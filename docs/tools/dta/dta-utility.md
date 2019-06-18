@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b40e9c05d81f7fb868884ab25e0f317804d162e0
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590195"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63001089"
 ---
 # <a name="dta-utility"></a>dta - utilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ dta -D db_name1, db_name2 -d db_name1
 ```  
   
  **-d** _database_name_  
- Specifica il primo database al quale si connette **dta** per ottimizzare un carico di lavoro. Per questo argomento è possibile specificare solo un database. Ad esempio  
+ Specifica il primo database al quale si connette **dta** per ottimizzare un carico di lavoro. Per questo argomento è possibile specificare solo un database. Esempio:  
   
 ```  
 dta -d AdventureWorks2012 ...  
@@ -227,7 +227,7 @@ dta -d AdventureWorks2012 ...
  Specifica il percorso e il nome del file del carico di lavoro da utilizzare come input per l'ottimizzazione. Il file deve essere in formato trc (file di traccia di SQL Server Profiler), sql (file SQL) oppure log (file di traccia di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). È inoltre necessario specificare un file o una tabella del carico di lavoro.  
   
  **-it** _workload_trace_table_name_  
- Specifica il nome della tabella contenente la traccia del carico di lavoro per l'ottimizzazione. Il nome viene specificato in formato [*database_name*]**.**[*owner_name*]**.**_table_name_.  
+ Specifica il nome della tabella contenente la traccia del carico di lavoro per l'ottimizzazione. Il nome viene specificato in formato [*database_name*] **.** [*owner_name*] **.** _table_name_.  
   
  Nella tabella seguente sono riportati i valori predefiniti per ogni parametro.  
   
@@ -344,14 +344,14 @@ In questo caso, DTA verrà usare Query Store come origine del carico di lavoro e
   
  *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
- Questo argomento rappresenta un'alternativa all'immissione di un elenco di tabelle al prompt dei comandi (**-Tl**). Non usare un file contenente un elenco di tabelle (**-Tf**) se si specifica **-Tl**. Se vengono utilizzati entrambi gli argomenti, l'esecuzione di **dta** ha esito negativo e viene restituito un errore.  
+ Questo argomento rappresenta un'alternativa all'immissione di un elenco di tabelle al prompt dei comandi ( **-Tl**). Non usare un file contenente un elenco di tabelle ( **-Tf**) se si specifica **-Tl**. Se vengono utilizzati entrambi gli argomenti, l'esecuzione di **dta** ha esito negativo e viene restituito un errore.  
   
  Se si omettono gli argomenti **-Tf** e **-Tl** , tutte le tabelle utente nei database specificati verranno considerate per l'ottimizzazione.  
   
  **-Tl** _table_list_  
  Specifica al prompt dei comandi un elenco di tabelle da ottimizzare. Per separare i nomi di tabella, utilizzare la virgola. Se con l'argomento **-D** viene specificato solo un database, non è necessario che i nomi delle tabelle vengano qualificati con un nome di database. In caso contrario, per ogni tabella sarà necessario specificare il nome completo nel formato: *database_name.schema_name.table_name* .  
   
- Questo argomento rappresenta un'alternativa all'utilizzo di un file contenente un elenco di tabelle (**-Tf**). Se vengono usati entrambi gli argomenti **-Tl** e **-Tf** , l'esecuzione di **dta** non riesce e viene restituito un errore.  
+ Questo argomento rappresenta un'alternativa all'utilizzo di un file contenente un elenco di tabelle ( **-Tf**). Se vengono usati entrambi gli argomenti **-Tl** e **-Tf** , l'esecuzione di **dta** non riesce e viene restituito un errore.  
   
  **-U** _login_id_  
  Specifica l'ID di accesso utilizzato per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

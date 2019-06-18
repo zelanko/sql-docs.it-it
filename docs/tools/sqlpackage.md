@@ -10,11 +10,11 @@ author: pensivebrian
 ms.author: broneill
 manager: craigg
 ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527593"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63269922"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -36,7 +36,7 @@ ms.locfileid: "58527593"
   
 La riga di comando di **SqlPackage.exe** consente di specificare queste azioni insieme alle proprietà e ai parametri specifici di ogni azione.  
 
-**[Scaricare la versione più recente](sqlpackage-download.md)**. Per informazioni dettagliate relative alla versione più recente, vedere la [note sulla versione](release-notes-sqlpackage.md).
+**[Scaricare la versione più recente](sqlpackage-download.md)** . Per informazioni dettagliate sulla versione più recente, vedere le [note sulla versione](release-notes-sqlpackage.md).
   
 ## <a name="command-line-syntax"></a>Sintassi della riga di comando
 

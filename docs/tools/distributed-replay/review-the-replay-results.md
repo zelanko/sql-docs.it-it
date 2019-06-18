@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: afb259625e100c886efabc00e21f7bd41f04389d
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291757"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62715664"
 ---
 # <a name="review-the-replay-results"></a>Controllo dei risultati della riproduzione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "51291757"
 |EventClass|**nvarchar**|Nome della classe di evento.|1|  
 |EventSequence|**bigint**|Per gli errori del provider e gli errori interni e gli avvisi, sequenza di eventi di acquisizione corrispondente all'errore o all'avviso.<br /><br /> Per tutte le altre classi di evento, sequenza dell'evento nei dati di traccia originali.|2|  
 |ReplaySequence|**bigint**|Per gli errori del provider e gli errori interni e gli avvisi, sequenza di eventi di riproduzione corrispondente all'errore o all'avviso.<br /><br /> Per tutte le altre classi di evento, sequenza dell'evento assegnato durante la riproduzione.|3|  
-|TextData|**ntext**|Il contenuto di TextData dipende da EventClass.<br /><br /> Per Audit Login e ExistingConnection, opzioni impostate per la connessione.<br /><br /> Per SQL:BatchStarting, corpo della richiesta batch.<br /><br /> Per RPC:Starting, stored procedure chiamata.<br /><br /> Per Replay Settings Event, questa colonna contiene le impostazioni definite nel file di configurazione della riproduzione.<br /><br /> Per Replay Statistics Event, contiene le informazioni seguenti:<br /><br /> - Computer SQL Server di destinazione della riproduzione<br /><br /> - Numero totale di eventi riproducibili<br /><br /> - Numero di errori del provider<br /><br /> - Numero di errori interni<br /><br /> - Avvisi interni<br /><br /> - Numero totale di errori<br /><br /> - Percentuale di superamento complessiva<br /><br /> - Durata della riproduzione (HH:MM:SS:MMM)<br /><br /> Per Replay Result Set Event, indica l'elenco delle intestazioni di colonna dei risultati restituiti.<br /><br /> Per Replay Result Row Event, indica il valore restituito di tutte le colonne per la riga.<br /><br /> Per Replay Internal Warning e Replay Provider Error, questa colonna contiene gli avvisi o gli errori del provider.|4|  
+|TextData|**ntext**|Il contenuto di TextData dipende da EventClass.<br /><br /> Per Audit Login e ExistingConnection, opzioni impostate per la connessione.<br /><br /> Per SQL:BatchStarting, corpo della richiesta batch.<br /><br /> Per RPC:Starting, stored procedure chiamata.<br /><br /> Per Replay Settings Event, questa colonna contiene le impostazioni definite nel file di configurazione della riproduzione.<br /><br /> Per Replay Statistics Event, contiene le informazioni seguenti:<br /><br /> \- Computer SQL Server di destinazione della riproduzione<br /><br /> \- Numero totale di eventi riproducibili<br /><br /> \- Numero di errori del provider<br /><br /> \- Numero di errori interni<br /><br /> \- Avvisi interni<br /><br /> \- Numero totale di errori<br /><br /> \- Percentuale di superamento complessiva<br /><br /> \- Durata della riproduzione (HH:MM:SS:MMM)<br /><br /> Per Replay Result Set Event, indica l'elenco delle intestazioni di colonna dei risultati restituiti.<br /><br /> Per Replay Result Row Event, indica il valore restituito di tutte le colonne per la riga.<br /><br /> Per Replay Internal Warning e Replay Provider Error, questa colonna contiene gli avvisi o gli errori del provider.|4|  
 |Attention|**bigint**|Durata di attenzione, in microsecondi, per l'evento. Viene calcolata dall'evento Attention dalla traccia di acquisizione. Se non è stato specificato alcun timeout query per l'evento, la colonna non è popolata (null).|5|  
 |SubmitTime|**datetime**|Data e ora in cui è stato inviato l'evento a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|6|  
 |IsSuccessful|**int**|Flag booleano che indica se un evento specifico è stato eseguito correttamente e che sono stati restituiti set di risultati al lato client.<br /><br /> Un evento che genera un avviso, ad esempio quando viene annullato un evento a causa di un evento Attention o di un timeout specificato da un utente, viene considerato riuscito.<br /><br /> IsSuccessful può essere impostato su uno dei valori seguenti:<br /><br /> 1 = eseguito correttamente<br /><br /> 0 = non riuscito|7|  

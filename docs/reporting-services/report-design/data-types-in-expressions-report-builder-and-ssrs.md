@@ -9,10 +9,10 @@ ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8167b9066b0549332a6bb30030d339b79c3c45ac
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580862"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipi di dati nelle espressioni (Generatore report e SSRS)
@@ -82,7 +82,7 @@ ms.locfileid: "65580862"
 |Da String a DateTime|`=DateTime.Parse(Fields!DateTimeinStringFormat.Value)`|  
 |Da String a DateTimeOffset|`=DateTimeOffset.Parse(Fields!DateTimeOffsetinStringFormat.Value)`|  
 |Estrazione dell'anno|`=Year(Fields!TimeinStringFormat.Value)`<br /><br /> `-- or --`<br /><br /> `=Year(Fields!TimeinDateTimeFormat.Value)`|  
-|Da Boolean a Integer|`=CInt(Parameters!BooleanField.Value)`<br /><br /> - 1 è True e 0 è False.|  
+|Da Boolean a Integer|`=CInt(Parameters!BooleanField.Value)`<br /><br /> \- 1 è True e 0 è False.|  
 |Da Boolean a Integer|`=System.Convert.ToInt32(Fields!BooleanFormat.Value)`<br /><br /> 1 è True e 0 è False.|  
 |Solo la parte DateTime di un valore DateTimeOffset|`=Fields!MyDatetimeOffset.Value.DateTime`|  
 |Solo la parte Offset di un valore DateTimeOffset|`=Fields!MyDatetimeOffset.Value.Offset`|  

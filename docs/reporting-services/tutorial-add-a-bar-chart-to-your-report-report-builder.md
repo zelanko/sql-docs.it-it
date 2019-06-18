@@ -6,17 +6,17 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: dce9cfd4ae9459ecdb4c2169a5fb6cb638792ab4
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296164"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041183"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico a barre al report (Generatore report)
-In questa esercitazione viene usata una procedura guidata di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] per creare un grafico a barre in un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]. Successivamente si aggiungerà un filtro e si migliorerà il grafico. 
+In questa esercitazione viene usata una procedura guidata di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] per creare un grafico a barre in un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . Successivamente si aggiungerà un filtro e si migliorerà il grafico. 
 
 In un grafico a barre i dati delle categorie vengono visualizzati orizzontalmente per gli scopi seguenti:  
   
@@ -30,7 +30,7 @@ L'illustrazione seguente visualizza il grafico a barre che verrà creato con le 
   
  
 > [!NOTE]  
-> In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, creare un set di dati e scegliere un'origine dati. Vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, creare un set di dati e scegliere un'origine dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report di tabelle semplici &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo previsto per il completamento di questa esercitazione: 15 minuti.  
   
@@ -83,7 +83,7 @@ Nella quale si crea un set di dati incorporato, si sceglie un'origine dati condi
     UNION SELECT 'Brian' as FirstName, 'Burke' as LastName, CAST(187000. AS money) AS SalesYear2015, CAST(207000. AS money) AS SalesYear2014  
     ```  
   
-8.  (Facoltativo) Fare clic sul pulsante Esegui (**!**) per visualizzare i dati sui quali verrà basato il grafico.  
+8.  (Facoltativo) Fare clic sul pulsante Esegui ( **!** ) per visualizzare i dati sui quali verrà basato il grafico.  
   
 9. Scegliere **Avanti**.  
   
@@ -93,7 +93,7 @@ Nella quale si crea un set di dati incorporato, si sceglie un'origine dati condi
   
 2.  Fare clic su **Barre**, quindi su **Avanti**.  
   
-    Nel riquadro **Campi disponibili** della pagina **Disponi campi del grafico** sono contenuti quattro campi: FirstName, LastName, SalesYear2015 e SalesYear2014.  
+    Nella pagina **Disponi campi del grafico** il riquadro **Campi disponibili** include quattro campi: FirstName, LastName, SalesYear2015 e SalesYear2014.  
   
 3.  Trascinare LastName nel riquadro Categorie.  
   
@@ -166,7 +166,7 @@ Quando si ordinano i dati in un grafico si modifica l'ordine dei valori sull'ass
   
 4.  Fare clic su **Ordinamento**. Nella pagina **Modificare le opzioni di ordinamento** viene visualizzato un elenco di espressioni di ordinamento. Per impostazione predefinita, l'elenco dispone di un'unica espressione di ordinamento che equivale all'espressione originale di raggruppamento delle categorie.  
   
-5.  In **Ordinamento**, fare clic su **[SalesYear2015]**.  
+5.  In **Ordinamento**, fare clic su **[SalesYear2015]** .  
   
 6.  Nell'elenco **Ordine** , selezionare **Dalla A alla Z** in modo che i nomi siano visualizzati in ordine a partire dalle vendite più alte alle più basse del 2015.
   
@@ -245,7 +245,7 @@ Il report visualizza l'importo delle vendite sull'asse orizzontale come valuta i
   
 5.  Scegliere **Aggiungi**. Verrà visualizzato un nuovo filtro vuoto.  
   
-6.  In **Espressione**digitare **[Sum(SalesYear2015)]**. Viene creata l'espressione sottostante `=Sum(Fields!SalesYear2015.Value)`, che può essere visualizzata facendo clic sul pulsante **fx** .  
+6.  In **Espressione**digitare **[Sum(SalesYear2015)]** . Viene creata l'espressione sottostante `=Sum(Fields!SalesYear2015.Value)`, che può essere visualizzata facendo clic sul pulsante **fx** .  
   
 7.  Verificare che il tipo di dati sia **Text**.  
   

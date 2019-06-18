@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4d1c367f530353991fca3f7b8301b8a1691f3833
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 44480672cc835e455062c70943e87379a18a059e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286929"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63294729"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Esercitazione: Creazione di report drill-through e report principali (Generatore report)
 In questa esercitazione verrà illustrato come creare due tipi di report impaginati in [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : un report drill-through e un report principale. I dati di vendita di esempio utilizzati in questi report vengono recuperati da un cubo di Analysis Services. 
@@ -63,7 +63,7 @@ Una connessione dati contiene le informazioni necessarie per connettersi a un'or
   
 4.  In **Seleziona il tipo di connessione**, scegliere **Microsoft SQL Server Analysis Services**, quindi fare clic su **Compila**.  
   
-5.  In **Origine dati**verificare che l'origine dati sia **Microsoft SQL Server Analysis Services (AdomdClient)**.  
+5.  In **Origine dati**verificare che l'origine dati sia **Microsoft SQL Server Analysis Services (AdomdClient)** .  
   
 6.  In **Nome server**, digitare il nome di un server nel quale è installata un'istanza di Analysis Services.  
   
@@ -120,7 +120,7 @@ In un report, è possibile utilizzare un set di dati condiviso che dispone di un
   
 5.  Nell'elenco dell'espressione filtro, espandere **Tutti i canali**, fare clic su **Online**, fare clic su **Rivenditore**, quindi fare clic su **OK**.  
   
-    La query ora comprende un filtro per includere solo questi canali: Online e Rivenditore.  
+    Ora la query include un filtro per includere solo questi canali: Online e Rivenditore.  
   
 6.  Espandere la dimensione Territorio di vendita, quindi trascinare Gruppo territorio di vendita nella colonna **Gerarchia** , sotto **Nome canale**.  
   
@@ -161,7 +161,7 @@ In un report, è possibile utilizzare un set di dati condiviso che dispone di un
   
 5.  Trascinare la misura Importo vendite nel riquadro dei dati, quindi posizionarlo a destra di Product Subcategory Name.  
   
-6.  Nella barra degli strumenti Progettazione query fare clic su **Esegui (!)**.  
+6.  Nella barra degli strumenti Progettazione query fare clic su **Esegui (!)** .  
   
 7.  Scegliere **Avanti**.  
   
@@ -261,7 +261,7 @@ Nella parte superiore del report viene visualizzato il titolo del report. È pos
   
 2.  Nell'area di progettazione fare clic su **Fare clic per aggiungere il titolo**.  
   
-3.  Digitare **Vendite e margini per categoria:**.  
+3.  Digitare **Vendite e margini per categoria:** .  
   
 4.  Fare clic con il pulsante destro del mouse, quindi fare clic su **Crea segnaposto**.  
   
@@ -361,7 +361,7 @@ Verrà aggiunta un'origine dati incorporata al report principale.
   
 4.  In **Seleziona il tipo di connessione**, scegliere **Microsoft SQL Server Analysis Services**, quindi fare clic su **Compila**.  
   
-5.  In **Origine dati**verificare che l'origine dati sia **Microsoft SQL Server Analysis Services (AdomdClient)**.  
+5.  In **Origine dati**verificare che l'origine dati sia **Microsoft SQL Server Analysis Services (AdomdClient)** .  
   
 6.  In **Nome server**, digitare il nome di un server nel quale è installata un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
@@ -392,7 +392,7 @@ Quindi creare un set di dati incorporato. A tale scopo, si utilizzerà Progettaz
   
 #### <a name="to-create-query-filters"></a>Per creare filtri query  
   
-1.  Nella sezione relativa al cubo del riquadro Metadati della pagina **Progetta query** fare clic sul pulsante con i puntini di sospensione **(...)**.  
+1.  Nella sezione relativa al cubo del riquadro Metadati della pagina **Progetta query** fare clic sul pulsante con i puntini di sospensione **(...)** .  
   
 2.  Nella finestra di dialogo **Seleziona cubo** fare clic su Vendite, quindi fare clic su **OK**.  
   
@@ -411,7 +411,7 @@ Quindi creare un set di dati incorporato. A tale scopo, si utilizzerà Progettaz
   
 5.  Nell'elenco dell'espressione filtro, espandere **Tutti i canali**, fare clic su **Online** e **Rivenditore**, quindi fare clic su **OK**.  
   
-    La query ora comprende un filtro per includere solo questi canali: Online e Rivenditore.  
+    Ora la query include un filtro per includere solo questi canali: Online e Rivenditore.  
   
 6.  Espandere la dimensione Territorio di vendita, quindi trascinare Gruppo territorio di vendita nella colonna **Gerarchia** , sotto **Nome canale**.  
   
@@ -479,7 +479,7 @@ Quindi creare un set di dati incorporato. A tale scopo, si utilizzerà Progettaz
   
 4.  Trascinare Fatturato netto da Membri calcolati al riquadro dati e posizionarlo a destra di `Net QTY`.  
   
-5.  Nella barra degli strumenti Progettazione query fare clic su **Esegui (!)**.  
+5.  Nella barra degli strumenti Progettazione query fare clic su **Esegui (!)** .  
   
     Controllare il set di risultati della query  
   
@@ -511,7 +511,7 @@ Nei report è possibile mostrare subtotali e totali complessivi. I dati nei repo
   
 1.  Nella pagina **Scegliere il layout** , sotto **Opzioni**, verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
   
-    Nel riquadro di anteprima della creazione guidata viene visualizzata una matrice con quattro righe.  Quando si esegue il report, ogni riga viene visualizzata nel seguente modo: La prima riga è il gruppo di colonne, la seconda riga contiene le intestazioni di colonna, la terza riga contiene i dati della categoria di prodotto (`[Sum(Net_ QTY)]` e `[Sum(Net_Sales)]`) e la quarta riga contiene i totali.  
+    Nel riquadro di anteprima della creazione guidata viene visualizzata una matrice con quattro righe.  Quando si esegue il report, ogni riga sarà visualizzata nella modalità seguente: La prima riga è il gruppo di colonne, la seconda riga contiene le intestazioni di colonna, la terza riga contiene i dati della categoria di prodotto (`[Sum(Net_ QTY)]` e `[Sum(Net_Sales)]`e la quarta riga contiene i totali.  
   
 2.  Scegliere **Avanti**.  
   
@@ -587,7 +587,7 @@ Utilizzare indicatori per mostrare lo stato di quantità e vendite per i canali 
   
 4.  Fare clic sul tipo **3 segnali** , quindi fare clic su **OK**.  
   
-5.  Fare clic con il pulsante destro del mouse sull'indicatore e nel riquadro Dati del misuratore, fare clic sulla freccia in giù accanto a **(Non specificato)**. Selezionare `Net_QTY`.  
+5.  Fare clic con il pulsante destro del mouse sull'indicatore e nel riquadro Dati del misuratore, fare clic sulla freccia in giù accanto a **(Non specificato)** . Selezionare `Net_QTY`.  
   
 6.  Ripetere i passaggi da 2 a 5 per la cella `[Sum(Net QTY)]` nel gruppo di righe `[Product_Category_Name]` all'interno di **Totale**.  
   
@@ -599,7 +599,7 @@ Utilizzare indicatori per mostrare lo stato di quantità e vendite per i canali 
   
 3.  Fare clic sul tipo **3 segnali** , quindi fare clic su **OK**.  
   
-4.  Fare clic con il pulsante destro del mouse sull'indicatore e nel riquadro Dati del misuratore, fare clic sulla freccia in giù accanto a **(Non specificato)**. Selezionare `Net_Sales`.  
+4.  Fare clic con il pulsante destro del mouse sull'indicatore e nel riquadro Dati del misuratore, fare clic sulla freccia in giù accanto a **(Non specificato)** . Selezionare `Net_Sales`.  
   
 5.  Ripetere i passaggi da 1 a 4 per la cella `[Sum(Net_Sales)]` nel gruppo di righe `[Product_Category_Name]` all'interno di **Totale**.  
   
@@ -627,7 +627,7 @@ Aggiungere un titolo a un report principale
   
 1.  Nell'area di progettazione fare clic su **Fare clic per aggiungere il titolo**.  
   
-2.  Digitare **Vendite per categoria di prodotto 2009: categoria Online e Rivenditore:**.  
+2.  Digitare **2009 Product Category Sales: Categoria Online e Rivenditore**.  
   
 3.  Selezionare il testo digitato.  
   

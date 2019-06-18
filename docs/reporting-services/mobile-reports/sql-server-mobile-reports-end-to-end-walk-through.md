@@ -1,5 +1,5 @@
 ---
-title: 'Report per dispositivi mobili di SQL Server: Procedura dettagliata completa'
+title: 'Report per dispositivi mobili di SQL Server: procedura dettagliata completa'
 description: Procedura dettagliata per la creazione di report per dispositivi mobili per schermi di qualsiasi dimensione con Microsoft SQL Server Mobile Report Publisher nel portale Web di Reporting Services e la visualizzazione degli stessi nell'app Power BI per dispositivi mobili.
 ms.date: 12/07/2018
 ms.prod: reporting-services
@@ -8,16 +8,16 @@ ms.technology: mobile-reports
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c4c1735d7f6e896ecb3a0c29b6266cddc48dffae
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: db6f8c664dff6f7234e43a3e3f11f6cc01e2eac4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286959"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62502429"
 ---
-# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Report per dispositivi mobili di SQL Server: Procedura dettagliata completa
+# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Report per dispositivi mobili di SQL Server: procedura dettagliata completa
 Procedura dettagliata per creare report per dispositivi mobili per schermi di qualsiasi dimensione con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] nel portale Web di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] e visualizzarli nell'app Power BI per dispositivi mobili.
 
 Consente di creare report per dispositivi mobili in un'area di progettazione con righe e colonne della griglia regolabili ed elementi flessibili del report per dispositivi mobili. È possibile connettersi a un'ampia gamma di origini dati locali, caricare cartelle di lavoro di Excel oppure creare report per dispositivi mobili, quindi salvarli in un portale Web di [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] e visualizzarli in un browser o nelle app Power BI per dispositivi mobili.  
@@ -79,7 +79,7 @@ Per creare il set di dati condiviso, usare uno strumento client di [!INCLUDE[PRO
 4. Nel campo Nome digitare il nome del server in cui è stata salvata l'origine dati, in questo formato:   
    
    Nome: https://*localhost*/ReportServer  
-   Elementi di tipo: Origini dati (*.rsds)  
+   Elementi di tipo: origini dati (file con estensione rsds)  
    
 5. Fare clic su **Apri**e passare all'origine dati creata sul server.  
    
@@ -105,7 +105,7 @@ Creare gli indicatori KPI direttamente nel portale Web di [!INCLUDE[PRODUCT_NAME
    
    ![PBI_SSMRP_KPI_DatasetField](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpi-datasetfield.png)  
    
-3. Fare clic sui puntini di sospensione (**...**) nella casella **Scegliere un campo del set di dati** e selezionare un set di dati dal passaggio precedente.  
+3. Fare clic sui puntini di sospensione ( **...** ) nella casella **Scegliere un campo del set di dati** e selezionare un set di dati dal passaggio precedente.  
    
    ![PBI_SSMRP_KPIPickDataset](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpipickdataset.png)  
    
@@ -121,7 +121,7 @@ Creare gli indicatori KPI direttamente nel portale Web di [!INCLUDE[PRODUCT_NAME
 
 7. Nella casella **Set di tendenze** fare clic su **Tendenza del set di dati**.  
   
-6. Nella casella **Scegliere una tendenza del set di dati** fare clic sui puntini di sospensione (**...**)  
+6. Nella casella **Scegliere una tendenza del set di dati** fare clic sui puntini di sospensione ( **...** )  
    
 7. Selezionare un campo e fare clic su **OK**.  
 

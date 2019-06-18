@@ -12,10 +12,10 @@ ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bc3d4122d276053a12cfcb98f58a3374634f4e5b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573164"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintassi del percorso di elemento per i dati del report XML (SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "65573164"
 |&#124; (barra verticale)|Separa gli elementi della sintassi. Indica che è possibile scegliere un solo elemento.|  
 |`[ ]` (parentesi quadre)|Elementi sintattici facoltativi. Le parentesi quadre non devono essere digitate.|  
 |**{ }** (parentesi graffe)|Delimitano i parametri degli elementi della sintassi.|  
-|[**,**...*n*]|Indica che l'elemento precedente può essere ripetuto *n* volte. Le varie occorrenze dell'elemento sono separate da una virgola.|  
+|[ **,** ...*n*]|Indica che l'elemento precedente può essere ripetuto *n* volte. Le varie occorrenze dell'elemento sono separate da una virgola.|  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -76,7 +76,7 @@ XMLLocalName :: =
 |**ElementNode**|Nodo XML nel documento XML. I nodi sono designati da tag e sono correlati agli altri nodi in base a una relazione gerarchica. Customers>\<, ad esempio, è il nodo elemento radice. Customer>\< è un sottoelemento di Customers>\<.|  
 |**XMLName**|Nome del nodo. Il nome del nodo Customers, ad esempio, è Customers. **XMLName** può essere preceduto da un identificatore dello spazio dei nomi, per assegnare a ogni nodo un nome univoco.|  
 |**Codifica**|Indica che il **valore** dell'elemento è un valore XML con codifica e deve essere decodificato e incluso come sottoelemento dell'elemento.|  
-|**FieldList**|Definisce il set di elementi e attributi da utilizzare per recuperare i dati.<br /><br /> Se non specificato, vengono utilizzati come campi tutti gli attributi e i sottoelementi. Se viene specificato l'elenco dei campi vuoto (**{}**), non verrà usato alcun campo di questo nodo.<br /><br /> L'oggetto **FieldList** non può contenere un **valore** e un **elemento** oppure un nodo **ElementNode**.|  
+|**FieldList**|Definisce il set di elementi e attributi da utilizzare per recuperare i dati.<br /><br /> Se non specificato, vengono utilizzati come campi tutti gli attributi e i sottoelementi. Se viene specificato l'elenco dei campi vuoto ( **{}** ), non verrà usato alcun campo di questo nodo.<br /><br /> L'oggetto **FieldList** non può contenere un **valore** e un **elemento** oppure un nodo **ElementNode**.|  
 |**Campo**|Specifica i dati recuperati come campo del set di dati.|  
 |**Attribute**|Coppia nome-valore contenuta in **ElementNode**. Nel nodo elemento Customer ID="1">\<, ad esempio, **ID** è un attributo e **@ID(Integer)** restituisce "1" come tipo integer nel campo dati **ID** corrispondente.|  
 |**Value**|Valore dell'elemento. **Valore** può essere usato solo nell'ultimo **ElementNode** del percorso di elemento. Poiché, ad esempio, Return>\< è un nodo foglia, se lo si include alla fine di un percorso di elemento, il valore di **Return {@}** è **Chair**.|  

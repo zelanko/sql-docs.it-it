@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 5be6c645caadfc2b619e3fbd6d8f6b2a78ad2ff0
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571573"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Creare un avviso dati nella finestra di progettazione Avviso dati
@@ -75,7 +75,7 @@ Le definizioni di avviso dati vengono create nella finestra di progettazione Avv
   
 10. Digitare il valore di confronto.  
   
-11. Facoltativamente, fare di nuovo clic sui puntini di sospensione **(...)**.  
+11. Facoltativamente, fare di nuovo clic sui puntini di sospensione **(...)** .  
   
      I puntini di sospensione **(...)** vengono visualizzati nella riga contenente la prima clausola.  
   
@@ -114,7 +114,7 @@ Le definizioni di avviso dati vengono create nella finestra di progettazione Avv
   
 20. Facoltativamente, nella casella di testo **Oggetto** aggiornare la riga dell'oggetto del messaggio di avviso.  
   
-     L'oggetto predefinito è **Avviso dati per \<nome avviso dati>**.  
+     L'oggetto predefinito è **Avviso dati per \<nome avviso dati>** .  
   
 21. Facoltativamente, digitare una descrizione per il messaggio di avviso nella casella di testo **Descrizione** .  
   

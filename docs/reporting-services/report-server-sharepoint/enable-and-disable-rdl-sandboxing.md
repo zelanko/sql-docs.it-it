@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cc2f32dd81e8dd505b6eaa79359ce10c757ea744
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577767"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>Abilitare e disabilitare RDL Sandboxing per Reporting Services in modalità integrata SharePoint
@@ -74,9 +74,9 @@ La funzionalità RDL (Report Definition Language) Sandboxing consente di rilevar
 |**Tipi**|Elenco di membri da consentire nelle espressioni RDL.|  
 |**Allow**|Tipo o set di tipi da consentire nelle espressioni RDL.|  
 |**Namespace**|Attributo per **Allow** che è lo spazio dei nomi contenente uno o più tipi applicabili a Value. Questa proprietà supporta la distinzione tra maiuscole e minuscole.|  
-|**AllowNew**|Attributo booleano per **Allow** che controlla se le nuove istanze del tipo possono essere create in espressioni RDL o in un elemento RDL **\<Class>**.<br /><br /> Quando **RDLSandboxing** è abilitato non è possibile creare nuove matrici in espressioni RDL, indipendentemente dall'impostazione di **AllowNew**.|  
+|**AllowNew**|Attributo booleano per **Allow** che controlla se le nuove istanze del tipo possono essere create in espressioni RDL o in un elemento RDL **\<Class>** .<br /><br /> Quando **RDLSandboxing** è abilitato non è possibile creare nuove matrici in espressioni RDL, indipendentemente dall'impostazione di **AllowNew**.|  
 |**Value**|Valore per **Allow** che è il nome del tipo da consentire nelle espressioni RDL. Il valore **\*** indica che sono consentiti tutti i tipi nello spazio dei nomi. Questa proprietà supporta la distinzione tra maiuscole e minuscole.|  
-|**Membri**|Per l'elenco dei tipi inclusi nell'elemento **\<Types>**, l'elenco dei nomi membro non consentiti nelle espressioni RDL.|  
+|**Membri**|Per l'elenco dei tipi inclusi nell'elemento **\<Types>** , l'elenco dei nomi membro non consentiti nelle espressioni RDL.|  
 |**Nega**|Nome di un membro non consentito nelle espressioni RDL. Questa proprietà supporta la distinzione tra maiuscole e minuscole.<br /><br /> Quando per un membro è specificato **Deny** non è consentito nessun membro con questo nome per nessun tipo.|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>Uso delle espressioni con RDL Sandboxing abilitato
@@ -128,7 +128,7 @@ La funzionalità RDL (Report Definition Language) Sandboxing consente di rilevar
   
  Per aggiungere funzioni .NET Framework di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] all'elenco degli elementi consentiti, aggiungere i tipi corrispondenti dallo spazio dei nomi Microsoft.VisualBasic all'elenco.  
   
- Per aggiungere le parole chiave tipo di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework all'elenco consentiti, aggiungere il tipo CLR corrispondente all'elenco consentiti. Ad esempio, per usare la parola chiave .NET Framework di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] di tipo **Intero** aggiungere il frammento XML seguente all'elemento **\<RDLSandboxing>**:  
+ Per aggiungere le parole chiave tipo di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework all'elenco consentiti, aggiungere il tipo CLR corrispondente all'elenco consentiti. Ad esempio, per usare la parola chiave .NET Framework di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] di tipo **Intero** aggiungere il frammento XML seguente all'elemento **\<RDLSandboxing>** :  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  
@@ -158,7 +158,7 @@ La funzionalità RDL (Report Definition Language) Sandboxing consente di rilevar
   
 ### <a name="working-with-operators-and-new"></a>Uso degli operatori e dell'operatore New
 
- Per impostazione predefinita, gli operatori di linguaggio .NET Framework di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] sono sempre consentiti, ad eccezione di **New**. L'operatore **New** è controllato dall'attributo **AllowNew** nell'elemento **\<Allow>**. Altri operatori di linguaggio, come l'operatore della funzione di accesso alla raccolta predefinito **!**, e le macro di cast .NET Framework di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] , come **CInt**, sono sempre consentiti.  
+ Per impostazione predefinita, gli operatori di linguaggio .NET Framework di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] sono sempre consentiti, ad eccezione di **New**. L'operatore **New** è controllato dall'attributo **AllowNew** nell'elemento **\<Allow>** . Altri operatori di linguaggio, come l'operatore della funzione di accesso alla raccolta predefinito **!** , e le macro di cast .NET Framework di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] , come **CInt**, sono sempre consentiti.  
   
  L'aggiunta di operatori, inclusi quelli personalizzati, a un elenco bloccati non è supportata. Per escludere operatori per un tipo, è necessario effettuare le operazioni seguenti:  
   

@@ -8,14 +8,14 @@ ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 79b7a54c511d483fde86d11eeb8670ce2ac2bc14
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5d43534148ccf22419c630880192ff21eba2a441
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813974"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63195286"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Utilizzo del controllo Windows Form ReportViewer
   Per visualizzare i report distribuiti in un server di report o presenti in un file system locale, è possibile usare il controllo Windows Form ReportViewer per eseguirne il rendering in un'applicazione Windows.  
@@ -38,7 +38,7 @@ ms.locfileid: "51813974"
   
  Dopo l'aggiunta del controllo al form, viene visualizzato lo smart tag **Attività di ReportViewer** che richiede di selezionare un report.  
   
- Se il report da visualizzare è stato distribuito in un server di report, scegliere l'opzione **\<Server di report>** dall'elenco a discesa **Scegli report**. Dopo avere scelto l'opzione **\<Server di report>**, vengono visualizzate due proprietà aggiuntive: **URL server di report** e **Percorso report**. **URL server di report** è l'indirizzo del server di report e **Percorso report** è il percorso completo del report di cui eseguire il rendering.  
+ Se il report da visualizzare è stato distribuito in un server di report, scegliere l'opzione **\<Server di report>** dall'elenco a discesa **Scegli report**. Dopo avere scelto l'opzione **\<Server di report>** , vengono visualizzate due proprietà aggiuntive: **URL server di report** e **Percorso report**. **URL server di report** è l'indirizzo del server di report e **Percorso report** è il percorso completo del report di cui eseguire il rendering.  
   
  ![Selezionare report server](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "Selezionare report server")  
   

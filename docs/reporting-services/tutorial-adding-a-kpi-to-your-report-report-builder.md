@@ -6,17 +6,17 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a19d1fee2e7e9fc1fd5efd8fe2c0007548bcaf2d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290719"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041891"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Esercitazione: Aggiunta di un indicatore di prestazioni chiave al report (Generatore report)
-In questa esercitazione di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] si aggiunge un indicatore di prestazioni chiave (KPI) a un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].  
+In questa esercitazione di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] viene aggiunto un indicatore KPI a un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .  
 
 Gli indicatori KPI sono valori misurabili con significato aziendale. In questo scenario l'indicatore KPI è il riepilogo delle vendite in base alle sottocategorie del prodotto. Lo stato corrente dell'indicatore KPI viene indicato da colori, misuratori e indicatori.
   
@@ -25,7 +25,7 @@ L'immagine seguente illustra un report simile quello che verrà creato.
 ![report-builder-kpi-report](../reporting-services/media/report-builder-kpi-report.png)
     
 > [!NOTE]  
-> In questa esercitazione, i passaggi della procedura guidata sono consolidati in due procedure: una per la creazione del set di dati e un'altra per la creazione di una tabella. Per istruzioni dettagliate su come selezionare un server di report, scegliere un'origine dati, creare un set di dati ed eseguire la procedura guidata. Vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In questa esercitazione, i passaggi della procedura guidata sono consolidati in due procedure: una per la creazione del set di dati e un'altra per la creazione di una tabella. Per istruzioni dettagliate su come selezionare un server di report, scegliere un'origine dati, creare un set di dati ed eseguire la procedura guidata, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo previsto per il completamento di questa esercitazione: 15 minuti.  
   
@@ -95,7 +95,7 @@ Questa sezione spiega come scegliere un'origine dati condivisa, creare un set di
        'SLR Camera' as Product, CAST(26576.00 AS money) AS Sales, 88 as Quantity  
     ```  
   
-10. Sulla barra degli strumenti Progettazione query fare clic su Esegui (**!**).
+10. Sulla barra degli strumenti Progettazione query fare clic su Esegui ( **!** ).
 
 11. Scegliere **Avanti**.  
   
@@ -136,7 +136,7 @@ La Creazione guidata tabella o matrice offre una progettazione iniziale in cui v
   
 11. Fare clic su **Fine**.  
   
-      La tabella viene aggiunta all'area di progettazione. Nella tabella sono presenti cinque colonne e altrettante righe. Nel riquadro Gruppi di righe vengono visualizzati tre gruppi di righe: SalesDate, Subcategory e Details. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati. Il riquadro Gruppi di colonne è vuoto.  
+      La tabella viene aggiunta all'area di progettazione. Nella tabella sono presenti cinque colonne e altrettante righe. Nel riquadro Gruppi di righe sono visualizzati tre gruppi di righe: SalesDate, Subcategory e Details. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati. Il riquadro Gruppi di colonne è vuoto.  
       
       ![report-builder-kpi-row-groups](../reporting-services/media/report-builder-kpi-row-groups.png)
   
@@ -184,7 +184,7 @@ I colori di sfondo possono essere impostati su un'espressione valutata quando si
     
     ![report-builder-text-box-properties](../reporting-services/media/report-builder-text-box-properties.png)
   
-2.  Nella scheda **Riempimento** fare clic sul pulsante **fx** accanto all'opzione **Colore riempimento** e immettere l'espressione seguente nel campo **Imposta espressione per: BackgroundColor**.  
+2.  Nella scheda **Riempimento** fare clic sul pulsante **fx** accanto all'opzione **Colore riempimento** e immettere l'espressione seguente nel campo **Imposta espressione per: BackgroundColor** :  
   
     `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   
@@ -268,7 +268,7 @@ Gli indicatori sono piccoli e semplici misuratori che consentono di visualizzare
   
 5.  Nella scheda **Inserisci**> **Visualizzazioni dati** > fare doppio clic su **Indicatore**.  
   
-6.  Nella finestra di dialogo **Seleziona tipo indicatore** in **Forme**selezionare il primo tipo di forma **"3 semafori (con bordo)"**.  
+6.  Nella finestra di dialogo **Seleziona tipo indicatore** in **Forme**selezionare il primo tipo di forma **"3 semafori (con bordo)"** .  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -276,7 +276,7 @@ Gli indicatori sono piccoli e semplici misuratori che consentono di visualizzare
   
 8.  Fare clic con il pulsante destro del mouse sull'indicatore e scegliere **Proprietà indicatore**.  
   
-9. Nella scheda **Valore e stati** nella casella **Valore** selezionare **[SUM (Sales)]**. Non modificare le opzioni.  
+9. Nella scheda **Valore e stati** nella casella **Valore** selezionare **[SUM (Sales)]** . Non modificare le opzioni.  
   
     Per impostazione predefinita, si verifica la sincronizzazione dei dati nell'area dati e il valore **Tablix1**, ovvero il nome dell'area dati della tabella nel report, viene visualizzato nella casella **Ambito sincronizzazione** .  
   

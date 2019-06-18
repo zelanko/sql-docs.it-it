@@ -15,10 +15,10 @@ ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7973c4ad5483193aa4ed2116b714f6d404c4da1c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570693"
 ---
 # <a name="secure-my-reports"></a>Proteggere i report personali
@@ -32,7 +32,7 @@ ms.locfileid: "65570693"
   
  Un'assegnazione di ruolo per la funzionalità **Report personali** è costituita dai componenti seguenti:  
   
--   La cartella Report personali dell'utente, che si trova nel percorso Cartelle utenti\\*\<nomeutente>* \Report personali.  
+-   La cartella Report personali dell'utente, che si trova nel percorso Cartelle utenti\\ *\<nomeutente>* \Report personali.  
   
 -   L'account utente, che viene determinato quando la cartella Report personali viene attivata. La cartella viene attivata quando un utente fa clic su una cartella Report personali in Gestione report oppure quando viene eseguita la pubblicazione di un report in una cartella Report personali da Progettazione report. La cartella viene inoltre attivata quando un utente richiede proprietà tramite il collegamento Report personali.  
   

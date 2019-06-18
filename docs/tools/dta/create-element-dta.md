@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c8f645884e28d93bf25032aa6cf89ae3d5dd6774
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671212"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62857189"
 ---
 # <a name="create-element-dta"></a>Create - elemento (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "51671212"
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Elemento Recommendation &#40;DTA&#41;](../../tools/dta/recommendation-element-dta.md)|  
-|**Elementi figlio**|[Elemento Index &#40;DTA&#41;](../../tools/dta/index-element-dta.md)<br /><br /> Elemento**Statistics** . Per informazioni, vedere l' [XML Schema dell'Ottimizzazione guidata motore di database](https://schemas.microsoft.com/sqlserver/) <br /><br /> Elemento**Heap** . Per informazioni, vedere l' [XML Schema dell'Ottimizzazione guidata motore di database](https://schemas.microsoft.com/sqlserver/) |  
+|**Elementi figlio**|[Elemento Index &#40;DTA&#41;](../../tools/dta/index-element-dta.md)<br /><br /> Elemento**Statistics** . Per informazioni, vedere l' [XML Schema dell'Ottimizzazione guidata motore di database](https://schemas.microsoft.com/sqlserver/)<br /><br /> Elemento**Heap** . Per informazioni, vedere l' [XML Schema dell'Ottimizzazione guidata motore di database](https://schemas.microsoft.com/sqlserver/)|  
   
 ## <a name="remarks"></a>Remarks  
  Questo elemento appartiene al nome **CreateTypecomplexType** nell'XML Schema dell'Ottimizzazione guidata motore di database. Viene utilizzato per creare indici, statistiche e strutture heap per una configurazione specificata dall'utente. Non confondere l'elemento **Create** con altri tipi che possono essere usati per creare viste (**CreateViewType**) o partizionamenti (**CreatePType**). Per informazioni su questi altri tipi di elemento [Create](https://schemas.microsoft.com/sqlserver/) , vedere l' **XML Schema dell'Ottimizzazione guidata motore di database** .  

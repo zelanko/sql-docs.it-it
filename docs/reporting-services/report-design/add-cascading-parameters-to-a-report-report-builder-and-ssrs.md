@@ -9,10 +9,10 @@ ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 56f701d86c180b6bb1d10c3c6ffebfbe057eaf7c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65582082"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Aggiunta di parametri di propagazione a un report (Generatore report e SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "65582082"
   
     2.  Un parametro della query per ogni parametro di propagazione. Un parametro della query limita i dati recuperati dall'origine dati specificando determinati valori da includere o escludere dalla query. In genere, i parametri della query si trovano in una clausola di restrizione nella query. In un'istruzione SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] , ad esempio, i parametri della query si trovano nella clausola WHERE.  
   
-6.  Fare clic su **Esegui** (**!**). Dopo aver incluso i parametri della query e aver eseguito la query, verranno creati automaticamente i parametri del report corrispondenti ai parametri della query.  
+6.  Fare clic su **Esegui** ( **!** ). Dopo aver incluso i parametri della query e aver eseguito la query, verranno creati automaticamente i parametri del report corrispondenti ai parametri della query.  
   
     > [!NOTE]  
     >  L'ordine in cui si presentano i parametri della query quando si esegue per la prima volta una query determina anche l'ordine in cui vengono creati nel report. Per modificare l'ordine, vedere [Modificare l'ordine di un parametro del report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
@@ -70,7 +70,7 @@ ms.locfileid: "65582082"
   
      Il comando SELECT DISTINCT rimuove i valori duplicati dal set di risultati in modo che sia possibile ottenere tutti i valori univoci dalla colonna specificata nella tabella indicata.  
   
-     Fare clic su **Esegui** (**!**). Nel set di risultati sono riportati i valori disponibili per il primo parametro.  
+     Fare clic su **Esegui** ( **!** ). Nel set di risultati sono riportati i valori disponibili per il primo parametro.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

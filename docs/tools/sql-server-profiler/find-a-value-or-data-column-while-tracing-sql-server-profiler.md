@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d88810885e1ab3447c561a1aad2f7be049cb7fff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819449"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62712312"
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>Trovare un valore o una colonna di dati durante l'esecuzione di una traccia (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 1fb9daa74abd547f23bc78e76b8c0840e9c54af5
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64775770"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Installare il primo server di report in modalità SharePoint
@@ -62,7 +62,7 @@ ms.locfileid: "64775770"
   
  **Creazione di un'applicazione di servizio Reporting Services**  
   
--   Dopo l'installazione e la registrazione del servizio Reporting Services, creare una o più applicazioni di servizio Reporting Services. L'account di servizio della farm di SharePoint deve essere temporaneamente membro del gruppo di amministratori locali affinché l'applicazione di servizio Reporting Services possa essere creata. Per altre informazioni sulle autorizzazioni per gli account di SharePoint 2013, vedere [Autorizzazioni e impostazioni di sicurezza per gli account in SharePoint Server 2013](https://technet.microsoft.com/library/cc678863.aspx) oppure, per https://technet.microsoft.com/library/cc678863.aspx)SharePoint 2016, vedere [Autorizzazioni e impostazioni di sicurezza per gli account in SharePoint Server 2016](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx).  
+-   Dopo l'installazione e la registrazione del servizio Reporting Services, creare una o più applicazioni di servizio Reporting Services. L'account di servizio della farm di SharePoint deve essere temporaneamente membro del gruppo di amministratori locali affinché l'applicazione di servizio Reporting Services possa essere creata. Per altre informazioni sulle autorizzazioni per gli account di SharePoint 2013, vedere [Autorizzazioni e impostazioni di sicurezza per gli account in SharePoint Server 2013](https://technet.microsoft.com/library/cc678863.aspx) oppure, per https://technet.microsoft.com/library/cc678863.aspx) SharePoint 2016, vedere [Autorizzazioni e impostazioni di sicurezza per gli account in SharePoint Server 2016](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx).  
   
      Per motivi di sicurezza è consigliabile che gli account amministratori di farm di SharePoint non siano anche account amministratori del sistema operativo locale. Se si aggiunge un account amministratore di farm al gruppo di amministratori locali durante il processo di installazione, è consigliabile rimuoverlo al termine dell'installazione.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "64775770"
   
      Fare clic su **Avanti**.  
 
-5.  È consigliabile selezionare **Usa Microsoft Update per verificare la disponibilità di aggiornamenti (scelta consigliata)**. Operazione facoltativa.
+5.  È consigliabile selezionare **Usa Microsoft Update per verificare la disponibilità di aggiornamenti (scelta consigliata)** . Operazione facoltativa.
   
      Fare clic su **Avanti**.   
   

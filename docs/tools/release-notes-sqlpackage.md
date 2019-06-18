@@ -11,11 +11,11 @@ author: pensivebrian
 ms.author: broneill
 manager: kenvh
 ms.openlocfilehash: 411a2cf4c9a3170e9fb3a3dc7709d8b3882f066b
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59670867"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63183697"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Note sulla versione per SqlPackage.exe
 

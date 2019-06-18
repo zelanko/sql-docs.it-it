@@ -9,10 +9,10 @@ ms.assetid: 0b297c2e-d48b-41b0-aabd-29680cdcdb05
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8982b9fb6312f3d3c14b4a4e009a81b51c435914
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581893"
 ---
 # <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>Aggiunta di grafici sparkline e barre dei dati (Generatore report e SSRS)
@@ -37,9 +37,9 @@ ms.locfileid: "65581893"
   
      Viene visualizzato il riquadro **Dati grafico** .  
   
-6.  Nell'area **Valori** fare clic sul segno più ( **) di** Aggiungi campi**+** e selezionare il campo contenente i valori che si vuole inserire in formato grafico.  
+6.  Nell'area **Valori** fare clic sul segno più ( **) di** Aggiungi campi **+** e selezionare il campo contenente i valori che si vuole inserire in formato grafico.  
   
-7.  Nell'area **Gruppi di categorie** fare clic sul segno più ( **) di** Aggiungi campi**+** e selezionare il campo contenente i valori in base ai quali si vuole raggruppare.  
+7.  Nell'area **Gruppi di categorie** fare clic sul segno più ( **) di** Aggiungi campi **+** e selezionare il campo contenente i valori in base ai quali si vuole raggruppare.  
   
      In genere per i grafici sparkline e per le barre dei dati, non viene aggiunto un campo all'area **Gruppo serie** in quanto si desidera una sola serie per ogni riga.  
   

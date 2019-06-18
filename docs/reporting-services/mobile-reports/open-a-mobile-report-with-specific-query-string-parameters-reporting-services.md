@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 4eeb3204-e207-4ac0-aff3-bfc4926e5754
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ca74d2d606dfddf394b0c7a32e8fe7d50f210934
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7204574d10b674c7cea4e08fb570c3550fe33e03
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296025"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62500013"
 ---
 # <a name="open-a-mobile-report-with-specific-query-string-parameters--reporting-services"></a>Aprire un report per dispositivi mobili con parametri della stringa di query specifici | Reporting Services
 Se si ha un report per dispositivi mobili [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] con parametri e [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] come origine dati, è possibile includere i parametri della stringa di query nell'URL del report in modo che si apra automaticamente con i valori specificati. 
@@ -27,11 +27,11 @@ Se si ha un report per dispositivi mobili [!INCLUDE[ssRSnoversion_md](../../incl
     
 2.  La sintassi dell'URL dipende dall'origine dati. 
 
-     **Se l'origine dati è SQL Server Analysis Services**: Creare un URL con un parametro della stringa di query in questo formato:
+     **Se l'origine dati è SQL Server Analysis Services**: compilare un URL con parametro della stringa di query nel formato seguente:
 
     `https://<servername>/reports/<report-folder-name>/<report-name>?<dataset-name>.<field-name>=<parameter-value>`
 
-    Ad esempio
+    Esempio:
     
     `https://sampleserver/reports/adventureworks-reports/adventureworks-load-on-demand?TimeChartLoD.category=Clothing` 
     
@@ -39,7 +39,7 @@ Se si ha un report per dispositivi mobili [!INCLUDE[ssRSnoversion_md](../../incl
 
     `https://<servername>/reports/<report-folder-name>/<report-name>?<dataset-name>.@<field-name>=<parameter-value>`
 
-    Ad esempio
+    Esempio:
     
       `https://sampleserver/reports/adventureworks-reports/adventureworks-load-on-demand?TimeChartLoD.@category=Clothing` 
 

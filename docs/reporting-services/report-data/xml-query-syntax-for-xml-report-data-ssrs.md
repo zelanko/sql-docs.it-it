@@ -14,10 +14,10 @@ ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3fc3cddc10dd53225867b910b8a3b3cb9c73d6ca
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574852"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Sintassi di query XML per i dati del report XML (SSRS)
@@ -38,7 +38,7 @@ ms.locfileid: "65574852"
  Per un endpoint servizio Web a cui punta un URL della stringa di connessione, l'elemento **Query** XML definisce l'azione SOAP o il metodo del servizio Web oppure entrambi. Tramite il provider di dati XML viene creata una richiesta del servizio Web per recuperare i dati XML da utilizzare per il report.  
   
 > [!NOTE]  
->  Quando uno spazio dei nomi del servizio Web contiene una barra (**/)** , includere sia il metodo del servizio Web che l'azione SOAP, per consentire all'estensione per l'elaborazione dati XML di derivare lo spazio dei nomi in modo corretto.  
+>  Quando uno spazio dei nomi del servizio Web contiene una barra ( **/)** , includere sia il metodo del servizio Web che l'azione SOAP, per consentire all'estensione per l'elaborazione dati XML di derivare lo spazio dei nomi in modo corretto.  
   
  Per un documento XML incorporato, l'elemento **Query** XML definisce i dati XML incorporati da usare, include gli spazi dei nomi facoltativi e contiene un elemento **ElementPath**XML facoltativo.  
   

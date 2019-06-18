@@ -9,10 +9,10 @@ ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d748e302606370152fc0c87ac47c350e11f39e9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574832"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>Aggiungere un filtro (Generatore report e SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "65574832"
   
 1.  Aprire un report in visualizzazione **Progettazione** .  
   
-2.  Selezionare l'area dati nell'area di progettazione e quindi fare clic con il pulsante destro del mouse su _\<area dati>_**Proprietà**. Per un misuratore, selezionare **Proprietà pannello del misuratore**. Viene visualizzata la finestra di dialogo _\<area dati>_**Proprietà**.  
+2.  Selezionare l'area dati nell'area di progettazione e quindi fare clic con il pulsante destro del mouse su _\<area dati>_ **Proprietà**. Per un misuratore, selezionare **Proprietà pannello del misuratore**. Viene visualizzata la finestra di dialogo _\<area dati>_ **Proprietà**.  
   
     > [!NOTE]  
     >  In un'area dati Tablix fare clic con il pulsante destro del mouse sulla cella d'angolo oppure sull'handle di una riga o colonna e quindi scegliere **Proprietà Tablix**.  

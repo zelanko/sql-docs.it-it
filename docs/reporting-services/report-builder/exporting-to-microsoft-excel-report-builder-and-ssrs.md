@@ -9,10 +9,10 @@ ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9973ce2f9c5eac344307258e1c212979146c1695
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580780"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Esportazione in Microsoft Excel (Generatore report e SSRS)
@@ -169,7 +169,7 @@ ms.locfileid: "65580780"
 |Proprietà|Excel 2003|Excel corrente|  
 |--------------|----------------|-------------------|  
 |Numero massimo di colonne per foglio di lavoro|256|16,384|  
-|Numero massimo di righe per foglio di lavoro|65,536|1.048.576|  
+|Numero massimo di righe per foglio di lavoro|65,536|1\.048.576|  
 |Numero di colori consentito in un foglio di lavoro|56 (tavolozza)<br /><br /> Se nel report vengono usati più di 56 colori, l'estensione per il rendering abbina il colore desiderato a uno dei 56 colori già disponibili nella tavolozza personalizzata.|Circa 16 milioni (colore a 24 bit)|  
 |File compressi ZIP|None|Compressione ZIP|  
 |Famiglia di caratteri predefinita|Arial|Calibri|  

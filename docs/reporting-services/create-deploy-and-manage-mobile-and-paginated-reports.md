@@ -16,10 +16,10 @@ ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 26fa81278afd686d25192fdd49bbc3f2119a5762
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571564"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>Che cos'è SQL Server Reporting Services (SSRS)?
@@ -110,7 +110,7 @@ Per altre informazioni, vedere [Server di report di Reporting Services in modali
 
 ::: moniker-end
 
-## <a name="includessrsnoversionincludesssrsnoversion-mdmd-programming-features"></a>Funzionalità di programmazione di[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 
+## <a name="includessrsnoversionincludesssrsnoversion-mdmd-programming-features"></a>Funzionalità di programmazione di[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]
 
 Sfruttando le funzionalità di programmazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è possibile estendere e personalizzare le funzionalità di creazione di report. Usare le API di SSRS per integrare o estendere l'elaborazione di dati e report in applicazioni personalizzate.
 

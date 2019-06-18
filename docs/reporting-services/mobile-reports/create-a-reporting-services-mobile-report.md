@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d3e35d889db2cbfa8eaead8f1f0e9a2015e007b5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b3fd0fc3530ec35da61e2314ef7a80a58d9bdd7d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295204"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63316427"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Creare un report per dispositivi mobili di Reporting Services
 Con SQL Server Mobile Report Publisher è possibile creare rapidamente report per dispositivi mobili di SQL Server Reporting Services che si adattano alle dimensioni di qualsiasi schermo, in un'area di progettazione con righe e colonne della griglia di dimensioni variabili ed elementi flessibili dei report per dispositivi mobili.  

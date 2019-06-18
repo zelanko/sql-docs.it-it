@@ -11,14 +11,14 @@ helpviewer_keywords:
 - methods [Reporting Services], about methods
 - methods [Reporting Services]
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b09f9e6d9700a56eaa36ddd40ad038fd291c6058
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 678c987e2297c7345dd347957e395b9c4c81544e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848129"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284594"
 ---
 # <a name="report-server-namespace-management-methods"></a>Metodi di gestione dello spazio dei nomi del server di report
   Il servizio Web di gestione del server report include metodi che è possibile utilizzare per gestire report, cartelle e risorse nel database del server di report.  

@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 6e1b69fc176281e9be65ca7a9766fc8fb270a3de
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580083"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gestire un'applicazione di servizio SharePoint di Reporting Services
@@ -146,7 +146,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  Selezionare questa opzione per specificare un account.  
   
  **Account**  
- Immettere un account utente di dominio di Windows. Usare questo formato: *\<domini>\\<account utente\>*.  
+ Immettere un account utente di dominio di Windows. Usare questo formato: *\<domini>\\<account utente\>* .  
   
  **Password**  
  Digitare la password.  

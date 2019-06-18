@@ -9,10 +9,10 @@ ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1ed33d00286119c63042680cfd6d2bd414d58098
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581833"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Grafici a barre (Generatore report e SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "65581833"
   
 -   **In pila**. Grafico a barre con più serie impilate in verticale. Se il grafico contiene una sola serie, il grafico a barre in pila verrà visualizzato come grafico a barre.  
   
--   **In pila 100%**. Grafico a barre con più serie impilate in verticale per occupare il 100% dell'area del grafico. Se il grafico contiene una sola serie, tutte le barre si adatteranno al 100% dell'area del grafico.  
+-   **In pila 100%** . Grafico a barre con più serie impilate in verticale per occupare il 100% dell'area del grafico. Se il grafico contiene una sola serie, tutte le barre si adatteranno al 100% dell'area del grafico.  
   
 -   **Cluster 3D**. Grafico a barre con le singole serie visualizzate in righe distinte in un grafico 3D.  
   

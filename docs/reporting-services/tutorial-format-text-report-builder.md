@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 42d55cf53d282b2c092769cf4435fd240ba0cbce
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579341"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63043042"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Esercitazione: Formattazione di testo (Generatore report)
 
@@ -111,7 +111,7 @@ Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;G
     UNION SELECT CAST('2015-01-06' AS date) as SalesDate, 'Fernando Ross' as FullName,'South' as Territory, 'Digital' as Subcategory, 'Slim Digital' as Product, CAST(6648.25 AS money) AS Sales, 35 as Quantity, 'What is New in Reporting Services (SSRS)' as Link, 'https://go.microsoft.com/fwlink/?LinkId=165064' AS URL  
     ```  
   
-7.  Scegliere Esegui (**!**) per eseguire la query.  
+7.  Scegliere Esegui ( **!** ) per eseguire la query.  
   
     I risultati della query corrispondono ai dati disponibili per la visualizzazione nel report.  
   
@@ -179,7 +179,7 @@ Creare questa tabella per avere un elemento in cui inserire i collegamenti ipert
   
 1.  Nella scheda **Inserisci** > **Tabella** > **Creazione guidata Tabella**.  
   
-2.  Nella pagina **Scegliere un set di dati** della Creazione guidata tabella o matrice fare clic su **Scegli un set di dati esistente in questo report o un set di dati condiviso** > **TextDataset (in questo report)** > **Avanti**.  
+2.  Nella pagina **Scegliere un set di dati** della Creazione guidata tabella o matrice fare clic su **Scegli un set di dati esistente in questo report o un set di dati condiviso** > **TextDataset (in questo report)**  > **Avanti**.  
   
 3.  Nella pagina **Disponi campi** trascinare i campi **Territory**, **LinkText**e **Product** in **Gruppi di righe**, trascinare il campo **Sales** in **Valori**, quindi fare clic su **Avanti**.  
 
@@ -218,7 +218,7 @@ In questa sezione si aggiungerà un collegamento ipertestuale al testo incluso n
   
 3.  Nella scheda **Azione** fare clic su **Vai a URL**.  
   
-5.  Nella casella **Seleziona un URL** fare clic su **[URL]**, quindi scegliere **OK**.  
+5.  Nella casella **Seleziona un URL** fare clic su **[URL]** , quindi scegliere **OK**.  
   
 6.  Si noti che il testo non presenta alcuna differenza. È necessario renderlo simile al testo di un collegamento.  
   
@@ -254,7 +254,7 @@ In questa sezione si ruoterà parte del testo incluso nella tabella creata nelle
    
 6.  Nella scheda **Home** della sezione **Paragrafo** selezionare **Al centro** e **Al centro** per posizionare il testo al centro delle celle sia verticalmente sia orizzontalmente.  
   
-8.  Fare clic su Esegui (**!**).  
+8.  Fare clic su Esegui ( **!** ).  
   
 Il testo incluso nella cella `[Territory]` scorre ora verticalmente dal basso verso l'alto delle celle.  
 
@@ -268,13 +268,13 @@ Il testo incluso nella cella `[Territory]` scorre ora verticalmente dal basso ve
   
 3.  Nella scheda **Home** > gruppo **Numero** > pulsante **Valuta**.  
   
-4.  (Facoltativo)     Se l'impostazione locale è Inglese (Stati Uniti), il testo dell'esempio predefinito è [**$12,345.00**]. Se non viene visualizzato un valore di valuta di esempio, fare clic su **Stili segnaposto** Valori di esempio **nel gruppo** > **Numeri**.  
+4.  (Facoltativo)     Se l'impostazione locale è Inglese (Stati Uniti), il testo dell'esempio predefinito è [ **$12,345.00**]. Se non viene visualizzato un valore di valuta di esempio, fare clic su **Stili segnaposto** Valori di esempio **nel gruppo** > **Numeri**.  
 
     ![report-generatore-segnaposto-valore-pulsante](../reporting-services/media/report-builder-placeholder-value-button.png)
   
 5.  (Facoltativo) Nel gruppo **Numero** della scheda **Home** fare clic due volte sul pulsante **Diminuisci decimali** per visualizzare le cifre in dollari senza centesimi.  
   
-6.  Fare clic su Esegui (**!**) per visualizzare l'anteprima del report.  
+6.  Fare clic su Esegui ( **!** ) per visualizzare l'anteprima del report.  
   
 Nel report verranno visualizzati i dati formattati che rendono più facile la lettura.  
 
@@ -316,7 +316,7 @@ Nel report verranno visualizzati i dati formattati che rendono più facile la le
   
 7.  Fare clic su **OK**.  
   
-8.  Fare clic su Esegui (**!**) per visualizzare l'anteprima del report.  
+8.  Fare clic su Esegui ( **!** ) per visualizzare l'anteprima del report.  
   
 Il testo nella casella di testo viene visualizzato come un'intestazione, un paragrafo e un elenco puntato.  
   

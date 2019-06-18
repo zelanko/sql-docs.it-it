@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a1dff1baf3d6a7cba7d1fc17f8febf6feeb68c3a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292219"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63295922"
 ---
 # <a name="tutorial-introducing-expressions"></a>Esercitazione: Introduzione alle espressioni
 In questa esercitazione di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] vengono usate espressioni e operatori comuni per creare report impaginati di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] potenti e flessibili. 
@@ -89,7 +89,7 @@ In questa sezione vengono creati un report tabella, un'origine dati e un set di 
     ```  
 
   
-10. Nella barra degli strumenti Progettazione query fare clic su **Esegui** (**!**). Nel set di risultati vengono visualizzate 23 righe di dati con le colonne seguenti: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase e LastPurchase.  
+10. Nella barra degli strumenti Progettazione query fare clic su **Esegui** ( **!** ). Nel set di risultati vengono visualizzate 23 righe di dati nelle colonne seguenti: Nome, Cognome, Paese/Regione, ID Paese/Regione, Sesso, Acquisti da inizio anno e Ultimo acquisto.  
 
     ![Generatore-report-espressione-esercitazione-query-come-testo](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
@@ -147,7 +147,7 @@ In questa sezione vengono creati un report tabella, un'origine dati e un set di 
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="Concatenate"></a>3. Visualizzare iniziale nome e cognome  
-In questa sezione, viene usata la funzione **Left** e l'operatore di **concatenazione** (**&**) in un'espressione tramite cui vengono restituiti un'iniziale del nome e un cognome. È possibile compilare l'espressione passaggio dopo passaggio oppure andare avanti nella procedura e copiare e incollare l'espressione dall'esercitazione nella finestra di dialogo **Espressione** .   
+In questa sezione, viene usata la funzione **Left** e l'operatore di **concatenazione** ( **&** ) in un'espressione tramite cui vengono restituiti un'iniziale del nome e un cognome. È possibile compilare l'espressione passaggio dopo passaggio oppure andare avanti nella procedura e copiare e incollare l'espressione dall'esercitazione nella finestra di dialogo **Espressione** .   
   
 1.  Fare clic con il pulsante destro del mouse sulla colonna **StateProvince** , scegliere **Inserisci colonna**e fare clic su **A sinistra**.  
   
@@ -169,7 +169,7 @@ In questa sezione, viene usata la funzione **Left** e l'operatore di **concatena
     
     ![Generatore- report- espressione-esercitazione-left-funzione](../reporting-services/media/report-builder-expression-tutorial-left-function.png)
   
-6.  Nell'elenco **Categoria** fare clic su **Fields (Expressions)**.  
+6.  Nell'elenco **Categoria** fare clic su **Fields (Expressions)** .  
   
 7.  Nell'elenco **Valori** fare doppio clic su **FirstName**.  
   
@@ -263,7 +263,7 @@ Per conservare il colore che è stato applicato alla cella della tabella durante
   
 4.  Nell'elenco **Elemento** fare doppio clic su **Switch**.  
   
-5.  Nell'elenco **Categoria** fare clic su **Fields (Expressions)**.  
+5.  Nell'elenco **Categoria** fare clic su **Fields (Expressions)** .  
   
 6.  Nell'elenco **Valori** fare doppio clic su **Gender**.  
   
@@ -345,7 +345,7 @@ In questa sezione viene creato un set di dati PaeseRegione e viene usata la funz
     UNION SELECT 12 AS ID, 'United Kingdom' AS CountryRegion  
     ```  
   
-9. Scegliere **Esegui** (**!**) per eseguire la query.  
+9. Scegliere **Esegui** ( **!** ) per eseguire la query.  
   
     I risultati query sono i nomi e gli identificatori di paesi.  
   
@@ -357,7 +357,7 @@ In questa sezione viene creato un set di dati PaeseRegione e viene usata la funz
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>Per cercare valori nel set di dati CountryRegion  
   
-1.  Fare clic sul titolo di colonna **Country Region ID** ed eliminare il testo: **ID**, in modo che si legga **Country Region**.  
+1.  Fare clic sull'intestazione della colonna **ID Paese/Regione** ed eliminare il testo : **ID**in modo che si legga **Paese/Regione**.  
   
 2.  Fare clic con il pulsante destro del mouse sulla cella di dati per la colonna **Country Region** e scegliere **Espressione**.  
   

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9143f1d8ce6ff530ef30f7dbfcd1ca599572e5ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676559"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63001598"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lezione 2: Utilizzo dello strumento Ottimizzazione guidata motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ Per individuare la migliore struttura fisica di database per l'esecuzione di que
 
   ![Opzioni di ottimizzazione di Ottimizzazione guidata motore di database](media/dta-tutorials/dta-tuning-options.png)
   
-7.  Fare clic sul pulsante **Avvia analisi** sulla barra degli strumenti. Durante l'esecuzione dell'analisi del carico di lavoro da parte di Ottimizzazione guidata motore di database, è possibile monitorarne lo stato nella scheda **Stato** . Dopo aver completato l'ottimizzazione, verrà visualizzata la scheda **Indicazioni**.  
+7.  Fare clic sul pulsante **Avvia analisi** sulla barra degli strumenti. Durante l'esecuzione dell'analisi del carico di lavoro da parte di Ottimizzazione guidata motore di database, è possibile monitorarne lo stato nella scheda **Stato** . Dopo aver completato l'ottimizzazione, verrà visualizzata la scheda **Indicazioni** .  
   
     Se viene visualizzato un errore relativo alla data e ora di arresto dell'ottimizzazione, controllare l'impostazione **Data e ora arresto** nella scheda principale **Opzioni di ottimizzazione** . Verificare che i valori **Data e ora arresto** siano successivi alla data e all'ora correnti e, se necessario, modificarli.  
 

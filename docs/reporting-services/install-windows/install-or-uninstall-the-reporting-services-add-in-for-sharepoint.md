@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 855991a52d2f531f559620427d4a3fc29fd79f35
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64775970"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>Installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint
@@ -101,7 +101,7 @@ Rssharepoint.msi /?
   
     1.  Passare alla cartella contenente il file eseguibile **rsCustomAction.exe**. Questo file viene copiato nel computer dal programma di installazione di tipo " solo file " del componente aggiuntivo. **rsCustomAction.exe** si trova nella directory **%Temp%** . Per passare al file, al prompt dei comandi digitare:  
   
-         **CD %temp%**.  
+         **CD %temp%** .  
   
          Il file si trova in: **\Users\\<nome utente\>\AppData\Local\Temp**  
   

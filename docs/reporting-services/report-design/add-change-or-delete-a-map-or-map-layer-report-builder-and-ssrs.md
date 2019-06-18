@@ -26,10 +26,10 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 32b0e633aa95ab2d9e4eadea822d10dbfe47d8d3
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65582074"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Aggiungere, modificare o eliminare una mappa o un livello mappa (Generatore report e SSRS)
@@ -178,7 +178,7 @@ ms.locfileid: "65582074"
 4.  In **Opzioni sezioni**selezionare uno stile della sezione. Se sono disponibili le tessere mappa di Bing, il livello sull'area di progettazione viene aggiornato con lo stile selezionato.  
   
     > [!NOTE]  
-    >  Un livello sezione può essere aggiunto anche quando si aggiunge un livello poligono, linea o punto nella Creazione guidata mappa o Creazione guidata livello mappa. Nella pagina **Scegli opzioni di dati spaziali e vista mappa** selezionare l'opzione **Add a Bing Maps background for this map view (Aggiungi sfondo Bing Maps per la vista mappa)**.  
+    >  Un livello sezione può essere aggiunto anche quando si aggiunge un livello poligono, linea o punto nella Creazione guidata mappa o Creazione guidata livello mappa. Nella pagina **Scegli opzioni di dati spaziali e vista mappa** selezionare l'opzione **Add a Bing Maps background for this map view (Aggiungi sfondo Bing Maps per la vista mappa)** .  
   
 ##  <a name="DrawingOrder"></a> Per modificare l'ordine di disegno di un livello  
   

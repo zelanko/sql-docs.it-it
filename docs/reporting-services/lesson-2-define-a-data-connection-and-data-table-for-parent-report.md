@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c2daa3e5ab74a49e5d0e66bfd972cc4b4eff1663
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e8bcfe976a8094c6faa22d8aab3db8a4a833d8cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657795"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62651599"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Lezione 2: Definire una connessione dati e una tabella di dati per il report padre
 Dopo aver creato un nuovo progetto di sito Web utilizzando il modello di sito Web ASP.NET per Visual C#, il passaggio successivo consiste nel creare una connessione dati e una tabella di dati per il report padre. In questa esercitazione la connessione dati è al database AdventureWorks2014.  

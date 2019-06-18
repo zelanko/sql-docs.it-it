@@ -9,10 +9,10 @@ ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 667f150ee0516b4f2ee63161509d6839b21e78e9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581607"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Column Charts (Report Builder and SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "65581607"
   
 -   **In pila**. Istogramma con più serie impilate in verticale. Se il grafico contiene una sola serie, l'istogramma in pila verrà visualizzato come istogramma.  
   
--   **In pila 100%**. Istogramma con più serie impilate in verticale per occupare il 100% dell'area del grafico. Se il grafico contiene una sola serie, tutte le colonne si adatteranno al 100% dell'area del grafico.  
+-   **In pila 100%** . Istogramma con più serie impilate in verticale per occupare il 100% dell'area del grafico. Se il grafico contiene una sola serie, tutte le colonne si adatteranno al 100% dell'area del grafico.  
   
 -   **Cluster 3D**. Istogramma con le singole serie visualizzate in righe distinte in un grafico 3D.  
   

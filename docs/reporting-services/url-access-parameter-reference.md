@@ -12,10 +12,10 @@ ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e5627b752099438ad19f3ba31792f08666abdfe
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65620591"
 ---
 # <a name="url-access-parameter-reference"></a>Riferimento ai parametri di accesso con URL
@@ -35,7 +35,7 @@ ms.locfileid: "65620591"
 -   [Comandi Web part del visualizzatore di report (rv:)](#bkmk_webpart)  
   
 ##  <a name="bkmk_htmlviewer"></a> Comandi del visualizzatore HTML (rc:)  
- - I comandi del visualizzatore HTML vengono usati per individuare il visualizzatore HTML e sono preceduti dal prefisso *rc:*:
+ - I comandi del visualizzatore HTML vengono usati per individuare il visualizzatore HTML e sono preceduti dal prefisso *rc:* :
   
 -   *Toolbar* :  
                   Visualizza o nasconde la barra degli strumenti. Se il valore di questo parametro è **false**, tutte le opzioni rimanenti vengono ignorate. Se si omette questo parametro, la barra degli strumenti viene visualizzata automaticamente nei formati di rendering che la supportano. Il valore predefinito di questo parametro è **true**.  
@@ -276,7 +276,7 @@ ms.locfileid: "65620591"
                   Visualizza o nasconde una sezione del report. Specificare un integer positivo per rappresentare la sezione da attivare o disattivare.  
   
 ##  <a name="bkmk_webpart"></a> Comandi Web part del visualizzatore di report (rv:)  
- I seguenti nomi dei parametri di report riservati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono usati per individuare la web part di Visualizzatore report integrata con SharePoint. Questi nomi di parametro sono preceduti dal prefisso *rv:*. La Web part del visualizzatore di report accetta inoltre il parametro *rs:ParameterLanguage* .  
+ I seguenti nomi dei parametri di report riservati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono usati per individuare la web part di Visualizzatore report integrata con SharePoint. Questi nomi di parametro sono preceduti dal prefisso *rv:* . La Web part del visualizzatore di report accetta inoltre il parametro *rs:ParameterLanguage* .  
   
 -   *Toolbar*: determina la visualizzazione della barra degli strumenti per la web part di Visualizzatore report. Il valore predefinito è **Full**. I valori possibili sono i seguenti.  
   

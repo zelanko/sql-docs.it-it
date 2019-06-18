@@ -8,21 +8,21 @@ ms.topic: reference
 helpviewer_keywords:
 - custom report items, deploying
 ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6315362b4c8d308e3be8d812ccfdeadaa1e7de8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b28d1b2f29dca3ab23ba658c8718173fe5d09779
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717049"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194135"
 ---
 # <a name="how-to-deploy-a-custom-report-item"></a>Procedura: Distribuzione di un elemento del report personalizzato
   Per distribuire un elemento del report personalizzato in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è necessario modificare i file di configurazione del server di report e copiare gli assembly del componente runtime e della fase di progettazione nelle cartelle appropriate dell'applicazione sia per Progettazione report sia per il server di report.  
   
 ### <a name="to-deploy-a-custom-report-item"></a>Per distribuire un elemento del report personalizzato  
   
-1.  Modificare il file Rsreportdesigner.config per configurare i componenti runtime e della modalità progettazione del report personalizzato da utilizzare nella finestra di progettazione. Si noti che **ReportItemName** deve corrispondere all'attributo **CustomReportItemAttribute** usato nella classe **CustomReportItemDesigner**. Ad esempio  
+1.  Modificare il file Rsreportdesigner.config per configurare i componenti runtime e della modalità progettazione del report personalizzato da utilizzare nella finestra di progettazione. Si noti che **ReportItemName** deve corrispondere all'attributo **CustomReportItemAttribute** usato nella classe **CustomReportItemDesigner**. Esempio:  
   
     ```  
     <ReportItems>  
@@ -36,7 +36,7 @@ ms.locfileid: "47717049"
     </ReportItemConverter>  
     ```  
   
-2.  Modificare il file Rsreportserver.config per registrare il componente runtime dell'elemento del report personalizzato. Ad esempio  
+2.  Modificare il file Rsreportserver.config per registrare il componente runtime dell'elemento del report personalizzato. Esempio:  
   
     ```  
     <ReportItems>  
@@ -44,7 +44,7 @@ ms.locfileid: "47717049"
     </ReportItems>  
     ```  
   
-3.  Modificare il file Rsssrvpolicy.config per aggiungere **CodeGroup** che concede le autorizzazioni appropriate all'elemento del report personalizzato. Ad esempio  
+3.  Modificare il file Rsssrvpolicy.config per aggiungere **CodeGroup** che concede le autorizzazioni appropriate all'elemento del report personalizzato. Esempio:  
   
     ```  
     <CodeGroup   

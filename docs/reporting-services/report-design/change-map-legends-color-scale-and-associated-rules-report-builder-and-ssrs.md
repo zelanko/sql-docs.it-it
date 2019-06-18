@@ -32,10 +32,10 @@ ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d8df41eb7c0a0463648898c08091dd8f8c01f29
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581737"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Modificare legende della mappa, scala dei colori e regole associate (Generatore report e SSRS)
@@ -55,7 +55,7 @@ ms.locfileid: "65581737"
   
 #### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>Per modificare la posizione di una legenda rispetto al viewport  
   
-1.  In visualizzazione Struttura fare clic con il pulsante destro del mouse sulla legenda e aprire la pagina **Proprietà** _\<elemento report>_.  
+1.  In visualizzazione Struttura fare clic con il pulsante destro del mouse sulla legenda e aprire la pagina **Proprietà** _\<elemento report>_ .  
   
 2.  In **Posizione**fare clic sulla posizione che specifica il punto in cui visualizzare la legenda rispetto al viewport.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "65581737"
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere _\<tipo di elemento mappa>_**Regola colore**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere _\<tipo di elemento mappa>_ **Regola colore**.  
   
 3.  Fare clic su **Legenda**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "65581737"
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere _\<tipo di elemento mappa>_**Regola colore**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere _\<tipo di elemento mappa>_ **Regola colore**.  
   
 3.  Fare clic su **Applica stile modello**.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "65581737"
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic con il pulsante destro del mouse sul livello che dispone dei dati desiderati e quindi selezionare _\<tipo di elemento mappa>_**Regola colore**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che dispone dei dati desiderati e quindi selezionare _\<tipo di elemento mappa>_ **Regola colore**.  
   
 3.  Fare clic su **Visualizza dati tramite tavolozza colori**.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "65581737"
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic con il pulsante destro del mouse sul livello che dispone dei dati desiderati e quindi selezionare _\<tipo di elemento mappa>_**Regola colore**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che dispone dei dati desiderati e quindi selezionare _\<tipo di elemento mappa>_ **Regola colore**.  
   
 3.  Fare clic su **Visualizza dati tramite intervalli colori**.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "65581737"
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic con il pulsante destro del mouse sul livello che dispone dei dati desiderati e quindi selezionare _\<tipo di elemento mappa>_**Regola colore**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che dispone dei dati desiderati e quindi selezionare _\<tipo di elemento mappa>_ **Regola colore**.  
   
 3.  Fare clic su **Visualizza dati tramite colori personalizzati**.  
   
@@ -187,7 +187,7 @@ ms.locfileid: "65581737"
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic con il pulsante destro del mouse sul livello che dispone dei dati desiderati e quindi selezionare _\<tipo di elemento mappa>_**Regola colore**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che dispone dei dati desiderati e quindi selezionare _\<tipo di elemento mappa>_ **Regola colore**.  
   
 3.  Selezionare l'opzione **Visualizza dati tramite** \<tipo di regola>. Per usare le opzioni di distribuzione, è necessario creare intervalli nella pagina **Distribuzione** in base ai dati analitici associati al livello.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "65581737"
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere **Regola** _\<tipo di elemento mappa>_.  
+2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere **Regola** _\<tipo di elemento mappa>_ .  
   
 3.  Verificare che l'opzione **Visualizza dati tramite** \<*tipo di regola*> sia selezionata.  
   
@@ -240,7 +240,7 @@ ms.locfileid: "65581737"
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic con il pulsante destro del mouse sul livello che dispone dei dati desiderati e quindi selezionare _\<tipo di elemento mappa>_**Regola colore**.  
+2.  Fare clic con il pulsante destro del mouse sul livello che dispone dei dati desiderati e quindi selezionare _\<tipo di elemento mappa>_ **Regola colore**.  
   
 3.  Selezionare l'opzione della regola colore da utilizzare. Per visualizzare gli elementi in una legenda della mappa o in una scala dei colori, è necessario selezionare una delle opzioni **Visualizza dati tramite** tipo di regola>\<.  
   
@@ -261,7 +261,7 @@ ms.locfileid: "65581737"
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere **Regola** _\<tipo di elemento mappa>_.  
+2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere **Regola** _\<tipo di elemento mappa>_ .  
   
 3.  Fare clic su **Legenda**.  
   
@@ -274,7 +274,7 @@ ms.locfileid: "65581737"
   
 1.  In visualizzazione struttura fare clic sulla mappa finché non viene visualizzato il riquadro della mappa.  
   
-2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere **Regola** _\<tipo di elemento mappa>_.  
+2.  Fare clic con il pulsante destro del mouse sul livello che contiene i dati desiderati e quindi scegliere **Regola** _\<tipo di elemento mappa>_ .  
   
 3.  Fare clic su **Legenda**.  
   

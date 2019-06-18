@@ -11,10 +11,10 @@ ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5e134c81fd697d4aa6fc7e5b620c1a71ff462b73
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573200"
 ---
 # <a name="configure-data-source-properties-for-a-paginated-report"></a>Configurare le proprietà delle origini dati per un report impaginato
@@ -26,7 +26,7 @@ ms.locfileid: "65573200"
   
 1.  Nel portale Web passare al report per il quale si vuole configurare un'origine dati specifica del report.  
   
-3.  Selezionare i puntini di sospensione (**...**) nell'angolo superiore destro > **Gestisci**.  
+3.  Selezionare i puntini di sospensione ( **...** ) nell'angolo superiore destro > **Gestisci**.  
   
 4.  Fare clic sulla scheda **Origini dati** . Verrà visualizzata la pagina delle proprietà dell'origine dati del report.  
   

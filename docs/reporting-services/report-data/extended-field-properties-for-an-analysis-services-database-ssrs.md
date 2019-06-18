@@ -9,10 +9,10 @@ ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d315aa1c5037e27d5c48e1ee03addef35cbc22df
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573314"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Proprietà di campo estese per un database di Analysis Services (SSRS)
@@ -44,7 +44,7 @@ ms.locfileid: "65573314"
 |------------------|--------------|---------------------------------------|  
 |**Value**|**Oggetto**|Specifica il valore dei dati del campo.|  
 |**IsMissing**|**Boolean**|Indica se il campo è stato trovato nel set di dati risultante.|  
-|**UniqueName**|**String**|Restituisce il nome completo di un livello. Ad esempio, il valore **UniqueName** per un dipendente può essere *[Dipendente].[Reparto dipendente].[Reparto].&[Vendite].&[Responsabile vendite Nord America].&[272]*.|  
+|**UniqueName**|**String**|Restituisce il nome completo di un livello. Ad esempio, il valore **UniqueName** per un dipendente può essere *[Dipendente].[Reparto dipendente].[Reparto].&[Vendite].&[Responsabile vendite Nord America].&[272]* .|  
 |**BackgroundColor**|**String**|Restituisce il colore di sfondo definito nel database per il campo.|  
 |**Colore**|**String**|Restituisce il colore di primo piano definito nel database per l'elemento.|  
 |**FontFamily**|**String**|Restituisce il nome del tipo di carattere definito nel database per l'elemento.|  

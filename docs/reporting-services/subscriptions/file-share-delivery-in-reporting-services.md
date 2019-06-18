@@ -12,10 +12,10 @@ ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 181f349f4dc878f0612cf6635143469c2cbe3f34
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65575994"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Recapito tramite condivisione file in Reporting Services
@@ -72,7 +72,7 @@ ms.locfileid: "65575994"
   
  **Sovrascrittura:** è possibile specificare le opzioni di sovrascrittura per riusare lo stesso nome file per tutti i recapiti di report oppure per creare un nuovo file. Per sovrascrivere il file, è necessario utilizzare lo stesso nome file e la stessa estensione.  
   
- Un modo alternativo per creare file univoci per ogni recapito consiste nell'includere un timestamp nel nome file. A tale scopo, aggiungere la variabile **@timestamp** al nome file, ad esempio *CompanySales@timestamp*. In tal modo il nome file sarà univoco per definizione e non verrà mai sovrascritto.  
+ Un modo alternativo per creare file univoci per ogni recapito consiste nell'includere un timestamp nel nome file. A tale scopo, aggiungere la variabile **@timestamp** al nome file, ad esempio *CompanySales@timestamp* . In tal modo il nome file sarà univoco per definizione e non verrà mai sovrascritto.  
   
  L'immagine seguente riporta un esempio delle impostazioni per una sottoscrizione configurata per il recapito della condivisione file.  
   

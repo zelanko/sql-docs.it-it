@@ -11,10 +11,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/08/2019
 ms.openlocfilehash: 37c3c8b874534f3a8a649d438b26b0ee133cb371
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65993855"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novità di SQL Server Reporting Services (SSRS)
@@ -29,7 +29,7 @@ Per informazioni su Server di report di Power BI, vedere [Che cos'è Server di r
 
 **Scarica** ![download](../analysis-services/media/download.png "download")
 
-Per scaricare SQL Server 2017 Reporting Services, accedere all'**[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=55252)**.
+Per scaricare SQL Server 2017 Reporting Services, accedere all' **[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=55252)** .
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 

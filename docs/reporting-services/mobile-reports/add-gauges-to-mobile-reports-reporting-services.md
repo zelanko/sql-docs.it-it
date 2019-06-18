@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1740846b348449cc1a2d4e072255a1339b96c478
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 90440119ec21cbfe97096b439e61074c7e515e00
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288549"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63280552"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Aggiungere indicatori ai report per dispositivi mobili | Reporting Services
 I misuratori sono gli oggetti visivi più semplici e più usati nei report per dispositivi mobili. Visualizzano un singolo valore in un set di dati: soltanto il valore oppure il valore rispetto a un obiettivo.

@@ -9,10 +9,10 @@ ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e5a622aaca18bed1cda8c4ad8a1a1dec8f91849
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580667"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Salvare i report in un server di report (Generatore report)
@@ -23,7 +23,7 @@ ms.locfileid: "65580667"
   
 ### <a name="to-save-a-report-to-a-report-server"></a>Per salvare un report in un server di report  
   
-1.  Dal pulsante Generatore report fare clic su **Salva**. Viene visualizzata la finestra di dialogo **Salva con nome**_\<Elemento del report>_.  
+1.  Dal pulsante Generatore report fare clic su **Salva**. Viene visualizzata la finestra di dialogo **Salva con nome** _\<Elemento del report>_ .  
   
     > [!NOTE]  
     >  Se si sta salvando di nuovo un report, questo viene automaticamente risalvato nel relativo percorso precedente. Utilizzare l'opzione Salva con nome per modificare il percorso.  
@@ -38,7 +38,7 @@ ms.locfileid: "65580667"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>Per salvare un report con un altro nome  
   
-1.  Dal pulsante Generatore report fare clic su **Salva con nome**. Viene visualizzata la finestra di dialogo **Salva con nome**_\<Elemento del report>_.  
+1.  Dal pulsante Generatore report fare clic su **Salva con nome**. Viene visualizzata la finestra di dialogo **Salva con nome** _\<Elemento del report>_ .  
   
 2.  Passare al percorso del server di report o alla condivisione file in cui si desidera salvare il report.  
   

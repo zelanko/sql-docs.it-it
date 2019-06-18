@@ -11,14 +11,14 @@ ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cd0b847ba4ebaa2d669927abe0665b18a2d517bc
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65579169"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Utilizzo delle espressioni nei report (Generatore report e SSRS)
-Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] le espressioni sono usate nella definizione del report per specificare o calcolare valori per parametri, query, filtri, proprietà degli elementi del report, definizioni di gruppo e di ordinamento, proprietà delle caselle di testo, segnalibri, mappe documento, contenuto dinamico dell'intestazione e del piè di pagina, immagini e definizioni delle origini dati dinamiche. In questo argomento vengono forniti esempi delle numerose posizioni in cui è possibile utilizzare le espressioni per modificare il contenuto o l'aspetto di un report. Non si tratta tuttavia di un elenco completo. È possibile impostare un'espressione per qualsiasi proprietà in una finestra di dialogo che contiene il pulsante di espressione (**fx**) o in un elenco a discesa in cui è visualizzato **\<Espressione...>**.  
+Nei report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] le espressioni sono usate nella definizione del report per specificare o calcolare valori per parametri, query, filtri, proprietà degli elementi del report, definizioni di gruppo e di ordinamento, proprietà delle caselle di testo, segnalibri, mappe documento, contenuto dinamico dell'intestazione e del piè di pagina, immagini e definizioni delle origini dati dinamiche. In questo argomento vengono forniti esempi delle numerose posizioni in cui è possibile utilizzare le espressioni per modificare il contenuto o l'aspetto di un report. Non si tratta tuttavia di un elenco completo. È possibile impostare un'espressione per qualsiasi proprietà in una finestra di dialogo che contiene il pulsante di espressione (**fx**) o in un elenco a discesa in cui è visualizzato **\<Espressione...>** .  
   
  Le espressioni possono essere semplici o complesse. Le*espressioni semplici* contengono un riferimento a un solo campo del set di dati, un solo parametro o un solo campo predefinito. Le espressioni complesse possono contenere più riferimenti incorporati, operatori e chiamate di funzione. Ad esempio, un'espressione complessa potrebbe includere la funzione Sum applicata al campo Sales.  
   

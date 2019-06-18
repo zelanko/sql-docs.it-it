@@ -9,14 +9,14 @@ helpviewer_keywords:
 - URL access [Reporting Services], about URL access
 - integrating reports [Reporting Services]
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 802708b1b630a42fe23860a906335e540e6c70f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c9609802daff2f5040974deaa5793e7bceb8fcbc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752599"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62660516"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>Integrazione di Reporting Services tramite l'accesso con URL
   L'accesso con URL consente di accedere ai report tramite un URL del server di report. Una richiesta URL consente di accedere a un server di report specifico, nonché ai report, alle risorse e agli altri elementi presenti nel database del server di report. È anche possibile personalizzare la visualizzazione del report e l'esperienza di navigazione per gli utenti. La stringa di query dell'URL contiene le impostazioni relative alle informazioni sul dispositivo, nonché i parametri del report e l'output di rendering scelto. Il modo in cui le richieste URL vengono gestite dal server di report dipende dai parametri, dai prefissi di parametro e dal tipo di elemento a cui si accede tramite l'URL.  

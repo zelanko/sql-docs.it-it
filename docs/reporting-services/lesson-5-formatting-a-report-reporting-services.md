@@ -9,10 +9,10 @@ ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a8bf8b6814f7989a904507cd89fbea397b8b6930
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105932"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lezione 5: Formattazione di un report (Reporting Services)
@@ -40,7 +40,7 @@ L'espressione del campo LineTotal visualizza un numero generico. È possibile fo
     - **Cifre decimali: 2**
     - **Numeri negativi: (€12345,00)**
     - **Simbolo: € italiano**
-4. Selezionare **Usa separatore delle migliaia (,)**. Se il testo di esempio visualizzato è **€12.345,00**, le impostazioni sono corrette.
+4. Selezionare **Usa separatore delle migliaia (,)** . Se il testo di esempio visualizzato è **€12.345,00**, le impostazioni sono corrette.
 5. Selezionare **OK** per applicare la formattazione.
 6. Visualizzare l'anteprima del report per verificare la modifica apportata alla colonna dell'espressione `[LineTotal]` e quindi tornare alla visualizzazione Progettazione.  
 

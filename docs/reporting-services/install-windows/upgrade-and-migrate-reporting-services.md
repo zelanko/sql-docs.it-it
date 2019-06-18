@@ -13,10 +13,10 @@ manager: kfile
 ms.topic: conceptual
 ms.date: 08/17/2017
 ms.openlocfilehash: dc205f966d0e5556f8dc6f722190d477b5d89327
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570740"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
@@ -84,7 +84,7 @@ ms.locfileid: "65570740"
   
 -   Eseguire il backup di eventuali personalizzazioni nelle directory virtuali di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] esistenti in IIS.  
   
--   Rimuovere certificati SSL non validi.  In questa operazione sono inclusi i certificati scaduti e quelli che non si intende aggiornare prima dell'aggiornamento di Reporting Services.  I certificati non validi causano l'esito negativo dell'aggiornamento e un messaggio di errore simile al seguente verrà scritto nel file di registro di Reporting Services: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: Nel sito Web non è configurato un certificato SSL (Secure Sockets Layer)**.  
+-   Rimuovere certificati SSL non validi.  In questa operazione sono inclusi i certificati scaduti e quelli che non si intende aggiornare prima dell'aggiornamento di Reporting Services.  I certificati non validi causano l'esito negativo dell'aggiornamento e un messaggio di errore simile al seguente verrà scritto nel file di registro di Reporting Services: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: Nel sito Web non è configurato un certificato SSL (Secure Sockets Layer)** .  
   
  Prima di aggiornare un ambiente di produzione, eseguire sempre un aggiornamento di prova in un ambiente di pre-produzione che abbia la stessa configurazione dell'ambiente di produzione.  
   

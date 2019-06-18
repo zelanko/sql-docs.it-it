@@ -8,14 +8,14 @@ ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: dcd5aab378463274c8856241a948360c9ec2f72e
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: eb7c8687d1fa873c3439288a138f2d8af3778eee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813034"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194801"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Utilizzo del controllo Web Form ReportViewer
   Per visualizzare i report distribuiti in un server di report o presenti in un file system locale, è possibile utilizzare il controllo Web Form ReportViewer per eseguirne il rendering in un'applicazione Web.  
@@ -36,7 +36,7 @@ ms.locfileid: "51813034"
   
      Il controllo **ReportViewer** denominato reportViewer1 verrà aggiunto al form.  
   
- Dopo l'aggiunta del controllo al form, viene visualizzato lo smart tag **ReportViewer Tasks** in cui viene richiesto di selezionare un report. Se il report da visualizzare è stato distribuito in un server di report, scegliere **\<<Server di report>** dall'elenco a discesa **Scegli report**. Dopo avere selezionato l'opzione **\<Server Report>**, verranno visualizzate due proprietà aggiuntive, ovvero **URL server di report** e **Percorso report**. L'**URL server di report** indica l'indirizzo del server di report, mentre **Percorso report** indica il percorso completo del report di cui si vuole eseguire il rendering.  
+ Dopo l'aggiunta del controllo al form, viene visualizzato lo smart tag **ReportViewer Tasks** in cui viene richiesto di selezionare un report. Se il report da visualizzare è stato distribuito in un server di report, scegliere **\<<Server di report>** dall'elenco a discesa **Scegli report**. Dopo avere selezionato l'opzione **\<Server Report>** , verranno visualizzate due proprietà aggiuntive, ovvero **URL server di report** e **Percorso report**. L'**URL server di report** indica l'indirizzo del server di report, mentre **Percorso report** indica il percorso completo del report di cui si vuole eseguire il rendering.  
   
  Per visualizzare un report in modalità locale, selezionare l'opzione **Progetta nuovo report** per avviare la progettazione del report oppure selezionare un report che fa già parte del progetto esistente. Dopo aver selezionato un report, assicurarsi di immettere il nome del file RDLC del report nella proprietà **ReportPath** del controllo ReportViewer. Questa proprietà viene visualizzata sotto il nodo **LocalReport** nel riquadro **Properties**.  
   

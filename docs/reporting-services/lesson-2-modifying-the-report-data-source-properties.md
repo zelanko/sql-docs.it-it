@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7da1fa318ac1bab2310cb8708215db3456d84d66
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 466415ebd4075afd5dda83e95a498a32b50af453
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399914"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62651726"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
 In questa lezione dell'esercitazione [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] verrà usato il portale Web per selezionare un report da recapitare ai destinatari. Con la sottoscrizione guidata dai dati che verrà definita verrà distribuito il report **Ordine vendita** creato nell'esercitazione [Creare un report tabella semplice &#40;esercitazione su SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  Nei passaggi seguenti verranno modificate le informazioni di connessione all'origine dei dati utilizzate dal report per acquisire i dati. Solo i report in cui vengono usate **credenziali archiviate** per accedere a un'origine dati del report possono essere distribuiti attraverso una sottoscrizione guidata dai dati. Le credenziali archiviate sono necessarie per l'esecuzione automatica dei report.  
@@ -24,8 +24,8 @@ Inoltre, verrà modificato il set di dati e il report per utilizzare un parametr
   
 1.  Accedere al portale Web di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con privilegi di amministratore, ad esempio, fare clic con il pulsante destro del mouse sull'icona di Internet Explorer e scegliere **Esegui come amministratore**.  
  
-2.    Individuare l'URL del portale Web.  Ad esempio   
-    `https://<server name>/reports`(Indici per tabelle con ottimizzazione per la memoria).  
+2.    Individuare l'URL del portale Web.  Esempio:   
+    `https://<server name>/reports`.  
     `https://localhost/reports`
  **Nota:** l'URL del *portale* Web è "Reports", non l'URL del *server* di report di "Reportserver".  
 3.  Selezionare la cartella contenente il report **Ordini vendita** e nel menu di scelta rapida del report fare clic su **Gestisci**.  
@@ -52,7 +52,7 @@ Inoltre, verrà modificato il set di dati e il report per utilizzare un parametr
 10. Fare clic su **Salva**.
 11. Fare clic su **Annulla**  
   
-11. Visualizzare il report per verificare che venga eseguito con le credenziali specificate. ,  
+11. Visualizzare il report per verificare che venga eseguito con le credenziali specificate. .  
   
 ## <a name="bkmk_modify_dataset"></a>Per modificare AdventureWorksDataset  
  Nei passaggi successivi si modificherà il set di dati in modo da usare un parametro per filtrare il set di dati in base a un numero di ordine.
@@ -89,7 +89,7 @@ Inoltre, verrà modificato il set di dati e il report per utilizzare un parametr
   
 3.  Verificare che **Prompt** sia `OrderNumber`.  
   
-4.  Selezionare **Consenti nessun valore ("")**.  
+4.  Selezionare **Consenti nessun valore ("")** .  
   
 5.  Selezionare **Consenti valore Null**.  
   

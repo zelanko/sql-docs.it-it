@@ -17,10 +17,10 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8f16f30aeba48be7f0d2e61d2ef28b37060a232c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581291"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
@@ -90,9 +90,9 @@ rs {-?}
   
  `rs.exe -i myScriptFile.rss -s https://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- Le variabili globali vengono create con i nomi indicati e impostate sui valori specificati. Ad esempio, **-v a=**"**1**" **-v b=**"**2**" restituisce una variabile denominata **a** con un valore di "**1**" e una variabile **b** con un valore di "**2**".  
+ Le variabili globali vengono create con i nomi indicati e impostate sui valori specificati. Ad esempio, **-v a=** "**1**" **-v b=** "**2**" restituisce una variabile denominata **a** con un valore di "**1**" e una variabile **b** con un valore di "**2**".  
   
- Le variabili globali sono disponibili per qualsiasi funzione nello script. Una barra rovesciata seguita dalle virgolette (**\\"**) viene interpretata come virgolette doppie. Le virgolette sono necessarie solo se la stringa contiene uno spazio. I nomi delle variabili devono essere validi per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], pertanto devono iniziare con un carattere alfabetico o un carattere di sottolineatura e contenere caratteri alfabetici, numerici o di sottolineatura. Le parole riservate non possono essere utilizzate come nomi di variabili. Per altre informazioni sull'uso delle variabili globali, vedere [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
+ Le variabili globali sono disponibili per qualsiasi funzione nello script. Una barra rovesciata seguita dalle virgolette ( **\\"** ) viene interpretata come virgolette doppie. Le virgolette sono necessarie solo se la stringa contiene uno spazio. I nomi delle variabili devono essere validi per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], pertanto devono iniziare con un carattere alfabetico o un carattere di sottolineatura e contenere caratteri alfabetici, numerici o di sottolineatura. Le parole riservate non possono essere utilizzate come nomi di variabili. Per altre informazioni sull'uso delle variabili globali, vedere [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
  **-t**  
  (Facoltativo) Crea l'output dei messaggi di errore nel log di traccia. Questo argomento non accetta un valore. Per altre informazioni, vedere [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  

@@ -19,10 +19,10 @@ ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 602c939c382bc5946e64340736f73bb88f17c655
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574103"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Eseguire la connessione a un server di report in Management Studio
@@ -49,7 +49,7 @@ ms.locfileid: "65574103"
 
 2. Selezionare **Connetti** per visualizzare l'elenco dei tipi di server e quindi **Reporting Services**.
 
-3. Nella finestra di dialogo **Connetti al server** immettere il nome dell'istanza del server di report. I nomi delle istanze del server di report si basano sui nomi delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per impostazione predefinita, il nome di un'istanza locale del server di report è il nome del computer. Se il server di report è installato come istanza denominata, usare la sintassi seguente per specificare il server: *\<nomeserver>[\\<nomeistanza\>]*.
+3. Nella finestra di dialogo **Connetti al server** immettere il nome dell'istanza del server di report. I nomi delle istanze del server di report si basano sui nomi delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per impostazione predefinita, il nome di un'istanza locale del server di report è il nome del computer. Se il server di report è installato come istanza denominata, usare la sintassi seguente per specificare il server: *\<nomeserver>[\\<nomeistanza\>]* .
 
 4. Selezionare il **tipo di autenticazione**. Se si usa l'autenticazione di Windows, connettersi con le proprie credenziali. Se è stata selezionata l'autenticazione di base o quella basata su form, digitare l'account e la password.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "65574103"
 
 4. In **Nome server**immettere un valore. Il valore da specificare dipende dalla modalità del server:
 
-    - Per un server di report in modalità nativa, digitare il nome dell'istanza relativa. I nomi delle istanze del server di report si basano sui nomi delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per impostazione predefinita, il nome di un'istanza locale del server di report è il nome del computer. Se il server di report è installato come istanza denominata, usare la sintassi seguente per specificare il server: *\<nomeserver>[\\<nomeistanza\>]*.
+    - Per un server di report in modalità nativa, digitare il nome dell'istanza relativa. I nomi delle istanze del server di report si basano sui nomi delle istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per impostazione predefinita, il nome di un'istanza locale del server di report è il nome del computer. Se il server di report è installato come istanza denominata, usare la sintassi seguente per specificare il server: *\<nomeserver>[\\<nomeistanza\>]* .
 
     - Per un server di report eseguito in modalità integrata SharePoint, il server cui connettersi è il sito di SharePoint cui il server di report è connesso. Connettersi al sito di SharePoint per poter visualizzare i livelli di autorizzazione. L'accesso al contenuto e alle operazioni del server di report è controllato dalle autorizzazioni. È possibile specificare qualsiasi sito nella raccolta siti. Nell'esempio seguente viene illustrata la sintassi: `https://mysharepointsite`.
 

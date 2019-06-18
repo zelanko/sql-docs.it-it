@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 95e646fd442144ee00f36cd6fdf80440913ad0ac
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e4c4fe265b23b46ee6c283797d44335a636cb368
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286949"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041730"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Esercitazione: Aggiungere un parametro al report (Generatore report)
 In questa esercitazione viene aggiunto un parametro in un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] per consentire ai lettori del report di filtrare i dati in base a uno o più valori. 
@@ -23,9 +23,9 @@ In questa esercitazione viene aggiunto un parametro in un report impaginato di [
 I parametri di report vengono creati automaticamente per ogni parametro di query incluso in una query del set di dati. Il tipo di dati determina il modo in cui il parametro viene presentato sulla barra degli strumenti della visualizzazione report. 
    
 > [!NOTE]  
-> In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, scegliere un'origine dati e creare un set di dati. Vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, come scegliere un'origine dati e come creare un set di dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Tempo previsto per il completamento di questa esercitazione: 25 minuti.  
+Tempo stimato per il completamento dell'esercitazione: 25 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
 Per informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -80,9 +80,9 @@ Creare un report matrice, un'origine dati e un set di dati.
   
     Questa query combina i risultati di diverse istruzioni SELECT di [!INCLUDE[tsql_md](../includes/tsql-md.md)] in un'espressione di tabella comune per specificare valori basati sui dati di vendita semplificati per le fotocamere del database di esempio Contoso. Le sottocategorie sono costituite da fotocamere digitali, fotocamere single lens reflex (SLR), cineprese e accessori.  
   
-11. Sulla barra degli strumenti di Progettazione query fare clic su **Esegui** (**!**) per visualizzare i dati.   
+11. Sulla barra degli strumenti di Progettazione query fare clic su **Esegui** ( **!** ) per visualizzare i dati.   
   
-    Il set di risultati è costituito da 11 righe di dati in cui viene mostrata la quantità di articoli venduti per ogni sottocategoria in quattro punti vendita, illustrati nelle colonne seguenti: StoreID, Subcategory, Quantity. In questa query, il nome del punto vendita non è parte del set di risultati. Più avanti in questa esercitazione, si cercherà il nome del punto vendita che corrisponde all'identificatore del punto vendita in un set di dati separato.  
+    Il set di risultati include 11 righe di dati che mostrano la quantità di articoli venduti per ogni sottocategoria in quattro punti vendita nelle colonne seguenti: StoreID, Subcategory, Quantity. Il nome del punto vendita non è incluso nel set di risultati. Più avanti in questa esercitazione, si cercherà il nome del punto vendita che corrisponde all'identificatore del punto vendita in un set di dati separato.  
   
     Questa query non contiene parametri di query. Verranno aggiunti più avanti in questa esercitazione.   
   
@@ -142,9 +142,9 @@ Quando si aggiunge un parametro di query a una query, in Generatore report viene
     WHERE StoreID = (@StoreID)  
     ```  
   
-    Viene aperta la finestra di dialogo **WHERE** limita i dati recuperati all'identificatore del punto vendita specificato dal parametro di query *@StoreID*.  
+    Viene aperta la finestra di dialogo **WHERE** limita i dati recuperati all'identificatore del punto vendita specificato dal parametro di query *@StoreID* .  
   
-4.  Nella barra degli strumenti Progettazione query fare clic su **Esegui** (**!**). Viene aperta la finestra di dialogo **Definisci parametri query** nella quale viene richiesto un valore per il parametro di query *@StoreID*.  
+4.  Nella barra degli strumenti Progettazione query fare clic su **Esegui** ( **!** ). Viene aperta la finestra di dialogo **Definisci parametri query** nella quale viene richiesto un valore per il parametro di query *@StoreID* .  
   
 5.  In **Valore parametro**digitare **200**.  
   
@@ -156,7 +156,7 @@ Quando si aggiunge un parametro di query a una query, in Generatore report viene
   
 8.  Nel riquadro Dati report espandere la cartella **Parametri** .  
   
-Si noti che è ora presente un parametro del report denominato *@StoreID*e un riquadro Parametri in cui visualizzare i parametri del report.   
+Si noti che è ora presente un parametro del report denominato *@StoreID* e un riquadro Parametri in cui visualizzare i parametri del report.   
   
 ![ssRB_ParamPane](../reporting-services/media/ssrb-parampane.png)  
   
@@ -169,7 +169,7 @@ Dopo aver creato un parametro di report, è possibile impostare i valori predefi
   
 Per impostazione predefinita, il parametro creato ha il tipo di dati **Text**. Poiché l'identificatore del punto vendita è un intero, è possibile modificare il tipo di dati in Integer.  
   
-1.  Nel riquadro Dati report nel nodo **Parametri** fare clic con il pulsante destro del mouse su *@StoreID*e quindi fare clic su **Proprietà parametri**.  
+1.  Nel riquadro Dati report nel nodo **Parametri** fare clic con il pulsante destro del mouse su *@StoreID* e quindi fare clic su **Proprietà parametri**.  
   
 2.  In **Messaggio di richiesta**digitare **Identificatore punto vendita?** Questo testo viene visualizzato nella barra degli strumenti del visualizzatore di report quando si esegue il report.  
   
@@ -179,7 +179,7 @@ Per impostazione predefinita, il parametro creato ha il tipo di dati **Text**. P
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  Fare clic su **Esegui** per visualizzare l'anteprima del report. Il visualizzatore di report visualizza il messaggio di richiesta **Store Identifier?** per *@StoreID*.  
+6.  Fare clic su **Esegui** per visualizzare l'anteprima del report. Il visualizzatore di report visualizza il messaggio di richiesta **Store Identifier?** per *@StoreID* .  
   
 7.  Nella barra degli strumenti del visualizzatore di report, accanto a Store ID, digitare **200**e quindi fare clic su **Visualizza report**.  
   
@@ -220,7 +220,7 @@ Dopo aver creato un set di dati per offrire i valori disponibili, modificare le 
   
 ### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>Per fornire i valori disponibili per un parametro da un set di dati  
   
-1.  Nel riquadro Dati report fare clic con il pulsante destro del mouse sul parametro *@StoreID*e quindi fare clic su **Proprietà parametri**.  
+1.  Nel riquadro Dati report fare clic con il pulsante destro del mouse sul parametro *@StoreID* e quindi fare clic su **Proprietà parametri**.  
   
 2.  Fare clic su **Valori disponibili**e quindi su **Ottieni valori da una query**.  
   
@@ -253,7 +253,7 @@ Nel report viene visualizzata la quantità venduta di accessori, cineprese e fot
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su *@StoreID*e quindi fare clic su **Proprietà parametri**.  
+2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su *@StoreID* e quindi fare clic su **Proprietà parametri**.  
   
 3.  Fare clic su **Valori predefiniti**e quindi su **Ottieni valori da una query**.  
   
@@ -265,13 +265,13 @@ Nel report viene visualizzata la quantità venduta di accessori, cineprese e fot
   
 7.  Visualizzare l'anteprima del report.  
   
-For *@StoreID*, nel Visualizzatore di report viene visualizzato il valore "Contoso North America Online Store" perché è il primo valore dal set di risultati per il set di dati **Punti vendita**. Nel report viene visualizzata la quantità venduta di fotocamere digitali per l'identificatore del punto vendita **199**.  
+For *@StoreID* , nel Visualizzatore di report viene visualizzato il valore "Contoso North America Online Store" perché è il primo valore dal set di risultati per il set di dati **Punti vendita**. Nel report viene visualizzata la quantità venduta di fotocamere digitali per l'identificatore del punto vendita **199**.  
   
 ### <a name="to-specify-a-custom-default-value"></a>Per specificare un valore predefinito personalizzato  
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su *@StoreID*e quindi fare clic su **Proprietà parametri**.  
+2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su *@StoreID* e quindi fare clic su **Proprietà parametri**.  
   
 3.  Fare clic su **Valori predefiniti** > **Specifica valori** > **Aggiungi**. Verrà aggiunta una nuova riga di valori.  
   
@@ -281,7 +281,7 @@ For *@StoreID*, nel Visualizzatore di report viene visualizzato il valore "Conto
   
 6.  Visualizzare l'anteprima del report.  
   
-For *@StoreID*viene visualizzato "Contoso Catalog Store" poiché si tratta del nome visualizzato per l'identificatore di punto vendita **200**. Nel report viene visualizzata la quantità venduta di accessori, cineprese e fotocamere SLR digitali per l'identificatore del punto vendita **200**.  
+For *@StoreID* viene visualizzato "Contoso Catalog Store" poiché si tratta del nome visualizzato per l'identificatore di punto vendita **200**. Nel report viene visualizzata la quantità venduta di accessori, cineprese e fotocamere SLR digitali per l'identificatore del punto vendita **200**.  
   
 ## <a name="NameValue"></a>4d. Cercare una coppia nome/valore  
 Un set di dati potrebbe contenere sia l'identificatore e che il campo del nome corrispondente. Quando si dispone solo di un identificatore, è possibile cercare il nome corrispondente in un set di dati creato che include coppie nome/valore.  
@@ -371,7 +371,7 @@ Per modificare un parametro da singolo a multivalore, è necessario modificare l
   
 1.  Passare alla Visualizzazione della struttura.  
   
-2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su *@StoreID*e quindi fare clic su **Proprietà parametri**.  
+2.  Nel riquadro Dati report fare clic con il pulsante destro del mouse su *@StoreID* e quindi fare clic su **Proprietà parametri**.  
   
 3.  Selezionare **Consenti più valori**.  
   

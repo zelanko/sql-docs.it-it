@@ -9,10 +9,10 @@ ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0f9e826ff115183180ad42a1c065619f2196cd3e
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580887"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Visualizzare i numeri di pagina o altre proprietà del report (Generatore report e SSRS)
@@ -62,7 +62,7 @@ ms.locfileid: "65580887"
   
      La casella di testo **Imposta espressione per: Valore** contiene l'espressione =Globals!PageNumber.  
   
-2.  Posizionare il cursore dopo il segno = e digitare **"Pagina " &**.  
+2.  Posizionare il cursore dopo il segno = e digitare **"Pagina " &** .  
   
      L'espressione cambierà in ="Pagina "&Globals!PageNumber  
   

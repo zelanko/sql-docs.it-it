@@ -8,20 +8,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - the web portal [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 01c235ec53d0b8f70611b8523a4286790623d990
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 962ab17170c69b6225f852f0b625a6cd50fa20d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415408"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63308394"
 ---
 # <a name="configure-the-web-portal"></a>Configurare il portale Web
 
 Il Portale Web è un'applicazione front-end Web usata per visualizzare report, gestire il contenuto del server di report e concedere l'accesso utente a un server di report in modalità nativa. Il portale Web viene installato con il servizio Web ReportServer all'interno della stessa istanza del server di report e facoltativamente configurato se si seleziona l'opzione **Installa la configurazione predefinita della modalità nativa** del programma di installazione. Può essere configurato anche come attività di post-installazione. Questo argomento offre informazioni sui seguenti scenari di configurazione del portale Web:
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
 Per usare il portale Web, è necessario che vengano soddisfatti i prerequisiti seguenti:
 
@@ -80,7 +80,7 @@ Per altre informazioni sul file di configurazione, vedere [Modificare un file di
 
 2. Aprire Internet Explorer.
 
-3. Immettere l'URL del portale Web. Per impostazione predefinita, l'URL è https://\<**your-server-name**>/reports, ma se Reporting Services è stato installato come istanza denominata, l'URL predefinito sarà https://\<**nome-server**>/reports\<**_nome istanza**>.
+3. Immettere l'URL del portale Web. Per impostazione predefinita, l'URL è https://\<**your-server-name**>/reports, ma se Reporting Services è stato installato come istanza denominata, l'URL predefinito sarà https://\<**nome-server**>/reports\< **_nome istanza**>.
 
 4. Selezionare **Impostazioni sito**.
 

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2d475716043c14c2dabac3090c58b12c9648b468
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 991610dacf7a13a467a3058f2bdbcfcc454ee71e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700371"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62512393"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>Lezione 8: Creare un filtro di dati
 Dopo aver aggiunto un'azione drill-through nel report padre, il passaggio successivo consiste nel creare un filtro di dati per la tabella di dati definita per il report figlio.  
@@ -39,7 +39,7 @@ Dopo aver aggiunto un'azione drill-through nel report padre, il passaggio succes
   
 4.  Nel campo **Espressione** fare clic su **ProductID** nell'elenco a discesa. Si tratta della colonna a cui applicare il filtro.  
   
-5.  Fare clic sull'operatore di uguaglianza (**=**) nell'elenco a discesa **Operatore** .  
+5.  Fare clic sull'operatore di uguaglianza ( **=** ) nell'elenco a discesa **Operatore** .  
   
 6.  Fare clic sul pulsante dell'espressione accanto al campo **Valore** , selezionare **Parametri** nell'area **Categoria** e fare doppio clic su **productid** nell'area **Valori** . Il campo **Imposta espressione per: Valore** dovrebbe contenere ora un'espressione simile a **=Parameters!productid.Value**.  
   

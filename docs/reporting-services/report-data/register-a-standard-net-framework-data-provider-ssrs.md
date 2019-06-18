@@ -16,16 +16,16 @@ ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: badeb4de20aa885a77fa61ec3a261a8c09c79506
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571243"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Registrare un provider di dati .NET Framework standard (SSRS)
   Per usare un provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] di terze parti per recuperare dati per un set di dati di un report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , è necessario distribuire e registrare l'assembly del provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] in due posizioni, ovvero nel client di creazione dei report e nel server di report. Nel client per la creazione del report, è necessario registrare il provider di dati come tipo di origine dei dati e associarlo a una finestra Progettazione query. Sarà quindi possibile selezionare il provider di dati come tipo di origine dei dati per la creazione di un set di dati di report. La finestra Progettazione query associata verrà aperta per consentire la creazione di query per il tipo di origine dei dati specifico. Nel server di report il provider di dati deve essere registrato come tipo di origine dei dati. Sarà quindi possibile elaborare i report pubblicati che recuperano i dati da un'origine mediante il provider di dati.  
   
- I provider di dati di terze parti possono non offrire tutte le funzionalità disponibili nelle estensioni per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md). Per informazioni sull'estensione della funzionalità di un  provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vedere [Implementazione di un'estensione per l'elaborazione dati](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md).  
+ I provider di dati di terze parti possono non offrire tutte le funzionalità disponibili nelle estensioni per l'elaborazione dati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Per altre informazioni, vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md). Per informazioni sull'estensione della funzionalità di un provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vedere [Implementazione di un'estensione per l'elaborazione dati](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md).  
   
  Per installare e registrare i provider di dati è necessario disporre di credenziali di amministratore.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "65571243"
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-server"></a>Per installare l'assembly di un provider di dati nel server di report  
   
-1.  Accedere al percorso predefinito della directory bin nel server di report in cui si vuole usare il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Il percorso predefinito della directory bin del server di report è *\<unità>*:\Programmi\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin.  
+1.  Accedere al percorso predefinito della directory bin nel server di report in cui si vuole usare il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Il percorso predefinito della directory bin del server di report è *\<unità>* :\Programmi\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin.  
   
 2.  Copiare l'assembly dal percorso di gestione temporanea nella directory bin del server di report. In alternativa, è possibile caricare l'assembly nella Global Assembly Cache (GAC). Per altre informazioni, vedere [Utilizzo di assembly e della Global Assembly Cache](https://go.microsoft.com/fwlink/?linkid=63912) nella documentazione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK in MSDN.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "65571243"
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-designer-client"></a>Per installare l'assembly di un provider di dati nel client di Progettazione report  
   
-1.  Accedere al percorso predefinito della directory PrivateAssemblies nel client di Progettazione report in cui si vuole usare il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Il percorso predefinito di questa directory è *\<unità>*:\Programmi\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
+1.  Accedere al percorso predefinito della directory PrivateAssemblies nel client di Progettazione report in cui si vuole usare il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Il percorso predefinito di questa directory è *\<unità>* :\Programmi\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
   
 2.  Copiare l'assembly dal percorso di gestione temporanea nella directory PrivateAssemblies del client di Progettazione report. In alternativa, è possibile caricare l'assembly nella Global Assembly Cache (GAC). Per altre informazioni, vedere [Utilizzo di assembly e della Global Assembly Cache](https://go.microsoft.com/fwlink/?linkid=63912) nella documentazione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK in MSDN.  
   

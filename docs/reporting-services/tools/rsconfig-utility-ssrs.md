@@ -15,10 +15,10 @@ ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 38c2cd6242e9515872ef086ec4851bf6cec103ef
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571520"
 ---
 # <a name="rsconfig-utility-ssrs"></a>utilità rsconfig (SSRS)
@@ -46,7 +46,7 @@ rsconfig {-?}
 |Nome|Facoltativo/obbligatorio|Definizione|  
 |----------|------------------------|----------------|  
 |**-?**|Facoltativo.|Visualizza la sintassi degli argomenti di Rsconfig.exe.|  
-|**-c**|Obbligatorio se non si specifica l'argomento **-e** .|Specifica la stringa di connessione, le credenziali e i valori relativi all'origine dei dati utilizzati per connettere un server di report al database corrispondente.<br /><br /> Questo argomento non accetta un valore. È tuttavia necessario specificare ulteriori argomenti per definire tutti i valori di connessione richiesti.<br /><br /> Gli argomenti che è possibile specificare con **- c** includono **-m**, **-s**, **-i**,**-d**,**-a**,**-u**,**-p**e **-t**.|  
+|**-c**|Obbligatorio se non si specifica l'argomento **-e** .|Specifica la stringa di connessione, le credenziali e i valori relativi all'origine dei dati utilizzati per connettere un server di report al database corrispondente.<br /><br /> Questo argomento non accetta un valore. È tuttavia necessario specificare ulteriori argomenti per definire tutti i valori di connessione richiesti.<br /><br /> Gli argomenti che è possibile specificare con **- c** includono **-m**, **-s**, **-i**, **-d**, **-a**, **-u**, **-p**e **-t**.|  
 |**-e**|Obbligatorio se non si specifica l'argomento **-c** .|Specifica un account di esecuzione automatica dei report.<br /><br /> Questo argomento non accetta un valore. Per specificare i valori crittografati nel file di configurazione, tuttavia, è necessario includere ulteriori argomenti nella riga di comando.<br /><br /> Con **-e** è possibile specificare gli argomenti **-u** e **-p**. È anche possibile specificare **-t**.|  
 |**-m**  *nomecomputer*|Obbligatorio se si sta configurando un'istanza remota del server di report.|Specifica il nome del computer che ospita il server di report. Se questo argomento viene omesso, l'impostazione predefinita è **localhost**.|  
 |**-s**  *nomeserver*|Obbligatorio.|Specifica l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ospita il database del server di report.|  

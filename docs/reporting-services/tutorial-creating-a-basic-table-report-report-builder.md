@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3e41b40bceadec4c841aa5b464e2946915003b93
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298384"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041203"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Esercitazione: Creazione di un report tabella semplice (Generatore report)
 In questa esercitazione viene illustrato come creare un report tabella semplice basato sui dati di vendita di esempio. Nell'illustrazione seguente viene mostrato il report che verrà creato.  
@@ -21,7 +21,7 @@ In questa esercitazione viene illustrato come creare un report tabella semplice 
 ![SSRS_Tutorial_Basic_Table_Report](../reporting-services/media/ssrs-tutorial-basic-table-report.png)  
   
 
-Tempo previsto per il completamento di questa esercitazione: 20 minuti.  
+Il tempo stimato per il completare l'esercitazione è di 20 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
 Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -124,7 +124,7 @@ In un report, è possibile usare un set di dati condiviso che dispone di una que
   
     ```  
   
-3.  Nella barra degli strumenti Progettazione query fare clic su **Esegui** (**!**).  
+3.  Nella barra degli strumenti Progettazione query fare clic su **Esegui** ( **!** ).  
   
     La query viene eseguita e viene visualizzato il set di risultati per il campi SalesDate, Subcategory, Product, Sales e Quantity.  
   
@@ -184,7 +184,7 @@ Dopo avere creato dei gruppi, è possibile aggiungere e formattare delle righe n
   
 4.  Fare clic su **Avanti** per visualizzare un'anteprima della tabella, quindi fare clic su **Fine**.  
   
-La tabella viene aggiunta all'area di progettazione. La tabella dispone di 5 colonne e 5 righe. Nel riquadro Gruppi di righe vengono visualizzati tre gruppi di righe: SalesDate, Subcategory e Details. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
+La tabella viene aggiunta all'area di progettazione. La tabella dispone di 5 colonne e 5 righe. Nel riquadro Gruppi di righe sono visualizzati tre gruppi di righe: SalesDate, Subcategory e Details. I dati dettaglio costituiscono tutti i dati recuperati dalla query del set di dati.  
   
 ## <a name="FormatCurrency"></a>2. Formattare i dati come valuta  
 Per impostazione predefinita, i dati di riepilogo del campo Sales riportano un numero generico. È possibile formattare tale numero come valuta.   
@@ -197,7 +197,7 @@ Per impostazione predefinita, i dati di riepilogo del campo Sales riportano un n
   
 3.  Nel gruppo **Numero** della scheda **Home** fare clic sul pulsante **Valuta** . Nelle celle i numeri vengono visualizzati nel formato di valuta.  
   
-    Se la lingua delle impostazioni locali è Inglese (Stati Uniti), il testo di esempio predefinito sarà [**$12,345.00**]. Se non viene visualizzato un valore di valuta di esempio, nel gruppo **Number** della scheda **Home** fare clic sulla freccia accanto all'icona **Stili segnaposto** > **Valori di esempio**.  
+    Se la lingua delle impostazioni locali è Inglese (Stati Uniti), il testo di esempio predefinito sarà [ **$12,345.00**]. Se non viene visualizzato un valore di valuta di esempio, nel gruppo **Number** della scheda **Home** fare clic sulla freccia accanto all'icona **Stili segnaposto** > **Valori di esempio**.  
   
 4.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
@@ -214,7 +214,7 @@ Per impostazione predefinita, nel campo SalesDate vengono visualizzate sia la da
   
 3.  Nel gruppo **Numero** della scheda **Home** fare clic sulla freccia sulla barra multifunzione e selezionare **Data**.  
   
-    Nella cella verrà visualizzata la data di esempio **[1/31/2000]**. Se non viene visualizzata una data di esempio, nel gruppo **Number** della scheda **Home** fare clic sulla freccia accanto all'icona **Stili segnaposto** > **Valori di esempio**.  
+    Nella cella verrà visualizzata la data di esempio **[1/31/2000]** . Se non viene visualizzata una data di esempio, nel gruppo **Number** della scheda **Home** fare clic sulla freccia accanto all'icona **Stili segnaposto** > **Valori di esempio**.  
   
 4.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
@@ -236,7 +236,7 @@ I valori SalesDate vengono visualizzati nel formato di data predefinito.
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    Nella cella viene visualizzata la data di esempio **[31 gennaio 2000]**.  
+    Nella cella viene visualizzata la data di esempio **[31 gennaio 2000]** .  
   
 7.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
@@ -340,7 +340,7 @@ In questa esercitazione, si esporterà il report in Excel e si imposterà una pr
   
 4.  Nella casella di testo **Nome file** digitare **Vendite prodotto Excel**.  
   
-5.  Verificare che il tipo di file sia **Excel(\*.xls)**.  
+5.  Verificare che il tipo di file sia **Excel(\*.xls)** .  
   
 6.  Fare clic su **Salva**.  
   

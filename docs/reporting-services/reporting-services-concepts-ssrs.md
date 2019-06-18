@@ -9,16 +9,16 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 126819d9adb85fa4cf17af0c6308d56696136988
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570859"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services Concepts (SSRS)
   In questo argomento viene fornito un breve riepilogo dei concetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
- **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] | Modalità SharePoint di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]    
+ **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] | Modalità SharePoint di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]   
   
 ##  <a name="bkmk_ReportServerConcepts"></a> Concetti relativi ai server di report  
  Un server di report è un computer con un'istanza [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installata. Un server di report archivia internamente elementi quali report impaginati e per dispositivi mobili, elementi e risorse correlati al report, pianificazioni e sottoscrizioni. È possibile configurare un server di report come un server singolo autonomo o come una farm con scalabilità orizzontale o può essere integrato con SharePoint Server. Si interagisce con gli elementi del server di report tramite il servizio Web [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , il provider WMI, l'accesso con URL o a livello di codice tramite script. La modalità di interazione con un server di report dipende dalla topologia di distribuzione e dalla configurazione.  

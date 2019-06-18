@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 709f355a78ece0db3e52b713f81f9ca2a95c8fe1
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291147"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62442770"
 ---
 # <a name="file-element-dta"></a>Elemento File (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "51291147"
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|Usare il tipo di dati **string** per specificare il percorso della directory del file del carico di lavoro. Ad esempio<br /><br /> `<File>C:\Tuning\tun.sql</File>`<br /><br /> Si noti che il limite della lunghezza viene forzato dal server.|  
+|**Tipo di dati e lunghezza**|Usare il tipo di dati **string** per specificare il percorso della directory del file del carico di lavoro. Esempio:<br /><br /> `<File>C:\Tuning\tun.sql</File>`<br /><br /> Si noti che il limite della lunghezza viene forzato dal server.|  
 |**Valore predefinito**|Nessuna.|  
 |**Occorrenza**|Obbligatorio una sola volta se non viene specificato un altro tipo di carico di lavoro. È necessario specificare un elemento figlio **EventString**, **File**o **Database** per l'elemento padre **Workload** , ma è possibile utilizzare un solo tipo. Se ad esempio si specifica un carico di lavoro con l'elemento **File** , non sarà possibile specificare anche un carico di lavoro con l'elemento **Database** nello stesso file di input XML.|  
   

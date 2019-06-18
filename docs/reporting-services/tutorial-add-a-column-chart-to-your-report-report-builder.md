@@ -1,19 +1,19 @@
 ---
-title: 'Esercitazione: Aggiungere un istogramma al report (Generatore report) | Microsoft Docs'
+title: 'Esercitazione: Aggiungere un grafico a torta al report (Generatore report) | Microsoft Docs'
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 509bce618c902ea06b3e64498b3e7445e0eaae4e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290659"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041401"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un istogramma al report (Generatore report)
 In questa esercitazione si creerà un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con un istogramma che visualizza una serie come set di barre verticali raggruppate per categoria. 
@@ -28,7 +28,7 @@ Nell'illustrazione seguente è mostrato l'istogramma che verrà creato con una m
   
 ![report-builder-column-chart-tutorial](../reporting-services/media/report-builder-column-chart-tutorial.png)    
 > [!NOTE]  
-> In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, scegliere un'origine dati e creare un set di dati. Vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In questa esercitazione, i passaggi per la procedura guidata sono consolidati in un'unica procedura. Per istruzioni dettagliate su come selezionare un server di report, come scegliere un'origine dati e come creare un set di dati, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo previsto per il completamento di questa esercitazione: 15 minuti.  
   
@@ -83,7 +83,7 @@ In questa sezione si usa Creazione guidata grafico per creare un set di dati inc
     UNION SELECT CAST('2015-12-31' AS date) AS SalesDate, CAST(81946. AS money) AS Sales  
     ```  
   
-8.  (Facoltativo) Fare clic sul pulsante Esegui (**!**) per visualizzare i dati sui quali verrà basato il grafico.  
+8.  (Facoltativo) Fare clic sul pulsante Esegui ( **!** ) per visualizzare i dati sui quali verrà basato il grafico.  
   
 9. Scegliere **Avanti**.  
   
@@ -207,7 +207,7 @@ Per impostazione predefinita, sull'asse verticale vengono visualizzati valori in
 
 10. Fare clic con il pulsante destro del mouse sul titolo dell'asse verticale > **Proprietà titolo asse**.  
   
-10. Sostituire il testo nel campo **Testo titolo** con il testo **Totale vendite (in migliaia)**. È anche possibile specificare diverse opzioni relative alla formattazione del titolo.  
+10. Sostituire il testo nel campo **Testo titolo** con il testo **Totale vendite (in migliaia)** . È anche possibile specificare diverse opzioni relative alla formattazione del titolo.  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

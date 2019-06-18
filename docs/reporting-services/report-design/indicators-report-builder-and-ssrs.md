@@ -16,10 +16,10 @@ ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 75cda38839aa4ee8a32eb65595b0f8df204983b3
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580216"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indicatori (Generatore report e SSRS)
@@ -87,7 +87,7 @@ ms.locfileid: "65580216"
 ##  <a name="UsingIndicatorsInTablesMatrices"></a> Utilizzo degli indicatori in tabelle e matrici  
  La semplicità delle forme degli indicatori li rendono ideali per l'utilizzo in tabelle e matrici. Gli indicatori sono validi anche in dimensioni ridotte. Questo aspetto li rende utili nelle righe di dettaglio o di gruppo dei report.  
   
- Il diagramma seguente illustra un report con una tabella che usa il set di indicatori direzionale, **4 frecce (colorate)**, per indicare le vendite. Le icone dell'indicatore nel report sono configurate per utilizzare sfumature di blu anziché i colori predefiniti rosso, giallo e verde.  
+ Il diagramma seguente illustra un report con una tabella che usa il set di indicatori direzionale, **4 frecce (colorate)** , per indicare le vendite. Le icone dell'indicatore nel report sono configurate per utilizzare sfumature di blu anziché i colori predefiniti rosso, giallo e verde.  
   
  ![rs_IndicatorReportBlueArrows](../../reporting-services/report-design/media/rs-indicatorreportbluearrows.gif "rs_IndicatorReportBlueArrows")  
   

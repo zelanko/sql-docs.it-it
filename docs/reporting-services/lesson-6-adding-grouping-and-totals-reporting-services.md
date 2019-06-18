@@ -9,10 +9,10 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b5b9846a20615cf613dd50752ac63f2669b1e399
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089672"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
@@ -23,13 +23,13 @@ In questa lezione finale dell'esercitazione si aggiungeranno raggruppamenti e to
 
 1. Selezionare la scheda **Progettazione**.
 2. Se il riquadro **Gruppi di righe** non è visualizzato, fare clic con il pulsante destro del mouse sull'area di progettazione e scegliere **Visualizza** >**Raggruppamento**.
-3. Dal riquadro **Dati report** trascinare il campo `[Date]` nel riquadro **Gruppi di righe**. Posizionarlo sopra la riga in cui è visualizzato **= (Dettagli)**.
+3. Dal riquadro **Dati report** trascinare il campo `[Date]` nel riquadro **Gruppi di righe**. Posizionarlo sopra la riga in cui è visualizzato **= (Dettagli)** .
 
     > [!NOTE]
     > Si noti che nell'handle di riga è ora presente una parentesi, che indica un gruppo. La tabella contiene ora due colonne con l'espressione `[Date]`, una su ogni lato di una linea verticale tratteggiata.
     >
     >![gruppo data aggiunto](media/rs-basictablegroups1design.png "gruppo data aggiunto")
-4. Dal riquadro **Dati report** trascinare il campo `[Order]` nel riquadro **Gruppi di righe**. Posizionarlo sotto **Date** e sopra **= (Dettagli)**.
+4. Dal riquadro **Dati report** trascinare il campo `[Order]` nel riquadro **Gruppi di righe**. Posizionarlo sotto **Date** e sopra **= (Dettagli)** .
 
     ![ssrs_ssdt_addorderfield](media/ssrs-ssdt-addorderfield.png)
 
