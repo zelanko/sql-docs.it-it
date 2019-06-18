@@ -16,17 +16,17 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 05ed8b22882264aa16efc8c5b7736bcc517e44f9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581447"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limiti delle dimensioni di report e snapshot
   Le informazioni contenute in questo argomento consentono agli amministratori che gestiscono una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] di conoscere i limiti relativi alle dimensioni dei report quando questi ultimi vengono pubblicati in un server di report, quando ne viene eseguito il rendering in fase di esecuzione e quando vengono salvati nel file system. In questo argomento vengono inoltre fornite indicazioni pratiche su come calcolare le dimensioni di un database del server di report e vengono descritti gli effetti delle dimensioni degli snapshot sulle prestazioni del server.  
   
 ## <a name="maximum-size-for-published-reports"></a>Dimensioni massime per i report pubblicati  
- Nel server di report le dimensioni dei report e dei modelli sono basate sulle dimensioni dei file di definizione del report, con estensione rdl, e del modello di report, con estensione smdl, pubblicati in un server di report. Il server di report non prevede limiti per le dimensioni di un report da pubblicare.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] prevede comunque una dimensione massima per gli elementi inviati al server. Per impostazione predefinita, questo limite è di 4 MB. Se si carica o si pubblica in un server di report un file le cui dimensioni superano questo limite, viene generata un'eccezione HTTP. In questo caso, è possibile modificare l'impostazione predefinita aumentando il valore dell'elemento **maxRequestLength** nel file Machine.config.  
+ Nel server di report le dimensioni dei report e dei modelli sono basate sulle dimensioni dei file di definizione del report, con estensione rdl, e del modello di report, con estensione smdl, pubblicati in un server di report. Il server di report non prevede limiti per le dimensioni di un report da pubblicare. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] prevede comunque una dimensione massima per gli elementi inviati al server. Per impostazione predefinita, questo limite è di 4 MB. Se si carica o si pubblica in un server di report un file le cui dimensioni superano questo limite, viene generata un'eccezione HTTP. In questo caso, è possibile modificare l'impostazione predefinita aumentando il valore dell'elemento **maxRequestLength** nel file Machine.config.  
   
  Sebbene un modello di report possa avere dimensioni molto grandi, le definizioni dei report non superano quasi mai i 4 MB. In genere, un report ha dimensioni di alcuni kilobyte (KB). Se tuttavia sono presenti immagini incorporate, la codifica di tali immagini può determinare un aumento considerevole delle dimensioni della definizione del report e, di conseguenza, il superamento del limite predefinito di 4 MB.  
   

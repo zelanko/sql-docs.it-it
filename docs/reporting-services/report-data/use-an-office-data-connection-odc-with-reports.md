@@ -13,10 +13,10 @@ ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a33b5bae668835ca1dbf52b2e7852c3af731ddfe
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574943"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>Utilizzare una connessione Office Data Connection (odc) ai report
@@ -90,7 +90,7 @@ ms.locfileid: "65574943"
   
 10. Se il report usa informazioni di un'origine dati personalizzata, fare clic su **Condivisa**.  
   
-11. In **Collegamento origine dati**fare clic sul pulsante con i puntini di sospensione (**...**).  
+11. In **Collegamento origine dati**fare clic sul pulsante con i puntini di sospensione ( **...** ).  
   
 12. Selezionare il file odc caricato in precedenza.  
   
