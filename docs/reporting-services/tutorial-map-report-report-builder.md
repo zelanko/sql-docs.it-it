@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 25f5dbcee0144b585fc3b328a699332c3346ce36
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298649"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041575"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Esercitazione: Report mappa (Generatore report)
 Questa esercitazione di [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] illustra le funzionalità della mappa che si possono usare per visualizzare i dati su uno sfondo geografico in un report impaginato di [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
@@ -27,7 +27,7 @@ Per variare l'aspetto degli elementi mappa, è possibile specificare un campo co
 In questa esercitazione viene compilato un report mappa in cui sono visualizzate le posizioni di alcuni negozi nelle regioni dello stato di New York.  
    
 > [!NOTE]  
-> In questa esercitazione, i passaggi della procedura guidata sono consolidati in due procedure: una per la creazione del set di dati e un'altra per la creazione di una tabella. Per istruzioni dettagliate su come selezionare un server di report, scegliere un'origine dati, creare un set di dati ed eseguire la procedura guidata. Vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> In questa esercitazione, i passaggi della procedura guidata sono consolidati in due procedure: una per la creazione del set di dati e un'altra per la creazione di una tabella. Per istruzioni dettagliate su come selezionare un server di report, scegliere un'origine dati, creare un set di dati ed eseguire la procedura guidata, vedere la prima esercitazione di questa serie: [Esercitazione: Creazione di un report tabella semplice &#40;Generatore report&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tempo previsto per il completamento di questa esercitazione: 30 minuti.  
   
@@ -166,7 +166,7 @@ In questa sezione viene usata la Creazione guidata livello mappa per aggiungere 
     CAST(1500000 as money) as Sales, CAST('POINT(-73.5626737425063 42.6940551238618)' as geography) AS SpatialLocation  
     ```  
   
-9. Nella barra degli strumenti Progettazione query fare clic su **Esegui** (**!**).  
+9. Nella barra degli strumenti Progettazione query fare clic su **Esegui** ( **!** ).  
   
     Il set di risultati contiene sette colonne che rappresentano un gruppo di punti vendita nello stato di New York che vendono beni di consumo. Di seguito è riportato un elenco, con le spiegazioni per gli elementi che possono non essere evidenti: 
     *   **StoreKey**: identificatore di un negozio.  
@@ -313,7 +313,7 @@ Questa sezione spiega come rendere visibili gli elementi su un livello attravers
   
 3.  Fare clic sulla freccia accanto a PolygonLayer1 > **Dati livello**. Viene visualizzata la finestra di dialogo **Proprietà livello poligono mappa** .  
   
-4.  Nella scheda **Visibilità** digitare **30**per **Trasparenza (percentuale)**.  
+4.  Nella scheda **Visibilità** digitare **30**per **Trasparenza (percentuale)** .  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -413,7 +413,7 @@ Per impostazione predefinita, i dati presentano un formato generale. In questa s
   
 1.  Con la scala dei colori ancora selezionata, nel riquadro Proprietà vengono visualizzate le proprietà per **MapColorScale**. 
   
-2. Espandere la sezione del titolo e nella proprietà Caption digitare **Sales (Thousands)**.
+2. Espandere la sezione del titolo e nella proprietà Caption digitare **Sales (Thousands)** .
 
 3. Modificare la proprietà TextColor in **Bianco**.  
 
