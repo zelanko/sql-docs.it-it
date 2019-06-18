@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3866a45a2b55a5372769eacc0bb6b0eb1e5c088f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62942974"
 ---
 # <a name="escape-sequences-in-odbc"></a>Sequenze di escape in ODBC
@@ -47,9 +47,9 @@ Un numero di funzionalità del linguaggio, ad esempio gli outer join e le chiama
  La sequenza di escape viene riconosciuta e analizzata dal driver, che sostituiscono le sequenze di escape con la grammatica per DBMS specifici. Per altre informazioni sulla sintassi della sequenza di escape, vedere [sequenze di Escape ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) nell'appendice c: Grammatica SQL.  
   
 > [!NOTE]  
->  In ODBC 2. *x*, questo era la sintassi standard della sequenza di escape: **-(\*vendor (**_-nome del fornitore_**), prodotto (** _-nome del prodotto_**)**_estensione_  **\*):**  
+>  In ODBC 2. *x*, questo era la sintassi standard della sequenza di escape: **-(\*vendor (** _-nome del fornitore_ **), prodotto (** _-nome del prodotto_ **)** _estensione_  **\*):**  
 >   
->  Oltre a questa sintassi, è stata definita una sintassi abbreviata nel formato: **{**_estensione_**}**  
+>  Oltre a questa sintassi, è stata definita una sintassi abbreviata nel formato: **{** _estensione_ **}**  
 >   
 >  In ODBC 3. *x*, la forma estesa della sequenza di escape è deprecata e viene usato esclusivamente la sintassi abbreviata.  
   
