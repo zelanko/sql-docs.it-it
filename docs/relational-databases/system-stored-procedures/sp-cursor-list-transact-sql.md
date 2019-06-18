@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c6cef14177e871f35ccd5c84af4a2b28e35aff5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724046"
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
@@ -69,7 +69,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |cursor_scope|**smallint**|1 = LOCAL<br /><br /> 2 = GLOBAL|  
 |status|**smallint**|Valori restituiti dalla funzione di sistema CURSOR_STATUS:<br /><br /> 1 = Il cursore a cui si fa riferimento tramite il nome o la variabile è aperto. Se il cursore è di tipo insensitive, statico o keyset, il set di risultati contiene almeno una riga. Se invece è dinamico, contiene zero o più righe.<br /><br /> 0 = Il cursore a cui si fa riferimento tramite il nome o la variabile è aperto, ma non contiene righe. I cursori dinamici non restituiscono mai questo valore.<br /><br /> -1 = Il cursore a cui si fa riferimento tramite il nome o la variabile è chiuso.<br /><br /> -2 = Si applica solo alle variabili di cursore. Alla variabile non è assegnato alcun cursore. È possibile che un parametro OUTPUT abbia assegnato un cursore alla variabile, ma la stored procedure ha chiuso il cursore prima di completare l'operazione.<br /><br /> -3 = Non esiste alcun cursore o variabile di cursore con il nome specificato oppure alla variabile non è stato assegnato alcun cursore.|  
 |model|**smallint**|1 = Insensitive (o statico)<br /><br /> 2 = Keyset<br /><br /> 3 = dinamica<br /><br /> 4 = Fast forward-only|  
-|concorrenza|**smallint**|1 = Di sola lettura.<br /><br /> 2 = Blocchi di scorrimento.<br /><br /> 3 = Ottimistica.|  
+|concurrency|**smallint**|1 = Di sola lettura.<br /><br /> 2 = Blocchi di scorrimento.<br /><br /> 3 = Ottimistica.|  
 |scrollable|**smallint**|0 = Forward-only<br /><br /> 1 = Scorrevole|  
 |open_status|**smallint**|0 = Chiuso<br /><br /> 1 = Aperto|  
 |cursor_rows|**int**|Numero di righe del set di risultati. Per altre informazioni, vedere [@@CURSOR_ROWS](../../t-sql/functions/cursor-rows-transact-sql.md).|  

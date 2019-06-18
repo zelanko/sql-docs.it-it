@@ -1,9 +1,8 @@
 ---
 title: Monitorare l'uso della CPU | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: sql
-ms.prod_service: database-engine
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
@@ -20,18 +19,17 @@ helpviewer_keywords:
 - CPU [SQL Server], monitoring
 - monitoring server performance [SQL Server], CPU usage
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
-author: julieMSFT
-ms.author: jrasnick
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e46610823432efde0cc757e3dff317227b7548ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63032103"
 ---
 # <a name="monitor-cpu-usage"></a>Monitorare l'utilizzo della CPU
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   È opportuno monitorare periodicamente un'istanza di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per verificare che i valori di utilizzo della CPU rientrino nei normali intervalli. Se la frequenza di utilizzo della CPU è costantemente elevata può essere necessario eseguire un aggiornamento della CPU o aggiungere più processori. Una valore costantemente elevato di utilizzo della CPU può inoltre indicare la presenza di un'applicazione non progettata o ottimizzata correttamente. L'ottimizzazione dell'applicazione potrebbe ridurre l'utilizzo della CPU.  
   
  Una soluzione efficiente per determinare l'utilizzo della CPU consiste nell'usare il contatore **Processore:% Tempo processore** in Monitoraggio di sistema. Questo contatore consente di monitorare la quantità di tempo utilizzata dalla CPU per l'esecuzione di un thread non inattivo. Se il valore relativo a tale stato è incluso tra l'80% e il 90%, può essere necessario eseguire un aggiornamento della CPU o aggiungere ulteriori processori. Nel caso dei sistemi multiprocessore, è necessario monitorare un'istanza del contatore per ogni processore. Il valore rappresenta il tempo totale di un processore specifico. Per determinare la media di tutti i processori, usare il contatore **Sistema: % Tempo totale processore** .  

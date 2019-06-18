@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dab6f53c5b75e1ef78eab346d2b0dd96a42e5861
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510148"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62703976"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Raccolte di XML Schema (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -170,7 +170,7 @@ ms.locfileid: "58510148"
   
 -   Scrivere query Transact-SQL sulle viste del catalogo appropriate per le raccolte di XML Schema.  
   
--   Usare la funzione predefinita **XML_SCHEMA_NAMESPACE()**. È possibile applicare i metodi per il tipo di dati **xml** all'output di questa funzione, ma non è possibile modificare gli elementi XML Schema sottostanti.  
+-   Usare la funzione predefinita **XML_SCHEMA_NAMESPACE()** . È possibile applicare i metodi per il tipo di dati **xml** all'output di questa funzione, ma non è possibile modificare gli elementi XML Schema sottostanti.  
   
  Queste tecniche di enumerazione sono illustrate negli esempi seguenti.  
   
@@ -191,7 +191,7 @@ WHERE    XSC.name = 'myCollection'
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
- I singoli elementi XML Schema inclusi nella raccolta possono essere ottenuti come istanze del tipo di dati **xml** , specificando lo spazio dei nomi di destinazione come terzo argomento della funzione **XML_SCHEMA_NAMESPACE()**, come illustrato nell'esempio seguente.  
+ I singoli elementi XML Schema inclusi nella raccolta possono essere ottenuti come istanze del tipo di dati **xml** , specificando lo spazio dei nomi di destinazione come terzo argomento della funzione **XML_SCHEMA_NAMESPACE()** , come illustrato nell'esempio seguente.  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Esempio: Restituzione di uno schema specifico da una raccolta di XML Schema  
  L'istruzione seguente restituisce l'elemento XML Schema con spazio dei nomi di destinazione _pretend_ https/\/www.microsoft.com/was-books dalla raccolta di XML Schema "myCollection" all'interno dello schema relazionale dbo.  

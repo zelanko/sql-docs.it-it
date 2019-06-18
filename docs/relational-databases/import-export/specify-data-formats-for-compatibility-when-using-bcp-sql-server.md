@@ -19,10 +19,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 929a6a40b7203147ed59e045bb359c464c248850
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946164"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>Impostazione dei formati di dati per la compatibilità mediante bcp (SQL Server)
@@ -54,7 +54,7 @@ ms.locfileid: "64946164"
   
   
 ##  <a name="FieldSpecificPrompts"></a> Panoramica dei prompt specifici dei campi  
- Se un comando **bcp** interattivo contiene l'opzione **in** o **out** , ma non contiene l'opzione del file di formato (**-f**) o un'opzione di formato dati (**-n**, **-c**, **-w**o **-N**), per ciascuna colonna della tabella di origine o di destinazione il comando richiede uno alla volta tutti gli attributi precedenti. In ogni prompt, il comando **bcp** offre un valore predefinito in base al tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] della colonna di tabella. Accettare il valore predefinito per tutti i prompt equivale a specificare il formato nativo (**-n**) nella riga di comando. Ogni prompt mostra un valore predefinito fra parentesi: [*predefinito*]. Per accettare i valori predefiniti, premere INVIO. Per specificare un valore diverso da quello predefinito, immettere il valore desiderato al prompt.  
+ Se un comando **bcp** interattivo contiene l'opzione **in** o **out** , ma non contiene l'opzione del file di formato ( **-f**) o un'opzione di formato dati ( **-n**, **-c**, **-w**o **-N**), per ciascuna colonna della tabella di origine o di destinazione il comando richiede uno alla volta tutti gli attributi precedenti. In ogni prompt, il comando **bcp** offre un valore predefinito in base al tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] della colonna di tabella. Accettare il valore predefinito per tutti i prompt equivale a specificare il formato nativo ( **-n**) nella riga di comando. Ogni prompt mostra un valore predefinito fra parentesi: [*predefinito*]. Per accettare i valori predefiniti, premere INVIO. Per specificare un valore diverso da quello predefinito, immettere il valore desiderato al prompt.  
   
 ### <a name="example"></a>Esempio  
  L'esempio seguente usa il comando **bcp** per l'esportazione in blocco interattiva dei dati dalla tabella `HumanResources.myTeam` al file `myTeam.txt` . Prima di eseguire l'esempio è necessario creare questa tabella. Per informazioni sulla modalità di creazione e sulla tabella, vedere [Tabella di esempio HumanResources.myTeam &#40;SQL Server&#41;](../../relational-databases/import-export/humanresources-myteam-sample-table-sql-server.md).  

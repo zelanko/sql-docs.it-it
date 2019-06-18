@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7700a2d1da4349bd1bc652badc1c2cdd89dc6550
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873270"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>Disabilitare la compressione in una tabella o un indice
@@ -57,7 +57,7 @@ ms.locfileid: "62873270"
   
 1.  In Esplora oggetti espandere il database contenente la tabella in cui si desidera disabilitare la compressione, quindi espandere la cartella **Tabelle** .  
   
-2.  Fare clic con il pulsante destro del mouse sulla tabella o sull'indice in cui si vuole disabilitare la compressione, scegliere **Archiviazione**, quindi selezionare **Gestione partizione...**.  
+2.  Fare clic con il pulsante destro del mouse sulla tabella o sull'indice in cui si vuole disabilitare la compressione, scegliere **Archiviazione**, quindi selezionare **Gestione partizione...** .  
   
 3.  Per disabilitare la compressione in un indice, espandere la tabella contenente l'indice che si desidera comprimere, quindi espandere la cartella **Indici** .  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62873270"
   
      Le opzioni seguenti sono disponibili nella pagina **Seleziona tipo di compressione** :  
   
-     Casella di controllo**Usa lo stesso tipo di compressione per tutte le partizioni**   
+     Casella di controllo**Usa lo stesso tipo di compressione per tutte le partizioni**  
      Selezionare questa opzione per configurare la stessa impostazione di compressione per tutte le partizioni. La casella di selezione viene abilitata e la colonna **Tipo di compressione** nella griglia viene disabilitata. Se viene selezionata, le opzioni nell'elenco adiacente sono **Nessuno**, **Riga**e **Pagina**.  
   
      **Numero partizioni**  

@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00732de7eca32dc8b2984fdda14163c77c66ad43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62632479"
 ---
 # <a name="update-delete-and-insert-statements"></a>Istruzioni UPDATE, DELETE e INSERT
@@ -33,15 +33,15 @@ Applicazioni basate su SQL apportano modifiche alle tabelle mediante l'esecuzion
   
  **SET** _column-identifier_ **=** {*expression* &#124; **NULL**}  
   
- [**,** _column-identifier_ **=** {*expression* &#124; **NULL**}]...  
+ [ **,** _column-identifier_ **=** {*expression* &#124; **NULL**}]...  
   
  [**In cui** _condizione di ricerca_]  
   
  **DELETE FROM** _nome tabella_[**in cui** _condizioni di ricerca_]  
   
- **INSERT INTO** _table-name_[**(** _column-identifier_ [**,** _column-identifier_]...**)**]  
+ **INSERT INTO** _table-name_[ **(** _column-identifier_ [ **,** _column-identifier_]... **)** ]  
   
- {*query-specification* &#124; **VALUES (** _insert-value_ [**,** _insert-value_]...**)**}  
+ {*query-specification* &#124; **VALUES (** _insert-value_ [ **,** _insert-value_]... **)** }  
   
  Si noti che il *query-specification* elemento è valido solo nelle grammatiche di Core e SQL estesa e che le *expression* e *condizione di ricerca* elementi diventano più complesse nelle grammatiche di Core e SQL estesa.  
   

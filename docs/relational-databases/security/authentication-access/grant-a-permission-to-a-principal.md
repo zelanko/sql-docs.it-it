@@ -15,17 +15,17 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cb89c5bd1d3c1f40e03de60041dc3d22cc56f661
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540414"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62645450"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Concedere un'autorizzazione a un'entità
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   In questo argomento viene descritto come concedere un'autorizzazione a un'entità in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -68,7 +68,7 @@ ms.locfileid: "52540414"
   
 4.  Fare clic con il pulsante destro del mouse su una stored procedure e selezionare **Proprietà**.  
   
-5.  Nella finestra di dialogo **Proprietà stored procedure -**_nome\_stored\_procedure_ selezionare **Autorizzazioni** in Selezione pagina. Utilizzare questa pagina per aggiungere utenti o ruoli alla stored procedure e specificare le autorizzazioni degli utenti o dei ruoli.  
+5.  Nella finestra di dialogo **Proprietà stored procedure -** _nome\_stored\_procedure_ selezionare **Autorizzazioni** in Selezione pagina. Utilizzare questa pagina per aggiungere utenti o ruoli alla stored procedure e specificare le autorizzazioni degli utenti o dei ruoli.  
   
 6.  Al termine, fare clic su **OK**.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "52540414"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- Grants EXECUTE permission on stored procedure HumanResources.uspUpdateEmployeeHireInfo to an application role called Recruiting11.   

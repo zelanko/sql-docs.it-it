@@ -15,11 +15,11 @@ ms.author: aliceku
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f3034dc76a64e25b614b1871247369214199c36b
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997493"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62521273"
 ---
 # <a name="create-a-database-master-key"></a>Creazione della chiave master di un database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "53997493"
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
 È richiesta l'autorizzazione CONTROL per il database.  
   
 ## <a name="using-transact-sql"></a>Utilizzo di Transact-SQL  
@@ -40,7 +40,7 @@ ms.locfileid: "53997493"
   
 3. Sulla barra Standard fare clic su **Nuova query**.  
   
-4. Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+4. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```sql
     -- Creates a database master key for the "AdventureWorks2012" database.   

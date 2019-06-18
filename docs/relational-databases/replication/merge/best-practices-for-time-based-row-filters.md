@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a2b86b5f9b08e9915adae27132b6beb5647394f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755881"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639313"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Procedure consigliate per i filtri di riga basati sul tempo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47755881"
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- Con un filtro di questo tipo, l'esecuzione dell'agente di merge ha in genere due risultati: le righe che soddisfano il filtro vengono replicate nei Sottoscrittori, mentre le righe che non soddisfano più il filtro vengono rimosse dai Sottoscrittori. Per altre informazioni sulle opzioni di filtro con **HOST_NAME()**, vedere [Filtri di riga con parametri](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md). La replica di tipo merge, tuttavia, consente di replicare e pulire esclusivamente i dati che sono stati modificati dopo l'ultima sincronizzazione, indipendentemente dalla modalità di definizione di un filtro di riga per tali dati.  
+ Con un filtro di questo tipo, l'esecuzione dell'agente di merge ha in genere due risultati: le righe che soddisfano il filtro vengono replicate nei Sottoscrittori, mentre le righe che non soddisfano più il filtro vengono rimosse dai Sottoscrittori. Per altre informazioni sulle opzioni di filtro con **HOST_NAME()** , vedere [Filtri di riga con parametri](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md). La replica di tipo merge, tuttavia, consente di replicare e pulire esclusivamente i dati che sono stati modificati dopo l'ultima sincronizzazione, indipendentemente dalla modalità di definizione di un filtro di riga per tali dati.  
   
  Affinché la replica di tipo merge elabori una riga, è necessario che i dati contenuti in tale riga soddisfino il filtro di riga e che siano stati modificati dopo l'ultima sincronizzazione. Nel caso della tabella **SalesOrderHeader** , **OrderDate** viene immesso quando si inserisce una riga. Le righe vengono quindi replicate nel Sottoscrittore come previsto poiché l'inserimento rappresenta una modifica ai dati. Se tuttavia nel Sottoscrittore sono presenti righe che non soddisfano più il filtro, ovvero sono relative a ordini immessi da più di sette giorni, queste verranno rimosse dal Sottoscrittore a meno che non siano state aggiornate per altri motivi.  
   

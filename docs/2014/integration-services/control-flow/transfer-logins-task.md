@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 805c89c24b0a16051de1d555b484a0870de0cfde
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62830012"
 ---
 # <a name="transfer-logins-task"></a>Attività Trasferisci account di accesso
@@ -27,7 +27,7 @@ ms.locfileid: "62830012"
 ## <a name="transfer-logins-between-instances-of-sql-server"></a>Trasferimento di account di accesso tra istanze di SQL Server  
  L'attività Trasferisci account di accesso supporta un'origine e una destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="events"></a>Eventi  
+## <a name="events"></a>Events  
  L'attività Trasferisci account di accesso genera un evento informativo in cui è indicato il numero di account di accesso trasferiti. Genera inoltre un evento di avviso quando un account di accesso viene sovrascritto.  
   
  Non viene riportato lo stato incrementale del trasferimento, ma solo il completamento 0% e 100%.  

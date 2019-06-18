@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e07d71e77fc3de250ca01bb4e7fb2fb0bf15817
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767523"
 ---
-# <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Passaggio 2: Aggiunta e configurazione del contenitore ciclo Foreach
+# <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Passaggio 2: Aggiunta e configurazione del contenitore Ciclo Foreach
   In questa attività verrà aggiunta la capacità di creare un ciclo in una cartella di file flat e applicare la stessa trasformazione del flusso di dati utilizzata nella lezione 1 a ognuno di questi file flat. Ciò si ottiene tramite l'aggiunta e la configurazione di un contenitore Ciclo Foreach al flusso di controllo.  
   
  Il contenitore Ciclo Foreach che si aggiunge deve essere in grado di collegarsi a ogni file flat della cartella. Dal momento che tutti i file della cartella hanno lo stesso formato, il contenitore Ciclo Foreach può utilizzare la stessa gestione connessione file flat per la connessione a tali file. La gestione connessione file flat utilizzata dal contenitore è la stessa creata nella lezione 1.  
@@ -45,7 +45,7 @@ ms.locfileid: "62767523"
   
 4.  Nel **Editor ciclo Foreach** finestra di dialogo il **generali** pagina per **Name**, immettere `Foreach File in Folder`. Fare clic su **OK**.  
   
-5.  Fare doppio clic il contenitore ciclo Foreach, fare clic su **delle proprietà**e nella finestra Proprietà verificare che il `LocaleID` è impostata su **inglese (Stati Uniti)**.  
+5.  Fare doppio clic il contenitore ciclo Foreach, fare clic su **delle proprietà**e nella finestra Proprietà verificare che il `LocaleID` è impostata su **inglese (Stati Uniti)** .  
   
 ### <a name="to-configure-the-enumerator-for-the-foreach-loop-container"></a>Per configurare l'enumeratore per il contenitore Ciclo Foreach  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62767523"
   
 1.  Fare clic su **Mapping variabili**.  
   
-2.  Nella colonna **Variabile** della pagina **Mapping variabili**, fare clic sulla cella vuota e selezionare **\<Nuova variabile...>**.  
+2.  Nella colonna **Variabile** della pagina **Mapping variabili**, fare clic sulla cella vuota e selezionare **\<Nuova variabile...>** .  
   
 3.  Nel **Aggiungi variabile** della finestra di dialogo per **Name**, tipo `varFileName`.  
   

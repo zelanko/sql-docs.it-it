@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85759d21668cc0eb5bc5b6f85f946da96de58442
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299900"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62724642"
 ---
 # <a name="replication-programming-concepts"></a>Concetti di base relativi alla programmazione della replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -111,8 +111,8 @@ ms.locfileid: "54299900"
 |[Concetti di base relativi a RMO (Replication Management Objects)](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)|Codice gestito|Amministrazione, monitoraggio e sincronizzazione.|  
 |<xref:Microsoft.SqlServer.Replication>|Codice gestito|Sincronizzazione.|  
 |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|Codice gestito|Creazione di gestori della logica di business per integrare la logica personalizzata con il processo di sincronizzazione di unione.|  
-|[Stored procedure per la replica &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Generazione di script|Amministrazione e monitoraggio.|  
-|[Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|Generazione di script|Sincronizzazione.|  
+|[Stored procedure per la replica &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Scripting|Amministrazione e monitoraggio.|  
+|[Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|Scripting|Sincronizzazione.|  
   
 ## <a name="example"></a>Esempio  
  La società [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] ha la necessità di pubblicare dati per 200 rappresentanti distribuiti in tutto il mondo. I rappresentanti viaggiano spesso e avranno quindi l'esigenza di utilizzare computer portatili o PDA per modificare i dati relativi ai clienti e aggiungere nuovi ordini. Le modifiche dovranno quindi essere sincronizzate con il server di pubblicazione nel momento in cui il rappresentante connette il computer portatile alla rete.  

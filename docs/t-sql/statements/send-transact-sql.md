@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3ead09886af3ec64c00af06e3919941effd7b234
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590296"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638687"
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ MESSAGE TYPE *message_type_name*
 Specifica il tipo di messaggio del messaggio inviato. Questo tipo di messaggio deve essere incluso nei contratti di servizio utilizzati da queste conversazioni. I contratti devono consentire al tipo di messaggio di essere inviato da questo lato della conversazione. Ad esempio, i servizi di destinazione delle conversazioni possono soltanto inviare messaggi specificati nel contratto come SENT BY TARGET o SENT BY ANY. Se questa clausola viene omessa, il messaggio sarà del tipo DEFAULT.  
   
 *message_body_expression*  
-Fornisce un'espressione che rappresenta il corpo del messaggio. *message_body_expression* è facoltativo. Se però *message_body_expression* è presente, l'espressione deve essere di un tipo convertibile in **varbinary(max)**. L'espressione non può essere NULL. Se questa clausola viene omessa, il corpo del messaggio sarà vuoto.  
+Fornisce un'espressione che rappresenta il corpo del messaggio. *message_body_expression* è facoltativo. Se però *message_body_expression* è presente, l'espressione deve essere di un tipo convertibile in **varbinary(max)** . L'espressione non può essere NULL. Se questa clausola viene omessa, il corpo del messaggio sarà vuoto.  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -93,11 +93,11 @@ L'istruzione SEND blocca separatamente ogni conversazione in cui viene inviato u
   
 L'istruzione SEND non è valida in una funzione definita dall'utente.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 Per inviare un messaggio, l'utente corrente deve disporre dell'autorizzazione RECEIVE per la coda di ogni servizio che invia il messaggio.  
   
 ## <a name="examples"></a>Esempi  
-Nell'esempio seguente viene avviato un dialogo e viene inviato un messaggio XML nel dialogo. Per inviare il messaggio, l'oggetto xml viene convertito in **varbinary(max)**.  
+Nell'esempio seguente viene avviato un dialogo e viene inviato un messaggio XML nel dialogo. Per inviare il messaggio, l'oggetto xml viene convertito in **varbinary(max)** .  
   
 ```sql
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  

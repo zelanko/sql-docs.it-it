@@ -15,21 +15,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5a43918612c24a6c2d7a0b39c89dacc3edc4ed6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509638"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62704276"
 ---
 # <a name="wildcard-components-and-content-validation"></a>Componenti jolly e convalida del contenuto
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   I componenti jolly vengono utilizzati per consentire una maggiore flessibilità riguardo agli elementi che è possibile includere in un modello di contenuto. Tali componenti vengono supportati nel linguaggio XSD nei modi seguenti:  
   
--   Elemento componenti jolly. Sono rappresentati dall'elemento **\<xsd:any>**.  
+-   Elemento componenti jolly. Sono rappresentati dall'elemento **\<xsd:any>** .  
   
--   Attributo componenti jolly. Sono rappresentati dall'elemento **\<xsd:anyAttribute>**.  
+-   Attributo componenti jolly. Sono rappresentati dall'elemento **\<xsd:anyAttribute>** .  
   
- Entrambi gli elementi dei caratteri jolly, **\<xsd:any>** e **\<xsd:anyAttribute>**, supportano l'uso di un attributo **processContents**. Questo attributo consente di specificare un valore che indica il modo in cui le applicazioni XML gestiscono la convalida del contenuto di documenti associato a tali elementi dei caratteri jolly. Valori diversi e relativo effetto:  
+ Entrambi gli elementi dei caratteri jolly, **\<xsd:any>** e **\<xsd:anyAttribute>** , supportano l'uso di un attributo **processContents**. Questo attributo consente di specificare un valore che indica il modo in cui le applicazioni XML gestiscono la convalida del contenuto di documenti associato a tali elementi dei caratteri jolly. Valori diversi e relativo effetto:  
   
 -   Il valore **strict** specifica che viene eseguita la convalida completa del contenuto.  
   

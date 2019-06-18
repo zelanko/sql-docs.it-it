@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a8a1825f00676618b9bcc98c774e7facd6f0e078
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62753018"
 ---
-# <a name="lesson-3-working-with-templates-solutions-and-script-projects"></a>Lezione 3: Utilizzo di modelli, soluzioni e progetti Script
+# <a name="lesson-3-working-with-templates-solutions-and-script-projects"></a>Lezione 3: Uso di modelli, soluzioni e progetti script
   Tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è possibile creare modelli personalizzati, nonché soluzioni e progetti script.  
   
  In questa lezione sono inclusi gli argomenti seguenti:  

@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 07f168c018c33d5078dd47b0f8a38d07ddfdcdf5
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095658"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Creazione di join esterni (Visual Database Tools)
@@ -31,7 +31,7 @@ Durante la creazione di un outer join, l'ordine di inserimento delle tabelle nel
   
 1.  Creare un join, automaticamente o manualmente. Per informazioni dettagliate, vedere [Unione di tabelle in modo automatico &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md) o [Unione di tabelle in modo manuale &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-manually-visual-database-tools.md).  
   
-2.  Selezionare la linea di join nel riquadro Diagramma e scegliere **Seleziona tutte le righe da**  dal menu **Progettazione query<tablename>**. Il comando da scegliere è quello relativo alla tabella contenente le righe supplementari da inserire.  
+2.  Selezionare la linea di join nel riquadro Diagramma e scegliere **Seleziona tutte le righe da**  dal menu **Progettazione query<tablename>** . Il comando da scegliere è quello relativo alla tabella contenente le righe supplementari da inserire.  
   
     -   Scegliere la prima tabella per creare un left outer join.  
   

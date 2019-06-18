@@ -17,11 +17,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7895158afd1f0302182ca7601cb138af4afc36f1
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326332"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639276"
 ---
 # <a name="revoke-system-object-permissions-transact-sql"></a>REVOKE - autorizzazioni per oggetti di sistema (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [**sys.**] .  
+ [**sys.** ] .  
  Il qualificatore **sys** è obbligatorio solo per riferimenti a viste del catalogo e viste a gestione dinamica (DMV).  
   
  *system_object*  
@@ -61,7 +61,7 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
   
  Gli oggetti di sistema sono visibili nella vista del catalogo [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) .  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL SERVER.  
   
 ## <a name="examples"></a>Esempi  

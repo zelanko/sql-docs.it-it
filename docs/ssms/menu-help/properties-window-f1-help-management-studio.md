@@ -25,10 +25,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ad01e2691f76fea00a5531834918b7fbe5d2382e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096395"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Guida sensibile al contesto della finestra Proprietà (Management Studio)
@@ -42,7 +42,7 @@ La finestra **Proprietà** visualizza diversi tipi di campi di modifica, a secon
 Elenca l'oggetto o gli oggetti attualmente selezionati. Saranno visibili solo gli oggetti dell'editor attivo o della finestra di progettazione attiva.  
   
 **Per categoria**  
-Elenca, per categoria, tutte le proprietà e i relativi valori per l'oggetto selezionato. È possibile comprimere una categoria per ridurre il numero di proprietà visualizzate. Quando si espande o comprime una categoria, viene visualizzato un segno più (**+**) o meno (**-**) a sinistra del nome della categoria. Le categorie sono elencate in ordine alfabetico.  
+Elenca, per categoria, tutte le proprietà e i relativi valori per l'oggetto selezionato. È possibile comprimere una categoria per ridurre il numero di proprietà visualizzate. Quando si espande o comprime una categoria, viene visualizzato un segno più ( **+** ) o meno ( **-** ) a sinistra del nome della categoria. Le categorie sono elencate in ordine alfabetico.  
   
 **Per nome**  
 Ordina alfabeticamente tutti gli eventi e le proprietà in fase di progettazione per gli oggetti selezionati.  

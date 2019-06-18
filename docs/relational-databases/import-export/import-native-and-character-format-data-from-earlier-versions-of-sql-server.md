@@ -18,10 +18,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1970f103825d95e77edffd5d2f6c58e405c9469d
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946611"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Importare dati in formato nativo e carattere da versioni precedenti di SQL Server
@@ -55,10 +55,10 @@ ms.locfileid: "64946611"
  **UDT indica un tipo definito dall'utente.  
   
 ## <a name="exporting-using--v-80"></a>Esportazione usando –V 80  
- Quando si esportano globalmente i dati usando l'opzione **-V80**, i dati di tipo **nvarchar(max)**, **varchar(max)**, **varbinary(max)**, XML e di tipo definito dall'utente (UDT) in modalità nativa vengono archiviati con un prefisso a 4 byte come i dati **text**, **image**e **ntext**, anziché con un prefisso a 8 byte che rappresenta l'impostazione predefinita per [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.  
+ Quando si esportano globalmente i dati usando l'opzione **-V80**, i dati di tipo **nvarchar(max)** , **varchar(max)** , **varbinary(max)** , XML e di tipo definito dall'utente (UDT) in modalità nativa vengono archiviati con un prefisso a 4 byte come i dati **text**, **image**e **ntext**, anziché con un prefisso a 8 byte che rappresenta l'impostazione predefinita per [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.  
   
 ## <a name="copying-date-values"></a>Copia dei valori di data  
- **bcp** consente di usare l'API della copia bulk ODBC. Quindi, per importare i valori di dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp** usa il formato di data ODBC (*aaaa-mm-gg hh:mm:ss*[*.f...*]).  
+ **bcp** consente di usare l'API della copia bulk ODBC. Quindi, per importare i valori di dati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp** usa il formato di data ODBC (*aaaa-mm-gg hh:mm:ss*[ *.f...* ]).  
   
  Il comando **bcp** esporterà sempre i file di dati in formato carattere usando il formato predefinito ODBC per i valori **datetime** e **smalldatetime** . Ad esempio, per una colonna **datetime** contenente la data `12 Aug 1998` verrà eseguita la copia bulk in un file di dati come stringa di caratteri `1998-08-12 00:00:00.000`.  
   

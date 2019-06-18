@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a66d4665af9980822f5ce4c41ed0b94964fa8c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62634926"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Lingue e regole di confronto (Analysis Services)
@@ -66,7 +66,7 @@ ms.locfileid: "62634926"
   
 -   0x0407 o 1031 per **Tedesco (Germania)**  
   
--   0x0416 o 1046 per **Portoghese (Brasile)**.  
+-   0x0416 o 1046 per **Portoghese (Brasile)** .  
   
  Per visualizzare un elenco più completo, vedere [ID delle impostazioni locali assegnati da Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx). Per altre informazioni generiche, vedere [Codifiche e tabelle codici](/globalization/encoding/encoding-overview).  
   

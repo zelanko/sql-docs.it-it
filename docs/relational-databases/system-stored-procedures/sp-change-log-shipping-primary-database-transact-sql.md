@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a713687d41c21a3c99c30d6b7192d7c59e41505
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62994252"
 ---
 # <a name="spchangelogshippingprimarydatabase-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
@@ -53,9 +53,9 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ## <a name="arguments"></a>Argomenti  
 `[ @database = ] 'database'` È il nome del database nel server primario. *primary_database* viene **sysname**, non prevede alcun valore predefinito.  
   
-`[ @backup_directory = ] 'backup_directory'` È il percorso della cartella di backup nel server primario. *backup_directory* viene **nvarchar(500)**, non prevede alcun valore predefinito e non può essere NULL.  
+`[ @backup_directory = ] 'backup_directory'` È il percorso della cartella di backup nel server primario. *backup_directory* viene **nvarchar(500)** , non prevede alcun valore predefinito e non può essere NULL.  
   
-`[ @backup_share = ] 'backup_share'` È il percorso di rete per la directory di backup nel server primario. *backup_share* viene **nvarchar(500)**, non prevede alcun valore predefinito e non può essere NULL.  
+`[ @backup_share = ] 'backup_share'` È il percorso di rete per la directory di backup nel server primario. *backup_share* viene **nvarchar(500)** , non prevede alcun valore predefinito e non può essere NULL.  
   
 `[ @backup_retention_period = ] 'backup_retention_period'` È il periodo di tempo, espresso in minuti, per mantenere il file di backup di log nella directory di backup nel server primario. *backup_retention_period* viene **int**, non prevede alcun valore predefinito e non può essere NULL.  
   

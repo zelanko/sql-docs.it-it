@@ -30,11 +30,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9c828a7db7a15e9a25073a5c6246a5c354934400
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664589"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ALTER XML SCHEMA COLLECTION MyColl ADD '
   
  Se la raccolta di schemi contiene già una carattere jolly di convalida lax o un elemento di tipo **xs:anyType**, l'aggiunta di una nuova dichiarazione di elemento globale, tipo o attributo alla raccolta di schemi comporterà una riconvalida di tutti i dati archiviati vincolati dalla raccolta di schemi.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per modificare XML SCHEMA COLLECTION è richiesta l'autorizzazione ALTER per la raccolta.  
   
 ## <a name="examples"></a>Esempi  
@@ -187,8 +187,8 @@ CREATE XML SCHEMA COLLECTION AS @MySchemaCollection;
   
  L'istruzione CREATE XML SCHEMA COLLECTION archivia solo i componenti dello schema riconosciuti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non tutti gli elementi contenuti in XML Schema vengono archiviati nel database. Pertanto, se si desidera una copia esatta della raccolta di XML Schema, è consigliabile salvare gli XML Schema in una colonna di database o in un'altra cartella nel computer.  
   
-### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>b. Specifica di spazi dei nomi relativi a più schemi in una raccolta di schemi  
- È possibile specificare più XML Schema quando si crea una raccolta di XML Schema. Ad esempio  
+### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. Specifica di spazi dei nomi relativi a più schemi in una raccolta di schemi  
+ È possibile specificare più XML Schema quando si crea una raccolta di XML Schema. Esempio:  
   
 ```  
 CREATE XML SCHEMA COLLECTION N'  

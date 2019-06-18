@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3e20ed69a9fdff95914dd0d5086e3c0774421d44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599949"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62671723"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurare un computer multihomed per l'accesso a SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,9 +68,9 @@ ms.locfileid: "47599949"
   
 #### <a name="to-determine-the-ip-addresses-and-ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>Per determinare le porte e gli indirizzi IP usati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  Fare clic sul pulsante **Start**, scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione**, quindi fare clic su **Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**.  
+1.  Fare clic sul pulsante **Start**, scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Strumenti di configurazione**, quindi fare clic su **Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
   
-2.  In **Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** nel riquadro della console espandere **Configurazione di rete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**, espandere **Protocolli per \<nome istanza>** e quindi fare doppio clic su **TCP/IP**.  
+2.  In **Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** nel riquadro della console espandere **Configurazione di rete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , espandere **Protocolli per \<nome istanza>** e quindi fare doppio clic su **TCP/IP**.  
   
 3.  Nella scheda **Indirizzi TCP/IP** della finestra di dialogo **Proprietà TCP/IP** vengono visualizzati vari indirizzi IP, nel formato **IP1**, **IP2**fino a **IPAll**. Uno di tali indirizzi corrisponde all'indirizzo IP della scheda loopback, ovvero 127.0.0.1. Ulteriori indirizzi IP vengono visualizzati per ogni indirizzo IP configurato nel computer.  
   

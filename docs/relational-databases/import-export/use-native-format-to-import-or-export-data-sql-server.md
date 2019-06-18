@@ -16,10 +16,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 170104d07302b7921dd06b30f91b386238fe6d55
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946391"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Utilizzo del formato nativo per importare o esportare dati (SQL Server)
@@ -67,14 +67,14 @@ Per importare correttamente i dati in formato nativo, verificare quanto segue:
   
      L' [utilità bcp](../../tools/bcp-utility.md) usa il formato dati binario interno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per trasferire dati non di tipo carattere da una tabella in un file di dati.  
   
--   Dati[char](../../t-sql/data-types/char-and-varchar-transact-sql.md) o [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)   
+-   Dati[char](../../t-sql/data-types/char-and-varchar-transact-sql.md) o [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)  
   
      All'inizio di ogni campo [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) o [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) , l'utilità [bcp](../../tools/bcp-utility.md) aggiunge la lunghezza del prefisso.  
   
     > [!IMPORTANT]
     >  Per impostazione predefinita, quando si usa la modalità nativa, l'utilità [bcp](../../tools/bcp-utility.md) converte i caratteri di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in caratteri OEM prima di copiarli in un file di dati. L' [utilità bcp](../../tools/bcp-utility.md) converte i caratteri di un file di dati in caratteri ANSI prima dell'importazione bulk in una tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Durante queste conversioni può verificarsi la perdita dei dati con caratteri estesi. Per i caratteri estesi, è necessario utilizzare il formato nativo Unicode o specificare una tabella codici.
   
--   Dati[sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)   
+-   Dati[sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)  
   
      Se i dati [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) vengono archiviati come SQLVARIANT in un file di dati in formato nativo, verranno mantenute tutte le relative caratteristiche. I metadati che registrano il tipo di dati di ogni valore vengono archiviati insieme al valore stesso. Questi metadati vengono usati per creare di nuovo il valore con lo stesso tipo di dati in una colonna di destinazione [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) .  
   
@@ -94,7 +94,7 @@ Il formato nativo è supportato dalle opzioni di comando seguenti:
 |OPENROWSET|N/D|Deve usare un file di formato|
 
   
- \*Per caricare i dati nativi (**-n**) in un formato compatibile con le versioni precedenti dei client di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , usare l'opzione **-V** . Per altre informazioni, vedere [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ \*Per caricare i dati nativi ( **-n**) in un formato compatibile con le versioni precedenti dei client di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , usare l'opzione **-V** . Per altre informazioni, vedere [Importare dati in formato nativo e carattere da versioni precedenti di SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
 > [!NOTE]
 >  In alternativa, è possibile definire la formattazione di ogni singolo campo in un file di formato. Per altre informazioni, vedere [File di formato per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).

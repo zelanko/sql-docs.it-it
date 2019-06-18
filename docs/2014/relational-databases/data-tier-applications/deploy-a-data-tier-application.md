@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ded740286ac86deee92d6822aaa5b3130f796849
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62918189"
 ---
 # <a name="deploy-a-data-tier-application"></a>Distribuire un'applicazione livello dati
@@ -89,7 +89,7 @@ ms.locfileid: "62918189"
   
  **Non visualizzare più questa pagina** - Fare clic sulla casella di controllo per evitare che la pagina venga visualizzata nuovamente in futuro.  
   
- **Avanti >**: consente di passare alla pagina **Selezione pacchetto di applicazione livello dati**.  
+ **Avanti >** : consente di passare alla pagina **Selezione pacchetto di applicazione livello dati**.  
   
  **Annulla** consente di terminare la procedura guidata senza distribuire un'applicazione livello dati.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "62918189"
   
  **\< Indietro** : consente di tornare alla pagina **Introduzione** .  
   
- **Avanti >**: consente di visualizzare un indicatore di stato per la verifica della validità del file selezionato come pacchetto di applicazione livello dati.  
+ **Avanti >** : consente di visualizzare un indicatore di stato per la verifica della validità del file selezionato come pacchetto di applicazione livello dati.  
   
  **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "62918189"
   
  **\< Precedente** -torna allo stato iniziale del **Seleziona pacchetto** pagina.  
   
- **Avanti >**: consente di passare alla versione finale della pagina **Seleziona pacchetto**.  
+ **Avanti >** : consente di passare alla versione finale della pagina **Seleziona pacchetto**.  
   
  **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "62918189"
   
  **\< Precedente** -restituisce la **Seleziona pacchetto** pagina.  
   
- **Avanti >**: consente di passare alla pagina **Aggiorna configurazione**.  
+ **Avanti >** : consente di passare alla pagina **Aggiorna configurazione**.  
   
  **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "62918189"
   
  **\< Precedente** -restituisce la **selezione pacchetto di applicazione livello dati** pagina.  
   
- **Avanti >**: consente di passare alla pagina **Riepilogo**.  
+ **Avanti >** : consente di passare alla pagina **Riepilogo**.  
   
  **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "62918189"
   
  **\< Precedente** -verrà nuovamente visualizzato il **Aggiorna configurazione** pagina per modificare le selezioni.  
   
- **Avanti >**: consente di distribuire l'applicazione livello dati e visualizzare i risultati nella pagina **Distribuisci DAC**.  
+ **Avanti >** : consente di distribuire l'applicazione livello dati e visualizzare i risultati nella pagina **Distribuisci DAC**.  
   
  **Annulla** : consente di terminare la procedura guidata senza distribuire l'applicazione livello dati.  
   

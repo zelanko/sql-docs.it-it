@@ -19,11 +19,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e697adb4df3127468e5e74d5e5c4cbbebbae6615
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135801"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62508335"
 ---
 # <a name="validate-replicated-data"></a>Convalida dei dati replicati
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ La replica transazionale e la replica di tipo merge consentono di verificare che
   
  Per gestire gli errori di convalida, considerare quanto segue:  
   
--   Configurare l'avviso di replica **Replica: la convalida dei dati nel Sottoscrittore non è riuscita.**, in modo che l'utente venga avvisato dell'errore. Per altre informazioni, vedere [Configurare gli avvisi di replica predefiniti &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md).  
+-   Configurare l'avviso di replica **Replica: la convalida dei dati nel Sottoscrittore non è riuscita.** , in modo che l'utente venga avvisato dell'errore. Per altre informazioni, vedere [Configurare gli avvisi di replica predefiniti &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md).  
   
 -   L'errore di convalida rappresenta un problema per l'applicazione utilizzata? Se sì, aggiornare manualmente i dati in modo che siano sincronizzati oppure reinizializzare la sottoscrizione:  
   
@@ -107,7 +107,7 @@ La replica transazionale e la replica di tipo merge consentono di verificare che
 
 #### <a name="all-articles"></a>Tutti gli articoli 
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md). Specificare **@publication** e uno dei valori riportati di seguito per **@rowcount_only**.  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md). Specificare **@publication** e uno dei valori riportati di seguito per **@rowcount_only** .  
   
     -   **1** : convalida solo mediante conteggio delle righe (impostazione predefinita).    
     -   **2** : convalida mediante conteggio delle righe e checksum binario.  
@@ -119,7 +119,7 @@ La replica transazionale e la replica di tipo merge consentono di verificare che
   
 #### <a name="single-article"></a>Singolo articolo  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Specificare **@publication**, il nome dell'articolo per **@article**e uno dei valori riportati di seguito per **@rowcount_only**.  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Specificare **@publication** , il nome dell'articolo per **@article** e uno dei valori riportati di seguito per **@rowcount_only** .  
   
     -   **1** : convalida solo mediante conteggio delle righe (impostazione predefinita).    
     -   **2** : convalida mediante conteggio delle righe e checksum binario.  
@@ -133,9 +133,9 @@ La replica transazionale e la replica di tipo merge consentono di verificare che
 #### <a name="single-subscriber"></a>Singolo sottoscrittore 
   
 1.  Nel database di pubblicazione del server di pubblicazione aprire una transazione esplicita usando [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md).    
-2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md). Specificare la pubblicazione per **@publication**, il nome del Sottoscrittore per **@subscriber**e il nome del database di sottoscrizione per **@destination_db**.    
+2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md). Specificare la pubblicazione per **@publication** , il nome del Sottoscrittore per **@subscriber** e il nome del database di sottoscrizione per **@destination_db** .    
 3.  (Facoltativo) Ripetere il passaggio 2 per ciascuna sottoscrizione da convalidare.    
-4.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Specificare **@publication**, il nome dell'articolo per **@article**e uno dei valori riportati di seguito per **@rowcount_only**.    
+4.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Specificare **@publication** , il nome dell'articolo per **@article** e uno dei valori riportati di seguito per **@rowcount_only** .    
     -   **1** : convalida solo mediante conteggio delle righe (impostazione predefinita).    
     -   **2** : convalida mediante conteggio delle righe e checksum binario.  
   
@@ -213,7 +213,7 @@ La replica transazionale e la replica di tipo merge consentono di verificare che
     3.  Visualizzare le informazioni nella scheda **Cronologia sincronizzazione** all'interno dell'area di testo **Ultimo messaggio della sessione selezionata** .  
 
 ### <a name="using-transact-sql"></a>Utilizzo di Transact-SQL
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md). Specificare **@publication**, il nome del Sottoscrittore per **@subscriber**, il nome del database di sottoscrizione per **@subscriber_db**e uno dei valori riportati di seguito per **@level**.   
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md). Specificare **@publication** , il nome del Sottoscrittore per **@subscriber** , il nome del database di sottoscrizione per **@subscriber_db** e uno dei valori riportati di seguito per **@level** .   
     -   **1** : convalida solo mediante conteggio delle righe.    
     -   **3** : convalida mediante conteggio delle righe e checksum binario.  
   
@@ -240,7 +240,7 @@ La replica transazionale e la replica di tipo merge consentono di verificare che
     3.  Visualizzare le informazioni nella scheda **Cronologia sincronizzazione** all'interno dell'area di testo **Ultimo messaggio della sessione selezionata** . 
   
 ### <a name="using-transact-sql"></a>Utilizzo di Transact-SQL
-1.  (Facoltativo) Nel database di pubblicazione del server di pubblicazione eseguire [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md). Specificare **@publication** e uno dei valori riportati di seguito per **@level**.    
+1.  (Facoltativo) Nel database di pubblicazione del server di pubblicazione eseguire [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md). Specificare **@publication** e uno dei valori riportati di seguito per **@level** .    
     -   **1** : convalida solo mediante conteggio delle righe.   
     -   **3** : convalida mediante conteggio delle righe e checksum binario.  
   

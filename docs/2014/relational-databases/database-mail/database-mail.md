@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c763c6db472f52df320d0c89dc47483636bf9f5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917967"
 ---
 # <a name="database-mail"></a>Posta elettronica database
@@ -41,37 +41,37 @@ ms.locfileid: "62917967"
   
 ### <a name="scalability"></a>Scalabilità  
   
--   Recapito in background: Posta elettronica database sono disponibili informazioni di base, o recapito asincrono. Quando si chiama **sp_send_dbmail** per inviare un messaggio, Posta elettronica database aggiunge una richiesta a una coda di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . La stored procedure restituisce immediatamente un risultato. Il componente esterno di posta elettronica riceve la richiesta e recapita i messaggi.  
+-   Recapito in background: Posta elettronica database consente il recapito in background o asincrono. Quando si chiama **sp_send_dbmail** per inviare un messaggio, Posta elettronica database aggiunge una richiesta a una coda di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . La stored procedure restituisce immediatamente un risultato. Il componente esterno di posta elettronica riceve la richiesta e recapita i messaggi.  
   
--   Più profili: Posta elettronica database consente di creare più profili in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza. Facoltativamente, è possibile scegliere il profilo utilizzato da Posta elettronica database quando viene inviato un messaggio.  
+-   Più profili: Posta elettronica database consente di creare più profili in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Facoltativamente, è possibile scegliere il profilo utilizzato da Posta elettronica database quando viene inviato un messaggio.  
   
--   Più account: Ogni profilo può contenere più account di failover. È possibile configurare profili diversi con account diversi, per distribuire la posta elettronica su più server di posta.  
+-   Più account: Ogni profilo può includere più account di failover. È possibile configurare profili diversi con account diversi, per distribuire la posta elettronica su più server di posta.  
   
--   compatibilità a 64 bit: Posta elettronica database è pienamente supportato nelle installazioni a 64 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Compatibilità con installazioni a 64 bit: Posta elettronica database è pienamente supportato nelle installazioni a 64 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="security"></a>Sicurezza  
   
--   Disattivato per impostazione predefinita: Per ridurre la superficie di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le procedure di posta elettronica Database archiviati sono disabilitate per impostazione predefinita.  
+-   Disattivazione per impostazione predefinita: Per ridurre la superficie di attacco di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le stored procedure di Posta elettronica database sono disabilitate per impostazione predefinita.  
   
 -   Protezione posta elettronica: per inviare Posta elettronica database, è necessario essere un membro del ruolo del database **DatabaseMailUserRole** nel database **msdb** .  
   
--   Sicurezza dei profili: Posta elettronica database impone la sicurezza per i profili di posta elettronica. È possibile scegliere gli utenti o i gruppi del database **msdb** autorizzati ad accedere a un profilo di Posta elettronica database. È possibile concedere l'accesso a utenti specifici o a tutti gli utenti in **msdb**. Un profilo privato consente di limitare l'accesso a un elenco specificato di utenti. Un profilo pubblico risulta disponibile per tutti gli utenti di un database.  
+-   Sicurezza dei profili: Posta elettronica database applica la sicurezza per i profili di posta. È possibile scegliere gli utenti o i gruppi del database **msdb** autorizzati ad accedere a un profilo di Posta elettronica database. È possibile concedere l'accesso a utenti specifici o a tutti gli utenti in **msdb**. Un profilo privato consente di limitare l'accesso a un elenco specificato di utenti. Un profilo pubblico risulta disponibile per tutti gli utenti di un database.  
   
--   Dimensione degli allegati: Posta elettronica database impone un limite configurabile per le dimensioni del file allegato. È possibile modificare tale limite usando la stored procedure [sysmail_configure_sp](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql) .  
+-   Gestore della dimensione degli allegati: Posta elettronica database applica un limite configurabile per la dimensione dei file allegati. È possibile modificare tale limite usando la stored procedure [sysmail_configure_sp](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql) .  
   
--   Estensioni file allegati non consentite: Posta elettronica database mantiene un elenco di estensioni file allegati non consentite. Gli utenti non possono allegare file la cui estensione è inclusa in tale elenco. È possibile modificare questo elenco utilizzando sysmail_configure_sp.  
+-   Estensioni di file non consentite: Posta elettronica database mantiene un elenco di estensioni di file non consentite. Gli utenti non possono allegare file la cui estensione è inclusa in tale elenco. È possibile modificare questo elenco utilizzando sysmail_configure_sp.  
   
 -   Posta elettronica database è in esecuzione nell'account di servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Engine. Per allegare un file da una cartella a un'e-mail, l'account del motore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve disporre delle autorizzazioni necessarie per accedere alla cartella in cui è contenuto il file.  
   
 ### <a name="supportability"></a>Facilità di supporto  
   
--   Configurazione integrata: Posta elettronica database mantiene le informazioni per gli account di posta elettronica all'interno di [!INCLUDE[ssDEnoversion](../../includes/tsql-md.md)].  
+-   Configurazione integrata: Posta elettronica database mantiene le informazioni relative agli account di posta elettronica all'interno di [!INCLUDE[ssDEnoversion](../../includes/tsql-md.md)].  
   
 -   Registrazione. Posta elettronica database registra l'attività di posta elettronica in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nel log eventi dell'applicazione di Microsoft Windows e nelle tabelle del database **msdb** .  
   
--   Controllo: Posta elettronica database conserva copie dei messaggi e gli allegati ricevuti **msdb** database. È possibile controllare con facilità l'utilizzo di Posta elettronica database ed esaminare i messaggi conservati.  
+-   Controllo: Posta elettronica database conserva le copie di messaggi e allegati nel database **msdb**. È possibile controllare con facilità l'utilizzo di Posta elettronica database ed esaminare i messaggi conservati.  
   
--   Supporto per HTML: Posta elettronica database consente di inviare posta elettronica formattato come HTML.  
+-   Supporto per HTML: Posta elettronica database consente di inviare messaggi di posta elettronica in formato HTML.  
   
 
   
