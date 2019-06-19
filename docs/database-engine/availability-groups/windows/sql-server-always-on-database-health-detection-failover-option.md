@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: 979061055a0d48af7c2eec809e3499a1e672ec9d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66777578"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Opzione di failover di rilevamento dell'integrità a livello di database di un gruppo di disponibilità

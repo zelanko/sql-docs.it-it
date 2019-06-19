@@ -28,11 +28,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 5bc7c5c22bdad37eee4e5a711b77555088404b0e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327682"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62644583"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY - autorizzazioni per entità di database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -144,7 +144,7 @@ DENY permission [ ,...n ]
 |ALTER|CONTROL|ALTER ANY APPLICATION ROLE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per l'entità specificata o un'autorizzazione di livello superiore che include l'autorizzazione CONTROL.  
   
  Gli utenti che dispongono dell'autorizzazione CONTROL per un database, ad esempio i membri del ruolo predefinito del database db_owner, possono negare qualsiasi autorizzazione per qualsiasi entità a protezione diretta nel database.  
@@ -160,7 +160,7 @@ DENY CONTROL ON USER::Wanida TO RolandX;
 GO  
 ```  
   
-### <a name="b-denying-view-definition-permission-on-a-role-to-a-user-to-which-it-was-granted-with-grant-option"></a>b. Negazione dell'autorizzazione VIEW DEFINITION per un ruolo a un utente a cui è stata concessa con GRANT OPTION  
+### <a name="b-denying-view-definition-permission-on-a-role-to-a-user-to-which-it-was-granted-with-grant-option"></a>B. Negazione dell'autorizzazione VIEW DEFINITION per un ruolo a un utente a cui è stata concessa con GRANT OPTION  
  Nell'esempio seguente viene negata l'autorizzazione `VIEW DEFINITION` per il ruolo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] del database `SammamishParking` all'utente di database `JinghaoLiu`. Viene specificata l'opzione `CASCADE` perché all'utente `JinghaoLiu` l'autorizzazione VIEW DEFINITION è stata concessa con WITH GRANT OPTION.  
   
 ```  
@@ -171,7 +171,7 @@ GO
 ```  
   
 ### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>C. Negazione dell'autorizzazione IMPERSONATE per un utente a un ruolo applicazione  
- Nell'esempio seguente viene negata l'autorizzazione `IMPERSONATE` per l'utente `HamithaL` al ruolo applicazione [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] del database `AccountsPayable17`.  
+ Nell'esempio seguente viene negata l'autorizzazione `IMPERSONATE` per l'utente `HamithaL` al ruolo applicazione `AccountsPayable17` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 **Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   

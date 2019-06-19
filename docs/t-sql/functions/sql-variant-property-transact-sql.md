@@ -21,10 +21,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7a9f7c245f08ffcd3211277a4d201ed884d66caa
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947661"
 ---
 # <a name="sqlvariantproperty-transact-sql"></a>SQL_VARIANT_PROPERTY (Transact-SQL)
@@ -45,7 +45,7 @@ SQL_VARIANT_PROPERTY ( expression , property )
  Espressione di tipo **sql_variant**.  
   
  *property*  
- Contiene il nome della proprietà **sql_variant** per la quale è necessario specificare informazioni. *property* è **varchar(** 128 **)** . I valori possibili sono i seguenti:  
+ Contiene il nome della proprietà **sql_variant** per la quale è necessario specificare informazioni. *property* è **varchar(** 128 **)**. I valori possibili sono i seguenti:  
   
 |valore|Descrizione|Tipo di base di sql_variant restituito|  
 |-----------|-----------------|----------------------------------------|  

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b3a6620b3cfdc5a450f54754b1260abe543e122d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806828"
 ---
 # <a name="toolbox-component-f1-help"></a>Guida sensibile al contesto del componente Casella degli strumenti
@@ -26,7 +26,7 @@ Nella**Casella degli strumenti** sono inclusi numerosi elementi utilizzabili nei
 **Casella degli strumenti** icone possono essere trascinate ed eliminate oppure copiate e incollate nell'editor di codice o in Progettazione vista evidenzia entro [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="using-the-toolbox"></a>Utilizzo della Casella degli strumenti  
- La Casella degli strumenti è un controllo di albero reimpostabile che funziona come Esplora risorse di [!INCLUDE[msCoName](../../includes/msconame-md.md)] , ma senza linee di collegamento o griglie. È possibile espandere più segmenti ("schede") della **Casella degli strumenti** contemporaneamente, in modo che l'intero albero scorra all'interno della finestra **Casella degli strumenti** . Per espandere una scheda della **Casella di controllo**, fare clic sul segno più (**+**) accanto al nome. Per comprimere una scheda espansa, fare clic sul segno meno (**-**) accanto al nome.  
+ La Casella degli strumenti è un controllo di albero reimpostabile che funziona come Esplora risorse di [!INCLUDE[msCoName](../../includes/msconame-md.md)] , ma senza linee di collegamento o griglie. È possibile espandere più segmenti ("schede") della **Casella degli strumenti** contemporaneamente, in modo che l'intero albero scorra all'interno della finestra **Casella degli strumenti** . Per espandere una scheda della **Casella di controllo**, fare clic sul segno più ( **+** ) accanto al nome. Per comprimere una scheda espansa, fare clic sul segno meno ( **-** ) accanto al nome.  
   
  Quando si ritorna a un editor o a una finestra di progettazione, nella **Casella degli strumenti** vengono visualizzati automaticamente la scheda e l'elemento selezionati più di recente. Quando si attiva una finestra di progettazione o un editor diverso, la selezione corrente nella **Casella degli strumenti** viene aggiornata di conseguenza.  
   

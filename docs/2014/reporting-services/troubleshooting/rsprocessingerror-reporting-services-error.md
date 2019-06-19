@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 46b8f7326578b9d8276c164577adf691accdd48e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099137"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Errore di Reporting Services
@@ -98,11 +98,11 @@ ms.locfileid: "66099137"
 ### <a name="cannot-compare-data-types-for-a-filter"></a>Impossibile confrontare tipi di dati per un filtro  
  In un'equazione di filtro è necessario che il tipo di dati dell'espressione che definisce gli elementi da filtrare e quello del valore del filtro sia lo stesso, in modo che sia possibile eseguirne il confronto. Se viene visualizzato uno degli errori seguenti, modificare l'espressione del campo o il valore del filtro in modo che i tipi di dati corrispondano:  
   
--   Impossibile eseguire l'elaborazione di *\<tipo di elemento del report>* per l'oggetto *\<nome dell'elemento del report>*. Non è possibile confrontare dati di tipo *\<tipo>* e *\<tipo>*. Verificare il tipo di dati restituito da *\<nome dell'elemento del report>*.  
+-   Impossibile eseguire l'elaborazione di *\<tipo di elemento del report>* per l'oggetto *\<nome dell'elemento del report>* . Non è possibile confrontare dati di tipo *\<tipo>* e *\<tipo>* . Verificare il tipo di dati restituito da *\<nome dell'elemento del report>* .  
   
--   Impossibile valutare *\<nome proprietà>*.  
+-   Impossibile valutare *\<nome proprietà>* .  
   
--   Impossibile valutare *\<nome proprietà>*. Fa riferimento a un campo del set di dati che contiene un errore: *\<stringa di errore>*.  
+-   Impossibile valutare *\<nome proprietà>* . Fa riferimento a un campo del set di dati che contiene un errore: *\<stringa di errore>* .  
   
  Per altre informazioni, vedere [Filtro, raggruppamento e ordinamento di dati &#40;Generatore report e SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
@@ -111,13 +111,13 @@ ms.locfileid: "66099137"
   
  È anche possibile passare il nome di un ambito specifico a una funzione di aggregazione. L'ambito può fare riferimento al nome di un set di dati o di un'area dati oppure al nome di un ambito a livello più elevato nella gerarchia dei dati. Questa condizione è valida per i seguenti messaggi:  
   
--   *\<tipo di elemento del report>* '*\<nome dell'elemento del report>*' con ambito non valido "*\<nome ambito>*". L'ambito deve essere l'ambito corrente oppure deve essere contenuto nell'ambito corrente.  
+-   *\<tipo di elemento del report>* ' *\<nome dell'elemento del report>* ' con ambito non valido " *\<nome ambito>* ". L'ambito deve essere l'ambito corrente oppure deve essere contenuto nell'ambito corrente.  
   
--   L'espressione per *\<nome proprietà>* per l'oggetto '*\<nome dell'elemento del report>*' di tipo *\<tipo dell'elemento del report>* ha un parametro di ambito non valido per una funzione di aggregazione. Il parametro di ambito deve essere impostato su una costante stringa uguale al nome di un gruppo contenitore, al nome di un'area dati contenitore oppure al nome di un set di dati.  
+-   L'espressione per *\<nome proprietà>* per l'oggetto ' *\<nome dell'elemento del report>* ' di tipo *\<tipo dell'elemento del report>* ha un parametro di ambito non valido per una funzione di aggregazione. Il parametro di ambito deve essere impostato su una costante stringa uguale al nome di un gruppo contenitore, al nome di un'area dati contenitore oppure al nome di un set di dati.  
   
  Per le funzioni di aggregazione che calcolano i totali parziali (`Previous`, `RunningValue` o `RowNumber`, è possibile specificare come parametro di ambito un nome di un gruppo di righe oppure un nome di un gruppo di colonne, ma non entrambi. Questa condizione è valida per il seguente messaggio di errore:  
   
--   `Previous`, `RunningValue` o `RowNumber` utilizzate nelle celle di dati di funzioni di aggregazione il  *\<tipo dell'elemento del report >* '*\<nome elemento report >*' fanno riferimento ad ambiti di raggruppamento in entrambe le colonne e righe del  *\<tipo di elemento del report >*. I parametri degli ambiti di tutte le `Previous`, `RunningValue` e `RowNumber` funzioni di aggregazione una  *\<tipo di elemento del report >* possono fare riferimento a raggruppamenti di righe o raggruppamenti di colonne di dati, ma non entrambi.  
+-   `Previous`, `RunningValue` o `RowNumber` utilizzate nelle celle di dati di funzioni di aggregazione il  *\<tipo dell'elemento del report >* ' *\<nome elemento report >* ' fanno riferimento ad ambiti di raggruppamento in entrambe le colonne e righe del  *\<tipo di elemento del report >* . I parametri degli ambiti di tutte le `Previous`, `RunningValue` e `RowNumber` funzioni di aggregazione una  *\<tipo di elemento del report >* possono fare riferimento a raggruppamenti di righe o raggruppamenti di colonne di dati, ma non entrambi.  
   
  Per altre informazioni, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](../report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) e [Raccolte predefinite nelle espressioni &#40;Generatore report e SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   

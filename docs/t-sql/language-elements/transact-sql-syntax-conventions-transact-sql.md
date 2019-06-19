@@ -30,10 +30,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: edc4bd43b27235a35b6c8ed213e2925523015fde
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981455"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Convenzioni della sintassi Transact-SQL (Transact-SQL)
@@ -50,7 +50,7 @@ Nella tabella seguente vengono elencate e descritte le convenzioni utilizzate ne
 |&#124; (barra verticale)|Separazione di elementi sintattici racchiusi tra parentesi quadre o graffe. Indica che è possibile utilizzare solo uno degli elementi.|  
 |`[ ]` (parentesi quadre)|Elementi sintattici facoltativi. Le parentesi quadre non devono essere digitate.|  
 |{ } (parentesi graffe)|Elementi sintattici obbligatori. Le parentesi graffe non devono essere digitate.|  
-|[ **,** ..._n_]|Indica che l'elemento precedente può essere ripetuto _n_ volte. Le varie occorrenze dell'elemento sono separate da una virgola.|  
+|[**,**..._n_]|Indica che l'elemento precedente può essere ripetuto _n_ volte. Le varie occorrenze dell'elemento sono separate da una virgola.|  
 |[..._n_]|Indica che l'elemento precedente può essere ripetuto _n_ volte. Le varie occorrenze dell'elemento sono separate da spazi.|  
 |;|Carattere di terminazione delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Anche se per la maggior parte delle istruzioni in questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è necessario usare il punto e virgola, questo requisito verrà introdotto in una versione futura.|  
 |\<label> ::=|Nome di un blocco della sintassi. Usare questa convenzione per raggruppare ed etichettare sezioni di sintassi estese oppure un'unità sintattica che è possibile usare in più posizioni di un'istruzione. Ogni posizione in cui si potrebbe usare il blocco di sintassi è indicata dall'etichetta racchiusa tra parentesi angolari: \<label>.<br /><br /> Un set è una raccolta di espressioni, ad esempio \<grouping set>, mentre un elenco è una raccolta di set, ad esempio \<composite element list>.|  

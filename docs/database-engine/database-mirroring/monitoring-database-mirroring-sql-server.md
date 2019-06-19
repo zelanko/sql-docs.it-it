@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 5bb5ffaab7bf391a50dbfb28be14852a05e83582
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66795352"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Monitoraggio del mirroring del database (SQL Server)
@@ -295,11 +295,11 @@ ms.locfileid: "66795352"
   
  Per il mirroring del database sono disponibili gli eventi seguenti:  
   
--   Classe di evento**Database Mirroring State Change**  
+-   Classe di evento**Database Mirroring State Change**   
   
      Indica quando lo stato di mirroring di un database con mirroring cambia. Per altre informazioni, vedere [Database Mirroring State Change Event Class](../../relational-databases/event-classes/database-mirroring-state-change-event-class.md).  
   
--   Classe di evento**Audit Database Mirroring Login**  
+-   Classe di evento**Audit Database Mirroring Login**   
   
      Segnala i messaggi di controllo correlati alla sicurezza di trasporto per il mirroring del database. Per altre informazioni, vedere [Audit Database Mirroring Login Event Class](../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).  
   

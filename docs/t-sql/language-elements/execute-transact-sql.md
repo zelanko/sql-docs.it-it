@@ -33,10 +33,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 558dbcfa3556099877406d8082f3cb909d6a22a1
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982350"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
@@ -259,7 +259,7 @@ Se si passa una singola parola che non inizia con `@` e che non è racchiusa tra
  Valore predefinito del parametro, come definito nel modulo. Quando nel modulo è previsto un valore per un parametro privo di valore predefinito ed è stato omesso un parametro o è stata specificata la parola chiave DEFAULT, viene generato un errore.  
   
  @*string_variable*  
- Nome di una variabile locale. @*string_variable* può essere di tipo **char**, **varchar**, **nchar** o **nvarchar**. Sono inclusi i tipi di dati **(max)** .  
+ Nome di una variabile locale. @*string_variable* può essere di tipo **char**, **varchar**, **nchar** o **nvarchar**. Sono inclusi i tipi di dati **(max)**.  
   
  [N] '*tsql_string*'  
  Valore stringa costante. *tsql_string* può essere di tipo **nvarchar** o **varchar**. Se si specifica N, la stringa viene interpretata come di tipo **nvarchar**.  
