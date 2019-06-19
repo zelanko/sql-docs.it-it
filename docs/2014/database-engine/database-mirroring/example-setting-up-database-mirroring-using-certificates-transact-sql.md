@@ -1,5 +1,5 @@
 ---
-title: 'Esempio: Impostazione del mirroring tramite certificati (Transact-SQL) | Microsoft Docs'
+title: 'Esempio: Configurazione del mirroring del database tramite certificati (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806752"
 ---
-# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Esempio: Impostazione del mirroring tramite certificati (Transact-SQL)
+# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Esempio: Configurazione del mirroring del database tramite certificati (Transact-SQL)
   In questo esempio vengono illustrati tutti i passaggi necessari per la creazione di una sessione di mirroring del database tramite l'autenticazione basata sui certificati. Negli esempi di questo argomento viene utilizzato [!INCLUDE[tsql](../../includes/tsql-md.md)]. A meno che la sicurezza della rete in uso non sia già garantita, è consigliabile utilizzare la crittografia per le connessioni per il mirroring del database.  
   
  Quando si copia un certificato in un altro sistema, utilizzare un metodo di copia sicuro. È estremamente importante garantire la protezione di tutti i certificati.  
@@ -257,7 +257,7 @@ ms.locfileid: "62806752"
     ```  
   
     > [!NOTE]  
-    >  Se si prevede di eseguire in modalità a sicurezza elevata con failover automatico, lasciare la sicurezza delle transazioni impostata su FULL (impostazione predefinita) e aggiungere il controllo appena possibile dopo l'esecuzione il secondo SET PARTNER **»*`partner_server`*'** istruzione. Si osservi che è necessario configurare prima il server di controllo del mirroring per le connessioni in uscita e in ingresso.  
+    >  Se si prevede di eseguire in modalità a sicurezza elevata con failover automatico, lasciare la sicurezza delle transazioni impostata su FULL (impostazione predefinita) e aggiungere il controllo appena possibile dopo l'esecuzione il secondo SET PARTNER **» *`partner_server`* '** istruzione. Si osservi che è necessario configurare prima il server di controllo del mirroring per le connessioni in uscita e in ingresso.  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   

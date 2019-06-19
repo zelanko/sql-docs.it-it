@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c922d50bdac99ad39fe9057a2c5091a2a389a849
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684279"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62723353"
 ---
 # <a name="drop-broker-priority-transact-sql"></a>DROP BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ DROP BROKER PRIORITY ConversationPriorityName
 ## <a name="remarks"></a>Remarks  
  Quando si elimina una priorità di conversazione, qualsiasi conversazione esistente continua a funzionare con i livelli di priorità assegnati dalla priorità di conversazione.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'autorizzazione per la creazione di una priorità di conversazione viene assegnata per impostazione predefinita ai membri del ruolo predefinito del database db_ddladmin o db_owner e al ruolo predefinito del server sysadmin. È richiesta l'autorizzazione ALTER per il database.  
   
 ## <a name="examples"></a>Esempi  

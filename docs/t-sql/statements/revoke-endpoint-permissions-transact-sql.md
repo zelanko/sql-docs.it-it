@@ -18,11 +18,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a6b7b9e2fdb8673571803e9b98de80dd1d26040f
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327564"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62659994"
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>REVOKE - autorizzazioni per endpoint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per l'endpoint o l'autorizzazione ALTER ANY ENDPOINT per il server.  
   
 ## <a name="examples"></a>Esempi  
@@ -113,7 +113,7 @@ REVOKE VIEW DEFINITION ON ENDPOINT::Mirror7 FROM ZArifin;
 GO  
 ```  
   
-### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>b. Revoca dell'autorizzazione TAKE OWNERSHIP con l'opzione CASCADE  
+### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>B. Revoca dell'autorizzazione TAKE OWNERSHIP con l'opzione CASCADE  
  Nell'esempio seguente viene revocata l'autorizzazione `TAKE OWNERSHIP` per l'endpoint `Shipping83` all'utente `PKomosinski` di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a tutte le entità a cui l'utente `PKomosinski` ha concesso l'autorizzazione `TAKE OWNERSHIP` per `Shipping83`.  
   
 ```  

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: ee92addc2d77c8393c3378762618504344b8d477
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63453641"
 ---
 # <a name="appendix---1-db2tosql"></a>Appendice - 1 (DB2ToSQL)
@@ -24,7 +24,7 @@ Panoramica della Console SSMA opzioni riga di comando:
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/script|Yes|scriptfile|Nome file XML valido.<br /><br />File di definizione di Script della console.|  
 |2|-v/variable|No|variablevaluefile|Nome file XML valido.<br /><br />Se vengono usate nel file di script, è necessario specificare questo file.|  
-|3|-c/serverconnection|No|serverconnectionfile|Nome file XML valido.<br /><br />Questo file contiene informazioni di connessione server.|  
+|3|-c/serverconnection|no|serverconnectionfile|Nome file XML valido.<br /><br />Questo file contiene informazioni di connessione server.|  
 |4|-x/xmloutput|No|xmloutputfile|Questa opzione indica l'output di console in formato XML. Se questa opzione non è specificata, l'output predefinito è in formato testo.<br /><br />Se non viene specificato xmloutputfile, output XML viene indirizzato a STDOUT.<br /><br />Xmloutputfile è il nome del file in cui viene scritto l'output della console in formato XML.|  
 |5|-l/log|No|logfile|Nome file valido.|  
 |6|-e/projectenvironment|No|projectenvironmentfolder|Nome di cartella valido che contiene file dell'ambiente di progetto SSMA.|  

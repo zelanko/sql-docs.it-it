@@ -13,18 +13,18 @@ ms.author: alayu
 ms.reviewer: maghan
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3399262b9ea80c789f81b7b4e745b6c8f32d11f1
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: 9ebb00b758aa3291c453d6c48d548f2047c72530
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66012904"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66836389"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Procedura guidata per l'importazione di file flat in SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 > Per i contenuti correlati all'importazione ed esportazione guidata, vedere la pagina relativa all'[Importazione/Esportazione guidata SQL Server](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
-La procedura guidata per l'importazione di file flat consente di copiare facilmente i dati da un file flat (con estensione csv, txt) a una destinazione. In questa panoramica vengono descritti i motivi per l'uso di questa procedura guidata, come trovarla e un semplice esempio da seguire.
+La procedura guidata per l'importazione di file flat consente di copiare facilmente i dati da un file flat (con estensione csv, txt) a una nuova tabella nel database. In questa panoramica vengono descritti i motivi per l'uso di questa procedura guidata, come trovarla e un semplice esempio da seguire.
 
 ## <a name="why-would-i-use-this-wizard"></a>Perché usare questa procedura guidata?
 Questa procedura guidata è stata creata per migliorare l'esperienza di importazione corrente sfruttando un framework intelligente noto come Program Synthesis using Examples ([PROSE](https://microsoft.github.io/prose/)). Per un utente senza una conoscenza specializzata dei domini, l'importazione dei dati può risultare un'attività complessa, soggetta a errori e impegnativa. Questa procedura guidata semplifica il processo di importazione: è sufficiente selezionare un file di input e un nome di tabella univoco e il framework PROSE gestisce il resto.

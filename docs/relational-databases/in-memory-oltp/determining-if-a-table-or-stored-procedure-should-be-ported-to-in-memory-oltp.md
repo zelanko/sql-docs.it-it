@@ -16,16 +16,16 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2cb94b594be62bf19ad90c00ffaef6145eb90fc9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531617"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047779"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Il report di analisi delle prestazioni delle transazioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] consente di valutare se OLTP in memoria è in grado di ottimizzare le prestazioni dell'applicazione di database. Il report indica anche la quantità di operazioni che è necessario eseguire per abilitare OLTP in memoria nell'applicazione. Una volta identificata la tabella basata su disco da trasferire in OLTP in memoria, è possibile usare [Ottimizzazione guidata per la memoria](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)per semplificarne la migrazione. Analogamente, l'[Assistente compilazione nativa](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) semplifica il trasferimento di una stored procedure a una stored procedure compilata in modo nativo. Per informazioni sulle metodologie di migrazione, vedere [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx) (OLTP in memoria: considerazioni sulla migrazione e sui modelli di carico di lavoro comuni).  
+  Il report di analisi delle prestazioni delle transazioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] consente di valutare se OLTP in memoria è in grado di ottimizzare le prestazioni dell'applicazione di database. Il report indica anche la quantità di operazioni che è necessario eseguire per abilitare OLTP in memoria nell'applicazione. Una volta identificata la tabella basata su disco da trasferire in OLTP in memoria, è possibile usare [Ottimizzazione guidata per la memoria](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)per semplificarne la migrazione. Analogamente, l' [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) semplifica il trasferimento di una stored procedure a una stored procedure compilata in modo nativo. Per informazioni sulle metodologie di migrazione, vedere [In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx) (OLTP in memoria: considerazioni sulla migrazione e sui modelli di carico di lavoro comuni).  
   
  Il report di analisi delle prestazioni delle transazioni viene eseguito direttamente su un database di produzione o un database di prova con un carico di lavoro attivo simile al carico di lavoro di produzione.  
   
@@ -102,7 +102,7 @@ Le statistiche sulle contese e sulle analisi nel report dettagli della tabella v
  Per visualizzare i dettagli relativi a come convertire una stored procedure in una stored procedure compilata in modo nativo, usare l'Assistente compilazione nativa.  
   
 ## <a name="generating-in-memory-oltp-migration-checklists"></a>Generazione guidata di elenchi di controllo per migrazione OLTP in memoria  
- Gli elenchi di controllo per migrazione identificano qualsiasi funzionalità di stored procedure o tabella non supportata con tabelle ottimizzate per la memoria o stored procedure compilate in modo nativo. L'ottimizzazione guidata della memoria e l'Assistente compilazione nativa possono generare un elenco di controllo per una singola tabella basata su disco o stored procedure T-SQL interpretata. Gli elenchi di controllo per migrazione possono essere creati per più tabelle e stored procedure in un database.  
+ Gli elenchi di controllo per migrazione identificano qualsiasi funzionalità di stored procedure o tabella non supportata con tabelle ottimizzate per la memoria o stored procedure compilate in modo nativo. L'ottimizzazione guidata della memoria e l'assistente compilazione nativa possono generare un elenco di controllo per una singola tabella basata su disco o stored procedure T-SQL interpretata. Gli elenchi di controllo per migrazione possono essere creati per più tabelle e stored procedure in un database.  
   
  È possibile generare un elenco di controllo per la migrazione in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando il comando **Generazione guidata elenchi di controllo per migrazione OLTP in memoria** o tramite PowerShell.  
   

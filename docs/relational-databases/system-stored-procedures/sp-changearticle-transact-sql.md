@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cbfbb923a831901bd42724759372f8b1f7ccbc0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997944"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
@@ -48,7 +48,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 `[ @article = ] 'article'` È il nome dell'articolo con la proprietà deve essere modificata. *articolo* viene **sysname**, con un valore predefinito è NULL.  
   
-`[ @property = ] 'property'` È una proprietà dell'articolo da modificare. *proprietà* viene **nvarchar(100)**.  
+`[ @property = ] 'property'` È una proprietà dell'articolo da modificare. *proprietà* viene **nvarchar(100)** .  
   
 `[ @value = ] 'value'` È il nuovo valore della proprietà dell'articolo. *valore* viene **nvarchar(255**.  
   
@@ -73,7 +73,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**delete**|Elimina la tabella di destinazione.|  
 ||**truncate**|Tronca la tabella di destinazione.|  
 |**pub_identity_range**||Controlla le dimensioni degli intervalli di valori Identity assegnati nel Sottoscrittore. Non supportato per la replica peer-to-peer.|  
-|**schema_option**||Specifica la mappa di bit dell'opzione di generazione dello schema per l'articolo specificato. *schema_option* viene **binari (8)**. Per ulteriori informazioni, vedere la sezione Osservazioni di seguito in questo argomento.|  
+|**schema_option**||Specifica la mappa di bit dell'opzione di generazione dello schema per l'articolo specificato. *schema_option* viene **binari (8)** . Per ulteriori informazioni, vedere la sezione Osservazioni di seguito in questo argomento.|  
 ||**0x00**|Disabilita la creazione di script eseguita dall'agente snapshot.|  
 ||**0x01**|Genera le istruzioni per la creazione di oggetti (CREATE TABLE, CREATE PROCEDURE e così via).|  
 ||**0x02**|Genera le stored procedure che propagano le eventuali modifiche per l'articolo.|  
@@ -104,7 +104,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x4000000**|Replica gli indici sul **xml** colonne.|  
 ||**0x8000000**|Crea gli schemi non ancora presenti nel Sottoscrittore.|  
 ||**0x10000000**|Consente di convertire **xml** le colonne da **ntext** nel Sottoscrittore.|  
-||**0x20000000**|Tipi di dati dell'oggetto converte grandi dimensioni (**nvarchar (max)**, **varchar (max)**, e **varbinary (max)**) che sono stati introdotti in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ai tipi di dati supportati in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
+||**0x20000000**|Tipi di dati dell'oggetto converte grandi dimensioni (**nvarchar (max)** , **varchar (max)** , e **varbinary (max)** ) che sono stati introdotti in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ai tipi di dati supportati in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
 ||**0x40000000**|Replica le autorizzazioni.|  
 ||**0x80000000**|Tenta di eliminare le dipendenze da tutti gli oggetti che non fanno parte della pubblicazione.|  
 ||**0x100000000**|Usare questa opzione per replicare l'attributo FILESTREAM se è specificato nel **varbinary (max)** colonne. Non specificare questa opzione se si stanno replicando tabelle nei Sottoscrittori [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. La replica di tabelle con colonne FILESTREAM in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] sottoscrittori non è supportata, indipendentemente dal modo in cui è impostata questa opzione dello schema.<br /><br /> Vedere l'opzione correlata **0x800000000**.|  

@@ -13,10 +13,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2dd71a010353c019acb2784456b66427e8559bff
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/03/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66462509"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Pianificare l'adozione delle funzionalità OLTP in memoria in SQL Server
@@ -214,9 +214,9 @@ Per una panoramica degli indici in tabelle ottimizzate per la memoria, vedere:
 
 #### <a name="hash-indexes"></a>Indici hash
 
-Gli indici hash possono rappresentare il formato più veloce per l'accesso a una riga specifica con il valore della chiave primaria preciso tramite l'operatore ' **=** '.
+Gli indici hash possono rappresentare il formato più veloce per l'accesso a una riga specifica con il valore della chiave primaria preciso tramite l'operatore '**=**'.
 
-- Gli operatori non precisi, ad esempio ' **! =** ',' **>** ' o '**BETWEEN**' potrebbero influire sulle prestazioni se vengono usati con un indice hash.
+- Gli operatori non precisi, ad esempio '**! =**','**>**' o '**BETWEEN**' potrebbero influire sulle prestazioni se vengono usati con un indice hash.
 
 - Un indice hash potrebbe non essere la scelta migliore se la velocità di duplicazione del valore chiave diventa troppo elevata.
 
@@ -226,7 +226,7 @@ Gli indici hash possono rappresentare il formato più veloce per l'accesso a una
 
 #### <a name="nonclustered-columnstore-indexes"></a>Indici columnstore non cluster
 
-Le tabelle con ottimizzazione per la memoria offrono un'elevata velocità effettiva con dati transazionali aziendali tipici denominata *elaborazione delle transazioni online* o *OLTP (Online Transaction Processing)* . Gli indici columnstore offrono elevata velocità effettiva con aggregazioni e processi denominata *Analisi*. In passato, l'approccio migliore disponibile per soddisfare le esigenze di analisi e OLTP era quello di separare le tabelle con elevato movimento di dati e con un certo livello di duplicazione dei dati. Oggi è disponibile una **soluzione ibrida** più semplice, ovvero la creazione di un indice columnstore in una tabella ottimizzata per la memoria.
+Le tabelle con ottimizzazione per la memoria offrono un'elevata velocità effettiva con dati transazionali aziendali tipici denominata *elaborazione delle transazioni online* o *OLTP (Online Transaction Processing)*. Gli indici columnstore offrono elevata velocità effettiva con aggregazioni e processi denominata *Analisi*. In passato, l'approccio migliore disponibile per soddisfare le esigenze di analisi e OLTP era quello di separare le tabelle con elevato movimento di dati e con un certo livello di duplicazione dei dati. Oggi è disponibile una **soluzione ibrida** più semplice, ovvero la creazione di un indice columnstore in una tabella ottimizzata per la memoria.
 
 
 - Un [indice columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md) può essere compilato in una tabella basata su disco, anche come indice cluster. Ma in una tabella ottimizzata per la memoria, un indice columnstore non può essere raggruppato in cluster.

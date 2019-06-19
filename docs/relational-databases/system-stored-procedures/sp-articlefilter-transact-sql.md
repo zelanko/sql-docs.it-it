@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 698a5941bc8e9920942e7ec7c962144b4ab24b62
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998289"
 ---
 # <a name="sparticlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
@@ -48,7 +48,7 @@ sp_articlefilter [ @publication = ] 'publication'
   
 `[ @article = ] 'article'` È il nome dell'articolo. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
   
-`[ @filter_name = ] 'filter_name'` È il nome della stored procedure di filtro da creare dal *filter_name*. *filter_name* viene **nvarchar(386)**, con un valore predefinito è NULL. È necessario specificare un nome univoco per il filtro per gli articoli.  
+`[ @filter_name = ] 'filter_name'` È il nome della stored procedure di filtro da creare dal *filter_name*. *filter_name* viene **nvarchar(386)** , con un valore predefinito è NULL. È necessario specificare un nome univoco per il filtro per gli articoli.  
   
 `[ @filter_clause = ] 'filter_clause'` È una restrizione clausola (WHERE) che definisce un filtro orizzontale. Quando si specifica la clausola di restrizione, omettere la parola chiave WHERE. *filter_clause* viene **ntext**, con un valore predefinito è NULL.  
   

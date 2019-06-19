@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ae0bb91fafb53c0c077a4e0d82558b550d0e6070
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62855711"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Lezione 2: Aggiunta di modelli di Data Mining per la struttura di Data Mining Time Series
+# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Lezione 2: Aggiunta di modelli di data mining alla struttura di data mining Time Series
   In questa lezione si aggiungerà un nuovo modello di data mining alla struttura di data mining appena creato in [lezione 1: Creazione di una serie temporale, modello di Data Mining e struttura di Data Mining](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
   
 ## <a name="alter-mining-structure-statement"></a>Istruzione ALTER MINING STRUCTURE  

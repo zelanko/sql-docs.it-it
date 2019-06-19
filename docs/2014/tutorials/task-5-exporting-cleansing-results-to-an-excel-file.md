@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3c690becefb71b71c154131b6957c1063872b540
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489120"
 ---
 # <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Attività 5: Esportazione dei risultati della pulizia in un file di Excel
@@ -42,7 +42,7 @@ ms.locfileid: "65489120"
   
     3.  Cercare **Los Angeles** e verificare che il **stato** è impostata su **CA**.  
   
-    4.  Verificare che vi sia alcun termine **co**, **corp**, e **Inc.**.  
+    4.  Verificare che vi sia alcun termine **co**, **corp**, e **Inc.** .  
   
     5.  Eliminare il **Address Validation** colonna dal foglio di calcolo e salvare il file di excel. Questa colonna aggiuntiva corrisponde al dominio composito Address Validation.  
   

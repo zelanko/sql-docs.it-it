@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c56aef79df354ee8e355da215a241836f8c7ab45
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63204695"
 ---
 # <a name="table-properties-visual-database-tools"></a>Proprietà delle tabelle (Visual Database Tools)
@@ -65,7 +65,7 @@ ms.locfileid: "63204695"
  Indica se la tabella è replicata in un'altra posizione  
   
  **Categoria Specifica spazio dei dati regolare**  
- Viene espansa per visualizzare le proprietà **(Tipo spazio dei dati)**, **Nome gruppo di file o schema di partizione**ed **Elenco colonne di partizione**.  
+ Viene espansa per visualizzare le proprietà **(Tipo spazio dei dati)** , **Nome gruppo di file o schema di partizione**ed **Elenco colonne di partizione**.  
   
  **(Tipo spazio dei dati)**  
  Indica se la tabella viene archiviata utilizzando un filegroup o uno schema di partizione.  

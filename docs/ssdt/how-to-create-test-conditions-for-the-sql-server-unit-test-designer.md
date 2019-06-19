@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 52975d96b6db206b4cdd2b6b201bc55eb572131c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090261"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Procedura: Creare condizioni di test per la finestra di progettazione unit test di SQL Server
@@ -179,7 +179,7 @@ La classe per la condizione di test personalizzata eredita dalla classe base [Te
 |Parametro attributo|Posizione|Descrizione|  
 |-----------------------|------------|---------------|  
 |DisplayName|1|Identifica la stringa nella casella combinata "Condizioni di test". Il nome deve essere univoco. Se due condizioni hanno lo stesso nome visualizzato, verrà visualizzata la prima condizione trovata e verrà restituito un avviso nella gestione degli errori di Visual Studio.|  
-|ImplementingType|2|Viene utilizzato per identificare in modo univoco l'estensione. È necessario modificare questo parametro in modo che corrisponda al tipo su cui si imposta l'attributo. In questo esempio viene usato il tipo **ResultSetColumnCountCondition**, quindi usare **typeof(ResultSetColumnCountCondition)**. Se il tipo è **NewTestCondition**, usare **typeof(NewTestCondition)**.|  
+|ImplementingType|2|Viene utilizzato per identificare in modo univoco l'estensione. È necessario modificare questo parametro in modo che corrisponda al tipo su cui si imposta l'attributo. In questo esempio viene usato il tipo **ResultSetColumnCountCondition**, quindi usare **typeof(ResultSetColumnCountCondition)** . Se il tipo è **NewTestCondition**, usare **typeof(NewTestCondition)** .|  
   
 Nel seguente esempio vengono aggiunte due proprietà. Gli utenti della condizione di test personalizzata possono utilizzare la proprietà ResultSet per specificare per quale set di risultati si deve verificare il totale delle colonne. Quindi, gli utenti possono utilizzare la proprietà Count per specificare il totale delle colonne previsto.  
   

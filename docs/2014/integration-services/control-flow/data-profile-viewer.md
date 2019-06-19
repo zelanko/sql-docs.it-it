@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0f6bcad3636178fb4aebbcdbeee29ba2542f092e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62832416"
 ---
 # <a name="data-profile-viewer"></a>Visualizzatore profilo dati
@@ -31,24 +31,24 @@ ms.locfileid: "62832416"
   
 -   Fare clic con il pulsante destro del mouse sull'attività **Profiling dati** in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , quindi scegliere **Modifica**. Fare clic su **Apri Visualizzatore profilo** nella pagina **Generale** dell' **Editor attività Profiling dati**.  
   
--   Nella cartella *\<unità>*:\Programmi (x86) | Programmi\Microsoft SQL Server\110\DTS\Binn eseguire DataProfileViewer.exe.  
+-   Nella cartella *\<unità>* :\Programmi (x86) | Programmi\Microsoft SQL Server\110\DTS\Binn eseguire DataProfileViewer.exe.  
   
  Il visualizzatore contiene più riquadri per visualizzare i profili richiesti e i risultati calcolati, con funzionalità di drill-down e dettagli facoltativi:  
   
- Riquadro**Profili**   
+ Riquadro**Profili**  
  Nel riquadro **Profili** vengono visualizzati i profili richiesti nell'attività Profiling dati. Per visualizzare i risultati calcolati per il profilo, selezionare il profilo nel riquadro **Profili** . I risultati verranno visualizzati negli altri riquadri del visualizzatore.  
   
- Riquadro**Risultati**   
+ Riquadro**Risultati**  
  Il riquadro **Risultati** usa una singola riga per riepilogare i risultati calcolati del profilo. Se, ad esempio, si richiede un **profilo Distribuzione lunghezze di colonna**, questa riga include le lunghezze minima e massima e il conteggio delle righe. Per la maggior parte dei profili è possibile selezionare questa riga nel riquadro **Risultati** per visualizzare altri dettagli nel riquadro **Dettagli** facoltativo.  
   
- Riquadro**Dettagli**   
+ Riquadro**Dettagli**  
  Per la maggior parte dei tipi di profilo, il riquadro **Dettagli** contiene informazioni aggiuntive sui risultati del profilo selezionati nel riquadro **Risultati** . Se, ad esempio, si richiede un **profilo Distribuzione lunghezze di colonna**, nel riquadro **Dettagli** verrà visualizzata ogni lunghezza di colonna rilevata. Nel riquadro viene inoltre visualizzato il numero e la percentuale di righe in cui il valore di colonna ha la lunghezza di colonna specificata.  
   
  Per i tre tipi di profilo calcolati in più colonne (profili Chiave candidata, Dipendenza funzionale e Inclusione valore), nel riquadro **Dettagli** vengono visualizzate le eventuali violazioni della relazione prevista. Se, ad esempio, si richiede un profilo Chiave candidata, nel riquadro Dettagli verranno visualizzati i valori duplicati che violano l'univocità della chiave candidata.  
   
  Se l'origine dati usata per calcolare il profilo è disponibile, è possibile fare doppio clic su una riga nel riquadro **Dettagli** per visualizzare le righe di dati corrispondenti nel riquadro **Drill-down** .  
   
- Riquadro**Drill-down**   
+ Riquadro**Drill-down**  
  È possibile fare doppio clic su una riga nel riquadro **Dettagli** per visualizzare le righe di dati corrispondenti nel riquadro **Drill-down** quando sono vere le condizioni seguenti:  
   
 -   L'origine dati utilizzata per calcolare il profilo è disponibile.  

@@ -24,11 +24,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 784d3f707bf57338a8385a1c4837e9b77fd43f2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609550"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62942816"
 ---
 # <a name="set-language-transact-sql"></a>SET LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -46,15 +46,15 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [**N**]**'**_language_**'** | **@**_language\_var_  
- Nome della lingua archiviata in [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). Questo argomento può essere un valore Unicode o un valore DBCS convertito in Unicode. Per specificare una lingua in Unicode, usare **N'**_language_**'**. Se viene specificata come variabile, deve essere una variabile di tipo **sysname**.  
+ [**N**] **'** _language_ **'**  |  **@** _language\_var_  
+ Nome della lingua archiviata in [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). Questo argomento può essere un valore Unicode o un valore DBCS convertito in Unicode. Per specificare una lingua in Unicode, usare **N'** _language_ **'** . Se viene specificata come variabile, deve essere una variabile di tipo **sysname**.  
   
 ## <a name="remarks"></a>Remarks  
  L'opzione SET LANGUAGE viene impostata in fase di esecuzione, non in fase di analisi.  
   
  SET LANGUAGE definisce in modo implicito l'impostazione di [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  

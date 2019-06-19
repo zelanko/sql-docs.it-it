@@ -24,11 +24,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c5913b6b5bfc6d06038c1debfc36a0c203e3b54f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872331"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62985112"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Architettura e guida per la progettazione degli indici di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ Per informazioni sugli indici full-text, vedere [Popolamento degli indici full-t
 ##  <a name="Basics"></a> Nozioni fondamentali sulla progettazione di indici  
  Un indice è una struttura su disco o memoria associata a una tabella o a una vista che consente di recuperare in modo rapido le righe della tabella o della vista. L'indice contiene chiavi costituite da una o più colonne della tabella o della vista. Per gli indici su disco, queste chiavi vengono archiviate in una struttura (albero B) che consente a SQL Server di individuare con rapidità ed efficienza la riga o le righe associate ai valori di chiave.  
 
- Un indice archivia dati organizzati logicamente, come una tabella con righe e colonne, e archiviati fisicamente in un formato di dati a livello di riga denominato *rowstore* <sup>1</sup>, o archiviati in un formato di dati a livello di colonna denominato  *[columnstore](#columnstore_index)*.  
+ Un indice archivia dati organizzati logicamente, come una tabella con righe e colonne, e archiviati fisicamente in un formato di dati a livello di riga denominato *rowstore* <sup>1</sup>, o archiviati in un formato di dati a livello di colonna denominato  *[columnstore](#columnstore_index)* .  
     
  La selezione degli indici adatti a un database e al relativo carico di lavoro è un'operazione complessa che comporta la ricerca di un equilibrio tra velocità delle query e costi di aggiornamento. Gli indici limitati, ovvero con poche colonne nella chiave di indice, richiedono meno spazio su disco e overhead di gestione. Gli indici estesi, d'altra parte, coprono più query. Potrebbe essere necessario sperimentare diverse soluzioni prima di trovare l'indice più efficiente. È possibile aggiungere, modificare ed eliminare indici senza modificare lo schema del database o la struttura dell'applicazione. È pertanto opportuno sperimentare il funzionamento di vari tipi di indice.  
   
@@ -123,7 +123,7 @@ Per informazioni sugli indici full-text, vedere [Popolamento degli indici full-t
   
 -   Mantenere corta la chiave dell'indice negli indici cluster. Inoltre, è consigliabile creare gli indici cluster su colonne univoche o non Null.  
   
--   Le colonne dei tipi di dati **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)** e **varbinary(max)** non possono essere specificate come colonne chiave di indice. Tuttavia, i tipi di dati **varchar(max)**, **nvarchar(max)**, **varbinary(max)** e **xml** possono essere usati in un indice non cluster come colonne di indice non chiave. Per altre informazioni, vedere la sezione " [Indice con colonne incluse](#Included_Columns)" in questa guida.  
+-   Le colonne dei tipi di dati **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** e **varbinary(max)** non possono essere specificate come colonne chiave di indice. Tuttavia, i tipi di dati **varchar(max)** , **nvarchar(max)** , **varbinary(max)** e **xml** possono essere usati in un indice non cluster come colonne di indice non chiave. Per altre informazioni, vedere la sezione " [Indice con colonne incluse](#Included_Columns)" in questa guida.  
   
 -   Un tipo di dati **xml** può essere solo una colonna chiave esclusivamente in un indice XML. Per altre informazioni, vedere [Indici XML &#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md). In SQL Server 2012 SP1 viene introdotto un nuovo tipo di indice XML noto come indice XML selettivo. Grazie al nuovo indice potranno essere migliorate le prestazioni di esecuzione delle query sui dati archiviati come XML in SQL Server, pertanto sarà possibile un'indicizzazione molto più rapida di carichi di lavoro di dati XML di grandi dimensioni, nonché un miglioramento della scalabilità riducendo i costi di archiviazione dell'indice stesso. Per altre informazioni vedere [Indici XML selettivi &#40;SXI&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
@@ -464,7 +464,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   In una pagina rientreranno meno righe di indice. Ciò potrebbe causare più operazioni di I/O e ridurre l'efficienza della cache.  
   
--   Sarà necessario più spazio su disco per archiviare l'indice. In particolare, l'aggiunta di tipi di dati **varchar(max)**, **nvarchar(max)**, **varbinary(max)** o **xml** come colonne non chiave dell'indice potrebbe aumentare significativamente l'utilizzo di spazio su disco. Ciò accade perché i valori delle colonne vengono copiati nel livello foglia dell'indice, risiedendo in tal modo sia nell'indice che nella tabella di base.  
+-   Sarà necessario più spazio su disco per archiviare l'indice. In particolare, l'aggiunta di tipi di dati **varchar(max)** , **nvarchar(max)** , **varbinary(max)** o **xml** come colonne non chiave dell'indice potrebbe aumentare significativamente l'utilizzo di spazio su disco. Ciò accade perché i valori delle colonne vengono copiati nel livello foglia dell'indice, risiedendo in tal modo sia nell'indice che nella tabella di base.  
   
 -   La manutenzione degli indici può aumentare il tempo necessario per eseguire modifiche, inserimenti, aggiornamenti o eliminazioni nella tabella sottostante o nella vista indicizzata.  
   

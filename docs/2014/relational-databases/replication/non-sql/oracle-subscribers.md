@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022229"
 ---
 # <a name="oracle-subscribers"></a>Sottoscrittori Oracle
@@ -85,7 +85,7 @@ ms.locfileid: "63022229"
   
     -   Verificare che le stringhe vuote non vengano inserite nella tabella pubblicata come valori di colonna.  
   
-    -   Usare il parametro **-SkipErrors** per l'agente di distribuzione se è accettabile ricevere una notifica degli errori nel log della cronologia dell'agente di distribuzione e continuare l'elaborazione. Specificare il codice errore Oracle 1400 (**-SkipErrors1400**).  
+    -   Usare il parametro **-SkipErrors** per l'agente di distribuzione se è accettabile ricevere una notifica degli errori nel log della cronologia dell'agente di distribuzione e continuare l'elaborazione. Specificare il codice errore Oracle 1400 ( **-SkipErrors1400**).  
   
     -   Modificare lo script di creazione tabelle generato, rimuovendo l'attributo NOT NULL da qualsiasi colonna di tipo carattere a cui possano essere associate stringhe vuote e fornire lo script modificato come script di creazione personalizzato per l'articolo utilizzando il parametro @creation_script di [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql).  
   
