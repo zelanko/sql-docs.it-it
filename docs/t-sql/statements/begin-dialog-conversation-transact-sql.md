@@ -32,11 +32,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f26eace7208ce0ec251707a34e964f718fcc1d09
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124791"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051732"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -122,7 +122,7 @@ WHERE database_id = DB_ID() ;
   
  BEGIN DIALOG CONVERSATION non è un'istruzione valida in una funzione definita dall'utente.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per iniziare un dialogo, l'utente corrente deve disporre dell'autorizzazione RECEIVE per la coda del servizio specificato nella clausola FROM del comando e dell'autorizzazione REFERENCES per il contratto specificato.  
   
 ## <a name="examples"></a>Esempi  
@@ -139,7 +139,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
    ON CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission] ;  
 ```  
   
-### <a name="b-beginning-a-dialog-with-an-explicit-lifetime"></a>b. Inizio di un dialogo con una durata esplicita  
+### <a name="b-beginning-a-dialog-with-an-explicit-lifetime"></a>B. Inizio di un dialogo con una durata esplicita  
  Nell'esempio seguente viene avviata una conversazione di dialogo e viene archiviato un identificatore per il dialogo in `@dialog_handle`. `//Adventure-Works.com/ExpenseClient` è il servizio initiator del dialogo, mentre `//Adventure-Works.com/Expenses` rappresenta il servizio di destinazione del dialogo. Il dialogo è basato sul contratto `//Adventure-Works.com/Expenses/ExpenseSubmission`. Se il dialogo non viene chiuso dal comando END CONVERSATION entro `60` secondi, Service Broker termina il dialogo con un errore.  
   
 ```  

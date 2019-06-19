@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 67b6514534083c05f40b40adcda2bae5c30a4591
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723636"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Guida di riferimento ai messaggi e agli errori di Integration Services
@@ -49,7 +49,7 @@ ms.locfileid: "65723636"
 -   [Messaggi di errore relativi al componente del flusso di dati (DTSBC_E_*)](#msgPipeline)  
   
 ##  <a name="msgError"></a> messaggi di errore  
- I nomi simbolici dei messaggi di errore di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] iniziano con **DTS_E_**.  
+ I nomi simbolici dei messaggi di errore di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] iniziano con **DTS_E_** .  
   
 |Codice esadecimale|Codice decimale|Nome simbolico|Descrizione|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2023,7 +2023,7 @@ ms.locfileid: "65723636"
 |||DTS_E_COMPONENTINITFAILED|Impossibile inizializzare il componente %1!s! a causa dell'errore 0x%2!8.8X! "%3!s!".|  
   
 ##  <a name="msgWarning"></a> Messaggi di avviso  
- I nomi simbolici dei messaggi di avviso di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] iniziano con **DTS_W_**.  
+ I nomi simbolici dei messaggi di avviso di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] iniziano con **DTS_W_** .  
   
 |Codice esadecimale|Codice decimale|Nome simbolico|Descrizione|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2169,7 +2169,7 @@ ms.locfileid: "65723636"
 |0x930D|37645|DTS_W_EXTERNALTABLECOLSOUTOFSYNC|La tabella "%1" è stata modificata. È possibile che siano state aggiunte nuove colonne.|  
   
 ##  <a name="msgInfo"></a> Messaggi informativi  
- I nomi simbolici dei messaggi informativi di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] iniziano con **DTS_I_**.  
+ I nomi simbolici dei messaggi informativi di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] iniziano con **DTS_I_** .  
   
 |Codice esadecimale|Codice decimale|Nome simbolico|Descrizione|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2268,7 +2268,7 @@ ms.locfileid: "65723636"
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|La proprietà Dimensioni massime commit inserimento della destinazione OLE DB "%1" è impostata su 0. Questa configurazione potrebbe causare l'arresto del pacchetto di esecuzione. Per ulteriori informazioni, vedere l'argomento della Guida sensibile al contesto Editor destinazione OLE DB (pagina Gestione connessione).|  
   
 ##  <a name="msgGeneral"></a> Messaggi generali e messaggi di evento  
- I nomi simbolici dei messaggi di errore di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] iniziano con **DTS_MSG_**.  
+ I nomi simbolici dei messaggi di errore di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] iniziano con **DTS_MSG_** .  
   
 |Codice esadecimale|Codice decimale|Nome simbolico|Descrizione|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2307,7 +2307,7 @@ ms.locfileid: "65723636"
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|Nome evento: %1<br /><br /> Messaggio: %9<br /><br /> Operatore: %2<br /><br /> Nome origine: %3<br /><br /> ID origine: %4<br /><br /> ID esecuzione: %5<br /><br /> Ora inizio: %6<br /><br /> Ora fine: %7<br /><br /> Codice dati: %8|  
   
 ##  <a name="msgSuccess"></a> Messaggi di operazione riuscita  
- I nomi simbolici dei messaggi di operazione riuscita di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] iniziano con **DTS_S_**.  
+ I nomi simbolici dei messaggi di operazione riuscita di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] iniziano con **DTS_S_** .  
   
 |Codice esadecimale|Codice decimale|Nome simbolico|Descrizione|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2316,7 +2316,7 @@ ms.locfileid: "65723636"
 |0x200001|2097153|DTS_S_EXPREVALTRUNCATIONOCCURRED|Troncamento durante la valutazione dell'espressione. Il troncamento ha avuto luogo durante la valutazione e ciò potrebbe significare in qualsiasi punto in un passaggio intermedio.|  
   
 ##  <a name="msgPipeline"></a> Messaggi di errore relativi al componente flusso di dati  
- I nomi simbolici dei messaggi di errore di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] iniziano con **DTSBC_E_**, dove "BC" si riferisce alla classe di base nativa da cui quale deriva la maggior parte dei componenti flusso di dati Microsoft.  
+ I nomi simbolici dei messaggi di errore di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] iniziano con **DTSBC_E_** , dove "BC" si riferisce alla classe di base nativa da cui quale deriva la maggior parte dei componenti flusso di dati Microsoft.  
   
 |Codice esadecimale|Codice decimale|Nome simbolico|Descrizione|  
 |----------------------|------------------|-------------------|-----------------|  

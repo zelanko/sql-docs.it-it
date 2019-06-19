@@ -31,11 +31,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4246ac153e28393db2bfaefd443f85235e8cf6db
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334538"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62705677"
 ---
 # <a name="select---into-clause-transact-sql"></a>Clausola SELECT - INTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -102,7 +102,7 @@ Il funzionamento dell'istruzione `SELECT...INTO` è costituito da due parti: vie
 ## <a name="logging-behavior"></a>Comportamento di registrazione  
  La quantità di registrazioni per `SELECT...INTO` dipende dal modello di recupero attivato per il database. Nel modello di recupero con registrazione minima o in quello con registrazione minima delle operazioni bulk, per tali operazioni la registrazione prevista è quella minima. Con la registrazione minima, l'uso dell'istruzione `SELECT...INTO` può essere più efficiente della creazione di una tabella e del popolamento della stessa con un'istruzione INSERT. Per altre informazioni, vedere [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessaria l'autorizzazione CREATE TABLE nel database di destinazione.  
   
 ## <a name="examples"></a>Esempi  
@@ -126,7 +126,7 @@ FROM Person.Person AS c
 GO  
 ```  
   
-### <a name="b-inserting-rows-using-minimal-logging"></a>b. Inserimento di righe utilizzando la registrazione minima  
+### <a name="b-inserting-rows-using-minimal-logging"></a>B. Inserimento di righe utilizzando la registrazione minima  
  Nell'esempio seguente viene creata la tabella `dbo.NewProducts`, in cui vengono inserite righe della tabella `Production.Product`. L'esempio presuppone che il modello di recupero del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sia impostato su FULL. Per assicurare l'utilizzo della registrazione minima, il modello di recupero del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] viene impostato su BULK_LOGGED prima che le righe vengano inserite e reimpostato su FULL dopo l'istruzione SELECT...INTO. In tal modo, si assicura l'utilizzo da parte dell'istruzione SELECT...INTO di uno spazio minimo nel log delle transazioni con risultati efficienti.  
   
 ```sql  
@@ -172,7 +172,7 @@ WHERE name = 'AddressID';
 ### <a name="d-creating-a-table-by-specifying-columns-from-a-remote-data-source"></a>D. Creazione di una tabella specificando colonne provenienti da un'origine dei dati remota  
  Nell'esempio seguente vengono illustrati tre metodi per creare una nuova tabella nel server locale da un'origine dati remota. L'esempio inizia con la creazione di un collegamento all'origine dati remota. Il nome del server collegato, `MyLinkServer,` viene specificato nella clausola FROM della prima istruzione SELECT...INTO e nella funzione OPENQUERY della seconda istruzione SELECT...INTO. La terza istruzione SELECT...INTO utilizza la funzione OPENDATASOURCE che specifica direttamente l'origine dei dati remota anziché utilizzare il nome del server collegato.  
   
- **Si applica a:**  da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a: ** da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```sql
 USE master;  

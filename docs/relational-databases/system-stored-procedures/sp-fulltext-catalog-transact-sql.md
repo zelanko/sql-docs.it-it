@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 528ba1cb776124c72fcb2d6f1d1e97c0b25ea2f9
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983110"
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
@@ -48,7 +48,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## <a name="arguments"></a>Argomenti  
 `[ @ftcat = ] 'fulltext_catalog_name'` È il nome del catalogo full-text. I nomi dei cataloghi devono essere univoci per ogni database. *fulltext_catalog_name* viene **sysname**.  
   
-`[ @action = ] 'action'` È l'azione da eseguire. *azione* viene **varchar (20)**, i possibili valori sono i seguenti.  
+`[ @action = ] 'action'` È l'azione da eseguire. *azione* viene **varchar (20)** , i possibili valori sono i seguenti.  
   
 > [!NOTE]  
 >  I cataloghi full-text possono essere creati, eliminati e modificati in base alle necessità. Evitare tuttavia di modificare contemporaneamente più cataloghi a livello di schema. È possibile eseguire queste azioni usando il **sp_fulltext_table** stored procedure, che è il metodo consigliato.  

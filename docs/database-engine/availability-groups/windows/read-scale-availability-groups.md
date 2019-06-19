@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 914fb9a73839580ebc96d30f406c3c66442726ba
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3e7c367acff65aa61e43f2ea00cde98a54d5cc94
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801044"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67131828"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>Usare gruppi di disponibilità Always On con scalabilità in lettura
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ In [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] e versioni precedenti
 Se i requisiti operativi prevedono di risparmiare risorse orientandole sui carichi di lavoro di importanza critica in esecuzione nella replica primaria, ora è possibile usare il routing di sola lettura o connettersi direttamente a repliche secondarie leggibili. Non più necessario dipendere dall'integrazione con le tecnologie di clustering. Queste nuove funzionalità sono disponibili per SQL Server 2017 in esecuzione su piattaforme Windows e Linux.
 
 >[!IMPORTANT]
->Non si tratta di un'installazione a disponibilità elevata. Non ci sono infrastrutture per monitorare e coordinare il rilevamento degli errori e il failover automatico. Senza cluster, SQL Server non può offrire l'obiettivo di tempo di ripristino ridotto (RTO, Recovery Time Objective) garantito da una soluzione a disponibilità elevata automatica. Se sono necessarie funzionalità di disponibilità elevata, usare un modulo di gestione cluster (Gestione cluster di failover in Windows Server o Pacemaker in Linux).
+>Non si tratta di un'installazione a disponibilità elevata. Non ci sono infrastrutture per monitorare e coordinare il rilevamento degli errori e il failover automatico. Senza cluster, SQL Server non può offrire l'obiettivo di tempo di ripristino ridotto (RTO, Recovery Time Objective) garantito da una soluzione a disponibilità elevata automatica. Se sono necessarie funzionalità di disponibilità elevata, usare un modulo di gestione cluster (cluster di failover in Windows Server o Pacemaker in Linux).
 >
 >Il gruppo di disponibilità per la scalabilità in lettura può offrire funzionalità di ripristino di emergenza. Quando le repliche di sola lettura si trovano in modalità con commit sincrono garantiscono un obiettivo del punto di ripristino (RPO, Recovery Point Objective) pari a zero. Per eseguire il failover di un gruppo di disponibilità per la scalabilità in lettura, vedere [Fail over the primary replica on a read-scale availability group](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md#ReadScaleOutOnly) (Eseguire il failover della replica primaria in un gruppo di disponibilità per scalabilità in lettura).
 

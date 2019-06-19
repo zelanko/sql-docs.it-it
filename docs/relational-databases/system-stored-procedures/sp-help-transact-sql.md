@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017756"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
@@ -42,7 +42,7 @@ sp_help [ [ @objname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @objname = ] 'name'` È il nome di qualsiasi oggetto, in **sysobjects** o digitare qualsiasi dato definito dall'utente il **systypes** tabella. *nome* viene **nvarchar (** 776 **)**, con un valore predefinito è NULL. I nomi di database non sono validi.  I nomi in due o tre parti devono essere delimitati, ad esempio 'Person.AddressType' o [Person.AddressType].   
+`[ @objname = ] 'name'` È il nome di qualsiasi oggetto, in **sysobjects** o digitare qualsiasi dato definito dall'utente il **systypes** tabella. *nome* viene **nvarchar (** 776 **)** , con un valore predefinito è NULL. I nomi di database non sono validi.  I nomi in due o tre parti devono essere delimitati, ad esempio 'Person.AddressType' o [Person.AddressType].   
    
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -93,7 +93,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Column_name**|**nvarchar(** 128 **)**|Nome colonna.|  
         |**Tipo**|**nvarchar(** 128 **)**|Tipo di dati della colonna.|  
         |**Computed**|**varchar(** 35 **)**|Indica se i valori nella colonna sono calcolati: Sì o No.|  
-        |**Lunghezza**|**int**|Lunghezza della colonna in byte.<br /><br /> Nota: Se il tipo di dati di colonna è un tipo di valori di grandi dimensioni (**varchar (max)**, **nvarchar (max)**, **varbinary (max)**, oppure **xml**), il valore verrà vengono visualizzati come -1.|  
+        |**Lunghezza**|**int**|Lunghezza della colonna in byte.<br /><br /> Nota: Se il tipo di dati di colonna è un tipo di valori di grandi dimensioni (**varchar (max)** , **nvarchar (max)** , **varbinary (max)** , oppure **xml**), il valore verrà vengono visualizzati come -1.|  
         |**Prec**|**char(** 5 **)**|Precisione della colonna.|  
         |**Scala**|**char(** 5 **)**|Scala della colonna.|  
         |**Ammette i valori Null**|**varchar(** 35 **)**|Indica se sono consentiti valori NULL nella colonna: Sì o No.|  

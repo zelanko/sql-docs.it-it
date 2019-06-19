@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 13e2b010a193e8c610c54a5b619d8a67c9b4d2d3
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097462"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Procedura dettagliata: Estendere la distribuzione del progetto di database per analizzare il piano di distribuzione
@@ -741,7 +741,7 @@ Il progetto può essere pubblicato o distribuito normalmente in Visual Studio. �
 È possibile creare strumenti aggiuntivi per eseguire l'elaborazione dei file XML di output. Questo è solo un esempio di [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). È anche possibile creare un elemento [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) per modificare un piano di distribuzione prima che sia eseguito.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Procedura dettagliata: Estendere la compilazione del progetto del database per generare statistiche del modello](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
+[Procedura dettagliata: Estendere la compilazione del progetto di database per generare statistiche del modello](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
 [Procedura dettagliata: Estendere la distribuzione del progetto di database per modificare il piano di distribuzione](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
 [Personalizzare la compilazione e la distribuzione del database tramite collaboratori alla compilazione e distribuzione](https://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
   

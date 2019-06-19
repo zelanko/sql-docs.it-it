@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62822313"
 ---
-# <a name="lesson-5-executing-prediction-queries"></a>Lezione 5: L'esecuzione di query di stima
+# <a name="lesson-5-executing-prediction-queries"></a>Lezione 5: Esecuzione di query di stima
   In questa lezione si userà il [SELECT FROM \<model > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) forma dell'istruzione SELECT per creare due tipi diversi di stime basate su albero delle decisioni del modello creato in [ Lezione 2: Aggiunta di modelli di Data Mining alla struttura di Data Mining di associazione](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Di seguito è riportata la definizione di questi tipi di stima.  
   
  Query singleton  

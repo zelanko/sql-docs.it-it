@@ -14,10 +14,10 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 42027a48803cd5269d5ab2d69452352bdbe62bc5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63012052"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Spostare un database protetto da TDE in un'altra istanza di SQL Server
@@ -161,7 +161,7 @@ ms.locfileid: "63012052"
   
 ###  <a name="SSMSMove"></a> Utilizzo di SQL Server Management Studio  
   
-1.  In Esplora oggetti fare clic con il pulsante destro del mouse sul database crittografato in precedenza, scegliere **Attività** e fare clic su **Scollega...**.  
+1.  In Esplora oggetti fare clic con il pulsante destro del mouse sul database crittografato in precedenza, scegliere **Attività** e fare clic su **Scollega...** .  
   
      Nella finestra di dialogo **Scollega database** sono disponibili le opzioni seguenti.  
   
@@ -191,7 +191,7 @@ ms.locfileid: "63012052"
   
     -   Quando un database è coinvolto nella replica, lo **Stato** è **Non pronto** e nella colonna **Messaggio** viene visualizzato **Database replicato**.  
   
-    -   Quando un database dispone di uno o più connessioni attive, il **lo stato** viene **non pronto** e il **messaggio** colonna Visualizza _< numero_di_connessioni_attive >_**Connessioni attive:** , ad esempio: **Connessioni attive: 1**. Prima di poter scollegare il database è necessario disconnettere tutte le connessioni attive selezionando **Interrompi connessioni**.  
+    -   Quando un database dispone di uno o più connessioni attive, il **lo stato** viene **non pronto** e il **messaggio** colonna Visualizza _< numero_di_connessioni_attive >_ **Connessioni attive:** , ad esempio: **Connessioni attive: 1**. Prima di poter scollegare il database è necessario disconnettere tutte le connessioni attive selezionando **Interrompi connessioni**.  
   
      Per ottenere ulteriori informazioni su un messaggio, fare clic sul testo del collegamento ipertestuale per aprire Monitoraggio attività.  
   
@@ -205,11 +205,11 @@ ms.locfileid: "63012052"
   
 6.  Ricreare il certificato del server usando il file di backup del certificato del server originale. Per altre informazioni, vedere **Uso di Transact-SQL** di seguito.  
   
-7.  In Esplora oggetti in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], fare clic con il pulsante destro del mouse sulla cartella **Database** e selezionare **Collega...**.  
+7.  In Esplora oggetti in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], fare clic con il pulsante destro del mouse sulla cartella **Database** e selezionare **Collega...** .  
   
 8.  Nella finestra di dialogo **Collega database** , in **Database da collegare**fare clic su **Aggiungi**.  
   
-9. Nel **Individua file di Database -**_nome_server_ della finestra di dialogo Seleziona il file di database da collegare al nuovo server e fare clic su **OK**.  
+9. Nel **Individua file di Database -** _nome_server_ della finestra di dialogo Seleziona il file di database da collegare al nuovo server e fare clic su **OK**.  
   
      Nella finestra di dialogo **Collega database** sono disponibili le opzioni seguenti.  
   
@@ -253,7 +253,7 @@ ms.locfileid: "63012052"
      Consente di rimuovere il file selezionato dalla griglia **Database da collegare** .  
   
      **"** _<database_name>_ **" dettagli database**  
-     Consente di visualizzare i nomi dei file da collegare. Per verificare o modificare il percorso di un file, fare clic sul pulsante **Sfoglia** (**...**).  
+     Consente di visualizzare i nomi dei file da collegare. Per verificare o modificare il percorso di un file, fare clic sul pulsante **Sfoglia** ( **...** ).  
   
     > [!NOTE]  
     >  Se il file non esiste, nella colonna **Messaggio** verrà visualizzato il testo "File non trovato". Se non rilevato, un file di log può trovarsi in un'altra directory o essere stato eliminato. È necessario aggiornare il percorso del file nella griglia **Dettagli database** in modo che indichi la posizione corretta oppure rimuovere il file di log dalla griglia. Se non viene rilevato un file di dati con estensione ndf, è necessario aggiornare il percorso nella griglia in modo che indichi la posizione corretta.  

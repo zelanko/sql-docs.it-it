@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: c5dc363a4b22bbd8fb8cd808d615174072fe26cc
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65936617"
 ---
 # <a name="stmpointfromwkb-geography-data-type"></a>STMPointFromWKB (tipo di dati geography)
@@ -39,7 +39,7 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
   
 ## <a name="arguments"></a>Argomenti  
  *WKB_multipoint*  
- Rappresentazione WKB dell'istanza **geographyMultiPoint** da restituire. *WKB_multipoint* è un'espressione **varbinary(max)** .  
+ Rappresentazione WKB dell'istanza **geographyMultiPoint** da restituire. *WKB_multipoint* è un'espressione **varbinary(max)**.  
   
  *SRID*  
  Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geographyMultiPoint** da restituire.  

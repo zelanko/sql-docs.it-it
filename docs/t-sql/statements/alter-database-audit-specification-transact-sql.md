@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd843cfe70aeaaac866398339e35089615eb44a2
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326692"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62961249"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="remarks"></a>Remarks  
  Le specifiche del controllo del database sono oggetti non a sicurezza diretta che risiedono in un database specifico. È necessario impostare lo stato di una specifica di controllo sull'opzione OFF per apportare modifiche a una specifica del controllo del database. Se ALTER DATABASE AUDIT SPECIFICATION viene eseguita quando un controllo è abilitato con qualsiasi altra opzione diversa da STATE=OFF, verrà visualizzato un messaggio di errore. Per altre informazioni, vedere [tempdb Database](../../relational-databases/databases/tempdb-database.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Gli utenti che dispongono dell'autorizzazione ALTER ANY DATABASE AUDIT possono modificare specifiche del controllo del database e associarle a qualsiasi controllo.  
   
  Dopo essere stata creata, la specifica del controllo del database può essere visualizzata dalle entità che dispongono dell'autorizzazione CONTROL SERVER o ALTER ANY DATABASE AUDIT o dell'account sysadmin oppure dalle entità che possono accedere esplicitamente al controllo.  
