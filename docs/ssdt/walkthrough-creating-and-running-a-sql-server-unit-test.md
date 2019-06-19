@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: f49d7d43e136adaadb2bda5b37fa6f7e8b63f4e7
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101943"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Procedura dettagliata: Creazione ed esecuzione di uno unit test di SQL Server
@@ -242,7 +242,7 @@ Per completare questa procedura dettagliata, è necessario essere in grado di co
   
 #### <a name="to-import-a-database-schema-from-a-script"></a>Per importare uno schema del database da uno script  
   
-1.  Scegliere **Importa** dal menu **Progetto** e quindi selezionare **Script (\*.sql)**.  
+1.  Scegliere **Importa** dal menu **Progetto** e quindi selezionare **Script (\*.sql)** .  
   
 2.  Fare clic su **Avanti** dopo aver letto la pagina di benvenuto.  
   
@@ -276,7 +276,7 @@ Per impostazione predefinita, quando si preme F5 il database viene distribuito (
   
 3.  Selezionare le caselle di controllo delle cinque stored procedure: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder** e **Sales.uspShowOrderDetails**.  
   
-4.  Nell'elenco a discesa **Progetto** selezionare **Crea nuovo progetto di test Visual C#**.  
+4.  Nell'elenco a discesa **Progetto** selezionare **Crea nuovo progetto di test Visual C#** .  
   
 5.  Accettare i nomi predefiniti per il progetto e la classe e fare clic su **OK**.  
   
@@ -556,7 +556,7 @@ Per i test, si presuppone che il database venga avviato in uno stato pulito. Ver
   
 4.  Nel riquadro **Condizioni di test** selezionare **Schema previsto** nell'elenco, quindi fare clic su **Aggiungi condizione di test**.  
   
-5.  Nella finestra **Proprietà** fare clic sul pulsante Sfoglia (**...**) nella proprietà **Configurazione**.  
+5.  Nella finestra **Proprietà** fare clic sul pulsante Sfoglia ( **...** ) nella proprietà **Configurazione**.  
   
 6.  Nella finestra di dialogo **Configurazione per expectedSchemaCondition1** specificare una connessione al database. Ad esempio, se venisse usato il percorso di distribuzione predefinito, ossia il database LocalDB, si farebbe clic su **Nuova connessione** e si specificherebbe **(LocalDB)\Projects**. Successivamente, scegliere il nome del database.  
   
@@ -621,7 +621,7 @@ Per i test, si presuppone che il database venga avviato in uno stato pulito. Ver
   
 13. Nel riquadro **Condizioni di test** selezionare **Checksum di dati** nell'elenco, quindi fare clic su **Aggiungi condizione di test**.  
   
-14. Nella finestra **Proprietà** fare clic sul pulsante Sfoglia (**...**) nella proprietà **Configurazione**.  
+14. Nella finestra **Proprietà** fare clic sul pulsante Sfoglia ( **...** ) nella proprietà **Configurazione**.  
   
 15. Nella finestra di dialogo **Configurazione per checksumCondition1** specificare una connessione al database.  
   

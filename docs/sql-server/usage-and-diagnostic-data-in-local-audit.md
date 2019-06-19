@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: 97eac599fd057d8a9ae335943e7e818df4b49ba4
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65372443"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Controllo locale per la raccolta di dati di diagnostica e utilizzo di SQL Server (Analisi utilizzo software)
@@ -65,7 +65,7 @@ Per ottenere l'account di accesso al servizio Analisi utilizzo software di SQL S
  
 1. Aprire la console **Servizi**. A tale scopo, premere **Tasto WINDOWS+R** sulla tastiera per aprire la finestra di dialogo **Esegui**. Digitare *services.msc* nel campo di testo e scegliere **OK** per avviare la console **Servizi**.  
 
-2. Passare al servizio appropriato. Ad esempio, per il motore di database trovare **Servizio Analisi utilizzo software di SQL Server**  **(*nome-istanza*)**. Per Analysis Services trovare **Analisi utilizzo software di SQL Server Analysis Services**  **(*nome-istanza*)**. Per Integration Services trovare **Analisi utilizzo software di SQL Server Integration Services**.
+2. Passare al servizio appropriato. Ad esempio, per il motore di database trovare **Servizio Analisi utilizzo software di SQL Server**  **(*nome-istanza*)** . Per Analysis Services trovare **Analisi utilizzo software di SQL Server Analysis Services**  **(*nome-istanza*)** . Per Integration Services trovare **Analisi utilizzo software di SQL Server Integration Services**.
 
 3. Fare clic con il pulsante destro del mouse sul servizio e scegliere **Proprietà**. 
 
@@ -73,7 +73,7 @@ Per ottenere l'account di accesso al servizio Analisi utilizzo software di SQL S
 
 ### <a name="configure-a-new-folder-for-the-local-audit-files"></a>Configurare una nuova cartella per i file del controllo locale.    
 
-Creare una nuova cartella (directory del controllo locale) in cui scrivere i log della funzionalità di controllo locale. Ad esempio, il percorso completo della directory del controllo locale per un'istanza predefinita del motore di database sarà: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*. 
+Creare una nuova cartella (directory del controllo locale) in cui scrivere i log della funzionalità di controllo locale. Ad esempio, il percorso completo della directory del controllo locale per un'istanza predefinita del motore di database sarà: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* . 
  
   >[!NOTE] 
   >Configurare il percorso di directory per il controllo locale all'esterno del percorso di installazione di SQL Server, per evitare che la funzionalità di controllo e l'applicazione di patch possano causare problemi a SQL Server.
@@ -140,7 +140,7 @@ Dopo aver completato i passaggi di configurazione preliminari, è possibile atti
 
 1. Fare clic con il pulsante destro del mouse su **UserRequestedLocalAuditDirectory** e selezionare *Modifica*. 
 
-1. Per attivare il controllo locale, digitare il relativo percorso, ad esempio *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*.
+1. Per attivare il controllo locale, digitare il relativo percorso, ad esempio *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* .
  
     Per disattivare il controllo locale, svuotare il valore in **UserRequestedLocalAuditDirectory**.
 
@@ -152,8 +152,8 @@ Analisi utilizzo software di SQL Server dovrebbe riconoscere immediatamente l'im
 
 1. Passare al servizio appropriato. 
 
-    - Per il motore di database usare **Servizio Analisi utilizzo software di SQL Server (*Nome-istanza*)**.     
-    - Per Analysis Services usare **Analisi utilizzo software di SQL Server Analysis Services (*Nome-istanza*)**.
+    - Per il motore di database usare **Servizio Analisi utilizzo software di SQL Server (*Nome-istanza*)** .     
+    - Per Analysis Services usare **Analisi utilizzo software di SQL Server Analysis Services (*Nome-istanza*)** .
     - Per Integration Services, 
         - Per SQL 2016 usare *Servizio Analisi utilizzo software di SQL Server Integration Services 13.0*.
         - Per SQL 2017 usare *Servizio Analisi utilizzo software di SQL Server Integration Services 14.0*.

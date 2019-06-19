@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7f379b3cbc335da74b4d029d19b8fa3bdab603c9
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403503"
 ---
 # <a name="lesson-9-1---defining-and-browsing-perspectives"></a>Lezione 9-1: definizione ed esplorazione delle prospettive
@@ -53,37 +53,37 @@ Nelle procedure descritte in questo argomento vengono definite diverse prospetti
   
 5.  Deselezionare le caselle di controllo corrispondenti agli oggetti seguenti:  
   
-    -   Gruppo di misure**Reseller Sales**   
+    -   Gruppo di misure**Reseller Sales**  
   
-    -   Gruppo di misure**Sales Quotas**   
+    -   Gruppo di misure**Sales Quotas**  
   
-    -   Gruppo di misure**Sales Quotas 1**   
+    -   Gruppo di misure**Sales Quotas 1**  
   
-    -   Dimensione del cubo**Reseller**   
+    -   Dimensione del cubo**Reseller**  
   
-    -   Dimensione del cubo**Reseller Geography**   
+    -   Dimensione del cubo**Reseller Geography**  
   
-    -   Dimensione del cubo**Sales Territory**   
+    -   Dimensione del cubo**Sales Territory**  
   
-    -   Dimensione del cubo**Employee**   
+    -   Dimensione del cubo**Employee**  
   
-    -   Dimensione del cubo**Promotion**   
+    -   Dimensione del cubo**Promotion**  
   
-    -   di**Reseller Revenue**   
+    -   di**Reseller Revenue**  
   
-    -   Set denominato**Large Resellers**   
+    -   Set denominato**Large Resellers**  
   
-    -   Membro calcolato**Total Sales Amount**   
+    -   Membro calcolato**Total Sales Amount**  
   
-    -   Membro calcolato**Total Product Cost**   
+    -   Membro calcolato**Total Product Cost**  
   
-    -   Membro calcolato**Reseller GPM**   
+    -   Membro calcolato**Reseller GPM**  
   
-    -   Membro calcolato**Total GPM**   
+    -   Membro calcolato**Total GPM**  
   
-    -   Membro calcolato**Reseller Sales Ratio to All Products**   
+    -   Membro calcolato**Reseller Sales Ratio to All Products**  
   
-    -   Membro calcolato**Total Sales Ratio to All Products**   
+    -   Membro calcolato**Total Sales Ratio to All Products**  
   
     Questi oggetti non riguardano le vendite Internet.  
   
@@ -102,29 +102,29 @@ Nelle procedure descritte in questo argomento vengono definite diverse prospetti
   
 4.  Deselezionare le caselle di controllo corrispondenti agli oggetti seguenti:  
   
-    -   Gruppo di misure**Internet Sales**   
+    -   Gruppo di misure**Internet Sales**  
   
-    -   Gruppo di misure**Internet Sales Reason**   
+    -   Gruppo di misure**Internet Sales Reason**  
   
-    -   Dimensione del cubo**Customer**   
+    -   Dimensione del cubo**Customer**  
   
-    -   Dimensione del cubo**Internet Sales Order Details**   
+    -   Dimensione del cubo**Internet Sales Order Details**  
   
-    -   Dimensione del cubo**Sales Reason**   
+    -   Dimensione del cubo**Sales Reason**  
   
-    -   Azione drill-through**Internet Sales Details Drillthrough Action**   
+    -   Azione drill-through**Internet Sales Details Drillthrough Action**  
   
-    -   Membro calcolato**Total Sales Amount**   
+    -   Membro calcolato**Total Sales Amount**  
   
-    -   Membro calcolato**Total Product Cost**   
+    -   Membro calcolato**Total Product Cost**  
   
-    -   Membro calcolato**Internet GPM**   
+    -   Membro calcolato**Internet GPM**  
   
-    -   Membro calcolato**Total GPM**   
+    -   Membro calcolato**Total GPM**  
   
-    -   Membro calcolato**Internet Sales Ratio to All Products**   
+    -   Membro calcolato**Internet Sales Ratio to All Products**  
   
-    -   Membro calcolato**Total Sales Ratio to All Products**   
+    -   Membro calcolato**Total Sales Ratio to All Products**  
   
     Questi oggetti non riguardano le vendite rivenditore.  
   
@@ -139,27 +139,27 @@ Nelle procedure descritte in questo argomento vengono definite diverse prospetti
   
 3.  Deselezionare le caselle di controllo corrispondenti agli oggetti seguenti:  
   
-    -   Gruppo di misure**Internet Sales**   
+    -   Gruppo di misure**Internet Sales**  
   
-    -   Gruppo di misure**Reseller Sales**   
+    -   Gruppo di misure**Reseller Sales**  
   
-    -   Gruppo di misure**Internet Sales Reason**   
+    -   Gruppo di misure**Internet Sales Reason**  
   
-    -   Gruppo di misure**Sales Quotas**   
+    -   Gruppo di misure**Sales Quotas**  
   
-    -   Gruppo di misure**Sales Quotas1**   
+    -   Gruppo di misure**Sales Quotas1**  
   
-    -   Dimensione del cubo**Internet Sales Order Details**   
+    -   Dimensione del cubo**Internet Sales Order Details**  
   
-    -   Dimensione del cubo**Sales Reason**   
+    -   Dimensione del cubo**Sales Reason**  
   
-    -   Azione drill-through**Internet Sales Details Drillthrough Action**   
+    -   Azione drill-through**Internet Sales Details Drillthrough Action**  
   
 4.  Selezionare le caselle di controllo corrispondenti agli oggetti seguenti:  
   
-    -   Misura**Internet Sales Count**   
+    -   Misura**Internet Sales Count**  
   
-    -   Misura**Reseller Sales Count**   
+    -   Misura**Reseller Sales Count**  
   
 ## <a name="browsing-the-cube-through-each-perspective"></a>Esplorazione del cubo tramite ogni prospettiva  
   

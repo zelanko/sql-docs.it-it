@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 923c6fc93418cf2e46bf3970632ae0454f5a611d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101888"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Utilizzo di condizioni di test in unit test di SQL Server
@@ -88,7 +88,7 @@ Dopo avere aggiunto una condizione di test Checksum di dati allo unit test del d
   
 3.  (Facoltativo) È possibile modificare la proprietà **(Nome)** della condizione di test per renderla più descrittiva.  
   
-4.  Nella proprietà **Configurazione** fare clic sul pulsante Sfoglia (**...**).  
+4.  Nella proprietà **Configurazione** fare clic sul pulsante Sfoglia ( **...** ).  
   
     Verrà visualizzata la finestra di dialogo **Configurazione per NomeCondizioneTest** .  
   
@@ -118,7 +118,7 @@ Dopo aver aggiunto una condizione di test Schema previsto allo unit test di SQL 
   
 3.  (Facoltativo) È possibile modificare la proprietà **(Nome)** della condizione di test per renderla più descrittiva.  
   
-4.  Nella proprietà **Configurazione** fare clic sul pulsante Sfoglia (**...**).  
+4.  Nella proprietà **Configurazione** fare clic sul pulsante Sfoglia ( **...** ).  
   
     Verrà visualizzata la finestra di dialogo **Configurazione per NomeCondizioneTest** .  
   

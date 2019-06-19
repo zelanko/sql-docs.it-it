@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7c03018fefd6b4d09987a67ced7694d8f5e574db
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717219"
 ---
 # <a name="catalogcleanupserverlog"></a>catalog.cleanup_server_log 
@@ -61,9 +61,9 @@ catalog.cleanup_server_log
 ## <a name="remarks"></a>Remarks  
  In SQL Server 2012 Service Pack 2 è stata aggiunta la proprietà SERVER_OPERATION_ENCRYPTION_LEVEL alla tabella **internal.catalog_properties**. Per questa proprietà sono possibili due valori:  
   
--   **PER_EXECUTION (1)**: il certificato e la chiave simmetrica usati per la protezione dei parametri e dei log di esecuzione riservati vengono creati per ogni esecuzione. Poiché i certificati e le chiavi vengono generati per ogni esecuzione, è possibile riscontrare problemi di prestazioni (deadlock, mancata riuscita di processi di manutenzione e così via) negli ambienti di produzione. Questa impostazione, tuttavia, offre un livello di sicurezza superiore rispetto all'altro valore (2).  
+-   **PER_EXECUTION (1)** : il certificato e la chiave simmetrica usati per la protezione dei parametri e dei log di esecuzione riservati vengono creati per ogni esecuzione. Poiché i certificati e le chiavi vengono generati per ogni esecuzione, è possibile riscontrare problemi di prestazioni (deadlock, mancata riuscita di processi di manutenzione e così via) negli ambienti di produzione. Questa impostazione, tuttavia, offre un livello di sicurezza superiore rispetto all'altro valore (2).  
   
--   **PER_PROJECT (2)**: il certificato e la chiave simmetrica usati per la protezione dei parametri riservati vengono creati per ogni progetto. PER_PROJECT (2) corrisponde all'impostazione predefinita. Questa impostazione garantisce prestazioni migliori rispetto al livello PER_EXECUTION, perché la chiave e il certificato vengono generati una volta per il progetto, anziché per ogni esecuzione.  
+-   **PER_PROJECT (2)** : il certificato e la chiave simmetrica usati per la protezione dei parametri riservati vengono creati per ogni progetto. PER_PROJECT (2) corrisponde all'impostazione predefinita. Questa impostazione garantisce prestazioni migliori rispetto al livello PER_EXECUTION, perché la chiave e il certificato vengono generati una volta per il progetto, anziché per ogni esecuzione.  
   
  Prima di modificare SERVER_OPERATION_ENCRYPTION_LEVEL da 2 a 1 o viceversa, è necessario eseguire [catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md). Prima di eseguire questa stored procedure, effettuare le operazioni seguenti:  
   

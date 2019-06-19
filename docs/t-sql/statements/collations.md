@@ -21,11 +21,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fcdc1c5cdc4dcbb7eb81236a1bb907d929aee5e0
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828101"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051561"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 
@@ -151,7 +151,7 @@ Colima
 Chiapas
 ```
 
-### <a name="b-additional-examples"></a>b. Esempi aggiuntivi
+### <a name="b-additional-examples"></a>B. Esempi aggiuntivi
 
 Per altri esempi in cui viene usata la clausola **COLLATE**, vedere [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples), esempio **G. Creazione di un database e specifica di un nome delle regole di confronto e delle opzioni** e [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column), esempio **V. Modifica delle regole di confronto di una colonna**.
 

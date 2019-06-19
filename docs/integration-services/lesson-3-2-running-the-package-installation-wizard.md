@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 534daee6995cd5429878cfb3fca4ac5aea33e2fe
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721967"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lezione 3-2 - Esecuzione dell'Installazione guidata pacchetti
@@ -51,7 +51,7 @@ In una lezione precedente sono stati modificati i pacchetti inclusi nell'esercit
   
 9. Nella pagina Selezione cartella di installazione fare clic su **Sfoglia**.  
   
-10. Nella finestra di dialogo **Sfoglia cartella** espandere **Risorse del computer** e quindi fare clic su **Disco locale (C:)**.  
+10. Nella finestra di dialogo **Sfoglia cartella** espandere **Risorse del computer** e quindi fare clic su **Disco locale (C:)** .  
   
 11. Fare clic su **Crea nuova cartella** e sostituire il nome predefinito della nuova cartella, vale a dire **Nuova cartella**, con **DeploymentTutorialInstall**.  
   

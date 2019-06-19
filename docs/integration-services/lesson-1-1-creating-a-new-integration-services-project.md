@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 82420ce073f65483043d44670fc538849a447d90
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723322"
 ---
 # <a name="lesson-1-1-create-a-new-integration-services-project"></a>Lezione 1-1: Creazione di un nuovo progetto di Integration Services
@@ -35,7 +35,7 @@ I pacchetti usati nelle lezioni da 2 a 6 vengono copiati dal pacchetto creato in
 
 ## <a name="create-a-new-integration-services-project"></a>Creazione di un nuovo progetto di Integration Services  
   
-1.  Nel menu **Start** di Windows cercare e selezionare **Visual Studio (SSDT)**.  
+1.  Nel menu **Start** di Windows cercare e selezionare **Visual Studio (SSDT)** .  
   
 2.  In Visual Studio selezionare **File** > **Nuovo** > **Progetto** per creare un nuovo progetto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   

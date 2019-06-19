@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 22fd8a3e1518c535e61321255fda9c2a3f279ab1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723940"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati ODBC (Importazione/Esportazione guidata SQL Server)
@@ -29,7 +29,7 @@ Può essere necessario scaricare il driver ODBC da Microsoft o da terze parti.
 Può essere necessario anche cercare le informazioni di connessione che devono essere specificate. Il sito di terze parti [The Connection Strings Reference](https://www.connectionstrings.com/) (Riferimenti alle stringhe di connessione) contiene stringhe di connessione di esempio e altre informazioni sui provider di dati e sulle informazioni di connessione richieste dai provider.
 
 ## <a name="make-sure-the-driver-you-want-is-installed"></a>Verificare che il driver desiderato sia installato
-1.  Cercare o passare all'applet **Origini dati ODBC (64 bit)** nel Pannello di controllo. Se si ha solo un driver a 32 bit o è necessario usare un driver a 32 bit, cercare o passare a **Origini dati ODBC (32 bit)**.
+1.  Cercare o passare all'applet **Origini dati ODBC (64 bit)** nel Pannello di controllo. Se si ha solo un driver a 32 bit o è necessario usare un driver a 32 bit, cercare o passare a **Origini dati ODBC (32 bit)** .
 2.  Avviare l'applet. Viene visualizzata la finestra **Amministrazione origine dati ODBC**.
 3.  Nella scheda **Driver** è disponibile un elenco di tutti i driver ODBC installati nel computer. È possibile che i nomi di alcuni driver siano visualizzati in più lingue.
 
@@ -67,7 +67,7 @@ Se si specifica una stringa di connessione, la pagina **Scelta origine dati** o 
 
 ## <a name="odbc_dsn"></a> Opzione 1 - Specificare un DSN
 Se si vuole specificare le informazioni di connessione con un DSN (nome dell'origine dati), usare l'applet **Amministrazione origine dati ODBC** per trovare il nome del DSN esistente o creare un nuovo DSN.
-1.  Cercare o passare all'applet **Origini dati ODBC (64 bit)** nel Pannello di controllo. Se si ha solo un driver a 32 bit o è necessario usare un driver a 32 bit, cercare o passare a **Origini dati ODBC (32 bit)**.
+1.  Cercare o passare all'applet **Origini dati ODBC (64 bit)** nel Pannello di controllo. Se si ha solo un driver a 32 bit o è necessario usare un driver a 32 bit, cercare o passare a **Origini dati ODBC (32 bit)** .
 2.  Avviare l'applet. Viene visualizzata la finestra **Amministrazione origine dati ODBC**. L'applet ha l'aspetto seguente.
 
     ![Applet del Pannello di controllo Amministrazione origine dati ODBC](../../integration-services/import-export-data/media/odbc-administrator-control-panel-applet.png)
@@ -112,7 +112,7 @@ Per trovare stringhe di connessione per il driver ODBC online, vedere [The Conne
 ## <a name="get-the-connection-string-with-an-app"></a>Ottenere la stringa di connessione con un'app
 Per compilare e testare la stringa di connessione per il driver ODBC nel computer, è possibile usare l'applet **Amministrazione origine dati ODBC** del Pannello di controllo. Creare un DSN su file per la connessione, quindi copiare le impostazioni del DSN su file per assemblare la stringa di connessione. Questa operazione richiede diversi passaggi, ma offre una stringa di connessione valida.
 
-1.  Cercare o passare all'applet **Origini dati ODBC (64 bit)** nel Pannello di controllo. Se si ha solo un driver a 32 bit o è necessario usare un driver a 32 bit, cercare o passare a **Origini dati ODBC (32 bit)**.
+1.  Cercare o passare all'applet **Origini dati ODBC (64 bit)** nel Pannello di controllo. Se si ha solo un driver a 32 bit o è necessario usare un driver a 32 bit, cercare o passare a **Origini dati ODBC (32 bit)** .
 2.  Avviare l'applet. Viene visualizzata la finestra **Amministrazione origine dati ODBC**.
 3.  Passare alla scheda **DSN su file** dell'applet. Scegliere **Aggiungi**.
 

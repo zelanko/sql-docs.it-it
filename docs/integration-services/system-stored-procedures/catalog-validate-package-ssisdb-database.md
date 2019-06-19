@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ca43c5b6faaa8aecf24da81e7a587f9c33636ac3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715732"
 ---
 # <a name="catalogvalidatepackage-ssisdb-database"></a>catalog.validate_package (database SSISDB)
@@ -44,13 +44,13 @@ catalog.validate_package [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argomenti  
  [ @folder_name = ] *folder_name*  
- Nella della cartella in cui è contenuto il pacchetto. *folder_name* è di tipo **nvarchar(128)**.  
+ Nella della cartella in cui è contenuto il pacchetto. *folder_name* è di tipo **nvarchar(128)** .  
   
  [ @project_name = ] *project_name*  
- Nome del progetto in cui è contenuto il pacchetto. *project_name* è di tipo **nvarchar(128)**.  
+ Nome del progetto in cui è contenuto il pacchetto. *project_name* è di tipo **nvarchar(128)** .  
   
  [ @package_name = ] *package_name*  
- Nome del pacchetto. *package_name* è di tipo **nvarchar(260)**.  
+ Nome del pacchetto. *package_name* è di tipo **nvarchar(260)** .  
   
  [ @validation_id = ] *validation_id*  
  Viene restituito l'identificatore (ID) univoco della convalida. *validation_id* è di tipo **bigint**.  
@@ -59,7 +59,7 @@ catalog.validate_package [ @folder_name = ] folder_name
  Viene indicato se il runtime a 32 bit deve essere utilizzato per eseguire il pacchetto in un sistema operativo a 64 bit. Usare il valore `1` per eseguire il pacchetto con il runtime a 32 bit quando in esecuzione in un sistema operativo a 64 bit. Utilizzare il valore pari a `0` per eseguire il pacchetto con il runtime a 64 bit quando in esecuzione in un sistema operativo a 64 bit. Questo parametro è facoltativo. *use32bitruntime* è di tipo **bit**.  
   
  [ @environment_scope = ] *environment_scope*  
- Vengono indicati i riferimenti all'ambiente considerati dalla convalida. Quando il valore è `A`, tutti i riferimenti all'ambiente associati al progetto sono inclusi nella convalida. Quando il valore è `S`, è incluso solo un singolo riferimento all'ambiente. Quando il valore è `D`, non è incluso alcun riferimento all'ambiente e ogni parametro deve disporre di un valore predefinito letterale per passare la convalida. Questo parametro è facoltativo. Per impostazione predefinita, viene usato il carattere `D`. *environment_scope* è di tipo **char(1)**.  
+ Vengono indicati i riferimenti all'ambiente considerati dalla convalida. Quando il valore è `A`, tutti i riferimenti all'ambiente associati al progetto sono inclusi nella convalida. Quando il valore è `S`, è incluso solo un singolo riferimento all'ambiente. Quando il valore è `D`, non è incluso alcun riferimento all'ambiente e ogni parametro deve disporre di un valore predefinito letterale per passare la convalida. Questo parametro è facoltativo. Per impostazione predefinita, viene usato il carattere `D`. *environment_scope* è di tipo **char(1)** .  
   
  [ @reference_id = ] *reference_id*  
  ID univoco del riferimento all'ambiente. Questo parametro è richiesto solo quando un singolo riferimento all'ambiente è incluso nella convalida, quando *environment_scope* è di tipo `S`. *reference_id* è di tipo **bigint**.  

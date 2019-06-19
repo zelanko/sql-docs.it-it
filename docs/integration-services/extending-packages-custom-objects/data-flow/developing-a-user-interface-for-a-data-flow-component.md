@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5db0f81b46e825201c82e0b99a15604ba1acd154
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724736"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Sviluppo di un'interfaccia utente per un componente del flusso di dati
@@ -75,7 +75,7 @@ Public Class SampleComponent
 End Class  
 ```  
   
-## <a name="implementing-the-idtscomponentui-interface"></a>Implementazione dell'interfaccia IDtsComponentUI   
+## <a name="implementing-the-idtscomponentui-interface"></a>Implementazione dell'interfaccia IDtsComponentUI  
  L'interfaccia <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> contiene i metodi chiamati da Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] quando un componente viene aggiunto, eliminato e modificato. Gli sviluppatori di componenti possono fornire codice nella loro implementazione di questi metodi per interagire con gli utenti del componente.  
   
  Questa classe viene in genere implementata in un assembly distinto dal componente stesso. Anche se non è obbligatorio utilizzare un assembly distinto, in questo modo lo sviluppatore può compilare e distribuire il componente e l'interfaccia utente indipendentemente l'uno dall'altra e mantenere piccola l'impronta binaria del componente.  

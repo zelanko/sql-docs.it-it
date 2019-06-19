@@ -44,11 +44,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 47dca205ad7ac3dd2a82ce404bc2e7fb20938346
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828381"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63201711"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opzioni per file e filegroup ALTER DATABASE (Transact-SQL)
 
@@ -64,7 +64,7 @@ Nella riga seguente fare clic su qualsiasi nome di prodotto. Viene visualizzato 
 
 |||
 |-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[Istanza gestita<br />database SQL](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|** _\* SQL Server \*_ ** &nbsp;|[Istanza gestita<br />database SQL](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
@@ -144,13 +144,13 @@ REMOVE FILE *logical_file_name* rimuove la descrizione del file logico da un'ist
 
 MODIFY FILE specifica il file da modificare. È possibile modificare una sola proprietà \<filespec> alla volta. L'opzione NAME deve essere sempre specificata in \<filespec> per identificare il file da modificare. Se si specifica l'opzione SIZE, le nuove dimensioni del file devono essere superiori a quelle correnti.
 
-Per modificare il nome logico di un file di dati o di un file di log, specificare il nome del file logico da rinominare nella clausola `NAME` e specificare il nuovo nome logico per il file nella clausola `NEWNAME`. Ad esempio
+Per modificare il nome logico di un file di dati o di un file di log, specificare il nome del file logico da rinominare nella clausola `NAME` e specificare il nuovo nome logico per il file nella clausola `NEWNAME`. Esempio:
 
 ```sql
 MODIFY FILE ( NAME = logical_file_name, NEWNAME = new_logical_name )
 ```
 
-Per spostare un file di dati o un file di log in una nuova posizione, specificare il nome di file logico corrente nella clausola `NAME` e specificare il nuovo percorso e il nome del file nel sistema operativo nella clausola `FILENAME`. Ad esempio
+Per spostare un file di dati o un file di log in una nuova posizione, specificare il nome di file logico corrente nella clausola `NAME` e specificare il nuovo percorso e il nome del file nel sistema operativo nella clausola `FILENAME`. Esempio:
 
 ```sql
 MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
@@ -179,7 +179,7 @@ NEWNAME *new_logical_file_name* specifica un nuovo nome logico per il file.
 
 *new_logical_file_name* è il nome da sostituire al nome del file logico esistente. Il nome deve essere univoco all'interno del database e conforme alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). Il nome può essere costituito da una costante per valori di carattere o Unicode, da un identificatore regolare o da un identificatore delimitato.
 
-FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** | **'**_memory\_optimized\_data\_path_**'**} specifica il nome file (fisico) del sistema operativo.
+FILENAME { **'** _os\_file\_name_ **'** | **'** _filestream\_path_ **'** | **'** _memory\_optimized\_data\_path_ **'** } specifica il nome file (fisico) del sistema operativo.
 
 ' *os_file_name* ' specifica, per un filegroup standard (ROWS), il percorso e il nome file usati dal sistema operativo quando si crea il file. Il file deve trovarsi nel server in cui è installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il percorso specificato deve essere esistente prima di eseguire l'istruzione ALTER DATABASE.
 
@@ -192,12 +192,12 @@ I file di dati non dovrebbero essere memorizzati in file system compressi, a men
 
 Se il file si trova in una partizione non formattata, nell'argomento *os_file_name* è necessario specificare solo la lettera dell'unità di una partizione non formattata esistente. In ogni partizione non formattata è possibile inserire un solo file.
 
-**'** *filestream_path* **'**: per un filegroup FILESTREAM, FILENAME fa riferimento a un percorso in cui verranno archiviati i dati di FILESTREAM. È necessario che il percorso fino all'ultima cartella esista già, mentre l'ultima cartella non deve essere presente. Se, ad esempio, si specifica il percorso `C:\MyFiles\MyFilestreamData`, `C:\MyFiles` deve esistere già prima di eseguire ALTER DATABASE, mentre la cartella `MyFilestreamData` non deve essere presente.
+**'** *filestream_path* **'** : per un filegroup FILESTREAM, FILENAME fa riferimento a un percorso in cui verranno archiviati i dati di FILESTREAM. È necessario che il percorso fino all'ultima cartella esista già, mentre l'ultima cartella non deve essere presente. Se, ad esempio, si specifica il percorso `C:\MyFiles\MyFilestreamData`, `C:\MyFiles` deve esistere già prima di eseguire ALTER DATABASE, mentre la cartella `MyFilestreamData` non deve essere presente.
 
 > [!NOTE]
 > Le proprietà SIZE e FILEGROWTH non si applicano a un filegroup FILESTREAM.
 
-**'** *memory_optimized_data_path* **'**: per un filegroup ottimizzato per la memoria, FILENAME fa riferimento a un percorso in cui verranno archiviati i dati ottimizzati per la memoria. È necessario che il percorso fino all'ultima cartella esista già, mentre l'ultima cartella non deve essere presente. Se, ad esempio, si specifica il percorso `C:\MyFiles\MyData`, `C:\MyFiles` deve esistere già prima di eseguire ALTER DATABASE, mentre la cartella `MyData` non deve essere presente.
+**'** *memory_optimized_data_path* **'** : per un filegroup ottimizzato per la memoria, FILENAME fa riferimento a un percorso in cui verranno archiviati i dati ottimizzati per la memoria. È necessario che il percorso fino all'ultima cartella esista già, mentre l'ultima cartella non deve essere presente. Se, ad esempio, si specifica il percorso `C:\MyFiles\MyData`, `C:\MyFiles` deve esistere già prima di eseguire ALTER DATABASE, mentre la cartella `MyData` non deve essere presente.
 
 Il filegroup e il file (`<filespec>`) devono essere creati nella stessa istruzione.
 
@@ -279,7 +279,7 @@ REMOVE FILEGROUP *filegroup_name* rimuove un filegroup dal database. Il filegrou
 > [!NOTE]
 > A meno che il Garbage Collector per FILESTREAM non abbia rimosso tutti i file da un contenitore FILESTREAM, l'operazione `ALTER DATABASE REMOVE FILE` per rimuovere un contenitore FILESTREAM avrà esito negativo e verrà restituito un errore. Vedere la sezione [Rimozione di un contenitore FILESTREAM](#removing-a-filestream-container) di seguito in questo argomento.
 
-MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } Modifica il filegroup impostando lo stato su READ_ONLY o READ_WRITE, impostando il filegroup come predefinito per il database o cambiando il nome del filegroup.
+MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } Modifica il filegroup impostando lo stato su READ_ONLY o READ_WRITE, impostando il filegroup come predefinito per il database o cambiando il nome del filegroup.
 
 \<filegroup_updatability_option> imposta la proprietà di sola lettura o di lettura/scrittura per il filegroup.
 
@@ -397,7 +397,7 @@ ADD FILE
 GO
 ```
 
-### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>b. Aggiunta di un filegroup con due file a un database
+### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. Aggiunta di un filegroup con due file a un database
 
 Nell'esempio seguente viene creato il filegroup `Test1FG1` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] e vengono aggiunti due file da 5 MB al filegroup.
 
@@ -684,7 +684,7 @@ GO
 
 > |||
 > |-|-|-|
-> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|**_\* Istanza gestita<br />database SQL\*_**<br />&nbsp;|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|** _\* Istanza gestita<br />database SQL\*_ **<br />&nbsp;|
 
 &nbsp;
 
@@ -812,7 +812,7 @@ ALTER DATABASE sql_db_mi ADD FILE (NAME='sql_db_mi_mod') TO FILEGROUP sql_db_mi_
 
 REMOVE FILEGROUP *filegroup_name* rimuove un filegroup dal database. Il filegroup può essere rimosso solo se è vuoto. Rimuove tutti i file a partire dal filegroup. Per altre informazioni, vedere "REMOVE FILE *logical_file_name*" più indietro in questo argomento.
 
-MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } Modifica il filegroup impostando lo stato su READ_ONLY o READ_WRITE, impostando il filegroup come predefinito per il database o cambiando il nome del filegroup.
+MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } Modifica il filegroup impostando lo stato su READ_ONLY o READ_WRITE, impostando il filegroup come predefinito per il database o cambiando il nome del filegroup.
 
 \<filegroup_updatability_option> imposta la proprietà di sola lettura o di lettura/scrittura per il filegroup.
 
@@ -878,7 +878,7 @@ ADD FILE
 GO
 ```
 
-### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>b. Aggiunta di un filegroup con due file a un database
+### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. Aggiunta di un filegroup con due file a un database
 
 Nell'esempio seguente viene creato il filegroup `Test1FG1` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] e vengono aggiunti due file da 5 MB al filegroup.
 

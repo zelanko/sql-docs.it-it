@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891403"
 ---
-# <a name="step-3-adding-error-flow-redirection"></a>Passaggio 3: Aggiunta del reindirizzamento del flusso di errore
+# <a name="step-3-adding-error-flow-redirection"></a>Passaggio 3: Aggiunta del reindirizzamento del flusso degli errori
   Come dimostrato nell'attività precedente, la trasformazione Lookup Currency Key non crea una corrispondenza quando tenta di elaborare il file flat di esempio danneggiato che ha generato un errore. Dato che la trasformazione utilizza le impostazioni predefinite per l'output degli errori, qualsiasi errore determina l'esito negativo della trasformazione. Quando la trasformazione viene interrotta, si interrompe anche il resto del pacchetto.  
   
  Anziché consentire la mancata riuscita della trasformazione, è possibile configurare il componente in modo da reindirizzare la riga con esito negativo a un altro percorso di elaborazione utilizzando l'output degli errori. L'utilizzo di un percorso di elaborazione separato per gli errori consente di ottenere diversi risultati. Ad esempio, è possibile ripulire i dati e quindi rielaborare la riga con esito negativo. È inoltre possibile salvare la riga con esito negativo insieme alle informazioni sugli errori aggiuntive in modo da consentire una verifica e una rielaborazione successive.  
@@ -48,7 +48,7 @@ ms.locfileid: "62891403"
   
 8.  Nella pagina **Input e output** espandere **Output 0**, fare clic su **Colonne di output**e fare clic su **Aggiungi colonna**.  
   
-9. Nel `Name` proprietà, digitare **ErrorDescription** e impostare il `DataType` proprietà **stringa Unicode [DT_WSTR]**.  
+9. Nel `Name` proprietà, digitare **ErrorDescription** e impostare il `DataType` proprietà **stringa Unicode [DT_WSTR]** .  
   
 10. Nel **Script** verificare che il `LocaleID` è impostata su **inglese (Stati Uniti.**  
   

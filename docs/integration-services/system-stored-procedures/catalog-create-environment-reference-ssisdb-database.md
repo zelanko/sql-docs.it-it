@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 73871d69a8fbdc56b2359aa888cbc08e572a6107
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716913"
 ---
 # <a name="catalogcreateenvironmentreference-ssisdb-database"></a>catalog.create_environment_reference (database SSISDB)
@@ -40,19 +40,19 @@ catalog.create_environment_reference [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argomenti  
  [ @folder_name = ] *folder_name*  
- Nome della cartella del progetto che fa riferimento all'ambiente. *folder_name* è di tipo **nvarchar(128)**.  
+ Nome della cartella del progetto che fa riferimento all'ambiente. *folder_name* è di tipo **nvarchar(128)** .  
   
  [ @project_name = ] *project_name*  
- Nome del progetto che fa riferimento all'ambiente. *project_name* è di tipo **nvarchar(128)**.  
+ Nome del progetto che fa riferimento all'ambiente. *project_name* è di tipo **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- Nome dell'ambiente a cui viene fatto riferimento. *environment_name* è di tipo **nvarchar(128)**.  
+ Nome dell'ambiente a cui viene fatto riferimento. *environment_name* è di tipo **nvarchar(128)** .  
   
  [ @reference_location = ] *reference_location*  
- Viene indicato se l'ambiente può essere individuato nella stessa cartella del progetto (riferimento relativo) o in una cartella diversa (riferimento assoluto). Utilizzare il valore `R` per indicare un riferimento relativo. Utilizzare il valore `A` per indicare un riferimento assoluto. *reference_location* è di tipo **char(1)**.  
+ Viene indicato se l'ambiente può essere individuato nella stessa cartella del progetto (riferimento relativo) o in una cartella diversa (riferimento assoluto). Utilizzare il valore `R` per indicare un riferimento relativo. Utilizzare il valore `A` per indicare un riferimento assoluto. *reference_location* è di tipo **char(1)** .  
   
  [ @environment_folder_name = ] *environment_folder_name*  
- Nome della cartella in cui si trova l'ambiente a cui viene fatto riferimento. Questo valore è richiesto per i riferimenti assoluti. *environment_folder_name* è di tipo **nvarchar(128)**.  
+ Nome della cartella in cui si trova l'ambiente a cui viene fatto riferimento. Questo valore è richiesto per i riferimenti assoluti. *environment_folder_name* è di tipo **nvarchar(128)** .  
   
  [ @reference_id = ] *reference_id*  
  Viene restituito l'identificatore univoco per il nuovo riferimento. Questo parametro è facoltativo. *reference_id* è di tipo **bigint**.  

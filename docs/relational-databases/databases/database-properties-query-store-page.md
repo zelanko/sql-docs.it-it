@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 72b79e02cfdc8bab664df1a47c1e8bfb91743493
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596662"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62861192"
 ---
 # <a name="database-properties-query-store-page"></a>Proprietà database (pagina Archivio query)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b4b72017bb23ae44da9c5884f0ebf2a8b099fd3e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63019046"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Applicare gli aggiornamenti rapidi della piattaforma di strumenti analitici
@@ -32,7 +32,7 @@ Per eseguire questi passaggi, è necessario:
   
 -   Un account di accesso di sistema di piattaforma Analitica con le autorizzazioni per accedere alla Console di amministrazione che consentono di monitorare lo stato di appliance. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
--   Conoscenza dell'account amministratore di dominio dell'infrastruttura per la connessione per il _< nome_dominio >_**-HST01** nodo.  
+-   Conoscenza dell'account amministratore di dominio dell'infrastruttura per la connessione per il _< nome_dominio >_ **-HST01** nodo.  
   
 ## <a name="HowToInstallPDW"></a>Per applicare un hotfix del sistema di piattaforma Analitica  
 A differenza di Microsoft Update, le correzioni rapide per il software di sistema di piattaforma Analitica non vengono gestite tramite WSUS. Hanno un flusso di lavoro diverso e vengono installati tramite l'esecuzione di un pacchetto di hotfix.  

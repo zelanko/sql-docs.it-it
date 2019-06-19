@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e03317e9d37387e6c2482aea3bdf102a0b063b03
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721194"
 ---
 # <a name="lesson-6-2-convert-the-project-to-the-project-deployment-model"></a>Lezione 6-2: Convertire il progetto nel modello di distribuzione del progetto

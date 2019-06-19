@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 708442d30b571f165f7f9d70f346a958764316d0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127905"
 ---
 # <a name="schemaini-file-text-file-driver"></a>File Schema.ini (driver file di testo)
@@ -100,7 +100,7 @@ n=ColumnNametype [#]
 |Parametro|Descrizione|  
 |---------------|-----------------|  
 |*ColumnName*|Il nome della colonna di testo. Se il nome della colonna contiene spazi incorporati, è necessario racchiuderlo tra virgolette.|  
-|*type*|Come indicato di seguito sono riportati i tipi di dati:<br /><br /> **Tipi di dati di Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Currency<br /><br /> Single<br /><br /> Double<br /><br /> Datetime<br /><br /> Testo<br /><br /> Memo<br /><br /> **Tipi di dati ODBC** Char (lo stesso testo)<br /><br /> Float (uguale a Double)<br /><br /> Integer (uguale a breve)<br /><br /> LongChar (uguale al credito)<br /><br /> Data *formato data*|  
+|*type*|Come indicato di seguito sono riportati i tipi di dati:<br /><br /> **Tipi di dati di Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Currency<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> Testo<br /><br /> Memo<br /><br /> **Tipi di dati ODBC** Char (lo stesso testo)<br /><br /> Float (uguale a Double)<br /><br /> Integer (uguale a breve)<br /><br /> LongChar (uguale al credito)<br /><br /> Data *formato data*|  
 |**Width**|Il valore di stringa letterale `Width`. Indica che il numero seguente definisce la larghezza della colonna (facoltativo per i file delimitati da caratteri; richiesto per i file di lunghezza fissa).|  
 |*#*|Il valore intero che definisce la larghezza della colonna (obbligatorio se **larghezza** è specificato).|  
   

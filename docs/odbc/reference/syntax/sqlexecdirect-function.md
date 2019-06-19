@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a1c66c9ab423a6bb722c422450b99c1a47118f7
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537196"
 ---
 # <a name="sqlexecdirect-function"></a>Funzione SQLExecDirect
@@ -86,7 +86,7 @@ SQLRETURN SQLExecDirect(
 |22015|Overflow del campo Interval|*\*StatementText* contiene un parametro numerico o intervallo esatto che, quando convertito in un intervallo di tipo di dati SQL, ha causato una perdita di cifre significative.<br /><br /> *\*StatementText* contiene un parametro di intervallo con più di un campo che, quando convertito in un tipo di dati numerici in una colonna, non aveva alcuna rappresentazione nel tipo di dati numerici.<br /><br /> *\*StatementText* conteneva dati di parametro che è stati assegnati a un intervallo di tipo SQL e si è verificato alcuna rappresentazione del valore di tipo C in un intervallo di tipo SQL.<br /><br /> Assegnazione di un parametro di input/output o di output che è stato un numerico esatto o l'intervallo di tipo SQL a un tipo di intervallo C ha causato una perdita di cifre significative.<br /><br /> Quando un parametro di input/output o di output è stato assegnato a una struttura di intervallo C, si è verificato alcun rappresentazione dei dati nella struttura di dati di intervallo.|  
 |22018|Valore del carattere non valido per la specifica del cast|*\*StatementText* contenevano un tipo C che è un valore numerico esatto o approssimativo, un valore datetime o un tipo di dati di intervallo, il tipo SQL della colonna è un tipo di dati carattere; e il valore nella colonna non è un valore letterale valido del tipo C associato.<br /><br /> Quando è stato restituito un parametro di input/output o di output, il tipo SQL è un valore numerico esatto o approssimativo, un valore datetime o un tipo di dati di intervallo. il tipo C è stata SQL_C_CHAR; e il valore nella colonna non è un valore letterale valido del tipo SQL associato.|  
 |22019|Carattere di escape non valido|\**StatementText* conteneva un'istruzione SQL che conteneva una **, ad esempio** predicato con un **ESCAPE** nel **dove** clausola e la lunghezza del carattere di escape carattere che segue **ESCAPE** non è uguale a 1.|  
-|22025|Sequenza di escape non valido|\**StatementText* conteneva un'istruzione SQL contenente "**, ad esempio** _valore di schema_ **ESCAPE** _carattere di escape_ "nel **in cui** clausola e il carattere che segue il carattere di escape nel valore del modello non corrisponde a uno di"%"o"_".|  
+|22025|Sequenza di escape non valido|\**StatementText* conteneva un'istruzione SQL contenente " **, ad esempio** _valore di schema_ **ESCAPE** _carattere di escape_ "nel **in cui** clausola e il carattere che segue il carattere di escape nel valore del modello non corrisponde a uno di"%"o"_".|  
 |23000|Violazione di vincolo di integrità|**StatementText* conteneva un'istruzione SQL contenente un parametro o valore letterale. Il valore del parametro non NULL per una colonna definita come NOT NULL nella colonna della tabella associati, un valore duplicato è stato fornito per una colonna vincolata a contenere solo valori univoci, o un altro vincolo di integrità è stato violato.|  
 |24000|Stato del cursore non valido|Un cursore è posizionato in corrispondenza di *StatementHandle* dal **SQLFetch** oppure **SQLFetchScroll**. Questo errore viene restituito da Gestione Driver, se **SQLFetch** oppure **SQLFetchScroll** non restituisce SQL_NO_DATA e viene restituito dal driver se **SQLFetch** oppure **SQLFetchScroll** è stato restituito SQL_NO_DATA.<br /><br /> Il cursore è stato aperto, ma non posizionato in corrispondenza di *StatementHandle*.<br /><br /> **StatementText* indipendente posizionata un'istruzione update o delete, e il cursore era posizionato prima dell'inizio del set di risultati o dopo la fine del set di risultati.|  
 |34000|Nome di cursore non valido|**StatementText* indipendente posizionata un'istruzione update o delete e il cursore fa riferimento l'istruzione eseguita non è stato aperto.|  

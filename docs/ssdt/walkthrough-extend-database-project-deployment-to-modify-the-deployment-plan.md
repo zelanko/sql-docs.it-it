@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fbd30a8b0e112d74bf9bd0d009592d753688fadd
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099546"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Procedura dettagliata: Estendere la distribuzione del progetto di database per modificare il piano di distribuzione
@@ -625,7 +625,7 @@ Compilare la libreria di classi.
   
 3.  Fare clic su **Firma assembly**.  
   
-4.  In **Scegli un file chiave con nome sicuro** fare clic su **<New>**.  
+4.  In **Scegli un file chiave con nome sicuro** fare clic su **<New>** .  
   
 5.  Nella finestra di dialogo **Crea chiave con nome sicuro** , in **Nome file di chiave**, digitare **MyRefKey**.  
   
@@ -707,7 +707,7 @@ Dopo aver seguito uno di questi approcci, è possibile utilizzare MSBuild per pa
   
     1.  Aprire Visual Studio e aprire la soluzione che contiene il progetto SQL.  
   
-    2.  Fare clic con il pulsante destro del mouse sul progetto in Esplora soluzioni e scegliere l'opzione **Pubblica...**.  
+    2.  Fare clic con il pulsante destro del mouse sul progetto in Esplora soluzioni e scegliere l'opzione **Pubblica...** .  
   
     3.  Impostare il nome del server e il nome del database in cui pubblicare.  
   
@@ -791,6 +791,6 @@ Dopo che un progetto SQL viene compilato, viene creato un file dacpac che può e
   
 ## <a name="see-also"></a>Vedere anche  
 [Personalizzare la compilazione e la distribuzione del database tramite collaboratori alla compilazione e distribuzione](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
-[Procedura dettagliata: Estendere la compilazione del progetto del database per generare statistiche del modello](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)  
+[Procedura dettagliata: Estendere la compilazione del progetto di database per generare statistiche del modello](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)  
 [Procedura dettagliata: Estendere la distribuzione del progetto di database per analizzare il piano di distribuzione](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

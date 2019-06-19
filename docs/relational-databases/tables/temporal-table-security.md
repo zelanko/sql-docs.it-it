@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ebe4438e48f14c1adba3b56d30cc772549f9ee7e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526438"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034848"
 ---
 # <a name="temporal-table-security"></a>Sicurezza di una tabella temporale
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "52526438"
   
 ||Creare una nuova tabella di cronologia|Riutilizzare una tabella di cronologia esistente|  
 |-|------------------------------|----------------------------------|  
-|Autorizzazione necessaria|Autorizzazione**CONTROL** nel database<br /><br /> Autorizzazione**CREATE TABLE** nel database<br /><br /> Autorizzazione**ALTER** per gli schemi in cui viene creata la tabella di cronologia|Autorizzazione**CONTROL** per la tabella originale modificata<br /><br /> Autorizzazione**CONTROL** per la tabella di cronologia specificata come parte dell'istruzione **ALTER TABLE** |  
+|Autorizzazione necessaria|Autorizzazione**CONTROL** nel database<br /><br /> Autorizzazione**CREATE TABLE** nel database<br /><br /> Autorizzazione**ALTER** per gli schemi in cui viene creata la tabella di cronologia|Autorizzazione**CONTROL** per la tabella originale modificata<br /><br /> Autorizzazione**CONTROL** per la tabella di cronologia specificata come parte dell'istruzione **ALTER TABLE**|  
 |Controllare il funzionamento di|Il controllo indica che la tabella temporale è stata modificata e contemporaneamente è stata creata la tabella di cronologia. L'operazione può non riuscire a causa della mancanza di autorizzazioni per creare una tabella nel database, a causa della mancanza di autorizzazioni per la modifica dello schema per la tabella di cronologia o a causa della mancanza di autorizzazioni per la modifica della tabella temporale.|Il controllo indica che la tabella temporale è stata modificata, ma l'operazione ha richiesto l'accesso alla tabella di cronologia. L'operazione potrebbe non riuscire a causa della mancanza di autorizzazioni per la tabella di cronologia o per la tabella corrente.|  
   
 ## <a name="security-of-select-statement"></a>Sicurezza dell'istruzione SELECT  

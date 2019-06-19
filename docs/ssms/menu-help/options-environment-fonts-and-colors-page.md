@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 755cc08f8e431e062ce9fdf3049d99453d724be6
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098381"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Opzioni (Ambiente- pagina Tipi di carattere e colori)
@@ -41,7 +41,7 @@ Consente di visualizzare l'elenco di tutti gli elementi dell'interfaccia utente 
 |Finestre di progettazione Business Intelligence|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo nelle finestre di Progettazione di Business Intelligence .|  
   
 **Valori predefiniti**  
-Il pulsante **Valori predefiniti** reimposta i valori predefiniti del tipo di carattere e dei colori dell'elemento selezionato dall'elenco **Mostra impostazioni per**.  
+Il pulsante **Valori predefiniti** reimposta i valori predefiniti del tipo di carattere e dei colori dell'elemento selezionato dall'elenco **Mostra impostazioni per** .  
   
 **Carattere (tipi di carattere a larghezza fissa in grassetto)**  
 Consente di visualizzare l'elenco di tutti i tipi di carattere installati nel sistema. Quando si apre questo elenco a discesa per la prima volta, viene selezionato il tipo di carattere corrente dell'elemento scelto nell'elenco **Mostra impostazioni per** . I tipi di carattere a larghezza fissa, più facili da allineare in un editor, vengono visualizzati in grassetto.  

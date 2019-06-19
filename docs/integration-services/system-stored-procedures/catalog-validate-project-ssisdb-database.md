@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1879aef282f9e3d8e61767ba2808bf3dd2908b8d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715679"
 ---
 # <a name="catalogvalidateproject-ssisdb-database"></a>catalog.validate_project (database SSISDB)
@@ -41,13 +41,13 @@ catalog.validate_project [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argomenti  
  [ @folder_name = ] *folder_name*  
- Nome di una cartella in cui è contenuto il progetto. *folder_name* è di tipo **nvarchar(128)**.  
+ Nome di una cartella in cui è contenuto il progetto. *folder_name* è di tipo **nvarchar(128)** .  
   
  [ @project_name = ] *project_name*  
- Nome del progetto. *project_name* è di tipo **nvarchar(128)**.  
+ Nome del progetto. *project_name* è di tipo **nvarchar(128)** .  
   
  [ @validate_type = ] *validate_type*  
- Viene indicato il tipo di convalida da eseguire. Utilizzare il carattere `F` per eseguire una convalida completa. Questo parametro è facoltativo. Per impostazione predefinita, verrà utilizzato il carattere `F`. *validate_type* è di tipo **char(1)**.  
+ Viene indicato il tipo di convalida da eseguire. Utilizzare il carattere `F` per eseguire una convalida completa. Questo parametro è facoltativo. Per impostazione predefinita, verrà utilizzato il carattere `F`. *validate_type* è di tipo **char(1)** .  
   
  [ @validation_id = ] *validation_id*  
  Viene restituito l'identificatore (ID) univoco della convalida. *validation_id* è di tipo **bigint**.  
@@ -56,7 +56,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  Viene indicato se il runtime a 32 bit deve essere utilizzato per eseguire il pacchetto in un sistema operativo a 64 bit. Usare il valore `1` per eseguire il pacchetto con il runtime a 32 bit quando in esecuzione in un sistema operativo a 64 bit. Utilizzare il valore pari a `0` per eseguire il pacchetto con il runtime a 64 bit quando in esecuzione in un sistema operativo a 64 bit. Questo parametro è facoltativo. *use32bitruntime* è di tipo **bit**.  
   
  [ @environment_scope = ] *environment_scope*  
- Vengono indicati i riferimenti all'ambiente considerati dalla convalida. Quando il valore è `A`, tutti i riferimenti all'ambiente associati al progetto sono inclusi nella convalida. Quando il valore è `S`, è incluso solo un singolo riferimento all'ambiente. Quando il valore è `D`, non è incluso alcun riferimento all'ambiente e ogni parametro deve disporre di un valore predefinito letterale per passare la convalida. Questo parametro è facoltativo. Per impostazione predefinita, verrà utilizzato il carattere `D`. *environment_scope* è di tipo **char(1)**.  
+ Vengono indicati i riferimenti all'ambiente considerati dalla convalida. Quando il valore è `A`, tutti i riferimenti all'ambiente associati al progetto sono inclusi nella convalida. Quando il valore è `S`, è incluso solo un singolo riferimento all'ambiente. Quando il valore è `D`, non è incluso alcun riferimento all'ambiente e ogni parametro deve disporre di un valore predefinito letterale per passare la convalida. Questo parametro è facoltativo. Per impostazione predefinita, verrà utilizzato il carattere `D`. *environment_scope* è di tipo **char(1)** .  
   
  [ @reference_id = ] *reference_id*  
  ID univoco del riferimento all'ambiente. Questo parametro è richiesto solo quando un singolo riferimento all'ambiente è incluso nella convalida, quando *environment_scope* è di tipo `S`. *reference_id* è di tipo **bigint**.  

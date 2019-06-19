@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a4e4dc5e53f4e45c558b5d709073900b6e724f1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717107"
 ---
 # <a name="catalogadddatatap"></a>catalog.add_data_tap 
@@ -45,21 +45,21 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  [ @task_package_path = ] *task_package_path*  
  Percorso del pacchetto per l'attività Flusso di dati. La proprietà **PackagePath** dell'attività Flusso di dati specifica il percorso. Per il percorso viene applicata la distinzione tra maiuscole e minuscole. Per individuare il percorso del pacchetto, in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] fare clic con il pulsante destro del mouse sull'attività Flusso di dati e scegliere **Proprietà**. La proprietà **PackagePath** viene visualizzata nella finestra **Proprietà**.  
   
- *task_package_path* è di tipo **nvarchar(max)**.  
+ *task_package_path* è di tipo **nvarchar(max)** .  
   
  [ @dataflow_path_id_string = ] *dataflow_path_id_string*  
  Stringa di identificazione per il percorso del flusso di dati. Un percorso connette due componenti flusso di dati. La proprietà **IdentificationString** per il percorso specifica la stringa.  
   
  Per individuare la stringa di identificazione, in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] fare clic con il pulsante destro del mouse sul percorso tra due componenti flusso dati e scegliere **Proprietà**. La proprietà **IdentificationString** viene visualizzata nella finestra **Proprietà**.  
   
- *dataflow_path_id_string* è di tipo **nvarchar(4000)**.  
+ *dataflow_path_id_string* è di tipo **nvarchar(4000)** .  
   
  [ @data_filename = ] *data_filename*  
  Nome del file in cui sono archiviati i data tap. Se l'attività Flusso di dati viene eseguita in un contenitore Ciclo Foreach o Ciclo For, i data tap per ogni iterazione del ciclo vengono archiviati in file separati. Ogni file ha un prefisso dato da un numero corrispondente a un'iterazione.  
   
  Per impostazione predefinita, il file viene archiviato nella cartella \<*unità*>:\Programmi\Microsoft SQL Server\130\DTS\DataDumps.  
   
- *data_filename* è di tipo **nvarchar(4000)**.  
+ *data_filename* è di tipo **nvarchar(4000)** .  
   
  [ @max_rows = ] *max_rows*  
  Numero di righe acquisite durante la scelta dei dati. Se questo valore non è specificato, vengono acquisite tutte le righe. *max_rows* è di tipo **int**.  

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 42d83c5adf9afa268bb7ec6e069731d6f8a05219
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716005"
 ---
 # <a name="catalogrenameenvironment-ssisdb-database"></a>catalog.rename_environment (database SSISDB)
@@ -37,13 +37,13 @@ catalog.rename_environment [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argomenti  
  [ @folder_name = ] *folder_name*  
- Nome della cartella in cui è contenuto l'ambiente. *folder_name* è di tipo **nvarchar(128)**.  
+ Nome della cartella in cui è contenuto l'ambiente. *folder_name* è di tipo **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- Nome originale dell'ambiente. *environment_name* è di tipo **nvarchar(128)**.  
+ Nome originale dell'ambiente. *environment_name* è di tipo **nvarchar(128)** .  
   
  [ @new_environment_name = ] *new_environment_name*  
- Nuovo nome dell'ambiente. *new_environment_name* è di tipo **nvarchar(128)**.  
+ Nuovo nome dell'ambiente. *new_environment_name* è di tipo **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  

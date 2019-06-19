@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a67815d20a1275d8ae77042c89f76189748d336
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65713728"
 ---
 # <a name="debugging-data-flow"></a>Debug di un flusso di dati
@@ -173,7 +173,7 @@ order by source_component_name desc
   
 4.  Fare clic con il pulsante destro del mouse sul componente di cui si desidera configurare le colonne dell'output degli errori, quindi scegliere **Visualizza editor avanzato**.  
   
-5.  Fare clic sulla scheda **Proprietà input e output**. Espandere **Output errori \<nome componente>**, quindi **Colonne di output**.  
+5.  Fare clic sulla scheda **Proprietà input e output**. Espandere **Output errori \<nome componente>** , quindi **Colonne di output**.  
   
 6.  Fare clic su una colonna e aggiornarne le proprietà.  
   

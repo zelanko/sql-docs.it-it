@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 887e43ef6bc4f3c8105cb51256f35f400368fec9
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098390"
 ---
 # <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Procedura: Aggiornare una condizione di test personalizzata di Visual Studio 2010 da una versione precedente a SQL Server Data Tools
@@ -50,7 +50,7 @@ Per aggiornare i riferimenti del progetto:
   
 8.  Scegliere **Scarica progetto** dal menu **Progetto**.  
   
-9. Fare clic con il pulsante destro del mouse sul **progetto** in **Esplora soluzioni** e scegliere **Modifica**`project_name`**.csproj**.  
+9. Fare clic con il pulsante destro del mouse sul **progetto** in **Esplora soluzioni** e scegliere **Modifica**`project_name` **.csproj**.  
   
 10. Aggiungere la seguente istruzione Import dopo l'importazione di `Microsoft.CSharp.targets`:  
   

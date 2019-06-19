@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a1a41df41528d3b9e76fd55404ae8ab544646a5d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715889"
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (database SSISDB)
@@ -66,7 +66,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  *object_type* è di tipo **smallint**.  
   
  [ @parameter_name = ] *parameter_name*  
- Nome del parametro. *parameter_name* è di tipo **nvarchar(128)**.  
+ Nome del parametro. *parameter_name* è di tipo **nvarchar(128)** .  
   
  [ @parameter_value = ] *parameter_value*  
  Valore del parametro. *parameter_value* è di tipo **sql_variant**.  

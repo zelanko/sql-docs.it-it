@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: b566905aa6814d10c1551b9d96562a28b11da944
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099654"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Procedura: Eseguire unit test di SQL Server da Team Foundation Build
@@ -115,7 +115,7 @@ Per impostazione predefinita, in Team Foundation Build viene creato un file di c
   
 3.  Fare clic con il pulsante destro del mouse sul file denominato **Copia di app.config** e scegliere Rinomina.  
   
-4.  Digitare _BuildComputer_**.sqlunitttest.config** e premere INVIO, dove *BuildComputer* è il nome del computer in cui viene eseguito l'agente di compilazione.  
+4.  Digitare _BuildComputer_ **.sqlunitttest.config** e premere INVIO, dove *BuildComputer* è il nome del computer in cui viene eseguito l'agente di compilazione.  
   
 5.  Fare doppio clic su *BuildComputer*.sqlunitttest.config.  
   
@@ -274,7 +274,7 @@ In questa procedura vengono archiviati tutti i file della soluzione. In questi f
   
 1.  In Team Explorer espandere il nodo del progetto Team, espandere il nodo Compilazioni, fare clic con il pulsante destro del mouse sulla definizione di compilazione che si desidera eseguire, quindi scegliere Accoda nuova compilazione.  
   
-    Viene visualizzata la finestra di dialogo **Accoda compilazione {**_TeamProjectName_**}** con un elenco di tutti i tipi di compilazione esistenti.  
+    Viene visualizzata la finestra di dialogo **Accoda compilazione {** _TeamProjectName_ **}** con un elenco di tutti i tipi di compilazione esistenti.  
   
 2.  Se necessario, in **Definizione di compilazione** fare clic sulla nuova definizione di compilazione.  
   
