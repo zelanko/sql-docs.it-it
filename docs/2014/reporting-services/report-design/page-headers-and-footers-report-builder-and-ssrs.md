@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b746f27653f5e8d1c24a584ac19c8fbac05a57c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105524"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Intestazioni di pagina e piè di pagina (Generatore report e SSRS)
@@ -58,8 +58,8 @@ ms.locfileid: "66105524"
 |Elementi supportati nell'espressione|Aggregazioni ReportItems|Aggregazioni Dataset (l'ambito deve essere il nome del set di dati)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
 |Caselle di testo nel corpo del report|Yes|No|  
-|&PageNumber|Yes|no|  
-|&TotalPages|Yes|no|  
+|&PageNumber|Yes|No|  
+|&TotalPages|Yes|No|  
 |Funzione di aggregazione|Sì. Ad esempio,<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|Sì. Ad esempio,<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |Raccolta Fields per gli elementi della pagina|Indirettamente. Ad esempio,<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|Sì. Ad esempio,<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
 |Immagine con associazione a dati|Indirettamente. Ad esempio, `=ReportItems!TXT_Photo.Value`|Sì. Ad esempio,<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  

@@ -26,11 +26,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ed0dd384b3ca1a90b1a40bbb23d63feabf2ae85d
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143291"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638418"
 ---
 # <a name="set-ansipadding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -65,7 +65,7 @@ SET ANSI_PADDING ON
   
 |Impostazione|char(*n*) NOT NULL o binary(*n*) NOT NULL|char(*n*) NULL o binary(*n*) NULL|varchar(*n*) o varbinary(*n*)|  
 |-------------|----------------------------------------------------|--------------------------------------------|----------------------------------------|  
-|ON|Completa il valore originale con spazi vuoti finali in colonne di tipo **char** e con zeri finali in colonne di tipo **binary** in modo da riempire l'intera lunghezza della colonna.|Segue le stesse regole di **char(**_n_**)** o **binary(**_n_**)** NOT NULL quando l'opzione SET ANSI_PADDING è impostata su ON.|Gli spazi vuoti finali nei valori di tipo carattere inseriti in colonne di tipo **varchar** non vengono eliminati. Gli zeri finali in valori binari inseriti in colonne di tipo **varbinary** non vengono eliminati. I valori non vengono riempiti con caratteri nulli per l'intera lunghezza della colonna.|  
+|ON|Completa il valore originale con spazi vuoti finali in colonne di tipo **char** e con zeri finali in colonne di tipo **binary** in modo da riempire l'intera lunghezza della colonna.|Segue le stesse regole di **char(** _n_ **)** o **binary(** _n_ **)** NOT NULL quando l'opzione SET ANSI_PADDING è impostata su ON.|Gli spazi vuoti finali nei valori di tipo carattere inseriti in colonne di tipo **varchar** non vengono eliminati. Gli zeri finali in valori binari inseriti in colonne di tipo **varbinary** non vengono eliminati. I valori non vengono riempiti con caratteri nulli per l'intera lunghezza della colonna.|  
 |OFF|Completa il valore originale con spazi vuoti finali in colonne di tipo **char** e con zeri finali in colonne di tipo **binary** in modo da riempire l'intera lunghezza della colonna.|Segue le stesse regole di **varchar** o **varbinary** quando l'opzione SET ANSI_PADDING è impostata su OFF.|Gli spazi vuoti finali in valori di tipo carattere inseriti in colonne di tipo **varchar** vengono eliminati. Gli zeri finali in valori binari inseriti in colonne di tipo **varbinary** vengono eliminati.|  
   
 > [!NOTE]  
@@ -75,7 +75,7 @@ SET ANSI_PADDING ON
   
 L'impostazione predefinita di SET ANSI_PADDING è ON. Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impostano automaticamente l'opzione ANSI_PADDING su ON al momento della connessione. Questa può essere configurata nelle origini dati ODBC, negli attributi di connessione ODBC o nelle proprietà di connessione OLE DB impostate nell'applicazione prima della connessione. L'opzione predefinita per SET ANSI_PADDING è OFF per le connessioni di applicazioni DB-Library.  
   
- L'impostazione SET ANSI_PADDING non ha effetto sui tipi di dati **nchar**, **nvarchar**, **ntext**, **text**, **image**, **varbinary(max)**, **varchar(max)** e **nvarchar(max)**. Viene sempre applicata l'opzione SET ANSI_PADDING ON. Gli spazi vuoti e gli zero finali non vengono pertanto eliminati.  
+ L'impostazione SET ANSI_PADDING non ha effetto sui tipi di dati **nchar**, **nvarchar**, **ntext**, **text**, **image**, **varbinary(max)** , **varchar(max)** e **nvarchar(max)** . Viene sempre applicata l'opzione SET ANSI_PADDING ON. Gli spazi vuoti e gli zero finali non vengono pertanto eliminati.  
   
 Quando l'opzione ANSI_DEFAULTS è impostata su ON, l'opzione ANSI_PADDING è abilitata.  
   
@@ -89,7 +89,7 @@ IF ( (16 & @@OPTIONS) = 16 ) SET @ANSI_PADDING = 'ON';
 SELECT @ANSI_PADDING AS ANSI_PADDING;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  

@@ -28,11 +28,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b01cdf350983bc24d6dda6efb8d6911027021264
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558668"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62819490"
 ---
 # <a name="set-showplantext-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  Per altre informazioni sugli operatori fisici e logici che possono essere visualizzati nell'output Showplan, vedere [Guida di riferimento a operatori Showplan logici e fisici](../../relational-databases/showplan-logical-and-physical-operators-reference.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per poter utilizzare SET SHOWPLAN_TEXT, è necessario disporre delle autorizzazioni sufficienti per eseguire le istruzioni in cui SET SHOWPLAN_TEXT viene eseguito, nonché l'autorizzazione SHOWPLAN per tutti i database contenenti oggetti di riferimento.  
   
  Per poter generare uno Showplan con le istruzioni SELECT, INSERT, UPDATE, DELETE, EXEC *stored_procedure* ed EXEC *user_defined_function*, l'utente deve avere:  

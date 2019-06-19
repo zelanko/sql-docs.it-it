@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: d41d5a0239f11882c135c27fd4af8e817e83b799
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66702769"
 ---
 # <a name="using-ado-with-scripting-languages"></a>Uso di ADO con i linguaggi di scripting
@@ -30,13 +30,13 @@ All'interno di un ambiente di scripting, ADO consente di esporre i dati tramite 
 |------------|-------------------------|  
 |Connessione di ADO|Yes|  
 |Comando ADO|No|  
-|Parametro ADO|no|  
+|Parametro ADO|No|  
 |ADO Recordset|Yes|  
 |ADO Record|Yes|  
 |Stream ADO|Yes|  
 |Errore ADO|No|  
 |Catalogo ADOX|No|  
-|ADOX CellSet|No|  
+|ADOX CellSet|no|  
 |Servizi Desktop remoto DataControl|Yes|  
 |DataSpace Servizi Desktop remoto|Yes|  
 |Data factory di servizi desktop remoto|No|  

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66077bac6ef3ce7f52b03eb5a439aa24a89449a9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65722717"
 ---
 # <a name="lesson-2-1-copy-the-lesson-1-package"></a>Lezione 2-1: Copiare il pacchetto della lezione 1
@@ -46,7 +46,7 @@ Attenersi alla procedura seguente se si sta copiando la lezione 1 completata.  P
   
 7.  Nella finestra **Proprietà** aggiornare la proprietà **Name** impostandola su **Lesson 2**.  
   
-8.  Selezionare la casella relativa alla proprietà **ID**, fare clic sulla freccia a discesa e quindi selezionare **\<Genera nuovo ID>**.  
+8.  Selezionare la casella relativa alla proprietà **ID**, fare clic sulla freccia a discesa e quindi selezionare **\<Genera nuovo ID>** .  
   
 ## <a name="use-the-sample-lesson-1-package"></a>Usare il pacchetto della lezione 1 di esempio  
   
@@ -56,7 +56,7 @@ Attenersi alla procedura seguente se si sta copiando la lezione 1 completata.  P
   
 3.  Nella finestra di dialogo **Aggiungi copia del pacchetto esistente** in **Posizione pacchetto** selezionare **File system**.  
   
-4.  Selezionare il pulsante sfoglia **(...)**, passare a **Lesson 1.dtsx** nel computer e quindi selezionare **Apri**.  
+4.  Selezionare il pulsante sfoglia **(...)** , passare a **Lesson 1.dtsx** nel computer e quindi selezionare **Apri**.  
   
 5.  Copiare e incollare il pacchetto della lezione 1, come illustrato nei passaggi 3-8 della sezione precedente.  
   

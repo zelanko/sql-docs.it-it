@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cc7ac8634ab77d7648326e5a7e2762d758fb78c9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106695"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Aggiunta di parametri di propagazione a un report (Generatore report e SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "66106695"
   
     2.  Un parametro della query per ogni parametro di propagazione. Un parametro della query limita i dati recuperati dall'origine dati specificando determinati valori da includere o escludere dalla query. In genere, i parametri della query si trovano in una clausola di restrizione nella query. In un'istruzione SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] , ad esempio, i parametri della query si trovano nella clausola WHERE. Per altre informazioni, vedere "Filtraggio delle righe usando WHERE e HAVING" nella documentazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclusa nella [documentazione online di SQL Server](https://go.microsoft.com/fwlink/?linkid=120955)  
   
-6.  Fare clic su **Esegui** (**!**). Dopo aver incluso i parametri della query e aver eseguito la query, verranno creati automaticamente i parametri del report corrispondenti ai parametri della query.  
+6.  Fare clic su **Esegui** ( **!** ). Dopo aver incluso i parametri della query e aver eseguito la query, verranno creati automaticamente i parametri del report corrispondenti ai parametri della query.  
   
     > [!NOTE]  
     >  L'ordine in cui si presentano i parametri della query quando si esegue per la prima volta una query determina anche l'ordine in cui vengono creati nel report. Per modificare l'ordine, vedere [Modificare l'ordine di un parametro del report &#40;Generatore report e SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
@@ -72,7 +72,7 @@ ms.locfileid: "66106695"
   
      Il comando SELECT DISTINCT rimuove i valori duplicati dal set di risultati in modo che sia possibile ottenere tutti i valori univoci dalla colonna specificata nella tabella indicata.  
   
-     Fare clic su **Esegui** (**!**). Nel set di risultati sono riportati i valori disponibili per il primo parametro.  
+     Fare clic su **Esegui** ( **!** ). Nel set di risultati sono riportati i valori disponibili per il primo parametro.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

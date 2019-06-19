@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 94faa6587f69f5944f29f6ec17f3899a6632b49a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109555"
 ---
 # <a name="data-alert-designer"></a>Finestra di progettazione Avviso dati
@@ -164,7 +164,7 @@ ms.locfileid: "66109555"
 ### <a name="email-settings"></a>Impostazioni posta elettronica  
  L'opzione **Destinatario/i** consente di specificare gli indirizzi di posta elettronica dei destinatari dei messaggi di avviso dati. Separare più indirizzi di posta elettronica tramite punti e virgola, analogamente a quanto avviene nei messaggi di posta elettronica di Microsoft Office Outlook. È anche possibile specificare come destinatari gruppi di distribuzione, in modo da poter gestire l'elenco destinatari in modo più semplice ed efficace. Se in SharePoint è possibile determinare l'indirizzo di posta elettronica personale quando si crea una definizione di avviso, tale indirizzo viene aggiunto automaticamente all'elenco di destinatari; in caso contrario, è necessario aggiungerlo in modo esplicito come destinatario.  
   
- L'oggetto predefinito del messaggio di posta elettronica è **Avviso dati per \<nome avviso>**. È possibile modificare l'oggetto in base alle proprie esigenze.  
+ L'oggetto predefinito del messaggio di posta elettronica è **Avviso dati per \<nome avviso>** . È possibile modificare l'oggetto in base alle proprie esigenze.  
   
  È anche possibile fornire una descrizione da includere nel messaggio di avviso dati nell'opzione **Descrizione** . L'inserimento di una descrizione, in particolare se vi sono avvisi dati simili, è utile per distinguere rapidamente i messaggi di avviso dati e per comprenderli. Oltre al messaggio di avviso inviato quando i dati del report soddisfano le regole specificate, viene inviato un messaggio di avviso a tutti i destinatari quando si verifica un errore. Per altre informazioni, vedere [Data Alert Messages](../../2014/reporting-services/data-alert-messages.md).  
   

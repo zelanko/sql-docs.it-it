@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: e8d038947ac511d9b271fc5b4e07ffabcc47cc96
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66795069"
 ---
 # <a name="witness-server-instance-configure-database-mirroring-security-wizard"></a>Istanza server di controllo del mirroring (Configurazione guidata sicurezza mirroring del database)

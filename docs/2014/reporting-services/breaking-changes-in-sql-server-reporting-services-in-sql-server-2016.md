@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0d86c9bb07a52aba0cd93b006fc33edf4d1aa885
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109924"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>Modifiche di rilievo di SQL Server Reporting Services in SQL Server 2014
@@ -38,7 +38,7 @@ ms.locfileid: "66109924"
 ##  <a name="bkmk_rc0"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Modifiche di rilievo di Reporting Services  
   
 ### <a name="sharepoint-mode-server-references-require-the-sharepoint-site"></a>Per i riferimenti server della modalità SharePoint è richiesto il sito di SharePoint  
- Non è possibile accedere o fare riferimento direttamente al server di report usando direttamente il nome virtuale nel percorso URL. Ad esempio:   
+ Non è possibile accedere o fare riferimento direttamente al server di report usando direttamente il nome virtuale nel percorso URL. Ad esempio:  
   
  `http://<Server name>/ReportServer`  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66109924"
  `http://<Server Name>/sites/videos/_vti_bin/ReportServer`  
   
 ### <a name="changes-to-sharepoint-mode-command-line-installation"></a>Modifiche all'installazione dalla riga di comando della modalità SharePoint  
- L'impostazione di input **/RSINSTALLMODE** viene usata solo con installazioni in modalità nativa e non per quelle in modalità SharePoint. Ad esempio, quanto segue non è supportato [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]: **/RSINSTALLMODE = "DefaultSharePointMode"**. Al posto dell'impostazione di input, usare **/RSSHPINSTALLMODE = "DefaultSharePointMode"**.  
+ L'impostazione di input **/RSINSTALLMODE** viene usata solo con installazioni in modalità nativa e non per quelle in modalità SharePoint. Ad esempio, quanto segue non è supportato [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]: **/RSINSTALLMODE = "DefaultSharePointMode"** . Al posto dell'impostazione di input, usare **/RSSHPINSTALLMODE = "DefaultSharePointMode"** .  
   
  L'istruzione seguente è riportato un esempio di un set di comandi e parametri di installazione completa: **setup /ACTION = install /FEATURES = SQL, RS /InstanceName = InstanceName=denali_inst1... /RSSHPINSTALLMODE = "DefaultSharePointMode"**  
   

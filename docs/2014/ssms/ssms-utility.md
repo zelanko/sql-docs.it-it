@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: edb7ea682ebef5d99cee7a248681be80fc433312
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126996"
 ---
 # <a name="ssms-utility"></a>Utilità Ssms
@@ -51,28 +51,28 @@ ms.locfileid: "63126996"
  *solutionfile*  
  Specifica una soluzione da aprire. Il parametro deve includere il percorso completo del file di soluzione.  
   
- [**-S** _nomeserver_]  
+ [ **-S** _nomeserver_]  
  Nome server  
   
- [**-d** _databasename_]  
+ [ **-d** _databasename_]  
  Nome database  
   
- [**-U** _username_]  
+ [ **-U** _username_]  
  Nome utente utilizzato per la connessione tramite l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- [**-P** _password_]  
+ [ **-P** _password_]  
  Password utilizzata per la connessione tramite l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- [**-E**]  
+ [ **-E**]  
  Stabilisce la connessione utilizzando l'autenticazione di Windows  
   
- [**-nosplash**]  
+ [ **-nosplash**]  
  Se si specifica questa opzione, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] non viene visualizzata la grafica della schermata iniziale all'apertura. Utilizzare questa opzione in caso di connessione al computer che esegue [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per mezzo di Servizi terminal tramite una connessione a larghezza di banda limitata. Questo argomento non supporta la distinzione tra maiuscole e minuscole e può trovarsi prima o dopo altri argomenti.  
   
- [**-log**_[filename]?_]  
+ [ **-log** _[filename]?_ ]  
  L'attività [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] viene registrata nel file specificato per la risoluzione dei problemi  
   
- [**-?**]  
+ [ **-?** ]  
  Visualizza informazioni della Guida relative alla riga di comando.  
   
 ## <a name="remarks"></a>Note  

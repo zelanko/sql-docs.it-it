@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 2692fc27400a5da76e05ce3931502b8b492eca8c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66799454"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>Configurare l'opzione di configurazione del server index create memory
@@ -59,7 +59,7 @@ ms.locfileid: "66799454"
   
 -   **Index Create Memory** è un'opzione a configurazione automatica e solitamente non richiede alcuna modifica. Se tuttavia si riscontrano difficoltà nella creazione di indici, valutare l'opportunità di aumentare il valore dell'opzione.  
 
--   In un sistema di produzione la creazione di indici è un'attività eseguita raramente e spesso viene pianificata per l'esecuzione come processo in periodi di attività ridotta. Se gli indici vengono creati raramente e durante i periodi di attività ridotta, l'aumento di **index create memory** può pertanto migliorare le prestazioni di creazione degli indici. Nel contempo è opportuno ridurre il valore dell'opzione di configurazione **[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)**, in modo che la creazione dell'indice venga avviata anche se non è disponibile tutta la memoria necessaria.
+-   In un sistema di produzione la creazione di indici è un'attività eseguita raramente e spesso viene pianificata per l'esecuzione come processo in periodi di attività ridotta. Se gli indici vengono creati raramente e durante i periodi di attività ridotta, l'aumento di **index create memory** può pertanto migliorare le prestazioni di creazione degli indici. Nel contempo è opportuno ridurre il valore dell'opzione di configurazione **[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** , in modo che la creazione dell'indice venga avviata anche se non è disponibile tutta la memoria necessaria.
   
 ###  <a name="Security"></a> Sicurezza  
   

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e6ae0fc2e0f9949bfac6b4043c581dd0921efb
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716952"
 ---
 # <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable (database SSISDB)
@@ -41,16 +41,16 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 ## <a name="arguments"></a>Argomenti  
  [@folder_name =] *folder_name*  
- Nome della cartella in cui è contenuto l'ambiente. *folder_name* è di tipo **nvarchar(128)**.  
+ Nome della cartella in cui è contenuto l'ambiente. *folder_name* è di tipo **nvarchar(128)** .  
   
  [@environment_name =] *environment_name*  
- Nome dell'ambiente. *environment_name* è di tipo **nvarchar(128)**.  
+ Nome dell'ambiente. *environment_name* è di tipo **nvarchar(128)** .  
   
  [@variable_name =] *variable_name*  
- Nome della variabile di ambiente. *variable_name* è di tipo **nvarchar(128)**.  
+ Nome della variabile di ambiente. *variable_name* è di tipo **nvarchar(128)** .  
   
  [@data_type =] *data_type*  
- Tipo di dati della variabile. I tipi di dati di variabile di ambiente supportati includono **Boolean**, **Byte**, **DateTime**, **Double**, **Int16**, **Int32**, **Int64**, **Single**, **String**, **UInt32** e **UInt64**. Tra i tipi di dati di variabile di ambiente non supportati sono inclusi **Char**, **DBNull**, **Object** e **Sbyte**. Il tipo di dati del parametro *data_type* è **nvarchar(128)**.  
+ Tipo di dati della variabile. I tipi di dati di variabile di ambiente supportati includono **Boolean**, **Byte**, **DateTime**, **Double**, **Int16**, **Int32**, **Int64**, **Single**, **String**, **UInt32** e **UInt64**. Tra i tipi di dati di variabile di ambiente non supportati sono inclusi **Char**, **DBNull**, **Object** e **Sbyte**. Il tipo di dati del parametro *data_type* è **nvarchar(128)** .  
   
  [@sensitive =] *sensitive*  
  Viene indicato se nella variabile è contenuto o meno un valore importante. Utilizzare un valore pari a `1`, per indicare che il valore della variabile di ambiente è importante o, in caso contrario, un valore pari a `0`. Un valore, se importante, viene crittografato quando viene archiviato; altrimenti, viene archiviato non crittografato. *Sensitive* è di tipo **bit**.  
@@ -59,7 +59,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
  Valore della variabile di ambiente. *value* è di tipo **sql_variant**.  
   
  [@description =] *description*  
- Descrizione della variabile di ambiente. *value* è di tipo **nvarchar(1024)**.  
+ Descrizione della variabile di ambiente. *value* è di tipo **nvarchar(1024)** .  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  

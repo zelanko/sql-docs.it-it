@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bfe74821b37a5e658ffc9abe3ff9710d8e53f592
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087770"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047805"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Stimare i requisiti di memoria delle tabelle con ottimizzazione per la memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -140,7 +140,7 @@ Le dimensioni della matrice di hash vengono impostate tramite `(bucket_count= va
   
 Pertanto, nell'esempio, la memoria necessaria per ogni matrice di hash è:  
   
-8.388.608 * 8 = 2^23 \* 8 = 2^23 \* 2^3 = 2^26 = 67.108.864 o circa 64 MB.  
+8\.388.608 * 8 = 2^23 \* 8 = 2^23 \* 2^3 = 2^26 = 67.108.864 o circa 64 MB.  
   
 Poiché vi sono tre indici hash, la memoria necessaria per gli indici hash è 3 * 64 MB = 192 MB.  
   

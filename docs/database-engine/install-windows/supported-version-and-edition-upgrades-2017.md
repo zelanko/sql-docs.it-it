@@ -17,10 +17,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: jroth
 ms.openlocfilehash: 879d98b00c4728d9a93ea34e08e2fd98964f4e13
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794801"
 ---
 # <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>Aggiornamenti di versione ed edizione supportati per SQL Server 2017

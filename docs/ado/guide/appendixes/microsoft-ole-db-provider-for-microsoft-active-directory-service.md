@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: acd7c73926e996100511569df3a5693068894b10
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66702728"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Provider Microsoft OLE DB per il servizio Microsoft Active Directory
@@ -117,8 +117,8 @@ objectClass='user' AND objectCategory='Person'"
   
 |Metodo|Disponibile?|  
 |------------|----------------|  
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|no|  
-|[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|No|  
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|No|  
+|[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|no|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|No|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|No|  
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Yes|  
@@ -135,8 +135,8 @@ objectClass='user' AND objectCategory='Person'"
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Yes|  
 |[Resync](../../../ado/reference/ado-api/resync-method.md)|Yes|  
 |[Supporti](../../../ado/reference/ado-api/supports-method.md)|Yes|  
-|[Update](../../../ado/reference/ado-api/update-method.md)|No|  
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|No|  
+|[Update](../../../ado/reference/ado-api/update-method.md)|no|  
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|no|  
   
  Per altre informazioni su ADSI e le specifiche del provider, consultare la documentazione di Active Directory Service Interfaces o visitare la pagina Web ADSI.  
   

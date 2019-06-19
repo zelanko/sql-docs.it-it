@@ -16,12 +16,12 @@ author: s-r-k
 ms.author: karam
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 0c2ed03ea43643aa8aaecd3e1600ee3e258929ed
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: dd767690533365dc51f1ef3e1fb27bcf3659eeb4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017927"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64775139"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining di funzioni definite dall'utente scalari
 
@@ -54,8 +54,9 @@ Si consideri la query seguente
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (L_EXTENDEDPRICE *(1 - L_DISCOUNT)) 
-FROM LINEITEM, ORDERS
-WHERE O_ORDERKEY = L_ORDERKEY 
+FROM LINEITEM
+INNER JOIN ORDERS
+  ON O_ORDERKEY = L_ORDERKEY 
 GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE;
 ```
 
@@ -74,8 +75,9 @@ END
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (dbo.discount_price(L_EXTENDEDPRICE, L_DISCOUNT)) 
-FROM LINEITEM, ORDERS
-WHERE O_ORDERKEY = L_ORDERKEY 
+FROM LINEITEM
+INNER JOIN ORDERS
+  ON O_ORDERKEY = L_ORDERKEY 
 GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE
 ```
 
@@ -180,7 +182,7 @@ Se vengono soddisfatte tutte le condizioni preliminari e SQL Server decide di es
 
 ## <a name="enabling-scalar-udf-inlining"></a>Abilitazione dell'inlining di funzioni definite dall'utente scalari
 
-È possibile impostare automaticamente i carichi di lavoro come idonei all'inlining di funzioni definite dall'utente scalari abilitando il livello di compatibilità 150 per il database.  Questa opzione è impostabile con Transact-SQL. Ad esempio  
+È possibile impostare automaticamente i carichi di lavoro come idonei all'inlining di funzioni definite dall'utente scalari abilitando il livello di compatibilità 150 per il database.  Questa opzione è impostabile con Transact-SQL. Esempio:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -202,12 +204,13 @@ Per riabilitare l'inlining di funzioni definite dall'utente scalari per il datab
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = ON;
 ```
 
-Se attiva, questa impostazione viene visualizzata come abilitata in [`sys.database_scoped_configurations` ](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md). È anche possibile disabilitare l'inlining di funzioni definite dall'utente scalari per una query specifica designando `DISABLE_TSQL_SCALAR_UDF_INLINING` come hint per la query `USE HINT`. Ad esempio
+Se attiva, questa impostazione viene visualizzata come abilitata in [`sys.database_scoped_configurations` ](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md). È anche possibile disabilitare l'inlining di funzioni definite dall'utente scalari per una query specifica designando `DISABLE_TSQL_SCALAR_UDF_INLINING` come hint per la query `USE HINT`. Esempio:
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (dbo.discount_price(L_EXTENDEDPRICE, L_DISCOUNT)) 
-FROM LINEITEM, ORDERS
-WHERE O_ORDERKEY = L_ORDERKEY 
+FROM LINEITEM
+INNER JOIN ORDERS
+  ON O_ORDERKEY = L_ORDERKEY 
 GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE
 OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 ```
@@ -215,7 +218,7 @@ OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 Un hint per la query `USE HINT` ha la precedenza sulla configurazione con ambito database o sull'impostazione del livello di compatibilità.
 
 È anche possibile disabilitare l'inlining di funzioni definite dall'utente scalari per una funzione definita dall'utente specifica tramite la clausola INLINE nell'istruzione `CREATE FUNCTION` o `ALTER FUNCTION`.
-Ad esempio
+Esempio:
 
 ```sql
 CREATE OR ALTER FUNCTION dbo.discount_price(@price DECIMAL(12,2), @discount DECIMAL(12,2))

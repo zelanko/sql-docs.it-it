@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: a1c1d288b79d9058a9aff7609290d2381c715575
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090187"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>Procedura: Configurare l'esecuzione di unit test di SQL Server
@@ -38,7 +38,7 @@ Tramite queste impostazioni vengono controllate la modalità di connessione del 
   
 1.  Fare clic con il pulsante destro del mouse sul progetto di unit test in **Esplora soluzioni** e scegliere **Configurazione test di SQL Server**.  
   
-    Verrà visualizzata la finestra di dialogo **Configurazione test di SQL Server -'<projectname>'**.  
+    Verrà visualizzata la finestra di dialogo **Configurazione test di SQL Server -'<projectname>'** .  
   
 2.  In **Connessioni database** è possibile effettuare le operazioni seguenti:  
   
@@ -50,7 +50,7 @@ Tramite queste impostazioni vengono controllate la modalità di connessione del 
   
     Con questo passaggio viene creata la stringa di connessione `ExecutionContext`, utilizzata per eseguire lo script di test nello unit test. Se si specifica anche una connessione secondaria, viene creata anche la stringa di connessione `PrivilegedContext`. Questa connessione viene utilizzata per testare le interazioni con il database all'esterno dello script di test nello unit test. Per altre informazioni, vedere [Panoramica delle stringhe di connessione e delle autorizzazioni](../ssdt/overview-of-connection-strings-and-permissions.md).  
   
-3.  Fare clic su **OK** per chiudere la finestra di dialogo **Configurazione test di SQL Server -'<projectname>'**.  
+3.  Fare clic su **OK** per chiudere la finestra di dialogo **Configurazione test di SQL Server -'<projectname>'** .  
   
 4.  Ricompilare il progetto di test per applicare le modifiche alla configurazione.  
   
@@ -66,7 +66,7 @@ Tramite queste impostazioni vengono controllate la modalità di connessione del 
   
 3.  Fare clic con il pulsante destro del mouse sul progetto di unit test in **Esplora soluzioni** e scegliere **Configurazione test di SQL Server**.  
   
-    Verrà visualizzata la finestra di dialogo **Configurazione test di SQL Server -'<projectname>'**.  
+    Verrà visualizzata la finestra di dialogo **Configurazione test di SQL Server -'<projectname>'** .  
   
 4.  In **Distribuzione** è possibile effettuare le operazioni seguenti:  
   
@@ -76,7 +76,7 @@ Tramite queste impostazioni vengono controllate la modalità di connessione del 
   
     -   In **Configurazione distribuzione** fare clic sulla configurazione del progetto da usare per la distribuzione. Le scelte disponibili sono **Debug**, **Predefinito** o **Release**. Se tuttavia si crea una configurazione per eseguire gli unit di test, la configurazione viene visualizzata anche come opzione.  
   
-5.  Fare clic su **OK** per chiudere la finestra di dialogo **Configurazione test di SQL Server -'<projectname>'**.  
+5.  Fare clic su **OK** per chiudere la finestra di dialogo **Configurazione test di SQL Server -'<projectname>'** .  
   
     All'inizio dell'esecuzione del test, viene eseguito lo script Transact\-SQL generato nel passaggio 1. Tramite questa operazione viene distribuito lo schema nel database di destinazione.  
   

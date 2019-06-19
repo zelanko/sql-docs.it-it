@@ -1,26 +1,23 @@
 ---
 title: Proprietà - SQL Server (scheda Avanzate) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 author: stevestein
 ms.author: sstein
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: 1bab4c78cdb4aee364cc8f41aff70578b8a6df0b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63028824"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>Proprietà - SQL Server (scheda Avanzate)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   Le proprietà descritte di seguito sono presenti nella scheda **Avanzate** per impostazione predefinita. Se sono state definite proprietà personalizzate, verranno visualizzate anche in questa scheda con i rispettivi valori.  
   
 ## <a name="options"></a>Opzioni  

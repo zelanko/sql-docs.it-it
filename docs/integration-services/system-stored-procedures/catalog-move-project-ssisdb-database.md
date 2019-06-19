@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c79df90c6093ed93668e504e574c712a2ba2146a
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716019"
 ---
 # <a name="catalogmoveproject---ssisdb-database"></a>catalog.move_project (database SSISDB)
@@ -37,13 +37,13 @@ catalog.move_project [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>Argomenti  
  [ @source_folder = ] *source_folder*  
- Nome della cartella di origine, in cui si trova il progetto prima dello spostamento. *source_folder* è di tipo **nvarchar(128)**.  
+ Nome della cartella di origine, in cui si trova il progetto prima dello spostamento. *source_folder* è di tipo **nvarchar(128)** .  
   
  [ @project_name = ] *project_name*  
- Nome del progetto che deve essere spostato. *project_name* è di tipo **nvarchar(128)**.  
+ Nome del progetto che deve essere spostato. *project_name* è di tipo **nvarchar(128)** .  
   
  [ @destination_folder = ] *destination_folder*  
- Nome della cartella di destinazione, in cui si trova il progetto dopo lo spostamento. *destination_folder* è di tipo **nvarchar(128)**.  
+ Nome della cartella di destinazione, in cui si trova il progetto dopo lo spostamento. *destination_folder* è di tipo **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  
