@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6aab8fc0c8e083181779c13654b0d7d42531e50
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108173"
 ---
 # <a name="new-linked-report-page-report-manager"></a>Pagina Nuovo report collegato (Gestione report)
@@ -50,7 +50,7 @@ ms.locfileid: "66108173"
  **Descrizione**  
  Consente di digitare una descrizione del contenuto del report. Questa descrizione viene visualizzata nella pagina Contenuto per gli utenti autorizzati ad accedere al report.  
   
- **Percorso**  
+ **Location**  
  Specificare il percorso della cartella in cui è disponibile il report. Per impostazione predefinita, i report collegati vengono creati nella stessa cartella del report di base. Fare clic su **Cambia percorso** per inserire il report collegato in una cartella diversa.  
   
  **OK**  

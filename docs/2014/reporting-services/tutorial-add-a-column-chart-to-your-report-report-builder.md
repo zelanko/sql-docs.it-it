@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 723e8fe5f657d3b9eda2d6ab73966830a13a3aac
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099130"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Esercitazione: Aggiungere un istogramma al report (Generatore report)
@@ -108,7 +108,7 @@ ms.locfileid: "66099130"
     UNION SELECT CAST('2009-12-31' AS date) AS SalesDate, CAST(81946. AS money) AS Sales  
     ```  
   
-8.  (Facoltativo) Fare clic sul pulsante Esegui (**!**) per visualizzare i dati sui quali verrà basato il grafico.  
+8.  (Facoltativo) Fare clic sul pulsante Esegui ( **!** ) per visualizzare i dati sui quali verrà basato il grafico.  
   
 9. Scegliere **Avanti**.  
   
@@ -236,7 +236,7 @@ ms.locfileid: "66099130"
   
 9. Fare doppio clic sul titolo dell'asse verticale lateralmente al grafico e fare clic su **proprietà titolo asse**.  
   
-10. Sostituire il testo di **testo titolo** campo con il testo seguente: **Totale vendite (in migliaia)**. È anche possibile specificare diverse opzioni relative alla formattazione del titolo.  
+10. Sostituire il testo di **testo titolo** campo con il testo seguente: **Totale vendite (in migliaia)** . È anche possibile specificare diverse opzioni relative alla formattazione del titolo.  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
