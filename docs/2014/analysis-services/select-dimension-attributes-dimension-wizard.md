@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84f8612b4d420eed11308472c9c8fabfc56e23c0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069532"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>Selezione attributi dimensione (Creazione guidata dimensione)
@@ -54,7 +54,7 @@ ms.locfileid: "66069532"
 |----------|--------------|  
 |Una dimensione contiene una gerarchia padre-figlio e **Consenti esplorazione** non è selezionato.|La procedura guidata lascia la proprietà `AttributeHierarchyEnabled` impostata su `True` e imposta l'attributo `AttributeHierarchyVisible` su `False` per l'attributo chiave.|  
 |Una tabella in una dimensione contiene una chiave esterna a una tabella che non è nella dimensione|La procedura guidata seleziona la chiave esterna come un attributo da includere, ma non selezionerà **Consenti esplorazione**. Se si mantengono queste impostazioni, la proprietà `AttributeHiearchyEnabled` dell’attributo sarà impostata su `True` e la proprietà `AttributeHieararchyVisible` sarà impostata su `False`.|  
-|Una dimensione contiene tabelle con schema snowflake raggiungibili tramite colonne chiavi esterne che ammettono valori Null.<br /><br /> - e -<br /><br /> Consenti esplorazione per l'attributo basato sulla chiave della tabella con schema snowflake non è selezionato|La procedura guidata creerà il nuovo attributo con la proprietà `AttributeHiearchyEnabled` impostata su `True` e la proprietà `AttributeHieararchyVisible` impostata su `False`.|  
+|Una dimensione contiene tabelle con schema snowflake raggiungibili tramite colonne chiavi esterne che ammettono valori Null.<br /><br /> \- e -<br /><br /> Consenti esplorazione per l'attributo basato sulla chiave della tabella con schema snowflake non è selezionato|La procedura guidata creerà il nuovo attributo con la proprietà `AttributeHiearchyEnabled` impostata su `True` e la proprietà `AttributeHieararchyVisible` impostata su `False`.|  
   
  **Tipo di attributo**  
  (Facoltativo) Impostare il tipo per l'attributo. Il valore predefinito è **Regolare**. Il tipo di attributo fornisce l’istruzione alle applicazioni client riguardo le informazioni che l'attributo potrebbe contenere.  

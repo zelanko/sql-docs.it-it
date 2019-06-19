@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eed92adad122587a031a3126322e4156a05bde58
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65722551"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>Lezione 2-3: Modificare la gestione connessione file flat
@@ -34,7 +34,7 @@ Modificando la gestione connessione in modo che usi il valore della variabile de
 
 2.  Nella finestra **Proprietà** assicurarsi che **PackagePath** inizi con **\Package.Connections**. In caso contrario, nel riquadro **Gestioni connessioni** fare clic con il pulsante destro del mouse su **Sample Flat File Source Data** e scegliere **Converti in connessione pacchetto**
   
-3.  Nella finestra **Proprietà** fare clic sulla cella vuota relativa a **Espressioni** e fare clic sul pulsante con i puntini di sospensione **(...)**.  
+3.  Nella finestra **Proprietà** fare clic sulla cella vuota relativa a **Espressioni** e fare clic sul pulsante con i puntini di sospensione **(...)** .  
   
 4.  Nella colonna **Proprietà** della finestra di dialogo **Editor espressioni di proprietà** selezionare **ConnectionString**.  
   

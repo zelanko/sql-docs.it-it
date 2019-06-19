@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 544fc09037c0670c7ba44adf7b270e46899621a8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086935"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Creare finestre di dialogo Relazione tra attributi e Modifica relazione tra attributi (scheda Relazione tra attributi, Progettazione dimensioni) (Analysis Services - Dati multidimensionali)
@@ -51,7 +51,7 @@ ms.locfileid: "66086935"
  Specifica le colonne chiave definite per l'attributo.  
   
  **Tipo di relazione**  
- Specifica il tipo di relazione da creare, **Flessibile (può cambiare nel tempo)** o **Rigida (non cambia nel tempo)**.  
+ Specifica il tipo di relazione da creare, **Flessibile (può cambiare nel tempo)** o **Rigida (non cambia nel tempo)** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Relazioni tra attributi &#40;progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  

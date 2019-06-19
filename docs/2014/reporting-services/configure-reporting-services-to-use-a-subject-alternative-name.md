@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39cb8593351e97c47fff38ae2d1b6f2b326f49b4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109736"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configurare Reporting Services per usare un nome alternativo del soggetto
@@ -22,7 +22,7 @@ ms.locfileid: "66109736"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] |  
+|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
   
  Le istruzioni si applicano all'URL Reporting Service nonché all'URL servizio Web.  
   

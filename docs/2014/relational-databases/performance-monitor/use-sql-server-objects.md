@@ -31,16 +31,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 67edebf9b4adcf40c12190446997dbd7c4b6e57b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63151182"
 ---
 # <a name="use-sql-server-objects"></a>Utilizzare oggetti di SQL Server
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rende disponibili oggetti e contatori utilizzabili in Monitoraggio di sistema per il monitoraggio dell'attività nei computer che eseguono un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per oggetto si intende qualsiasi risorsa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio un blocco di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un processo di Windows. Ogni oggetto contiene uno o più contatori che determinano diversi aspetti degli oggetti da monitorare. Ad esempio, l'oggetto **SQL Server Locks** contiene i contatori **Numero di blocchi critici deadlock/sec** e **Timeout blocchi/sec**.  
   
- Se un computer include più risorse dello stesso tipo, saranno presenti più istanze dello stesso tipo di oggetto. Ad esempio, nei sistemi con più processori saranno presenti più istanze dell'oggetto di tipo **Processor** . Per ogni database di **sarà presente un'istanza dell'oggetto di tipo** Databases [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per alcuni tipi di oggetti, ad esempio **Memory Manager** , è prevista una sola istanza. Se sono presenti più istanze di un tipo di oggetto, è possibile aggiungere i contatori per tenere traccia delle statistiche di ogni singola istanza o in molti casi di tutte le istanze contemporaneamente. I contatori per l'istanza predefinita sono visualizzati nel formato **SQLServer:**_\<nome oggetto>_. I contatori per le istanze denominate sono visualizzati nel formato **MSSQL$**_\<nome istanza>_**:**_\<nome contatore>_ o **SQLAgent$**_\<nome istanza>_**:**_\<nome contatore>_.  
+ Se un computer include più risorse dello stesso tipo, saranno presenti più istanze dello stesso tipo di oggetto. Ad esempio, nei sistemi con più processori saranno presenti più istanze dell'oggetto di tipo **Processor** . Per ogni database di **sarà presente un'istanza dell'oggetto di tipo** Databases [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per alcuni tipi di oggetti, ad esempio **Memory Manager** , è prevista una sola istanza. Se sono presenti più istanze di un tipo di oggetto, è possibile aggiungere i contatori per tenere traccia delle statistiche di ogni singola istanza o in molti casi di tutte le istanze contemporaneamente. I contatori per l'istanza predefinita sono visualizzati nel formato **SQLServer:** _\<nome oggetto>_ . I contatori per le istanze denominate sono visualizzati nel formato **MSSQL$** _\<nome istanza>_ **:** _\<nome contatore>_ o **SQLAgent$** _\<nome istanza>_ **:** _\<nome contatore>_ .  
   
  Per specificare gli oggetti e i contatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da monitorare all'avvio di Monitoraggio di sistema, aggiungere o rimuovere i contatori nel grafico e salvare le impostazioni.  
   

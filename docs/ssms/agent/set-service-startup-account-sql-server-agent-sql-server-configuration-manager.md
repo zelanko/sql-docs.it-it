@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 334153d45cbc2f4998fdef5902a3084f5912ad95
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090082"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
@@ -72,15 +72,15 @@ Per altre informazioni sulle autorizzazioni di Windows necessarie per l'account 
   
 2.  Fare clic sul segno più per espandere la cartella **Gruppi di server locali** .  
   
-3.  Fare clic con il pulsante destro del mouse sull'istanza del server dove si intende impostare l'account di avvio del servizio e selezionare **Gestione configurazione SQL Server...**.  
+3.  Fare clic con il pulsante destro del mouse sull'istanza del server dove si intende impostare l'account di avvio del servizio e selezionare **Gestione configurazione SQL Server...** .  
   
 4.  Nella finestra di dialogo **Controllo account utente** fare clic su **Sì**.  
   
 5.  Nel riquadro della console di Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , selezionare **Servizi di SQL Server**.  
   
-6.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server Agent**_(nome\_server)_, dove *nome_server* è il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per cui si vuole modificare l'account di avvio del servizio e selezionare **Proprietà**.  
+6.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server Agent** _(nome\_server)_ , dove *nome_server* è il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent per cui si vuole modificare l'account di avvio del servizio e selezionare **Proprietà**.  
   
-7.  Nella finestra di dialogo **Proprietà** **SQL Server Agent**_(nome\_server)_ nella scheda **Accesso** selezionare una delle seguenti opzioni in **Accedi come**:  
+7.  Nella finestra di dialogo **Proprietà** **SQL Server Agent** _(nome\_server)_ nella scheda **Accesso** selezionare una delle seguenti opzioni in **Accedi come**:  
   
     -   **Account predefinito**: selezionare questa opzione se i processi usano solo risorse del server locale. Per informazioni sulla selezione di un account predefinito di Windows, vedere [Selezionare un account per il servizio SQL Server Agent](https://msdn.microsoft.com/library/ms191543.aspx).  
   

@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3c5ad31437cf2639d6b8478d173c7522fa3e9fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63272932"
 ---
 # <a name="translator-specification-subkeys"></a>Sottochiavi di specifica dei convertitori
 Ogni funzione di conversione elencate nella sottochiave ODBC Translators ha una sottochiave propri. Questa sottochiave ha lo stesso nome come valore della sottochiave ODBC Translators corrispondente. I valori sotto questa sottochiave elencare i percorsi completi della funzione di conversione e file DLL di installazione di Microsoft translator e il conteggio di utilizzo. I formati dei valori vengono visualizzati nella tabella seguente.  
   
-|nome|Tipo di dati|Dati|  
+|Nome|Tipo di dati|Dati|  
 |----------|---------------|----------|  
 |Funzione di conversione|REG_SZ|*translator-DLL-path*|  
 |Configurazione|REG_SZ|*setup-DLL-path*|  

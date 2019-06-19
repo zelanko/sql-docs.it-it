@@ -14,11 +14,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: cca73d0d0ad9574f592f529a26518c18a6332c77
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512486"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63006158"
 ---
 # <a name="import-policies-dialog-box"></a>Finestra di dialogo Importa criteri
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "51512486"
   
 ## <a name="options"></a>Opzioni  
  **File da importare**  
- Per importare i criteri da un file XML, digitare il percorso e il nome del file oppure usare il pulsante Sfoglia (**...**).  
+ Per importare i criteri da un file XML, digitare il percorso e il nome del file oppure usare il pulsante Sfoglia ( **...** ).  
   
  **Sostituisci duplicati con gli elementi importati**  
  Selezionare questa opzione per sovrascrivere eventuali criteri o condizioni con lo stesso nome che esistono già nell'istanza corrente del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Non è possibile sovrascrivere una condizione con criteri dipendenti, a meno che non vengano sovrascritti anche questi ultimi. Se questa opzione non viene selezionata, una condizione esistente che utilizza la stessa espressione di condizione non genererà un errore.  

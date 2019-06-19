@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 91dbc92eca754b99a154b062c4f40e5663a4cd9a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078396"
 ---
 # <a name="defining-calculated-members"></a>Definizione dei membri calcolati
@@ -57,7 +57,7 @@ ms.locfileid: "66078396"
   
 5.  Trascinare **Internet Sales-Sales Amount** dalla scheda **Metadati** nel riquadro **Strumenti di calcolo** alla casella **Espressione** nel riquadro **Calculation Expressions** (Espressioni di calcolo).  
   
-6.  Nel **espressione** , digitare un segno più (`+`) dopo **[Measures]. [ Internet Sales-Sales Amount]**.  
+6.  Nel **espressione** , digitare un segno più (`+`) dopo **[Measures]. [ Internet Sales-Sales Amount]** .  
   
 7.  Nella scheda **Metadati** del riquadro **Strumenti di calcolo** , espandere **Vendite rivenditore**e trascinare **Reseller Sales-Sales Amount** nella casella **Espressione** del riquadro **Calculation Expressions** (Espressioni di calcolo) dopo il segno più (+).  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66078396"
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
     ```  
   
-14. Nell'elenco **Stringa formato** selezionare **"Currency"**.  
+14. Nell'elenco **Stringa formato** selezionare **"Currency"** .  
   
 15. Nell'elenco **Gestione NON EMPTY** selezionare le caselle di controllo corrispondenti a **Internet Sales-Total Product Cost** e **Reseller Sales-Total Product Cost**e fare clic su **OK**.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "66078396"
     [Measures].[Internet Sales-Sales Amount]  
     ```  
   
-4.  Nell'elenco **Stringa formato** selezionare **"Percent"**.  
+4.  Nell'elenco **Stringa formato** selezionare **"Percent"** .  
   
 5.  Nell'elenco **Gestione NON EMPTY** selezionare la casella di controllo corrispondente a **Internet Sales-Sales Amount**e fare clic su **OK**.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "66078396"
     [Measures].[Reseller Sales-Sales Amount]  
     ```  
   
-9. Nell'elenco **Stringa formato** selezionare **"Percent"**.  
+9. Nell'elenco **Stringa formato** selezionare **"Percent"** .  
   
 10. Nell'elenco **Gestione NON EMPTY** selezionare la casella di controllo corrispondente a **Reseller Sales-Sales Amount**e fare clic su **OK**.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "66078396"
   
      Si noti che il membro calcolato fa riferimento ad altri membri calcolati. Poiché tale membro verrà calcolato dopo i membri calcolati a cui fa riferimento, si tratta di un membro calcolato valido.  
   
-14. Nell'elenco **Stringa formato** selezionare **"Percent"**.  
+14. Nell'elenco **Stringa formato** selezionare **"Percent"** .  
   
 15. Nell'elenco **Gestione NON EMPTY** selezionare le caselle di controllo corrispondenti a **Internet Sales-Sales Amount** e **Reseller Sales-Sales Amount**e fare clic su **OK**.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "66078396"
   
      Questa espressione MDX calcola il contributo di ogni prodotto alle vendite Internet totali. L'istruzione Case combinata alla funzione IS EMPTY evita la generazione di un errore di divisione per zero quando le vendite di un prodotto corrispondono a zero.  
   
-5.  Nell'elenco **Stringa formato** selezionare **"Percent"**.  
+5.  Nell'elenco **Stringa formato** selezionare **"Percent"** .  
   
 6.  Nell'elenco **Gestione NON EMPTY** selezionare la casella di controllo corrispondente a **Internet Sales-Sales Amount**e fare clic su **OK**.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "66078396"
         End  
     ```  
   
-10. Nell'elenco **Stringa formato** selezionare **"Percent"**.  
+10. Nell'elenco **Stringa formato** selezionare **"Percent"** .  
   
 11. Nell'elenco **Gestione NON EMPTY** selezionare la casella di controllo corrispondente a **Reseller Sales-Sales Amount**e fare clic su **OK**.  
   
@@ -230,7 +230,7 @@ ms.locfileid: "66078396"
         End  
     ```  
   
-15. Nell'elenco **Stringa formato** selezionare **"Percent"**.  
+15. Nell'elenco **Stringa formato** selezionare **"Percent"** .  
   
 16. Nell'elenco **Gestione NON EMPTY** selezionare le caselle di controllo corrispondenti a **Internet Sales-Sales Amount** e **Reseller Sales-Sales Amount**e fare clic su **OK**.  
   

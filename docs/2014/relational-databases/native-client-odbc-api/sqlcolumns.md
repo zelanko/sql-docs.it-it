@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63067722"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
@@ -38,7 +38,7 @@ ms.locfileid: "63067722"
 |Nome colonna|Descrizione|  
 |-----------------|-----------------|  
 |DATA_TYPE|Restituisce SQL_VARCHAR, SQL_VARBINARY o SQL_WVARCHAR per i **varchar (max)** i tipi di dati.|  
-|TYPE_NAME|Restituisce "varchar", "varbinary" o "nvarchar" per il **varchar (max)**, **varbinary (max)**, e **nvarchar (max)** i tipi di dati.|  
+|TYPE_NAME|Restituisce "varchar", "varbinary" o "nvarchar" per il **varchar (max)** , **varbinary (max)** , e **nvarchar (max)** i tipi di dati.|  
 |COLUMN_SIZE|Restituisce SQL_SS_LENGTH_UNLIMITED per **varchar (max)** i tipi di dati, che indica che la dimensione della colonna è illimitata.|  
 |BUFFER_LENGTH|Restituisce SQL_SS_LENGTH_UNLIMITED per **varchar (max)** i tipi di dati, che indica che la dimensione del buffer è illimitata.|  
 |SQL_DATA_TYPE|Restituisce SQL_VARCHAR, SQL_VARBINARY o SQL_WVARCHAR per i **varchar (max)** i tipi di dati.|  

@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 715387bcb15e27b0d53a7f000b0f97c2be5a4bbe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996286"
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
@@ -46,11 +46,11 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @defname = ] 'default'` È il nome del valore predefinito viene creato tramite CREATE DEFAULT. *impostazione predefinita* viene **nvarchar(776)**, non prevede alcun valore predefinito.  
+`[ @defname = ] 'default'` È il nome del valore predefinito viene creato tramite CREATE DEFAULT. *impostazione predefinita* viene **nvarchar(776)** , non prevede alcun valore predefinito.  
   
-`[ @objname = ] 'object_name'` È il nome della tabella e colonna o tipo di dati alias a cui è associato il valore predefinito. *object_name* viene **nvarchar(776)** non prevede alcun valore predefinito. *object_name* non possono essere definiti con la **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, o CLR tipi definiti dall'utente.  
+`[ @objname = ] 'object_name'` È il nome della tabella e colonna o tipo di dati alias a cui è associato il valore predefinito. *object_name* viene **nvarchar(776)** non prevede alcun valore predefinito. *object_name* non possono essere definiti con la **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , **xml**, o CLR tipi definiti dall'utente.  
   
- Se *object_name* è un nome di una sola parte, viene risolto come tipo di dati alias. Se è un nome in due o tre parti, viene prima risolto come tabella e colonna. Se la risoluzione non riesce, viene risolto come tipo di dati alias. Per impostazione predefinita, le colonne esistenti del tipo di dati alias ereditano *predefinito*, a meno che un valore predefinito è stato associato direttamente alla colonna. Un valore predefinito non può essere associato a un **testo**, **ntext**, **immagine**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, **timestamp**, o CLR colonna con tipo definito dall'utente, una colonna con la proprietà IDENTITY, una colonna calcolata o una colonna che esiste già un vincolo predefinito.  
+ Se *object_name* è un nome di una sola parte, viene risolto come tipo di dati alias. Se è un nome in due o tre parti, viene prima risolto come tabella e colonna. Se la risoluzione non riesce, viene risolto come tipo di dati alias. Per impostazione predefinita, le colonne esistenti del tipo di dati alias ereditano *predefinito*, a meno che un valore predefinito è stato associato direttamente alla colonna. Un valore predefinito non può essere associato a un **testo**, **ntext**, **immagine**, **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , **xml**, **timestamp**, o CLR colonna con tipo definito dall'utente, una colonna con la proprietà IDENTITY, una colonna calcolata o una colonna che esiste già un vincolo predefinito.  
   
 > [!NOTE]  
 >  *object_name* può contenere parentesi quadre **[]** come identificatori delimitati. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md).  

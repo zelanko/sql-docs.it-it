@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 835057cdef6b7d2a336b64480515a5046cfde070
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62875764"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Recupero fino a un numero di sequenza del file di log (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "62875764"
   
  Ogni record presente nel log delle transazioni è identificato in modo univoco da un numero di sequenza dei file di log (LSN). Gli LSN sono ordinati in modo tale che se LSN è maggiore di LSN1, la modifica descritta dal record di log cui fa riferimento LSN2 si verifica dopo la modifica descritta dall'LSN del record di log.  
   
- L'LSN di un record di log in corrispondenza del quale si è verificato un evento significativo può essere utile per creare sequenze di ripristino corrette. Essendo ordinati, gli LSN possono essere confrontati in termini di uguaglianza e disuguaglianza, ovvero **\<**, **>**, **=**, **\<=**, **>=**. Questi confronti sono utili nella creazione di sequenze di ripristino.  
+ L'LSN di un record di log in corrispondenza del quale si è verificato un evento significativo può essere utile per creare sequenze di ripristino corrette. Essendo ordinati, gli LSN possono essere confrontati in termini di uguaglianza e disuguaglianza, ovvero **\<** , **>** , **=** , **\<=** , **>=** . Questi confronti sono utili nella creazione di sequenze di ripristino.  
   
 > [!NOTE]  
 >  Gli LSN sono valori di tipo di dati `numeric`(25,0). Gli operatori matematici, ad esempio addizione o sottrazione, non sono significativi e non devono essere utilizzati con gli LSN.  
@@ -64,11 +64,11 @@ ms.locfileid: "62875764"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Sintassi Transact-SQL per il ripristino fino a un numero di sequenza del file di log (LSN)  
  Un'istruzione [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) consente di arrestare il processo esattamente in corrispondenza dell'LSN o immediatamente prima, come illustrato di seguito:  
   
--   Usare la clausola WITH STOPATMARK **='** lsn:_<numero_lsn>_**'**, dove lsn:*\<Numerolsn>* è una stringa che specifica che il punto di recupero corrisponde al record di log contenente l'LSN specificato.  
+-   Usare la clausola WITH STOPATMARK **='** lsn: _<numero_lsn>_ **'** , dove lsn: *\<Numerolsn>* è una stringa che specifica che il punto di recupero corrisponde al record di log contenente l'LSN specificato.  
   
      STOPATMARK esegue il rollforward al numero di sequenza del file di log (LSN) includendo anche tale record del log.  
   
--   Usare la clausola WITH STOPBEFOREMARK **='** lsn:_<numero_lsn>_**'**, dove lsn:*\<Numerolsn>* è una stringa che specifica che il punto di recupero corrisponde al record di log immediatamente precedente a quello contenente l'LSN specificato.  
+-   Usare la clausola WITH STOPBEFOREMARK **='** lsn: _<numero_lsn>_ **'** , dove lsn: *\<Numerolsn>* è una stringa che specifica che il punto di recupero corrisponde al record di log immediatamente precedente a quello contenente l'LSN specificato.  
   
      Tramite STOPBEFOREMARK viene eseguito il rollforward fino all'LSN escludendo tale record di log.  
   

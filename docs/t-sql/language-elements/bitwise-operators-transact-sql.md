@@ -18,12 +18,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fd4a6fe9ba55aa3e30f0df94721c7aeeef225fa
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.openlocfilehash: c16b0ba6f774321346c95a69163fa110ffb196ad
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66506424"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046687"
 ---
 # <a name="bitwise-operators-transact-sql"></a>Operatori bit per bit (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ Vedere gli argomenti seguenti:
 |------------------|-------------------|  
 |[binary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**, **smallint** o **tinyint**|  
 |[bit](../../t-sql/data-types/bit-transact-sql.md)|**int**, **smallint**, **tinyint** o **bit**|  
-|[bigint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **binary** o **varbinary**|  
+|[bigint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**bigint**, **int**, **smallint**, **tinyint**, **binary** o **varbinary**|  
 |[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **binary** o **varbinary**|  
 |[smallint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **binary** o **varbinary**|  
 |[tinyint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **binary** o **varbinary**|  

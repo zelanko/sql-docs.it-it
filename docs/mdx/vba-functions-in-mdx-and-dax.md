@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63251552"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Funzioni VBA in MDX e DAX
@@ -51,7 +51,7 @@ ms.locfileid: "63251552"
 |CurDir|Non supportato||  
 |CVar|Solo MDX||  
 |CVErr|Non supportato||  
-|date|Solo MDX|**Avviso** con DAX viene implementata una funzione diversa con lo stesso nome, cioè la funzione DATE (Year, Month, Day), usato per generare un valore di tipo date dagli argomenti specificati|  
+|Date|Solo MDX|**Avviso** con DAX viene implementata una funzione diversa con lo stesso nome, cioè la funzione DATE (Year, Month, Day), usato per generare un valore di tipo date dagli argomenti specificati|  
 |DateAdd|Solo MDX|**Avviso** DAX viene implementata una funzione diversa con lo stesso nome, il DATEADD (\<date >, < number_of_intervals >,\<interval >) funzione, utilizzato per scorrere le date specificate da un numero di intervalli specificati|  
 |DateDiff]|Solo MDX||  
 |DatePart|Solo MDX||  

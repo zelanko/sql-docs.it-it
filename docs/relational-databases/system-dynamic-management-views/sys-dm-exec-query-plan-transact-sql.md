@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c879af413bd8b3cf4b90e8112f10e5f756201148
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013268"
 ---
 # <a name="sysdmexecqueryplan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
@@ -43,7 +43,7 @@ sys.dm_exec_query_plan(plan_handle)
   
 ## <a name="arguments"></a>Argomenti  
 *plan_handle*  
-È un token che identifica in modo univoco un piano di esecuzione di query per un batch che ha eseguito e il piano risiede nella cache dei piani o attualmente in esecuzione. *plan_handle* viene **varbinary(64)**.   
+È un token che identifica in modo univoco un piano di esecuzione di query per un batch che ha eseguito e il piano risiede nella cache dei piani o attualmente in esecuzione. *plan_handle* viene **varbinary(64)** .   
 
 Il *plan_handle* può essere ottenuto dagli oggetti a gestione dinamica seguenti:
   

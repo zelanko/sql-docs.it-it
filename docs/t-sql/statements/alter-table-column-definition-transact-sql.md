@@ -23,11 +23,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f18a3d809be2302732fa4e4aaeaa1b1e19cbb2dd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130391"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025195"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +85,7 @@ column_name <data_type>
  *column_name*  
  Nome della colonna da modificare, aggiungere o eliminare. *column_name* può essere costituito da un numero di caratteri compreso tra 1 e 128. Nel caso di nuove colonne create con il tipo di dati timestamp, è possibile omettere *column_name*. Se non viene specificato il nome *column_name* per una colonna con il tipo di dati **timestamp**, viene usato il nome **timestamp**.  
   
- [ _type_schema_name_**.** ] *type_name*  
+ [ _type_schema_name_ **.** ] *type_name*  
  Tipo di dati della colonna che viene aggiunta e dello schema a cui appartiene.  
   
  *TYPE_NAME* può essere:  
@@ -125,7 +125,7 @@ DOCUMENT
  Si applica solo al tipo di dati **xml** per associare una raccolta di XML Schema al tipo. Per poter digitare una colonna **xml** in uno schema, è necessario creare lo schema nel database usando [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).  
   
 FILESTREAM  
- Facoltativamente specifica l'attributo di archiviazione FILESTREAM per la colonna con *type_name* di **varbinary(max)**.  
+ Facoltativamente specifica l'attributo di archiviazione FILESTREAM per la colonna con *type_name* di **varbinary(max)** .  
   
  Quando viene specificato FILESTREAM per una colonna, la tabella deve avere anche una colonna per il tipo di dati **uniqueidentifier** con l'attributo ROWGUIDCOL. Questa colonna non deve consentire valori Null e deve avere un vincolo a colonna singola UNIQUE o PRIMARY KEY. Il valore GUID per la colonna deve essere fornito da un'applicazione all'inserimento dei dati o da un vincolo DEFAULT che utilizza la funzione NEWID ().  
   
@@ -163,7 +163,7 @@ Se viene usata quando non viene aggiunta anche la colonna correlata, non ha alcu
 IDENTITY  
  Specifica che la nuova colonna è una colonna Identity. Il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] fornisce un valore univoco incrementale per la colonna. Quando si aggiungono colonne identificatore alle tabelle esistenti, alle righe esistenti della tabella vengono aggiunti i valori Identity con i valori di inizializzazione e di incremento. L'ordine con cui le righe vengono aggiornate non è prevedibile. Vengono inoltre generati valori Identity per qualsiasi nuova riga aggiunta.  
   
- Le colonne Identity vengono comunemente utilizzate in combinazione con vincoli PRIMARY KEY per fungere da identificatore di riga univoco per la tabella. La proprietà IDENTITY può essere assegnata a una colonna **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** o **numeric(p,0)**. Ogni tabella può includere una sola colonna Identity. Per una colonna Identity inoltre non è possibile utilizzare la parola chiave DEFAULT con associati valori predefiniti. È necessario specificare sia il valore di inizializzazione che l'incremento oppure nessuno dei due valori. Nel secondo caso il valore predefinito è (1,1).  
+ Le colonne Identity vengono comunemente utilizzate in combinazione con vincoli PRIMARY KEY per fungere da identificatore di riga univoco per la tabella. La proprietà IDENTITY può essere assegnata a una colonna **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** o **numeric(p,0)** . Ogni tabella può includere una sola colonna Identity. Per una colonna Identity inoltre non è possibile utilizzare la parola chiave DEFAULT con associati valori predefiniti. È necessario specificare sia il valore di inizializzazione che l'incremento oppure nessuno dei due valori. Nel secondo caso il valore predefinito è (1,1).  
   
 > [!NOTE]  
 >  Non è possibile modificare una colonna della tabella esistente per aggiungere la proprietà IDENTITY.  
@@ -215,7 +215,7 @@ ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }
   
 ALGORITHM  
 **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
-Deve essere **'AEAD_AES_256_CBC_HMAC_SHA_256'**.  
+Deve essere **'AEAD_AES_256_CBC_HMAC_SHA_256'** .  
   
  Per altre informazioni sui vincoli della funzionalità, vedere [Always Encrypted &#40;Motore di database&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
   

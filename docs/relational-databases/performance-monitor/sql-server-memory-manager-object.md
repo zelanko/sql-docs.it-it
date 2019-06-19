@@ -15,11 +15,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 764f32bec05d2ab12542f0739dc72498a8229ec3
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53379712"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62649388"
 ---
 # <a name="sql-server-memory-manager-object"></a>Oggetto Memory Manager di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53379712"
 |**Concessioni di memoria in attesa**|Specifica il numero totale di processi a cui è stata concessa memoria per l'area di lavoro.|  
 |**Concessioni di memoria in sospeso**|Specifica il numero totale di processi in attesa di ottenere memoria per l'area di lavoro.|  
 |**Memoria Query Optimizer (KB)**|Specifica la quantità totale di memoria dinamica utilizzata dal server per l'ottimizzazione delle query.|  
-|**Memoria server riservata (KB)**|Indica la quantità di memoria che il server ha riservato per l'utilizzo futuro. Questo contatore indica la quantità di memoria corrente non utilizzata e inizialmente concessa indicata in **Memoria area di lavoro concessa (KB)**.|  
+|**Memoria server riservata (KB)**|Indica la quantità di memoria che il server ha riservato per l'utilizzo futuro. Questo contatore indica la quantità di memoria corrente non utilizzata e inizialmente concessa indicata in **Memoria area di lavoro concessa (KB)** .|  
 |**Memoria cache SQL (KB)**|Specifica la quantità totale di memoria dinamica utilizzata dal server per la cache SQL dinamica.|  
 |**Memoria server prelevata (KB)**|Specifica la quantità di memoria utilizzata dal server per fini diversi dalle pagine del database.|  
 |**Memoria prevista server (KB)**|Indica la quantità totale di memoria dinamica disponibile per il server.|  

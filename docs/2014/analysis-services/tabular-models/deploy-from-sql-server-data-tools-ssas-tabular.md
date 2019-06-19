@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6429fb7f30c748c7ac0a8ab69bc16c3d63b4d3ae
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067294"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>Distribuire da SQL Server Data Tools (SSAS tabulare)
@@ -54,7 +54,7 @@ ms.locfileid: "66067294"
   
 #### <a name="to-deploy-a-tabular-model-solution"></a>Per distribuire una soluzione del modello tabulare  
   
--   Nella [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]via il **compilare** menu, fare clic su **Distribuisci \<nome progetto >**.  
+-   Nella [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]via il **compilare** menu, fare clic su **Distribuisci \<nome progetto >** .  
   
      Verrà visualizzata la finestra di dialogo **Distribuisci** e verrà fornita l'indicazione dello stato della distribuzione dei metadati e dell'elaborazione di ogni tabella inclusa nel modello, a meno che la proprietà Opzione di elaborazione non sia impostata su Non elaborare. Una volta completato il processo di distribuzione, utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per connettersi all'istanza di Analysis Services e verificare il nuovo oggetto di database modello creato. In alternativa, utilizzare un'applicazione client di creazione report per connettersi al modello distribuito.  
   

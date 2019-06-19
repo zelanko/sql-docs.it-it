@@ -25,11 +25,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d78cd012d2a66dff8b3cfb2a4d3fba5745dfbe36
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327632"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051704"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ CREATE APPLICATION ROLE application_role_name
  *application_role_name*  
  Specifica il nome del ruolo applicazione. Il nome non deve già essere usato per fare riferimento a un'altra entità nel database.  
   
- PASSWORD **='**_password_**'**  
+ PASSWORD **='** _password_ **'**  
  Specifica la password che verrà usata dagli utenti di database per attivare il ruolo applicazione. È necessario usare sempre password complesse. *password* deve soddisfare i requisiti per i criteri password di Windows del computer che sta eseguendo l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- DEFAULT_SCHEMA **=**_schema\_name_  
+ DEFAULT_SCHEMA **=** _schema\_name_  
  Specifica il primo schema in cui il server eseguirà la ricerca per la risoluzione dei nomi degli oggetti per il ruolo. Se DEFAULT_SCHEMA non viene definito, il ruolo applicazione utilizzerà DBO come schema predefinito. *schema_name* può essere uno schema che non esiste nel database.  
   
 ## <a name="remarks"></a>Remarks  
@@ -68,7 +68,7 @@ CREATE APPLICATION ROLE application_role_name
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY APPLICATION ROLE nel database.  
   
 ## <a name="examples"></a>Esempi  

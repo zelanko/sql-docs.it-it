@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 429b3b0638f8a9abab8fb2f58fe08d2d58227d58
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66093868"
 ---
 # <a name="modify-indexes-that-depend-on-the-return-type-of-hostid"></a>Modificare gli indici che dipendono dal tipo restituito di HOST_ID

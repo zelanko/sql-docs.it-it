@@ -16,11 +16,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 95748a37b656c1ab203ed0cff354c5a641a9c7ed
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974370"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63027002"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guida sull'architettura di pagina ed extent
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -109,10 +109,10 @@ Le strutture di dati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] c
 
 In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono usati due tipi di mappe per la registrazione delle allocazioni di extent: 
 
-- **Mappa di allocazione globale (GAM, Global Allocation Map)**   
+- **Mappa di allocazione globale (GAM, Global Allocation Map)**    
   Nelle pagine GAM vengono registrati gli extent allocati. In ogni pagina GAM possono essere registrati riferimenti a 64.000 extent, ovvero a circa 4 gigabyte (GB) di dati. La pagina GAM include 1 bit per ogni extent dell'intervallo che la riguarda. Se il bit è 1, l'extent è disponibile, mentre se è 0, l'extent è allocato. 
 
-- **Mappa di allocazione globale condivisa (SGAM, Shared Global Allocation Map)**   
+- **Mappa di allocazione globale condivisa (SGAM, Shared Global Allocation Map)**    
   Nelle pagine SGAM vengono registrate informazioni sugli extent misti con almeno una pagina inutilizzata. In ogni pagina SGAM possono essere registrati riferimenti a 64.000 extent, ovvero a circa 4 GB di dati. La pagina SGAM include 1 bit per ogni extent dell'intervallo che la riguarda. Se il bit è 1, l'extent viene utilizzato come extent misto e include una pagina disponibile. Se il bit è 0, l'extent non viene utilizzato come extent misto o rappresenta un extent misto di cui sono in uso tutte le pagine. 
 
 Nelle pagine GAM e SGAM per ogni extent sono impostati gli schemi di bit indicati di seguito, in base all'utilizzo corrente dell'extent. 
@@ -177,10 +177,10 @@ In [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] viene allocato un 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa due strutture di dati interne per rilevare gli extent modificati mediante operazioni di copia bulk e quelli modificati dopo il backup completo più recente. Queste strutture di dati consentono di accelerare in misura significativa le operazioni di backup differenziale. Esse accelerano inoltre la registrazione delle operazioni di copia bulk con database per i quali viene utilizzato il modello di recupero con registrazione minima delle operazioni bulk. Come le pagine mappa di allocazione globale (GAM, Global Allocation Map) e mappa di allocazione globale condivisa (SGAM, Shared Global Allocation Map), queste strutture sono mappe di bit in cui ogni bit rappresenta un singolo extent. 
 
-- **Mappa differenziale delle modifiche (DCM, Differential Changed Map)**   
+- **Mappa differenziale delle modifiche (DCM, Differential Changed Map)**    
    Rileva gli extent modificati dopo l'esecuzione dell'ultima istruzione `BACKUP DATABASE`. Se il bit di un extent è 1, l'extent è stato modificato dopo l'esecuzione dell'ultima istruzione `BACKUP DATABASE`. Se invece è 0, l'extent non è stato modificato. Durante il backup differenziale vengono lette solo le pagine DCM per identificare gli extent modificati. In questo modo, il numero di pagine di cui è necessario eseguire l'analisi durante il backup differenziale risulta notevolmente ridotto. La durata dell'esecuzione di un backup differenziale è proporzionale al numero di extent modificati dopo l'esecuzione dell'ultima istruzione BACKUP DATABASE e non alle dimensioni complessive del database. 
 
-- **Mappa delle modifiche di copia bulk (BCM, Bulk Changed Map)**   
+- **Mappa delle modifiche di copia bulk (BCM, Bulk Changed Map)**    
    Rileva gli extent modificati mediante operazioni con registrazione minima delle operazioni bulk dall'esecuzione dell'ultima istruzione `BACKUP LOG`. Se il bit di un extent è 1, l'extent è stato modificato mediante un'operazione con registrazione minima delle operazioni bulk dall'esecuzione dell'ultima istruzione `BACKUP LOG`. Se invece è 0, l'extent non è stato modificato mediante operazioni con registrazione minima delle operazioni bulk. Sebbene le pagine BCM siano presenti in tutti i database, esse risultano utili solo se il database utilizza il modello di recupero con registrazione minima delle operazioni bulk. In questo modello di recupero, quando viene eseguita un'istruzione `BACKUP LOG` il processo di backup esegue l'analisi delle pagine BCM per identificare gli extent che sono stati modificati, quindi li include nel backup del log. In questo modo, se il database viene ripristinato da un backup di database e da una sequenza di backup del log delle transazioni, viene eseguito il recupero delle operazioni con registrazione minima delle operazioni bulk. Le pagine BCM non risultano utili in database che utilizzano il modello di recupero con registrazione minima in quanto non prevede la registrazione delle operazioni con registrazione minima delle operazioni bulk, né in database che utilizzano il modello di recupero con registrazione completa in quanto, con questo modello, le operazioni con registrazione minima delle operazioni bulk vengono considerate come operazioni con registrazione completa delle operazioni bulk. 
 
 L'intervallo tra le pagine DCM e BCM corrisponde all'intervallo tra le pagine GAM e SGAM, ovvero 64.000 extent. All'interno di un file fisico le pagine DCM e BCM sono seguite dalle pagine GAM e SGAM:

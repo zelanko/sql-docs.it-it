@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0fee60fa1a78c2d6d0becb63b2319105016adf1c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754673"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>Rimuovere il server di controllo del mirroring da una sessione di mirroring del database (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "62754673"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Completamento:**  [Dopo aver rimosso il server di controllo](#FollowUp)  
+-   **Completamento:**  [Dopo la rimozione del server di controllo del mirroring](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62754673"
     ALTER DATABASE AdventureWorks2012 SET WITNESS OFF ;  
     ```  
   
-##  <a name="FollowUp"></a> Completamento: Dopo aver rimosso il server di controllo  
+##  <a name="FollowUp"></a> Completamento: Dopo la rimozione del server di controllo del mirroring  
  La disattivazione del server di controllo del mirroring comporta la modifica della [modalità operativa](database-mirroring-operating-modes.md)in base all'impostazione del livello di protezione delle transazioni:  
   
 -   Se il livello di protezione delle transazioni è impostato su FULL (impostazione predefinita), nella sessione viene utilizzata la modalità sincrona a protezione elevata senza failover automatico.  

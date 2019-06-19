@@ -19,11 +19,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 0e9ac1c3e0ff2298acf3b155d5b99189a80e30f5
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326732"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62719404"
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +60,7 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
   
  Altre informazioni sulle credenziali con ambito database sono disponibili nella vista del catalogo [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessaria l'autorizzazione `ALTER` per la credenziale.  
   
 ## <a name="examples"></a>Esempi  
@@ -74,7 +74,7 @@ ALTER DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'RettigB',
 GO  
 ```  
   
-### <a name="b-removing-the-password-from-a-credential"></a>b. Rimozione della password da una credenziale  
+### <a name="b-removing-the-password-from-a-credential"></a>B. Rimozione della password da una credenziale  
  Nell'esempio seguente la password viene rimossa da una credenziale con ambito database denominata `Frames`. La credenziale con ambito database include l'account di accesso Windows `Aboulrus8` e una password. Dopo l'esecuzione dell'istruzione, la credenziale con ambito database includerà una password NULL perché l'opzione SECRET è stata omessa.  
   
 ```  

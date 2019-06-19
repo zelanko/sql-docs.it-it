@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d9cdb5c17a74b600b640872d7b153f715da8e15a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590235"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62999603"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Distribuire un database tramite un'applicazione livello dati
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "53590235"
 ###  <a name="Security"></a> Sicurezza  
  Per migliorare la sicurezza, gli account di accesso dell'autenticazione di SQL Server vengono archiviati in un file BACPAC dell'applicazione livello dati senza password. Quando il file BACPAC viene importato, l'account di accesso viene creato come account disabilitato con una password generata. Per abilitare gli account di accesso, è necessario accedere usando un account che dispone dell'autorizzazione ALTER ANY LOGIN e usare ALTER LOGIN per abilitare l'account di accesso e assegnare una nuova password che può essere comunicata all'utente. Questa operazione non è necessaria per gli account di accesso dell'autenticazione di Windows, in quanto le relative password non sono gestite da SQL Server.  
   
-#### <a name="permissions"></a>Permissions  
+#### <a name="permissions"></a>Autorizzazioni  
  Per la procedura guidata sono richieste autorizzazioni di esportazione dell'applicazione livello dati sul database di origine. Per l'account di accesso sono richieste almeno le autorizzazioni ALTER ANY LOGIN e VIEW DEFINITION nell'ambito del database, nonché le autorizzazioni SELECT su **sys.sql_expression_dependencies**. L'esportazione di un'applicazione livello dati può essere effettuata da membri del ruolo predefinito del server securityadmin che sono anche membri del ruolo predefinito del database database_owner nel database dal cui viene esportata l'applicazione livello dati. Possono esportare un'applicazione livello dati anche i membri del ruolo predefinito del server sysadmin o dell'account amministratore di sistema SQL Server predefinito denominato **sa** .  
   
  Per la procedura guidata sono richieste autorizzazioni di importazione dell'applicazione livello dati sull'istanza o sul server di destinazione. L'account di accesso deve essere un membro del ruolo predefinito del server **sysadmin** , **serveradmin** o **dbcreator** con autorizzazioni ALTER ANY LOGIN. È anche possibile importare un'applicazione livello dati usando l'account dell'amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito denominato **sa** . L'importazione di un'applicazione livello dati con gli account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza al ruolo loginmanager o serveradmin. L'importazione di un'applicazione livello dati senza account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza al ruolo dbmanager o serveradmin.  
@@ -105,7 +105,7 @@ ms.locfileid: "53590235"
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] :**  
   
--   **Edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**: selezionare l'edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nel menu a discesa.  
+-   **Edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** : selezionare l'edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nel menu a discesa.  
   
 -   **Dimensioni massime database**: selezionare le dimensioni massime del database dal menu a discesa.  
   

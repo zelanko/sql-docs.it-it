@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5853ef42066eca006bfc5b7229f7bd7900a8fb6d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62814024"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Sospendere un database di disponibilità (SQL Server)
@@ -55,7 +55,7 @@ ms.locfileid: "62814024"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Completamento:** [Come evitare il Log delle transazioni pieno](#FollowUp)  
+-   **Completamento:** [Come evitare il riempimento del log delle transazioni](#FollowUp)  
   
 -   [Attività correlate](#RelatedTasks)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62814024"
  È necessario essere connessi all'istanza del server che ospita il database che si desidera sospendere. Per sospendere un database primario e i database secondari corrispondenti, connettersi all'istanza del server che ospita la replica primaria. Per sospendere un database secondario lasciando disponibile il database primario, connettersi alla replica secondaria.  
   
 ###  <a name="Recommendations"></a> Indicazioni  
- Durante i colli di bottiglia, potrebbe essere utile sospendere brevemente uno o più database secondari per migliorare temporaneamente le prestazioni sulla replica primaria. Finché un database secondario rimane sospeso, il log delle transazioni del database primario corrispondente non può essere troncato. Per questo motivo, i record del log si accumulano sul database primario. È pertanto consigliabile riprendere o rimuovere rapidamente un database secondario sospeso. Per altre informazioni, vedere [Follow-up: Come evitare un Log delle transazioni pieno](#FollowUp), più avanti in questo argomento.  
+ Durante i colli di bottiglia, potrebbe essere utile sospendere brevemente uno o più database secondari per migliorare temporaneamente le prestazioni sulla replica primaria. Finché un database secondario rimane sospeso, il log delle transazioni del database primario corrispondente non può essere troncato. Per questo motivo, i record del log si accumulano sul database primario. È pertanto consigliabile riprendere o rimuovere rapidamente un database secondario sospeso. Per altre informazioni, vedere [Completamento: Come evitare il riempimento del log delle transazioni](#FollowUp), più avanti in questo argomento.  
   
 ###  <a name="Security"></a> Sicurezza  
   
@@ -125,7 +125,7 @@ ms.locfileid: "62814024"
   
 -   [Provider PowerShell per SQL Server](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Completamento: Come evitare il Log delle transazioni pieno  
+##  <a name="FollowUp"></a> Completamento: Come evitare il riempimento del log delle transazioni  
  In genere, quando su un database viene eseguito un checkpoint automatico, il relativo log delle transazioni viene troncato in corrispondenza di tale checkpoint dopo il successivo backup del log. Tuttavia, quando un database secondario viene sospeso, tutti i record del log correnti rimangono attivi sul database primario. Se il log delle transazioni si riempie, perché raggiunge le dimensioni massime o l'istanza del server esaurisce lo spazio, il database non può eseguire ulteriori aggiornamenti.  
   
  Per evitare il problema, effettuare una delle azioni seguenti:  

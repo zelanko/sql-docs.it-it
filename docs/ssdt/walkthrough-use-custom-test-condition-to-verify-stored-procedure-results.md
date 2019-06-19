@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9a262107294988e0d624e4b423147b5e5183a629
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097434"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Procedura dettagliata: Uso di una condizione di test personalizzata per verificare i risultati di una stored procedure
@@ -54,7 +54,7 @@ Nella prossima esercitazione verrà illustrato come firmare il progetto.
   
 2.  Nella scheda **Firma** selezionare la casella di controllo **Firma assembly**.  
   
-3.  Nella casella **Scegli un file chiave con nome sicuro** fare clic su **\<Nuovo...>**.  
+3.  Nella casella **Scegli un file chiave con nome sicuro** fare clic su **\<Nuovo...>** .  
   
     Verrà visualizzata la finestra di dialogo **Crea chiave con nome sicuro**.  
   
@@ -375,7 +375,7 @@ Nella prossima esercitazione verrà illustrato come creare uno unit test. Per cr
   
 3.  In **Nome test** digitare **SampleUnitTest**.  
   
-4.  In **Aggiungi a progetto di test** fare clic su **Crea nuovo progetto di test Visual C\#**. Fare clic su **OK** per visualizzare la finestra di dialogo **Nuovo progetto di test**.  
+4.  In **Aggiungi a progetto di test** fare clic su **Crea nuovo progetto di test Visual C\#** . Fare clic su **OK** per visualizzare la finestra di dialogo **Nuovo progetto di test**.  
   
 5.  Digitare **SampleUnitTest** per il nome del progetto.  
   

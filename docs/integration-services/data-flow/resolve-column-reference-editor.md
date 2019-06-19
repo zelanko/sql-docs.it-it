@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d9b414c8f47cbe8942f4448d0f071b125a7d6518
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726473"
 ---
 # <a name="resolve-column-reference-editor"></a>Editor della risoluzione dei riferimenti alle colonne
@@ -34,16 +34,16 @@ ms.locfileid: "65726473"
  Dopo che sono stati risolti tutti i riferimenti alle colonne, in assenza di altri errori del percorso dati, accanto al percorso dati non verranno più visualizzate altre icone di errore.  
   
 ## <a name="options"></a>Opzioni  
- **Colonne di output senza mapping (Origine)**    
+ **Colonne di output senza mapping (Origine)**     
  Colonne del percorso a monte di cui non è stato eseguito il mapping  
   
-**Colonne con mapping (Origine)**    
+**Colonne con mapping (Origine)**     
  Colonne del percorso a monte di cui è stato eseguito il mapping alle colonne del percorso a valle  
   
-**Colonne con mapping (Destinazione)**    
+**Colonne con mapping (Destinazione)**     
  Colonne del percorso a monte di cui è stato eseguito il mapping alle colonne del percorso a valle  
   
-**Colonne di input senza mapping (Destinazione)**    
+**Colonne di input senza mapping (Destinazione)**     
  Colonne del percorso a valle di cui non è stato eseguito il mapping  
   
 **Elimina colonne input senza mapping**  

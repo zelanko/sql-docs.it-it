@@ -18,17 +18,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8382624490df51ce0c44856363247697a546a9b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634359"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661813"
 ---
 # <a name="add-articles-to-and-drop-articles-from-a-publication"></a>Aggiungere ed eliminare articoli in una pubblicazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Aggiungere inizialmente articoli a una pubblicazione durante la creazione nell'ambito della Creazione guidata nuova pubblicazione. Per altre informazioni sull'uso di questa procedura guidata, vedere [Creare una pubblicazione](../../../relational-databases/replication/publish/create-a-publication.md).  
   
- Dopo la creazione di una pubblicazione, aggiungere ed eliminare articoli nella pagina **Articoli** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Per altre informazioni sulle considerazioni relative all'aggiunta e l'eliminazione di articoli, vedere [Aggiungere ed eliminare articoli in pubblicazioni esistenti](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
+ Dopo la creazione di una pubblicazione, aggiungere ed eliminare articoli nella pagina **Articoli** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Per altre informazioni sulle considerazioni relative all'aggiunta e l'eliminazione di articoli, vedere [Aggiungere ed eliminare articoli in pubblicazioni esistenti](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="to-add-an-article-after-a-publication-is-created"></a>Per aggiungere un articolo dopo la creazione di una pubblicazione  
   

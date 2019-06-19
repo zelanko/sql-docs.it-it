@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d64b5bf6b60f37bf386840031c304dd5b13faaeb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63158804"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Associare un database con tabelle con ottimizzazione per la memoria a un pool di risorse
@@ -44,7 +44,7 @@ GO
 ### <a name="determine-the-minimum-value-for-minmemorypercent-and-maxmemorypercent"></a>Determinare il valore minimo per MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT.  
  Dopo aver determinato la memoria necessaria per le tabelle ottimizzate per la memoria, è necessario determinare la percentuale di memoria disponibile necessaria e impostare le percentuali di memoria su un valore uguale o superiore.  
   
- **Esempio:**   
+ **Esempio:**    
 In questo esempio si suppone che sia stato calcolato che gli indici e le tabelle ottimizzate per la memoria richiedano 16 GB di memoria. Si suppone inoltre che siano stati riservati 32 GB di memoria per l'utilizzo da parte dell'utente.  
   
  A prima vista, si potrebbe ritenere corretto impostare MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT su 50 (16 è il 50% di 32).  Tuttavia, questo valore non garantirebbe memoria sufficiente alle tabelle ottimizzate per la memoria. Nella tabella seguente ([la sezione relativa alla percentuale di memoria disponibile per indici e tabelle ottimizzate per la memoria](#percent-of-memory-available-for-memory-optimized-tables-and-indexes)) è possibile notare che se si riservano 32 GB di memoria, solo l'80% di tale valore sarà disponibile per gli indici e le tabelle ottimizzate per la memoria.  Pertanto, le percentuali minima e massima sono calcolate in base alla memoria disponibile, non alla memoria riservata.  

@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a73ae886682890c68c34ac90af33438d7f7b9644
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124181"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62644769"
 ---
 # <a name="secure-the-snapshot-folder"></a>Sicurezza della cartella snapshot
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "54124181"
 > [!NOTE]  
 >  Controllo account utente consente agli amministratori di gestire i propri diritti utente elevati (detti anche *privilegi*). Quando l'esecuzione avviene in sistemi operativi con Controllo account utente abilitato, gli amministratori non utilizzano i propri diritti amministrativi, ma eseguono la maggior parte delle azioni come utenti standard (non amministrativi), assumendo temporaneamente i diritti di amministratore solo se necessario. Controllo account utente può impedire l'accesso amministrativo alla condivisione snapshot. Le autorizzazioni per la condivisione snapshot devono pertanto essere concesse in modo esplicito agli account di Windows utilizzati dall'agente snapshot, dall'agente di distribuzione e dall'agente di merge. È necessario eseguire questa operazione anche se gli account di Windows sono membri del gruppo Administrators.  
   
- Se si configura un server di distribuzione tramite Configurazione guidata distribuzione o Creazione guidata pubblicazione, la cartella snapshot viene configurata per impostazione predefinita su un percorso locale: X:\Programmi\Microsoft SQL Server\\*\<istanza>* \MSSQL\ReplData. Se si usano un server di distribuzione remoto o sottoscrizioni pull, è necessario specificare una condivisione di rete UNC (ad esempio \\\\<*nomecomputer>* \snapshot) anziché un percorso locale.  
+ Se si configura un server di distribuzione tramite Configurazione guidata distribuzione o Creazione guidata pubblicazione, la cartella snapshot viene configurata per impostazione predefinita su un percorso locale: X:\Programmi\Microsoft SQL Server\\ *\<istanza>* \MSSQL\ReplData. Se si usano un server di distribuzione remoto o sottoscrizioni pull, è necessario specificare una condivisione di rete UNC (ad esempio \\\\<*nomecomputer>* \snapshot) anziché un percorso locale.  
   
  Quando si concedono le autorizzazioni di accesso alla cartella snapshot, è necessario valutare il tipo di accesso che verrà utilizzato per la cartella. In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 2003 vengono utilizzate le schede di finestre di dialogo seguenti:  
   

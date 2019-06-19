@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e1c2789d8d10928bcbe576fc57f630675fdbd405
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723900"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati file flat (Importazione/Esportazione guidata SQL Server)
@@ -208,7 +208,7 @@ Nello screenshot si noti che il tipo di dati della colonna **id**, che contiene 
 |Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**Nome**|Consente di specificare un nome descrittivo per la colonna. Se non si immettere alcun nome, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea automaticamente un nome nel formato Colonna 0, Colonna 1 e così via.|
-|**ColumnDelimiter**|Consente di selezionare i delimitatori di colonna disponibili nell'apposito elenco. Scegliere come delimitatori caratteri che non siano già presenti nel testo. Questo valore viene ignorato per le colonne a larghezza fissa.<br /><br /> **{CR}{LF}**. Le colonne sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.<br /><br /> **{CR}**. Le colonne sono delimitate da un ritorno a capo.<br /><br /> **{LF}**. Le colonne sono delimitate da un avanzamento riga.<br /><br /> **Punto e virgola {;}**. Le colonne sono delimitate da un punto e virgola.<br /><br /> **Due punti {:}**. Le colonne sono delimitate da due punti.<br /><br /> **Virgola {,}**. Le colonne sono delimitate da una virgola.<br /><br /> **Tabulazione {t}**. Le colonne sono delimitate da una tabulazione.<br /><br /> **Barra verticale {&#124;}**. Le colonne sono delimitate da una barra verticale.|
+|**ColumnDelimiter**|Consente di selezionare i delimitatori di colonna disponibili nell'apposito elenco. Scegliere come delimitatori caratteri che non siano già presenti nel testo. Questo valore viene ignorato per le colonne a larghezza fissa.<br /><br /> **{CR}{LF}** . Le colonne sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.<br /><br /> **{CR}** . Le colonne sono delimitate da un ritorno a capo.<br /><br /> **{LF}** . Le colonne sono delimitate da un avanzamento riga.<br /><br /> **Punto e virgola {;}** . Le colonne sono delimitate da un punto e virgola.<br /><br /> **Due punti {:}** . Le colonne sono delimitate da due punti.<br /><br /> **Virgola {,}** . Le colonne sono delimitate da una virgola.<br /><br /> **Tabulazione {t}** . Le colonne sono delimitate da una tabulazione.<br /><br /> **Barra verticale {&#124;}** . Le colonne sono delimitate da una barra verticale.|
 |**ColumnType**|Indica se la colonna è delimitata, a larghezza fissa o non allineata a destra. Questa proprietà è di sola lettura. I file non allineati a destra sono file in cui ogni colonna ha una larghezza fissa, ad eccezione dell'ultima. L'ultima colonna è delimitata dal delimitatore di riga.|  
 |**InputColumnWidth**|Specificare il valore da archiviare come numero di byte. Per i file Unicode, questo valore corrisponde al numero di caratteri. Questo valore viene ignorato nelle colonne delimitate.<br /><br /> **Nota** : nel modello a oggetti il nome di questa proprietà è ColumnWidth.|
 |**DataPrecision**|Consente di specificare la precisione dei dati numerici. Per precisione si intende il numero di cifre.|

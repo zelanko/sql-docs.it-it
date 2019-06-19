@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d883a137dd182f233bc056b0fca98cf60df4331f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794579"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665503"
 ---
 # <a name="add-or-edit-join"></a>Aggiungi join o Modifica join
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47794579"
   
     -   Se si aggiunge un nuovo join, selezionare l'opzione **Per creare l'istruzione verrà utilizzato il generatore** o l'opzione **L'istruzione per il join verrà scritta manualmente**. Se si inizia a scrivere manualmente il join non è possibile utilizzare il generatore.  
   
-         Se si sceglie di utilizzare il generatore, utilizzare le colonne della griglia, ovvero**Congiunzione**, **Colonna tabella filtrata**, **Operatore**e **Colonna tabella unita in join**, per compilare un'istruzione per il join. Ogni colonna della griglia contiene un elenco a discesa che consente di selezionare due colonne e un operatore, ovvero**=**, **<>**, **<=**, **\<**, **>=**, **>**, **like**. I risultati vengono visualizzati nell'area di testo **Anteprima** . Se il join include più di una coppia di colonne, selezionare una congiunzione, ovvero**AND** o **OR**, nella colonna **Congiunzione** e quindi digitare altre due colonne e un altro operatore.  
+         Se si sceglie di utilizzare il generatore, utilizzare le colonne della griglia, ovvero**Congiunzione**, **Colonna tabella filtrata**, **Operatore**e **Colonna tabella unita in join**, per compilare un'istruzione per il join. Ogni colonna della griglia contiene un elenco a discesa che consente di selezionare due colonne e un operatore, ovvero **=** , **<>** , **<=** , **\<** , **>=** , **>** , **like**. I risultati vengono visualizzati nell'area di testo **Anteprima** . Se il join include più di una coppia di colonne, selezionare una congiunzione, ovvero**AND** o **OR**, nella colonna **Congiunzione** e quindi digitare altre due colonne e un altro operatore.  
   
          Se si sceglie di scrivere manualmente l'istruzione per il join, digitarla nell'area di testo **Istruzione per il join** . Utilizzare le caselle di riepilogo **Colonne tabella filtrata** e **Colonne tabella unita in join** per trascinare le colonne selezionate nell'area di testo **Istruzione per il join** .  
   

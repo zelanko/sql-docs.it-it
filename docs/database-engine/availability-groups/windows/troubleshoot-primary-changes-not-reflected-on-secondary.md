@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 manager: jroth
 ms.openlocfilehash: 9f3c6d70d107e5afbd168fc5152e3d46d150debf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66802989"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>Determinare il motivo per cui le modifiche apportate alla replica primaria non vengono eseguite nella replica secondaria per un gruppo di disponibilità Always On

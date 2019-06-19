@@ -15,17 +15,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64896beeb2e815f22662cd7d16aaf263135f8122
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089575"
 ---
 # <a name="trace-properties-events-selection-tab"></a>Proprietà traccia (scheda Selezione eventi)
   Usare la scheda **Selezione eventi** della finestra di dialogo **Proprietà traccia** per visualizzare o specificare le colonne di dati e gli eventi inseriti nella traccia.  
   
 ## <a name="options"></a>Opzioni  
- Colonna**Eventi**   
+ Colonna**Eventi**  
  È possibile specificare gli eventi inseriti nella traccia selezionando o deselezionando la casella di controllo nella colonna di evento. Le colonne**Eventi** sono organizzate in base alla categoria di evento. Le classi di evento specificate nel modello vengono selezionate automaticamente. Per altre informazioni, vedere [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Colonne di dati  

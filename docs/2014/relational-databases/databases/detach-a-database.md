@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 050220781f484b4a9e595551496d7e58c06f954c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871956"
 ---
 # <a name="detach-a-database"></a>Scollegare un database
@@ -85,7 +85,7 @@ ms.locfileid: "62871956"
   
     -   Quando un database è coinvolto nella replica, lo **Stato** è **Non pronto** e nella colonna **Messaggio** viene visualizzato **Database replicato**.  
   
-    -   Quando un database dispone di uno o più connessioni attive, il **lo stato** viene **non pronto** e il **messaggio** colonna Visualizza _< numero_di_connessioni_attive >_**Connessioni attive:** , ad esempio: **Connessioni attive: 1**. Prima di poter scollegare il database è necessario disconnettere tutte le connessioni attive selezionando **Interrompi connessioni**.  
+    -   Quando un database dispone di uno o più connessioni attive, il **lo stato** viene **non pronto** e il **messaggio** colonna Visualizza _< numero_di_connessioni_attive >_ **Connessioni attive:** , ad esempio: **Connessioni attive: 1**. Prima di poter scollegare il database è necessario disconnettere tutte le connessioni attive selezionando **Interrompi connessioni**.  
   
      Per ottenere ulteriori informazioni su un messaggio, fare clic sul testo del collegamento ipertestuale per aprire Monitoraggio attività.  
   

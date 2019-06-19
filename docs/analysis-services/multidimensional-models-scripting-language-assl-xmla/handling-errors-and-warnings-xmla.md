@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 884474398abc9f449e5f6bd82c9f4b981f9a3a43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63261701"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Gestione di errori e avvisi (XMLA)
@@ -39,7 +39,7 @@ ms.locfileid: "63261701"
 ### <a name="fault-code-information"></a>Informazioni sul codice di errore  
  Nella tabella seguente vengono elencate le informazioni sul codice di errore XMLA contenute nella sezione dei dettagli della risposta SOAP. Le colonne rappresentano gli attributi di un errore nella sezione dei dettagli di un errore SOAP.  
   
-|Nome colonna|Tipo|Descrizione|Valore null consentito<sup>1</sup>|  
+|Nome colonna|Type|Descrizione|Valore null consentito<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
 |**ErrorCode**|**UnsignedInt**|Codice restituito che indica l'esito positivo o negativo del metodo. Il valore esadecimale deve essere convertito in un **UnsignedInt** valore.|No|  
 |**WarningCode**|**UnsignedInt**|Codice restituito che indica una condizione di avviso. Il valore esadecimale deve essere convertito in un **UnsignedInt** valore.|Yes|  

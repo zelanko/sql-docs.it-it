@@ -20,10 +20,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7fbf5c43d58f56a3a383023e5818f1494e86ed68
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821863"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - Usare con variabili di scripting
@@ -87,7 +87,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
   
 -   I nomi delle variabili non devono contenere spazi vuoti o virgolette.  
   
--   Il formato dei nomi delle variabili non deve essere identico a quello di un'espressione con variabili, ad esempio *$(var)*.  
+-   Il formato dei nomi delle variabili non deve essere identico a quello di un'espressione con variabili, ad esempio *$(var)* .  
   
 -   Per le variabili di scripting non viene fatta distinzione tra maiuscole e minuscole.  
   

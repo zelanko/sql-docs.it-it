@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 639e31d8ec9282a948a7eda9050cc1a2025ac65e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060138"
 ---
 # <a name="create-parameters"></a>Create Parameters
@@ -39,7 +39,7 @@ ms.locfileid: "66060138"
   
     |Proprietà|Descrizione|  
     |--------------|-----------------|  
-    |nome|Nome del parametro.|  
+    |Nome|Nome del parametro.|  
     |Tipo di dati|Tipo di dati del parametro.|  
     |Valore predefinito|Valore predefinito del parametro assegnato in fase di progettazione. Noto anche come valore predefinito di progettazione.|  
     |Sensibile|I valori di parametri sensibili sono crittografati nel catalogo e risultano NULL quando vengono visualizzati con Transact-SQL o con SQL Server Management Studio.|  
@@ -52,7 +52,7 @@ ms.locfileid: "66060138"
 4.  Salvare il progetto per salvare le modifiche ai parametri. I valori dei parametri vengono archiviati nel file di progetto.  
   
     > [!WARNING]  
-    >  È possibile modificare direttamente l'elenco oppure usare la finestra **Proprietà** per modificare i valori delle proprietà dei parametri. È possibile eliminare un parametro tramite il pulsante **Elimina (X)**. Utilizzando l'ultimo pulsante della barra degli strumenti, è possibile specificare un valore per un parametro utilizzato solo quando si esegue il pacchetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
+    >  È possibile modificare direttamente l'elenco oppure usare la finestra **Proprietà** per modificare i valori delle proprietà dei parametri. È possibile eliminare un parametro tramite il pulsante **Elimina (X)** . Utilizzando l'ultimo pulsante della barra degli strumenti, è possibile specificare un valore per un parametro utilizzato solo quando si esegue il pacchetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
     > [!NOTE]  
     >  Se si riapre il file di pacchetto senza aprire il progetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], la scheda **Parametri** sarà vuota e disabilitata.  
@@ -83,7 +83,7 @@ ms.locfileid: "66060138"
 5.  Salvare il progetto per salvare le modifiche ai parametri. I valori dei parametri sono archiviati nelle configurazioni del file di progetto. Salvare il file di progetto per eseguire il commit al disco delle eventuali modifiche apportate ai valori dei parametri.  
   
     > [!WARNING]  
-    >  È possibile modificare direttamente l'elenco oppure usare la finestra **Proprietà** per modificare i valori delle proprietà dei parametri. È possibile eliminare un parametro tramite il pulsante **Elimina (X)**. Usando l'ultimo pulsante della barra degli strumenti per aprire la finestra di dialogo **Gestione dei valori dei parametri**, è possibile specificare un valore per un parametro usato solo quando si esegue il pacchetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
+    >  È possibile modificare direttamente l'elenco oppure usare la finestra **Proprietà** per modificare i valori delle proprietà dei parametri. È possibile eliminare un parametro tramite il pulsante **Elimina (X)** . Usando l'ultimo pulsante della barra degli strumenti per aprire la finestra di dialogo **Gestione dei valori dei parametri**, è possibile specificare un valore per un parametro usato solo quando si esegue il pacchetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
  [Integration Services &#40;SSIS&#41; parametri](integration-services-ssis-package-and-project-parameters.md)  

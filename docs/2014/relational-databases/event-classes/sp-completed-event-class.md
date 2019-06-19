@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7bcc8cdc62616dd26eb714b78ad07296a794b55f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63050967"
 ---
 # <a name="spcompleted-event-class"></a>SP:Completed - classe di evento
@@ -35,7 +35,7 @@ ms.locfileid: "63050967"
 |Duration|`bigint`|Durata dell'evento in microsecondi.|13|Yes|  
 |EndTime|`datetime`|Ora di fine dell'evento. Questa colonna non viene popolata per le classi degli eventi di avvio, ad esempio SQL:BatchStarting o SP:Starting.|15|Yes|  
 |EventClass|`int`|Tipo di evento = 43.|27|no|  
-|EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
+|EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  
 |HostName|`nvarchar`|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  
 |IsSystem|`int`|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Yes|  
@@ -50,7 +50,7 @@ ms.locfileid: "63050967"
 |ObjectType|`int`|Tipo della stored procedure chiamata. Questo valore corrisponde alla colonna type nella vista del catalogo sys.objects. Per i valori, vedere [Colonna ObjectType per gli eventi di traccia](objecttype-trace-event-column.md).|28|Yes|  
 |RequestID|`int`|ID della richiesta contenente l'istruzione.|49|Yes|  
 |RowCounts|`bigint`|Numero di righe per tutte le istruzioni della stored procedure.|48|Yes|  
-|ssSqlProfiler|`nvarchar`|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
+|ssSqlProfiler|`nvarchar`|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
 |SessionLoginName|`nvarchar`|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Yes|  
 |SourceDatabaseID|`int`|ID del database che contiene l'oggetto.|62|Yes|  
 |SPID|`int`|ID della sessione in cui si è verificato l'evento.|12|Yes|  

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a129386b5c88939d68f5d7f23a5fe2b4d8ce7cca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789529"
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>Configurare il routing di sola lettura per un gruppo di disponibilità (SQL Server)
@@ -82,7 +82,7 @@ ms.locfileid: "62789529"
   
     -   Per configurare il routing di sola lettura per il ruolo secondario, nella clausola ADD REPLICA o MODIFY REPLICA WITH specificare l'opzione SECONDARY_ROLE, come segue:  
   
-         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='** TCP **://*`system-address`*:*`port`*')**  
+         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='** TCP **:// *`system-address`* : *`port`* ')**  
   
          I parametri dell'URL del routing di sola lettura sono i seguenti:  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62789529"
   
     -   Per configurare il routing di sola lettura per il ruolo primario, nella clausola ADD REPLICA o MODIFY REPLICA WITH specificare l'opzione PRIMARY_ROLE, come segue:  
   
-         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=('*`server`*'** [ **,**...*n* ] **))**  
+         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=(' *`server`* '** [ **,** ...*n* ] **))**  
   
          dove *server* identifica un'istanza del server in cui viene ospitata una replica secondaria di sola lettura nel gruppo di disponibilità.  
   
@@ -154,13 +154,13 @@ GO
   
 2.  Quando si aggiunge una replica di disponibilità a un gruppo di disponibilità, utilizzare il cmdlet `New-SqlAvailabilityReplica`. Quando si modifica una replica di disponibilità esistente, utilizzare il cmdlet `Set-SqlAvailabilityReplica`. I parametri pertinenti sono i seguenti:  
   
-    -   Per configurare il routing di sola lettura per il ruolo secondario, specificare il **ReadonlyRoutingConnectionUrl "*`url`*"** parametro.  
+    -   Per configurare il routing di sola lettura per il ruolo secondario, specificare il **ReadonlyRoutingConnectionUrl " *`url`* "** parametro.  
   
          dove *url* è il nome di dominio completo (FQDN) e la porta di connettività da usare in caso di routing alla replica per le connessioni di sola lettura. Esempio:  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
          Per ulteriori informazioni, vedere [Calcolo di Read_only_routing_url per AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx).  
   
-    -   Per configurare l'accesso alla connessione per il ruolo primario, specificare **ReadonlyRoutingList "*`server`*"** [ **,**... *n* ], dove *server* identifica un'istanza del server che ospita una replica secondaria di sola lettura nel gruppo di disponibilità. Esempio:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
+    -   Per configurare l'accesso alla connessione per il ruolo primario, specificare **ReadonlyRoutingList " *`server`* "** [ **,** ... *n* ], dove *server* identifica un'istanza del server che ospita una replica secondaria di sola lettura nel gruppo di disponibilità. Esempio:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
         > [!NOTE]  
         >  È necessario impostare l'URL del routing di sola lettura di una replica prima di configurare il relativo elenco di routing di sola lettura.  

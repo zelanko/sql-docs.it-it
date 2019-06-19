@@ -18,10 +18,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e0d0f760bcc31414dc6a6f69b62cdd28bb36741d
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946115"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Specificare la lunghezza del prefisso nei file di dati tramite bcp (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "64946115"
   Per fornire il tipo di archiviazione file con la massima compressione durante l'esportazione in blocco dei dati in formato nativo in un file di dati, il comando **bcp** inserisce davanti a ogni campo uno o più caratteri che ne indicano la lunghezza. Tali caratteri sono denominati *caratteri per il prefisso di lunghezza*.  
   
 ## <a name="the-bcp-prompt-for-prefix-length"></a>Richiesta della lunghezza del prefisso da parte di bcp  
- Se un comando interattivo **bcp** include l'opzione **in** o **out** senza l'opzione relativa al file di formato (**-f**) o al formato dei dati (**-n**, **-c**, **-w**o **-N**) viene richiesta la lunghezza del prefisso di ogni campo di dati, come illustrato di seguito:  
+ Se un comando interattivo **bcp** include l'opzione **in** o **out** senza l'opzione relativa al file di formato ( **-f**) o al formato dei dati ( **-n**, **-c**, **-w**o **-N**) viene richiesta la lunghezza del prefisso di ogni campo di dati, come illustrato di seguito:  
   
  `Enter prefix length of field <field_name> [<default>]:`  
   
@@ -85,7 +85,7 @@ ms.locfileid: "64946115"
 |**XML**|8|8|8|8|  
 |**sql_variant**|8|8|8|8|  
   
- \*I tipi di dati **ntext**, **text**e **image** verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente li utilizzano. In alternativa, usare i tipi di dati **nvarchar(max)**, **varchar(max)** e **varbinary(max)** .  
+ \*I tipi di dati **ntext**, **text**e **image** verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente li utilizzano. In alternativa, usare i tipi di dati **nvarchar(max)** , **varchar(max)** e **varbinary(max)** .  
   
 ##  <a name="PrefixLengthsImport"></a> Lunghezze del prefisso per il caricamento bulk  
  Quando si esegue l'importazione bulk di dati, la lunghezza del prefisso corrisponde al valore specificato al momento della creazione del file di dati. Se il file di dati non è stato creato da un comando **bcp** , i caratteri di prefisso di lunghezza probabilmente non esistono. In tal caso, specificare il valore 0 come lunghezza del prefisso.  

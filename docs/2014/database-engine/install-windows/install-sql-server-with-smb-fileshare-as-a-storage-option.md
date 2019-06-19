@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3242f463e24322921b16a513c1b3a6905965b390
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775334"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Installazione di SQL Server con l'opzione di archiviazione su condivisione file SMB
@@ -98,11 +98,11 @@ ms.locfileid: "62775334"
     > [!NOTE]  
     >  Le autorizzazioni di condivisione Controllo completo e le autorizzazioni NTFS sulle cartelle condivise SMB devono essere limitate a: account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e utenti di Windows con ruoli di amministratore del server.  
   
-     Si consiglia per utilizzare un account di dominio come account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'account di sistema viene usato come account del servizio, concedere le autorizzazioni per l'account del computer nel formato: _<nome_dominio>_**\\**_<nome_computer>_**$**.  
+     Si consiglia per utilizzare un account di dominio come account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'account di sistema viene usato come account del servizio, concedere le autorizzazioni per l'account del computer nel formato: _<nome_dominio>_ **\\** _<nome_computer>_ **$** .  
   
     > [!NOTE]  
     >  -   Durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario specificare l'account di dominio come account del servizio se la condivisione file SMB viene specificata come opzione di archiviazione. Con le condivisioni file SMB, è possibile specificare l'account di sistema come account del servizio solo dopo l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
-    > -   Gli account virtuali non possono essere autenticati a un percorso remoto. Per tutti gli account virtuali viene usata l'autorizzazione dell'account del computer. Eseguire il provisioning dell'account del computer nel formato _<nome_dominio>_**\\**_<nome_computer>_**$**.  
+    > -   Gli account virtuali non possono essere autenticati a un percorso remoto. Per tutti gli account virtuali viene usata l'autorizzazione dell'account del computer. Eseguire il provisioning dell'account del computer nel formato _<nome_dominio>_ **\\** _<nome_computer>_ **$** .  
   
 -   L'account utilizzato per installare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve disporre di autorizzazioni FULL CONTROL sulla cartella della condivisione file SMB utilizzata come directory dei dati o su qualsiasi altra cartella dei dati (directory del database utente, directory del log del database utente, directory TempDB, directory del log TempDB, directory di backup) durante l'Installazione del cluster.  
   

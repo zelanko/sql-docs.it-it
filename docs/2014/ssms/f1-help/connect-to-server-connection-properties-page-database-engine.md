@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca69ca5ca402e06999e2817c24c11c6b52d75f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245507"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Motore di database - Connetti al server (pagina Proprietà connessione)
@@ -24,7 +24,7 @@ ms.locfileid: "63245507"
   
 ## <a name="options"></a>Opzioni  
  **Connetti al database**  
- Selezionare dall'elenco un database al quale connettersi. Se si seleziona  **\<predefinito >**, si verrà connessi al database predefinito per il server. Se si seleziona  **\<Esplora server >**, è possibile esplorare il server per il database a cui connettersi.  
+ Selezionare dall'elenco un database al quale connettersi. Se si seleziona  **\<predefinito >** , si verrà connessi al database predefinito per il server. Se si seleziona  **\<Esplora server >** , è possibile esplorare il server per il database a cui connettersi.  
   
  Quando si esegue una connessione a un'istanza del motore di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], è necessario usare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e specificare un database nella scheda **Proprietà connessione** della finestra di dialogo **Connetti al server** . Assicurarsi di selezionare la casella di controllo **Crittografa connessione** .  
   

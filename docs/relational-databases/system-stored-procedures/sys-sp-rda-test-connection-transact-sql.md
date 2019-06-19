@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cdf171c66c19d87ea4919eeb55dca65f14b89ebd
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982875"
 ---
 # <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (Transact-SQL)
@@ -49,9 +49,9 @@ EXECUTE sys.sp_rda_test_connection
  @server_address = N'*azure_server_fully_qualified_address*'  
  L'indirizzo completo del server di Azure.  
   
--   Se si specifica un valore per **@database_name**, ma il database specificato non è abilitata per l'estensione, quindi è necessario specificare un valore per **@server_address**.  
+-   Se si specifica un valore per **@database_name** , ma il database specificato non è abilitata per l'estensione, quindi è necessario specificare un valore per **@server_address** .  
   
--   Se si specifica un valore per **@database_name**e il database specificato è abilitata per l'estensione, quindi non devi fornire un valore per **@server_address**. Se si specifica un valore per **@server_address**, la stored procedure viene ignorato e Usa il server di Azure già associate con il database abilitati per Stretch.  
+-   Se si specifica un valore per **@database_name** e il database specificato è abilitata per l'estensione, quindi non devi fornire un valore per **@server_address** . Se si specifica un valore per **@server_address** , la stored procedure viene ignorato e Usa il server di Azure già associate con il database abilitati per Stretch.  
   
  @azure_username = N'*azure_username*  
  Il nome utente per il server Azure remoto.  
