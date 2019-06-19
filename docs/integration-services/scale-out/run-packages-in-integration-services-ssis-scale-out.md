@@ -14,10 +14,10 @@ manager: craigg
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.openlocfilehash: 1825b26912b507b8e58b1828437102cf3650d5e6
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66015042"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Eseguire pacchetti nel servizio Integration Services (SSIS) Scale Out
@@ -66,7 +66,7 @@ Dopo aver distribuito i pacchetti nel server Integration Services, è possibile 
 
 1.  Creare le esecuzioni.
 
-    Chiamare `[catalog].[create_execution]` per ogni pacchetto. Impostare il parametro **@runinscaleout** su `True`. Se non tutti i computer Scale Out Worker sono autorizzati a eseguire il pacchetto, impostare il parametro **@useanyworker** su `False`. Per altre informazioni sulle stored procedure e sul parametro **@useanyworker**, vedere [ catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md). 
+    Chiamare `[catalog].[create_execution]` per ogni pacchetto. Impostare il parametro **@runinscaleout** su `True`. Se non tutti i computer Scale Out Worker sono autorizzati a eseguire il pacchetto, impostare il parametro **@useanyworker** su `False`. Per altre informazioni sulle stored procedure e sul parametro **@useanyworker** , vedere [ catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md). 
 
 2. Impostare i parametri di esecuzione.
 

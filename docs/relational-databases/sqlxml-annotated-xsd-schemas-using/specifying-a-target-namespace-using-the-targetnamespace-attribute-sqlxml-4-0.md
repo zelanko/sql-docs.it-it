@@ -22,10 +22,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a52ce206eee69fa585a72788e46f8f7174d936a8
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980824"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Specifica di uno spazio dei nomi di destinazione mediante l'attributo targetNamespace (SQLXML 4.0)
@@ -38,7 +38,7 @@ ms.locfileid: "65980824"
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per altre informazioni, vedere [requisiti per l'esecuzione di esempi di SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-a-target-namespace"></a>A. Specificare uno spazio dei nomi di destinazione  
- Il seguente schema XSD specifica uno spazio dei nomi di destinazione utilizzando il **xsd:targetNamespace** attributo. Lo schema imposta anche il **elementFormDefault** e **attributeFormDefault** per i valori dell'attributo **"unqualified"** (il valore predefinito per questi attributi). Si tratta di una dichiarazione globale e ha effetto su tutti gli elementi locali (**\<ordine >** nello schema) e gli attributi (**CustomerID**, **ContactName**, e **OrderID** nello schema).  
+ Il seguente schema XSD specifica uno spazio dei nomi di destinazione utilizzando il **xsd:targetNamespace** attributo. Lo schema imposta anche il **elementFormDefault** e **attributeFormDefault** per i valori dell'attributo **"unqualified"** (il valore predefinito per questi attributi). Si tratta di una dichiarazione globale e ha effetto su tutti gli elementi locali ( **\<ordine >** nello schema) e gli attributi (**CustomerID**, **ContactName**, e **OrderID** nello schema).  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -132,7 +132,7 @@ ms.locfileid: "65980824"
   
      Per altre informazioni, vedere [utilizzo di ADO per eseguire query SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Se lo schema specifica **elementFormDefault** e **attributeFormDefault** gli attributi con valore **"qualified"**, il documento di istanza conterrà tutti locale gli elementi e attributi qualificati. È possibile modificare lo schema precedente in modo da includere questi attributi nel  **\<xsd: schema >** elemento ed eseguire nuovamente il modello. Poiché ora anche gli attributi sono qualificati nell'istanza, la query XPath verrà modificata per includere il prefisso dello spazio dei nomi.  
+ Se lo schema specifica **elementFormDefault** e **attributeFormDefault** gli attributi con valore **"qualified"** , il documento di istanza conterrà tutti locale gli elementi e attributi qualificati. È possibile modificare lo schema precedente in modo da includere questi attributi nel  **\<xsd: schema >** elemento ed eseguire nuovamente il modello. Poiché ora anche gli attributi sono qualificati nell'istanza, la query XPath verrà modificata per includere il prefisso dello spazio dei nomi.  
   
  La query XPath modificata è:  
   

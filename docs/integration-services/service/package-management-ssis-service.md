@@ -29,10 +29,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6d4d453c1e5c6de342ac81fdd828a570bdc33e5a
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65805264"
 ---
 # <a name="package-management-ssis-service"></a>Gestione dei pacchetti (servizio SSIS)
@@ -143,15 +143,15 @@ Per arrestare un pacchetto in esecuzione dalla cartella **Pacchetti in esecuzion
   
     -   Per importare il pacchetto da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selezionare l'opzione **SQL Server** , specificare il server e selezionare la modalità di autenticazione. Se si seleziona l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare un nome utente e una password.  
   
-         Fare clic sul pulsante Sfoglia **(...)**, selezionare il pacchetto da importare e quindi fare clic su **OK**.  
+         Fare clic sul pulsante Sfoglia **(...)** , selezionare il pacchetto da importare e quindi fare clic su **OK**.  
   
     -   Per importare il pacchetto dal file system, selezionare l'opzione **File system** .  
   
-         Fare clic sul pulsante Sfoglia **(...)**, selezionare il pacchetto da importare e quindi fare clic su **Apri**.  
+         Fare clic sul pulsante Sfoglia **(...)** , selezionare il pacchetto da importare e quindi fare clic su **Apri**.  
   
     -   Per importare il pacchetto dall'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] , selezionare l'opzione **Archivio pacchetti SSIS** e specificare il server.  
   
-         Fare clic sul pulsante Sfoglia **(...)**, selezionare il pacchetto da importare e quindi fare clic su **OK**.  
+         Fare clic sul pulsante Sfoglia **(...)** , selezionare il pacchetto da importare e quindi fare clic su **OK**.  
   
 7.  Facoltativamente, aggiornare il nome del pacchetto.  
   
@@ -187,7 +187,7 @@ Per arrestare un pacchetto in esecuzione dalla cartella **Pacchetti in esecuzion
   
     -   Per eseguire l'esportazione nell'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] , selezionare l'opzione **Archivio pacchetti SSIS** e specificare il server.  
   
-         Fare clic sul pulsante Sfoglia **(...)**, espandere la cartella **Pacchetti SSIS** e selezionare la cartella in cui si vuole salvare il pacchetto. Facoltativamente, immettere un nuovo nome per il pacchetto nella casella di testo **Nome pacchetto** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+         Fare clic sul pulsante Sfoglia **(...)** , espandere la cartella **Pacchetti SSIS** e selezionare la cartella in cui si vuole salvare il pacchetto. Facoltativamente, immettere un nuovo nome per il pacchetto nella casella di testo **Nome pacchetto** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 7.  Per aggiornare il livello di protezione del pacchetto, fare clic sul pulsante Sfoglia **(...)** e specificare un livello di protezione diverso usando la finestra di dialogo **Livello di protezione pacchetto**. Se l'opzione **Crittografa tutti i dati sensibili con una password** o **Crittografa tutti i dati con una password** è selezionata, digitare e confermare una password.  
   

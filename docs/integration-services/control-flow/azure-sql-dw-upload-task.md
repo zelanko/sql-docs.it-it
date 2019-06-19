@@ -15,10 +15,10 @@ author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
 ms.openlocfilehash: 96be54415e3a2892da2ec892a0e90c02c5365e90
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727927"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Attività di caricamento di Azure SQL DW
@@ -27,7 +27,7 @@ ms.locfileid: "65727927"
 
 
 
-L'**'attività di caricamento di Azure SQL DW** consente a un pacchetto SSIS di copiare dati tabulari in Azure SQL Data Warehouse (DW) dal file system o da Archiviazione BLOB di Azure.
+L' **'attività di caricamento di Azure SQL DW** consente a un pacchetto SSIS di copiare dati tabulari in Azure SQL Data Warehouse (DW) dal file system o da Archiviazione BLOB di Azure.
 L'attività usa PolyBase per migliorare le prestazioni, come descritto nell'articolo [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)(Modelli e strategie di caricamento di Azure SQL Data Warehouse).
 Il formato di file dei dati di origine attualmente supportato è testo delimitato in codifica UTF8.
 Quando si copia dal file system, i dati vengono prima caricati in Archiviazione BLOB di Azure per lo staging e poi in Azure SQL DW. Per questo motivo, è quindi necessario un account di Archiviazione BLOB di Azure.
@@ -62,7 +62,7 @@ RetainFiles|Specifica se mantenere i file caricati in Archiviazione di Azure.
 CompressionType|Specifica il formato di compressione da usare durante il caricamento dei file in Archiviazione di Azure. L'origine locale non è interessata.
 CompressionLevel|Specifica il livello di compressione da usare per il formato di compressione.
 AzureDwConnection|Specifica una gestione connessione ADO.NET per Azure SQL DW.
-TableName|Specifica il nome della tabella di destinazione. Scegliere un nome di tabella esistente o crearne uno nuovo scegliendo **\<Nuova tabella ...>**.
+TableName|Specifica il nome della tabella di destinazione. Scegliere un nome di tabella esistente o crearne uno nuovo scegliendo **\<Nuova tabella ...>** .
 TableDistribution|Specifica il metodo di distribuzione per la nuova tabella. Si applica se per **TableName**viene specificato un nuovo nome tabella.
 HashColumnName|Specifica la colonna usata per la distribuzione di tabelle hash. Si applica se **HASH** è specificato per **TableDistribution**.
 
@@ -77,7 +77,7 @@ RowDelimiter|Specifica il carattere che contrassegna la fine di ogni riga.
 ColumnDelimiter|Specifica uno o più caratteri che contrassegnano la fine di ogni colonna. Ad esempio, &#124; (barra verticale), \t (TAB), ' (virgoletta singola), " (virgoletta doppia) e 0x5c (barra rovesciata).
 CompressionType|Specifica il formato di compressione usato per i dati di origine.
 AzureDwConnection|Specifica una gestione connessione ADO.NET per Azure SQL DW.
-TableName|Specifica il nome della tabella di destinazione. Scegliere un nome di tabella esistente o crearne uno nuovo scegliendo **\<Nuova tabella ...>**.
+TableName|Specifica il nome della tabella di destinazione. Scegliere un nome di tabella esistente o crearne uno nuovo scegliendo **\<Nuova tabella ...>** .
 TableDistribution|Specifica il metodo di distribuzione per la nuova tabella. Si applica se per **TableName**viene specificato un nuovo nome tabella.
 HashColumnName|Specifica la colonna usata per la distribuzione di tabelle hash. Si applica se **HASH** è specificato per **TableDistribution**.
 

@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: fa3c8cfcb4eb90c34bbab94a0d61998a6bc3c916
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485571"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Creare un flusso di lavoro personalizzato (Master Data Services)
@@ -83,7 +83,7 @@ ms.locfileid: "65485571"
     </setting>  
     ```  
   
-3.  Sotto l'impostazione "ConnectionString" aggiungere l'impostazione "WorkflowTypeExtenders" per associare il nome di un tag all'assembly del gestore del flusso di lavoro. Ad esempio:   
+3.  Sotto l'impostazione "ConnectionString" aggiungere l'impostazione "WorkflowTypeExtenders" per associare il nome di un tag all'assembly del gestore del flusso di lavoro. Ad esempio:  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  

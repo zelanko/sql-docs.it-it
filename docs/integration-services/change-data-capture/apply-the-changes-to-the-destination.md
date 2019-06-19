@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: db439c34845dc01c54752e01428fa9793f994fdb
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65729087"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>Applicazione delle modifiche alla destinazione
@@ -107,6 +107,6 @@ ms.locfileid: "65729087"
 ## <a name="optimizing-inserts-and-updates-by-using-merge-functionality"></a>Ottimizzazione di inserimenti e aggiornamenti tramite la funzionalità MERGE  
  È possibile ottimizzare l'elaborazione di inserimenti e aggiornamenti combinando alcune opzioni di Change Data Capture con l'utilizzo della parola chiave MERGE di Transact-SQL. Per ulteriori informazioni sulla parola chiave MERGE, vedere [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md).  
   
- Nell'istruzione Transact-SQL che recupera i dati delle modifiche, è possibile specificare *all with merge* come valore del parametro *row_filter_option* quando si chiama la funzione **cdc.fn_cdc_get_net_changes_<capture_instance>**. La funzione Change Data Capture ha maggiore efficacia quando non deve eseguire l'elaborazione aggiuntiva necessaria per distinguere gli inserimenti dagli aggiornamenti. Quando si specifica il valore di parametro *all with merge* , il valore **__$operation** dei dati delle modifiche è 1 per le eliminazioni e 5 per le modifiche prodotte da inserimenti o aggiornamenti. Per ulteriori informazioni sulla funzione Transact-SQL usata per recuperare i dati delle modifiche, vedere [Recuperare e comprendere i dati delle modifiche](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md). Dopo avere recuperato le modifiche con il valore di parametro *all with merge*, è possibile applicare le eliminazioni ed eseguire l'output delle righe rimanenti in una tabella temporanea o una tabella di staging. In un'attività Esegui SQL a valle è quindi possibile utilizzare una singola istruzione MERGE per applicare tutti gli inserimenti o gli aggiornamenti dalla tabella di staging alla destinazione.  
+ Nell'istruzione Transact-SQL che recupera i dati delle modifiche, è possibile specificare *all with merge* come valore del parametro *row_filter_option* quando si chiama la funzione **cdc.fn_cdc_get_net_changes_<capture_instance>** . La funzione Change Data Capture ha maggiore efficacia quando non deve eseguire l'elaborazione aggiuntiva necessaria per distinguere gli inserimenti dagli aggiornamenti. Quando si specifica il valore di parametro *all with merge* , il valore **__$operation** dei dati delle modifiche è 1 per le eliminazioni e 5 per le modifiche prodotte da inserimenti o aggiornamenti. Per ulteriori informazioni sulla funzione Transact-SQL usata per recuperare i dati delle modifiche, vedere [Recuperare e comprendere i dati delle modifiche](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md). Dopo avere recuperato le modifiche con il valore di parametro *all with merge*, è possibile applicare le eliminazioni ed eseguire l'output delle righe rimanenti in una tabella temporanea o una tabella di staging. In un'attività Esegui SQL a valle è quindi possibile utilizzare una singola istruzione MERGE per applicare tutti gli inserimenti o gli aggiornamenti dalla tabella di staging alla destinazione.  
   
   

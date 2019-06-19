@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d24a66ce59b3908a04e3ab7719265fbef3c96f58
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503214"
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
@@ -112,9 +112,9 @@ identifier
  *xml_column_name*  
  Nome della colonna XML contenente i percorsi che si desidera indicizzare.  
   
- [WITH XMLNAMESPACES **(**\<xmlnamespace_list>**)**] Elenco degli spazi dei nomi usati nei percorsi da indicizzare. Per informazioni sulla sintassi della clausola WITH XMLNAMESPACES, vedere [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md).  
+ [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)** ] Elenco degli spazi dei nomi usati nei percorsi da indicizzare. Per informazioni sulla sintassi della clausola WITH XMLNAMESPACES, vedere [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md).  
   
- FOR **(**\<promoted_node_path_list>**)** Elenco di percorsi da indicizzare con hint di ottimizzazione facoltativi. Per informazioni sui percorsi e gli hint di ottimizzazione che è possibile specificare nell'istruzione CREATE o ALTER, vedere [Specificare percorsi e hint di ottimizzazione per indici XML selettivi](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
+ FOR **(** \<promoted_node_path_list> **)** Elenco di percorsi da indicizzare con hint di ottimizzazione facoltativi. Per informazioni sui percorsi e gli hint di ottimizzazione che è possibile specificare nell'istruzione CREATE o ALTER, vedere [Specificare percorsi e hint di ottimizzazione per indici XML selettivi](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
   
  WITH *\<index_options>* Per informazioni sulle opzioni di indicizzazione, vedere [CREATE XML INDEX &#40;Indici XML selettivi&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   

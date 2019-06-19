@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c033a631425a051fae411acbd5ff589302eb7344
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728477"
 ---
 # <a name="the-oracle-cdc-service"></a>Servizio Oracle CDC
@@ -76,7 +76,7 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
  Se viene utilizzato un algoritmo diverso, è possibile eliminare questa chiave e crearne una nuova con lo stesso nome e crittografata con la stessa password.  
   
- La password della chiave asimmetrica è la password master salvata nel Registro di sistema nel percorso **HKLM\Software\Microsoft\XDBCDCSVC\\<nome-servizio>**. Tale chiave è accessibile solo agli amministratori locali e all'account del servizio di Windows Oracle CDC. La chiave contiene un valore binario crittografato **AsymmetricKeyPassword** in cui è archiviata la password della chiave asimmetrica. L'accesso a questa chiave del Registro di sistema è necessario per accedere alle credenziali di log mining Oracle.  
+ La password della chiave asimmetrica è la password master salvata nel Registro di sistema nel percorso **HKLM\Software\Microsoft\XDBCDCSVC\\<nome-servizio>** . Tale chiave è accessibile solo agli amministratori locali e all'account del servizio di Windows Oracle CDC. La chiave contiene un valore binario crittografato **AsymmetricKeyPassword** in cui è archiviata la password della chiave asimmetrica. L'accesso a questa chiave del Registro di sistema è necessario per accedere alle credenziali di log mining Oracle.  
   
  Per utilizzare la clausola ENCRYPTION BY PASSWORD, è necessario che la password soddisfi i criteri password Windows per il computer in cui viene eseguita l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A tale scopo, selezionare la password della chiave asimmetrica in base a questi criteri.  
   

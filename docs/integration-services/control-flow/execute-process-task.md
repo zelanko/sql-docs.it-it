@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af2cc62bd09dd2376c68ec5d66e4867369ef8b68
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727754"
 ---
 # <a name="execute-process-task"></a>Attività Esegui processo
@@ -117,15 +117,15 @@ ms.locfileid: "65727754"
  Digitare il percorso della cartella contenente il file eseguibile oppure fare clic sul pulsante sfoglia **(...)** per individuare la cartella.  
   
  **StandardInputVariable**  
- Selezionare una variabile per l'invio dell'input al processo oppure fare clic su \<**Nuova variabile...**> per crearne una nuova:  
+ Selezionare una variabile per l'invio dell'input al processo oppure fare clic su \<**Nuova variabile...** > per crearne una nuova:  
   
  **Argomenti correlati:** [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **StandardOutputVariable**  
- Selezionare una variabile per l'acquisizione dell'output del processo oppure fare clic su \<**Nuova variabile...**> per crearne una nuova.  
+ Selezionare una variabile per l'acquisizione dell'output del processo oppure fare clic su \<**Nuova variabile...** > per crearne una nuova.  
   
  **StandardErrorVariable**  
- Selezionare una variabile per l'acquisizione dell'output di errore del processore oppure fare clic su \<**Nuova variabile...**> per crearne una nuova.  
+ Selezionare una variabile per l'acquisizione dell'output di errore del processore oppure fare clic su \<**Nuova variabile...** > per crearne una nuova.  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  Consente di indicare se l'attività deve avere esito negativo nel caso in cui il codice di uscita del processo non corrisponda al valore specificato in **SuccessValue**.  

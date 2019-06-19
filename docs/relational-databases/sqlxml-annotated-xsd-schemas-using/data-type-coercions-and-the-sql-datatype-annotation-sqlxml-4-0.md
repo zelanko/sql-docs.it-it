@@ -24,10 +24,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 21dc355570d5a2778e553924a189ce985513a7cc
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981034"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>Coercizioni dei tipi di dati e annotazione sql:datatype (SQLXML 4.0)
@@ -89,9 +89,9 @@ ms.locfileid: "65981034"
 ## <a name="sqldatatype-annotation"></a>Annotazione sql:datatype  
  Il **SQL: DataType** annotazione viene usata per specificare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati deve essere specificato quando:  
   
--   Si esegue un caricamento bulk in una **data/ora** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colonna da uno schema XSD **dateTime**, **date**, o **ora** tipo. In questo caso, è necessario identificare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati colonna usando **SQL: DataType = "dateTime"**. Questa regola si applica anche agli updategram.  
+-   Si esegue un caricamento bulk in una **data/ora** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colonna da uno schema XSD **dateTime**, **date**, o **ora** tipo. In questo caso, è necessario identificare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati colonna usando **SQL: DataType = "dateTime"** . Questa regola si applica anche agli updategram.  
   
--   Si esegue un caricamento bulk in una colonna di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **uniqueidentifier** tipo e il valore XSD è un GUID che include parentesi graffe ({e}). Quando si specifica **SQL: DataType = "uniqueidentifier"**, le parentesi graffe vengono rimosse dal valore prima che venga inserito nella colonna. Se **SQL: DataType** non viene specificato, il valore viene inviato con le parentesi graffe e l'inserimento o aggiornamento di ha esito negativo.  
+-   Si esegue un caricamento bulk in una colonna di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **uniqueidentifier** tipo e il valore XSD è un GUID che include parentesi graffe ({e}). Quando si specifica **SQL: DataType = "uniqueidentifier"** , le parentesi graffe vengono rimosse dal valore prima che venga inserito nella colonna. Se **SQL: DataType** non viene specificato, il valore viene inviato con le parentesi graffe e l'inserimento o aggiornamento di ha esito negativo.  
   
 -   Il tipo di dati XML **base64Binary** esegue il mapping a varie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati (**binario**, **immagine**, o **varbinary**). Eseguire il mapping di tipo di dati XML **base64Binary** a uno specifico [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati, usare i **SQL: DataType** annotazione. Questa annotazione specifica il tipo di dati esplicito di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] della colonna a cui viene mappato l'attributo. Ciò risulta utile durante l'archiviazione dei dati nei database. Specificando il **SQL: DataType** annotazione, è possibile identificare l'impostazione esplicita [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati.  
   

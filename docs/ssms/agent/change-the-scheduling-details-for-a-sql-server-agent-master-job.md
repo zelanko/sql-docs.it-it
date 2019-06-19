@@ -13,10 +13,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1cdfd05aea7be9baf5172b169c3ecd329693e1f1
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105906"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Change the Scheduling Details for a SQL Server Agent Master Job
@@ -63,7 +63,7 @@ Un processo master di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
   
 4.  Fare clic con il pulsante destro del mouse sul processo di cui si vuole modificare la pianificazione e selezionare **Proprietà**.  
   
-5.  Nella finestra di dialogo **Proprietà processo -**_nome\_processo_ selezionare **Pianificazioni** in **Selezione pagina**. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [Proprietà processo - Nuovo processo &#40;pagina Pianificazioni&#41;](../../ssms/agent/job-properties-new-job-schedules-page.md).  
+5.  Nella finestra di dialogo **Proprietà processo -** _nome\_processo_ selezionare **Pianificazioni** in **Selezione pagina**. Per altre informazioni sulle opzioni disponibili in questa pagina, vedere [Proprietà processo - Nuovo processo &#40;pagina Pianificazioni&#41;](../../ssms/agent/job-properties-new-job-schedules-page.md).  
   
 6.  Al termine, fare clic su **OK**.  
   

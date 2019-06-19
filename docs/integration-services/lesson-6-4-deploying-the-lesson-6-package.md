@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4c843fa7af8e3390e820714886b7988edab878d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65720821"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>Lezione 6-4: Distribuire il pacchetto della lezione 6
@@ -39,7 +39,7 @@ In questa attività:
   
 1.  Selezionare **Start** > **Tutti i programmi** > **Microsoft SQL Server 2017** e quindi selezionare **SQL Management Studio**.  
   
-2.  Nella finestra di dialogo **Connetti al server** verificare le impostazioni predefinite e quindi selezionare **Connetti**. Per eseguire la connessione, è necessario che il **nome** del server sia il nome del computer in cui è installato SQL Server. Se il **motore di database** è un'istanza denominata, il nome nella casella **Server** deve essere il nome dell'istanza nel formato *\<nome_computer>\\\<nome_istanza>*. 
+2.  Nella finestra di dialogo **Connetti al server** verificare le impostazioni predefinite e quindi selezionare **Connetti**. Per eseguire la connessione, è necessario che il **nome** del server sia il nome del computer in cui è installato SQL Server. Se il **motore di database** è un'istanza denominata, il nome nella casella **Server** deve essere il nome dell'istanza nel formato *\<nome_computer>\\\<nome_istanza>* . 
   
 3.  In **Esplora oggetti** espandere **Cataloghi di Integration Services**.  
   
@@ -97,7 +97,7 @@ Quando si chiude la Conversione guidata progetto di Integration Services, SSIS v
   
 ## <a name="create-and-populate-a-new-sample-data-folder"></a>Creare e popolare una nuova cartella di dati di esempio  
   
-1.  In **Esplora risorse** al livello di radice dell'unità, ad esempio **C:\\**, creare una cartella denominata **Sample Data Two**.  
+1.  In **Esplora risorse** al livello di radice dell'unità, ad esempio **C:\\** , creare una cartella denominata **Sample Data Two**.  
   
 2.  Aprire la cartella **Sample Data** riportata nei [prerequisiti della lezione 1](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites) e quindi copiare uno dei tre file di esempio.  
   

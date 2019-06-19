@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cce0b8606b398d1c72b70c161bb8ccdf0d779167
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728058"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Attività Esegui DDL Analysis Services
@@ -275,7 +275,7 @@ ms.locfileid: "65728058"
   
 #### <a name="sourcetype--file-connection"></a>SourceType = File Connection  
  **Origine**  
- Selezionare una connessione file dall'elenco oppure fare clic su \<**Nuova connessione...**> e usare la finestra di dialogo **Gestione connessione file** per creare una nuova connessione.  
+ Selezionare una connessione file dall'elenco oppure fare clic su \<**Nuova connessione...** > e usare la finestra di dialogo **Gestione connessione file** per creare una nuova connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md)  
   

@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 401d146241bae341db981f207f877c18919eaaa2
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728188"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>gestione connessione per più file flat
@@ -243,7 +243,7 @@ ms.locfileid: "65728188"
 |**TextQualified**|Consente di specificare se i dati di testo sono qualificati usando un carattere qualificatore di testo:<br /><br /> **True**: i dati di tipo testo nel file flat sono qualificati.<br /><br /> **False**: i dati di tipo testo nel file flat non sono qualificati.|  
 |**Nome**|Consente di specificare un nome per la colonna. Per impostazione predefinita, si tratta di un elenco numerato di colonne. È comunque possibile scegliere qualsiasi nome descrittivo univoco.|  
 |**DataScale**|Consente di specificare la scala dei dati numerici. Per scala si intende il numero di posizioni decimali. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  
-|**ColumnDelimiter**|Consente di selezionare i delimitatori di colonna disponibili nell'apposito elenco. Scegliere come delimitatori caratteri che non siano già presenti nel testo. Questo valore viene ignorato per le colonne a larghezza fissa.<br /><br /> **{CR}{LF}**: le colonne sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga<br /><br /> **{CR}**: le colonne sono delimitate da un ritorno a capo<br /><br /> **{LF}**: le colonne sono delimitate da un avanzamento riga<br /><br /> **Punto e virgola {;}**: le colonne sono delimitate da un punto e virgola<br /><br /> **Due punti {:}**: le colonne sono delimitate da due punti<br /><br /> **Virgola {,}{,}**: le colonne sono delimitate da una virgola<br /><br /> **Tabulazione {t}**: le colonne sono delimitate da una tabulazione<br /><br /> **Barra verticale {&#124;}**: le colonne sono delimitate da una barra verticale|  
+|**ColumnDelimiter**|Consente di selezionare i delimitatori di colonna disponibili nell'apposito elenco. Scegliere come delimitatori caratteri che non siano già presenti nel testo. Questo valore viene ignorato per le colonne a larghezza fissa.<br /><br /> **{CR}{LF}** : le colonne sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga<br /><br /> **{CR}** : le colonne sono delimitate da un ritorno a capo<br /><br /> **{LF}** : le colonne sono delimitate da un avanzamento riga<br /><br /> **Punto e virgola {;}** : le colonne sono delimitate da un punto e virgola<br /><br /> **Due punti {:}** : le colonne sono delimitate da due punti<br /><br /> **Virgola {,}{,}** : le colonne sono delimitate da una virgola<br /><br /> **Tabulazione {t}** : le colonne sono delimitate da una tabulazione<br /><br /> **Barra verticale {&#124;}** : le colonne sono delimitate da una barra verticale|  
 |**DataPrecision**|Consente di specificare la precisione dei dati numerici. Per precisione si intende il numero di cifre. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**InputColumnWidth**|Consente di specificare il valore da archiviare come conteggio di byte. Nel caso dei file Unicode tale valore verrà visualizzato come conteggio di caratteri. Questo valore viene ignorato nelle colonne delimitate.<br /><br /> **Nota** : nel modello a oggetti il nome di questa proprietà è ColumnWidth.|  
   

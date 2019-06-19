@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd43f430f43f31435df6fff71687136f4bd5f9e7
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010363"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Accedere alle tabelle FileTable con API di Input-Output dei file
@@ -92,7 +92,7 @@ ms.locfileid: "66010363"
   
 -   Il rollback di tali modifiche non è possibile.  
   
- È tuttavia possibile accedere alla colonna FILESTREAM in una tabella FileTable anche con l'accesso FILESTREAM transazionale chiamando **OpenSqlFileStream()**. Questo tipo di accesso può essere completamente transazionale e soddisferà tutti i livelli di coerenza delle transazioni attualmente supportati.  
+ È tuttavia possibile accedere alla colonna FILESTREAM in una tabella FileTable anche con l'accesso FILESTREAM transazionale chiamando **OpenSqlFileStream()** . Questo tipo di accesso può essere completamente transazionale e soddisferà tutti i livelli di coerenza delle transazioni attualmente supportati.  
   
 ###  <a name="concurrency"></a> Controllo della concorrenza  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applica il controllo della concorrenza per l'accesso alla tabella FileTable tra applicazioni del file system, nonché tra applicazioni del file system e applicazioni [!INCLUDE[tsql](../../includes/tsql-md.md)] . Questo controllo della concorrenza viene effettuato applicando blocchi appropriati nelle righe della tabella FileTable.  
@@ -106,23 +106,23 @@ ms.locfileid: "66010363"
 |----------------|---------------|--------------|  
 |**Blocchi opportunistici (oplock)**|Yes|È disponibile il supporto opportunistico per livello 1, livello 2, batch e filtri.|  
 |**Attributi estesi**|No||  
-|**Punti di analisi**|No||  
+|**Punti di analisi**|no||  
 |**ACL persistenti**|No||  
 |**Flussi denominati**|No||  
 |**File sparse**|Yes|Il tipo sparse può essere impostato solo per i file e influisce sull'archiviazione del flusso dei dati. Poiché i dati FILESTREAM vengono archiviati in volumi NTFS, la funzionalità FileTable supporta file sparse inoltrando le richieste al file system NTFS.|  
 |**Compressione**|Yes||  
 |**Crittografia**|Yes||  
-|**TxF**|No||  
-|**ID file**|No||  
-|**ID oggetto**|no||  
-|**Collegamenti simbolici**|no||  
+|**TxF**|no||  
+|**ID file**|no||  
+|**ID oggetto**|No||  
+|**Collegamenti simbolici**|No||  
 |**Collegamenti reali**|No||  
 |**Nomi brevi**|No||  
 |**Notifiche di modifica di directory**|No||  
 |**Blocco di intervalli di byte**|Yes|Le richieste del blocco degli intervalli di byte vengono passate al file system NTFS.|  
 |**File di cui è stato eseguito il mapping in memoria**|No||  
 |**Annullamento I/O**|Yes||  
-|**Sicurezza**|No|Vengono applicate la sicurezza a livello di condivisione di Windows e la sicurezza a livello di tabella e di colonna di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|**Sicurezza**|no|Vengono applicate la sicurezza a livello di condivisione di Windows e la sicurezza a livello di tabella e di colonna di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**Journal USN**|No|Le modifiche ai metadati di file e directory in una tabella FileTable sono operazioni DML in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vengono pertanto registrate nel file di log del database corrispondente. Non vengono invece registrate nel journal USN NTFS, ad eccezione delle modifiche di dimensione.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per acquisire informazioni simili.|  
   
 ## <a name="see-also"></a>Vedere anche  

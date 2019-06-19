@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: feacddee000b296e5a0687e63deb1cb75fe1b04c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727814"
 ---
 # <a name="data-profile-viewer"></a>Visualizzatore profilo dati
@@ -38,24 +38,24 @@ ms.locfileid: "65727814"
   
 -   Fare clic con il pulsante destro del mouse sull'attività **Profiling dati** in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , quindi scegliere **Modifica**. Fare clic su **Apri Visualizzatore profilo** nella pagina **Generale** dell' **Editor attività Profiling dati**.  
   
--   Nella cartella *\<unità>*:\Programmi (x86) | Programmi\Microsoft SQL Server\110\DTS\Binn eseguire DataProfileViewer.exe.  
+-   Nella cartella *\<unità>* :\Programmi (x86) | Programmi\Microsoft SQL Server\110\DTS\Binn eseguire DataProfileViewer.exe.  
   
  Il visualizzatore contiene più riquadri per visualizzare i profili richiesti e i risultati calcolati, con funzionalità di drill-down e dettagli facoltativi:  
   
- Riquadro**Profili**   
+ Riquadro**Profili**  
  Nel riquadro **Profili** vengono visualizzati i profili richiesti nell'attività Profiling dati. Per visualizzare i risultati calcolati per il profilo, selezionare il profilo nel riquadro **Profili** . I risultati verranno visualizzati negli altri riquadri del visualizzatore.  
   
- Riquadro**Risultati**   
+ Riquadro**Risultati**  
  Il riquadro **Risultati** usa una singola riga per riepilogare i risultati calcolati del profilo. Se, ad esempio, si richiede un **profilo Distribuzione lunghezze di colonna**, questa riga include le lunghezze minima e massima e il conteggio delle righe. Per la maggior parte dei profili è possibile selezionare questa riga nel riquadro **Risultati** per visualizzare altri dettagli nel riquadro **Dettagli** facoltativo.  
   
- Riquadro**Dettagli**   
+ Riquadro**Dettagli**  
  Per la maggior parte dei tipi di profilo, il riquadro **Dettagli** contiene informazioni aggiuntive sui risultati del profilo selezionati nel riquadro **Risultati** . Se, ad esempio, si richiede un **profilo Distribuzione lunghezze di colonna**, nel riquadro **Dettagli** verrà visualizzata ogni lunghezza di colonna rilevata. Nel riquadro viene inoltre visualizzato il numero e la percentuale di righe in cui il valore di colonna ha la lunghezza di colonna specificata.  
   
  Per i tre tipi di profilo calcolati in più colonne (profili Chiave candidata, Dipendenza funzionale e Inclusione valore), nel riquadro **Dettagli** vengono visualizzate le eventuali violazioni della relazione prevista. Se, ad esempio, si richiede un profilo Chiave candidata, nel riquadro Dettagli verranno visualizzati i valori duplicati che violano l'univocità della chiave candidata.  
   
  Se l'origine dati usata per calcolare il profilo è disponibile, è possibile fare doppio clic su una riga nel riquadro **Dettagli** per visualizzare le righe di dati corrispondenti nel riquadro **Drill-down** .  
   
- Riquadro**Drill-down**   
+ Riquadro**Drill-down**  
  È possibile fare doppio clic su una riga nel riquadro **Dettagli** per visualizzare le righe di dati corrispondenti nel riquadro **Drill-down** quando sono vere le condizioni seguenti:  
   
 -   L'origine dati utilizzata per calcolare il profilo è disponibile.  
@@ -80,13 +80,13 @@ ms.locfileid: "65727814"
  **Aprire**  
  Consente di accedere al file salvato che contiene l'output dell'attività Profiling dati.  
   
- Riquadro**Profili**   
+ Riquadro**Profili**  
  Espandere l'albero nel riquadro **Profili** per visualizzare i profili inclusi nell'output. Selezionare un profilo per visualizzarne i risultati.  
   
- Riquadro**Messaggio**   
+ Riquadro**Messaggio**  
  Visualizza i messaggi di stato.  
   
- Riquadro**Drill-down**   
+ Riquadro**Drill-down**  
  Visualizza le righe di dati che corrispondono a un valore nell'output, se l'origine dati utilizzata dall'attività Profiling dati è disponibile.  
   
  Se, ad esempio, si visualizza l'output di un profilo Distribuzione valori di colonna per una colonna US State, il riquadro **Distribuzione dettagliata valori** potrebbe contenere una riga per "WA". Fare doppio clic sulla riga nel riquadro **Distribuzione dettagliata valori** per visualizzare le righe di dati in cui il valore della colonna di stato è "WA" nel riquadro di drill-down.  
@@ -223,7 +223,7 @@ ms.locfileid: "65727814"
  Visualizza il numero di righe in cui il valore della colonna determinante determina la colonna dipendente.  
   
  **Conteggio violazioni**  
- Visualizza il numero di righe in cui il valore della colonna determinante non determina la colonna dipendente. Si tratta delle righe in cui i valori dipendenti corrispondono ai valori indicati nella colonna **\<dependent column name>**.  
+ Visualizza il numero di righe in cui il valore della colonna determinante non determina la colonna dipendente. Si tratta delle righe in cui i valori dipendenti corrispondono ai valori indicati nella colonna **\<dependent column name>** .  
   
  **Percentuale del supporto**  
  Visualizza la percentuale di righe in cui la colonna determinante determina la colonna dipendente.  

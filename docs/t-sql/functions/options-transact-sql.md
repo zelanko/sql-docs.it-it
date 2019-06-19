@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4750fe9d0c74d8443f3482557268e67858d882f1
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944852"
 ---
 # <a name="x40x40options-transact-sql"></a>&#x40;&#x40;OPTIONS (Transact-SQL)
@@ -50,7 +50,7 @@ ms.locfileid: "65944852"
   
  La funzione **@@OPTIONS** restituisce una mappa di bit delle opzioni, convertita in un numero intero in base 10 (decimale). Le impostazioni di bit vengono archiviate nei percorsi descritti in un tabella dell'argomento [Configurare l'opzione di configurazione del server user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md).  
   
- Per decodificare il valore di **@@OPTIONS**, convertire il numero intero restituito da **@@OPTIONS** in binario e quindi cercare i valori nella tabella riportata in [Configurare l'opzione di configurazione del server user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md). Se, ad esempio, `SELECT @@OPTIONS;` restituisce il valore `5496`, usare la calcolatrice di Windows (**calc.exe**) per convertire il valore decimale `5496` in binario. Il risultato è `1010101111000`. I caratteri più a destra (binario 1, 2 e 4) corrispondono a 0. Ciò indica che i primi tre elementi della tabella sono impostati su OFF. Consultando la tabella, si noterà che si tratta di **DISABLE_DEF_CNST_CHK**, **IMPLICIT_TRANSACTIONS** e **CURSOR_CLOSE_ON_COMMIT**. L'elemento successivo, ovvero **ANSI_WARNINGS** nella posizione `1000`, è impostato su ON. Continuare a lavorare verso sinistra nella mappa di bit e verso il basso nell'elenco di opzioni. Quando le opzioni più a sinistra corrispondono a 0, vengono troncate dalla conversione dei tipi. La mappa di bit `1010101111000` è in realtà `001010101111000` per rappresentare tutte e 15 le opzioni.  
+ Per decodificare il valore di **@@OPTIONS** , convertire il numero intero restituito da **@@OPTIONS** in binario e quindi cercare i valori nella tabella riportata in [Configurare l'opzione di configurazione del server user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md). Se, ad esempio, `SELECT @@OPTIONS;` restituisce il valore `5496`, usare la calcolatrice di Windows (**calc.exe**) per convertire il valore decimale `5496` in binario. Il risultato è `1010101111000`. I caratteri più a destra (binario 1, 2 e 4) corrispondono a 0. Ciò indica che i primi tre elementi della tabella sono impostati su OFF. Consultando la tabella, si noterà che si tratta di **DISABLE_DEF_CNST_CHK**, **IMPLICIT_TRANSACTIONS** e **CURSOR_CLOSE_ON_COMMIT**. L'elemento successivo, ovvero **ANSI_WARNINGS** nella posizione `1000`, è impostato su ON. Continuare a lavorare verso sinistra nella mappa di bit e verso il basso nell'elenco di opzioni. Quando le opzioni più a sinistra corrispondono a 0, vengono troncate dalla conversione dei tipi. La mappa di bit `1010101111000` è in realtà `001010101111000` per rappresentare tutte e 15 le opzioni.  
   
 ## <a name="examples"></a>Esempi  
   

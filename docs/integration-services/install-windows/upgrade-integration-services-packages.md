@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.openlocfilehash: 3d7a1d96603168560c55b78fb05b5546e8674c7c
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65805387"
 ---
 # <a name="upgrade-integration-services-packages"></a>Aggiornare pacchetti di Integration Services
@@ -59,14 +59,14 @@ ms.locfileid: "65805387"
   
 -   DTExecUI.exe.config  
   
- Per usare [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] per progettare pacchetti in cui siano inclusi i componenti personalizzati [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], è necessario modificare il file devenv.exe.config disponibile in *\<unità>*:\Programmi\Microsoft Visual Studio 10.0\Common7\IDE.  
+ Per usare [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] per progettare pacchetti in cui siano inclusi i componenti personalizzati [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], è necessario modificare il file devenv.exe.config disponibile in *\<unità>* :\Programmi\Microsoft Visual Studio 10.0\Common7\IDE.  
   
  Per utilizzare questi pacchetti con le applicazioni dei clienti che vengono compilate con il runtime per [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], includere le regole di reindirizzamento nella sezione di configurazione del file *.exe.config per il file eseguibile. Le regole reindirizzano gli assembly di runtime alla versione 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Per altre informazioni sul reindirizzamento della versione dell'assembly, vedere [Elemento \<assemblyBinding> per \<runtime>](https://msdn.microsoft.com/library/twy1dw1e.aspx).  
   
 ### <a name="locating-the-assemblies"></a>Individuazione degli assembly  
- In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]gli assembly [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono stati aggiornati a .NET 4.0. È disponibile una Global Assembly Cache separata per .NET 4 in *\<unità>*:\Windows\Microsoft.NET\assembly. Tutti gli assembly di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] possono essere individuati in questo percorso, generalmente nella cartella GAC_MSIL.  
+ In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]gli assembly [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono stati aggiornati a .NET 4.0. È disponibile una Global Assembly Cache separata per .NET 4 in *\<unità>* :\Windows\Microsoft.NET\assembly. Tutti gli assembly di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] possono essere individuati in questo percorso, generalmente nella cartella GAC_MSIL.  
   
- Come nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i file DLL di estendibilità principali di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili anche in *\<unità>*:\Programmi\Microsoft SQL Server\130\SDK\Assemblies.  
+ Come nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i file DLL di estendibilità principali di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili anche in *\<unità>* :\Programmi\Microsoft SQL Server\130\SDK\Assemblies.  
   
 ## <a name="understanding-sql-server-package-upgrade-results"></a>Informazioni sui risultati dell'aggiornamento dei pacchetti di SQL Server  
  Durante il processo di aggiornamento dei pacchetti, la maggior parte dei componenti e delle funzionalità dei pacchetti di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] viene convertita facilmente nella controparte della versione corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Diversi componenti e funzionalità, tuttavia, non verranno aggiornati o avranno risultati di cui è consigliabile tenere conto. Nella tabella seguente vengono identificati tali componenti e funzionalità.  

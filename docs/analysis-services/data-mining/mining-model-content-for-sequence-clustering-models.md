@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f0498fd93a6ed613078b4339e36e3d71e929b8f
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65961374"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models"></a>Contenuto dei modelli di data mining per i modelli Sequence Clustering
@@ -21,7 +21,7 @@ ms.locfileid: "65961374"
   In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo Microsoft Sequence Clustering. Per una spiegazione della terminologia generale e statistica relativa al contenuto dei modelli di data mining applicabile a tutti i tipi di modello, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-sequence-clustering-model"></a>Informazioni sulla struttura di un modello Sequence Clustering  
- Un modello Sequence Clustering include un singolo nodo padre (NODE_TYPE = 1) che rappresenta il modello e i relativi metadati. Il nodo padre, identificato con **(All)**, include un nodo di sequenza correlato (NODE_TYPE = 13) che elenca tutte le transizioni rilevate nei dati di training.  
+ Un modello Sequence Clustering include un singolo nodo padre (NODE_TYPE = 1) che rappresenta il modello e i relativi metadati. Il nodo padre, identificato con **(All)** , include un nodo di sequenza correlato (NODE_TYPE = 13) che elenca tutte le transizioni rilevate nei dati di training.  
   
  ![Struttura del modello sequence clustering](../../analysis-services/data-mining/media/modelcontent-seqclust.gif "struttura del modello sequence clustering")  
   

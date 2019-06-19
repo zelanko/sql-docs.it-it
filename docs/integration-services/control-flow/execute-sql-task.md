@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64ee2c630d026870e8133377d34610d831ccc360
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727717"
 ---
 # <a name="execute-sql-task"></a>Attività Esegui SQL
@@ -191,7 +191,7 @@ Per sapere di più sul linguaggio di query Transact-SQL, vedere [Guida di riferi
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = Connessione file  
  **FileConnection**  
- Selezionare una gestione connessione file esistente o fare clic su \<**Nuova connessione...**> per creare una nuova gestione connessione.  
+ Selezionare una gestione connessione file esistente o fare clic su \<**Nuova connessione...** > per creare una nuova gestione connessione.  
   
  **Argomenti correlati:** [Gestione connessione file](../../integration-services/connection-manager/file-connection-manager.md), [Editor gestione connessione file](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
@@ -348,7 +348,7 @@ Le istruzioni SQL e le stored procedure usano spesso parametri di **input** , pa
   
 -   Un parametro di **output** con il tipo di dati appropriato, come elencato nella tabella seguente.  
   
-    |Tipo di parametro di**Output** |Tipo di dati date|  
+    |Tipo di parametro di**Output**|Tipo di dati date|  
     |-------------------------------|--------------------|  
     |SQL_DATE|**data**|  
     |SQL_SS_TIME2|**time**|  
