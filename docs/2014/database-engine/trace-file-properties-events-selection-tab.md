@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a6c6da76bd89b4686791087e558ae1f329f57a3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088795"
 ---
 # <a name="trace-file-properties-events-selection-tab"></a>Proprietà file di traccia (scheda Selezione eventi)
@@ -27,7 +27,7 @@ ms.locfileid: "66088795"
  Per visualizzare questa finestra, aprire un file di traccia Scegliere **Proprietà** dal menu **File**e quindi fare clic sulla scheda **Selezione eventi** .  
   
 ## <a name="options"></a>Opzioni  
- Colonna**Eventi**   
+ Colonna**Eventi**  
  Consente di visualizzare gli eventi inseriti nella traccia organizzati per categoria. Inizialmente sono selezionati tutti gli eventi della traccia. È possibile selezionare gli eventi selezionando le rispettive caselle o colonne di dati. Se si seleziona la casella corrispondente all'evento, verranno selezionate tutte le colonne di dati disponibili per tale evento. Se si seleziona la colonna di dati corrispondente all'evento, quest'ultimo viene selezionato insieme a tutte le altre colonne necessarie. Se si sta visualizzando un file o una tabella di traccia, è possibile deselezionare le caselle di controllo relative agli eventi o alle colonne di dati per ridurre la quantità di dati visibili nella finestra di traccia, facilitandone in tal modo l'analisi. È inoltre possibile modificare i filtri colonna per ridurre la quantità di dati visibili nella finestra di traccia. Per ulteriori informazioni sulle classi degli eventi, vedere [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Colonne di dati  

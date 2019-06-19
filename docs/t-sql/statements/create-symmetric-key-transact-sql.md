@@ -1,7 +1,7 @@
 ---
 title: CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/12/2017
+ms.date: 06/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 54c25b504befc151b31bf6f0727838170b6d5a9b
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 56be2b8913002d681a4478eff80448acd2e71089
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326502"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66836354"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ CREATE SYMMETRIC KEY key_name
   
 ## <a name="arguments"></a>Argomenti  
  *Key_name*  
- Specifica il nome univoco con il quale la chiave simmetrica è nota all'interno del database. I nomi delle chiavi temporanee devono iniziare con un simbolo di cancelletto (#), ad esempio **#temporaryKey900007**. Non è possibile creare una chiave simmetrica con un nome che inizia con più di un simbolo di cancelletto (#). Non è possibile creare una chiave simmetrica temporanea utilizzando un provider EKM.  
+ Specifica il nome univoco con il quale la chiave simmetrica è nota all'interno del database. Le chiavi temporanee vengono designate quando _key_name_ inizia con un cancelletto (#). ad esempio **#temporaryKey900007**. Non è possibile creare una chiave simmetrica con un nome che inizia con più di un simbolo di cancelletto (#). Non è possibile creare una chiave simmetrica temporanea utilizzando un provider EKM.  
   
  AUTHORIZATION *owner_name*  
  Specifica il nome dell'utente di database o del ruolo applicazione che sarà il proprietario della chiave.  
@@ -82,13 +82,13 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  Questa opzione non è disponibile in un database indipendente.  
   
- KEY_SOURCE **='**_pass\_phrase_**'**  
+ KEY_SOURCE **='** _pass\_phrase_ **'**  
  Specifica una passphrase da cui derivare la chiave.  
   
- IDENTITY_VALUE **='**_identity\_phrase_**'**  
+ IDENTITY_VALUE **='** _identity\_phrase_ **'**  
  Specifica una frase identificativa da cui generare un GUID per contrassegnare i dati crittografati con una chiave temporanea.  
   
- PROVIDER_KEY_NAME **='**_key\_name\_in\_provider_**'**  
+ PROVIDER_KEY_NAME **='** _key\_name\_in\_provider_ **'**  
  Specifica il nome a cui viene fatto riferimento nel provider EKM.  
   
 > [!NOTE]  
@@ -151,7 +151,7 @@ Specifica l'algoritmo di crittografia.
 > [!WARNING]  
 >  L'algoritmo RC4 è supportato solo per motivi di compatibilità con le versioni precedenti. È possibile crittografare il nuovo materiale usando RC4 o RC4_128 solo quando il livello di compatibilità del database è 90 o 100. (Non consigliato.) Usare un algoritmo più recente, ad esempio uno degli algoritmi AES. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] il materiale crittografato utilizzando RC4 o RC4_128 può essere decrittografato in qualsiasi livello di compatibilità.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY SYMMETRIC KEY per il database. Se si specifica AUTHORIZATION, è richiesta l'autorizzazione IMPERSONATE per l'utente di database o l'autorizzazione ALTER per il ruolo applicazione. Se la crittografia viene applicata con un certificato o una chiave asimmetrica, è richiesta l'autorizzazione VIEW DEFINITION per il certificato o la chiave asimmetrica. Solo gli account di accesso di Windows e di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i ruoli applicazione possono disporre di chiavi simmetriche. I gruppi e i ruoli non possono disporre di chiavi simmetriche.  
   
 ## <a name="examples"></a>Esempi  
@@ -166,7 +166,7 @@ ENCRYPTION BY CERTIFICATE Shipping04;
 GO  
 ```  
   
-### <a name="b-creating-a-temporary-symmetric-key"></a>b. Creazione di una chiave simmetrica temporanea  
+### <a name="b-creating-a-temporary-symmetric-key"></a>B. Creazione di una chiave simmetrica temporanea  
  Nell'esempio seguente viene creata una chiave simmetrica temporanea denominata `#MarketingXXV` dalla passphrase: `The square of the hypotenuse is equal to the sum of the squares of the sides`. Alla chiave viene associato un GUID generato dalla stringa `Pythagoras` e la chiave viene poi crittografata con il certificato `Marketing25`.  
   
 ```  

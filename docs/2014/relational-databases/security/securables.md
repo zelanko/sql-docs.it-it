@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7c4a82cfa4d8a82db1e01c49899c3c49c2e01ee9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62745720"
 ---
 # <a name="securables"></a>Entità a protezione diretta
@@ -79,7 +79,7 @@ ms.locfileid: "62745720"
 ## <a name="securable-scope-schema"></a>Ambito a protezione diretta: schema  
  L'ambito a protezione diretta **schema** contiene le entità a protezione diretta seguenti:  
   
--   Tipo  
+-   Type  
   
 -   Raccolta di XML Schema  
   

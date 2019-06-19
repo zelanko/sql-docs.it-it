@@ -20,10 +20,10 @@ ms.author: mathoma
 manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: e97881362ed01f08a0c229025c21950cf117835a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66800670"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clustering di failover e gruppi di disponibilità Always On (SQL Server)
@@ -70,7 +70,7 @@ ms.locfileid: "66800670"
 |**Impostazioni dei criteri di failover applicabili**|Quorum WSFC<br /><br /> Specifiche per FCI<br /><br /> Impostazioni dei gruppi di disponibilità**|Quorum WSFC<br /><br /> Impostazioni dei gruppi di disponibilità|  
 |**Risorse di cui è stato eseguito il failover**|Server, istanza e database|Solo database|  
   
- * Mentre le repliche secondarie sincrone di un gruppo di disponibilità sono sempre in esecuzione nelle rispettive istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , i nodi secondari in un'istanza del cluster di failover non hanno avviato le rispettive istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e quindi non sono leggibili. In un'istanza FCI, un nodo secondario consente di avviare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] solo quando la proprietà del gruppo di risorse viene trasferita a questo nodo durante un failover dell'istanza FCI. Tuttavia, nel nodo FCI attivo, se un database ospitato da FCI appartiene a un gruppo di disponibilità e la replica di disponibilità locale è in esecuzione come replica secondaria leggibile, il database è leggibile.  
+ \* Mentre le repliche secondarie sincrone di un gruppo di disponibilità sono sempre in esecuzione nelle rispettive istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , i nodi secondari in un'istanza del cluster di failover non hanno avviato le rispettive istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e quindi non sono leggibili. In un'istanza FCI, un nodo secondario consente di avviare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] solo quando la proprietà del gruppo di risorse viene trasferita a questo nodo durante un failover dell'istanza FCI. Tuttavia, nel nodo FCI attivo, se un database ospitato da FCI appartiene a un gruppo di disponibilità e la replica di disponibilità locale è in esecuzione come replica secondaria leggibile, il database è leggibile.  
   
  ** Le impostazioni dei criteri di failover per il gruppo di disponibilità si applicano a tutte le repliche, indipendentemente dal fatto che siano ospitate in un'istanza autonoma o in un'istanza del cluster di failover.  
   

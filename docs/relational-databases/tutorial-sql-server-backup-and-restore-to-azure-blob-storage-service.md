@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dcc749166f7c86575a84f41e12b452275ff3649c
-ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66402982"
 ---
 # <a name="quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Avvio rapido: Backup e ripristino di SQL Server nel servizio di archiviazione BLOB di Azure

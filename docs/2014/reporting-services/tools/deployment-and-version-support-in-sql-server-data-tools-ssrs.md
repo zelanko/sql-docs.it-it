@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c488316c1eaed822685577356e9df6f0cad9d174
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100359"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>Deployment and Version Support in SQL Server Data Tools (SSRS)
@@ -62,9 +62,9 @@ ms.locfileid: "66100359"
 |Tipo di progetto o file|Version|Creazione di report|Pubblicazione di report|Note|  
 |--------------------------|-------------|--------------------|---------------------|-----------|  
 |Progetto server di report<br /><br /> o Gestione configurazione<br /><br /> Progetto Creazione guidata report|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Schema RDL 2014|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|Progetto server di report<br /><br /> o Gestione configurazione<br /><br /> Progetto Creazione guidata report|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Schema RDL 2012|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
+|Progetto server di report<br /><br /> oppure<br /><br /> Progetto Creazione guidata report|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Schema RDL 2012|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
 |Progetto server di report<br /><br /> o Gestione configurazione<br /><br /> Progetto Creazione guidata report|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|Schema RDL 2008 R2|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
-|Progetto server di report<br /><br /> o Gestione configurazione<br /><br /> Progetto Creazione guidata report|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Schema RDL 2008|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] solo server di report|Aggiornamenti dello schema da RDL 2003 e RDL 2005 a RDL 2008 in locale.|  
+|Progetto server di report<br /><br /> oppure<br /><br /> Progetto Creazione guidata report|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|Schema RDL 2008|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] solo server di report|Aggiornamenti dello schema da RDL 2003 e RDL 2005 a RDL 2008 in locale.|  
 |Progetto server di report<br /><br /> o Gestione configurazione<br /><br /> Progetto Creazione guidata report|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Schema RDL 2005|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oppure [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server di report||  
 |Progetto server di report|[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]|Schema RDL 2003|Non supportato||  
 |Progettazione report RDLC [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|Schema RDL 2005|Non supportato|Lo schema RDL 2008 non è supportato.|  

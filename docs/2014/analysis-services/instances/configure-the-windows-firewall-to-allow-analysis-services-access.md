@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac7570550cd256a5c65c82c9585b2baf7713c878
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080264"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Configurare Windows Firewall per consentire l'accesso ad Analysis Services
@@ -78,7 +78,7 @@ ms.locfileid: "66080264"
 ##  <a name="bkmk_default"></a> Configurare Windows Firewall per un'istanza predefinita di Analysis Services  
  L'istanza predefinita di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è in ascolto sulla porta TCP 2383. Se è stata installata l'istanza predefinita e si desidera utilizzare questa porta, è sufficiente sbloccare l'accesso in ingresso alla porta TCP 2383 in Windows Firewall per abilitare l'accesso remoto per l'istanza predefinita di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Se è stata installata l'istanza predefinita, ma si desidera configurare il servizio in modo che sia in attesa su una porta fissa, vedere [Utilizzare una porta fissa per un'istanza predefinita o denominata di Analysis Services](#bkmk_fixed) di seguito in questo argomento.  
   
- Per verificare se il servizio è in esecuzione come istanza predefinita (MSSQLServerOLAPService), controllare il relativo nome in Gestione configurazione SQL Server. Un'istanza predefinita di Analysis Services è sempre elencata come **SQL Server Analysis Services (MSSQLSERVER)**.  
+ Per verificare se il servizio è in esecuzione come istanza predefinita (MSSQLServerOLAPService), controllare il relativo nome in Gestione configurazione SQL Server. Un'istanza predefinita di Analysis Services è sempre elencata come **SQL Server Analysis Services (MSSQLSERVER)** .  
   
 > [!NOTE]  
 >  Nei vari sistemi operativi Windows sono disponibili strumenti diversi per la configurazione di Windows Firewall. La maggior parte di questi strumenti consente di scegliere tra l'apertura di una porta specifica o di un eseguibile di un programma. A meno che non vi sia un motivo per specificare l'eseguibile di un programma, è consigliabile specificare la porta.  

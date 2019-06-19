@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9eab7de49abaf06446fbd03f7b80c381d102f20
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064394"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Attributi (scheda Struttura dimensione, Progettazione dimensioni) (Analysis Services – Dati multidimensionali)
@@ -58,7 +58,7 @@ ms.locfileid: "66064394"
 |Value|Descrizione|  
 |-----------|-----------------|  
 |Regular|Identifica un attributo regolare.|  
-|Chiave|Identifica l'attributo chiave per la dimensione. Corrisponde ai membri foglia della dimensione. Per ogni dimensione può esistere un solo attributo chiave. Per apportare modifiche fare clic sul pulsante con i puntini di sospensione (**...**) accanto alla proprietà **KeyColumns** nel riquadro **Proprietà** .|  
+|Chiave|Identifica l'attributo chiave per la dimensione. Corrisponde ai membri foglia della dimensione. Per ogni dimensione può esistere un solo attributo chiave. Per apportare modifiche fare clic sul pulsante con i puntini di sospensione ( **...** ) accanto alla proprietà **KeyColumns** nel riquadro **Proprietà** .|  
 |Parent|Indica l'attributo padre per una relazione padre-figlio. L'attributo figlio in questa relazione deve essere sempre l’attributo chiave.|  
 |AccountType|Indica un attributo di tipo Conto. Viene utilizzato dal server o dal motore quando la funzione di aggregazione per una misura è impostata su "ByAccount".|  
   

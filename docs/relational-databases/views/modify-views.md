@@ -18,17 +18,17 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b21a93ad09aecc13842f37b488a8230347cab283
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514766"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62744457"
 ---
 # <a name="modify-views"></a>Modifica di viste
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
   Dopo aver definito una vista, è possibile modificarne la definizione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , senza eliminare e ricreare la vista, utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -54,7 +54,7 @@ ms.locfileid: "52514766"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per eseguire ALTER VIEW, è richiesta come minimo l'autorizzazione ALTER per OBJECT.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -83,7 +83,7 @@ ms.locfileid: "52514766"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio si crea innanzitutto una vista che, successivamente, viene modificata tramite ALTER VIEW. Una clausola WHERE viene aggiunta alla definizione della vista.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio si crea innanzitutto una vista che, successivamente, viene modificata tramite ALTER VIEW. Una clausola WHERE viene aggiunta alla definizione della vista.  
   
     ```  
     USE AdventureWorks2012 ;  

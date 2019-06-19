@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f095429070a16cb4a99dabd84ffe99d169ce35a9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095324"
 ---
 # <a name="feature-review"></a>Esame caratteristiche
@@ -26,7 +26,7 @@ ms.locfileid: "66095324"
   
 |Gruppo di componenti|Componenti e caratteristiche|  
 |---------------------|-----------------------------|  
-|Servizi[!INCLUDE[ssDE](../../includes/ssde-md.md)] |[!INCLUDE[ssDE](../../includes/ssde-md.md)] è il servizio principale per l'archiviazione, l'elaborazione e la sicurezza dei dati. Nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] sono inclusi i seguenti componenti:<br /><br /> Replica: (Facoltativo) La replica è un set di tecnologie per la copia e la distribuzione di oggetti di database e i dati da un database a un altro e la successiva sincronizzazione dei database per garantirne la coerenza.<br /><br /> Ricerca full-Text: (Facoltativo) Ricerca full-Text offre funzionalità per eseguire query full-text su semplici dati basati su caratteri in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelle.<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (Facoltativo): [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) è una soluzione di pulizia dei dati che consente di individuare dati incoerenti e non corretti nell'origine dati e che offre metodi automatici e interattivi per pulire i dati.|  
+|Servizi[!INCLUDE[ssDE](../../includes/ssde-md.md)]|[!INCLUDE[ssDE](../../includes/ssde-md.md)] è il servizio principale per l'archiviazione, l'elaborazione e la sicurezza dei dati. Nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] sono inclusi i seguenti componenti:<br /><br /> Replica: (Facoltativo) La replica è un set di tecnologie per la copia e la distribuzione di oggetti di database e i dati da un database a un altro e la successiva sincronizzazione dei database per garantirne la coerenza.<br /><br /> Ricerca full-Text: (Facoltativo) Ricerca full-Text offre funzionalità per eseguire query full-text su semplici dati basati su caratteri in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelle.<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (Facoltativo): [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) è una soluzione di pulizia dei dati che consente di individuare dati incoerenti e non corretti nell'origine dati e che offre metodi automatici e interattivi per pulire i dati.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|In[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono inclusi componenti client e server per la creazione, la gestione e la distribuzione di report tabulari, matrice, grafici e in formato libero. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è inoltre una piattaforma estendibile che consente di sviluppare applicazioni di creazione di report.|  
   
 ## <a name="see-also"></a>Vedere anche  

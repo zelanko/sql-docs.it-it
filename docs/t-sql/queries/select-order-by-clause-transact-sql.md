@@ -41,11 +41,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c08e29c5d1fba184739e2bb0e33718f766c32655
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334718"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62708182"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>Clausola SELECT - ORDER BY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -223,7 +223,7 @@ WHERE Name LIKE 'Lock Washer%'
 ORDER BY ProductID;  
 ```  
   
-#### <a name="b-specifying-a-column-that-is-not-defined-in-the-select-list"></a>b. Specifica di una colonna non definita nell'elenco di selezione  
+#### <a name="b-specifying-a-column-that-is-not-defined-in-the-select-list"></a>B. Specifica di una colonna non definita nell'elenco di selezione  
  Nell'esempio seguente il set di risultati viene ordinato in base a una colonna non inclusa nell'elenco di selezione, ma viene definito nella tabella specificata nella clausola FROM.  
   
 ```sql
@@ -274,7 +274,7 @@ ORDER BY ProductID DESC;
   
 ```  
   
-#### <a name="b-specifying-an-ascending-order"></a>b. Specifica di un ordine crescente  
+#### <a name="b-specifying-an-ascending-order"></a>B. Specifica di un ordine crescente  
  Nell'esempio seguente il set di risultati viene ordinato in base alla colonna `Name` in ordine crescente. I caratteri sono ordinati alfabeticamente, non numericamente. Di conseguenza, 10 precede 2.  
   
 ```sql
@@ -391,7 +391,7 @@ ORDER BY DepartmentID
   
 ```  
   
-#### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>b. Specifica di variabili per i valori OFFSET e FETCH  
+#### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>B. Specifica di variabili per i valori OFFSET e FETCH  
  Nell'esempio seguente vengono dichiarate le variabili `@StartingRowNumber` e `@FetchRows` che vengono in seguito specificate nelle clausole OFFSET e FETCH.  
   
 ```sql

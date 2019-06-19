@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: febaae6051e8428d3fed2bb6533ce2c4d972950f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078054"
 ---
 # <a name="level-naming-template-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Modello denominazione livelli (Analysis Services - Dati multidimensionali)
-  Usare la finestra di dialogo **Modello denominazione livelli** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per creare il modello di denominazione dei livelli per un attributo padre in una dimensione. Per altre informazioni sui modelli di denominazione dei livelli, vedere [Elemento NamingTemplate &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/namingtemplate-element-assl). È possibile visualizzare il **modello denominazione livelli** finestra di dialogo facendo clic sul pulsante con puntini di sospensione (**...** ) sul `NamingTemplate` valore di una traduzione per un attributo nel **dettagli di traduzione** riquadro il **traduzioni** scheda della finestra di **progettazione dimensioni**.  
+  Usare la finestra di dialogo **Modello denominazione livelli** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per creare il modello di denominazione dei livelli per un attributo padre in una dimensione. Per altre informazioni sui modelli di denominazione dei livelli, vedere [Elemento NamingTemplate &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/namingtemplate-element-assl). È possibile visualizzare il **modello denominazione livelli** finestra di dialogo facendo clic sul pulsante con puntini di sospensione ( **...** ) sul `NamingTemplate` valore di una traduzione per un attributo nel **dettagli di traduzione** riquadro il **traduzioni** scheda della finestra di **progettazione dimensioni**.  
   
 ## <a name="options"></a>Opzioni  
   

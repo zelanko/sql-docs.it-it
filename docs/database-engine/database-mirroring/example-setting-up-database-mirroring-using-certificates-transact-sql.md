@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 06d8ddd5710b41a80a41643bc2df194ad9c3981c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66795480"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Esempio: Configurazione del mirroring del database tramite certificati (Transact-SQL)
@@ -263,7 +263,7 @@ ms.locfileid: "66795480"
     ```  
   
     > [!NOTE]  
-    >  Se si prevede di usare la modalità a sicurezza elevata con failover automatico, lasciare la sicurezza delle transazioni impostata su FULL (impostazione predefinita) e aggiungere il server di controllo del mirroring non appena possibile dopo l'esecuzione della seconda istruzione SET PARTNER **'***partner_server***'**. Si osservi che è necessario configurare prima il server di controllo del mirroring per le connessioni in uscita e in ingresso.  
+    >  Se si prevede di usare la modalità a sicurezza elevata con failover automatico, lasciare la sicurezza delle transazioni impostata su FULL (impostazione predefinita) e aggiungere il server di controllo del mirroring non appena possibile dopo l'esecuzione della seconda istruzione SET PARTNER **'***partner_server***'** . Si osservi che è necessario configurare prima il server di controllo del mirroring per le connessioni in uscita e in ingresso.  
   
  [&#91;Inizio dell'esempio &#93;](#ExampleH2)  
   

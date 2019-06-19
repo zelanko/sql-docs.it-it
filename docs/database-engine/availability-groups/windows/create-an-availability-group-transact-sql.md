@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: 409c6a27b03eb4a7f84038df005a8c625b4011ee
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66793521"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>Creare un gruppo di disponibilità Always On con Transact-SQL (T-SQL)
@@ -52,7 +52,7 @@ ms.locfileid: "66793521"
 |Preparare il database secondario|[BACKUP](../../../t-sql/statements/backup-transact-sql.md) e [RESTORE](../../../t-sql/statements/restore-statements-transact-sql.md).|Creare i backup nell'istanza del server in cui è ospitata la replica primaria.<br /><br /> Ripristinare i backup in ogni istanza del server che ospita una replica secondaria, utilizzando RESTORE WITH NORECOVERY.|  
 |Avviare la sincronizzazione dei dati creando un join di ogni database secondario al gruppo di disponibilità|[ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) *_database* SET HADR AVAILABILITY GROUP = *nome_gruppo*|Eseguire in ogni istanza del server in cui è ospitata una replica secondaria.|  
   
- * Per eseguire un'attività specifica, connettersi alle istanze del server indicate.   
+ \* Per eseguire un'attività specifica, connettersi alle istanze del server indicate.   
  
 ### <a name="using-transact-sql"></a>Utilizzo di Transact-SQL 
 > [!NOTE]  

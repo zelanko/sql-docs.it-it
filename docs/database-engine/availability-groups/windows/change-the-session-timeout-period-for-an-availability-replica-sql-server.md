@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: d1cb8408c01dd02528f80cf44b0516e0d12000b2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66796605"
 ---
 # <a name="change-the-session-timeout-period-for-a-replica-within-an-always-on-availability-group"></a>Modificare il periodo di timeout della sessione per una replica all'interno di un gruppo di disponibilità Always On

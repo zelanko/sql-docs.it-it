@@ -11,12 +11,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4992e50f3daeb7d131e8cfb98be3700366550f3f
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: d27099c54497eadecf38af33f8f3b0c12f4ccc7b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582834"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046697"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup di SQL Server nell'URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ Quando si esegue il backup su BLOB in blocchi, le dimensioni del blocco massimo 
   
 -   Il backup in Archiviazione Premium non è supportato.  
   
--   SQL Server limita le dimensioni massime di backup supportate usando un BLOB di pagine di 1 TB. Le dimensioni massime di backup supportate tramite BLOB in blocchi sono limitate a circa 200 MB (50.000 blocchi * MAXTRANSFERSIZE a 4MB). I BLOB in blocchi supportano lo striping che consente backup di notevoli dimensioni.  
+-   SQL Server limita le dimensioni massime di backup supportate usando un BLOB di pagine di 1 TB. Le dimensioni massime di backup supportate tramite BLOB in blocchi sono limitate a circa 200 GB (50.000 blocchi * MAXTRANSFERSIZE a 4MB). I BLOB in blocchi supportano lo striping che consente backup di notevoli dimensioni.  
   
 -   È possibile eseguire istruzioni di backup o ripristino tramite TSQL, SMO, cmdlet PowerShell, SQL Server Management Studio Backup o Ripristino guidato.   
   
@@ -115,7 +115,7 @@ Quando si esegue il backup su BLOB in blocchi, le dimensioni del blocco massimo 
   
 -   La specifica delle opzioni del set di backup, **RETAINDAYS** ed **EXPIREDATE** , non è supportata.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è previsto un limite massimo di 259 caratteri per il nome di un dispositivo di backup. BACKUP TO URL utilizza 36 caratteri per gli elementi necessari usati per specificare l'URL (https://.blob.core.windows.net//.bak) lasciando 223 caratteri per i nomi dell'account, del contenitore e del BLOB.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è previsto un limite massimo di 259 caratteri per il nome di un dispositivo di backup. BACKUP TO URL utilizza 36 caratteri per gli elementi necessari usati per specificare l'URL (https://.blob.core.windows.net//.bak ) lasciando 223 caratteri per i nomi dell'account, del contenitore e del BLOB.  
   
 ###  <a name="Support"></a> Supporto per le istruzioni di backup/ripristino  
   
@@ -250,7 +250,7 @@ Quando si esegue il backup su BLOB in blocchi, le dimensioni del blocco massimo 
 ##  <a name="RestoreSSMS"></a> Ripristino dal servizio di archiviazione Microsoft Azure tramite SQL Server Management Studio  
 L'attività Ripristina database include **URL** come dispositivo da cui eseguire il ripristino.  I passaggi seguenti descrivono come usare l'attività di ripristino per eseguire il ripristino dal servizio di archiviazione BLOB di Microsoft Azure: 
   
-1.  Fare clic con il pulsante destro del mouse su **Database** e scegliere **Ripristina database....**. 
+1.  Fare clic con il pulsante destro del mouse su **Database** e scegliere **Ripristina database....** . 
   
 2.  Nella pagina **Generale** selezionare **Dispositivo** nella sezione **Origine** .
   

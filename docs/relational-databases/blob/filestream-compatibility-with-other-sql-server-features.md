@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e2b2f9e434e1e88d893478c558078c8139e1bb0
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65094256"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilità FILESTREAM con altre funzionalità di SQL Server
@@ -53,7 +53,7 @@ ms.locfileid: "65094256"
  È possibile utilizzare la trasformazione Importa colonna per caricare file dal file system e inserirli in una colonna FILESTREAM. È inoltre possibile utilizzare la trasformazione Esporta colonna per estrarre i file da una colonna FILESTREAM e inserirli in un'altra posizione nel file system.  
   
 ##  <a name="distqueries"></a> Query distribuite e server collegati  
- È possibile utilizzare i dati FILESTREAM tramite query distribuite e server collegati trattandoli come dati **varbinary(max)** . Non è possibile utilizzare la funzione FILESTREAM **PathName()** in query distribuite in cui viene utilizzato un nome in quattro parti, anche quando il nome si riferisce al server locale. Tuttavia, è possibile utilizzare **PathName()** nella query interna di una query pass-through in cui viene utilizzato **OPENQUERY()**.  
+ È possibile utilizzare i dati FILESTREAM tramite query distribuite e server collegati trattandoli come dati **varbinary(max)** . Non è possibile utilizzare la funzione FILESTREAM **PathName()** in query distribuite in cui viene utilizzato un nome in quattro parti, anche quando il nome si riferisce al server locale. Tuttavia, è possibile utilizzare **PathName()** nella query interna di una query pass-through in cui viene utilizzato **OPENQUERY()** .  
   
 ##  <a name="encryption"></a> Crittografia  
  I dati FILESTREAM non vengono crittografati anche se è abilitata la crittografia dei dati trasparenti.  

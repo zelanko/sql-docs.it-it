@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 627ab54ed35cbc0a43c5a0eac26a1397199edbd8
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014659"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Specifica di uno schema di mapping con annotazioni in un updategram (SQLXML 4.0)
@@ -64,7 +64,7 @@ ms.locfileid: "66014659"
 </xsd:schema>  
 ```  
   
- L'updategram seguente inserisce un record nella tabella Sales.Customer e si basa sullo schema di mapping precedente per eseguire il mapping di questi dati alla tabella correttamente. Si noti che l'updategram utilizza lo stesso nome di elemento,  **\<cliente >**, come definito nello schema. Questa condizione è obbligatoria perché l'updategram specifica uno schema particolare.  
+ L'updategram seguente inserisce un record nella tabella Sales.Customer e si basa sullo schema di mapping precedente per eseguire il mapping di questi dati alla tabella correttamente. Si noti che l'updategram utilizza lo stesso nome di elemento,  **\<cliente >** , come definito nello schema. Questa condizione è obbligatoria perché l'updategram specifica uno schema particolare.  
   
 ##### <a name="to-test-the-updategram"></a>Per testare l'updategram  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66014659"
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. Inserimento di un record tramite la relazione padre-figlio specificata nello schema di mapping  
  Gli elementi dello schema possono essere correlati. Il  **\<SQL: Relationship >** elemento specifica la relazione padre-figlio tra gli elementi dello schema. Queste informazioni vengono utilizzate per aggiornare le tabelle corrispondenti che presentano una relazione chiave primaria/chiave esterna.  
   
- Lo schema di mapping seguente (SampleSchema. XML) è costituito da due elementi  **\<ordine >** e  **\<OD >**:  
+ Lo schema di mapping seguente (SampleSchema. XML) è costituito da due elementi  **\<ordine >** e  **\<OD >** :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

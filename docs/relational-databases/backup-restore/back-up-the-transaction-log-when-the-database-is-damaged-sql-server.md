@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be62f7dfe7cce25d6b4cd63767bdea211dacd1a5
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242179"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64478529"
 ---
 # <a name="back-up-the-transaction-log-when-the-database-is-damaged-sql-server"></a>Esecuzione del backup del log delle transazioni quando il database è danneggiato (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "59242179"
      `BACKUP LOG <database_name> TO <backup_device> WITH NORECOVERY`  
   
     > [!IMPORTANT]  
-    >  In fase di ripristino nella finestra di dialogo Ripristina database il tipo di backup della parte finale del log verrà visualizzato come **Log delle transazioni (solo copia)**.  
+    >  In fase di ripristino nella finestra di dialogo Ripristina database il tipo di backup della parte finale del log verrà visualizzato come **Log delle transazioni (solo copia)** .  
   
 15. Se si esegue il backup su un'unità nastro, come specificato nella sezione **Destinazione** della pagina **Generale** , l'opzione **Scarica nastro al termine del backup** sarà attiva. Se si seleziona questa opzione, verrà inoltre attivata l'opzione **Riavvolgi il nastro prima di scaricarlo** .  
   

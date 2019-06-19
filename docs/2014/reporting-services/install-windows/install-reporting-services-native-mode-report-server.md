@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3a54650403458eec09826b51f1528a844e48791
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108806"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Installare un server di report in modalità nativa di Reporting Services
@@ -26,7 +26,7 @@ ms.locfileid: "66108806"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] |  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
   
 ##  <a name="bkmk_top"></a> Contenuto dell'argomento  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66108806"
   
 -   L'account utente utilizzato per eseguire il programma di installazione deve appartenere al gruppo Administrators locale e deve disporre dell'autorizzazione per accedere e creare i database nell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ospita i database del server di report.  
   
--   Il programma di installazione deve essere in grado di utilizzare i valori predefiniti per riservare gli URL necessari per accedere al server di report e a Gestione report. Questi valori sono la porta 80, un carattere jolly complesso e i nomi delle directory virtuali nel formato **ReportServer_\<***nome_istanza***>** e **Reports_\<***nome_istanza***>**.  
+-   Il programma di installazione deve essere in grado di utilizzare i valori predefiniti per riservare gli URL necessari per accedere al server di report e a Gestione report. Questi valori sono la porta 80, un carattere jolly complesso e i nomi delle directory virtuali nel formato **ReportServer_\<***nome_istanza***>** e **Reports_\<***nome_istanza***>** .  
   
 -   È necessario poter utilizzare i valori predefiniti con il programma di installazione per creare i database del server di report. Tali valori sono **ReportServer** e **ReportServerTempDB**. Se sono presenti database esistenti da un'installazione precedente, il programma di installazione si blocca perché non è in grado di configurare il server di report nella configurazione predefinita per la modalità nativa. Per sbloccare il programma di installazione, è necessario rinominare, spostare o eliminare i database.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "66108806"
 |Parte|Descrizione|  
 |----------|-----------------|  
 |Prefisso|Il prefisso predefinito è HTTP. Se in precedenza è stato installato un certificato SSL (Secure Sockets Layer), il programma di installazione tenterà di creare prenotazioni URL che utilizzano il prefisso HTTPS.|  
-|Nome host|Il nome host predefinito è un carattere jolly complesso (+). Specifica che il server di report accetterà qualsiasi richiesta HTTP sulla porta designata per qualsiasi nome host risolto nel computer, tra cui http://\<nomecomputer > / reportserver, http://localhost/reportserver, o http://\<IPAddress > / ReportServer.|  
+|Nome host|Il nome host predefinito è un carattere jolly complesso (+). Specifica che il server di report accetterà qualsiasi richiesta HTTP sulla porta designata per qualsiasi nome host risolto nel computer, tra cui http://\<nomecomputer > / reportserver, http://localhost/reportserver , o http://\< IPAddress > / ReportServer.|  
 |Port|La porta predefinita è 80. Si noti che se si utilizza un numero di porta diverso da 80, sarà necessario aggiungerlo in modo esplicito all'URL quando si apre un'applicazione Web di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in una finestra del browser.|  
 |Directory virtuale|Per impostazione predefinita, le directory virtuali vengono create nel formato reportserver_\<*nome_istanza*> per il servizio Web ReportServer e Reports_\<*nome_istanza*> per gestione Report. Per il servizio Web ReportServer, la directory virtuale predefinita è **reportserver**. Per Gestione report, la directory virtuale predefinita è **reports**.|  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66108806"
   
 -   http://+:80/reportserver consente l'accesso al server di report.  
   
--   http://+:80/reports, fornisce l'accesso a gestione Report.  
+-   http://+:80/reports , fornisce l'accesso a gestione Report.  
   
 ##  <a name="bkmk_installwithwizard"></a> Installare la modalità nativa con l'installazione guidata SQL Server  
  Nell'elenco seguente sono illustrati i passaggi e le opzioni specifici di  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] selezionati nell'Installazione guidata di SQL Server. Nell'elenco non vengono descritte tutte le pagine che verranno visualizzate nell'installazione guidata, bensì solo le pagine correlate a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] che fanno parte di un'installazione in modalità nativa.  

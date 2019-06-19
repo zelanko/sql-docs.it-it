@@ -17,11 +17,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a2213a6f87aa11db9201dc052efa5a5513e185a7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539158"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716118"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Creazione di un controllo del server e di una specifica del controllo del database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "52539158"
   
  Il*controllo* di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o di un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comporta il rilevamento e la registrazione di eventi che si verificano nel sistema. L'oggetto *SQL Server Audit* raccoglie un'unica istanza di azioni a livello di server o di database e gruppi di azioni da monitorare. Il controllo si trova a livello dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile disporre di più controlli. Anche l'oggetto *Database-Level Audit Specification* fa parte di un controllo. È possibile creare una specifica del controllo del database per ogni database di SQL Server e per ogni controllo. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -54,7 +54,7 @@ ms.locfileid: "52539158"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
   
 -   Gli utenti che dispongono dell'autorizzazione ALTER ANY DATABASE AUDIT possono creare specifiche del controllo del database e associarle a qualsiasi controllo.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "52539158"
   
 1.  In Esplora oggetti espandere la cartella **Sicurezza** .  
   
-2.  Fare clic con il pulsante destro del mouse sulla cartella **Controlli** e scegliere **Nuovo controllo...**. Per altre informazioni, vedere [Creazione di un controllo del server e di una specifica del controllo del server](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
+2.  Fare clic con il pulsante destro del mouse sulla cartella **Controlli** e scegliere **Nuovo controllo...** . Per altre informazioni, vedere [Creazione di un controllo del server e di una specifica del controllo del server](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
   
 3.  Una volta selezionate le opzioni, fare clic su **OK**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "52539158"
   
 2.  Espandere la cartella **Sicurezza** .  
   
-3.  Fare clic con il pulsante destro del mouse sulla cartella **Specifiche controllo database** e selezionare **Nuova specifica controllo data base...**.  
+3.  Fare clic con il pulsante destro del mouse sulla cartella **Specifiche controllo database** e selezionare **Nuova specifica controllo data base...** .  
   
      Nella finestra di dialogo **Crea specifica controllo database** sono disponibili le opzioni indicate di seguito.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "52539158"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     USE master ;  
@@ -135,7 +135,7 @@ ms.locfileid: "52539158"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio seguente viene creata una specifica del controllo del database denominata `Audit_Pay_Tables` che controlla le istruzioni SELECT e INSERT per l'utente `dbo` per la tabella `HumanResources.EmployeePayHistory` in base al controllo del server definito in precedenza.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio seguente viene creata una specifica del controllo del database denominata `Audit_Pay_Tables` che controlla le istruzioni SELECT e INSERT per l'utente `dbo` per la tabella `HumanResources.EmployeePayHistory` in base al controllo del server definito in precedenza.  
   
     ```  
     USE AdventureWorks2012 ;   

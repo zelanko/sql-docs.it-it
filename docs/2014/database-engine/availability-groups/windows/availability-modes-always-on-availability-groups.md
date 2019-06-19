@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5a05f52eceb554d8f4b023a3136fd4cf8e55d4fc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62791796"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Modalità di disponibilità (gruppi di disponibilità AlwaysOn)
@@ -52,7 +52,7 @@ ms.locfileid: "62791796"
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
 |01|02|02 e 03|04|Yes|  
 |02|01|01 e 03|04|Yes|  
-|03||01 e 02|04|no|  
+|03||01 e 02|04|No|  
 |04|||01, 02 e 03|No|  
   
  In genere il nodo 04 come replica con commit asincrono viene distribuito in un sito per il ripristino di emergenza. Il fatto che i nodi 01, 02 e 03 rimangano nella modalità con commit asincrono dopo il failover al nodo 04 contribuisce ad evitare possibili cali delle prestazioni nel gruppo di disponibilità dovute all'elevata latenza di rete tra i due siti.  

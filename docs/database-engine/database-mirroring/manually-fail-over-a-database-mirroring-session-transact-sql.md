@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: cff69cccd05d48df6affeca17a6799f82e26e1f5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66795397"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-transact-sql"></a>Failover manuale in una sessione di mirroring del database (Transact-SQL)

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eeb3df670097c0d511a9f5b779b6705f40a5e897
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070303"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor dei form delle azioni report (scheda Azioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
@@ -76,7 +76,7 @@ ms.locfileid: "66070303"
 |colonna|Descrizione|  
 |------------|-----------------|  
 |**Nome parametro**|Consente di digitare il nome del parametro del report da passare al report.|  
-|**Valore parametro**|Consente di digitare il valore del parametro del report da passare al report.<br /><br /> Fare clic sul pulsante con i puntini di sospensione (**...**) per visualizzare la finestra di dialogo **Generatore MDX** e creare un'espressione MDX che restituisca il valore del parametro del report. Per altre informazioni sulla finestra di dialogo **Generatore MDX**, vedere [Generatore MDX &#40;Analysis Services - Dati multidimensionali&#41;](mdx-builder-analysis-services-multidimensional-data.md).<br /><br /> Se il parametro è impostato su un'espressione MDX, tale espressione viene valutata quando l'azione viene eseguita, altrimenti viene passata al report senza alcuna modifica.|  
+|**Valore parametro**|Consente di digitare il valore del parametro del report da passare al report.<br /><br /> Fare clic sul pulsante con i puntini di sospensione ( **...** ) per visualizzare la finestra di dialogo **Generatore MDX** e creare un'espressione MDX che restituisca il valore del parametro del report. Per altre informazioni sulla finestra di dialogo **Generatore MDX**, vedere [Generatore MDX &#40;Analysis Services - Dati multidimensionali&#41;](mdx-builder-analysis-services-multidimensional-data.md).<br /><br /> Se il parametro è impostato su un'espressione MDX, tale espressione viene valutata quando l'azione viene eseguita, altrimenti viene passata al report senza alcuna modifica.|  
   
  **Proprietà aggiuntive**  
  Espandere la finestra per visualizzare le opzioni **Chiamata**, **Applicazione**, **Descrizione**, **Didascalia**e **Didascalia MDX** .  

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f372bd5bcc538d861ddd556b3bb420c181d59717
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104653"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Celle, righe e colonne dell'area dati Tablix (Generatore report e SSRS)
@@ -106,7 +106,7 @@ ms.locfileid: "66104653"
  Se le celle dell'area del corpo Tablix si trovano in una riga o una colonna di dettaglio, possono visualizzare dati di dettaglio. Se si trovano in una riga o in una colonna di gruppo, possono visualizzare dati di gruppo aggregati. L'ambito dei dati in una cella è rappresentato dall'intersezione del gruppo di righe e di colonne più interno a cui appartiene la cella.  
   
 > [!NOTE]  
->  I dati effettivi visualizzati per ogni cella sono l'espressione valutata per l'elemento del report contenuto nella cella, in genere una casella di testo. In una cella che appartiene a una riga o a una colonna di dettaglio, l'espressione usa come valore predefinito i dati dettaglio, ad esempio **[LineTotal]**. In una cella che non appartiene a una riga o a una colonna di dettaglio, l'espressione usa come valore predefinito una funzione di aggregazione, ad esempio **Sum[LineTotal]**. Se un'espressione non specifica una funzione di aggregazione anche se la cella appartiene a una riga o una colonna di gruppo, viene visualizzato il primo valore del gruppo. Per altre informazioni sulle aggregazioni, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+>  I dati effettivi visualizzati per ogni cella sono l'espressione valutata per l'elemento del report contenuto nella cella, in genere una casella di testo. In una cella che appartiene a una riga o a una colonna di dettaglio, l'espressione usa come valore predefinito i dati dettaglio, ad esempio **[LineTotal]** . In una cella che non appartiene a una riga o a una colonna di dettaglio, l'espressione usa come valore predefinito una funzione di aggregazione, ad esempio **Sum[LineTotal]** . Se un'espressione non specifica una funzione di aggregazione anche se la cella appartiene a una riga o una colonna di gruppo, viene visualizzato il primo valore del gruppo. Per altre informazioni sulle aggregazioni, vedere [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Generatore report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ### <a name="merging-and-splitting-cells"></a>Unione e divisione delle celle  
  In un'area Tablix, è possibile unire tra loro più celle adiacenti. È possibile, ad esempio, creare celle per etichette che si estendono su più colonne o righe.  

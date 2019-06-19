@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 61c11ad810109d76a59b9f6d9c1a3620a2866d65
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62844099"
 ---
 # <a name="new-full-text-catalog-general-page"></a>Nuovo catalogo full-text (pagina Generale)
@@ -38,7 +38,7 @@ ms.locfileid: "62844099"
  Selezionare questa opzione per impostare il catalogo come predefinito per i nuovi cataloghi full-text.  
   
  **Distinzione caratteri accentati/non accentati**  
- Indica se il catalogo non sensibili o distinzione relativa ai segni diacritici, ad esempio una tilde (**~**), mark latino (**'**), o umlaut (**¨**). Se si seleziona **Insensitive**, segni diacritici vengono ignorati negli indici full-text che sono associati a questo catalogo full-text. Per informazioni sui segni diacritici, vedere [segno diacritico](https://www.merriam-webster.com/dictionary/diacritic) nel sito Web di Merriam inventa.  
+ Indica se il catalogo non sensibili o distinzione relativa ai segni diacritici, ad esempio una tilde ( **~** ), mark latino ( **'** ), o umlaut (**¨**). Se si seleziona **Insensitive**, segni diacritici vengono ignorati negli indici full-text che sono associati a questo catalogo full-text. Per informazioni sui segni diacritici, vedere [segno diacritico](https://www.merriam-webster.com/dictionary/diacritic) nel sito Web di Merriam inventa.  
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  

@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fb350568200226585f4c3138224e65816e617780
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096665"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Finestra di dialogo Indici/chiavi (Visual Database Tools)
@@ -57,7 +57,7 @@ Se viene espansa, visualizza i campi delle proprietà **Nome** e **Descrizione**
 Visualizza il nome della chiave o dell'indice. Quando si crea un nuovo indice, gli viene assegnato un nome predefinito sulla base della tabella presente nella finestra attiva di Progettazione tabelle. Il nome può essere modificato in qualunque momento.  
   
 **Descrizione**  
-Consente di immettere una descrizione della chiave o dell'indice. Per inserire una descrizione più dettagliata, fare clic su **Descrizione** e sui puntini di sospensione (**...**) a destra del campo della proprietà. Viene così visualizzata un'area più grande in cui scrivere il testo.  
+Consente di immettere una descrizione della chiave o dell'indice. Per inserire una descrizione più dettagliata, fare clic su **Descrizione** e sui puntini di sospensione ( **...** ) a destra del campo della proprietà. Viene così visualizzata un'area più grande in cui scrivere il testo.  
   
 **Categoria Progettazione tabelle**  
 Se viene espansa, visualizza le informazioni relative a **Crea come CLUSTERED**.  
@@ -66,7 +66,7 @@ Se viene espansa, visualizza le informazioni relative a **Crea come CLUSTERED**.
 Trasforma la chiave o l'indice in chiave o indice cluster. In una tabella è consentito un solo indice cluster. I dati nella tabella vengono archiviati secondo l'ordine dell'indice cluster. Per altre informazioni, vedere [Creare indici cluster](../../relational-databases/indexes/create-clustered-indexes.md) e [Creare indici non cluster](../../relational-databases/indexes/create-nonclustered-indexes.md).  
   
 **Specifica spazio dei dati**  
-Se viene espansa, visualizza le informazioni relative a **(Tipo spazio dei dati)**, **Nome gruppo di file o schema di partizione**ed **Elenco colonne di partizione**.  
+Se viene espansa, visualizza le informazioni relative a **(Tipo spazio dei dati)** , **Nome gruppo di file o schema di partizione**ed **Elenco colonne di partizione**.  
   
 **(Tipo spazio dei dati)**  
 Indica se l'indice o la chiave appartiene a un gruppo di file o a uno schema di partizione.  

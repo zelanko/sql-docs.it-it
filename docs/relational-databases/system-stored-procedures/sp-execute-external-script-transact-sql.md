@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f11b09d93510fe1da89abc1a723e7698f1fdd915
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 77d5386f05e371a2e653f4f6097257e99457e910
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531043"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046709"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
@@ -78,9 +78,9 @@ sp_execute_external_script
  **@language** = N'*linguaggio*'  
  Indica il linguaggio di scripting. *linguaggio* viene **sysname**.  A seconda della versione di SQL Server, i valori validi sono (SQL Server 2016 e versioni successive) di R, Python (SQL Server 2017 e versioni successive) e Java (anteprima di SQL Server 2019). 
   
- **@script** = N'*script*' dello script del linguaggio esterno specificato come input un valore letterale o una variabile. *lo script* viene **nvarchar (max)**.  
+ **@script** = N'*script*' dello script del linguaggio esterno specificato come input un valore letterale o una variabile. *lo script* viene **nvarchar (max)** .  
 
-`[ @input_data_1 =  N'input_data_1' ]` Specifica i dati di input usati dallo script esterno sotto forma di un [!INCLUDE[tsql](../../includes/tsql-md.md)] query. Il tipo di dati *input_data_1* viene **nvarchar (max)**.
+`[ @input_data_1 =  N'input_data_1' ]` Specifica i dati di input usati dallo script esterno sotto forma di un [!INCLUDE[tsql](../../includes/tsql-md.md)] query. Il tipo di dati *input_data_1* viene **nvarchar (max)** .
 
 `[ @input_data_1_name = N'input_data_1_name' ]` Specifica il nome della variabile utilizzata per rappresentare la query definita dal @input_data_1. Il tipo di dati della variabile nello script esterno dipende dalla lingua. In caso di R, la variabile di input è un frame di dati. Nel caso di Python, input deve essere in formato tabulare. *input_data_1_name* viene **sysname**.  Valore predefinito è *InputDataSet*.  
 
@@ -124,7 +124,7 @@ L'esecuzione di script di monitoraggio mediante [DM external_script_requests](..
 
  In SQL Server 2019, attualmente in anteprima pubblica, è possibile impostare due parametri aggiuntivi che consentono la modellazione delle minacce su dati partizionati, in cui partizioni sono basate su uno o più colonne è fornire che naturalmente segmentare un set di dati in partizioni logiche creato e utilizzato solo durante l'esecuzione di script. Le colonne che contengono i valori ripetuti per età, sesso, area geografica, data o ora, sono riportati alcuni esempi che si prestano a set di dati partizionati.
  
- I due parametri sono **input_data_1_partition_by_columns** e **input_data_1_order_by_columns**, in cui il secondo parametro viene usato per ordinare il set di risultati. I parametri vengono passati come input per `sp_execute_external_script` con l'esterno script in esecuzione una sola volta per ogni partizione. Per altre informazioni ed esempi, vedere [esercitazione: Creare modelli basati sulla partizione](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md).
+ I due parametri sono **input_data_1_partition_by_columns** e **input_data_1_order_by_columns**, in cui il secondo parametro viene usato per ordinare il set di risultati. I parametri vengono passati come input per `sp_execute_external_script` con l'esterno script in esecuzione una sola volta per ogni partizione. Per altre informazioni ed esempi, vedere [esercitazione: Creare modelli basati sulla partizione](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition).
 
  È possibile eseguire script in parallelo specificando `@parallel=1`. Se la query di input può essere eseguite in parallelo, è necessario impostare `@parallel=1` come parte degli argomenti su `sp_execute_external_script`. Per impostazione predefinita, query optimizer opera `@parallel=1` nelle tabelle che includono più di 256 righe, ma se si vuole gestirlo in modo esplicito, questo script include il parametro come dimostrazione.
 

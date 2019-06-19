@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 033965a6152edaf3d62fcd8c29476651648c1697
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085409"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Creare un grafico di accuratezza, un grafico dei profitti o una matrice di classificazione
@@ -69,7 +69,7 @@ ms.locfileid: "66085409"
   
     -   Selezionare l'opzione **Usa test case della struttura di data mining**per usare il set completo di test case definiti come parte del set di dati di controllo delle strutture di data mining.  
   
-    -   Selezionare l'opzione **Specifica un set di dati diverso**se si vuole usare dati esterni.  Il set di dati deve essere disponibile come vista origine dati.   Fare clic su Sfoglia (**...** ) pulsante per scegliere le tabelle di dati da utilizzare per il grafico di accuratezza. Per altre informazioni, vedere [Scegliere ed eseguire il mapping dei dati di test del modello](choose-and-map-model-testing-data.md).  
+    -   Selezionare l'opzione **Specifica un set di dati diverso**se si vuole usare dati esterni.  Il set di dati deve essere disponibile come vista origine dati.   Fare clic su Sfoglia ( **...** ) pulsante per scegliere le tabelle di dati da utilizzare per il grafico di accuratezza. Per altre informazioni, vedere [Scegliere ed eseguire il mapping dei dati di test del modello](choose-and-map-model-testing-data.md).  
   
          Se si utilizza un set di dati esterno, è possibile scegliere di filtrare il set di dati di input. Per altre informazioni, vedere [Applicare filtri ai dati di test del modello](apply-filters-to-model-testing-data.md).  
   

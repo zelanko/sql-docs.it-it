@@ -1,5 +1,5 @@
 ---
-Title: Connettersi a un'istanza di SQL Server ed eseguire query con SQL Server Management Studio (SSMS)
+title: Connettersi a un'istanza di SQL Server ed eseguire query con SQL Server Management Studio (SSMS)
 description: Esercitazione di avvio rapido per la connessione a un'istanza di SQL Server tramite SQL Server Management Studio e l'esecuzione di query T-SQL di base.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -12,12 +12,12 @@ ms.prod: sql
 ms.technology: ssms
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 0300594d64bd1bc973cc5f1a0376ab8a325521ce
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 2cd8f0ad109f7ad780c78a8ee98afe40d14fba4c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66499426"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66822807"
 ---
 # <a name="quickstart-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Avvio rapido: Connettersi a un'istanza di SQL Server ed eseguire query con SQL Server Management Studio (SSMS)
 

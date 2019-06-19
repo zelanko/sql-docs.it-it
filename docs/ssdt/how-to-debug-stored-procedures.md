@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 727117a31fd1a2fc5f5a807de824a8ff61ebb5bd
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090202"
 ---
 # <a name="how-to-debug-stored-procedures"></a>Procedura: Eseguire il debug di stored procedure
@@ -57,7 +57,7 @@ In questo esempio viene illustrato come creare ed eseguire il debug di una store
   
 7.  Premere la freccia a discesa sul pulsante freccia verde nella barra degli strumenti dell'Editor Transact\-SQL e selezionare **Esegui con debugger** per eseguire la query contestualmente al debug.  
   
-8.  In alternativa, è possibile avviare il debug da Esplora oggetti di SQL Server. Fare clic con il pulsante destro del mouse sulla stored procedure **AddProduct** (all'interno di **Locale** ->  database **TradeDev** -> **Programmazione** -> **Stored procedure**). Selezionare **Debug procedura...**. Se per l'oggetto vengono richiesti parametri, verrà visualizzata la finestra di dialogo **Debug procedura** con una tabella contenente una riga per ogni parametro. In ogni riga della tabella sono presenti due colonne: una per il nome del parametro e un'altra per il relativo valore. Immettere i valori per ogni parametro e fare clic su OK.  
+8.  In alternativa, è possibile avviare il debug da Esplora oggetti di SQL Server. Fare clic con il pulsante destro del mouse sulla stored procedure **AddProduct** (all'interno di **Locale** ->  database **TradeDev** -> **Programmazione** -> **Stored procedure**). Selezionare **Debug procedura...** . Se per l'oggetto vengono richiesti parametri, verrà visualizzata la finestra di dialogo **Debug procedura** con una tabella contenente una riga per ogni parametro. In ogni riga della tabella sono presenti due colonne: una per il nome del parametro e un'altra per il relativo valore. Immettere i valori per ogni parametro e fare clic su OK.  
   
 9. Verificare che la finestra **Variabili locali** sia aperta. In caso contrario, scegliere **Finestre** dal menu **Debug**, quindi **Locale**.  
   

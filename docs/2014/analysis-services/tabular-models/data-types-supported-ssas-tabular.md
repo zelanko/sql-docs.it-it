@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 585ce68402e8922f6c9629d8f4e8cd517218106f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067278"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>Tipi di dati supportati (SSAS tabulare)
@@ -73,7 +73,7 @@ ms.locfileid: "66067278"
 ##  <a name="bkmk_implicit"></a> Conversione implicita ed esplicita del tipo di dati nelle formule DAX  
  Ogni funzione DAX prevede requisiti specifici relativi ai tipi di dati utilizzati come input e output. Alcune funzioni, ad esempio, richiedono numeri interi per determinati argomenti e date per altri. Altre funzioni richiedono testo o tabelle.  
   
- Se i dati nella colonna specificata come argomento non sono compatibili con il tipo di dati richiesto dalla funzione, in molti casi in DAX viene restituito un errore. Quando possibile, tuttavia, in DAX viene eseguito un tentativo di conversione implicita dei dati nel tipo di dati richiesto. Ad esempio:   
+ Se i dati nella colonna specificata come argomento non sono compatibili con il tipo di dati richiesto dalla funzione, in molti casi in DAX viene restituito un errore. Quando possibile, tuttavia, in DAX viene eseguito un tentativo di conversione implicita dei dati nel tipo di dati richiesto. Ad esempio:  
   
 -   È possibile digitare un numero, ad esempio "123", sotto forma di stringa. Tramite DAX la stringa verrà analizzata e si tenterà di specificarla come tipo di dati numerico.  
   

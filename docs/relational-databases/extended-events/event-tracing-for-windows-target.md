@@ -17,10 +17,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 660244f23151be405bdcf47914c85730e6c5b823
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66198317"
 ---
 # <a name="event-tracing-for-windows-target"></a>destinazione di Event Tracing for Windows
