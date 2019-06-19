@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23b0125ab578ebb4fb8837c95ec61db900880ec6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064525"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Cerca cartella remota (Analysis Services - Dati multidimensionali)
   Nella finestra di dialogo **Cerca cartella remota** viene visualizzato un elenco di cartelle di dati e log disponibili definite per un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. È possibile selezionare una delle cartelle incluse nell'elenco oppure specificarne un'altra. Per visualizzare la finestra di dialogo **Cerca cartella remota** , eseguire uno dei passaggi seguenti:  
   
--   In Creazione guidata partizione, nella pagina **Posizioni di elaborazione e archiviazione** fare clic sul pulsante con i puntini di sospensione (**...**).  
+-   In Creazione guidata partizione, nella pagina **Posizioni di elaborazione e archiviazione** fare clic sul pulsante con i puntini di sospensione ( **...** ).  
   
--   Nella finestra di dialogo **Ripristina database** , nella pagina **Partizioni** , nell'opzione **Seleziona percorsi diversi** , nella colonna **Cartella di destinazione** fare clic sul pulsante con i puntini di sospensione (**...**).  
+-   Nella finestra di dialogo **Ripristina database** , nella pagina **Partizioni** , nell'opzione **Seleziona percorsi diversi** , nella colonna **Cartella di destinazione** fare clic sul pulsante con i puntini di sospensione ( **...** ).  
   
--   Nella finestra di dialogo **Partizioni remote - Impostazioni avanzate** , nell'opzione **Elenco partizioni** , nella colonna **Cartella ripristino** fare clic sul pulsante con i puntini di sospensione (**...**).  
+-   Nella finestra di dialogo **Partizioni remote - Impostazioni avanzate** , nell'opzione **Elenco partizioni** , nella colonna **Cartella ripristino** fare clic sul pulsante con i puntini di sospensione ( **...** ).  
   
--   In Sincronizzazione guidata database, nella pagina **Impostazione percorsi partizioni locali** oppure **Impostazione percorsi partizioni remote** , nell'opzione **Percorsi** , nella colonna **Cartella di destinazione** fare clic sul pulsante con i puntini di sospensione (**...**).  
+-   In Sincronizzazione guidata database, nella pagina **Impostazione percorsi partizioni locali** oppure **Impostazione percorsi partizioni remote** , nell'opzione **Percorsi** , nella colonna **Cartella di destinazione** fare clic sul pulsante con i puntini di sospensione ( **...** ).  
   
 ## <a name="options"></a>Opzioni  
  **Selezionare la cartella**  

@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1c0b3c7332fdb2583800f3aa600175f06f8928f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591345"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62999594"
 ---
 # <a name="delete-a-data-tier-application"></a>Eliminazione di un'applicazione livello dati
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "53591345"
 > [!WARNING]  
 >  La ricompilazione di un'istanza di applicazione livello dati mediante la registrazione di un'applicazione livello dati da un database ripristinato o ricollegato non implica la ricreazione di alcune parti dell'applicazione originale, quali i criteri di selezione dei server.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorizzazioni  
  Un'applicazione livello dati può essere eliminata unicamente da membri del ruolo predefinito del server **sysadmin** o **serveradmin** oppure dal proprietario del database. È inoltre possibile avviare la procedura guidata usando l'account dell'amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito denominato **sa** .  
   
 ##  <a name="UsingDeleteDACWizard"></a> Utilizzo della procedura guidata Elimina applicazione livello dati  
@@ -84,7 +84,7 @@ ms.locfileid: "53591345"
   
  **Non visualizzare più questa pagina** - Fare clic sulla casella di controllo per evitare che la pagina venga visualizzata nuovamente in futuro.  
   
- **Avanti >**: consente di passare alla pagina **Seleziona metodo**.  
+ **Avanti >** : consente di passare alla pagina **Seleziona metodo**.  
   
  **Annulla** : consente di terminare la procedura guidata senza eliminare un'applicazione livello dati o un database.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "53591345"
   
  **< Indietro**: consente di tornare alla pagina **Introduzione**.  
   
- **Avanti >**: consente di passare alla pagina **Riepilogo**.  
+ **Avanti >** : consente di passare alla pagina **Riepilogo**.  
   
  **Annulla** : consente di terminare la procedura guidata senza eliminare l'applicazione livello dati o il database.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "53591345"
   
  **< Indietro**: consente di tornare alla pagina **Seleziona metodo** per selezionare un altro metodo di eliminazione.  
   
- **Avanti >**: consente di eliminare l'istanza DAC usando il metodo selezionato nella pagina precedente e passare alla pagina **Elimina applicazione del livello dati**.  
+ **Avanti >** : consente di eliminare l'istanza DAC usando il metodo selezionato nella pagina precedente e passare alla pagina **Elimina applicazione del livello dati**.  
   
  **Annulla** : consente di terminare la procedura guidata senza eliminare l'istanza di applicazione livello dati.  
   

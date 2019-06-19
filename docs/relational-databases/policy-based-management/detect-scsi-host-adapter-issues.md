@@ -14,11 +14,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d26498c6006c867bd2123e3bb8a37112773ac450
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663600"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63007622"
 ---
 # <a name="detect-scsi-host-adapter-issues"></a>Rilevamento dei problemi relativi all'adattatore host SCSI
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

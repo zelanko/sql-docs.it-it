@@ -19,10 +19,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 335352fbf9753c2be6e0ddbed3d0f8d8032a3649
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946168"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Impostazione dei caratteri di terminazione del campo e della riga (SQL Server)
@@ -70,12 +70,12 @@ ms.locfileid: "64946168"
   
     -   Uso dell'opzione **-t** per specificare il carattere di terminazione del campo per tutti i campi, ad eccezione dell'ultimo campo della riga, e dell'opzione **-r** per specificare un carattere di terminazione della riga.  
   
-    -   Uso di un'opzione per il formato carattere (**-c** o **-w**) senza l'opzione **-t** , che imposta il carattere di terminazione del campo sul carattere di tabulazione, \t. Questa impostazione è equivalente all'uso di **-t**\t.  
+    -   Uso di un'opzione per il formato carattere ( **-c** o **-w**) senza l'opzione **-t** , che imposta il carattere di terminazione del campo sul carattere di tabulazione, \t. Questa impostazione è equivalente all'uso di **-t**\t.  
   
         > [!NOTE]  
         >  Se si specifica l'opzione **-n** per i dati nativi o l'opzione **-N** per i dati nativi Unicode, i caratteri di terminazione non vengono inseriti.  
   
-    -   Se un comando **bcp** interattivo include l'opzione **in** o **out** senza l'opzione per il file di formato (**-f**) o per un formato dei dati (**-n**, **-c**, **-w**o **-N**) e si è scelto di non specificare la lunghezza del prefisso e del campo, il comando richiede di specificare il carattere di terminazione di ogni campo. L'impostazione predefinita none non prevede alcun carattere di terminazione:  
+    -   Se un comando **bcp** interattivo include l'opzione **in** o **out** senza l'opzione per il file di formato ( **-f**) o per un formato dei dati ( **-n**, **-c**, **-w**o **-N**) e si è scelto di non specificare la lunghezza del prefisso e del campo, il comando richiede di specificare il carattere di terminazione di ogni campo. L'impostazione predefinita none non prevede alcun carattere di terminazione:  
   
          `Enter field terminator [none]:`  
   
@@ -187,8 +187,8 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 |Opzione|attribute|  
 |------------|---------------|  
 |DATAFILETYPE **='** char **'**|Specifica che i campi dati devono essere caricati come dati di tipo carattere.|  
-|FIELDTERMINATOR **='**`,`**'**|Specifica la virgola (`,`) come carattere di terminazione del campo.|  
-|ROWTERMINATOR **='**`\n`**'**|Specifica il carattere di nuova riga come carattere di terminazione della riga.|  
+|FIELDTERMINATOR **='** `,` **'**|Specifica la virgola (`,`) come carattere di terminazione del campo.|  
+|ROWTERMINATOR **='** `\n` **'**|Specifica il carattere di nuova riga come carattere di terminazione della riga.|  
   
  Nell'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eseguire il codice seguente:  
   

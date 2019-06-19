@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9fc5fc211d0f0c843ad16fb377fad2082bcf02c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62791942"
 ---
 # <a name="enable-and-disable-alwayson-availability-groups-sql-server"></a>Abilitare e disabilitare la funzionalità Gruppi di disponibilità AlwaysOn (SQL Server)
@@ -131,7 +131,7 @@ ms.locfileid: "62791942"
   
 2.  Nel menu **Start** scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **Strumenti di configurazione**, quindi fare clic su **Gestione configurazione SQL Server**.  
   
-3.  Nelle **Gestione configurazione SQL Server**, fare clic su **SQL Server Services**, fare doppio clic su SQL Server (**<*`instance name`*>)**, dove **< *`instance name`* >** è il nome di un'istanza del server locale per il quale si desidera abilitare gruppi di disponibilità AlwaysOn, e Fare clic su **proprietà.**  
+3.  Nelle **Gestione configurazione SQL Server**, fare clic su **SQL Server Services**, fare doppio clic su SQL Server ( **< *`instance name`* >)** , dove **< *`instance name`* >** è il nome di un'istanza del server locale per il quale si desidera abilitare gruppi di disponibilità AlwaysOn, e Fare clic su **proprietà.**  
   
 4.  Selezionare la scheda **Disponibilità elevata AlwaysOn** .  
   
@@ -195,7 +195,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  Nel menu **Start** scegliere **Tutti i programmi**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **Strumenti di configurazione**, quindi fare clic su **Gestione configurazione SQL Server**.  
   
-3.  Nelle **Gestione configurazione SQL Server**, fare clic su **SQL Server Services**, fare doppio clic su SQL Server (**<*`instance name`*>)**, dove **< *`instance name`* >** è il nome di un'istanza del server locale per il quale si desidera disabilitare gruppi di disponibilità AlwaysOn e Fare clic su **proprietà**.  
+3.  Nelle **Gestione configurazione SQL Server**, fare clic su **SQL Server Services**, fare doppio clic su SQL Server ( **< *`instance name`* >)** , dove **< *`instance name`* >** è il nome di un'istanza del server locale per il quale si desidera disabilitare gruppi di disponibilità AlwaysOn e Fare clic su **proprietà**.  
   
 4.  Deselezionare la casella di controllo**Abilita gruppi di disponibilità AlwaysOn**nella scheda **Disponibilità elevata AlwaysOn** e scegliere **OK**.  
   
@@ -251,7 +251,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 |Specifica del parametro -NoServiceRestart|Specifica del parametro -Force|Riavvio del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |--------------------------------------------|---------------------------------|---------------------------------------------------------|  
-|No|No|Per impostazione predefinita. Tuttavia dal cmdlet è richiesto quanto segue:<br /><br /> **Per completare l'azione, è necessario riavviare il servizio SQL Server per l'istanza del server '<nome_istanza>'. Continuare?**<br /><br /> **[Y] Sì [N] No [S] Sospendi [?] Guida (l'impostazione predefinita è "Y"):**<br /><br /> Se si specifica **N** o **S**, il servizio non viene riavviato.|  
+|No|no|Per impostazione predefinita. Tuttavia dal cmdlet è richiesto quanto segue:<br /><br /> **Per completare l'azione, è necessario riavviare il servizio SQL Server per l'istanza del server '<nome_istanza>'. Continuare?**<br /><br /> **[Y] Sì [N] No [S] Sospendi [?] Guida (l'impostazione predefinita è "Y"):**<br /><br /> Se si specifica **N** o **S**, il servizio non viene riavviato.|  
 |No|Yes|Servizio riavviato.|  
 |Yes|No|Servizio non riavviato.|  
 |Yes|Yes|Servizio non riavviato.|  

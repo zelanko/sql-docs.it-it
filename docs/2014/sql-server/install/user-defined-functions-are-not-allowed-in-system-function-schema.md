@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 10813b7bc0a97f0ba8a81f3f48447142659cd596
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66091326"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>In system_function_schema non sono consentite funzioni definite dall'utente
@@ -54,7 +54,7 @@ ms.locfileid: "66091326"
   
 4.  Sostituire i riferimenti a **system_function_schema** con **dbo** in tutti gli script che contengono istruzioni DDL di funzioni definite dall'utente.  
   
-5.  Modificare gli script che richiamano tali funzioni per l'utilizzo di dbo nome in due parti **.** _nome_funzione_, o il nome in tre parti _database_name_**.** dbo. *nome_funzione*.  
+5.  Modificare gli script che richiamano tali funzioni per l'utilizzo di dbo nome in due parti **.** _nome_funzione_, o il nome in tre parti _database_name_ **.** dbo. *nome_funzione*.  
   
  Per ulteriori informazioni, vedere gli argomenti seguenti della documentazione online di SQL Server:  
   

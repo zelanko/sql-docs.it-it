@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8e9e1ebbf8a6ba8186d30063bd377f95b8e286d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62894745"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>Configurazione dell'attività Script nell'editor attività Script
@@ -51,7 +51,7 @@ ms.locfileid: "62894745"
 > [!NOTE]  
 >  Per i nomi delle variabili viene fatta distinzione tra maiuscole e minuscole.  
   
- Per selezionare le variabili, fare clic sui puntini di sospensione (**...**) accanto al campo della proprietà. Per altre informazioni, vedere [Pagina Seleziona variabili](../../control-flow/select-variables-page.md).  
+ Per selezionare le variabili, fare clic sui puntini di sospensione ( **...** ) accanto al campo della proprietà. Per altre informazioni, vedere [Pagina Seleziona variabili](../../control-flow/select-variables-page.md).  
   
 ### <a name="edit-script-button"></a>Pulsante Modifica script  
  Il pulsante **Modifica script** avvia l'ambiente di sviluppo di VSTA in cui scrivere lo script personalizzato. Per altre informazioni, vedere [Scrittura di codice e debug dell'attività Script](coding-and-debugging-the-script-task.md).  

@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a548fe7327c6e3c8ac4febca3db442490c983058
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131701"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025456"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Recupero di database correlati che contengono transazioni contrassegnate
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,11 +63,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Sintassi Transact-SQL per il recupero fino a un contrassegno  
  Quando si specifica una transazione contrassegnata come destinazione usando un'istruzione [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md), è possibile usare una delle clausole seguenti per arrestare l'operazione in corrispondenza del contrassegno o immediatamente prima di esso:  
   
--   Usare la clausola WITH STOPATMARK = **'**_<nome_contrassegno>_**'** per specificare che il punto di recupero corrisponde alla transazione contrassegnata.  
+-   Usare la clausola WITH STOPATMARK = **'** _<nome_contrassegno>_ **'** per specificare che il punto di recupero corrisponde alla transazione contrassegnata.  
   
      STOPATMARK esegue il rollforward fino al contrassegno, includendovi la transazione contrassegnata.  
   
--   Usare la clausola WITH STOPBEFOREMARK = **'**_<nome_contrassegno>_**'** per specificare che il punto di recupero corrisponde al record del log immediatamente precedente al contrassegno.  
+-   Usare la clausola WITH STOPBEFOREMARK = **'** _<nome_contrassegno>_ **'** per specificare che il punto di recupero corrisponde al record del log immediatamente precedente al contrassegno.  
   
      STOPBEFOREMARK esegue il rollforward fino al contrassegno, escludendo la transazione contrassegnata.  
   

@@ -10,11 +10,11 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 ms.openlocfilehash: 75563b5dcceead80b5b4d55c07413b37c9d0c278
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380662"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63299485"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>Usare DMV per determinare le statistiche di utilizzo e le prestazioni delle viste
 Questo articolo illustra la metodologia e gli script usati per ottenere informazioni sulle **prestazioni delle query che usano viste**. La finalità di questi script è fornire indicatori dell'uso e delle prestazioni delle varie viste disponibili all'interno di un database. 

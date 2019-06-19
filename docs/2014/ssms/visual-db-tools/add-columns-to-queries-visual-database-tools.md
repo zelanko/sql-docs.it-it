@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aef64ed8031664dcbefa7d0e30bf9f63435b292c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63015702"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>Aggiunta di colonne a query (Visual Database Tools)
@@ -40,7 +40,7 @@ ms.locfileid: "63015702"
   
 ### <a name="to-add-all-columns-for-one-table-or-table-valued-object"></a>Per aggiungere tutte le colonne di una tabella o di un oggetto con valori di tabella  
   
--   Nel **riquadro Diagramma**, selezionare la casella di controllo accanto a  **\*(tutte le colonne)**.  
+-   Nel **riquadro Diagramma**, selezionare la casella di controllo accanto a  **\*(tutte le colonne)** .  
   
 ### <a name="to-add-all-columns-for-all-tables-and-table-structured-objects"></a>Per aggiungere tutte le colonne per tutte le tabelle e gli oggetti con struttura di tabella  
   

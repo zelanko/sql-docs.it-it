@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04dea4a32303e06d7f0e6c015eef38ba6d267a30
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070846"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>Aggiornamento di dati PowerPivot con SharePoint 2010
@@ -204,7 +204,7 @@ ms.locfileid: "66070846"
   
  Se viene visualizzato **Integrated Security = SSPI** nella stringa di connessione, è possibile ignorare le credenziali nella stringa di connessione. La connessione utilizzerà sempre l'utente corrente. Eventuali credenziali fornite verranno ignorate.  
   
- Se viene visualizzato **Persist Security Info = False, Password =\* \* \* \* \* \* \* \* \* \* \*, UserID =\<userlogin >**, si avrà una stringa di connessione che accetterà le credenziali. Le credenziali contenute in una stringa di connessione, ad esempio ID utente e Password, non sono credenziali di Windows, ma account di accesso del database o altri account validi per l'origine dati di destinazione.  
+ Se viene visualizzato **Persist Security Info = False, Password =\* \* \* \* \* \* \* \* \* \* \*, UserID =\<userlogin >** , si avrà una stringa di connessione che accetterà le credenziali. Le credenziali contenute in una stringa di connessione, ad esempio ID utente e Password, non sono credenziali di Windows, ma account di accesso del database o altri account validi per l'origine dati di destinazione.  
   
  **Come eseguire l'override delle credenziali nella stringa di connessione**  
   

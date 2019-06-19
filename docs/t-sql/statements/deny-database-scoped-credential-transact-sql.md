@@ -21,11 +21,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2f58fa15ba67cfcf84a35f130fa70eff0d981c0e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327362"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63017733"
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>DENY - Credenziali con ambito database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ DENY permission  [ ,...n ]
  *permission*  
  Specifica un'autorizzazione che può essere negata per credenziali con ambito database. Vedere l'elenco riportato di seguito.  
   
- ON DATABASE SCOPED CREDENTIAL **::**_credential_name_  
+ ON DATABASE SCOPED CREDENTIAL **::** _credential_name_  
  Specifica il tipo di credenziali con ambito database per cui viene negata l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
  *database_principal*  
@@ -64,11 +64,11 @@ DENY permission  [ ,...n ]
   
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
   
--   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
+-   utente del database di cui è stato eseguito il mapping a un gruppo di Windows  
   
--   utente del database sul quale viene eseguito il mapping a un certificato  
+-   utente del database di cui è stato eseguito il mapping a un certificato  
   
--   utente del database mappato a una chiave asimmetrica  
+-   utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
   
 -   utente del database non mappato ad alcuna entità server.  
   
@@ -86,11 +86,11 @@ DENY permission  [ ,...n ]
   
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
   
--   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
+-   utente del database di cui è stato eseguito il mapping a un gruppo di Windows  
   
--   utente del database sul quale viene eseguito il mapping a un certificato  
+-   utente del database di cui è stato eseguito il mapping a un certificato  
   
--   utente del database mappato a una chiave asimmetrica  
+-   utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
   
 -   utente del database non mappato ad alcuna entità server.  
   
@@ -105,7 +105,7 @@ DENY permission  [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per le credenziali con ambito database. Se viene usata la clausola AS, l'entità specificata deve essere proprietaria delle credenziali con ambito database.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: f2c07b756c608e5e28de3351d887d7a7b2f051ce
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334408"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62927634"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ _table_ **.** _column_
 Nome di una tabella e di una colonna in cui leggere i valori. I nomi delle tabelle e delle colonne devono rispettare le regole relative agli [identificatori](../../relational-databases/databases/database-identifiers.md). È necessario specificare i nomi della tabella e della colonna, mentre il nome del database e il nome del proprietario sono facoltativi.  
   
 _text\_ptr_  
-Puntatore di testo valido. _text\_ptr_ deve essere **binary(16)**.  
+Puntatore di testo valido. _text\_ptr_ deve essere **binary(16)** .  
   
 _offset_  
 Se viene usato il tipo di dati **text** o **image**, è il numero di byte. Se viene usato il tipo di dati **ntext**, può anche essere il numero di byte di caratteri da ignorare prima di iniziare la lettura dei dati **text**, **image** o **ntext**.  
@@ -66,7 +66,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i puntatori di test
   
 Se il valore della funzione @@TEXTSIZE è inferiore alle dimensioni specificate per READTEXT, prevale su di esse. La funzione @@TEXTSIZE specifica il limite per il numero di byte di dati restituito che viene impostato dall'istruzione SET TEXTSIZE. Per altre informazioni sull'impostazione della sessione per la funzione TEXTSIZE, vedere [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 Le autorizzazioni per l'istruzione READTEXT vengono assegnate per impostazione predefinita agli utenti con autorizzazioni SELECT per la tabella specificata. Le autorizzazioni sono trasferibili, ovvero vengono trasferite insieme alle autorizzazioni SELECT.  
   
 ## <a name="examples"></a>Esempi  

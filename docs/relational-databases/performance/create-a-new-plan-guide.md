@@ -16,11 +16,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 0bcd57b8f3a2c9d136968fd2903a7e591cc777e2
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143521"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63013841"
 ---
 # <a name="create-a-new-plan-guide"></a>Creare una nuova guida di piano
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ Le guide di piano influiscono sull'ottimizzazione delle query mediante l'aggiunt
 Una guida di piano applica a una query un piano di query fisso e/o hint per la query.
   
 ##  <a name="Restrictions"></a> Limitazioni e restrizioni  
--   Gli argomenti per sp_create_plan_guide devono essere inseriti nell'ordine illustrato. Quando si forniscono valori per i parametri di **sp_create_plan_guide**, è necessario specificare in modo esplicito tutti i nomi dei parametri oppure nessuno. Se ad esempio si specifica **@name =**, è necessario specificare anche **@stmt =** , **@type =** e così via. Analogamente, se si omette **@name =** e viene specificato soltanto il valore del parametro, è necessario omettere anche i nomi dei parametri restanti e specificarne solo il valore. I nomi degli argomenti hanno scopo esclusivamente descrittivo, per facilitare la comprensione della sintassi. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non verifica che il nome di parametro specificato corrisponda al nome del parametro nella posizione in cui il nome viene utilizzato.  
+-   Gli argomenti per sp_create_plan_guide devono essere inseriti nell'ordine illustrato. Quando si forniscono valori per i parametri di **sp_create_plan_guide**, è necessario specificare in modo esplicito tutti i nomi dei parametri oppure nessuno. Se ad esempio si specifica **@name =** , è necessario specificare anche **@stmt =** , **@type =** e così via. Analogamente, se si omette **@name =** e viene specificato soltanto il valore del parametro, è necessario omettere anche i nomi dei parametri restanti e specificarne solo il valore. I nomi degli argomenti hanno scopo esclusivamente descrittivo, per facilitare la comprensione della sintassi. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non verifica che il nome di parametro specificato corrisponda al nome del parametro nella posizione in cui il nome viene utilizzato.  
   
 -   È possibile creare più guide di piano OBJECT o SQL per la stessa query e batch o modulo. Tuttavia è possibile abilitare una sola guida di piano alla volta.  
   
@@ -37,13 +37,13 @@ Una guida di piano applica a una query un piano di query fisso e/o hint per la q
   
 -   Se si tenta di eliminare o modificare una funzione, una stored procedure o un trigger DML a cui viene fatto riferimento in una guida di piano abilitata o disabilitata, viene generato un errore. Viene generato un errore anche se si cerca di eliminare una tabella per la quale è stato definito un trigger a cui una guida di piano fa riferimento.  
 
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorizzazioni  
  Per creare una guida di piano di tipo OBJECT, è necessaria l'autorizzazione ALTER per l'oggetto a cui si fa riferimento. Per creare una guida di piano di tipo SQL o TEMPLATE, è necessaria l'autorizzazione ALTER per il database corrente.  
   
 ##  <a name="SSMSProcedure"></a> Per creare una guida di piano usando SSMS  
 1.  Fare clic sul segno più per espandere il database in cui si desidera creare una guida di piano, quindi fare clic sul segno più per espandere la cartella **Programmabilità** .  
   
-2.  Fare clic con il pulsante destro del mouse sulla cartella **Guide di piano** e selezionare **Nuova guida di piano…**. ![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
+2.  Fare clic con il pulsante destro del mouse sulla cartella **Guide di piano** e selezionare **Nuova guida di piano…** . ![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
   
 3.  Nella casella **Nome** della finestra di dialogo **Nuova guida di piano** immettere il nome della guida di piano.  
   
@@ -76,7 +76,7 @@ Una guida di piano applica a una query un piano di query fisso e/o hint per la q
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```sql  
     -- creates a plan guide named Guide1 based on a SQL statement  

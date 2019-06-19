@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 541bdcde5841394c3a28428a9e21ae4797e75fd4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202960"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62684370"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ ON ALL SERVER
   
  Per altre informazioni su come visualizzare un elenco dei trigger esistenti, vedere [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) e [sys.server_triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per l'eliminazione di un trigger DML è richiesta l'autorizzazione ALTER per la tabella o la vista in cui è definito il trigger.  
   
  Per eliminare un trigger DDL definito con ambito server (ON ALL SERVER) o un trigger LOGON è necessaria l'autorizzazione CONTROL SERVER nel server. Per l'eliminazione di un trigger DDL con ambito database (ON DATABASE) è richiesta l'autorizzazione ALTER ANY DATABASE DDL TRIGGER nel database corrente.  
@@ -112,7 +112,7 @@ IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL
    DROP TRIGGER employee_insupd;  
 ```  
   
-### <a name="b-dropping-a-ddl-trigger"></a>b. Eliminazione di un trigger DDL  
+### <a name="b-dropping-a-ddl-trigger"></a>B. Eliminazione di un trigger DDL  
  Nell'esempio seguente viene eliminato il trigger DDL `safety`.  
   
 > [!IMPORTANT]  

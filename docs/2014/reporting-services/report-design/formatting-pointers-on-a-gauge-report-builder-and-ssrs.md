@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 294586f0d48ca96ca12d3e9eac70f5d2d288654f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105830"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Formattazione degli indicatori di misura su un misuratore (Generatore report e SSRS)
@@ -38,7 +38,7 @@ ms.locfileid: "66105830"
 ##  <a name="DisplayingMultiple"></a> Visualizzazione di più indicatori di misura sul misuratore  
  È possibile aggiungere più indicatori di misura al misuratore in modo da indicare più valori sulla stessa scala. Questa operazione può risultare utile se si desidera visualizzare contemporaneamente un valore alto e uno basso. Per specificare più indicatori di misura sul misuratore per la stessa scala, fare clic con il pulsante destro del mouse in un punto qualsiasi all'interno del misuratore e scegliere **Aggiungi indicatore di misura** dal menu di scelta rapida. In alternativa, è possibile aggiungere una scala facendo clic con il pulsante destro del mouse in un punto qualsiasi del misuratore e scegliendo **Aggiungi scala**. È quindi possibile aggiungere un nuovo indicatore di misura che verrà associato automaticamente all'ultima scala.  
   
- Quando gli indicatori di misura si sovrappongono, l'ordine in base al quale vengono disegnati viene determinato dall'ordine in cui vengono aggiunti al misuratore. Non è possibile ridefinire l'ordine di disegno degli indicatori di misura modificando l'ordine dei campi nel riquadro dei dati. Per modificare l'ordine di disegno di più indicatori di misura, aprire il riquadro Proprietà e fare clic su **Indicatori di misura (...)**. Modificare quindi l'ordine degli indicatori di misura nella raccolta Indicatore di misura.  
+ Quando gli indicatori di misura si sovrappongono, l'ordine in base al quale vengono disegnati viene determinato dall'ordine in cui vengono aggiunti al misuratore. Non è possibile ridefinire l'ordine di disegno degli indicatori di misura modificando l'ordine dei campi nel riquadro dei dati. Per modificare l'ordine di disegno di più indicatori di misura, aprire il riquadro Proprietà e fare clic su **Indicatori di misura (...)** . Modificare quindi l'ordine degli indicatori di misura nella raccolta Indicatore di misura.  
   
   
 ##  <a name="SettingGradients"></a> Impostazione delle sfumature sull'estremità di una lancetta  

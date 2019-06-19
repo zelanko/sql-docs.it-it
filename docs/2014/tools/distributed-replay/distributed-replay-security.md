@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c040bde90a54b9327023d1e1889efdd2930d81b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150343"
 ---
 # <a name="distributed-replay-security"></a>Sicurezza di Distributed Replay
@@ -70,7 +70,7 @@ ms.locfileid: "63150343"
   
  Per configurare le autorizzazioni DCOM del controller, effettuare le seguenti operazioni:  
   
-1.  **Snap-in Servizi componenti Open dcomcnfg.exe,**: Questo è lo strumento che consente di configurare le autorizzazioni DCOM.  
+1.  **Snap-in Servizi componenti Open dcomcnfg.exe,** : Questo è lo strumento che consente di configurare le autorizzazioni DCOM.  
   
     1.  Nel computer controller fare clic sul menu **Start**.  
   

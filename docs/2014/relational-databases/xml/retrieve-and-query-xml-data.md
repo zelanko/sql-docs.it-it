@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63241211"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Recuperare ed eseguire query su dati XML
@@ -27,7 +27,7 @@ ms.locfileid: "63241211"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene il contenuto dell'istanza XML, ma non mantiene gli aspetti dell'istanza XML che non sono considerati significativi nel modello di dati XML. Ciò significa che un'istanza XML recuperata potrebbe non essere identica all'istanza archiviata nel server, ma conterrà le stesse informazioni.  
   
 ### <a name="xml-declaration"></a>Dichiarazione XML  
- La dichiarazione XML in un'istanza non viene mantenuta quando l'istanza viene archiviata nel database. Ad esempio:   
+ La dichiarazione XML in un'istanza non viene mantenuta quando l'istanza viene archiviata nel database. Ad esempio:  
   
 ```  
 CREATE TABLE T1 (Col1 int primary key, Col2 xml)  

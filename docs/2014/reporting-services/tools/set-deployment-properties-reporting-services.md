@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85ddbe528734e5824c80bd5cc00a15d3b32c9bec
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099544"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Impostare le proprietà di distribuzione (Reporting Services)
@@ -63,7 +63,7 @@ ms.locfileid: "66099544"
     > [!NOTE]  
     >  Per un server di report in esecuzione in modalità nativa, per poter pubblicare i report nella cartella di destinazione è necessario disporre delle autorizzazioni **Pubblica** , che vengono fornite tramite un'assegnazione di ruolo che esegue il mapping dell'account utente a un ruolo che include operazioni di pubblicazione. Per altre informazioni, vedere [Creare e gestire assegnazioni di ruolo](../security/create-and-manage-role-assignments.md). Per un server di report in esecuzione in modalità integrata SharePoint, è necessario disporre dell'autorizzazione **Membro** o **Proprietario** per il sito di SharePoint. Per altre informazioni, vedere [Informazioni di riferimento sulle autorizzazioni relative a elenchi e siti di SharePoint per gli elementi del server di report](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
-10. Nella casella di testo **TargetServerURL** digitare l'URL del server di report di destinazione. Prima di pubblicare un report, è necessario impostare questa proprietà su un URL valido per il server di report. Quando si pubblica in un server di report in esecuzione in modalità nativa, usare l'URL della directory virtuale del server di report, ad esempio http:*//server/serverdireport* o https:*//server/serverdireport*. In questa casella è necessario impostare la directory virtuale del server di report e non di Gestione report.  
+10. Nella casella di testo **TargetServerURL** digitare l'URL del server di report di destinazione. Prima di pubblicare un report, è necessario impostare questa proprietà su un URL valido per il server di report. Quando si pubblica in un server di report in esecuzione in modalità nativa, usare l'URL della directory virtuale del server di report, ad esempio http: *//server/serverdireport* o https: *//server/serverdireport*. In questa casella è necessario impostare la directory virtuale del server di report e non di Gestione report.  
   
      Per la pubblicazione su un server di report in cui è attiva la modalità integrata SharePoint, utilizzare l'URL di un sito principale o secondario di SharePoint. Se non si specifica un sito, verrà usato il sito principale predefinito, ad esempio http://*nomeserver*, http://*nomeserver*/*sito* o http://*nomeserver*/*sito*/*sitosecondario*.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66099544"
   
 2.  Nella finestra di dialogo **Pagine delle proprietà** del progetto fare clic su **Gestione configurazione**.  
   
-3.  Nella finestra di dialogo **Gestione configurazione** selezionare la configurazione da modificare. La configurazione attualmente attiva è visualizzata come **Attiva(***\<configurazione>***)**.  
+3.  Nella finestra di dialogo **Gestione configurazione** selezionare la configurazione da modificare. La configurazione attualmente attiva è visualizzata come **Attiva(***\<configurazione>***)** .  
   
 4.  Per ogni progetto nella soluzione, in **Contesti progetto**selezionare o deselezionare la casella di controllo **Compila** o **Distribuisci**.  
   

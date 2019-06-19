@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921823"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Ripristini di file (modello di recupero con registrazione minima)
@@ -62,13 +62,13 @@ ms.locfileid: "62921823"
   
  La sequenza di ripristino contiene solo due istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] . La prima istruzione esegue il ripristino di un file secondario, il file `A`, che viene ripristinato utilizzando WITH NORECOVERY. La seconda operazione ripristina altri due file, i file `B` e `C` , che vengono ripristinati utilizzando WITH RECOVERY da un diverso dispositivo di backup:  
   
-1.  RESTORE DATABASE *database* FILE **=**_nome_file_A_  
+1.  RESTORE DATABASE *database* FILE **=** _nome_file_A_  
   
      FROM *backup_file_A*  
   
      WITH NORECOVERY **;**  
   
-2.  RESTORE DATABASE *database* FILE **=**_nome_file_B_**,**_nome_file_C_  
+2.  RESTORE DATABASE *database* FILE **=** _nome_file_B_ **,** _nome_file_C_  
   
      FROM *backup_dei_file_B_e_C*  
   

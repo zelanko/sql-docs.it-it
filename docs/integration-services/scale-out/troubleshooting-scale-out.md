@@ -12,10 +12,10 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.openlocfilehash: 8de649eb8f6311270c64969981e78315cee29450
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718282"
 ---
 # <a name="troubleshoot-scale-out"></a>Risolvere i problemi di Scale Out
@@ -66,7 +66,7 @@ Controllare i messaggi di errore nel log del servizio Scale Out Worker in `\<dri
 
 ### <a name="symptoms"></a>Sintomi
 
-*"System.ServiceModel.EndpointNotFoundException: Non è disponibile alcun endpoint in ascolto su https://*[NomeComputer]:[Porta]*/ClusterManagement/ in grado di accettare il messaggio."*
+*"System.ServiceModel.EndpointNotFoundException: Non è disponibile alcun endpoint in ascolto su https://* [NomeComputer]:[Porta] */ClusterManagement/ in grado di accettare il messaggio."*
 
 ### <a name="solution"></a>Soluzione
 
@@ -214,7 +214,7 @@ I messaggi di errore nel report di esecuzione del pacchetto non sono sufficienti
 ### <a name="solution"></a>Soluzione
 Sono disponibili più log di esecuzione in `TasksRootFolder` configurati in `WorkerSettings.config`. Per impostazione predefinita, la cartella è `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks`. *[account]* indica l'account che esegue il servizio Scale Out Worker con il valore predefinito `SSISScaleOutWorker140`.
 
-Per individuare il log per l'esecuzione del pacchetto con *[execution ID]*, eseguire il comando Transact-SQL seguente per ottenere il valore di *[task ID*. Quindi, individuare il nome della sottocartella contenente *[task ID]* in `TasksRootFolder`.
+Per individuare il log per l'esecuzione del pacchetto con *[execution ID]* , eseguire il comando Transact-SQL seguente per ottenere il valore di *[task ID*. Quindi, individuare il nome della sottocartella contenente *[task ID]* in `TasksRootFolder`.
 
 ```sql
 SELECT [TaskId]

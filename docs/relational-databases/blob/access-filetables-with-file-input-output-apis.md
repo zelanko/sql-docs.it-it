@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3005ff6aa1311b22eea25e2daa14c1d4110da32c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089036"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Accedere alle tabelle FileTable con API di Input-Output dei file
@@ -94,7 +94,7 @@ ms.locfileid: "65089036"
   
 -   Il rollback di tali modifiche non è possibile.  
   
- È tuttavia possibile accedere alla colonna FILESTREAM in una tabella FileTable anche con l'accesso FILESTREAM transazionale chiamando **OpenSqlFileStream()**. Questo tipo di accesso può essere completamente transazionale e soddisferà tutti i livelli di coerenza delle transazioni attualmente supportati.  
+ È tuttavia possibile accedere alla colonna FILESTREAM in una tabella FileTable anche con l'accesso FILESTREAM transazionale chiamando **OpenSqlFileStream()** . Questo tipo di accesso può essere completamente transazionale e soddisferà tutti i livelli di coerenza delle transazioni attualmente supportati.  
   
 ###  <a name="concurrency"></a> Controllo della concorrenza  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applica il controllo della concorrenza per l'accesso alla tabella FileTable tra applicazioni del file system, nonché tra applicazioni del file system e applicazioni [!INCLUDE[tsql](../../includes/tsql-md.md)] . Questo controllo della concorrenza viene effettuato applicando blocchi appropriati nelle righe della tabella FileTable.  

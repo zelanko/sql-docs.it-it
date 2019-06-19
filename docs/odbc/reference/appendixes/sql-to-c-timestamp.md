@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69c9f1258f35a69d6554783f5d1b4ca79be313d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63259262"
 ---
 # <a name="sql-to-c-timestamp"></a>Da SQL a C: Timestamp
@@ -51,4 +51,4 @@ La tabella seguente illustra i dati ODBC C i tipi di dati a cui possono essere c
   
  [f] questa è la dimensione del tipo di dati C corrispondente.  
 
-Quando i dati SQL timestamp viene convertiti in dati di tipo carattere C, la stringa risultante è nel "*yyyy*-*mm*-*gg* *hh* :*mm*:*ss*[.*f...*] "formato, dove può essere usato fino a nove cifre per i secondi frazionari. Questo formato non è interessato dall'impostazione paese Windows®. (Fatta eccezione per il separatore decimale e i secondi frazionari, il formato intero che sarà utilizzato, indipendentemente dalla precisione del tipo di dati timestamp SQL.)
+Quando i dati SQL timestamp viene convertiti in dati di tipo carattere C, la stringa risultante è nel "*yyyy*-*mm*-*gg* *hh* :*mm*:*ss*[.*f...* ] "formato, dove può essere usato fino a nove cifre per i secondi frazionari. Questo formato non è interessato dall'impostazione paese Windows®. (Fatta eccezione per il separatore decimale e i secondi frazionari, il formato intero che sarà utilizzato, indipendentemente dalla precisione del tipo di dati timestamp SQL.)

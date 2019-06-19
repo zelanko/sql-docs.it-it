@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e8ed8f3cdd8232cdf8fd66be1dce021f84d2e492
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727937"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Chiave candidata (Attività Profiling dati)
@@ -81,12 +81,12 @@ ms.locfileid: "65727937"
  Visualizza il nome della tabella selezionata. Questa opzione è di sola lettura.  
   
 #### <a name="keycolumns-options"></a>Opzioni KeyColumns  
- Le opzioni seguenti sono disponibili per ogni colonna selezionata per l'analisi in **KeyColumns** o per l'opzione **(\*)**.  
+ Le opzioni seguenti sono disponibili per ogni colonna selezionata per l'analisi in **KeyColumns** o per l'opzione **(\*)** .  
   
  Per ulteriori informazioni, vedere la sezione "Informazioni sulla selezione di colonne per la proprietà KeyColumns" riportata in precedenza in questo argomento.  
   
  **IsWildcard**  
- Specifica se è stato selezionato il carattere jolly **(\*)**. Questa opzione è impostata su **True** se è stato selezionato **(\*)** per profilare tutte le colonne. È impostata su **False** se è stata selezionata una singola colonna da analizzare. Questa opzione è di sola lettura.  
+ Specifica se è stato selezionato il carattere jolly **(\*)** . Questa opzione è impostata su **True** se è stato selezionato **(\*)** per profilare tutte le colonne. È impostata su **False** se è stata selezionata una singola colonna da analizzare. Questa opzione è di sola lettura.  
   
  **ColumnName**  
  Visualizza il nome della colonna selezionata. È vuota se è stato selezionato **(\*)** per profilare tutte le colonne. Questa opzione è di sola lettura.  

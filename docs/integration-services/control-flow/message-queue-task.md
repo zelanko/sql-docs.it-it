@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fd1ce5f5da0fec21ee1ac944df6da0f9f6b1390b
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727575"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
@@ -231,7 +231,7 @@ ms.locfileid: "65727575"
 |**Dal pacchetto**|Il messaggio riceve solo messaggi dal pacchetto specificato. La selezione del valore determina la visualizzazione dell'opzione dinamica **Identifier**.|  
   
  **Variabile**  
- Digitare il nome della variabile oppure fare clic su \<**Nuova variabile...**> per configurare una nuova variabile.  
+ Digitare il nome della variabile oppure fare clic su \<**Nuova variabile...** > per configurare una nuova variabile.  
   
  **Argomenti correlati:** [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -276,7 +276,7 @@ ms.locfileid: "65727575"
  Specificare la stringa con cui confrontare il messaggio, a meno che l'opzione **Compare** sia impostata su **Nessuno**.  
   
  **Variabile**  
- Digitare il nome della variabile per la memorizzazione del messaggio ricevuto oppure fare clic su \<**Nuova variabile...**> e quindi configurare una nuova variabile.  
+ Digitare il nome della variabile per la memorizzazione del messaggio ricevuto oppure fare clic su \<**Nuova variabile...** > e quindi configurare una nuova variabile.  
   
  **Argomenti correlati:** [Aggiungi variabile](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 357030c913888d299cbec06c212eb049383b4526
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62916709"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Ripristinare un database a uno snapshot del database
@@ -99,7 +99,7 @@ ms.locfileid: "62916709"
   
      Per un'operazione di ripristino è necessario disporre delle autorizzazioni RESTORE DATABASE nel database di origine. Utilizzare quindi l'istruzione Transact-SQL per ripristinare il database:  
   
-     RESTORE DATABASE *nome_database* FROM DATABASE_SNAPSHOT **=**_nome_snapshot_database_  
+     RESTORE DATABASE *nome_database* FROM DATABASE_SNAPSHOT **=** _nome_snapshot_database_  
   
      dove *nome_database* è il database di origine e *nome_snapshot_database* è il nome dello snapshot con cui ripristinare il database. Si noti che in questa istruzione è necessario specificare un nome di snapshot anziché un dispositivo di backup.  
   
