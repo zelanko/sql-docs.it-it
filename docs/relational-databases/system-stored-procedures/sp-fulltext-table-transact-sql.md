@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 870f12fa569eb0c6046377472a6122d69cd35d6e
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982960"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
@@ -50,7 +50,7 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @tabname = ] 'qualified_table_name'` È un nome di tabella di una o due parti. La tabella deve esistere nel database corrente *qualified_table_name* viene **nvarchar(517)**, non prevede alcun valore predefinito.  
+`[ @tabname = ] 'qualified_table_name'` È un nome di tabella di una o due parti. La tabella deve esistere nel database corrente *qualified_table_name* viene **nvarchar(517)** , non prevede alcun valore predefinito.  
   
 `[ @action = ] 'action'` È l'azione da eseguire. *azione* viene **nvarchar (50)** e non prevede alcun valore predefinito, i possibili valori sono i seguenti.  
   

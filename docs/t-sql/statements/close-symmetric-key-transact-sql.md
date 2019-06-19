@@ -23,11 +23,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 999e8cc5e66e8e809b2c716c77b0c0fba8ae95ba
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361361"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051444"
 ---
 # <a name="close-symmetric-key-transact-sql"></a>CLOSE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }
 ## <a name="remarks"></a>Remarks  
  Le chiavi simmetriche aperte sono associate alla sessione, non al contesto di sicurezza. Una chiave aperta resterà disponibile finché non viene chiusa in modo esplicito o la sessione non viene terminata. CLOSE ALL SYMMETRIC KEYS chiuderà qualsiasi chiave master del database aperta nella sessione corrente tramite l'istruzione [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md).  Le informazioni sulle chiavi aperte sono visibili nella vista del catalogo [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Non sono richieste autorizzazioni esplicite per chiudere una chiave simmetrica.  
   
 ## <a name="examples"></a>Esempi  
@@ -63,7 +63,7 @@ CLOSE SYMMETRIC KEY ShippingSymKey04;
 GO  
 ```  
   
-### <a name="b-closing-all-symmetric-keys"></a>b. Chiusura di tutte le chiavi simmetriche  
+### <a name="b-closing-all-symmetric-keys"></a>B. Chiusura di tutte le chiavi simmetriche  
  Nell'esempio seguente vengono chiuse tutte le chiavi simmetriche aperte nella sessione corrente insieme alla chiave master del database aperta in modo esplicito.  
   
 ```  

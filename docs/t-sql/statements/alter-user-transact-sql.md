@@ -27,11 +27,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 522ff2df33067792979e785b60417c9783d5e46a
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421178"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62648810"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -193,7 +193,7 @@ Il nome di un utente di cui è stato eseguito il mapping a un account di accesso
 > [!NOTE]  
 >  Un utente con autorizzazione **ALTER ANY USER** può modificare lo schema predefinito di qualsiasi utente. È possibile che un utente con uno schema modificato selezioni involontariamente i dati dalla tabella errata o esegua codice dallo schema errato.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  Per modificare il nome di un utente, è necessaria l'autorizzazione **ALTER ANY USER**.  
   
  Per modificare l'account di accesso di destinazione di un utente, è necessaria l'autorizzazione **CONTROL** per il database.  
@@ -214,7 +214,7 @@ ALTER USER Mary5 WITH NAME = Mary51;
 GO  
 ```  
   
-### <a name="b-changing-the-default-schema-of-a-user"></a>b. Modifica dello schema predefinito di un utente  
+### <a name="b-changing-the-default-schema-of-a-user"></a>B. Modifica dello schema predefinito di un utente  
  Nell'esempio seguente lo schema predefinito dell'utente `Mary51` viene modificato in `Purchasing`.  
   
 ```  

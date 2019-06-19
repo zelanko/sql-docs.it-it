@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: d0ca85d39df85fc48a9aad779414db1dcc1b4de6
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65936909"
 ---
 # <a name="stgeomfromwkb-geography-data-type"></a>STGeomFromWKB (tipo di dati geography)
@@ -41,7 +41,7 @@ STGeomFromWKB ( 'WKB_geography' , SRID )
   
 ## <a name="arguments"></a>Argomenti  
  *WKB_geography*  
- Rappresentazione WKB dell'istanza **geography** da restituire. *WKB_geography* è un'espressione **varbinary(max)** .  
+ Rappresentazione WKB dell'istanza **geography** da restituire. *WKB_geography* è un'espressione **varbinary(max)**.  
   
  *SRID*  
  Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geography** da restituire.  

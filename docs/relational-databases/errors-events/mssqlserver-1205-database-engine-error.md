@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c1c42e2e64a0ff43c34d4d928d75ae091702d7db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724600"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63048235"
 ---
 # <a name="mssqlserver1205"></a>MSSQLSERVER_1205
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47724600"
 |Testo del messaggio|La transazione (ID di processo %d) è stata interrotta a causa di un deadlock delle risorse %.*ls con un altro processo. Ripetere la transazione.|  
   
 ## <a name="explanation"></a>Spiegazione  
-Si è tentato di accedere a risorse in ordine conflittuale in transazioni distinte, causando un deadlock. Ad esempio  
+Si è tentato di accedere a risorse in ordine conflittuale in transazioni distinte, causando un deadlock. Esempio:  
   
 -   Transaction1 aggiorna **Table1.Row1**, mentre Transaction2 aggiorna **Table2.Row2**.  
   

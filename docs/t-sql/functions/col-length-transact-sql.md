@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cdcb4ff647328e4c217831a416ca512a4e957f0b
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944030"
 ---
 # <a name="collength-transact-sql"></a>COL_LENGTH (Transact-SQL)
@@ -57,7 +57,7 @@ Restituisce NULL in caso di errore o se un chiamante non ha l'autorizzazione cor
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un utente può visualizzare esclusivamente i metadati delle entità a protezione diretta di cui è proprietario o per cui ha ricevuto un'autorizzazione. Di conseguenza, le funzioni predefinite di creazione dei metadati come COL_LENGTH possono restituire NULL se l'utente non ha l'autorizzazione corretta per l'oggetto. Per altre informazioni, vedere [Configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).
   
 ## <a name="remarks"></a>Remarks  
-Per le colonne di tipo **varchar** dichiarate con l'identificatore **max** (**varchar(max)** ), COL_LENGTH restituisce il valore -1.
+Per le colonne di tipo **varchar** dichiarate con l'identificatore **max** (**varchar(max)**), COL_LENGTH restituisce il valore -1.
   
 ## <a name="examples"></a>Esempi  
 Nell'esempio seguente vengono illustrati i valori restituiti per una colonna di tipo `varchar(40)` e una colonna di tipo `nvarchar(40)`:

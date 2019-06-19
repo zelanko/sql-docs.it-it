@@ -20,11 +20,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: afb12785dd744ddfd938fd2ddfd02e058f2e4034
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327402"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033839"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE - autorizzazioni per entità di database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -152,7 +152,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |ALTER|CONTROL|ALTER ANY APPLICATION ROLE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per l'entità specificata o un'autorizzazione di livello superiore che include l'autorizzazione CONTROL.  
   
  Gli utenti che dispongono dell'autorizzazione CONTROL per un database, ad esempio i membri del ruolo predefinito del database **db_owner**, possono concedere qualsiasi autorizzazione per qualsiasi entità a protezione diretta nel database.  
@@ -168,7 +168,7 @@ REVOKE CONTROL ON USER::Wanida FROM RolandX;
 GO  
 ```  
   
-### <a name="b-revoking-view-definition-permission-on-a-role-from-a-user-to-which-it-was-granted-with-grant-option"></a>b. Revoca dell'autorizzazione VIEW DEFINITION per un ruolo a un utente a cui è stata concessa con WITH GRANT OPTION  
+### <a name="b-revoking-view-definition-permission-on-a-role-from-a-user-to-which-it-was-granted-with-grant-option"></a>B. Revoca dell'autorizzazione VIEW DEFINITION per un ruolo a un utente a cui è stata concessa con WITH GRANT OPTION  
  Nell'esempio seguente viene revocata l'autorizzazione `VIEW DEFINITION` per il ruolo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] del database `SammamishParking` all'utente di database `JinghaoLiu`. Viene specificata l'opzione `CASCADE` perché all'utente `JinghaoLiu` l'autorizzazione `VIEW DEFINITION` è stata concessa con `WITH GRANT OPTION`.  
   
 ```  
@@ -179,7 +179,7 @@ GO
 ```  
   
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>C. Revoca dell'autorizzazione IMPERSONATE per un utente a un ruolo applicazione  
- Nell'esempio seguente viene revocata l'autorizzazione `IMPERSONATE` per l'utente `HamithaL` al ruolo applicazione [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] del database `AccountsPayable17`.  
+ Nell'esempio seguente viene revocata l'autorizzazione `IMPERSONATE` per l'utente `HamithaL` al ruolo applicazione `AccountsPayable17` del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 **Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   

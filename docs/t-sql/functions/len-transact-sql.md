@@ -22,10 +22,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3c3a4b7c9685b11517ce97ebcce64d25f069f1a9
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948670"
 ---
 # <a name="len-transact-sql"></a>LEN (Transact-SQL)
@@ -49,7 +49,7 @@ LEN ( string_expression )
  [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) stringa da valutare. *string_expression* può essere una costante, una variabile o una colonna di dati di tipo carattere o binario.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **bigint** se *expression* è del tipo di dati **varchar(max)** , **nvarchar(max)** o **varbinary(max)** . In caso contrario, **int**.  
+ **bigint** se *expression* è del tipo di dati **varchar(max)**, **nvarchar(max)** o **varbinary(max)**. In caso contrario, **int**.  
   
  Se si utilizzano le regole di confronto SC, il valore intero restituito considererà le coppie di surrogati UTF-16 come un singolo carattere. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   

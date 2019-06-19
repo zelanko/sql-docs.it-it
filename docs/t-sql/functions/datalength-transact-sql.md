@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d5f1b4816be53f05dd964f8be0ee9ce52fd11cbb
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943791"
 ---
 # <a name="datalength-transact-sql"></a>DATALENGTH (Transact-SQL)
@@ -48,7 +48,7 @@ DATALENGTH ( expression )
 [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) con qualsiasi tipo di dati.
   
 ## <a name="return-types"></a>Tipi restituiti
-**bigint** se *expression* è del tipo di dati **nvarchar(max)** , **varbinary(max)** o **varchar(max)** . In caso contrario, **int**.
+**bigint** se *expression* è del tipo di dati **nvarchar(max)**, **varbinary(max)** o **varchar(max)**. In caso contrario, **int**.
   
 ## <a name="remarks"></a>Remarks  
 `DATALENGTH` è molto utile in combinazione con i tipi di dati

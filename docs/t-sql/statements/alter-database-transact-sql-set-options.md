@@ -31,12 +31,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: bee1497ec928f1ac3abcd39ca052301ad5b6bfc9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e3b0e53dfbbe03fd723edb4d4c941e3395a0b1e5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785123"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66826928"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opzioni ALTER DATABASE SET (Transact-SQL)
 
@@ -2934,7 +2934,7 @@ Il proprietario del database può modificare il database solo se è un membro de
 > [!Note]
 > Questa funzionalità viene implementata in tutte le aree. Controllare la versione distribuita per l'istanza in uso e le [note sulla versione di Azure SQL Data Warehouse](/azure/sql-data-warehouse/release-notes-10-0-10106-0) più recenti per la disponibilità delle funzionalità.
 
-<a name="result_set_caching"></a> RESULT_SET_CACHING {ON | OFF} (anteprima per Azure SQL Data Warehouse Gen2) Questo comando deve essere eseguito mentre si è connessi al database master.  Le modifiche apportate a questa impostazione del database hanno effetto immediato.  La memorizzazione nella cache dei set di risultati delle query prevede l'addebito dei costi di archiviazione. Dopo aver disabilitato la memorizzazione nella cache dei risultati per un database, la cache dei risultati precedentemente salvati in modo permanente verrà immediatamente eliminata dalla risorsa di archiviazione di Azure SQL Data Warehouse. È stata introdotta una nuova colonna denominata is_result_set_caching_on in sys.databases per mostrare l'impostazione di memorizzazione nella cache dei risultati per un database.  
+<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF } Si applica solo ad Azure SQL Data Warehouse Gen2 (anteprima) Questo comando deve essere eseguito mentre si è connessi al database master.  Le modifiche apportate a questa impostazione del database hanno effetto immediato.  La memorizzazione nella cache dei set di risultati delle query prevede l'addebito dei costi di archiviazione. Dopo aver disabilitato la memorizzazione nella cache dei risultati per un database, la cache dei risultati precedentemente salvati in modo permanente verrà immediatamente eliminata dalla risorsa di archiviazione di Azure SQL Data Warehouse. È stata introdotta una nuova colonna denominata is_result_set_caching_on in sys.databases per mostrare l'impostazione di memorizzazione nella cache dei risultati per un database.  
 
 SÌ Specifica che i set di risultati delle query restituiti da questo database verranno memorizzati nella cache nell'archiviazione di Azure SQL Data Warehouse.
 

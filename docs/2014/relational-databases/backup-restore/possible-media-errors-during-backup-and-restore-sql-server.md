@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46b9fef97433609310169c98d8ffc623a21a10c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62876114"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Possibili errori relativi ai supporti durante il backup e il ripristino (SQL Server)
@@ -58,7 +58,7 @@ ms.locfileid: "62876114"
   
 2.  Indipendentemente dalla presenza di valori di checksum per la pagina, viene generato un checksum di backup separato per i flussi di backup. Le operazioni di ripristino possono utilizzare facoltativamente il checksum del backup per verificare che il backup non sia danneggiato. Il checksum del backup viene archiviato nei supporti di backup e non nelle pagine del database. È possibile utilizzare facoltativamente il checksum del backup in fase di ripristino.  
   
-3.  Il set di backup viene contrassegnato come contenente checksum di backup (nella colonna **has_backup_checksums** di **msdb..backupset)**. Per altre informazioni, vedere [backupset &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql).  
+3.  Il set di backup viene contrassegnato come contenente checksum di backup (nella colonna **has_backup_checksums** di **msdb..backupset)** . Per altre informazioni, vedere [backupset &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql).  
   
  Durante un'operazione di ripristino, se nel supporto di backup sono presenti checksum di backup, per impostazione predefinita le istruzioni RESTORE e RESTORE VERIFYONLY verificheranno solo i checksum di backup e delle pagine. In assenza di un checksum di backup, l'operazione di backup proseguirà senza verifica, in quanto, in tal caso, l'operazione di ripristino non è in grado di verificare in modo affidabile i checksum delle pagine.  
   

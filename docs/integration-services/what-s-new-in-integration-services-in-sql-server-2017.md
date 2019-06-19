@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6d8660aa65699e6abd22c73e13c3673903ff6bfb
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65713537"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Novità&#39; di Integration Services in SQL Server 2017
@@ -64,7 +64,7 @@ Oltre ai miglioramenti di connettività in SQL Server, in Integration Services F
 -   La gestione del failover dei log di esecuzione dai ruoli di lavoro di scalabilità orizzontale è stata migliorata. I log di esecuzione vengono resi persistenti su disco locale in caso di arresto improvviso di Scale Out Worker. Al riavvio del ruolo di lavoro, i log persistenti saranno ricaricati e salvati in SSISDB.
 -   Il parametro *runincluster* della stored procedure **[catalog].[create_execution]** è stato rinominato in *runinscaleout* per coerenza e leggibilità. Questa modifica del nome del parametro ha le conseguenze seguenti:
     -   Se esistono script che eseguono pacchetti in Scale Out, è necessario modificare il nome del parametro da *runincluster* a *runinscaleout* affinché gli script possano essere usati nella versione RC1.
-    -   In SQL Server Management Studio (SSMS) 17.1 e nelle versioni precedenti non è possibile eseguire i pacchetti in Scale Out nella versione RC1. Messaggio di errore: "*@runincluster* non è un parametro per la procedura **create_execution**." Questo problema viene risolto nella versione 17.2 di SSMS. La versione 17.2 e successiva di SSMS supportano il nuovo nome del parametro ed eseguono i pacchetti in Scale Out. Finché la versione 17.2 di SSMS sarà disponibile, è possibile usare come soluzione alternativa la versione esistente di SSMS per generare lo script che esegue i pacchetti, modificare il nome del parametro *runincluster* in *runinscaleout* nello script ed eseguire lo script.
+    -   In SQL Server Management Studio (SSMS) 17.1 e nelle versioni precedenti non è possibile eseguire i pacchetti in Scale Out nella versione RC1. Messaggio di errore: " *@runincluster* non è un parametro per la procedura **create_execution**." Questo problema viene risolto nella versione 17.2 di SSMS. La versione 17.2 e successiva di SSMS supportano il nuovo nome del parametro ed eseguono i pacchetti in Scale Out. Finché la versione 17.2 di SSMS sarà disponibile, è possibile usare come soluzione alternativa la versione esistente di SSMS per generare lo script che esegue i pacchetti, modificare il nome del parametro *runincluster* in *runinscaleout* nello script ed eseguire lo script.
 -   Il catalogo SSIS include una nuova proprietà globale che consente di specificare la modalità predefinita per l'esecuzione dei pacchetti SSIS. Questa nuova proprietà si applica quando si chiama la stored procedure **[catalog]. [ create_execution]** con il parametro *runinscaleout* impostato su Null. Questa modalità si applica anche ai processi di SQL Agent SSIS. È possibile impostare la nuova proprietà globale nella finestra di dialogo Proprietà per il nodo SSISDB in SSMS oppure con il comando seguente:
     ```sql
     EXEC [catalog].[configure_catalog] @property_name=N'DEFAULT_EXECUTION_MODE', @property_value=1

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e52399dc77fce220bf33939b7c7921e32cd2438c
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011481"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurare e gestire i file del thesaurus per la ricerca full-text
@@ -29,7 +29,7 @@ ms.locfileid: "66011481"
   
 -   Impostazione dei segni diacritici  
   
-     Per un determinato thesaurus, tutti i criteri di ricerca sono sensibili o distinzione relativa ai segni diacritici, ad esempio una tilde (**~**), mark latino (**??** ), o umlaut (**??** ) (vale a dire *accentati/non accentati* oppure */non accentati*). Ad esempio, si supponga di che specifica il modello "caf??" per essere sostituito con altri criteri in una query full-text. Se il thesaurus distinzione caratteri accentati, ricerca full-text verrà sostituito i modelli "caf??" e "Cafe". Se il thesaurus è sensibile alla distinzione tra caratteri accentati, ricerca full-text verrà sostituito solo il modello "caf??". Per impostazione predefinita, un thesaurus non supporta la distinzione tra caratteri accentati e non accentati.  
+     Per un determinato thesaurus, tutti i criteri di ricerca sono sensibili o distinzione relativa ai segni diacritici, ad esempio una tilde ( **~** ), mark latino ( **??** ), o umlaut ( **??** ) (vale a dire *accentati/non accentati* oppure */non accentati*). Ad esempio, si supponga di che specifica il modello "caf??" per essere sostituito con altri criteri in una query full-text. Se il thesaurus distinzione caratteri accentati, ricerca full-text verrà sostituito i modelli "caf??" e "Cafe". Se il thesaurus è sensibile alla distinzione tra caratteri accentati, ricerca full-text verrà sostituito solo il modello "caf??". Per impostazione predefinita, un thesaurus non supporta la distinzione tra caratteri accentati e non accentati.  
   
 -   Set di espansione  
   

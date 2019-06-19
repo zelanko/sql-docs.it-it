@@ -26,10 +26,10 @@ ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: baa6f443215d5d1f221462e1d20d4bf1498ca899
-ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65626693"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Livello di compatibilità ALTER DATABASE (Transact-SQL)
@@ -74,7 +74,7 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 } è la versio
 >
 > Per informazioni dettagliate su come valutare le variazioni delle prestazioni delle query più importanti tra i due livelli di compatibilità [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] vedere [Prestazioni delle query migliorate con il livello di compatibilità 130 in Database SQL di Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/). Si noti che questo articolo si riferisce al livello di compatibilità 130 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma la stessa metodologia si applica ai passaggi al livello 140 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-Eseguire la query seguente per determinare la versione del [!INCLUDE[ssDE](../../includes/ssde-md.md)] a cui si è connessi. 
+Eseguire la query seguente per determinare la versione del [!INCLUDE[ssDE](../../includes/ssde-md.md)] a cui si è connessi.
 
 ```sql
 SELECT SERVERPROPERTY('ProductVersion');
@@ -168,7 +168,7 @@ Per il flusso di lavoro consigliato per l'aggiornamento del livello di compatibi
 
 ## <a name="compatibility-levels-and-stored-procedures"></a>Livelli di compatibilità e stored procedure
 
-Quando si esegue una stored procedure, viene utilizzato il livello di compatibilità corrente del database in cui la procedura è definita. Se si modifica l'impostazione di compatibilità di un database, tutte le relative stored procedure vengono ricompilate automaticamente al fine di riflettere tale modifica. 
+Quando si esegue una stored procedure, viene utilizzato il livello di compatibilità corrente del database in cui la procedura è definita. Se si modifica l'impostazione di compatibilità di un database, tutte le relative stored procedure vengono ricompilate automaticamente al fine di riflettere tale modifica.
 
 ## <a name="differences-between-compatibility-level-140-and-level-150"></a>Differenze tra il livello di compatibilità 140 e 150
 
@@ -186,7 +186,7 @@ Il livello di compatibilità del database 150 è attualmente in anteprima pubbli
 
 Per altre informazioni sulle funzionalità di elaborazione delle query abilitate nel livello di compatibilità del database 150, vedere [Novità di SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md) ed [Elaborazione di query intelligenti nei database SQL](https://docs.microsoft.com/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017).
 
-## <a name="differences-between-compatibility-level-130-and-level-140"></a>Differenze tra il livello di compatibilità 130 e 140 
+## <a name="differences-between-compatibility-level-130-and-level-140"></a>Differenze tra il livello di compatibilità 130 e 140
 
 In questa sezione vengono descritti i nuovi comportamenti introdotti con il livello di compatibilità 140.
 
@@ -295,7 +295,7 @@ A un determinato livello di compatibilità, le parole chiave riservate includono
 
 Una volta introdotta, una parola chiave rimane riservata. La parola chiave riservata PIVOT, ad esempio, introdotta per il livello di compatibilità 90, è riservata per i livelli 100, 110 e 120.
 
-Se per un'applicazione si utilizza un identificatore che rappresenta una parola chiave riservata nel livello di compatibilità relativo, viene generato un errore. In alternativa, racchiudere l'identificatore tra parentesi quadre (**[]**) o virgolette (**""**. Per aggiornare ad esempio un'applicazione che usa l'identificatore **EXTERNAL** al livello di compatibilità 90, è possibile modificare l'identificatore in **[EXTERNAL]** o **"EXTERNAL"**.
+Se per un'applicazione si utilizza un identificatore che rappresenta una parola chiave riservata nel livello di compatibilità relativo, viene generato un errore. In alternativa, racchiudere l'identificatore tra parentesi quadre ( **[]** ) o virgolette ( **""** . Per aggiornare ad esempio un'applicazione che usa l'identificatore **EXTERNAL** al livello di compatibilità 90, è possibile modificare l'identificatore in **[EXTERNAL]** o **"EXTERNAL"** .
 
 Per altre informazioni, vedere [Parole chiave riservate](../../t-sql/language-elements/reserved-keywords-transact-sql.md).
 

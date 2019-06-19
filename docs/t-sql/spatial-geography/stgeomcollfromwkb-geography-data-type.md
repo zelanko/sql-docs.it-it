@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: fe164f0ca8a411f4cb9de9242e2e2df0d8043d38
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65936945"
 ---
 # <a name="stgeomcollfromwkb-geography-data-type"></a>STGeomCollFromWKB (tipo di dati geography)
@@ -39,7 +39,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
   
 ## <a name="arguments"></a>Argomenti  
  *WKB_geometrycollection*  
- Rappresentazione WKB dell'istanza **GeometryCollection** da restituire. *WKB_geometrycollection* è un'espressione **varbinary(max)** .  
+ Rappresentazione WKB dell'istanza **GeometryCollection** da restituire. *WKB_geometrycollection* è un'espressione **varbinary(max)**.  
   
  *SRID*  
  Espressione **int** che rappresenta l'identificatore SRID dell'istanza **GeometryCollection** da restituire.  

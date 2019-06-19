@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 541b7371cdc05ee316e9fb9de9f50affc4f14fc7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062855"
 ---
 # <a name="add-reference-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Aggiungi riferimento (Analysis Services - Dati multidimensionali)

@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f0a32d1d21cd5f3c42fcb91ece5b5a6792c94ce6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728012"
 ---
 # <a name="bulk-insert-task"></a>Inserimento bulk - attività
@@ -126,7 +126,7 @@ ms.locfileid: "65728012"
   
 ### <a name="options"></a>Opzioni  
  **Connessione**  
- Selezionare una gestione connessione OLE DB nell'elenco o fare clic su \<**Nuova connessione...**> per creare una nuova connessione.  
+ Selezionare una gestione connessione OLE DB nell'elenco o fare clic su \<**Nuova connessione...** > per creare una nuova connessione.  
   
  **Argomenti correlati:** [Gestione connessione OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
@@ -142,7 +142,7 @@ ms.locfileid: "65728012"
 |**Specifica**|Consente di specificare il formato. Selezionando questa opzione vengono visualizzate le opzioni dinamiche **RowDelimiter** e **ColumnDelimiter**.|  
   
  **File**  
- Selezionare una gestione connessione file o file flat nell'elenco oppure fare clic su \<**Nuova connessione...**> per creare una nuova connessione.  
+ Selezionare una gestione connessione file o file flat nell'elenco oppure fare clic su \<**Nuova connessione...** > per creare una nuova connessione.  
   
  Il percorso del file è relativo al Motore di database di SQL Server specificato nella gestione connessione per questa attività. Il file di testo deve essere accessibile dal Motore di database di SQL Server in un disco rigido locale sul server oppure tramite un'unità condivisa o di cui è stato eseguito il mapping a SQL Server. Non è possibile accedere al file tramite SSIS Runtime.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "65728012"
   
 #### <a name="format--specify"></a>Format = Specifica  
  **RowDelimiter**  
- Consente di specificare il delimitatore di riga nel file di origine. Il valore predefinito è **{CR}{LF}**.  
+ Consente di specificare il delimitatore di riga nel file di origine. Il valore predefinito è **{CR}{LF}** .  
   
  **ColumnDelimiter**  
  Consente di specificare il delimitatore di colonna nel file di origine. Il valore predefinito è **Tabulazione**.  

@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c0439c5230d39ae9dc856c9e1c5c5553e250c42
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723668"
 ---
 # <a name="install-integration-services"></a>Installazione di Integration Services
@@ -85,7 +85,7 @@ Per impostazione predefinita, in una nuova installazione, [!INCLUDE[ssISnoversio
 
 Per un'installazione completa di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], selezionare i componenti necessari dall'elenco seguente:
 
--   **Integration Services (SSIS)**. Installare SSIS con l'Installazione guidata di SQL Server. Se si seleziona SSIS viene installato quanto segue:
+-   **Integration Services (SSIS)** . Installare SSIS con l'Installazione guidata di SQL Server. Se si seleziona SSIS viene installato quanto segue:
 
     -   Supporto per il catalogo SSIS nel motore di database di SQL Server.
 
@@ -97,7 +97,7 @@ Per un'installazione completa di [!INCLUDE[ssISnoversion](../../includes/ssisnov
 
 -   **Motore di database di SQL Server**. Installare il motore di database con l'Installazione guidata di SQL Server. La selezione del motore di database consente di creare e ospitare il database del catalogo SSIS, `SSISDB`, per archiviare, gestire, eseguire e monitorare i pacchetti SSIS.
 
--   **SQL Server Data Tools (SSDT)**. Per scaricare e installare SSDT, vedere [Scaricare SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md). L'installazione di SSDT consente di progettare e distribuire pacchetti SSIS. Con SSDT vengono installati i componenti seguenti:
+-   **SQL Server Data Tools (SSDT)** . Per scaricare e installare SSDT, vedere [Scaricare SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md). L'installazione di SSDT consente di progettare e distribuire pacchetti SSIS. Con SSDT vengono installati i componenti seguenti:
 
     -   Strumenti di progettazione e sviluppo di pacchetti SSIS, incluso Progettazione SSIS.
 

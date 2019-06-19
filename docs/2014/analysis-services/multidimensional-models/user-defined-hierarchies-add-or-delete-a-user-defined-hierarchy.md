@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14d63345020fbe76b727d9276585b17bb3406846
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072585"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>Aggiungere o eliminare una gerarchia definita dall'utente
@@ -53,11 +53,11 @@ ms.locfileid: "66072585"
   
 -   Nella scheda **Struttura dimensione** fare clic sulla gerarchia definita dall'utente che si vuole rimuovere nel riquadro **Gerarchie** . Fare clic su **Elimina**sulla barra degli strumenti.  
   
-     - - oppure -  
+     - \- oppure -  
   
 -   Fare clic con il pulsante destro del mouse sulla gerarchia definita dall'utente che si vuole rimuovere nel riquadro **Gerarchie** e quindi scegliere **Elimina**.  
   
-     - - oppure -  
+     - \- oppure -  
   
 -   Trascinare la gerarchia definita dall'utente al di fuori dell'area di progettazione.  
   

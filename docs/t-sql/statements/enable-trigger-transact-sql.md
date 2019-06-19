@@ -24,11 +24,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 86b23a92006e4a2f3e3896cd1fe20c8b566d14e4
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652520"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62681494"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ Per un trigger DDL, indica che *trigger_name* è stato creato o modificato per e
 ## <a name="remarks"></a>Remarks  
 L'abilitazione di un trigger non comporta la sua creazione ex-novo. Un trigger disabilitato continua a esistere come oggetto nel database corrente, ma non viene attivato. Se si abilita un trigger, questo verrà attivato ogni volta che vengono eseguite istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] per le quali è stato programmato in origine. I trigger vengono disabilitati tramite [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md). I trigger DML definiti su tabelle possono essere disabilitati o abilitati anche tramite [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 Per abilitare un trigger DML, un utente deve avere almeno l'autorizzazione ALTER per la tabella o vista in base alla quale il trigger è stato creato.  
   
 Per abilitare un trigger DDL con ambito server (ON ALL SERVER) o un trigger LOGON, un utente deve avere l'autorizzazione CONTROL SERVER per il server. Per abilitare un trigger DDL nell'ambito del database (ON DATABASE), un utente deve avere almeno l'autorizzazione ALTER ANY DATABASE DDL TRIGGER nel database corrente.  
@@ -88,7 +88,7 @@ ENABLE Trigger Person.uAddress ON Person.Address;
 GO  
 ```  
   
-### <a name="b-enabling-a-ddl-trigger"></a>b. Abilitazione di un trigger DDL  
+### <a name="b-enabling-a-ddl-trigger"></a>B. Abilitazione di un trigger DDL  
 Nell'esempio seguente viene creato un trigger DDL `safety` con ambito database, che viene quindi disabilitato e poi abilitato.  
   
 ```  
