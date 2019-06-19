@@ -1,5 +1,5 @@
 ---
-title: Creare, modificare ed eliminare tabelle FileTable | Microsoft Docs
+title: Creare, modificare ed eliminare FileTable | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cfe7ea1c88a6d7118be63314824a479bd108f070
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65094358"
 ---
-# <a name="create-alter-and-drop-filetables"></a>Creare, modificare ed eliminare tabelle FileTable
+# <a name="create-alter-and-drop-filetables"></a>Creare, modificare e rilasciare FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Viene descritto come creare una nuova tabella FileTable o modificarne o eliminarne una esistente.  
   

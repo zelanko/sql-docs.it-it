@@ -7,10 +7,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.openlocfilehash: 1a0bd129fc535b53d8d19ad76f99f3a86ba10c11
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65135237"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>Uso dei SID dei servizi per concedere autorizzazioni ai servizi in SQL Server
@@ -31,7 +31,7 @@ Dopo aver creato e confermato il SID del servizio, è necessario concedergli l'a
 > [!TIP]
 > Se viene restituito l'errore `Login failed for user 'NT AUTHORITY\SYSTEM'`, verificare che il SID del servizio sia disponibile per il servizio desiderato, che l'account di accesso del SID del servizio sia stato creato in SQL Server e che al SID siano state concesse le autorizzazioni appropriate in SQL Server.
 
-## <a name="security"></a>Sicurezza
+## <a name="security"></a>Security
 
 ### <a name="eliminate-service-accounts"></a>Eliminazione degli account del servizio
 
