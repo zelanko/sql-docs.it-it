@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 203eae4b3660aaf5d1f2ed3a92ba844e88a518ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62467782"
 ---
 # <a name="imdembeddeddata-interface"></a>Interfaccia IMDEmbeddedData
@@ -109,7 +109,7 @@ HRESULT GetStreamIdentifier (
 |DBPROPVAL_EMBED_EMBEDDED|0x01|L'applicazione corrente contiene il database incorporato|  
 |DBPROPVAL_EMBED_LINKED|0x02|Il database incorporato è ospitato in un'applicazione remota, ad esempio SharePoint Server|  
   
-#### <a name="source"></a>Source  
+#### <a name="source"></a>`Source`  
   
 ```  
 [id(1), helpstring("Get identifier used to look up embedded stream in container document")]   
@@ -139,7 +139,7 @@ HRESULT SetContainerURL (
  **E_FAIL**  
  Si è verificato un errore durante l'impostazione dell'URL del contenitore.  
   
-#### <a name="source"></a>Source  
+#### <a name="source"></a>`Source`  
   
 ```  
 [id(2), helpstring("Set the URL for the document containing the embedded stream")]   
@@ -169,7 +169,7 @@ HRESULT SetHosted (
  **E_FAIL**  
  Si è verificato un errore durante l'impostazione del flag.  
   
-#### <a name="source"></a>Source  
+#### <a name="source"></a>`Source`  
   
 ```  
 [id(5), helpstring("Set flag indicating if the application is in a hosted environment")]   
@@ -199,7 +199,7 @@ HRESULT SetTempDirPath (
  **E_FAIL**  
  Si è verificato un errore durante l'impostazione del percorso.  
   
-#### <a name="source"></a>Source  
+#### <a name="source"></a>`Source`  
   
 ```  
 [id(4), helpstring("Set the path used by the host application for temporary files")]   
@@ -229,7 +229,7 @@ HRESULT Cancel ( void )
  **E_FAIL**  
  Si verificato un errore durante l'annullamento dell'operazione incorporata.  
   
-#### <a name="source"></a>Source  
+#### <a name="source"></a>`Source`  
   
 ```  
 [id(5), helpstring("Cancel the current operation")]   
