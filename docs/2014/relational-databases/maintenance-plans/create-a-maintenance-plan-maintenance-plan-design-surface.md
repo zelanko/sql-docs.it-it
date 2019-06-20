@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63144342"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Creare un piano di manutenzione (area di progettazione del piano di manutenzione)
@@ -107,7 +107,7 @@ ms.locfileid: "63144342"
      **Pianificazione**  
      Indica la pianificazione in base alla quale verrà eseguito il sottopiano. Fare clic su **Pianificazione sottopiano** per aprire la finestra di dialogo **Nuova pianificazione processo** . Fare clic su **Rimuovi pianificazione** per eliminare la pianificazione dal sottopiano.  
   
-     Elenco**Esegui come**   
+     Elenco**Esegui come**  
      Consente di selezionare l'account da utilizzare per l'esecuzione di questa sottoattività.  
   
 6.  Fare clic su **Pianificazione sottopiano** per immettere i dettagli della pianificazione nella finestra di dialogo **Nuova pianificazione processo** .  
@@ -159,10 +159,10 @@ ms.locfileid: "63144342"
          **Opzioni vincolo**  
          Consente di definire il funzionamento di un vincolo tra due attività.  
   
-         Elenco**Operazione valutazione**    
+         Elenco**Operazione valutazione**  
          Consente di specificare l'operazione di valutazione utilizzata dal vincolo di precedenza. Le operazioni sono: **Vincolo**, **Espressione**, **Espressione e vincolo** e **Espressione o vincolo**.  
   
-         Elenco**Valore**   
+         Elenco**Valore**  
          Specificare il valore del vincolo: **Esito positivo**, **Esito negativo** o **Completamento**. Il valore predefinito è**Esito positivo** .  
   
         > [!NOTE]  
@@ -215,7 +215,7 @@ ms.locfileid: "63144342"
   
         1.  Se si seleziona **Genera report in un file di testo**, selezionare **Crea nuovo file** o **Accoda a file**.  
   
-        2.  A seconda della selezione effettuata nel passaggio precedente, immettere il nome e il percorso completo del nuovo file o del file da accodare nella casella **Cartella** o **Nome file** . In alternativa, fare clic sui puntini di sospensione **(...)**  e selezionare il percorso per il nome file o cartella dal **individua cartella -**_nome_server_ oppure **Individua file di Database -**_nome_server_  finestre di dialogo.  
+        2.  A seconda della selezione effettuata nel passaggio precedente, immettere il nome e il percorso completo del nuovo file o del file da accodare nella casella **Cartella** o **Nome file** . In alternativa, fare clic sui puntini di sospensione **(...)**  e selezionare il percorso per il nome file o cartella dal **individua cartella -** _nome_server_ oppure **Individua file di Database -** _nome_server_  finestre di dialogo.  
   
         3.  Se si seleziona **Invia report a destinatario di posta elettronica**, nell'elenco **Operatore agente** selezionare il destinatario del report da inviare tramite posta elettronica.  
   
@@ -230,7 +230,7 @@ ms.locfileid: "63144342"
   
 12. Per visualizzare i risultati nel visualizzatore file di log, in **Esplora oggetti**fare clic con il pulsante destro del mouse sulla cartella **Piani di manutenzione** o sul piano di manutenzione specifico e selezionare **Visualizza cronologia**.  
   
-     Le opzioni seguenti sono disponibili sul **Visualizzatore File di Log -**_nome_server_ nella finestra di dialogo.  
+     Le opzioni seguenti sono disponibili sul **Visualizzatore File di Log -** _nome_server_ nella finestra di dialogo.  
   
      **Carica log**  
      Consente di aprire una finestra di dialogo in cui è possibile specificare un file di log da caricare.  

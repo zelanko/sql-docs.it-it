@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62890212"
 ---
 # <a name="dtexec-utility"></a>Utilità dtexec
@@ -63,32 +63,32 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="bit"></a> Considerazioni sull'installazione in computer a 64 bit  
  In un computer a 64 bit con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] viene installata una versione a 64 bit dell'utilità `dtexec` (dtexec.exe). Se è necessario eseguire alcuni pacchetti nella modalità 32 bit, è necessario installare la versione a 32 bit dell'utilità `dtexec`. Per installare la versione a 32 bit dell'utilità `dtexec`, è necessario selezionare gli strumenti client o [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] durante l'installazione.  
   
- Per impostazione predefinita, un computer a 64 bit contenente le versioni a 64 bit e a 32 bit di un'utilità del prompt dei comandi di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installata eseguirà la versione a 32 bit al prompt dei comandi. Viene eseguita la versione a 32 bit perché il percorso della directory della versione a 32 bit compare nella variabile di ambiente PATH prima del percorso della directory della versione a 64 bit. In genere, il percorso della directory a 32 bit è *\<unità>*:\Programmi (x86) \Microsoft SQL Server\110\DTS\Binn, mentre il percorso della directory a 64 bit è *\<unità>*:\Programmi\Microsoft SQL Server\110\DTS\Binn.  
+ Per impostazione predefinita, un computer a 64 bit contenente le versioni a 64 bit e a 32 bit di un'utilità del prompt dei comandi di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installata eseguirà la versione a 32 bit al prompt dei comandi. Viene eseguita la versione a 32 bit perché il percorso della directory della versione a 32 bit compare nella variabile di ambiente PATH prima del percorso della directory della versione a 64 bit. In genere, il percorso della directory a 32 bit è *\<unità>* :\Programmi (x86) \Microsoft SQL Server\110\DTS\Binn, mentre il percorso della directory a 64 bit è *\<unità>* :\Programmi\Microsoft SQL Server\110\DTS\Binn.  
   
 > [!NOTE]  
 >  Se si utilizza SQL Server Agent per eseguire l'utilità, verrà automaticamente utilizzata la versione a 64 bit dell'utilità. Per trovare l'eseguibile corretto per l'utilità, SQL Server Agent utilizza il Registro di sistema, non la variabile di ambiente PATH.  
   
  Per assicurarsi di eseguire la versione a 64 bit dell'utilità al prompt dei comandi, è possibile eseguire una delle azioni seguenti:  
   
--   Aprire una finestra del prompt dei comandi, accedere alla directory che contiene la versione a 64 bit dell'utilità, *\<unità>*:\Programmi\Microsoft SQL Server\110\DTS\Binn, quindi eseguire l'utilità da quel percorso.  
+-   Aprire una finestra del prompt dei comandi, accedere alla directory che contiene la versione a 64 bit dell'utilità, *\<unità>* :\Programmi\Microsoft SQL Server\110\DTS\Binn, quindi eseguire l'utilità da quel percorso.  
   
--   Al prompt dei comandi eseguire l'utilità immettendo il percorso completo (*\<unità>*:\Programmi\Microsoft SQL Server\110\DTS\Binn) della versione a 64 bit dell'utilità.  
+-   Al prompt dei comandi eseguire l'utilità immettendo il percorso completo ( *\<unità>* :\Programmi\Microsoft SQL Server\110\DTS\Binn) della versione a 64 bit dell'utilità.  
   
--   Modificare in modo definitivo l'ordine dei percorsi nella variabile di ambiente PATH spostando il percorso della versione a 64 bit (*\<unità>*:\Programmi\Microsoft SQL Server\110\DTS\Binn) prima del percorso della versione a 32 bit (*\<unità>*:\Programmi(x86)\Microsoft SQL Server\110\DTS\Binn).  
+-   Modificare in modo definitivo l'ordine dei percorsi nella variabile di ambiente PATH spostando il percorso della versione a 64 bit ( *\<unità>* :\Programmi\Microsoft SQL Server\110\DTS\Binn) prima del percorso della versione a 32 bit ( *\<unità>* :\Programmi(x86)\Microsoft SQL Server\110\DTS\Binn).  
   
 ##  <a name="side"></a> Considerazioni sui computer con installazioni side-by-side  
  Se [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] è installato in un computer con [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)], vengono installate più versioni dell'utilità `dtexec`.  
   
- Per assicurarsi di eseguire la versione corretta dell'utilità, al prompt dei comandi eseguirla immettendo il percorso completo (*\<unità>*:\Programmi\Microsoft SQL Server\\<versione\>\DTS\Binn).  
+ Per assicurarsi di eseguire la versione corretta dell'utilità, al prompt dei comandi eseguirla immettendo il percorso completo ( *\<unità>* :\Programmi\Microsoft SQL Server\\<versione\>\DTS\Binn).  
   
 ##  <a name="phases"></a> Fasi di esecuzione  
  L'esecuzione di questa utilità si articola nelle quattro fasi descritte di seguito.  
   
-1.  Fase di determinazione dell'origine di comando: Il prompt dei comandi legge l'elenco delle opzioni e gli argomenti che sono stati specificati. Tutte le fasi successive vengono ignorate se viene rilevata un'opzione **/?** o **/HELP** .  
+1.  Determinazione dell'origine del comando: il prompt dei comandi esegue la lettura dell'elenco delle opzioni e degli argomenti specificati. Tutte le fasi successive vengono ignorate se viene rilevata un'opzione **/?** o **/HELP** .  
   
 2.  Caricamento dei pacchetti: Il pacchetto specificato dal `/SQL`, **/file**, o `/DTS` opzione viene caricato.  
   
-3.  Fase di configurazione: Le opzioni vengono elaborate nell'ordine indicato:  
+3.  Configurazione: le opzioni vengono elaborate nell'ordine riportato di seguito.  
   
     -   Opzioni che impostano i flag, le variabili e le proprietà dei pacchetti.  
   
@@ -96,7 +96,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
     -   Opzioni che configurano il comportamento dell'utilità in fase di esecuzione, ad esempio la creazione di report.  
   
-4.  Fase di convalida ed esecuzione: il pacchetto viene eseguito o convalidato senza essere eseguito se è stata specificata l'opzione **/VALIDATE**.  
+4.  Convalida ed esecuzione: il pacchetto viene eseguito o convalidato senza essere eseguito se è stata specificata l'opzione **/VALIDATE**.  
   
 ##  <a name="exit"></a> Codici di uscita restituiti  
  **Codici di uscita restituiti dall'utilità dtexec**  
@@ -154,13 +154,13 @@ dtexec /option [value] [/option [value]]...
   
      Se si specifica un *option_name* argomento `dtexec` avvia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentazione in linea e visualizza l'argomento relativo all'utilità dtexec.  
   
--   **/Ca[llerInfo]**:   
+-   **/Ca[llerInfo]** :   
                   Facoltativo. Specifica informazioni aggiuntive per l'esecuzione di un pacchetto. Quando si esegue un pacchetto utilizzando SQL Server Agent, tramite l'agente è possibile impostare questo argomento per specificare che l'esecuzione del pacchetto venga richiamata da SQL Server Agent. Questo parametro viene ignorato quando l'utilità `dtexec` viene eseguita dalla riga di comando.  
   
 -   **/CheckF[ile]** _filespec_:   
                   Facoltativo. Imposta il `CheckpointFileName` proprietà del pacchetto per il percorso e sul file specificati nel *filespec*. Questo file viene utilizzato quando il pacchetto viene riavviato. Se si specifica questa opzione ma si omette il valore del nome file, la proprietà `CheckpointFileName` del pacchetto viene impostata su una stringa vuota. Se si omette questa opzione, i valori nel pacchetto vengono conservati.  
   
--   **/Checkp [ointing]** _{on\off}_:   
+-   **/Checkp [ointing]** _{on\off}_ :   
                   Facoltativo. Consente di impostare un valore che determina se il pacchetto utilizzerà i checkpoint durante l'esecuzione. Il valore **on** indica che un pacchetto la cui esecuzione ha avuto esito negativo deve essere rieseguito. In questo caso, il motore di run-time utilizza il file del checkpoint per riavviare il pacchetto dal punto in cui si è verificato l'errore.  
   
      Il valore predefinito è on se l'opzione viene dichiarata senza un valore. L'esecuzione del pacchetto avrà esito negativo se il valore viene impostato su on, ma non risulta possibile trovare il file del checkpoint. Se si omette questa opzione, il valore impostato nel pacchetto viene conservato. Per ulteriori informazioni, vedere [Riavvio dei pacchetti tramite checkpoint](restart-packages-by-using-checkpoints.md).  
@@ -174,7 +174,7 @@ dtexec /option [value] [/option [value]]...
   
      È possibile usare l'opzione **/ConfigFile** per caricare in fase di esecuzione configurazioni aggiuntive non specificate in fase di progettazione. Non è tuttavia possibile usare l'opzione **/ConfigFile** per sostituire valori configurati specificati anche in fase di progettazione. Per informazioni sull'applicazione delle configurazioni dei pacchetti, vedere [Package Configurations](../package-configurations.md).  
   
--   **/Conn[ection]** _id_or_name;connection_string [[;id_or_name;connection_string]...]_:   
+-   **/Conn[ection]** _id_or_name;connection_string [[;id_or_name;connection_string]...]_ :   
                   Facoltativo. Consente di specificare che la gestione connessione con il nome o il GUID indicato si trova nel pacchetto e che è stata specificata una stringa di connessione.  
   
      Questa opzione richiede che vengano specificati entrambi i parametri: il nome o il GUID della gestione connessione deve essere specificato nell'argomento *id_or_name*, mentre nell'argomento *connection_string* deve essere specificata una stringa di connessione valida. Per altre informazioni, vedere [Connessioni in Integration Services &#40;SSIS&#41;](../connection-manager/integration-services-ssis-connections.md).  
@@ -240,7 +240,7 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     Per impostazione predefinita, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archivia i file di dump del debug nella cartella *\<unità>*:\Programmi\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     Per impostazione predefinita, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archivia i file di dump del debug nella cartella *\<unità>* :\Programmi\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > [!NOTE]  
     >  I file di dump del debug possono contenere informazioni riservate. Utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso ai file oppure copiare i file in una cartella con accesso limitato. Ad esempio, prima di inviare i file del debug al supporto tecnico Microsoft, si consiglia di rimuovere eventuali informazioni sensibili o riservate.  
@@ -254,7 +254,7 @@ dtexec /option [value] [/option [value]]...
 -   **/DumpOnError**:   
                   Facoltativo. Crea il file dump del debug, con estensione mdmp e TMP, quando si verifica un errore durante l'esecuzione del pacchetto.  
   
-     Per impostazione predefinita, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archivia i file di dump del debug nella cartella *\<unità>*:\Programmi\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     Per impostazione predefinita, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] archivia i file di dump del debug nella cartella *\<unità>* :\Programmi\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > [!NOTE]  
     >  I file di dump del debug possono contenere informazioni riservate. Utilizzare un elenco di controllo di accesso (ACL) per limitare l'accesso ai file oppure copiare i file in una cartella con accesso limitato. Ad esempio, prima di inviare i file del debug al supporto tecnico Microsoft, si consiglia di rimuovere eventuali informazioni sensibili o riservate.  
@@ -377,7 +377,7 @@ dtexec /option [value] [/option [value]]...
 -   **/Rem** _comment_:  
                   Facoltativo. Include i commenti nel prompt dei comandi o nei file di comando. L'argomento è facoltativo. Il valore di *comment* è una stringa che deve essere racchiusa tra virgolette o non deve contenere spazi. Se non si specifica alcun argomento, viene inserita una riga vuota. Durante la fase di determinazione dell'origine del comando, i valori*comment* vengono eliminati.  
   
--   **/Rep[orting]** _level_ [*;event_guid_or_name*[*;event_guid_or_name*[...]]: Facoltativo. Specifica i tipi di messaggi da segnalare. Le opzioni relative alle opzioni per *level* sono elencate di seguito:  
+-   **/Rep[orting]** _level_ [ *;event_guid_or_name*[ *;event_guid_or_name*[...]]: Facoltativo. Specifica i tipi di messaggi da segnalare. Le opzioni relative alle opzioni per *level* sono elencate di seguito:  
   
      **N** Nessun report.  
   
@@ -452,7 +452,7 @@ dtexec /option [value] [/option [value]]...
   
      L'opzione `/SQL` non può essere utilizzata in combinazione con l'opzione `/DTS` o `/File`. Se si specificano più opzioni, l'esecuzione di `dtexec` avrà esito negativo.  
   
--   **/Su[m]**: Facoltativo. Consente di visualizzare un contatore incrementale con il numero di righe che verranno ricevute dal componente successivo.  
+-   **/Su[m]** : Facoltativo. Consente di visualizzare un contatore incrementale con il numero di righe che verranno ricevute dal componente successivo.  
   
 -   **/U[ser]** _user_name_:  
                   Facoltativo. Consente il recupero di un pacchetto protetto tramite l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa opzione viene utilizzata solo se si specifica l'opzione `/SQL`. Il valore *user_name* può essere racchiuso tra virgolette.  
@@ -460,10 +460,10 @@ dtexec /option [value] [/option [value]]...
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
--   **/Va[lidate]**:  
+-   **/Va[lidate]** :  
                   Facoltativo. Consente di arrestare l'esecuzione del pacchetto dopo la fase di convalida, quindi il pacchetto non viene eseguito. Durante la convalida, usare il **/WarnAsError** opzione cause `dtexec` interpreta un avviso come errore; pertanto il pacchetto ha esito negativo se viene generato un avviso durante la convalida.  
   
--   **/VerifyB[uild]** _major_[*;minor*[*;build*]]: Facoltativo. Consente di verificare il numero di build di un pacchetto rispetto ai numeri di build specificati durante la fase di verifica negli argomenti *major*, *minor*e *build* . Se i numeri non corrispondono, il pacchetto non verrà eseguito.  
+-   **/VerifyB[uild]** _major_[ *;minor*[ *;build*]]: Facoltativo. Consente di verificare il numero di build di un pacchetto rispetto ai numeri di build specificati durante la fase di verifica negli argomenti *major*, *minor*e *build* . Se i numeri non corrispondono, il pacchetto non verrà eseguito.  
   
      I valori sono di tipo integer long. L'argomento può avere uno dei tre formati seguenti. Il valore *major* è sempre obbligatorio:  
   
@@ -476,7 +476,7 @@ dtexec /option [value] [/option [value]]...
 -   **/VerifyP[ackageID]** _packageID_:  
                   Facoltativo. Consente di verificare il GUID del pacchetto da eseguire in base al valore specificato nell'argomento *package_id* .  
   
--   **/VerifyS[igned]**:  
+-   **/VerifyS[igned]** :  
                   Facoltativo. Comporta il controllo della firma digitale del pacchetto da parte di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Se il pacchetto non è firmato o se la firma non è valida, il pacchetto ha esito negativo. Per altre informazioni, vedere [Identificazione dell'origine dei pacchetti con firme digitali](../security/identify-the-source-of-packages-with-digital-signatures.md).  
   
     > [!IMPORTANT]  
@@ -487,11 +487,11 @@ dtexec /option [value] [/option [value]]...
   
 -   **/VerifyV[ersionID]** _versionID_: Facoltativo. Consente di verificare il GUID di versione di un pacchetto da eseguire in base al valore specificato nell'argomento *version_id* durante la fase di convalida del pacchetto.  
   
--   **/VLog** _[Filespec]_: Facoltativo. Consente di scrivere tutti gli eventi dei pacchetti Integration Services nei provider di log abilitati durante la progettazione del pacchetto. Per consentire l'abilitazione di un provider di log per i file di testo e la scrittura degli eventi del log in un file di testo specifico, includere un percorso e un nome file come parametro *Filespec* .  
+-   **/VLog** _[Filespec]_ : Facoltativo. Consente di scrivere tutti gli eventi dei pacchetti Integration Services nei provider di log abilitati durante la progettazione del pacchetto. Per consentire l'abilitazione di un provider di log per i file di testo e la scrittura degli eventi del log in un file di testo specifico, includere un percorso e un nome file come parametro *Filespec* .  
   
      Se non si include il parametro *Filespec* , non sarà possibile abilitare un provider di log per i file di testo. Gli eventi del log verranno scritti solo nei provider di log abilitati durante la progettazione del pacchetto.  
   
--   **/W[arnAsError]**:  
+-   **/W[arnAsError]** :  
                   Facoltativo. Poiché un avviso viene interpretato come un errore, il pacchetto non viene eseguito se durante la convalida viene generato un avviso. Se non viene generato alcun avviso durante la convalida e si omette l'opzione **/Validate** , il pacchetto viene eseguito.  
   
 -   **/X86**: Facoltativo. Determina l'esecuzione del pacchetto in modalità a 32 bit in un computer a 64 bit da parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Questa opzione viene impostata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent quando sono soddisfatte le condizioni seguenti:  

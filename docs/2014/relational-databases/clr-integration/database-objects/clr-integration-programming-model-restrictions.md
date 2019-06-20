@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a9b51e0fc192c94b32b4d496523dbf3c9216efd6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873811"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Restrizioni relative al modello di programmazione dell'integrazione con CLR
@@ -37,7 +37,7 @@ ms.locfileid: "62873811"
   
 -   L'assembly è uno degli assembly supportati. Per altre informazioni, vedere [librerie di .NET Framework supportate](supported-net-framework-libraries.md).  
   
--   Si usa `CREATE ASSEMBLY FROM`  *\<location >,* e sono disponibili in tutti gli assembly di riferimento e le relative dipendenze  *\<location >*.  
+-   Si usa `CREATE ASSEMBLY FROM`  *\<location >,* e sono disponibili in tutti gli assembly di riferimento e le relative dipendenze  *\<location >* .  
   
 -   Si usa `CREATE ASSEMBLY FROM`  *\<... Byte >,* e tutti i riferimenti vengono specificati tramite lo spazio separati byte.  
   

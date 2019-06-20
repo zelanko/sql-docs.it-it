@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c17f1ba2b6e57fe9194d4cbf4a6e365e65a89d6c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013226"
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
@@ -41,7 +41,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="arguments"></a>Argomenti  
  *plan_handle*  
- Viene identificato in modo univoco un piano di query per un batch eseguito il cui piano risiede nella cache dei piani. *plan_handle* viene **varbinary(64)**. L'handle di piano può essere ottenuto dal [DM exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) vista a gestione dinamica.  
+ Viene identificato in modo univoco un piano di query per un batch eseguito il cui piano risiede nella cache dei piani. *plan_handle* viene **varbinary(64)** . L'handle di piano può essere ottenuto dal [DM exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) vista a gestione dinamica.  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
