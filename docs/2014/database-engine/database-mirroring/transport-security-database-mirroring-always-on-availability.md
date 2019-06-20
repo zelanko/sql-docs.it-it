@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 18b52163cb1e8c6be0cf7fdea37861662d6e4830
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754291"
 ---
 # <a name="transport-security-for-database-mirroring-and-alwayson-availability-groups-sql-server"></a>Sicurezza trasporto per il mirroring del database e i gruppi di disponibilità AlwaysOn (SQL Server)
@@ -65,7 +65,7 @@ ms.locfileid: "62754291"
   
 |Valore di ALGORITHM|Descrizione|  
 |---------------------|-----------------|  
-|RC4|Specifica che l'endpoint deve utilizzare l'algoritmo RC4. Impostazione predefinita.<br /><br /> Nota: L'algoritmo RC4 è deprecato. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] È consigliabile utilizzare AES.|  
+|RC4|Specifica che l'endpoint deve utilizzare l'algoritmo RC4. Questa è l'impostazione predefinita.<br /><br /> Nota: L'algoritmo RC4 è deprecato. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] È consigliabile utilizzare AES.|  
 |AES|Specifica che l'endpoint deve utilizzare l'algoritmo AES.|  
 |AES RC4|Specifica che due endpoint eseguiranno la negoziazione di un algoritmo di crittografia con l'endpoint corrente, dando la priorità all'algoritmo AES.|  
 |RC4 AES|Specifica che due endpoint eseguiranno la negoziazione di un algoritmo di crittografia con l'endpoint corrente, dando la priorità all'algoritmo RC4.|  

@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8b09ee01da2dde8e8bf50fbda21c1c8bca1689d
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011941"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Importazione di dati per operazioni bulk con BULK INSERT o OPENROWSET(BULK...) (SQL Server)
@@ -64,7 +64,7 @@ ms.locfileid: "66011941"
   
 -   [Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="openrowsetbulk-function"></a>OPENROWSET Funzione  
+## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK...) Funzione  
  Al provider bulk per set di righe OPENROWSET si accede chiamando la funzione OPENROWSET e specificando l'opzione BULK. La funzione OPENROWSET(BULK...) consente di accedere ai dati remoti connettendosi a un'origine dei dati remota, ad esempio un file di dati, con un provider OLE DB.  
   
  Per eseguire l'importazione bulk dei dati, chiamare OPENROWSET(BULK...) da una clausola SELECT...FROM all'interno di un'istruzione INSERT. La sintassi di base per l'importazione bulk dei dati è la seguente:  

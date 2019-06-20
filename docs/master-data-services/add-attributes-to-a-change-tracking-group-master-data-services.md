@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 335bdd657c0aa2f687d89f31dfcdd45d757e0cbd
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484808"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>Aggiungere attributi ad un gruppo rilevamento modifiche (Master Data Services)
@@ -66,7 +66,7 @@ ms.locfileid: "65484808"
   
 9. Fare clic su **Salva attributo**.  
   
-     Per l'attributo modificato, la colonna del gruppo **Abilita rilevamento modifiche** nella griglia viene modificata in **Sì (gruppo: numero del gruppo immesso)**.  
+     Per l'attributo modificato, la colonna del gruppo **Abilita rilevamento modifiche** nella griglia viene modificata in **Sì (gruppo: numero del gruppo immesso)** .  
   
 10. Ripetere questa procedura per tutti gli attributi che si desidera includere nel gruppo. Utilizzare lo stesso numero del gruppo rilevamento modifiche per ciascun attributo del gruppo.  
   

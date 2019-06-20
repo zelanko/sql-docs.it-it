@@ -10,12 +10,12 @@ ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ea28d9e214546930c38d600a27e8df6e971a9f17
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 23e80a2bf02ee6b97449ea3acff38a3937d37000
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66090855"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046730"
 ---
 # <a name="lesson-2-create-a-policy-on-container-and-generate-a-shared-access-signature-sas-key"></a>Lezione 2. creare i criteri per il contenitore e generare una chiave di firma di accesso condivisa (SAS, Shared Access Signature)
   In questa lezione, verrà illustrato come creare criteri del contenitore BLOB e generare una chiave SAS.  
@@ -26,7 +26,7 @@ ms.locfileid: "66090855"
   
 -   Operazioni API REST di Azure: [Crea contenitore](https://msdn.microsoft.com/library/azure/dd179468.aspx), [Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx), e [Get Container ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
   
--   [Metodo CloudBlobContainer.GetSharedAccessSignature](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storageclient.cloudblobcontainer.getsharedaccesssignature.aspx) in Microsoft Azure SDK.  
+-   [Metodo CloudBlobContainer.GetSharedAccessSignature](https://docs.microsoft.com/dotnet/api/microsoft.azure.storage.blob.cloudblobcontainer.getsharedaccesssignature) in Microsoft Azure SDK.  
   
     ```  
   

@@ -1,24 +1,20 @@
 ---
 title: Personalizzare i fogli di stile per il visualizzatore HTML e gestione di Report | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
-helpviewer_keywords:
-- style sheets [Reporting Services]
-ms.assetid: df805cff-b1de-4062-b2ac-423f37390fbd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d9c4a57413db37c8f93b1a311542398417bfeff0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: HT
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/26/2019
+ms.openlocfilehash: 7c7745d69e234f81c2a331d214789e93e9fd4014
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63264859"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64568262"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>Personalizzare i fogli di stile per il visualizzatore HTML e Gestione report
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornisce stile CSS predefiniti file sheets (CSS) che definiscono stili per il **report** sulla barra degli strumenti Visualizzatore HTML e per gestione Report. Gli sviluppatori Web o gli utenti con esperienza nella creazione di fogli di stile CSS possono modificare gli stili predefiniti a loro rischio per modificare i colori, i tipi di carattere e il layout della barra degli strumenti di Gestione report. Né i fogli di stile predefiniti né le istruzioni relative alla loro modifica sono documentati in questa versione.  
@@ -37,9 +33,6 @@ ms.locfileid: "63264859"
 |-----------------|-----------------|  
 |Htmlviewer.css|Foglio di stile di esempio che è possibile utilizzare come modello per creare stili personalizzati per la barra degli strumenti **report** del Visualizzatore HTML.<br /><br /> Gli stili predefiniti utilizzati dal Visualizzatore HTML vengono compilati nel server di report. Nel file Htmlviewer.css è contenuto un esempio degli stili utilizzati dal visualizzatore.|  
 |ReportingServices.css|Definisce gli stili per Gestione report.|  
-  
-> [!NOTE]  
->  I fogli di stile vengono usati per la documentazione online di gestione Report e non devono mai essere modificati: CSS e mailto. Altri fogli di stile definiscono stili per i report e per Gestione report aperti in web part di SharePoint. Tali fogli di stile includono Rswebparts.css, Sp_full.css e Sp_small.css. Non è consigliabile modificare i fogli di stile di SharePoint. Per altre informazioni sull'uso di Web part, vedere [esplorare nativo modalità report con Web part di SharePoint e visualizzazione &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md).  
   
 ## <a name="configuring-reporting-services-to-use-a-custom-style-sheet"></a>Configurazione di Reporting Services per l'utilizzo di un foglio di stile personalizzato  
  Il foglio di stile deve essere un file con estensione css valido e deve essere contenuto nella cartella Styles. Per impostazione predefinita, si trova nella cartella Styles \< *unità*>: \Programmi\Microsoft SQL Server\MSSQL. *n*services\reportserver\styles.  

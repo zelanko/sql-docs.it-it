@@ -1,7 +1,7 @@
 ---
 title: Configurare l'accesso HTTP ad Analysis Services in Internet Information Services (IIS) 8.0 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 06/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: analysis-services
@@ -10,12 +10,12 @@ ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4c8af52dfe8c95b80f5b9550b41a14e1f70c7a6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42ccdae89fdb0883201ec022479e51a327ea0b33
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66080169"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263234"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Configurare l'accesso HTTP ad Analysis Services in Internet Information Services (IIS) 8.0
   In questo articolo viene illustrato come configurare un endpoint HTTP per l'accesso a un'istanza di Analysis Services. È possibile abilitare l'accesso HTTP configurando MSMDPUMP.dll, un'estensione ISAPI che viene eseguita in IIS (Internet Information Services) e che consente di eseguire attività di data pump da applicazioni client a un server Analysis Services e viceversa. Questo approccio fornisce un'alternativa per la connessione ad Analysis Services se per le soluzioni Business Intelligence in uso sono richieste le funzionalità seguenti:  
@@ -84,7 +84,7 @@ ms.locfileid: "66080169"
   
 -   **Sviluppo di applicazioni** | **Estensioni ISAPI**  
   
- Per verificare o aggiungere questi componenti, usare **Gestione server** | **Gestisci** | **Aggiungi ruoli e funzionalità**. Eseguire la procedura guidata fino a **Ruoli server**. Scorrere fino a **Server Web (IIS)** .  
+ Per verificare o aggiungere questi componenti, usare **Gestione server** | **Gestisci** | **Aggiungi ruoli e funzionalità**. Eseguire la procedura guidata fino a **Ruoli server**. Scorrere fino a **Server Web (IIS)**.  
   
 1.  Aprire **Server Web** | **Sicurezza** e scegliere i metodi di autenticazione.  
   
@@ -261,7 +261,7 @@ ms.locfileid: "66080169"
 ##  <a name="bkmk_test"></a> Passaggio 6: Testare la configurazione  
  La sintassi della stringa di connessione per MSMDPUMP è l'URL del MSMDPUMP.dll.  
   
- Se l'applicazione web è in ascolto su una porta fissa, aggiungere il numero di porta per il nome del server o l'indirizzo IP (ad esempio, http://my-web-srv01:8080/OLAP/msmdpump.dll o http://123.456.789.012:8080/OLAP/msmdpump.dll.  
+ Se l'applicazione web è in ascolto su una porta fissa, aggiungere il numero di porta, ad esempio, per il nome del server o l'indirizzo IP `http://my-web-srv01:8080/OLAP/msmdpump.dll` o `http://123.456.789.012:8080/OLAP/msmdpump.dll`.  
   
  Per testare la connessione in modo rapido, è possibile aprirne una usando Microsoft Excel o SQL Server Management Studio  
   

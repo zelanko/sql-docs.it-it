@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2cd0ea9764007784fb6f999c3115e0a2997d8e2f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011375"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Abilitare la ricerca semantica in tabelle e colonne
@@ -50,7 +50,7 @@ ms.locfileid: "66011375"
   
 -   Se si specifica una lingua per una colonna per cui non è disponibile il modello di lingua, la creazione dell'indice ha esito negativo e viene restituito un messaggio di errore.  
   
-###  <a name="HowToEnableCreate"></a> Come si fa: Creare un indice semantico quando non esiste alcun indice Full-Text  
+###  <a name="HowToEnableCreate"></a> Procedura: Creare un indice semantico quando non esiste alcun indice Full-Text  
  Quando si crea un nuovo indice full-text con l'istruzione **CREATE FULLTEXT INDEX** , è possibile abilitare l'indicizzazione semantica a livello di colonna specificando la parola chiave **STATISTICAL_SEMANTICS** come parte della definizione della colonna. È inoltre possibile abilitare l'indicizzazione semantica quando si utilizza l'Indicizzazione guidata full-text per creare un nuovo indice full-text.  
   
  **Creare un nuovo indice semantico tramite Transact-SQL**  
@@ -115,7 +115,7 @@ GO
  **Creare un nuovo indice semantico tramite SQL Server Management Studio**  
  Eseguire l'Indicizzazione guidata full-text e abilitare **Semantica statistica** nella pagina **Selezione colonne tabella** per ogni colonna in cui creare un indice semantico. Per altre informazioni, comprese le informazioni sulla modalità di avvio dell'Indicizzazione guidata full-text, vedere [Usare l'Indicizzazione guidata full-text](use-the-full-text-indexing-wizard.md).  
   
-###  <a name="HowToEnableAlter"></a> Come si fa: Creare un indice semantico quando esiste un indice Full-Text esistente  
+###  <a name="HowToEnableAlter"></a> Procedura: Creare un indice semantico quando esiste un indice Full-Text esistente  
  È possibile aggiungere un'indicizzazione semantica quando si modifica un indice full-text esistente tramite l'istruzione **ALTER FULLTEXT INDEX** . È inoltre possibile aggiungere l'indicizzazione semantica utilizzando le varie finestre di dialogo in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **Aggiungere un indice semantico tramite Transact-SQL**  
@@ -152,7 +152,7 @@ GO
   
 ##  <a name="dropping"></a> Eliminazione di un indice semantico  
   
-###  <a name="drophow"></a> Come si fa: Eliminare un indice semantico  
+###  <a name="drophow"></a> Procedura: Eliminare un indice semantico  
  È possibile eliminare un'indicizzazione semantica quando si modifica un indice full-text esistente tramite l'istruzione **ALTER FULLTEXT INDEX** . È possibile eliminare inoltre l'indicizzazione semantica tramite le varie finestre di dialogo in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **Eliminare un indice semantico tramite Transact-SQL**  
@@ -191,7 +191,7 @@ GO
   
 ## <a name="checking-whether-semantic-search-is-enabled-on-database-objects"></a>Verifica dell'abilitazione della ricerca semantica su oggetti di database  
   
-###  <a name="HowToCheckEnabled"></a> Come si fa: Controllare se è abilitata la ricerca semantica su oggetti di Database  
+###  <a name="HowToCheckEnabled"></a> Procedura: Controllare se è abilitata la ricerca semantica su oggetti di Database  
  **Ricerca semantica è abilitata per un database?**  
  Eseguire una query sulla proprietà **IsFullTextEnabled** della funzione per i metadati [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/databasepropertyex-transact-sql).  
   
@@ -239,7 +239,7 @@ GO
   
 ## <a name="determining-what-can-be-indexed-for-semantic-search"></a>Determinare ciò che può essere indicizzato per la ricerca semantica  
   
-###  <a name="HowToCheckLanguages"></a> Come si fa: Verificare quali lingue sono supportate per la ricerca semantica  
+###  <a name="HowToCheckLanguages"></a> Procedura: Verificare quali lingue sono supportate per la ricerca semantica  
   
 > [!IMPORTANT]  
 >  L'indicizzazione semantica supporta un numero minore di lingue rispetto all'indicizzazione full-text. Di conseguenza, alcune colonne supportano l'indicizzazione full-text, ma non l'indicizzazione semantica.  
@@ -266,7 +266,7 @@ GO
 |Portoghese (Portogallo)|2070|  
 |Spagnolo|3082|  
   
-###  <a name="doctypes"></a> Come si fa: Determinare quali tipi di documento possono essere indicizzati  
+###  <a name="doctypes"></a> Procedura: Determinare quali tipi di documento possono essere indicizzati  
  Eseguire una query sulla vista del catalogo [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
   
  Se il tipo di documento che si desidera indicizzare non è nell'elenco di tipi supportati, può essere necessario individuare, scaricare e installare filtri aggiuntivi. Per altre informazioni, vedere [Visualizzazione o modifica di word breaker e filtri registrati](view-or-change-registered-filters-and-word-breakers.md).  

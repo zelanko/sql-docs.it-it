@@ -12,10 +12,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 67f7ac024c2a2b779518a0a775705f17b423ecf5
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014014"
 ---
 # <a name="spatial-indexes-overview"></a>Panoramica degli indici spaziali
@@ -106,7 +106,7 @@ ms.locfileid: "66014014"
 #### <a name="deepest-cell-rule"></a>Regola della cella più in basso  
  La regola della cella più in basso sfrutta il fatto che ogni cella di livello inferiore appartiene alla cella a essa superiore: una cella di livello 4 appartiene a una cella di livello 3, una cella di livello 3 appartiene a una cella di livello 2 e una cella di livello 2 appartiene a una cella di livello 1. Un oggetto che appartiene alla cella 1.1.1.1, ad esempio, appartiene anche alle celle 1.1.1, 1.1 e 1. Il riconoscimento di tali relazioni gerarchiche tra celle è incorporata in Query Processor. Pertanto, solo le celle di livello più basso devono essere registrate nell'indice, rendendo minime le informazioni da archiviare.  
   
- Nell'illustrazione seguente, un poligono a forma di diamante relativamente piccolo è suddiviso a mosaico. L'indice utilizza il limite di celle per oggetto predefinito di 16 che non è raggiunto per questo piccolo oggetto. La suddivisione a mosaico, pertanto, continua fino al livello 4. Il poligono si trova nel livello 1 seguente attraverso le celle di livello 3: 4, 4.4 e 4.4.10 e 4.4.14. Tuttavia, nella suddivisione a mosaico utilizzando la regola della cella più in basso, conta solo le 12 celle di livello 4: 4.4.10.13-15 e 4.4.14.1-3, 4.4.14.5-7 e 4.4.14.9-11.  
+ Nell'illustrazione seguente, un poligono a forma di diamante relativamente piccolo è suddiviso a mosaico. L'indice utilizza il limite di celle per oggetto predefinito di 16 che non è raggiunto per questo piccolo oggetto. La suddivisione a mosaico, pertanto, continua fino al livello 4. Il poligono si trova nelle celle comprese tra il livello 1 e il livello 3 seguenti: 4, 4.4, 4.4.10 e 4.4.14. Usando la regola della cella più in basso, tuttavia, nella suddivisione a mosaico vengono contate solo le 12 celle di livello 4: 4.4.10.13-15 e 4.4.14.1-3, 4.4.14.5-7 e 4.4.14.9-11.  
   
  ![Ottimizzazione della cella più in basso](../../database-engine/media/spndx-opt-deepest-cell.gif "Ottimizzazione della cella più in basso")  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66014014"
 >  È possibile specificare in modo esplicito questo schema a mosaico con la clausola USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) dell'istruzione [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
 ##### <a name="the-bounding-box"></a>Riquadro  
- I dati geometrici occupano un piano che può essere infinito. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], tuttavia, un indice spaziale richiede uno spazio finito. Per stabilire uno spazio finito per la scomposizione, lo schema a mosaico per la griglia di geometria richiede un *riquadro*rettangolare. Il rettangolo di selezione è definito da quattro coordinate, `(` _x-min_**,**_y-min_ `)` e `(` _x-max_ **,**_y-max_`)`, che vengono archiviate come proprietà dell'indice spaziale. Queste coordinate rappresentano gli elementi seguenti:  
+ I dati geometrici occupano un piano che può essere infinito. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], tuttavia, un indice spaziale richiede uno spazio finito. Per stabilire uno spazio finito per la scomposizione, lo schema a mosaico per la griglia di geometria richiede un *riquadro*rettangolare. Il rettangolo di selezione è definito da quattro coordinate, `(` _x-min_ **,** _y-min_ `)` e `(` _x-max_ **,** _y-max_`)`, che vengono archiviate come proprietà dell'indice spaziale. Queste coordinate rappresentano gli elementi seguenti:  
   
 -   *x-min* è la coordinata x dell'angolo inferiore sinistro del rettangolo di selezione.  
   
@@ -140,11 +140,11 @@ ms.locfileid: "66014014"
 > [!NOTE]  
 >  Queste coordinate sono specificate dalla clausola BOUNDING_BOX dell'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql).  
   
- Il `(` _x-min_**,**_y-min_ `)` e `(` _x-max_**,** _y-max_ `)` coordinate determinano la posizione e dimensioni del rettangolo. Lo spazio al di fuori del riquadro viene considerato come una cella unica numerata con 0.  
+ Il `(` _x-min_ **,** _y-min_ `)` e `(` _x-max_ **,** _y-max_ `)` coordinate determinano la posizione e dimensioni del rettangolo. Lo spazio al di fuori del riquadro viene considerato come una cella unica numerata con 0.  
   
  L'indice spaziale scompone lo spazio nel riquadro. che viene riempito dalla griglia di livello 1 della gerarchia di griglie. Per posizionare un oggetto geometrico nella gerarchia di griglie, l'indice spaziale confronta le coordinate dell'oggetto con quelle del riquadro.  
   
- La figura seguente mostra i punti definiti dalle `(` _x-min_**,**_y-min_ `)` e `(` _x-max_  **,**_y-max_ `)` coordinate del rettangolo. Il livello superiore della gerarchia di griglie viene mostrato come una griglia 4x4. Ai fini dell'illustrazione, i livelli inferiori sono omessi. Lo spazio al di fuori del riquadro è indicato da uno zero (0). L'oggetto 'A' si estende in parte oltre il riquadro e l'oggetto 'B' si trova completamente al di fuori del riquadro nella cella 0.  
+ La figura seguente mostra i punti definiti dalle `(` _x-min_ **,** _y-min_ `)` e `(` _x-max_  **,** _y-max_ `)` coordinate del rettangolo. Il livello superiore della gerarchia di griglie viene mostrato come una griglia 4x4. Ai fini dell'illustrazione, i livelli inferiori sono omessi. Lo spazio al di fuori del riquadro è indicato da uno zero (0). L'oggetto 'A' si estende in parte oltre il riquadro e l'oggetto 'B' si trova completamente al di fuori del riquadro nella cella 0.  
   
  ![Rettangolo di selezione contenente le coordinate e la cella 0.](../../database-engine/media/spndx-bb-4x4-objects.gif "Rettangolo di selezione contenente le coordinate e la cella 0.")  
   
@@ -179,7 +179,7 @@ ms.locfileid: "66014014"
 ##  <a name="methods"></a> Metodi supportati dagli indici spaziali  
   
 ###  <a name="geometry"></a> Metodi di geometria supportati da indici spaziali  
- Gli indici spaziali supportano i metodi di geometria orientati ai set seguenti in determinate condizioni: Stcontains (), stdistance (), Stequals, stintersects (), stoverlaps (), Sttouches e stwithin (). Per essere supportati da un indice spaziale questi metodi devono essere utilizzati all'interno della clausola WHERE o JOIN ON di una query e devono verificarsi all'interno di un predicato del seguente form generale:  
+ In determinate condizioni, gli indici spaziali supportano i seguenti metodi di geometria orientati ai set: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() e STWithin(). Per essere supportati da un indice spaziale questi metodi devono essere utilizzati all'interno della clausola WHERE o JOIN ON di una query e devono verificarsi all'interno di un predicato del seguente form generale:  
   
  *geometry1*.*nome_metodo*(*geometry2*)*operatore_confronto**numero_valido*  
   
@@ -204,7 +204,7 @@ ms.locfileid: "66014014"
 -   *geometry1*.[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*)= 1  
   
 ###  <a name="geography"></a> Metodi di geografia supportati da indici spaziali  
- In determinate condizioni, gli indici spaziali supportano i seguenti metodi geography orientati ai set: STIntersects(),STEquals(), and STDistance(). Per essere supportati da un indice spaziale questi metodi devono essere utilizzati all'interno della clausola WHERE di una query e devono verificarsi all'interno di un predicato del seguente form generale:  
+ In alcuni casi, gli indici spaziali supportano i seguenti metodi di geografia orientati ai set: STIntersects(),STEquals() e STDistance(). Per essere supportati da un indice spaziale questi metodi devono essere utilizzati all'interno della clausola WHERE di una query e devono verificarsi all'interno di un predicato del seguente form generale:  
   
  *geography1*.*nome_metodo*(*geography2*)*operatore_confronto**numero_valido*  
   

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d1dbbb57527fc2d362837e0340f35a241d764b75
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63473523"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Esecuzione della Console SSMA (AccessToSQL)
@@ -305,7 +305,7 @@ generate-assessment-report
   
 />  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <generate-assessment-report  
@@ -467,7 +467,7 @@ collegamento-tabelle: Questo comando Collega la tabella di origine (accesso) nel
   
 </link-tables>  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <link-tables>  
@@ -581,7 +581,7 @@ o Gestione configurazione
   
   object-type="category"/>  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <synchronize-target>  

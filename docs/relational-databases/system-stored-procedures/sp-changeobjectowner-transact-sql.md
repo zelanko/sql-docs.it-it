@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8980ab1f968bcc842fdd17a6095a9945fcc26b42
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997074"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
@@ -46,7 +46,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @objname = ] 'object'` È il nome di una tabella esistente, vista, funzione definita dall'utente o stored procedure nel database corrente. *oggetto* è un **nvarchar(776)**, non prevede alcun valore predefinito. *oggetto* può essere qualificato con il proprietario dell'oggetto esistente, nel formato _existing_owner_**.** _oggetto_ se lo schema e il relativo proprietario hanno lo stesso nome.  
+`[ @objname = ] 'object'` È il nome di una tabella esistente, vista, funzione definita dall'utente o stored procedure nel database corrente. *oggetto* è un **nvarchar(776)** , non prevede alcun valore predefinito. *oggetto* può essere qualificato con il proprietario dell'oggetto esistente, nel formato _existing_owner_ **.** _oggetto_ se lo schema e il relativo proprietario hanno lo stesso nome.  
   
 `[ @newowner = ] 'owner_ '` È il nome dell'account di protezione che sarà il nuovo proprietario dell'oggetto. *proprietario* viene **sysname**, non prevede alcun valore predefinito. *proprietario* deve essere un utente valido del database, ruolo del server [!INCLUDE[msCoName](../../includes/msconame-md.md)] account di accesso di Windows, o il gruppo di Windows con accesso al database corrente. Se il nuovo proprietario è un utente di Windows o un gruppo di Windows per cui non esiste un'entità corrispondente a livello di database, verrà creato un utente di database.  
   

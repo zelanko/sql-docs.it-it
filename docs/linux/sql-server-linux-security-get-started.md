@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.openlocfilehash: 655aebb0c07c812a7aa6c81e7c7033d85e8b7ce2
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66705211"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Procedura dettagliata per la funzionalità di sicurezza di SQL Server in Linux
@@ -28,7 +28,7 @@ Se sei un utente di Linux che è una novità di SQL Server, le attività seguent
 
 ## <a name="create-a-login-and-a-database-user"></a>Creare un account di accesso e un utente del database 
 
-Concedere ad altri utenti l'accesso a SQL Server mediante la creazione di un account di accesso nel database master usando il [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) istruzione. Ad esempio:
+Concedere ad altri utenti l'accesso a SQL Server mediante la creazione di un account di accesso nel database master usando il [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) istruzione. Ad esempio: 
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
