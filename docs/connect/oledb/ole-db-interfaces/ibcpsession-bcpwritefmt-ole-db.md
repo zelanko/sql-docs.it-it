@@ -15,13 +15,13 @@ helpviewer_keywords:
 - BCPWriteFmt method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: e7941234243c06ecd894b250327e6fcc367f9cd5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 5d93d2114ff462eddd45fb5520a976d148cc96ac
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605531"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66790841"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

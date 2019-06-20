@@ -12,13 +12,13 @@ helpviewer_keywords:
 - OLE DB, bulk copy operations
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 3309e0b5e878f4923faf31069ae1e29220fdbd97
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 2e4291d32de1b18edb65560e21d16c76eb692f3d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416250"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66769550"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>Modifiche della copia bulk per i tipi di data e ora migliorati (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "52416250"
   
  **Nota per OLE DB** Le conversioni seguenti vengono eseguite da IBCPSession. IRowsetFastLoad utilizza conversioni OLE DB come definito in [conversioni eseguite da Client a Server](../../oledb/ole-db-date-time/conversions-performed-from-client-to-server.md). Si noti che i valori datetime vengono arrotondati a 1/300 di secondo, mentre per i valori smalldatetime i secondi vengono impostati su zero in seguito all'esecuzione delle conversioni client descritte di seguito. L'arrotondamento dei valori datetime viene applicato a ore e minuti, ma non alla data.  
   
-|A --><br /><br /> From|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
+|A -><br /><br /> From|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |date|1|-|1, 6|1, 6|1, 6|1, 5, 6|1, 3|1, 3|  
 |Time|N/D|1, 10|1, 7, 10|1, 7, 10|1, 7, 10|1, 5, 7, 10|1, 3|1, 3|  

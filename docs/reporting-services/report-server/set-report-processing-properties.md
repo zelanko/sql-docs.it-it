@@ -1,6 +1,6 @@
 ---
 title: Impostare proprietà di elaborazione dei report | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -15,25 +15,25 @@ helpviewer_keywords:
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8f12b5734d0ea3715c93a8c346023743be44eda4
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 4a7729e8880e811494e6e1016b827831674cd812
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65577713"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140401"
 ---
 # <a name="set-report-processing-properties"></a>Impostare proprietà di elaborazione dei report
   Le proprietà di esecuzione dei report consentono di controllarne le modalità di esecuzione e devono essere impostate singolarmente per ogni report.  
   
- Per impostare le proprietà di esecuzione di un report, aprire il report in Gestione report e passare alla pagina delle proprietà Esecuzione. Per altre informazioni, vedere [Pagina delle proprietà Opzioni di elaborazione &#40;Gestione report&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0). È inoltre possibile impostare le proprietà tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; vedere [Pagina delle proprietà Opzioni di elaborazione &#40;Gestione report&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0).  
+ Per impostare le proprietà di esecuzione dei report, passare al report nel portale web, fare doppio clic su report e selezionare **Gestisci** dal menu a discesa.
   
 ## <a name="report-execution-modes"></a>Modalità di esecuzione dei report  
  I report possono essere eseguiti su richiesta o come snapshot. Nella sezione seguente vengono descritte le due diverse modalità.  
   
-### <a name="running-reports-on-demand"></a>Esecuzione di report su richiesta  
+### <a name="running-reports-on-demand"></a>Esecuzione di report su richiesta 
  È possibile specificare che a ogni esecuzione di un report da parte di un utente venga eseguita una query su un'origine dei dati. I report eseguiti in questo modo vengono definiti report su richiesta e contengono i dati più aggiornati. Per ogni utente che apre o richiede il report viene creata una nuova istanza del report che contiene i risultati di una nuova query. In questo modo se un report viene aperto da dieci utenti contemporaneamente, per l'elaborazione delle istanze del report vengono eseguite dieci query sull'origine dati.  
   
-### <a name="running-reports-on-demand-from-cache"></a>Esecuzione di report su richiesta dalla cache  
+### <a name="running-reports-on-demand-from-cache"></a>Esecuzione di report su richiesta dalla cache 
  Per migliorare le prestazioni, è possibile specificare che quando un utente esegue un report, il report stesso e i relativi dati vengano memorizzati temporaneamente nella cache. La copia nella cache sarà disponibile in seguito per altri utenti che accederanno allo stesso report. In questo modo se dieci utenti aprono il report, questo verrà elaborato solo in seguito alla prima richiesta. Il report viene quindi memorizzato nella cache e gli altri nove utenti visualizzeranno la copia memorizzata nella cache.  
   
  I report memorizzati nella cache vengono rimossi a intervalli di tempo definiti dall'utente. È possibile specificare un valore per gli intervalli in minuti oppure pianificare la data e l'ora in cui cancellare la cache. Per altre informazioni, vedere [Memorizzazione dei report nella cache &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
@@ -55,9 +55,7 @@ ms.locfileid: "65577713"
   
 ## <a name="see-also"></a>Vedere anche  
  [Impostare le opzioni di elaborazione &#40;Reporting Services in modalità integrata SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Configurare le proprietà di esecuzione per un report &#40;Gestione report&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   
- [Reporting Services Concepts &#40;SSRS&#41; (Concetti di Reporting Services (SSRS))](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Procedura: Aggiunta di uno snapshot alla cronologia del report.](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Concetti relativi a Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
+ [Creare, modificare ed eliminare snapshot nella cronologia dei report](create-modify-and-delete-snapshots-in-report-history.md)   
  [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
-  
   

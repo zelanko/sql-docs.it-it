@@ -11,10 +11,10 @@ ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
 ms.openlocfilehash: 8592d3dfc16f0dd9d13a6445f0d8290f9ad507e4
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66499622"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parametri report (Generatore report e Progettazione report)
@@ -168,7 +168,7 @@ Creare manualmente un parametro dal riquadro dei dati del report. È possibile c
   
 -   Per query [!INCLUDE[tsql](../../includes/tsql-md.md)] , origini dati diverse supportano una sintassi diversa per i parametri. Supportare gli intervalli dei parametri identificati nella query in base alla posizione o al nome. Per altre informazioni, vedere gli argomenti sui tipi specifici di origini dati esterne in [Set di dati del report &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md). Nella finestra Progettazione query relazionale, è necessario selezionare l'opzione del parametro di filtro per creare una query con parametri. Per altre informazioni, vedere [Interfaccia utente di Progettazione query relazionale &#40;Generatore report&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
   
--   Per query basate su un'origine di dati multidimensionale quale Microsoft SQL Server Analysis Services, SAP NetWeaver BI o Hyperion Essbase, è possibile specificare se creare un parametro basato su un filtro specificato in Progettazione query. Per altre informazioni, vedere l'argomento relativo alla progettazione query corrispondente all'estensione per i dati in [Finestre di progettazione query &#40;Generatore report&#41;](../report-data/query-design-tools-ssrs.md).  
+-   Per query basate su un'origine di dati multidimensionale quale Microsoft SQL Server Analysis Services, SAP NetWeaver BI o Hyperion Essbase, è possibile specificare se creare un parametro basato su un filtro specificato in Progettazione query. Per altre informazioni, vedere l'argomento relativo alla progettazione query corrispondente all'estensione per i dati in [Strumenti di progettazione query &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md).  
   
 ##  <a name="bkmk_Manage_Parameters"></a> Gestione di parametri per un report pubblicato  
  Quando si progetta un report, i parametri corrispondenti vengono salvati nella definizione del report. Quando si pubblica un report, i parametri corrispondenti vengono salvati e gestiti separatamente della definizione del report.  

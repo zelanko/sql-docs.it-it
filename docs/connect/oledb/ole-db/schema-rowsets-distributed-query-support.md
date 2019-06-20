@@ -17,13 +17,13 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: b09e62a5057a948e2a12bb6272c9a0e431ba7507
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+manager: jroth
+ms.openlocfilehash: 575ce4f2522299be723be159bb87e19f8fff1a1d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864159"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795960"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>Set di righe dello schema - Supporto di query distribuite
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47864159"
 
   Per supportare query distribuite di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'interfaccia **IDBSchemaRowset** del driver OLE DB per SQL Server restituisce metadati sui server collegati.  
   
- Se la proprietà SSPROP_QUOTEDCATALOGNAMES di DBPROPSET_SQLSERVERSESSION è VARIANT_TRUE, è possibile utilizzare un identificatore tra virgolette per specificare il nome di catalogo (ad esempio "catalogo.personale"). Quando si restringe l'output del set di righe dello schema restituito in base al catalogo, il driver OLE DB per SQL Server riconosce un nome in due parti che contiene il server collegato e il nome del catalogo. Per il set di righe dello schema riportato nella tabella seguente, la specifica di un nome di catalogo in due parti, quale _linked\_server_**.**_catalog_, restringe l'output al catalogo applicabile del server collegato denominato.  
+ Se la proprietà SSPROP_QUOTEDCATALOGNAMES di DBPROPSET_SQLSERVERSESSION è VARIANT_TRUE, è possibile utilizzare un identificatore tra virgolette per specificare il nome di catalogo (ad esempio "catalogo.personale"). Quando si restringe l'output del set di righe dello schema restituito in base al catalogo, il driver OLE DB per SQL Server riconosce un nome in due parti che contiene il server collegato e il nome del catalogo. Per il set di righe dello schema riportato nella tabella seguente, la specifica di un nome di catalogo in due parti, quale _linked\_server_ **.** _catalog_, restringe l'output al catalogo applicabile del server collegato denominato.  
   
 |Set di righe dello schema|Restrizione per catalogo|  
 |-------------------|-------------------------|  

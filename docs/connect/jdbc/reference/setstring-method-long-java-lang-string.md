@@ -1,5 +1,5 @@
 ---
-title: setString (long, lang) metodo | Microsoft Docs
+title: Metodo setString (long, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 1b2190e9-5ace-497a-8554-0e913ea9b0cb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4a5fd1c9f0f876f024047fab5e28fb31ba29b687
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b23c0c5de87fc5df557d5d02958a72eaa336f8fb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839109"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66771664"
 ---
 # <a name="setstring-method-long-javalangstring"></a>Metodo setString (long, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public int setString(long pos,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *POS*  
+ *pos*  
   
  Posizione in corrispondenza della quale iniziare la scrittura nell'oggetto CLOB.  
   
@@ -52,7 +52,7 @@ public int setString(long pos,
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo setString viene specificato dal metodo setString nell'interfaccia CLOB.  
+ Questo metodo setString viene specificato dal metodo setString nell'interfaccia java.sql.Clob.  
   
  I dati di tipo carattere vengono sovrascritti a partire dalla posizione specificata e possono superare la lunghezza iniziale dell'oggetto CLOB. Se si specifica un valore posizione+1, verrà aggiunta la stringa. Se si specifica un valore posizione+2 o superiore (o zero o inferiore) verrà generato un errore di posizione.  
   

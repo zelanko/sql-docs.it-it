@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a266e3bc-05c2-44e2-9346-125ae6780216
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 784ae37816977e08bb52290249d4ee47526cc527
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 034378c7e5f8624fa945bcf696ee521606963063
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782769"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66762574"
 ---
 # <a name="getrow-method-sqlserverresultset"></a>Metodo getRow (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public int getRow()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getRow viene specificato dal metodo nell'interfaccia ResultSet getRow.  
+ Questo metodo getRow viene specificato dal metodo getRow nell'interfaccia java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

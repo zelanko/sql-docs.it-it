@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: fa17cc56-fb38-433b-a40d-65642f04dc23
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2a5f94566cf965cfe135a17eed216cf8ee4b42b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7854d52116b9092a069043f8e3c1ca9a23fbbce5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618679"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802227"
 ---
 # <a name="sqlsrvgetfield"></a>sqlsrv_get_field
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +41,7 @@ sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])
   
 *$fieldIndex*: indice del campo da recuperare. Gli indici iniziano da zero.  
   
-*$getAsType* [FACOLTATIVO]: costante **SQLSRV** (**SQLSRV_PHPTYPE_&#x2a;**) che determina il tipo di dati PHP per i dati restituiti. Per informazioni sui tipi di dati supportati, vedere [Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Se non viene specificato alcun tipo restituito, verrà restituito un tipo PHP predefinito. Per informazioni sui tipi PHP predefiniti, vedere [Default PHP Data Types](../../connect/php/default-php-data-types.md). Per informazioni sulla specifica dei tipi di dati PHP, vedere [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+*$getAsType* [FACOLTATIVO]: costante **SQLSRV** (**SQLSRV_PHPTYPE_&#x2a;** ) che determina il tipo di dati PHP per i dati restituiti. Per informazioni sui tipi di dati supportati, vedere [Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Se non viene specificato alcun tipo restituito, verrà restituito un tipo PHP predefinito. Per informazioni sui tipi PHP predefiniti, vedere [Default PHP Data Types](../../connect/php/default-php-data-types.md). Per informazioni sulla specifica dei tipi di dati PHP, vedere [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
 ## <a name="return-value"></a>Valore restituito  
 I dati del campo. È possibile specificare il tipo di dati PHP dei dati restituiti usando il parametro *$getAsType* . Se non viene specificato alcun tipo di dati restituito, verrà restituito il tipo di dati PHP predefinito. Per informazioni sui tipi PHP predefiniti, vedere [Default PHP Data Types](../../connect/php/default-php-data-types.md). Per informazioni sulla specifica dei tipi di dati PHP, vedere [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 64f62569-5d8e-411f-a98d-ddc52798391e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dcf7c0b513726db49615b8ab85e99493b8a7cb41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7eabe3aec185042d5bf0853f4ade8c4f1dfe7f0a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730489"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803972"
 ---
 # <a name="getcatalogname-method-sqlserverresultsetmetadata"></a>Metodo getCatalogName (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

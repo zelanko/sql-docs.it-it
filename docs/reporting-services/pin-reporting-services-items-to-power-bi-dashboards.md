@@ -16,10 +16,10 @@ ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ad7e73839a988e057f57b9a294e795f65e41f9fb
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66500034"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Aggiungere elementi del report impaginato di Reporting Services ai dashboard in Power BI
@@ -40,7 +40,7 @@ ms.locfileid: "66500034"
   
 -   Se si vuole aggiornare l'elemento aggiunto, è necessario configurare i report per le credenziali archiviate.  Quando si aggiunge un elemento, viene creata automaticamente una sottoscrizione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per gestire l'aggiornamento dei dati dell'elemento nel dashboard.  Se il report non usa le credenziali archiviate, quando viene eseguita la sottoscrizione verrà visualizzato un messaggio simile al seguente nella pagina **Sottoscrizioni personali**.  
   
-    Errore di recapito di Power BI: dashboard: Esempio di analisi della spesa IT, oggetto visivo: Chart2, errore: Impossibile completare l'azione corrente. Le credenziali per l'origine dati utente non soddisfano i requisiti per eseguire il report o il set di dati condiviso. Le credenziali per l'origine dati utente..."
+    "Errore di recapito di Power BI: dashboard: Esempio di analisi della spesa IT, oggetto visivo: Chart2, errore: Impossibile completare l'azione corrente. Le credenziali per l'origine dati utente non soddisfano i requisiti per eseguire il report o il set di dati condiviso. Le credenziali per l'origine dati utente..."
  
     Vedere la sezione "Configurare le credenziali archiviate per un'origine dati specifica del report (modalità nativa)" di [Archiviare le credenziali in un'origine dati di Reporting Services](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66500034"
   
 ##  <a name="bkmk_to_pin"></a> Per aggiungere un elemento del report  
   
-1. Verificare di aver eseguito l'accesso a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], select the menu item **My Settings** and sign in. Per altre informazioni, vedere  [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](my-settings-for-power-bi-integration-web-portal.md).
+1. Verificare di aver eseguito l'accesso a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], select the menu item **My Settings** and sign in. Per altre informazioni, vedere [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](my-settings-for-power-bi-integration-web-portal.md).
 
     ![ssRS_WebPortal_MySettings](../reporting-services/media/ssrs-webportal-mysettings.png)  
   
@@ -108,11 +108,11 @@ Nel dashboard di [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] l'elemento d
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action can't be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
   
--   **Credenziali di Power BI scadute:**  se si tenta di aggiungere un elemento, viene visualizzato il messaggio di errore seguente. In [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]fare clic su **Impostazioni personali** e, nella pagina Impostazioni personali, fare clic su **Accedi**. Per altre informazioni, vedere  [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](my-settings-for-power-bi-integration-web-portal.md).  
+-   **Credenziali di Power BI scadute:**  se si tenta di aggiungere un elemento, viene visualizzato il messaggio di errore seguente. In [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]fare clic su **Impostazioni personali** e, nella pagina Impostazioni personali, fare clic su **Accedi**. Per altre informazioni, vedere [Impostazioni personali per Integrazione di Power BI &#40;portale Web&#41;](my-settings-for-power-bi-integration-web-portal.md).  
   
         Cannot Pin: Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
   
--   **Impossibile eseguire l'aggiunta**: se si tenta di aggiungere un elemento a un dashboard in uno stato di sola lettura, verrà visualizzato un messaggio di errore simile al seguente:  
+-   **Impossibile eseguire l'aggiunta**: se si tenta di aggiungere un elemento a un dashboard in uno stato di sola lettura, verrà visualizzato un messaggio di errore simile a questo:  
   
         Server Error: The item 'Dashboard deleted 015cf022-8e2f-462e-88e5-75ab0a04c4d0' can't be found. (rsItemNotFound)  
   

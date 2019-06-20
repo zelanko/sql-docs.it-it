@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d436072e81212203aff568feba1d764b07c31b8a
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+manager: jroth
+ms.openlocfilehash: 48e4771b8d538775ae2e2faec053f0263bd6d653
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579261"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66789888"
 ---
 # <a name="connecting-with-sqlcmd"></a>Connessione con sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -65,7 +65,7 @@ Nella versione corrente, sono disponibili le opzioni seguenti:
 - -k Rimuove o sostituisce i caratteri di controllo.  
   
 - **-K**_finalità\_applicazione_  
-Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. L'unico valore attualmente supportato è **ReadOnly**. Se l'opzione **-K** non è specificata, `sqlcmd` non supporta la connettività a una replica secondaria in un gruppo di disponibilità AlwaysOn. Per altre informazioni, vedere [Driver ODBC in Linux e macOS - disponibilità elevata e ripristino di emergenza](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. L'unico valore attualmente supportato è **ReadOnly**. Se l'opzione **-K** non è specificata, `sqlcmd` non supporta la connettività a una replica secondaria in un gruppo di disponibilità AlwaysOn. Per altre informazioni, vedere [Driver ODBC in Linux e macOS - Disponibilità elevata e ripristino di emergenza](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > **-K** non è supportata in CTP per SUSE Linux. È tuttavia possibile specificare la parola chiave **ApplicationIntent=ReadOnly** in un file DSN passato a `sqlcmd`. Per altre informazioni, vedere "Supporto di DSN in `sqlcmd` e `bcp`" alla fine di questo argomento.  
@@ -98,7 +98,7 @@ Specificare sempre **-M** in caso di connessione al listener di un gruppo di dis
   
 - -s *column_separator_char* specificare il carattere separatore di colonna.  
 
-- -S [*protocol*:] *server*[**,**_port_]  
+- -S [*protocol*:] *server*[ **,** _port_]  
 Specificare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per connettersi a, o se -D viene usata, un DSN. Il driver ODBC in Linux e macOS richiede - S. Si noti che **tcp** è l'unico protocollo valido.  
   
 - -t *timeout_query* Specifica il numero di secondi prima del timeout di un comando o di un'istruzione SQL.  
@@ -210,19 +210,19 @@ In un DSN in Linux o macOS sono supportate le voci seguenti:
 
 -   **ApplicationIntent=ReadOnly**  
 
--   **Database =**_database\_nome_  
+-   **Database =** _database\_nome_  
   
 -   **Driver = ODBC Driver 11 for SQL Server** o **Driver = ODBC Driver 13 for SQL Server**
   
 -   **MultiSubnetFailover=Yes**  
   
--   **Server =**_server\_name\_oppure\_IP\_indirizzo_  
+-   **Server =** _server\_name\_oppure\_IP\_indirizzo_  
   
 -   **Trusted_Connection=yes**|**no**  
   
 In un DSN, solo la voce DRIVER è obbligatoria, ma per connettersi a un server, `sqlcmd` o `bcp` richiede il valore nella voce SERVER.  
 
-Se è specificata la stessa opzione sia nel DSN che nella riga di comando di `sqlcmd` o di `bcp`, l'opzione della riga di comando sostituisce il valore usato nel DSN. Se ad esempio il DSN include una voce DATABASE e la riga di comando di `sqlcmd` include **-d**, viene usato il valore passato a **-d**. Se si specifica **Trusted_Connection=yes** nel DNS, viene usata l'autenticazione Kerberos e il nome utente (**-U**) e la password (**-P**), se specificati, vengono ignorati.
+Se è specificata la stessa opzione sia nel DSN che nella riga di comando di `sqlcmd` o di `bcp`, l'opzione della riga di comando sostituisce il valore usato nel DSN. Se ad esempio il DSN include una voce DATABASE e la riga di comando di `sqlcmd` include **-d**, viene usato il valore passato a **-d**. Se si specifica **Trusted_Connection=yes** nel DNS, viene usata l'autenticazione Kerberos e il nome utente ( **-U**) e la password ( **-P**), se specificati, vengono ignorati.
 
 Gli script esistenti che richiamano `isql` possono essere modificati per l'uso di `sqlcmd` definendo l'alias seguente: `alias isql="sqlcmd -D"`.  
 

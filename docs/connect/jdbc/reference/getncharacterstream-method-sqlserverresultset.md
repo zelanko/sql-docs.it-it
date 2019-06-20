@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 69620047-78fd-4be9-a245-1851afaeac1b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 685c3701f4e46a991e20c33d357403c3a44d09ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b10f98a64bf5871bfaa8d3267b1cd74c88745f73
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784169"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66784509"
 ---
 # <a name="getncharacterstream-method-sqlserverresultset"></a>Metodo getNCharacterStream (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

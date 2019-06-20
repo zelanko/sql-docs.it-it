@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e90dc3c4996fc9dc412a28849df2283ec9495ebd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9e9e7c7c6c29847fef54ac3e484e7ed7b1821f4d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597139"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801803"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Panoramica del driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47597139"
 |[Dipendenze delle funzionalità di Microsoft JDBC Driver per SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Dipendenze delle funzionalità di Microsoft JDBC Driver per SQL Server.|
 
 ## <a name="see-also"></a>Vedere anche  
- [Repository di GitHub del Driver JDBC](https://github.com/microsoft/mssql-jdbc)  
+ [Repository GitHub del driver JDBC](https://github.com/microsoft/mssql-jdbc)  
  [Informazioni di riferimento sull'API del driver JDBC](../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

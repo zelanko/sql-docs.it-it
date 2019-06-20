@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c1fbb2ad5c2c652f5be04982ffaedb7eadea97be
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294779"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62683721"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Esegue il mapping nei report di Reporting Services per dispositivi mobili
 Le mappe sono un ottimo modo per visualizzare dati geografici. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] include tre diversi tipi di viste mappa e mappe predefinite per i continenti e per alcuni paesi singoli. È anche possibile [caricare e usare mappe personalizzate](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   

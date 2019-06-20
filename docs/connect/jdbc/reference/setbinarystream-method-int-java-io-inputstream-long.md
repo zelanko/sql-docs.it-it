@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4ab2e2f3-eaf0-471a-8422-2cf98ce979cf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bf7e9a394671f8e66fe80c186f6dfa915ef45116
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 71e98565d09b7128c4a0dee257b28bb0a0b9983a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842105"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66764765"
 ---
 # <a name="setbinarystream-method-int-javaioinputstream-long"></a>Metodo setBinaryStream (int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +33,7 @@ public final void setBinaryStream(int parameterIndex,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *parametro parameterIndex*  
+ *parameterIndex*  
   
  Valore **int** che indica il numero di parametro.  
   

@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 57fa8d097b2a6cedc5bf96dc4ee75471c7d27266
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: a5d2db7479e3a8cdce00dca62f04bf2c64989b48
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737022"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66798495"
 ---
 # <a name="using-table-valued-parameters"></a>Uso di parametri con valori di tabella
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-I parametri con valori di tabella offrono un modo semplice per effettuare il marshalling di più righe di dati da un'applicazione client di SQL Server senza richiedere più round trip o una logica speciale sul lato server per l'elaborazione dei dati. I parametri con valori di tabella possono essere usati per incapsulare le righe di dati in un'applicazione client e inviare i dati al server in un singolo comando con parametri. Le righe di dati in ingresso vengono archiviate in una variabile di tabella che può quindi essere utilizzata tramite Transact-SQL.  
+I parametri con valori di tabella offrono un modo semplice per effettuare il marshalling di più righe di dati da un'applicazione client di SQL Server senza richiedere più round trip o una logica speciale sul lato server per l'elaborazione dei dati. I parametri con valori di tabella possono essere usati per incapsulare le righe di dati in un'applicazione client e inviare i dati al server in un singolo comando con parametri. Le righe di dati in ingresso vengono archiviate in una variabile di tabella su cui è possibile operare tramite Transact-SQL.  
   
 I valori di colonna nei parametri con valori di tabella accessibili tramite istruzioni Transact-SQL SELECT standard. I parametri con valori di tabella sono fortemente tipizzati e la loro struttura viene convalidata automaticamente. Le dimensioni dei parametri con valori di tabella sono limitata solo dalla memoria del server.  
   

@@ -9,14 +9,14 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
 ms.author: v-chojas
-manager: craigg
+manager: jroth
 author: MightyPen
-ms.openlocfilehash: 59a1458c98fb12f2f053bfd71649f40ddc5d1e4e
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 84e729cd60a28ff8a58760bd3810ec538a327007
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55047215"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800484"
 ---
 # <a name="custom-keystore-providers"></a>Provider di archivi chiavi personalizzati
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -83,7 +83,7 @@ typedef struct CEKeystoreProvider {
 
 |Nome campo|Descrizione|
 |:--|:--|
-|`Name`|Il nome del provider dell'archivio chiavi. Non deve essere lo stesso come qualsiasi altro provider di archivio chiavi caricato in precedenza tramite il driver o presenti in questa libreria. Con terminazione null, wide-stringa di caratteri *.|
+|`Name`|Il nome del provider dell'archivio chiavi. Non deve essere lo stesso come qualsiasi altro provider di archivio chiavi caricato in precedenza tramite il driver o presenti in questa libreria. Stringa di caratteri "wide"* con terminazione Null.|
 |`Init`|Funzione di inizializzazione. Se una funzione di inizializzazione non è obbligatorio, questo campo può essere null.|
 |`Read`|Provider read (funzione). Può essere null se non è necessario.|
 |`Write`|Funzione di scrittura provider. Obbligatorio se in lettura non è null. Può essere null se non è necessario.|
@@ -140,8 +140,8 @@ Nome segnaposto per una funzione di decrittografia chiave ECEK definito dal prov
 |:--|:--|
 |`ctx`|[Input] Contesto dell'operazione.|
 |`onError`|[Input] Funzione di segnalazione degli errori.|
-|`keyPath`|[Input] Il valore della [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) attributo di metadati per la chiave CMK fa riferimento la chiave ECEK specificata. Con terminazione null wide-stringa di caratteri *. Ciò consente di identificare una CMK gestita da questo provider.|
-|`alg`|[Input] Il valore della [algoritmo](../../t-sql/statements/create-column-encryption-key-transact-sql.md) attributo di metadati per la chiave ECEK specificata. Con terminazione null wide-stringa di caratteri *. Ciò consente di identificare l'algoritmo di crittografia usata per crittografare la chiave ECEK specificata.|
+|`keyPath`|[Input] Il valore della [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) attributo di metadati per la chiave CMK fa riferimento la chiave ECEK specificata. Stringa di caratteri "wide"* con terminazione Null. Ciò consente di identificare una CMK gestita da questo provider.|
+|`alg`|[Input] Il valore della [algoritmo](../../t-sql/statements/create-column-encryption-key-transact-sql.md) attributo di metadati per la chiave ECEK specificata. Stringa di caratteri "wide"* con terminazione Null. Ciò consente di identificare l'algoritmo di crittografia usata per crittografare la chiave ECEK specificata.|
 |`ecek`|[Input] Puntatore per la chiave ECEK da decrittografare.|
 |`ecekLen`|[Input] Lunghezza della chiave ECEK.|
 |`cekOut`|[Output] Il provider deve allocare memoria per la chiave ECEK decrittografata e scrivere il relativo indirizzo all'indicatore di misura a cui punta cekOut. Deve essere possibile liberare questo blocco di memoria usando il [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) o gratuito (funzione) (Linux/Mac). Se non è memoria allocata a causa di un errore o in caso contrario, il provider deve impostare * cekOut a un puntatore null.|
@@ -157,8 +157,8 @@ Nome segnaposto per una funzione di crittografia chiave CEK definito dal provide
 |:--|:--|
 |`ctx`|[Input] Contesto dell'operazione.|
 |`onError`|[Input] Funzione di segnalazione degli errori.|
-|`keyPath`|[Input] Il valore della [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) attributo di metadati per la chiave CMK fa riferimento la chiave ECEK specificata. Con terminazione null wide-stringa di caratteri *. Ciò consente di identificare una CMK gestita da questo provider.|
-|`alg`|[Input] Il valore della [algoritmo](../../t-sql/statements/create-column-encryption-key-transact-sql.md) attributo di metadati per la chiave ECEK specificata. Con terminazione null wide-stringa di caratteri *. Ciò consente di identificare l'algoritmo di crittografia usata per crittografare la chiave ECEK specificata.|
+|`keyPath`|[Input] Il valore della [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) attributo di metadati per la chiave CMK fa riferimento la chiave ECEK specificata. Stringa di caratteri "wide"* con terminazione Null. Ciò consente di identificare una CMK gestita da questo provider.|
+|`alg`|[Input] Il valore della [algoritmo](../../t-sql/statements/create-column-encryption-key-transact-sql.md) attributo di metadati per la chiave ECEK specificata. Stringa di caratteri "wide"* con terminazione Null. Ciò consente di identificare l'algoritmo di crittografia usata per crittografare la chiave ECEK specificata.|
 |`cek`|[Input] Puntatore alla CEK deve essere crittografato.|
 |`cekLen`|[Input] Lunghezza della chiave CEK.|
 |`ecekOut`|[Output] Il provider deve allocare memoria per la CEK crittografata e scrivere il relativo indirizzo all'indicatore di misura a cui punta ecekOut. Deve essere possibile liberare questo blocco di memoria usando il [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) o gratuito (funzione) (Linux/Mac). Se non è memoria allocata a causa di un errore o in caso contrario, il provider deve impostare * ecekOut a un puntatore null.|
@@ -187,10 +187,10 @@ Il **onError** parametro punta a una funzione di segnalazione degli errori, con 
 |Argomento|Descrizione|
 |:--|:--|
 |`ctx`|[Input] Il contesto per segnalare l'errore.|
-|`msg`|[Input] Il messaggio di errore al report. Stringa con terminazione null di caratteri wide. Per consentire di informazioni con parametri sia presente, questa stringa può contenere le sequenze di formattazione di inserimento nel formato accettato dal [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) (funzione). La funzionalità estesa può essere specificata da questo parametro, come descritto di seguito.|
+|`msg`|[Input] Il messaggio di errore al report. Stringa di caratteri "wide" con terminazione Null. Per consentire di informazioni con parametri sia presente, questa stringa può contenere le sequenze di formattazione di inserimento nel formato accettato dal [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) (funzione). La funzionalità estesa può essere specificata da questo parametro, come descritto di seguito.|
 |...|[Input] Parametri variadic aggiuntive per gli identificatori di formato di messaggio, come appropriato.|
 
-Per segnalare quando si è verificato un errore, la funzione provider onError le chiamate provider, fornendo il parametro di contesto passato dal driver e un messaggio di errore con parametri aggiuntivi facoltativi da formattare in esso. Il provider può chiamare questa funzione più volte per inviare più messaggi di errore consecutivamente all'interno di chiamata di una funzione del provider. Ad esempio
+Per segnalare quando si è verificato un errore, la funzione provider onError le chiamate provider, fornendo il parametro di contesto passato dal driver e un messaggio di errore con parametri aggiuntivi facoltativi da formattare in esso. Il provider può chiamare questa funzione più volte per inviare più messaggi di errore consecutivamente all'interno di chiamata di una funzione del provider. Esempio:
 
 ```
     if (!doSomething(...))

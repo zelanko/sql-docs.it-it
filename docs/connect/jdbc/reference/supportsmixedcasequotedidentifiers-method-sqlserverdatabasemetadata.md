@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 76c68fc2-5af6-4b8d-baee-245716fdc5cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a01c246d7388c8a10641997af28bb97778cbb4f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b6cb9ce098a57d3378ca0ae2d6a4718185221852
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666019"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66788608"
 ---
 # <a name="supportsmixedcasequotedidentifiers-method-sqlserverdatabasemetadata"></a>Metodo supportsMixedCaseQuotedIdentifiers (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

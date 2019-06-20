@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c8cc4636-01e9-4dc8-a40c-728337ca08f5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a956d1411ec99340ec3df2caec803dba7b57536c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0b52d434f3add9cfe2590519e90267bbfb93e160
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828519"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66784382"
 ---
 # <a name="getnstring-method-int-sqlserverresultset"></a>Metodo getNString (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,9 +42,9 @@ public java.lang.String getNString(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getNString viene specificato dal metodo nell'interfaccia java.sql.SQLServerResultSet getNString.  
+ Questo metodo getNString viene specificato dal metodo getNString nell'interfaccia java.sql.SQLServerResultSet.  
   
- Questo metodo può essere utilizzato per recuperare il valore di un' **nvarchar**, **nchar**, **nvarchar (max)**, **ntext**, o **xml** colonna nella riga corrente di questo [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto. Se si tenta di utilizzare questo metodo per recuperare valori di altri tipi di dati, verrà generata un'eccezione.  
+ Questo metodo può essere utilizzato per recuperare il valore di un' **nvarchar**, **nchar**, **nvarchar (max)** , **ntext**, o **xml** colonna nella riga corrente di questo [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto. Se si tenta di utilizzare questo metodo per recuperare valori di altri tipi di dati, verrà generata un'eccezione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo getNString &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)   

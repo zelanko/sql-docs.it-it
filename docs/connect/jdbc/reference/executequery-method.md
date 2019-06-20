@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 1d90407f-16df-4ba2-b4a5-47d5751e1d7c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 557c4c598b42cacd71962a084f98da95451576e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9d5374aeef43632fe82ac85b021e6a2a473a5d5d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829703"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796961"
 ---
 # <a name="executequery-method-"></a>Metodo executeQuery ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public java.sql.ResultSet executeQuery()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo executeQuery viene specificato dal metodo executeQuery nell'interfaccia PreparedStatement.  
+ Questo metodo executeQuery viene specificato dal metodo executeQuery nell'interfaccia java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo executeQuery &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)   

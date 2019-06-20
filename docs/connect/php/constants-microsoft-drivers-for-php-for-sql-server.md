@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 172b96b63f65b5ee8b576ba6ee9c18aad18e3531
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 82fa4ef2f47143afe8f2331469a1eb07fd9b2522
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744451"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796228"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Costanti (driver Microsoft per PHP per SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -68,11 +68,11 @@ L'attributo PDO::SQLSRV_ATTR_QUERY_TIMEOUT è un intero non negativo che rappres
 ### <a name="handling-numeric-fetches"></a>Gestione delle operazioni di recupero numerico
 L'attributo PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE utilizzabile per gestire operazioni di recupero numerici dalle colonne con tipi numerici SQL (bit, integer, smallint, tinyint, float e real). Quando PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE è impostata su true, i risultati di una colonna integer sono rappresentati come valori int, mentre si muove SQL reals sono rappresentati come valori a virgola mobile. Questo attributo può essere impostato con [pdostatement:: SetAttribute](../../connect/php/pdostatement-setattribute.md). 
 
-È possibile modificare il comportamento di formattazione decimale predefinito con gli attributi PDO::SQLSRV_ATTR_FORMAT_DECIMALS e PDO::SQLSRV_ATTR_DECIMAL_PLACES. Il comportamento di questi attributi è identico per le opzioni corrispondenti sul lato SQLSRV (**FormatDecimals** e **DecimalPlaces**), ad eccezione del fatto che i parametri di output non sono supportati per la formattazione. Questi attributi possono essere impostati a livello di connessione o di istruzione con [PDO:: SetAttribute](../../connect/php/pdo-setattribute.md) oppure [pdostatement:: SetAttribute](../../connect/php/pdostatement-setattribute.md), ma verrà esegue l'override di qualsiasi attributo di istruzione corrispondente attributo di connessione. Per altre informazioni, vedere [formattazione le stringhe decimali e valori di tipo Money (Driver PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).
+È possibile modificare il comportamento di formattazione decimale predefinito con gli attributi PDO::SQLSRV_ATTR_FORMAT_DECIMALS e PDO::SQLSRV_ATTR_DECIMAL_PLACES. Il comportamento di questi attributi è identico per le opzioni corrispondenti sul lato SQLSRV (**FormatDecimals** e **DecimalPlaces**), ad eccezione del fatto che i parametri di output non sono supportati per la formattazione. Questi attributi possono essere impostati a livello di connessione o di istruzione con [PDO:: SetAttribute](../../connect/php/pdo-setattribute.md) oppure [pdostatement:: SetAttribute](../../connect/php/pdostatement-setattribute.md), ma verrà esegue l'override di qualsiasi attributo di istruzione corrispondente attributo di connessione. Per altri dettagli, vedere [Formattazione di stringhe decimali e valori money (driver PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).
 
 ### <a name="handling-date-and-time-fetches"></a>Gestione di recuperi di data e ora
 
-Il PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE specifica se recuperare i tipi di data e ora come [DateTime PHP](http://php.net/manual/en/class.datetime.php) oggetti. Se false, il comportamento predefinito consiste nel restituire li come stringhe. Questo attributo può essere impostato a livello di connessione o di istruzione con [PDO:: SetAttribute](../../connect/php/pdo-setattribute.md) oppure [pdostatement:: SetAttribute](../../connect/php/pdostatement-setattribute.md), ma eseguirà l'override dell'attributo di istruzione corrispondente attributo di connessione. Per altre informazioni, vedere [procedura: recuperare data e ora i tipi come oggetti di data/ora PHP mediante il Driver PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
+Il PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE specifica se recuperare i tipi di data e ora come [DateTime PHP](http://php.net/manual/en/class.datetime.php) oggetti. Se false, il comportamento predefinito è restituirli come stringhe. Questo attributo può essere impostato a livello di connessione o di istruzione con [PDO:: SetAttribute](../../connect/php/pdo-setattribute.md) oppure [pdostatement:: SetAttribute](../../connect/php/pdostatement-setattribute.md), ma eseguirà l'override dell'attributo di istruzione corrispondente attributo di connessione. Per altre informazioni, vedere [Procedura: Recuperare i tipi di data e ora come oggetti DateTime PHP usando il driver PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV  
 Nelle sezioni seguenti sono elencate le costanti usate dal driver SQLSRV.  
@@ -141,7 +141,7 @@ Nella tabella seguente sono elencate le costanti che vengono usate per descriver
   
 |Costante SQLSRV|Tipo di dati PHP|  
 |-------------------|-----------------|  
-|SQLSRV_PHPTYPE_INT|Integer|  
+|SQLSRV_PHPTYPE_INT|Valore intero|  
 |SQLSRV_PHPTYPE_DATETIME|DATETIME|  
 |SQLSRV_PHPTYPE_FLOAT|float|  
 |SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|STREAM|  

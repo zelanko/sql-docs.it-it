@@ -9,10 +9,10 @@ ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b4ac7074d89b0e187d18c6cee79840c2a6ab61e8
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66499977"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo di connessione dell'elenco SharePoint (SSRS)
@@ -39,25 +39,25 @@ Usare le informazioni presenti in questo argomento per compilare un'origine dati
   
  **Tabella 1**  
   
-||Credenziali supportate|Autenticazione di Windows in modalità classica|* Autenticazione attestazioni|  
+||Credenziali supportate|Autenticazione di Windows in modalità classica|\* Autenticazione attestazioni|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Elenco SharePoint di una farm locale|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|Sì|  
 ||Archiviate, su richiesta, nessuna (con credenziali di Windows)<br /><br /> Le credenziali archiviate e su richiesta con credenziali non di Windows non sono supportate.|Sì|no|  
 |Elenco SharePoint remoto|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|no<br /><br /> L'autenticazione basata su form e l'autenticazione delle attestazioni non sono supportate per gli elenchi SharePoint remoti.|  
 ||Archiviate, su richiesta, nessuna (con credenziali di Windows)<br /><br /> Le credenziali archiviate e su richiesta con credenziali non di Windows non sono supportate.|Sì|no<br /><br /> L'autenticazione basata su form e l'autenticazione delle attestazioni non sono supportate per gli elenchi SharePoint remoti.|  
   
- * Autenticazione di Windows, autenticazione basata su form (FBA), token SAML (Secure Application Markup Language), altri provider di identità o una combinazione di più provider di autenticazione tra quelli indicati in precedenza.  
+ \* Autenticazione di Windows, autenticazione basata su form (FBA), token SAML (Secure Application Markup Language), altri provider di identità o una combinazione di più provider di autenticazione tra quelli indicati in precedenza.  
   
  **tabella 2**  
   
-||Credenziali supportate|Autenticazione di Windows in modalità classica|* Autenticazione attestazioni|  
+||Credenziali supportate|Autenticazione di Windows in modalità classica|\* Autenticazione attestazioni|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Elenco SharePoint di una farm locale|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|Sì|  
 ||Archiviate, su richiesta, nessuna (con credenziali di Windows)<br /><br /> Le credenziali archiviate e su richiesta con credenziali non di Windows non sono supportate.|no|no|  
 |Elenco SharePoint remoto|Autenticazione di Windows (integrata) o token utente di SharePoint|Sì|no<br /><br /> L'autenticazione basata su form e l'autenticazione delle attestazioni non sono supportate per gli elenchi SharePoint remoti.|  
 ||Archiviate, su richiesta, nessuna (con credenziali di Windows)<br /><br /> Le credenziali archiviate e su richiesta con credenziali non di Windows non sono supportate.|no|no<br /><br /> L'autenticazione basata su form e l'autenticazione delle attestazioni non sono supportate per gli elenchi SharePoint remoti.|  
   
- * Autenticazione di Windows, autenticazione basata su form (FBA), token SAML (Secure Application Markup Language), altri provider di identità o una combinazione di più provider di autenticazione tra quelli indicati in precedenza.  
+ \* Autenticazione di Windows, autenticazione basata su form (FBA), token SAML (Secure Application Markup Language), altri provider di identità o una combinazione di più provider di autenticazione tra quelli indicati in precedenza.  
   
  **Autenticazione di Windows**  
  Per una tecnologia SharePoint configurata per essere usata con un server di report in modalità Account attendibile, questa opzione non è supportata. Si applica solo alle versioni precedenti di SQL Server 2012 Reporting Services.
@@ -71,7 +71,7 @@ Usare le informazioni presenti in questo argomento per compilare un'origine dati
   
  Per informazioni sul supporto dell'autenticazione delle attestazioni nello stack di Microsoft Business Intelligence, vedere la pagina relativa all' [utilizzo dell'autenticazione delle attestazioni nello stack di Microsoft Business Intelligence](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
- Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione&#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Specificare credenziali in Generatore report](specify-credential-and-connection-information-for-report-data-sources.md) e [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ Per altre informazioni, vedere [Connessioni dati, origini dati e stringhe di connessione&#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Specificare credenziali e informazioni di connessione per le origini dati del report](specify-credential-and-connection-information-for-report-data-sources.md) e [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 ##  <a name="Query"></a> Query  
  Per progettare una query, creare un nuovo set di dati basato sull'origine dati, quindi aprire la finestra Progettazione query associata. Per altre informazioni, vedere [Creare un set di dati condiviso o un set di dati incorporato &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  

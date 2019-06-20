@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ffbc4a02-e851-431c-bc1a-7ab381d982bb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d9beb1e335faa29dc83e727e2366208172713909
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 38cc11c791666ebefadf71a412ea5a5858c03f34
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726799"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66786145"
 ---
 # <a name="gettype-method-sqlserverresultset"></a>Metodo getType (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +48,7 @@ public int getType()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getType viene specificato dal metodo getType nell'interfaccia ResultSet.  
+ Questo metodo getType viene specificato dal metodo getType nell'interfaccia java.sql.ResultSet.  
   
  Questo metodo può essere utilizzato per determinare il tipo di cursore effettivo. Se l'applicazione ha selezionato TYPE_FORWARD_ONLY o utilizzato un tipo di cursore predefinito, sarà restituito TYPE_FORWARD_ONLY.  
   

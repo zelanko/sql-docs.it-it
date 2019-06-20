@@ -1,6 +1,6 @@
 ---
 title: Supporto delle transazioni locali | Microsoft Docs
-description: Transazioni locali nel Driver OLE DB per SQL Server
+description: Transazioni locali nel driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - local transactions [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 82621a5c289a3ae7a31affa848bc5b2a77800736
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9aacaf8c52ad45a3d61087d1029bdd6f7176629e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788681"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66765981"
 ---
 # <a name="supporting-local-transactions"></a>Supporto delle transazioni locali
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

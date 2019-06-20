@@ -14,13 +14,13 @@ helpviewer_keywords:
 - SPNs [SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 125b3de50e127e4b1e7d567da58b71f58e2f72aa
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+manager: jroth
+ms.openlocfilehash: 9055af8a085b6566a542ed44ab6b13bda62e0c3f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980287"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802932"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Supporto per nomi SPN nelle connessioni client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "53980287"
   
 -   Affidabilità: per consentire l'uso di nomi SPN predefiniti, è necessario che l'account del servizio usato per l'esecuzione dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] disponga di privilegi sufficienti per l'aggiornamento di Active Directory nel centro distribuzione chiavi.  
   
--   Utilità e trasparenza a livello di posizione: valutare le conseguenze sui nomi SPN di un'applicazione se il database viene spostato in un'istanza diversa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Questa considerazione si applica sia al server principale sia al relativo partner di failover se si usa il mirroring del database. Se una modifica apportata al server comporta la modifica dei nomi SPN, valutare le conseguenze sulle applicazioni e determinare se sarà possibile gestire tutte le modifiche.  
+-   Utilità e trasparenza a livello di posizione: valutare le conseguenze sui nomi SPN di un'applicazione se il database viene spostato in un'istanza diversa di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Questa considerazione si applica sia al server principale sia al relativo partner di failover se si usa il mirroring del database. Se una modifica apportata al server comporta la modifica dei nomi SPN, valutare le conseguenze sulle applicazioni e determinare se sarà possibile gestire tutte le modifiche.  
   
 ## <a name="specifying-the-spn"></a>Definizione del nome SPN  
  È possibile specificare un nome SPN nelle finestre di dialogo e nel codice. In questa sezione viene descritto come specificare un nome SPN.  

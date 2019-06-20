@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a15fc702c5f7b3907441a237f5765b19ea41a14d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 82125679283a67006ed93bcd0d8355e2aaaf3d07
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602281"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66770657"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 
-![Download-FRECCIAGIÙ cerchiato](../../ssdt/media/download.png)[scaricare ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download di ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ADO.NET è la tecnologia di base per l'accesso ai dati per i linguaggi .NET. Usare lo spazio dei nomi System.Data.SqlClient per accedere a SQL Server oppure i provider di altri fornitori per accedere ai rispettivi archivi. Usare System.Data.Odbc o System.Data.Oledb per accedere ai dati dai linguaggi .NET mediante altre tecnologie di accesso ai dati. Usare System.Data.Dataset quando è necessaria una cache di dati offline nelle applicazioni client. Offre anche funzionalità per il salvataggio permanente locale e per XML, che possono risultare utili nei servizi Web.  
   
@@ -42,7 +42,7 @@ ADO.NET è la tecnologia di base per l'accesso ai dati per i linguaggi .NET. Usa
 ## <a name="more-samples"></a>Altri esempi  
 * [Esempi di codice di ADO.NET](https://msdn.microsoft.com/library/dw70f090.aspx)  
 * [Introduzione a .NET Framework su Windows](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/)
-* [Introduzione a .NET core su macOS](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
-* [Introduzione a .NET Core in Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
+* [Introduzione a .NET Core su macOS](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
+* [Introduzione a .NET Core su Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
 * [Introduzione a .NET Core su Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/csharp/rhel/)
   

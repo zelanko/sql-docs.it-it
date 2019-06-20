@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 60abf83d-6f97-4e47-b9d3-5072bd09d869
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1ab888a8845f5cd718837d6a534e36bd83950da1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 37bd84db5e5aeb4355234d126c4356b73a5ec6d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623969"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66777146"
 ---
 # <a name="getdatetimeoffsetint-sqlserverresultset"></a>getDateTimeOffset(int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

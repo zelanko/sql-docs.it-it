@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 928c1ad5a9b181e791d30332bc7af9d6ed47a0aa
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 68f06811c0c56fa46f1e3769c794d48ad0e43488
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600511"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66761976"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,7 +52,7 @@ PDO::SQLSRV_ATTR_QUERY_TIMEOUT influisce anche sul comportamento di PDO::exec. P
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *num*|Richiede i dati della colonna specificata. La prima colonna della tabella è la colonna 0.|  
 |PDO::FETCH_CLASS, '*classname*', array( *arglist* )|Crea un'istanza di una classe e assegna i nomi di colonna alle proprietà della classe. Se il costruttore della classe accetta uno o più parametri, è anche possibile passare *arglist*.|  
-|PDO:: fetch_class, '*classname*'|Assegna i nomi delle colonne alle proprietà di una classe esistente.|  
+|PDO::FETCH_CLASS, '*classname*'|Assegna i nomi delle colonne alle proprietà di una classe esistente.|  
   
 Eseguire una chiamata a PDOStatement::closeCursor per rilasciare le risorse di database associate all'oggetto PDOStatement prima di eseguire una nuova chiamata a PDO::query.  
   
@@ -119,7 +119,7 @@ $stmt = null;
 ```
 
 ## <a name="example"></a>Esempio
-Questo esempio di codice viene illustrato come creare una tabella di [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) tipi e recuperare i dati inseriti.
+Questo esempio illustra come creare una tabella di tipi [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) e recuperare i dati inseriti.
 
 ```
 <?php
@@ -156,7 +156,7 @@ try {
 ?>
 ```
 
-L'output previsto sarà:
+L'output previsto è il seguente:
 
 ```
 Array

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1fa6c6e18620c0e80576e864eca246c524eb0c5d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 8aea7a5a74ae85563234c1f40f5faae1213e75de
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601041"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66789953"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>Scaricare ODBC Driver for SQL Server
 
@@ -33,12 +33,12 @@ ms.locfileid: "51601041"
 - [Debian 8 DEB i pacchetti](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql17/)
 
 #### <a name="redhat"></a>RedHat
-- [I pacchetti RPM RedHat 7 (msodbcsql17-*)](https://packages.microsoft.com/rhel/7/prod/)
-- [I pacchetti RPM RedHat 6 (msodbcsql17-*)](https://packages.microsoft.com/rhel/6.8/prod/)
+- [Pacchetti RPM RedHat 7 (msodbcsql17-*)](https://packages.microsoft.com/rhel/7/prod/)
+- [Pacchetti RPM RedHat 6 (msodbcsql17-*)](https://packages.microsoft.com/rhel/6.8/prod/)
 
 #### <a name="suse"></a>SUSE
 - [I pacchetti RPM SuSE 12 (msodbcsql17-*)](https://packages.microsoft.com/sles/12/prod/)
-- [I pacchetti RPM SuSE 11 (msodbcsql17-*)](https://packages.microsoft.com/sles/11/prod/)
+- [Pacchetti RPM SuSE 11 (msodbcsql17-*)](https://packages.microsoft.com/sles/11/prod/)
 
 #### <a name="ubuntu"></a>Ubuntu
 - [Pacchetti DEB 18.04 Ubuntu](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql17/)
@@ -64,8 +64,8 @@ Vedere anche [installazione del Driver](linux-mac/installing-the-microsoft-odbc-
 - [Debian 8 DEB i pacchetti](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/)
 
 #### <a name="redhat"></a>RedHat
-- [I pacchetti RPM RedHat 7 (msodbcsql-*)](https://packages.microsoft.com/rhel/7/prod/)
-- [I pacchetti RPM RedHat 6 (msodbcsql-*)](https://packages.microsoft.com/rhel/6.8/prod/)
+- [Pacchetti RPM RedHat 7 (msodbcsql-*)](https://packages.microsoft.com/rhel/7/prod/)
+- [Pacchetti RPM RedHat 6 (msodbcsql-*)](https://packages.microsoft.com/rhel/6.8/prod/)
 
 #### <a name="suse"></a>SUSE
 - [I pacchetti RPM SuSE 12 (msodbcsql-*)](https://packages.microsoft.com/sles/12/prod/)
@@ -102,6 +102,6 @@ Vedere anche [installazione del Driver](linux-mac/installing-the-microsoft-odbc-
 
 ### <a name="linux"></a>Linux
 
-- **Red Hat Enterprise Linux 5 e 6 (a 64 bit)** - [Download di Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)
+- **Red Hat Enterprise Linux 5 e 6 (a 64 bit)**  - [Download di Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)
 
-- **SUSE Linux Enterprise 11 Service Pack 2 (a 64 bit)** - [Download di Microsoft ODBC Driver 11 Preview for SQL Server - SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)
+- **SUSE Linux Enterprise 11 Service Pack 2 (a 64 bit)**  - [Download di Microsoft ODBC Driver 11 Preview for SQL Server - SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)

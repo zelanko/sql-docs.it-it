@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 59a975e8-bea8-42fe-8f34-5f18f2bbd415
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bd2b58566a427d1666ba42cfafa69074f6780da5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b250b6dc7f0b9322a3e0c638042c4d8077186f96
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717469"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66787540"
 ---
 # <a name="getobject-method-javalangstring-sqlserverresultset"></a>Metodo getObject (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public java.lang.Object getObject(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getObject viene specificato dal metodo nell'interfaccia ResultSet getObject.  
+ Questo metodo getObject viene specificato dal metodo getObject nell'interfaccia java.sql.ResultSet.  
   
  Il metodo restituirà il valore della colonna specificata come oggetto Java. Il tipo dell'oggetto Java sarà il tipo di oggetto Java predefinito che corrisponde al tipo SQL della colonna, in base al mapping per i tipi predefiniti indicato nella specifica JDBC. Se si tratta di un valore NULL SQL, il driver restituisce un valore Null Java.  
   

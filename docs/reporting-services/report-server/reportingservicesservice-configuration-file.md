@@ -1,6 +1,6 @@
 ---
 title: File di configurazione ReportingServicesService | Microsoft Docs
-ms.date: 03/15/2017
+ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c78156832d2e66d95e4a9868bef2336c4769d9bc
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: dfb0f48bb35e6341e2b2a9a72007ef4eb09c2b9b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581325"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66506629"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService - file di configurazione
 
@@ -26,8 +26,13 @@ ms.locfileid: "65581325"
 Il file ReportingServicesService.exe.config contiene impostazioni di configurazione della funzionalità di traccia.  
   
 ## <a name="file-location"></a>Percorso del file  
- Il file si trova nella cartella \Reporting Services\Report Server\Bin.  
-  
+Questo file può trovarsi in uno dei percorsi seguenti:  
+
+``` Paths  
+\Reporting Services\Report Server\Bin  
+\Program Files\Microsoft SQL Server Reporting Services\SSRS\ReportServer\bin  
+```  
+ 
 ## <a name="editing-guidelines"></a>Linee guida per la modifica  
  È possibile modificare questo file per rinominare il file di log oppure per aumentare o ridurre i livelli di traccia. Non modificare altre impostazioni. Per le istruzioni, vedere [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Per altre informazioni sui log di traccia, vedere [Log di traccia del servizio del server di report](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
@@ -86,7 +91,6 @@ Il file ReportingServicesService.exe.config contiene impostazioni di configurazi
 |**Runtime**|Specifica le impostazioni di configurazione che supportano la compatibilità con la versione precedente. Le impostazioni di run-time vengono utilizzate per reindirizzare le richieste relative alla versione precedente di Microsoft.ReportingServices.Interfaces alla nuova versione.<br /><br /> Tutte le impostazioni di configurazione di questa sezione vengono descritte nella documentazione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Per ulteriori informazioni, ricercare la voce "Runtime Schema Settings" nel sito Web MSDN o nella documentazione di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .|  
   
 ## <a name="see-also"></a>Vedere anche  
- [File di configurazione di Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Log di traccia del servizio del server di report](../../reporting-services/report-server/report-server-service-trace-log.md)  
-  
+[File di configurazione di Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)  
+[Log di traccia del servizio del server di report](../../reporting-services/report-server/report-server-service-trace-log.md)  
   

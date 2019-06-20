@@ -9,10 +9,10 @@ ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66499556"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Esercitazione: Creazione di un report in formato libero (Generatore report)
@@ -505,7 +505,7 @@ Per altre informazioni sugli elenchi, vedere:
 * [Creare fatture e moduli con elenchi](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Celle, righe e colonne dell'area dati Tablix &#40;Generatore report e SSRS&#41;](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-Per altre informazioni sulla progettazione delle query, vedere [Finestre di progettazione query &#40;Generatore report&#41;](report-data/query-design-tools-ssrs.md) e [Interfaccia utente di Progettazione query basata su testo &#40;Generatore report&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+Per altre informazioni sulla progettazione delle query, vedere [Finestre di progettazione query (SSRS)](report-data/query-design-tools-ssrs.md) e [Interfaccia utente di Progettazione query basata su testo &#40;Generatore report&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Esercitazioni di Generatore report](../reporting-services/report-builder-tutorials.md) 

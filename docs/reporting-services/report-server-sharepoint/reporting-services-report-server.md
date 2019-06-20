@@ -1,20 +1,20 @@
 ---
-title: Server di report di Reporting Services | Microsoft Docs
-ms.date: 09/25/2017
+title: Confronto tra i server di report di Reporting Services in SharePoint e nativa | Microsoft Docs
+ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c432132f856d8c83b98f718351e1ef78be98360d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: f7a75f578c025386966fc4fc7a15c41e7e44e0a7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580578"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67038021"
 ---
-# <a name="reporting-services-report-server"></a>Server di report di Reporting Services
+# <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>Confronto tra i server di report di Reporting Services in SharePoint e nativa
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -52,7 +52,7 @@ Un server di report di Reporting Services viene eseguito in una delle due modali
 |**Indirizzamento tramite URL**|Sì|L'indirizzamento tramite URL è diverso nella modalità integrata SharePoint. Per fare riferimento a report, modelli di report, origini dati condivise e risorse vengono usati gli URL di SharePoint. La gerarchia di cartelle del server di report non viene usata. Se si dispone di applicazioni personalizzate che si basano sull'accesso all'URL supportato in un server di report in modalità nativa, questa funzionalità non sarà più disponibile quando il server di report è configurato per l'integrazione con SharePoint.<br /><br /> Per altre informazioni sull'accesso all'URL, vedere [Riferimento ai parametri di accesso con URL](../../reporting-services/url-access-parameter-reference.md)|  
 |**Estensioni di sicurezza personalizzate**|Sì|Le estensioni di sicurezza personalizzate di Reporting Services non possono essere distribuite o usate nel server di report. Il server di report include una speciale estensione di sicurezza, che viene usata quando si configura un server di report per l'esecuzione in modalità di integrazione con SharePoint. Tale estensione di sicurezza è un componente interno ed è necessaria per le operazioni in modalità integrata.|  
 |**Gestione configurazione**|Sì|**\*\* Importante \*\*** Non è possibile usare Gestione configurazione per gestire un server di report in modalità SharePoint. Usare invece Amministrazione centrale SharePoint.|  
-|**Gestione report**|Sì|Non è possibile usare Gestione report per gestire la modalità SharePoint. Usare le pagine dell'applicazione SharePoint. Per altre informazioni, vedere [Servizio SharePoint di Reporting Services e applicazioni di servizio](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
+|**Portale Web**|Sì|Non è possibile gestire in modalità SharePoint nel portale web. Usare le pagine dell'applicazione SharePoint. Per altre informazioni, vedere [Servizio SharePoint di Reporting Services e applicazioni di servizio](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**Report collegati**|Sì|No.|  
 |**Report personali**|Sì|no|  
 |**Sottoscrizioni personali** e metodi di invio in batch|Sì|no|  
@@ -132,14 +132,12 @@ Un server di report di Reporting Services viene eseguito in una delle due modali
   
 ## <a name="related-tasks"></a>Attività correlate
 
- Negli argomenti seguenti vengono fornite altre informazioni relative a installazione, utilizzo e gestione di un server di report:  
+ Negli articoli seguenti vengono fornite altre informazioni relative a installazione, uso e gestione di un server di report:  
   
 |Attività|Collegamento|  
 |----------|----------|  
 |Verificare i requisiti hardware e software.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](https://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99).|  
 |Installare la modalità SharePoint di Reporting Services.|[Installare la modalità SharePoint di Reporting Services per SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)|  
-|Gli sviluppatori Web o gli utenti con esperienza nella creazione di fogli di stile CSS possono modificare gli stili predefiniti a loro rischio per modificare i colori, i tipi di carattere e il layout della barra degli strumenti di Gestione report. Né i fogli di stile predefiniti né le istruzioni relative alla loro modifica sono documentati in questa versione.|[Personalizzare i fogli di stile per il visualizzatore HTML e Gestione report](https://msdn.microsoft.com/library/df805cff-b1de-4062-b2ac-423f37390fbd)|  
-|Gli sviluppatori Web che hanno familiarità con gli stili HTML e fogli di stile CSS possono utilizzare le informazioni in questo argomento per determinare i file che è possibile modificare per personalizzare l'aspetto di Gestione report.|[Configurare il portale Web per il passaggio di cookie di autenticazione personalizzati](assetid:///91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
 |Illustra come ottimizzare le impostazioni di memoria per il servizio Web ReportServer e il servizio Windows.|[Configurare la memoria disponibile per applicazioni del server di report](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |Vengono illustrati i passaggi consigliati per configurare il server di report per l'amministrazione remota.|[Configurare un server di report per l'amministrazione remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
 |Vengono fornite istruzioni per la configurazione della disponibilità della funzionalità **Report personali** in un'istanza del server di report nativa.|[Abilitare e disabilitare la funzionalità Report personali](../../reporting-services/report-server/enable-and-disable-my-reports.md)|  

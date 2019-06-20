@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f087fd40-8451-478e-b465-43112c711515
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4bcd06eba29bdc46b0a81f29c974590697b76c73
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 7c21c548b113e9da03661ca3beb04b6757c92697
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599891"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66781639"
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>Conformità con JDBC 4.1 per il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

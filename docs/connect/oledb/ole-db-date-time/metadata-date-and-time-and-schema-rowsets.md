@@ -12,13 +12,13 @@ helpviewer_keywords:
 - date/time [OLE DB], schema rowsets
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 104785bc2a13218ee50135666b4efcc2e93a0b60
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: e9ac734cbc11492074c322c21a9e7127249223a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403206"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800692"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>Metadati - Set di righe dello schema e di data e ora
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "52403206"
 ## <a name="providertypes-rowset"></a>Set di righe PROVIDER_TYPES  
  Per i tipi di data/ora vengono restituite le righe seguenti:  
   
-|Type -><br /><br /> colonna|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Tipo -><br /><br /> colonna|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |TYPE_NAME|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  

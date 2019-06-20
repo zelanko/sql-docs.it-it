@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 09042ee9-dfb1-4d0b-82bd-d1224b0aea80
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 081da23826951c5c8c4d4872de1c28a771a2958b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: dbddcadfec0ed7b2bab9573717d0079240443a94
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720919"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795688"
 ---
 # <a name="setcharacterstream-method-sqlservernclob"></a>Metodo setCharacterStream (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +31,7 @@ public java.io.Writer setCharacterStream(long pos)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *POS*  
+ *pos*  
   
  Posizione di inizio della scrittura nel valore **NCLOB**. La prima posizione è 1.  
   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 78acce6157928d579a06e06fbf95008c4a7e11c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b799ebd6205ebac01f832910dff0775afe5c0a93
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664599"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795953"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Supporto dei set di righe dello schema (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

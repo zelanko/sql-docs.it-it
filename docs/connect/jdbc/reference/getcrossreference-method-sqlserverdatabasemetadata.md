@@ -15,18 +15,18 @@ apitype: Assembly
 ms.assetid: 099dd0bf-b017-479d-9696-f5b06f4c6bf9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bae60cb90c0459b5a221f88f463cfda0a520f47e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2fc70ed3e449840793dbd32e4d2014031256f3bd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600859"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66763010"
 ---
 # <a name="getcrossreference-method-sqlserverdatabasemetadata"></a>Metodo getCrossReference (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera una descrizione delle colonne di chiave esterna per la tabella di chiave esterna specificata che fa riferimento alle colonne di chiave primaria della tabella di chiave primaria specificata.   
+  Recupera una descrizione delle colonne di chiave esterna per la tabella di chiave esterna specificata che fa riferimento alle colonne di chiave primaria della tabella di chiave primaria specificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,7 +41,7 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *gatto1*  
+ *cat1*  
   
  Valore **String** contenente il nome del catalogo della tabella che contiene la chiave primaria.  
   
@@ -53,7 +53,7 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
   
  Valore **String** contenente il nome tabella della tabella che contiene la chiave primaria.  
   
- *Cat2*  
+ *cat2*  
   
  Valore **String** contenente il nome del catalogo della tabella che contiene la chiave esterna.  
   
@@ -61,7 +61,7 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
   
  Valore **String** contenente il nome dello schema della tabella che contiene la chiave esterna.  
   
- *TAB2*  
+ *tab2*  
   
  Valore **String** contenente il nome tabella della tabella che contiene la chiave esterna.  
   

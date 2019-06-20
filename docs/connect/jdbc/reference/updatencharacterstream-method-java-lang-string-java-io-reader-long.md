@@ -1,5 +1,5 @@
 ---
-title: Metodo stringa - lettura - lunga updateNCharacterStream) | Microsoft Docs
+title: Metodo updateNCharacterStream (String - Reader - long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: db0a96a8-248f-4664-9c13-f480f309ab91
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1ca23d9813cbcdeb73aa67b1036b6dcc4aabe82a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7285f091a933ebbcfa4796da338e34c6795105fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687761"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66798471"
 ---
 # <a name="updatencharacterstream-method-javalangstring-javaioreader-long"></a>Metodo updateNCharacterStream (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public void updateNCharacterStream(java.lang.String columnLabel,
 ## <a name="remarks"></a>Remarks  
  Questo metodo updateNCharacterStream viene specificato dal metodo updateNCharacterStream nell'interfaccia ResultSet.  
   
- Questo metodo passa caratteri Unicode da un oggetto lettore selezionati **nchar**, **nvarchar (max)**, **ntext**, e **xml** colonne. L'utilizzo di questo metodo su colonne con altri tipi di dati genererà un'eccezione.  
+ Questo metodo passa caratteri Unicode da un oggetto lettore selezionati **nchar**, **nvarchar (max)** , **ntext**, e **xml** colonne. L'utilizzo di questo metodo su colonne con altri tipi di dati genererà un'eccezione.  
   
  Se la lunghezza del flusso è diversa da quanto specificato nel parametro *length*, il driver JDBC genera un'eccezione al momento dell'aggiornamento o dell'inserimento della riga.  
   

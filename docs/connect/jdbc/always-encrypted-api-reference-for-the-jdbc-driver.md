@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 66f659f5fbb2daa0b0a9969c3e7cde75dccc53d0
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+manager: jroth
+ms.openlocfilehash: 36ccbdddde5276bedffe3271a541875f1e555df3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361671"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66770478"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>Informazioni di riferimento sull'API Always Encrypted per il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -75,8 +75,8 @@ ms.locfileid: "54361671"
   
 |nome|Descrizione|  
 |----------|-----------------|  
-|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|Consente di effettuare la decrittografia del valore crittografato specificato di una column encryption key. Il valore crittografato deve essere crittografato utilizzando il certificato con il percorso della chiave specificato e l'algoritmo specificato.<br /><br /> **Il formato del percorso della chiave deve essere uno dei seguenti:**<br /><br /> Thumbprint:<certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Sostituisce SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).)|  
-|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|Consente di eseguire la crittografia di una column encryption key utilizzando il certificato con il percorso della chiave specificato e l'algoritmo specificato.<br /><br /> **Il formato del percorso della chiave deve essere uno dei seguenti:**<br /><br /> Thumbprint:<certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Sostituisce SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|  
+|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|Consente di effettuare la decrittografia del valore crittografato specificato di una column encryption key. Il valore crittografato deve essere crittografato utilizzando il certificato con il percorso della chiave specificato e l'algoritmo specificato.<br /><br /> **Il formato del percorso della chiave deve essere uno dei seguenti:**<br /><br /> Identificazione personale:<certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Sostituisce SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).)|  
+|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|Consente di eseguire la crittografia di una column encryption key utilizzando il certificato con il percorso della chiave specificato e l'algoritmo specificato.<br /><br /> **Il formato del percorso della chiave deve essere uno dei seguenti:**<br /><br /> Identificazione personale:<certificate_thumbprint><br /><br /> Alias:<certificate_alias><br /><br /> (Sostituisce SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|  
 |`public void setName (String name)`|Imposta il nome di questo provider dell'archivio chiavi.|
 |`public String getName ()`|Ottiene il nome di questo provider dell'archivio chiavi.|
   

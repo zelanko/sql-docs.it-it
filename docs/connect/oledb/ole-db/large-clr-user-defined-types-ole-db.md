@@ -12,13 +12,13 @@ helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: b5c071a36cebacc8ce0dea5c1633bf3f92b28599
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 2af61fea9909597736769eb3d28fda43753a800b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409608"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795975"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Tipi CLR definiti dall'utente di grandi dimensioni (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "52409608"
 |Tipo di parametro|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|"DBTYPE_UDT"|*n*|Non definito|Non definito|Cancellato|  
-|DBTYPE_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|"DBTYPE_UDT"|~ 0|Non definito|Non definito|set|  
+|DBTYPE_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|"DBTYPE_UDT"|~0|Non definito|Non definito|set|  
   
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  Le informazioni specificate nella struttura DBPARAMBINDINFO devono essere conformi agli elementi seguenti:  
@@ -67,7 +67,7 @@ ms.locfileid: "52409608"
 |Tipo di parametro|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|--------------------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|DBTYPE_UDT|*n*|Ignorato|Ignorato|Deve essere impostato se è necessario passare il parametro utilizzando DBTYPE_IUNKNOWN.|  
-|DBTYPE_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|DBTYPE_UDT|~ 0|Ignorato|Ignorato|Ignorato|  
+|DBTYPE_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|DBTYPE_UDT|~0|Ignorato|Ignorato|Ignorato|  
   
 ## <a name="isscommandwithparameters"></a>ISSCommandWithParameters  
  Le applicazioni usano **ISSCommandWithParameters** per ottenere e impostare le proprietà dei parametri definite nella sezione Proprietà dei parametri.  
@@ -78,7 +78,7 @@ ms.locfileid: "52409608"
 |Tipo di colonna|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE|DBCOLUMN_FLAGS_ISLONG|DBCOLUMNS_ISSEARCHABLE|DBCOLUMN_OCTETLENGTH|  
 |-----------------|--------------------|--------------------------|-------------------------|---------------------|-----------------------------|-----------------------------|---------------------------|  
 |DBTYPE_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|DBTYPE_UDT|*n*|NULL|NULL|Clear|DB_ALL_EXCEPT_LIKE|n|  
-|DBTYPE_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|DBTYPE_UDT|~ 0|NULL|NULL|Impostare|DB_ALL_EXCEPT_LIKE|0|  
+|DBTYPE_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|DBTYPE_UDT|~0|NULL|NULL|Impostare|DB_ALL_EXCEPT_LIKE|0|  
   
  Per i tipi definiti dall'utente vengono definite anche le colonne seguenti:  
   
@@ -94,8 +94,8 @@ ms.locfileid: "52409608"
   
 |Tipo di parametro|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
-|DBTYPE_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|DBTYPE_UDT|*n*|~ 0|~ 0|Clear|  
-|DBTYPE_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|DBTYPE_UDT|~ 0|~ 0|~ 0|Impostare|  
+|DBTYPE_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|DBTYPE_UDT|*n*|~0|~0|Clear|  
+|DBTYPE_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|DBTYPE_UDT|~0|~0|~0|Impostare|  
   
 ## <a name="columns-rowset-schema-rowsets"></a>Set di righe COLUMNS (set di righe dello schema)  
  Per i tipi definiti dall'utente vengono restituiti i valori di colonna seguenti:  
@@ -167,7 +167,7 @@ ms.locfileid: "52409608"
 ## <a name="down-level-client-behavior-for-udts"></a>Comportamento dei client legacy per i tipi definiti dall'utente  
  I tipi definiti dall'utente sono soggetti al mapping dei tipi con i client legacy nel modo seguente:  
   
-|Versione client |DBTYPE_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|DBTYPE_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|  
+|Versione client|DBTYPE_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|DBTYPE_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|  
 |--------------------|------------------------------------------------------------------|---------------------------------------------------------|  
 |SQL Server 2005|UDT (tipo definito dall'utente)|varbinary(max)|  
 |SQL Server 2008 e versioni successive|UDT (tipo definito dall'utente)|UDT (tipo definito dall'utente)|  

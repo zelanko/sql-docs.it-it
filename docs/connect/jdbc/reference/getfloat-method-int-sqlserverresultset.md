@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 30863ef5-7a7c-440e-8fbb-426a99266ee1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f50325b245a821b114e7f8d9ca3898f195eae7cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 72a2ed57b9b86db50c7d0c1f824181c4a5623026
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810659"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802009"
 ---
 # <a name="getfloat-method-int-sqlserverresultset"></a>Metodo getFloat (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public float getFloat(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getFloat viene specificato dal metodo getFloat nell'interfaccia ResultSet.  
+ Questo metodo getFloat viene specificato dal metodo getFloat nell'interfaccia java.sql.ResultSet.  
   
  Questo metodo restituisce tutti i tipi numerici con fedeltà **float** di Java.  
   

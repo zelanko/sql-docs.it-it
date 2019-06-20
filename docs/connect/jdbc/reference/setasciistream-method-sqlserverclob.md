@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 6e1779df-3b2a-41d1-8dca-99692cc9da14
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a93a6a8750f48f58c6e676ebe619985dad67277d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 76d58f43e1caded32ac03e2c8f96ee5b9365bb72
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694809"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66764977"
 ---
 # <a name="setasciistream-method-sqlserverclob"></a>Metodo setAsciiStream (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public java.io.OutputStream setAsciiStream(long pos)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *POS*  
+ *pos*  
   
  Posizione in corrispondenza della quale iniziare la scrittura nell'oggetto CLOB.  
   

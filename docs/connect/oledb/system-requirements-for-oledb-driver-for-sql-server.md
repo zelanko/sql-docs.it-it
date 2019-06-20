@@ -15,13 +15,13 @@ helpviewer_keywords:
 - MSOLEDBSQL, system requirements
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6462901ba1e3e73ca8c0a4ca448d8bc689bd8868
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 5e509014412bb89995602141d596ff34fa7f3572
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744431"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795856"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>Requisiti di sistema per driver OLE DB per SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,7 +72,7 @@ Per altre informazioni vedere [Uso di Azure Active Directory](features/using-azu
 
 |Tipo di dati|SQL Server Native Client<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Driver OLE DB per SQL Server|Applicazioni OLE DB di Windows Data Access Components, MDAC e<br /><br /> Driver OLE DB per le applicazioni OLE DB per SQL Server con Datatypecompatibility=80 = 80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|CLR definito dall'utente (\<= 8 Kb)|udt|udt|udt|Varbinary|  
+|Tipo definito dall'utente CLR (\<= 8 KB)|udt|udt|udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|image|  
 |ntext|varchar|varchar|varchar|Text|  
 |nvarchar(max)|NVARCHAR|NVARCHAR|NVARCHAR|Ntext|  

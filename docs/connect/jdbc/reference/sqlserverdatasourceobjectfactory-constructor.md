@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 7c2bd899-0d79-47ed-bb8d-60941594ee0d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4c51519fb3aba7c14dba46a1d3dcea6d33b884a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: defe6465c114a52e8a9a086248c6e85954cf283a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617560"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796848"
 ---
 # <a name="sqlserverdatasourceobjectfactory-constructor-"></a>Costruttore di SQLServerDataSourceObjectFactory ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

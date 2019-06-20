@@ -1,5 +1,5 @@
 ---
-title: 'Pdostatement:: Bindparam | Microsoft Docs'
+title: PDOStatement::bindParam | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 968fcaa992f19b24d928bcb50315d9d2c53468cb
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: d8186b87e5dde50b07aa69e4dde870d8474265bd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606361"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795585"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -122,10 +122,10 @@ In questo esempio di codice viene illustrato come usare un parametro di input/ou
 ```  
 
 > [!NOTE]
-> È consigliabile usare le stringhe come input durante l'associazione di valori da un [colonna decimal o numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) per garantire precisione e accuratezza come PHP ha limitato la precisione per [numeri a virgola mobile](https://php.net/manual/en/language.types.float.php). Lo stesso vale per le colonne di tipo bigint, soprattutto quando i valori sono di fuori dell'intervallo di un' [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+> È consigliabile usare stringhe come input durante l'associazione di valori a una [colonna decimal o numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) per garantire precisione e accuratezza, dato che PHP offre una precisione limitata per i [numeri a virgola mobile](https://php.net/manual/en/language.types.float.php). Lo stesso vale per le colonne di tipo bigint, soprattutto quando i valori non sono compresi nell'intervallo di un [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
 ## <a name="example"></a>Esempio  
-Questo esempio di codice viene illustrato come associare un valore decimale come parametro di input.  
+Questo esempio di codice mostra come associare un valore decimale come parametro di input.  
 
 ```
 <?php  

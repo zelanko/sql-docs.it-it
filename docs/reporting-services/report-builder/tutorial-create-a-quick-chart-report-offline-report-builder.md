@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 429ee4c7dcd0b6d58b2cbb3e223e8f7407339327
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 72e6846ef10bc86c1711958e144601d8bff5caac
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571763"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67037966"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Esercitazione: Creare un report grafico rapido offline (Generatore report)
 
@@ -105,7 +105,7 @@ ms.locfileid: "65571763"
     </Query>  
     ```  
   
-11. (Facoltativo) Fare clic sul pulsante **Esegui** (**!**) per visualizzare i dati su cui si baserà il grafico.  
+11. (Facoltativo) Fare clic sul pulsante **Esegui** ( **!** ) per visualizzare i dati su cui si baserà il grafico.  
   
      ![Query di progettazione di Generatore report](../../reporting-services/report-builder/media/rb-designquery.png "Query di progettazione di Generatore report")  
   
@@ -169,7 +169,7 @@ ms.locfileid: "65571763"
     UNION SELECT 450 AS Sales, 'Ranjit Varkey' AS FullName   
     ```  
   
-8.  (Facoltativo) Fare clic sul pulsante Esegui (**!**) per visualizzare i dati sui quali verrà basato il grafico.  
+8.  (Facoltativo) Fare clic sul pulsante Esegui ( **!** ) per visualizzare i dati sui quali verrà basato il grafico.  
   
 9. Scegliere **Avanti**.  
   
@@ -207,7 +207,7 @@ L'area di progettazione viene ingrandita man mano che viene trascinata.
   
 2.  Fare clic con il pulsante destro del mouse sulle etichette e scegliere **Proprietà etichetta serie**. Verrà visualizzata la finestra di dialogo **Proprietà etichetta serie** .  
   
-3.  Nella casella **Dati etichetta** digitare **#PERCENT{P0}**.  
+3.  Nella casella **Dati etichetta** digitare **#PERCENT{P0}** .  
   
      Il testo **{P0}** specifica la percentuale senza cifre decimali. Se si digita solo **#PERCENT**, i numeri avranno due cifre decimali. **#PERCENT** è una delle tante parole chiave disponibili che eseguono un calcolo o una funzione.  
      
@@ -226,7 +226,7 @@ L'area di progettazione viene ingrandita man mano che viene trascinata.
   
  Per salvare infine i report in un server di report o in un sito di SharePoint integrato con un server di report, è necessario disporre dell'URL e delle autorizzazioni appropriate. Tutti i report creati possono essere eseguiti direttamente dal computer, tuttavia quando vengono eseguiti dal server di report o dal sito di SharePoint i report offrono maggiori funzionalità. Per eseguire i propri report o quelli presenti sul server di report o nel sito di SharePoint in cui vengono pubblicati è necessario disporre delle autorizzazioni appropriate. Per ottenere l'accesso è necessario rivolgersi all'amministratore di sistema.  
   
- Prima di iniziare può essere utile leggere le informazioni su alcuni concetti e termini. Vedere [Concetti relativi alla creazione di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md). È inoltre consigliabile dedicarsi alla pianificazione prima di creare il primo report. Questa fase preliminare risulterà infatti molto utile. Vedere [Pianificazione di un report &#40;Generatore report&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
+ Prima di iniziare può essere utile leggere le informazioni su alcuni concetti e termini. Vedere [Concetti relativi a Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md). È inoltre consigliabile dedicarsi alla pianificazione prima di creare il primo report. Questa fase preliminare risulterà infatti molto utile. Vedere [Pianificazione di un report &#40;Generatore report&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
 
 ## <a name="next-steps"></a>Passaggi successivi
 

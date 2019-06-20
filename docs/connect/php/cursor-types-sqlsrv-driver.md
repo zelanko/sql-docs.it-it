@@ -1,5 +1,5 @@
 ---
-title: Tipi di cursore (Driver SQLSRV) | Microsoft Docs
+title: Tipi di cursore (driver SQLSRV) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0f435b3f2308557654259395e296c07956a2c337
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+manager: jroth
+ms.openlocfilehash: 6452fc506814cdfdeee4f61085ec9a1ee0cededa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676139"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801486"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>Tipi di cursore (driver SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -122,9 +122,9 @@ sqlsrv_close( $conn );
 ## <a name="client-side-cursors-and-the-sqlsrv-driver"></a>I cursori sul lato client e il Driver SQLSRV  
 I cursori sul lato client sono una funzionalità aggiunta nella versione 3.0 del [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] che consente di memorizzare nella cache un intero set di risultati in memoria. Conteggio delle righe è disponibile dopo l'esecuzione della query quando si usa un cursore lato client.  
   
-Usare cursori sul lato client per i set di risultati di piccole e medie. Utilizzare cursori sul lato server per i set di risultati di grandi dimensioni.  
+È consigliabile usare i cursori lato client per set di risultati di piccole e medie dimensioni. Utilizzare cursori sul lato server per i set di risultati di grandi dimensioni.  
   
-Una query restituirà false se il buffer non è sufficientemente grande da contenere l'intero set di risultati. È possibile aumentare le dimensioni del buffer fino al limite di memoria PHP.  
+Una query restituirà false se il buffer non è sufficientemente grande da contenere l'intero set di risultati. Si possono aumentare le dimensioni del buffer fino al limite di memoria di PHP.  
   
 Usa il driver SQLSRV, è possibile configurare le dimensioni del buffer che contiene il set di risultati con l'impostazione ClientBufferMaxKBSize [sqlsrv_configure](../../connect/php/sqlsrv-configure.md). [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md) restituisce il valore di ClientBufferMaxKBSize. È anche possibile impostare la dimensione massima del buffer nel file PHP. ini con sqlsrv. ClientBufferMaxKBSize (ad esempio sqlsrv. ClientBufferMaxKBSize = 1024).  
   

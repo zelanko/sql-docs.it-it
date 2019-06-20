@@ -3,18 +3,18 @@ title: Cronologia di driver per Microsoft SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 05/04/2018
 ms.prod: sql
-ms.reviewer: genemi
+ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daveng
-manager: craigg
-ms.openlocfilehash: e6656b2df8eb635686dd5702d9b60a644a04e29b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+author: MightyPen
+ms.author: genemi
+manager: jroth
+ms.openlocfilehash: f8a0c12939882602f21a849d2fb3ec7d829df92b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511618"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66822775"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Cronologia di driver per Microsoft SQL Server
 
@@ -22,7 +22,7 @@ Questa pagina descrive i dati cronologici connessione le tecnologie Microsoft pe
 
 ## <a name="odbc"></a>ODBC
 
-Sono disponibili tre generazioni distinte dei driver Microsoft ODBC per SQL Server. Il driver ODBC di "SQL Server" primo viene ancora fornito come parte della [Windows Data Access Components](#microsoft-or-windows-data-access-components). Non è consigliabile usare il driver per i nuovi sviluppi. A partire da SQL Server 2005, il [SQL Server Native Client](#sql-server-native-client) include un'interfaccia ODBC e il driver ODBC fornito con SQL Server 2005 tramite SQL Server 2012. Non è consigliabile usare il driver per i nuovi sviluppi. Dopo SQL Server 2012, il [Microsoft ODBC Driver for SQL Server](#microsoft-odbc-driver-for-sql-server) è il driver che viene aggiornato con le funzionalità server più recenti in futuro.
+Sono disponibili tre generazioni distinte di driver Microsoft ODBC per SQL Server. Il driver ODBC di "SQL Server" primo viene ancora fornito come parte della [Windows Data Access Components](#microsoft-or-windows-data-access-components). Non è consigliabile usare il driver per i nuovi sviluppi. A partire da SQL Server 2005, il [SQL Server Native Client](#sql-server-native-client) include un'interfaccia ODBC e il driver ODBC fornito con SQL Server 2005 tramite SQL Server 2012. Non è consigliabile usare il driver per i nuovi sviluppi. Dopo SQL Server 2012, il [Microsoft ODBC Driver for SQL Server](#microsoft-odbc-driver-for-sql-server) è il driver che viene aggiornato con le funzionalità server più recenti in futuro.
 
 ### <a name="sql-server-native-client"></a>SQL Server Native Client
 
@@ -36,7 +36,7 @@ Dopo SQL Server 2012, sviluppati e rilasciati come Microsoft ODBC Driver for SQL
 
 ## <a name="ole-db"></a>OLE DB
 
-Sono disponibili tre generazioni distinte di provider Microsoft OLE DB per SQL Server. Il primo "Microsoft OLE DB Provider per SQL Server" (SQLOLEDB) viene ancora fornito come parte della [Windows Data Access Components](#microsoft-or-windows-data-access-components). Questo provider non verrà aggiornato con le nuove funzionalità e non è consigliabile usare il driver per i nuovi sviluppi. A partire da SQL Server 2005, il [SQL Server Native Client](#sql-server-native-client) include un'interfaccia di provider OLE DB (SQLNCLI) ed è il provider OLE DB fornito con SQL Server 2005 tramite SQL Server 2017. Era [annunciate come deprecate nel 2011](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/) e non è consigliabile usare il driver per i nuovi sviluppi. Nel 2017, tecnologia di accesso ai dati di OLE DB è stata successivamente [deprecata ed è stata annunciata una nuova versione pianificata](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/) per il 2018. Il nuovo provider OLE DB viene chiamato il "Microsoft OLE DB Driver per SQL Server" (MSOLEDBSQL) e attualmente è gestito e supportato.
+Sono disponibili tre generazioni distinte di provider Microsoft OLE DB per SQL Server. Il primo "provider Microsoft OLE DB per SQL Server" (SQLOLEDB) viene ancora fornito come parte di [Windows Data Access Components](#microsoft-or-windows-data-access-components). Questo provider non verrà aggiornato con le nuove funzionalità e non è consigliabile usare il driver per i nuovi sviluppi. A partire da SQL Server 2005, il [SQL Server Native Client](#sql-server-native-client) include un'interfaccia di provider OLE DB (SQLNCLI) ed è il provider OLE DB fornito con SQL Server 2005 tramite SQL Server 2017. È stato [annunciato come deprecato nel 2011](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/) e non è consigliabile usare questo driver per nuovi sviluppi. Nel 2017, tecnologia di accesso ai dati di OLE DB è stata successivamente [deprecata ed è stata annunciata una nuova versione pianificata](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/) per il 2018. Il nuovo provider OLE DB viene chiamato il "Microsoft OLE DB Driver per SQL Server" (MSOLEDBSQL) e attualmente è gestito e supportato.
 
 ## <a name="adonet"></a>ADO.NET
 
@@ -141,7 +141,7 @@ I componenti seguenti sono considerati obsoleti:
 
 * **DB-Library:** DB-Library è un modello di programmazione specifiche di SQL Server che include le API C. Sono non stati apportati alcuna modifica in DB-Library dopo SQL Server 6.5. Rilascio della versione finale è stato effettuato con SQL Server 2000 e verrà non essere trasferita al sistema operativo Windows a 64 bit.
 * **Embedded SQL (E-SQL):** E-SQL è un modello di programmazione specifiche di SQL Server che consente di istruzioni Transact-SQL per essere incorporati nel codice Visual C#. Miglioramenti della funzionalità non sono stati apportati alle istruzioni SQL E SQL Server 6.5. Rilascio della versione finale è stato effettuato con SQL Server 2000 e verrà non essere trasferita al sistema operativo Windows a 64 bit.
-* **Data Access Objects (DAO):** DAO fornisce l'accesso ai database JET (accesso). Questa API può essere usata da Microsoft Visual Basic, Microsoft Visual C++ e linguaggi di scripting. È stato incluso in Microsoft Office 2000 e Office XP. 3.6 DAO è la versione finale di questa tecnologia. Non sarà disponibile nel sistema operativo Windows a 64 bit.
+* **Data Access Objects (DAO):** DAO fornisce l'accesso ai database JET (accesso). Questa API può essere usata da Microsoft Visual Basic, Microsoft Visual C++ e linguaggi di scripting. È stato incluso in Microsoft Office 2000 e Office XP. 3\.6 DAO è la versione finale di questa tecnologia. Non sarà disponibile nel sistema operativo Windows a 64 bit.
 * **Oggetti dati remoti (RDO):** RDO è stato progettato specificamente per l'accesso remoto alle origini dati relazionali ODBC e ancora più facile utilizzare ODBC senza codice di applicazione complesse. È stato incluso con Microsoft Visual Basic le versioni 4, 5 e 6. RDO versione 2.0 è la versione finale di questa tecnologia.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

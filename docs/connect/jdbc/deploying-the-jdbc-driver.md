@@ -1,5 +1,5 @@
 ---
-title: Distribuzione del Driver JDBC | Microsoft Docs
+title: Distribuzione del driver JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c677cd46b4d3366b997e4d1effe5c056ec62a158
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: b688e5b014915578df5c56ec5e6af2fc8fe26b16
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529601"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66781979"
 ---
 # <a name="deploying-the-jdbc-driver"></a>Distribuzione del driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "52529601"
 >  Quando si usa l'opzione `/auto` l'installazione non sarà realmente automatica, in quanto la finestra di dialogo di WinZip verrà comunque visualizzata sullo schermo dell'utente. Tuttavia, non è necessario interagire con essa e viene chiusa non appena l'operazione di decompressione è stata completata.  
   
 ## <a name="deploying-the-driver-on-unix-systems"></a>Distribuzione del driver su sistemi UNIX  
- Quando il driver JDBC viene distribuito in sistemi operativi UNIX, è necessario utilizzare la versione del file GZIP del pacchetto di installazione, denominata in genere `sqljdbc_<version>_<language>.tar.gz`.  
+ Quando il driver JDBC viene distribuito in sistemi operativi UNIX, è necessario usare la versione del file GZIP del pacchetto di installazione, denominata in genere `sqljdbc_<version>_<language>.tar.gz`.  
   
  Prima di installare il driver JDBC, assicurarsi che entrambe le utilità GZIP e TAR siano installate nel sistema operativo dell'utente e che le cartelle che contengono i file eseguibili di entrambe le utilità siano state aggiunte alla variabile di ambiente PATH.  
   

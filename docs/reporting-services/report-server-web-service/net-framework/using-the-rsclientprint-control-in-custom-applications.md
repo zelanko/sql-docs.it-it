@@ -11,14 +11,14 @@ helpviewer_keywords:
 - custom printing [Reporting Services]
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a12d08348a88529efdd84fd1ae5dab3c64d7d1c1
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b0da6d086754b63a2d796c4f7ff8e1b7fd2d2cad
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814184"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63249805"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Utilizzo del controllo RSClientPrint in applicazioni personalizzate
   Il controllo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX **RSPrintClient** consente la stampa sul lato client dei report visualizzati nel Visualizzatore HTML. Offre una finestra di dialogo **Stampa** per consentire all'utente di avviare un processo di stampa, visualizzare un'anteprima di un report, specificare le pagine da stampare e modificare i margini. Durante la stampa sul lato client, il server di report esegue il rendering del report con l'estensione per il rendering Immagine (EMF) e utilizza le funzionalità di stampa del sistema operativo per creare il processo di stampa e inviarlo a una stampante.  

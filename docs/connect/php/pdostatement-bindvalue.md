@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d7ae069a5bb485f4b74a11b066f5871aba2f30ec
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 93cf012017e6614bc0ae4d81150e90ddab5b424a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606281"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66780666"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -77,10 +77,10 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 ```
 
 > [!NOTE]
-> È consigliabile usare le stringhe come input durante l'associazione di valori da un [colonna decimal o numeric](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) per garantire precisione e accuratezza come PHP ha limitato la precisione per [numeri a virgola mobile](https://php.net/manual/en/language.types.float.php). Lo stesso vale per le colonne di tipo bigint, soprattutto quando i valori sono di fuori dell'intervallo di un' [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+> È consigliabile usare stringhe come input durante l'associazione di valori a una [colonna decimal o numeric](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) per garantire precisione e accuratezza, dato che PHP offre una precisione limitata per i [numeri a virgola mobile](https://php.net/manual/en/language.types.float.php). Lo stesso vale per le colonne di tipo bigint, soprattutto quando i valori non sono compresi nell'intervallo di un [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
 ## <a name="example"></a>Esempio  
-Questo esempio di codice viene illustrato come associare un valore decimale come parametro di input.  
+Questo esempio di codice mostra come associare un valore decimale come parametro di input.  
 
 ```
 <?php  

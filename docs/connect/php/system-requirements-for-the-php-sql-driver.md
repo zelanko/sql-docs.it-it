@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d53a3233d2e2af6aa9806cdea06b2a203e31bf89
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+manager: jroth
+ms.openlocfilehash: 0cea4c62c7976e1f6d84dc046abc1046179ef125
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658414"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803911"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Requisiti di sistema dei driver Microsoft per PHP per SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -58,7 +58,7 @@ La versione corretta di Microsoft ODBC Driver for SQL Server è necessario nel c
 
 Se si scarica la versione di Windows del driver in una versione a 64 bit di Windows, il programma di installazione ODBC 64-bit installa i driver ODBC sia a 32 e 64 bit. Se si usa una versione a 32 bit di Windows, usare ODBC x86 programma di installazione. Su piattaforme non Windows, sono disponibili versioni solo 64 bit del driver.
 
-|PHP per la versione del driver SQL Server&#8594;<br />&#8595;Versione del Driver ODBC|5.6|5.3|5.2|4.3|4.0|3.2|3.1|
+|PHP per la versione del driver SQL Server&#8594;<br />&#8595; Versione driver ODBC|5.6|5.3|5.2|4.3|4.0|3.2|3.1|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |ODBC Driver 17+ |S|S|S| | | | |
 |Driver ODBC 13.1|S|S|S|S|S| | |
@@ -130,11 +130,11 @@ In Windows, sono incluse le seguenti versioni del driver:
 |php_sqlsrv_71_nts.dll a 64 bit<br />php_pdo_sqlsrv_71_nts.dll a 64 bit|7.1|no |php7.dll a 64 bit|  
 |php_sqlsrv_71_ts.dll a 64 bit <br />php_pdo_sqlsrv_71_ts.dll a 64 bit |7.1|sì|php7ts.dll a 64 bit|   
 |php_sqlsrv_72_nts.dll 32 bit<br />php_pdo_sqlsrv_72_nts.dll 32 bit|7.2|no |php7.dll 32 bit|  
-|php_sqlsrv_72_ts.dll 32 bit <br />php_pdo_sqlsrv_72_ts.dll 32 bit |7.2|sì|php7ts.dll 32 bit|  
+|php_sqlsrv_72_ts.dll 32 bit <br />php_pdo_sqlsrv_72_ts.dll a 32 bit |7.2|sì|php7ts.dll 32 bit|  
 |php_sqlsrv_72_nts.dll a 64 bit<br />php_pdo_sqlsrv_72_nts.dll a 64 bit|7.2|no |php7.dll a 64 bit|  
 |php_sqlsrv_72_ts.dll a 64 bit <br />php_pdo_sqlsrv_72_ts.dll a 64 bit |7.2|sì|php7ts.dll a 64 bit|  
 |php_sqlsrv_73_nts.dll 32 bit<br />php_pdo_sqlsrv_73_nts.dll 32 bit|7.3|no |php7.dll 32 bit|  
-|php_sqlsrv_73_ts.dll 32 bit <br />php_pdo_sqlsrv_73_ts.dll 32 bit |7.3|sì|php7ts.dll 32 bit|  
+|php_sqlsrv_73_ts.dll 32 bit <br />php_pdo_sqlsrv_73_ts.dll a 32 bit |7.3|sì|php7ts.dll 32 bit|  
 |php_sqlsrv_73_nts.dll a 64 bit<br />php_pdo_sqlsrv_73_nts.dll a 64 bit|7.3|no |php7.dll a 64 bit|  
 |php_sqlsrv_73_ts.dll a 64 bit <br />php_pdo_sqlsrv_73_ts.dll a 64 bit |7.3|sì|php7ts.dll a 64 bit|  
 
@@ -156,7 +156,7 @@ In Windows, sono incluse le seguenti versioni del driver:
 |File del driver|Versione PHP|Thread-safe?|Uso con PHP .dll|  
 |---------------|:---------------:|:----------------:|---------------------|  
 |php_sqlsrv_7_nts.dll 32 bit <br />php_pdo_sqlsrv_7_nts.dll 32 bit |7.0|no |php7.dll 32 bit|
-|php_sqlsrv_7_ts.dll 32 bit  <br />php_pdo_sqlsrv_7_ts.dll 32 bit  |7.0|sì|php7ts.dll 32 bit|
+|php_sqlsrv_7_ts.dll 32 bit  <br />php_pdo_sqlsrv_7_ts.dll a 32 bit  |7.0|sì|php7ts.dll 32 bit|
 |php_sqlsrv_7_nts.dll a 64 bit <br />php_pdo_sqlsrv_7_nts.dll a 64 bit |7.0|no |php7.dll a 64 bit|  
 |php_sqlsrv_7_ts.dll a 64 bit  <br />php_pdo_sqlsrv_7_ts.dll a 64 bit  |7.0|sì|php7ts.dll a 64 bit|
 |php_sqlsrv_71_nts.dll 32 bit<br />php_pdo_sqlsrv_71_nts.dll 32 bit|7.1|no |php7.dll 32 bit|  
@@ -164,7 +164,7 @@ In Windows, sono incluse le seguenti versioni del driver:
 |php_sqlsrv_71_nts.dll a 64 bit<br />php_pdo_sqlsrv_71_nts.dll a 64 bit|7.1|no |php7.dll a 64 bit|  
 |php_sqlsrv_71_ts.dll a 64 bit <br />php_pdo_sqlsrv_71_ts.dll a 64 bit |7.1|sì|php7ts.dll a 64 bit|   
 |php_sqlsrv_72_nts.dll 32 bit<br />php_pdo_sqlsrv_72_nts.dll 32 bit|7.2|no |php7.dll 32 bit|  
-|php_sqlsrv_72_ts.dll 32 bit <br />php_pdo_sqlsrv_72_ts.dll 32 bit |7.2|sì|php7ts.dll 32 bit|  
+|php_sqlsrv_72_ts.dll 32 bit <br />php_pdo_sqlsrv_72_ts.dll a 32 bit |7.2|sì|php7ts.dll 32 bit|  
 |php_sqlsrv_72_nts.dll a 64 bit<br />php_pdo_sqlsrv_72_nts.dll a 64 bit|7.2|no |php7.dll a 64 bit|  
 |php_sqlsrv_72_ts.dll a 64 bit <br />php_pdo_sqlsrv_72_ts.dll a 64 bit |7.2|sì|php7ts.dll a 64 bit|  
 
@@ -186,7 +186,7 @@ In Windows, sono incluse le seguenti versioni del driver:
 |File del driver|Versione PHP|Thread-safe?|Uso con PHP .dll|  
 |---------------|:---------------:|:----------------:|---------------------|  
 |php_sqlsrv_7_nts.dll 32 bit <br />php_pdo_sqlsrv_7_nts.dll 32 bit |7.0|no |php7.dll 32 bit|
-|php_sqlsrv_7_ts.dll 32 bit  <br />php_pdo_sqlsrv_7_ts.dll 32 bit  |7.0|sì|php7ts.dll 32 bit|
+|php_sqlsrv_7_ts.dll 32 bit  <br />php_pdo_sqlsrv_7_ts.dll a 32 bit  |7.0|sì|php7ts.dll 32 bit|
 |php_sqlsrv_7_nts.dll a 64 bit <br />php_pdo_sqlsrv_7_nts.dll a 64 bit |7.0|no |php7.dll a 64 bit|  
 |php_sqlsrv_7_ts.dll a 64 bit  <br />php_pdo_sqlsrv_7_ts.dll a 64 bit  |7.0|sì|php7ts.dll a 64 bit|
 |php_sqlsrv_71_nts.dll 32 bit<br />php_pdo_sqlsrv_71_nts.dll 32 bit|7.1|no |php7.dll 32 bit|  
@@ -194,7 +194,7 @@ In Windows, sono incluse le seguenti versioni del driver:
 |php_sqlsrv_71_nts.dll a 64 bit<br />php_pdo_sqlsrv_71_nts.dll a 64 bit|7.1|no |php7.dll a 64 bit|  
 |php_sqlsrv_71_ts.dll a 64 bit <br />php_pdo_sqlsrv_71_ts.dll a 64 bit |7.1|sì|php7ts.dll a 64 bit|   
 |php_sqlsrv_72_nts.dll 32 bit<br />php_pdo_sqlsrv_72_nts.dll 32 bit|7.2|no |php7.dll 32 bit|  
-|php_sqlsrv_72_ts.dll 32 bit <br />php_pdo_sqlsrv_72_ts.dll 32 bit |7.2|sì|php7ts.dll 32 bit|  
+|php_sqlsrv_72_ts.dll 32 bit <br />php_pdo_sqlsrv_72_ts.dll a 32 bit |7.2|sì|php7ts.dll 32 bit|  
 |php_sqlsrv_72_nts.dll a 64 bit<br />php_pdo_sqlsrv_72_nts.dll a 64 bit|7.2|no |php7.dll a 64 bit|  
 |php_sqlsrv_72_ts.dll a 64 bit <br />php_pdo_sqlsrv_72_ts.dll a 64 bit |7.2|sì|php7ts.dll a 64 bit|  
 
@@ -216,7 +216,7 @@ In Windows, sono incluse le seguenti versioni del driver:
 |File del driver|Versione PHP|Thread-safe?|Uso con PHP .dll|  
 |---------------|:---------------:|:----------------:|---------------------|  
 |php_sqlsrv_7_nts.dll 32 bit <br />php_pdo_sqlsrv_7_nts.dll 32 bit |7.0|no |php7.dll 32 bit|
-|php_sqlsrv_7_ts.dll 32 bit  <br />php_pdo_sqlsrv_7_ts.dll 32 bit  |7.0|sì|php7ts.dll 32 bit|
+|php_sqlsrv_7_ts.dll 32 bit  <br />php_pdo_sqlsrv_7_ts.dll a 32 bit  |7.0|sì|php7ts.dll 32 bit|
 |php_sqlsrv_7_nts.dll a 64 bit <br />php_pdo_sqlsrv_7_nts.dll a 64 bit |7.0|no |php7.dll a 64 bit|  
 |php_sqlsrv_7_ts.dll a 64 bit  <br />php_pdo_sqlsrv_7_ts.dll a 64 bit  |7.0|sì|php7ts.dll a 64 bit|
 |php_sqlsrv_71_nts.dll 32 bit<br />php_pdo_sqlsrv_71_nts.dll 32 bit|7.1|no |php7.dll 32 bit|  
@@ -276,7 +276,7 @@ In Windows, sono incluse le seguenti versioni del driver:
 |php_sqlsrv_55_ts.dll<br />php_pdo_sqlsrv_55_ts.dll|5.5|sì|php5ts.dll|  
 
 ## <a name="see-also"></a>Vedere anche  
-[Introduzione a Microsoft Drivers per PHP per SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Introduzione ai driver Microsoft per PHP per SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [Guida di programmazione per i driver Microsoft per PHP per SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 

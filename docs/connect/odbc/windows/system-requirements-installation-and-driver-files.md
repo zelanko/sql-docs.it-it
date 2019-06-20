@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd37c097873b104f3f53e9ca92e50b6f7c1acafe
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+manager: jroth
+ms.openlocfilehash: 9b48188cbc1eb25774bc127246514d82ca5ef475
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464767"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66841087"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>Requisiti di sistema, installazione e file del driver
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,7 +28,9 @@ In Windows è possibile installare ODBC Driver 11 for [!INCLUDE[ssNoVersion](../
 ODBC Driver 13 e 13.1 per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], inoltre, supporta SQL Server 2016. 
 
 ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta tutti quelli precedenti e anche SQL Server 2017.
-  
+
+ODBC Driver 17 for SQL Server supporta SQL Server 2019 a partire dalla versione del driver 17.3.
+
 È il nome del driver specificato nella stringa di connessione `ODBC Driver 11 for SQL Server` oppure `ODBC Driver 13 for SQL Server` (per i 13 e 13.1) o `ODBC Driver 17 for SQL Server`.
   
 ## <a name="supported-operating-systems"></a>Sistemi operativi supportati
@@ -58,13 +60,13 @@ Il driver è installato quando si esegue `msodbcsql.msi` da uno dei collegamenti
 
 Può essere installato side-by-side con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
 
-Quando si chiama `msodbcsql.msi`, solo i componenti client vengono installati per impostazione predefinita. I componenti client sono file che supportano l'esecuzione di un'applicazione sviluppata tramite il driver. Per installare i componenti dell'SDK, specificare `ADDLOCAL=ALL` nella riga di comando. Ad esempio  
+Quando si chiama `msodbcsql.msi`, solo i componenti client vengono installati per impostazione predefinita. I componenti client sono file che supportano l'esecuzione di un'applicazione sviluppata tramite il driver. Per installare i componenti dell'SDK, specificare `ADDLOCAL=ALL` nella riga di comando. Esempio:  
   
 ```  
 msiexec /i msodbcsql.msi ADDLOCAL=ALL  
 ```  
   
- Specificare `IACCEPTMSODBCSQLLICENSETERMS=YES` per accettare le condizioni di licenza per l'utente finale se si usa l'opzione di installazione `/passive`, `/qn`, `/qb` o `/qr`. È necessario specificare questa opzione in lettere maiuscole. Ad esempio  
+ Specificare `IACCEPTMSODBCSQLLICENSETERMS=YES` per accettare le condizioni di licenza per l'utente finale se si usa l'opzione di installazione `/passive`, `/qn`, `/qb` o `/qr`. È necessario specificare questa opzione in lettere maiuscole. Esempio:  
   
 ```  
 msiexec /quiet /passive /qn /i msodbcsql.msi IACCEPTMSODBCSQLLICENSETERMS=YES ADDLOCAL=ALL  
@@ -76,7 +78,7 @@ msiexec /quiet /passive /qn /i msodbcsql.msi IACCEPTMSODBCSQLLICENSETERMS=YES AD
 msiexec /quiet /passive /qn /uninstall msodbcsql.msi  
 ```  
   
-Quando un'applicazione usa il driver, deve indicare che dipende da questo tramite l'opzione di installazione `APPGUID`. In questo modo il programma di installazione del driver è in grado di segnalare le applicazioni dipendenti prima della disinstallazione. Per specificare una dipendenza dal driver, impostare il parametro della riga di comando `APPGUID` sul codice prodotto al momento di eseguire l'installazione invisibile all'utente del driver. Quando si usa Microsoft Installer per aggregare il programma di installazione dell'applicazione, è necessario creare un codice prodotto. Ad esempio  
+Quando un'applicazione usa il driver, deve indicare che dipende da questo tramite l'opzione di installazione `APPGUID`. In questo modo il programma di installazione del driver è in grado di segnalare le applicazioni dipendenti prima della disinstallazione. Per specificare una dipendenza dal driver, impostare il parametro della riga di comando `APPGUID` sul codice prodotto al momento di eseguire l'installazione invisibile all'utente del driver. Quando si usa Microsoft Installer per aggregare il programma di installazione dell'applicazione, è necessario creare un codice prodotto. Esempio:  
   
 ```  
 msiexec /i msodbcsql.msi APPGUID={ <Your dependent application's APPGUID> }  

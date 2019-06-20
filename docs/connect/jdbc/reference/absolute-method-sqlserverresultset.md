@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 638e8148-8ca0-4e1f-9ec2-04a11bc9809b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 298e169fe2b67b16b55d607f504446c48893fc1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b0572ed756bd8b347c01e05168873ac543a0ea7e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616939"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66783557"
 ---
 # <a name="absolute-method-sqlserverresultset"></a>Metodo absolute (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public boolean absolute(int row)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo assoluto viene specificato dal metodo nell'interfaccia ResultSet assoluto.  
+ Questo metodo absolute viene specificato dal metodo absolute nell'interfaccia java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 48c4497dfa8974fe5fd59747d4b7023002d3f762
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+manager: jroth
+ms.openlocfilehash: b17e45fee91b293524cca39037f15fac15cd881e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58646418"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797079"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Note sulla versione dei driver Microsoft per PHP per SQL Server
 
@@ -74,13 +74,13 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
   - Versione 17 è ora l'impostazione predefinita in tutte le piattaforme
 - Supporto per Ubuntu 17.10, Debian 9 ed Enterprise Suse Linux 12
 - Eliminato il supporto per Ubuntu 15.10
-- Supporto per Always Encrypted con funzionalità CRUD su Windows. Per altre informazioni, vedere [uso di Always Encrypted con il driver PHP per SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)
+- Supporto per Always Encrypted con funzionalità CRUD su Windows. Per altre informazioni, vedere [Uso di Always Encrypted con i driver PHP per SQL Server](../../connect/php/using-always-encrypted-php-drivers.md).
   - Supporto per Windows Store di certificato
   - Always Encrypted è supportato solo con Microsoft ODBC Driver 17 e versioni successive
 - Supporto per le impostazioni locali non UTF8 in Linux e macOS
   - Le impostazioni locali non UTF8 in Linux e macOS sono supportate solo con Microsoft ODBC Driver 17 e versioni successive
 - Supporto per Azure SQL Data Warehouse
-- Supporto per l'istanza gestita SQL di Azure (anteprima privata estesa)
+- Supporto per l'istanza gestita di database SQL di Azure (anteprima privata estesa)
 
 ## <a name="whats-new-in-version-43"></a>Novità della versione 4.3
 

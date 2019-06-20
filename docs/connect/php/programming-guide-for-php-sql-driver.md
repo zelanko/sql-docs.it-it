@@ -1,5 +1,5 @@
 ---
-title: Guida alla programmazione dei driver Microsoft per PHP per SQL Server | Microsoft Docs
+title: Guida alla programmazione per i driver Microsoft per PHP per SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 48a4a3f288af63788af84e8f64f2af91138c9ff1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 10269896b8c145293d5733a3fb34b2ac645a5e43
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776499"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66781000"
 ---
 # <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>Guida di programmazione per i driver Microsoft per PHP per SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +41,7 @@ Questa sezione contiene argomenti che consentono di sviluppare applicazioni con 
 ## <a name="see-also"></a>Vedere anche  
 [Panoramica dei driver Microsoft per PHP per SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
 
-[Introduzione a Microsoft Drivers per PHP per SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Introduzione ai driver Microsoft per PHP per SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [Riferimento all'API del driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 903106b5dfc17b98aae0614bd7b168d9b3acdf11
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: d4eaf16d364927b8439bcf98e7ac6655d4a2f7bc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527529"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66789865"
 ---
 # <a name="connecting-with-bcp"></a>Connessione a bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -47,7 +47,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>Opzioni disponibili
 Nella versione corrente sono disponibili le opzioni e la sintassi seguenti:  
 
-[_database_**.**] _schema_**.** _tabella_ **nelle** _data\_file_ | **out** _dati\_file_
+[_database_ **.** ] _schema_ **.** _tabella_ **nelle** _data\_file_ | **out** _dati\_file_
 
 - -a *packet_size*  
 Specifica il numero di byte inviati al e dal server per ogni pacchetto di rete.  

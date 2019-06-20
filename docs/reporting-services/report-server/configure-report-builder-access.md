@@ -7,13 +7,13 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.date: 03/14/2017
-ms.openlocfilehash: 50703b76ddd67ca4d41cc42625eb6cd0e5ac993b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.date: 06/06/2019
+ms.openlocfilehash: a6383eb6bf9c00f6158e0e7adc77605cfc226d9f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580379"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66826912"
 ---
 # <a name="configure-report-builder-access"></a>Configurare l'accesso a Generatore report
 Generatore report è uno strumento per il reporting ad hoc installato con un server di report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurato per la modalità nativa o la modalità integrata SharePoint.  
@@ -28,29 +28,29 @@ L'accesso a Generatore report dipende dai fattori seguenti:
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Generatore report non è disponibile in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere l'argomento relativo alle [funzionalità supportate dalle edizioni di SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md).  
+Generatore report non è disponibile in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere l'argomento relativo alle [funzionalità supportate dalle edizioni di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
 
-Nel computer client deve essere installato [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornisce l'infrastruttura per l'esecuzione di applicazioni [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
+Il computer client deve avere il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 o 4.6.1 installato rispettivamente per SSRS 2016 e 2017. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornisce l'infrastruttura per l'esecuzione di applicazioni [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
 
-È necessario utilizzare [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 6.0 o versioni successive.  
+È necessario usare [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 o versione successiva, o un altro browser moderni.  
 
 Generatore report viene sempre eseguito con attendibilità totale e non è possibile configurarlo per l'esecuzione con attendibilità parziale. Nelle versioni precedenti è possibile eseguire Generatore report in attendibilità parziale, ma tale opzione non è supportata in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
 
 ## <a name="enabling-and-disabling-report-builder"></a>Abilitazione e disabilitazione di Generatore report  
 
-Generatore report è abilitato per impostazione predefinita. Gli amministratori del server di report hanno la possibilità di disabilitare la funzionalità Generatore report impostando la proprietà di sistema del server di report **EnableReportDesignClientDownload** su **false**. Impostando questa proprietà, vengono disabilitati i download di Generatore report per il server di report.  
+Generatore report è abilitato per impostazione predefinita. Gli amministratori del server di report hanno la possibilità di disabilitare la funzionalità Generatore report impostando la proprietà di sistema del server di report **ShowDownloadMenu** su **false**. Impostando questa proprietà, vengono disabilitati Generatore Report, Mobile Report Publisher e download di Power BI per dispositivi mobili per tale server di report.  
 
-Per impostare le proprietà di sistema del server di report, è possibile utilizzare Management Studio o uno script:  
+ Per impostare le proprietà di sistema del server di report, è possibile utilizzare Management Studio o uno script:   
 
-- Per usare Management Studio, connettersi al server di report e usare la pagina delle proprietà avanzate del server per impostare **EnableReportDesignClientDownload** su **false**. Per altre informazioni su come aprire questa pagina, vedere [Impostare le proprietà di un server di report &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
+ - Per usare Management Studio, connettersi al server di report e utilizzare la pagina relativa alle proprietà avanzate del server per impostare **ShowDownloadMenu** su **false**. Per altre informazioni su come aprire questa pagina, vedere [Impostare le proprietà di un server di report &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).      
 
-- Per visualizzare uno script di esempio che consente di impostare una proprietà del server di report, vedere [Creare script per le attività di distribuzione e di amministrazione](../../reporting-services/tools/script-deployment-and-administrative-tasks.md).  
+ - Per visualizzare uno script di esempio che consente di impostare una proprietà del server di report, vedere [Creare script per le attività di distribuzione e di amministrazione](../../reporting-services/tools/script-deployment-and-administrative-tasks.md).  
 
 ## <a name="role-assignments-granting-report-builder-access-on-a-native-mode-report-server"></a>Assegnazioni di ruolo che concedono l'accesso a Generatore report in un server di report in modalità nativa  
 
 In un server di report in modalità nativa creare assegnazioni di ruoli utente che includano attività per l'utilizzo di Generatore report. Per creare o modificare definizioni di ruolo e assegnazioni di ruolo sugli elementi e a livello del sito, è necessario essere assegnati ai ruoli Amministratore sistema e Gestione contenuto.  
 
-Nelle istruzioni seguenti si presuppone che vengano utilizzati ruoli predefiniti. Se le definizioni di ruolo sono state modificate o se è stato eseguito l'aggiornamento da SQL Server 2000, controllare i ruoli per verificare che contengano le attività necessarie. Per altre informazioni sulla creazione delle assegnazioni di ruolo, vedere [Concedere l'accesso utente a un server di report &#40;Gestione report&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
+Nelle istruzioni seguenti si presuppone che vengano utilizzati ruoli predefiniti. Se le definizioni di ruolo sono state modificate o se è stato eseguito l'aggiornamento da SQL Server 2000, controllare i ruoli per verificare che contengano le attività necessarie. Per altre informazioni sulla creazione delle assegnazioni di ruolo, vedere [Concedere l'accesso utente a un server di report](../../reporting-services/security/grant-user-access-to-a-report-server.md).
 
 Dopo avere creato le assegnazioni di ruolo, gli utenti disporranno dell'autorizzazione per effettuare le operazioni seguenti:  
 
@@ -100,7 +100,7 @@ Dopo avere creato le assegnazioni di ruolo, gli utenti disporranno dell'autorizz
 
     3. In Nome digitare **Generatore report**.  
 
-    4. In Descrizione immettere una descrizione per il ruolo in modo da indicare lo scopo del ruolo agli utenti di Gestione report.  
+    4. In Descrizione immettere una descrizione per il ruolo in modo da indicare lo scopo del ruolo agli utenti del portale Web.  
 
     5. Aggiungere le attività seguenti: **Utilizzo di report**, **Visualizzazione di report**, **Visualizzazione di modelli**, **Visualizzazione di risorse**, **Visualizzazione di cartelle**e **Gestione di sottoscrizioni individuali**.  
 
@@ -108,9 +108,10 @@ Dopo avere creato le assegnazioni di ruolo, gli utenti disporranno dell'autorizz
 
 #### <a name="to-create-role-assignments-that-grant-access-to-report-builder"></a>Per creare assegnazioni di ruolo che concedono l'accesso a Generatore report  
 
-1. Avviare Gestione report.  
+1. Avviare il portale Web.  
 
-2. Fare clic su **Impostazioni sito**.  
+2. Fai clic sull'icona a forma di ingranaggio in alto a destra della home page del portale web e selezionare **Impostazioni sito** dal menu a discesa.  
+![l'icona a forma di ingranaggio portale web e menu](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
 3. Fare clic su **Sicurezza**.  
 
@@ -150,5 +151,6 @@ Nella tabella seguente vengono descritti i tipi di autenticazione supportati dal
 - [Autenticazione con il server di report](../../reporting-services/security/authentication-with-the-report-server.md)
 - [Supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
 - [Avviare Generatore report](../../reporting-services/report-builder/start-report-builder.md)
-- [Gestione report &#40;modalità nativa SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)- [Eseguire la connessione a un server di report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
+- [Portale Web di un server di report (modalità nativa SSRS)](../web-portal-ssrs-native-mode.md)
+- [Eseguire la connessione a un server di report in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
 - [Proprietà di sistema del server di report](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)

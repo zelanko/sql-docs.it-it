@@ -12,13 +12,13 @@ helpviewer_keywords:
 - conversions [OLE DB], server to client
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: d6e71a8175cdddf63ad5e55124a63b40117b3be0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 3ff9bc3f85340eb86aa0fa21820977e70ab51c5b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407048"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66769364"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Conversioni eseguite da server a client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

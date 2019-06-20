@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 6d0deaf2-6f12-4a6e-b537-a51fa3478059
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01babe87d330cabbfc6a882e1a22dd03ed99ff3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f587ff09c63f955cf238f8422b3bfcdd42439dde
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755239"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66785582"
 ---
 # <a name="getdate-method-javalangstring-javautilcalendar"></a>Metodo getDate (java.lang.String, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public java.sql.Date getDate(java.lang.String sCol,
   
  Valore **String** contenente il nome del parametro.  
   
- *licenza CAL*  
+ *cal*  
   
  Un oggetto calendario.  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4659c6571f8afbcdb757141e03df51ac54d0835e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 860014601394e4e39436e3aa10de8ebcff55ddd6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510725"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66790283"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Uso di Always Encrypted con il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -33,7 +33,7 @@ Always Encrypted consente ai client di eseguire la crittografia dei dati sensibi
 
     - Se si usa mssql-jdbc-X.X.X.jre8.jar o sqljdbc42.jar, i file dei criteri possono essere scaricati da [Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 8 Download](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)
 
-    - Se si usa il mssql-jdbc-X.X.X.jre9.jar, non è necessario scaricare alcun file di criteri. I criteri di una giurisdizione in Java 9 viene impostato su un numero illimitato di livello di crittografia.
+    - Se si usa mssql-jdbc-X.X.X.jre9.jar, non è necessario scaricare alcun file di criteri. I criteri di una giurisdizione in Java 9 viene impostato su un numero illimitato di livello di crittografia.
 
 ## <a name="working-with-column-master-key-stores"></a>Uso degli archivi delle chiavi master delle colonne
 Per crittografare o decrittografare i dati per le colonne crittografate, SQL Server gestisce le chiavi di crittografia di colonna. Le chiavi di crittografia di colonna vengono archiviate in forma crittografata nei metadati del database. Ogni chiave di crittografia di colonna ha una chiave master corrispondente che viene usata per crittografare la chiave di crittografia della colonna. I metadati del database non contengano chiavi master della colonna. Tali chiavi vengono gestite solo dal client. Tuttavia i metadati del database contengono informazioni sulla posizione di archiviazione chiavi master della colonna rispetto al client. Ad esempio, i metadati del database potrebbero indicare che l'archivio chiavi contenente una chiave master della colonna è la Store di certificati di Windows e il certificato specifico utilizzato per crittografare e decrittografare si trova in un percorso specifico all'interno di Store di certificati di Windows. Se il client può accedere a tale certificato in Store il certificato di Windows, è possibile ottenere il certificato. Il certificato è quindi utilizzabile per decrittografare la chiave di crittografia di colonna. Tale chiave di crittografia può essere utilizzata per decrittografare o crittografare i dati per le colonne crittografate che usano tale chiave di crittografia di colonna.
@@ -99,9 +99,9 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > [!IMPORTANT]
 >  Se si usa il provider dell'archivio chiavi di Azure Key Vault, l'implementazione di Azure Key Vault del driver JDBC ha dipendenze su queste librerie (da GitHub) che devono essere incluse con l'applicazione:
 >
->  [Azure-sdk-for-java](https://github.com/Azure/azure-sdk-for-java)
+>  [azure-sdk-for-java](https://github.com/Azure/azure-sdk-for-java)
 >
->  [librerie di Azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java)
+>  [azure-activedirectory-library-for-java libraries](https://github.com/AzureAD/azure-activedirectory-library-for-java)
 >
 > Per un esempio di come includere queste dipendenze in un progetto Maven, vedere [scaricare ADAL4J AKV dipendenze e con Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
@@ -360,14 +360,14 @@ ds.setColumnEncryptionSetting("Enabled");
 SQLServerConnection con = (SQLServerConnection) ds.getConnection();
 ```
 
-Always Encrypted può anche essere abilitato per le singole query. Per altre informazioni, vedere [controllare l'impatto sulle prestazioni di Always Encrypted](#controlling-the-performance-impact-of-always-encrypted). Perché la crittografia o la decrittografia abbiano esito positivo, non è sufficiente l'abilitazione di Always Encrypted. È necessario anche assicurarsi che:
+Always Encrypted può anche essere abilitato per le singole query. Per altre informazioni, vedere [Controllo dell'impatto di Always Encrypted sulle prestazioni](#controlling-the-performance-impact-of-always-encrypted). Perché la crittografia o la decrittografia abbiano esito positivo, non è sufficiente l'abilitazione di Always Encrypted. È necessario anche assicurarsi che:
 - L'applicazione abbia le autorizzazioni di database *VIEW ANY COLUMN MASTER KEY DEFINITION* e *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* , necessarie per accedere ai metadati sulle chiavi Always Encrypted nel database. Per informazioni dettagliate, vedere [ Autorizzazioni in Always Encrypted (motore di database)](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions).
 - L'applicazione può accedere alla chiave master della colonna che protegge le chiavi di crittografia di colonna, le quali crittografano le colonne di database sottoposte a query. Per usare il provider di Java Key Store, è necessario fornire altre credenziali nella stringa di connessione. Per altre informazioni, vedere [provider Using Java Key Store](#using-java-key-store-provider).
 
 ### <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Configurazione della modalità di invio dei valori java.sql.Time al server
 La proprietà di connessione **sendTimeAsDatetime** viene usata per configurare la modalità di invio del valore java.sql.Time al server. Se impostato su false, il valore di ora viene inviato come un tipo time di SQL Server. Se impostato su true, l'ora di invio valore come tipo datetime. Se una colonna time è crittografata, il **sendTimeAsDatetime** proprietà deve essere impostato su false, come le colonne crittografate non supportano la conversione dall'ora in datetime. Si noti inoltre che questa proprietà è per valore predefinito true, in modo che quando si usano colonne crittografate ora è possibile impostarlo su false. In caso contrario, il driver genera un'eccezione. A partire dalla versione 6.0 del driver, la classe SQLServerConnection offre due metodi per configurare il valore di questa proprietà a livello di codice:
  
-* public void setSendTimeAsDatetime (sendTimeAsDateTimeValue booleano)
+* public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)
 * public boolean getSendTimeAsDatetime()
 
 Per altre informazioni su questa proprietà, vedere [Java configurazione come valori vengono inviati al Server](configuring-how-java-sql-time-values-are-sent-to-the-server.md).

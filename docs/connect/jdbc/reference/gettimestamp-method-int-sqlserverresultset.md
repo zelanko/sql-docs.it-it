@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ad538a76-983f-4175-9481-9e7fa9480c71
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 286156070f62faa576eec11cb1f6d946420c7fb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a404b80c855fa866f55114431dbb0e8fc2bb476e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823289"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66778655"
 ---
 # <a name="gettimestamp-method-int-sqlserverresultset"></a>Metodo getTimestamp (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public java.sql.Timestamp getTimestamp(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getTimestamp viene specificato dal metodo getTimestamp nell'interfaccia ResultSet.  
+ Questo metodo getTimestamp viene specificato dal metodo getTimestamp nell'interfaccia java.sql.ResultSet.  
   
  Questo metodo restituisce valori solo dalle colonne datetime e smalldatetime di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

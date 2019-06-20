@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 81104fd5-75b0-4540-9f48-c3dbf59a8564
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6691a88bf3012d05893c705c8ee6330d101e18fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9db29066c54eaf45a0c9385889dfba282eb77527
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830700"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66771213"
 ---
 # <a name="preparecall-method-javalangstring-int-int-int"></a>Metodo prepareCall (java.lang.String, int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql,
   
  Valore **String** contenente un'istruzione SQL.  
   
- *NLE*  
+ *nType*  
   
  Valore **int** che indica il tipo di set di risultati.  
   

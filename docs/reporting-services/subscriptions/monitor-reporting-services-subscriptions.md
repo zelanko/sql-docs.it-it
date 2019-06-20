@@ -1,6 +1,6 @@
 ---
 title: Monitorare le sottoscrizioni di Reporting Services | Microsoft Docs
-ms.date: 03/07/2017
+ms.date: 06/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: subscriptions
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cb4d7f64bf72aaf8844097277c78d6563b426cc1
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 33d865ad28e9d013b97910ff30c4bcf7be760f93
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65578217"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140541"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Monitorare le sottoscrizioni di Reporting Services
   È possibile monitorare le sottoscrizioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dall'interfaccia utente, da Windows PowerShell o dai file di log. Le opzioni disponibili per il monitoraggio dipendono dalla modalità del server di report in esecuzione.  
@@ -28,7 +28,7 @@ ms.locfileid: "65578217"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  Modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
   
- **Contenuto dell'argomento:**  
+ **Contenuto dell'articolo:**  
   
 -   [Interfaccia utente in modalità nativa](#bkmk_native_mode)  
   
@@ -39,14 +39,14 @@ ms.locfileid: "65578217"
 -   [Gestione di sottoscrizioni inattive](#bkmk_manage_inactive)  
   
 ##  <a name="bkmk_native_mode"></a> Interfaccia utente in modalità nativa  
- I singoli utenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possono monitorare lo stato di una sottoscrizione tramite la pagina **Sottoscrizioni personali** o la scheda **Sottoscrizioni** in Gestione report. Le pagine delle sottoscrizioni includono colonne che indicano la data di ultima esecuzione e lo stato di ogni sottoscrizione. I messaggi di stato vengono aggiornati in corrispondenza del momento in cui è stata pianificata la sottoscrizione. Se non si verifica mai l'evento che determina l'elaborazione della sottoscrizione (ad esempio se uno snapshot dell'esecuzione del report non viene mai aggiornato o se una pianificazione non viene mai eseguita), il messaggio di stato non verrà aggiornato.  
+ I singoli utenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] possono monitorare lo stato di una sottoscrizione tramite la pagina **Sottoscrizioni personali** o la scheda **Sottoscrizioni** nel portale Web. Le pagine delle sottoscrizioni includono colonne che indicano la data di ultima esecuzione e lo stato di ogni sottoscrizione. I messaggi di stato vengono aggiornati in corrispondenza del momento in cui è stata pianificata la sottoscrizione. Se non si verifica mai l'evento che determina l'elaborazione della sottoscrizione (ad esempio se uno snapshot dell'esecuzione del report non viene mai aggiornato o se una pianificazione non viene mai eseguita), il messaggio di stato non verrà aggiornato.  
   
  La tabella seguente descrive i valori possibili per la colonna **Stato** .  
   
 |Stato|Descrizione|  
 |------------|-----------------|  
 |Nuova sottoscrizione|Viene visualizzato quando viene creata una nuova sottoscrizione.|  
-|Inactive|Viene visualizzato quando una sottoscrizione non può essere elaborata. Per altre informazioni, vedere "Gestione di sottoscrizioni inattive" più avanti in questo argomento.|  
+|Inactive|Viene visualizzato quando una sottoscrizione non può essere elaborata. Per altre informazioni, vedere "Gestione di sottoscrizioni inattive" più avanti in questo articolo.|  
 |Completata: elaborato/i \<*numero*> su un totale di \<*numero*>; \<*numero*> errori.|Consente di visualizzare lo stato di esecuzione di una sottoscrizione guidata dai dati. Questo messaggio viene generato da Elaborazione pianificazione e recapito.|  
 |\<*numero*> elaborato/i|Numero di notifiche che Elaborazione pianificazione e recapito ha recapitato senza errori oppure che non tenterà più di recapitare. Quando viene completata l'operazione di recapito correlata a una sottoscrizione guidata dai dati, il numero di notifiche elaborate dovrebbe corrispondere al numero totale di notifiche generate.|  
 |\<*numero*> totale|Numero totale di notifiche generate per l'ultima operazione di recapito correlata alla sottoscrizione.|  
@@ -66,17 +66,17 @@ ms.locfileid: "65578217"
 ### <a name="native-mode-log-files"></a>File di log in modalità nativa  
  Se si verifica un errore durante il recapito, viene inserita una voce specifica nel log di traccia del server di report.  
   
- Per determinare lo stato di recapito delle sottoscrizioni, gli amministratori del server di report possono esaminare i file **reportserverservice_\*.log**. Per il recapito tramite posta elettronica, i file di registro del server di report includono una registrazione delle operazioni di elaborazione e di recapito ad account di posta elettronica specifici. Di seguito è riportato il percorso predefinito dei file di log:  
+ Per determinare lo stato di recapito delle sottoscrizioni, gli amministratori del server di report possono esaminare i file **ReportServerService_*.log**. Per il recapito tramite posta elettronica, i file di registro del server di report includono una registrazione delle operazioni di elaborazione e di recapito ad account di posta elettronica specifici. Di seguito è riportato il percorso predefinito dei file di log:  
   
- `C:\Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\LogFiles`  
+ `C:\Program Files\Microsoft SQL Server Reporting Services\SSRS\LogFiles`  
   
  Di seguito è riportato un esempio del nome di un file di log:  
   
- `ReportServerService__05_21_2014_00_05_07.log`  
+ `ReportServerService__05_21_2019_00_05_07.log`  
   
  Di seguito è riportato un esempio di un messaggio di errore nel file di log di traccia relativo alle sottoscrizioni:  
   
--   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e ERROR: **Error sending email**. Exception: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.1 Client was not authenticated   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   library!WindowsService_7!b60!05/20/2019-22:34:36:: i INFO: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41:: e ERROR: **Error sending email**. Exception: System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.1 Client was not authenticated   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
   
  Il file di log non indica se il report è stato aperto né se il recapito è effettivamente riuscito. Un'operazione di recapito è considerata riuscita quando non vengono generati errori da Elaborazione pianificazione e recapito e il server di report si è connesso al server di posta elettronica. Nel file di log non vengono registrati, ad esempio, gli errori di mancato recapito dei messaggi di posta elettronica nella cassetta postale degli utenti. Per altre informazioni sui file di log, vedere [File di log e origini di Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
@@ -85,9 +85,9 @@ ms.locfileid: "65578217"
   
 1.  Selezionare la raccolta documenti contenente il report.  
   
-2.  Aprire il menu di scelta rapida del report (**...**).  
+2.  Aprire il menu di scelta rapida del report ( **...** ).  
   
-3.  Selezionare l'opzione di menu espanso (**...**).  
+3.  Selezionare l'opzione di menu espanso ( **...** ).  
   
 4.  Selezionare **Gestisci sottoscrizioni**  
   
@@ -97,10 +97,10 @@ ms.locfileid: "65578217"
 ||||||||  
 |-|-|-|-|-|-|-|  
 |date|Process|Area|Category|Level|Correlation|Message|  
-|5/21/2014 14:34:06:15|App Pool: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Report Server Email Extension|Unexpected|(empty)|**Error sending email.** Exception: System.Net.Mail.SmtpException: Mailbox unavailable. The server response was: 5.7.1 Client does not have permissions to send as this sender  at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  at System.Net.Mail.SmtpClient.Send(MailMessage message)  at Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
+|21/5/2019 14:34:06:15|App Pool: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Report Server Email Extension|Unexpected|(empty)|**Error sending email.** Exception: System.Net.Mail.SmtpException: Mailbox unavailable. The server response was: 5.7.1 Client does not have permissions to send as this sender  at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  at System.Net.Mail.SmtpClient.Send(MailMessage message)  at Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="bkmk_use_powershell"></a> Usare PowerShell per monitorare le sottoscrizioni  
- Per un esempio degli script di PowerShell che è possibile usare per controllare lo stato delle sottoscrizioni in modalità nativa o in modalità SharePoint, vedere [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
+ Ad esempio gli script di PowerShell è possibile usare per controllare lo stato della modalità nativa o le sottoscrizioni in modalità SharePoint, vedere [gestire i proprietari di sottoscrizioni ed eseguire sottoscrizione - PowerShell](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
 ##  <a name="bkmk_manage_inactive"></a> Gestione di sottoscrizioni inattive  
  Se una sottoscrizione diventa inattiva, è necessario eliminarla oppure riattivarla risolvendo i problemi che ne impediscono l'elaborazione. Le sottoscrizioni possono diventare inattive se si verificano condizioni che ne impediscono l'elaborazione. Alcune di queste condizioni sono indicate di seguito:  
@@ -118,7 +118,7 @@ ms.locfileid: "65578217"
  Lo stato di inattività della sottoscrizione viene indicato nella sottoscrizione stessa quando questa viene eseguita dal server di report. Ad esempio, se una sottoscrizione è pianificata in modo da recapitare un report ogni venerdì alle 2.00 e l'estensione per il recapito che utilizza viene disinstallata lunedì alle 9.00, la sottoscrizione non indicherà lo stato di inattività fino alle 2.00 di venerdì.  
   
 ## <a name="see-also"></a>Vedere anche  
- [old_Creare e gestire sottoscrizioni per server di report in modalità nativa](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
+ [Creare e gestire sottoscrizioni per server di report in modalità nativa](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Sottoscrizioni e recapito &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

@@ -1,6 +1,6 @@
 ---
 title: Supporto di transazioni distribuite | Microsoft Docs
-description: Transazioni distribuite nel Driver OLE DB per SQL Server
+description: Transazioni distribuite nel driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,13 +18,13 @@ helpviewer_keywords:
 - MS DTC, about distributed transaction support
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 058c7755468551ff94da7e7b8eb9d1993d92a07a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 97c7c4744d21697620740d2a865e5e6a66558a0f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621959"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66766119"
 ---
 # <a name="supporting-distributed-transactions"></a>Supporto di transazioni distribuite
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

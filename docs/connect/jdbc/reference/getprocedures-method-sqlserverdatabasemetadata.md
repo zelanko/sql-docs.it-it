@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 66c9a8b0-dc4c-4cbb-8004-c7157368cab4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f61427cdc3a71ebba5c6d511c3a5c8068b44c496
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6e374dd44d25a40953662cada81f6cc3d949f97c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778749"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66771102"
 ---
 # <a name="getprocedures-method-sqlserverdatabasemetadata"></a>Metodo getProcedures (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
   
  Valore **String** contenente il nome del catalogo. Se si specifica Null per questo parametro, non è necessario utilizzare il nome del catalogo.  
   
- *SLO*  
+ *sSchema*  
   
  Valore **String** contenente il modello del nome dello schema. Se si specifica Null per questo parametro, non è necessario utilizzare il nome dello schema.  
   

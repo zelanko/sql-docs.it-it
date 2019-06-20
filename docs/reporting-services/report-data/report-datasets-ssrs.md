@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 666623579f6cd195908318c194ec4c0036493edf
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 921bb8bf3e0b601a567e54bf326c5b35824cc848
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500300"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67037954"
 ---
 # <a name="report-datasets-ssrs"></a>Set di dati del report (SSRS)
   Per aggiungere dati a un rapporto, è necessario creare set di dati. Ogni set di dati rappresenta il set di risultati dall'esecuzione di un comando di query su un'origine dati. Le colonne del set di risultati sono la raccolta di campi. Le righe del set di risultati sono i dati. Un set di dati non contiene i dati effettivi. Un set di dati contiene le informazioni necessarie per recuperare un set di dati specifico da un'origine dati.  
@@ -94,7 +94,7 @@ ms.locfileid: "66500300"
   
  Per eseguire una query, è necessario disporre di credenziali per la fase di progettazione. Per altre informazioni, vedere [specificare le credenziali e informazioni di connessione per origini dati del Report](specify-credential-and-connection-information-for-report-data-sources.md) e [connessioni dati, origini dati e stringhe di connessione &#40;Generatore Report e SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
- Le comunicazioni tra un'estensione per i dati e l'origine dati esterna sono gestite dai provider di dati. Il supporto per la sintassi del comando di query, per i parametri query e per i tipi di dati per i valori nel set di risultati è determinato da ogni provider di dati. Per altre informazioni, vedere l'argomento relativo al tipo specifico di estensione per dati e [Finestre di progettazione query &#40;Generatore report&#41;](query-design-tools-ssrs.md).  
+ Le comunicazioni tra un'estensione per i dati e l'origine dati esterna sono gestite dai provider di dati. Il supporto per la sintassi del comando di query, per i parametri query e per i tipi di dati per i valori nel set di risultati è determinato da ogni provider di dati. Per altre informazioni, vedere l'argomento relativo al tipo specifico di estensione per dati e [Finestre di progettazione query &#40;SSRS&#41;](query-design-tools-ssrs.md).  
   
   
 ##  <a name="HowTo"></a> Procedure  
@@ -131,6 +131,6 @@ ms.locfileid: "66500300"
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzazione di progettazione report &#40;Generatore report&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [Concetti relativi alla creazione di report &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Concetti relativi a Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md)
   
   

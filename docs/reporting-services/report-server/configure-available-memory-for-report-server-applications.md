@@ -1,6 +1,6 @@
 ---
 title: Configurare la memoria disponibile per applicazioni del server di report | Microsoft Docs
-ms.date: 03/20/2017
+ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -11,22 +11,22 @@ helpviewer_keywords:
 ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4727cff529db944205f46be291f65ebb653eb9bc
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 8cf0b0008efb05d15f7e34827ab0f80855fb526d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580383"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66506582"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Configurare la memoria disponibile per applicazioni del server di report
-  Sebbene [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sia in grado di usare tutta la memoria disponibile, è possibile ignorare il comportamento predefinito configurando un limite superiore per la quantità totale di risorse di memoria allocate per applicazioni server di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . È inoltre possibile impostare soglie in modo che il server di report modifichi il modo in cui assegna la priorità ed elabora le richieste in base all'utilizzo basso, medio o alto della memoria. Se i livelli di utilizzo della memoria non sono elevati, il server di report risponde assegnando una priorità leggermente superiore all'elaborazione dei report interattiva o su richiesta. Se invece i livelli di utilizzo della memoria sono elevati, il server di report utilizza più tecniche per rimanere operativo utilizzando le limitate risorse disponibili.  
+ Sebbene [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sia in grado di usare tutta la memoria disponibile, è possibile ignorare il comportamento predefinito configurando un limite superiore per la quantità totale di risorse di memoria allocate per applicazioni server di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . È inoltre possibile impostare soglie in modo che il server di report modifichi il modo in cui assegna la priorità ed elabora le richieste in base all'utilizzo basso, medio o alto della memoria. Se i livelli di utilizzo della memoria non sono elevati, il server di report risponde assegnando una priorità leggermente superiore all'elaborazione dei report interattiva o su richiesta. Se invece i livelli di utilizzo della memoria sono elevati, il server di report utilizza più tecniche per rimanere operativo utilizzando le limitate risorse disponibili.  
   
  In questo argomento vengono descritte le impostazioni di configurazione che è possibile specificare e le modalità di risposta del server quando l'utilizzo della memoria diventa un fattore da considerare nell'elaborazione delle richieste.  
   
 ## <a name="memory-management-policies"></a>Criteri di gestione della memoria  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rispetta i vincoli relativi alle risorse di sistema regolando la quantità di memoria allocata per applicazioni e tipi di elaborazione di richieste specifici. Di seguito vengono riportate le applicazioni eseguite nel servizio del server di report soggette alla gestione della memoria:  
   
--   Gestione report, un'applicazione Web front-end per il server di report.  
+-   Il portale Web, un'applicazione Web front-end per il server di report.  
   
 -   Servizio Web ReportServer, utilizzato per l'elaborazione interattiva di report e per richieste su richiesta.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "65580383"
   
  Sebbene non sia possibile personalizzare le risposte del server di report per i diversi scenari di utilizzo della memoria, è possibile specificare impostazioni di configurazione che definiscono i limiti che separano le risposte relative a un utilizzo basso, medio o alto della memoria stessa.  
   
-## <a name="when-to-customize-memory-management-settings"></a>Personalizzazione delle impostazioni di gestione della memoria  
+## <a name="when-to-customize-memory-management-settings"></a>Quando personalizzare le impostazioni di gestione della memoria  
  Le impostazioni predefinite specificano intervalli disuguali per l'utilizzo basso, medio e alto della memoria. Per impostazione predefinita, l'area riservata all'utilizzo della memoria basso è maggiore di quelle riservate per l'utilizzo della memoria medio e alto. Questo tipo di configurazione è ottimale per l'elaborazione di carichi distribuiti uniformemente o che aumentano o diminuiscono in modo incrementale. In questo scenario la transizione tra aree è graduale e il server di report dispone di tempo sufficiente per regolare la propria risposta.  
   
  La modifica delle impostazioni predefinite è utile se nel modello di carico sono presenti picchi. Quando nel carico di elaborazione si verificano picchi improvvisi, il server di report potrebbe rapidamente passare da una situazione in cui la memoria non viene utilizzata a una in cui si verificano errori di allocazione di memoria. Questo problema potrebbe verificarsi se sono presenti più istanze simultanee di un report che utilizza una quantità di memoria elevata che iniziano nello stesso momento. Per gestire questo tipo di carico di elaborazione, è possibile fare in modo che il server di report risponda in base all'utilizzo medio o alto della memoria il prima possibile in modo da rallentare l'elaborazione. In questo modo è possibile completare più richieste. A questo scopo, è necessario diminuire il valore di **MemorySafetyMargin** in modo che l'area relativa all'uso basso della memoria sia minore rispetto alle altre. In questo modo verrà data la precedenza alle risposte relative a un utilizzo medio e alto della memoria.  
@@ -60,7 +60,7 @@ ms.locfileid: "65580383"
   
  Nella figura seguente viene illustrato il modo in cui le impostazioni vengono utilizzate insieme per distinguere tra i livelli basso, medio e alto di utilizzo della memoria:  
   
- ![Impostazioni di configurazione per lo stato della memoria](../../reporting-services/report-server/media/rs-memoryconfigurationzones.gif "Impostazioni di configurazione per lo stato della memoria")  
+ ![Impostazioni di configurazione per lo stato della memoria](../../reporting-services/report-server/media/rs-memoryconfigurationzones.png "Impostazioni di configurazione per lo stato della memoria")  
   
  La tabella seguente descrive le impostazioni **WorkingSetMaximum**, **WorkingSetMinimum**, **MemorySafetyMargin**e **MemoryThreshold** . Le impostazioni di configurazione sono specificate nel file [RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
@@ -77,20 +77,17 @@ ms.locfileid: "65580383"
 #### <a name="example-of-memory-configuration-settings"></a>Esempio di impostazioni di configurazione della memoria  
  Nell'esempio seguente vengono mostrate le impostazioni di configurazione per un computer server di report che utilizza valori di configurazione della memoria personalizzati. Se si desidera aggiungere **WorkingSetMaximum** o **WorkingSetMinimum**è necessario digitare gli elementi e i valori nel file RSReportServer.config. Entrambi i valori sono numeri interi espressi in KB di RAM allocati per le applicazioni server. Nell'esempio seguente si specifica che l'allocazione totale di memoria per le applicazioni del server di report non può superare i 4 GB. Se il valore predefinito per **WorkingSetMinimum** (60% di **WorkingSetMaximum**) è accettabile, è possibile ometterlo e specificare solo **WorkingSetMaximum** nel file RSReportServer. config. In questo esempio è stato incluso il valore **WorkingSetMinimum** per illustrarne la visualizzazione qualora si desiderasse aggiungerlo:  
   
-```  
-      <MemorySafetyMargin>80</MemorySafetyMargin>  
+' ' File di configurazione <MemorySafetyMargin>80</MemorySafetyMargin>  
       <MemoryThreshold>90</MemoryThreshold>  
       <WorkingSetMaximum>4000000</WorkingSetMaximum>  
       <WorkingSetMinimum>2400000</WorkingSetMinimum>  
 ```  
   
-#### <a name="about-aspnet-memory-configuration-settings"></a>Informazioni sulle impostazioni di configurazione della memoria ASP.NET  
- Sebbene i servizi Web ReportServer e Gestione report siano applicazioni [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , nessuna applicazione risponde alle impostazioni di configurazione della memoria specificate nella sezione **processModel** di machine.config per le applicazioni [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] eseguite in modalità compatibilità IIS 5.0. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] legge le impostazioni di configurazione della memoria solo dal file RSReportServer.config.  
+#### About ASP.NET memory configuration settings  
+ Although the 2016 and later Report Server Web service and web portal are HTML5 applications, previous versions are [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications, neither application responds to memory configuration settings that you specify in the **processModel** section of machine.config for [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications that run in IIS 5.0 and higher compatibility mode. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reads memory configuration settings from the RSReportServer.config file only.  
   
-## <a name="see-also"></a>Vedere anche  
- [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+## See also  
+ [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
  [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
-  
   

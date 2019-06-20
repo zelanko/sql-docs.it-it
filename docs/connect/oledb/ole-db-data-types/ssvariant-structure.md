@@ -14,13 +14,13 @@ helpviewer_keywords:
 - SSVARIANT struct
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: cf9141d77b1dc510a6653e94166c4b6f3c1ccfe4
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+manager: jroth
+ms.openlocfilehash: d956aab8a82dc0387317578964b1796a685f24c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617681"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66769526"
 ---
 # <a name="ssvariant-structure"></a>Struttura SSVARIANT
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
   
 |Membro|Indicatore del tipo OLE DB|Tipo di dati C di OLE DB|valore vt|Commenti|  
 |------------|---------------------------|------------------------|--------------|--------------|  
-|VT|SSVARTYPE|||Specifica il tipo di valore contenuto nella struttura **SSVARIANT**.|  
+|vt|SSVARTYPE|||Specifica il tipo di valore contenuto nella struttura **SSVARIANT**.|  
 |bTinyIntVal|DBTYPE_UI1|**BYTE**|**VT_SS_UI1**|Supporta il **tinyint** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo di dati.|  
 |sShortIntVal|DBTYPE_I2|**SHORT**|**VT_SS_I2**|Supporta il **smallint** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo di dati.|  
 |lIntVal|DBTYPE_I4|**LONG**|**VT_SS_I4**|Supporta il **int** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo di dati.|  

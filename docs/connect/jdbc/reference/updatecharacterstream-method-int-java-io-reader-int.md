@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: b692c372-f6d7-4528-9c5d-cd8421bdb12e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dbd6d01951e6d3864031739f4f0c1794ee02ee53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: af5965d55fd48ad884da5ca1ff02e447b2ff5764
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604779"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66784142"
 ---
 # <a name="updatecharacterstream-method-int-javaioreader-int"></a>Metodo updateCharacterStream (int, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,7 +56,7 @@ public void updateCharacterStream(int columnIndex,
 ## <a name="remarks"></a>Remarks  
  Questo metodo updateCharacterStream viene specificato dal metodo updateCharacterStream nell'interfaccia ResultSet.  
   
- Questo metodo passa caratteri Unicode da un oggetto Reader alle colonne di testo e binarie selezionate. Include tutte le colonne di testo e le colonne **binary**, **varbinary**, **varbinary(max)**, **image** e **xml**, ma non le colonne **udt**.  
+ Questo metodo passa caratteri Unicode da un oggetto Reader alle colonne di testo e binarie selezionate. Include tutte le colonne di testo e le colonne **binary**, **varbinary**, **varbinary(max)** , **image** e **xml**, ma non le colonne **udt**.  
   
  Se la lunghezza del flusso è diversa da quella specificata nel parametro *length*, il driver JDBC genera un'eccezione al momento dell'aggiornamento o dell'inserimento della riga.  
   

@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: genemi
 ms.openlocfilehash: d773e05a3ed953e5210c0ade3226b4a32e82aeab
-ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51289901"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63182238"
 ---
-# <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Home page per client di programmazione a Microsoft SQL Server
+# <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Home page per la programmazione client per Microsoft SQL Server
 
 
 Benvenuti al nostro home page sul client per interagire con Microsoft SQL Server e Database SQL di Azure nel cloud di programmazione. Questo articolo fornisce le informazioni seguenti:
@@ -54,7 +54,7 @@ Nella tabella seguente, ogni immagine language è un collegamento a informazioni
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
 | &nbsp; [![Logo di c#][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![Entity Framework ORM, di .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Logo di Java][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp; [![Logo di Node. js][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![cpp indifferente][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![Logo PHP][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp; [![Logo di Node. js][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [ **`ODBC for C++`** ](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![Logo PHP][image-ref-360-php]](#an-170-php-docu) |
 | &nbsp; [![Logo Python][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Logo di Ruby][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
@@ -181,7 +181,7 @@ Il driver di connessione di Node. js per SQL Server viene implementato in JavaSc
 
 ## <a name="odbc-for-c"></a>Microsoft ODBC per C++ 
 
-![Logo ODBC][image-ref-350-odbc] ![cpp indifferente][image-ref-322-cpp]
+![Logo ODBC][image-ref-350-odbc] ![cpp-big-plus][image-ref-322-cpp]
 
 (ODBC) Open database connectivity è stato sviluppato nel 1990s e anticipa .NET Framework. ODBC è progettato per essere indipendente da qualsiasi sistema di database specifico e indipendente dal sistema operativo.
 
@@ -191,7 +191,7 @@ Alcuni altri driver di connettività usano ODBC internamente.
 
 #### <a name="code-example"></a>Esempio di codice
 
-- [Esempio di codice C++, tramite ODBC](../odbc/reference/sample-odbc-program.md)
+- [Esempio di codice C++ che usa ODBC](../odbc/reference/sample-odbc-program.md)
 
 #### <a name="documentation-outline"></a>Struttura di documentazione
 

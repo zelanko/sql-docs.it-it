@@ -12,13 +12,13 @@ helpviewer_keywords:
 - table-valued parameters, inserting data into
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: be4ecd3bfdf88029f56e86fb071edc51987a21b2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: c1edbe7d411e06e477db016db62b4245e0893aee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604591"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801161"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Inserimento di dati in parametri con valori di tabella
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,15 +54,15 @@ ms.locfileid: "51604591"
   
  Per utilizzare il modello pull, i consumer devono specificare l'implementazione personalizzata di un oggetto set di righe. Quando si usa il modello pull con set di righe di parametri con valori di tabella (CLSID_ROWSET_TVP), il consumer viene richiesto di aggregare l'oggetto set di righe di parametri con valori di tabella esposte dal provider tramite il ITableDefinitionWithConstraints:: Metodo CreateTableWithConstraints o IOpenRowset:: OPENROWSET. Il comportamento previsto per l'oggetto consumer consiste esclusivamente nel sostituire l'implementazione dell'interfaccia IRowset. È necessario sostituire le funzioni seguenti:  
   
--   IRowset:: GetNextRows  
+-   IRowset::GetNextRows  
   
--   IRowset:: Addrefrows  
+-   IRowset::AddRefRows  
   
--   IRowset:: GetData  
+-   IRowset::GetData  
   
--   :: ReleaseRows  
+-   IRowset::ReleaseRows  
   
--   :: RestartPosition  
+-   IRowset::RestartPosition  
   
  Il driver OLE DB per SQL Server leggerà una o più righe per volta dall'oggetto set di righe del consumer per supportare l'esecuzione del flusso in parametri con valori di tabella. L'utente, ad esempio, potrebbe avere i dati dei set di righe di parametri con valori di tabella su disco (non in memoria) e implementare la funzionalità di lettura dei dati dal disco se richiesto dal driver OLE DB per SQL Server.  
   

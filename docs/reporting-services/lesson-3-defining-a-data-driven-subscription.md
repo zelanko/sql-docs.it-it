@@ -1,26 +1,26 @@
 ---
-title: 'Lezione 3: Definizione di una sottoscrizione guidata dai dati | Microsoft Docs'
-ms.date: 05/26/2016
+title: 'Lesson 3: Defining a Data-Driven Subscription (Lezione 3: Definizione di una sottoscrizione guidata dai dati) | Microsoft Docs'
+ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4de4f510bcb584e0ec409f89eaba8c13ba6d8c6e
-ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: fafd591e4b29f9b8beb1639ff64f4e2d43b65c2d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54457654"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66826863"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lezione 3: Definizione di una sottoscrizione guidata dai dati
-In questa lezione dell'esercitazione [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] verranno usate le pagine di sottoscrizione guidata dai dati dei portali Web di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per connettersi a un'origine dati di sottoscrizione, verrà compilata una query che recupera i dati di sottoscrizione e sarà eseguito il mapping tra il set di risultati e le opzioni di recapito e del report.  
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+In questa lezione dell'esercitazione [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] verranno usate le pagine di sottoscrizione guidata dai dati del portale Web di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per connettersi a un'origine dati di sottoscrizione, verrà compilata una query che recupera i dati di sottoscrizione e verrà eseguito il mapping tra il set di risultati e le opzioni di recapito e del report.  
   
 > [!NOTE]  
 > Prima di iniziare, verificare che il servizio **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent** sia in esecuzione. Se non è in esecuzione, non è possibile salvare la sottoscrizione.  Un metodo per verificarlo consiste nell'aprire [Gestione configurazione SQL Server](../relational-databases/sql-server-configuration-manager.md).
-In questa lezione si presuppone che le lezioni 1 e 2 siano state completate e che l'origine dati del report utilizzi credenziali archiviate.  Per altre informazioni, vedere [Lezione 2: Modifica delle proprietà dell'origine dati del report](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
+In questa lezione si presuppone che le lezioni 1 e 2 siano state completate e che l'origine dati del report utilizzi credenziali archiviate.  Per altre informazioni, vedere [Lezione 2: Modifica delle proprietà dell'origine dei dati del report](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
 ## <a name="bkmk_startwizard"></a>Avvio di Creazione guidata sottoscrizione guidata dai dati  
   
@@ -28,7 +28,7 @@ In questa lezione si presuppone che le lezioni 1 e 2 siano state completate e ch
   
 2.  Nel menu di scelta rapida ![ssrs_tutorial_datadriven_reportmenu](../reporting-services/media/ssrs-tutorial-datadriven-reportmenu.png) del report fare clic su **Gestisci**, quindi fare clic su **Sottoscrizioni** nel riquadro a sinistra.  
   
-3.  Fare clic su **+ Nuova sottoscrizione**. Se il pulsante non è visualizzato, non si dispone delle autorizzazioni di Gestione contenuto. 
+3. Fare clic su **+ Nuova sottoscrizione**. Se il pulsante non è visualizzato, non si dispone delle autorizzazioni di Gestione contenuto.
   
 ## <a name="define-a-description"></a>Definire una descrizione  
 1.  Digitare **Recapito ordine di vendita** nella descrizione.
@@ -39,9 +39,10 @@ In questa lezione si presuppone che le lezioni 1 e 2 siano state completate e ch
 ## <a name="schedule"></a>Pianificazione
 1. Nella sezione Pianificazione fare clic su **Pianificazione in base al report**.
 2. Fare clic su **Modifica pianificazione**.
-3.  In **Dettagli pianificazione**fare clic su **Singola occorrenza**.  
-4.  Specificare un'ora di inizio posticipata di alcuni minuti rispetto all'ora corrente.  
-5.  Fare clic su **Applica**.
+3. In **Dettagli pianificazione**fare clic su **Singola occorrenza**.  
+4. Specificare un'ora di inizio posticipata di alcuni minuti rispetto all'ora corrente.  
+5. Specificare il **date di inizio e fine**.
+6. Selezionare **Applica**.
 
 ## <a name="destination"></a>Destination  
 1.  Nella sezione Destinazione selezionare **Condivisione file di Windows** per il metodo di recapito.  
@@ -67,7 +68,7 @@ In questa lezione si presuppone che le lezioni 1 e 2 siano state completate e ch
 ## <a name="query"></a>Query      
 1.  Nella casella della query digitare la query seguente:  
   
-    ```sql
+    ```
     Select * from OrderInfo  
     ```  
   
@@ -87,20 +88,22 @@ Parametro  |Origine del valore  | Valore/campo
 **Estensione file** |Immettere il valore |True
 **Nome utente** | Immettere il valore | Digitare l'account utente di dominio. Specificare l'account nel formato \<dominio>\\\<<account>. L'account utente deve avere le autorizzazioni richieste per il percorso configurato. 
 **Password** | Immettere il valore | Digitare la password
+**Usa l'account di condivisione file** | Immettere il valore | False
 
 ## <a name="report-parameters"></a>Parametri di report
  1. Nel campo **Numero ordine** selezionare **Ottieni il valore dal set di dati**. In Valore selezionare **Ordine**. 
- 2. Fare clic su **Crea sottoscrizione**.
+ 2. Selezionare **Crea sottoscrizione**.
    
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
 Quando la sottoscrizione viene eseguita, nella condivisione file specificata vengono recapitati quattro file di report, uno per ogni ordine nell'origine dati *Sottoscrittori* . Ogni recapito deve essere univoco in termini di dati (che devono essere specifici dell'ordine), di formato di visualizzazione e di formato di file. È possibile aprire tutti i report dalla cartella condivisa per verificare che ogni versione sia personalizzata in base alle opzioni di sottoscrizione definite.  
   
 ![Elenco dei file creati dalla sottoscrizione](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "Elenco dei file creati dalla sottoscrizione")  
   
-La pagina di sottoscrizione nel portale Web conterrà la data dell' **Ultima esecuzione** e lo **Stato** della sottoscrizione. 
-**Nota:** Aggiornare la pagina dopo l'esecuzione della sottoscrizione per visualizzare le informazioni aggiornate.  
+La pagina di sottoscrizione nel portale Web conterrà la data dell'**Ultima esecuzione** e lo **Stato** della sottoscrizione. 
+> [!NOTE]
+> Aggiornare la pagina dopo l'esecuzione della sottoscrizione per visualizzare le informazioni aggiornate.  
     
-![Risultati della sottoscrizione in Gestione report](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "Risultati della sottoscrizione in Gestione report")  
+![Risultati della sottoscrizione nel portale web](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "risultati della sottoscrizione nel portale web")  
   
 Questo passaggio conclude l'esercitazione relativa alla definizione di una sottoscrizione guidata dai dati.   
   
@@ -110,6 +113,3 @@ Questo passaggio conclude l'esercitazione relativa alla definizione di una sotto
 [Come creare, modificare ed eliminare le sottoscrizioni guidate dai dati](../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
 [Utilizzare un'origine dei dati esterna per i dati del Sottoscrittore &#40;sottoscrizione guidata dai dati&#41;](../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   
-  
-  
-

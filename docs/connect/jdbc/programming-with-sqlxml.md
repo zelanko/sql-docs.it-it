@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 399100d6e718138012453e47fdfe8d11386f8cbd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c4e8d429490a0dd7fe8f0a259d065f1f4914dd29
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754899"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794053"
 ---
 # <a name="programming-with-sqlxml"></a>Programmazione con SQLXML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -49,12 +49,12 @@ ms.locfileid: "47754899"
   
 -   La colonna **Oggetto SQLXML setter** rappresenta un oggetto SQLXML, che viene creato tramite il metodo [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) della classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Si noti che i metodi setter seguenti accettano solo un oggetto SQLXML creato tramite il metodo [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md).  
   
-|Nome metodo|Oggetto SQLXML getter<br /><br /> (accessibile in lettura)|Oggetto SQLXML setter<br /><br /> (accessibile in scrittura)|  
+|Nome metodo|Oggetto SQLXML metodo di richiamo<br /><br /> (accessibile in lettura)|Oggetto SQLXML metodo di impostazione<br /><br /> (accessibile in scrittura)|  
 |-----------------|-------------------------------------------|-------------------------------------------|  
 |CallableStatement.setSQLXML()|Non supportato|Supportato|  
 |CallableStatement.setObject()|Non supportato|Supportato|  
 |PreparedStatement.setSQLXML()|Non supportato|Supportato|  
-|SetObject|Non supportato|Supportato|  
+|PreparedStatement.setObject()|Non supportato|Supportato|  
 |ResultSet.updateSQLXML()|Non supportato|Supportato|  
 |ResultSet.updateObject()|Non supportato|Supportato|  
 |ResultSet.getSQLXML()|Supportato|Non supportato|  

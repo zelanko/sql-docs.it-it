@@ -12,13 +12,13 @@ helpviewer_keywords:
 - IRow interface
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: deab7936f6ba3eacb455cc19622d4232ed8617e5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: cbc97de598e05d6045a5f7f142a67b39dcb9dd05
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600081"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66791556"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Recuperare colonne tramite IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51600081"
   
 -   Come recuperare un gruppo di colonne (in sequenza).  
   
--   Come accedere due volte a una colonna. La prima volta viene ottenuta la larghezza di colonna effettiva, mentre la seconda volta viene eseguito l'accesso ai dati effettivi. Nella struttura DBCOLUMNACCESS, se **pData** è NULL e **cbMaxLen** è 0, tramite la chiamata a **IRow**-**->GetColumns** viene restituita solo la lunghezza effettiva della colonna. In questo caso, è possibile chiamare nuovamente **IRow->GetColumns()** nella stessa colonna per recuperare i dati effettivi.  
+-   Come accedere due volte a una colonna. La prima volta viene ottenuta la larghezza di colonna effettiva, mentre la seconda volta viene eseguito l'accesso ai dati effettivi. Nella struttura DBCOLUMNACCESS, se **pData** è NULL e **cbMaxLen** è 0, tramite la chiamata a **IRow**- **->GetColumns** viene restituita solo la lunghezza effettiva della colonna. In questo caso, è possibile chiamare nuovamente **IRow->GetColumns()** nella stessa colonna per recuperare i dati effettivi.  
   
 > [!IMPORTANT]  
 >  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -53,7 +53,7 @@ ms.locfileid: "51600081"
   
 -   Come accedere a una colonna due volte. La prima volta viene ottenuta la larghezza di colonna effettiva, mentre la seconda volta viene eseguito l'accesso ai dati effettivi.  
   
- Nella struttura DBCOLUMNACCESS, se pData è NULL e cbMaxLen è 0, tramite la chiamata a IRow->GetColumns viene restituita solo la larghezza di colonna effettiva. In questo caso, è possibile chiamare nuovamente IRow->GetColumns nella stessa colonna per recuperare i dati effettivi. Questo esempio non è supportato in IA64.  
+ Nella struttura DBCOLUMNACCESS, se pData è NULL e cbMaxLen è 0, tramite la chiamata a IRow->GetColumns viene restituita solo la lunghezza effettiva della colonna. In questo caso è possibile chiamare nuovamente IRow->GetColumns sulla stessa colonna per recuperare i dati effettivi. Questo esempio non è supportato in IA64.  
   
  Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
   

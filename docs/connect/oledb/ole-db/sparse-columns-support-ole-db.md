@@ -10,13 +10,13 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: e6f0dedf8847488187755985beab0049b2930719
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cec78daf72a65bfc0d3b496a42d1e726f84a1778
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772604"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795915"
 ---
 # <a name="sparse-columns-support-ole-db"></a>Supporto per colonne di tipo sparse (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,10 +54,10 @@ ms.locfileid: "47772604"
   
 |Tipo o funzione membro|Descrizione|  
 |-----------------------------|-----------------|  
-|IColumnsInfo::|Un nuovo valore del flag DBCOLUMNFLAGS, ovvero DBCOLUMNFLAGS_SS_ISCOLUMNSET, è impostato per le colonne **column_set** in *dwFlags*.<br /><br /> DBCOLUMNFLAGS_WRITE è impostato per le colonne **column_set**.|  
+|IColumnsInfo::GetColumnsInfo|Un nuovo valore del flag DBCOLUMNFLAGS, ovvero DBCOLUMNFLAGS_SS_ISCOLUMNSET, è impostato per le colonne **column_set** in *dwFlags*.<br /><br /> DBCOLUMNFLAGS_WRITE è impostato per le colonne **column_set**.|  
 |IColumsRowset::GetColumnsRowset|Un nuovo valore del flag DBCOLUMNFLAGS, ovvero DBCOLUMNFLAGS_SS_ISCOLUMNSET, è impostato per le colonne **column_set** in DBCOLUMN_FLAGS.<br /><br /> DBCOLUMN_COMPUTEMODE è impostato su DBCOMPUTEMODE_DYNAMIC per le colonne **column_set**.|  
 |IDBSchemaRowset::GetSchemaRowset|DBSCHEMA_COLUMNS restituisce due nuove colonne: SS_IS_COLUMN_SET e SS_IS_SPARSE.<br /><br /> DBSCHEMA_COLUMNS restituisce solo colonne che non sono membri di **column_set**.<br /><br /> Sono stati aggiunti due nuovi set di righe dello schema: DBSCHEMA_COLUMNS_EXTENDED restituirà tutte le colonne indipendentemente dal fatto che siano o meno di tipo sparse o dall'appartenenza a **column_set**. DBSCHEMA_SPARSE_COLUMN_SET restituisce solo le colonne che sono membri di **column_set**. Questi nuovi set di righe includono le stesse colonne e comportano le stesse restrizioni di DBSCHEMA_COLUMNS.|  
-|IDBSchemaRowset:: GetSchemas|IDBSchemaRowset::GetSchemas include i GUID per i nuovi set di righe DBSCHEMA_COLUMNS_EXTENDED e DBSCHEMA_SPARSE_COLUMN_SET nell'elenco dei set di righe dello schema disponibili.|  
+|IDBSchemaRowset::GetSchemas|IDBSchemaRowset::GetSchemas include i GUID per i nuovi set di righe DBSCHEMA_COLUMNS_EXTENDED e DBSCHEMA_SPARSE_COLUMN_SET nell'elenco dei set di righe dello schema disponibili.|  
 |ICommand::Execute|Se si utilizza **select \* from** *table*, vengono restituite tutte le colonne che non sono membri del **column_set** di tipo sparse, nonché una colonna XML che contiene i valori di tutte le colonne non null membri del **column_set** di tipo sparse, se presente.|  
 |IOpenRowset::OpenRowset|IOpenRowset:: OPENROWSET restituisce un set di righe con le stesse colonne ICommand:: Execute, con un **selezionate \***  query nella stessa tabella.|  
 |ITableDefinition|Non è stata apportata alcuna modifica a questa interfaccia per le colonne di tipo sparse o per le colonne **column_set**. Le applicazioni che devono apportare modifiche allo schema devono eseguire direttamente l'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] appropriata.|  

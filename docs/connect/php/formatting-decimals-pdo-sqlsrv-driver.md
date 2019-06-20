@@ -12,11 +12,11 @@ author: yitam
 ms.author: v-yitam
 manager: mbarwin
 ms.openlocfilehash: 35626c192c3d74ad0201cee3c5e97adbce92a3aa
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676556"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62669696"
 ---
 # <a name="formatting-decimal-strings-and-money-values-pdosqlsrv-driver"></a>Formattazione di stringhe decimali e valori money (driver PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,7 +26,7 @@ Accuratezza, mantenere [tipi di dati decimali o numerici](https://docs.microsoft
 ## <a name="add-leading-zeroes-if-missing"></a>Aggiungere zeri iniziali se mancante
 A partire da versione 5.6.0, la connessione o l'attributo di istruzione `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` consente all'utente di formattare le stringhe decimali. Questo attributo è previsto un valore booleano (true o false) e influisce solo sulla formattazione dei valori numerici o decimali nei risultati recuperati. In altre parole, questo attributo non ha effetto sulle altre operazioni, ad esempio inserimento o aggiornamento.
 
-Per impostazione predefinita `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` viene **false**. Se impostato su true, gli zeri iniziali per le stringhe decimali verrà aggiunti per qualsiasi valore decimale minore di 1.
+L'impostazione predefinita di `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` è **false**. Se impostato su true, gli zeri iniziali per le stringhe decimali verrà aggiunti per qualsiasi valore decimale minore di 1.
 
 ## <a name="configure-number-of-decimal-places"></a>Configurare numero di posizioni decimali
 Con `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` attivata, un altro attributo di connessione o istruzione, `PDO::SQLSRV_ATTR_DECIMAL_PLACES`, consente agli utenti di configurare il numero di posizioni decimali, la visualizzazione di dati money e smallmoney. Accetta i valori integer compreso nell'intervallo [0, 4], e potrebbe verificarsi l'arrotondamento quando visualizzata. Tuttavia, i dati sottostanti di denaro rimangono invariati.

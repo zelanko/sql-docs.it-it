@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45ad47f53b36a54843aacb985e3d9c3db3d55d01
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: b555568ae93936c1f8659b52ba6bb731e8398e0f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398334"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66781658"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Caratteristiche internazionali del driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "52398334"
   
 -   Supporto per un'interfaccia completamente localizzata nelle stesse lingue di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   Supporto per le conversioni di linguaggio Java per i dati sensibili locali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   Supporto per le conversioni di linguaggio Java di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dipendenti dalle impostazioni locali  
   
 -   Supporto per lingue internazionali, indipendentemente dal sistema operativo  
   

@@ -14,10 +14,10 @@ ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f4d98747a2f00de41dd5661b76a05a9f22d341df
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66506443"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Impostazione dei valori di timeout per l'elaborazione di report e di set di dati condivisi (SSRS)
@@ -42,9 +42,9 @@ ms.locfileid: "66506443"
  I valori di timeout per la query vengono specificati in secondi sul server di report quando si crea o si gestisce un set di dati condiviso. Per impostazione predefinita, questo valore viene impostato su 0 secondi che indica l'assenza del valore di timeout. Per altre informazioni, vedere [Gestire set di dati condivisi](../../reporting-services/report-data/manage-shared-datasets.md).  
   
 ## <a name="setting-a-report-execution-time-out"></a>Impostazione del timeout dell'esecuzione del report  
- È possibile impostare il valore di timeout dell'esecuzione del report in modo da limitare la quantità di tempo utilizzata da un server di report per elaborare un report. I valori di timeout dell'esecuzione del report possono essere impostati in Gestione report. È possibile impostare un valore predefinito per tutti i report nella pagina Impostazioni sito e quindi modificare tale valore per un determinato report nella pagina per impostare le proprietà di esecuzione. Per impostazione predefinita, il valore è impostato su 1800 secondi. Per altre informazioni, vedere [Impostare proprietà di elaborazione dei report](../../reporting-services/report-server/set-report-processing-properties.md).  
+ È possibile impostare il valore di timeout dell'esecuzione del report in modo da limitare la quantità di tempo utilizzata da un server di report per elaborare un report. I valori di timeout dell'esecuzione del report possono essere impostati nel portale Web. È possibile impostare un valore predefinito per tutti i report nella pagina Impostazioni sito e quindi modificare tale valore per un determinato report nella pagina per impostare le proprietà di esecuzione. Per impostazione predefinita, il valore è impostato su 1800 secondi. Per altre informazioni, vedere [Impostare proprietà di elaborazione dei report](../../reporting-services/report-server/set-report-processing-properties.md).  
   
-## <a name="how-report-execution-time-out-values-are-evaluated"></a>Valutazione dei valori di timeout per l'esecuzione dei report  
+## <a name="how-report-execution-time-out-values-are-evaluated"></a>Come vengono valutati i valori di timeout per l'esecuzione dei report  
  Il server di report valuta i processi in esecuzione a intervalli di 60 secondi. Ogni 60 secondi, il server di report confronta il tempo di elaborazione effettivo con il valore di timeout per l'esecuzione del report. Se il tempo di elaborazione di un report supera il valore di timeout previsto, l'elaborazione del report viene arrestata.  
   
  Si noti che se si specifica un valore di timeout minore di 60 secondi, il report può venire eseguito completamente se l'elaborazione ha inizio e termina durante la parte di attesa del ciclo, ossia quando il server di report non valuta i processi in esecuzione. Se, ad esempio, si imposta un valore di timeout di 10 secondi per un report la cui esecuzione richiede 20 secondi, il report viene elaborato completamente se l'esecuzione inizia all'inizio del ciclo di 60 secondi.  

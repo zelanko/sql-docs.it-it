@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: bfa493c4-fe07-449b-b4d0-384e1a1fce48
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e2a7b550814a0d980380916eb59be31560a8fda1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8690984c3795bb07497a3d255d85766930c1ab07
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737039"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66773902"
 ---
 # <a name="getstring-method-int-sqlserverresultset"></a>Metodo getString (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public java.lang.String getString(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getString viene specificato dal metodo getString nell'interfaccia ResultSet.  
+ Questo metodo getString viene specificato dal metodo getString nell'interfaccia java.sql.ResultSet.  
   
  Tutte le colonne in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possono essere restituite come stringa. Pertanto, possono essere restituite una rappresentazione **String** di tutti i tipi numerici e basati su caratteri e una rappresentazione stringa esadecimale di colonne binarie quali binary, varbinary, varbinary(max), image, timestamp e uniqueidentifier.  
   

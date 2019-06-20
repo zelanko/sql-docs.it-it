@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 56cb2a6a28e60aa34a2bb74d9d7c506f7d3b9523
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: d920d15bb633828dd2ad614c6789f397e229f0b5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403176"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797795"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Pool di connessioni compatibile con il driver nel driver ODBC per SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "52403176"
   Il driver ODBC per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta il [pool di connessioni compatibile con il driver](https://msdn.microsoft.com/library/hh405031(VS.85).aspx). In questo argomento vengono descritti i miglioramenti apportati al pool di connessioni compatibile con il driver in Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Windows:  
   
 -   Indipendentemente dalle proprietà delle connessioni, le connessioni che usano `SQLDriverConnect` vengono inserite in un pool separato rispetto alle connessioni che usano `SQLConnect`.
-- Quando si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e il pool di connessioni compatibile con il driver, il driver non usa il contesto di sicurezza dell'utente di Windows per il thread corrente per separare le connessioni del pool. Ovvero, se le connessioni hanno parametri equivalenti negli scenari di rappresentazione di Windows con l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e usano le stesse credenziali dell'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per connettersi al back-end, diversi utenti di Windows possono potenzialmente usare lo stesso pool di connessioni. Quando si usa l'autenticazione di Windows e il pool di connessioni compatibile con il driver, il driver usa il contesto di sicurezza dell'utente corrente di Windows per separare le connessioni del pool. Ovvero, per gli scenari di rappresentazione di Windows, diversi utenti di Windows non condividono le connessioni anche se le connessioni usano gli stessi parametri.
+- Quando si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e il pool di connessioni compatibile con il driver, il driver non usa il contesto di sicurezza dell'utente di Windows per il thread corrente per separare le connessioni nel pool. Ovvero, se le connessioni hanno parametri equivalenti negli scenari di rappresentazione di Windows con l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e usano le stesse credenziali dell'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per connettersi al back-end, diversi utenti di Windows possono potenzialmente usare lo stesso pool di connessioni. Quando si usa l'autenticazione di Windows e il pool di connessioni compatibile con il driver, il driver usa il contesto di sicurezza dell'utente corrente di Windows per separare le connessioni nel pool. Ovvero, per gli scenari di rappresentazione di Windows, diversi utenti di Windows non condividono le connessioni anche se le connessioni usano gli stessi parametri.
 - Quando si usa Azure Active Directory e il pool di connessioni compatibile con il driver, il driver Usa anche il valore di autenticazione per determinare l'appartenenza nel pool di connessioni.
   
 -   Il pool di connessioni compatibile con il driver impedisce la restituzione di una connessione non valida dal pool.  

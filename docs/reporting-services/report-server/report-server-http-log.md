@@ -1,6 +1,6 @@
 ---
 title: Log HTTP del server di report | Microsoft Docs
-ms.date: 03/02/2018
+ms.date: 06/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -10,27 +10,27 @@ helpviewer_keywords:
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d290d32cbe05a0e378486cad72c5f39a2bc6e58
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 7fb733325b09c189221729a3edc0dd12cf33b283
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581396"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140457"
 ---
 # <a name="report-server-http-log"></a>Log HTTP del server di report
   Nel file di log HTTP del server di report viene mantenuto un record per ogni richiesta HTTP e relativa risposta gestite dal server di report. Poiché gli errori di overflow e di timeout relativi alle richiesta ed errori non raggiungono il server di report, non vengono registrati nel file di log.  
   
  Per impostazione predefinita, la registrazione HTTP non è abilitata. Per utilizzare questa caratteristica nella propria installazione, è necessario modificare il file di configurazione ReportingServicesService.exe.  
   
-## <a name="viewing-log-information"></a>Visualizzazione delle informazioni sul log di esecuzione  
+## <a name="viewing-log-information"></a>Visualizzazione delle informazioni del log  
  Il log è un file di testo ASCII, che può essere visualizzato mediante qualsiasi editor di testo. Il file di log HTTP del server di report è equivalente al file di log esteso W3C presente in IIS e utilizza campi simili ed è pertanto possibile utilizzare visualizzatori del file di log di IIS esistenti per leggerlo. Nella tabella seguente vengono fornite informazioni aggiuntive sul file di log HTTP:  
   
 |||  
 |-|-|  
 |Nome file|Per impostazione predefinita, il nome del file è ReportServerService_HTTP_\<timestamp>.log. È possibile personalizzare il prefisso del nome del file modificando l'attributo HttpTraceFileName nel file ReportingServicesService.exe.config. Il timestamp si basa su l'ora UTC (Coordinated Universal Time).|  
-|Percorso del file|Il percorso del file è \Microsoft SQL Server\\*\<Istanza di SQL Server>* \Reporting Services\LogFiles.|  
+|Percorso del file|Il percorso del file è \Microsoft SQL Server\\ *\<Istanza di SQL Server>* \Reporting Services\LogFiles.|  
 |Formato del file|Il file è in formato en-US ed è un file di testo ASCII.|  
-|Creazione e memorizzazione del file|Per creare un log HTTP, è necessario innanzitutto riabilitarlo nel file di configurazione e riavviare il servizio. Il file viene quindi creato quando il server di report gestisce una richiesta HTTP. Se le impostazioni sono state configurate ma il file di log non viene visualizzato, aprire un report o avviare un'applicazione del server di report (ad esempio Gestione report) per generare una richiesta HTTP per creare il file.<br /><br /> Una nuova istanza del file di log verrà creata dopo ogni riavvio del servizio e ogni successiva richiesta HTTP al server di report.<br /><br /> Per impostazione predefinita, i log di traccia possono occupare uno spazio massimo di 32 MB e vengono eliminati dopo 14 giorni.|  
+|Creazione e memorizzazione del file|Per creare un log HTTP, è necessario innanzitutto riabilitarlo nel file di configurazione e riavviare il servizio. Il file viene quindi creato quando il server di report gestisce una richiesta HTTP. Se le impostazioni sono state configurate ma il file di log non viene visualizzato, aprire un report o avviare un'applicazione del server di report (ad esempio il portale Web) per generare una richiesta HTTP per creare il file.<br /><br /> Una nuova istanza del file di log verrà creata dopo ogni riavvio del servizio e ogni successiva richiesta HTTP al server di report.<br /><br /> Per impostazione predefinita, i log di traccia possono occupare uno spazio massimo di 32 MB e vengono eliminati dopo 14 giorni.|  
   
 ## <a name="configuration-settings-for-report-server-http-log"></a>Impostazioni di configurazione per il log HTTP del server di report  
  Per configurare il log HTTP del server di report, utilizzare Blocco note per modificare il file ReportingServicesService.exe.config. Il percorso del file di configurazione è \Programmi\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin.  
@@ -80,5 +80,4 @@ ms.locfileid: "65581396"
  [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)   
  [File di log e origini di Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Guida di riferimento a errori ed eventi &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-  
   

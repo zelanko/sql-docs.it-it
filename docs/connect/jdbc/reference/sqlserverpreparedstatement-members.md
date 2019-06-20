@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2363902f-d4c6-4cd4-a5fc-86079eb9e418
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ec09d5aa1862be0cd16ea33a90755532fd37fbfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 89b4d7bedb2572c0396c3de80f000fdccdd1a2cb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605719"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803011"
 ---
 # <a name="sqlserverpreparedstatement-members"></a>Membri di SQLServerPreparedStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "47605719"
 |[getMaxFieldSize](../../../connect/jdbc/reference/getmaxfieldsize-method-sqlserverstatement.md)|Ereditato da [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md). Recupera il numero massimo di byte che possono essere restituiti per i valori delle colonne binarie o di tipo carattere in un oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) generato da questo oggetto Statement.|  
 |[getMaxRows](../../../connect/jdbc/reference/getmaxrows-method-sqlserverstatement.md)|Ereditato da [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md). Recupera il numero massimo di righe che un oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) generato da questo oggetto Statement può contenere.|  
 |[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverpreparedstatement.md)|Recupera una [classe SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) che contiene informazioni sulle colonne dell'oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) che saranno restituite quando viene eseguito questo oggetto Statement.|  
-|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|Ereditato da SQLServerStatement. Passa al risultato successivo di questo oggetto istruzione.|  
+|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|Ereditato da [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md). Passa al risultato successivo di questo oggetto istruzione.|  
 |[getParameterMetaData](../../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md)|Recupera il numero, i tipi e le proprietà dei parametri di questo oggetto Statement.|  
 |[getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md)|Ereditato da [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md). Recupera la modalità di memorizzazione delle risposte nel buffer per questo oggetto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
 |[getQueryTimeout](../../../connect/jdbc/reference/getquerytimeout-method-sqlserverstatement.md)|Ereditato da [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md). Recupera il numero di secondi di attesa di [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] prima dell'esecuzione di questo oggetto Statement.|  

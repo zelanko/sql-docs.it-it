@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7732746b-eda5-469e-8567-e8546c4d81cd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc209770285226beb45342223c1e46ff3a2fec3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9a871bbbb7135d22771b3cd769a6ef0e5eb1bbe9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771319"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66768761"
 ---
 # <a name="setncharacterstream-method-int-javaioreader"></a>Metodo setNCharacterStream (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +32,7 @@ public final void setNCharacterStream(int parameterIndex,
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *parametro parameterIndex*  
+ *parameterIndex*  
   
  Valore **int** che specifica l'indice del parametro.  
   

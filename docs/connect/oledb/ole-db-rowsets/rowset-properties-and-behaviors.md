@@ -15,13 +15,13 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8c78c56d08535b5d9947b5bd215afaf2f8e23e44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c3bb95de560e0e4ec6b5e01fda8623858a73aaf4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754829"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803808"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Proprietà e comportamenti dei set di righe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "47754829"
 |DBPROP_MAYWRITECOLUMN|Questa proprietà set di righe non è implementata dal Driver OLE DB per SQL Server. Il tentativo di lettura o scrittura del valore della proprietà genera un errore.|  
 |DBPROP_MEMORYUSAGE|Questa proprietà set di righe non è implementata dal Driver OLE DB per SQL Server. Il tentativo di lettura o scrittura del valore della proprietà genera un errore.|  
 |DBPROP_NOTIFICATIONGRANULARITY|Questa proprietà set di righe non è implementata dal Driver OLE DB per SQL Server. Il tentativo di lettura o scrittura del valore della proprietà genera un errore.|  
-|DBPROP_NOTIFICATIONPHASES|L/S: Sola lettura<br /><br /> Impostazione predefinita: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124; DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124; DBPROPVAL_NP_DIDEVENT<br /><br /> Descrizione: Il Driver OLE DB per SQL Server supporta tutte le fasi di notifica.|  
+|DBPROP_NOTIFICATIONPHASES|L/S: Sola lettura<br /><br /> Impostazione predefinita: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124;  DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124;  DBPROPVAL_NP_DIDEVENT<br /><br /> Descrizione: Il Driver OLE DB per SQL Server supporta tutte le fasi di notifica.|  
 |DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|L/S: Sola lettura<br /><br /> Impostazione predefinita: DBPROPVAL_NP_OKTODO &#124;  DBPROPVAL_NP_ABOUTTODO<br /><br /> Descrizione: le fasi di notifica del driver OLE DB per SQL Server sono annullabili prima di un tentativo di esecuzione della modifica del set di righe indicata. Il Driver OLE DB per SQL Server non supporta l'annullamento della fase dopo il tentativo di completamento.|  
 |DBPROP_ORDEREDBOOKMARKS|Questa proprietà set di righe non è implementata dal Driver OLE DB per SQL Server. Il tentativo di lettura o scrittura del valore della proprietà genera un errore.|  
 |DBPROP_OTHERINSERT DBPROP_OTHERUPDATEDELETE DBPROP_OWNINSERT DBPROP_OWNUPDATEDELETE|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Descrizione: l'impostazione delle proprietà di visibilità delle modifiche fa in modo che il driver OLE DB per SQL Server usi cursori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per supportare il set di righe. Per altre informazioni, vedere [Set di righe e cursori SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
@@ -101,7 +101,7 @@ ms.locfileid: "47754829"
 |SSPROP_MAXBLOBLENGTH|Colonna: nessuna<br /><br /> L/S: Lettura/Scrittura<br /><br /> Tipo: VT_I4<br /><br /> Impostazione predefinita: Il provider non limita le dimensioni del testo restituito dal server e il valore della proprietà è impostato sul valore massimo, ad esempio 2147483647.<br /><br /> Descrizione: il driver OLE DB per SQL Server esegue un'istruzione SET TEXTSIZE per limitare la lunghezza dei dati BLOB (Binary Large Object Block) restituiti in un'istruzione SELECT.|  
 |SSPROP_NOCOUNT_STATUS|Colonna: NoCount<br /><br /> L/S: Sola lettura<br /><br /> Tipo: VT_BOOL<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Descrizione: valore booleano che rappresenta lo stato di SET NOCOUNT ON/OFF in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:<br /><br /> VARIANT_TRUE: con SET NOCOUNT ON<br /><br /> VARIANT_TRUE: con SET NOCOUNT OFF|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|Colonna: nessuna<br /><br /> L/S: Lettura/Scrittura<br /><br /> Tipo: VT_BSTR (1-2000 caratteri consentiti)<br /><br /> Impostazione predefinita: stringa vuota<br /><br /> Descrizione: testo del messaggio della notifica delle query. Il testo è definito dall'utente e non ha un formato definito.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|Colonna: nessuna<br /><br /> L/S: Lettura/Scrittura<br /><br /> Tipo: VT_BSTR<br /><br /> Impostazione predefinita: stringa vuota<br /><br /> Descrizione: opzioni di notifica delle query. Tali opzioni vengono specificate in una stringa con `name=value`. L'utente è responsabile della creazione del servizio e della lettura delle notifiche all'esterno della coda. La sintassi delle opzioni delle notifiche delle query è la seguente:<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> Ad esempio<br /><br /> `service=mySSBService;local database=mydb`|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|Colonna: nessuna<br /><br /> L/S: Lettura/Scrittura<br /><br /> Tipo: VT_BSTR<br /><br /> Impostazione predefinita: stringa vuota<br /><br /> Descrizione: opzioni di notifica delle query. Tali opzioni vengono specificate in una stringa con `name=value`. L'utente è responsabile della creazione del servizio e della lettura delle notifiche all'esterno della coda. La sintassi delle opzioni delle notifiche delle query è la seguente:<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> Esempio:<br /><br /> `service=mySSBService;local database=mydb`|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|Colonna: nessuna<br /><br /> L/S: Lettura/Scrittura<br /><br /> Tipo: VT_UI4<br /><br /> Impostazione predefinita: 432000 secondi (5 giorni)<br /><br /> Valore minimo: 1 secondo<br /><br /> Valore massimo: 2^31-1 secondi<br /><br /> Descrizione: numero di secondi durante i quali la notifica delle query deve rimanere attiva.|  
   
 ## <a name="see-also"></a>Vedere anche  

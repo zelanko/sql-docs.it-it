@@ -16,13 +16,13 @@ helpviewer_keywords:
 - initialization properties [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: a2477e18f1ae9aa78d195a45f28494b4b909934d
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 6778b08e106416a009e854c3b88c3f7a13efc88a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744521"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66768581"
 ---
 # <a name="initialization-and-authorization-properties"></a>Proprietà di inizializzazione e di autorizzazione
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "56744521"
 |DBPROP_INIT_ASYNCH|Il Driver OLE DB per SQL Server supporta l'inizializzazione asincrona.<br /><br /> L'impostazione del bit DBPROPVAL_ASYNCH_INITIALIZE nella proprietà DBPROP_INIT_ASYNCH fa sì che **IDBInitialize::Initialize** diventi una chiamata non bloccante. Per altre informazioni, vedere [esecuzione di operazioni asincrone](../../oledb/features/performing-asynchronous-operations.md).|  
 |DBPROP_INIT_CATALOG|Nome di un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esistente a cui connettersi.|  
 |DBPROP_INIT_DATASOURCE|Nome di rete di un server che esegue un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se sono presenti più istanze di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in esecuzione nel computer, per connettersi a un'istanza specifica di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], il valore DBPROP_INIT_DATASOURCE deve essere specificato come *\\\NomeServer\NomeIstanza*. Per la barra rovesciata viene usata la sequenza di escape \\\.|  
-|DBPROP_INIT_GENERALTIMEOUT|Indica il numero di secondi prima dello scadere di una richiesta diversa dall'inizializzazione dell'origine dati e dall'esecuzione di comandi. Il valore 0 indica un timeout infinito. I provider che supportano connessioni di rete o scenari distribuiti o in transazioni possono utilizzare questa proprietà per indicare a un componente integrato di provocare il timeout nel caso di una richiesta con esecuzione prolungata. I timeout per l'inizializzazione dell'origine dati e l'esecuzione di comandi continuano a essere gestiti rispettivamente da DBPROP_INIT_TIMEOUT e DBPROP_COMMANDTIMEOUT.<br /><br /> Poiché la proprietà DBPROP_INIT_GENERALTIMEOUT è di sola lettura, se si tenta di impostarla viene restituito l'errore *dwstatus* di DBPROPSTATUS_NOTSETTABLE.|  
+|DBPROP_INIT_GENERALTIMEOUT|Indica il numero di secondi prima del timeout di una richiesta diversa dall'inizializzazione dell'origine dati e dall'esecuzione di comandi. Il valore 0 indica un timeout infinito. I provider che supportano connessioni di rete o scenari distribuiti o in transazioni possono usare questa proprietà per indicare a un componente integrato di attivare il timeout nel caso di una richiesta con esecuzione prolungata. I timeout per l'inizializzazione dell'origine dati e l'esecuzione di comandi continuano a essere gestiti rispettivamente da DBPROP_INIT_TIMEOUT e DBPROP_COMMANDTIMEOUT.<br /><br /> Poiché la proprietà DBPROP_INIT_GENERALTIMEOUT è di sola lettura, se si tenta di impostarla viene restituito l'errore *dwstatus* di DBPROPSTATUS_NOTSETTABLE.|  
 |DBPROP_INIT_HWND|Handle della finestra dall'applicazione chiamante. È necessario un handle valido per la finestra di dialogo di inizializzazione visualizzata quando è consentita la richiesta delle proprietà di inizializzazione.|  
 |DBPROP_INIT_IMPERSONATION_LEVEL|Il Driver OLE DB per SQL Server non supporta la modifica del livello rappresentazione.<br /><br /> Il Driver OLE DB per SQL Server restituisce DB_S_ERRORSOCCURRED se si prova a impostare il valore della proprietà. Il membro *dwStatus* della struttura DBPROP indica DBPROPSTATUS_NOTSUPPORTED.|  
 |DBPROP_INIT_LCID|Il driver OLE DB per SQL Server convalida l'ID delle impostazioni locali e restituisce un errore se tale ID non è supportato o non è installato nel client.|  
@@ -84,7 +84,7 @@ ms.locfileid: "56744521"
  Nel set di proprietà specifiche del provider DBPROPSET_SQLSERVERDATASOURCEINFO, il Driver OLE DB per SQL Server definisce le proprietà aggiuntive: visualizzare [proprietà delle informazioni di origine dati](../../oledb/ole-db-data-source-objects/data-source-information-properties.md) per altre informazioni.  
   
 ## <a name="the-ole-db-driver-for-sql-server-string"></a>Stringa del driver OLE DB per SQL Server  
- Il Driver OLE DB per SQL Server riconosce una sintassi simile a ODBC nei valori di proprietà di stringa del provider. La proprietà della stringa del provider viene fornita come valore della proprietà di inizializzazione OLE DB DBPROP_INIT_PROVIDERSTRING quando viene stabilita una connessione all'origine dati OLE DB. Questa proprietà fornisce i dati di connessione specifici del provider OLE DB necessari per implementare una connessione all'origine dati OLE DB. All'interno della stringa gli elementi sono delimitati da punto e virgola. L'elemento finale nella stringa deve terminare con un punto e virgola. Ogni elemento è costituito da una parola chiave, da un segno di uguale e dal valore passato durante l'inizializzazione. Ad esempio  
+ Il Driver OLE DB per SQL Server riconosce una sintassi simile a ODBC nei valori di proprietà di stringa del provider. La proprietà della stringa del provider viene fornita come valore della proprietà di inizializzazione OLE DB DBPROP_INIT_PROVIDERSTRING quando viene stabilita una connessione all'origine dati OLE DB. Questa proprietà fornisce i dati di connessione specifici del provider OLE DB necessari per implementare una connessione all'origine dati OLE DB. All'interno della stringa gli elementi sono delimitati da punto e virgola. L'elemento finale nella stringa deve terminare con un punto e virgola. Ogni elemento è costituito da una parola chiave, da un segno di uguale e dal valore passato durante l'inizializzazione. Esempio:  
   
 ```  
 Server=MyServer;UID=MyUserName;  

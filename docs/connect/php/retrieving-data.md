@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cbc6d4e971a810d581b8ace2de8fd7882171c460
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+manager: jroth
+ms.openlocfilehash: 85fc9956e8e88398703adf283c91517972aa7e77
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676059"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797070"
 ---
 # <a name="retrieving-data"></a>Recupero di dati
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -76,7 +76,7 @@ Per verificare il numero di righe incluse in un set di risultati, specificare un
 |[Uso dei parametri direzionali](../../connect/php/using-directional-parameters.md)|Descrive l'uso dei parametri direzionali in una chiamata a una stored procedure.|  
 |[Specifica di un tipo di cursore e selezione di righe](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|Viene illustrato come creare un set di risultati con righe cui è possibile accedere in qualsiasi ordine.|  
 |[Procedura: Recuperare i tipi di data e ora come stringhe usando il driver SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|Descrive come recuperare i tipi di data e ora come stringhe usando il driver SQLSRV.|  
-|[Procedura: Recuperare i tipi di data e ora come oggetti Datetime PHP usando il driver PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|Viene descritto come recuperare i tipi di data e ora come oggetti usando il driver PDO_SQLSRV.|  
+|[Procedura: Recuperare i tipi di data e ora come oggetti Datetime PHP usando il driver PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|Descrive come recuperare i tipi di data e ora come oggetti usando il driver PDO_SQLSRV.|  
 |[Formattazione delle stringhe decimale con il Driver SQLSRV](../../connect/php/formatting-decimals-sqlsrv-driver.md)|Di seguito viene illustrato come formattare i valori decimali o denaro usando il driver SQLSRV.|  
 |[Formattazione delle stringhe decimale con il Driver PDO_SQLSRV](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)|Di seguito viene illustrato come formattare i valori decimali o denaro usando il driver PDO_SQLSRV.|  
   

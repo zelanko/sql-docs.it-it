@@ -11,13 +11,13 @@ apitype: Assembly
 ms.assetid: 5ebdc186-e50f-4d14-bbf4-95af5051e4a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6dc7a5a5e19f7baa335055d1f6c2038b4660f721
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9c6f0ab616be75d9ccd71bd5b191fde3c76098d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642809"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66772965"
 ---
 # <a name="sqlservercallablestatement-members"></a>Membri di SQLServerCallableStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47642809"
   
 |nome|Descrizione|  
 |----------|-----------------|  
-|[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|Ereditato da SQLServerPreparedStatement. Aggiunge un set di parametri al batch di comandi per questo oggetto CallableStatement.|  
+|[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|Ereditato da [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md). Aggiunge un set di parametri al batch di comandi per questo oggetto CallableStatement.|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|Ereditato da [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md). Annulla l'istruzione SQL attualmente in esecuzione tramite questo oggetto CallableStatement.|  
 |[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md)|Ereditato da [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md). Svuota l'elenco corrente di comandi SQL per questo oggetto CallableStatement.|  
 |[clearParameters](../../../connect/jdbc/reference/clearparameters-method-sqlserverpreparedstatement.md)|Ereditato da [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md). Cancella immediatamente i valori di parametro correnti.|  
@@ -58,7 +58,7 @@ ms.locfileid: "47642809"
 |[getMaxFieldSize](../../../connect/jdbc/reference/getmaxfieldsize-method-sqlserverstatement.md)|Ereditato da [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md). Recupera il numero massimo di byte che possono essere restituiti per i valori delle colonne binarie o di tipo carattere in un oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) generato da questo oggetto CallableStatement.|  
 |[getMaxRows](../../../connect/jdbc/reference/getmaxrows-method-sqlserverstatement.md)|Ereditato da [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md). Recupera il numero massimo di righe che un oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) generato da questo oggetto CallableStatement può contenere.|  
 |[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverpreparedstatement.md)|Ereditato da [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md). Recupera una [classe SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) che contiene informazioni sulle colonne dell'oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) che saranno restituite quando viene eseguito questo oggetto CallableStatement.|  
-|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|Ereditato da SQLServerStatement. Passa al risultato successivo di questo oggetto CallableStatement.|  
+|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|Ereditato da [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md). Passa al risultato successivo di questo oggetto CallableStatement.|  
 |[getParameterMetaData](../../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md)|Ereditato da [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md). Recupera il numero, i tipi e le proprietà dei parametri di questo oggetto CallableStatement.|  
 |[getArray](../../../connect/jdbc/reference/getarray-method-sqlservercallablestatement.md)|Recupera il valore del parametro designato come oggetto Array.|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservercallablestatement.md)|Recupera il valore del parametro designato come flusso di caratteri **ASCII**.|  
