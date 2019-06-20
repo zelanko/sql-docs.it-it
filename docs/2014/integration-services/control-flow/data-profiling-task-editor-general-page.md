@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8462f85dc6c804020f12b9bc989d683c5a4ad0ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62832225"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Editor attività Profiling dati (pagina Generale)
@@ -76,7 +76,7 @@ ms.locfileid: "62832225"
  Consente di aprire il Visualizzatore profilo dati. Il Visualizzatore profilo dati autonomo visualizza l'output del profilo dei dati dall'attività Profiling dati. È possibile visualizzare l'output del profilo dei dati dopo avere eseguito l'attività Profiling dati nel pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e aver calcolato i profili dati.  
   
 > [!NOTE]  
->  È anche possibile aprire il Visualizzatore profilo dati eseguendo DataProfileViewer.exe nella cartella *\<unità>*:\Programmi (x86) | Programmi\Microsoft SQL Server\110\DTS\Binn.  
+>  È anche possibile aprire il Visualizzatore profilo dati eseguendo DataProfileViewer.exe nella cartella *\<unità>* :\Programmi (x86) | Programmi\Microsoft SQL Server\110\DTS\Binn.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Form profilo rapido singola tabella &#40;Attività Profiling dati&#41;](single-table-quick-profile-form-data-profiling-task.md)   

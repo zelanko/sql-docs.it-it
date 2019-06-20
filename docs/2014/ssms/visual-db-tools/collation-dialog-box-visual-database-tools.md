@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 28c32be0bfb42b923041169c542e21b21074cf70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62936965"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>Finestra di dialogo Confronto (Visual Database Tools)
@@ -27,7 +27,7 @@ ms.locfileid: "62936965"
   
 -   Se si specifica un nome di confronto non valido nel campo **Confronto** della scheda **Proprietà colonne** .  
   
--   Se si fa clic nel campo **Confronto** della scheda **Proprietà colonne** e sui puntini di sospensione (**...**) a destra del campo.  
+-   Se si fa clic nel campo **Confronto** della scheda **Proprietà colonne** e sui puntini di sospensione ( **...** ) a destra del campo.  
   
 ## <a name="options"></a>Opzioni  
  **Confronto SQL**  

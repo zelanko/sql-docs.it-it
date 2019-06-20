@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 910b06a5cd7af69cc668fb3054dfdfd98c3ae036
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109882"
 ---
 # <a name="choose-link-page-report-manager"></a>Pagina Scegli collegamento (Gestione report)
@@ -36,7 +36,7 @@ ms.locfileid: "66109882"
 4.  Nella scheda **Generale** nella pagina delle proprietà fare clic su **Modifica collegamento**.  
   
 ## <a name="options"></a>Opzioni  
- **Percorso**  
+ **Location**  
  Specificare il nome completo del report pubblicato, incluso il percorso. È possibile digitare il nome completo del report oppure selezionare il report da utilizzare nella visualizzazione albero.  
   
  **Visualizzazione struttura ad albero**  

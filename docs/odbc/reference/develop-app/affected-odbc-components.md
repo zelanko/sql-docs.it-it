@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72e004e6fd41ee74643fc05ec9020e6ac1933e09
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63186252"
 ---
 # <a name="affected-odbc-components"></a>Componenti ODBC interessati
 Compatibilità con le versioni precedenti viene descritto come le applicazioni, gestione Driver e i driver sono interessati dall'introduzione di una nuova versione di gestione Driver. Questo influisce sulle applicazioni e driver quando uno o entrambi gli elementi rimangono nella versione precedente. Vi sono, pertanto, tre tipi di garantire la compatibilità da prendere in considerazione, come illustrato nella tabella seguente.  
   
-|Tipo|Versione di gestione dei dispositivi|Versione dell'applicazione|Versione del driver|  
+|Type|Versione di gestione dei dispositivi|Versione dell'applicazione|Versione del driver|  
 |----------|-------------------|----------------------------|-----------------------|  
 |Garantire la compatibilità di gestione Driver|3 *.x*|2.*x*|2.*x*|  
 |Compatibilità con le versioni precedenti del Driver [1]|3 *.x*|2.*x*|3.*x*|  

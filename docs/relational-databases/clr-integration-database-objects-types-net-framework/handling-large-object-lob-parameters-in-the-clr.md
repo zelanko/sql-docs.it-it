@@ -16,15 +16,15 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6079766625633391e281b99751ba42bb772531e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62760465"
 ---
 # <a name="handling-large-object-lob-parameters-in-the-clr"></a>Gestione di parametri di tipo LOB (Large Object) in CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Uso **SqlBytes** e **SqlChars** passare LOB (large object) di tipo binario (**varbinary (max)**) e LOB di tipo carattere (**nvarchar (max)**) i parametri, rispettivamente. Questi tipi consentono di eseguire il flusso dei valori LOB dal database alla routine CLR (Common Language Runtime) anziché copiare l'intero valore nello spazio gestito. **SqlBinary** e **SqlString** deve essere usato solo per file binario di piccole dimensioni e i valori di stringa di caratteri.  
+  Uso **SqlBytes** e **SqlChars** passare LOB (large object) di tipo binario (**varbinary (max)** ) e LOB di tipo carattere (**nvarchar (max)** ) i parametri, rispettivamente. Questi tipi consentono di eseguire il flusso dei valori LOB dal database alla routine CLR (Common Language Runtime) anziché copiare l'intero valore nello spazio gestito. **SqlBinary** e **SqlString** deve essere usato solo per file binario di piccole dimensioni e i valori di stringa di caratteri.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di dati di SQL Server in .NET Framework](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  

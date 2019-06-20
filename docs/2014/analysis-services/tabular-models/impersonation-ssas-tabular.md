@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81e8f9ae90db3c7613ccb99039d70d9a28c5a113
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067056"
 ---
 # <a name="impersonation-ssas-tabular"></a>Rappresentazione (SSAS tabulare)
@@ -67,7 +67,7 @@ ms.locfileid: "66067056"
   
 |Opzione|ImpersonationMode<sup>1</sup>|Descrizione|  
 |------------|-----------------------------------|-----------------|  
-|**Nome utente di Windows specifico e la password** <sup>2</sup>|ImpersonateWindowsUserAccount|Questa opzione consente di specificare che nel modello viene utilizzato un account utente di Windows per importare o elaborare dati dall'origine dati. Il dominio e il nome dell'account utente nel formato seguente:**\<nome di dominio >\\< nome dell'account utente\>**. Si tratta dell'opzione predefinita per la creazione di un nuovo modello tramite l'Importazione guidata tabella.|  
+|**Nome utente di Windows specifico e la password** <sup>2</sup>|ImpersonateWindowsUserAccount|Questa opzione consente di specificare che nel modello viene utilizzato un account utente di Windows per importare o elaborare dati dall'origine dati. Il dominio e il nome dell'account utente nel formato seguente: **\<nome di dominio >\\< nome dell'account utente\>** . Si tratta dell'opzione predefinita per la creazione di un nuovo modello tramite l'Importazione guidata tabella.|  
 |**Account servizio**|ImpersonateServiceAccount|Questa opzione consente di specificare che nel modello vengono utilizzate le credenziali di sicurezza associate all'istanza del servizio Analysis Services tramite cui viene gestito il modello.|  
   
  <sup>1</sup>ImpersonationMode consente di specificare il valore per il [elemento DataSourceImpersonationInfo &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) proprietà dell'origine dati.  

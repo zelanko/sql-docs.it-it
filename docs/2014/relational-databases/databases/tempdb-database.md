@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62916883"
 ---
 # <a name="tempdb-database"></a>Database tempdb
@@ -70,7 +70,7 @@ ms.locfileid: "62916883"
 |ANSI_PADDING|OFF|Yes|  
 |ANSI_WARNINGS|OFF|Yes|  
 |ARITHABORT|OFF|Yes|  
-|AUTO_CLOSE|OFF|No|  
+|AUTO_CLOSE|OFF|no|  
 |AUTO_CREATE_STATISTICS|ON|Yes|  
 |AUTO_SHRINK|OFF|No|  
 |AUTO_UPDATE_STATISTICS|ON|Yes|  
@@ -79,19 +79,19 @@ ms.locfileid: "62916883"
 |CONCAT_NULL_YIELDS_NULL|OFF|Yes|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Yes|  
 |CURSOR_DEFAULT|GLOBAL|Yes|  
-|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> No<br /><br /> No|  
+|Opzioni relative alla disponibilità del database|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|no<br /><br /> No<br /><br /> no|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Yes|  
-|DB_CHAINING|ON|no|  
-|ENCRYPTION|OFF|no|  
+|DB_CHAINING|ON|No|  
+|ENCRYPTION|OFF|No|  
 |NUMERIC_ROUNDABORT|OFF|Yes|  
 |PAGE_VERIFY|CHECKSUM per nuove installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE per aggiornamenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Yes|  
 |PARAMETERIZATION|SIMPLE|Yes|  
 |QUOTED_IDENTIFIER|OFF|Yes|  
 |READ_COMMITTED_SNAPSHOT|OFF|No|  
-|RECOVERY|SIMPLE|No|  
+|RECOVERY|SIMPLE|no|  
 |RECURSIVE_TRIGGERS|OFF|Yes|  
 |Opzioni relative a Service Broker|ENABLE_BROKER|Yes|  
-|TRUSTWORTHY|OFF|No|  
+|TRUSTWORTHY|OFF|no|  
   
  Per una descrizione di queste opzioni di database, vedere [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   

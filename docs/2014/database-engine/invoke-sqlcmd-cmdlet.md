@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0079ca11eb6400b2bce524fd909acbaafd112323
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064713"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Cmdlet Invoke-Sqlcmd
@@ -91,11 +91,11 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
 ## <a name="comparing-invoke-sqlcmd-and-the-sqlcmd-utility"></a>Confronto tra Invoke-Sqlcmd e l'utilità sqlcmd  
  Il cmdlet**Invoke-Sqlcmd** può essere usato per eseguire molti degli script eseguibili tramite l'utilità **sqlcmd** . Il cmdlet **Invoke-Sqlcmd** viene tuttavia eseguito in un ambiente Windows PowerShell diverso dall'ambiente del prompt dei comandi in cui viene eseguito **sqlcmd** . Il comportamento di **Invoke-Sqlcmd** è stato modificato per l'uso in un ambiente Windows PowerShell.  
   
- Non tutti i comandi **sqlcmd** sono implementati in **Invoke-Sqlcmd**. I comandi non implementati sono: **:!!**, **:connect**, **:error**, **:out**, **:ed**, **:list**, **:listvar**, **:reset**, **:perftrace**e **:serverlist**.  
+ Non tutti i comandi **sqlcmd** sono implementati in **Invoke-Sqlcmd**. I comandi non implementati sono: **:!!** , **:connect**, **:error**, **:out**, **:ed**, **:list**, **:listvar**, **:reset**, **:perftrace**e **:serverlist**.  
   
  Il cmdlet**Invoke-Sqlcmd** non inizializza l'ambiente o le variabili di scripting di **sqlcmd** , ad esempio SQLCMDDBNAME o SQLCMDWORKSTATION.  
   
- Il cmdlet**Invoke-Sqlcmd** non visualizza i messaggi, ad esempio l'output di istruzioni PRINT, a meno che non venga specificato il parametro comune **-Verbose** di Windows PowerShell. Ad esempio:   
+ Il cmdlet**Invoke-Sqlcmd** non visualizza i messaggi, ad esempio l'output di istruzioni PRINT, a meno che non venga specificato il parametro comune **-Verbose** di Windows PowerShell. Ad esempio:  
   
 ```  
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  

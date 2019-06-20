@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58abb892f737b3f5b3c707c9e26fd44249d8e54f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105481"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Paginazione in Reporting Services (Generatore report e SSRS)
@@ -45,14 +45,14 @@ ms.locfileid: "66105481"
   
  L'area della pagina fisica disponibile in seguito all'allocazione dello spazio per margini, spaziatura delle colonne, intestazione e piè di pagina, è denominata *area utilizzabile della pagina*. I margini vengono applicati solo quando si esegue il rendering e si stampano report nei formati dei renderer di interruzioni di pagina manuali. Nell'immagine seguente sono indicati il margine e l'area utilizzabile della pagina di una pagina fisica.  
   
- ![Pagina fisica con margini e area usabile.](../media/rspagemargins.gif "Pagina fisica con margini e area usabile.")  
+ ![Pagina fisica con margini e area usabile.] (../media/rspagemargins.gif "Pagina fisica con margini e area usabile.")  
   
 ### <a name="newsletter-style-columns"></a>Colonne in formato newsletter  
  Il report può essere diviso in colonne, ad esempio le colonne di un giornale, che vengono considerate come pagine logiche di cui viene eseguito il rendering nella stessa pagina fisica. Le colonne vengono disposte da sinistra verso destra e dall'alto verso il basso e sono separate tra loro da spazi vuoti. Se il report è diviso in più colonne, ogni pagina fisica viene divisa verticalmente in colonne, ciascuna delle quali viene considerata come una pagina logica. Si supponga ad esempio che in una pagina fisica siano presenti due colonne. Il contenuto del report verrà inserito nella prima e quindi nella seconda colonna. Se le prime due colonne sono insufficienti per il contenuto del report, verranno riempite la prima e quindi la seconda colonna nella pagina successiva. Le colonne continuano a essere riempite, da sinistra verso destra e dall'alto verso il basso, finché non viene eseguito il rendering di tutti gli elementi del report. Se per le colonne si specificano dimensioni tali che la larghezza orizzontale o verticale sia uguale a zero, il valore predefinito dell'impostazione relativa alla spaziatura tra le colonne sarà uguale a zero.  
   
  Le colonne vengono specificate nella finestra di dialogo **Imposta pagina** o nel riquadro **Proprietà report** oppure modificando le proprietà TopMargin, BottomMargin, LeftMargin e RightMargin nel riquadro **Proprietà** . Se si desidera usare per i margini dimensioni non definite, è possibile specificare tali dimensioni usando le impostazioni relative alle informazioni sui dispositivi per il renderer specifico usato per esportare il report. Le colonne vengono applicate solo quando si esegue il rendering e si stampano report nei formati PDF o Immagine. Nell'immagine seguente è indicata l'area utilizzabile di una pagina contenente colonne.  
   
- ![Pagina fisica con colonne visualizzate.](../media/rspagecolumns.gif "Pagina fisica con colonne visualizzate.")  
+ ![Pagina fisica con colonne visualizzate.] (../media/rspagecolumns.gif "Pagina fisica con colonne visualizzate.")  
   
 ## <a name="page-breaks-and-page-names"></a>Interruzioni e nomi di pagina  
  La leggibilità di un report, così come il controllo e l'esportazione dei relativi dati potrebbero risultare migliori quando il report dispone di nomi di pagina. Reporting Services offre proprietà per report e aree dati Tablix (tabella, matrice ed elenco), gruppi e rettangoli nel report per controllare la paginazione, reimpostare i numeri di pagina e fornire nuovi nomi di pagina del report in base alle interruzioni di pagina. Tali caratteristiche consentono di migliorare i report indipendentemente dal formato in cui ne viene eseguito il rendering, tuttavia risultano utili soprattutto in caso di esportazione dei report nelle cartelle di lavoro di Excel.  

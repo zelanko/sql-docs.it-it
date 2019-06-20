@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62889813"
 ---
 # <a name="integration-services-ssis-logging"></a>Registrazione di Integration Services (SSIS)
@@ -96,7 +96,7 @@ ms.locfileid: "62889813"
 |Operatore|Identifica l'utente che ha avviato il pacchetto.|  
 |SourceName|Nome del contenitore o dell'attività in cui è stato generato l'evento.|  
 |SourceID|Identificatore univoco del pacchetto, contenitore Ciclo For, Ciclo Foreach o Sequenza oppure attività in cui è stato generato l'evento.|  
-|ExecutionID|GUID dell'istanza di esecuzione del pacchetto.<br /><br /> Nota: Esecuzione di un singolo pacchetto potrebbe creare voci di log con valori diversi per l'elemento ExecutionID. Ad esempio, quando si esegue un pacchetto in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], la fase di convalida potrebbe creare voci di log con un elemento ExecutionID che corrisponde a [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. La fase di esecuzione potrebbe invece creare voci di log con un elemento ExecutionID che corrisponde a dtshost.exe. Per fornire un altro esempio, quando si esegue un pacchetto che contiene attività Esegui pacchetto, ognuna di queste attività esegue un pacchetto figlio. Questi pacchetti figlio potrebbero creare voci di log con un elemento ExecutionID diverso rispetto alle voci di log create dal pacchetto.|  
+|ExecutionID|GUID dell'istanza di esecuzione del pacchetto.<br /><br /> Nota: L'esecuzione di un singolo pacchetto potrebbe creare voci di log con valori diversi per l'elemento ExecutionID. Ad esempio, quando si esegue un pacchetto in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], la fase di convalida potrebbe creare voci di log con un elemento ExecutionID che corrisponde a [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. La fase di esecuzione potrebbe invece creare voci di log con un elemento ExecutionID che corrisponde a dtshost.exe. Per fornire un altro esempio, quando si esegue un pacchetto che contiene attività Esegui pacchetto, ognuna di queste attività esegue un pacchetto figlio. Questi pacchetti figlio potrebbero creare voci di log con un elemento ExecutionID diverso rispetto alle voci di log create dal pacchetto.|  
 |MessageText|Messaggio associato alla voce di log.|  
 |DataBytes|Matrice di byte specifica della voce di log. Il significato di questo campo varia a seconda della voce di log.|  
   
@@ -113,7 +113,7 @@ ms.locfileid: "62889813"
   
  Nella tabella seguente vengono descritti gli eventi predefiniti che è possibile abilitare per scrivere voci di log quando si verificano eventi di run-time. Queste voci sono relative ai file eseguibili, al pacchetto e alle attività e ai contenitori inclusi nel pacchetto. Il nome della voce di log corrisponde al nome dell'evento di run-time che è stato generato e che ha causato la scrittura della voce.  
   
-|Eventi|Descrizione|  
+|Events|Descrizione|  
 |------------|-----------------|  
 |**OnError**|Viene inserita una voce del registro quando si verifica un errore.|  
 |**OnExecStatusChanged**|Viene scritta una voce del registro quando un'attività (non un contenitore) viene sospesa o ripresa durante il debug.|  

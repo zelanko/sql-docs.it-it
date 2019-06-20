@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d559defe1dd08f26077738cdd0aea219e8f7554b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62890546"
 ---
-# <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>Lezione 6: Utilizzo di parametri con il modello di distribuzione
+# <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>Lezione 6: Uso di parametri con il modello di distribuzione del progetto
   In SQL Server 2012 è disponibile un nuovo modello di distribuzione in cui è possibile distribuire i progetti nel server Integration Services. Il server Integration Services consente di gestire ed eseguire pacchetti e di configurare i valori di runtime per i pacchetti.  
   
  In questa lezione si modificherà il pacchetto creato nella [lezione 5: Aggiunta delle configurazioni di pacchetto per il modello di distribuzione pacchetto](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md) per utilizzare il modello di distribuzione. Sostituire il valore di configurazione con un parametro per specificare la posizione dei dati di esempio. È inoltre possibile copiare il pacchetto della lezione 5 completato incluso nell'esercitazione.  

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: bd734f9cc74a00ac3556f142ec5a6922513429da
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66712601"
 ---
 # <a name="dataspace-object-rds-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto DataSpace (Servizi Desktop remoto)
@@ -31,7 +31,7 @@ ms.locfileid: "66712601"
 ## <a name="methods"></a>Metodi  
  [Metodo CreateObject (Servizi Desktop remoto)](../../../ado/reference/rds-api/createobject-method-rds.md)  
   
-## <a name="events"></a>Eventi  
+## <a name="events"></a>Events  
  Nessuna.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e249e2e8a9bccdeddb32bf0f8302d478d08adf1e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069785"
 ---
 # <a name="select-a-measure-group-dimension-add-new-nested-table-wizard"></a>Selezione dimensione gruppo di misure (procedura guidata Aggiungi nuova tabella nidificata)

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0bc5468fed5c25b472be0bb5306b9da1b7e68eb1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068536"
 ---
 # <a name="specify-attribute-ordering-business-intelligence-wizard"></a>Impostazione ordinamento attributi (Configurazione guidata funzionalità di Business Intelligence)

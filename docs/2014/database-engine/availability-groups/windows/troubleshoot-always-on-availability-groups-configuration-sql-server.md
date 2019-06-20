@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d1756c80b86ec9b8c16792bf488cc1d3d19b590d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62813164"
 ---
 # <a name="troubleshoot-alwayson-availability-groups-configuration-sql-server"></a>Risolvere i problemi relativi alla configurazione di Gruppi di disponibilità AlwaysOn (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "62813164"
   
  **Contenuto dell'argomento:**  
   
-|Sezione|Descrizione|  
+|`Section`|Descrizione|  
 |-------------|-----------------|  
 |[Gruppi di disponibilità AlwaysOn non è abilitato](#IsHadrEnabled)|Se un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non è abilitata per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], l'istanza non supporta la creazione del gruppo di disponibilità e non è in grado di ospitare alcuna replica di disponibilità.|  
 |[Accounts](#Accounts)|Illustra i requisiti per la corretta configurazione degli account in cui viene eseguito [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
@@ -136,7 +136,7 @@ ms.locfileid: "62813164"
 |![Casella di controllo](../../media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Replica primaria corrente|Verificare che READ_ONLY_ROUTING_LIST contenga solo le istanze del server che ospitano una replica secondaria leggibile.|**Per identificare repliche secondarie leggibili:** sys.availability_replicas (colonna**secondary_role_allow_connections_desc** )<br /><br /> **Per visualizzare un elenco di routing di sola lettura:** sys.availability_read_only_routing_lists<br /><br /> **Per modificare un elenco di routing di sola lettura:** ALTER AVAILABILITY GROUP|[sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
 |![Casella di controllo](../../media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Ogni replica in read_only_routing_list|Verificare che Windows Firewall non blocchi la porta READ_ONLY_ROUTING_URL.|-|[Configurazione di Windows Firewall per l'accesso al Motore di database](../../configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |![Casella di controllo](../../media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Ogni replica in read_only_routing_list|In Gestione configurazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verificare quanto segue:<br /><br /> La connettività remota di SQL Server è abilitata.<br /><br /> TCP/IP è abilitato.<br /><br /> Gli indirizzi IP sono configurati correttamente.|-|[Visualizzare o modificare le proprietà del server &#40;SQL Server&#41;](../../configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [Configurare un server per l'attesa su una porta TCP specifica &#40;Gestione configurazione SQL Server&#41;](../../configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
-|![Casella di controllo](../../media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Ogni replica in read_only_routing_list|Verificare che READ_ONLY_ROUTING_URL (TCP<strong>://*`system-address`*:</strong>*porta*) contiene il nome corretto di dominio completo (FQDN) e il numero di porta.|-|[Calcolo di read_only_routing_url per AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
+|![Casella di controllo](../../media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Ogni replica in read_only_routing_list|Verificare che READ_ONLY_ROUTING_URL (TCP<strong>:// *`system-address`* :</strong>*porta*) contiene il nome corretto di dominio completo (FQDN) e il numero di porta.|-|[Calcolo di read_only_routing_url per AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx)<br /><br /> [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|  
 |![Casella di controllo](../../media/checkboxemptycenterxtraspacetopandright.gif "Casella di controllo")|Sistema client|Verificare che il driver client supporti il routing di sola lettura.|-|[Connettività Client AlwaysOn (SQL Server)](always-on-client-connectivity-sql-server.md)|  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  

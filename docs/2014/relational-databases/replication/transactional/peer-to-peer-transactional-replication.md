@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 133d44d233abdcffe7893ce29be5b462f4b16524
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63274363"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Replica transazionale peer-to-peer
@@ -137,7 +137,7 @@ ms.locfileid: "63274363"
   
 -   Il parametro **-SubscriptionStreams** dell'agente di distribuzione e il parametro **-MaxCmdsInTran**dell'agente di lettura log.  
   
--   Le proprietà di articolo **@destination_owner** e **@destination_table**.  
+-   Le proprietà di articolo **@destination_owner** e **@destination_table** .  
 
 -   La replica transazionale peer-to-peer non supporta la creazione di una sottoscrizione transazionale unidirezionale di una pubblicazione peer-to-peer.
   
@@ -147,7 +147,7 @@ ms.locfileid: "63274363"
   
 -   La proprietà di articolo **@replicate_ddl** richiede il valore `true`; **@identityrangemanagementoption** richiede il valore `manual`; e **@status** richiede che l'opzione **24** è impostata.  
   
--   Il valore delle proprietà di articolo **@ins_cmd**, **@del_cmd**, e **@upd_cmd** non può essere impostata su `SQL`.  
+-   Il valore delle proprietà di articolo **@ins_cmd** , **@del_cmd** , e **@upd_cmd** non può essere impostata su `SQL`.  
   
 -   La proprietà della sottoscrizione **@sync_type** richiede il valore `none` o `automatic`.  
   

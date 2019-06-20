@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4d6daa4efcd865502429dad0cc8edd498e8a94f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727558"
 ---
 # <a name="precedence-constraints"></a>Vincoli di precedenza
@@ -147,7 +147,7 @@ Utilizzare la finestra di dialogo **Editor vincoli di precedenza** per configura
   
 2.  In Esplora soluzioni fare doppio clic sul pacchetto per aprirlo.  
   
-3.  Fare clic sulla scheda **Flusso di controllo** . Nell'area di progettazione della scheda Flusso di controllo fare clic sul vincolo di precedenza con il pulsante destro del mouse e quindi scegliere **Proprietà**. Nella finestra Proprietà modificare i valori delle proprietà.  
+3.  Fare clic sulla scheda **Flusso di controllo** . Nell'area di progettazione della scheda **Flusso di controllo** fare clic sul vincolo di precedenza con il pulsante destro del mouse e quindi scegliere **Proprietà**. Nella finestra Proprietà modificare i valori delle proprietà.  
   
 4.  Nella finestra **Proprietà** impostare le proprietà di lettura/scrittura seguenti dei vincoli di precedenza:  
   

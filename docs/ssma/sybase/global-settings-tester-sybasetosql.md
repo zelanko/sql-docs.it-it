@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 5d9bf2a94146739a743fc4c310ece1d9c4642d11
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126354"
 ---
 # <a name="global-settings-tester-sybasetosql"></a>Impostazioni globali (tester) (SybaseToSQL)
@@ -30,7 +30,7 @@ Le opzioni seguenti sono disponibili per questa impostazione:
   
 1.  Yes  
   
-2.  no  
+2.  No  
   
 **Tabelle ausiliarie modalità risparmio**  
 Questa impostazione specifica come salvare le tabelle ausiliarie interne create durante l'esecuzione del test case. Per questa particolare impostazione possibile è possibile impostare le opzioni seguenti:  

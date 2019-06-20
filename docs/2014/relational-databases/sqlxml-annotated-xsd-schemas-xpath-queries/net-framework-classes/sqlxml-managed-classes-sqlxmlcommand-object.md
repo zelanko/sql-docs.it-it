@@ -31,10 +31,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d002208a83b58a4c8547bc6ce85db073ced70974
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010739"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>Oggetto SqlXmlCommand (classi gestite SQLXML)
@@ -101,7 +101,7 @@ public SqlXmlCommand(string cnString)
  Testo del comando. Questa proprietà viene utilizzata per specificare il testo del comando che si desidera eseguire. Per un esempio funzionante, vedere [l'esecuzione di query SQL &#40;classi gestite SQLXML&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
   
  CommandStream  
- Flusso del comando. Questa proprietà è utile se si desidera eseguire un comando da un file, ad esempio un modello XML. Quando si utilizza CommandStream, solo **"Template"**, **"UpdateGram"** e **"DiffGram" CommandType** sono supportati i valori. Per un esempio funzionante, vedere [l'esecuzione di file di modello tramite la proprietà CommandStream](executing-template-files-by-using-the-commandstream-property.md).  
+ Flusso del comando. Questa proprietà è utile se si desidera eseguire un comando da un file, ad esempio un modello XML. Quando si utilizza CommandStream, solo **"Template"** , **"UpdateGram"** e **"DiffGram" CommandType** sono supportati i valori. Per un esempio funzionante, vedere [l'esecuzione di file di modello tramite la proprietà CommandStream](executing-template-files-by-using-the-commandstream-property.md).  
   
  CommandType  
  Identifica il tipo di comando. Questa proprietà viene utilizzata per specificare il tipo di comando che si desidera eseguire. I valori nella tabella seguente determinano il tipo del comando. Per un esempio funzionante, vedere [l'accesso a funzionalità SQLXML nell'ambiente .NET](accessing-sqlxml-functionality-in-the-net-environment.md).  

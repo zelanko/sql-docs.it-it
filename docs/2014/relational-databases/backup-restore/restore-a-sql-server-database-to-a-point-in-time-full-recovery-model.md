@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 66393f8b48c9075c3200b1c56b8447410e143c57
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921060"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Ripristino di un database di SQL Server fino a un punto specifico all'interno di un backup (modello di recupero con registrazione completa)
@@ -74,7 +74,7 @@ ms.locfileid: "62921060"
   
     -   **Dispositivo**  
   
-         Fare clic sul pulsante Sfoglia (**...**) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . Nella casella **Tipi di supporti di backup** selezionare uno dei tipi di dispositivi elencati. Per selezionare uno o più dispositivi per la casella **Supporti di backup** , fare clic su **Aggiungi**.  
+         Fare clic sul pulsante Sfoglia ( **...** ) per aprire la finestra di dialogo **Seleziona dispositivi di backup** . Nella casella **Tipi di supporti di backup** selezionare uno dei tipi di dispositivi elencati. Per selezionare uno o più dispositivi per la casella **Supporti di backup** , fare clic su **Aggiungi**.  
   
          Dopo avere aggiunto i dispositivi desiderati nella casella di riepilogo **Dispositivi di backup** , fare clic su **OK** per tornare alla pagina **Generale** .  
   
@@ -132,7 +132,7 @@ ms.locfileid: "62921060"
   
  **Sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] di base**  
   
- RESTORE LOG *database_name* FROM < dispositivo_backup > WITH STOPAT  **= *`time`*,** ripristino...  
+ RESTORE LOG *database_name* FROM < dispositivo_backup > WITH STOPAT  **= *`time`* ,** ripristino...  
   
  Il punto di ripristino è l'ultimo commit delle transazioni che si sono verificati in corrispondenza o prima la `datetime` valore specificato da *ora*.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "62921060"
   
 3.  Ripristinare l'ultimo backup del database differenziale, se presente, senza recuperare il database (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  Applicare ogni backup del log delle transazioni nella stessa sequenza in cui sono stati creati, specificando l'ora in cui si intende arrestare il ripristino del log (RESTORE DATABASE *database_name* FROM < dispositivo_backup > WITH STOPAT **= *`time`*,** RECOVERY).  
+4.  Applicare ogni backup del log delle transazioni nella stessa sequenza in cui sono stati creati, specificando l'ora in cui si intende arrestare il ripristino del log (RESTORE DATABASE *database_name* FROM < dispositivo_backup > WITH STOPAT **= *`time`* ,** RECOVERY).  
   
     > [!NOTE]  
     >  Le opzioni RECOVERY e STOPAT. Se il backup del log delle transazioni non contiene i dati corrispondenti all'ora richiesta, ad esempio se l'ora specificata è successiva al periodo di tempo gestito dal log delle transazioni, viene generato un messaggio di avviso e il database non viene recuperato.  

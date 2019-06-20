@@ -18,10 +18,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779595"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Installare un Service Pack in un sistema con tempi di inattività minimi per database con mirroring
@@ -74,13 +74,13 @@ ms.locfileid: "62779595"
   
 1.  Se una sessione di mirroring viene eseguita in modalità a elevate prestazioni, prima di eseguire un aggiornamento in sequenza impostare la modalità operativa su protezione elevata senza failover automatico. Utilizzare una delle seguenti modalità:  
   
-    -   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: Modifica il **modalità operativa** possibilità **protezione elevata senza failover automatico (sincrona)** utilizzando il [pagina Mirroring](../relational-databases/databases/database-properties-mirroring-page.md) del **Database Proprietà** nella finestra di dialogo. Per informazioni su come accedere a questa pagina, vedere [Avvio della Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md).  
+    -   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: modificare l'opzione **Modalità operativa** e impostarla su **Protezione elevata senza failover automatico (sincrona)** usando la [pagina Mirroring](../relational-databases/databases/database-properties-mirroring-page.md) della finestra di dialogo **Proprietà database**. Per informazioni su come accedere a questa pagina, vedere [Avvio della Configurazione guidata sicurezza mirroring del database &#40;SQL Server Management Studio&#41;](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md).  
   
-    -   In [!INCLUDE[tsql](../includes/tsql-md.md)]: Impostare la sicurezza della transazione su FULL. Per altre informazioni, vedere [Modifica della protezione delle transazioni in una sessione di mirroring del database &#40;SQL Server&#41;](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
+    -   In [!INCLUDE[tsql](../includes/tsql-md.md)]: impostare la sicurezza della transazione su FULL. Per altre informazioni, vedere [Modifica della protezione delle transazioni in una sessione di mirroring del database &#40;SQL Server&#41;](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
 ### <a name="to-perform-the-rolling-update"></a>Per eseguire l'aggiornamento in sequenza  
   
-1.  Per ridurre al minimo i tempi di inattività, si consiglia quanto segue: Avviare l'aggiornamento in sequenza aggiornando qualsiasi partner di mirroring che è attualmente il server mirror in tutte le sue sessioni di mirroring. In questa fase potrebbe essere necessario aggiornare più istanze del server.  
+1.  Per ridurre al minimo i tempi di inattività, si consiglia di: Avviare l'aggiornamento in sequenza aggiornando qualsiasi partner di mirroring che è attualmente il server mirror in tutte le sue sessioni di mirroring. In questa fase potrebbe essere necessario aggiornare più istanze del server.  
   
     > [!NOTE]  
     >  Un server di controllo del mirroring può essere aggiornato in qualsiasi punto del processo di aggiornamento in sequenza. Ad esempio, se un'istanza del server è un server mirror nella sessione 1 e un server di controllo del mirroring nella sessione 2, è possibile aggiornare l'istanza del server.  
@@ -123,7 +123,7 @@ ms.locfileid: "62779595"
   
 1.  Facoltativamente, tornare alla modalità a elevate prestazioni utilizzando uno dei metodi seguenti:  
   
-    -   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: Modifica il **modalità operativa** possibilità **prestazioni elevate (asincrona)** utilizzando il [pagina Mirroring](../relational-databases/databases/database-properties-mirroring-page.md) del **le proprietà del Database**finestra di dialogo.  
+    -   In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: modificare l'opzione **Modalità operativa** e impostarla su **Prestazioni elevate (asincrona)** usando la [pagina Mirroring](../relational-databases/databases/database-properties-mirroring-page.md) della finestra di dialogo **Proprietà database**.  
   
     -   In [!INCLUDE[tsql](../includes/tsql-md.md)]: Uso [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) per la protezione delle transazioni è impostata su OFF.  
   

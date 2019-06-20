@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6e43196f5bc318630a52073e22969dc58a0e64a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079225"
 ---
 # <a name="modifying-default-table-names"></a>Modifica dei nomi predefiniti delle tabelle
@@ -33,11 +33,11 @@ ms.locfileid: "66079225"
   
      Se la finestra Proprietà rimane aperta è più facile modificare le proprietà di ogni tabella della vista origine dati. Se la finestra non viene tenuta aperta usando il pulsante **Nascondi automaticamente** , si chiuderà quando si fa clic su un altro oggetto nel riquadro **Diagramma** .  
   
-3.  Modifica il **FriendlyName** proprietà per il **FactInternetSales** oggetto *`InternetSales`*.  
+3.  Modifica il **FriendlyName** proprietà per il **FactInternetSales** oggetto *`InternetSales`* .  
   
      La modifica viene applicata quando si fa clic in un punto diverso dalla cella della proprietà **FriendlyName** . Nella lezione successiva si definirà un gruppo di misure basato su questa tabella dei fatti. Il nome della tabella dei fatti sarà InternetSales anziché FactInternetSales a causa della modifica apportata in questa lezione.  
   
-4.  Fare clic su **DimProduct** nel riquadro **Tabelle** . Nella finestra Proprietà modificare il **FriendlyName** proprietà *`Product`*.  
+4.  Fare clic su **DimProduct** nel riquadro **Tabelle** . Nella finestra Proprietà modificare il **FriendlyName** proprietà *`Product`* .  
   
 5.  Modificare la proprietà **FriendlyName** delle tabelle rimanenti nella vista origine dati allo stesso modo per rimuovere il prefisso "**Dim**".  
   

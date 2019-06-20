@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5f3c354a36f5a3a62120ecc40a815420393648c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62811545"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Configurazione del Motore di database per l'attesa su più porte TCP
@@ -74,7 +74,7 @@ ms.locfileid: "62811545"
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>Per configurare il Motore di database di SQL Server per l'attesa su una porta TCP aggiuntiva  
   
-1.  In Gestione configurazione SQL Server espandere **Configurazione di rete SQL Server** e quindi fare clic su **Protocolli per**_<nome_istanza>_.  
+1.  In Gestione configurazione SQL Server espandere **Configurazione di rete SQL Server** e quindi fare clic su **Protocolli per** _<nome_istanza>_ .  
   
 2.  Espandere **Protocolli per** _<nome_istanza>_ e quindi fare clic su **TCP/IP**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "62811545"
   
 6.  Nel riquadro di sinistra fare clic su **Servizi di SQL Server**.  
   
-7.  Nel riquadro di destra fare clic con il pulsante destro del mouse su **SQL Server**_<nome_istanza>_ e quindi scegliere **Riavvia**.  
+7.  Nel riquadro di destra fare clic con il pulsante destro del mouse su **SQL Server** _<nome_istanza>_ e quindi scegliere **Riavvia**.  
   
      Dopo il riavvio di [!INCLUDE[ssDE](../../includes/ssde-md.md)], il log degli errori conterrà l'elenco delle porte sulle quali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in attesa.  
   

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3e8b4442d8d7f6e8838d9c5bb56e4c545b6f931c
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011087"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Ripristinare i word breaker utilizzati dalla ricerca alla versione precedente
@@ -164,7 +164,7 @@ ms.locfileid: "66011087"
   
     4.  Se la lingua selezionata utilizza uno stemmer, aggiornare i dati (predefiniti) del valore di quella chiave al nome file dello stemmer precedente riportato nella tabella.  
   
-7.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\\< Radiceistanza\>\MSSearch\Language\\< language_key >**. *<language_key>* rappresenta l'abbreviazione per la lingua utilizzata nel Registro di sistema, ad esempio "fra" per il francese e "esn" per lo spagnolo.  
+7.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\\< Radiceistanza\>\MSSearch\Language\\< language_key >** . *<language_key>* rappresenta l'abbreviazione per la lingua utilizzata nel Registro di sistema, ad esempio "fra" per il francese e "esn" per lo spagnolo.  
   
 8.  Aggiornare il valore della chiave **WBreakerClass** al valore riportato nella tabella per il word breaker corrente.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "66011087"
   
     4.  Se la lingua selezionata utilizza uno stemmer, aggiornare i dati (predefiniti) del valore di quella chiave al nome file dello stemmer corrente riportato nella tabella.  
   
-5.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\\< Radiceistanza\>\MSSearch\Language\\< language_key >**. *<language_key>* rappresenta l'abbreviazione per la lingua utilizzata nel Registro di sistema, ad esempio "fra" per il francese e "esn" per lo spagnolo.  
+5.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\\< Radiceistanza\>\MSSearch\Language\\< language_key >** . *<language_key>* rappresenta l'abbreviazione per la lingua utilizzata nel Registro di sistema, ad esempio "fra" per il francese e "esn" per lo spagnolo.  
   
 6.  Aggiornare il valore della chiave **WBreakerClass** al valore riportato nella tabella per il word breaker precedente.  
   
@@ -285,7 +285,7 @@ ms.locfileid: "66011087"
   
     4.  Se la lingua selezionata utilizza uno stemmer, aggiornare i dati (predefiniti) del valore di quella chiave al nome file dello stemmer precedente riportato nella tabella.  
   
-4.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\\< Radiceistanza\>\MSSearch\Language\\< language_key >**. *<language_key>* rappresenta l'abbreviazione per la lingua utilizzata nel Registro di sistema, ad esempio "fra" per il francese e "esn" per lo spagnolo.  
+4.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\\< Radiceistanza\>\MSSearch\Language\\< language_key >** . *<language_key>* rappresenta l'abbreviazione per la lingua utilizzata nel Registro di sistema, ad esempio "fra" per il francese e "esn" per lo spagnolo.  
   
 5.  Aggiornare il valore della chiave **WBreakerClass** al valore riportato nella tabella per il word breaker corrente.  
   
@@ -309,7 +309,7 @@ ms.locfileid: "66011087"
   
     4.  Se la lingua selezionata utilizza uno stemmer, aggiornare i dati (predefiniti) del valore di quella chiave al nome file dello stemmer corrente riportato nella tabella.  
   
-4.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\\< Radiceistanza\>\MSSearch\Language\\< language_key >**. *<language_key>* rappresenta l'abbreviazione per la lingua utilizzata nel Registro di sistema, ad esempio "fra" per il francese e "esn" per lo spagnolo.  
+4.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\\< Radiceistanza\>\MSSearch\Language\\< language_key >** . *<language_key>* rappresenta l'abbreviazione per la lingua utilizzata nel Registro di sistema, ad esempio "fra" per il francese e "esn" per lo spagnolo.  
   
 5.  Aggiornare il valore della chiave **WBreakerClass** al valore riportato nella tabella per il word breaker precedente.  
   

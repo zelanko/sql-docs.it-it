@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 81d2c60f281e439b010b8ead087e13cafa91c95e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8496868bc3b5b6ee42ac4f222724e859797662a4
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67148992"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263336"
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>Lezione supplementare - Sicurezza dinamica
 
@@ -25,7 +25,7 @@ In questa lezione supplementare si crea un ruolo aggiuntivo che implementa la si
   
 Per implementare la sicurezza dinamica, è aggiungere una tabella al modello contenente i nomi degli utenti che possono connettersi al modello ed esplorare dati e oggetti modello. Il modello creato in questa esercitazione è nel contesto di Adventure Works; Tuttavia, per completare questa lezione, è necessario aggiungere una tabella contenente gli utenti del proprio dominio. Non è necessaria la password per i nomi utente aggiunti. Per creare una tabella EmployeeSecurity con un piccolo campione di utenti del proprio dominio, è usare la funzionalità Incolla e incollare i dati dei dipendenti da un foglio di calcolo di Excel. In uno scenario reale, la tabella contenente i nomi utente in genere sarebbe una tabella di un database effettivo come un'origine dati. ad esempio, una tabella DimEmployee reale.  
   
-Per implementare la sicurezza dinamica, si usano due funzioni DAX: [Funzione USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f) e [LOOKUPVALUE (DAX)-funzione](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab). Queste funzioni applicate in una formula di filtro di riga vengono definite in un nuovo ruolo. Usando la funzione LOOKUPVALUE, la formula specifica un valore dalla tabella EmployeeSecurity. La formula passa quindi che valore alla funzione USERNAME, che specifica il nome utente dell'utente connesso appartiene a questo ruolo. L'utente può quindi esplorare solo i dati specificati dai filtri di riga del ruolo. In questo scenario, si specifica che i dipendenti possono esplorare solo i dati di vendite Internet per i territori di vendita in cui sono membri.  
+Per implementare la sicurezza dinamica, si usano due funzioni DAX: [Funzione USERNAME (DAX)](/dax/username-function-dax) e [LOOKUPVALUE (DAX)-funzione](/dax/lookupvalue-function-dax). Queste funzioni applicate in una formula di filtro di riga vengono definite in un nuovo ruolo. Usando la funzione LOOKUPVALUE, la formula specifica un valore dalla tabella EmployeeSecurity. La formula passa quindi che valore alla funzione USERNAME, che specifica il nome utente dell'utente connesso appartiene a questo ruolo. L'utente può quindi esplorare solo i dati specificati dai filtri di riga del ruolo. In questo scenario, si specifica che i dipendenti possono esplorare solo i dati di vendite Internet per i territori di vendita in cui sono membri.  
   
 Le attività che sono specifiche di questo scenario di modello tabulare Adventure Works, ma che potrebbero non applicarsi necessariamente a uno scenario realistico, vengono identificate come tali. Ogni attività include informazioni aggiuntive che descrivono lo scopo dell'attività.  
   
@@ -188,6 +188,6 @@ In questa attività si userà l'analizza nella funzionalità di Excel in SSDT pe
   
 ## <a name="see-also"></a>Vedere anche  
 
-[Funzione USERNAME (DAX)](https://msdn.microsoft.com/library/hh230954.aspx)  
-[Funzione LOOKUPVALUE (DAX)](https://msdn.microsoft.com/library/gg492170.aspx)  
-[Funzione CUSTOMDATA (DAX)](https://msdn.microsoft.com/library/hh213140.aspx)  
+[Funzione USERNAME (DAX)](/dax/username-function-dax)  
+[Funzione LOOKUPVALUE (DAX)](/dax/lookupvalue-function-dax)  
+[Funzione CUSTOMDATA (DAX)](/dax/customdata-function-dax)  

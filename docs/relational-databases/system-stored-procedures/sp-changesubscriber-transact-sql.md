@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1f31a00e0c42bc56dffac191ff9a934bb77b95df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997810"
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
@@ -63,7 +63,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @login = ] 'login'` È il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID di accesso di autenticazione. *login* è di tipo **sysname** e il valore predefinito è NULL.  
   
-`[ @password = ] 'password'` È il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] password per l'autenticazione. *la password* viene **sysname**, il valore predefinito è **%**. **%** indica che nessuna modifica per la proprietà della password.  
+`[ @password = ] 'password'` È il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] password per l'autenticazione. *la password* viene **sysname**, il valore predefinito è **%** . **%** indica che nessuna modifica per la proprietà della password.  
   
 `[ @commit_batch_size = ] commit_batch_size` Supportato solo per la compatibilità.  
   

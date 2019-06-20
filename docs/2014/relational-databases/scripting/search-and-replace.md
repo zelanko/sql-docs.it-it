@@ -29,14 +29,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cce96567d465c4b0c10741ac8a10b08902405368
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090196"
 ---
 # <a name="search-and-replace"></a>Ricerca e sostituzione
-  È possibile eseguire ricerche e sostituzioni di testo in diversi modi. Nel **Edit** dal menu **Trova e sostituisci** offre quattro scelte: **Ricerca veloce**, **Sostituzione veloce**, **Cerca nei file**, oppure **Sostituisci nei file**. L'aspetto della finestra di dialogo **Trova e sostituisci** cambia in base all'opzione selezionata. È inoltre possibile eseguire ricerche senza una finestra di dialogo, utilizzando i tasti di scelta rapida per la ricerca incrementale. Queste tecniche consentono di controllare l'ambito di ricerca e sostituzione e di scegliere il metodo di analisi dei risultati.  
+  È possibile eseguire ricerche e sostituzioni di testo in diversi modi. Nel menu **Modifica** la voce **Trova e sostituisci** offre quattro opzioni: **Ricerca veloce**, **Sostituzione veloce**, **Cerca nei file** o **Sostituisci nei file**. L'aspetto della finestra di dialogo **Trova e sostituisci** cambia in base all'opzione selezionata. È inoltre possibile eseguire ricerche senza una finestra di dialogo, utilizzando i tasti di scelta rapida per la ricerca incrementale. Queste tecniche consentono di controllare l'ambito di ricerca e sostituzione e di scegliere il metodo di analisi dei risultati.  
   
  Al momento della ricerca e sostituzione di un testo, è consigliabile tenere presente quanto segue:  
   

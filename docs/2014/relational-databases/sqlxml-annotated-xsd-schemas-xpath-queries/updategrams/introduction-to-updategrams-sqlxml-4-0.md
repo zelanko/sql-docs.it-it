@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 114bc96623b608cfbb520a9d2f35f23a04310a74
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014796"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Introduzione sugli updategram (SQLXML 4.0)
@@ -40,10 +40,10 @@ ms.locfileid: "66014796"
 >  In questa documentazione si presuppone che l'utente disponga di una certa familiarità con i modelli e il supporto dello schema di mapping in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Introduzione agli schemi XSD con annotazioni &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Per le applicazioni legacy che utilizzano XDR, vedere [schemi XDR con annotazioni &#40;deprecato in SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="required-namespaces-in-the-updategram"></a>Spazi dei nomi necessari nell'updategram  
- Le parole chiave in un updategram, ad esempio  **\<sincronizzazione >**,  **\<prima >**, e  **\<dopo >**, esiste la `urn:schemas-microsoft-com:xml-updategram`dello spazio dei nomi. Il prefisso dello spazio dei nomi utilizzato è arbitrario. In questa documentazione il prefisso `updg` indica lo spazio dei nomi `updategram`.  
+ Le parole chiave in un updategram, ad esempio  **\<sincronizzazione >** ,  **\<prima >** , e  **\<dopo >** , esiste la `urn:schemas-microsoft-com:xml-updategram`dello spazio dei nomi. Il prefisso dello spazio dei nomi utilizzato è arbitrario. In questa documentazione il prefisso `updg` indica lo spazio dei nomi `updategram`.  
   
 ## <a name="reviewing-syntax"></a>Esame della sintassi  
- Un updategram è un modello con  **\<sincronizzazione >**,  **\<prima >**, e  **\<dopo >** blocchi che costituiscono la sintassi del Updategram. Tale sintassi, nella sua forma più semplice, viene illustrata nel codice seguente:  
+ Un updategram è un modello con  **\<sincronizzazione >** ,  **\<prima >** , e  **\<dopo >** blocchi che costituiscono la sintassi del Updategram. Tale sintassi, nella sua forma più semplice, viene illustrata nel codice seguente:  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

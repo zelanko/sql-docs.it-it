@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e107660073716019f48def8578a424ead92abf32
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768637"
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>Metodi di runtime di un componente del flusso di dati
@@ -56,7 +56,7 @@ ms.locfileid: "62768637"
 ### <a name="primeoutput-method"></a>Metodo PrimeOutput  
  Il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100.PrimeOutput%2A> viene chiamato quando un componente include almeno un output, connesso a un componente a valle tramite un oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100>, la cui proprietà <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> è zero. Il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100.PrimeOutput%2A> viene chiamato per i componenti di origine e per le trasformazioni con output asincroni. A differenza del metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> descritto di seguito, il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> viene chiamato una sola volta per ogni componente che lo richiede.  
   
-### <a name="processinput-method"></a>Metodo ProcessInput   
+### <a name="processinput-method"></a>Metodo ProcessInput  
  Il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100.ProcessInput%2A> viene chiamato per i componenti che includono almeno un input connesso a un componente a monte tramite un oggetto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100>. Il metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100.ProcessInput%2A> viene chiamato per i componenti di destinazione e per le trasformazioni con output sincroni. <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> viene chiamato ripetutamente finché non sono più disponibili righe da elaborare dei componenti a monte.  
   
 ## <a name="working-with-inputs-and-outputs"></a>Utilizzo di input e output  

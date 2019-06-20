@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d12bf6f0e002b1f06bc96ff97608f88bd305b34b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960806"
 ---
 # <a name="oledb-dataread-event-class"></a>OLEDB DataRead - classe di evento
@@ -38,7 +38,7 @@ ms.locfileid: "62960806"
 |EndTime|`datetime`|Ora di fine dell'evento.|15|Yes|  
 |Errore|`int`|Numero di errore di un evento specifico. Corrisponde spesso al numero di errore archiviato nella vista del catalogo sys.messages.|31|Yes|  
 |EventClass|`int`|Tipo di evento = 121.|27|No|  
-|EventSequence|`int`|Sequenza della classe di evento OLE DB nel batch.|51|no|  
+|EventSequence|`int`|Sequenza della classe di evento OLE DB nel batch.|51|No|  
 |EventSubClass|`int`|Tipo di sottoclasse di evento.<br /><br /> 0=Avvio in corso<br /><br /> 1=Completato|21|no|  
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  
 |HostName|`nvarchar`|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  
@@ -54,7 +54,7 @@ ms.locfileid: "62960806"
 |SessionLoginName|`nvarchar`|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se ad esempio si stabilisce la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, SessionLoginName indica Login1 e LoginName indica Login2. In questa colonna sono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Yes|  
 |SPID|`Int`|ID della sessione in cui si è verificato l'evento.|12|Yes|  
 |StartTime|`datetime`|Ora di inizio dell'evento, se disponibile.|14|Yes|  
-|TextData|`nvarchar`|Parametri inviati e ricevuti nella chiamata OLE DB.|1|No|  
+|TextData|`nvarchar`|Parametri inviati e ricevuti nella chiamata OLE DB.|1|no|  
 |TransactionID|`bigint`|ID della transazione assegnato dal sistema.|4|Yes|  
   
 ## <a name="see-also"></a>Vedere anche  

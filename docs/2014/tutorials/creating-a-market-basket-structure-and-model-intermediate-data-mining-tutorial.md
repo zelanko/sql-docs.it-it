@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63190822"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>Creazione di una struttura e di un modello Market Basket (Esercitazione intermedia sul data mining)
@@ -31,7 +31,7 @@ ms.locfileid: "63190822"
   
 3.  Nel **Selezione metodo di definizione** verificare che **da esistenti database relazionale o data warehouse** sia selezionata e quindi fare clic su **Next**.  
   
-4.  Nel **creare la struttura di Data Mining** nella pagina **tecnica di data mining si desidera utilizzare?**, selezionare **Microsoft Association Rules** dall'elenco, quindi fare clic su **Successivo**. Il **selezione vista origine dati** verrà visualizzata la pagina.  
+4.  Nel **creare la struttura di Data Mining** nella pagina **tecnica di data mining si desidera utilizzare?** , selezionare **Microsoft Association Rules** dall'elenco, quindi fare clic su **Successivo**. Il **selezione vista origine dati** verrà visualizzata la pagina.  
   
 5.  Selezionare **ordini**sotto **viste origine dati disponibili**, quindi fare clic su **Avanti**.  
   

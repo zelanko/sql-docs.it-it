@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b25921a7b48ecd818527dd95ebc2d8714cb6871d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63187065"
 ---
 # <a name="sqlps-utility"></a>sqlps - utilità
@@ -69,9 +69,9 @@ ms.locfileid: "63187065"
  Specifica un blocco di comandi di PowerShell da eseguire. Il blocco deve essere incluso tra parentesi graffe: {}. *Script_block* può essere specificato solo quando il `sqlps` utilità viene chiamata da **PowerShell** o un altro `sqlps` sessione dell'utilità. *argument_array* è una matrice di variabili PowerShell che contiene gli argomenti per i comandi di PowerShell in *script_block*.  
   
  *string* [ *command_parameters* ]  
- Specifica una stringa che contiene i comandi di PowerShell da eseguire. Usare il formato **"& {*`command`*}"**. Le virgolette indicano una stringa e la richiamata operatore (&) cause il `sqlps` utilità per eseguire il comando.  
+ Specifica una stringa che contiene i comandi di PowerShell da eseguire. Usare il formato **"& { *`command`* }"** . Le virgolette indicano una stringa e la richiamata operatore (&) cause il `sqlps` utilità per eseguire il comando.  
   
- [ **-?** | **-Help** ]  
+ [ **-?** |  **-Help** ]  
  Visualizza il riepilogo della sintassi delle opzioni dell'utilità `sqlps`.  
   
 ## <a name="remarks"></a>Note  

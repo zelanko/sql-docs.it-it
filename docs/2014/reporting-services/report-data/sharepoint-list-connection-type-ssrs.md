@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cfa09322af5b4838ccdc2bb9dc85d13a412bc359
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107075"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo di connessione dell'elenco SharePoint (SSRS)
@@ -50,7 +50,7 @@ ms.locfileid: "66107075"
 ||Credenziali supportate|Autenticazione di Windows in modalità classica|<sup>3</sup> autenticazione delle attestazioni|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |Elenco SharePoint di una farm locale|Autenticazione di Windows (integrata) o token utente di SharePoint|Yes|Yes|  
-||Archiviate, su richiesta, nessuna (con le credenziali di Windows<sup>1</sup>)|no|No|  
+||Archiviate, su richiesta, nessuna (con le credenziali di Windows<sup>1</sup>)|No|No|  
 |Elenco SharePoint remoto|Autenticazione di Windows (integrata) o token utente di SharePoint|Yes|No<sup>2</sup>|  
 ||Archiviate, su richiesta, nessuna (con le credenziali di Windows<sup>1</sup>)|No|No<sup>2</sup>|  
   

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6af4597a4ddf802c80bc98cb38363d59348fa0bb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810051"
 ---
 # <a name="prevent-automatic-startup-of-an-instance-of-sql-server-sql-server-configuration-manager"></a>Impedire l'avvio automatico di un'istanza di SQL Server (Gestione configurazione SQL Server)
@@ -37,9 +37,9 @@ ms.locfileid: "62810051"
   
 3.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **MSSQLServer**quindi scegliere **Proprietà**.  
   
-4.  Nella finestra di dialogo **SQL Server \<**_nomeistanza_**> Proprietà** in **Proprietà** impostare il valore di **Modalità di avvio** su **Manuale**.  
+4.  Nella finestra di dialogo **SQL Server \<** _nomeistanza_ **> Proprietà** in **Proprietà** impostare il valore di **Modalità di avvio** su **Manuale**.  
   
-5.  Fare clic su **OK** per chiudere la finestra di dialogo**SQL Server \<**_nomeistanza_**> Proprietà** e quindi chiudere Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+5.  Fare clic su **OK** per chiudere la finestra di dialogo**SQL Server \<** _nomeistanza_ **> Proprietà** e quindi chiudere Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
  [Avviare, arrestare, sospendere, riprendere, riavviare il motore di database, SQL Server Agent o SQL Server Browser](start-stop-pause-resume-restart-sql-server-services.md)  
