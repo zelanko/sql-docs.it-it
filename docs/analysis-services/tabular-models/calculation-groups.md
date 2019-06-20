@@ -1,6 +1,6 @@
 ---
 title: I gruppi di calcolo nei modelli tabulari di Analysis Services | Microsoft Docs
-ms.date: 06/09/2019
+ms.date: 06/17/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: abc1f51d21613676fd94271f931e1a7692cc1efc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6dfe3516a36fa0ee6e8644b46b5caeb2a7cca92b
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822698"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263443"
 ---
 # <a name="calculation-groups-preview"></a>Gruppi di calcolo (anteprima)
  
@@ -64,7 +64,7 @@ Prima di analizzare i dettagli, è possibile introdurre alcune nuove funzioni DA
 
 [ISSELECTEDMEASURE](https://docs.microsoft.com/dax/isselectedmeasure-function-dax) : utilizzate dalle espressioni per elementi di calcolo determinare la misura che si trova nel contesto è specificata in un elenco delle misure.
 
-[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasurefromatstring-function-dax) : utilizzate dalle espressioni per elementi di calcolo recuperare la stringa di formato della misura che si trova nel contesto.
+[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) : utilizzate dalle espressioni per elementi di calcolo recuperare la stringa di formato della misura che si trova nel contesto.
 
 ### <a name="time-intelligence-example"></a>Esempio di Intelligence tempo
 
@@ -195,11 +195,11 @@ I modelli tabulari supportano la formattazione dinamica delle misure tramite DAX
 
 ### <a name="dynamic-format-strings-for-time-intelligence"></a>Stringhe di formato dinamico per business intelligence
 
-Se si esamina l'esempio di Intelligence ora illustrato in precedenza, tutto il calcolo degli elementi tranne **YOY %** deve utilizzare il formato della misura corrente nel contesto. Ad esempio, **YTD** calcolato sulla misura Sales base deve essere valuta. Se si trattasse di un gruppo di calcolo per simile a una misura di base di ordini, il formato è numerico. **YOY %** , tuttavia, deve essere una percentuale indipendentemente dal formato della misura di base.
+Se si esamina l'esempio di Intelligence ora illustrato in precedenza, tutto il calcolo degli elementi tranne **YOY %** deve utilizzare il formato della misura corrente nel contesto. Ad esempio, **YTD** calcolato sulla misura Sales base deve essere valuta. Se si trattasse di un gruppo di calcolo per simile a una misura di base di ordini, il formato è numerico. **YOY %**, tuttavia, deve essere una percentuale indipendentemente dal formato della misura di base.
 
-Per la **YOY %** , è possibile ignorare la stringa di formato impostando la proprietà di espressione di stringa di formato **0,00%;-0.00%; % 0,00**. Per altre informazioni sulle proprietà dell'espressione stringa di formato, vedere [proprietà delle celle MDX - contenuti di stringa di formato](../multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md#numeric-values).
+Per la **YOY %**, è possibile ignorare la stringa di formato impostando la proprietà di espressione di stringa di formato **0,00%;-0.00%; % 0,00**. Per altre informazioni sulle proprietà dell'espressione stringa di formato, vedere [proprietà delle celle MDX - contenuti di stringa di formato](../multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md#numeric-values).
 
-In questo oggetto visivo matrice in Power BI, vedrai **vendite corrente/YOY** e **ordini corrente/YOY** mantengono le relative stringhe di formato di misura di base corrispondente. **Vendite YOY %** e **Ordina YOY %** , tuttavia, sostituisce la stringa di formato da utilizzare *percentuale* formato.
+In questo oggetto visivo matrice in Power BI, vedrai **vendite corrente/YOY** e **ordini corrente/YOY** mantengono le relative stringhe di formato di misura di base corrispondente. **Vendite YOY %** e **Ordina YOY %**, tuttavia, sostituisce la stringa di formato da utilizzare *percentuale* formato.
 
 ![Intelligence ora nell'oggetto visivo matrice](media/calculation-groups/calc-groups-dynamicstring-timeintel.png)
 
@@ -251,7 +251,7 @@ SELECTEDVALUE(
     SELECTEDMEASUREFORMATSTRING()
 )
 ```
-L'espressione di stringa di formato deve restituire una stringa scalare. Viene utilizzato il nuovo [SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasurefromatstring-function-dax) funzione per ripristinare la stringa di formato della misura di base se sono presenti più valute in contesto di filtro.
+L'espressione di stringa di formato deve restituire una stringa scalare. Viene utilizzato il nuovo [SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) funzione per ripristinare la stringa di formato della misura di base se sono presenti più valute in contesto di filtro.
 
 L'animazione seguente mostra la conversione di valuta formato dinamico del **Sales** misure in un report.
 
@@ -407,8 +407,6 @@ I gruppi di calcolo non sono ancora supportati in SQL Server Data Tools, Visual 
 [Sicurezza a livello dell'oggetto](object-level-security.md) (amministrazione) definiti nel calcolo tabelle del gruppo non è supportato. Tuttavia, amministrazione può essere definito in altre tabelle nello stesso modello. Se un elemento di calcolo fa riferimento a un oggetto protetto di amministrazione, viene restituito un errore generico.
 
 [Sicurezza a livello di riga](roles-ssas-tabular.md#bkmk_rowfliters) (RLS) non è supportato. È possibile definire a livello di riga nelle tabelle nel modello stesso, ma non su stessi gruppi di calcolo (direttamente o indirettamente).
-
-[Le espressioni di righe di dettaglio](../tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md) non sono supportate con gruppi di calcolo.
 
 ## <a name="see-also"></a>Vedere anche  
 

@@ -16,10 +16,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 45b13c29af6a9c5e82533a4b66213d1cb1b9dd15
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62787759"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>Modifiche di rilievo alla ricerca full-text
@@ -38,7 +38,7 @@ ms.locfileid: "62787759"
   
 |Funzionalità|Scenario|SQL Server 2005|SQL Server 2008 e versioni successive|  
 |-------------|--------------|---------------------|----------------------------------------|  
-|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) con tipi definiti dall'utente (UDT)|La chiave full-text è un tipo definito dall'utente (UDT) di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ad esempio `MyType = char(1)`.|La chiave restituita è del tipo assegnato al tipo definito dall'utente (UDT).<br /><br /> Nell'esempio, si tratterà **char (1)**.|La chiave restituita è del tipo definito dall'utente (UDT). Nell'esempio, si tratterà **MyType**.|  
+|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) con tipi definiti dall'utente (UDT)|La chiave full-text è un tipo definito dall'utente (UDT) di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ad esempio `MyType = char(1)`.|La chiave restituita è del tipo assegnato al tipo definito dall'utente (UDT).<br /><br /> Nell'esempio, si tratterà **char (1)** .|La chiave restituita è del tipo definito dall'utente (UDT). Nell'esempio, si tratterà **MyType**.|  
 |*top_n_by_rank* parametro (di CONTAINSTABLE e [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) [!INCLUDE[tsql](../includes/tsql-md.md)] istruzioni)|*top_n_by_rank* le query che utilizzano 0 come parametro.|Ha esito negativo e viene restituito un messaggio di errore indicante che è necessario utilizzare un valore maggiore di zero.|Ha esito positivo e vengono restituite zero righe.|  
 |Le funzioni CONTAINSTABLE e **ItemCount**|Eliminare righe dalla tabella di base prima che vengano inserite modifiche in MSSearch.|Viene restituito un record fantasma da CONTAINSTABLE. **ItemCount** non viene modificato.|Non viene restituito alcun record fantasma da CONTAINSTABLE.|  
 |**ItemCount**|Nella tabella sono contenuti documenti o colonne del tipo Null.|Oltre ai documenti indicizzati, vengono contati i documenti che sono null o che hanno tipi null per il **ItemCount** valore.|Vengono contati solo i documenti indicizzati per la **ItemCount** valore.|  

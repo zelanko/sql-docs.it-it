@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef5fd5e081804abf27ede8d0cd7ad65f888b870c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078472"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Definizione di una relazione molti-a-molti
@@ -49,7 +49,7 @@ ms.locfileid: "66078472"
   
 7.  Nella finestra Proprietà modificare il **FriendlyName** proprietà delle **DimSalesReason** alla tabella `SalesReason`e quindi modificare la **FriendlyName** proprietà del **FactInternetSalesReason** alla tabella `InternetSalesReason`.  
   
-8.  Nel riquadro **Tabelle** espandere **InternetSalesReason (dbo.FactInternetSalesReason)**, fare clic su **SalesOrderNumber**e quindi controllare la proprietà **DataType** per questa colonna dati nella finestra Proprietà.  
+8.  Nel riquadro **Tabelle** espandere **InternetSalesReason (dbo.FactInternetSalesReason)** , fare clic su **SalesOrderNumber**e quindi controllare la proprietà **DataType** per questa colonna dati nella finestra Proprietà.  
   
      Si noti che la colonna **SalesOrderNumber** è di tipo stringa.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "66078472"
   
      Si noti che la dimensione **Sales Reason** ha una relazione di tipo Regolare definita con il gruppo di misure **Internet Sales Reason** ma nessuna relazione definita con i gruppi di misure **Internet Sales** o **Reseller Sales** . Si noti inoltre che la dimensione **Internet Sales Order Details** ha una relazione di tipo Regolare definita con la dimensione **Internet Sales Reason** , la quale a sua volta ha una **relazione di tipo Fatti** con il gruppo di misure **Internet Sales** . Se questa dimensione non è presente oppure manca un'altra dimensione con una relazione con entrambi i gruppi di misure **Internet Sales Reason** e **Internet Sales** , non sarà possibile definire la relazione molti-a-molti.  
   
-2.  Fare clic sulla cella nel punto di intersezione tra il gruppo di misure **Internet Sales** e la dimensione **Sales Reason** e quindi fare clic sul pulsante con i puntini di sospensione (**...**).  
+2.  Fare clic sulla cella nel punto di intersezione tra il gruppo di misure **Internet Sales** e la dimensione **Sales Reason** e quindi fare clic sul pulsante con i puntini di sospensione ( **...** ).  
   
 3.  Nella finestra di dialogo **Definisci relazione** selezionare **Molti-a-molti** nell'elenco **Selezionare il tipo di relazione** .  
   

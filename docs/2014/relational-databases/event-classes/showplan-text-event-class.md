@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6108a35d3f1c51f4d3dedbcf673be1d837091b71
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62692070"
 ---
 # <a name="showplan-text-event-class"></a>Showplan Text - classe di evento
@@ -43,7 +43,7 @@ ms.locfileid: "62692070"
 |Integer Data|`integer`|Numero stimato di righe restituite.|25|Yes|  
 |IsSystem|`int`|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Yes|  
 |LineNumber|`int`|Visualizza il numero della riga contenente l'errore.|5|Yes|  
-|Login SID|`bitmap`|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo sys.server_principals. Il SID è univoco per ogni account di accesso nel server.|41|no|  
+|Login SID|`bitmap`|ID di sicurezza (SID) dell'utente connesso. Queste informazioni sono disponibili nella vista del catalogo sys.server_principals. Il SID è univoco per ogni account di accesso nel server.|41|No|  
 |LoginName|`nvarchar`|Nome dell'account di accesso dell'utente (account di accesso di sicurezza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenziali di accesso di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows nel formato DOMINIO\nomeutente).|11|Yes|  
 |NestLevel|`int`|Valore intero che rappresenta i dati restituiti da @@NESTLEVEL.|29|Yes|  
 |NTDomainName|`nvarchar`|Dominio Windows di appartenenza dell'utente.|7|Yes|  

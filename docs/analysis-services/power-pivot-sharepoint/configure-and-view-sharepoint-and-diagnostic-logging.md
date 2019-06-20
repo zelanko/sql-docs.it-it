@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2df09cb9bf167c0af28c240ff69f8666cce01a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62988646"
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Configurare e visualizzare la registrazione diagnostica e SharePoint
@@ -46,7 +46,7 @@ ms.locfileid: "62988646"
   
 2.  Fare clic su **Configura registrazione diagnostica**.  
   
-3.  Scorrere fino a **Servizio [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]**.  
+3.  Scorrere fino a **Servizio [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]** .  
   
 4.  Espandere la categoria e selezionare le singole categorie.  
   
@@ -116,13 +116,13 @@ ms.locfileid: "62988646"
 #### <a name="entries-for-power-pivot-services"></a>Voci per i servizi Power Pivot  
  Nella tabella seguente sono descritte le voci per le operazioni server [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] che più probabilmente si trovano in file di log di SharePoint.  
   
-|Process|Area|Category|Level|Message|Dettagli|  
+|Process|Area|Category|Level|`Message`|Dettagli|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
-|w3wp.exe|Servizio[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] |Uso|Dettagliato|Non sono disponibili statistiche sulle richieste, nulla da registrare.|A intervalli predefiniti, il servizio riporta le statistiche sulle risposte alle query come evento di utilizzo nel sistema di raccolta dei dati di utilizzo. Questo messaggio indica che non ci sono statistiche sulle query da riportare.|  
+|w3wp.exe|Servizio[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]|Uso|Dettagliato|Non sono disponibili statistiche sulle richieste, nulla da registrare.|A intervalli predefiniti, il servizio riporta le statistiche sulle risposte alle query come evento di utilizzo nel sistema di raccolta dei dati di utilizzo. Questo messaggio indica che non ci sono statistiche sulle query da riportare.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Servizio|Front-end Web|Dettagliato|Avvio individuazione server applicazioni per l'origine dati =\<*percorso*>|Quando riceve una richiesta di connessione, il servizio [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] identifica un [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] disponibile per gestire la richiesta. Se è presente un solo server nella farm, il server locale accetta la richiesta in tutti i casi.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Servizio|Front-end Web|Dettagliato|Individuazione del server applicazioni riuscita.|La richiesta è stata allocata a un'applicazione di servizio [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Servizio|Front-end Web|Dettagliato|Reindirizzamento della richiesta per il \< *origine dati PowerPivot*> per il [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|La richiesta è stata inoltrata a [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|  
-|w3wp.exe|Servizio[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] |Elaborazione delle richieste|Dettagliato|Reindirizzamento della richiesta per nomeutente\<*utente SharePoint*> al database|Una connessione rappresentata all'origine dati [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] è stata creata per conto dell'utente SharePoint.|  
+|w3wp.exe|Servizio[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]|Elaborazione delle richieste|Dettagliato|Reindirizzamento della richiesta per nomeutente\<*utente SharePoint*> al database|Una connessione rappresentata all'origine dati [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] è stata creata per conto dell'utente SharePoint.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta dati di utilizzo di PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)   

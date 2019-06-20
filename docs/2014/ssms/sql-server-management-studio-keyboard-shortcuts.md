@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127038"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Tasti di scelta rapida di SQL Server Management Studio
@@ -42,7 +42,7 @@ ms.locfileid: "63127038"
 |Visualizzare il menu di scelta rapida|MAIUSC+F10|MAIUSC+F10|  
 |Visualizzare la finestra di dialogo **Nuovo file** per creare un file|CTRL+N|CTRL+N|  
 |Visualizzare la finestra di dialogo **Nuovo progetto** per creare un nuovo progetto|CTRL+MAIUSC+N|CTRL+MAIUSC+N|  
-|Visualizzare la finestra di dialogo **Apri file** per aprire un file esistente|CTRL+O<br /><br /> o Gestione configurazione<br /><br /> CTRL+MAIUSC+G|CTRL+O|  
+|Visualizzare la finestra di dialogo **Apri file** per aprire un file esistente|CTRL+O<br /><br /> oppure<br /><br /> CTRL+MAIUSC+G|CTRL+O|  
 |Visualizzare la finestra di dialogo **Apri progetto** per aprire un progetto esistente|CTRL+MAIUSC+O|CTRL+MAIUSC+O|  
 |Visualizzare la finestra di dialogo **Aggiungi nuovo elemento** per aggiungere un nuovo file al progetto corrente|CTRL+MAIUSC+A|CTRL+MAIUSC+A|  
 |Visualizzare la finestra di dialogo **Aggiungi elemento esistente** per aggiungere un file esistente al progetto corrente|MAIUSC+ALT+A|MAIUSC+ALT+A|  
@@ -65,10 +65,10 @@ ms.locfileid: "63127038"
 |Spostare il punto di inserimento nella barra a discesa posta in alto nell'editor di codice quando l'editor si trova nella visualizzazione Codice o nella visualizzazione Codice server|CTRL+F2|Nessun equivalente|  
 |Portarsi sulla barra degli strumenti della finestra degli strumenti corrente|MAIUSC+ALT|MAIUSC+ALT|  
 |Visualizzare lo strumento di navigazione dell'IDE con la prima finestra degli strumenti selezionata|ALT+F7|Nessun equivalente|  
-|Portarsi sulla finestra degli strumenti successiva|ALT+F6<br /><br /> o Gestione configurazione<br /><br /> F6 nell'editor di query del [!INCLUDE[ssDE](../includes/ssde-md.md)]|ALT+F6|  
+|Portarsi sulla finestra degli strumenti successiva|ALT+F6<br /><br /> oppure<br /><br /> F6 nell'editor di query del [!INCLUDE[ssDE](../includes/ssde-md.md)]|ALT+F6|  
 |Portarsi sulla finestra degli strumenti precedente|MAIUSC+ALT+F7|MAIUSC+ALT+F7|  
 |Portarsi sul riquadro successivo di una visualizzazione a riquadri di un singolo documento|F6|F6|  
-|Portarsi sulla finestra selezionata in precedenza|MAIUSC+ALT+F6<br /><br /> o Gestione configurazione<br /><br /> MAIUSC+F6 nell'editor di query del [!INCLUDE[ssDE](../includes/ssde-md.md)]|MAIUSC+ALT+F6|  
+|Portarsi sulla finestra selezionata in precedenza|MAIUSC+ALT+F6<br /><br /> oppure<br /><br /> MAIUSC+F6 nell'editor di query del [!INCLUDE[ssDE](../includes/ssde-md.md)]|MAIUSC+ALT+F6|  
 |Portarsi sul riquadro precedente di una visualizzazione a riquadri di un singolo documento|MAIUSC+F6|F6|  
 |Visualizzare il menu ancoraggio|ALT+SEGNO MENO|Nessun equivalente|  
 |Visualizzare un menu popup di tutte le finestre aperte|CTRL+ALT+FRECCIA GIÙ|Nessun equivalente|  
@@ -180,7 +180,7 @@ ms.locfileid: "63127038"
 |Abilitare/disabilitare la visualizzazione a schermo interno|MAIUSC+ALT+INVIO|MAIUSC+ALT+INVIO|  
 |Scorrere il testo verso l'alto di una riga|CTRL+freccia SU|CTRL+freccia SU|  
 |Scorrere il testo verso il basso di una riga|CTRL+FRECCIA GIÙ|CTRL+ FRECCIA GIÙ|  
-|Annullare l'ultima azione di modifica|CTRL+Z<br /><br /> o Gestione configurazione<br /><br /> ALT+BACKSPACE|CTRL+Z|  
+|Annullare l'ultima azione di modifica|CTRL+Z<br /><br /> oppure<br /><br /> ALT+BACKSPACE|CTRL+Z|  
 |Ripristinare la modifica annullata in precedenza|CTRL+MAIUSC+Z<br /><br /> o Gestione configurazione<br /><br /> CTRL+Y<br /><br /> o Gestione configurazione<br /><br /> ALT+MAIUSC+BACKSPACE|CTRL+MAIUSC+Z<br /><br /> o Gestione configurazione<br /><br /> CTRL+Y<br /><br /> o Gestione configurazione<br /><br /> ALT+MAIUSC+BACKSPACE|  
 |Salvare l'elemento selezionato|CTRL+S|CTRL+S|  
 |Salvare tutto|CTRL+MAIUSC+S|CTRL+MAIUSC+S|  
@@ -200,7 +200,7 @@ ms.locfileid: "63127038"
 |Aprire una nuova query con la connessione corrente|CTRL+N|CTRL+N|  
 |Aprire il database in Esplora oggetti|ALT+F8|ALT+F8|  
 |Specificare valori per i parametri modello|CTRL+MAIUSC+M|CTRL+MAIUSC+M|  
-|Eseguire la parte selezionata dell'editor di query o, in assenza di selezione, l'intero editor di query|F5<br /><br /> o Gestione configurazione<br /><br /> CTRL+MAIUSC+E|F5<br /><br /> o Gestione configurazione<br /><br /> CTRL+E<br /><br /> o Gestione configurazione<br /><br /> ALT+X|  
+|Eseguire la parte selezionata dell'editor di query o, in assenza di selezione, l'intero editor di query|F5<br /><br /> o Gestione configurazione<br /><br /> CTRL+MAIUSC+E|F5<br /><br /> oppure<br /><br /> CTRL+E<br /><br /> oppure<br /><br /> ALT+X|  
 |Analizzare la parte selezionata dell'editor di query o, in assenza di selezione, l'intero editor di query|CTRL+F5|CTRL+F5|  
 |Visualizzare il piano di esecuzione stimato|CTRL+MAIUSC+ALT+L|CTRL+L|  
 |Annullare l'esecuzione della query|ALT+INTERR|ALT+INTERR|  
@@ -235,7 +235,7 @@ ms.locfileid: "63127038"
 |Inserire una nuova riga|INVIO oppure MAIUSC+INVIO|INVIO oppure MAIUSC+INVIO|  
 |Invertire i caratteri su entrambi i lati del cursore (non si applica all'editor SQL)|CTRL+T|CTRL+T|  
 |Eliminare un carattere a destra del cursore|DELETE|DELETE|  
-|Eliminare un carattere a sinistra del cursore|BACKSPACE<br /><br /> o Gestione configurazione<br /><br /> MAIUSC+<br /><br /> BACKSPACE|BACKSPACE<br /><br /> o Gestione configurazione<br /><br /> MAIUSC+<br /><br /> BACKSPACE|  
+|Eliminare un carattere a sinistra del cursore|BACKSPACE<br /><br /> oppure<br /><br /> MAIUSC+<br /><br /> BACKSPACE|BACKSPACE<br /><br /> oppure<br /><br /> MAIUSC+<br /><br /> BACKSPACE|  
 |Eliminare lo spazio vuoto nella selezione oppure quello adiacente al cursore in assenza di selezione|CTRL+K, C|Nessun equivalente|  
 |Inserire il numero di spazi configurati per l'editor|TAB|TAB|  
 |Inserire una riga vuota sopra il cursore|CTRL+INVIO|CTRL+INVIO|  
@@ -383,9 +383,9 @@ ms.locfileid: "63127038"
 |------------|-----------------------------|---------------------------------|  
 |Tagliare (eliminare l'elemento selezionato e metterlo negli Appunti)|CTRL+X<br /><br /> o Gestione configurazione<br /><br /> SHIFT+CANC|CTRL+X<br /><br /> o Gestione configurazione<br /><br /> MAIUSC+CANC|  
 |Tagliare tutte le righe selezionate o la riga corrente se non viene selezionato nulla.|CTRL+L<br /><br /> o Gestione configurazione<br /><br /> CTRL+MAIUSC+L|Nessun equivalente|  
-|Copiare negli Appunti|CTRL+C<br /><br /> o Gestione configurazione<br /><br /> CTRL+INS|CTRL+C<br /><br /> o Gestione configurazione<br /><br /> CTRL+INS|  
+|Copiare negli Appunti|CTRL+C<br /><br /> oppure<br /><br /> CTRL+INS|CTRL+C<br /><br /> oppure<br /><br /> CTRL+INS|  
 |Incollare il testo dagli Appunti nel punto di inserimento|CTRL+V<br /><br /> o Gestione configurazione<br /><br /> MAIUSC+INS|CTRL+V<br /><br /> o Gestione configurazione<br /><br /> MAIUSC+INS|  
-|Incollare un elemento dalla Sequenza Appunti al punto di inserimento e selezionare automaticamente l'elemento incollato|CTRL+MAIUSC+V<br /><br /> o Gestione configurazione<br /><br /> CTRL+MAIUSC+INS|Nessun equivalente|  
+|Incollare un elemento dalla Sequenza Appunti al punto di inserimento e selezionare automaticamente l'elemento incollato|CTRL+MAIUSC+V<br /><br /> oppure<br /><br /> CTRL+MAIUSC+INS|Nessun equivalente|  
   
 ## <a name="log-viewer-keyboard-shortcuts"></a>Tasti di scelta rapida per il Visualizzatore log  
   

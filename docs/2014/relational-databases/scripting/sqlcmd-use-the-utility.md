@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 19c13fba697477174f671344304a9cd4befba53e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063642"
 ---
 # <a name="use-the-sqlcmd-utility"></a>Utilizzo dell'utilità sqlcmd
@@ -40,16 +40,16 @@ ms.locfileid: "66063642"
 ## <a name="typically-used-sqlcmd-options"></a>Opzioni di sqlcmd utilizzate di frequente  
  Le opzioni seguenti sono quelle utilizzate più di frequente:  
   
--   L'opzione server (**-S**) che identifica l'istanza del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui `sqlcmd` si connette.  
+-   L'opzione server ( **-S**) che identifica l'istanza del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui `sqlcmd` si connette.  
   
--   Le opzioni di autenticazione (**-E**, **- U**, e **-P**) che specificano le credenziali che `sqlcmd` utilizza per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Le opzioni di autenticazione ( **-E**, **- U**, e **-P**) che specificano le credenziali che `sqlcmd` utilizza per connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     > [!NOTE]  
     >  Opzione **-E** che è l'opzione predefinita e non è necessario specificarla.  
   
--   Opzioni di input (**-Q**, **- q**, e **-i**) che identificano la posizione dell'input `sqlcmd`.  
+-   Opzioni di input ( **-Q**, **- q**, e **-i**) che identificano la posizione dell'input `sqlcmd`.  
   
--   L'opzione di output (**-o**) che specifica il file in cui `sqlcmd` consiste nell'inserire il proprio output.  
+-   L'opzione di output ( **-o**) che specifica il file in cui `sqlcmd` consiste nell'inserire il proprio output.  
   
 ## <a name="connecting-to-the-sqlcmd-utility"></a>Connessione all'utilità sqlcmd  
  Vengono di seguito riportati alcuni utilizzi comuni dell'utilità `sqlcmd`:  
@@ -118,7 +118,7 @@ ms.locfileid: "66063642"
 ## <a name="quoted-strings"></a>Stringhe tra virgolette  
  I caratteri racchiusi tra virgolette vengono utilizzati senza alcuna pre-elaborazione aggiuntiva, fatta eccezione per il fatto che è possibile inserire virgolette in una stringa immettendo due virgolette consecutive. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tratta questa sequenza di caratteri come virgoletta. La traduzione avviene tuttavia nel server. Le variabili di scripting non vengono espanse se sono incluse all'interno di una stringa.  
   
- Ad esempio:   
+ Ad esempio:  
   
  `sqlcmd`  
   

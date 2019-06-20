@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ec01dd697e04b5d4b5d8d943a855a62adac48f60
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090619"
 ---
 # <a name="create-the-finance-name-policy"></a>Creazione di criteri Nome Finance
@@ -39,7 +39,7 @@ ms.locfileid: "66090619"
   
 3.  Nell'elenco **Facet** selezionare **Nome a più parti**.  
   
-4.  Nella finestra di dialogo **Espressione** , nella casella **Campo** selezionare **@Name**. Nella casella **Operatore** selezionare **Like**. Nella casella **Valore** digitare **'fintbl%'** per fare in modo che tutti i nomi di tabella inizino con le lettere **fintbl**.  
+4.  Nella finestra di dialogo **Espressione** , nella casella **Campo** selezionare **@Name** . Nella casella **Operatore** selezionare **Like**. Nella casella **Valore** digitare **'fintbl%'** per fare in modo che tutti i nomi di tabella inizino con le lettere **fintbl**.  
   
 5.  Nella pagina **Descrizione** digitare **I nomi di tabella del database Finance devono iniziare con fintbl**e quindi scegliere **OK** per creare la condizione.  
   

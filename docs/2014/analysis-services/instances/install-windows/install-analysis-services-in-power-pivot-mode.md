@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f89ba75ab8d13960b3c86193862f5061f6727bb6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079934"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>PowerPivot for SharePoint 2013 Installation
@@ -249,7 +249,7 @@ ms.locfileid: "66079934"
  I passaggi necessari per aggiornare le cartelle di lavoro create in versioni precedenti di PowerPivot dipendono dalla versione di PowerPivot tramite cui è stata creata la cartella di lavoro. Per altre informazioni, vedere [Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
 ##  <a name="bkmk_multiple_servers"></a> Oltre l'installazione a Server singolo - PowerPivot per Microsoft SharePoint  
- **Web front-end (WFE)** oppure **livello intermedio:**: Usare un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server in modalità SharePoint in una farm di SharePoint di grandi dimensioni e per installare funzionalità aggiuntive di PowerPivot nella farm, eseguire il pacchetto di installazione **sppowerpivot. msi** in ogni server SharePoint. Tramite spPowerPivot.msi vengono installati i provider di dati necessari e lo strumento di configurazione di PowerPivot per SharePoint 2013.  
+ **Web front-end (WFE)** oppure **livello intermedio:** : Usare un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server in modalità SharePoint in una farm di SharePoint di grandi dimensioni e per installare funzionalità aggiuntive di PowerPivot nella farm, eseguire il pacchetto di installazione **sppowerpivot. msi** in ogni server SharePoint. Tramite spPowerPivot.msi vengono installati i provider di dati necessari e lo strumento di configurazione di PowerPivot per SharePoint 2013.  
   
  Per ulteriori informazioni sull'installazione e sulla configurazione del livello intermedio, vedere gli argomenti seguenti:  
   

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7532f2a6f2c50f53e5af01c2cec979170b493147
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922936"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Applicazione dei backup di log delle transazioni (SQL Server)
@@ -63,7 +63,7 @@ ms.locfileid: "62922936"
   
 |Time|Evento|  
 |----------|-----------|  
-|8.00|Backup del database per creare un backup completo del database.|  
+|8\.00|Backup del database per creare un backup completo del database.|  
 |12.00|Backup del log delle transazioni|  
 |16.00|Backup del log delle transazioni|  
 |18.00|Backup del database per creare un backup completo del database.|  

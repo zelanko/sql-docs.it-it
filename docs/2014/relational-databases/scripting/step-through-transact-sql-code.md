@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e79a92bc1756003341cbb9e0581ade42a2bcee8b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090006"
 ---
 # <a name="step-through-transact-sql-code"></a>Esecuzione istruzione per istruzione del codice Transact-SQL
@@ -54,7 +54,7 @@ ms.locfileid: "66090006"
 |Eseguire tutte le istruzioni dall'istruzione corrente al successivo punto di interruzione|Nel **Debug** menu, fare clic su **continua**.<br /><br /> Nel **Debug** sulla barra degli strumenti, fare clic sui **continua** pulsante.|  
 |Eseguire la successiva istruzione o il successivo modulo.|Nel **Debug** menu, fare clic su **Esegui istruzione**.<br /><br /> Nel **Debug** sulla barra degli strumenti, fare clic sui **Esegui istruzione** pulsante.<br /><br /> Premere F11.|  
 |Passare alla successiva istruzione o al successivo modulo.|Nel **Debug** menu, fare clic su **Esegui istruzione/routine**.<br /><br /> Nel **Debug** sulla barra degli strumenti, fare clic sui **Esegui istruzione/routine** pulsante.<br /><br /> Premere F10.|  
-|Uscire da un modulo|Nel **Debug** menu, fare clic su **Esci da istruzione /**.<br /><br /> Nel **Debug** sulla barra degli strumenti, fare clic sui **Esci da istruzione /** pulsante.<br /><br /> Premere MAIUSC+F11.|  
+|Uscire da un modulo|Nel **Debug** menu, fare clic su **Esci da istruzione /** .<br /><br /> Nel **Debug** sulla barra degli strumenti, fare clic sui **Esci da istruzione /** pulsante.<br /><br /> Premere MAIUSC+F11.|  
 |Eseguire il codice fino alla posizione corrente del cursore|Fare clic con il pulsante destro del mouse nella finestra dell'editor di query, quindi fare clic su **Esegui fino al cursore**.<br /><br /> Premere CTRL+F10.|  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d683c9dc9a201b1f4351ee00d718ad0d7917606
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084605"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>Eseguire il drill-through sui dati del case da un modello di data mining
@@ -31,13 +31,13 @@ ms.locfileid: "66084605"
   
 |Nome del visualizzatore|Nome del riquadro o della scheda|Selezione nodo|  
 |-----------------|----------------------|-----------------|  
-|**Visualizzatore Microsoft Decision Trees**|Scheda**Albero delle decisioni** |Fare clic su un nodo dell'albero.<br /><br /> **Nota** evitare di utilizzare il drill-through su di `All` nodo, poiché potrebbe richiedere molto tempo per restituire i risultati.|  
+|**Visualizzatore Microsoft Decision Trees**|Scheda**Albero delle decisioni**|Fare clic su un nodo dell'albero.<br /><br /> **Nota** evitare di utilizzare il drill-through su di `All` nodo, poiché potrebbe richiedere molto tempo per restituire i risultati.|  
 |**Visualizzatore Microsoft Clustering**|**Diagramma dei cluster**|Fare clic su un nodo del cluster.|  
 |**Visualizzatore Microsoft Clustering**|**Profili cluster**|Fare clic in un punto qualsiasi della colonna del cluster.|  
-|**Visualizzatore Microsoft Association**|Scheda**Regole** |Fare clic su una riga che contiene un set di regole.|  
-|**Visualizzatore Microsoft Association**|Scheda**Set di elementi** |Fare clic su una riga che contiene un set di elementi.|  
-|**Visualizzatore Microsoft Sequence Clustering**|Scheda**Regole** |Fare clic su una riga che contiene un set di regole.|  
-|**Visualizzatore Microsoft Sequence Clustering**|Scheda**Set di elementi** |Fare clic su una riga che contiene un set di elementi.|  
+|**Visualizzatore Microsoft Association**|Scheda**Regole**|Fare clic su una riga che contiene un set di regole.|  
+|**Visualizzatore Microsoft Association**|Scheda**Set di elementi**|Fare clic su una riga che contiene un set di elementi.|  
+|**Visualizzatore Microsoft Sequence Clustering**|Scheda**Regole**|Fare clic su una riga che contiene un set di regole.|  
+|**Visualizzatore Microsoft Sequence Clustering**|Scheda**Set di elementi**|Fare clic su una riga che contiene un set di elementi.|  
   
 > [!NOTE]  
 >  Con alcuni modelli non è consentito l'utilizzo del drill-through. La possibilità di eseguire il drill-through dipende dall'algoritmo utilizzato per creare il modello: Per un elenco dei tipi di modelli di data mining che supportano il drill-through, vedere [Drillthrough Queries &#40;Data Mining&#41;](drillthrough-queries-data-mining.md).  

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fadff7e68404ffae528cb4630e1f6c4b8156ccc0
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011071"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Ricerca di parole vicine a un'altra parola con NEAR
@@ -89,7 +89,7 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
  "`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`"  
   
 ### <a name="combining-a-custom-proximity-term-with-other-terms"></a>Combinazione di un termine di prossimità personalizzato con altri termini  
- È possibile combinare un termine di prossimità personalizzato con alcuni altri termini. È possibile usare AND (&), OR (|) oppure AND NOT (&!) per combinare un termine di prossimità personalizzato con un altro termine di prossimità personalizzato, un termine semplice o un termine prefisso. Ad esempio:   
+ È possibile combinare un termine di prossimità personalizzato con alcuni altri termini. È possibile usare AND (&), OR (|) oppure AND NOT (&!) per combinare un termine di prossimità personalizzato con un altro termine di prossimità personalizzato, un termine semplice o un termine prefisso. Ad esempio:  
   
 -   CONTAINS('NEAR((*term1*,*term2*),5) AND *term3*')  
   
@@ -174,7 +174,7 @@ GO
  Per altre informazioni, vedere "[Considerazioni aggiuntive per le ricerche per prossimità](#Additional_Considerations)" più avanti in questo argomento.  
   
 ### <a name="combining-a-generic-proximity-term-with-other-terms"></a>Combinazione di un termine di prossimità generico con altri termini  
- È possibile usare AND (&), OR (|) oppure AND NOT (&!) per combinare un termine di prossimità generico con un altro termine di prossimità generico, un termine semplice o un termine prefisso. Ad esempio:   
+ È possibile usare AND (&), OR (|) oppure AND NOT (&!) per combinare un termine di prossimità generico con un altro termine di prossimità generico, un termine semplice o un termine prefisso. Ad esempio:  
   
 ```  
 CONTAINSTABLE (Production.ProductDescription,  

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 869185e56db9a4ffb07282d3ce51ced191a6bac8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067125"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>Filtrare i dati di una tabella (SSAS tabulare)
@@ -43,7 +43,7 @@ ms.locfileid: "66067125"
   
 1.  Fare clic sulla freccia nell'intestazione della colonna per la quale si desidera cancellare un filtro.  
   
-2.  Fare clic su **Cancella filtro da \<nome colonna >**.  
+2.  Fare clic su **Cancella filtro da \<nome colonna >** .  
   
 ### <a name="to-clear-all-filters-for-a-table"></a>Per cancellare tutti i filtri per una tabella  
   

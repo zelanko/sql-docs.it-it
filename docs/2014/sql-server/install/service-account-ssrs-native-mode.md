@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 318e567e32ca66ba2d42e2e6333c8b2e2075f06c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092175"
 ---
 # <a name="service-account-ssrs-native-mode"></a>Account del servizio (modalità nativa SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "66092175"
  Selezionare **Servizio di rete**, **Sistema locale**o **Servizio locale** dall'elenco. L'unica opzione consigliata è **Servizio di rete** . È tuttavia possibile configurare l'utilizzo di qualsiasi account disponibile.  
   
  **Usare un altro account**  
- Selezionare questa opzione per specificare un account utente di Windows. È possibile immettere un account utente locale di Windows o un account utente di dominio. Specificare un account di dominio nel formato seguente:  *\<dominio >\\< utente\>*. Specificare un account utente locale di Windows nel formato seguente:  *\<nome_computer >\\< utente\>*. È possibile solo selezionare un account esistente: in Configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è possibile creare nuovi account.  
+ Selezionare questa opzione per specificare un account utente di Windows. È possibile immettere un account utente locale di Windows o un account utente di dominio. Specificare un account di dominio nel formato seguente:  *\<dominio >\\< utente\>* . Specificare un account utente locale di Windows nel formato seguente:  *\<nome_computer >\\< utente\>* . È possibile solo selezionare un account esistente: in Configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è possibile creare nuovi account.  
   
  Il limite massimo di caratteri per l'account è 20.  
   

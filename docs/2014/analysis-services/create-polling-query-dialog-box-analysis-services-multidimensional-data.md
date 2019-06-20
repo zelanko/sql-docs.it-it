@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: faf96ad02005c0385ec56e1f8763da2e82f093ec
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086829"
 ---
 # <a name="create-polling-query-dialog-box-analysis-services---multidimensional-data"></a>Finestra di dialogo Crea query di polling (Analysis Services - Dati multidimensionali)
-  Usare la finestra di dialogo **Crea query di polling** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per creare una query di polling nella scheda **Notifiche** della finestra di dialogo **Opzioni di archiviazione**. Una query di polling è in genere una query singleton che restituisce un valore utilizzabile da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per determinare se sono state apportate modifiche a una tabella o a un altro oggetto relazionale. Per visualizzare la finestra di dialogo **Crea query di polling**, è possibile fare clic sul pulsante con i puntini di sospensione (**...**) nella colonna **Query di polling** della griglia relativa all'opzione **Polling pianificato** nella scheda **Notifiche** della finestra di dialogo **Opzioni di archiviazione**. Per altre informazioni sulla scheda **Notifiche** della finestra di dialogo **Opzioni di archiviazione** vedere [Notifiche &#40;finestra di dialogo Opzioni di archiviazione&#41; &#40;Analysis Services - dati multidimensionali&41#;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  
+  Usare la finestra di dialogo **Crea query di polling** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per creare una query di polling nella scheda **Notifiche** della finestra di dialogo **Opzioni di archiviazione**. Una query di polling è in genere una query singleton che restituisce un valore utilizzabile da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per determinare se sono state apportate modifiche a una tabella o a un altro oggetto relazionale. Per visualizzare la finestra di dialogo **Crea query di polling**, è possibile fare clic sul pulsante con i puntini di sospensione ( **...** ) nella colonna **Query di polling** della griglia relativa all'opzione **Polling pianificato** nella scheda **Notifiche** della finestra di dialogo **Opzioni di archiviazione**. Per altre informazioni sulla scheda **Notifiche** della finestra di dialogo **Opzioni di archiviazione** vedere [Notifiche &#40;finestra di dialogo Opzioni di archiviazione&#41; &#40;Analysis Services - dati multidimensionali&41#;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  
   
  Il tipo di valore restituito dalla query di polling dipende dal tipo di aggiornamenti pianificati per la cache OLAP multidimensionale (MOLAP) dell'oggetto in base alla tabella su cui viene eseguita la query.  
   

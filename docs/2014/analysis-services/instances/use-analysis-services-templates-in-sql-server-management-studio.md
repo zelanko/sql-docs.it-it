@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca2f92441841168916cb3d50b63376634073456b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079553"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Usare i modelli di Analysis Services in SQL Server Management Studio
@@ -69,15 +69,15 @@ ms.locfileid: "66079553"
   
 3.  Tramite **Visualizzatore metadati**trascinare i campi e le misure seguenti nel modello di query:  
   
-    1.  Sostituire \<row_axis, mdx_set > con **[Product Category]. [ Product Category Name]**.  
+    1.  Sostituire \<row_axis, mdx_set > con **[Product Category]. [ Product Category Name]** .  
   
     2.  Sostituire \<column_axis, mdx_set > con **[Date]. [ Anno di calendario]. [Anno di calendario]** .  
   
-    3.  Sostituire \<from_clause, mdx_name > con **[Internet Sales]**.  
+    3.  Sostituire \<from_clause, mdx_name > con **[Internet Sales]** .  
   
-    4.  Sostituire \<where_clause, mdx_set > con **[Measures]. [ Internet Total Sales]**.  
+    4.  Sostituire \<where_clause, mdx_set > con **[Measures]. [ Internet Total Sales]** .  
   
-4.  È possibile eseguire la query così come è, ma sarà probabilmente necessario apportare alcune modifiche, ad esempio aggiungendo una funzione per restituire membri specifici. Ad esempio, digitare `.members` dopo **[Product Category]. [ Product Category Name]**. Per altre informazioni, vedere [Uso delle espressioni di membro](/sql/mdx/using-member-expressions).  
+4.  È possibile eseguire la query così come è, ma sarà probabilmente necessario apportare alcune modifiche, ad esempio aggiungendo una funzione per restituire membri specifici. Ad esempio, digitare `.members` dopo **[Product Category]. [ Product Category Name]** . Per altre informazioni, vedere [Uso delle espressioni di membro](/sql/mdx/using-member-expressions).  
   
 ##  <a name="bkmk_backup"></a> Creare uno script XMLA da un modello  
  I modelli di comandi XMLA forniti in Esplora modelli possono essere usati per creare script per il monitoraggio e l'aggiornamento di oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , indipendentemente dal fatto che l'istanza sia in modalità multidimensionale e di data mining oppure tabulare. I modelli **XMLA** includono esempi per i tipi di script seguenti:  
@@ -167,12 +167,12 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 |Category|Modello di elementi|Descrizione|  
 |--------------|-------------------|-----------------|  
-|DMX\Model Content|Content Query|Viene illustrato come utilizzare l'istruzione DMX SELECT FROM  *\<modello >*. CONTENUTO istruzione per recuperare il contenuto del set di righe dello schema per un modello di data mining specificato.|  
+|DMX\Model Content|Content Query|Viene illustrato come utilizzare l'istruzione DMX SELECT FROM  *\<modello >* . CONTENUTO istruzione per recuperare il contenuto del set di righe dello schema per un modello di data mining specificato.|  
 ||Continuous Column Values|Viene illustrato come utilizzare DMX SELECT DISTINCT FROM  *\<modello >* dell'istruzione DMX `RangeMin` e `RangeMax` funzioni per recuperare un set di valori in un intervallo specifico da colonne continue in un modello di data mining specificato.|  
 ||Discrete Column Values|Viene illustrato come utilizzare DMX SELECT DISTINCT FROM  *\<modello >* istruzione recuperare un set completo di valori da colonne discrete di un modello di data mining specificato.|  
 ||Drillthrough Query|Illustra l'utilizzo dell'istruzione DMX SELECT * FROM Model.CASES con la funzione DMX IsInNode per l'esecuzione di una query drill-through.|  
 ||Attributi di modellazione|Illustra l'utilizzo della funzione DMX System.GetModelAttributes per restituire un elenco degli attributi utilizzati da un modello.|  
-||PMML Content|Viene illustrato come utilizzare DMX SELECT \* FROM  *\<modello >*. Istruzione PMML per recuperare la rappresentazione PMML Predictive Model Markup Language () del modello di data mining, per gli algoritmi che supportano questa funzionalità.|  
+||PMML Content|Viene illustrato come utilizzare DMX SELECT \* FROM  *\<modello >* . Istruzione PMML per recuperare la rappresentazione PMML Predictive Model Markup Language () del modello di data mining, per gli algoritmi che supportano questa funzionalità.|  
 |DMX\Model Management|Add Model|Illustra l'utilizzo dell'istruzione DMX ALTER MINING MODEL STRUCTURE per l'aggiunta di un modello di data mining.|  
 ||Clear Model|Illustra l'utilizzo dell'istruzione DMX DELETE * FROM MINING MODEL per l'eliminazione del contenuto di un modello di data mining specificato.|  
 ||Clear Structure Cases|Illustra l'utilizzo dell'istruzione DMX DELETE FROM MINING STRUCTURE per la cancellazione dei case delle strutture dei modelli di data mining.|  

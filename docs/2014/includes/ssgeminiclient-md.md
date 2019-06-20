@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 445e898590a74913e3b886bc64259b903cd9adc1
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65819379"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67223057"
 ---
 PowerPivot per Excel
