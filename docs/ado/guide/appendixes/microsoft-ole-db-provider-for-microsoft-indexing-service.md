@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: dea7ec95efc1f560a2279868b2116d02d7ad6fef
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66701210"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Provider Microsoft OLE DB per Microsoft Panoramica del servizio di indicizzazione
@@ -111,7 +111,7 @@ MSIDXS
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Yes|
 |[Resync](../../../ado/reference/ado-api/resync-method.md)|Yes|
 |[Supporti](../../../ado/reference/ado-api/supports-method.md)|Yes|
-|[Update](../../../ado/reference/ado-api/update-method.md)|No|
+|[Update](../../../ado/reference/ado-api/update-method.md)|no|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|No|
 
  Per dettagli specifici sull'implementazione e informazioni funzionale su Provider Microsoft OLE DB per Microsoft Indexing Service, consultare il [Guida per programmatori OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx), oppure visitare la pagina servizi Web di Windows NT Server Web sito.

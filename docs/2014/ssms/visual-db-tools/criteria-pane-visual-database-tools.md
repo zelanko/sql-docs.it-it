@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bbfd7e02b11a9f2a5cc0213c31b453eaa28e446
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63270599"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Riquadro Criteri (Visual Database Tools)
@@ -60,7 +60,7 @@ ms.locfileid: "63270599"
 |colonna|All|Visualizza il nome di una colonna di dati utilizzata per la query o l'espressione per una colonna calcolata. Questa colonna è bloccata in modo da essere sempre visibile quando si scorre orizzontalmente.|  
 |Alias|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Specifica un nome alternativo per una colonna o il nome che è possibile utilizzare per una colonna calcolata.|  
 |Tabella|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Specifica il nome della tabella o dell'oggetto con struttura a tabella per la colonna di dati associata. Questa colonna è vuota per le colonne calcolate.|  
-|Output|SELECT, INSERT FROM, MAKE TABLE|Specifica se una colonna di dati viene inserita nell'output della query.<br /><br /> Nota: Se il database lo consente, è possibile utilizzare una colonna di dati per le clausole di ricerca o di ordinamento senza visualizzarla nel set di risultati.|  
+|Output|SELECT, INSERT FROM, MAKE TABLE|Specifica se una colonna di dati viene inserita nell'output della query.<br /><br /> Nota: Se il database lo consente, è possibile usare una colonna di dati per le clausole di ricerca o di ordinamento senza visualizzarla nel set di risultati.|  
 |Tipo di ordinamento|SELECT, INSERT FROM|Specifica che la colonna di dati associata viene utilizzata per ordinare i risultati della query e indica se l'ordinamento è crescente o decrescente.|  
 |Ordinamento|SELECT, INSERT FROM|Specifica la priorità di ordinamento delle colonne di dati utilizzate per ordinare il set di risultati. Quando si modifica il criterio di ordinamento di una colonna di dati, il criterio di ordinamento di tutte le altre colonne verrà aggiornato di conseguenza.|  
 |Group By|SELECT, INSERT FROM, MAKE TABLE|Specifica che la colonna di dati associata viene utilizzata per creare una query di aggregazione. Questa colonna della griglia viene visualizzata solo se è stato scelto **Raggruppa** dal menu **Strumenti** o se è stata aggiunta una clausola GROUP BY al riquadro SQL.<br /><br /> Per impostazione predefinita, il valore di questa colonna è impostato su **Group By**e la colonna fa parte della clausola GROUP BY.<br /><br /> Quando ci si sposta in una cella di questa colonna e si seleziona una funzione di aggregazione da applicare alla colonna di dati associata, in base all'impostazione predefinita l'espressione risultante viene aggiunta come colonna di output al set di risultati.|  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a4b503c63706135b326490ccefc3f0d8ca6ceccb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078270"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Definizione e utilizzo di un'azione drill-through
@@ -106,9 +106,9 @@ ms.locfileid: "66078270"
   
 6.  Modifica il **Name** proprietà per il **Order Date Key** dell'attributo `Order Date` , quindi fare clic sul pulsante per il **colonna nome** proprietà e il **Colonna nome** finestra di dialogo **data** come tabella di origine e SimpleDate come colonna di origine. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Modificare il **Name** proprietà per il **Due Date Key** dell'attributo `Due Date`e quindi, usando il metodo di stesso come il **Order Date Key** modificare il  **Assegnare un nome colonna** proprietà per l'attributo **date. simpledate (WChar)**.  
+7.  Modificare il **Name** proprietà per il **Due Date Key** dell'attributo `Due Date`e quindi, usando il metodo di stesso come il **Order Date Key** modificare il  **Assegnare un nome colonna** proprietà per l'attributo **date. simpledate (WChar)** .  
   
-8.  Modificare il **nome** proprietà per il **Ship Date Key** dell'attributo `Ship Date`e quindi modificare la **colonna nome** proprietà per questo attributo su  **Date. simpledate (WChar)**.  
+8.  Modificare il **nome** proprietà per il **Ship Date Key** dell'attributo `Ship Date`e quindi modificare la **colonna nome** proprietà per questo attributo su  **Date. simpledate (WChar)** .  
   
 9. Passare alla scheda **Azioni[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di Progettazione cubi per il cubo**  Tutorial.  
   

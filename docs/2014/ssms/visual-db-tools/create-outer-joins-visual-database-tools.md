@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd5c9a9cb2e40c7b0a235ff848c1f9a0025773a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63184316"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Creazione di join esterni (Visual Database Tools)
@@ -29,7 +29,7 @@ ms.locfileid: "63184316"
   
 1.  Creare un join, automaticamente o manualmente. Per informazioni dettagliate, vedere [Unione di tabelle in modo automatico &#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md) o [Unione di tabelle in modo manuale &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md).  
   
-2.  Selezionare la linea di join nel riquadro Diagramma, quindi dal **progettazione Query** menu, scegliere **Seleziona tutte le righe da \<tablename >**, selezionando il comando che include la tabella il cui extra righe da includere.  
+2.  Selezionare la linea di join nel riquadro Diagramma, quindi dal **progettazione Query** menu, scegliere **Seleziona tutte le righe da \<tablename >** , selezionando il comando che include la tabella il cui extra righe da includere.  
   
     -   Scegliere la prima tabella per creare un left outer join.  
   

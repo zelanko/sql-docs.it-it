@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b071494697d21a37f4420889a8f60cc35fe3d8b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63049887"
 ---
 # <a name="deferred-buffers"></a>Buffer posticipati
@@ -26,7 +26,7 @@ Oggetto *buffer posticipati* è quello il cui valore viene utilizzato in un mome
   
  È possibile rinviare i buffer di input e di output. Nella tabella seguente sono riepilogati gli utilizzi del buffer posticipati. Si noti che i buffer posticipati associato per le colonne del set di risultati vengono specificati con **SQLBindCol**, e specificati in posticipate i buffer associati ai parametri di istruzione SQL con **SQLBindParameter**.  
   
-|Uso di buffer|Tipo|Specificato con|Usato da|  
+|Uso di buffer|Type|Specificato con|Usato da|  
 |----------------|----------|--------------------|-------------|  
 |L'invio dei dati per i parametri di input|Input posticipata|**SQLBindParameter**|**SQLExecute**<br /> **SQLExecDirect**|  
 |Imposta l'invio dei dati per aggiornare o inserire una riga in un risultato|Input posticipata|**SQLBindCol**|**SQLSetPos**|  

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e6dadcc53120ce112ad3e9044e38bf14a525fded
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404083"
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Lezione 5-4: definizione della granularità della dimensione all'interno di un gruppo di misure
@@ -127,7 +127,7 @@ Nelle attività di questo argomento verrà aggiunto un gruppo di misure Sales Qu
   
     Le dimensioni del cubo **Employee** e **Date** sono collegate ai gruppi di misure **Sales Quotas e Sales Quotas 1** tramite relazioni regolari. Si noti anche che la dimensione del cubo **Sales Territory** non è collegata a nessuno di questi gruppi di misure.  
   
-4.  Fare clic nella cella all'intersezione tra il **territorio vendita** dimensione e il **Sales Quotas** gruppo di misure e quindi fare clic sul pulsante Sfoglia (**...** ). Verrà visualizzata la finestra di dialogo **Definisci relazione** .  
+4.  Fare clic nella cella all'intersezione tra il **territorio vendita** dimensione e il **Sales Quotas** gruppo di misure e quindi fare clic sul pulsante Sfoglia ( **...** ). Verrà visualizzata la finestra di dialogo **Definisci relazione** .  
   
 5.  Nell'elenco **Selezionare il tipo di relazione** selezionare **Riferimento**.  
   
@@ -141,7 +141,7 @@ Nelle attività di questo argomento verrà aggiunto un gruppo di misure Sales Qu
   
 10. Fare clic su **OK**.  
   
-11. Fare clic nella cella all'intersezione tra il **territorio vendita** dimensione e il **Sales Quotas 1** gruppo di misure e quindi fare clic sul pulsante Sfoglia (**...** ). Verrà visualizzata la finestra di dialogo **Definisci relazione** .  
+11. Fare clic nella cella all'intersezione tra il **territorio vendita** dimensione e il **Sales Quotas 1** gruppo di misure e quindi fare clic sul pulsante Sfoglia ( **...** ). Verrà visualizzata la finestra di dialogo **Definisci relazione** .  
   
 12. Nell'elenco **Selezionare il tipo di relazione** selezionare **Riferimento**.  
   
@@ -163,7 +163,7 @@ Nelle attività di questo argomento verrà aggiunto un gruppo di misure Sales Qu
   
     Rinominando la dimensione **Order Date** del cubo come **Date** se ne evidenzia meglio agli utenti il ruolo di dimensione primaria di data del cubo.  
   
-20. Fare clic sul pulsante Sfoglia (**...** ) nella cella nel punto di intersezione tra il **Sales Quotas** gruppo di misure e il **data** dimensione.  
+20. Fare clic sul pulsante Sfoglia ( **...** ) nella cella nel punto di intersezione tra il **Sales Quotas** gruppo di misure e il **data** dimensione.  
   
 21. Nella finestra di dialogo **Definisci relazione** selezionare **Regolare** nell'elenco **Selezionare il tipo di relazione** .  
   

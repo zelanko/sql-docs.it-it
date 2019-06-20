@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e57aee7142da5c256a213ddd2eb0390a0f3b042a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070855"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>Calcolo stime (Strumenti di analisi tabelle per Excel)
@@ -73,7 +73,7 @@ ms.locfileid: "66070855"
 -   In questa sezione vengono descritte le informazioni incluse in ogni report e viene illustrato come utilizzare le varie opzioni dei report.  
   
 ### <a name="prediction-report-with-graphs"></a>Report di stima con grafici  
- Il titolo è il primo report di stima **Report calcolo stime per il \<stato destinazione > dei \<attributo di destinazione >**. Questo report contiene una tabella di fattori derivati dall'analisi, insieme agli strumenti che consentono di valutare l'impatto finanziario di una determinata analisi.  
+ Il titolo è il primo report di stima **Report calcolo stime per il \<stato destinazione > dei \<attributo di destinazione >** . Questo report contiene una tabella di fattori derivati dall'analisi, insieme agli strumenti che consentono di valutare l'impatto finanziario di una determinata analisi.  
   
 #### <a name="table-for-specifying-costs-and-profits"></a>Tabella per la specifica di costi e profitti  
  Il primo strumento di questo report, che si trova in alto a sinistra nel report, è una tabella in cui è possibile specificare i costi e i profitti associati alla stima corretta e non corretta di un valore.  Questi costi e profitti sono necessari per calcolare il valore di soglia ottimale per il punteggio per lo strumento di calcolo.  
@@ -120,7 +120,7 @@ ms.locfileid: "66070855"
  Anche se, ad esempio, il primo grafico suggerisce che rivolgendosi ai primi 500 clienti stimati dal modello è possibile ottenere il massimo profitto, dopo aver analizzato il secondo grafico è possibile stabilire che i costi da sostenere rivolgendosi ai clienti errati sono troppo elevati e decidere pertanto di limitare la campagna di marketing ai primi 400 clienti.  
   
 ### <a name="interactive-prediction-calculator"></a>Calcolo stime interattivo  
- Il secondo foglio di lavoro creato dallo strumento calcolo stime è denominato **calcolo stime per il \<stato destinazione > dei \<attributo di destinazione >**. Si tratta di un foglio di lavoro interattivo che è possibile utilizzare per calcolare i singoli punteggi. Poiché in questo foglio di lavoro vengono utilizzati modelli e statistiche archiviati nel modello, è possibile provare a utilizzare valori diversi e vedere in che modo questi influiscono sul punteggio stimato. Anche questo report è costituito da due sezioni, una interattiva e una fornita come riferimento.  
+ Il secondo foglio di lavoro creato dallo strumento calcolo stime è denominato **calcolo stime per il \<stato destinazione > dei \<attributo di destinazione >** . Si tratta di un foglio di lavoro interattivo che è possibile utilizzare per calcolare i singoli punteggi. Poiché in questo foglio di lavoro vengono utilizzati modelli e statistiche archiviati nel modello, è possibile provare a utilizzare valori diversi e vedere in che modo questi influiscono sul punteggio stimato. Anche questo report è costituito da due sezioni, una interattiva e una fornita come riferimento.  
   
 #### <a name="first-table"></a>Prima tabella  
  È possibile selezionare o digitare un nuovo valore nel **valore** colonna della tabella per vedere come la modifica del valore influisce sul punteggio.  
@@ -152,11 +152,11 @@ ms.locfileid: "66070855"
  In questa tabella sono indicati i singoli punteggi per ogni possibile stato delle colonne di input e l'impatto relativo del punteggio sui risultati. Questa tabella è statica e serve solo come riferimento.  
   
 ### <a name="printable-prediction-calculator"></a>Calcolo stime stampabile  
- Il terzo foglio di lavoro creato dallo strumento calcolo stime è denominato **PrintablePrediction calcolatore per le \<stato destinazione > dei \<attributo di destinazione >**. Questa scorecard può essere stampata e utilizzata per calcolare manualmente i punteggi quando non si è al computer.  
+ Il terzo foglio di lavoro creato dallo strumento calcolo stime è denominato **PrintablePrediction calcolatore per le \<stato destinazione > dei \<attributo di destinazione >** . Questa scorecard può essere stampata e utilizzata per calcolare manualmente i punteggi quando non si è al computer.  
   
 ##### <a name="to-print-and-use-the-scoring-report-generated-by-the-prediction-calculator"></a>Per stampare e utilizzare il report per l'assegnazione dei punteggi generato da Calcolo stime  
   
-1.  Fare clic sulla scheda denominata **calcolo stime stampabile per \<attributo >**.  
+1.  Fare clic sulla scheda denominata **calcolo stime stampabile per \<attributo >** .  
   
 2.  Nel menu File di Excel, selezionare **anteprima di stampa**.  
   

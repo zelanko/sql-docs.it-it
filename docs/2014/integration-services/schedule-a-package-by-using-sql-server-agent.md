@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 55b872b46b5e0007d0651e190f6698ff0cfb50ec
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056233"
 ---
 # <a name="schedule-a-package-by-using-sql-server-agent"></a>Pianificare un pacchetto tramite SQL Server Agent
@@ -55,7 +55,7 @@ ms.locfileid: "66056233"
     |--------------------|-----------------|  
     |**Catalogo SSIS**|Pacchetti archiviati nel database SSISDB. I pacchetti sono contenuti nei progetti di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] distribuiti nel server [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
     |**SQL Server**|Pacchetti archiviati nel database MSDB. Utilizzare il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per gestire i pacchetti.|  
-    |**Archivio pacchetti SSIS**|Pacchetti archiviati nella cartella predefinita nel computer. La cartella predefinita è *\<unità>*:\Programmi\Microsoft SQL Server\110\DTS\Packages. Utilizzare il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per gestire i pacchetti.<br /><br /> Nota: È possibile specificare una cartella diversa o specificare cartelle aggiuntive nel file system da gestire con il [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] servizio modificando il file di configurazione per [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Per altre informazioni, vedere [Configurazione del servizio Integration Services &#40;servizio SSIS&#41;](service/integration-services-service-ssis-service.md).|  
+    |**Archivio pacchetti SSIS**|Pacchetti archiviati nella cartella predefinita nel computer. La cartella predefinita è *\<unità>* :\Programmi\Microsoft SQL Server\110\DTS\Packages. Utilizzare il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] per gestire i pacchetti.<br /><br /> Nota: È possibile specificare un'altra cartella o specificare cartelle aggiuntive nel file system da gestire tramite il servizio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], modificando il file di configurazione per [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Per altre informazioni, vedere [Configurazione del servizio Integration Services &#40;servizio SSIS&#41;](service/integration-services-service-ssis-service.md).|  
     |**File System**|Pacchetti archiviati in qualsiasi cartella nel computer locale.|  
   
      **Nelle tabelle seguenti vengono descritte le opzioni di configurazione disponibili per il passaggio di processo in base all'origine del pacchetto selezionata.**  
@@ -76,7 +76,7 @@ ms.locfileid: "66056233"
     ||**Dump su errori**: Specificare se vengono generati file di dump del debug quando si verifica un errore durante l'esecuzione del pacchetto.<br /><br /> I file contengono le informazioni sull'esecuzione del pacchetto che possono consentire di risolvere i problemi dell'esecuzione.<br /><br /> Quando si seleziona questa opzione e si verifica un errore durante l'esecuzione, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] crea un file con estensione MDMP (file binario) e un file con estensione TMP (file di testo). Per impostazione predefinita, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] archivia i file nella cartella *\<unità>:* \Programmi\Microsoft SQL Server\110\Shared\ErrorDumps.|  
     ||**runtime a 32 bit** indicare se si desidera eseguire il pacchetto usando la versione a 32 bit dell'utilità dtexec in un computer a 64 bit che ha la versione a 64 bit dello [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installato l'agente.<br /><br /> Potrebbe essere necessario eseguire il pacchetto utilizzando la versione a 32 bit di dtexec se, ad esempio, il pacchetto utilizza un provider OLE DB nativo che non è disponibile in una versione a 64 bit. Per ulteriori informazioni, vedere [Considerazioni a 64r bit per Integration Services](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx).<br /><br /> Per impostazione predefinita, quando si seleziona il tipo di passaggio di processo **Pacchetto di SQL Server Integration Services** , [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent esegue il pacchetto utilizzando la versione dell'utilità dtexec che è richiamata automaticamente dal sistema. Il sistema richiama la versione a 32 bit o la versione a 64 bit dell'utilità a seconda del processore del computer e la versione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent in esecuzione nel computer.|  
   
-     **Origine pacchetto**:  SQL Server, Store pacchetto SSIS o File System  
+     **Origine pacchetto**:  SQL Server, archivio pacchetti SSIS o file system  
   
      Molte delle opzioni che è possibile impostare per i pacchetti archiviati in SQL Server, nell'archivio pacchetti SSIS o nel file system corrispondono alle opzioni della riga di comando per l'utilità del prompt dei comandi `dtexec`. Per ulteriori informazioni sull'utilità e sulle opzioni della riga di comando, vedere [Utilità dtexec](packages/dtexec-utility.md).  
   

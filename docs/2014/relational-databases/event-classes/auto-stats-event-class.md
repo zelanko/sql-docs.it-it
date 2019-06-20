@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 354c2e39716dc0cfa215e4392945bf9aa5899da0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63012366"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats - classe di evento
@@ -35,7 +35,7 @@ ms.locfileid: "63012366"
 |**Durata**|**bigint**|Durata dell'evento in microsecondi.|13|Yes|  
 |**EndTime**|**datetime**|Ora di fine dell'evento.|15|Yes|  
 |**Errore**|**int**|Numero di errore di un evento specifico. Corrisponde spesso al numero di errore archiviato nella vista del catalogo **sys.messages** .|31|Yes|  
-|**EventClass**|**int**|Tipo di evento = 58.|27|no|  
+|**EventClass**|**int**|Tipo di evento = 58.|27|No|  
 |**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |**EventSubClass**|**int**|Tipo di sottoclasse di evento:<br /><br /> 1: Statistiche create/aggiornate in modo sincrono; **TextData** colonna indica le statistiche e indica se sono stati creati o aggiornati.<br /><br /> 2: Aggiornamento statistiche asincrono; processo in coda.<br /><br /> 3: Aggiornamento statistiche asincrono; processo di avvio.<br /><br /> 4: Aggiornamento statistiche asincrono; processo completato.|21|Yes|  
 |**GroupID**|**int**|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c7d4a14a6afc2d716e85e687cbae1a202a596d7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63241245"
 ---
 # <a name="display-size"></a>Dimensioni di visualizzazione
@@ -39,7 +39,7 @@ Le dimensioni di visualizzazione di una colonna sono il numero massimo di caratt
 |SQL_FLOAT SQL_DOUBLE|24 (un segno, 15 cifre, un separatore decimale, la lettera *elettronica*, un segno e 3 cifre).|  
 |Tutti i tipi binari [a]|Il definita o massimo (tipi di variabile) 2 di tempi di lunghezza della colonna. (Ogni byte binario è rappresentato da un numero esadecimale a 2 cifre).|  
 |SQL_TYPE_DATE|10 (una data nel formato *aaaa-mm-gg*).|  
-|SQL_TYPE_TIME|8 (un'ora nel formato *hh: mm:*)<br /><br /> - oppure -<br /><br /> 9 + *s* (un'ora nel formato *hh.mm.ss*[. fff...], dove *s* precisione frazionaria dei secondi).|  
+|SQL_TYPE_TIME|8 (un'ora nel formato *hh: mm:* )<br /><br /> - oppure -<br /><br /> 9 + *s* (un'ora nel formato *hh.mm.ss*[. fff...], dove *s* precisione frazionaria dei secondi).|  
 |SQL_TYPE_TIMESTAMP|19 (per un timestamp nel *aaaa-mm-gg hh.mm.ss* formato)<br /><br /> - oppure -<br /><br /> 20 + *s* (per un timestamp nel *aaaa-mm-gg hh.mm.ss*formato [. fff], in cui *s* precisione frazionaria dei secondi).|  
 |Tutti i tipi di dati intervallo|Visualizzare [lunghezza del tipo di dati di intervallo](../../../odbc/reference/appendixes/interval-data-type-length.md).|  
 |SQL_GUID|36 (il numero di caratteri nel *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee* formato|  

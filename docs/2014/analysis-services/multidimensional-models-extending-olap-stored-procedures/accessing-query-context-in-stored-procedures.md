@@ -16,16 +16,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93624a612126e9103144b8b53272122e66202b8a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62702673"
 ---
 # <a name="accessing-query-context-in-stored-procedures"></a>Accesso al contesto di query nelle stored procedure
   Il contesto di esecuzione di una stored procedure è disponibile all'interno del codice della stored procedure stessa sotto forma di oggetto `Context` del modello a oggetti server ADOMD.NET. Si tratta di un contesto di sola lettura che non può essere modificato dalla stored procedure. Per questo oggetto sono disponibili le proprietà seguenti.  
   
-|Proprietà|Tipo|Descrizione|  
+|Proprietà|Type|Descrizione|  
 |--------------|----------|-----------------|  
 |**CurrentCube**|Cube|Cubo per il contesto di query corrente.|  
 |**CurrentDatabaseName**|String|Identificatore del database corrente.|  

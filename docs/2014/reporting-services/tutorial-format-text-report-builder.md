@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dc58232ed3025063fb329392b58895ed667465f4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098894"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Esercitazione: Formattazione del testo (Generatore report)
@@ -128,7 +128,7 @@ ms.locfileid: "66098894"
     UNION SELECT CAST('2009-01-06' AS date) as SalesDate, 'Fernando Ross' as FullName,'South' as Territory, 'Digital' as Subcategory, 'Slim Digital' as Product, CAST(6648.25 AS money) AS Sales, 35 as Quantity, 'What is New in Report Builder' as Link, 'https://go.microsoft.com/fwlink/?LinkId=165064' AS URL  
     ```  
   
-7.  Scegliere Esegui (**!**) per eseguire la query.  
+7.  Scegliere Esegui ( **!** ) per eseguire la query.  
   
      I risultati della query corrispondono ai dati disponibili per la visualizzazione nel report.  
   
@@ -196,7 +196,7 @@ ms.locfileid: "66098894"
   
 1.  Nel **inserire** menu, fare clic su **tabella**e quindi fare clic su **guidata tabella**.  
   
-2.  Nel **scegliere un set di dati** pagina della procedura guidata nuova tabella o matrice, fare clic su **Scegli un set di dati esistente nel report o un set di dati condiviso**, fare clic su **TextDataset (in questo Report)**, quindi fare clic su **successiva**.  
+2.  Nel **scegliere un set di dati** pagina della procedura guidata nuova tabella o matrice, fare clic su **Scegli un set di dati esistente nel report o un set di dati condiviso**, fare clic su **TextDataset (in questo Report)** , quindi fare clic su **successiva**.  
   
 3.  Nel **Disponi campi** pagina, trascinare il **Territory**, **LinkText**, e **prodotto** i campi a **gruppidirighe**, trascinare il **vendite** campo **valori**, quindi fare clic su **successivo**.  
   
@@ -233,7 +233,7 @@ ms.locfileid: "66098894"
   
 4.  Fare clic su **Vai a URL**.  
   
-5.  Nel **selezionare un URL** fare clic su **[URL]**, quindi fare clic su **OK**.  
+5.  Nel **selezionare un URL** fare clic su **[URL]** , quindi fare clic su **OK**.  
   
 6.  Si noti che il testo non presenta alcuna differenza. È necessario renderlo simile al testo di un collegamento.  
   
@@ -269,7 +269,7 @@ ms.locfileid: "66098894"
   
 7.  Nel **Home** scheda il **paragrafo** fare clic sul **intermedio** e **Center** pulsanti per posizionare il testo al centro della cella entrambi verticalmente e orizzontalmente.  
   
-8.  Fare clic su Esegui (**!**).  
+8.  Fare clic su Esegui ( **!** ).  
   
  Il testo incluso nella cella `[Territory]` scorre ora verticalmente dal basso verso l'alto delle celle.  
   
@@ -309,7 +309,7 @@ ms.locfileid: "66098894"
   
 7.  Fare clic su **OK**.  
   
-8.  Fare clic su Esegui (**!**) per visualizzare l'anteprima del report.  
+8.  Fare clic su Esegui ( **!** ) per visualizzare l'anteprima del report.  
   
  Il testo nella casella di testo viene visualizzato come un'intestazione, un paragrafo e un elenco puntato.  
   
@@ -327,7 +327,7 @@ ms.locfileid: "66098894"
   
 5.  (Facoltativo) Nel gruppo **Numero** della scheda **Home** fare clic due volte sul pulsante **Diminuisci decimali** per visualizzare le cifre in dollari senza centesimi.  
   
-6.  Fare clic su Esegui (**!**) per visualizzare l'anteprima del report.  
+6.  Fare clic su Esegui ( **!** ) per visualizzare l'anteprima del report.  
   
  Nel report verranno visualizzati i dati formattati che rendono più facile la lettura.  
   

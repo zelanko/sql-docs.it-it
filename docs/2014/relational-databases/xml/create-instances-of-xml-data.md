@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62637609"
 ---
 # <a name="create-instances-of-xml-data"></a>Creare istanze di dati XML
@@ -40,7 +40,7 @@ ms.locfileid: "62637609"
 -   Utilizzo del caricamento bulk.  
   
 ## <a name="type-casting-string-and-binary-instances"></a>Cast di tipo di istanze binarie e di stringa  
- È possibile analizzare uno qualsiasi dei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati, stringa, ad esempio [**n**] [**var**]**char**, **testo di [n]**,  **varbinary**, e **immagine**, nelle `xml` eseguendo il cast (CAST) o conversione (Converti) la stringa del tipo di dati di `xml` tipo di dati. L'istanza XML non tipizzata viene controllata per verificare che il formato sia corretto. Se è presente uno schema è associato il `xml` tipo, la convalida viene eseguito anche. Per altre informazioni, vedere [Confrontare dati XML tipizzati con dati XML non tipizzati](compare-typed-xml-to-untyped-xml.md).  
+ È possibile analizzare uno qualsiasi dei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati, stringa, ad esempio [**n**] [**var**]**char**, **testo di [n]** ,  **varbinary**, e **immagine**, nelle `xml` eseguendo il cast (CAST) o conversione (Converti) la stringa del tipo di dati di `xml` tipo di dati. L'istanza XML non tipizzata viene controllata per verificare che il formato sia corretto. Se è presente uno schema è associato il `xml` tipo, la convalida viene eseguito anche. Per altre informazioni, vedere [Confrontare dati XML tipizzati con dati XML non tipizzati](compare-typed-xml-to-untyped-xml.md).  
   
  I documenti XML possono essere codificati con codifiche diverse, ad esempio UTF-8, UTF-16, windows-1252). Di seguito vengono descritte le regole in base alle quali i tipi di origine di stringa e binari interagiscono con la codifica del documento XML, nonché il comportamento del parser.  
   
@@ -71,7 +71,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
 -   Viene assegnato il valore predefinito all'attributo `xml:space` attivo per un elemento o i relativi predecessori.  
   
- Ad esempio:   
+ Ad esempio:  
   
 ```  
 declare @x xml  
@@ -85,7 +85,7 @@ select @x
 <root><child/></root>  
 ```  
   
- È tuttavia possibile modificare tale impostazione. Per mantenere gli spazi vuoti in un'istanza XML DT, è possibile utilizzare l'operatore CONVERT e il parametro facoltativo *style* corrispondente impostato sul valore 1. Ad esempio:   
+ È tuttavia possibile modificare tale impostazione. Per mantenere gli spazi vuoti in un'istanza XML DT, è possibile utilizzare l'operatore CONVERT e il parametro facoltativo *style* corrispondente impostato sul valore 1. Ad esempio:  
   
 ```  
 SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)  
@@ -133,7 +133,7 @@ select @x
 ```  
   
 ## <a name="using-the-select-statement-with-a-for-xml-clause"></a>Utilizzo dell'istruzione SELECT con la clausola FOR XML  
- È possibile utilizzare la clausola FOR XML in un'istruzione SELECT per restituire i risultati in formato XML. Ad esempio:   
+ È possibile utilizzare la clausola FOR XML in un'istruzione SELECT per restituire i risultati in formato XML. Ad esempio:  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -183,7 +183,7 @@ go
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di restituire al client istanze con tipo di dati `xml` come risultato di diversi costrutti server, quali query FOR XML che utilizzano la direttiva TYPE, o nel caso in cui il tipo di dati `xml` venga utilizzato per restituire il codice XML da colonne SQL, variabili o parametri di output. Nel codice dell'applicazione client il provider ADO.NET richiede che queste informazioni con tipo di dati `xml` siano inviate dal server utilizzando una codifica binaria. Se tuttavia si utilizza FOR XML senza la direttiva TYPE, i dati XML vengono restituiti come tipo string. In tutti i casi, il provider client sarà sempre in grado di gestire entrambe i formati di XML.  
   
 ## <a name="using-constant-assignments"></a>Utilizzo di assegnazioni di costanti  
- Costante stringa utilizzabile in un'istanza di cui il `xml` è previsto il tipo di dati. Tale operazione è equivalente a un CAST implicito della stringa al formato XML. Ad esempio:   
+ Costante stringa utilizzabile in un'istanza di cui il `xml` è previsto il tipo di dati. Tale operazione è equivalente a un CAST implicito della stringa al formato XML. Ad esempio:  
   
 ```  
 DECLARE @xmlDoc xml  

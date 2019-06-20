@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d1c846f7ed60bbecac64021e9a881312e1f1f64c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011349"
 ---
 # <a name="join-a-role"></a>aggiungere un ruolo
@@ -76,9 +76,9 @@ ms.locfileid: "63011349"
   
 4.  Fare clic con il pulsante destro del mouse sul ruolo da modificare e selezionare **Proprietà**.  
   
-5.  Nel **proprietà del ruolo Server -**_nome_ruolo_server_ finestra di dialogo il **membri** fare clic su **Aggiungi**.  
+5.  Nel **proprietà del ruolo Server -** _nome_ruolo_server_ finestra di dialogo il **membri** fare clic su **Aggiungi**.  
   
-6.  Nella finestra di dialogo **Seleziona account di accesso o ruolo del server** immettere l'account di accesso o il ruolo del server da aggiungere a questo ruolo del server in **Immettere i nomi degli oggetti da selezionare (esempi)**. In alternativa, fare clic su **Sfoglia...** e selezionare uno, alcuni o tutti gli oggetti disponibili nella finestra di dialogo **Cerca oggetti**. Fare clic su **OK** da restituire per il **proprietà ruolo del Server -**_nome_ruolo_server_ nella finestra di dialogo.  
+6.  Nella finestra di dialogo **Seleziona account di accesso o ruolo del server** immettere l'account di accesso o il ruolo del server da aggiungere a questo ruolo del server in **Immettere i nomi degli oggetti da selezionare (esempi)** . In alternativa, fare clic su **Sfoglia...** e selezionare uno, alcuni o tutti gli oggetti disponibili nella finestra di dialogo **Cerca oggetti**. Fare clic su **OK** da restituire per il **proprietà ruolo del Server -** _nome_ruolo_server_ nella finestra di dialogo.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -98,9 +98,9 @@ ms.locfileid: "63011349"
   
 7.  Fare clic con il pulsante destro del mouse sul ruolo da modificare e selezionare **Proprietà**.  
   
-8.  Nel **proprietà ruolo Database -**_database_role_name_ nella finestra di dialogo il **generali** fare clic su **Aggiungi**.  
+8.  Nel **proprietà ruolo Database -** _database_role_name_ nella finestra di dialogo il **generali** fare clic su **Aggiungi**.  
   
-9. Nella finestra di dialogo **Seleziona utente o ruolo del database** immettere l'account di accesso o il ruolo del database da aggiungere a questo ruolo del database in **Immettere i nomi degli oggetti da selezionare (esempi)**. In alternativa, fare clic su **Sfoglia...** e selezionare uno, alcuni o tutti gli oggetti disponibili nella finestra di dialogo **Cerca oggetti**. Fare clic su **OK** da restituire per il **proprietà ruolo Database -**_database_role_name_ nella finestra di dialogo.  
+9. Nella finestra di dialogo **Seleziona utente o ruolo del database** immettere l'account di accesso o il ruolo del database da aggiungere a questo ruolo del database in **Immettere i nomi degli oggetti da selezionare (esempi)** . In alternativa, fare clic su **Sfoglia...** e selezionare uno, alcuni o tutti gli oggetti disponibili nella finestra di dialogo **Cerca oggetti**. Fare clic su **OK** da restituire per il **proprietà ruolo Database -** _database_role_name_ nella finestra di dialogo.  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

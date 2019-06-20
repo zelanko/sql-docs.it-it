@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a84e1d2fa9d65cfdab4e4753315d44346af4597e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004531"
 ---
 # <a name="sysinternaltables-transact-sql"></a>sys.internal_tables (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "63004531"
 
   Restituisce una riga per ogni oggetto che rappresenta una tabella interna. Le tabelle interne vengono generate automaticamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per supportare varie funzionalità. Quando ad esempio si crea un indice XML primario, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea automaticamente una tabella interna per rendere persistenti i dati del documento XML suddiviso. Le tabelle interne vengono visualizzate nel **sys** dello schema di tutti i database e dispongono di nomi univoci, generati dal sistema che indicano la funzione, ad esempio, **xml_index_nodes_2021582240_32001** o  **queue_messages_1977058079**  
   
- Le tabelle interne non includono dati accessibili all'utente e i loro schemi sono fissi e non modificabili. Non è possibile fare riferimento ai nomi delle tabelle interne nelle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ad esempio, è possibile eseguire un'istruzione quale SELECT \* FROM  *\<Sys. internal_table_name >*. È tuttavia possibile eseguire query sulle viste del catalogo per vedere i metadati delle tabelle interne.  
+ Le tabelle interne non includono dati accessibili all'utente e i loro schemi sono fissi e non modificabili. Non è possibile fare riferimento ai nomi delle tabelle interne nelle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ad esempio, è possibile eseguire un'istruzione quale SELECT \* FROM  *\<Sys. internal_table_name >* . È tuttavia possibile eseguire query sulle viste del catalogo per vedere i metadati delle tabelle interne.  
   
   
 |Nome colonna|Tipo di dati|Descrizione|  
