@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: de41d864b6bfd8e7fe80188b69b50e2592d6cf16
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63453403"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>Opzioni della riga di comando nella Console SSMA (DB2ToSQL)
@@ -25,7 +25,7 @@ Microsoft offre un solido set opzioni riga di comando per eseguire e controllare
   
 Ai fini di questa sezione, il termine 'option' è detta anche 'switch'.  
   
-Opzioni non sono tra maiuscole e minuscole e può iniziare con '**-**'or,'**/**' caratteri.  
+Opzioni non sono tra maiuscole e minuscole e può iniziare con ' **-** 'or,' **/** ' caratteri.  
   
 Se si specificano opzioni, diventa obbligatorio specificare i parametri di opzione corrispondenti.  
   

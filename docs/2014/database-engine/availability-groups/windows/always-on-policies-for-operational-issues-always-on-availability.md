@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62815754"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Criteri Always On per problemi operativi con gruppi di disponibilità Always On (SQL Server)
@@ -46,7 +46,7 @@ ms.locfileid: "62815754"
 ##  <a name="AlwaysOnPBM"></a> Criteri predefiniti e problemi  
  Nella tabella seguente sono riepilogati i criteri predefiniti.  
   
-|Nome criteri|Problema|Categoria**<sup>*</sup>**|Facet|  
+|Nome criteri|Problema|Categoria **<sup>*</sup>**|Facet|  
 |-----------------|-----------|------------------------------|-----------|  
 |Stato del cluster WSFC|[Il servizio cluster WSFC è offline](wsfc-cluster-service-is-offline.md).|Critico|Istanza di SQL Server|  
 |Stato online del gruppo di disponibilità|[Gruppo di disponibilità offline](availability-group-is-offline.md).|Critico|gruppo di disponibilità|  

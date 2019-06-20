@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0faff73e9b823ab46073137e67c5dfc511404330
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404073"
 ---
 # <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Lezione 4-7: definizione the Unknown Member and Null Processing proprietà
@@ -68,7 +68,7 @@ Nelle attività di questo argomento si aggiungeranno gli attributi della categor
   
     Viene visualizzata la finestra di dialogo **Aggiungi/Rimuovi tabelle** .  
   
-2.  Nell'elenco **Oggetti inclusi** selezionare **DimProduct (dbo)**, quindi fare clic su **Aggiungi tabelle correlate**.  
+2.  Nell'elenco **Oggetti inclusi** selezionare **DimProduct (dbo)** , quindi fare clic su **Aggiungi tabelle correlate**.  
   
     Verranno aggiunti sia **DimProductSubcategory (dbo)** che **FactProductInventory (dbo)** . Rimuovere **FactProductInventory (dbo)** in modo che solo la tabella **DimProductSubcategory (dbo)** venga aggiunta all'elenco **Oggetti inclusi** .  
   
@@ -90,7 +90,7 @@ Nelle attività di questo argomento si aggiungeranno gli attributi della categor
   
 9. Nel riquadro **Attributi** modificare il nome di questo nuovo attributo in **Category**.  
   
-10. Nella finestra Proprietà fare clic nel **NameColumn** proprietà campo e quindi fare clic su Sfoglia (**...** ) per aprire la **colonna nome** nella finestra di dialogo.  
+10. Nella finestra Proprietà fare clic nel **NameColumn** proprietà campo e quindi fare clic su Sfoglia ( **...** ) per aprire la **colonna nome** nella finestra di dialogo.  
   
 11. Selezionare **EnglishProductCategoryName** nell'elenco **Colonna di origine** , quindi fare clic su **OK**.  
   

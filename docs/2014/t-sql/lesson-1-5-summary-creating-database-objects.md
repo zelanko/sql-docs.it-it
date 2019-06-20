@@ -13,13 +13,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 11cd1134a770d62afeb50dd5da53c375b482b723
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62704489"
 ---
-# <a name="summary-creating-database-objects"></a>Riepilogo: Creazione di oggetti di Database
+# <a name="summary-creating-database-objects"></a>Riepilogo: Creazione di oggetti di database
   In questa esercitazione sono state illustrate le procedure per la creazione di un database e di una tabella, nonché per l'inserimento, la modifica e la lettura dei dati nella tabella. È stata utilizzata la sintassi di base delle istruzioni necessarie e numerose opzioni di queste ultime non sono state descritte. Per ulteriori informazioni su queste istruzioni, leggerne la sintassi completa nei rispettivi argomenti della documentazione online di SQL Server ed esaminare i numerosi esempi disponibili.  
   
 ## <a name="next-lesson"></a>Lezione successiva  

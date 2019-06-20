@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 42aa89a111697f17f23613761eeeb462494bdd27
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011255"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Miglioramento delle prestazioni di indici full-text
@@ -128,14 +128,14 @@ ms.locfileid: "66011255"
   
 |Piattaforma|Stima dei requisiti di memoria fdhost.exe in MB*F*<sup>1</sup>|Formula per il calcolo della memoria massima del server -*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|_F_ **=** _numero di intervalli di ricerca per indicizzazione_ **&#42;** 50|_M_ **=minimum(** _T_ **,** 2000 **)-*`F`*-** 500|  
-|x64|_F_ **=** _numero di intervalli di ricerca per indicizzazione_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
+|x86|_F_ ** = ** _numero di intervalli di ricerca per indicizzazione_ ** &#42; ** 50|_M_ **=minimum(** _T_ **,** 2000 **)-*`F`*-** 500|  
+|x64|_F_ ** = ** _numero di intervalli di ricerca per indicizzazione_ ** &#42; ** 10 ** &#42; ** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
   
  <sup>1</sup> se è in corso più popolamenti completi, calcolare i requisiti di memoria fdhost.exe della ognuno separatamente, ad esempio *F1*, *F2*e così via. Calcolare quindi *M* come _T_**-** sigma **(**_F_i **)**.  
   
  <sup>2</sup> 500 MB è una stima della memoria necessaria per altri processi nel sistema. Se nel sistema sono in corso processi aggiuntivi, aumentare questo valore di conseguenza.  
   
- <sup>3</sup> . *ism_size* si presuppone che sia 8 MB per x64 piattaforme.  
+ <sup>3</sup> .* ism_size* si presuppone che sia 8 MB per x64 piattaforme.  
   
  **Esempio: Stima dei requisiti di memoria di fdhost.exe**  
   

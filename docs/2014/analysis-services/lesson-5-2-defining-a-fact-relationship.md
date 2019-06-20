@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 726b5fa4295d68c5b74d4fb3cac711126a8e570b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078570"
 ---
 # <a name="defining-a-fact-relationship"></a>Definizione di una relazione di tipo Fatti
@@ -87,7 +87,7 @@ ms.locfileid: "66078570"
   
      Si noti che la dimensione del cubo **Internet Sales Order Details** viene configurata automaticamente come provvista di una relazione di tipo Fatti, indicata dall'icona univoca.  
   
-2.  Fare clic sul pulsante Sfoglia (**...** ) nei **Item Description** cella all'intersezione tra il **Internet Sales** gruppo di misure e la **Internet Sales Order Details** dimensione, a Esaminare le proprietà di relazione di tipo fatti.  
+2.  Fare clic sul pulsante Sfoglia ( **...** ) nei **Item Description** cella all'intersezione tra il **Internet Sales** gruppo di misure e la **Internet Sales Order Details** dimensione, a Esaminare le proprietà di relazione di tipo fatti.  
   
      Verrà visualizzata la finestra di dialogo **Definisci relazione** . Si noti che non è possibile configurare le proprietà.  
   
