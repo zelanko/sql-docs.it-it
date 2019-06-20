@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1a884f7c45accefb248029d148feb8b521e6ff4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63240539"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>Organizzare le colonne visualizzate in una traccia (SQL Server Profiler)
@@ -35,7 +35,7 @@ ms.locfileid: "63240539"
 |1|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
 |25|12/12/2006 5:24:44 PM|SQL:StmtCompleted|648|  
   
--   Per raggruppare e aggregare gli eventi di traccia, selezionare una singola colonna per il raggruppamento. In questo caso, nella finestra della traccia gli eventi vengono raggruppati in base ai valori della colonna di dati specificata e tutti gli eventi sottostanti vengono compressi. A sinistra dell'evento nella colonna di dati selezionata per il raggruppamento viene visualizzato un segno più (**+**), mentre a destra dell'evento viene visualizzato tra parentesi il numero degli eventi compressi sottostanti. L'esempio seguente mostra come viene visualizzata la griglia della finestra di traccia se per il raggruppamento viene selezionata solo la colonna di dati **EventClass** . Tutti gli eventi vengono organizzati nella colonna di dati **EventClass** . Per visualizzare tutti gli eventi, fare clic sul segno più per espandere e visualizzare tutte le classi di eventi del tipo specificato.  
+-   Per raggruppare e aggregare gli eventi di traccia, selezionare una singola colonna per il raggruppamento. In questo caso, nella finestra della traccia gli eventi vengono raggruppati in base ai valori della colonna di dati specificata e tutti gli eventi sottostanti vengono compressi. A sinistra dell'evento nella colonna di dati selezionata per il raggruppamento viene visualizzato un segno più ( **+** ), mentre a destra dell'evento viene visualizzato tra parentesi il numero degli eventi compressi sottostanti. L'esempio seguente mostra come viene visualizzata la griglia della finestra di traccia se per il raggruppamento viene selezionata solo la colonna di dati **EventClass** . Tutti gli eventi vengono organizzati nella colonna di dati **EventClass** . Per visualizzare tutti gli eventi, fare clic sul segno più per espandere e visualizzare tutte le classi di eventi del tipo specificato.  
   
 |EventClass|StartTime|Duration|ClientProcessID|  
 |----------------|---------------|--------------|---------------------|  
@@ -78,7 +78,7 @@ ms.locfileid: "63240539"
   
 6.  Fare clic su **OK** nella finestra di dialogo **Organizza colonne** e quindi su **OK** nella finestra di dialogo **Proprietà tabella di traccia** o **Proprietà file di traccia** .  
   
-     Dopo avere fatto clic su **OK** nella finestra di dialogo **Proprietà tabella di traccia** o **Proprietà file di traccia** , le colonne di dati verranno riorganizzate nella traccia visualizzata. Tutti gli altri eventi delle colonne di dati verranno aggregati nella colonna di dati spostata in precedenza nell'elenco **Gruppi** . Fare clic sul segno più (**+**) a sinistra dell'evento nella colonna di dati selezionata per l'aggregazione per espanderla e visualizzare tutti gli eventi dello stesso tipo. La colonna selezionata per l'aggregazione rimane fissa, ma è possibile scorrere a destra o a sinistra per visualizzare le altre colonne.  
+     Dopo avere fatto clic su **OK** nella finestra di dialogo **Proprietà tabella di traccia** o **Proprietà file di traccia** , le colonne di dati verranno riorganizzate nella traccia visualizzata. Tutti gli altri eventi delle colonne di dati verranno aggregati nella colonna di dati spostata in precedenza nell'elenco **Gruppi** . Fare clic sul segno più ( **+** ) a sinistra dell'evento nella colonna di dati selezionata per l'aggregazione per espanderla e visualizzare tutti gli eventi dello stesso tipo. La colonna selezionata per l'aggregazione rimane fissa, ma è possibile scorrere a destra o a sinistra per visualizzare le altre colonne.  
   
 7.  Per tornare a una visualizzazione normale dei dati di traccia, scegliere **Visualizzazione aggregata** dal menu **Visualizza** per annullare la selezione. Per tornare alla visualizzazione aggregata, scegliere di nuovo **Visualizzazione aggregata** dal menu **Visualizza** per confermare di nuovo la selezione. È anche possibile scegliere **Visualizzazione a gruppi** dal menu **Visualizza** per visualizzare gli eventi di traccia raggruppati senza comprimerli.  
   

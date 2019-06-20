@@ -10,12 +10,12 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2df295b62ca76dfb46e767ed206180a52493255a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 5030feecab11ed0c7727424ae49bde788c1f55f8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66102965"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046747"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services Concepts (SSRS)
   In questo argomento viene fornito un breve riepilogo dei concetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -76,7 +76,7 @@ ms.locfileid: "66102965"
  **I report e definizioni dei report**  
  **RDL.** Una definizione di report viene scritta in un file XML in conformità a una grammatica XML denominata linguaggio RDL (Report Definition Language). In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]creare una definizione di report in uno strumento come Generatore report o Progettazione report. Vengono forniti gli elementi che definiscono le connessioni alle origini dati, le query usate per il recupero dei dati, le espressioni, i parametri, le immagini, le caselle di testo, le tabelle e qualsiasi altro layout relativo alla fase di progettazione. Per altre informazioni, vedere [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md).  
   
- **RDLX.** Una definizione del report in RDLX è un file RDL con estensioni interne mediante le quali viene abilitata la visualizzazione di [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Per altre informazioni, vedere la pagina relativa alla [panoramica di Power View](https://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx).  
+ **RDLX.** Una definizione del report in RDLX è un file RDL con estensioni interne mediante le quali viene abilitata la visualizzazione di [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Per altre informazioni, vedere la pagina relativa alla [panoramica di Power View](https://support.office.com/article/power-view-explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e#__toc328127684).  
   
  **RDLC.** In Progettazione report di Visual Studio vengono creati file di definizione dei report del client (con estensione rdlc) in formato XML da usare con il controllo ReportViewer.  
   
