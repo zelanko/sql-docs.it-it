@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5db09273a26bd8dd596a6ae576b2f8f0cc414190
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106070"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipi di dati nelle espressioni (Generatore report e SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66106070"
 |String|Impostazione predefinita: String<br /><br /> Chart, GUID, Timespan|  
 |Boolean|Impostazione predefinita: Boolean|  
 |Valore intero|Impostazione predefinita: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|Datetime|Impostazione predefinita: Datetime<br /><br /> DateTimeOffset|  
+|DateTime|Impostazione predefinita: DateTime<br /><br /> DateTimeOffset|  
 |float|Impostazione predefinita: Double<br /><br /> Single, Decimal|  
 |Binario|Impostazione predefinita: Byte[]|  
 |Variant|Uno qualsiasi tra quelli riportati in precedenza eccetto Byte []|  
@@ -84,7 +84,7 @@ ms.locfileid: "66106070"
 |Da String a DateTime|`=DateTime.Parse(Fields!DateTimeinStringFormat.Value)`|  
 |Da String a DateTimeOffset|`=DateTimeOffset.Parse(Fields!DateTimeOffsetinStringFormat.Value)`|  
 |Estrazione dell'anno|`=Year(Fields!TimeinStringFormat.Value)`<br /><br /> `-- or --`<br /><br /> `=Year(Fields!TimeinDateTimeFormat.Value)`|  
-|Da Boolean a Integer|`=CInt(Parameters!BooleanField.Value)`<br /><br /> - 1 è True e 0 è False.|  
+|Da Boolean a Integer|`=CInt(Parameters!BooleanField.Value)`<br /><br /> \- 1 è True e 0 è False.|  
 |Da Boolean a Integer|`=System.Convert.ToInt32(Fields!BooleanFormat.Value)`<br /><br /> 1 è True e 0 è False.|  
 |Solo la parte DateTime di un valore DateTimeOffset|`=Fields!MyDatetimeOffset.Value.DateTime`|  
 |Solo la parte Offset di un valore DateTimeOffset|`=Fields!MyDatetimeOffset.Value.Offset`|  
@@ -108,7 +108,7 @@ ms.locfileid: "66106070"
   
  Per convertire questi dati in uno o più valori CLR, è possibile adottare una delle strategie seguenti:  
   
--   In una casella di testo utilizzare un'espressione per estrarre parti della stringa. Ad esempio:   
+-   In una casella di testo utilizzare un'espressione per estrarre parti della stringa. Ad esempio:  
   
     -   Nell'espressione seguente solo la parte relativa all'ora della differenza di fuso orario dall'ora UTC viene prima estratta e poi convertita in minuti: `=CInt(Fields!MyDateTime.Value.Substring(Fields!MyDateTime.Value.Length-5,2)) * 60`  
   

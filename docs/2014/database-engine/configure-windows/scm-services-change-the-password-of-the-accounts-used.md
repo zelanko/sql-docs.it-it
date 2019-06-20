@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 865c23dc88571e0c9ee317eca280286a6c37118f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810436"
 ---
 # <a name="change-the-password-of-the-accounts-used-by-sql-server-sql-server-configuration-manager"></a>Modifica della password degli account utilizzati da SQL Server (Gestione configurazione SQL Server)
@@ -55,9 +55,9 @@ ms.locfileid: "62810436"
   
 2.  In Gestione configurazione SQL Server fare clic su **Servizi di SQL Server**.  
   
-3.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (**\<nomeistanza>**)** e quindi scegliere **Proprietà**.  
+3.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (** \<nomeistanza> **)** e quindi scegliere **Proprietà**.  
   
-4.  Nella finestra di dialogo **SQL Server (**\<nomeistanza>**) Proprietà**, nella scheda Accesso, per l'account indicato nella casella **Nome account** digitare la nuova password nelle caselle **Password** e **Conferma password** e quindi fare clic su **OK**.  
+4.  Nella finestra di dialogo **SQL Server (** \<nomeistanza> **) Proprietà**, nella scheda Accesso, per l'account indicato nella casella **Nome account** digitare la nuova password nelle caselle **Password** e **Conferma password** e quindi fare clic su **OK**.  
   
      La password diventa immediatamente effettiva e non richiede il riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -67,9 +67,9 @@ ms.locfileid: "62810436"
   
 2.  In Gestione configurazione SQL Server fare clic su **Servizi di SQL Server**.  
   
-3.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server Agent (**\<nomeistanza>**)** e quindi fare clic su **Proprietà**.  
+3.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server Agent (** \<nomeistanza> **)** e quindi fare clic su **Proprietà**.  
   
-4.  Nella finestra di dialogo **SQL Server Agent (**\<nomeistanza>**) Proprietà**, nella scheda Accesso, per l'account indicato nella casella **Nome account** digitare la nuova password nelle caselle **Password** e **Conferma password** e quindi fare clic su **OK**.  
+4.  Nella finestra di dialogo **SQL Server Agent (** \<nomeistanza> **) Proprietà**, nella scheda Accesso, per l'account indicato nella casella **Nome account** digitare la nuova password nelle caselle **Password** e **Conferma password** e quindi fare clic su **OK**.  
   
      In un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la password diventa effettiva immediatamente, senza riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In un'istanza cluster, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può portare offline la risorsa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e potrebbe essere necessario un riavvio.  
   

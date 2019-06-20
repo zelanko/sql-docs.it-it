@@ -1,5 +1,5 @@
 ---
-title: 'Procedura dettagliata: Aggiunta e modifica di un diagramma di Database | Microsoft Docs'
+title: 'Procedura dettagliata: Aggiunta e modifica di un diagramma di database | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273739"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Procedura dettagliata: Aggiunta e modifica di un diagramma di database
@@ -44,7 +44,7 @@ ms.locfileid: "63273739"
   
 3.  Fare clic con il pulsante destro del mouse sul nodo Diagrammi database e scegliere **Nuovo diagramma database**.  
   
-     Se il database non include gli oggetti necessari alla creazione dei diagrammi, viene visualizzato il messaggio seguente: **Questo database non dispone di uno o più oggetti di supporto necessari per l'uso dei diagrammi di database. Creare tali oggetti?** Scegliere **Sì**.  
+     Se il database non include gli oggetti necessari alla creazione dei diagrammi, verrà visualizzato il messaggio seguente: **Per il database non sono disponibili uno o più oggetti di supporto necessari per l'utilizzo dei diagrammi. Creare tali oggetti?** Scegliere **Sì**.  
   
      Verrà visualizzata la finestra di dialogo **Aggiungi tabella** .  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63273739"
   
 1.  Fare clic con il pulsante destro del mouse sulla tabella `Address` . Nel menu di scelta rapida scegliere **Vista tabella**e fare clic su **Standard**.  
   
-     La griglia della tabella sono visualizzate tre colonne: **Nome della colonna**, **tipo di dati**, e **ammette valori null**.  
+     Nella griglia della tabella sono visualizzate tre colonne: **Nome colonna**, **Tipo di dati**e **Consenti valori Null**.  
   
 2.  Fare clic con il pulsante destro del mouse sulla tabella `Address` , fare clic su **Vista tabella** e scegliere **Chiavi**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "63273739"
   
 2.  Nel **Scegli nome** finestra di dialogo, fare clic su **OK** per accettare il nome predefinito `Table1`.  
   
-     Viene visualizzata una nuova griglia della tabella con tre colonne: **Nome della colonna**, **tipo di dati**, e **ammette valori null**.  
+     Verrà visualizzata una nuova griglia della tabella con tre colonne: **Nome colonna**, **Tipo di dati**e **Consenti valori Null**.  
   
 3.  Aggiungere le informazioni seguenti per `Table1`:  
   
@@ -130,7 +130,7 @@ ms.locfileid: "63273739"
   
 2.  Trascinare `T2col1` in `T1col1`.  
   
-     Verranno visualizzate due finestre di dialogo: **Relazione chiavi esterne** in background e **tabelle e colonne** in primo piano.  
+     Verranno visualizzate due finestre di dialogo: **Relazione chiavi esterne** sullo sfondo e **Tabelle e colonne** in primo piano.  
   
 3.  Fare clic su **OK** per salvare la nuova relazione.  
   

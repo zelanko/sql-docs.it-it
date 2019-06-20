@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 1ac058e42b8bad4f499210835a1f85c3cc7a08a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62639510"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>Gestione delle autorizzazioni in Parallel Data Warehouse
@@ -62,7 +62,7 @@ L'elenco seguente descrive le autorizzazioni predefinite:
   
 -   Quando viene creato un account di accesso per le direttive using **CREATE LOGIN** istruzione, l'account di accesso riceve il **CONNECT SQL** autorizzazione che consente l'accesso per connettersi a SQL Server PDW.  
   
--   Quando un utente del database viene creato usando il **CREATE USER** istruzione, l'utente riceve il **CONNECT ON DATABASE::**_< database_name >_ autorizzazione, che consente la account di accesso per connettersi al database come un utente.  
+-   Quando un utente del database viene creato usando il **CREATE USER** istruzione, l'utente riceve il **CONNECT ON DATABASE::** _< database_name >_ autorizzazione, che consente la account di accesso per connettersi al database come un utente.  
   
 -   Tutte le entità, tra cui il ruolo PUBLIC, non avere alcuna autorizzazione esplicite o implicite per impostazione predefinita, poiché le autorizzazioni implicite vengono ereditate dalle autorizzazioni esplicite. Pertanto, quando non sono presente alcuna autorizzazione esplicitare, non può anche essere presente alcuna autorizzazione implicite.  
   

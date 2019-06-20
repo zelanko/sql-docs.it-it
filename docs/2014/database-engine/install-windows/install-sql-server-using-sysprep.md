@@ -11,14 +11,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775304"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>Installare SQL Server 2014 tramite SysPrep
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le azioni di installazione correlate a SysPrep sono accessibili tramite Centro installazione. Nella pagina **Avanzate** di **Centro installazione** sono disponibili due opzioni: **Preparazione immagine di un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** e **Completamento immagine di un'istanza autonoma predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Nelle sezioni di [preparazione](#prepare) e [completamento](#complete) viene descritto in modo dettagliato il processo di installazione. Per altre informazioni, vedere [Considerazioni sull'installazione di SQL Server tramite SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le azioni di installazione correlate a SysPrep sono accessibili tramite Centro installazione. Nella pagina **Avanzate** di **Centro installazione** sono disponibili due opzioni: **Preparazione immagine di un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** e **Completamento immagine di un'istanza autonoma predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Nelle sezioni di [preparazione](#prepare) e [completamento](#complete) viene descritto in modo dettagliato il processo di installazione. Per altre informazioni, vedere [Considerazioni sull'installazione di SQL Server tramite SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
   
  È possibile inoltre preparare e completare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il prompt dei comandi o un file di configurazione. Per altre informazioni, vedere:  
   
@@ -105,13 +105,13 @@ ms.locfileid: "62775304"
   
 3.  Controllo configurazione sistema consente di eseguire un'operazione di individuazione nel computer. Per continuare, fare clic su **OK**. È possibile fare clic su **Mostra dettagli**per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato**per visualizzarlo come report HTML.  
   
-4.  Nella pagina Aggiornamenti prodotto vengono visualizzati gli aggiornamenti più recenti sul prodotto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se non si vogliono includere gli aggiornamenti, deselezionare la casella di controllo **Includi aggiornamenti prodotto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Se non viene individuato alcun aggiornamento del prodotto, durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa pagina non viene visualizzata e viene aperta automaticamente la pagina **Installazione dei file di installazione** .  
+4.  Nella pagina Aggiornamenti prodotto vengono visualizzati gli aggiornamenti più recenti sul prodotto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se non si vogliono includere gli aggiornamenti, deselezionare la casella di controllo **Includi aggiornamenti prodotto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Se non viene individuato alcun aggiornamento del prodotto, durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa pagina non viene visualizzata e viene aperta automaticamente la pagina **Installazione dei file di installazione** .  
   
 5.  Nella pagina Installa i file di installazione viene mostrato lo stato di avanzamento del download, dell'estrazione e dell'installazione dei file di installazione. Se viene individuato un aggiornamento per il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ne viene specificata l'inclusione, verrà installato anche questo aggiornamento.  
   
 6.  Controllo configurazione sistema verifica lo stato del sistema del computer prima che l'installazione continui. È possibile fare clic su **Mostra dettagli** per visualizzare i dettagli sullo schermo oppure su **Visualizza report dettagliato** per visualizzarlo come report HTML.  
   
-7.  Nella pagina **Prepara tipo di immagine** selezionare **Prepara una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**.  
+7.  Nella pagina **Prepara tipo di immagine** selezionare **Prepara una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
   
      La pagina **Prepara tipo di immagine** viene visualizzata solo quando si ha un'istanza predisposta non configurata esistente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer. È possibile scegliere di preparare una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o di aggiungere funzionalità supportate da SysPrep a un'istanza predisposta esistente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer. Per altre informazioni su come aggiungere funzionalità a un'istanza predisposta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vedere [Aggiungere funzionalità a un'istanza predisposta](#AddFeatures).  
   
@@ -171,7 +171,7 @@ ms.locfileid: "62775304"
   
 7.  Nella pagina **Seleziona istanza predisposta** selezionare l'istanza predisposta che si vuole completare dalla casella di riepilogo a discesa. Selezionare l'istanza non configurata nell'elenco **ID istanza** .  
   
-     **Istanze installate:** Questa griglia vengono visualizzate tutte le istanze, comprese quelle predisposte nel computer.  
+     **Istanze installate:** la griglia mostra tutte le istanze, incluse tutte le istanze preparate nel computer.  
   
 8.  Nella pagina **Esame funzionalità** verranno visualizzate le funzionalità selezionate e i componenti inclusi nell'istallazione durante il passaggio relativo alla preparazione. Se si vogliono aggiungere più funzionalità all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza includerle nell'istanza predisposta, è prima necessario completare questo passaggio per completare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , quindi aggiungere le funzionalità da **Aggiungi funzionalità** in **Centro installazione**.  
   
@@ -249,7 +249,7 @@ ms.locfileid: "62775304"
   
 4.  Nella pagina File di supporto per l'installazione fare clic su **Installa** per installare i file specifici.  
   
-5.  Nella pagina **Prepara tipo di immagine** selezionare l'opzione **Aggiungi funzionalità a un'istanza predisposta esistente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Selezionare l'istanza predisposta specifica a cui si desidera aggiungere funzionalità dall'elenco a discesa delle istanze predisposte disponibili.  
+5.  Nella pagina **Prepara tipo di immagine** selezionare l'opzione **Aggiungi funzionalità a un'istanza predisposta esistente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Selezionare l'istanza predisposta specifica a cui si desidera aggiungere funzionalità dall'elenco a discesa delle istanze predisposte disponibili.  
   
 6.  Nella pagina **Selezione funzionalità** specificare le funzionalità che si vogliono aggiungere all'istanza predisposta specificata.  
   

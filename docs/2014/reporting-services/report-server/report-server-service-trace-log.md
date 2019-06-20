@@ -16,17 +16,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d69b2a3eeb28d5fe23eb6674c8a0ca0ee7628a75
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103405"
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
   Il log di traccia del server di report di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] è un file di testo ASCII che contiene informazioni dettagliate relative alle operazioni del servizio del server di report, ad esempio operazioni eseguite dal servizio Web ReportServer, da Gestione report e dall'elaborazione in background. Nel file di log di traccia sono contenute inoltre informazioni ridondanti, che vengono registrate in altri file di log, e informazioni aggiuntive non disponibili altrove. Le informazioni contenute nel log di traccia sono utili se si esegue il debug di un'applicazione che include un server di report o se è necessario analizzare un problema specifico scritto nel log eventi o nel log di esecuzione.  
   
 > [!NOTE]  
->  Nelle versioni precedenti sono presenti più file di log di traccia, uno per ogni applicazione. I file seguenti sono obsoleti e non vengono più creati in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive: Reportserverwebapp _*\<timestamp >*. log, ReportServer_*\<timestamp >*. log e reportserverservice_main _ *\< timestamp >*. log.  
+>  Nelle versioni precedenti sono presenti più file di log di traccia, uno per ogni applicazione. I file seguenti sono obsoleti e non vengono più creati in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive: Reportserverwebapp _ *\<timestamp >* . log, ReportServer_ *\<timestamp >* . log e reportserverservice_main _ *\< timestamp >* . log.  
   
  **Contenuto dell'argomento:**  
   

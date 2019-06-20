@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774343"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Dettagli di istanze gestite (Utilità SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "62774343"
   
  La sequenza di colonne nella visualizzazione Elenco può essere modificata trascinando le colonne verso destra o verso sinistra. È possibile aggiungere o eliminare colonne nella visualizzazione Elenco facendo clic con il pulsante destro del mouse sulle intestazioni di colonna e selezionando o deselezionando le colonne desiderate. Anche il menu di scelta rapida fornisce opzioni per l'ordinamento. È inoltre possibile attivare l'ordinamento facendo clic all'inizio di un nome di colonna.  
   
- Per accedere alle opzioni di filtro per la visualizzazione Elenco dell’utilità, fare clic con il pulsante destro del mouse sul nodo **Istanze gestite** nel riquadro di spostamento Esplora utilità, quindi selezionare **Filtro**. Dopo l'implementazione delle impostazioni del filtro, il nodo **Istanze gestite** in Gestione Utilità verrà identificato dall'etichetta **Istanze gestite (filtrato)**. Per altre informazioni, vedere [Impostazioni filtro &#40;Esplora oggetti ed Esplora utilità&#41;](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
+ Per accedere alle opzioni di filtro per la visualizzazione Elenco dell’utilità, fare clic con il pulsante destro del mouse sul nodo **Istanze gestite** nel riquadro di spostamento Esplora utilità, quindi selezionare **Filtro**. Dopo l'implementazione delle impostazioni del filtro, il nodo **Istanze gestite** in Gestione Utilità verrà identificato dall'etichetta **Istanze gestite (filtrato)** . Per altre informazioni, vedere [Impostazioni filtro &#40;Esplora oggetti ed Esplora utilità&#41;](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
   
  Per impostazione predefinita, nelle colonne seguenti sono visualizzate informazioni sullo stato di integrità relative a ogni istanza gestita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   

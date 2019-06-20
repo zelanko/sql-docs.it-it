@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cde9ff4e640948c953bc0488517749fd776e438
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62670694"
 ---
 # <a name="dta-utility"></a>dta - utilità
@@ -211,7 +211,7 @@ dta -d AdventureWorks2012 ...
  Specifica il percorso e il nome del file del carico di lavoro da utilizzare come input per l'ottimizzazione. Il file deve essere in formato trc (file di traccia di SQL Server Profiler), sql (file SQL) oppure log (file di traccia di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). È inoltre necessario specificare un file o una tabella del carico di lavoro.  
   
  **-it** _workload_trace_table_name_  
- Specifica il nome della tabella contenente la traccia del carico di lavoro per l'ottimizzazione. Il nome viene specificato in formato [*database_name*]**.**[*owner_name*]**.**_table_name_.  
+ Specifica il nome della tabella contenente la traccia del carico di lavoro per l'ottimizzazione. Il nome viene specificato in formato [*database_name*] **.** [*owner_name*] **.** _table_name_.  
   
  Nella tabella seguente sono riportati i valori predefiniti per ogni parametro.  
   
@@ -316,14 +316,14 @@ dta -n number_of_events -A 0
   
  *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
- Questo argomento rappresenta un'alternativa all'immissione di un elenco di tabelle al prompt dei comandi (**-Tl**). Non usare un file contenente un elenco di tabelle (**-Tf**) se si specifica **-Tl**. Se vengono utilizzati entrambi gli argomenti, l'esecuzione di **dta** ha esito negativo e viene restituito un errore.  
+ Questo argomento rappresenta un'alternativa all'immissione di un elenco di tabelle al prompt dei comandi ( **-Tl**). Non usare un file contenente un elenco di tabelle ( **-Tf**) se si specifica **-Tl**. Se vengono utilizzati entrambi gli argomenti, l'esecuzione di **dta** ha esito negativo e viene restituito un errore.  
   
  Se si omettono gli argomenti **-Tf** e **-Tl** , tutte le tabelle utente nei database specificati verranno considerate per l'ottimizzazione.  
   
  **-Tl** _table_list_  
  Specifica al prompt dei comandi un elenco di tabelle da ottimizzare. Per separare i nomi di tabella, utilizzare la virgola. Se con l'argomento **-D** viene specificato solo un database, non è necessario che i nomi delle tabelle vengano qualificati con un nome di database. In caso contrario, per ogni tabella sarà necessario specificare il nome completo nel formato: *database_name.schema_name.table_name* .  
   
- Questo argomento rappresenta un'alternativa all'utilizzo di un file contenente un elenco di tabelle (**-Tf**). Se vengono usati entrambi gli argomenti **-Tl** e **-Tf** , l'esecuzione di **dta** non riesce e viene restituito un errore.  
+ Questo argomento rappresenta un'alternativa all'utilizzo di un file contenente un elenco di tabelle ( **-Tf**). Se vengono usati entrambi gli argomenti **-Tl** e **-Tf** , l'esecuzione di **dta** non riesce e viene restituito un errore.  
   
  **-U** _login_id_  
  Specifica l'ID di accesso utilizzato per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

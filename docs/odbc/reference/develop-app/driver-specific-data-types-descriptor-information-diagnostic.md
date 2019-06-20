@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30c310e6c6b2833da6e1d9167faee2e979bb4616
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63238811"
 ---
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>Tipi di dati specifici del driver, tipi di descrittori, tipi di informazioni, tipi di diagnostica e attributi
 I driver possono allocare i valori specifici del driver per le operazioni seguenti:  
   
--   **Indicatori di tipo di dati di SQL** questi intervalli vengono usati *ParameterType* nelle **SQLBindParameter** e in *DataType* in **SQLGetTypeInfo** e restituito da **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**,  **SQLDescribeParam**, **SQLProcedureColumns**, e **SQLSpecialColumns**.  
+-   **Indicatori di tipo di dati di SQL** questi intervalli vengono usati *ParameterType* nelle **SQLBindParameter** e in *DataType* in **SQLGetTypeInfo** e restituito da **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**, ** SQLDescribeParam**, **SQLProcedureColumns**, e **SQLSpecialColumns**.  
   
 -   **Campi del descrittore** questi intervalli vengono usati *FieldIdentifier* nelle **SQLColAttribute**, **SQLGetDescField**, e **SQLSetDescField**.  
   
@@ -33,7 +33,7 @@ I driver possono allocare i valori specifici del driver per le operazioni seguen
   
 -   **Tipi di informazioni** questi intervalli vengono usati *InfoType* nelle **SQLGetInfo**.  
   
--   **Connessione e gli attributi di istruzione** questi intervalli vengono usati *attributo* nelle **SQLGetConnectAttr**, **SQLGetStmtAttr**,  **SQLSetConnectAttr**, e **SQLSetStmtAttr**.  
+-   **Connessione e gli attributi di istruzione** questi intervalli vengono usati *attributo* nelle **SQLGetConnectAttr**, **SQLGetStmtAttr**, ** SQLSetConnectAttr**, e **SQLSetStmtAttr**.  
   
  Per ognuno di questi elementi, sono disponibili due set di valori: valori riservati per l'utilizzo da ODBC e valori riservati per i driver. Prima di implementare i valori specifici del driver, un writer di driver deve richiedere un valore per ogni tipo specifico del driver, un campo o attributo da Open Group. Per i nuovi sviluppi di driver, utilizzare l'intervallo descritto nella tabella seguente. La gestione dei Driver di ODBC 3.8 non genererà un errore se viene usato un valore sconosciuto che non è compreso nell'intervallo descritto di seguito. Tuttavia, le versioni successive di gestione Driver potrebbero generare un errore se i valori sconosciuti vengono ricevuti che non sono compresi nell'intervallo.  
   

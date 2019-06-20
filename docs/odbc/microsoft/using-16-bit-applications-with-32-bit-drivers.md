@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ebd6f25758f73e75fd96abb734bc7b0347d5ee0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63209981"
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>Uso delle applicazioni a 16 bit con driver a 32 bit
@@ -36,7 +36,7 @@ ms.locfileid: "63209981"
 >  Ogni volta che un'applicazione a 16 bit interagisce con un driver a 32 bit, la gestione di Driver a 32 bit restituisce sempre "2.0" come versione di ODBC supportati dal driver.  
   
 ## <a name="administration"></a>Amministrazione  
- È possibile gestire le origini dati per i driver a 32 bit con l'amministratore dell'origine dati ODBC. Per aprire l'amministratore ODBC in computer che eseguono Microsoft® Windows® 2000, aprire il pannello di controllo di Windows, fare doppio clic su **strumenti di amministrazione**, quindi fare doppio clic su **origini dati (ODBC)**. Nei computer che eseguono versioni precedenti di Microsoft Windows, l'icona è denominata **ODBC a 32 bit** o semplicemente **ODBC**.  
+ È possibile gestire le origini dati per i driver a 32 bit con l'amministratore dell'origine dati ODBC. Per aprire l'amministratore ODBC in computer che eseguono Microsoft® Windows® 2000, aprire il pannello di controllo di Windows, fare doppio clic su **strumenti di amministrazione**, quindi fare doppio clic su **origini dati (ODBC)** . Nei computer che eseguono versioni precedenti di Microsoft Windows, l'icona è denominata **ODBC a 32 bit** o semplicemente **ODBC**.  
   
  La figura seguente mostra come un'applicazione a 16 bit chiama una DLL di installazione di driver a 32 bit. Tra il programma di installazione a 16 bit DLL e il driver a 32 bit DLL di installazione è una DLL thunk generica che converte le chiamate DLL programma di installazione a 16 bit in chiamate DLL programma di installazione a 32 bit.  
   

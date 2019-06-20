@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 537865967d0e43b7dd9501f9fbb7b9605f5b9367
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62625794"
 ---
 # <a name="running-test-cases-oracletosql"></a>Esecuzione di test case (OracleToSQL)
@@ -43,7 +43,7 @@ Si supponga che la tabella verificata è denominata USER_TABLE. Per una tabella,
   
 ||||  
 |-|-|-|  
-|Nome|Tipo|Descrizione|  
+|Nome|Type|Descrizione|  
 |USER_TABLE$Trg|trigger|Attivare il controllo delle modifiche nella tabella verificata.|  
 |USER_TABLE$AUD|table|Tabella in cui vengono salvate le righe eliminate e sovrascritte.|  
 |USER_TABLE$AUDID|table|Tabella in cui vengono salvate righe nuove e modificate.|  
@@ -56,14 +56,14 @@ L'oggetto seguente viene creato nello schema di tabella verificata nel [!INCLUDE
   
 ||||  
 |-|-|-|  
-|Nome|Tipo|Descrizione|  
+|Nome|Type|Descrizione|  
 |USER_TABLE$Trg|trigger|Attivare il controllo delle modifiche nella tabella verificata.|  
   
 E gli oggetti seguenti vengono creati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nel database ssmatesterdb.  
   
 ||||  
 |-|-|-|  
-|Nome|Tipo|Descrizione|  
+|Nome|Type|Descrizione|  
 |USER_TABLE$Aud|table|Tabella in cui vengono salvate le righe eliminate e sovrascritte.|  
 |USER_TABLE$AudID|table|Tabella in cui vengono salvate righe nuove e modificate.|  
 |USER_TABLE|vista|Rappresentazione semplificata delle modifiche nella tabella.|  

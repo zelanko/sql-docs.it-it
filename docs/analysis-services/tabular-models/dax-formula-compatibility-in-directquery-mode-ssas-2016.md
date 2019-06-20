@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8e3a9a9f8043a3251e928b7b13e706b407097894
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 24d605c3ca3374a41fa080a861b64001c36f3ef2
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63019221"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263327"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>Compatibilità delle formule DAX in modalità DirectQuery 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,10 +45,10 @@ Queste funzioni non sono state ottimizzate per l'uso con DirectQuery. Queste fun
 
 Il motivo per cui è possibile che una particolare funzione non sia ottimizzata per DirectQuery risiede nel fatto che il motore relazionale sottostante non è in grado di eseguire calcoli equivalenti a quelli eseguiti dal motore xVelocity oppure che la formula non può essere convertita in un'espressione SQL equivalente. In altri casi, le prestazioni dell'espressione convertita e i calcoli risultanti potrebbero essere inaccettabili.
 
-Per informazioni su tutte le funzioni DAX, vedere il [riferimento alle funzioni DAX]. (https://msdn.microsoft.com/library/ee634396.aspx)
+Per informazioni su tutte le funzioni DAX, vedere la [riferimento alle funzioni DAX](/dax/dax-function-reference).
 
 ## <a name="dax-operators-in-directquery-mode"></a>Operatori DAX in modalità DirectQuery
-Tutti gli operatori di confronto e aritmetici DAX sono completamente supportati nella modalità DirectQuery. Per altre informazioni, vedere [Guida di riferimento agli operatori DAX](https://msdn.microsoft.com/library/ee634237.aspx).
+Tutti gli operatori di confronto e aritmetici DAX sono completamente supportati nella modalità DirectQuery. Per altre informazioni, vedere [Guida di riferimento agli operatori DAX](/dax/dax-operator-reference).
 
 
  
@@ -107,7 +107,7 @@ Il linguaggio DAX non prevede alcuna funzione cast di questo tipo, tuttavia i ca
 -   I valori booleani vengono sempre trattati come valori logici nei confronti e quando vengono usati con EXACT, AND, OR, &amp;&amp;o ||.  
   
 **Cast di una stringa a un valore booleano**  
-In memoria e i modelli DirectQuery, i cast sono consentiti per i valori booleani solo di queste stringhe: **""** (stringa vuota), **"true"** , **"false"** ; in una stringa vuota cast a un valore false.  
+In memoria e i modelli DirectQuery, i cast sono consentiti per i valori booleani solo di queste stringhe: **""** (stringa vuota), **"true"**, **"false"**; in una stringa vuota cast a un valore false.  
   
 Il cast a un tipo di dati booleano di qualsiasi altra stringa genera un errore.  
   
@@ -160,7 +160,7 @@ SQL Server gestisce i valori Null e gli spazi vuoti in modo diverso rispetto al 
   
 Le stesse limitazioni si applicano alle altre funzioni logaritmiche: LOG10 e LN.  
   
-Per altre informazioni sul tipo di dati **blank** in DAX, vedere [Specifica della sintassi DAX per PowerPivot](https://msdn.microsoft.com/library/ee634217.aspx).  
+Per altre informazioni sul tipo di dati **blank** in DAX, vedere [Specifica della sintassi DAX per PowerPivot](/dax/dax-syntax-reference).  
   
 **Divisione per 0 e divisione per spazio vuoto**  
 Nella modalità DirectQuery la divisione per zero (0) o per BLANK genera sempre un errore. SQL Server non supporta la nozione di infinito e poiché il risultato naturale di qualsiasi divisione per 0 è un infinito, il risultato è un errore. Tuttavia, SQL Server supporta la divisione per valori Null e il risultato deve sempre essere uguale a Null.  

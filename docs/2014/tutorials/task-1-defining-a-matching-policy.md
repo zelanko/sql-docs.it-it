@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481309"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>Attività 1: Definizione di criteri di corrispondenza
-  In questa attività vengono creati criteri di corrispondenza in cui è contenuta una regola. La regola avrà un solo prerequisito: **Supplier ID**, il che significa che gli ID dei fornitori devono corrispondere prima di usare gli altri domini nella regola. La regola usa due altri domini: **Nome fornitore** con **somiglianza** valore impostato su **70%** e **Contact Email** con **somiglianza** valore impostato su **30%**.  
+  In questa attività vengono creati criteri di corrispondenza in cui è contenuta una regola. La regola avrà un solo prerequisito: **Supplier ID**, il che significa che gli ID dei fornitori devono corrispondere prima di usare gli altri domini nella regola. La regola usa due altri domini: **Nome fornitore** con **somiglianza** valore impostato su **70%** e **Contact Email** con **somiglianza** valore impostato su **30%** .  
   
 1.  Nella pagina principale del **Client DQS**, fare clic su **freccia destra** accanto a **Suppliers** knowledge base, quindi seleziona **criteri di corrispondenza**.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "65481309"
   
 12. Ripetere i due passaggi precedenti per aggiungere **Contact Email** dominio con **30** per il **peso**.  
   
-13. Si noti che il **punteggio corrispondente minimo** è impostata su **80%**, che è il valore visualizzato nel **generale** scheda della finestra di **configurazione** pagina di **Amministrazione DQS**. Questo punteggio può essere aumentato oltre questo valore soglia solo qui.  
+13. Si noti che il **punteggio corrispondente minimo** è impostata su **80%** , che è il valore visualizzato nel **generale** scheda della finestra di **configurazione** pagina di **Amministrazione DQS**. Questo punteggio può essere aumentato oltre questo valore soglia solo qui.  
   
 14. Si noti che **cluster sovrapposti** opzione è selezionata. Con questa opzione, un record può essere visualizzato in più cluster. Se l'impostazione viene modificata su Cluster non sovrapposti, i cluster che presentano record comuni vengono combinati in uno unico.  
   
