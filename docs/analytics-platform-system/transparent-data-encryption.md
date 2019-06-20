@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: e9067416365e56dccf9c09f2e826c01fb3ecfa3c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63156958"
 ---
 # <a name="transparent-data-encryption"></a>Transparent Data Encryption
@@ -244,7 +244,7 @@ Esempio di azione per sostituire una macchina virtuale.
   
 `setup.exe /Action=ReplaceVM ... DMKPassword='**********'`  
   
-Durante l'aggiornamento, se un database utente è crittografato e la password DMK non viene specificata, l'azione di aggiornamento avrà esito negativo. Durante la sostituzione, se la password corretta non è disponibile quando è presente una DMK, l'operazione ignorerà il passaggio di recupero DMK. Tutti gli altri passaggi verranno completati al termine dell'azione di sostituzione della macchina virtuale, ma l'azione segnala un errore alla fine per indicare che sono necessari passaggi aggiuntivi. Nei log del programma di installazione (che si trova **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\\Detail-Setup < timestamp >**), verrà visualizzato l'avviso seguente verso la fine.  
+Durante l'aggiornamento, se un database utente è crittografato e la password DMK non viene specificata, l'azione di aggiornamento avrà esito negativo. Durante la sostituzione, se la password corretta non è disponibile quando è presente una DMK, l'operazione ignorerà il passaggio di recupero DMK. Tutti gli altri passaggi verranno completati al termine dell'azione di sostituzione della macchina virtuale, ma l'azione segnala un errore alla fine per indicare che sono necessari passaggi aggiuntivi. Nei log del programma di installazione (che si trova **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\\Detail-Setup < timestamp >** ), verrà visualizzato l'avviso seguente verso la fine.  
   
 `*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
   

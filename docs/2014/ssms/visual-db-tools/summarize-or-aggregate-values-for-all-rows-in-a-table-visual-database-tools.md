@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63204615"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Riepilogo o aggregazione di valori per tutte le righe di una tabella (Visual Database Tools)
@@ -57,7 +57,7 @@ FROM titles
   
      Verrà assegnato automaticamente un alias di colonna alla colonna di cui si effettua il riepilogo. Tale alias può essere sostituito con un alias più significativo. Per altre informazioni dettagliate, vedere [Creazione di alias di colonna &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
   
-4.  Nel **Group By** colonna della griglia, Seleziona funzione di aggregazione appropriata, ad esempio: **Somma**, **Avg**, **Min**, **Max**, **conteggio**. Per aggregare solo le righe univoche nel set di risultati, scegliere una funzione di aggregazione con l'opzione DISTINCT, ad esempio **Min Distinct**. Non scegliere **Group By**, **Expression**o **Where**, in quanto tali opzioni non sono applicabili per l'aggregazione di tutte le righe.  
+4.  Nella colonna della griglia **Group By** selezionare la funzione di aggregazione appropriata, ad esempio **Sum**, **Avg**, **Min**, **Max**, **Count**. Per aggregare solo le righe univoche nel set di risultati, scegliere una funzione di aggregazione con l'opzione DISTINCT, ad esempio **Min Distinct**. Non scegliere **Group By**, **Expression**o **Where**, in quanto tali opzioni non sono applicabili per l'aggregazione di tutte le righe.  
   
      Il nome della colonna nell'istruzione del [riquadro SQL](sql-pane-visual-database-tools.md) verrà sostituito con la funzione di aggregazione specificata in Progettazione query e Progettazione viste. L'istruzione SQL, ad esempio, può essere analoga alla seguente:  
   

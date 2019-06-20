@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b41519ee6a6d31be33d92c8fbdf2ab503c93ec1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63265070"
 ---
 # <a name="how-to-deploy-a-custom-report-item"></a>Procedura: Distribuire un elemento del report personalizzato
@@ -24,7 +24,7 @@ ms.locfileid: "63265070"
   
 ### <a name="to-deploy-a-custom-report-item"></a>Per distribuire un elemento del report personalizzato  
   
-1.  Modificare il file Rsreportdesigner.config per configurare i componenti runtime e della modalità progettazione del report personalizzato da utilizzare nella finestra di progettazione. Si noti che la voce `ReportItemName` deve corrispondere all'attributo `CustomReportItemAttribute` utilizzato nella classe `CustomReportItemDesigner`. Ad esempio:   
+1.  Modificare il file Rsreportdesigner.config per configurare i componenti runtime e della modalità progettazione del report personalizzato da utilizzare nella finestra di progettazione. Si noti che la voce `ReportItemName` deve corrispondere all'attributo `CustomReportItemAttribute` utilizzato nella classe `CustomReportItemDesigner`. Ad esempio:  
   
     ```  
     <ReportItems>  
@@ -46,7 +46,7 @@ ms.locfileid: "63265070"
     </ReportItems>  
     ```  
   
-3.  Modificare il file Rsssrvpolicy.config per aggiungere una parola chiave `CodeGroup` che conceda le autorizzazioni appropriate all'elemento del report personalizzato. Ad esempio:   
+3.  Modificare il file Rsssrvpolicy.config per aggiungere una parola chiave `CodeGroup` che conceda le autorizzazioni appropriate all'elemento del report personalizzato. Ad esempio:  
   
     ```  
     <CodeGroup   

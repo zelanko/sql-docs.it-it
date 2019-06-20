@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022648"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Mapping dei tipi di dati per i server di pubblicazione Oracle
@@ -33,9 +33,9 @@ ms.locfileid: "63022648"
 |CHAR([1-2000])|CHAR([1-2000])|Yes|  
 |CLOB|VARCHAR(MAX)|Yes|  
 |DATE|DATETIME|Yes|  
-|FLOAT|FLOAT|No|  
-|FLOAT([1-53])|FLOAT([1-53])|no|  
-|FLOAT([54-126])|FLOAT|No|  
+|FLOAT|FLOAT|no|  
+|FLOAT([1-53])|FLOAT([1-53])|No|  
+|FLOAT([54-126])|FLOAT|no|  
 |INT|NUMERIC(38)|Yes|  
 |INTERVAL|DATETIME|Yes|  
 |LONG|VARCHAR(MAX)|Yes|  
@@ -47,8 +47,8 @@ ms.locfileid: "63022648"
 |NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Yes|  
 |NVARCHAR2([1-2000])|NVARCHAR([1-2000])|No|  
 |RAW([1-2000])|VARBINARY([1-2000])|No|  
-|real|FLOAT|no|  
-|ROWID|CHAR(18)|no|  
+|real|FLOAT|No|  
+|ROWID|CHAR(18)|No|  
 |timestamp|DATETIME|Yes|  
 |TIMESTAMP(0-7)|DATETIME|Yes|  
 |TIMESTAMP(8-9)|DATETIME|Yes|  

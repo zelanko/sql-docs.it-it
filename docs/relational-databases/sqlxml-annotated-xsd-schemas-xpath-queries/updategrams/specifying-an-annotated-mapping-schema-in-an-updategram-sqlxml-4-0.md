@@ -23,10 +23,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e55ec7d8ed06914299f56b3d613186d8c612a05
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63025540"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Specifica di uno schema di mapping con annotazioni in un updategram (SQLXML 4.0)
@@ -39,9 +39,9 @@ ms.locfileid: "63025540"
 >  In questa documentazione si presuppone che l'utente disponga di una certa familiarità con i modelli e il supporto dello schema di mapping in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Introduzione agli schemi XSD con annotazioni &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Per le applicazioni legacy che utilizzano XDR, vedere [schemi XDR con annotazioni &#40;deprecato in SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="dealing-with-data-types"></a>Gestione dei tipi di dati  
- Se lo schema specifica la **immagine**, **binario**, o **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo di dati (tramite **SQL: DataType**) e non esiste specificare un tipo di dati XML, l'updategram presuppone che il tipo di dati XML è **binari base 64**. Se i dati siano **bin.base** tipo, è necessario specificare esplicitamente il tipo (**dt:type=bin.base** oppure **tipo = "xsd: hexBinary"**).  
+ Se lo schema specifica la **immagine**, **binario**, o **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo di dati (tramite **SQL: DataType**) e non esiste specificare un tipo di dati XML, l'updategram presuppone che il tipo di dati XML è **binari base 64**. Se i dati siano **bin.base** tipo, è necessario specificare esplicitamente il tipo (**dt:type=bin.base** oppure **tipo = "xsd: hexBinary"** ).  
   
- Se lo schema specifica la **data/ora**, **data**, o **ora** tipo di dati XSD, è necessario specificare anche il corrispondente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo di dati tramite  **SQL: DataType = "dateTime"**.  
+ Se lo schema specifica la **data/ora**, **data**, o **ora** tipo di dati XSD, è necessario specificare anche il corrispondente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo di dati tramite  **SQL: DataType = "dateTime"** .  
   
  Quando si gestiscono parametri di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **denaro** tipo, è necessario specificare esplicitamente **SQL: DataType = "money"** nel nodo appropriato nello schema di mapping.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "63025540"
 </xsd:schema>  
 ```  
   
- L'updategram seguente inserisce un record nella tabella Sales.Customer e si basa sullo schema di mapping precedente per eseguire il mapping di questi dati alla tabella correttamente. Si noti che l'updategram utilizza lo stesso nome di elemento,  **\<cliente >**, come definito nello schema. Questa condizione è obbligatoria perché l'updategram specifica uno schema particolare.  
+ L'updategram seguente inserisce un record nella tabella Sales.Customer e si basa sullo schema di mapping precedente per eseguire il mapping di questi dati alla tabella correttamente. Si noti che l'updategram utilizza lo stesso nome di elemento,  **\<cliente >** , come definito nello schema. Questa condizione è obbligatoria perché l'updategram specifica uno schema particolare.  
   
 ##### <a name="to-test-the-updategram"></a>Per testare l'updategram  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63025540"
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. Inserimento di un record tramite la relazione padre-figlio specificata nello schema di mapping  
  Gli elementi dello schema possono essere correlati. Il  **\<SQL: Relationship >** elemento specifica la relazione padre-figlio tra gli elementi dello schema. Queste informazioni vengono utilizzate per aggiornare le tabelle corrispondenti che presentano una relazione chiave primaria/chiave esterna.  
   
- Lo schema di mapping seguente (SampleSchema. XML) è costituito da due elementi  **\<ordine >** e  **\<OD >**:  
+ Lo schema di mapping seguente (SampleSchema. XML) è costituito da due elementi  **\<ordine >** e  **\<OD >** :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

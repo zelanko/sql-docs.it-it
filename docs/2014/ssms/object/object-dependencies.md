@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bba5156d159c87ad6ad0e011268bc655b45a5c37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63032411"
 ---
 # <a name="object-dependencies"></a>Dipendenze tra oggetti
@@ -27,10 +27,10 @@ ms.locfileid: "63032411"
  Utilizzare questa finestra di dialogo per individuare le dipendenze prima di modificare o eliminare l'oggetto selezionato.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
- **Gli oggetti che dipendono**_\<oggetto selezionato >_  
+ **Gli oggetti che dipendono** _\<oggetto selezionato >_  
  Fare clic su questo pulsante per visualizzare un elenco di tutti gli oggetti registrati nelle dipendenze che dipendono dall'oggetto selezionato.  
   
- **Gli oggetti in cui**_\<oggetto selezionato >_**dipende dal**  
+ **Gli oggetti in cui** _\<oggetto selezionato >_ **dipende dal**  
  Fare clic su questo pulsante per visualizzare un elenco di tutti gli oggetti registrati nelle dipendenze da cui dipende l'oggetto selezionato.  
   
  **Dipendenze**  

@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5b20a0d2f47e89070712a4063acba4da0225b85d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060954"
 ---
 # <a name="common-properties"></a>Proprietà comuni
@@ -93,7 +93,7 @@ ms.locfileid: "66060954"
 |IdentificationString|String|Identifica il componente.|  
 |IsDefaultLocale|Boolean|Indica se il componente utilizza le impostazioni locali dell'attività Flusso di dati alla quale appartiene.|  
 |LocaleID|Valore intero|Impostazioni locali che il componente flusso di dati utilizza durante l'esecuzione del pacchetto. Tutte le impostazioni locali di Windows sono disponibili per l'utilizzo nei componenti flusso di dati.|  
-|Nome|String|Nome del componente del flusso di dati.|  
+|nome|String|Nome del componente del flusso di dati.|  
 |PipelineVersion|Valore intero|Versione dell'attività Flusso di dati nella quale il componente è progettato per l'esecuzione.|  
 |UsesDispositions|Boolean|Indica se un componente ha un output degli errori.|  
 |ValidateExternalMetadata|Boolean|Indica se i metadati delle colonne esterne sono convalidati. Il valore predefinito di questa proprietà è `True`.|  
@@ -158,8 +158,8 @@ ms.locfileid: "66060954"
 |ID|Valore intero|Valore che identifica l'output in modo univoco.|  
 |IdentificationString|String|Stringa che identifica l'output.|  
 |IsErrorOut|Boolean|Indica se l'output è un output degli errori.|  
-|IsSorted|Boolean|Indica se l'output è ordinato. Il valore predefinito è `False`.<br /><br /> **\*\* Importanti \* \***  impostando il valore della `IsSorted` proprietà `True` non consente di ordinare i dati. Questa proprietà fornisce solo un hint ai componenti a valle in relazione all'ordinamento precedente dei dati. Per altre informazioni, vedere [Ordinamento dei dati per le trasformazioni Unione e Merge Join](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
-|Nome|String|Nome dell'output.|  
+|IsSorted|Boolean|Indica se l'output è ordinato. Il valore predefinito è `False`.<br /><br /> **\*\* Importanti \* \* ** impostando il valore della `IsSorted` proprietà `True` non consente di ordinare i dati. Questa proprietà fornisce solo un hint ai componenti a valle in relazione all'ordinamento precedente dei dati. Per altre informazioni, vedere [Ordinamento dei dati per le trasformazioni Unione e Merge Join](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
+|nome|String|Nome dell'output.|  
 |SynchronousInputID|Valore intero|ID di un input sincrono all'output.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valore che determina la gestione dei troncamenti da parte del componente durante l'elaborazione delle righe. I possibili valori sono `Fail component`, `Ignore failure` e `Redirect row`.|  
   
