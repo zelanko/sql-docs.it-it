@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63072378"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria
@@ -123,7 +123,7 @@ ms.locfileid: "63072378"
   
  È possibile configurare un agente di raccolta dati su un SQL Server 2012 o versione successiva di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Per poter caricare dati in un database del data warehouse di gestione in un'istanza diversa da quella in cui verrà eseguita la profilatura delle transazioni, è necessario un proxy di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent configurato con le credenziali corrette per un agente di raccolta dati. Per abilitare un proxy di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, è innanzitutto necessario definire le credenziali con un account di accesso abilitato per il dominio, che deve essere membro del gruppo `mdw_admin` per il database del data warehouse di gestione. Vedere [come: Creare una credenziale (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) per informazioni su come creare una credenziale.  
+ Per poter caricare dati in un database del data warehouse di gestione in un'istanza diversa da quella in cui verrà eseguita la profilatura delle transazioni, è necessario un proxy di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent configurato con le credenziali corrette per un agente di raccolta dati. Per abilitare un proxy di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, è innanzitutto necessario definire le credenziali con un account di accesso abilitato per il dominio, che deve essere membro del gruppo `mdw_admin` per il database del data warehouse di gestione. Vedere [Procedura: Creare una credenziale (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) per informazioni su come creare una credenziale.  
   
  Per configurare la raccolta dati da caricare in un database del data warehouse di gestione in un'istanza diversa  
   

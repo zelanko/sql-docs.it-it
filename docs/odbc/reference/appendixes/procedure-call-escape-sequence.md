@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 914bd4759552680a57c345dc3a7c3bc1bcc103a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63188502"
 ---
 # <a name="procedure-call-escape-sequence"></a>Sequenza di escape per chiamata di procedura
 ODBC Usa sequenze di escape per le chiamate di procedura. La sintassi di questa sequenza di escape è come segue:  
   
- **{**[?=]**call** *procedure-name*[**(**[*parameter*][,[*parameter*]]...**)**]**}**  
+ **{** [?=]**call** *procedure-name*[ **(** [*parameter*][,[*parameter*]]... **)** ] **}**  
   
  Nella notazione BNF, la sintassi è come segue:  
   
@@ -43,7 +43,7 @@ ODBC Usa sequenze di escape per le chiamate di procedura. La sintassi di questa 
   
  &#124;*separatore di catalogo-nome del catalogo* *procedure-identifier*  
   
- &#124;*separatore di catalogo-nome del catalogo* [*-nome del proprietario*]. *Identificatore di procedure*  
+ &#124;*separatore di catalogo-nome del catalogo* [ *-nome del proprietario*]. *Identificatore di procedure*  
   
  (La terza sintassi è valida solo se l'origine dati non supporta i proprietari).  
   

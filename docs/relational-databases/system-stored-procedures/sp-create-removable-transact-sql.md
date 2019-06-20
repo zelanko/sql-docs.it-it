@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9c2e25b51998d863809a57654b245b1cb63027b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724066"
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
@@ -60,13 +60,13 @@ sp_create_removable
   
 `[ @syslogical = ] 'syslogical'` È il nome logico del file che contiene le tabelle del catalogo di sistema. *syslogical* viene **sysname**.  
   
-`[ @sysphysical = ] 'sysphysical'` È il nome fisico. In esso è incluso un percorso completo del file contenente le tabelle del catalogo di sistema. *sysphysical* viene **nvarchar(260)**.  
+`[ @sysphysical = ] 'sysphysical'` È il nome fisico. In esso è incluso un percorso completo del file contenente le tabelle del catalogo di sistema. *sysphysical* viene **nvarchar(260)** .  
   
 `[ @syssize = ] syssize` È la dimensione, in megabyte del file che contiene il sistema tabelle del catalogo. *syssize* viene **int**. Il valore minimo *syssize* è 1.  
   
 `[ @loglogical = ] 'loglogical'` È il nome logico del file che contiene il log delle transazioni. *loglogical* viene **sysname**.  
   
-`[ @logphysical = ] 'logphysical'` È il nome fisico. In esso è incluso un percorso completo del file contenente il log delle transazioni. *logphysical* viene **nvarchar(260)**.  
+`[ @logphysical = ] 'logphysical'` È il nome fisico. In esso è incluso un percorso completo del file contenente il log delle transazioni. *logphysical* viene **nvarchar(260)** .  
   
 `[ @logsize = ] logsize` È la dimensione, in megabyte del file che contiene il log delle transazioni. *LogSize* viene **int**. Il valore minimo *logsize* è 1.  
   
@@ -74,7 +74,7 @@ sp_create_removable
   
  Il numero dei file di dati è compreso tra 1 e 16. Vengono in genere creati più file di dati quando si prevede che il database sia di grandi dimensioni e debba essere pertanto suddiviso su più dischi.  
   
-`[ @dataphysical1 = ] 'dataphysical'` È il nome fisico. In esso è incluso un percorso completo di un file contenente le tabelle di dati. *dataphysical* viene **nvarchar(260)**.  
+`[ @dataphysical1 = ] 'dataphysical'` È il nome fisico. In esso è incluso un percorso completo di un file contenente le tabelle di dati. *dataphysical* viene **nvarchar(260)** .  
   
 `[ @datasize1 = ] 'datasize'` È la dimensione, in megabyte di un file che contiene le tabelle di dati. *DataSize* viene **int**. Il valore minimo *datasize* è 1.  
   

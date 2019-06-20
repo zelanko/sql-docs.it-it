@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86f54b00e530e70d1952461ce7b98b9238e4c3f3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109163"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>Finestra di dialogo Riempimento (Generatore report e SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66109163"
   
 ## <a name="options"></a>Opzioni  
  **Colore di riempimento**  
- Fare clic sul pulsante del colore per selezionare un colore di riempimento per il rettangolo. Fare clic sul pulsante **Espressione**_(fx)_ per modificare l'espressione, che può essere un valore esadecimale per il colore RGB o uno dei nomi di colore predefiniti specificati nella finestra di dialogo **Espressione** . Per visualizzare un elenco di colori predefiniti, selezionare **Web** nel riquadro **Elemento**. I nomi di colore elencati nel riquadro **Titolo** possono essere digitati nel riquadro di testo dell'espressione. Quando si digita il nome del colore, non utilizzare un segno di uguale (=) o le virgolette ("").  
+ Fare clic sul pulsante del colore per selezionare un colore di riempimento per il rettangolo. Fare clic sul pulsante **Espressione** _(fx)_ per modificare l'espressione, che può essere un valore esadecimale per il colore RGB o uno dei nomi di colore predefiniti specificati nella finestra di dialogo **Espressione** . Per visualizzare un elenco di colori predefiniti, selezionare **Web** nel riquadro **Elemento**. I nomi di colore elencati nel riquadro **Titolo** possono essere digitati nel riquadro di testo dell'espressione. Quando si digita il nome del colore, non utilizzare un segno di uguale (=) o le virgolette ("").  
   
  **Selezionare l'origine dell'immagine**  
  Indicare il percorso di archiviazione dell'immagine in modo da consentire al processore del report di visualizzarla durante il rendering del report.  
@@ -47,7 +47,7 @@ ms.locfileid: "66109163"
   
  Se si intende incorporare l'immagine, selezionare l'immagine da aggiungere al report nell'elenco a discesa. Fare clic su **Importa** per aggiungere l'immagine all'elenco a discesa. Se un'immagine è stata aggiunta al riquadro **Dati** , è possibile scegliere **Incorporata** e quindi selezionare l'immagine nell'elenco a discesa.  
   
- Se si seleziona l'opzione **Esterna** , digitare l'URL dell'immagine. Per un report pubblicato in un server di report configurato per la modalità nativa, utilizzare un percorso completo o relativo (ad esempio, http://*\<nomeserver >*  /Images/Image1.jpg). Per un report pubblicato in un server di report configurato in modalità integrata SharePoint, utilizzare un URL completo (ad esempio, http://*\<NomeServerSharePoint > /\<sito >*  /documenta/immagini / Image1).  
+ Se si seleziona l'opzione **Esterna** , digitare l'URL dell'immagine. Per un report pubblicato in un server di report configurato per la modalità nativa, utilizzare un percorso completo o relativo (ad esempio, http:// *\<nomeserver >*  /Images/Image1.jpg). Per un report pubblicato in un server di report configurato in modalità integrata SharePoint, utilizzare un URL completo (ad esempio, http:// *\<NomeServerSharePoint > /\<sito >*  /documenta/immagini / Image1).  
   
  **Importa**  
  Questa opzione è disponibile quando si seleziona **Incorporata**. Fare clic su questa opzione per aggiungere un'immagine all'elenco a discesa **Use this image** (Usa questa immagine).  

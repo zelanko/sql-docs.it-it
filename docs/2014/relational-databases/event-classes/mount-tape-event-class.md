@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 513792c12833a14b8d1d3fc78f4b3bb6be173627
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63023452"
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape - classe di evento
@@ -34,8 +34,8 @@ ms.locfileid: "63023452"
 |DatabaseName|`nvarchar`|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Yes|  
 |Duration|`bigint`|Durata dell'evento in microsecondi.|13|Yes|  
 |EndTime|`datetime`|Per gli eventi Mount Request, eventuale timeout di montaggio; altrimenti, durata dell'evento stesso. In questo caso, StartTime indica la durata della richiesta di montaggio corrispondente.|15|Yes|  
-|EventClass|`int`|Tipo di evento = 195.|27|no|  
-|EventSequence|`int`|Sequenza di un evento specificato nella richiesta.|51|No|  
+|EventClass|`int`|Tipo di evento = 195.|27|No|  
+|EventSequence|`int`|Sequenza di un evento specificato nella richiesta.|51|no|  
 |EventSubClass|`int`|Tipo di sottoclasse di evento.<br /><br /> 1 = Richiesta di montaggio nastro<br /><br /> 2 = Montaggio nastro completato<br /><br /> 3 = Montaggio nastro annullato|21|Yes|  
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  
 |HostName|`nvarchar`|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  

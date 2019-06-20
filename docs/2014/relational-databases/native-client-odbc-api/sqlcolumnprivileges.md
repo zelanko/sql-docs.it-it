@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 737ace72f201f3abe192393b1a1cc3747f5774e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63067757"
 ---
 # <a name="sqlcolumnprivileges"></a>SQLColumnPrivileges
-  **SQLColumnPrivileges** restituisce SQL_SUCCESS se esistono o meno valori per il*CatalogName*, *SchemaName*, *TableName*, o  *ColumnName* parametri. **SQLFetch** restituisce SQL_NO_DATA quando in questi parametri vengono utilizzati valori non validi.  
+  **SQLColumnPrivileges** restituisce SQL_SUCCESS se esistono o meno valori per il*CatalogName*, *SchemaName*, *TableName*, o * ColumnName* parametri. **SQLFetch** restituisce SQL_NO_DATA quando in questi parametri vengono utilizzati valori non validi.  
   
  **SQLColumnPrivileges** può essere eseguito su un cursore server statico. Un tentativo di eseguire **SQLColumnPrivileges** su un cursore aggiornabile (dinamico o keyset) restituirà SQL_SUCCESS_WITH_INFO che indica che il tipo di cursore è stato modificato.  
   
