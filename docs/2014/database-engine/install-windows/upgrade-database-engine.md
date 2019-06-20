@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774975"
 ---
 # <a name="upgrade-database-engine"></a>Aggiornare il motore di database
@@ -43,7 +43,7 @@ ms.locfileid: "62774975"
 >  Prima di eseguire l'aggiornamento da un'edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un'altra, verificare che le funzionalità attualmente in uso siano supportate nell'edizione a cui si desidera eseguire l'aggiornamento.  
   
 > [!NOTE]  
->  Quando esegue l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition, scegliere tra Enterprise Edition: Gestione delle licenze basate su core ed Enterprise Edition. Queste due edizioni differiscono solo per le modalità di gestione delle licenze. Per altre informazioni, vedere [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+>  Quando esegue l'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] da una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition, scegliere tra Enterprise Edition: licenze basate su core ed Enterprise Edition. Queste due edizioni differiscono solo per le modalità di gestione delle licenze. Per altre informazioni, vedere [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 ## <a name="pre-upgrade-checklist"></a>Elenco di controllo preliminare all'aggiornamento  
  L'aggiornamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una versione precedente è supportato solo dal programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È inoltre possibile eseguire la migrazione dei database da versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La migrazione può essere eseguita da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un'altra nello stesso computer o da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un computer diverso. Le opzioni di migrazione includono l'utilizzo della Copia guidata database, delle funzionalità di backup e ripristino, dell'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], nonché dei metodi per importare ed esportare globalmente.  

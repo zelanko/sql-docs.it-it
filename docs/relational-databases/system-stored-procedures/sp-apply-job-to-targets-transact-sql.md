@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f293e906d647d318bca5d730d0164b75cc88fc6f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998023"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
@@ -50,11 +50,11 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 > [!NOTE]  
 >  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
-`[ @target_server_groups = ] 'target_server_groups'` Elenco delimitato da virgole dei gruppi di server di destinazione a cui il processo specificato è da applicare. *target_server_groups* viene **nvarchar(2048)**, con un valore predefinito è NULL.  
+`[ @target_server_groups = ] 'target_server_groups'` Elenco delimitato da virgole dei gruppi di server di destinazione a cui il processo specificato è da applicare. *target_server_groups* viene **nvarchar(2048)** , con un valore predefinito è NULL.  
   
-`[ @target_servers = ] 'target_servers'` Elenco delimitato da virgole dei server di destinazione a cui il processo specificato è da applicare. *target_servers*viene **nvarchar(2048)**, con un valore predefinito è NULL.  
+`[ @target_servers = ] 'target_servers'` Elenco delimitato da virgole dei server di destinazione a cui il processo specificato è da applicare. *target_servers*viene **nvarchar(2048)** , con un valore predefinito è NULL.  
   
-`[ @operation = ] 'operation'` È fatto che il processo specificato deve essere applicato a o rimosso dal server di destinazione specificato o gruppi di server di destinazione. *operazione*viene **varchar(7)**, con un valore predefinito è APPLY. Operazioni valide sono **APPLY** e **rimuovere**.  
+`[ @operation = ] 'operation'` È fatto che il processo specificato deve essere applicato a o rimosso dal server di destinazione specificato o gruppi di server di destinazione. *operazione*viene **varchar(7)** , con un valore predefinito è APPLY. Operazioni valide sono **APPLY** e **rimuovere**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dda74f247f9899b9e0a23d43143a5031574d8c13
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63155307"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Costrutti Transact-SQL non supportati da OLTP in memoria
@@ -35,7 +35,7 @@ ms.locfileid: "63155307"
 ## <a name="databases-that-use-in-memory-oltp"></a>Database che utilizzano OLTP in memoria  
  Nella tabella seguente vengono elencate le funzionalità e le parole chiave [!INCLUDE[tsql](../../includes/tsql-md.md)] che possono essere incluse nel testo del messaggio di un errore relativo a un database OLTP in memoria.  
   
-|Tipo|Nome|Soluzione|  
+|Type|nome|Soluzione|  
 |----------|----------|----------------|  
 |Opzione|AUTO_CLOSE|L'opzione di database AUTO_CLOSE=ON non è supportata con i database che contengono un filegroup MEMORY_OPTIMIZED_DATA.|  
 |Opzione|ATTACH_REBUILD_LOG|L'opzione di database CREATE ATTACH_REBUILD_LOG non è supportata con i database contenenti un filegroup MEMORY_OPTIMIZED_DATA.|  
@@ -46,7 +46,7 @@ ms.locfileid: "63155307"
 ## <a name="memory-optimized-tables"></a>Tabelle con ottimizzazione per la memoria  
  Nella tabella seguente vengono elencate le parole chiave e le funzionalità di [!INCLUDE[tsql](../../includes/tsql-md.md)] che possono essere incluse nel testo del messaggio di un errore che interessa una tabella ottimizzata per la memoria e l'azione correttiva per risolvere l'errore.  
   
-|Tipo|Nome|Soluzione|  
+|Type|Nome|Soluzione|  
 |----------|----------|----------------|  
 |Funzionalità|ON|Le tabelle con ottimizzazione per la memoria non possono essere posizionate in uno schema di partizione o filegroup. Rimuovere la clausola ON dall'istruzione `CREATE TABLE`.|  
 |Tipo di dati|*Nome del tipo di dati*|Il tipo di dati indicato non è supportato. Sostituirlo con un tipo di dati supportato. Per altre informazioni, vedere [Supported Data Types](supported-data-types-for-in-memory-oltp.md).|  
@@ -84,7 +84,7 @@ ms.locfileid: "63155307"
 ## <a name="indexes-on-memory-optimized-tables"></a>Indici in tabelle con ottimizzazione per la memoria  
  Nella tabella seguente vengono elencate le parole chiave e le funzionalità di [!INCLUDE[tsql](../../includes/tsql-md.md)] che possono essere inclusi nel testo del messaggio di un errore che interessa l'indice di una tabella ottimizzata per la memoria e l'azione correttiva per risolvere l'errore.  
   
-|Tipo|nome|Soluzione|  
+|Type|nome|Soluzione|  
 |----------|----------|----------------|  
 |Funzionalità|Indice filtrato|Gli indici filtrati non sono supportati con le tabelle ottimizzate per la memoria. Omettere la clausola `WHERE` dalla specifica dell'indice.|  
 |Funzionalità|UNIQUE|Gli indici univoci non sono supportati dalle tabelle ottimizzate per la memoria. Rimuovere l'argomento `UNIQUE` dalla specifica dell'indice.|  
@@ -98,14 +98,14 @@ ms.locfileid: "63155307"
 ## <a name="nonclustered-hash-indexes"></a>Indici hash non cluster  
  Nella tabella seguente vengono elencate le parole chiave e le funzionalità di [!INCLUDE[tsql](../../includes/tsql-md.md)] che possono essere incluse nel testo del messaggio di un errore che interessa un indice hash non cluster e l'azione correttiva per risolvere l'errore.  
   
-|Tipo|Nome|Soluzione|  
+|Type|Nome|Soluzione|  
 |----------|----------|----------------|  
 |Opzione|ASC/DESC|Gli indici hash non cluster non sono ordinati. Rimuovere le parole chiave `ASC` e `DESC` dalla specifica della chiave di indice.|  
   
 ## <a name="natively-compiled-stored-procedures"></a>stored procedure compilate in modo nativo  
  Nella tabella seguente vengono elencate le parole chiave e le funzionalità di [!INCLUDE[tsql](../../includes/tsql-md.md)] che possono essere incluse nel testo del messaggio di un errore che interessa le stored procedure compilate in modo nativo e l'azione correttiva per risolvere l'errore.  
   
-|Tipo|Funzionalità|Soluzione|  
+|Type|Funzionalità|Soluzione|  
 |----------|-------------|----------------|  
 |Funzionalità|Variabili di tabella inline|I tipi di tabella non possono essere dichiarati inline con le dichiarazioni di variabili. I tipi di tabella devono essere dichiarati in modo esplicito utilizzando un'istruzione `CREATE TYPE`.|  
 |Funzionalità|Cursori|I cursori non sono supportati nelle stored procedure compilate in modo nativo.<br /><br /> -Quando si esegue la procedura dal client, usare RPC anziché l'API cursore. Con ODBC, evitare l'istruzione `EXECUTE` di [!INCLUDE[tsql](../../includes/tsql-md.md)] e specificare direttamente il nome della procedura.<br /><br /> -Quando si esegue la procedura da un [!INCLUDE[tsql](../../includes/tsql-md.md)] batch o un'altra stored procedure, evitare di utilizzare un cursore con la stored procedure compilata in modo nativo.<br /><br /> -Quando si crea una stored procedure compilata in modo nativo, anziché utilizzare un cursore, usare la logica basata su set o un `WHILE` ciclo.|  
@@ -199,7 +199,7 @@ ms.locfileid: "63155307"
 ## <a name="transactions-that-access-memory-optimized-tables"></a>Transazioni che accedono alle tabelle con ottimizzazione per la memoria  
  Nella tabella seguente vengono elencate le parole chiave e le funzionalità di [!INCLUDE[tsql](../../includes/tsql-md.md)] che possono essere incluse nel testo del messaggio di un errore che interessa le transazioni che accedono alle tabelle ottimizzate per la memoria e l'azione correttiva per risolvere l'errore.  
   
-|Tipo|Nome|Soluzione|  
+|Type|Nome|Soluzione|  
 |----------|----------|----------------|  
 |Funzionalità|punto di salvataggio|La creazione di punti di salvataggio espliciti nelle transazioni che accedono alle tabelle ottimizzate per la memoria non è supportata.|  
 |Funzionalità|transazione associata|Le sessioni associate non possono partecipare alle transazioni che accedono alle tabelle ottimizzate per la memoria. Non associare la sessione prima di eseguire la procedura.|  

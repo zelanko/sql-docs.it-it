@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 588e656ca71bc5843e3483879f5a58951373aff5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62916581"
 ---
 # <a name="sql-server-data-files-in-windows-azure"></a>File di dati di SQL Server in Windows Azure
@@ -99,7 +99,7 @@ ON
   
 -   Nella versione corrente di questa funzionalità, l'archiviazione dei dati `FileStream` nel servizio di archiviazione di Microsoft Azure non è supportata. È possibile archiviare i dati `Filestream` in un database locale integrato nel servizio di archiviazione di Microsoft Azure ma non è possibile spostare i dati FILESTREAM tra computer usando il servizio di archiviazione di Microsoft Azure. Per i dati `FileStream`, è consigliabile continuare a usare le tecniche tradizionali per spostare i file (con estensione MDF, LDF) associati a FILESTREAM tra computer diversi.  
   
--   Attualmente, questa nuova funzionalità avanzata non supporta più istanze di SQL Server che accedono contemporaneamente agli stessi file di database nel servizio di archiviazione di Microsoft Azure. Se ServerA è online con un file di database attivo e se ServerB viene avviato per errore e include anch'esso un database che punta allo stesso file di dati, il secondo server non riuscirà ad avviare il database generando il codice errore **5120 Impossibile aprire il file fisico "%.\*ls". Errore del sistema operativo %d: "%ls"**.  
+-   Attualmente, questa nuova funzionalità avanzata non supporta più istanze di SQL Server che accedono contemporaneamente agli stessi file di database nel servizio di archiviazione di Microsoft Azure. Se ServerA è online con un file di database attivo e se ServerB viene avviato per errore e include anch'esso un database che punta allo stesso file di dati, il secondo server non riuscirà ad avviare il database generando il codice errore **5120 Impossibile aprire il file fisico "%.\*ls". Errore del sistema operativo %d: "%ls"** .  
   
 -   Solo i file con estensione mdf, ldf e ndf possono essere archiviati nel servizio di archiviazione di Microsoft Azure con la funzionalità relativa ai file di dati di SQL Server in Microsoft Azure.  
   
@@ -142,13 +142,13 @@ ON
   
  **Errori di autenticazione**  
   
--   *Impossibile eliminare le credenziali '%.\*ls' perché usate da un file di database attivo.*   
+-   *Impossibile eliminare le credenziali '%.\*ls' perché usate da un file di database attivo.*    
     Soluzione: Si potrebbe essere visualizzato questo errore quando si prova a eliminare le credenziali ancora usate da un file di database attivo in archiviazione di Azure. Per eliminare le credenziali, è innanzitutto necessario eliminare l'oggetto BLOB associato a questo file di database. Per eliminare un BLOB con un lease attivo è innanzitutto necessario interrompere il lease.  
   
--   *La firma di accesso condiviso non è stata creata correttamente nel contenitore.*   
+-   *La firma di accesso condiviso non è stata creata correttamente nel contenitore.*    
      Soluzione: Assicurarsi di avere creato una firma di accesso condiviso del contenitore correttamente. Esaminare le istruzioni riportate nella lezione 2 di [Esercitazione: File di dati di SQL Server nel servizio di archiviazione Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
--   *Le credenziali di SQL Server non sono state create correttamente.*   
+-   *Le credenziali di SQL Server non sono state create correttamente.*    
     Soluzione: verificare di aver usato "Shared Access Signature" per il campo **Identity** e di aver creato correttamente un segreto. Esaminare le istruzioni riportate nella lezione 3 di [Esercitazione: File di dati di SQL Server nel servizio di archiviazione Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
  **Errori di lease di oggetti BLOB:**  
@@ -163,10 +163,10 @@ ON
 2.  *Errori durante l'esecuzione dell'istruzione Alter*   
     Soluzione: Assicurarsi di eseguire l'istruzione Alter Database quando il database è online. Quando si copiano i file di dati nel servizio di archiviazione di Microsoft Azure, creare sempre un BLOB di pagine e non un BLOB in blocchi. In caso contrario, l'istruzione ALTER Database avrà esito negativo. Esaminare le istruzioni riportate nella lezione 7 di [Esercitazione: File di dati di SQL Server nel servizio di archiviazione Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
-3.  *Codice errore 5120 Impossibile aprire il file fisico "%.\*ls". Errore del sistema operativo %d: "%ls"*   
-    Soluzione: Attualmente, questa nuova funzionalità avanzata non supporta più istanze di SQL Server che accedono contemporaneamente agli stessi file di database nel servizio di archiviazione di Microsoft Azure. Se ServerA è online con un file di database attivo e se ServerB viene avviato per errore e include anch'esso un database che punta allo stesso file di dati, il secondo server non riuscirà ad avviare il database generando il codice errore *5120 Impossibile aprire il file fisico "%.\*ls". Errore del sistema operativo %d: "%ls"*.  
+3.  *Codice errore 5120 Impossibile aprire il file fisico "%.\*ls". Errore del sistema operativo %d: "%ls"*    
+    Soluzione: Attualmente, questa nuova funzionalità avanzata non supporta più istanze di SQL Server che accedono contemporaneamente agli stessi file di database nel servizio di archiviazione di Microsoft Azure. Se ServerA è online con un file di database attivo e se ServerB viene avviato per errore e include anch'esso un database che punta allo stesso file di dati, il secondo server non riuscirà ad avviare il database generando il codice errore *5120 Impossibile aprire il file fisico "%.\*ls". Errore del sistema operativo %d: "%ls"* .  
   
-     Per risolvere questo problema, determinare innanzitutto se è necessario che ServerA acceda al file di database nel servizio di archiviazione di Microsoft Azure. Se non è necessario, rimuovere qualsiasi connessione tra ServerA e i file di database nel servizio di archiviazione di Microsoft Azure. A tale scopo, eseguire le operazioni seguenti:  
+     Per risolvere questo problema, determinare innanzitutto se è necessario che ServerA acceda al file di database nel servizio di archiviazione di Microsoft Azure. Se non è necessario, rimuovere qualsiasi connessione tra ServerA e i file di database nel servizio di archiviazione di Microsoft Azure. A tale scopo, effettuare le operazioni seguenti:  
   
     1.  Impostare il percorso di file di ServerA su una cartella locale tramite l'istruzione ALTER Database.  
   

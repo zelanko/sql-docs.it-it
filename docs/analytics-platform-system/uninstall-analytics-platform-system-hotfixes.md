@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 5507eae7bb2f8a5ce138223a031ac4946d9f0030
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62675669"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>Disinstallare gli aggiornamenti rapidi di sistema di piattaforma Analitica 
@@ -26,13 +26,13 @@ Per eseguire questi passaggi, è necessario:
   
 -   Un account di accesso di sistema di piattaforma Analitica con le autorizzazioni per accedere alla Console di amministrazione che consentono di monitorare l'appliance.  
   
--   L'account amministratore di dominio per eseguire l'accesso per il <em>< appliance_domain ></em>**-HST01** nodo.  
+-   L'account amministratore di dominio per eseguire l'accesso per il <em>< appliance_domain ></em> **-HST01** nodo.  
   
 -   L'articolo della Knowledge Base numero di articolo per l'aggiornamento rapido per disinstallare.  
   
 ## <a name="HowToUninstallPDW"></a>Per disinstallare un hotfix di SQL Server PDW  
   
-1.  Eseguire l'accesso di <em>< appliance_domain ></em>**-HST01** nodo come l'amministratore di dominio di Fabric.  
+1.  Eseguire l'accesso di <em>< appliance_domain ></em> **-HST01** nodo come l'amministratore di dominio di Fabric.  
   
 2.  Usare l'esecuzione come opzione di amministratore per aprire un prompt dei comandi.  
   

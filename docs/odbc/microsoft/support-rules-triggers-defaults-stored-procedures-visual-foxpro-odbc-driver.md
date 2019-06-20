@@ -30,10 +30,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63269854"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Supporto di regole, trigger, valori predefiniti e stored procedure (driver ODBC Visual FoxPro)
@@ -44,7 +44,7 @@ ms.locfileid: "63269854"
  Se l'applicazione interagisce con i dati cui le regole, trigger, valori predefiniti o le stored procedure chiamano altri comandi di Visual FoxPro o funzioni, il driver genera un errore. Visualizzare [funzioni e non supportati i comandi Visual FoxPro](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md) per un elenco di comandi e funzioni non supportate dal driver.  
   
 > [!TIP]  
->  Se si desidera inserire codice condizionale all'interno di regole, trigger o stored procedure che determina i comandi da eseguire quando viene chiamato dal driver, è possibile usare la **(versione)** (funzione). Il **(versione)** restituisce "Driver ODBC Visual FoxPro  *\<versione >*" quando viene chiamato dal driver.  
+>  Se si desidera inserire codice condizionale all'interno di regole, trigger o stored procedure che determina i comandi da eseguire quando viene chiamato dal driver, è possibile usare la **(versione)** (funzione). Il **(versione)** restituisce "Driver ODBC Visual FoxPro  *\<versione >* " quando viene chiamato dal driver.  
   
 ## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>Funzioni supportate in Stored procedure, trigger, valori predefiniti e regole e i comandi di Visual FoxPro  
   
