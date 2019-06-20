@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62736364"
 ---
 # <a name="specify-parameters"></a>Specificare i parametri
@@ -63,10 +63,10 @@ GO
  La denominazione dei parametri e l'assegnazione dei valori appropriati in modo esplicito a ogni parametro in una chiamata alla procedura consentono ai parametri di essere forniti in qualsiasi ordine. Se ad esempio per la procedura **my_proc** sono previsti tre parametri denominati **\@first**, **\@second** e **\@third**, i valori passati alla procedura possono essere assegnati ai nomi dei parametri, ad esempio: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]
->  Se un valore del parametro viene specificato nel formato **\@parametro =**_valore_, tutti i parametri successivi devono essere specificati in questo modo. Se i valori dei parametri non vengono passati nel formato **\@parametro =**_valore_, devono essere specificati nello stesso ordine, da sinistra a destra, dei parametri elencati nell'istruzione CREATE PROCEDURE.  
+>  Se un valore del parametro viene specificato nel formato **\@parametro =** _valore_, tutti i parametri successivi devono essere specificati in questo modo. Se i valori dei parametri non vengono passati nel formato **\@parametro =** _valore_, devono essere specificati nello stesso ordine, da sinistra a destra, dei parametri elencati nell'istruzione CREATE PROCEDURE.  
 > 
 > [!WARNING]
->  Qualsiasi parametro passato nel formato **\@parametro =**_valore_ contenente un errore di ortografia causerà la generazione di un errore in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e impedirà l'esecuzione della procedura.  
+>  Qualsiasi parametro passato nel formato **\@parametro =** _valore_ contenente un errore di ortografia causerà la generazione di un errore in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e impedirà l'esecuzione della procedura.  
   
 ## <a name="specifying-parameter-data-types"></a>Specifica dei tipi di dati per i parametri  
  I parametri devono essere definiti con un tipo di dati quando vengono dichiarati in un'istruzione CREATE PROCEDURE. Il tipo di dati di un parametro consente di determinare il tipo e l'intervallo di valori accettati per il parametro quando viene chiamata la procedura. Se, ad esempio, si definisce un parametro con un tipo di dati `tinyint`, verranno accettati soltanto i valori numerici nell'intervallo compreso tra 0 e 255 quando passati in tale parametro. Se una procedura viene eseguita con un valore incompatibile con il tipo di dati, verrà restituito un errore.  
@@ -126,7 +126,7 @@ EXEC Sales.usp_GetSalesYTD N'Blythe';
 GO  
 ```  
   
- Sebbene sia possibile omettere i parametri per cui sono stati forniti valori predefiniti, è possibile troncare soltanto l'elenco di parametri. Ad esempio, se una procedura dispone di cinque parametri, è possibile omettere sia il quarto sia il quinto parametro. Non è tuttavia possibile ignorare il quarto parametro finché è incluso il quinto, a meno che i parametri non vengano specificati nel formato **\@parametro =**_valore_.  
+ Sebbene sia possibile omettere i parametri per cui sono stati forniti valori predefiniti, è possibile troncare soltanto l'elenco di parametri. Ad esempio, se una procedura dispone di cinque parametri, è possibile omettere sia il quarto sia il quinto parametro. Non è tuttavia possibile ignorare il quarto parametro finché è incluso il quinto, a meno che i parametri non vengano specificati nel formato **\@parametro =** _valore_.  
   
 ## <a name="specifying-parameter-direction"></a>Specifica della direzione di un parametro  
  La direzione di un parametro può essere input, cioè un valore viene passato nel corpo della procedura, o output, vale a dire che tramite la procedura viene restituito un valore al programma chiamante. Il parametro di input è l'impostazione predefinita.  

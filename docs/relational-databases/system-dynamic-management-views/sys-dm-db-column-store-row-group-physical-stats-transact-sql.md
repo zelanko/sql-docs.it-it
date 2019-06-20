@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1460ef53098a9cdd7cf8bb1672c45cfd27adff57
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66822730"
 ---
 # <a name="sysdmdbcolumnstorerowgroupphysicalstats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "66822730"
 |**row_group_id**|**int**|ID di questo gruppo di righe. Per le tabelle partizionate, è univoco all'interno della partizione.<br /><br /> -1 per una coda in memoria.|  
 |**delta_store_hobt_id**|**bigint**|Hobt_id per un gruppo di righe nell'archivio differenziale.<br /><br /> NULL se il gruppo di righe non è presente nell'archivio differenziale.<br /><br /> NULL per la parte finale di una tabella in memoria.|  
 |**state**|**tinyint**|Numero di ID associato *a state_description*.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED<br /><br /> 4 = TOMBSTONE<br /><br /> COMPRESSED è l'unico stato che si applica alle tabelle in memoria.|  
-|**state_desc**|**nvarchar(60)**|Descrizione dello stato del gruppo di righe:<br /><br /> INVISIBILI - un gruppo di righe che si sta compilando. Ad esempio: <br />Un gruppo di righe nel columnstore è INVISIBILE, mentre i dati viene compresso. Al termine la compressione è un commutatore metadati viene modificato lo stato della riga di columnstore gruppo da INVISIBILE a COMPRESSED e lo stato del gruppo di righe deltastore da chiuso a per la rimozione definitiva.<br /><br /> Aprire - un gruppo di righe deltastore che sta accettando nuove righe. Un gruppo di righe aperto presenta ancora il formato rowstore e non è stato compresso nel formato columnstore.<br /><br /> CHIUSO - un gruppo di righe nell'archivio differenziale che contiene il numero massimo di righe ed è in attesa per il processo tuple-mover eseguirne la compressione nel columnstore.<br /><br /> COMPRESSI - un gruppo di righe che verrà compressi con la compressione columnstore e archiviato nel columnstore.<br /><br /> Per la rimozione definitiva - un gruppo di righe che era in precedenza nel deltastore e non viene più usato.|  
+|**state_desc**|**nvarchar(60)**|Descrizione dello stato del gruppo di righe:<br /><br /> INVISIBILI - un gruppo di righe che si sta compilando. Ad esempio:  <br />Un gruppo di righe nel columnstore è INVISIBILE, mentre i dati viene compresso. Al termine la compressione è un commutatore metadati viene modificato lo stato della riga di columnstore gruppo da INVISIBILE a COMPRESSED e lo stato del gruppo di righe deltastore da chiuso a per la rimozione definitiva.<br /><br /> Aprire - un gruppo di righe deltastore che sta accettando nuove righe. Un gruppo di righe aperto presenta ancora il formato rowstore e non è stato compresso nel formato columnstore.<br /><br /> CHIUSO - un gruppo di righe nell'archivio differenziale che contiene il numero massimo di righe ed è in attesa per il processo tuple-mover eseguirne la compressione nel columnstore.<br /><br /> COMPRESSI - un gruppo di righe che verrà compressi con la compressione columnstore e archiviato nel columnstore.<br /><br /> Per la rimozione definitiva - un gruppo di righe che era in precedenza nel deltastore e non viene più usato.|  
 |**total_rows**|**bigint**|Numero di righe fisiche archiviato nel gruppo di righe. Per i gruppi di righe compressi, questo include le righe eliminate contrassegnate.|  
 |**deleted_rows**|**bigint**|Numero di righe archiviate fisicamente in un gruppo di righe compressi che vengono contrassegnati per l'eliminazione.<br /><br /> 0 per i gruppi di righe che sono nell'archivio differenziale.|  
 |**size_in_bytes**|**bigint**|Dimensioni combinate, in byte di tutte le pagine di questo gruppo di righe. Questa dimensione non include la dimensione necessaria per archiviare i metadati o i dizionari condivisi.|  

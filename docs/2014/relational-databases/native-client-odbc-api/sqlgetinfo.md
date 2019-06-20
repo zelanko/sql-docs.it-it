@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f4a17b9b6599a57275524308608ac6ef18a8e18e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63128643"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
@@ -132,7 +132,7 @@ ms.locfileid: "63128643"
 |SQL_MAX_COLUMNS_IN_GROUP_BY|16|  
 |SQL_MAX_COLUMNS_IN_INDEX|16|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|16|  
-|SQL_MAX_COLUMNS_IN_SELECT|4.000|  
+|SQL_MAX_COLUMNS_IN_SELECT|4\.000|  
 |SQL_MAX_COLUMNS_IN_TABLE|250|  
 |SQL_MAX_CONCURRENT_ACTIVITIES|1|  
 |SQL_MAX_CURSOR_NAME_LEN|128|  

@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871138"
 ---
 # <a name="use-the-copy-database-wizard"></a>Utilizzo di Copia guidata database
@@ -112,7 +112,7 @@ ms.locfileid: "62871138"
 2.  Nella pagina **Selezione server di origine** specificare il server in cui si trova il database da spostare o copiare e immettere le informazioni relative all'account di accesso. Dopo aver selezionato il metodo di autenticazione e immesso le informazioni per l'accesso, fare clic su **Avanti** per stabilire la connessione al server di origine. La connessione rimane aperta durante tutta la sessione.  
   
      **Server di origine**  
-     Selezionare il nome del server in cui risiedono i database che si desidera spostare o copiare oppure fare clic sul pulsante Sfoglia (**...**) per individuare il server desiderato. La versione del server deve essere almeno [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+     Selezionare il nome del server in cui risiedono i database che si desidera spostare o copiare oppure fare clic sul pulsante Sfoglia ( **...** ) per individuare il server desiderato. La versione del server deve essere almeno [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
      **Usa autenticazione di Windows**  
      Consente a un utente di connettersi tramite un account utente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
@@ -132,7 +132,7 @@ ms.locfileid: "62871138"
 3.  Nella pagina **Selezione server di destinazione** specificare il server in cui verrà spostato o copiato il database. Se si impostano il server di origine e quello di destinazione sulla stessa istanza del server, verrà effettuata una copia di un database. In questo caso, è necessario rinominare il database in un punto successivo della procedura guidata. È possibile utilizzare il nome del database di origine per il database copiato o spostato solo se non si verificano conflitti di nome nel server di destinazione. Se sono presenti conflitti di nome, è necessario risolverli manualmente nel server di destinazione per potervi utilizzare il nome del database di origine.  
   
      **Server di destinazione**  
-     Selezionare il nome del server in cui verranno copiati o spostati i database oppure fare clic sul pulsante Sfoglia (**...**) per individuare un server di destinazione.  
+     Selezionare il nome del server in cui verranno copiati o spostati i database oppure fare clic sul pulsante Sfoglia ( **...** ) per individuare un server di destinazione.  
   
     > [!NOTE]  
     >  È possibile utilizzare una destinazione costituita da un server cluster. Nella Copia guidata database sarà possibile selezionare solo unità condivise in un server di destinazione cluster.  

@@ -18,10 +18,10 @@ ms.author: arib
 manager: tomerw
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: b583afef9f52da7801384d4a7a9c76deaf8d4ee4
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66822681"
 ---
 # <a name="syssqlfeaturerestrictions-transact-sql"></a>sys.sql_feature_restrictions (Transact-SQL)
@@ -42,8 +42,8 @@ Attualmente le seguenti funzionalità può essere limitata:
 
 | Funzionalità          | Descrizione |
 |------------------|-------------|
-| N'ErrorMessages' | Quando la limitata, verranno applicata la maschera dati utente all'interno del messaggio di errore. |
-| N'Waitfor'       | Quando la limitata, il comando restituirà immediatamente senza alcun ritardo. |
+| N'ErrorMessages' | Se limitata, tutti i dati utente all'interno del messaggio di errore verranno mascherati. |
+| N'Waitfor'       | Se limitata, il comando restituirà immediatamente il controllo senza alcun ritardo. |
   
 ## <a name="permissions"></a>Permissions
 

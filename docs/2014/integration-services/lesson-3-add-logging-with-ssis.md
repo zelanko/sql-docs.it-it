@@ -10,14 +10,14 @@ ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1a3a32b35503ff6dae2e103f46e45a28359b948d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e716b808d5d9ada8aeaf50d92006cc6453c6e47d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767539"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046759"
 ---
-# <a name="lesson-3-adding-logging"></a>Lezione 3: Aggiunta di registrazione
+# <a name="lesson-3-adding-logging"></a>Lezione 3: Aggiunta delle funzionalità di registrazione
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include funzionalità di registrazione che consentono di risolvere i problemi e monitorare l'esecuzione dei pacchetti offrendo una traccia degli eventi generati dalle attività e dai contenitori. Le caratteristiche di registrazione sono flessibili ed è possibile attivarle a livello di pacchetto o a livello di singole attività o contenitori del pacchetto. È possibile selezionare gli eventi che si desidera registrare e creare più log per un singolo pacchetto.  
   
  La registrazione è garantita da un provider di log. Ogni provider di log è in grado di scrivere le informazioni di registrazione in diversi formati e tipi di destinazione. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] rende disponibili i provider di log seguenti:  
@@ -35,7 +35,7 @@ ms.locfileid: "62767539"
  In questa lezione si creerà una copia del pacchetto creato nella [lezione 2: Aggiungere cicli](lesson-2-adding-looping-with-ssis.md). Usando questo nuovo pacchetto, verranno aggiunte e configurate funzionalità di registrazione per monitorare eventi specifici durante l'esecuzione del pacchetto. Se non è stata completata nessuna delle lezioni precedenti, è possibile copiare il pacchetto della lezione 2 completato incluso nell'esercitazione.  
   
 > [!IMPORTANT]  
->  Per eseguire questa esercitazione, è necessario il database di esempio **AdventureWorksDW2012** . Per altre informazioni su come installare e distribuire **AdventureWorksDW2012**, [Reporting Services Product Samples in CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=52691).  
+>  Per eseguire questa esercitazione, è necessario il database di esempio **AdventureWorksDW2012** . Per altre informazioni su come installare e distribuire **AdventureWorksDW2012**, [Reporting Services Product Samples in GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).  
   
 ## <a name="lesson-tasks"></a>Argomenti della lezione  
  In questa lezione sono incluse le attività seguenti:  

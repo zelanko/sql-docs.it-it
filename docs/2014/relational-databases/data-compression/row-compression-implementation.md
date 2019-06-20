@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 626ab7363a264b47d7c907c56c0e6c6d4d208dba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873012"
 ---
 # <a name="row-compression-implementation"></a>Implementazione della compressione di riga
@@ -58,21 +58,21 @@ ms.locfileid: "62873012"
 |`datetimeoffset`|Yes|Tipo simile a `datetime2`, ad eccezione che in questo caso sono disponibili 2 byte per il fuso orario in formato (HH.MM).<br /><br /> Analogamente a `datetime2`, la compressione consente di risparmiare 2 byte.<br /><br /> Per i valori del fuso orario, il valore MM potrebbe essere uguale a 0 per la maggior parte dei casi. Di conseguenza, la compressione consente di risparmiare 1 byte.<br /><br /> La compressione di riga non apporta alcuna modifica all'archiviazione.|  
 |`char`|Yes|I caratteri di riempimento finali vengono rimossi. Si noti che in [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene inserito lo stesso carattere di riempimento indipendentemente dalle regole di confronto utilizzate.|  
 |`varchar`|No|Nessun effetto.|  
-|`text`|No|Nessun effetto.|  
+|`text`|no|Nessun effetto.|  
 |`nchar`|Yes|I caratteri di riempimento finali vengono rimossi. Si noti che in [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene inserito lo stesso carattere di riempimento indipendentemente dalle regole di confronto utilizzate.|  
-|`nvarchar`|No|Nessun effetto.|  
+|`nvarchar`|no|Nessun effetto.|  
 |`ntext`|No|Nessun effetto.|  
 |`binary`|Yes|Gli zero finali vengono rimossi.|  
 |`varbinary`|No|Nessun effetto.|  
-|`image`|No|Nessun effetto.|  
+|`image`|no|Nessun effetto.|  
 |`cursor`|No|Nessun effetto.|  
 |`timestamp` / `rowversion`|Yes|Rappresenta i dati Integer utilizzando 8 byte. È disponibile un contatore timestamp gestito per ogni database, il cui valore iniziale è pari a 0. È possibile comprimere questo tipo in modo analogo a qualsiasi altro valore intero.|  
 |`sql_variant`|No|Nessun effetto.|  
-|`uniqueidentifier`|no|Nessun effetto.|  
-|`table`|no|Nessun effetto.|  
-|`xml`|no|Nessun effetto.|  
-|Tipi definiti dall'utente|No|Rappresentati internamente come `varbinary`.|  
-|FILESTREAM|No|Rappresentati internamente come `varbinary`.|  
+|`uniqueidentifier`|No|Nessun effetto.|  
+|`table`|No|Nessun effetto.|  
+|`xml`|No|Nessun effetto.|  
+|Tipi definiti dall'utente|no|Rappresentati internamente come `varbinary`.|  
+|FILESTREAM|no|Rappresentati internamente come `varbinary`.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Compressione dei dati](data-compression.md)   

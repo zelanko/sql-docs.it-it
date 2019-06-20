@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: de5a49853f08541cd617afb20273820f956ee660
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63061315"
 ---
 # <a name="sqltransaction-event-class"></a>SQLTransaction - classe di evento
@@ -34,7 +34,7 @@ ms.locfileid: "63061315"
 |DatabaseName|`nvarchar`|Nome del database nel quale viene eseguita l'istruzione dell'utente.|35|Yes|  
 |Duration|`bigint`|Durata dell'evento in microsecondi.|13|Yes|  
 |EndTime|`datetime`|Ora di fine dell'evento.|15|Yes|  
-|EventClass|`int`|Tipo di evento = 50.|27|no|  
+|EventClass|`int`|Tipo di evento = 50.|27|No|  
 |EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
 |EventSubClass|`int`|Tipo di sottoclasse di evento.<br /><br /> 0=Inizio<br /><br /> 1=Commit<br /><br /> 2=Rollback<br /><br /> 3 = Punto di salvataggio|21|Yes|  
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  

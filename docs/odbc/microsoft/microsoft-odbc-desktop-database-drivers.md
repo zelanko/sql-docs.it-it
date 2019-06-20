@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81cdf1738d35d89c35c34500900be79f7702f877
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63045953"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Driver di database desktop ODBC Microsoft
@@ -43,7 +43,7 @@ ODBC è un'API che usa Structured Query Language (SQL) come lingua di accesso de
  Visualizzare [Driver ODBC Visual FoxPro](../../odbc/microsoft/visual-foxpro-odbc-driver.md) per la documentazione dettagliata su Visual FoxPro Microsoft® ODBC Driver.  
   
 > [!NOTE]  
->  Accesso ad altre origini dati, ad esempio Lotus 1 a 2, 3, Microsoft Exchange e HTML, è abilitato per i driver installabili ISAM (IISAM). Per altre informazioni su questi driver, vedere "Accesso ai dati esterni" nel *di riferimento per programmatori di Microsoft Jet Database Engine*. 4.0 driver di Database Desktop ODBC non supportano i formati di dati Btrieve ed EMS.  
+>  Accesso ad altre origini dati, ad esempio Lotus 1 a 2, 3, Microsoft Exchange e HTML, è abilitato per i driver installabili ISAM (IISAM). Per altre informazioni su questi driver, vedere "Accesso ai dati esterni" nel *di riferimento per programmatori di Microsoft Jet Database Engine*. 4\.0 driver di Database Desktop ODBC non supportano i formati di dati Btrieve ed EMS.  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

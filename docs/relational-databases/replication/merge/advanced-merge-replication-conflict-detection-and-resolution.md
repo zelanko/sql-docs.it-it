@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 88f175d5d3658a61964ab7d7daba1be88438e2cd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130571"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639764"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Replica di tipo merge avanzata - Rilevamento e risoluzione dei conflitti
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ Risolvere i conflitti della replica di tipo merge [!INCLUDE[appliesto-ss-xxxx-xx
   
  Nel Visualizzatore conflitti sono visualizzate informazioni delle tre tabelle di sistema:  
   
--   La replica crea una tabella dei conflitti per ogni tabella dell'articolo di merge, denominata **MSmerge_conflict_\<NomePubblicazione>_\<NomeArticolo>**.  
+-   La replica crea una tabella dei conflitti per ogni tabella dell'articolo di merge, denominata **MSmerge_conflict_\<NomePubblicazione>_\<NomeArticolo>** .  
   
      La struttura delle tabelle dei conflitti corrisponde a quella delle tabelle su cui sono basate. Una riga in una di queste tabelle rappresenta la versione non confermata di una riga in conflitto. La versione confermata della riga è inclusa nella tabella utente effettiva.  
   

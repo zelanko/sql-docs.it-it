@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f2833f1f342aa212b73611d257b8e29606a14cce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62662982"
 ---
 # <a name="deprecation-final-support-event-class"></a>Deprecation Final Support - classe di evento
@@ -46,7 +46,7 @@ ms.locfileid: "62662982"
 |ObjectID|`int`|Numero ID della caratteristica deprecata.|22|Yes|  
 |ObjectName|`nvarchar`|Nome della caratteristica deprecata.|34|Yes|  
 |RequestID|`int`|ID della richiesta contenente l'istruzione.|49|Yes|  
-|ssSqlProfiler|`nvarchar`|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
+|ssSqlProfiler|`nvarchar`|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|No|  
 |SessionLoginName|`nvarchar`|Nome dell'account di accesso dell'utente che ha avviato la sessione. Se, ad esempio, si esegue la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con l'account di accesso Login1 e si esegue un'istruzione con l'account di accesso Login2, in `SessionLoginName` viene visualizzato Login1 e in `LoginName` viene visualizzato Login2. In questa colonna vengono visualizzati sia gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che quelli di Windows.|64|Yes|  
 |SPID|`int`|ID della sessione in cui si è verificato l'evento.|12|Yes|  
 |SqlHandle|`image`|Handle binario che è possibile utilizzare per identificare batch o stored procedure SQL.|63|Yes|  

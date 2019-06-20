@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 253841e26ab7ecbeafb2cfeeed8c090c91650d14
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62805865"
 ---
 # <a name="sqlstate-odbc-error-codes"></a>SQLSTATE (codici di errore ODBC)
@@ -28,7 +28,7 @@ ms.locfileid: "62805865"
   
  Per ulteriori informazioni sui codici di errore di stato, vedere i seguenti argomenti:  
   
--   [Appendice a: Codici di errore ODBC](https://go.microsoft.com/fwlink/?LinkId=89356)  
+-   [Appendice A: Codici di errore ODBC](https://go.microsoft.com/fwlink/?LinkId=89356)  
   
 -   [Mapping di SQLSTATE](https://go.microsoft.com/fwlink/?LinkId=89355)  
   

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 53a9793fc2a8770c8d926c945ba31a335bdfed3f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62808732"
 ---
 # <a name="connect-to-server-login-page-integration-services"></a>Connetti al server (pagina Nome account di accesso) - Integration Services
@@ -31,7 +31,7 @@ ms.locfileid: "62808732"
  Consente di selezionare il server a cui connettersi. Per impostazione predefinita verrà visualizzata l'ultima istanza del server a cui è stata effettuata la connessione.  
   
 > [!NOTE]  
->  Non utilizzare  *\<nomeserver >*\\*\<NomeIstanza >* perché [!INCLUDE[ssIS](../includes/ssis-md.md)] non supporta più istanze in un computer.  
+>  Non utilizzare  *\<nomeserver >* \\ *\<NomeIstanza >* perché [!INCLUDE[ssIS](../includes/ssis-md.md)] non supporta più istanze in un computer.  
   
  **Autenticazione**  
  Solo l'autenticazione di [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows è disponibile per [!INCLUDE[ssIS](../includes/ssis-md.md)]. Tale modalità consente di connettersi tramite un account utente di Windows.  

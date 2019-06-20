@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be6ddc45dd2f37b5a4a29f0e3fee4a9c44f723ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62788354"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Pagina Specifica repliche (Creazione guidata Gruppo di disponibilità: Procedura guidata Aggiungi replica)
@@ -38,7 +38,7 @@ ms.locfileid: "62788354"
  Se un'istanza del server utilizzata per ospitare una replica secondaria non è elencata nella griglia **Repliche di disponibilità** , fare clic sul pulsante **Aggiungi replica** . Se si configura un gruppo di disponibilità in un ambiente IT ibrido (vedere [Disponibilità elevata e ripristino di emergenza di SQL Server in Macchine virtuali di Windows Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), è possibile fare clic sul pulsante **Aggiungi replica Azure** per creare macchine virtuali con repliche secondarie in Windows Azure.  
   
  **Ruolo iniziale**  
- Indica il ruolo che verrà inizialmente svolto dalla nuova replica: **Primaria** o **Secondaria**.  
+ Indica il ruolo che la nuova replica eseguirà inizialmente: **Primaria** o **Secondaria**.  
   
  **Failover automatico (fino a 2)**  
  Selezionare questa casella di controllo solo se si desidera che questa replica di disponibilità sia un partner di failover automatico. Per configurare il failover automatico, è necessario scegliere questa opzione per la replica primaria iniziale e per una replica secondaria. Per entrambe le repliche verrà utilizzata la modalità di disponibilità con commit sincrono. Il failover automatico è supportato solo da due repliche.  
@@ -146,7 +146,7 @@ ms.locfileid: "62788354"
  Specificare le preferenze del listener per questo gruppo di disponibilità, nel modo seguente:  
   
  **Nome DNS del listener**  
- Specificare il nome di rete del listener. Questo nome deve essere univoco nel dominio e può contenere solo caratteri alfanumerici, trattini (**-**) e caratteri di sottolineatura (**_**), in qualsiasi ordine. Se viene specificato tramite la scheda **Listener** , il nome DNS può avere una lunghezza massima di 15 caratteri.  
+ Specificare il nome di rete del listener. Questo nome deve essere univoco nel dominio e può contenere solo caratteri alfanumerici, trattini ( **-** ) e caratteri di sottolineatura ( **_** ), in qualsiasi ordine. Se viene specificato tramite la scheda **Listener** , il nome DNS può avere una lunghezza massima di 15 caratteri.  
   
 > [!IMPORTANT]  
 >  Se si immette un nome del listener DNS (o numero di porta) non valido nella scheda **Listener** , il pulsante **Avanti** è disabilitato nella pagina **Specifica repliche** .  
@@ -165,10 +165,10 @@ ms.locfileid: "62788354"
   
  Se si seleziona **Indirizzo IP statico** come modalità di rete (selezione predefinita), viene visualizzata una griglia con le colonne **Subnet** e **Indirizzo IP** e i pulsanti **Aggiungi** e **Rimuovi** associati. Si noti che la griglia è vuota finché non si aggiunge la prima subnet.  
   
- Colonna**Subnet**   
+ Colonna**Subnet**  
  Viene visualizzato l'indirizzo subnet selezionato per ogni subnet aggiunta per il listener.  
   
- Colonna**Indirizzo IP**   
+ Colonna**Indirizzo IP**  
  Viene visualizzato l'indirizzo IPv4 o IPv6 specificato per una determinata subnet.  
   
  **Aggiungi**  

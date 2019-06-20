@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01b985a1bb818e7b3d3612596bb4e2b7fa6fd393
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62829467"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Attività Trasferisci oggetti di SQL Server
@@ -73,7 +73,7 @@ ms.locfileid: "62829467"
 ## <a name="transfer-objects-between-instances-of-sql-server"></a>Trasferimento di oggetti tra istanze di SQL Server  
  L'attività Trasferisci oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta un'origine e una destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="events"></a>Eventi  
+## <a name="events"></a>Events  
  L'attività genera un evento informativo in cui è indicato il numero di oggetti trasferiti. Genera inoltre un evento di avviso quando un oggetto viene sovrascritto. Viene generato un evento informativo anche in corrispondenza di azioni quale il troncamento delle tabelle di database.  
   
  L'attività Trasferisci oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non riporta lo stato incrementale del trasferimento, ma solo il completamento 0% e 100%.  

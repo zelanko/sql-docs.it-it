@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 68b082d125650d150676d545cfdf6ab27bd25da2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62813524"
 ---
 # <a name="configure-a-server-to-listen-on-an-alternate-pipe-sql-server-configuration-manager"></a>Configurazione di un server per l'attesa su una pipe alternativa (Gestione configurazione SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "62813524"
   
 #### <a name="to-configure-the-named-pipe-used-by-the-sql-server-database-engine"></a>Per configurare l'utilizzo della named pipe mediante il Motore di database di SQL Server  
   
-1.  Nel riquadro della console di Gestione configurazione SQL Server, espandere **Configurazione di rete SQL Server** e **Protocolli per** *\<nome istanza>*.  
+1.  Nel riquadro della console di Gestione configurazione SQL Server, espandere **Configurazione di rete SQL Server** e **Protocolli per** *\<nome istanza>* .  
   
 2.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **Named pipe**, quindi scegliere **Proprietà**.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62813524"
   
 4.  Nel riquadro della console fare clic su **Servizi di SQL Server**.  
   
-5.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (**\<<nome istanza>**)** e scegliere **Riavvia**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà arrestato e riavviato.  
+5.  Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **SQL Server (** \<<nome istanza> **)** e scegliere **Riavvia**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà arrestato e riavviato.  
   
  Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in attesa su una pipe alternativa, è possibile connettersi a una named pipe specifica mediante un'applicazione client in tre modi differenti:  
   

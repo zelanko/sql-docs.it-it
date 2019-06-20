@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce80e7b9c6e8cfcf15c0810986c1a34e8d881ade
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62742257"
 ---
 # <a name="sqlsetdescfield-function"></a>Funzione SQLSetDescField
@@ -140,7 +140,7 @@ SQLRETURN SQLSetDescField(
   
  L'inizializzazione di campi di intestazione è descritto nella tabella seguente.  
   
-|Nome di campo di intestazione|Tipo|L/S|Impostazione predefinita|  
+|Nome di campo di intestazione|Type|L/S|Impostazione predefinita|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|ARD: R APD: R IRD: R IPD: R|ARD: SQL_DESC_ALLOC_AUTO per implicite o SQL_DESC_ALLOC_USER per esplicita<br /><br /> APD: SQL_DESC_ALLOC_AUTO per implicite o SQL_DESC_ALLOC_USER per esplicita<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
 |SQL_DESC_ARRAY_SIZE|SQLULEN|ARD: R/W APD: R/W IRD: Inutilizzati IPD: Non utilizzato|ARD:[1] APD:[1] IRD: Inutilizzati IPD: Non utilizzato|  
@@ -154,7 +154,7 @@ SQLRETURN SQLSetDescField(
   
  L'inizializzazione di campi del record è come illustrato nella tabella seguente.  
   
-|Nome del campo di record|Tipo|L/S|Impostazione predefinita|  
+|Nome del campo di record|Type|L/S|Impostazione predefinita|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|ARD: APD inutilizzate: Inutilizzati IRD: R IPD: Non utilizzato|ARD: APD inutilizzate: Inutilizzati IRD: D IPD: Non utilizzato|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|ARD: APD inutilizzate: Inutilizzati IRD: R IPD: Non utilizzato|ARD: APD inutilizzate: Inutilizzati IRD: D IPD: Non utilizzato|  

@@ -19,10 +19,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a9d2ee9e659e9cae8bb93a1ea50b0f2d8e355701
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62719994"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Definizione di un percorso (SQLXML 4.0)
@@ -41,7 +41,7 @@ ms.locfileid: "62719994"
      Un percorso relativo inizia in corrispondenza del nodo di contesto nel documento. Un percorso è costituito da una sequenza di uno o più passi separati da una barra (/). Ogni passo seleziona un set di nodi relativi al nodo di contesto. La sequenza iniziale dei passi seleziona un set di nodi relativi a un nodo di contesto. Ogni nodo nel set viene utilizzato come nodo di contesto per il passo successivo. I set di nodi identificati dal passo vengono uniti in join. Ad esempio, **child:: Order/child::** consente di selezionare la  **\<OrderDetail >** figlio dell'elemento il  **\<ordine >** elemento elementi figlio del nodo di contesto.  
   
     > [!NOTE]  
-    >  Nell'implementazione SQLXML 4.0 di XPath, ogni query XPath inizia in corrispondenza del contesto radice, anche se XPath non è assoluto in modo esplicito. Una query XPath che inizia con "Customer", ad esempio, viene considerata come "/Customer". Nella query XPath **Customer [Order]**, Customer inizia in corrispondenza del contesto radice, ma Order inizia in corrispondenza del contesto di Customer. Per altre informazioni, vedere [Introduzione alle query XPath utilizzando &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
+    >  Nell'implementazione SQLXML 4.0 di XPath, ogni query XPath inizia in corrispondenza del contesto radice, anche se XPath non è assoluto in modo esplicito. Una query XPath che inizia con "Customer", ad esempio, viene considerata come "/Customer". Nella query XPath **Customer [Order]** , Customer inizia in corrispondenza del contesto radice, ma Order inizia in corrispondenza del contesto di Customer. Per altre informazioni, vedere [Introduzione alle query XPath utilizzando &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
   
 ## <a name="location-steps"></a>Passi  
  Un percorso (assoluto o relativo) è costituito da passi che contengono tre parti:  
@@ -52,7 +52,7 @@ ms.locfileid: "62719994"
   
 -   **test di nodo**  
   
-     Un test di nodo specifica il tipo di nodo selezionato dal passo. Ogni asse (**figlio**, **padre**, **attributo**, e **self**) dispone di un tipo di nodo principale. Per il **attributo** asse, il tipo di nodo principale viene  **\<attributo >**. Per il **padre**, **figlio**, e **self** assi, il tipo di nodo principale è  **\<elemento >**.  
+     Un test di nodo specifica il tipo di nodo selezionato dal passo. Ogni asse (**figlio**, **padre**, **attributo**, e **self**) dispone di un tipo di nodo principale. Per il **attributo** asse, il tipo di nodo principale viene  **\<attributo >** . Per il **padre**, **figlio**, e **self** assi, il tipo di nodo principale è  **\<elemento >** .  
   
      Ad esempio, se il percorso specifica **child:: Customer**, il  **\<cliente >** sono selezionati gli elementi figlio del nodo di contesto. Poiché il **figlio** asse ha  **\<elemento >** come tipo di nodo principale, il test di nodo Customer è TRUE se Customer è un  **\<elemento >** nodo.  
   

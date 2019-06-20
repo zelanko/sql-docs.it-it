@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 664c2d3d4e1a1cea78bd93c748d9c17d2f1fe670
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667721"
 ---
 # <a name="running-test-cases-sybasetosql"></a>Esecuzione di test case (SybaseToSQL)
@@ -45,7 +45,7 @@ Si supponga che la tabella verificata è denominata USER_TABLE. Per una tabella,
   
 I seguenti oggetti vengono creati Sybase nel database SSMATESTER2005db o SSMATESTER2008db e a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel database ssmatesterdb_syb.  
   
-|nome|Tipo|Descrizione|  
+|Nome|Type|Descrizione|  
 |--------|--------|---------------|  
 |USER_TABLE$Trg|Trigger|Attivare il controllo delle modifiche nella tabella verificata.|  
 |USER_TABLE$Aud|Tabella|Tabella in cui vengono salvate le righe eliminate e sovrascritte.|  
@@ -57,7 +57,7 @@ I seguenti oggetti vengono creati Sybase nel database SSMATESTER2005db o SSMATES
   
 L'oggetto seguente viene creato nel database della tabella verificato Sybase e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|nome|Tipo|Descrizione|  
+|Nome|Type|Descrizione|  
 |--------|--------|---------------|  
 |USER_TABLE$Trg|Trigger|Attivare il controllo delle modifiche nella tabella verificata.|  
   

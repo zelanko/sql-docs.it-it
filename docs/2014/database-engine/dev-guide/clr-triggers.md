@@ -26,10 +26,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 87d822e97a75bbd08375980fe6a6f0341d8f9c60
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755249"
 ---
 # <a name="clr-triggers"></a>Trigger CLR
@@ -74,7 +74,7 @@ ms.locfileid: "62755249"
 ### <a name="using-the-inserted-and-deleted-tables"></a>Utilizzo delle tabelle Inserted e Deleted  
  Nelle istruzioni di trigger DML vengono utilizzate due tabelle speciali: il **inserito** tabella e il **eliminato** tabella. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea e gestisce queste tabelle automaticamente. È possibile utilizzare queste tabelle temporanee per verificare gli effetti di determinate modifiche apportate ai dati e impostare le condizioni per le azioni dei trigger DML. Non è tuttavia possibile modificare direttamente i dati nelle tabelle.  
   
- Trigger CLR possono accedere le **inserito** e **eliminato** tabelle tramite il provider in-process CLR. A tale scopo è necessario ottenere un oggetto `SqlCommand` dall'oggetto SqlContext. Ad esempio:   
+ Trigger CLR possono accedere le **inserito** e **eliminato** tabelle tramite il provider in-process CLR. A tale scopo è necessario ottenere un oggetto `SqlCommand` dall'oggetto SqlContext. Ad esempio:  
   
  C#  
   

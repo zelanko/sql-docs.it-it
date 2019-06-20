@@ -32,10 +32,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dfbe6f41150e7d437a6ee1df20e62e41b799c8c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62668837"
 ---
 # <a name="using-xml-data-types"></a>Utilizzo di tipi di dati XML
@@ -85,8 +85,8 @@ ms.locfileid: "62668837"
   
 |Tipo di dati|Al server<br /><br /> **XML**|Al server<br /><br /> **Non XML**|Dal server<br /><br /> **XML**|Dal server<br /><br /> **Non XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
-|DBTYPE_XML|Pass-through<sup>6,7</sup>|Error<sup>1</sup>|OK<sup>11, 6</sup>|Error<sup>8</sup>|  
-|DBTYPE_BYTES|Pass-through<sup>6,7</sup>|N/A<sup>2</sup>|OK <sup>11, 6</sup>|N/D <sup>2</sup>|  
+|DBTYPE_XML|Pass-through<sup>6,7</sup>|Errore<sup>1</sup>|OK<sup>11, 6</sup>|Errore<sup>8</sup>|  
+|DBTYPE_BYTES|Pass-through<sup>6,7</sup>|N/D<sup>2</sup>|OK <sup>11, 6</sup>|N/D <sup>2</sup>|  
 |DBTYPE_WSTR|Pass-through<sup>6,10</sup>|N/D <sup>2</sup>|OK<sup>4, 6, 12</sup>|N/D <sup>2</sup>|  
 |DBTYPE_BSTR|Pass-through<sup>6,10</sup>|N/D <sup>2</sup>|OK <sup>3</sup>|N/D <sup>2</sup>|  
 |DBTYPE_STR|OK<sup>6, 9, 10</sup>|N/D <sup>2</sup>|OK<sup>5, 6, 12</sup>|N/D <sup>2</sup>|  
@@ -94,7 +94,7 @@ ms.locfileid: "62668837"
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pass-through<sup>6,7</sup>|N/D <sup>2</sup>|N/D|N/D <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|Pass-through<sup>6,10</sup>|N/D <sup>2</sup>|OK<sup>3</sup>|N/D <sup>2</sup>|  
   
- <sup>1</sup>se un server di tipo diverso da DBTYPE_XML è specificato con **ICommandWithParameters:: SetParameterInfo** e il tipo di funzione di accesso è DBTYPE_XML, si verifica un errore durante l'esecuzione dell'istruzione (DB_E_ERRORSOCCURRED, il stato del parametro è DBSTATUS_E_BADACCESSOR); in caso contrario, i dati vengono inviati al server, ma il server restituisce un errore che indica che non viene eseguita alcuna conversione implicita da XML al tipo di dati del parametro.  
+ <sup>1</sup>Se un tipo di server diverso da DBTYPE_XML è specificato con **ICommandWithParameters::SetParameterInfo** e il tipo di funzione di accesso è DBTYPE_XML, si verifica un errore quando viene eseguita l'istruzione (DB_E_ERRORSOCCURRED, lo stato del parametro è DBSTATUS_E_BADACCESSOR). In caso contrario, i dati vengono inviati al server, ma il server restituisce un errore indicante che non è disponibile alcuna conversione implicita da XML al tipo di dati del parametro.  
   
  <sup>2</sup>esula dall'ambito di questo argomento.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "62668837"
 #### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>Set di righe dello schema COLUMNS e PROCEDURE_PARAMETERS  
  Tra le aggiunte ai set di righe dello schema COLUMNS e PROCEDURE_PARAMETERS sono incluse le colonne seguenti.  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Nome di un catalogo in cui viene definita una raccolta di XML Schema. NULL per una colonna non XML o una colonna XML non tipizzata.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Nome di uno schema in cui viene definita una raccolta di XML Schema. NULL per una colonna non XML o una colonna XML non tipizzata.|  
@@ -151,7 +151,7 @@ ms.locfileid: "62668837"
 #### <a name="the-ssxmlschema-schema-rowset"></a>Set di righe dello schema SS_XMLSCHEMA  
  È stato introdotto un nuovo set di righe dello schema per i client, denominato SS_XMLSCHEMA, che consente il recupero di informazioni su XML Schema. Il set di righe SS_XMLSCHEMA contiene le colonne seguenti.  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Catalogo cui appartiene una raccolta XML.|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Schema cui appartiene una raccolta XML.|  
@@ -171,7 +171,7 @@ ms.locfileid: "62668837"
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>Set di proprietà DBPROPSET_SQLSERVERPARAMETER  
  Per supportare le **xml** tipo di dati tramite OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa il nuovo set di proprietà DBPROPSET_SQLSERVERPARAMETER, che contiene i valori seguenti.  
   
-|Nome|Tipo|Descrizione|  
+|Nome|Type|Descrizione|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Nome di un catalogo (database) in cui viene definita una raccolta di XML Schema. Una delle tre parti di cui è composto l'identificatore del nome SQL.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Nome di un elemento XML Schema all'interno della raccolta di schemi. Una delle tre parti di cui è composto l'identificatore del nome SQL.|  
@@ -180,7 +180,7 @@ ms.locfileid: "62668837"
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>Set di proprietà DBPROPSET_SQLSERVERCOLUMN  
  Per supportare la creazione delle tabelle di **ITableDefinition** interfaccia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client aggiunte tre nuove colonne al set di proprietà DBPROPSET_SQLSERVERCOLUMN.  
   
-|Nome|Tipo|Descrizione|  
+|Nome|Type|Descrizione|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|Per le colonne XML tipizzate, questa proprietà è una stringa che specifica il nome del catalogo in cui viene archiviato l'elemento XML Schema. Per gli altri tipi di colonna questa proprietà restituisce una stringa vuota.|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|Per le colonne XML tipizzate, questa proprietà è una stringa che specifica il nome dell'elemento XML Schema che definisce la colonna.|  
@@ -200,7 +200,7 @@ ms.locfileid: "62668837"
 #### <a name="the-icolumnsrowset-interface"></a>Interfaccia IColumnsRowset  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client aggiunge gli elementi seguenti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-colonne specifiche per il set di righe restituito dal **IColumnRowset:: GetColumnsRowset** (metodo). Tali colonne contengono il nome in tre parti di una raccolta di XML Schema. Per le colonne non XML o per le colonne XML non tipizzate, le tre colonne assumono tutte il valore predefinito NULL.  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome colonna|Type|Descrizione|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Catalogo cui appartiene una raccolta di XML Schema.<br /><br /> In caso contrario, NULL.|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Schema cui appartiene una raccolta di XML Schema. In caso contrario, NULL.|  
@@ -216,7 +216,7 @@ ms.locfileid: "62668837"
 #### <a name="the-irowsetchange-interface"></a>Interfaccia IRowsetChange  
  Il consumer può aggiornare un'istanza XML in una colonna utilizzando due modalità diverse. La prima consiste nell'usare l'oggetto **ISequentialStream** creato dal provider. Il consumer può chiamare il metodo **ISequentialStream::Write** per aggiornare direttamente l'istanza XML restituita dal provider.  
   
- Il secondo approccio consiste nell'usare il metodo **IRowsetChange::SetData** o **IRowsetChange::InsertRow**. Questo approccio, è possibile specificare un'istanza XML nel buffer del consumer in un'associazione di tipo DBTYPE_BSTR, DBTYPE_WSTR, DBTYPE_VARIANT, DBTYPE_XML o DBTYPE_IUNKNOWN.  
+ Il secondo approccio consiste nell'usare il metodo **IRowsetChange::SetData** o **IRowsetChange::InsertRow**. In questo approccio è possibile specificare un'istanza XML nel buffer del consumer in un'associazione di tipo DBTYPE_BSTR, DBTYPE_WSTR, DBTYPE_VARIANT, DBTYPE_XML o DBTYPE_IUNKNOWN.  
   
  Se si utilizza il tipo DBTYPE_BSTR, DBTYPE_WSTR o DBTYPE_VARIANT, il provider archivia l'istanza XML che si trova nel buffer del consumer nella colonna appropriata.  
   

@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6ad0e30c0db83daf7e0cae4f7353d1f0a96a96d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62809037"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>Configurare SQL Server per l'utilizzo di Soft-NUMA (SQL Server)
@@ -57,7 +57,7 @@ Per configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per us
   
  Nell'istanza A che presenta un I/O significativo sono disponibili ora due thread di I/O e un thread Lazywriter mentre nell'istanza B in cui vengono eseguite operazioni con utilizzo elevato del processore sono disponibili solo un thread di I/O e un thread Lazywriter. È possibile assegnare alle istanze quantità di memoria diverse ma, a differenza di quanto avviene con hardware NUMA, entrambe le istanze ricevono memoria dallo stesso blocco di memoria del sistema operativo e non è presente affinità tra memoria e processore.  
   
- Il thread Lazywriter è correlato alla vista del sistema operativo SQL dei nodi di memoria NUMA fisici. Pertanto, qualsiasi elemento venga presentato come nodo NUMA fisico da parte dell'hardware corrisponderà al numero di thread Lazywriter creati. Per altre informazioni, vedere [How It Works: Soft-NUMA, Thread di completamento i/o, thread di lavoro Lazywriter e nodi di memoria](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
+ Il thread Lazywriter è correlato alla vista del sistema operativo SQL dei nodi di memoria NUMA fisici. Pertanto, qualsiasi elemento venga presentato come nodo NUMA fisico da parte dell'hardware corrisponderà al numero di thread Lazywriter creati. Per altre informazioni, vedere [How It Works: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx) (Funzionamento: soft-NUMA, thread di completamento di I/O, thread di lavoro Lazywriter e nodi di memoria).  
   
 > [!NOTE]  
 >  Le chiavi del Registro di sistema di **Soft-NUMA** non vengono copiate quando si aggiorna un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -84,7 +84,7 @@ Per configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per us
   
      Nell'esempio seguente si presuppone di avere un server DL580 G9 con 18 core per socket (in 4 socket) e ciascun socket si trova nel proprio gruppo K. La configurazione soft-NUMA creata dovrebbe essere simile alla seguente: 6 core per nodo, 3 nodi per gruppo, 4 gruppi.  
   
-    |Esempio per un server [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] con più gruppi K|Tipo|Nome del valore|Dati del valore|  
+    |Esempio per un server [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] con più gruppi K|Type|Nome del valore|Dati del valore|  
     |------------------------------------------------------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|CPUMask|0x3F|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|Raggruppa|0|  
@@ -113,7 +113,7 @@ Per configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per us
   
      Esempi aggiuntivi:  
   
-    |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Tipo|Nome del valore|Dati del valore|  
+    |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Type|Nome del valore|Dati del valore|  
     |---------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|Raggruppa|0|  
@@ -125,7 +125,7 @@ Per configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per us
     > [!TIP]  
     >  Per specificare le CPU da 60 a 63, usare un valore QWORD di F000000000000000 o un valore BINARY di 1111000000000000000000000000000000000000000000000000000000000000.  
   
-    |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Tipo|Nome del valore|Dati del valore|  
+    |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Type|Nome del valore|Dati del valore|  
     |---------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node0|DWORD|Raggruppa|0|  
@@ -134,7 +134,7 @@ Per configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per us
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node2|DWORD|Raggruppa|0|  
   
-    |SQL Server 2008 R2|Tipo|Nome del valore|Dati del valore|  
+    |SQL Server 2008 R2|Type|Nome del valore|Dati del valore|  
     |------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|Raggruppa|0|  
@@ -143,13 +143,13 @@ Per configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per us
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|Raggruppa|0|  
   
-    |SQL Server 2008|Tipo|Nome del valore|Dati del valore|  
+    |SQL Server 2008|Type|Nome del valore|Dati del valore|  
     |---------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node1|DWORD|CPUMask|0x0c|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
   
-    |SQL Server 2005|Tipo|Nome del valore|Dati del valore|  
+    |SQL Server 2005|Type|Nome del valore|Dati del valore|  
     |---------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\90\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\90\NodeConfiguration\Node1|DWORD|CPUMask|0x0c|  

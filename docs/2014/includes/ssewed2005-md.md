@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 6b9225c1d1a2fa29d586bb870e31d36a359ac56e
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65819481"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67224188"
 ---
 SQL Server Compact 3.5 Service Pack 1

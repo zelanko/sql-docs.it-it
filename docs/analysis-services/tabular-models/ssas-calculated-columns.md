@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 087c30045fdee1e769471cb12188cf31b524c618
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 2768449e242b7da66406b9c1a5b95084e0f04949
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072398"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263383"
 ---
 # <a name="calculated-columns"></a>Colonne calcolate
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53072398"
   
 -   Quando si rinomina una colonna calcolata, è necessario aggiornare tutte le formule basate sulla colonna manualmente. A meno che non si tratti di una modalità di aggiornamento manuale, l'aggiornamento dei risultati delle formule viene eseguito automaticamente. Tuttavia, questa operazione potrebbe richiedere del tempo.  
   
--   Vi sono determinati caratteri che non possono essere utilizzati all'interno dei nomi di colonne. Per altre informazioni, vedere "Requisiti per la denominazione" in [Riferimento alla sintassi DAX](http://msdn.microsoft.com/098630f4-7d1d-467e-976c-99b2279430d5).  
+-   Vi sono determinati caratteri che non possono essere utilizzati all'interno dei nomi di colonne. Per altre informazioni, vedere "Requisiti per la denominazione" in [Riferimento alla sintassi DAX](/dax/dax-syntax-reference).  
   
 ##  <a name="bkmk_perf"></a> Performance of calculated columns  
  La formula per una colonna calcolata può richiedere un maggior numero di risorse rispetto alla formula utilizzata per una misura, poiché, ad esempio, il risultato di una colonna calcolata viene calcolato sempre per ogni riga di una tabella, mentre una misura viene calcolata solo per le celle definite dal filtro utilizzato in un report, in una tabella pivot o in un grafico pivot. In una tabella con un milione di righe, ad esempio, sarà sempre presente una colonna calcolata con un milione di risultati con conseguente effetto sulle prestazioni. Una tabella pivot, invece, consente in genere di filtrare i dati applicando le intestazioni di riga e colonna. Una misura viene pertanto calcolata solo per il subset di dati presente in ogni cella della tabella pivot.  

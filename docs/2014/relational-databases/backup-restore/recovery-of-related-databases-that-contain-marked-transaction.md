@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 209bc81c63998cea299d2c377175955ee99470c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62875714"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Recupero di database correlati che contengono transazioni contrassegnate
@@ -61,11 +61,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Sintassi Transact-SQL per il recupero fino a un contrassegno  
  Quando si specifica una transazione contrassegnata come destinazione usando un'istruzione[RESTORE LOG](/sql/t-sql/statements/restore-statements-transact-sql), è possibile usare una delle clausole seguenti per arrestare l'operazione in corrispondenza del contrassegno o immediatamente prima di esso:  
   
--   Usare la clausola WITH STOPATMARK = **»*`<mark_name>`*'** clausola per specificare che la transazione contrassegnata è il punto di ripristino.  
+-   Usare la clausola WITH STOPATMARK = **» *`<mark_name>`* '** clausola per specificare che la transazione contrassegnata è il punto di ripristino.  
   
      STOPATMARK esegue il rollforward fino al contrassegno, includendovi la transazione contrassegnata.  
   
--   Usare la clausola WITH STOPBEFOREMARK = **»*`<mark_name>`*'** clausola per specificare che il record del log viene immediatamente precedente al contrassegno il punto di ripristino.  
+-   Usare la clausola WITH STOPBEFOREMARK = **» *`<mark_name>`* '** clausola per specificare che il record del log viene immediatamente precedente al contrassegno il punto di ripristino.  
   
      STOPBEFOREMARK esegue il rollforward fino al contrassegno, escludendo la transazione contrassegnata.  
   

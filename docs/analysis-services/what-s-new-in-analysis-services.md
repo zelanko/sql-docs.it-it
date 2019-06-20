@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 873fd4bc1e010b2f7e2795368f8f209dfee23ea0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: de2ac80a10e66ed7673a65428c4bfa011d31b534
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210190"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263278"
 ---
 # <a name="what39s-new-in-analysis-services"></a>Cosa&#39;s New in Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -86,7 +86,7 @@ Una *tabella calcolata* è una costruzione solo modello basata su una query o un
 
 
 
-## <a name="scripting"></a>Generazione di script
+## <a name="scripting"></a>Scripting
  ### <a name="powershell-for-tabular-models"></a>PowerShell per i modelli tabulari    
  Questa versione include miglioramenti di PowerShell per i modelli tabulari con livello di compatibilità 1200. È possibile usare tutti i cmdlet applicabili, nonché cmdlet specifici per la modalità tabulare: [Invoke-ProcessASDatabase](../analysis-services/powershell/invoke-processasdatabase.md) e [cmdlet Invoke-ProcessTable](../analysis-services/powershell/invoke-processtable-cmdlet.md).    
  ### <a name="ssms-scripting-database-operations"></a>Operazioni di scripting del database di SSMS    
@@ -133,9 +133,9 @@ refresh|Elabora l'oggetto. L'equivalente ASSL è PROCESS.
 Gli aggiornamenti apportati alla barra della formula consentono di scrivere formule più facilmente differenziando le funzioni, i campi e le misure con la colorazione della sintassi. I suggerimenti intelligenti relativi a campi e funzioni segnalano le parti errate dell'espressione DAX con le *sottolineature*. Ora è anche possibile usare più righe (ALT+INVIO) e il rientro (TAB). La barra della formula ora consente inoltre di scrivere commenti come parte di misure, è sufficiente digitare "/ /" e tutto ciò che segue questi caratteri sulla stessa riga verranno considerati un commento.
 
 ### <a name="dax-variables"></a>Variabili DAX    
-Questa versione ora include il supporto per le variabili in DAX. Ora le variabili possono archiviare il risultato di un'espressione come variabile denominata, che può essere passata come argomento ad altre espressioni di misura. Dopo aver calcolato i valori risultanti per un'espressione variabile, non tali valori non cambiano, anche se viene fatto riferimento alla variabile in un'altra espressione. Per altre informazioni, vedere la [funzione VAR](http://msdn.microsoft.com/library/mt243785.aspx).    
+Questa versione ora include il supporto per le variabili in DAX. Ora le variabili possono archiviare il risultato di un'espressione come variabile denominata, che può essere passata come argomento ad altre espressioni di misura. Dopo aver calcolato i valori risultanti per un'espressione variabile, non tali valori non cambiano, anche se viene fatto riferimento alla variabile in un'altra espressione. Per altre informazioni, vedere la [funzione VAR](/dax/var-dax).    
 ### <a name="new-dax-functions"></a>Nuove funzioni DAX
-Con questa versione, in DAX sono state introdotte più di cinquanta nuove funzioni per supportare calcoli più rapidi e visualizzazioni migliorate in Power BI. Per altre informazioni, vedere [Nuove funzioni DAX](http://msdn.microsoft.com/library/mt704075.aspx).
+Con questa versione, in DAX sono state introdotte più di cinquanta nuove funzioni per supportare calcoli più rapidi e visualizzazioni migliorate in Power BI. Per altre informazioni, vedere [Nuove funzioni DAX](/dax/new-dax-functions).
 ### <a name="save-incomplete-measures"></a>Salvataggio di misure incomplete
 Ora è possibile salvare le misure DAX incomplete direttamente in un progetto di modello tabulare 1200 e riprenderle quando si è pronti per continuare.
 ### <a name="additional-dax-enhancements"></a>Altri miglioramenti di DAX
@@ -145,7 +145,7 @@ Ora è possibile salvare le misure DAX incomplete direttamente in un progetto di
 - Eliminazione di join ridondanti - Una singola query al motore di archiviazione restituisce le colonne della dimensione e i valori delle misure.
 - Valutazione restrittiva di IF/SWITCH - Un ramo con una condizione false non comporterà più query del motore di archiviazione. In precedenza, i rami venivano valutati rapidamente ma i risultati erano scartati in un secondo momento.     
     
-## <a name="developer"></a>Developer    
+## <a name="developer"></a>Sviluppatore    
  ### <a name="microsoftanalysisservicestabular-namespace-for-tabular-1200-programmability-in-amo"></a>Spazio dei nomi Microsoft.AnalysisServices.Tabular per la programmabilità tabulare a livello 1200 in AMO
  Analysis Services Management Objects (AMO) viene aggiornato per includere un nuovo spazio dei nomi tabulare per la gestione di un'istanza in modalità tabulare di SQL Server 2016 Analysis Services e fornire il linguaggio DDL (Data Definition Language) per la creazione o la modifica di modelli tabulari 1200 a livello di codice. Per informazioni sull'API, vedere [Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx) .    
  ### <a name="analysis-services-management-objects-amo-updates"></a>Aggiornamenti di Analysis Services Management Objects (AMO)

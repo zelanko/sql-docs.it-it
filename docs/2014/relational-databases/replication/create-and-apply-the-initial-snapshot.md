@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a69d4805a21cfbd83bd9a8d79b5150460d4977be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721683"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Creazione e applicazione dello snapshot iniziale
@@ -82,9 +82,9 @@ ms.locfileid: "62721683"
   
     -   **@job_login, che specifica** le credenziali dell'autenticazione di Windows con cui l'agente snapshot viene eseguito nel database di distribuzione.  
   
-    -   **@job_password**, che corrisponde alla password per le credenziali di Windows specificate.  
+    -   **@job_password** , che corrisponde alla password per le credenziali di Windows specificate.  
   
-    -   (Facoltativo) Valore **0** per **@publisher_security_mode** se l'agente utilizzerà l'autenticazione di SQL Server per la connessione al server di pubblicazione. In questo caso, è necessario specificare anche le informazioni di accesso dell'autenticazione di SQL Server per **@publisher_login** e **@publisher_password**.  
+    -   (Facoltativo) Valore **0** per **@publisher_security_mode** se l'agente utilizzerà l'autenticazione di SQL Server per la connessione al server di pubblicazione. In questo caso, è necessario specificare anche le informazioni di accesso dell'autenticazione di SQL Server per **@publisher_login** e **@publisher_password** .  
   
     -   (Facoltativo) Pianificazione della sincronizzazione per il processo dell'agente snapshot. Per altre informazioni, vedere [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
   

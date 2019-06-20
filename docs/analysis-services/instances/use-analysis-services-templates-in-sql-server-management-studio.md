@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d5ac074bef7570dc49a5597500bd15c8075235ba
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: bdcd5b9a30d19fc6fd0018fac1d24a275f236518
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148136"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263162"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Usare i modelli di Analysis Services in SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "50148136"
  In questo esempio viene illustrato come creare una query MDX in SQL Server Management Studio utilizzando un database modello tabulare come origine dati. Per ripetere questo esempio nel computer, è possibile [scaricare il progetto di esempio di modello tabulare AdventureWorks](http://go.microsoft.com/fwlink/?LinkId=231183).  
   
 > [!WARNING]  
->  Non è possibile utilizzare query MDX su modelli tabulari distribuiti in modalità DirectQuery. È tuttavia possibile inviare query equivalenti utilizzando query di tabella DAX con il comando EVALUATE. Per altre informazioni, vedere [Parametri per query DAX](http://msdn.microsoft.com/c5841b4e-3395-4237-815b-9822a691e544).  
+>  Non è possibile utilizzare query MDX su modelli tabulari distribuiti in modalità DirectQuery. È tuttavia possibile inviare query equivalenti utilizzando query di tabella DAX con il comando EVALUATE. Per altre informazioni, vedere [Parametri per query DAX](/dax/dax-queries#parameters-in-dax-queries).  
   
 #### <a name="create-an-mdx-query-from-a-template"></a>Creare una query MDX da un modello  
   
@@ -58,15 +58,15 @@ ms.locfileid: "50148136"
   
 3.  Tramite **Visualizzatore metadati**trascinare i campi e le misure seguenti nel modello di query:  
   
-    1.  Sostituire \<row_axis, mdx_set > con **[Product Category]. [ Product Category Name]**.  
+    1.  Sostituire \<row_axis, mdx_set > con **[Product Category]. [ Product Category Name]** .  
   
     2.  Sostituire \<column_axis, mdx_set > con **[Date]. [ Anno di calendario]. [Anno di calendario]** .  
   
-    3.  Sostituire \<from_clause, mdx_name > con **[Internet Sales]**.  
+    3.  Sostituire \<from_clause, mdx_name > con **[Internet Sales]** .  
   
-    4.  Sostituire \<where_clause, mdx_set > con **[Measures]. [ Internet Total Sales]**.  
+    4.  Sostituire \<where_clause, mdx_set > con **[Measures]. [ Internet Total Sales]** .  
   
-4.  È possibile eseguire la query così come è, ma sarà probabilmente necessario apportare alcune modifiche, ad esempio aggiungendo una funzione per restituire membri specifici. Digitare, ad esempio, **.members** dopo **[Product Category].[Product Category Name]**. Per altre informazioni, vedere [Uso delle espressioni di membro](../../mdx/using-member-expressions.md).  
+4.  È possibile eseguire la query così come è, ma sarà probabilmente necessario apportare alcune modifiche, ad esempio aggiungendo una funzione per restituire membri specifici. Digitare, ad esempio, **.members** dopo **[Product Category].[Product Category Name]** . Per altre informazioni, vedere [Uso delle espressioni di membro](../../mdx/using-member-expressions.md).  
   
 ##  <a name="bkmk_backup"></a> Creare uno script XMLA da un modello  
  I modelli di comandi XMLA forniti in Esplora modelli possono essere usati per creare script per il monitoraggio e l'aggiornamento di oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , indipendentemente dal fatto che l'istanza sia in modalità multidimensionale e di data mining oppure tabulare. I modelli **XMLA** includono esempi per i tipi di script seguenti:  
@@ -154,14 +154,14 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ##  <a name="bkmk_Ref"></a> Guida di riferimento ai modelli di Analysis Services  
  I modelli seguenti vengono forniti per l'utilizzo con i database di Analysis Services e gli oggetti all'interno del database, inclusi modelli e strutture di data mining, cubi e modelli tabulari:  
   
-|Category|Modello di elementi|Description|  
+|Category|Modello di elementi|Descrizione|  
 |--------------|-------------------|-----------------|  
-|DMX\Model Content|Content Query|Viene illustrato come utilizzare l'istruzione DMX SELECT FROM  *\<modello >*. CONTENUTO istruzione per recuperare il contenuto del set di righe dello schema per un modello di data mining specificato.|  
+|DMX\Model Content|Content Query|Viene illustrato come utilizzare l'istruzione DMX SELECT FROM  *\<modello >* . CONTENUTO istruzione per recuperare il contenuto del set di righe dello schema per un modello di data mining specificato.|  
 ||Continuous Column Values|Viene illustrato come utilizzare DMX SELECT DISTINCT FROM  *\<modello >* dell'istruzione DMX **RangeMin** e **RangeMax** per recuperare un set di funzioni valori in un intervallo specifico da colonne continue in un modello di data mining specificato.|  
 ||Discrete Column Values|Viene illustrato come utilizzare DMX SELECT DISTINCT FROM  *\<modello >* istruzione recuperare un set completo di valori da colonne discrete di un modello di data mining specificato.|  
 ||Drillthrough Query|Illustra l'utilizzo dell'istruzione DMX SELECT * FROM Model.CASES con la funzione DMX IsInNode per l'esecuzione di una query drill-through.|  
 ||Attributi di modellazione|Illustra l'utilizzo della funzione DMX System.GetModelAttributes per restituire un elenco degli attributi utilizzati da un modello.|  
-||PMML Content|Viene illustrato come utilizzare DMX SELECT \* FROM  *\<modello >*. Istruzione PMML per recuperare la rappresentazione PMML Predictive Model Markup Language () del modello di data mining, per gli algoritmi che supportano questa funzionalità.|  
+||PMML Content|Viene illustrato come utilizzare DMX SELECT \* FROM  *\<modello >* . Istruzione PMML per recuperare la rappresentazione PMML Predictive Model Markup Language () del modello di data mining, per gli algoritmi che supportano questa funzionalità.|  
 |DMX\Model Management|Add Model|Illustra l'utilizzo dell'istruzione DMX ALTER MINING MODEL STRUCTURE per l'aggiunta di un modello di data mining.|  
 ||Clear Model|Illustra l'utilizzo dell'istruzione DMX DELETE * FROM MINING MODEL per l'eliminazione del contenuto di un modello di data mining specificato.|  
 ||Clear Structure Cases|Illustra l'utilizzo dell'istruzione DMX DELETE FROM MINING STRUCTURE per la cancellazione dei case delle strutture dei modelli di data mining.|  

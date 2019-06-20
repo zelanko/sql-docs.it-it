@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62689025"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
@@ -70,13 +70,13 @@ fIsMaxType
 |`SQLBITN`|Prima o dopo|**bit-null**|  
 |`SQLBIT`|Prima o dopo|**bit**|  
 |`SQLBIGCHAR`|No|**char**|  
-|`SQLCHARACTER`|No|**char**|  
+|`SQLCHARACTER`|no|**char**|  
 |`SQLBIGVARCHAR`|No|**varchar**|  
 |`SQLVARCHAR`|no|**varchar**|  
 |`SQLTEXT`|Prima o dopo|**text**|  
 |`SQLBIGBINARY`|No|**binary**|  
-|`SQLBINARY`|no|**Binario**|  
-|`SQLBIGVARBINARY`|No|**Varbinary**|  
+|`SQLBINARY`|No|**Binario**|  
+|`SQLBIGVARBINARY`|no|**Varbinary**|  
 |`SQLVARBINARY`|No|**Varbinary**|  
 |`SQLIMAGE`|Prima o dopo|**Immagine**|  
 |`SQLINTN`|Prima o dopo|**int-null**|  

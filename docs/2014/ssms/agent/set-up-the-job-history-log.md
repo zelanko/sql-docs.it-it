@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 613c0ccae7be912bd3bec63905b838b7f07b59b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63033579"
 ---
 # <a name="set-up-the-job-history-log"></a>Impostare il log di cronologia processi
@@ -27,7 +27,7 @@ ms.locfileid: "63033579"
   
 -   **Prima di iniziare:**  [Sicurezza](#Security)  
   
--   **Per configurare la cronologia dei processi di log, utilizzando:**  [SQL Server Management Studio](#SSMS)  
+-   **Per impostare il log di cronologia processi usando:**  [SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   

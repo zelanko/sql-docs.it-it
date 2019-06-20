@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62856317"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Creazione di una struttura e di un modello di rete neurale (Esercitazione intermedia sul data mining)
@@ -52,7 +52,7 @@ ms.locfileid: "62856317"
   
 4.  Nel **creare la struttura di Data Mining** verificare che l'opzione **Crea struttura di data mining con un modello di data mining** sia selezionata.  
   
-5.  Fare clic sull'elenco a discesa per l'opzione **tecnica di data mining si desidera utilizzare?**, quindi selezionare **Microsoft Neural Network**.  
+5.  Fare clic sull'elenco a discesa per l'opzione **tecnica di data mining si desidera utilizzare?** , quindi selezionare **Microsoft Neural Network**.  
   
      Poiché i modelli di regressione logistica sono basati sulle reti neurali, è possibile riutilizzare la stessa struttura e aggiungere un nuovo modello di data mining.  
   

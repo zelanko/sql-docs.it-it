@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: df4afbecebd3c076f80064dbd3d13f35ba2cbcf0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 53de714a7db50b653a24fa42662fc7e0aeffa88d
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62472081"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263403"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence"></a>Specificare contrassegna come tabella data per l'uso con Business intelligence
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "62472081"
   
 2.  Fare clic sul menu **Tabella** , selezionare **Data**, quindi scegliere **Contrassegna come tabella data**  
   
-3.  Nella casella di riepilogo **Data** della finestra di dialogo **Contrassegna come tabella data** selezionare una colonna da utilizzare come identificatore univoco. In questa colonna devono essere inclusi valori univoci e il tipo di dati utilizzato deve essere Date. Ad esempio:  
+3.  Nella casella di riepilogo **Data** della finestra di dialogo **Contrassegna come tabella data** selezionare una colonna da utilizzare come identificatore univoco. In questa colonna devono essere inclusi valori univoci e il tipo di dati utilizzato deve essere Date. Ad esempio:   
   
     |Date|  
     |----------|  
@@ -52,6 +52,6 @@ ms.locfileid: "62472081"
   
 ## <a name="see-also"></a>Vedere anche  
  [Calcoli](../../analysis-services/tabular-models/calculations-ssas-tabular.md)   
- [Funzioni di business intelligence (DAX)](http://msdn.microsoft.com/91df278d-4b28-40c1-a572-cdb91f081517)  
+ [Funzioni di business intelligence (DAX)](/dax/time-intelligence-functions-dax)  
   
   
