@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6924ef36c57036cf6cad6e25a6dc5cebfa5fa5f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017843"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
@@ -39,7 +39,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%**, che rimuove i metadati per tutte le pubblicazioni. Se viene specificata in modo esplicito, la pubblicazione deve essere esistente.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%** , che rimuove i metadati per tutte le pubblicazioni. Se viene specificata in modo esplicito, la pubblicazione deve essere esistente.  
   
 `[ @reinitialize_subscriber = ] 'subscriber'` Specifica se reinizializzare il sottoscrittore. *Sottoscrittore* viene **nvarchar(5**, può essere **TRUE** oppure **FALSE**, il valore predefinito è **TRUE**. Se **TRUE**, le sottoscrizioni vengono contrassegnate per la reinizializzazione. Se **FALSE**, le sottoscrizioni non sono contrassegnate per la reinizializzazione.  
   
@@ -53,11 +53,11 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 >  Dopo aver **sp_mergecleanupmetadata** viene eseguita, per impostazione predefinita, tutte le sottoscrizioni nei Sottoscrittori delle pubblicazioni che includono metadati archiviati nelle **MSmerge_genhistory**, **MSmerge_contents**  e **MSmerge_tombstone** sono contrassegnati per la reinizializzazione, eventuali modifiche in sospeso nel Sottoscrittore andranno perse e lo snapshot corrente è contrassegnato come obsoleto.  
 > 
 > [!NOTE]
->  Se sono presenti più pubblicazioni in un database e una di esse viene utilizzato un periodo di memorizzazione infinito (**@retention**=**0**), in esecuzione  **sp_mergecleanupmetadata** non la pulizia di metadati per il database di rilevamento delle modifiche merge della replica. È pertanto opportuno utilizzare il periodo di memorizzazione infinito con cautela.  
+>  Se sono presenti più pubblicazioni in un database e una di esse viene utilizzato un periodo di memorizzazione infinito ( **@retention** =**0**), in esecuzione  **sp_mergecleanupmetadata** non la pulizia di metadati per il database di rilevamento delle modifiche merge della replica. È pertanto opportuno utilizzare il periodo di memorizzazione infinito con cautela.  
   
  Quando si esegue questa stored procedure, è possibile scegliere se reinizializzare i sottoscrittori impostando il **@reinitialize_subscriber** parametro **TRUE** (predefinito) o **FALSE**. Se **sp_mergecleanupmetadata** viene eseguita con il **@reinitialize_subscriber** parametro impostato su **TRUE**, uno snapshot verrà riapplicato al sottoscrittore anche se la sottoscrizione è stata creato senza uno snapshot (ad esempio, se i dati dello snapshot e lo schema sono stati applicati manualmente o esistevano già nel Sottoscrittore) iniziale. Impostazione del parametro su **FALSE** deve essere usata con cautela, poiché se la pubblicazione non viene reinizializzata è necessario assicurarsi che i dati nel server di pubblicazione e sottoscrittore sono sincronizzati.  
   
- Indipendentemente dal valore della **@reinitialize_subscriber**, **sp_mergecleanupmetadata** processi che siano tentando di caricare le modifiche in un server di pubblicazione o a un sottoscrittore di ripubblicazione di merge ha esito negativo se sono presenti in corso Quando che viene richiamata la stored procedure.  
+ Indipendentemente dal valore della **@reinitialize_subscriber** , **sp_mergecleanupmetadata** processi che siano tentando di caricare le modifiche in un server di pubblicazione o a un sottoscrittore di ripubblicazione di merge ha esito negativo se sono presenti in corso Quando che viene richiamata la stored procedure.  
   
  **Esecuzione di sp_mergecleanupmetadata con @reinitialize_subscriber = TRUE:**  
   

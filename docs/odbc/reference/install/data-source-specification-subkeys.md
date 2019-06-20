@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad210f91d00f9e692c8ee20fef01a808a01501c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63198212"
 ---
 # <a name="data-source-specification-subkeys"></a>Sottochiavi di specifica dell'origine dati
@@ -27,7 +27,7 @@ Ogni origine dati elencate nella sottochiave ODBC Zdroje dat ha una sottochiave 
   
  I formati dei valori vengono visualizzati nella tabella seguente. È necessario solo il valore di Driver.  
   
-|Nome|Tipo di dati|Dati|  
+|nome|Tipo di dati|Dati|  
 |----------|---------------|----------|  
 |Descrizione|REG_SZ|*description*|  
 |Driver|REG_SZ|*driver-DLL-path*|  

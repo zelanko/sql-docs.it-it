@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2bd2e9d0decc730a59b63ee600bec2d080cc85fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62856168"
 ---
 # <a name="creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial"></a>Creazione di una struttura del modello di data mining Targeted Mailing (Esercitazione di base sul data mining)
@@ -30,7 +30,7 @@ ms.locfileid: "62856168"
   
 3.  Nel **Selezione metodo di definizione** verificare che **da esistenti database relazionale o data warehouse** sia selezionata e quindi fare clic su **Next**.  
   
-4.  Nel **creare la struttura di Data Mining** nella pagina **tecnica di data mining si desidera utilizzare?**, selezionare **Microsoft Decision Trees**.  
+4.  Nel **creare la struttura di Data Mining** nella pagina **tecnica di data mining si desidera utilizzare?** , selezionare **Microsoft Decision Trees**.  
   
     > [!NOTE]  
     >  Se viene visualizzato un avviso relativo al mancato rilevamento di algoritmi di data mining, è possibile che le proprietà del progetto non siano state configurate correttamente. Questo avviso viene visualizzato quando il progetto tenta di recuperare un elenco di algoritmi di data mining dal server di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e quest'ultimo non viene rilevato. Per impostazione predefinita [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] userà **localhost** del server. Se si utilizza un'istanza diversa o un'istanza denominata, è necessario modificare le proprietà del progetto. Per altre informazioni, vedere [creazione di un progetto di Analysis Services &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md).  

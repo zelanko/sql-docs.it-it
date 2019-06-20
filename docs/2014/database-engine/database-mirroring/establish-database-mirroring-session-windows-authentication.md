@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 70d9b3f9d243531e13d3d5a46693c80288815881
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806918"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-sql-server-management-studio"></a>Stabilire una sessione di mirroring del database tramite autenticazione di Windows (SQL Server Management Studio)
@@ -71,7 +71,7 @@ ms.locfileid: "62806918"
   
     -   Gli indirizzi TCP completi delle istanze del server principale e del server mirror sono specificati nella sezione **Indirizzi di rete del server** .  
   
-    -   Se la modalità operativa è impostata su **Protezione elevata con failover automatico (sincrona)**, viene anche specificato l'indirizzo TCP completo dell'istanza del server di controllo del mirroring.  
+    -   Se la modalità operativa è impostata su **Protezione elevata con failover automatico (sincrona)** , viene anche specificato l'indirizzo TCP completo dell'istanza del server di controllo del mirroring.  
   
 8.  Dopo l'avvio del mirroring, è possibile cambiare la modalità operativa e salvare la modifica scegliendo **OK**. Si noti che è possibile passare alla modalità a protezione elevata con failover automatico solo se prima si è specificato un indirizzo per il server di controllo del mirroring.  
   

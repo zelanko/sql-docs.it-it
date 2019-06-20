@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2de2ed783db4f717b86e94424b994f78d4eb75d6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105593"
 ---
 # <a name="managing-report-parts"></a>Gestione di parti di report
@@ -53,7 +53,7 @@ ms.locfileid: "66105593"
   
 |Proprietà|Descrizione|Parte del report<br /><br /> Criteri di ricerca nella raccolta|  
 |--------------|-----------------|---------------------------------------------|  
-|Nome|Uno dei criteri in base al quale un utente può eseguire la ricerca nella raccolta di parti del report.|Yes|  
+|nome|Uno dei criteri in base al quale un utente può eseguire la ricerca nella raccolta di parti del report.|Yes|  
 |Descrizione|Può essere necessario organizzare i nomi delle parti del report in modo da semplificare la ricerca nella raccolta. Ad esempio, è possibile cercare la descrizione che inizia con "Vendite>>" per trovare tutte le parti di report in cui sono presenti dati e presentazioni relativi alle vendite.|Yes|  
 |CreatedBy|ID dell'utente che ha aggiunto la parte del report al database del server di report. Il formato esatto dipende dal metodo di autenticazione. Alcuni metodi di autenticazione, ad esempio, consentono di visualizzare il nome di dominio\utente completo nei campi CreatedBy e ModifiedBy.|Yes|  
 |CreationDate|Data in cui è stata originariamente creata la parte del report.<br /><br /> Uno dei criteri in base al quale un utente può eseguire la ricerca nella raccolta di parti del report.|Yes|  

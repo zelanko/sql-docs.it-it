@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a543182d5c367be9cc1be875f05c1ab5d4c9bfcf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099036"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Esercitazione: Aggiungere un grafico sparkline al report (Generatore report)
@@ -146,7 +146,7 @@ ms.locfileid: "66099036"
        'Slim Digital' as Product, CAST(26576.00 AS money) AS Sales, 88 as Quantity  
     ```  
   
-4.  Sulla barra degli strumenti di Progettazione query fare clic su Esegui (**!**).  
+4.  Sulla barra degli strumenti di Progettazione query fare clic su Esegui ( **!** ).  
   
      La query viene eseguita e viene visualizzato il set di risultati per il campi **SalesDate**, **Subcategory**, **Product**, **Sales**e **Quantity**.  
   
@@ -254,7 +254,7 @@ ms.locfileid: "66099036"
   
 3.  Nel gruppo **Numero** della scheda **Home** fare clic sul pulsante **Valuta** . Nelle celle i numeri vengono visualizzati nel formato di valuta.  
   
-     Se la lingua delle impostazioni locali è Inglese (Stati Uniti), il testo di esempio predefinito sarà [**$12,345.00**]. Se non è possibile visualizzare un valore di valuta di esempio, fare clic su **stili segnaposto** nel **numeri** gruppo e quindi fare clic su **valori di esempio**.  
+     Se la lingua delle impostazioni locali è Inglese (Stati Uniti), il testo di esempio predefinito sarà [ **$12,345.00**]. Se non è possibile visualizzare un valore di valuta di esempio, fare clic su **stili segnaposto** nel **numeri** gruppo e quindi fare clic su **valori di esempio**.  
   
 4.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   
@@ -271,7 +271,7 @@ ms.locfileid: "66099036"
   
 3.  Sulla barra multifunzione, nella **Home** nella scheda il **numero** gruppo dall'elenco a discesa, selezionare **data**.  
   
-     Nella cella verrà visualizzata la data di esempio **[1/31/2000]**. Se non viene visualizzata una data di esempio, fare clic su **Stili segnaposto** nel gruppo **Numeri** , quindi fare clic su **Valori di esempio**.  
+     Nella cella verrà visualizzata la data di esempio **[1/31/2000]** . Se non viene visualizzata una data di esempio, fare clic su **Stili segnaposto** nel gruppo **Numeri** , quindi fare clic su **Valori di esempio**.  
   
 4.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   

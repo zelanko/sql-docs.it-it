@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 593c065e9567c6b298e45d6130f944816325fbbb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62813988"
 ---
 # <a name="remove-a-primary-database-from-an-availability-group-sql-server"></a>Rimuovere un database primario da un gruppo di disponibilità (SQL Server)

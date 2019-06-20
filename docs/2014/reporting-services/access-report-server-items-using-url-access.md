@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb841d8014bd1a66d533c10c4740c016bb13e737
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66110103"
 ---
 # <a name="access-report-server-items-using-url-access"></a>Accesso agli elementi del server di report utilizzando l'accesso tramite URL
@@ -28,11 +28,11 @@ ms.locfileid: "66110103"
  Si noti la sintassi del proxy `_vti_bin` negli esempi riportati di seguito. Per altre informazioni su come usare la sintassi del proxy, vedere [Riferimento ai parametri di accesso con URL](url-access-parameter-reference.md).  
   
 ## <a name="access-a-report"></a>Accedere a report  
- Per visualizzare un report nel browser, usare il parametro *rs:Command*=*Render* . Ad esempio:   
+ Per visualizzare un report nel browser, usare il parametro *rs:Command*=*Render* . Ad esempio:  
   
  `Native` `http://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
   
- `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
+ `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
   
 > [!TIP]  
 >  È importante che nell'URL sia inclusa la sintassi proxy `_vti_bin` per indirizzare la richiesta tramite SharePoint e il proxy HTTP di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Tramite il proxy viene aggiunto del contesto alla richiesta HTTP. Questo contesto è necessario per garantire l'esecuzione corretta del report per i server di report in modalità SharePoint.  
@@ -42,14 +42,14 @@ ms.locfileid: "66110103"
   
  `Native` `http://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
   
- `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
+ `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
   
 ## <a name="access-a-data-source"></a>Accedere a un'origine dati  
- Per accedere a un'origine dati, usare il parametro *rs:Command*=*GetDataSourceContents* . Se si browser supporta l'XML, l'origine dati viene visualizzata se la richiesta avviene da parte di un utente autenticato con autorizzazione `Read Contents` per l'origine dati. Ad esempio:   
+ Per accedere a un'origine dati, usare il parametro *rs:Command*=*GetDataSourceContents* . Se si browser supporta l'XML, l'origine dati viene visualizzata se la richiesta avviene da parte di un utente autenticato con autorizzazione `Read Contents` per l'origine dati. Ad esempio:  
   
  `Native` `http://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
- `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
+ `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
  La struttura XML potrebbe essere simile a quella illustrata nell'esempio seguente:  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66110103"
   
  `Native` `http://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
   
- `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales&rs:Command=GetChildren`  
+ `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rs:Command=GetChildren`  
   
  L'interfaccia utente visualizzata è simile alla modalità di esplorazione delle directory utilizzata da [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Server (IIS). Sotto l'elenco della cartella viene visualizzato anche il numero di versione, incluso il numero di build, del server di report.  
   

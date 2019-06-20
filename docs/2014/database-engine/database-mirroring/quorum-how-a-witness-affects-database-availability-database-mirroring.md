@@ -1,5 +1,5 @@
 ---
-title: 'Quorum: Come un server di controllo influisce sulla disponibilità del Database (mirroring del Database) | Microsoft Docs'
+title: 'Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database (mirroring del database) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,13 +22,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 26abcc214c4f4304019bbc855379b56cab7cfc96
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754406"
 ---
-# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum: Come un server di controllo influisce sulla disponibilità del Database (mirroring del Database)
+# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum: Impatto di un server di controllo del mirroring sulla disponibilità del database (mirroring del database)
   Ogni volta che viene impostato un server di controllo del mirroring per una sessione di mirroring del database, è necessario che esista il *quorum* . Il quorum è una relazione esistente quando due o più istanze del server in una sessione di mirroring del database sono connesse l'una all'altra. In genere, un quorum coinvolge tre istanze del server interconnesse. Quando è impostato un server di controllo del mirroring, il quorum è necessario per rendere disponibile il database. Progettato per la modalità a protezione elevata con failover automatico, il quorum garantisce che un database sia di proprietà di un singolo partner alla volta.  
   
  Se un'istanza del server specifica viene disconnessa da una sessione di mirroring, perde il quorum. In assenza di istanze del server connesse, la sessione perde il quorum e il database non è più disponibile. Sono possibili tre tipi di quorum:  

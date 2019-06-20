@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 64dc9129373a57de2924b2983e14266a67d4915e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873518"
 ---
 # <a name="write-international-transact-sql-statements"></a>Scrittura di istruzioni Transact-SQL internazionali
@@ -36,9 +36,9 @@ ms.locfileid: "62873518"
   
     -   Le applicazioni ADO, OLE DB e ODBC devono utilizzare le clausole di escape seguenti relative a timestamp, data e ora:  
   
-         **{ts'** yyyy**-**_mm_**-**_ddhh_**:**  _mm_**:**_ss_[**.** _fff_] **'}** , ad esempio: **{ts'** 1998**-** 09**-** 24 10 **:** 02 **:** 20 **'}**  
+         **{ts'** yyyy **-** _mm_ **-** _ddhh_ **:**  _mm_ **:** _ss_[ **.** _fff_] **'}** , ad esempio: **{ts'** 1998 **-** 09 **-** 24 10 **:** 02 **:** 20 **'}**  
   
-         **{ d'** _aaaa_ **-** _mm_ **-** _gg_ **'}** ad esempio: **{ d'** 1998**-** 09**-** 24 **'}**  
+         **{ d'** _aaaa_ **-** _mm_ **-** _gg_ **'}** ad esempio: **{ d'** 1998 **-** 09 **-** 24 **'}**  
   
          **{ t'** _hh_ **:** _mm_ **:** _ss_ **'}** such as: **{ t'** 10:02:20 **'}**  
   

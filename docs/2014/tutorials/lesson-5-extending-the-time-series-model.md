@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62822069"
 ---
-# <a name="lesson-5-extending-the-time-series-model"></a>Lezione 5: Estendere la serie temporale del modello
+# <a name="lesson-5-extending-the-time-series-model"></a>Lezione 5: Estensione del modello Time Series
   In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise è possibile aggiungere nuovi dati a un modello Time Series e incorporarli automaticamente nel modello. I nuovi dati possono essere aggiunti a un modello di data mining Time Series in uno dei due modi indicati di seguito:  
   
 -   Utilizzando PREDICTION JOIN per unire in join i dati in un'origine esterna ai dati di training.  

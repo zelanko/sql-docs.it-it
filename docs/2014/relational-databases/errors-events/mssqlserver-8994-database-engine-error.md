@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_8994 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
-ms.prod: sql
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: conceptual
 helpviewer_keywords:
 - 8994 (Database Engine error)
 ms.assetid: 8f4b0e2f-04c0-46e4-9208-20a7085d7a1a
@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d213738b7ea2bbe846bad98620d3b4d5577133a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62913216"
 ---
 # <a name="mssqlserver8994"></a>MSSQLSERVER_8994
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+    
 ## <a name="details"></a>Dettagli  
   
 |||  
@@ -34,28 +33,29 @@ ms.locfileid: "62913216"
 |Testo del messaggio|La pagina della riga da inoltrare P_ID2, slot S_ID2 deve puntare all'ID di oggetto O_ID, nella pagina della riga inoltrata P_ID1, slot S_ID1. Impossibile trovare la riga da inoltrare. Possibile errore di allocazione.|  
   
 ## <a name="explanation"></a>Spiegazione  
-Manca la riga da inoltrare che dovrebbe puntare a una riga inoltrata in un heap.  
+ Manca la riga da inoltrare che dovrebbe puntare a una riga inoltrata in un heap.  
   
 ## <a name="user-action"></a>Azione dell'utente  
   
 ### <a name="look-for-hardware-failure"></a>Individuare errori hardware  
-Eseguire gli strumenti di diagnostica hardware e risolvere eventuali problemi. Esaminare inoltre il registro di sistema di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows e il registro delle applicazioni, nonché il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per stabilire se l'errore è dovuto a un problema hardware. Risolvere tutti i problemi relativi all'hardware indicati nei log.  
+ Eseguire gli strumenti di diagnostica hardware e risolvere eventuali problemi. Esaminare inoltre il registro di sistema di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows e il registro delle applicazioni, nonché il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per stabilire se l'errore è dovuto a un problema hardware. Risolvere tutti i problemi relativi all'hardware indicati nei log.  
   
-In caso di problemi persistenti che provocano il danneggiamento dei dati, provare a sostituire i vari componenti hardware per isolare il problema. Verificare che nel sistema non sia abilitata la memorizzazione nella cache in scrittura sul controller del disco. Se si ritiene che il problema sia dovuto alla memorizzazione nella cache in scrittura, rivolgersi al fornitore dell'hardware.  
+ In caso di problemi persistenti che provocano il danneggiamento dei dati, provare a sostituire i vari componenti hardware per isolare il problema. Verificare che nel sistema non sia abilitata la memorizzazione nella cache in scrittura sul controller del disco. Se si ritiene che il problema sia dovuto alla memorizzazione nella cache in scrittura, rivolgersi al fornitore dell'hardware.  
   
-Infine, potrebbe essere conveniente passare a un nuovo sistema hardware. A tale scopo può essere necessario riformattare le unità disco e reinstallare il sistema operativo.  
+ Infine, potrebbe essere conveniente passare a un nuovo sistema hardware. A tale scopo può essere necessario riformattare le unità disco e reinstallare il sistema operativo.  
   
 ### <a name="restore-from-backup"></a>Eseguire un ripristino da backup  
-Se il problema non è correlato all'hardware ed è disponibile un backup valido noto, ripristinare il database dal backup.  
+ Se il problema non è correlato all'hardware ed è disponibile un backup valido noto, ripristinare il database dal backup.  
   
 ### <a name="run-dbcc-checkdb"></a>Eseguire DBCC CHECKDB  
-Se non è disponibile un backup valido, eseguire DBCC CHECKDB senza la clausola REPAIR per determinare l'entità del danno. Verrà automaticamente suggerita la clausola REPAIR da usare. Eseguire quindi DBCC CHECKDB con la clausola REPAIR appropriata per correggere il database.  
+ Se non è disponibile un backup valido, eseguire DBCC CHECKDB senza la clausola REPAIR per determinare l'entità del danno. Verrà automaticamente suggerita la clausola REPAIR da usare. Eseguire quindi DBCC CHECKDB con la clausola REPAIR appropriata per correggere il database.  
   
 > [!CAUTION]  
-> Se non si è certi dell'effetto prodotto sui dati dall'esecuzione di DBCC CHECKDB con la clausola REPAIR, contattare il personale del supporto tecnico prima di eseguire l'istruzione.  
+>  Se non si è certi dell'effetto prodotto sui dati dall'esecuzione di DBCC CHECKDB con la clausola REPAIR, contattare il personale del supporto tecnico prima di eseguire l'istruzione.  
   
-Se l'esecuzione di DBCC CHECKDB con una clausola REPAIR non consente di risolvere il problema, contattare il personale del supporto tecnico.  
+ Se l'esecuzione di DBCC CHECKDB con una clausola REPAIR non consente di risolvere il problema, contattare il personale del supporto tecnico.  
   
 #### <a name="results-of-running-repair-options"></a>Risultati dell'esecuzione delle opzioni REPAIR  
-La riga inoltrata verrà convertita in una riga di dati regolare.  
+ La riga inoltrata verrà convertita in una riga di dati regolare.  
+  
   

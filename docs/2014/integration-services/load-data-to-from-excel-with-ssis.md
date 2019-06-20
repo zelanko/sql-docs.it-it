@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e2092ef7f755b9980ee29ee3d7080774d78a0094
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767313"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importare i dati da Excel o esportarli in Excel con SQL Server Integration Services (SSIS)
@@ -49,7 +49,7 @@ Assicurarsi di eseguire il download di Access Database Engine 2016 *Redistributa
 
 Se nel computer è già installata una versione a 32 bit di Office, è necessario installare la versione a 32 bit dei componenti. Verificare inoltre che il pacchetto SSIS venga eseguito in modalità a 32 bit oppure eseguire la versione a 32 bit dell'Importazione/Esportazione guidata.
 
-Se si ha una sottoscrizione di Office 365, è possibile che appaia un messaggio di errore quando si esegue il programma di installazione. L'errore indica che non è possibile installare il download affiancato ai componenti di Office A portata di clic. Per ignorare questo messaggio di errore, eseguire l'installazione in modalità non interattiva aprendo una finestra del prompt dei comandi ed eseguendo il file con estensione EXE scaricato con l'opzione `/quiet`. Ad esempio: 
+Se si ha una sottoscrizione di Office 365, è possibile che appaia un messaggio di errore quando si esegue il programma di installazione. L'errore indica che non è possibile installare il download affiancato ai componenti di Office A portata di clic. Per ignorare questo messaggio di errore, eseguire l'installazione in modalità non interattiva aprendo una finestra del prompt dei comandi ed eseguendo il file con estensione EXE scaricato con l'opzione `/quiet`. Ad esempio:
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
@@ -110,11 +110,11 @@ Se si esportano dati da Excel e si abilita questa opzione, la prima riga di dati
 
 Esistono tre tipi di oggetti di Excel che si possono usare come origine o destinazione per i dati: un foglio di lavoro, un intervallo denominato o un intervallo di celle senza nome specificato con il relativo indirizzo.
 
--   **Foglio di lavoro.** Per specificare un foglio di lavoro, aggiungere il carattere `$` alla fine del nome del foglio e aggiungere delimitatori all'inizio e alla fine della stringa, ad esempio **[Foglio1$]**. Oppure cercare un nome che termina con il carattere `$` nell'elenco di tabelle e viste esistenti.
+-   **Foglio di lavoro.** Per specificare un foglio di lavoro, aggiungere il carattere `$` alla fine del nome del foglio e aggiungere delimitatori all'inizio e alla fine della stringa, ad esempio **[Foglio1$]** . Oppure cercare un nome che termina con il carattere `$` nell'elenco di tabelle e viste esistenti.
 
 -   **Intervallo denominato.** Per specificare un intervallo denominato, indicare il nome dell'intervallo, ad esempio **MioIntervalloDati**. Oppure cercare un nome che non termina con il carattere `$` nell'elenco di tabelle e viste esistenti.
     
--   **Intervallo senza nome.** Per specificare un intervallo di celle a cui non è stato assegnato un nome, aggiungere il carattere $ alla fine del nome del foglio, aggiungere la specifica dell'intervallo e aggiungere delimitatori all'inizio e alla fine della stringa, ad esempio **[Foglio1$A1:B4]**.
+-   **Intervallo senza nome.** Per specificare un intervallo di celle a cui non è stato assegnato un nome, aggiungere il carattere $ alla fine del nome del foglio, aggiungere la specifica dell'intervallo e aggiungere delimitatori all'inizio e alla fine della stringa, ad esempio **[Foglio1$A1:B4]** .
 
 Per selezionare o specificare il tipo di oggetto di Excel da usare come origine o destinazione per i dati, eseguire una delle operazioni seguenti:
 

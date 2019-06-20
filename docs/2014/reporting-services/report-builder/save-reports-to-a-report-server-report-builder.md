@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c94117f277f0d058bd67c61e8dabc609d009337
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107643"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Salvare i report in un server di report (Generatore report)
@@ -25,7 +25,7 @@ ms.locfileid: "66107643"
   
 ### <a name="to-save-a-report-to-a-report-server"></a>Per salvare un report in un server di report  
   
-1.  Dal pulsante Generatore report fare clic su **Salva**. Il **Salva con nome**_\<elemento del Report\>_  verrà visualizzata la finestra di dialogo.  
+1.  Dal pulsante Generatore report fare clic su **Salva**. Il **Salva con nome** _\<elemento del Report\>_  verrà visualizzata la finestra di dialogo.  
   
     > [!NOTE]  
     >  Se si sta salvando di nuovo un report, questo viene automaticamente risalvato nel relativo percorso precedente. Utilizzare l'opzione Salva con nome per modificare il percorso.  
@@ -40,7 +40,7 @@ ms.locfileid: "66107643"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>Per salvare un report con un altro nome  
   
-1.  Dal pulsante Generatore report fare clic su **Salva con nome**. Il **Salva con nome**_\<elemento del Report\>_  verrà visualizzata la finestra di dialogo.  
+1.  Dal pulsante Generatore report fare clic su **Salva con nome**. Il **Salva con nome** _\<elemento del Report\>_  verrà visualizzata la finestra di dialogo.  
   
 2.  Passare al percorso del server di report o alla condivisione file in cui si desidera salvare il report.  
   

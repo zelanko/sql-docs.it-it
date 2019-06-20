@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 206a91032b0eb2e1928846ebcdbfcb97f04ba12c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768957"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Creazione di una destinazione con il componente script
@@ -68,7 +68,7 @@ ms.locfileid: "62768957"
 ### <a name="adding-variables"></a>Aggiunta di variabili  
  Se si desidera usare le variabili esistenti nello script, è possibile aggiungerle nel `ReadOnlyVariables` e `ReadWriteVariables` nei campi proprietà le **Script** pagina del **Editor trasformazione Script**.  
   
- Quando si aggiungono più variabili nei campi delle proprietà, separare i relativi nomi con virgole. È anche possibile selezionare più variabili facendo clic sui puntini di sospensione (**...** ) accanto al pulsante il `ReadOnlyVariables` e `ReadWriteVariables` campi delle proprietà e quindi selezionando le variabili nella **Seleziona variabili** nella finestra di dialogo.  
+ Quando si aggiungono più variabili nei campi delle proprietà, separare i relativi nomi con virgole. È anche possibile selezionare più variabili facendo clic sui puntini di sospensione ( **...** ) accanto al pulsante il `ReadOnlyVariables` e `ReadWriteVariables` campi delle proprietà e quindi selezionando le variabili nella **Seleziona variabili** nella finestra di dialogo.  
   
  Per informazioni generali sull'uso delle variabili con il componente script, vedere [Uso di variabili nel componente script](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -119,7 +119,7 @@ ms.locfileid: "62768957"
   
 3.  Aggiungere un nuovo componente script all'area di progettazione del flusso di dati e configurarlo come destinazione.  
   
-4.  Connettere l'output di un'origine o di una trasformazione a monte al componente di destinazione in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (È possibile connettere un'origine direttamente a una destinazione senza alcuna trasformazione). Questo output deve fornire i dati di **Person. Address** tabella del `AdventureWorks` database di esempio che contiene almeno le **AddressID** e **Città** colonne.  
+4.  Connettere l'output di un'origine o di una trasformazione a monte al componente di destinazione in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. È possibile connettere direttamente un'origine a una destinazione senza alcuna trasformazione. Questo output deve fornire i dati di **Person. Address** tabella del `AdventureWorks` database di esempio che contiene almeno le **AddressID** e **Città** colonne.  
   
 5.  Aprire l'**Editor trasformazione Script**. Nella pagina **Colonne di input** selezionare le colonne di input **AddressID** e **City**.  
   
@@ -236,7 +236,7 @@ public class ScriptMain:
   
 2.  Aggiungere un nuovo componente script all'area di progettazione del flusso di dati e configurarlo come destinazione.  
   
-3.  Connettere l'output di un'origine o di una trasformazione a monte al componente di destinazione in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (È possibile connettere un'origine direttamente a una destinazione senza alcuna trasformazione). Questo output deve fornire i dati di **Person. Address** tabella del `AdventureWorks` database di esempio e deve contenere almeno le **AddressID** e **Città** colonne.  
+3.  Connettere l'output di un'origine o di una trasformazione a monte al componente di destinazione in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)]. È possibile connettere direttamente un'origine a una destinazione senza alcuna trasformazione. Questo output deve fornire i dati di **Person. Address** tabella del `AdventureWorks` database di esempio e deve contenere almeno le **AddressID** e **Città** colonne.  
   
 4.  Aprire l'**Editor trasformazione Script**. Nella pagina **Colonne di input** selezionare le colonne **AddressID** e **City**.  
   

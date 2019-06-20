@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 21f8ec6ea0ed9cd1af8257dcd10b18f59903c929
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66694800"
 ---
 # <a name="index-property"></a>Proprietà Index
@@ -46,7 +46,7 @@ Indica il nome dell'indice attualmente attiva per un [Recordset](../../../ado/re
   
  Se l'indice può essere impostato e il [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) è di proprietà **adLockPessimistic** oppure **adLockOptimistic**, quindi implicita [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) operazione viene eseguita. Rilascia i gruppi interessati e correnti. Qualsiasi filtro esistente viene rilasciato e viene modificata la posizione della riga corrente sulla prima riga del riordinati **Recordset**.  
   
- Il **indice** proprietà viene utilizzata in combinazione con la [Seek](../../../ado/reference/ado-api/seek-method.md) (metodo). Se il provider sottostante non supporta il **indice** proprietà e pertanto il **Seek** metodo, è consigliabile usare il [trovare](../../../ado/reference/ado-api/find-method-ado.md) metodo invece. Determinare se il **Recordset** oggetto supporta gli indici con il [supporta](../../../ado/reference/ado-api/supports-method.md) **(adIndex)** (metodo).  
+ Il **indice** proprietà viene utilizzata in combinazione con la [Seek](../../../ado/reference/ado-api/seek-method.md) (metodo). Se il provider sottostante non supporta il **indice** proprietà e pertanto il **Seek** metodo, è consigliabile usare il [trovare](../../../ado/reference/ado-api/find-method-ado.md) metodo invece. Determinare se il **Recordset** oggetto supporta gli indici con il [supporta](../../../ado/reference/ado-api/supports-method.md)**(adIndex)** (metodo).  
   
  L'elemento predefinito **indice** proprietà non è correlata a dinamica [Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) proprietà, anche se entrambe vengono utilizzate per gli indici.  
   

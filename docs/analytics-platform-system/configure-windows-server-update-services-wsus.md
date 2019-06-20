@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 776859eb291004431a7e4e2743f1c008a7b752dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63134953"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurare Windows Server Update Services (WSUS) nel sistema di piattaforma Analitica
@@ -183,15 +183,15 @@ Dopo la configurazione di WSUS per il sistema di piattaforma Analitica, il passa
   
 2.  Immettere il nome "Punti di accesso" per il gruppo di computer e quindi fare clic su **Add**.  
   
-    ![Immettere il nome del nuovo gruppo di computer. ](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSpecifyGroupName.png "SQL_Server_PDW_WSUSSpecifyGroupName")  
+    ![Immettere il nome del nuovo gruppo di computer. ] (./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSpecifyGroupName.png "SQL_Server_PDW_WSUSSpecifyGroupName")  
   
 3.  Fare clic su **tutti i computer** anche in questo caso, modificare lo stato nel **lo stato** menu di scelta rapida per **qualsiasi**, quindi fare clic su **Aggiorna**. Potrebbe essere necessario espandere **tutti i computer** facendovi clic sopra su controllo albero sulla sinistra per visualizzare il nuovo gruppo appena aggiunto.  
   
-    ![Impostare lo stato su qualsiasi e fare clic su Aggiorna. ](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChangeStatusToAny.png "SQL_Server_PDW_WSUSChangeStatusToAny")  
+    ![Impostare lo stato su qualsiasi e fare clic su Aggiorna. ] (./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChangeStatusToAny.png "SQL_Server_PDW_WSUSChangeStatusToAny")  
   
 4.  Selezionare tutti i computer che fanno parte dell'appliance, pulsante destro del mouse e quindi fare clic su **Modifica appartenenza**.  
   
-    ![Modificare l'appartenenza per tutti i computer PDW. ](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChangeMembership.png "SQL_Server_PDW_WSUSChangeMembership")  
+    ![Modificare l'appartenenza per tutti i computer PDW. ] (./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChangeMembership.png "SQL_Server_PDW_WSUSChangeMembership")  
   
 5.  Selezionare il nuovo gruppo di computer creato facendo clic la casella di controllo e quindi scegliendo **OK**.  
   
@@ -199,5 +199,5 @@ Dopo la configurazione di WSUS per il sistema di piattaforma Analitica, il passa
   
 6.  Selezionare il nuovo gruppo di computer, modificare relativo **lo stato** a **qualsiasi**, quindi fare clic su **Aggiorna**. Tutti i computer devono essere assegnati a questo gruppo ed elencati nel riquadro di destra. È in genere possibile continuare senza problemi quando i nodi vengono visualizzati avvisi, ad esempio **questo nodo non ha segnalato lo stato ancora**.  
   
-    ![Impostare lo stato su qualsiasi e fare clic su Aggiorna. ](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChangeStatusAnyRefresh.png "SQL_Server_PDW_WSUSChangeStatusAnyRefresh")  
+    ![Impostare lo stato su qualsiasi e fare clic su Aggiorna. ] (./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChangeStatusAnyRefresh.png "SQL_Server_PDW_WSUSChangeStatusAnyRefresh")  
   

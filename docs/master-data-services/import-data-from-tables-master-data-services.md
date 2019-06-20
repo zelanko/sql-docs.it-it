@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0d70710da66b60d84928ae6eaac2d85749e7b721
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484255"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>Importare dati dalle tabelle (Master Data Services)
@@ -32,7 +32,7 @@ ms.locfileid: "65484255"
   
 -   Il modello non deve avere uno stato di **Commit completato**.  
   
- **Per aggiungere, aggiornare ed eliminare dati nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]**   
+ **Per aggiungere, aggiornare ed eliminare dati nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]**  
   
 1.  Preparare i membri da importare nella tabella di staging appropriata del database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], ad esempio fornire valori per i campi obbligatori. Per una panoramica delle tabelle di staging, vedere [Panoramica: Importazione di dati da tabelle &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   

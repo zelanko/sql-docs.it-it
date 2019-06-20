@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63145478"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lezione 1: Connessione al motore di database
@@ -72,7 +72,7 @@ ms.locfileid: "63145478"
   
 2.  Selezionare **Motore di database**.  
   
-3.  Nella casella **Nome server** digitare il nome dell'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)]. Per l'istanza predefinita di SQL Server il nome del server è il nome del computer. Per un'istanza denominata di SQL Server, il nome del server è *<nome_computer>***\\***<nome_istanza>*, ad esempio **ACCTG_SRVR\SQLEXPRESS**.  
+3.  Nella casella **Nome server** digitare il nome dell'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)]. Per l'istanza predefinita di SQL Server il nome del server è il nome del computer. Per un'istanza denominata di SQL Server, il nome del server è *<nome_computer>***\\***<nome_istanza>* , ad esempio **ACCTG_SRVR\SQLEXPRESS**.  
   
 4.  Fare clic su **Connetti**.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "63145478"
   
      Viene visualizzata la finestra di dialogo **Account di accesso - Nuovo** .  
   
-2.  Nel **generali** nella pagina il **nome account di accesso** , digitare un account di accesso di Windows nel formato  *\<dominio >\\< login\>*.  
+2.  Nel **generali** nella pagina il **nome account di accesso** , digitare un account di accesso di Windows nel formato  *\<dominio >\\< login\>* .  
   
 3.  Nella casella **Database predefinito** selezionare [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , se disponibile. In caso contrario, selezionare **master**.  
   

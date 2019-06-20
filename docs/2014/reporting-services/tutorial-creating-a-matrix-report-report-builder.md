@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f87c1188b0abd1b576da63412829464368275b0f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098914"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Esercitazione: Creazione di un report matrice (Generatore report)
@@ -176,13 +176,13 @@ ms.locfileid: "66098914"
   
 3.  Nel gruppo **Numero** della scheda **Home** fare clic su **Valuta**. I numeri nelle celle verranno visualizzati nel formato di valuta.  
   
-     Se la lingua delle impostazioni locali è Inglese (Stati Uniti), il testo di esempio predefinito sarà [**$12,345.00**]. Se non è possibile visualizzare un valore di valuta di esempio, fare clic su **stili segnaposto** nel **numeri** gruppo e quindi fare clic su **valori di esempio**.  
+     Se la lingua delle impostazioni locali è Inglese (Stati Uniti), il testo di esempio predefinito sarà [ **$12,345.00**]. Se non è possibile visualizzare un valore di valuta di esempio, fare clic su **stili segnaposto** nel **numeri** gruppo e quindi fare clic su **valori di esempio**.  
   
 4.  Fare clic sulla cella contenente `[SalesDate]`.  
   
 5.  Nel **numero** gruppo, dall'elenco a discesa, selezionare **data**.  
   
-     Nella cella verrà visualizzata la data di esempio **[1/31/2000]**. Se non viene visualizzata una data di esempio, fare clic su **Stili segnaposto** nel gruppo **Numeri** , quindi fare clic su **Valori di esempio**.  
+     Nella cella verrà visualizzata la data di esempio **[1/31/2000]** . Se non viene visualizzata una data di esempio, fare clic su **Stili segnaposto** nel gruppo **Numeri** , quindi fare clic su **Valori di esempio**.  
   
 6.  Fare clic su **Esegui** per visualizzare l'anteprima del report.  
   

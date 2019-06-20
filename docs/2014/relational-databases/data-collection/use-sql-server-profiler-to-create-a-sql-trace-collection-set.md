@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873338"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>Utilizzo di SQL Server Profiler per creare un set di raccolta Traccia SQL (SQL Server Management Studio)
@@ -38,7 +38,7 @@ ms.locfileid: "62873338"
   
 2.  Nella finestra di dialogo **Connetti al server** fare clic su **Annulla**.  
   
-3.  Per questo scenario, assicurarsi che i valori di durata siano configurati per essere visualizzati in millisecondi (impostazione predefinita). A tale scopo, eseguire le operazioni seguenti:  
+3.  Per questo scenario, assicurarsi che i valori di durata siano configurati per essere visualizzati in millisecondi (impostazione predefinita). A tale scopo, effettuare le operazioni seguenti:  
   
     1.  Scegliere **Opzioni** dal menu **Strumenti**.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62873338"
   
 4.  Fare clic su **Esegui** per eseguire la query e creare il set di raccolta.  
   
-5.  In Esplora oggetti verificare che il set di raccolta sia stato creato. A tale scopo, eseguire le operazioni seguenti:  
+5.  In Esplora oggetti verificare che il set di raccolta sia stato creato. A tale scopo, effettuare le operazioni seguenti:  
   
     1.  Fare clic con il pulsante destro del mouse su **Gestione**, quindi scegliere **Aggiorna**.  
   

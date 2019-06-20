@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 696d8becd23f7a7136011a5e1c61eb9669c58e12
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62740603"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Creare un nuovo cluster di failover di SQL Server (programma di installazione)
@@ -123,7 +123,7 @@ ms.locfileid: "62740603"
   
 11. Nella pagina Configurazione dell'istanza specificare se installare un'istanza predefinita o denominata. Per ulteriori informazioni, vedere [Instance Configuration](../../install/instance-configuration.md).  
   
-     **Nome di rete di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**: specificare un nome di rete per il nuovo cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si tratta del nome utilizzato per identificare il cluster di failover nella rete.  
+     **Nome di rete di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** : specificare un nome di rete per il nuovo cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si tratta del nome utilizzato per identificare il cluster di failover nella rete.  
   
     > [!NOTE]  
     >  Nelle precedenti versioni dei cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] questo nome era noto come nome virtuale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -405,7 +405,7 @@ ms.locfileid: "62740603"
 19. Al termine dell'installazione, nella pagina **Operazione completata** viene visualizzato un collegamento al file di log di riepilogo del processo di installazione e ad altre note importanti. Per completare il processo di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , fare clic su **Chiudi**. A questo punto tutti i nodi preparati per lo stesso cluster di failover appartengono al cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] completato.  
   
 ## <a name="next-steps"></a>Passaggi successivi  
- **Configurare la nuova installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**: per ridurre la superficie di attacco di un sistema, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono installati e abilitati in modo selettivo i servizi e le funzionalità principali. Per ulteriori informazioni, vedere [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  
+ **Configurare la nuova installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** : per ridurre la superficie di attacco di un sistema, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono installati e abilitati in modo selettivo i servizi e le funzionalità principali. Per ulteriori informazioni, vedere [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  
   
  Per altre informazioni sui file di log, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   

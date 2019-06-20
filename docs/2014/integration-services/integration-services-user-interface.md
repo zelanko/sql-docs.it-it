@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 55b09057927fa9c5102b8d816c42e1741bc0883a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767673"
 ---
 # <a name="integration-services-user-interface"></a>Interfaccia utente di Integration Services
@@ -47,7 +47,7 @@ ms.locfileid: "62767673"
 |**Firma digitale**|Consente di firmare o rimuovere la firma da un pacchetto.|Scegliere **Firma digitale** dal menu **SSIS**.<br /><br /> oppure<br /><br /> Fare clic con il pulsante destro del mouse nell'area di progettazione della scheda **Flusso di controllo** e quindi scegliere **Firma digitale**.|  
 |**Imposta punti di interruzione**|Consente di attivare punti di interruzione sulle attività e impostarne le proprietà.|Nell'area di progettazione della scheda **Flusso di controllo** fare clic con il pulsante destro del mouse su un'attività o contenitore e quindi scegliere **Modifica punti di interruzione**. Per impostare un punto di interruzione per il pacchetto, fare clic con il pulsante destro del mouse nell'area di progettazione della scheda **Flusso di controllo** , quindi scegliere **Modifica punti di interruzione**.|  
   
- Nella finestra **Attività iniziali** sono disponibili collegamenti a esempi, esercitazioni e video. Per aggiungere collegamenti ad altro contenuto, modificare il file SamplesSites.xml incluso nella versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. È consigliabile non modificare il valore dell'elemento \<GettingStartedSamples> che specifica l'URL del feed RSS. Il file si trova nella cartella *\<unità>*:\Programmi\Microsoft SQL Server\110\DTS\Binn. In un computer a 64 bit il file si trova nella cartella *\<unità>*:\Programmi (x86)\Microsoft SQL Server\110\DTS\Binn  
+ Nella finestra **Attività iniziali** sono disponibili collegamenti a esempi, esercitazioni e video. Per aggiungere collegamenti ad altro contenuto, modificare il file SamplesSites.xml incluso nella versione corrente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. È consigliabile non modificare il valore dell'elemento \<GettingStartedSamples> che specifica l'URL del feed RSS. Il file si trova nella cartella *\<unità>* :\Programmi\Microsoft SQL Server\110\DTS\Binn. In un computer a 64 bit il file si trova nella cartella *\<unità>* :\Programmi (x86)\Microsoft SQL Server\110\DTS\Binn  
   
  Se il file SamplesSites.xml è danneggiato, sostituire il codice xml nel file con il codice xml predefinito seguente.  
   

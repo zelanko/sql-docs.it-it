@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f9f9db58c48e74a91ec85972befb206ed3fb07f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62773546"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure---retention-and-storage-settings"></a>Backup gestito di SQL Server in Windows Azure - Impostazioni di archiviazione e di memorizzazione
@@ -94,7 +94,7 @@ ms.locfileid: "62773546"
   
 -   **Utilizzo di Transact-SQL:**  
   
-     Se si sta abilitando [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per la prima volta, i parametri obbligatori sono: *@database_name*, *@credential_name*, *@encryption_algorithm*, *@enable_backup* Il *@storage_url* parametro è facoltativo. Se non si specifica un valore per il @storage_url parametro, il valore viene ottenuto utilizzando le informazioni sull'account di archiviazione delle credenziali SQL. Se si specifica l'URL di archiviazione, fornire solo l'URL per la radice dell'account di archiviazione, che deve corrispondere alle informazioni specificate nelle credenziali SQL.  
+     Se si sta abilitando [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] per la prima volta, i parametri obbligatori sono: *@database_name* , *@credential_name* , *@encryption_algorithm* , *@enable_backup* Il *@storage_url* parametro è facoltativo. Se non si specifica un valore per il @storage_url parametro, il valore viene ottenuto utilizzando le informazioni sull'account di archiviazione delle credenziali SQL. Se si specifica l'URL di archiviazione, fornire solo l'URL per la radice dell'account di archiviazione, che deve corrispondere alle informazioni specificate nelle credenziali SQL.  
   
     1.  Connettersi al [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
@@ -135,7 +135,7 @@ ms.locfileid: "62773546"
 ##  <a name="InstanceConfigure"></a> Abilitare e configurare predefinito [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] impostazioni per l'istanza  
  È possibile abilitare e configurare default [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] impostazioni a livello di istanza in due modi:  Tramite il sistema stored procedure `smart_backup.set_instance_backup` oppure **SQL Server Management Studio**. I due metodi sono illustrati di seguito:  
   
- **smart_backup.set_instance_backup:**. Specificando il valore **1** per *@enable_backup* parametro, è possibile abilitare il backup e impostare le configurazioni predefinite. Una volta applicate a livello di istanza, queste impostazioni predefinite sono valide per qualsiasi nuovo database aggiunto a questa istanza.  Quando [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] viene abilitato per la prima volta, è necessario specificare le informazioni seguenti oltre ad abilitare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] nell'istanza:  
+ **smart_backup.set_instance_backup:** . Specificando il valore **1** per *@enable_backup* parametro, è possibile abilitare il backup e impostare le configurazioni predefinite. Una volta applicate a livello di istanza, queste impostazioni predefinite sono valide per qualsiasi nuovo database aggiunto a questa istanza.  Quando [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] viene abilitato per la prima volta, è necessario specificare le informazioni seguenti oltre ad abilitare [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] nell'istanza:  
   
 -   Periodo di memorizzazione.  
   

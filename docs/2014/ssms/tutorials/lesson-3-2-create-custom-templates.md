@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62805563"
 ---
 # <a name="create-custom-templates"></a>Creare modelli personalizzati
@@ -67,7 +67,7 @@ ms.locfileid: "62805563"
   
 10. Nell'editor di query digitare **EXECUTE dbo.WorkOrdersForBlade**e premere F5 per eseguire la query. Verificare che nel riquadro **Risultati** sia visualizzato l'elenco di ordini di blade richiesto.  
   
-11. Modificare lo script del modello (lo script nel passaggio 7) sostituendo il nome del prodotto Blade con il parametro  <strong>*<* product_name</strong>, `nvarchar(50)`, <strong>nome*>*</strong> , in quattro punti.  
+11. Modificare lo script del modello (lo script nel passaggio 7) sostituendo il nome del prodotto Blade con il parametro <strong> *<* product_name</strong>, `nvarchar(50)`, <strong>nome*>* </strong>, in quattro punti.  
   
     > [!NOTE]  
     >  Per i parametri sono necessari tre elementi, ovvero il nome che si desidera restituire, il tipo di dati e il valore predefinito.  

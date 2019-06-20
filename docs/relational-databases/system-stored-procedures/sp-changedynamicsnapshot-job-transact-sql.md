@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ab11ccb8853c00439583162f33e76d0e14622a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62994310"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
@@ -121,9 +121,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @active_end_time_of_day = ] active_end_time_of_day` L'ora del giorno quando si arresta l'agente di Merge viene pianificata, nel formato HHMMSS. *active_end_time_of_day* viene **int**, con un valore predefinito è NULL.  
   
-`[ @job_login = ] 'job_login'` È il [!INCLUDE[msCoName](../../includes/msconame-md.md)] Account Windows con cui viene eseguito l'agente Snapshot durante la generazione dello snapshot per una sottoscrizione usando un filtro di riga con parametri. *job_login* viene **nvarchar(257)**, con un valore predefinito NULL.  
+`[ @job_login = ] 'job_login'` È il [!INCLUDE[msCoName](../../includes/msconame-md.md)] Account Windows con cui viene eseguito l'agente Snapshot durante la generazione dello snapshot per una sottoscrizione usando un filtro di riga con parametri. *job_login* viene **nvarchar(257)** , con un valore predefinito NULL.  
   
-`[ @job_password = ] 'job_password'` Password per l'Account di Windows con cui viene eseguito l'agente Snapshot durante la generazione dello snapshot per una sottoscrizione tramite un filtro di riga con parametri. *job_password* viene **nvarchar(257)**, con un valore predefinito NULL.  
+`[ @job_password = ] 'job_password'` Password per l'Account di Windows con cui viene eseguito l'agente Snapshot durante la generazione dello snapshot per una sottoscrizione tramite un filtro di riga con parametri. *job_password* viene **nvarchar(257)** , con un valore predefinito NULL.  
   
 > [!IMPORTANT]  
 >  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  

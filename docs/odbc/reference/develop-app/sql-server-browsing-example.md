@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8dc57d738c1d5726d2208b930c5d4fadcd93b39
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63149307"
 ---
 # <a name="sql-server-browsing-example"></a>Esempio di esplorazione di SQL Server
@@ -77,7 +77,7 @@ SQLBrowseConnect(hdbc, "DATABASE=pubs;", SQL_NTS, BrowseResult,
 "DSN=MySQLServer;SERVER=green;UID=Smith;PWD=Sesame;DATABASE=pubs;"  
 ```  
   
- La stringa di connessione finale restituita dal driver non contiene i nomi descrittivi dopo ogni parola chiave, né contiene parole chiave facoltative non specificate dall'applicazione. L'applicazione può usare questa stringa con **SQLDriverConnect** per ristabilire la connessione all'origine dati nell'handle di connessione corrente (dopo la disconnessione) o per connettersi all'origine dati su un handle di connessione diversa. Ad esempio:   
+ La stringa di connessione finale restituita dal driver non contiene i nomi descrittivi dopo ogni parola chiave, né contiene parole chiave facoltative non specificate dall'applicazione. L'applicazione può usare questa stringa con **SQLDriverConnect** per ristabilire la connessione all'origine dati nell'handle di connessione corrente (dopo la disconnessione) o per connettersi all'origine dati su un handle di connessione diversa. Ad esempio:  
   
 ```  
 SQLDriverConnect(hdbc, hwnd, BrowseResult, SQL_NTS, ConnStrOut,  
