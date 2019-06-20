@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 4ef1665bf96688fba5fc7d157b73d2df2fcd2c68
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66705605"
 ---
 # <a name="number-property-ado"></a>Proprietà Number (ADO)
@@ -34,7 +34,7 @@ Indica il numero che identifica in modo univoco un' [errore](../../../ado/refere
 ## <a name="remarks"></a>Note  
  Usare la **numero** proprietà per determinare l'errore verificatosi. Il valore della proprietà è un numero univoco che corrisponde alla condizione di errore.  
   
- Il [errori](../../../ado/reference/ado-api/errors-collection-ado.md) raccolta restituisce un valore HRESULT in formato esadecimale (ad esempio, 0x80004005) o come valore long (ad esempio, 2147467259). Questi valori HRESULT possono essere generati da componenti sottostanti, ad esempio OLE DB o OLE stesso. Per altre informazioni su questi valori, vedere [errori (OLE DB)](https://msdn.microsoft.com/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd) nel [riferimento per programmatori OLE DB](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8) *.*  
+ Il [errori](../../../ado/reference/ado-api/errors-collection-ado.md) raccolta restituisce un valore HRESULT in formato esadecimale (ad esempio, 0x80004005) o come valore long (ad esempio, 2147467259). Questi valori HRESULT possono essere generati da componenti sottostanti, ad esempio OLE DB o OLE stesso. Per altre informazioni su questi valori, vedere [errori (OLE DB)](https://msdn.microsoft.com/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd) nel [riferimento per programmatori OLE DB](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)*.*  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Error](../../../ado/reference/ado-api/error-object.md)  

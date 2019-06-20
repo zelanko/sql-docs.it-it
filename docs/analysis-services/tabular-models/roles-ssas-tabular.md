@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bbbf4f080696d41360e7fd654ef4b6878df268a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6c42615115ae486d14112a1a1dbd7f05d6328eb
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62472134"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263301"
 ---
 # <a name="roles"></a>Ruoli
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "62472134"
   
  I filtri di riga possono essere definiti solo per ruoli con le autorizzazioni di lettura e di lettura ed elaborazione. Per impostazione predefinita, se per una particolare tabella non è stato definito alcun filtro di riga, i membri di un ruolo con l'autorizzazione di lettura o di lettura ed elaborazione saranno in grado di eseguire query su tutte le righe della tabella, a meno che non venga applicato il filtro incrociato da un'altra tabella.  
   
- Una volta definito un filtro di riga per una determinata tabella, una formula DAX da cui deve essere restituito un valore TRUE o FALSE, tale filtro consente di definire le righe in cui i membri di tale particolare ruolo possono eseguire query. Non sarà possibile eseguire query sulle righe non incluse nella formula DAX. Ad esempio, per i membri del ruolo relativo alle vendite, la tabella Customers con la riga seguente espressione dei filtri, *= Customers [Country] = 'USA'* , i membri del ruolo relativo alle vendite, sarà solo in grado di visualizzare i clienti negli Stati Uniti.  
+ Una volta definito un filtro di riga per una determinata tabella, una formula DAX da cui deve essere restituito un valore TRUE o FALSE, tale filtro consente di definire le righe in cui i membri di tale particolare ruolo possono eseguire query. Non sarà possibile eseguire query sulle righe non incluse nella formula DAX. Ad esempio, per i membri del ruolo relativo alle vendite, la tabella Customers con la riga seguente espressione dei filtri, *= Customers [Country] = 'USA'*, i membri del ruolo relativo alle vendite, sarà solo in grado di visualizzare i clienti negli Stati Uniti.  
   
  I filtri di riga vengono applicati alle righe specificate e a quelle correlate. Quando una tabella dispone di più relazioni, tramite i filtri viene applicata la sicurezza alla relazione che è attiva. I filtri di riga saranno intersecati con altri relativi filtri definiti per le tabelle correlate, ad esempio:  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62472134"
   
  Il risultato finale di queste autorizzazioni nella tabella Transactions è che i membri potranno eseguire query sulle righe di dati se il cliente si trova negli Stati Uniti, la categoria di prodotto è quella delle biciclette e l'anno è il 2008. Gli utenti non saranno in grado di eseguire query su alcuna transazione al di fuori degli Stati Uniti, che non riguardi biciclette o che non appartenga al 2008, a meno che non siano membri di un altro ruolo che garantisce tali autorizzazioni.  
   
- È possibile usare il filtro, *=FALSE()* , per negare l'accesso a tutte le righe per un'intera tabella.  
+ È possibile usare il filtro, *=FALSE()*, per negare l'accesso a tutte le righe per un'intera tabella.  
   
 ### <a name="dynamic-security"></a>Sicurezza dinamica  
  La sicurezza dinamica offre una modalità per definire la sicurezza a livello di riga in base al nome dell'utente attualmente connesso o alla proprietà CustomData restituita da una stringa di connessione. Per implementare la sicurezza dinamica, è necessario includere nel modello una tabella con i valori di accesso (nome utente di Windows) per gli utenti e un campo che è possibile utilizzare per definire una particolare autorizzazione; ad esempio, una tabella dimEmployees con un ID di accesso (dominio\nomeutente) e un valore di reparto per ogni dipendente.  
@@ -84,8 +84,8 @@ ms.locfileid: "62472134"
   
 |Funzione|Descrizione|  
 |--------------|-----------------|  
-|[Funzione USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)|Viene restituito il valore dominio\nomeutente dell'utente attualmente connesso.|  
-|[Funzione CUSTOMDATA (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)|Viene restituita la proprietà CustomData in una stringa di connessione.|  
+|[Funzione USERNAME (DAX)](/dax/username-function-dax)|Viene restituito il valore dominio\nomeutente dell'utente attualmente connesso.|  
+|[Funzione CUSTOMDATA (DAX)](/dax/customdata-function-dax)|Viene restituita la proprietà CustomData in una stringa di connessione.|  
   
  È possibile utilizzare la funzione LOOKUPVALUE per restituire valori per una colonna in cui il nome utente di Windows corrisponde al nome utente restituito dalla funzione USERNAME o una stringa restituita dalla funzione CustomData. Le query possono quindi essere limitate nel caso in cui i valori restituiti da LOOKUPVALUE corrispondono ai valori nella stessa tabella o in una tabella correlata.  
   
@@ -128,8 +128,8 @@ ms.locfileid: "62472134"
 ## <a name="see-also"></a>Vedere anche  
  [Prospettive](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Modello](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
- [Funzione USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)   
- [LOOKUPVALUE (DAX) - funzione](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)   
- [Funzione CUSTOMDATA (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+ [Funzione USERNAME (DAX)](/dax/username-function-dax)   
+ [LOOKUPVALUE (DAX) - funzione](/dax/lookupvalue-function-dax)   
+ [Funzione CUSTOMDATA (DAX)](/dax/customdata-function-dax)  
   
   

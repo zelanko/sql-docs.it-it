@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: e38b253cdebcc5ab976de8c8eb355f7f6fb03aec
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66699539"
 ---
 # <a name="customization-file-userlist-section"></a>Sezione UserList del file di personalizzazione
@@ -32,7 +32,7 @@ Il **userlist** sezione riguarda le **connettersi** sezione con la stessa sezion
 ## <a name="syntax"></a>Sintassi  
  Una voce di accesso utente è nel formato:  
   
- _userName_ **=**    
+ _userName_ **=**   
  **_accessRights_**  
   
 |Parte|Descrizione|  

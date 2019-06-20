@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 789046b7df230b88ca1761d1d89cc147074e12a9
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+manager: jroth
+ms.openlocfilehash: adf71b7f701d96ddf56f5070475fb853f89042ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663117"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801729"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Uso di Azure Active Directory con il driver ODBC
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -34,7 +34,7 @@ Il `Authentication` parola chiave può essere utilizzata quando ci si connette c
 
 |nome|Valori|Default|Descrizione|
 |-|-|-|-|
-|`Authentication`|(non impostato), (stringa vuota), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`, `ActiveDirectoryMsi` |(non impostato)|Controlla la modalità di autenticazione.<table><tr><th>valore<th>Descrizione<tr><td>(non impostato)<td>Modalità di autenticazione di base a parole chiave (opzioni di connessione legacy esistenti).<tr><td>(stringa vuota)<td>Stringa di connessione: "{0}" Eseguire l'override e annullare un `Authentication` impostata nel DSN.<tr><td>`SqlPassword`<td>L'autenticazione diretta a un'istanza di SQL Server utilizzando un nome utente e password.<tr><td>`ActiveDirectoryPassword`<td>Eseguire l'autenticazione con un'identità di Azure Active Directory usando un nome utente e password.<tr><td>`ActiveDirectoryIntegrated`<td>_Solo i driver di Windows_. Eseguire l'autenticazione con un'identità di Azure Active Directory usando l'autenticazione integrata.<tr><td>`ActiveDirectoryInteractive`<td>_Solo i driver di Windows_. Eseguire l'autenticazione con un'identità di Azure Active Directory usando l'autenticazione interattiva.<tr><td>`ActiveDirectoryMsi`<td>Eseguire l'autenticazione con identità di Azure Active Directory con l'autenticazione delle identità del servizio gestito. Per l'identità assegnata dall'utente, UID è impostato per l'ID oggetto del identità utente.</table>|
+|`Authentication`|(non impostato), (stringa vuota), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`, `ActiveDirectoryMsi` |(non impostato)|Controlla la modalità di autenticazione.<table><tr><th>valore<th>Descrizione<tr><td>(non impostato)<td>Modalità di autenticazione di base a parole chiave (opzioni di connessione legacy esistenti).<tr><td>(stringa vuota)<td>Stringa di connessione Eseguire l'override e annullare un `Authentication` impostata nel DSN.<tr><td>`SqlPassword`<td>L'autenticazione diretta a un'istanza di SQL Server utilizzando un nome utente e password.<tr><td>`ActiveDirectoryPassword`<td>Eseguire l'autenticazione con un'identità di Azure Active Directory usando un nome utente e password.<tr><td>`ActiveDirectoryIntegrated`<td>_Solo i driver di Windows_. Eseguire l'autenticazione con un'identità di Azure Active Directory usando l'autenticazione integrata.<tr><td>`ActiveDirectoryInteractive`<td>_Solo i driver di Windows_. Eseguire l'autenticazione con un'identità di Azure Active Directory usando l'autenticazione interattiva.<tr><td>`ActiveDirectoryMsi`<td>Eseguire l'autenticazione con identità di Azure Active Directory con l'autenticazione delle identità del servizio gestito. Per l'identità assegnata dall'utente, UID è impostato sull'ID oggetto dell'identità utente.</table>|
 |`Encrypt`|(non impostato), `Yes`, `No`|(vedere la descrizione)|Controlla la crittografia per una connessione. Se il valore pre-dell'attributo di i `Authentication` impostazione non è _none_ nella stringa di connessione o DSN, il valore predefinito è `Yes`. Diversamente, il valore predefinito è `No`. Se l'attributo `SQL_COPT_SS_AUTHENTICATION` sostituisce il valore pre-dell'attributo di `Authentication`, in modo esplicito impostare il valore della crittografia nelle attributo di connessione o DSN o stringa di connessione. È il valore dell'attributo non definitiva di crittografia `Yes` se il valore è impostato su `Yes` nella stringa di connessione o DSN.|
 
 ## <a name="new-andor-modified-connection-attributes"></a>Attributi di connessione nuovi e/o modificato
@@ -105,7 +105,7 @@ Queste opzioni corrispondono alle stesse cinque disponibile nella configurazione
 
 ![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
 
-8. Usa AAD Managed Service Identity Authentication assegnato dal sistema o l'identità assegnata dall'utente per l'autenticazione configurare connessione. Per l'identità assegnata dall'utente, UID è impostato per l'ID oggetto dell'identità dell'utente.<br>
+8. Usa AAD Managed Service Identity Authentication assegnato dal sistema o l'identità assegnata dall'utente per l'autenticazione configurare connessione. Per l'identità assegnata dall'utente, UID è impostato sull'ID oggetto dell'identità utente.<br>
 Per l'identità assegnata dal sistema,<br>
 `server=Server;database=Database;Authentication=ActiveDirectoryMsi;`<br>
 Per l'identità assegnata dall'utente con ID oggetto è uguale a myObjectId,<br>
@@ -168,7 +168,7 @@ Di seguito è una stringa di connessione di esempio per l'uso con autenticazione
 ~~~
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myuser;Authentication=ActiveDirectoryInteractive"
 ~~~
-Di seguito è una stringa di connessione di esempio per l'uso con Azure Active Directory Managed Service Identity Authentication. Si noti che UID è impostato per l'ID oggetto dell'identità dell'utente per l'identità assegnata dall'utente.
+Di seguito è una stringa di connessione di esempio per l'uso con Azure Active Directory Managed Service Identity Authentication. Si noti che l'UID è impostato sull'ID oggetto dell'identità utente per l'identità assegnata dall'utente.
 ~~~
 // For system-assigned identity,
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};Authentication=ActiveDirectoryMsi"
