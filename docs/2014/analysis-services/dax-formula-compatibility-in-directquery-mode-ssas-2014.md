@@ -10,12 +10,12 @@ ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6da2326c22d0581f59c2307abf018a54915857a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2136c162846b31c4d221d7aaad6476ba70508287
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62732473"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284963"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>Compatibilità delle formule DAX in modalità DirectQuery (SSAS 2014)
 Il linguaggio Data Analysis Expression (DAX) può essere utilizzato per creare misure e altre formule personalizzate per l'uso nei modelli tabulari di Analysis Services, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modelli di dati nelle cartelle di lavoro di Excel e modelli di dati di Power BI Desktop. Nella maggior parte dei casi, i modelli creati in questi ambienti sono identici ed è possibile usare le stesse misure, relazioni e gli indicatori KPI, e così via. Tuttavia, se si crea un modello tabulare di Analysis Services e distribuirlo nella modalità DirectQuery, esistono alcune restrizioni riguardanti le formule che è possibile usare. In questo argomento viene fornita una panoramica di tali differenze, elenca le funzioni che non sono supportate in SQL Server 2014 Analysis Services tabulars modello a livello di compatibilità 1100 o 1103 e nella modalità DirectQuery e sono elencate le funzioni che sono supportate ma potrebbe essere restituire risultati diversi.  
@@ -78,14 +78,14 @@ Il linguaggio DAX non prevede alcuna funzione cast di questo tipo, tuttavia i ca
 -   I valori booleani vengono sempre trattati come valori logici nei confronti e quando vengono usati con EXACT, AND, OR, &amp;&amp;o ||.  
   
 **Cast di una stringa a un valore booleano**  
-In memoria e i modelli DirectQuery, i cast sono consentiti per i valori booleani solo di queste stringhe: **""** (stringa vuota), **"true"** , **"false"** ; in una stringa vuota cast a un valore false.  
+In memoria e i modelli DirectQuery, i cast sono consentiti per i valori booleani solo di queste stringhe: **""** (stringa vuota), **"true"**, **"false"**; in una stringa vuota cast a un valore false.  
   
 Il cast a un tipo di dati booleano di qualsiasi altra stringa genera un errore.  
   
 **Cast da stringa a data/ora**  
 Nella modalità DirectQuery i cast da rappresentazioni stringa di date e ore a valori **datetime** effettivi si comportano come in SQL Server.  
   
-Per informazioni sulle regole che disciplinano i cast da stringa a **data/ora** tipi di dati di [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modelli, vedere il [riferimento alla sintassi DAX](https://msdn.microsoft.com/library/ee634217.aspx).  
+Per informazioni sulle regole che disciplinano i cast da stringa a **data/ora** tipi di dati di [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modelli, vedere il [riferimento alla sintassi DAX] (/ / dax--riferimento alla sintassi dax
   
 I modelli che utilizzano l'archivio dati in memoria supportano una gamma più limitata di formati di testo per le date rispetto ai formati stringa per date supportati in SQL Server. Tuttavia, il linguaggio DAX supporta formati data e ora personalizzati.  
   
@@ -133,7 +133,7 @@ SQL Server gestisce i valori Null e gli spazi vuoti in modo diverso rispetto al 
   
 Le stesse limitazioni si applicano alle altre funzioni logaritmiche: LOG10 e LN.  
   
-Per altre informazioni sul tipo di dati **blank** in DAX, vedere [Specifica della sintassi DAX per PowerPivot](https://msdn.microsoft.com/library/ee634217.aspx).  
+Per altre informazioni sul **vuoto** tipo di dati in DAX, vedere [riferimento alla sintassi DAX] (/ / dax--riferimento alla sintassi dax
   
 **Divisione per 0 e divisione per spazio vuoto**  
 Nella modalità DirectQuery la divisione per zero (0) o per BLANK genera sempre un errore. SQL Server non supporta la nozione di infinito e poiché il risultato naturale di qualsiasi divisione per 0 è un infinito, il risultato è un errore. Tuttavia, SQL Server supporta la divisione per valori Null e il risultato deve sempre essere uguale a Null.  

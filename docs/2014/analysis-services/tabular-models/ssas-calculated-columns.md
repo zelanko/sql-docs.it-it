@@ -10,12 +10,12 @@ ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ad2e89a8862c4b51856d70ddb1dfd3b1e1fdb17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e9a93fffba5c34d26cdb0305b0f6a97369e51b3e
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066579"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284895"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>Colonne calcolate (SSAS tabulare)
   Nei modelli tabulari, le colonne calcolate consentono all'utente di aggiungere nuovi dati al modello. Anziché incollare o importare i valori nella colonna, si crea una formula DAX che definisce i valori a livello di riga della colonna. La colonna calcolata può quindi essere utilizzata in un report, in una tabella pivot o in un grafico pivot come qualsiasi altra colonna.  
@@ -60,7 +60,7 @@ ms.locfileid: "66066579"
   
 -   Quando si rinomina una colonna calcolata, è necessario aggiornare tutte le formule basate sulla colonna manualmente. A meno che non si tratti di una modalità di aggiornamento manuale, l'aggiornamento dei risultati delle formule viene eseguito automaticamente. Tuttavia, questa operazione potrebbe richiedere del tempo.  
   
--   Vi sono determinati caratteri che non possono essere utilizzati all'interno dei nomi di colonne. Per altre informazioni, vedere "Requisiti per la denominazione" in [Specifica della sintassi DAX per PowerPivot](https://msdn.microsoft.com/library/ee634217(v=sql.120).aspx).  
+-   Vi sono determinati caratteri che non possono essere utilizzati all'interno dei nomi di colonne. Per altre informazioni, vedere "Requisiti per la denominazione" in [Specifica della sintassi DAX per PowerPivot](/dax/dax-syntax-reference).  
   
 ##  <a name="bkmk_perf"></a> Prestazioni delle colonne calcolate  
  La formula per una colonna calcolata può richiedere un maggior numero di risorse rispetto alla formula utilizzata per una misura, poiché, ad esempio, il risultato di una colonna calcolata viene calcolato sempre per ogni riga di una tabella, mentre una misura viene calcolata solo per le celle definite dal filtro utilizzato in un report, in una tabella pivot o in un grafico pivot. In una tabella con un milione di righe, ad esempio, sarà sempre presente una colonna calcolata con un milione di risultati con conseguente effetto sulle prestazioni. Una tabella pivot, invece, consente in genere di filtrare i dati applicando le intestazioni di riga e colonna. Una misura viene pertanto calcolata solo per il subset di dati presente in ogni cella della tabella pivot.  

@@ -10,12 +10,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7881df645a02e70948d81baa6fd8a029d06ea1b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5bf8d4af44f7596bb632a05483c387752ba2e056
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066463"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284852"
 ---
 # <a name="tabular-model-data-access"></a>Accesso ai dati di modello tabulare
   L'accesso a database modello tabulare in Analysis Services può essere eseguito dalla maggior parte dei client, delle interfacce e dei linguaggi che si utilizzano per recuperare dati o metadati da un modello multidimensionale. Per altre informazioni, vedere [Accesso ai dati di modelli multidimensionali &#40;Analysis Services - Dati multidimensionali&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "66066463"
   
  Inoltre, è possibile utilizzare le espressioni DAX all'interno del contesto di un'istruzione di comando XMLA EXECUTE per inviare query a un modello tabulare distribuito in modalità DirectQuery.  
   
- Per esempi di esecuzione di query su un modello tabulare usando DAX, vedere [Riferimento alla sintassi di query DAX](https://msdn.microsoft.com/library/ee634217.aspx).  
+ Per esempi di query su un modello tabulare usando DAX, vedere [riferimento alla sintassi di Query a DAX] (/ / dax--riferimento alla sintassi dax
   
 ### <a name="mdx"></a>MDX  
  È possibile utilizzare MDX per creare query su modelli tabulari in cui si utilizza la cache in memoria come metodo di query preferito (vale a dire modelli che non sono stati distribuiti in modalità DirectQuery). Anche se i client quali [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] usano DAX sia per la creazione di aggregazioni sia per l'esecuzione di query sul modello come origine dati, se si ha familiarità con MDX può essere più rapido creare query di esempio in MDX, vedere [Compilazione di misure in MDX](../multidimensional-models/mdx/mdx-building-measures.md).  

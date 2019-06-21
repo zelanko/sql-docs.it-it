@@ -12,12 +12,12 @@ ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ab544235e842e38024ce98763094c300bb06275
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a9c1510030f61896f686b49f4bc134a7dfcb42b
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067225"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284868"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>Modalità DirectQuery (SSAS tabulare)
   Analysis Services consente di recuperare i dati e creare report da un modello tabulare recuperando dati e aggregazioni direttamente da un sistema di database relazionali, usando *la modalità DirectQuery*. In questo argomento vengono illustrate le differenze tra i modelli tabulari standard residenti unicamente in memoria e i modelli tabulari in grado di eseguire query su un'origine dati relazionale. Viene inoltre descritto come creare e distribuire un modello destinato a essere utilizzato nella modalità DirectQuery.  
@@ -82,7 +82,7 @@ ms.locfileid: "66067225"
   
 -   **Restrizioni client:** Quando un modello è in modalità DirectQuery, è possibile eseguire query solo tramite DAX. Non è possibile utilizzare MDX per creare query. Pertanto, non è possibile utilizzare Excel PivotClient, perché Excel utilizza MDX.  
   
-     Tuttavia, è possibile creare query su un modello DirectQuery in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] se si usa una query di tabella DAX come parte di un'istruzione Execute XMLA, per altre informazioni, vedere [riferimento alla sintassi di Query DAX](https://msdn.microsoft.com/library/ee634217.aspx).  
+     Tuttavia, è possibile creare query su un modello DirectQuery in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] se si usa una query di tabella DAX come parte di un'istruzione Execute XMLA, per altre informazioni, vedere [riferimento alla sintassi di Query a DAX] (/ / dax--riferimento alla sintassi dax
   
  Dopo avere risolto tutti i problemi di progettazione e dopo avere testato il modello, è possibile procedere con la distribuzione. A questo punto, è possibile impostare il metodo preferito per rispondere alle query sul modello. Si desidera che gli utenti abbiano accesso alla cache o che utilizzino sempre e solo l'origine dati relazionale?  
   

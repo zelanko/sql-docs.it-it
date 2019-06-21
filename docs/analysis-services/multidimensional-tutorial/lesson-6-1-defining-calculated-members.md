@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3cda7757d5cf7f62f5946dc69882e5bd8cd5c42
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404053"
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>Lezione 6-1: definizione di membri calcolati
@@ -43,7 +43,7 @@ Nelle procedure descritte in questo argomento vengono definite misure calcolate 
   
     ![Form del riquadro espressioni calcoli](../media/l6-calculatedmembers-02.gif "form del riquadro espressioni di calcolo")  
   
-3.  Nella casella **Nome** cambiare il nome della misura calcolata in **[Total Sales Amount]**.  
+3.  Nella casella **Nome** cambiare il nome della misura calcolata in **[Total Sales Amount]** .  
   
     Se il nome di un membro calcolato contiene uno spazio, tale nome deve essere racchiuso tra parentesi quadre.  
   
@@ -58,7 +58,7 @@ Nelle procedure descritte in questo argomento vengono definite misure calcolate 
   
 5.  Trascinare **Internet Sales-Sales Amount** dalla scheda **Metadati** nel riquadro **Strumenti di calcolo** alla casella **Espressione** nel riquadro **Calculation Expressions** (Espressioni di calcolo).  
   
-6.  Nella casella **Espressione** digitare un segno più (**+**) dopo **[Measures].[Internet Sales-Sales Amount]**.  
+6.  Nella casella **Espressione** digitare un segno più ( **+** ) dopo **[Measures].[Internet Sales-Sales Amount]** .  
   
 7.  Nella scheda **Metadati** del riquadro **Strumenti di calcolo** , espandere **Vendite rivenditore**e trascinare **Reseller Sales-Sales Amount** nella casella **Espressione** del riquadro **Calculation Expressions** (Espressioni di calcolo) dopo il segno più (+).  
   
@@ -94,7 +94,7 @@ Nelle procedure descritte in questo argomento vengono definite misure calcolate 
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
     ```  
   
-14. Nell'elenco **Stringa formato** selezionare **"Currency"**.  
+14. Nell'elenco **Stringa formato** selezionare **"Currency"** .  
   
 15. Nell'elenco **Gestione NON EMPTY** selezionare le caselle di controllo corrispondenti a **Internet Sales-Total Product Cost** e **Reseller Sales-Total Product Cost**e fare clic su **OK**.  
   
@@ -104,7 +104,7 @@ Nelle procedure descritte in questo argomento vengono definite misure calcolate 
   
 1.  Verificare che l'opzione **[Total Product Cost]** sia selezionata nella **Libreria script** e fare clic su **Nuovo membro calcolato** sulla barra degli strumenti della scheda **Calcoli** .  
   
-2.  Nella casella **Nome** cambiare il nome della nuova misura calcolata in **[Internet GPM]**.  
+2.  Nella casella **Nome** cambiare il nome della nuova misura calcolata in **[Internet GPM]** .  
   
 3.  Nella casella **Espressione** creare l'espressione MDX seguente:  
   
@@ -114,13 +114,13 @@ Nelle procedure descritte in questo argomento vengono definite misure calcolate 
     [Measures].[Internet Sales-Sales Amount]  
     ```  
   
-4.  Nell'elenco **Stringa formato** selezionare **"Percent"**.  
+4.  Nell'elenco **Stringa formato** selezionare **"Percent"** .  
   
 5.  Nell'elenco **Gestione NON EMPTY** selezionare la casella di controllo corrispondente a **Internet Sales-Sales Amount**e fare clic su **OK**.  
   
 6.  Fare clic su **Nuovo membro calcolato** sulla barra degli strumenti della scheda **Calcoli**.  
   
-7.  Nella casella **Nome** cambiare il nome della nuova misura calcolata in **[Reseller GPM]**.  
+7.  Nella casella **Nome** cambiare il nome della nuova misura calcolata in **[Reseller GPM]** .  
   
 8.  Nella casella **Espressione** creare l'espressione MDX seguente:  
   
@@ -130,13 +130,13 @@ Nelle procedure descritte in questo argomento vengono definite misure calcolate 
     [Measures].[Reseller Sales-Sales Amount]  
     ```  
   
-9. Nell'elenco **Stringa formato** selezionare **"Percent"**.  
+9. Nell'elenco **Stringa formato** selezionare **"Percent"** .  
   
 10. Nell'elenco **Gestione NON EMPTY** selezionare la casella di controllo corrispondente a **Reseller Sales-Sales Amount**e fare clic su **OK**.  
   
 11. Fare clic su **Nuovo membro calcolato** sulla barra degli strumenti della scheda **Calcoli**.  
   
-12. Nella casella **Nome** cambiare il nome della nuova misura calcolata in **[Total GPM]**.  
+12. Nella casella **Nome** cambiare il nome della nuova misura calcolata in **[Total GPM]** .  
   
 13. Nella casella **Espressione** creare l'espressione MDX seguente:  
   
@@ -148,7 +148,7 @@ Nelle procedure descritte in questo argomento vengono definite misure calcolate 
   
     Si noti che il membro calcolato fa riferimento ad altri membri calcolati. Poiché tale membro verrà calcolato dopo i membri calcolati a cui fa riferimento, si tratta di un membro calcolato valido.  
   
-14. Nell'elenco **Stringa formato** selezionare **"Percent"**.  
+14. Nell'elenco **Stringa formato** selezionare **"Percent"** .  
   
 15. Nell'elenco **Gestione NON EMPTY** selezionare le caselle di controllo corrispondenti a **Internet Sales-Sales Amount** e **Reseller Sales-Sales Amount**e fare clic su **OK**.  
   
@@ -172,7 +172,7 @@ Nelle procedure descritte in questo argomento vengono definite misure calcolate 
   
     Facendo clic sull'ultimo membro calcolato nel riquadro **Libreria script** prima di selezionare **Nuovo membro calcolato** si garantisce che il nuovo membro calcolato venga immesso alla fine dello script. L'esecuzione degli script seguirà l'ordine visualizzato nel riquadro **Libreria script** .  
   
-3.  Cambiare il nome del nuovo membro calcolato in **[Internet Sales Ratio to All Products]**.  
+3.  Cambiare il nome del nuovo membro calcolato in **[Internet Sales Ratio to All Products]** .  
   
 4.  Digitare l'espressione seguente nella casella **Espressione** :  
   
@@ -189,13 +189,13 @@ Nelle procedure descritte in questo argomento vengono definite misure calcolate 
   
     Questa espressione MDX calcola il contributo di ogni prodotto alle vendite Internet totali. L'istruzione Case combinata alla funzione IS EMPTY evita la generazione di un errore di divisione per zero quando le vendite di un prodotto corrispondono a zero.  
   
-5.  Nell'elenco **Stringa formato** selezionare **"Percent"**.  
+5.  Nell'elenco **Stringa formato** selezionare **"Percent"** .  
   
 6.  Nell'elenco **Gestione NON EMPTY** selezionare la casella di controllo corrispondente a **Internet Sales-Sales Amount**e fare clic su **OK**.  
   
 7.  Fare clic su **Nuovo membro calcolato** sulla barra degli strumenti della scheda **Calcoli**.  
   
-8.  Cambiare il nome del nuovo membro calcolato in **[Reseller Sales Ratio to All Products]**.  
+8.  Cambiare il nome del nuovo membro calcolato in **[Reseller Sales Ratio to All Products]** .  
   
 9. Digitare l'espressione seguente nella casella **Espressione** :  
   
@@ -210,13 +210,13 @@ Nelle procedure descritte in questo argomento vengono definite misure calcolate 
         End  
     ```  
   
-10. Nell'elenco **Stringa formato** selezionare **"Percent"**.  
+10. Nell'elenco **Stringa formato** selezionare **"Percent"** .  
   
 11. Nell'elenco **Gestione NON EMPTY** selezionare la casella di controllo corrispondente a **Reseller Sales-Sales Amount**e fare clic su **OK**.  
   
 12. Fare clic su **Nuovo membro calcolato** sulla barra degli strumenti della scheda **Calcoli**.  
   
-13. Cambiare il nome del nuovo membro calcolato in **[Total Sales Ratio to All Products]**.  
+13. Cambiare il nome del nuovo membro calcolato in **[Total Sales Ratio to All Products]** .  
   
 14. Digitare l'espressione seguente nella casella **Espressione** :  
   
@@ -231,7 +231,7 @@ Nelle procedure descritte in questo argomento vengono definite misure calcolate 
         End  
     ```  
   
-15. Nell'elenco **Stringa formato** selezionare **"Percent"**.  
+15. Nell'elenco **Stringa formato** selezionare **"Percent"** .  
   
 16. Nell'elenco **Gestione NON EMPTY** selezionare le caselle di controllo corrispondenti a **Internet Sales-Sales Amount** e **Reseller Sales-Sales Amount**e fare clic su **OK**.  
   
