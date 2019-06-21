@@ -14,11 +14,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2ab9b5d763fba9d33af7ccfb9229e223522a919f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615219"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62446758"
 ---
 # <a name="spcacheremove-event-class"></a>SP:CacheRemove - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47615219"
 |DatabaseName|**nvarchar**|Nome del database nel quale viene eseguita la stored procedure.|35|Sì|  
 |EventClass|**int**|Tipo di evento = 36.|27|no|  
 |EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
-|EventSubClass|**int**|Tipo di sottoclasse di evento.<br /><br /> 1=Compplan Remove: un piano di query compilato è stato rimosso dalla cache.<br /><br /> 2=Proc Cache Flush: tutte le voci sono state rimosse dalla cache delle procedure.|21|Sì|  
+|EventSubClass|**int**|Tipo di sottoclasse di evento.<br /><br /> 1=Compplan Remove: Un piano di query compilato è stato rimosso dalla cache.<br /><br /> 2=Proc Cache Flush: Tutte le voci sono state rimosse dalla cache delle procedure.|21|Sì|  
 |GroupID|**int**|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
 |HostName|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |IsSystem|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Sì|  

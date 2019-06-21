@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fdbaeb17e6ce722c0b14fcd9eac99982c5bf8684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803659"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046636"
 ---
 # <a name="mssqlserver2512"></a>MSSQLSERVER_2512
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47803659"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC_DUPLICATE_KEYS|  
-|Testo del messaggio|Errore di tabella: ID di oggetto ID_O, ID di indice ID_I, ID di partizione ID_PN, ID di unità di allocazione ID_A (tipo TIPO). Chiavi duplicate alla pagina ID1_P, slot SLOT1, e alla pagina ID2_P, slot SLOT2.|  
+|Testo del messaggio|Errore di tabella: ID di oggetto O_ID, ID di indice I_ID, ID di partizione PN_ID, ID di unità di allocazione A_ID (tipo TYPE). Chiavi duplicate alla pagina ID1_P, slot SLOT1, e alla pagina ID2_P, slot SLOT2.|  
   
 ## <a name="explanation"></a>Spiegazione  
 I due slot specificati hanno chiavi identiche, inclusi gli **uniqueifiers**.  

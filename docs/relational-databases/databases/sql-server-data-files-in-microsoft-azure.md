@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5dc7979ea9778ad6f580bb4c7c4af517dc3d515f
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579507"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62706742"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>File di dati di SQL Server in Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "57579507"
   
 -   **Vantaggi a livello di disponibilità elevata e ripristino di emergenza:** l'uso di file di dati di SQL Server in Microsoft Azure potrebbe semplificare le soluzioni di disponibilità elevata e ripristino di emergenza. Se ad esempio una macchina virtuale in Microsoft Azure o un'istanza di SQL Server si arresta in modo anomalo, è possibile ricreare i database in una nuova istanza di SQL Server semplicemente ristabilendo i collegamenti agli oggetti BLOB di Microsoft Azure.  
   
--   **Vantaggi a livello di sicurezza:** : con questa nuova funzionalità avanzata è possibile separare un'istanza di calcolo da un'istanza di archiviazione. È possibile disporre di un database completamente crittografato da decrittografare solo in un'istanza di calcolo e non in un'istanza di archiviazione. In altri termini, usando questa nuova funzionalità avanzata è possibile crittografare tutti i dati in un cloud pubblico tramite i certificati TDE (Transparent Data Encryption) che sono separati fisicamente dai dati. Le chiavi TDE possono essere archiviate nel database master, che viene archiviato in locale nel computer fisicamente protetto in locale e di cui viene eseguito un backup in locale. È possibile usare queste chiavi locali per crittografare i dati che risiedono nel servizio di archiviazione di Microsoft Azure. Se le credenziali dell'account di archiviazione del cloud vengono rubate, i dati rimangono protetti perché i certificati TDE risiedono sempre in locale.  
+-   **Vantaggi a livello di sicurezza:** con questo nuovo miglioramento è possibile separare un'istanza di calcolo da un'istanza di archiviazione. È possibile disporre di un database completamente crittografato da decrittografare solo in un'istanza di calcolo e non in un'istanza di archiviazione. In altri termini, usando questa nuova funzionalità avanzata è possibile crittografare tutti i dati in un cloud pubblico tramite i certificati TDE (Transparent Data Encryption) che sono separati fisicamente dai dati. Le chiavi TDE possono essere archiviate nel database master, che viene archiviato in locale nel computer fisicamente protetto in locale e di cui viene eseguito un backup in locale. È possibile usare queste chiavi locali per crittografare i dati che risiedono nel servizio di archiviazione di Microsoft Azure. Se le credenziali dell'account di archiviazione del cloud vengono rubate, i dati rimangono protetti perché i certificati TDE risiedono sempre in locale.  
   
 -   **Backup di snapshot:**  questa funzionalità consente di usare gli snapshot di Azure per backup quasi istantanei e ripristini più veloci dei file di database archiviati con il servizio di archiviazione BLOB di Azure. Questa funzionalità consente di semplificare i criteri di backup e ripristino. Per altre informazioni, vedere [Backup di snapshot di file per i file di database in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
@@ -102,7 +102,7 @@ ON
   
 -   Nella versione corrente di questa funzionalità, l'archiviazione dei dati **FileStream** in Archiviazione di Azure non è supportata. È possibile archiviare dati **FileStream** in un database contenente anche file di dati archiviati in Archiviazione di Azure, ma tutti i file di dati FileStream devono essere archiviati in un archivio locale.  Poiché i dati FileStream devono risiedere in un archivio locale, non possono essere spostati tra computer usando Archiviazione di Azure. È quindi consigliabile continuare a usare le [tecniche tradizionali](../../relational-databases/blob/move-a-filestream-enabled-database.md) per spostare i dati associati a FileStream tra computer diversi.  
   
--   Attualmente, questa nuova funzionalità avanzata non supporta più istanze di SQL Server che accedono contemporaneamente agli stessi file di database in Archiviazione di Azure. Se ServerA è online con un file di database attivo e se ServerB viene avviato per errore e include anch'esso un database che punta allo stesso file di dati, il secondo server non riuscirà ad avviare il database generando il codice errore **5120 Impossibile aprire il file fisico "%.\*ls". Errore del sistema operativo %d: "%ls"**.  
+-   Attualmente, questa nuova funzionalità avanzata non supporta più istanze di SQL Server che accedono contemporaneamente agli stessi file di database in Archiviazione di Azure. Se ServerA è online con un file di database attivo e se ServerB viene avviato per errore e include anch'esso un database che punta allo stesso file di dati, il secondo server non riuscirà ad avviare il database generando il codice errore **5120 Impossibile aprire il file fisico "%.\*ls". Errore del sistema operativo %d: "%ls"** .  
   
 -   Solo i file con estensione mdf, ldf e ndf possono essere archiviati in Archiviazione di Azure con la funzionalità relativa ai file di dati di SQL Server in Azure.  
   
@@ -147,13 +147,13 @@ ON
   
  **Errori di autenticazione**  
   
--   *Impossibile eliminare le credenziali '%.\*ls' perché usate da un file di database attivo.*   
+-   *Impossibile eliminare le credenziali '%.\*ls' perché usate da un file di database attivo.*    
     Soluzione: questo errore può essere visualizzato quando si tenta di eliminare credenziali ancora usate da un file di database attivo in Archiviazione di Azure. Per eliminare le credenziali, è innanzitutto necessario eliminare l'oggetto BLOB associato a questo file di database. Per eliminare un BLOB con un lease attivo è innanzitutto necessario interrompere il lease.  
   
--   *La firma di accesso condiviso non è stata creata correttamente nel contenitore.*   
+-   *La firma di accesso condiviso non è stata creata correttamente nel contenitore.*    
      Soluzione: assicurarsi di avere creato correttamente una firma di accesso condiviso nel contenitore. Esaminare le istruzioni riportate nella lezione 2 di [Esercitazione: Uso del servizio di archiviazione BLOB di Microsoft Azure con i database di SQL Server 2016](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md).  
   
--   *Le credenziali di SQL Server non sono state create correttamente.*   
+-   *Le credenziali di SQL Server non sono state create correttamente.*    
     Soluzione: verificare di aver usato "Shared Access Signature" per il campo **Identity** e di aver creato correttamente un segreto. Esaminare le istruzioni riportate nella lezione 3 di [Esercitazione: Uso del servizio di archiviazione BLOB di Microsoft Azure con i database di SQL Server 2016](../lesson-3-database-backup-to-url.md).  
   
  **Errori di lease di oggetti BLOB:**  
@@ -168,8 +168,8 @@ ON
 2.  *Errori durante l'esecuzione dell'istruzione Alter*   
     Soluzione: accertarsi di eseguire l'istruzione Alter Database quando il database è online. Quando si copiano i file di dati in Archiviazione di Azure, creare sempre un BLOB di pagine e non un BLOB in blocchi. In caso contrario, l'istruzione ALTER Database avrà esito negativo. Esaminare le istruzioni riportate nella lezione 7 di [Esercitazione: Uso del servizio di archiviazione BLOB di Microsoft Azure con i database di SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
-3.  *Codice errore 5120 Impossibile aprire il file fisico "%.\*ls". Errore del sistema operativo %d: "%ls"*   
-    Soluzione: attualmente, questo nuovo miglioramento non supporta l'accesso simultaneo di più istanze di SQL Server agli stessi file di database in Archiviazione di Azure. Se ServerA è online con un file di database attivo e se ServerB viene avviato per errore e include anch'esso un database che punta allo stesso file di dati, il secondo server non riuscirà ad avviare il database generando il codice errore *5120 Impossibile aprire il file fisico "%.\*ls". Errore del sistema operativo %d: "%ls"*.  
+3.  *Codice errore 5120 Impossibile aprire il file fisico "%.\*ls". Errore del sistema operativo %d: "%ls"*    
+    Soluzione: attualmente, questo nuovo miglioramento non supporta l'accesso simultaneo di più istanze di SQL Server agli stessi file di database in Archiviazione di Azure. Se ServerA è online con un file di database attivo e se ServerB viene avviato per errore e include anch'esso un database che punta allo stesso file di dati, il secondo server non riuscirà ad avviare il database generando il codice errore *5120 Impossibile aprire il file fisico "%.\*ls". Errore del sistema operativo %d: "%ls"* .  
   
      Per risolvere questo problema, determinare innanzitutto se è necessario che ServerA acceda al file di database in Archiviazione di Azure. Se non è necessario, rimuovere qualsiasi connessione tra ServerA e i file di database in Archiviazione di Azure. A tale scopo, eseguire le operazioni seguenti:  
   

@@ -16,11 +16,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ac96a7ea691a02c61aa132ea0efcdf5bc2d68ab1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513753"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62707129"
 ---
 # <a name="control-transaction-durability"></a>Controllo della durabilità delle transazioni
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,13 +64,13 @@ ms.locfileid: "52513753"
     
  Alcuni dei casi in cui è possibile trarre vantaggio dall'utilizzo delle transazioni con durabilità ritardata sono:    
     
- **Possibilità di tollerare un'eventuale perdita di dati.**    
+ **Possibilità di tollerare un'eventuale perdita di dati.**     
  Se è possibile tollerare un'eventuale perdita di dati, ad esempio la perdita di singoli record non cruciali, purché si disponga della maggior parte dei dati, potrebbe essere opportuno considerare la durabilità ritardata. Se non è possibile tollerare un'eventuale perdita di dati, non utilizzare le transazioni con durabilità ritardata.    
     
- **Collo di bottiglia nella scrittura del log delle transazioni.**    
+ **Collo di bottiglia nella scrittura del log delle transazioni.**     
  Se i problemi di prestazioni sono dovuti alla latenza nella scrittura del log delle transazioni, l'applicazione probabilmente trarrà vantaggio dall'utilizzo delle transazioni con durabilità ritardata.    
     
- **Carichi di lavoro con una frequenza elevata di contesa.**    
+ **Carichi di lavoro con una frequenza elevata di contesa.**     
  Se nel sistema sono presenti carichi di lavoro con un livello elevato di contesa, si perde molto tempo nell'attesa del rilascio dei blocchi. Le transazioni con durabilità ritardata riducono il tempo di commit rilasciando i blocchi più velocemente con una velocità effettiva più elevata.    
     
  ### <a name="delayed-transaction-durability-guarantees"></a>Garanzie delle transazioni con durabilità ritardata   
@@ -135,7 +135,7 @@ AS BEGIN ATOMIC WITH
 END    
 ```    
     
-### <a name="table-1-durability-in-atomic-blocks"></a>Tabella 1: durabilità nei blocchi atomici    
+### <a name="table-1-durability-in-atomic-blocks"></a>Tabella 1: durabilità nei blocchi ATOMIC    
     
 |Opzione di durabilità nei blocchi atomici|Nessuna transazione esistente|Transazione in corso (completamente durevole o con durabilità ritardata)|    
 |------------------------------------|-----------------------------|---------------------------------------------------------|    
@@ -204,7 +204,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 ### <a name="catastrophic-events"></a>Eventi irreversibili    
  Nel caso di un evento irreversibile, come ad esempio un arresto anomalo del server, si verificherà una perdita di dati per tutte le transazioni di cui è stato eseguito il commit che non sono state salvate su disco. Le transazioni con durabilità ritardata vengono salvate su disco ogni volta che in una tabella del database (durevole ottimizzata per la memoria o basata su disco) viene eseguita una transazione completamente durevole o viene chiamato `sp_flush_log`. Se si usano le transazioni con durabilità ritardata, è possibile creare una tabella di piccole dimensioni nel database da aggiornare periodicamente oppure è possibile chiamare periodicamente `sp_flush_log` per salvare tutte le transazioni in sospeso di cui è stato eseguito il commit. Inoltre, il log delle transazioni viene scaricato ogni volta che diventa pieno, condizione che però è difficile da prevedere e impossibile da controllare.    
     
-### <a name="includessnoversionincludesssnoversion-mdmd-shutdown-and-restart"></a>Arresto e riavvio di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]     
+### <a name="includessnoversionincludesssnoversion-mdmd-shutdown-and-restart"></a>Arresto e riavvio di[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]    
  Per la durabilità ritardata non esiste alcuna differenza tra un arresto imprevisto e un arresto/riavvio previsto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Analogamente agli eventi irreversibili, occorre prevedere la possibilità di una perdita di dati. In un arresto/riavvio pianificato alcune transazioni che non sono state scritte su dico possono essere prima salvate su disco ma non è una condizione che è possibile pianificare. Considerare un arresto/riavvio, indipendentemente che sia pianificato o meno, allo stesso modo di un evento irreversibile in cui può verificarsi una perdita di dati.    
     
 ## <a name="see-also"></a>Vedere anche    

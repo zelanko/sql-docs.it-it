@@ -15,15 +15,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c0304976a3ce161d72075f13c51e657695d9af3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852599"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661145"
 ---
 # <a name="automatically-generate-join-filters-between-merge-articles"></a>Generare automaticamente filtri di join tra articoli di merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Generare automaticamente un set di filtri di join nella pagina **Filtro righe tabella** della Creazione guidata nuova pubblicazione o nella pagina **Filtra righe** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](../../../relational-databases/replication/publish/create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+  Generare automaticamente un set di filtri di join nella pagina **Filtro righe tabella** della Creazione guidata nuova pubblicazione o nella pagina **Filtra righe** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](../../../relational-databases/replication/publish/create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 > [!NOTE]  
 >  Se si genera automaticamente un set di filtri di join nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** in seguito all'inizializzazione delle sottoscrizioni della pubblicazione, sarà necessario generare un nuovo snapshot e reinizializzare tutte le sottoscrizioni dopo aver apportato le modifiche. Per altre informazioni sui requisiti per la modifica delle proprietà, vedere [Modificare le proprietà di pubblicazioni e articoli](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
@@ -59,7 +59,7 @@ ms.locfileid: "47852599"
   
     3.  Specificare le opzioni di filtro.  
   
-         Selezionare l'opzione corrispondente alla modalità di condivisione dei dati tra i Sottoscrittori, ovvero **Una riga di questa tabella verrà inviata a più sottoscrizioni** o **Una riga di questa tabella verrà inviata a una sola sottoscrizione**. Selezionando **Una riga di questa tabella verrà inviata a una sola sottoscrizione**è possibile ottimizzare le prestazioni della replica di tipo merge archiviando ed elaborando una minore quantità di metadati. È tuttavia necessario garantire che i dati vengano partizionati in modo da non consentire la replica di una riga in più Sottoscrittori. Per altre informazioni, vedere la sezione relativa all'impostazione delle opzioni delle partizioni nell'argomento [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+         Selezionare l'opzione corrispondente alla modalità desiderata di condivisione dei dati tra i Sottoscrittori: **Una riga di questa tabella verrà inviata a più sottoscrizioni** o **Una riga di questa tabella verrà inviata a una sola sottoscrizione**. Selezionando **Una riga di questa tabella verrà inviata a una sola sottoscrizione**è possibile ottimizzare le prestazioni della replica di tipo merge archiviando ed elaborando una minore quantità di metadati. È tuttavia necessario garantire che i dati vengano partizionati in modo da non consentire la replica di una riga in più Sottoscrittori. Per altre informazioni, vedere la sezione relativa all'impostazione delle opzioni delle partizioni nell'argomento [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

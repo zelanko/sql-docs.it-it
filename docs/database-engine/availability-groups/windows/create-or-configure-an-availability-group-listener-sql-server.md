@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: fae8d782dfcc4fd5e3c653cf5ac37f1323ebf59e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b5e4ba32dd96186a05df55ac57cadb31fa522ebe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213590"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62510330"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Configurare un listener per un gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,51 +30,9 @@ ms.locfileid: "53213590"
 > [!IMPORTANT]  
 >  Per creare il primo listener di un gruppo di disponibilità, è consigliabile usare [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Evitare di creare un listener direttamente nel cluster WSFC se non necessario, ad esempio per creare un listener aggiuntivo.  
   
--   **Prima di iniziare:**  
-  
-     [Esiste già un listener per questo gruppo di disponibilità?](#DoesListenerExist)  
-  
-     [Limitazioni e restrizioni](#Restrictions)  
-  
-     [Indicazioni](#Recommendations)  
-  
-     [Prerequisiti](#Prerequisites)  
-  
-     [Requisiti per il nome DNS di un listener del gruppo di disponibilità](#DNSnameReqs)  
-  
-     [Autorizzazioni di Windows](#WinPermissions)  
-  
-     [Autorizzazioni di SQL Server](#SqlPermissions)  
-  
--   **Per creare o configurare un listener del gruppo di disponibilità tramite:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Risoluzione dei problemi**  
-  
-     [Impossibile creare un listener del gruppo di disponibilità a causa di quote di Active Directory](#ADQuotas)  
-  
--   **Completamento: Dopo la creazione di un listener del gruppo di disponibilità**  
-  
-     [Parola chiave MultiSubnetFailover e funzionalità associate](#MultiSubnetFailover)  
-  
-     [Impostazione RegisterAllProvidersIP](#RegisterAllProvidersIP)  
-  
-     [Impostazione HostRecordTTL](#HostRecordTTL)  
-  
-     [Script PowerShell di esempio per disabilitare RegisterAllProvidersIP e ridurre TTL](#SampleScript)  
-  
-     [Indicazioni sul completamento](#FollowUpRecommendations)  
-  
-     [Creare un listener aggiuntivo per un gruppo di disponibilità (facoltativo)](#CreateAdditionalListener)  
-  
-##  <a name="BeforeYouBegin"></a> Prima di iniziare  
-  
-###  <a name="DoesListenerExist"></a> Esiste già un listener per questo gruppo di disponibilità?  
+ 
+##  <a name="DoesListenerExist"></a> Esiste già un listener per questo gruppo di disponibilità?  
+
  **Per determinare se un listener già esiste per il gruppo di disponibilità**  
   
 -   [Visualizzare le proprietà del listener del gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
@@ -82,14 +40,14 @@ ms.locfileid: "53213590"
 > [!NOTE]  
 >  Se è già presente un listener e si vuole creare un listener aggiuntivo, vedere [Per creare un listener aggiuntivo per un gruppo di disponibilità (facoltativo)](#CreateAdditionalListener), più avanti in questo argomento.  
   
-###  <a name="Restrictions"></a> Limitazioni e restrizioni  
+##  <a name="Restrictions"></a> Limitazioni e restrizioni  
   
 -   È possibile creare un solo listener per gruppo di disponibilità tramite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ogni gruppo di disponibilità richiede in genere un solo listener. Tuttavia, alcuni scenari del cliente richiedono più listener per un gruppo di disponibilità.   Dopo avere creato un listener tramite SQL Server, è possibile utilizzare Windows PowerShell per i cluster di failover o Gestione cluster di failover WSFC per creare listener aggiuntivi. Per altre informazioni, vedere [Per creare un listener aggiuntivo per un gruppo di disponibilità (facoltativo)](#CreateAdditionalListener), più avanti in questo argomento.  
   
-###  <a name="Recommendations"></a> Indicazioni  
+##  <a name="Recommendations"></a> Indicazioni  
  L'utilizzo di un indirizzo IP statico è consigliato, sebbene non obbligatorio, per più configurazioni di subnet.  
   
-###  <a name="Prerequisites"></a> Prerequisiti  
+##  <a name="Prerequisites"></a> Prerequisiti  
   
 -   È necessario essere connessi all'istanza del server che ospita la replica primaria.  
   
@@ -106,9 +64,9 @@ ms.locfileid: "53213590"
 > [!IMPORTANT]  
 >  NetBIOS riconosce solo i primi 15 caratteri di dns_name. Se si dispone di due cluster WSFC controllati dallo stesso dominio Active Directory e si tenta di creare listener del gruppo di disponibilità in entrambi i cluster usando nomi con più di 15 caratteri e un prefisso a 15 caratteri identico, verrà restituito un errore in cui si segnala che non è possibile portare online la risorsa del nome di rete virtuale. Per informazioni sulle regole di denominazione dei prefissi per i nomi DNS, vedere [Assegnare nomi ai domini](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
   
-###  <a name="WinPermissions"></a> Autorizzazioni di Windows  
+##  <a name="WinPermissions"></a> Autorizzazioni di Windows  
   
-|Permissions|Collegamento|  
+|Autorizzazioni|Collegamento|  
 |-----------------|----------|  
 |Il nome dell'oggetto cluster WSFC che ospita il gruppo di disponibilità deve avere l'autorizzazione per la **creazione degli oggetti computer** .<br /><br /> Per impostazione predefinita, in Active Directory un nome di oggetto cluster non ha l'autorizzazione per la **creazione degli oggetti computer** assegnata in modo esplicito e può creare 10 oggetti computer virtuali. Dopo aver creato 10 oggetti computer virtuali, la creazione di ulteriori oggetti di questo tipo avrà esito negativo. È possibile evitare questo problema concedendo in modo esplicito l'autorizzazione al nome dell'oggetto cluster WSFC. Si noti che gli oggetti computer virtuali per i gruppi di disponibilità eliminati non vengono rimossi automaticamente da Active Directory e continuano a essere conteggiati ai fini del limite predefinito di 10 oggetti a meno che non vengano eliminati manualmente.<br /><br /> Nota: in alcune organizzazioni i criteri di sicurezza non permettono di concedere l'autorizzazione per la **creazione di oggetti computer** a singoli account utente.|*Passaggi per la configurazione dell'account per chi installa il cluster* nella [Guida dettagliata al cluster di failover: Configurazione di account in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *Passaggi per la configurazione pre-installazione dell'account del nome cluster* nella [Guida dettagliata al cluster di failover: Configurazione di account in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
 |Se l'organizzazione richiede la configurazione pre-installazione dell'account del computer per un nome di rete virtuale del listener, sarà necessaria l'appartenenza al gruppo **Account Operator** o l'assistenza dell'amministratore di dominio.|*Passaggi per la configurazione pre-installazione di un account per un servizio o un'applicazione cluster* nella [Guida dettagliata al cluster di failover: Configurazione di account in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2).|  
@@ -116,9 +74,9 @@ ms.locfileid: "53213590"
 > [!TIP]  
 >  In genere, è più semplice non effettuare la configurazione pre-installazione dell'account del computer per un nome di rete virtuale del listener. Se è possibile, procedere con la creazione e la configurazione automatica dell'account durante l'esecuzione della procedura guidata Disponibilità elevata WSFC.  
   
-###  <a name="SqlPermissions"></a> Autorizzazioni di SQL Server  
+##  <a name="SqlPermissions"></a> Autorizzazioni di SQL Server  
   
-|Attività|Permissions|  
+|Attività|Autorizzazioni|  
 |----------|-----------------|  
 |Per creare un listener del gruppo di disponibilità|Sono necessarie l'appartenenza al ruolo predefinito del server **sysadmin** e l'autorizzazione server CREATE AVAILABILITY GROUP oppure l'autorizzazione ALTER ANY AVAILABILITY GROUP o CONTROL SERVER.|  
 |Per modificare un listener del gruppo di disponibilità esistente|È necessaria l'autorizzazione ALTER AVAILABILITY GROUP nel gruppo di disponibilità, l'autorizzazione CONTROL AVAILABILITY GROUP, l'autorizzazione ALTER ANY AVAILABILITY GROUP o l'autorizzazione CONTROL SERVER.|  
@@ -180,7 +138,7 @@ ms.locfileid: "53213590"
  **OK**  
  Fare clic per creare il listener del gruppo di disponibilità specificato.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per creare o configurare un listener del gruppo di disponibilità**  
   
 1.  Connettersi all'istanza del server che ospita la replica primaria.  
@@ -272,7 +230,7 @@ ms.locfileid: "53213590"
   
  **Problema:** se nel gruppo di disponibilità o nell'istanza del cluster di failover è disponibile un nome di listener (noto come nome di rete o punto di accesso client in Gestione cluster WSFC) dipendente da più indirizzi IP di subnet diverse e si sta usando ADO.NET con .NET Framework 3.5SP1 o SQL Native Client 11.0 OLEDB, potenzialmente il 50% delle richieste di connessione client al listener del gruppo di disponibilità riscontrerà un timeout di connessione.  
   
- **Soluzioni alternative:** è consigliabile effettuare una delle seguenti attività.  
+ **Soluzioni alternative:** è consigliabile eseguire una delle attività seguenti.  
   
 -   Se non si dispone dell'autorizzazione per usare le risorse cluster, modificare il timeout di connessione in 30 secondi (questo valore corrisponde a un periodo di timeout TCP di 20 secondi più un buffer di 10).  
   

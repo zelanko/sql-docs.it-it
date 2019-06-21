@@ -1,5 +1,5 @@
 ---
-title: 'Classe di evento TM: Save Tran Completed | Microsoft Docs'
+title: 'TM: Classe di evento Save Tran Completed | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0c0bf789a8060082c8d20379ae089677c901602
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853020"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62706760"
 ---
 # <a name="tm-save-tran-completed-event-class"></a>TM: Save Tran Completed - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  La classe di evento TM: Save Tran Completed indica il completamento di una richiesta SAVE TRANSACTION. La richiesta è stata inviata dal client tramite l'interfaccia di gestione delle transazioni.  
+  TM: La classe di evento Save Tran Completed indica il completamento di una richiesta SAVE TRANSACTION. La richiesta è stata inviata dal client tramite l'interfaccia di gestione delle transazioni.  
   
-## <a name="tm-save-tran-completed-event-class-data-columns"></a>Colonne di dati della classe di evento TM: Save Tran Completed  
+## <a name="tm-save-tran-completed-event-class-data-columns"></a>TM: Colonne di dati della classe di evento Save Tran Completed  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  

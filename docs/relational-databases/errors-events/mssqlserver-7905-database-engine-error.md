@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 031ce30ab9eb677c5b9e846d5e7aec76f2a60248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641649"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62694684"
 ---
 # <a name="mssqlserver7905"></a>MSSQLSERVER_7905
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47641649"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC2_FS_INVALID_ROWSET_DIRECTORY|  
-|Testo del messaggio|Errore di database: la directory 'DIRECTORY' non è una directory FileStream valida.|  
+|Testo del messaggio|Errore di database: la directory 'DIRECTORY' non è una directory FILESTREAM valida.|  
   
 ## <a name="explanation"></a>Spiegazione  
 Il nome di una directory di set di righe è l'ID di partizione della partizione, ad eccezione dei nomi di directory di set di righe speciali, ad esempio 'ghost'. Se non è possibile convertire tale nome in un ID di partizione, la directory non verrà considerata una directory di set di righe valida.  

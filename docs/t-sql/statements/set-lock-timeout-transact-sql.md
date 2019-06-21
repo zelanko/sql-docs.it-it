@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: df2683d7a0c580624dd56aa8d35e183ab7ac6bbf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630149"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62942803"
 ---
 # <a name="set-locktimeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,12 +61,12 @@ SET LOCK_TIMEOUT timeout_period
   
  Le istruzioni CREATE DATABASE, ALTER DATABASE e DROP DATABASE non rispettano l'impostazione di SET LOCK_TIMEOUT.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>A. Impostare il timeout di blocco su 1800 millisecondi.  
+### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>A: Impostare il timeout blocco su 1800 millisecondi  
  Nell'esempio seguente il timeout per l'attesa del blocco viene impostato su `1800` millisecondi.  
   
 ```sql  

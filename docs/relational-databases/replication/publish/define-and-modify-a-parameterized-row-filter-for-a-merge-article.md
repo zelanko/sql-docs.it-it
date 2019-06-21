@@ -20,17 +20,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a768ac49603a05a9d1878bd3e64564a040d8e4a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817727"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62507755"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>Definizione e modifica di un filtro di riga con parametri per un articolo di merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In questo argomento viene descritto come definire e modificare un filtro di riga con parametri in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- Quando si creano articoli di tabella, è possibile usare filtri di riga con parametri. Questi filtri usano una clausola [WHERE](../../../t-sql/queries/where-transact-sql.md) per selezionare i dati adatti da pubblicare. Anziché specificare un valore letterale nella clausola, come avviene con il filtro di riga statico, si specificano una o entrambe le funzioni di sistema seguenti: [SUSER_SNAME](../../../t-sql/functions/suser-sname-transact-sql.md) e [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md). Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Quando si creano articoli di tabella, è possibile usare filtri di riga con parametri. Questi filtri usano una clausola [WHERE](../../../t-sql/queries/where-transact-sql.md) per selezionare i dati adatti da pubblicare. Anziché specificare un valore letterale nella clausola, come avviene con il filtro di riga statico, specificare una o entrambe le funzioni di sistema seguenti: [SUSER_SNAME](../../../t-sql/functions/suser-sname-transact-sql.md) e [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md). Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Contenuto dell'argomento**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "47817727"
 -   Per motivi relativi alle prestazioni è consigliabile evitare di applicare funzioni ai nomi di colonna nelle clausole per filtri di riga con parametri, come `LEFT([MyColumn]) = SUSER_SNAME()`. Se si usano HOST_NAME in una clausola di filtro e si sostituisce il valore HOST_NAME, può essere necessario convertire i tipi di dati tramite l'istruzione CONVERT. Per altre informazioni sulle procedure consigliate in questo caso, vedere la sezione relativa alla sostituzione del valore HOST_NAME() nell'argomento [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
- Definire, modificare ed eliminare filtri di riga con parametri nella pagina **Filtro righe tabella** della Creazione guidata nuova pubblicazione oppure nella pagina **Filtra righe** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](../../../relational-databases/replication/publish/create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Definire, modificare ed eliminare filtri di riga con parametri nella pagina **Filtro righe tabella** della Creazione guidata nuova pubblicazione oppure nella pagina **Filtra righe** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](../../../relational-databases/replication/publish/create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-parameterized-row-filter"></a>Per definire un filtro di riga con parametri  
   
@@ -108,7 +108,7 @@ ms.locfileid: "47817727"
   
 #### <a name="to-define-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>Per definire un filtro di riga con parametri per un articolo in una pubblicazione di tipo merge  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specificare **@publication**, un nome di articolo per **@article**, la tabella da pubblicare per **@source_object**, la clausola WHERE che definisce il filtro con parametri per **@subset_filterclause** (escluso `WHERE`) e uno dei valori seguenti per **@partition_options**, che descrive il tipo di partizionamento risultante dall'applicazione del filtro di riga con parametri:  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specificare **@publication** , un nome di articolo per **@article** , la tabella da pubblicare per **@source_object** , la clausola WHERE che definisce il filtro con parametri per **@subset_filterclause** (escluso `WHERE`) e uno dei valori seguenti per **@partition_options** , che descrive il tipo di partizionamento risultante dall'applicazione del filtro di riga con parametri:  
   
     -   **0** : il filtro dell'articolo è statico oppure non restituisce un subset univoco di dati per ogni partizione, ovvero si tratta di una partizione "sovrapposta".  
   
@@ -120,9 +120,9 @@ ms.locfileid: "47817727"
   
 #### <a name="to-change-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>Per modificare un filtro di riga con parametri per un articolo in una pubblicazione di tipo merge  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specificare **@publication**, **@article**, il valore **subset_filterclause** per **@property**, l'espressione che definisce il filtro con parametri per **@value** (escluso `WHERE`) e il valore **1** sia per **@force_invalidate_snapshot** e **@force_reinit_subscription**.  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Specificare **@publication** , **@article** , il valore **subset_filterclause** per **@property** , l'espressione che definisce il filtro con parametri per **@value** (escluso `WHERE`) e il valore **1** sia per **@force_invalidate_snapshot** e **@force_reinit_subscription** .  
   
-2.  Se questa modifica implica un diverso comportamento del partizionamento, eseguire nuovamente [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) . Specificare **@publication**, **@article**, il valore **partition_options** per **@property**e l'opzione di partizionamento più appropriata tra quelle elencate di seguito per **@value**:  
+2.  Se questa modifica implica un diverso comportamento del partizionamento, eseguire nuovamente [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) . Specificare **@publication** , **@article** , il valore **partition_options** per **@property** e l'opzione di partizionamento più appropriata tra quelle elencate di seguito per **@value** :  
   
     -   **0** : il filtro dell'articolo è statico oppure non restituisce un subset univoco di dati per ogni partizione, ovvero si tratta di una partizione "sovrapposta".  
   

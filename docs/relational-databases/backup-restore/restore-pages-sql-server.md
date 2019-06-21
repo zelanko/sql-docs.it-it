@@ -21,18 +21,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8d2e5e0cad34fdd9364868e5f9c2e4a02d460dba
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242264"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62506383"
 ---
 # <a name="restore-pages-sql-server"></a>Ripristino di pagine (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   In questo argomento viene descritto come ripristinare le pagine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'obiettivo di un ripristino della pagina è ripristinare una o più pagine danneggiate senza ripristinare l'intero database. In genere, le pagine candidate al ripristino sono state contrassegnate come "sospette" a causa di un errore verificatosi all'accesso alla pagina. Le pagine sospette vengono identificate nella tabella [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) del database **msdb** .  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "54242264"
   
      [Indicazioni](#Recommendations)  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per ripristinare le pagine usando:**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "54242264"
   
     -   Log delle transazioni  
   
-    -   Pagine di allocazione: pagine mappa di allocazione globale (GAM, Global Allocation Map), pagine mappa di allocazione globale condivisa (SGAM, Shared Global Allocation Map) e pagine spazio libero nella pagina (PFS, Page Free Space).  
+    -   Pagine di allocazione: pagine GAM (Global Allocation Map), pagine SGAM ( Shared Global Allocation Map) e pagine PFS (Page Free Space).  
   
     -   Pagina 0 di tutti i file di dati (pagina di avvio del file)  
   
@@ -102,7 +102,7 @@ ms.locfileid: "54242264"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Se il database da ripristinare non esiste, per eseguire un'operazione RESTORE l'utente deve disporre delle autorizzazioni CREATE DATABASE. Se il database esiste, le autorizzazioni per l'istruzione RESTORE vengono assegnate per impostazione predefinita ai membri dei ruoli predefiniti del server **sysadmin** e **dbcreator** e al proprietario (**dbo**) del database. Per l'opzione FROM DATABASE_SNAPSHOT, il database esiste sempre.  
   
  Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. Poiché è possibile controllare l'appartenenza ai ruoli predefiniti del database solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, i membri del ruolo predefinito del database **db_owner** non dispongono delle autorizzazioni per l'istruzione RESTORE.  
@@ -166,7 +166,7 @@ ms.locfileid: "54242264"
   
 7.  Per ripristinare le pagine elencate nella griglia, fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  Per specificare una pagina in un'istruzione RESTORE DATABASE, sono necessari l'ID del file contenente la pagina e l'ID della pagina. La sintassi necessaria è la seguente:  
   
  `RESTORE DATABASE <database_name>`  

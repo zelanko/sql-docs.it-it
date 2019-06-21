@@ -28,11 +28,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0aa6dbd766f842b4c923d98702fd2780fc2652fb
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306229"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62644382"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,7 +95,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  Le espressioni di tabella comuni possono inoltre essere utilizzate con istruzioni SELECT, INSERT, UPDATE e CREATE VIEW. Per altre informazioni, vedere [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- TOP **(**_expression_**)** [ PERCENT ]  
+ TOP **(** _expression_ **)** [ PERCENT ]  
  Viene specificato il numero o la percentuale di righe casuali che verranno eliminate. Il valore di*expression* può essere specificato come numero o come percentuale di righe. Le righe a cui viene fatto riferimento nell'espressione TOP utilizzata con INSERT, UPDATE o DELETE non sono disposte in alcun ordine. Per altre informazioni, vedere [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
  FROM  
@@ -164,7 +164,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  *cursor_variable_name*  
  Nome di una variabile di cursore. La variabile di cursore deve fare riferimento a un cursore che consente operazioni di aggiornamento.  
   
- OPTION **(** \<query_hint> [ **,**... *n*] **)**  
+ OPTION **(** \<query_hint> [ **,** ... *n*] **)**  
  Parole chiave che indicano quali hint di ottimizzazione vengono utilizzati per personalizzare la modalità di elaborazione dell'istruzione nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Per altre informazioni, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="best-practices"></a>Procedure consigliate  
@@ -240,7 +240,7 @@ GO
 ###  <a name="LimitRows"></a>Limitazione delle righe eliminate  
  Negli esempi riportati in questa sezione viene illustrato come limitare il numero di righe che verranno eliminate.  
   
-#### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>b. Utilizzo della clausola WHERE per eliminare un set di righe  
+#### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. Utilizzo della clausola WHERE per eliminare un set di righe  
  Nell'esempio seguente vengono eliminate tutte le righe della tabella `ProductCostHistory` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] in cui il valore della colonna `StandardCost` è maggiore di `1000.00`.  
   
 ```sql
@@ -403,7 +403,7 @@ WHERE ShoppingCartID = 20621;
 GO  
 ```  
   
-#### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. Utilizzo di OUTPUT con <from_table_name> in un'istruzione DELETE  
+#### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. Uso di OUTPUT con <from_table_name> in un'istruzione DELETE  
  Nell'esempio seguente vengono eliminate alcune righe della tabella `ProductProductPhoto` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] in base ai criteri di ricerca definiti nella clausola `FROM` dell'istruzione `DELETE`. La clausola `OUTPUT` restituisce le colonne della tabella che si desidera eliminare, `DELETED.ProductID`, `DELETED.ProductPhotoID`e alcune colonne della tabella `Product` . Queste informazioni vengono utilizzate nella clausola `FROM` per specificare le righe da eliminare.  
   
 ```sql

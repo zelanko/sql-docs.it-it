@@ -16,11 +16,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a4f5357e9645eb5ab1e55db96ae0138144ded8b9
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617741"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639175"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>Visualizzare le dipendenze di una stored procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "52617741"
 ##  <a name="Top"></a>   
 -   **Prima di iniziare:**  [Limitazioni e restrizioni](#Restrictions), [Sicurezza](#Security)  
   
--   **Per visualizzare le dipendenze di una stored procedure usando:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Per visualizzare le dipendenze di una procedura usando:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -37,7 +37,7 @@ ms.locfileid: "52617741"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Funzione di sistema: **sys.dm_sql_referencing_entities**  
  Richiede l'autorizzazione CONTROL per l'entità a cui si fa riferimento e l'autorizzazione SELECT per sys.dm_sql_referencing_entities. Quando l'entità a cui si fa riferimento è una funzione di partizione, è necessaria l'autorizzazione CONTROL per il database. Per impostazione predefinita, l'autorizzazione SELECT è concessa al ruolo public.  
   

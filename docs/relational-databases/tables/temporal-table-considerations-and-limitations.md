@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f88363967571c2f6401be42659b5b00ec3811b07
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410088"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034982"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Considerazioni e limitazioni delle tabelle temporali
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52410088"
   
 -   Le tabelle temporali e di cronologia non possono essere **FILETABLE** e possono contenere colonne di qualsiasi tipo di dati supportato diverso da **FILESTREAM** poiché **FILETABLE** e **FILESTREAM** consentono la manipolazione dei dati all'esterno di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e quindi non può essere garantito il controllo delle versioni di sistema.  
   
--   Mentre le tabelle temporali supportano i tipi di dati BLOB, ad esempio **(n)varchar(max)**, **varbinary(max)**, **(n)text**e **image**, a causa delle loro dimensioni non si potranno evitare costi di archiviazione significativi e implicazioni sulle prestazioni. Di conseguenza, quando si progetta il sistema è importante prestare attenzione mentre si usano questi tipi di dati.  
+-   Mentre le tabelle temporali supportano i tipi di dati BLOB, ad esempio **(n)varchar(max)** , **varbinary(max)** , **(n)text**e **image**, a causa delle loro dimensioni non si potranno evitare costi di archiviazione significativi e implicazioni sulle prestazioni. Di conseguenza, quando si progetta il sistema è importante prestare attenzione mentre si usano questi tipi di dati.  
   
 -   La tabella di cronologia deve essere creata nello stesso database della tabella corrente. L'esecuzione di query temporali su **Linked Server** non è supportata.  
   
@@ -62,9 +62,9 @@ ms.locfileid: "52410088"
   
 -   L'uso di tecnologie di replica è limitato.  
   
-    -   **Always On:** completamente supportato  
+    -   **Always On:** supporto completo  
   
-    -   **Change Data Capture e Change Data Tracking:** supportati solo per la tabella corrente  
+    -   **Change Data Capture e rilevamento modifiche dati:** supportati solo nella tabella corrente  
   
     -   **Replica snapshot e transazionale**: supportata solo per un singolo server di pubblicazione senza attivazione di tabella temporale e per un sottoscrittore con attivazione di tabella temporale. In questo caso, il server di pubblicazione viene usato per un carico di lavoro OLTP, mentre il sottoscrittore viene usato per la ripartizione di report, inclusa l'esecuzione di query 'AS OF'.    
         L'uso di più sottoscrittori non è supportato poiché questo scenario potrebbe comportare dati temporali incoerenti in quanto ognuno di essi dipenderebbe dall'orologio di sistema locale.  
@@ -91,7 +91,7 @@ ms.locfileid: "52410088"
   
     -   Configurazione del partizionamento  
   
-    -   Permissions  
+    -   Autorizzazioni  
   
     -   Predicati di sicurezza a livello di riga  
   

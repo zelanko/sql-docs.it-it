@@ -15,12 +15,12 @@ ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c80985d6c69cc1f62e82ae26cbf4bc841501e9d
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: 4aa32fb8859df9fdc7c6d85cb43e93425dfa895b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590386"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67145466"
 ---
 # <a name="nodes-method-xml-data-type"></a>Metodo nodes() (tipo di dati xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,15 +78,15 @@ Una chiamata al metodo `nodes()` con l'espressione di query `/root/Location` res
 Product  
 ModelID      Instructions  
 ----------------------------------  
-1       <root>  
+1      <root><Location LocationID="10" ... />  
              <Location LocationID="20" ... />  
              <Location LocationID="30" .../></root>  
 1      <root><Location LocationID="10" ... />  
-  
+             <Location LocationID="20" ... />  
              <Location LocationID="30" .../></root>  
 1      <root><Location LocationID="10" ... />  
              <Location LocationID="20" ... />  
-             </root>  
+             <Location LocationID="30" .../></root>  
 ```  
   
 Per eseguire query su tale set di righe, è possibile usare i metodi con tipo di dati **xml**. La query seguente estrae il sottoalbero dell'elemento di contesto per ogni riga generata:  
@@ -107,7 +107,7 @@ ProductModelID  Instructions
 1        <Location LocationID="30" .../>  
 ```  
   
-Nel set di righe restituito sono state mantenute le informazioni sul tipo. È possibile applicare metodi con tipo di dati **xml**, ad esempio **query()**, **value()**, **exist()** e **nodes()** al risultato di un metodo **nodes()**. Non è tuttavia possibile applicare il metodo **modify()** per modificare l'istanza XML.  
+Nel set di righe restituito sono state mantenute le informazioni sul tipo. È possibile applicare metodi con tipo di dati **xml**, ad esempio **query()** , **value()** , **exist()** e **nodes()** al risultato di un metodo **nodes()** . Non è tuttavia possibile applicare il metodo **modify()** per modificare l'istanza XML.  
   
 Inoltre, il nodo di contesto nel set di righe non può essere materializzato, ovvero non può essere usato in un'istruzione SELECT. Può essere tuttavia utilizzato nelle istruzioni IS NULL e COUNT(*).  
   
@@ -171,7 +171,7 @@ Nel risultato dell'esempio seguente, il metodo della query restituisce l'element
 <row id="3"/>  
 ```  
   
-Se si applica la funzione di accesso padre ai nodi di contesto, viene restituito l'elemento <`Root`> di ognuna delle tre righe:  
+Se si applica la funzione di accesso padre ai nodi di contesto, viene restituito l'elemento <`Root`> per tutte le tre righe:  
   
 ```sql
 SELECT T.c.query('..') AS result  

@@ -1,5 +1,5 @@
 ---
-title: 'Classe di evento TM: Begin Tran Completed | Microsoft Docs'
+title: 'TM: Classe di evento Begin Tran Completed | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a8a198358a6c84e128340516938fb8b85c6c9f8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801229"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661303"
 ---
 # <a name="tm-begin-tran-completed-event-class"></a>TM: Begin Tran Completed - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  La classe di evento TM: Begin Tran Completed indica che è stata completata una richiesta BEGIN TRANSACTION. La richiesta è stata inviata dal client tramite l'interfaccia di gestione delle transazioni.  
+  TM: La classe di evento Begin Tran Completed indica che è stata completata una richiesta BEGIN TRANSACTION. La richiesta è stata inviata dal client tramite l'interfaccia di gestione delle transazioni.  
   
-## <a name="tm-begin-tran-completed-event-class-data-columns"></a>Colonne di dati della classe di evento TM: Begin Tran Completed  
+## <a name="tm-begin-tran-completed-event-class-data-columns"></a>TM: Colonne di dati della classe di evento Begin Tran Completed  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  

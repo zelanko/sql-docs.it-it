@@ -14,11 +14,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 92333f9d9e15482c379afe241aaf627f1a66bec9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640019"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62446642"
 ---
 # <a name="spcachehit-event-class"></a>SP:CacheHit - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47640019"
 |DatabaseName|**nvarchar**|Nome del database nel quale viene eseguita la stored procedure.|35|Sì|  
 |EventClass|**int**|Tipo di evento = 38.|27|no|  
 |EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
-|EventSubClass|**int**|1=Accesso al contesto di esecuzione: Piano di esecuzione non compilato trovato nella cache dei piani.<br /><br /> 2 = Accesso piano compilato: Piano compilato trovato nella cache dei piani.|21|Sì|  
+|EventSubClass|**int**|1 = Accesso contesto di esecuzione: Piano di esecuzione non compilato trovato nella cache dei piani.<br /><br /> 2 = Accesso piano di compilazione: Piano compilato trovato nella cache dei piani.|21|Sì|  
 |GroupID|**int**|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
 |HostName|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |IsSystem|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente. 1 = sistema, 0 = utente.|60|Sì|  

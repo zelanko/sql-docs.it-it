@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 45cde8d0e42c2e85238bf3d42fc8835584083d27
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: a64e02ecdb3f8a8321e0a625a3788228df0890fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510978"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64775193"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Usare la procedura guidata Tabella esterna con origini dati relazionali
 
@@ -23,7 +23,7 @@ Uno degli scenari chiave per SQL Server 2019 CTP 2.0 è la possibilità di virtu
 
 ## <a name="start-the-external-table-wizard"></a>Avviare la procedura guidata Tabella esterna
 
-Connettersi all'istanza master usando l'indirizzo IP/numero di porta (31433) ottenuti alla fine dello script di distribuzione. Espandere il nodo **Database** in Esplora oggetti. Selezionare quindi uno dei database di cui si vogliono virtualizzare i dati da un'istanza di SQL Server esistente. Fare clic con il pulsante destro del mouse sul database e selezionare **Create External Table** (Crea tabella esterna) per avviare la procedura guidata Virtualize Data (Virtualizza dati). È anche possibile avviare la procedura guidata Virtualize Data (Virtualizza dati) dal riquadro comandi. Premere CTRL+MAIUSC+P in Windows o Cmd+MAIUSC+P in un computer Mac.
+Connettersi all'istanza principale usando il numero di porta/indirizzo IP dell'endpoint **sql-server-master** ottenuto con il comando [ **mssqlctl cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints). Espandere il nodo **Database** in Esplora oggetti. Selezionare quindi uno dei database di cui si vogliono virtualizzare i dati da un'istanza di SQL Server esistente. Fare clic con il pulsante destro del mouse sul database e selezionare **Create External Table** (Crea tabella esterna) per avviare la procedura guidata Virtualize Data (Virtualizza dati). È anche possibile avviare la procedura guidata Virtualize Data (Virtualizza dati) dal riquadro comandi. Premere CTRL+MAIUSC+P in Windows o Cmd+MAIUSC+P in un computer Mac.
 
 ![Procedura guidata Virtualize Data (Virtualizza dati)](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>Selezione un'origine dati

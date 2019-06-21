@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9663732206ec3697379a241ae7eecf6d12a3b749
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407728"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63037524"
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>Configurare le impostazioni NodeWeight per il quorum del cluster
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52407728"
   
 -   **Prima di iniziare:**  [Prerequisiti](#Prerequisites), [Sicurezza](#Security)  
   
--   **Per visualizzare le impostazioni NodeWeight del quorum utilizzando:** [Utilizzo di Powershell](#PowerShellProcedure), [Utilizzo di Cluster.exe](#CommandPromptProcedure)  
+-   **Per visualizzare le impostazioni NodeWeight per il quorum:** [Uso di Powershell](#PowerShellProcedure), [Uso di Cluster.exe](#CommandPromptProcedure)  
   
 -   [Contenuto correlato](#RelatedContent)  
   

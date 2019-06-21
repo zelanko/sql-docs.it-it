@@ -16,12 +16,12 @@ ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 80c63fa27f1ba85882b18f47910f38c06dd09f51
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: db9c48686a6292f4a2fcd6ef85501fb1b715241d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800135"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140644"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>Aggiungere un database a un gruppo di disponibilità Always On con la "Creazione guidata Gruppo di disponibilità"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,6 +66,10 @@ ms.locfileid: "66800135"
      Se il database contiene una chiave master di database, immettere la relativa password nella colonna **Password**.  
   
 5.  Nella pagina **Seleziona sincronizzazione dei dati iniziale** specificare come creare e aggiungere i nuovi database secondari al gruppo di disponibilità. Selezionare una delle opzioni seguenti:  
+
+    - **Seeding automatico**
+      
+      Selezionare questa opzione per usare il seeding automatico. Il seeding automatico usa il trasporto del flusso di log per trasmettere il backup mediante un'infrastruttura VDI nella replica secondaria per ogni database del gruppo di disponibilità tramite endpoint configurati. Ciò consente di ripristinare il backup del database nella replica secondaria senza doverlo fare manualmente. Per altre informazioni sul seeding automatico, vedere [Seeding automatico](automatic-seeding-secondary-replicas.md).
   
     -   **Full**  
   

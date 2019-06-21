@@ -1,5 +1,5 @@
 ---
-title: 'Classe di evento TM: Commit Tran Completed | Microsoft Docs'
+title: 'TM: Classe di evento Commit Tran Completed | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a910e2217f94b16e8890467ba75bef83e37a838d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623559"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661331"
 ---
 # <a name="tm-commit-tran-completed-event-class"></a>TM: Commit Tran Completed - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  La classe di evento TM: Commit Tran Completed indica che una richiesta COMMIT TRANSACTION è stata completata. La richiesta è stata inviata dal client tramite l'interfaccia di gestione delle transazioni. La colonna EventSubClass indica se, in seguito al commit della transazione corrente, verrà avviata una nuova transazione.  
+  TM: La classe di evento Commit Tran Completed indica che una richiesta COMMIT TRANSACTION è stata completata. La richiesta è stata inviata dal client tramite l'interfaccia di gestione delle transazioni. La colonna EventSubClass indica se, in seguito al commit della transazione corrente, verrà avviata una nuova transazione.  
   
-## <a name="tm-commit-tran-completed-event-class-data-columns"></a>Colonne di dati della classe di evento TM: Commit Tran Completed  
+## <a name="tm-commit-tran-completed-event-class-data-columns"></a>TM: Colonne di dati della classe di evento Commit Tran Completed  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Sì|  
 |----------------------|---------------|-----------------|---------------|---------|  

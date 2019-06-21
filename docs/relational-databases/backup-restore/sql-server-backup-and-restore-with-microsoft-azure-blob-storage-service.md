@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 625eccb976c500dcacaa5612ca41bac8b638fbed
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434445"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62516242"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "58434445"
   
 -   **Backup di snapshot di file per i file di database in Archiviazione BLOB di Azure** : con l'uso degli snapshot di Azure, i backup degli snapshot di file di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] garantiscono backup e ripristini quasi istantanei per i file di database archiviati usando il servizio di archiviazione BLOB di Azure. Questa funzionalità consente di semplificare i criteri di backup e ripristino e supporta il ripristino temporizzato. Per altre informazioni, vedere [Backup di snapshot di file per i file di database in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md). Questa funzionalità è disponibile in SQL Server 2016 o versione successiva.  
   
--   **Consentire a SQL Server di gestire i backup in Microsoft Azure:** configurare SQL Server in modo da gestire la strategia di backup e pianificare i backup per un singolo database o più database oppure impostare i valori predefiniti a livello di istanza. Questa funzionalità viene definita **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]**. Per altre informazioni, vedere [Backup gestito di SQL Server in Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md). Questa funzionalità è disponibile in SQL Server 2014 o versione successiva.  
+-   **Consentire a SQL Server di gestire i backup in Microsoft Azure:** configurare SQL Server in modo da gestire la strategia di backup e pianificare i backup per un singolo database o più database oppure impostare i valori predefiniti a livello di istanza. Questa funzionalità viene definita **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** . Per altre informazioni, vedere [Backup gestito di SQL Server in Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md). Questa funzionalità è disponibile in SQL Server 2014 o versione successiva.  
   
 ## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>Vantaggi dell'uso del servizio BLOB di Microsoft Azure per i backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 97b13091d9b43a371a629d4f3d929e66ffffd368
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026641"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62927690"
 ---
 # <a name="exist-method-xml-data-type"></a>Metodo exist() (tipo di dati xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ exist (XQuery)
 ## <a name="remarks"></a>Remarks  
   
 > [!NOTE]  
->  Il metodo **exist()** restituisce 1 per l'espressione XQuery che restituisce un risultato non vuoto. Se si specifica la funzione **true()** o **false()** nel metodo **exist()**, il metodo **exist()** restituisce 1, in quanto le funzioni **true()** e **false()** restituiscono, rispettivamente, i valori booleani True e False, ovvero un risultato non vuoto. Il metodo **exist()** restituisce pertanto 1 (True), come illustrato nell'esempio seguente:  
+>  Il metodo **exist()** restituisce 1 per l'espressione XQuery che restituisce un risultato non vuoto. Se si specifica la funzione **true()** o **false()** nel metodo **exist()** , il metodo **exist()** restituisce 1, in quanto le funzioni **true()** e **false()** restituiscono, rispettivamente, i valori booleani True e False, ovvero un risultato non vuoto. Il metodo **exist()** restituisce pertanto 1 (True), come illustrato nell'esempio seguente:  
   
 ```  
 declare @x xml;  
@@ -56,10 +56,10 @@ select @x.exist('true()');
 ```  
   
 ## <a name="examples"></a>Esempi  
- Negli esempi seguenti viene illustrato come specificare il metodo **exist()**.  
+ Negli esempi seguenti viene illustrato come specificare il metodo **exist()** .  
   
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>Esempio: specifica del metodo exist() su una variabile di tipo XML  
- Nell'esempio seguente, @x è una variabile di tipo **xml** (xml non tipizzato) e @f è una variabile di tipo Integer che archivia il valore restituito dal metodo **exist()**. Il metodo **exist()** restituisce (1) se il valore di data archiviato nell'istanza XML è `2002-01-01`.  
+ Nell'esempio seguente, @x è una variabile di tipo **xml** (xml non tipizzato) e @f è una variabile di tipo Integer che archivia il valore restituito dal metodo **exist()** . Il metodo **exist()** restituisce (1) se il valore di data archiviato nell'istanza XML è `2002-01-01`.  
   
 ```  
 declare @x xml;  
@@ -75,7 +75,7 @@ select @f;
   
 -   Il valore dell'attributo **@Somedate** non è tipizzato. Nell'operazione di confronto, viene eseguito il cast implicito del valore al tipo sul lato destro del confronto, il tipo **xs:date**.  
   
--   Anziché **cast as xs:date()** è possibile usare la funzione costruttore **xs:date()**. Per altre informazioni, vedere [Constructor Functions &#40;XQuery&#41;](../../xquery/constructor-functions-xquery.md) (Funzioni costruttore &#40;XQuery&#41;).  
+-   Anziché **cast as xs:date()** è possibile usare la funzione costruttore **xs:date()** . Per altre informazioni, vedere [Constructor Functions &#40;XQuery&#41;](../../xquery/constructor-functions-xquery.md) (Funzioni costruttore &#40;XQuery&#41;).  
   
  L'esempio seguente è simile al precedente, ma contiene un elemento <`Somedate`>.  
   

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3e15b2614b64b6c5161e8648574f88700d4fd6d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787411"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62797039"
 ---
 # <a name="mssqlserver802---database-engine-error"></a>Errore del motore di database MSSQLSERVER_802
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ Nell'elenco seguente viene illustrata la procedura generale per la risoluzione d
   
 1.  Verificare se altre applicazioni o servizi utilizzano la memoria nel server specificato. Riconfigurare le applicazioni o i servizi meno critici per utilizzare una quantità di memoria inferiore.  
   
-2.  Iniziare a raccogliere i dati dei contatori di Performance Monitor per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: Gestione buffer** e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: Gestione memoria**.  
+2.  Iniziare a raccogliere i dati dei contatori di Performance Monitor per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Gestione buffer**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Memory Manager**.  
   
 3.  Verificare i seguenti parametri di configurazione della memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -61,7 +61,7 @@ Per aumentare la quantità di memoria disponibile per [!INCLUDE[ssNoVersion](../
   
 -   Se le risorse vengono utilizzate da altre applicazioni oltre a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], provare ad arrestare tali applicazioni o a eseguirle in un server distinto.  
   
--   Se è stata configurata l'opzione **max server memory,**, aumentarne il valore impostato.  
+-   Se è stata configurata l'opzione **max server memory,** , aumentarne il valore impostato.  
   
 Eseguire i comandi DBCC seguenti per liberare diverse cache in memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -14,11 +14,11 @@ ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 063c344e36ed4cb4404e2f78ae97a4e118322bb4
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658315"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63002376"
 ---
 # <a name="sql-server-2012-release-notes"></a>Note sulla versione di SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -30,9 +30,9 @@ Per informazioni su come installare SQL Server 2012, vedere il file Leggimi di S
 Prima di installare [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], si considerino le informazioni riportate di seguito.  
   
 ### <a name="11-rules-documentation-for-sql-server-2012-setup"></a>1.1 Documentazione sulle regole relative al programma di installazione di SQL Server 2012  
-**Problema:** la configurazione del computer viene convalidata dal programma di installazione di SQL Server prima del completamento dell'operazione di installazione. Le diverse regole in esecuzione durante l'operazione del programma di installazione di SQL Server vengono acquisite tramite il report Controllo configurazione sistema (SCC, System Configuration Checker). La documentazione relativa a queste regole del programma di installazione non è più disponibile in MSDN Library.  
+**Problema:** la configurazione del computer viene convalidata dall'installazione di SQL Server prima del completamento dell'operazione di installazione. Le diverse regole in esecuzione durante l'operazione del programma di installazione di SQL Server vengono acquisite tramite il report Controllo configurazione sistema (SCC, System Configuration Checker). La documentazione relativa a queste regole del programma di installazione non è più disponibile in MSDN Library.  
   
-**Soluzione alternativa:** per altre informazioni su queste regole del programma di installazione è possibile fare riferimento al report di controllo della configurazione di sistema. Tramite il controllo della configurazione di sistema viene generato un report contenente una breve descrizione di ogni regola eseguita, nonché lo stato dell'esecuzione. Il report di controllo della configurazione di sistema si trova nel percorso %Programmi%\Microsoft SQL Server\110\Setup Bootstrap\Log\\\<AAAAMMGG_HHMM>\\\.  
+**Soluzione alternativa:** per altre informazioni su queste regole di installazione è possibile fare riferimento al report di controllo della configurazione di sistema. Tramite il controllo della configurazione di sistema viene generato un report contenente una breve descrizione di ogni regola eseguita, nonché lo stato dell'esecuzione. Il report di controllo della configurazione di sistema si trova nel percorso %Programmi%\Microsoft SQL Server\110\Setup Bootstrap\Log\\\<AAAAMMGG_HHMM>\\\.  
   
 ### <a name="12-adding-a-local-user-account-for-the-distributed-replay-controller-service-might-terminate-setup-unexpectedly"></a>1.2 L'aggiunta di un account utente locale per il servizio Distributed Replay Controller potrebbe causare l'interruzione imprevista dell'installazione  
 **Problema:** nella pagina **Distributed Replay Controller** del programma di installazione di SQL Server, quando si tenta di aggiungere un account utente locale per il servizio Distributed Replay Controller, viene visualizzato il messaggio di errore "Errore durante l'installazione di SQL Server" e l'installazione viene interrotta in modo imprevisto.  
@@ -60,7 +60,7 @@ Prima di installare [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], si consi
 10. Avviare il servizio SQL Server Distributed Replay Controller.  
   
 ### <a name="13-sql-server-setup-might-fail-while-trying-to-start-the-sql-server-browser-service"></a>1.3 L'installazione di SQL Server potrebbe non venir completata nel tentativo di avviare il servizio SQL Server Browser  
-**Problema:** l'installazione di SQL Server potrebbe non riuscire nel tentativo di avviare il servizio SQL Server Browser, con errori simili al seguente:  
+**Problema:** l'installazione di SQL Server potrebbe non riuscire quando si tenta di avviare il servizio SQL Server Browser, con errori simili al seguente:  
   
 <pre>The following error has occurred:  
 Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.</pre>  
@@ -91,11 +91,11 @@ SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu3
 -   Non tutte le funzionalità di SQL Server 2012 sono supportate nel sistema operativo Server Core. Per altre informazioni sulle funzionalità supportate e sull'installazione di SQL Server 2012 in Server Core, vedere [Installare SQL Server 2012 in Server Core](https://msdn.microsoft.com/library/hh231669(SQL.110).aspx).  
   
 ### <a name="16-semantic-search-requires-you-to-install-an-additional-dependency"></a>1.6 È necessario installare un'ulteriore dipendenza per la Ricerca semantica  
-**Problema:** il database di statistiche lingua semantica, che non è installato dal programma di installazione di SQL Server, costituisce un ulteriore prerequisito per la ricerca semantica statistica.  
+**Problema:** la ricerca semantica statistica ha un altro prerequisito, il database di statistiche lingua semantica, che non viene installato dal programma di installazione di SQL Server.  
   
 **Soluzione alternativa:** per configurare il database di statistiche lingua semantica come prerequisito per l'indicizzazione semantica, eseguire la procedura seguente:  
   
-1.  Individuare ed eseguire il pacchetto di Windows Installer denominato SemanticLanguageDatabase.msi sui supporti di installazione di SQL Server al fine di estrarre il database. Per SQL Server 2012 Express, scaricare il database di Semantic Language Statistics dall'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=35582) (https://www.microsoft.com/download/details.aspx?id=35582)) ed eseguire il pacchetto Windows Installer.  
+1.  Individuare ed eseguire il pacchetto di Windows Installer denominato SemanticLanguageDatabase.msi sui supporti di installazione di SQL Server al fine di estrarre il database. Per SQL Server 2012 Express, scaricare il database di Semantic Language Statistics dall'[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=35582) (https://www.microsoft.com/download/details.aspx?id=35582) ) ed eseguire il pacchetto Windows Installer.  
   
 2.  Spostare il database in una cartella di dati adeguata. Se si decide di lasciare il database nella posizione predefinita, è necessario modificare le relative autorizzazioni prima di poter collegarlo correttamente.  
   
@@ -121,7 +121,7 @@ Di seguito viene descritto il comportamento dell'installazione dei prerequisiti 
   
         **Per abilitare .NET Framework 3.5 SP1 in Windows Server 2008 R2 SP1, usare uno dei metodi seguenti:**  
   
-        Metodo 1: uso di Server Manager  
+        Metodo 1: usare Server Manager  
   
         1.  In Server Manager fare clic su **Aggiungi funzionalità** per visualizzare un elenco di funzionalità disponibili.  
   
@@ -133,7 +133,7 @@ Di seguito viene descritto il comportamento dell'installazione dei prerequisiti 
   
         5.  Attendere il completamento del processo di installazione, quindi scegliere **Chiudi**.  
   
-        Metodo 2: uso di Windows PowerShell  
+        Metodo 2: Usare Windows PowerShell  
   
         1.  Fare clic su **Start** | **Tutti i programmi** | **Accessori**.  
   
@@ -226,14 +226,14 @@ SQL Server 2012 è supportato nei sistemi operativi Windows Vista SP2, Windows S
 Per altre informazioni su come ripristinare un'istanza di SQL Server, vedere [Ripristino di un'installazione non riuscita di SQL Server 2012](../database-engine/install-windows/repair-a-failed-sql-server-installation.md).  
   
 ### <a name="111-an-instance-of-sql-server-2012-might-fail-after-an-os-upgrade"></a>1.11 Un'istanza di SQL Server 2012 potrebbe non riuscire dopo un aggiornamento del sistema operativo  
-**Problema:** un'istanza di SQL Server 2012 potrebbe non riuscire con il seguente errore dopo l'aggiornamento del sistema operativo a Windows 7 SP1 da Windows Vista.  
+**Problema:** un'istanza di SQL Server 2012 potrebbe non riuscire con l'errore seguente dopo l'aggiornamento del sistema operativo a Windows 7 SP1 da Windows Vista.  
   
 `Setup has detected that the .NET Framework version 4 needs to be repaired. Do not restart your computer until Setup is complete.`  
   
 **Soluzione alternativa**: ripristinare l'installazione di .NET Framework 4 dopo l'aggiornamento del sistema operativo. Per altre informazioni, vedere [Come ripristinare un'installazione esistente di .NET Framework](https://support.microsoft.com/kb/306160).  
   
 ### <a name="112-sql-server-edition-upgrade-requires-a-restart"></a>1.12 Per l'aggiornamento dell'edizione di SQL Server è richiesto un riavvio  
-**Problema**: quando si effettua l'aggiornamento dell'edizione di un'istanza di SQL Server 2012, alcune delle funzionalità associate alla nuova edizione potrebbero non essere attivate immediatamente.  
+**Problema**: quando si esegue l'aggiornamento dell'edizione di un'istanza di SQL Server 2012, alcune delle funzionalità associate alla nuova edizione potrebbero non essere attivate immediatamente.  
   
 **Soluzione alternativa**: riavviare il computer dopo l'aggiornamento dell'edizione di un'istanza di SQL Server 2012. Per altre informazioni sugli aggiornamenti supportati in SQL Server 2012, vedere [Aggiornamenti di versione ed edizione supportati](../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  
   
@@ -243,7 +243,7 @@ Per altre informazioni su come ripristinare un'istanza di SQL Server, vedere [Ri
 **Soluzione alternativa:** prima dell'aggiornamento, assicurarsi che il database e i relativi file/filegroup siano impostati sulla modalità di lettura/scrittura.  
   
 ### <a name="114-reinstalling-an-instance-of-sql-server-failover-custer-fails-if-you-use-the-same-ip-address"></a>1.14 La reinstallazione di un'istanza del cluster di failover di SQL Server non riesce se si usano lo stesso indirizzo IP  
-**Problema:** se si specifica un indirizzo IP non corretto durante un'installazione di un'istanza del cluster di failover di SQL Server, l'installazione non riesce. Dopo la disinstallazione dell'istanza con errori, e in caso di tentativo di reinstallazione dell'istanza del cluster di failover di SQL Server con lo stesso nome istanza, e indirizzo IP corretto, l'installazione non viene completata. L'errore è dovuto al gruppo di risorse duplicate lasciato dall'installazione precedente.  
+**Problema:** se si specifica un indirizzo IP non corretto durante l'installazione di un'istanza del cluster di failover di SQL Server, l'installazione non riesce. Dopo la disinstallazione dell'istanza con errori, e in caso di tentativo di reinstallazione dell'istanza del cluster di failover di SQL Server con lo stesso nome istanza, e indirizzo IP corretto, l'installazione non viene completata. L'errore è dovuto al gruppo di risorse duplicate lasciato dall'installazione precedente.  
   
 **Soluzione alternativa:** per risolvere il problema, usare un nome istanza diverso durante la reinstallazione oppure eliminare manualmente il gruppo di risorse prima della reinstallazione. Per altre informazioni, vedere la pagina relativa all' [aggiunta o alla rimozione di nodi in un cluster di failover di SQL Server](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
@@ -252,7 +252,7 @@ Per altre informazioni su come ripristinare un'istanza di SQL Server, vedere [Ri
 ## <a name="AS"></a>2.0 Analysis Services  
   
 ### <a name="21-sql-editor-and-as-editor-cannot-connect-to-their-respective-server-instances-in-the-same-ssms-instance"></a>2.1 Non è possibile effettuare la connessione dell'editor SQL e di quello AS alle rispettive istanze del server nella stessa istanza di SSMS  
-**Problema:** non è possibile effettuare la connessione a un server Analysis Services usando l'editor MDX/DMX quando l'editor SQL è già connesso.  
+**Problema:** non è possibile eseguire la connessione a un server Analysis Services usando l'editor MDX/DMX quando l'editor SQL è già connesso.  
   
 Quando si usano SQL Server Management Studio 2012 (SSMS), se un file con estensione sql viene aperto nell'editor e viene connesso a un'istanza di SQL Server, un file MDX o DMX aperto nella stessa istanza di SSMS non può essere connesso a un'istanza del server AS. Analogamente, se un file MDX o DMX è già aperto nell'editor in SSMS ed è connesso a un'istanza del server AS, un file con estensione sql aperto nella stessa istanza di SSMS non può essere connesso a un'istanza di SQL Server.  
   
@@ -263,7 +263,7 @@ Quando si usano SQL Server Management Studio 2012 (SSMS), se un file con estensi
 -   Disconnettere l'editor SQL, quindi connettere l'editor MDX/DMX a un server AS.  
   
 ### <a name="22-cannot-create-or-open-tabular-projects-when-builtinadministrators-group-name-cannot-be-resolved"></a>2.2 Non è possibile creare o aprire progetti tabulari se il nome del gruppo BUILTIN\Administrators non può essere risolto  
-**Problema:** Per poter creare o aprire progetti tabulari, è necessario essere amministratore del server di database dell'area di lavoro. È possibile aggiungere un utente al gruppo di amministratori del server, aggiungendo il nome utente o il gruppo di utenti. Se si fa parte del gruppo BUILTIN\Administrator, non è possibile creare o modificare i file BIM a meno che non si crei un join del server di database dell'area di lavoro al dominio dal quale è stato inizialmente reso disponibile. Se si apre o crea il file BIM, l'operazione non riuscirà e verrà visualizzato il seguente messaggio di errore:  
+**Problema:** per poter creare o aprire progetti tabulari, è necessario essere amministratore del server di database dell'area di lavoro. È possibile aggiungere un utente al gruppo di amministratori del server, aggiungendo il nome utente o il gruppo di utenti. Se si fa parte del gruppo BUILTIN\Administrator, non è possibile creare o modificare i file BIM a meno che non si crei un join del server di database dell'area di lavoro al dominio dal quale è stato inizialmente reso disponibile. Se si apre o crea il file BIM, l'operazione non riuscirà e verrà visualizzato il seguente messaggio di errore:  
   
 `"The BIM file cannot be opened. The server connected to is not valid. Reason: You are not an administrator of server [server name]."`  
   
@@ -276,13 +276,13 @@ Quando si usano SQL Server Management Studio 2012 (SSMS), se un file con estensi
 ### <a name="23-ssis-components-for-as-tabular-models-do-not-work-as-expected"></a>2.3 I componenti SSIS per i modelli tabulari AS non funzionano come previsto  
 I componenti SQL Server Integration Services (SSIS) per Analysis Services (AS) non funzionano come previsto per i modelli tabulari. Di seguito sono riportati i problemi noti che possono verificarsi quando si tenta di scrivere un pacchetto SSIS perché funzioni con modelli tabulari.  
   
-**Problema:** La gestione connessione AS non può utilizzare un modello tabulare nella stessa soluzione come origine dati.  
+**Problema:** la gestione connessione AS non può usare un modello tabulare nella stessa soluzione come origine dati.  
   
 **Soluzione alternativa:** è necessario connettersi esplicitamente al server AS prima di configurare l'attività Elaborazione Analysis Services o Esegui DDL Analysis Services.  
   
 Si verificano problemi con l'attività Elaborazione Analysis Services quando si lavora con modelli tabulari:  
   
-**Problema:** Invece di database, tabelle e partizioni, vengono visualizzati cubi, gruppi di misure e dimensioni. Si tratta di un limite dell'attività.  
+**Problema:** invece di database, tabelle e partizioni, vengono visualizzati cubi, gruppi di misure e dimensioni. Si tratta di un limite dell'attività.  
   
 **Soluzione alternativa:** è comunque possibile elaborare un modello tabulare usando la struttura a cubi/gruppi di misure/dimensioni.  
   
@@ -290,7 +290,7 @@ Si verificano problemi con l'attività Elaborazione Analysis Services quando si 
   
 **Soluzione alternativa:** usare l'attività Esegui DDL Analysis Services invece di eseguire uno script XMLA in cui è contenuto il comando ProcessDefrag.  
   
-**Problema:** Alcune opzioni di configurazione nello strumento non sono applicabili. Evitare, ad esempio, di usare "Oggetti relativi a processi" quando si elaborano partizioni. Nell'opzione di configurazione "Elaborazione parallela" è incluso un messaggio di errore non valido in cui viene indicato che l'elaborazione parallela non è supportata nella SKU standard.  
+**Problema:** alcune opzioni di configurazione nello strumento non sono applicabili. Evitare, ad esempio, di usare "Oggetti relativi a processi" quando si elaborano partizioni. Nell'opzione di configurazione "Elaborazione parallela" è incluso un messaggio di errore non valido in cui viene indicato che l'elaborazione parallela non è supportata nella SKU standard.  
   
 **Soluzione alternativa:** None  
   
@@ -338,7 +338,7 @@ Si verificano problemi con l'attività Elaborazione Analysis Services quando si 
 ### <a name="44-a-cancel-operation-discards-work-from-multiple-activities"></a>4.4 Le operazioni provenienti da più attività vengono ignorate da un'operazione di annullamento  
 **Problema:** se si fa clic su **Annulla** quando si esegue un'attività di individuazione informazioni o gestione di dominio e vi sono anche altre attività in esecuzione, che sono state completate precedentemente ma senza che sia stata eseguita un'operazione di pubblicazione, tutto ciò che è stato eseguito sin dall'ultima pubblicazione di tutte le attività, non solo quelle attuali, verrà annullato.  
   
-**Soluzione alternativa:** per evitare questo problema, pubblicare tutto ciò che si desidera mantenere nella Knowledge Base prima di iniziare una nuova attività.  
+**Soluzione alternativa:** per evitare questo problema, pubblicare tutto ciò che si vuole mantenere nella knowledge base prima di iniziare una nuova attività.  
   
 ### <a name="45-controls-do-not-scale-properly-on-large-font-sizes"></a>4.5 I controlli non scalano correttamente con dimensioni del carattere grandi  
 **Problema:** se si modifica la dimensione del testo in "Grande - 150%" (in Windows Server 2008 o Windows 7) o si modifica l'impostazione personalizzata DPI in 200% (in Windows 7), i pulsanti **Annulla** e **Crea** nella pagina **Nuova Knowledge Base** non saranno accessibili.  
@@ -373,7 +373,7 @@ In un progetto DQS se è stato eseguito il mapping di un campo nei dati di origi
 ### <a name="413-error-when-mapping-to-an-excel-sheet-that-contains-a--semicolon-in-its-name"></a>4.13 Errore durante il mapping a un foglio di Excel contenente un punto e virgola (;) nel relativo nome  
 **Problema:** nella pagina **Mappa** di tutte le attività DQS in Data Quality Client, se si esegue il mapping al foglio di Excel di origine contenente un punto e virgola (;) nel nome, viene visualizzato un messaggio di eccezione non gestita quando si sceglie **Avanti** nella pagina **Mappa**.  
   
-**Soluzione alternativa:** rimuovere il punto e virgola (;) dal nome del foglio nel file di Excel contenente i dati di origine di cui eseguire il mapping, quindi riprovare.  
+**Soluzione alternativa:** rimuovere il punto e virgola (;) dal nome del foglio nel file di Excel contenente i dati di origine di cui eseguire il mapping e riprovare.  
   
 ### <a name="414-issue-with-date-or-datetime-values-in-unmapped-source-fields-in-excel-during-cleansing-and-matching"></a>4.14 Problema con i valori Date o DateTime nei campi di origine di cui non è stato eseguito il mapping in Excel durante la pulizia e la corrispondenza  
 **Problema**: se i dati di origine sono in formato Excel e per i campi di origine contenenti valori di tipo **Date** o **DateTime** non è stato eseguito il mapping, durante le attività di pulizia e corrispondenza si verifica quanto segue:  
@@ -435,7 +435,7 @@ Di seguito viene fornito un esempio per illustrare questo comportamento. Si cons
 ## <a name="DE"></a>5.0 Motore di database  
   
 ### <a name="51-use-of-distributed-replay-controller-and-distributed-replay-client-features"></a>5.1 Utilizzo delle funzionalità Distributed Replay Controller e Distributed Replay Client  
-**Problema:** le funzionalità Distributed Replay Controller e Distributed Replay Client sono rese disponibili nella SKU Server Core di Windows Server 2008, Windows Server 2008 R2 e Windows Server 7, anche se queste due funzionalità non sono supportate nella SKU Server Core.  
+**Problema:** le funzionalità Controller di Riesecuzione distribuita e Client Riesecuzione distribuita sono rese disponibili nella SKU Server Core di Windows Server 2008, Windows Server 2008 R2 e Windows Server 7, anche se queste due funzionalità non sono supportate nella SKU Server Core.  
   
 **Soluzione alternativa:** non installare o usare queste due funzionalità nella SKU Server Core di Windows Server 2008, Windows Server 2008 R2 e Windows Server 7.  
   
@@ -472,7 +472,7 @@ Il nome di oggetto sys.federations' non è valido. (Microsoft SQL Server, Errore
 **Soluzione alternativa:** chiudere e riaprire la Generazione guidata script.  
   
 ### <a name="55-new-maintenance-plan-layout-not-compatible-with-earlier-sql-server-tools"></a>5.5 Layout del nuovo piano di manutenzione non compatibile con gli strumenti precedenti di SQL Server  
-**Problema:** quando gli strumenti di gestione di SQL Server 2012 vengono usati per modificare un piano di manutenzione esistente creato in una precedente versione degli strumenti di gestione di SQL Server (SQL Server 2008 R2, SQL Server 2008 o SQL Server 2005), il piano di manutenzione viene salvato in un nuovo formato. Le precedenti versioni degli strumenti di gestione di SQL Server non supportano questo nuovo formato.  
+**Problema:** quando gli strumenti di gestione di SQL Server 2012 vengono usati per modificare un piano di manutenzione esistente creato in una versione precedente degli strumenti di gestione di SQL Server (SQL Server 2008 R2, SQL Server 2008 o SQL Server 2005), il piano di manutenzione viene salvato in un nuovo formato. Le precedenti versioni degli strumenti di gestione di SQL Server non supportano questo nuovo formato.  
   
 **Soluzione alternativa**: None  
   
@@ -503,7 +503,7 @@ Nella seguente tabella viene riepilogato il supporto dei driver per i gruppi di 
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Sì|Sì|Sì|Sì|Sì|  
 |SQL Native Client 11.0 OLEDB|no|Sì|Sì|no|no|  
-|ADO.NET con .NET Framework 4.0 con patch di connettività**\&#42;**|Sì|Sì|Sì|Sì|Sì|  
+|ADO.NET con .NET Framework 4.0 con patch di connettività **\&#42;**|Sì|Sì|Sì|Sì|Sì|  
 |ADO.NET con.NET Framework 3.5 SP1 con patch di connettività **\&#42;\&#42;**|Sì|Sì|Sì|Sì|Sì|  
 |Microsoft JDBC Driver 4.0 per SQL Server|Sì|Sì|Sì|Sì|Sì|  
   
@@ -529,9 +529,9 @@ MultiSubnetFailover è una nuova parola chiave della stringa di connessione usat
   
 **MultiSubnetFailover=True non supportato da .NET Framework 3.5 o OLEDB**  
   
-**Problema:** Se il gruppo di disponibilità o l'istanza del cluster di failover dispone di un nome di listener (noto come nome di rete o punto di accesso client in Gestione cluster WSFC) dipendente da più indirizzi IP di subnet diverse e si sta utilizzando ADO.NET con .NET Framework 3.5SP1 o SQL Native Client 11.0 OLEDB, potenzialmente il 50% delle richieste di connessione client al listener del gruppo di disponibilità riscontrerà un timeout di connessione.  
+**Problema:** Se il gruppo di disponibilità o l'istanza del cluster di failover ha un nome di listener (noto come nome di rete o punto di accesso client in Gestione cluster WSFC) dipendente da più indirizzi IP di subnet diverse e si sta usando ADO.NET con .NET Framework 3.5SP1 o SQL Native Client 11.0 OLEDB, potenzialmente il 50% delle richieste di connessione client al listener del gruppo di disponibilità riscontrerà un timeout di connessione.  
   
-**Soluzioni alternative:** è consigliabile effettuare una delle seguenti attività.  
+**Soluzioni alternative:** è consigliabile eseguire una delle attività seguenti.  
   
 -   Se non si dispone dell'autorizzazione per usare le risorse cluster, modificare il timeout di connessione in 30 secondi (questo valore corrisponde a un periodo di timeout TCP di 20 secondi più un buffer di 10).  
   
@@ -585,12 +585,12 @@ Il servizio CDC per Oracle è un servizio di Windows tramite cui vengono analizz
 #### <a name="611-install-the-cdc-service-for-oracle-and-the-cdc-designer-for-oracle"></a>6.1.1 Installare il servizio CDC per Oracle e CDC Designer per Oracle  
 **Problema:** il servizio CDC e CDC Designer non vengono installati dal programma di installazione di SQL Server. È necessario installare manualmente il servizio CDC o CDD Designer in un computer che soddisfa i requisiti e i prerequisiti descritti nei file della Guida aggiornati.  
   
-**Soluzione alternativa:** Per installare il servizio CDC per Oracle, eseguire manualmente AttunityOracleCdcService.msi dai supporti di installazione di SQL Server. Per installare CDC Designer Console, eseguire manualmente AttunityOracleCdcDesigner.msi dai supporti di installazione di SQL Server.  I pacchetti di installazione per x86 e x64 sono presenti nel percorso .\Tools\AttunityCDCOracle\ sul supporto di installazione di SQL Server.  
+**Soluzione alternativa:** per installare il servizio CDC per Oracle, eseguire manualmente AttunityOracleCdcService.msi dai supporti di installazione di SQL Server. Per installare CDC Designer Console, eseguire manualmente AttunityOracleCdcDesigner.msi dai supporti di installazione di SQL Server.  I pacchetti di installazione per x86 e x64 sono presenti nel percorso .\Tools\AttunityCDCOracle\ sul supporto di installazione di SQL Server.  
   
 #### <a name="612-f1-help-functionality-points-to-incorrect-documentation-files"></a>6.1.2 La funzionalità della Guida punta a file della documentazione non corretti  
-**Problema:** non è possibile accedere alla documentazione della Guida corretta usando l'elenco a discesa della Guida o facendo clic su "?" nelle console di Attunity. Questi metodi puntano a file chm non corretti.  
+**Problema:** non è possibile accedere alla documentazione della Guida corretta usando l'elenco a discesa con F1 o facendo clic su "?" nelle console di Attunity. Questi metodi puntano a file chm non corretti.  
   
-**Soluzione alternativa:** i file chm corretti vengono installati insieme al servizio CDC per Oracle e CDC Designer per Oracle. Per visualizzare il contenuto corretto della Guida, avviare i file chm direttamente da questo percorso: `%Program Files%\Change Data Capture for Oracle by Attunity\*.chm`.  
+**Soluzione alternativa:** i file con estensione chm corretti vengono installati insieme al servizio CDC per Oracle e CDC Designer per Oracle. Per visualizzare il contenuto corretto della Guida, avviare i file chm direttamente da questo percorso: `%Program Files%\Change Data Capture for Oracle by Attunity\*.chm`.  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
@@ -629,7 +629,7 @@ In SQL Server 2012 è incluso StreamInsight 2.0 per cui sono richiesti una licen
 ## <a name="UA"></a>10.0 Preparazione aggiornamento  
   
 ### <a name="101-link-to-install-upgrade-advisor-is-not-enabled-on-chinese-hk-operating-systems"></a>10.1 Il collegamento per installare Upgrade Advisor non è abilitato in sistemi operativi cinesi (HK)  
-Problema: Quando si tenta di installare Preparazione aggiornamento in qualsiasi versione di Windows supportata in sistemi operativi in lingua cinese (Hong Kong), è possibile che il collegamento per installare Preparazione aggiornamento non è abilitato.  
+Problema: Quando si tenta di installare Preparazione aggiornamento in qualsiasi versione di Windows supportata in sistemi operativi in lingua cinese (Hong Kong), è possibile che il collegamento per installare Preparazione aggiornamento non sia abilitato.  
   
 **Soluzione alternativa**: individuare il file **SQLUA.msi** nel supporto SQL Server 2012 in `\1028_CHT_LP\x64\redist\Upgrade Advisor` o `\1028_CHT_LP\x86\redist\Upgrade Advisor`, a seconda dell'architettura del sistema operativo.  
   

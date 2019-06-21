@@ -14,11 +14,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 569b085d28a0339927049fca0d758286dd1b6e8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737249"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62686101"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>Classe di evento CPU Threshold Exceeded
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47737249"
 |EventSubClass|**int**|Violazione del limite della CPU.|21|Sì|  
 |GroupID|**int**|ID del gruppo in cui si verifica la violazione.|66|Sì|  
 |OwnerID|**int**|SPID del processo che provoca la violazione.|58|Sì|  
-|SPID|**int**|ID del processo del server che genera l'evento.<br /><br /> Nota: può essere differente dallo SPID effettivo dell'utente se il thread di sistema convalida l'utilizzo della CPU come attività in background.|12|Sì|  
+|SPID|**int**|ID del processo del server che genera l'evento.<br /><br /> Nota: può essere diverso dallo SPID effettivo dell'utente se il thread di sistema convalida l'utilizzo della CPU come attività di background.|12|Sì|  
 |StartTime|**datetime**|Ora di generazione dell'evento.|14|Sì|  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -12,11 +12,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 6315784a4092f73f9243c49902eb40ea905edcf4
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512616"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63009086"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>Finestra di dialogo Crea nuovi criteri o Apri criteri, pagina Descrizione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "51512616"
  **Collegamento ipertestuale alla Guida aggiuntiva: Testo da visualizzare**  
  Quando si eseguono criteri, il collegamento ipertestuale alla Guida aggiuntiva viene visualizzato nella pagina **Visualizzazione dettagliata risultati** . Digitare il testo da visualizzare come collegamento ipertestuale.  
   
- **Collegamento ipertestuale alla Guida aggiuntiva: Indirizzo**  
+ **Collegamento ipertestuale alla Guida aggiuntiva: indirizzo**  
  Digitare il collegamento ipertestuale di una pagina Web da aprire quando gli utenti fanno clic sul testo del collegamento ipertestuale visualizzato nella pagina **Visualizzazione dettagliata risultati** .  
   
- **Collegamento ipertestuale alla Guida aggiuntiva: Collegamento test**  
+ **Collegamento ipertestuale alla Guida aggiuntiva: test collegamento**  
  Fare clic per aprire il collegamento ipertestuale per testare la validità del collegamento.  
   
  **Data creazione**  

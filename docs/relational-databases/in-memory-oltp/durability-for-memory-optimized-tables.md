@@ -12,11 +12,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0fe8886c5c826a6535a7d9898ad7d6f30756effd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419912"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047757"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilità per tabelle con ottimizzazione per la memoria
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "52419912"
   
  Quando una riga viene eliminata o aggiornata, non viene rimossa o modificata sul posto nel file di dati, ma le righe eliminate vengono rilevate in un altro tipo di file: il file differenziale. Le operazioni di aggiornamento sono elaborate come una tupla di operazioni di eliminazione e inserimento per ogni riga. Ciò consente di eliminare le operazioni di I/O casuali nel file di dati.  
  
-   Dimensioni: ogni file di dati viene ridimensionato approssimativamente a 128 MB per i computer con memoria superiore a 16 GB e a 16 MB per i computer con memoria minore o uguale a 16 GB. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SQL Server può usare la modalità di checkpoint di grandi dimensioni se ritiene che il sottosistema di archiviazione sia sufficientemente veloce. In modalità di checkpoint di grandi dimensioni, i file di dati vengono ridimensionati a 1GB. In questo modo è possibile migliorare l'efficienza del sottosistema di archiviazione per i carichi di lavoro con velocità effettiva elevata.  
+   Dimensioni: Ogni file di dati viene ridimensionato approssimativamente su 128 MB per i computer con memoria superiore a 16 GB e a 16 MB per i computer con memoria minore o uguale a 16 GB. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SQL Server può usare la modalità di checkpoint di grandi dimensioni se ritiene che il sottosistema di archiviazione sia sufficientemente veloce. In modalità di checkpoint di grandi dimensioni, i file di dati vengono ridimensionati a 1GB. In questo modo è possibile migliorare l'efficienza del sottosistema di archiviazione per i carichi di lavoro con velocità effettiva elevata.  
    
 ### <a name="the-delta-file"></a>File differenziale  
  Ogni file di dati è associato a un file differenziale con lo stesso intervallo di transazione che tiene traccia delle righe eliminate inserite dalle transazioni nell'intervallo di transazione. Questo file di dati e differenziale è spesso indicato come coppia di file di checkpoint (CFP, Checkpoint File Pair) e corrisponde all'unità di allocazione e deallocazione, oltre che all'unità per le operazioni di unione. Ad esempio, in un file differenziale che corrisponde all'intervallo di transazione (100, 200) verranno archiviate le righe eliminate inserite dalle transazioni nell'intervallo (100, 200). Come per i file di dati, l'accesso al file differenziale avviene in ordine sequenziale.  

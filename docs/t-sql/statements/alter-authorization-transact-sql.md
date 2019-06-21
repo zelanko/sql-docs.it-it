@@ -28,11 +28,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4960dae2aad32a75f612b1b07e4aacdeb6a3d4d9
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421228"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63026088"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -195,7 +195,7 @@ ALTER AUTHORIZATION ON
 ## <a name="AlterDB"></a> ALTER AUTHORIZATION per i database  
 **SI APPLICA A**: [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 ### <a name="for-sql-server"></a>Per SQL Server:  
-**Requisiti per il nuovo proprietario:**   
+**Requisiti per il nuovo proprietario:**    
 La nuova entità proprietario deve essere uno dei valori seguenti:  
 
 -   Un account di accesso con autenticazione di SQL Server.  
@@ -206,7 +206,7 @@ La nuova entità proprietario deve essere uno dei valori seguenti:
 Chi non è membro del ruolo predefinito del server **sysadmin**, deve avere almeno un'autorizzazione TAKE OWNERSHIP nel database e deve disporre dell'autorizzazione IMPERSONATE nel nuovo account di accesso proprietario.   
 
 ### <a name="for-azure-sql-database"></a>Per il database SQL di Azure:  
-**Requisiti per il nuovo proprietario:**   
+**Requisiti per il nuovo proprietario:**    
 La nuova entità proprietario deve essere uno dei valori seguenti:  
 
 -   Un account di accesso con autenticazione di SQL Server.  
@@ -261,11 +261,11 @@ Anziché usare gli utenti di Azure AD come singoli proprietari del database, usa
   ```    
   ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;  
   ```    
-2.  Creare un gruppo di Azure AD che diventerà proprietario del database e aggiungerlo come utente al database utente. Ad esempio  
+2.  Creare un gruppo di Azure AD che diventerà proprietario del database e aggiungerlo come utente al database utente. Esempio:  
   ```    
   CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;  
   ```    
-3.  Nel database utente aggiungere l'utente che rappresenta il gruppo di Azure AD al ruolo predefinito del database **db_owner**. Ad esempio  
+3.  Nel database utente aggiungere l'utente che rappresenta il gruppo di Azure AD al ruolo predefinito del database **db_owner**. Esempio:  
   ```    
   ALTER ROLE db_owner ADD MEMBER mydbogroup;  
   ```    
@@ -283,7 +283,7 @@ SELECT IS_MEMBER ('db_owner');
 Se il valore restituito è 1, significa che l'utente è un membro del ruolo.  
    
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>Autorizzazioni    
  È richiesta l'autorizzazione TAKE OWNERSHIP per l'entità. Se il nuovo proprietario non è l'utente che sta eseguendo l'istruzione 1) è richiesta l'autorizzazione IMPERSONATE per il nuovo proprietario se si tratta di un utente o un account di accesso, oppure 2) se il nuovo proprietario è un ruolo, è richiesta l'appartenenza al ruolo o l'autorizzazione ALTER per tale ruolo, oppure 3) se il nuovo proprietario è un ruolo applicazione, è richiesta l'autorizzazione ALTER per il ruolo applicazione.    
     
 ## <a name="examples"></a>Esempi    
@@ -303,14 +303,14 @@ ALTER AUTHORIZATION ON Parts.Sprockets TO MichikoOsada;
 GO    
 ```    
     
- Se lo schema degli oggetti non è incluso come parte dell'istruzione, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] cercherà l'oggetto nello schema predefinito degli utenti. Ad esempio    
+ Se lo schema degli oggetti non è incluso come parte dell'istruzione, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] cercherà l'oggetto nello schema predefinito degli utenti. Esempio:    
     
 ```    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;    
 ```    
     
-### <a name="b-transfer-ownership-of-a-view-to-the-schema-owner"></a>b. Trasferire la proprietà di una vista al proprietario dello schema    
+### <a name="b-transfer-ownership-of-a-view-to-the-schema-owner"></a>B. Trasferire la proprietà di una vista al proprietario dello schema    
  Nell'esempio seguente la proprietà della vista `ProductionView06` viene trasferita al proprietario dello schema che la contiene. La vista è inclusa nello schema `Production`.    
     
 ```    

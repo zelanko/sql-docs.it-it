@@ -16,26 +16,26 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7dae619283acc6259a488ae868c853c193a2f2f4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665740"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62668925"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurazione di IIS per la sincronizzazione Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Le procedure descritte in questo argomento rappresentano il secondo passaggio nella configurazione della sincronizzazione Web per la replica di tipo merge. Questo passaggio è successivo all'abilitazione di una pubblicazione per la sincronizzazione Web. Per una panoramica del processo di configurazione, vedere [Configura sincronizzazione Web](../../relational-databases/replication/configure-web-synchronization.md). Al termine delle procedure indicate in questo argomento, procedere al terzo passaggio, che consiste nella configurazione di una sottoscrizione per l'utilizzo della sincronizzazione Web. Questo terzo passaggio è descritto negli argomenti seguenti:  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Procedura: Configurazione di una sottoscrizione per l'utilizzo della sincronizzazione tramite il Web \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Procedura: Configurare una sottoscrizione per l'usare la sincronizzazione Web \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   Programmazione [!INCLUDE[tsql](../../includes/tsql-md.md)] della replica: [Procedura: Configurazione di una sottoscrizione per l'utilizzo della sincronizzazione Web (Programmazione Transact-SQL della replica)](https://msdn.microsoft.com/library/ms345206.aspx)  
+-   Programmazione [!INCLUDE[tsql](../../includes/tsql-md.md)] della replica: [Procedura: Configurare una sottoscrizione per l'usare la sincronizzazione Web (Programmazione Transact-SQL della replica)](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO: [Procedura: Configurazione di una sottoscrizione per l'utilizzo di una sottoscrizione Web (Programmazione RMO)](https://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO: [Procedura: Configurare una sottoscrizione per l'usare la sincronizzazione Web (Programmazione RMO)](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  Nella sincronizzazione Web viene utilizzato un computer che esegue [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) per sincronizzare le sottoscrizioni pull con le pubblicazioni di tipo merge. Sono supportate le versioni 5.0, 6.0 e 7.0 di IIS. La Configurazione guidata sincronizzazione Web non è supportata in IIS versione 7.0.  
   
 > [!IMPORTANT]  
->  Verificare che nell'applicazione venga utilizzato solo [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] o versione successiva e che le versioni precedenti di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] non siano installate sul server IIS. Le versioni precedenti di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] possono causare errori come, ad esempio, "Formato di messaggio non valido durante la sincronizzazione Web. Verificare che i componenti di replica siano configurati correttamente nel server Web".  
+>  Verificare che nell'applicazione venga utilizzato solo [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] o versione successiva e che le versioni precedenti di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] non siano installate sul server IIS. Le versioni precedenti di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] possono causare errori tra cui: "Formato di messaggio non valido durante la sincronizzazione Web. Verificare che i componenti di replica siano configurati correttamente nel server Web".  
   
 > [!CAUTION]  
 >  Non utilizzare contemporaneamente sia WebSync sia percorsi alternativi della cartella snapshot.  
@@ -66,7 +66,7 @@ ms.locfileid: "51665740"
   
 1.  Accedere come amministratore al computer che esegue IIS.  
   
-2.  Avviare **Gestione Internet Information Services (IIS)**:  
+2.  Avviare **Gestione Internet Information Services (IIS)** :  
   
     1.  Fare clic sul pulsante **Start**e quindi scegliere **Esegui**.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "51665740"
   
     2.  Nella casella **Percorso** immettere un percorso per la directory virtuale. Ad esempio, se è stato immesso **websync1** nella casella **Alias** , immettere **C:\Inetpub\wwwroot\websync1** nella casella **Percorso** . Fare clic su **Avanti**.  
   
-    3.  In entrambe le finestre di dialogo fare clic su **Sì**. In questo modo viene specificato che si intende creare una nuova cartella e copiare la DLL ISAPI (Internet Server API) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . ,  
+    3.  In entrambe le finestre di dialogo fare clic su **Sì**. In questo modo viene specificato che si intende creare una nuova cartella e copiare la DLL ISAPI (Internet Server API) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . .  
   
 7.  Nella pagina **Accesso autenticato** :  
   
@@ -171,7 +171,7 @@ ms.locfileid: "51665740"
   
 8.  Nella pagina **Accesso alla directory** :  
   
-    1.  Fare clic su **Aggiungi**e quindi nella finestra di dialogo **Seleziona Utenti o gruppi** aggiungere gli account che verranno utilizzati dai Sottoscrittori per le connessioni al server IIS. Si tratta degli account che verranno specificati nella pagina **Informazioni server Web** della Creazione guidata nuova sottoscrizione oppure come valore per il parametro [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)*@internet_login* .  
+    1.  Fare clic su **Aggiungi**e quindi nella finestra di dialogo **Seleziona Utenti o gruppi** aggiungere gli account che verranno utilizzati dai Sottoscrittori per le connessioni al server IIS. Si tratta degli account che verranno specificati nella pagina **Informazioni server Web** della Creazione guidata nuova sottoscrizione oppure come valore per il parametro [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) *@internet_login* .  
   
 9. Nella pagina **Accesso alla condivisione snapshot** immettere la condivisione snapshot. In questa condivisione vengono impostate le autorizzazioni appropriate affinché i Sottoscrittori possano accedere ai file di snapshot. Per altre informazioni sulle autorizzazioni per la condivisione, vedere [Proteggere la cartella snapshot](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
@@ -274,7 +274,7 @@ ms.locfileid: "51665740"
   
     7.  Fare clic su **OK**.  
   
-4.  Creare un pool di applicazioni in **Gestione Internet Information Services (IIS)**:  
+4.  Creare un pool di applicazioni in **Gestione Internet Information Services (IIS)** :  
   
     1.  Fare clic sul pulsante **Start**e quindi scegliere **Esegui**.  
   

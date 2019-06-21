@@ -15,11 +15,11 @@ ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 1a45ddf4920f693db928dddd30256c20f36ebe4a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524343"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63037259"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,9 +56,9 @@ Fare riferimento alla tabella seguente per determinare il file da scaricare e in
 |Nessuna installazione a 64 bit di SQL Server 2008 R2 Management Studio|Installare SQL Server 2008 R2 Management Studio con SP2|SQLManagementStudio_x64_ENU.exe in [questa pagina](https://go.microsoft.com/fwlink/p/?LinkId=251791) per installare la versione gratuita di SQL Server 2008 R2 SP2 Management Studio Express Edition.|  
   
 ### <a name="22-setup-might-fail-if-sqagtresdll-is-locked-by-another-process"></a>2.2 Possibile errore di installazione se il file SQAGTRES.dll è bloccato da un altro processo  
-**Problema**: può verificarsi l'errore seguente durante l'installazione di SQL Server: `Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` La causa principale consiste nel fatto che il file C:\Windows\system32\SQAGTRES.DLL è bloccato da un altro processo e pertanto non può essere aggiornato dall'installazione.  
+**Problema**: un'operazione dell'installazione di SQL Server potrebbe non riuscire con l'errore: `Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` La causa principale consiste nel fatto che il file C:\Windows\system32\SQAGTRES.DLL è bloccato da un altro processo e pertanto non può essere aggiornato dall'installazione.  
   
-**Soluzione alternativa**: rinominare C:\Windows\system32\SQAGTRES.DLL con un nome temporaneo, ad esempio C:\Windows\system32\SQAGTRES_old.DLL, quindi selezionare l'opzione Riprova nel messaggio di errore dell'installazione. In questo modo, sarà possibile continuare l'installazione. Dopo il riavvio, è possibile eliminare il file temporaneo C:\Windows\system32\SQAGTRES_old.DLL.  
+**Soluzione alternativa**: rinominare C:\Windows\system32\SQAGTRES.DLL con un nome temporaneo, ad esempio C:\Windows\system32\SQAGTRES_old.DLL, e selezionare l'opzione Riprova nel messaggio di errore dell'installazione. In questo modo, sarà possibile continuare l'installazione. Dopo il riavvio, è possibile eliminare il file temporaneo C:\Windows\system32\SQAGTRES_old.DLL.  
   
 ## <a name="30-known-issues-fixed-in-this-service-pack"></a>3.0 Problemi noti risolti in questo Service Pack  
 Per un elenco completo dei bug e dei problemi noti risolti in questo Service Pack, vedere questo [articolo riepilogativo della Knowledge Base](https://support.microsoft.com/kb/2630455).  

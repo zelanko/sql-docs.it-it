@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8b369aafc68c7bf06ca56e325c036ffa0c7e4341
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515137"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639358"
 ---
 # <a name="set-datefirst-transact-sql"></a>SET DATEFIRST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ SET DATEFIRST 7 ;
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *number* | **@**_number_var_  
+ *number* |  **@** _number_var_  
  Valore intero che indica il primo giorno della settimana. Può essere uno dei valori seguenti.  
   
 |valore|Primo giorno della settimana|  
@@ -77,7 +77,7 @@ SET DATEFIRST 7 ;
   
  La specifica di SET DATEFIRST non influisce su DATEDIFF. In DATEDIFF viene utilizzata sempre la domenica come primo giorno della settimana per garantire che la funzione sia deterministica.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  

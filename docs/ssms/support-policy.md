@@ -12,11 +12,11 @@ author: dnethi
 ms.author: dinethi
 manager: craigg
 ms.openlocfilehash: 3fa971160eb4a8d2caa4773c4a9c4ccef1b31027
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524608"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62934996"
 ---
 # <a name="sql-server-management-studio-ssms-support-policy"></a>Criteri di supporto per SQL Server Management Studio (SSMS)
 
@@ -36,7 +36,7 @@ Ad esempio, a maggio 2018 è stata rilasciata la versione SSMS 17.7. La versione
 
 Per un'esperienza ottimale, è consigliabile installare la versione più recente tramite https://aka.ms/ssms  
 
-Fase di servizio **Supporto completo**: quando si esegue la versione Current Branch più recente di SQL Server Management Studio, si ricevono tutti gli aggiornamenti, tra cui gli aggiornamenti della sicurezza, gli aggiornamenti critici, le nuove funzionalità e così via.
+Fase di manutenzione **Supporto completo**: quando si esegue la versione Current Branch più recente di SQL Server Management Studio, si ricevono tutti gli aggiornamenti, tra cui gli aggiornamenti della sicurezza, gli aggiornamenti critici, le nuove funzionalità e così via.
 
 
 

@@ -13,18 +13,18 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fbb29e8e8f694c76ac7fab7340a3f90d7e5c7ea3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624750"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047815"
 ---
 # <a name="create-and-access-tables-in-tempdb-from-stored-procedures"></a>Creare e accedere alle tabelle in TempDB da stored procedure
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   La creazione e l'accesso alle tabelle in TempDB dalle stored procedure compilate in modo nativo non è supportato. Usare invece tabelle ottimizzate per la memoria con DURABILITY=SCHEMA_ONLY o tipi di tabella e variabili di tabella. 
 
-Per altre informazioni sull'ottimizzazione per la memoria degli scenari di tabella temporanea e variabile di tabella, vedere: [Faster temp table and table variable by using memory optimization](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)(Tabella temporanea e variabile di tabella più rapide con l'ottimizzazione per la memoria).
+Per altre informazioni dettagliate sull'ottimizzazione della memoria di scenari con tabelle temporanee e variabili di tabella, vedere: [Tabella temporanea e variabile di tabella più rapide con l'ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
   
   L'esempio seguente mostra come usare una variabile di tabella **@OrderQuantityByProduct** di tipo **dbo.OrderQuantityByProduct**anziché una tabella temporanea con tre colonne (id, ProductID, Quantity):  
   

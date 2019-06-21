@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17c42f4c43245e8a39251d765f29c378d8cf9d19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788009"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046346"
 ---
 # <a name="mssqlserver2579"></a>MSSQLSERVER_2579
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,10 +31,10 @@ ms.locfileid: "47788009"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC_EXTENT_OUT_OF_RANGE|  
-|Testo del messaggio|Errore di tabella: l'extent ID_P nell'oggetto con ID ID_O, ID di indice ID_I, ID di partizione ID_PN, ID di unità di allocazione ID_A (tipo TIPO) è oltre l'intervallo consentito per questo database.|  
+|Testo del messaggio|Errore di tabella: l'extent ID_P nell'oggetto con ID ID_O, ID di indice ID_I, ID di partizione ID_PN, ID di unità di allocazione ID_A (tipo TYPE) è oltre l'intervallo consentito per questo database.|  
   
 ## <a name="explanation"></a>Spiegazione  
-*P_ID* è l'ID di pagina del form *(filenum:pageinfile)*. Il valore *pageinfile* di questo extent è maggiore della dimensione fisica del file (*filenum)* del database. L'extent è contrassegnato per l'allocazione in una pagina IAM con l'ID di unità di allocazione indicato.  
+*P_ID* è l'ID di pagina del form *(filenum:pageinfile)* . Il valore *pageinfile* di questo extent è maggiore della dimensione fisica del file (*filenum)* del database. L'extent è contrassegnato per l'allocazione in una pagina IAM con l'ID di unità di allocazione indicato.  
   
 ## <a name="user-action"></a>Azione dell'utente  
   

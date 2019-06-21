@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8083e23a59c66185e9c289dc18cdbec1f4e5495
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725759"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62694791"
 ---
 # <a name="mssqlserver701"></a>MSSQLSERVER_701
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ Nell'elenco seguente viene illustrata la procedura generale per la risoluzione d
   
 1.  Verificare se altre applicazioni o servizi utilizzano la memoria nel server specificato. Riconfigurare le applicazioni o i servizi meno critici per utilizzare una quantità di memoria inferiore.  
   
-2.  Iniziare a raccogliere i dati dei contatori di Performance Monitor per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: Gestione buffer** e **SQL Server: Gestione memoria**.  
+2.  Iniziare a raccogliere i dati dei contatori di Performance Monitor per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Gestione buffer**, **SQL Server: Memory Manager**.  
   
 3.  Verificare i seguenti parametri di configurazione della memoria di SQL Server:  
   
@@ -67,7 +67,7 @@ Per aumentare la quantità di memoria disponibile per [!INCLUDE[ssNoVersion](../
   
 -   Se le risorse vengono utilizzate da altre applicazioni oltre a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], provare ad arrestarne l'esecuzione oppure a eseguirle in un server distinto. In questo modo sarà possibile eliminare le richieste di memoria esterne.  
   
--   Se è stata configurata l'opzione **max server memory,**, aumentarne il valore impostato.  
+-   Se è stata configurata l'opzione **max server memory,** , aumentarne il valore impostato.  
   
 Eseguire i comandi DBCC seguenti per liberare diverse cache in memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

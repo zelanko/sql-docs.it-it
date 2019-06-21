@@ -13,11 +13,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: db78cdc744ec73e0f2fb8b465187eaac84a2fae2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526517"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661128"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Sviluppare con Always Encrypted e il provider di dati .NET Framework
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ Always Encrypted consente alle applicazioni client di eseguire la crittografia d
 ## <a name="prerequisites"></a>Prerequisites
 
 - Configurare Always Encrypted nel database. Ciò implica il provisioning di chiavi Always Encrypted e l'impostazione della crittografia per le colonne di database selezionate. Se non è presente un database in cui Always Encrypted è configurato, seguire le istruzioni fornite nel blog di [introduzione a Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_5).
-- Verificare che .NET Framework versione 4.6 o successiva sia installato nel computer di sviluppo. Per informazioni dettagliate, vedere [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx). È necessario anche assicurarsi che .NET Framework versione 4.6 o successiva sia configurato come versione di .NET Framework di destinazione nell'ambiente di sviluppo. Se si usa Visual Studio, vedere [Procedura: Destinare una versione di .NET Framework](https://msdn.microsoft.com/library/bb398202.aspx). 
+- Verificare che .NET Framework versione 4.6 o successiva sia installato nel computer di sviluppo. Per informazioni dettagliate, vedere [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx). È necessario anche assicurarsi che .NET Framework versione 4.6 o successiva sia configurato come versione di .NET Framework di destinazione nell'ambiente di sviluppo. Se si usa Visual Studio, vedere [Procedura: Assegnare come destinazione una versione di .NET Framework](https://msdn.microsoft.com/library/bb398202.aspx). 
 
 > [!NOTE]
 > Il livello di supporto per Always Encrypted varia in base alle specifiche versioni di .NET Framework. Per informazioni dettagliate, vedere la sezione Riferimento all'API di Always Encrypted riportata di seguito. 
@@ -282,7 +282,7 @@ Il provider di dati .NET Framework per SQL Server viene fornito con i seguenti p
 | Classe | Descrizione | Nome del provider (ricerca) |
 |:---|:---|:---|
 |Classe SqlColumnEncryptionCertificateStoreProvider| Un provider per l'archivio certificati di Windows. | MSSQL_CERTIFICATE_STORE |
-|[Classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**Nota:** questo provider è disponibile in .NET Framework 4.6.1 e versioni successive. |Un provider di archivio delle chiavi che supporta [Microsoft Cryptography API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx). In genere, un archivio di questo tipo è un modulo di protezione hardware, ovvero un dispositivo fisico che protegge e gestisce le chiavi digitali e fornisce l'elaborazione della crittografia.  | MSSQL_CNG_STORE|
+|[Classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**Nota:** questo provider è disponibile in .NET Framework 4.6.1 e versioni successive. |Un provider di un archivio delle chiavi che supporta l'[API Cryptography Next Generation (CNG) Microsoft](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx). In genere, un archivio di questo tipo è un modulo di protezione hardware, ovvero un dispositivo fisico che protegge e gestisce le chiavi digitali e fornisce l'elaborazione della crittografia.  | MSSQL_CNG_STORE|
 | [Classe SqlColumnEncryptionCspProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncspprovider.aspx)<br><br>**Nota:** questo provider è disponibile in .NET Framework 4.6.1 o versioni successive.| Un provider di un archivio delle chiavi che supporta [Microsoft CryptoAPI (CAPI)](https://msdn.microsoft.com/library/aa266944.aspx). In genere, un archivio di questo tipo è un modulo di protezione hardware, ovvero un dispositivo fisico che protegge e gestisce le chiavi digitali e fornisce l'elaborazione della crittografia.| MSSQL_CSP_PROVIDER |
   
 Per usare questi provider non è necessario apportare alcuna modifica del codice dell'applicazione, ma tenere presente quanto segue:
@@ -511,7 +511,7 @@ Con SqlBulkCopy, è possibile copiare dati, che sono già crittografati e archiv
 
 - Assicurarsi che la configurazione di crittografia della tabella di destinazione sia identica alla configurazione della tabella di origine. In particolare, entrambe le tabelle devono avere le stesse colonne crittografate e le colonne devono essere crittografate usando gli stessi tipi di crittografia e le stesse chiavi di crittografia. Nota: se una o più colonne di destinazione sono crittografate in modo diverso dalla relativa colonna di origine corrispondente, non sarà possibile decrittografare i dati nella tabella di destinazione dopo l'operazione di copia. I dati risulteranno danneggiati.
 - Configurare entrambe le connessioni di database, per la tabella di origine e la tabella di destinazione, senza Always Encrypted abilitato. 
-- Impostare l'opzione AllowEncryptedValueModifications (vedere [SqlBulkCopyOptions](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopyoptions.aspx)). Nota: prestare attenzione quando si specifica AllowEncryptedValueModifications; questa operazione può causare, infatti, il danneggiamento del database perché il provider di dati .NET Framework per SQL Server non verifica se i dati vengono effettivamente crittografati o se vengono crittografati correttamente usando lo stesso tipo di crittografia, l'algoritmo e la chiave come colonna di destinazione.
+- Impostare l'opzione AllowEncryptedValueModifications (vedere [SqlBulkCopyOptions](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopyoptions.aspx)). Nota: prestare attenzione quando si specifica AllowEncryptedValueModifications; questa operazione può causare il danneggiamento del database perché il provider di dati .NET Framework per SQL Server non verifica se i dati vengono effettivamente crittografati o se vengono crittografati correttamente usando lo stesso tipo di crittografia, l'algoritmo e la chiave come colonna di destinazione.
 
 Si noti che l'opzione AllowEncryptedValueModifications è disponibile in .NET Framework 4.6.1 e versioni successive.
 
@@ -552,7 +552,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 |nome|Descrizione|Introdotta nella versione di .NET
 |:---|:---|:---
 |[Classe SqlColumnEncryptionCertificateStoreProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Un provider di archivi di chiavi per l'archivio certificati di Windows.|  4.6
-|[Classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Un provider di archivi di chiavi per l'API di crittografia di Microsoft: Next Generation (CNG).|  4.6.1
+|[Classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Un provider di archivi di chiavi per l'API Cryptography Next Generation (CNG) Microsoft.|  4.6.1
 |[Classe SqlColumnEncryptionCspProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncspprovider.aspx)|Un provider di archivio di chiavi CAPI di Microsoft sulla base dei provider di servizi di crittografia (CSP).|4.6.1  
 |[classe SqlColumnEncryptionKeyStoreProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptionkeystoreprovider.aspx)|Classe base per tutti i provider di archivi di chiavi.|  4.6
 |[Enumerazione SqlCommandColumnEncryptionSetting](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommandcolumnencryptionsetting.aspx)|Impostazioni per abilitare la crittografia e la decrittografia per una connessione al database.|4.6  
@@ -571,7 +571,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 - [Always Encrypted (motore di database)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Blog sulla Crittografia sempre attiva](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
-- [Esercitazione database SQL: Proteggere i dati sensibili con Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
+- [Esercitazione su database SQL: Proteggere i dati sensibili con Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 
 
 

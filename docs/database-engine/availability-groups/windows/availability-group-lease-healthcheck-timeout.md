@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 08794856151267477753b1b756a63b6eb897b7f7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 63d16dd3856fc680ab580451f769bd29aeabeef4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66761836"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140603"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Funzionamento e linee guida per i timeout lease, cluster e controllo integrità per i gruppi di disponibilità Always On 
 
@@ -46,7 +46,7 @@ A differenza di quanto accade in altri meccanismi di failover, nel meccanismo le
 
 Il meccanismo lease applica la sincronizzazione tra SQL Server e il cluster di failover di Windows Server. Quando viene eseguito un comando di failover, il servizio cluster esegue una chiamata offline alla DLL della risorsa della replica primaria corrente. Prima la risorsa DLL prova a portare offline il gruppo di disponibilità tramite una stored procedure. Se la stored procedure ha esito negativo o registra un timeout, l'errore viene segnalato al servizio cluster, che esegue un comando di interruzione. Anche tale comando prova a eseguire la stessa stored procedure, ma questa volta il cluster non attende che la DLL della risorsa segnali la riuscita o l'errore prima di portare online il gruppo di disponibilità su una nuova replica. Se questa seconda chiamata di procedura ha esito negativo, l'host di risorse deve fare affidamento sul meccanismo lease per portare offline l'istanza. Quando la DLL della risorsa viene chiamata per portare offline il gruppo di disponibilità la DLL della risorsa segnala l'evento di arresto lease, attivando il thread di lavoro lease di SQL Server per portare offline il gruppo di disponibilità. Anche se questo evento di arresto non viene segnalato, il lease scade e la replica passa allo stato di risoluzione. 
 
-Il lease è principalmente un meccanismo di sincronizzazione tra l'istanza primaria e il cluster, ma può anche creare condizioni di errore in casi per cui non sarebbe stato necessario eseguire il failover. Ad esempio, condizioni come utilizzo elevato della CPU, memoria insufficiente (scarsa memoria virtuale, paging dei processi), mancata risposta da parte del processo SQL durante la generazione di un dump di memoria, blocco a livello di sistema, cluster (WSFC) offline a causa della perdita del quorum possono impedire il rinnovo del lease da parte dell'istanza SQL Server e causare un failover. 
+Il lease è principalmente un meccanismo di sincronizzazione tra l'istanza primaria e il cluster, ma può anche creare condizioni di errore in casi per cui non sarebbe stato necessario eseguire il failover. Ad esempio, utilizzo della CPU elevato, condizioni di memoria insufficiente (scarsa memoria virtuale, paging dei processi), mancata risposta da parte del processo SQL durante la generazione di un dump della memoria, blocco a livello di sistema, cluster (WSFC) offline a causa della perdita del quorum possono impedire il rinnovo del lease da parte dell'istanza SQL Server e causare un riavvio o un failover. 
 
 ## <a name="guidelines-for-cluster-timeout-values"></a>Linee guida per i valori di timeout cluster 
 
@@ -156,7 +156,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
   
  | Impostazione di timeout | Scopo | Compreso tra | Utilizzi | IsAlive e LooksAlive | Cause | Risultato 
  | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
- | Timeout lease </br> **Impostazione predefinita: 20000** | Impedire lo split brain | Da primaria a cluster </br> (HADR) | [Oggetti evento di Windows](/windows/desktop/Sync/event-objects)| Usati in entrambi | Sistema operativo bloccato, memoria virtuale insufficiente, generazione di dump, massimo utilizzo della CPU, WSFC inattivo (perdita di quorum) | Risorsa del gruppo di disponibilità offline-online, failover |  
+ | Timeout lease </br> **Impostazione predefinita: 20000** | Impedire lo split brain | Da primaria a cluster </br> (HADR) | [Oggetti evento di Windows](/windows/desktop/Sync/event-objects)| Usati in entrambi | Sistema operativo bloccato, memoria virtuale insufficiente, working set paging, generazione di dump, massimo utilizzo della CPU, WSFC inattivo (perdita di quorum) | Risorsa del gruppo di disponibilità offline-online, failover |  
  | Timeout sessione </br> **Impostazione predefinita: 10000** | Informare del problema di comunicazione tra replica primaria e secondaria | Da secondaria a primaria </br> (HADR) | [Socket TCP (messaggi inviati tramite l'endpoint di mirroring del database)](/windows/desktop/WinSock/windows-sockets-start-page-2) | Usati in nessuna delle due | Comunicazione di rete, </br> problemi nella replica secondaria - inattiva, sistema operativo bloccato, contesa di risorse | Secondaria - DISCONNESSA | 
  |Timeout controllo integrità  </br> **Impostazione predefinita: 30000** | Indicare il timeout durante il tentativo di determinare l'integrità della replica primaria | Da cluster a primaria </br> (FCI e HADR) | [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) di T-SQL | Usati in entrambi | Condizioni di errore soddisfatte, sistema operativo bloccato, memoria virtuale insufficiente, taglio del working set, generazione di dump, WSFC (perdita di quorum), problemi dell'utilità di pianificazione (utilità di pianificazione con deadlock)| Risorsa del gruppo di disponibilità offline-online o failover, riavvio/failover FCI |  
   | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; |

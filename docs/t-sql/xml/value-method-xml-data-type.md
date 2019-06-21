@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0a208baaf237987c9f3e544da4d02dca72b191f9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021452"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62857325"
 ---
 # <a name="value-method-xml-data-type"></a>Metodo value() (tipo di dati xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ value (XQuery, SQLType)
  Il metodo **value()** usa l'operatore [!INCLUDE[tsql](../../includes/tsql-md.md)] CONVERT in modo implicito e prova a convertire il risultato dell'espressione XQuery, ovvero la rappresentazione della stringa serializzata, dal tipo XSD al tipo SQL corrispondente specificato dalla conversione [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per altre informazioni sulle regole relative al cast del tipo per CONVERT, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 > [!NOTE]  
->  Per motivi di prestazioni, anziché usare il metodo **value()** in un predicato per eseguire il confronto con un valore relazionale, è consigliabile usare **exist()** con **sql:column()**. Questa operazione è illustrata nell'esempio D seguente.  
+>  Per motivi di prestazioni, anziché usare il metodo **value()** in un predicato per eseguire il confronto con un valore relazionale, è consigliabile usare **exist()** con **sql:column()** . Questa operazione è illustrata nell'esempio D seguente.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -73,7 +73,7 @@ SELECT @ProdID
   
  Benché nell'istanza XML sia presente un solo attributo `ProductID`, in base alle regole della tipizzazione statica è necessario specificare in modo esplicito che l'espressione di percorso restituisce un singleton. Alla fine dell'espressione di percorso viene pertanto specificato `[1]`. Per altre informazioni sulla tipizzazione statica, vedere [XQuery e tipizzazione statica](../../xquery/xquery-and-static-typing.md).  
   
-### <a name="b-using-the-value-method-to-retrieve-a-value-from-an-xml-type-column"></a>b. Utilizzo del metodo value() per recuperare un valore da una colonna di tipo xml  
+### <a name="b-using-the-value-method-to-retrieve-a-value-from-an-xml-type-column"></a>B. Utilizzo del metodo value() per recuperare un valore da una colonna di tipo xml  
  La query seguente viene eseguita su una colonna di tipo **xml** (`CatalogDescription`) nel database `AdventureWorks`. La query recupera i valori dell'attributo `ProductModelID` da ognuna delle istanze XML archiviate nella colonna.  
   
 ```  
@@ -136,7 +136,7 @@ Result
 ```  
   
 ### <a name="d-using-the-exist-method-instead-of-the-value-method"></a>D. Utilizzo del metodo exist() in sostituzione del metodo value()  
- Per motivi relativi alle prestazioni, anziché utilizzare il metodo `value()` in un predicato per eseguire il confronto con un valore relazionale, è consigliabile utilizzare `exist()` con `sql:column()`. Ad esempio  
+ Per motivi relativi alle prestazioni, anziché utilizzare il metodo `value()` in un predicato per eseguire il confronto con un valore relazionale, è consigliabile utilizzare `exist()` con `sql:column()`. Esempio:  
   
 ```  
 CREATE TABLE T (c1 int, c2 varchar(10), c3 xml)  

@@ -19,12 +19,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bfaeb323e940ca2d289ddae58aaf679bed9fffa
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 852b98c1ee0eecba21b426c74397985208fd2178
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993721"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140794"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -127,6 +127,8 @@ Quando l'utente **RUser1** esegue uno script esterno, il valore di `libPath` pu�
 Specifica il contenuto del pacchetto per una piattaforma specifica. È supportato soltanto un elemento di tipo file per piattaforma.
 
 Il file può essere specificato usando il percorso locale o il percorso di rete.
+
+Quando si prova ad accedere al file specificato in **<client_library_specifier>** , SQL Server rappresenta il contesto di sicurezza dell'account di accesso di Windows corrente. Se **<client_library_specifier>** specifica un percorso di rete (percorso UNC), la rappresentazione dell'account di accesso corrente non viene riportata nel percorso di rete a causa dei limiti di delega. In questo caso, l'accesso viene eseguito tramite il contesto di sicurezza dell'account del servizio SQL Server. Per altre informazioni, vedere [Credenziali (motore di database)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
 
 Facoltativamente, è possibile specificare una piattaforma del sistema operativo per il file. È consentito un solo elemento di tipo file o un contenuto per piattaforma del sistema operativo per un linguaggio o un runtime specifico.
 

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 462b14902e9a0a5e830e3359d3db4474a150fd5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827350"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62686848"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47827350"
 |**Errore**|**int**|Numero di errore di un evento specifico. Corrisponde spesso al numero di errore archiviato nella vista del catalogo **sys.messages** .|31|Sì|  
 |**EventClass**|**int**|Tipo di evento = 58.|27|no|  
 |**EventSequence**|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
-|**EventSubClass**|**int**|Tipo di sottoclasse di evento:<br /><br /> 1: statistiche create/aggiornate in modo sincrono; la colonna **TextData** indica le statistiche e dove sono state create o aggiornate.<br /><br /> 2: aggiornamento statistiche asincrono; processo in coda.<br /><br /> 3: aggiornamento statistiche asincrono; processo in avvio.<br /><br /> 4: aggiornamento statistiche asincrono; processo completato.|21|Sì|  
+|**EventSubClass**|**int**|Tipo di sottoclasse di evento:<br /><br /> 1: statistiche create/aggiornate in modo sincrono; la colonna **TextData** indica le statistiche e se sono state create o aggiornate.<br /><br /> 2: aggiornamento statistiche asincrono; processo in coda.<br /><br /> 3: aggiornamento statistiche asincrono; processo in avvio.<br /><br /> 4: aggiornamento statistiche asincrono; processo completato.|21|Sì|  
 |**GroupID**|**int**|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
 |**HostName**|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |**IndexID**|**int**|ID della voce di statistiche/indice nell'oggetto interessato dall'evento. Per determinare l'ID dell'indice per un oggetto, utilizzare la colonna **index_id** della vista del catalogo **sys.indexes** .|24|Sì|  
@@ -54,7 +54,7 @@ ms.locfileid: "47827350"
 |**SPID**|**int**|ID della sessione in cui si è verificato l'evento.|12|Sì|  
 |**StartTime**|**datetime**|Ora di inizio dell'evento, se disponibile.|14|Sì|  
 |**Esito positivo**|**int**|0 = errore.<br /><br /> 1 = esito positivo.<br /><br /> 2 = ignorato a causa di limitazione del server (MSDE).|23|Sì|  
-|**TextData**|**ntext**|Il contenuto della colonna dipende dal fatto che le statistiche vengano aggiornate in modo sincrono (**EventSubClass** 1) o asincrono (**EventSubClass** 2, 3 o 4):<br /><br /> 1: elenca le statistiche aggiornate/create<br /><br /> 2, 3 o 4: NULL; la colonna **IndexID** viene popolata con l'ID dell'indice/statistiche per le statistiche aggiornate.|1|Sì|  
+|**TextData**|**ntext**|Il contenuto della colonna dipende dal fatto che le statistiche vengano aggiornate in modo sincrono (**EventSubClass** 1) o asincrono (**EventSubClass** 2, 3 o 4):<br /><br /> 1: elenca le statistiche aggiornate/create<br /><br /> 2, 3 o 4: NULL. La colonna **IndexID** viene popolata con l'ID indice/statistiche per le statistiche aggiornate.|1|Sì|  
 |**TransactionID**|**bigint**|ID della transazione assegnato dal sistema.|4|Sì|  
 |**Tipo**|**int**|Tipo di processo.|57|Sì|  
   

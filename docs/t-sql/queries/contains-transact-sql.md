@@ -36,11 +36,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 4afc59a5901497fc3112cff3a06bbe20dd3ce04d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334808"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62467006"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -143,7 +143,7 @@ CONTAINS (
   
 ## <a name="arguments"></a>Argomenti  
  *column_name*  
- Nome di una colonna con indicizzazione full-text della tabella specificata nella clausola FROM. La colonna o le colonne possono essere di tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** r **varbinary(max)**.  
+ Nome di una colonna con indicizzazione full-text della tabella specificata nella clausola FROM. La colonna o le colonne possono essere di tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** r **varbinary(max)** .  
   
  *column_list*  
  Specifica due o più colonne, separate da virgole. *column_list*deve essere racchiuso tra parentesi. La lingua di tutte le colonne di *column_list* deve essere la stessa, a meno che non sia specificato *language_term*.  
@@ -313,7 +313,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  Specifica che le righe restituite dalla query corrispondono a un elenco di parole e di frasi, a ognuna delle quali può essere associato un valore di ponderazione facoltativo.  
   
  ISABOUT  
- Specifica la parola chiave  *\<weighted_term >*.  
+ Specifica la parola chiave  *\<weighted_term >* .  
   
  WEIGHT(*weight_value*)  
  Specifica un valore di ponderazione compreso tra 0.0 e 1.0. Ogni componente di *\<weighted_term>* può includere un valore *weight_value*. *weight_value* consente di modificare l'effetto delle varie parti di una query sul valore di pertinenza assegnato a ogni riga che soddisfa la query. WEIGHT non ha alcun effetto sui risultati delle query CONTAINS, ma ha effetto sul valore di pertinenza nelle query [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md).  
@@ -321,14 +321,14 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
 > [!NOTE]  
 >  Il separatore decimale è sempre un punto, indipendentemente dalle impostazioni locali del sistema operativo.  
   
- { AND | & } | { AND NOT | &! } | { OR | | }   
+ { AND | & } | { AND NOT | &! } | { OR | | }  
  Specifica un'operazione logica tra due condizioni di ricerca del predicato CONTAINS.  
   
  { AND | & }  
- Indica che devono essere soddisfatte entrambe le condizioni di ricerca del predicato CONTAINS. Per rappresentare l'operatore AND, è possibile utilizzare il carattere e commerciale (&) anziché la parola chiave AND.  
+ Indica che devono essere soddisfatte entrambe le condizioni di ricerca del predicato CONTAINS. Per rappresentare l'operatore AND, è possibile usare il carattere e commerciale (&) anziché la parola chiave AND.  
   
  { AND NOT | &! }  
- Indica che la seconda condizione di ricerca non deve essere soddisfatta. Per rappresentare l'operatore AND NOT, è possibile utilizzare il carattere e commerciale seguito dal punto esclamativo (&!) anziché la parola chiave AND NOT.  
+ Indica che la seconda condizione di ricerca non deve essere soddisfatta. Per rappresentare l'operatore AND NOT, è possibile usare il carattere e commerciale seguito dal punto esclamativo (&!) anziché la parola chiave AND NOT.  
   
  { OR | | }  
  Indica che deve essere soddisfatta una delle due condizioni di ricerca del predicato CONTAINS. Per rappresentare l'operatore OR, è possibile utilizzare il carattere barra (|) anziché la parola chiave OR.  
@@ -385,7 +385,7 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-### <a name="b-using-contains-and-phrase-with-simpleterm"></a>b. Uso di CONTAINS e di una frase con \<simple_term>  
+### <a name="b-using-contains-and-phrase-with-simpleterm"></a>B. Uso di CONTAINS e di una frase con \<simple_term>  
  Nell'esempio seguente vengono restituiti tutti i prodotti che contengono la frase `Mountain` o `Road`.  
   
 ```sql  
