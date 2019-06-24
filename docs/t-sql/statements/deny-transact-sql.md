@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3ca28e379188c13c266871c4b2afdeecca773bf
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: d14ee4d8bef4e9b7ada7ee558ca2524538775148
+ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361651"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67166375"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -128,7 +128,8 @@ DENY
  Indica che l'autorizzazione viene negata all'entità specificata e a tutte le entità alle quali l'entità ha concesso l'autorizzazione. Obbligatorio quando l'entità dispone dell'autorizzazione con GRANT OPTION.  
   
  AS *principal*  
-  Usare la clausola AS principal per indicare che l'entità registrata come l'utente che nega l'autorizzazione deve essere un'entità diversa dalla persona che esegue l'istruzione. Si supponga ad esempio che l'utente Mary sia principal_id 12 e l'utente Raul sia principal 15. Mary esegue `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`. Ora la tabella sys.database_permissions indicherà l'utente 15 (Raul) come grantor_principal_id dell'istruzione di negazione anche se l'istruzione è stata effettivamente eseguita dall'utente 13 (Mary).
+ Specifica un'entità dalla quale l'entità che esegue la query ottiene il diritto di negare l'autorizzazione.
+Usare la clausola AS principal per indicare che l'entità registrata come l'utente che nega l'autorizzazione deve essere un'entità diversa dalla persona che esegue l'istruzione. Si supponga ad esempio che l'utente Mary sia principal_id 12 e l'utente Raul sia principal 15. Mary esegue `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`. Ora la tabella sys.database_permissions indicherà l'utente 15 (Raul) come grantor_principal_id dell'istruzione di negazione anche se l'istruzione è stata effettivamente eseguita dall'utente 13 (Mary).
   
 L'uso di AS in questa istruzione non implica la possibilità di rappresentare un altro utente.  
   
@@ -148,7 +149,7 @@ L'uso di AS in questa istruzione non implica la possibilità di rappresentare un
 > [!CAUTION]  
 >  Se si nega l'autorizzazione CONTROL SERVER, viene implicitamente negata anche l'autorizzazione CONNECT SQL per il server. Un'entità a cui viene negata l'autorizzazione CONTROL SERVER per un server non può connettersi a tale server.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Il chiamante (o l'entità specificata con l'opzione AS) deve disporre dell'autorizzazione CONTROL per un'entità a protezione diretta o di un'autorizzazione di livello superiore che implichi l'autorizzazione CONTROL per tale entità a protezione diretta. Se si utilizza l'opzione AS, l'entità specificata deve essere proprietaria dell'entità a protezione diretta per la quale viene negata un'autorizzazione.  
   
  Gli utenti che dispongono dell'autorizzazione CONTROL SERVER, ad esempio i membri del ruolo predefinito del server sysadmin, possono negare qualsiasi autorizzazione per qualsiasi entità a protezione diretta nel server. Gli utenti che dispongono dell'autorizzazione CONTROL per il database, ad esempio i membri del ruolo predefinito del database db_owner, possono negare qualsiasi autorizzazione per ogni entità a protezione diretta nel database. Gli utenti che dispongono dell'autorizzazione CONTROL per uno schema possono negare qualsiasi autorizzazione per qualsiasi oggetto nello schema. Se si utilizza la clausola AS, l'entità specificata deve essere proprietaria dell'entità a protezione diretta per cui vengono negate le autorizzazioni.  

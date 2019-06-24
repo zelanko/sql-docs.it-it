@@ -23,12 +23,12 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bf2776df77af8f4ba5fec9595d6ba9cddf927f7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7756482734dac8d4d5982b0ab6d5d58942065697
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65620509"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263516"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Esercitazioni per SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ Di seguito gli argomenti trattati dalle esercitazioni:
 
     In questa esercitazione si apprende come creare lo script di vari oggetti in SSMS, tra cui database e query. 
 
-- [Esercitazione: Uso di modelli in SSMS](templates-ssms.md)
+- [Esercitazione: Uso di modelli in SSMS](../template/templates-ssms.md)
    
     In questa esercitazione si apprende come usare i modelli preesistenti in SSMS. I modelli sono una funzionalità poco nota che consente di archiviare un certo numero di frammenti di codice Transact-SQL per varie attività di amministrazione dei database. 
 

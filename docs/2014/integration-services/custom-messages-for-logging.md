@@ -15,12 +15,12 @@ ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47a14ad3baf1660b2b60cd6b96f2ef51f1e5d727
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a557d3dfddf5989c580b0ba78f9b5d930c548617
+ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060092"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316669"
 ---
 # <a name="custom-messages-for-logging"></a>Messaggi personalizzati per la registrazione
   In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sono disponibili numerosi eventi personalizzati per la scrittura di voci di log per i pacchetti e per molte attività. È possibile utilizzare tali voci per salvare informazioni dettagliate su stato di esecuzione, risultati e problemi, tramite la registrazione di eventi predefiniti o messaggi definiti dall'utente da analizzare in un secondo momento. È ad esempio possibile registrare la data e l'ora di inizio e di fine di un'operazione di inserimento bulk per identificare problemi di prestazioni durante l'esecuzione del pacchetto.  
@@ -258,12 +258,8 @@ ms.locfileid: "66060092"
   
 |Voce di log|Descrizione|  
 |---------------|-----------------|  
-|`XMLOperation`|Fornisce informazioni sull'operazione eseguita dall'attività.|  
-  
-## <a name="related-content"></a>Contenuto correlato  
- Intervento nel blog [Logging custom events for Integration Services tasks](https://go.microsoft.com/fwlink/?LinkId=150580) (Registrazione di eventi personalizzati per le attività di Integration Services) nel sito Web dougbert.com.  
+|`XMLOperation`|Fornisce informazioni sull'operazione eseguita dall'attività.|   
   
 ## <a name="see-also"></a>Vedere anche  
  [Registrazione di Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
-  
   

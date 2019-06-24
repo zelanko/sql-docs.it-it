@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 018a9ddb9a51b9962486d8a9e6d2c6b1945e5885
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4e36454809519b6470c353b9dd77364491a87f8
+ms.sourcegitcommit: 3870a41f49906108136396c4ed8c130691c46b18
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836297"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67298219"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novità di [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -233,7 +233,6 @@ In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.0 sono state an
 |La colonna `command` della vista a gestione dinamica `sys.dm_exec_requests` mostra `SELECT (STATMAN)` se un'operazione `SELECT` è in attesa del completamento di un'operazione di aggiornamento delle statistiche sincrona prima di continuare l'esecuzione di query. | [`sys.dm_exec_requests`](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) |
 |Il nuovo tipo di attesa `WAIT_ON_SYNC_STATISTICS_REFRESH` viene esposto nella vista a gestione dinamica `sys.dm_os_wait_stats`. Mostra il tempo accumulato a livello di istanza dedicato alle operazioni di aggiornamento delle statistiche sincrone.|[`sys.dm_os_wait_stats`](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) |
 |Il pool di buffer ibrido è una nuova funzionalità del motore di database di SQL Server con la quale le pagine del database che si trovano in file di database posizionati in un dispositivo di memoria persistente (PMEM) saranno accessibili direttamente quando necessario.|[Pool di buffer ibrido](../database-engine/configure-windows/hybrid-buffer-pool.md) |
-|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduce il mascheramento dei dati statico. È possibile usare il mascheramento dei dati statico per purificare i dati sensibili in copie di database di SQL Server.|[Maschera dati statica](../relational-databases/security/static-data-masking.md) |
 |Usare alias di tabelle o viste derivate nelle query corrispondenti ai grafi |[Vincoli di arco dei grafi](../relational-databases/tables/graph-edge-constraints.md) |
 | &nbsp; | &nbsp; |
 

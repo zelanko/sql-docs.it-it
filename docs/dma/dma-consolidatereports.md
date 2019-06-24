@@ -2,7 +2,7 @@
 title: Valutare un'azienda e di consolidare i report di valutazione (SQL Server) | Microsoft Docs
 description: Informazioni su come utilizzare DMA per valutare un'azienda e consolidare i report di valutazione prima di aggiornare SQL Server o la migrazione al Database SQL di Azure.
 ms.custom: ''
-ms.date: 03/19/2019
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: jroth
-ms.openlocfilehash: f9ca00c2390ef0a03369ac21cfe02fcf7ed01392
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0021e5851627e156addb86fa1c136d78d3be2228
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794374"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67313833"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Valutare un'azienda e di consolidare i report di valutazione con DMA
 
@@ -30,22 +30,24 @@ Le istruzioni dettagliate riportate aiutarti a usare Data Migration Assistant pe
 
 - Designare un computer di strumenti della rete da cui verrà avviato DMA. Assicurarsi che il computer disponga della connettività per le destinazioni di SQL Server.
 - Scaricare e installare:
-    - [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) v3.6 o versione successiva.
-    - [PowerShell](https://aka.ms/wmf5download) versione 5.0 o versione successiva.
-    - [.NET framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 o successiva.
-    - [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 o versione successiva.
-    - [Power BI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
-    - [Moduli di Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
+  - [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) v3.6 o versione successiva.
+  - [PowerShell](https://aka.ms/wmf5download) versione 5.0 o versione successiva.
+  - [.NET framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 o successiva.
+  - [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 o versione successiva.
+  - [Desktop di Power BI](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
+  - [Moduli di Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Scaricare ed estrarre:
-    - Il [modello di Power BI i report di DMA](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip).
-    - Il [LoadWarehouse script](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip).
+  - Il [modello di Power BI i report di DMA](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip).
+  - Il [LoadWarehouse script](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip).
 
 ## <a name="loading-the-powershell-modules"></a>Il caricamento di moduli di PowerShell
+
 Salvare i moduli di PowerShell nella directory dei moduli di PowerShell consente di chiamare i moduli senza la necessità di caricare in modo esplicito prima dell'uso.
 
 Per caricare i moduli, procedere come segue:
+
 1. Passare a c:\Programmi\Microsoft files\windowspowershell\modules. e quindi creare una cartella denominata **DataMigrationAssistant**.
-2. Aprire il [moduli di PowerShell](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/3/PowerShell-Modules2.zip)e quindi salvarle nella cartella creata.
+2. Aprire il [moduli di PowerShell](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/4/PowerShell-Modules2.zip)e quindi salvarle nella cartella creata.
 
       ![Moduli di PowerShell](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -64,9 +66,11 @@ Per caricare i moduli, procedere come segue:
     PowerShell è ora necessario caricare questi moduli automaticamente quando si avvia una nuova sessione di PowerShell.
 
 ## <a name="create-inventory"></a> Creare un inventario delle istanze di SQL Server
+
 Prima di eseguire lo script di PowerShell per valutare i computer SQL Server, è necessario creare un inventario dei server SQL che si desidera valutare.
 
 L'inventario può trovarsi in uno dei due formati:
+
 - File CSV di Excel
 - Tabella di SQL Server
 
@@ -79,7 +83,7 @@ L'inventario può trovarsi in uno dei due formati:
 
 
 Quando si usa un file csv per importare i dati, assicurarsi che esistono solo due colonne di dati - **nome istanza** e **Nome Database**, e che le colonne non includono le righe di intestazione.
- 
+
  ![contenuto del file CSV](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 
 ### <a name="if-using-a-sql-server-table"></a>Se si usa una tabella di SQL Server
@@ -88,6 +92,7 @@ Quando si usa un file csv per importare i dati, assicurarsi che esistono solo du
 > Per le istanze predefinite, impostare il nome dell'istanza di MSSQLServer.
 
 Creare un database denominato **EstateInventory** e una tabella denominata **DatabaseInventory**. La tabella che contiene questi dati di inventario può avere qualsiasi numero di colonne, fino a quando esistono quattro colonne seguenti:
+
 - ServerName
 - InstanceName
 - DatabaseName
@@ -102,6 +107,7 @@ Il vantaggio dell'uso di una tabella di SQL Server tramite un file CSV è che è
 Tenere presente che in base al numero di oggetti e della loro complessità, una valutazione può richiedere un estremamente lungo tempo (ore +), pertanto è consigliabile separare la valutazione in blocchi gestibili.
 
 ## <a name="running-a-scaled-assessment"></a>Esegue una valutazione della scalabilità
+
 Dopo il caricamento di moduli di PowerShell nella directory dei moduli e creazione di un inventario, è necessario eseguire una valutazione con scalabilità, aprire PowerShell e che esegue la funzione dmaDataCollector.
  
   ![elenchi di dmaDataCollector (funzione)](../dma/media//dma-consolidatereports/dma-dmaDataCollector-function-listing.png)
@@ -144,6 +150,7 @@ I parametri associati alla funzione dmaProcessor sono descritti nella tabella se
 La funzione dmaProcessor dovrebbe richiedere solo alcuni secondi per elaborare un singolo file.
 
 ## <a name="loading-the-data-warehouse"></a>Il caricamento del data warehouse
+
 Dopo il dmaProcessor ha completato l'elaborazione dei file di valutazione, i dati verranno caricati nel database DMAReporting nella tabella dati rapporto. A questo punto, è necessario caricare il data warehouse.
 
 1. Usare lo script LoadWarehouse per popolare i valori mancanti nelle dimensioni.
@@ -155,6 +162,7 @@ Dopo il dmaProcessor ha completato l'elaborazione dei file di valutazione, i dat
       ![LoadWarehouse contenuto caricato](../dma/media//dma-consolidatereports/dma-LoadWarehouse-loaded.png)
 
 ## <a name="set-your-database-owners"></a>Impostare i proprietari del database
+
 Sebbene non sia obbligatorio, per ottenere il massimo valore dai report, è consigliabile impostare i proprietari di database **dimDBOwner** dimensione e quindi aggiornare **DBOwnerKey** nel  **FactAssessment** tabella.  Seguendo questa procedura consentirà di sezionamento e filtro del report di Power BI in base ai proprietari di database specifici.
 
 È anche possibile usare lo script LoadWarehouse per fornire le istruzioni TSQL di base per impostare i proprietari di database.
@@ -176,7 +184,9 @@ Sebbene non sia obbligatorio, per ottenere il massimo valore dai report, è cons
    > Se non è possibile visualizzare i dati che previsti, provare a modificare il segnalibro attivo.  Per altre informazioni, vedere i dettagli nella sezione seguente.
 
 ## <a name="working-with-dma-reports"></a>Utilizzo dei report DMA
+
 Per usare i report DMA, usare i segnalibri e filtri dei dati per filtrare in base:
+
 - Tipi di valutazione (database SQL di Azure, istanza Gestita SQL di Azure, SQL in locale) 
 - Nome istanza
 - Nome database
@@ -186,11 +196,12 @@ Per accedere al pannello di segnalibri e filtri, selezionare il segnalibro filtr
 
 ![I filtri e i segnalibri report DMA](../dma/media//dma-consolidatereports/dma-report-bookmarks-filters.png)
 
-In questo modo il pannello seguente:
+Se si seleziona il segnalibro filtri abilitata il pannello seguente:
 
 ![Pannello di visualizzazioni dei rapporti DMA](../dma/media//dma-consolidatereports/dma-report-views-blade.png)
 
 È possibile usare i segnalibri per cambiare il contesto di creazione di report tra:
+
 - Valutazioni cloud di Azure SQL DB
 - Valutazioni di cloud di istanza Gestita di SQL Azure
 - Valutazioni in locale
@@ -201,10 +212,11 @@ Per nascondere il pannello di filtri, CTRL + clic sul pulsante indietro:
 
 ![Visualizzazioni dei rapporti DMA pulsante Indietro](../dma/media//dma-consolidatereports/dma-report-bookmarks-back.png)
 
-C'è un prompt dei comandi nella parte inferiore della pagina del report per mostrare se attualmente si applica un filtro in uno qualsiasi degli elementi seguenti:
-* FactAssessment-InstanceName
-* FactAssessment-DatabaseName
-* dimDBOwner - DBOwner
+C'è un prompt dei comandi nella parte inferiore della pagina del report per mostrare se attualmente si applica un filtro in uno qualsiasi dei seguenti elementi:
+
+- FactAssessment-InstanceName
+- FactAssessment-DatabaseName
+- dimDBOwner - DBOwner
 
 ![Prompt dei comandi filtro applicato](../dma/media//dma-consolidatereports/dma-filter-applied-prompt.png)
 
@@ -212,6 +224,7 @@ C'è un prompt dei comandi nella parte inferiore della pagina del report per mos
 > Se si esegue solo una valutazione di Database SQL di Azure, vengono popolati solo i report di Cloud. Viceversa, se si esegue solo una valutazione in locale, vengono popolati solo i report in locale. Tuttavia, se si esegue un'istanza di Azure sia una valutazione di On-Premise e quindi caricano entrambi valutazioni nel warehouse, è possibile passare tra i report di Cloud e locale facendo clic CTRL l'icona associata.
 
 ## <a name="reports-visuals"></a>Oggetti visivi di report
+
 I dettagli visualizzati nei report di Power BI viene visualizzato nelle sezioni seguenti.
 
 ### <a name="readiness-"></a>% Conformità
@@ -231,6 +244,7 @@ Questo oggetto visivo Mostra il numero di database che sono pronti per eseguire 
   ![Bucket Readiness DMA](../dma/media//dma-consolidatereports/dma-readiness-bucket.png)
 
 Questo oggetto visivo Mostra una suddivisione dei database da parte dei bucket di idoneità seguenti:
+
 - PRONTO PER 100%
 - PRONTI A 99 75%
 - 50-75% PRONTO
@@ -240,13 +254,14 @@ Questo oggetto visivo Mostra una suddivisione dei database da parte dei bucket d
  
   ![Problemi DMA WordCloud](../dma/media//dma-consolidatereports/dma-issues-word-cloud.png)
 
-Questo oggetto visivo Mostra i problemi che attualmente si verificano all'interno nel contesto di selezione (tutti gli elementi, dell'istanza, database [multipli di]). Maggiore di word viene visualizzato sullo schermo, maggiore il numero di problemi in tale categoria. Si posiziona il puntatore del mouse su una parola Mostra il numero di problemi che si verificano in tale categoria.
+Questo oggetto visivo Mostra i problemi che attualmente si verificano all'interno nel contesto di selezione (tutti gli elementi, dell'istanza, database [multipli di]). Maggiore la parola viene visualizzata sullo schermo, maggiore è il numero di problemi in tale categoria. Si posiziona il puntatore del mouse su una parola Mostra il numero di problemi che si verificano in tale categoria.
 
 ### <a name="database-readiness"></a>Preparazione del database
 
   ![Report di conformità Database DMA](../dma/media//dma-consolidatereports/dma-database-readiness-report.png)
 
 In questa sezione è la parte principale del report, che mostra l'idoneità di un database di istanza. Questo report include una gerarchia di drill-down di:
+
 - InstanceDatabase
 - ChangeCategory
 - Titolo
@@ -270,4 +285,5 @@ Questa attività consente di filtrare il report piano di correzione per il livel
   ![Opzioni di filtro report piano di correzione DMA](../dma/media//dma-consolidatereports/dma-remediation-plan-report-filter-options.png)
 
 ### <a name="script-disclaimer"></a>Dichiarazione di non responsabilità script
+
 *Gli script di esempio forniti in questo articolo non sono supportati in alcun programma di supporto tecnico standard di Microsoft o un servizio. Tutti gli script vengono forniti così come sono senza garanzie di alcun tipo. Microsoft ha declina tutte le garanzie implicite tra cui, in via esemplificativa, qualsiasi garanzia di commerciabilità o di adeguatezza per uno scopo specifico. Il rischio derivante dall'utilizzo o gli script di esempio e documentazione deell'utente. In nessun caso Microsoft, i relativi autori o chiunque altro coinvolti nella creazione, produzione o recapito degli script sarà responsabile per danni (incluso, in via esemplificativa, danni per perdita o mancato guadagno, interruzione dell'attività, perdita di le informazioni aziendali, o altre perdite economiche) derivanti dall'utilizzo di o all'impossibilità di usare gli script di esempio o documentazione, anche se Microsoft sia stata informata della possibilità del verificarsi di tali danni.  Autorizzazione prima di questi script di report in altri siti/repository/blog di ricerca.*
