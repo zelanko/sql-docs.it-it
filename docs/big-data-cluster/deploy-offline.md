@@ -5,16 +5,16 @@ description: Informazioni su come eseguire una distribuzione non in linea di un 
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fd6a1e1e6f2ad661c8a2316c434854095c7f6da5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f3bfcfba0cfb972c7d02042bc98aa461eb110bb
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797893"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388811"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Eseguire una distribuzione non in linea di un cluster di big data di SQL Server
 
@@ -42,7 +42,7 @@ I passaggi seguenti descrivono come il cluster di big data il pull delle immagin
    > [!TIP]
    > Questi comandi usano PowerShell ad esempio, ma è possibile eseguirli da cmd, bash o da qualunque shell dei comandi eseguibili docker. In Linux, aggiungere `sudo` per ogni comando.
 
-1. Eseguire il pull di cluster di big data le immagini del contenitore, ripetere il comando seguente. Sostituire `<SOURCE_IMAGE_NAME>` con ogni [nome immagine](#images). Sostituire `<SOURCE_DOCKER_TAG>` con il tag per i big data cluster versione, ad esempio **ctp3.0**.  
+1. Eseguire il pull di cluster di big data le immagini del contenitore, ripetere il comando seguente. Sostituire `<SOURCE_IMAGE_NAME>` con ogni [nome immagine](#images). Sostituire `<SOURCE_DOCKER_TAG>` con il tag per i big data cluster versione, ad esempio **ctp3.1**.  
 
    ```PowerShell
    docker pull private-repo.microsoft.com/mssql-private-preview/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -84,7 +84,6 @@ Le seguenti immagini del contenitore del cluster dei big data sono necessarie pe
  - **mssql-mlserver-r-runtime**
  - **mssql-mlserver-py-runtime**
  - **mssql-controller**
- - **mssql-portal**
  - **mssql-server-controller**
  - **mssql-monitor-grafana**
  - **mssql-monitor-kibana**
@@ -92,6 +91,8 @@ Le seguenti immagini del contenitore del cluster dei big data sono necessarie pe
  - **mssql-app-service-proxy**
  - **mssql-ssis-app-runtime**
  - **mssql-monitor-telegraf**
+ - **mssql-mleap-serving-runtime**
+  
 
 ## <a id="automated"></a> Script automatizzato
 
@@ -179,9 +180,9 @@ Per installare **kubectl** a un computer offline, usare la procedura seguente.
 Per distribuire dal repository privato, usare la procedura descritta nel [Guida alla distribuzione](deployment-guidance.md), ma usare un file di configurazione di distribuzione personalizzato che specifica le informazioni del repository Docker private. Quanto segue **mssqlctl** comandi illustrano come modificare le impostazioni di Docker in un file di configurazione di distribuzione personalizzato denominato **custom.json**:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.repository=<your-docker-repository>"
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.registry=<your-docker-registry>"
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.imageTag=<your-docker-image-tag>"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.repository=<your-docker-repository>"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.registry=<your-docker-registry>"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.imageTag=<your-docker-image-tag>"
 ```
 
 La distribuzione richiede il nome utente di docker e la password, oppure è possibile specificarli nel **DOCKER_USERNAME** e **DOCKER_PASSWORD** le variabili di ambiente.

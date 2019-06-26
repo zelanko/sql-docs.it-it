@@ -5,16 +5,16 @@ description: Articolo di riferimento per i comandi mssqlctl.
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: acc25e6b3deca199ad774378318e17991614dcaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2601d526710e6cf51de089f7879f0f5517bf86aa
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66779238"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388671"
 ---
 # <a name="mssqlctl"></a>mssqlctl
 
@@ -26,9 +26,11 @@ L'articolo seguente fornisce informazioni di riferimento per la **mssqlctl** del
 |     |     |
 | --- | --- |
 |[app mssqlctl](reference-mssqlctl-app.md) | Creare, eliminare, eseguire e gestire le applicazioni. |
-|[cluster mssqlctl](reference-mssqlctl-cluster.md) | Selezionare, gestire e operare i cluster. |
+|[mssqlctl bdc](reference-mssqlctl-bdc.md) | Selezionare, gestire e utilizzare cluster di Big Data di SQL Server. |
+|[mssqlctl hdfs](reference-mssqlctl-hdfs.md) | Il modulo HDFS fornisce comandi per accedere a un HDFS del file system. |
 [account di accesso mssqlctl](#mssqlctl-login) | Accedere all'endpoint del cluster controller.
 [disconnessione mssqlctl](#mssqlctl-logout) | Disconnettersi dal cluster.
+|[mssqlctl sql](reference-mssqlctl-sql.md) | L'interfaccia CLI DB SQL consente all'utente di interagire con SQL Server tramite T-SQL. |
 ## <a name="mssqlctl-login"></a>account di accesso mssqlctl
 Quando viene distribuito il cluster, verranno visualizzate durante la distribuzione, è consigliabile usare l'endpoint di controller per l'accesso.  Se non si conosce l'endpoint di controller, è possibile con configurazione kube del cluster nel sistema nel percorso predefinito dell'account di accesso <user home>/.kube/config o utilizzano file KUBECONFIG env var, ovvero esportare KUBECONFIG=path/to/.kube/config.
 ```bash

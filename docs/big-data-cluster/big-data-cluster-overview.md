@@ -5,17 +5,17 @@ description: Informazioni sui cluster di big data 2019 di SQL Server (anteprima)
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 12/07/2018
+ms.date: 06/26/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: fed82f9bda8f72d92157de726eb6ae3c6ed1c0c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 667c7a76bfc0b74ab8ee642ccb558a774a1e0e2c
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801886"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388733"
 ---
 # <a name="what-are-sql-server-big-data-clusters"></a>Cluster di Big Data di SQL Server
 
@@ -57,9 +57,7 @@ I cluster di big data di SQL Server consentono di attività sui dati archiviati 
 
 ### <a name="management-and-monitoring"></a>Gestione e monitoraggio
 
-Gestione e monitoraggio vengono forniti tramite una combinazione di strumenti da riga di comando, API, un portale per gli amministratori e viste a gestione dinamica.
-
-Il [portale di amministrazione cluster](cluster-admin-portal.md) è un'interfaccia web che consente di visualizzare lo stato e integrità dei POD nel cluster. Vengono inoltre forniti collegamenti ad altri dashboard per log analitica e dashboard di monitoraggio.
+Gestione e monitoraggio vengono forniti tramite una combinazione di strumenti da riga di comando, API, portali e viste a gestione dinamica.
 
 È possibile utilizzare Data Studio di Azure per eseguire una serie di attività nel cluster di big data. Questa opzione è abilitata per il nuovo **estensione 2019 per Server SQL (anteprima)** . Questa estensione offre:
 

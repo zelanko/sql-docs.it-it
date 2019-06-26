@@ -5,17 +5,17 @@ description: Questo articolo include comandi utili per il monitoraggio e risoluz
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 232c39e6a98f7f55fa3a653735f39c9607fbcbf4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d217e206ff9b41b0b61fa2d0407f530ef31eadf7
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800735"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388721"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>Monitoraggio e risoluzione dei problemi dei cluster di SQL Server i big Data
 
@@ -116,12 +116,11 @@ I servizi seguenti supportano le connessioni esterne per i cluster di big data:
 |---|---|
 | **master-svc-external** | Fornisce l'accesso all'istanza master.<br/>(**EXTERNAL-IP, 31433** e il **SA** utente) |
 | **controller-svc-external** | Supporta gli strumenti e i client che gestiscono il cluster. |
-| **mgmtproxy-svc-external** | Fornisce l'accesso per il [portale di amministrazione Cluster](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal) |
 | **gateway-svc-external** | Fornisce l'accesso al gateway HDFS/Spark.<br/>(**EXTERNAL-IP** e il **radice** utente) |
 | **appproxy-svc-external** | Supporta gli scenari di distribuzione dell'applicazione. |
 
 > [!TIP]
-> Si tratta di un modo per visualizzare i servizi con **kubectl**, ma è anche possibile usare `mssqlctl cluster endpoint list` comando per visualizzare tali endpoint. Per altre informazioni, vedere [ottenere gli endpoint del cluster di big data](deployment-guidance.md#endpoints).
+> Si tratta di un modo per visualizzare i servizi con **kubectl**, ma è anche possibile usare `mssqlctl bdc endpoint list` comando per visualizzare tali endpoint. Per altre informazioni, vedere [ottenere gli endpoint del cluster di big data](deployment-guidance.md#endpoints).
 
 ## <a name="get-service-details"></a>Ottenere i dettagli del servizio
 
@@ -224,10 +223,6 @@ L'esempio seguente ottiene l'indirizzo IP del nodo di `master-0` pod è in esecu
 ```bash
 kubectl get pods master-0 -o yaml -n mssql-cluster | grep hostIP
 ```
-
-## <a name="cluster-administration-portal"></a>Portale di amministrazione cluster
-
-Usare la [portale di amministrazione cluster](cluster-admin-portal.md) per monitorare lo stato del cluster di big data. Ad esempio, durante le distribuzioni, è possibile usare la **distribuzione** scheda. È necessario attendere per il **mgmtproxy-svc-external** avvio prima di accedere a questo portale, pertanto non sarà disponibile all'inizio di una distribuzione del servizio.
 
 ## <a name="kubernetes-dashboard"></a>Dashboard di Kubernetes
 

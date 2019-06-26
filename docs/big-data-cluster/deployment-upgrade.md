@@ -5,16 +5,16 @@ description: Informazioni su come aggiornare i cluster di big data di SQL Server
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3af688d607e8ec2d9dad7efe0d2275840c48cba8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2bde0037933f420147d0467f83f1bcb6428cf526
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782242"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388743"
 ---
 # <a name="how-to-upgrade-sql-server-big-data-clusters"></a>Come aggiornare i cluster di SQL Server i big Data
 
@@ -31,7 +31,7 @@ Attualmente, l'unico modo per aggiornare un cluster di big data a una nuova vers
 1. Eliminare il vecchio cluster con il `mssqlctl delete cluster` comando.
 
    ```bash
-    mssqlctl cluster delete --name <old-cluster-name>
+    mssqlctl bdc delete --name <old-cluster-name>
    ```
 
    > [!Important]
@@ -39,30 +39,24 @@ Attualmente, l'unico modo per aggiornare un cluster di big data a una nuova vers
 
 1. Se si dispone di tutte le versioni precedenti di **mssqlctl** installato, è importante disinstallare **mssqlctl** prima prima di installare la versione più recente.
 
-   Se si sta disinstallando **mssqlctl** corrispondente a CTP 2.2 o eseguito inferiore:
+   Per versioni da CTP 2.3 o versione successiva, eseguire il comando seguente. Sostituire `ctp3.0` nel comando con la versione di **mssqlctl** che si desidera disinstallare. Se la versione è precedente alla versione CTP 3.0, aggiungere un trattino prima il numero di versione (ad esempio, `ctp-2.5`).
 
    ```powershell
-   pip3 uninstall mssqlctl
+   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt
    ```
 
-   Per versioni da CTP 2.3 o versione successiva, eseguire il comando seguente. Sostituire `ctp-2.5` nel comando con la versione di **mssqlctl** che si desidera disinstallare:
-
-   ```powershell
-   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
-   ```
-
-1. Installare la versione più recente di **mssqlctl**. I seguenti comandi installano **mssqlctl** versione CTP 3.0:
+1. Installare la versione più recente di **mssqlctl**. I seguenti comandi installano **mssqlctl** per la versione CTP 3.1:
 
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
    ```
 
    **Linux:**
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt --user
    ```
 
    > [!IMPORTANT]

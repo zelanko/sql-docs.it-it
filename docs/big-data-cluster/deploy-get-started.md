@@ -5,16 +5,16 @@ description: Descrive i passaggi e le risorse per la distribuzione di cluster di
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 31f8b94693ad7c6d242249300a21d051a7afe859
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4379e35b4d86ca462ea97b28c37d2f3b56427292
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797908"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388828"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>Introduzione ai cluster di SQL Server i big Data
 
@@ -47,7 +47,7 @@ I cluster di big data vengono distribuiti come una serie di contenitori correlat
 
 ## <a name="deploy-a-big-data-cluster"></a>Distribuire un cluster Big Data
 
-Dopo la configurazione di Kubernetes, si distribuisce un cluster di big data con il `mssqlctl cluster create` comando. Quando si distribuisce, è possibile eseguire diversi approcci.
+Dopo la configurazione di Kubernetes, si distribuisce un cluster di big data con il `mssqlctl bdc create` comando. Quando si distribuisce, è possibile eseguire diversi approcci.
 
 - Se si distribuisce in un ambiente di sviluppo e test, è possibile scegliere di usare uno dei [le configurazioni predefinite](deployment-guidance.md#deploy) disql **mssqlctl**.
 

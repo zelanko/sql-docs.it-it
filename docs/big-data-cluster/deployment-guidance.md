@@ -5,17 +5,17 @@ description: Informazioni su come distribuire i cluster di big data di SQL Serve
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 15cd412de1dda9d1245859c27d35a7c7f9f52710
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4bd6d260d58b837e2df0d216c28149b6e9a3fa51
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782248"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388776"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Come distribuire i cluster di big data di SQL Server in Kubernetes
 
@@ -82,14 +82,14 @@ I big data opzioni sono definite nei file di configurazione JSON di distribuzion
 
 | Profilo di distribuzione | Ambiente di Kubernetes |
 |---|---|
-| **aks-dev-test.json** | Azure Kubernetes Service (AKS) |
-| **kubeadm-dev-test.json** | Più computer (kubeadm) |
-| **minikube-dev-test.json** | minikube |
+| **aks-dev-test** | Azure Kubernetes Service (AKS) |
+| **kubeadm-dev-test** | Più computer (kubeadm) |
+| **minikube-dev-test** | minikube |
 
-È possibile distribuire un cluster di big data eseguendo **di creazione del cluster mssqlctl**. Questo verrà richiesto di scegliere una delle configurazioni predefinite e quindi in modo semplificato la distribuzione.
+È possibile distribuire un cluster di big data eseguendo **bdc mssqlctl creare**. Questo verrà richiesto di scegliere una delle configurazioni predefinite e quindi in modo semplificato la distribuzione.
 
 ```bash
-mssqlctl cluster create
+mssqlctl bdc create
 ```
 
 In questo scenario, richiesto per tutte le impostazioni che non fanno parte della configurazione predefinita, ad esempio le password. Si noti che le informazioni di Docker viene fornite all'utente da Microsoft come parte del 2019 Server SQL [programma Early Adoption](https://aka.ms/eapsignup).
@@ -99,35 +99,38 @@ In questo scenario, richiesto per tutte le impostazioni che non fanno parte dell
 
 ## <a id="customconfig"></a> Configurazioni personalizzate
 
-È anche possibile personalizzare il proprio file di configurazione di distribuzione. È possibile farlo con i passaggi seguenti:
+È anche possibile personalizzare il proprio profilo di configurazione di distribuzione. È possibile farlo con i passaggi seguenti:
 
-1. Iniziare con uno dei profili di distribuzione standard che corrispondono all'ambiente di Kubernetes. È possibile usare la **elenco di configurazione di cluster mssqlctl** comando per elencare li:
+1. Iniziare con uno dei profili di distribuzione standard che corrispondono all'ambiente di Kubernetes. È possibile usare la **elenco di configurazione di integrazione applicativa dei dati mssqlctl** comando per elencare li:
 
    ```bash
-   mssqlctl cluster config list
+   mssqlctl bdc config list
    ```
 
-1. Per personalizzare la distribuzione, creare una copia del profilo di distribuzione con il **mssqlctl cluster config init** comando. Ad esempio, il comando seguente crea una copia del **aks-dev-test.json** file di configurazione di distribuzione nella directory corrente:
+1. Per personalizzare la distribuzione, creare una copia del profilo di distribuzione con il **mssqlctl bdc config init** comando. Ad esempio, il comando seguente crea una copia del **aks-dev-test** file di configurazione di distribuzione in una directory di destinazione denominata `custom`:
 
    ```bash
-   mssqlctl cluster config init --src aks-dev-test.json --target custom.json
-   ```
-
-1. Per personalizzare le impostazioni nel file di configurazione di distribuzione, è possibile modificarlo in uno strumento valido per la modifica di documenti json, ad esempio Visual Studio Code. Per l'automazione con script, è possibile modificare il file di configurazione personalizzata mediante **gruppo di sezione di configurazione di cluster mssqlctl** comando. Ad esempio, il comando seguente modifica un file di configurazione personalizzato per modificare il nome del cluster distribuito da quello predefinito (**mssql-cluster**) per **test-cluster**:  
-
-   ```bash
-   mssqlctl cluster config section set --config-file custom.json --json-values "metadata.name=test-cluster"
+   mssqlctl bdc config init --source aks-dev-test --target custom
    ```
 
    > [!TIP]
-   > Uno strumento utile per trovare i percorsi JSON è il [analizzatore Online JSONPath](https://jsonpath.com/).
+   > Il `--target` specifica una directory che contiene il file di configurazione in base il `--source` parametro.
+
+1. Per personalizzare le impostazioni nel profilo di configurazione di distribuzione, è possibile modificare il file di configurazione di distribuzione in uno strumento valido per la modifica di file JSON, ad esempio Visual Studio Code. Per l'automazione con script, è possibile modificare anche il profilo di distribuzione personalizzato usando **gruppo di sezione di configurazione di integrazione applicativa dei dati mssqlctl** comando. Ad esempio, il comando seguente modifica un profilo di distribuzione personalizzato per modificare il nome del cluster distribuito da quello predefinito (**mssql-cluster**) per **test-cluster**:  
+
+   ```bash
+   mssqlctl bdc config section set --config-profile custom --json-values "metadata.name=test-cluster"
+   ```
+
+   > [!TIP]
+   > Il `--config-profile` specifica un nome di directory per il profilo di distribuzione personalizzato, ma le modifiche effettive vengono eseguiti per il file JSON di configurazione di distribuzione all'interno di tale directory. Uno strumento utile per trovare i percorsi JSON è il [analizzatore Online JSONPath](https://jsonpath.com/).
 
    Oltre a passare coppie chiave-valore, è anche possibile fornire i valori JSON inline o passare i file di patch JSON. Per altre informazioni, vedere [configurare le impostazioni di distribuzione per i cluster di big data](deployment-custom-configuration.md).
 
-1. Quindi passare il file di configurazione personalizzati **di creazione del cluster mssqlctl**. Si noti che è necessario impostare la necessaria [variabili di ambiente](#env), in caso contrario, verrà richiesto per i valori:
+1. Quindi passare il file di configurazione personalizzati **bdc mssqlctl creare**. Si noti che è necessario impostare la necessaria [variabili di ambiente](#env), in caso contrario, verrà richiesto per i valori:
 
    ```bash
-   mssqlctl cluster create --config-file custom.json --accept-eula yes
+   mssqlctl bdc create --config-profile custom --accept-eula yes
    ```
 
 > [!TIP]
@@ -146,7 +149,7 @@ Le variabili di ambiente seguenti vengono usate per le impostazioni di sicurezza
 | **KNOX_PASSWORD** | La password per utente Knox. |
 | **MSSQL_SA_PASSWORD** | La password dell'utente dell'amministratore di sistema per l'istanza master di SQL. |
 
-Queste variabili di ambiente devono essere impostate prima di chiamare **di creazione del cluster mssqlctl**. Se tutte le variabili non sono impostata, richiesto.
+Queste variabili di ambiente devono essere impostate prima di chiamare **bdc mssqlctl creare**. Se tutte le variabili non sono impostata, richiesto.
 
 Nell'esempio seguente viene illustrato come impostare le variabili di ambiente per Linux (bash) e Windows (PowerShell):
 
@@ -168,10 +171,10 @@ SET DOCKER_USERNAME=<docker-username>
 SET DOCKER_PASSWORD=<docker-password>
 ```
 
-Durante la configurazione variabili di ambiente, è necessario eseguire `mssqlctl cluster create` per attivare la distribuzione. Questo esempio Usa il file di configurazione del cluster creato in precedenza:
+Dopo aver impostato le variabili di ambiente, è necessario eseguire `mssqlctl bdc create` per attivare la distribuzione. Questo esempio Usa il profilo di configurazione del cluster creato in precedenza:
 
 ```
-mssqlctl cluster create --config-file custom.json --accept-eula yes
+mssqlctl bdc create --config-profile custom --accept-eula yes
 ```
 
 Tenere presente le linee guida seguenti:
@@ -182,7 +185,7 @@ Tenere presente le linee guida seguenti:
 
 ## <a id="unattended"></a> Installazione automatica
 
-Per una distribuzione automatica, è necessario impostare tutte le variabili di ambiente necessarie, usare un file di configurazione e chiamare `mssqlctl cluster create` comando con il `--accept-eula yes` parametro. Gli esempi nella sezione precedente illustrano la sintassi per l'installazione automatica.
+Per una distribuzione automatica, è necessario impostare tutte le variabili di ambiente necessarie, usare un file di configurazione e chiamare `mssqlctl bdc create` comando con il `--accept-eula yes` parametro. Gli esempi nella sezione precedente illustrano la sintassi per l'installazione automatica.
 
 ## <a id="monitor"></a> Monitorare la distribuzione
 
@@ -195,7 +198,7 @@ Durante il bootstrap del cluster, la finestra di comando client restituirà lo s
 In meno di 15 a 30 minuti, si dovrebbe ricevere una notifica che il pod controller sia in esecuzione:
 
 ```output
-2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Checkthe mssqlctl.log file for more details.
+2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Check the mssqlctl.log file for more details.
 2019-04-12 15:01:40.0861 UTC | INFO | Controller pod is running.
 2019-04-12 15:01:40.0884 UTC | INFO | Controller Endpoint: https://<ip-address>:30080
 ```
@@ -206,11 +209,8 @@ In meno di 15 a 30 minuti, si dovrebbe ricevere una notifica che il pod controll
 Al termine della distribuzione, l'output invia una notifica di esito positivo:
 
 ```output
-2019-04-12 15:37:18.0271 UTC | INFO | Monitor and track your cluster at the Portal Endpoint: https://<ip-address>:30777/portal/
 2019-04-12 15:37:18.0271 UTC | INFO | Cluster deployed successfully.
 ```
-
-Prendere nota dell'URL del **Endpoint portale** nell'output precedente per l'uso nella sezione successiva.
 
 > [!TIP]
 > È il nome predefinito per il cluster di big data distribuita `mssql-cluster` a meno che non modificato da una configurazione personalizzata.
@@ -236,10 +236,10 @@ Una volta completato lo script di distribuzione, è possibile ottenere gli indir
 
    Specificare il nome utente e la password configurata per il controller (CONTROLLER_USERNAME e CONTROLLER_PASSWORD) durante la distribuzione.
 
-1. Eseguire **elenco di endpoint cluster mssqlctl** per ottenere un elenco con una descrizione di ogni endpoint e i relativi valori di porta e indirizzo IP. 
+1. Eseguire **elenco di endpoint di integrazione applicativa dei dati mssqlctl** per ottenere un elenco con una descrizione di ogni endpoint e i relativi valori di porta e indirizzo IP. 
 
    ```bash
-   mssqlctl cluster endpoint list
+   mssqlctl bdc endpoint list
    ```
 
    L'elenco seguente mostra l'output di esempio da questo comando:
@@ -252,7 +252,6 @@ Una volta completato lo script di distribuzione, è possibile ottenere gli indir
    yarn-ui            Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  30443   https
    app-proxy          Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  30778   https
    management-proxy   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  30777   https
-   portal             Management Portal                                       https://11.111.111.111:30777/portal                        11.111.111.111  30777   https
    log-search-ui      Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  30777   https
    metrics-ui         Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  30777   https
    controller         Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  30080   https

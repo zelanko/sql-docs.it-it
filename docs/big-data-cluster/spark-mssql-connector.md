@@ -5,26 +5,37 @@ description: Informazioni su come usare il connettore Spark MSSQL in Spark per l
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: faa9d90cf78df5d73f125c7660b79d39e2bd5622
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d8172bc1d2b831d0cbeaab72bead283853b22cc
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770943"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388626"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Come leggere e scrivere in SQL Server da Spark usando il connettore Spark MSSQL
 
 Un modello di utilizzo principali dei big data è l'elaborazione dati di volumi elevati in Spark, seguita dalla scrittura dei dati a SQL Server per l'accesso alle applicazioni line-of-business. Questi modelli di utilizzo trarre vantaggio da un connettore che utilizza ottimizzazioni principali di SQL e fornisce un meccanismo efficiente di scrittura.
 
-I cluster di big Data offre un nuovo connettore MSSQL Spark che Usa SQL Server in blocco scrittura delle API per un efficiente Spark in scrittura SQL. Questo articolo fornisce un esempio di come leggere e scrivere in SQL Server da Spark usando il connettore Spark MSSQL. In questo esempio, i dati vengono letti da HDFS in un cluster di big data, di elaborazione Spark e quindi scritto per l'istanza master di SQL Server nel cluster usando il nuovo connettore Spark MSSQL.
+Questo articolo fornisce un esempio di come usare il connettore MSSQL Spark per leggere e scrivere nelle posizioni seguenti all'interno di un cluster di big data:
+
+1. L'istanza master di SQL Server
+1. Il pool di dati di SQL Server
+
+   ![Diagramma di connettore Spark MSSQL](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
+
+L'esempio esegue le attività seguenti:
+
+- Leggere un file da HDFS ed eseguire alcune operazioni di elaborazione di base.
+- Scrivere il frame di dati in un'istanza di SQL Server master come una tabella SQL e quindi leggere la tabella in un frame di dati.
+- Scrivere il frame di dati in un pool di dati di SQL Server come una tabella esterna a SQL e quindi leggere la tabella esterna a un dataframe.
 
 ## <a name="mssql-spark-connector-interface"></a>Interfaccia Connector Spark MSSQL
 
-Connettore Spark MSSQL è basato sull'origine dati di Spark le API e offre un'interfaccia familiare di connettore JDBC Spark. Per i parametri dell'interfaccia, vedere [documentazione di Apache Spark](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). Il connettore Spark per MSSQL fa riferimento il nome **com.microsoft.sqlserver.jdbc.spark**.
+Anteprima di SQL Server 2019 fornisce il **connettore Spark MSSQL** per big data cluster che usa bulk di SQL Server scrittura delle API per Spark e di scritture SQL. Connettore Spark MSSQL è basato sull'origine dati di Spark le API e offre un'interfaccia familiare di connettore JDBC Spark. Per i parametri dell'interfaccia, vedere [documentazione di Apache Spark](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). Il connettore Spark per MSSQL fa riferimento il nome **com.microsoft.sqlserver.jdbc.spark**.
 
 Nella tabella seguente vengono descritti i parametri dell'interfaccia che sono state modificate o sono nuovi:
 
@@ -55,7 +66,9 @@ Il connettore Usa SQL Server Bulk scrittura delle API. Le operazioni di scrittur
 
 1. Scaricare [AdultCensusIncome.csv](https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv) nel computer locale.
 
-1. In Azure Data Studio, fare doppio clic sulla cartella HDFS nel cluster di big data e selezionare **nuova directory**. Nome della directory **spark_data**.
+1. Avviare Data Studio di Azure, e [connettersi al cluster di big data](connect-to-big-data-cluster.md).
+
+1. Pulsante destro del mouse sulla cartella HDFS nel cluster di big data e selezionare **nuova directory**. Nome della directory **spark_data**.
 
 1. Fare clic con il pulsante destro sul **spark_data** directory, quindi selezionare **caricare file**. Caricare il **AdultCensusIncome.csv** file.
 
