@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a64addb1d9267aadc7e7eb2828e032d67db5d540
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a36ae06f28cb68395fd24b64921575567757a7f
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705101"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399942"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>Installare SQL Server 2019 Machine Learning Services (R, Python) in Linux
 
@@ -28,7 +28,7 @@ Servizi di Machine Learning è supportato anche sui contenitori di Linux. Micros
 
 ## <a name="uninstall-previous-ctp"></a>Versione CTP precedente di disinstallazione
 
-L'elenco dei pacchetti è stato modificato nelle ultime versioni CTP diversi, generando un minor numero di pacchetti. È consigliabile disinstallare CTP 2.x in modo da rimuovere tutti i pacchetti precedenti prima di installare una versione CTP 3.0. Installazione side-by-side di più versioni non è supportata.
+L'elenco dei pacchetti è stato modificato nelle ultime versioni CTP diversi, generando un minor numero di pacchetti. È consigliabile disinstallare CTP 2.x in modo da rimuovere tutti i pacchetti precedenti prima di installare versioni CTP 3.1. Installazione side-by-side di più versioni non è supportata.
 
 ### <a name="1-confirm-package-installation"></a>1. Confermare l'installazione del pacchetto
 
@@ -61,7 +61,7 @@ Comandi per la rimozione dei pacchetti vengono visualizzati nella tabella seguen
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### <a name="3-proceed-with-ctp-30-install"></a>3. Procedere con l'installazione di CTP 3.0
+### <a name="3-proceed-with-ctp-31-install"></a>3. Procedere con l'installazione di versioni CTP 3.1
 
 Installare il massimo livello di pacchetto seguendo le istruzioni riportate in questo articolo per il sistema operativo.
 

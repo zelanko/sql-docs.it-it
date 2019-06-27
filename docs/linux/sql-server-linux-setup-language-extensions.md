@@ -4,17 +4,17 @@ description: Informazioni su come installare estensioni di linguaggio (Java) di 
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c796d8f445f4cc1b02a0f49d12cde55e0a7ab4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9231828263020c352700fda6a4a0a9953dd70760
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719374"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399940"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Installare SQL Server 2019 estensioni del linguaggio (Java) in Linux
 
@@ -28,7 +28,7 @@ Le estensioni del linguaggio è supportato anche sui contenitori di Linux. Micro
 
 ## <a name="uninstall-previous-ctp"></a>Versione CTP precedente di disinstallazione
 
-L'elenco dei pacchetti è stato modificato nelle ultime versioni CTP diversi, generando un minor numero di pacchetti. È consigliabile disinstallare CTP 2.x in modo da rimuovere tutti i pacchetti precedenti prima di installare una versione CTP 3.0. Installazione side-by-side di più versioni non è supportata.
+L'elenco dei pacchetti è stato modificato nelle ultime versioni CTP diversi, generando un minor numero di pacchetti. È consigliabile disinstallare CTP 2.x in modo da rimuovere tutti i pacchetti precedenti prima di installare versioni CTP 3.1. Installazione side-by-side di più versioni non è supportata.
 
 ### <a name="1-confirm-package-installation"></a>1. Confermare l'installazione del pacchetto
 
@@ -52,7 +52,7 @@ Comandi per la rimozione dei pacchetti vengono visualizzati nella tabella seguen
 | SLES  | `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
 
-### <a name="3-proceed-with-ctp-30-install"></a>3. Procedere con l'installazione di CTP 3.0
+### <a name="3-proceed-with-ctp-31-install"></a>3. Procedere con l'installazione di versioni CTP 3.1
 
 Installare il massimo livello di pacchetto seguendo le istruzioni riportate in questo articolo per il sistema operativo.
 
@@ -185,6 +185,20 @@ sudo zypper install mssql-server-extensibility-java
 6. Riavviare il `mssql-launchpadd` service nuovamente.
 
 7. Per ogni database che si desidera usare le estensioni del linguaggio in, è necessario registrare il linguaggio esterno con [linguaggio esterno creare](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+
+## <a name="register-external-language"></a>Registrare linguaggio esterno
+
+Per ogni database che si desidera usare le estensioni del linguaggio in, è necessario registrare il linguaggio esterno con [linguaggio esterno creare](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+
+L'esempio seguente aggiunge un linguaggio esterno denominato Java in un database in SQL Server in Linux.
+
+```SQL
+CREATE EXTERNAL LANGUAGE Java
+FROM (CONTENT = N'<path-to-tar.gz>', FILE_NAME = 'javaextension.so');
+GO
+```
+
+Per altre informazioni, vedere [linguaggio esterno creare](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
 
 ## <a name="verify-installation"></a>Verificare l'installazione
 

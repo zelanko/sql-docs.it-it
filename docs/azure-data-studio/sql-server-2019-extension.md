@@ -3,7 +3,7 @@ title: Estensione di SQL Server 2019 (anteprima)
 titleSuffix: Azure Data Studio
 description: Estensione di anteprima di SQL Server 2019 per Data Studio di Azure
 ms.custom: seodec18
-ms.date: 05/15/2019
+ms.date: 06/25/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: aa83e92fb62f9cb0ad00830d1e78e5367112899c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b8f31d55ae9dcc7042fff051c37a4beaa72a47e
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798054"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399999"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Estensione di SQL Server 2019 (anteprima)
 
@@ -30,9 +30,9 @@ Per installare l'estensione di SQL Server 2019 (anteprima), scaricare e installa
 
    |Piattaforma|Scarica|Data di rilascio|Versione
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092817)|15 maggio 2019 |0.13.1
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092816)|15 maggio 2019 |0.13.1
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092815)|15 maggio 2019 |0.13.1
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097803)|25 giugno 2019 |0.14.1
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097802)|25 giugno 2019 |0.14.1
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097801)|25 giugno 2019 |0.14.1
 
 1. In Azure Data Studio scegliere **installare l'estensione dal pacchetto VSIX** dalle **File** menu e selezionare il file VSIX scaricato.
 
@@ -43,6 +43,9 @@ Per installare l'estensione di SQL Server 2019 (anteprima), scaricare e installa
 1. Dopo il ricaricamento, l'estensione installerà le dipendenze. È possibile visualizzare lo stato di avanzamento nella finestra di Output e che potrebbe richiedere alcuni minuti.
 
 1. Dopo le dipendenze completato l'installazione, chiudere e riaprire Data Studio di Azure. Il **cluster di big data di SQL Server** tipo di connessione non è disponibile solo dopo il riavvio Data Studio di Azure.
+
+## <a name="changes-in-release-0141"></a>Modifiche nella versione 0.14.1
+* Supporto per il supporto di origine dati di CTP 3.1
 
 ## <a name="changes-in-release-0121"></a>Modifiche nella versione 0.12.1
 

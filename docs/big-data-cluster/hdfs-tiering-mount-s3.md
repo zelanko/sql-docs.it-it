@@ -10,12 +10,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b31c47039c79e0b8303f560694e67276dd192b6f
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: f26fcfa24da5b9f22ddab1e76c2f80a0d24fae8d
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388767"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400024"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Come montare S3 per HDFS la suddivisione in livelli in un cluster di big data
 
@@ -32,12 +32,12 @@ Le sezioni seguenti forniscono un esempio di come configurare la suddivisione in
 
 ## <a name="access-keys"></a>Chiavi di accesso
 
-1. Aprire un prompt dei comandi in un computer client che possa accedere al cluster di big data.
+### <a name="set-environment-variable-for-access-key-credentials"></a>Impostare la variabile di ambiente per le credenziali chiave di accesso
 
-1. Creare un file locale denominato **filename.creds** che contiene le credenziali dell'account S3 usando il formato seguente:
+Aprire un prompt dei comandi in un computer client che possa accedere al cluster di big data. Impostare una variabile di ambiente usando il formato seguente. Elenco separato da tenere presente che le credenziali devono essere in una virgola. Il comando 'imposta' viene usato in Windows. Se si usa Linux, usare invece 'export'.
 
    ```text
-    fs.s3a.access.key=<Access Key ID of the key>
+    set MOUNT_CREDENTIALS=fs.s3a.access.key=<Access Key ID of the key>,
     fs.s3a.secret.key=<Secret Access Key of the key>
    ```
 
@@ -59,11 +59,13 @@ Ora che è stato creato un file di credenziali con le chiavi di accesso, è poss
    ```bash
    mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
+   
+1. Impostare la variabile di ambiente MOUNT_CREDENTIALS seguendo le istruzioni riportate sopra
 
 1. Montare l'archiviazione HDFS remoto in Azure usando **montaggio del pool di archiviazione di integrazione applicativa dei dati mssqlctl creare**. Prima di eseguire il comando seguente, sostituire i valori segnaposto:
 
    ```bash
-   mssqlctl bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
+   mssqlctl bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]
