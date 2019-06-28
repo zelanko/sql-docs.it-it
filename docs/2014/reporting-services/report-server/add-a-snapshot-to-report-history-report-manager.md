@@ -1,7 +1,7 @@
 ---
 title: Aggiungere uno snapshot alla cronologia del report (Gestione report) | Microsoft Docs
-ms.prod: reporting-services-2014
-ms.technology: reporting-services-native
+ms.prod: sql-server-2014
+ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], adding
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 633ac335067f579459809264fb055ff43481f4e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00b1caa2f68da0a3a38d98cf35f959f83257b99e
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63135085"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413111"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>Aggiungere uno snapshot alla cronologia del report (Gestione report)
 
@@ -73,7 +73,7 @@ Gli snapshot dei report non vengono salvati in un formato di rendering specifico
   
 ## <a name="see-also"></a>Vedere anche
 
-- [Configurare le proprietà di esecuzione per un Report &#40;gestione Report&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)
+- [Configurare le proprietà di esecuzione per un report &#40;Gestione report&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)
 - [Aprire e chiudere un report &#40;Gestione report&#41;](../reports/open-and-close-a-report-report-manager.md)
 - [Limitare la cronologia dei report &#40;Gestione report&#41;](../reports/limit-report-history-report-manager.md)
 - [Pianificazioni](../subscriptions/schedules.md)   

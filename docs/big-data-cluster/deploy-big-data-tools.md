@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: cbb4860cd747e454a09f1374d3b166fae466ee33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ffb63e3e7fb2891aeed1b9b26fbc43dddf69c78e
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797922"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412960"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Installare strumenti di SQL Server 2019 big data
 
@@ -33,7 +33,7 @@ La tabella seguente elenca i comuni strumenti di cluster di big data e come inst
 |---|---|---|---|
 | **mssqlctl** | Yes | Strumento da riga di comando per l'installazione e la gestione di un cluster di big data. | [Installazione](deploy-install-mssqlctl.md) |
 | **kubectl**<sup>1</sup> | Yes | Strumento da riga di comando per il monitoraggio del cluster sottostante Kuberentes ([altre informazioni](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
-| **Azure Data Studio** | Yes | Lo strumento con interfaccia grafico multipiattaforma per l'esecuzione di query SQL Server ([altre informazioni](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [Installazione](../azure-data-studio/download.md) |
+| **Azure Data Studio (Insider)** | Yes | Lo strumento con interfaccia grafico multipiattaforma per l'esecuzione di query SQL Server ([altre informazioni](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [Installazione](https://aka.ms/azdata-insiders) |
 | **Estensione di SQL Server 2019** | Yes | Estensione di Studio di dati di Azure che supporta la connessione al cluster di big data. Fornisce inoltre una procedura guidata la virtualizzazione dei dati. | [Installazione](../azure-data-studio/sql-server-2019-extension.md) |
 | **Azure CLI**<sup>2</sup> | Per AKS | Interfaccia della riga di comando moderna per la gestione dei servizi di Azure. Utilizzato con le distribuzioni di cluster AKS dei big data ([altre informazioni](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Installazione](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | Facoltativo | Interfaccia della riga di comando moderna per le query di SQL Server ([altre informazioni](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |

@@ -2,10 +2,10 @@
 title: Sys.dm_user_db_resource_governance (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
-ms.prod: ''
+ms.prod: sql
+ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governance
@@ -21,12 +21,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: bb4c43fa4193d9254d7f06f24bd903f974739e87
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: d25c4d3cfe8628c01b44a99c6e26a96adf453050
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58567637"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413068"
 ---
 # <a name="sysdmuserdbresourcegovernance-transact-sql"></a>Sys.dm_user_db_resource_governance (Transact-SQL)
 
@@ -68,7 +68,7 @@ Restituisce le impostazioni di configurazione e la capacità per un database SQL
 |**max_transaction_size**|BIGINT|Spazio del log massima usato da qualsiasi transazione, in KB.|
 |**checkpoint_rate_mbps**|INT|Punto di controllo della larghezza di banda, in Mbps.|
 |**checkpoint_rate_io**|INT|I/o frequenza di checkpoint in IOs al secondo.|
-|**last_updated_date_utc**|DATETIME|Data e ora dell'ultima modifica dell'impostazione o riconfigurazione.|
+|**last_updated_date_utc**|datetime|Data e ora dell'ultima modifica dell'impostazione o riconfigurazione.|
 |**primary_group_id**|INT|ID del gruppo di carico di lavoro utente primario.|
 |**primary_group_max_workers**|INT|Limite di ruolo di lavoro a livello di gruppo del carico di lavoro utente primario.|
 |**primary_min_log_rate**|BIGINT|Frequenza di registrazione minimo (byte / sec) a livello di gruppo del carico di lavoro utente primario.|

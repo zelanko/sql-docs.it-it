@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4bd6d260d58b837e2df0d216c28149b6e9a3fa51
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 75f4f7d046e144713efa271fb1980d4518843448
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388776"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413107"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Come distribuire i cluster di big data di SQL Server in Kubernetes
 
@@ -192,15 +192,14 @@ Per una distribuzione automatica, è necessario impostare tutte le variabili di 
 Durante il bootstrap del cluster, la finestra di comando client restituirà lo stato della distribuzione. Durante il processo di distribuzione, verrà visualizzato una serie di messaggi in cui è in attesa il pod controller:
 
 ```output
-2019-04-12 14:40:10.0129 UTC | INFO | Waiting for controller pod to be up...
+Waiting for cluster controller to start.
 ```
 
 In meno di 15 a 30 minuti, si dovrebbe ricevere una notifica che il pod controller sia in esecuzione:
 
 ```output
-2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Check the mssqlctl.log file for more details.
-2019-04-12 15:01:40.0861 UTC | INFO | Controller pod is running.
-2019-04-12 15:01:40.0884 UTC | INFO | Controller Endpoint: https://<ip-address>:30080
+Cluster controller endpoint is available at 11.111.111.11:30080.
+Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
@@ -209,7 +208,7 @@ In meno di 15 a 30 minuti, si dovrebbe ricevere una notifica che il pod controll
 Al termine della distribuzione, l'output invia una notifica di esito positivo:
 
 ```output
-2019-04-12 15:37:18.0271 UTC | INFO | Cluster deployed successfully.
+Cluster deployed successfully.
 ```
 
 > [!TIP]
@@ -228,7 +227,7 @@ Una volta completato lo script di distribuzione, è possibile ottenere gli indir
    > [!TIP]
    > Se non è modificato il nome predefinito durante la distribuzione, usare `-n mssql-cluster` nel comando precedente. **MSSQL-cluster** è il nome predefinito per il cluster di big data.
 
-1. Accedere al cluster di big data con **mssqlctl login**. Impostare il **-controller-endpoint** parametro per l'indirizzo IP esterno dell'endpoint del controller.
+1. Accedere al cluster di big data con [mssqlctl login](reference-mssqlctl.md). Impostare il **-controller-endpoint** parametro per l'indirizzo IP esterno dell'endpoint del controller.
 
    ```bash
    mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
@@ -236,29 +235,35 @@ Una volta completato lo script di distribuzione, è possibile ottenere gli indir
 
    Specificare il nome utente e la password configurata per il controller (CONTROLLER_USERNAME e CONTROLLER_PASSWORD) durante la distribuzione.
 
-1. Eseguire **elenco di endpoint di integrazione applicativa dei dati mssqlctl** per ottenere un elenco con una descrizione di ogni endpoint e i relativi valori di porta e indirizzo IP. 
+1. Eseguire [elenco di endpoint di integrazione applicativa dei dati mssqlctl](reference-mssqlctl-bdc-endpoint.md) per ottenere un elenco con una descrizione di ogni endpoint e i relativi valori di porta e indirizzo IP. 
 
    ```bash
-   mssqlctl bdc endpoint list
+   mssqlctl bdc endpoint list -o table
    ```
 
    L'elenco seguente mostra l'output di esempio da questo comando:
 
    ```output
-   Name               Description                                             Endpoint                                                   Ip              Port    Protocol
-   -----------------  ------------------------------------------------------  ---------------------------------------------------------  --------------  ------  ----------
-   gateway            Gateway to access HDFS files, Spark                     https://11.111.111.111:30443                               11.111.111.111  30443   https
-   spark-history      Spark Jobs Management and Monitoring Dashboard          https://11.111.111.111:30443/gateway/default/sparkhistory  11.111.111.111  30443   https
-   yarn-ui            Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  30443   https
-   app-proxy          Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  30778   https
-   management-proxy   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  30777   https
-   log-search-ui      Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  30777   https
-   metrics-ui         Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  30777   https
-   controller         Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  30080   https
-   sql-server-master  SQL Server Master Instance Front-End                    11.111.111.111,31433                                       11.111.111.111  31433   tcp
-   webhdfs            HDFS File System Proxy                                  https://11.111.111.111:30443/gateway/default/webhdfs/v1    11.111.111.111  30443   https
-   livy               Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  30443   https
+   Description                                             Endpoint                                                   Ip              Name               Port    Protocol
+   ------------------------------------------------------  ---------------------------------------------------------  --------------  -----------------  ------  ----------
+   Gateway to access HDFS files, Spark                     https://11.111.111.111:30443                               11.111.111.111  gateway            30443   https
+   Spark Jobs Management and Monitoring Dashboard          https://11.111.111.111:30443/gateway/default/sparkhistory  11.111.111.111  spark-history      30443   https
+   Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  yarn-ui            30443   https
+   Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  app-proxy          30778   https
+   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  mgmtproxy          30777   https
+   Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  logsui             30777   https
+   Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  metricsui          30777   https
+   Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  controller         30080   https
+   SQL Server Master Instance Front-End                    11.111.111.111,31433                                       11.111.111.111  sql-server-master  31433   tcp
+   HDFS File System Proxy                                  https://11.111.111.111:30443/gateway/default/webhdfs/v1    11.111.111.111  webhdfs            30443   https
+   Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  livy               30443   https
    ```
+
+È anche possibile ottenere tutti gli endpoint del servizio distribuiti per il cluster eseguendo le operazioni seguenti **kubectl** comando:
+
+```bash
+kubectl get svc -n <your-big-data-cluster-name>
+```
 
 ### <a name="minikube"></a>Minikube
 
@@ -268,11 +273,38 @@ Se si usa minikube, è necessario eseguire il comando seguente per ottenere l'in
 minikube ip
 ```
 
-Indipendentemente dalla piattaforma si sta usando il cluster Kubernetes, per ottenere tutti gli endpoint del servizio distribuiti per il cluster, eseguire il comando seguente:
+## <a id="status"></a> Verificare lo stato del cluster
+
+Dopo la distribuzione, è possibile controllare lo stato del cluster con il [Mostra lo stato di integrazione applicativa dei dati mssqlctl](reference-mssqlctl-bdc-status.md) comando.
 
 ```bash
-kubectl get svc -n <your-big-data-cluster-name>
+mssqlctl bdc status show -o table
 ```
+
+> [!TIP]
+> Per eseguire i comandi di stato, è prima necessario accedere con il **mssqlctl login** comando, che è stato illustrato nella sezione endpoint precedente.
+
+Il seguente esempio di output da questo comando:
+
+```output
+Kind     Name           State
+-------  -------------  -------
+BDC      mssql-cluster  Ready
+Control  default        Ready
+Master   default        Ready
+Compute  default        Ready
+Data     default        Ready
+Storage  default        Ready
+```
+
+Oltre a questo riepilogo dello stato, è anche possibile ottenere lo stato più dettagliato con i comandi seguenti:
+
+- [stato del controllo mssqlctl integrazione applicativa dei dati](reference-mssqlctl-bdc-control-status.md)
+- [stato del pool di mssqlctl integrazione applicativa dei dati](reference-mssqlctl-bdc-pool-status.md)
+
+L'output di questi comandi contengono URL ai dashboard di Kibana e Grafana per analisi più dettagliata. 
+
+Oltre a usare **mssqlctl**, è anche possibile usare Studio di Azure Data per trovare gli endpoint sia le informazioni sullo stato. Per altre informazioni sulla visualizzazione dello stato del cluster con **mssqlctl** e Azure Data Studio, vedere [come visualizzare lo stato di un cluster di big data](view-cluster-status.md).
 
 ## <a id="connect"></a> Connettersi al cluster
 

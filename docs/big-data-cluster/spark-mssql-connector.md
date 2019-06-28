@@ -9,12 +9,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9d8172bc1d2b831d0cbeaab72bead283853b22cc
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: d4fde2e13efdebd0cdaad4a4f1c7e528c46ea136
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388626"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412889"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Come leggere e scrivere in SQL Server da Spark usando il connettore Spark MSSQL
 
@@ -49,7 +49,7 @@ Il connettore Usa SQL Server Bulk scrittura delle API. Le operazioni di scrittur
 
 - Oggetto [cluster di big data di SQL Server](deploy-get-started.md).
 
-- [Azure Data Studio](../azure-data-studio/download.md).
+- [Azure Data Studio](https://aka.ms/azdata-insiders).
 
 ## <a name="create-the-target-database"></a>Creare il database di destinazione
 

@@ -1,7 +1,7 @@
 ---
 title: Graph processing con SQL Server e Database SQL di Azure | Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcabc19d3c83cd1ed4c9ee7b8047759e2550863e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 010d985245052949451a0b519ee4d7b312a97f4a
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502495"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413071"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Graph processing con SQL Server e Database SQL di Azure
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -84,6 +84,9 @@ Per altre informazioni su come creare e usare i vincoli di arco, vedere [i vinco
 Il [MERGE](../../t-sql/statements/merge-transact-sql.md) istruzione esegue un'operazione insert, update o operazioni delete in una tabella di destinazione in base ai risultati di un join con una tabella di origine. Ad esempio, è possibile sincronizzare due tabelle inserendo, aggiornando o eliminando righe in una tabella di destinazione in base alle differenze tra la tabella di destinazione e la tabella di origine. Usare MATCH predicati in un'istruzione MERGE è ora supportato nel Database SQL di Azure e SQL Server vNext. Vale a dire, è ora possibile unire i dati del grafo corrente (tabelle nodi o bordi) con i nuovi dati utilizzando i predicati di corrispondenza per specificare le relazioni di graph in un'unica istruzione, invece di istruzioni INSERT/UPDATE/DELETE separate.
 
 Per altre informazioni su come corrispondenza può essere utilizzata nel merge DML, vedere [istruzione MERGE](../../t-sql/statements/merge-transact-sql.md)
+
+## <a name="shortest-path"></a>Percorso più breve
+Il [SHORTEST_PATH](./sql-graph-shortest-path.md) funzione Trova percorso più breve tra qualsiasi 2 nodi in un grafico o a partire da un determinato nodo per tutti gli altri nodi nel grafico. Percorso più breve può essere utilizzato anche per trovare una chiusura transitiva o per gli attraversamenti di lunghezza arbitraria nel grafico. 
 
  ## <a name="next-steps"></a>Passaggi successivi  
 Lettura di [Database a grafo SQL - architettura](./sql-graph-architecture.md)
