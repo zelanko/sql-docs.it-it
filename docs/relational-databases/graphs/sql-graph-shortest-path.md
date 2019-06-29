@@ -19,12 +19,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ed931a8b1918961b69cc0600f94aff6e4d68b9e1
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: ef8f38acbf621a9c73a0d85bca579c8b7c87aa13
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413988"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463548"
 ---
 # <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -39,12 +39,12 @@ La funzione SHORTEST_PATH consente di trovare:
 * Singola origine percorsi più brevi.
 * Percorso più breve di più nodi di origine a più nodi di destinazione.
 
-Accetta un modello di lunghezza arbitraria come input e restituisce un percorso più breve che esiste tra due nodi. Questa funzione può essere usata solo all'interno di MATCH. Accetta un modello di lunghezza arbitraria e consente di trovare un percorso più breve nel grafico, che corrisponde a tale modello. La funzione restituisce solo un percorso più breve tra due nodi specificati. Se è presente, due o più percorsi più brevi della stessa lunghezza tra qualsiasi coppia di nodi di origine e di destinazione, la funzione restituirà solo un percorso che è stato trovato prima durante l'attraversamento. Si noti che, una serie di lunghezza arbitraria può essere specificata solo all'interno di una funzione SHORTEST_PATH. 
+Accetta un modello di lunghezza arbitraria come input e restituisce un percorso più breve che esiste tra due nodi. Questa funzione può essere usata solo all'interno di MATCH. La funzione restituisce solo un percorso più breve tra due nodi specificati. Se è presente, due o più percorsi più brevi della stessa lunghezza tra qualsiasi coppia di nodi di origine e di destinazione, il funzione restituisce solo un percorso che è stato trovato prima durante l'attraversamento. Si noti che, una serie di lunghezza arbitraria può essere specificata solo all'interno di una funzione SHORTEST_PATH. 
 
 Vedere le [MATCH (grafo SQL)](../../t-sql/queries/match-sql-graph.md) per la sintassi. 
 
 ## <a name="for-path"></a>PER PERCORSO
-PER percorso deve essere utilizzato con qualsiasi nome di tabella nodi o archi nella clausola FROM, che farà parte di un modello di lunghezza arbitraria. PER il percorso indica al motore che la tabella nodi o archi restituirà un insieme ordinato che rappresenta l'elenco di nodi o bordi attraversati lungo il percorso dal nodo di inizio per il nodo di fine. Gli attributi da tali tabelle non possono essere proiettati direttamente nella clausola SELECT. Per proiettare gli attributi da tali tabelle, funzioni di aggregazione tracciato del grafico deve essere utilizzato.  
+PER percorso deve essere utilizzato con qualsiasi nome di tabella nodi o archi nella clausola FROM, che farà parte di un modello di lunghezza arbitraria. PER il percorso indica al motore che la tabella nodi o archi restituirà un insieme ordinato che rappresenta l'elenco di nodi o bordi trovati nel percorso attraversato. Gli attributi da tali tabelle non possono essere proiettati direttamente nella clausola SELECT. Per proiettare gli attributi da tali tabelle, funzioni di aggregazione tracciato del grafico deve essere utilizzato.  
 
 ## <a name="arbitrary-length-pattern"></a>Modello di lunghezza arbitraria
 Questo modello include i nodi e bordi che devono essere attraversati ripetutamente fino a raggiunta il nodo desiderato o finché il numero massimo di iterazioni come specificato nel modello viene soddisfatta. Ogni volta che viene eseguita la query, il risultato dell'esecuzione di questo modello sarà una raccolta ordinata di nodi e bordi attraversati lungo il percorso dal nodo di inizio per il nodo di fine. Questo è un modello di sintassi di espressione regolare lo stile e sono supportati i quantificatori due modello seguente:
