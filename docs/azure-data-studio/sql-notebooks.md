@@ -3,7 +3,7 @@ title: Come usare i notebook di SQL Studio di dati di Azure
 titleSuffix: Azure Data Studio
 description: Informazioni su come usare i notebook di SQL Studio di dati di Azure
 ms.custom: seodec18
-ms.date: 03/17/2019
+ms.date: 06/28/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: achatter; alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: 6ac15dcd6b440a8c3bcca0c468a79548469fe059
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02146596b8c0c21531d269a815f97512b5c955a5
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798037"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469075"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Come usare i notebook in Azure Data Studio
 
@@ -163,14 +163,13 @@ import <package-name>
 
 Quando si esegue questo comando, `Module not found` viene restituito. Se il pacchetto esiste, non si verrà visualizzato l'errore.
 
-Se viene restituito un `Module not Found` errori, quindi fare clic su **Gestisci pacchetti** per avviare il terminale. È ora possibile installare i pacchetti in locale. Usare i comandi seguenti per installare i pacchetti:
+Se viene restituito un `Module not Found` errori, quindi fare clic su **Gestisci pacchetti** per avviare l'esperienza guidata. 
 
-```bash
-./pip install <package-name>
-```
+![Image17](media/sql-notebooks/manage-packages.png)
 
-   > [!Tip]
-   > In Mac, seguire le istruzioni nella finestra del terminale per installare i pacchetti. 
+In questa procedura guidata sarà in grado di vedere le **Installed** pacchetti. È possibile cercare l'elenco e la versione associata di ognuno di questi pacchetti. Se devi **disinstallare** uno di questi pacchetti, è possibile fare clic su uno dei pacchetti e quindi fare clic sui **disinstallare i pacchetti selezionati** opzione.
+
+È inoltre possibile fare clic su **Aggiungi nuovo** di pacchetti **ricerca** per un particolare pacchetto, scegliere la versione correlata e fare clic su **installare**. Per impostazione predefinita, selezionare la versione più recente del pacchetto di ricerca. 
 
 Dopo aver installato il pacchetto, sarà possibile tornare nella cella Notebook e digitare il comando seguente:
 
@@ -178,11 +177,7 @@ Dopo aver installato il pacchetto, sarà possibile tornare nella cella Notebook 
 import <package-name>
 ```
 
-Per disinstallare un pacchetto, usare il comando seguente dal terminale:
-
-```bash
-./pip uninstall <package-name>
-```
+Se devi **disinstallare** uno di questi pacchetti, è possibile fare clic su uno o più pacchetti e quindi fare clic sui **disinstallare i pacchetti selezionati** opzione.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

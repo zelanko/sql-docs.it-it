@@ -1,6 +1,6 @@
 ---
-title: Linguaggio R e integrazione delle funzionalità Python - servizi di SQL Server Machine Learning
-description: Linguaggio R e le funzionalità di Python in SQL Server, l'integrazione con i dati relazionali per l'analisi scientifica dei dati e modellazione statistica, modelli di machine learning, analitica predittiva, visualizzazione dei dati e altro ancora.
+title: Overview of SQL Server Machine Learning Services (R, Python) - SQL Server Machine Learning Services
+description: Panoramica della funzionalità di Machine Learning Services in SQL Server, in cui è possibile integrare Python e R con dati relazionali per data science e statistiche di modellazione, modelli di machine learning, analitica predittiva, visualizzazione dei dati e altro ancora.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
@@ -8,19 +8,19 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 921ffc0188623335ac7e7206a02095cc11469327
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: ea6db43d999c2c0102cde0c0b30867f255bce569
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140326"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469214"
 ---
-# <a name="machine-learning-services-r-python-in-sql-server-2017"></a>Machine Learning Services (R, Python) in SQL Server 2017
+# <a name="sql-server-machine-learning-services-r-python"></a>SQL Server Machine Learning Services (R, Python)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Servizi di Machine Learning è una funzionalità di SQL Server, usato per l'esecuzione di script R e Python nel database. La funzionalità include [pacchetti di Microsoft R e Python](#components) per prestazioni elevate analitica predittiva e machine learning. I dati relazionali possono essere utilizzati negli script R e Python tramite le stored procedure, script T-SQL contenente le istruzioni di R e Python, o R e Python di codice T-SQL che lo contiene.
 
-Se è stato usato in precedenza [SQL Server 2016 R Services](r/sql-server-r-services.md), servizi di Machine Learning in SQL Server 2017 è la prossima generazione di supporto di R, con le versioni aggiornate di base R, RevoScaleR, MicrosoftML, e altre librerie introdotti nel 2016. 
+Se è stato usato in precedenza [SQL Server 2016 R Services](r/sql-server-r-services.md), servizi di Machine Learning in SQL Server 2017 e versioni successive è la prossima generazione di supporto di R, con le versioni aggiornate di R di base, RevoScaleR, MicrosoftML, e altre librerie introdotte in 2016.
 
 Nel Database SQL di Azure [Machine Learning Services (con R)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) è attualmente in anteprima pubblica.
 

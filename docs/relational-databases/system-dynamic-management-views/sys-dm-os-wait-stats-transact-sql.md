@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f4d66846be52a1f42a87f6dd11a584ace4e3ac4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e85d3d1257b4cd873ddb1686a78d746cf92021c3
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499676"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469134"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -346,6 +346,7 @@ Questo comando reimposta tutti i contatori su 0.
 |HADR_TDS_LISTENER_SYNC |Il sistema interno AlwaysOn o il cluster WSFC verrà richiesto che i listener vengono avviati o arrestati. L'elaborazione di questa richiesta è sempre asincrona ed è disponibile un meccanismo di rimozione delle richieste ridondanti. Inoltre, si possono verificare momenti in cui questa elaborazione viene sospesa a causa di modifiche di configurazione. Questo tipo di attesa viene usato da tutte le attese correlate a questo meccanismo di sincronizzazione del listener. Solo per uso interno., <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_TDS_LISTENER_SYNC_PROCESSING |Usato alla fine di un'istruzione sempre in Transact-SQL che richiede l'avvio e/o l'arresto di un listener del gruppo di disponibilità. Dal momento che l'operazione di avvio/arresto viene eseguita in modo asincrono, il thread dell'utente verrà bloccato tramite questo tipo di attesa fino a quando non è nota la situazione del listener., <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_THROTTLE_LOG_RATE_GOVERNOR |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO | Si verifica quando un database secondario con replica geografica è configurato con inferiore calcolo delle dimensioni (inferiore SLO) rispetto al database primario. Un database primario è limitato a causa dell'utilizzo di log ritardata, il database secondario. Ciò è dovuto al database secondario con la capacità di calcolo sufficienti per supportare la velocità del database primario di modifica. <br /> **Si applica a**: Database SQL di Azure| 
 |HADR_THROTTLE_LOG_RATE_LOG_SIZE |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_THROTTLE_LOG_RATE_SEEDING |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
