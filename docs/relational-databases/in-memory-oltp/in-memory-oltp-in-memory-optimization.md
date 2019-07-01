@@ -1,7 +1,7 @@
 ---
 title: OLTP in memoria (ottimizzazione in memoria) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/22/2016
+ms.date: 06/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,14 +15,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5d982ba0b7a2ec5b35a6d38da3a5831119c4c1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ebb953132e28a3ea0766f7d9d7cd40f3f620659
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047575"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351662"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP in memoria (ottimizzazione per la memoria)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] può migliorare significativamente le prestazioni di elaborazione delle transazioni, di inserimento e caricamento dei dati e di scenari di dati temporanei.  Per ottenere il codice di base e le informazioni necessarie per verificare rapidamente la tabella ottimizzata per la memoria e la stored procedure compilata in modo nativo, vedere
@@ -42,7 +43,7 @@ Per una panoramica più dettagliata di OLTP in memoria e un'analisi degli scenar
  
  Si noti che [!INCLUDE[hek_2](../../includes/hek-2-md.md)] è la tecnologia di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per migliorare le prestazioni dell'elaborazione delle transazioni. Per la tecnologia di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che migliora la creazione di report e le prestazioni di query di analisi, vedere [Guida agli indici columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md).
   
- Sono stati apportati diversi miglioramenti a OLTP in memoria in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], nonché in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La superficie di attacco Transact-SQL è stata aumentata per semplificare la migrazione delle applicazioni di database. È stato aggiunto il supporto per l'esecuzione di operazioni ALTER per le tabelle ottimizzate per la memoria e le stored procedure compilate in modo nativo per semplificare la gestione delle applicazioni. Per informazioni sulle nuove funzionalità in [!INCLUDE[hek_2](../../includes/hek-2-md.md)], vedere [Indici columnstore - Novità](../../relational-databases/indexes/columnstore-indexes-what-s-new.md).  
+ Sono stati apportati diversi miglioramenti a OLTP in memoria in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], nonché in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La superficie di attacco Transact-SQL è stata aumentata per semplificare la migrazione delle applicazioni di database. È stato aggiunto il supporto per l'esecuzione di operazioni ALTER per le tabelle ottimizzate per la memoria e le stored procedure compilate in modo nativo per semplificare la gestione delle applicazioni.
   
 > [!NOTE]  
 >  **Per provarlo**  
