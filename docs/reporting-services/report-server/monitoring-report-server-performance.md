@@ -1,6 +1,6 @@
 ---
 title: Monitoraggio delle prestazioni del server di report | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 06/20/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ba639ea5bc65cb8d5e753883418ad3937919fa1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 36837445c13d5a0aa0c2bf0f93008d93e87d77d8
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577655"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314021"
 ---
 # <a name="monitoring-report-server-performance"></a>Monitoraggio delle prestazioni del server di report
   Con gli strumenti di monitoraggio delle prestazioni è possibile valutare l'attività del server di report, osservare le tendenze, diagnosticare i colli di bottiglia a livello di sistema e raccogliere dati che consentono di determinare più facilmente se la configurazione del sistema corrente è sufficiente. Per ottimizzare le prestazioni del server, è possibile specificare la frequenza di riciclo del dominio dell'applicazione del server di report. Per altre informazioni, vedere [Configurare la memoria disponibile per applicazioni del server di report](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "65577655"
   
  In Gestione attività sono disponibili informazioni sui programmi e sui processi in esecuzione nel computer. È possibile utilizzare Gestione attività per monitorare i principali indicatori delle prestazioni del server di report nonché per valutare l'attività dei processi in esecuzione e visualizzare grafici e dati sull'utilizzo della CPU e della memoria. Per informazioni sull'utilizzo di Gestione attività, vedere la documentazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- È possibile utilizzare la console Performance e il Visualizzatore eventi per creare avvisi e log relativi all'elaborazione dei report e all'utilizzo di risorse. Per informazioni su eventi di Windows generati da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Registro applicazioni di Windows](../../reporting-services/report-server/windows-application-log.md). Per informazioni sulla console Performance, vedere "Contatori delle prestazioni di Windows" più avanti in questo argomento.  
+ È possibile utilizzare la console Performance e il Visualizzatore eventi per creare avvisi e log relativi all'elaborazione dei report e all'utilizzo di risorse. Per informazioni su eventi di Windows generati da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Registro applicazioni di Windows](../../reporting-services/report-server/windows-application-log.md). Per informazioni sulla console Performance, vedere "Contatori delle prestazioni di Windows" più avanti in questo articolo.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - Le utilità forniscono anche informazioni sul database del server di report e sui database temporanei usati per la gestione della memorizzazione nella cache e delle sessioni.  
   
@@ -55,22 +55,22 @@ ms.locfileid: "65577655"
 -   Convalidare le modifiche apportate alla configurazione del sistema per verificare che abbiano l'effetto desiderato sulle prestazioni.  
   
 ## <a name="reporting-services-performance-objects"></a>Oggetti prestazione di Reporting Services  
- [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] include gli oggetti prestazione seguenti:  
+SQL Server 2016 Reporting Services o versione successiva (SSRS) include gli oggetti prestazione seguenti:  
   
 -   **MSRS 2011 Web Service** e **MSRS 2011 SharePoint Mode Web Service** per il monitoraggio delle prestazioni del server di report. In questi oggetti prestazione è inclusa una raccolta di contatori che consentono di tenere traccia delle elaborazioni nel server di report avviate in genere da operazioni di visualizzazione dei report interattive. I contatori vengono reimpostati ogni volta che il servizio Web ReportServer viene arrestato da [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] .  
   
 -   **MSRS 2011 Windows Service** e **MSRS 2011 Windows Service SharePoint Mode** per il monitoraggio delle operazioni pianificate e del recapito dei report. In questi oggetti prestazione è inclusa una raccolta di contatori che consentono di tenere traccia delle elaborazioni di report avviate tramite operazioni pianificate, nelle quali sono incluse sottoscrizioni e recapiti, snapshot delle esecuzioni dei report e cronologie dei report.  
   
--   **ReportServer:Service** e **ReportServerSharePoint:Service** per il monitoraggio degli eventi correlati ad HTTP e per la gestione della memoria. Tali contatori sono specifici di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e consentono di tenere traccia degli eventi correlati ad HTTP per il server di report, ad esempio richieste, connessioni e tentativi di accesso. Questo oggetto prestazione, inoltre, include contatori correlati alla gestione della memoria.  
+-   **Servizio ReportServer** e **servizio ReportServerSharePoint** per il monitoraggio degli eventi correlati ad HTTP e per la gestione della memoria. Questi contatori sono specifici di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e consentono di tenere traccia degli eventi correlati ad HTTP per il server di report, ad esempio richieste, connessioni e tentativi di accesso. Questo oggetto prestazione, inoltre, include contatori correlati alla gestione della memoria.  
   
  Se sono presenti più istanze del server di report in uno stesso computer, è possibile scegliere se monitorare le istanze insieme o separatamente. Scegliere quali istanze includere quando si aggiunge un contatore. Per altre informazioni sull'uso della console Performance (perfmon.msc) e sull'aggiunta di contatori, vedere la documentazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
 ## <a name="other-performance-counters"></a>Altri contatori delle prestazioni  
- Alcuni contatori delle prestazioni personalizzati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili solo per **MSRS 2008 Web Service**, **MSRS 2008 Windows Service**e **ReportServer:Service**. Gli oggetti prestazione seguenti forniscono dati di monitoraggio delle prestazioni aggiuntivi per il server di report.  
+ Alcuni contatori delle prestazioni personalizzati di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili solo per il **servizio Web MSRS 2008**, il **servizio Windows MSRS 2008** e il **servizio ReportServer**. Gli oggetti prestazione seguenti forniscono dati di monitoraggio delle prestazioni aggiuntivi per il server di report.  
   
 |Oggetto prestazione|Note|  
 |------------------------|-----------|  
-|**.NET CLR Data** e **.NET CLR Memory**|In Gestione report vengono utilizzati i contatori delle prestazioni di [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] . Per ulteriori informazioni, vedere "Miglioramento delle prestazioni e della scalabilità di applicazioni .NET" su MSDN.|  
+|**.NET CLR Data** e **.NET CLR Memory**|Usa il portale web [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] i contatori delle prestazioni. Per ulteriori informazioni, vedere "Miglioramento delle prestazioni e della scalabilità di applicazioni .NET" su MSDN.|  
 |**Process**|Aggiungere i contatori delle prestazioni **Elapsed Time** e **ID Process** affinché un'istanza ReportingServicesService registri il tempo di attività del processo in base all'ID processo.|  
   
 ## <a name="sharepoint-events"></a>Eventi di SharePoint  
@@ -93,5 +93,4 @@ ms.locfileid: "65577655"
  [Configurare la memoria disponibile per applicazioni del server di report](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
  [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Strumenti di Reporting Services](../../reporting-services/tools/reporting-services-tools.md)  
-  
   

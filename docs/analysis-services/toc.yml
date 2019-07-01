@@ -1,7 +1,7 @@
-- name: SQL Server >>
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: Informazioni su SQL Server Analysis Services
   href: ../analysis-services/analysis-services.md
+- name: Benvenuto in SQL Server >>
+  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: Panoramica
   items:
     - name: Novità di SQL Server Analysis Services 2016

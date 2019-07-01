@@ -35,7 +35,7 @@ ms.locfileid: "67140264"
   
 -   [Esecuzione della sottoscrizione](#bkmk_run_subscription)  
   
-##  <a name="bkmk_manage_and_delete">Gestione ed eliminazione di una sottoscrizione guidata dai dati</a>  
+##  <a name="bkmk_manage_and_delete"></a>Gestione ed eliminazione di una sottoscrizione guidata dai dati  
  Una sottoscrizione guidata dai dati che è in corso non può essere arrestata o eliminata tramite il portale web. Per questa ragione, è vantaggioso utilizzare una pianificazione condivisa per attivare una sottoscrizione guidata dai dati. In questo modo, se si desidera impedire temporaneamente l'elaborazione di una sottoscrizione, è possibile sospendere la pianificazione che ne determina l'attivazione. Per altre informazioni, vedere [Creare e gestire sottoscrizioni per server di report in modalità nativa](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
  Per eliminare una sottoscrizione guidata dai dati, selezionare la casella di controllo accanto al report nel **abbonamenti** pagina e quindi selezionare **eliminare**.  

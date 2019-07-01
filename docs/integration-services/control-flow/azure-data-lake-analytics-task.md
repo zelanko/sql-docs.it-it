@@ -2,7 +2,7 @@
 title: Attività Azure Data Lake Analytics | Microsoft Docs
 description: È possibile inviare processi U-SQL al servizio Azure Data Lake Analytics con l'attività Azure Data Lake Analytics.
 ms.custom: ''
-ms.date: 05/18/2018
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: maghan
@@ -14,12 +14,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: f68a57063f0619458d6961308bbaeeee9c22c323
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28c9ed815825dbebd0d7f96b983ee34f1176b48c
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014922"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419158"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Attività Azure Data Lake Analytics
 
@@ -37,7 +37,7 @@ Per aggiungere un'attività Data Lake Analytics a un pacchetto, trascinarla dall
 
 ## <a name="general-page-configuration"></a>Configurazione della pagina Generale
 
-Usare la pagina **Generale** per configurare l'attività e fornire lo script U-SQL inviato dall'attività. Per altre informazioni sul linguaggio U-SQL, vedere la [U-SQL language reference](https://msdn.microsoft.com/azure/data-lake-analytics/u-sql/u-sql-language-reference) (Guida di riferimento al linguaggio U-SQL).
+Usare la pagina **Generale** per configurare l'attività e fornire lo script U-SQL inviato dall'attività. Per altre informazioni sul linguaggio U-SQL, vedere la [U-SQL language reference](/u-sql/) (Guida di riferimento al linguaggio U-SQL).
 
 ### <a name="basic-configuration"></a>Configurazione di base
 
