@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 36837445c13d5a0aa0c2bf0f93008d93e87d77d8
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: HT
+ms.openlocfilehash: 5d277089fded73524e55d05bbc21078d5df426e3
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314021"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412650"
 ---
 # <a name="monitoring-report-server-performance"></a>Monitoraggio delle prestazioni del server di report
   Con gli strumenti di monitoraggio delle prestazioni è possibile valutare l'attività del server di report, osservare le tendenze, diagnosticare i colli di bottiglia a livello di sistema e raccogliere dati che consentono di determinare più facilmente se la configurazione del sistema corrente è sufficiente. Per ottimizzare le prestazioni del server, è possibile specificare la frequenza di riciclo del dominio dell'applicazione del server di report. Per altre informazioni, vedere [Configurare la memoria disponibile per applicazioni del server di report](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).  
@@ -53,6 +53,8 @@ ms.locfileid: "67314021"
 -   Verificare che gli aggiornamenti hardware abbiano l'effetto desiderato sulle prestazioni.  
   
 -   Convalidare le modifiche apportate alla configurazione del sistema per verificare che abbiano l'effetto desiderato sulle prestazioni.  
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
   
 ## <a name="reporting-services-performance-objects"></a>Oggetti prestazione di Reporting Services  
 SQL Server 2016 Reporting Services o versione successiva (SSRS) include gli oggetti prestazione seguenti:  
@@ -85,9 +87,8 @@ SQL Server 2016 Reporting Services o versione successiva (SSRS) include gli ogge
   
  [Contatori delle prestazioni per gli oggetti prestazioni di ReportServer:Service e ReportServerSharePoint:Service](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
  Vengono descritti i contatori delle prestazioni correlati ad HTTP e alla memoria in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
-  
- Eventi per un server di report in modalità integrata SharePoint  
- Vengono descritti gli eventi di diagnostica che è utile registrare quando si esegue un ambiente di report un prodotto SharePoint.  
+
+::: moniker-end
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare la memoria disponibile per applicazioni del server di report](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
