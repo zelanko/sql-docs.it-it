@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d29f7718a71485e04dda6aac848def5822557d4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 628e02b11118dfcb82e6d8eb5d195b40e7d3b1a8
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946061"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343979"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Utilizzo di un file di formato per l'importazione bulk dei dati (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +70,7 @@ Usando il Blocco note, creare un file `D:\BCP\myFirstImport.bcp` vuoto e inserir
 
 In alternativa, è possibile eseguire lo script PowerShell seguente per creare e popolare il file di dati:
 ```powershell
-cls
+Clear-Host
 # revise directory as desired
 $dir = 'D:\BCP\';
 
@@ -93,7 +93,7 @@ Add-Content -Path $bcpFile -Value '3,Stella,Rosenhain,1992-03-02';
 
 #Review content
 Get-Content -Path $bcpFile;
-Invoke-Item $bcpFile;
+Notepad.exe $bcpfile;
 ```
 
 ## Creazione dei file di formato<a name="create_format_file"></a>
