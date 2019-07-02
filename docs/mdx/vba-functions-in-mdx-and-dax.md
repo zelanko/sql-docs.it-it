@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f6b6d89ced88a570ce242ae9490d4c6d8bd6ac8
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251552"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500045"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Funzioni VBA in MDX e DAX
 
@@ -53,10 +53,10 @@ ms.locfileid: "63251552"
 |CVErr|Non supportato||  
 |Date|Solo MDX|**Avviso** con DAX viene implementata una funzione diversa con lo stesso nome, cioè la funzione DATE (Year, Month, Day), usato per generare un valore di tipo date dagli argomenti specificati|  
 |DateAdd|Solo MDX|**Avviso** DAX viene implementata una funzione diversa con lo stesso nome, il DATEADD (\<date >, < number_of_intervals >,\<interval >) funzione, utilizzato per scorrere le date specificate da un numero di intervalli specificati|  
-|DateDiff]|Solo MDX||  
+|DateDiff|Solo MDX||  
 |DatePart|Solo MDX||  
 |DateSerial|Solo MDX||  
-|DateValue]|DAX, MDX||  
+|DateValue|DAX, MDX||  
 |Day|DAX, MDX||  
 |DDB|Solo MDX||  
 |Dir|Non supportato||  
@@ -118,7 +118,7 @@ ms.locfileid: "63251552"
 |MonthName|Non supportato||  
 |MsgBox|Non supportato||  
 |Adesso|DAX, MDX||  
-|NPer]|Solo MDX||  
+|NPer|Solo MDX||  
 |NPV|Solo MDX||  
 |Oct|Solo MDX||  
 |Partition|Solo MDX||  
@@ -146,7 +146,7 @@ ms.locfileid: "63251552"
 |Str|Solo MDX||  
 |StrComp|Solo MDX||  
 |StrConv|Solo MDX||  
-|Stringa]|Solo MDX||  
+|String|Solo MDX||  
 |StrReverse|Non supportato||  
 |Opzione|Solo MDX||  
 |SYD|Solo MDX||  
@@ -156,7 +156,7 @@ ms.locfileid: "63251552"
 |Timer|Solo MDX||  
 |TimeSerial|Solo MDX||  
 |TimeValue|DAX, MDX||  
-|Trim]|DAX, MDX||  
+|Trim|DAX, MDX||  
 |TypeName|Solo MDX||  
 |UBound|Non supportato||  
 |UCase|Solo MDX||  
