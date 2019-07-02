@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 8f44927fb59e6d1b613b2a67e26aed980b3a080a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82fc1e58ffd329a74849986b858aa25cf733dc84
+ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65993949"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67166371"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Note sulla versione di anteprima di SQL Server 2019
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -98,6 +98,16 @@ Dettagli completi sul supporto e sulle licenze per le versioni CTP sono disponib
 - **Si applica a**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
 
 ## <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclave sicuri
+
+### <a name="loading-enclave-fails"></a>Il caricamento dell'enclave non riesce
+
+- **Problema e impatto per i clienti**: Il caricamento dell'enclave per Always Encrypted non riesce con l'acquisizione del messaggio seguente nel log degli errori: `Internal enclave error: Cannot initialize the 1 enclave`.
+
+- **Soluzione alternativa**: Nessuna. Una risoluzione è pianificata per CTP 3.1.
+
+- **Si applica a**: CTP 3.0
+
+### <a name="rich-computations-performance"></a>Prestazioni dei calcoli avanzati
 
 - **Problema e impatto per i clienti**: i calcoli avanzati sono in attesa di varie ottimizzazioni delle prestazioni, includono funzionalità limitate (nessuna indicizzazione e altro) e sono attualmente disabilitati per impostazione predefinita.
 
