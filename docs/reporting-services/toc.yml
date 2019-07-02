@@ -284,10 +284,8 @@
     - name: Gestione contenuto del server di report (modalità nativa SSRS)
       href: ../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md
       items:
-        - name: 'Creare, eliminare o modificare una cartella (portale Web)'
-          href: ../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md
         - name: 'Creare, eliminare o modificare una cartella'
-          href: ../reporting-services/report-server/create-delete-or-modify-a-folder-report-manager.md
+          href: ../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md
         - name: Spostare o eliminare un elemento
           href: ../reporting-services/report-server/move-or-delete-an-item-report-manager.md
         - name: Caricare file in una cartella
@@ -974,8 +972,6 @@
       href: ../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md
     - name: Limitare la cronologia dei report
       href: ../reporting-services/reports/limit-report-history-report-manager.md
-    - name: Aprire e chiudere un report
-      href: ../reporting-services/reports/open-and-close-a-report-report-manager.md
     - name: Caricare un file o un report
       href: ../reporting-services/reports/upload-a-file-or-report-report-manager.md
     - name: Creare un report collegato
