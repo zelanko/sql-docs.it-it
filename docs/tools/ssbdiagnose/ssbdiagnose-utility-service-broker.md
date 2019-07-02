@@ -26,12 +26,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07e4f9c8f694f68e1ee0df02ec6110847fde4e0f
-ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
+ms.openlocfilehash: 34d549a433bebe20beaae287362537a851b2ae6b
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66836318"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469152"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilità ssbdiagnose (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -185,14 +185,14 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  Identificatore univoco di un endpoint di conversazione in un'applicazione. Per un endpoint di una conversazione gli handle di conversazione sono univoci , mentre per gli endpoint dell'Initiator e di destinazione gli handle di conversazione sono diversi.  
   
- Gli handle di conversazione vengono restituiti alle applicazioni dal parametro *@dialog_handle* dell'istruzione **BEGIN DIALOG** e dalla colonna **conversation_handle** nel set di risultati di un'istruzione **RECEIVE** .  
+ Gli handle di conversazione vengono restituiti alle applicazioni dal parametro *\@dialog_handle* dell'istruzione **BEGIN DIALOG** e dalla colonna **conversation_handle** nel set di risultati di un'istruzione **RECEIVE**.  
   
  Gli handle di conversazione vengono indicati nella colonna **conversation_handle** delle viste del catalogo **sys.transmission_queue** e **sys.conversation_endpoints** .  
   
  *conversation_group_id*  
  Identificatore univoco di un gruppo di conversazioni.  
   
- Gli ID gruppo di conversazioni vengono restituiti nelle applicazioni dal parametro *@conversation_group_id* dell'istruzione **GET CONVERSATION GROUP** e dalla colonna **conversation_group_id** nel set di risultati di un'istruzione **RECEIVE** .  
+ Gli ID gruppo di conversazioni vengono restituiti nelle applicazioni dal parametro *\@conversation_group_id* dell'istruzione **GET CONVERSATION GROUP** e dalla colonna **conversation_group_id** nel set di risultati di un'istruzione **RECEIVE**.  
   
  Gli ID gruppo di conversazioni vengono indicati nelle colonne **conversation_group_id** delle viste del catalogo **sys.conversation_groups** e **sys.conversation_endpoints** .  
   

@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fd837276436de158f58fd2f66ed864930fe6032
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269922"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400050"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -602,4 +602,10 @@ L'azione Script di **SqlPackage.exe** consente di creare uno script di aggiornam
 |**/p:**|UnmodifiableObjectWarnings=(BOOLEAN 'True')|Specifica se devono essere generati avvisi quando vengono rilevate differenze negli oggetti che non possono essere modificati, ad esempio quando risultano differenti la dimensione o i percorsi di un file.|
 |**/p:**|VerifyCollationCompatibility = (booleano "True")|Specifica se viene verificata la compatibilità delle regole di confronto.
 |**/p:**|VerifyDeployment=(BOOLEAN 'True')|Specifica se prima della pubblicazione devono essere eseguiti i controlli che arresteranno l'azione di pubblicazione qualora vengono rilevati problemi che potrebbero bloccare l'esecuzione della pubblicazione. Ad esempio, l'azione di pubblicazione potrebbe venire arrestata se si hanno chiavi esterne nel database di destinazione che non esistono nel progetto di database e tale situazione comporta la generazione di errori durante la pubblicazione.|
-  
+
+## <a name="exit-codes"></a>Codici di uscita
+
+Comandi che restituiscono i codici di uscita seguente:
+
+- 0 = esito positivo
+- diverso da zero = esito negativo
