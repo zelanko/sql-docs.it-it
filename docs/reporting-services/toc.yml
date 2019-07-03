@@ -1,7 +1,7 @@
 - name: Che cos'è SQL Server Reporting Services (SSRS)?
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
 - name: Benvenuto in SQL Server >>
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
+  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: Panoramica
   items:
     - name: Novità di Reporting Services
