@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 187a333da1f38cc89f8783b48e0c171630339c9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766180"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034838"
 ---
 # <a name="temporal-table-system-consistency-checks"></a>Verifiche di coerenza del sistema della tabella temporale
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47766180"
 10. La tabella di cronologia non è configurata per il rilevamento delle modifiche o per Change Data Capture  
   
 ### <a name="data-consistency-check"></a>Verifica della coerenza dei dati  
- Prima di impostare **SYSTEM_VERSIONING** su **ON** e come parte di un'operazione DML, il sistema esegue la verifica seguente: **SysEndTime** ≥**SysStartTime**  
+ Prima di impostare **SYSTEM_VERSIONING** su **ON** e nell'ambito di qualsiasi operazione DML, il sistema esegue il controllo seguente: **SysEndTime** ≥**SysStartTime**  
   
  Quando si crea un collegamento a una tabella di cronologia esistente, è possibile scegliere di eseguire una verifica della coerenza dei dati. Questa verifica della coerenza dei dati garantisce che i record esistenti non si sovrappongano e che siano soddisfatti i requisiti temporali per ogni singolo record. L'impostazione predefinita prevede l'esecuzione della verifica della coerenza dei dati. È in genere consigliabile eseguire la coerenza dei dati ogni volta che i dati tra le tabelle correnti e di cronologia non sono sincronizzati, ad esempio quando si incorpora una tabella di cronologia esistente popolata con dati cronologici.  
   

@@ -31,12 +31,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: e3b0e53dfbbe03fd723edb4d4c941e3395a0b1e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 10b29bcce89adb35b4650b5501fea9a460f18d50
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66826928"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67313984"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opzioni ALTER DATABASE SET (Transact-SQL)
 
@@ -2897,49 +2897,45 @@ SET QUERY_STORE = ON
 
 ## <a name="azure-sql-data-warehouse"></a>Azure SQL Data Warehouse
 
-> [!NOTE]
-> Molte opzioni SET di database possono essere configurate per la sessione corrente tramite [Istruzioni SET](../../t-sql/statements/set-statements-transact-sql.md) e spesso vengono configurate dalle applicazioni durante la connessione. Le opzioni di impostazione a livello di sessione sostituiscono i valori **ALTER DATABASE SET**. Le opzioni di database descritte di seguito sono valori che è possibile impostare per le sessioni che non prevedono esplicitamente altri valori di opzioni SET.
-
 ## <a name="syntax"></a>Sintassi
 
 ```
-ALTER DATABASE { database_name | Current }
+ALTER DATABASE { database_name }
 SET
 {
     <optionspec> [ ,...n ]
 }
 ;
 
-<auto_option> ::=
-{}
-RESULT_SET_CACHING { ON | OFF}
+<option_spec>::=
+{
+<RESULT_SET_CACHING>
 }
+;
+
+<RESULT_SET_CACHING>::=
+{
+RESULT_SET_CACHING {ON | OFF}
+}
+
 ```
 
 ## <a name="arguments"></a>Argomenti
 
-*database_name* è il nome del database da modificare.
+*database_name*
 
-**\<auto_option> ::=**
+Nome del database da modificare.
 
-Consente di controllare le opzioni automatiche.
+<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
+Si applica ad Azure SQL Data Warehouse (anteprima)
 
-**Autorizzazioni** Richiede le autorizzazioni seguenti:
+Questo comando deve essere eseguito mentre si è connessi al database `master`.  Le modifiche apportate a questa impostazione del database hanno effetto immediato.  La memorizzazione nella cache dei set di risultati delle query prevede l'addebito dei costi di archiviazione. Dopo aver disabilitato la memorizzazione nella cache dei risultati per un database, la cache dei risultati precedentemente salvati in modo permanente verrà immediatamente eliminata dalla risorsa di archiviazione di Azure SQL Data Warehouse. È stata introdotta una nuova colonna denominata is_result_set_caching_on in `sys.databases` per visualizzare l'impostazione di memorizzazione nella cache dei risultati per un database.  
 
-- Accesso principale di livello server (creato dal processo di provisioning) oppure
-- Membro del ruolo del database `dbmanager`.
+ON   
+Specifica che i set di risultati delle query restituiti da questo database verranno memorizzati nella cache della risorsa di archiviazione di Azure SQL Data Warehouse.
 
-Il proprietario del database può modificare il database solo se è un membro del ruolo dbmanager.
-
-> [!Note]
-> Questa funzionalità viene implementata in tutte le aree. Controllare la versione distribuita per l'istanza in uso e le [note sulla versione di Azure SQL Data Warehouse](/azure/sql-data-warehouse/release-notes-10-0-10106-0) più recenti per la disponibilità delle funzionalità.
-
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF } Si applica solo ad Azure SQL Data Warehouse Gen2 (anteprima) Questo comando deve essere eseguito mentre si è connessi al database master.  Le modifiche apportate a questa impostazione del database hanno effetto immediato.  La memorizzazione nella cache dei set di risultati delle query prevede l'addebito dei costi di archiviazione. Dopo aver disabilitato la memorizzazione nella cache dei risultati per un database, la cache dei risultati precedentemente salvati in modo permanente verrà immediatamente eliminata dalla risorsa di archiviazione di Azure SQL Data Warehouse. È stata introdotta una nuova colonna denominata is_result_set_caching_on in sys.databases per mostrare l'impostazione di memorizzazione nella cache dei risultati per un database.  
-
-SÌ Specifica che i set di risultati delle query restituiti da questo database verranno memorizzati nella cache nell'archiviazione di Azure SQL Data Warehouse.
-
-NO Specifica che i set di risultati delle query restituiti da questo database non verranno memorizzati nella cache nell'archiviazione di Azure SQL Data Warehouse.
-Per stabilire se una query è stata eseguita con un riscontro nella cache o un mancato riscontro nella cache dei risultati, gli utenti possono eseguire una query su sys.pdw_request_steps con un ID richiesta specifico.   In caso di riscontro nella cache, il risultato della query presenterà un singolo passaggio con i dettagli seguenti:
+OFF   
+Specifica che i set di risultati delle query restituiti da questo database non verranno memorizzati nella cache della risorsa di archiviazione di Azure SQL Data Warehouse. Per stabilire se una query è stata eseguita con un riscontro nella cache o un mancato riscontro nella cache dei risultati, gli utenti possono eseguire una query su sys.pdw_request_steps con un ID richiesta specifico.   In caso di riscontro nella cache, il risultato della query presenterà un singolo passaggio con i dettagli seguenti:
 
 |**Nome colonna** |**Operatore** |**Value** |
 |----|----|----|
@@ -2948,6 +2944,25 @@ Per stabilire se una query è stata eseguita con un riscontro nella cache o un m
 |location_type|=|Controllo|
 comando|Simile a|%DWResultCacheDb%|
 | | |
+
+## <a name="remarks"></a>Remarks
+
+Il set di risultati memorizzato nella cache viene riutilizzato per una query se vengono soddisfatti tutti i requisiti seguenti:
+
+1. L'utente che esegue la query ha accesso a tutte le tabelle a cui viene fatto riferimento nella query.
+1. È presente una corrispondenza esatta tra la nuova query e la query precedente che ha generato la cache dei set di risultati.
+1. Non sono presenti dati o modifiche dello schema nelle tabelle da cui è stato generato il set di risultati memorizzato nella cache.  
+
+Dopo l'attivazione della memorizzazione nella cache del set di risultati per un database, i risultati vengono memorizzati nella cache per tutte le query finché la cache non è piena, fatta eccezione per le query con funzioni non deterministiche, ad esempio DateTime.Now().   Le query con set di risultati di grandi dimensioni (ad esempio, > 1 milione di righe) potrebbero incontrare un rallentamento delle prestazioni durante la prima esecuzione quando viene creata la cache dei risultati.
+
+## <a name="permissions"></a>Autorizzazioni
+
+Richiede le autorizzazioni seguenti:
+
+- Accesso principale di livello server (creato dal processo di provisioning) oppure
+- Membro del ruolo del database `dbmanager`.
+
+Il proprietario del database può modificare il database solo se è un membro del ruolo dbmanager.
 
 ## <a name="examples"></a>Esempi
 

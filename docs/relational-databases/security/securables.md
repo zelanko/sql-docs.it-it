@@ -21,18 +21,18 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cb09b9028f2ef994d57f8a52ad21f6c80be63293
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537617"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62865914"
 ---
 # <a name="securables"></a>Entità a protezione diretta
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Le entità a protezione diretta sono le risorse il cui accesso è controllato dal sistema di autorizzazioni del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Ad esempio, una tabella è un'entità a protezione diretta. Alcune entità a protezione diretta possono essere contenute da altre, creando gerarchie nidificate denominate ambiti, che possono a loro volta essere protetti. Gli ambiti a protezione diretta sono **server**, **database**e **schema**.  
+  Le entità a protezione diretta sono le risorse il cui accesso è controllato dal sistema di autorizzazioni del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Ad esempio, una tabella è un'entità a protezione diretta. Alcune entità a protezione diretta possono essere contenute da altre, creando gerarchie nidificate denominate ambiti, che possono a loro volta essere protetti. Gli ambiti a protezione diretta sono **server**, **database**e **schema**.  
   
-## <a name="securable-scope-server"></a>Ambito a protezione diretta: server  
+## <a name="securable-scope-server"></a>Ambito a protezione diretta: Server  
  L'ambito a protezione diretta **server** contiene le entità a protezione diretta seguenti:  
   
 -   gruppo di disponibilità  
@@ -45,7 +45,7 @@ ms.locfileid: "52537617"
   
 -   Database  
   
-## <a name="securable-scope-database"></a>Ambito a protezione diretta: database  
+## <a name="securable-scope-database"></a>Ambito a protezione diretta: Database  
  L'ambito a protezione diretta **database** contiene le entità a protezione diretta seguenti:  
   
 -   Ruolo applicazione  

@@ -22,11 +22,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: b272b3b5df01931cfabf1f19945bba477cc680bc
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326712"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62993853"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ALTER APPLICATION ROLE application_role_name
 > [!CAUTION]  
 >  Il comportamento degli schemi in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] è diverso rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile che il codice in cui gli schemi sono equivalenti agli utenti del database non restituisca risultati corretti. Le viste del catalogo precedenti, inclusa sysobjects, non devono essere usate in un database in cui è stata usata una delle istruzioni DDL seguenti: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. In questi database è necessario usare le nuove viste del catalogo, in cui si tiene conto della separazione tra entità e schemi introdotta in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per altre informazioni sulle viste del catalogo, vedere [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY APPLICATION ROLE nel database. Per modificare lo schema predefinito, è inoltre richiesta l'autorizzazione ALTER per il ruolo applicazione. Un ruolo applicazione può modificare il proprio schema predefinito, ma non il nome o la password.  
   
 ## <a name="examples"></a>Esempi  
@@ -91,7 +91,7 @@ ALTER APPLICATION ROLE weekly_receipts
 GO  
 ```  
   
-### <a name="b-changing-the-password-of-application-role"></a>b. Modifica della password del ruolo applicazione  
+### <a name="b-changing-the-password-of-application-role"></a>B. Modifica della password del ruolo applicazione  
  Nell'esempio seguente viene modificata la password del ruolo applicazione `receipts_ledger`.  
   
 ```  

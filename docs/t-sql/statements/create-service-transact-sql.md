@@ -22,12 +22,12 @@ ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fcd52d1f45b1f1b29777cae26e65660887302e92
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d7344df7b16bdef8bb6d49ac5ee313916a1c0a49
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131921"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67232500"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "54131921"
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 CREATE SERVICE service_name  
    [ AUTHORIZATION owner_name ]  
    ON QUEUE [ schema_name. ]queue_name  
@@ -52,12 +51,12 @@ CREATE SERVICE service_name
  Nome del servizio da creare. I nuovi servizi vengono creati nel database corrente e sono di proprietà dell'entità specificata nella clausola AUTHORIZATION. Non è possibile specificare i nomi del server, del database e dello schema. *route_name* deve essere un valore **sysname** valido.  
   
 > [!NOTE]  
->  Non creare un servizio che usa la parola chiave ANY per *service_name*. Quando si specifica ANY per un nome del servizio in CREATE BROKER PRIORITY, la priorità viene considerata per tutti i servizi e non è limitata a un servizio il cui nome è ANY.  
+> Non creare un servizio che usa la parola chiave ANY per *service_name*. Quando si specifica `ANY` per un nome del servizio in `CREATE BROKER PRIORITY`, la priorità viene considerata per tutti i servizi e non è limitata a un servizio il cui nome è ANY.  
   
  AUTHORIZATION *owner_name*  
  Imposta come proprietario del servizio l'utente o il ruolo del database specificato. Se l'utente corrente è **dbo** o **sa**, *owner_name* può essere il nome di qualsiasi utente o ruolo valido. In caso contrario, *owner_name* deve corrispondere al nome dell'utente corrente, al nome di un utente per il quale l'utente corrente dispone di autorizzazione IMPERSONATE oppure al nome di un ruolo a cui appartiene l'utente corrente.  
   
- ON QUEUE [ _schema_name_**.** ] *queue_name*  
+ ON QUEUE [ _schema_name_ **.** ] *queue_name*  
  Specifica la coda che riceve i messaggi per il servizio. La coda deve esistere nello stesso database del servizio. Se non si specifica *schema_name* viene usato lo schema predefinito per l'utente che esegue l'istruzione.  
   
  *contract_name*  
@@ -67,16 +66,16 @@ CREATE SERVICE service_name
  Specifica che il servizio può fungere da servizio di destinazione per le conversazioni che seguono il contratto DEFAULT. Nel contesto di questa clausola DEFAULT non è una parola chiave ed è pertanto necessario delimitarlo come identificatore. Il contratto DEFAULT consente a entrambi i lati della conversazione di inviare messaggi di tipo DEFAULT. Per il tipo di messaggi DEFAULT viene utilizzata la convalida NONE.  
   
 ## <a name="remarks"></a>Remarks  
- Un servizio espone la funzionalità fornita dai contratti a cui è associato, rendendone possibile l'utilizzo da parte di altri servizi. L'istruzione CREATE SERVICE specifica i contratti per cui questo servizio funge da destinatario. Un servizio può fungere da destinatario solo per le conversazioni che utilizzano i contratti specificati dal servizio. Un servizio che non specifica alcun contratto non espone alcuna funzionalità per gli altri servizi.  
+ Un servizio espone la funzionalità fornita dai contratti a cui è associato, rendendone possibile l'utilizzo da parte di altri servizi. L'istruzione `CREATE SERVICE` specifica i contratti per cui questo servizio funge da destinatario. Un servizio può fungere da destinatario solo per le conversazioni che utilizzano i contratti specificati dal servizio. Un servizio che non specifica alcun contratto non espone alcuna funzionalità per gli altri servizi.  
   
  Le conversazioni avviate da questo servizio possono utilizzare qualsiasi contratto. Creare un servizio senza specificare alcun contratto se il servizio deve solo avviare conversazioni.  
   
  Quando [!INCLUDE[ssSB](../../includes/sssb-md.md)] accetta una nuova conversazione da un servizio remoto, il nome del servizio di destinazione determina la coda in cui Service Broker inserirà i messaggi della conversazione.  
   
-## <a name="permissions"></a>Permissions  
- L'autorizzazione per la creazione di un servizio viene assegnata per impostazione predefinita ai membri del ruolo predefinito del database **db_ddladmin** o **db_owner** e del ruolo predefinito del server **sysadmin**. L'utente che esegue l'istruzione CREATE SERVICE deve disporre dell'autorizzazione REFERENCES per la coda e per tutti i contratti specificati.  
+## <a name="permissions"></a>Autorizzazioni  
+ L'autorizzazione per la creazione di un servizio viene assegnata per impostazione predefinita ai membri del ruolo predefinito del database `db_ddladmin` o `db_owner` o del ruolo predefinito del server `sysadmin`. L'utente che esegue l'istruzione `CREATE SERVICE` deve disporre dell'autorizzazione `REFERENCES` per la coda e per tutti i contratti specificati.  
   
- L'autorizzazione REFERENCES per un servizio viene assegnata per impostazione predefinita ai membri del ruolo predefinito del database **db_ddladmin** o **db_owner** e ai membri del ruolo predefinito del server **sysadmin**. Le autorizzazioni SEND per un servizio vengono assegnate per impostazione predefinita al proprietario del servizio, ai membri del ruolo predefinito del database **db_owner** e ai membri del ruolo predefinito del server **sysadmin**.  
+ L'autorizzazione `REFERENCES` per un servizio viene assegnata per impostazione predefinita al proprietario del servizio, ai membri del ruolo predefinito del database `db_ddladmin` o `db_owner` o ai membri del ruolo predefinito del server `sysadmin`. Le autorizzazioni `SEND` per un servizio vengono assegnate per impostazione predefinita al proprietario del servizio, ai membri del ruolo predefinito del database `db_owner` o ai membri del ruolo predefinito del server `sysadmin`.  
   
  Un servizio non può essere un oggetto temporaneo. I nomi dei servizi che iniziano con **#** sono consentiti, ma sono oggetti permanenti.  
   
@@ -85,16 +84,16 @@ CREATE SERVICE service_name
 ### <a name="a-creating-a-service-with-one-contract"></a>A. Creazione di un servizio con un contratto  
  Nell'esempio seguente viene creato il servizio `//Adventure-Works.com/Expenses` per la coda `ExpenseQueue` nello schema `dbo`. I dialoghi per questo servizio devono essere basati sul contratto `//Adventure-Works.com/Expenses/ExpenseSubmission`.  
   
-```  
+```sql  
 CREATE SERVICE [//Adventure-Works.com/Expenses]  
     ON QUEUE [dbo].[ExpenseQueue]  
     ([//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  
 ```  
   
-### <a name="b-creating-a-service-with-multiple-contracts"></a>b. Creazione di un servizio con più contratti  
+### <a name="b-creating-a-service-with-multiple-contracts"></a>B. Creazione di un servizio con più contratti  
  Nell'esempio seguente viene creato il servizio `//Adventure-Works.com/Expenses` per la coda `ExpenseQueue`. I dialoghi per questo servizio devono essere basati sul contratto `//Adventure-Works.com/Expenses/ExpenseSubmission` oppure sul contratto `//Adventure-Works.com/Expenses/ExpenseProcessing`.  
   
-```  
+```sql  
 CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue  
     ([//Adventure-Works.com/Expenses/ExpenseSubmission],  
      [//Adventure-Works.com/Expenses/ExpenseProcessing]) ;  
@@ -103,7 +102,7 @@ CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue
 ### <a name="c-creating-a-service-with-no-contracts"></a>C. Creazione di un servizio senza contratti  
  Nell'esempio seguente viene creata la coda del servizio `//Adventure-Works.com/Expenses on the ExpenseQueue`. Per questo servizio non è stato specificato alcun contratto, quindi il servizio può solo fungere da initiator di un dialogo.  
   
-```  
+```sql  
 CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue ;  
 ```  
   

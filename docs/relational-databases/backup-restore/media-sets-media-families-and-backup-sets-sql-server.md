@@ -25,11 +25,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a8023d72b28ec3ff9e9bafe2423b26620a5046ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534113"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62672448"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Set di supporti, gruppi di supporti e set di backup (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "52534113"
 ##  <a name="OvMediaSetsFamiliesBackupSets"></a> Panoramica dei set di supporti, dei gruppi di supporti e dei set di backup  
  I backup disponibili in un set di uno o più supporti di backup costituiscono un singolo set di supporti. Un *set di supporti* è una raccolta ordinata di *supporti di backup*, nastri o file su disco, o oggetti BLOB di Azure, su cui una o più operazioni di backup hanno eseguito la scrittura usando un tipo e un numero fissi di dispositivi di backup. Un set di supporti specificati usano unità nastro, unità disco o oggetti BLOB di Azure, ma non una combinazione di due o più. 
  
-**Esempio:** i dispositivi di backup associati a un set di supporti possono essere tre unità nastro denominate `\\.\TAPE0`, `\\.\TAPE1`e `\\.\TAPE2`. Il set di supporti include solo nastri, a partire da almeno tre nastri, ovvero uno per unità. Il tipo e il numero di dispositivi di backup vengono definiti in fase di creazione di un set di supporti e non è possibile modificarli. Se necessario, tra le operazioni di backup e ripristino è tuttavia possibile sostituire un determinato dispositivo con un dispositivo dello stesso tipo.  
+**Esempio:** i dispositivi di backup associati a un set di supporti possono essere tre unità nastro denominate `\\.\TAPE0`, `\\.\TAPE1` e `\\.\TAPE2`. Il set di supporti include solo nastri, a partire da almeno tre nastri, ovvero uno per unità. Il tipo e il numero di dispositivi di backup vengono definiti in fase di creazione di un set di supporti e non è possibile modificarli. Se necessario, tra le operazioni di backup e ripristino è tuttavia possibile sostituire un determinato dispositivo con un dispositivo dello stesso tipo.  
   
  Per creare un set di supporti nei supporti di backup durante un'operazione di backup, formattare i supporti di backup. Per altre informazioni, vedere [Creazione di un nuovo set di supporti](#CreatingMediaSet)più avanti in questo argomento. Dopo la formattazione, ogni file o nastro include un'intestazione supporto per il set di supporti ed è pronto per la ricezione di contenuto di backup. Dopo la creazione dell'intestazione, l'operazione di backup continua e in tutti i dispositivi di backup specificati per l'operazione viene eseguito il backup dei dati specificati nel supporto di backup.  
   
@@ -140,7 +140,7 @@ WITH
   
  ![Secondo set di backup distribuito su 3 nastri del set di supporti](../../relational-databases/backup-restore/media/bnr-mediaset-appendedto.gif "Secondo set di backup distribuito su 3 nastri del set di supporti")  
   
- Quando si ripristinano i backup, è possibile usare l'opzione FILE per specificare quali backup si desidera usare. L'esempio seguente illustra l'uso delle clausole FILE **=**_numero_file_set_backup_ quando si ripristina un backup completo del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] seguito da un backup differenziale del database sullo stesso set di supporti. Il set di supporti usano tre nastri di backup, che si trovano sulle unità nastro `\\.\tape0`, `tape1`e `tape2`.  
+ Quando si ripristinano i backup, è possibile usare l'opzione FILE per specificare quali backup si desidera usare. L'esempio seguente illustra l'uso delle clausole FILE **=** _numero_file_set_backup_ quando si ripristina un backup completo del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] seguito da un backup differenziale del database sullo stesso set di supporti. Il set di supporti usano tre nastri di backup, che si trovano sulle unità nastro `\\.\tape0`, `tape1`e `tape2`.  
   
 ```  
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  

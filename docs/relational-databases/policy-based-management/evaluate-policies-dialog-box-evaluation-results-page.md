@@ -14,33 +14,33 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ff79f1ad81a492452404324d20e92c2251b2d4f8
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512133"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63007797"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>Finestra di dialogo Valuta criteri, pagina Risultati valutazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Utilizzare questa finestra di dialogo per visualizzare i risultati di valutazione dei criteri e applicare criteri della Gestione basata su criteri a un set di destinazioni non conforme ai criteri.  
   
 ## <a name="options"></a>Opzioni  
- **Risultati: Criteri**  
+ **Risultati: criterio**  
  Nome dei criteri da valutare. Il contenuto di questa casella è di sola lettura.  
   
- **Risultati: Messaggio**  
+ **Risultati: messaggio**  
  Collegamento a informazioni se si verifica un errore.  
   
- **Dettagli destinazione: Server**  
+ **Dettagli destinazione: server**  
  Istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rispetto alla quale vengono valutati i criteri.  
   
- **Dettagli destinazione: Destinazione**  
+ **Dettagli destinazione: destinazione**  
  Destinazione rispetto alla quale vengono valutati i criteri.  
   
- **Dettagli destinazione: Dettagli**  
+ **Dettagli destinazione: dettagli**  
  Collegamento alla finestra di dialogo **Visualizzazione dettagliata risultati** , in cui vengono visualizzate informazioni dettagliate sulla valutazione dei criteri.  
   
- **Dettagli destinazione: Messaggio**  
+ **Dettagli destinazione: messaggio**  
  Collegamento a informazioni se si verifica un errore.  
   
 ## <a name="see-also"></a>Vedere anche  

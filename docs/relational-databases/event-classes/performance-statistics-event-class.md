@@ -14,18 +14,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a9e698b750e37e595592299e9b7e41a60e868d79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640291"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62694295"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   La classe di evento Performance Statistics consente di eseguire il monitoraggio delle prestazioni di query, stored prcoedure e trigger in esecuzione. Ciascuna delle sei sottoclassi di evento indica un evento generato nel corso di query, stored procedure e trigger all'interno del sistema. L'utilizzo di tali sottoclassi di evento in combinazione con le viste a gestione dinamica sys.dm_exec_query_stats, sys.dm_exec_procedure_stats e sys.dm_exec_trigger_stats associate consente di ricostituire la cronologia delle prestazioni di qualsiasi query, stored procedure o trigger specifico.  
   
 ## <a name="performance-statistics-event-class-data-columns"></a>Colonne di dati della classe di evento Performance Statistics  
- Nelle tabelle seguenti sono descritte le colonne di dati della classe di evento associate a ciascuna delle sottoclassi di evento EventSubClass 0, EventSubClass 1, EventSubClass 2, EventSubClass 3, EventSubClass 4 ed EventSubClass 5.  
+ Le tabelle seguenti descrivono le colonne dei dati delle classi di evento associate a ognuna delle sottoclassi di evento seguenti: EventSubClass 0, EventSubClass 1,EventSubClass 2,EventSubClass 3, EventSubClass 4 ed EventSubClass 5.  
   
 ### <a name="eventsubclass-0"></a>EventSubClass 0  
   

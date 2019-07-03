@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b1b43a2c739de3ae0f23871c7bc023b3f215b4ce
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 4c436c6c9b0c20d99e5de168aa375f66f2e76999
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665508"
 ---
 # <a name="replication-distribution-agent"></a>Agente distribuzione repliche
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,14 +92,14 @@ distrib [-?]
  **-?**  
  Stampa tutti i parametri disponibili.  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- Nome del server di pubblicazione. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server_name_**\\**_instance_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ Nome del server di pubblicazione. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server_name_ **\\** _instance_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
   
  **-PublisherDB** _publisher_database_  
  Nome del database del server di pubblicazione.  
   
- **-Subscriber** _server_name_[**\\**_instance_name_]  
- Nome del Sottoscrittore. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server_name_**\\**_instance_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
+ **-Subscriber** _server_name_[ **\\** _instance_name_]  
+ Nome del Sottoscrittore. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server_name_ **\\** _instance_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
   
  **-SubscriberDB** _subscriber_database_  
  Nome del database Sottoscrittore.  
@@ -111,10 +111,10 @@ distrib [-?]
  Numero di righe da inviare in un'operazione di copia bulk. Quando si esegue un'operazione **bcp in** , la dimensione del batch indica il numero di righe da inviare al server come unica transazione, nonché il numero di righe che devono essere inviate prima che l'agente di distribuzione registri un messaggio di stato **bcp** . Quando si esegue un'operazione **bcp out** , viene usata una dimensione batch fissa di **1000** .  
   
  **-CommitBatchSize** _commit_batch_size_  
- Numero di transazioni da eseguire nel Sottoscrittore prima di eseguire un'istruzione COMMIT. Il valore predefinito è 100.  
+ Numero di transazioni da eseguire nel Sottoscrittore prima di eseguire un'istruzione COMMIT. Il valore predefinito è 100 e il valore massimo è 10000.
   
  **-CommitBatchThreshold**  _commit_batch_threshold_  
- Numero di comandi di replica da eseguire nel Sottoscrittore prima di eseguire un'istruzione COMMIT. Il valore predefinito è 1000.  
+ Numero di comandi di replica da eseguire nel Sottoscrittore prima di eseguire un'istruzione COMMIT. Il valore predefinito è 1000 e il valore massimo è 10000. 
   
  **-Continuous**  
  Specifica se l'agente tenta di eseguire continuamente il polling delle transazioni replicate. Se specificato, l'agente esegue il polling delle transazioni replicate dall'origine in base agli intervalli di polling, anche se non vi sono transazioni in sospeso.  
@@ -233,7 +233,7 @@ distrib [-?]
  **-QuotedIdentifier** _quoted_identifier_  
  Specifica il carattere dell'identificatore tra virgolette da utilizzare. Il primo carattere del valore indica il valore utilizzato dall'agente di distribuzione. Se **QuotedIdentifier** viene usato senza valore, l'agente di distribuzione usa uno spazio. Se **QuotedIdentifier** non viene usato, l'agente di distribuzione usa qualsiasi identificatore delimitato tra virgolette supportato dal Sottoscrittore.  
   
- **-SkipErrors** _native_error_id_ [**:**_...n_]  
+ **-SkipErrors** _native_error_id_ [ **:** _...n_]  
  Elenco delimitato da due punti che specifica i numeri di errore che devono essere ignorati dall'agente.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  

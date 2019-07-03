@@ -23,12 +23,12 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a44c62bfa8c85999112887dcacd54bfd176dfaa1
-ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
+ms.openlocfilehash: 783b2249a36b69bc53e147699e50dcab86fd89b5
+ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55428648"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316677"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ Se ad esempio la dimensione della cache viene impostata su 50, nella cache di [!
 Se per la creazione si utilizza l'opzione **CACHE**, un arresto imprevisto, ad esempio un'interruzione dell'alimentazione, potrebbe causare la perdita dei numeri di sequenza rimanenti nella cache.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
- I numeri di sequenza vengono generati esternamente all'ambito della transazione corrente. Vengono utilizzati sia in caso di commit che di rollback della transazione che utilizza il numero di sequenza.  
+ I numeri di sequenza vengono generati esternamente all'ambito della transazione corrente. Vengono utilizzati sia in caso di commit che di rollback della transazione che utilizza il numero di sequenza. La convalida dei duplicati viene eseguita solo quando un record è completamente popolato. Ciò può provocare, in alcuni casi, l'assegnazione di uno stesso numero a più di un record durante la creazione, ma il numero viene comunque identificato come duplicato. Se si verifica questo errore e ai record successivi sono stati applicati altri valori di numerazione automatica, può verificarsi uno scarto tra i valori di numerazione automatica e il comportamento previsto.
   
 ### <a name="cache-management"></a>Gestione della cache  
  Per migliorare le prestazioni, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il numero di numeri di sequenza specificati dall'argomento **CACHE** viene pre-allocato.  
@@ -154,7 +154,7 @@ Se per la creazione si utilizza l'opzione **CACHE**, un arresto imprevisto, ad e
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione **CREATE SEQUENCE**, **ALTER**o **CONTROL** per l'oggetto SCHEMA.  
   
 -   I membri dei ruoli predefiniti del database db_owner and db_ddladmin possono creare, alterare ed eliminare oggetti sequenza.  
@@ -196,7 +196,7 @@ CREATE SEQUENCE Test.CountBy1
 GO  
 ```  
   
-### <a name="b-creating-a-sequence-that-decreases-by-1"></a>b. Creazione di una sequenza che diminuisce di 1  
+### <a name="b-creating-a-sequence-that-decreases-by-1"></a>B. Creazione di una sequenza che diminuisce di 1  
  Nell'esempio seguente la sequenza inizia da 0 e aumenta di un numero negativo ogni volta che viene utilizzata.  
   
 ```sql  

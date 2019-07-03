@@ -16,11 +16,11 @@ ms.author: sstein
 ms.manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fdc46b1d0addad193f5bc09a9bcd60fab9efe027
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418172"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62744021"
 ---
 # <a name="rename-views"></a>Rinominare viste
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "52418172"
 > [!WARNING]  
 >  Se si rinomina una vista, è possibile che smettano di funzionare il codice e le applicazioni che dipendono da essa, incluse altre viste, query, stored procedure, funzioni definite dall'utente e applicazioni client. Tali errori inoltre tendono a propagarsi a cascata.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "52418172"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Follow Up:**  [After renaming a view](#FollowUp)  
+-   **Completamento:**  [dopo che una vista è stata rinominata](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -52,7 +52,7 @@ ms.locfileid: "52418172"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Sono richieste l'autorizzazione ALTER per SCHEMA o CONTROL per OBJECT e l'autorizzazione CREATE VIEW per il database.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -72,7 +72,7 @@ ms.locfileid: "52418172"
   
  Per altre informazioni, vedere [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md) e [DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md).  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la rinomina di una vista  
+##  <a name="FollowUp"></a> Completamento: dopo che una vista è stata rinominata  
  Assicurarsi che tutti gli oggetti, gli script e le applicazioni che fanno riferimento al nome precedente della vista usino ora il nuovo nome.  
   
   

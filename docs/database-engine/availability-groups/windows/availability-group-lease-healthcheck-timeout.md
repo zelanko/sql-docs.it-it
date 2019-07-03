@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 63d16dd3856fc680ab580451f769bd29aeabeef4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4093a3629278f6bd733abdd3d14a006d2b73a75
+ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140603"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67166393"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Funzionamento e linee guida per i timeout lease, cluster e controllo integrità per i gruppi di disponibilità Always On 
 
@@ -56,7 +56,7 @@ Le impostazioni predefinite sono ottimizzate per una reazione rapida ai sintomi 
 
 ### <a name="relationship-between-cluster-timeout-and-lease-timeout"></a>Relazione tra timeout cluster e timeout lease 
 
-La funzione primaria del meccanismo lease è la gestione della risorsa di SQL Server quando il servizio cluster non può comunicare con l'istanza durante l'esecuzione di un failover a un altro nodo. Quando il cluster esegue l'operazione offline sulla risorsa cluster del gruppo di disponibilità, il servizio cluster esegue una chiamata RPC a rhs.exe per portare offline la risorsa. La DLL della risorsa usa le stored procedure per indicare a SQL Server di portare offline il gruppo di disponibilità, ma questa stored procedure potrebbe non riuscire o registrare un timeout. Anche l'host di risorse interrompe il proprio thread di rinnovo lease durante la chiamata offline. Nel peggiore dei casi, SQL Server causa la scadenza del lease entro ½ \* LeaseTimeout ed esegue la transizione dell'istanza a uno stato di risoluzione. I failover possono essere avviati da entità diverse, ma è importante che la visualizzazione dello stato del cluster sia coerente nelle diverse istanze cluster e nelle istanze di SQL Server. Considerare ad esempio uno scenario in cui l'istanza primaria perde la connessione al resto del cluster. Ogni nodo del cluster determina un errore in orari simili a causa dei valori di timeout cluster, ma solo il nodo primario può interagire con l'istanza di SQL Server primaria per imporre la rinuncia al ruolo primario. 
+La funzione primaria del meccanismo lease è di portare offline la risorsa di SQL Server quando il servizio cluster non può comunicare con l'istanza durante l'esecuzione di un failover a un altro nodo. Quando il cluster esegue l'operazione offline sulla risorsa cluster del gruppo di disponibilità, il servizio cluster esegue una chiamata RPC a rhs.exe per portare offline la risorsa. La DLL della risorsa usa le stored procedure per indicare a SQL Server di portare offline il gruppo di disponibilità, ma questa stored procedure potrebbe non riuscire o registrare un timeout. Anche l'host di risorse interrompe il proprio thread di rinnovo lease durante la chiamata offline. Nel peggiore dei casi, SQL Server causa la scadenza del lease entro ½ \* LeaseTimeout ed esegue la transizione dell'istanza a uno stato di risoluzione. I failover possono essere avviati da entità diverse, ma è importante che la visualizzazione dello stato del cluster sia coerente nelle diverse istanze cluster e nelle istanze di SQL Server. Considerare ad esempio uno scenario in cui l'istanza primaria perde la connessione al resto del cluster. Ogni nodo del cluster determina un errore in orari simili a causa dei valori di timeout cluster, ma solo il nodo primario può interagire con l'istanza di SQL Server primaria per imporre la rinuncia al ruolo primario. 
 
 Dal punto di vista del nodo primario, il servizio cluster ha perso il quorum e il servizio inizia la procedura di chiusura. Il servizio cluster rilascia una chiamata RPC all'host di risorse per terminare il processo. Questa chiamata di terminazione è quella che porta offline il gruppo di disponibilità nell'istanza di SQL Server. Questa chiamata offline viene eseguita tramite T-SQL, ma non può garantire che verrà stabilita una connessione tra SQL e la DLL della risorsa. 
 

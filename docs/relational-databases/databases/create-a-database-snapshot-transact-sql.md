@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e09eae93b2b6a2f7c50dfc2d65370a23dc8d55d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205940"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025451"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Creare uno snapshot del database (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ AdventureWorks_snapshot_evening
   
 
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Se un utente può creare un database, può creare anche uno snapshot del database; tuttavia, per creare uno snapshot di un database mirror, è necessario essere membro del ruolo del server predefinito **sysadmin** .  
   
 ##  <a name="TsqlProcedure"></a> Come creare uno snapshot del database utilizzando Transact-SQL  
@@ -130,7 +130,7 @@ AdventureWorks_snapshot_evening
   
 -   A. [Creazione di uno snapshot del database AdventureWorks](#Creating_on_AW)  
   
--   b. [Creazione di uno snapshot del database Sales](#Creating_on_Sales)  
+-   B. [Creazione di uno snapshot del database Sales](#Creating_on_Sales)  
   
 ####  <a name="Creating_on_AW"></a> A. Creazione di uno snapshot del database AdventureWorks  
  In questo esempio viene creato uno snapshot del database `AdventureWorks` . Il nome dello snapshot, `AdventureWorks_dbss_1800`, e il nome del file sparse corrispondente, `AdventureWorks_data_1800.ss`, indicano l'ora di creazione, ovvero le 18.00 (1800).  

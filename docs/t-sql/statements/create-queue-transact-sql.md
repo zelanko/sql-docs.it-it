@@ -26,12 +26,12 @@ ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ab7873152b9ae372c3d61d2906d3b52a055d4130
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1f7c970293a68e1ecf4df19ac70bb0e7e1ba303a
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503245"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67232550"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -163,32 +163,32 @@ CREATE QUEUE <object>
 |message_id|**uniqueidentifier**|Identificatore univoco del messaggio.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- L'autorizzazione per la creazione di una coda viene assegnata ai membri del ruolo predefinito del database db_ddladmin o db_owner  e ai membri del ruolo predefinito del server sysadmin.  
+ L'autorizzazione per la creazione di una coda viene assegnata ai membri del ruolo predefinito del database `db_ddladmin` o `db_owner` e del ruolo predefinito del server `sysadmin`.  
   
- L'autorizzazione REFERENCES per una coda viene assegnata per impostazione predefinita al proprietario della coda, ai membri del ruolo predefinito del database db_ddladmin o db_owner e ai membri del ruolo predefinito del server sysadmin.  
+ L'autorizzazione `REFERENCES` per una coda viene assegnata per impostazione predefinita al proprietario della coda, ai membri del ruolo predefinito del database `db_ddladmin` o `db_owner` e del ruolo predefinito del server `sysadmin`.  
   
- L'autorizzazione RECEIVE per una coda viene assegnata per impostazione predefinita al proprietario della coda, ai membri del ruolo predefinito del database db_owner e ai membri del ruolo predefinito del server sysadmin.  
+ L'autorizzazione `RECEIVE` per una coda viene assegnata per impostazione predefinita al proprietario della coda, ai membri del ruolo predefinito del database `db_owner` o ai membri del ruolo predefinito del server `sysadmin`.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-creating-a-queue-with-no-parameters"></a>A. Creazione di una coda senza parametri  
  Nell'esempio seguente viene creata una coda disponibile per la ricezione di messaggi. Per la coda non viene specificata alcuna stored procedure di attivazione.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue ;  
 ```  
   
 ### <a name="b-creating-an-unavailable-queue"></a>B. Creazione di una coda non disponibile  
  Nell'esempio seguente viene creata una coda non disponibile per la ricezione di messaggi. Per la coda non viene specificata alcuna stored procedure di attivazione.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue WITH STATUS=OFF ;  
 ```  
   
 ### <a name="c-creating-a-queue-and-specify-internal-activation-information"></a>C. Creazione di una coda e impostazione delle informazioni interne per l'attivazione  
  Nell'esempio seguente viene creata una coda disponibile per la ricezione di messaggi. La coda avvia la stored procedure `expense_procedure` quando un messaggio raggiunge la coda. La stored procedure viene eseguita con l'account `ExpenseUser`. La coda avvia al massimo `5` istanze della stored procedure.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     WITH STATUS=ON,  
     ACTIVATION (  
@@ -200,7 +200,7 @@ CREATE QUEUE ExpenseQueue
 ### <a name="d-creating-a-queue-on-a-specific-filegroup"></a>D. Creazione di una coda in un filegroup specifico  
  Nell'esempio seguente viene creata una coda nel filegroup `ExpenseWorkFileGroup`.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     ON ExpenseWorkFileGroup ;  
 ```  
@@ -208,7 +208,7 @@ CREATE QUEUE ExpenseQueue
 ### <a name="e-creating-a-queue-with-multiple-parameters"></a>E. Creazione di una coda con più parametri  
  Nell'esempio seguente viene creata una coda nel filegroup `DEFAULT`. La coda non è disponibile. I messaggi vengono memorizzati nella coda fino al termine della conversazione cui appartengono. Quando viene resa disponibile tramite ALTER QUEUE, la coda avvia la stored procedure `2008R2.dbo.expense_procedure` per elaborare i messaggi. La stored procedure viene eseguita con l'account dell'utente che ha eseguito l'istruzione `CREATE QUEUE`. La coda avvia al massimo `10` istanze della stored procedure.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     WITH STATUS = OFF,  
       RETENTION = ON,  

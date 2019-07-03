@@ -20,11 +20,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c18ceba0be4237cc6b4a0ae824af9021631861c1
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828461"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62643773"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY - autorizzazioni per database (Transact-SQL)
 
@@ -59,7 +59,7 @@ DENY <permission> [ ,...n ]
 
 *permission* specifica un'autorizzazione che può essere negata per un database. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.
 
-L'opzione ALL non nega tutte le autorizzazioni possibili. L'impostazione di ALL equivale a negare le autorizzazioni seguenti: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE e CREATE VIEW.
+L'opzione ALL non nega tutte le autorizzazioni possibili. La negazione di ALL equivale a negare le autorizzazioni seguenti: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE e CREATE VIEW.
 
 PRIVILEGES viene incluso per la conformità allo standard ISO. Non modifica il funzionamento di ALL.
 
@@ -170,7 +170,7 @@ Un database è un'entità a protezione diretta contenuta nel server padre nella 
 |VIEW DATABASE STATE|CONTROL|VIEW SERVER STATE|
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
 L'entità che esegue l'istruzione (o l'entità specificata con l'opzione AS) deve disporre dell'autorizzazione CONTROL per il database o di un'autorizzazione di livello superiore che include l'autorizzazione CONTROL per il database.
 
@@ -188,7 +188,7 @@ DENY CREATE CERTIFICATE TO MelanieK;
 GO
 ```
 
-### <a name="b-denying-references-permission-to-an-application-role"></a>b. Negazione dell'autorizzazione REFERENCES a un ruolo applicazione
+### <a name="b-denying-references-permission-to-an-application-role"></a>B. Negazione dell'autorizzazione REFERENCES a un ruolo applicazione
 
 Nell'esempio seguente viene negata l'autorizzazione `REFERENCES` per il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] al ruolo applicazione `AuditMonitor`.
 

@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba776c683ea05665708891dbe734e82591077bf7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd0a4a2850af0bcd954db1c257adef209d5876c8
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946234"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67219003"
 ---
 # <a name="create-a-format-file-sql-server"></a>Creazione di un file di formato (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "64946234"
  In generale, i file di formato XML e non XML sono intercambiabili. È tuttavia consigliabile utilizzare la sintassi XML per i nuovi file di formato, in quanto questo tipo di file offre numerosi vantaggi rispetto ai file di formato non XML.  
   
 > [!NOTE]  
->  La versione dell'utilità **bcp** (Bcp.exe) usata per leggere un file di formato deve essere uguale o successiva alla versione usata per creare il file di formato. Ad esempio, l'utilità [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** può leggere un file di formato versione 10.0 generato dall'utilità [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**; tuttavia l'utilità [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** non riesce a leggere un file di formato versione 11.0 generato dall'utilità [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp**.  
+>  La versione dell'utilità **bcp** (Bcp.exe) usata per leggere un file di formato deve essere uguale o successiva alla versione usata per creare il file di formato. Ad esempio, l'utilità [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** può leggere un file di formato versione 10.0 generato dall'utilità [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**; tuttavia l'utilità [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** non può leggere un file di formato versione 11.0 generato dall'utilità [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**.  
   
- Questo argomento descrive come usare l' [utilità bcp](../../tools/bcp-utility.md) per creare un file di formato per una tabella specifica. Il file di formato è basato sull'opzione relativa al tipo di dati specificata (**-n**, **-c**, **-w**o **-N**) e sui delimitatori della tabella o della vista.  
+ Questo argomento descrive come usare l' [utilità bcp](../../tools/bcp-utility.md) per creare un file di formato per una tabella specifica. Il file di formato è basato sull'opzione relativa al tipo di dati specificata ( **-n**, **-c**, **-w**o **-N**) e sui delimitatori della tabella o della vista.  
   
 ## <a name="creating-a-non-xml-format-file"></a>Creazione di un file di formato non XML  
  Per usare un comando **bcp** per creare un file di formato, specificare l'argomento **format** e usare **nul** anziché un percorso del file di dati. L'opzione **format** richiede anche l'opzione **-f** , come nell'esempio seguente:  
@@ -40,7 +40,7 @@ ms.locfileid: "64946234"
  **bcp** _table_or_view_ **format** nul **-f**_format_file_name_  
   
 > [!NOTE]  
->  Per distinguere un file di formato non XML, è consigliabile utilizzare l'estensione fmt, ad esempio MyTable.fmt.  
+> Per distinguere un file di formato non XML, è consigliabile utilizzare l'estensione fmt, ad esempio MyTable.fmt.  
   
  Per informazioni sulla struttura e sui campi dei file di formato non XML, vedere [File in formato non XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
@@ -172,7 +172,7 @@ Ecco un esempio di file di formato senza le informazioni sulle regole di confron
  **bcp** _table_or_view_ **format nul-f** _format_file_name_ **-x**  
   
 > [!NOTE]  
->  Per distinguere un file di formato XML, è consigliabile utilizzare l'estensione xml, ad esempio MyTable.xml.  
+> Per distinguere un file di formato XML, è consigliabile utilizzare l'estensione xml, ad esempio MyTable.xml.  
   
  Per informazioni sulla struttura e sui campi dei file di formato XML, vedere [File in formato XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
@@ -180,7 +180,6 @@ Ecco un esempio di file di formato senza le informazioni sulle regole di confron
  Questa sezione contiene gli esempi seguenti che illustrano come usare i comandi **bcp** per creare un file di formato XML:  
   
 -   A. Creazione di un file di formato XML per dati di tipo carattere  
-  
 -   B. Creazione di un file di formato XML per dati nativi  
   
  Negli esempi viene utilizzata la tabella `HumanResources.Department` del database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . La tabella `HumanResources.Department` contiene quattro colonne, ovvero `DepartmentID`, `Name`, `GroupName`e `ModifiedDate`.  
@@ -197,13 +196,13 @@ Ecco un esempio di file di formato senza le informazioni sulle regole di confron
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|Specifica il file di formato XML.|  
 |**-c**|Specifica i dati di tipo carattere.|  
-|**-t** `,`|Specifica la virgola (**,**) come carattere di terminazione del campo.<br /><br /> Nota: se il file di dati usa il carattere di terminazione del campo predefinito (`\t`), l'opzione **-t** non è necessaria.|  
+|**-t** `,`|Specifica la virgola ( **,** ) come carattere di terminazione del campo.<br /><br /> Nota: se il file di dati usa il carattere di terminazione del campo predefinito (`\t`), l'opzione **-t** non è necessaria.|  
 |**-T**|Specifica che l'utilità **bcp** si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite una connessione trusted che usa la sicurezza integrata. Se non si specifica **-T** , è necessario specificare **-U** e **-P** per eseguire correttamente l'accesso.|  
   
  Al prompt dei comandi di Windows digitare il comando `bcp` seguente:  
   
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml -t, -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c.xml -t, -T  
 ```  
   
  Il file di formato generato, `Department-c.xml`, contiene gli elementi XML seguenti:  
@@ -242,7 +241,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
  Al prompt dei comandi di Windows digitare il comando `bcp` seguente:  
   
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..xml -n -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n.xml -n -T  
 ```  
   
  Il file di formato generato, `Department-n.xml`, contiene gli elementi XML seguenti:  

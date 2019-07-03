@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: eae7dfb2a198cf7cb3b1563f8f5b35c5fbb0b4eb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409618"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62515988"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Creazione di una tabella temporale con controllo delle versioni di sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -58,11 +58,11 @@ WITH (SYSTEM_VERSIONING = ON)
   
 -   Una tabella di cronologia anonima viene creata automaticamente nello stesso schema della tabella corrente o della tabella temporale.  
   
--   Il nome della tabella della cronologia anonima ha il seguente formato: *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffisso]*. Il suffisso è facoltativo e sarà aggiunto solo se la prima parte del nome della tabella non è univoco.  
+-   Il nome della tabella di cronologia anonimo presenta il seguente formato: *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffisso]* . Il suffisso è facoltativo e sarà aggiunto solo se la prima parte del nome della tabella non è univoco.  
   
 -   La tabella di cronologia viene creata come tabella rowstore. Se possibile, viene applicata la compressione di pagina, altrimenti la tabella di cronologia sarà non compressa. Ad esempio, alcune configurazioni di tabella, come le colonne di tipo sparse, non consentono la compressione.  
   
--   Viene creato un indice cluster predefinito per la tabella di cronologia con un nome generato automaticamente in formato *IX_<history_table_name>*. L'indice cluster contiene le colonne **PERIOD** (inizio, fine).  
+-   Viene creato un indice cluster predefinito per la tabella di cronologia con un nome generato automaticamente in formato *IX_<history_table_name>* . L'indice cluster contiene le colonne **PERIOD** (inizio, fine).  
   
 -   Per creare la tabella corrente come una tabella ottimizzata per la memoria, vedere [Tabelle temporali con controllo delle versioni di sistema con tabelle ottimizzate per la memoria](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md).  
   

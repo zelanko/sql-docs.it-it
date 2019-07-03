@@ -26,11 +26,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 11e155be4678c2cb57b9b551b412570e4578eb46
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516663"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62715854"
 ---
 # <a name="create-a-database-user"></a>Creazione di un utente di database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "52516663"
   
  È possibile concedere autorizzazioni agli utenti, in quanto entità di sicurezza. L'ambito di un utente è il database. Affinché un account di accesso possa eseguire la connessione a un database specifico nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è necessario eseguirne il mapping a un utente del database. Le autorizzazioni all'interno del database vengono concesse e negate all'utente del database, non all'account di accesso.  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorizzazioni  
  Richiede l'autorizzazione **ALTER ANY USER** per il database.  
   
 ##  <a name="SSMSProcedure"></a> Creare un utente con SSMS  
@@ -74,7 +74,7 @@ ms.locfileid: "52516663"
   
 2.  Espandere il database in cui si desidera creare il nuovo utente del database.  
   
-3.  Fare clic con il pulsante destro del mouse sulla cartella **Sicurezza**, scegliere **Nuovo** e quindi **Utente...**.  
+3.  Fare clic con il pulsante destro del mouse sulla cartella **Sicurezza**, scegliere **Nuovo** e quindi **Utente...** .  
   
 4.  Nella finestra di dialogo **Utente database - Nuovo** nella pagina **Generale** selezionare uno dei tipi di utente seguenti nell'elenco **Tipo utente**:  
   
@@ -116,7 +116,7 @@ ms.locfileid: "52516663"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opzioni aggiuntive  
- La finestra di dialogo **Utente database - Nuovo** presenta diverse opzioni anche in altre quattro pagine: **Schemi di proprietà**, **Appartenenza**, **Entità a protezione diretta** e **Proprietà estese**.  
+ Nella finestra di dialogo **Utente di database - Nuovo** sono disponibili opzioni anche in altre quattro pagine: **Schemi di proprietà**, **Appartenenza**, **Entità a protezione diretta** e **Proprietà estese**.  
   
 -   Nella pagina **Schemi di proprietà** sono elencati tutti i possibili schemi che possono essere di proprietà del nuovo utente del database. Per aggiungere schemi o rimuoverli da un utente del database, in **Schemi di proprietà di questo utente**selezionare o deselezionare le caselle di controllo accanto agli schemi.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "52516663"
   
 2.  Sulla barra **Standard** fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- Creates the login AbolrousHazem with password '340$Uuxwp7Mcxo7Khy'.  
