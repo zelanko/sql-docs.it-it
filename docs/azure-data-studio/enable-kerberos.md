@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 manager: jroth
-ms.openlocfilehash: 4836b22d9903b05d70170aad53fde7ac7101f537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d06af565a581ea8ed9dbbdd6330271ef9f6c7218
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778374"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556890"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Connettersi a SQL Server utilizzando l'autenticazione di Windows - Kerberos in [!INCLUDE[name-sos](../includes/name-sos-short.md)] 
 
@@ -160,7 +160,7 @@ Ottenere un Ticket Granting Ticket (TGT) dal KDC.
 kinit username@DOMAIN.COMPANY.COM
 ```
 
-Consente di visualizzare il ticket disponibile tramite kinit. Se il kinit ha avuto esito positivo, verrà visualizzato un ticket. 
+Consente di visualizzare i ticket disponibili utilizzando klist. Se il kinit ha avuto esito positivo, verrà visualizzato un ticket. 
 
 ```bash
 klist
