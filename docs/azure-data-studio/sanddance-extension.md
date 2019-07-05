@@ -3,7 +3,7 @@ title: SandDance per Studio dei dati di Azure
 titleSuffix: Azure Data Studio
 description: Come usare SandDance in Azure Data Studio
 ms.custom: seodec18
-ms.date: 04/18/2019
+ms.date: 07/03/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: 683aea4066c0b27db295cc07db31ecd07fb33245
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 466b2b60548d1dcef104979d1e291d44bf53b3de
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798083"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563984"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>SandDance per Studio dei dati di Azure (anteprima)
 Azure Data Studio offre ora un modo per creare visualizzazioni rapide per i file con estensione csv e tsv che si siano lavorando. Sono incluse in file locali o i file in HDFS in Big Data Cluster di SQL Server 2019. Questa estensione è utile quando si tenta di avere una rapida esaminare i dati e comprendere cosa sta succedendo. Usiamo una tecnologia denominata SandDance da Microsoft Research, che può generare visualizzazioni sul posto dei dati.
@@ -36,9 +36,9 @@ Pulsante destro del mouse su un file con estensione csv o tsv in HDFS, se si è 
 
 ## <a name="known-issues"></a>Problemi noti
 
-Attualmente un identificatore univoco devono essere la prima colonna dei dati.
+Attualmente, un identificatore univoco devono essere la prima colonna dei dati.
 
-Attualmente non calcoliamo il conteggio delle righe che verrà visualizzato. Tuttavia, il consumo di memoria aumenta proporzionalmente al numero di righe, pertanto è consigliabile che il set di dati o visualizzazione è limitata a circa 100K righe.
+Attualmente, non calcoliamo il conteggio delle righe che verrà visualizzato. Tuttavia, il consumo di memoria aumenta proporzionalmente al numero di righe, pertanto è consigliabile che il set di dati o visualizzazione è limitata a circa 100K righe.
 
 Vedere [problemi noti](https://microsoft.github.io/SandDance/#known-issues)
 
