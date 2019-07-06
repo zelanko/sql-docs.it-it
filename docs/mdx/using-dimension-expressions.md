@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a5e26d56a52c8c922c43325bd2267fa623dc0e19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e492498ee6e15866e7fe6fd96588480c914b0622
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63125534"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597528"
 ---
 # <a name="using-dimension-expressions"></a>Utilizzo delle espressioni di dimensione
 
@@ -59,7 +59,7 @@ ms.locfileid: "63125534"
   
  `FROM [Adventure Works]`  
   
- Un identificatore di gerarchia viene visualizzato come *Dimension_Name **.** Hierarchy_Name* nella notazione BNF utilizzata per descrivere istruzioni MDX.  
+ Un identificatore di gerarchia viene visualizzato come *Dimension_Name.Hierarchy_Name* nella notazione BNF utilizzata per descrivere istruzioni MDX.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Le espressioni &#40;MDX&#41;](../mdx/expressions-mdx.md)  

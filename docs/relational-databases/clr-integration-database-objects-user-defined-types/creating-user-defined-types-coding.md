@@ -31,12 +31,12 @@ ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b3e8921e230f581f60c96e6443d4fa5b71a417b3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dfb90f9e0d1e3910f45a5b283161e9c36da49a71
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661561"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579788"
 ---
 # <a name="creating-user-defined-types---coding"></a>Creazione di tipi definiti dall'utente - Codifica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -494,7 +494,7 @@ public Int32 Y
  Quando si codificano i metodi UDT, è consigliabile valutare la possibilità che l'algoritmo utilizzato possa cambiare nel tempo. In questo caso è possibile creare una classe separata per i metodi utilizzati dal tipo definito dall'utente. Se l'algoritmo cambia, è possibile ricompilare la classe con il nuovo codice e caricare l'assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza influire sul tipo definito dall'utente. In molti casi i tipi definiti dall'utente possono essere ricaricati utilizzando l'istruzione ALTER ASSEMBLY [!INCLUDE[tsql](../../includes/tsql-md.md)], anche se tale operazione potrebbe provocare problemi con i dati esistenti. Ad esempio, il **valuta** UDT è inclusa con la **AdventureWorks** Usa database di esempio un **ConvertCurrency** funzione per convertire i valori di valuta, che viene implementato in una classe separata. È possibile che gli algoritmi di conversione cambino nel tempo in modo imprevedibile o che venga richiesta una nuova funzionalità. Separando il **ConvertCurrency** funzione di **valuta** implementazione UDT offre maggiore flessibilità durante la pianificazione per le modifiche future.  
   
 ### <a name="example"></a>Esempio  
- Il **punto** classe contiene tre metodi semplici per il calcolo della distanza: **distanza**, **DistanceFrom** e **DistanceFromXY**. Ognuna restituisce un **doppie** calcola la distanza da **puntare** a zero, la distanza da un punto specificato da **puntare**, e la distanza dal specificato le coordinate X e Y per **punto**. **Distanza** e **DistanceFrom** ogni chiamata **DistanceFromXY**e viene illustrato come usare argomenti diversi per ogni metodo.  
+ Il **punto** classe contiene tre metodi semplici per il calcolo della distanza: **Distanza**, **DistanceFrom** e **DistanceFromXY**. Ognuna restituisce un **doppie** calcola la distanza da **puntare** a zero, la distanza da un punto specificato da **puntare**, e la distanza dal specificato le coordinate X e Y per **punto**. **Distanza** e **DistanceFrom** ogni chiamata **DistanceFromXY**e viene illustrato come usare argomenti diversi per ogni metodo.  
   
 ```vb  
 ' Distance from 0 to Point.  
@@ -544,7 +544,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  Il **Microsoft.SqlServer.Server.SqlMethodAttribute** classe fornisce attributi personalizzati che possono essere usati per contrassegnare le definizioni di metodo per specificare il determinismo, sul comportamento di chiamate null e per specificare se un metodo mutatore. Per queste proprietà si presuppone l'uso dei valori predefiniti e l'attributo personalizzato viene utilizzato solo quando è necessario un valore non predefinito.  
   
 > [!NOTE]  
->  Il **SqlMethodAttribute** classe eredita dal **SqlFunctionAttribute** classe, pertanto **SqlMethodAttribute** eredita il **FillRowMethodName** e **TableDefinition** i campi dal **SqlFunctionAttribute**. Questo implica, contrariamente al vero, la possibilità di scrivere un metodo con valori di tabella. Il metodo viene compilato e l'assembly viene distribuito, ma un errore sul **IEnumerable** restituire tipo viene generato in fase di esecuzione con messaggio analogo al seguente: "metodo, proprietà o campo '\<nome >' nella classe\<classe >' nell'assembly '\<assembly >' ha tipo restituito non valido. "  
+>  Il **SqlMethodAttribute** classe eredita dal **SqlFunctionAttribute** classe, pertanto **SqlMethodAttribute** eredita il **FillRowMethodName** e **TableDefinition** i campi dal **SqlFunctionAttribute**. Questo implica, contrariamente al vero, la possibilità di scrivere un metodo con valori di tabella. Il metodo viene compilato e l'assembly viene distribuito, ma un errore sul **IEnumerable** restituire tipo viene generato in fase di esecuzione con messaggio analogo al seguente: "Metodo, proprietà o campo '\<nome >' nella classe\<classe >' nell'assembly '\<assembly >' ha tipo restituito non valido."  
   
  Nella tabella seguente descrive alcune delle pertinente **Microsoft.SqlServer.Server.SqlMethodAttribute** proprietà che può essere usata nei metodi di tipo definito dall'utente e i relativi valori predefiniti.  
   
@@ -614,7 +614,9 @@ public void Rotate(double anglex, double angley, double anglez)
 2.  Usare la **scrivere** metodo per il **valuta** definito dall'utente per determinare come viene mantenuto il tipo definito dall'utente su disco e come i valori di tipo definito dall'utente vengono confrontati e ordinati per [!INCLUDE[tsql](../../includes/tsql-md.md)] operazioni.  
   
 3.  Salvare il **valuta** tipo definito dall'utente utilizzando il formato binario seguente:  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  Salvare le impostazioni cultura come stringa codificata UTF-16 per i byte 0-19 con riempimento a destra con caratteri Null.  
   
     2.  Utilizzare i byte 20 e successivi per contenere il valore decimale della valuta.  

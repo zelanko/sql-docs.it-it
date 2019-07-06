@@ -10,12 +10,12 @@ ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: b32ffb832baf12a72df6e32b07386f24448b3c35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 456aec6c6b9d0d1a5d0ee1d9949507a37577130c
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63285686"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597519"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>Creazione di stime (Esercitazione di base sul data mining)
   Dopo aver testato l'accuratezza dei modelli di data mining e ha deciso che si è soddisfatti dei risultati, è quindi possibile generare stime tramite il generatore di Query di stima nel **stima modello di Data Mining** scheda modelli di Data Mining Finestra di progettazione.  
@@ -96,7 +96,7 @@ ms.locfileid: "63285686"
   
      In questo modo viene specificata la colonna di destinazione per la funzione `PredictProbability`. Per altre informazioni sulle funzioni, vedere [Data Mining Extensions &#40;DMX&#41; Function Reference](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
-5.  Fare clic sulla riga vuota successiva nella **origine** colonna e quindi selezionare i modelli di data mining TM_Decision_Tree **.**  
+5.  Fare clic sulla riga vuota successiva nella **origine** colonna e quindi selezionare **TM_Decision_Tree** modello di data mining.  
   
 6.  Nel `TM_Decision_Tree` riga di **campo** colonna, selezionare `Bike Buyer`.  
   

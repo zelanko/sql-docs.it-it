@@ -13,12 +13,12 @@ ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 581065868f408eca28f15ffe9fb703d53e16ae66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d58edcfae92c94cfc635d3539f81faf834e382c7
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704141"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597566"
 ---
 # <a name="understanding-the-customization-file"></a>Informazioni sul file di personalizzazione
 Ogni intestazione di sezione nel file di personalizzazione è costituito da parentesi quadre ( **[]** ) che contiene un tipo e un parametro. Per le stringhe letterali sono indicati i quattro tipi di sezioni **connettersi**, **sql**, **elencoutenti**, oppure **log**. Il parametro è la stringa letterale, il valore predefinito, un identificatore specificato dall'utente o nulla.  
@@ -55,7 +55,7 @@ identifier
   
  Una sezione viene usata nelle circostanze seguenti:  
   
--   Oggetto **connettersi** sezione viene usata se la parte valore del client di connettersi, parola chiave della stringa "**origine dati =** _valore_", corrisponde a un **connettersi** Identificatore di sezione *.*  
+-   Oggetto **connettersi** sezione viene usata se la parte valore del client di connettersi, parola chiave della stringa "**origine dati =** _valore_", corrisponde a un **connettersi** Identificatore di sezione. 
   
 -   Un' **sql** sezione viene usata se la stringa di comando del client contiene una stringa che corrisponde a un **sql** identificatore di sezione.  
   

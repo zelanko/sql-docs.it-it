@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 222479dd03263f61a603e30202f2abf54307b0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c965300654f8cbebdf6fbd88699afdd512632488
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224885"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597438"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
 
@@ -46,9 +46,9 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  Delimitatore valido espresso come espressione stringa.  
   
 ## <a name="remarks"></a>Note  
- Se viene specificato un secondo set, la **genera** funzione restituisce un set generato applicando le tuple del secondo set a ogni tupla nel primo set *,* e quindi creando un join risultante viene impostato dall'unione. Se **tutti** viene specificato, i duplicati nel set risultante vengono mantenuti.  
+ Se viene specificato un secondo set, la **genera** funzione restituisce un set generato applicando le tuple del secondo set a ogni tupla nel primo set e quindi creando un join risultante imposta da union. Se **tutti** viene specificato, i duplicati nel set risultante vengono mantenuti.  
   
- Se viene specificata un'espressione stringa, il **genera** funzione restituisce una stringa generata valutando l'espressione stringa specificata su ogni tupla nel primo set *,* quindi concatenando i risultati. Facoltativamente, è possibile delimitare la stringa separando i vari risultati nella stringa concatenata risultante.  
+ Se viene specificata un'espressione stringa, il **genera** funzione restituisce una stringa generata valutando l'espressione stringa specificata su ogni tupla nel primo set, e quindi concatenando i risultati. Facoltativamente, è possibile delimitare la stringa separando i vari risultati nella stringa concatenata risultante.  
   
 ## <a name="examples"></a>Esempi  
   

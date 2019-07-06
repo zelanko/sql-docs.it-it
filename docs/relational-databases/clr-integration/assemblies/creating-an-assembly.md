@@ -17,12 +17,12 @@ ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c9b69fa2c6ed790a33da50c0002b17a7e4461d0e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8d9c14a534dc46f320ddacbf518c2df766292de6
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656760"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584052"
 ---
 # <a name="creating-an-assembly"></a>Creazione di un assembly
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   L'assembly chiamato o cui si fa riferimento è stato creato nello stesso database.  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>Configurazione della sicurezza durante la creazione di assembly  
- Quando si crea un assembly in un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, è possibile specificare uno dei tre diversi livelli di sicurezza in cui è possibile eseguire il codice: **sicuri**, **EXTERNAL_ACCESS**, o **UNSAFE** . Quando la **CREATE ASSEMBLY** istruzione viene eseguita, vengono effettuati alcuni controlli sull'assembly del codice che potrebbe causare l'assembly a non riescono a registrarsi nel server. Per altre informazioni, vedere l'esempio Impersonation sul [CodePlex](https://msftengprodsamples.codeplex.com/).  
+ Quando si crea un assembly in un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, è possibile specificare uno dei tre diversi livelli di sicurezza in cui è possibile eseguire il codice: **-SAFE**, **EXTERNAL_ACCESS**, o **UNSAFE**. Quando la **CREATE ASSEMBLY** istruzione viene eseguita, vengono effettuati alcuni controlli sull'assembly del codice che potrebbe causare l'assembly a non riescono a registrarsi nel server. Per altre informazioni, vedere l'esempio Impersonation sul [CodePlex](https://msftengprodsamples.codeplex.com/).  
   
  **SAFE** è il set di autorizzazioni predefinito e funziona per la maggior parte degli scenari. Per specificare un determinato livello di sicurezza, è necessario modificare la sintassi dell'istruzione CREATE ASSEMBLY come indicato di seguito:  
   
@@ -80,7 +80,9 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 1.  L'assembly è firmato con nome sicuro o dispone di firma Authenticode con un certificato. Questo nome sicuro (o certificato) viene creato all'interno [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] come asymmetric key (o certificato), e ha un account di accesso corrispondente con **EXTERNAL ACCESS ASSEMBLY** autorizzazione (per assembly di accesso esterno) o  **UNSAFE ASSEMBLY** autorizzazione (per gli assembly unsafe).  
   
 2.  Il proprietario del database (DBO) dispone **EXTERNAL ACCESS ASSEMBLY** (per **EXTERNAL ACCESS** assembly) o **UNSAFE ASSEMBLY** (per **UNSAFE** l'autorizzazione di assembly) e il database ha il [proprietà di Database TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md) impostata su **ON**.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Le due condizioni elencate in precedenza vengono verificate in fase di caricamento dell'assembly (fase che include l'esecuzione). Per caricare l'assembly, è necessario che si verifichi almeno una delle due condizioni.  
   
  È consigliabile che il [proprietà di Database TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md) in un database di non essere impostato su **ON** solo per eseguire common language runtime (CLR) di codice nel processo server. È invece consigliabile creare una chiave asimmetrica dal file di assembly nel database master. Un account di accesso mappato a questa chiave asimmetrica deve essere quindi creato e l'account di accesso devono essere concesse **EXTERNAL ACCESS ASSEMBLY** oppure **UNSAFE ASSEMBLY** l'autorizzazione.  

@@ -33,12 +33,12 @@ ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f82da51a519525451078a7f65548a91a532a0c86
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cad827776e525c55b41517ae1de05d547d88dd2a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537313"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584056"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Registrazione dei tipi definiti dall'utente in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,9 @@ ms.locfileid: "52537313"
 4.  Scrivere il codice per implementare il tipo definito dall'utente (UDT).  
   
 5.  Dal **compilare** dal menu **Distribuisci**. per registrare l'assembly e creare il tipo nel database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="using-transact-sql-to-deploy-udts"></a>Utilizzo di Transact-SQL per distribuire i tipi definiti dall'utente (UDT)  
  La sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY viene utilizzata per registrare l'assembly nel database in cui si desidera utilizzare il tipo definito dall'utente (UDT). Viene archiviata internamente nelle tabelle di sistema del database e non esternamente nel file system. Se il tipo definito dall'utente (UDT) dipende dagli assembly esterni, questi dovranno essere caricati nel database. L'istruzione CREATE TYPE viene utilizzata per creare il tipo definito dall'utente (UDT) nel database in cui deve essere utilizzato. Per altre informazioni, vedere [CREATE ASSEMBLY &#40;Transact-SQL&#41; ](../../t-sql/statements/create-assembly-transact-sql.md) e [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
   

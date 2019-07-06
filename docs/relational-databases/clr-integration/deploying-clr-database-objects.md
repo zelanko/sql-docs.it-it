@@ -15,12 +15,12 @@ ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3b32590b47a5fd686b02dfc0a1cd1cd323fc9a70
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3a7446027be3ec8df4d3ff35a2b806ffdda6f8f8
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663050"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585690"
 ---
 # <a name="deploying-clr-database-objects"></a>Distribuzione di oggetti di database CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "51663050"
 2.  Risolvere tutti gli avvisi e gli errori di compilazione prima di distribuire l'assembly al server di prova.  
   
 3.  Selezionare **Deploy** dalle **compilazione** menu. L'assembly verrà quindi registrato nel database e nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificati quando il progetto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stato creato per la prima volta in Visual Studio.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-deploy-the-assembly-using-transact-sql"></a>Per distribuire l'assembly utilizzando Transact-SQL  
   
 1.  Compilare l'assembly dal file di origine utilizzando i compilatori della riga di comando inclusi in .NET Framework.  
@@ -97,7 +99,7 @@ ms.locfileid: "51663050"
   
 6.  Per ogni tipo di oggetto selezionato nel **selezione tipi di oggetti** riquadro, un **Scegli \<tipo >** riquadro viene visualizzato. In questo riquadro è possibile scegliere tra tutte le istanze del tipo di oggetto di database registrato nel database specificato. Selezionare uno o più oggetti e fare clic su **successivo**.  
   
-7.  Il **opzioni di Output** riquadro verrà visualizzato dopo tutti i database desiderato dell'oggetto sono stati selezionati tipi. Selezionare **genera Script nel file** e specificare un percorso di file per lo script. Fare clic su **Avanti**. Rivedere le selezioni effettuate e fare clic su **fine**. Lo script di distribuzione verrà salvato nel percorso di file specificato.  
+7.  Il **opzioni di Output** riquadro verrà visualizzato dopo tutti i database desiderato dell'oggetto sono stati selezionati tipi. Selezionare **genera Script nel file** e specificare un percorso di file per lo script. Selezionare **Avanti**. Rivedere le selezioni effettuate e fare clic su **fine**. Lo script di distribuzione verrà salvato nel percorso di file specificato.  
   
 ## <a name="post-deployment-scripts"></a>Script post-distribuzione  
  È possibile eseguire uno script post-distribuzione.  

@@ -13,12 +13,12 @@ ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62d13bdc9d1a0fc030dc33bf982f6561b454c4ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 195d226caed68da7131390eaf1985d4e05b2edf3
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232288"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597537"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE (comando SQL)
 Crea una tabella con i campi specificati.  
@@ -121,7 +121,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  Una tabella può avere più indici candidato.  
   
  CHIAVE esterna *eExpression4*TAG *TagName4*[NODUP]  
- Crea un indice (non primaria) esterno e stabilisce una relazione a una tabella padre. *eExpression4* specifica l'espressione della chiave esterna dell'indice, e *TagName4* specifica il nome del tag chiave esterna indice creato *.* I nomi di tag di indice possono contenere fino a 10 caratteri. Includere NODUP per creare un indice esterna candidato.  
+ Crea un indice (non primaria) esterno e stabilisce una relazione a una tabella padre. *eExpression4* specifica l'espressione della chiave esterna dell'indice, e *TagName4* specifica il nome del tag chiave esterna di indice che viene creato. I nomi di tag di indice possono contenere fino a 10 caratteri. Includere NODUP per creare un indice esterna candidato.  
   
  È possibile creare più indici esterni per la tabella, ma le espressioni di indice esterna devono specificare diversi campi nella tabella.  
   
@@ -151,7 +151,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
 |Sintassi ODBC|Sintassi di Visual FoxPro|  
 |-----------------|--------------------------|  
-|CREATE TABLE *nome-tabella di base*<br /><br /> (*identificatore di colonna tipo di dati*<br /><br /> [NOT NULL]<br /><br /> [,*-identificatore della colonna tipo di dati*<br /><br /> [NOT NULL] ...)|Crea tabella *TableName1* [nome *LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [NOT NULL])|  
+|CREATE TABLE *nome-tabella di base*<br /><br /> (*identificatore di colonna tipo di dati*<br /><br /> [NOT NULL]<br /><br /> [, *-identificatore della colonna tipo di dati*<br /><br /> [NOT NULL] ...)|Crea tabella *TableName1* [nome *LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [NOT NULL])|  
   
  Quando si crea una tabella usando il driver, il driver nella tabella si chiude immediatamente dopo la creazione di consentire l'accesso alla tabella da altri utenti. Questo comportamento è diverso da Visual FoxPro, che rimane aperto in modo esclusivo al momento della creazione della tabella. Tuttavia, se viene eseguita una stored procedure nell'origine dati che contiene un'istruzione CREATE TABLE, la tabella viene lasciata aperta.  
   

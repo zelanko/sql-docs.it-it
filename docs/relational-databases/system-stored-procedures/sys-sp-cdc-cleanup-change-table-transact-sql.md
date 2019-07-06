@@ -1,5 +1,5 @@
 ---
-title: Sys. sp_cdc_cleanup_change_table (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_cleanup_change_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 19fb2cb2fc3b70bb8389a85d661992a5f7a7cb4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bbcc576ab0ff38adde9042a713e0dfd0c7d54be
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700701"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583289"
 ---
 # <a name="sysspcdccleanupchangetable-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ sys.sp_cdc_cleanup_change_table
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @capture_instance =] '*capture_instance*'  
+ [ @capture_instance = ] '*capture_instance*'  
  Nome dell'istanza di acquisizione associata alla tabella delle modifiche. *capture_instance* viene **sysname**, non prevede alcun valore predefinito e non può essere NULL.  
   
  *capture_instance* deve denominare un'istanza di acquisizione che esiste nel database corrente.  
   
- [ @low_water_mark =] *low_water_mark*  
- Numero di sequenza del log (LSN) che deve essere utilizzato come nuovo limite minimo per il *istanza di acquisizione*. *low_water_mark* viene **binary(10)**, non prevede alcun valore predefinito.  
+ [ @low_water_mark = ] *low_water_mark*  
+ Numero di sequenza del log (LSN) che deve essere utilizzato come nuovo limite minimo per il *istanza di acquisizione*. *low_water_mark* viene **binary(10)** , non prevede alcun valore predefinito.  
   
  Se il valore è diverso da null, deve apparire come valore start_lsn di una voce corrente nella [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) tabella. Se altre voci in cdc.lsn_time_mapping condividono la stessa ora di commit della voce identificata dal nuovo limite minimo, il valore LSN minore associato a tale gruppo di voci viene scelto come limite minimo.  
   
@@ -76,7 +76,9 @@ sys.sp_cdc_cleanup_change_table
     >  Il nuovo limite minimo potrebbe non essere quello specificato nella chiamata alla stored procedure. Se altre voci nella tabella cdc.lsn_time_mapping condividono la stessa ora di commit, il valore start_lsn più piccolo rappresentato nel gruppo di voci viene selezionato come limite minimo modificato. Se il @low_water_mark parametro è NULL o il limite minimo corrente è maggiore di grande del nuovo limite minimo, il valore start_lsn per l'istanza di acquisizione non viene modificato.  
   
 2.  Le voci della tabella delle modifiche con valori __$start_lsn inferiori al limite minimo vengono quindi eliminate. La soglia di eliminazione viene utilizzata per limitare il numero di righe eliminate in una singola transazione. Viene restituito un errore sull'eliminazione delle voci, che però non influisce sulle modifiche apportate al limite minimo dell'istanza di acquisizione in base alla chiamata.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Utilizzare sys.sp_cdc_cleanup_change_table nelle circostanze seguenti:  
   
 -   I report del processo Cleanup Agent eliminano gli errori.  

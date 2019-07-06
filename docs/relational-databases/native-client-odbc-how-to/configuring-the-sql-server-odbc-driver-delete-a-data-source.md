@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 087e2194fb5d0963e8fd9cb4aef0d0193359de04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8c4447413468fe01370ad67c16da0209fcee359
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818660"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584579"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>Configurazione del driver ODBC di SQL Server - Eliminare un'origine dati
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,14 +31,16 @@ ms.locfileid: "47818660"
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>Per eliminare un'origine dati tramite Amministratore ODBC.  
   
-1.  Nella **Pannello di controllo**, aprire **strumenti di amministrazione**, quindi fare doppio clic su uno **origini dati ODBC (64 bit)** o **origini dati ODBC (32 bit)**. In alternativa, è possibile eseguire odbcad32.exe dal prompt dei comandi.  
+1.  Nella **Pannello di controllo**, aprire **strumenti di amministrazione**, quindi fare doppio clic su uno **origini dati ODBC (64 bit)** o **origini dati ODBC (32 bit)** . In alternativa, è possibile eseguire odbcad32.exe dal prompt dei comandi.  
   
 2.  Scegliere il **DSN utente**, **DSN di sistema**, o **DSN su File** scheda.  
   
 3.  Selezionare l'origine dati da eliminare.  
   
 4.  Fare clic su **rimuovere**e quindi confermare l'eliminazione.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>Esempio  
  Per eliminare a livello di codice un'origine dati, chiamare [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) utilizzando ODBC_REMOVE_DSN o ODBC_REMOVE_SYS_DSN come secondo parametro.  
   

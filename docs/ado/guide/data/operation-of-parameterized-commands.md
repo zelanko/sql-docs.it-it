@@ -14,12 +14,12 @@ ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 4001ac5b449609683293cd3174dc4410cabf4c4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c07c42a1f864c3dc6888003cd31b06fce9e6893c
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701870"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597461"
 ---
 # <a name="operation-of-parameterized-commands"></a>Funzionamento dei comandi con parametri
 Se si lavora con un elemento figlio di grandi dimensioni **Recordset**, in particolare rispetto alle dimensioni dell'elemento padre **Recordset**, ma è necessario accedere solo ad alcuni capitoli figlio, può risultare più efficiente usare un' comando con parametri.  
@@ -36,7 +36,7 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- Le tabelle padre e figlio di un nome di colonna, cust_id *.* Il *comando figlio* dispone di un "?" segnaposto, a cui fa riferimento la clausola RELATE (vale a dire, "... PARAMETRO 0").  
+ Le tabelle padre e figlio hanno in comune, un nome di colonna *cust_id*. Il *comando figlio* dispone di un "?" segnaposto, a cui fa riferimento la clausola RELATE (vale a dire, "... PARAMETRO 0").  
   
 > [!NOTE]
 >  La clausola parametro riguarda esclusivamente la sintassi dei comandi di forma. Non è associato uno ADO [parametri](../../../ado/reference/ado-api/parameter-object.md) oggetto o il [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) raccolta.  

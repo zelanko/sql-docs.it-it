@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3d6fe74ecf361392da9000286427679194e15de9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e73a5b2d7924d67f7c8bc2e41414e158aa0ff6b
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65404043"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597506"
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>Lezione 2-5: distribuzione di un progetto di Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +36,7 @@ Nell'attività successiva verranno esaminate le proprietà di distribuzione del 
     Esaminare le proprietà di sviluppo del progetto. Per impostazione predefinita, il modello del progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configura un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per la distribuzione incrementale di tutti i progetti nell'istanza predefinita di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nel computer locale, per creare un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con lo stesso nome del progetto ed elaborare gli oggetti dopo la distribuzione utilizzando l'opzione di elaborazione predefinita. Per altre informazioni, vedere [Configurare proprietà di progetti di Analysis Services &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
     > [!NOTE]  
-    > Se si desidera distribuire il progetto in un'istanza denominata di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nel computer locale o a un'istanza in un server remoto, modificare il **Server** nome di proprietà all'istanza appropriata, ad esempio \<  *ServerName **>\\<** NomeIstanza * * >* .  
+    > Se si desidera distribuire il progetto in un'istanza denominata di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nel computer locale o a un'istanza in un server remoto, modificare il **Server** nome di proprietà all'istanza appropriata, ad esempio \<  **ServerName**>\\\<**NomeIstanza**>.  
   
 3.  Fare clic su **OK**.  
   
