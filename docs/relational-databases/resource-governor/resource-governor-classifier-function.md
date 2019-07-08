@@ -15,12 +15,12 @@ ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 0a17a0708621a01c101cb29786d61ceda192b5b8
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 2bbe90a155ee0bf995d0b5f7f21cf0c686275a9f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689794"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584744"
 ---
 # <a name="resource-governor-classifier-function"></a>Funzione di classificazione di Resource Governor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -74,7 +74,9 @@ ms.locfileid: "55689794"
 2.  Esecuzione del trigger LOGON  
   
 3.  Classificazione  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Quando la classificazione viene avviata, in Resource Governor viene eseguita la funzione di classificazione e il valore restituito dalla funzione viene utilizzato per inviare richieste al gruppo del carico di lavoro appropriato.  
   
 > [!NOTE]  

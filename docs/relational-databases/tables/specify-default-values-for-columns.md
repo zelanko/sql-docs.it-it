@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f60cb38a7b57ebd56d603d6041535974ec7ac7e
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+ms.openlocfilehash: 4fb94a2ae07993b1f95ab9adf97e164843aa06e7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464717"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582999"
 ---
 # <a name="specify-default-values-for-columns"></a>Specificare valori predefiniti per le colonne
 
@@ -67,6 +67,8 @@ Per le azioni descritte in questo articolo è necessaria l'autorizzazione ALTER 
 
 4. Scegliere **Salva** _nome tabella_ dal menu **File**.
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="TsqlProcedure"></a> Usare Transact-SQL per specificare un valore predefinito
 
 Esistono vari modi per specificare un valore predefinito per una colonna usando SSMS per inviare T-SQL.
@@ -77,7 +79,7 @@ Esistono vari modi per specificare un valore predefinito per una colonna usando 
 
 2. Sulla barra Standard fare clic su **Nuova query**.
 
-3. Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.
+3. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.
 
    ```sql
    CREATE TABLE dbo.doc_exz (column_a INT, column_b INT); -- Allows nulls.

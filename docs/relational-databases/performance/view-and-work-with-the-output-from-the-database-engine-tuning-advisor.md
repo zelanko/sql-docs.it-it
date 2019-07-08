@@ -26,12 +26,12 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 4d7b86e88d576d44869dd3a54ddfd6af05770971
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 647630106046345dbe2b3008df020fa1d790d2aa
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369293"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582547"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,9 @@ ms.locfileid: "53369293"
 5.  Deselezionare **Mostra oggetti esistenti** nella parte inferiore della pagina a schede **Indicazioni** . Nella griglia verranno visualizzati solo gli oggetti di database cui si fa riferimento nell'indicazione. Usare la barra di scorrimento inferiore per visualizzare la colonna all'estremità destra nella griglia delle indicazioni e fare clic nella colonna **Definizione** per visualizzare o copiare lo script [!INCLUDE[tsql](../../includes/tsql-md.md)] che crea l'oggetto nel database.  
   
 6.  Se si desidera salvare tutti gli script [!INCLUDE[tsql](../../includes/tsql-md.md)] tramite cui vengono creati o eliminati tutti gli oggetti di database nell'indicazione in un file script, scegliere **Salva indicazioni** dal menu **Azioni** .  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-view-the-tuning-summary-and-reports-with-the-database-engine-tuning-advisor-gui"></a>Per visualizzare il riepilogo e i report relativi all'ottimizzazione tramite la GUI di Ottimizzazione guidata motore di database  
   
 1.  Ottimizzare un database usando la GUI di Ottimizzazione guidata motore di database o l'utilità da riga di comando **dta** . Per altre informazioni, vedere [Avvio e utilizzo di Ottimizzazione guidata motore di database](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Se si desidera utilizzare una sessione di ottimizzazione esistente, ignorare questo passaggio e continuare con il passaggio 2.  

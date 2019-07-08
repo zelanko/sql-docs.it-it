@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e25498f1d9d3b1ec3c24b7c2f34031fab9e4341f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7547ce03478e810eac4725b8b543afd9862f9ca2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057463"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581345"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Risoluzione dei problemi: Trovare gli errori con la replica transazionale di SQL Server 
 La risoluzione degli errori di replica può risultare frustrante senza una conoscenza di base del funzionamento della replica transazionale. Il primo passaggio per la creazione di una pubblicazione prevede che l'agente di snapshot crei lo snapshot e lo salvi nella cartella degli snapshot. Successivamente, l'agente di distribuzione applica lo snapshot al sottoscrittore. 
@@ -25,6 +25,8 @@ Questo processo crea la pubblicazione e la pone nello stato di *sincronizzazione
 1. Le transazioni vengono eseguite su oggetti replicati e contrassegnati "per la replica" nel log delle transazioni. 
 2. L'agente di lettura log esegue l'analisi del log delle transazioni ed esegue una ricerca delle transazioni contrassegnate "per la replica." Queste transazioni vengono quindi salvate nel database di distribuzione. 
 3. L'agente di distribuzione esegue un'analisi del database di distribuzione tramite il thread di lettura. Quindi, usando il thread di scrittura, questo agente si connette al sottoscrittore per applicare tali modifiche nel sottoscrittore.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Gli errori possono verificarsi in qualsiasi passaggio del processo. Trovare questi errori può essere l'aspetto più complesso della risoluzione dei problemi di sincronizzazione. Fortunatamente, l'uso di Monitoraggio replica semplifica questo processo. 
 

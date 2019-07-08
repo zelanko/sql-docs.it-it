@@ -13,12 +13,12 @@ ms.author: alayu
 ms.reviewer: maghan
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ebb00b758aa3291c453d6c48d548f2047c72530
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f577b3f7f739f2642af239c3396a545dfd6332fb
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836389"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585892"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Procedura guidata per l'importazione di file flat in SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,6 +44,8 @@ Per accedere alla procedura guidata per l'importazione di file flat, procedere c
 1. Aprire **SQL Server Management Studio**.
 2. Connettersi a un'istanza del motore di database di Microsoft SQL Server o localhost.
 3. Espandere **Database**, fare clic con il pulsante destro del mouse su un database (vedere l'esempio seguente), scegliere **Attività** e fare clic su **Importa file flat** sopra a Importa dati.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ![Menu della procedura guidata](media/import-flat-file-wizard/importffmenu.png)
 

@@ -18,12 +18,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 160de04e9b8fbe83e8a771f5622f4f6103a8c7bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97ad249695c4fbe0fd79a23a5493d998fbaf5191
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845599"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582324"
 ---
 # <a name="create-edge-constraints"></a>Creare vincoli di arco
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -44,8 +44,10 @@ ms.locfileid: "47845599"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. L'esempio crea un vincolo di arco nella tabella archi **bought**.  
-  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. L'esempio crea un vincolo di arco nella tabella archi **bought**.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  ```sql
  USE TEMPDB
  GO
@@ -80,7 +82,7 @@ ms.locfileid: "47845599"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. L'esempio usa ALTER TABLE per aggiungere un vincolo di arco nella tabella archi **bought**.
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. L'esempio usa ALTER TABLE per aggiungere un vincolo di arco nella tabella archi **bought**.
   
  ```sql
  USE TEMPDB
@@ -117,7 +119,7 @@ ms.locfileid: "47845599"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. L'esempio usa ALTER TABLE per aggiungere un vincolo di arco con clausole aggiuntive per il vincolo di arco nella tabella archi **bought**.
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. L'esempio usa ALTER TABLE per aggiungere un vincolo di arco con clausole aggiuntive per il vincolo di arco nella tabella archi **bought**.
   
  ```sql
  USE TEMPDB
@@ -171,7 +173,7 @@ ms.locfileid: "47845599"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. L'esempio usa ALTER TABLE per aggiungere un vincolo di arco con una nuova clausola per il vincolo di arco nella tabella archi **bought**.
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. L'esempio usa ALTER TABLE per aggiungere un vincolo di arco con una nuova clausola per il vincolo di arco nella tabella archi **bought**.
   
  ```sql
  USE TEMPDB

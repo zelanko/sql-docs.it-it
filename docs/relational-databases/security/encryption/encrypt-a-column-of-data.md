@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f8238abce193ea7582c278d0c843f5f1b695fc8
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: eb7a66bd1c433843db58d64dc2ea7a5a4a217a19
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997543"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585366"
 ---
 # <a name="encrypt-a-column-of-data"></a>Crittografia di una colonna di dati
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "53997543"
 
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni seguenti sono necessarie per eseguire i passaggi riportati di seguito:  
   
 - Autorizzazione CONTROL per il database.  
@@ -59,8 +59,10 @@ Creare sempre una copia di backup della chiave master del database. Per altre in
   
 2. Sulla barra Standard fare clic su **Nuova query**.  
   
-3. Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
-  
+3. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```sql
     USE AdventureWorks2012;  
     GO  
@@ -117,7 +119,7 @@ Creare sempre una copia di backup della chiave master del database. Per altre in
   
 2. Sulla barra Standard fare clic su **Nuova query**.  
   
-3. Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```sql
     USE AdventureWorks2012;  

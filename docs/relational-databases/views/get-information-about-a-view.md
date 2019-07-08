@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d22570e6be56297a3428b5c9a89c04829379aa39
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e2f413d9f82d128dbff31a8aea02bc2e31022234
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505727"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584997"
 ---
 # <a name="get-information-about-a-view"></a>Ottenere informazioni su una vista
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52505727"
 > [!IMPORTANT]  
 >  Se si cambia il nome di un oggetto a cui viene fatto riferimento da una vista, è necessario modificare la vista in modo che per il relativo testo venga fatto riferimento al nuovo nome. Prima di rinominare un oggetto, visualizzare innanzitutto le relative dipendenze per determinare se la modifica proposta interessa le viste.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -63,41 +63,43 @@ ms.locfileid: "52505727"
 1.  In **Esplora oggetti**fare clic sul segno più accanto al database contenente la vista in cui si desidera visualizzare le proprietà, quindi fare di nuovo clic sul segno più per espandere la cartella **Viste** .  
   
 2.  Fare clic con il pulsante destro del mouse sulla vista di cui si vogliono visualizzare le proprietà e scegliere **Proprietà**.  
-  
-     Le seguenti proprietà vengono visualizzate nella finestra di dialogo **Proprietà vista** .  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The following properties show in the **View Properties** dialog box.  
   
      **Database**  
-     Nome del database contenente la vista.  
+     The name of the database containing this view.  
   
      **Server**  
-     Nome dell'istanza del server corrente.  
+     The name of the current server instance.  
   
-     **Utente**  
-     Nome dell'utente della connessione.  
+     **User**  
+     The name of the user of this connection.  
   
-     **Data creazione**  
-     Indica la data di creazione della vista.  
+     **Created date**  
+     Displays the date the view was created.  
   
-     **Nome**  
-     Nome della vista corrente.  
+     **Name**  
+     The name of the current view.  
   
      **Schema**  
-     Consente di visualizzare lo schema proprietario della vista.  
+     Displays the schema that owns the view.  
   
-     **Oggetto di sistema**  
-     Indica se la vista è un oggetto di sistema. I valori sono True e False.  
+     **System object**  
+     Indicates whether the view is a system object. Values are True and False.  
   
      **ANSI NULLs**  
-     Indica se l'oggetto è stato creato con l'opzione ANSI NULLs.  
+     Indicates if the object was created with the ANSI NULLs option.  
   
-     **Crittografata**  
-     Indica se la vista è crittografata. I valori sono True e False.  
+     **Encrypted**  
+     Indicates whether the view is encrypted. Values are True and False.  
   
-     **Identificatore delimitato**  
-     Indica se l'oggetto è stato creato con l'opzione quoted identifier.  
+     **Quoted identifier**  
+     Indicates if the object was created with the quoted identifier option.  
   
-     **Associata a schema**  
-     Indica se la vista è associata a uno schema. I valori sono True e False. Per informazioni sulle viste associate a schemi, vedere la sezione SCHEMABINDING di[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
+     **Schema bound**  
+     Indicates whether the view is schema-bound. Values are True and False. For information about schema-bound views, see the SCHEMABINDING portion of [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
 #### <a name="getting-view-properties-by-using-the-view-designer-tool"></a>Acquisizione di proprietà delle viste tramite lo strumento Progettazione viste  
   
@@ -216,7 +218,7 @@ ms.locfileid: "52505727"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;  

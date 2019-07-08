@@ -13,12 +13,12 @@ ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df8cd54cdf13941044ae4f72f8781e4532fc5c51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b0bea639ebb7ec36cc1784db829fc98db8d2c0ba
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714328"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580202"
 ---
 # <a name="monitor-data-tier-applications"></a>Monitoraggio delle applicazioni livello dati
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "62714328"
 3.  Selezionare il menu **Visualizza/Dettagli Esplora utilità** .  
   
 4.  Selezionare il nodo **Applicazioni livello dati distribuite** in **Esplora utilità**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Le informazioni contenute nella pagina dei dettagli **Applicazioni livello dati distribuite** provengono dai dati nel data warehouse di gestione dell'utilità, che per impostazione predefinita raccoglie i dati ogni 15 minuti. È possibile personalizzare l'intervallo utilizzando la pagina dei dettagli **Amministrazione utilità** .  
   
 ## <a name="using-object-explorer"></a>Utilizzo di Esplora oggetti  

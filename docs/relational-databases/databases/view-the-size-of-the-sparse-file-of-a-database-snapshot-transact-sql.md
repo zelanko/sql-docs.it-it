@@ -19,12 +19,12 @@ ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 71b50aa6c27b2328833685051bcc31917f584cb3
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 51bdd4d5a368bbf5b5991c57c37a2aa95a89fb97
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558898"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583399"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>Visualizzare le dimensioni del file sparse di uno snapshot del database (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,12 +36,14 @@ ms.locfileid: "51558898"
 ## <a name="verify-that-a-database-file-is-a-sparse-file"></a>Verificare che un file di database sia un file sparse  
   
 1.  Nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     Select the **is_sparse** column from either **sys.database_files** in the database snapshot or from **sys.master_files**. The value indicates whether the file is a sparse file, as follows:  
   
-     Selezionare la colonna **is_sparse** in **sys.database_files** nello snapshot di database oppure in **sys.master_files**. Tramite il valore viene indicato se il file è di tipo sparse, come segue:  
+     1 = File is a sparse file.  
   
-     1 = il file è di tipo sparse.  
-  
-     0 = il file non è di tipo sparse.  
+     0 = File is not a sparse file.  
   
 ## <a name="find-out-the-actual-size-of-a-sparse-file"></a>Conoscere le dimensioni effettive di un file sparse  
   

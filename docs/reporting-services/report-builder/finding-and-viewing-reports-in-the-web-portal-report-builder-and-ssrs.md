@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e92e16db5eb7ac6edf03a07c3091edac2c26d144
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f0dae8999d22773a1a76440c439d4682785f684
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581192"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492844"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Ricerca e visualizzazione di report nel portale Web (Generatore report e SSRS)
   Gestione report è uno strumento basato sul Web in cui sono disponibili funzionalità per la visualizzazione e la gestione dei report. Fa parte di un'installazione del server di report. Per aprire Gestione report, digitare l'URL relativo in una finestra del browser. Per informazioni sui requisiti del browser, vedere [Supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md). Per ulteriori informazioni sulla configurazione di un URL di Gestione report nel server di report, rivolgersi all'amministratore di sistema. Per altre informazioni, vedere [Configurare Gestione report &#40;modalità nativa&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md).  
@@ -40,8 +40,8 @@ Barra multifunzione di Gestione report
 ## <a name="opening-a-report"></a>Apertura di un report  
  Dopo avere individuato un report, fare clic sul nome per aprirlo. Il report, di cui viene eseguito il rendering in formato HTML, viene visualizzato nella pagina Contenuto in Gestione report. I report vengono sempre memorizzati nella cache per ogni sessione del browser. Ciò significa che se si apre un report è in genere possibile tornarvi tramite il pulsante **Indietro** . Questa possibilità è disponibile anche se sono stati richiesti nome utente e password per l'esecuzione del report. Un report visualizzabile viene quindi chiuso effettivamente solo quando si chiude il browser.  
   
- Non tutti i report visibili nella gerarchia delle cartelle sono immediatamente accessibili. Per alcuni report potrebbe essere richiesta l'immissione di nome utente e password per verificare se l'utente può accedere all'origine dati per il report. Per altre informazioni sull'apertura di report in Gestione Report, vedere [Aprire e chiudere un report &#40;Gestione report&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
-  
+ Non tutti i report visibili nella gerarchia delle cartelle sono immediatamente accessibili. Per alcuni report potrebbe essere richiesta l'immissione di nome utente e password per verificare se l'utente può accedere all'origine dati per il report. 
+
  È inoltre possibile individuare e aprire un report direttamente dal server di report in Generatore report. 
   
 ## <a name="to-search-for-items"></a>Per eseguire la ricerca di elementi  

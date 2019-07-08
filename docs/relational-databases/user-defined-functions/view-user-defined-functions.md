@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a6f4b6283c6e1a29f273eae5c607478166535af
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 1197244abd63560bf6fa9d76401c0836b833c6a5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256026"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581414"
 ---
 # <a name="view-user-defined-functions"></a>Visualizzare le funzioni definite dall'utente
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "54256026"
 > [!IMPORTANT]  
 >  Se si cambia il nome di un oggetto a cui viene fatto riferimento da una funzione, è necessario modificare la funzione in modo che per il relativo testo venga fatto riferimento al nuovo nome. Pertanto, prima di rinominare un oggetto, visualizzare le dipendenze dell'oggetto per determinare se la modifica proposta interessa eventuali funzioni.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per acquisire informazioni su una funzione tramite:**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "54256026"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  L'uso di **sys.sql_expression_dependencies** per trovare tutte le dipendenze da una funzione richiede l'autorizzazione VIEW DEFINITION per il database e l'autorizzazione SELECT per **sys.sql_expression_dependencies** per il database. Le definizioni dell'oggetto di sistema, come quelle restituite in OBJECT_DEFINITION sono visibili pubblicamente.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -70,49 +70,51 @@ ms.locfileid: "54256026"
     -   Funzione di aggregazione  
   
 4.  Fare clic con il pulsante destro del mouse sulla funzione di cui si vogliono visualizzare le proprietà e scegliere **Proprietà**.  
-  
-     Le proprietà seguenti vengono visualizzate nella finestra di dialogo **Proprietà funzione -** _nome_funzione_.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The following properties appear in the **Function Properties -** _function_name_ dialog box.  
   
      **Database**  
-     Nome del database che contiene la funzione.  
+     The name of the database containing this function.  
   
      **Server**  
-     Nome dell'istanza del server corrente.  
+     The name of the current server instance.  
   
-     **Utente**  
-     Nome dell'utente della connessione.  
+     **User**  
+     The name of the user of this connection.  
   
-     **Data creazione**  
-     Visualizza la data di creazione della funzione.  
+     **Created date**  
+     Displays the date the function was created.  
   
-     **Esegui come**  
-     Contesto di esecuzione per la funzione.  
+     **Execute As**  
+     Execution context for the function.  
   
-     **Nome**  
-     Nome della funzione corrente.  
+     **Name**  
+     The name of the current function.  
   
      **Schema**  
-     Visualizza lo schema proprietario della funzione.  
+     Displays the schema that owns the function.  
   
-     **Oggetto di sistema**  
-     Indica se la funzione è un oggetto di sistema. I valori sono True e False.  
+     **System object**  
+     Indicates whether the function is a system object. Values are True and False.  
   
      **ANSI NULLs**  
-     Indica se l'oggetto è stato creato con l'opzione ANSI NULLs.  
+     Indicates if the object was created with the ANSI NULLs option.  
   
-     **Crittografata**  
-     Indica se la funzione è crittografata. I valori sono True e False.  
+     **Encrypted**  
+     Indicates whether the function is encrypted. Values are True and False.  
   
-     **Tipo di funzione**  
-     Tipo della funzione definita dall'utente.  
+     **Function Type**  
+     The type of user defined function.  
   
-     **Identificatore delimitato**  
-     Indica se l'oggetto è stato creato con l'opzione quoted identifier.  
+     **Quoted identifier**  
+     Indicates if the object was created with the quoted identifier option.  
   
-     **Associata a schema**  
-     Indica se la funzione è associata allo schema. I valori sono True e False. Per informazioni sulle funzioni associate a schema, vedere la sezione relativa a SCHEMABINDING in [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
+     **Schema bound**  
+     Indicates whether the function is schema-bound. Values are True and False. For information about schema-bound functions, see the SCHEMABINDING section of [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>Per acquisire la definizione e le proprietà di una funzione  
   
@@ -161,7 +163,7 @@ ms.locfileid: "54256026"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;  

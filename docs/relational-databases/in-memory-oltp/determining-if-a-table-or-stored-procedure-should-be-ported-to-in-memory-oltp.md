@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2cb94b594be62bf19ad90c00ffaef6145eb90fc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcb4c7385c509e132da589149c4da9f2db5c0d5f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047779"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582229"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinare se una tabella o una stored procedure deve essere trasferita a OLTP in memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -123,7 +123,9 @@ Le statistiche sulle contese e sulle analisi nel report dettagli della tabella v
 3.  Fare clic su **Avanti** e verificare che l'elenco di attività corrisponda alle impostazioni nella pagina **Configura opzioni di generazione elenco di controllo** .  
   
 4.  Fare clic su **Fine**e quindi verificare che i report degli elenchi di controllo per migrazione siano stati generati solo per gli oggetti selezionati.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  È possibile verificare l'accuratezza dei report confrontandoli con i report generati dagli strumenti Ottimizzazione guidata per la memoria e Assistente compilazione nativa. Per ulteriori informazioni, vedere [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) e [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md).  
   
 **Per generare un elenco di controllo per migrazione tramite SQL Server PowerShell**  

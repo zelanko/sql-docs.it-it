@@ -14,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 807f347bb176f6d8b3191f9f10c8f30448ce9b1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45fd2a7f8281a2b65097c7c0e493cc0a6f60eddc
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099963"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584360"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Amministrare e monitorare Change Data Capture (SQL Server)
 
@@ -175,7 +175,9 @@ L'agente di raccolta dati disponibile in [!INCLUDE[ssNoVersion](../../includes/s
 3. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]espandere **Gestione**, quindi espandere **Raccolta dati**. Fare clic con il pulsante destro del mouse su **CDC Performance Data Collector**, quindi fare clic su **Avvia set di raccolta dati**.  
   
 4. Nel data warehouse configurato nel passaggio 1 trovare la tabella custom_snapshots.cdc_log_scan_data. In questa tabella viene fornito uno snapshot cronologico di dati dalle sessioni di analisi del log. Questi dati possono essere utilizzati per analizzare nel corso del tempo latenza, velocità effettiva e altri indicatori di prestazioni.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="ScriptUpgrade"></a> Modalità di aggiornamento script
 
 Quando si applicano gli aggiornamenti cumulativi o Service Pack a un'istanza, è possibile che al riavvio l'istanza passi alla modalità di aggiornamento script. In questa modalità SQL Server potrebbe eseguire un passaggio per analizzare e aggiornare le tabelle CDC interne e questa operazione potrebbe implicare la rigenerazione di oggetti, tra cui gli indici sulle tabelle di acquisizione. A seconda della quantità di dati interessati, questo passaggio potrebbe richiedere tempo o comportare un utilizzo elevato del log delle transazioni per i database CDC abilitati.

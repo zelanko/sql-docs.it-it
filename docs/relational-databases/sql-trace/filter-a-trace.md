@@ -17,12 +17,12 @@ ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1dae7b73c02ce1c9ced01104754dc881bf25893f
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 20cebbb314e2830272e677da2d26bf53668798ab
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571231"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579834"
 ---
 # <a name="filter-a-trace"></a>Filtrare una traccia
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "51571231"
 2.  Identificare i dati e le colonne di dati contenenti le informazioni necessarie.  
   
 3.  Identificare un subset dei dati necessari e definire filtri in base a tale subset di dati.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Ad esempio, è possibile che si desideri filtrare solo gli eventi con durata superiore a un determinato intervallo. In tal caso, è possibile creare una traccia che include gli eventi per i quali il valore nella colonna **Duration** è maggiore di 300 millisecondi. Nella traccia non saranno inclusi gli eventi con durata inferiore a 300 millisecondi.  
   
  È possibile creare filtri tramite SQL Server Profiler o le stored procedure Transact-SQL.  

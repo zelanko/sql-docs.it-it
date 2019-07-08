@@ -14,12 +14,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a66491bb68469ecaa8f9cde47f77566e6c31236a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1c806c91beb14d2a50988b95e0ab09ee7f678dc3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936430"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584694"
 ---
 # <a name="multipolygon"></a>MultiPolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,9 @@ La seconda istanza in MultiPolygon è un'istanza di LineString e non un'istanza 
 1.  Tutte le istanze che comprendono l'istanza **MultiPolygon** sono istanze **Polygon** valide. Per le istanze **Polygon** valide, vedere [Polygon](../../relational-databases/spatial/polygon.md).  
   
 2.  Nessuna delle istanze **Polygon** che compongono l'istanza **MultiPolygon** si sovrappone.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 Nell'esempio seguente sono indicate due istanze **MultiPolygon** valide e un'istanza **MultiPolygon** non valida.  
   
 ```sql  

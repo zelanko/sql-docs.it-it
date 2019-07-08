@@ -15,12 +15,12 @@ ms.assetid: 4d0fa941-f9ea-4a14-aed9-34df593fc6f2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2ba35386a91e6660b69b1e00c31da95e405b8627
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a7ced1aff5f2d9ceaa1fd70afdc6165fc6988d61
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665386"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581413"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>Amministrazione di una topologia peer-to-peer (programmazione Transact-SQL della replica)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "62665386"
     >  Dopo l'esecuzione di [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), la replica aggiunge automaticamente l'articolo alle sottoscrizioni nella topologia.  
   
 6.  Riavviare gli agenti di distribuzione in ciascun nodo nella topologia.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="to-make-schema-changes-to-a-publication-database"></a>Per apportare le modifiche dello schema nel database di pubblicazione  
   
 1.  Mettere in stato di inattività il sistema.  

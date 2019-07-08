@@ -12,12 +12,12 @@ ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 86298faa86bf439c7efcaddcce35033eeb2e63cc
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 283c1c2022cad1926771620db508b0457a70351d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689754"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581797"
 ---
 # <a name="disable-resource-governor"></a>Disabilitare Resource Governor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "55689754"
 ###  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
  Non è possibile usare l'istruzione **ALTER RESOURCE GOVERNOR** per disabilitare Resource Governor in una transazione utente.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorizzazioni  
  Per disabilitare Resource Governor è necessaria l'autorizzazione CONTROL SERVER.  
   
 ##  <a name="RGOffObjEx"></a> Disabilitare Resource Governor utilizzando Esplora oggetti  
@@ -56,7 +56,9 @@ ms.locfileid: "55689754"
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aprire Esplora oggetti ed espandere in modo ricorsivo il nodo **Gestione** fino a **Resource Governor**.  
   
 2.  Fare clic con il pulsante destro del mouse su **Resource Governor**, quindi su **Disabilita**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="RGOffProp"></a> Disabilitare Resource Governor utilizzando Proprietà di Resource Governor  
  **Per disabilitare Resource Governor utilizzando la pagina Proprietà di Resource Governor**  
   

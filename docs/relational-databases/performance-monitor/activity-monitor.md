@@ -13,12 +13,12 @@ ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 6d6f215127e584b73e28ee30339189ef49fa10d0
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 1332575178ac4ac94802e948b1725164419fa6ad
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59367209"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580760"
 ---
 # <a name="activity-monitor"></a>Monitoraggio attività
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,9 @@ Per le colonne incluse nei riquadri **Processi**, **Attese risorse**, **I/O file
 2.  Per ordinare una colonna, fare clic sul relativo nome.  
   
 3.  Per applicare un filtro in base a una o più colonne, fare clic sulla freccia a discesa nell'intestazione della colonna, quindi selezionare un valore.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="more-information"></a>Ulteriori informazioni  
    
 |||  

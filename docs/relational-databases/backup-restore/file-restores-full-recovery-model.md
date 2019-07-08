@@ -20,12 +20,12 @@ ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85cd45abfbc434ce02d5000d48ed5dacd48ad208
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 0d063f60a959c047385b50b150359c063bfa668c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242122"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579414"
 ---
 # <a name="file-restores-full-recovery-model"></a>Ripristini di file (modello di recupero con registrazione completa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,9 @@ ms.locfileid: "54242122"
      È necessario ripristinare tutti i backup del log delle transazioni creati successivamente ai backup di file per assicurare la consistenza del database. Il rollforward dei backup del log delle transazioni è un'operazione rapida, in quanto vengono applicate soltanto le modifiche valide per i file ripristinati. Il ripristino di singoli file può offrire risultati migliori rispetto al ripristino dell'intero database poiché i file non danneggiati non vengono copiati e non ne viene eseguito il rollforward. Deve comunque essere letta l'intera catena dei backup di log.  
   
 5.  Recuperare il database.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE]  
 >  I backup dei file possono essere utilizzati per ripristinare il database a una temporizzazione precedente. A tale scopo, è necessario ripristinare un set completo di backup dei file e quindi ripristinare i backup del log delle transazioni in sequenza, fino a raggiungere un punto nel tempo successivo al backup di file più recente ripristinato. Per altre informazioni sul recupero temporizzato, vedere [Ripristino di un database di SQL Server fino a un punto specifico all'interno di un backup &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
@@ -120,7 +122,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   [Esempio: Ripristino online di un file di sola lettura &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
--   [Esempio: Ripristino offline del filegroup primario e di un altro filegroup &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [Esempio: Ripristino offline del filegroup primario e di un altro filegroup &#40;Modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
  **Per ripristinare file e filegroup**  

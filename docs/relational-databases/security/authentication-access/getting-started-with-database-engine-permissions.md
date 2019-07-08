@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14e32081c9cbe03d7336f4ee973b02737f1cda1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6239c7854a5a63165672dc3a66d5b6ce26dfb3ff
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66454587"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579890"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Introduzione alle autorizzazioni del motore di database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,29 +29,29 @@ ms.locfileid: "66454587"
 ## <a name="security-principals"></a>Entità di sicurezza  
  Con entità di sicurezza si definiscono le identità che usano [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e a cui è possibile assegnare delle autorizzazioni per eseguire varie azioni. Si tratta in genere di utenti o gruppi di utenti, ma possono essere altre entità che fingono di essere utenti. Le entità di sicurezza possono essere create e gestite con il linguaggio [!INCLUDE[tsql](../../../includes/tsql-md.md)] elencato o con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
- Logins  
+##### <a name="logins"></a>Logins  
  Gli account di accesso sono account utente singoli per l'accesso al [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e il [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] supportano account di accesso basati sull'autenticazione di Windows e account di accesso basati sull'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per informazioni sui due tipi di account di accesso, vedere [Choose an Authentication Mode](../../../relational-databases/security/choose-an-authentication-mode.md).  
   
- Ruoli predefiniti del server  
+##### <a name="fixed-server-roles"></a>Ruoli predefiniti del server  
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]i ruoli predefiniti del server sono costituiti da un set di ruoli preconfigurati che forniscono una serie appropriata di autorizzazioni a livello di server. Gli account di accesso possono essere aggiunti ai ruoli con l'istruzione `ALTER SERVER ROLE ... ADD MEMBER` . Per altre informazioni, vedere [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md). [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] non supporta i ruoli predefiniti del server, ma ha due ruoli nel database master (`dbmanager` e `loginmanager`) che fungono da ruoli del server.  
   
- Ruoli del server definiti dall'utente  
+##### <a name="user-defined-server-roles"></a>Ruoli del server definiti dall'utente  
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]è possibile creare ruoli del server personalizzati e assegnarvi autorizzazioni a livello di server. Gli account di accesso possono essere aggiunti ai ruoli del server con l'istruzione `ALTER SERVER ROLE ... ADD MEMBER` . Per altre informazioni, vedere [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md). [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] non supporta i ruoli del server definiti dall'utente.  
   
- Utenti di database  
+##### <a name="database-users"></a>Utenti di database  
  Agli account di accesso viene concesso l'accesso a un database creando un utente in un database ed eseguendo il mapping di tale utente di database all'account di accesso. In genere, il nome utente di database è identico al nome dell'account di accesso, anche se non è necessario. Ogni utente di database esegue il mapping a un singolo account di accesso. Il mapping di un account di accesso può essere eseguito a un solo utente in un database, ma può essere eseguito come utente di database in diversi database.  
   
  Gli utenti di database possono anche essere creati senza avere un account di accesso corrispondente e vengono denominati *utenti di database indipendente*. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] promuove l'uso di utenti di database indipendente perché semplifica lo spostamento di un database in un altro server. Analogamente agli account di accesso, gli utenti di database indipendente possono usare l'autenticazione di Windows o l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Utenti di database indipendente: rendere portabile un database](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
  Esistono 12 tipi di utenti con piccole differenze per la modalità di autenticazione e la relativa rappresentazione. Per vedere un elenco di utenti, vedere [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md).  
   
- Ruoli predefiniti del database  
+##### <a name="fixed-database-roles"></a>Ruoli predefiniti del database  
  I ruoli predefiniti del database sono costituiti da un set di ruoli preconfigurati che forniscono una serie appropriata di autorizzazioni a livello di database. Gli utenti del database e i ruoli del database definiti dall'utente possono essere aggiunti ai ruoli predefiniti del database con l'istruzione `ALTER ROLE ... ADD MEMBER`. Per altre informazioni, vedere [ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md).  
   
- Ruoli del database definiti dall'utente  
+##### <a name="user-defined-database-roles"></a>Ruoli del database definiti dall'utente  
  Gli utenti con l'autorizzazione `CREATE ROLE` possono creare nuovi ruoli del database definiti dall'utente per rappresentare gruppi di utenti con autorizzazioni comuni. In genere, le autorizzazioni vengono concesse o negate per l'intero ruolo, semplificando la gestione e il monitoraggio delle autorizzazioni. Gli utenti di database possono essere aggiunti ai ruoli del database con l'istruzione `ALTER ROLE ... ADD MEMBER` . Per altre informazioni, vedere [ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md).  
   
- Altre entità  
+##### <a name="other-principals"></a>Altre entità  
  Altre entità di sicurezza non illustrate nel presente articolo includono ruoli applicazione nonché account di accesso e utenti basati su certificati o chiavi asimmetriche.  
   
  Per un grafico che mostra le relazioni tra utenti di Windows, gruppi di Windows, account di accesso e utenti di database, vedere [Create a Database User](../../../relational-databases/security/authentication-access/create-a-database-user.md).  
@@ -66,7 +66,9 @@ ms.locfileid: "66454587"
 2.  Creare gruppi di Windows che rappresentano le unità di lavoro e le funzioni di lavoro.  
   
 3.  Aggiungere gli utenti di Windows ai gruppi di Windows.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="if-the-person-connecting-will-be-connecting-to-many-databases"></a>Se l'utente che si connette verrà connesso a molti database  
   
 1.  Creare un account di accesso per i gruppi di Windows. Se si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ignorare i passaggi di Active Directory e creare qui gli account di accesso con autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  

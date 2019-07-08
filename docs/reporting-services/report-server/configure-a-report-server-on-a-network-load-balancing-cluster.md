@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 10/03/2018
-ms.openlocfilehash: a6c04be1bf56577d0a6d40ccba9f627d319535ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.date: 07/03/2019
+ms.openlocfilehash: cc9e35829be7ea287cebaa99d7f96d10bb0d92d1
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937244"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564001"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurare un server di report in un cluster per il bilanciamento del carico di rete
 
@@ -62,16 +62,16 @@ Per eseguire una distribuzione con scalabilità orizzontale in un cluster per il
     Nell'esempio seguente viene illustrato il valore che è necessario ottenere: Non copiare l'esempio nei file di configurazione in uso, in quanto i valori di chiave non sono validi.  
   
     ```xml
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
     ```  
   
-2. Aprire il file Web.config di Server di report, quindi nella sezione <`system.web`> incollare l'elemento <`machineKey`> generato. Per impostazione predefinita, il file Web.config di Server di report si trova in \Programmi\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
+2. Aprire il file Web.config di Server di report, quindi nella sezione <`system.web`> incollare l'elemento <`MachineKey`> generato. Per impostazione predefinita, il file Web.config di Server di report si trova in \Programmi\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
   
 3. Salvare il file.  
   
 4. Ripetere il passaggio precedente per ogni server di report presente nella distribuzione con scalabilità orizzontale.  
   
-5. Verificare che tutti i file Web.Config nelle cartelle \Reporting Services\Reportserver contengano elementi <`machineKey`> identici nella sezione <`system.web`>.  
+5. Verificare che tutti i file Web.Config nelle cartelle \Reporting Services\Reportserver contengano elementi <`MachineKey`> identici nella sezione <`system.web`>.  
 
 ::: moniker-end
 
@@ -82,7 +82,7 @@ Per eseguire una distribuzione con scalabilità orizzontale in un cluster per il
     Nell'esempio seguente viene illustrato il valore che è necessario ottenere: Non copiare l'esempio nei file di configurazione in uso, in quanto i valori di chiave non sono validi. Il server di report richiede le maiuscole e minuscole corrette.
 
     ```xml
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>
     ```
 
 2. Salvare il file.

@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2858b789c9c6925c093812dc0818ac9f6604cb0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98b0c3beba33688943bdd767d29b0e9f7f0cefc4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946208"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579621"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,6 +79,8 @@ Per la terminologia, vedere [Struttura dei file di formato non XML](../../relati
 1.  Riorganizzare l'ordine delle righe del file di formato in modo che le righe siano nello stesso ordine dei dati in `myRemap.bcp`.
 2.  Assicurarsi che i valori dell'ordine dei campi nel file host siano sequenziali.
 3.  Verificare che dopo l'ultima riga del file di formato ci sia un ritorno a capo.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Confrontare le modifiche:     
 **Prima**

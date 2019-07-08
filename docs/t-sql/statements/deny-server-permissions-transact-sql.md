@@ -18,12 +18,12 @@ ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9f480a406983fa0e4bdce4c100b4ccb4d44c5c3a
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: df064e5ebe9a5a6fabbd1eda16cf29bfa3f58d0e
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361591"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556909"
 ---
 # <a name="deny-server-permissions-transact-sql"></a>DENY - autorizzazioni per server (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,13 +60,16 @@ DENY permission [ ,...n ]
  Specifica un'autorizzazione che può essere negata per un server. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
  CASCADE  
- Indica che l'autorizzazione negata viene negata anche ad altre entità alle quali è stata concessa da questa entità.  
+ Indica che l'autorizzazione viene negata all'entità specificata e a tutte le entità alle quali l'entità ha concesso l'autorizzazione. Obbligatorio quando l'entità dispone dell'autorizzazione con GRANT OPTION. 
   
  TO \<server_principal>  
  Specifica l'entità a cui viene negata l'autorizzazione.  
   
  AS \<grantor_principal>  
- Specifica un'entità dalla quale l'entità che esegue la query ottiene il diritto di negare l'autorizzazione.  
+ Specifica un'entità dalla quale l'entità che esegue la query ottiene il diritto di negare l'autorizzazione.
+Usare la clausola AS principal per indicare che l'entità registrata come l'utente che nega l'autorizzazione deve essere un'entità diversa dalla persona che esegue l'istruzione. Si supponga ad esempio che l'utente Mary sia principal_id 12 e l'utente Raul sia principal 15. Mary esegue `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`. Ora la tabella sys.database_permissions indicherà l'utente 15 (Raul) come grantor_principal_id dell'istruzione di negazione anche se l'istruzione è stata effettivamente eseguita dall'utente 13 (Mary).
+  
+L'uso di AS in questa istruzione non implica la possibilità di rappresentare un altro utente.    
   
  *SQL_Server_login*  
  Specifica un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -142,7 +145,7 @@ DENY permission [ ,...n ]
  Autorizzazione **SELECT ALL USER SECURABLES**  
  Quando viene concessa, un account di accesso, ad esempio un revisore, può visualizzare i dati in tutti i database a cui l'utente può connettersi. Quando negata, impedisce l'accesso agli oggetti a meno che non siano nello schema **sys**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL SERVER o la proprietà dell'entità a sicurezza diretta. Se si utilizza la clausola AS, l'entità specificata deve essere proprietaria dell'entità a sicurezza diretta per cui vengono negate le autorizzazioni.  
   
 ## <a name="examples"></a>Esempi  
@@ -156,7 +159,7 @@ DENY CONNECT SQL TO Annika CASCADE;
 GO  
 ```  
   
-### <a name="b-denying-create-endpoint-permission-to-a-sql-server-login-using-the-as-option"></a>b. Negazione dell'autorizzazione CREATE ENDPOINT a un account di accesso di SQL Server con l'opzione AS  
+### <a name="b-denying-create-endpoint-permission-to-a-sql-server-login-using-the-as-option"></a>B. Negazione dell'autorizzazione CREATE ENDPOINT a un account di accesso di SQL Server con l'opzione AS  
  Nell'esempio seguente viene negata l'autorizzazione `CREATE ENDPOINT` all'utente `ArifS`. Nell'esempio viene utilizzata l'opzione `AS` per specificare `MandarP` come entità da cui l'entità che esegue l'istruzione deriva il diritto di effettuare l'operazione.  
   
 ```  

@@ -12,12 +12,12 @@ ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 4e0e8afe9c46d6d1f4c5382152de8a0f66ac6e9e
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 4dd095f8d4a9254b88680b13bffcf319960336f3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997523"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585609"
 ---
 # <a name="restore-a-database-master-key"></a>Ripristino di una chiave master del database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "53997523"
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorizzazioni
 È richiesta l'autorizzazione CONTROL per il database.  
   
 ## <a name="using-sql-server-management-studio-with-transact-sql"></a>Utilizzo di SQL Server Management Studio con Transact-SQL  
@@ -50,8 +50,10 @@ ms.locfileid: "53997523"
   
 3. Sulla barra Standard fare clic su **Nuova query**.  
   
-4. Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
-  
+4. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```sql
     -- Restores the database master key of the AdventureWorks2012 database.  
     USE AdventureWorks2012;  
@@ -64,6 +66,6 @@ ms.locfileid: "53997523"
     ```  
   
     > [!NOTE]  
-    > Il percorso del file della chiave e della password della chiave (se esistente) sarà diverso da quello indicato in precedenza. Assicurarsi che entrambi siano specifici della configurazione della chiave e del server in uso.  
+    > The file path to the key and the key's password (if it exists) will be different than what is indicated above. Please make sure that both are specific to your server and key set-up.  
   
  Per altre informazioni, vedere [RESTORE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-master-key-transact-sql.md)  

@@ -11,12 +11,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f26af2d630270428aec6affa0d633eeac86194b
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 5e3d1f2d0a2ad21cd7603912c81e8b8335bfa3c8
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305459"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586154"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Modifica del word breaker utilizzato per le lingue Inglese (Stati Uniti) e Inglese (Regno Unito)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,12 +51,14 @@ ms.locfileid: "58305459"
   
 3.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\Language\enu**.  
   
-4.  Aggiornare il valore della chiave **WBreakerClass** a **{188D6CC5-CB03-4C01-912E-47D21295D77E}**.  
+4.  Aggiornare il valore della chiave **WBreakerClass** a **{188D6CC5-CB03-4C01-912E-47D21295D77E}** .  
   
-5.  Aggiornare il valore della chiave **StemmerClass** a **{EEED4C20-7F1B-11CE-BE57-00AA0051FE20}**.  
+5.  Aggiornare il valore della chiave **StemmerClass** a **{EEED4C20-7F1B-11CE-BE57-00AA0051FE20}** .  
   
 6.  Riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>Per passare dalla versione corrente del word breaker per la lingua inglese Regno Unito alla versione precedente  
   
 1.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\CLSID**.  
@@ -73,9 +75,9 @@ ms.locfileid: "58305459"
   
 3.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\Language\eng**.  
   
-4.  Aggiornare il valore della chiave **WBreakerClass** a **{173C97E2-AEBE-437C-9445-01B237ABF2F6}**.  
+4.  Aggiornare il valore della chiave **WBreakerClass** a **{173C97E2-AEBE-437C-9445-01B237ABF2F6}** .  
   
-5.  Aggiornare il valore della chiave **StemmerClass** a **{D99F7670-7F1A-11CE-BE57-00AA0051FE20}**.  
+5.  Aggiornare il valore della chiave **StemmerClass** a **{D99F7670-7F1A-11CE-BE57-00AA0051FE20}** .  
   
 6.  Riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -97,9 +99,9 @@ ms.locfileid: "58305459"
   
 3.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\Language\eng**.  
   
-4.  Aggiornare il valore della chiave **WBreakerClass** a **{9faed859-0b30-4434-ae65-412e14a16fb8}**.  
+4.  Aggiornare il valore della chiave **WBreakerClass** a **{9faed859-0b30-4434-ae65-412e14a16fb8}** .  
   
-5.  Aggiornare il valore della chiave **StemmerClass** a **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}**.  
+5.  Aggiornare il valore della chiave **StemmerClass** a **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}** .  
   
 6.  Riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -119,9 +121,9 @@ ms.locfileid: "58305459"
   
 3.  Nel Registro di sistema passare al nodo seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RadiceIstanza\>\MSSearch\Language\eng**.  
   
-4.  Aggiornare il valore della chiave **WBreakerClass** a **{9faed859-0b30-4434-ae65-412e14a16fb8}**.  
+4.  Aggiornare il valore della chiave **WBreakerClass** a **{9faed859-0b30-4434-ae65-412e14a16fb8}** .  
   
-5.  Aggiornare il valore della chiave **StemmerClass** a **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}**.  
+5.  Aggiornare il valore della chiave **StemmerClass** a **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}** .  
   
 6.  Riavviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

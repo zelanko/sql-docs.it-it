@@ -24,12 +24,12 @@ ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9878aaa62eedf9a2468aa02031e3dcf20e6d7df6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6875a490a2ebb4228321cbf9d9076af892c9471
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025523"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580219"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Possibili errori relativi ai supporti durante il backup e il ripristino (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,8 +59,10 @@ ms.locfileid: "63025523"
   
 2.  Indipendentemente dalla presenza di valori di checksum per la pagina, viene generato un checksum di backup separato per i flussi di backup. Le operazioni di ripristino possono utilizzare facoltativamente il checksum del backup per verificare che il backup non sia danneggiato. Il checksum del backup viene archiviato nei supporti di backup e non nelle pagine del database. È possibile utilizzare facoltativamente il checksum del backup in fase di ripristino.  
   
-3.  Il set di backup viene contrassegnato come contenente checksum di backup (nella colonna **has_backup_checksums** di **msdb..backupset)**. Per altre informazioni, vedere [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md).  
-  
+3.  Il set di backup viene contrassegnato come contenente checksum di backup (nella colonna **has_backup_checksums** di **msdb..backupset)** . Per altre informazioni, vedere [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md).  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Durante un'operazione di ripristino, se nel supporto di backup sono presenti checksum di backup, per impostazione predefinita le istruzioni RESTORE e RESTORE VERIFYONLY verificheranno solo i checksum di backup e delle pagine. In assenza di un checksum di backup, l'operazione di backup proseguirà senza verifica, in quanto, in tal caso, l'operazione di ripristino non è in grado di verificare in modo affidabile i checksum delle pagine.  
   
 ## <a name="response-to-page-checksum-errors-during-a-backup-or-restore-operation"></a>Risposta a errori di checksum di pagina durante un'operazione di backup o ripristino  

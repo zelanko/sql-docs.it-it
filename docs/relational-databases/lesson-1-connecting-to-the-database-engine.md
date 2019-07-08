@@ -11,12 +11,12 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9414215e82a6828152e1ab84265a5b70b6a2171
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: a7f95a4ebc0227a4bb16f256073a3408ae15a1c2
+ms.sourcegitcommit: c8f9e5577465148ffe94eec784848f5a956b1086
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801685"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67517767"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lezione 1: Connessione al motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,6 +60,8 @@ I database di esempio e gli esempi non sono inclusi in [!INCLUDE[ssNoVersion](..
 3.  Se Server registrati non è visualizzato, scegliere **Server registrati** dal menu **Visualizza**.
 4.  Dopo avere selezionato **Motore di database** nella barra degli strumenti Server registrati, espandere **Motore di database**, fare clic con il pulsante destro del mouse su **Gruppi di server locali**, scegliere **Attività**e quindi fare clic su **Registra server locali**. Verranno visualizzate tutte le istanze di [!INCLUDE[ssDE](../includes/ssde-md.md)] installate nel computer, L'istanza predefinita non è denominata e viene visualizzata come nome del computer. Un'istanza denominata viene visualizzata come nome del computer seguito da una barra rovesciata (\\) e dal nome dell'istanza. Per [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], l'istanza è denominata *<nome_computer>* \sqlexpress, se non è stato specificato un nome diverso durante l'installazione.  
 
+[!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##### <a name="to-verify-that-the-database-engine-is-running"></a>Per verificare che il Motore di database sia in esecuzione
 
 1.  In Server registrati, se accanto al nome dell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è presente un punto verde con una freccia bianca, [!INCLUDE[ssDE](../includes/ssde-md.md)] è in esecuzione e non sono necessarie ulteriori operazioni.  
@@ -77,7 +79,7 @@ I database di esempio e gli esempi non sono inclusi in [!INCLUDE[ssNoVersion](..
 
 ![object-explorer](../relational-databases/media/object-explorer.png)
 
-3.  Nella casella **Nome server** digitare il nome dell'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)]. Per l'istanza predefinita di SQL Server il nome del server è il nome del computer. Per un'istanza denominata di SQL Server, il nome del server è _\<nome_computer\>_**\\**_\<nome_istanza\>_, ad esempio **ACCTG_SRVR\SQLEXPRESS**. La schermata seguente mostra la connessione all'istanza predefinita (non denominata) di [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] in un computer denominato 'PracticeComputer'. L'utente attualmente connesso a Windows è Mary dal dominio Contoso. Quando si usa l'autenticazione di Windows non è possibile modificare il nome utente. 
+3.  Nella casella **Nome server** digitare il nome dell'istanza del [!INCLUDE[ssDE](../includes/ssde-md.md)]. Per l'istanza predefinita di SQL Server il nome del server è il nome del computer. Per un'istanza denominata di SQL Server, il nome del server è _\<nome_computer\>_ **\\** _\<nome_istanza\>_ , ad esempio **ACCTG_SRVR\SQLEXPRESS**. La schermata seguente mostra la connessione all'istanza predefinita (non denominata) di [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] in un computer denominato 'PracticeComputer'. L'utente attualmente connesso a Windows è Mary dal dominio Contoso. Quando si usa l'autenticazione di Windows non è possibile modificare il nome utente. 
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 

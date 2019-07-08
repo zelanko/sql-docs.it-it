@@ -11,12 +11,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98d517c4d00d0ed69aa4a04daa4333c65fdf31de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fae2897f84ad6784742b4210344c6bbd7809e901
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935257"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585544"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,9 +44,11 @@ ms.locfileid: "65935257"
 2.  Dispone almeno di quattro punti.  
   
 3.  I punti iniziale e finale condividono le stesse coordinate X e Y.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     > [!NOTE]  
-    > I valori Z e ; vengono ignorati.  
+    > Z and M values are ignored.  
   
 L'esempio seguente illustra le istanze **CurvePolygon** accettate.  
   

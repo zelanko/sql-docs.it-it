@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 464ad33fd322226d68c79b364a72bd55de0d62b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ea144a638bd64446e61b5bcbfed8397d5784d6a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62521552"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585425"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Creare e archiviare chiavi master della colonna (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,6 +109,8 @@ Per concedere all'utente l'autorizzazione di *lettura* per un certificato archiv
 7.  Nella finestra di dialogo **Aggiungi/Rimuovi snap-in** fare clic su **OK**.
 8.  In **Snap-in certificati** trovare il certificato nella cartella **Certificati > Personale**, fare clic con il pulsante destro del mouse sul certificato, scegliere **Tutte le attività** e quindi fare clic su **Gestisci chiavi private**.
 9.  Nella finestra di dialogo **Sicurezza** aggiungere le autorizzazioni di lettura per un account utente, se necessario.
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="creating-column-master-keys-in-azure-key-vault"></a>Creazione di chiavi master della colonna nell'insieme di credenziali delle chiavi di Azure
 
