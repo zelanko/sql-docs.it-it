@@ -14,12 +14,12 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6b29e94e129cf674beee7d9ca2b784203c753c79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b08178a89f8678b8ad0ac9f9f2f848860bb786c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826399"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584196"
 ---
 # <a name="view-offline-log-files"></a>Visualizzare file di log offline
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "47826399"
   
      Se si desidera connettersi a un computer remoto, effettuare le operazioni seguenti:  
   
-    1.  Fare clic con il pulsante destro del mouse su **Controllo WMI (computer locale)**, quindi scegliere **Connetti a un altro computer**.  
+    1.  Fare clic con il pulsante destro del mouse su **Controllo WMI (computer locale)** , quindi scegliere **Connetti a un altro computer**.  
   
     2.  Nella finestra di dialogo **Cambio computer gestito** fare clic su **Altro computer**.  
   
@@ -87,7 +87,9 @@ ms.locfileid: "47826399"
 6.  Fare clic su **Sicurezza**.  
   
 7.  Verificare che l'account usato abbia l'autorizzazione **Abilita account** . Questa autorizzazione consente accesso in lettura a oggetti WMI.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="view-log-files"></a>Visualizzare file di log  
  Nella procedura seguente viene illustrato come visualizzare file di log offline tramite Server registrati. Nella procedura si suppone quanto segue:  
   

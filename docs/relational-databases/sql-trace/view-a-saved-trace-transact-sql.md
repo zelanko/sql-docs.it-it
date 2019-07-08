@@ -15,12 +15,12 @@ ms.assetid: 3a95a816-aa89-4d5f-858c-968a9cb3ee87
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 706c100a68a2b077a000e88d6cf093efbddb0ede
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 4118a30ffe84210bd7829522d50dc0f163e88639
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570660"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582399"
 ---
 # <a name="view-a-saved-trace-transact-sql"></a>Visualizzare una traccia salvata (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,8 +29,10 @@ ms.locfileid: "51570660"
 ### <a name="to-view-a-specific-trace"></a>Per visualizzare una traccia specifica  
   
 1.  Eseguire **fn_trace_getinfo** specificando l'ID della traccia su cui si vuole ottenere informazioni. Questa funzione restituisce una tabella in cui sono indicate la traccia, la proprietà della traccia e le informazioni sulla proprietà.  
-  
-     Richiamare la funzione nel modo seguente:  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     Invoke the function this way:  
   
     ```  
     SELECT *  

@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af0251b5a493eb757b16dfb01b08304751eaa4dc
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 68c611986bba308dc06476a7fd61328353c9075d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589525"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580584"
 ---
 # <a name="duplicate-tables"></a>Duplicare le tabelle
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "53589525"
 > [!IMPORTANT]  
 >  Questa operazione consente di duplicare solo la struttura di una tabella, non le righe della tabella.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per duplicare una tabella:**  
   
@@ -48,7 +48,7 @@ ms.locfileid: "53589525"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessaria l'autorizzazione CREATE TABLE nel database di destinazione.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -70,8 +70,10 @@ ms.locfileid: "53589525"
 7.  Scegliere **Salva** table name **dal menu**_File_.  
   
 8.  Nella finestra di dialogo **Scegli nome** digitare un nome per la nuova tabella e quindi fare clic su **OK**.  
-  
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-duplicate-a-table-in-query-editor"></a>Per duplicare una tabella in Editor di query  
   

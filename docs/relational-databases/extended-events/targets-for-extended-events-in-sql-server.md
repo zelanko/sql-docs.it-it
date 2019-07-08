@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a34c835fe87edb3acf8e6bb64f262a090cc92806
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 6d9a5221f3386bd96a728bab27db93eca9373054
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478136"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583392"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinazioni per gli eventi estesi in SQL Server
 
@@ -521,6 +521,7 @@ Per testare la sessione eventi, si è intenzionalmente impedito il rilascio di b
 3. Non si è intenzionalmente eseguita un'istruzione COMMIT TRANSACTION finché non si sono esaminate le destinazioni.
 4. Successivamente, dopo il testing, si è eseguita un'istruzione COMMIT TRANSACTION.
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 La semplice destinazione **event_counter** ha fornito le righe di output seguenti. Poiché 52-50=2, l'output indica che, quando si esamina l'output della destinazione pair-matching, dovrebbero essere visibili due eventi lock_acquired non abbinati.
 

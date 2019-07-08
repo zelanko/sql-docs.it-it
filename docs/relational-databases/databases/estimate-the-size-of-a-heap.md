@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f57b07be679195794df5f0f9fe2329417a0b30f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d65ccbf6784b7571684624423cc0f7d378c0f2c7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62860676"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585288"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Stima delle dimensioni di un heap
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "62860676"
   
 3.  Parte della riga, nota come mappa di bit null, è riservata alla gestione del supporto dei valori Null in una colonna. Calcolarne le dimensioni:  
   
-     **_Null_Bitmap_**  = 2 + ((**_Num_Cols_** + 7) / 8)  
+     **_Null_Bitmap_**  = 2 + (( **_Num_Cols_** + 7) / 8)  
   
      Solo l'integrale di questa espressione dovrebbe essere utilizzato. Eliminare le parti restanti.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62860676"
   
      Se la tabella include colonne di lunghezza variabile, determinare la quantità di spazio utilizzata per l'archiviazione delle colonne nella riga:  
   
-     **_Variable_Data_Size_**  = 2 + (**_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
+     **_Variable_Data_Size_**  = 2 + ( **_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
   
      I byte aggiunti a **_Max_Var_Size_** servono a tenere traccia di ogni colonna a lunghezza variabile. Questa formula si basa sul presupposto che tutte le colonne a lunghezza variabile siano piene al 100%. Se si prevede che verrà usata una percentuale inferiore dello spazio di archiviazione delle colonne a lunghezza variabile, è possibile modificare il valore di **_Max_Var_Size_** in base a tale percentuale per ottenere una stima più accurata delle dimensioni complessive della tabella.  
   
@@ -66,25 +66,27 @@ ms.locfileid: "62860676"
   
 5.  Calcolare le dimensioni totali della riga:  
   
-     **_Row_Size_**  = **_Fixed_Data_Size_** + **_Variable_Data_Size_** + **_Null_Bitmap_** + 4  
+     **_Row_Size_**   =  **_Fixed_Data_Size_**  +  **_Variable_Data_Size_**  +  **_Null_Bitmap_** + 4  
   
      Il valore 4 nel formula è l'overhead dell'intestazione di riga della riga di dati.  
   
 6.  Calcolare il numero di righe per pagina (8096 byte liberi per pagina):  
   
-     **_Rows_Per_Page_**  = 8096 / (**_Row_Size_** + 2)  
+     **_Rows_Per_Page_**  = 8096 / ( **_Row_Size_** + 2)  
   
      Poiché le righe non si estendono su più pagine, il numero di righe per pagina deve essere arrotondato alla riga completa più vicina. Il valore 2 nella formula è per la voce di riga nella matrice di slot della pagina.  
   
 7.  Calcolare il numero di pagine necessario per archiviare tutte le righe:  
   
-     **_Num_Pages_**  = **_Num_Rows_** / **_Rows_Per_Page_**  
+     **_Num_Pages_**   =  **_Num_Rows_**  /  **_Rows_Per_Page_**  
   
      Il numero di pagine stimato deve essere arrotondato alla pagina intera più vicina.  
   
 8.  Infine, calcolare la quantità di spazio necessaria per archiviare i dati nell'heap (8192 byte totali per pagina):  
-  
-     Dimensioni dell'heap (byte) = 8192 x **_Num_Pages_**  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     Heap size (bytes) = 8192 x **_Num_Pages_**  
   
  Il calcolo non prende in considerazione i fattori seguenti:  
   
@@ -98,7 +100,7 @@ ms.locfileid: "62860676"
   
 -   Valori LOB  
   
-     L'algoritmo per determinare con esattezza la quantità di spazio usata per archiviare i tipi di dati LOB **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**, **ntextxml**e **image** è complesso. È sufficiente aggiungere soltanto le dimensioni medie dei valori LOB previsti e aggiungerle alle dimensioni totali dell'heap.  
+     L'algoritmo per determinare con esattezza la quantità di spazio usata per archiviare i tipi di dati LOB **varchar(max)** , **varbinary(max)** , **nvarchar(max)** , **text**, **ntextxml**e **image** è complesso. È sufficiente aggiungere soltanto le dimensioni medie dei valori LOB previsti e aggiungerle alle dimensioni totali dell'heap.  
   
 -   Compressione  
   

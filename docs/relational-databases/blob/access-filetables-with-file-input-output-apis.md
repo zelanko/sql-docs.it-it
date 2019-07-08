@@ -13,12 +13,12 @@ ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3005ff6aa1311b22eea25e2daa14c1d4110da32c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: abcbeb3cd6abfd1712217ed5577f2fafd4d5b4a3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65089036"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582255"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Accedere alle tabelle FileTable con API di Input-Output dei file
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,9 @@ ms.locfileid: "65089036"
 1.  L'accesso dell'API di l'I/O dei file inizia in genere con l'acquisizione di un percorso UNC logico per il file o la directory. Le applicazioni possono usare un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] con la funzione [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) per ottenere il percorso logico per il file o la directory. Per altre informazioni, vedere [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
 2.  Nell'applicazione viene utilizzato quindi questo percorso logico per ottenere un handle al file o alla directory ed eseguire un'operazione sull'oggetto. Il percorso può essere passato a qualsiasi funzione dell'API del file system supportata, ad esempio CreateFile() o CreateDirectory() per creare o aprire un file e ottenere un handle. L'handle può essere quindi utilizzato per trasmettere dati, enumerare o organizzare directory, ottenere o impostare attributi di file, eliminare file o directory e così via.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="create"></a> Creazione di file e directory in una tabella FileTable  
  È possibile creare un file o una directory in una tabella FileTable chiamando un'API di I/O dei file quale CreateFile o CreateDirectory.  
   

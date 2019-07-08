@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3053f1415332ee26017126322ab5cd029f668e32
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6e8472678a0d25c134f99317a2588e329c468e8d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665121"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579430"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Supporto di SQL Server Management Studio per OLTP in memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,8 +36,10 @@ ms.locfileid: "51665121"
 3.  Per aggiungere un nuovo filegroup di dati ottimizzato per la memoria, fare clic sulla pagina **Filegroup**. In **DATI OTTIMIZZATI PER LA MEMORIA** fare clic su **Aggiungi filegroup**, quindi immettere il nome del filegroup di dati ottimizzato per la memoria.  La colonna con etichetta **File FILESTREAM** rappresenta il numero di contenitori del filegroup. I contenitori vengono aggiunti alla pagina **Generale** .  
   
 4.  Per aggiungere un file (contenitore) a un filegroup, fare clic sulla pagina **Generale** . In **File di database**fare clic su **Aggiungi**. Selezionare **Tipo file** come **Dati FILESTREAM**, specificare il nome logico del contenitore, selezionare il filegroup ottimizzato per la memoria e verificare che **Aumento automatico / Dimensioni max** sia impostato su **Senza limiti**.  
-  
-     Per altre informazioni sulle modalità di creazione di un nuovo database tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vedere [Creare un database](../../relational-databases/databases/create-a-database.md).  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     For more information on how to create a new database by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [Create a Database](../../relational-databases/databases/create-a-database.md).  
   
 ### <a name="to-create-a-memory-optimized-table"></a>Per creare una tabella ottimizzata per la memoria  
   

@@ -13,12 +13,12 @@ ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 1fcf2b3c6f6b516d34f2d1c8658acd61549650b6
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 2780556c86203cd89e6804cf9a108bdf37ecd019
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689864"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582431"
 ---
 # <a name="change-resource-pool-settings"></a>Modificare le impostazioni del pool di risorse
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "55689864"
   
  La somma delle percentuali minime della CPU e delle percentuali minime della memoria per tutti i pool di risorse non deve superare 100.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorizzazioni  
  Per modificare le impostazioni di un pool di risorse è necessaria l'autorizzazione CONTROL SERVER.  
   
 ##  <a name="ChgRPProp"></a> Modificare le impostazioni di un pool di risorse utilizzando SQL Server Management Studio  
@@ -51,7 +51,9 @@ ms.locfileid: "55689864"
 4.  Selezionare o fare doppio clic sulle celle della riga da modificare e immettere i nuovi valori.  
   
 5.  Per salvare le modifiche, fare clic su **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="ChgRPTSQL"></a> Modificare le impostazioni di un pool di risorse utilizzando Transact-SQL  
  **Per modificare le impostazioni di un pool di risorse utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   

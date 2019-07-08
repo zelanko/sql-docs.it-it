@@ -14,12 +14,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f8df41184356f29e3037f36d519c9957f2f3e5b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23b0b3156d97670832ba040693a2ea0dc20540f2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936438"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584065"
 ---
 # <a name="multilinestring"></a>MultiLineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,9 @@ Per poter essere valida, un'istanza **MultiLineString** deve soddisfare i criter
 1.  Tutte le istanze che comprendono l'istanza **MultiLineString** devono essere istanze **LineString** valide.  
   
 2.  Due istanze **LineString** che comprendono l'istanza **MultiLineString** possono sovrapporsi a un intervallo. Le istanze **LineString** possono solo intersecarsi oppure toccarsi reciprocamente o con altre istanze **LineString** in un numero finito di punti.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 L'esempio seguente indica tre istanze **MultiLineString** valide e un'istanza **MultiLineString** non valida.  
   
 ```sql  

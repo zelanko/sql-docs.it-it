@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b0b63123e9d48ca7f89d888dca82b6b988942893
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef2848efb4a66ccf2d8d1b2271bd70c455b27fd9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62466745"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582639"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gestire la conservazione dei dati cronologici nelle tabelle temporali con controllo delle versioni di sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,9 @@ ms.locfileid: "62466745"
      ![Pagina Selezionare l'indirizzo IP della procedura guidata Estensione database](../../relational-databases/tables/media/stretch-wizard-7.png "Pagina Selezionare l'indirizzo IP della procedura guidata Estensione database")  
   
 6.  Al termine della procedura guidata, verificare che il database sia stato abilitato per l'estensione. Notare le icone in Esplora oggetti che indicano che il database è stato esteso.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > **NOTA:** Se l'abilitazione del database per l'estensione ha esito negativo,controllare il log degli errori. Un errore comune consiste nella configurazione non corretta della regola del firewall.  
   
  Vedere anche:  

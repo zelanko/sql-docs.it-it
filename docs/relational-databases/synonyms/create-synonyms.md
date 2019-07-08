@@ -15,12 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cbe7f38f6132e79f1938936c0914bae236ea5a03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d65e6941d6db291130b1b0e991c5626277ce38b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639238"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581616"
 ---
 # <a name="create-synonyms"></a>Creare sinonimi
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,27 +54,29 @@ ms.locfileid: "62639238"
 2.  Fare clic con il pulsante destro del mouse sulla cartella **Sinonimi**, quindi selezionare **Nuovo sinonimo...** .  
   
 3.  Nella finestra di dialogo **Aggiungi sinonimo** immettere le informazioni riportate di seguito.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     **Synonym name**  
+     Type the new name you will use for this object.  
   
-     **Nome sinonimo**  
-     Digitare il nuovo nome che verrà utilizzato per questo oggetto.  
+     **Synonym schema**  
+     Type the schema of the new name you will use for this object.  
   
-     **Schema sinonimo**  
-     Digitare lo schema del nuovo nome che verrà utilizzato per questo oggetto.  
+     **Server name**  
+     Type the server instance to connect to.  
   
-     **Nome server**  
-     Digitare l'istanza del server a cui connettersi.  
-  
-     **Nome database**  
-     Digitare o selezionare il database contenente l'oggetto.  
+     **Database name**  
+     Type or select the database containing the object.  
   
      **Schema**  
-     Digitare o selezionare lo schema proprietario dell'oggetto.  
+     Type or select the schema that owns the object.  
   
-     **Tipo oggetto**  
-     Selezionare il tipo di oggetto.  
+     **Object type**  
+     Select the type of object.  
   
-     **Nome oggetto**  
-     Digitare il nome dell'oggetto al quale fa riferimento il sinonimo.  
+     **Object name**  
+     Type the name of the object to which the synonym refers.  
   
 ##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   

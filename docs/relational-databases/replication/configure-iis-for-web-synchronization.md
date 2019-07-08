@@ -15,12 +15,12 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7dae619283acc6259a488ae868c853c193a2f2f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78fc4eff34dd98552924435c3132c1fafb96c746
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62668925"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585794"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurazione di IIS per la sincronizzazione Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,9 @@ ms.locfileid: "62668925"
 4.  Impostare le autorizzazioni appropriate per Listener per la replica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 5.  Eseguire la sincronizzazione Web in modalità diagnostica per testare la connessione al computer che esegue IIS e verificare la corretta installazione del certificato SSL (Secure Sockets Layer).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="configuring-secure-sockets-layer"></a>Configurazione di SSL (Secure Sockets Layer)  
  Per configurare SSL, specificare un certificato che il computer che esegue IIS deve utilizzare. La sincronizzazione Web per la replica di tipo merge supporta l'utilizzo di certificati server ma non di certificati client. Per configurare IIS per la distribuzione, è innanzitutto necessario ottenere un certificato da un'autorità di certificazione. Un'autorità di certificazione è un'entità responsabile di determinare e garantire l'autenticità delle chiavi di crittografia pubbliche appartenenti a utenti, computer o altre autorità di certificazione. Per ulteriori informazioni sui certificati, vedere la documentazione di IIS. Dopo l'installazione del certificato, è necessario associare il certificato al sito Web utilizzato nella sincronizzazione Web.  
   

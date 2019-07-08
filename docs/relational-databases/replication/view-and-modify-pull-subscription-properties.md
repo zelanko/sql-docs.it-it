@@ -19,12 +19,12 @@ ms.assetid: 1601e54f-86f0-49e8-b023-87a5d1def033
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1042ab20755059c0b6730f1bfe810c1b5d46c31b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60365d5a49d4871ae57b3dbb1644355a0193be8e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047525"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585162"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>Visualizzazione e modifica delle proprietà delle sottoscrizioni pull
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,9 @@ ms.locfileid: "63047525"
 3.  Espandere la pubblicazione appropriata, fare clic con il pulsante destro del mouse su una sottoscrizione, quindi su **Proprietà**.  
   
 4.  Visualizzare le proprietà e quindi fare clic su **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-view-and-modify-pull-subscription-properties-from-the-subscriber-in-management-studio"></a>Per visualizzare e modificare le proprietà delle sottoscrizioni pull dal Sottoscrittore in Management Studio  
   
 1.  Connettersi al Sottoscrittore in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]e quindi espandere il nodo del server.  
@@ -78,23 +80,23 @@ ms.locfileid: "63047525"
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Per visualizzare le proprietà di una sottoscrizione pull di una pubblicazione snapshot o transazionale  
   
-1.  Nel Sottoscrittore eseguire [sp_helppullsubscription](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md). Specificare i parametri **@publisher**, **@publisher_db**e **@publication**. In tal modo verranno restituite le informazioni sulla sottoscrizione archiviate nelle tabelle di sistema del Sottoscrittore.  
+1.  Nel Sottoscrittore eseguire [sp_helppullsubscription](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md). Specificare i parametri **@publisher** , **@publisher_db** e **@publication** . In tal modo verranno restituite le informazioni sulla sottoscrizione archiviate nelle tabelle di sistema del Sottoscrittore.  
   
-2.  Nel Sottoscrittore eseguire [sp_helpsubscription_properties](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md). Specificare i parametri **@publisher**, **@publisher_db**, **@publication**e uno dei valori seguenti per **@publication_type**.  
+2.  Nel Sottoscrittore eseguire [sp_helpsubscription_properties](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md). Specificare i parametri **@publisher** , **@publisher_db** , **@publication** e uno dei valori seguenti per **@publication_type** .  
   
     -   **0** : la sottoscrizione appartiene a una pubblicazione transazionale.  
   
     -   **1** : la sottoscrizione appartiene a una pubblicazione snapshot.  
   
-3.  Nel server di pubblicazione eseguire [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md). Specificare **@publication** e **@subscriber**.  
+3.  Nel server di pubblicazione eseguire [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md). Specificare **@publication** e **@subscriber** .  
   
-4.  Nel server di pubblicazione eseguire [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md), specificando **@subscriber**. In tal modo verranno visualizzate le informazioni sul Sottoscrittore.  
+4.  Nel server di pubblicazione eseguire [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md), specificando **@subscriber** . In tal modo verranno visualizzate le informazioni sul Sottoscrittore.  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Per modificare le proprietà di una sottoscrizione pull di una pubblicazione snapshot o transazionale  
   
-1.  Nel Sottoscrittore eseguire [sp_change_subscription_properties](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md), specificando **@publisher**, **@publisher_db**, **@publication**, il valore **0** (transazionale) o **1** (snapshot) per **@publication_type**, la proprietà della sottoscrizione da modificare come **@property**e il nuovo valore come **@value**.  
+1.  Nel Sottoscrittore eseguire [sp_change_subscription_properties](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md), specificando **@publisher** , **@publisher_db** , **@publication** , il valore **0** (transazionale) o **1** (snapshot) per **@publication_type** , la proprietà della sottoscrizione da modificare come **@property** e il nuovo valore come **@value** .  
   
-2.  (Facoltativo) Nel database di sottoscrizione del Sottoscrittore eseguire [sp_changesubscriptiondtsinfo](../../relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql.md). Specificare l'ID del processo dell'agente di distribuzione per **@jobid**e le proprietà del pacchetto DTS (Data Transformation Services) seguenti:  
+2.  (Facoltativo) Nel database di sottoscrizione del Sottoscrittore eseguire [sp_changesubscriptiondtsinfo](../../relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql.md). Specificare l'ID del processo dell'agente di distribuzione per **@jobid** e le proprietà del pacchetto DTS (Data Transformation Services) seguenti:  
   
     -   **@dts_package_name**  
   
@@ -109,17 +111,17 @@ ms.locfileid: "63047525"
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-merge-publication"></a>Per visualizzare le proprietà di una sottoscrizione pull di una pubblicazione di tipo merge  
   
-1.  Nel Sottoscrittore eseguire [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md). Specificare i parametri **@publisher**, **@publisher_db**e **@publication**.  
+1.  Nel Sottoscrittore eseguire [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md). Specificare i parametri **@publisher** , **@publisher_db** e **@publication** .  
   
-2.  Nel Sottoscrittore eseguire [sp_helpsubscription_properties](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md). Specificare i parametri **@publisher**, **@publisher_db**, **@publication**e il valore 2 per **@publication_type**.  
+2.  Nel Sottoscrittore eseguire [sp_helpsubscription_properties](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md). Specificare i parametri **@publisher** , **@publisher_db** , **@publication** e il valore 2 per **@publication_type** .  
   
-3.  Nel server di pubblicazione eseguire [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md) per visualizzare le informazioni sulla sottoscrizione. Per restituire informazioni su una sottoscrizione specifica, è necessario specificare **@publication**, **@subscriber**e il valore **pull** per **@subscription_type**.  
+3.  Nel server di pubblicazione eseguire [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md) per visualizzare le informazioni sulla sottoscrizione. Per restituire informazioni su una sottoscrizione specifica, è necessario specificare **@publication** , **@subscriber** e il valore **pull** per **@subscription_type** .  
   
-4.  Nel server di pubblicazione eseguire [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md), specificando **@subscriber**. In tal modo verranno visualizzate le informazioni sul Sottoscrittore.  
+4.  Nel server di pubblicazione eseguire [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md), specificando **@subscriber** . In tal modo verranno visualizzate le informazioni sul Sottoscrittore.  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-merge-publication"></a>Per modificare le proprietà di una sottoscrizione pull di una pubblicazione di tipo merge  
   
-1.  Nel Sottoscrittore eseguire [sp_changemergepullsubscription](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md). Specificare i parametri **@publication**, **@publisher**, **@publisher_db**, la proprietà della sottoscrizione da modificare come **@property**e il nuovo valore come **@value**.  
+1.  Nel Sottoscrittore eseguire [sp_changemergepullsubscription](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md). Specificare i parametri **@publication** , **@publisher** , **@publisher_db** , la proprietà della sottoscrizione da modificare come **@property** e il nuovo valore come **@value** .  
   
 ##  <a name="RMOProcedure"></a> Utilizzo di RMO (Replication Management Objects)  
  Le classi RMO utilizzate per la visualizzazione o la modifica delle proprietà di una sottoscrizione pull dipendono dal tipo di pubblicazione per cui viene creata la sottoscrizione pull.  

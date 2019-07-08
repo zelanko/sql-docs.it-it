@@ -14,12 +14,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9bbed0ab919c2eb4258c22bee4545ec8d49a1462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 192b068c8ece6bcfda9aee2899793d7d901dd90a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66761450"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581696"
 ---
 # <a name="polygon"></a>Polygon
 
@@ -43,7 +43,9 @@ Come indicato nell'illustrazione:
 2.  La figura 2 è un'istanza **Polygon** il cui limite è definito da un anello esterno e due anelli interni. L'area negli anelli interni è parte dell'esterno dell'istanza **Polygon** .  
   
 3.  La figura 3 è un'istanza **Polygon** valida perché i suoi anelli interni si intersecano in un solo punto tangente.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="accepted-instances"></a>Istanze accettate  
  Le istanze **Polygon** accettate sono istanze che possono essere archiviate in una variabile **geometry** o **geography** senza generare un'eccezione. Di seguito sono riportate le istanze **Polygon** accettate:  
   

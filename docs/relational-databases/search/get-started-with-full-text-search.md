@@ -16,12 +16,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d87ebe37c4dcf669243262c97422337b1669be6
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 6043372a62776b4f7417b3a666417be9a811bfce
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973711"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585500"
 ---
 # <a name="get-started-with-full-text-search"></a>Introduzione alla ricerca full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,6 +31,8 @@ La funzionalità full-text è abilitata per impostazione predefinita nei databas
 Per configurare la ricerca full-text sono richiesti due passaggi di base:  
 1.  Creazione di un catalogo full-text.  
 2.  Creare un indice full-text nelle tabelle o nelle viste indicizzate in cui eseguire la ricerca. 
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Ogni indice full-text deve appartenere a un catalogo full-text. È possibile creare un catalogo di testo separato per ogni indice full-text oppure associare più indici full-text a un determinato catalogo. Un catalogo full-text è un oggetto virtuale e non appartiene ad alcun filegroup. Il catalogo full-text è un concetto logico che fa riferimento a un gruppo di indici full-text.
 

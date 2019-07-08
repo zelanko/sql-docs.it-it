@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: b3e6a0fc14137ca13e3539a7046edf576b4719ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bb0f511f5b8a470e4f7784d6dff9ce4e46650543
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775049"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581237"
 ---
 # <a name="install-polybase-on-windows"></a>Installare PolyBase in Windows
 
@@ -91,6 +91,8 @@ Dopo aver installato PolyBase autonomo o in un gruppo di scalabilità orizzontal
      Questa opzione abilita anche le connessioni al firewall di Microsoft Distributed Transaction Coordinator (MSDTC) e modifica le impostazioni del registro di MSDTC.  
    
 6. Nella pagina Configurazione di PolyBase, specificare un intervallo di porte che comprenda almeno sei porte. L'installazione di SQL Server alloca le prime sei porte disponibili dell'intervallo.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    >[!IMPORTANT]
    > Dopo l'installazione, è necessario [abilitare la funzionalità PolyBase](#enable).
@@ -170,7 +172,7 @@ PolyBase installa tre database utente, DWConfiguration, DWDiagnostics e DWQueue.
    
 ### <a id="confirminstall"></a> Come confermare l'installazione  
 
-Eseguire il comando seguente. Se installato, PolyBase restituisce 1;  in caso contrario, restituisce 0.  
+Eseguire il comando seguente. Se installato, PolyBase restituisce 1; in caso contrario, restituisce 0.  
 
 ```sql  
 SELECT SERVERPROPERTY ('IsPolyBaseInstalled') AS IsPolyBaseInstalled;  
