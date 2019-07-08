@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0fefd22e080ac0ed4e0646dde1805ce5923b8e3a
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: 6a3f6ccaf2da262033a291d300fc66c02ca35e78
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419163"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580707"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (Motore di database)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,13 +84,15 @@ Per aggiornare correttamente la colonna, procedere come segue:
 1. Eseguire SELECT sui dati della colonna SSN e archiviarli come set di risultati nell'applicazione. Ciò consentirà all'applicazione (*driver* client) di decrittografare la colonna.
 2. Eseguire INSERT per i dati dal set di risultati in SQL Server. 
 
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  >[!IMPORTANT]
  > In questo scenario, i dati verranno decrittografati quando vengono inviati di nuovo al server perché la colonna di destinazione è di tipo varchar regolare e non accetta dati crittografati. 
   
 ## <a name="selecting--deterministic-or-randomized-encryption"></a>Selezione della crittografia deterministica o casuale  
  Il motore di database non agisce mai sui dati in testo non crittografato archiviati in colonne crittografate, ma supporta alcune query sui dati crittografati, a seconda del tipo di crittografia per la colonna. Crittografia sempre attiva supporta due tipi di crittografia: crittografia casuale e crittografia deterministica.  
   
-- La crittografia deterministica genera sempre lo stesso valore crittografato per ogni valore specifico di testo non crittografato. L'uso della crittografia deterministica consente le ricerche di punti, join di uguaglianza, raggruppamento e indicizzazione di colonne crittografate. Tuttavia, potrebbe anche consentire a utenti non autorizzati di indovinare le informazioni sui valori crittografati esaminando i modelli della colonna crittografata, soprattutto se è incluso un piccolo set di valori crittografati, ad esempio True/False, o aree Nord/Sud/Est/Ovest. La crittografia deterministica deve usare regole di confronto a livello di colonna con un ordinamento binario2 per colonne di tipo carattere.
+- La crittografia deterministica genera sempre lo stesso valore crittografato per ogni valore specifico di testo non crittografato. L'uso della crittografia deterministica consente le ricerche di punti, join di uguaglianza, raggruppamento e indicizzazione di colonne crittografate. Tuttavia potrebbe anche consentire a utenti non autorizzati di indovinare le informazioni sui valori crittografati esaminando i modelli della colonna crittografata, soprattutto se è incluso un set piccolo di possibili valori crittografati, ad esempio True/False o le aree Nord/Sud/Est/Ovest. La crittografia deterministica deve usare regole di confronto a livello di colonna con un ordinamento binario2 per colonne di tipo carattere.
 
 - La crittografia casuale usa un metodo di crittografia dei dati meno prevedibile. La crittografia casuale è più sicura, ma impedisce le ricerche, il raggruppamento, l'indicizzazione e il join su colonne crittografate.
 

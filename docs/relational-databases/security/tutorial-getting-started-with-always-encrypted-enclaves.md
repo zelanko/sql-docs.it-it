@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ab1678831e67fa2504f9abb64a7dcc95f9f8e64
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: dde30ce48bf559bc72b3cdf3a4544039328f53e7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388126"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585097"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Esercitazione: Introduzione ad Always Encrypted con enclave sicuri tramite SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -46,7 +46,7 @@ Per iniziare a usare Always Encrypted con enclave sicuri sono necessari almeno d
    - In Hyper-V 2016 o versioni successive, [abilitare le estensioni di virtualizzazione annidata](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) nel processore della macchina virtuale.
    - In Azure, assicurarsi di eseguire una dimensione di macchina virtuale che supporta la virtualizzazione annidata, ad esempio le macchine virtuali della serie Dv3 ed Ev3. Vedere [Creare una VM di Azure in grado di supportare l'annidamento](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
    - In VMWare vSphere 6.7 6.7 o versioni successive, abilitare il supporto della sicurezza basata sulla virtualizzazione per la macchina virtuale come descritto nella [documentazione di VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
-   - Altri hypervisor e cloud pubblici potrebbero supportare l'uso di Always Encrypted con enclave sicure in una macchina virtuale, purché le estensioni di virtualizzazione (note a volte come virtualizzazione annidata) vengano esposte alla macchina virtuale. Consultare la documentazione della soluzione di virtualizzazione per informazioni sulla compatibilità e istruzioni per la configurazione.
+   - Altri hypervisor e cloud pubblici potrebbero supportare l'uso di Always Encrypted con enclave sicure in una macchina virtuale, purché le estensioni di virtualizzazione (note a volte come virtualizzazione annidata) vengano esposte alla macchina virtuale. Vedere la documentazione della soluzione di virtualizzazione per informazioni sulla compatibilità e istruzioni per la configurazione.
 - [SQL Server Management Studio (SSMS) 18.0 o versioni successive](../../ssms/download-sql-server-management-studio-ssms.md).
 
 In alternativa è possibile installare SSMS in un altro computer.
@@ -88,6 +88,8 @@ In questo passaggio si configura il computer HGS per eseguire il servizio Sorveg
    ```
 
 4. Trovare l'indirizzo IP del computer HGS eseguendo il comando seguente. Salvare questo indirizzo IP per i passaggi successivi.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    ```powershell
    Get-NetIPAddress  

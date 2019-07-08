@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b05cca816684cbb95c625232883d06706edfe7f6
-ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
+ms.openlocfilehash: 26db878bee2a786dc52f6046afea617bf7c69c0f
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67351717"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500155"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -566,10 +566,7 @@ Per restituire informazioni su database, file e filegroup, è possibile usare vi
 
 ## <a name="permissions"></a>Autorizzazioni
 
-Solo l'account di accesso dell'entità a livello di server (creato dal processo di provisioning) o i membri del ruolo del database `dbmanager` possono modificare un database.
-
-> [!IMPORTANT]
-> Il proprietario del database può modificare il database solo se è un membro del ruolo `dbmanager`.
+Per modificare un database un login deve essere il login principale di livello server (creato dal processo di provisioning), un membro del ruolo del database `dbmanager` nel database master, un membro del ruolo del database `db_owner` nel database corrente oppure un elemento `dbo` del database.
 
 ## <a name="examples"></a>Esempi
 

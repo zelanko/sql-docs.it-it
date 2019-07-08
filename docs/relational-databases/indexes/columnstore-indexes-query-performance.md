@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff3494a9983104c958dbd1f3e0ac7b74598f2dcb
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: b8cd9f4e066096bcffa5181e112710fb1c4e2d17
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343920"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583217"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Indici columnstore - Prestazioni delle query
 
@@ -92,7 +92,7 @@ ms.locfileid: "67343920"
     
  Non tutti gli operatori di esecuzione delle query possono essere eseguiti in modalità batch. Ad esempio, le operazioni DML di inserimento, eliminazione o aggiornamento vengono eseguite una riga alla volta. Gli operatori in modalità batch fanno riferimento agli operatori per velocizzare le prestazioni delle query in operazioni di analisi, join, aggregazione, ordinamento e così via. Dall'introduzione dell'indice columnstore in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] si sta lavorando costantemente all'incremento degli operatori eseguibili in modalità batch. La tabella seguente visualizza gli operatori eseguibili in modalità batch in base alla versione del prodotto.    
     
-|Operatori in modalità batch|Quando si usa?|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]¹|Commenti|    
+|Operatori in modalità batch|Quando si usa?|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]?|Commenti|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    
 |Operazioni DML (insert, delete, update, merge)||no|no|no|DML non è un'operazione in modalità batch perché non è parallela. Anche quando si abilita l'elaborazione batch in modalità seriale e si consente l'elaborazione in modalità batch di DML, non si rilevano vantaggi significativi.|    
 |Index Scan columnstore|SCAN|ND|sì|sì|Per gli indici columnstore è possibile eseguire il push del predicato nel nodo SCAN.|    
@@ -111,7 +111,7 @@ ms.locfileid: "67343920"
 |Top Sort||no|no|sì||    
 |Window Aggregates||ND|ND|sì|Nuovo operatore in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
- ¹Si applica a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], ai livelli Standard e Premium del [!INCLUDE[ssSDS](../../includes/sssds-md.md)], S3 e successive, a tutti i livelli vCore e a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+ ?Si applica a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], ai livelli Standard e Premium di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (S3 e successive), a tutti i livelli vCore e a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
     
 ### <a name="aggregate-pushdown"></a>Distribuzione dell'aggregazione    
  Un percorso di esecuzione normale per il calcolo di aggregazione che consente di recuperare le righe idonee dal nodo SCAN e aggregare i valori in modalità batch. Questo metodo offre buone prestazioni, ma con [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] è possibile eseguire il push dell'operazione di aggregazione nel nodo SCAN per migliorare le prestazioni di calcolo di aggregazione per ordini di grandezza durante l'esecuzione in modalità batch, purché vengano soddisfatte le condizioni seguenti: 
@@ -146,7 +146,7 @@ Quando si progetta uno schema del data warehouse, la modellazione consigliata è
     
 Ad esempio, un fatto può essere un record che rappresenta la vendita di un certo prodotto in un'area specifica, mentre la dimensione rappresenta un set di regioni, prodotti e così via. Le tabelle dei fatti e delle dimensioni sono connesse da una relazione di tipo chiave primaria/chiave esterna. Le query di analisi più diffuse creano un join di una o più tabelle delle dimensioni con la tabella dei fatti.    
     
-Ad esempio considerare il caso di una tabella delle dimensioni `Products`. Una chiave primaria tipica è `ProductCode`, generalmente rappresentata con il tipo di dati stringa. Una procedura consigliata per il miglioramento delle prestazioni delle query è la creazione di una chiave surrogata, in genere una colonna di tipo integer, per fare riferimento alla riga della tabella delle dimensioni dalla tabella dei fatti.    
+Ad esempio considerare il caso di una tabella delle dimensioni `Products`. Una chiave primaria tipica è `ProductCode`, generalmente rappresentata con il tipo di dati stringa. Una procedura consigliata per il miglioramento delle prestazioni delle query è la creazione di una chiave surrogata, in genere una colonna di tipo integer, per fare riferimento alla riga della tabella delle dimensioni dalla tabella dei fatti. ? ?
     
 L'indice columnstore esegue in modo efficace le query di analisi con join/predicati che includono chiavi di tipo numerico o integer. Tuttavia, in molti carichi di lavoro del cliente vengono usate colonne basate su stringhe per il collegamento delle tabelle dei fatti e delle dimensioni e le prestazioni delle query con l'indice columnstore non risultano altrettanto efficaci. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] migliora in modo significativo le prestazioni delle query di analisi con le colonne basate su stringhe grazie alla distribuzione dei predicati con colonne di tipo stringa nel nodo SCAN.    
     
@@ -155,6 +155,9 @@ La distribuzione del predicato stringa si basa sul dizionario primario o seconda
 Con la distribuzione del predicato stringa, l'esecuzione della query calcola il predicato in base ai valori nel dizionario e, se è qualificato, tutte le righe che fanno riferimento al valore del dizionario risultano automaticamente qualificate. Questo migliora le prestazioni in due modi:
 1.  Vengono restituite solo le righe qualificate, riducendo il numero di righe da trasmettere dal nodo SCAN. 
 2.  Il numero dei confronti di stringhe viene notevolmente ridotto. In questo esempio sono necessari solo 100 confronti di stringhe invece di un milione. Esistono alcune limitazioni, come descritto di seguito:    
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   Non è consentita la distribuzione del predicato stringa per i rowgroup delta. Non esiste un dizionario per le colonne nei rowgroup delta.    
     -   Non è consentita la distribuzione del predicato stringa se le voci del dizionario superano i 64 KB.    
     -   Le espressioni che restituiscono NULL non sono supportate.    
