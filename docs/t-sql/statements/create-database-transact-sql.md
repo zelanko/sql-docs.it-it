@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 95aa89336e4dcd6decc4434d4afaf77073dd45e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04339f2553d2eb6787fec1b83d61b71623159308
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66428968"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351687"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -61,7 +61,7 @@ Nella riga seguente fare clic su qualsiasi nome di prodotto. Viene visualizzato 
 
 |||||
 |-|-|-|-|
-|** _\* SQL Server \*_ ** &nbsp;| [Database singolo/pool elastico<br />database SQL](create-database-transact-sql.md?view=azuresqldb-current) | [Istanza gestita<br />database SQL](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Piattaforma di strumenti<br />analitici (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+|** _\* SQL Server \*_** &nbsp;| [Database singolo/pool elastico<br />database SQL](create-database-transact-sql.md?view=azuresqldb-current) | [Istanza gestita<br />database SQL](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Piattaforma di strumenti<br />analitici (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 |||||
 
 &nbsp;
@@ -865,7 +865,7 @@ GO
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| ** _\*Database singolo/pool elastico<br />database SQL\*_ ** | [Istanza gestita<br />database SQL](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Piattaforma di strumenti<br />analitici (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| ** _\*Database singolo/pool elastico<br />database SQL\*_** | [Istanza gestita<br />database SQL](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Piattaforma di strumenti<br />analitici (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -949,8 +949,6 @@ EDITION
 Specifica il livello del servizio del database.
 
 Database singoli e in pool in un database singolo/pool elastico. I valori disponibili sono: 'basic', 'standard', 'premium', 'GeneralPurpose', 'BusinessCritical' e 'Hyperscale'.
-
-Quando si specifica EDITION ma non MAXSIZE, MAXSIZE viene impostato sulle dimensioni minime supportate dall'edizione.
 
 MAXSIZE     
 Specifica le dimensioni massime del database. MAXSIZE deve essere valido per il livello del servizio specificato in EDITION. Nella tabella seguente sono elencati i valori MAXSIZE supportati e i valori predefiniti (P) per i livelli del servizio.
@@ -1038,12 +1036,12 @@ Il valore MAXSIZE per il modello basato su DTU, se specificato, deve essere un v
 |:----- | -------: |--------: |--------: |--------: |--------: |---------:|--------: |
 |Dimensioni massime dei dati (GB)|3072|3072|3072|4096|4096|4096|4096|
 
-Se non viene impostato alcun `MAXSIZE`valore quando viene usato il modello vCore, il valore predefinito è 32 GB. Per altri dettagli relativi ai limiti delle risorse per il modello basato su vCore, vedere [Limiti delle risorse basati su vCore](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
+Se non viene impostato alcun valore `MAXSIZE` quando si usa il modello vCore, il valore predefinito è 32 GB. Per altri dettagli relativi ai limiti delle risorse per il modello basato su vCore, vedere [Limiti delle risorse basati su vCore](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
 
 Le seguenti regole vengono applicate agli argomenti MAXSIZE ed EDITION:
 
-- Se il valore di EDITION è specificato e il valore di MAXSIZE viene omesso, viene utilizzato il valore predefinito dell'edizione. Ad esempio, se EDITION è impostato su Standard e MAXSIZE non è specificato, il valore di MAXSIZE viene automaticamente impostato su 250 MB.
-- Se né MAXSIZE né EDITION sono specificati, EDITION viene impostato su Standard (S0) e MAXSIZE viene impostato su 250 GB.
+- Se il valore di EDITION è specificato e il valore di MAXSIZE viene omesso, viene utilizzato il valore predefinito dell'edizione. Se ad esempio EDITION è impostato su Standard e MAXSIZE non è specificato, il valore di MAXSIZE viene automaticamente impostato su 250 MB.
+- Se non vengono specificati né MAXSIZE né EDITION, EDITION viene impostato su Utilizzo generico e MAXSIZE viene impostato su 32 GB.
 
 SERVICE_OBJECTIVE     
 - **Per database singoli e in pool**
@@ -1122,7 +1120,7 @@ CREATE DATABASE TestDB1;
 ```
 
 ### <a name="simple-example-with-edition"></a>Esempio semplice con Edition
-Esempio semplice per la creazione di un database standard.
+Esempio semplice per la creazione di un database per utilizzo generico.
 
 ```sql
 CREATE DATABASE TestDB2
@@ -1194,7 +1192,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Database singolo/pool elastico<br />database SQL](create-database-transact-sql.md?view=azuresqldb-current)| ** _\* Istanza gestita<br />database SQL\*_ ** | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Piattaforma di strumenti<br />analitici (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Database singolo/pool elastico<br />database SQL](create-database-transact-sql.md?view=azuresqldb-current)| ** _\* Istanza gestita<br />database SQL\*_** | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Piattaforma di strumenti<br />analitici (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1261,7 +1259,7 @@ Vedere [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-curren
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Database singolo/pool elastico<br />database SQL](create-database-transact-sql.md?view=azuresqldb-current)| [Istanza gestita<br />database SQL](create-database-transact-sql.md?view=azuresqldb-mi-current)| ** _\* SQL Data<br />Warehouse \*_ **| [Piattaforma di strumenti<br />analitici (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Database singolo/pool elastico<br />database SQL](create-database-transact-sql.md?view=azuresqldb-current)| [Istanza gestita<br />database SQL](create-database-transact-sql.md?view=azuresqldb-mi-current)| ** _\* SQL Data<br />Warehouse \*_**| [Piattaforma di strumenti<br />analitici (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1373,7 +1371,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Database singolo/pool elastico<br />database SQL](create-database-transact-sql.md?view=azuresqldb-current)| [Istanza gestita<br />database SQL](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|** _\*Piattaforma di strumenti<br />analitici (PDW)\*_ ** |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Database singolo/pool elastico<br />database SQL](create-database-transact-sql.md?view=azuresqldb-current)| [Istanza gestita<br />database SQL](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|** _\*Piattaforma di strumenti<br />analitici (PDW)\*_** |
 
 &nbsp;
 

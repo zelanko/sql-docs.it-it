@@ -27,12 +27,12 @@ ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fba367c376084ff4842ef165382fb5a91f410724
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: 02a84386929f2e62200cc67946be3567c6e02a51
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266002"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463592"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,13 +52,15 @@ ms.locfileid: "53266002"
 -- User-defined Data Type Syntax    
 CREATE TYPE [ schema_name. ] type_name  
 {   
-    FROM base_type   
-    [ ( precision [ , scale ] ) ]  
-    [ NULL | NOT NULL ]   
-  | EXTERNAL NAME assembly_name [ .class_name ]   
-AS TABLE ( { <column_definition> | <computed_column_definition> [ ,... n ] }
-    | [ <table_constraint> ] [ ,... n ]    
-    | [ <table_index> ] [ ,... n ] } )
+    [
+      FROM base_type   
+      [ ( precision [ , scale ] ) ]  
+      [ NULL | NOT NULL ]
+    ]
+    | EXTERNAL NAME assembly_name [ .class_name ]   
+    | AS TABLE ( { <column_definition> | <computed_column_definition> [ ,... n ] }
+      [ <table_constraint> ] [ ,... n ]    
+      [ <table_index> ] [ ,... n ] } )
  
 } [ ; ]  
   
@@ -206,7 +208,7 @@ column_name <data_type>
  **[.** *class_name*  **]**  
  **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Specifica la classe nell'assembly che implementa il tipo definito dall'utente. *class_name* deve essere un identificatore valido e deve esistere come classe nell'assembly con visibilità dell'assembly. *class_name* supporta la distinzione tra maiuscole e minuscole, indipendentemente dalle regole di confronto del database e deve corrispondere esattamente al nome di classe nell'assembly corrispondente. Il nome di classe può essere un nome completo con lo spazio dei nomi e racchiuso tra parentesi quadre (**[ ]**) se il linguaggio di programmazione usato per scrivere la classe usa il concetto degli spazi dei nomi, come nel caso, ad esempio, di C#. Se *class_name* viene omesso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presume che equivalga a *type_name*.  
+ Specifica la classe nell'assembly che implementa il tipo definito dall'utente. *class_name* deve essere un identificatore valido e deve esistere come classe nell'assembly con visibilità dell'assembly. *class_name* supporta la distinzione tra maiuscole e minuscole, indipendentemente dalle regole di confronto del database e deve corrispondere esattamente al nome di classe nell'assembly corrispondente. Il nome di classe può essere un nome completo con lo spazio dei nomi e racchiuso tra parentesi quadre ( **[ ]** ) se il linguaggio di programmazione usato per scrivere la classe usa il concetto degli spazi dei nomi, come nel caso, ad esempio, di C#. Se *class_name* viene omesso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presume che equivalga a *type_name*.  
   
  \<column_definition>  
  Definisce le colonne per un tipo di tabella definito dall'utente.  
@@ -274,7 +276,7 @@ Specifica che deve essere creato un indice per la tabella. Può trattarsi di un 
 ## <a name="memory-optimized-table-types"></a>Tipi di tabella con ottimizzazione per la memoria  
  A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], l'elaborazione dei dati in un tipo di tabella può essere eseguita nella memoria primaria e non su disco. Per altre informazioni, vedere [OLTP in memoria &#40;ottimizzazione in memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Per esempi di codice che illustrano come creare tipi di tabelle ottimizzate per la memoria, vedere [Creazione di una tabella con ottimizzazione per la memoria e di una stored procedure compilata in modo nativo](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CREATE TYPE nel database corrente e l'autorizzazione ALTER per *schema_name*. Se *schema_name* viene omesso, vengono applicate le regole predefinite per la risoluzione dei nomi per determinare lo schema dell'utente corrente. Se l'argomento *assembly_name* viene specificato, è necessario che l'utente sia il proprietario dell'assembly o che abbia l'autorizzazione REFERENCES per tale assembly.  
 
  Se una colonna nell'istruzione CREATE TABLE è definita con un tipo definito dall'utente, è necessaria l'autorizzazione REFERENCES per il tipo definito dall'utente.
@@ -293,7 +295,7 @@ CREATE TYPE SSN
 FROM varchar(11) NOT NULL ;  
 ```  
   
-### <a name="b-creating-a-user-defined-type"></a>b. Creazione di un tipo definito dall'utente  
+### <a name="b-creating-a-user-defined-type"></a>B. Creazione di un tipo definito dall'utente  
  Nell'esempio seguente viene creato un tipo `Utf8String` che fa riferimento alla classe `utf8string` nell'assembly `utf8string`. Prima di creare il tipo, l'assembly `utf8string` viene registrato nel database locale. Sostituire la parte binaria dell'istruzione CREATE ASSEMBLY con una descrizione valida.  
   
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -317,6 +319,25 @@ CREATE TYPE LocationTableType AS TABLE
     , CostRate INT );  
 GO  
 ```  
+
+### <a name="d-creating-a-user-defined-table-type-with-primary-key-and-index"></a>D. Creazione di un tipo di tabella definito dall'utente con chiave primaria e indice
+L'Nell'esempio seguente viene creato un tipo di tabella definito dall'utente che contiene tre colonne, una delle quali (`Name`) è la chiave primaria e un'altra (`Price`) dispone di un indice non cluster.  Per altre informazioni su come creare e usare parametri con valori di tabella, vedere [Usare parametri con valori di tabella &#40;motore di database&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).
+
+```sql
+CREATE TYPE InventoryItem AS TABLE
+(
+    [Name] NVARCHAR(50) NOT NULL,
+    SupplierId BIGINT NOT NULL,
+    Price DECIMAL (18, 4) NULL,
+    PRIMARY KEY (
+        Name
+    ),
+    INDEX IX_InventoryItem_Price (
+        Price
+    )
+)
+GO
+```
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   

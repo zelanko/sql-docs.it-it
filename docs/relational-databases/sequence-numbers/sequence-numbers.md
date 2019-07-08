@@ -18,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f5665e97e09d8bdaad57a328aae31113f42f15b
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: b5198b8919fb41c754d5d94ac45c895dda852e2e
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571140"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343845"
 ---
 # <a name="sequence-numbers"></a>Numeri di sequenza
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,6 +58,8 @@ ms.locfileid: "51571140"
  L'oggetto sequenza genera numeri in base alla definizione, ma non controlla come vengono utilizzati i numeri. Nei numeri di sequenza inseriti in una tabella possono essere presenti gap quando viene eseguito il rollback di una transazione, quando un oggetto sequenza è condiviso da più tabelle o quando i numeri di sequenza vengono allocati senza essere utilizzati nelle tabelle. In caso di creazione con l'opzione CACHE, un arresto imprevisto quale un'interruzione dell'alimentazione, può provocare la perdita dei numeri di sequenza nella cache.  
   
  Se sono presenti più istanze della funzione **NEXT VALUE FOR** che specificano lo stesso generatore di sequenze in un'unica istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] , tutte le istanze restituiscono lo stesso valore per una determinata riga elaborata da questa istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] . Questo comportamento è coerente con lo standard ANSI.  
+ 
+ I numeri di sequenza vengono generati esternamente all'ambito della transazione corrente. Vengono utilizzati sia in caso di commit che di rollback della transazione che utilizza il numero di sequenza. La convalida dei duplicati viene eseguita solo quando un record è completamente popolato. Ciò può provocare, in alcuni casi, l'assegnazione di uno stesso numero a più di un record durante la creazione, ma il numero viene comunque identificato come duplicato. Se si verifica questo errore e ai record successivi sono stati applicati altri valori di numerazione automatica, può verificarsi uno scarto tra i valori di numerazione automatica.
   
 ## <a name="typical-use"></a>Utilizzo tipico  
  Per creare un numero di sequenza intero che viene incrementato di 1 da -2.147.483.648 a 2.147.483.647, utilizzare l'istruzione seguente.  

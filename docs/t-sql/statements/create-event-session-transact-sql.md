@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 482d6fd7062dfb0b733e3a3d50bae82f2f754f72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49570a5dd2c5d0e45e75a51a4835df28b63aa783
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66354509"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388117"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "66354509"
   
 ```    
 CREATE EVENT SESSION event_session_name  
-ON SERVER  
+ON { SERVER | DATABASE }
 {  
     <event_definition> [ ,...n]  
     [ <event_target_definition> [ ,...n] ]  
@@ -123,7 +123,7 @@ ON SERVER
  SET { *event_customizable_attribute*= \<value> [ ,...*n*] }  
  Consente gli attributi personalizzabili per l'evento da impostare. Gli attributi personalizzabili vengono visualizzati nella vista sys.dm_xe_object_columns come column_type 'customizable' e object_name = *event_name*.  
   
- ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,**...*n*] })  
+ ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,** ...*n*] })  
  Azione da associare alla sessione dell'evento, dove:  
   
 -   *event_module_guid* è l'identificatore univoco globale (GUID) del modulo contenente l'evento.  
@@ -241,7 +241,7 @@ ON SERVER
 L'ordine di precedenza degli operatori logici prevede `NOT` come operatore con precedenza massima, seguito da `AND` e quindi da `OR`.  
   
 ## <a name="permissions"></a>Autorizzazioni  
-È necessaria l'autorizzazione `ALTER ANY EVENT SESSION`.  
+In SQL Server è richiesta l'autorizzazione `ALTER ANY EVENT SESSION`. Nel database SQL è richiesta l'autorizzazione `ALTER ANY DATABASE EVENT SESSION` nel database.
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato come creare una sessione dell'evento denominata `test_session`. In questo esempio vengono aggiunti due eventi e viene utilizzata la destinazione Analisi eventi per Windows.  
@@ -269,7 +269,6 @@ GO
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
  [sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)   
  [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)   
- [sys.dm_xe_object_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)  
-  
+ [sys.dm_xe_object_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)   
   
 

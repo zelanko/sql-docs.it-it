@@ -1,7 +1,7 @@
 ---
 title: Ruotare le chiavi di Always Encrypted con PowerShell | Microsoft Docs
 ms.custom: ''
-ms.date: 05/17/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95718cff851a9ec13cda4cfa5d192bd366d7edcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b74fd823b513114e84c5ac22c5d8f8404d352e68
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413468"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387920"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>Ruotare le chiavi di Always Encrypted con PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ Always Encrypted usa due tipi di chiavi, quindi ci sono due flussi di lavoro pri
 * **Rotazione della chiave di crittografia della colonna** : comporta la decrittografia dei dati crittografati con la chiave corrente e la nuova crittografia dei dati tramite la nuova chiave di crittografia della colonna. Dal momento che la rotazione di una chiave di crittografia della colonna richiede l'accesso alle chiavi e al database, questa può solo essere eseguita senza la separazione dei ruoli.
 * **Rotazione delle chiavi master della colonna** : comporta la decrittografia delle chiavi di crittografia della colonna che sono protette dalla chiave master corrente della colonna, la nuova crittografia tramite la nuova chiave master della colonna e l'aggiornamento dei metadati per entrambi i tipi di chiavi. La rotazione delle chiavi master della colonna può essere completata con o senza la separazione dei ruoli (quando si usa il modulo PowerShell SqlServer).
 
-
 ## <a name="column-master-key-rotation-without-role-separation"></a>Rotazione delle chiavi master della colonna senza la separazione dei ruoli
-Il metodo di rotazione di una chiave master della colonna descritta in questa sezione non supporta la separazione dei ruoli tra un amministratore della sicurezza e un amministratore di database. I passaggi seguenti combinano operazioni sulle chiavi fisiche con operazioni sui metadati della chiave, quindi questo flusso di lavoro è consigliato per le organizzazioni che usano il modello DevOps oppure se il database è ospitato nel cloud e l'obiettivo principale consiste nel limitare l'accesso ai dati sensibili agli amministratori del cloud, escludendo gli amministratori di database locale. Questo metodo non è consigliato nel caso in cui eventuali concorrenti includano amministratori di database oppure se semplicemente gli amministratori di database non devono avere accesso ai dati sensibili.  
+
+Il metodo di rotazione di una chiave master della colonna descritta in questa sezione non supporta la separazione dei ruoli tra un amministratore della sicurezza e un amministratore di database. I passaggi seguenti combinano operazioni sulle chiavi fisiche con operazioni sui metadati della chiave, quindi questo flusso di lavoro è consigliato per le organizzazioni che usano il modello DevOps oppure se il database è ospitato nel cloud e l'obiettivo principale consiste nel limitare l'accesso ai dati sensibili agli amministratori del cloud, escludendo gli amministratori di database locale. Questo metodo non è consigliato nel caso in cui eventuali concorrenti includano amministratori di database oppure se gli amministratori di database non devono avere accesso ai dati sensibili.  
 
 
 | Attività | Articolo | Accede alle chiavi di testo non crittografato o all'archivio chiavi| Accede al database
@@ -96,8 +96,7 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 Il flusso di lavoro della rotazione delle chiavi master della colonna descritto in questa sezione assicura la separazione dei ruoli tra un amministratore della sicurezza e un amministratore di database.
 
 > [!IMPORTANT]
-> Prima di eseguire passaggi in cui *Accede a chiavi di testo non crittografato/archivio chiavi*=**Sì** (passaggi che accedono a chiavi di testo non crittografato/archivio chiavi), assicurarsi che l'ambiente PowerShell venga eseguito su un computer protetto diverso da un computer che ospita il database. Per altre informazioni, vedere [Considerazioni sulla sicurezza per la gestione delle chiavi](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement).
-
+> Prima di eseguire passaggi in cui *Accede a chiavi di testo non crittografato/archivio chiavi*=**Sì** (passaggi che accedono a chiavi di testo non crittografato/archivio chiavi), assicurarsi che l'ambiente PowerShell venga eseguito su un computer protetto diverso da un computer che ospita il database. Per altre informazioni, vedere [Considerazioni sulla sicurezza per la gestione delle chiavi](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management).
 
 ### <a name="part-1-dba"></a>Parte 1: AMMINISTRATORE DI DATABASE
 
@@ -129,7 +128,6 @@ L'amministratore della sicurezza genera una nuova chiave master della colonna, r
 
 > [!NOTE]
 > Si consiglia di non eliminare definitivamente la chiave master precedente della colonna dopo la rotazione. È opportuno invece conservare la chiave master precedente della colonna nell'archivio chiavi corrente o archiviarla in un altro posto sicuro. Se si ripristina il database da un file di backup creato *prima* che la nuova chiave master della colonna sia stata configurata, è necessaria la chiave precedente per accedere ai dati.
-
 
 ### <a name="part-3-dba"></a>Parte 3: AMMINISTRATORE DI DATABASE
 
@@ -296,12 +294,11 @@ Complete-SqlColumnMasterKeyRotation -SourceColumnMasterKeyName $oldCmkName  -Inp
 Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 ```
 
-
 ## <a name="rotating-a-column-encryption-key"></a>Rotazione di una chiave di crittografia della colonna
 
-La rotazione di una chiave di crittografia della colonna comporta la decrittografia dei dati in tutte le colonne crittografate con la chiave da ruotare e la nuova crittografia dei dati che usano la nuova chiave di crittografia della colonna. Questo flusso di lavoro di rotazione richiede accesso alle chiavi e al database e quindi non può essere eseguito con la separazione dei ruoli. Si noti che la rotazione di una chiave di crittografia della colonna può richiedere molto tempo, se le tabelle contenenti le colonne crittografate con la chiave da ruotare sono di grandi dimensioni. Pertanto, l'organizzazione deve pianificare con molta attenzione una rotazione della chiave di crittografia della colonna.
+La rotazione di una chiave di crittografia della colonna comporta la decrittografia dei dati in tutte le colonne crittografate con la chiave da ruotare e la nuova crittografia dei dati che usano la nuova chiave di crittografia della colonna. Questo flusso di lavoro di rotazione richiede accesso alle chiavi e al database e quindi non può essere eseguito con la separazione dei ruoli. La rotazione di una chiave di crittografia della colonna può richiedere molto tempo, se le tabelle contenenti le colonne crittografate con la chiave da ruotare sono di grandi dimensioni. Pertanto, l'organizzazione deve pianificare con attenzione una rotazione della chiave di crittografia della colonna.
 
-È possibile ruotare una chiave di crittografia della colonna usando un approccio online o offline. Il primo metodo è probabilmente il più veloce, ma le applicazioni non possono scrivere nelle tabelle interessate. Il secondo approccio richiederà probabilmente più tempo, ma è possibile limitare l'intervallo di tempo durante il quale le tabelle interessate non sono disponibili per le applicazioni. Per altre informazioni, vedere [Configurare la crittografia della colonna tramite PowerShell](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md) e [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption/) .
+È possibile ruotare una chiave di crittografia della colonna usando un approccio online o offline. Il primo metodo è probabilmente il più veloce, ma le applicazioni non possono scrivere nelle tabelle interessate. Il secondo approccio richiederà probabilmente più tempo, ma è possibile limitare l'intervallo di tempo durante il quale le tabelle interessate non sono disponibili per le applicazioni. Per altre informazioni, vedere [Configurare la crittografia della colonna tramite PowerShell](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md) e [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption/).
 
 | Attività | Articolo | Accede alle chiavi di testo non crittografato o all'archivio chiavi| Accede al database
 |:---|:---|:---|:---
@@ -316,7 +313,7 @@ La rotazione di una chiave di crittografia della colonna comporta la decrittogra
 
 ### <a name="example---rotating-a-column-encryption-key"></a>Esempio: rotazione di una chiave di crittografia della colonna
 
-Lo script seguente illustra la rotazione di una chiave di crittografia della colonna.  Questo script presuppone che il database di destinazione contenga alcune colonne crittografate con una chiave di crittografia della colonna denominata CEK1 (da ruotare), che è protetta da una chiave master della colonna, denominata CMK1 (la chiave master della colonna non è archiviata nell'insieme di credenziali delle chiavi di Azure).
+Lo script seguente illustra la rotazione di una chiave di crittografia della colonna.  Questo script presuppone che il database di destinazione contenga alcune colonne crittografate con una chiave di crittografia della colonna denominata CEK1 (da ruotare), che è protetta da una chiave master della colonna, denominata CMK1 (la chiave master della colonna non è archiviata in Azure Key Vault).
 
 
 ```
@@ -364,7 +361,7 @@ Remove-SqlColumnEncryptionKey -Name $oldCekName -InputObject $database
   
 ## <a name="next-steps"></a>Next Steps  
     
-- [Sviluppare applicazioni che usano Always Encrypted con il provider di dati .NET Framework per SQL Server](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
+- [Sviluppare applicazioni usando Always Encrypted con il provider di dati .NET Framework per SQL Server](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
   
 ## <a name="additional-resources"></a>Risorse aggiuntive  
 

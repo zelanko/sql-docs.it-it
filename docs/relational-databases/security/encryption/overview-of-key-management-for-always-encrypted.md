@@ -1,7 +1,7 @@
 ---
 title: Panoramica della gestione delle chiavi per Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 07/20/2016
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9250b8e8ceb392973c5799d8cf473d8b94a267b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 27387a217ccd6c4a48921dae88b56d6ba1832240
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535392"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388763"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Overview of Key Management for Always Encrypted (Panoramica della gestione delle chiavi per Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ Quando si parla di chiavi e di gestione delle chiavi Always Encrypted, è import
 
 - Le***chiavi master della colonna*** proteggono le chiavi usate per crittografare le chiavi di crittografia della colonna. Le chiavi master della colonna devono essere archiviate in un archivio chiavi attendibile, ad esempio l'archivio certificati Windows, l'insieme di credenziali delle chiavi di Azure o un modulo di sicurezza hardware. Il database contiene solo i metadati relativi alle chiavi master della colonna (il tipo di archivio chiavi e la posizione). I metadati delle chiavi master della colonna sono archiviati nella vista del catalogo [sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md) .  
 
-È importante notare che i metadati delle chiavi nel sistema del database non contengono chiavi master della colonna o chiavi di crittografia della colonna sotto forma di testo non crittografato. Il database contiene solo informazioni sul tipo e sulla posizione delle chiavi master della colonna e i valori crittografati delle chiavi di crittografia della colonna. Ciò significa che le chiavi in testo non crittografato non sono mai esposte al sistema di database. Questo garantisce che i dati protetti con Always Encrypted sono al sicuro anche se il sistema di database viene compromesso. Per assicurarsi che il sistema del database non possa accedere alle chiavi in testo non crittografato, eseguire gli strumenti di gestione delle chiavi in un computer diverso da quello che ospita il database. Per i dettagli, vedere la sezione [Considerazioni sulla sicurezza per la gestione delle chiavi](#SecurityForKeyManagement) più avanti.
+È importante notare che i metadati delle chiavi nel sistema del database non contengono chiavi master della colonna o chiavi di crittografia della colonna sotto forma di testo non crittografato. Il database contiene solo informazioni sul tipo e sulla posizione delle chiavi master della colonna e i valori crittografati delle chiavi di crittografia della colonna. Ciò significa che le chiavi in testo non crittografato non sono mai esposte al sistema di database. Questo garantisce che i dati protetti con Always Encrypted sono al sicuro anche se il sistema di database viene compromesso. Per assicurarsi che il sistema del database non possa accedere alle chiavi in testo non crittografato, eseguire gli strumenti di gestione delle chiavi in un computer diverso da quello che ospita il database. Per i dettagli, vedere la sezione [Considerazioni sulla sicurezza per la gestione delle chiavi](#security-considerations-for-key-management) più avanti.
 
 Poiché il database contiene solo dati crittografati (all'interno di colonne protette con Always Encrypted) e non può accedere alle chiavi in testo non crittografato, non può decrittografare i dati. Ciò significa che una query sulle colonne Always Encrypted restituirà semplicemente valori crittografati. Le applicazioni client che devono crittografare o decrittografare i dati protetti, quindi, devono essere in grado di accedere alla chiave master della colonna e alle chiavi di crittografia della colonna corrispondenti. Per i dettagli, vedere [Always Encrypted (client development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)(Always Encrypted (sviluppo client)).
 
@@ -70,7 +70,7 @@ Se le chiavi Always Encrypted vengono gestite senza separazione dei ruoli, un un
 
 Le chiavi Always Encrypted possono essere gestite tramite [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) e [PowerShell](../../scripting/sql-server-powershell.md):
 
-- **SQL Server Management Studio (SSMS)**: mette a disposizione finestre di dialogo e procedure guidate che consentono di combinare attività legate all'accesso all'archivio delle chiavi e all'accesso al database. SSMS quindi non supporta la separazione dei ruoli ma semplifica la configurazione delle chiavi. Per altre informazioni sulla gestione delle chiavi con SSMS, vedere:
+- **SQL Server Management Studio (SSMS)** : mette a disposizione finestre di dialogo e procedure guidate che consentono di combinare attività legate all'accesso all'archivio delle chiavi e all'accesso al database. SSMS quindi non supporta la separazione dei ruoli ma semplifica la configurazione delle chiavi. Per altre informazioni sulla gestione delle chiavi con SSMS, vedere:
     - [Provisioning delle chiavi master della colonna](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncmk)
     - [Provisioning delle chiavi di crittografia della colonna](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncek)
     - [Rotazione delle chiavi master di colonna](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecmk)
@@ -82,7 +82,7 @@ Le chiavi Always Encrypted possono essere gestite tramite [SQL Server Management
     - [Ruotare le chiavi Always Encrypted tramite PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
 
-## <a name="SecurityForKeyManagement"></a> Considerazioni sulla sicurezza per la gestione delle chiavi
+## <a name="security-considerations-for-key-management"></a>Considerazioni sulla sicurezza per la gestione delle chiavi
 
 L'obiettivo principale di Always Encrypted è di garantire la sicurezza dei dati sensibili archiviati in un database anche se il sistema di database o il suo ambiente host viene compromesso. Ecco alcuni esempi di attacchi alla sicurezza in cui Always Encrypted consente di evitare perdite di dati sensibili:
 

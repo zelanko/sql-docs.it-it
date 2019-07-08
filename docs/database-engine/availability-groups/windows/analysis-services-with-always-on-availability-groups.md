@@ -12,12 +12,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 81fd6e4a9be7b27190491c6a36ef536e3c1ba669
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1d9b9d9ac9c5b1a0eeb7d40640db83ce688ae7e5
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212490"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67396521"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services con i gruppi di disponibilità AlwaysOn
 
@@ -27,24 +27,12 @@ ms.locfileid: "53212490"
   
  Le attività di elaborazione e query sono carichi di lavoro di sola lettura. È possibile migliorare le prestazioni ripartendo questi carichi di lavoro su una replica secondaria leggibile. Per questo scenario sono necessarie operazioni di configurazione aggiuntive. Utilizzare l'elenco di controllo contenuto in questo argomento per assicurarsi di eseguire tutti i passaggi.  
   
- [Prerequisiti](#bkmk_prereq)  
-  
- [Elenco di controllo: usare una replica secondaria per le operazioni di sola lettura](#bkmk_UseSecondary)  
-  
- [Creare un'origine dati di Analysis Services utilizzando un database di disponibilità AlwaysOn](#bkmk_ssasAODB)  
-  
- [Testare la configurazione](#bkmk_test)  
-  
- [Cosa accade dopo un failover](#bkmk_whathappens)  
-  
- [Writeback quando si utilizza un database di disponibilità AlwaysOn](#bkmk_writeback)  
-  
 ##  <a name="bkmk_prereq"></a> Prerequisiti  
  È necessario disporre dell'accesso di SQL Server su tutte le repliche. È necessario disporre dei privilegi di **sysadmin** per configurare i gruppi, i listener e i database di disponibilità, ma per gli utenti sono sufficienti le autorizzazioni di **db_datareader** per accedere al database da un client Analysis Services.  
   
  Utilizzare un provider di dati che supporti il protocollo TDS (Tabular Data Stream) versione 7.4 o successive, ad esempio SQL Server Native Client 11.0 o il provider di dati per SQL Server in .NET Framework 4.02.  
   
- **(Per i carichi di lavoro di sola lettura)**. Il ruolo della replica secondaria deve essere configurato per le connessioni di sola lettura, il gruppo di disponibilità deve presentare un elenco di routing e la connessione nell'origine dati di Analysis Services deve specificare il listener del gruppo di disponibilità. In questo argomento sono incluse le indicazioni necessarie per eseguire l'attivazione.  
+ **(Per i carichi di lavoro di sola lettura)** . Il ruolo della replica secondaria deve essere configurato per le connessioni di sola lettura, il gruppo di disponibilità deve presentare un elenco di routing e la connessione nell'origine dati di Analysis Services deve specificare il listener del gruppo di disponibilità. In questo argomento sono incluse le indicazioni necessarie per eseguire l'attivazione.  
   
 ##  <a name="bkmk_UseSecondary"></a> Elenco di controllo: usare una replica secondaria per le operazioni di sola lettura  
  È possibile configurare una connessione all'origine dati per l'utilizzo di una replica secondaria leggibile se la soluzione di Analysis Services include il writeback. Se si dispone di una connessione di rete veloce, la replica secondaria genera una latenza dati molto bassa, fornendo dati pressoché identici a quelli della replica primaria. Utilizzando la replica secondaria per le operazioni di Analysis Services, è possibile ridurre le contese di lettura-scrittura sulla replica primaria e utilizzare in modo migliore le repliche secondarie nel gruppo di disponibilità.  

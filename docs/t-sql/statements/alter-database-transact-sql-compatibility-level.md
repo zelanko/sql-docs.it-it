@@ -25,18 +25,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: baa6f443215d5d1f221462e1d20d4bf1498ca899
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ccc7241c6d549985df4a838ebcc8cbb2120d3eb0
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65626693"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469199"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Livello di compatibilità ALTER DATABASE (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Imposta aspetti specifici del comportamento del database in modo che risultino compatibili con la versione specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre opzioni di ALTER DATABASE, vedere [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
+Imposta i comportamenti di [!INCLUDE[tsql](../../includes/tsql-md.md)] e dell'elaborazione delle query in modo che risultino compatibili con la versione specificata del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Per altre opzioni di ALTER DATABASE, vedere [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).  
 
 Per altre informazioni sulle convenzioni di sintassi, vedere [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
@@ -49,16 +49,18 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 
 ## <a name="arguments"></a>Argomenti
 
-*database_name* è il nome del database da modificare.
+*database_name*      
+Nome del database da modificare.
 
-COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 } è la versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con cui il database deve essere reso compatibile. È possibile configurare i valori di livello di compatibilità seguenti (non tutte le versioni supportano tutti i livelli di compatibilità elencati):
+COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }       
+Versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con cui il database deve risultare compatibile. È possibile configurare i valori di livello di compatibilità seguenti (non tutte le versioni supportano tutti i livelli di compatibilità elencati):
 
-|Prodotto|Versione del motore di database|Designazione di livello di compatibilità|Valori del livello di compatibilità supportato|
+|Prodotto|Versione del motore di database|Designazione del livello di compatibilità predefinito|Valori del livello di compatibilità supportato|
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|
 |[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|14|140|140, 130, 120, 110, 100|
-|Database singolo/pool elastico di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|130|150, 140, 130, 120, 110, 100|
-|Istanza gestita di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|130|150, 140, 130, 120, 110, 100|
+|Database singolo/pool elastico di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|140|150, 140, 130, 120, 110, 100|
+|Istanza gestita di [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|140|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130, 120, 110, 100|
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120, 110, 100|
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|11|110|110, 100, 90|
@@ -66,28 +68,6 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 } è la versio
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|10|100|100, 90, 80|
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|9|90|90, 80|
 |SQL Server 2000|8|80|80|
-
-> [!NOTE]
-> A partire da **gennaio 2018**, nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], il livello di compatibilità predefinito è 140 per i nuovi database. Per i database esistenti, il livello di compatibilità del database non viene aggiornato. I clienti possono decidere l'approccio da adottare in base alle proprie esigenze. È tuttavia consigliabile pianificare il passaggio al livello di compatibilità più recente per trarre vantaggio dai miglioramenti apportati.
->
-> Se si vuole sfruttare in generale il livello di compatibilità 140 del database, ma per qualche motivo si preferisce il modello di **stima della cardinalità** di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], che corrisponde al livello di compatibilità 110 del database, vedere [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) e in particolare la parola chiave `LEGACY_CARDINALITY_ESTIMATION = ON`.
->
-> Per informazioni dettagliate su come valutare le variazioni delle prestazioni delle query più importanti tra i due livelli di compatibilità [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] vedere [Prestazioni delle query migliorate con il livello di compatibilità 130 in Database SQL di Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/). Si noti che questo articolo si riferisce al livello di compatibilità 130 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma la stessa metodologia si applica ai passaggi al livello 140 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
-
-Eseguire la query seguente per determinare la versione del [!INCLUDE[ssDE](../../includes/ssde-md.md)] a cui si è connessi.
-
-```sql
-SELECT SERVERPROPERTY('ProductVersion');
-```
-
-> [!NOTE]
-> Non tutte le funzionalità che variano in base al livello di compatibilità sono supportate nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
-
-Per determinare il livello di compatibilità corrente, eseguire una query sulla colonna **compatibility_level** di [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
-
-```sql
-SELECT name, compatibility_level FROM sys.databases;
-```
 
 ## <a name="remarks"></a>Remarks
 
@@ -106,6 +86,26 @@ Per visualizzare il livello di compatibilità corrente di un database, eseguire 
 > [!NOTE]
 > Un [database di distribuzione](../../relational-databases/replication/distribution-database.md) creato in una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aggiornato a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM o Service Pack 1 ha il livello di compatibilità 90 che non è supportato per altri database. Ciò non determina alcun impatto sulle funzionalità di replica. L'aggiornamento a Service Pack e versioni più recenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determinerà l'innalzamento del livello di compatibilità del database di distribuzione in modo da corrispondere a quello del database **master**.
 
+A partire da **gennaio 2018**, nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], il livello di compatibilità predefinito è 140 per i nuovi database. Per i database esistenti, il livello di compatibilità del database non viene aggiornato. I clienti possono decidere l'approccio da adottare in base alle proprie esigenze. Microsoft consiglia di pianificare l'aggiornamento al livello di compatibilità più recente per trarre vantaggio dai miglioramenti apportati all'ottimizzazione query.
+Per sfruttare in generale il livello di compatibilità 140 del database, ma al tempo stesso usare il modello di [**stima della cardinalità**](../../relational-databases/performance/cardinality-estimation-sql-server.md) di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], che corrisponde al livello di compatibilità 110 del database, vedere [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) e in particolare la parola chiave `LEGACY_CARDINALITY_ESTIMATION = ON`.
+
+Per informazioni dettagliate su come valutare le variazioni delle prestazioni delle query più importanti tra i due livelli di compatibilità [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] vedere [Prestazioni delle query migliorate con il livello di compatibilità 130 in Database SQL di Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/). Si noti che questo articolo si riferisce al livello di compatibilità 130 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma la stessa metodologia si applica ai passaggi al livello 140 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+
+Per determinare la versione del [!INCLUDE[ssDE](../../includes/ssde-md.md)] a cui si è connessi, eseguire la query seguente.
+
+```sql
+SELECT SERVERPROPERTY('ProductVersion');
+```
+
+> [!NOTE]
+> Non tutte le funzionalità che variano in base al livello di compatibilità sono supportate nel [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+
+Per determinare il livello di compatibilità corrente, eseguire una query sulla colonna **compatibility_level** di [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
+
+```sql
+SELECT name, compatibility_level FROM sys.databases;
+```
+
 ## <a name="compatibility-levels-and-sql-server-upgrades"></a>Livelli di compatibilità e aggiornamenti di SQL Server
 
 Il livello di compatibilità del database è un utile strumento nella modernizzazione dei database poiché consente di aggiornare il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e di preservare lo stato funzionale delle applicazioni che si connettono mantenendo lo stesso livello di compatibilità del database precedente all'aggiornamento.
@@ -120,12 +120,14 @@ Per i nuovi progetti di sviluppo o quando un'applicazione esistente richiede l'u
 >
 > Per altre informazioni sulle differenze tra i livelli di compatibilità, vedere le sezioni appropriate più avanti in questo articolo.
 
-Per aggiornare il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] alla versione più recente, mantenendo il livello di compatibilità del database che esisteva prima dell'aggiornamento e il relativo stato di supporto, è consigliabile eseguire la convalida della superficie di attacco funzionale statica del codice dell'applicazione nel database usando lo strumento [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) (DMA). L'assenza di errori nell'output dello strumento DMA, relativi a funzionalità mancanti o non compatibili, protegge l'applicazione da regressioni funzionali nella nuova versione di destinazione. Per altre informazioni sullo strumento DMA, vedere [qui](https://blogs.msdn.microsoft.com/datamigration/dma).
+Per aggiornare il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] alla versione più recente, mantenendo il livello di compatibilità del database che esisteva prima dell'aggiornamento e il relativo stato di supporto, è consigliabile eseguire la convalida della superficie di attacco funzionale statica del codice dell'applicazione nel database (oggetti di programmabilità come stored procedure, funzioni, trigger e altri) e nell'applicazione (mediante una traccia del carico di lavoro che acquisisce il codice dinamico inviato dall'applicazione) usando lo strumento [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) (DMA). L'assenza di errori nell'output dello strumento DMA, relativi a funzionalità mancanti o non compatibili, protegge l'applicazione da regressioni funzionali nella nuova versione di destinazione. Per altre informazioni sullo strumento DMA, vedere [qui](https://blogs.msdn.microsoft.com/datamigration/dma).
 
 > [!NOTE]
-> DMA supporta il livello di compatibilità del database 100 e superiore. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] come versione di origine è escluso.
+> DMA supporta il livello di compatibilità del database 100 e superiore. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] come versione di origine è escluso.   
+
 > [!IMPORTANT]
-> Microsoft consiglia di eseguire una quantità minima di test per convalidare l'esito positivo di un aggiornamento mantenendo il livello di compatibilità del database precedente. Determinare questa quantità minima di test in base all'applicazione e allo scenario specifici.
+> Microsoft consiglia di eseguire una quantità minima di test per convalidare l'esito positivo di un aggiornamento mantenendo il livello di compatibilità del database precedente. Determinare questa quantità minima di test in base all'applicazione e allo scenario specifici.   
+
 > [!NOTE]
 > Microsoft offre protezione della forma del piano di query quando:
 >
@@ -136,20 +138,23 @@ Per aggiornare il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 
 
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>Utilizzo del livello di compatibilità per garantire la compatibilità con le versioni precedenti
 
-L'impostazione del *livello di compatibilità del database* influisce sui comportamenti solo del database specificato, non dell'intero server. Il livello di compatibilità del database offre solo una compatibilità parziale con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+L'impostazione del *livello di compatibilità del database* influisce sui comportamenti solo del database specificato, non dell'intero server. Il livello di compatibilità del database offre la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in relazione ai comportamenti di [!INCLUDE[tsql](../../includes/tsql-md.md)] e di ottimizzazione query. 
 
 > [!TIP]
 > Poiché il *livello di compatibilità del database* è un'impostazione a livello di database, un'applicazione in esecuzione su un [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] più recente con un livello di compatibilità del database meno recente può comunque sfruttare i miglioramenti a livello di server senza alcun bisogno di modifiche all'applicazione.
 >
 > Questi includono miglioramenti del monitoraggio e della risoluzione dei problemi, con le nuove [Viste a gestione dinamica (DMV) di sistema](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) e gli [Eventi estesi](../../relational-databases/extended-events/extended-events.md). È stata inoltre migliorata la scalabilità, ad esempio con l'[Architettura soft-NUMA automatica](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa).
 
-A partire dalla modalità di compatibilità 130, tutte le nuove funzionalità che influiscono sul piano di query sono state aggiunte intenzionalmente solo al nuovo livello di compatibilità. In questo modo si riduce al minimo il rischio che si corre durante gli aggiornamenti di ridurre il livello delle prestazioni per modifiche apportate al piano di query. Dal punto di vista dell'applicazione, l'obiettivo dovrebbe essere sempre l'aggiornamento al livello di compatibilità più recente per ereditare alcune delle nuove funzionalità e sfruttare i miglioramenti in termini di prestazioni offerti da Query Optimizer, il tutto eseguito in modo controllato. Per una migrazione più sicura in cui sia possibile risolvere i problemi correlati alle differenze tra le versioni usare il livello di compatibilità inferiore nei comportamenti controllati dall'impostazione del livello di compatibilità pertinente.
+A partire dalla modalità di compatibilità 130, tutte le nuove funzionalità che influiscono sul piano di query sono state aggiunte intenzionalmente solo al nuovo livello di compatibilità. In questo modo si riduce al minimo il rischio che si corre durante gli aggiornamenti di ridurre il livello delle prestazioni per modifiche apportate al piano di query potenzialmente introdotte dai nuovi comportamenti di ottimizzazione query.      
+Dal punto di vista dell'applicazione, l'obiettivo dovrebbe essere sempre l'aggiornamento al livello di compatibilità più recente per ereditare alcune delle nuove funzionalità come l'[elaborazione di query intelligenti](../../relational-databases/performance/intelligent-query-processing.md), il tutto eseguito in modo controllato. Per una migrazione più sicura in cui sia possibile risolvere i problemi correlati alle differenze tra le versioni usare il livello di compatibilità inferiore nei comportamenti controllati dall'impostazione del livello di compatibilità pertinente.
 Per altri dettagli, incluso il flusso di lavoro consigliato per aggiornare il livello di compatibilità del database, vedere [Procedure consigliate per aggiornare il livello di compatibilità del database](#best-practices-for-upgrading-database-compatibility-level) più avanti in questo articolo.
 
 > [!IMPORTANT]
 > Le funzionalità che non sono più supportate in una determinata versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sono protette dal livello di compatibilità. Ciò si riferisce alle funzionalità rimosse dal [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
-> Ad esempio, l'hint `FASTFIRSTROW` non è più supportato in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ed è stato sostituito dall'hint `OPTION (FAST n )`. Se il livello di compatibilità del database viene impostato su 110, l'hint che non è più supportato non viene ripristinato.
-> Per altre informazioni sulle funzionalità non più disponibili, vedere [Funzionalità del motore di database non più usate in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Funzionalità del motore di database non più usate in SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Funzionalità del motore di database non più usate in SQL Server 2012](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md) e [Funzionalità del motore di database non più usate in SQL Server 2008](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).
+> Ad esempio, l'hint `FASTFIRSTROW` non è più supportato in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ed è stato sostituito dall'hint `OPTION (FAST n )`. Se il livello di compatibilità del database viene impostato su 110, l'hint che non è più supportato non viene ripristinato.  
+>  
+> Per altre informazioni sulle funzionalità non più disponibili, vedere [Funzionalità del motore di database non più usate in SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Funzionalità del motore di database non più usate in SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014) e [Funzionalità del motore di database non più usate in SQL Server 2012](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali).    
+
 > [!IMPORTANT]
 > Le modifiche di rilievo introdotte in una determinata versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **potrebbero** non essere protette dal livello di compatibilità. Ciò si riferisce alle modifiche funzionali tra le versioni del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Il comportamento di [!INCLUDE[tsql](../../includes/tsql-md.md)] è generalmente protetto dal livello di compatibilità. Gli oggetti di sistema modificati o rimossi **non** sono tuttavia protetti dal livello di compatibilità.
 >
@@ -158,13 +163,13 @@ Per altri dettagli, incluso il flusso di lavoro consigliato per aggiornare il li
 > Di seguito sono elencati esempi di modifiche di rilievo **non protette** dal livello di compatibilità:
 >
 > - Nomi di colonna modificati in oggetti di sistema. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] la colonna *single_pages_kb* in sys.dm_os_sys_info è rinominata in *pages_kb*. Indipendentemente dal livello di compatibilità, la query `SELECT single_pages_kb FROM sys.dm_os_sys_info` genererà l'errore 207 (nome di colonna non valido).
-> - Oggetti di sistema rimossi. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] la store procedure `sp_dboption` è rimossa. Indipendentemente dal livello di compatibilità, l'istruzione `EXEC sp_dboption 'AdventureWorks2016CTP3', 'autoshrink', 'FALSE';` genererà l'errore 2812 (Impossibile trovare la stored procedure 'sp_dboption').
+> - Oggetti di sistema rimossi. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] la store procedure `sp_dboption` è rimossa. Indipendentemente dal livello di compatibilità, l'istruzione `EXEC sp_dboption 'AdventureWorks2016', 'autoshrink', 'FALSE';` genererà l'errore 2812 (Impossibile trovare la stored procedure 'sp_dboption').
 >
-> Per altre informazioni sulle modifiche di rilievo, vedere [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2014](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2012](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md) e [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2008](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).
+> Per alter informazioni sulle modifiche di rilievo, vedere [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014), [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2012](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali) e [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2008](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#KJKatmai).
 
 ## <a name="best-practices-for-upgrading-database-compatibility-level"></a>Procedure consigliate per aggiornare il livello di compatibilità del database
 
-Per il flusso di lavoro consigliato per l'aggiornamento del livello di compatibilità, vedere [Modificare la modalità di compatibilità del database e usare il Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md).
+Per il flusso di lavoro consigliato per l'aggiornamento del livello di compatibilità, vedere [Modificare la modalità di compatibilità del database e usare il Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). Inoltre, per un'esperienza assistita con l'aggiornamento del livello di compatibilità del database, vedere [Aggiornamento di database mediante l'Assistente ottimizzazione query](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
 
 ## <a name="compatibility-levels-and-stored-procedures"></a>Livelli di compatibilità e stored procedure
 
@@ -178,13 +183,13 @@ Il livello di compatibilità del database 150 è attualmente in anteprima pubbli
 
 |Livello di compatibilità 140 o inferiore|Livello di compatibilità 150|
 |--------------------------------------------------|-----------------------------------------|
-|I carichi di lavoro analitici e per data warehouse relazionali potrebbero non essere in grado di sfruttare gli indici columnstore a causa dell'overhead OLTP, della mancanza di supporto dei fornitori o di altre limitazioni.  Senza gli indici columnstore, questi carichi di lavoro non possono trarre vantaggio dalla modalità di esecuzione batch.|La modalità di esecuzione batch è ora disponibile per i carichi di lavoro analitici senza richiedere indici columnstore. Per altre informazioni, vedere [Modalità batch per rowstore](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore).|
-|Le query in modalità riga per le quali sono necessarie concessioni di memoria di dimensioni insufficienti che causano distribuzioni su disco possono essere problematiche su esecuzioni consecutive.|Le query in modalità riga per le quali sono necessarie concessioni di memoria di dimensioni insufficienti che causano distribuzioni su disco possono evidenziare miglioramenti in termini di prestazioni su esecuzioni consecutive. Per altre informazioni, vedere [Feedback delle concessioni di memoria in modalità riga](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback).|
-|Le query in modalità riga per le quali sono necessarie concessioni di memoria di dimensioni eccessive che causano problemi di concorrenza possono essere problematiche su esecuzioni consecutive.|Le query in modalità riga per le quali sono necessarie concessioni di memoria di dimensioni eccessive che causano problemi di concorrenza possono evidenziare miglioramenti in termini di concorrenza su esecuzioni consecutive. Per altre informazioni, vedere [Feedback delle concessioni di memoria in modalità riga](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback).|
-|Le query che fanno riferimento a funzioni definite dall'utente scalari T-SQL useranno la chiamata iterativa, senza calcolo dei costi e con esecuzione seriale imposta. |Le funzioni definite dall'utente scalari T-SQL vengono trasformate in espressioni relazionali equivalenti che vengono rese inline nella query chiamante, ottenendo spesso significativi miglioramenti delle prestazioni. Per altre informazioni, vedere [Inlining di funzioni definite dall'utente scalari T-SQL](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining).|
-|Le variabili di tabella usano un'ipotesi fissa per la stima della cardinalità.  Se il numero effettivo di righe è molto superiore al valore ipotizzato, possono esserci effetti negativi sulle prestazioni delle operazioni downstream. |I nuovi piani useranno la cardinalità effettiva della variabile tabella rilevata nella prima compilazione invece di una stima fissa. Per altre informazioni, vedere [Compilazione posticipata delle variabili di tabella](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation).|
+|I carichi di lavoro analitici e per data warehouse relazionali potrebbero non essere in grado di sfruttare gli indici columnstore a causa dell'overhead OLTP, della mancanza di supporto dei fornitori o di altre limitazioni.  Senza gli indici columnstore, questi carichi di lavoro non possono trarre vantaggio dalla modalità di esecuzione batch.|La modalità di esecuzione batch è ora disponibile per i carichi di lavoro analitici senza richiedere indici columnstore. Per altre informazioni, vedere [Modalità batch per rowstore](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore).|
+|Le query in modalità riga per le quali sono necessarie concessioni di memoria di dimensioni insufficienti che causano distribuzioni su disco possono essere problematiche su esecuzioni consecutive.|Le query in modalità riga per le quali sono necessarie concessioni di memoria di dimensioni insufficienti che causano distribuzioni su disco possono evidenziare miglioramenti in termini di prestazioni su esecuzioni consecutive. Per altre informazioni, vedere [Feedback delle concessioni di memoria in modalità riga](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback).|
+|Le query in modalità riga per le quali sono necessarie concessioni di memoria di dimensioni eccessive che causano problemi di concorrenza possono essere problematiche su esecuzioni consecutive.|Le query in modalità riga per le quali sono necessarie concessioni di memoria di dimensioni eccessive che causano problemi di concorrenza possono evidenziare miglioramenti in termini di concorrenza su esecuzioni consecutive. Per altre informazioni, vedere [Feedback delle concessioni di memoria in modalità riga](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback).|
+|Le query che fanno riferimento a funzioni definite dall'utente scalari T-SQL useranno la chiamata iterativa, senza calcolo dei costi e con esecuzione seriale imposta. |Le funzioni definite dall'utente scalari T-SQL vengono trasformate in espressioni relazionali equivalenti che vengono rese inline nella query chiamante, ottenendo spesso significativi miglioramenti delle prestazioni. Per altre informazioni, vedere [Inlining di funzioni definite dall'utente scalari T-SQL](../../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).|
+|Le variabili di tabella usano un'ipotesi fissa per la stima della cardinalità.  Se il numero effettivo di righe è molto superiore al valore ipotizzato, possono esserci effetti negativi sulle prestazioni delle operazioni downstream. |I nuovi piani useranno la cardinalità effettiva della variabile tabella rilevata nella prima compilazione invece di una stima fissa. Per altre informazioni, vedere [Compilazione posticipata delle variabili di tabella](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation).|
 
-Per altre informazioni sulle funzionalità di elaborazione delle query abilitate nel livello di compatibilità del database 150, vedere [Novità di SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md) ed [Elaborazione di query intelligenti nei database SQL](https://docs.microsoft.com/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017).
+Per altre informazioni sulle funzionalità di elaborazione delle query abilitate nel livello di compatibilità del database 150, vedere [Novità di SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md) ed [Elaborazione di query intelligenti nei database SQL](../../relational-databases/performance/intelligent-query-processing.md).
 
 ## <a name="differences-between-compatibility-level-130-and-level-140"></a>Differenze tra il livello di compatibilità 130 e 140
 

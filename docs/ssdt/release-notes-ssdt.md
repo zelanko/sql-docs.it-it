@@ -12,20 +12,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 80836cb5ab67f221ff3f9965d1980bcbc9c8378d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef3cd72348cc93eee37716007c7975731b2da333
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101907"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400087"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Note sulla versione per SQL Server Data Tools (SSDT)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Queste note sulla versione si riferiscono a [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) per Visual Studio (VS).
-
-Per i post dettagliati sulle novità e le modifiche, vedere il [blog del team di SSDT](https://blogs.msdn.microsoft.com/ssdt/).
 
 <!--
 Hello.  We have switched to a newer standardized format for Release Notes articles.
@@ -72,6 +70,7 @@ _SSDT per Visual Studio 2017._
 | :---------- | :------ |
 | L'attività di esecuzione pacchetti SSIS non supporta il debug quando ExecuteOutOfProcess è impostato su True. | Questo problema è limitato al debug. Il salvataggio, la distribuzione e l'esecuzione tramite DTExec.exe o il catalogo SSIS funzionano normalmente. |
 | Le versioni di SSDT per Visual Studio 2017 superiori alla versione 15.8 non supportano la progettazione di pacchetti contenenti un'origine o una destinazione Teradata. | Usare SSDT per Visual Studio 2017 (15.8). |
+| Impossibile creare o modificare le origini dati nel modello di distribuzione del pacchetto. | La Creazione guidata origine dati non viene aperta. |
 | L'origine Power Query può non supportare OData v4 se SSIS e SSAS sono installati nella stessa istanza di Visual Studio. | &nbsp; |
 | L'origine Power Query può non supportare l'uso di ODBC per la connessione a Oracle se SSIS e SSAS sono installati nella stessa istanza di Visual Studio. | &nbsp; |
 | L'origine Power Query non è localizzata. | &nbsp; |
@@ -543,7 +542,7 @@ _SSDT per Visual Studio 2015._
 - Risolto un problema per cui in alcuni casi le modifiche apportate alla formattazione degli indicatori KPI non venivano mantenute.
 - Risolto un problema con l'interfaccia utente di Power Query che mostrava lo stato selezionato del menu errato per la visualizzazione o meno della barra della formula.
 - Risolto un problema con le origini dati di Power Query nei progetti tabulari con livello di compatibilità 1400 di Analysis Services che poteva causare l'arresto anomalo di Visual Studio quando si selezionava il menu Modifica origine dati da Esplora modelli tabulari.
-- Risolto un problema saltuario per cui il caricamento di un modello tabulare 1400 poteva restituire il messaggio di errore *Impossibile caricare il file o l'assembly 'Microsoft.ProBI.MashupLibrary'*.
+- Risolto un problema saltuario per cui il caricamento di un modello tabulare 1400 poteva restituire il messaggio di errore *Impossibile caricare il file o l'assembly 'Microsoft.ProBI.MashupLibrary'* .
 
 **Progetti RS**
 - Le preferenze utente per lo stato di selezione delle impostazioni relative a Righello e Parametro in RS vengono memorizzate correttamente nelle sessioni.

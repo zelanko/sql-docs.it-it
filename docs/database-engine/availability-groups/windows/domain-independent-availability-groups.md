@@ -13,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: ad844d0b08ba0323f9930970a3056e592e44c25e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19e64c2fa9f1006e07f6da72d8fdfc146c9faf8b
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66765717"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388111"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>Creare un gruppo di disponibilità indipendente dal dominio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,8 +71,10 @@ Per un cluster di gruppi di lavoro di un gruppo di disponibilità indipendente d
 10. Verrà richiesto di riavviare. Se non si vuole riavviare immediatamente, fare clic su Riavvia in seguito, in caso contrario fare clic su Riavvia.
 11. Dopo aver riavviato il server, assicurarsi che il suffisso DNS comune sia configurato esaminando di nuovo Sistema.
 
-
 ![Configurazione del suffisso DNS riuscita][4]
+
+  > [!NOTE]
+  > Se si usano più subnet e si dispone di un DNS statico, sarà necessario predisporre un processo per aggiornare il record DNS associato al listener prima di eseguire un failover. In caso contrario, il nome di rete non verrà portato online.
 
 ## <a name="create-a-domain-independent-availability-group"></a>Creare un gruppo di disponibilità indipendente dal dominio
 

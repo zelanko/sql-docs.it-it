@@ -1,7 +1,7 @@
 ---
 title: Vincoli di arco del grafo | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,31 +13,22 @@ helpviewer_keywords:
 - edge constraints [Azure SQL Database]
 - graph edge constraints
 - SQL Graph
-ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86544dee5262a1d04c1ff1d8e59f8ddac5e9b5ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
+ms.openlocfilehash: aa73858e6df29c814821ee9e24923cbfc0fbd4a2
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64774649"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343889"
 ---
 # <a name="edge-constraints"></a>Vincoli di arco
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-  I vincoli di arco possono essere usati per imporre l'integrità dei dati e semantica specifica per le tabelle archi nel database a grafo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-  
-Questo articolo include le sezioni seguenti.  
-  
-[Vincoli di arco](../../relational-databases/tables/graph-edge-constraints.md#Connection)  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[Vincoli di arco](../../relational-databases/tables/graph-edge-constraints.md#Connection)  
-  
-[Attività correlate](../../relational-databases/tables/graph-edge-constraints.md#Tasks)  
-  
+I vincoli di arco possono essere usati per imporre l'integrità dei dati e semantica specifica per le tabelle archi nel database a grafo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
 ##  <a name="Connection"></a> Vincoli di arco
  Nella prima versione delle funzionalità relative ai grafi, le tabelle archi non imponevano alcun vincolo per le estremità dell'arco. Questo significa che un arco in un database a grafo poteva connettere qualsiasi nodo a qualsiasi altro nodo, indipendentemente dal tipo. 
 
@@ -66,3 +57,5 @@ Questo articolo include le sezioni seguenti.
 |Viene descritto come eliminare un vincolo di arco.|[Eliminare vincoli di arco](../../relational-databases/tables/delete-edge-constraint.md)|  
 |Viene descritto come modificare un vincolo di arco.|[Modificare vincoli di arco](../../relational-databases/tables/modify-edge-constraint.md)|  
 |Viene descritto come visualizzare le proprietà dei vincoli di arco.|[Visualizzare le proprietà di un vincolo di arco](../../relational-databases/tables/view-edge-constraint-properties.md)|  
+| Panoramica della tecnologia Graph in SQL Server | [Elaborazione di grafi con SQL Server e il database SQL di Azure](../graphs/sql-graph-overview.md) |
+| &nbsp; | &nbsp; |

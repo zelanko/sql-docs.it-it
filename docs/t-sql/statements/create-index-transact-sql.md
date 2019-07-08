@@ -1,7 +1,7 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 825fedb3bfc3262abf4e432075e03f6e0a370eac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d5e7b1be70692f29b81f06725adfa326ba77d65
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65626698"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388355"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -134,6 +134,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | MAX_DURATION = <time> [MINUTES]
   | ALLOW_ROW_LOCKS = { ON | OFF }
   | ALLOW_PAGE_LOCKS = { ON | OFF }
+  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
   | MAXDOP = max_degree_of_parallelism
   | DATA_COMPRESSION = { NONE | ROW | PAGE}
      [ ON PARTITIONS ( { <partition_number_expression> | <range> }
@@ -476,6 +477,11 @@ ON: i blocchi a livello di pagina sono consentiti durante l'accesso all'indice. 
 
 OFF: i blocchi a livello di pagina non vengono usati.
 
+
+OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** } **si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e versioni successive.
+
+Specifica se eseguire o meno l'ottimizzazione per la contesa di inserimento dell'ultima pagina. Il valore predefinito è OFF. Per altre informazioni, vedere le sezione [Chiavi sequenziali](#sequential-keys).
+
 MAXDOP = _max_degree_of_parallelism_
 **si applica da** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -732,6 +738,13 @@ Le funzionalità seguenti sono disabilitate per le operazioni di creazione dell'
 Se ALLOW_ROW_LOCKS = ON e ALLOW_PAGE_LOCK = ON, sono consentiti blocchi di riga, pagina e tabella per l'accesso all'indice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] sceglie il blocco appropriato e può eseguire un'escalation del blocco da un blocco di riga o di pagina a un blocco di tabella.
 
 Se ALLOW_ROW_LOCKS = OFF e ALLOW_PAGE_LOCK = OFF, sono consentiti solo blocchi a livello di tabella per l'accesso all'indice.
+
+## <a name="sequential-keys"></a>Chiavi sequenziali
+**Si applica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e versioni successive.
+
+La contesa di inserimento dell'ultima pagina è un problema di prestazioni comune che si verifica quando un numero elevato di thread simultanei tenta di inserire righe in un indice con una chiave sequenziale. Un indice viene considerato sequenziale quando la colonna chiave iniziale contiene valori che sono sempre crescenti o decrescenti, ad esempio una colonna Identity o una data che per impostazione predefinita è la data/ora corrente. Poiché le chiavi da inserire sono sequenziali, tutte le nuove righe verranno inserite alla fine della struttura dell'indice (in altre parole, nella stessa pagina). Questo comporta una contesa per la pagina in memoria, che si manifesta come diversi thread in attesa di PAGELATCH_EX per la pagina in questione.
+
+L'attivazione dell'opzione di indice OPTIMIZE_FOR_SEQUENTIAL_KEY abilita un'ottimizzazione all'interno del motore di database che contribuisce a migliorare la velocità effettiva per gli inserimenti nell'indice con un elevato grado di concorrenza. Questa opzione è destinata agli indici che dispongono di una chiave sequenziale e che pertanto sono soggetti a contesa di inserimento dell'ultima pagina, ma può essere utile anche per gli indici contenenti aree sensibili in altre aree della struttura dell'indice albero B.
 
 ## <a name="viewing-index-information"></a>Visualizzazione delle informazioni degli indici
 

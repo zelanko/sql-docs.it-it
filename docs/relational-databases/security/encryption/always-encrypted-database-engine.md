@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ac5ce3e74713da1b1560d4fd0e1cb86bb4593be
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.openlocfilehash: 0fefd22e080ac0ed4e0646dde1805ce5923b8e3a
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185027"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419163"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (Motore di database)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -181,11 +181,11 @@ Le clausole seguenti non possono essere usate per le colonne crittografate:
 Le funzionalità seguenti non sono supportate nelle colonne crittografate:
 
 - Replica transazionale o di tipo merge
-- Query distribuite (server collegati)
+- Query distribuite (server collegati, OPENROWSET(T-SQL), OPENDATASOURCE(T-SQL))
 
 Requisiti degli strumenti
 
-- SQL Server Management Studio può decrittografare i risultati recuperati da colonne crittografate se la connessione viene effettuata con *column encryption setting=enabled* nella scheda **Proprietà aggiuntive** della finestra di dialogo **Connetti al server** . È necessario almeno SQL Server Management Studio versione 17 per l'inserimento, l'aggiornamento o l'applicazione di un filtro alle colonne crittografate.
+- SQL Server Management Studio può decrittografare i risultati recuperati da colonne crittografate se la connessione viene effettuata con *column encryption setting=enabled* nella scheda **Proprietà aggiuntive** della finestra di dialogo **Connetti al server** . È necessario almeno SQL Server Management Studio versione 17 per l'inserimento, l'aggiornamento o l'applicazione di un filtro alle colonne crittografate. Per le stringhe di connessione da usare nelle applicazioni client, vedere [Always Encrypted (sviluppo client)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 
 - Le connessioni crittografate da `sqlcmd` richiedono almeno la versione 13.1, disponibile nell' [Area download](https://go.microsoft.com/fwlink/?LinkID=825643).
 

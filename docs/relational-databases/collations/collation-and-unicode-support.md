@@ -1,7 +1,7 @@
 ---
 title: Regole di confronto e supporto Unicode | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -22,18 +22,20 @@ helpviewer_keywords:
 - locales [SQL Server]
 - code pages [SQL Server]
 - SQL Server collations
+- UTF-8
+- UTF-16
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a754607e4eb3af99216e5a11e9af50730279040e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bcff15423fb1ab3f1f05347bddba6eab09fae713
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836381"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419192"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -117,57 +119,54 @@ Le impostazioni locali rappresentano un set di informazioni associate a un paese
     
 ###  <a name="Code_Page_Defn"></a> Code Page    
  Una tabella codici è un set ordinato di caratteri di uno script specifico nel quale a ogni carattere viene associato un indice numerico o un valore punto di codice. Per tabella codici di Windows si intende in genere un *set di caratteri* o *charset*. Queste tabelle vengono usate per supportare i set di caratteri e i layout di tastiera impiegati per le diverse impostazioni locali di Windows.     
+ 
 ###  <a name="Sort_Order_Defn"></a> Sort Order    
  L'ordinamento specifica il modo in cui vengono ordinati i valori dei dati. e influisce sui risultati del confronto dei dati stessi. I dati vengono ordinati tramite regole di confronto e possono essere ottimizzati tramite indici.    
     
 ##  <a name="Unicode_Defn"></a> Supporto Unicode    
-Unicode è uno standard per il mapping dei punti di codice ai caratteri. Dato che è progettato per supportare tutti i caratteri di tutte le lingue del mondo, non è necessario che set di caratteri diversi vengano gestiti da tabelle codici diverse. Se vengono archiviati dati di tipo carattere che riflettono più lingue in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), usare tipi di dati Unicode (UTF-16) (**nchar**, **nvarchar** e **ntext**) anziché tipi di dati non Unicode (**char**, **varchar** e **text**). In alternativa, a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], se si usano regole di confronto abilitate per UTF-8 (\_UTF8), i tipi di dati in precedenza non Unicode (**char** e **varchar**) diventano tipi di dati Unicode (UTF-8). 
-
-> [!NOTE]
-> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] non modifica il comportamento dei tipi di dati Unicode (UTF-16) esistenti in precedenza (**nchar**, **nvarchar** e **ntext**).   
-    
-Ai tipi di dati non Unicode sono associate numerose limitazioni, perché nei computer non Unicode è disponibile una sola tabella codici. Utilizzando tipi di dati Unicode è possibile ottenere prestazioni migliori, in quanto è necessario un minor numero di conversioni tramite la tabella codici. Le regole di confronto Unicode devono essere selezionate singolarmente a livello di database, di colonna o di espressione perché non sono supportate a livello di server.    
-    
+Unicode è uno standard per il mapping dei punti di codice ai caratteri. Dato che è progettato per supportare tutti i caratteri di tutte le lingue del mondo, non è necessario che set di caratteri diversi vengano gestiti da tabelle codici diverse. 
+   
 Le tabelle codici usate da un client vengono determinate in base alle impostazioni del sistema operativo. Per impostare le tabelle codici del client nel sistema operativo Windows usare l'opzione **Impostazioni internazionali** del Pannello di controllo.    
-    
+
+Ai tipi di dati non Unicode sono associate numerose limitazioni, perché nei computer non Unicode è disponibile una sola tabella codici. Utilizzando tipi di dati Unicode è possibile ottenere prestazioni migliori, in quanto è necessario un minor numero di conversioni tramite la tabella codici. Le regole di confronto Unicode devono essere selezionate singolarmente a livello di database, di colonna o di espressione perché non sono supportate a livello di server.    
+   
 Quando si spostano dati da un server a un client, le regole di confronto del server potrebbero non essere riconosciute dai driver client meno recenti. Questa situazione può verificarsi quando si spostano dati da un server Unicode a un client non Unicode. La migliore opzione potrebbe consistere nell'aggiornare il sistema operativo client affinché vengano aggiornate le regole di confronto del sistema sottostanti. Se nel client è installato il software client del database, è possibile applicare un aggiornamento dei servizi a tale software.    
     
-È anche possibile tentare di usare regole di confronto diverse per i dati nel server. Scegliere regole di confronto con mapping a una tabella codici nel client.    
-    
-Per usare le regole di confronto UTF-16 disponibili in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e migliorare la ricerca e l'ordinamento di alcuni caratteri Unicode (solo regole di confronto Windows), è possibile selezionare una delle regole di confronto dei caratteri supplementari (\_SC) o una delle regole di confronto versione 140.    
+> [!TIP]
+> È anche possibile tentare di usare regole di confronto diverse per i dati nel server. Scegliere regole di confronto con mapping a una tabella codici nel client.    
+
+Se vengono archiviati dati di tipo carattere che riflettono più lingue in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), usare tipi di dati Unicode (**nchar**, **nvarchar** e **ntext**) anziché tipi di dati non Unicode (**char**, **varchar** e **text**). 
+
+> [!NOTE]
+> Per i tipi di dati Unicode, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] può rappresentare un massimo di 65.535 caratteri con UCS-2 o l'intera gamma Unicode (1.114.111 caratteri), se vengono usati caratteri supplementari. Per altre informazioni sull'abilitazione dei caratteri supplementari, vedere [Caratteri supplementari](#Supplementary_Characters).
+
+In alternativa, a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], se si usano regole di confronto abilitate per UTF-8 (\_UTF8), i tipi di dati in precedenza non Unicode (**char** e **varchar**) diventano tipi di dati Unicode (UTF-8). [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] non modifica il comportamento dei tipi di dati Unicode (UTF-16) esistenti in precedenza (**nchar**, **nvarchar** e **ntext**). Per altre informazioni, vedere [Differenze nell'archiviazione tra UTF-8 e UTF-16](#storage_differences).
+       
+Per usare le regole di confronto UTF-16 disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e migliorare la ricerca e l'ordinamento di alcuni caratteri Unicode (solo regole di confronto Windows), è possibile selezionare una delle regole di confronto dei caratteri supplementari (\_SC) o una delle regole di confronto versione 140.    
  
 Per usare le regole di confronto UTF-8 disponibili in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] e migliorare la ricerca e l'ordinamento di alcuni caratteri Unicode (solo regole di confronto Windows), è necessario selezionare regole di confronto abilitate per la codifica UTF-8 (\_UTF8).
  
 -   Il flag UTF8 può essere applicato a:    
-   
     -   Regole di confronto versione 90 
-    
         > [!NOTE]
         > Solo quando esistono già regole di confronto che riconoscono i caratteri supplementari (\_SC) o con distinzione tra selettori di variazione (\_VSS) in questa versione.
-    
     -   Regole di confronto versione 100    
-    
     -   Regole di confronto versione 140   
-    
     -   Regole di confronto BIN2<sup>1</sup>
     
 -   Il flag UTF8 non può essere applicato a:    
-    
     -   Regole di confronto versione 90 che non supportano caratteri supplementari (\_SC) o con distinzione tra selettori di variazione (\_VSS)    
-    
     -   Regole di confronto binarie BIN o BIN2<sup>2</sup>    
-    
     -   Regole di confronto di SQL \*  
     
-<sup>1</sup> A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3     
-<sup>2</sup> Fino a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3
+<sup>1</sup> A partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 le regole di confronto UTF8_BIN2 sono state sostituite da Latin1_General_100_BIN2_UTF8.     
+<sup>2</sup> Fino a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3. 
     
 Per valutare i problemi relativi all'utilizzo di tipi di dati Unicode o non Unicode, è necessario eseguire il test dello scenario per verificare le differenze di prestazioni nell'ambiente specifico. È consigliabile standardizzare le regole di confronto usate nei sistemi presenti nell'ambito dell'organizzazione, quindi distribuire server e client Unicode laddove possibile.    
     
 In molti casi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interagisce con altri server o client e l'organizzazione può usare più standard di accesso ai dati tra applicazioni e istanze del server. I client[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono principalmente di due tipi:    
     
 -   **Client Unicode** che usano OLE DB e ODBC (Open Database Connectivity) versione 3.7 o successive.    
-    
 -   **Client non Unicode** che usano DB-Library e ODBC versione 3.6 o precedenti.    
     
 Nella tabella seguente sono riportate informazioni sull'utilizzo di dati multilingue con diverse combinazioni di server Unicode e non Unicode.    
@@ -180,38 +179,34 @@ Nella tabella seguente sono riportate informazioni sull'utilizzo di dati multili
 |Non Unicode|Non Unicode|Si tratta di uno scenario che presenta numerose limitazioni per i dati multilingue. È possibile usare solo una tabella codici.|    
     
 ##  <a name="Supplementary_Characters"></a> Caratteri supplementari    
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce tipi di dati, come **nchar** e **nvarchar**, per archiviare dati Unicode (UTF-16) in tutte le regole di confronto e tipi di dati, come **char** e **varchar** per archiviare dati Unicode (UTF-8) in regole di confronto abilitate per UTF-8 (\_UTF8). Questi tipi di dati codificano il testo in un formato denominato rispettivamente *UTF-16* e *UTF-8*. L'Unicode Consortium assegna a ogni carattere un punto di codice univoco, che corrisponde a un valore nell'intervallo compreso tra 0x0000 e 0x10FFFF. I caratteri usati più di frequente sono associati a valori di punti di codice compresi in una parola a 8 bit o a 16 bit in memoria e su disco, mentre i caratteri con valori di punti di codice maggiori di 0xFFFF richiedono da due a quattro parole a 8 bit consecutive (UTF-8) oppure due parole a 16 bit consecutive (UTF-16). Questi caratteri sono denominati *caratteri supplementari* e le parole a 8 bit o a 16 bit consecutive aggiuntive sono denominate *coppie di surrogati*.    
-    
-A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] è possibile usare una nuova famiglia di regole di confronto per caratteri supplementari (\_SC) con i tipi di dati **nchar**, **nvarchar** e **sql_variant**. Ad esempio: `Latin1_General_100_CI_AS_SC`o, se si utilizzano regole di confronto giapponesi, `Japanese_Bushu_Kakusu_100_CI_AS_SC`. 
- 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] estende il supporto dei caratteri supplementari ai tipi di dati **char** e **varchar** con le nuove regole di confronto abilitate per UTF-8 (\_UTF8).   
+L'Unicode Consortium assegna a ogni carattere un punto di codice univoco, che corrisponde a un valore nell'intervallo compreso tra 000000 e 10FFFF. I caratteri usati più di frequente hanno valori dei punti di codice nell'intervallo tra 000000 e 00FFFF (65.535 caratteri), compresi in una parola a 8 bit o a 16 bit in memoria e su disco. Questo intervallo viene in genere designato come Basic Multilingual Plane (BMP). 
 
-A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tutte le nuove regole di confronto supportano automaticamente i caratteri supplementari.
+L'Unicode Consortium ha tuttavia stabilito 16 "piani" aggiuntivi di caratteri, ognuno con le stesse dimensioni di BMP. Questa definizione offre a Unicode la possibilità di rappresentare 1.114.112 caratteri (ovvero, 2<sup>16</sup> * 17 caratteri) nell'intervallo di punti di codice da 000000 a 10FFFF. I caratteri con valori di punti di codice maggiori di 00FFFF richiedono da due a quattro parole a 8 bit consecutive (UTF-8) o due parole a 16 bit consecutive (UTF-16). Questi caratteri posizionati oltre BMP sono denominati *caratteri supplementari* e le parole a 8 bit o a 16 bit consecutive aggiuntive sono denominate *coppie di surrogati*. Per altre informazioni su caratteri supplementari, surrogati e coppie di surrogati, vedere lo [standard Unicode](http://www.unicode.org/standard/standard.html).    
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce tipi di dati come **nchar** e **nvarchar** per archiviare i dati Unicode nell'intervallo BMP (da 000000 a 00FFFF), che viene codificato da [!INCLUDE[ssde_md](../../includes/ssde_md.md)] tramite UCS-2. 
+
+In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] è stata introdotta una nuova famiglia di regole di confronto per caratteri supplementari (\_SC) con i tipi di dati **nchar**, **nvarchar** e **sql_variant** per rappresentare l'intera gamma di caratteri Unicode (da 000000 a 10FFFF). Ad esempio: `Latin1_General_100_CI_AS_SC`o, se si utilizzano regole di confronto giapponesi, `Japanese_Bushu_Kakusu_100_CI_AS_SC`. 
+ 
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] estende il supporto dei caratteri supplementari ai tipi di dati **char** e **varchar** con le nuove regole di confronto abilitate per UTF-8 ([\_UTF8](#utf8)). Sono inoltre in grado di rappresentare l'intera gamma di caratteri Unicode.   
+
+> [!NOTE]
+> A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], tutte le nuove regole di confronto **\_140** supportano automaticamente i caratteri supplementari.
 
 Se si utilizzano caratteri supplementari:    
     
 -   I caratteri supplementari possono essere usati in operazioni di ordinamento e confronto solo con le versioni delle regole di confronto 90 o successive.    
-    
 -   Tutte le regole di confronto versione 100 supportano l'ordinamento linguistico con caratteri supplementari.    
-    
 -   L'utilizzo dei caratteri supplementari in metadati, ad esempio in nomi di oggetti di database, non è supportato.    
-    
 -   I database che usano le regole di confronto con caratteri supplementari (\_SC) non possono essere abilitati per la replica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo perché alcune delle tabelle di sistema e delle stored procedure create per la replica usano il tipo di dati legacy **ntext**, che non supporta i caratteri supplementari.  
-    
+
 -   Il flag SC può essere applicato a:    
-    
     -   Regole di confronto versione 90    
-    
     -   Regole di confronto versione 100    
     
 -   Il flag SC non può essere applicato a:    
-    
     -   Regole di confronto di Windows senza versione, versione 80    
-    
     -   Regole di confronto binarie BIN o BIN2    
-    
     -   Regole di confronto di SQL \*    
-    
     -   Regole di confronto versione 140. Non devono necessariamente avere il flag SC perché supportano già i caratteri supplementari    
     
 Nella tabella seguente viene confrontato il comportamento di alcune funzioni per i valori stringa e di alcuni operatori di stringa quando vengono usati caratteri supplementari con e senza regole di confronto che supportano caratteri complementari:    
@@ -224,11 +219,11 @@ Nella tabella seguente viene confrontato il comportamento di alcune funzioni per
 |[UNICODE](../../t-sql/functions/unicode-transact-sql.md)|Restituisce un punto di codice UTF-16 nell'intervallo compreso tra 0 e 0x10FFFF.|Restituisce un punto di codice UCS-2 nell'intervallo compreso tra 0 e 0xFFFF.|    
 |[Carattere jolly per corrispondenze di singoli caratteri](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)<br /><br /> [Carattere jolly per la mancata corrispondenza dei caratteri](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)|Sono supportati caratteri supplementari per tutte le operazioni con caratteri jolly.|Non sono supportati caratteri supplementari per queste operazioni con caratteri jolly. Sono supportati altri operatori jolly.|    
     
-##  <a name="GB18030"></a> Supporto GB18030    
- GB18030 è uno standard separato usato nella Repubblica popolare Cinese per la codifica dei caratteri cinesi. In GB18030, i caratteri possono essere di 1, 2 o 4 byte di lunghezza. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre supporto per i caratteri con codifica GB18030 consentendone il riconoscimento al momento dell'ingresso nel server da un'applicazione client e la conversione e archiviazione come caratteri Unicode a livello nativo. Dopo essere stati archiviati nel server, tali caratteri vengono trattati come caratteri Unicode in tutte le operazioni successive. È possibile usare una qualsiasi regola di confronto cinese, preferibilmente la versione 100 più recente. Tutte le regole di confronto di livello _100 supportano l'ordinamento linguistico con caratteri GB18030. Se nei dati sono inclusi caratteri supplementari (coppie surrogate), è possibile usare le regole di confronto SC in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per migliorare la ricerca e l'ordinamento.    
+## <a name="GB18030"></a> Supporto GB18030    
+GB18030 è uno standard separato usato nella Repubblica popolare Cinese per la codifica dei caratteri cinesi. In GB18030, i caratteri possono essere di 1, 2 o 4 byte di lunghezza. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre supporto per i caratteri con codifica GB18030 consentendone il riconoscimento al momento dell'ingresso nel server da un'applicazione client e la conversione e archiviazione come caratteri Unicode a livello nativo. Dopo essere stati archiviati nel server, tali caratteri vengono trattati come caratteri Unicode in tutte le operazioni successive. È possibile usare una qualsiasi regola di confronto cinese, preferibilmente la versione 100 più recente. Tutte le regole di confronto di livello _100 supportano l'ordinamento linguistico con caratteri GB18030. Se nei dati sono inclusi caratteri supplementari (coppie surrogate), è possibile usare le regole di confronto SC in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] per migliorare la ricerca e l'ordinamento.    
     
-##  <a name="Complex_script"></a> Supporto di lingue con alfabeti non latini    
- In[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere supportata l'immissione, l'archiviazione, la modifica e la visualizzazione di lingue con alfabeti non latini. Le lingue con alfabeti non latini includono i siti seguenti:    
+## <a name="Complex_script"></a> Supporto di lingue con alfabeti non latini    
+In[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere supportata l'immissione, l'archiviazione, la modifica e la visualizzazione di lingue con alfabeti non latini. Le lingue con alfabeti non latini includono i siti seguenti:    
     
 -   Lingue che presentano una combinazione di testo scritto sia da destra verso sinistra sia da sinistra verso destra, ad esempio una combinazione di testo in arabo e inglese.    
 -   Lingue i cui caratteri assumono una forma diversa a seconda della posizione oppure combinati con altri caratteri, ad esempio arabi, indiani e thai.    
@@ -236,7 +231,7 @@ Nella tabella seguente viene confrontato il comportamento di alcune funzioni per
     
 Le applicazioni di database che interagiscono con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devono usare controlli che supportano le lingue con alfabeti non latini. I form standard di Windows creati in codice gestito sono abilitati per le lingue con alfabeti non latini.    
 
-##  <a name="Japanese_Collations"></a> aggiunte in  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+## <a name="Japanese_Collations"></a> aggiunte in  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
  
 A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] sono supportate nuove famiglie di regole di confronto per il giapponese, con permutazioni di varie opzioni (\_CS, \_AS, \_KS, \_WS, \_VSS). 
 
@@ -247,19 +242,44 @@ SELECT Name, Description FROM fn_helpcollations()
 WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 ``` 
 
-Tutte le nuove regole di confronto supportano in modo predefinito i caratteri supplementari. Per nessuna nuova regola di confronto esiste o è necessario il flag SC.
+Tutte le nuove regole di confronto supportano in modo predefinito i caratteri supplementari. Per nessuna nuova regola di confronto **\_140** esiste o è necessario il flag SC.
 
-Queste regole di confronto sono supportate negli indici del motore di database, nelle tabelle ottimizzate per la memoria, negli indici columnstore e nei moduli compilati in modo nativo.
+Queste regole di confronto sono supportate negli indici del [!INCLUDE[ssde_md](../../includes/ssde_md.md)], nelle tabelle ottimizzate per la memoria, negli indici columnstore e nei moduli compilati in modo nativo.
 
 <a name="ctp23"></a>
 
-## <a name="utf-8-support"></a>Supporto UTF-8
+## <a name="utf8"></a> Supporto di UTF-8
+In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] viene introdotto il supporto completo per la codifica dei caratteri di grande diffusione UTF-8 come codifica di importazione o esportazione e come regola di confronto di livello database o colonna per i dati di tipo stringa. La codifica UTF-8 è consentita nei tipi di dati **char** and **varchar** ed è abilitata quando si crea o si modifica la regola di confronto di un oggetto convertendola in una regola di confronto con il suffisso `UTF8`. Ad esempio da `LATIN1_GENERAL_100_CI_AS_SC` a `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. 
 
-In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] viene introdotto il supporto completo per la codifica dei caratteri di grande diffusione UTF-8 come codifica di importazione o esportazione o come regola di confronto di livello database o colonna per i dati di testo. La codifica UTF-8 è consentita nei tipi di dati `CHAR` e `VARCHAR` ed è abilitata quando si crea o si modifica la regola di confronto di un oggetto convertendola in una regola di confronto con il suffisso `UTF8`. 
+UTF-8 è disponibile solo per le regole di confronto di Windows che supportano i caratteri supplementari. Questa funzionalità è stata introdotta in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. **nchar** e **nvarchar** consentono solo la codifica UCS-2 o UTF-16 e rimangono invariati.
 
-Ad esempio da `LATIN1_GENERAL_100_CI_AS_SC` a `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 è disponibile solo per le regole di confronto di Windows che supportano i caratteri supplementari. Questa funzionalità è stata introdotta in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. `NCHAR` e `NVARCHAR` consentono solo la codifica UTF-16 e rimangono invariati.
+### <a name="storage_differences"></a> Differenze nell'archiviazione tra UTF-8 e UTF-16
+L'Unicode Consortium assegna a ogni carattere un punto di codice univoco, che corrisponde a un valore nell'intervallo compreso tra 000000 e 10FFFF. Con [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], sono disponibili entrambe le codifiche UTF-8 e UTF-16 per rappresentare l'intera gamma:    
+-  Con la codifica UTF-8, i caratteri nell'intervallo ASCII (000000 - 00007F) richiedono 1 byte, i punti di codice da 000080 a 0007FF richiedono 2 byte, i punti di codice da 000800 a 00FFFF richiedono 3 byte e i punti di codice da 0010000 a 0010FFFF richiedono 4 byte. 
+-  Con la codifica UTF-16, i punti di codice da 000000 a 00FFFF richiedono 2 byte e i punti di codice da 0010000 a 0010FFFF richiedono 4 byte. 
 
-A seconda del set di caratteri in uso, questa funzionalità può offrire importanti risparmi di risorse di archiviazione. Se ad esempio si cambia il tipo di dati di una colonna esistente con stringhe ASCII (Latin) da `NCHAR(10)` in `CHAR(10)` usando una regola di confronto con supporto UTF-8, i requisiti di archiviazione vengono ridotti del 50%. Questa riduzione deriva dal fatto che `NCHAR(10)` richiede 20 byte per l'archiviazione, mentre `CHAR(10)` richiede solo 10 byte per la stessa stringa Unicode.
+Nella tabella seguente sono illustrati i byte per l'archiviazione della codifica per ogni intervallo di caratteri e tipo di codifica:
+
+|Intervallo di codici (esadecimale)|Intervallo di codici (decimale)|Byte per l'archiviazione <sup>1</sup> con UTF-8|Byte per l'archiviazione <sup>1</sup> con UTF-16|    
+|---------------------------------|---------------------------------|--------------------------|-----------------------------|   
+|000000 - 00007F|0 - 127|1|2|
+|000080 - 00009F<br />0000A0 - 0003FF<br />000400 - 0007FF|128 - 159<br />160 - 1.023<br />1\.024 - 2.047|2|2|
+|000800 - 003FFF<br />004000 - 00FFFF|2\.048 - 16.383<br />16.384 - 65.535|3|2|
+|010000 - 03FFFF <sup>2</sup><br /><br />040000 - 10FFFF <sup>2</sup>|65.536 - 262.143 <sup>2</sup><br /><br />262.144 - 1.114.111 <sup>2</sup>|4|4|
+
+<sup>1</sup> I byte per l'archiviazione si riferiscono alla lunghezza in byte con codifica, non alle dimensioni di archiviazione su disco del rispettivo tipo di dati. Per altre informazioni sulle dimensioni di archiviazione su disco, vedere [nchar e nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) e [char e varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md).
+
+<sup>2</sup> Intervallo di punti di codice per [caratteri supplementari](#Supplementary_Characters).
+
+Come illustrato in precedenza, a seconda del set di caratteri in uso, la scelta della codifica Unicode e del tipo di dati appropriati può offrire importanti risparmi di risorse di archiviazione. Se ad esempio si cambia il tipo di dati di una colonna esistente con caratteri ASCII da `NCHAR(10)` in `CHAR(10)` usando una regola di confronto con supporto UTF-8, i requisiti di archiviazione vengono ridotti del 50%. Questa riduzione deriva dal fatto che `NCHAR(10)` richiede 20 byte per l'archiviazione, mentre `CHAR(10)` richiede solo 10 byte per la rappresentazione della stessa stringa Unicode.
+
+Prima di scegliere se usare la codifica UTF-8 o UTF-16 per un database o una colonna, considerare la distribuzione dei dati di tipo stringa che verranno archiviati:
+-  Se sono principalmente nell'intervallo ASCII (ad esempio, per la lingua inglese), ogni carattere richiede 1 byte con UTF-8 e 2 byte con UTF-16. L'uso di UTF-8 offre vantaggi in termini di archiviazione. 
+-  Oltre l'intervallo ASCII, quasi tutti gli script basati sull'alfabeto latino, nonché greco, cirillico, copto, armeno, ebraico, arabo, siriaco, tāna e n'ko, richiederanno 2 byte per carattere sia in UTF-8 che in UTF-16. In questi casi non vi sono significative differenze a livello di archiviazione per i tipi di dati simili (ad esempio, tra l'uso di **char** o **nchar**).
+-  Se si tratta principalmente di script dell'Asia orientale (ad esempio, coreano, cinese e giapponese), ogni carattere richiede 3 byte con UTF-8 e 2 byte con UTF-16. L'uso di UTF-16 offre vantaggi in termini di archiviazione. 
+-  I caratteri nell'intervallo da 010000 a 10FFFF richiedono 4 byte sia in UTF-8 che in UTF-16. In questi casi non vi sono differenze di archiviazione per i tipi di dati simili (ad esempio, tra l'uso di **char** o **nchar**).
+
+Per altre considerazioni, vedere [Scrittura di istruzioni Transact-SQL internazionali](../../relational-databases/collations/write-international-transact-sql-statements.md).
 
 ##  <a name="Related_Tasks"></a> Attività correlate    
     
@@ -277,7 +297,8 @@ A seconda del set di caratteri in uso, questa funzionalità può offrire importa
 [Usare il formato carattere Unicode per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
 [Scrittura di istruzioni Transact-SQL internazionali](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 [SQL Server Best Practices Migration to Unicode](https://go.microsoft.com/fwlink/?LinkId=113890) (Procedure consigliate di SQL Server: migrazione a Unicode) - non più aggiornato   
-[Sito Web Unicode Consortium](https://go.microsoft.com/fwlink/?LinkId=48619)    
+[Sito Web Unicode Consortium](https://go.microsoft.com/fwlink/?LinkId=48619)   
+[Standard Unicode](http://www.unicode.org/standard/standard.html)      
     
 ## <a name="see-also"></a>Vedere anche    
 [Regole di confronto dei database indipendenti](../../relational-databases/databases/contained-database-collations.md)     

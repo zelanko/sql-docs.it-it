@@ -21,18 +21,37 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 31bfc7ef9761ac40b56af9b733a29fbb12bc586e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e366d686bc71d9b4ee391013fedb25e93494c45
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822951"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413150"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - Flag di traccia (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 I flag di traccia vengono usati per impostare funzionalità del server specifiche o per modificare un particolare comportamento. Il flag di traccia 3226 è ad esempio un flag di traccia di avvio di uso comune che elimina i messaggi di backup riuscito nel log degli errori. I flag di traccia vengono spesso usati per diagnosticare i problemi di prestazioni o eseguire il debug di stored procedure o sistemi complessi, ma possono anche essere consigliati dal supporto tecnico Microsoft per risolvere un comportamento che ha conseguenze negative su uno specifico carico di lavoro.  Tutti i flag di traccia descritti e quelli consigliati dal supporto tecnico Microsoft sono completamente supportati in un ambiente di produzione se usati come indicato.  Si noti che i flag di traccia in questo elenco possono essere accompagnati da considerazioni aggiuntive sul loro uso specifico, pertanto è consigliabile esaminare con attenzione tutti i consigli specificati qui e/o dal personale del supporto tecnico. Come con qualsiasi modifica alla configurazione in SQL Server, è sempre consigliabile testare accuratamente il flag in un ambiente non di produzione prima della distribuzione.
+
+## <a name="remarks"></a>Remarks  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili tre tipi di flag di traccia: di query, di sessione e globali. I flag di traccia di query sono attivi per il contesto di una query specifica. I flag di traccia di sessione sono attivi per una connessione e sono visibili solo per tale connessione. I flag di traccia globali vengono impostati a livello del server e sono visibili per tutte le connessioni nel server. Alcuni flag possono essere abilitati solo in ambito globale, mentre altri possono essere abilitati in ambito globale o sessione.  
+  
+ Sono applicabili le regole seguenti:  
+-   Un flag di traccia globale deve essere abilitato a livello globale. In caso contrario, non ha alcun effetto. È consigliabile abilitare i flag di traccia globali all'avvio usando l'opzione della riga di comando **-T**. In questo modo il flag di traccia rimane attivo dopo il riavvio del server. Riavviare SQL Server per rendere effettivo il flag di traccia. 
+-   Un flag di traccia con ambito globale, sessione o query può essere abilitato con l'ambito appropriato. Un flag di traccia abilitato a livello di sessione non influisce mai sulle altre sessioni e l'effetto viene perso alla disconnessione dello SPID che ha aperto la sessione.  
+  
+I flag di traccia possono essere attivati o disattivati in uno dei modi seguenti:
+-   Tramite i comandi DBCC TRACEON e DBCC TRACEOFF.  
+     Ad esempio, per abilitare il flag di traccia 2528 a livello globale, usare [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) con l'argomento -1: `DBCC TRACEON (2528, -1)`. L'effetto dell'attivazione di un flag di traccia globale con DBCC TRACEON viene perso al riavvio del server. Per disabilitare un flag di traccia globale, usare [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md) con l'argomento -1.  
+-   Tramite l'opzione di avvio **-T** se si vuole che il flag di traccia venga impostato durante l'avvio.  
+     L'opzione di avvio **-T** attiva un flag di traccia a livello globale. Non è possibile abilitare un flag di traccia a livello di sessione tramite un'opzione di avvio. In questo modo il flag di traccia rimane attivo dopo il riavvio del server. Per altre informazioni sulle opzioni di avvio, vedere [Opzioni di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md).
+-   A livello di query, usando l'[hint per la query](https://support.microsoft.com/kb/2801413) QUERYTRACEON. L'opzione QUERYTRACEON è supportata solo per i flag di traccia di Query Optimizer descritti nella tabella precedente.
+  
+Per verificare i flag di traccia attivi, usare il comando `DBCC TRACESTATUS`.
+
+## <a name="trace-flags"></a>Flag di traccia
+
   
 Nella tabella seguente vengono elencati e descritti i flag di traccia disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
@@ -156,21 +175,7 @@ Nella tabella seguente vengono elencati e descritti i flag di traccia disponibil
 |**11023**|Disabilita l'uso dell'ultima frequenza di campionamento persistente per tutti gli aggiornamenti delle statistiche successivi, in cui non è specificata in modo esplicito una frequenza di campionamento come parte dell'istruzione [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md). Per altre informazioni, vedere questo [articolo del supporto tecnico Microsoft](https://support.microsoft.com/kb/4039284).<br /><br />**Ambito**: globale o sessione|    
 |**11024**|Attiva l'aggiornamento automatico delle statistiche quando il totale delle modifiche di qualsiasi partizione supera la [soglia](../../relational-databases/statistics/statistics.md#AutoUpdateStats) locale. Per altre informazioni, vedere questo [articolo del supporto tecnico Microsoft](https://support.microsoft.com/kb/4041811).<br /><br />**Nota:** questo flag di traccia si applica a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e alle build successive.<br /><br />**Ambito**: globale o sessione| 
   
-## <a name="remarks"></a>Remarks  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili tre tipi di flag di traccia: di query, di sessione e globali. I flag di traccia di query sono attivi per il contesto di una query specifica. I flag di traccia di sessione sono attivi per una connessione e sono visibili solo per tale connessione. I flag di traccia globali vengono impostati a livello del server e sono visibili per tutte le connessioni nel server. Alcuni flag possono essere abilitati solo in ambito globale, mentre altri possono essere abilitati in ambito globale o sessione.  
-  
- Sono applicabili le regole seguenti:  
--   Un flag di traccia globale deve essere abilitato a livello globale. In caso contrario, non ha alcun effetto. È consigliabile abilitare i flag di traccia globali all'avvio usando l'opzione della riga di comando **-T**. In questo modo il flag di traccia rimane attivo dopo il riavvio del server.  
--   Un flag di traccia con ambito globale, sessione o query può essere abilitato con l'ambito appropriato. Un flag di traccia abilitato a livello di sessione non influisce mai sulle altre sessioni e l'effetto viene perso alla disconnessione dello SPID che ha aperto la sessione.  
-  
-I flag di traccia possono essere attivati o disattivati in uno dei modi seguenti:
--   Tramite i comandi DBCC TRACEON e DBCC TRACEOFF.  
-     Ad esempio, per abilitare il flag di traccia 2528 a livello globale, usare [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) con l'argomento -1: `DBCC TRACEON (2528, -1)`. L'effetto dell'attivazione di un flag di traccia globale con DBCC TRACEON viene perso al riavvio del server. Per disabilitare un flag di traccia globale, usare [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md) con l'argomento -1.  
--   Tramite l'opzione di avvio **-T** se si vuole che il flag di traccia venga impostato durante l'avvio.  
-     L'opzione di avvio **-T** attiva un flag di traccia a livello globale. Non è possibile abilitare un flag di traccia a livello di sessione tramite un'opzione di avvio. In questo modo il flag di traccia rimane attivo dopo il riavvio del server. Per altre informazioni sulle opzioni di avvio, vedere [Opzioni di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md).
--   A livello di query, usando l'[hint per la query](https://support.microsoft.com/kb/2801413) QUERYTRACEON. L'opzione QUERYTRACEON è supportata solo per i flag di traccia di Query Optimizer descritti nella tabella precedente.
-  
-Per verificare i flag di traccia attivi, usare il comando `DBCC TRACESTATUS`.
+
   
 ## <a name="examples"></a>Esempi  
  L'esempio seguente imposta il flag di traccia 3205 per tutte le sessioni a livello di server usando DBCC TRACEON.  

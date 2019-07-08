@@ -1,7 +1,7 @@
 ---
 title: Configurare le chiavi di Always Encrypted con PowerShell | Microsoft Docs
 ms.custom: ''
-ms.date: 05/17/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 889df15caaba289e5f0fed43727d9358bab3a2e1
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 5e8f0eb293390e88f0c7d8f982c0525b5a62f871
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327472"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387995"
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>Configurare le chiavi di Always Encrypted con PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ Per informazioni su come usare il modulo PowerShell SqlServer per Always Encrypt
 
 ## <a name="KeyProvisionWithoutRoles"></a> Provisioning delle chiavi senza separazione dei ruoli
 
-Il metodo di provisioning delle chiavi descritto in questa sezione non supporta la separazione dei ruoli tra amministratori della sicurezza e amministratori di database. Alcuni dei passaggi che seguono includono operazioni sulle chiavi fisiche e operazioni sui metadati delle chiavi. Per questa ragione, questo metodo di provisioning delle chiavi è consigliato per le organizzazioni che usano il modello DevOps oppure se il database è ospitato nel cloud e l'obiettivo principale consiste nel limitare l'accesso ai dati sensibili agli amministratori del cloud escludendo gli amministratori di database locali. Questo metodo non è consigliato nel caso in cui eventuali concorrenti includano amministratori di database oppure se semplicemente gli amministratori di database non devono avere accesso ai dati sensibili.
+Il metodo di provisioning delle chiavi descritto in questa sezione non supporta la separazione dei ruoli tra amministratori della sicurezza e amministratori di database. Alcuni dei passaggi che seguono includono operazioni sulle chiavi fisiche e operazioni sui metadati delle chiavi. Per questa ragione, questo metodo di provisioning delle chiavi è consigliato per le organizzazioni che usano il modello DevOps oppure se il database è ospitato nel cloud e l'obiettivo principale consiste nel limitare l'accesso ai dati sensibili agli amministratori del cloud escludendo gli amministratori di database locali. Questo metodo non è consigliato nel caso in cui eventuali concorrenti includano amministratori di database oppure se gli amministratori di database non devono avere accesso ai dati sensibili.
 
 Prima di eseguire passaggi che implicano l'accesso a chiavi di testo non crittografato o all'archivio chiavi (indicati nella colonna **Accede a chiavi di testo non crittografato/archivio chiavi** della tabella che segue), assicurarsi che l'ambiente PowerShell venga eseguito in un computer protetto diverso dal computer che ospita il database. Per altre informazioni, vedere ***Considerazioni sulla sicurezza per la gestione delle chiavi***.
 
@@ -186,7 +186,7 @@ Prima di eseguire i passaggi che prevedono l'accesso alle chiavi di testo non cr
 1.  l'ambiente di PowerShell venga eseguito in un computer protetto diverso da un computer che ospita il database.
 2.  gli amministratori di database dell'organizzazione non abbiano accesso al computer (cosa che vanificherebbe lo scopo della separazione dei ruoli).
 
-Per altre informazioni, vedere [Considerazioni sulla sicurezza per la gestione delle chiavi](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement).
+Per altre informazioni, vedere [Considerazioni sulla sicurezza per la gestione delle chiavi](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management).
 
 
 Attività  |Articolo  |Accede alle chiavi in testo non crittografato o all'archivio delle chiavi  |Accede al database  
