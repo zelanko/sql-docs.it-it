@@ -12,12 +12,12 @@ ms.assetid: 63d6d6d7-3850-4061-8e96-b1fa665e3180
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4ecb1732e3717a2145d8902077e638ec0affc11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e28f71fb3f9ec1168a7f89281b188c5fe44eb0f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746809"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585949"
 ---
 # <a name="mssqlserver8645"></a>MSSQLSERVER_8645
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Nell'elenco seguente viene illustrata la procedura generale per la risoluzione d
   
 1.  Verificare se altre applicazioni o servizi utilizzano la memoria nel server specificato. Riconfigurare le applicazioni o i servizi meno critici per utilizzare una quantità di memoria inferiore.  
   
-2.  Iniziare a raccogliere i dati dei contatori di monitoraggio delle prestazioni per **SQL Server: Gestione buffer** e **SQL Server: Gestione memoria**.  
+2.  Iniziare a raccogliere i dati dei contatori di Performance Monitor per **SQL Server: Gestione buffer**, **SQL Server: Memory Manager**.  
   
 3.  Verificare i seguenti parametri di configurazione della memoria di SQL Server:  
   
@@ -58,7 +58,9 @@ Nell'elenco seguente viene illustrata la procedura generale per la risoluzione d
 4.  Osservare l'output di DBCC MEMORYSTATUS e il modo in cui viene modificato quando vengono visualizzati questi messaggi di errore.  
   
 5.  Verificare il carico di lavoro (ad esempio, numero di sessioni simultanee, query attualmente in esecuzione).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 Per aumentare la quantità di memoria disponibile per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], effettuare le operazioni seguenti:  
   
 -   Se le risorse vengono utilizzate da altre applicazioni oltre a SQL Server, provare a interromperne l'esecuzione o a eseguirle in un server distinto. In questo modo sarà possibile eliminare le richieste di memoria esterne.  

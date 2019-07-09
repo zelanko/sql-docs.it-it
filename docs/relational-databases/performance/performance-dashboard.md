@@ -14,21 +14,21 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 99ff37b3c974f6ba63515b3b51e87719a1912521
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 4b5e2a9dbb6963b63d6dfac8d76d9c01e839a8fe
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242398"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559477"
 ---
 # <a name="performance-dashboard"></a>Performance Dashboard
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] versione 17.2 e successive includono Performance Dashboard. Il dashboard è stato progettato per consentire di visualizzare rapidamente informazioni dettagliate sullo stato delle prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]). 
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] versione 17.2 e successive includono Performance Dashboard. Il dashboard è stato progettato per consentire di visualizzare rapidamente informazioni dettagliate sullo stato delle prestazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]. 
 
-Performance Dashboard consente di comprendere rapidamente se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sta riscontrando un collo di bottiglia delle prestazioni. E se questo viene trovato, acquisisce facilmente dati di diagnostica aggiuntivi che potrebbero essere necessari per risolvere il problema. Alcuni dei problemi di prestazioni comuni che Performance Dashboard può contribuire a identificare includono:
+Performance Dashboard consente di comprendere rapidamente se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] sta riscontrando un collo di bottiglia delle prestazioni. E se questo viene trovato, acquisisce facilmente dati di diagnostica aggiuntivi che potrebbero essere necessari per risolvere il problema. Alcuni dei problemi di prestazioni comuni che Performance Dashboard può contribuire a identificare includono:
 -  Colli di bottiglia della CPU (e quali query stanno utilizzando la maggior parte di CPU)
--  Colli di bottiglia I/O (e quali query stanno eseguendo la maggior parte delle operazioni di I/O)
+-  Colli di bottiglia di I/O (e quali query stanno eseguendo la maggior parte delle operazioni di I/O)
 -  Raccomandazioni relative agli indici generate da Query Optimizer (indici mancanti)
 -  Processi bloccati
 -  Contesa di risorse, inclusa la contesa latch
@@ -80,8 +80,8 @@ I report **Query dispendiose** vengono reimpostati quando [!INCLUDE[ssNoVersion]
 > [!NOTE]
 > Performance Dashboard all'inizio è stato rilasciato come download autonomo per [SQL Server 2005](http://www.microsoft.com/download/details.aspx?id=22602) e successivamente è stato aggiornato per [SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
 
-## <a name="permissions"></a>Permissions  
-Sono necessarie le autorizzazioni `VIEW SERVER STATE` e `ALTER TRACE`. 
+## <a name="permissions"></a>Autorizzazioni  
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono necessarie le autorizzazioni `VIEW SERVER STATE` e `ALTER TRACE`. In [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] è richiesta l'autorizzazione `VIEW DATABASE STATE` per il database.
 
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio e ottimizzazione delle prestazioni](../../relational-databases/performance/monitor-and-tune-for-performance.md)     

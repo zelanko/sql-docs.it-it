@@ -16,12 +16,12 @@ author: s-r-k
 ms.author: karam
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: dd767690533365dc51f1ef3e1fb27bcf3659eeb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dba65eb4ca0aa97ca747567a6337e68fb7c2f29
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775139"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581430"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining di funzioni definite dall'utente scalari
 
@@ -136,6 +136,8 @@ Come detto in precedenza, il piano di query non ha più un operatore per la funz
 2. SQL Server ha anche dedotto la clausola `GROUP BY O_CUSTKEY on ORDERS` implicita e ha usato IndexSpool + StreamAggregate per implementarla.
 3. SQL Server usa ora il parallelismo tra tutti gli operatori.
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 A seconda della complessità della logica della funzione definita dall'utente, il piano di query generato risultante può essere anche più grande e più complesso. Come si può vedere, le operazioni all'interno della funzione definita dall'utente non sono più una black box. Query Optimizer è quindi in grado di determinare i costi di queste operazioni e di ottimizzarle. Poiché, poi, la funzione definita dall'utente non è più all'interno del piano, la chiamata iterativa a tale funzione viene sostituita da un piano che evita completamente il sovraccarico delle chiamate di funzione.
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>Requisiti delle funzioni definite dall'utente scalari abilitate per l'inlining
@@ -182,7 +184,7 @@ Se vengono soddisfatte tutte le condizioni preliminari e SQL Server decide di es
 
 ## <a name="enabling-scalar-udf-inlining"></a>Abilitazione dell'inlining di funzioni definite dall'utente scalari
 
-È possibile impostare automaticamente i carichi di lavoro come idonei all'inlining di funzioni definite dall'utente scalari abilitando il livello di compatibilità 150 per il database.  Questa opzione è impostabile con Transact-SQL. Esempio:  
+È possibile impostare automaticamente i carichi di lavoro come idonei all'inlining di funzioni definite dall'utente scalari abilitando il livello di compatibilità 150 per il database. Questa opzione può essere impostata con Transact-SQL. Ad esempio:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;

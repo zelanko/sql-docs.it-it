@@ -13,12 +13,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: 7e9e96ee56895c38a8c242d3cd48804884f581d1
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: d13809c3fa5b100a29df4434da5aec354de0c7c2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206367"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581232"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guida di ottimizzazione e convalida post-migrazione
 
@@ -53,7 +53,7 @@ Per altre informazioni su questo argomento, vedere [Mantenere la stabilità dell
 **Si applica a:** migrazione da piattaforma esterna (ad esempio Oracle, DB2, MySQL e Sybase) a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
-> Per le migrazioni da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se questo problema si verificava nell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di origine, la semplice migrazione a una versione più recente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  non risolverà il problema descritto in questo scenario. 
+> Per le migrazioni da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se questo problema si verificava nell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di origine, la semplice migrazione a una versione più recente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]? non risolverà il problema descritto in questo scenario. 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compila i piani di query sulle stored procedure analizzando i parametri di input alla prima compilazione e generando un piano con parametri riutilizzabile e ottimizzato per la distribuzione di questi dati di input. Anche se non vengono usate stored procedure, la maggior parte delle istruzioni che generano piani semplici includerà dei parametri. Dopo che un piano è stato inizialmente memorizzato nella cache, per le esecuzioni future verrà eseguito il mapping a un piano precedentemente memorizzato nella cache.
 Un potenziale problema si presenta nel caso in cui durante questa prima compilazione non siano stati usati i set di parametri più comuni per il normale carico di lavoro. Per parametri diversi, lo stesso piano di esecuzione diventa inefficiente. Per altre informazioni su questo argomento, vedere il blog sull'[analisi dei parametri](../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
@@ -108,6 +108,9 @@ Alcuni esempi di predicati non SARGable:
   -   Ciò può richiedere il confronto del costrutto di codice definito dall'utente archiviato nel database, ad esempio stored procedure, funzioni o viste definite dall'utente, con le tabelle di sistema contenenti informazioni sui tipi di dati usati nelle tabelle sottostanti (ad esempio, [sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md)).
 2. Se non è possibile passare al punto precedente del codice, modificare il tipo di dati nella tabella in modo che corrisponda alla dichiarazione di variabile o parametro.
 3. Riflettere sull'utilità dei costrutti seguenti:
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
   -   Funzioni usate come predicati
   -   Ricerche con caratteri jolly
   -   Espressioni complesse basate su dati a colonne: valutare la necessità di creare invece colonne calcolate persistenti che possono essere indicizzate.

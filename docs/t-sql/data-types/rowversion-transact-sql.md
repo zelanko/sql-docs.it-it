@@ -27,12 +27,12 @@ ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: da68caa3ac81d25c8a03dfe11c1f75dcee15d40d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 876e498a84ea3b6066647b47ea7ba27b5fc2a91d
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041542"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492589"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ CREATE TABLE ExampleTable2 (PriKey int PRIMARY KEY, VerCol rowversion) ;
 > [!NOTE]  
 >  Per generare valori **rowversion** duplicati, usare l'istruzione SELECT INTO nella quale una colonna di tipo **rowversion** è inclusa nell'elenco SELECT. Non è consigliabile usare **rowversion** in questo modo.  
   
-Una colonna di tipo **rowversion** che non ammette valori Null equivale dal punto di vista semantico a una colonna di tipo **binary(8)**. Una colonna di tipo **rowversion** che non ammette valori Null equivale dal punto di vista semantico a una colonna di tipo **varbinary(8)**.
+Una colonna di tipo **rowversion** che non ammette valori Null equivale dal punto di vista semantico a una colonna di tipo **binary(8)** . Una colonna di tipo **rowversion** che non ammette valori Null equivale dal punto di vista semantico a una colonna di tipo **varbinary(8)** .
   
 È possibile usare la colonna di tipo **rowversion** di una riga per stabilire con facilità se per la riga è stata eseguita un'istruzione di aggiornamento dall'ultima volta in cui è stata letta. Se è stata eseguita un'istruzione di aggiornamento per la riga, il valore rowversion viene aggiornato. Se invece non è stata eseguita alcuna istruzione di aggiornamento per la riga, il valore rowversion rimane invariato rispetto alla lettura precedente. Per restituire il valore rowversion corrente per un database, usare [@@DBTS](../../t-sql/functions/dbts-transact-sql.md).
   
@@ -102,7 +102,7 @@ IF (SELECT COUNT(*) FROM @t) = 0
   
 `myRv` è il valore della colonna **rowversion** relativo alla riga che indica l'ultima volta in cui la riga è stata letta. Tale valore deve essere sostituito dal valore **rowversion** effettivo. Un esempio del valore **rowversion** effettivo è 0x00000000000007D3.
   
-È possibile inoltre inserire le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] di esempio in una transazione. Eseguendo una query sulla variabile `@t` nell'ambito della transazione, è possibile recuperare la colonna aggiornata `myKey` della tabella senza rieseguire una query sulla tabella `MyTes`.
+È possibile inoltre inserire le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] di esempio in una transazione. Eseguendo una query sulla variabile `@t` nell'ambito della transazione, è possibile recuperare la colonna aggiornata `myKey` della tabella senza rieseguire una query sulla tabella `MyTest`.
   
 Di seguito viene riportato lo stesso esempio che usa la sintassi **timestamp**:
   

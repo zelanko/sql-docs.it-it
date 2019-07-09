@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d23495f210a2c5979a5e5abecd9f43e4f5b62c02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a67d663f2f0970750b30686b443538cd66358fc5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63228094"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583056"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurare il database di distribuzione repliche nel gruppo di disponibilità Always On
 
@@ -116,6 +116,8 @@ In questo esempio vengono configurati un nuovo server di distribuzione e un nuov
    Il valore di `@working_directory` deve essere un percorso di rete indipendente da DIST1, DIST2 e DIST3.
 
 1. In DIST2 e DIST3 eseguire:  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
@@ -238,7 +240,7 @@ In questo esempio viene rimosso un server di distribuzione da un gruppo di dispo
 
 ## <a name="remove-a-publisher-from-distribution-database-ag"></a>Rimuovere un server di pubblicazione dal gruppo di disponibilità del database di distribuzione
 
-In questo esempio viene rimosso un server di pubblicazione da un gruppo di disponibilità del database di distribuzione corrente del server di distribuzione senza alcun effetto sui server di pubblicazione serviti dal gruppo di disponibilità del database di distribuzione. In questo esempio la configurazione esistente include un database di distribuzione in un gruppo di disponibilità. DIST1, DIST2 e DIST3 sono i server di distribuzione, `distribution` è il database di distribuzione nel gruppo di disponibilità e PUB1 e PUB2 sono i server di pubblicazione serviti dal database `distribution`. Nell'esempio PUB1 viene rimosso dai server di distribuzione.
+In questo esempio viene rimosso un server di pubblicazione da un gruppo di disponibilità del database di distribuzione corrente del server di distribuzione senza alcun effetto sui restanti server di pubblicazione gestiti dal gruppo di disponibilità del database di distribuzione. In questo esempio la configurazione esistente include un database di distribuzione in un gruppo di disponibilità. DIST1, DIST2 e DIST3 sono i server di distribuzione, `distribution` è il database di distribuzione nel gruppo di disponibilità e PUB1 e PUB2 sono i server di pubblicazione serviti dal database `distribution`. Nell'esempio PUB1 viene rimosso dai server di distribuzione.
 
 ### <a name="publisher-workflow"></a>Flusso di lavoro del server di pubblicazione
 
@@ -395,9 +397,9 @@ Go
 -- On Publisher, create the publication as one would normally do.
 -- On the Secondary replicas of the Distribution DB, add the Subscriber as a linked server.
 :CONNECT SQLNODE2
-EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
+EXEC?master.dbo.sp_addlinkedserver?@server?=?N'SQLNODE5',?@srvproduct=N'SQL Server'
  /* For security reasons the linked server remote logins password is changed with ######## */
-EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
+EXEC?master.dbo.sp_addlinkedsrvlogin?@rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
 ```
 
 ## <a name="see-also"></a>Vedere anche  

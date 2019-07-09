@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9c0d51046b7ac30cbf1f2a608c51c34974b75d9
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 07d8b7936051b202c73b7457c87e7533e1d46192
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579391"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500227"
 ---
 # <a name="subqueries-sql-server"></a>Sottoquery (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -106,7 +106,7 @@ Le sottoquery sono soggette alle seguenti restrizioni:
 -   Per convenzione, l'elenco di selezione di una sottoquery introdotta da `EXISTS` include un asterisco (\*) anziché un singolo nome di colonna. Le regole valide per una sottoquery introdotta da `EXISTS` corrispondono a quelle seguite per un elenco di selezione standard poiché una sottoquery introdotta da `EXISTS` crea un test di esistenza e non restituisce dati, ma TRUE o FALSE.   
 
 ## <a name="qualifying"></a> Qualificazione dei nomi delle colonne nelle sottoquery
-Nell'esempio seguente la colonna *CustomerID* specificata nella clausola `WHERE` della query esterna viene qualificata in modo implicito con il nome della tabella indicato nella clausola `FROM` della query esterna, ovvero *Sales.Store*. Il riferimento a *CustomerID* nell'elenco di selezione della sottoquery viene qualificato dalla clausola `FROM` della sottoquery, ovvero dalla tabella *Sales.Customer*.
+Nell'esempio seguente la colonna *BusinessEntityID* specificata nella clausola `WHERE` della query esterna viene qualificata in modo implicito con il nome della tabella indicato nella clausola `FROM` della query esterna, ovvero *Sales.Store*. Il riferimento a *CustomerID* nell'elenco di selezione della sottoquery viene qualificato dalla clausola `FROM` della sottoquery, ovvero dalla tabella *Sales.Customer*.
 
 ```sql
 USE AdventureWorks2016;

@@ -23,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04632f7b1ef117c31701cf998b913375656e8a39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e4ec1c90f49de20707690825f9e5ba802965278
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62928678"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559414"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - Uso di PIVOT e UNPIVOT
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-È possibile usare gli operatori relazionali `PIVOT` e `UNPIVOT` per modificare un'espressione con valori di tabella in un'altra tabella. `PIVOT` ruota un'espressione con valori di tabella convertendo i valori univoci di una colonna nell'espressione in più colonne nell'output ed esegue le aggregazioni necessarie sui valori di colonna restanti da includere nell'output finale. `UNPIVOT` esegue l'operazione opposta rispetto a PIVOT, ruotando le colonne di un'espressione con valori di tabella in valori di colonna.  
+È possibile usare gli operatori relazionali `PIVOT` e `UNPIVOT` per modificare un'espressione con valori di tabella in un'altra tabella. `PIVOT` ruota un'espressione con valori di tabella convertendo i valori univoci di una colonna nell'espressione in più colonne nell'output. E `PIVOT` esegue le aggregazioni richieste sugli eventuali valori di colonna restanti da includere nell'output finale. `UNPIVOT` esegue l'operazione opposta rispetto a PIVOT, ruotando le colonne di un'espressione con valori di tabella in valori di colonna.  
   
 La sintassi di `PIVOT` è più semplice e leggibile di quella che sarebbe altrimenti possibile specificare in una serie complessa di istruzioni `SELECT...CASE`. Per una descrizione completa della sintassi per `PIVOT`, vedere [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).  
   
@@ -75,7 +75,6 @@ GO
 SELECT DaysToManufacture, AVG(StandardCost) AS AverageCost   
 FROM Production.Product  
 GROUP BY DaysToManufacture;  
-  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

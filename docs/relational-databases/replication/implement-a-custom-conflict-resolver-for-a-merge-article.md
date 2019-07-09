@@ -17,18 +17,18 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 057320ea2d739b89675a253f4dad80b0f78357f3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: fbf0eac77eab02c63ef3e46941da93d47718bbd9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128251"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584884"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementazione di un sistema di risoluzione dei conflitti personalizzato per un articolo di tipo merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In questo argomento viene descritto come implementare il sistema di risoluzione dei conflitti personalizzato per un articolo di tipo merge in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[tsql](../../includes/tsql-md.md)] o un [sistema di risoluzione personalizzato basato su COM](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Per implementare un sistema di risoluzione dei conflitti personalizzato per un articolo di tipo merge, utilizzando:**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "54128251"
   
      [Sistema di risoluzione basato su COM](#COM)  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  È possibile scrivere un sistema di risoluzione dei conflitti personalizzato come stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] in ogni server di pubblicazione. Durante la sincronizzazione questa stored procedure viene richiamata quando vengono rilevati conflitti in un articolo per il quale il sistema di risoluzione è stato registrato e l'agente di merge passa le informazioni sulla riga con conflitti ai parametri obbligatori della procedura. I sistemi di risoluzione dei conflitti personalizzati basati su stored procedure vengono sempre creati nel server di pubblicazione.  
   
 > [!NOTE]  
@@ -60,19 +60,21 @@ ms.locfileid: "54128251"
      Questa stored procedure utilizza i valori passati dall'agente di merge a questi parametri per implementare la logica di risoluzione dei conflitti personalizzata. Deve restituire un solo set di risultati della riga la cui struttura è identica a quella della tabella di base e che contiene i valori dei dati per la versione confermata della riga.  
   
 2.  Concedere autorizzazioni EXECUTE sulla stored procedure a qualsiasi account di accesso utilizzato dai Sottoscrittori per la connessione al server di pubblicazione.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-use-a-custom-conflict-resolver-with-a-new-table-article"></a>Per utilizzare un sistema di risoluzione dei conflitti personalizzato con un nuovo articolo di tabella  
   
-1.  Eseguire [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) per definire un articolo, specificando il valore **MicrosoftSQL** **Server Stored Procedure Resolver** per il parametro **@article_resolver** e il nome della stored procedure che implementa la logica del sistema di risoluzione dei conflitti per il parametro **@resolver_info**. Per altre informazioni, vedere [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
+1.  Eseguire [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) per definire un articolo, specificando il valore **MicrosoftSQL** **Server Stored Procedure Resolver** per il parametro **@article_resolver** e il nome della stored procedure che implementa la logica del sistema di risoluzione dei conflitti per il parametro **@resolver_info** . Per altre informazioni, vedere [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>Per utilizzare un sistema di risoluzione dei conflitti personalizzato con un articolo di tabella esistente  
   
-1.  Eseguire [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specificando **@publication**, **@article**, il valore **article_resolver** per **@property** e il valore **MicrosoftSQL** **Server Stored ProcedureResolver** per **@value**.  
+1.  Eseguire [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specificando **@publication** , **@article** , il valore **article_resolver** per **@property** e il valore **MicrosoftSQL** **Server Stored ProcedureResolver** per **@value** .  
   
-2.  Eseguire [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specificando **@publication**, **@article**, il valore **resolver_info** per **@property**e il nome della stored procedure che implementa la logica del sistema di risoluzione dei conflitti per **@value**.  
+2.  Eseguire [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specificando **@publication** , **@article** , il valore **resolver_info** per **@property** e il nome della stored procedure che implementa la logica del sistema di risoluzione dei conflitti per **@value** .  
   
 ##  <a name="COM"></a> Utilizzo di un sistema di risoluzione personalizzato basato su COM  
- Lo spazio dei nomi <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implementa un'interfaccia che consente di scrivere logica di business complessa per gestire gli eventi e i risolvere conflitti che si verificano durante il processo di sincronizzazione della replica di tipo merge. Per altre informazioni, vedere [Implementazione di un gestore della logica di business per un articolo di merge](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md). Per risolvere i conflitti, è inoltre possibile scrivere una logica di business personalizzata basata su codice nativo. Tale logica viene compilata come un componente COM in DLL, utilizzando prodotti quali [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Un simile sistema di risoluzione dei conflitti personalizzato basato su COM deve implementare l'interfaccia **ICustomResolver** , specificamente progettata per la risoluzione dei conflitti.  
+ Lo spazio dei nomi <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implementa un'interfaccia che consente di scrivere logica di business complessa per gestire gli eventi e i risolvere conflitti che si verificano durante il processo di sincronizzazione della replica di tipo merge. Per altre informazioni, vedere [Implementazione di un gestore della logica di business per un articolo di merge](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md). Per risolvere i conflitti, è inoltre possibile scrivere una logica di business personalizzata basata su codice nativo. Tale logica viene compilata come un componente COM in DLL, utilizzando prodotti quali [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Un simile sistema di risoluzione dei conflitti personalizzato basato su COM deve implementare l'interfaccia **ICustomResolver**, specificamente progettata per la risoluzione dei conflitti.  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>Per creare e registrare un sistema di risoluzione dei conflitti personalizzato basato su COM  
   
@@ -99,7 +101,7 @@ ms.locfileid: "54128251"
   
 8.  Nel server di pubblicazione eseguire [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) per verificare che la libreria non sia già registrata come sistema di risoluzione dei conflitti personalizzato.  
   
-9. Per registrare la libreria come sistema di risoluzione dei conflitti personalizzato, eseguire [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md) nel database di distribuzione. Specificare il nome descrittivo dell'oggetto COM per **@article_resolver**, l'ID (CLSID) della libreria per **@resolver_clsid**e il valore **false** per **@is_dotnet_assembly**.  
+9. Per registrare la libreria come sistema di risoluzione dei conflitti personalizzato, eseguire [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md) nel database di distribuzione. Specificare il nome descrittivo dell'oggetto COM per **@article_resolver** , l'ID (CLSID) della libreria per **@resolver_clsid** e il valore **false** per **@is_dotnet_assembly** .  
   
     > [!NOTE]  
     >  Quando un sistema di risoluzione dei conflitti personalizzato non è più necessario, è possibile annullarne la registrazione con [sp_unregistercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md).  
@@ -110,13 +112,13 @@ ms.locfileid: "54128251"
   
 1.  Nel server di pubblicazione eseguire [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) e prendere nota del nome descrittivo del sistema di risoluzione desiderato.  
   
-2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) per definire un articolo. Specificare il nome descrittivo del sistema di risoluzione dei conflitti dell'articolo ottenuto al passaggio 1 per **@article_resolver**. Per altre informazioni, vedere [definire un articolo](../../relational-databases/replication/publish/define-an-article.md).  
+2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) per definire un articolo. Specificare il nome descrittivo del sistema di risoluzione dei conflitti dell'articolo ottenuto al passaggio 1 per **@article_resolver** . Per altre informazioni, vedere [definire un articolo](../../relational-databases/replication/publish/define-an-article.md).  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>Per utilizzare un sistema di risoluzione dei conflitti personalizzato con un articolo di tabella esistente  
   
 1.  Nel server di pubblicazione eseguire [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) e prendere nota del nome descrittivo del sistema di risoluzione desiderato.  
   
-2.  Eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specificando **@publication**, **@article**, il valore **article_resolver** per **@property** e il nome descrittivo del sistema di risoluzione dei conflitti dell'articolo dal passaggio 1 per **@value**.  
+2.  Eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), specificando **@publication** , **@article** , il valore **article_resolver** per **@property** e il nome descrittivo del sistema di risoluzione dei conflitti dell'articolo dal passaggio 1 per **@value** .  
   
 
 ## <a name="see-also"></a>Vedere anche  

@@ -16,18 +16,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ce984371d1dd618c7a99b081667115208b7afb7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 21298500f7d5bc135b8e9068c97e2928d1853b6f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406468"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583582"
 ---
 # <a name="recompile-a-stored-procedure"></a>Ricompilare una stored procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  In questo argomento viene descritto come ricompilare una stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)]. È possibile eseguire questa operazione in tre modi: usando l'opzione **WITH RECOMPILE** nella definizione della stored procedure o quando viene chiamata la stored procedure, tramite l'hint per la query **RECOMPILE** nelle singole istruzioni o usando la stored procedure di sistema **sp_recompile** . Questo argomento illustra l'uso dell'opzione WITH RECOMPILE quando si crea una definizione di stored procedure e si esegue una stored procedure esistente. Descrive anche l'uso della stored procedure di sistema sp_recompile per ricompilare una stored procedure esistente.  
+  In questo argomento viene descritto come ricompilare una stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Questa operazione può essere eseguita in tre modi: usando l'opzione **WITH RECOMPILE** nella definizione della stored procedure o quando viene chiamata la stored procedure, tramite l'hint per la query **RECOMPILE** nelle singole istruzioni o usando la stored procedure di sistema **sp_recompile**. Questo argomento illustra l'uso dell'opzione WITH RECOMPILE quando si crea una definizione di stored procedure e si esegue una stored procedure esistente. Descrive anche l'uso della stored procedure di sistema sp_recompile per ricompilare una stored procedure esistente.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -55,8 +55,8 @@ ms.locfileid: "52406468"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
- Opzione**WITH RECOMPILE**   
+####  <a name="Permissions"></a> Autorizzazioni  
+ Opzione**WITH RECOMPILE**  
  Se si utilizza questa opzione alla creazione della definizione della stored procedure, è necessario disporre dell'autorizzazione CREATE PROCEDURE per il database e dell'autorizzazione ALTER per lo schema in cui verrà creata la stored procedure.  
   
  Se questa opzione viene utilizzata in un'istruzione EXECUTE, richiede autorizzazioni EXECUTE sulla stored procedure. Le autorizzazioni non sono richieste per l'istruzione EXECUTE stessa, ma le autorizzazioni di esecuzione sono necessarie per la stored procedure a cui fa riferimento l'istruzione EXECUTE. Per altre informazioni, vedere [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "52406468"
  Hint per la query **RECOMPILE**  
  Questa funzionalità viene usata quando si crea la stored procedure e si include l'hint nelle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] nella stored procedure. È pertanto necessario disporre dell'autorizzazione CREATE PROCEDURE per il database e dell'autorizzazione ALTER per lo schema in cui la stored procedure viene creata.  
   
- Stored procedure di sistema**sp_recompile**   
+ Stored procedure di sistema**sp_recompile**  
  È richiesta l'autorizzazione ALTER per la stored procedure specificata.  
   
 ##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
@@ -75,8 +75,10 @@ ms.locfileid: "52406468"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio seguente viene creata la definizione della stored procedure.  
-  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio seguente viene creata la definizione della stored procedure.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ```  
 USE AdventureWorks2012;  
 GO  
@@ -103,7 +105,7 @@ AS
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio viene creata una stored procedure semplice tramite cui vengono restituiti tutti i dipendenti (per cui vengono indicati il nome e il cognome), le relative posizioni e i nomi dei reparti di appartenenza da una vista.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio viene creata una stored procedure semplice tramite cui vengono restituiti tutti i dipendenti (per cui vengono indicati il nome e il cognome), le relative posizioni e i nomi dei reparti di appartenenza da una vista.  
   
      Successivamente, copiare e incollare il secondo esempio di codice nella finestra Query, quindi fare clic su **Esegui**. Verrà eseguita la stored procedure e verrà ricompilato il piano di query della stored procedure.  
   
@@ -121,7 +123,7 @@ GO
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio viene creata una stored procedure semplice tramite cui vengono restituiti tutti i dipendenti (per cui vengono indicati il nome e il cognome), le relative posizioni e i nomi dei reparti di appartenenza da una vista.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio viene creata una stored procedure semplice tramite cui vengono restituiti tutti i dipendenti (per cui vengono indicati il nome e il cognome), le relative posizioni e i nomi dei reparti di appartenenza da una vista.  
   
      Successivamente, copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. La stored procedure non verrà eseguita, ma contrassegnata per la ricompilazione in modo che il relativo piano di query venga aggiornata alla successiva esecuzione della stored procedure.  
   

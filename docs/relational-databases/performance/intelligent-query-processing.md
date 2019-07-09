@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9889ac45bff237ddb1e26e9dbbaffd12f3be556
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f548fff9a7634e0c105fc8ce09fa39d2aa4100c7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64776033"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580744"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Elaborazione di query intelligenti nei database SQL
 
@@ -75,6 +75,9 @@ Nel piano viene visualizzato quanto segue:
 1. È presente il nuovo operatore Join adattivo. L'operatore definisce la soglia usata per il passaggio a un piano Cicli annidati. In questo esempio la soglia corrisponde a 78 righe. Se il risultato è &gt;= 78 righe, verrà usato un hash join. Se è inferiore alla soglia, verrà usato un join a cicli annidati.
 1. Poiché le righe restituite sono 336, la soglia viene superata: il secondo ramo rappresenta la fase di probe di un'operazione hash join standard. Si noti che Statistiche query dinamiche visualizza le righe del flusso tra gli operatori, in questo caso "672 di 672".
 1. L'ultimo ramo è la Ricerca indice cluster che il join a cicli annidati avrebbe usato se la soglia non fosse stata superata. Il valore visualizzato è "0 di 336" righe (il ramo non viene usato).
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Ora si confronti il piano con la stessa query, ma questa volta per un valore *Quantità* che ha una sola riga nella tabella:
  
 ```sql
@@ -127,7 +130,7 @@ Alcune condizioni rendono un join logico idoneo per un join adattivo in modalit�
 Se un join adattivo passa al funzionamento con cicli annidati usa le righe già lette dalla compilazione hash join. L'operatore **non** legge di nuovo le righe del riferimento esterno.
 
 ### <a name="adaptive-threshold-rows"></a>Righe della soglia adattiva
-Il grafico seguente visualizza un esempio di intersezione tra il costo di un hash join e il costo di un join a cicli annidati alternativo.  In questo punto di intersezione viene determinata la soglia, che a sua volta determina l'algoritmo usato per l'operazione di join.
+Il grafico seguente visualizza un esempio di intersezione tra il costo di un hash join e il costo di un join a cicli annidati alternativo.? In questo punto di intersezione viene determinata la soglia, che a sua volta determina l'algoritmo usato per l'operazione di join.
 
 ![Soglia di join](./media/6_AQPJoinThreshold.png)
 

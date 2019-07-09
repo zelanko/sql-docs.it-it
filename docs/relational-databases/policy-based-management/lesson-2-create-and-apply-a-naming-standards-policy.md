@@ -11,14 +11,14 @@ ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 688a61aeecfb729eeee877e0f8d3e463eaff06c8
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: c00b9b2156848e45ce4f73429c8cf397f7d34fc2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52159039"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584900"
 ---
-# <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Lezione 2: Creazione e applicazione di criteri per gli standard di denominazione
+# <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Lezione 2: Creare e applicare criteri per gli standard di denominazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Alcuni tipi di criteri della gestione basata su criteri possono creare trigger per l'applicazione della conformità successiva tramite i criteri. In questa lezione verranno creati criteri per l'applicazione di uno standard di denominazione per le tabelle. Si verificheranno quindi i criteri tentando di creare una tabella che violi i criteri.  
 
@@ -40,6 +40,7 @@ Per completare questa esercitazione, sono necessari SQL Server Management Studio
   
 2.  In Esplora oggetti fare clic su **Database**, quindi premere F5 per aggiornare l'elenco dei database.  
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="create-the-finance-tables-condition"></a>Creare la condizione Tabelle Finance 
 
@@ -49,7 +50,7 @@ Per completare questa esercitazione, sono necessari SQL Server Management Studio
   
 2.  Nella finestra di dialogo **Crea nuova condizione** , nella casella **Nome** digitare **Tabelle Finance**.  
     1. Nell'elenco **Facet** selezionare **Nome a più parti**. 
-    1. Nella finestra di dialogo **Espressione**, nella casella **Campo** selezionare **@Name**. Nella casella **Operatore** selezionare **Like** e nella casella **Valore** digitare ```'fintbl%'``` per fare in modo che tutti i nomi di tabella inizino con le lettere **fintbl**.
+    1. Nella finestra di dialogo **Espressione**, nella casella **Campo** selezionare **@Name** . Nella casella **Operatore** selezionare **Like** e nella casella **Valore** digitare ```'fintbl%'``` per fare in modo che tutti i nomi di tabella inizino con le lettere **fintbl**.
     1. Nella pagina **Descrizione** digitare **I nomi di tabella del database Finance devono iniziare con fintbl**e quindi scegliere **OK** per creare la condizione.  
 
     ![Condizione Tabelle Finance](Media/lesson-2-create-and-apply-a-naming-standards-policy/finance-tables-condition.png)

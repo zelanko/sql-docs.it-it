@@ -11,12 +11,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dfd06b590ba54efc935bab1bbe8c898101e827ae
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 38ac1dae8a3d679a09ccebaa2aca06b681ac48ff
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518614"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582748"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Risolvere i problemi di memoria insufficiente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,13 +27,13 @@ ms.locfileid: "52518614"
   
 |Argomento|Panoramica|  
 |-----------|--------------|  
-|[Risoluzione degli errori di ripristino del database dovuti a memoria insufficiente](#bkmk_resolveRecoveryFailures)|Operazioni da eseguire se viene visualizzato il messaggio di errore "Operazione di ripristino non riuscita per il database '*\<NomeDatabase>*'. Memoria insufficiente nel pool di risorse '*\<NomePoolRisorse>*'."|  
+|[Risoluzione degli errori di ripristino del database dovuti a memoria insufficiente](#bkmk_resolveRecoveryFailures)|Operazioni da eseguire se viene visualizzato il messaggio di errore "Operazione di ripristino non riuscita per il database ' *\<NomeDatabase>* '. Memoria insufficiente nel pool di risorse ' *\<NomePoolRisorse>* '."|  
 |[Risoluzione dell'impatto delle condizioni di memoria insufficiente sul carico di lavoro](#bkmk_recoverFromOOM)|Operazioni da eseguire nel caso in cui i problemi di memoria insufficiente incidono negativamente sulle prestazioni.|  
-|[Risoluzione degli errori di allocazione della pagina dovuti a memoria insufficiente quando è disponibile memoria sufficiente](#bkmk_PageAllocFailure)|Operazioni da eseguire se viene visualizzato il messaggio di errore "È in corso la disabilitazione delle allocazioni di pagine per il database '*\<NomeDatabase>*'. Memoria insufficiente nel pool di risorse '*\<NomePoolRisorse>*'. ..." quando la memoria disponibile è sufficiente per l'operazione.|
+|[Risoluzione degli errori di allocazione della pagina dovuti a memoria insufficiente quando è disponibile memoria sufficiente](#bkmk_PageAllocFailure)|Operazioni da eseguire se viene visualizzato il messaggio di errore "È in corso la disabilitazione delle allocazioni di pagine per il database ' *\<NomeDatabase>* '. Memoria insufficiente nel pool di risorse ' *\<NomePoolRisorse>* '. ..." quando la memoria disponibile è sufficiente per l'operazione.|
 |[Procedure consigliate sull'uso di OLTP in memoria in un ambiente di VM](#bkmk_VMs)|Aspetti da tenere presenti quando si usa OLTP in memoria in un ambiente virtualizzato.|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> Risoluzione degli errori di ripristino del database dovuti a memoria insufficiente  
- Quando si prova a ripristinare un database, è possibile che venga visualizzato il messaggio di errore "Operazione di ripristino non riuscita per il database '*\<NomeDatabase>*'. Memoria insufficiente nel pool di risorse '*\<NomePoolRisorse>*'." Questo errore indica che la memoria disponibile del server non è sufficiente per il ripristino del database. 
+ Quando si tenta di ripristinare un database è possibile che venga visualizzato il messaggio di errore: "Operazione di ripristino non riuscita per il database ' *\<NomeDatabase>* '. Memoria insufficiente nel pool di risorse ' *\<NomePoolRisorse>* '." Questo errore indica che la memoria disponibile del server non è sufficiente per il ripristino del database. 
    
 La memoria disponibile del server in cui viene ripristinato un database deve essere sufficiente per le tabelle ottimizzate per la memoria nel backup del database. In caso contrario, il database non verrà portato online e verrà contrassegnato come sospetto.  
   
@@ -77,7 +77,9 @@ Se la memoria fisica del server è sufficiente, ma viene comunque visualizzato q
 1.  [Aprire una connessione amministrativa dedicata (DAC)](#bkmk_openDAC)  
   
 2.  [Intraprendere un'azione correttiva](#bkmk_takeCorrectiveAction)  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="bkmk_openDAC"></a> Aprire una connessione amministrativa dedicata (DAC)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre una connessione amministrativa dedicata (DAC). La connessione DAC consente a un amministratore di accedere a un'istanza in esecuzione del motore di database di SQL Server per risolvere i problemi presenti nel server, anche quando il server non risponde ad altre connessioni client. La connessione DAC è disponibile tramite l'utilità `sqlcmd` e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

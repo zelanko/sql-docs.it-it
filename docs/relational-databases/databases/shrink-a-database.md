@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7642b2514f7a73034e8f0c2a5c75db71149d33e
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: ae356a0f5ad27a92eb7ba7ba70fcf1553c0aa65c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559588"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583454"
 ---
 # <a name="shrink-a-database"></a>Compattare un database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51559588"
   
  Compattando i file di dati si recupera spazio spostando le pagine di dati dalla fine del file allo spazio non occupato più vicino all'inizio del file. Quando alla fine del file viene creato sufficiente spazio libero, le pagine di dati possono essere deallocate e restituite al file system.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "51559588"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Follow Up:**  [You shrink a database](#FollowUp)  
+-   **Completamento:**  [compattare un database](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -77,7 +77,7 @@ ms.locfileid: "51559588"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -106,7 +106,9 @@ ms.locfileid: "51559588"
      Immettere la massima percentuale di spazio che si desidera sia disponibile nei file del database dopo la compattazione del database. I valori consentiti sono compresi tra 0 e 99.  
   
 4.  Fare clic su **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-shrink-a-database"></a>Per compattare un database  
@@ -119,7 +121,7 @@ ms.locfileid: "51559588"
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../relational-databases/databases/codesnippet/tsql/shrink-a-database_1.sql)]  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la compattazione di un database  
+##  <a name="FollowUp"></a> Completamento: dopo la compattazione di un database  
  I dati spostati per ridurre un file possono essere dispersi in qualsiasi percorso disponibile nel file, provocando la frammentazione dell'indice e rallentando le prestazioni di query che eseguono ricerche in un intervallo dell'indice Per eliminare la frammentazione, valutare la possibilità di ricompilare gli indici sul file dopo la compattazione.  
   
 ## <a name="see-also"></a>Vedere anche  

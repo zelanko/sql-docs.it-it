@@ -15,18 +15,18 @@ ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 248f4f540cffb3d1d71eda2fa23b388140745234
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eef28dde084a7ec0f4a782a22e77485ca477dec5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775719"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585910"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>Passaggio da una modalità di aggiornamento all'altra per una sottoscrizione transazionale aggiornabile
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In questo argomento viene descritto come passare da una modalità di aggiornamento all'altra per una sottoscrizione con transazione aggiornabile in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Per specificare la modalità per le sottoscrizioni aggiornabili, utilizzare la Creazione guidata nuova sottoscrizione. Per informazioni sull'impostazione della modalità durante l'uso di questa procedura guidata, vedere [Visualizzare e modificare le proprietà delle sottoscrizioni pull](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -66,14 +66,16 @@ ms.locfileid: "47775719"
 4.  Nella finestra di dialogo **Imposta metodo di aggiornamento - \<Sottoscrittore>: \<DatabaseSottoscrizione>** selezionare **Aggiornamento immediato** o **Aggiornamento in coda**.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>Per impostare la modalità di aggiornamento per una sottoscrizione pull  
   
 1.  Nella finestra di dialogo **Proprietà sottoscrizione - \<Server di pubblicazione>: \<DatabasePubblicazione>** selezionare **Replica le modifiche immediatamente** o **Accoda le modifiche** per l'opzione **Modalità di aggiornamento del Sottoscrittore**.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- Per altre informazioni sull'accesso alla finestra di dialogo **Proprietà sottoscrizione - \<Server di pubblicazione>: \<DatabasePubblicazione>**, vedere [Visualizzare e modificare le proprietà delle sottoscrizioni pull](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+ Per altre informazioni sull'accesso alla finestra di dialogo **Proprietà sottoscrizione - \<Server di pubblicazione>: \<DatabasePubblicazione>** , vedere [Visualizzare e modificare le proprietà delle sottoscrizioni pull](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
 ##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
@@ -81,7 +83,7 @@ ms.locfileid: "47775719"
   
 1.  Verificare che la sottoscrizione supporti il failover eseguendo [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md) per una sottoscrizione pull o [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) per una sottoscrizione push. Se il valore di **update mode** nel set di risultati è **3** o **4**, il failover è supportato.  
   
-2.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md). Specificare **@publisher**, **@publisher_db**, **@publication**e uno dei valori riportati di seguito per **@failover_mode**.  
+2.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md). Specificare **@publisher** , **@publisher_db** , **@publication** e uno dei valori riportati di seguito per **@failover_mode** .  
   
     -   **queued** : viene eseguito il failover all'aggiornamento in coda in caso di perdita temporanea della connettività.  
   

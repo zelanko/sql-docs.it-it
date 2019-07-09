@@ -26,16 +26,16 @@ ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ac0c3526439d0dc899e81554305c7602c4fa8a9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb99199e90a4e85412fed33210d75b18c8f2975a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781909"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579871"
 ---
 # <a name="choose-an-authentication-mode"></a>Scegliere una modalità di autenticazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Durante l'installazione è necessario selezionare una modalità di autenticazione per il [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Sono disponibili due modalità: la modalità di autenticazione di Windows e la modalità mista. La modalità di autenticazione di Windows abilita l'autenticazione di Windows e disabilita quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La modalità mista abilita sia l'autenticazione di Windows sia quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'autenticazione di Windows è sempre disponibile e non può essere disabilitata.  
+  Durante l'installazione è necessario selezionare una modalità di autenticazione per il [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Esistono due possibili modalità: modalità di autenticazione di Windows e modalità mista. La modalità di autenticazione di Windows abilita l'autenticazione di Windows e disabilita quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La modalità mista abilita sia l'autenticazione di Windows sia quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'autenticazione di Windows è sempre disponibile e non può essere disabilitata.  
   
 ## <a name="configuring-the-authentication-mode"></a>Configurazione della modalità di autenticazione  
  Se si seleziona l'autenticazione in modalità mista durante l'installazione, è necessario specificare e confermare una password complessa per l'account amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito denominato sa. L'account sa consente di connettersi utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -74,8 +74,10 @@ ms.locfileid: "47781909"
 2.  Nella finestra di dialogo **Esegui** digitare **secpol.msc**, quindi fare clic su **OK**.  
   
 3.  Nell'applicazione **Impostazioni sicurezza locale** espandere **Impostazioni di sicurezza**e **Criteri account**, quindi fare clic su **Criteri password**.  
-  
-     I criteri password sono descritti nel riquadro dei risultati.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The password policies are described in the results pane.  
   
 ### <a name="disadvantages-of-sql-server-authentication"></a>Svantaggi dell'autenticazione di SQL Server  
   

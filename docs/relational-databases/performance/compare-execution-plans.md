@@ -17,12 +17,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: b1bd2ab7d1ab17ef9d0bc4671054f02808ed230f
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: 7703ad7ce46c9dda59dacbc86ebbd9646b1015cf
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439843"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584486"
 ---
 # <a name="compare-execution-plans"></a>Confrontare i piani di esecuzione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,11 +69,13 @@ Quando viene eseguito il confronto di due piani di esecuzione, le aree del piano
      > [!TIP]
      > Tutte le opzioni di zoom e navigazione disponibili per i piani di esecuzione possono essere usate nella modalità di confronto dei piani. Per altre informazioni, vedere [Visualizzazione di un piano di esecuzione effettivo](../../relational-databases/performance/display-an-actual-execution-plan.md).
 
-5.  Sul lato destro viene aperta anche una finestra delle proprietà doppie, nell'ambito della selezione predefinita. Le proprietà presenti in entrambi gli operatori confrontati ma che presentano differenze verranno precedute dal segno *diverso da* (≠) per facilitarne l'identificazione.
+5.  Sul lato destro viene aperta anche una finestra delle proprietà doppie, nell'ambito della selezione predefinita. Le proprietà presenti in entrambi gli operatori confrontati ma che presentano differenze verranno precedute dal segno *diverso da* (?) per facilitarne l'identificazione.
 
     ![Finestra delle proprietà doppie](../../relational-databases/performance/media/plancomparison-properties.png "Finestra delle proprietà doppie")  
 
 6.  Nella parte inferiore viene aperta anche la finestra di navigazione di confronto **Analisi showplan**. Sono disponibili tre schede:
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     1.  Nella scheda **Opzioni dell'istruzione** la selezione predefinita è *Evidenzia le operazioni simili* e gli stessi operatori o nodi evidenziati nei piani confrontati hanno lo stesso colore e motivo di linea. Per spostarsi tra aree simili nei piani confrontati, fare clic su un motivo di linea. È anche possibile scegliere di evidenziare le differenze nei piani anziché le analogie selezionando *Evidenzia gli operatori che non corrispondono a segmenti simili*. 
     

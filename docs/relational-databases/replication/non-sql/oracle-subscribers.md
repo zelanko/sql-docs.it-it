@@ -17,12 +17,12 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 647828d7e0e78b7faa6abb2ce1a7ca8102490d67
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 3c24ad02eb34e06d23ec30f91b3c547f6fbd737e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135901"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585880"
 ---
 # <a name="oracle-subscribers"></a>Sottoscrittori Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,9 @@ ms.locfileid: "54135901"
     |Inserimento dei dati host per identificare il listener del database|L'host è il nome o l'alias DNS del computer su cui viene eseguito il listener Oracle, in genere lo stesso computer contenente il database. Per alcuni protocolli è necessario indicare informazioni aggiuntive. Ad esempio, se si seleziona il protocollo TCP è necessario indicare la porta su cui il listener rimane in attesa di richieste di connessione al database di destinazione. La configurazione TCP predefinita utilizza la porta 1521.|  
   
 3.  Creare uno snapshot o una pubblicazione transazionale, abilitarlo per i Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , quindi creare una sottoscrizione push per il Sottoscrittore. Per altre informazioni, vedere [Creazione di una sottoscrizione per un Sottoscrittore non SQL Server](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="setting-directory-permissions"></a>Impostazione delle autorizzazioni di directory  
  All'account con cui viene eseguito il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] disponibile nel server di distribuzione devono essere concesse le autorizzazioni di lettura ed esecuzione per la directory e tutte le sottodirectory in cui è installato il software client Oracle di rete.  
   
@@ -87,7 +89,7 @@ ms.locfileid: "54135901"
   
     -   Verificare che le stringhe vuote non vengano inserite nella tabella pubblicata come valori di colonna.  
   
-    -   Usare il parametro **–SkipErrors** per l'agente di distribuzione se è accettabile ricevere una notifica degli errori nel log della cronologia dell'agente di distribuzione e continuare l'elaborazione. Specificare il codice errore Oracle 1400 (**-SkipErrors1400**).  
+    -   Usare il parametro **?SkipErrors** per l'agente di distribuzione se è accettabile ricevere una notifica degli errori nel log della cronologia dell'agente di distribuzione e continuare l'elaborazione. Specificare il codice errore Oracle 1400 ( **-SkipErrors1400**).  
   
     -   Modificare lo script di creazione tabelle generato, rimuovendo l'attributo NOT NULL da qualsiasi colonna di tipo carattere a cui possano essere associate stringhe vuote e fornire lo script modificato come script di creazione personalizzato per l'articolo utilizzando il parametro @creation_script di [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   

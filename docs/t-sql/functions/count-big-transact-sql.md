@@ -23,14 +23,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c25a0cf97c556baad24f475cdf71698e03fa6a25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04ab74218fcea53d3f51a386d1d2637c346eded5
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948051"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556990"
 ---
-# <a name="countbig--sql"></a>COUNT_BIG (-SQL)
+# <a name="countbig-transact-sql"></a>COUNT_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Questa funzione restituisce il numero di elementi presenti in un gruppo. Il funzionamento di `COUNT_BIG` è analogo a quello della funzione [COUNT](../../t-sql/functions/count-transact-sql.md). Queste funzioni differiscono solo per i tipi di dati dei valori restituiti. `COUNT_BIG` restituisce sempre un valore con tipo di dati **bigint**. `COUNT` restituisce sempre un valore con tipo di dati **int**.

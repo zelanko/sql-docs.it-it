@@ -33,12 +33,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 144323deee0c84ac1be404869a0ca71197ffcd32
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 674a785d0e5d3dd6b847c8f26701ad0ce48e2d20
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135581"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582514"
 ---
 # <a name="configure-web-synchronization"></a>Configurazione della sincronizzazione Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +52,11 @@ ms.locfileid: "54135581"
 3.  Configurare una pubblicazione di tipo merge per consentire la sincronizzazione Web.  
   
 4.  Configurare una o più sottoscrizioni per l'utilizzo della sincronizzazione Web.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE]  
->  Se si intende replicare volumi elevati di dati o utilizzare tipi di dati di grandi dimensioni, ad esempio **varchar(max)**, leggere la sezione "Replica di volumi elevati di dati" in questo argomento.  
+>  Se si intende replicare volumi elevati di dati o utilizzare tipi di dati di grandi dimensioni, ad esempio **varchar(max)** , leggere la sezione "Replica di volumi elevati di dati" in questo argomento.  
   
  Per configurare correttamente la sincronizzazione Web, è necessario decidere come verrà configurata la sicurezza per soddisfare requisiti e criteri specifici. È preferibile prendere queste decisioni e creare gli account necessari prima di configurare IIS, la pubblicazione e le sottoscrizioni.  
   
@@ -132,11 +134,11 @@ ms.locfileid: "54135581"
   
  La dimensione massima per il file XML è 4 GB, ma la replica sincronizza le modifiche di quel file in batch. La dimensione massima dei batch di dati e metadati è di 25 MB. È necessario assicurarsi che i dati di ciascun batch non superino approssimativamente i 20 MB di dimensioni, per tenere conto dell'overhead dei metadati e di altro tipo. Questo limite presenta le implicazioni seguenti:  
   
--   Non è possibile replicare colonne che causano il superamento del limite di 25 MB per dati e metadati. Questo potrebbe essere un problema quando si replicano righe contenenti tipi di dati di grandi dimensioni, ad esempio **varchar(max)**.  
+-   Non è possibile replicare colonne che causano il superamento del limite di 25 MB per dati e metadati. Questo potrebbe essere un problema quando si replicano righe contenenti tipi di dati di grandi dimensioni, ad esempio **varchar(max)** .  
   
 -   Se si replicano volumi elevati di dati, può essere necessario regolare la dimensione dei batch dell'agente di merge.  
   
- La dimensione dei batch per la replica di tipo merge è misurata in *generazioni*, ovvero raccolte di modifiche per ogni articolo. Il numero di generazioni in un batch è specificato utilizzando i parametri **-DownloadGenerationsPerBatch** e **-UploadGenerationsPerBatch** dell'agente di merge. Per altre informazioni, vedere [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
+ La dimensione dei batch per la replica di tipo merge è misurata in *generazioni*, ovvero raccolte di modifiche per ogni articolo. Per specificare il numero di generazioni in un batch, si usano i parametri ?**DownloadGenerationsPerBatch** e ?**UploadGenerationsPerBatch** dell'agente di merge. Per altre informazioni, vedere [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
  Per volumi elevati di dati, specificare un numero basso per ognuno dei parametri di batch. Si consiglia di iniziare con il valore 10, quindi regolarlo in base alle esigenze e alle prestazioni dell'applicazione. In genere, questi parametri sono specificati in un profilo dell'agente. Per ulteriori informazioni sui profili, vedere [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

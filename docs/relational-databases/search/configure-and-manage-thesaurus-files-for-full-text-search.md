@@ -14,12 +14,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: 94531ed04a4265a5fa1a9293e191faeb37feab9f
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: d7035a47368ead8af3a20d9ca56f0c5452395516
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973940"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586183"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurare e gestire i file del thesaurus per la ricerca full-text
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Un thesaurus di ricerca full-text è un file di testo XML.
 
 -   Impostazione dei segni diacritici  
   
-     Per un determinato thesaurus, tutti i criteri di ricerca supportano o non supportano la distinzione relativa ai segni diacritici come la tilde (**~**), l'accento acuto (**´**) o l'umlaut (**¨**), ovvero *supportano la distinzione tra caratteri accentati e non accentati* o *non supportano la distinzione tra caratteri accentati e non accentati*. Si supponga, ad esempio, di specificare la sostituzione del criterio "café" con altri criteri in una query di ricerca full-text. Se il thesaurus non supporta la distinzione tra caratteri accentati e non accentati, tramite la ricerca full-text verranno sostituiti i criteri "café" e "cafe". Se il thesaurus supporta la distinzione tra caratteri accentati e non accentati, tramite la ricerca full-text verrà sostituito solo il criterio "café". Per impostazione predefinita, un thesaurus non supporta la distinzione tra caratteri accentati e non accentati.  
+     Per un determinato thesaurus, tutti i criteri di ricerca supportano o non supportano la distinzione relativa ai segni diacritici come la tilde ( **~** ), l'accento acuto ( **?** ) o l'umlaut ( **?** ), ovvero *supportano la distinzione tra caratteri accentati e non accentati* o *non supportano la distinzione tra caratteri accentati e non accentati*. Si supponga, ad esempio, di specificare la sostituzione del criterio "caf?" con altri criteri in una query di ricerca full-text. Se il thesaurus non supporta la distinzione tra caratteri accentati e non accentati, tramite la ricerca full-text verranno sostituiti i criteri "caf?" e "cafe". Se il thesaurus supporta la distinzione tra caratteri accentati e non accentati, tramite la ricerca full-text verrà sostituito solo il criterio "caf?". Per impostazione predefinita, un thesaurus non supporta la distinzione tra caratteri accentati e non accentati.  
   
 ##  <a name="initial_thesaurus_files"></a> File del thesaurus predefiniti
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre un set di file XML del thesaurus, uno per ogni lingua supportata. Tali file sono essenzialmente vuoti e contengono solo la struttura XML di livello principale comune a tutti i thesaurus di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e un thesaurus di esempio costituito da commenti.  
@@ -83,6 +83,8 @@ Un thesaurus di ricerca full-text è un file di testo XML.
 Una query sul thesaurus usano sia un thesaurus specifico della lingua sia un thesaurus globale.
 1.  La query esegue innanzitutto la ricerca in un file specifico della lingua e lo carica per l'elaborazione, a meno che non sia già caricato. La query viene quindi espansa per includere i sinonimi specifici della lingua indicati dalle regole del set di espansione e del set di sostituzione nel file del thesaurus. 
 2.  Questi passaggi vengono quindi ripetuti per il thesaurus globale. Se, tuttavia, nel file del thesaurus specifico della lingua è già stata individuata una corrispondenza per un termine, tale termine non può essere considerato valido per la corrispondenza nel thesaurus globale.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="structure"></a> Struttura di un file del thesaurus  
  Ogni file del thesaurus definisce un contenitore XML, il cui ID è `Microsoft Search Thesaurus`, e un commento `<!--` ... `-->` che contiene un thesaurus di esempio. Il thesaurus è definito in un elemento `<thesaurus>` contenente esempi degli elementi figlio che definiscono l'impostazione dei segni diacritici, i set di espansione e i set di sostituzione.

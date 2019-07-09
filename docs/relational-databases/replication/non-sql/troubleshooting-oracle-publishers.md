@@ -14,12 +14,12 @@ ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e12b5746d99635b773e3b61a6db10485f2e60765
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c4259070befa31239ca68ce93106ec990b131e4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667839"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582211"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Risoluzione dei problemi dei server di pubblicazione Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "47667839"
   
 -   "L'istanza del server Oracle '\<*NomeServerPubblicazioneOracle*>' è stata precedentemente configurata per l'uso di '\<*NomeDatabaseDistribuzioneSQLServer*>' come database di distribuzione. Per iniziare a usare '\<*NuovoDatabaseDistribuzioneSQLServer*>' come database di distribuzione, è necessario rimuovere la configurazione corrente della replica nell'istanza del server Oracle, eliminando così tutte le pubblicazioni presenti in tale istanza del server."  
   
--   "Il server Oracle '\<*NomeServerOracleServer*>' è già definito come server di pubblicazione '\<*NomeServerPubblicazioneOracle*>' nel database di distribuzione '\<*NomeDatabaseDistribuzioneSQL*>.*\<NomeDatabaseDistribuzione>*'. Eliminare il server di pubblicazione oppure eliminare il sinonimo public '*\<NomeSinonimo*' per ricrearlo."  
+-   "Il server Oracle '\<*NomeServerOracleServer*>' è già definito come server di pubblicazione '\<*NomeServerPubblicazioneOracle*>' nel database di distribuzione '\<*NomeDatabaseDistribuzioneSQL*>. *\<NomeDatabaseDistribuzione>* '. Eliminare il server di pubblicazione oppure eliminare il sinonimo public ' *\<NomeSinonimo*' per ricrearlo."  
   
  Con l'eliminazione di un server di pubblicazione Oracle, vengono automaticamente rimossi gli oggetti di replica nel database Oracle. In alcuni casi è tuttavia necessario eseguire manualmente la pulizia degli oggetti di replica Oracle. Per rimuovere manualmente gli oggetti di replica Oracle creati con la replica:  
   
@@ -79,7 +79,9 @@ ms.locfileid: "47667839"
 2.  Eseguire il comando SQL `DROP PUBLIC SYNONYM MSSQLSERVERDISTRIBUTOR;`.  
   
 3.  Eseguire il comando SQL `DROP USER <replication_administrative_user_schema>``CASCADE;`.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>Viene generato l'errore SQL Server 21663 relativo alla mancanza di una chiave primaria  
  Gli articoli delle pubblicazioni transazionali devono disporre di una chiave primaria valida. In assenza di una chiave primaria valida, quando si tenta di aggiungere un articolo viene visualizzato il messaggio di errore seguente:  
   
@@ -90,7 +92,7 @@ ms.locfileid: "47667839"
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>Viene generato l'errore SQL Server 21642 relativo all'accesso a un server collegato duplicato  
  Durante la configurazione iniziale di un server di pubblicazione Oracle, viene creata una voce di server collegato per la connessione tra server di pubblicazione e server di distribuzione. Il nome del server collegato corrisponde al nome del servizio TNS Oracle. Se si tenta di creare un server collegato con lo stesso nome, viene visualizzato il messaggio di errore seguente:  
   
- 'Per i server di pubblicazione eterogenei è necessario un server collegato. Esiste già un server collegato denominato '*\<NomeServerCollegato*'. Rimuovere il server collegato o scegliere un nome di server di pubblicazione diverso'.  
+ 'Per i server di pubblicazione eterogenei è necessario un server collegato. Esiste già un server collegato denominato ' *\<NomeServerCollegato*'. Rimuovere il server collegato o scegliere un nome di server di pubblicazione diverso'.  
   
  Questo errore si può verificare se si tenta di creare il server collegato direttamente oppure se è stata precedentemente eliminata la relazione tra il server di pubblicazione Oracle e il server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e si tenta ora di riconfigurarla. Se questo errore viene visualizzato durante un tentativo di riconfigurazione del server di pubblicazione, eliminare il server collegato con [sp_dropserver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md).  
   
@@ -157,7 +159,7 @@ ms.locfileid: "47667839"
   
 2.  Nella finestra di dialogo **Esegui** digitare **regedit**e quindi fare clic su **OK**.  
   
-3.  Individuare HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*\<NomeIstanza>* \Providers.  
+3.  Individuare HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<NomeIstanza>* \Providers.  
   
      Nella cartella Providers dovrebbe essere presente una cartella denominata OraOLEDB.Oracle. In questa cartella dovrebbe essere incluso il nome valore DWORD **AllowInProcess**, con un valore pari a **1**.  
   

@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc4bd0a0d3c70b31f398c791c4e75dbd7ab1403e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b155862bd9983bc8b93b6088bfa6d5df254ffe7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621149"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579393"
 ---
 # <a name="lesson-3-delete-database-objects"></a>Lezione 3: Eliminare gli oggetti di database
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,33 +44,32 @@ Utilizzare l'istruzione `REVOKE` per rimuovere l'autorizzazione di esecuzione pe
 
 1. Utilizzare l'istruzione `DROP` per rimuovere l'autorizzazione di accesso per `Mary` al database `TestData` :
   
-  ```sql  
-  DROP USER Mary;  
-  GO  
-  ```  
+   ```sql  
+   DROP USER Mary;  
+   GO  
+   ```  
 
 
 2. Utilizzare l'istruzione `DROP` per rimuovere l'autorizzazione di accesso per `Mary` all'istanza di [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]:
   
-  ```sql  
-    DROP LOGIN [<computer_name>\Mary];  
-    GO   
-  ```  
+   ```sql  
+   DROP LOGIN [<computer_name>\Mary];  
+   GO   
+   ```  
   
-3.   Utilizzare l'istruzione `DROP` per rimuovere la stored procedure `pr_Names`:  
+3. Utilizzare l'istruzione `DROP` per rimuovere la stored procedure `pr_Names`:  
   
-    ```sql  
-    DROP PROC pr_Names;  
-    GO  
-    ```  
+   ```sql  
+   DROP PROC pr_Names;  
+   GO   
+   ```  
   
-6.  Utilizzare l'istruzione `DROP` per rimuovere la vista `vw_Names`:  
+4. Utilizzare l'istruzione `DROP` per rimuovere la vista `vw_Names`:  
   
-    ```sql  
-    DROP VIEW vw_Names;  
-    GO  
-  
-    ```  
+   ```sql  
+   DROP VIEW vw_Names;  
+   GO  
+   ```  
 
 ## <a name="delete-table"></a>Eliminare la tabella
   

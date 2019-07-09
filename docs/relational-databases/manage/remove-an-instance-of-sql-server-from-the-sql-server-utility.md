@@ -13,12 +13,12 @@ ms.assetid: ae1d126a-46d2-47bf-b339-17c743df6491
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7db64758c57b586982a2f2edfa2008dbec164f90
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6894081bb925238e4f0e9f7abda4009281c2baa6
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535217"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580840"
 ---
 # <a name="remove-an-instance-of-sql-server-from-the-sql-server-utility"></a>Rimuovere un'istanza di SQL Server da Utilità SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,10 +31,12 @@ ms.locfileid: "52535217"
   
 2.  Nella colonna **Nome istanza di SQL Server** della visualizzazione elenco selezionare l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da rimuovere da Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Fare clic con il pulsante destro del mouse sull'istanza da rimuovere e scegliere **Rimuovi istanza gestita**.  
   
-3.  Specificare credenziali con privilegi di amministratore per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Fare clic su **Connetti**, verificare le informazioni nella finestra di dialogo **Connetti al server** e quindi fare clic su **Connetti**. Le informazioni di accesso verranno visualizzate nella finestra di dialogo **Rimuovi istanza gestita** .  
+3.  Specificare le credenziali con privilegi di amministratore per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Fare clic su **Connetti**, verificare le informazioni nella finestra di dialogo **Connetti al server** e quindi fare clic su **Connetti**. Le informazioni di accesso verranno visualizzate nella finestra di dialogo **Rimuovi istanza gestita** .  
   
 4.  Fare clic su **OK**per confermare l'operazione. Per uscire dall'operazione, scegliere **Annulla**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="manually-remove-a-managed-instance-of-sql-server-from-a-sql-server-utility"></a>Rimozione manuale di un'istanza gestita di SQL Server da un'Utilità SQL Server  
  Questa procedura rimuove l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dalla visualizzazione elenco del punto di controllo dell'utilità e arresta la raccolta dati in Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene disinstallata.  
   

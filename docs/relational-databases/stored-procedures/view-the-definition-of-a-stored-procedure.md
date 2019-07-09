@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a423012af5d4fa7c89b38fda6739c142bc5b367b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d6be68be92ac6525e0fb3b128e8c02ab596c601
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648919"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584129"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>Visualizzare la definizione di una stored procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,18 +30,18 @@ ms.locfileid: "47648919"
   
 -   **Prima di iniziare:**  [Sicurezza](#Security)  
   
--   **Per visualizzare la definizione di una stored procedure usando:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Per visualizzare la definizione di una procedura mediante:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Stored procedure di sistema: **sp_helptext**  
- È richiesta l'appartenenza al ruolo **public** . Le definizioni degli oggetti di sistema sono visibili pubblicamente. La definizione degli oggetti utente è visibile al proprietario degli oggetti o agli utenti autorizzati che dispongono di una delle autorizzazioni seguenti: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION.  
+ È richiesta l'appartenenza al ruolo **public** . Le definizioni degli oggetti di sistema sono visibili pubblicamente. La definizione degli oggetti utente è visibile al proprietario degli oggetti o agli utenti autorizzati che hanno una delle autorizzazioni seguenti: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION.  
   
  Funzione di sistema: **OBJECT_DEFINITION**  
- Le definizioni degli oggetti di sistema sono visibili pubblicamente. La definizione degli oggetti utente è visibile al proprietario degli oggetti o agli utenti autorizzati che dispongono di una delle autorizzazioni seguenti: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION. Queste autorizzazioni sono assegnate implicitamente ai membri dei ruoli predefiniti del database **db_owner**, **db_ddladmin**e **db_securityadmin** .  
+ Le definizioni degli oggetti di sistema sono visibili pubblicamente. La definizione degli oggetti utente è visibile al proprietario degli oggetti o agli utenti autorizzati che hanno una delle autorizzazioni seguenti: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION. Queste autorizzazioni sono assegnate implicitamente ai membri dei ruoli predefiniti del database **db_owner**, **db_ddladmin**e **db_securityadmin** .  
   
  Vista del catalogo dell'oggetto: **sys.sql_modules**  
  La visibilità dei metadati nelle viste del catalogo è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
@@ -56,14 +56,16 @@ ms.locfileid: "47648919"
 ###  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
  **Per visualizzare la definizione di una stored procedure in Esplora oggetti**  
   
-1.  In Esplora oggetti connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e quindi espanderla.  
+1.  In Esplora oggetti connettersi a un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , quindi espanderla.  
   
 2.  Espandere **Database**, espandere il database a cui appartiene la stored procedure, quindi espandere **Programmabilità**.  
   
-3.  Espandere **Stored procedure**, fare clic con il pulsante destro del mouse sulla stored procedure, quindi scegliere **Crea script per stored procedure**, quindi fare clic su una delle opzioni seguenti: **Genera codice per istruzione CREATE in**, **Genera codice per istruzione ALTER in**o **Genera codice per istruzioni DROP e CREATE in**.  
+3.  Espandere **Stored procedure**, fare clic con il pulsante destro del mouse sulla procedura, scegliere **Crea script per stored procedure**, infine fare clic su una delle opzioni seguenti: **Genera codice per istruzione CREATE in**, **Genera codice per istruzione ALTER in** o **Genera codice per istruzioni DROP e CREATE in**.  
   
 4.  Selezionare **Nuova finestra editor di query**. Verrà visualizzata la definizione della stored procedure.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  **Per visualizzare la definizione di una stored procedure nell'editor di query**  
   

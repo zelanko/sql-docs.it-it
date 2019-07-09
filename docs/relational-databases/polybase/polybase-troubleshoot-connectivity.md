@@ -12,12 +12,12 @@ ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 3a6e9206bb252d90a9bca498ffdc27ce507556c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 626d188dca3a013cba246f54523aa4fe9532815d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64776010"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581220"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Risolvere i problemi di connettività di PolyBase Kerberos
 
@@ -32,6 +32,8 @@ Questo articolo può essere usato come guida per eseguire il debug dei problemi 
 1. SQL Server 2016 RTM CU6 / SQL Server 2016 SP1 CU3 / SQL Server 2017 o versione successiva con PolyBase installato
 1. Un cluster Hadoop (Cloudera o Hortonworks) protetto con Kerberos (Active Directory o MIT)
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="introduction"></a>Introduzione
 
 È utile per capire il protocollo Kerberos a livello generale. Sono tre gli attori coinvolti:
@@ -40,7 +42,7 @@ Questo articolo può essere usato come guida per eseguire il debug dei problemi 
 1. Risorsa protetta (HDFS, MR2, YARN, cronologia processo e così via)
 1. Centro distribuzione chiavi (definito controller di dominio in Active Directory)
 
-Ogni risorsa protetta di Hadoop è registrata nel **Centro distribuzione chiavi (KDC)** con un **nome dell'entità servizio (SPN)** univoco quando Kerberos viene configurato nel cluster Hadoop. L'obiettivo è consentire al client di ottenere un ticket utente temporaneo, detto **Ticket Granting Ticket (TGT)**, in modo da richiedere un altro ticket temporaneo, detto **ticket di servizio (ST)**, dal KDC per il nome dell'entità servizio specifico a cui si vuole accedere.  
+Ogni risorsa protetta di Hadoop è registrata nel **Centro distribuzione chiavi (KDC)** con un **nome dell'entità servizio (SPN)** univoco quando Kerberos viene configurato nel cluster Hadoop. L'obiettivo è consentire al client di ottenere un ticket utente temporaneo, detto **Ticket Granting Ticket (TGT)** , in modo da richiedere un altro ticket temporaneo, detto **ticket di servizio (ST)** , dal KDC per il nome dell'entità servizio specifico a cui si vuole accedere.  
 
 In PolyBase, quando è richiesta l'autenticazione per qualsiasi risorsa protetta con Kerberos, viene eseguito il seguente handshake a quattro vie:
 
@@ -246,7 +248,7 @@ Se si riscontrano ancora problemi ad accedere a Kerberos, attenersi alla procedu
 
      Nell'esempio precedente, `admin_user` include solo il nome utente e nessuna parte di dominio.
 
-2. Se è possibile accedere ai dati di Hadoop Distributed File System Kerberos dall'esterno di PolyBase:
+2. Se non è possibile accedere ai dati di Hadoop Distributed File System Kerberos dall'esterno di PolyBase:
     - Esistono due tipi di autenticazione Kerberos: L'autenticazione Active Directory Kerberos e l'autenticazione MIT Kerberos.
     - Verificare che l'utente sia presente nell'account di dominio e usare lo stesso account utente per accedere al sistema HDFS.
 

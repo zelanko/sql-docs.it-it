@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e071a15e119e1225698cb2cea3f602d256841e74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 945573e16582ba2778ff29e7396a2fb6ea3dedce
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63015479"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556942"
 ---
 # <a name="memory-management-architecture-guide"></a>guida sull'architettura di gestione della memoria
 
@@ -97,7 +97,7 @@ La tabella seguente indica se un tipo specifico di allocazione di memoria è con
 |Memoria stack di thread|no|no|
 |Allocazioni dirette da Windows|no|no|
 
-A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] potrebbe allocare altra memoria rispetto al valore specificato nell'impostazione max server memory. Questo comportamento può verificarsi quando il valore **_Memoria totale server (KB)_ ** ha già raggiunto il valore dell'impostazione **_Memoria prevista server (KB)_ ** (come specificato da max server memory). Se la memoria contigua disponibile è insufficiente per soddisfare le richieste di più pagine di memoria (più di 8 KB) a causa della frammentazione della memoria, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] può eseguire l'overcommit anziché rifiutare la richiesta di memoria. 
+A partire da [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] potrebbe allocare altra memoria rispetto al valore specificato nell'impostazione max server memory. Questo comportamento può verificarsi quando il valore **_Memoria totale server (KB)_** ha già raggiunto il valore dell'impostazione **_Memoria prevista server (KB)_** (come specificato da max server memory). Se la memoria contigua disponibile è insufficiente per soddisfare le richieste di più pagine di memoria (più di 8 KB) a causa della frammentazione della memoria, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] può eseguire l'overcommit anziché rifiutare la richiesta di memoria. 
 
 Non appena viene eseguita questa allocazione, l'attività in background *Monitoraggio risorse* inizia a segnalare a tutti i consumer di memoria di rilasciare la memoria allocata e tenta di portare il valore *Memoria totale server (KB)* al di sotto del valore specificato per *Memoria prevista server (KB)* . Pertanto, l'utilizzo della memoria di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] potrebbe entro breve superare l'impostazione max server memory. In questo caso, la lettura del contatore delle prestazioni *Memoria totale server (KB)* risulterà superiore alle impostazioni max server memory e *Memoria prevista server (KB)* .
 

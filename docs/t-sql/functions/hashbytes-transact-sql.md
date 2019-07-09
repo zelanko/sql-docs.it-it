@@ -20,14 +20,15 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4364afdd649fe91f5e779170d9f80a4071118ea0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 400078e666f3854383cbd430cf8fd719ea720929
+ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67145415"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533809"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Restituisce l'hash MD2, MD4, MD5, SHA1 o SHA2 del relativo input in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -43,14 +44,15 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **'** \<algorithm> **'**  
- Identifica l'algoritmo di hash da utilizzare per eseguire l'hashing dell'input. Si tratta di un argomento obbligatorio in assenza di impostazioni predefinite. Le virgolette singole sono obbligatorie. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tutti gli algoritmi diversi da SHA2_256 e SHA2_512 sono deprecati.  
+
+`<algorithm>`  
+Identifica l'algoritmo di hash da utilizzare per eseguire l'hashing dell'input. Si tratta di un argomento obbligatorio in assenza di impostazioni predefinite. Le virgolette singole sono obbligatorie. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tutti gli algoritmi diversi da SHA2_256 e SHA2_512 sono deprecati.  
   
- **@input**  
- Specifica una variabile contenente i dati di cui eseguire l'hashing. **@input** è di tipo **varchar**, **nvarchar** o **varbinary**.  
+`@input`  
+Specifica una variabile contenente i dati di cui eseguire l'hashing. `@input` è di tipo **varchar**, **nvarchar** o **varbinary**.  
   
- **'** *input* **'**  
- Specifica un'espressione che restituisce un carattere o una stringa binaria di cui eseguire l'hashing.  
+'*input*'  
+Specifica un'espressione che restituisce un carattere o una stringa binaria di cui eseguire l'hashing.  
   
  L'output è conforme allo standard dell'algoritmo: 128 bit (16 byte) per MD2, MD4 e MD5; 160 bit (20 byte) per SHA e SHA1; 256 bit (32 byte) per SHA2_256 e 512 bit (64 byte) per SHA2_512.  
   
@@ -68,31 +70,30 @@ Gli algoritmi MD2, MD4, MD5, SHA e SHA1 sono deprecati a partire da [!INCLUDE[ss
 
 ## <a name="examples"></a>Esempi  
 ### <a name="return-the-hash-of-a-variable"></a>Restituire l'hash di una variabile  
- Nell'esempio seguente viene restituito l'hash `SHA1` dei dati **nvarchar** archiviati nella variabile `@HashThis`.  
+ Nell'esempio seguente viene restituito l'hash `SHA2_256` dei dati **nvarchar** archiviati nella variabile `@HashThis`.  
   
 ```sql  
-DECLARE @HashThis nvarchar(4000);  
-SET @HashThis = CONVERT(nvarchar(4000),'dslfdkjLK85kldhnv$n000#knf');  
-SELECT HASHBYTES('SHA1', @HashThis);  
+DECLARE @HashThis nvarchar(32);  
+SET @HashThis = CONVERT(nvarchar(32),'dslfdkjLK85kldhnv$n000#knf');  
+SELECT HASHBYTES('SHA2_256', @HashThis);  
 ```  
   
 ### <a name="return-the-hash-of-a-table-column"></a>Restituire l'hash di una colonna di tabella  
- Nell'esempio seguente viene restituito l'hash SHA1 dei valori della colonna `c1` nella tabella `Test1`.  
+ Nell'esempio seguente viene restituito l'hash SHA2_256 dei valori della colonna `c1` nella tabella `Test1`.  
   
 ```sql  
-CREATE TABLE dbo.Test1 (c1 nvarchar(50));  
+CREATE TABLE dbo.Test1 (c1 nvarchar(32));  
 INSERT dbo.Test1 VALUES ('This is a test.');  
 INSERT dbo.Test1 VALUES ('This is test 2.');  
-SELECT HASHBYTES('SHA1', c1) FROM dbo.Test1;  
+SELECT HASHBYTES('SHA2_256', c1) FROM dbo.Test1;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
 -------------------------------------------  
-0x0E7AAB0B4FF0FD2DFB4F0233E2EE7A26CD08F173  
-0xF643A82F948DEFB922B12E50B950CEE130A934D6  
-  
+0x741238C01D9DB821CF171BF61D72260B998F7C7881D90091099945E0B9E0C2E3 
+0x91DDCC41B761ACA928C62F7B0DA61DC763255E8247E0BD8DCE6B22205197154D  
 (2 row(s) affected)  
 ```  
   

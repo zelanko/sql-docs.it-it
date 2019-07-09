@@ -24,12 +24,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 768ffcece8525d36eb7ab3576f28596430941caa
-ms.sourcegitcommit: 3a1e0b92cbe53ccf3b233faf8629d16bbf673b30
+ms.openlocfilehash: a34c21deff4314747f1477efeb3f20991d311fb5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55229042"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585027"
 ---
 # <a name="statistics"></a>Statistiche
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -112,7 +112,7 @@ ORDER BY s.name;
     * Se la cardinalità della tabella è 500 o minore al momento della valutazione delle statistiche, l'aggiornamento avviene ogni 500 modifiche.
     * Se la cardinalità della tabella è maggiore di 500 al momento della valutazione delle statistiche, l'aggiornamento avviene ogni 500 modifiche + il 20%.
 
-* A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e con [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa una soglia di aggiornamento delle statiche dinamica decrescente, che si adatta al numero di righe nella tabella. Tale soglia viene calcolata come radice quadrata del prodotto di 1000 e della cardinalità della tabella corrente. Se ad esempio la tabella contiene 2 milioni di righe, il calcolo sarà sqrt (1000 * 2000000) = 44721,359. Con questa modifica, le statistiche sulle tabelle di grandi dimensioni vengono aggiornate più spesso. Tuttavia, se il livello di compatibilità di un database è minore di 130, viene applicata la soglia di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+* A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e con [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa una soglia di aggiornamento delle statiche dinamica decrescente, che si adatta al numero di righe nella tabella. Tale soglia viene calcolata come radice quadrata del prodotto di 1000 e della cardinalità della tabella corrente. Ad esempio, se la tabella contiene 2 milioni di righe, il calcolo sarà? sqrt (1000 * 2000000) = 44721,359. Con questa modifica, le statistiche sulle tabelle di grandi dimensioni vengono aggiornate più spesso. Tuttavia, se il livello di compatibilità di un database è minore di 130, viene applicata la soglia di [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. ?
 
 > [!IMPORTANT]
 > A partire da [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] e fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] con [livello di compatibilità del database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, usare il [flag di traccia 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] userà una soglia di aggiornamento delle statiche dinamica decrescente, che si adatta al numero di righe nella tabella.
@@ -162,7 +162,9 @@ Per altre informazioni sul controllo di AUTO_UPDATE_STATISTICS, vedere [Controll
 1.  Query Optimizer crea statistiche per gli indici in tabelle o viste, al momento della creazione dell'indice stesso. Tali statistiche vengono create nelle colonne chiave dell'indice. Se l'indice è filtrato, Query Optimizer crea statistiche filtrate nello stesso subset di righe specificato per l'indice filtrato. Per altre informazioni sugli indici filtrati, vedere [Creare indici filtrati](../../relational-databases/indexes/create-filtered-indexes.md) e [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 2.  Quando [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) è impostata su ON, Query Optimizer crea statistiche per le singole colonne nei predicati di query.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 Per la maggior parte delle query, questi due metodi di creazione delle statistiche garantiscono la definizione di un piano di query di alta qualità. In alcuni casi, è possibile migliorare i piani di query creando statistiche aggiuntive con l'istruzione [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) . Tali statistiche aggiuntive possono acquisire correlazioni statistiche che non vengono prese in considerazione in Query Optimizer durante la creazione di statistiche per indici o singole colonne. È possibile che nell'applicazione siano disponibili correlazioni statistiche aggiuntive nei dati della tabella che, se calcolate in un oggetto statistiche, possono consentire a Query Optimizer di migliorare i piani di query. Le statistiche filtrate per un subset di righe di dati o le statistiche multicolonna per le colonne dei predicati di query possono ad esempio migliorare il piano di query.  
   
 Quando si creano statistiche con l'istruzione CREATE STATISTICS, si consiglia di mantenere l'opzione AUTO_CREATE_STATISTICS impostata su ON, in modo tale che Query Optimizer continui a creare regolarmente statistiche a colonna singola per le colonne dei predicati di query. Per altre informazioni sui predicati, vedere [Condizione di ricerca&#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
@@ -236,7 +238,7 @@ Quando le statistiche su uno snapshot o un database di sola lettura sono mancant
 Solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile creare e aggiornare le statistiche temporanee. È tuttavia possibile eliminare le statistiche temporanee e monitorare le relative proprietà utilizzando gli stessi strumenti utilizzati per le statistiche permanenti:  
   
 * Eliminare le statistiche temporanee usando l'istruzione [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md).  
-* Monitorare le statistiche usando le viste del catalogo **[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)** e **[sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)**. **sys_stats** include una colonna, **is_temporary** , che indica quali statistiche sono permanenti e quali invece temporanee.  
+* Monitorare le statistiche usando le viste del catalogo **[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)** e **[sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)** . **sys_stats** include una colonna, **is_temporary** , che indica quali statistiche sono permanenti e quali invece temporanee.  
   
  Poiché le statistiche temporanee sono archiviate in **tempdb**, un riavvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comporta l'indisponibilità di tutte le statistiche temporanee.  
     

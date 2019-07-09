@@ -16,12 +16,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 70f74f1b098c53c864fb2bf20889b43541d70846
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0ed869ccfbeb745229ce1bbf2780ce6beb7e12e2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539726"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579886"
 ---
 # <a name="create-an-application-role"></a>Creazione di un ruolo applicazione
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "52539726"
 > [!IMPORTANT]  
 >  In fase di impostazione delle password per i ruoli applicazione viene eseguito il controllo dei requisiti di complessità delle password. Le applicazioni che richiamano i ruoli applicazione devono archiviare le relative password. Le password dei ruoli applicazione devono essere sempre archiviate in forma crittografata.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "52539726"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY APPLICATION ROLE nel database.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -59,7 +59,7 @@ ms.locfileid: "52539726"
   
 3.  Espandere la cartella **Ruoli** .  
   
-4.  Fare clic con il pulsante destro del mouse sulla cartella **Ruoli applicazione**, quindi scegliere **Nuovo ruolo applicazione...**.  
+4.  Fare clic con il pulsante destro del mouse sulla cartella **Ruoli applicazione**, quindi scegliere **Nuovo ruolo applicazione...** .  
   
 5.  Nella pagina **Generale** della finestra di dialogo **Ruolo applicazione - Nuovo**immettere il nome del nuovo ruolo applicazione nella casella **Nome ruolo**.  
   
@@ -70,9 +70,11 @@ ms.locfileid: "52539726"
 8.  In **Schemi di proprietà del ruolo**, selezionare o visualizzare gli schemi che saranno di proprietà di questo ruolo. Uno schema può essere di proprietà di un solo schema o ruolo.  
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="additional-options"></a>Opzioni aggiuntive  
- Nella finestra di dialogo **Ruolo applicazione - Nuovo** sono anche disponibili opzioni in due pagine aggiuntive, cioè **Entità a protezione diretta** e **Proprietà estese**.  
+ La finestra di dialogo **Ruolo applicazione - Nuovo** offre anche opzioni in altre due pagine: **Entità a protezione diretta** e **Proprietà estese**.  
   
 -   Nella pagina **Entità a protezione diretta** sono elencate tutte le possibili entità a protezione diretta e le autorizzazioni su quelle entità a protezione diretta che possono essere concesse all'account di accesso.  
   
@@ -86,7 +88,7 @@ ms.locfileid: "52539726"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- Creates an application role called "weekly_receipts" that has the password "987Gbv876sPYY5m23" and "Sales" as its default schema.  

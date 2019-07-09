@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: dbf81f0cb1100fdc5663a8c2ff46343d8d9671c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47382961ebb72d3d0b51ae9a72161fb107021f75
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64568276"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559464"
 ---
 # <a name="query-profiling-infrastructure"></a>Infrastruttura di profilatura delle query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -171,6 +171,18 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
     MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
     MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
+
+## <a name="query-profiling-infrastruture-usage-guidance"></a>Linee guida per l'utilizzo dell'infrastruttura di profilatura di query
+La tabella seguente riepiloga le azioni per abilitare la profilatura standard o la profilatura leggera, sia a livello globale (a livello di server) che in una singola sessione. Include anche la versione minima per cui è disponibile l'azione. 
+
+|Ambito|Profilatura standard|Profilatura leggera|
+|---------------|---------------|---------------|
+|Global|Sessione xEvent con `query_post_execution_showplan` XE; a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Flag di traccia 7412; a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1|
+|Global|Traccia SQL e SQL Server Profiler con l'evento di traccia `Showplan XML`; a partire da SQL Server 2000|Sessione xEvent con `query_thread_profile` XE; a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2|
+|Global|-|Sessione xEvent con `query_post_execution_plan_profile` XE; a partire da [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
+|Sessione|Usare `SET STATISTICS XML ON`; a partire da SQL Server 2000|Usare l'hint per la query `QUERY_PLAN_PROFILE` insieme a una sessione xEvent con `query_plan_profile` XE; a partire [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11|
+|Sessione|Usare `SET STATISTICS PROFILE ON`; a partire da SQL Server 2000|-|
+|Sessione|Fare clic sul pulsante [Statistiche query dinamiche](../../relational-databases/performance/live-query-statistics.md) in SSMS; a partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2|-|
 
 ## <a name="remarks"></a>Remarks
 

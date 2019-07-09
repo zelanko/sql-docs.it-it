@@ -1,9 +1,9 @@
 ---
 title: Sicurezza a livello di riga | Microsoft Docs
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 05/14/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
@@ -18,12 +18,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ba5cddf682ba9e3f9dfa6e5ef9b44ce7f9e5f4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de58a5d37bae0f589cae0c56dba21370923aa850
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140594"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559445"
 ---
 # <a name="row-level-security"></a>Sicurezza a livello di riga
 
@@ -38,8 +38,8 @@ La sicurezza a livello di riga semplifica la progettazione e la codifica della s
 La logica di restrizione dell'accesso si trova sul livello del database e non su un altro livello applicazione lontano dai dati. Il sistema del database applica le restrizioni di accesso a ogni tentativo di accesso ai dati da qualsiasi livello. La riduzione della superficie di attacco del sistema di sicurezza lo rende più affidabile e solido.  
   
 Implementare la sicurezza a livello di riga tramite l'istruzione [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] e i predicati creati come [funzioni con valori di tabella inline](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
-  
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([fare clic qui per ottenerlo](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([fare clic qui per ottenerlo](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
   
 > [!NOTE]
 > Azure SQL Data Warehouse supporta solo predicati di filtro. I predicati di blocco non sono attualmente supportati in Azure SQL Data Warehouse.
@@ -422,7 +422,7 @@ DROP LOGIN Manager;
 ### <a name="MidTier"></a> C. Scenari per gli utenti che si connettono al database tramite un'applicazione di livello intermedio
 
 > [!NOTE]
-> Questo esempio non è applicabile ad Azure SQL Data Warehouse, perché SESSION_CONTEXT e i predicati di blocco non sono attualmente supportati.
+> In questo esempio, la funzionalità di predicati di blocco non è attualmente supportata per Azure SQL Data Warehouse, quindi l'inserimento di righe per l'ID utente errato non viene bloccato con Azure SQL Data Warehouse.
 
 Questo esempio mostra in che modo un'applicazione di livello intermedio può implementare il filtro della connessione, in cui gli utenti dell'applicazione (o i tenant) condividono lo stesso utente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (l'applicazione). L'applicazione imposta l'ID utente dell'applicazione corrente in [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) dopo la connessione al database, quindi i criteri di sicurezza filtrano in modo trasparente le righe che non devono essere visibili a tale ID e impediscono all'utente di inserire righe per l'ID utente errato. Non sono necessarie altre modifiche all'applicazione.  
   

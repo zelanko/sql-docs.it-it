@@ -11,12 +11,12 @@ ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8eab3ceeb9ace557f7e7f34b4bb267d6269d7fdc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3bf26c7ea0384523370557e71069bf30233a74d6
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521378"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586365"
 ---
 # <a name="create-an-encrypted-backup"></a>Creare un backup crittografato
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52521378"
   
  Utilizzare i passaggi seguenti per creare un backup crittografato di un database in un disco locale. In questo esempio viene utilizzato un database utente denominato MyTestDB.  
   
-1.  **Creare una chiave master del database per il database master:** scegliere una password per crittografare la copia della chiave master che verrà archiviata nel database. Connettersi al motore di database, avviare una nuova finestra Query e copiare e incollare l'esempio seguente, quindi fare clic su **Esegui**.  
+1.  **Creare una chiave master del database del database master:** Scegliere una password per la crittografia della copia della chiave master che verrà archiviata nel database. Connettersi al motore di database, avviare una nuova finestra Query e copiare e incollare l'esempio seguente, quindi fare clic su **Esegui**.  
   
     ```  
     -- Creates a database master key.   
@@ -54,8 +54,10 @@ ms.locfileid: "52521378"
   
     ```  
   
-3.  **Backup del database:** specificare l'algoritmo di crittografia e il certificato da usare. Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
-  
+3.  **Eseguire il backup del database:** specificare l'algoritmo di crittografia e il certificato da usare. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     BACKUP DATABASE [MyTestDB]  
     TO DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\MyTestDB.bak'  
@@ -78,11 +80,11 @@ ms.locfileid: "52521378"
   
  **Prerequisiti:**  
   
--   Account di archiviazione di Windows con contenitore. Per altre informazioni, vedere [Lezione 1: Creare gli oggetti della risorsa di archiviazione di Windows Azure](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5).  
+-   Account di archiviazione di Windows con contenitore. Per altre informazioni, vedere [Lezione 1: Creare oggetti di Archiviazione di Microsoft Azure](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5).  
   
 -   Chiave master di un database master e certificato o chiave asimmetrica nell'istanza di SQL Server. Per le autorizzazioni e i requisiti di crittografia, vedere [Crittografia dei backup](../../relational-databases/backup-restore/backup-encryption.md).  
   
-1.  **Creare le credenziali di SQL Server:** per creare le credenziali di SQL Server, connettersi al motore di database, aprire una nuova finestra Query e copiare e incollare il seguente esempio, quindi fare clic su **Esegui**.  
+1.  **Creare credenziali di SQL Server:** per creare le credenziali di SQL Server, connettersi al motore di database, aprire una nuova finestra Query, copiare e incollare l'esempio seguente e quindi fare clic su **Esegui**.  
   
     ```  
     CREATE CREDENTIAL mycredential   
@@ -90,7 +92,7 @@ ms.locfileid: "52521378"
     , SECRET = '<storage account access key>' - this should be either the Primary or Secondary Access Key for the storage account  
     ```  
   
-2.  **Creare una chiave master del database:** scegliere una password per crittografare la copia della chiave master che verrà archiviata nel database. Connettersi al motore di database, avviare una nuova finestra Query e copiare e incollare l'esempio seguente, quindi fare clic su **Esegui**.  
+2.  **Creare una chiave master del database:** Scegliere una password per la crittografia della copia della chiave master che verrà archiviata nel database. Connettersi al motore di database, avviare una nuova finestra Query e copiare e incollare l'esempio seguente, quindi fare clic su **Esegui**.  
   
     ```  
     -- Creates a database master key.  
@@ -113,7 +115,7 @@ ms.locfileid: "52521378"
   
     ```  
   
-4.  **Backup del database:** specificare l'algoritmo di crittografia e il certificato da usare. Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+4.  **Eseguire il backup del database:** specificare l'algoritmo di crittografia e il certificato da usare. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     BACKUP DATABASE [MyTestDB]  

@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d4d718b38780b7dd77f356269a431daf0f91b03
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 23b29d5d7626986c957489249eb570eaa993f8f0
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514637"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581677"
 ---
 # <a name="create-views"></a>Creare viste
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52514637"
   
 -   Per fornire un'interfaccia compatibile con le versioni precedenti con cui emulare una tabella il cui schema è stato modificato.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "52514637"
   
 2.  Fare clic con il pulsante destro del mouse sulla cartella **Viste** e quindi selezionare **Nuova vista**.  
   
-3.  Nella finestra di dialogo **Aggiungi tabella** selezionare gli elementi che si desidera includere nella nuova vista da una delle schede seguenti: Tabelle, Viste, Funzioni e Sinonimi.  
+3.  Nella finestra di dialogo **Aggiungi tabella** selezionare gli elementi che si vuole includere nella nuova vista da una delle schede seguenti: Tabelle, Viste, Funzioni e Sinonimi.  
   
 4.  Fare clic su **Aggiungi**, quindi su **Chiudi**.  
   
@@ -76,8 +76,10 @@ ms.locfileid: "52514637"
 7.  Nel menu **File** scegliere **Salva**_view name_.  
   
 8.  Nella finestra di dialogo **Scegli nome** immettere un nome per la nuova vista, quindi scegliere **OK**.  
-  
-     Per altre informazioni su Progettazione query e Progettazione viste, vedere [Strumenti di progettazione di query e viste &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f).  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     For more information about the query and view designer, see [Query and View Designer Tools &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f).  
   
 ##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
@@ -87,7 +89,7 @@ ms.locfileid: "52514637"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012 ;   

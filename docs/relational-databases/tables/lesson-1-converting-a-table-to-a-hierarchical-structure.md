@@ -13,12 +13,12 @@ ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e95be3958bf3b5ab77e3da43e31b91b75c918d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83871be7e8de5976eee684788d7a1a852aaa7c8a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661159"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582153"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Lezione 1: Conversione di una tabella in una struttura gerarchica
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,9 @@ Il database di esempio Adventureworks2017 (o versione successiva) contiene una t
 ### <a name="copy-the-employee-table"></a>Copiare la tabella Employee  
   
 1.  In una finestra editor di query, eseguire il codice seguente per copiare la struttura della tabella e i dati della tabella **Employee** in una tabella nuova denominata **EmployeeDemo**. Poiché la tabella originale usa già hierarchyid, questa query essenzialmente rende flat la gerarchia per recuperare il manager del dipendente. Nelle parti successive di questa lezione questa gerarchia verrà ricostruita.
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```sql  
     USE AdventureWorks2017;  
     GO  

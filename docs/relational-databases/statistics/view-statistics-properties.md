@@ -16,22 +16,22 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3a20135a3063e5316f133e2f6483eb40e17d035
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 27fb2d88af957067af09baccd7cbd6f3629b7353
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256636"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585033"
 ---
 # <a name="view-statistics-properties"></a>Visualizzare le proprietà delle statistiche
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   È possibile visualizzare le statistiche di ottimizzazione delle query correnti per una tabella o una vista indicizzata in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'oggetto statistiche include un'intestazione con metadati relativi alle statistiche, un istogramma con la distribuzione dei valori nella prima colonna chiave dell'oggetto stesso e un vettore di densità per misurare la correlazione tra colonne. Per altre informazioni sugli istogrammi e sui vettori di densità, vedere [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Visualizzare le proprietà delle statistiche tramite:**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "54256636"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per visualizzare l'oggetto statistiche, l'utente deve essere il proprietario della tabella oppure un membro del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** o **db_ddladmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -97,7 +97,7 @@ ms.locfileid: "54256636"
      Numero medio di byte per valore per tutte le colonne chiave nell'oggetto statistiche.  
   
      **String Index**  
-     Il valore Yes indica che l'oggetto statistiche contiene statistiche di riepilogo delle stringhe per migliorare le stime relative alla cardinalità per i predicati della query che utilizzano l'operatore LIKE, ad esempio `WHERE ProductName LIKE '%Bike'`. Le statistiche di riepilogo delle stringhe vengono archiviate separatamente rispetto all'istogramma e vengono create nella prima colonna chiave dell'oggetto statistiche quando tale colonna è di tipo **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text**o **ntext**.  
+     Il valore Yes indica che l'oggetto statistiche contiene statistiche di riepilogo delle stringhe per migliorare le stime relative alla cardinalità per i predicati della query che utilizzano l'operatore LIKE, ad esempio `WHERE ProductName LIKE '%Bike'`. Le statistiche di riepilogo delle stringhe vengono archiviate separatamente rispetto all'istogramma e vengono create nella prima colonna chiave dell'oggetto statistiche quando tale colonna è di tipo **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text**o **ntext**.  
   
      **Espressione filtro**  
      Predicato per il subset di righe della tabella incluso nell'oggetto statistiche. NULL = statistiche non filtrate.  
@@ -134,8 +134,10 @@ ms.locfileid: "54256636"
      Numero medio di righe con valori di colonna duplicati compresi in un intervallo dell'istogramma, escluso il limite superiore (RANGE_ROWS / DISTINCT_RANGE_ROWS per DISTINCT_RANGE_ROWS > 0).  
   
 7.  Fare clic su **OK**.  
-  
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-view-statistics-properties"></a>Per visualizzare le proprietà delle statistiche  
   
@@ -143,7 +145,7 @@ ms.locfileid: "54256636"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;  
@@ -161,7 +163,7 @@ ms.locfileid: "54256636"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;   

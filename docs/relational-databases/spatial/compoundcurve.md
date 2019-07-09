@@ -11,12 +11,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b1d6e67ef3810a6da8a58b81f278afafd713e0f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd06ad617f2e74d068209859bde6bcbe95d84b62
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935387"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580540"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,9 @@ ms.locfileid: "65935387"
 1.  Deve contenere almeno un'istanza **CircularString** o **LineString** .  
   
 2.  La sequenza di istanze **CircularString** o **LineString** deve essere continua.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 Se un'istanza **CompoundCurve** contiene una sequenza di più istanze **CircularString** e **LineString** , l'endpoint finale per ogni istanza, a eccezione dell'ultima, deve essere l'endpoint iniziale dell'istanza successiva nella sequenza. Ciò significa che se il punto finale di un'istanza precedente nella sequenza è (4 3 7 2), il punto iniziale dell'istanza successiva nella sequenza deve essere (4 3 7 2). Si noti che i valori Z (elevazione) e M (misura) del punto devono essere anch'essi uguali. Nel caso di una differenza nei due punti, viene generata un'eccezione `System.FormatException` . I punti in un'istanza **CircularString** non devono avere un valore Z o M. Se non sono presenti valori Z o M per il punto finale dell'istanza precedente, il punto iniziale dell'istanza successiva non potrà includere valori Z o M. Se il punto finale della sequenza precedente è (4 3), il punto iniziale della sequenza successiva dovrà essere (4 3). Non potrà essere (4 3 7 2). Tutti i punti in un'istanza **CompoundCurve** non devono avere alcun valore Z oppure devono avere lo stesso valore Z.  
   
 ## <a name="compoundcurve-instances"></a>Istanze CompoundCurve  
@@ -138,7 +140,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARS
 SELECT @g.STLength();  
 ```  
   
-Viene prodotto l'output `12.5663706143592` equivalente a 4∏. L'istanza `CompoundCurve` riportata nell'esempio consente di archiviare un cerchio con un raggio di 2. In entrambi gli esempi di codice precedenti non è stato necessario utilizzare un'istanza `CompoundCurve`. Per il primo esempio sarebbe stata più semplice un'istanza `LineString` , mentre per il secondo esempio sarebbe stata più semplice un'istanza `CircularString` . Nell'esempio successivo viene tuttavia illustrato in quale punto un'istanza `CompoundCurve` costituisce una migliore alternativa.  
+Viene prodotto l'output `12.5663706143592` equivalente a 4?. L'istanza `CompoundCurve` riportata nell'esempio consente di archiviare un cerchio con un raggio di 2. In entrambi gli esempi di codice precedenti non è stato necessario utilizzare un'istanza `CompoundCurve`. Per il primo esempio sarebbe stata più semplice un'istanza `LineString` , mentre per il secondo esempio sarebbe stata più semplice un'istanza `CircularString` . Nell'esempio successivo viene tuttavia illustrato in quale punto un'istanza `CompoundCurve` costituisce una migliore alternativa.  
   
 ### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>F. Utilizzo di un'istanza CompoundCurve per archiviare un semicerchio  
  Nell'esempio seguente viene utilizzata un'istanza `CompoundCurve` per archiviare un semicerchio.  
@@ -184,7 +186,7 @@ Circle One11.940039...
 Circle Two12.566370...  
 ```  
   
-Il perimetro di Circle Two è approssimativamente 4∏, che corrisponde al valore effettivo per il perimetro. Il perimetro per Circle One, tuttavia, è significativamente impreciso. L'istanza `CompoundCurve` di Circle One consente l'archiviazione di un segmento di arco circolare (ABC) e di due segmenti di linea (CD, DA). Tramite l'istanza `CompoundCurve` devono essere archiviati due segmenti di arco circolare (ABC, CDA) per definire un cerchio. Tramite un'istanza `LineString` viene definito il secondo set di punti (4 2, 2 4, 0 2) nell'istanza `CompoundCurve` di Circle One. È necessario dichiarare in modo esplicito un'istanza `CircularString` in un'istanza `CompoundCurve`.  
+Il perimetro di Circle Two è approssimativamente 4?, che corrisponde al valore effettivo per il perimetro. Il perimetro per Circle One, tuttavia, è significativamente impreciso. L'istanza `CompoundCurve` di Circle One consente l'archiviazione di un segmento di arco circolare (ABC) e di due segmenti di linea (CD, DA). Tramite l'istanza `CompoundCurve` devono essere archiviati due segmenti di arco circolare (ABC, CDA) per definire un cerchio. Tramite un'istanza `LineString` viene definito il secondo set di punti (4 2, 2 4, 0 2) nell'istanza `CompoundCurve` di Circle One. È necessario dichiarare in modo esplicito un'istanza `CircularString` in un'istanza `CompoundCurve`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [STIsValid &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   

@@ -15,12 +15,12 @@ ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b9a3f872a87695da3e6c57ad90012cfe1307109
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a5aced367f3b046473887999ff8e72b24ff8156
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047339"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580456"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>Risoluzione dei conflitti per la replica di tipo merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "63047339"
   
     -   Selezionare una o più righe nella griglia superiore e quindi fare clic su **Rimuovi**, che equivale a fare clic sul pulsante **Invia riga in conflitto confermata** , senza apportare alcuna modifica ai dati.  
   
-    -   Fare clic sul pulsante delle proprietà ( **…** ) per visualizzare ulteriori informazioni su una colonna coinvolta in un conflitto.  
+    -   Fare clic sul pulsante delle proprietà ( **?** ) per visualizzare altre informazioni su una colonna coinvolta in un conflitto.  
   
     -   Modificare i dati nella colonna **Riga in conflitto confermata** o **Riga in conflitto ignorata** prima di inviare i dati, che sono di sola lettura se la colonna è grigia.  
   
@@ -74,8 +74,8 @@ ms.locfileid: "63047339"
   
 6.  Chiudere il Visualizzatore conflitti di replica.  
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-  
 ## <a name="view-conflict-information"></a>Visualizzare le informazioni sui conflitti
 Quando si risolve un conflitto in una replica di tipo merge, i dati della riga non confermata vengono scritti in una tabella di conflitti. I dati relativi al conflitto possono essere visualizzati a livello di programmazione tramite le stored procedure di replica. Per altre informazioni, vedere [Rilevamento e risoluzione avanzati dei conflitti nella replica di tipo merge](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   

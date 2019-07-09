@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 79be3e174e77648b4cbe908fa7d29f827bf4d3c5
-ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
+ms.openlocfilehash: d1f75a8c70415fe31419a8f30f80e727226fa879
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263503"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556929"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novità di SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ SQL Server 2017 include numerose nuove funzionalità del motore di database, mig
 - La colonna **modified_extent_page_count** in [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) tiene traccia delle modifiche differenziali in ogni file di database abilitando soluzioni di backup intelligente che eseguono un backup differenziale o un backup completo in base alla percentuale di pagine modificate nel database. (CTP 2.0)
 - La sintassi T-SQL [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) supporta ora il caricamento di una tabella in un filegroup diverso da quello predefinito dell'utente usando la parola chiave **ON**. (CTP 2.0)
 - Le transazioni tra database sono ora supportate in tutti i database che appartengono a un **gruppo di disponibilità Always On**, inclusi i database che appartengono alla stessa istanza. Vedere [Transactions - Always On Availability Groups and Database Mirroring](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md) (Transazioni: gruppi di disponibilità Always On e mirroring del database) (CTP 2.0)
-- La nuova funzionalità **Gruppi di disponibilità** include il supporto senza cluster, l'impostazione Minimum Replica Commit Availability Groups (Gruppi di disponibilità con commit di un numero minimo di repliche), le migrazioni tra sistemi operativi Windows e Linux e i test. (CTP 1.3)
+- La nuova funzionalità **Gruppi di disponibilità** include il supporto della scalabilità in lettura senza cluster, l'impostazione Minimum Replica Commit Availability Groups (Gruppi di disponibilità con commit di un numero minimo di repliche), le migrazioni tra sistemi operativi Windows e Linux e i test. (CTP 1.3)
 - Nuove viste di gestione dinamiche:
     - [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) espone attributi a livello di riepilogo e informazioni sui file di log delle transazioni utili per il monitoraggio dello stato dei log delle transazioni. (CTP 2.1)
     - [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) tiene traccia dell'utilizzo dell'archivio versioni per ogni database e consente di pianificare in modo proattivo la dimensione del file tempdb in base all'utilizzo dell'archivio versioni di ogni singolo database. (CTP 2.0)

@@ -9,12 +9,12 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: cd2f9dec39075b332b2ae38c622f3970faf8d331
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
+ms.openlocfilehash: 8767640e2ad0a7b71bb7977ab6eb997892845403
+ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67037846"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533838"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Note sulla versione per SQL Server Reporting Services (SSRS) 2017 e versioni successive
 
@@ -50,6 +50,23 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
+
+## <a name="1406001274-20190701"></a>14.0.600.1274, 01/07/2019
+
+| Risolto un problema | Dettagli |
+| :---------- | :------ |
+| Aggiornamenti per la sicurezza | &nbsp; |
+| Non è possibile selezionare i giorni della settimana durante la creazione di una pianificazione settimana condivisa | &nbsp; |
+| Report non visualizza ritorni a capo in modo corretto in formato Word | &nbsp; |
+| Non aggiornamento di System Center Operations Manager(SCOM) 2019 funziona più con recenti SSRS 2017 | &nbsp; |
+| Si è verificato un errore durante la chiamata dell'estensione di autorizzazione per set di dati condiviso | &nbsp; |
+| Per la logica modificata nella stored procedure GetAllProperties in SSRS 2017 e PBIRS, che fa sì che l'endpoint del servizio Web ReportingService2010.GetProperties metodo non è possibile ottenere tutti i dati per report collegato | &nbsp; |
+| Intestazione di riga della griglia semplice nel Report per dispositivi mobili scompare quando si fa clic su un elemento all'interno della griglia | &nbsp; |
+| Non è possibile usare il campo data nel parametro di sottoscrizione guidata dai dati | &nbsp; |
+| Tablix nidificata Mostra carattere di piccole dimensioni o parziale in SSRS 2016 e versioni successive | &nbsp; |
+| Sottoscrizioni con errori di parametro DateTime out dopo che l'utente con le modifiche delle impostazioni locali diverse della sottoscrizione | &nbsp; |
+| Creazione di una sottoscrizione guidata dai dati con estensione Null per il recapito ha esito negativo con "si è verificato un errore di recapito" | &nbsp; |
+| Codifica URL è corretta quando si imposta il valore nel formato Excel\Word | &nbsp; |
 
 ## <a name="1406001109-20190212"></a>14.0.600.1109, 12/02/2019
 

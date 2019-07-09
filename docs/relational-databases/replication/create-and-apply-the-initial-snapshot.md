@@ -14,12 +14,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d537dedf9cf84cafd0b61cfac6605f1b0457fb8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a18aaf9d8743e5f3d250d04156dd5bab5375625f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135611"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579470"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Creazione e applicazione dello snapshot iniziale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,11 +50,11 @@ Per visualizzare o modificare la posizione della cartella snapshot predefinita, 
 
  Specificare la posizione predefinita degli snapshot nella pagina **Cartella snapshot** della Configurazione guidata distribuzione. Per altre informazioni sull'uso di questa procedura guidata, vedere [Configurare la pubblicazione e la distribuzione](../../relational-databases/replication/configure-publishing-and-distribution.md). Se si crea una pubblicazione su un server non configurato come server di distribuzione, specificare una posizione predefinita degli snapshot nella pagina **Cartella snapshot** della Creazione guidata nuova pubblicazione. Per altre informazioni sull'uso di questa procedura guidata, vedere [Creare una pubblicazione](../../relational-databases/replication/publish/create-a-publication.md).  
   
- Modificare la posizione predefinita degli snapshot nella pagina **Server di pubblicazione** della finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>**. Per altre informazioni, vedere [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md). Impostare la cartella snapshot per ogni pubblicazione nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione**. Per altre informazioni, vedere [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Modificare la posizione predefinita degli snapshot nella pagina **Server di pubblicazione** della finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>** . Per altre informazioni, vedere [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md). Impostare la cartella snapshot per ogni pubblicazione nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione**. Per altre informazioni, vedere [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 ### <a name="modify-the-default-snapshot-location"></a>Modificare la posizione predefinita degli snapshot  
   
-1.  Nella pagina **Server di pubblicazione** della finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>** fare clic sul pulsante delle proprietà (**…**) per il server di pubblicazione di cui si vuole modificare la posizione predefinita degli snapshot.  
+1.  Nella pagina **Server di pubblicazione** della finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>** fare clic sul pulsante delle proprietà ( **?** ) per il server di pubblicazione di cui si vuole modificare la posizione predefinita degli snapshot.  
   
 2.  Nella finestra di dialogo **Proprietà server di pubblicazione - \<Server di pubblicazione>** immettere un valore per la proprietà **Cartella snapshot predefinita**.  
   
@@ -62,6 +62,8 @@ Per visualizzare o modificare la posizione della cartella snapshot predefinita, 
     >  L'agente snapshot deve disporre delle autorizzazioni di scrittura per la directory specificata, mentre l'agente di distribuzione o l'agente di merge deve disporre delle autorizzazioni di lettura. Se si usano sottoscrizioni pull, è necessario specificare una directory condivisa come percorso UNC (Universal Naming Convention), ad esempio \\\nomecomputer\snapshot. Per altre informazioni, vedere [Proteggere la cartella snapshot](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="create-snapshot"></a>Creare snapshot
 Per impostazione predefinita, se SQL Server Agent è in esecuzione, l'agente di snapshot genera immediatamente uno snapshot dopo aver creato una pubblicazione con la Creazione guidata nuova pubblicazione. Sempre per impostazione predefinita, tale snapshot viene quindi applicato dall'agente di distribuzione (per la replica snapshot e transazionale) o dall'agente di merge (per le sottoscrizioni di tipo merge) per tutte le sottoscrizioni. È anche possibile generare uno snapshot utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e Monitoraggio replica. Per informazioni sull'avvio di Monitoraggio replica, vedere [Avviare Monitoraggio replica](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
@@ -92,9 +94,9 @@ Gli snapshot iniziali possono essere creati a livello di programmazione creando 
   
     -   **@job_login, che specifica** le credenziali dell'autenticazione di Windows con cui l'agente snapshot viene eseguito nel database di distribuzione.  
   
-    -   **@job_password**, che corrisponde alla password per le credenziali di Windows specificate.  
+    -   **@job_password** , che corrisponde alla password per le credenziali di Windows specificate.  
   
-    -   (Facoltativo) Valore **0** per **@publisher_security_mode** se l'agente utilizzerà l'autenticazione di SQL Server per la connessione al server di pubblicazione. In questo caso, è necessario specificare anche le informazioni di accesso dell'autenticazione di SQL Server per **@publisher_login** e **@publisher_password**.  
+    -   (Facoltativo) Valore **0** per **@publisher_security_mode** se l'agente utilizzerà l'autenticazione di SQL Server per la connessione al server di pubblicazione. In questo caso, è necessario specificare anche le informazioni di accesso dell'autenticazione di SQL Server per **@publisher_login** e **@publisher_password** .  
   
     -   (Facoltativo) Pianificazione della sincronizzazione per il processo dell'agente snapshot. Per altre informazioni, vedere [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   

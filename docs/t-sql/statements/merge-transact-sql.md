@@ -25,12 +25,12 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 85db3bb859a84ed9821f81186b311baf591583e0
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 433f0bac60d3643c56b37cdd6d2750952d9836b2
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802675"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492781"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "56802675"
 
 Esegue operazioni di inserimento, aggiornamento o eliminazione in una tabella di destinazione dai risultati di un join con una tabella di origine. Sincronizzare, ad esempio, due tabelle inserendo, aggiornando o eliminando righe in una tabella in base alle differenze trovate nell'altra tabella.  
   
-**Suggerimento per le prestazioni:** il comportamento condizionale descritto per l'istruzione MERGE funziona meglio quando le due tabelle hanno una combinazione complessa di caratteristiche corrispondenti. Ad esempio, inserire una riga se non esiste o aggiornare una riga se corrisponde. Quando si aggiorna semplicemente una tabella in base alle righe di un'altra tabella, ottenere prestazioni e scalabilità migliori con le istruzioni INSERT, UPDATE e DELETE di base. Ad esempio  
+**Suggerimento per le prestazioni:** il comportamento condizionale descritto per l'istruzione MERGE funziona meglio quando le due tabelle hanno una combinazione complessa di caratteristiche corrispondenti. Ad esempio, inserire una riga se non esiste o aggiornare una riga se corrisponde. Quando si aggiorna semplicemente una tabella in base alle righe di un'altra tabella, ottenere prestazioni e scalabilità migliori con le istruzioni INSERT, UPDATE e DELETE di base. Esempio:  
   
 ```  
 INSERT tbl_A (col, col2)  
@@ -307,7 +307,7 @@ Se in *target_table* è definito un trigger INSTEAD OF UPDATE o INSTEAD OF DELET
   
 Se in *target_table* è definito un trigger INSTEAD OF INSERT, l'operazione di inserimento non viene eseguita, ma la tabella viene popolata di conseguenza.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 È necessario disporre dell'autorizzazione SELECT per la tabella di origine e dell'autorizzazione INSERT, UPDATE o DELETE per quella di destinazione. Per altre informazioni, vedere gli articoli relativi a [SELECT](../../t-sql/queries/select-transact-sql.md), [INSERT](../../t-sql/statements/insert-transact-sql.md), [UPDATE](../../t-sql/queries/update-transact-sql.md) e [DELETE](../../t-sql/statements/delete-transact-sql.md) nella sezione Autorizzazioni.  
   
 ## <a name="examples"></a>Esempi  
@@ -366,9 +366,9 @@ BEGIN
     ON (target.UnitMeasureCode = source.UnitMeasureCode)  
     WHEN MATCHED THEN   
         UPDATE SET Name = source.Name  
-WHEN NOT MATCHED THEN  
-    INSERT (UnitMeasureCode, Name)  
-    VALUES (source.UnitMeasureCode, source.Name)  
+    WHEN NOT MATCHED THEN  
+        INSERT (UnitMeasureCode, Name)  
+        VALUES (source.UnitMeasureCode, source.Name)  
     OUTPUT deleted.*, $action, inserted.* INTO #MyTempTable;  
 END;  
 GO  
@@ -384,7 +384,7 @@ DROP TABLE #MyTempTable;
 GO  
 ```  
   
-### <a name="b-using-merge-to-do-update-and-delete-operations-on-a-table-in-a-single-statement"></a>b. Uso di MERGE per eseguire operazioni UPDATE e DELETE in una tabella in un'unica istruzione  
+### <a name="b-using-merge-to-do-update-and-delete-operations-on-a-table-in-a-single-statement"></a>B. Uso di MERGE per eseguire operazioni UPDATE e DELETE in una tabella in un'unica istruzione  
 L'esempio seguente usa MERGE per aggiornare la tabella `ProductInventory` nel database di esempio [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], su base giornaliera, in base agli ordini elaborati nella tabella `SalesOrderDetail`. La colonna `Quantity` della tabella `ProductInventory` viene aggiornata sottraendo il numero di ordini effettuati ogni giorno per ciascun prodotto nella tabella `SalesOrderDetail`. Se il numero di ordini per un prodotto riduce il livello delle scorte del prodotto a zero o a un valore inferiore, la riga relativa a tale prodotto viene eliminata dalla tabella `ProductInventory`.  
   
 ```sql  

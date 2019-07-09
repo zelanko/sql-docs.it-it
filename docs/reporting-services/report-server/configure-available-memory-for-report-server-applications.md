@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8cf0b0008efb05d15f7e34827ab0f80855fb526d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7cbcb0b2cd0da8bd13d28620261c2e9894463db
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506582"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564032"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Configurare la memoria disponibile per applicazioni del server di report
  Sebbene [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sia in grado di usare tutta la memoria disponibile, è possibile ignorare il comportamento predefinito configurando un limite superiore per la quantità totale di risorse di memoria allocate per applicazioni server di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . È inoltre possibile impostare soglie in modo che il server di report modifichi il modo in cui assegna la priorità ed elabora le richieste in base all'utilizzo basso, medio o alto della memoria. Se i livelli di utilizzo della memoria non sono elevati, il server di report risponde assegnando una priorità leggermente superiore all'elaborazione dei report interattiva o su richiesta. Se invece i livelli di utilizzo della memoria sono elevati, il server di report utilizza più tecniche per rimanere operativo utilizzando le limitate risorse disponibili.  
@@ -77,17 +77,19 @@ ms.locfileid: "66506582"
 #### <a name="example-of-memory-configuration-settings"></a>Esempio di impostazioni di configurazione della memoria  
  Nell'esempio seguente vengono mostrate le impostazioni di configurazione per un computer server di report che utilizza valori di configurazione della memoria personalizzati. Se si desidera aggiungere **WorkingSetMaximum** o **WorkingSetMinimum**è necessario digitare gli elementi e i valori nel file RSReportServer.config. Entrambi i valori sono numeri interi espressi in KB di RAM allocati per le applicazioni server. Nell'esempio seguente si specifica che l'allocazione totale di memoria per le applicazioni del server di report non può superare i 4 GB. Se il valore predefinito per **WorkingSetMinimum** (60% di **WorkingSetMaximum**) è accettabile, è possibile ometterlo e specificare solo **WorkingSetMaximum** nel file RSReportServer. config. In questo esempio è stato incluso il valore **WorkingSetMinimum** per illustrarne la visualizzazione qualora si desiderasse aggiungerlo:  
   
-' ' File di configurazione <MemorySafetyMargin>80</MemorySafetyMargin>  
+```
+      Config files 
+      <MemorySafetyMargin>80</MemorySafetyMargin>  
       <MemoryThreshold>90</MemoryThreshold>  
       <WorkingSetMaximum>4000000</WorkingSetMaximum>  
       <WorkingSetMinimum>2400000</WorkingSetMinimum>  
 ```  
   
-#### About ASP.NET memory configuration settings  
- Although the 2016 and later Report Server Web service and web portal are HTML5 applications, previous versions are [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications, neither application responds to memory configuration settings that you specify in the **processModel** section of machine.config for [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications that run in IIS 5.0 and higher compatibility mode. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reads memory configuration settings from the RSReportServer.config file only.  
+#### <a name="about-aspnet-memory-configuration-settings"></a>Informazioni sulle impostazioni di configurazione della memoria ASP.NET  
+ Anche se 2016 e versioni successivo Report Server web e servizio portale Web sono applicazioni HTML5, le versioni precedenti sono [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] le applicazioni, nessuna applicazione risponde alle impostazioni di configurazione di memoria specificata nel **processModel**  sezione del file Machine. config per [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applicazioni in esecuzione in IIS 5.0 e versioni successive in modalità di compatibilità. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] legge le impostazioni di configurazione della memoria solo dal file RSReportServer.config.  
   
-## See also  
- [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
- [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
+## <a name="see-also"></a>Vedere anche  
+ [File di configurazione RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [Modificare un file di configurazione di Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
+ [Domini applicazione per applicazioni del server di report](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
   

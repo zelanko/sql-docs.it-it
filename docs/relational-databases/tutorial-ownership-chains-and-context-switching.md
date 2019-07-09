@@ -1,5 +1,5 @@
 ---
-title: 'Esercitazione: Catene di proprietà e cambio di contesto'
+title: 'Esercitazione: Catene di proprietà e cambio di contesto | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f74c768c55058f2ec17fb569c934317f550d13bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22851b6b515d50ce9a68c4323729b1b838b5e281
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657196"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581468"
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Esercitazione: Catene di proprietà e cambio di contesto
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 In questa esercitazione viene utilizzato uno scenario per illustrare i concetti sulla sicurezza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relativi a catene di proprietà e cambio di contesto utente.  
   
@@ -40,7 +40,9 @@ Per soddisfare i requisiti di questo scenario, l'esempio è suddiviso in quattro
 2.  Creazione di una stored procedure per l'accesso ai dati in base all'ordine di acquisto.   
 3.  Accesso ai dati tramite la stored procedure.  
 4.  Reimpostazione dell'ambiente.  
-  
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 Ogni blocco di codice dell'esempio è illustrato sulla stessa riga. Per copiare l'esempio completo, vedere [Esempio completo](#CompleteExample) alla fine dell'esercitazione.
 
 ## <a name="prerequisites"></a>Prerequisites

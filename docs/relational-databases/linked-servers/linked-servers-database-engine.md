@@ -20,14 +20,15 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28ac0ac6b125d394633a601d7f45d7608a22ce06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5418ea8fa92e8e62cf28d1bb740091feb88f32d2
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66354378"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556925"
 ---
 # <a name="linked-servers-database-engine"></a>Server collegati (Motore di database)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   I server collegati consentono a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e all'[istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) di leggere i dati dalle origini dati remote e di eseguire comandi sui server di database remoti, ad esempio le origini dati OLE DB, al di fuori dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In genere i server collegati sono configurati per consentire a [!INCLUDE[ssDE](../../includes/ssde-md.md)] di eseguire l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che include tabelle in un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o un altro prodotto del database quale Oracle. Molti tipi di origini dati OLE DB possono essere configurati come server collegati, inclusi [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access, Excel e Azure CosmosDB.
@@ -78,7 +79,7 @@ I server collegati vengono in genere utilizzati per la gestione delle query dist
 È disponibile un set di opzioni che consente di controllare la modalità con cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carica e utilizza i provider OLE DB specificati nel Registro di sistema.  
   
 ## <a name="managing-linked-server-definitions"></a>Gestione delle definizioni dei server collegati  
-Quando si configura un server collegato è necessario registrare in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]i dati per la connessione e le informazioni sull'origine dei dati. Dopo la registrazione sarà possibile fare riferimento all'origine dei dati utilizzando un singolo nome logico.  
+Quando si configura un server collegato è necessario registrare in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]i dati per la connessione e le informazioni sull'origine dei dati. Dopo la registrazione sarà possibile fare riferimento all'origine dati con un singolo nome logico.  
   
 Per gestire le definizioni dei server collegati è possibile utilizzare stored procedure e viste del catalogo:  
   
@@ -90,7 +91,7 @@ Per gestire le definizioni dei server collegati è possibile utilizzare stored p
   
 Per definire i server collegati è inoltre possibile utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. In Esplora oggetti fare clic con il pulsante destro del mouse su **Oggetti server**, scegliere **Nuovo**e quindi **Server collegato**. Per eliminare la definizione di un server collegato, è possibile fare clic con il pulsante destro del mouse sul nome del server collegato e scegliere **Elimina**.  
   
- Quando si esegue una query distribuita su un server collegato, per ogni origine dei dati su cui viene eseguita la query specificare un nome di tabella completo in quattro parti. Questo nome composto da quattro parti deve essere nel formato _nome\_server\_collegato.catalog_**.**_schema_**.**_nome\_oggetto_.  
+ Quando si esegue una query distribuita su un server collegato, per ogni origine dei dati su cui viene eseguita la query specificare un nome di tabella completo in quattro parti. Questo nome composto da quattro parti deve essere nel formato _nome\_server\_collegato.catalog_ **.** _schema_ **.** _nome\_oggetto_.  
   
 > [!NOTE]  
 > È possibile definire un server collegato in modo che punti all'indietro (loopback) al server in cui è stato definito. I server di loopback risultano particolarmente utili durante il test di un'applicazione in cui vengono utilizzate query distribuite in una rete con un solo server. I server collegati di loopback sono destinati ai test e non sono supportati per molte operazioni, ad esempio le transazioni distribuite.  

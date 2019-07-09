@@ -1,7 +1,7 @@
 ---
 title: Monitoraggio delle prestazioni con Query Store | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92752fa479852c2f0c17ded6fa2a047cfcff5dcb
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: e407b4ae2a9be3b4a2d3c2671c59548db94916de
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356474"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581399"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoraggio delle prestazioni con Query Store
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,10 +45,12 @@ ms.locfileid: "58356474"
 2.  Nella finestra di dialogo **Proprietà database** selezionare la pagina **Archivio query** .  
   
 3.  Nella casella **Modalità operativa (richiesta)** selezionare **Lettura/Scrittura**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="use-transact-sql-statements"></a>Usare istruzioni Transact-SQL  
   
-Per abilitare l'archivio query, usare l'istruzione **ALTER DATABASE** . Ad esempio  
+Per abilitare l'archivio query, usare l'istruzione **ALTER DATABASE** . Esempio:  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012 SET QUERY_STORE (OPERATION_MODE = READ_WRITE); 
@@ -571,7 +573,7 @@ Per le query eseguite più volte è possibile notare che [!INCLUDE[ssNoVersion](
   
 È anche possibile identificare incoerenze nelle prestazioni di una query con parametri (impostati sia automaticamente che manualmente). Tra i diversi piani è possibile identificare quello più rapido e adatto per tutti o per la maggior parte dei valori di parametro e forzarne l'uso in modo da garantire prestazioni prevedibili per un ampio numero di scenari utente.  
   
- ### <a name="force-a-plan-for-a-query-apply-forcing-policy"></a>Forzare un piano per una query (applicando criteri di utilizzo forzato)
+### <a name="force-a-plan-for-a-query-apply-forcing-policy"></a>Forzare un piano per una query (applicando criteri di utilizzo forzato)
 
 Quando si forza un piano per una determinata query, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prova a forzare il piano in Query Optimizer. Se l'uso forzato del piano ha esito negativo, viene generato un XEvent e a query optimizer viene richiesto di ottimizzare in modo normale.
 
@@ -580,7 +582,11 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 ```  
   
 Se si usa **sp_query_store_force_plan** , è possibile forzare solo piani che sono stati registrati da Archivio query come piani per tale query. In altre parole, gli unici piani disponibili per una query sono quelli già usati per eseguire tale query mentre Archivio query era attivo.  
+
+#### <a name="a-namectp23a-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> Supporto dell'uso forzato del piano per cursori fast forward e statici
   
+Query Store di [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 supporta la possibilità di forzare i piani di esecuzione query per i cursori T-SQL e API fast forward e statici. L'uso forzato è ora supportato tramite `sp_query_store_force_plan` o tramite i report di Query Store in SQL Server Management Studio.
+
 ### <a name="remove-plan-forcing-for-a-query"></a>Rimuovere l'utilizzo forzato del piano per una query
 
 Per impiegare di nuovo Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per calcolare il piano di query ottimale, usare **sp_query_store_unforce_plan** per annullare l'utilizzo forzato del piano selezionato per la query.  
@@ -588,7 +594,9 @@ Per impiegare di nuovo Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/
 ```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
-  
+
+
+
 ## <a name="see-also"></a>Vedere anche  
  [Procedure consigliate per l'archivio query](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Uso di Archivio query con OLTP in-memoria](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
