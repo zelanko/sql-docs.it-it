@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7987b0cfb8be268a8e48fd25d7512b4969aea6fb
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 6158df674c90f14a1f77f5e12c18adcb6f8fbc4f
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542181"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652867"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -68,7 +68,7 @@ In primo luogo, se il piano contiene i costrutti seguenti:
 * Riferimento a una tabella esterna
 * Query distribuita o operazioni full-text
 * Uso di query globali 
-* Cursori
+* Cursori keyset o dinamico (uso forzato del piano è supportato per cursori statici o fast forward)
 * Specifica di join a stella non valida 
 
 In secondo luogo, quando gli oggetti su cui si basa il piano non sono più disponibili:

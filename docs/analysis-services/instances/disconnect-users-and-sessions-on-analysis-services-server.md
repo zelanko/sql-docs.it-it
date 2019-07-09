@@ -1,6 +1,6 @@
 ---
 title: Disconnettere utenti e sessioni in Analysis Services Server | Microsoft Docs
-ms.date: 05/02/2018
+ms.date: 07/05/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0e4868a7ff2e8b03835988cd4517909c722eaf4a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 696c6548dadda2412566acf7fae1e2cff2b28095
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144772"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624376"
 ---
 # <a name="disconnect-users-and-sessions-on-analysis-services-server"></a>Disconnettere utenti e sessioni sul server Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Nell'ambito della gestione del carico di lavoro, un amministratore di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] può terminare l'attività dell'utente annullando sessioni e connessioni. Le sessioni possono essere create automaticamente durante l'esecuzione di una query (implicite) oppure denominate dall'amministratore al momento della creazione (esplicite). Le connessioni sono circuiti aperti per l'esecuzione delle query. È possibile terminare sia le sessioni che le connessioni mentre sono attive. Ad esempio, un amministratore può terminare l'elaborazione di una sessione se il processo richiede tempi troppo lunghi o non è certo che il comando in esecuzione sia stato registrato correttamente.  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+  Come amministratore, si consiglia di attività degli utenti finali come parte della gestione del carico di lavoro. annullando sessioni e connessioni. Le sessioni possono essere create automaticamente durante l'esecuzione di una query (implicite) oppure denominate dall'amministratore al momento della creazione (esplicite). Le connessioni sono circuiti aperti per l'esecuzione delle query. È possibile terminare sia le sessioni che le connessioni mentre sono attive. Ad esempio, è possibile terminare l'elaborazione di una sessione, se l'elaborazione richiede troppo tempo oppure se alcuni non è certo che il comando in esecuzione è stata scritta correttamente.  
   
 ## <a name="ending-sessions-and-connections"></a>Terminazione di sessioni e connessioni  
- Per gestire sessioni e connessioni, è possibile utilizzare viste a gestione dinamica (DMV) e XMLA:  
+ Per gestire sessioni e connessioni, utilizzare viste a gestione dinamica (DMV) e XMLA:  
   
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]connettersi a un'istanza di Analysis Services.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "50144772"
   
      `Select * from $System.Discover_Sessions`  
   
-     `Select * from $System.Discover_Connections`  
+     `Select * from $System.Discover_Connections`  (Questa query non si applica ad Azure Analysis Services)
   
      `Select * from $System.Discover_Commands`  
   
@@ -56,16 +56,10 @@ ms.locfileid: "50144772"
     ```  
   
 2.  Premere F5 per eseguire il comando Annulla.  
+
+SessionID o SPID l'annullamento annullerà i comandi attivi in esecuzione nella sessione corrispondente all'ID di sessione/SPID. Annullamento di una connessione verrà identificare di sessione associata alla connessione e Annulla eventuali comandi attivi in esecuzione su tale sessione. In rari casi, una connessione non viene chiusa se il motore non è possibile tenere traccia di tutte le sessioni e i valori SPID associati alla connessione; ad esempio, quando più sessioni siano aperte in uno scenario HTTP.   
   
- Se si modifica una connessione, saranno annullate tutte le sessioni e i valori SPID e la sessione host sarà chiusa.  
-  
- Se si termina una sessione, saranno arrestati tutti i comandi (SPID) eseguiti nel corso di tale sessione.  
-  
- Se si termina un SPID, sarà annullato un comando specifico.  
-  
- In rari casi, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non chiuderà una connessione se non è possibile rilevare tutte le sessioni e i valori SPID associati alla connessione, ad esempio nel caso in cui più sessioni siano aperte in uno scenario HTTP.  
-  
- Per altre informazioni sul codice XMLA a cui si fa riferimento in questo argomento, vedere [Metodo Execute &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) ed [Elemento Cancel &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla).  
+Per altre informazioni sul codice XMLA a cui fa riferimento in questo argomento, vedere [metodo Execute &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) e [Annulla elemento &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione di connessioni e sessioni &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   

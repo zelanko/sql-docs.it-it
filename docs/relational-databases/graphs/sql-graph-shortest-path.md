@@ -19,12 +19,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ef8f38acbf621a9c73a0d85bca579c8b7c87aa13
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 3ed9fbb373febd803fedfd7519df7656c23181f2
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463548"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652844"
 ---
 # <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -49,8 +49,8 @@ PER percorso deve essere utilizzato con qualsiasi nome di tabella nodi o archi n
 ## <a name="arbitrary-length-pattern"></a>Modello di lunghezza arbitraria
 Questo modello include i nodi e bordi che devono essere attraversati ripetutamente fino a raggiunta il nodo desiderato o finché il numero massimo di iterazioni come specificato nel modello viene soddisfatta. Ogni volta che viene eseguita la query, il risultato dell'esecuzione di questo modello sarà una raccolta ordinata di nodi e bordi attraversati lungo il percorso dal nodo di inizio per il nodo di fine. Questo è un modello di sintassi di espressione regolare lo stile e sono supportati i quantificatori due modello seguente:
 
-* **‘+’** : Ripetere il modello 1 o più volte. Terminare non appena viene trovato un percorso più breve.
-* **{1,n}** : Ripetere il modello 1 da ' n'ore. Terminare non appena viene trovato un più breve.
+* **‘+’** : Ripetere il criterio una o più volte. Terminare non appena viene trovato un percorso più breve.
+* **{1,n}** : Ripetere il criterio da una a "n" volte. Terminare non appena viene trovato un più breve.
 
 ## <a name="lastnode"></a>LAST_NODE
 Funzione LAST_NODE() consente la concatenazione di due schemi di attraversamento di lunghezza arbitraria. Può essere utilizzato negli scenari in cui:    
@@ -94,7 +94,7 @@ Mentre, ultimo nodo è l'ultimo nodo ennesima nel percorso grafico di output per
 Questa funzione restituisce la somma dei valori di attributo specificato nodo/Microsoft edge o un'espressione che è disponibile nel percorso attraversato.
 
 ### <a name="count"></a>COUNT
-Questa funzione restituisce il numero di valori non null dell'attributo desiderato nodo/Microsoft edge nel percorso. Supporta la funzione COUNT di ' *' operatore con un alias di tabella nodi o bordi. Senza l'alias della tabella nodi o archi, l'utilizzo di * è ambiguo e verrà generato un errore.
+Questa funzione restituisce il numero di valori non null dell'attributo desiderato nodo/Microsoft edge nel percorso. La funzione COUNT supporta il '\*' operatore con un alias di tabella nodi o bordi. Senza l'alias della tabella nodi o archi, l'utilizzo di \* è ambiguo e verrà generato un errore.
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 

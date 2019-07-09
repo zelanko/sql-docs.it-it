@@ -16,12 +16,12 @@ ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1239d2dea1a4f73b54f78345f769c9550c262b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 871f5eb0dab1105017fac8be1f978e0c81a9f1d3
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064689"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624362"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>cmdlet Invoke-PolicyEvaluation
   **Invoke-PolicyEvaluation** è un cmdlet di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che segnala se un set di destinazioni di oggetti di SQL Server è conforme alle condizioni specificate in uno o più criteri della gestione basata su criteri.  
@@ -88,7 +88,7 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
   
 -   **-TargetObjects** accetta un oggetto o una matrice di oggetti che rappresenta gli oggetti di SQL Server nel set di destinazioni. È possibile ad esempio creare una matrice di oggetti di classe <xref:Microsoft.SqlServer.Management.Smo.Database> da passare in **-TargetObjects**.  
   
--   **-TargetExpressions** consente di prendere una stringa contenente un'espressione di query che specifica gli oggetti nel set di destinazioni. L'espressione di query è nel formato di nodi separati dal carattere barra (/). Ogni nodo è nel formato ObjectType[Filter]. ObjectType è uno degli oggetti in una gerarchia di oggetti SMO (SQL Server Management Objects). Filter è un'espressione che filtra gli oggetti in corrispondenza di quel nodo. Per altre informazioni, vedere [Espressioni di query e Uniform Resource Name](../powershell/query-expressions-and-uniform-resource-names.md).  
+-   **-TargetExpressions** consente di prendere una stringa contenente un'espressione di query che specifica gli oggetti nel set di destinazioni. L'espressione di query è nel formato di nodi separati dal carattere barra (/). Ogni nodo è nel formato ObjectType[Filter]. Tipo di oggetto è uno degli oggetti in una gerarchia di oggetti di SQL Server Management oggetto (SMO). Filter è un'espressione che filtra gli oggetti in corrispondenza di quel nodo. Per altre informazioni, vedere [Espressioni di query e Uniform Resource Name](../powershell/query-expressions-and-uniform-resource-names.md).  
   
  Specificare il parametro **-TargetObjects** o **-TargetExpression**, ma non entrambi.  
   

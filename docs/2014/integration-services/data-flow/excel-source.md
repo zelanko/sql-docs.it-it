@@ -15,12 +15,12 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 15ef45a4f3bfb0b74de2472a5b2f0d8e483edab1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14153d38d53a87729231b60b2b2846dc12401fc1
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62856944"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624358"
 ---
 # <a name="excel-source"></a>Origine Excel
   L'origine Excel consente di estrarre dati da fogli di lavoro o intervalli di una cartella di lavoro di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -118,6 +118,6 @@ ms.locfileid: "62856944"
   
 -   Intervento nel blog concernente [Excel in Integration Services, parte 3 di 3: Problemi e alternative](https://go.microsoft.com/fwlink/?LinkId=217676), su dougbert.com.  
   
--   Intervento nel blog concernente [la connessione a Excel (XLSX) in SSIS ](https://microsoft-ssis.blogspot.com/2014/02/connecting-to-excel-xlsx-in-ssis.html).  
+-   Intervento nel blog concernente [la connessione a Excel (XLSX) in SSIS](https://microsoft-ssis.blogspot.com/2014/02/connecting-to-excel-xlsx-in-ssis.html).  
   
   
