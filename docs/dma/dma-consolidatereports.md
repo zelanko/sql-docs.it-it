@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: jroth
-ms.openlocfilehash: 0021e5851627e156addb86fa1c136d78d3be2228
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
+ms.openlocfilehash: 361b1d318a7db08007d4506531441ab19347ea62
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67313833"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680264"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Valutare un'azienda e di consolidare i report di valutazione con DMA
 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d7a61c97d3e1636cd6a11173e281c192d1533d93
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 2ace3ee9cd17240890a9da901297c731ced4016c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388747"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681594"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Come distribuire un'app nel cluster di big data di SQL Server (anteprima)
 
@@ -107,7 +107,7 @@ Il comando seguente illustra un esempio di ciò che potrebbe essere simile quest
 mssqlctl app create --spec ./addpy
 ```
 
-Ciò presuppone che si disponga dell'applicazione archiviato nel `addpy` cartella. Questa cartella deve contenere anche un file della specifica per l'applicazione, denominata chiamato `spec.yaml`. Vedi [la pagina distribuzione delle applicazioni](concept-application-deployment.md) per altre informazioni sul `spec.yaml` file.
+Ciò presuppone che si disponga dell'applicazione archiviato nel `addpy` cartella. Questa cartella deve contenere anche un file della specifica per l'applicazione, denominata `spec.yaml`. Vedi [la pagina distribuzione delle applicazioni](concept-application-deployment.md) per altre informazioni sul `spec.yaml` file.
 
 Per distribuire questa app di esempio di app, creare i seguenti file in una directory denominata `addpy`:
 

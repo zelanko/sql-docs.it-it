@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 0d07288bccc641f67644a37cd027e093fc3967c8
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 8d701d9e8595eee3a583e913baabc2148af214fe
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645550"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681612"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Il monitoraggio usando viste a gestione dinamica (DMV) di SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ Per informazioni più generali sulle DMV, vedere [viste a gestione dinamica del 
 
 Le seguenti viste a gestione dinamica consente il monitoraggio di carichi di lavoro di machine learning in SQL Server. Per eseguire una query DMV, è necessario `VIEW SERVER STATE` l'autorizzazione per l'istanza.
 
-| Vista a gestione dinamica | Tipo | Descrizione |
+| Vista a gestione dinamica | type | Descrizione |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | Esecuzione | Restituisce una riga per ogni account di lavoro attivo che esegue uno script esterno. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | Esecuzione | Restituisce una riga per ogni tipo di richiesta di script esterni. |
@@ -196,7 +196,7 @@ La query restituisce le colonne seguenti:
 |--------|-------------|
 | physical_memory_kb | La quantità totale di memoria fisica nel computer. |
 | committed_kb | La memoria vincolata in kilobyte (KB) nel gestore della memoria. Non include la memoria riservata nel gestore della memoria. |
-| external_pool_peak_memory_kb | La somma del la quantità massima di memoria utilizzata, in kilobyte, per tutti i pool di risorse esterne. |
+| external_pool_peak_memory_kb | La somma della quantità massima di memoria utilizzata, in kilobyte, per tutti i pool di risorse esterne. |
 
 ## <a name="memory-configuration"></a>Configurazione della memoria
 
@@ -278,7 +278,7 @@ Le colonne restituite sono:
 | colonna | Descrizione |
 |--------|-------------|
 | Pacchetto | Nome del pacchetto installato. |
-| Versione | Versione del pacchetto. |
+| Version | Versione del pacchetto. |
 | Dipende da | Elenca i pacchetti che dipende dal pacchetto installato. |
 | Licenza | Licenza per il pacchetto installato. |
 | LibPath | Directory in cui è possibile trovare il pacchetto. |
@@ -304,8 +304,8 @@ Le colonne restituite sono:
 | colonna | Descrizione |
 |--------|-------------|
 | Pacchetto | Nome del pacchetto installato. |
-| Versione | Versione del pacchetto. |
-| Località | Directory in cui è possibile trovare il pacchetto. |
+| Version | Versione del pacchetto. |
+| Location | Directory in cui è possibile trovare il pacchetto. |
 
 ## <a name="next-steps"></a>Passaggi successivi
 

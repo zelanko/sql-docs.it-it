@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: 0b8f31d55ae9dcc7042fff051c37a4beaa72a47e
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: bc865b36dc8b8036fa9a6a1a9c58c6890acadf47
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399999"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681598"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Estensione di SQL Server 2019 (anteprima)
 
@@ -51,7 +51,7 @@ Per installare l'estensione di SQL Server 2019 (anteprima), scaricare e installa
 
 * Il **cluster di big data di SQL Server** tipo di connessione è stata rimossa in questa versione. Tutte le funzionalità disponibili in precedenza dalla connessione di cluster di SQL Server i big data sono ora disponibile nella connessione di SQL Server.
 * Esplorazione di HDFS sono disponibili nel **Data Services** cartella
-* Per i notebook del kernel PySpark e altri dati di lavoro quando si è connessi all'istanza master di SQL Server nel cluster di big data di SQL Server.
+* Per i notebook il kernel PySpark e altri dati big funziona quando si è connessi all'istanza master di SQL Server nel cluster di big data di SQL Server.
 * Creazione guidata tabella esterna:
   * Supporto per la creazione di tabella esterna usando l'origine dati esterna esistente.
   * Miglioramenti delle prestazioni attraverso la procedura guidata.

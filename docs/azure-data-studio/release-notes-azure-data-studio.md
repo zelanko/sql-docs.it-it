@@ -11,12 +11,12 @@ manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 06/06/2019
-ms.openlocfilehash: 453c00715e68a648e9cdfc2010810ce701358cf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b06e8476e10abc3a96ab6c6f2304ef81f225f02
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798102"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681609"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Note sulla versione per Azure Data Studio
 
@@ -367,7 +367,7 @@ Il *versione di anteprima pubblica di luglio* è incentrato sugli elementi segue
 ### <a name="github-issues-fixes-june-2018"></a>Consente di risolvere i problemi di GitHub, giugno 2018
 
 - Richiesta di funzionalità ([emettere 1204](https://github.com/Microsoft/azuredatastudio/issues/1204)): Verificare i risultati della larghezza della colonna di adattamento della griglia per i dati e ricordare le modifiche manuali se si esegue nuovamente la stessa query.
-- Correggere [emettere 1398](https://github.com/Microsoft/azuredatastudio/issues/1398): Show devono aggiungere messaggi e pulsante Aggiungi account account quando l'account collegato è vuota.
+- Correggere [emettere 1398](https://github.com/Microsoft/azuredatastudio/issues/1398): Show devono aggiungere messaggi e pulsante Aggiungi account quando l'account collegato è vuota.
 - Correggere [emettere 1399](https://github.com/Microsoft/azuredatastudio/issues/1399): Scheda account collegato viene interrotta quando la visualizzazione è compressa.
 - Correggere [emettere 1374](https://github.com/Microsoft/azuredatastudio/issues/1374): Arresti anomali del servizio di strumenti di SQL all'apertura di file con estensione SQL dal disco.
 - Correggere [emettere 1372](https://github.com/Microsoft/azuredatastudio/issues/1372): Parola chiave SQL "BETWEEN" mancante.
