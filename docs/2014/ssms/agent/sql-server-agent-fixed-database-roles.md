@@ -19,12 +19,12 @@ ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dcb939b8eb04fafce163a395b05eb0e272977283
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a8067aaa2133648c1a1ea4fff81db08c139d5278
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245988"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793400"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Ruoli di database predefiniti di SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gli amministratori hanno a disposizione i seguenti ruoli predefiniti del database **msdb** , che consentono di controllare in modo più capillare l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Sono previsti i seguenti ruoli, elencati a partire da quello che ha meno privilegi:  
@@ -48,12 +48,12 @@ ms.locfileid: "63245988"
   
  Nella tabella seguente vengono riepilogate le autorizzazioni per il ruolo **SQLAgentUserRole** su oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-|Azione|Operatori|Processi locali<br /><br /> (solo processi di proprietà)|Pianificazioni di processi<br /><br /> (solo pianificazioni di proprietà)|Proxy|  
+|Action|Operatori|Processi locali<br /><br /> (solo processi di proprietà)|Pianificazioni dei processi<br /><br /> (solo pianificazioni di proprietà)|Proxy|  
 |------------|---------------|----------------------------------------|------------------------------------------------|-------------|  
 |Creazione/modifica/eliminazione|No|Sì <sup>1</sup>|Yes|No|  
 |Visualizzazione di un elenco (enumerazione)|Sì <sup>2</sup>|Yes|Yes|Sì <sup>3</sup>|  
 |Abilitazione/disabilitazione|No|Yes|Yes|Non applicabile|  
-|Visualizzazione di proprietà|No|Yes|Yes|No|  
+|Visualizzazione di proprietà|No|Yes|Sì|No|  
 |Esecuzione/arresto/avvio|Non applicabile|Yes|Non applicabile|Non applicabile|  
 |Visualizzazione cronologia processo|Non applicabile|Yes|Non applicabile|Non applicabile|  
 |Eliminazione cronologia processo|Non applicabile|No <sup>4</sup>|Non applicabile|Non applicabile|  
@@ -75,14 +75,14 @@ ms.locfileid: "63245988"
   
  Nella tabella seguente vengono riepilogate le autorizzazioni per il ruolo **SQLAgentReaderRole** su oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-|Azione|Operatori|Processi locali|Processi multiserver|Pianificazioni di processi|Proxy|  
+|Action|Operatori|Processi locali|Processi multiserver|Pianificazioni di processi|Proxy|  
 |------------|---------------|----------------|----------------------|-------------------|-------------|  
-|Creazione/modifica/eliminazione|No|Sì <sup>1</sup> (solo per i processi di proprietà)|No|Sì (solo pianificazioni di proprietà)|no|  
+|Creazione/modifica/eliminazione|No|Sì <sup>1</sup> (solo per i processi di proprietà)|No|Sì (solo pianificazioni di proprietà)|No|  
 |Visualizzazione di un elenco (enumerazione)|Sì <sup>2</sup>|Yes|Yes|Yes|Sì <sup>3</sup>|  
 |Abilitazione/disabilitazione|No|Sì (solo processi di proprietà)|No|Sì (solo pianificazioni di proprietà)|Non applicabile|  
-|Visualizzazione di proprietà|No|Yes|Yes|Yes|No|  
-|Modifica di proprietà|No|Sì (solo processi di proprietà)|No|Sì (solo pianificazioni di proprietà)|no|  
-|Esecuzione/arresto/avvio|Non applicabile|Sì (solo processi di proprietà)|no|Non applicabile|Non applicabile|  
+|Visualizzazione di proprietà|No|Yes|Yes|Sì|No|  
+|Modifica di proprietà|No|Sì (solo processi di proprietà)|No|Sì (solo pianificazioni di proprietà)|No|  
+|Esecuzione/arresto/avvio|Non applicabile|Sì (solo processi di proprietà)|No|Non applicabile|Non applicabile|  
 |Visualizzazione cronologia processo|Non applicabile|Yes|Yes|Non applicabile|Non applicabile|  
 |Eliminazione cronologia processo|Non applicabile|No <sup>4</sup>|No|Non applicabile|Non applicabile|  
 |Collegamento/scollegamento|Non applicabile|Non applicabile|Non applicabile|Sì (solo pianificazioni di proprietà)|Non applicabile|  
@@ -98,7 +98,7 @@ ms.locfileid: "63245988"
 ### <a name="sqlagentoperatorrole-permissions"></a>Autorizzazioni per SQLAgentOperatorRole  
  **SQLAgentOperatorRole** è il ruolo di database predefinito di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent con privilegi di livello più alto. E include tutte le autorizzazioni dei ruoli **SQLAgentUserRole** e **SQLAgentReaderRole**. I membri di questo ruolo possono inoltre visualizzare proprietà di operatori e proxy e possono enumerare i proxy e gli avvisi disponibili sul server.  
   
- I membri del ruolo**SQLAgentOperatorRole** hanno autorizzazioni aggiuntive su pianificazioni e processi locali. Possono eseguire, arrestare o avviare tutti i processi locali e possono eliminare la cronologia processo di qualsiasi processo locale del server. Possono inoltre attivare o disabilitare tutte le pianificazioni e i processi locali del server. Per abilitare o disabilitare processi locali o pianificazioni, i membri di questo ruolo devono usare le stored procedure **sp_update_job** e **sp_update_schedule**. I membri del ruolo **@enabled** possono specificare solo i parametri che definiscono il nome o l'ID del processo o della pianificazione e il parametro **SQLAgentOperatorRole**. Se si specifica un qualsiasi altro parametro, l'esecuzione di queste stored procedure non viene portata a termine. I membri del ruolo**SQLAgentOperatorRole** non possono modificare la proprietà dei processi per ottenere l'accesso a processi di cui non sono già proprietari.  
+ I membri del ruolo**SQLAgentOperatorRole** hanno autorizzazioni aggiuntive su pianificazioni e processi locali. Possono eseguire, arrestare o avviare tutti i processi locali e possono eliminare la cronologia processo di qualsiasi processo locale del server. Possono inoltre attivare o disabilitare tutte le pianificazioni e i processi locali del server. Per abilitare o disabilitare processi locali o pianificazioni, i membri di questo ruolo devono usare le stored procedure **sp_update_job** e **sp_update_schedule**. Solo i parametri che specificano il nome del processo o della pianificazione o l'identificatore e il  **\@abilitati** parametro può essere specificato dai membri del **SQLAgentOperatorRole**. Se si specifica un qualsiasi altro parametro, l'esecuzione di queste stored procedure non viene portata a termine. I membri del ruolo**SQLAgentOperatorRole** non possono modificare la proprietà dei processi per ottenere l'accesso a processi di cui non sono già proprietari.  
   
  I nodi **Processi**, **Avvisi**, **Operatori**e **Proxy** inclusi in Esplora oggetti di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sono visibili a membri del ruolo **SQLAgentOperatorRole**. Solo il nodo **Log degli errori** non è visibile ai membri di questo ruolo.  
   
@@ -107,13 +107,13 @@ ms.locfileid: "63245988"
   
  Nella tabella seguente vengono riepilogate le autorizzazioni per il ruolo **SQLAgentOperatorRole** su oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-|Azione|Avvisi|Operatori|Processi locali|Processi multiserver|Pianificazioni di processi|Proxy|  
+|Action|Avvisi|Operatori|Processi locali|Processi multiserver|Pianificazioni di processi|Proxy|  
 |------------|------------|---------------|----------------|----------------------|-------------------|-------------|  
 |Creazione/modifica/eliminazione|No|No|Sì <sup>2</sup> (solo per i processi di proprietà)|No|Sì (solo pianificazioni di proprietà)|No|  
 |Visualizzazione di un elenco (enumerazione)|Yes|Sì <sup>1</sup>|Yes|Yes|Yes|Yes|  
 |Abilitazione/disabilitazione|No|No|Sì <sup>3</sup>|No|Sì <sup>4</sup>|Non applicabile|  
 |Visualizzazione di proprietà|Yes|Yes|Yes|Yes|Yes|Yes|  
-|Modifica di proprietà|no|No|Sì (solo processi di proprietà)|No|Sì (solo pianificazioni di proprietà)|No|  
+|Modifica di proprietà|No|No|Sì (solo processi di proprietà)|No|Sì (solo pianificazioni di proprietà)|No|  
 |Esecuzione/arresto/avvio|Non applicabile|Non applicabile|Yes|No|Non applicabile|Non applicabile|  
 |Visualizzazione cronologia processo|Non applicabile|Non applicabile|Yes|Yes|Non applicabile|Non applicabile|  
 |Eliminazione cronologia processo|Non applicabile|Non applicabile|Yes|No|Non applicabile|Non applicabile|  
@@ -123,9 +123,9 @@ ms.locfileid: "63245988"
   
  <sup>2</sup> non è possibile modificare la proprietà dei processi.  
   
- <sup>3</sup> **SQLAgentOperatorRole** possono abilitare o disabilitare processi locali di cui non sono proprietari usando la stored procedure **sp_update_job** e specificando valori per il ** @enabled ** e il ** @job_id ** (o ** @job_name **) parametri. Se un membro di questo ruolo specifica un qualsiasi altro parametro per questa stored procedure, la sua esecuzione non viene portata a termine.  
+ <sup>3</sup> **SQLAgentOperatorRole** possono abilitare o disabilitare processi locali di cui non sono proprietari usando la stored procedure **sp_update_job** e specificando valori per il  **\@abilitate** e il  **\@job_id** (o  **\@job_name**) parametri. Se un membro di questo ruolo specifica un qualsiasi altro parametro per questa stored procedure, la sua esecuzione non viene portata a termine.  
   
- <sup>4</sup> **SQLAgentOperatorRole** possono abilitare o disabilitare le pianificazioni non sono proprietari usando la stored procedure **sp_update_schedule** e specificando valori per il ** @enabled ** e il ** @schedule_id ** (o ** @name **) parametri. Se un membro di questo ruolo specifica un qualsiasi altro parametro per questa stored procedure, la sua esecuzione non viene portata a termine.  
+ <sup>4</sup> **SQLAgentOperatorRole** possono abilitare o disabilitare le pianificazioni non sono proprietari usando la stored procedure **sp_update_schedule** e specificando valori per il  **\@abilitate** e il  **\@schedule_id** (o  **\@nome**) parametri. Se un membro di questo ruolo specifica un qualsiasi altro parametro per questa stored procedure, la sua esecuzione non viene portata a termine.  
   
 ## <a name="assigning-users-multiple-roles"></a>Assegnazione di più ruoli a utenti  
  I membri del ruolo predefinito del server **sysadmin** dispongono di accesso a tutte le funzionalità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Se un utente non è membro del ruolo **sysadmin** ma è membro di più di un ruolo predefinito di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, è importante tenere presente il modello ad autorizzazioni concentriche di questi ruoli. Poiché i ruoli con privilegi di livello più alto comprendono sempre tutte le autorizzazioni dei ruoli con privilegi di livello più basso, a un utente che è membro di più di un ruolo vengono concesse automaticamente le autorizzazioni associate al ruolo con privilegi di livello più alto di cui questo utente è membro.  

@@ -14,15 +14,15 @@ ms.assetid: a0fa4510-8891-4a61-a867-b2555bc35f05
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5520554b509b0c25d62e4a191e16ad3524a02652
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5153980cae143feeb1917c89da640723716c8ef1
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297454"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793007"
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>Mapping di SQLSetScrollOptions
-Quando un'applicazione chiama **SQLSetScrollOptions** tramite un'applicazione ODBC 3 *. x* e il driver non supporta **SQLSetScrollOptions**, la chiamata a  
+Quando un'applicazione chiama **SQLSetScrollOptions** tramite un database ODBC *3.x* e il driver non supporta **SQLSetScrollOptions**, la chiamata a  
   
 ```  
 SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)  
@@ -100,4 +100,4 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
      con *\*ValuePtr* impostato sul *RowsetSize* argomento **SQLSetScrollOptions**.  
   
     > [!NOTE]  
-    >  Quando esegue il mapping di gestione Driver **SQLSetScrollOptions** per un'applicazione che utilizza un'applicazione ODBC 3 *. x* driver che non supporta **SQLSetScrollOptions**, il Driver Manager imposta l'opzione dell'istruzione SQL_ROWSET_SIZE, non l'attributo di istruzione SQL_ATTR_ROW_ARRAY_SIZE sul *RowsetSize* nell'argomento **SQLSetScrollOption**. Ne consegue **SQLSetScrollOptions** non può essere utilizzato da un'applicazione durante il recupero di più righe da una chiamata a **SQLFetch** oppure **SQLFetchScroll**. Può essere utilizzato solo quando più durante il recupero di righe da una chiamata a **SQLExtendedFetch**.
+    >  Quando esegue il mapping di gestione Driver **SQLSetScrollOptions** per un'applicazione che utilizza un database ODBC *3.x* driver che non supporta **SQLSetScrollOptions**, il Driver Manager imposta l'opzione dell'istruzione SQL_ROWSET_SIZE, non l'attributo di istruzione SQL_ATTR_ROW_ARRAY_SIZE sul *RowsetSize* nell'argomento **SQLSetScrollOption**. Ne consegue **SQLSetScrollOptions** non può essere utilizzato da un'applicazione durante il recupero di più righe da una chiamata a **SQLFetch** oppure **SQLFetchScroll**. Può essere utilizzato solo quando più durante il recupero di righe da una chiamata a **SQLExtendedFetch**.

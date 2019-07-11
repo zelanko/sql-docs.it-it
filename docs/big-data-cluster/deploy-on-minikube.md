@@ -2,20 +2,20 @@
 title: Configurare minikube
 titleSuffix: SQL Server big data clusters
 description: Informazioni su come configurare minikube per le distribuzioni di cluster (anteprima) di SQL Server 2019 dei big data in un singolo computer.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 5b7698cd439461a9ee9280571f49649fb03387a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70e4fe9439264b9b2dee3d95423bf1d3f420379d
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803102"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728909"
 ---
 # <a name="configure-minikube-for-sql-server-big-data-cluster-deployments"></a>Configurare minikube per le distribuzioni di cluster di SQL Server i big Data
 

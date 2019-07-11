@@ -16,21 +16,21 @@ helpviewer_keywords:
 - sys.resource_stats
 - resource_stats
 ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
-author: CarlRabeler
-ms.author: carlrab
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c12b995a52f633c4fbd7829f090f2a95d631751e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6918c712e5440aa79bef045f2d64b2578eb42a69
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041442"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716322"
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Restituisce i dati di archiviazione e di utilizzo della CPU per un database SQL di Azure. I dati vengono raccolti e aggregati in intervalli di cinque minuti. Per ogni database utente, è presente una riga per ogni finestra di creazione report di cinque minuti in cui viene apportata una modifica nell'utilizzo della risorsa. I dati restituiti includono utilizzo della CPU, modifica delle dimensioni di archiviazione e database di modifica della SKU. I database inattivi senza modifiche potrebbero non avere righe per ogni intervallo di cinque minuti. I dati cronologici vengono mantenuti per circa 14 giorni.  
+  Restituisce i dati di archiviazione e di uso della CPU per un database SQL di Azure. I dati vengono raccolti e aggregati per intervalli di cinque minuti. Per ogni database utente, è presente una riga per ogni finestra di creazione report di cinque minuti in cui viene apportata una modifica nell'utilizzo della risorsa. I dati restituiti includono utilizzo della CPU, modifica delle dimensioni di archiviazione e database di modifica della SKU. I database inattivi senza modifiche potrebbero non avere righe per ogni intervallo di cinque minuti. I dati cronologici vengono mantenuti per circa 14 giorni.  
   
  Il **Sys. resource_stats** visualizzazione contiene diverse definizioni a seconda della versione del Server di Database SQL Azure che è associato il database. Prendere in considerazione queste differenze e le eventuali modifiche richieste dall'applicazione durante l'aggiornamento a una nuova versione del server.  
   

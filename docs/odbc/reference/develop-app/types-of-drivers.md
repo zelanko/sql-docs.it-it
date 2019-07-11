@@ -16,12 +16,12 @@ ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 445fe3a0b87e6ad8e35dbc585981d874f8e357bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 08c1c9b4338502f20e5f99885d371d713971aa38
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63306211"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792698"
 ---
 # <a name="types-of-drivers"></a>Tipi di driver
 Driver ODBC possono essere classificati come indicato di seguito:  
@@ -29,9 +29,9 @@ Driver ODBC possono essere classificati come indicato di seguito:
 -   **32 bit ODBC 2.**  
      **_x_ Driver** driver A 32 bit che:  
   
-    -   Consente di esportare solo l'API ODBC 2*x* funzioni.  
+    -   Consente di esportare solo ODBC *2.x* funzioni.  
   
-    -   Mostra ODBC 2.*x* comportamento per modifiche del comportamento.  
+    -   Mostra ODBC *2.x* comportamento per modifiche del comportamento.  
   
 -   **ISO e aprire i Driver compatibili con gruppo** driver A 32 bit che:  
   
@@ -45,13 +45,13 @@ Driver ODBC possono essere classificati come indicato di seguito:
   
     -   Esporta solo le funzioni che sono nella versione 3.0 di ODBC meno funzioni deprecate.  
   
-    -   È in grado di che esibisce ODBC 2.*x* comportamento o il comportamento ODBC 3.0 rispetto alle modifiche di comportamento, basato sull'attributo SQL_ATTR_APP_ODBC_VERSION ambiente.  
+    -   È in grado di che esibisce ODBC *2.x* comportamento o il comportamento ODBC 3.0 rispetto alle modifiche di comportamento, basato sull'attributo SQL_ATTR_APP_ODBC_VERSION ambiente.  
   
 -   **Driver ODBC 3.5 (o versioni successive) ANSI** driver A 32 bit che:  
   
     -   Esporta solo le funzioni che sono in ODBC 3.5 meno funzioni deprecate.  
   
-    -   È in grado di che esibisce ODBC 2. *x* comportamento o il comportamento ODBC 3.0 o comportamento ODBC 3.5 rispetto alle modifiche del comportamento, basato sull'attributo SQL_ATTR_APP_ODBC_VERSION ambiente.  
+    -   È in grado di che esibisce ODBC *2.x* comportamento o il comportamento ODBC 3.0 o comportamento ODBC 3.5 rispetto alle modifiche del comportamento, basato sull'attributo SQL_ATTR_APP_ODBC_VERSION ambiente.  
   
 -   **Driver ODBC 3.5 (o versioni successive) Unicode** driver A 32 bit che:  
   
@@ -62,4 +62,4 @@ Driver ODBC possono essere classificati come indicato di seguito:
     -   Può archiviare ed elaborare i dati Unicode nell'origine dati.  
   
 > [!NOTE]  
->  driver ODBC a 16 bit non funziona direttamente con ODBC 3. *x* gestione Driver. Tuttavia, è possibile che i driver a 16 bit lavorare con la gestione di Driver ODBC 2.0, che successivamente thunk fino a 3. *x* gestione Driver.
+>  driver ODBC a 16 bit non funziona direttamente con ODBC *3.x* gestione Driver. Tuttavia, è possibile che i driver lavorare con la gestione di Driver ODBC 2.0, che successivamente thunk fino a 16 bit i *3.x* gestione Driver.

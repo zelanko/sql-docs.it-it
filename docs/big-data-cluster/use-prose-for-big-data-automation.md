@@ -2,20 +2,20 @@
 title: Generare il codice per attività di gestione dei dati
 titleSuffix: Azure Data Studio
 description: Questo articolo descrive come usare l'acceleratore di codice PROSE in Azure Data Studio per generare automaticamente codice per attività di gestione dei dati comuni.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: f5406ce0e67322a8f7148fc83b83d0789f27e1ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c26a6efa1f96ac5016d1560f0ae4d9e02f0d369d
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770783"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728321"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>Wrangling dei dati usando i tasti di scelta rapida codice PROSE
 
@@ -114,10 +114,10 @@ Per altre informazioni, vedere la [documentazione](https://aka.ms/prose-codeacce
 Un altro scenario comune è per rilevare modelli in una colonna stringa allo scopo di pulizia o di raggruppamento. Ad esempio, potrebbe essere una colonna di date con le date in più formati diversi. Per standardizzare i valori, si potrebbe voler scrivere istruzioni condizionali usando espressioni regolari.
 
 
-|   |Nome                      |BirthDate      |
+|   |Name                      |BirthDate      |
 |---|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
-| 1 |Naiara Moravcikova        |Unknown        |
+| 1 |Naiara Moravcikova        |Sconosciuto        |
 | 2 |Jihoo Spel                |2014           |
 | 3 |Viachaslau Gordan Hilario |22-aprile-67      |
 | 4 |Villiers de Maya          |Mar-19-60      |

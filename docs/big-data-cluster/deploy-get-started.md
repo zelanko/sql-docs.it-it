@@ -1,20 +1,21 @@
 ---
-title: Introduzione
+title: Attività iniziali
 titleSuffix: SQL Server big data clusters
 description: Descrive i passaggi e le risorse per la distribuzione di cluster di big data 2019 Server SQL (anteprima).
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4379e35b4d86ca462ea97b28c37d2f3b56427292
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: b090ec57ae62058a211e4e232f8bfa99e44f9675
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388828"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728954"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>Introduzione ai cluster di SQL Server i big Data
 
@@ -35,7 +36,7 @@ I cluster di big data richiedono un set di strumenti client specifico. Prima di 
 
 Altri strumenti sono necessari per scenari diversi. Ogni articolo deve spiegare gli strumenti dei prerequisiti per l'esecuzione di un'attività specifica. Per un elenco completo di strumenti e i collegamenti di installazione, vedere [strumenti di big data di installazione di SQL Server 2019](deploy-big-data-tools.md).
 
-## <a name="kubernetes"></a>Kubernetes
+## <a name="kubernetes"></a>kubernetes
 
 I cluster di big data vengono distribuiti come una serie di contenitori correlati che vengono gestite nei [Kubernetes](https://kubernetes.io/docs/home). È possibile ospitare Kubernetes in diversi modi. Anche se si dispone già di un ambiente Kubernetes esistente, è consigliabile esaminare i requisiti correlati per i cluster di big data.
 

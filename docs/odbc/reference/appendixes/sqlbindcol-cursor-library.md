@@ -13,12 +13,12 @@ ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9e9e1018754977ee73ecdc21db30b3d8c2aae8b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6cd98b39421e95254fcb052db67cbc9f9205b668
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199689"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793528"
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol (libreria di cursori)
 > [!IMPORTANT]  
@@ -30,8 +30,8 @@ ms.locfileid: "63199689"
   
  Un'applicazione può chiamare **SQLBindCol** riassociare risultato set di colonne dopo aver chiamato **SQLExtendedFetch**, **SQLFetch**, o **SQLFetchScroll**, purché il tipo di dati C, le dimensioni di colonna e cifre decimali della colonna associata rimangono invariati. L'applicazione non necessario chiudere il cursore per la riassociazione delle colonne a indirizzi diversi.  
   
- La libreria di cursori supporta l'impostazione dell'attributo di istruzione SQL_ATTR_ROW_BIND_OFFSET_PTR usare gli offset di associazione. (**SQLBindCol** non deve essere chiamato per questo che si verifichi la riassociazione.) Se la libreria di cursori viene usata con un'applicazione ODBC 3 *. x* driver, l'offset di binding non è utilizzato quando **SQLFetch** viene chiamato. L'offset di binding viene usato se **SQLFetch** viene chiamato quando viene usata la libreria di cursori con un'API ODBC 2. *x* driver poiché **SQLFetch** viene quindi mappato a **SQLExtendedFetch**.  
+ La libreria di cursori supporta l'impostazione dell'attributo di istruzione SQL_ATTR_ROW_BIND_OFFSET_PTR usare gli offset di associazione. (**SQLBindCol** non deve essere chiamato per questo che si verifichi la riassociazione.) Se la libreria di cursori viene usata con un database ODBC *3.x* driver, l'offset di binding non è utilizzato quando **SQLFetch** viene chiamato. L'offset di binding viene usato se **SQLFetch** viene chiamato quando la libreria di cursori viene usata con un database ODBC *2.x* driver perché **SQLFetch** viene quindi mappato a  **SQLExtendedFetch**.  
   
  La libreria di cursori supporta la chiamata **SQLBindCol** per associare la colonna del segnalibro.  
   
- Quando si lavora con un'API ODBC 2. *x* driver, la libreria di cursori restituisce SQLSTATE HY090 (stringa di lunghezza o non valida del buffer) quando **SQLBindCol** viene chiamato per impostare la lunghezza del buffer per una colonna del segnalibro a un valore non è uguale a 4. Quando si lavora con un'applicazione ODBC 3*x* driver, la libreria di cursori consente il buffer essere di qualsiasi dimensione.
+ Quando si lavora con un database ODBC *2.x* driver, la libreria di cursori restituisce SQLSTATE HY090 (stringa di lunghezza o non valida del buffer) quando **SQLBindCol** per impostare la lunghezza del buffer per una colonna del segnalibro a un valore non viene chiamato uguale a 4. Quando si lavora con un database ODBC *3.x* driver, la libreria di cursori consente il buffer essere di qualsiasi dimensione.

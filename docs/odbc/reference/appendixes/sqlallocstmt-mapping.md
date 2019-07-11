@@ -14,15 +14,15 @@ ms.assetid: a2449dbb-1b6c-4b49-81b9-ebdddd4442fd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 330c245d8b5839fd8a721a7399a22edea78a2417
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1139d87d9f97a3d63236c03e7cf4ced787ad8e85
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269962"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793555"
 ---
 # <a name="sqlallocstmt-mapping"></a>Mapping di SQLAllocStmt
-Quando un'applicazione chiama **SQLAllocStmt** tramite un'applicazione ODBC 3*x* driver, la chiamata a:  
+Quando un'applicazione chiama **SQLAllocStmt** tramite un database ODBC *3.x* driver, la chiamata a:  
   
 ```  
 SQLAllocStmt(hdbc, phstmt)  

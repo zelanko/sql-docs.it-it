@@ -19,22 +19,22 @@ ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b1d0fc510c7c45dab8fbc79cc8e74001ff1855b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e948b1e2fa5bb0877597e3fc3429f306afe991f2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026571"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793758"
 ---
 # <a name="compatibility-matrix"></a>Matrice di compatibilità
 Nella tabella seguente viene descritta la compatibilità dei tipi di applicazioni e driver definiti precedentemente in questa sezione.  
   
-|Tipo di applicazione<br /><br /> e versione|ODBC 32-bit<br /><br /> 2.*x* driver|ODBC 3.*x*<br /><br /> Driver|Driver ODBC 3.8|ISO e aprire compatibile con gruppo di driver|  
+|Tipo di applicazione<br /><br /> e versione|ODBC 32-bit<br /><br /> *versione 2.x* driver|ODBC *3.x*<br /><br /> Driver|Driver ODBC 3.8|ISO e aprire compatibile con gruppo di driver|  
 |--------------------------------------|-----------------------------------|---------------------------|---------------------|-----------------------------------------|  
 |applicazione a 16 bit, qualsiasi versione|Compatibilità|Compatibilità|Compatibilità|Compatibilità|  
-|2 pure. *x* applicazione|Compatibilità|Compatibilità|Compatibilità|Non compatibile con [3]|  
-|2 pure. *x* ricompilate dell'applicazione|Compatibilità|Compatibile con [1]|Compatibile con [1]|Non compatibile con [3]|  
-|2 pure. *x* Unicode application|Compatibilità|Compatibile con [1]|Compatibile con [1]|Non compatibile con [3]|  
+|Pura *2.x* applicazione|Compatibilità|Compatibilità|Compatibilità|Non compatibile con [3]|  
+|Pura *2.x* ricompilate dell'applicazione|Compatibilità|Compatibile con [1]|Compatibile con [1]|Non compatibile con [3]|  
+|Pura *2.x* Unicode application|Compatibilità|Compatibile con [1]|Compatibile con [1]|Non compatibile con [3]|  
 |Applicazione di gruppo aprire puro e conforme allo standard ISO|Non è compatibile|Compatibile con [2]|Compatibile con [2]|Compatibile con [2]|  
 |Applicazione 3.0 pure|Non è compatibile|Compatibilità|Compatibilità|Non compatibile con [4]|  
 |Applicazione 3.5 pure|Non è compatibile|Compatibilità|Compatibilità|Non compatibile con [4]|  
@@ -45,9 +45,9 @@ Nella tabella seguente viene descritta la compatibilità dei tipi di applicazion
   
  [2] l'applicazione deve compilare con le intestazioni ODBC 3.5 (o versione successive) e collegare con gestione Driver ODBC. Inoltre necessario impostare il flag di intestazione ODBC_STD.  
   
- [3] questa configurazione possa potenzialmente non funzionerà perché sono presenti funzioni di ODBC 2. *x* che non sono presenti gli standard, ad esempio i segnalibri.  
+ [3] questa configurazione possa potenzialmente non funzionano perché in ODBC sono funzionalità *2.x* che non sono presenti gli standard, ad esempio i segnalibri.  
   
- [4] questa configurazione possa potenzialmente non funzionano perché sono presenti funzionalità in ODBC 3*x* che non sono presenti gli standard, ad esempio i segnalibri.  
+ [4] questa configurazione possa potenzialmente non funzionano perché in ODBC sono funzionalità *3.x* che non sono presenti gli standard, ad esempio i segnalibri.  
   
  [5] questa configurazione può non riuscire perché sono presenti funzionalità che non si trovano in ODBC 2.x o 3.x driver, ad esempio specifici del driver ODBC 3.8 [tipi di dati C in ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   

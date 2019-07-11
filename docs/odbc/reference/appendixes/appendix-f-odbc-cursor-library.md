@@ -16,12 +16,12 @@ ms.assetid: a03084df-4e48-48ef-917d-4a3fae48a605
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c27845976651b0d68b91b6269a21d1cae3518df8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a87f6c365762f5b262dfbed07bbae14cb08604a
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267797"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794147"
 ---
 # <a name="appendix-f-odbc-cursor-library"></a>Appendice F: Libreria di cursori ODBC
 > [!IMPORTANT]  
@@ -31,7 +31,7 @@ ms.locfileid: "63267797"
   
  La libreria di cursori è una libreria di collegamento dinamico (DLL) che risiede tra gestione Driver e il driver. Quando un'applicazione chiama una funzione, gestione Driver chiama la funzione nella libreria di cursori, che esegue la funzione o chiama tale driver specificato. Per una determinata connessione, un'applicazione specifica se la libreria di cursori viene sempre usata, utilizzata se il driver non supporta i cursori scorrevoli o mai utilizzata.  
   
- La libreria di cursori viene visualizzato come un driver per la gestione di Driver. Se la libreria di cursori si trova tra la gestione di Driver e un'API ODBC 2. *x* driver, la libreria di cursori viene visualizzato come un'API ODBC 2. *x* driver. Se la libreria di cursori si trova tra la gestione di Driver e un'applicazione ODBC 3 *. x* driver, la libreria di cursori viene visualizzato come un'applicazione ODBC 3*x* driver. Comportamento anomalo dalla libreria di cursori varia a seconda della versione del driver può essere utilizzato con, fatta eccezione per gli offset di associazione, che è supportato per entrambi ODBC 2. *x* e ODBC 3. *x* driver.  
+ La libreria di cursori viene visualizzato come un driver per la gestione di Driver. Se la libreria di cursori si trova tra la gestione di Driver e un database ODBC *2.x* driver, la libreria di cursori viene visualizzato come un database ODBC *2.x* driver. Se la libreria di cursori si trova tra la gestione di Driver e un database ODBC *3.x* driver, la libreria di cursori viene visualizzato come un database ODBC *3.x* driver. Comportamento anomalo dalla libreria di cursori varia a seconda della versione del driver può essere utilizzato con, fatta eccezione per gli offset di associazione, che è supportato per entrambi ODBC *2.x* e ODBC *3.x* driver.  
   
  Per implementare cursori a blocchi nei **SQLFetch** e **SQLFetchScroll**, la libreria di cursori chiama ripetutamente **SQLFetch** nel driver. Per implementare lo scorrimento, memorizza nella cache i dati che sono recuperati nella memoria e nei file di disco. Quando un'applicazione richiede un nuovo set di righe, la libreria di cursori recupera in base alle esigenze dal driver o dalla cache.  
   

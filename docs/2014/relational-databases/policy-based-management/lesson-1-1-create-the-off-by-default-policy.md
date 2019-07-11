@@ -10,12 +10,12 @@ ms.assetid: 98fde3c5-297c-4d95-981e-95700bbf5ccd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2fb48665fafc9c79856279c7460918b85334bfb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c96443d7f46dee539fd7d39a91a168b3ed5a0d8c
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064298"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792931"
 ---
 # <a name="create-the-off-by-default-policy"></a>Creazione di criteri Disattivata per impostazione predefinita
   Questa attività consente di creare una condizione denominata Posta disattivata basata sul facet Configurazione superficie di attacco e di creare quindi un criterio denominato Disattivata per impostazione predefinita.  
@@ -28,7 +28,7 @@ ms.locfileid: "66064298"
   
 3.  Nella casella **Facet** verificare che il facet **Configurazione superficie di attacco** sia selezionato.  
   
-4.  Nella finestra di dialogo **Campo** nell'area **Espressione** selezionare **@DatabaseMailEnabled** , nella casella **Operatore** selezionare **=** e in **Valore** selezionare **False**.  
+4.  Nel **espressione** area, nel **campo** , quindi selezionare  **\@DatabaseMailEnabled**nella **operatore** selezionare **=** e il **valore** seleziona **False**.  
   
 5.  Nella pagina **Descrizione** digitare una descrizione per la condizione, quindi scegliere **OK** per creare la condizione.  
   

@@ -14,12 +14,12 @@ ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1368d29801a414de866003b86c63fb4823c4a7b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8a1b81d60ef691e02d4b69cc71fa961bbaddf18
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62790660"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793427"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Connettività client Always On (SQL Server)
   In questo argomento vengono illustrate le considerazioni relative alla connettività client ai gruppi di disponibilità AlwaysOn, inclusi prerequisiti, restrizioni e indicazioni per configurazioni e impostazioni client.  
@@ -33,12 +33,12 @@ ms.locfileid: "62790660"
   
  Nella tabella seguente viene riepilogato il supporto di driver per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
   
-|Driver|Failover su più subnet|Finalità dell'applicazione|Routing di sola lettura|Failover su più Subnet: Failover degli Endpoint singola Subnet più rapido|Failover su più Subnet: Le istanze cluster di risoluzione dell'istanza denominata di SQL|  
+|Driver|Failover su più subnet|Finalità dell'applicazione|Routing di sola lettura|Failover su più subnet: Failover dell'endpoint su una sola subnet più rapido|Failover su più subnet: Risoluzione dell'istanza denominata per le istanze cluster SQL|  
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Yes|Yes|Yes|Yes|Yes|  
-|SQL Native Client 11.0 OLEDB|No|Yes|Yes|No|no|  
-|ADO.NET con .NET Framework 4.0 con patch di connettività **<sup>*</sup>**|Yes|Yes|Yes|Yes|Yes|  
-|ADO.NET con.NET Framework 3.5 SP1 con patch di connettività **<sup>** </sup>**|Yes|Yes|Yes|Yes|Yes|  
+|SQL Native Client 11.0 OLEDB|No|Yes|Sì|No|No|  
+|ADO.NET con .NET Framework 4.0 con patch di connettività **<sup>*</sup>** |Yes|Yes|Yes|Yes|Yes|  
+|ADO.NET con.NET Framework 3.5 SP1 con patch di connettività **<sup>** </sup>** |Yes|Yes|Yes|Yes|Yes|  
 |Microsoft JDBC Driver 4.0 per SQL Server|Yes|Yes|Yes|Yes|Yes|  
   
  **<sup>*</sup>**  Scaricare la patch di connettività per ADO .NET con .NET Framework 4.0: [ https://support.microsoft.com/kb/2600211 ](https://support.microsoft.com/kb/2600211).  

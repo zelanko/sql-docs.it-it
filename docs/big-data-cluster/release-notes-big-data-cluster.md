@@ -2,20 +2,20 @@
 title: Note sulla versione
 titleSuffix: SQL Server big data clusters
 description: Questo articolo descrive gli ultimi aggiornamenti e problemi noti per i cluster di big data di SQL Server 2019 (anteprima).
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 389a521d256becb431b23ec073cadcde7c116952
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 2937734ad4543d9dc59e777ceaddfc597da148d2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681547"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794095"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Note sulla versione per i cluster di big data in SQL Server
 
@@ -113,6 +113,11 @@ Le sezioni seguenti descrivono i problemi noti e limitazioni della versione.
 - Il SA_PASSWORD fa parte dell'ambiente e individuabile (ad esempio in un file di dump del cavo di alimentazione). È necessario reimpostare il SA_PASSWORD nell'istanza master dopo la distribuzione. Questo non è un bug, ma un passaggio di sicurezza. Per altre informazioni su come modificare il SA_PASSWORD in un contenitore Linux, vedere [modificare la password SA](../linux/quickstart-install-connect-docker.md#sapassword).
 
 - I log di servizio contenitore di AZURE possono contenere la password dell'amministratore di sistema per le distribuzioni cluster di big data.
+
+#### <a name="kibana-logs-dashboards"></a>Dashboard di log di Kibana
+
+- Confronto tra Aris CTP 3.0 e 3.1, la versione di Kibana è stata aggiornata da 6.3.1 a 7.0.1.  Questo ha reso compatibile con Kibana del browser Microsoft Edge. Gli utenti visualizzeranno una pagina vuota quando si caricano la versione corrente dei dashboard Kibana in Microsoft Edge. Visualizzare [qui]( https://www.elastic.co/support/matrix#matrix_browse) per i browser supportati per Kibana.rs 
+
 
 ## <a id="ctp30"></a> CTP 3.0 (maggio)
 

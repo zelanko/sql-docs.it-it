@@ -2,19 +2,20 @@
 title: Fare riferimento a mssqlctl hdfs
 titleSuffix: SQL Server big data clusters
 description: Articolo di riferimento per i comandi hdfs mssqlctl.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9051c3630fce005572bc3b939ebef9ed8d111e07
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 8f211faf827bdf925a8fde938fff8f96998bc359
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394213"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728522"
 ---
 # <a name="mssqlctl-hdfs"></a>mssqlctl hdfs
 
@@ -22,7 +23,7 @@ ms.locfileid: "67394213"
 
 L'articolo seguente fornisce informazioni di riferimento per la **hdfs** comandi nel **mssqlctl** dello strumento. Per altre informazioni sulle altre **mssqlctl** comandi, vedere [mssqlctl riferimento](reference-mssqlctl.md).
 
-## <a name="commands"></a>Comandi
+## <a name="commands"></a>Comandi:
 |     |     |
 | --- | --- |
 [mssqlctl hdfs shell](#mssqlctl-hdfs-shell) | La shell HDFS è una shell dei comandi interattiva semplice per file system HDFS.
@@ -48,15 +49,15 @@ mssqlctl hdfs shell
 ```
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 ## <a name="mssqlctl-hdfs-ls"></a>mssqlctl hdfs ls
 Elenca lo stato del file specificato o della directory.
 ```bash
@@ -73,15 +74,15 @@ mssqlctl hdfs ls --path '/tmp'
 Il percorso per lo stato dell'elenco.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 ## <a name="mssqlctl-hdfs-exists"></a>hdfs mssqlctl esiste
 Determinare se esiste un file o directory.  Restituisce True se è presente e False in caso contrario.
 ```bash
@@ -98,15 +99,15 @@ mssqlctl hdfs exists --path '/tmp'
 Percorso per verificare la presenza di esistenza.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 ## <a name="mssqlctl-hdfs-mkdir"></a>mssqlctl hdfs mkdir
 Creare una directory nel percorso specificato.
 ```bash
@@ -123,15 +124,15 @@ mssqlctl hdfs mkdir --path '/tmp'
 Nome della directory da creare.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 ## <a name="mssqlctl-hdfs-mv"></a>mssqlctl hdfs mv
 Spostare il file specificato o il percorso nel percorso specificato.
 ```bash
@@ -150,15 +151,15 @@ La directory da spostare.
 Il percorso in cui spostarsi.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 ## <a name="mssqlctl-hdfs-create"></a>creare mssqlctl hdfs
 Creare il file di testo nella posizione specificata.  È possibile aggiungere contenuto di testo semplice tramite il parametro dei dati.
 ```bash
@@ -177,15 +178,15 @@ Nome del file da creare.
 Contenuto del file.  Pensate per il contenuto di testo semplice.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 ## <a name="mssqlctl-hdfs-read"></a>hdfs mssqlctl leggere
 Leggere il contenuto di un file.  Offset e lunghezza in byte sono parametri facoltativi.
 ```bash
@@ -207,15 +208,15 @@ Numero di byte di offset all'interno del file da leggere.
 Lunghezza dei dati da leggere.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 ## <a name="mssqlctl-hdfs-rm"></a>mssqlctl hdfs rm
 Rimuovere un file o directory.
 ```bash
@@ -232,15 +233,15 @@ mssqlctl hdfs rm --path '/tmp'
 Nome del file da rimuovere.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 ## <a name="mssqlctl-hdfs-rmr"></a>mssqlctl hdfs rmr
 Rimuovono in modo ricorsivo un file o directory.
 ```bash
@@ -257,15 +258,15 @@ mssqlctl hdfs rmr --path '/tmp'
 Nome del file da rimuovere in modo ricorsivo.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 ## <a name="mssqlctl-hdfs-chmod"></a>chmod hdfs mssqlctl
 Modificare l'autorizzazione per il file o directory specificata.
 ```bash
@@ -284,15 +285,15 @@ Nome del file o directory per impostare le autorizzazioni su.
 Ottetti di autorizzazione da impostare.  Esempio "775".
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 ## <a name="mssqlctl-hdfs-chown"></a>mssqlctl hdfs chown
 Modificare il proprietario o il gruppo di file specificato.
 ```bash
@@ -314,15 +315,15 @@ Per impostare il nome del proprietario.
 Nome del gruppo per impostare su.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

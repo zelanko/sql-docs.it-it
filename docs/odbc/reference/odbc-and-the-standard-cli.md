@@ -17,12 +17,12 @@ ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5485da176b9bd4aa7afca7afa088e6932d6f0d58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: adddf32a29d3a891a4a2c6fb2353648e62b0d9c5
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273313"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794098"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC e l'interfaccia della riga di comando standard
 Consente di allineare ODBC con le seguenti specifiche degli standard in grado di gestire con l'interfaccia a livello di chiamata (CLI). (Le funzioni ODBC sono un superset della ognuno di questi standard).  
@@ -33,17 +33,17 @@ Consente di allineare ODBC con le seguenti specifiche degli standard in grado di
   
  In seguito a questa allineamento, si verifica quanto segue:  
   
--   Un'applicazione scritta per le specifiche di CLI ISO e Open Group funzionerà con un'applicazione ODBC 3. *x* driver o un driver conforme agli standard quando viene compilato con ODBC 3. *x* file di intestazione e collegata con ODBC 3. *x* librerie, e quando riesce ad accedere al driver tramite ODBC 3. *x* gestione Driver.  
+-   Un'applicazione scritta in base alle specifiche Open Group e ISO CLI funzionerà con un database ODBC *3.x* driver o un driver conforme agli standard quando viene compilato con ODBC *3.x* intestazione file, con collegamenti e ODBC *3.x* librerie, e quando riesce ad accedere al driver tramite ODBC *3.x* gestione Driver.  
   
--   Un driver scritto in base alle specifiche Open Group e ISO CLI funzionerà con un'applicazione ODBC 3 *. x* applicazione o un'applicazione conforme agli standard quando viene compilato con ODBC 3*x* i file di intestazione e collegato con ODBC 3 *. x* librerie, e quando l'applicazione può accedere al driver tramite ODBC 3*x* gestione Driver. (Per altre informazioni, vedere [applicazioni conformi agli standard e i driver](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
+-   È possibile utilizzare un driver scritti in base alle specifiche Open Group e ISO CLI con un database ODBC *3.x* applicazione o un'applicazione conforme agli standard quando viene compilato con ODBC *3.x* i file di intestazione e collegato con ODBC *3.x* librerie, e quando l'applicazione può accedere al driver tramite ODBC *3.x* gestione Driver. (Per altre informazioni, vedere [applicazioni conformi agli standard e i driver](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
   
- Il livello di conformità di interfaccia Core comprende tutte le funzionalità di ISO CLI e tutte le funzionalità necessari della riga di comando gruppo aperto. Funzionalità opzionali della riga di comando di gruppo aprire vengono visualizzati nei livelli superiori della conformità di interfaccia. Poiché tutti ODBC 3. *x* i driver devono supportare le funzionalità di livello la conformità di interfaccia di Core, vengono soddisfatte le seguenti:  
+ Il livello di conformità di interfaccia Core comprende tutte le funzionalità di ISO CLI e tutte le funzionalità necessari della riga di comando gruppo aperto. Funzionalità opzionali della riga di comando di gruppo aprire vengono visualizzati nei livelli superiori della conformità di interfaccia. Poiché tutti ODBC *3.x* i driver devono supportare le funzionalità di livello la conformità di interfaccia di Core, vengono soddisfatte le seguenti:  
   
--   Un database ODBC 3. *x* driver supporterà tutte le funzionalità usate da un'applicazione conforme agli standard.  
+-   Un database ODBC *3.x* driver supporterà tutte le funzionalità usate da un'applicazione conforme agli standard.  
   
--   Un database ODBC 3. *x* applicazione usando solo le funzionalità di ISO CLI e le funzionalità necessari della riga di comando di gruppo aprire funzionerà con qualsiasi driver conforme agli standard.  
+-   Un database ODBC *3.x* applicazione usando solo le funzionalità di ISO CLI e le funzionalità necessari della riga di comando di gruppo aprire funzionerà con qualsiasi driver conforme agli standard.  
   
- Oltre alle specifiche di interfaccia a livello di chiamata contenute negli standard ISO/IEC e CLI di gruppo aprire ODBC implementa le funzionalità seguenti. (Alcune di queste funzionalità disponibili nelle versioni di ODBC prima ODBC 3. *x*.)  
+ Oltre alle specifiche di interfaccia a livello di chiamata contenute negli standard ISO/IEC e CLI di gruppo aprire ODBC implementa le funzionalità seguenti. (Alcune di queste funzionalità disponibili nelle versioni di ODBC prima ODBC *3.x*.)  
   
 -   Operazioni di recupero con più righe da una singola chiamata di funzione  
   

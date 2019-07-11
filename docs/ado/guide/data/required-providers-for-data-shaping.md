@@ -14,19 +14,19 @@ ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: b95d6e42174cbce4357562ac3b866f49f0b58fef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b825139c99fe97cfce27d03e65429bb076558413
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701793"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793039"
 ---
 # <a name="required-providers-for-data-shaping"></a>Provider necessari per il data shaping
 Il data shaping in genere richiede due provider. Il provider di servizi [Data shaping per OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), fornisce i dati di data shaping, funzionalità e un provider di dati, ad esempio il Provider OLE DB per SQL Server, che include le righe di dati per popolare il data shaping [Recordset ](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
  Il nome del provider di servizi (MSDataShape) può essere specificato come valore dei [Connection](../../../ado/reference/ado-api/connection-object-ado.md) oggetto [Provider](../../../ado/reference/ado-api/provider-property-ado.md) proprietà o parola chiave della stringa di connessione "Provider = MSDataShape;".  
   
- Il nome del provider di dati può essere specificato come valore dei **Provider di dati** proprietà dinamiche, che viene aggiunto al **connessione** oggetto [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta in base al il Data shaping per OLE DB o parola chiave della stringa di connessione "**Provider di dati =**_provider_".  
+ Il nome del provider di dati può essere specificato come valore dei **Provider di dati** proprietà dinamiche, che viene aggiunto al **connessione** oggetto [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta in base al il Data shaping per OLE DB o parola chiave della stringa di connessione "**Provider di dati =** _provider_".  
   
  Nessun provider di dati è obbligatorio se il **Recordset** non viene popolata (ad esempio, come un creato **Recordset** in cui le colonne vengono create con la nuova parola chiave). In tal caso, specificare "**Provider di dati =** none;".  
   

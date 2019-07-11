@@ -14,12 +14,12 @@ ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33116adaf74ed2d3fc52fec460859a7672ce2d0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6741b5f07f2427ef502f5177bbf01acd56c4d5b
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057783"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794173"
 ---
 # <a name="odbc-glossary"></a>Glossario di ODBC
 ## <a name="a"></a>A  
@@ -53,9 +53,9 @@ ms.locfileid: "63057783"
  **la modalità autocommit**  
  Una modalità di commit delle transazioni in cui vengono eseguito il commit delle transazioni immediatamente dopo che vengono eseguite.  
   
-## <a name="b"></a>B  
+## <a name="b"></a>b  
  **Modifica comportamentale**  
- Una modifica determinate funzionalità da ODBC 3 *. x* comportamento a ODBC 2. *x* comportamento, o viceversa. Generato modificando l'attributo di ambiente SQL_ATTR_ODBC_VERSION.  
+ Una modifica in determinate funzionalità da ODBC *3.x* comportamento a ODBC *2.x* comportamento, o viceversa. Generato modificando l'attributo di ambiente SQL_ATTR_ODBC_VERSION.  
   
  **Oggetto binario di grandi dimensioni (BLOB)**  
  Qualsiasi dato binario in un determinato numero di byte, ad esempio 255. In genere molto più tempo. Questo tipo di dati è in genere inviato da e recuperato dall'origine dei dati in parti. Noto anche come *dati di tipo long*.  
@@ -75,7 +75,7 @@ ms.locfileid: "63057783"
  **byte**  
  Otto bit o a un ottetto. *Vedere anche* ottetto.  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
  **Tipo di dati C**  
  Il tipo di dati di una variabile in un programma C, in questo caso l'applicazione.  
   

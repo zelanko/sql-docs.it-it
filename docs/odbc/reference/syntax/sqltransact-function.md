@@ -20,19 +20,19 @@ ms.assetid: 496249e0-8eff-4c60-8358-5543bc3ead9c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b76b7a550211522c2b2100776b88f311abb2b932
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4ad40522bd9f97c72a5d0a71d089b9e7c98a7d6b
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63233341"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793616"
 ---
 # <a name="sqltransact-function"></a>Funzione SQLTransact
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 ODBC: Deprecato  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: Funzionalità deprecate  
   
  **Riepilogo**  
- In ODBC 3. *x*, l'API ODBC 2 *. x* funzione **SQLTransact** è stato sostituito da **SQLEndTran**. Per altre informazioni, vedere [SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).  
+ In ODBC *3.x*, ODBC *2.x* funzione **SQLTransact** è stato sostituito da **SQLEndTran**. Per altre informazioni, vedere [SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).  
   
 > [!NOTE]  
 >  L'attributo SQL_ASYNC_DBC_FUNCTION_ENABLE, che è stata introdotta in ODBC 3.8, non è supportato dal **SQLTransact**. Applicazioni con un'operazione asincrona su un handle di connessione devono utilizzare **SQLEndTran**.  

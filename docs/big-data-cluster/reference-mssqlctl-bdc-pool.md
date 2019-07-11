@@ -2,19 +2,20 @@
 title: riferimento ai pool di mssqlctl integrazione applicativa dei dati
 titleSuffix: SQL Server big data clusters
 description: Articolo di riferimento per i comandi di pool di mssqlctl integrazione applicativa dei dati.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 43d2e8e93020bd397a9416efefb9691cf23b7110
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 82d7f9ee32faf5ed9816846bce39380f6b0a3c3c
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394263"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727447"
 ---
 # <a name="mssqlctl-bdc-pool"></a>pool di integrazione applicativa dei dati mssqlctl
 
@@ -22,7 +23,7 @@ ms.locfileid: "67394263"
 
 L'articolo seguente fornisce informazioni di riferimento per il **bdc pool** comandi nel **mssqlctl** dello strumento. Per altre informazioni sulle altre **mssqlctl** comandi, vedere [mssqlctl riferimento](reference-mssqlctl.md).
 
-## <a name="commands"></a>Comandi
+## <a name="commands"></a>Comandi:
 |     |     |
 | --- | --- |
 [stato del pool di mssqlctl integrazione applicativa dei dati](reference-mssqlctl-bdc-pool-status.md) | Comandi dello stato del pool.

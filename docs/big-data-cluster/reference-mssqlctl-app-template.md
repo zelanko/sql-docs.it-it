@@ -2,19 +2,20 @@
 title: riferimento di modello app mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Articolo di riferimento per i comandi di modello app mssqlctl.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 20d8b332643c9ef749aae5be0ab9e778a593d6ff
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: c0b9ab4dc278e04b2b112608699b9c60682de769
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388190"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728716"
 ---
 # <a name="mssqlctl-app-template"></a>modello di app mssqlctl
 
@@ -22,7 +23,7 @@ ms.locfileid: "67388190"
 
 L'articolo seguente fornisce informazioni di riferimento per la **modello di app** comandi nel **mssqlctl** dello strumento. Per altre informazioni sulle altre **mssqlctl** comandi, vedere [mssqlctl riferimento](reference-mssqlctl.md).
 
-## <a name="commands"></a>Comandi
+## <a name="commands"></a>Comandi:
 |     |     |
 | --- | --- |
 [elenco di modelli di app mssqlctl](#mssqlctl-app-template-list) | Modelli di recupero supportata.
@@ -47,15 +48,15 @@ mssqlctl app template list --url https://github.com/diffrent/templates.git
 Specificare un percorso del repository di modelli diversi. Valore predefinito: https://github.com/Microsoft/SQLBDC-AppDeploy.git
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 ## <a name="mssqlctl-app-template-pull"></a>pull di modello app mssqlctl
 Scaricare i modelli supportati disponibili nel repository di github [URL] specificato.
 ```bash
@@ -86,15 +87,15 @@ Posizione in cui inserire il modello di struttura dell'applicazione.
 `./templates`
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b006e2795a79f9a7cbaf3686113bb2f1c7ad8172
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8aae950e39dd66bb08a2adbc6225358c75ad4d37
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049738"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730164"
 ---
 # <a name="syscryptproperties-transact-sql"></a>sys.crypt_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "63049738"
 |**class_desc**|**nvarchar(60)**|Descrizione della classe dell'elemento in cui esiste la proprietà.<br /><br /> OBJECT_OR_COLUMN<br /> ASSEMBLY|  
 |**major_id**|**int**|ID dell'elemento in cui esiste la proprietà, interpretato in base alla classe.|  
 |**thumbprint**|**varbinary(32)**|Hash SHA-1 del certificato o chiave asimmetrica utilizzata.|  
-|**crypt_type**|**char(4)**|Tipo di crittografia.<br /><br /> SPVC = Crittografato tramite la chiave privata del certificato<br /><br /> SPVA = Crittografato tramite la chiave privata asimmetrica<br /><br /> CPVC = Controfirma tramite la chiave privata del certificato<br /><br /> CPVA = Controfirma tramite la chiave asimmetrica|  
+|**crypt_type**|**char(4)**|Tipo di crittografia.<br /><br /> SPVC = firmato dalla chiave privata del certificato<br /><br /> SPVA = firmato dalla chiave privata asimmetrica<br /><br /> CPVC = Controfirma tramite la chiave privata del certificato<br /><br /> CPVA = Controfirma tramite la chiave asimmetrica|  
 |**crypt_type_desc**|**nvarchar(60)**|Descrizione del tipo di crittografia.<br /><br /> SIGNATURE BY CERTIFICATE<br /><br /> SIGNATURE BY ASYMMETRIC KEY<br /><br /> COUNTER SIGNATURE BY CERTIFICATE<br /><br /> COUNTER SIGNATURE BY ASYMMETRIC KEY|  
-|**crypt_property**|**varbinary(max)**|Bit firmati o crittografati.|  
+|**crypt_property**|**varbinary(max)**|Bit firmati o crittografati. Per un modulo firmato questi sono i bit di firma del modulo.|  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

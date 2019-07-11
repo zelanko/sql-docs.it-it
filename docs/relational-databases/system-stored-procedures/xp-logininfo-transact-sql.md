@@ -18,12 +18,12 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 96dc11ebc246e42fb4b01b777b430c6aa9230b5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e48337afee5320355eb71025bffb972b85e3358
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099953"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793614"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ## <a name="arguments"></a>Argomenti  
 `[ @acctname = ] 'account_name'` È il nome di un utente di Windows o un gruppo consentito l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *account_name* viene **sysname**, con un valore predefinito è NULL. Se *account_name* non viene specificato, tutti i gruppi di Windows e gli utenti di Windows che sono stati esplicitamente concesso l'autorizzazione di accesso vengono segnalati. *account_name* deve essere completo. ad esempio ADVWKS4\macraes o BUILTIN\Administrators.  
   
- **'tutte'** | **'members'**  
- Specifica se devono essere restituite informazioni su tutti i percorsi di autorizzazione per l'account oppure sui membri del gruppo di Windows. **@option** viene **varchar (10)**, con un valore predefinito è NULL. A meno che **tutti** viene specificato, viene visualizzato solo il primo percorso di autorizzazione.  
+ **'tutte'**  |  **'members'**  
+ Specifica se devono essere restituite informazioni su tutti i percorsi di autorizzazione per l'account oppure sui membri del gruppo di Windows. **\@opzione** viene **varchar (10)** , con un valore predefinito è NULL. A meno che **tutti** viene specificato, viene visualizzato solo il primo percorso di autorizzazione.  
   
-`[ @privilege = ] variable_name` È un parametro di output che restituisce il livello di privilegio dell'account Windows specificato. *variable_name* viene **varchar (10)**, valore predefinito 'Not wanted'. Il livello di privilegio restituito è **utente**, **admin**, o **null**.  
+`[ @privilege = ] variable_name` È un parametro di output che restituisce il livello di privilegio dell'account Windows specificato. *variable_name* viene **varchar (10)** , valore predefinito 'Not wanted'. Il livello di privilegio restituito è **utente**, **admin**, o **null**.  
   
  OUTPUT  
  Quando specificato, lo inserisce *variable_name* nel parametro di output.  

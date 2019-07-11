@@ -14,15 +14,15 @@ ms.assetid: e3792fe4-a955-473a-a297-c1b2403660c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8504709cb2cedb36c62bb9be74ffc8d12a4c811d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ccfebb99d6f98f1c6c2e5eea4650e1433e536d97
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188784"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792448"
 ---
 # <a name="sqlgetconnectoption-mapping"></a>Mapping di SQLGetConnectOption
-Quando un'applicazione chiama **SQLGetConnectOption** tramite un'applicazione ODBC 3*x* driver, la chiamata a  
+Quando un'applicazione chiama **SQLGetConnectOption** tramite un database ODBC *3.x* driver, la chiamata a  
   
 ```  
 SQLGetConnectOption(hdbc, fOption, pvParam)   
@@ -52,4 +52,4 @@ SQLGetConnectOption(hdbc, fOption, pvParam)
   
  Per le opzioni di connessione di stringa definite da ODBC, gestione Driver imposta il *BufferLength* argomento nella chiamata a **SQLGetConnectAttr** alla lunghezza massima predefinita (SQL_MAX_OPTION_STRING_LENGTH); per un'opzione di connessione, non di tipo stringa *BufferLength* è impostato su 0.  
   
- Per un'applicazione ODBC 3 *. x* driver, gestione Driver non controlla se *opzione* compresa tra SQL_CONN_OPT_MIN e SQL_CONN_OPT_MAX, oppure è maggiore di SQL_CONNECT_OPT_DRVR_START. Il driver deve verificare la validità dei valori di opzione.
+ Per un database ODBC *3.x* driver, gestione Driver non controlla se *opzione* compresa tra SQL_CONN_OPT_MIN e SQL_CONN_OPT_MAX, oppure è maggiore di SQL_CONNECT_OPT_DRVR_START. Il driver deve verificare la validità dei valori di opzione.

@@ -2,20 +2,20 @@
 title: Caricare dati di esempio
 titleSuffix: SQL Server big data clusters
 description: Questa esercitazione illustra come caricare i dati di esempio in un cluster di big data di SQL Server. I dati di esempio includono i dati relazionali nell'istanza master di SQL Server. Include anche dati di HDFS nel pool di archiviazione. Questo tipo di dati supporta altre esercitazioni in questa sezione.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 04/23/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d78fd9ecce71e9b7ffb86441fab134b1180d058a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4ea5540c0188ec9a57ad8b6780cf3ab6af5dfc2
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770831"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727349"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Esercitazione: Caricare i dati di esempio in un cluster di big data di SQL Server
 

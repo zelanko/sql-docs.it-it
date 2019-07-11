@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Questo articolo illustra come configurare la suddivisione in livelli per montare un file system di archivio Azure Data Lake esterni in HDFS in un cluster di big data (anteprima) di SQL Server 2019 HDFS.
 author: nelgson
 ms.author: negust
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a36bd28efd128a76246297995d712b417d7f230d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 823e24b4ec78996140fa3f17cef9c1e56365a3f7
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782108"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728741"
 ---
 # <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>Configurare la suddivisione in livelli nel cluster di big data di SQL Server HDFS
 

@@ -2,19 +2,20 @@
 title: riferimento dell'app mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Articolo di riferimento per i comandi dell'app mssqlctl.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f1dc3830a2bdf9d8a3d4e2d65fcbb556af224d1c
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 1ac884a8d77aa241402cedce3eaedeef9f60512a
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388244"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727533"
 ---
 # <a name="mssqlctl-app"></a>app mssqlctl
 
@@ -22,7 +23,7 @@ ms.locfileid: "67388244"
 
 L'articolo seguente fornisce informazioni di riferimento per la **app** comandi nel **mssqlctl** dello strumento. Per altre informazioni sulle altre **mssqlctl** comandi, vedere [mssqlctl riferimento](reference-mssqlctl.md).
 
-## <a name="commands"></a>Comandi
+## <a name="commands"></a>Comandi:
 |     |     |
 | --- | --- |
 [modello di app mssqlctl](reference-mssqlctl-app-template.md) | modelli.
@@ -75,15 +76,15 @@ Posizione in cui posizionare lo scheletro dell'applicazione. Valore predefinito:
 Specificare un percorso del repository di modelli diversi. Valore predefinito: https://github.com/Microsoft/SQLBDC-AppDeploy.git
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 ## <a name="mssqlctl-app-create"></a>creare app mssqlctl
 Creare un'applicazione.
 ```bash
@@ -100,15 +101,15 @@ mssqlctl app create --spec /path/to/dir/with/spec/yaml
 Percorso di una directory con un file YAML delle specifiche che descrive l'applicazione.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 ## <a name="mssqlctl-app-update"></a>aggiornamento dell'app mssqlctl
 Aggiornare un'applicazione.
 ```bash
@@ -127,15 +128,15 @@ Percorso di una directory con un file YAML delle specifiche che descrive l'appli
 Non chiedere conferma quando si aggiorna un'applicazione dal file spec.yaml del CWD.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 ## <a name="mssqlctl-app-list"></a>elenco di app mssqlctl
 Elencare un'applicazione o le applicazioni.,
 ```bash
@@ -162,15 +163,15 @@ Nome applicazione
 Versione dell'applicazione.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 ## <a name="mssqlctl-app-delete"></a>mssqlctl app delete
 Eliminare un'applicazione.
 ```bash
@@ -189,15 +190,15 @@ Nome applicazione
 Versione dell'applicazione.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 ## <a name="mssqlctl-app-run"></a>esecuzione dell'app mssqlctl
 Eseguire un'applicazione.
 ```bash
@@ -228,15 +229,15 @@ Versione dell'applicazione.
 I parametri in un file CSV di input applicazione `name=value` formato.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 ## <a name="mssqlctl-app-describe"></a>Descrivere mssqlctl app
 Descrivere un'applicazione.
 ```bash
@@ -258,15 +259,15 @@ Nome applicazione
 Versione dell'applicazione.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

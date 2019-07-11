@@ -10,27 +10,26 @@ ms.assetid: c1224e88-af74-4c99-ae32-d5d2c552a1f5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9fa5034f83f537afa3b7678b57637ffedada6680
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c7ff8638aeeb02cdb86643fd1fc6a3241a8db26
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630719"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732546"
 ---
 # <a name="sysdmdbxtpmergerequests-transact-sql"></a>sys.dm_db_xtp_merge_requests (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
 Traccia le richieste di unione del database. La richiesta di unione potrebbe essere stata generata da SQL Server o la richiesta potrebbe essere effettuata da un utente con [Sys. sp_xtp_merge_checkpoint_files (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql.md).
 
 > [!NOTE]
 > Questa vista a gestione dinamica (DMV), sys.dm_db_xtp_merge_requests, esiste fino a Microsoft SQL Server 2014.
-> 
 > Tuttavia, a partire da SQL Server 2016 questa DMV non è più valido.
 
 ## <a name="columns-in-the-report"></a>Colonne del report
 
-| Nome colonna | Tipo di dati | Description |
+| Nome colonna | Tipo di dati | Descrizione |
 | :-- | :-- | :-- |
 | request_state | tinyint | Stato della richiesta di unione:<br/>0 = Richiesta<br/>1 = In sospeso<br/>2 = installato<br/>3 = Abbandonata |
 | request_state_desc | nvarchar(60) | Significati per lo stato corrente della richiesta:<br/><br/>Richieste - esiste una richiesta di unione.<br/>In sospeso - il merge è in corso l'elaborazione.<br/>Installato: l'unione è stata completata.<br/>Abbandonata - merge. Impossibile completare, forse a causa della mancanza di spazio di archiviazione. |
@@ -39,7 +38,7 @@ Traccia le richieste di unione del database. La richiesta di unione potrebbe ess
 | upper_bound_tsn | bigint | Timestamp massimo per il file di unione di destinazione. Il timestamp massimo per la transazione di tutti i file di origine da unire. |
 | collection_tsn | bigint | Timestamp di raccolta della riga corrente.<br/><br/>Una riga nello stato Installata viene rimossa quando checkpoint_tsn è maggiore di collection_tsn.<br/><br/>Una riga nello stato Abbandonata viene rimossa quando checkpoint_tsn è minore di collection_tsn. |
 | checkpoint_tsn | bigint | Ora di avvio del checkpoint.<br/><br/>Tutte le eliminazioni eseguite da transazioni con un timestamp minore di questo vengono incluse nel nuovo file di dati. Le eliminazioni rimanenti vengono spostate nel file differenziale di destinazione. |
-| sourcenumber_file_id | GUID | Fino a 16 ID di file interni tramite cui vengono identificati in modo univoco i file di origine nell'unione. |
+| sourcenumber_file_id | GUID | Fino a 16 ID di file interne che identificano i file di origine nell'unione. |
 
 ## <a name="permissions"></a>Permissions
 
@@ -48,5 +47,3 @@ Traccia le richieste di unione del database. La richiesta di unione potrebbe ess
 ## <a name="see-also"></a>Vedere anche
 
 [Tabella con ottimizzazione per la memoria viste a gestione dinamica (Transact-SQL)](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)
-
-

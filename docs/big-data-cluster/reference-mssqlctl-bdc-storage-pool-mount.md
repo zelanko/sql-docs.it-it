@@ -2,19 +2,20 @@
 title: riferimento di montaggio mssqlctl integrazione applicativa dei dati del pool di archiviazione
 titleSuffix: SQL Server big data clusters
 description: Articolo di riferimento per i comandi di montaggio mssqlctl integrazione applicativa dei dati del pool di archiviazione.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cf6012b6c700afd6ee0eca763df0961f088a3be4
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 4204e87e96fd0d91a9bfbf64813583ef92d3202b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394243"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727474"
 ---
 # <a name="mssqlctl-bdc-storage-pool-mount"></a>montaggio di pool di archiviazione mssqlctl integrazione applicativa dei dati
 
@@ -22,7 +23,7 @@ ms.locfileid: "67394243"
 
 L'articolo seguente fornisce informazioni di riferimento per la **montaggio di integrazione applicativa dei dati del pool di archiviazione** comandi nel **mssqlctl** dello strumento. Per altre informazioni sulle altre **mssqlctl** comandi, vedere [mssqlctl riferimento](reference-mssqlctl.md).
 
-## <a name="commands"></a>Comandi
+## <a name="commands"></a>Comandi:
 |     |     |
 | --- | --- |
 [creazione di montaggio di pool di archiviazione mssqlctl integrazione applicativa dei dati](#mssqlctl-bdc-storage-pool-mount-create) | Creare punti di montaggio di archivi remoti in HDFS.
@@ -52,15 +53,15 @@ URI dell'archivio remoto che deve essere montati (di origine di montaggio).
 Percorso HDFS in cui deve essere creato (destinazione di montaggio) montaggio.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 ## <a name="mssqlctl-bdc-storage-pool-mount-delete"></a>eliminazione di montaggio mssqlctl integrazione applicativa dei dati del pool di archiviazione
 Eliminare i punti di montaggio del remoto archivia in HDFS.
 ```bash
@@ -77,15 +78,15 @@ mssqlctl bdc storage-pool mount delete --mount-path /mounts/adlsv2/data
 Il percorso HDFS corrispondente per il montaggio che deve essere eliminato.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 ## <a name="mssqlctl-bdc-storage-pool-mount-status"></a>stato di montaggio mssqlctl integrazione applicativa dei dati del pool di archiviazione
 Stato di mount(s).
 ```bash
@@ -106,15 +107,15 @@ mssqlctl bdc storage-pool mount status
 Percorso di montaggio.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

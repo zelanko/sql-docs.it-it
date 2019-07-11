@@ -1,32 +1,32 @@
 ---
-title: Guida introduttiva alla distribuzione
+title: Script di distribuzione
 titleSuffix: SQL Server big data clusters
 description: Procedura dettagliata di una distribuzione di cluster di big data 2019 Server SQL (anteprima) in Azure Kubernetes Service (AKS).
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 05/22/2019
-ms.topic: quickstart
+ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d1b8c595512d3268e0e04482d464f6c19ee01234
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0254b76b0845ff5f913d2d0ab69324ddd0072923
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798743"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728778"
 ---
-# <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Avvio rapido: Distribuire il cluster di big data di SQL Server in Azure Kubernetes Service (AKS)
+# <a name="deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Distribuire il cluster di big data di SQL Server in Azure Kubernetes Service (AKS)
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In questa Guida introduttiva si usa uno script di distribuzione di esempio per distribuire cluster di big data 2019 Server SQL (anteprima) per Azure Kubernetes Service (AKS). 
+In questa esercitazione si usa uno script di distribuzione di esempio per distribuire cluster di big data 2019 Server SQL (anteprima) per Azure Kubernetes Service (AKS). 
 
 > [!TIP]
 > Servizio contenitore di AZURE è solo una delle opzioni per l'hosting di Kubernetes per i cluster di big data. Per altre informazioni sulle altre opzioni di distribuzione nonché come opzioni per personalizzare la distribuzione, vedere [come distribuire i dati di grandi dimensioni di SQL Server di cluster in Kubernetes](deployment-guidance.md).
 
-La distribuzione di cluster di big data predefinita usata in questo esempio è costituito da un'istanza di SQL Master, istanza del pool di uno calcolo, due istanze del pool di dati e due istanze del pool di archiviazione. I dati viene mantenuti usando volumi permanenti Kubernetes che usano le classi di archiviazione predefinito AKS. La configurazione predefinita usata in questa Guida introduttiva è adatta per ambienti di sviluppo/test.
+La distribuzione di cluster di big data predefinita usata in questo esempio è costituito da un'istanza di SQL Master, istanza del pool di uno calcolo, due istanze del pool di dati e due istanze del pool di archiviazione. I dati viene mantenuti usando volumi permanenti Kubernetes che usano le classi di archiviazione predefinito AKS. La configurazione predefinita usata in questa esercitazione è adatta agli ambienti di sviluppo/test.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -38,7 +38,7 @@ La distribuzione di cluster di big data predefinita usata in questo esempio è c
    - **kubectl**
    - **Azure Data Studio**
    - **Estensione di SQL Server 2019**
-   - **Comando di Azure**
+   - **Interfaccia della riga di comando di Azure**
 
 ## <a name="log-in-to-your-azure-account"></a>Accedere al proprio account Azure
 
@@ -50,7 +50,7 @@ az login
 
 ## <a name="download-the-deployment-script"></a>Scaricare lo script di distribuzione
 
-Questa Guida introduttiva consente di automatizzare la creazione del cluster di big data nel servizio contenitore di AZURE usando uno script di python **distribuire-sql-big-data-aks.py**. Se già installato python per **mssqlctl**, dovrebbe essere possibile eseguire lo script in questa Guida introduttiva. 
+Questa esercitazione consente di automatizzare la creazione del cluster di big data nel servizio contenitore di AZURE usando uno script di python **distribuire-sql-big-data-aks.py**. Se già installato python per **mssqlctl**, dovrebbe essere possibile eseguire correttamente lo script in questa esercitazione. 
 
 In un prompt di bash di Linux o Windows PowerShell, eseguire il comando seguente per scaricare lo script di distribuzione da GitHub.
 
@@ -165,7 +165,7 @@ Al termine dello script di distribuzione, l'output invia una notifica di esito p
 
 Il cluster di big data di SQL Server è stato distribuito nel servizio contenitore di AZURE. È ora possibile usare Studio di Azure Data per connettersi al cluster. Per altre informazioni, vedere [Connetti a SQL Server del cluster di big data con Azure Data Studio](connect-to-big-data-cluster.md).
 
-## <a name="clean-up"></a>Pulizia
+## <a name="clean-up"></a>Eseguire la pulizia
 
 Se si siano testando i cluster di big data di SQL Server in Azure, è necessario eliminare il cluster AKS termine per evitare addebiti imprevisti. Non rimuovere il cluster se si prevede di continuare a usarlo.
 

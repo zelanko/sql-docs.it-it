@@ -2,20 +2,20 @@
 title: Inserire i dati con i processi Spark
 titleSuffix: SQL Server big data clusters
 description: Questa esercitazione illustra come inserire dati nel pool di dati di un cluster di big data 2019 Server SQL (anteprima) con i processi Spark in Azure Data Studio.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: shivsood
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 56715b8134ca5427807bb287124d7766aefb1b3b
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 1d52a88a1742cdf1dbd83bebe52ebeb6cc277033
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388562"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727440"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Esercitazione: Inserire dati in un pool di dati di SQL Server con i processi Spark
 
@@ -23,7 +23,7 @@ ms.locfileid: "67388562"
 
 Questa esercitazione illustra come usare processi di Spark per caricare i dati di [pool di dati](concept-data-pool.md) di un cluster di big data di SQL Server 2019 (anteprima). 
 
-In questa esercitazione, apprenderà come:
+In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
 > * Creare una tabella esterna nel pool di dati.
@@ -140,7 +140,7 @@ I passaggi seguenti mostrano che il processo di streaming Spark caricato i dati 
    SELECT TOP 10 * FROM [web_clickstreams_spark_results];
    ```
 
-## <a name="clean-up"></a>Pulizia
+## <a name="clean-up"></a>Eseguire la pulizia
 
 Usare il comando seguente per rimuovere gli oggetti di database creati in questa esercitazione.
 

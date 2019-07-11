@@ -16,16 +16,16 @@ ms.assetid: cbd8185e-fb03-408f-b80b-1a2e164534fd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e40947dc4dbad0830444870ea7e2d0c663490b25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21af6ef1be21e000d25582151650f274fe3561a4
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188964"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793369"
 ---
 # <a name="fixed-length-bookmarks"></a>Segnalibri di lunghezza fissa
-Se un'applicazione ODBC 3 *. x* driver dovrebbero funzionare con un'API ODBC 2. *x* dell'applicazione che utilizza segnalibri di lunghezza fissa, il driver devono supportare quanto segue:  
+Se un database ODBC *3.x* driver dovrebbero funzionare con un database ODBC *2.x* dell'applicazione che utilizza segnalibri di lunghezza fissa, il driver devono supportare quanto segue:  
   
--   SQL_UB_ON come valore per l'opzione dell'istruzione SQL_USE_BOOKMARKS. (Deprecata in ODBC 3 SQL_UB_ON*x*.)  
+-   SQL_UB_ON come valore per l'opzione dell'istruzione SQL_USE_BOOKMARKS. (SQL_UB_ON è deprecato in ODBC *3.x*.)  
   
 -   L'opzione dell'istruzione SQL_GET_BOOKMARK.

@@ -2,19 +2,20 @@
 title: riferimento mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Articolo di riferimento per i comandi mssqlctl.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2601d526710e6cf51de089f7879f0f5517bf86aa
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: a30f78b24a85f85b85beb914dc0f26af652242fd
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388671"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728540"
 ---
 # <a name="mssqlctl"></a>mssqlctl
 
@@ -22,7 +23,7 @@ ms.locfileid: "67388671"
 
 L'articolo seguente fornisce informazioni di riferimento per la **mssqlctl** dello strumento per [cluster di big data 2019 Server SQL (anteprima)](big-data-cluster-overview.md). Per altre informazioni su come installare il **mssqlctl** dello strumento, vedere [installare mssqlctl per gestire i cluster di big data di SQL Server 2019](deploy-install-mssqlctl.md).
 
-## <a name="commands"></a>Comandi
+## <a name="commands"></a>Comandi:
 |     |     |
 | --- | --- |
 |[app mssqlctl](reference-mssqlctl-app.md) | Creare, eliminare, eseguire e gestire le applicazioni. |
@@ -63,15 +64,15 @@ Controller endpoint cluster "https://host:port". Se non vuoi usare questo argome
 Si accettano le condizioni di licenza? [yes/no]. Se non vuoi usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su 'Sì'
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 ## <a name="mssqlctl-logout"></a>disconnessione mssqlctl
 Disconnettersi dal cluster.
 ```bash
@@ -84,15 +85,15 @@ mssqlctl logout
 ```
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

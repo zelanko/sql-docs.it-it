@@ -17,12 +17,12 @@ ms.assetid: add88e48-ada3-4c0c-a5ac-e78903d3ff41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b81acf6c60bd11e03a598e349e145dbf72e174b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76846a5027ff5229997151b36a93b1ea553ddbc8
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026945"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793221"
 ---
 # <a name="bookmark-c-data-type"></a>Tipo di dati C Bookmark
 Il tipo di dati C bookmark consente a un'applicazione recuperare un segnalibro. I tipi di segnalibro C vengono utilizzati solo per recuperare i valori di segnalibro che possono variare in lunghezza; essi non devono essere convertiti in altri tipi di dati. Un'applicazione recupera dalla colonna 0 il risultato impostata con un segnalibro **SQLBulkOperations** (con un'operazione di SQL_ADD), **SQLFetch**, **SQLFetchScroll**, o **SQLGetData**. Per altre informazioni, vedere [segnalibri](../../../odbc/reference/develop-app/bookmarks-odbc.md).  
@@ -30,7 +30,7 @@ Il tipo di dati C bookmark consente a un'applicazione recuperare un segnalibro. 
  La tabella seguente elenca il valore di *CType* per il tipo di dati C bookmark, digitare il tipo di dati C ODBC che implementa il tipo di dati C bookmark e la definizione dei dati da SQL. H.  
   
 > [!NOTE]
->  Il tipo di dati SQL_C_BOOKMARK è stato deprecato. ODBC 3*x* applicazioni non deve usare SQL_C_BOOKMARK. ODBC 3 *. x* driver devono supportare SQL_C_BOOKMARK solo se desiderano utilizzare ODBC 2. *x* le applicazioni che lo usano. Gestione Driver esegue il mapping SQL_C_VARBOOKMARK SQL_C_BOOKMARK quando un'applicazione funziona con un'API ODBC 2. *x* driver.  
+>  Il tipo di dati SQL_C_BOOKMARK è stato deprecato. ODBC *3.x* applicazioni non deve usare SQL_C_BOOKMARK. ODBC *3.x* driver devono supportare SQL_C_BOOKMARK solo se si desidera lavorare con ODBC *2.x* le applicazioni che lo usano. Gestione Driver esegue il mapping SQL_C_VARBOOKMARK a SQL_C_BOOKMARK quando un'applicazione funziona con un database ODBC *2.x* driver.  
   
 |Identificatore di tipo C|Typedef di ODBC C|Tipo C|  
 |-----------------------|--------------------|------------|  

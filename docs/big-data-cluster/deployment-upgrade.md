@@ -2,19 +2,20 @@
 title: Eseguire l'aggiornamento a una nuova versione
 titleSuffix: SQL Server big data clusters
 description: Informazioni su come aggiornare i cluster di big data di SQL Server 2019 (anteprima) a una nuova versione.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2bde0037933f420147d0467f83f1bcb6428cf526
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 8c8b8df4dc5643febdf3ddc808f215a9c34d24fe
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388743"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728755"
 ---
 # <a name="how-to-upgrade-sql-server-big-data-clusters"></a>Come aggiornare i cluster di SQL Server i big Data
 

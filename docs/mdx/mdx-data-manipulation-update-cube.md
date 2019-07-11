@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 878f103e236a198ff71181a64b39400c8f6ea0ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 248605667afe073e2261585444555a1d254ffc26
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187615"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794121"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>Manipolazione dei dati MDX - UPDATE CUBE
 
@@ -67,7 +67,7 @@ UPDATE [ CUBE ] Cube_Name
 <New Value> / Count(leaf cells that are contained in <tuple>)  
 ```  
   
- **USE_EQUAL_INCREMENT:** ogni cella foglia che contribuisce alla cella aggiornata verrà modificato in base all'espressione seguente.  
+ **USE_EQUAL_INCREMENT:** Ogni cella foglia che contribuisce alla cella aggiornata viene modificata in base all'espressione seguente.  
   
 ```  
 <leaf cell value> = <leaf cell value> +   

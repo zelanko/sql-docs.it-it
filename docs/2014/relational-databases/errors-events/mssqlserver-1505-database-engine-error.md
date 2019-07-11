@@ -12,12 +12,12 @@ ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec0a5700df76134eab8a4fe2278820691dad509e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ada58ff37b3fb7dd2760427483b0935d9bc47cb
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62869689"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727736"
 ---
 # <a name="mssqlserver1505"></a>MSSQLSERVER_1505
     
@@ -30,7 +30,7 @@ ms.locfileid: "62869689"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DUP_KEY|  
-|Testo del messaggio|Istruzione CREATE UNIQUE INDEX interrotta. Trovata chiave duplicata per il nome di oggetto '%.* ls' e il nome di indice '%.\*ls'.  Valore della chiave duplicata: %ls.|  
+|Testo del messaggio|Istruzione CREATE UNIQUE INDEX interrotta. Trovata chiave duplicata per il nome di oggetto '%.\*ls' and index name '%.\*ls'.  Valore della chiave duplicata: %ls.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Questo errore si verifica quando si tenta di creare un indice univoco e il valore duplicato specificato è presente in più di una riga della tabella. Un indice univoco viene creato quando si crea un indice e si specifica la parola chiave UNIQUE o quando si crea un vincolo UNIQUE. Nella tabella non può essere contenuta alcuna riga con valori duplicati nelle colonne definite nell'indice o nel vincolo.  
@@ -50,7 +50,7 @@ ms.locfileid: "62869689"
   
  Il messaggio di errore 1505 restituisce la prima riga che viola il vincolo di univocità. Nella tabella possono essere presenti altre righe duplicate. Per individuare tutte le righe duplicate, eseguire una query sulla tabella specificata e utilizzare le clausole GROUP BY e HAVING per segnalarle. Nella query seguente, ad esempio, vengono restituite le righe della tabella **Employee** in cui sono presenti nomi e cognomi duplicati.  
   
- SELECT LastName, FirstName, count(*) FROM dbo.Employee GROUP BY LastName, FirstName HAVING count(\*) > 1;  
+ Selezionare LastName, FirstName, count (\*) dalla tabella dbo. Dipendente gruppo da LastName, FirstName con conteggio (\*) > 1.  
   
 ## <a name="user-action"></a>Azione dell'utente  
  Prendere in considerazione le seguenti soluzioni:  

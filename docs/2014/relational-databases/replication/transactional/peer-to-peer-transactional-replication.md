@@ -16,12 +16,12 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 133d44d233abdcffe7893ce29be5b462f4b16524
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63274363"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793922"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Replica transazionale peer-to-peer
   La replica peer-to-peer rappresenta una soluzione per la scalabilità orizzontale ad elevata disponibilità in quanto consente di gestire copie dei dati in più istanze del server, definite *nodi*. Compilata sulle basi della replica transazionale, la replica peer-to-peer propaga quasi in tempo reale modifiche coerenti dal punto di vista transazionale. In tal modo le applicazioni che richiedono la scalabilità orizzontale delle operazioni di lettura possono distribuire le operazioni di lettura dei client in più nodi. Perché i dati vengono gestiti nei nodi quasi in tempo reale, la replica peer-to-peer offre quella funzionalità di ridondanza dei dati che consente di aumentare la disponibilità dei dati.  
@@ -137,19 +137,19 @@ ms.locfileid: "63274363"
   
 -   Il parametro **-SubscriptionStreams** dell'agente di distribuzione e il parametro **-MaxCmdsInTran**dell'agente di lettura log.  
   
--   Le proprietà di articolo **@destination_owner** e **@destination_table** .  
+-   Le proprietà dell'articolo  **\@destination_owner** e  **\@destination_table**.  
 
 -   La replica transazionale peer-to-peer non supporta la creazione di una sottoscrizione transazionale unidirezionale di una pubblicazione peer-to-peer.
   
  Per le proprietà indicate di seguito sono presenti considerazioni speciali:  
   
--   La proprietà di pubblicazione **@allow_initialize_from_backup** richiede il valore `true`.  
+-   La proprietà di pubblicazione  **\@allow_initialize_from_backup** richiede il valore `true`.  
   
--   La proprietà di articolo **@replicate_ddl** richiede il valore `true`; **@identityrangemanagementoption** richiede il valore `manual`; e **@status** richiede che l'opzione **24** è impostata.  
+-   La proprietà di articolo  **\@replicate_ddl** richiede il valore `true`;  **\@identityrangemanagementoption** richiede il valore `manual`; e  **\@stato** richiede che l'opzione **24** è impostato.  
   
--   Il valore delle proprietà di articolo **@ins_cmd** , **@del_cmd** , e **@upd_cmd** non può essere impostata su `SQL`.  
+-   Il valore delle proprietà di articolo  **\@ins_cmd**,  **\@del_cmd**, e  **\@upd_cmd** non può essere impostata su `SQL`.  
   
--   La proprietà della sottoscrizione **@sync_type** richiede il valore `none` o `automatic`.  
+-   La proprietà della sottoscrizione  **\@sync_type** richiede il valore `none` o `automatic`.  
   
 ### <a name="maintenance-considerations"></a>Considerazioni relative alla manutenzione  
  Per le operazioni seguenti è necessario mettere il sistema in stato di inattività, ovvero arrestare le attività sulle tabelle pubblicate in tutti i nodi e verificare che ogni nodo abbia ricevuto tutte le modifiche dagli altri nodi:  

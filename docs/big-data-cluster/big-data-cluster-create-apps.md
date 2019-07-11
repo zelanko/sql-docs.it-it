@@ -4,19 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Distribuire uno script Python o R come un'applicazione nel cluster di big data 2019 Server SQL (anteprima).
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 2ace3ee9cd17240890a9da901297c731ced4016c
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 2309fd7a318222ef337815ddf511359f5b305e26
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681594"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729285"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Come distribuire un'app nel cluster di big data di SQL Server (anteprima)
 
@@ -43,7 +42,7 @@ Sono supportati i tipi di App seguenti:
 - [Cluster di big data di SQL Server 2019](deployment-guidance.md)
 - [utilità della riga di comando mssqlctl](deploy-install-mssqlctl.md)
 
-## <a name="capabilities"></a>Capabilities
+## <a name="capabilities"></a>Funzionalità
 
 In SQL Server 2019 (anteprima) è possibile creare, eliminare, descrivere, inizializzare, elenco eseguire e aggiornare l'applicazione. La tabella seguente descrive i comandi di distribuzione dell'applicazione che è possibile usare con **mssqlctl**.
 
@@ -66,7 +65,7 @@ mssqlctl app create --help
 
 Le sezioni seguenti descrivono questi comandi in modo più dettagliato.
 
-## <a name="sign-in"></a>Accedi
+## <a name="sign-in"></a>Accesso
 
 Prima di distribuire o interagire con le applicazioni, accedere prima all'istanza di SQL Server del cluster di big data con il `mssqlctl login` comando. Specificare l'indirizzo IP esterno del `controller-svc-external` servizio (ad esempio: `https://ip-address:30080`) con il nome utente e la password per il cluster.
 

@@ -16,12 +16,12 @@ ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ba5d3ec6958cf3dbc3cca0497f08feaac094b837
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb9e2ae87a82bf272e84a8d940606879aa3c1e9d
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63265122"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792807"
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>Accesso agli assembly personalizzati tramite espressioni
   Dopo aver creato un assembly personalizzato, averlo reso disponibile in Progettazione report o nel server di report, aver aggiunto i criteri di sicurezza appropriati e aver aggiunto un riferimento all'assembly personalizzato nella definizione del report, è possibile accedere ai membri delle classi nell'assembly utilizzando le espressioni di report. Per fare riferimento al codice personalizzato in un'espressione, è necessario chiamare il membro di una classe nell'assembly. La modalità di esecuzione di tale operazione dipende dal tipo di metodo, ovvero statico o basato su istanze.  
@@ -43,7 +43,7 @@ ms.locfileid: "63265122"
 ## <a name="calling-instance-members-from-a-report-definition-file"></a>Chiamata a membri di istanza da un file di definizione del report  
  Se l'assembly personalizzato contiene membri di istanza a cui è necessario accedere in una definizione del report, è necessario aggiungere al report un nome di istanza per la classe. È possibile aggiungere un nome di istanza per una classe usando la scheda **Codice** della finestra di dialogo **Proprietà report**. Per altre informazioni sull'aggiunta di istanze di classi a un report, vedere [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
- Per chiamare un membro statico, è necessario farvi riferimento come espressione nel formato =Code *.NomeIstanza.Metodo*.  
+ Per chiamare un membro statico, è necessario farvi riferimento come espressione nel formato = Code *. NomeIstanza*.  
   
 #### <a name="to-call-instance-members"></a>Per chiamare i membri dell'istanza  
   

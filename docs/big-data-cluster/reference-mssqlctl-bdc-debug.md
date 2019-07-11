@@ -2,19 +2,20 @@
 title: riferimento di debug mssqlctl integrazione applicativa dei dati
 titleSuffix: SQL Server big data clusters
 description: Articolo di riferimento per i comandi di debug di mssqlctl integrazione applicativa dei dati.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dde99490805ec0f78c9acbaa3875f1ae1406e77f
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 20257039a40594cd592bcc4d4f6050027d8858ea
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394343"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728574"
 ---
 # <a name="mssqlctl-bdc-debug"></a>debug di integrazione applicativa dei dati mssqlctl
 
@@ -22,7 +23,7 @@ ms.locfileid: "67394343"
 
 L'articolo seguente fornisce informazioni di riferimento per il **debug bdc** comandi nel **mssqlctl** strumento. Per altre informazioni sulle altre **mssqlctl** comandi, vedere [mssqlctl riferimento](reference-mssqlctl.md).
 
-## <a name="commands"></a>Comandi
+## <a name="commands"></a>Comandi:
 |     |     |
 | --- | --- |
 [mssqlctl integrazione applicativa dei dati copia-i log di debug](#mssqlctl-bdc-debug-copy-logs) | Copiare i log.
@@ -50,15 +51,15 @@ Copiare i log per i POD con nome simile. Facoltativo, per i log di copia predefi
 Il numero di secondi di attesa per il completamento del comando. Il valore predefinito è 0 che è illimitato
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 ## <a name="mssqlctl-bdc-debug-dump"></a>dump del debug mssqlctl integrazione applicativa dei dati
 Attivare i dump di registrazione e copiarlo dal contenitore: configurazione di kube è necessaria nel sistema.
 ```bash
@@ -76,15 +77,15 @@ Copiare i log per i contenitori con nome simile, facoltativo, per impostazione p
 Percorso della cartella di destinazione per copiare i registri per. Facoltativo, per impostazione predefinita viene creato il risultato nella cartella locale.  Non è possibile specificare più volte. Se è specificato più volte, ultimo uno da utilizzare `./output/dump`
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumentare il livello di dettaglio di registrazione per mostrare che tutti i registri di debug.
+Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e uscita.
+Mostra questo messaggio della Guida e l'uscita.
 #### `--output -o`
 Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito: json.
 #### `--query -q`
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
-Aumentare il livello di dettaglio di registrazione. Usare--debug per i log di debug completi.
+Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

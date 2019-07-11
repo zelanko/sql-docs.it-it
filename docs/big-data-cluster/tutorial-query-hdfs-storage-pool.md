@@ -2,20 +2,20 @@
 title: Eseguire query sui dati HDFS nel pool di archiviazione
 titleSuffix: SQL Server big data clusters
 description: Questa esercitazione illustra come eseguire query sui dati HDFS in un cluster di big data di SQL Server 2019 (anteprima). Creare una tabella esterna dei dati nel pool di archiviazione e quindi eseguire una query.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 83a039fcbc335ecbc6057b1c8d7d1a953ba2c364
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: bcb2b036610b1ef62575d9a03043158e1b8af653
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388645"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728339"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Esercitazione: Query di HDFS in un cluster di big data di SQL Server
 
@@ -23,7 +23,7 @@ ms.locfileid: "67388645"
 
 Questa esercitazione illustra come eseguire query sui dati HDFS in un cluster di big data di SQL Server 2019 (anteprima).
 
-In questa esercitazione, apprenderà come:
+In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
 > * Creare una tabella esterna che punta ai dati HDFS in un cluster di big data.
@@ -119,7 +119,7 @@ GROUP BY  wcs_user_sk;
 GO
 ```
 
-## <a name="clean-up"></a>Pulizia
+## <a name="clean-up"></a>Eseguire la pulizia
 
 Usare il comando seguente per rimuovere la tabella esterna usata in questa esercitazione.
 

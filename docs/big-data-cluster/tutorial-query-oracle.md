@@ -2,20 +2,20 @@
 title: Eseguire query sui dati esterni in Oracle
 titleSuffix: SQL Server big data clusters
 description: Questa esercitazione illustra come eseguire query sui dati di Oracle da un cluster di big data di SQL Server 2019 (anteprima). Creare una tabella esterna su dati in Oracle e quindi eseguire una query.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
 manager: jroth
 ms.date: 12/12/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 036118c3c5620b9685a9971b1aa8c22bdb2b6b9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8da0248eb4e31e25503efad9797f4c58243f3b5e
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770789"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728329"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Esercitazione: Eseguire una query Oracle da un cluster di big data di SQL Server
 
@@ -23,7 +23,7 @@ ms.locfileid: "66770789"
 
 Questa esercitazione illustra come eseguire query sui dati di Oracle da un cluster di big data di SQL Server 2019. Per eseguire questa esercitazione, è necessario avere accesso a un server Oracle. Se non si ha accesso, in questa esercitazione può avere un'idea del funzionamento della virtualizzazione dei dati per origini dati esterne in cluster di big data di SQL Server.
 
-In questa esercitazione, apprenderà come:
+In questa esercitazione si imparerà a:
 
 > [!div class="checklist"]
 > * Creare una tabella esterna per i dati in un database Oracle esterno.
@@ -123,7 +123,7 @@ SELECT TOP(100) w.w_warehouse_name, i.inv_item, SUM(i.inv_quantity_on_hand) as t
  GROUP BY w.w_warehouse_name, i.inv_item;
 ```
 
-## <a name="clean-up"></a>Pulizia
+## <a name="clean-up"></a>Eseguire la pulizia
 
 Usare il comando seguente per rimuovere gli oggetti di database creati in questa esercitazione.
 

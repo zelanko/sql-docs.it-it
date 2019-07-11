@@ -2,20 +2,20 @@
 title: Che cos'è l'istanza master?
 titleSuffix: SQL Server big data clusters
 description: Questo articolo descrive l'istanza master di SQL Server in un cluster di big data di SQL Server 2019 (anteprima).
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 6c3a9a425d5de55e7018c9e33b37a8e3d1a8e1c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b9cd9d8270a82eb578781a6376d8ac1045aa485
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783082"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729121"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>Che cos'è l'istanza master in un cluster di big data di SQL Server?
 

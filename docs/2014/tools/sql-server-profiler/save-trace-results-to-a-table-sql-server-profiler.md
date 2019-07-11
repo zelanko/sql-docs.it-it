@@ -13,12 +13,12 @@ ms.assetid: edbecf74-683b-4e43-a1ef-7a3d5f5e27f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4679576a8336d9a35299622b8513b9c8ae855287
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8571f7273cc2667040ffffc8ffbfb0df4e2a6ef6
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267775"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792692"
 ---
 # <a name="save-trace-results-to-a-table-sql-server-profiler"></a>Salvare i risultati della traccia in una tabella (SQL Server Profiler)
   In questo argomento viene descritta la procedura per salvare i risultati della traccia in una tabella di database mediante [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -40,9 +40,9 @@ ms.locfileid: "63267775"
   
 5.  Nell'elenco **Proprietario** selezionare il proprietario della traccia.  
   
-6.  Nell'elenco **Tabella** digitare o selezionare il nome della tabella per i risultati della traccia. Scegliere **OK.**  
+6.  Nell'elenco **Tabella** digitare o selezionare il nome della tabella per i risultati della traccia. Fare clic su **OK**.  
   
-7.  Nella finestra di dialogo **Proprietà traccia** selezionare la casella di controllo **Numero massimo di righe (in migliaia)** per specificare il numero massimo di righe da salvare.  
+7.  Nel **proprietà traccia** finestra di dialogo, seleziona la **numero massimo di righe (in migliaia)** casella di controllo per specificare il numero massimo di righe da salvare.  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Profiler](sql-server-profiler.md)  

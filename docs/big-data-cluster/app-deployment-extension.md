@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Distribuire uno script Python o R come un'applicazione nel cluster di big data 2019 Server SQL (anteprima).
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0b0d76db3813e0a399f1ece841d729711743cbd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba56ebb90d09866b7860c5f29dd2a26cf525fd9b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801913"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729308"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>Come usare Visual Studio Code per distribuire applicazioni in cluster di SQL Server i big Data
 
@@ -28,7 +28,7 @@ Questo articolo descrive come distribuire le applicazioni a un cluster di big da
 - [Visual Studio Code](https://code.visualstudio.com/).
 - [Cluster di big data di SQL Server](big-data-cluster-overview.md) CTP 2.3 o versioni successive.
 
-## <a name="capabilities"></a>Capabilities
+## <a name="capabilities"></a>Funzionalità
 
 Questa estensione supporta le attività seguenti in Visual Studio Code:
 
@@ -128,7 +128,7 @@ Dal riquadro sul lato, sarà in grado di vedere gli argomenti seguenti disponibi
 - Parametri di output
 - collegamenti
   - swagger
-  - dettagli
+  - details
 
 Se si sceglie `Links`, si noterà che è possibile accedere la `swagger.json` dell'app distribuita, in modo che sia possibile scrivere il proprio client che chiama l'app:
 
@@ -163,7 +163,7 @@ Quando si chiama un'app distribuita, se eventuali parametri di input sono innati
 - vettore
     - `inputs:`
         - `x: [1, 2, 3]`
-- Matrice
+- Matrix
     - `inputs:`
         - `x: [[A,B,C],[1,2,3]]`
 - Object

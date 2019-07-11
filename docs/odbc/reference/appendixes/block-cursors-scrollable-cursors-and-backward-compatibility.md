@@ -17,19 +17,19 @@ ms.assetid: d9d271f6-d2d9-49b9-a365-4909ca06caae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3896473a1fa08f769f13d94bd1d81f373cf67c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66b4cf0ce2b2ffc15a9e450461021a9b20b1f0c3
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026603"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794127"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>Cursori rettangolari, cursori scorrevoli e compatibilità con le versioni precedenti
-La presenza di entrambe **SQLFetchScroll** e **SQLExtendedFetch** rappresenta cancellare le prima di tutto è suddiviso in ODBC tra l'interfaccia API (Application Programming), ovvero il set di funzioni di le chiamate dell'applicazione e il servizio Provider di interfaccia (SPI), ovvero il set di funzioni il driver implementa. Questa suddivisione è necessaria in modo che ODBC 3. *x*, che usa **SQLFetchScroll**, bealigned con gli standard e anche essere compatibile con ODBC 2. *x*, che usa **SQLExtendedFetch**.  
+La presenza di entrambe **SQLFetchScroll** e **SQLExtendedFetch** rappresenta cancellare le prima di tutto è suddiviso in ODBC tra l'interfaccia API (Application Programming), ovvero il set di funzioni di le chiamate dell'applicazione e il servizio Provider di interfaccia (SPI), ovvero il set di funzioni il driver implementa. Questa suddivisione è necessaria in modo da ODBC *3.x*, che usa **SQLFetchScroll**, bealigned con gli standard e anche essere compatibile con ODBC *2.x*, che usa **SQLExtendedFetch**.  
   
- ODBC 3 *. x* API, ovvero il set di funzioni l'applicazione chiama, includono **SQLFetchScroll** e relativi attributi di istruzione. ODBC 3 *. x* SPI, ovvero il set di funzioni implementa il driver, include **SQLFetchScroll**, **SQLExtendedFetch**e i relativi attributi di istruzione. Poiché ODBC non impone formalmente questa suddivisione tra l'API e di SPI, è possibile che per ODBC 3 *. x* alle applicazioni di chiamare **SQLExtendedFetch** e relativi attributi di istruzione. Tuttavia, non vi è alcun motivo per ODBC 3*x* dell'applicazione per eseguire questa operazione. Per altre informazioni sulle API e SPI, vedere l'introduzione [architettura ODBC](../../../odbc/reference/odbc-architecture.md).  
+ ODBC *3.x* API, ovvero il set di funzioni l'applicazione chiama, includono **SQLFetchScroll** e relativi attributi di istruzione. ODBC *3.x* SPI, ovvero il set di funzioni implementa il driver, include **SQLFetchScroll**, **SQLExtendedFetch**e i relativi attributi di istruzione. Poiché ODBC non impone formalmente questa suddivisione tra l'API e di SPI, è possibile che per ODBC *3.x* alle applicazioni di chiamare **SQLExtendedFetch** e relativi attributi di istruzione. Tuttavia, non vi è alcun motivo per ODBC *3.x* dell'applicazione per eseguire questa operazione. Per altre informazioni sulle API e SPI, vedere l'introduzione [architettura ODBC](../../../odbc/reference/odbc-architecture.md).  
   
- Per informazioni su quali funzioni e l'istruzione di attributi un'applicazione ODBC 3. *x* dell'applicazione deve usare con i cursori scorrevoli e blocco, vedere [cursori rettangolari, cursori scorrevoli e compatibilità con le versioni precedenti per le applicazioni ODBC 3.x](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md).  
+ Per informazioni su quali funzioni e istruzione degli attributi un ODBC *3.x* dell'applicazione deve usare con i cursori scorrevoli e blocco, vedere [cursori rettangolari, cursori scorrevoli e compatibilità con le versioni precedenti per ODBC 3.x Le applicazioni](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md).  
   
  In questa sezione vengono trattati gli argomenti seguenti.  
   

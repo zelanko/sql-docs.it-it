@@ -20,12 +20,12 @@ ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f76974a17fc12c4a72623c133586690c81269d06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cee1f41c76a79edf1d78d8b94b07107c3c2771e0
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536280"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793156"
 ---
 # <a name="sqlsetdescrec-function"></a>Funzione SQLSetDescRec
 **Conformità**  
@@ -101,7 +101,7 @@ SQLRETURN SQLSetDescRec(
 |HY013|Errore di gestione della memoria|La chiamata di funzione non è stato possibile elaborare perché gli oggetti di memoria sottostante non sono accessibile, probabilmente a causa di condizioni di memoria insufficiente.|  
 |HY016|Non è possibile modificare un descrittore delle righe di implementazione|Il *DescriptorHandle* argomento è stato associato a un'implementazione.|  
 |HY021|Informazioni descrittore incoerenti.|Il *tipo* campo o qualsiasi altro campo associato al campo SQL_DESC_TYPE nel descrittore di, è non stata valide o coerenti.<br /><br /> Le informazioni sul descrittore controllati durante una verifica coerenza non era coerente. (Vedere "Le verifiche coerenza," più avanti in questa sezione).|  
-|HY090|Lunghezza della stringa o buffer non valido|(DM) il driver è stato un ODBC 2 *. x* driver, il descrittore è un ARD, il *ColumnNumber* argomento è stato impostato su 0 e il valore specificato per l'argomento *BufferLength* era non è uguale a 4.|  
+|HY090|Lunghezza della stringa o buffer non valido|(DM) il driver non è un database ODBC *2.x* driver, il descrittore è un ARD, il *ColumnNumber* argomento è stato impostato su 0 e il valore specificato per l'argomento *BufferLength* era non è uguale a 4.|  
 |HY117|Connessione viene sospesa a causa dello stato di transazione sconosciuto. Solo disconnettere e le funzioni di sola lettura sono consentite.|(DM) per altre informazioni sullo stato sospeso, vedere [SQLEndTran-funzione](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Timeout di connessione scaduto|Il periodo di timeout di connessione è scaduto prima che l'origine dati ha risposto alla richiesta. Il periodo di timeout di connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Driver non supporta questa funzione|Il driver (DM) associato il *DescriptorHandle* non supporta la funzione.|  

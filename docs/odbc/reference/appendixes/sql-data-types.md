@@ -15,12 +15,12 @@ ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 623ac38791eebc6db84380dfadd499651af938af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56caa8131cea834b88eeb338bb05d20c25349ea9
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280919"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794156"
 ---
 # <a name="sql-data-types"></a>Tipi di dati SQL
 Ogni sistema DBMS definisce i proprio tipi SQL. Ogni driver ODBC espone solo questi tipi di dati SQL che definisce il sistema DBMS associato. Informazioni sulle modalità di mapping di un driver SQL DBMS tipi per gli identificatori di tipo definite da ODBC SQL e come un driver esegue il mapping di tipi SQL DBMS per i proprio identificatori dei tipi specifici del driver SQL viene restituito tramite una chiamata a **SQLGetTypeInfo**. Un driver restituisce anche i tipi di dati SQL quando si descrivono i tipi di dati delle colonne e i parametri tramite le chiamate a **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, e **SQLSpecialColumns**.  
@@ -47,12 +47,12 @@ Ogni sistema DBMS definisce i proprio tipi SQL. Ogni driver ODBC espone solo que
 |SQL_NUMERIC|NUMERIC(*p*,*s*)|Firmato, a valore numerico esatto con precisione *p* e la scalabilità *s* (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
 |SQL_SMALLINT|SMALLINT|Valore numerico esatto con precisione 5 e scala 0 (firmato:-32.768 e < = *n* < = 32.767, senza segno:  0 <= *n* <= 65,535)[3].|  
 |SQL_INTEGER|INTEGER|Valore numerico esatto con precisione 10 e scala 0 (firmato: -2 [31] < = *n* < = 2 [31] - 1, senza segno:  0 <= *n* <= 2[32] - 1)[3].|  
-|SQL_REAL|real|Valore con segno, numerico approssimativo con una precisione binaria di 24 (zero o valore assoluto da 10 [-38] a 10[38]).|  
+|SQL_REAL|REAL|Valore con segno, numerico approssimativo con una precisione binaria di 24 (zero o valore assoluto da 10 [-38] a 10[38]).|  
 |SQL_FLOAT|FLOAT(*p*)|Valore con segno, numerico approssimativo con una precisione binaria di almeno *p*. (La precisione massima è definito dal driver). [5]|  
 |SQL_DOUBLE|DOUBLE PRECISION|Valore con segno, numerico approssimativo con una precisione binaria di 53 (zero o valore assoluto da 10 [-308] a 10[308]).|  
 |SQL_BIT|BIT|Dati binari a singolo bit. [8]|  
 |SQL_TINYINT|TINYINT|Valore numerico esatto con precisione 3 e scala 0 (firmato: da -128 < = *n* < = 127, senza segno:  0 <= *n* <= 255)[3].|  
-|SQL_BIGINT|bigint|Esatto valore numerico con precisione 19 (con segno) o 20 (se senza segno) e scala 0 (firmato: -2 [63] < = *n* < = 2 [63] - 1, senza segno: 0 <= *n* <= 2[64] - 1)[3],[9].|  
+|SQL_BIGINT|BIGINT|Esatto valore numerico con precisione 19 (con segno) o 20 (se senza segno) e scala 0 (firmato: -2 [63] < = *n* < = 2 [63] - 1, senza segno: 0 <= *n* <= 2[64] - 1)[3],[9].|  
 |SQL_BINARY|BINARIO (*n*)|Dati binari a lunghezza fissa *n*. [ 9]|  
 |SQL_VARBINARY|VARBINARY (*n*)|Dati binari a lunghezza variabile di lunghezza massima *n*. Il valore massimo è impostato dall'utente. [9]|  
 |SQL_LONGVARBINARY|LONG VARBINARY|Dati binari a lunghezza variabile. Lunghezza massima è dipendente dall'origine dati. [9]|  
@@ -86,7 +86,7 @@ Ogni sistema DBMS definisce i proprio tipi SQL. Ogni driver ODBC espone solo que
   
  [5] a seconda dell'implementazione, può essere la precisione del SQL_FLOAT 24 o 53: se è 24, il tipo di dati SQL_FLOAT è identico SQL_REAL; Se è 53, il tipo di dati SQL_FLOAT è identico SQL_DOUBLE.  
   
- [6] in ODBC 3 *. x*, i tipi di dati SQL date, time e timestamp sono SQL_TYPE_DATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP, rispettivamente; in ODBC 2. *x*, i tipi di dati sono SQL_DATE, SQL_TIME e SQL_TIMESTAMP.  
+ [6] in ODBC *3.x*, i tipi di dati SQL date, time e timestamp sono SQL_TYPE_DATE, SQL_TYPE_TIME e SQL_TYPE_TIMESTAMP, rispettivamente; in ODBC *2.x*, i tipi di dati sono SQL_DATE, SQL_TIME e SQL _ TIMESTAMP.  
   
  [7] per altre informazioni sui tipi di dati intervallo SQL, vedere la [tipi di dati intervallo](../../../odbc/reference/appendixes/interval-data-types.md) più avanti in questa appendice.  
   

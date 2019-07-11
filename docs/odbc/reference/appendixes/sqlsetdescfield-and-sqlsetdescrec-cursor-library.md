@@ -14,12 +14,12 @@ ms.assetid: 4ccff067-85cd-4bfa-a6cd-7f28051fb5b9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b390df48e676290696ae8080c8f671fd0e37bad8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cb723e7325454e6ff60e05d28a6321fd4d167e2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298273"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792826"
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField and SQLSetDescRec (libreria di cursori)
 > [!IMPORTANT]  
@@ -55,7 +55,7 @@ ms.locfileid: "63298273"
   
  La libreria di cursori esegue chiamate a **SQLSetDescRec** per una colonna del segnalibro.  
   
- Quando si lavora con un'API ODBC 2. *x* driver, la libreria di cursori restituisce SQLSTATE HY090 (stringa di lunghezza o non valida del buffer) quando **SQLSetDescField** oppure **SQLSetDescRec** viene chiamato per impostare il SQL_DESC_OCTET_ Campo di lunghezza per il record di segnalibro di un ARD su un valore non è uguale a 4. Quando si lavora con un'applicazione ODBC 3*x* driver, la libreria di cursori consente il buffer essere di qualsiasi dimensione.  
+ Quando si lavora con un database ODBC *2.x* driver, la libreria di cursori restituisce SQLSTATE HY090 (stringa di lunghezza o non valida del buffer) quando **SQLSetDescField** oppure **SQLSetDescRec** viene chiamato Per impostare il campo SQL_DESC_OCTET_LENGTH per il record di segnalibro di un ARD su un valore non è uguale a 4. Quando si lavora con un database ODBC *3.x* driver, la libreria di cursori consente il buffer essere di qualsiasi dimensione.  
   
  Esegue la libreria di cursori **SQLSetDescField** quando viene chiamato per restituire il valore del campo SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE o SQL_DESC_ROW_STATUS_PTR. Questi campi possono essere restituiti per ogni riga, non solo la riga di segnalibro.  
   

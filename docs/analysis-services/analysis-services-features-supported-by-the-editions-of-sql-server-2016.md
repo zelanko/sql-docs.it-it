@@ -1,6 +1,6 @@
 ---
-title: Funzionalità supportate dalle edizioni di SQL Server di Analysis Services | Microsoft Docs
-ms.date: 06/25/2019
+title: Funzionalità di Analysis Services supportate dalle edizioni di SQL Server | Microsoft Docs
+ms.date: 07/10/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9947b10e01864f66bf26d6599e43814ab37dadc6
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 6d4f0cc16638963dbbbb091bc19cade36e45fe3b
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388213"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792554"
 ---
 # <a name="analysis-services-features-supported-by-sql-server-edition"></a>Funzionalità di Analysis Services supportate dall'edizione di SQL Server
+
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
 
 Questo articolo descrive le funzionalità supportate dalle diverse edizioni di SQL Server 2016, 2017 2019 Analysis Services. Versione di valutazione supporta le funzionalità dell'edizione Enterprise.
@@ -37,7 +38,7 @@ Questo articolo descrive le funzionalità supportate dalle diverse edizioni di S
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Gerarchie|Yes|Yes|||||Yes|  
 |KPI|Yes|Yes|||||Yes|  
-|prospettive|Yes||||||Yes|  
+|Prospettive|Yes||||||Yes|  
 |Traduzioni|Yes|Yes|||||Yes|  
 |Calcoli DAX, query DAX, query MDX|Yes|Yes|||||Yes|  
 |Sicurezza a livello di riga|Yes|Yes|||||Yes|  
@@ -50,21 +51,21 @@ Questo articolo descrive le funzionalità supportate dalle diverse edizioni di S
   
 |Funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Sviluppatore|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|Misure semiadditive|Yes|No <sup>1</sup>|||||Yes|  
+|Misure semiadditive|Yes|No <sup>[1](#sameas)</sup>|||||Yes|  
 |Gerarchie|Yes|Yes|||||Yes|  
 |KPI|Yes|Yes|||||Yes|  
-|prospettive|Yes||||||Yes|  
+|Prospettive|Yes||||||Yes|  
 |Azioni|Yes|Yes|||||Yes|  
 |Funzionalità di Business Intelligence per la contabilità|Yes|Yes|||||Yes|  
 |Business Intelligence per gerarchie temporali|Yes|Yes|||||Yes|  
 |Rollup personalizzati|Yes|Yes|||||Yes|  
 |Cubo writeback|Yes|Yes|||||Yes|  
-|Dimensioni writeback|Yes||||||Yes|  
+|Dimensioni writeback|Sì <sup>[2](#wb)</sup>||||||Sì <sup>[2](#wb)</sup>|  
 |Celle writeback|Yes|Yes|||||Yes|  
 |Drill-through|Yes|Yes|||||Yes|  
 |Tipi di gerarchia avanzati (padre-figlio e gerarchie incomplete)|Yes|Yes|||||Yes|  
 |Dimensioni avanzate (dimensioni di riferimento, dimensioni molti-a-molti)|Yes|Yes|||||Yes|  
-|Dimensioni e misure collegate|Yes|Sì  <sup>2</sup> |||||Yes|  
+|Dimensioni e misure collegate|Yes|Sì <sup> [3](#linkmd)</sup> |||||Yes|  
 |Traduzioni|Yes|Yes|||||Yes|  
 |Aggregations|Yes|Yes|||||Yes|  
 |Più partizioni|Yes|Sì, fino a 3|||||Yes|  
@@ -80,8 +81,12 @@ Questo articolo descrive le funzionalità supportate dalle diverse edizioni di S
 |Elaborazione in modalità push|Yes||||||Yes|  
 |Espressioni di misura|Yes||||||Yes|  
   
- <sup>1</sup> La misura semiadattiva LastChild è supportata nell'edizione Standard, mentre altre misure semiadattive come None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren e ByAccount non lo sono. Le misure additive, ad esempio Sum, Count, Min, Max e quelle non additive (DistinctCount) sono supportate in tutte le edizioni.  
-  <sup>2</sup> L'edizione Standard supporta il collegamento di misure e dimensioni all'interno dello stesso database, ma non da altri database o istanze.
+<a name="sameas">[1] </a> Misura semiadattiva LastChild the è supportata nell'edizione Standard, ma altre misure semiadattive come None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren e ByAccount non lo sono. Le misure additive, ad esempio Sum, Count, Min, Max e quelle non additive (DistinctCount) sono supportate in tutte le edizioni. 
+
+<a name="wb">[2] </a> Il writeback delle dimensioni non sono più disponibili in SQL Server Analysis Services 2019 e versioni successive.
+ 
+<a name="linkmd">[3] </a> Standard edition supporta il collegamento di misure e dimensioni all'interno dello stesso database, ma non da altri database o istanze.
+  
   
 ## <a name="power-pivot-for-sharepoint"></a>PowerPivot per SharePoint  
   
@@ -95,6 +100,9 @@ Questo articolo descrive le funzionalità supportate dalle diverse edizioni di S
 |Feed di dati Power Pivot|Yes||||||Yes|  
   
 ## <a name="data-mining"></a>Data Mining  
+
+> [!NOTE]
+> Il data mining [deprecato](analysis-services-backward-compatibility-sql2017.md#deprecated-features) in SQL Server Analysis Services 2017.
   
 |Nome funzionalità|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Sviluppatore|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
