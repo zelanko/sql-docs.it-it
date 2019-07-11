@@ -1336,7 +1336,7 @@
       items:
         - name: Heap (tabelle senza indici cluster)
           href: relational-databases/indexes/heaps-tables-without-clustered-indexes.md
-        - name: Descrizione di indici cluster e non cluster
+        - name: Indici cluster e non cluster
           href: relational-databases/indexes/clustered-and-nonclustered-indexes-described.md
           items:
             - name: Crea
