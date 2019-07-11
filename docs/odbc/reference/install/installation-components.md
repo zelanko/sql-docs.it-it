@@ -14,12 +14,12 @@ ms.assetid: 9de15ca0-fe6a-4634-8709-a928d3c9cc73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a883377a17aa9e0c3426b4805263616375ea6215
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d58b5791fc3cd6418f5594828aff6c8419cc7e1
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198398"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793410"
 ---
 # <a name="installation-components"></a>Componenti di installazione
 > [!NOTE]  
@@ -30,7 +30,7 @@ ms.locfileid: "63198398"
  ![Relazione tra i componenti di installazione](../../../odbc/reference/install/media/pr29.gif "pr29")  
   
 > [!IMPORTANT]
->  Il file Odbc.inf che è stato usato in ODBC 2. *x* per descrivere i file necessari per ogni ODBC componente non verrà utilizzata in ODBC 3*x*. I driver di ODBC 3*x* componenti non sono necessario creare un file Odbc.inf. La rimozione dei **la funzione SQLInstallDriver** e **la funzione SQLInstallODBC**e la rimozione del **SQLInstallTranslator**, hanno sottoposto a rendering Odbc.inf non necessari. Le informazioni del driver che erano nelle sezioni della parola chiave Driver del Odbc.inf sono ora disponibili nel *lpszDriver* nell'argomento **SQLInstallDriverEx**. Le informazioni di Microsoft translator che usato in [ODBC Microsoft Translator] e le sezioni specifiche di Microsoft Translator di Odbc.inf sono ora disponibili nel *lpszTranslator* argomenti del **SQLInstallTranslatorEx**. Queste modifiche consentono il programma di installazione ODBC garantire la portabilità tra piattaforme.  
+>  Il file Odbc.inf che è stato usato in ODBC *2.x* per descrivere i file necessari per ogni ODBC componente non verrà utilizzata in ODBC *3.x*. I driver di ODBC *3.x* componenti non sono necessario creare un file Odbc.inf. La rimozione dei **la funzione SQLInstallDriver** e **la funzione SQLInstallODBC**e la rimozione del **SQLInstallTranslator**, hanno sottoposto a rendering Odbc.inf non necessari. Le informazioni del driver che erano nelle sezioni della parola chiave Driver del Odbc.inf sono ora disponibili nel *lpszDriver* nell'argomento **SQLInstallDriverEx**. Le informazioni di Microsoft translator che usato in [ODBC Microsoft Translator] e le sezioni specifiche di Microsoft Translator di Odbc.inf sono ora disponibili nel *lpszTranslator* argomenti del **SQLInstallTranslatorEx**. Queste modifiche consentono il programma di installazione ODBC garantire la portabilità tra piattaforme.  
   
  Per altre informazioni su questi componenti, vedere gli argomenti seguenti alla fine di questa sezione.  
   

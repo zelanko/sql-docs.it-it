@@ -2,19 +2,20 @@
 title: Distribuire in modalità offline
 titleSuffix: SQL Server big data clusters
 description: Informazioni su come eseguire una distribuzione non in linea di un cluster di big data di SQL Server.
-author: rothja
-ms.author: jroth
+author: mihaelablendea
+ms.author: mihaelab
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0f3bfcfba0cfb972c7d02042bc98aa461eb110bb
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 1300c375903eb8692b8da6dce4e74a41e91d80c0
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388811"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728929"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Eseguire una distribuzione non in linea di un cluster di big data di SQL Server
 
