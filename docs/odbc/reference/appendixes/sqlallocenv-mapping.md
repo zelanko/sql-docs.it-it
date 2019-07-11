@@ -14,15 +14,15 @@ ms.assetid: 4bb51845-ee91-4b97-9dd4-2fab977f2aec
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39736d4d007814e29bc8c8293fa7e1020539b940
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 841310d1e51084ae6a61c629b8782a8b84c665f8
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280855"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793576"
 ---
 # <a name="sqlallocenv-mapping"></a>Mapping di SQLAllocEnv
-Quando un'applicazione chiama **SQLAllocEnv** tramite un'applicazione ODBC 3 *. x* driver, la chiamata al **SQLAllocEnv**(*phenv*) viene mappato a **SQLAllocHandle** come indicato di seguito:  
+Quando un'applicazione chiama **SQLAllocEnv** tramite un database ODBC *3.x* driver, la chiamata al **SQLAllocEnv**(*phenv*) viene mappato a **SQLAllocHandle** come indicato di seguito:  
   
 1.  Gestione Driver alloca un handle di ambiente e lo restituisce all'applicazione. Le chiamate di gestione Driver **SQLSetEnvAttr** su cui impostare l'attributo di ambiente SQL_ATTR_ODBC_VERSION SQL_OV_ODBC2.  
   

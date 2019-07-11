@@ -9056,7 +9056,7 @@
               items:
                 - name: Ottenere il dump completo della memoria
                   href: ssms/troubleshoot/get-full-memory-dump.md
-                - name: Arresti anomali e blocchi
+                - name: Ottenere dati di diagnostica
                   href: ssms/troubleshoot/ssms-troubleshoot.md
             - name: SQL Server Agent
               items:
