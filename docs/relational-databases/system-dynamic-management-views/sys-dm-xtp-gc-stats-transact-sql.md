@@ -19,15 +19,15 @@ ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ab8e21dd9c4a475f635573ff913d230d0e6fe7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10c58086a6d7e562548024273c71ef36664dff11
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730939"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826630"
 ---
 # <a name="sysdmxtpgcstats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Fornisce informazioni (statistiche generali) sul comportamento corrente del processo di Garbage Collection [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
   
@@ -35,7 +35,7 @@ ms.locfileid: "47730939"
   
  Per altre informazioni, vedere [OLTP in memoria &#40;ottimizzazione in memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nome colonna|Tipo|Description|  
+|Nome colonna|type|Descrizione|  
 |-----------------|----------|-----------------|  
 |rows_examined|**bigint**|Numero di righe esaminate dal sottosistema di Garbage Collection dal momento in cui è stato avviato il server.|  
 |rows_no_sweep_needed|**bigint**|Numero di righe che sono state rimosse senza analisi di elementi nascosti.|  

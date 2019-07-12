@@ -10,12 +10,12 @@ ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1374179c5bdac27bc7fda98d8a4675eab4ca9a18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cfceb6b2314f9e57d6d383312d9f9373f7df1621
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66080224"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832917"
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Configurare Analysis Services per la delega vincolata Kerberos
   Quando si configura Analysis Services per l'autenticazione Kerberos, è probabile che si desideri ottenere uno o entrambi i seguenti risultati: che Analysis Services rappresenti un'identità utente per l'esecuzione di query sui dati oppure che Analysis Services deleghi un'identità utente per un servizio di livello inferiore. Ogni scenario prevede requisiti di configurazione lievemente diversi. Entrambi gli scenari richiedono che si verifichi la correttezza della configurazione.  
@@ -23,7 +23,7 @@ ms.locfileid: "66080224"
 > [!TIP]  
 >  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** è uno strumento di diagnostica che semplifica la risoluzione dei problemi di connettività correlati a Kerberos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Microsoft Kerberos Configuration Manager per SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
- In questo argomento sono incluse le sezioni seguenti:  
+ Di seguito sono elencate le diverse sezioni di questo argomento:  
   
 -   [Consentire ad Analysis Services di rappresentare un'identità utente](#bkmk_impersonate)  
   
@@ -109,7 +109,7 @@ ms.locfileid: "66080224"
   
  Per un test completo è necessario usare strumenti di monitoraggio della rete in grado di acquisire richieste e risposte Kerberos. A tale scopo è possibile usare l'utilità Network Monitor (netmon.exe), con filtro per Kerberos. Per altre informazioni sull'uso di Netmon 3.4 e altri strumenti per verificare l'autenticazione Kerberos, vedere [configurazione dell'autenticazione Kerberos: Configurazione di base (SharePoint Server 2010)](https://technet.microsoft.com/library/gg502602\(v=office.14\).aspx).  
   
- Vedere inoltre [La finestra di dialogo che più disorienta in Active Directory](http://windowsitpro.com/windows/most-confusing-dialog-box-active-directory) per una descrizione dettagliata di ciascuna opzione nella scheda Delega della finestra di dialogo delle proprietà dell'oggetto di Active Directory. Questo articolo spiega inoltre come usare LDP per eseguire i test e interpretarne i relativi risultati.  
+ Vedere inoltre [La finestra di dialogo che più disorienta in Active Directory](https://www.itprotoday.com/active-directory/most-confusing-dialog-box-active-directory) per una descrizione dettagliata di ciascuna opzione nella scheda Delega della finestra di dialogo delle proprietà dell'oggetto di Active Directory. Questo articolo spiega inoltre come usare LDP per eseguire i test e interpretarne i relativi risultati.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Delega dell'identità e autenticazione di Microsoft Business Intelligence](https://go.microsoft.com/fwlink/?LinkID=286576)   

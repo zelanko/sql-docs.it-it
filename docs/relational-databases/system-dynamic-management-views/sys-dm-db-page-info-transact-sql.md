@@ -20,16 +20,16 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 03d284ad2dc8ac41e13ca6c90b38a65297ec7fcd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71e32cbe889a6c8236bf536a83109b37e6845842
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822241"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832998"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
 Restituisce informazioni su una pagina in un database.  La funzione restituisce una riga che contiene le informazioni di intestazione dalla pagina, inclusi i `object_id`, `index_id`, e `partition_id`.  Questa funzione sostituisce l'uso di `DBCC PAGE` nella maggior parte dei casi.
 
@@ -55,58 +55,58 @@ Determina il livello di dettaglio nell'output della funzione. "Limitato" restitu
 
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|database_id |INT |ID database |
-|file_id |INT |ID file |
-|page_id |INT |ID pagina |
-|page_type |INT |Tipo di pagina |
+|database_id |int |ID database |
+|file_id |int |ID file |
+|page_id |int |ID pagina |
+|page_type |int |Tipo di pagina |
 |page_type_desc |nvarchar(64) |Descrizione del tipo di pagina |
 |page_flag_bits |nvarchar(64) |Flag di bit nell'intestazione di pagina |
 |page_flag_bits_desc |nvarchar(256) |Descrizione del flag bit nell'intestazione di pagina |
 |page_type_flag_bits |nvarchar(64) |Bit di Flag di tipo nell'intestazione di pagina |
 |page_type_flag_bits_desc |nvarchar(64) |Descrizione del tipo flag bit nell'intestazione di pagina |
-|object_id |INT |ID dell'oggetto proprietario della pagina |
-|index_id |INT |ID dell'indice (0 per le pagine di dati di heap) |
-|partition_id |BIGINT |ID della partizione |
-|alloc_unit_id |BIGINT |ID di unità di allocazione |
-|page_level |INT |A livello di pagina nell'indice (foglia = 0) |
-|slot_count |SMALLINT |Numero totale di slot (utilizzato e inutilizzato) <br> Per una pagina di dati, questo numero è equivalente al numero di righe. |
-|ghost_rec_count |SMALLINT |Numero di record contrassegnati come fantasma nella pagina <br> Un record fantasma è quello che è stato contrassegnato per l'eliminazione ma non sono ancora stati rimossi. |
-|torn_bits |INT |bit 1 per ogni settore per il rilevamento di scritture errate. Utilizzato anche per archiviare checksum <br> Questo valore viene utilizzato per rilevare il danneggiamento dei dati |
+|object_id |int |ID dell'oggetto proprietario della pagina |
+|index_id |int |ID dell'indice (0 per le pagine di dati di heap) |
+|partition_id |bigint |ID della partizione |
+|alloc_unit_id |bigint |ID di unità di allocazione |
+|page_level |int |A livello di pagina nell'indice (foglia = 0) |
+|slot_count |smallint |Numero totale di slot (utilizzato e inutilizzato) <br> Per una pagina di dati, questo numero è equivalente al numero di righe. |
+|ghost_rec_count |smallint |Numero di record contrassegnati come fantasma nella pagina <br> Un record fantasma è quello che è stato contrassegnato per l'eliminazione ma non sono ancora stati rimossi. |
+|torn_bits |int |bit 1 per ogni settore per il rilevamento di scritture errate. Utilizzato anche per archiviare checksum <br> Questo valore viene utilizzato per rilevare il danneggiamento dei dati |
 |is_iam_pg |bit |Bit per indicare se la pagina è una pagina IAM  |
 |is_mixed_ext |bit |Bit per indicare se allocata in un extent misto |
-|pfs_file_id |SMALLINT |ID file della pagina PFS corrispondente |
-|pfs_page_id |INT |ID della pagina PFS corrispondente |
-|pfs_alloc_percent |INT |Percentuale di allocazione come indicato dal byte PFS |
+|pfs_file_id |smallint |ID file della pagina PFS corrispondente |
+|pfs_page_id |int |ID della pagina PFS corrispondente |
+|pfs_alloc_percent |int |Percentuale di allocazione come indicato dal byte PFS |
 |pfs_status |nvarchar(64) |PFS byte |
 |pfs_status_desc |nvarchar(64) |Descrizione del byte PFS |
-|gam_file_id |SMALLINT |ID file della pagina GAM corrispondente |
-|gam_page_id |INT |ID pagina della pagina GAM corrispondente |
+|gam_file_id |smallint |ID file della pagina GAM corrispondente |
+|gam_page_id |int |ID pagina della pagina GAM corrispondente |
 |gam_status |bit |Bit per indicare se allocata nella mappa GAM |
 |gam_status_desc |nvarchar(64) |Descrizione per il bit di stato nella pagina GAM |
-|sgam_file_id |SMALLINT |ID file della pagina SGAM corrispondente |
-|sgam_page_id |INT |ID pagina della pagina SGAM corrispondente |
+|sgam_file_id |smallint |ID file della pagina SGAM corrispondente |
+|sgam_page_id |int |ID pagina della pagina SGAM corrispondente |
 |sgam_status |bit |Bit per indicare se allocata nella mappa SGAM |
 |sgam_status_desc |nvarchar(64) |Descrizione per il bit di stato nella pagina SGAM |
-|diff_map_file_id |SMALLINT |ID file della pagina mappa di bit differenziale corrispondente |
-|diff_map_page_id |INT |ID pagina della pagina mappa di bit differenziale corrispondente |
+|diff_map_file_id |smallint |ID file della pagina mappa di bit differenziale corrispondente |
+|diff_map_page_id |int |ID pagina della pagina mappa di bit differenziale corrispondente |
 |diff_status |bit |Bit per indicare se viene modificato lo stato delle differenze |
 |diff_status_desc |nvarchar(64) |Descrizione per il bit di stato diff |
-|ml_file_id |SMALLINT |ID file della pagina corrispondente bitmap con registrazione minima |
-|ml_page_id |INT |ID pagina della pagina corrispondente bitmap con registrazione minima |
+|ml_file_id |smallint |ID file della pagina corrispondente bitmap con registrazione minima |
+|ml_page_id |int |ID pagina della pagina corrispondente bitmap con registrazione minima |
 |ml_status |bit |Bit per indicare se la pagina è a registrazione minima |
 |ml_status_desc |nvarchar(64) |Descrizione dello stato della registrazione minima di bit |
-|free_bytes |SMALLINT |Numero di byte disponibili nella pagina |
-|free_data_offset |INT |Offset di spazio disponibile alla fine dell'area dati |
-|reserved_bytes |SMALLINT |Numero di byte disponibili riservati da tutte le transazioni (se heap) <br> Numero di righe fantasma (se foglia dell'indice) |
-|reserved_xdes_id |SMALLINT |Spazio fornito dalle m_xdesID a m_reservedCnt <br> Solo a scopo di debug |
+|free_bytes |smallint |Numero di byte disponibili nella pagina |
+|free_data_offset |int |Offset di spazio disponibile alla fine dell'area dati |
+|reserved_bytes |smallint |Numero di byte disponibili riservati da tutte le transazioni (se heap) <br> Numero di righe fantasma (se foglia dell'indice) |
+|reserved_xdes_id |smallint |Spazio fornito dalle m_xdesID a m_reservedCnt <br> Solo a scopo di debug |
 |xdes_id |nvarchar(64) |Più recente delle transazioni fornite da m_reserved <br> Solo a scopo di debug |
-|prev_page_file_id |SMALLINT |ID di file di pagina precedente |
-|prev_page_page_id |INT |ID di pagina pagina precedente |
-|next_page_file_id |SMALLINT |ID di file di pagina successiva |
-|next_page_page_id |INT |ID di pagina pagina successiva |
-|min_len |SMALLINT |Lunghezza delle righe di dimensioni fisse |
+|prev_page_file_id |smallint |ID di file di pagina precedente |
+|prev_page_page_id |int |ID di pagina pagina precedente |
+|next_page_file_id |smallint |ID di file di pagina successiva |
+|next_page_page_id |int |ID di pagina pagina successiva |
+|min_len |smallint |Lunghezza delle righe di dimensioni fisse |
 |lsn |nvarchar(64) |Numero di sequenza di log / timestamp |
-|header_version |INT |Versione dell'intestazione di pagina |
+|header_version |int |Versione dell'intestazione di pagina |
 
 ## <a name="remarks"></a>Note
 Il `sys.dm_db_page_info` funzione a gestione dinamica restituisce informazioni sulla pagina, ad esempio `page_id`, `file_id`, `index_id`, `object_id` e così via, presenti in un'intestazione di pagina. Queste informazioni sono utili per la risoluzione dei problemi e debug di diversi problemi di prestazioni (contesa latch / blocco) e il danneggiamento.
@@ -123,7 +123,7 @@ Richiede il `VIEW DATABASE STATE` autorizzazione nel database.
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-displaying-all-the-properties-of-a-page"></a>A. Visualizzazione di tutte le proprietà di una pagina
+### <a name="a-displaying-all-the-properties-of-a-page"></a>R. Visualizzazione di tutte le proprietà di una pagina
 La query seguente restituisce una riga con tutte le informazioni della pagina per un determinato `database_id`, `file_id`, `page_id` combinazione con la modalità predefinita ('limitazioni')
 
 ```sql

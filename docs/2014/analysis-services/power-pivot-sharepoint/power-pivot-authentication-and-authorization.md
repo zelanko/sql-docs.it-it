@@ -10,12 +10,12 @@ ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2fe19165a8b9e0d419a1cba67eeb4ada6a3ce183
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f567da3318c7b8fff799475c638c1086613f45b
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66071433"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826340"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>Autenticazione e autorizzazione di PowerPivot
   Una distribuzione PowerPivot per SharePoint eseguita in una farm di SharePoint 2010 utilizza il sottosistema di autenticazione e il modello di autorizzazione forniti dai server SharePoint. L'infrastruttura di sicurezza di SharePoint si estende al contenuto e alle operazioni di PowerPivot poiché tutto il contenuto correlato a PowerPivot viene archiviato nei database del contenuto di SharePoint e tutte le operazioni correlate a PowerPivot vengono effettuate dai servizi condivisi PowerPivot nella farm. L'autenticazione degli utenti che richiedono una cartella di lavoro contenente dati PowerPivot avviene tramite un'identità utente di SharePoint basata sull'identità utente di Windows. Le autorizzazioni di visualizzazione nella cartella di lavoro consentono di determinare se la richiesta viene concessa o negata.  
@@ -87,7 +87,7 @@ ms.locfileid: "66071433"
 |Amministratore di farm o di servizio|Installazione, abilitazione e configurazione di servizi e applicazioni.<br /><br /> Utilizzo del dashboard di gestione PowerPivot e visualizzazione dei report amministrativi.|  
 |Controllo completo|Attivazione dell'integrazione delle caratteristiche di PowerPivot a livello di raccolta siti.<br /><br /> Creazione di una libreria di raccolta PowerPivot.<br /><br /> Creazione di una libreria di feed di dati.|  
 |Collaborazione|Aggiunta, modifica e download di cartelle di lavoro di PowerPivot.<br /><br /> Configurazione dell'aggiornamento dati.<br /><br /> Creazione di cartelle di lavoro e report basati sulle cartelle di lavoro di PowerPivot in un sito di SharePoint.<br /><br /> Creazione di documenti di servizio dati in una libreria di feed di dati|  
-|lettura|Accedere a cartelle di lavoro di PowerPivot come un'origine dati esterna, dove l'URL della cartella di lavoro viene immesso in modo esplicito in una finestra di dialogo di connessione (ad esempio, nella connessione guidata dati di Excel).|  
+|Lettura|Accedere a cartelle di lavoro di PowerPivot come un'origine dati esterna, dove l'URL della cartella di lavoro viene immesso in modo esplicito in una finestra di dialogo di connessione (ad esempio, nella connessione guidata dati di Excel).|  
 |Solo visualizzazione|Visualizzazione delle cartelle di lavoro di PowerPivot.<br /><br /> Visualizzazione della cronologia dell'aggiornamento dati.<br /><br /> Connessione di una cartella di lavoro locale a una cartella di lavoro di PowerPivot su un sito di SharePoint, per la ridefinizione degli scopi dei relativi dati in altri modi.<br /><br /> Download di uno snapshot della cartella di lavoro. Lo snapshot è una copia statica dei dati, senza filtri dei dati, filtri, formule o connessioni dati. Il contenuto dello snapshot è simile alla copia di valori cella dalla finestra del browser.|  
   
 ##  <a name="excel"></a> Considerazioni sulla sicurezza di Excel Services per le cartelle di lavoro di PowerPivot  
@@ -107,7 +107,7 @@ ms.locfileid: "66071433"
 ||Impostazione dati esterni consentiti|È necessario impostare questo valore su **Raccolte di connessioni dati attendibili e connessioni incorporate**. Le connessioni dati PowerPivot sono incorporate nella cartella di lavoro. Se non si consentono le connessioni incorporate, gli utenti possono visualizzare la cache della tabella pivot, ma non saranno in grado di interagire con i dati PowerPivot.|  
 ||Avvisa in caso di aggiornamento|È necessario disabilitare questo valore se si utilizza la raccolta PowerPivot per archiviare cartelle di lavoro e report. Nella raccolta PowerPivot è inclusa una caratteristica di anteprima di documento che funziona meglio se l'aggiornamento all'apertura e l'avviso in caso di aggiornamento sono disabilitati.|  
 |Provider di dati attendibili|MSOLAP.4<br /><br /> MSOLAP.5|MSOLAP.4 è incluso per impostazione predefinita, tuttavia per l'accesso ai dati PowerPivot viene richiesto che la versione del provider MSOLAP.4 sia SQL Server 2008 R2.<br /><br /> MSOLAP.5 è installato con la versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di PowerPivot per SharePoint.<br /><br /> Non rimuovere questi provider dall'elenco di provider di dati attendibili. In alcuni casi, potrebbe essere necessario installare copie aggiuntive di questo provider negli altri server SharePoint della farm. Per altre informazioni, vedere [Installazione del provider OLE DB di Analysis Services nei server di SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).|  
-|Raccolte connessioni dati attendibili|Facoltativo.|Nelle cartelle di lavoro di PowerPivot è possibile utilizzare file ODC (Office Data Connection). Se si utilizzano file odc per fornire informazioni di connessione alle cartelle di lavoro di PowerPivot locali, è possibile aggiungere gli stessi file odc a questa raccolta.|  
+|Raccolte connessioni dati attendibili|facoltativo.|Nelle cartelle di lavoro di PowerPivot è possibile utilizzare file ODC (Office Data Connection). Se si utilizzano file odc per fornire informazioni di connessione alle cartelle di lavoro di PowerPivot locali, è possibile aggiungere gli stessi file odc a questa raccolta.|  
 |Assembly per la funzione definita dall'utente|Non applicabile.|In PowerPivot per SharePoint vengono ignorati gli assembly per la funzione definita dall'utente compilati e distribuiti per Excel Services. Se si utilizzano gli assembly definiti dall'utente per un comportamento specifico, assicurarsi che per l'elaborazione di query PowerPivot non vengano utilizzate le funzioni definite dall'utente create.|  
   
 ## <a name="see-also"></a>Vedere anche  

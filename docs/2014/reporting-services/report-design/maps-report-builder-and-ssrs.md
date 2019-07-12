@@ -17,12 +17,12 @@ ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f784da5b506930bd3a28366c4610c79e73b14c77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86932da9ccec6e973a2a35fc0ccbb5f54af63f05
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66105545"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826544"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mappe (Generatore report e SSRS)
   Per visualizzare i dati aziendali su uno sfondo geografico, è possibile aggiungere una mappa al report. Il tipo di mappa da selezionare dipende da quali informazioni si desidera comunicare nel report. È possibile aggiungere una mappa che visualizza solo le posizioni, una mappa a bolle in cui le dimensioni di queste ultime variano in base al numero di unità familiari presenti in un'area, una mappa con marcatori in cui lo stile del marcatore cambia a seconda del prodotto più remunerativo per ogni negozio oppure una mappa linea che consente di visualizzare gli itinerari tra i diversi negozi.  
@@ -80,7 +80,7 @@ ms.locfileid: "66105545"
 -   **Report di Raccolta mappe.** I dati spaziali sono incorporati nei report posizionati nella raccolta mappe. Per impostazione predefinita, la raccolta mappe è installata in *\<unità>* :\Programmi\Microsoft SQL Server\Generatore report\RaccoltaMappe.  
   
     > [!NOTE]  
-    >  Questa funzionalità di mapping di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa i dati dei file di forma TIGER/Line forniti gentilmente Census Bureau degli Stati Uniti ([http://www.census.gov/](http://www.census.gov/)). I file di forma TIGER/Line sono un estratto di informazioni geografiche e cartografiche selezionate dal database Census MAF/TIGER e sono messi a disposizione gratuitamente dallo United States Census Bureau. Per altre informazioni sui file di forma TIGER/Line, visitare [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Le informazioni sui confini presenti nei file di forma TIGER/Line servono solo per la raccolta dei dati statistici e la tabulazione. La relativa rappresentazione e designazione per scopi statistici non determina un'autorità giurisdizionale oppure diritti di proprietà o titoli, né rappresentano descrizioni geografiche valide a livello legale. Census TIGER e TIGER/Line sono marchi registrati dello United States Bureau of the Census.  
+    >  Questa funzionalità di mapping di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa i dati dei file di forma TIGER/Line forniti gentilmente Census Bureau degli Stati Uniti ([http://www.census.gov/](http://www.census.gov/)). I file di forma TIGER/Line sono un estratto di informazioni geografiche e cartografiche selezionate dal database Census MAF/TIGER e sono messi a disposizione gratuitamente dallo United States Census Bureau. Per altre informazioni sui file di forma TIGER/Line, vedere [TIGER/Line Shapefiles and TIGER/Line Files Technical Documentation](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html) (Documentazione tecnica dei file di forma TIGER/Line e dei file TIGER/Line). Le informazioni sui confini presenti nei file di forma TIGER/Line servono solo per la raccolta dei dati statistici e la tabulazione. La relativa rappresentazione e designazione per scopi statistici non determina un'autorità giurisdizionale oppure diritti di proprietà o titoli, né rappresentano descrizioni geografiche valide a livello legale. Census TIGER e TIGER/Line sono marchi registrati dello United States Bureau of the Census.  
   
 -   **File di forma ESRI.** I file di forma ESRI contengono dati conformi al formato dei dati spaziali dei file di forma Environmental Systems Research Institute, Inc. (ESRI) Formato di file di forma dei dati spaziali. Essi fanno riferimento a un set di file. I dati nel file con estensione shp specificano le forme geografiche o geometriche. I dati nel file con estensione dbf forniscono gli attributi per le forme. Per visualizzare una mappa in visualizzazione della struttura o eseguirla dal server di report, entrambi i file devono trovarsi nella stessa cartella. Quando si aggiungono dati spaziali da un file con estensione shp sul file system locale, i dati spaziali sono incorporati nel report. Per recuperare i dati spaziali dinamicamente in fase di esecuzione, caricare i file di forma nel server di report e specificarli come origine dei dati spaziali. Per altre informazioni, vedere la pagina relativa alla [ricerca di file di forma ESRI per una mappa](https://go.microsoft.com/fwlink/?linkid=178814).  
   

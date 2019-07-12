@@ -1,20 +1,20 @@
 ---
-title: Sviluppare applicazioni per SQL Server in Linux | Microsoft Docs
+title: Sviluppare applicazioni per SQL Server in Linux
 description: ''
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 11/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 4d3ef46dfbacb1c4cbfe67df555b79fb10ade86d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 737fd2776c3320e9f71b9dfa372aa6de646516e6
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705821"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833818"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Come iniziare a sviluppare applicazioni per SQL Server in Linux
 

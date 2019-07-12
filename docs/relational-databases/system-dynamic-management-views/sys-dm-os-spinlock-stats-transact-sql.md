@@ -5,11 +5,8 @@ ms.date: 06/03/2019
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: ''
-ms.component: dmv's
-ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -21,20 +18,19 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_os_spinlock_stats dynamic management view
-ms.assetid: ''
-caps.latest.revision: ''
 author: bluefooted
 ms.author: pamela
+ms.reviewer: maghan
 manager: amitban
-ms.workload: Inactive
-ms.openlocfilehash: d26369b657848bf1ff092bc69fba1a6aa5850102
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: e302eadaa559674482911904678cc8aa4cbd2577
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67420853"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826607"
 ---
 # <a name="sysdmosspinlockstats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Restituisce informazioni su tutte le attese di spinlock organizzati per tipo.  
@@ -42,7 +38,7 @@ Restituisce informazioni su tutte le attese di spinlock organizzati per tipo.
 
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|NAME|**nvarchar(256)**|Nome del tipo di spinlock.|  
+|name|**nvarchar(256)**|Nome del tipo di spinlock.|  
 |conflitti|**bigint**|Il numero di volte in cui un thread tenta di acquisire lo spinlock e viene bloccato perché un altro thread attualmente contiene lo spinlock.|  
 |Attiva|**bigint**|Il numero di volte in cui un thread esegue un ciclo durante il tentativo di acquisire lo spinlock.|  
 |spins_per_collision|**real**|Rapporto tra rotazioni per ogni conflitto.|  
@@ -191,7 +187,7 @@ GO
 |LANG_RES_LOAD|Solo per uso interno.|
 |LIVE_TARGET_TVF|Solo per uso interno.|
 |LOCK_FREE_LIST|Solo per uso interno.|
-|LOCK_HASH|Consente di proteggere l'accesso alla tabella hash di blocco manager che contiene informazioni sui blocchi mantenuti in un database. Visualizzare [questo articolo](https://support.microsoft.comkb/2926217) per altre informazioni.|
+|LOCK_HASH|Consente di proteggere l'accesso alla tabella hash di blocco manager che contiene informazioni sui blocchi mantenuti in un database. Visualizzare [questo articolo](https://support.microsoft.com/kb/2926217) per altre informazioni.|
 |LOCK_NOTIFICATION|Solo per uso interno.|
 |LOCK_RESOURCE_ID|Solo per uso interno.|
 |LOCK_RW_ABTX_HASH_SET|Solo per uso interno.|

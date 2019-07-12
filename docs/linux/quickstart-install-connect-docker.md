@@ -2,9 +2,9 @@
 title: Introduzione ai contenitori Linux di SQL Server in Docker
 titleSuffix: SQL Server
 description: Questa Guida introduttiva illustra come usare Docker per eseguire SQL Server 2017 e le immagini del contenitore 2019. Si userà quindi sqlcmd per creare un database ed eseguire query su di esso.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: vin-yu
+ms.author: vinsonyu
+ms.reviewer: vanto
 ms.date: 05/14/2019
 ms.topic: conceptual
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 667103945781e5c7814879456027a81b77cf7338
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: e9dfbd9edbb7a363c3f88845bfe3a6331bbd7db9
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399931"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833623"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Avvio rapido: Eseguire le immagini del contenitore SQL Server con Docker
 

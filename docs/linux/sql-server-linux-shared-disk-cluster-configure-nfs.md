@@ -1,19 +1,20 @@
 ---
-title: Configurare l'archiviazione failover istanza del cluster NFS - SQL Server in Linux | Microsoft Docs
+title: Configurare l'archiviazione failover istanza del cluster NFS - SQL Server in Linux
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 0e325a8f717a84ed224fa619bdb47e79cf7af80f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cbac33943de34c8757d5319e5a59b049973d50c4
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719363"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833172"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Configurare cluster di failover - NFS - SQL Server in Linux
 

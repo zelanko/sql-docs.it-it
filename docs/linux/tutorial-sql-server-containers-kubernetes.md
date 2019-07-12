@@ -1,20 +1,21 @@
 ---
-title: Distribuire un contenitore di SQL Server in Kubernetes con servizi Kubernetes di Azure (AKS) | Microsoft Docs
+title: Distribuire un contenitore di SQL Server in Kubernetes con servizi Kubernetes di Azure (AKS)
 description: Questa esercitazione illustra come distribuire una soluzione a disponibilità elevata SQL Server con Kubernetes in Azure Kubernetes Service.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.custom: mvc
 ms.technology: linux
-ms.openlocfilehash: 236ae198b77f8fdc63a6c4d5069e3b335a44a472
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76c4003398368a1cdbadb257165dab6b048ebced
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704845"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832995"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Distribuire un contenitore di SQL Server in Kubernetes con servizi Kubernetes di Azure (AKS)
 
@@ -77,7 +78,7 @@ Il comando seguente crea una password per l'account SA:
 
 ## <a name="create-storage"></a>Creare spazio di archiviazione
 
-Configurare un [volume permanente](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) e [attestazione di volume permanente](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volume-claim-protection) nel cluster Kubernetes. Completare i passaggi seguenti: 
+Configurare un [volume permanente](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) e [attestazione di volume permanente](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volume-claim-protection) nel cluster Kubernetes. Completare questi passaggi: 
 
 1. Creare un manifesto per definire la classe di archiviazione e del volume permanente attestazione.  Il manifesto specifica di strumento di provisioning di archiviazione, parametri, e [occupata da criteri](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming). Il cluster Kubernetes Usa questo manifesto per creare l'archivio permanente. 
 

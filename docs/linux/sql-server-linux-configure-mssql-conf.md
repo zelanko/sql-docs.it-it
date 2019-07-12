@@ -1,20 +1,20 @@
 ---
-title: Configurare le impostazioni di SQL Server in Linux | Microsoft Docs
+title: Configurare le impostazioni di SQL Server in Linux
 description: Questo articolo descrive come usare lo strumento mssql-conf per configurare le impostazioni di SQL Server in Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 9fd4e35a9fbdd7e0cd3c77fb05ef2f7fdde53c02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57e43f3afd9c46e3b49e4f1f07ab3038359c8c50
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719397"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834016"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurare SQL Server in Linux con lo strumento mssql-conf
 
@@ -394,7 +394,7 @@ La prima acquisizione di fase viene controllata dal **coredump.coredumptype** im
 
     La tabella seguente elenca i possibili **coredump.coredumptype** valori.
 
-    | Type | Descrizione |
+    | type | Descrizione |
     |-----|-----|
     | **mini** | Mini è il tipo di file di dump più piccolo. Usa le informazioni sul sistema di Linux per determinare i thread e i moduli del processo. Il dump contiene solo i moduli e gli stack di thread di ambiente host. Non contiene riferimenti indiretti memoria o alle raccolte globals. |
     | **miniplus** | È simile a mini miniPlus, ma include memoria aggiuntiva. Riconosce le caratteristiche interne di SQLPAL e l'ambiente host, aggiungere le seguenti aree di memoria per il dump:</br></br> -Funzioni globali varie</br> -Tutta la memoria superiori a 64TB</br> -All denominata area trovata **/proc/$ pid e mappe**</br> -Memoria indiretto dal thread e stack</br> -Informazioni thread</br> -Del Teb e associati di Peb</br> -Modulo informazioni</br> -VMM e VAD albero |

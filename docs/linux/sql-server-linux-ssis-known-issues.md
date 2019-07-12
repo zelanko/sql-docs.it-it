@@ -1,20 +1,20 @@
 ---
-title: Limitazioni e problemi noti per SSIS in Linux | Microsoft Docs
+title: Limitazioni e problemi noti per SSIS in Linux
 description: Questo articolo descrive le limitazioni e problemi noti per SQL Server Integration Services (SSIS) in computer Linux
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
-manager: craigg
+manager: jroth
 ms.date: 06/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: fdf6542f64549233dd5d4ef15dc39a53fefa49a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc4ec7f99a8cbcf5b6bd48924f3eed1e8f10f658
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712833"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833136"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Limitazioni e problemi noti per SSIS in Linux
 
@@ -103,7 +103,7 @@ La seguente attività di manutenzione sono supportate in Linux:
 
 ## <a name="supported-data-flow-transformations"></a>Trasformazioni del flusso di dati è supportata
 - Aggregate
-- Controllare il funzionamento di
+- Audit
 - Server di distribuzione di dati bilanciati
 - Mappa caratteri
 - Suddivisione condizionale

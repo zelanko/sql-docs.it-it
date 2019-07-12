@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6158df674c90f14a1f77f5e12c18adcb6f8fbc4f
-ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
+ms.openlocfilehash: 7adf4a825fb93b6c87714476607b30e9f4ec97a7
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67652867"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833567"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -68,8 +68,11 @@ In primo luogo, se il piano contiene i costrutti seguenti:
 * Riferimento a una tabella esterna
 * Query distribuita o operazioni full-text
 * Uso di query globali 
-* Cursori keyset o dinamico (uso forzato del piano è supportato per cursori statici o fast forward)
+* Cursori keyset o dinamico 
 * Specifica di join a stella non valida 
+
+> [!NOTE]
+> Database SQL di Azure e SQL Server 2019 (anteprima) supporta l'utilizzo forzato del piano per i cursori statici e fast forward.
 
 In secondo luogo, quando gli oggetti su cui si basa il piano non sono più disponibili:
 * Database (se il database da cui ha avuto origine il piano non esiste più)

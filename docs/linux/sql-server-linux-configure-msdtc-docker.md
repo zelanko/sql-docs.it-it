@@ -1,20 +1,20 @@
 ---
-title: Come usare le transazioni distribuite con SQL Server in Docker | Microsoft Docs
+title: Come usare le transazioni distribuite con SQL Server in Docker
 description: Questo articolo illustra come usare Dprovides una procedura dettagliata per la configurazione di MSDTC in Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 09/25/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e38c1cf0fb82c70f57a1648619d584b06281cba
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 808f9d0ef2911aa79c8a4fc5af55a222a056004b
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400052"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834042"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>Come usare le transazioni distribuite con SQL Server in Docker
 

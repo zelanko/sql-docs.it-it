@@ -10,13 +10,13 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 07/10/2019
-ms.openlocfilehash: 5e3aa3f0472b775f1dfbd13634228226e4e7e0c2
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.date: 07/11/2019
+ms.openlocfilehash: 9b6fa6e7ec82853e05070a1675154f06091e5092
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794066"
+ms.locfileid: "67826519"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Note sulla versione per Azure Data Studio
 
@@ -24,7 +24,7 @@ ms.locfileid: "67794066"
 
 ## <a name="july-2019"></a>Luglio 2019
 
-Il 10 luglio 2019 &nbsp;  /  &nbsp; versione: 1.9.0 
+11 luglio 2019 &nbsp;  /  &nbsp; versione: 1.9.0 
 
 &nbsp;
 
@@ -39,7 +39,6 @@ Il 10 luglio 2019 &nbsp;  /  &nbsp; versione: 1.9.0
 | Visual Studio Code può rilasciare Merge 1.35 | I miglioramenti più recenti sono reperibili [qui](https://code.visualstudio.com/updates/v1_35). |
 | Problemi e i bug risolti | Nelle versioni precedenti di Azure Data Studio, se un database utente è stato selezionato durante la connessione nella finestra di dialogo di connessione, il risulta Esplora oggetti è stato l'ambito della voce interamente per quel singolo database. Inizio di questa versione, che viene modificato il comportamento in modo che le proprietà a livello di server vengono anche visualizzate in Esplora oggetti. <br/> Per un elenco completo delle correzioni, vedere [bug e problemi, in GitHub](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1). |
 | &nbsp; | &nbsp; |
-
 
 
 ## <a name="june-2019"></a>Giugno 2019

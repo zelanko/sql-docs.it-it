@@ -1,19 +1,20 @@
 ---
-title: Nozioni fondamentali sulla disponibilità di SQL Server per le distribuzioni di Linux | Microsoft Docs
+title: Nozioni fondamentali sulla disponibilità di SQL Server per le distribuzioni di Linux
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4e42088227e22f6368426b9c4e8dc8134dbb49d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 203fad6aa3c39d57446738b9c74631fe114c609e
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719366"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833559"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Nozioni fondamentali sulla disponibilità di SQL Server per le distribuzioni di Linux
 

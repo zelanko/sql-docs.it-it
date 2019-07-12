@@ -6,16 +6,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 manager: jroth
-ms.date: 02/28/2019
+ms.date: 07/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c5860e4c26008cf94b9ec168bb6a705f15ae7cd1
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 872988b29cddc202ea2c0f199548bc28b946b918
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728913"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826525"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurare Azure Kubernetes Service per le distribuzioni di cluster di SQL Server i big Data
 
@@ -76,9 +76,39 @@ Un gruppo di risorse di Azure è un gruppo logico in Azure le risorse vengono di
    az group create --name sqlbdcgroup --location westus2
    ```
 
+## <a name="verify-available-kubernetes-versions"></a>Verificare che le versioni disponibili di Kubernetes
+
+Usare l'ultima versione disponibile di Kubernetes. La versione più recente disponibile dipende dalla posizione in cui si distribuisce il cluster. Il comando seguente restituisce le versioni di Kubernetes disponibili in una posizione specifica.
+
+Prima di eseguire il comando, aggiornare lo script. Sostituire `<Azure data center>` con la posizione del cluster.
+
+   **bash**
+
+   ```bash
+   az aks get-versions \
+   --location <Azure data center> \
+   --query orchestrators \
+   --o table
+   ```
+
+   **PowerShell**
+
+   ```powershell
+   az aks get-versions `
+   --location <Azure data center> `
+   --query orchestrators `
+   --o table
+   ```
+
+Scegliere la versione più recente disponibile per il cluster. Registrare il numero di versione. Si userà nel passaggio successivo.
+
 ## <a name="create-a-kubernetes-cluster"></a>Creare un cluster Kubernetes
 
-1. Creare un cluster Kubernetes nel servizio contenitore di AZURE con il [az aks create](https://docs.microsoft.com/cli/azure/aks) comando. L'esempio seguente crea un cluster Kubernetes denominato *kubcluster* con un nodo dell'agente Linux di dimensioni **Standard_L8s**. Assicurarsi di che creare il cluster AKS nello stesso gruppo di risorse usato nelle sezioni precedenti.
+1. Creare un cluster Kubernetes nel servizio contenitore di AZURE con il [az aks create](https://docs.microsoft.com/cli/azure/aks) comando. L'esempio seguente crea un cluster Kubernetes denominato *kubcluster* con un nodo dell'agente Linux di dimensioni **Standard_L8s**.
+
+   Prima di eseguire lo script, sostituire `<version number>` con il numero di versione è identificato nel passaggio precedente.
+
+   Assicurarsi di che creare il cluster AKS nello stesso gruppo di risorse usato nelle sezioni precedenti.
 
    **bash:**
 
@@ -88,7 +118,7 @@ Un gruppo di risorse di Azure è un gruppo logico in Azure le risorse vengono di
    --generate-ssh-keys \
    --node-vm-size Standard_L8s \
    --node-count 1 \
-   --kubernetes-version 1.12.8
+   --kubernetes-version <version number>
    ```
 
    **PowerShell:**
@@ -99,7 +129,7 @@ Un gruppo di risorse di Azure è un gruppo logico in Azure le risorse vengono di
    --generate-ssh-keys `
    --node-vm-size Standard_L8s `
    --node-count 1 `
-   --kubernetes-version 1.12.8
+   --kubernetes-version <version number>
    ```
 
    È possibile aumentare o ridurre il numero di nodi agente Kubernetes modificando la `--node-count <n>` in cui `<n>` è il numero di nodi di agenti da usare. Questo non include il nodo master Kubernetes, che viene gestito in background dal servizio contenitore di AZURE. L'esempio precedente Usa solo un singolo nodo per scopi di valutazione.

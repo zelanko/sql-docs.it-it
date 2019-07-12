@@ -1,19 +1,20 @@
 ---
-title: Configura archivio cluster di failover istanza SMB - SQL Server in Linux | Microsoft Docs
+title: Configura archivio cluster di failover istanza SMB - SQL Server in Linux
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 7a8df4121fa71580af9596c855e0f0d6199fca46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 74b8779a4654f544f8085041adeafb14a59688bf
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712862"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833185"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configurare cluster di failover - SMB - SQL Server in Linux
 

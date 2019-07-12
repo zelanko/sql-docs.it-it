@@ -1,20 +1,20 @@
 ---
-title: Framework e librerie di connettività | Microsoft Docs
+title: Framework e librerie di connettività
 description: Elenca i driver di connettività che le app client possono usare da vari linguaggi per connettersi a Microsoft SQL Server in esecuzione in locale o nel cloud, in Linux, Windows o Docker e anche al Database SQL di Azure e Azure SQL Data Warehouse.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
-ms.openlocfilehash: 1f0274a8eb84f9700378d266729afbdc91aebaf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88b212d9a39f990184753382f433f1c002a4634d
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713209"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833854"
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>Librerie di connettività e Framework per Microsoft SQL Server
 

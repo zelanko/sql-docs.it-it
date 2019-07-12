@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2f6568e39b364b0e7d486e0d9e0318709141be63
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c4f72522c1803a364d9a309b5fa2d21fd9f2fe18
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402646"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826495"
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Autenticazione e autorizzazione di Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "52402646"
 |Amministratore di farm o di servizio|Installazione, abilitazione e configurazione di servizi e applicazioni.<br /><br /> Uso del dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e visualizzazione dei report amministrativi.|  
 |Controllo completo|Attivazione dell'integrazione delle caratteristiche di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a livello di raccolta siti.<br /><br /> Creazione di un libreria della Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Creazione di una libreria di feed di dati.|  
 |Collaborazione|Aggiunta, modifica,eliminazione e download di cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Configurazione dell'aggiornamento dati.<br /><br /> Creazione di nuove cartelle di lavoro e report basati sulle cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in un sito di SharePoint.<br /><br /> Creazione di documenti di servizio dati in una libreria di feed di dati|  
-|lettura|Accesso [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cartelle di lavoro come un'origine dati esterna, dove l'URL della cartella di lavoro viene immesso in modo esplicito in una finestra di dialogo di connessione (ad esempio, nella connessione guidata dati di Excel).|  
+|Lettura|Accesso [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cartelle di lavoro come un'origine dati esterna, dove l'URL della cartella di lavoro viene immesso in modo esplicito in una finestra di dialogo di connessione (ad esempio, nella connessione guidata dati di Excel).|  
 |Solo visualizzazione|Visualizzazione delle cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Visualizzazione della cronologia dell'aggiornamento dati.<br /><br /> Connessione di una cartella di lavoro locale a una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] su un sito di SharePoint, per la ridefinizione degli scopi dei relativi dati in altri modi.<br /><br /> Download di uno snapshot della cartella di lavoro. Lo snapshot è una copia statica dei dati, senza filtri dei dati, filtri, formule o connessioni dati. Il contenuto dello snapshot è simile alla copia di valori cella dalla finestra del browser.|  
   
 ##  <a name="excel"></a> Considerazioni sulla sicurezza di Excel Services per le cartelle di lavoro di Power Pivot  
@@ -107,7 +107,7 @@ ms.locfileid: "52402646"
 ||Impostazione dati esterni consentiti|È necessario impostare questo valore su **Raccolte di connessioni dati attendibili e connessioni incorporate**. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sono incorporate nella cartella di lavoro. Se non si consentono le connessioni incorporate, gli utenti possono visualizzare la cache della [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , ma non saranno in grado di interagire con i dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 ||Avvisa in caso di aggiornamento|È necessario disabilitare questo valore se si usa la Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per archiviare cartelle di lavoro e report. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è inclusa una caratteristica di anteprima di documento che funziona meglio se l'aggiornamento all'apertura e l'avviso in caso di aggiornamento sono disabilitati.|  
 |Provider di dati attendibili|MSOLAP.4<br /><br /> MSOLAP.5|MSOLAP.4 è incluso per impostazione predefinita, tuttavia per l'accesso ai dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] viene richiesto che la versione del provider MSOLAP.4 sia SQL Server 2008 R2.<br /><br /> MSOLAP.5 è installato con la versione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint.<br /><br /> Non rimuovere questi provider dall'elenco di provider di dati attendibili. In alcuni casi, potrebbe essere necessario installare copie aggiuntive di questo provider negli altri server SharePoint della farm. Per altre informazioni, vedere [Installazione del provider OLE DB di Analysis Services nei server di SharePoint](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).|  
-|Raccolte connessioni dati attendibili|Facoltativo.|Nelle cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è possibile usare file ODC (Office Data Connection), con estensione odc. Se si usano file odc per fornire informazioni di connessione alle cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] locali, è possibile aggiungere gli stessi file odc a questa raccolta.|  
+|Raccolte connessioni dati attendibili|facoltativo.|Nelle cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è possibile usare file ODC (Office Data Connection), con estensione odc. Se si usano file odc per fornire informazioni di connessione alle cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] locali, è possibile aggiungere gli stessi file odc a questa raccolta.|  
 |Assembly per la funzione definita dall'utente|Non applicabile.|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint ignora gli assembly per la funzione definita dall'utente compilati e distribuiti per Excel Services. Se si usano assembly definiti dall'utente per un comportamento specifico, tenere presente che per l'elaborazione di query [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] non verranno usate le funzioni definite dall'utente create.|  
   
 ## <a name="see-also"></a>Vedere anche  

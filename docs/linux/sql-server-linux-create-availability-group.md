@@ -1,19 +1,20 @@
 ---
-title: Creare e configurare un gruppo di disponibilità per SQL Server in Linux | Microsoft Docs
+title: Creare e configurare un gruppo di disponibilità per SQL Server in Linux
 description: Questa esercitazione illustra come creare e configurare i gruppi di disponibilità per SQL Server in Linux.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1841b7e38e47ffa1192b19564e1c6596ea9804a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7bd6f1259989c1cb0286fca546ea9e0410e0837f
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719385"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833896"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Creare e configurare un gruppo di disponibilità per SQL Server in Linux
 
@@ -324,11 +325,11 @@ Questa sezione illustra come creare un gruppo di disponibilità con un tipo di c
 
 2.  Nella finestra di dialogo Introduction, fare clic su **successivo**.
 
-3.  Nella finestra di dialogo specificare le opzioni di gruppo di disponibilità, immettere un nome per il gruppo di disponibilità e selezionare un tipo di cluster di EXTERNAL o nessuno nell'elenco a discesa. Esterno deve essere usato quando Pacemaker verrà distribuito. Nessuno è per scenari specializzati, ad esempio lettura con scalabilità orizzontale. Se si seleziona l'opzione per il rilevamento dell'integrità a livello di database è facoltativa. Per altre informazioni su questa opzione, vedere [opzione failover di rilevamento dell'integrità a livello di disponibilità gruppo database](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Scegliere **Avanti**.
+3.  Nella finestra di dialogo specificare le opzioni di gruppo di disponibilità, immettere un nome per il gruppo di disponibilità e selezionare un tipo di cluster di EXTERNAL o nessuno nell'elenco a discesa. Esterno deve essere usato quando Pacemaker verrà distribuito. Nessuno è per scenari specializzati, ad esempio lettura con scalabilità orizzontale. Se si seleziona l'opzione per il rilevamento dell'integrità a livello di database è facoltativa. Per altre informazioni su questa opzione, vedere [opzione failover di rilevamento dell'integrità a livello di disponibilità gruppo database](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Fare clic su **Avanti**.
 
     ![](./media/sql-server-linux-create-availability-group/image3.png)
 
-4.  Nella finestra di dialogo Seleziona database, selezionare i database che faranno parte del gruppo di disponibilità. Ogni database deve avere un backup completo prima di aggiungerlo a un gruppo di disponibilità. Scegliere **Avanti**.
+4.  Nella finestra di dialogo Seleziona database, selezionare i database che faranno parte del gruppo di disponibilità. Ogni database deve avere un backup completo prima di aggiungerlo a un gruppo di disponibilità. Fare clic su **Avanti**.
 
 5.  Nella finestra di dialogo specifica repliche, fare clic su **Aggiungi Replica**.
 
@@ -360,11 +361,11 @@ Questa sezione illustra come creare un gruppo di disponibilità con un tipo di c
 
     c.  Selezionare ogni URL e dal basso, selezionare le repliche leggibili. Per la selezione multipla, tenere premuto MAIUSC o fare clic e trascinare.
 
-12. Scegliere **Avanti**.
+12. Fare clic su **Avanti**.
 
-13. Scegli modalità di inizializzazione nelle repliche secondarie. L'impostazione predefinita consiste nell'usare [il seeding automatico](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), che richiede lo stesso percorso in tutti i server che fanno parte del gruppo di disponibilità. È anche possibile la procedura guidata eseguire una backup, copia e ripristino (la seconda opzione); aggiungerlo se hanno manualmente il backup, copiata e ripristinato il database nelle repliche (terza opzione); o aggiungere il database in un secondo momento (ultima opzione). Come con i certificati, se si apportano i backup e copiarli manualmente, le autorizzazioni per i file di backup deve essere impostato nelle altre repliche. Scegliere **Avanti**.
+13. Scegli modalità di inizializzazione nelle repliche secondarie. L'impostazione predefinita consiste nell'usare [il seeding automatico](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), che richiede lo stesso percorso in tutti i server che fanno parte del gruppo di disponibilità. È anche possibile la procedura guidata eseguire una backup, copia e ripristino (la seconda opzione); aggiungerlo se hanno manualmente il backup, copiata e ripristinato il database nelle repliche (terza opzione); o aggiungere il database in un secondo momento (ultima opzione). Come con i certificati, se si apportano i backup e copiarli manualmente, le autorizzazioni per i file di backup deve essere impostato nelle altre repliche. Fare clic su **Avanti**.
 
-14. Nella finestra di dialogo convalida, se tutti gli elementi non arrivi come esito positivo, provare a utilizzare. Alcuni avvisi siano accettabili e non irreversibili, ad esempio se non si crea un listener. Scegliere **Avanti**.
+14. Nella finestra di dialogo convalida, se tutti gli elementi non arrivi come esito positivo, provare a utilizzare. Alcuni avvisi siano accettabili e non irreversibili, ad esempio se non si crea un listener. Fare clic su **Avanti**.
 
 15. Nella finestra di dialogo riepilogo, fare clic su **fine**. A questo punto verrà avviata la procedura per creare il gruppo di disponibilità.
 
