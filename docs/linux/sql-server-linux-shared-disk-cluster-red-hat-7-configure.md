@@ -1,20 +1,21 @@
 ---
-title: Configurare cluster condiviso di Red Hat Enterprise Linux per SQL Server | Microsoft Docs
+title: Configurare cluster condiviso di Red Hat Enterprise Linux per SQL Server
 description: Implementare la disponibilità elevata tramite la configurazione del cluster di dischi condivisi di Red Hat Enterprise Linux per SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 73dff2be37cade58991078fec4663a9ac351f49b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2eb3a0a135fc43e3dadb855682cea9f6465d5ca
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712900"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833143"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurare il cluster di dischi condivisi di Red Hat Enterprise Linux per SQL Server
 
