@@ -4,18 +4,18 @@ titleSuffix: SQL Server
 description: ''
 author: Dylan-MSFT
 ms.author: dygray
-ms.reviewer: rothja
+ms.reviewer: vanto
 ms.date: 04/01/2019
-manager: craigg
+manager: jroth
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 50f2685b5b981cddfdba61f91b7ec04e9f6345d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cee4ca0edcc5a49a34b6c352ae0121bed3b40ca
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822520"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834445"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Creare un join SQL Server in un host Linux a un dominio di Active Directory
 
@@ -171,7 +171,7 @@ Utilizzare la procedura seguente per aggiungere un host di SQL Server a un domin
 
    Nella tabella seguente sono elencati alcuni messaggi di errore che si potrebbero ricevere e suggerimenti su come risolverli:
 
-   | Messaggio di errore | Consiglio |
+   | Messaggio di errore | Recommendation |
    |---|---|
    | `Necessary packages are not installed` | Installare i pacchetti usando Gestione pacchetti della distribuzione Linux prima di eseguire nuovamente il comando di join dell'area di autenticazione. |
    | `Insufficient permissions to join the domain` | Verificare con un amministratore di dominio che si dispone di autorizzazioni sufficienti per aggiungere macchine Linux al dominio. |

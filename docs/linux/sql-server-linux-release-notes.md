@@ -1,20 +1,20 @@
 ---
-title: Note sulla versione di SQL Server 2017 in Linux | Microsoft Docs
+title: Note sulla versione di SQL Server 2017 in Linux
 description: Questo articolo contiene le note sulla versione e funzionalità supportate per SQL Server 2017 in esecuzione su Linux. Note sulla versione sono incluse per la versione più recente e versioni precedenti.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 06/25/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: da7d92fd1fa15deb83dbca9a1710b967d660b99f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06c46a54f21c0397f4ee801349acbebafeedf7a1
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705150"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834808"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Note sulla versione di SQL Server 2017 in Linux
 

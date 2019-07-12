@@ -1,20 +1,21 @@
 ---
-title: Installare SQL Server Machine Learning Services (R, Python) in Linux | Microsoft Docs
+title: Installare SQL Server Machine Learning Services (R, Python) in Linux
 description: Informazioni su come installare SQL Server Machine Learning Services (R, Python) su Red Hat, Ubuntu e SUSE.
 author: dphansen
 ms.author: davidph
+ms.reviewer: vanto
 manager: cgronlun
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a36ae06f28cb68395fd24b64921575567757a7f
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 5e64f19c7495a58c02852d9c1207b047de669758
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399942"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834677"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>Installare SQL Server 2019 Machine Learning Services (R, Python) in Linux
 
@@ -160,7 +161,7 @@ In un dispositivo connesso a internet, i pacchetti vengono scaricati e installat
 
 | Nome pacchetto | Si applica a | Descrizione |
 |--------------|----------|-------------|
-|mssql-server-extensibility  | All | Framework di estendibilità utilizzato per eseguire codice R e Python. |
+|mssql-server-extensibility  | Tutti | Framework di estendibilità utilizzato per eseguire codice R e Python. |
 | microsoft-openmpi  | Python, R | Interfaccia utilizzata dalle librerie Revo * per la parallelizzazione in Linux di passaggio dei messaggi. |
 | mssql-mlservices-python | Python | Distribuzione di open source di Python e Anaconda. |
 |mssql-mlservices-mlm-py  | Python | *Installazione completa*. Fornisce revoscalepy, microsoftml, pre-training di modelli per l'analisi del sentiment definizione delle funzionalità e il testo di immagine.| 
@@ -278,7 +279,7 @@ Configurazione aggiuntiva viene eseguito principalmente tramita il [lo strumento
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-2. Accettare il contratto di licenza di R e Python open source. Esistono diversi modi per eseguire questa operazione. Se in precedenza accettati licenza di SQL Server e si siano aggiungendo a questo punto le estensioni R o Python, il comando seguente è il tuo consenso delle condizioni:
+2. Accettare il contratto di licenza di R e Python open source. Esistono diversi modi per eseguire tale operazione. Se in precedenza accettati licenza di SQL Server e si siano aggiungendo a questo punto le estensioni R o Python, il comando seguente è il tuo consenso delle condizioni:
 
    ```bash
    # Run as SUDO or root

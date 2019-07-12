@@ -1,20 +1,20 @@
 ---
-title: Introduzione alle funzionalità delle prestazioni di SQL Server in Linux | Microsoft Docs
+title: Introduzione alle funzionalità delle prestazioni di SQL Server in Linux
 description: Questo articolo fornisce un'introduzione delle funzionalità delle prestazioni di SQL Server per Linux gli utenti che hanno familiarità con SQL Server. Molti di questi esempi funzionano in tutte le piattaforme, ma il contesto di questo articolo è un sistema Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.openlocfilehash: a340b3b8ded0824947cc242538ad19159b4abb4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c5cf07107702579af1ae111c9c55843c16c01bd0
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713326"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834828"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Procedura dettagliata per le funzionalità delle prestazioni di SQL Server in Linux
 
@@ -158,7 +158,7 @@ SQL Server supporta le stored procedure compilate in modo nativo che accedono al
 ### <a name="learn-more-about-in-memory-oltp"></a>Altre informazioni su OLTP In memoria
 Per ulteriori informazioni su OLTP In memoria, vedere gli argomenti seguenti:
 
-- [Avvio rapido 1: Tecnologie OLTP in memoria per migliorare le prestazioni di Transact-SQL](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
+- [Avvio rapido 1: tecnologie OLTP in memoria per migliorare le prestazioni di Transact-SQL](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
 - [Migrazione a OLTP in memoria](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)
 - [Tabella temporanea più rapida e variabile di tabella tramite l'ottimizzazione per la memoria](../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)
 - [Monitorare e risolvere i problemi relativi all'utilizzo della memoria](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)

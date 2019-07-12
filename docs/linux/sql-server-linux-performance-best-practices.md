@@ -1,19 +1,20 @@
 ---
-title: Procedure consigliate sulle prestazioni per SQL Server in Linux | Microsoft Docs
+title: Procedure consigliate sulle prestazioni per SQL Server in Linux
 description: Questo articolo offre linee guida e procedure consigliate sulle prestazioni per l'esecuzione di SQL Server in Linux.
 author: rgward
 ms.author: bobward
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 8dc3cafb54fe91709bd3ee078dfeeb1dc5e3d649
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d82ee87f0911ab6e47a9537e035e522b062a699c
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705165"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834856"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Prestazioni le procedure consigliate e linee guida per la configurazione per SQL Server in Linux
 
@@ -61,7 +62,7 @@ Si tratta di prestazioni correlati ad alta le impostazioni di sistema operativo 
 
 La tabella seguente fornisce indicazioni per le impostazioni della CPU:
 
-| Impostazione | Value | Ulteriori informazioni |
+| Impostazione | Value | Altre informazioni |
 |---|---|---|
 | Governor frequenza della CPU | prestazioni | Vedere le **cpupower** comando |
 | ENERGY_PERF_BIAS | prestazioni | Vedere le **x86_energy_perf_policy** comando |
@@ -70,7 +71,7 @@ La tabella seguente fornisce indicazioni per le impostazioni della CPU:
 
 La tabella seguente fornisce indicazioni per le impostazioni del disco:
 
-| Impostazione | Value | Ulteriori informazioni |
+| Impostazione | Value | Altre informazioni |
 |---|---|---|
 | Read-ahead disco | 4096 | Vedere le **blockdev** comando |
 | impostazioni sysctl | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | Vedere le **sysctl** comando |

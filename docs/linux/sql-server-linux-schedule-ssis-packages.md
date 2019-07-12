@@ -1,20 +1,20 @@
 ---
-title: Pianificare i pacchetti SSIS in Linux con cron | Microsoft Docs
+title: Pianificare i pacchetti SSIS in Linux con cron
 description: Questo articolo descrive come pianificare i pacchetti di SQL Server Integration Services (SSIS) in Linux con il servizio cron.
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
-manager: craigg
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 6d78190f5c6acf1f5dc8bfaccbf072a290faa908
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b171f3e3ba24474afcea09498d69574d69b3c33
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705320"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834736"
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>Esecuzione in Linux con cron pacchetti pianificazione SQL Server Integration Services
 
@@ -32,7 +32,7 @@ Per controllare lo stato del servizio cron, usare il comando seguente: `systemct
 
 Se il servizio non è attivo (vale a dire, non è già in esecuzione), contattare l'amministratore per installare e configurare correttamente il servizio cron.
 
-## <a name="create-jobs"></a>Creare i processi
+## <a name="create-jobs"></a>Creare processi
 
 Un processo cron è un'attività che è possibile configurare per eseguire regolarmente un intervallo specificato. Il processo può essere semplice quanto un comando che è in genere digitare direttamente nella console o eseguire come script della shell.
 

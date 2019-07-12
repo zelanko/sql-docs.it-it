@@ -1,20 +1,21 @@
 ---
-title: Configurare condivisioni cartella snapshot della replica di SQL Server in Linux | Microsoft Docs
+title: Configurare condivisioni cartella snapshot della replica di SQL Server in Linux
 description: Questo articolo descrive come configurare la replica di SQL Server condivisioni cartella snapshot in Linux.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7569eaf92484038e998595405df42dd1f2d31b3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4091bd6f1a3afcf32431af78ad47089ffc9a1620
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718161"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834785"
 ---
 # <a name="configure-replication-snapshot-folder-with-shares"></a>Configura la cartella snapshot della replica con le condivisioni
 
