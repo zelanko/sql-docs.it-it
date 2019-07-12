@@ -1,20 +1,20 @@
 ---
 title: Sviluppare e distribuire SQL Server di database per Linux | Microsoft Docs
 description: ''
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: fafec68510e2c9214ed77294314b2ff06e456ff2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3981071bb6f175a130444dabc588d1dba18112f7
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713284"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833809"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Usare Visual Studio per creare i database di SQL Server in Linux
 
@@ -106,12 +106,12 @@ Avere creato un nuovo database nell'istanza di SQL Server in Linux e appreso le 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Se si ha familiarità con T-SQL, vedere [esercitazione: La scrittura di istruzioni Transact-SQL] e il [riferimento a Transact-SQL (motore di Database)].
+Se si ha familiarità con T-SQL, vedere [Esercitazione: Scrittura di istruzioni Transact-SQL] e il [Riferimento Transact-SQL (motore di Database)].
 
 Per altre informazioni sullo sviluppo di un database con SQL Data Tools, vedere [documenti MSDN di SSDT]
 
-[Scaricare e installare Visual Studio]:https://www.visualstudio.com/downloads/
+[Scaricare e installare Visual Studio]: https://www.visualstudio.com/downloads/
 [Download and Install SSDT]:https://aka.ms/ssdt-download
 [Documenti MSDN di SSDT]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[Esercitazione: Scrittura di istruzioni Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
-[Riferimento Transact-SQL (motore di Database)]:https://msdn.microsoft.com/library/bb510741.aspx
+[Esercitazione: Scrittura di istruzioni Transact-SQL]: https://msdn.microsoft.com/library/ms365303.aspx
+[Riferimento Transact-SQL (motore di Database)]: https://msdn.microsoft.com/library/bb510741.aspx
