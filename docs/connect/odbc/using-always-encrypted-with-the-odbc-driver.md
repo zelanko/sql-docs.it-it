@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: jroth
 author: MightyPen
-ms.openlocfilehash: aff69606c81a1ee93a01a8467299ba2155da770d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a187f83939ec9758db8ca688a074de530d6cf0d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801742"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680086"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso di Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -58,7 +58,12 @@ Si noti che l'abilitazione di Always Encrypted non è sufficiente per l'esito po
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Recupero e modifica di dati nelle colonne crittografate
 
-Dopo aver abilitato Always Encrypted per una connessione, è possibile usare le API ODBC standard (vedere il [codice di esempio ODBC](https://code.msdn.microsoft.com/windowsapps/ODBC-sample-191624ae/sourcecode?fileId=51137&pathId=1980325953) o la [guida di riferimento per programmatori ODBC](https://msdn.microsoft.com/library/ms714177(v=vs.85).aspx)) per recuperare o modificare i dati nelle colonne di database crittografate. Supponendo che l'applicazione abbia le autorizzazioni necessarie per il database e che possa accedere alla chiave master della colonna, il driver crittograferà tutti i parametri di query che puntano a colonne crittografate e decrittograferà i dati recuperati dalle colonne crittografate, comportandosi in modo trasparente per l'applicazione come se le colonne non fossero crittografate.
+Dopo aver abilitato Always Encrypted per una connessione, è possibile usare le API ODBC standard. Le API ODBC possono recuperare o modificare i dati in colonne crittografate del database. Gli elementi di documentazione seguenti possono risultare utili con questo:
+
+- [Codice di esempio ODBC](cpp-code-example-app-connect-access-sql-db.md)
+- [Guida di riferimento per programmatori ODBC](../../odbc/reference/odbc-programmer-s-reference.md)
+
+L'applicazione deve avere le autorizzazioni di database necessari e deve essere in grado di accedere alla chiave master di colonna. Quindi, il driver crittografa eventuali parametri di query destinati alle colonne crittografate. Inoltre, il driver decrittografa i dati recuperati dalle colonne crittografate. Il driver esegue tutti la crittografia e decrittografia senza assistenza da parte del codice sorgente. Per il programma, è come se le colonne non vengono crittografate.
 
 Se Always Encrypted non è abilitato, le query con parametri destinati alle colonne crittografate avranno esito negativo. I dati possono essere comunque recuperati dalle colonne crittografate, a condizione che non presentino parametri destinati alle colonne crittografate. Il driver tuttavia non tenterà alcuna decrittografia e l'applicazione riceverà i dati binari crittografati, sotto forma di matrici di byte.
 
