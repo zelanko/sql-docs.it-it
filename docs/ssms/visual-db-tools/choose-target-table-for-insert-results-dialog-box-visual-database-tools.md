@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4028ff53a81d35654030e21838d8733236e42297
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: b0cb39dff8306c2fcba5bcb67f1ada2a279b35b3
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65089387"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686380"
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>Finestra di dialogo Scegliere la tabella di destinazione per Accodamento (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

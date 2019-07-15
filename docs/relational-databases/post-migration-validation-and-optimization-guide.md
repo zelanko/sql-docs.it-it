@@ -13,12 +13,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: d13809c3fa5b100a29df4434da5aec354de0c7c2
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 1ba2746e91c33c49c943a9c100e9ea3bd6d3d9e5
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581232"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860497"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guida di ottimizzazione e convalida post-migrazione
 
@@ -53,7 +53,7 @@ Per altre informazioni su questo argomento, vedere [Mantenere la stabilità dell
 **Si applica a:** migrazione da piattaforma esterna (ad esempio Oracle, DB2, MySQL e Sybase) a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
-> Per le migrazioni da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se questo problema si verificava nell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di origine, la semplice migrazione a una versione più recente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]? non risolverà il problema descritto in questo scenario. 
+> Per le migrazioni da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se questo problema si verificava nell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] di origine, la semplice migrazione a una versione più recente di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non risolverà il problema descritto in questo scenario. 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compila i piani di query sulle stored procedure analizzando i parametri di input alla prima compilazione e generando un piano con parametri riutilizzabile e ottimizzato per la distribuzione di questi dati di input. Anche se non vengono usate stored procedure, la maggior parte delle istruzioni che generano piani semplici includerà dei parametri. Dopo che un piano è stato inizialmente memorizzato nella cache, per le esecuzioni future verrà eseguito il mapping a un piano precedentemente memorizzato nella cache.
 Un potenziale problema si presenta nel caso in cui durante questa prima compilazione non siano stati usati i set di parametri più comuni per il normale carico di lavoro. Per parametri diversi, lo stesso piano di esecuzione diventa inefficiente. Per altre informazioni su questo argomento, vedere il blog sull'[analisi dei parametri](../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
