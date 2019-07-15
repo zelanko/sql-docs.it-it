@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 37ba23a5bb39fd4a01d8acf949b97f9014c80881
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 1c4a1e6f83bc785f8a32099146ebe05fbb6988c2
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088790"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686681"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Documentazione per gli utenti in SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ Per ottenere ulteriori informazioni, la Guida di [!INCLUDE[ssManStudio](../inclu
   
 #### <a name="to-access-sql-server-focused-communities-from-the-how-do-i-page"></a>Per accedere alle community dedicate a SQL Server dalla pagina Ricerca per categorie  
   
-1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]scegliere **Ricerca per categorie** dal menu **?**.  
+1.  In [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]scegliere **Ricerca per categorie** dal menu **?** .  
   
 2.  Verrà visualizzata la pagina [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Ricerca per categorie** . Nell'intestazione laterale dei collegamenti ai siti della community, fare clic sul nome del sito della community a cui si desidera accedere.  
   
@@ -80,7 +80,7 @@ Per ottenere ulteriori informazioni, la Guida di [!INCLUDE[ssManStudio](../inclu
   
 #### <a name="to-search-msdn-online-and-sql-server-focused-communities-from-the-search-page"></a>Per eseguire ricerche in MSDN Online e nelle community dedicate a SQL Server dalla pagina Cerca  
   
-1.  Scegliere **Cerca** dal menu **?**.  
+1.  Scegliere **Cerca** dal menu **?** .  
   
 2.  Immettere i termini di ricerca nella casella di testo **Cerca** e fare clic su **Cerca**.  
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], command prompt
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8f73f17d3224ced3fca052e9b19a7d61cf64548b
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 5b35a8027608cc2b250e37078b9c44971e9bb106
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100436"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728130"
 ---
 # <a name="sqlmaint-utility"></a>utilità sqlmaint
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,8 +81,8 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  Specifica che deve essere restituito il diagramma della sintassi di **sqlmaint** . Questo parametro deve essere utilizzato da solo.  
   
- **-S** _server_name_[ **\\**_instance\_name_]  
- Specifica l'istanza di destinazione di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare _server\_name_ per connettersi all'istanza predefinita di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] su tale server. Specificare _server\_name_**\\**_instance\_name_ per connettersi a un'istanza denominata di [!INCLUDE[ssDE](../includes/ssde-md.md)] su tale server. Se non si specifica alcun server, **sqlmaint** si connette all'istanza predefinita di [!INCLUDE[ssDE](../includes/ssde-md.md)] nel computer locale.  
+ **-S** _server_name_[ **\\** _instance\_name_]  
+ Specifica l'istanza di destinazione di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare _server\_name_ per connettersi all'istanza predefinita di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] su tale server. Specificare _server\_name_ **\\** _instance\_name_ per connettersi a un'istanza denominata di [!INCLUDE[ssDE](../includes/ssde-md.md)] su tale server. Se non si specifica alcun server, **sqlmaint** si connette all'istanza predefinita di [!INCLUDE[ssDE](../includes/ssde-md.md)] nel computer locale.  
   
  **-U** _login_ID_  
  Specifica l'ID di accesso utilizzato per la connessione al server. Se omesso, **sqlmaint** prova a usare l'autenticazione di Windows [!INCLUDE[msCoName](../includes/msconame-md.md)] . Se *login_ID* contiene caratteri speciali, il valore deve essere racchiuso tra virgolette doppie ("). In caso contrario, le virgolette doppie sono facoltative.  
@@ -136,12 +136,12 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-RmUnusedSpace** _threshold_percent free_percent_  
  Specifica la rimozione dello spazio inutilizzato dal database indicato in **-D**. Questa opzione è utile solo nel caso di database per i quali è stato impostato l'aumento automatico delle dimensioni. *Threshold_percent* specifica le dimensioni, in megabyte, che il database deve raggiungere prima che **sqlmaint** rimuova lo spazio inutilizzato. Se le dimensioni del database sono inferiori a *threshold_percent*, non viene eseguita alcuna azione. *Free_percent* specifica la quantità di spazio inutilizzato che deve rimanere nel database, in termini di percentuale delle dimensioni finali del database. Se ad esempio un database di 200 MB contiene 100 MB di dati e si specifica 10 per *free_percent* , le dimensioni finali del database saranno di 110 MB. Le dimensioni del database non vengono aumentate se sono inferiori a *free_percent* più la quantità di dati del database. Se ad esempio un database di 108 MB contiene 100 MB di dati e si specifica 10 per *free_percent* , il database non viene esteso a 110 MB, ma resta di 108 MB.  
   
- **-CkDB** | **-CkDBNoIdx**  
+ **-CkDB** |  **-CkDBNoIdx**  
  Specifica l'esecuzione di un'istruzione DBCC CHECKDB o DBCC CHECKDB con l'opzione NOINDEX nel database indicato in **-D**. Per ulteriori informazioni, vedere DBCC CHECKDB.  
   
  Se durante l'esecuzione di *sqlmaint* il database è in uso, viene scritto un avviso in **text_file** .  
   
- **-CkAl** | **-CkAlNoIdx**  
+ **-CkAl** |  **-CkAlNoIdx**  
  Specifica l'esecuzione di un'istruzione DBCC CHECKALLOC con l'opzione NOINDEX nel database indicato in **-D**. Per altre informazioni, vedere [DBCC CHECKALLOC &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md).  
   
  **-CkCat**  
@@ -213,7 +213,7 @@ dbname_log_yyyymmddhhmm.BAK
  Indica che il supporto di backup è un nastro.  
   
  **-BkUpOnlyIfClean**  
- Specifica che il backup viene eseguito solo se i controlli **-Ck** specificati non rilevano problemi con i dati. Le azioni di manutenzione vengono eseguite nella stessa sequenza in cui sono indicate nel prompt dei comandi. Specificare i parametri **-CkDB**, **-CkDBNoIdx**, **-CkAl**, **-CkAlNoIdx**, **-CkTxtAl**o **-CkCat** prima dei parametri **-BkUpDB**/**-BkUpLog** se si intende specificare anche **- BkUpOnlyIfClean**, oppure il backup verrà eseguito a prescindere dal fatto che il controllo abbia segnalato problemi.  
+ Specifica che il backup viene eseguito solo se i controlli **-Ck** specificati non rilevano problemi con i dati. Le azioni di manutenzione vengono eseguite nella stessa sequenza in cui sono indicate nel prompt dei comandi. Specificare i parametri **-CkDB**, **-CkDBNoIdx**, **-CkAl**, **-CkAlNoIdx**, **-CkTxtAl**o **-CkCat** prima dei parametri **-BkUpDB**/ **-BkUpLog** se si intende specificare anche **- BkUpOnlyIfClean**, oppure il backup verrà eseguito a prescindere dal fatto che il controllo abbia segnalato problemi.  
   
  **-VrfyBackup**  
  Specifica l'esecuzione dell'istruzione RESTORE VERIFYONLY al termine del backup.  
@@ -240,7 +240,7 @@ dbname_log_yyyymmddhhmm.BAK
   
 -   Si verifica un errore generale.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'utilità **sqlmaint** può essere eseguita da qualsiasi utente di Windows che abbia l'autorizzazione **Lettura/esecuzione** su `sqlmaint.exe`, archiviato nella cartella `x:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER1\MSSQL\Binn` per impostazione predefinita. L'account di accesso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] specificato con **-login_ID** deve avere anche le autorizzazioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] necessarie per eseguire l'operazione specificata. Se la connessione a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza l'autenticazione di Windows, l'account di accesso di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sul quale viene eseguito il mapping all'utente di Windows autenticato deve disporre delle autorizzazioni [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] necessarie per eseguire l'operazione specificata.  
   
  Ad esempio, per usare **-BkUpDB** è necessaria l'autorizzazione per eseguire l'istruzione BACKUP, mentre l'uso dell'argomento **-UpdOptiStats** richiede l'autorizzazione per eseguire l'istruzione UPDATE STATISTICS. Per ulteriori informazioni, vedere le sezioni dedicate alle autorizzazioni nei relativi argomenti della documentazione online.  
@@ -253,7 +253,7 @@ dbname_log_yyyymmddhhmm.BAK
 sqlmaint -S MyServer -D AdventureWorks2012 -CkDB -CkAl -CkCat -Rpt C:\MyReports\AdvWks_chk.rpt  
 ```  
   
-### <a name="b-updating-statistics-using-a-15-sample-in-all-databases-in-a-plan-also-shrink-any-of-the-database-that-have-reached-110-mb-to-having-only-10-free-space"></a>b. Aggiornamento delle statistiche utilizzando un campione del 15% per tutti i database di un piano e compattazione dei database che hanno raggiunto dimensioni di 110 MB in modo che lo spazio libero sia pari al 10%  
+### <a name="b-updating-statistics-using-a-15-sample-in-all-databases-in-a-plan-also-shrink-any-of-the-database-that-have-reached-110-mb-to-having-only-10-free-space"></a>B. Aggiornamento delle statistiche utilizzando un campione del 15% per tutti i database di un piano e compattazione dei database che hanno raggiunto dimensioni di 110 MB in modo che lo spazio libero sia pari al 10%  
   
 ```  
 sqlmaint -S MyServer -PlanName MyUserDBPlan -UpdOptiStats 15 -RmUnusedSpace 110 10  

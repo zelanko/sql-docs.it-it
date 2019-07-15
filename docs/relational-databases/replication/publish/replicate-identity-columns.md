@@ -18,12 +18,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2e412e2ef25e9eb48a8068cbe6e75b2c1ec8797
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 18668d7c5a36a39bacf61383507d0911737e7762
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67579833"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860642"
 ---
 # <a name="replicate-identity-columns"></a>Replica di colonne Identity
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "67579833"
  Ad esempio, è possibile specificare 10.000 per **@pub_identity_range** , 1000 per **@identity_range** (presupponendo aggiornamenti minori nel Sottoscrittore) e 80% per **@threshold** . Dopo 800 inserimenti in un Sottoscrittore, pari all'80% di 1000, al Sottoscrittore viene assegnato un nuovo intervallo. Dopo 8.000 inserimenti nel server di pubblicazione, al server di pubblicazione viene assegnato un nuovo intervallo. A questo punto vi sarà un gap nell'intervallo di valori Identity della tabella. Specificando una soglia più elevata si avranno gap più piccoli, ma il sistema sarà meno tollerante agli errori. Se per qualche ragione non è possibile eseguire l'agente di distribuzione, i Sottoscrittori potrebbero esaurire più facilmente i valori Identity.  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>Assegnazione di intervalli per la gestione manuale degli intervalli di valori Identity  
- Se si sceglie la gestione manuale, è necessario verificare che il server di pubblicazione e tutti i Sottoscrittori utilizzino intervalli di valori Identity diversi. Si consideri, ad esempio, una tabella nel server di pubblicazione con una colonna Identity definita come `IDENTITY(1,1)`: la colonna Identity comincia col valore 1 e viene incrementata di 1 ogni volta che viene inserita una riga. Se la tabella nel server di pubblicazione ha 5.000 righe e si prevede una crescita nella tabella superiore alla durata dell'applicazione, per il server di pubblicazione si potrebbe utilizzare l'intervallo 1-10.000. Nel caso vi siano due Sottoscrittori, per il Sottoscrittore A si potrebbe usare l'intervallo 10.001?20.000 e per il Sottoscrittore B l'intervallo 20.001-30.000.  
+ Se si sceglie la gestione manuale, è necessario verificare che il server di pubblicazione e tutti i Sottoscrittori utilizzino intervalli di valori Identity diversi. Si consideri, ad esempio, una tabella nel server di pubblicazione con una colonna Identity definita come `IDENTITY(1,1)`: la colonna Identity comincia col valore 1 e viene incrementata di 1 ogni volta che viene inserita una riga. Se la tabella nel server di pubblicazione ha 5.000 righe e si prevede una crescita nella tabella superiore alla durata dell'applicazione, per il server di pubblicazione si potrebbe utilizzare l'intervallo 1-10.000. Nel caso vi siano due Sottoscrittori, per il Sottoscrittore A si potrebbe usare l'intervallo 10.001-20.000 e per il Sottoscrittore B l'intervallo 20.001-30.000.  
   
  Dopo aver inizializzato un Sottoscrittore con uno snapshot o altri metodi, eseguire DBCC CHECKIDENT per assegnare al Sottoscrittore un punto di partenza per l'intervallo di valori Identity. Ad esempio, nel Sottoscrittore A si eseguirà `DBCC CHECKIDENT('<TableName>','reseed',10001)`, mentre nel Sottoscrittore B si eseguirà `CHECKIDENT('<TableName>','reseed',20001)`.  
   

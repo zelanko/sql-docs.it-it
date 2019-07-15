@@ -3,19 +3,19 @@ title: Virtualizzare i dati esterni in SQL Server 2019 CTP 2.0 | Microsoft Docs
 description: Questa pagina illustra i passaggi per l'uso della procedura guidata di creazione di una tabella esterna per un file CSV
 author: Abiola
 ms.author: aboke
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: craigg
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0a0a609d2581230418df2a7c1ae1e990a04e41ae
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 3d00744ff63d51cb7557a8f299a3fb8fb53a99be
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388857"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729490"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>Usare la procedura guidata di creazione di una tabella esterna per i file CSV
 

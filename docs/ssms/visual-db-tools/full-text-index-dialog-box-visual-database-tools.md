@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 461a0afd4b77a449f7b398a03113164370061df5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 114f5969bc4d0987df0dbc0ecd04e424c7224f4c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105163"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682317"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Finestra di dialogo Indice full-text (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

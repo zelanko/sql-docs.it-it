@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: ea089a65065aedac59eb7cac7308acdab097ff47
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f1a48d9b2892033ee0e6203800a5b30cbd45b7c3
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213070"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731931"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Proprietà di SQL Server (scheda Parametri di avvio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "53213070"
  Per altre informazioni su come spostare il database master, vedere l'argomento "Spostamento dei database di sistema" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="optional-parameters"></a>Parametri facoltativi  
- Tutti i parametri di avvio supportati sono descritti nell'argomento "Utilizzo delle opzioni di avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un parametro di avvio -T*trace#* indica che deve essere avviata un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con uno specifico flag di traccia (*trace#*) attivo. I flag di traccia vengono utilizzati per avviare il server con un funzionamento non standard. Per altre informazioni sui flag di traccia, vedere l'argomento "Flag di traccia ( [!INCLUDE[tsql](../../includes/tsql-md.md)] )" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Tutti i parametri di avvio supportati sono descritti nell'argomento "Utilizzo delle opzioni di avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un parametro di avvio -T*trace#* indica che deve essere avviata un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con uno specifico flag di traccia (*trace#* ) attivo. I flag di traccia vengono utilizzati per avviare il server con un funzionamento non standard. Per altre informazioni sui flag di traccia, vedere l'argomento "Flag di traccia ( [!INCLUDE[tsql](../../includes/tsql-md.md)] )" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!CAUTION]  
 >  Su Internet è possibile che siano descritti parametri di avvio e flag di traccia aggiuntivi non documentati. I parametri di avvio e i flag di traccia non documentati vengono creati per risolvere problemi non comuni o per forzare determinate condizioni richieste per il test. L'utilizzo di parametri di avvio non documentati può causare risultati imprevisti. Utilizzare parametri non documentati solo se indicato dal Servizio Supporto Tecnico Clienti Microsoft.  
@@ -80,6 +80,6 @@ ms.locfileid: "53213070"
 -   Account di dominio utilizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se il [!INCLUDE[ssDE](../../includes/ssde-md.md)] è configurato per essere in esecuzione in un account di dominio.  
   
 ## <a name="books-online-references"></a>Riferimenti della documentazione online  
- Per altre informazioni sui parametri di avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere "Procedura: Configurare le opzioni di avvio del server (Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Per informazioni aggiuntive sui parametri di avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere "Procedura: Configurazione delle opzioni di avvio del server (Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])" nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   

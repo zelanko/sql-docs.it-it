@@ -11,12 +11,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1ffaaae5e6849db094c4c7ea176118b68a040ad7
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 73faafc9f9aca28ec6c334722a1cb9ce0a51d5ca
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582755"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860703"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup di SQL Server nell'URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ Quando si esegue il backup su BLOB in blocchi, le dimensioni del blocco massimo 
 |RESTORE HEADERONLY|S||Richiede che siano state definite credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nelle quali venga specificato l'argomento WITH CREDENTIAL se le credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono state definite tramite la chiave dell'account di archiviazione come segreto|  
 |RESTORE LABELONLY|S||Richiede che siano state definite credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nelle quali venga specificato l'argomento WITH CREDENTIAL se le credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono state definite tramite la chiave dell'account di archiviazione come segreto|  
 |RESTORE VERIFYONLY|S||Richiede che siano state definite credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nelle quali venga specificato l'argomento WITH CREDENTIAL se le credenziali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono state definite tramite la chiave dell'account di archiviazione come segreto|  
-|RESTORE REWINDONLY|?|||  
+|RESTORE REWINDONLY|-|||  
   
  Per la sintassi e informazioni generali sulle istruzioni di backup, vedere [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   
@@ -151,9 +151,9 @@ Quando si esegue il backup su BLOB in blocchi, le dimensioni del blocco massimo 
 |COMPRESSION&#124;NO_COMPRESSION|S|Non supportato per il backup con snapshot di file||  
 |DESCRIPTION|S|||  
 |NAME|S|||  
-|EXPIREDATE &#124; RETAINDAYS|?|||  
-|NOINIT &#124; INIT|?||L'accodamento ai BLOB non è consentito. Per sovrascrivere un backup, usare l'argomento **WITH FORMAT** . Quando si usano i backup con snapshot di file (usando l'argomento **WITH FILE_SNAPSHOT** ) tuttavia, l'argomento **WITH FORMAT** non è consentito per evitare di lasciare snapshot di file orfani creati con il backup originale.|  
-|NOSKIP &#124; SKIP|?|||  
+|EXPIREDATE &#124; RETAINDAYS|-|||  
+|NOINIT &#124; INIT|-||L'accodamento ai BLOB non è consentito. Per sovrascrivere un backup, usare l'argomento **WITH FORMAT** . Quando si usano i backup con snapshot di file (usando l'argomento **WITH FILE_SNAPSHOT** ) tuttavia, l'argomento **WITH FORMAT** non è consentito per evitare di lasciare snapshot di file orfani creati con il backup originale.|  
+|NOSKIP &#124; SKIP|-|||  
 |NOFORMAT &#124; FORMAT|S||Un backup eseguito in un BLOB esistente non viene completato a meno che non venga specificato **WITH FORMAT** . Il BLOB esistente viene sovrascritto quando viene specificato **WITH FORMAT** . Quando si usano i backup con snapshot di file (usando l'argomento **WITH FILE_SNAPSHOT** ) tuttavia, l'argomento FORMAT non è consentito per evitare di lasciare snapshot di file orfani creati con il backup con snapshot di file originale. Quando si usano i backup con snapshot di file (usando l'argomento **WITH FILE_SNAPSHOT** ) tuttavia, l'argomento **WITH FORMAT** non è consentito per evitare di lasciare snapshot di file orfani creati con il backup originale.|  
 |MEDIADESCRIPTION|S|||  
 |MEDIANAME|S|||  
@@ -163,8 +163,8 @@ Quando si esegue il backup su BLOB in blocchi, le dimensioni del blocco massimo 
 |NO_CHECKSUM &#124; CHECKSUM|S|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|S|||  
 |STATS|S|||  
-|REWIND &#124; NOREWIND|?|||  
-|UNLOAD &#124; NOUNLOAD|?|||  
+|REWIND &#124; NOREWIND|-|||  
+|UNLOAD &#124; NOUNLOAD|-|||  
 |NORECOVERY &#124; STANDBY|S|||  
 |NO_TRUNCATE|S|||  
   
@@ -186,19 +186,19 @@ Quando si esegue il backup su BLOB in blocchi, le dimensioni del blocco massimo 
 |REPLACE|S|||  
 |RESTART|S|||  
 |RESTRICTED_USER|S|||  
-|FILE|?|||  
+|FILE|-|||  
 |PASSWORD|S|||  
 |MEDIANAME|S|||  
 |MEDIAPASSWORD|S|||  
 |BLOCKSIZE|S|||  
-|BUFFERCOUNT|?|||  
-|MAXTRANSFERSIZE|?|||  
+|BUFFERCOUNT|-|||  
+|MAXTRANSFERSIZE|-|||  
 |CHECKSUM &#124; NO_CHECKSUM|S|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|S|||  
 |FILESTREAM|S|Non supportato per il backup con snapshot di file||  
 |STATS|S|||  
-|REWIND &#124; NOREWIND|?|||  
-|UNLOAD &#124; NOUNLOAD|?|||  
+|REWIND &#124; NOREWIND|-|||  
+|UNLOAD &#124; NOUNLOAD|-|||  
 |KEEP_REPLICATION|S|||  
 |KEEP_CDC|S|||  
 |ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|S|||  
@@ -219,9 +219,6 @@ Quando si esegue il backup su BLOB in blocchi, le dimensioni del blocco massimo 
 2.  Espandere **Database**, fare clic con il pulsante destro del mouse sul database desiderato, scegliere **Attività**e quindi fare clic su **Copia database**.
   
 3.  Nella pagina **Generale** nella sezione **Destinazione** è disponibile l'opzione **URL** nell'elenco a discesa **Backup in:** .  L'opzione **URL** è usata per creare un backup nel servizio di archiviazione Microsoft Azure. Fare clic su **Aggiungi** Verrà aperta la finestra di dialogo **Selezionare la destinazione di backup**
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     1.  **Contenitore di archiviazione di Azure:** Nome del contenitore di archiviazione di Microsoft Azure in cui archiviare i file di backup.  Selezionare un contenitore esistente nell'elenco a discesa o immetterlo manualmente. 
   
     2.  **Criteri di accesso condiviso:** Immettere la firma di accesso condiviso per un contenitore immesso manualmente.  Questo campo non è disponibile se è stato scelto un contenitore esistente. 
@@ -229,11 +226,13 @@ Quando si esegue il backup su BLOB in blocchi, le dimensioni del blocco massimo 
     3.  **File di backup:** nome del file di backup.
     
     4.  **Nuovo contenitore:** Usato per registrare un contenitore esistente per il quale non si ha una firma di accesso condiviso.  Vedere [Connettersi a una sottoscrizione di Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
-  
+
 > [!NOTE] 
 >  **Aggiungi** supporta più file di backup e i contenitori di archiviazione per un singolo set di supporti.
-  
- Quando si seleziona un **URL** come destinazione, alcune opzioni nella pagina **Opzioni supporti** vengono disabilitate.  Negli argomenti seguenti vengono fornite ulteriori informazioni sulla finestra di dialogo Backup database:  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+Quando si seleziona un **URL** come destinazione, alcune opzioni nella pagina **Opzioni supporti** vengono disabilitate.  Negli argomenti seguenti vengono fornite ulteriori informazioni sulla finestra di dialogo Backup database:  
   
  [Backup database &#40;pagina Generale&#41;](../../relational-databases/backup-restore/back-up-database-general-page.md)  
   

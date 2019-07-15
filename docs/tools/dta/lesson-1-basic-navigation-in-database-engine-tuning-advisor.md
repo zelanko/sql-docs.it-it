@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], tutorials
 ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d41c8a3dcc995849fa62ea9a06703d915298eeac
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 149fc4781c0a93db423a863c98f7eeaf0afcf2da
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201780"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727614"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Lezione 1: Navigazione di base in Ottimizzazione guidata motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Per completare questa esercitazione, sono necessari SQL Server Management Studio
 - Scaricare i [database di esempio AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017).
 
 
-Le istruzioni per il ripristino dei database in SSMS si trovano qui: Ripristinare un database
+Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristinare un database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017).
 
   >[!NOTE]
   > Questa esercitazione è destinata a un utente ha familiarità con SQL Server Management Studio e le attività di amministrazione di base dei database. 
@@ -86,7 +86,7 @@ Al primo avvio dell'interfaccia utente grafica dello strumento Ottimizzazione gu
     -   Per impostazione predefinita, l'opzione **Chiedi conferma prima di arrestare l'analisi della sessione** è selezionata, per evitare l'arresto accidentale di una sessione di ottimizzazione prima che Ottimizzazione guidata motore di database abbia concluso l'analisi di un carico di lavoro.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
-[Lezione 2: Uso di Ottimizzazione guidata motore di database](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[Lezione 2: Uso dello strumento Ottimizzazione guidata motore di database](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   

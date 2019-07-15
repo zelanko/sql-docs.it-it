@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7aef54c119c9941b245068186cc93f66f4e5f135
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b4fab6179453ccd21623a2da5ea0157d235eea40
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677750"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732120"
 ---
 # <a name="distributed-replay-security"></a>Sicurezza di Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "51677750"
 |Account|Autorizzazioni per le cartelle|  
 |-------------|------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Account del servizio controller di Riesecuzione distribuita|`<Controller_Installation_Path>\DReplayController` (Lettura, Scrittura, Eliminazione)<br /><br /> `DReplayServer.xml` file (Lettura, Scrittura)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Account del servizio Distributed Replay Client|`<Client_Installation_Path>\DReplayClient` (Lettura, Scrittura, Eliminazione)<br /><br /> `DReplayClient.xml` file (Lettura, Scrittura)<br /><br /> Le directory di lavoro e dei risultati, secondo quanto specificato nel file di configurazione del client rispettivamente tramite gli elementi `WorkingDirectory` e `ResultDirectory` . (Lettura, Scrittura)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Account del servizio client di Riesecuzione distribuita|`<Client_Installation_Path>\DReplayClient` (Lettura, Scrittura, Eliminazione)<br /><br /> `DReplayClient.xml` file (Lettura, Scrittura)<br /><br /> Le directory di lavoro e dei risultati, secondo quanto specificato nel file di configurazione del client rispettivamente tramite gli elementi `WorkingDirectory` e `ResultDirectory` . (Lettura, Scrittura)|  
   
 ## <a name="dcom-permissions"></a>Autorizzazioni DCOM  
  DCOM viene utilizzato per la comunicazione RPC (Remote Procedure Call) tra il controller e lo strumento di amministrazione e tra il controller e tutti i client. È necessario configurare le autorizzazioni DCOM a livello di computer e specifiche dell'applicazione sul controller dopo l'installazione delle funzionalità di Distributed Replay.  

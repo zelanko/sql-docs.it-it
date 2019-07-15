@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SQL Server Profiler, starting
 - starting SQL Server Profiler
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9f1fa1e72ab814f6ff00d39cd72e6ed98cb57fb6
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 06ee31ac87f8bbdc8177ea7899b59a6f0e576365
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291301"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731580"
 ---
 # <a name="profiler-utility"></a>Utilità profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ profiler
  Specifica una tabella di traccia da caricare all'avvio di SQL Profiler. Assieme alla tabella è necessario specificare il database, l'utente oppure lo schema.  
   
  **/T"** *template_name* **"**  
- Specifica il modello che verrà caricato per configurare la traccia. È necessario racchiudere il nome del modello tra virgolette. Il nome del modello deve trovarsi nella directory dei modelli di sistema oppure in quella dei modelli utente. Se in entrambe le directory esistono due modelli con lo stesso nome, verrà caricato il modello incluso nella directory di sistema. Se non esiste alcun modello con il nome specificato, verrà caricato il modello standard. Si noti che l'estensione di file tdf del modello non dovrà essere specificata come parte del *template_name*. Ad esempio  
+ Specifica il modello che verrà caricato per configurare la traccia. È necessario racchiudere il nome del modello tra virgolette. Il nome del modello deve trovarsi nella directory dei modelli di sistema oppure in quella dei modelli utente. Se in entrambe le directory esistono due modelli con lo stesso nome, verrà caricato il modello incluso nella directory di sistema. Se non esiste alcun modello con il nome specificato, verrà caricato il modello standard. Si noti che l'estensione di file tdf del modello non dovrà essere specificata come parte del *template_name*. Esempio:  
   
 ```  
 /T "standard"  

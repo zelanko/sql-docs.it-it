@@ -17,12 +17,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 873604d3a27d4f3f01eb501f76a39fd008248cdd
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: aa4ed7aa2eaf3d10ec2b69860b71b8b612cc9ff8
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584806"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860616"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Visualizzazione e modifica delle impostazioni di sicurezza della replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -146,9 +146,9 @@ ms.locfileid: "67584806"
   
 1.  Nella finestra di dialogo **Proprietà sottoscrizione - \<Sottoscrizione>** del server di pubblicazione è possibile apportare le modifiche seguenti:  
   
-    -   Per modificare l'account usato per eseguire l'agente di distribuzione e stabilire connessioni con il server di distribuzione, fare clic sulla riga **Account processo agente** e quindi sul pulsante delle proprietà ( **?** ) nella riga. Specificare un account e una password nella finestra di dialogo **Sicurezza agente di distribuzione** .  
+    -   Per modificare l'account utilizzato per eseguire l'agente di distribuzione e stabilire connessioni con il server di distribuzione, fare clic sulla riga **Account processo agente** e quindi sul pulsante delle proprietà ( **…** ) nella riga. Specificare un account e una password nella finestra di dialogo **Sicurezza agente di distribuzione** .  
   
-    -   Per modificare il contesto nel quale l'agente di distribuzione esegue la connessione al Sottoscrittore, fare clic sulla riga **Connessione al Sottoscrittore** e quindi sul pulsante delle proprietà ( **?** ) nella riga. Specificare il contesto nella finestra di dialogo **Immissione delle informazioni per la connessione** .  
+    -   Per modificare il contesto nel quale l'agente di distribuzione esegue la connessione al Sottoscrittore, fare clic sulla riga **Connessione al Sottoscrittore** e quindi sul pulsante delle proprietà ( **…** ) nella riga. Specificare il contesto nella finestra di dialogo **Immissione delle informazioni per la connessione** .  
   
          Se si utilizzano sottoscrizioni ad aggiornamento in coda, anche l'agente di lettura coda utilizzerà il contesto specificato per le connessioni al Sottoscrittore.  
   
@@ -158,11 +158,11 @@ ms.locfileid: "67584806"
   
 1.  Nella finestra di dialogo **Proprietà sottoscrizione - \<Sottoscrizione>** del Sottoscrittore è possibile apportare le modifiche seguenti:  
   
-    -   Per modificare l'account usato per eseguire l'agente di distribuzione e stabilire connessioni con il Sottoscrittore, fare clic sulla riga **Account processo agente** e quindi sul pulsante delle proprietà ( **?** ) nella riga. Specificare un account e una password nella finestra di dialogo **Sicurezza agente di distribuzione** .  
+    -   Per modificare l'account utilizzato per eseguire l'agente di distribuzione e stabilire connessioni con il Sottoscrittore, fare clic sulla riga **Account processo agente** e quindi sul pulsante delle proprietà ( **…** ) nella riga. Specificare un account e una password nella finestra di dialogo **Sicurezza agente di distribuzione** .  
   
          Se si utilizzano sottoscrizioni ad aggiornamento in coda, anche l'agente di lettura coda utilizzerà il contesto specificato per le connessioni al Sottoscrittore.  
   
-    -   Per modificare il contesto nel quale l'agente di distribuzione esegue la connessione al server di distribuzione, fare clic sulla riga **Connessione server di distribuzione** e quindi sul pulsante delle proprietà ( **?** ) nella riga. Specificare il contesto nella finestra di dialogo **Immissione delle informazioni per la connessione** .  
+    -   Per modificare il contesto nel quale l'agente di distribuzione esegue la connessione al server di distribuzione, fare clic sulla riga **Connessione server di distribuzione** e quindi sul pulsante delle proprietà ( **…** ) nella riga. Specificare il contesto nella finestra di dialogo **Immissione delle informazioni per la connessione** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -170,9 +170,9 @@ ms.locfileid: "67584806"
   
 1.  Nella finestra di dialogo **Proprietà sottoscrizione - \<Sottoscrizione>** del server di pubblicazione è possibile apportare le modifiche seguenti:  
   
-    -   Per modificare l'account usato per eseguire l'agente di merge e stabilire connessioni con il server di pubblicazione e il server di distribuzione, fare clic sulla riga **Account processo agente** e quindi sul pulsante delle proprietà ( **?** ) nella riga. Specificare un account e una password nella finestra di dialogo **Sicurezza agente di merge** .  
+    -   Per modificare l'account utilizzato per eseguire l'agente di merge e stabilire connessioni con il server di pubblicazione e il server di distribuzione, fare clic sulla riga **Account processo agente** e quindi sul pulsante delle proprietà ( **…** ) nella riga. Specificare un account e una password nella finestra di dialogo **Sicurezza agente di merge** .  
   
-    -   Per modificare il contesto nel quale l'agente di merge esegue la connessione al Sottoscrittore, fare clic sulla riga **Connessione al Sottoscrittore** e quindi sul pulsante delle proprietà ( **?** ) nella riga. Specificare il contesto nella finestra di dialogo **Immissione delle informazioni per la connessione** .  
+    -   Per modificare il contesto nel quale l'agente di merge esegue la connessione al Sottoscrittore, fare clic sulla riga **Connessione al Sottoscrittore** e quindi sul pulsante delle proprietà ( **…** ) nella riga. Specificare il contesto nella finestra di dialogo **Immissione delle informazioni per la connessione** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -180,15 +180,15 @@ ms.locfileid: "67584806"
   
 1.  Nella finestra di dialogo **Proprietà sottoscrizione - \<Sottoscrizione>** del Sottoscrittore è possibile apportare le modifiche seguenti:  
   
-    -   Per modificare l'account usato per eseguire l'agente di merge e stabilire connessioni con il Sottoscrittore, fare clic sulla riga **Account processo agente** e quindi sul pulsante delle proprietà ( **?** ) nella riga. Specificare un account e una password nella finestra di dialogo **Sicurezza agente di merge** .  
+    -   Per modificare l'account utilizzato per eseguire l'agente di merge e stabilire connessioni con il Sottoscrittore, fare clic sulla riga **Account processo agente** e quindi sul pulsante delle proprietà ( **…** ) nella riga. Specificare un account e una password nella finestra di dialogo **Sicurezza agente di merge** .  
   
-    -   Per modificare il contesto nel quale l'agente di merge esegue la connessione al server di pubblicazione e al server di distribuzione, fare clic sulla riga **Connessione server di pubblicazione** e quindi sul pulsante delle proprietà ( **?** ) nella riga. Specificare il contesto nella finestra di dialogo **Immissione delle informazioni per la connessione** .  
+    -   Per modificare il contesto nel quale l'agente di merge esegue la connessione al server di pubblicazione e al server di distribuzione, fare clic sulla riga **Connessione server di pubblicazione** e quindi sul pulsante delle proprietà ( **…** ) nella riga. Specificare il contesto nella finestra di dialogo **Immissione delle informazioni per la connessione** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-change-the-account-under-which-the-queue-reader-agent-runs"></a>Per modificare l'account per l'esecuzione dell'agente di lettura coda  
   
-1.  Nella pagina **Generale** della finestra di dialogo **Proprietà server di distribuzione - \<ServerDistribuzione>** fare clic sul pulsante delle proprietà ( **?** ) accanto al database di distribuzione.  
+1.  Nella pagina **Generale** della finestra di dialogo **Proprietà server di distribuzione - \<ServerDistribuzione>** fare clic sul pulsante delle proprietà ( **…** ) accanto al database di distribuzione.  
   
 2.  Nella finestra di dialogo **Proprietà database di distribuzione - \<Database>** fare clic sul pulsante **Impostazioni di sicurezza** accanto alla casella di testo **Account processo agente**.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "67584806"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>Per modificare le impostazioni di sicurezza per una sottoscrizione pull ad aggiornamento immediato  
   
-1.  Nella finestra di dialogo **Proprietà sottoscrizione - \<Sottoscrizione>** del Sottoscrittore fare clic sulla riga **Connessione server di pubblicazione** e quindi scegliere il pulsante delle proprietà ( **?** ) nella riga.  
+1.  Nella finestra di dialogo **Proprietà sottoscrizione - \<Sottoscrizione>** del Sottoscrittore fare clic sulla riga **Connessione server di pubblicazione** e quindi scegliere il pulsante delle proprietà ( **…** ) nella riga.  
   
 2.  Nella finestra di dialogo **Immissione delle informazioni per la connessione** selezionare una delle seguenti opzioni:  
   

@@ -20,12 +20,12 @@ ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c867fd986ea88d6323c56b2ac76c9aecaba57a15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 144bcbf882b997dfa07889c2cae5977d0b12b8dc
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65981664"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832959"
 ---
 # <a name="sql-server-utilities-statements---go"></a>Istruzioni delle utilità SQL Server - GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "65981664"
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 GO [count]  
 ```  
   
@@ -78,16 +77,16 @@ GO
   
  Nelle applicazioni basate sulle API ODBC o OLE DB i tentativi di esecuzione del comando GO provocano un errore di sintassi. Le utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non inviano mai un comando GO al server.  
   
- Non usare un punto e virgola come carattere di terminazione dopo GO.  
-  
-## <a name="permissions"></a>Autorizzazioni  
- GO è un comando di utilità che non richiede autorizzazioni e può essere eseguito da qualsiasi utente.  
-  
-```  
+ Non usare un punto e virgola come carattere di terminazione dopo GO.
+ 
+```
 -- Yields an error because ; is not permitted after GO  
 SELECT @@VERSION;  
 GO;  
-```  
+```
+  
+## <a name="permissions"></a>Autorizzazioni  
+ GO è un comando di utilità che non richiede autorizzazioni e può essere eseguito da qualsiasi utente.    
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono creati due batch. Il primo contiene solo un'istruzione `USE AdventureWorks2012` per l'impostazione del contesto del database. Nelle restanti istruzioni viene utilizzata una variabile locale. Pertanto, tutte le dichiarazioni della variabile locale devono essere raggruppate in un singolo batch. A tale scopo, è necessario inserire il comando `GO` solo dopo l'ultima istruzione che fa riferimento alla variabile.  

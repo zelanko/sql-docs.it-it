@@ -12,15 +12,15 @@ helpviewer_keywords:
 - local database runtime utility
 - LocalDB, SqlLocalDB Utility
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 19902c030538d0384c89dd632aaf1d6f8c728048
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bf71626fcec01b1140f85a67a03a69dc1a9736e8
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538782"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728149"
 ---
 # <a name="sqllocaldb-utility"></a>Utilità SqlLocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +45,8 @@ SqlLocalDB.exe
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [**-s** ]  
- Crea una nuova istanza di **LocalDB** di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. **SqlLocalDB** utilizza la versione dei file binari di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] specificati dall'argomento *\<<instance-version>*. Il numero di versione viene specificato in formato numerico con almeno un numero decimale. I numeri di versione secondari (Service Pack) sono facoltativi. Ad esempio, i due numeri di versione seguenti sono entrambi accettabili: 11.0 o 11.0.1186. La versione specificata deve essere installata nel computer. Se non è specificata, il numero di versione predefinito sarà quello corrispondente alla versione dell'utilità **SqlLocalDB** . Aggiungere **-s** per avviare la nuova istanza di **LocalDB**.  
+ [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [ **-s** ]  
+ Crea una nuova istanza di **LocalDB** di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. **SqlLocalDB** utilizza la versione dei file binari di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] specificati dall'argomento *\<<instance-version>* . Il numero di versione viene specificato in formato numerico con almeno un numero decimale. I numeri di versione secondari (Service Pack) sono facoltativi. Ad esempio, i due numeri di versione seguenti sono entrambi accettabili: 11.0 o 11.0.1186. La versione specificata deve essere installata nel computer. Se non è specificata, il numero di versione predefinito sarà quello corrispondente alla versione dell'utilità **SqlLocalDB** . Aggiungere **-s** per avviare la nuova istanza di **LocalDB**.  
   
  [ **share** | **h** ]  
  Condivide l'istanza privata specificata di **LocalDB** tramite il nome condiviso indicato. Se viene omesso il SID dell'utente o il nome dell'account, il valore predefinito è l'utente corrente.  
@@ -57,10 +57,10 @@ SqlLocalDB.exe
  [ **delete** | **d** ] *\<instance-name>*  
  Elimina l'istanza specificata di **LocalDB** di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)].  
   
- [ **start** | **s** ] "*\<instance-name>*"  
+ [ **start** | **s** ] " *\<instance-name>* "  
  Avvia l'istanza specificata di **LocalDB** di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. Quando ha esito positivo, l'istruzione restituisce l'indirizzo della named pipe del **database locale**.  
   
- [ **stop** | **p** ] *\<instance-name>* [**-i** ] [**-k** ]  
+ [ **stop** | **p** ] *\<instance-name>* [ **-i** ] [ **-k** ]  
  Arresta l'istanza specificata di **LocalDB** di [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. Aggiungere **-i** per richiedere l'arresto dell'istanza con l'opzione **NOWAIT**. Aggiungere **-k** per terminare il processo dell'istanza senza contattarlo.  
   
  [ **info** | **i** ] [ *\<instance-name>* ]  

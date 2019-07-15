@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 98ace9b0-72d5-4b72-9b7b-11fbc490981a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 77286e4bb4ed04a61e6949c4834e242bfac4be66
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c87e3ecbbec1a2ee566fd8dfb446372f1e89fa6d
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534652"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733228"
 ---
 # <a name="sql-server-browser-properties-service-tab"></a>Proprietà - SQL Server Browser (scheda Servizio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "52534652"
 -   Disabilitato: il servizio non può essere avviato.  
   
  **State**  
- Indica se il servizio è in esecuzione, arrestato o disabilitato. "**...**" indica una modifica di stato in sospeso.  
+ Indica se il servizio è in esecuzione, arrestato o disabilitato. " **...** " indica una modifica di stato in sospeso.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Servizio SQL Server Browser](../../tools/configuration-manager/sql-server-browser-service.md)  

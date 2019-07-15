@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 605e7a5b532e03d55b9d15964697597b06793174
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7da71a2ba80325c768abc10435ff9816ce539b0b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502457"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730481"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Utilizzo di percorsi di SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ Dopo essere passati a un nodo in un percorso di provider [!INCLUDE[ssDE](../incl
   
  Per visualizzare i metodi e le proprietà disponibili per specifici oggetti o classi di oggetti, usare il cmdlet **Get-Member** .  
   
-### <a name="examples-listing-methods-and-properties"></a>Esempi: elencare metodi e proprietà  
+### <a name="examples-listing-methods-and-properties"></a>Esempi: Elenco di metodi e proprietà  
  In questo esempio viene impostata una variabile di Windows PowerShell sulla classe SMO <xref:Microsoft.SqlServer.Management.Smo.Database> e vengono elencati i metodi e le proprietà:  
   
 ```  
@@ -71,7 +71,7 @@ Get-Item . | Get-Member -Type Properties
   
  Per eseguire operazioni su oggetti di un percorso di provider [!INCLUDE[ssDE](../includes/ssde-md.md)] è possibile utilizzare metodi e proprietà SMO.  
   
-### <a name="examples-using-methods-and-properties"></a>Esempi: utilizzo di metodi e proprietà  
+### <a name="examples-using-methods-and-properties"></a>Esempi: Utilizzo di metodi e proprietà  
  In questo esempio viene usata la proprietà dello **schema** SMO per ottenere un elenco delle tabelle dallo schema Sales di AdventureWorks2012:  
   
 ```  

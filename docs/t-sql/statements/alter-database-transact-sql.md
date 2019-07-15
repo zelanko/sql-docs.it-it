@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 26db878bee2a786dc52f6046afea617bf7c69c0f
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: a7423b1a9e260e644e46a5c31246dd5dbb07cf1d
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500155"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826576"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -418,7 +418,7 @@ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB) Specifica le dimen
 |500 GB|N/D|√|√|√ (P)|√|
 |750 GB|N/D|√|√|√|√|
 |1024 GB|N/D|√|√|√|√ (P)|
-|Da 1024 GB fino a 4096 GB con incrementi di 256 GB*|N/D|N/D|N/D|N/D|√|√|
+|Da 1024 GB fino a 4096 GB con incrementi di 256 GB*|N/D|N/D|N/D|N/D|√|
 
 \* P11 e P15 consentono un valore massimo di MAXSIZE pari a 4 TB. Le dimensioni predefinite sono 1024 GB. P11 e P15 possono usare fino a 4 TB di spazio di archiviazione incluso senza addebiti aggiuntivi. Nel livello Premium, MAXSIZE maggiore di 1 TB è attualmente disponibile nelle aree seguenti: Stati Uniti orientali 2, Stati Uniti occidentali, US Gov Virginia, Europa occidentale, Germania centrale, Asia sud-orientale, Giappone orientale, Australia orientale, Canada centrale e Canada orientale. Per altri dettagli relativi ai limiti delle risorse per il modello basato su DTU, vedere [DTU-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) (Limiti delle risorse basate su DTU).
 

@@ -1,21 +1,20 @@
 ---
 title: Configurare PolyBase per l'accesso a dati esterni in Teradata | Microsoft Docs
-ms.custom: ''
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
 author: Abiola
 ms.author: aboke
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 4f1952a2974ca9ad62be1cb3adaaebfc89172e96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28dead8fbb0247bf3bc9ab9660bfcc4f4cc7cc9a
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64774678"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730319"
 ---
 # <a name="configure-polybase-to-access-external-data-in-teradata"></a>Configurare PolyBase per l'accesso a dati esterni in Teradata
 
