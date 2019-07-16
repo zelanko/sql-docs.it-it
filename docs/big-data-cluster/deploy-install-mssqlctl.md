@@ -5,17 +5,16 @@ description: Informazioni su come installare lo strumento mssqlctl per l'install
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 61c1596de09f230020b3332730eb51cd131bba62
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 3be1987baed27aeb49b03942ca3c4f07c2b0ce0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728951"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958521"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-big-data-clusters"></a>Installare mssqlctl per gestire i cluster di SQL Server i big Data
 

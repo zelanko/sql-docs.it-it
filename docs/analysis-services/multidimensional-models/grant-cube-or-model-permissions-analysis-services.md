@@ -1,5 +1,5 @@
 ---
-title: Concedere le autorizzazioni del cubo o modello (Analysis Services) | Documenti Microsoft
+title: Concedere le autorizzazioni del cubo o modello (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f028885e91dd67869e15bab4d7b64cc97b64f9bb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024368"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208879"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Concedere le autorizzazioni per un cubo o un modello (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "34024368"
   
      Si noti che il riquadro Origine dati verrà ignorato. La maggior parte degli utenti normali dei dati di Analysis Services non necessita di autorizzazioni per l'oggetto origine dati. Per informazioni dettagliate sui livelli di autorizzazione, vedere [Concedere le autorizzazioni per un oggetto origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md) .  
   
-#### <a name="step-3-set-cube-permissions"></a>Passaggio 3: Impostare le autorizzazioni per il cubo  
+#### <a name="step-3-set-cube-permissions"></a>Passaggio 3: Impostare le autorizzazioni del cubo  
   
 1.  Nel riquadro **Cubi** selezionare un cubo, quindi fare clic sull'accesso **Lettura** o **Lettura/Scrittura** .  
   
@@ -78,7 +78,7 @@ ms.locfileid: "34024368"
   
      Se alla connessione si verifica un errore, controllare la configurazione della porta per Analysis Services e verificare che il server accetti le connessioni remote. Per la configurazione della porta, vedere [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
   
-#### <a name="step-5-script-role-definition-and-assignments"></a>Passaggio 5: Generare uno script per la definizione e le assegnazioni di ruolo  
+#### <a name="step-5-script-role-definition-and-assignments"></a>Passaggio 5: Le assegnazioni e crea script per definizione ruolo  
   
 1.  Come passaggio finale, generare uno script per acquisire la definizione del ruolo appena creata.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "34024368"
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodologie di autenticazione supportate da Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Concedere le autorizzazioni per modelli e strutture di data mining &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Concedere le autorizzazioni per un oggetto origine dati & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Concedere le autorizzazioni per le strutture e i modelli di data mining &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Concedere le autorizzazioni per un oggetto origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Impostare l'archiviazione della partizione (Analysis Services - multidimensionale) | Documenti Microsoft
+title: Impostare l'archiviazione delle partizioni (Analysis Services - multidimensionale) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3410a8b26b9b9e26046a39f8ed5250ae9b82e67d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022898"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165155"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>Impostare l'archiviazione delle partizioni (Analysis Services - Multidimensionale)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornisce diverse configurazioni di archiviazione standard per le modalità di archiviazione e le opzioni di cache. Si tratta delle configurazioni utilizzate di frequente per notifiche di aggiornamento, latenza e ricompilazione dei dati.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre diverse configurazioni di archiviazione standard per le modalità di archiviazione e le opzioni di memorizzazione nella cache. Si tratta delle configurazioni utilizzate di frequente per notifiche di aggiornamento, latenza e ricompilazione dei dati.  
   
  È possibile specificare l'archiviazione delle partizioni nella scheda Partizioni del cubo in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]o nella pagina delle proprietà delle partizioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -39,7 +39,7 @@ ms.locfileid: "34022898"
   
 ## <a name="storage-settings-descriptions"></a>Descrizione delle impostazioni di archiviazione  
   
-|Impostazione di archiviazione standard|Description|  
+|Impostazione di archiviazione standard|Descrizione|  
 |------------------------------|-----------------|  
 |ROLAP in tempo reale|La tecnologia OLAP è in tempo reale. I dati dettaglio e le aggregazioni vengono archiviati in formato relazionale. Il server è in attesa di notifiche quando i dati vengono modificati e tutte le query riflettono lo stato corrente dei dati (latenza zero).<br /><br /> Questa impostazione viene in genere utilizzata per un'origine dei dati con aggiornamenti molto frequenti e continui quando per gli utenti sono necessari i dati più recenti. In base ai tipi di query generate dalle applicazioni client, questo metodo può comportare i tempi di risposta più lenti.|  
 |HOLAP in tempo reale|La tecnologia OLAP è in tempo reale. I dati dettaglio vengono archiviati in un formato relazionale mentre le aggregazioni vengono archiviate in un formato multidimensionale. Il server è in attesa di notifiche quando i dati vengono modificati e aggiorna, quando necessario, le aggregazioni OLAP multidimensionali (MOLAP). Non viene creta alcuna cache MOLAP. Quando l'origine dei dati viene aggiornata, il server passa in modalità ROLAP in tempo reale fino a quando le aggregazioni vengono aggiornate. Tutte le query riflettono lo stato corrente dei dati (latenza zero).<br /><br /> Questa impostazione viene in genere utilizzata per un'origine dei dati con aggiornamenti frequenti e continui, ma non così frequenti da richiedere la modalità ROLAP in tempo reale, quando per gli utenti sono necessari i dati più recenti. Questo metodo offre in genere prestazioni globali migliori rispetto all'archiviazione ROLAP. Se l'origine dati rimane inattiva per un periodo di tempo sufficientemente lungo, questa impostazione può offrire prestazioni simili a quelle della modalità MOLAP.|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c80e71b-9e3f-4d05-ab2a-9e78798dad88
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5e147c308c3070084fc74ea285bf724dded59a9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b2906515b09eb32caf6def6e84d3b2bbd21dd15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933112"
 ---
 # <a name="delete-method-example-vb"></a>Esempio del metodo Delete (VB)
 Questo esempio Usa la [eliminare](../../../ado/reference/ado-api/delete-method-ado-recordset.md) metodo per rimuovere un record specificato da un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

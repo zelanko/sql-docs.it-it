@@ -1,23 +1,22 @@
 ---
-title: mssqlctl bdc config reference
+title: riferimento di configurazione di integrazione applicativa dei dati mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Articolo di riferimento per i comandi di mssqlctl integrazione applicativa dei dati.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5c4182f216b13d4b56d1c37f6d003ad2ea6f5cf6
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: f6aee38bd11d226ba324153b76c750ba57eb9fb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958171"
 ---
-# <a name="mssqlctl-bdc-config"></a>mssqlctl bdc config
+# <a name="mssqlctl-bdc-config"></a>configurazione di integrazione applicativa dei dati mssqlctl
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -27,9 +26,9 @@ L'articolo seguente fornisce informazioni di riferimento per la **configurazione
 |     |     |
 | --- | --- |
 [mssqlctl bdc config show](#mssqlctl-bdc-config-show) | Ottiene la Big Data configurazione del Cluster corrente.
-[mssqlctl bdc config init](#mssqlctl-bdc-config-init) | Inizializza un Cluster di grandi dimensioni dati Crea profilo di configurazione che può essere utilizzato con il cluster.
-[mssqlctl bdc config list](#mssqlctl-bdc-config-list) | Elenca le scelte del profilo di configurazione disponibili.
-[mssqlctl bdc config section](reference-mssqlctl-bdc-config-section.md) | Comandi per l'utilizzo di diverse sezioni del profilo di configurazione del Cluster di Big Data.
+[init di config mssqlctl integrazione applicativa dei dati](#mssqlctl-bdc-config-init) | Inizializza un Cluster di grandi dimensioni dati Crea profilo di configurazione che può essere utilizzato con il cluster.
+[elenco di configurazione di integrazione applicativa dei dati mssqlctl](#mssqlctl-bdc-config-list) | Elenca le scelte del profilo di configurazione disponibili.
+[sezione di configurazione di integrazione applicativa dei dati mssqlctl](reference-mssqlctl-bdc-config-section.md) | Comandi per l'utilizzo di diverse sezioni del profilo di configurazione del Cluster di Big Data.
 ## <a name="mssqlctl-bdc-config-show"></a>mssqlctl bdc config show
 Ottiene il profilo di configurazione corrente del Cluster Big Data e lo invia a directory di destinazione o piuttosto lo stampa nella console.
 ```bash
@@ -57,7 +56,7 @@ Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
 Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
-## <a name="mssqlctl-bdc-config-init"></a>mssqlctl bdc config init
+## <a name="mssqlctl-bdc-config-init"></a>init di config mssqlctl integrazione applicativa dei dati
 Inizializza un Cluster di grandi dimensioni dati Crea profilo di configurazione che può essere utilizzato con il cluster. Gli argomenti da 3 scelte, è possibile specificare l'origine specifica del profilo di configurazione.
 ```bash
 mssqlctl bdc config init [--target -t] 
@@ -91,7 +90,7 @@ Formato di output.  I valori consentiti: json, jsonc, tabella, tsv.  Predefinito
 Stringa di query JMESPath. Visualizzare [ http://jmespath.org/ ](http://jmespath.org/]) per altre informazioni ed esempi.
 #### `--verbose`
 Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
-## <a name="mssqlctl-bdc-config-list"></a>mssqlctl bdc config list
+## <a name="mssqlctl-bdc-config-list"></a>elenco di configurazione di integrazione applicativa dei dati mssqlctl
 Vengono elencate le opzioni di profilo di configurazione disponibili per l'utilizzo in `bdc config init`
 ```bash
 mssqlctl bdc config list [--config-profile -c] 

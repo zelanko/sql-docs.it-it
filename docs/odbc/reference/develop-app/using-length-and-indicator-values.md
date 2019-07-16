@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 442d0865ede4819ea3413d662411295daa5b48bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3a0b54617d55033addabc729adbd078680022fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62501112"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902473"
 ---
 # <a name="using-length-and-indicator-values"></a>Uso di valori di lunghezza e indicatore
 Il buffer di lunghezza/indicatore viene utilizzato per passare la lunghezza in byte dei dati nel buffer di dati o un indicatore speciale, ad esempio SQL_NULL_DATA, che indica che i dati sono NULL. A seconda della funzione in cui viene utilizzato, un buffer di lunghezza/indicatore è definito come un SQLINTEGER o un SQLSMALLINT. Pertanto, un singolo argomento, è necessario per una descrizione. Se il buffer dei dati è un buffer di input nondeferred, questo argomento contiene la lunghezza in byte dei dati stessi o un valore dell'indicatore. È spesso denominata *StrLen_or_Ind* o un nome simile. Ad esempio, il codice seguente chiama **SQLPutData** per passare un buffer completo dei dati, la lunghezza in byte (*ValueLen*) viene passato direttamente perché il buffer dei dati (*ValuePtr*) è un buffer di input.  

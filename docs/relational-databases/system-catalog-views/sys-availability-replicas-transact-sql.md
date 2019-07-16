@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d6babc4d32782e6bf7321deb0a1778fff644bd14
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 6623d6b95dfe0ebd4e45b13d190d8176bcab1a3c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257076"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942611"
 ---
 # <a name="sysavailabilityreplicas-transact-sql"></a>sys.availability_replicas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-Restituisce una riga per ognuna delle repliche di disponibilità che appartengono a qualsiasi gruppo di disponibilità Always On nel cluster di failover WSFC.  
+Restituisce una riga per ognuna delle repliche di disponibilità che appartiene a un gruppo di disponibilità Always On nel cluster di failover WSFC.  
   
 Se l'istanza del server locale non è in grado di comunicare con il cluster di failover WSFC, ad esempio perché il cluster non è attivo o perché è stato perso il quorum, vengono restituite solo le righe delle repliche di disponibilità locali. Tali righe conterranno solo le colonne di dati memorizzate nella cache dei metadati in locale.  
   
@@ -51,11 +50,11 @@ Se l'istanza del server locale non è in grado di comunicare con il cluster di f
 |**session\_timeout**|**int**|Periodo di timeout in secondi. Il periodo di timeout è il tempo di attesa massimo rispettato dalla replica per la ricezione di un messaggio da un'altra replica, prima di considerare la connessione tra la replica primaria e secondaria non riuscita. Il timeout della sessione rileva se le repliche secondarie sono connesse alla replica primaria.<br /><br /> Se viene rilevata una connessione non riuscita con una replica secondaria, la replica primaria considera la replica secondaria come non\_SYNCHRONIZED. Se viene rilevata una connessione non riuscita con una replica primaria, una replica secondaria tenta di riconnettersi.<br /><br /> **Nota:** I timeout della sessione non provocano failover automatici.<br /><br /> Per modificare questo valore, usare l'opzione SESSION_TIMEOUT del [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione.|  
 |**primario\_ruolo\_Consenti\_connessioni**|**tinyint**|Specifica se la disponibilità consente tutte le connessioni o solo connessioni di lettura e scrittura. I valori possibili sono:<br /><br /> 2 = Tutte (impostazione predefinita)<br /><br /> 3 = lettura e scrittura|  
 |**primario\_ruolo\_consentire\_connessioni\_desc**|**nvarchar(60)**|Descrizione della **primari\_ruolo\_consentono\_connessioni**, uno di:<br /><br /> ALL<br /><br /> LEGGERE\_SCRIVERE|  
-|**secondari\_ruolo\_Consenti\_connessioni**|**tinyint**|Specifica se una replica di disponibilità che esegue il ruolo secondario, ovvero una replica secondaria, può accettare connessioni dai client. I valori possibili sono:<br /><br /> 0 = No. Non è consentita alcuna connessione ai database nella replica secondaria e i database non sono disponibili per l'accesso in lettura. Si tratta dell'impostazione predefinita.<br /><br /> 1 = Sola lettura. Sono consentite solo le connessioni di sola lettura ai database nella replica secondaria. Tutti i database nella replica sono disponibili per l'accesso in lettura.<br /><br /> 2 = Tutte. Sono consentite tutte le connessioni ai database nella replica secondaria per l'accesso in sola lettura.<br /><br /> Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).|  
+|**secondari\_ruolo\_Consenti\_connessioni**|**tinyint**|Specifica se una replica di disponibilità che esegue il ruolo secondario, ovvero una replica secondaria, può accettare connessioni dai client. I valori possibili sono:<br /><br /> 0 = No. Non è consentita alcuna connessione ai database nella replica secondaria e i database non sono disponibili per l'accesso in lettura. Questa è l'impostazione predefinita.<br /><br /> 1 = Sola lettura. Sono consentite solo le connessioni di sola lettura ai database nella replica secondaria. Tutti i database nella replica sono disponibili per l'accesso in lettura.<br /><br /> 2 = Tutte. Sono consentite tutte le connessioni ai database nella replica secondaria per l'accesso in sola lettura.<br /><br /> Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).|  
 |**secondary_role_allow_connections_desc**|**nvarchar(60)**|Descrizione della **secondary_role_allow_connections**, uno di:<br /><br /> No<br /><br /> READ_ONLY<br /><br /> ALL|  
 |**create_date**|**datetime**|Data di creazione della replica.<br /><br /> NULL = La replica non risiede nell'istanza del server.|  
 |**modify_date**|**datetime**|Data dell'ultima modifica apportata alla replica.<br /><br /> NULL = La replica non risiede nell'istanza del server.|  
-|**backup_priority**|**int**|Rappresenta la priorità specificata dall'utente per l'esecuzione dei backup nella replica rispetto alle altre repliche nello stesso gruppo di disponibilità. Il valore è un numero intero compreso nell'intervallo 0-100.<br /><br /> Per altre informazioni, vedere [Repliche secondarie attive: Backup su repliche secondarie &#40;gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).|  
+|**backup_priority**|**int**|Rappresenta la priorità specificata dall'utente per l'esecuzione dei backup nella replica rispetto alle altre repliche nello stesso gruppo di disponibilità. Il valore è un numero intero compreso nell'intervallo 0-100.<br /><br /> Per altre informazioni, vedere [Repliche secondarie attive: Backup su repliche secondarie &#40;Gruppi di disponibilità Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).|  
 |**read_only_routing_url**|**nvarchar(256)**|Endpoint di connettività (URL) della replica di disponibilità di sola lettura. Per altre informazioni, vedere [Configurare il routing di sola lettura per un gruppo di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).|  
   
 ## <a name="security"></a>Sicurezza  

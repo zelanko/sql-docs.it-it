@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e48185f0524a920d52092540f5e3ed6d8546edfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ce247905afd6ed34366424f5f905d57b42d988f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710505"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938849"
 ---
 # <a name="update-method"></a>Metodo Update
 Salva le modifiche apportate alla riga corrente di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto, o il [campi](../../../ado/reference/ado-api/fields-collection-ado.md) raccolta di un [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto.  
@@ -36,10 +35,10 @@ record.Fields.Update
   
 #### <a name="parameters"></a>Parametri  
  *Fields*  
- Facoltativo. Oggetto **Variant** che rappresenta un singolo nome o una **Variant** matrice che rappresenta i nomi o posizione ordinale del campo o campi che si desidera modificare.  
+ facoltativo. Oggetto **Variant** che rappresenta un singolo nome o una **Variant** matrice che rappresenta i nomi o posizione ordinale del campo o campi che si desidera modificare.  
   
  *Valori*  
- Facoltativo. Oggetto **Variant** che rappresenta un singolo valore, o una **Variant** matrice che rappresenta i valori per il campo o campi nel nuovo record.  
+ facoltativo. Oggetto **Variant** che rappresenta un singolo valore, o una **Variant** matrice che rappresenta i valori per il campo o campi nel nuovo record.  
   
 ## <a name="remarks"></a>Note  
   

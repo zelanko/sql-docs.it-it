@@ -1,5 +1,5 @@
 ---
-title: Contenuto del modello di rete neurale modelli di data mining | Documenti Microsoft
+title: Contenuto dei modelli di rete neurale modelli di data mining | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e01fea742e5af04efa470bd80da4e2c75c5eebc7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018528"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182681"
 ---
-# <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli di rete neurale (Analysis Services - Data mining)
+# <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo Microsoft Neural Network. Per una spiegazione dell'interpretazione delle statistiche e della struttura condivise da tutti i tipi di modello e per definizioni generali dei termini relativi al contenuto dei modelli di data mining, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "34018528"
  ATTRIBUTE_NAME  
  Nomi degli attributi che corrispondono a questo nodo.  
   
-|Node|Contenuto|  
+|Node|Content|  
 |----------|-------------|  
 |Nodo radice del modello|Vuoto|  
 |Statistiche marginali|Vuoto|  
@@ -78,7 +78,7 @@ ms.locfileid: "34018528"
  NODE_TYPE  
  Un modello di rete neurale restituisce i tipi di nodo seguenti:  
   
-|ID tipo di nodo|Description|  
+|ID tipo di nodo|Descrizione|  
 |------------------|-----------------|  
 |1|Modello.|  
 |17|Nodo della libreria per la subnet|  
@@ -96,7 +96,7 @@ ms.locfileid: "34018528"
  CHILDREN_CARDINALITY  
  Stima del numero di nodi figlio del nodo.  
   
-|Node|Contenuto|  
+|Node|Content|  
 |----------|-------------|  
 |Nodo radice del modello|Indica il conteggio di nodi figlio che include almeno 1 rete, 1 nodo marginale obbligatorio e 1 livello di input obbligatorio. Se, ad esempio, il valore è 5, sono presenti 3 subnet.|  
 |Statistiche marginali|Sempre 0.|  
@@ -115,7 +115,7 @@ ms.locfileid: "34018528"
  NODE_DESCRIPTION  
  Descrizione intuitiva del nodo.  
   
-|Node|Contenuto|  
+|Node|Content|  
 |----------|-------------|  
 |Nodo radice del modello|Vuoto|  
 |Statistiche marginali|Vuoto|  
@@ -129,7 +129,7 @@ ms.locfileid: "34018528"
  NODE_RULE  
  Descrizione XML della regola incorporata nel nodo.  
   
-|Node|Contenuto|  
+|Node|Content|  
 |----------|-------------|  
 |Nodo radice del modello|Vuoto|  
 |Statistiche marginali|Vuoto|  
@@ -161,7 +161,7 @@ ms.locfileid: "34018528"
  Per ottenere informazioni sul supporto nei case di training per valori specifici, vedere il nodo delle statistiche marginali.  
   
  MSOLAP_MODEL_COLUMN  
- |Node|Contenuto|  
+ |Node|Content|  
 |----------|-------------|  
 |Nodo radice del modello|Vuoto|  
 |Statistiche marginali|Vuoto|  
@@ -178,7 +178,7 @@ ms.locfileid: "34018528"
  MSOLAP_NODE_SHORT_CAPTION  
  Per i modelli di rete neurale, sempre vuoto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Lo scopo del training di un modello di rete neurale consiste nel determinare i pesi associati a ogni transizione da un input a un punto medio e da un punto medio a un endpoint. Di conseguenza, il livello di input del modello esiste principalmente per archiviare i valori effettivi utilizzati per la compilazione del modello. Nel livello nascosto vengono archiviati i pesi calcolati e vengono forniti nuovamente i puntatori agli attributi di input. Nel livello di output vengono archiviati i valori stimabili e vengono forniti nuovamente i puntatori ai punti medi nel livello nascosto.  
   
 ##  <a name="bkmk_NodeIDs"></a> Utilizzo dei nomi e degli ID dei nodi  
@@ -206,11 +206,11 @@ ms.locfileid: "34018528"
 ### <a name="input-nodes"></a>Nodi di input  
  Il livello di input contiene un nodo per ogni valore dell'attributo utilizzato nel modello.  
   
- **Attributo discreto:** nel nodo di input vengono archiviati solo il nome dell'attributo e il relativo valore nelle colonne ATTRIBUTE_NAME e ATTRIBUTE_VALUE. Ad esempio, se [Work Shift] è la colonna, viene creato un nodo separato per ogni valore di quella colonna utilizzato nel modello, ad esempio AM e PM. Per ogni nodo, nella tabella NODE_DISTRIBUTION viene elencato solo il valore corrente dell'attributo.  
+ **Attributo discreto:** Il nodo di input vengono archiviati solo il nome dell'attributo e il relativo valore nelle colonne ATTRIBUTE_NAME e ATTRIBUTE_VALUE. Ad esempio, se [Work Shift] è la colonna, viene creato un nodo separato per ogni valore di quella colonna utilizzato nel modello, ad esempio AM e PM. Per ogni nodo, nella tabella NODE_DISTRIBUTION viene elencato solo il valore corrente dell'attributo.  
   
- **Attributo numerico discretizzato:** nel nodo di input vengono archiviati il nome dell'attributo e il valore, che può essere costituito da un intervallo o da un valore specifico. Tutti valori vengono rappresentati tramite espressioni, ad esempio '77,4 – 87,4' < 64,0' per il valore [Time Per Issue]. Per ogni nodo, nella tabella NODE_DISTRIBUTION viene elencato solo il valore corrente dell'attributo.  
+ **Attributo numerico discretizzato:** Il nodo di input vengono archiviati il nome dell'attributo e il valore, che può essere un intervallo o un valore specifico. Tutti valori vengono rappresentati tramite espressioni, ad esempio '77,4 – 87,4' < 64,0' per il valore [Time Per Issue]. Per ogni nodo, nella tabella NODE_DISTRIBUTION viene elencato solo il valore corrente dell'attributo.  
   
- **Attributo continuo:** nel nodo di input viene archiviato il valore medio dell'attributo. Per ogni nodo, nella tabella NODE_DISTRIBUTION viene elencato solo il valore corrente dell'attributo.  
+ **Attributo continuo:** Nel nodo di input viene archiviato il valore medio dell'attributo. Per ogni nodo, nella tabella NODE_DISTRIBUTION viene elencato solo il valore corrente dell'attributo.  
   
 ### <a name="hidden-layer-nodes"></a>Nodi del livello nascosto  
  Il livello nascosto contiene un numero variabile di nodi. In ogni nodo, la tabella NODE_DISTRIBUTION contiene mapping dal livello nascosto ai nodi nel livello di input. La colonna ATTRIBUTE_NAME contiene un ID del nodo che corrisponde a un nodo nel livello di input. La colonna ATTRIBUTE_VALUE contiene il peso associato a tale combinazione di un nodo di input e di un nodo del livello nascosto. L'ultima riga nella tabella contiene un coefficiente che rappresenta il peso di tale nodo nascosto nel livello nascosto.  
@@ -220,15 +220,15 @@ ms.locfileid: "34018528"
   
  La tabella NODE_DISTRIBUTION contiene le informazioni aggiuntive seguenti, a seconda del tipo di attributo:  
   
- **Attributo discreto:** le due righe finali della tabella NODE_DISTRIBUTION contengono un coefficiente per il nodo nel suo complesso e il valore corrente dell'attributo.  
+ **Attributo discreto:** Le due righe finali della tabella NODE_DISTRIBUTION contengono un coefficiente per il nodo come suo complesso e il valore corrente dell'attributo.  
   
- **Attributo numerico discretizzato:** identico agli attributi discreti, ad eccezione del fatto che il valore dell'attributo è un intervallo di valori.  
+ **Attributo numerico discretizzato:** Identico agli attributi discreti, ad eccezione del fatto che il valore dell'attributo è un intervallo di valori.  
   
- **Attributo continuo:** le due righe finali della tabella NODE_DISTRIBUTION contengono il valore medio dell'attributo, il coefficiente per il nodo nel suo complesso e la varianza del coefficiente.  
+ **Attributo continuo:** Le due righe finali della tabella NODE_DISTRIBUTION contengono il valore medio dell'attributo, il coefficiente per il nodo nel suo complesso e la varianza del coefficiente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmo Microsoft Neural Network](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [Riferimento tecnico l'algoritmo Microsoft Neural Network](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
- [Esempi di Query del modello di rete neurale](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
+ [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [Neural Network Model Query Examples](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

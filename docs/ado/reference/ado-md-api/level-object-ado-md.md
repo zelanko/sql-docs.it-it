@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 27e789c4eb34ed275d6f18f62325287febb73422
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4a44060ae4ffd9399c34d4cd8133f5ad7404ed5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949609"
 ---
 # <a name="level-object-ado-md"></a>Oggetto Level (ADO MD)
 Contiene un set di membri, ognuno dei quali ha lo stesso rango all'interno di una gerarchia.  

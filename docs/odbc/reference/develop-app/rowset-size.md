@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 54da54a63fb1234478a3161cd46e7143258d2d65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fda38811fa876c9a0fad55e7f2ee7566ad3026d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468678"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943766"
 ---
 # <a name="rowset-size"></a>Dimensione del set di righe
 Quali dimensioni del set di righe da utilizzare dipendono dall'applicazione. Le applicazioni basate su schermo comunemente seguono una delle due strategie. Il primo consiste nell'impostare le dimensioni del set di righe per il numero di righe visualizzate sullo schermo. Se l'utente ridimensiona la schermata, l'applicazione cambia di conseguenza le dimensioni del set di righe. Il secondo consiste nell'impostare le dimensioni del set di righe su un numero maggiore, ad esempio 100, che riduce il numero di chiamate all'origine dati. L'applicazione scorre in locale all'interno del set di righe quando possibile e recupera le nuove righe solo quando scorre all'esterno del set di righe.  

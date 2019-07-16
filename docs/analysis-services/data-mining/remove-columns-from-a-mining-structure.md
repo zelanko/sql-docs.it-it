@@ -1,5 +1,5 @@
 ---
-title: Rimuovere le colonne da una struttura di Data Mining | Documenti Microsoft
+title: Rimuovere colonne da una struttura di Data Mining | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bd8691d8ec0cc1546e27e8195e7d0bbc20709f59
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015878"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209680"
 ---
 # <a name="remove-columns-from-a-mining-structure"></a>Rimuovere colonne da una struttura di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,6 +39,6 @@ ms.locfileid: "34015878"
 4.  Nella finestra di dialogo **Elimina oggetti** fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data mining struttura attività e procedure](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Attività e procedure relative alla struttura di data mining](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

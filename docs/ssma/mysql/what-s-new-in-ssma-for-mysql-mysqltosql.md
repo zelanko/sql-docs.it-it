@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 author: HJToland3
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 5f3ea9905f0a44e7863154b93283ea8ef2f49f7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3cccabc3558da3534384dacfc77e42b8d078574
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66841063"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927759"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Novità di SSMA per MySQL (MySQLToSql)
 
@@ -154,7 +153,7 @@ La versione di maggio 2016 di SSMA per MySQL contiene le seguenti modifiche:
 * Il caricamento di oggetti MsSql fissi.
 * Correzione del bug nelle impostazioni globali.
 
-## <a name="march-2016"></a>Marzo 2016
+## <a name="march-2016"></a>marzo 2016
 
 La versione di anteprima di marzo 2016 di SSMA per MySQL aggiunge il supporto per la migrazione a SQL Server 2016. 
   

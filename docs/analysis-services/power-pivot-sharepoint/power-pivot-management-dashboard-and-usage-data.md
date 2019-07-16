@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f53c8835da14fc3ee41eb9598303f80c062a0e82
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087750"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208099"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Dati di utilizzo e dashboard di gestione PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "55087750"
   
 ### <a name="open-the-dashboard-from-general-application-settings"></a>Aprire il dashboard da Impostazioni generali applicazione  
   
-1.  Nel gruppo **Impostazioni generali applicazione** di Amministrazione centrale fare clic su **Dashboard di gestione [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]**.  
+1.  Nel gruppo **Impostazioni generali applicazione** di Amministrazione centrale fare clic su **Dashboard di gestione [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]** .  
   
 2.  Nella pagina principale selezionare l'applicazione del servizio PowerPivot di cui visualizzare i dati delle operazioni.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "55087750"
   
 -   [Configurare la raccolta dati di utilizzo per PowerPivot per SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- Al fine di acquisire dati sul sistema del server PowerPivot, verificare che siano abilitate la messaggistica degli eventi, la cronologia dell'aggiornamento dati e altre cronologie relative all'utilizzo per ogni applicazione del servizio PowerPivot. I dati di utilizzo e del server raccolti durante il normale funzionamento del server costituiscono i dati di origine che finiscono nel modello di dati interno. **Nota:** Se si disabilita la cronologia degli eventi o dell'utilizzo, i report composti risulteranno incompleti o errati.  
+ Al fine di acquisire dati sul sistema del server PowerPivot, verificare che siano abilitate la messaggistica degli eventi, la cronologia dell'aggiornamento dati e altre cronologie relative all'utilizzo per ogni applicazione del servizio PowerPivot. I dati di utilizzo e del server raccolti durante il normale funzionamento del server costituiscono i dati di origine che finiscono nel modello di dati interno. **Nota:** Se si disabilita gli eventi o la cronologia di utilizzo, i report composti risulteranno incompleti o errati.  
   
 ##  <a name="edit"></a> Modificare il dashboard PowerPivot  
  Gli utenti esperti nello sviluppo e nella personalizzazione di dashboard potranno modificare il dashboard in modo da includere nuove web part. È possibile modificare anche le proprietà delle web part incluse nel dashboard.  
@@ -81,7 +81,7 @@ ms.locfileid: "55087750"
  Per iniziare a usare la creazione di report personalizzati, il dashboard di gestione [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] fornisce un file Office Data Connection (.odc) per la connessione alla cartella di lavoro di origine. Ad esempio, è possibile utilizzare il file con estensione odc in Excel per la creazione di report aggiuntivi.  
   
 > [!NOTE]  
->  Modificare il file per evitare l'errore seguente quando si tenta di usare il file con estensione odc in Excel: "Inizializzazione dell'origine dati non riuscita". Nel file con estensione odc generato automaticamente è incluso un parametro che non è supportato dal provider OLE DB MSOLAP. Nelle istruzioni seguenti viene fornita la soluzione alternativa per la rimozione dei parametri.  
+>  Modificare il file per evitare l'errore seguente quando si prova a usare il file con estensione odc in Excel: "Inizializzazione dell'origine dati non riuscita". Nel file con estensione odc generato automaticamente è incluso un parametro che non è supportato dal provider OLE DB MSOLAP. Nelle istruzioni seguenti viene fornita la soluzione alternativa per la rimozione dei parametri.  
   
  Per compilare report basati sulla cartella di lavoro di [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] in Amministrazione centrale, è necessario essere l'amministratore di una farm o di un servizio.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "55087750"
   
 2.  Scorrere alla sezione **Report** nella parte inferiore della pagina.  
   
-3.  Fare clic su **Dati di gestione di [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]**.  
+3.  Fare clic su **Dati di gestione di [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]** .  
   
 4.  Salvare il file con estensione odc in una cartella locale.  
   

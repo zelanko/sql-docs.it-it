@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016722"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185805"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>Distribuzione di criteri pianificati in istanze multiple
   Tramite Server registrati è possibile distribuire criteri pianificati a server gestiti da una posizione centralizzata. È possibile distribuire i criteri pianificati da un gruppo di server locali o da un server di gestione centrale.  
@@ -71,7 +71,7 @@ ms.locfileid: "56016722"
     > [!NOTE]  
     >  Se facendo clic **gruppi di Server locali** o il Server di gestione centrale stesso, i criteri verranno distribuiti a tutti i server gestiti. Se si fa clic con il pulsante destro del mouse su un gruppo di server specifico, i criteri verranno distribuiti solo in tale gruppo. Se si fa clic con il pulsante destro del mouse su un server registrato specifico, i criteri verranno distribuiti solo in tale server.  
   
-3.  Accanto a **i file da importare**, fare clic sul pulsante con puntini di sospensione (**...** ).  
+3.  Accanto a **i file da importare**, fare clic sul pulsante con puntini di sospensione ( **...** ).  
   
 4.  Nel **Seleziona criteri** della finestra di dialogo Sfoglia per il percorso della cartella in cui è stato salvato i criteri pianificati. Per questo esempio, passare al percorso **C:\Scheduled_BP_Policies**.  
   

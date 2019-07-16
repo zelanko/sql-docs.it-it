@@ -10,14 +10,13 @@ ms.topic: language-reference
 ms.assetid: 9b5c94d6-612c-4e0f-976d-ac6ba55da3ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7874cb88d70aae5a843475f2adf4946730aed1b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f5486fa6f9100e61dbd25ad029f1024115485111
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915116"
 ---
 # <a name="sysdatabaseeventsessionfields-azure-sql-database"></a>sys.database_event_session_fields (database SQL di Azure)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -26,13 +25,13 @@ ms.locfileid: "47717960"
   
 ||  
 |-|  
-|**Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e tutte le versioni successive.|  
+|**Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Versione 12 e tutte le versioni successive.|  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|ID della sessione dell'evento. Non ammette i valori Null.|  
 |object_id|**int**|ID dell'oggetto a cui è associato il campo. Non ammette i valori Null.|  
-|NAME|**sysname**|Nome del campo. Non ammette i valori Null.|  
+|name|**sysname**|Nome del campo. Non ammette i valori Null.|  
 |Valore|**sql_variant**|Valore del campo. Non ammette i valori Null.|  
   
 ## <a name="permissions"></a>Permissions  

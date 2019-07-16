@@ -1,5 +1,5 @@
 ---
-title: KPICurrentTimeMember (MDX) | Microsoft Docs
+title: Kpicurrenttimemember=1=«String (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 34fb8bbfbda3f6fcab865697749aca3f76ae2603
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69c4a15108e682659cd95a20b4fc4ec5c41da007
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905898"
 ---
 # <a name="kpicurrenttimemember-mdx"></a>KPICurrentTimeMember (MDX)
 

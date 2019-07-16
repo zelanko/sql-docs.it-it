@@ -1,5 +1,5 @@
 ---
-title: DOMANDE FREQUENTI
+title: Domande frequenti
 titleSuffix: Azure Data Studio
 description: Domande frequenti (FAQ) su Azure Data Studio.
 ms.prod: sql
@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 7bd6c42882c9adc938904621b7939bea1b0e68de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1916a10a468fdc44c021e410eb1521cb7c219d58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800752"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959543"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>Domande frequenti su [!INCLUDE[Azure Data Studio](../includes/name-sos.md)]
 
@@ -84,7 +83,7 @@ No. Gli investimenti per i principali strumenti Windows (SQL Server Management S
 |Funzionalità|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Sign-In Azure|Yes|Yes|
-|Dashboard|Yes| |
+|dashboard|Yes| |
 |Estensioni|Yes| |
 |Terminale integrato|Yes||
 |Esplora oggetti|Yes|Yes|
@@ -150,7 +149,7 @@ No. Gli investimenti per i principali strumenti Windows (SQL Server Management S
 |Diagrammi di database||Yes|
 |Visualizzatore Log di errore||Yes|
 |Piani di manutenzione||Yes|
-|Multi-Server Query||Yes|
+|Query multiserver||Yes|
 |Gestione basata su criteri||Yes|
 |PolyBase||Yes|
 |Archivio query||Yes|

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 76cd14b8ee1c5a55e0312993090bfaf098c7e219
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6aebf318652e604c5f5ad4c30ef389fdfd9e78c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702133"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925646"
 ---
 # <a name="data-section"></a>Sezione di dati
 La sezione di dati definisce i dati del set di righe con uno qualsiasi degli aggiornamenti, le operazioni di inserimento o eliminazione in sospeso. La sezione di dati può contenere zero o più righe. Può contenere solo i dati da un set di righe in cui la riga è definita dallo schema. Inoltre, come illustrato in precedenza, le colonne senza dati possono essere omessa. Se un attributo o un sottoelemento viene usato nella sezione dei dati e tale costrutto non è stato definito nella sezione schema, viene ignorata automaticamente.  
@@ -32,7 +31,7 @@ La sezione di dati definisce i dati del set di righe con uno qualsiasi degli agg
   
  I seguenti caratteri sono riservati in XML e devono essere sostituiti da entità carattere: {"," &,\<, >}.  
   
-## <a name="binary"></a>Binario  
+## <a name="binary"></a>Binary  
  Dati binari sono con codificata hex (vale a dire, un byte viene mappato a due caratteri, un carattere per nibble).  
   
 ## <a name="datetime"></a>DateTime  

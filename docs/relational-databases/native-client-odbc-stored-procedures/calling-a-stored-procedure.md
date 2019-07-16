@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7cd89d826177074bca18a047545a32acee115a9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7b1441f06a5825467431a7c11ee9a8e3e46df6fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128365"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910268"
 ---
 # <a name="calling-a-stored-procedure"></a>Chiamata di una stored procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "54128365"
   
  La sequenza di escape ODBC CALL per la chiamata a una procedura è la seguente:  
   
- {[**? =**]**chiamare**_procedure_name_[([*parametro*] [**,**[*parametro*]] ...)]}  
+ {[ **? =** ]**chiamare**_procedure_name_[([*parametro*] [ **,** [*parametro*]] ...)]}  
   
  in cui *procedure_name* specifica il nome di una stored procedure e *parametro* specifica un parametro di routine. I parametri denominati sono supportati solo nelle istruzioni che utilizzano la sequenza di escape ODBC CALL.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "54128365"
   
  I parametri di input e di input/output possono essere omessi dalle chiamate alle procedure. Se una procedura viene chiamata con parentesi ma senza alcun parametro, il driver indica all'origine dati di utilizzare il valore predefinito per il primo parametro. Ad esempio:  
   
- {**chiamare** _procedure_name_**()**}  
+ {**chiamare** _procedure_name_ **()** }  
   
  Se la procedura non include alcun parametro, può non essere eseguita. Se una procedura viene chiamata senza parentesi, il driver non invia alcun valore di parametro. Ad esempio:  
   

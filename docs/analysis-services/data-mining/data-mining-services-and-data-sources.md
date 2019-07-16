@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: acb8f97708cd92bc0bdee1278d8b672908d65877
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145886"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183450"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Servizi di data mining e origini dati
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "50145886"
 ### <a name="xmla-listener"></a>Listener XMLA  
  Il componente listener XMLA gestisce tutte le comunicazioni XMLA tra [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e i relativi client. È possibile usare l'impostazione di configurazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Port** nel file msmdsrv.ini per specificare la porta su cui è in ascolto un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Un valore 0 in questo file indica che [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è in ascolto sulla porta predefinita. Se non specificato diversamente, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] userà le porte TCP predefinite seguenti:  
   
-|Port|Description|  
+|Port|Descrizione|  
 |----------|-----------------|  
 |2383|Istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |2382|Redirector per altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3831c78380d8ae34e1dab74e92514c7d84136988
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61795a8cb10fb0b469f89012d52dfb4723aa0a89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949792"
 ---
 # <a name="cubedef-object-ado-md"></a>Oggetto CubeDef (ADO MD)
 Rappresenta un cubo da uno schema multidimensionale, contenente un set di dimensioni correlate.  
@@ -59,6 +58,6 @@ Rappresenta un cubo da uno schema multidimensionale, contenente un set di dimens
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di CubeDef (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [Oggetto Catalog (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
- [CubeDefs Collection (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)   
- [Dimensions Collection (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
+ [Raccolta CubeDefs (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)   
+ [Raccolta Dimensions (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
  [Raccolta delle proprietà (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

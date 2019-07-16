@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: f807c373-7fbc-4108-a2bd-73b48a236003
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83525324b328a688713418835b353e4a72892a0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59ea64e16f1469c12461a559c3f102094615fa12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781649"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950458"
 ---
 # <a name="spxpcmdshellproxyaccount-transact-sql"></a>sp_xp_cmdshell_proxy_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- La credenziale proxy verrà chiamata **# # xp_cmdshell_proxy_account # #**.  
+ La credenziale proxy verrà chiamata **# # xp_cmdshell_proxy_account # #** .  
   
  Quando viene eseguito con l'opzione NULL, **sp_xp_cmdshell_proxy_account** consente di eliminare la credenziale proxy.  
   
@@ -67,7 +66,7 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-the-proxy-credential"></a>A. Creazione delle credenziali proxy  
+### <a name="a-creating-the-proxy-credential"></a>R. Creazione delle credenziali proxy  
  Nell'esempio seguente viene illustrata la creazione di una credenziale proxy per un account di Windows denominato `ADVWKS\Max04` con la password `ds35efg##65`.  
   
 ```  

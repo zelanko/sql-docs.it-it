@@ -1,5 +1,5 @@
 ---
-title: Riferimento tecnico l'algoritmo Microsoft Linear Regression | Documenti Microsoft
+title: Riferimento tecnico l'algoritmo Microsoft Linear Regression | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 84d0d6609538bb9abdbca61e75c6691c25a45950
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019378"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183057"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Linear Regression
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34019378"
 ### <a name="setting-algorithm-parameters"></a>Impostazione dei parametri dell'algoritmo  
  Nella tabella seguente sono elencati i parametri forniti per l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression.  
   
-|Parametro|Description|  
+|Parametro|Descrizione|  
 |---------------|-----------------|  
 |*MAXIMUM_INPUT_ATTRIBUTES*|Definisce il numero di attributi di input che l'algoritmo è in grado di gestire prima di richiamare la funzionalità di selezione degli attributi. Impostare questo valore su 0 per disabilitare la funzionalità di selezione degli attributi.<br /><br /> Il valore predefinito è 255.|  
 |*MAXIMUM_OUTPUT_ATTRIBUTES*|Definisce il numero di attributi di output che l'algoritmo è in grado di gestire prima di richiamare la funzionalità di selezione degli attributi. Impostare questo valore su 0 per disabilitare la funzionalità di selezione degli attributi.<br /><br /> Il valore predefinito è 255.|  
@@ -52,10 +52,10 @@ ms.locfileid: "34019378"
 ### <a name="modeling-flags"></a>Flag di modellazione  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression supporta i flag di modellazione indicati di seguito. Quando si crea la struttura o il modello di data mining, i flag di modellazione vengono definiti per specificare la modalità di gestione dei valori presenti in ogni colonna durante l'analisi. Per altre informazioni, vedere [Flag di modellazione &#40;data mining&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md).  
   
-|Flag di modellazione|Description|  
+|Flag di modellazione|Descrizione|  
 |-------------------|-----------------|  
 |NOT NULL|Indica che la colonna non può contenere un valore Null. Se Analysis Services rileva un valore Null durante il training del modello, viene generato un errore.<br /><br /> Si applica alle colonne della struttura di data mining.|  
-|REGRESSOR|Indica che la colonna contiene valori numerici continui che devono essere considerati come potenziali variabili indipendenti durante l'analisi. Si applica alle colonne del modello di data mining.<br /><br /> Nota: l'applicazione di un flag REGRESSOR a una colonna non ne garantisce l'uso come regressore nel modello finale.|  
+|REGRESSOR|Indica che la colonna contiene valori numerici continui che devono essere considerati come potenziali variabili indipendenti durante l'analisi. Si applica alle colonne del modello di data mining.<br /><br /> Nota: Quando si contrassegna una colonna come regressore non garantisce che la colonna verrà utilizzata come regressore nel modello finale.|  
   
 ### <a name="regressors-in-linear-regression-models"></a>Regressori nei modelli di regressione lineare  
  I modelli di regressione lineare sono basati sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees. Tuttavia, anche se non si utilizza l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression, qualsiasi modello di albero delle decisioni può contenere un albero o i nodi che rappresentano una regressione su un attributo continuo.  
@@ -70,7 +70,7 @@ ms.locfileid: "34019378"
  Un modello di regressione lineare deve contenere una colonna chiave, le colonne di input e almeno una colonna stimabile.  
   
 ### <a name="input-and-predictable-columns"></a>Colonne di input e stimabili  
- L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression supporta le colonne di input e le colonne stimabili specifiche riportate nella tabella seguente. Per altre informazioni sul significato dei tipi di contenuto usati in un modello di data mining, vedere [Tipi di contenuto &#40;Data Mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
+ L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression supporta le colonne di input e le colonne stimabili specifiche riportate nella tabella seguente. Per altre informazioni sul significato dei tipi di contenuto usati in un modello di data mining, vedere [Tipi di contenuto &#40;Data mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
 |Colonna|Tipi di contenuto|  
 |------------|-------------------|  
@@ -82,7 +82,7 @@ ms.locfileid: "34019378"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Linear Regression](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
- [Esempi di Query del modello di regressione lineare](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [Contenuto del modello di data mining per i modelli di regressione lineare & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Esempi di query sul modello di regressione lineare](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
+ [Contenuto dei modelli di data mining per i modelli di regressione lineare &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

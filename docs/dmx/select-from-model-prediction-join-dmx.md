@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f0778a104383f54cf2798c0d6f51f082926b1fd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b592aef0ba3831c5513e039ee4552d826468e819
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658953"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928336"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;modello&gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +33,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 ## <a name="arguments"></a>Argomenti  
  *n*  
- Facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
+ facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
   
  *elenco di espressioni SELECT*  
  Elenco delimitato da virgole contenente espressioni e identificatori di colonna derivati dal modello di data mining.  
@@ -52,10 +51,10 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  Facoltativo. Espressione logica che confronta le colonne del modello con quelle della query di origine.  
   
  *espressione della condizione*  
- Facoltativo. Condizione per limitare i valori restituiti dall'elenco di colonne.  
+ facoltativo. Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
  *expression*  
- Facoltativo. Espressione che restituisce un valore scalare.  
+ facoltativo. Espressione che restituisce un valore scalare.  
   
 ## <a name="remarks"></a>Note  
  La clausola ON definisce il mapping tra le colonne della query di origine e quelle del modello di data mining. Tale mapping viene utilizzato per dirigere le colonne dalla query di origine alle colonne nel modello di data mining, di modo che possano essere utilizzate come input durante la creazione delle stime. Colonne di \< *elenco mapping dei join*> sono correlate tramite un segno di uguale (=), come illustrato nell'esempio seguente:  
