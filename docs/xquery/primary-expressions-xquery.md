@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 15a5b859b260288cccad5e0ed01640c3e070d6fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e8704a01d810477fd0359196cb622984da357cf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946384"
 ---
 # <a name="primary-expressions-xquery"></a>Espressioni primarie (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ Go
   
  `<a>I don't know</a>`  
   
- Le funzioni booleane predefinite, **true ()** e **false ()**, può essere utilizzato per rappresentare valori booleani, come illustrato nell'esempio seguente.  
+ Le funzioni booleane predefinite, **true ()** e **false ()** , può essere utilizzato per rappresentare valori booleani, come illustrato nell'esempio seguente.  
   
 ```  
 DECLARE @var XML  
@@ -157,7 +156,7 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
 ## <a name="context-item-expressions"></a>Espressioni per elementi di contesto  
  Per elemento di contesto si intende l'elemento corrente elaborato nel contesto di un'espressione di percorso. Viene inizializzato in un'istanza con tipo di dati XML non NULL tramite il nodo di documento. Può anche essere modificato dal metodo Nodes (), nell'ambito di espressioni XPath o di predicati [].  
   
- L'elemento di contesto viene restituito da un'espressione che contiene un punto (.). Ad esempio, la query seguente valuta ogni elemento <`a`> per verificare la presenza dell'attributo `attr`. Se l'attributo è presente, viene restituito l'elemento. Si noti che la condizione del predicato specifica che il nodo di contesto è specificato da un solo punto.  
+ L'elemento di contesto viene restituito da un'espressione che contiene un punto (.). Ad esempio, la query seguente valuta ogni elemento <`a`> per la presenza dell'attributo `attr`. Se l'attributo è presente, viene restituito l'elemento. Si noti che la condizione del predicato specifica che il nodo di contesto è specificato da un solo punto.  
   
 ```  
 DECLARE @var XML  

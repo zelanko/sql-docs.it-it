@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8ae29a85-2b77-48db-a2b9-a1720287b271
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 907e7d73651075a122cfb6b7e4a8d3eac44f072c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 703d7cb0b225bf12e7ccd91bdf34251c3044230b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950845"
 ---
 # <a name="columnprivileges-transact-sql"></a>COLUMN_PRIVILEGES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,14 +35,14 @@ ms.locfileid: "54124321"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**UTENTE CHE CONCEDE**|**nvarchar (** 128 **)**|Utente che concede il privilegio.|  
-|**ALL'UTENTE AUTORIZZATO**|**nvarchar (** 128 **)**|Beneficiario del privilegio.|  
-|**TABLE_CATALOG**|**nvarchar (** 128 **)**|Qualificatore della tabella.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nome dello schema che contiene la tabella.<br /><br /> **&#42;&#42;Importante &#42; &#42;**  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
+|**UTENTE CHE CONCEDE**|**nvarchar(** 128 **)**|Utente che concede il privilegio.|  
+|**ALL'UTENTE AUTORIZZATO**|**nvarchar(** 128 **)**|Beneficiario del privilegio.|  
+|**TABLE_CATALOG**|**nvarchar(** 128 **)**|Qualificatore della tabella.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nome dello schema che contiene la tabella.<br /><br /> **&#42;&#42;Importante &#42; &#42;**  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
 |**TABLE_NAME**|**sysname**|Nome della tabella.|  
 |**COLUMN_NAME**|**sysname**|Nome colonna.|  
-|**PRIVILEGE_TYPE**|**varchar (** 10 **)**|Tipo di privilegio.|  
-|**IS_GRANTABLE**|**varchar (** 3 **)**|Specifica se il beneficiario può concedere autorizzazioni ad altri utenti.|  
+|**PRIVILEGE_TYPE**|**varchar(** 10 **)**|Tipo di privilegio.|  
+|**IS_GRANTABLE**|**varchar(** 3 **)**|Specifica se il beneficiario può concedere autorizzazioni ad altri utenti.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste di sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
