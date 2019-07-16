@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fe9dc770f537b9b9f8b53461c30b890a4144a821
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 157e38c2c9c23ff8f7e92af40385b0962c6dcb70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707342"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918069"
 ---
 # <a name="moverecord-method-ado"></a>Metodo MoveRecord (ADO)
 Sposta l'entità rappresentata da un [Record](../../../ado/reference/ado-api/record-object-ado.md) in un'altra posizione.  
@@ -39,7 +38,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  Facoltativo. Oggetto **stringa** contenente un URL che identifica il **Record** da spostare. Se *origine* viene omesso oppure specifica una stringa vuota, l'oggetto rappresentato da questo **Record** viene spostato. Ad esempio, se il **Record** rappresenta un file, il contenuto del file viene spostati nel percorso specificato da *destinazione*.  
   
  *Destinazione*  
- Facoltativo. Oggetto **stringa** contenente un URL che specifica la posizione in cui *origine* verranno spostati.  
+ facoltativo. Oggetto **stringa** contenente un URL che specifica la posizione in cui *origine* verranno spostati.  
   
  *UserName*  
  Facoltativo. Oggetto **stringa** valore contenente l'ID utente, se necessario, autorizza l'accesso al *destinazione*.  
@@ -48,10 +47,10 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  Facoltativo. Oggetto **stringa** che contiene la password che, se necessario, verifica *UserName*.  
   
  *Opzioni*  
- Facoltativo. Oggetto [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) valore il cui valore predefinito è **adMoveUnspecified**. Specifica il comportamento di questo metodo.  
+ facoltativo. Oggetto [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) valore il cui valore predefinito è **adMoveUnspecified**. Specifica il comportamento di questo metodo.  
   
  *Async*  
- Facoltativo. Oggetto **booleana** valore che, quando **True**, specifica l'operazione deve essere asincrona.  
+ facoltativo. Oggetto **booleana** valore che, quando **True**, specifica l'operazione deve essere asincrona.  
   
 ## <a name="return-value"></a>Valore restituito  
  Valore **String**. In genere, il valore di *destinazione* viene restituito. Tuttavia, il valore esatto restituito è dipendente dal provider.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cb02a96e6ee3d28c67e21996677c02b58fc97c07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b744dbd464aedbd9b87d22aa74277787fcc3c7a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925045"
 ---
 # <a name="how-event-handlers-work-together"></a>Interazione tra i gestori eventi
 A meno che la programmazione in Visual Basic, tutti i gestori di eventi per **Connection** e **Recordset** gli eventi devono essere implementati, indipendentemente dal fatto che è effettivamente elaborare tutti gli eventi. La quantità di lavoro di implementazione che è necessario eseguire dipende dal linguaggio di programmazione. Per altre informazioni, vedere [creazione di istanze evento ADO per linguaggio](../../../ado/guide/data/ado-event-instantiation-by-language.md).  

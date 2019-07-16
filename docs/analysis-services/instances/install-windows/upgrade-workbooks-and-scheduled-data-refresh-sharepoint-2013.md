@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5f0d49d6aeb8231dbffb56b42fe1151ae90d0e41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505217"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181302"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "52505217"
 |Data creazione|\<|Supporto e comportamento|>|  
 |----------------|--------|--------------------------|--------|  
 ||**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2010**|**2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2010**|**2012 SP1 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2013**|  
-|**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per Excel 2010**|Tutte le funzionalità|**Esperienza:** gli utenti possono interagire con la cartella di lavoro nel browser e usarla come origine dati per altre soluzioni.<br /><br /> **Eseguire l'aggiornamento:** Le cartelle di lavoro verranno aggiornate automaticamente nella raccolta documenti se l'aggiornamento automatico è abilitato per il [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] servizio di sistema nella farm di SharePoint,<br /><br /> **Pianificazione dell'aggiornamento dati:** NON supportato. La cartella di lavoro deve essere aggiornata.|**Esperienza:** gli utenti possono interagire con la cartella di lavoro e usarla come origine dati per altre soluzioni.<br /><br /> **Eseguire l'aggiornamento:** l'aggiornamento automatico non è disponibile. Gli utenti devono aggiornare manualmente le cartelle di lavoro di SQL Server 2008 R2 alla versione 2012 o alla versione di Office 2013.<br /><br /> **Pianificazione dell'aggiornamento dati:** NON supportato. La cartella di lavoro deve essere aggiornata.|  
-|**2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per Excel**|Non supportato|Tutte le funzionalità|**Esperienza:** gli utenti possono interagire con la cartella di lavoro nel browser e usarla come origine dati per altre soluzioni. La pianificazione dell'aggiornamento dati è disponibile.<br /><br /> **Eseguire l'aggiornamento:** l'aggiornamento automatico non è supportato. Gli utenti possono aggiornare manualmente le cartelle di lavoro alla versione di Office 2013.<br /><br /> **Pianificazione dell'aggiornamento dati:** supportata.|  
-|**Excel 2013**|Non supportato|Non supportato|Tutte le funzionalità|  
+|**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per Excel 2010**|Tutte le funzionalità|**Esperienza:** Gli utenti possono interagire con la cartella di lavoro nel browser e utilizzarla come origine dati per altre soluzioni.<br /><br /> **Eseguire l'aggiornamento:** Le cartelle di lavoro verranno aggiornate automaticamente nella raccolta documenti se l'aggiornamento automatico è abilitato per il [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] servizio di sistema nella farm di SharePoint,<br /><br /> **Pianificazione dell'aggiornamento dati:** NON è supportato. La cartella di lavoro deve essere aggiornata.|**Esperienza:** Gli utenti possono interagire con la cartella di lavoro e utilizzarla come origine dati per altre soluzioni.<br /><br /> **Eseguire l'aggiornamento:** Aggiornamento automatico non è disponibile. Gli utenti devono aggiornare manualmente le cartelle di lavoro di SQL Server 2008 R2 alla versione 2012 o alla versione di Office 2013.<br /><br /> **Pianificazione dell'aggiornamento dati:** NON è supportato. La cartella di lavoro deve essere aggiornata.|  
+|**2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per Excel**|Non supportate|Tutte le funzionalità|**Esperienza:** Gli utenti possono interagire con la cartella di lavoro nel browser e utilizzarla come origine dati per altre soluzioni. La pianificazione dell'aggiornamento dati è disponibile.<br /><br /> **Eseguire l'aggiornamento:** Aggiornamento automatico non è supportato. Gli utenti possono aggiornare manualmente le cartelle di lavoro alla versione di Office 2013.<br /><br /> **Pianificazione dell'aggiornamento dati:** supportata.|  
+|**Excel 2013**|Non supportate|Non supportate|Tutte le funzionalità|  
   
 ##  <a name="bkmk_to_2012sp1_from_2008r2"></a> Eseguire l'aggiornamento a cartelle di lavoro di SQL Server 2012 Service Pack 1 (SP1) da cartelle di lavoro di SQL Server 2008 R2  
  Questa sezione descrive l'aggiornamento a SQL Server 2012 SP1 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per cartelle di lavoro di Excel 2013 e da SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per cartelle di lavoro di Excel 2010.  
@@ -58,7 +58,7 @@ ms.locfileid: "52505217"
   
 -   SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per Excel 2013.  
   
- **Come aggiornare una cartella di lavoro:** l'aggiornamento dati pianificato non funzionerà finché la cartella di lavoro non viene aggiornata alla relativa versione 2012. Per aggiornare la cartella di lavoro e il modello in essa contenuto, completare una delle operazioni seguenti:  
+ **Come aggiornare una cartella di lavoro:** L'aggiornamento dati pianificato non funzionerà finché non viene aggiornata la cartella di lavoro alla relativa versione 2012. Per aggiornare la cartella di lavoro e il modello in essa contenuto, completare una delle operazioni seguenti:  
   
 -   Scaricare e aprire la cartella di lavoro in Microsoft Excel 2010 con il componente aggiuntivo SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per Excel installato.  
   

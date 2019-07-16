@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4a31052bb0633d370098e328741432f6b854d65e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774653"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205957"
 ---
 # <a name="back-up-database-task-maintenance-plan"></a>Attività Backup database (Piano di manutenzione)
   Usare la finestra di dialogo **Attività Backup database** per aggiungere un'attività di backup al piano di manutenzione. L'esecuzione di backup del database è importante in caso di guasti al sistema o all'hardware, nonché di errori degli utenti, che possono danneggiare il database e rendere pertanto necessaria la disponibilità di una copia di backup per il ripristino. Questa attività consente di eseguire backup completi e differenziali, di file e filegroup, nonché del log delle transazioni.  

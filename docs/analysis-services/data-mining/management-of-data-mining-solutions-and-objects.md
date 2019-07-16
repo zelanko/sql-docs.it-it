@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d7dd7de5aac016239c2b778a7afeee9447144259
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145686"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183221"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Gestione degli oggetti e delle soluzioni di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -76,14 +76,14 @@ ms.locfileid: "50145686"
   
 -   <xref:Microsoft.AnalysisServices>  
   
- **Restrizioni:** nessuna.  
+ **Restrizioni:** No.  
   
 ### <a name="data-mining-extensions-dmx"></a>Data Mining Extensions (DMX)  
  È possibile utilizzare DMX con altre interfacce di comando, ad esempio [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o ADOMD.Net, per creare, eliminare ed eseguire query su strutture e modelli di data mining.  
   
 -   [Istruzioni DMX &#40;Data Mining Extensions&#41; per la definizione dei dati](../../dmx/dmx-statements-data-definition.md)  
   
- **Restrizioni:** alcune proprietà non possono essere modificate usando DMX.  
+ **Restrizioni:** Alcune proprietà non possono essere modificate usando DMX.  
   
 ### <a name="xml-for-analysis-xmla"></a>XML for Analysis (XMLA)  
  XMLA (XML for Analysis) è il linguaggio DDL (Data Definition Language) per Analysis Services. XMLA consente di controllare la maggior parte degli oggetti di data mining e delle operazioni del server. Tutte le operazioni di gestione tra il client e il server possono essere eseguite tramite XMLA. Per semplicità è possibile usare il linguaggio ASSL ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language) per eseguire il wrapping degli elementi XML.  

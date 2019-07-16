@@ -1,5 +1,5 @@
 ---
-title: Visualizzare attributi in Progettazione dimensioni | Documenti Microsoft
+title: Visualizzare attributi in Progettazione dimensioni | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c8e0535a1df60b4a4e1550e2b49a02e7a60e2c04
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022958"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179414"
 ---
-# <a name="attribute-properties---view-attributes-in-dimension-designer"></a>Proprietà dell'attributo - visualizzare attributi in Progettazione dimensioni
+# <a name="attribute-properties---view-attributes-in-dimension-designer"></a>Proprietà degli attributi - Visualizzare attributi in Progettazione dimensioni
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Gli attributi vengono creati in oggetti dimensione. È possibile visualizzare e configurare gli attributi tramite Progettazione dimensioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Nel riquadro **Attributi** della scheda **Struttura dimensione** di Progettazione dimensioni sono elencati gli attributi inclusi in una dimensione. Utilizzare questo riquadro per aggiungere, rimuovere o configurare attributi. È inoltre possibile selezionare gli attributi da utilizzare come livello in una nuova gerarchia o da aggiungere come livello in una gerarchia esistente.  
   
@@ -53,10 +53,10 @@ ms.locfileid: "34022958"
 |Icona|Utilizzo dell'attributo|  
 |----------|---------------------|  
 |![Icona di attributo](../../analysis-services/multidimensional-models/media/as-icon-attribute.gif "icona di attributo")|Regular o AccountType|  
-|![Icona di attributo chiave](../../analysis-services/multidimensional-models/media/as-icon-key-attribute.gif "icona di attributo chiave")|Key|  
+|![Icona di attributo chiave](../../analysis-services/multidimensional-models/media/as-icon-key-attribute.gif "icona di attributo chiave")|Chiave|  
 |![Icona di attributo padre](../../analysis-services/multidimensional-models/media/as-icon-parent-attribute.gif "icona di attributo padre")|Parent|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Riferimento alle proprietà degli attributi delle dimensioni](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

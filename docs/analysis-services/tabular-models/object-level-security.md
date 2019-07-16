@@ -11,11 +11,11 @@ author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: d354aa64e8b6a1e98941011c30550a056f4c01c9
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685578"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162786"
 ---
 # <a name="object-level-security"></a>Sicurezza a livello di oggetto
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -72,7 +72,7 @@ In questo esempio, la proprietà metadataPermission della classe di autorizzazio
   }
 ```
 
-## <a name="restrictions"></a>Restrictions
+## <a name="restrictions"></a>Restrizioni
 
 *  Sicurezza a livello di tabella non può essere impostata per un modello se interrompe una catena di relazioni. Viene generato un errore in fase di progettazione.
  Se sono presenti relazioni tra le tabelle A e B e B e C, ad esempio, non è possibile proteggere tabella B. Se nella tabella B è protetto, una query sulla tabella non può passare le relazioni tra la tabella A e B e B e C. In questo caso, è stato possibile configurare una relazione separata tra le tabelle A e B.

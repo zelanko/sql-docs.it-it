@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5e7f9a484ecb873a141f9b91a88c64f65ff25336
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6c174d2e6a659a3b9da8f89816b5bdf90342416
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712211"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917377"
 ---
 # <a name="readtext-method"></a>Metodo ReadText
 Legge un numero di caratteri da un testo specificato [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oggetto.  
@@ -35,8 +34,8 @@ String = Stream.ReadText ( NumChars)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *NumChars*  
- Facoltativo. Oggetto **lungo** valore che specifica il numero di caratteri da leggere dal file o una [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) valore. Il valore predefinito è **adReadAll**.  
+ *numChars*  
+ facoltativo. Oggetto **lungo** valore che specifica il numero di caratteri da leggere dal file o una [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) valore. Il valore predefinito è **adReadAll**.  
   
 ## <a name="return-value"></a>Valore restituito  
  Il **ReadText** metodo legge un numero specificato di caratteri, un'intera riga o dell'intero flusso da un **Stream** specificato e restituisce la stringa risultante.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2a39742fa8e97e198d54baf73d91534d69a6ee36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516669"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210039"
 ---
 # <a name="drillthrough-queries-data-mining"></a>Query drill-through (Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -78,9 +78,9 @@ ms.locfileid: "52516669"
   
 |Nome algoritmo|Problema|  
 |--------------------|-----------|  
-|Algoritmo Microsoft Naive Bayes|Non supportato. Questi algoritmi non assegnano case ai nodi specifici nel contenuto.|  
-|Algoritmo Microsoft Neural Network|Non supportato. Questi algoritmi non assegnano case ai nodi specifici nel contenuto.|  
-|Algoritmo Microsoft Logistic Regression|Non supportato. Questi algoritmi non assegnano case ai nodi specifici nel contenuto.|  
+|Algoritmo Microsoft Naive Bayes|Non supportati. Questi algoritmi non assegnano case ai nodi specifici nel contenuto.|  
+|Algoritmo Microsoft Neural Network|Non supportati. Questi algoritmi non assegnano case ai nodi specifici nel contenuto.|  
+|Algoritmo Microsoft Logistic Regression|Non supportati. Questi algoritmi non assegnano case ai nodi specifici nel contenuto.|  
 |Algoritmo Microsoft Linear Regression|Supportato. Tuttavia, poiché il modello crea un solo nodo, **All**, il drill-through restituisce tutti i case di training del modello. Se le dimensioni del set di training sono elevate, il caricamento dei risultati può richiedere molto tempo.|  
 |Algoritmo Microsoft Time Series|Supportato. Non è tuttavia possibile eseguire il drill-through ai dati della struttura o del case usando il **Visualizzatore modello di data mining** in Progettazione modelli di data mining. È necessario creare invece una query DMX.<br /><br /> Inoltre, non è possibile eseguire il drill-through su nodi specifici o scrivere una query DMX per recuperare case in nodi specifici di un modello Time Series. È possibile recuperare dati del case dal modello o dalla struttura utilizzando altri criteri, ad esempio una data o i valori dell'attributo.<br /><br /> È inoltre possibile restituire le date dai case nel modello usando la funzione [Lag &#40;DMX&#41;](../../dmx/lag-dmx.md).<br /><br /> Se si vogliono visualizzare i dettagli dei nodi ARTXP e ARIMA creati dall'algoritmo Microsoft Time Series, è possibile usare [Microsoft Generic Content Tree Viewer &#40;Data mining&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).|  
   

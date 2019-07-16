@@ -1,5 +1,5 @@
 ---
-title: SystemGetClusterCrossValidationResults (Analysis Services - Data Mining) | Documenti Microsoft
+title: SystemGetClusterCrossValidationResults (Analysis Services - Data Mining) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ce11f7cb54d40336633d09a5d6601f0366c6bf55
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018878"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209623"
 ---
 # <a name="systemgetclustercrossvalidationresults-analysis-services---data-mining"></a>SystemGetClusterCrossValidationResults (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -83,7 +83,7 @@ SystemGetClusterCrossValidationResults(
   
  Nella tabella seguente vengono descritte le colonne restituite.  
   
-|Nome colonna|Description|  
+|Nome colonna|Descrizione|  
 |-----------------|-----------------|  
 |ModelName|Nome del modello sottoposto a test.|  
 |AttributeName|Nome della colonna stimabile. Per i modelli del cluster, è sempre **null**.|  
@@ -94,7 +94,7 @@ SystemGetClusterCrossValidationResults(
 |Misura|Nome della misura restituita dal test. Le misure per ogni modello dipendono dal tipo del valore stimabile. Per la definizione delle diverse misure, vedere [Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).<br /><br /> Per un elenco delle misure restituite per ogni tipo stimabile, vedere [Misure nel report di convalida incrociata](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
 |Value|Valore della misura di test specificata.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Per restituire la metrica di accuratezza per l'intero set di dati, usare [SystemGetClusterAccuracyResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md).  
   
  Se il modello di data mining è già stato partizionato in riduzioni, è inoltre possibile ignorare l'elaborazione e restituire solo i risultati di convalida incrociata usando [SystemGetClusterAccuracyResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md).  
@@ -135,6 +135,6 @@ CALL SystemGetClusterCrossValidationResults(
  [SystemGetCrossValidationResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterAccuracyResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

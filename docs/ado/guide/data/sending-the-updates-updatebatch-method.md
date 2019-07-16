@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6759f007e652a6a52a1633b021553faa2978f6b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 182e444587ce9bb3ca73166fb05dfac2506a39aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706643"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924251"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>Invio di aggiornamenti: Metodo UpdateBatch
 Il codice seguente viene aperto un Recordset in modalità batch impostando la proprietà LockType adLockBatchOptimistic e CursorLocation a adUseClient. Aggiunge due nuovi record e modifica il valore di un campo in un record esistente, salvando i valori originali e quindi chiama il metodo UpdateBatch per restituire le modifiche all'origine dati.  

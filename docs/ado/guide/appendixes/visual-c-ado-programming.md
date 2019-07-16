@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c8145b4000a621ecb09abff074e4b5e06aea7c80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1890d554367b2a21bcd46a6d2ebddf00013957e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926426"
 ---
 # <a name="visual-c-ado-programming"></a>Programmazione ADO in Visual C++
 Il riferimento all'API ADO viene descritta la funzionalità delle ADO application programming interface (API) usando una sintassi simile a Microsoft Visual Basic. Anche se i destinatari sono tutti gli utenti, programmatori ADO utilizzano svariati linguaggi come Visual Basic, Visual C++ (con e senza il **#import** (direttiva)) e Visual J++ (con il pacchetto di classe ADO/WFC).  
@@ -223,7 +222,7 @@ Dim rst As ADODB.Recordset
 Dim rst As New ADODB.Recordset  
 ```
   
- oppure  
+ -oppure-  
   
 ```vb
 Dim rst As ADODB.Recordset  
@@ -242,14 +241,14 @@ _RecordsetPtr  rs;
 _RecordsetPtr  rs("ADODB.Recordset");  
 ```
   
- oppure  
+ -oppure-  
   
 ```cpp
 _RecordsetPtr  rs;  
 rs.CreateInstance("ADODB.Recordset");  
 ```
   
- oppure  
+ -oppure-  
   
 ```cpp
 _RecordsetPtr  rs;  

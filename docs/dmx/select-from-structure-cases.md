@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 65ab4d5ebf1fbe64d3e85854df186d9ebe098e84
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 041d6ade2363b4a33528bd44438a2fcb440d61ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600061"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928292"
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM &lt;struttura&gt;. CASE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +53,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
  Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
  *expression*  
- Facoltativo. Espressione che restituisce un valore scalare.  
+ facoltativo. Espressione che restituisce un valore scalare.  
   
 ## <a name="remarks"></a>Note  
  Se il drill-through è attivato sia nella struttura che nel modello, qualsiasi membro di un ruolo che dispone di autorizzazioni drill-through per il modello di data mining e per la struttura di data mining può restituire le colonne della struttura non incluse nel modello utilizzando la sintassi seguente:  
@@ -68,7 +67,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti si basano nella struttura di data mining, Targeted Mailing, basata sul [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] database e i modelli di data mining associati. Per altre informazioni, vedere [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
-### <a name="example-1-drill-through-to-structure-cases"></a>Esempio 1: Esecuzione del drill-through nei case della struttura  
+### <a name="example-1-drill-through-to-structure-cases"></a>Esempio 1: Il drill-through nei case della struttura  
  Nell'esempio seguente viene restituito l'elenco dei 500 clienti meno recenti nella struttura di data mining, Targeted Mailing. La query restituisce tutte le colonne nel modello di data mining, ma limita le righe ai clienti che hanno acquistato una bicicletta e li ordina per età. È anche possibile modificare l'elenco di espressioni per specificare le colonne da restituire.  
   
 ```  
@@ -78,7 +77,7 @@ WHERE [Bike Buyer] = 1
 ORDER BY Age DESC;  
 ```  
   
-### <a name="example-2-drillthrough-to-test-or-training-cases-only"></a>Esempio 2: Esecuzione del drill-through solo in case di test o training  
+### <a name="example-2-drillthrough-to-test-or-training-cases-only"></a>Esempio 2: Drill-through solo i case di Training o Test  
  Nell'esempio seguente viene restituito l'elenco dei case della struttura per Targeted Mailing riservato per l'esecuzione di test. Se la struttura di data mining non contiene un set di test di controllo, per impostazione predefinita tutti i case sono trattati come case di training e la query restituisce 0 case.  
   
 ```  
@@ -90,7 +89,7 @@ WHERE IsTestCase();
  Per la restituzione dei case di training, sostituire la funzione `IsTrainingCase()`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SELEZIONARE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
  [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  

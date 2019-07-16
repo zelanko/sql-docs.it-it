@@ -1,5 +1,5 @@
 ---
-title: Drill-Through nei dati del Case da un modello di Data Mining | Documenti Microsoft
+title: Il drill-Through nei dati del Case da un modello di Data Mining | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7b5b2cbfd141642cb5d36d0ec67958ec7ae14ae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015128"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210053"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>Eseguire il drill-through sui dati del case da un modello di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,16 +29,16 @@ ms.locfileid: "34015128"
   
 |Nome del visualizzatore|Nome del riquadro o della scheda|Selezione nodo|  
 |-----------------|----------------------|-----------------|  
-|**Visualizzatore Microsoft Decision Trees**|Scheda**Albero delle decisioni** |Fare clic su un nodo dell'albero.<br /><br /> **Nota** Evitare di usare il drill-through sul nodo **Tutti** , poiché potrebbe richiedere molto tempo per restituire i risultati.|  
+|**Visualizzatore Microsoft Decision Trees**|Scheda**Albero delle decisioni**|Fare clic su un nodo dell'albero.<br /><br /> **Nota** Evitare di usare il drill-through sul nodo **Tutti** , poiché potrebbe richiedere molto tempo per restituire i risultati.|  
 |**Visualizzatore Microsoft Clustering**|**Diagramma dei cluster**|Fare clic su un nodo del cluster.|  
 |**Visualizzatore Microsoft Clustering**|**Profili cluster**|Fare clic in un punto qualsiasi della colonna del cluster.|  
-|**Visualizzatore Microsoft Association**|Scheda**Regole** |Fare clic su una riga che contiene un set di regole.|  
-|**Visualizzatore Microsoft Association**|Scheda**Set di elementi** |Fare clic su una riga che contiene un set di elementi.|  
-|**Visualizzatore Microsoft Sequence Clustering**|Scheda**Regole** |Fare clic su una riga che contiene un set di regole.|  
-|**Visualizzatore Microsoft Sequence Clustering**|Scheda**Set di elementi** |Fare clic su una riga che contiene un set di elementi.|  
+|**Visualizzatore Microsoft Association**|Scheda**Regole**|Fare clic su una riga che contiene un set di regole.|  
+|**Visualizzatore Microsoft Association**|Scheda**Set di elementi**|Fare clic su una riga che contiene un set di elementi.|  
+|**Visualizzatore Microsoft Sequence Clustering**|Scheda**Regole**|Fare clic su una riga che contiene un set di regole.|  
+|**Visualizzatore Microsoft Sequence Clustering**|Scheda**Set di elementi**|Fare clic su una riga che contiene un set di elementi.|  
   
 > [!NOTE]  
->  Con alcuni modelli non è consentito l'utilizzo del drill-through. La possibilità di eseguire il drill-through dipende dall'algoritmo utilizzato per creare il modello: Per un elenco dei tipi di modelli di data mining che supportano il drill-through, vedere [Drillthrough Queries &#40;Data Mining&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
+>  Con alcuni modelli non è consentito l'utilizzo del drill-through. La possibilità di eseguire il drill-through dipende dall'algoritmo utilizzato per creare il modello: Per un elenco dei tipi di modelli di data mining che supportano il drill-through, vedere [Query drill-through &#40;Data Mining&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
 ### <a name="to-view-drillthrough-data-from-a-mining-model"></a>Per visualizzare i dati del drill-through da un modello di data mining  
   
@@ -55,6 +55,6 @@ ms.locfileid: "34015128"
 6.  Per copiare i dati negli Appunti, fare clic con il pulsante destro del mouse su qualsiasi riga nella tabella e selezionare **Copia tutto**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining query drill-through & #40; & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+ [Query drill-through &#40;Data Mining&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
   

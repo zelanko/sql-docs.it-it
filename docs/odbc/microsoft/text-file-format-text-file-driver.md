@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cd2bc95e6fe5468e88fc61dd8ed4adcd985ec052
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 51619902398f0e3d0a8307a0c76a40ab898ce88d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633016"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912439"
 ---
 # <a name="text-file-format-text-file-driver"></a>Formato file di testo (driver file di testo)
 Il driver ODBC testo supporta entrambi i file di testo a larghezza fissa che quelli delimitati. Un file di testo è costituito da una riga di intestazione facoltativi e zero o più righe di testo.  
@@ -45,7 +44,7 @@ Il driver ODBC testo supporta entrambi i file di testo a larghezza fissa che que
 |parentesi quadre ([])|Elementi facoltativi|  
 |le parentesi graffe ({})|Un elenco di scelte si escludono a vicenda|  
 |le barre verticali (&#124;)|Opzioni si escludono a vicenda separate|  
-|ellipses (...)|Elementi che possono essere ripetuti una o più volte|  
+|puntini di sospensione (...)|Elementi che possono essere ripetuti una o più volte|  
   
  Il formato di un file di testo è:  
   

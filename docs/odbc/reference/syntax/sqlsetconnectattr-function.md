@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 53ab6ddfb8253b1df877c6e20df43f8327f0f2e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd4acd7ce6a33665ce3d32e42328c906aaec3049
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910378"
 ---
 # <a name="sqlsetconnectattr-function"></a>Pagina relativa alla funzione SQLSetConnectAttr
 **Conformità**  
@@ -130,17 +129,17 @@ SQLRETURN SQLSetConnectAttr(
   
 |attribute|Impostare prima o dopo la connessione?|  
 |---------------|-------------------------------------|  
-|SQL_ATTR_ACCESS_MODE|Either[1]|  
+|SQL_ATTR_ACCESS_MODE|[1]|  
 |SQL_ATTR_ASYNC_DBC_EVENT|Prima o dopo|  
-|SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE|Either[4]|  
+|SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE|[4]|  
 |SQL_ATTR_ASYNC_DBC_PCALLBACK|Prima o dopo|  
 |SQL_ATTR_ASYNC_DBC_PCONTEXT|Prima o dopo|  
 |SQL_ATTR_ASYNC_ENABLE|[2]|  
 |SQL_ATTR_AUTO_IPD|Prima o dopo|  
-|SQL_ATTR_AUTOCOMMIT|Either[5]|  
+|SQL_ATTR_AUTOCOMMIT|[5]|  
 |SQL_ATTR_CONNECTION_DEAD|After|  
 |SQL_ATTR_CONNECTION_TIMEOUT|Prima o dopo|  
-|SQL_ATTR_CURRENT_CATALOG|Either[1]|  
+|SQL_ATTR_CURRENT_CATALOG|[1]|  
 |SQL_ATTR_DBC_INFO_TOKEN|After|  
 |SQL_ATTR_ENLIST_IN_DTC|After|  
 |SQL_ATTR_LOGIN_TIMEOUT|Prima|  
@@ -185,7 +184,7 @@ SQLRETURN SQLSetConnectAttr(
 |SQL_ATTR_ENLIST_IN_DTC (ODBC 3.0)|Valore SQLPOINTER che specifica se utilizzare il driver ODBC nelle transazioni distribuite coordinate da Servizi componenti Microsoft.<br /><br /> Passare un oggetto OLE DTC transaction che specifica la transazione da esportare in SQL Server o SQL_DTC_DONE per terminare l'associazione DTC della connessione.<br /><br /> Il client chiama il metodo di Microsoft Distributed Transaction Coordinator (MS DTC) OLE ITransactionDispenser:: BeginTransaction per iniziare una transazione MS DTC e creare un oggetto transazione MS DTC che rappresenta la transazione. L'applicazione chiama quindi SQLSetConnectAttr con l'opzione SQL_ATTR_ENLIST_IN_DTC per associare l'oggetto di transazione alla connessione ODBC. Tutte le attività del database correlate verranno eseguite sotto la protezione della transazione MS DTC. L'applicazione chiama la funzione SQLSetConnectAttr con SQL_DTC_DONE per terminare l'associazione DTC della connessione. Per ulteriori informazioni, vedere la documentazione di MS DTC.|  
 |SQL_ATTR_LOGIN_TIMEOUT (ODBC 1.0)|Un valore SQLUINTEGER corrispondente al numero di secondi di attesa per una richiesta di accesso per il completamento prima di restituire all'applicazione. Il valore predefinito dipende dal driver. Se *ValuePtr* è 0, il timeout è disabilitato e un tentativo di connessione attenderà un tempo illimitato.<br /><br /> Se il timeout specificato supera il timeout massimo di account di accesso nell'origine dati, il driver sostituisce quel valore e restituisce SQLSTATE 01S02 (valore dell'opzione modificato).|  
 |SQL_ATTR_METADATA_ID (ODBC 3.0)|Un valore SQLUINTEGER che determina come vengono trattati gli argomenti stringa di funzioni di catalogo.<br /><br /> Se SQL_TRUE, l'argomento della stringa di funzioni di catalogo sono trattate come identificatori. Nel caso non è significativo. Per le stringhe non delimitate, il driver rimuove spazi iniziali o finali e la stringa è stata ridotta in lettere maiuscole. Per le stringhe delimitato da virgole, il driver rimuove gli spazi iniziali o finali e accetta letteralmente qualsiasi cosa ci sia racchiuso tra i delimitatori. Se uno di questi argomenti è impostato su un puntatore null, la funzione restituisce SQL_ERROR e SQLSTATE HY009 (utilizzo non valido del puntatore null).<br /><br /> Se SQL_FALSE, gli argomenti stringa di funzioni di catalogo non sono trattate come identificatori. Il caso è significativo. Essi possono contenere un criterio di ricerca di stringa o non, a seconda dell'argomento.<br /><br /> Il valore predefinito è SQL_FALSE.<br /><br /> Il *TableType* argomenti del **SQLTables**, che accetta un elenco di valori, non è interessato da questo attributo.<br /><br /> SQL_ATTR_METADATA_ID può anche essere impostati a livello di istruzione. (È l'attributo di connessione solo che è anche un attributo di istruzione).<br /><br /> Per altre informazioni, vedere [argomenti nelle funzioni di catalogo](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).|  
-|SQL_ATTR_ODBC_CURSORS (ODBC 2.0)|Un valore SQLULEN che specifica come il Driver Manager usa la libreria di cursori ODBC:<br /><br /> SQL_CUR_USE_IF_NEEDED = The Driver Manager usa la libreria di cursori ODBC solo se necessario. Se il driver supporta l'opzione SQL_FETCH_PRIOR **SQLFetchScroll**, gestione Driver utilizza le funzionalità di scorrimento del driver. In caso contrario, Usa la libreria di cursori ODBC.<br /><br /> SQL_CUR_USE_ODBC = The Driver Manager usa la libreria di cursori ODBC.<br /><br /> SQL_CUR_USE_DRIVER = The Driver Manager usa le funzionalità di scorrimento del driver. Si tratta dell'impostazione predefinita.<br /><br /> Per altre informazioni sulla libreria di cursori ODBC, vedere [appendice f: Libreria di cursori ODBC](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md). **Avviso:**  La libreria di cursori verrà rimosso in una versione futura di Windows. Evitare di utilizzarla nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che utilizzano attualmente questa funzionalità. Microsoft consiglia di usare le funzionalità del driver del cursore.|  
+|SQL_ATTR_ODBC_CURSORS (ODBC 2.0)|Un valore SQLULEN che specifica come il Driver Manager usa la libreria di cursori ODBC:<br /><br /> SQL_CUR_USE_IF_NEEDED = The Driver Manager usa la libreria di cursori ODBC solo se necessario. Se il driver supporta l'opzione SQL_FETCH_PRIOR **SQLFetchScroll**, gestione Driver utilizza le funzionalità di scorrimento del driver. In caso contrario, Usa la libreria di cursori ODBC.<br /><br /> SQL_CUR_USE_ODBC = The Driver Manager usa la libreria di cursori ODBC.<br /><br /> SQL_CUR_USE_DRIVER = The Driver Manager usa le funzionalità di scorrimento del driver. Questa è l'impostazione predefinita.<br /><br /> Per altre informazioni sulla libreria di cursori ODBC, vedere [appendice f: Libreria di cursori ODBC](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md). **Avviso:**  La libreria di cursori verrà rimosso in una versione futura di Windows. Evitare di utilizzarla nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che utilizzano attualmente questa funzionalità. Microsoft consiglia di usare le funzionalità del driver del cursore.|  
 |SQL_ATTR_PACKET_SIZE (ODBC 2.0)|Un valore SQLUINTEGER che specifica le dimensioni del pacchetto di rete in byte. **Nota:**  Molte origini dati non supportano questa opzione o solo possibile ma restituito non impostare le dimensioni del pacchetto di rete. <br /><br /> Se le dimensioni specificate superano le dimensioni massime o sono inferiore alla dimensione minima dei pacchetti, il driver sostituisce quel valore e restituisce SQLSTATE 01S02 (valore dell'opzione modificato).<br /><br /> Se l'applicazione imposta dimensioni del pacchetto dopo che è già stata stabilita una connessione, il driver restituirà SQLSTATE HY011 (attributo non può essere impostato a questo punto).|  
 |SQL_ATTR_QUIET_MODE (ODBC 2.0)|Un handle di finestra (HWND).<br /><br /> Se l'handle della finestra è un puntatore null, il driver non visualizza alcuna finestra di dialogo.<br /><br /> Se l'handle della finestra non è un puntatore null, deve essere l'handle della finestra principale dell'applicazione. Questa è l'impostazione predefinita. Il driver Usa questo handle per visualizzare le finestre di dialogo. **Nota:**  L'attributo di connessione SQL_ATTR_QUIET_MODE non si applica alle finestre di dialogo visualizzate da **SQLDriverConnect**.|  
 |SQL_ATTR_TRACE (ODBC 1.0)|Un valore SQLUINTEGER indica se eseguire la traccia di gestione Driver:<br /><br /> SQL_OPT_TRACE_OFF = traccia off (impostazione predefinita)<br /><br /> SQL_OPT_TRACE_ON = traccia in<br /><br /> Quando la tracciatura è attivata, gestione Driver scrive ogni chiamata di funzione ODBC al file di traccia. **Nota:**  Quando la tracciatura è attivata, gestione Driver può restituire SQLSTATE IM013 (errore del file di traccia) da qualsiasi funzione. <br /><br /> Un'applicazione specifica un file di traccia con l'opzione SQL_ATTR_TRACEFILE. Se il file esiste già, gestione Driver aggiunge al file. In caso contrario, viene creato il file. Se la tracciatura è acceso e file di traccia non è stato specificato, Driver Manager scrive nel file SQL. LOG nella directory radice.<br /><br /> Un'applicazione può impostare la variabile **ODBCSharedTraceFlag** per abilitare la traccia in modo dinamico. La traccia viene quindi abilitata per tutte le applicazioni ODBC attualmente in esecuzione. Se un'applicazione disattiva la traccia, solo per l'applicazione è stata disattivata.<br /><br /> Se il **traccia** parola chiave nelle informazioni di sistema è impostato su 1 quando un'applicazione chiama **SQLAllocHandle** con un *HandleType* SQL_HANDLE_ENV, traccia è abilitata per tutti gestisce l'eccezione. È abilitata solo per l'applicazione che ha chiamato **SQLAllocHandle**.<br /><br /> La chiamata **SQLSetConnectAttr** con un *attributo* di SQL_ATTR_TRACE non richiede che il *ConnectionHandle* argomento sia valido e non restituisce SQL_ERROR se *ConnectionHandle* è NULL. Questo attributo viene applicato a tutte le connessioni.|  

@@ -1,5 +1,5 @@
 ---
-title: Definire gruppi di membri | Documenti Microsoft
+title: Definire gruppi di membri | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1da226353847409f1d808472dc155cb2055395cd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021078"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179595"
 ---
-# <a name="attribute-properties---define-member-groups"></a>Attributo di proprietà: definire i gruppi di membri
+# <a name="attribute-properties---define-member-groups"></a>Proprietà degli attributi - Definire gruppi di membri
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Se un attributo include un numero elevato di membri, è possibile scegliere di raggruppare tali membri in bucket, riducendo il numero di membri visualizzati dagli utenti durante la ricerca dei dati in una gerarchia. È inoltre possibile determinare il numero di bucket in cui sono raggruppati i membri e impostare uno schema di denominazione per i bucket. Per altre informazioni, vedere [Raggruppare membri di attributo &#40;discretizzazione&#41;](../../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md).  
   

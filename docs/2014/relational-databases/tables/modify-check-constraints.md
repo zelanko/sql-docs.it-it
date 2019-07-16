@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 651b13121653f5627f59bc6a8a11f1e2e49c43b2
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130321"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211849"
 ---
 # <a name="modify-check-constraints"></a>Modifica di vincoli CHECK
   È possibile modificare un vincolo CHECK in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] quando si desidera modificare l'espressione del vincolo o le opzioni che lo abilitano o disabilitano al verificarsi di specifiche condizioni.  
@@ -41,7 +41,7 @@ ms.locfileid: "54130321"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -67,7 +67,7 @@ ms.locfileid: "54130321"
     > [!NOTE]  
     >  Alcuni database dispongono di funzionalità differenti per i vincoli CHECK.  
   
-5.  Scegliere **Chiudi**.  
+5.  Fare clic su **Chiudi**.  
   
 6.  Nel menu **File** scegliere **Salva**_table name_.  
   

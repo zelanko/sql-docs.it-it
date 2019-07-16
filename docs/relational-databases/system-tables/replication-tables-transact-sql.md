@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f89da45bfaaf4c3878fa6535082f5872dcfd04a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3dc89ce68529212246d85bdbafa8d9487b77a067
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499538"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910230"
 ---
 # <a name="replication-tables-transact-sql"></a>Tabelle di replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +91,7 @@ ms.locfileid: "66499538"
  
 |||  
 |-|-|  
-|[conflict_\<schema>_\<table>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
+|[conflict_\<schema > _\<tabella >](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
 |[MSdynamicsnapshotjobs](msdynamicsnapshotjobs-transact-sql.md)             |[MSpeer_response](mspeer-response-transact-sql.md)|
 |[MSdynamicsnapshotviews](msdynamicsnapshotviews-transact-sql.md)           |[MSpeer_topologyrequest](mspeer-topologyrequest-transact-sql.md)|  
 |[MSmerge_altsyncpartners](msmerge-altsyncpartners-transact-sql.md)         |[MSpeer_topologyresponse](mspeer-topologyresponse-transact-sql.md)|  

@@ -1,5 +1,5 @@
 ---
-title: Connettersi in modalità Online a un Database di Analysis Services | Documenti Microsoft
+title: Connettersi in modalità Online a un Database di Analysis Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 612e538ef01040778497242606115a01c6ef6921
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021308"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179010"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>Connettersi in modalità online a un database di Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "34021308"
   
      È possibile digitare il nome del database oppure eseguire una query sul server per visualizzare i database esistenti in tale server.  
   
-5.  Scegliere **OK**.  
+5.  Fare clic su **OK**.  
   
      È ora possibile modificare direttamente qualsiasi oggetto all'interno del database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di Analysis Services progetti e database durante la fase di sviluppo](../../analysis-services/multidimensional-models/work-with-analysis-services-projects-and-databases-in-development.md)   
- [Creazione di modelli multidimensionali tramite SQL Server Data Tools & #40; SSDT & #41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
+ [Utilizzo di progetti e database di Analysis Services durante la fase di sviluppo](../../analysis-services/multidimensional-models/work-with-analysis-services-projects-and-databases-in-development.md)   
+ [Creazione di modelli multidimensionali tramite SQL Server Data Tools &#40;SSDT&#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
   
   

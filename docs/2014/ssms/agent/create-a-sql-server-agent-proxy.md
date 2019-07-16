@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dfaba668e4f2328610656db6a61f01960814bff0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784423"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189513"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>Creazione di un proxy di SQL Server Agent
   In questo argomento viene descritto come creare un proxy SQL Server Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -54,9 +54,9 @@ ms.locfileid: "52784423"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
   
--   Solo i membri del ruolo predefinito del server **sysadmin** sono autorizzati a creare, modificare o eliminare gli account proxy. Gli utenti che non sono membri del **sysadmin** ruolo predefinito del server deve essere aggiunto a uno dei seguenti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente ruoli predefiniti del database nel **msdb** database da usare per i proxy: **SQLAgentUserRole**, **SQLAgentReaderRole**, o **SQLAgentOperatorRole**.  
+-   Solo i membri del ruolo predefinito del server **sysadmin** sono autorizzati a creare, modificare o eliminare gli account proxy. Per poter usare i proxy, gli utenti che non sono membri del ruolo predefinito del server **sysadmin** devono essere aggiunti a uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent nel database **msdb**: **SQLAgentUserRole**, **SQLAgentReaderRole** o **SQLAgentOperatorRole**.  
   
 -   Richiede l'autorizzazione `ALTER ANY CREDENTIAL` se si creano le credenziali oltre al proxy.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "52784423"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- creates credential CatalogApplicationCredential  

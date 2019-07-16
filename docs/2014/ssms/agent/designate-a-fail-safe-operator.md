@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 54ec71df8efab1f60bfb7a5b9af448705e349d28
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760753"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211429"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Impostazione di un operatore alternativo
   Un operatore alternativo è un utente che riceve l'avviso nel caso in cui l'operatore designato non sia raggiungibile. In questo argomento viene descritto come impostare un operatore alternativo per la ricezione di notifiche di avvisi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -49,7 +49,7 @@ ms.locfileid: "52760753"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Solo i membri del ruolo predefinito del server **sysadmin** possono definire operatori alternativi.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -66,7 +66,7 @@ ms.locfileid: "52760753"
   
 5.  Nell'elenco **Operatore** selezionare l'operatore che si vuole rendere alternativo.  
   
-6.  Selezionare qualsiasi o tutte le caselle di controllo seguenti per specificare il modo in cui l'operatore riceverà la notifica: **Messaggio di posta elettronica**, **cercapersone**, o **Net send**.  
+6.  Selezionare una qualsiasi o tutte le caselle di controllo seguenti per specificare il modo in cui l'operatore riceverà la notifica: **Posta elettronica**, **Cercapersone** o **Net Send**.  
   
 7.  Al termine, fare clic su **OK**.  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 21f67a7d-6273-4648-9abd-2236650efa4c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5615f924881b4bf316c208bc47e90e2ba35f0265
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a0f281d1bce5e75b9158a18e1ea97256ba85625
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703033"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917515"
 ---
 # <a name="property-object-properties-methods-and-events"></a>Proprietà dell'oggetto proprietà, metodi ed eventi
 ## <a name="properties"></a>Proprietà  
@@ -31,10 +30,10 @@ ms.locfileid: "66703033"
  [Proprietà Value](../../../ado/reference/ado-api/value-property-ado.md)  
   
 ## <a name="methods"></a>Metodi  
- Nessuna.  
+ No.  
   
 ## <a name="events"></a>Events  
- Nessuna.  
+ No.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)

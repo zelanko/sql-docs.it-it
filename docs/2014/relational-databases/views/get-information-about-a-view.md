@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528436"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211648"
 ---
 # <a name="get-information-about-a-view"></a>Ottenere informazioni su una vista
   Tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] è possibile acquisire informazioni sulla definizione o sulle proprietà di una vista in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Potrebbe essere necessario visualizzare la definizione della vista per determinare come vengono derivati i dati dalle tabelle di origine o per visualizzare i dati definiti dalla vista.  
@@ -50,7 +50,7 @@ ms.locfileid: "52528436"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  L'utilizzo di `sp_helptext` per restituire la definizione di una vista richiede l'appartenenza al ruolo **pubblico** . L'utilizzo di `sys.sql_expression_dependencies` per individuare tutte le dipendenze in una vista richiede l'autorizzazione VIEW DEFINITION sul database e l'autorizzazione SELECT su `sys.sql_expression_dependencies` per il database. Le definizioni dell'oggetto di sistema, come quelle restituite in SELECT OBJECT_DEFINITION sono visibili pubblicamente.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -213,7 +213,7 @@ ms.locfileid: "52528436"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;  

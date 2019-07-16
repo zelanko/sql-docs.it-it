@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 015ea45d1383e6813973aeb1e4c86451a506a2aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14837bc5ba3368fbb0d33680ee1c54936ab0a224
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213322"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898845"
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (driver ODBC Visual FoxPro)
 > [!NOTE]  
@@ -43,23 +42,23 @@ ms.locfileid: "63213322"
   
  SQL_ALTER_TABLE restituisce SQL_AT_ADD_COLUMN o SQL_AT_DROP_COLUMN.  
   
-## <a name="b"></a>B  
+## <a name="b"></a>b  
  SQL_BOOKMARK_PERSISTENCE restituisce SQL_BP_SCROLL.  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
  SQL_COLUMN_ALIAS restituisce 'Y'.  
   
  SQL_CONCAT_NULL_BEHAVIOR restituisce SQL_CB_NULL.  
   
- SQL_CONVERT_BIGINT returns 0. Il Driver ODBC Visual FoxPro nepodporuje *BigInt*.  
+ SQL_CONVERT_BIGINT restituisce 0. Il Driver ODBC Visual FoxPro nepodporuje *BigInt*.  
   
  SQL_CONVERT_BINARY restituisce 0.  
   
- SQL_CONVERT_BIT returns 0.  
+ SQL_CONVERT_BIT restituisce 0.  
   
  SQL_CONVERT_CHAR restituisce 0.  
   
- SQL_CONVERT_DATE returns 0.  
+ SQL_CONVERT_DATE restituisce 0.  
   
  Sql_convert_decimal riportato restituisce 0.  
   
@@ -77,13 +76,13 @@ ms.locfileid: "63213322"
   
  SQL_CONVERT_REAL restituisce 0.  
   
- SQL_CONVERT_SMALLINT returns 0.  
+ SQL_CONVERT_SMALLINT restituisce 0.  
   
- SQL_CONVERT_TIME returns 0.  
+ SQL_CONVERT_TIME restituisce 0.  
   
- SQL_CONVERT_TIMESTAMP returns 0.  
+ Sql_convert_timestamp riportato restituisce 0.  
   
- SQL_CONVERT_TINYINT returns 0.  
+ SQL_CONVERT_TINYINT restituisce 0.  
   
  SQL_CONVERT_VARBINARY restituisce 0.  
   
@@ -95,7 +94,7 @@ ms.locfileid: "63213322"
   
  SQL_CURSOR_COMMIT_BEHAVIOR restituisce SQL_CB_PRESERVE.  
   
- SQL_CURSOR_ROLLBACK_BEHAVIOR returns SQL_CB_PRESERVE.  
+ SQL_CURSOR_ROLLBACK_BEHAVIOR restituisce SQL_CB_PRESERVE.  
   
 ## <a name="d"></a>D  
  SQL_DATA_SOURCE_NAME restituisce il valore passato come DSN per [SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md), o [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md); restituisce una stringa vuota se non è specificato alcun DSN.  
@@ -118,7 +117,7 @@ ms.locfileid: "63213322"
   
  SQL_DRIVER_HSTMT viene implementato da Gestione Driver.  
   
- SQL_DRIVER_NAME returns "vfpodbc.dll".  
+ SQL_DRIVER_NAME restituisce "vfpodbc".  
   
  SQL_DRIVER_ODBC_VER restituisce "02.50" (SQL_SPEC_MAJOR, SQL_SPEC_MINOR).  
   
@@ -147,7 +146,7 @@ ms.locfileid: "63213322"
  SQL_FILE_USAGE restituisce SQL_FILE_QUALIFIER entrambi per il database (file DBC) e tabella gratuitamente zdroje dat (file con estensione dbf).  
   
 ## <a name="g-h"></a>G-H  
- SQL_GETDATA_EXENSIONS returns:  
+ SQL_GETDATA_EXENSIONS restituisce:  
   
 -   SQL_GD_ANY_COLUMN  
   
@@ -162,13 +161,13 @@ ms.locfileid: "63213322"
 ## <a name="i-j"></a>I-J  
  SQL_IDENTIFIER_CASE restituisce SQL_IC_MIXED.  
   
- SQL_IDENTIFIER_QUOTE_CHAR returns `.  
+ SQL_IDENTIFIER_QUOTE_CHAR restituisce '.  
   
 ## <a name="k"></a>K  
  SQL_KEYWORDS restituisce "".  
   
 ## <a name="l"></a>L  
- SQL_LIKE_ESCAPE_CLAUSE returns 'N'.  
+ SQL_LIKE_ESCAPE_CLAUSE restituisce ' n '.  
   
  SQL_LOCK_TYPES restituisce SQL_LCK_NO_CHANGE.  
   
@@ -177,7 +176,7 @@ ms.locfileid: "63213322"
   
  SQL_MAX_CHAR_LITERAL_LEN restituisce 254.  
   
- SQL_MAX_COLUMN_NAME_LEN returns 128.  
+ SQL_MAX_COLUMN_NAME_LEN restituisce 128.  
   
  SQL_MAX_COLUMNS_IN_GROUP_BY restituisce 16.  
   
@@ -189,25 +188,25 @@ ms.locfileid: "63213322"
   
  SQL_MAX_COLUMNS_IN_TABLE restituisce 254.  
   
- SQL_MAX_CURSOR_NAME_LEN returns 254.  
+ SQL_MAX_CURSOR_NAME_LEN restituisce 254.  
   
- SQL_MAX_INDEX_SIZE returns 0.  
+ SQL_MAX_INDEX_SIZE restituisce 0.  
   
- SQL_MAX_OWNER_NAME_LEN returns 0.  
+ SQL_MAX_OWNER_NAME_LEN restituisce 0.  
   
- SQL_MAX_PROCEDURE_NAME_LEN returns 0. Il Driver ODBC Visual FoxPro non consente l'accesso diretto alle procedure di Visual FoxPro archiviati.  
+ SQL_MAX_PROCEDURE_NAME_LEN restituisce 0. Il Driver ODBC Visual FoxPro non consente l'accesso diretto alle procedure di Visual FoxPro archiviati.  
   
  SQL_MAX_QUALIFIER_NAME_LEN restituisce la lunghezza massima del sistema operativo.  
   
- SQL_MAX_ROW_SIZE returns 254^2.  
+ SQL_MAX_ROW_SIZE restituisce 254 ^ 2.  
   
  SQL_MAX_ROW_SIZE_INCLUDES_LONG restituisce ' n '.  
   
- SQL_MAX_STATEMENT_LEN returns 8192.  
+ SQL_MAX_STATEMENT_LEN restituisce 8192.  
   
  SQL_MAX_TABLE_NAME_LEN returns 128.  
   
- SQL_MAX_TABLES_IN_SELECT returns 16.  
+ SQL_MAX_TABLES_IN_SELECT restituisce 16.  
   
  SQL_MAX_USER_NAME_LEN restituisce 0.  
   
@@ -279,9 +278,9 @@ ms.locfileid: "63213322"
   
  SQL_ODBC_VER viene implementato da Gestione Driver.  
   
- SQL_ORDER_BY_COLUMNS_IN_SELECT returns "N".  
+ Restituisce SQL_ORDER_BY_COLUMNS_IN_SELECT "N".  
   
- SQL_OUTER_JOINS returns "N".  
+ Restituisce SQL_OUTER_JOINS "N".  
   
  SQL_OWNER_TERM restituisce "". Il Driver ODBC Visual FoxPro non supporta i proprietari per i relativi oggetti.  
   
@@ -297,7 +296,7 @@ ms.locfileid: "63213322"
  SQL_PROCEDURES restituisce ' n '.  
   
 ## <a name="q"></a>Q  
- SQL_QUALIFIER_LOCATION returns SQL_QL_START.  
+ SQL_QUALIFIER_LOCATION restituisce SQL_QL_START.  
   
  SQL_QUALIFIER_NAME_SEPARATOR restituisce '!' o '\\'. Il separatore tra database e la tabella è '!' per le origini dati connesse al [database](../../odbc/microsoft/visual-foxpro-terminology.md), e '\\' per le origini dati presenti nelle directory dei [libero tabelle](../../odbc/microsoft/visual-foxpro-terminology.md).  
   
@@ -305,7 +304,7 @@ ms.locfileid: "63213322"
   
  SQL_QUALIFIER_USAGE nepodporuje SQL_QU_PRIVILEGE_DEFINITION; Restituisce un oggetto SQL_QU_DML_STATEMENT o SQL_QU_TABLE_DEFINITION.  
   
- SQL_QUOTED_IDENTIFIER_CASE returns SQL_IC_MIXED.  
+ SQL_QUOTED_IDENTIFIER_CASE restituisce SQL_IC_MIXED.  
   
 ## <a name="r"></a>R  
  Restituisce SQL_ROW_UPDATES "N". Il Driver ODBC Visual FoxPro supporta solo in avanti cursori statici.  
@@ -317,7 +316,7 @@ ms.locfileid: "63213322"
   
  SQL_SEARCH_PATTERN_ESCAPE restituisce "\\".  
   
- SQL_SERVER_NAME returns "".  
+ SQL_SERVER_NAME restituisce "".  
   
  SQL_SPECIAL_CHARACTERS returns "~@#$%^".  
   
@@ -382,7 +381,7 @@ ms.locfileid: "63213322"
 ## <a name="t"></a>T  
  SQL_TABLE_TERM restituisce "table".  
   
- SQL_TIMEDATE_ADD_INTERVALS returns:  
+ SQL_TIMEDATE_ADD_INTERVALS restituisce:  
   
 -   SQL_FN_TSI_ SECOND  
   
@@ -448,7 +447,7 @@ ms.locfileid: "63213322"
   
 -   SQL_FN_TD_YEAR .  
   
- SQL_TXN_CAPABLE returns SQL_TC_DML.  
+ SQL_TXN_CAPABLE restituisce SQL_TC_DML.  
   
  SQL_TXN_ISOLATION_OPTION restituisce SQL_TXN_READ_COMMITTED.  
   

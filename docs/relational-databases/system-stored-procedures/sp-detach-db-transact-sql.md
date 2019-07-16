@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1b5dfd9cf062e5767606d83c3beb8a25b36387f1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: eec8b91bbb7d90483b627aebddb7088bc80cb1ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538223"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912888"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +54,13 @@ sp_detach_db [ @dbname= ] 'database_name'
 `[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` Specifica che il file di indice full-text associato al database che si desidera scollegare non verrà eliminato il database durante l'operazione di scollegamento. *KeepFulltextIndexFile* è un **nvarchar(10)** valore e il valore predefinito **true**. Se *KeepFulltextIndexFile* viene **false**, tutti i file di indice full-text associati al database e vengono eliminati i metadati dell'indice full-text, a meno che il database è di sola lettura. Se è NULL oppure **true**, full-text relativi metadati vengono mantenuti.  
   
 > [!IMPORTANT]
->  Il**@keepfulltextindexfile** parametro verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non utilizzare questo parametro in un nuovo progetto di sviluppo e modificare non appena possibile le applicazioni in cui viene attualmente utilizzato.  
+>  Il **@keepfulltextindexfile** parametro verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non utilizzare questo parametro in un nuovo progetto di sviluppo e modificare non appena possibile le applicazioni in cui viene attualmente utilizzato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  Quando un database è scollegato, tutti i suoi metadati vengono eliminati. Se il database predefinito di qualsiasi account di accesso, si aggirava **master** diventa il database predefinito.  
@@ -69,7 +68,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 > [!NOTE]  
 >  Per informazioni su come visualizzare il database predefinito di tutti gli account di accesso, vedere [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). Se si dispone delle autorizzazioni necessarie, è possibile usare [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) per assegnare un nuovo database predefinito a un account di accesso.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrizioni  
  Non è possibile scollegare un database se una delle seguenti condizioni è vera:  
   
 -   Il database è attualmente in uso. Per ulteriori informazioni, vedere la sezione "Come ottenere l'accesso esclusivo" di seguito in questo argomento.  

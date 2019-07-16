@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3dc86f27ab9e111c5d93c91de65c51da9008ba33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228761"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207085"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>Costruzione di istruzioni SQL per i cursori
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client utilizza i cursori del server per implementare le funzionalità di cursore definita nella specifica ODBC. Un'applicazione ODBC controlla il comportamento del cursore tramite [la funzione SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) per impostare gli attributi di istruzione diverso. Di seguito sono indicati gli attributi e le rispettive impostazioni predefinite.  
   
-|attribute|Default|  
+|attribute|Impostazione predefinita|  
 |---------------|-------------|  
 |SQL_ATTR_CONCURRENCY|SQL_CONCUR_READ_ONLY|  
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  
@@ -63,7 +63,7 @@ ms.locfileid: "48228761"
   
  Le istruzioni SQL che non rientrano nelle categorie sopra riportate possono essere eseguite con qualsiasi impostazione degli attributi di istruzione. Il funzionamento è identico con un set di risultati predefinito o con un cursore server.  
   
-## <a name="errors"></a>Errori  
+## <a name="errors"></a>Errors  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 e versioni successive un tentativo di eseguire un'istruzione che produce più set di risultati genera SQL_SUCCESS_WITH INFO e il messaggio seguente:  
   
 ```  

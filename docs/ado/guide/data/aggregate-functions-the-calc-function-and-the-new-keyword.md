@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0a72cf80f9fee9c887e7805f3a2a5bd542d7f47c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a7ed836b9b57ddd690dd85dd94cc12cb967c472
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926003"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Funzioni di aggregazione, funzione CALC e parola chiave NEW
 Il data shaping supporta le funzioni seguenti. Il nome assegnato al capitolo contenente la colonna da utilizzare è il *capitolo-alias*.  

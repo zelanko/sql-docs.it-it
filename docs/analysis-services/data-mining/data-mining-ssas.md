@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 163314576f609d6fc34ba55b05eff841d1361182
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185097"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210111"
 ---
 # <a name="data-mining-ssas"></a>Data mining (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,21 +32,21 @@ ms.locfileid: "54185097"
 ## <a name="key-data-mining-features"></a>Caratteristiche principali del data mining  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In Data Mining di SQL Server sono disponibili le caratteristiche seguenti per il supporto di soluzioni di data mining integrate:  
   
--   Più origini dei dati: È possibile usare qualsiasi origine dati tabulari per data mining, inclusi file di testo e fogli di calcolo. È anche possibile eseguire il processo di data mining di cubi OLAP creati in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Tuttavia, non è possibile usare i dati di un database in memoria.  
+-   Più origini dati: È possibile usare qualsiasi origine dati tabulari per data mining, inclusi file di testo e fogli di calcolo. È anche possibile eseguire il processo di data mining di cubi OLAP creati in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Tuttavia, non è possibile usare i dati di un database in memoria.  
   
 -   Pulizia dati integrata, gestione dati e generazione di report: in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili strumenti avanzati per il profiling e la pulizia dei dati. È possibile creare processi ETL per la pulizia dei dati in preparazione per la modellazione e ssISnoversion facilita la ripetizione del training e l'aggiornamento dei modelli.  
   
 -   Più algoritmi personalizzabili: Oltre a fornire algoritmi quali quelli di clustering, reti neurali e alberi delle decisioni, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining supporta lo sviluppo di algoritmi plug-in personalizzati.  
   
--   Infrastruttura di test del modello: testare i modelli e i set di dati usando importanti strumenti statistici come la convalida incrociata, le matrici di classificazione, i grafici di accuratezza e a dispersione. Creare e gestire facilmente i set di testing e di training.  
+-   Infrastruttura di test del modello: Testare i modelli e set di dati utilizzando importanti strumenti statistici come la convalida incrociata, le matrici di classificazione, i grafici di accuratezza e a dispersione. Creare e gestire facilmente i set di testing e di training.  
   
--   Esecuzione di query e drill-through: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining fornisce il linguaggio DMX per l'integrazione di query di stima nelle applicazioni. È anche possibile recuperare statistiche dettagliate e schemi dai modelli ed eseguire il drill-through nei dati del case.  
+-   L'esecuzione di query e drill-through: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining fornisce il linguaggio DMX per l'integrazione di query di stima nelle applicazioni. È anche possibile recuperare statistiche dettagliate e schemi dai modelli ed eseguire il drill-through nei dati del case.  
   
--   Strumenti client: oltre agli strumenti di sviluppo e progettazione forniti da SQL Server, è possibile usare i componenti aggiuntivi Data mining per Excel per creare ed esplorare i modelli, nonché per eseguirvi query. In alternativa creare client personalizzati, inclusi i servizi Web.  
+-   Strumenti client: Oltre a questi prodotti di sviluppo e progettazione forniti da SQL Server, è possibile usare i componenti aggiuntivi Data Mining per Excel per creare, interrogare ed esplorare i modelli. In alternativa creare client personalizzati, inclusi i servizi Web.  
   
--   Supporto del linguaggio di scripting e API gestita: tutti gli oggetti di data mining sono completamente programmabili. La generazione di script è possibile tramite MDX, XMLA o le estensioni PowerShell per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Utilizzare il linguaggio DMX (Data Mining Extensions) per eseguire query e generare script velocemente.  
+-   Supporto di lingue Scripting e API gestita: Tutti gli oggetti di data mining sono completamente programmabili. La generazione di script è possibile tramite MDX, XMLA o le estensioni PowerShell per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Utilizzare il linguaggio DMX (Data Mining Extensions) per eseguire query e generare script velocemente.  
   
--   Sicurezza e distribuzione: tramite [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene fornita la sicurezza basata su ruoli, incluse autorizzazioni separate relative al drill-through per i dati del modello e della struttura. Distribuzione semplice di modelli agli altri server, in modo che gli utenti possano accedere agli schemi o effettuare stime  
+-   Sicurezza e distribuzione: Fornisce la protezione basata sui ruoli tramite [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], incluse autorizzazioni separate relative al drill-through nella struttura e modello di dati. Distribuzione semplice di modelli agli altri server, in modo che gli utenti possano accedere agli schemi o effettuare stime  
   
 ## <a name="in-this-section"></a>In questa sezione  
  Negli argomenti di questa sezione sono illustrate le caratteristiche principali di Data mining di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e le attività correlate.  

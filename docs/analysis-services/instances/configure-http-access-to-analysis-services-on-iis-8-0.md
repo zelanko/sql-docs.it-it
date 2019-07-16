@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b2e318d8426f9c78e0065377dcb27a6186e31c0d
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079467"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182083"
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>Configurare l'accesso HTTP ad Analysis Services in IIS 8.0
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "56079467"
   
 -   **Sviluppo di applicazioni** | **Estensioni ISAPI**  
   
- Per verificare o aggiungere questi componenti, usare **Gestione server** | **Gestisci** | **Aggiungi ruoli e funzionalità**. Eseguire la procedura guidata fino a **Ruoli server**. Scorrere fino a **Server Web (IIS)**.  
+ Per verificare o aggiungere questi componenti, usare **Gestione server** | **Gestisci** | **Aggiungi ruoli e funzionalità**. Eseguire la procedura guidata fino a **Ruoli server**. Scorrere fino a **Server Web (IIS)** .  
   
 1.  Aprire **Server Web** | **Sicurezza** e scegliere i metodi di autenticazione.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "56079467"
   
  È necessario formattare l'unità per il file system NTFS. Il percorso della cartella creata non deve contenere spazi.  
   
-1.  Copiare i file seguenti, disponibili in \<unità >: \Programmi\Microsoft SQL Server\\< istanza\>\OLAP\bin\isapi: MSMDPUMP.DLL, MSMDPUMP.INI e una cartella Resources.  
+1.  Copiare i file seguenti, disponibili in \<unità >: \Programmi\Microsoft SQL Server\\< istanza\>\OLAP\bin\isapi: MSMDPUMP. DLL, MSMDPUMP. INI e una cartella Resources.  
   
      ![Struttura di cartelle di file MSMDPUMP](../../analysis-services/instances/media/ssas-httpaccess-msmdpumpfilecopy.PNG "struttura di cartelle di file MSMDPUMP")  
   
@@ -104,7 +104,7 @@ ms.locfileid: "56079467"
   
 3.  Incollare i file copiati in precedenza in questa nuova cartella.  
   
-4.  Verificare che nella cartella \inetpub\wwwroot\OLAP nel server Web siano contenuti i file MSMDPUMP.DLL, MSMDPUMP.INI e una cartella Resources. La struttura di cartelle dovrebbe essere simile alla seguente:  
+4.  Verificare che nella cartella \inetpub\wwwroot\OLAP nel server web contiene quanto segue: MSMDPUMP. DLL, MSMDPUMP. INI e una cartella Resources. La struttura di cartelle dovrebbe essere simile alla seguente:  
   
     -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
@@ -167,7 +167,7 @@ ms.locfileid: "56079467"
   
  L'**autenticazione anonima** viene spesso usata durante il test iniziale, perché la relativa semplicità di configurazione consente di convalidare rapidamente la connettività HTTP ad Analysis Services. In soli pochi passaggi è possibile assegnare un account utente univoco come identità, concedere all'account le autorizzazioni in Analysis Services, utilizzare l'account per verificare l'accesso ai dati in un'applicazione client e infine disabilitare l'autenticazione anonima al completamento del test.  
   
- È anche possibile usare l'autenticazione anonima in un ambiente di produzione se gli utenti non hanno account utente di Windows, ma si attengono alle procedure consigliate bloccando le autorizzazioni nel sistema host, come illustrato nell'articolo [Abilitare l'autenticazione anonima (IIS 7)](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx). Assicurarsi che l'autenticazione sia impostata nella directory virtuale e non nel sito Web padre, per ridurre ulteriormente il livello di accesso dell'account.  
+ È anche possibile usare l'autenticazione anonima in un ambiente di produzione se gli utenti non dispongono di account utente di Windows, ma si attengono le procedure consigliate bloccando le autorizzazioni nel sistema host, come illustrato in questo articolo: [Abilitare l'autenticazione anonima (IIS 7)](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx). Assicurarsi che l'autenticazione sia impostata nella directory virtuale e non nel sito Web padre, per ridurre ulteriormente il livello di accesso dell'account.  
   
  Quando è abilitata l'autenticazione anonima, la connessione come utente anonimo è consentita per qualsiasi connessione utente all'endpoint HTTP. Sarà in grado di controllare le connessioni di singolo utente, né utilizzare l'identità dell'utente per selezionare i dati da un modello. Come è possibile vedere, l'utilizzo dell'autenticazione anonima ha impatto su vari aspetti, dalla progettazione dei modelli, all'aggiornamento dei dati e all'accesso a questi ultimi. Tuttavia, se gli utenti non dispongono di un account di accesso di Windows con cui iniziare, è possibile che l'unica opzione disponibile sia l'account anonimo.  
   
@@ -229,7 +229,7 @@ ms.locfileid: "56079467"
   
  Se è stato configurato un oggetto denominato o predefinito di istanza di Analysis Services in ascolto su una porta fissa, è necessario aggiungere il numero di porta al nome del server (ad esempio, \<ServerName > AW-lt;nomeserver>AW-Srv01:55555</nomeserver&gt\</ServerName >) ed è necessario consentire in ingresso connessioni a tale porta nel Firewall di Windows.  
   
-## <a name="step-5-grant-data-access-permissions"></a>Passaggio 5: Concedere le autorizzazioni di accesso ai dati  
+## <a name="step-5-grant-data-access-permissions"></a>Passaggio 5: Concedere le autorizzazioni di accesso  
  Come indicato in precedenza, sarà necessario concedere le autorizzazioni nell'istanza di Analysis Services. A ogni oggetto di database verranno assegnati ruoli mediante i quali viene fornito un livello specificato di autorizzazioni (lettura o lettura/scrittura) e ogni ruolo disporrà di membri costituiti da identità utente di Windows.  
   
  Per impostare le autorizzazioni è possibile utilizzare SQL Server Management Studio. Nella cartella **Database** | **Ruoli** è possibile creare ruoli, specificare le autorizzazioni del database, assegnare l'appartenenza agli account utente e di gruppo Windows, nonché concedere le autorizzazioni di lettura o scrittura per oggetti specifici. In genere, le autorizzazioni di **lettura** per un cubo sono sufficienti per le connessioni client, mediante le quali vengono usati, ma non aggiornati, i dati del modello.  

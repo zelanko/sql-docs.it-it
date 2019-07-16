@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1fc09dc1-9e32-412e-9f43-b8eb8bb483ca
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 34a4ab7327edfb6f6f4204fb457ade97be4f5975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70486a27cfbe5c977d371906da89563059685093
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702923"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927000"
 ---
 # <a name="ado-java-class-wrappers"></a>Wrapper di classe Java ADO
 Questo codice dichiara un'istanza di ADO [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) wrapper di classe e la inizializza, tutti sulla stessa riga del codice. Inoltre, vengono dichiarate le variabili per ognuno degli argomenti in di [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) metodo, in particolare per [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) e [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) (poiché Java non supporta enumerati tipi). Apre e chiude il **Recordset** oggetto. Impostazione Rs1 su NULL semplicemente pianifica tale variabile deve essere rilasciato quando Java viene eseguito il rilascio sistematico e intermittente di oggetti inutilizzati.  

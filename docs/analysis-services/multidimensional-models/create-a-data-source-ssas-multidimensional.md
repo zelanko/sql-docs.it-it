@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2d22e4b3b9c53aa02a7666c929fcba25d2c17ced
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410318"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209085"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Crea un' origine dati (SSAS multidimensionale)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "52410318"
   
          La nuova connessione verrà visualizzata nel riquadro **Connessioni dati** della pagina **Selezione metodo di definizione connessione** della Creazione guidata origine dati.  
   
-6.  Scegliere **Avanti**.  
+6.  Fare clic su **Avanti**.  
   
 7.  In **Impostazioni di rappresentazione**specificare le credenziali di Windows o l'identità utente usata da Analysis Services al momento della connessione all'origine dati esterna. Se si utilizza l'autenticazione del database, queste impostazioni verranno ignorate ai fini della connessione.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "52410318"
   
      L'account specificato deve disporre delle autorizzazioni di lettura per l'origine dati.  
   
-8.  Scegliere **Avanti**.  In **Completamento procedura guidata**immettere il nome di un'origine dati o usare il nome predefinito. Il nome predefinito corrisponde a quello del database specificato nella connessione. Nel riquadro **Anteprima** verrà visualizzata la stringa di connessione per la nuova origine dati.  
+8.  Fare clic su **Avanti**.  In **Completamento procedura guidata**immettere il nome di un'origine dati o usare il nome predefinito. Il nome predefinito corrisponde a quello del database specificato nella connessione. Nel riquadro **Anteprima** verrà visualizzata la stringa di connessione per la nuova origine dati.  
   
 9. Scegliere **Fine**.  La nuova origine dati verrà visualizzata nella cartella **Origini dati** in Esplora soluzioni.  
   

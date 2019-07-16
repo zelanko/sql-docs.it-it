@@ -1,5 +1,5 @@
 ---
-title: Aggiungere colonne a una struttura di Data Mining | Documenti Microsoft
+title: Aggiungere colonne a una struttura di Data Mining | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4c09d4b263dc4e4274888f6cbd8bf1f27103dd8b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016289"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210212"
 ---
 # <a name="add-columns-to-a-mining-structure"></a>Aggiungere colonne a una struttura di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,6 +41,6 @@ ms.locfileid: "34016289"
 >  Se si aggiunge una colonna già esistente, nella struttura verrà inclusa una copia e al nome verrà aggiunto "1". È possibile specificare un nome più descrittivo per la colonna copiata digitandolo nella proprietà **Nome** della colonna della struttura di data mining.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data mining struttura attività e procedure](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Attività e procedure relative alla struttura di data mining](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cb490ab23d146dc8131c16e22b0d63f07b79d482
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058311"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207046"
 ---
 # <a name="processing-results-odbc"></a>Risultati dell'elaborazione (ODBC)
   Dopo l'invio di un'istruzione SQL da parte di un'applicazione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce eventuali dati risultanti come uno o più set di risultati. Un set di risultati è un set di righe e colonne che corrispondono ai criteri della query. Le istruzioni SELECT, le funzioni di catalogo e alcune stored procedure producono un set di risultati reso disponibile a un'applicazione in formato tabulare. Se l'istruzione SQL eseguita è una stored procedure, un batch contenente più comandi o un'istruzione SELECT contenente parole chiave, il numero di set di risultati da elaborare sarà maggiore.  
@@ -62,7 +62,7 @@ ms.locfileid: "48058311"
   
  Il processo che consente di recuperare le righe dall'origine dati e di restituirle alle applicazioni viene denominato recupero.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Determinazione delle caratteristiche di un Set di risultati &#40;ODBC&#41;](determining-the-characteristics-of-a-result-set-odbc.md)  
   

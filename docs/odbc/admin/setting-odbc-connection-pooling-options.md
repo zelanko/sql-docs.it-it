@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15a3efd678d7b1f055daebc31d71d4044ad19eef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43d4fe1ab363326269daf40375e126b930d2548b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198538"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901639"
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>Impostazione di opzioni del pool di connessioni ODBC
 Pool di connessioni consente a un'applicazione usare una connessione da un pool di connessioni che non è necessario ristabilirle per ogni utilizzo. È possibile usare la **pool di connessioni** scheda della finestra di **Amministrazione origine dati ODBC** finestra di dialogo per abilitare e disabilitare il monitoraggio delle prestazioni. Fare doppio clic su un nome di driver per impostare il periodo di timeout di connessione.  

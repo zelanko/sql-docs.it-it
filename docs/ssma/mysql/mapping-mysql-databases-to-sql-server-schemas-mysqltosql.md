@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 40a3cf9db1248292d66d2a296c25c53ccfda002d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 215833c96fae02ae7877e00173fb5a920a47ee0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63311997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908984"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Mapping tra database MySQL e schemi di SQL Server (MySQLToSQL)
 Per impostazione predefinita, SSMA per MySQL consente di migrare tutti gli oggetti in uno schema di MySQL a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database di SQL Azure denominato per lo schema. Tuttavia, è possibile personalizzare il mapping tra gli schemi di MySQL e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o i database di SQL Azure.  

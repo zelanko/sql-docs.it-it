@@ -1,5 +1,5 @@
 ---
-title: Algoritmo Microsoft Sequence Clustering | Documenti Microsoft
+title: Algoritmo Microsoft Sequence Clustering | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d231e1c11e53650b7e76c0c7070bcbc0e0a7fa70
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016458"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182901"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Algoritmo Microsoft Sequence Clustering
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "34016458"
   
  Per informazioni sulla creazione di query in base a un modello di data mining, vedere [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md). Per alcuni esempi su come usare le query con un modello Sequence Clustering, vedere [Esempi di query sul modello di cluster di sequenza](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
 -   Non supporta l'utilizzo del linguaggio PMML (Predictive Model Markup Language) per la creazione di modelli di data mining.  
   
@@ -72,9 +72,9 @@ ms.locfileid: "34016458"
 -   Supporta l'utilizzo di modelli di data mining OLAP e la creazione di dimensioni di data mining.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Riferimento tecnico algoritmo Microsoft Sequence Clustering](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Visualizzare un modello utilizzando il visualizzatore Microsoft Sequence Clustering](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Riferimento tecnico per l'algoritmo Microsoft Sequence Clustering](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [Esempi di query sul modello di cluster di sequenza](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
+ [Visualizzare un modello usando il Visualizzatore Microsoft Sequence Clustering](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
   
