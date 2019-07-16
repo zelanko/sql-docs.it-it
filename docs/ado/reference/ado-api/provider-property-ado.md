@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0ff70e72-0061-4ffc-90fb-e3ea23129bb2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a8c571bf143d4aa68fc5785b91929635864e9ce8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fae46773befb13105ed9dcd81b1116be48cf0675
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931454"
 ---
 # <a name="provider-property-ado"></a>Proprietà Provider (ADO)
 Indica il nome del provider per un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto.  
@@ -45,4 +44,4 @@ Indica il nome del provider per un [connessione](../../../ado/reference/ado-api/
  [Esempio di proprietà DefaultDatabase (VB) e provider](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [Esempio di proprietà DefaultDatabase (VB) e provider](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [Provider Microsoft OLE DB per ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)   
- [Appendice A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Appendice A: provider](../../../ado/guide/appendixes/appendix-a-providers.md)

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4329b8fcbddb0050f529e401da8d6c7c14f065d9
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: 5016f6f556967fa45364460280080ca829e521b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58080273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936886"
 ---
 # <a name="sysdmexectextqueryplan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sys.dm_exec_text_query_plan
   
 ## <a name="arguments"></a>Argomenti  
 *plan_handle*  
-È un token che identifica in modo univoco un piano di esecuzione di query per un batch che ha eseguito e il piano risiede nella cache dei piani o attualmente in esecuzione. *plan_handle* viene **varbinary(64)**.   
+È un token che identifica in modo univoco un piano di esecuzione di query per un batch che ha eseguito e il piano risiede nella cache dei piani o attualmente in esecuzione. *plan_handle* viene **varbinary(64)** .   
 
 Il *plan_handle* può essere ottenuto dagli oggetti a gestione dinamica seguenti: 
   
@@ -110,7 +109,7 @@ Quando viene utilizzata una query ad hoc [semplice](../../relational-databases/q
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-retrieving-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>A. Recupero del piano della query memorizzato nella cache per un query o un batch Transact-SQL con esecuzione prolungata  
+### <a name="a-retrieving-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>R. Recupero del piano della query memorizzato nella cache per un query o un batch Transact-SQL con esecuzione prolungata  
  Se l'esecuzione di una query o un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] risulta prolungata in una particolare connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile recuperare il piano di esecuzione di tale query o batch per individuare le cause del ritardo. Nell'esempio seguente viene illustrato come recuperare il piano Showplan per una query o un batch con esecuzione prolungata.  
   
 > [!NOTE]  
@@ -145,7 +144,7 @@ FROM sys.dm_exec_text_query_plan (0x06000100A27E7C1FA821B10600,0,-1);
 GO  
 ```  
   
-### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>b. Recupero di tutti i piani di query dalla cache dei piani  
+### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>B. Recupero di tutti i piani di query dalla cache dei piani  
  Per recuperare uno snapshot di tutti i piani di query disponibili nella cache dei piani, è possibile recuperare gli handle per tutti i piani di query nella cache eseguendo una query sulla vista a gestione dinamica `sys.dm_exec_cached_plans`. Gli handle dei piani sono archiviati nella colonna `plan_handle` della vista `sys.dm_exec_cached_plans`. È quindi necessario utilizzare l'operatore CROSS APPLY per passare gli handle dei piani a `sys.dm_exec_text_query_plan` come illustrato di seguito. L'output Showplan per ogni piano disponibile nella cache dei piani è nel `query_plan` colonna della tabella restituita.  
   
 ```sql  

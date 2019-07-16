@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f60ce03d303941855b0b1eaa242b03966db1e79f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8aa762af8e08c72f7f00369219771c371ce39aac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946108"
 ---
 # <a name="xqueries-involving-hierarchy"></a>Esecuzione di query XQuery che coinvolgono gerarchie
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,10 +29,10 @@ ms.locfileid: "51670840"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. Recupero delle posizioni dei centri di lavorazione, insieme al primo passaggio di produzione eseguito in tali centri, dai documenti contenenti le istruzioni per la produzione  
+### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>R. Recupero delle posizioni dei centri di lavorazione, insieme al primo passaggio di produzione eseguito in tali centri, dai documenti contenenti le istruzioni per la produzione  
  Per il modello di prodotto 7, la query costruisce codice XML che include il <`ManuInstr`> elemento, con **ProductModelID** e **ProductModelName** attributi e uno o più <`Location`> elementi figlio.  
   
- Ogni elemento <`Location`> ha un proprio set di attributi e un elemento figlio <`step`>. L'elemento figlio <`step`>; corrisponde al primo passaggio di produzione eseguito nel centro di lavorazione.  
+ Ogni <`Location`> elemento ha un proprio set di attributi e un <`step`> elemento figlio. In questo <`step`> elemento figlio è il primo passaggio di produzione nel centro di lavorazione.  
   
 ```sql
 SELECT Instructions.query('  
@@ -62,7 +61,7 @@ WHERE ProductModelID=7
   
 -   Il **Column** viene usato per includere un valore relazionale nel codice XML che viene costruito.  
   
--   Nella creazione dell'elemento <`Location`> $wc/@* recupera tutti gli attributi dei centri di lavorazione.  
+-   Nella costruzione di <`Location`> elemento $wc/@* recupera tutti gli attributi della posizione center lavoro.  
   
 -   Il **String ()** funzione restituisce il valore di stringa dal <`step`> elemento.  
   
@@ -85,7 +84,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B. Ricerca di tutti i numeri di telefono nella colonna AdditionalContactInfo  
- La query seguente recupera i numeri di telefono aggiuntivi per un determinato contatto presso un cliente cercando l'elemento <`telephoneNumber`> nell'intera gerarchia. Poiché l'elemento <`telephoneNumber`> può presentarsi ovunque nella gerarchia, la query utilizza l'operatore descendant and self (//).  
+ La query seguente recupera i numeri di telefono aggiuntivi per un contatto specifico cliente cercando l'intera gerarchia per la <`telephoneNumber`> elemento. Poiché il <`telephoneNumber`> elemento può trovarsi in qualsiasi punto della gerarchia, la query Usa l'operatore descendant and self (/ /) nella ricerca.  
   
 ```sql
 SELECT AdditionalContactInfo.query('  
@@ -99,7 +98,7 @@ FROM  Person.Contact
 WHERE ContactID = 1  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```xml
 \<act:number   
@@ -112,9 +111,9 @@ WHERE ContactID = 1
 \</act:number>  
 ```  
   
- Per recuperare solo i numeri di telefono di livello principale, in particolare gli elementi figlio <`telephoneNumber`> di <`AdditionalContactInfo`>, l'espressione FOR utilizzata nella query viene modificata come segue:  
+ Per recuperare solo i numeri di telefono principale, in particolare il <`telephoneNumber`> elementi figlio di <`AdditionalContactInfo`>, l'espressione FOR utilizzata nella query diventa  
   
- `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber` (Indici per tabelle con ottimizzazione per la memoria).  
+ `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali su XQuery](../xquery/xquery-basics.md)   

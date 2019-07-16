@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d5c63b6e2f128871740f816cf0772f44646e31f3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 51c1898ddaee1ecf878944a3b43c3d8adbb38590
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946174"
 ---
 # <a name="xml-construction-xquery"></a>Costruzione di strutture XML (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- Anche se la costruzione di elementi da espressioni costanti, come illustrato in questo esempio, può risultare utile, il punto forte di questa caratteristica del linguaggio XQuery è costituito dalla possibilità di costruire strutture XML che estraggono i dati da un database in modo dinamico. È possibile utilizzare le parentesi graffe per specificare le espressioni di query. Nel codice XML risultante l'espressione viene sostituita dal relativo valore. Ad esempio, la query seguente crea un elemento <`NewRoot`> con un elemento figlio (<`e`>). Il valore dell'elemento <`e`> viene calcolato specificando un'espressione di percorso fra parentesi graffe ("{...}").  
+ Anche se la costruzione di elementi da espressioni costanti, come illustrato in questo esempio, può risultare utile, il punto forte di questa caratteristica del linguaggio XQuery è costituito dalla possibilità di costruire strutture XML che estraggono i dati da un database in modo dinamico. È possibile utilizzare le parentesi graffe per specificare le espressioni di query. Nel codice XML risultante l'espressione viene sostituita dal relativo valore. Ad esempio, la query seguente crea un <`NewRoot`> elemento con un elemento figlio (<`e`>). Il valore dell'elemento <`e`> viene calcolato specificando un'espressione di percorso fra parentesi graffe ("{...}").  
   
 ```sql
 DECLARE @x xml;  
@@ -137,7 +136,7 @@ SELECT @y;
 <NewRoot> Hello, I can use { and  } as part of my text</NewRoot>  
 ```  
   
- La query seguente è un altro esempio di creazione di elementi mediante il costruttore diretto di elementi. Il valore dell'elemento <`FirstLocation`> viene ottenuto eseguendo l'espressione fra parentesi graffe. L'espressione della query restituisce le fasi di produzione nel primo centro di lavorazione dalla colonna Instructions della tabella Production.ProductModel.  
+ La query seguente è un altro esempio di creazione di elementi mediante il costruttore diretto di elementi. Inoltre, il valore della <`FirstLocation`> elemento viene ottenuto eseguendo l'espressione fra parentesi graffe. L'espressione della query restituisce le fasi di produzione nel primo centro di lavorazione dalla colonna Instructions della tabella Production.ProductModel.  
   
 ```sql
 SELECT Instructions.query('  
@@ -235,7 +234,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- L'elemento costruito <`ProductModel`> ha un attributo ProductModelID e i nodi figlio seguenti:  
+ L'elemento costruito <`ProductModel`> ha un attributo ProductModelID e i nodi figlio:  
   
 -   Un nodo di testo, `This is product model catalog description.`  
   
@@ -337,7 +336,7 @@ where ProductModelID=7;
     SELECT @x.query( '<a attr="{/x}{/x}"/>' )  
     ```  
   
--   Le sequenze eterogenee non sono supportate. Qualsiasi tentativo di assegnare una sequenza eterogenea come valore di attributo provocherà la restituzione di un errore, come illustrato nell'esempio seguente. In questo esempio una sequenza eterogenea, una stringa "Item" e un elemento <`x`> vengono specificati come valore di attributo:  
+-   Le sequenze eterogenee non sono supportate. Qualsiasi tentativo di assegnare una sequenza eterogenea come valore di attributo provocherà la restituzione di un errore, come illustrato nell'esempio seguente. In questo esempio, una sequenza eterogenea, una stringa "Item" e un elemento <`x`>, viene specificato come valore dell'attributo:  
   
     ```sql
     DECLARE @x xml  
@@ -382,7 +381,7 @@ where ProductModelID=7;
 -   Nel prologo della XQuery.  
   
 #### <a name="using-a-namespace-declaration-attribute-to-add-namespaces"></a>Utilizzo di un attributo di dichiarazione dello spazio dei nomi per l'aggiunta degli spazi dei nomi  
- Nell'esempio seguente viene utilizzato un attributo di dichiarazione dello spazio dei nomi nella costruzione dell'elemento <`a`> per la dichiarazione di uno spazio dei nomi predefinito. La costruzione dell'elemento figlio <`b`> annulla la dichiarazione dello spazio dei nomi predefinito dichiarato nell'elemento padre.  
+ L'esempio seguente usa un attributo di dichiarazione dello spazio dei nomi nella costruzione dell'elemento <`a`> per dichiarare uno spazio dei nomi predefinito. La costruzione dell'elemento figlio <`b`> Annulla la dichiarazione dello spazio dei nomi predefinito dichiarato nell'elemento padre.  
   
 ```sql
 declare @x xml  
@@ -401,7 +400,7 @@ select @x.query( '
 </a>  
 ```  
   
- È possibile assegnare allo spazio dei nomi un prefisso, specificandolo nella costruzione dell'elemento <`a`>.  
+ È possibile assegnare allo spazio dei nomi un prefisso, Specificandolo nella costruzione dell'elemento <`a`>.  
   
 ```sql
 declare @x xml  
@@ -420,7 +419,7 @@ select @x.query( '
 </x:a>  
 ```  
   
- È possibile annullare la dichiarazione di uno spazio dei nomi predefinito nella costruzione di strutture XML, ma non di un prefisso di spazio dei nomi. La query seguente restituisce un errore poiché non è possibile annullare la dichiarazione di un prefisso come specificato nella costruzione dell'elemento <`b`>.  
+ È possibile annullare la dichiarazione di uno spazio dei nomi predefinito nella costruzione di strutture XML, ma non di un prefisso di spazio dei nomi. La query seguente restituisce un errore, perché non è possibile annullare la-dichiara un prefisso come specificato nella costruzione dell'elemento <`b`>.  
   
 ```sql
 declare @x xml  
@@ -431,7 +430,7 @@ select @x.query( '
   </x:a>' )  
 ```  
   
- Il nuovo spazio dei nomi costruito è disponibile per l'utilizzo all'interno della query. Ad esempio, la query seguente dichiara uno spazio dei nomi nella costruzione dell'elemento <`FirstLocation`>e specifica il prefisso nelle espressioni per i valori di attributo LocationID e SetupHrs.  
+ Il nuovo spazio dei nomi costruito è disponibile per l'utilizzo all'interno della query. Ad esempio, la query seguente dichiara uno spazio dei nomi nella costruzione dell'elemento <`FirstLocation`> e specifica il prefisso nelle espressioni per i valori degli attributi LocationID e SetupHrs.  
   
 ```sql
 SELECT Instructions.query('  
@@ -445,7 +444,7 @@ FROM  Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Si noti che un nuovo prefisso di spazio dei nomi creato in questo modo sostituirà le dichiarazioni dello spazio dei nomi preesistenti per il prefisso. Ad esempio, la dichiarazione dello spazio dei nomi `AWMI="https://someURI"` nel prologo della query viene sostituita dalla dichiarazione dello spazio dei nomi nell'elemento <`FirstLocation`>.  
+ Si noti che un nuovo prefisso di spazio dei nomi creato in questo modo sostituirà le dichiarazioni dello spazio dei nomi preesistenti per il prefisso. Ad esempio, la dichiarazione dello spazio dei nomi, `AWMI="https://someURI"`, nella query prologo è sottoposto a override dalla dichiarazione dello spazio dei nomi di <`FirstLocation`> elemento.  
   
 ```sql
 SELECT Instructions.query('  
@@ -471,7 +470,7 @@ select @x.query( '
             <a><b xmlns=""/></a>' )  
 ```  
   
- Si noti che nella costruzione dell'elemento <`b`>, il valore dell'attributo di dichiarazione dello spazio dei nomi è specificato da una stringa vuota. In questo modo la dichiarazione dello spazio dei nomi predefinito dichiarato nel padre viene annullata.  
+ Si noti che nella costruzione dell'elemento <`b`>, l'attributo di dichiarazione dello spazio dei nomi è specificato con una stringa vuota come relativo valore. In questo modo la dichiarazione dello spazio dei nomi predefinito dichiarato nel padre viene annullata.  
   
 
 Questo è il risultato:  
@@ -549,7 +548,7 @@ test
   
  **Nota** per un esempio dell'uso di un costruttore di nodi di testo esplicito, vedere l'esempio specifico in [insert &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md).  
   
- Nella query seguente il costrutto XML include un elemento, due attributi, un commento e un'istruzione di elaborazione. Si noti che prima di <`FirstLocation`> viene utilizzata una virgola, perché si sta costruendo una sequenza.  
+ Nella query seguente il costrutto XML include un elemento, due attributi, un commento e un'istruzione di elaborazione. Si noti che viene usata una virgola prima di <`FirstLocation`>, perché viene generata una sequenza.  
   
 ```sql
 SELECT Instructions.query('  

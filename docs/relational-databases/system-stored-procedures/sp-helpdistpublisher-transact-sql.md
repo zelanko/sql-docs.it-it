@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54222842aa51e6904944a8b97507a3368e144612
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5fa9e40e0f83e4d47d4f31cfd43f4215ec60ea49
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526473"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943510"
 ---
 # <a name="sphelpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'` È il server di pubblicazione per cui vengono restituite le proprietà. *server di pubblicazione* viene **sysname**, il valore predefinito è **%**.  
+`[ @publisher = ] 'publisher'` È il server di pubblicazione per cui vengono restituite le proprietà. *server di pubblicazione* viene **sysname**, il valore predefinito è **%** .  
   
 `[ @check_user = ] check_user` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

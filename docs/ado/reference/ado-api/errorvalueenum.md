@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0f9efa743e6e5f9efe99e08001980ab87bf13247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18117be8dccc64f7ed2583170cf062145836f337
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932879"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 Specifica il tipo di errore di run-time di ADO.  

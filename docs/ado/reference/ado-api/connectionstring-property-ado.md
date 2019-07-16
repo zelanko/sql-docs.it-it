@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d31b9ff3a60b746309224b0e0f9669cef229f234
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e391ad7c61bd6c303b0558892435af344a2768fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933495"
 ---
 # <a name="connectionstring-property-ado"></a>Proprietà ConnectionString (ADO)
 Indica le informazioni utilizzate per stabilire una connessione a un'origine dati.  
@@ -36,11 +35,11 @@ Indica le informazioni utilizzate per stabilire una connessione a un'origine dat
   
 |Argomento|Descrizione|  
 |--------------|-----------------|  
-|*Provider=*|Specifica il nome di un provider da utilizzare per la connessione.|  
+|*Provider =*|Specifica il nome di un provider da utilizzare per la connessione.|  
 |*Nome file =*|Specifica il nome di un file specifico del provider (ad esempio, un oggetto origine dati persistenti) che contiene informazioni di connessione predefinite.|  
 |*Provider remoto =*|Specifica il nome di un provider da utilizzare quando si apre una connessione client-side. (Solo servizio dati remoto).|  
 |*Server remoto =*|Specifica il nome del percorso del server da usare quando si apre una connessione client-side. (Solo servizio dati remoto).|  
-|*URL=*|Specifica la stringa di connessione come un URL assoluto che identifica una risorsa, ad esempio un file o directory.|  
+|*URL =*|Specifica la stringa di connessione come un URL assoluto che identifica una risorsa, ad esempio un file o directory.|  
   
  Dopo aver impostato la **ConnectionString** proprietà e aprire il [connessione](../../../ado/reference/ado-api/connection-object-ado.md) dell'oggetto, il provider può modificare il contenuto della proprietà, ad esempio, eseguendo il mapping di nomi degli argomenti definiti da ADO per loro equivalenti per il provider specifico.  
   
@@ -59,8 +58,8 @@ Indica le informazioni utilizzate per stabilire una connessione a un'origine dat
   
 |Provider predefinito di ADO|Sistema operativo Windows|  
 |--------------------------|------------------------------|  
-|MSDASQL<br /><br /> (Per migliorare la leggibilità del codice sorgente, specificare in modo esplicito il nome del provider nella stringa di connessione.)|Windows 2000 (32-bit)<br /><br /> Windows XP (32-bit)<br /><br /> Windows 2003 Server (32 bit)<br /><br /> Windows Vista (32 bit)<br /><br /> Windows Vista Service Pack 1 o versioni successive (32 bit e 64 bit)<br /><br /> Versioni di Windows dopo Windows Vista (32 bit e 64 bit)|  
-|Nessuna impostazione predefinita.<br /><br /> Quando un'applicazione ADO esegue nei seguenti sistemi operativi e non specifica il provider in modo esplicito, ADO restituisce l'errore seguente: "ADODB. Connessione: provider non è specificato e non vi è alcun provider predefinito designato "|Windows 2000 (64-bit)<br /><br /> Windows XP (64-bit)<br /><br /> Windows 2003 Server (64 bit)<br /><br /> Windows Vista (64-bit)|  
+|MSDASQL<br /><br /> (Per migliorare la leggibilità del codice sorgente, specificare in modo esplicito il nome del provider nella stringa di connessione.)|Windows 2000 (32 bit)<br /><br /> Windows XP (32 bit)<br /><br /> Windows 2003 Server (32 bit)<br /><br /> Windows Vista (32 bit)<br /><br /> Windows Vista Service Pack 1 o versioni successive (32 bit e 64 bit)<br /><br /> Versioni di Windows dopo Windows Vista (32 bit e 64 bit)|  
+|Nessuna impostazione predefinita.<br /><br /> Quando un'applicazione ADO esegue nei seguenti sistemi operativi e non specifica il provider in modo esplicito, ADO restituisce l'errore seguente: "ADODB. Connessione: provider non è specificato e non vi è alcun provider predefinito designato "|Windows 2000 (64 bit)<br /><br /> Windows XP (64 bit)<br /><br /> Windows 2003 Server (64 bit)<br /><br /> Windows Vista (64 bit)|  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
@@ -68,4 +67,4 @@ Indica le informazioni utilizzate per stabilire una connessione a un'origine dat
 ## <a name="see-also"></a>Vedere anche  
  [ConnectionString, ConnectionTimeout ed esempio di proprietà State (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  [Esempio ConnectionString, ConnectionTimeout e proprietà State (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [Appendice A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Appendice A: provider](../../../ado/guide/appendixes/appendix-a-providers.md)

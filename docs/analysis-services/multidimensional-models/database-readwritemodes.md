@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7e80433c224f08b9074a8d1ef93ef96bdc157853
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147166"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178845"
 ---
 # <a name="database-readwritemodes"></a>Proprietà ReadWriteMode del database
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "50147166"
   
 |Modalità ReadOnly|Operazioni con restrizioni|  
 |-------------------|---------------------------|  
-|Comandi XML/A<br /><br /> <br /><br /> Nota: quando si esegue uno di questi comandi, viene generato un errore.|**Create**<br /><br /> **Alter**<br /><br /> **Elimina**<br /><br /> **Process**<br /><br /> **MergePartitions**<br /><br /> **DesignAggregations**<br /><br /> **CommitTransaction**<br /><br /> **Restore**<br /><br /> **Sincronizza**<br /><br /> **Insert**<br /><br /> **Update**<br /><br /> **Drop**<br /><br /> <br /><br /> Nota: il writeback delle celle è consentito nei database impostati in sola lettura, tuttavia non è possibile eseguire il commit delle modifiche.|  
-|Istruzioni MDX<br /><br /> <br /><br /> Nota: quando si esegue una di queste istruzioni, viene generato un errore.|**COMMIT TRAN**<br /><br /> **CREATE SESSION CUBE**<br /><br /> **ALTER CUBE**<br /><br /> **ALTER DIMENSION**<br /><br /> **CREATE DIMENSION MEMBER**<br /><br /> **DROP DIMENSION MEMBER**<br /><br /> **ALTER DIMENSION**<br /><br /> <br /><br /> Nota: gli utenti di Excel non possono usare la caratteristica di raggruppamento nelle tabelle pivot, perché tale caratteristica è implementata internamente tramite comandi **CREATE SESSION CUBE** .|  
-|Istruzioni DMX<br /><br /> <br /><br /> Nota: quando si esegue una di queste istruzioni, viene generato un errore.|**CREATE [SESSION] MINING STRUCTURE**<br /><br /> **ALTER MINING STRUCTURE**<br /><br /> **DROP MINING STRUCTURE**<br /><br /> **CREATE [SESSION] MINING MODEL**<br /><br /> **DROP MINING MODEL**<br /><br /> **IMPORT**<br /><br /> **SELECT INTO**<br /><br /> **INSERT**<br /><br /> **UPDATE**<br /><br /> **DELETE**|  
+|Comandi XML/A<br /><br /> <br /><br /> Nota: Quando si esegue uno di questi comandi, viene generato un errore.|**Creare**<br /><br /> **Alter**<br /><br /> **Elimina**<br /><br /> **Process**<br /><br /> **MergePartitions**<br /><br /> **DesignAggregations**<br /><br /> **CommitTransaction**<br /><br /> **Restore**<br /><br /> **Sincronizza**<br /><br /> **Insert**<br /><br /> **Update**<br /><br /> **Drop**<br /><br /> <br /><br /> Nota: Il writeback delle celle è consentito nei database impostati in sola lettura. Tuttavia, le modifiche non possono essere eseguito il commit.|  
+|Istruzioni MDX<br /><br /> <br /><br /> Nota: Viene generato un errore quando si esegue una di queste istruzioni.|**COMMIT TRAN**<br /><br /> **CREATE SESSION CUBE**<br /><br /> **ALTER CUBE**<br /><br /> **ALTER DIMENSION**<br /><br /> **CREATE DIMENSION MEMBER**<br /><br /> **DROP DIMENSION MEMBER**<br /><br /> **ALTER DIMENSION**<br /><br /> <br /><br /> Nota: Gli utenti di Excel non è possibile utilizzare la caratteristica di raggruppamento nelle tabelle Pivot, perché tale caratteristica è implementata internamente tramite **CREATE SESSION CUBE** comandi.|  
+|Istruzioni DMX<br /><br /> <br /><br /> Nota: Viene generato un errore quando si esegue una di queste istruzioni.|**CREATE [SESSION] MINING STRUCTURE**<br /><br /> **ALTER MINING STRUCTURE**<br /><br /> **DROP MINING STRUCTURE**<br /><br /> **CREATE [SESSION] MINING MODEL**<br /><br /> **DROP MINING MODEL**<br /><br /> **IMPORT**<br /><br /> **SELECT INTO**<br /><br /> **INSERT**<br /><br /> **UPDATE**<br /><br /> **DELETE**|  
 |Operazioni in background|Le operazioni in background che comportano la modifica del database sono disabilitate, ad esempio l'elaborazione lenta e la memorizzazione nella cache attiva.|  
   
 ## <a name="readwritemode-usage"></a>Utilizzo di ReadWriteMode  

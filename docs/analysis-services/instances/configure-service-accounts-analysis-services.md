@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bc968281f9aec0cc86f7b5f8f92fb035d9854af9
-ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47443145"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209539"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurare gli account del servizio (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,18 +33,18 @@ ms.locfileid: "47443145"
 ## <a name="logon-account-recommendations"></a>Indicazioni sull'account di accesso  
  In un cluster di failover, tutte le istanze di Analysis Services devono essere configurate per usare un account utente di dominio Windows. Assegnare lo stesso account a tutte le istanze. Per altre informazioni, vedere [Come eseguire il clustering di Analysis Services](http://msdn.microsoft.com/library/dn736073.aspx) .  
   
- Le istanze autonome devono usare l'account virtuale predefinito **NT Service\MSSQLServerOLAPService** per l'istanza predefinita o **NT Service\MSOLAP$**_nome-istanza_ per un'istanza denominata. Questa indicazione si applica alle istanze di Analysis Services in tutte le modalità del server, presupponendo che venga usato Windows Server 2008 R2 e versioni successive per il sistema operativo e SQL Server 2012 e versioni successive per Analysis Services.  
+ Le istanze autonome devono usare l'account virtuale predefinito **NT Service\MSSQLServerOLAPService** per l'istanza predefinita o **NT Service\MSOLAP$** _nome-istanza_ per un'istanza denominata. Questa indicazione si applica alle istanze di Analysis Services in tutte le modalità del server, presupponendo che venga usato Windows Server 2008 R2 e versioni successive per il sistema operativo e SQL Server 2012 e versioni successive per Analysis Services.  
   
 ## <a name="granting-permissions-to-analysis-services"></a>Concessione di autorizzazioni ad Analysis Services  
  Questa sezione illustra le autorizzazioni richieste da Analysis Services per le operazioni interne locali come, ad esempio, avviare l'eseguibile, leggere il file di configurazione e caricare i database dalla directory dati. Per le indicazioni sull'impostazione delle autorizzazioni per l'accesso ai dati esterni e l'interoperabilità con altri servizi e applicazioni, vedere invece [Concessione di ulteriori autorizzazioni per operazioni del server specifiche](#bkmk_tasks) più avanti in questo argomento.  
   
  Per le operazioni interne, il proprietario delle autorizzazioni in Analysis Services non è l'account di accesso, ma un gruppo di sicurezza di Windows locale creato dal programma di installazione che contiene il SID per servizio. L'assegnazione delle autorizzazioni al gruppo di sicurezza è coerente con le versioni precedenti di Analysis Services. Inoltre, gli account di accesso possono cambiare nel tempo, mentre il SID per servizio e il gruppo di sicurezza locale sono costanti per la durata dell'installazione del server. In Analysis Services è quindi preferibile usare il gruppo di sicurezza anziché l'account di accesso per la gestione delle autorizzazioni. Ogni volta che si concedono manualmente i diritti all'istanza del servizio, indipendentemente dal fatto che si tratti di autorizzazioni del file system o di privilegi di Windows, assicurarsi di concedere le autorizzazioni al gruppo di sicurezza locale creato per l'istanza del server.  
   
- Il nome del gruppo di sicurezza segue uno schema specifico. Il prefisso è sempre **SQLServerMSASUser$**, seguito dal nome del computer, terminando con il nome dell'istanza. L'istanza predefinita è **MSSQLSERVER**. Un'istanza denominata è il nome assegnato durante la configurazione.  
+ Il nome del gruppo di sicurezza segue uno schema specifico. Il prefisso è sempre **SQLServerMSASUser$** , seguito dal nome del computer, terminando con il nome dell'istanza. L'istanza predefinita è **MSSQLSERVER**. Un'istanza denominata è il nome assegnato durante la configurazione.  
   
  È possibile visualizzare questo gruppo di sicurezza nelle impostazioni di sicurezza locali:  
   
--   Eseguire compmgmt. msc | **Utenti e gruppi locali** | **gruppi** | **SQLServerMSASUser$**\<server-name >**$MSSQLSERVER**  (per un'istanza predefinita).  
+-   Eseguire compmgmt. msc | **Utenti e gruppi locali** | **gruppi** | **SQLServerMSASUser$** \<server-name > **$MSSQLSERVER**  (per un'istanza predefinita).  
   
 -   Fare doppio clic sul gruppo di sicurezza per visualizzarne i membri.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "47443145"
   
 |||  
 |-|-|  
-|**Aumento di un working set di processo** (SeIncreaseWorkingSetPrivilege)|Questo privilegio è disponibile per tutti gli utenti per impostazione predefinita tramite il gruppo di sicurezza **Utenti** . Se si blocca un server rimuovendo i privilegi per questo gruppo, Analysis Services potrebbe non avviarsi registrando l'errore seguente: "Il privilegio richiesto non appartiene al client". Quando si verifica questo errore, ripristinare il privilegio in Analysis Services concedendo tale privilegio al gruppo di sicurezza di Analysis Services appropriato.|  
+|**Aumento di un working set di processo** (SeIncreaseWorkingSetPrivilege)|Questo privilegio è disponibile per tutti gli utenti per impostazione predefinita tramite il gruppo di sicurezza **Utenti** . Se Blocca un server rimuovendo i privilegi per questo gruppo, Analysis Services non venga avviato, registrando l'errore: "Un privilegio richiesto non è disponibile dal client." Quando si verifica questo errore, ripristinare il privilegio in Analysis Services concedendo tale privilegio al gruppo di sicurezza di Analysis Services appropriato.|  
 |**Regolazione quote di memoria per un processo** (SeIncreaseQuotaPrivilege)|Questo privilegio viene usato per richiedere una quantità maggiore di memoria se un processo non dispone di risorse sufficienti per completare l'esecuzione, in base alle soglie di memoria stabilite per l'istanza.|  
 |**Blocco di pagine in memoria** (SeLockMemoryPrivilege)|Questo privilegio è necessario solo se il paging è completamente disattivato. Per impostazione predefinita, un'istanza del server tabulare usa il file di paging di Windows, ma è possibile impedirne l'uso impostando **VertiPaqPagingPolicy** su 0.<br /><br /> **VertiPaqPagingPolicy** impostato su 1 (impostazione predefinita) indica all'istanza del server tabulare di usare il file di paging di Windows. Le allocazioni non vengono bloccate consentendo a Windows di eliminare tramite paging le allocazioni in base alle esigenze. Poiché viene usato il paging, non è necessario bloccare le pagine in memoria. Pertanto, per la configurazione predefinita, dove **VertiPaqPagingPolicy** = 1, non è necessario concedere il privilegio **Blocco di pagine in memoria** a un'istanza tabulare.<br /><br /> **VertiPaqPagingPolicy** impostato su 0. Se si disattiva il paging per Analysis Services, le allocazioni vengono bloccate, supponendo che all'istanza tabulare venga concesso il privilegio **Blocco di pagine in memoria** . Con questa impostazione e il privilegio **Blocco di pagine in memoria** , Windows non può eliminare tramite paging le allocazioni di memoria effettuate per Analysis Services quando la quantità di memoria disponibile nel sistema è insufficiente. Analysis Services si basa sul privilegio **Blocco di pagine in memoria** quando si usa **VertiPaqPagingPolicy** = 0. Si noti che non è consigliabile disattivare il paging di Windows. Si aumenta la frequenza di errori di memoria insufficiente per le operazioni che altrimenti potrebbero riuscire se il paging fosse consentito. Per altre informazioni su [VertiPaqPagingPolicy](../../analysis-services/server-properties/memory-properties.md) , vedere **Memory Properties**.|  
   
@@ -69,7 +69,7 @@ ms.locfileid: "47443145"
   
 1.  Eseguire GPEDIT.msc | Criteri del computer locale | Configurazione computer | Impostazioni di Windows | Impostazioni di sicurezza | Criteri locali | Assegnazione diritti utente.  
   
-2.  Verificare i criteri esistenti che includono **SQLServerMSASUser$**. Si tratta di un gruppo di sicurezza locale presente nei computer in cui è installato Analysis Services. A questo gruppo di sicurezza vengono concessi sia i privilegi di Windows che le autorizzazioni alle cartelle di file. Fare doppio clic sul privilegio **Accesso come servizio** per vedere come il gruppo di sicurezza viene specificato nel sistema. Il nome completo del gruppo di sicurezza varia a seconda che Analysis Services sia stato installato come istanza denominata. Quando si aggiungono i privilegi dell'account, usare questo gruppo di sicurezza anziché l'account del servizio effettivo.  
+2.  Verificare i criteri esistenti che includono **SQLServerMSASUser$** . Si tratta di un gruppo di sicurezza locale presente nei computer in cui è installato Analysis Services. A questo gruppo di sicurezza vengono concessi sia i privilegi di Windows che le autorizzazioni alle cartelle di file. Fare doppio clic sul privilegio **Accesso come servizio** per vedere come il gruppo di sicurezza viene specificato nel sistema. Il nome completo del gruppo di sicurezza varia a seconda che Analysis Services sia stato installato come istanza denominata. Quando si aggiungono i privilegi dell'account, usare questo gruppo di sicurezza anziché l'account del servizio effettivo.  
   
 3.  Per aggiungere i privilegi dell'account in GPEDIT, fare clic con il pulsante destro del mouse su **Aumento di un working set di processo** e scegliere **Proprietà**.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "47443145"
   
  Il proprietario delle autorizzazioni per i file di dati, gli eseguibili dei file di programma, i file di configurazioni, i file di log e i file temporanei è un gruppo di sicurezza locale creato dal programma di installazione di SQL Server.  
   
- Per ogni istanza installata viene creato un solo gruppo di sicurezza. Il gruppo di sicurezza è denominato in base all'istanza **SQLServerMSASUser$ MSSQLSERVER** per l'istanza predefinita, o **SQLServerMSASUser$**\<nomeserver >$\< NomeIstanza > per un'istanza denominata. Questo gruppo di sicurezza viene fornito dal programma di installazione con le autorizzazioni per i file necessarie per eseguire le operazioni del server. Se si controllano le autorizzazioni di sicurezza per la directory \MSAS13.MSSQLSERVER\OLAP\BIN, si noterà che il proprietario dell'autorizzazione per la directory in questione è il gruppo di sicurezza, non l'account del servizio né il relativo SID per servizio.  
+ Per ogni istanza installata viene creato un solo gruppo di sicurezza. Il gruppo di sicurezza è denominato in base all'istanza **SQLServerMSASUser$ MSSQLSERVER** per l'istanza predefinita, o **SQLServerMSASUser$** \<nomeserver >$\< NomeIstanza > per un'istanza denominata. Questo gruppo di sicurezza viene fornito dal programma di installazione con le autorizzazioni per i file necessarie per eseguire le operazioni del server. Se si controllano le autorizzazioni di sicurezza per la directory \MSAS13.MSSQLSERVER\OLAP\BIN, si noterà che il proprietario dell'autorizzazione per la directory in questione è il gruppo di sicurezza, non l'account del servizio né il relativo SID per servizio.  
   
  Nel gruppo di sicurezza è incluso solo un membro, vale a dire il SID per servizio dell'account di avvio dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Il programma di installazione aggiunge il SID per servizio al gruppo di sicurezza locale. L'uso di un gruppo di sicurezza locale con l'appartenenza al SID rappresenta una lieve ma percettibile differenza nel modo in cui il programma di installazione di SQL Server esegue il provisioning di Analysis Services rispetto al Motore di database.  
   
@@ -145,8 +145,8 @@ ms.locfileid: "47443145"
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare account di servizio e autorizzazioni di Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [Account del servizio SQL Server e SID Per servizio (Blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
- [SQL Server utilizza un SID del servizio per fornire isolamento dei servizi (articolo KB)](http://support.microsoft.com/kb/2620201)   
+ [Account del servizio SQL Server e SID per servizio (blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
+ [SQL Server utilizza un SID di servizio per fornire l'isolamento dei servizi (articolo KB)](http://support.microsoft.com/kb/2620201)   
  [Token di accesso (MSDN)](/windows/desktop/SecAuthZ/access-tokens)   
  [ID di sicurezza (MSDN)](/windows/desktop/SecAuthZ/security-identifiers)   
  [Token di accesso (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   

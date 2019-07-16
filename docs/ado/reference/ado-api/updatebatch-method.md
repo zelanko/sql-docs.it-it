@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 11c930efdffe5eb685494843f2b0abe7b753ea3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e9d74fe938ce486a4cd15573af8166dbed12ba6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710413"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937848"
 ---
 # <a name="updatebatch-method"></a>Metodo UpdateBatch
 Scrive tutti gli aggiornamenti in blocco in sospeso sul disco.  
@@ -36,10 +35,10 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
   
 #### <a name="parameters"></a>Parametri  
  *AffectRecords*  
- Facoltativo. Un' [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valore che indica il numero di record la **UpdateBatch** saranno influenzati dal metodo.  
+ facoltativo. Un' [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valore che indica il numero di record la **UpdateBatch** saranno influenzati dal metodo.  
   
  *PreserveStatus*  
- Facoltativo. Oggetto **booleana** valore che specifica se le modifiche locali, come indicato dal [stato](../../../ado/reference/ado-api/status-property-ado-recordset.md) proprietà, deve essere eseguito il commit. Se questo valore è impostato su **True**, il **stato** proprietà di ogni record rimane invariato dopo il completamento dell'aggiornamento.  
+ facoltativo. Oggetto **booleana** valore che specifica se le modifiche locali, come indicato dal [stato](../../../ado/reference/ado-api/status-property-ado-recordset.md) proprietà, deve essere eseguito il commit. Se questo valore è impostato su **True**, il **stato** proprietà di ogni record rimane invariato dopo il completamento dell'aggiornamento.  
   
 ## <a name="remarks"></a>Note  
  Usare la **UpdateBatch** metodo quando si modifica un **Recordset** oggetto in modalità di aggiornamento batch per trasmettere tutte le modifiche apportate un **Recordset** oggetto nel database sottostante.  

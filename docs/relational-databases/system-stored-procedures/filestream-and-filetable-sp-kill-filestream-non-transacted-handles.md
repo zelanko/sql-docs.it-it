@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7189499084c40d297f30514ba2f9bf5c01ada510
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 98c986c26c8d0d0cc6e2b8ff3573f0a20d938975
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397644"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942268"
 ---
 # <a name="spkillfilestreamnontransactedhandles-transact-sql"></a>sp_kill_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,14 +52,14 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @h
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-set"></a>Set di risultati  
- Nessuna.  
+ No.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Il *handle_id* richiesto dal **sp_kill_filestream_non_transacted_handles** non è correlato a session_id o all'unità di lavoro che viene usato in altri **kill** comandi.  
   
  Per altre informazioni, vedere [Gestire le tabelle FileTable](../../relational-databases/blob/manage-filetables.md).  
   
-## <a name="metadata"></a>Metadati  
+## <a name="metadata"></a>Metadata  
  Per informazioni sugli handle di file non transazionali aperti, eseguire una query nella vista a gestione dinamica [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).  
   
 ## <a name="security"></a>Sicurezza  

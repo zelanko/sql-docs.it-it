@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129621"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196836"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modifica di relazioni di chiave esterna
   È possibile modificare il lato chiave esterna di una relazione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cambiando la chiave esterna di una tabella vengono modificate le colonne correlate alle colonne della tabella della chiave primaria.  
@@ -53,7 +53,7 @@ ms.locfileid: "54129621"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -82,7 +82,7 @@ ms.locfileid: "54129621"
      Consente di verificare in base al vincolo tutti i dati esistenti nella tabella prima della creazione o della riabilitazione del vincolo.  
   
      **Categoria Specifica tabelle e colonne**  
-     Viene espansa per visualizzare le colonne che fungono da chiave esterna e chiave primaria o univoca nella relazione, nonché le tabelle in cui sono contenute. Per modificare o definire questi valori, fare clic sul pulsante con puntini di sospensione (**...**) a destra del campo della proprietà.  
+     Viene espansa per visualizzare le colonne che fungono da chiave esterna e chiave primaria o univoca nella relazione, nonché le tabelle in cui sono contenute. Per modificare o definire questi valori, fare clic sul pulsante con puntini di sospensione ( **...** ) a destra del campo della proprietà.  
   
      **Tabella di base chiavi esterne**  
      Visualizza la tabella in cui è contenuta la colonna che funge da chiave esterna nella relazione selezionata.  

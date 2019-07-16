@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 33f037f4d82cbf5bbdebde01a5c4492128ecc8ae
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775833"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206024"
 ---
 # <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>Attività Esegui processo di SQL Server Agent (Piano di manutenzione)
   Utilizzare la finestra di dialogo **Attività Esegui processo di SQL Server Agent** per eseguire i processi di Microsoft SQL Server Agent nell'ambito di un piano di manutenzione. Questa opzione non sarà disponibile se la connessione selezionata non contiene alcun processo di SQL Server Agent.  

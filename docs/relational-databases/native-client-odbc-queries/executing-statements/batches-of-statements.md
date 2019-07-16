@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ac0a6d48c8a3492dcbbb260e56405165220c4fc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d9f8a4f0b1a917fdd2fbfc040c4637be88822ee7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662580"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937292"
 ---
 # <a name="batches-of-statements"></a>Batch di istruzioni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Un batch di [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzioni contiene due o più istruzioni, separate da punto e virgola (;), incorporato in una singola stringa passata a **SQLExecDirect** oppure [funzione SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360). Esempio:  
+  Un batch di [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzioni contiene due o più istruzioni, separate da punto e virgola (;), incorporato in una singola stringa passata a **SQLExecDirect** oppure [funzione SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360). Ad esempio:  
   
 ```  
 SQLExecDirect(hstmt,   

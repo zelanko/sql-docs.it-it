@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dea7ec95efc1f560a2279868b2116d02d7ad6fef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926668"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Provider Microsoft OLE DB per Microsoft Panoramica del servizio di indicizzazione
 Il Provider Microsoft OLE DB per Microsoft Indexing Service fornisce l'accesso di sola lettura a livello di codice per file system e i dati Web indicizzati dal servizio di indicizzazione Microsoft. Le applicazioni ADO possono eseguire query SQL per recuperare le informazioni sulle proprietà di contenuto e file.
@@ -77,18 +76,18 @@ MSIDXS
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|lettura/scrittura|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|always **adUseServer**|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|always **adEditNone**|
+|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|sempre **adEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Sola lettura|
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|lettura/scrittura|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lettura/scrittura|
-|[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|non disponibile|
+|[MarshalOptions (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|non disponibile|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|lettura/scrittura|
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|Sola lettura|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|lettura/scrittura|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|Sola lettura|
 |[Origine](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lettura/scrittura|
 |[Stato](../../../ado/reference/ado-api/state-property-ado.md)|Sola lettura|
-|[Stato](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Sola lettura|
+|[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Sola lettura|
 
  \*I segnalibri è necessario attivare il provider per questa funzionalità esiste nel **Recordset**.
 
@@ -108,10 +107,10 @@ MSIDXS
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Yes|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Yes|
 |[Aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Yes|
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|Yes|
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|Yes|
+|[Rieseguire una query](../../../ado/reference/ado-api/requery-method.md)|Yes|
+|[Risincronizzazione](../../../ado/reference/ado-api/resync-method.md)|Yes|
 |[Supporti](../../../ado/reference/ado-api/supports-method.md)|Yes|
-|[Update](../../../ado/reference/ado-api/update-method.md)|no|
+|[Update](../../../ado/reference/ado-api/update-method.md)|No|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|No|
 
  Per dettagli specifici sull'implementazione e informazioni funzionale su Provider Microsoft OLE DB per Microsoft Indexing Service, consultare il [Guida per programmatori OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx), oppure visitare la pagina servizi Web di Windows NT Server Web sito.

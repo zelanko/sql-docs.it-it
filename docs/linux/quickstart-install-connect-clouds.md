@@ -4,18 +4,17 @@ titleSuffix: SQL Server
 description: Questa guida di avvio rapido illustra come eseguire SQL Server in Linux in un cloud a scelta.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 10/25/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 00b2f24de925c1d957e535030079ad0b1e18487d
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 39cde4a4f3b4e970bfe1367432e986c48f55a975
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910526"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>Avvio rapido: Eseguire SQL Server nel cloud
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -25,7 +24,7 @@ In questa Guida introduttiva si installerà SQL Server su Red Hat Enterprise Lin
 > [!NOTE]
 > Se si sceglie di eseguire un'edizione a pagamento di SQL Server, quindi è necessario utilizzare la propria licenza (BYOL).
 
-## <a name="amazon-web-services"></a>Amazon Web Services
+## <a name="amazon-web-services"></a>Servizi Web Amazon
 1.  Creare un AMI Linux con almeno 2 GB di memoria da marketplace 
     * [RHEL 7.3 +](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)

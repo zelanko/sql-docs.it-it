@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 717229c9645384477b89e67b569c15179e9f3bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00c89272d121898b6ac5af75022344acf1dceb28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704902"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923850"
 ---
 # <a name="types-of-cursors-ado"></a>Tipi di cursori (ADO)
 Come regola generale, l'applicazione deve usare il cursore più semplice che fornisce l'accesso ai dati necessari. Ogni caratteristica di cursore aggiuntive oltre le nozioni di base (forward-only, sola lettura, statici, scorrimento, non memorizzato nel buffer) prevede un prezzo - nella memoria del client, il carico di rete o delle prestazioni. In molti casi, le opzioni di cursore predefinito generano un cursore più complesso rispetto a effettivamente necessaria per l'applicazione.  

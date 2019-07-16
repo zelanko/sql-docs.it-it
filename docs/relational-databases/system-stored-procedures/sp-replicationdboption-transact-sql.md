@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 153c2e2b8c75c21451dca3b673129a059d78e3a6
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e8285713df1fb17b2e82dcfa6edac0fd6db5500a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527333"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950668"
 ---
 # <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +41,17 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [**@dbname=**] **'***dbname***'**  
+ [ **@dbname=** ] **'***dbname***'**  
  Database per cui si desidera impostare l'opzione del database di replica. *db_name* viene **sysname**, non prevede alcun valore predefinito.  
   
- [**@optname=**] **'***optname***'**  
+ [ **@optname=** ] **'***optname***'**  
  Opzione del database di replica che si desidera abilitare o disabilitare. *optname* viene **sysname**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
 |**pubblicazione di tipo merge**|Specifica se il database può essere utilizzato per pubblicazioni di tipo merge.|  
 |**publish**|Specifica se il database può essere utilizzato per altri tipi di pubblicazione.|  
-|**subscribe**|Specifica se si tratta di un database di sottoscrizione.|  
+|**la sottoscrizione**|Specifica se si tratta di un database di sottoscrizione.|  
 |**la sincronizzazione con backup**|Specifica se il database è abilitato per il backup coordinato. Per altre informazioni, vedere [attivare backup coordinati per la replica transazionale &#40;programmazione Transact-SQL della replica&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
 `[ @value = ] 'value'` Indica se abilitare o disabilitare l'opzione di database di replica specificato. *valore* viene **sysname**e può essere **true** oppure **false**. Quando questo valore è **false** e *optname* viene **pubblicazione di tipo merge**, vengono eliminate anche le sottoscrizioni per il database pubblicato di tipo merge.  

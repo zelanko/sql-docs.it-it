@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a5db5706af88a657b213e85d97777abe3ef4f744
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203140"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207987"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>Impossibile aggiornare i dati per una connessione dati della cartella di lavoro
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "53203140"
   
 |||  
 |-|-|  
-|Si applica a:|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint|  
+|Si applica a|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint|  
 |Versione prodotto|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Causa|Vedere di seguito.|  
 |Testo del messaggio|Impossibile aggiornare i dati per una connessione dati della cartella di lavoro. Riprovare o contattare l'amministratore di sistema. Impossibile aggiornare le connessioni seguenti: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Dati|  
@@ -40,7 +40,7 @@ ms.locfileid: "53203140"
   
  La cartella di lavoro che si sta provando ad aprire potrebbe essere stata creata con la versione SQL Server 2008 R2 di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel. Molto probabilmente, il provider di dati di Analysis Services specificato nella stringa di connessione dati non è presente sul computer che sta gestendo la richiesta.  
   
- In questo caso, il messaggio si trova nel log ULS: "Aggiornamento non riuscito per ' [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]t dati ' nella cartella di lavoro '\<URL cartella di lavoro >'", seguito da "Impossibile stabilire una connessione".  
+ In questo caso, si troveranno questo messaggio nel log ULS: "Aggiornamento non riuscito per ' [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]t dati ' nella cartella di lavoro '\<URL cartella di lavoro >'", seguito da "Impossibile stabilire una connessione".  
   
  Per determinare la versione della cartella di lavoro, aprirla in Excel e controllare il provider di dati specificato nella stringa di connessione. In una cartella di lavoro SQL Server 2008 R2 viene utilizzato MSOLAP.4 come provider di dati.  
   

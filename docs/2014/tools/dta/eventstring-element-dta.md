@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 30e46515fda5bf03a96e9f1168b470f635698d07
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769513"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211111"
 ---
 # <a name="eventstring-element-dta"></a>Elemento EventString (DTA)
   Specifica il carico di lavoro di uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] direttamente nel file di input XML.  
@@ -39,14 +39,14 @@ ms.locfileid: "52769513"
   
 |attribute|Descrizione|  
 |---------------|-----------------|  
-|`Weight`|Facoltativo. Specifica il fattore di ponderazione, o fattore di importanza, della query per l'evento specificato. Per specificare il fattore di ponderazione, utilizzare un tipo di dati `float`. Ad esempio, `Weight`="100.01". Il valore minimo che è possibile specificare per `Weight` è "0".|  
+|`Weight`|facoltativo. Specifica il fattore di ponderazione, o fattore di importanza, della query per l'evento specificato. Per specificare il fattore di ponderazione, utilizzare un tipo di dati `float`. Ad esempio, `Weight`="100.01". Il valore minimo che è possibile specificare per `Weight` è "0".|  
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
 |Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|`string`, lunghezza illimitata.|  
-|**Valore predefinito**|Nessuna.|  
+|**Valore predefinito**|No.|  
 |**Occorrenza**|Obbligatorio una sola volta se non viene specificato un altro tipo di carico di lavoro. È necessario specificare un elemento figlio `EventString`, `File` o `Database` per l'elemento padre `Workload`, ma è possibile utilizzare un solo tipo. Se ad esempio si specifica un carico di lavoro con l'elemento `EventString`, non sarà possibile specificare anche un carico di lavoro con l'elemento `File` nello stesso file di input XML.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -54,7 +54,7 @@ ms.locfileid: "52769513"
 |Relazione|Elementi|  
 |------------------|--------------|  
 |**Elemento padre**|[Elemento Workload &#40;DTA&#41;](workload-element-dta.md)|  
-|**Elementi figlio**|Nessuna.|  
+|**Elementi figlio**|No.|  
   
 ## <a name="example"></a>Esempio  
  Per un esempio di utilizzo di questo elemento, vedere [Esempio di file di input XML con carico di lavoro inline &#40;DTA&#41;](xml-input-file-sample-with-inline-workload-dta.md).  

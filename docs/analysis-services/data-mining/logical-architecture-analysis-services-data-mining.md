@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2fe6eb33c95c54f7762c8c5c0feb08db87c01df3
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145527"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209930"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>Architettura logica (Analysis Services – Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

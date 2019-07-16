@@ -5,17 +5,16 @@ description: Informazioni sui cluster di big data 2019 di SQL Server (anteprima)
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dd9b649dbb7bf2fc68c34ae22a1d270515756df8
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 166fa1d5b736720b8bab7dff6a8ea56c63a702fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958859"
 ---
 # <a name="what-are-sql-server-big-data-clusters"></a>Cluster di Big Data di SQL Server
 
@@ -78,7 +77,7 @@ Kubernetes è un agente di orchestrazione di contenitori di open source, che è 
 |:--|:--|
 | **Cluster** | Un cluster Kubernetes è un set di computer, noti come nodi. Un nodo controlla il cluster e viene designato del nodo master; i nodi rimanenti sono nodi di lavoro. Il master di Kubernetes è responsabile per la distribuzione del lavoro tra i ruoli di lavoro e per il monitoraggio dell'integrità del cluster. |
 | **Node** | Un nodo esegue le applicazioni nei contenitori. Può trattarsi di un computer fisico o una macchina virtuale. Un cluster Kubernetes può contenere una combinazione di nodi macchina virtuale e computer fisici. |
-| **Pod** | Un pod è l'unità atomica di distribuzione di Kubernetes. Un pod è un gruppo logico di uno o più contenitori- e associate le risorse necessarie per eseguire un'applicazione. Ogni pod viene eseguito su un nodo. un nodo può essere eseguito una o più POD. Il master di Kubernetes assegna automaticamente i POD per i nodi del cluster. |
+| **POD** | Un pod è l'unità atomica di distribuzione di Kubernetes. Un pod è un gruppo logico di uno o più contenitori- e associate le risorse necessarie per eseguire un'applicazione. Ogni pod viene eseguito su un nodo. un nodo può essere eseguito una o più POD. Il master di Kubernetes assegna automaticamente i POD per i nodi del cluster. |
 | &nbsp; ||
 
 Nei cluster di SQL Server i big data, Kubernetes è responsabile per lo stato dei cluster di big data di SQL Server; Kubernetes compila e configura i nodi del cluster, assegna i POD a nodi e monitora l'integrità del cluster.

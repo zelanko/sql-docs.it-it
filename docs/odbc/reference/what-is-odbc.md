@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc9c7a3d9f75e1863d90b16986234e0036229d01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bda4abf9802bd58e81f35bd4223b28f687e89b4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714093"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951791"
 ---
 # <a name="what-is-odbc"></a>Informazioni su ODBC
 Molti pregiudizi ODBC esistono in tutto il mondo informatico. Per l'utente finale, è un'icona nel Pannello di controllo Microsoft® Windows®. Per i programmatori di applicazioni è una libreria che contiene la routine di accesso ai dati. Per molti altri, è la risposta a tutti i problemi di accesso di database che mai immaginato in precedenza.  

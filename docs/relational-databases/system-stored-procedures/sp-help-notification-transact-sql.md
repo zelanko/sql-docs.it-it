@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d003b1f15500b1f6d0b8490d9e712a6a34b100a3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 630c2f90085cedfbb5c59ba395c7d0d9ae9d9643
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538633"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906101"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @object_type = ] 'object_type'` Il tipo di informazioni da restituire. *object_type*viene **char(9)**, non prevede alcun valore predefinito. *object_type* sono ALERTS, con cui sono elencati gli avvisi assegnati al nome dell'operatore specificato *,* operatori, in cui sono elencati gli operatori responsabili del nome dell'avviso specificato o *.*  
+`[ @object_type = ] 'object_type'` Il tipo di informazioni da restituire. *object_type*viene **char(9)** , non prevede alcun valore predefinito. *object_type* sono ALERTS, con cui sono elencati gli avvisi assegnati al nome dell'operatore specificato *,* operatori, in cui sono elencati gli operatori responsabili del nome dell'avviso specificato o *.*  
   
 `[ @name = ] 'name'` Nome di un operatore (se *object_type* è OPERATORS) o nome di un avviso (se *object_type* è ALERTS). *nome* viene **sysname**, non prevede alcun valore predefinito.  
   
@@ -106,7 +105,7 @@ sp_help_notification
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-listing-alerts-for-a-specific-operator"></a>A. Visualizzazione di un elenco di avvisi per un operatore specifico  
+### <a name="a-listing-alerts-for-a-specific-operator"></a>R. Visualizzazione di un elenco di avvisi per un operatore specifico  
  Nell'esempio seguente vengono restituiti tutti gli avvisi per i quali `François Ajenstat` riceve una notifica.  
   
 ```  

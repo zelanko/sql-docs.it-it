@@ -5,17 +5,16 @@ description: Articolo di riferimento per i comandi mssqlctl.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a30f78b24a85f85b85beb914dc0f26af652242fd
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 5567b46376acc5aee6c42cdae19eef133c7af506
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957892"
 ---
 # <a name="mssqlctl"></a>mssqlctl
 
@@ -27,7 +26,7 @@ L'articolo seguente fornisce informazioni di riferimento per la **mssqlctl** del
 |     |     |
 | --- | --- |
 |[app mssqlctl](reference-mssqlctl-app.md) | Creare, eliminare, eseguire e gestire le applicazioni. |
-|[mssqlctl bdc](reference-mssqlctl-bdc.md) | Selezionare, gestire e utilizzare cluster di Big Data di SQL Server. |
+|[mssqlctl integrazione applicativa dei dati](reference-mssqlctl-bdc.md) | Selezionare, gestire e utilizzare cluster di Big Data di SQL Server. |
 |[mssqlctl hdfs](reference-mssqlctl-hdfs.md) | Il modulo HDFS fornisce comandi per accedere a un HDFS del file system. |
 [account di accesso mssqlctl](#mssqlctl-login) | Accedere all'endpoint del cluster controller.
 [disconnessione mssqlctl](#mssqlctl-logout) | Disconnettersi dal cluster.
@@ -61,7 +60,7 @@ Account utente. Se non vuoi usare questo argomento, è possibile impostare la va
 #### `--controller-endpoint -e`
 Controller endpoint cluster "https://host:port". Se non vuoi usare questo argomento, è possibile utilizzare file di configurazione kube nel computer. Assicurarsi che la configurazione si trova nel percorso predefinito di <user home>/.kube/config o l'utilizzo di VAR. env KUBECONFIG
 #### `--accept-eula -a`
-Si accettano le condizioni di licenza? [yes/no]. Se non vuoi usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su 'Sì'
+Si accettano le condizioni di licenza? [sì/no]. Se non vuoi usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su 'Sì'
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.

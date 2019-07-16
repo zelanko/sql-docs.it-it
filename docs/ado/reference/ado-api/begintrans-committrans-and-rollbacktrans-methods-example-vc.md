@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4ac19647-73e7-4edf-9913-25c8fd927e36
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2f9f19cc552209d2ecb35c1339d209cc04feb874
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f99cab327d9171aaa53b6c273c4a519bf13680b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920425"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>BeginTrans, CommitTrans e RollbackTrans esempio di metodi (VC + +)
 Questo esempio viene modificato il tipo di libro di tutti i libri di psicologia nella ***titoli*** tabella del database. Dopo il [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) metodo avvia una transazione che consente di isolare tutte le modifiche apportate al ***titoli*** tabella, il [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) metodo salva le modifiche apportate. È possibile usare la [Rollback](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) metodo per annullare le modifiche salvate tramite il [Update](../../../ado/reference/ado-api/update-method.md) (metodo).  

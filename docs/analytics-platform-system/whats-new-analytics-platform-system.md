@@ -2,19 +2,18 @@
 title: Quali sono le novità nel sistema di piattaforma Analitica - un warehouse dati di tipo scale-out
 description: Vedere quali sono le novità nel sistema di piattaforma Analitica di Microsoft, uno strumento di scalabilità orizzontale in locale che ospita MPP SQL Server Parallel Data Warehouse.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b56791e9fd59aef57c2d107e21eb76896ebb4910
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78b2b0e7fd05bbfa430c7a8939378091850537ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175052"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959809"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Quali sono le novità nel sistema di piattaforma Analitica, di un data warehouse di tipo scale-out MPP
 Vedere Novità gli ultimi aggiornamenti di Appliance per Microsoft Analitica piattaforma di strumenti analitici. I punti di accesso è un'appliance di scalabilità orizzontale in locale che ospita MPP SQL Server Parallel Data Warehouse. 
@@ -167,7 +166,7 @@ APS AU6 supporta questi miglioramenti di compatibilità di T-SQL.  Questi elemen
 
 **Tipi di dati**
 
-- [VARCHAR(MAX)][], [NVARCHAR(MAX)][] e [varbinary (max)][]. Questi tipi di dati LOB hanno una dimensione massima di 2 GB. Per caricare questi oggetti di uso [utilità bcp][]. PolyBase e dwloader non attualmente supportano questi tipi di dati. 
+- [VARCHAR(MAX)][], [nvarchar (max)][] e [varbinary (max)][]. Questi tipi di dati LOB hanno una dimensione massima di 2 GB. Per caricare questi oggetti di uso [utilità bcp][]. PolyBase e dwloader non attualmente supportano questi tipi di dati. 
 - [SYSNAME][]
 - [UNIQUEIDENTIFIER][]
 - [NUMERIC][] e tipi di dati decimale.
@@ -230,7 +229,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 
 [Indici non cluster in indici columnstore cluster]:/sql/t-sql/statements/create-index-transact-sql
 [VARCHAR(MAX)]:/sql/t-sql/data-types/char-and-varchar-transact-sql
-[NVARCHAR(MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
+[NVARCHAR (MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
 [VARBINARY (MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
 [SYSNAME]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
 [SELECT...INTO]:/sql/t-sql/queries/select-into-clause-transact-sql
