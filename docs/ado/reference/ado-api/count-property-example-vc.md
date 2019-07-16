@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 08ef2f2f9989f9b8dc8dc33b94c73f6ab579eab5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73557703a1375128a141de8194929f9284b86930
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919339"
 ---
 # <a name="count-property-example-vc"></a>Esempio della proprietà Count (VC++)
 Questo esempio viene illustrato il [conteggio](../../../ado/reference/ado-api/count-property-ado.md) con due raccolte nelle proprietà il ***dipendente*** database. La proprietà ottiene il numero di oggetti in ogni raccolta e imposta il limite superiore per i cicli di enumerare le raccolte.  

@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 93966909-d758-4d50-950b-f5066d104fa6
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a5df628a6b37c8d89843506c5b7f4c5050157158
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 61593522e09ed86ec10f08a6ad8ff7a941a2e10e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027393"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899351"
 ---
 # <a name="sysdmpdwnodes-transact-sql"></a>sys.dm_pdw_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -28,9 +27,9 @@ ms.locfileid: "56027393"
 |Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|Id numerico univoco associato al nodo.<br /><br /> Chiave per questa visualizzazione.|Deve essere univoco nell'intera appliance, indipendentemente dal tipo.|  
-|Tipo|**nvarchar(32)**|Tipo del nodo.|'GESTIONE DI CALCOLO', 'CONTROL',' '|  
-|NAME|**nvarchar(32)**|Nome logico del nodo.|Qualsiasi stringa di lunghezza appropriato.|  
-|address|**nvarchar(32)**|Indirizzo IP del nodo.|Nel formato [0-255]. [0-255]. [0-255]. [0-255].|  
+|type|**nvarchar(32)**|Tipo del nodo.|'GESTIONE DI CALCOLO', 'CONTROL',' '|  
+|name|**nvarchar(32)**|Nome logico del nodo.|Qualsiasi stringa di lunghezza appropriato.|  
+|Address|**nvarchar(32)**|Indirizzo IP del nodo.|Nel formato [0-255]. [0-255]. [0-255]. [0-255].|  
 |is_passive|**int**|Indica se la macchina virtuale che esegue il nodo è in esecuzione sul server assegnato o ha eseguito il failover al server di riserva.|0 - macchina virtuale del nodo è in esecuzione nel server originale.<br /><br /> 1 - macchina virtuale del nodo è in esecuzione nel server di riserva.|  
 |regione|**nvarchar(32)**|L'area in cui il nodo è in esecuzione.|'PDW', 'HDINSIGHT'|  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d01aeb4d-4e43-450b-b3f2-0c27eaaf9f86
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cbd237580dc8c56284552e6fe2fb00e469832c5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11ab68775e19ec1d3ce3c888917588f41ad65287
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702042"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924632"
 ---
 # <a name="persisting-filtered-and-hierarchical-recordsets"></a>Persistenza di recordset filtrati e gerarchici
 Se il [filtro](../../../ado/reference/ado-api/filter-property.md) proprietà è valida per il **Recordset**, vengono salvate solo le righe accessibili in base al filtro. Se il **Recordset** è di tipo gerarchico, il membro figlio corrente **Recordset** e i relativi elementi figlio viene salvati, incluso l'elemento padre **Recordset**. Se il **salvare** metodo di un elemento figlio **Recordset** viene chiamato, l'elemento figlio e i relativi elementi figlio viene salvati, ma non è l'elemento padre. Per altre informazioni sulle gerarchica **recordset**, vedere [Data Shaping](../../../ado/guide/data/data-shaping.md).  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 67cc4945-4850-4eb4-8da6-b835ddaeca4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6a1f8893351ceb68ebd7c42e3ac82c876c01c10b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9dc741321894ae69a9ffb59738576a01d47628f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901663"
 ---
 # <a name="managing-data-sources"></a>Gestione delle origini dati
 Dopo aver installato un driver ODBC dal programma di installazione del driver, è possibile definire uno o più origini dati per tale. Il nome di origine dati (DSN) deve fornire una descrizione univoca dei dati. ad esempio, *Payroll* oppure *contabilità fornitori*. Sono elencate le origini dati utente e di sistema definiti per tutti attualmente installati i driver nel **DSN utente** o **DSN di sistema** schede della finestra di **Amministrazione origine dati ODBC**finestra di dialogo. Vengono elencate le origini di dati file in una determinata directory nel **DSN su File** scheda; la directory da visualizzare viene immesso nel **Cerca in** nella casella il **DSN su File** scheda.  
@@ -40,7 +39,7 @@ The specified DSN contains an architecture mismatch between the Driver and Appli
   
  Un'origine dati consente di associare un driver ODBC specifico con i dati che si desidera accedere tramite tale driver. Ad esempio, è possibile creare un'origine dati per utilizzare il driver dBASE ODBC per accedere a uno o più file dBASE trovati in una directory specifica sul disco rigido o un'unità di rete. Tramite Amministrazione origine dati ODBC, è possibile aggiungere, modificare ed eliminare origini dati, come descritto nella tabella seguente.  
   
-|Azione|Descrizione|  
+|Action|Descrizione|  
 |------------|-----------------|  
 |Aggiunta di origini dati|È possibile aggiungere più origini dati, ognuno di essi l'associazione di un driver con alcuni dati che si desidera accedere utilizzando tale driver. Assegnare un nome che identifica in modo univoco tale origine dati di ogni origine dati. Ad esempio, se si crea un'origine dati per un set di file dBASE che contengono informazioni sul cliente, è possibile denominare l'origine dati "Customers". Le applicazioni in genere visualizzare nomi di origine dati per gli utenti scelgano da.<br /><br /> Aggiunta di un'origine dati file è leggermente diversa dall'aggiunta di origini dati di sistema o utente. Per altre informazioni, vedere l'amministratore dell'origine dati ODBC file della Guida.|  
 |Modifica delle origini dati|A seconda dei requisiti, si potrebbe essere necessario riconfigurare le origini dati. È possibile reimpostare le opzioni facendo **configura** in qualsiasi finestra di dialogo programma di installazione di driver.|  

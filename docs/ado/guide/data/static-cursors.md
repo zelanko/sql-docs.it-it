@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e8337a6e93aba36e8b5838dcbf6d2e084fe022f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 520c484bdaaa6eb59488900208993a607c5b0f7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700348"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924112"
 ---
 # <a name="static-cursors"></a>Cursori statici
 Un cursore statico Visualizza sempre il risultato impostato com'era quando il cursore è stato aperto. A seconda di implementazione, cursori statici sono di sola lettura o lettura/scrittura e fornire lo scorrimento in avanti e indietro. In genere un cursore statico non vengono rilevate le modifiche apportate per l'appartenenza, ordine o i valori del set di risultati dopo l'apertura del cursore. I cursori statici possono rilevare le proprie operazioni di aggiornamento, eliminazione e inserimento, anche se tale rilevamento non è obbligatorio per cursori di questo tipo.  

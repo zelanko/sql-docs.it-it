@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4b8f08cda158c21d556b251d3e141b333418ca38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 84b90e2c1338c38538d0c33779fb8e3f5cf2af79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704354"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922950"
 ---
 # <a name="basic-rds-programming-model"></a>Modello di programmazione RDS di base
 > [!IMPORTANT]
@@ -46,7 +45,7 @@ ms.locfileid: "66704354"
   
 ## <a name="see-also"></a>Vedere anche  
  [Modello di programmazione RDS in dettaglio](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)   
- [RDS Scenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
+ [Scenario RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Esercitazione su RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Utilizzo e sicurezza per RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)

@@ -12,13 +12,12 @@ dev_langs:
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 500beed65583eea1e1e01b34a3bb585198b219e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a839ffc977981c977c2675f25dae4d505e89b081
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700982"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926051"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>Creazione di istanze di eventi ADO: Visual C++
 Si tratta di una descrizione di come creare un'istanza degli eventi ADO in Microsoft® Visual C++® schematica. Visualizzare [esempio di modello di eventi ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) per una descrizione completa.  

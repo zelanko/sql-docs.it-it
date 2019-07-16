@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4f65aa4dc64e795235286eccd9f3283216ba6f4f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2fc4a61868114f86a198878f5f54a59f3e96a5b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658772"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928436"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM &lt;modello&gt;. CASE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +39,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  *n*  
  Facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
   
- *expression list*  
+ *elenco di espressioni*  
  Elenco di espressioni separate da virgola. Un'espressione può includere identificatori di colonna, funzioni definite dall'utente (UDF), funzioni VBA e altro.  
   
  Per includere una colonna della struttura che non è inclusa nel modello di data mining, utilizzare la funzione `StructureColumn('<structure column name>')`.  

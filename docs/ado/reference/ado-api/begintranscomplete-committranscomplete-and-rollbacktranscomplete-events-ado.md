@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8239a5f9069212b9413216bc3535e3c90e2d5316
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 750e89e97eb916c7db23e71475b753a57a4d90e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920440"
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>BeginTransComplete, CommitTransComplete e RollbackTransComplete (ADO)
 Questi eventi verranno chiamati al termine dell'operazione associato nel [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto termina l'esecuzione.  

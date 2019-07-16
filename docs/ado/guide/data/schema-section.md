@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bb09e954640554c5375539b4104ab58ae71ddaab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b6e591ecc9f366f3914986b0ae11e0e301b782d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924296"
 ---
 # <a name="schema-section"></a>Sezione dello schema
 La sezione dello schema è obbligatoria. Come illustrato nell'esempio precedente, ADO scrive i metadati dettagliati su ogni colonna per mantenere la semantica dei valori dei dati quanto più possibile per l'aggiornamento. Tuttavia, per caricare il file XML, ADO richiede solo i nomi delle colonne e il set di righe a cui appartengono. Di seguito è riportato un esempio di uno schema minimo:  

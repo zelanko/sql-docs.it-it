@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 959cb06535cf1f6530898c7da565ce281bf9df4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f18884c7a1aabe138408cca7eb529f4f21120330
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696169"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919914"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>Raccolte (sintassi ADO per Visual C++)
 ## <a name="parameters"></a>Parametri  
@@ -88,7 +87,7 @@ get_Item(VARIANT Index, ADOField **ppvObject);
   
 -   [Proprietà Item (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
-## <a name="errors"></a>Errori  
+## <a name="errors"></a>Errors  
   
 ### <a name="methods"></a>Metodi  
   
@@ -142,7 +141,7 @@ get_Item(VARIANT Index, ADOProperty **ppvObject);
 -   [Proprietà Item (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Errors Collection (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [Raccolta di errori (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Raccolta di parametri (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Raccolta delle proprietà (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

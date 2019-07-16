@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 67b428a06679bdb0cade14314195d576a1ccc596
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8df204daeda82f809cf50246590141729e3608e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920920"
 ---
 # <a name="ado-methods"></a>Metodi ADO
 
@@ -41,12 +40,12 @@ ms.locfileid: "66696860"
 |[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)|Crea un nuovo **parametro** oggetto contenente le proprietà specificate.|  
 |[Delete (raccolta di parametri ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)|Elimina un oggetto dal **parametri** raccolta.|  
 |[Delete (raccolta Fields ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)|Elimina un oggetto dal **campi** raccolta.|  
-|[Delete (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Elimina il record corrente o un gruppo di record.|  
+|[Delete (Recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Elimina il record corrente o un gruppo di record.|  
 |[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)|Elimina un file o directory e tutte le relative sottodirectory.|  
 |[Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|Esegue la query, l'istruzione SQL o stored procedure specificata nel **CommandText** proprietà.|  
 |[Execute (connessione ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|Esegue la query specificata, SQL istruzione, stored procedure o il testo del provider.|  
-|[Find](../../../ado/reference/ado-api/find-method-ado.md)|Cerca un **Recordset** per la riga che soddisfa i criteri specificati.|  
-|[Flush](../../../ado/reference/ado-api/flush-method-ado.md)|Forza il contenuto del **Stream** rimanenti nel buffer di ADO per l'oggetto sottostante a cui il **Stream** è associato.|  
+|[trovare](../../../ado/reference/ado-api/find-method-ado.md)|Cerca un **Recordset** per la riga che soddisfa i criteri specificati.|  
+|[scaricamento](../../../ado/reference/ado-api/flush-method-ado.md)|Forza il contenuto del **Stream** rimanenti nel buffer di ADO per l'oggetto sottostante a cui il **Stream** è associato.|  
 |[Metodo get_OLEDBCommand](../../../ado/reference/ado-api/get-oledbcommand-method.md)|Restituisce il comando OLE DB sottostanti, prima di tutto la propagazione di tutte le informazioni sui parametri impostata per il comando ADO per comando OLE DB.|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|Restituisce un **Recordset** contenente le righe rappresentano i file e sottodirectory nella directory rappresentata da questo **Record**.|  
 |[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)|Restituisce tutte le o in parte, il contenuto di un testo di grandi dimensioni o dati binari **campo** oggetto.|  
@@ -59,26 +58,26 @@ ms.locfileid: "66696860"
 |[MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)|Sposta un file o una directory e il relativo contenuto, in un'altra posizione.|  
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Cancella l'oggetto corrente **Recordset** dell'oggetto e restituisce il successivo **Recordset** anticipando attraverso una serie di comandi.|  
 |[Open (connessione ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)|Apre una connessione a un'origine dati.|  
-|[Open (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)|Apre un oggetto esistente **Record** dell'oggetto o creare un nuovo file o directory.|  
-|[Open (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Apre un cursore.|  
+|[Open (Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)|Apre un oggetto esistente **Record** dell'oggetto o creare un nuovo file o directory.|  
+|[Open (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Apre un cursore.|  
 |[Aprire (Stream ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)|Consente di aprire una **Stream** oggetto per gestire i flussi di dati binari o testo.|  
 |[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)|Ottiene le informazioni sullo schema di database dal provider.|  
 |[Metodo put_OLEDBCommand](../../../ado/reference/ado-api/put-oledbcommand-method.md)|Questo metodo non esegue alcuna operazione, viene sempre restituito S_OK.|  
 |[Lettura](../../../ado/reference/ado-api/read-method.md)|Legge un numero specificato di byte da un **Stream** oggetto.|  
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|Legge un numero specificato di caratteri da un testo **Stream** oggetto.|  
 |[Aggiorna](../../../ado/reference/ado-api/refresh-method-ado.md)|Aggiorna gli oggetti in una raccolta in modo da riflettere gli oggetti disponibili e specifiche del provider.|  
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|Aggiorna i dati in un **Recordset** oggetto eseguendo nuovamente la query in cui si basa l'oggetto.|  
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|Aggiorna i dati nell'attuale **Recordset** oggetto, o **campi** raccolta di un **Record** oggetto, dal database sottostante.|  
+|[Rieseguire una query](../../../ado/reference/ado-api/requery-method.md)|Aggiorna i dati in un **Recordset** oggetto eseguendo nuovamente la query in cui si basa l'oggetto.|  
+|[Risincronizzazione](../../../ado/reference/ado-api/resync-method.md)|Aggiorna i dati nell'attuale **Recordset** oggetto, o **campi** raccolta di un **Record** oggetto, dal database sottostante.|  
 |[Salvare](../../../ado/reference/ado-api/save-method.md)|Salva il **Recordset** in un file o **Stream** oggetto.|  
 |[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|Salva il contenuto binario di un **Stream** in un file.|  
 |[Seek](../../../ado/reference/ado-api/seek-method.md)|Cerca l'indice di un **Recordset** per individuare rapidamente la riga che corrisponde ai valori specificati e cambia la posizione della riga corrente di tale riga.|  
-|[SetEOS](../../../ado/reference/ado-api/seteos-method.md)|Imposta la posizione che rappresenta la fine del flusso.|  
+|[Metodo SetEOS](../../../ado/reference/ado-api/seteos-method.md)|Imposta la posizione che rappresenta la fine del flusso.|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|Ignora un'intera riga durante la lettura di un flusso di testo.|  
 |[Stat](../../../ado/reference/ado-api/stat-method.md)|Ottiene le informazioni statistiche su un flusso aperto.|  
 |[Supporti](../../../ado/reference/ado-api/supports-method.md)|Determina se un oggetto specificato **Recordset** oggetto supporta un determinato tipo di funzionalità.|  
 |[Update](../../../ado/reference/ado-api/update-method.md)|Salva le modifiche apportate alla riga corrente di un **Recordset** oggetto, o il **campi** raccolta di un **Record** oggetto.|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Scrive tutti gli aggiornamenti in blocco in sospeso sul disco.|  
-|[Write](../../../ado/reference/ado-api/write-method.md)|Scrive dati binari in una **Stream** oggetto.|  
+|[scrittura](../../../ado/reference/ado-api/write-method.md)|Scrive dati binari in una **Stream** oggetto.|  
 |[WriteText](../../../ado/reference/ado-api/writetext-method.md)|Scrive una stringa di testo specificato in un **Stream** oggetto.|  
   
 ## <a name="see-also"></a>Vedere anche  

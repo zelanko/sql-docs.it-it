@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 36fe2a156a7c83e8f884c135f24351371b0af533
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 37ec05a27421b8b55fb0085dbac97ab564bc5bff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032302"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915089"
 ---
 # <a name="sysdatabasefiles-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "56032302"
 |**state_desc**|**nvarchar(60)**|Descrizione dello stato del file:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Per altre informazioni, vedere [Stati del file](../../relational-databases/databases/file-states.md).|  
 |**size**|**int**|Dimensioni del file in pagine da 8 KB.<br /><br /> 0 = Non applicabile<br /><br /> Per uno snapshot del database, il valore size corrisponde allo spazio massimo utilizzabile dallo snapshot per il file.<br /><br /> Per i contenitori del filegroup FILESTREAM, dimensioni riflettono che corrente usato dimensione del contenitore.|  
 |**max_size**|**int**|Dimensioni massime del file espresse in pagine da 8 KB.<br /><br /> 0 = Non è consentito alcun aumento.<br /><br /> -1 = La dimensione del file aumenterà finché il disco è pieno.<br /><br /> 268435456 = La dimensione del file di log aumenterà fino al valore massimo di 2 TB.<br /><br /> Per i contenitori del filegroup FILESTREAM, max_size riflette la dimensione massima del contenitore.<br /><br /> Si noti che i database che vengono aggiornati con una dimensione del file di log senza limiti segnalerà -1 per le dimensioni massime del file di log.|  
-|**growth**|**int**|0 = La dimensione del file è fissa e non aumenterà.<br /><br /> >0 = Il file aumenterà automaticamente.<br /><br /> Se is_percent_growth = 0, il valore dell'aumento di dimensioni è espresso in unità di pagine da 8 KB, con arrotondamento ai 64 KB successivi.<br /><br /> Se is_percent_growth = 1, il valore dell'aumento di dimensioni è espresso come percentuale (numero intero).|  
+|**growth**|**int**|0 = La dimensione del file è fissa e non aumenterà.<br /><br /> > 0 = file aumenterà automaticamente.<br /><br /> Se is_percent_growth = 0, il valore dell'aumento di dimensioni è espresso in unità di pagine da 8 KB, con arrotondamento ai 64 KB successivi.<br /><br /> Se is_percent_growth = 1, il valore dell'aumento di dimensioni è espresso come percentuale (numero intero).|  
 |**is_media_read_only**|**bit**|1 = Il file si trova in un supporto con accesso in sola lettura.<br /><br /> 0 = Il file è memorizzato in un supporto di lettura/scrittura.|  
 |**is_read_only**|**bit**|1 = Il file è contrassegnato per l'accesso in sola lettura.<br /><br /> 0 = Il file è contrassegnato in lettura/scrittura.|  
 |**is_sparse**|**bit**|1 = il file è di tipo sparse.<br /><br /> 0 = il file non è di tipo sparse.<br /><br /> Per altre informazioni, vedere [Visualizzare le dimensioni del file sparse di uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).|  

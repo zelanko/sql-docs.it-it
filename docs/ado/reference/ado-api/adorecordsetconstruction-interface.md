@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f08d007395c85ef6b423c7db6c1aed5b39cb27ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e1d14255acd4cc7f18abea1c494353ef970903c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718544"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920799"
 ---
 # <a name="adorecordsetconstruction-interface"></a>Interfaccia ADORecordsetConstruction
 Il **ADORecordsetConstruction** interfaccia viene utilizzata per costruire un oggetto ADO **Recordset** oggetto da OLE DB **set di righe** oggetto in un'applicazione C/C++.  
@@ -37,10 +36,10 @@ Il **ADORecordsetConstruction** interfaccia viene utilizzata per costruire un og
 |[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|Lettura/scrittura.<br />Ottiene o imposta un DB OLE **Rowset** oggetto da/in questa ADO **Recordset** oggetto.|  
   
 ## <a name="methods"></a>Metodi  
- Nessuna.  
+ No.  
   
 ## <a name="events"></a>Events  
- Nessuna.  
+ No.  
   
 ## <a name="remarks"></a>Note  
  Dato un OLE DB **Rowset** oggetto (`pRowset`), la costruzione di un oggetto ADO **Recordset** oggetto (`adoRs`) gli importi per le tre operazioni fondamentali seguenti:  

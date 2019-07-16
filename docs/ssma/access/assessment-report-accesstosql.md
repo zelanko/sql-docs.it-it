@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1278552f1bfe1ccfb7ab250f843e86c62e63440b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c28fb4cf5d110e01b156fc6ce985b2cb2fb7bfe1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62651081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910679"
 ---
-# <a name="assessment-report-accesstosql"></a>Assessment Report (AccessToSQL)
+# <a name="assessment-report-accesstosql"></a>Report di valutazione (AccessToSQL)
 La finestra di Report di valutazione Mostra i risultati della conversione di oggetti di database da [!INCLUDE[tsql](../../includes/tsql-md.md)] informazioni sulla sintassi, e può inoltre la Guida è stimare la complessità e i costi dei progetti di migrazione.  
   
 Per creare un report di valutazione, selezionare gli oggetti da convertire in metadati Esplora codice sorgente, fare doppio clic su **database**, quindi selezionare **crea Report**. È anche possibile visualizzare questo rapporto automaticamente dopo la conversione di schemi. Tuttavia, il nome del report sarà Report di conversione. Per altre informazioni, vedere [Project. le impostazioni (GUI) (SSMA comuni)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
