@@ -5,17 +5,16 @@ description: Procedura dettagliata di una distribuzione di cluster di big data 2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0254b76b0845ff5f913d2d0ab69324ddd0072923
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 1688725e8944b4099623688f92931c261b7fdcb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728778"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958278"
 ---
 # <a name="deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Distribuire il cluster di big data di SQL Server in Azure Kubernetes Service (AKS)
 
@@ -82,7 +81,7 @@ Usare la procedura seguente per eseguire lo script di distribuzione. Questo scri
    | **Area di Azure** | L'area di Azure per il nuovo cluster servizio contenitore di AZURE (impostazione predefinita **westus**). |
    | **Dimensioni della macchina** | Il [dimensioni della macchina](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) da usare per i nodi del cluster servizio contenitore di AZURE (impostazione predefinita **Standard_L8s**). |
    | **Nodi di lavoro** | Il numero di nodi di lavoro del cluster servizio contenitore di AZURE (impostazione predefinita **1**). |
-   | **Nome del cluster** | Nome del cluster servizio contenitore di AZURE sia il cluster di big data. Solo i caratteri alfanumerici minuscoli e senza spazi, deve essere il nome del cluster di big data. (default **sqlbigdata**). |
+   | **Nome del cluster** | Nome del cluster servizio contenitore di AZURE sia il cluster di big data. Solo i caratteri alfanumerici minuscoli e senza spazi, deve essere il nome del cluster di big data. (impostazione predefinita **sqlbigdata**). |
    | **Password** | Password per l'istanza master, un gateway HDFS/Spark e un controller (impostazione predefinita **MySQLBigData2019**). |
    | **Utente controller** | Nome utente dell'utente controller (impostazione predefinita: **admin**). |
 
