@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b52dfd93-95af-4299-bc8f-83f2a7a6a518
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 3fd443ff2ad58aa503fac2960016cb55f35b8a7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3f54a38ae995dd2c83fd36647393f81b802fde2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948457"
 ---
 # <a name="creating-test-cases-sybasetosql"></a>Creazione di test case (SybaseToSQL)
 Usare la procedura guidata di Test Case per creare un test. Questa procedura guidata consente di creare test case scegliendo testato e verificato gli oggetti e specificando i parametri di test.  

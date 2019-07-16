@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d8f6c624427a8dc8c5a6c1828b9a48ff7f335cea
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670329"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946489"
 ---
 # <a name="path-expressions---specifying-axis"></a>Espressioni di percorso - Specifica asse
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "51670329"
   
  L'implementazione di XQuery in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta i passi dell'asse seguenti:  
   
-|Asse|Description|  
+|Asse|Descrizione|  
 |----------|-----------------|  
 |**child**|Restituisce gli elementi figlio del nodo di contesto.|  
 |**descendant**|Restituisce tutti i discendenti del nodo di contesto.|  
@@ -60,7 +59,7 @@ ms.locfileid: "51670329"
 ## <a name="examples"></a>Esempi  
  Gli esempi di query in questo argomento vengono specificati con **xml** colonne di tipo i **AdventureWorks** database.  
   
-### <a name="a-specifying-a-child-axis"></a>A. Definizione di un asse child  
+### <a name="a-specifying-a-child-axis"></a>R. Definizione di un asse child  
  Per un modello di prodotto specifico, la query seguente recupera le \<funzionalità > elemento figlio del nodo il \<ProductDescription > nodo dell'elemento dalla descrizione del catalogo prodotti archiviata nella `Production.ProductModel` tabella.  
   
 ```  
@@ -109,11 +108,11 @@ select @y
   
  Se in questa espressione si specifica un asse descendant per l'espressione di percorso,  
   
- `/child::a/child::b/descendant::*`, si richiedono tutti i discendenti del nodo elemento <`b`>.  
+ `/child::a/child::b/descendant::*`, si richiedono tutti i discendenti del <`b`> nodo elemento.  
   
  L'asterisco (*) nel test di nodo rappresenta il nome del nodo come test di nodo. Pertanto, il tipo di nodo primario dell'asse descendant, il nodo elemento, determina i tipi di nodi restituiti. L'espressione restituisce quindi tutti i nodi elemento. I nodi di testo non vengono restituiti. Per altre informazioni sul tipo di nodo primario e la relativa relazione con il test di nodo, vedere [specifica di Test di nodo in un passo dell'espressione di percorso](../xquery/path-expressions-specifying-node-test.md) argomento.  
   
- I nodi elemento <`c`> e <`d`> vengono restituiti come illustrato nel risultato seguente:  
+ I nodi elemento <`c`> e <`d`> vengono restituiti, come illustrato nel risultato seguente:  
   
 ```  
 <c>text2  
@@ -122,9 +121,9 @@ select @y
 <d>text3</d>  
 ```  
   
- Se si specifica un asse descendant-or-self anziché l'asse descendant, `/child::a/child::b/descendant-or-self::*` restituisce il nodo di contesto, l'elemento <`b`> e i relativi discendenti.  
+ Se si specifica un asse descendant-or-self anziché l'asse descendant `/child::a/child::b/descendant-or-self::*` restituisce il nodo di contesto, elemento <`b`> e i relativi discendenti.  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <b>text1  
@@ -152,9 +151,9 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="c-specifying-a-parent-axis"></a>C. Definizione di un asse parent  
- La query seguente restituisce l'elemento figlio <`Summary`> dell'elemento <`ProductDescription`> nel documento XML del catalogo prodotti archiviato nella tabella `Production.ProductModel`.  
+ La query seguente restituisce la <`Summary`> figlio dell'elemento di <`ProductDescription`> elemento nel documento XML del catalogo prodotti archiviato nella `Production.ProductModel` tabella.  
   
- In questo esempio viene utilizzato l'asse parent per tornare all'elemento padre dell'elemento <`Feature`> e recuperare l'elemento figlio <`Summary`> dell'elemento <`ProductDescription`>.  
+ In questo esempio viene utilizzato l'asse parent per tornare al padre di <`Feature`> elemento e recuperare il <`Summary`> figlio dell'elemento di <`ProductDescription`> elemento.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -194,7 +193,7 @@ WHERE  ProductModelID=19
 <Feature ProductModelID="...">...</Feature>  
 ```  
   
- Per aggiungere `ProductModelID` per ogni elemento `<Feature`>, viene specificato l'asse `parent`:  
+ Per aggiungere il `ProductModelID` per ognuno `<Feature`> elemento, il `parent` specificato l'asse:  
   
 ```  
 SELECT CatalogDescription.query('  

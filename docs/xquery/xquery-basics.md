@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: b2460a37-7663-42de-9c72-fdfbe2f1504d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3ec5248134f8032d876fb712c1bdaa39e170e878
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 81a506c9f7b079dc86062976fca1b8785c1a80dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291407"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946059"
 ---
 # <a name="xquery-basics"></a>Nozioni fondamentali su XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   In questa sezione vengono illustrate le nozioni fondamentali su XQuery.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Sequenza e QName &#40;XQuery&#41;](../xquery/sequence-and-qnames-xquery.md)  
  Descrive sequenze, elementi QName e spazi dei nomi predefiniti.  
   

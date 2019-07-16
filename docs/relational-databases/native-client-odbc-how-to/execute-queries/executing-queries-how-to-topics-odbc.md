@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3594c908-192e-41ea-9db0-7045da8812b5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a48b2eecfb61cc5c0046afe1da6d99794b5edd60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37746e24bafb984c7599abe379792933d9a146ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947544"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>Procedure per l'esecuzione di query (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "47794369"
 
   L'esecuzione di un'istruzione SQL in un'applicazione ODBC richiede l'allocazione di un handle di istruzione, l'impostazione degli attributi dell'istruzione, nonché la preparazione e l'esecuzione di quest'ultima.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Usare un'istruzione &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/use-a-statement-odbc.md)  
   

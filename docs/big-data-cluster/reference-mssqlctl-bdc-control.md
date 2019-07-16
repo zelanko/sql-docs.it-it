@@ -5,17 +5,16 @@ description: Articolo di riferimento per i comandi del controllo mssqlctl integr
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 87b8b095ee990e0b20e86c839e1cd6d2a1ca85bf
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: d6d99f0bb46ca62e33b4832d5847dcb7e0f64f93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958097"
 ---
 # <a name="mssqlctl-bdc-control"></a>controllo di integrazione applicativa dei dati mssqlctl
 

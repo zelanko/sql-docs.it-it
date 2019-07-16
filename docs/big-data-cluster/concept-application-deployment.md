@@ -5,17 +5,16 @@ description: Questo articolo descrive la distribuzione di applicazioni in un clu
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 03/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7e103acdcfd11b3693e6b1ba343258ee00c16572
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 43d65ce9b9335d22b453114139f7032613ac5359
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958822"
 ---
 # <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>Che cos'è la distribuzione di applicazioni in un cluster di SQL Server 2019 dei big Data?
 

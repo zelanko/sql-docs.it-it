@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8852aaf6b8d6baa7a5451f0ccc31229d6f521a33
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: e3741dde8d570ae6b404caf326e5dce607dc30f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494373"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947530"
 ---
 # <a name="spaddmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,14 +92,14 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @description = ] 'description'` È una descrizione dell'articolo. *Descrizione* viene **nvarchar(255**, con un valore predefinito è NULL.  
   
-`[ @column_tracking = ] 'column_tracking'` È l'impostazione per il rilevamento a livello di colonna. *column_tracking* viene **nvarchar(10)**, con un valore predefinito è FALSE. **true**attivare il controllo delle colonne. **false** disattiva e mantiene il rilevamento dei conflitti a livello di riga. Se la tabella è già pubblicata in altre pubblicazioni di tipo merge, è necessario utilizzare lo stesso valore di rilevamento a livello di colonna utilizzato dagli articoli esistenti basati su questa tabella. Questo parametro è disponibile solo per gli articoli di tabelle.  
+`[ @column_tracking = ] 'column_tracking'` È l'impostazione per il rilevamento a livello di colonna. *column_tracking* viene **nvarchar(10)** , con un valore predefinito è FALSE. **true**attivare il controllo delle colonne. **false** disattiva e mantiene il rilevamento dei conflitti a livello di riga. Se la tabella è già pubblicata in altre pubblicazioni di tipo merge, è necessario utilizzare lo stesso valore di rilevamento a livello di colonna utilizzato dagli articoli esistenti basati su questa tabella. Questo parametro è disponibile solo per gli articoli di tabelle.  
   
 > [!NOTE]  
 >  Se si utilizza il rilevamento a livello di riga per il rilevamento dei conflitti (impostazione predefinita), la tabella di base può includere fino a 1.024 colonne, che devono tuttavia essere filtrate dall'articolo in modo da pubblicare un massimo di 246 colonne. Se viene utilizzato il rilevamento a livello di colonna, nella tabella di base possono essere incluse al massimo 246 colonne.  
   
-`[ @status = ] 'status'` È lo stato dell'articolo. *lo stato* viene **nvarchar(10)**, il valore predefinito è **unsynced**. Se **active**, viene eseguito lo script di elaborazione iniziale per pubblicare la tabella. Se **unsynced**, viene eseguito lo script di elaborazione iniziale per pubblicare la tabella alla successiva esecuzione dell'agente Snapshot.  
+`[ @status = ] 'status'` È lo stato dell'articolo. *lo stato* viene **nvarchar(10)** , il valore predefinito è **unsynced**. Se **active**, viene eseguito lo script di elaborazione iniziale per pubblicare la tabella. Se **unsynced**, viene eseguito lo script di elaborazione iniziale per pubblicare la tabella alla successiva esecuzione dell'agente Snapshot.  
   
-`[ @pre_creation_cmd = ] 'pre_creation_cmd'` Specifica il tipo di sistema da eseguire se la tabella esiste nel Sottoscrittore durante l'applicazione dello snapshot. *pre_creation_cmd* viene **nvarchar(10)**, e può essere uno dei valori seguenti.  
+`[ @pre_creation_cmd = ] 'pre_creation_cmd'` Specifica il tipo di sistema da eseguire se la tabella esiste nel Sottoscrittore durante l'applicazione dello snapshot. *pre_creation_cmd* viene **nvarchar(10)** , e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -145,7 +144,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x4000000**|Replica gli indici sul **xml** colonne.|  
 |**0x8000000**|Crea gli eventuali schemi non ancora presenti nel Sottoscrittore.|  
 |**0x10000000**|Consente di convertire **xml** le colonne da **ntext** nel Sottoscrittore.|  
-|**0x20000000**|Tipi di dati dell'oggetto converte grandi dimensioni (**nvarchar (max)**, **varchar (max)**, e **varbinary (max)**) introdotte in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ai tipi di dati supportati in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
+|**0x20000000**|Tipi di dati dell'oggetto converte grandi dimensioni (**nvarchar (max)** , **varchar (max)** , e **varbinary (max)** ) introdotte in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ai tipi di dati supportati in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
 |**0x40000000**|Replica le autorizzazioni.|  
 |**0x80000000**|Esegue un tentativo di rimozione delle dipendenze dagli oggetti che non fanno parte della pubblicazione.|  
 |**0x100000000**|Usare questa opzione per replicare l'attributo FILESTREAM se è specificato nel **varbinary (max)** colonne. Non specificare questa opzione se si stanno replicando tabelle nei Sottoscrittori [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. La replica di tabelle con colonne FILESTREAM in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] sottoscrittori non è supportata, indipendentemente dal modo in cui è impostata questa opzione dello schema. Vedere l'opzione correlata **0x800000000**.|  
@@ -163,12 +162,12 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  Il *schema_option* parametro interessa solo le opzioni di replica per lo snapshot iniziale. Dopo aver generato dall'agente Snapshot e applicato al sottoscrittore lo schema iniziale, la replica delle modifiche dello schema di pubblicazione al sottoscrittore si verificano in base alle regole di replica modifiche dello schema e il *replicate_ddl* impostazione del parametro specificato nella [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
-`[ @subset_filterclause = ] 'subset_filterclause'` Una clausola WHERE che specifica il filtraggio orizzontale di un articolo di tabella senza la parola in cui è incluso. *subset_filterclause* presenta **nvarchar(1000)**, con un valore predefinito di una stringa vuota.  
+`[ @subset_filterclause = ] 'subset_filterclause'` Una clausola WHERE che specifica il filtraggio orizzontale di un articolo di tabella senza la parola in cui è incluso. *subset_filterclause* presenta **nvarchar(1000)** , con un valore predefinito di una stringa vuota.  
   
 > [!IMPORTANT]  
 >  Per motivi relativi alle prestazioni, è consigliabile evitare di applicare funzioni ai nomi di colonna nelle clausole di filtro di riga con parametri, come `LEFT([MyColumn]) = SUSER_SNAME()`. Se si usa [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) in una clausola di filtro e si sostituisce il valore di HOST_NAME, potrebbe essere necessario convertire i tipi di dati tramite [CONVERTIRE](../../t-sql/functions/cast-and-convert-transact-sql.md). Per altre informazioni sulle procedure consigliate per questo caso, vedere la sezione "Eseguire l'override del valore di HOST_NAME ()" nella [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-`[ @article_resolver = ] 'article_resolver'` È il sistema di risoluzione basato su COM utilizzato per risolvere i conflitti nell'articolo di tabella oppure assembly .NET Framework richiamato per eseguire la logica di business personalizzata sull'articolo di tabella. *article_resolver* viene **nvarchar (255)**, con un valore predefinito è NULL. I valori disponibili per questi parametri sono elencati nell'argomento relativo ai sistemi di risoluzione personalizzati [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Se il valore specificato non corrisponde a uno dei sistemi di risoluzione [!INCLUDE[msCoName](../../includes/msconame-md.md)], in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene utilizzato il sistema di risoluzione specificato anziché quello di sistema. Uso **sp_enumcustomresolvers** per enumerare l'elenco dei sistemi di risoluzione personalizzati disponibili. Per altre informazioni, vedere [eseguire la logica di Business durante la sincronizzazione Merge](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md) e [Advanced Merge Replication Conflict Detection and risoluzione](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+`[ @article_resolver = ] 'article_resolver'` È il sistema di risoluzione basato su COM utilizzato per risolvere i conflitti nell'articolo di tabella oppure assembly .NET Framework richiamato per eseguire la logica di business personalizzata sull'articolo di tabella. *article_resolver* viene **nvarchar (255)** , con un valore predefinito è NULL. I valori disponibili per questi parametri sono elencati nell'argomento relativo ai sistemi di risoluzione personalizzati [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Se il valore specificato non corrisponde a uno dei sistemi di risoluzione [!INCLUDE[msCoName](../../includes/msconame-md.md)], in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene utilizzato il sistema di risoluzione specificato anziché quello di sistema. Uso **sp_enumcustomresolvers** per enumerare l'elenco dei sistemi di risoluzione personalizzati disponibili. Per altre informazioni, vedere [eseguire la logica di Business durante la sincronizzazione Merge](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md) e [Advanced Merge Replication Conflict Detection and risoluzione](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 `[ @resolver_info = ] 'resolver_info'` Consente di specificare informazioni aggiuntive necessarie per un resolver personalizzato. Alcuni sistemi di risoluzione [!INCLUDE[msCoName](../../includes/msconame-md.md)] richiedono una colonna come input. *resolver_info* viene **nvarchar(255**, con un valore predefinito è NULL. Per altre informazioni, vedere [Sistemi di risoluzione dei conflitti basati su Microsoft COM](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
@@ -202,7 +201,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **1** specifica che la firma verrà verificata per stabilire se proviene da una fonte attendibile.  
   
-`[ @destination_object = ] 'destination_object'` È il nome dell'oggetto nel database di sottoscrizione. *destination_object* viene **sysname**, con un valore predefinito di quali sono le novità **@source_object**. È possibile specificare questo parametro solo se l'articolo include solo lo schema, come nel caso di stored procedure, viste e funzioni definite dall'utente. Se l'articolo specificato è un articolo di tabella, il valore in *@source_object* sostituisce il valore nel *destination_object*.  
+`[ @destination_object = ] 'destination_object'` È il nome dell'oggetto nel database di sottoscrizione. *destination_object* viene **sysname**, con un valore predefinito di quali sono le novità **@source_object** . È possibile specificare questo parametro solo se l'articolo include solo lo schema, come nel caso di stored procedure, viste e funzioni definite dall'utente. Se l'articolo specificato è un articolo di tabella, il valore in *@source_object* sostituisce il valore nel *destination_object*.  
   
 `[ @allow_interactive_resolver = ] 'allow_interactive_resolver'` Abilita o disabilita l'uso di risoluzione interattivo in un articolo. *allow_interactive_resolver* viene **nvarchar(5**, con un valore predefinito è FALSE. **true** consente l'uso di risoluzione interattivo per l'articolo; **false** lo disabilita.  
   
@@ -279,12 +278,12 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  Se la tabella di origine per un articolo è già pubblicata in un'altra pubblicazione, il valore di *subscriber_upload_options* deve coincidere per entrambi gli articoli.  
   
-`[ @identityrangemanagementoption = ] identityrangemanagementoption` Specifica la modalità Gestione intervalli di valori identity per l'articolo. *identityrangemanagementoption* viene **nvarchar(10)**, e può essere uno dei valori seguenti.  
+`[ @identityrangemanagementoption = ] identityrangemanagementoption` Specifica la modalità Gestione intervalli di valori identity per l'articolo. *identityrangemanagementoption* viene **nvarchar(10)** , e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
 |**Nessuno**|Disabilita la gestione degli intervalli di valori Identity.|  
-|**manual**|Contrassegna la colonna Identity con NOT FOR REPLICATION per consentire la gestione manuale degli intervalli di valori Identity.|  
+|**Manuale**|Contrassegna la colonna Identity con NOT FOR REPLICATION per consentire la gestione manuale degli intervalli di valori Identity.|  
 |**auto**|Imposta la gestione automatica degli intervalli di valori Identity.|  
 |NULL(default)|Per impostazione predefinita **none**quando il valore di *auto_identity_range* non **true**.|  
   

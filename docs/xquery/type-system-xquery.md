@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34680d0af0e8c69bca15e4e93cddbe6b2a3386cb
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 0736bc39ceaa6d9a0aa541d2af3b2b784614322b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946207"
 ---
 # <a name="type-system-xquery"></a>Sistema di tipi (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +96,7 @@ SELECT @x.query( '/a[1] instance of element()')
 > [!NOTE]  
 >  Quando si esegue una query su un'istanza XML tipizzata e l'espressione della query include l'asse padre, le informazioni relative al tipo statico dei nodi risultanti non sono più disponibili. Il tipo dinamico rimane tuttavia associato ai nodi.  
   
-## <a name="typed-value-vs-string-value"></a>Valore tipizzato e valore stringa  
+## <a name="typed-value-vs-string-value"></a>Valore tipizzato e Valore stringa  
  A ogni nodo è associato un valore tipizzato e un valore stringa. Per i dati XML tipizzati, il tipo del valore tipizzato è fornito dalla raccolta di XML Schema associata alla colonna o alla variabile su cui viene eseguita la query. Per i dati XML non tipizzati, è il tipo del valore tipizzato **xdt: untypedAtomic**.  
   
  È possibile usare la **data ()** oppure **String ()** funzione per recuperare il valore di un nodo:  
@@ -106,7 +105,7 @@ SELECT @x.query( '/a[1] instance of element()')
   
 -   Il [funzione string &#40;XQuery&#41; ](../xquery/data-accessor-functions-string-xquery.md) restituisce il valore di stringa del nodo.  
   
- Nella raccolta di XML Schema seguente, viene definito l'elemento <`root`> di tipo integer:  
+ Nella raccolta di XML schema seguente, la <`root`> viene definito l'elemento di tipo integer:  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  

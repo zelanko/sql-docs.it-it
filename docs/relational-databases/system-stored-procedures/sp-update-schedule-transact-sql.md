@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b7bf2a2e589a7e3dc69ee805f1958dad4cbecb8c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 51e21d189a9302c2dc7b74a013846460e9cb7bc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538563"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946647"
 ---
 # <a name="spupdateschedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,9 +81,9 @@ sp_update_schedule
 |---------------------------|--------------------------------|  
 |**1** (once)|*freq_interval* risulta inutilizzato.|  
 |**4** (giornaliera)|Ogni *freq_interval* giorni.|  
-|**8** (settimanale)|*freq_interval* corrisponde a uno o più dei valori seguenti (combinati con un' **OR** operatore logico):<br /><br /> **1** = Sunday<br /><br /> **2** = lunedì<br /><br /> **4** = martedì<br /><br /> **8** = mercoledì<br /><br /> **16** = giovedì<br /><br /> **32** = venerdì<br /><br /> **64** = Saturday|  
+|**8** (settimanale)|*freq_interval* corrisponde a uno o più dei valori seguenti (combinati con un' **OR** operatore logico):<br /><br /> **1** = domenica<br /><br /> **2** = lunedì<br /><br /> **4** = martedì<br /><br /> **8** = mercoledì<br /><br /> **16** = giovedì<br /><br /> **32** = venerdì<br /><br /> **64** = sabato|  
 |**16** (mensile)|Nel *freq_interval* giorno del mese.|  
-|**32** (mensile relativo)|*freq_interval* è uno dei seguenti:<br /><br /> **1** = Sunday<br /><br /> **2** = lunedì<br /><br /> **3** = martedì<br /><br /> **4** = mercoledì<br /><br /> **5** = giovedì<br /><br /> **6** = Friday<br /><br /> **7** = sabato<br /><br /> **8** = giorno<br /><br /> **9** = giorno feriale<br /><br /> **10** = giorno festivo|  
+|**32** (mensile relativo)|*freq_interval* è uno dei seguenti:<br /><br /> **1** = domenica<br /><br /> **2** = lunedì<br /><br /> **3** = martedì<br /><br /> **4** = mercoledì<br /><br /> **5** = giovedì<br /><br /> **6** = venerdì<br /><br /> **7** = sabato<br /><br /> **8** = giorno<br /><br /> **9** = giorno feriale<br /><br /> **10** = giorno festivo|  
 |**64** (all'avvio del servizio SQLServerAgent)|*freq_interval* risulta inutilizzato.|  
 |**128**|*freq_interval* risulta inutilizzato.|  
   
