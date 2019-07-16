@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c43d969f56619109cfb6ebe09b8a416824f59638
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ede8b65cb3f11ed6640121031ea6a2fe5b57b83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124185"
 ---
 # <a name="spfulltextservice-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_fulltext_service [ [@action=] 'action'
 > [!NOTE]  
 >  Le azioni seguenti verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **clean_up**, **connect_timeout**, **data_timeout**, e **resource_ utilizzo**. Evitare di utilizzare queste azioni in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui attualmente vengono utilizzate.  
   
-|Azione|Tipo di dati|Descrizione|  
+|Action|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
 |**clean_up**|**int**|Supportato unicamente per compatibilità con le versioni precedenti. Il valore corrisponde sempre a 0.|  
 |**connect_timeout**|**int**|Supportato unicamente per compatibilità con le versioni precedenti. Il valore corrisponde sempre a 0.|  
@@ -67,14 +66,14 @@ sp_fulltext_service [ [@action=] 'action'
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="permissions"></a>Permissions  
  Solo i membri del **serveradmin** ruolo predefinito del server o l'amministratore di sistema può eseguire **sp_fulltext_service**.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-updating-the-list-of-registered-languages"></a>A. Aggiornamento dell'elenco di lingue registrate  
+### <a name="a-updating-the-list-of-registered-languages"></a>R. Aggiornamento dell'elenco di lingue registrate  
  Nell'esempio seguente viene aggiornato l'elenco di lingue registrate per la ricerca full-text.  
   
 ```  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 27f1b65e-e04d-457f-bd49-02deb3873613
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8474c2ac06e3bed58262f31f44eaa3dd08ff63b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c52780ab67acf072a3ee61ce1ebd07fc18c0d40e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987931"
 ---
 # <a name="schema-text-file-driver"></a>Schema (driver file di testo)
 Lo schema include informazioni su ogni tabella (file di testo) in un'origine dati, tra cui formato della tabella, il numero di righe da esaminare per determinare i tipi di colonna, se la prima riga della tabella contiene i nomi di colonna, se viene scritto il file di origine usando un OEM o Tabella codici ANSI e ogni colonna nome, tipo di dati e larghezza.

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e3e5e5dc-21dc-42fc-82a6-730fed46ef16
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 84935f1f6baa297ac775a5c8be4b6b42681716c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 704b6d24e48ffd4997a8107da8c3039b7386c1ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724329"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011115"
 ---
 # <a name="localdberrorsqlserverstartupfailed"></a>LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47724329"
 |ID evento|266|  
 |Origine evento|Runtime database locale di SQL Server 12.0|  
 |Componente|API di Runtime database locale|  
-|Testo del messaggio|Errore durante l'avvio dell'istanza del database locale: avvio del processo di SQL Server non riuscito.|  
+|Testo del messaggio|Errore durante l'avvio dell'istanza del Database locale: Impossibile avviare il processo di SQL Server.|  
   
 ## <a name="explanation"></a>Spiegazione  
  Avviato processo di SQL Server ma tale operazione non è stata completata.  

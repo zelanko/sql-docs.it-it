@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0bc0d5e8-b092-413e-a0ee-7ef2c516d324
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6e6801fec8392336f3351513a2db9111bafaaa60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3f818b7e6041761d3684ac35374298c47335de5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126284"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029069"
 ---
 # <a name="global-settings-editor-sybasetosql"></a>Impostazioni globali (editor) (SybaseToSQL)
 Utilizzare la pagina Editor del **Global Settings** finestra di dialogo per specificare le impostazioni per finestre dell'editor di codice.  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6ef13b4a6ad3ed6ba04fec471876f8c93e7cee56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce8d0490625780459ecafd8e9d346af0fc9bd1f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054534"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>Rendere visibile un gruppo di attributi per gli utenti (Master Data Services)
 

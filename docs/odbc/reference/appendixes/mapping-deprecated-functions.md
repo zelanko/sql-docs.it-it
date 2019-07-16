@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0568306ad0e2fd8a73737bf80a4270e8eaa3ed18
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 307f0f54434fdcb4ebb19c38256a7a04f4a5c46d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793178"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990706"
 ---
 # <a name="mapping-deprecated-functions"></a>Mapping di funzioni deprecate
 Questa sezione vengono descritte le funzioni come deprecate vengono mappati da ODBC *3.x* gestione Driver per garantire la compatibilità con le versioni precedenti di ODBC *3.x* driver che vengono usati con ODBC *2.x* le applicazioni. Gestione Driver esegue il mapping indipendentemente dalla versione dell'applicazione. Poiché ogni ODBC *2.x* funzioni nell'elenco seguente viene mappato a ODBC corrispondente *3.x* funzione quando viene chiamato in un database ODBC *3.x* driver ODBC *3.x* driver non deve implementare ODBC *2.x* funzioni.  

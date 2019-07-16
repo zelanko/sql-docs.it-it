@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 97f04e8d30b29b43528adc6fe2ab2abdb2d54531
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2c6571ce334c1534dd6fe869f37f007da793469d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493623"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118054"
 ---
 # <a name="spaddmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +84,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 > [!NOTE]  
 >  Il periodo di memorizzazione per le pubblicazioni di tipo merge è caratterizzato da un periodo di tolleranza di 24 ore per consentire l'adeguamento dei Sottoscrittori appartenenti a fusi orari diversi. Se, ad esempio, si imposta un periodo di memorizzazione di un giorno, il periodo di memorizzazione effettivo sarà di 48 ore.  
   
-`[ @sync_mode = ] 'sync_mode'` È la modalità di sincronizzazione iniziale dei sottoscrittori della pubblicazione. *sync_mode* viene **nvarchar(10)**, e può essere uno dei valori seguenti.  
+`[ @sync_mode = ] 'sync_mode'` È la modalità di sincronizzazione iniziale dei sottoscrittori della pubblicazione. *sync_mode* viene **nvarchar(10)** , e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -150,7 +149,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @allow_synctoalternate = ] 'allow_synctoalternate'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @validate_subscriber_info = ] 'validate_subscriber_info'` Elenca le funzioni che vengono usate per definire una partizione del sottoscrittore dei dati pubblicati quando vengono utilizzati i filtri di riga con parametri. *validate_subscriber_info* viene **nvarchar(500)**, con un valore predefinito è NULL. Queste informazioni vengono utilizzate dall'agente di merge per convalidare la partizione del Sottoscrittore. Ad esempio, se [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) viene utilizzato nel filtro di riga con parametri, il parametro deve essere `@validate_subscriber_info=N'SUSER_SNAME()'`.  
+`[ @validate_subscriber_info = ] 'validate_subscriber_info'` Elenca le funzioni che vengono usate per definire una partizione del sottoscrittore dei dati pubblicati quando vengono utilizzati i filtri di riga con parametri. *validate_subscriber_info* viene **nvarchar(500)** , con un valore predefinito è NULL. Queste informazioni vengono utilizzate dall'agente di merge per convalidare la partizione del Sottoscrittore. Ad esempio, se [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) viene utilizzato nel filtro di riga con parametri, il parametro deve essere `@validate_subscriber_info=N'SUSER_SNAME()'`.  
   
 > [!NOTE]  
 >  Si consiglia di non specificare questo parametro e di consentire invece a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di determinare il criterio di filtro in modo automatico.  
@@ -171,9 +170,9 @@ sp_addmergepublication [ @publication = ] 'publication'
   
  Le partizioni pre-calcolate vengono utilizzate per impostazione predefinita. Per evitare di utilizzare partizioni precalcolate *use_partition_groups* deve essere impostata su **false**. Se è NULL, il sistema decide se è possibile utilizzare le partizioni pre-calcolate. Se pre-calcolate non è possibile utilizzare le partizioni, quindi questo valore, diventeranno **false** senza generare alcun errore. In questi casi *keep_partition_changes* può essere impostata su **true** fornire alcune ottimizzazione. Per altre informazioni, vedere [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) e [Ottimizza prestazioni filtro con parametri con partizioni pre-calcolate](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
-`[ @publication_compatibility_level = ] backward_comp_level` Indica la compatibilità con le versioni precedenti della pubblicazione. *backward_comp_level* viene **nvarchar(6)**, i possibili valori sono i seguenti:  
+`[ @publication_compatibility_level = ] backward_comp_level` Indica la compatibilità con le versioni precedenti della pubblicazione. *backward_comp_level* viene **nvarchar(6)** , i possibili valori sono i seguenti:  
   
-|Value|Versione|  
+|Value|Version|  
 |-----------|-------------|  
 |**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
@@ -192,30 +191,30 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @allow_web_synchronization = ] 'allow_web_synchronization'` Specifica se la pubblicazione è abilitata per la sincronizzazione Web. *allow_web_synchronization* viene **nvarchar(5**, con un valore predefinito è FALSE. **true** specifica che le sottoscrizioni della pubblicazione possono essere sincronizzate tramite HTTPS. Per altre informazioni, vedere [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md). Per supportare [!INCLUDE[ssEW](../../includes/ssew-md.md)] sottoscrittori, è necessario specificare **true**.  
   
-`[ @web_synchronization_url = ] 'web_synchronization_url'` Specifica il valore predefinito dell'URL Internet utilizzato per la sincronizzazione Web. *web_synchronization_url ho*s **nvarchar(500)**, con un valore predefinito è NULL. Definisce l'URL Internet predefinito se non esplicitamente impostata quando [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) viene eseguita.  
+`[ @web_synchronization_url = ] 'web_synchronization_url'` Specifica il valore predefinito dell'URL Internet utilizzato per la sincronizzazione Web. *web_synchronization_url ho*s **nvarchar(500)** , con un valore predefinito è NULL. Definisce l'URL Internet predefinito se non esplicitamente impostata quando [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) viene eseguita.  
   
 `[ @allow_partition_realignment = ] 'allow_partition_realignment'` Determina se le eliminazioni vengono inviate al sottoscrittore quando la modifica della riga nel server di pubblicazione comporta un cambiamento di partizione. *allow_partition_realignment* viene **nvarchar(5**, con un valore predefinito è TRUE. **true** le eliminazioni vengono inviate al sottoscrittore in modo da riflettere i risultati di una modifica della partizione, rimuovendo i dati che non sono più parte della partizione del sottoscrittore. **false** lascia i dati di una vecchia partizione nel Sottoscrittore, in cui le modifiche apportate a tali dati nel server di pubblicazione non verranno replicate nel Sottoscrittore, ma le modifiche apportate nel Sottoscrittore verranno replicate nel server di pubblicazione. L'impostazione *allow_partition_realignment* al **false** consente di conservare i dati in una sottoscrizione di una vecchia partizione quando i dati devono essere accessibili per motivi cronologici.  
   
 > [!NOTE]  
 >  Dati che rimangono nel Sottoscrittore come risultato di impostazione *allow_partition_realignment* al **false** devono essere considerati come se si trattasse di sola lettura, tuttavia, questo non viene applicato dal sistema di replica.  
   
-`[ @retention_period_unit = ] 'retention_period_unit'` Specifica le unità per il periodo di memorizzazione impostato *conservazione*. *retention_period_unit* viene **nvarchar(10)**, e può essere uno dei valori seguenti.  
+`[ @retention_period_unit = ] 'retention_period_unit'` Specifica le unità per il periodo di memorizzazione impostato *conservazione*. *retention_period_unit* viene **nvarchar(10)** , e può essere uno dei valori seguenti.  
   
-|Value|Versione|  
+|Value|Version|  
 |-----------|-------------|  
 |**giorno** (impostazione predefinita)|Il periodo di memorizzazione è specificato in giorni.|  
 |**week**|Il periodo di memorizzazione è specificato in settimane.|  
-|**month**|Il periodo di memorizzazione è specificato in mesi.|  
+|**mese**|Il periodo di memorizzazione è specificato in mesi.|  
 |**year**|Il periodo di memorizzazione è specificato in anni.|  
   
 `[ @generation_leveling_threshold = ] generation_leveling_threshold` Specifica il numero di modifiche contenute in una generazione. Una generazione è una raccolta di modifiche recapitate a un server di pubblicazione o a un Sottoscrittore. *generation_leveling_threshold* viene **int**, con valore predefinito è 1000.  
   
-`[ @automatic_reinitialization_policy = ] automatic_reinitialization_policy` Specifica se le modifiche vengono caricate dal sottoscrittore prima di una reinizializzazione automatica richiesta da una modifica della pubblicazione, dove il valore **1** è stato specificato per **@force_reinit_subscription**. *automatic_reinitialization_policy* è di tipo bit e il valore predefinito è pari a 0. **1** significa che le modifiche vengono caricate dal sottoscrittore prima che si verifichi una reinizializzazione automatica.  
+`[ @automatic_reinitialization_policy = ] automatic_reinitialization_policy` Specifica se le modifiche vengono caricate dal sottoscrittore prima di una reinizializzazione automatica richiesta da una modifica della pubblicazione, dove il valore **1** è stato specificato per **@force_reinit_subscription** . *automatic_reinitialization_policy* è di tipo bit e il valore predefinito è pari a 0. **1** significa che le modifiche vengono caricate dal sottoscrittore prima che si verifichi una reinizializzazione automatica.  
   
 > [!IMPORTANT]  
 >  Se si aggiunge, elimina o modifica un filtro con parametri, le modifiche in sospeso nel Sottoscrittore non possono essere caricate nel server di pubblicazione durante la reinizializzazione. Per caricare le modifiche in sospeso, sincronizzare tutte le sottoscrizioni prima di modificare il filtro.  
   
-`[ @conflict_logging = ] 'conflict_logging'` Specifica dove vengono archiviati i record dei conflitti. *conflict_logging* viene **nvarchar(15)**, e può essere uno dei valori seguenti:  
+`[ @conflict_logging = ] 'conflict_logging'` Specifica dove vengono archiviati i record dei conflitti. *conflict_logging* viene **nvarchar(15)** , e può essere uno dei valori seguenti:  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -236,7 +235,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
  Per la [!INCLUDE[ssEW](../../includes/ssew-md.md)] sottoscrittori, il valore di *alternate_snapshot_folder* viene utilizzato solo quando il valore di *snapshot_in_default_folder* viene **false**.  
   
- La replica DDL abilitato (_replicate_ddl_**= 1**) per una pubblicazione, affinché le DDL da non replicare le modifiche della pubblicazione [sp_changemergepublication &#40; Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) devono essere eseguite prima di tutto per impostare *replicate_ddl* a **0**. Dopo le istruzioni DDL da non replicare, **sp_changemergepublication** può essere eseguito nuovamente per riattivare la replica DDL.  
+ La replica DDL abilitato (_replicate_ddl_ **= 1**) per una pubblicazione, affinché le DDL da non replicare le modifiche della pubblicazione [sp_changemergepublication &#40; Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) devono essere eseguite prima di tutto per impostare *replicate_ddl* a **0**. Dopo le istruzioni DDL da non replicare, **sp_changemergepublication** può essere eseguito nuovamente per riattivare la replica DDL.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_AddMergePub](../../relational-databases/replication/codesnippet/tsql/sp-addmergepublication-t_1.sql)]  

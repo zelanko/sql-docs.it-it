@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d8d2ad4c7df20b2b9649b1ad780dd40353a7796e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b285b5032c1ccde03ef8bd3f287d6b7f60eb0ffc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62996807"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046175"
 ---
 # <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>Argomenti  
 `[ @dbname = ] 'dbname'` È il nome del database da collegare al server. Il nome deve essere univoco. *dbname* viene **sysname**, con un valore predefinito è NULL.  
   
-`[ @physname = ] 'physical_name'` È il nome fisico, completo di percorso, del file di database. *physical_name* viene **nvarchar(260)**, con un valore predefinito è NULL.  
+`[ @physname = ] 'physical_name'` È il nome fisico, completo di percorso, del file di database. *physical_name* viene **nvarchar(260)** , con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  Questo argomento esegue il mapping al parametro FILENAME dell'istruzione CREATE DATABASE. Per alte informazioni, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
@@ -60,7 +59,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  Uso **sp_attach_single_file_db** solo sui database che sono stati precedentemente scollegati dal server tramite l'impostazione esplicita **sp_detach_db** operazione o in database copiati.  

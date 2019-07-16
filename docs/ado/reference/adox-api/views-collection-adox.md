@@ -16,23 +16,22 @@ helpviewer_keywords:
 ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2d01beffb328c26bdd0faf18ac22e73adb4dbcbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0cec2462f8726e7c580a7d6755394c6c3f07c85b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697004"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964775"
 ---
 # <a name="views-collection-adox"></a>Raccolta Views (ADOX)
 Contiene tutti [vista](../../../ado/reference/adox-api/view-object-adox.md) gli oggetti di un catalogo.  
   
 ## <a name="remarks"></a>Note  
- Il [Append](../../../ado/reference/adox-api/append-method-adox-views.md) metodo per un **viste** raccolta sia univoca per ADOX. È possibile effettuare le operazioni seguenti:  
+ Il [Append](../../../ado/reference/adox-api/append-method-adox-views.md) metodo per un **viste** raccolta sia univoca per ADOX. È possibile:  
   
 -   Aggiungere una nuova vista alla raccolta con il **Append** (metodo).  
   
- Le proprietà e metodi restanti sono standard per le raccolte di ADO. È possibile effettuare le operazioni seguenti:  
+ Le proprietà e metodi restanti sono standard per le raccolte di ADO. È possibile:  
   
 -   Accedere a una visualizzazione nella raccolta con il [elemento](../../../ado/reference/ado-api/item-property-ado.md) proprietà.  
   

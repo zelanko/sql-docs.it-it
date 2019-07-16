@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 69381eb0ffdd3638079d824d8d4c150563375a6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29e5718debadb4725bc9d9ebcd499c261ed23d54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63046965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985754"
 ---
 # <a name="aggregate-functions---min"></a>Funzioni di aggregazione - min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
   
-### <a name="a-using-the-min-xquery-function-to-find-the-work-center-location-that-has-the-fewest-labor-hours"></a>A. Utilizzo della funzione XQuery min() per l'individuazione del centro di lavorazione con il numero minimo di ore di manodopera  
+### <a name="a-using-the-min-xquery-function-to-find-the-work-center-location-that-has-the-fewest-labor-hours"></a>R. Utilizzo della funzione XQuery min() per l'individuazione del centro di lavorazione con il numero minimo di ore di manodopera  
  La query seguente recupera tutti i centri di lavorazione con il numero minimo di ore di manodopera inclusi nel processo di produzione del modello del prodotto (ProductModelID=7). In genere, come illustrato nell'esempio seguente, viene restituito un singolo centro. Nel caso in cui esistano più centri con lo stesso numero minimo di ore di manodopera, vengono restituiti tutti questi centri.  
   
 ```  

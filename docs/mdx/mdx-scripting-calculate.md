@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 389c5f470cb3bf00cfe668a9405e36cd4ac8950e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a4a8be73a94ccbca1eb0deeacc0e7cc33c5cfaa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187633"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003452"
 ---
 # <a name="mdx-scripting---calculate"></a>Scripting MDX - CALCULATE
 
@@ -29,7 +28,7 @@ CALCULATE
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  Quando si crea un cubo utilizzando [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], l'istruzione CALCULATE viene automaticamente inclusa come prima istruzione nello script MDX del cubo. L'istruzione CALCULATE indica alle celle del cubo di eseguire l'aggregazione a partire dalle celle con una granularità più bassa. Dopo l'aggregazione di una cella, l'utilizzo delle espressioni per popolare le celle con una granularità più bassa influisce sul valore aggregato delle celle con una granularità superiore. Sebbene questa aggregazione sia consigliabile nella maggior parte dei casi, è possibile non applicarla o eseguire altre istruzioni prima di questa.  

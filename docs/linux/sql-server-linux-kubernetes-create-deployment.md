@@ -4,18 +4,17 @@ description: Questo articolo illustra come creare script di distribuzione per un
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: dfee5188c6fe54ed91172f9d83de7af6395c8956
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 181773a19e87c34a1931cae05f5a329aedbc1239
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833643"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000138"
 ---
 # <a name="create-deployment-script-for-sql-server-always-on-availability-group"></a>Creare uno script di distribuzione per SQL Server gruppo di disponibilità AlwaysOn
 
@@ -90,7 +89,7 @@ python ./deploy-ag.py --help
 python ./deploy-ag.py deploy --help
 ```
 
-* **usage**:
+* **utilizzo**:
 
   ```
   python ./deploy-ag.py deploy [-h] [--verbose] [--ag AG] [-n NAMESPACE]
@@ -113,7 +112,7 @@ python ./deploy-ag.py deploy --help
   
   `--ag AG`
   
-  nome del gruppo di disponibilità. Default=ag1
+  nome del gruppo di disponibilità. Default = ag1
   
   `-n NAMESPACE, --namespace NAMESPACE`
   
@@ -142,7 +141,7 @@ python ./deploy-ag.py deploy --help
 ```cmd
 python ./deploy-ag.py failover --help
 ```
-* **usage**: 
+* **utilizzo**: 
 
   ```cmd
   python deploy-ag.py failover [-h] [--verbose] [--ag AG]
@@ -168,7 +167,7 @@ python ./deploy-ag.py failover --help
 
   `--ag AG`
   
-  nome del gruppo di disponibilità. Default=ag1
+  nome del gruppo di disponibilità. Default = ag1
 
   `--namespace NAMESPACE`
 

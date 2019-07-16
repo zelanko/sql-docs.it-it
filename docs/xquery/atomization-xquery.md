@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bddb70c6c79ab983d1931bb17c741ff0dd531857
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e034e6464e395c1516eed874ed1c0cff2c32238f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047595"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985704"
 ---
 # <a name="atomization-xquery"></a>Atomizzazione (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ where ProductModelID=7
  Atomizzazione viene inoltre eseguita in passato alle funzioni, valori restituiti dalle funzioni, parametri dell'espressione di confronto **cast ()** espressioni ed espressioni di ordinamento passate nell'ordine dalla clausola.  
   
 ## <a name="see-also"></a>Vedere anche  
- [XQuery Basics](../xquery/xquery-basics.md)   
+ [Nozioni fondamentali su XQuery](../xquery/xquery-basics.md)   
  [Espressioni di confronto &#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)   
  [Funzioni XQuery per il tipo di dati XML](../xquery/xquery-functions-against-the-xml-data-type.md)  
   

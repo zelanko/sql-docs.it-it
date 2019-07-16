@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4b69f189-2722-4314-8a02-f4ffecd6dabd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d2a04f5052a0b686d3669c976ec7c4bee09e52b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57b187bf4f14bd5c05f91a433fa331e954fa0fb9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020375"
 ---
 # <a name="row-status-array"></a>Matrice di stato riga
 Oltre ai dati, **SQLFetch** e **SQLFetchScroll** può restituire una matrice che contiene lo stato di ogni riga nel set di righe. Questa matrice viene specificata tramite l'attributo di istruzione vengono impostati SQL_ATTR_ROW_STATUS_PTR. Questa matrice viene allocata dall'applicazione e deve avere tanti elementi come vengono specificati mediante l'attributo di istruzione SQL_ATTR_ROW_ARRAY_SIZE. I valori nella matrice sono impostati dallo **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, e **SQLSetPos.** I valori descrivono lo stato della riga e se tale stato è stato modificato dopo l'ultimo recupero.  

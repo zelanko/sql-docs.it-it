@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 34b80790-e010-4b90-8eaa-03189f5d8986
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5adf32800f4c2bc2b4a0874ca7efc22f04ffd110
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6992e084c210cea1b95157744addfd40180fccb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200479"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039337"
 ---
 # <a name="the-odbc-solution"></a>Soluzione ODBC
 La domanda, quindi, è come ODBC standardizzare l'accesso al database? Esistono due requisiti di architettura:  

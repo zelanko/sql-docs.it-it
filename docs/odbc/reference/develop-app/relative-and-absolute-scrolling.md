@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5ba05cb9079514750cf087149bae476efe0d8d41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e2034a3922dcd3db77113e08a6c48fe7ac39457f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861511"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138064"
 ---
 # <a name="relative-and-absolute-scrolling"></a>Scorrimento relativo e assoluto
 La maggior parte delle opzioni di scorrimento nella **SQLFetchScroll** posizionare il cursore rispetto alla posizione corrente o a una posizione assoluta. **SQLFetchScroll** supporta il recupero successivo, precedente, primo e ultimo set di righe, come il recupero anche come relativo (recuperare il set di righe *n* righe dall'inizio del set di righe corrente) e il recupero assoluto (recupero di inizio del set di righe nella riga *n*). Se *n* è negativo in un recupero assoluto, le righe vengono conteggiate dalla fine del set di risultati. Di conseguenza, un recupero assoluto della riga -1 significa che recuperare il set di righe che inizia con l'ultima riga nel set di risultati.  

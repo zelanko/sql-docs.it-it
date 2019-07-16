@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 185d6109-48cf-4981-bc40-ec2a4a90cafc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30547551cc1793622eaa981c07bbc002d07a094d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20310c60759aea17d61b9252fd73d226567a7a54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312914"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027236"
 ---
 # <a name="like-predicate-escape-character"></a>Carattere di escape nel predicato LIKE
 In un **, ad esempio** predicato, il segno di percentuale (%) corrisponde a zero o più di qualsiasi carattere e il carattere di sottolineatura (_) corrisponde a qualsiasi carattere. In base a un segno di percentuale effettivo o un carattere di sottolineatura un **, ad esempio** predicato, un carattere di escape deve precedere il segno di percentuale o un carattere di sottolineatura. La sequenza di escape che definisce il **, ad esempio** carattere di escape nel predicato è:  

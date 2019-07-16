@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 330b330375ee49d13242dd400ed76fae2bfc6e71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 070c2a362a69fb6863cc263da3975efc66c7c9f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661209"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006937"
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
  [ @objname =] '*object_name*'  
  Nome corrente completo o non qualificato dell'oggetto utente o del tipo di dati. Se l'oggetto da rinominare è una colonna in una tabella, *object_name* deve essere nel formato *Table. Column* oppure *schema.table.column*. Se l'oggetto da rinominare è un indice *object_name* deve essere nel formato *Table. index* oppure *schema.table.index*. Se l'oggetto da rinominare è un vincolo *object_name* deve essere nel formato *schema.constraint*.  
   
- Le virgolette sono necessarie solo se viene specificato un nome di oggetto completo. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. *object_name* viene **nvarchar(776)**, non prevede alcun valore predefinito.  
+ Le virgolette sono necessarie solo se viene specificato un nome di oggetto completo. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. *object_name* viene **nvarchar(776)** , non prevede alcun valore predefinito.  
   
  [ @newname =] '*new_name*'  
  Nuovo nome dell'oggetto specificato. *new_name* deve essere un nome composto da una parte e devono rispettare le regole per gli identificatori. *newname* viene **sysname**, non prevede alcun valore predefinito.  
@@ -60,9 +59,9 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 >  I nomi di trigger non possono iniziare con # o ##.  
   
  [ @objtype =] '*object_type*'  
- Tipo dell'oggetto da rinominare. *object_type* viene **varchar(13)**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
+ Tipo dell'oggetto da rinominare. *object_type* viene **varchar(13)** , con un valore predefinito è NULL, i possibili valori sono i seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |COLUMN|Colonna da rinominare.|  
 |DATABASE|Database definito dall'utente. Quando si rinomina un database è necessario specificare questo tipo di oggetto.|  
@@ -90,7 +89,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-renaming-a-table"></a>A. Ridenominazione di una tabella  
+### <a name="a-renaming-a-table"></a>R. Ridenominazione di una tabella  
  Nell'esempio seguente la tabella `SalesTerritory` viene rinominata in `SalesTerr` nello schema `Sales` .  
   
 ```  

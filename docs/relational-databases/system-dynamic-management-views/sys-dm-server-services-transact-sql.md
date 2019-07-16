@@ -1,5 +1,5 @@
 ---
-title: sys.dm_server_services (Transact-SQL) | Microsoft Docs
+title: Sys.dm server_services (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/07/2018
 ms.prod: sql
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8acb2fae0aa0edadf1995a0a103ff60b66a912a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c968c1c7445b89d0291faf97056417952e417dec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62686226"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090683"
 ---
 # <a name="sysdmserverservices-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +34,9 @@ ms.locfileid: "62686226"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |servicename|**nvarchar(256)**|Nome del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Full-text, o un servizio di SQL Server Agent. Non può essere null.|  
-|startup_type|**int**|Indica la modalità di avvio del servizio. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> 0: Altro<br />1: Altro<br />2: Automatico<br />3: Manual<br />4: Disabilitata<br /><br /> Ammette i valori Null.|  
-|startup_desc|**nvarchar(256)**|Descrive la modalità di avvio del servizio. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> Altro: Altro (esecuzione avvio)<br />Altro: Altro (avvio del sistema)<br />Automatico: Avvio automatico<br />Manuale: Inizio richiesta<br />Disabilitato: Disabilitata<br /><br /> Non può essere null.|  
-|status|**int**|Indica lo stato corrente del servizio. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> 1: Stopped<br />2: Altro (avvio in sospeso)<br />3: Altro (in attesa dell'arresto)<br />4: In esecuzione<br />5: Altro (in attesa della ripresa)<br />6: Altro (sospensione in sospeso)<br />7: Paused<br /><br /> Ammette i valori Null.|  
+|startup_type|**int**|Indica la modalità di avvio del servizio. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> 0: Altro<br />1: Altro<br />2: Automatico<br />3: Manuale<br />4: Disabled<br /><br /> Ammette i valori Null.|  
+|startup_desc|**nvarchar(256)**|Descrive la modalità di avvio del servizio. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> Altro: Altro (esecuzione avvio)<br />Altro: Altro (avvio del sistema)<br />Automatico: Avvio automatico<br />Manuale: Inizio richiesta<br />Disabilitato: Disabled<br /><br /> Non può essere null.|  
+|status|**int**|Indica lo stato corrente del servizio. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> 1: Arrestato<br />2: Altro (avvio in sospeso)<br />3: Altro (in attesa dell'arresto)<br />4: In esecuzione<br />5: Altro (in attesa della ripresa)<br />6: Altro (sospensione in sospeso)<br />7: Paused<br /><br /> Ammette i valori Null.|  
 |status_desc|**nvarchar(256)**|Descrive lo stato corrente del servizio. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> Arrestato: Il servizio è stato arrestato.<br />Altro (avvio dell'operazione in sospeso): Il servizio è in corso di avvio.<br />Altro (operazione di arresto in sospeso): Il servizio è in corso l'arresto.<br />corsa: Il servizio è in esecuzione.<br />Altri (continuare le operazioni in sospeso): Il servizio è in sospeso.<br />Altro (in attesa della sospensione): Il servizio è in corso la sospensione.<br />Sospeso: Il servizio è stato sospeso.<br /><br /> Non può essere null.|  
 |process_id|**int**|ID di processo del servizio. Non può essere null.|  
 |last_startup_time|**datetimeoffset(7)**|Data e ora dell'ultimo avvio del servizio. Ammette i valori Null.|  

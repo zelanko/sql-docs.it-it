@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 74d4ceb4532ee09004f035958860833aef488aaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 185e68ed8d083e3ccfbab99369f6a778766a4c09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446688"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138907"
 ---
 # <a name="interface-conformance-levels"></a>Livelli di conformità di interfaccia
 Lo scopo di livellamento è informare l'applicazione di quali funzionalità sono disponibili a esso dal driver. Uno schema di livellamento basato sulle funzioni non sufficientemente raggiungere tale obiettivo. In ODBC 3. *x*, i driver sono classificati in base alle funzionalità di cui dispongono. La funzionalità di supporto può includere che supportano la funzione. può inoltre includere il supporto di un campo di descrizione, un attributo di istruzione, un valore "Y" per un tipo di informazioni restituito da **SQLGetInfo**e così via.  

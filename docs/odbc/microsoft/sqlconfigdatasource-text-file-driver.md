@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c505d36e-1e72-47b2-a9e5-e4926b408468
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1635538f69b313a73a24ab1531f8793c7d98741e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 46bb00fb01ed3fee8098420794af089f2d8b981e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054079"
 ---
 # <a name="sqlconfigdatasource-text-file-driver"></a>SQLConfigDataSource (driver file di testo)
 > [!NOTE]  
@@ -34,7 +33,7 @@ ms.locfileid: "62665257"
 |DEFAULTDIR|La specifica del percorso della directory.|  
 |DESCRIPTION|Una descrizione dei dati nell'origine dati.<br /><br /> Consente di impostare la stessa opzione come **descrizione** nella finestra di dialogo programma di installazione.|  
 |DRIVER|Specifica il percorso alla DLL del driver.|  
-|DRIVERID|Un ID intero per il driver. 27 (Text)|  
+|DRIVERID|Un ID intero per il driver. 27 (testo)|  
 |ESTENSIONI|Elenca le estensioni dei file di testo sull'origine dati.<br /><br /> Consente di impostare la stessa opzione come **elenco di estensioni** nella finestra di dialogo programma di installazione.|  
 |FIL|Tipo di file testo|  
 |FILETYPE|Tipo di file per il driver di testo (testo).|  

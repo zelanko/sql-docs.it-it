@@ -4,18 +4,17 @@ description: Implementare la disponibilità elevata tramite la configurazione de
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: b2eb3a0a135fc43e3dadb855682cea9f6465d5ca
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 5ca2cd85087cf26be925e8899dfc3a1957e284ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833143"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032286"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurare il cluster di dischi condivisi di Red Hat Enterprise Linux per SQL Server
 
@@ -334,8 +333,8 @@ A questo punto, entrambe le istanze di SQL Server configurate per eseguire con i
    - **Nome della risorsa IP mobile**: Un nome per la risorsa indirizzo IP virtuale.
    - **Indirizzo IP**: L'indirizzo IP che i client useranno per connettersi all'istanza del cluster di SQL Server. 
    - **Il nome di risorsa sistema**: Un nome per la risorsa File System.
-   - **device**: Percorso di condivisione NFS
-   - **device**: Il percorso locale che viene montata la condivisione
+   - **dispositivo**: Percorso di condivisione NFS
+   - **dispositivo**: Il percorso locale che viene montata la condivisione
    - **fstype**: Tipo di condivisione file (ad esempio nfs)
 
    Aggiornare i valori dallo script seguente per l'ambiente. Eseguire in un nodo per configurare e avviare il servizio cluster.  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bc0c1d981180c61452f97a01bc0aba6fdc2d81e3
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: ef0f25660a0faa0747752a8ca15c207c1e939669
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793726"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039556"
 ---
 # <a name="sqlstatistics-function"></a>Funzione SQLStatistics
 **Conformità**  
@@ -148,7 +147,7 @@ SQLRETURN SQLStatistics(
 |TIPO (ODBC 1.0)|7|Smallint non NULL|Tipo di informazioni da restituire:<br /><br /> SQL_TABLE_STAT indica una statistica per la tabella (nella colonna della CARDINALITÀ o pagine).<br /><br /> SQL_INDEX_BTREE indica un indice albero B.<br /><br /> SQL_INDEX_CLUSTERED indica un indice cluster.<br /><br /> SQL_INDEX_CONTENT indica un indice di contenuto.<br /><br /> SQL_INDEX_HASHED indica un indice hash.<br /><br /> SQL_INDEX_OTHER indica un altro tipo di indice.|  
 |ORDINAL_POSITION (ODBC 1.0)|8|Smallint|Numero di sequenza di colonna nell'indice (a partire da 1); Se il tipo è SQL_TABLE_STAT, viene restituito NULL.|  
 |COLUMN_NAME (ODBC 1.0)|9|Varchar|Nome colonna. Se la colonna è basata su un'espressione, ad esempio SALARY + vantaggi, viene restituita l'espressione; Se l'espressione non può essere determinato, viene restituita una stringa vuota. Se il tipo è SQL_TABLE_STAT, viene restituito NULL.|  
-|ASC_OR_DESC (ODBC 1.0)|10|Char(1)|Sequenza di ordinamento per la colonna: "A" per ordine crescente; "D" per ordine decrescente; Se la sequenza di ordinamento colonne non è supportata dall'origine dati o se il tipo è SQL_TABLE_STAT, viene restituito NULL.|  
+|ASC_OR_DESC (ODBC 1.0)|10|Char (1)|Sequenza di ordinamento per la colonna: "A" per ordine crescente; "D" per ordine decrescente; Se la sequenza di ordinamento colonne non è supportata dall'origine dati o se il tipo è SQL_TABLE_STAT, viene restituito NULL.|  
 |CARDINALITÀ (ODBC 1.0)|11|Integer|Cardinalità della tabella o indice. numero di righe nella tabella se il tipo è SQL_TABLE_STAT; numero di valori univoci nell'indice se il tipo non è SQL_TABLE_STAT; Se il valore non è disponibile dall'origine dati, viene restituito NULL.|  
 |PAGINE (ODBC 1.0)|12|Integer|Numero di pagine utilizzate per archiviare l'indice o tabella. numero di pagine per la tabella se il tipo è SQL_TABLE_STAT; numero di pagine per l'indice se il tipo non è SQL_TABLE_STAT; Se il valore non è disponibile dall'origine dati o se non applicabile all'origine dati, viene restituito NULL.|  
 |FILTER_CONDITION (ODBC 2.0)|13|Varchar|Se l'indice è un indice filtrato, questa è la condizione di filtro, ad esempio SALARY > 30000; Se non è possibile determinare la condizione di filtro, questa è una stringa vuota.<br /><br /> NULL se l'indice non è un indice filtrato, non è possibile determinare se l'indice è un indice filtrato o il tipo è SQL_TABLE_STAT.|  

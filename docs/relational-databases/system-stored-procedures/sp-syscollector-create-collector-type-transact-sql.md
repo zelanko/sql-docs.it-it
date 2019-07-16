@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f7b50d9cf05f1242ae853f7aa24e7e681bdc245f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd8c82a401f78f4907bb891ede845017c00ac5ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032629"
 ---
 # <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,13 +55,13 @@ sp_syscollector_create_collector_type
  [ @parameter_schema =] '*parameter_schema*'  
  XML Schema per questo tipo di agente di raccolta. *parameter_schema* viene **xml** con valore predefinito è NULL.  
   
- [ @parameter_formatter = ] '*parameter_formatter*'  
+ [ @parameter_formatter =] '*parameter_formatter*'  
  Modello da utilizzare per trasformare l'XML per l'utilizzo nella pagina delle proprietà del set di raccolta. *parameter_formatter* viene **xml** con valore predefinito è NULL.  
   
- [@collection_package_id = ] *collection_package_id*  
+ [@collection_package_id =] *collection_package_id*  
  È un identificatore univoco locale che punta al pacchetto di raccolta [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilizzato dal set di raccolta. *collection_package_id* viene **uniqueidentifier** ed è obbligatorio.  
   
- [@upload_package_id = ] *upload_package_id*  
+ [@upload_package_id =] *upload_package_id*  
  Identificatore univoco locale che punta al pacchetto di caricamento di [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilizzato dal set di raccolta. *upload_package_id* viene **uniqueidentifier** ed è obbligatorio.  
   
 ## <a name="return-code-values"></a>Valori restituiti  

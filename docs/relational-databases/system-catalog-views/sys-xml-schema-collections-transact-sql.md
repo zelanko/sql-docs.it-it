@@ -19,14 +19,13 @@ ms.assetid: f3f7f3dc-029f-4942-ab3c-75fa9814e40f
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f7756d13f3a844d3cb8fb146a691698b69ba280
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ef3a2d6bca9591637223aa4f5659e42ac27c5d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115045"
 ---
 # <a name="sysxmlschemacollections-transact-sql"></a>sys.xml_schema_collections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "64945975"
 |xml_collection_id|**int**|Nome della raccolta di XML Schema. Univoco all'interno del database.|  
 |schema_id|**int**|ID dello schema relazionale contenente la raccolta di XML Schema.|  
 |principal_id|**int**|ID del singolo proprietario se diverso dal proprietario dello schema. Per impostazione predefinita, gli oggetti contenuti nello schema appartengono al proprietario dello schema stesso. È tuttavia possibile specificare un proprietario alternativo tramite l'istruzione ALTER AUTHORIZATION per modificare la proprietà.<br /><br /> NULL = Nessun proprietario singolo alternativo.|  
-|NAME|**sysname**|Nome della raccolta di XML Schema.|  
+|name|**sysname**|Nome della raccolta di XML Schema.|  
 |create_date|**datetime**|Data di creazione della raccolta di XML Schema.|  
 |modify_date|**datetime**|Data dell'ultima modifica della raccolta di XML Schema.|  
   

@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: ad3548bc-4780-4821-b962-b421d52daed9
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 349abe5ccc5fb36ee6c3568e97163e6eb665f633
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe249cd389e71fa5565e2877fba46b47cf0a4f38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594674"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108778"
 ---
 # <a name="syssystemsqlmodules-transact-sql"></a>sys.system_sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Restituisce una riga per oggetto di sistema contenente un modulo definito tramite il linguaggio SQL. Gli oggetti di sistema di tipo FN, IF, P, PC, TF, V sono associati a un modulo SQL. Per identificare l'oggetto contenitore, è possibile unire questa vista alla [Sys. system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md).  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Numero di identificazione dell'oggetto contenitore, univoco all'interno di un database.|  
-|**Definizione**|**nvarchar(max)**|Testo SQL che definisce il modulo.|  
+|**definition**|**nvarchar(max)**|Testo SQL che definisce il modulo.|  
 |**uses_ansi_nulls**|**bit**|1 = Il modulo è stato creato con l'opzione di database SET ANSI_NULLS impostata su ON.<br /><br /> Restituisce sempre 1.|  
 |**uses_quoted_identifier**|**bit**|1= Il modulo è stato creato con SET QUOTED_IDENTIFIER ON.<br /><br /> Restituisce sempre 1.|  
 |**is_schema_bound**|**bit**|0 = Il modulo non è stato creato con l'opzione SCHEMABINDING.<br /><br /> Restituisce sempre 0.|  

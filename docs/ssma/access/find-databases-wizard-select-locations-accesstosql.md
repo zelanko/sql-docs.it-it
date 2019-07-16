@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 86e9d39e6dd56cb5762933dc5ed37b5740a34ea5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82558c7839263a777a15d374acff28b4c40103d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759581"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024752"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Procedura guidata trova database (Seleziona percorsi) (AccessToSQL)
 Nella pagina Selezione percorsi della procedura guidata trova database immesso i parametri di ricerca per trovare i database di Access.  

@@ -4,19 +4,18 @@ titleSuffix: SQL Server
 description: Installare, aggiornare e disinstallare SQL Server in Linux. Questo articolo descrive gli scenari online, offline e a quella automatico.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: c4e58111fd6a584344b4f73e6986774040aa6211
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 7f4b2aa37b20cceaa3269527c95bfa97a2daa311
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833219"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032442"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guida all'installazione per SQL Server in Linux
 
@@ -40,8 +39,8 @@ SQL Server 2017 è supportata in Ubuntu, SUSE Linux Enterprise Server (SLES) e R
 | Piattaforma | Versioni supportate | Recupero
 |-----|-----|-----
 | **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [Ottenere RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
-| **SUSE Linux Enterprise Server** | v12 SP2 | [Get SLES v12 SP2](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04 | [Get Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
+| **SUSE Linux Enterprise Server** | v12 SP2 | [Ottenere SLES 12 SP2](https://www.suse.com/products/server)
+| **Ubuntu** | 16.04 | [Ottenere Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
 | **Motore docker** | 1.8+ | [Ottieni Docker](https://www.docker.com/get-started)
 
 Microsoft supporta anche la distribuzione e la gestione dei contenitori di SQL Server usando OpenShift e Kubernetes.
@@ -58,7 +57,7 @@ SQL Server 2017 include i seguenti requisiti di sistema per Linux:
 | **Memoria** | 2 GB |
 | **File system** | **XFS** oppure **EXT4** (altro file System, ad esempio **BTRFS**, non sono supportati) |
 | **Spazio su disco** | 6 GB |
-| **Velocità processore** | 2 GHz |
+| **Velocità processore** | Almeno 2 GHz |
 | **Memorie centrali del processore** | 2 core |
 | **Tipo di processore** | compatibile con x64 solo |
 

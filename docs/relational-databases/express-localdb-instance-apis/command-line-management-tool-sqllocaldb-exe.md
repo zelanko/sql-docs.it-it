@@ -1,5 +1,5 @@
 ---
-title: 'Strumento di gestione da riga di comando: SqlLocalDB.exe | Microsoft Docs'
+title: 'Strumento di gestione della riga di comando: SqlLocalDB.exe | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,13 +12,12 @@ apilocation:
 ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e97cd1d95196b838585148e240cb8cf50a47a041
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a41daed808b51df59ba80e0113b84e46c501c9b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683229"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126952"
 ---
 # <a name="command-line-management-tool-sqllocaldbexe"></a>Strumento di gestione della riga di comando: SqlLocalDB.exe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "47683229"
 ## <a name="sqllocaldb-options"></a>Opzioni di SqlLocalDB  
  SqlLocalDB supporta le opzioni seguenti.  
   
-|Opzione|Funzione|  
+|Opzione|Descrizione|  
 |------------|------------------|  
 |`-?`|Viene stampato il testo della Guida.|  
 |`create\|c "instance name" [version-number] [-s]`|Viene creata una nuova istanza del database locale con una versione e un nome specificati.<br /><br /> Se il parametro [version-number] viene omesso, il valore predefinito è la versione della build di SqlLocalDB.<br /><br /> Tramite il parametro -s viene avviata la nuova istanza del database locale dopo la relativa creazione.|  
@@ -44,7 +43,7 @@ ms.locfileid: "47683229"
 |||  
 |`trace\|t on\|off`|Viene abilitata o disabilitata la traccia.|  
   
- Gli spazi in SqlLocalDB vengono considerati come delimitatori. È necessario racchiudere tra virgolette i nomi delle istanze contenenti spazi e caratteri speciali. Esempio:  
+ Gli spazi in SqlLocalDB vengono considerati come delimitatori. È necessario racchiudere tra virgolette i nomi delle istanze contenenti spazi e caratteri speciali. Ad esempio:  
   
  `SqlLocalDB create "My instance name with spaces"`  
   
