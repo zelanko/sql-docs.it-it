@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d9843e4b-1d05-4d5a-9dc3-ee9ec59edb97
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 31c1703bc03a2881e7b9b96989b8949cc81aba7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 152a0aa1e8d92424b2f60c49f44888de7d3e528c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939780"
 ---
 # <a name="table-name-limitations"></a>Limitazioni dei nomi di tabella
 I nomi di tabella possono contenere qualsiasi carattere validi (ad esempio, spazi). Se i nomi delle tabelle contengono i caratteri tranne lettere, numeri e caratteri di sottolineatura, il nome deve essere delimitato racchiudendolo tra virgolette back (').  

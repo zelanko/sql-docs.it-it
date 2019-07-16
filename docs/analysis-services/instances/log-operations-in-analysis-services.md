@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9f597f1968f947b9e0dd792568ea59f42af1d2a0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521087"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209432"
 ---
 # <a name="log-operations-in-analysis-services"></a>Registrare le operazioni in Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "52521087"
   
  Oltre alla funzionalità di registrazione predefinita, molti amministratori e sviluppatori usano anche gli strumenti forniti dalla community di Analysis Services, ad esempio **ASTrace**, per raccogliere i dati relativi alle operazioni del server. Vedere [esempi della Community di Microsoft SQL Server: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) collegamenti per il download.  
   
- In questo argomento sono incluse le sezioni seguenti:  
+ Di seguito sono elencate le diverse sezioni di questo argomento:  
   
 -   [Posizione e tipi di log](#bkmk_location)  
   
@@ -40,13 +40,13 @@ ms.locfileid: "52521087"
 ##  <a name="bkmk_location"></a> Posizione e tipi di log  
  Analysis Services fornisce i log descritti di seguito.  
   
-|Posizione o nome del file|Tipo|Utilizzo|Attivato per impostazione predefinita|  
+|Posizione o nome del file|type|Utilizzo|Attivato per impostazione predefinita|  
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|Log degli errori|Monitoraggio della routine e risoluzione dei problemi di base|Yes|  
 |Tabella OlapQueryLog in un database relazionale|Log di query|Raccolta di input per l'Ottimizzazione guidata basata sulle statistiche di utilizzo|No|  
 |File SQLDmp\<guid > i file con estensione mdmp|Arresti anomali ed eccezioni|Risoluzione dei problemi completa|No|  
   
- Per altre risorse di informazioni non incluse nel presente argomento, è consigliabile consultare il collegamento seguente: [Suggerimenti di raccolta dati dal supporto Microsoft iniziale](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
+ È consigliabile il collegamento seguente per le risorse di informazioni aggiuntive non trattate in questo argomento: [Suggerimenti di raccolta dati dal supporto Microsoft iniziale](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   
 ##  <a name="bkmk_general"></a> Informazioni generali sulle impostazioni di configurazione dei file di log  
  È possibile trovare le sezioni per ogni log nel file di configurazione del server msmdsrv.ini, che si trova nella cartella \Programmi\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\Config. Per istruzioni su come modificare il file, vedere [Proprietà del server in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md) .  
@@ -146,7 +146,7 @@ ms.locfileid: "52521087"
   
  **Configurare le segnalazioni di arresti anomali**  
   
- Se non diversamente indicato dal supporto tecnico Microsoft, la maggior parte degli amministratori usa le impostazioni predefinite. Per istruzioni su come configurare i file di dump, è possibile usare ancora il seguente articolo della Knowledge Base anche se non molto recente: [Come configurare Analysis Services per generare file di dump di memoria](http://support.microsoft.com/kb/919711).  
+ Se non diversamente indicato dal supporto tecnico Microsoft, la maggior parte degli amministratori usa le impostazioni predefinite. Questo articolo non recente della Knowledge base viene ancora usato per fornire istruzioni su come configurare i file di dump: [Come configurare Analysis Services per generare file di dump di memoria](http://support.microsoft.com/kb/919711).  
   
  L'impostazione di configurazione che verrà modificata con maggiore probabilità è **CreateAndSendCrashReports** , usata per determinare se verrà generato o meno un file di dump di memoria.  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0e04ffd13183462b0d2a5e68ebc177b8b342b570
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5f28b5d593524288a755f4c9455bba39554d7bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701859"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924811"
 ---
 # <a name="namespaces"></a>Spazi dei nomi
 Il formato di persistenza XML ADO utilizza i seguenti quattro spazi dei nomi.  
@@ -29,9 +28,9 @@ Il formato di persistenza XML ADO utilizza i seguenti quattro spazi dei nomi.
 |Prefisso|Descrizione|  
 |------------|-----------------|  
 |s|Fa riferimento allo spazio dei nomi "XML-Data" che contiene gli elementi e attributi che definiscono lo schema del set di record corrente.|  
-|dt|Fa riferimento alla specifica di definizioni del tipo di dati.|  
+|DT|Fa riferimento alla specifica di definizioni del tipo di dati.|  
 |rs|Fa riferimento agli elementi che lo contiene lo spazio dei nomi e gli attributi specifici per le proprietà di Recordset ADO e attributi.|  
-|z|Fa riferimento allo schema del set di righe corrente.|  
+|l|Fa riferimento allo schema del set di righe corrente.|  
   
  Un client non deve aggiungere dei tag corrispondenti a questi spazi dei nomi, come definito dalla specifica. Ad esempio, un client non deve definire uno spazio dei nomi come "urn: schemas-microsoft-com: rowset" e quindi scrivere un valore, ad esempio "rs: MyOwnTag." Per altre informazioni sugli spazi dei nomi, vedere la [W3C raccomandazione Namespaces in XML](http://www.w3.org/TR/REC-xml-names/).  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 49f7c204dd5c8fd74c1e2fe1c1c57adb38e60d69
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524066"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946117"
 ---
 # <a name="xqueries-involving-order"></a>Query XQuery che implicano l'ordinamento
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "52524066"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-retrieve-manufacturing-steps-at-the-second-work-center-location-for-a-product"></a>A. Recupero delle fasi di produzione di un prodotto nel secondo centro di lavorazione  
+### <a name="a-retrieve-manufacturing-steps-at-the-second-work-center-location-for-a-product"></a>R. Recupero delle fasi di produzione di un prodotto nel secondo centro di lavorazione  
  La query seguente recupera le fasi di produzione di un modello di prodotto specifico nel secondo centro di lavorazione di una sequenza di centri coinvolti nel processo di produzione.  
   
 ```sql
@@ -64,7 +63,7 @@ WHERE ProductModelID=7
   
 -   **@\*** Recupera tutti gli attributi del secondo centro di lavorazione.  
   
--   L'iterazione di FLWOR (FOR ... RETURN) recupera tutti gli elementi figlio <`step`> del secondo centro di lavorazione.  
+-   L'iterazione di FLWOR (per... RETURN) recupera tutti i <`step`> gli elementi figlio del secondo centro di lavorazione.  
   
 -   Il [funzione SQL: Column (XQuery)](../xquery/xquery-extension-functions-sql-column.md) include il valore relazionale nel XML che viene costruito.  
   
@@ -84,7 +83,7 @@ WHERE ProductModelID=7
   
  La query precedente recupera unicamente i nodi di testo. Se si desidera che l'intera <`step`> elemento restituito al contrario, rimuovere il **String ()** funzione della query:  
   
-### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>b. Ricerca di tutti i materiali e gli strumenti utilizzati nel secondo centro di lavorazione per la produzione di un prodotto  
+### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. Ricerca di tutti i materiali e gli strumenti utilizzati nel secondo centro di lavorazione per la produzione di un prodotto  
  La query seguente recupera gli strumenti e i materiali utilizzati per un modello di prodotto specifico nel secondo centro di lavorazione della sequenza di centri coinvolta nel processo di produzione.  
   
 ```sql
@@ -116,7 +115,7 @@ where ProductModelID=7
   
  Dalla query precedente si noti quanto segue:  
   
--   La query crea l'elemento <Loca`tion`> e recupera i valori dei relativi attributi dal database.  
+-   La query costruisce il < Loca`tion`> elemento e recupera valori dei relativi attributi dal database.  
   
 -   La query utilizza due iterazioni di FLWOR (for...return), una per recuperare gli strumenti e l'altra per recuperare i materiali utilizzati.  
   
@@ -138,7 +137,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>C. Recupero delle descrizioni delle prime due caratteristiche di un prodotto dal catalogo dei prodotti  
- La query seguente recupera le descrizioni delle prime due caratteristiche di un modello di prodotto specifico dall'elemento <`Features`> nel catalogo dei modelli del prodotto.  
+ Per un modello di prodotto specifico, la query recupera i primi due descrizioni di caratteristiche dal <`Features`> elemento del catalogo del modello di prodotto.  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -158,9 +157,9 @@ where ProductModelID=19
   
  Dalla query precedente si noti quanto segue:  
   
- La query costruisce il codice XML che include l'elemento <`ProductModel`> per cui sono presenti gli attributi ProductModelID e ProductModelName.  
+ Il corpo della query costruisce codice XML che include il <`ProductModel`> elemento che ha gli attributi ProductModelID e ProductModelName.  
   
--   La query utilizza un ciclo FOR ... RETURN per recuperare le descrizioni delle caratteristiche del modello del prodotto. Il **Position** funzione viene utilizzata per recuperare le prime due caratteristiche.  
+-   La query utilizza un ciclo FOR... È impostata su RETURN per recuperare le descrizioni di funzionalità del modello di prodotto. Il **Position** funzione viene utilizzata per recuperare le prime due caratteristiche.  
   
  Questo è il risultato:  
   

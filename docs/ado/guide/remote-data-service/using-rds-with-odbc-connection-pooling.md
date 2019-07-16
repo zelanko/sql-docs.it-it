@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 14f06b98896a63f8e19ce22fb9cd1eb5b181f481
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2ffcc64cb9d0e45d371e927cd1c15be51cd917c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921931"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>Uso di RDS con pool di connessioni ODBC
 Se si usa un'origine dati ODBC, è possibile usare l'opzione in Internet Information Services (IIS) al pool per ottenere la gestione di ad alte prestazioni del carico di lavoro client. Pool di connessioni è un gestore di risorse per le connessioni, mantenere lo stato aperto per le connessioni utilizzate di frequente.  
@@ -32,7 +31,7 @@ Se si usa un'origine dati ODBC, è possibile usare l'opzione in Internet Informa
   
  Per garantire che il pool di connessioni è stabile e offre ulteriori miglioramenti delle prestazioni, è necessario configurare Microsoft SQL Server per usare la libreria di rete TCP/IP Socket.  
   
- A tale scopo, è necessario:  
+ A questo scopo, è necessario:  
   
 -   Configurare il computer di SQL Server per usare i socket TCP/IP.  
   
@@ -74,7 +73,7 @@ Se si usa un'origine dati ODBC, è possibile usare l'opzione in Internet Informa
   
 ### <a name="to-configure-the-web-server-all-sql-servers"></a>Per configurare il server Web (tutti i server SQL)  
   
-### <a name="for-microsoft-sql-server-65"></a>For Microsoft SQL Server 6.5:  
+### <a name="for-microsoft-sql-server-65"></a>Per Microsoft SQL Server 6.5:  
   
 1.  Dal menu Start, scegliere Programmi Microsoft SQL Server 6.5 e quindi fare clic su Utilità di configurazione di SQL Client.  
   
@@ -84,7 +83,7 @@ Se si usa un'origine dati ODBC, è possibile usare l'opzione in Internet Informa
   
 4.  Fare clic su Fine per salvare le modifiche e uscire dall'utilità.  
   
-### <a name="for-microsoft-sql-server-70"></a>For Microsoft SQL Server 7.0:  
+### <a name="for-microsoft-sql-server-70"></a>Per Microsoft SQL Server 7.0:  
   
 1.  Dal menu Start, scegliere Programmi Microsoft SQL Server 7.0 e quindi fare clic su Utilità di rete del Client.  
   
@@ -98,7 +97,7 @@ Se si usa un'origine dati ODBC, è possibile usare l'opzione in Internet Informa
   
 ### <a name="to-configure-the-web-server-a-specific-sql-server"></a>Per configurare il server Web (SQL Server specifica)  
   
-### <a name="for-microsoft-sql-server-65"></a>For Microsoft SQL Server 6.5:  
+### <a name="for-microsoft-sql-server-65"></a>Per Microsoft SQL Server 6.5:  
   
 1.  Dal menu Start, scegliere Programmi Microsoft SQL Server 6.5 e quindi fare clic su Utilità di configurazione di SQL Client.  
   
@@ -112,7 +111,7 @@ Se si usa un'origine dati ODBC, è possibile usare l'opzione in Internet Informa
   
 6.  Fare clic su Fine.  
   
-### <a name="for-microsoft-sql-server-70"></a>For Microsoft SQL Server 7.0:  
+### <a name="for-microsoft-sql-server-70"></a>Per Microsoft SQL Server 7.0:  
   
 1.  Dal menu Start, scegliere Programmi Microsoft SQL Server 7.0 e quindi fare clic su Utilità di configurazione del Client.  
   

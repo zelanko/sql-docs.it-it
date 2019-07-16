@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 809e8c80ec1734c24f6930b4042b5e1a84356597
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 85710deec2e7ab5e79ed7a514e3b625c6232484e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400108"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902197"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ Questa tabella è archiviata nel **msdb** database.
 |**sql_message_id**|**int**|ID di un messaggio di errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito se l'esecuzione del processo ha esito negativo.|  
 |**sql_severity**|**int**|Gravità di qualsiasi errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**message**|**nvarchar(4000)**|Eventuale testo di un messaggio di errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**run_status**|**int**|Stato di esecuzione del processo:<br /><br /> **0** = non è riuscita<br /><br /> **1** = Succeeded<br /><br /> **2** = Retry<br /><br /> **3** = annullato<br /><br />**4** = in corso|  
+|**run_status**|**int**|Stato di esecuzione del processo:<br /><br /> **0** = non è riuscita<br /><br /> **1** = ha avuto esito positivo<br /><br /> **2** = nuovo tentativo<br /><br /> **3** = annullato<br /><br />**4** = in corso|  
 |**run_date**|**int**|Data di avvio dell'esecuzione del processo o del passaggio. Per una cronologia dei processi o dei passaggi in corso, rappresenta la data/ora di scrittura della cronologia.|  
 |**run_time**|**int**|Ora di inizio dell'esecuzione del processo o del passaggio.|  
 |**run_duration**|**int**|Tempo trascorso per l'esecuzione del processo o passaggio **HHMMSS** formato.|  

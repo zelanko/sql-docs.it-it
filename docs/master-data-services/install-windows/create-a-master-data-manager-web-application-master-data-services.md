@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 85791ac61d35d9c5651a4df02b15e5ee1fc896a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fa6834a853a82067418a2ea5270e59ebdaa7dc9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945031"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>Creare un'applicazione Web Gestione dati master (Master Data Services)
 

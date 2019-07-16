@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 27e704e6274910e2c9e3f77fe235e02918d95425
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072208"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207664"
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>Abilitare la modalità DirectQuery in SSMS
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "53072208"
   
 2.  In Esplora oggetti fare doppio clic sul database > **Proprietà** > **Livello di compatibilità**.  
   
-     Il valore sarà **SQL Server 2016 (1200)** o un livello precedente come **SQL Server 2012 SP1 o versione successiva (1103)**. Nel passaggio successivo, seguire le istruzioni adatte al livello di compatibilità.  
+     Il valore sarà **SQL Server 2016 (1200)** o un livello precedente come **SQL Server 2012 SP1 o versione successiva (1103)** . Nel passaggio successivo, seguire le istruzioni adatte al livello di compatibilità.  
   
  Quando si modifica un modello tabulare in modalità DirectQuery, la nuova modalità di archiviazione di dati diventa effettiva immediatamente.  
   

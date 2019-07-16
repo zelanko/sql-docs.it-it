@@ -4,17 +4,16 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 203fad6aa3c39d57446738b9c74631fe114c609e
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: d7d7d7eeacca4e18fe5b5fdc97331e24a6ca212d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833559"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952616"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Nozioni fondamentali sulla disponibilità di SQL Server per le distribuzioni di Linux
 
@@ -86,7 +85,7 @@ Analogamente a Windows, distribuzioni Linux hanno un firewall incorporato. Se l'
 
 | Numero di porta | Tipo     | Description                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS - `rpcbind/sunrpc`                                                                                                    |
+| 111         | TCP/UDP  | NFS: `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (se usati) - Mapper di endpoint                                                                                          |
 | 137         | UDP      | Samba (se usati) - servizio nomi NetBIOS                                                                                      |
 | 138         | UDP      | Samba (se usati) - datagrammi NetBIOS                                                                                          |
@@ -200,7 +199,7 @@ Il `corosync.conf` file contiene la configurazione del cluster. Si trova in `/et
 #### <a name="cluster-log-location"></a>Percorso del registro cluster
 Percorsi dei log per i cluster Pacemaker differiscono a seconda della distribuzione.
 -   RHEL e SLES: `/var/log/cluster/corosync.log`
--   Ubuntu - `/var/log/corosync/corosync.log`
+-   Ubuntu- `/var/log/corosync/corosync.log`
 
 Per modificare il percorso di registrazione predefinito, modificare `corosync.conf`.
 

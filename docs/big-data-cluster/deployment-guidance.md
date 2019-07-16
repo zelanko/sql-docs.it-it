@@ -5,17 +5,16 @@ description: Informazioni su come distribuire i cluster di big data di SQL Serve
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e04986691b52149f0918b1559f1f3db1d99cab38
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 0f2993d15cecd87879cabc50918d784a16750b30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728801"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958410"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Come distribuire i cluster di big data di SQL Server in Kubernetes
 
@@ -53,7 +52,7 @@ Se si dispone già di un cluster Kubernetes che soddisfi i prerequisiti preceden
 
 | Distribuzione di Kubernetes in: | Descrizione | Collegamento |
 |---|---|---|
-| **Azure Kubernetes Services (AKS)** | Un servizio di contenitore Kubernetes gestito in Azure. | [Istruzioni](deploy-on-aks.md) |
+| **Servizi Kubernetes Azure (AKS)** | Un servizio di contenitore Kubernetes gestito in Azure. | [Istruzioni](deploy-on-aks.md) |
 | **Più computer (kubeadm)** | Un cluster Kubernetes distribuito nei computer fisici o macchine virtuali usando **kubeadm** | [Istruzioni](deploy-with-kubeadm.md) |
 | **Minikube** | Un cluster Kubernetes a nodo singolo in una macchina virtuale. | [Istruzioni](deploy-on-minikube.md) |
 
@@ -84,7 +83,7 @@ I big data opzioni sono definite nei file di configurazione JSON di distribuzion
 |---|---|
 | **aks-dev-test** | Azure Kubernetes Service (AKS) |
 | **kubeadm-dev-test** | Più computer (kubeadm) |
-| **minikube-dev-test** | minikube |
+| **minikube-dev-test** | Minikube |
 
 È possibile distribuire un cluster di big data eseguendo **bdc mssqlctl creare**. Questo verrà richiesto di scegliere una delle configurazioni predefinite e quindi in modo semplificato la distribuzione.
 

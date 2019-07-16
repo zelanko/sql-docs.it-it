@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a3219168a070a9c264d4fb5457f9e5844734844a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775563"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68186119"
 ---
 # <a name="start-sql-server-profiler"></a>Avviare SQL Server Profiler
   È possibile avviare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] in diversi modi per supportare la raccolta dell'output di traccia in numerosi scenari. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] può essere avviato dal menu **Start**, dal menu **Strumenti** in Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] e da diverse posizioni all'interno di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

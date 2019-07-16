@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 99ced09e841e4a778b9920ced4023336a1668d2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 000302715e7ce7d3a8ae53f06d61f54e98cbd883
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925791"
 ---
 # <a name="connecting-to-data-sources"></a>Connessione a origini dati
 Un oggetto ADO **connessione** oggetto rappresenta una sessione univoca con un'origine dati, inclusi un DBMS, un archivio di file o un file di testo delimitato da virgole. Nel caso di un sistema di database client/server, la connessione di ADO può essere una connessione di rete effettivo al server.  

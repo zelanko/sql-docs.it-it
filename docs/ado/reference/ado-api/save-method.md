@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0953b76ff642387679c907e6f0b3364cbac898df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ec1601749b6537484cead17c50492de131932ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931178"
 ---
 # <a name="save-method"></a>Metodo Save
 Salva il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in un file o [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oggetto.  
@@ -36,10 +35,10 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Parametri  
  *Destinazione*  
- Facoltativo. Oggetto **Variant** che rappresenta il nome del percorso completo del file in cui le **Recordset** deve essere salvato, o un riferimento a una **Stream** oggetto.  
+ facoltativo. Oggetto **Variant** che rappresenta il nome del percorso completo del file in cui le **Recordset** deve essere salvato, o un riferimento a una **Stream** oggetto.  
   
  *PersistFormat*  
- Facoltativo. Oggetto [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) valore che specifica il formato in cui le **Recordset** devono essere salvati (XML o ADTG). Il valore predefinito è **adPersistADTG**.  
+ facoltativo. Oggetto [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) valore che specifica il formato in cui le **Recordset** devono essere salvati (XML o ADTG). Il valore predefinito è **adPersistADTG**.  
   
 ## <a name="remarks"></a>Note  
  Il [metodo Save](../../../ado/reference/ado-api/save-method.md) metodo può essere richiamato solo su un elemento aperto **Recordset**. Usare la [metodo Open (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) metodo di ripristino successive il **Recordset** dalla *destinazione*.  

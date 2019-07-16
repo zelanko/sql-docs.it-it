@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cbfdff7c22152acfd0deb97a6e278bd5fd3f553f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25d57116e1fa24658d62a0c9083e00a3e320d2a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698435"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933378"
 ---
 # <a name="copyto-method-ado"></a>Metodo CopyTo (ADO)
 Copia il numero specificato di caratteri o byte (a seconda [tipo](../../../ado/reference/ado-api/type-property-ado-stream.md)) nella [Stream](../../../ado/reference/ado-api/stream-object-ado.md) a un altro **Stream** oggetto.  
@@ -41,8 +40,8 @@ Stream.CopyTo DestStream, NumChars
 > [!NOTE]
 >  Il *DestStream* parametro non può essere un proxy di **Stream** dell'oggetto perché questo richiede l'accesso a un'interfaccia privata nel **Stream** oggetto che non può essere eseguita in modalità remota per il client.  
   
- *NumChars*  
- Facoltativo. Un' **Integer** valore che specifica il numero di byte o caratteri da copiare dalla posizione corrente nell'origine **Stream** alla destinazione **Stream**. Il valore predefinito è -1, che specifica che tutti i caratteri o byte vengono copiati dalla posizione corrente per [EOS](../../../ado/reference/ado-api/eos-property.md).  
+ *numChars*  
+ facoltativo. Un' **Integer** valore che specifica il numero di byte o caratteri da copiare dalla posizione corrente nell'origine **Stream** alla destinazione **Stream**. Il valore predefinito è -1, che specifica che tutti i caratteri o byte vengono copiati dalla posizione corrente per [EOS](../../../ado/reference/ado-api/eos-property.md).  
   
 ## <a name="remarks"></a>Note  
  Questo metodo copia il numero specificato di caratteri o byte, a partire dalla posizione corrente specificata dal [posizione](../../../ado/reference/ado-api/position-property-ado.md) proprietà. Se il numero specificato è maggiore del numero disponibile di byte fino **EOS**, quindi solo caratteri o byte dalla posizione corrente alla **EOS** vengono copiati. Se il valore di *NumChars* è -1 o viene omesso, vengono copiati tutti i caratteri o byte a partire dalla posizione corrente.  

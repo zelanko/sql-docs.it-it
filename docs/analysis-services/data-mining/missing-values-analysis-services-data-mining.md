@@ -1,5 +1,5 @@
 ---
-title: I valori mancanti (Analysis Services - Data Mining) | Documenti Microsoft
+title: I valori mancanti (Analysis Services - Data Mining) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 662fdd55fc5929fe56734b9894bf971962ff2a7b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017648"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182599"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Valori mancanti (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Una gestione corretta dei  *valori mancanti* è fondamentale per ottenere una modellazione efficace. In questa sezione vengono illustrati i valori mancanti e descritte le caratteristiche fornite in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per gestire i valori mancanti durante la compilazione di strutture e modelli di data mining.  
+  Una gestione corretta dei *valori mancanti* è fondamentale per ottenere una modellazione efficace. In questa sezione vengono illustrati i valori mancanti e descritte le caratteristiche fornite in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per gestire i valori mancanti durante la compilazione di strutture e modelli di data mining.  
   
 ## <a name="definition-of-missing-values-in-data-mining"></a>Definizione dei valori mancanti nel data mining  
  Un valore mancante può avere diversi significati. È possibile che il campo non fosse applicabile, che l'evento non si sia verificato o che i dati non fossero disponibili. Potrebbe essere accaduto che la persona che ha immesso i dati non conoscesse il valore corretto o non abbia verificato l'effettiva compilazione di un campo.  
@@ -41,7 +41,7 @@ ms.locfileid: "34017648"
   
  Ad esempio, nella tabella seguente è illustrata la distribuzione di valori per il nodo (Tutto) nel modello di albero delle decisioni creato per l'esercitazione Bike Buyer. Nello scenario di esempio la colonna [Bike Buyer] rappresenta l'attributo stimabile, dove 1 indica "Sì" e 0 indica "No".  
   
-|Valore|Case|  
+|Value|Case|  
 |-----------|-----------|  
 |0|9296|  
 |1|9098|  
@@ -49,7 +49,7 @@ ms.locfileid: "34017648"
   
  Tramite questa distribuzione viene indicato che circa la metà dei clienti ha acquistato una bicicletta, mentre l'altra metà no. Questo specifico set di dati è molto pulito. Ogni case ha pertanto un valore nella colonna [Bike Buyer] e il conteggio dei valori **Missing** è 0. Se nel campo [Bike Buyer] di un case è tuttavia presente un valore Null, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tale riga viene conteggiata come un case con un valore **Missing** .  
   
- Se l'input è una colonna continua, il modello tabula due possibili stati per l'attributo: **Existing** e **Missing**. In altri termini, la colonna contiene un valore di un tipo di dati numerico oppure non contiene alcun valore. Per i case che contengono un valore, il modello calcola la media, la deviazione standard e altre statistiche significative. Per i case che non includono valori, il modello fornisce un conteggio dei valori **Missing** e adatta le stime di conseguenza. Il metodo per adattare la stima varia a seconda dell'algoritmo e viene descritto nella sezione seguente.  
+ Se l'input è una colonna continua, il modello Tabula due possibili stati per l'attributo: **Esistenti** e **mancante**. In altri termini, la colonna contiene un valore di un tipo di dati numerico oppure non contiene alcun valore. Per i case che contengono un valore, il modello calcola la media, la deviazione standard e altre statistiche significative. Per i case che non includono valori, il modello fornisce un conteggio dei valori **Missing** e adatta le stime di conseguenza. Il metodo per adattare la stima varia a seconda dell'algoritmo e viene descritto nella sezione seguente.  
   
 > [!NOTE]  
 >  Per gli attributi di una tabella nidificata, i valori mancanti non sono informativi. Se ad esempio un cliente non ha acquistato un prodotto, la tabella nidificata **Prodotti** non include una riga corrispondente a tale prodotto e il modello di data mining non crea un attributo per il prodotto mancante. Se tuttavia si è interessati ai clienti che non hanno acquistato determinati prodotti, è possibile creare un modello filtrato in base alla non esistenza dei prodotti nella tabella nidificata, utilizzando un'istruzione NOT EXISTS nel filtro del modello. Per altre informazioni, vedere [Applicare un filtro a un modello di data mining](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md).  
@@ -57,7 +57,7 @@ ms.locfileid: "34017648"
 ## <a name="adjusting-probability-for-missing-states"></a>Adattamento della probabilità per gli stati mancanti  
  Oltre al conteggio dei valori, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene eseguito il calcolo della probabilità di qualsiasi valore nel set di dati. Lo stesso vale per il valore **Missing** . Nella tabella seguente sono, ad esempio, illustrate le probabilità per i case dell'esempio precedente:  
   
-|Valore|Case|Probabilità|  
+|Value|Case|Probabilità|  
 |-----------|-----------|-----------------|  
 |0|9296|50,55%|  
 |1|9098|49,42%|  
@@ -84,7 +84,7 @@ ms.locfileid: "34017648"
   
  ProbabilitàStato = (ProbabilitàPrecedenteNodo) * (SupportoStato + 1) / (SupportoNodo + TotaleStati)  
   
-L'algoritmo Decision Trees fornisce un'ulteriore regolazione che consente di compensare la presenza di filtri nel modello, che potrebbe comportare di molti stati da escludere durante il training.  
+L'algoritmo Decision Trees fornisce un adattamento aggiuntivo che consente di compensare la presenza di filtri nel modello, che potrebbe comportare molti stati da escludere durante il training.  
   
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], se uno stato è presente durante il training ma ha supporto zero in un determinato nodo, viene eseguito l'adattamento standard. Tuttavia, se uno stato non viene mai rilevato durante il training, l'algoritmo consente di impostare la probabilità esattamente su zero. Questo adattamento non si applica soltanto allo stato **Missing** , ma anche agli altri stati esistenti nei dati di training a cui corrisponde un supporto zero in seguito al filtro del modello.  
   
@@ -101,13 +101,13 @@ L'algoritmo Decision Trees fornisce un'ulteriore regolazione che consente di com
   
 |Attività|Collegamenti|  
 |-----------|-----------|  
-|Aggiungere flag alle singole colonne del modello per controllare la gestione dei valori mancanti|[Visualizzare o modificare modello di Data Mining flag & #40; & #41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
-|Impostare le proprietà su un modello di data mining per controllare la gestione dei valori mancanti|[Modificare le proprietà di un modello di Data Mining](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)|  
-|Informazioni sulla specificazione di flag di modellazione in DMX|[Flag di modellazione & #40; DMX & #41;](../../dmx/modeling-flags-dmx.md)|  
-|Modificare la modalità di gestione dei valori mancanti da parte della struttura di data mining|[Modificare le proprietà di una struttura di Data Mining](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
+|Aggiungere flag alle singole colonne del modello per controllare la gestione dei valori mancanti|[Visualizzare o modificare flag di modellazione &#40;Data mining&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|Impostare le proprietà su un modello di data mining per controllare la gestione dei valori mancanti|[Modificare le proprietà di un modello di data mining](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)|  
+|Informazioni sulla specificazione di flag di modellazione in DMX|[Flag di modellazione &#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
+|Modificare la modalità di gestione dei valori mancanti da parte della struttura di data mining|[Modificare le proprietà di una struttura di data mining](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto del modello di data mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Modello di Data Mining flag & #40; & #41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
+ [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Flag di modellazione &#40;data mining&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   

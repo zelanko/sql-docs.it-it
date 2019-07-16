@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4647211-2566-4657-ae7b-3dd761457d7b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f9c16ccd42dbd1ef1e375cdc98fbcd155b8dc07b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 345b87539452a974b054b3aec07c648a3c2b6fad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709817"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947386"
 ---
 # <a name="axis-example-vbscript"></a>Esempio di Axis (VBScript)
 Questa pagina ASP sono riportati i dati OLAP da una stringa di Query MDX e scrive il set di celle risultante in una struttura di tabella HTML.  

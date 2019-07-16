@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 32f8c0086f1f81103156e5f592bcd63b0a43dd73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2080145e00c658288f9d34e3fa42ed335e0c1d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931868"
 ---
 # <a name="openschema-method"></a>Metodo OpenSchema
 Ottiene le informazioni sullo schema di database dal provider.  
@@ -42,7 +41,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  Eventuali [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) valore che rappresenta il tipo di query di schema per l'esecuzione.  
   
  *Criteri*  
- Facoltativo. Una matrice dei vincoli di query per ognuno *QueryType* opzione, come elencato nella [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
+ facoltativo. Una matrice dei vincoli di query per ognuno *QueryType* opzione, come elencato nella [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
   
  *SchemaID*  
  Il GUID per una query dello schema di provider non è definito dalla specifica OLE DB. Questo parametro è obbligatorio se *QueryType* è impostata su **adSchemaProviderSpecific**; in caso contrario, non viene utilizzato.  
@@ -77,4 +76,4 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  [Metodo Open (Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Metodo Open (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Metodo Open (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Appendice A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Appendice A: provider](../../../ado/guide/appendixes/appendix-a-providers.md)
