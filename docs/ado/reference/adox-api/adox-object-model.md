@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 035f4ae31a364055cee18ac4026b2c2760d3661d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad9942121c6b6173e773cc601f33b572a58512d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708392"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928533"
 ---
 # <a name="adox-object-model"></a>Modello a oggetti ADOX
 Il diagramma seguente illustra come gli oggetti vengono rappresentati e correlati in ADOX. Per altre informazioni su un oggetto specifico o una raccolta, vedere l'argomento di riferimento, oppure [oggetti ADOX](../../../ado/reference/adox-api/adox-objects.md) e [raccolte ADOX](../../../ado/reference/adox-api/adox-collections.md).  
   
- ![ADOX Object Model](../../../ado/reference/adox-api/media/adox_object_model.gif "ADOX_object_model")  
+ ![Modello a oggetti ADOX](../../../ado/reference/adox-api/media/adox_object_model.gif "ADOX_object_model")  
   
  Ognuna delle [tabella](../../../ado/reference/adox-api/table-object-adox.md), [indice](../../../ado/reference/adox-api/index-object-adox.md), e [colonna](../../../ado/reference/adox-api/column-object-adox.md) oggetti ha anche un oggetto ADO standard [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta.  
   

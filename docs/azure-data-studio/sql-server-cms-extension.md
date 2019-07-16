@@ -10,13 +10,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: 743bf6f78fa84f628a20bed23af0ace8cf23d06f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03edfc5b6d95c5cd6497d96d7014641f3032fb84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959208"
 ---
 # <a name="sql-server-central-management-servers-extension-preview"></a>Estensione Server di gestione centrale di SQL Server (anteprima)
 L'estensione di server di gestione centrale consente agli utenti di archiviare un elenco di istanze di SQL Server in cui è organizzato in uno o più gruppi. Le azioni effettuate utilizzando un gruppo CMS agiscono su tutti i server nel gruppo di server.

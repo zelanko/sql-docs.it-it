@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: ea432d05ea1fde8ec0d2585d0618ea6feba86ccc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20158894567c1452a8d605f5cec84354654c5e96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801932"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959594"
 ---
 # <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>Guida introduttiva a [!INCLUDE[name-sos](../includes/name-sos-short.md)] extensibility
 
@@ -54,7 +53,7 @@ IntelliSense è supportata all'interno di azuredatastudio.
 
 Contribuire con tab, contenitore, il widget insight al dashboard.
 
-![Dashboard](media/extensibility/dashboard-page.png)
+![dashboard](media/extensibility/dashboard-page.png)
 
 `dashboard.tabs`
 
@@ -268,13 +267,13 @@ Per informazioni generali sul contesto in Visual Studio Code e, successivamente,
 
 In Azure Data Studio, abbiamo un contesto specifico per le connessioni di database disponibile per le estensioni.
 
-### <a name="dashboard"></a>Dashboard
+### <a name="dashboard"></a>dashboard
 
 Nel dashboard, sono disponibili le seguenti variabili di contesto:
 
 |variabile di contesto| description|
 |:---|:---|
-|`connectionProvider` | Stringa dell'identificatore per il provider della connessione corrente. Ex. `connectionProvider == 'MSSQL'` (Indici per tabelle con ottimizzazione per la memoria).|
+|`connectionProvider` | Stringa dell'identificatore per il provider della connessione corrente. Ex. `connectionProvider == 'MSSQL'`.|
 |`serverName`|Stringa del nome del server della connessione corrente. Ex. `serverName == 'localhost'` (Indici per tabelle con ottimizzazione per la memoria).|
 |`databaseName` | Stringa del nome del database della connessione corrente. Ex. `databaseName == 'master'` (Indici per tabelle con ottimizzazione per la memoria).|
 |`connection` | L'oggetto profilo di connessione completa per la connessione corrente (IConnectionProfile)|

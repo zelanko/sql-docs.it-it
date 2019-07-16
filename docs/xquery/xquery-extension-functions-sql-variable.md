@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe1115c7e0cf0e4f78ff09acb405c64912af3471
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 56a8c53a22fefec7fbda4c2ac7476ae46d664199
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946000"
 ---
 # <a name="xquery-extension-functions---sqlvariable"></a>Funzioni per estensioni XQuery - sql:variable()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sql:variable("variableName") as xdt:anyAtomicType?
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-the-sqlvariable-function-to-bring-a-transact-sql-variable-value-into-xml"></a>A. Utilizzo della funzione sql:variable() per convertire in XML il valore di una variabile Transact-SQL  
+### <a name="a-using-the-sqlvariable-function-to-bring-a-transact-sql-variable-value-into-xml"></a>R. Utilizzo della funzione sql:variable() per convertire in XML il valore di una variabile Transact-SQL  
  Nell'esempio seguente viene costruita un'istanza XML costituita da:  
   
 -   Un valore (`ProductID`) ottenuto da una colonna non XML. Il [funzione SQL: Column](../xquery/xquery-extension-functions-sql-column.md) viene utilizzato per associare tale valore nel file XML.  
@@ -85,7 +84,7 @@ WHERE ProductID=771
   
 -   Il `namespace` parola chiave viene usata per definire un prefisso dello spazio dei nomi nel [prologo XQuery](../xquery/modules-and-prologs-xquery-prolog.md). Tale prefisso viene creato perché il valore dell'attributo `ProductModelName` viene recuperato dalla colonna di tipo xml `CatalogDescription xml`, a cui è associato uno schema.  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```xml
 <Product ProductID="771" ProductModelID="19"   

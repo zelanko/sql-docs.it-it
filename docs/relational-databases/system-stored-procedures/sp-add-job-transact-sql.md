@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eb371603230c0c3b6fbee0012c89ce402711fb6e
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 34cd282331a2f7bd8c0146d954b0ff76b7f42109
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493233"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941745"
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,11 +54,11 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_name = ] 'job_name'` Il nome del processo. Il nome deve essere univoco e non può contenere la percentuale (**%**) caratteri. *nome_processo*viene **nvarchar (128)**, non prevede alcun valore predefinito.  
+`[ @job_name = ] 'job_name'` Il nome del processo. Il nome deve essere univoco e non può contenere la percentuale ( **%** ) caratteri. *nome_processo*viene **nvarchar (128)** , non prevede alcun valore predefinito.  
   
 `[ @enabled = ] enabled` Indica lo stato del processo aggiunto. *abilitata*viene **tinyint**, con un valore predefinito è 1 (abilitato). Se **0**, il processo non è abilitato e non viene eseguito in base alla relativa pianificazione; tuttavia, può essere eseguito manualmente.  
   
-`[ @description = ] 'description'` La descrizione del processo. *Descrizione* viene **nvarchar(512)**, con un valore predefinito è NULL. Se *descrizione* viene non omesso, viene utilizzata "Nessuna descrizione disponibile".  
+`[ @description = ] 'description'` La descrizione del processo. *Descrizione* viene **nvarchar(512)** , con un valore predefinito è NULL. Se *descrizione* viene non omesso, viene utilizzata "Nessuna descrizione disponibile".  
   
 `[ @start_step_id = ] step_id` Il numero di identificazione del primo passaggio da eseguire per il processo. *step_id*viene **int**, con un valore predefinito è 1.  
   
@@ -67,7 +66,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
 `[ @category_id = ] category_id` Un meccanismo indipendente dal linguaggio per specificare una categoria di processi. *category_id*viene **int**, con un valore predefinito è NULL.  
   
-`[ @owner_login_name = ] 'login'` Il nome dell'account di accesso proprietario del processo. *account di accesso*viene **sysname**, con un valore predefinito è NULL, che viene interpretato come nome account di accesso corrente. Solo i membri del **sysadmin** ruolo predefinito del server può impostare o modificare il valore per **@owner_login_name**. Se gli utenti che non sono membri del **sysadmin** ruolo impostare o modificare il valore di **@owner_login_name**, esecuzione di questa stored procedure ha esito negativo e viene restituito un errore.  
+`[ @owner_login_name = ] 'login'` Il nome dell'account di accesso proprietario del processo. *account di accesso*viene **sysname**, con un valore predefinito è NULL, che viene interpretato come nome account di accesso corrente. Solo i membri del **sysadmin** ruolo predefinito del server può impostare o modificare il valore per **@owner_login_name** . Se gli utenti che non sono membri del **sysadmin** ruolo impostare o modificare il valore di **@owner_login_name** , esecuzione di questa stored procedure ha esito negativo e viene restituito un errore.  
   
 `[ @notify_level_eventlog = ] eventlog_level` Un valore che indica quando inserire una voce nel registro applicazioni di Microsoft Windows per questo processo. *eventlog_level*viene **int**, i possibili valori sono i seguenti.  
   
@@ -101,7 +100,7 @@ sp_add_job [ @job_name = ] 'job_name'
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  **@originating_server** esiste **sp_add_job** ma non è elencato nella sezione argomenti. **@originating_server** è riservato per uso interno.  
@@ -123,11 +122,11 @@ sp_add_job [ @job_name = ] 'job_name'
   
  Per informazioni sulle autorizzazioni specifiche che sono associati a ognuno di questi ruoli del database, vedere [ruoli predefiniti del Database SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Solo i membri del **sysadmin** ruolo predefinito del server può impostare o modificare il valore per **@owner_login_name**. Se gli utenti che non sono membri del **sysadmin** ruolo impostare o modificare il valore di **@owner_login_name**, esecuzione di questa stored procedure ha esito negativo e viene restituito un errore.  
+ Solo i membri del **sysadmin** ruolo predefinito del server può impostare o modificare il valore per **@owner_login_name** . Se gli utenti che non sono membri del **sysadmin** ruolo impostare o modificare il valore di **@owner_login_name** , esecuzione di questa stored procedure ha esito negativo e viene restituito un errore.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-adding-a-job"></a>A. Aggiunta di un processo  
+### <a name="a-adding-a-job"></a>R. Aggiunta di un processo  
  In questo esempio viene aggiunto il nuovo processo denominato `NightlyBackups`.  
   
 ```  
@@ -139,7 +138,7 @@ EXEC dbo.sp_add_job
 GO  
 ```  
   
-### <a name="b-adding-a-job-with-pager-e-mail-and-net-send-information"></a>b. Aggiunta di un processo con informazioni inviate tramite il cercapersone, la posta elettronica e la rete  
+### <a name="b-adding-a-job-with-pager-e-mail-and-net-send-information"></a>B. Aggiunta di un processo con informazioni inviate tramite il cercapersone, la posta elettronica e la rete  
  In questo esempio viene creato il processo `Ad hoc Sales Data Backup` che in caso di esito negativo invia una notifica all'operatore `François Ajenstat` (tramite cercapersone, posta elettronica o messaggio popup di rete), mentre in caso di esito positivo si autoelimina.  
   
 > [!NOTE]  

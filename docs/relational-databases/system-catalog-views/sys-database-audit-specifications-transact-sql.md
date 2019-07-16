@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf5f584a556db9e32fcaf1f53b907adcb8d08e25
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2a01e41c67c937a0a6d85e9f5c46427ab149b65b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940202"
 ---
 # <a name="sysdatabaseauditspecifications-transact-sql"></a>sys.database_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "52522976"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|nome|**sysname**|Nome della specifica del controllo.|  
+|Nome|**sysname**|Nome della specifica del controllo.|  
 |database_specification_id|**int**|ID della specifica del database.|  
 |create_date|**datetime**|Data di creazione della specifica del controllo.|  
 |modified_date|**datetime**|Data dell'ultima modifica della specifica del controllo.|  
@@ -47,7 +46,7 @@ ms.locfileid: "52522976"
 ## <a name="permissions"></a>Permissions  
  Le entità con la **ALTER ANY DATABASE AUDIT** oppure **VIEW DEFINITION** autorizzazioni, il ruolo dbo e i membri del ruolo predefinito del database db_owners hanno accesso a questa vista del catalogo. Inoltre, l'entità non deve essere negata **VIEW DEFINITION** l'autorizzazione.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] (Indici per tabelle con ottimizzazione per la memoria). Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

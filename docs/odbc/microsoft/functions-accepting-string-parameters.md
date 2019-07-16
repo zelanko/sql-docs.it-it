@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 869b8421-f71e-4dfd-adce-691bd3012b16
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 61bb013885238492d9c7324658ede198c489361d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4165dd51437f143351835bc1739ffb8279bd04ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952489"
 ---
 # <a name="functions-accepting-string-parameters"></a>Funzioni che accettano parametri stringa
 Tutte le funzioni che accettano parametri stringa verranno convertite in Unicode. (Verrà esportata la forma di "W" della funzione.) Numero di byte viene convertito nel numero di caratteri per le API ODBC applicabile. Questo vale per le funzioni seguenti:  
@@ -49,7 +48,7 @@ Tutte le funzioni che accettano parametri stringa verranno convertite in Unicode
   
 -   **SQLGetStmtOption** (diventa **SQLGetStmtAttr**)  
   
--   **SQLSetStmtOption** (becomes **SQLSetStmtAttr**)  
+-   **SQLSetStmtOption** (diventa **SQLSetStmtAttr**)  
   
 -   **SQLGetConnectOption**  
   

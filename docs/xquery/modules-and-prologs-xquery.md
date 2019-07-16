@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f17b4a4-6234-41d4-a996-6db4e27bff7e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cc8c582f4a4e984bd203071f5ce59f986765e840
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: f7a2df8ea534622c4ff4c1695c7e44a7aea7611d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291517"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946580"
 ---
 # <a name="modules-and-prologs-xquery"></a>Moduli e prologhi (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "51291517"
   
 -   Dichiarazione di funzione (`declare function`)  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Prologo XQuery](../xquery/modules-and-prologs-xquery-prolog.md)  
  Descrive il prologo di una query XQuery.  
   

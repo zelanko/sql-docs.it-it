@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0489bb43ee3b41ebf4334da0d6b8045e117acc39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4999b1e21ec145713cadae28ff7ee8a64dd460b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695379"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932897"
 ---
 # <a name="execute-method-ado-connection"></a>Metodo Execute (Connection - ADO)
 Esegue la query specificata, SQL istruzione, stored procedure o il testo del provider.  
@@ -43,10 +42,10 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  Oggetto **stringa** valore contenente l'istruzione SQL, stored procedure, un URL o il testo del provider per l'esecuzione. **Facoltativamente**, nomi di tabella possono essere usati solo se il provider è compatibile con SQL. Per ad esempio se un nome di tabella "Customers" viene usato, ADO anteporrà la sintassi SQL Select standard per creare e passare a "SELECT * FROM Customers" automaticamente come un [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzione per il provider.  
   
  *RecordsAffected*  
- Facoltativo. Oggetto **lungo** variabile in cui il provider restituisce il numero di record interessati dall'operazione.  
+ facoltativo. Oggetto **lungo** variabile in cui il provider restituisce il numero di record interessati dall'operazione.  
   
  *Opzioni*  
- Facoltativo. Oggetto **lungo** valore che indica come il provider deve restituire l'argomento CommandText. Può essere una maschera di bit di uno o più [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) oppure [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valori.  
+ facoltativo. Oggetto **lungo** valore che indica come il provider deve restituire l'argomento CommandText. Può essere una maschera di bit di uno o più [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) oppure [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valori.  
   
  **Nota** usare il **ExecuteOptionEnum** valore **adExecuteStream** per migliorare le prestazioni riducendo al minimo l'elaborazione interna e per le applicazioni che si esegue il porting da Visual Basic 6.0.  
   

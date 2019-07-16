@@ -5,17 +5,16 @@ description: Questo articolo illustra come visualizzare lo stato di un cluster d
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 06/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b3cc78e36fe427966c7730533104c63aa3ed9332
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 1a8d04ab43adac77a534a82626cc4a018c24b68f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957675"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Come visualizzare lo stato di un cluster di big data
 
@@ -205,7 +204,7 @@ Il `logsUrl` valore collegamenti a un dashboard kibana con le informazioni sul l
 
 Il `nodeMetricsUrl` e `sqlMetricsUrl` collegano valori a un dashboard di grafana per il monitoraggio di integrità del nodo e le metriche SQL:
 
-![Grafana dashboard](./media/view-cluster-status/grafana-dashboard.png)
+![Dashboard di Grafana](./media/view-cluster-status/grafana-dashboard.png)
 
 ![SQL](./media/view-cluster-status/grafana-sql-status.png)
 

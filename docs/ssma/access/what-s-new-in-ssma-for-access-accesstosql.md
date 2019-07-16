@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 author: HJToland3
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 0f0084f93fa648e5db79ef70dd5f05a259b94b67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 50723f7b7161bbed960ce2f94e1b7bbf79d420d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66841115"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938417"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Novità in SSMA per Access (AccessToSQL)
 
@@ -143,7 +142,7 @@ La versione di maggio 2016 di SSMA per Access contiene le seguenti modifiche:
 * Correzione dei dati delle tabelle durante il caricamento per le schede di interfaccia utente per l'accesso.
 * Correzione del bug nelle impostazioni globali. 
 
-## <a name="march-2016"></a>Marzo 2016
+## <a name="march-2016"></a>marzo 2016
 
 La versione di anteprima di marzo 2016 di SSMA per Access aggiunge il supporto per la migrazione a SQL Server 2016.  
 

@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-manager: jroth
-ms.openlocfilehash: be8683ae563e4e0676f53203cb40386cf8aa4840
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9dcbbe621ab237eeceff55cd5f931d7d650dd3b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959461"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>Avvio rapido: Connettersi ed eseguire query con PostgreSQL [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Questa Guida introduttiva illustra come usare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per connettersi a Postgres e quindi usare istruzioni SQL per creare il database *tutorialdb* ed eseguire una query.
@@ -54,7 +53,7 @@ Per completare questa Guida introduttiva, è necessario [!INCLUDE[name-sos](../i
    | **Gruppo di server** | \<Default\> | Questa opzione consente di assegnare questa connessione a un gruppo di server specifico che è creare. | 
    | **Nome (facoltativo)** | *Lasciare vuoto* | Questa opzione consente di specificare un nome descrittivo per il server. | 
 
-5. Selezionare **Connetti**. 
+5. Selezionare **Connessione**. 
 
 Dopo aver stabilito la connessione, il server viene aperto nel **server** nella barra laterale.
 

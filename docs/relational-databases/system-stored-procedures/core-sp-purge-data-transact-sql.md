@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 23495d6f2d18964bb35395666c3c7b867e508e20
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 72737a9b623e7979617784c1ef49c3f6d09aaea8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942499"
 ---
 # <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ core.sp_purge_data
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-running-sppurgedata-with-no-parameters"></a>A. Esecuzione di sp_purge_data senza parametri  
+### <a name="a-running-sppurgedata-with-no-parameters"></a>R. Esecuzione di sp_purge_data senza parametri  
  Nell'esempio seguente viene eseguito core.sp_purge_data senza specificare alcun parametro. Il valore predefinito NULL viene pertanto utilizzato per tutti i parametri, con il comportamento associato.  
   
 ```  
@@ -85,7 +84,7 @@ EXECUTE core.sp_purge_data;
 GO  
 ```  
   
-### <a name="b-specifying-retention-and-duration-values"></a>b. Specifica dei valori di memorizzazione e durata  
+### <a name="b-specifying-retention-and-duration-values"></a>B. Specifica dei valori di memorizzazione e durata  
  Nell'esempio seguente vengono rimossi dal data warehouse di gestione i dati più vecchi di 7 giorni. Inoltre, il @duration parametro viene specificato in modo che l'esecuzione dell'operazione non duri più di 5 minuti.  
   
 ```  

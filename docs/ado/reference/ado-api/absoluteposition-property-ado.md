@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 467834d2cfd5e56c14d9c7565d6749fa6848251e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b9795f962d0ead59a8d4f993e799a0ae4e2b750
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718351"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921698"
 ---
 # <a name="absoluteposition-property-ado"></a>Proprietà AbsolutePosition (ADO)
 Indica la posizione ordinale di una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) record corrente dell'oggetto.  

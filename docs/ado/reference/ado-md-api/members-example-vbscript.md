@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 87bbd4ad-bb1a-4123-93ef-99ef47fd970b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4a9febce34248bdab86fc2c7f8ae43f3cd41e2d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e8f3fc746660b1382d8c06f5ffc343fd52ecf024
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62659544"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949410"
 ---
 # <a name="members-example-vbscript"></a>Esempio di Members (VBScript)
 In questo esempio Usa una stringa di query MDX per recuperare dati OLAP e scrive il set di celle risultante in una struttura di tabella HTML utilizzando le caratteristiche di estensione di colonna per set di celle più dimensioni.  

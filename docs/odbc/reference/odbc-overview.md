@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 233315bd-2b7f-4b20-9978-e920e1ea9a07
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6b064436dae6cb2f3d5f37fa02ab57a1e4a3f015
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 945ebced0703c109ac64c374e31d2e76b556e7ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63272934"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944830"
 ---
 # <a name="odbc-overview"></a>Panoramica di ODBC
 Open Database Connectivity (ODBC) è una diffuso API application programming interface () per l'accesso al database. Si basa sulle specifiche a livello di chiamata Interface (CLI) di Open Group e ISO/IEC per API di database e Usa Structured Query Language (SQL) come lingua del database l'accesso.  

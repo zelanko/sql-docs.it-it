@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7502cef1a02ff580b16b8df0d6f1c2c6c54fb8ef
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4e8ba9bb523d4ce7aed76f61c569f5e8b1775972
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946434"
 ---
 # <a name="path-expressions---specifying-predicates"></a>Espressioni di percorso - Specifica predicati
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -71,13 +70,13 @@ select @x.query('/People/Person[1]/Name')
 select @x.query('/People[1]/Person/Name')  
 ```  
   
- Si noti che in ognuno dei casi, il predicato viene associato al nodo dell'espressione di percorso nella quale è applicato. Ad esempio, la prima espressione di percorso seleziona il primo elemento <`Name`> all'interno di ogni nodo /People/Person e, nell'istanza XML specificata, restituisce quanto segue:  
+ Si noti che in ognuno dei casi, il predicato viene associato al nodo dell'espressione di percorso nella quale è applicato. Ad esempio, la prima espressione di percorso seleziona il primo <`Name`> elemento all'interno di ogni/nodo /People/Person e, con l'istanza XML specificata, restituisce le informazioni seguenti:  
   
 ```  
 <Name>John</Name><Name>Goofy</Name><Name>Daffy</Name>  
 ```  
   
- La seconda espressione di percorso seleziona tuttavia tutti gli elementi <`Name`> che si trovano sotto il primo nodo /People/Person. Viene pertanto restituito quando segue:  
+ Tuttavia, la seconda espressione di percorso Seleziona tutti gli elementi <`Name`> gli elementi che sono sotto il primo nodo di persona/utenti /. Viene pertanto restituito quando segue:  
   
 ```  
 <Name>John</Name>  
@@ -106,7 +105,7 @@ select @x.query('/People/Person[contains(Name[1], "J") and xs:integer(Age[1]) < 
 /child::root/child::Location[attribute::LocationID=10]  
 ```  
   
- La condizione specificata dal predicato viene applicata a tutti i figli del nodo elemento <`Location`>. Vengono pertanto restituiti solo i centri di lavorazione il cui valore dell'attributo LocationID è 10.  
+ La condizione specificata dal predicato viene applicata a tutti i <`Location`> nodi figlio dell'elemento. Vengono pertanto restituiti solo i centri di lavorazione il cui valore dell'attributo LocationID è 10.  
   
  L'espressione di percorso precedente viene eseguita nell'istruzione SELECT seguente:  
   
@@ -124,7 +123,7 @@ WHERE ProductModelID=7
   
 1.  Se il valore dell'espressione del predicato è una sequenza vuota, il valore di verità del predicato è False.  
   
-     Esempio:  
+     Ad esempio:  
   
     ```  
     SELECT Instructions.query('  
@@ -135,11 +134,11 @@ WHERE ProductModelID=7
     WHERE ProductModelID=7  
     ```  
   
-     L'espressione di percorso nella query restituisce solo i nodi elemento <`Location`> per i quali è stato specificato un attributo LotSize. Se il predicato restituisce una sequenza vuota per un nodo elemento <`Location`> specifico, il relativo centro di lavorazione non verrà restituito nel risultato.  
+     L'espressione di percorso nella query seguente restituisce solo quelli <`Location`> i nodi elemento con un attributo LotSize specificato. Se il predicato restituisce una sequenza vuota per un determinato <`Location`>, che centro di lavorazione non viene restituito nel risultato.  
   
 2.  I valori possono essere solo xs: integer, xs: Boolean o nodo di predicato\*. Per il nodo\*, il predicato restituisce True se sono presenti nodi e False per una sequenza vuota. Qualsiasi altro tipo numerico, ad esempio double e float, genera un errore di tipizzazione statica. Il valore di verità del predicato di un'espressione è True se e solo se il valore di tipo integer risultante è uguale al valore della posizione del contesto. Inoltre, i valori letterali integer solo e il **Last** funzione riducono la cardinalità dell'espressione per passi filtrata a 1.  
   
-     Ad esempio, la query seguente recupera il terzo nodo figlio dell'elemento <`Features`>.  
+     Ad esempio, la query seguente recupera il terzo nodo figlio dell'elemento di <`Features`> elemento.  
   
     ```  
     SELECT CatalogDescription.query('  
@@ -157,7 +156,7 @@ WHERE ProductModelID=7
   
     -   Nel terzo passo viene inoltre specificato un carattere jolly (*) che indica tutti i nodi nel test dei nodi. Il predicato filtra tuttavia i nodi e restituisce solo il nodo nella terza posizione.  
   
-    -   La query restituisce il terzo nodo figlio degli elementi figlio <`Features`> degli elementi figlio <`ProductDescription`> della radice dei documenti.  
+    -   La query restituisce il terzo elemento figlio del nodo dell'elemento di <`Features`> figlio dell'elemento il <`ProductDescription`> gli elementi figlio della radice del documento.  
   
 3.  Se il valore dell'espressione predicato è un valore semplice booleano, il valore di verità del predicato è uguale al valore dell'espressione predicato.  
   
@@ -194,7 +193,7 @@ WHERE ProductModelID=7
   
     -   L'espressione nel **per** ciclo prevede due passaggi e il secondo passo specifica un predicato. il cui valore è di tipo booleano. Se il valore è True, anche il valore di verità del predicato è True.  
   
-    -   La query restituisce il <`Customer`> elementi figlio, il cui valore del predicato è True, del \<Survey > gli elementi figlio della radice del documento. Risultato:  
+    -   La query restituisce il <`Customer`> elementi figlio, il cui valore del predicato è True, del \<Survey > gli elementi figlio della radice del documento. Questo è il risultato:  
   
         ```  
         <CustomerWithChildren CustomerID="1"/>   

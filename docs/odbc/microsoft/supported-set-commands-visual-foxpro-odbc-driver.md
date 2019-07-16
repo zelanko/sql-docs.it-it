@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 43a821fb-97fd-4316-aafe-4ef2de783188
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9832d2a3772d63c1b0641f6ca08205e25a9867c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54cc247827a176bc9921884ae318120b07108293
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939861"
 ---
 # <a name="supported-set-commands-visual-foxpro-odbc-driver"></a>Comandi SET supportati (driver ODBC Visual FoxPro)
 L'applicazione può inviare il seguente Visual FoxPro **impostare** comandi da un'origine dati:  

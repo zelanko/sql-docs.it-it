@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 750d299b951b403ed6fe51baa43b047505860c3f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: b16fe1f29d132b900eeb4c8f450fcdbd66eb22b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493803"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942388"
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @name = ] 'name'` Il nome dell'avviso. Tale nome viene visualizzato nel messaggio di posta elettronica o di cercapersone inviato in risposta all'avviso. Deve essere univoco e può contenere la percentuale (**%**) caratteri. *nome* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @name = ] 'name'` Il nome dell'avviso. Tale nome viene visualizzato nel messaggio di posta elettronica o di cercapersone inviato in risposta all'avviso. Deve essere univoco e può contenere la percentuale ( **%** ) caratteri. *nome* viene **sysname**, non prevede alcun valore predefinito.  
   
 `[ @message_id = ] message_id` Il numero di errore di messaggio che definisce l'avviso. (Corrisponde in genere a un numero di errore il **sysmessages** tabella.) *message_id* viene **int**, il valore predefinito è **0**. Se *severity* viene usato per l'avviso, definire *message_id* deve essere **0** o NULL.  
   
@@ -73,7 +72,7 @@ sp_add_alert [ @name = ] 'name'
   
  L'impostazione di tale valore impedisce, ad esempio, l'invio di più messaggi di posta elettronica quando un avviso viene generato ripetutamente in un breve periodo di tempo.  
   
-`[ @notification_message = ] 'notification_message'` Messaggio aggiuntivo facoltativo inviato all'operatore come parte del messaggio di posta elettronica, **net send**, o notifica tramite cercapersone. *notification_message* viene **nvarchar(512)**, con un valore predefinito è NULL. Che specifica *notification_message* è utile per aggiungere note speciali, ad esempio procedure correttive.  
+`[ @notification_message = ] 'notification_message'` Messaggio aggiuntivo facoltativo inviato all'operatore come parte del messaggio di posta elettronica, **net send**, o notifica tramite cercapersone. *notification_message* viene **nvarchar(512)** , con un valore predefinito è NULL. Che specifica *notification_message* è utile per aggiungere note speciali, ad esempio procedure correttive.  
   
 `[ @include_event_description_in = ] include_event_description_in` È se la descrizione del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] errore debba essere inclusi come parte del messaggio di notifica. *include_event_description_in*viene **tinyint**, il valore predefinito è **5** (messaggio di posta elettronica e **net send**) e può avere uno o più dei valori seguenti combinati con un **o** operatore logico.  
   
@@ -82,14 +81,14 @@ sp_add_alert [ @name = ] 'name'
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|**0**|None|  
+|**0**|Nessuna|  
 |**1**|Posta elettronica|  
 |**2**|Cercapersone|  
 |**4**|**net send**|  
   
 `[ @database_name = ] 'database'` Il database in cui deve verificarsi l'errore affinché l'avviso venga generato. Se *database*viene omesso, l'avviso viene attivato indipendentemente dalla posizione dell'errore. *database* viene **sysname**. I nomi racchiusi tra parentesi quadre ([ ]) non sono ammessi. Il valore predefinito è NULL.  
   
-`[ @event_description_keyword = ] 'event_description_keyword_pattern'` La sequenza di caratteri che la descrizione del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] errore deve essere uguali. È possibile utilizzare i caratteri dei criteri di ricerca dell'espressione LIKE [!INCLUDE[tsql](../../includes/tsql-md.md)]. *event_description_keyword_pattern* viene **nvarchar(100)**, con un valore predefinito è NULL. Questo parametro è utile per filtrare i nomi degli oggetti (ad esempio, **% customer_table %**).  
+`[ @event_description_keyword = ] 'event_description_keyword_pattern'` La sequenza di caratteri che la descrizione del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] errore deve essere uguali. È possibile utilizzare i caratteri dei criteri di ricerca dell'espressione LIKE [!INCLUDE[tsql](../../includes/tsql-md.md)]. *event_description_keyword_pattern* viene **nvarchar(100)** , con un valore predefinito è NULL. Questo parametro è utile per filtrare i nomi degli oggetti (ad esempio, **% customer_table %** ).  
   
 `[ @job_id = ] job_id` Il numero di identificazione del processo da eseguire in risposta all'avviso. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
@@ -105,20 +104,20 @@ sp_add_alert [ @name = ] 'name'
 |Componente del formato|Descrizione|  
 |--------------------|-----------------|  
 |*Elemento*|Oggetto prestazioni, contatore delle prestazioni o istanza denominata del contatore|  
-|*Criterio di confronto*|Uno degli operatori seguenti: >, < o =|  
+|*Criterio di confronto*|Uno degli operatori seguenti: >, <, o =|  
 |*Valore*|Valore numerico del contatore|  
   
 `[ @category_name = ] 'category'` Il nome della categoria di avvisi. *categoria* viene **sysname**, con un valore predefinito è NULL.  
   
 `[ @wmi_namespace = ] 'wmi_namespace'` Lo spazio dei nomi WMI per eseguire query per gli eventi. *wmi_namespace* viene **sysname**, con un valore predefinito è NULL. Sono supportati solo gli spazi di nomi nel server locale.  
   
-`[ @wmi_query = ] 'wmi_query'` La query che specifica l'evento WMI per l'avviso. *Wmi_query* viene **nvarchar(512)**, con un valore predefinito è NULL.  
+`[ @wmi_query = ] 'wmi_query'` La query che specifica l'evento WMI per l'avviso. *Wmi_query* viene **nvarchar(512)** , con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  **sp_add_alert** deve essere eseguita la **msdb** database.  

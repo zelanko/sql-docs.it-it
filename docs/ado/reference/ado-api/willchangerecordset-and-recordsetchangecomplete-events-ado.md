@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c5ca84c5759523bf17c4e047b22cafbd48dce547
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd4e2f1485c18ce1fecc76d4eb23aa4132d85329
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710069"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938680"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>Eventi WillChangeRecordset e RecordsetChangeComplete (ADO)
 Il **WillChangeRecordset** eventi viene chiamato prima che un'operazione in sospeso viene modificato il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Il **RecordsetChangeComplete** eventi viene chiamato dopo la **Recordset** è stato modificato.  

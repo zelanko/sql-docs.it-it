@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 352d6be6f924fc8285a25d3f83ef5bee74c03acb
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: a8372e5079b79cc694ccf51f1b6f7cddcf0fed43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254676"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946218"
 ---
 # <a name="type-casting-rules-in-xquery"></a>Regole del cast dei tipi in XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +95,7 @@ create xml schema collection myCollection as N'
 go  
 ```  
   
- La query seguente restituisce un errore statico, in quanto non si conosce il numero di elementi <`root`> di livello principale inclusi nell'istanza di documento.  
+ La query seguente restituisce un errore statico perché non si conosce il numero primo livello <`root`> sono elementi nell'istanza del documento.  
   
 ```  
 declare @x xml(myCollection)  
@@ -106,7 +105,7 @@ select @x.query('/root/A cast as xs:string?')
 go  
 ```  
   
- Se nell'espressione si specifica un elemento <`root`> singleton, la query ha esito positivo. La query restituisce una sequenza con un valore di tipo semplice tipizzato come xs:string.  
+ Specificando un singleton <`root`> elemento dell'espressione, la query ha esito positivo. La query restituisce una sequenza con un valore di tipo semplice tipizzato come xs:string.  
   
 ```  
 declare @x xml(myCollection)  
@@ -116,7 +115,7 @@ select @x.query('/root[1]/A cast as xs:string?')
 go  
 ```  
   
- Nell'esempio seguente, la variabile di tipo XML include una parola chiave del documento che specifica la raccolta di XML Schema. Pertanto, l'istanza XML deve essere un documento che contiene un singolo elemento di livello principale. Se si creano due elementi <`root`> nell'istanza XML, verrà restituito un errore.  
+ Nell'esempio seguente, la variabile di tipo XML include una parola chiave del documento che specifica la raccolta di XML Schema. Pertanto, l'istanza XML deve essere un documento che contiene un singolo elemento di livello principale. Se si creano due <`root`> elementi nell'istanza XML, verrà restituito un errore.  
   
 ```  
 declare @x xml(document myCollection)  

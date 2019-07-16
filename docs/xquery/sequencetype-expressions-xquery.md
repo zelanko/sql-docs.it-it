@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59c6718ce034f8a0b9d37bc62591a7ffc44ce999
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: e7c3cdf33b0765ba50e5553f3bc31fd5c69312e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946286"
 ---
 # <a name="sequencetype-expressions-xquery"></a>Espressioni SequenceType (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +39,11 @@ ms.locfileid: "54255126"
 Expression instance of SequenceType[Occurrence indicator]  
 ```  
   
- Si noti che il `instance of` operatore, la `Occurrence indicator`, specifica la cardinalità, numero di elementi nella sequenza risultante. Se non viene specificato, si presuppone una cardinalità 1. Nelle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], solo il punto interrogativo (**?)**  indicatore di occorrenza è supportato. Il **?** indicatore di occorrenza indica che `Expression` può restituire zero o un elemento. Se il **?** indicatore di occorrenza è specificato, `instance of` restituisce True quando il `Expression` tipo corrisponde al valore specificato `SequenceType`, indipendentemente dal fatto che `Expression` restituisce un singleton o una sequenza vuota.  
+ Si noti che il `instance of` operatore, la `Occurrence indicator`, specifica la cardinalità, numero di elementi nella sequenza risultante. Se non viene specificato, si presuppone una cardinalità 1. Nelle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], solo il punto interrogativo ( **?)**  indicatore di occorrenza è supportato. Il **?** indicatore di occorrenza indica che `Expression` può restituire zero o un elemento. Se il **?** indicatore di occorrenza è specificato, `instance of` restituisce True quando il `Expression` tipo corrisponde al valore specificato `SequenceType`, indipendentemente dal fatto che `Expression` restituisce un singleton o una sequenza vuota.  
   
  Se il **?** indicatore di occorrenza non viene specificato, `sequence of` restituisce True solo quando il `Expression` corrispondenze di digitare il `Type` specificato e `Expression` restituisce un singleton.  
   
- **Nota** sul simbolo più (**+**) e l'asterisco (**&#42;**) non sono supportati gli indicatori di occorrenza in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **Nota** sul simbolo più ( **+** ) e l'asterisco ( **&#42;** ) non sono supportati gli indicatori di occorrenza in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Gli esempi seguenti illustrano l'uso del**istanza** operatore XQuery.  
   
@@ -164,7 +163,7 @@ CREATE XML SCHEMA COLLECTION MyTestSchema AS '
 Go  
 ```  
   
- La query seguente restituisce False, perché il SequenceType specificato nell'espressione `instance of` non è l'elemento padre di livello più alto del tipo effettivo dell'espressione specificata. Il valore dell'elemento <`TestElement`> è infatti un tipo integer. L'elemento padre di livello più alto è xs:decimal, ma non è specificato come secondo operando dell'operatore `instance of`.  
+ La query seguente restituisce False, perché il SequenceType specificato nell'espressione `instance of` non è l'elemento padre di livello più alto del tipo effettivo dell'espressione specificata. Vale a dire, il valore della <`TestElement`> è un tipo integer. L'elemento padre di livello più alto è xs:decimal, ma non è specificato come secondo operando dell'operatore `instance of`.  
   
 ```  
 SET QUOTED_IDENTIFIER ON  
@@ -191,7 +190,7 @@ go
 ### <a name="example-d"></a>Esempio D  
  In questo esempio, prima di tutto creare una raccolta XML schema e utilizzarla per tipizzare una **xml** variabile. L'oggetto tipizzato **xml** variabile viene quindi eseguita una query per illustrare la `instance of` funzionalità.  
   
- La raccolta di XML Schema seguente definisce il tipo semplice myType e un elemento, <`root`> di tipo myType:  
+ La raccolta di XML schema seguente definisce un tipo semplice myType e un elemento <`root`>, di tipo myType:  
   
 ```  
 drop xml schema collection SC  
@@ -239,7 +238,7 @@ go
   
 -   Crea un oggetto tipizzato **xml** variabile e assegna un XML di esempio di istanza a esso.  
   
--   Specifica una query sulla variabile. L'espressione della query recupera il valore di ID del primo ordine dall'attributo OrderList di tipo IDREFS del primo elemento <`Customer`>. Il valore recuperato è di tipo IDREF. L'operatore `instance of` pertanto restituisce True.  
+-   Specifica una query sulla variabile. L'espressione di query recupera il valore dell'ID primo ordine dall'attributo OrderList elemento tipo del primo <`Customer`>. Il valore recuperato è di tipo IDREF. L'operatore `instance of` pertanto restituisce True.  
   
 ```  
 create xml schema collection SC as  
@@ -315,7 +314,7 @@ select @x.query(' declare namespace CustOrders="Customers";
   
 -   Quando si utilizza una forma del **Element ()** che specifica un nome di tipo, ad esempio tipo di sequenza `element(ElementName, TypeName)`, il tipo deve essere qualificato con un punto interrogativo (?). Ad esempio, `element(Title, xs:string?)` indica che l'elemento potrebbe essere null. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non supporta il rilevamento di runtime del **xsi: nil** usando `instance of`.  
   
--   Se il valore in `Expression` viene da un elemento o un attributo tipizzato come unione, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] può identificare solo il tipo primitivo dal quale deriva il tipo di valore, non il tipo derivato. Ad esempio, se si specifica un tipo statico (xs:integer | xs:string) per <`e1`>, la query seguente restituirà False.  
+-   Se il valore in `Expression` viene da un elemento o un attributo tipizzato come unione, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] può identificare solo il tipo primitivo dal quale deriva il tipo di valore, non il tipo derivato. Ad esempio, se <`e1`> è definito con un tipo statico (xs: integer | xs: String), il codice seguente restituirà False.  
   
     ```  
     data(<e1>123</e1>) instance of xs:integer  

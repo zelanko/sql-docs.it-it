@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: f929c973a400b600a220a920b944d7a9d46df6a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b8101e9545b6b4d0c2d924092db9e0ed07982952
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802143"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935582"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Configurare livelli di gravità per i file di log DQS
 
@@ -65,7 +64,7 @@ ms.locfileid: "66802143"
     > [!NOTE]  
     >  Per impostazione predefinita, è selezionato **Errore** per ognuna delle attività. Ciò significa che i messaggi di errore ed errore irreversibile verranno scritti nei file di log DQS per ogni attività per impostazione predefinita.  
   
-5.  Scegliere **Chiudi**.  
+5.  Fare clic su **Chiudi**.  
   
 ##  <a name="ConfigureModule"></a> Configurare i livelli di gravità a livello di modulo (impostazione avanzata)  
  La sezione **Avanzate** della scheda **Impostazioni log** consente di configurare le impostazioni di gravità del log a livello di modulo. I moduli sono assembly di sistema DQS che implementano varie funzionalità all'interno di una funzionalità in DQS. Ad esempio, l'attività di gestione del dominio contiene varie funzionalità quali la definizione di regole di dominio, la definizione di condizioni della regola, la definizione di regole tra domini per i domini compositi e così via.  
@@ -90,7 +89,7 @@ ms.locfileid: "66802143"
   
 4.  Ripetere i passaggi 2 e 3 per altri moduli, se necessario. È inoltre possibile aggiungere o eliminare righe nella griglia facendo clic sulle icone **Aggiungi modulo** e **Rimuovi modulo** .  
   
-5.  Scegliere **Chiudi**.  
+5.  Fare clic su **Chiudi**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare le impostazioni avanzate per i file di log DQS](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)  

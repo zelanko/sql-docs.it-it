@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e9fb54ab264b6f1a247407d5bfdecdbdf6c4dc16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f77b2d395b76b537107ad87cf1487bb4d25a430c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931446"
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Read, ReadText, Write e WriteText metodi esempio (VB)
 In questo esempio viene illustrato come leggere il contenuto di una casella di testo in un testo entrambe [Stream](../../../ado/reference/ado-api/stream-object-ado.md) e un file binario **Stream**. Includono altre proprietà e metodi illustrati [posizione](../../../ado/reference/ado-api/position-property-ado.md), [Size](../../../ado/reference/ado-api/size-property-ado-parameter.md), [Charset](../../../ado/reference/ado-api/charset-property-ado.md), e [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  

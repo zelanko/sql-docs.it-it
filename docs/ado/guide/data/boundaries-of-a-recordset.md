@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 967ccb49cd2bbaa805420e7c982cc11721931022
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f4efddad1b55ce57c62ce52418539ec06599bb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702344"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925916"
 ---
 # <a name="boundaries-of-a-recordset"></a>Limiti di un recordset
 **Recordset** supporta la **BOF** e **EOF** le proprietà per delineare l'inizio e alla fine, rispettivamente, del set di dati. È possibile pensare **BOF** e **EOF** come record "fittizio" che vengono posizionati all'inizio e alla fine del **Recordset**. Il conteggio **BOF** e **EOF**, un campione **Recordset** sarebbe simile al seguente:  

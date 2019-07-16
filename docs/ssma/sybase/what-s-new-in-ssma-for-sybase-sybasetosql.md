@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 author: HJToland3
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 727ede7a057491eea2ea230d7057aa3228b5fc82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af728d438f01203308258d8f074f145494780a3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66841111"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944573"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Quali sono le novità di SSMA per SAP ASE (SybaseToSQL)
 Questo articolo elenca SQL Server Migration Assistant (SSMA) per le modifiche di SAP ASE (in precedenza SSMA per Sybase) in ogni versione.
@@ -152,7 +151,7 @@ La versione di maggio 2016 di SSMA per Sybase contiene le seguenti modifiche:
 * Risolto il conteggio degli oggetti per il caricamento iniziale.
 * Correzione del bug nelle impostazioni globali.
 
-## <a name="march-2016"></a>Marzo 2016
+## <a name="march-2016"></a>marzo 2016
 
 La versione di anteprima di marzo 2016 di SSMA per Sybase aggiunge il supporto per la migrazione a SQL Server 2016.  
   

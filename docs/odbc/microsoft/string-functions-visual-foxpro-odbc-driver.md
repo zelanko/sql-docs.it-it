@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1974fd26-ef0d-45d5-860b-298917c8e9c3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a9e1c94eec150cc24522cd6e4c57eb35b4a2126
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db1fbaffbee0f74625f4a11cad3b961f194e3829
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948771"
 ---
 # <a name="string-functions-visual-foxpro-odbc-driver"></a>Funzioni per i valori stringa (driver ODBC Visual FoxPro)
 La tabella seguente elenca le funzioni di modifica stringa ODBC supportate per il Driver ODBC Visual FoxPro; Quando la grammatica di Visual FoxPro per la stessa funzione differisce dalla sintassi ODBC, viene elencato l'equivalente di Visual FoxPro.  
@@ -32,14 +31,14 @@ La tabella seguente elenca le funzioni di modifica stringa ODBC supportate per i
 |CHAR *(codice)*|CHR *(string_exp)*|  
 |CONCAT *(string_exp1, string_exp2)*|*string_exp1 + string_exp2*|  
 |DIFFERENCE *(string_exp1, string_exp2)*||  
-|INSERT *(string_exp1, start, length, string_exp2)*|STUFF *(string_exp1, start, length, string_exp2 e)*|  
+|Inserisci *(string_exp1, start, length, string_exp2 e)*|STUFF *(string_exp1, start, length, string_exp2 e)*|  
 |LCASE *(string_exp)*|LOWER *(string_exp)*|  
-|LEFT *(string_exp, count)*||  
+|SINISTRA *(string_exp, conteggio)*||  
 |LENGTH *(string_exp)*|LEN *(string_exp)*|  
 |LTRIM *(string_exp)*||  
-|REPEAT *(string_exp, count)*|REPLICATE *(string_exp, count)*|  
+|Ripetere *(string_exp, conteggio)*|REPLICARE *(string_exp, conteggio)*|  
 |REPLACE *(string_exp1, string_exp2, string_exp3)*|STRTRAN *(string_exp1, string_exp2, string_exp3)*|  
-|RIGHT *(string_exp, count)*||  
+|DESTRA *(string_exp, conteggio)*||  
 |RTRIM *(string_exp)*||  
 |SOUNDEX *(string_exp)*||  
 |SPAZIO *(conteggio)*||  
