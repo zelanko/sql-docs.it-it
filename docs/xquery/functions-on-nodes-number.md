@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 44ab042814b95886faa9f632fb58d7a809c9e458
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 31a52f86692d5769fe22f4cf0b5a04ad324c3ac0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930111"
 ---
 # <a name="functions-on-nodes---number"></a>Funzioni su nodi - number
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ fn:number($arg as node()?) as xs:double?
  Nodo per il quale verrà restituito un valore numerico.  
   
 ## <a name="remarks"></a>Note  
- Se *$arg* viene omesso, viene restituito il valore numerico del nodo di contesto, convertito in valore double. In SQL Server **fn:number()** senza un argomento può essere utilizzato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi ([ ]). Ad esempio, l'espressione seguente restituisce l'elemento <`ROOT`>.  
+ Se *$arg* viene omesso, viene restituito il valore numerico del nodo di contesto, convertito in valore double. In SQL Server **fn:number()** senza un argomento può essere utilizzato solo nel contesto di un predicato dipendente dal contesto. In particolare, può essere utilizzata solo tra parentesi ([ ]). Ad esempio, l'espressione seguente restituisce la <`ROOT`> elemento.  
   
 ```  
 declare @x xml  
@@ -54,7 +53,7 @@ select @x.query('/ROOT[number()=111]')
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
   
-### <a name="a-using-the-number-xquery-function-to-retrieve-the-numeric-value-of-an-attribute"></a>A. Utilizzo della funzione XQuery number() per recuperare il valore numerico di un attributo  
+### <a name="a-using-the-number-xquery-function-to-retrieve-the-numeric-value-of-an-attribute"></a>R. Utilizzo della funzione XQuery number() per recuperare il valore numerico di un attributo  
  La query seguente recupera il valore numerico dell'attributo lotsize dal primo centro di lavorazione nel processo di produzione del modello di prodotto 7.  
   
 ```  
@@ -81,7 +80,7 @@ WHERE ProductModelID=7
   
 -   La query per **LotSizeD** viene illustrato l'utilizzo di un valore numerico in un'operazione aritmetica.  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 ProductModelID   Result  

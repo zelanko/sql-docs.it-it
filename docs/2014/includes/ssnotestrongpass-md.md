@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 49b3e885264ab0e14480bbd86d9ec3de7f995536
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67222730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68187140"
 ---
 Non usare una password vuota. Usare una password complessa.
