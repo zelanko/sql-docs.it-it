@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: d2b1616fdf7b690d61c6a2605cc15da2508a3fb9
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 36731206770b324bf4387143ef2c98b0532475ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534663"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902885"
 ---
 # <a name="sysmailupdateprofilesp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
   
 `[ @profile_name = ] 'profile_name'` Il nome del profilo da aggiornare oppure nuovo nome per il profilo. *profile_name* viene **sysname**, con un valore predefinito è NULL. Almeno uno dei *profile_id* oppure *profile_name* deve essere specificato. Se si specificano entrambi, la procedura modifica il nome del profilo.  
   
-`[ @description = ] 'description'` Nuova descrizione per il profilo. *Descrizione* viene **nvarchar(256)**, con un valore predefinito è NULL.  
+`[ @description = ] 'description'` Nuova descrizione per il profilo. *Descrizione* viene **nvarchar(256)** , con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

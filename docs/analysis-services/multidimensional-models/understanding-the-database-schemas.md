@@ -1,5 +1,5 @@
 ---
-title: Comprendere gli schemi di Database | Documenti Microsoft
+title: Informazioni sugli schemi di Database | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 91a54be06727a674a16f12295fa886f869b188e4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023478"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164966"
 ---
 # <a name="understanding-the-database-schemas"></a>Informazioni sugli schemi di database
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -89,6 +89,6 @@ ms.locfileid: "34023478"
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni sulla generazione incrementale](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   
- [Gestire le modifiche a viste origine dati e origini dati](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
+ [Gestire modifiche a viste origine dati e origini dati](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
   
   
