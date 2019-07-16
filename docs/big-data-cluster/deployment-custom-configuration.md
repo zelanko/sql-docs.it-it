@@ -5,17 +5,16 @@ description: Informazioni su come personalizzare una distribuzione cluster con i
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 19654422bcc57f2ad00b9ab8170d163f848f188b
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ccd7b0955cbeaa22f10a2b81515d7afd892e135e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728887"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958442"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>Configurare le impostazioni di distribuzione per i cluster di big data
 

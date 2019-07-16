@@ -5,17 +5,16 @@ description: Articolo di riferimento per i comandi hdfs mssqlctl.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8f211faf827bdf925a8fde938fff8f96998bc359
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 6a2044594065e6f98ed919ace2171279e6f72c25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728522"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957910"
 ---
 # <a name="mssqlctl-hdfs"></a>mssqlctl hdfs
 
@@ -26,13 +25,13 @@ L'articolo seguente fornisce informazioni di riferimento per la **hdfs** comandi
 ## <a name="commands"></a>Comandi:
 |     |     |
 | --- | --- |
-[mssqlctl hdfs shell](#mssqlctl-hdfs-shell) | La shell HDFS è una shell dei comandi interattiva semplice per file system HDFS.
+[shell hdfs mssqlctl](#mssqlctl-hdfs-shell) | La shell HDFS è una shell dei comandi interattiva semplice per file system HDFS.
 [mssqlctl hdfs ls](#mssqlctl-hdfs-ls) | Elenca lo stato del file specificato o della directory.
 [hdfs mssqlctl esiste](#mssqlctl-hdfs-exists) | Determinare se esiste un file o directory.  Restituisce True se è presente e False in caso contrario.
 [mssqlctl hdfs mkdir](#mssqlctl-hdfs-mkdir) | Creare una directory nel percorso specificato.
 [mssqlctl hdfs mv](#mssqlctl-hdfs-mv) | Spostare il file specificato o il percorso nel percorso specificato.
 [creare mssqlctl hdfs](#mssqlctl-hdfs-create) | Creare il file di testo nella posizione specificata.  È possibile aggiungere contenuto di testo semplice tramite il parametro dei dati.
-[mssqlctl hdfs read](#mssqlctl-hdfs-read) | Leggere il contenuto di un file.  Offset e lunghezza in byte sono parametri facoltativi.
+[hdfs mssqlctl leggere](#mssqlctl-hdfs-read) | Leggere il contenuto di un file.  Offset e lunghezza in byte sono parametri facoltativi.
 [mssqlctl hdfs rm](#mssqlctl-hdfs-rm) | Rimuovere un file o directory.
 [mssqlctl hdfs rmr](#mssqlctl-hdfs-rmr) | Rimuovono in modo ricorsivo un file o directory.
 [chmod hdfs mssqlctl](#mssqlctl-hdfs-chmod) | Modificare l'autorizzazione per il file o directory specificata.

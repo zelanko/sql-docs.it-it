@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48554e48d09822b23320d36080084d4947882736
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: 4ff8d99bd31e2638aa63393fb5ba052f442bf75f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58080283"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936899"
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 ## <a name="arguments"></a>Argomenti  
 *sql_handle*  
-È un token che identifica in modo univoco un batch che ha eseguito o attualmente in esecuzione. *valore di sql_handle* viene **varbinary(64)**. 
+È un token che identifica in modo univoco un batch che ha eseguito o attualmente in esecuzione. *valore di sql_handle* viene **varbinary(64)** . 
 
 Il *sql_handle* può essere ottenuto dagli oggetti a gestione dinamica seguenti:  
   
@@ -59,7 +58,7 @@ Il *sql_handle* può essere ottenuto dagli oggetti a gestione dinamica seguenti:
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
   
 *plan_handle*  
-È un token che identifica in modo univoco un piano di esecuzione di query per un batch che ha eseguito e il piano risiede nella cache dei piani o attualmente in esecuzione. *plan_handle* viene **varbinary(64)**.   
+È un token che identifica in modo univoco un piano di esecuzione di query per un batch che ha eseguito e il piano risiede nella cache dei piani o attualmente in esecuzione. *plan_handle* viene **varbinary(64)** .   
 
 Il *plan_handle* può essere ottenuto dagli oggetti a gestione dinamica seguenti:    
   
@@ -98,7 +97,7 @@ Handle del piano è un valore hash derivato dal piano compilato dell'intero batc
   
 ## <a name="examples"></a>Esempi 
 
-### <a name="a-conceptual-example"></a>A. Esempio concettuale
+### <a name="a-conceptual-example"></a>R. Esempio concettuale
 Di seguito è riportato un esempio di base per illustrare il passaggio di un **sql_handle** direttamente o con **CROSS APPLY**.
   1.  Creare attività.  
 Eseguire T-SQL seguente in una nuova finestra query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].   
@@ -133,7 +132,7 @@ Acquisire le **sql_handle** dalla **exec_requests**. Passare quindi il **sql_han
          ```      
     
   
-### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>b. Ottenere informazioni sulle prime cinque query per tempo medio CPU  
+### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>B. Ottenere informazioni sulle prime cinque query per tempo medio CPU  
  Nell'esempio seguente vengono restituiti il testo dell'istruzione SQL e il tempo medio di CPU per le prime cinque query.  
   
 ```sql  
@@ -187,5 +186,5 @@ ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;
  [sys.dm_exec_cursors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
  [sys.dm_exec_xml_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
  [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [Using APPLY](../../t-sql/queries/from-transact-sql.md#using-apply)   [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
+ [Utilizzo di APPLY](../../t-sql/queries/from-transact-sql.md#using-apply)   [DM exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
 

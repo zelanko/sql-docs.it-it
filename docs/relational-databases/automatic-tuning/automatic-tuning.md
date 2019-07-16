@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7382e4d1b9e9d968d7ad87af9830691dd931d657
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 4ad185085c19d8286fa6a09e46742860a948849a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226618"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934552"
 ---
 # <a name="automatic-tuning"></a>Ottimizzazione automatica
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ L'ottimizzazione automatica nel [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-m
 
 Il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] monitoraggi, le query eseguite sul database e automaticamente migliora le prestazioni del carico di lavoro. Il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] include un meccanismo di intelligence integrata che possa ottimizzare automaticamente e migliorare le prestazioni delle query, adattando in modo dinamico il database ai carichi di lavoro. Esistono due funzionalità di ottimizzazione automatica disponibili:
 
- -  **Correzione automatica dei piani** identifica query problematiche piani di esecuzione e corregge i problemi di prestazioni di piani di esecuzione della query. **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (A partire da [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ -  **Correzione automatica dei piani** identifica query problematiche piani di esecuzione e corregge i problemi di prestazioni di piani di esecuzione della query. **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
  -  **Gestione automatica degli indici** identifica gli indici che devono essere aggiunti nel database e gli indici che devono essere rimossi. **Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ## <a name="why-automatic-tuning"></a>Il motivo per cui l'ottimizzazione automatica?
@@ -96,7 +95,7 @@ Piani forzati manualmente dovrebbero non essere forzati all'infinito, perché il
 
 In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], è possibile trovare le regressioni della scelta piano utilizzo delle viste di sistema di Query Store. Nella [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] rileva e visualizza le regressioni della scelta piano potenziali e le azioni consigliate che devono essere applicate nella [DM db_tuning_recommendations &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) visualizzazione. La visualizzazione Mostra informazioni sul problema, l'importanza del problema e i dettagli, ad esempio la query identificato, l'ID del piano regredito, l'ID del piano che è stato usato come base per il confronto e il [!INCLUDE[tsql_md](../../includes/tsql-md.md)] istruzione che può essere eseguito per correggere il c'è problema.
 
-| Tipo | description | DATETIME | score | dettagli | ... |
+| type | description | datetime | score | details | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | Modificato da 4 ms a 14 ms di tempo di CPU | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | Tempo di CPU modificato da 37 ms e ms 84 | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |

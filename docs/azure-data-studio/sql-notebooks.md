@@ -10,13 +10,12 @@ ms.reviewer: achatter; alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: 02146596b8c0c21531d269a815f97512b5c955a5
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 9af2e04a3973eddfcd714c7968c35e544302aba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959269"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Come usare i notebook in Azure Data Studio
 
@@ -118,7 +117,7 @@ Apri in Studio di Azure Data i notebook sono predefiniti **attendibile**.
 
 Se si apre un Notebook da un'altra origine, verrà aperta **Non Trusted** modalità e quindi è possibile renderlo **attendibile**.
 
-### <a name="save"></a>Salvare 
+### <a name="save"></a>Salva 
 
 È possibile salvare i Notebook dal **Ctrl + S** o facendo clic sui **salvataggio File**, **Salva con nome File...**  e **File Salva tutto** comandi dal menu File e **File: Salvare** comandi immessi nel riquadro comandi.
 
@@ -126,7 +125,7 @@ Se si apre un Notebook da un'altra origine, verrà aperta **Non Trusted** modali
 
 Scegliere il `PySpark Kernel` e nel tipo di cella nel codice seguente.
 
-Fare clic su **Esegui**.
+Fai clic su **Esegui**.
 
 L'applicazione Spark viene avviato e restituisce l'output seguente:
 

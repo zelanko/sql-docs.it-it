@@ -1,5 +1,5 @@
 ---
-title: sys.database_audit_specification_details (Transact-SQL) | Microsoft Docs
+title: Sys. database_audit_specification_details (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 865fb25a08bdf549c09a9bb4e4e23cff929f12ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4dcf9664adcdeba495b53f1a1392781df3fa60bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652479"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940278"
 ---
 # <a name="sysdatabaseauditspecificationdetails-transact-sql"></a>sys.database_audit_specification_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62652479"
 |-----------------|---------------|-----------------|  
 |**database_specification_id**|**int**|ID della specifica del controllo.|  
 |**audit_action_id**|**int**|ID dell'azione di controllo.|  
-|**audit_action_name**|**Sysname**|Nome dell'azione di controllo o del gruppo di azioni di controllo.|  
+|**audit_action_name**|**sysname**|Nome dell'azione di controllo o del gruppo di azioni di controllo.|  
 |**Classe**|**int**|Identifica la classe dell'oggetto controllato.|  
 |**class_ desc**|**Nvarchar(60)**|Descrizione della classe dell'oggetto controllato:<br /><br /> - SCHEMA<br /><br /> - TABLE|  
 |**major_id**|**int**|ID principale dell'oggetto controllato, ad esempio un ID di tabella di un'azione di controllo di una tabella.|  

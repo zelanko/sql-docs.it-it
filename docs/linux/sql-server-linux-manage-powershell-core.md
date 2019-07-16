@@ -8,13 +8,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-manager: jroth
-ms.openlocfilehash: e96fe471f78e02e5667431f7065a169a5c136417
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: d8d0675bbb7ebbedc9d1efec29fff8854670c10f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834949"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952531"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>Gestire SQL Server in Linux con PowerShell Core
 
@@ -259,7 +258,7 @@ SELECT Name
 - New-SqlHADREndpoint
 - Set-SqlHADREndpoint
 - Get-SqlInstance
-- Add-SqlLogin
+- Aggiungere-SqlLogin
 - Remove-SqlLogin
 - Get-SqlLogin
 - Set-SqlSmartAdmin

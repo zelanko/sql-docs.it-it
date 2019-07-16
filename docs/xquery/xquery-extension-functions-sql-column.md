@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c5b7babb3f34f906a241669bbde753e3beaace92
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: df46abb8efdd5761797a599cf5a8cdebe02e5158
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946015"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>Funzioni per estensioni XQuery - sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sql:column("columnName")
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-sqlcolumn-to-retrieve-the-relational-value-inside-xml"></a>A. Utilizzo della funzione sql:column() per recuperare il valore relazionale nell'istanza XML  
+### <a name="a-using-sqlcolumn-to-retrieve-the-relational-value-inside-xml"></a>R. Utilizzo della funzione sql:column() per recuperare il valore relazionale nell'istanza XML  
  Nell'esempio seguente relativo alla costruzione di un'istanza XML viene illustrato il recupero di valori da una colonna relazionale non XML per associare dati XML e relazionali.  
   
  La query costruisce un'istanza XML con il formato seguente:  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ec1e18c2-63a1-4d2b-ba9a-c13857403782
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5f68c5e5671e31b166e82970e59c265334ed3188
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: d38e6ae0eaf7ed6015834052067db28993cbcccd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588905"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948618"
 ---
 # <a name="keycolumnusage-transact-sql"></a>KEY_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,13 +34,13 @@ ms.locfileid: "53588905"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**CONSTRAINT_CATALOG**|**nvarchar (** 128 **)**|Qualificatore del vincolo.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Nome dello schema che contiene il vincolo.<br /><br /> <strong>\*\* Importanti \* \*</strong>  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
-|**CONSTRAINT_NAME**|**nvarchar (** 128 **)**|Nome del vincolo.|  
-|**TABLE_CATALOG**|**nvarchar (** 128 **)**|Qualificatore della tabella.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nome dello schema che contiene la tabella.<br /><br /> <strong>\*\* Importanti \* \*</strong>  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
-|**TABLE_NAME**|**nvarchar (** 128 **)**|Nome della tabella.|  
-|**COLUMN_NAME**|**nvarchar (** 128 **)**|Nome colonna.|  
+|**CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|Qualificatore del vincolo.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|Nome dello schema che contiene il vincolo.<br /><br /> <strong>\*\* Importanti \* \*</strong>  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
+|**CONSTRAINT_NAME**|**nvarchar(** 128 **)**|Nome del vincolo.|  
+|**TABLE_CATALOG**|**nvarchar(** 128 **)**|Qualificatore della tabella.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nome dello schema che contiene la tabella.<br /><br /> <strong>\*\* Importanti \* \*</strong>  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
+|**TABLE_NAME**|**nvarchar(** 128 **)**|Nome della tabella.|  
+|**COLUMN_NAME**|**nvarchar(** 128 **)**|Nome colonna.|  
 |**ORDINAL_POSITION**|**int**|Posizione ordinale della colonna.|  
   
 ## <a name="see-also"></a>Vedere anche  

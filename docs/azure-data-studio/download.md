@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.custom: seodec18
 ms.date: 07/11/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: 741c36331e6c0c8827e34517dd7ee4e5d04abf93
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: a2a4d4e755908d544e79b751d64ee99cad6fc96c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959697"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Scaricare e installare Data Studio di Azure
 
@@ -161,7 +160,7 @@ Se[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] è stato installato 
 Per un'esperienza ottimale, usare i requisiti di sistema consigliati.
 [Need aggiornamento qui quantificare memoria]
 
-|             | Core CPU | Memory/RAM |
+|             | Core CPU | Memoria/memoria RAM |
 |:-----------|:---------|:----------|
 | Consigliato |     4     |      8 GB    |
 |   Minimo   |     2     |      4 GB     |
@@ -198,7 +197,7 @@ Se si desidera spostare che le impostazioni personalizzate, tasti di scelta rapi
 
 3. Copiare tutti i file in questa cartella e salvarlo in un modo facile trovare percorso nell'unità locale, come la cartella documenti.
 
-   ![copy-settings](./media/download/copy-settings.png)
+   ![Copia-impostazioni](./media/download/copy-settings.png)
 
 4. Nella versione nuova di Azure Data Studio, seguire i passaggi 1 e 2, quindi per passaggio 3 incollare il contenuto che è stato salvato nella cartella. È inoltre possibile copiare manualmente tramite le impostazioni, i tasti di scelta rapida o frammenti di codice nelle rispettive posizioni.
 

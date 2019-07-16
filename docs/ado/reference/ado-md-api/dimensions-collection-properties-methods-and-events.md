@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0025687e-e20d-4c36-8242-b9ab56e50706
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0a52fcccbe9f1ba3423f39f5ca3be61b09089d42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd8efea8b3e1aad41430b6dc7170331ab65bf127
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938478"
 ---
 # <a name="dimensions-collection-properties-methods-and-events"></a>Proprietà, metodi ed eventi della raccolta Dimensions
 ## <a name="properties"></a>Proprietà  
@@ -30,7 +29,7 @@ ms.locfileid: "66718977"
  [Metodo Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Events  
- Nessuna.  
+ No.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta Dimensions (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)

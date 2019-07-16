@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a3aa594d-f9d4-4654-8625-ec20153ff5d9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4f01845752c0ee1f9187ea3d209a97509f87a5a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 09e83fd8645a5c0ab604a640478c4cced4870742
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709573"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949819"
 ---
 # <a name="close-method-ado-md"></a>Metodo Close (ADO MD)
 Chiude un set di celle open.  

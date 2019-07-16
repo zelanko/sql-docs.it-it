@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31afdbb14229fa7c0eaf13f1b3a215e31356945f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7adc7ed5677fdc511f0c8801a5ab56b55d4b9cde
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528813"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950402"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Stored procedure - argomenti e le proprietà di indice spaziale
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -186,19 +185,19 @@ ms.locfileid: "58528813"
 >  Questa informazione è utile solo per determinare se vi sono oggetti eventualmente mancanti nel riquadro.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level0_In_Index**  
- Numero di oggetti a livello 0 contigui al riquadro. Il valore di Cell_attribute è 0.  Valore è **bigint**.  
+ Numero di oggetti a livello 0 contigui al riquadro. (Il valore di Cell_attribute è 0).  Valore è **bigint**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level1_In_Index**  
- Numero di celle dell'oggetto che incontrano un limite di celle della griglia a livello di schema a mosaico 1. Il valore di Cell_attribute è 0. Si tratta di una proprietà principale. Valore è **bigint**.  
+ Numero di celle dell'oggetto che incontrano un limite di celle della griglia a livello di schema a mosaico 1. (Il valore di Cell_attribute è 0). Si tratta di una proprietà principale. Valore è **bigint**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level2_In_Index**  
- Numero di celle dell'oggetto che incontrano un limite di celle della griglia a livello di schema a mosaico 2. Il valore di Cell_attribute è 0. Si tratta di una proprietà principale. Valore è **bigint**.  
+ Numero di celle dell'oggetto che incontrano un limite di celle della griglia a livello di schema a mosaico 2. (Il valore di Cell_attribute è 0). Si tratta di una proprietà principale. Valore è **bigint**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level3_In_Index**  
- Numero di celle dell'oggetto che incontrano un limite di celle della griglia a livello di schema a mosaico 3. Il valore di Cell_attribute è 0. Si tratta di una proprietà principale. Valore è **bigint**.  
+ Numero di celle dell'oggetto che incontrano un limite di celle della griglia a livello di schema a mosaico 3. (Il valore di Cell_attribute è 0). Si tratta di una proprietà principale. Valore è **bigint**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level4_In_Index**  
- Numero di celle dell'oggetto contigue a un limite della cella della griglia a livello 4 del mosaico. Il valore di Cell_attribute è 0. Si tratta di una proprietà principale. Valore è **bigint**.  
+ Numero di celle dell'oggetto contigue a un limite della cella della griglia a livello 4 del mosaico. (Il valore di Cell_attribute è 0). Si tratta di una proprietà principale. Valore è **bigint**.  
   
  **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
  Percentuale dell'area totale (celle foglia totali) della griglia in cui sono contenute celle foglia coperte da un oggetto.  
@@ -321,7 +320,7 @@ ms.locfileid: "58528813"
  [Indice spaziale Stored procedure &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [Panoramica degli indici spaziali](../../relational-databases/spatial/spatial-indexes-overview.md)   
- [XQuery Basics](../../xquery/xquery-basics.md)   
+ [Nozioni fondamentali su XQuery](../../xquery/xquery-basics.md)   
  [Riferimento al linguaggio XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
   
   

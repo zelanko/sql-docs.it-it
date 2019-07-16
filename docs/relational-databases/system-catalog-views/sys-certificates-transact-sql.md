@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 634fbc4ddd96fd407aa124c98ae2b55897edaa71
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6adf267137533d7436349de5a42e8552072216bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391224"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942560"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "52391224"
 |**subject**|**nvarchar(4000)**|Oggetto del certificato.|  
 |**expiry_date**|**datetime**|Data di scadenza del certificato.|  
 |**start_date**|**datetime**|Data di inizio di validità del certificato.|  
-|**Identificazione personale**|**varbinary(32)**|Hash SHA-1 del certificato. L'hash SHA-1 è univoco globale.|  
+|**thumbprint**|**varbinary(32)**|Hash SHA-1 del certificato. L'hash SHA-1 è univoco globale.|  
 |**attested_by**|**nvarchar(260)**|Riservato per l'utilizzo nel sistema.|  
 |pvt_key_last_backup_date|**datetime**|Data e ora che ultima esportazione della chiave privata del certificato.|  
   

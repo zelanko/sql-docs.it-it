@@ -1,5 +1,5 @@
 ---
-title: INSERT INTO (DMX) | Microsoft Docs
+title: INSERIRE (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 16732c1d889f7125d71d01bd0804b4202daceb7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 463bd3ac40a2f90a66457faa9a80b9512b67b53a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62505151"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937782"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +34,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *model*  
  Identificatore del modello.  
   
- *structure*  
+ *struttura*  
  Identificatore della struttura.  
   
  *colonne del modello con mapping*  
@@ -65,7 +64,7 @@ INSERT INTO [MINING MODEL] <model>
 ||La struttura di data mining non è elaborata.|Vengono elaborati il modello e la struttura di data mining.|  
 ||La struttura di data mining contiene modelli di data mining aggiuntivi.|L'elaborazione non riesce. È necessario rielaborare la struttura e i modelli di data mining associati.|  
 |INSERT INTO MINING STRUCTURE *\<struttura >*|La struttura di data mining viene elaborata o non elaborata.|La struttura di data mining e i modelli di data mining associati vengono elaborati.|  
-|INSERT INTO MINING MODEL *\<modello >* contenente una query di origine<br /><br /> o Gestione configurazione<br /><br /> INSERT INTO MINING STRUCTURE *\<struttura >* contenente una query di origine|La struttura o il modello include già un contenuto.|L'elaborazione non riesce. È necessario deselezionare gli oggetti prima di eseguire questa operazione, utilizzando [eliminare &#40;DMX&#41;](../dmx/delete-dmx.md).|  
+|INSERT INTO MINING MODEL *\<modello >* contenente una query di origine<br /><br /> oppure<br /><br /> INSERT INTO MINING STRUCTURE *\<struttura >* contenente una query di origine|La struttura o il modello include già un contenuto.|L'elaborazione non riesce. È necessario deselezionare gli oggetti prima di eseguire questa operazione, utilizzando [eliminare &#40;DMX&#41;](../dmx/delete-dmx.md).|  
   
 ## <a name="mapped-model-columns"></a>Elemento mapped model columns  
  Tramite il \<il mapping delle colonne del modello > elemento, è possibile mappare le colonne dall'origine dati alle colonne nel modello di data mining. Il \<il mapping delle colonne del modello > elemento ha il formato seguente:  
@@ -87,7 +86,7 @@ INSERT INTO [MINING MODEL] <model>
   
 -   **OPENROWSET**  
   
--   **SHAPE**  
+-   **FORMA**  
   
 -   Qualsiasi query di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che restituisce un set di righe.  
   
