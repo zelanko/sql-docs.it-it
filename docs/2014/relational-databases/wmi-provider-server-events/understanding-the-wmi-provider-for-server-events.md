@@ -15,18 +15,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2deedb64e5c8995524978a19b02110a068bde08d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358213"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195801"
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>Informazioni sul provider WMI per eventi del server
   Il provider WMI per eventi del server consente di utilizzare il servizio Strumentazione gestione Windows (WMI) per monitorare eventi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo provider converte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un oggetto WMI gestito. Qualsiasi evento che può generare una notifica degli eventi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere utilizzato da WMI tramite questo provider. Come applicazione di gestione che interagisce con WMI, inoltre, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent può rispondere a tali eventi, espandendo l'ambito degli eventi gestiti rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
  Le applicazioni di gestione come [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent possono accedere a eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il provider WMI per eventi del server ed eseguendo istruzioni WQL (WMI Query Language). WQL è un subset semplificato del linguaggio SQL (Structured Query Language), con alcune estensioni specifiche di WMI. Utilizzando WQL, un'applicazione recupera un tipo di evento rispetto a un database o a un oggetto di database specifico. Il provider WMI per eventi del server converte la query in una notifica degli eventi, creando in modo efficace una notifica degli eventi nel database di destinazione. Per altre informazioni sul funzionamento delle notifiche degli eventi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [del Provider WMI per concetti degli eventi Server](https://technet.microsoft.com/library/ms180560.aspx). Sono elencati gli eventi che possono essere interrogati [Provider WMI per la proprietà e le classi di eventi Server](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
- Quando si verifica un evento che attiva la notifica degli eventi per inviare un messaggio, il messaggio viene inviato a un servizio di destinazione predefinito in **msdb** denominata **SQL/Notifications/ProcessWMIEventProviderNotification/v1.0**. Il servizio inserisce l'evento in una coda predefinita in **msdb** denominata **WMIEventProviderNotificationQueue**. Sia il servizio sia la coda vengono creati dinamicamente dal provider quando si connette per la prima volta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il provider legge quindi i dati degli eventi dalla coda e li trasforma in dati MOF (Managed Object Format) prima di restituirli all'applicazione client. Questo processo viene illustrato nella figura seguente.  
+ Quando si verifica un evento che attiva la notifica degli eventi per inviare un messaggio, il messaggio viene inviato a un servizio di destinazione predefinito in **msdb** denominata **SQL/Notifications/ProcessWMIEventProviderNotification/v1.0**. Il servizio inserisce l'evento in una coda predefinita in **msdb** denominata **WMIEventProviderNotificationQueue**. (Il servizio e la coda vengono creati dinamicamente dal provider quando si connette prima al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Quindi, il provider legge i dati dell'evento da questa coda e li trasforma in formato di oggetto gestito (MOF) prima di restituirlo all'applicazione. Questo processo viene illustrato nella figura seguente.  
   
  ![Diagramma di flusso del Provider WMI per eventi del Server](../../../2014/database-engine/dev-guide/media/wmi-provider-functional-spec.gif "diagramma di flusso del Provider WMI per eventi del Server")  
   

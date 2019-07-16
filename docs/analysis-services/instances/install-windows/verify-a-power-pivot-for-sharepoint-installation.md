@@ -1,5 +1,5 @@
 ---
-title: Verificare di PowerPivot per SharePoint | Documenti Microsoft
+title: Verify a Power Pivot for SharePoint Installation | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f047593657806b872aafdda802c9c85ac4526b56
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017508"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209472"
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>Verificare un'installazione Power Pivot per SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "34017508"
 ## <a name="verify-integration-at-the-site-level"></a>Verifica dell'integrazione a livello di sito  
  Per verificare l'integrazione di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] con un sito di SharePoint, eseguire queste operazioni:  
   
-1.  In un browser aprire l'applicazione Web creata. Se si utilizza valori predefiniti, è possibile specificare http://\<il nome del computer > nell'indirizzo URL.  
+1.  In un browser aprire l'applicazione Web creata. Se si usa valori predefiniti, è possibile specificare http://\<il nome computer > nell'indirizzo URL.  
   
 2.  Verificare che le funzionalità di elaborazione e di accesso ai dati [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] siano disponibili nell'applicazione. È possibile eseguire questa operazione verificando la presenza di modelli di libreria forniti da [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]:  
   
@@ -89,7 +89,7 @@ ms.locfileid: "34017508"
   
 7.  In Tipo di server selezionare **Analysis Services**.  
   
-8.  In nome Server immettere  **\<nome server > \powerpivot**, dove  **\<nome server >** è il nome del computer in cui è il [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint installazione.  
+8.  In nome Server immettere  **\<nome-server > \powerpivot.** , dove  **\<server-name >** è il nome del computer in cui è il [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint installazione.  
   
 9. Fare clic su **Connetti**. Viene verificata la disponibilità del server Analysis Services.  
   
