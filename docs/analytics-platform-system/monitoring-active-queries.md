@@ -2,19 +2,18 @@
 title: Monitorare le query attive - Parallel Data Warehouse | Microsoft Docs
 description: Usare le viste di sistema della Console di amministrazione e Parallel Data Warehouse per monitorare le query attive nel sistema di piattaforma Analitica.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d2b1ee84b2ae738d7790e1238176331a221ac473
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65d656b02ef0d726292a7d37aef565bf508d7662
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960499"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>Monitoraggio delle query attive - Parallel Data Warehouse
 Questo articolo illustra come usare la Console di amministrazione e le viste di sistema di SQL Server PDW per monitorare le query attive. Visualizzare [monitorare l'Appliance usando la Console di amministrazione](monitor-the-appliance-by-using-the-admin-console.md) e [viste di sistema](tsql-system-views.md) per informazioni su questi strumenti.  

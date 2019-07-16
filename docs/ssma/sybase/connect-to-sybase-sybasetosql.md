@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 0805246d5b88138cfa97019d1e0cd524c82456c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6cb2f4196737cceec2f60684de1b7409f5e383a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061004"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083390"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Connettersi a Sybase (SybaseToSQL)
 Usare la **connettersi a Sybase** finestra di dialogo per connettersi all'istanza di Sybase Adaptive Server Enterprise (ASE) che si desidera eseguire la migrazione.  
@@ -52,7 +51,7 @@ Le stringhe di connessione sono costituiti da coppie nome / valore di parametro.
   
     |Impostazione|Parametro Sybase 12,5|Parametro Sybase 15|  
     |-----------|-------------------------|-----------------------|  
-    |Nome server|Server Name|Server|  
+    |Nome del server|Server Name|Server|  
     |Port|Indirizzo di porta del server|Port|  
     |Nome utente|ID utente|ID utente|  
     |Password|Password|Password|  

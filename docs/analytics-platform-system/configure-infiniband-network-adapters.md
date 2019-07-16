@@ -2,19 +2,18 @@
 title: Configurare InfiniBand - sistema di piattaforma Analitica | Microsoft Docs
 description: Viene descritto come configurare le schede di rete InfiniBand in un server non appliance client per connettersi al nodo di controllo in Parallel Data Warehouse (PDW). Usare queste istruzioni per la connettività di base e per la disponibilità elevata, in modo che il caricamento, i processi di backup e altri si connettono automaticamente alla rete InfiniBand attiva.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 9e52e3962fa1928d7f7680a750d6c1efe5201c6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4739a79989321c215819bab90da1d1831764f820
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057192"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961242"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configurare le schede di rete InfiniBand per il sistema di piattaforma Analitica
 Viene descritto come configurare le schede di rete InfiniBand in un server non appliance client per connettersi al nodo di controllo in Parallel Data Warehouse (PDW). Usare queste istruzioni per la connettività di base e per la disponibilità elevata, in modo che il caricamento, i processi di backup e altri si connettono automaticamente alla rete InfiniBand attiva.  
@@ -128,7 +127,7 @@ Per soddisfare i requisiti aziendali specifici, è anche possibile aggiungere il
   
     4.  Impostare il server DNS alternativo per l'indirizzo IP del TeamIB1 che si è preso nota in precedenza da appliance_domain *-AD02 nodo.  
   
-        ![InfiniBand 1 Network Adapter Properties](media/network-ib1-properties.png "SQL_Server_PDW_Network_IB1_properties")  
+        ![Proprietà dell'Adapter 1 rete InfiniBand](media/network-ib1-properties.png "SQL_Server_PDW_Network_IB1_properties")  
   
     5.  Fare clic su OK per applicare le modifiche.  
   

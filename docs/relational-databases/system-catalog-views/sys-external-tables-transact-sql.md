@@ -10,14 +10,13 @@ dev_langs:
 ms.assetid: fac4720c-b679-4ab2-864b-ff7810a9b559
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fd6b9c144df14f9480ff825726fc918deb86f6cf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c26dbafb76ecf318fa497e11ccac09e800691900
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516292"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054310"
 ---
 # <a name="sysexternaltables-transact-sql"></a>sys.external_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "52516292"
 |uses_ansi_nulls|**bit**|La tabella è stata creata con l'opzione di database SET ANSI_NULLS impostata su ON.||  
 |data_source_id|**int**|ID oggetto per l'origine dati esterna.||  
 |file_format_id|**int**|Per le tabelle esterne su un'origine dati esterna HADOOP, questo è l'ID oggetto per il formato di file esterno.||  
-|posizione|**nvarchar(4000)**|Per le tabelle esterne su un'origine dati esterna HADOOP, questo è il percorso dei dati esterni in HDFS.||  
+|location|**nvarchar(4000)**|Per le tabelle esterne su un'origine dati esterna HADOOP, questo è il percorso dei dati esterni in HDFS.||  
 |reject_type|**tinyint**|Per le tabelle esterne su un'origine dati esterna HADOOP, questo è il modo per eseguire query sui dati esterni vengono contate righe rifiutate.|VALORE: il numero di righe rifiutate.<br /><br /> Percentuale: la percentuale di righe rifiutate.|  
 |reject_value|**float**|Per le tabelle esterne su un'origine dati esterna HADOOP:<br /><br /> Per la *reject_type =* valore, questo è il numero di rifiuti delle righe per consentire prima di aver eseguito la query.<br /><br /> Per la *reject_type* = percentage, questa è la percentuale di rifiuti delle righe per consentire prima di aver eseguito la query.||  
 |reject_sample_value|**int**|Per la *reject_type* = percentage, il numero di righe da caricare, esito positivo o negativo, prima di calcolare la percentuale di righe rifiutate.|NULL se reject_type = VALUE.|  

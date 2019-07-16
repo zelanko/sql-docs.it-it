@@ -7,13 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 039e5a8970b2161bfe54b1836f3bd12b48477e1a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4ad8446f52f5bf85794e8444d8d1b53f53bc54dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513058"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961816"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>Compilare un modello R e salvare in SQL Server (procedura dettagliata)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -204,7 +203,7 @@ In questa sezione proverà a usare entrambe le tecniche.
 
 Dopo aver compilato un modello e ha accertato che stia funzionando correttamente, consigliabile distribuirla in un sito in cui gli utenti o gli utenti dell'organizzazione possono rendere utilizzare il modello, o forse ripetere il training e ricalibrare il modello a intervalli regolari. Questo processo è detto *messa in funzione* un modello. In SQL Server, messa in funzione consiste nell'incorporare codice R in una stored procedure. Poiché nella procedura si trova codice, può essere chiamato da qualsiasi applicazione in grado di connettersi a SQL Server.
 
-Prima di chiamare il modello da un'applicazione esterna, è necessario salvare il modello per il database utilizzato per la produzione. Modelli di training vengono archiviati in formato binario, in una singola colonna di tipo **varbinary (max)**.
+Prima di chiamare il modello da un'applicazione esterna, è necessario salvare il modello per il database utilizzato per la produzione. Modelli di training vengono archiviati in formato binario, in una singola colonna di tipo **varbinary (max)** .
 
 Un flusso di lavoro di distribuzione tipica è costituita dai passaggi seguenti:
 

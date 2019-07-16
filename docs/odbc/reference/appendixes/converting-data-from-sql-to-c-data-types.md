@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6819b28ba57f1e6314535a6a90ad13de39b4842c
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 95a44698c12abf0de64c8d6f7d316e9156dc139c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019113"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Conversione di dati da SQL ai tipi di dati C
 Quando un'applicazione chiama **SQLFetch**, **SQLFetchScroll**, o **SQLGetData**, i dati vengono recuperati dall'origine dati. Se necessario, ne converte i dati dal tipo di dati in cui il driver è stato recuperato al tipo di dati specificato per il *TargetType* argomento nella **SQLBindCol** o **SQLGetData.** Infine, archivia i dati nella posizione a cui fa riferimento il *TargetValuePtr* argomento nella **SQLBindCol** oppure **SQLGetData** (e il campo SQL_DESC_DATA_PTR del ARD).  
@@ -55,7 +54,7 @@ Quando un'applicazione chiama **SQLFetch**, **SQLFetchScroll**, o **SQLGetData**
   
 -   [SQL a c: Carattere](../../../odbc/reference/appendixes/sql-to-c-character.md)  
   
--   [SQL a c: Numeric](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
+-   [SQL a c: Numerico](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
   
 -   [SQL a c: Bit](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
   

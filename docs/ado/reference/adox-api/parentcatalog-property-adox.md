@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c146e53379f1a81948135d9d993150f4e1e4046e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8bc9527109aaa4a3a8063b26a594c9bdb978dcf3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965581"
 ---
 # <a name="parentcatalog-property-adox"></a>Proprietà ParentCatalog (ADOX)
 Specifica il catalogo padre di un oggetto tabella, un utente o colonna per fornire l'accesso a proprietà specifiche del provider.  

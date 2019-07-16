@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a11fb3f879336f5217abe138c91755154df868b5
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b40f7233bb3c50203a68c0b01cfcbdaf631e0098
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096174"
 ---
 # <a name="sptableprivilegesex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,18 +54,18 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 `[ @fUsePattern = ] 'fUsePattern'` Determina se i caratteri '_', '%', ' [', e ']' vengono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* viene **bit**, con un valore predefinito è 1.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- None  
+ Nessuna  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nome del qualificatore della tabella. Vari prodotti DBMS supportano nomi di tabelle in tre parti (_qualificatore_**.** _owner_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella. Questo campo può essere NULL.|  
+|**TABLE_CAT**|**sysname**|Nome del qualificatore della tabella. Vari prodotti DBMS supportano nomi di tabelle in tre parti (_qualificatore_ **.** _owner_ **.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella. Questo campo può essere NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nome del proprietario della tabella. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome dell'utente del database che ha creato la tabella. Questo campo restituisce sempre un valore.|  
 |**TABLE_NAME**|**sysname**|Nome della tabella. Questo campo restituisce sempre un valore.|  
 |**UTENTE CHE CONCEDE**|**sysname**|Nome utente del database che ha concesso autorizzazioni al **nome_tabella** per la tabella **all'utente autorizzato**. Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa colonna è sempre lo stesso come il **TABLE_OWNER**. Questo campo restituisce sempre un valore. Inoltre, la colonna GRANTOR può rappresentare il proprietario del database (**TABLE_OWNER**) o un utente a cui il proprietario del database concesso autorizzazioni tramite la clausola WITH GRANT OPTION dell'istruzione GRANT.|  
 |**ALL'UTENTE AUTORIZZATO**|**sysname**|Nome utente del database che disponga delle autorizzazioni per questo **nome_tabella** per la tabella **GRANTOR**. Questo campo restituisce sempre un valore.|  
-|**PRIVILEGE**|**varchar(** 32 **)**|Una delle autorizzazioni di tabella disponibili. I possibili valori delle autorizzazioni di tabella sono i seguenti. È inoltre possibile utilizzare altri valori supportati dall'origine dei dati al momento della definizione dell'implementazione.<br /><br /> Selezionare = **al BENEFICIARIO** può recuperare i dati per uno o più colonne.<br /><br /> INSERT = **al BENEFICIARIO** possono fornire dati per le nuove righe per uno o più colonne.<br /><br /> UPDATE = **al BENEFICIARIO** può modificare i dati esistenti per uno o più colonne.<br /><br /> DELETE = **al BENEFICIARIO** può rimuovere righe dalla tabella.<br /><br /> I riferimenti = **al BENEFICIARIO** può fare riferimento a una colonna in una tabella esterna in una relazione chiave primaria/esterna principale. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le relazioni tra chiave primaria e chiave esterna vengono definite tramite l'utilizzo di vincoli di tabella.<br /><br /> L'ambito di azione ottenuto il **al BENEFICIARIO** da una tabella specifica il privilegio è dipendente dall'origine dati. Ad esempio, è stato possibile abilitare l'autorizzazione UPDATE il **all'utente autorizzato** per aggiornare tutte le colonne in una tabella in un'origine dati e solo le colonne per cui il **GRANTOR** dispone di autorizzazioni per un'altra origine dati.|  
+|**CON PRIVILEGI**|**varchar(** 32 **)**|Una delle autorizzazioni di tabella disponibili. I possibili valori delle autorizzazioni di tabella sono i seguenti. È inoltre possibile utilizzare altri valori supportati dall'origine dei dati al momento della definizione dell'implementazione.<br /><br /> Selezionare = **al BENEFICIARIO** può recuperare i dati per uno o più colonne.<br /><br /> INSERT = **al BENEFICIARIO** possono fornire dati per le nuove righe per uno o più colonne.<br /><br /> UPDATE = **al BENEFICIARIO** può modificare i dati esistenti per uno o più colonne.<br /><br /> DELETE = **al BENEFICIARIO** può rimuovere righe dalla tabella.<br /><br /> I riferimenti = **al BENEFICIARIO** può fare riferimento a una colonna in una tabella esterna in una relazione chiave primaria/esterna principale. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le relazioni tra chiave primaria e chiave esterna vengono definite tramite l'utilizzo di vincoli di tabella.<br /><br /> L'ambito di azione ottenuto il **al BENEFICIARIO** da una tabella specifica il privilegio è dipendente dall'origine dati. Ad esempio, è stato possibile abilitare l'autorizzazione UPDATE il **all'utente autorizzato** per aggiornare tutte le colonne in una tabella in un'origine dati e solo le colonne per cui il **GRANTOR** dispone di autorizzazioni per un'altra origine dati.|  
 |**IS_GRANTABLE**|**varchar(** 3 **)**|Indica se il **al BENEFICIARIO** è la possibilità di concedere autorizzazioni ad altri utenti. Questa autorizzazione spesso viene denominata "autorizzazione per la concessione di autorizzazioni". I possibili valori sono YES, NO e NULL. Il valore sconosciuto, o NULL, indica un'origine dei dati per la quale l'autorizzazione per la concessione di autorizzazioni non è applicabile.|  
   
 ## <a name="remarks"></a>Note  

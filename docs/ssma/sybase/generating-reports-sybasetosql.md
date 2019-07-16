@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: bb377e36f73bad59da35fabc2f6e9189544230e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a63ad1dad1a1dcab28e2a8ffb5c96d9564210475
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126294"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029132"
 ---
 # <a name="generating-reports-sybasetosql"></a>Generazione di report (SybaseToSQL)
 I report di determinate attività eseguite usando i comandi vengono generati nella Console SSMA a livello di oggetto dell'albero.  
@@ -33,7 +32,7 @@ Utilizzare la procedura seguente per generare report:
     ||||  
     |-|-|-|  
     |**SL. No.**|**Command**|**Titolo del report**|  
-    |1|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
+    |1|generare report di valutazione|AssessmentReport&lt;n&gt;.XML|  
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
     |3|migrate-data|DataMigrationReport&lt;n&gt;.XML|  
     |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
@@ -61,8 +60,8 @@ Utilizzare la procedura seguente per generare report:
     ||||  
     |-|-|-|  
     |**SL. No.**|**Comando e parametri**|**Descrizione di output**|  
-    |1|report-errors="false"|Nessun dettaglio in caso di errore / avviso / i messaggi di informazioni.|  
-    |2|report-errors="true"|Dettagli errore / avviso / i messaggi di informazioni.|  
+    |1|Segnala errori = "false"|Nessun dettaglio in caso di errore / avviso / i messaggi di informazioni.|  
+    |2|Segnala errori = "true"|Dettagli errore / avviso / i messaggi di informazioni.|  
   
     > [!NOTE]  
     > Le impostazioni di segnalazione di errori specificato in precedenza sono applicabili per generare report di valutazione, convert-schema, eseguire la migrazione di dati, i comandi di convert-sql-statement.  
@@ -107,13 +106,13 @@ Il comando **destinazione sincronizzare** ha **report errori-a-** parametro che 
 ```  
 **object-name:** Specifica gli oggetti considerati per la sincronizzazione (può anche avere un nome di oggetto gruppo o nomi di oggetto individuali).  
   
-**on-error:** Specifica se specificare gli errori di sincronizzazione come avvisi o errori. Opzioni disponibili per in caso di errore:  
+**in errore:** Specifica se specificare gli errori di sincronizzazione come avvisi o errori. Opzioni disponibili per in caso di errore:  
   
--   report-total-as-warning  
+-   -Totale report come avviso  
   
--   report-each-as-warning  
+-   report-each-come-avviso  
   
--   fail-script  
+-   Errore-script  
   
 ### <a name="refresh-from-database"></a>aggiornamento dal database:  
 Il comando **dal database di aggiornamento** ha **report errori-a-** parametro che specifica il percorso del report di errore per l'operazione di aggiornamento. Quindi, un file con nome **SourceDBRefreshReport&lt;n&gt;. XML** viene creato nella posizione specificata, in cui **&lt;n&gt;** è il numero di file univoco che viene incrementato con una cifra a ogni esecuzione del comando stesso.  
@@ -137,13 +136,13 @@ Il comando **dal database di aggiornamento** ha **report errori-a-** parametro c
 ```  
 **object-name:** Specifica gli oggetti considerati per l'aggiornamento (può anche avere un nome di oggetto gruppo o nomi di oggetto individuali).  
   
-**on-error:** Specifica se occorre indicare errori di aggiornamento come avvisi o errori. Opzioni disponibili per in caso di errore:  
+**in errore:** Specifica se occorre indicare errori di aggiornamento come avvisi o errori. Opzioni disponibili per in caso di errore:  
   
--   report-total-as-warning  
+-   -Totale report come avviso  
   
--   report-each-as-warning  
+-   report-each-come-avviso  
   
--   fail-script  
+-   Errore-script  
   
 ## <a name="see-also"></a>Vedere anche  
 [Esecuzione della Console SSMA (Sybase)](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  

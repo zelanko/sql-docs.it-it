@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9b648198-349f-46f6-b869-13d129945971
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 44e773248cd2d61e211f6de98d5a0f81acc78bd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 884a33339db10ee8e07d8b432d1765720d45734a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019454"
 ---
 # <a name="insert---sql-command"></a>INSERT (comando SQL)
 Accoda un record alla fine di una tabella che contiene i valori di campo specificato.  
@@ -41,7 +40,7 @@ INSERT INTO dbf_name [(fname1 [, fname2, ...])]
   
  Se la tabella specificata è aperta, l'istruzione INSERT Accoda il nuovo record alla tabella. Se la tabella è aperta in un'area di lavoro diverso da area di lavoro corrente, non è selezionato dopo che il record è stato aggiunto; l'area di lavoro corrente rimanga selezionata.  
   
- [( *fname1*[, *fname2*[, ...]])]  
+ [( *fname1*[, *fname2*[,...]])]  
  Specifica i nomi dei campi nel nuovo record in cui vengono inseriti i valori.  
   
  VALUES ( *eExpression1*[, *eExpression2*[, ...]])  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d1dbbb57527fc2d362837e0340f35a241d764b75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97425a6795889f72b329280ff70f9638378e7799
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63473523"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006565"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Esecuzione della Console SSMA (AccessToSQL)
 Microsoft offre un solido set di comandi di file di script e opzioni della riga di comando per eseguire e controllare le attività SSMA. Le sezioni che seguono in modo dettagliato lo stesso.  
@@ -25,7 +24,7 @@ I comandi di progetto di gestire la creazione di progetti, apertura, salvataggio
   
 **Command**  
   
-create-new-project: Crea un nuovo progetto SSMA.  
+Crea-nuovo-progetto: Crea un nuovo progetto SSMA.  
   
 **Script**  
   
@@ -149,7 +148,7 @@ Definizione del server viene recuperato dall'attributo del nome definito per ogn
 ```  
 **Command**  
   
-load-access-database: Consente di caricare i file di database di access  
+caricamento-accesso-database: Consente di caricare i file di database di access  
   
 **Script**  
   
@@ -158,7 +157,7 @@ load-access-database: Consente di caricare i file di database di access
 ```xml  
 <load-access-database  database-file="<Access-database>"/>  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <load-access-database>  
@@ -192,7 +191,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
   metabase="<source/target>"/>  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <force-load>  
@@ -254,7 +253,7 @@ I comandi di Report generano i report sulle prestazioni di varie attività di Co
   
 **Command**  
   
-generate-assessment-report  
+generare report di valutazione  
   
 -   Genera report di valutazione nel database di origine.  
   
@@ -377,7 +376,7 @@ convert-schema
   
 />  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <convert-schema  
@@ -437,7 +436,7 @@ migrate-data
   
 </migrate-data>  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <migrate-data  
@@ -493,7 +492,7 @@ Scollega-tabelle: Questo comando consente di scollegare la tabella di origine (a
   
 </unlink-tables>  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <unlink-tables>  
@@ -547,11 +546,11 @@ synchronize-target
   
 3.  `on-error:` Specifica se specificare gli errori di sincronizzazione come avvisi o errori. Opzioni disponibili per in caso di errore:  
   
-    -   report-total-as-warning  
+    -   -Totale report come avviso  
   
-    -   report-each-as-warning  
+    -   report-each-come-avviso  
   
-    -   fail-script  
+    -   Errore-script  
   
 4.  `report-errors-to:` Specifica percorso di segnalazione errori per l'operazione di sincronizzazione (attributo facoltativo) se viene fornito percorso della cartella, solo del file in base al nome **TargetSynchronizationReport.XML** viene creato.  
   
@@ -572,7 +571,7 @@ synchronize-target
   
 />  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <synchronize-target  
@@ -612,11 +611,11 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
 3.  `on-error:` Specifica se occorre indicare errori di aggiornamento come avvisi o errori. Opzioni disponibili per in caso di errore:  
   
-    -   report-total-as-warning  
+    -   -Totale report come avviso  
   
-    -   report-each-as-warning  
+    -   report-each-come-avviso  
   
-    -   fail-script  
+    -   Errore-script  
   
 4.  `report-errors-to:` Specifica percorso di segnalazione errori per l'operazione di aggiornamento (attributo facoltativo) se viene fornito percorso della cartella, solo del file in base al nome **SourceDBRefreshReport.XML** viene creato.  
   
@@ -637,7 +636,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
 />  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <refresh-from-database  
@@ -646,7 +645,7 @@ o Gestione configurazione
   
   object-type="category"/>  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <refresh-from-database>  
@@ -661,7 +660,7 @@ La generazione di Script, i comandi consentono di salvare l'output della console
   
 **Command**  
   
-save-as-script  
+come Save-script  
   
 Consente di salvare gli script degli oggetti in un file indicato quando metabase target, si tratta di un'alternativa al comando di sincronizzazione in cui in si ottenere gli script ed eseguire lo stesso nel database di destinazione.  
   
@@ -696,7 +695,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
 />  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <save-as-script  

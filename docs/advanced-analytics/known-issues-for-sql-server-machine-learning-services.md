@@ -6,13 +6,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 805dd613c49351c0106231b9147a4af54ac8cf0d
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 88dcbbf3a336af38b80ab8c5aa4b49dbe17d9184
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962818"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Problemi noti di Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -123,7 +122,7 @@ Se si installa una versione non definitiva di SQL Server 2017 in un computer sen
 
 Questo problema viene risolto nella versione di rilascio. Inoltre, questa limitazione non si applica ai componenti di R.
 
-**Si applica a:** SQL Server 2017 with Python
+**Si applica a:** SQL Server 2017 con Python
 
 ### <a name="bkmk_sqlbindr"></a> Avviso di versione non compatibile quando ci si connette a una versione precedente di SQL Server R Services da un client usando [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
@@ -252,7 +251,7 @@ Nella compilazione di rilascio iniziale di SQL Server 2016, è possibile imposta
 
 Questo problema è stato risolto in SQL Server 2016 Service Pack 1. È consigliabile eseguire l'aggiornamento alla versione più recente del servizio.
 
-**Si applica a:** SQL Server 2016 R Services RTM version
+**Si applica a:** Versione RTM di SQL Server 2016 R Services
 
 ### <a name="5-changes-to-column-types-cannot-be-performed-when-reading-data-in-a-sql-server-compute-context"></a>5. Non è possibile apportare modifiche ai tipi di colonna durante la lettura di dati in un contesto di calcolo di SQL Server
 

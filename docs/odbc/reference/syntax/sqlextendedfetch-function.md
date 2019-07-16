@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63030b34e4b607b850f25a67357d62a7184467c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce4bd75b2a1ffac44b14c9906e669421d55888c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003083"
 ---
 # <a name="sqlextendedfetch-function"></a>Funzione SQLExtendedFetch
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 ODBC: Deprecato  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: Funzionalità deprecate  
   
  **Riepilogo**  
  **SQLExtendedFetch** recupera il set di righe specificato dei dati dal set di risultati e restituisce i dati per tutte le colonne associate. I set di righe può essere specificato in una posizione assoluta o relativa o dal segnalibro.  

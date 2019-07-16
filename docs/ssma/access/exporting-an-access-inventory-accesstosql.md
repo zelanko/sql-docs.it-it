@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: f35ae03cb6588bc7828349dd4a4beafcc5a7b2f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c05eafd1fb58b6ece15f5ad8721228d9d4beab6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760824"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006561"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Esportazione di un inventario di Access (AccessToSQL)
 Se si dispone di più database di Access e non si sono certi che quelli per eseguire la migrazione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile esportare un inventario di tutti i database di Access in un progetto. È quindi possibile esaminare e ottenere i metadati di inventario per determinare quali database e gli oggetti presenti in tali database per eseguire la migrazione. L'inventario è possibile rapidamente trovare le risposte alle domande, ad esempio il seguente:  
@@ -56,7 +55,7 @@ Le istruzioni seguenti descrivono come creare un progetto, aggiungere database a
   
 1.  Aprire SSMA per l'accesso.  
   
-2.  Scegliere **Nuovo progetto** dal menu **File**.  
+2.  Nel menu **File** selezionare **Nuovo progetto**.  
   
     Verrà visualizzata la finestra di dialogo **Nuovo progetto** .  
   
@@ -91,7 +90,7 @@ Per altre informazioni sulla creazione di progetti, vedere [creazione e gestione
   
     È possibile usare la **Seleziona tutto** e **Clear All** pulsanti nella parte superiore dell'elenco per selezionare o deselezionare tutti i database. È anche possibile tenere premuto il tasto CTRL per selezionare più righe o tenere premuto il tasto MAIUSC basso per selezionare un intervallo di righe.  
   
-7.  Scegliere **Avanti**.  
+7.  Fare clic su **Avanti**.  
   
 8.  Nella pagina di verifica, fare clic su **fine**.  
   
@@ -107,7 +106,7 @@ Per altre informazioni sull'aggiunta di database per i progetti, vedere [aggiunt
   
     -   Se ci si connette all'istanza predefinita in un altro computer, immettere il nome del computer.  
   
-    -   Se ci si connette a un'istanza denominata, immettere il nome del computer, una barra rovesciata e il nome dell'istanza. Ad esempio:  MyServer\MyInstance.  
+    -   Se ci si connette a un'istanza denominata, immettere il nome del computer, una barra rovesciata e il nome dell'istanza. Ad esempio: MyServer\MyInstance.  
   
 3.  Nel **Database** immettere il nome del database di destinazione per i metadati esportati.  
   

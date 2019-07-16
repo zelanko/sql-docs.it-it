@@ -4,17 +4,16 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 89a72a7390b3b782781c4849d69f81065544e991
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 0d52038d3e556ecc2202fd1066dc2638bfe14183
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833196"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032399"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configurare l'istanza del cluster di failover SQL Server in Linux - iSCSI:
 
@@ -53,7 +52,7 @@ Per altre informazioni sull'iniziatore iSCSI per le distribuzioni supportate, co
 
     - iface.net_ifacename è il nome della scheda di rete, come illustrato nel sistema operativo.
     - iface.hwaddress è l'indirizzo MAC del nome univoco che verrà creato per questa interfaccia riportato di seguito.
-    - iface.ipaddress
+    - iface.IPAddress
     - iface.subnet_Mask 
 
     Vedere l'esempio seguente:
@@ -320,7 +319,7 @@ Per altre informazioni sull'iniziatore iSCSI per le distribuzioni supportate, co
 
    *    Per eseguire il test, creare un database in tale cartella. L'esempio illustrato di seguito Usa sqlcmd per creare un database, passare a esso, verificare i file esistono a livello di sistema operativo e quindi Elimina il percorso temporaneo. È possibile usare SQL Server Management Studio.
   
-    ![50-ExampleCreateSSMS][9]
+    ![50 ExampleCreateSSMS][9]
 
    *    Smontare la condivisione 
 

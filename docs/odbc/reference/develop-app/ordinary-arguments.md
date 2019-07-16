@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a18cdae1-6b85-41cb-875c-b5a01ec90aeb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 31d83b00fd70cd54587a19ebfea7310154167493
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 997604b4376656d36d2bc4bc31f1959aa6c8a229
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62999279"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987825"
 ---
 # <a name="ordinary-arguments"></a>Argomenti ordinari
 Quando un argomento di stringa di funzione di catalogo è un normale argomento, si viene considerato come una stringa letterale. Un normale argomento accetta un criterio di ricerca stringa né un elenco di valori. Nel caso di un normale argomento è significativo e le virgolette nella stringa vengono considerate in modo letterale. Questi argomenti vengono trattati come argomenti ordinari se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_FALSE; vengono considerate come argomenti di tipo identificatore invece se questo attributo è impostato su SQL_TRUE.  

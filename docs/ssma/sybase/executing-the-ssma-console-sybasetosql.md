@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6cbdd0a1394114e3fdef0511c7ed14658f7dd9b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 602bc0ac1584f9ff369efa8a2484a16a97a92285
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029148"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Esecuzione della console SSMA (SybaseToSQL)
 Microsoft offre un solido set di script di comandi del file per eseguire e controllare le attività SSMA. Le sezioni che seguono in modo dettagliato lo stesso.  
@@ -35,7 +34,7 @@ L'applicazione console utilizza alcuni comandi di file di script standard come e
 ## <a name="project-commands"></a>Comandi di progetto  
 I comandi di progetto di gestire la creazione di progetti, apertura, salvataggio e chiusura di progetti.  
   
-### <a name="create-new-project"></a>create-new-project  
+### <a name="create-new-project"></a>Create-new-project  
 Questo comando crea un nuovo progetto SSMA.  
   
 -   `project-folder` indica la cartella del progetto di creazione.  
@@ -182,7 +181,7 @@ Se (ri) connessione alla destinazione non viene stabilita, viene generato un err
 ## <a name="report-commands"></a>Comandi del report  
 I comandi di Report generano i report sulle prestazioni di varie attività di Console SSMA.  
   
-### <a name="generate-assessment-report"></a>generate-assessment-report  
+### <a name="generate-assessment-report"></a>generare report di valutazione  
   
 Questo comando genera i report di valutazione nel database di origine.  
   
@@ -296,7 +295,7 @@ Se la connessione di database di origine o di destinazione non viene eseguita pr
   
 />  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <convert-schema  
@@ -406,11 +405,11 @@ Se la connessione di database di destinazione non viene eseguita prima di esegui
   
 -   `on-error:` Specifica se specificare gli errori di sincronizzazione come avvisi o errori. Opzioni disponibili per in caso di errore:  
   
-    -   report-total-as-warning  
+    -   -Totale report come avviso  
   
-    -   report-each-as-warning  
+    -   report-each-come-avviso  
   
-    -   fail-script  
+    -   Errore-script  
   
 -   `report-errors-to:` Specifica percorso del report di errore per l'operazione di sincronizzazione (attributo facoltativo). Se viene fornito percorso della cartella, solo file in base al nome **TargetSynchronizationReport.XML** viene creato.  
   
@@ -431,7 +430,7 @@ fail-script>" (optional)
   
 />  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <synchronize-target  
@@ -440,7 +439,7 @@ o Gestione configurazione
   
   object-type="<object-category>"/>  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <synchronize-target>  
@@ -467,11 +466,11 @@ Questo comando richiede uno o più nodi di metabase come parametro della riga di
   
 -   `on-error:` Specifica se chiamare l'aggiornamento degli errori come avvisi o errori. Opzioni disponibili per in caso di errore:  
   
-    -   report-total-as-warning  
+    -   -Totale report come avviso  
   
-    -   report-each-as-warning  
+    -   report-each-come-avviso  
   
-    -   fail-script  
+    -   Errore-script  
   
 -   `report-errors-to:` Specifica percorso del report di errore per l'operazione di aggiornamento (attributo facoltativo). Se viene fornito percorso della cartella, solo file in base al nome **SourceDBRefreshReport.XML** viene creato.  
   
@@ -492,7 +491,7 @@ Questo comando richiede uno o più nodi di metabase come parametro della riga di
   
 />  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <refresh-from-database  
@@ -514,7 +513,7 @@ oppure
 ## <a name="script-generation-commands"></a>Comandi di generazione script  
 I comandi di generazione dello Script eseguono due attività: consentono di salvare l'output in un file di script della console e registrano l'output di T-SQL per la console o un file basato sul parametro specificato.  
   
-### <a name="save-as-script"></a>save-as-script  
+### <a name="save-as-script"></a>come Save-script  
 Questo comando viene utilizzato per salvare gli script degli oggetti in un file indicato quando metabase target. Si tratta di un'alternativa al comando di sincronizzazione in quanto è ottenere gli script ed eseguire lo stesso nel database di destinazione.  
   
 Questo comando richiede uno o più nodi di metabase come parametro della riga di comando.  
@@ -546,7 +545,7 @@ Questo comando richiede uno o più nodi di metabase come parametro della riga di
   
 />  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <save-as-script  
@@ -620,7 +619,7 @@ Questo comando richiede uno o più nodi di metabase come parametro della riga di
   
 </convert-sql-statement>  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```  
 <convert-sql-statement  

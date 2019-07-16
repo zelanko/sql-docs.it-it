@@ -2,7 +2,6 @@
 title: Statistiche automatiche (sistema di piattaforma Analitica)
 description: Vengono descritte funzionalità statistiche automatico introdotta in AU7 sistema di piattaforma Analitica.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -10,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: e48d40d78c25431fd6e5592dacfa410723b31f82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: caed6b9d126e09bc70a61c73b5100d689f81b011
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961275"
 ---
 # <a name="configure-auto-statistics"></a>Configurare automaticamente le statistiche
 
@@ -55,7 +54,7 @@ ALTER DATABASE myPDW SET AUTO_UPDATE_STATISTICS_ASYNC ON
  
 Opzione AUTO_UPDATE STATISTICS_ASYNC funziona solo se la proprietà AUTO_UPDATE_STATISTICS è impostata su ON.  Di conseguenza, le statistiche non vengono aggiornate quando AUTO_UPDATE_STATISTICS è impostata su OFF e AUTO_UPDATE_STATISTICS_ASYNC è ON. 
 
-### <a name="error-messages"></a>Messaggi di errore
+### <a name="error-messages"></a>messaggi di errore
 Si potrebbe ricevere il messaggio di errore "questa opzione non è supportata in PDW".  Questo errore si verifica quando l'amministratore di sistema non ha abilitato le statistiche automatiche, e si tenta di impostare uno qualsiasi dei automatica opzioni relative alle statistiche in ALTER DATABASE. 
 
 ### <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni

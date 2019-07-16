@@ -12,23 +12,22 @@ helpviewer_keywords:
 ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9d4632c05bbbde885589d7f1dd57ddea60aa5d98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 787c0786719b1daa7f77495b8ce144f95796df79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616239"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001342"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>Creazione, modifica e rimozione di chiavi esterne
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   In SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects) le chiavi esterne sono rappresentate dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>.  
   
- Per creare una chiave esterna in SMO, è necessario specificare la tabella in cui la chiave esterna viene definita nel costruttore del <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> oggetto. Dalla tabella, è necessario selezionare almeno una colonna che rappresenti la chiave esterna. A questo scopo, creare una variabile dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> e specificare il nome della colonna che rappresenta la chiave esterna. Specificare quindi la tabella e la colonna a cui si fa riferimento. Usare la <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> metodo per aggiungere la colonna per il **colonne** proprietà dell'oggetto.  
+ Per creare una chiave esterna in SMO, è necessario specificare la tabella in cui la chiave esterna viene definita nel costruttore dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. Dalla tabella, è necessario selezionare almeno una colonna che rappresenti la chiave esterna. A questo scopo, creare una variabile dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> e specificare il nome della colonna che rappresenta la chiave esterna. Specificare quindi la tabella e la colonna a cui si fa riferimento. Usare la <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> metodo per aggiungere la colonna per il **colonne** proprietà dell'oggetto.  
   
- Le colonne che rappresentano la chiave esterna sono elencate nel **colonne** proprietà dell'oggetto di <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> oggetto. La chiave primaria che fa riferimento la chiave esterna è rappresentata dal <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> presente nella tabella specificata nella proprietà il <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> proprietà.  
+ Le colonne che rappresentano la chiave esterna sono elencate nel **colonne** proprietà dell'oggetto di <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> oggetto. La chiave primaria a cui la chiave esterna fa riferimento è rappresentata dalla proprietà <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> che si trova nella tabella specificata nella proprietà <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A>.  
   
 ## <a name="example"></a>Esempio  
  Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un Visual C&#35; progetto SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
@@ -121,8 +120,8 @@ $fk.ReferencedTableSchema = "HumanResources"
 $fk.Create()  
 ```  
   
-## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>Esempio: chiavi esterne, chiavi primarie e colonne con vincolo univoco  
- In questo esempio vengono illustrate le operazioni seguenti:  
+## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>Esempio: Le chiavi esterne, chiavi primarie e colonne vincoli Unique  
+ In questo esempio viene illustrato quanto segue:  
   
 -   Individuazione di una chiave esterna in un oggetto esistente.  
   

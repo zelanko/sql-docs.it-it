@@ -2,19 +2,18 @@
 title: Importare i Management Pack di SCOM - sistema di piattaforma Analitica | Microsoft Docs
 description: Seguire questi passaggi per importare i Management Pack di System Center Operations Manager (SCOM) per Analitica piattaforma di strumenti analitici. I management pack sono necessari per monitorare Parallel Data Warehouse da SCOM.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c4280fb257147f3c401badc6eaec18929f6d69b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 070e7b73614f6884e45a5c91603d6086613d15ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149626"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960852"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>Importare il Management Pack SCOM - sistema di piattaforma Analitica
 Seguire questi passaggi per importare i Management Pack di System Center Operations Manager (SCOM) per Analitica piattaforma di strumenti analitici. I management pack sono necessari per monitorare Parallel Data Warehouse da SCOM. 
@@ -72,7 +71,7 @@ I management pack deve essere installato. Visualizzare [installa i Management Pa
   
     ![Fare clic su Installa](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
   
-5.  Scegliere **Chiudi**.  
+5.  Fare clic su **Chiudi**.  
   
     ![Fare clic su Chiudi](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW4.png "SCOM_PDW4")  
   

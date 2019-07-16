@@ -2,19 +2,18 @@
 title: Configurare Windows per ricevere copie di una tabella remota - Parallel Data Warehouse | Microsoft Docs
 description: Descrive come acquistare e configurare un sistema di Windows non appliance connesso tramite la rete InfiniBand per l'uso con la funzionalità di copia tabella remota in Parallel Data Warehouse. Il sistema di Windows ospiterà il database di SQL Server che riceve la copia della tabella remota da un database di SQL Server PDW. È acquistato separatamente dall'appliance e connesso alla rete InfiniBand appliance.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ed7122f497b0bdebd893eec75606bbb6382e9a73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 428dc5b4edda91f60a09a52c0326f881f257b32c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961304"
 ---
 # <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>Configurare un sistema Windows esterno per ricevere copie di una tabella remota usando InfiniBand - Parallel Data Warehouse
 Descrive come acquistare e configurare un sistema di Windows non appliance connesso tramite la rete InfiniBand per l'uso con la funzionalità di copia tabella remota in SQL Server PDW. Il sistema di Windows ospiterà il database di SQL Server che riceve la copia della tabella remota da un database di SQL Server PDW. È acquistato separatamente dall'appliance e connesso alla rete InfiniBand appliance.  

@@ -2,19 +2,18 @@
 title: Configurare la connettività di PolyBase - sistema di piattaforma Analitica | Microsoft Docs
 description: Viene illustrato come configurare PolyBase in Parallel Data Warehouse, per connettersi a Hadoop o in Microsoft Azure storage blob origini dati esterne. Usare PolyBase per eseguire query che si integrano dati da più origini, inclusi Hadoop, archiviazione blob di Azure e Parallel Data Warehouse.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: da6d71521f72ff23b4caf2f27dbc663dee684592
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c218d686951e8855dd0687e35c1b777b0ae29617
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961259"
 ---
 # <a name="what-is-polybase"></a>Che cos'è PolyBase?
 PolyBase consente il sistema di piattaforma Analitica (AP) per elaborare query Transact-SQL che può leggere i dati da e scrivere dati in origini dati esterne. Le stesse query che accedono ai dati esterni possono anche includere tabelle relazioni in punti di accesso. In questo modo è possibile combinare dati provenienti da origini esterne con dati relazionali di alto valore nei database di punti di accesso.

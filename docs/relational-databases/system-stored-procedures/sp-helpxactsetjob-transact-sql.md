@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7402fcc825e6f537703268c1fd3fead9c88b1f5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db259133a2ddd7ebe18b6d198c0f91e8ffc7b8bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62959611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048192"
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 |**nextdate**|**varchar(22)**|Data della successiva esecuzione del processo.|  
 |**broken**|**varchar(1)**|Flag che indica se il processo è interrotto.|  
 |**interval**|**varchar(200)**|Intervallo del processo.|  
-|**failures**|**int**|Numero di errori per il processo.|  
+|**errori**|**int**|Numero di errori per il processo.|  
 |**xactsetjobwhat**|**varchar(200)**|Nome della procedura eseguita dal processo.|  
 |**xactsetjob**|**varchar(1)**|Stato del processo. I possibili valori sono i seguenti:<br /><br /> **1** -il processo è abilitato.<br /><br /> **0** -il processo sia disabilitato.|  
 |**xactsetlonginterval**|**int**|Intervallo lungo per il processo.|  

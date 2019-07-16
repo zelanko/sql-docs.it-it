@@ -9,25 +9,24 @@ ms.topic: conceptual
 ms.assetid: b090b327-cec6-4d9a-a670-8f96e8ff0046
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 199a9fb8587cb1c024ac5dd5c09c1264a1226191
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4d552114800b2d5d0148e3681f1fd165a914f654
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138892"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006591"
 ---
-# <a name="data-migration-report-accesstosql"></a>Data Migration Report (AccessToSQL)
+# <a name="data-migration-report-accesstosql"></a>Report di migrazione dati (AccessToSQL)
 Il **Report di migrazione dati** verrà visualizzata la finestra di dialogo dopo la migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Opzioni  
-**Stato**  
+**Status**  
 Mostra lo stato della migrazione dei dati dall'origine al database di destinazione.  
   
 **From**  
 La tabella di origine.  
   
-**Per**  
+**To**  
 La tabella di destinazione.  
   
 **Numero totale di righe**  

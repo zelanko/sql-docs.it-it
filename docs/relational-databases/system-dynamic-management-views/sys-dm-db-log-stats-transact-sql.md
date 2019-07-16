@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 43e5b145122f5b2586d8eb976162afb0615f89d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b23eea391c7de1f02eacec7f8c8625211dfeea3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846319"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004831"
 ---
 # <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ La funzione predefinita [DB_ID](../../t-sql/functions/db-id-transact-sql.md) pu�
   
 ## <a name="tables-returned"></a>Tabelle restituite  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |database_id    |**int**    |ID database |  
 |recovery_model |**nvarchar(60)**   |   Modello di recupero del database. I valori possibili includono: <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
@@ -81,7 +80,7 @@ Richiede il `VIEW DATABASE STATE` autorizzazione nel database.
   
 ## <a name="examples"></a>Esempi  
 
-### <a name="a-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-high-number-of-vlfs"></a>A. Determinare i database in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza con un numero elevato di file di log virtuali   
+### <a name="a-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-high-number-of-vlfs"></a>R. Determinare i database in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza con un numero elevato di file di log virtuali   
 La query seguente restituisce i database con più di 100 file di log virtuali nei file di log. Un numero elevato di file di log virtuali può influire sull'ora di avvio, ripristino e ripristino di database.
 
 ```sql  

@@ -2,19 +2,18 @@
 title: Attività di gestione del carico di lavoro - sistema di piattaforma Analitica | Microsoft Docs
 description: Attività di gestione del carico di lavoro nel sistema di piattaforma Analitica.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 8e538b96c482a6a16fffcfdac197e62885426b52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea6b3785914781e73a8570c1282741f7c4b56298
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63243794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959751"
 ---
 # <a name="workload-management-tasks-in-analytics-platform-system"></a>Attività di gestione del carico di lavoro nel sistema di piattaforma Analitica
 Attività di gestione del carico di lavoro nel sistema di piattaforma Analitica.

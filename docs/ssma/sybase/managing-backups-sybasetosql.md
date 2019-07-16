@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 266d987c-ecc5-4fa4-bfdf-8c584f1a1332
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 3a1a5172de403d7ecfa99887439db218adb1141a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b10d8704a6badaed7cb10888e266fcdc7bb339f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63132305"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028920"
 ---
 # <a name="managing-backups-sybasetosql"></a>Gestione dei backup (SybaseToSQL)
 Gestione dei Backup Sybase consente di backup e ripristino dei dati di tabella prima o dopo l'esecuzione di un test. È anche possibile gestire il contenuto di backup con finestra di dialogo Gestisci contenuto di Backup.  

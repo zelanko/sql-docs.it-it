@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 86b4d8c97996733396e3062e134b2e31d2819ec0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6184aa9d932355cd935a9131848ec27895faea5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471312"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049303"
 ---
 # <a name="divide-mdx"></a>Divisione (MDX)
 
@@ -29,10 +28,10 @@ Divide (<numerator>, <denominator> [,<alternateresult>])
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *numerator*  
+ *numeratore*  
  Dividendo o numero da dividere.  
   
- *denominator*  
+ *denominatore*  
  Divisore o numero per cui dividere.  
   
  *alternateresult*  

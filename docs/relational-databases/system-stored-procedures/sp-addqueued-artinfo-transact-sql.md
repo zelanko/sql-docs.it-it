@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e44891f5a16625cb6c3176fac8188fa568822add
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: a0f94fbf686e9b9bd9fd1b6780b298c661ce42f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493184"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031015"
 ---
 # <a name="spaddqueuedartinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
   
 `[ @dest_table = ] _'dest_table'` È il nome della tabella di destinazione. *dest_table* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@owner =** ] **'**_proprietario_**'**  
+ [ **@owner =** ] **'** _proprietario_ **'**  
  Proprietario della sottoscrizione. *proprietario* viene **sysname**, non prevede alcun valore predefinito.  
   
 `[ @cft_table = ] 'cft_table'` Nome della tabella dei conflitti ad aggiornamento in coda per questo articolo. *cft_table*viene **sysname**, non prevede alcun valore predefinito.  

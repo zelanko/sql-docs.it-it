@@ -15,22 +15,21 @@ helpviewer_keywords:
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3cf60ccc0e220850f7a83ed2c25db3795c1e7796
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b37bdfae5f97a453477768aca39b801c06c0701
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312492"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023290"
 ---
 # <a name="positioned-update-and-delete-statements"></a>Istruzioni di eliminazione e aggiornamento posizionato
 Le applicazioni possono aggiornare o eliminare la riga corrente in un set di risultati con un aggiornamento posizionato o istruzione delete. Posizionato update e delete sono supportate le istruzioni da alcune origini dati, ma non tutte. Per determinare se un'origine dati supporta posizionato istruzioni update e delete, un'applicazione chiama **SQLGetInfo** con SQL_DYNAMIC_CURSOR_ATTRIBUTES1 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ Cursore1 o SQL_STATIC_CURSOR_ATTRIBUTES1 *InfoType* (a seconda del tipo di cursore). Si noti che la libreria di cursori ODBC simula posizionato istruzioni update e delete.  
   
  Per usare un aggiornamento posizionato o istruzione delete, l'applicazione deve creare un set di risultati con un **selezionare per aggiornare** istruzione. La sintassi di questa istruzione è:  
   
- **SELECT** [**ALL** &#124; **DISTINCT**] *select-list*  
+ **Selezionare** [**tutto** &#124; **DISTINCT**] *elenco select*  
   
- **FROM** *table-reference-list*  
+ **DAL** *tabella--elenco dei riferimenti*  
   
  [**In cui** *condizione di ricerca*]  
   
@@ -42,7 +41,7 @@ Le applicazioni possono aggiornare o eliminare la riga corrente in un set di ris
   
  **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
   
- [ **,** *column-identifier* **=** {*expression* &#124; **NULL**}]...  
+ [ **,** *colonna identificatore* **=** {*espressione* &#124; **NULL**}]...  
   
  **WHERE CURRENT OF** *-nome del cursore*  
   

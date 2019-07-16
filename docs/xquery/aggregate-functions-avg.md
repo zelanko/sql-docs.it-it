@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 56760100d49e76179b868c892dd3cd61cf2c8142
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: b659aa13a8704a060be12bb015bd0de0fd126562
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985991"
 ---
 # <a name="aggregate-functions---avg"></a>Funzioni di aggregazione - avg
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
  Se l'input è una sequenza vuota calcolata in modo statico, la sequenza vuota è implicita e viene restituito un errore statico.  
   
- Il **AVG ()** funzione restituisce la media dei numeri calcolata. Esempio:  
+ Il **AVG ()** funzione restituisce la media dei numeri calcolata. Ad esempio:  
   
  **SUM (** *$arg* **) div count (** *$arg* **)**  
   
@@ -57,7 +56,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
   
-### <a name="a-using-the-avg-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-in-which-labor-hours-are-greater-than-the-average-for-all-work-center-locations"></a>A. Utilizzo della funzione XQuery avg() per trovare i centri di lavorazione del processo di produzione con ore di manodopera superiori alla media di tutti i centri.  
+### <a name="a-using-the-avg-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-in-which-labor-hours-are-greater-than-the-average-for-all-work-center-locations"></a>R. Utilizzo della funzione XQuery avg() per trovare i centri di lavorazione del processo di produzione con ore di manodopera superiori alla media di tutti i centri.  
  È possibile riscrivere la query illustrata nel [funzione min (XQuery)](../xquery/aggregate-functions-min.md) da utilizzare il **AVG ()** (funzione).  
   
 ## <a name="implementation-limitations"></a>Limitazioni di implementazione  

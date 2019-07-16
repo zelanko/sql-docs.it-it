@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9168b0b6-a828-4fef-b8cd-bdf439776f23
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: af0ed8307652ccf45e7fbfffb6c00355c8a8b004
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5863935ddf595409d48be79dc646c0994ddeb0b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019318"
 ---
 # <a name="c-to-sql-guid"></a>Da C a SQL: GUID
 L'identificatore per il tipo di dati C ODBC GUID è:  
@@ -37,7 +36,7 @@ L'identificatore per il tipo di dati C ODBC GUID è:
 |SQL_WCHAR|Lunghezza in caratteri colonna > = 36|n/d|  
 |SQL_WVARCHAR|Colonna carattere a lunghezza < 36|22001|  
 |SQL_WLONGVARCHAR|Valore di dati non è un GUID valido|22018|  
-|SQL_GUID|None[a]|n/d|  
+|SQL_GUID|Nessuno [a]|n/d|  
   
  [a] tutti i valori esadecimali sono validi come GUID.  
   

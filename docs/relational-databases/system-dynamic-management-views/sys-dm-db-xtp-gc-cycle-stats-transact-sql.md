@@ -19,32 +19,31 @@ helpviewer_keywords:
 ms.assetid: bbc9704e-158e-4d32-b693-f00dce31cd2f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b59b0bdfb2852c20c2f13641682a1adff3547662
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 95e173cd20bd04c3b5a5a6cd7ad7299ef13971d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026856"
 ---
 # <a name="sysdmdbxtpgccyclestats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Restituisce lo stato corrente delle transazioni su cui è stato eseguito il commit e che hanno eliminato una o più righe. Il thread inattivo di Garbage Collection viene attivato ogni minuto o quando il numero delle transazioni DML su cui è stato eseguito il commit supera una soglia interna dopo l'ultimo ciclo di Garbage Collection. Come parte del ciclo di Garbage Collection, sposta le transazioni che sono state sottoposte al commit in una o più code associate alle generazioni. Le transazioni che hanno generato versioni non aggiornate vengono raggruppate in unità di 16 transazioni di 16 generazioni come indicato di seguito:  
   
--   Generazione 0: archivia tutte le transazioni di cui è stato eseguito il commit prima della transazione attiva meno recente. Le versioni di riga generate da queste transazioni sono immediatamente disponibili per il Garbage Collection.  
+-   Generazione 0: Consente di archiviare tutte le transazioni che è stato eseguito il commit in precedenza la transazione attiva meno recente. Le versioni di riga generate da queste transazioni sono immediatamente disponibili per il Garbage Collection.  
   
--   Generazione 1-14: archivia le transazioni con un timestamp maggiore della transazione attiva meno recente. Le versioni di riga non possono essere sottoposte a Garbage Collection. Ogni generazione può contenere fino a 16 transazioni. In queste generazioni possono essere presenti 224 (14 * 16) transazioni.  
+-   1-14: Archivia le transazioni con timestamp maggiore della transazione attiva meno recente. Le versioni di riga non possono essere sottoposte a Garbage Collection. Ogni generazione può contenere fino a 16 transazioni. In queste generazioni possono essere presenti 224 (14 * 16) transazioni.  
   
--   Generazione 15: le transazioni rimanenti con un timestamp maggiore della transazione attiva meno recente passano alla generazione 15. Analogamente alla generazione 0, non vi sono limiti di numero di transazioni nella generazione 15.  
+-   Generazione 15: Le transazioni rimanenti con timestamp maggiore della transazione attiva meno recente passano alla generazione 15. Analogamente alla generazione 0, non vi sono limiti di numero di transazioni nella generazione 15.  
   
  Quando sono presenti richieste di memoria, il thread di Garbage Collection aggiorna l'hint della transazione attiva meno recente in modo aggressivo forzando il Garbage Collection.  
   
  Per altre informazioni, vedere [OLTP in memoria &#40;ottimizzazione in memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome colonna|type|Descrizione|  
 |-----------------|----------|-----------------|  
 |cycle_id|**bigint**|Identificatore univoco del ciclo di Garbage Collection.|  
 |ticks_at_cycle_start|**bigint**|Tick all'avvio del ciclo.|  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: acb2fe2d6c6b439295c0a6f0b7a4e233c23cb337
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 7fc3da1474546f0719af20c52f44248baa8ce5da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119749"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028265"
 ---
 # <a name="creating-user-defined-types---requirements"></a>Creazione di tipi definiti dall'utente - Requisiti
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +112,7 @@ ms.locfileid: "49119749"
  Indica se tutte le istanze del tipo definito dall'utente sono della stessa lunghezza.  
   
  **MaxByteSize**  
- Dimensioni massime, in byte, dell'istanza. È necessario specificare **MaxByteSize** con il **UserDefined** formato di serializzazione. Per un tipo definito dall'utente con serializzazione definita dall'utente specificata, **MaxByteSize** si riferisce alle dimensioni totali dell'UDT nella sua forma serializzata come definito dall'utente. Il valore di **MaxByteSize** deve essere compreso nell'intervallo tra 1 e 8000 o impostato su -1 per indicare che il tipo definito dall'utente è maggiore di 8000 byte (le dimensioni totali non possono superare le dimensioni LOB massime). Si consideri un tipo definito dall'utente con una proprietà di una stringa di 10 caratteri (**System. Char**). Quando il tipo definito dall'utente viene serializzato utilizzando un oggetto BinaryWriter, le dimensioni totali della stringa serializzata sono pari a 22 byte per ciascun carattere Unicode UTF-16, moltiplicati per il numero massimo di caratteri, più 2 byte di controllo per l'overhead generato dalla serializzazione di un flusso binario. Pertanto, quando si determina il valore di **MaxByteSize**, le dimensioni totali del tipo serializzato in questione devono essere considerata: le dimensioni dei dati serializzati in formato binario più l'overhead generato dalla serializzazione.  
+ Dimensioni massime, in byte, dell'istanza. È necessario specificare **MaxByteSize** con il **UserDefined** formato di serializzazione. Per un tipo definito dall'utente con serializzazione definita dall'utente specificata, **MaxByteSize** si riferisce alle dimensioni totali dell'UDT nella sua forma serializzata come definito dall'utente. Il valore di **MaxByteSize** deve essere compreso nell'intervallo tra 1 e 8000 o impostato su -1 per indicare che il tipo definito dall'utente è maggiore di 8000 byte (le dimensioni totali non possono superare le dimensioni LOB massime). Si consideri un tipo definito dall'utente con una proprietà di una stringa di 10 caratteri (**System. Char**). Quando il tipo definito dall'utente viene serializzato utilizzando un oggetto BinaryWriter, le dimensioni totali della stringa serializzata sono 22 byte: 2 byte per carattere UTF-16 Unicode, moltiplicato per il numero massimo di caratteri più 2, il controllo byte di overhead generato dalla serializzazione di un flusso binario. Pertanto, quando si determina il valore di **MaxByteSize**, le dimensioni totali del tipo serializzato in questione devono essere considerata: le dimensioni dei dati serializzati in formato binario più l'overhead generato dalla serializzazione.  
   
  **Metodo ValidationMethodName**  
  Nome del metodo utilizzato per convalidare le istanze del tipo definito dall'utente.  
@@ -141,9 +140,9 @@ ms.locfileid: "49119749"
   
 -   Minore di (\<)  
   
--   Maggiore o uguale a (>=)  
+-   Maggiore o uguale a (> =)  
   
--   Minore o uguale a (<=)  
+-   Minore o uguale a (< =)  
   
 ### <a name="implementing-nullability"></a>Implementazione del supporto dei valori Null  
  Oltre a specificare correttamente gli attributi per gli assembly, la classe deve inoltre supportare i valori Null. Tipi definiti dall'utente caricati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supportano i valori null, ma in ordine per il tipo definito dall'utente possa riconoscere un valore null, la classe deve implementare il **INullable** interfaccia. Per altre informazioni e un esempio di come implementare l'ammissione di valori null in un tipo definito dall'utente, vedere [codifica di tipi](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  

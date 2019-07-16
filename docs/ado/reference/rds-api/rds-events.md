@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e03739e0-8169-46d6-9956-556b644a7645
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 209187c5620ed380b268eeb3eb5d34cd1c1da836
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23ef18b438f309ff8cf6ed641a3bdcb6b375a3cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694639"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963690"
 ---
 # <a name="rds-events"></a>Eventi di Servizi Desktop remoto
 > [!IMPORTANT]
@@ -27,7 +26,7 @@ ms.locfileid: "66694639"
   
 |||  
 |-|-|  
-|[onError (RDS)](../../../ado/reference/rds-api/onerror-event-rds.md)|Chiamato ogni volta che si verifica un errore durante un'operazione.|  
+|[onError (Servizi Desktop remoto)](../../../ado/reference/rds-api/onerror-event-rds.md)|Chiamato ogni volta che si verifica un errore durante un'operazione.|  
 |[onReadyStateChange (RDS)](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)|Chiamato ogni volta che il valore della **ReadyState** le modifiche alle proprietà.|
 
 

@@ -8,13 +8,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
-ms.openlocfilehash: 69cc0c84d06c1be4065c7419b3eb35c6c30e0592
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 637d67767e17344d63498f8cb6a141fa78b11ecb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834233"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996444"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Elevata disponibilità e protezione dei dati per le configurazioni di gruppo di disponibilità
 
@@ -58,7 +57,7 @@ Questa configurazione è costituita da tre repliche sincrone. Per impostazione p
 
 Un gruppo di disponibilità con tre repliche sincrone può fornire la protezione dei dati, la disponibilità elevata e scalabilità in lettura. La tabella seguente descrive il comportamento di disponibilità. 
 
-| |read-scale|Disponibilità elevata & </br> protezione dei dati | Protezione dati|
+| |scalabilità in lettura|Disponibilità elevata & </br> protezione dei dati | Protezione dati|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
 |Interruzione primaria |Failover automatico. Nuova replica primaria è R / w. |Failover automatico. Nuova replica primaria è R / w. |Failover automatico. Nuovo database primario non è disponibile per le transazioni utente fino a quando i database primario viene ripristinato e join di gruppo di disponibilità secondario. |
@@ -76,7 +75,7 @@ Questa configurazione abilita la protezione dei dati. Come le altre configurazio
 
 Un gruppo di disponibilità con due repliche sincrone fornisce scalabilità in lettura e la protezione dati. La tabella seguente descrive il comportamento di disponibilità. 
 
-| |read-scale |Protezione dati|
+| |scalabilità in lettura |Protezione dati|
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |Interruzione primaria | Failover manuale. Potrebbe verificarsi la perdita di dati. Nuova replica primaria è R / w.| Failover automatico. Nuovo database primario non è disponibile per le transazioni utente fino a quando i database primario viene ripristinato e join di gruppo di disponibilità secondario.|

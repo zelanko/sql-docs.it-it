@@ -7,15 +7,14 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 278eba1189b376b57f2dec7249a378832c18095c
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: f1eaa39e5f22efbe7bea7a44ac2ce93a5e28205e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962033"
 ---
-# <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>Guida introduttiva: Creare un modello predittivo tramite R in SQL Server
+# <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>Avvio rapido: Creare un modello predittivo tramite R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questa Guida introduttiva, si sarà informazioni su come eseguire il training di un modello usando R e quindi salvare il modello in una tabella in SQL Server. Il modello è un semplice modello lineare generalizzato (GLM) che consente di prevedere probabilità che un veicolo è stato dotato di una trasmissione manuale. Si userà il `mtcars` set di dati incluso in R.
@@ -125,4 +124,4 @@ WHERE model_name = 'default model'
 Ora che si dispone di un modello, nella Guida introduttiva finale, si apprenderà come generare le stime da esso e tracciare i risultati.
 
 > [!div class="nextstepaction"]
-> [Guida introduttiva: Stimare e creare un tracciato dal modello](quickstart-r-predict-from-model.md)
+> [Avvio rapido: Stimare e creare un tracciato dal modello](quickstart-r-predict-from-model.md)

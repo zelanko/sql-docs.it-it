@@ -2,19 +2,18 @@
 title: Monitoraggio dell'integrità del dispositivo - sistema di piattaforma Analitica
 description: Come monitorare lo stato di un'appliance di sistema di piattaforma Analitica utilizzando la Console di amministrazione o direttamente tramite query le viste a gestione dinamica Parallel Data Warehouse.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d8616d291dcaa8afadc01c9bd237903ca6c13573
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c69e46ad6a37a17a12c37f83625b5c7f6eaf8078
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640022"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960618"
 ---
 # <a name="monitor-appliance-health-state"></a>Monitoraggio stato di integrità Appliance
 Questo articolo illustra come monitorare lo stato di un'appliance di sistema di piattaforma Analitica utilizzando la Console di amministrazione o direttamente tramite query le viste a gestione dinamica Parallel Data Warehouse. 
@@ -75,7 +74,7 @@ I valori possibili per la proprietà di stati restituiti sono:
   
 -   Critico  
   
--   Unknown  
+-   Sconosciuto  
   
 -   Non supportato  
   

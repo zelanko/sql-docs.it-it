@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 3126872e3333383d0cea53f38b3cfd06be86b704
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 887bae28ffe35ad006bceb08a1b62b824795be0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962798"
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>Pacchetti predefiniti R e Python in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,8 +27,8 @@ I pacchetti R vengono installati con [SQL Server 2016 R Services](../install/sql
 |----------------|--------------|--------------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | 9.2 | Utilizzato per contesti di calcolo remoti, streaming, l'esecuzione parallela delle funzioni rx per l'importazione dei dati e trasformazione, modellazione, visualizzazione e analisi. |
 | [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | 9.2 |Utilizzato per l'inclusione di script R nelle stored procedure. |
-| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.2 | Consente di aggiungere algoritmi di machine learning in R. | 
-| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.a.  | 9.2 | Utilizzato per la scrittura di istruzioni MDX in R. |
+| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| Paesi Bassi | 9.2 | Consente di aggiungere algoritmi di machine learning in R. | 
+| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | Paesi Bassi  | 9.2 | Utilizzato per la scrittura di istruzioni MDX in R. |
 
 MicrosoftML e olapR sono disponibili per impostazione predefinita in Machine Learning Services di SQL Server 2017. In un'istanza di SQL Server 2016 R Services, è possibile aggiungere questi pacchetti tramite un [aggiornamento del componente](../install/upgrade-r-and-python.md). Un aggiornamento del componente ottiene anche le versioni più recenti dei pacchetti (ad esempio, le versioni più recenti di RevoScaleR includono funzioni per la gestione dei pacchetti in SQL Server).
 
@@ -91,7 +90,7 @@ I percorsi dei file includono anche i nomi delle istanze. SQL Server viene insta
 |----------------------|------------|
 | SQL Server 2016 |C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\library|
 | SQL Server 2017 con R|C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library |
-| SQL Server 2017 with Python |C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\Lib\site-pacchetti |
+| SQL Server 2017 con Python |C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\Lib\site-pacchetti |
 
 
 #### <a name="file-path-for-standalone-server-installations"></a>Percorso del file per le installazioni di server autonomi

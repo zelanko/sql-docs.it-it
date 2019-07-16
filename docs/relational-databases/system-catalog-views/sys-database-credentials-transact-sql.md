@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 796322df-e62a-45bf-b519-89e1d521abce
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46c055e017c2cf5c06993f3e117010ac1621e175
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2521d9543c71d9dee298fbb58518163fd45fbfdc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62936741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999524"
 ---
-# <a name="sysdatabasecredentials-transact-sql"></a>sys.database_credentials (Transact-SQL)
+# <a name="sysdatabasecredentials-transact-sql"></a>Sys. database_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Restituisce una riga per ogni database scoped credential nel database.  
@@ -36,7 +35,7 @@ ms.locfileid: "62936741"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |credential_id|**int**|ID della credenziale con ambito database. È univoco nel database.|  
-|NAME|**sysname**|Nome del database-credenziali con ambito. È univoco nel database.|  
+|name|**sysname**|Nome del database-credenziali con ambito. È univoco nel database.|  
 |credential_identity|**nvarchar(4000)**|Nome dell'identità da utilizzare, in genere corrispondente a un utente di Windows. Non è necessario che sia univoco.|  
 |create_date|**datetime**|Ora in cui è stata creata la credenziale con ambito database.|  
 |modify_date|**datetime**|Ora ultima modifica in corrispondenza del quale la credenziale con ambito database.|  

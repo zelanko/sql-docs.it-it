@@ -2,19 +2,18 @@
 title: Istruzioni T-SQL - Parallel Data Warehouse | Microsoft Docs
 description: Istruzioni T-SQL per analisi della piattaforma di strumenti analitici SQL Server Parallel Data Warehouse (PDW).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ca12b3926fb848defc2a19a08ffa9702516726fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 804f4cb744ad036978341de4eedcc3351d5f620c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63034938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959945"
 ---
 # <a name="t-sql-statements-for-parallel-data-warehouse"></a>Istruzioni T-SQL per Parallel Data Warehouse
 Istruzioni Transact-SQL (T-SQL) per analitiche piattaforma di strumenti analitici SQL Server Parallel Data Warehouse (PDW).
@@ -28,7 +27,7 @@ Istruzioni Transact-SQL (T-SQL) per analitiche piattaforma di strumenti analitic
 * [CREATE COLUMNSTORE INDEX](../t-sql/statements/create-columnstore-index-transact-sql.md)
 * [CREATE DATABASE](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
 * [CREATE DATABASE SCOPED CREDENTIAL](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
-* [CREA ORIGINE DATI ESTERNA](../t-sql/statements/create-external-data-source-transact-sql.md)
+* [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)
 * [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md)
 * [CREARE UNA TABELLA ESTERNA](../t-sql/statements/create-external-table-transact-sql.md)
 * [CREARE (FUNZIONE)](../t-sql/statements/create-function-sql-data-warehouse.md)
@@ -44,7 +43,7 @@ Istruzioni Transact-SQL (T-SQL) per analitiche piattaforma di strumenti analitic
 * [DROP EXTERNAL TABLE](../t-sql/statements/drop-external-table-transact-sql.md)
 * [DROP INDEX](../t-sql/statements/drop-index-transact-sql.md)
 * [DROP PROCEDURE](../t-sql/statements/drop-procedure-transact-sql.md)
-* [DROP STATISTICS](../t-sql/statements/drop-statistics-transact-sql.md)
+* [ELIMINARE STATISTICHE](../t-sql/statements/drop-statistics-transact-sql.md)
 * [DROP TABLE](../t-sql/statements/drop-table-transact-sql.md)
 * [DROP SCHEMA](../t-sql/statements/drop-schema-transact-sql.md)
 * [DROP VIEW](../t-sql/statements/drop-view-transact-sql.md)
@@ -85,7 +84,7 @@ Istruzioni Transact-SQL (T-SQL) per analitiche piattaforma di strumenti analitic
 * [Sottoquery](../t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md)
 
 ## <a name="security-statements"></a>Istruzioni di sicurezza
-* Autorizzazioni: [GRANT](../t-sql/statements/grant-transact-sql.md), [DENY](../t-sql/statements/deny-transact-sql.md), [REVOKE](../t-sql/statements/revoke-transact-sql.md)
+* Autorizzazioni: [CONCESSIONE](../t-sql/statements/grant-transact-sql.md), [DENY](../t-sql/statements/deny-transact-sql.md), [REVOCARE](../t-sql/statements/revoke-transact-sql.md)
 * [ALTER AUTHORIZATION](../t-sql/statements/alter-authorization-transact-sql.md)
 * [ISTRUZIONE ALTER CERTIFICATE](../t-sql/statements/alter-certificate-transact-sql.md)
 * [ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)

@@ -16,23 +16,22 @@ helpviewer_keywords:
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6898c7fbf326209e7b2071b4bdedf383cefc0642
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e84f49d5ad2d88ebb88417ae01046c0bcfd8006
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966042"
 ---
 # <a name="indexes-collection-adox"></a>Raccolta Indexes (ADOX)
 Contiene tutti [indice](../../../ado/reference/adox-api/index-object-adox.md) gli oggetti di una tabella.  
   
 ## <a name="remarks"></a>Note  
- Il [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md) metodo per un' **indici** raccolta sia univoca per ADOX. È possibile effettuare le operazioni seguenti:  
+ Il [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md) metodo per un' **indici** raccolta sia univoca per ADOX. È possibile:  
   
 -   Aggiungere un nuovo indice per la raccolta con il **Append** (metodo).  
   
- Le proprietà e metodi restanti sono standard per le raccolte di ADO. È possibile effettuare le operazioni seguenti:  
+ Le proprietà e metodi restanti sono standard per le raccolte di ADO. È possibile:  
   
 -   Accedere a un indice nella raccolta con il [elemento](../../../ado/reference/ado-api/item-property-ado.md) proprietà.  
   

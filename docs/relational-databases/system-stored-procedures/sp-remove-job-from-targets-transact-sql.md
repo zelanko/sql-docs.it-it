@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e6ec60d6b11f9d17a6f5446e2840688fd1e4cb75
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1ba55c2744d1fad0b6453e0f1d1cd2ea96934bfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536833"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006978"
 ---
 # <a name="spremovejobfromtargets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ sp_remove_job_from_targets [ @job_id = ] job_id
   
 `[ @job_name = ] 'job_name'` Il nome del processo da cui rimuovere il server di destinazione specificato o i gruppi di server di destinazione. Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi. *nome_processo* viene **sysname**, con un valore predefinito è NULL.  
   
-`[ @target_server_groups = ] 'target_server_groups'` Elenco delimitato da virgole dei gruppi di server di destinazione da rimuovere dal processo specificato. *target_server_groups* viene **nvarchar(1024)**, con un valore predefinito è NULL.  
+`[ @target_server_groups = ] 'target_server_groups'` Elenco delimitato da virgole dei gruppi di server di destinazione da rimuovere dal processo specificato. *target_server_groups* viene **nvarchar(1024)** , con un valore predefinito è NULL.  
   
-`[ @target_servers = ] 'target_servers'` Elenco delimitato da virgole dei server di destinazione da rimuovere dal processo specificato. *target_servers* viene **nvarchar(1024)**, con un valore predefinito è NULL.  
+`[ @target_servers = ] 'target_servers'` Elenco delimitato da virgole dei server di destinazione da rimuovere dal processo specificato. *target_servers* viene **nvarchar(1024)** , con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

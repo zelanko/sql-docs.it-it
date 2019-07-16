@@ -7,15 +7,14 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: df1c4c50e21ba5db5459da958f915be560500dc7
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: baa7a378c85668ac87ff8dc28422d4a6bbbcd225
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046927"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962020"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>Guida introduttiva: Gestire i tipi di dati e oggetti usando R in SQL Server
+# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>Avvio rapido: Gestire i tipi di dati e oggetti usando R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questa Guida introduttiva, un'introduzione pratica a problemi comuni che si verificano durante lo spostamento dei dati tra R e SQL Server. L'esperienza che è possibile ottenere questo esercizio vengono fornite informazioni essenziali quando si lavora con i dati in uno script personalizzato.
@@ -283,4 +282,4 @@ Per informazioni sull'impatto sulle prestazioni della fase di esecuzione di conv
 Nella Guida introduttiva successiva, verrà illustrato come applicare funzioni R ai dati di SQL Server.
 
 > [!div class="nextstepaction"]
-> [Guida introduttiva: Usare le funzioni R con dati di SQL Server](quickstart-r-functions.md)
+> [Avvio rapido: Usare le funzioni R con dati di SQL Server](quickstart-r-functions.md)

@@ -3,18 +3,17 @@ title: Introduzione alla sicurezza di SQL Server in Linux
 description: Questo articolo descrive le azioni di sicurezza standard.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.openlocfilehash: 9fe29cadaa14168871e7448350d41bc89afed05b
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 1e64ce76ef2528c96ecc0206b7a56b31d4c95ef7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834743"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019505"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Procedura dettagliata per la funzionalità di sicurezza di SQL Server in Linux
 
@@ -138,9 +137,9 @@ Create a security policy adding the function as both a filter and a block predic
 ```
 CREARE SalesFilter dei criteri di sicurezza   
 Aggiungi filtro PREDICATO Security.fn_securitypredicate(SalesPersonID)    
-  ON Sales.SalesOrderHeader,   
+  IN Sales. SalesOrderHeader,   
 AGGIUNGERE Security.fn_securitypredicate(SalesPersonID) PREDICATO di blocco    
-  ON Sales.SalesOrderHeader   
+  IN Sales. SalesOrderHeader   
 WITH (STATE = ON);   
 ```
 
@@ -160,7 +159,7 @@ Alter the security policy to disable the policy.  Now both users can access all 
 
 ```
 ALTER SECURITY POLICY SalesFilter   
-WITH (STATE = OFF);    
+CON (STATE = OFF);    
 ``` 
 
 
@@ -181,7 +180,7 @@ Create a new user `TestUser` with `SELECT` permission on the table, then execute
 CREARE TestUser utente senza account di accesso;   
 GRANT selezionare ON Person.EmailAddress a TestUser;    
  
-EXECUTE AS USER = 'TestUser';   
+EXECUTE AS USER = "TestUser";   
 Selezionare EmailAddressID, indirizzo di posta elettronica da Person.EmailAddress;       
 RIPRISTINARE;    
 ```
@@ -229,7 +228,7 @@ GO
 CREARE MyServerCert certificato con soggetto = 'My Database certificato della chiave DEK';  
 GO  
 
-USE AdventureWorks2014;   GO
+USARE AdventureWorks2014;   GO
   
 CREATE DATABASE ENCRYPTION KEY  
 CON L'ALGORITMO = AES_256  

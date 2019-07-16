@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2157462ca1f9509034f33208cce7aed2983ae4f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9948767ca0eca5721207079f978987142653e9c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62644799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091913"
 ---
 # <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ xp_sqlmaint 'switch_string'
  Il **-?** non è valida per **xp_sqlmaint**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- Nessuna. Restituisce un errore se il **sqlmaint** utilità ha esito negativo.  
+ No. Restituisce un errore se il **sqlmaint** utilità ha esito negativo.  
   
 ## <a name="remarks"></a>Note  
  Se questa procedura viene chiamata da un utente l'accesso con autenticazione di SQL Server, il **- U "***login_id***"** e **-P "***password***"** commutatori vengono aggiunti all'inizio *switch_string* prima dell'esecuzione. Se l'utente è connesso con l'autenticazione di Windows *switch_string* viene passato senza apportare modifiche **sqlmaint**.  

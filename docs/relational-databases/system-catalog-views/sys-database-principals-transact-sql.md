@@ -1,5 +1,5 @@
 ---
-title: sys.database_principals (Transact-SQL) | Microsoft Docs
+title: Sys. database_principals (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/27/2016
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 512994ada852ea7807cc14ecd5b25d9acff56ffc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c369bfe81a86af7a11a370a4d827440cd4544a9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632682"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022680"
 ---
 # <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "62632682"
 |**owning_principal_id**|**int**|ID dell'entità proprietaria dell'entità corrente. Tutte le entità, ad eccezione dei ruoli di Database devono essere proprietario **dbo**.|  
 |**sid**|**varbinary(85)**|ID di sicurezza (SID) dell'entità.  NULL per SYS e INFORMATION SCHEMAS.|  
 |**is_fixed_role**|**bit**|Se è 1, questa riga rappresenta una voce per uno dei ruoli predefiniti del database, ovvero db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
-|**authentication_type**|**int**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica il tipo di autenticazione. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> 0 : Nessuna autenticazione<br />1 : Autenticazione istanza<br />2 : Autenticazione del database<br />3 : Autenticazione di Windows|  
+|**authentication_type**|**int**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica il tipo di autenticazione. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> 0: Nessuna autenticazione<br />1: Autenticazione istanza<br />2: Autenticazione del database<br />3: Autenticazione di Windows|  
 |**authentication_type_desc**|**nvarchar(60)**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Descrizione del tipo di autenticazione. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> NONE: Nessuna autenticazione<br />ISTANZA DI: Autenticazione istanza<br />DATABASE: Autenticazione del database<br />FINESTRE: Autenticazione di Windows|  
 |**default_language_name**|**sysname**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica la lingua predefinita per questa entità.|  
 |**default_language_lcid**|**int**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica l'identificatore LCID predefinito per questa entità.|  
@@ -59,7 +58,7 @@ ms.locfileid: "62632682"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-listing-all-the-permissions-of-database-principals"></a>A: Elenco di tutte le autorizzazioni delle entità di database  
+### <a name="a-listing-all-the-permissions-of-database-principals"></a>R: Elenco di tutte le autorizzazioni delle entità di database  
  Nella query seguente vengono elencate le autorizzazioni concesse o negate in modo esplicito alle entità di database.  
   
 > [!IMPORTANT]  

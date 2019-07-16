@@ -2,19 +2,18 @@
 title: Copia di tabelle remote - Parallel Data Warehouse | Microsoft Docs
 description: Utilizzo di copia della tabella remota in Analitica Platform System Parallel Data Warehouse.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5ed517a471368e4192ad7393a92274424d37f975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28bd5deda25650d36467281ccbffa7b666f4c695
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678561"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960209"
 ---
 # <a name="remote-table-copy"></a>Copia della tabella remota
 Viene descritto come usare la funzionalità di copia della tabella remota per copiare tabelle da database di SQL Server PDW per i database di SQL Server SMP remoti (non appliance). Usare la copia di tabelle remote a rende possibili scenari di hub e spoke per SQL Server PDW.  

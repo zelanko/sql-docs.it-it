@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fc366321c9c9c3a6e19bb6a6e520007247bca5a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f6ada7e9c6c793ebc412abc00bf4c0957072740
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694671"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963619"
 ---
 # <a name="rds-properties"></a>Proprietà di Servizi Desktop remoto
 > [!IMPORTANT]
@@ -27,19 +26,19 @@ ms.locfileid: "66694671"
   
 |||  
 |-|-|  
-|[Connect (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)|Indica il nome del database da cui vengono eseguite le operazioni di query e aggiornamento.|  
-|[ExecuteOptions (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)|Indica se è abilitata l'esecuzione asincrona.|  
-|[FetchOptions (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)|Indica il tipo di recupero asincrono.|  
+|[Connect (Servizi Desktop remoto)](../../../ado/reference/rds-api/connect-property-rds.md)|Indica il nome del database da cui vengono eseguite le operazioni di query e aggiornamento.|  
+|[Proprietà ExecuteOptions (Servizi Desktop remoto)](../../../ado/reference/rds-api/executeoptions-property-rds.md)|Indica se è abilitata l'esecuzione asincrona.|  
+|[FetchOptions (Servizi Desktop remoto)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)|Indica il tipo di recupero asincrono.|  
 |[FilterColumn (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)|Indica la colonna in cui valutare i criteri di filtro.|  
-|[FilterCriterion (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)|Indica l'operatore di valutazione da utilizzare nel valore di filtro.|  
-|[FilterValue (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)|Indica il valore per filtrare i record.|  
-|[Handler (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)|Indica il nome di un programma di personalizzazione lato server (*gestore*) che estende la funzionalità del **RDSServer**e i parametri usati dal *gestore*.|  
+|[FilterCriterion (Servizi Desktop remoto)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)|Indica l'operatore di valutazione da utilizzare nel valore di filtro.|  
+|[Valore FilterValue (Servizi Desktop remoto)](../../../ado/reference/rds-api/filtervalue-property-rds.md)|Indica il valore per filtrare i record.|  
+|[Gestore (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)|Indica il nome di un programma di personalizzazione lato server (*gestore*) che estende la funzionalità del **RDSServer**e i parametri usati dal *gestore*.|  
 |[InternetTimeout (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)|Indica il numero di millisecondi di attesa prima del timeout di una richiesta.|  
 |[ReadyState (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)|Indica lo stato di un **DataControl** dell'oggetto come il recupero dei dati nel relativo **Recordset** oggetto.|  
-|[Recordset and SourceRecordset (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)|Indica la **Recordset** oggetto restituito da un oggetto business personalizzato.|  
+|[Recordset e SourceRecordset (Servizi Desktop remoto)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)|Indica la **Recordset** oggetto restituito da un oggetto business personalizzato.|  
 |[Server (RDS)](../../../ado/reference/rds-api/server-property-rds.md)|Indica il protocollo di nome e la comunicazione Internet Information Services (IIS).|  
-|[SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)|Indica da quale colonna per ordinare i record.|  
-|[SortDirection (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)|Indica se una sequenza di ordinamento è crescente o decrescente.|  
+|[Proprietà SortColumn (Servizi Desktop remoto)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)|Indica da quale colonna per ordinare i record.|  
+|[SortDirection (Servizi Desktop remoto)](../../../ado/reference/rds-api/sortdirection-property-rds.md)|Indica se una sequenza di ordinamento è crescente o decrescente.|  
 |[SQL (RDS)](../../../ado/reference/rds-api/sql-property.md)|Indica la stringa di query usata per recuperare il **Recordset**.|  
 |[URL (RDS)](../../../ado/reference/rds-api/url-property-rds.md)|Indica una stringa che contiene un URL relativo o assoluto.|
 

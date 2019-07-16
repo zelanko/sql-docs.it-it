@@ -2,19 +2,18 @@
 title: Le configurazioni hardware, sistema di piattaforma Analitica | Microsoft Docs
 description: L'hardware di appliance Analitica Platform System (APS) è stato progettato con unità scalabili in modo che si acquista la giusta quantità di elaborazione e archiviazione in base alle esigenze aziendali. L'appliance Ridimensiona archiviazione per Parallel Data Warehouse da pochi terabyte a più di 6 petabyte di dati.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2a252e5f2aebd8d51b9b0eb1f353ded504155c2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f3e1759dcde0dd792ce5179de08e9add1ef355e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63283253"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960898"
 ---
 # <a name="hardware-configurations---analytics-platform-system"></a>Configurazioni hardware, sistema di piattaforma Analitica
 L'hardware del sistema di piattaforma Analitica (AP) è stato progettato con unità scalabili in modo che si acquista la giusta quantità di elaborazione e archiviazione in base alle esigenze aziendali. L'appliance scala di archiviazione per SQL Server Parallel Data Wareouse (PDW) da pochi terabyte a più di 6 petabyte di dati.  

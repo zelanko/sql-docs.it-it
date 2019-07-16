@@ -2,19 +2,18 @@
 title: Componenti hardware, sistema di piattaforma Analitica | Microsoft Docs
 description: Analitica piattaforma di strumenti analitici Usa componenti scalabili in modo che è possibile acquistare la giusta quantità di elaborazione e archiviazione in base alle esigenze aziendali. Quando si ordinano i punti di accesso, è necessario una combinazione di questi componenti hardware di base.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 8cf7fd100f72e14b09ea086a1ebff5140a9068a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f7f3bd8f4d5500a59675d40ff7f50d1afd9a199
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157379"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960885"
 ---
 # <a name="hardware-components-for-analytics-platform-system"></a>Componenti hardware per il sistema di piattaforma Analitica
 

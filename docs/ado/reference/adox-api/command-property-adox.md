@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bcc9146f-586f-4e69-9c10-863440c9cffa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ee346a4f73a959f42b4b74967a6f08338775c144
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 55f54ed42b121c347bc2640068fd5b4ef702aeb3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966687"
 ---
 # <a name="command-property-adox"></a>Proprietà Command (ADOX)
 Specifica un oggetto ADO [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto che può essere utilizzato per creare o eseguire la procedura.  

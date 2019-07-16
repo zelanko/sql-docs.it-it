@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 864f6fa78ab1ef23b7db3a0be4c85738b95ea72d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61e55bec7a35009f0d83a43550a434e0966559b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471259"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019474"
 ---
 # <a name="index-command"></a>INDEX (comando)
 Crea un file di indice per visualizzare e accedere ai record di tabella in ordine logico.  
@@ -46,7 +45,7 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
   
  È possibile creare una chiave di indice con lunghezza pari a zero. Ad esempio, una chiave di indice pari a zero lunghezza viene creata quando l'espressione di indice è una sottostringa di un campo di tipo memo vuoto. Una chiave di indice pari a zero lunghezza genera un messaggio di errore. Quando Visual FoxPro viene creato un indice, la valuta i campi nel primo record nella tabella. Se un campo è vuoto, potrebbe essere necessario immettere alcuni dati temporanei nel campo del primo record per evitare che una chiave di indice di lunghezza 0.  
   
- TO *IDXFileName*  
+ PER *IDXFileName*  
  Crea un file di indice IDX. Il file di indice viene assegnato l'IDX di estensione predefinito.  
   
  TAG *TagName*[OF *CDXFileName*]  

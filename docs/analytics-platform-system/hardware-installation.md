@@ -2,19 +2,18 @@
 title: Installazione hardware - sistema di piattaforma Analitica | Microsoft Docs
 description: Questo articolo descrive come spostare, decomprimere e installare i componenti hardware per l'appliance di SQL Server PDW. Questo articolo è solo informativo e può aiutare a comprendere il processo. L'appliance deve essere disimballato, installato e verificato prima viene girato all'utente. La partecipazione dei clienti è obbligatoria per gli elementi, ad esempio data center di accesso, alimentazione elettrica e connessioni Ethernet.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 169b38a1228f909a79d7866eba20b85b4a56c30b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c864a560bb37d27a5bb8ef306ac66815e8b5149c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960870"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-appliance"></a>Installazione di hardware per il dispositivo di sistema di piattaforma Analitica
 Questo articolo descrive come spostare, decomprimere e installare i componenti hardware per l'appliance di SQL Server PDW. Questo articolo è solo informativo e può aiutare a comprendere il processo. L'appliance deve essere disimballato, installato e verificato prima viene girato all'utente. La partecipazione dei clienti è obbligatoria per gli elementi, ad esempio data center di accesso, alimentazione elettrica e connessioni Ethernet.  

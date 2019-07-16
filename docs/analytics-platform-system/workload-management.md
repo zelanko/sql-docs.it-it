@@ -2,19 +2,18 @@
 title: Gestione del carico di lavoro nel sistema di piattaforma Analitica | Microsoft Docs
 description: Gestione del carico di lavoro nel sistema di piattaforma Analitica.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2281262c086f4d8dcab27debc8bb735ea5e8e1ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: adc3928e1b7464d93970d280af6acf303ebc6d16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157465"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959745"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Gestione del carico di lavoro nel sistema di piattaforma Analitica
 
@@ -60,7 +59,7 @@ Nella tabella seguente descrive le classi di risorse e le allocazioni di risorse
   
 |Classe di risorse|Priorità richiesta|Utilizzo di memoria massima *|Slot di concorrenza (massimo = 32)|Descrizione|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|predefiniti|Media|400 MB|1|Per impostazione predefinita, ogni account di accesso è consentita una piccola quantità di risorse di memoria e concorrenza per le richieste.<br /><br />Quando un account di accesso viene aggiunto a una classe di risorse, la nuova classe ha la precedenza. Quando viene eliminato un account di accesso da tutte le classi di risorse, l'account di accesso torna all'allocazione delle risorse predefinito.|  
+|default|Media|400 MB|1|Per impostazione predefinita, ogni account di accesso è consentita una piccola quantità di risorse di memoria e concorrenza per le richieste.<br /><br />Quando un account di accesso viene aggiunto a una classe di risorse, la nuova classe ha la precedenza. Quando viene eliminato un account di accesso da tutte le classi di risorse, l'account di accesso torna all'allocazione delle risorse predefinito.|  
 |MediumRC|Media|1200 MB|3|Esempi di richieste che potrebbero essere la classe di risorse Media:<br /><br />Operazioni di CTAS dotati di grandi dimensioni hash join.<br /><br />Selezionare le operazioni che richiedono più memoria per evitare la memorizzazione nella cache su disco.<br /><br />Caricamento di dati in indici columnstore cluster.<br /><br />La compilazione, ricompilazione e la riorganizzazione degli indici columnstore cluster per tabelle di dimensioni minori con 10 a 15 colonne.|  
 |Largerc|Alto|2,8 GB|7|Esempi di richieste che potrebbero essere la classe di risorse di grandi dimensioni:<br /><br />Operazioni di CTAS molto grandi che hanno enorme hash join o deve contenere aggregazioni di grandi dimensioni, ad esempio grandi clausole ORDER BY o GROUP BY.<br /><br />Selezionare le operazioni che richiedono grandi quantità di memoria per operazioni quali hash join o aggregazioni, ad esempio le clausole ORDER BY o GROUP BY<br /><br />Caricamento di dati in indici columnstore cluster.<br /><br />La compilazione, ricompilazione e la riorganizzazione degli indici columnstore cluster per tabelle di dimensioni minori con 10 a 15 colonne.|  
 |xlargerc|Alto|8.4 GB|22|La classe di risorse molto grande è per le richieste che potrebbero richiedere il consumo di risorse molto grande in fase di esecuzione.|  

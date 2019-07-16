@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e893b719-4392-476f-911a-5ed6da6f7e94
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aee8914493c66ff451d7bca7f56fc8723d2a7ca0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5f780f9abc47a367a1825d51b12159292ace5da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63254134"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020426"
 ---
 # <a name="return-codes-odbc"></a>Codici restituiti ODBC
 Ogni funzione in ODBC restituisce un codice, noto come relativo *codice restituito,* che indica l'esito positivo o negativo complessivo della funzione. La logica del programma si basa generalmente sui codici restituiti.  

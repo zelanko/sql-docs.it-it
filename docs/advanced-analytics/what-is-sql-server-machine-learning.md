@@ -1,5 +1,5 @@
 ---
-title: Overview of SQL Server Machine Learning Services (R, Python) - SQL Server Machine Learning Services
+title: Panoramica di SQL Server Machine Learning Services (R, Python) - SQL Server Machine Learning Services
 description: Panoramica della funzionalità di Machine Learning Services in SQL Server, in cui è possibile integrare Python e R con dati relazionali per data science e statistiche di modellazione, modelli di machine learning, analitica predittiva, visualizzazione dei dati e altro ancora.
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: ea6db43d999c2c0102cde0c0b30867f255bce569
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 2d05c48f1492509fe05272560dd3cf332b424cb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961672"
 ---
 # <a name="sql-server-machine-learning-services-r-python"></a>SQL Server Machine Learning Services (R, Python)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -99,7 +98,7 @@ Scegliere il linguaggio migliore per l'attività. R è ideale per i calcoli stat
 
 Quando il modello è pronto per la scalabilità su dati aziendali, il data scientist spesso funziona con lo sviluppatore di amministratore di database o SQL per ottimizzare i processi, ad esempio:
 
-+ Progettazione delle funzionalità
++ Progettazione delle funzioni
 + L'inserimento di dati e trasformazione dei dati
 + Assegnazione dei punteggi
 
@@ -135,10 +134,10 @@ Servizi di SQL Server 2017 Machine Learning è la prossima generazione di SQL Se
 
 | Nome prodotto | Versione del motore | Data di rilascio |
 |--------------|---------|--------------|
-| SQL Server 2017 Machine Learning Services (In-Database) | R Server 9.2.1 <br/> Python Server 9.2 | Ottobre 2017 |
-| SQL Server 2017 Machine Learning Server (Standalone) | R Server 9.2.1 <br/> Python Server 9.2 | Ottobre 2017 |
+| SQL Server 2017 Machine Learning Services (In-Database) | R Server 9.2.1 <br/> Server di Python 9.2 | Ottobre 2017 |
+| Machine Learning Server (Standalone) di SQL Server 2017 | R Server 9.2.1 <br/> Server di Python 9.2 | Ottobre 2017 |
 | SQL Server 2016 R Services (In-Database) | R Server 9.1  | Luglio 2017  |
-| SQL Server 2016 R Server (Standalone)  |  R Server 9.1 | Luglio 2017 |
+| R Server (Standalone) di SQL Server 2016  |  R Server 9.1 | Luglio 2017 |
 
 Per versioni del pacchetto dalla versione, vedere la versione di eseguire il mapping nel [i componenti di eseguire l'aggiornamento di R e Python](install/upgrade-r-and-python.md#version-map).
 

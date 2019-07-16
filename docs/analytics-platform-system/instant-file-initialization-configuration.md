@@ -2,19 +2,18 @@
 title: Configurare l'inizializzazione immediata dei File - sistema di piattaforma Analitica | Microsoft Docs
 description: Configurare l'inizializzazione immediata dei File nel sistema di piattaforma Analitica. L'inizializzazione immediata dei file è una funzionalità di SQL Server che consente operazioni di file di dati eseguire più rapidamente.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 959d219565de6577e31d9548f5daea0fe0d2419e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27f716b5fc3668b78fd7e5728dc4a2cd640c7940
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960739"
 ---
 # <a name="instant-file-initialization-configuration"></a>Configurazione dell'inizializzazione immediata dei File
 L'inizializzazione immediata dei file è una funzionalità di SQL Server che consente operazioni di file di dati eseguire più rapidamente. Selezionando la casella per attivare l'inizializzazione immediata dei File migliorerà le prestazioni di SQL Server PDW. Tuttavia, se ciò costituisce un rischio per la sicurezza per l'utente business, quindi lasciare deselezionata la casella.  
@@ -52,7 +51,7 @@ Il processo di backup richiede una credenziale di rete (account utente di Window
   
 5.  È possibile ripetere i passaggi descritti in precedenza come **aggiungere l'autorizzazione per l'Account di Backup** per rimuovere il **eseguire le attività di manutenzione volume** l'autorizzazione.  
   
-![DWConfig Appliance PDW Instant File Initialization](./media/instant-file-initialization-configuration/SQL_Server_PDW_DWConfig_ApplPDWInstant.png "SQL_Server_PDW_DWConfig_ApplPDWInstant")  
+![Inizializzazione dei File immediata DWConfig Appliance PDW](./media/instant-file-initialization-configuration/SQL_Server_PDW_DWConfig_ApplPDWInstant.png "SQL_Server_PDW_DWConfig_ApplPDWInstant")  
   
 Per altre informazioni sull'inizializzazione immediata dei file, vedere [inizializzazione immediata dei File](https://technet.microsoft.com/library/ms175935(v=SQL.105).aspx).  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 73ca766827c1b6149bcb40cec8adefe86e944890
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9181cfc0203bc9c37b5c8eece8d742d628e4bba5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531703"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044436"
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +51,8 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 |**queue_type**|**nvarchar(6)**|Tipo di coda. I valori possibili sono **mail** e **stato**.|  
 |**length**|**int**|Numero di elementi di posta nella coda specificata.|  
 |**state**|**nvarchar(64)**|Stato del server di monitoraggio. I valori possibili sono **INACTIVE** (coda è inattiva), **NOTIFIED** (coda ha ricevuto una notifica al verificarsi), e **RECEIVES_OCCURRING** (coda riceve).|  
-|**last_empty_rowset_time**|**DATETIME**|Data e ora dell'ultimo svuotamento della coda, sia nel formato 24 ore sia nel fuso orario GMT.|  
-|**last_activated_time**|**DATETIME**|Data e ora dell'ultima attivazione della coda, sia nel formato 24 ore sia nel fuso orario GMT.|  
+|**last_empty_rowset_time**|**DATA/ORA**|Data e ora dell'ultimo svuotamento della coda, sia nel formato 24 ore sia nel fuso orario GMT.|  
+|**last_activated_time**|**DATA/ORA**|Data e ora dell'ultima attivazione della coda, sia nel formato 24 ore sia nel fuso orario GMT.|  
   
 ## <a name="remarks"></a>Note  
  La risoluzione dei problemi di posta elettronica Database, usare **sysmail_help_queue_sp** per visualizzare il numero di elementi nella coda, lo stato della coda e l'ultima attivazione.  

@@ -7,13 +7,12 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 2e0505cf847a091a5650b392aab56f486cee16aa
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: f2793c6773dc38ebeb4a420e24c38504deb412d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511248"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961857"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>Eseguire il training e salvataggio di un modello Python con T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -116,7 +115,7 @@ Per renderne più semplice ripetere il training del modello su nuovi dati, esegu
 
     L'elaborazione dei dati e l'adattamento del modello potrebbe richiedere un paio di minuti. I messaggi che sarebbero inoltrati di Python **stdout** flusso vengono visualizzati nel **messaggi** finestra di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Ad esempio:
 
-    *Messaggi STDOUT dallo script esterno:*
+    *Messaggi STDOUT dallo script esterno:* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
 
 3. Aprire la tabella *città di New York\_taxi_models*. È possibile notare che è stata aggiunta una riga nuova contenente il modello serializzato nella colonna _model_.
@@ -178,9 +177,9 @@ Usando **revoscalepy**, è possibile creare contesti di calcolo remoti, spostare
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);
     ```
 
-    L'elaborazione dei dati e l'adattamento del modello potrebbe richiedere qualche minuto. I messaggi che sarebbero inoltrati di Python **stdout** flusso vengono visualizzati nel **messaggi** finestra di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Esempio:
+    L'elaborazione dei dati e l'adattamento del modello potrebbe richiedere qualche minuto. I messaggi che sarebbero inoltrati di Python **stdout** flusso vengono visualizzati nel **messaggi** finestra di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Ad esempio:
 
-    *Messaggi STDOUT dallo script esterno:*
+    *Messaggi STDOUT dallo script esterno:* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
 
 3. Aprire la tabella *nyc_taxi_models*. È possibile notare che è stata aggiunta una riga nuova contenente il modello serializzato nella colonna _model_.

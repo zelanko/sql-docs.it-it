@@ -2,19 +2,18 @@
 title: Database master - Parallel Data Warehouse | Microsoft Docs
 description: Informazioni sui database master in Parallel Data Warehouse.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: bf07b9c27e08a49cb0866b177a0ec37fed4528a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f37c7a85baea3b41f6016a57e4f57579b427719
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213292"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960656"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Database master - Parallel Data Warehouse
 Il database master di SQL Server PDW archivia le informazioni di accesso a livello di dispositivo e il catalogo del database. È un database master di SQL Server che si trova nel nodo di controllo. Di conseguenza, fornisce funzionalità simili a SQL Server PDW come master consente a SQL Server.  

@@ -2,19 +2,18 @@
 title: Accendere il dispositivo attiva o disattiva - sistema di piattaforma Analitica | Microsoft Docs
 description: Power l'appliance attiva o disattiva per il sistema di piattaforma Analitica
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d24f808365a8a04fdc6b469a8eaac98c208c19e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960248"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Power l'appliance attiva o disattiva per il sistema di piattaforma Analitica
 In questo argomento viene descritto come all'alimentazione accensione o spegnimento Systemappliance la piattaforma Analitica che esegue Parallel Data Warehouse. Dopo un'interruzione dell'alimentazione irreversibili, usare questo argomento quando si sposta un'appliance di sistema di piattaforma Analitica o alla potenza su un dispositivo.  
@@ -27,7 +26,7 @@ Quando queste istruzioni specificano la connessione a un nodo di SQL Server PDW,
   
 ## <a name="PowerOff"></a>Spegnere l'Appliance  
   
-### <a name="before-you-begin"></a>Operazioni preliminari  
+### <a name="before-you-begin"></a>Prima di iniziare  
 Prima di spegnere l'appliance, è necessario terminare tutte le attività nell'appliance. Per terminare tutte le attività:  
   
 -   Usare la **sessioni** della Console di amministrazione per identificare gli utenti correnti. Contattarlo e chiedergli di chiudere la sessione.  

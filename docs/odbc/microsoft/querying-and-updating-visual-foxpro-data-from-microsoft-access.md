@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2d314e78-9edf-44b2-bd8b-96784236bcbe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1097e03c414d919a606ffd21ae50ffddf51173b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2681ecd0fe6f586954236c4fb5fddcf576b206be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63316754"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988062"
 ---
 # <a name="querying-and-updating-visual-foxpro-data-from-microsoft-access"></a>Esecuzione di query e aggiornamento dei dati Visual FoxPro da Microsoft Access
 È possibile eseguire una query e aggiornare i dati archiviati in un database di Visual FoxPro da un database Microsoft Access usando l'opzione di tabella dei collegamenti.  

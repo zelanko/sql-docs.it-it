@@ -3,18 +3,17 @@ title: Ripristinare un database di SQL Server in Docker
 description: Questa esercitazione illustra come Ripristina un backup del database di SQL Server in un nuovo contenitore Docker di Linux.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 826d62b3f1aeb75a89aa65be4755839f6601fcf2
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 31018f8285bd5f7609aada56b16ca9178b8d0860
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032126"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Ripristinare un database di SQL Server in un contenitore Docker di Linux
 

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c8e83341a72e6864b6545a4ccbbc2262403f9b06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 416aaefa95871e909a12117756ea59747c555650
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697498"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963499"
 ---
 # <a name="reset-method-rds"></a>Metodo Reset (Servizi Desktop remoto)
 Esegue l'ordinamento o filtro sul lato client **Recordset** basato sulle proprietà di ordinamento e filtro specificata.  
@@ -39,7 +38,7 @@ DataControl.Reset(value)
  Una variabile oggetto che rappresenta un [Servizi Desktop remoto. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto.  
   
  *Valore*  
- Facoltativo. Oggetto **booleana** valore corrispondente a **True** (impostazione predefinita) se si desidera filtrare il set di righe corrente "filtrato". **False** indica che viene filtrato il set di righe originali, rimuovendo eventuali opzioni di filtro precedente.  
+ facoltativo. Oggetto **booleana** valore corrispondente a **True** (impostazione predefinita) se si desidera filtrare il set di righe corrente "filtrato". **False** indica che viene filtrato il set di righe originali, rimuovendo eventuali opzioni di filtro precedente.  
   
 ## <a name="remarks"></a>Note  
  Il [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md), e [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)le proprietà forniscono l'ordinamento e filtrare le funzionalità della cache lato client. La funzionalità di ordinamento Ordina i record per i valori da una colonna. La funzionalità di filtro consente di visualizzare un subset di record basata su criteri di ricerca, mentre la versione completa [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) viene mantenuto nella cache. Il **reimpostare** esegue i criteri e sostituire il metodo **Recordset** con un aggiornabile **Recordset**.  

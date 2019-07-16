@@ -2,19 +2,18 @@
 title: Configurazione di rete Appliance - sistema di piattaforma Analitica | Microsoft Docs
 description: L'appliance di Analitica piattaforma di strumenti analitici creata e configurata con un set di correzione degli indirizzi IP in tutti i server e dispositivi applicabili dal produttore del fornitore IHV. Dopo la consegna dell'appliance, è necessario riconfigurare l'indirizzo IP esterno (Ethernet) indirizzato in base ai requisiti di centro dati del cliente specifico.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: dc0fbd64ac1179cc77e5b8a3cf9f0e5fed73d7fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9bc836e3e05525b18ea994e768f65012e5c3d945
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63276122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961464"
 ---
 # <a name="appliance-network-configuration-for-analytics-platform-system"></a>Configurazione di rete Appliance per il sistema di piattaforma Analitica
 L'appliance di Analitica piattaforma di strumenti analitici creata e configurata con un set di correzione degli indirizzi IP in tutti i server e dispositivi applicabili dal produttore del fornitore IHV. Dopo la consegna dell'appliance, è necessario riconfigurare l'indirizzo IP esterno (Ethernet) indirizzato in base ai requisiti di centro dati del cliente specifico.  
@@ -24,7 +23,7 @@ L'appliance di Analitica piattaforma di strumenti analitici creata e configurata
   
 Il **configurazione di rete** pagina consente di visualizzare le impostazioni di rete accessibile pubblicamente per i nodi nel dispositivo di sistema di piattaforma Analitica. Questa pagina è di sola lettura.  
   
-![DWConfig Appliance Network](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
+![Rete dello strumento DWConfig](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
   
 ## <a name="to-update-the-network-configuration-on-your-appliance"></a>Per aggiornare la configurazione di rete del dispositivo  
 Modificare gli indirizzi IP del dominio dell'infrastruttura e il dominio del carico di lavoro modificando la **AplianceInfo.xml** file e quindi eseguendo il programma di installazione. Si tratta di un'operazione offline. Le aree PDW verranno automaticamente arrestate durante la modifica dell'indirizzo IP.  

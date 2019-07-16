@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c238b89f6fefbb158c50531d28d2c234c64f64bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9aac31af80ff5774d464f76f130d2d113002e60a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63125467"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001394"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>Scelta di un'origine dati o driver
 L'origine dati o il driver utilizzato da un'applicazione a volte è hardcoded nell'applicazione. Ad esempio, un'applicazione personalizzata scritta da un reparto MIS per trasferire dati da un'origine dati a un altro che contengono nomi di tali dati di origini: l'applicazione semplicemente non funziona con tutte le altre origini dati. Un altro esempio è un'applicazione verticale, ad esempio un oggetto utilizzato per l'inserimento dell'ordine. Tale applicazione sempre Usa la stessa origine dati, che ha uno schema predefinito noto con l'applicazione.  

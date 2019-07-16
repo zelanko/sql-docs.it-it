@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15074b31b1c147ef78a898dbb8624f3b40358d13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f9b3171d496f54942e7ac1005acea1b3566ff76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537134"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003073"
 ---
 # <a name="sqlfetch-function"></a>Funzione SQLFetch
 **Conformità**  
@@ -107,7 +106,7 @@ SQLRETURN SQLFetch(
 |Condizione|Prima riga del nuovo set di righe|  
 |---------------|-----------------------------|  
 |Prima dell'inizio|1|  
-|*CurrRowsetStart* \<= *LastResultRow - RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* \< =  *LastResultRow - RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
 |*CurrRowsetStart* > *LastResultRow - RowsetSize*[1]|Dopo la fine|  
 |Dopo la fine|Dopo la fine|  
   
@@ -115,7 +114,7 @@ SQLRETURN SQLFetch(
   
  [2] se le dimensioni del set di righe viene modificata tra operazioni di recupero, questa è la dimensione del set di righe che è stata usata con la nuova operazione di recupero.  
   
-|Notazione|Significato|  
+|Notation|Significato|  
 |--------------|-------------|  
 |Prima dell'inizio|Prima dell'inizio del set di risultati è posizionato il cursore a blocchi. Se prima dell'inizio del set di risultati, la prima riga del set di righe nuove **SQLFetch** restituisce SQL_NO_DATA.|  
 |Dopo la fine|Il cursore a blocchi viene posizionato dopo la fine del set di risultati. Se dopo la fine del set di risultati, la prima riga del set di righe nuove **SQLFetch** restituisce SQL_NO_DATA.|  
@@ -132,9 +131,9 @@ SQLRETURN SQLFetch(
 |52 a 56|SQL_SUCCESS|57 a 61|5|  
 |91 al 95|SQL_SUCCESS|96 e 100|5|  
 |93 a 97|SQL_SUCCESS|98 a 100. Righe 4 e 5 della matrice di stato di riga sono impostate su SQL_ROW_NOROW.|3|  
-|96 e 100|SQL_NO_DATA|Nessuna.|0|  
-|99 a 100|SQL_NO_DATA|Nessuna.|0|  
-|Dopo la fine|SQL_NO_DATA|Nessuna.|0|  
+|96 e 100|SQL_NO_DATA|No.|0|  
+|99 a 100|SQL_NO_DATA|No.|0|  
+|Dopo la fine|SQL_NO_DATA|No.|0|  
   
 ## <a name="returning-data-in-bound-columns"></a>Restituzione di dati nelle colonne associate  
  Come **SQLFetch** restituisce ogni riga, vengono inseriti i dati per ogni colonna associata nel buffer associato a tale colonna. Se nessuna colonna è associata, **SQLFetch** non restituisce dati ma consente di spostare in avanti il cursore a blocchi. I dati possono ancora essere recuperati tramite **SQLGetData**. Se il cursore è di più righe (vale a dire l'oggetto SQL_ATTR_ROW_ARRAY_SIZE è maggiore di 1), **SQLGetData** può essere chiamato solo se viene restituito quando SQL_GD_BLOCK **SQLGetInfo** viene chiamato con un  *InfoType* di SQL_GETDATA_EXTENSIONS. (Per altre informazioni, vedere [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md).)  
@@ -232,10 +231,10 @@ SQLRETURN SQLFetch(
   
 |Campo di descrizione|DESC.|Campo in|Impostare tramite|  
 |----------------------|-----------|--------------|-----------------|  
-|SQL_DESC_ARRAY_SIZE|ARD|Intestazione|SQL_ATTR_ROW_ARRAY_SIZE statement attribute|  
+|SQL_DESC_ARRAY_SIZE|ARD|Intestazione|Attributo di SQL_ATTR_ROW_ARRAY_SIZE istruzione|  
 |SQL_DESC_ARRAY_STATUS_PTR|IRD|Intestazione|Attributo di istruzione vengono impostati SQL_ATTR_ROW_STATUS_PTR|  
 |SQL_DESC_BIND_OFFSET_PTR|ARD|Intestazione|Attributo di istruzione SQL_ATTR_ROW_BIND_OFFSET_PTR|  
-|SQL_DESC_BIND_TYPE|ARD|Intestazione|SQL_ATTR_ROW_BIND_TYPE statement attribute|  
+|SQL_DESC_BIND_TYPE|ARD|Intestazione|Attributo di istruzione SQL_ATTR_ROW_BIND_TYPE|  
 |SQL_DESC_COUNT|ARD|Intestazione|*ColumnNumber* argomento di **SQLBindCol**|  
 |SQL_DESC_DATA_PTR|ARD|record|*TargetValuePtr* argomento di **SQLBindCol**|  
 |SQL_DESC_INDICATOR_PTR|ARD|record|*StrLen_or_IndPtr* argomento in **SQLBindCol**|  

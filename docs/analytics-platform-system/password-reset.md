@@ -2,19 +2,18 @@
 title: Reimpostazione della password - sistema di piattaforma Analitica | Microsoft Docs
 description: La pagina di reimpostazione della Password consente di modificare la password per gli account amministratore usato dal sistema di piattaforma Analitica.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 63fbb097bf1ca926223ce7c0114c8da5d10cd969
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5fb3bbb5adba5754c220c34503a22656f6da39c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639944"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960464"
 ---
 # <a name="password-reset---analytics-platform-system"></a>Reimpostazione della password - sistema di piattaforma Analitica
 Il **reimpostazione delle Password** pagina consente di modificare la password per gli account amministratore usato dal sistema di piattaforma Analitica.  
@@ -24,7 +23,7 @@ Il **reimpostazione delle Password** pagina consente di modificare la password p
   
 Viene fornita la password del sistema di piattaforma Analitica quando viene recapitata all'appliance. Sempre modificare le password per i nuovi valori quando si assumersi la responsabilità per l'appliance. Vi sono tre le password per l'aggiornamento. Le password non sono necessario essere quella di loro.  
   
-**F<*xxxx*>\Administrator**  
+**F <*xxxx*> \administrator.**  
 Il **amministratore** del dominio appliance.  
   
 **.\Administrator**  

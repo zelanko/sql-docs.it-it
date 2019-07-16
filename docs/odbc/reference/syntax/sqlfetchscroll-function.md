@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 20a1580503ad141817edcf8e01772dfcc8dc39a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f3d82cc11763722f552896a29bb3831d892054b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537362"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003039"
 ---
 # <a name="sqlfetchscroll-function"></a>Funzione SQLFetchScroll
 **Conformità**  
@@ -148,7 +147,7 @@ SQLRETURN SQLFetchScroll(
 ## <a name="cursor-positioning-rules"></a>Le regole di posizionamento del cursore  
  Le sezioni seguenti descrivono le regole precise per ogni valore di FetchOrientation. Tali regole utilizzano la notazione seguente.  
   
-|Notazione|Significato|  
+|Notation|Significato|  
 |--------------|-------------|  
 |*Prima dell'inizio*|Prima dell'inizio del set di risultati è posizionato il cursore a blocchi. Se prima dell'inizio del set di risultati, la prima riga del set di righe nuove **SQLFetchScroll** restituisce SQL_NO_DATA.|  
 |*Dopo la fine*|Il cursore a blocchi viene posizionato dopo la fine del set di risultati. Se dopo la fine del set di risultati, la prima riga del set di righe nuove **SQLFetchScroll** restituisce SQL_NO_DATA.|  
@@ -177,7 +176,7 @@ SQLRETURN SQLFetchScroll(
 |---------------|-----------------------------|  
 |*Prima dell'inizio*|*Prima dell'inizio*|  
 |*CurrRowsetStart = 1*|*Prima dell'inizio*|  
-|*1 < CurrRowsetStart <= RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
+|*1 < CurrRowsetStart < = RowsetSize* <sup>[2].</sup>|*1* <sup>[1]</sup>|  
 |*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart - RowsetSize* <sup>[2]</sup>|  
 |*Dopo la fine e LastResultRow < RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*Dopo la fine LastResultRow e > = RowsetSize* <sup>[2]</sup>|*LastResultRow - RowsetSize + 1* <sup>[2].</sup>|  
@@ -194,8 +193,8 @@ SQLRETURN SQLFetchScroll(
 |*(Prima di avviare e FetchOffset > 0) O (dopo la fine e FetchOffset < 0)*|*--* <sup>[1]</sup>|  
 |*BeforeStart e FetchOffset < = 0*|*Prima dell'inizio*|  
 |*CurrRowsetStart = 1 AND FetchOffset < 0*|*Prima dell'inizio*|  
-|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*Prima dell'inizio*|  
-|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; <= RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
+|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 e &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*Prima dell'inizio*|  
+|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 e &#124; FetchOffset &#124; < = RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
 |*1 <= CurrRowsetStart + FetchOffset \<= LastResultRow*|*CurrRowsetStart + FetchOffset*|  
 |*CurrRowsetStart + FetchOffset > LastResultRow*|*Dopo la fine*|  
 |*Dopo la fine FetchOffset e > = 0*|*Dopo la fine*|  
@@ -211,11 +210,11 @@ SQLRETURN SQLFetchScroll(
   
 |Condizione|Prima riga del nuovo set di righe|  
 |---------------|-----------------------------|  
-|*FetchOffset < 0 AND &#124; FetchOffset &#124; <= LastResultRow*|*LastResultRow + FetchOffset + 1*|  
+|*FetchOffset < 0 e &#124; FetchOffset &#124; < = LastResultRow*|*LastResultRow + FetchOffset + 1*|  
 |*FetchOffset < 0 e &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*Prima dell'inizio*|  
 |*FetchOffset < 0 e &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; < = RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset = 0*|*Prima dell'inizio*|  
-|*1 <= FetchOffset \<= LastResultRow*|*FetchOffset*|  
+|*1 < = FetchOffset \<= LastResultRow*|*FetchOffset*|  
 |*FetchOffset > LastResultRow*|*Dopo la fine*|  
   
  [1] **SQLFetchScroll** restituisce SQLSTATE 01S06 (tentativo di recupero prima che il set di risultati restituito il primo set di righe) e SQL_SUCCESS_WITH_INFO.  
@@ -229,7 +228,7 @@ SQLRETURN SQLFetchScroll(
   
 |Condizione|Prima riga del nuovo set di righe|  
 |---------------|-----------------------------|  
-|*Any*|*1*|  
+|*Qualsiasi*|*1*|  
   
 ## <a name="sqlfetchlast"></a>SQL_FETCH_LAST  
  Le regole seguenti si applicano.  
@@ -247,7 +246,7 @@ SQLRETURN SQLFetchScroll(
 |Condizione|Prima riga del nuovo set di righe|  
 |---------------|-----------------------------|  
 |*BookmarkRow + FetchOffset < 1*|*Prima dell'inizio*|  
-|*1 <= BookmarkRow + FetchOffset \<= LastResultRow*|*BookmarkRow + FetchOffset*|  
+|*1 < = BookmarkRow + FetchOffset \<= LastResultRow*|*BookmarkRow + FetchOffset*|  
 |*BookmarkRow + FetchOffset > LastResultRow*|*Dopo la fine*|  
   
  Per informazioni sui segnalibri, vedere [segnalibri (ODBC)](../../../odbc/reference/develop-app/bookmarks-odbc.md).  

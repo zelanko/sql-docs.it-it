@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 489083cb-8430-40be-9ef2-d75b9a2eea88
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 509dd17efeeb982c51938d7a18fad99a2e84ba5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59f6f5a37e65c802c8d51a1f56a40380f054e39b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63148935"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114092"
 ---
 # <a name="testing-interoperable-applications"></a>Test delle applicazioni interoperative
 Test delle applicazioni interoperative è nella migliore delle ipotesi richiede un tempo impossibili nel peggiore dei casi poiché i nuovi driver vengono visualizzati continuamente disponibili sul mercato e aziendali. Tuttavia, un livello ragionevole di test è possibile. Le applicazioni a basso o limitato interoperability devono solo essere controllate rispetto a questi driver è garantito che per il supporto. Tuttavia, essi devono essere completamente testati rispetto a tali driver.  

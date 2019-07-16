@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: c29d9b29078d6097b512acb93ff47eef018592c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e7d6e072cd47233b6cb76c09fb3bc0e9b9b42604
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63278446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020655"
 ---
 # <a name="properties-mdx"></a>Properties (MDX)
 
@@ -32,7 +31,7 @@ Member_Expression.Properties(Property_Name [, TYPED])
  *Member_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un membro.  
   
- *Property_Name*  
+ *Property_name*  
  Espressione stringa valida del nome della proprietà di un membro.  
   
 ## <a name="remarks"></a>Note  

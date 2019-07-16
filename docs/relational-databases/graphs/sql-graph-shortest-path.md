@@ -17,14 +17,13 @@ helpviewer_keywords:
 - SQL graph, MATCH statement
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3ed9fbb373febd803fedfd7519df7656c23181f2
-ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
+ms.openlocfilehash: b4e07c8aa0c7911b02f7df5386c03b1860df38c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67652844"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035886"
 ---
 # <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -49,7 +48,7 @@ PER percorso deve essere utilizzato con qualsiasi nome di tabella nodi o archi n
 ## <a name="arbitrary-length-pattern"></a>Modello di lunghezza arbitraria
 Questo modello include i nodi e bordi che devono essere attraversati ripetutamente fino a raggiunta il nodo desiderato o finché il numero massimo di iterazioni come specificato nel modello viene soddisfatta. Ogni volta che viene eseguita la query, il risultato dell'esecuzione di questo modello sarà una raccolta ordinata di nodi e bordi attraversati lungo il percorso dal nodo di inizio per il nodo di fine. Questo è un modello di sintassi di espressione regolare lo stile e sono supportati i quantificatori due modello seguente:
 
-* **‘+’** : Ripetere il criterio una o più volte. Terminare non appena viene trovato un percorso più breve.
+* **'+'** : Ripetere il criterio una o più volte. Terminare non appena viene trovato un percorso più breve.
 * **{1,n}** : Ripetere il criterio da una a "n" volte. Terminare non appena viene trovato un più breve.
 
 ## <a name="lastnode"></a>LAST_NODE
@@ -118,7 +117,7 @@ In alcuni casi, i piani non validi possono essere generati per le query con nume
 ## <a name="examples"></a>Esempi 
 Per le query di esempio illustrate in questo caso, si userà ot utilizzano il nodo e creare le tabelle edge in [esempio grafo SQL](./sql-graph-sample.md)
 
-### <a name="a--find-shortest-path-between-2-people"></a>A.  Individuare il percorso più breve tra 2 persone
+### <a name="a--find-shortest-path-between-2-people"></a>R.  Individuare il percorso più breve tra 2 persone
  Nell'esempio seguente, troviamo un percorso più breve tra Jacob e Alice. È necessario il nodo /People/Person ed edge FriendOf creati dallo script di esempio di grafico. 
 
  ```

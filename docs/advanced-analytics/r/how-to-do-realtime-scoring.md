@@ -7,13 +7,12 @@ ms.date: 08/30/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 001b90eafd26c90f730e5647f0dc62d756ca9d1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4af5fff7581ae2ae8f74e09603b75bca620ca775
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62503774"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962639"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Come generare le previsioni e stime usando modelli di machine learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +25,7 @@ La tabella seguente riepiloga i framework di assegnazione dei punteggi per la pr
 
 | Metodologia           | Interfaccia         | Requisiti della libreria | Velocità di elaborazione |
 |-----------------------|-------------------|----------------------|----------------------|
-| Framework di estendibilità | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Nessuna. I modelli possono essere basati su qualsiasi funzione R o Python | Centinaia di millisecondi. <br/>Il caricamento di un ambiente di runtime ha un costo fisso, il calcolo della media di tre a 600 millisecondi, prima di tutti i nuovi dati viene assegnato un punteggio. |
+| Framework di estendibilità | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | No. I modelli possono essere basati su qualsiasi funzione R o Python | Centinaia di millisecondi. <br/>Il caricamento di un ambiente di runtime ha un costo fisso, il calcolo della media di tre a 600 millisecondi, prima di tutti i nuovi dati viene assegnato un punteggio. |
 | [Estensione CLR assegnazione dei punteggi in tempo reale](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) su un modello serializzato | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy, microsoftml | Decine di millisecondi, in Media. |
 | [Estensione di C++ di assegnazione dei punteggi nativa](../sql-native-scoring.md) | [Funzione T-SQL stimare](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) su un modello serializzato | R: RevoScaleR <br/>Python: revoscalepy | Meno di 20 millisecondi, in Media. | 
 
@@ -36,7 +35,7 @@ Il modello deve essere creato utilizzando una funzione supportata, quindi serial
 
 L'importanza delle estensioni di C++ e CLR è prossimità al motore di database stesso. Il linguaggio nativo del motore di database è C++, ovvero estensioni scritte in C++ eseguito con un minor numero di dipendenze. Al contrario, le estensioni CLR dipendono da .NET Core. 
 
-Come è prevedibile, supporto della piattaforma è stato interessato da questi ambienti di runtime. Estensioni del motore di database nativo esecuzione ovunque che è supportato nel database relazionale: Windows, Linux, Azure. Le estensioni CLR con il requisito di .NET Core attualmente è solo Windows.
+Come è prevedibile, supporto della piattaforma è stato interessato da questi ambienti di runtime. Estensioni del motore di database nativo esecuzione ovunque che è supportato nel database relazionale: Windows, Linux e Azure. Le estensioni CLR con il requisito di .NET Core attualmente è solo Windows.
 
 ## <a name="scoring-overview"></a>Panoramica di assegnazione dei punteggi
 
@@ -96,7 +95,7 @@ La serializzazione di un modello in un formato binario è utile, ma non è neces
 
 ## <a name="scoring-in-related-products"></a>Assegnazione dei punteggi in prodotti correlati
 
-Se si usa la [server autonomi](r-server-standalone.md) o una [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), sono disponibili altre opzioni oltre a stored procedure e funzioni T-SQL per la generazione di stime rapidamente. Il server autonomo e il Machine Learning Server supportano il concetto di una *servizio web* per la distribuzione di codice. È possibile aggregare una R o Python eseguito il training del modello come servizio web, chiamato in fase di esecuzione per valutare nuovi input di dati. Per altre informazioni, vedere gli articoli seguenti:
+Se si usa la [server autonomi](r-server-standalone.md) o una [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), sono disponibili altre opzioni oltre a stored procedure e funzioni T-SQL per la generazione di stime rapidamente. Il server autonomo e il Machine Learning Server supportano il concetto di una *servizio web* per la distribuzione di codice. È possibile aggregare una R o Python eseguito il training del modello come servizio web, chiamato in fase di esecuzione per valutare nuovi input di dati. Per altre informazioni, vedere questi articoli:
 
 + [Quali sono i servizi web in Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
 + [Che cos'è messa in funzione?](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)

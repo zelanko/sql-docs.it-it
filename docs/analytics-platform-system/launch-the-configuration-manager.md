@@ -2,19 +2,18 @@
 title: Avvia Configuration Manager - sistema di piattaforma Analitica | Microsoft Docs
 description: Istruzioni per l'avvio dello strumento Configuration Manager per l'appliance del sistema di piattaforma Analitica.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 087360981a7c31de6980755cfee4f98f88f48a15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7aef9ada4a93605460cf2759dbe9deeddfc9e0d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183423"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960721"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Avviare Gestione configurazione nel sistema di piattaforma Analitica
 Questo argomento fornisce istruzioni per l'avvio di **Configuration Manager** per l'appliance del sistema di piattaforma Analitica.  

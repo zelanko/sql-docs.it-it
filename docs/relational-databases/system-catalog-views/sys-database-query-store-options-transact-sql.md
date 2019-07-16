@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02f1d456e7b2e6849bd179a4cb42d862e3d06d03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de6033aaa70b415ff7d218c2a0d8c3138845c8fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725145"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022638"
 ---
 # <a name="sysdatabasequerystoreoptions-transact-sql"></a>sys.database_query_store_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "65725145"
 |**flush_interval_seconds**|**bigint**|Il periodo per regolare lo scaricamento di Query Store i dati su disco in secondi. Valore predefinito è **900** (15 min).<br /><br /> Modifica tramite la `ALTER DATABASE <database> SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS  = <interval>)` istruzione.|  
 |**interval_length_minutes**|**bigint**|Intervallo di aggregazione delle statistiche in pochi minuti. Non sono consentiti valori arbitrari. Usare uno dei seguenti: 1, 5, 10, 15, 30, 60 e 1440 minuti. Il valore predefinito è **60** minuti.|  
 |**max_storage_size_mb**|**bigint**|Dimensione massima del disco per la Query Store in megabyte (MB). Valore predefinito è **100** MB.<br />Per la [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium edition, impostazione predefinita è 1 GB e per [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic edition il valore predefinito è 10MB.<br /><br /> Modifica tramite la `ALTER DATABASE <database> SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <size>)` istruzione.|  
-|**stale_query_threshold_days**|**bigint**|Numero di giorni che esegue una query con le impostazioni di criteri non viene mantenuto in Query Store. Valore predefinito è **30**. Impostare su 0 per disabilitare i criteri di conservazione.<br />Per l'edizione [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic, l'impostazione predefinita è 7 giorni.<br /><br /> Modifica tramite la `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` istruzione.|  
+|**stale_query_threshold_days**|**bigint**|Numero di giorni che esegue una query con le impostazioni di criteri non viene mantenuto in Query Store. Il valore predefinito è **30**. Impostare su 0 per disabilitare i criteri di conservazione.<br />Per l'edizione [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic, l'impostazione predefinita è 7 giorni.<br /><br /> Modifica tramite la `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` istruzione.|  
 |**max_plans_per_query**|**bigint**|Limita il numero massimo di piani stored. Valore predefinito è **200**. Se il valore massimo viene raggiunto, Query Store interrompe l'acquisizione di nuovi piani per tale query. Impostazione su 0 consente di rimuovere le limitazioni per quanto riguarda il numero di piani acquisiti.<br /><br /> Modifica tramite la `ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)` istruzione.|  
 |**query_capture_mode**|**smallint**|La modalità di acquisizione query attualmente attiva:<br /><br /> **1** = ALL - vengono acquisite tutte le query. Questo è il valore di configurazione predefinito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).<br /><br /> 2 = AUTO - acquisite le query pertinenti in base l'esecuzione numero e consumo delle risorse. Questo è il valore di configurazione predefinito per [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].<br /><br /> 3 = Nessuna: arrestare l'acquisizione di nuove query. Query Store continuerà a raccogliere le statistiche di compilazione e runtime per le query che sono già state acquisite. Usare questa configurazione con cautela in quanto si potrebbero perdere l'acquisizione di query importante.|  
 |**query_capture_mode_desc**|**nvarchar(60)**|Descrizione testuale della modalità di acquisizione effettivi di Query Store:<br /><br /> TUTTE (impostazione predefinita per [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])<br /><br /> **AUTO** (impostazione predefinita per [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)])<br /><br /> Nessuno|  

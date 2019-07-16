@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6750e17b694086cf716e32629fcf3b3f3b48f486
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64348e33502e8407e567b8901890246344765f4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989677"
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>Esecuzione della Console SSMA (DB2ToSQL)
 Microsoft offre un solido set di script di comandi del file per eseguire e controllare le attività SSMA. Le sezioni che seguono in modo dettagliato lo stesso. L'applicazione console utilizza alcuni comandi di file di script standard come enumerate in questa sezione.  
@@ -25,7 +24,7 @@ I comandi di progetto di gestire la creazione di progetti, apertura, salvataggio
   
 **Command**  
   
-create-new-project  
+Create-new-project  
   
 Crea un nuovo progetto SSMA.  
   
@@ -159,7 +158,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
   metabase="<source/target>"/>  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <force-load>  
@@ -221,7 +220,7 @@ I comandi di Report generano i report sulle prestazioni di varie attività di Co
   
 **Command**  
   
-generate-assessment-report  
+generare report di valutazione  
   
 -   Genera report di valutazione nel database di origine.  
   
@@ -272,7 +271,7 @@ generate-assessment-report
   
 />  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <generate-assessment-report  
@@ -410,7 +409,7 @@ eseguire la migrazione di dati: Esegue la migrazione dei dati di origine alla de
   
 </migrate-data>  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <migrate-data  
@@ -495,11 +494,11 @@ synchronize-target
   
 -   `on-error:` Specifica se specificare gli errori di sincronizzazione come avvisi o errori. Opzioni disponibili per in caso di errore:  
   
-    -   report-total-as-warning  
+    -   -Totale report come avviso  
   
-    -   report-each-as-warning  
+    -   report-each-come-avviso  
   
-    -   fail-script  
+    -   Errore-script  
   
 -   `report-errors-to:` Specifica percorso di segnalazione errori per l'operazione di sincronizzazione (attributo facoltativo) se viene fornito percorso della cartella, solo del file in base al nome **TargetSynchronizationReport.XML** viene creato.  
   
@@ -520,7 +519,7 @@ synchronize-target
   
 />  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <synchronize-target  
@@ -529,7 +528,7 @@ o Gestione configurazione
   
    object-type="<object-category>"/>  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <synchronize-target>  
@@ -560,11 +559,11 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
 -   `on-error:` Specifica se occorre indicare errori di aggiornamento come avvisi o errori. Opzioni disponibili per in caso di errore:  
   
-    -   report-total-as-warning  
+    -   -Totale report come avviso  
   
-    -   report-each-as-warning  
+    -   report-each-come-avviso  
   
-    -   fail-script  
+    -   Errore-script  
   
 -   `report-errors-to:` Specifica percorso di segnalazione errori per l'operazione di aggiornamento (attributo facoltativo) se viene fornito percorso della cartella, solo del file in base al nome **SourceDBRefreshReport.XML** viene creato.  
   
@@ -585,7 +584,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
 />  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <refresh-from-database  
@@ -594,7 +593,7 @@ o Gestione configurazione
   
    object-type="<object-category>"/>  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <refresh-from-database>  
@@ -609,7 +608,7 @@ I comandi di generazione dello Script seguire due attività: Consentono di salva
   
 **Command**  
   
-save-as-script  
+come Save-script  
   
 Consente di salvare gli script degli oggetti in un file indicato quando metabase target, si tratta di un'alternativa al comando di sincronizzazione in cui in si ottenere gli script ed eseguire lo stesso nel database di destinazione.  
   
@@ -644,7 +643,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
 />  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```xml  
 <save-as-script  
@@ -720,7 +719,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
 </convert-sql-statement>  
 ```  
-o Gestione configurazione  
+oppure  
   
 ```  
 <convert-sql-statement  

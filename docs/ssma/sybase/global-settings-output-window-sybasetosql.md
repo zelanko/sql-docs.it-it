@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7efe8070-bb30-45c7-8619-7efc9cdfbd06
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 4d28e1a7a69404d76b0d6cecaca08f3e91455ae5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0289407dd24a64733ce0a1abf5182b2370e58a0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126259"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029033"
 ---
 # <a name="global-settings-output-window--sybasetosql"></a>Impostazioni globali (finestra di Output) (SybaseToSQL)
 Usare la **Global Settings** finestra di dialogo per specificare le impostazioni per SSMA.  

@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 448322fc79f4a85256b1d0b5b682fcc5147263c5
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 6c302f7cc9830b15ed058c160618ea0e40705444
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962738"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Configurare un client di analisi scientifica dei dati per lo sviluppo Python in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -305,4 +304,4 @@ In PyCharm, impostare l'interprete Python eseguibile installato per Machine Lear
 Ora che si dispone di strumenti e una connessione attiva a SQL Server, espandere le tue competenze mediante l'esecuzione tramite le guide introduttive di Python usando [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 > [!div class="nextstepaction"]
-> [Guida introduttiva: Verificare il che esistenza di Python in SQL Server](../tutorials/quickstart-python-verify.md)
+> [Avvio rapido: Verificare il che esistenza di Python in SQL Server](../tutorials/quickstart-python-verify.md)

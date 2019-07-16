@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a83ddfe567a0a4fc900e3098e0cb33b00e417c73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0d50c8cab60ddf1839c5683023af0b90ebe527c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697044"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964732"
 ---
 # <a name="views-refresh-method-example-vb"></a>Esempio del metodo Refresh di Views (VB)
 Il codice seguente viene illustrato come aggiornare il [viste](../../../ado/reference/adox-api/views-collection-adox.md) raccolta di un [catalogo](../../../ado/reference/adox-api/catalog-object-adox.md). Questa operazione è necessaria prima [View](../../../ado/reference/adox-api/view-object-adox.md) oggetti dalle **catalogo** sono accessibili.  

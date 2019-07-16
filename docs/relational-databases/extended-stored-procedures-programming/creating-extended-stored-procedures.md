@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ec645ca897bb3760cb5ac866fbc28de5e2f6fcab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c22077de3bf41bc09864ac2c7f24dbdd4ecc3e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032044"
 ---
 # <a name="creating-extended-stored-procedures"></a>Creazione di stored procedure estese
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47711806"
   
  Una stored procedure estesa è una funzione con un prototipo:  
   
- SRVRETCODE *xp_extendedProcName* **(** SRVPROC  **\*);**  
+ SRVRETCODE *xp_extendedProcName* **(** SRVPROC **\*);**  
   
  L'utilizzo del prefisso xp_ è facoltativo. Per i nomi delle stored procedure estese viene fatta distinzione tra maiuscole e minuscole quando vi si fa riferimento in istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], indipendentemente dalla tabella codici o dall'ordinamento installato nel server. Quando si compila una DLL:  
   
@@ -45,7 +44,7 @@ ms.locfileid: "47711806"
   
  I file seguenti sono necessari per la creazione della DLL di una stored procedure estesa.  
   
-|File|Description|  
+|File|Descrizione|  
 |----------|-----------------|  
 |Srv.h|File di intestazione dell'API della stored procedure estesa|  
 |Opends60.lib|Libreria di importazione per Opends60.dll|  
@@ -64,7 +63,7 @@ __declspec(dllexport) ULONG __GetXpVersion()
 > [!NOTE]  
 >  __declspec(dllexport) è un'estensione del compilatore specifica di Microsoft. Se il compilatore non supporta questa direttiva, è necessario esportare questa funzione all'interno della sezione EXPORTS nel file DEF.  
   
- Quando si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviato con la traccia flag - T260 o se un utente con privilegi di amministratore di sistema esegue DBCC TRACEON (260) e se estesa stored procedure di DLL non supporta GetXpVersion, un messaggio di avviso (errore 8131: stored procedure estesa DLL '% s' non Esporta \__GetXpVersion().) viene stampato nel log degli errori. (Si noti che \__GetXpVersion() inizia con due caratteri di sottolineatura.)  
+ Quando si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene avviato con la traccia flag - T260 o se un utente con privilegi di amministratore di sistema esegue DBCC TRACEON (260) e se estesa stored procedure di DLL non supporta GetXpVersion, un messaggio di avviso (errore 8131: Stored procedure estesa '% s' di DLL non Esporta \__GetXpVersion().) viene stampato nel log degli errori. (Si noti che \__GetXpVersion() inizia con due caratteri di sottolineatura.)  
   
  Se la DLL della stored procedure estesa consente l'esportazione di __GetXpVersion() ma la versione restituita dalla versione è precedente rispetto a quella richiesta dal server, nel log degli errori viene stampato un messaggio di avviso indicante la versione restituita dalla funzione e la versione prevista dal server. Se viene visualizzato questo messaggio, si restituisce un valore non corretto da \__GetXpVersion() o si esegue la compilazione con una versione precedente di SRV.  
   

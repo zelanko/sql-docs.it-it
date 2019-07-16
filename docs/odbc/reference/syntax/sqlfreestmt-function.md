@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6ff8cb5bd0ff257d42cd658da54415697e99ae0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83e62430e55a82c904e6cae996538225ac8282b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538144"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006225"
 ---
 # <a name="sqlfreestmt-function"></a>SQLFreeStmt Function
 **Conformità**  
@@ -50,7 +49,7 @@ SQLRETURN SQLFreeStmt(
  *Opzione*  
  [Input] Una delle opzioni seguenti:  
   
- SQL_ CLOSE: Chiude il cursore associato *StatementHandle* (se è stato definito uno) ed Elimina tutti i risultati in sospeso. L'applicazione può riaprire questo cursore in un secondo momento tramite l'esecuzione di un **seleziona** istruzione nuovamente con i valori dei parametri uguali o diversi. Se nessun cursore è aperto, questa opzione ha effetto per l'applicazione. **SQLCloseCursor** può anche essere chiamato per chiudere un cursore. Per altre informazioni, vedere [chiusura del cursore](../../../odbc/reference/develop-app/closing-the-cursor.md).  
+ SQL _ CLOSE: Chiude il cursore associato *StatementHandle* (se è stato definito uno) ed Elimina tutti i risultati in sospeso. L'applicazione può riaprire questo cursore in un secondo momento tramite l'esecuzione di un **seleziona** istruzione nuovamente con i valori dei parametri uguali o diversi. Se nessun cursore è aperto, questa opzione ha effetto per l'applicazione. **SQLCloseCursor** può anche essere chiamato per chiudere un cursore. Per altre informazioni, vedere [chiusura del cursore](../../../odbc/reference/develop-app/closing-the-cursor.md).  
   
  SQL_DROP: Questa opzione è deprecata. Una chiamata a **SQLFreeStmt** con un *opzione* di SQL_DROP viene eseguito il mapping a in Gestione Driver [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   

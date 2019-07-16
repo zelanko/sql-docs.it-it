@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43474055a9dd9d5f8b71a0c2ec008b02f4b847ed
-ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
+ms.openlocfilehash: 84cbfafdba3bca9b06f250ed9996f0a87e71a18c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54211082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026862"
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -43,12 +42,12 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] è notevolmente diverso rispetto alle versioni più recenti e viene illustrato più basso nell'argomento relativo alla [SQL Server 2014](#bkmk_2014).**
   
 ## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive  
- Nella tabella seguente vengono descritte le colonne in `sys.dm_db_xtp_checkpoint_stats`, a partire **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**.  
+ Nella tabella seguente vengono descritte le colonne in `sys.dm_db_xtp_checkpoint_stats`, a partire **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome colonna|type|Descrizione|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|Ultimo LSN visualizzato dal controller.|  
-|end_of_log_lsn|**Numeric(38)**|LSN di fine del log.|  
+|end_of_log_lsn|**numeric(38)**|LSN di fine del log.|  
 |bytes_to_end_of_log|**bigint**|Byte non elaborati dal controller, corrispondenti ai byte tra log `last_lsn_processed` e `end_of_log_lsn`.|  
 |log_consumption_rate|**bigint**|Frequenza di utilizzo di log delle transazioni dal controller (in KB/sec).|  
 |active_scan_time_in_ms|**bigint**|Tempo trascorso per il controller esegua l'analisi del log delle transazioni.|  
@@ -66,10 +65,10 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |xtp_log_bytes_consumed|**bigint**|Numero totale di byte di log utilizzati dal riavvio del database.|  
 |checkpoints_closed|**bigint**|Numero di checkpoint chiusi perché il database riavviare.|  
 |last_closed_checkpoint_ts|**bigint**|Timestamp dell'ultimo checkpoint chiusi.|  
-|hardened_recovery_lsn|**Numeric(38)**|Verrà avviato il recupero da questo LSN.|  
+|hardened_recovery_lsn|**numeric(38)**|Verrà avviato il recupero da questo LSN.|  
 |hardened_root_file_guid|**uniqueidentifier**|GUID del file radice che finalizzati in seguito all'ultimo checkpoint completato.|  
 |hardened_root_file_watermark|**bigint**|**Interno solo**. Fino a che punto è possibile leggere il file radice fino a (questo è un tipo internamente rilevante solo - denominato BSN).|  
-|hardened_truncation_lsn|**Numeric(38)**|LSN del punto di troncamento.|  
+|hardened_truncation_lsn|**numeric(38)**|LSN del punto di troncamento.|  
 |log_bytes_since_last_close|**bigint**|Byte dall'ultima chiusura alla fine corrente del log.|  
 |time_since_last_close_in_ms|**bigint**|Tempo trascorso dall'ultima chiusura del checkpoint.|  
 |current_checkpoint_id|**bigint**|Attualmente, i nuovi segmenti vengono assegnati a questo checkpoint. Il sistema di checkpoint è una pipeline. Il checkpoint corrente è quello che vengono assegnati a segmenti dal log. Dopo che è stato raggiunto un limite, il checkpoint viene rilasciato il controller e una nuova istanza creata come corrente.|  
@@ -79,15 +78,15 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |closing_checkpoint_id|**bigint**|ID del punto di arresto di chiusura.<br /><br /> I serializzatori lavorano in parallelo, in modo che una volta effettuato terminati il checkpoint è un candidato per essere chiuso dal thread di chiusura. Ma il thread di chiusura solo possibile chiudere una alla volta e deve essere in ordine, in modo che il checkpoint di chiusura è quella che sta lavorando per il thread di chiusura.|  
 |recovery_checkpoint_id|**bigint**|ID del checkpoint da utilizzare per il ripristino.|  
 |recovery_checkpoint_ts|**bigint**|Timestamp del checkpoint di ripristino.|  
-|bootstrap_recovery_lsn|**Numeric(38)**|LSN recupero per il bootstrap.|  
+|bootstrap_recovery_lsn|**numeric(38)**|LSN recupero per il bootstrap.|  
 |bootstrap_root_file_guid|**uniqueidentifier**|GUID del file radice per il bootstrap.|  
 |internal_error_code|**bigint**|Errore rilevato da uno qualsiasi dei controller, serializzatore, close e thread di unione.|
 |bytes_of_large_data_serialized|**bigint**|La quantità di dati che è stati serializzati. |  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- Nella tabella seguente vengono descritte le colonne in `sys.dm_db_xtp_checkpoint_stats`, per **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  
+ Nella tabella seguente vengono descritte le colonne in `sys.dm_db_xtp_checkpoint_stats`, per **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
-|Nome colonna|Tipo|Descrizione|  
+|Nome colonna|type|Descrizione|  
 |-----------------|----------|-----------------|  
 |log_to_process_in_bytes|**bigint**|Numero di byte di log tra il numero di sequenza del file di log (LSN) corrente e la fine del log del thread.|  
 |total_log_blocks_processed|**bigint**|Numero complessivo di blocchi di log elaborati dall'avvio del server.|  

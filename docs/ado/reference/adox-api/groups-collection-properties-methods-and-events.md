@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0776457f-bf78-4a79-96bf-a17136d45811
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9b7625c437f6c44a57aae61301bfe5207d4bca09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3e3b7147593cc6d6f1654ccdb0f9d362bd7b421
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706691"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966168"
 ---
 # <a name="groups-collection-properties-methods-and-events"></a>Proprietà, metodi ed eventi della raccolta Groups
 ## <a name="properties"></a>Proprietà  
@@ -34,7 +33,7 @@ ms.locfileid: "66706691"
  [Metodo Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Events  
- Nessuna.  
+ No.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta di oggetti Group (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 529c503bc10d3ed0b69a4c280c7fa63e72893f8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 819856a584c6133e28e222a704b720337f99cd9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018960"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **Conformità**  
@@ -94,7 +93,7 @@ BOOL SQLManageDataSources(
   
  Un DSN di sistema viene registrato nella voce HKEY_LOCAL_MACHINE nelle informazioni di sistema anziché nella voce HKEY_CURRENT_USER. Non è associato a un utente che esegue l'accesso con il proprio nome utente specifico e la password, ma può essere usato da qualsiasi utente del computer o da un servizio automatico a livello di sistema. Il DSN di sistema è, tuttavia, associato a un solo computer. Non supporta la funzionalità di utilizzo remoto DSN tra computer. DSN di sistema sono registrate come indicato di seguito le informazioni di sistema:  
   
- HKEY_LOCAL_MACHINE    SOFTWARE       ODBC          Odbc.ini  
+ HKEY_LOCAL_MACHINE SOFTWARE ODBC ini  
   
 ## <a name="file-dsns"></a>DSN file  
  Un'origine dati file non è un nome dell'origine dati, perché esegue un'origine dati di computer e non è registrato per qualsiasi utente o computer. Le informazioni di connessione per l'origine dati sono contenute in un file DSN che può essere copiato in tutti i computer. Un'origine dati file può essere condivisibile, nel qual caso il file DSN si trova in una rete e può essere usata contemporaneamente da più utenti nella rete, purché l'utente abbia il driver appropriato installato. Un'origine dati file può anche essere condivisibile, nel qual caso può essere utilizzato solo in un singolo computer.  

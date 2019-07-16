@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 683adbb172802d3709250c3cac46efdbed6cc544
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2bbaaaa6770c5644da227c7e64a9ff9e0fc2c13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766131"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026844"
 ---
 # <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ Le catene molto lunghe possono influire significativamente sulle prestazioni del
   
 Per altre informazioni, vedere [Hash Indexes for Memory-Optimized Tables indici](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   
-|Nome colonna|Tipo|Description|  
+|Nome colonna|type|Descrizione|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|ID oggetto della tabella padre.|  
 |xtp_object_id|**bigint**|ID della tabella con ottimizzazione per la memoria.|  
@@ -62,7 +61,7 @@ Per altre informazioni, vedere [Hash Indexes for Memory-Optimized Tables indici]
 
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-troubleshooting-hash-index-bucket-count"></a>A. Risoluzione dei problemi relativi al numero di bucket dell'indice hash
+### <a name="a-troubleshooting-hash-index-bucket-count"></a>R. Risoluzione dei problemi relativi al numero di bucket dell'indice hash
 
 La query seguente può essere utilizzata per risolvere il numero di bucket dell'indice hash di una tabella esistente. La query restituisce statistiche sulla percentuale di bucket vuoti e lunghezza della catena per tutti gli indici hash nelle tabelle utente.
 

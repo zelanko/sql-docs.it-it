@@ -12,13 +12,12 @@ keywords:
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a07e97cda518834207990f3adcb15c99d5506e5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20920eb0a7a748b886444b44abef38708df0db46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488142"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007192"
 ---
 # <a name="learn-sql-server-master-data-services"></a>Informazioni su SQL Server Master Data Services
 
@@ -26,7 +25,7 @@ ms.locfileid: "65488142"
 
   
   
-## <a name="training"></a>Training  
+## <a name="training"></a>Formazione  
 * Per esplorare le nuove funzionalità e le funzionalità introdotte [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], provare una [Self-Paced Lab](https://www.microsoft.com/handsonlabs/selfpacedlabs) (Accedi con l'account Microsoft sono obbligatorio).  
 * Per sviluppare un [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] soluzione per archiviare e gestire elenchi principali di dati geografici, usando il componente aggiuntivo per Excel e il [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)], provare una [Lab Self-Paced](https://www.microsoft.com/handsonlabs/selfpacedlabs). Verranno create entità e gerarchie e si userà [!INCLUDE[ssIS_md](../includes/ssis-md.md)] per popolare una tabella delle dimensioni.  
   

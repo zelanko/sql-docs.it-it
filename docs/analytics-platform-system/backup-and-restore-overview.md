@@ -2,19 +2,18 @@
 title: Backup e ripristino - Parallel Data Warehouse | Microsoft Docs
 description: Descrive come i dati di backup e ripristino funziona per Parallel Data Warehouse (PDW). Operazioni di backup e ripristino vengono usate per il ripristino di emergenza. Backup e ripristino è anche utilizzabile per copiare un database da un'appliance a un'altra appliance.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0b95d18eb38bbe0012235304747ca80b3dc19a79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d322eb27a92c644afa834371d5f38b3d9d7ad28b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200968"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961407"
 ---
 # <a name="backup-and-restore"></a>Backup e ripristino
 

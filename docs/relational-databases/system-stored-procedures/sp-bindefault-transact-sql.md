@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 715387bcb15e27b0d53a7f000b0f97c2be5a4bbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 918f545dd0ea0ca30524a307f1ae6d30c3fafb61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62996286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046050"
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ sp_bindefault [ @defname = ] 'default' ,
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-binding-a-default-to-a-column"></a>A. Associazione di un valore predefinito a una colonna  
+### <a name="a-binding-a-default-to-a-column"></a>R. Associazione di un valore predefinito a una colonna  
  Il valore predefinito `today` è stato definito nel database corrente tramite l'istruzione CREATE DEFAULT, in questo esempio tale valore viene associato alla colonna `HireDate` della tabella `Employee`. Quando si aggiunge una riga alla tabella `Employee` senza specificare dati nella colonna `HireDate` la colonna include il valore predefinito `today`.  
   
 ```  

@@ -2,19 +2,18 @@
 title: I messaggi di errore - Parallel Data Warehouse | Microsoft Docs
 description: I messaggi di errore Parallel Data Warehouse (PDW) segnalano gli errori e problemi rilevati dai componenti PDW e possono includere anche gli errori di SQL Server rilevati tramite PDW. Questi messaggi di errore usano una sintassi coerente per la presentazione di informazioni. La comprensione di questa sintassi verrà consentono di identificare e risolvere i problemi.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3ffc7a097845f4652f56d82c572ecfab868d33f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78c5cd8dab37ac9cb32de794861c68e6c8085747
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960965"
 ---
 # <a name="error-messages-in-parallel-data-warehouse"></a>Messaggi di errore in Parallel Data Warehouse
 

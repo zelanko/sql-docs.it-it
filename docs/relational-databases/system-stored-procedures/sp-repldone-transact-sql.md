@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8aa102f134d262eb2342e3774c1960f33f8adffc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5ed4502b7f3e737b8e3adbfae852c2a513e2ccd4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538233"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006889"
 ---
 # <a name="sprepldone-transact-sql"></a>sp_repldone (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +44,9 @@ sp_repldone [ @xactid= ] xactid
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @xactid = ] xactid` È il numero di sequenza del log (LSN) del primo record relativo all'ultima transazione distribuita del server. *xactid* viene **binary(10)**, non prevede alcun valore predefinito.  
+`[ @xactid = ] xactid` È il numero di sequenza del log (LSN) del primo record relativo all'ultima transazione distribuita del server. *xactid* viene **binary(10)** , non prevede alcun valore predefinito.  
   
-`[ @xact_seqno = ] xact_seqno` È il numero LSN dell'ultimo record per l'ultima transazione distribuita del server. *xact_seqno* viene **binary(10)**, non prevede alcun valore predefinito.  
+`[ @xact_seqno = ] xact_seqno` È il numero LSN dell'ultimo record per l'ultima transazione distribuita del server. *xact_seqno* viene **binary(10)** , non prevede alcun valore predefinito.  
   
 `[ @numtrans = ] numtrans` È il numero di transazioni distribuite. *numtrans* viene **int**, non prevede alcun valore predefinito.  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6f244c40ec005f07b6b310f01f3027f80d7862bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4ff8cf50279d9be6b3ed334982e2140f0bd41f4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703564"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966692"
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Esempio del metodo Close di Connection e della proprietà Type di Table (VC++)
 Impostando il [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) proprietà **Nothing** deve "chiudere" il catalogo. Raccolte associate sarà vuote. Saranno rese orfane tutti gli oggetti che sono stati creati da oggetti dello schema nel catalogo. Tutte le proprietà per gli oggetti memorizzati nella cache sarà ancora disponibile, ma il tentativo di leggere le proprietà che richiedono una chiamata al provider avrà esito negativo.  

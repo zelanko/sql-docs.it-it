@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6c2204f2-d49e-49ba-9c0f-f14cf07fa561
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: dd1068e509a14c9d7388beea3727f2b30dd3ba40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b8ef85b9d0d997ed8aae05fc53aa685a2dcacfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299265"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986411"
 ---
 # <a name="global-settings-dialogs-accesstosql"></a>Impostazioni globali (finestre di dialogo) (AccessToSQL)
 Utilizzare la pagina di finestre di dialogo del **Global Settings** finestra di dialogo per specificare l'azione predefinita dell'utente e le impostazioni di avviso per SSMA.  

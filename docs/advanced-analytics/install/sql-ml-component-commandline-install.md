@@ -7,13 +7,12 @@ ms.date: 03/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: d852cc745578d852b2c8235ebcaf3614020a1bb8
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6ffd4b13d5ab92187ac998fd983e8fa8416e4401
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511748"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962899"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Installare i componenti di R e Python dalla riga di comando di apprendimento automatico SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,7 +56,7 @@ In caso di installazione dal prompt dei comandi, in [!INCLUDE[ssNoVersion](../..
 | /IACCEPTPYTHONLICENSETERMS | Indica che si hanno accettato le condizioni di licenza per l'uso di componenti Python. |
 | /IACCEPTSQLSERVERLICENSETERMS | Indica che si hanno accettato le condizioni di licenza per l'uso di SQL Server.|
 | /MRCACHEDIRECTORY | Per l'installazione offline, imposta la cartella che contiene i file CAB dei componenti R. |
-| /MPYCACHEDIRECTORY | Riservato per utilizzi futuri. Utilizzare % TEMP % per archiviare i file CAB dei componenti Python per l'installazione nei computer che non dispongono di una connessione a internet. |
+| / MPYCACHEDIRECTORY | Riservato per utilizzi futuri. Utilizzare % TEMP % per archiviare i file CAB dei componenti Python per l'installazione nei computer che non dispongono di una connessione a internet. |
 
 
 ## <a name="indb"></a> Le installazioni di istanze nel database

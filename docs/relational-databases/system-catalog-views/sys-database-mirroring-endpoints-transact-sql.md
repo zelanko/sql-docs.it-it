@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0aa757203ba82794a0564e50c715134e502c6ac1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bcbe9d23bab18e47b69f82812f604a94d4c5ce9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538067"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022774"
 ---
 # <a name="sysdatabasemirroringendpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "52538067"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**\<colonne ereditate >**|-|Eredita le colonne da **Sys. Endpoints** (per altre informazioni, vedere [Sys. Endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)).|  
-|**Ruolo**|**tinyint**|Ruolo del mirroring. I possibili valori sono i seguenti:<br /><br /> **0** = nessuno<br /><br /> **1** = partner<br /><br /> **2** = server di controllo<br /><br /> **3** = all<br /><br /> Nota: Questo valore è rilevante solo per il mirroring del database.|  
+|**role**|**tinyint**|Ruolo del mirroring. I possibili valori sono i seguenti:<br /><br /> **0** = nessuno<br /><br /> **1** = partner<br /><br /> **2** = server di controllo<br /><br /> **3** = all<br /><br /> Nota: Questo valore è rilevante solo per il mirroring del database.|  
 |**role_desc**|**nvarchar(60)**|Descrizione del ruolo del mirroring. I possibili valori sono i seguenti:<br /><br /> **NONE**<br /><br /> **PARTNER**<br /><br /> **CONTROLLO DEL MIRRORING**<br /><br /> **ALL**<br /><br /> Nota: Questo valore è rilevante solo per il mirroring del database.|  
 |**is_encryption_enabled**|**bit**|**1** significa che la crittografia è abilitata.<br /><br /> **0** significa che la crittografia è disabilitata.|  
 |**connection_auth**|**tinyint**|Tipo di autenticazione della connessione necessario per le connessioni all'endpoint. I possibili valori sono i seguenti:<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -NEGOTIATE<br /><br /> **4** -CERTIFICATO<br /><br /> **5** -NTLM, CERTIFICATO<br /><br /> **6** -KERBEROS, CERTIFICATO<br /><br /> **7** -NEGOTIATE, CERTIFICATI<br /><br /> **8** -CERTIFICATO, NTLM<br /><br /> **9** -CERTIFICATO, KERBEROS<br /><br /> **10** -CERTIFICATO, NEGOTIATE|  

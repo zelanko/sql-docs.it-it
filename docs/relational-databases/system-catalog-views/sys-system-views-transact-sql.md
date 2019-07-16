@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: a526c410-e7b5-4075-8103-e1f3c6837c3c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 13568aae4723a695dd2ce3e611d5e92f96deffb7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fce2816d8cb169c5761f47dd0f9dd0a6ed1959f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714899"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078610"
 ---
 # <a name="syssystemviews-transact-sql"></a>sys.system_views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene una riga per ogni vista di sistema disponibile in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Tutte le viste di sistema sono contenute negli schemi denominati **sys** oppure **INFORMATION_SCHEMA**.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |\<colonne ereditate >||Per un elenco delle colonne ereditate da questa vista, vedere [Sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**is_replicated**|**bit**|1 = la vista viene replicata.|  

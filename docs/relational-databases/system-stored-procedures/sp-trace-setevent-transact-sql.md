@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54f36b46f75bf943ecf08aafd93a6b861c2da90a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b90fe62de358c226fba4b3b4a26f941c75ce5a47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538583"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095953"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,8 +58,8 @@ sp_trace_setevent [ @traceid = ] trace_id
 |11|RPC:Starting|Viene generato all'avvio di una chiamata RPC.|  
 |12|SQL:BatchCompleted|Viene generato al completamento di un batch [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |13|SQL:BatchStarting|Viene generato all'avvio di un batch [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
-|14|Audit Login|Viene generato quando un utente esegue correttamente l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|15|Audit Logout|Viene generato quando un utente si disconnette da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|14|Connessione di controllo|Viene generato quando un utente esegue correttamente l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|15|Disconnessione di controllo|Viene generato quando un utente si disconnette da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |16|Attention|Viene generato per eventi di attenzione, come le richieste di interrupt dei client o l'interruzione di connessioni client.|  
 |17|ExistingConnection|Rileva tutte le attività degli utenti connessi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prima dell'avvio della traccia.|  
 |18|Audit Server Starts and Stops|Viene generato alla modifica dello stato del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -82,7 +81,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |36|SP:CacheRemove|Indica la rimozione di un elemento dalla cache delle procedure.|  
 |37|SP:Recompile|Indica la ricompilazione di una stored procedure.|  
 |38|SP:CacheHit|Indica l'individuazione di una stored procedure nella cache delle procedure.|  
-|39|Deprecato|Deprecato|  
+|39|Funzionalità deprecate|Funzionalità deprecate|  
 |40|SQL:StmtStarting|Viene generato all'avvio dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |41|SQL:StmtCompleted|Viene generato al completamento dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |42|SP:Starting|Indica l'avvio della stored procedure.|  
@@ -302,7 +301,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |57|**Tipo**|Valore intero che dipende dalla classe di evento acquisita nella traccia.|  
 |58|**OwnerID**|Tipo di oggetto proprietario del blocco. Solo per gli eventi di blocco.|  
 |59|**ParentName**|Nome dello schema in cui è incluso l'oggetto.|  
-|60|**IsSystem**|Indica se l'evento è stato generato per un processo di sistema o un processo utente.<br /><br /> **1** = sistema<br /><br /> **0** = user.|  
+|60|**IsSystem**|Indica se l'evento è stato generato per un processo di sistema o un processo utente.<br /><br /> **1** = sistema<br /><br /> **0** = utente.|  
 |61|**Offset**|Offset iniziale dell'istruzione nella stored procedure o nel batch.|  
 |62|**SourceDatabaseID**|ID del database in cui esiste l'origine dell'oggetto.|  
 |63|**SqlHandle**|Hash a 64 bit basato sul testo di una query ad hoc oppure ID del database e dell'oggetto di un oggetto SQL. È possibile passare questo valore a **sys.dm_exec_sql_text()** per recuperare il testo SQL associato.|  
@@ -315,7 +314,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Se *sul* è impostata su **0**, e *column_id* è NULL, l'evento è attivo OFF e tutte le colonne vengono cancellate. Se *column_id* non è null, la colonna viene impostata OFF.  
   
- Questa tabella illustra l'interazione tra **@on** e **@columnid**.  
+ Questa tabella illustra l'interazione tra **@on** e **@columnid** .  
   
 |@on|@columnid|Risultato|  
 |---------|---------------|------------|  

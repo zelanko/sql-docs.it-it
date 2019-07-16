@@ -7,13 +7,12 @@ ms.date: 12/18/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 99dc3aa20bd3f31766ed66a6cdabea5cf38553f6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 467c9320880f1b113cecd36101345f6ee99f7b75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510158"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961939"
 ---
 # <a name="sql-server-r-language-tutorials"></a>Esercitazioni sul linguaggio di SQL Server R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +30,7 @@ Questo articolo descrive le esercitazioni di linguaggio R per analitica nel data
 
 | Collegamento | Descrizione |
 |------|-------------|
-| [Guida introduttiva: Uso di R in T-SQL](rtsql-using-r-code-in-transact-sql-quickstart.md) | Primo di più guide introduttive, con quella che illustra la sintassi di base per chiamare una funzione R usando un editor di query T-SQL, ad esempio SQL Server Management Studio. |
+| [Avvio rapido: Uso di R in T-SQL](rtsql-using-r-code-in-transact-sql-quickstart.md) | Primo di più guide introduttive, con quella che illustra la sintassi di base per chiamare una funzione R usando un editor di query T-SQL, ad esempio SQL Server Management Studio. |
 | [Esercitazione: Informazioni su analitica di R nel database per i data Scientist](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | Per gli sviluppatori di R per SQL Server, questa esercitazione viene illustrato come eseguire attività comuni di data science in SQL Server. Caricare e visualizzare i dati, eseguire il training e salvare un modello in SQL Server e utilizzare il modello di analitica predittiva. |
 | [Esercitazione: Informazioni su analitica di R nel database per sviluppatori SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md) | Compilare e distribuire una soluzione completa di R, usando solo [!INCLUDE[tsql](../../includes/tsql-md.md)] strumenti. Si concentra sullo spostamento di una soluzione nell'ambiente di produzione. Si apprenderà come eseguire il wrapping del codice R in una stored procedure, come salvare un modello R in un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e come effettuare chiamate con parametri al modello R per la creazione di stime. |
 | [Esercitazione: Approfondimento RevoScalepR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) | Informazioni su come usare le funzioni nei pacchetti RevoScaleR. Spostare dati tra R e SQL Server e commutatore contesti di calcolo per soddisfare una determinata attività. Creare modelli e tracciati e quindi spostati tra l'ambiente di sviluppo e il server di database. |

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7b23466adb660f2aa18cb44a20d189f456c3bb3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d196a60986734c5717be9711af1fa28accee414
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697542"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963479"
 ---
 # <a name="server-property-rds"></a>Proprietà Server (Servizi Desktop remoto)
 Indica il protocollo di nome e la comunicazione Internet Information Services (IIS).  
@@ -112,7 +111,7 @@ DataControl.Server=""
  Oggetto **stringa** valore che contiene un Internet o intranet percorso o nome del computer, se il server è in un computer remoto; oppure, una stringa vuota se il server nel computer locale.  
   
  *port*  
- Facoltativo. Una porta che viene usata per connettersi a un server che esegue IIS. Il numero di porta è impostato in Internet Explorer (nelle **visualizzazione** menu, fare clic su **opzioni**e quindi selezionare il **connessione** scheda) o in IIS.  
+ facoltativo. Una porta che viene usata per connettersi a un server che esegue IIS. Il numero di porta è impostato in Internet Explorer (nelle **visualizzazione** menu, fare clic su **opzioni**e quindi selezionare il **connessione** scheda) o in IIS.  
   
  *DataControl*  
  Una variabile oggetto che rappresenta un **Servizi Desktop remoto. DataControl** oggetto.  

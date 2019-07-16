@@ -2,19 +2,18 @@
 title: Acquisire e configurare un server di caricamento - Parallel Data Warehouse | Microsoft Docs
 description: Questo articolo descrive come acquisire e configurare un server di caricamento come un sistema di Windows non appliance per l'invio di caricamenti di dati per Parallel Data Warehouse (PDW).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: da404aa881f3ff7af26a681751aae12a45f2628f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d753237841695786de3d368bebf9a606875ea634
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63231099"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961614"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Acquisire e configurare un server di caricamento per Parallel Data Warehouse
 Questo articolo descrive come acquisire e configurare un server di caricamento come un sistema di Windows non appliance per l'invio di caricamenti di dati per Parallel Data Warehouse (PDW).  

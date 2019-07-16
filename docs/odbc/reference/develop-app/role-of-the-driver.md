@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cac64c24-a27d-4884-96c0-ea7988351711
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b940eac1548582285e7d41e0014cfe911dfb1137
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c344c1d8b3a4702728807af9dae7ed9ca7c5cd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63254184"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020377"
 ---
 # <a name="role-of-the-driver"></a>Ruolo del driver
 Il driver controlla tutti gli errori e avvisi non controllati da Gestione Driver e ordina i record di stato che genera. (Un ODBC 2. *x* driver non ordina i record di stato.) Quali errori e avvisi di troncamento dei dati, la conversione dei dati, sintassi e alcuni transizioni di stato. Il driver potrebbe anche controllare errori e avvisi controllo parzialmente selezionati da Gestione Driver. Ad esempio, anche se Gestione Driver controlla se il valore di *operazione* nel **SQLSetPos** è consentito, il driver deve controllare se è supportato.  

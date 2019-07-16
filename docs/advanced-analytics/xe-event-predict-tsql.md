@@ -6,13 +6,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: fa0d9d4ed647a6616c525533e696960784d09290
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e8e2f43d176bb0f828545c5d7d0abcf5849a7ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63142313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961628"
 ---
 # <a name="extended-events-for-monitoring-predict-statements"></a>Eventi estesi per il monitoraggio di istruzioni PREDICT
 
@@ -34,13 +33,13 @@ Gli eventi estesi seguenti sono disponibili in tutte le versioni di SQL Server c
 
 L'istruzione T-SQL stimare è stato introdotto in SQL Server 2017. 
 
-|NAME |object_type|description| 
+|name |object_type|description| 
 |----|----|----|
-|predict_function_completed |evento  |Suddivisione tempo di esecuzione Builtin|
-|predict_model_cache_hit |evento|Si verifica quando un modello viene recuperato dalla cache del modello di funzione PREDICT. Utilizzare questo evento insieme agli altri eventi predict_model_cache _ * per risolvere i problemi causati dalla cache dei modelli di funzione PREDICT.|
-|predict_model_cache_insert |evento  |   Si verifica quando un modello viene inserito nella cache dei modelli di funzione PREDICT. Utilizzare questo evento insieme agli altri eventi predict_model_cache _ * per risolvere i problemi causati dalla cache dei modelli di funzione PREDICT.    |
-|predict_model_cache_miss   |evento|Si verifica quando un modello non viene trovato nella cache dei modelli di funzione PREDICT. Le occorrenze di frequente di questo evento può indicare che è necessaria più memoria di SQL Server. Utilizzare questo evento insieme agli altri eventi predict_model_cache _ * per risolvere i problemi causati dalla cache dei modelli di funzione PREDICT.|
-|predict_model_cache_remove |evento| Si verifica quando un modello viene rimosso dalla cache dei modelli per la funzione PREDICT. Utilizzare questo evento insieme agli altri eventi predict_model_cache _ * per risolvere i problemi causati dalla cache dei modelli di funzione PREDICT.|
+|predict_function_completed |event  |Suddivisione tempo di esecuzione Builtin|
+|predict_model_cache_hit |event|Si verifica quando un modello viene recuperato dalla cache del modello di funzione PREDICT. Utilizzare questo evento insieme agli altri eventi predict_model_cache _ * per risolvere i problemi causati dalla cache dei modelli di funzione PREDICT.|
+|predict_model_cache_insert |event  |   Si verifica quando un modello viene inserito nella cache dei modelli di funzione PREDICT. Utilizzare questo evento insieme agli altri eventi predict_model_cache _ * per risolvere i problemi causati dalla cache dei modelli di funzione PREDICT.    |
+|predict_model_cache_miss   |event|Si verifica quando un modello non viene trovato nella cache dei modelli di funzione PREDICT. Le occorrenze di frequente di questo evento può indicare che è necessaria più memoria di SQL Server. Utilizzare questo evento insieme agli altri eventi predict_model_cache _ * per risolvere i problemi causati dalla cache dei modelli di funzione PREDICT.|
+|predict_model_cache_remove |event| Si verifica quando un modello viene rimosso dalla cache dei modelli per la funzione PREDICT. Utilizzare questo evento insieme agli altri eventi predict_model_cache _ * per risolvere i problemi causati dalla cache dei modelli di funzione PREDICT.|
 
 ## <a name="query-for-related-events"></a>Eseguire una query per eventi correlati
 

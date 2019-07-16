@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: c39d19807cfe01ca9c96b47de020abb9227c43a0
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4092de07d19d4d33bd56025076e606269c2b04e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962158"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>Visualizzare i dati di SQL Server tramite R (esercitazione di RevoScaleR e SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -79,7 +78,7 @@ Basato su statistiche di riepilogo calcolate nella lezione precedente, aver scop
 A questo punto, le modifiche interessano solo l'oggetto di origine dati in R; Nessun nuovo dato è ancora stato scritto per la tabella di database. Tuttavia, è possibile utilizzare i dati acquisiti nella variabile sumOut per creare visualizzazioni e riepiloghi. 
 
 > [!TIP]
-> If you forget which compute context you're using, run **rxGetComputeContext()**. Valore restituito di "Contesto di calcolo RxLocalSeq" indica che siano in esecuzione nel contesto di calcolo locale.
+> Se si ricorda il contesto di calcolo in uso, eseguire **rxGetComputeContext()** . Valore restituito di "Contesto di calcolo RxLocalSeq" indica che siano in esecuzione nel contesto di calcolo locale.
 
 ## <a name="visualize-data-using-rxhistogram"></a>Visualizzare i dati tramite rxHistogram
 
@@ -123,7 +122,7 @@ Grafici a dispersione vengono spesso usati durante l'esplorazione dei dati per c
     cubePlot <- rxResultsDF(cube1)
     ```
   
-    Il **rxCube** funzione include un argomento facoltativo *returnDataFrame* = **TRUE**, che è possibile usare per convertire direttamente i risultati in un frame di dati. Esempio:
+    Il **rxCube** funzione include un argomento facoltativo *returnDataFrame* = **TRUE**, che è possibile usare per convertire direttamente i risultati in un frame di dati. Ad esempio:
     
     `print(rxCube(fraudRisk~F(numTrans):F(numIntlTrans), data = sqlFraudDS, returnDataFrame = TRUE))`
        

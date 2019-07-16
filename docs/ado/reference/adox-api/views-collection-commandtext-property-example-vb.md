@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a05a0190-352d-44ff-9488-0c94e9fb656e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01ddcb116c4253c2ab56548af2b9cf136b9e28de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b185bd3c5d42eb6aa9078f842280fe11e1383202
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964761"
 ---
 # <a name="views-collection-commandtext-property-example-vb"></a>Raccolta Views: esempio della proprietà CommandText (VB)
 Il codice seguente illustra come usare il [comando](../../../ado/reference/adox-api/command-property-adox.md) proprietà di aggiornamento del testo di una vista.  

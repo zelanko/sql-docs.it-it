@@ -7,13 +7,12 @@ ms.date: 03/15/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 2d00e96162b492d28f0c0ec107612023c8e15e48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e882243f73588cbe3f9bf301dd3fa5a99cef03e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642035"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962591"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Rendere operativo il codice R tramite stored procedure in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +23,7 @@ Quando si usa la funzionalità R e Python in SQL Server Machine Learning Service
 
 In genere, l'integrazione delle soluzioni di analisi scientifica dei dati ha lo scopo ricodifica esteso per supportare le prestazioni e l'integrazione. Servizi di SQL Server Machine Learning semplifica questa attività perché il codice R e Python può essere eseguito in SQL Server e richiamato tramite le stored procedure. Per altre informazioni sui meccanismi di incorporamento di codice nelle stored procedure, vedere:
 
-+ [Guida introduttiva: Script R di "Hello world" in SQL Server](../../advanced-analytics/tutorials//quickstart-r-run-using-tsql.md)
++ [Avvio rapido: Script R di "Hello world" in SQL Server](../../advanced-analytics/tutorials//quickstart-r-run-using-tsql.md)
 + [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
 Un esempio più dettagliato di distribuzione del codice R nell'ambiente di produzione usando le stored procedure è reperibile in [esercitazione: Analitica di dati R per sviluppatori SQL](../../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)

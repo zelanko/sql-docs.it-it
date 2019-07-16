@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 1b18844e6899615ac978e63cefa6c712f8f194ea
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 5630bd485936a07c3fb8cf64de483fdb93ead3af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962459"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Configurare un client di analisi scientifica dei dati per lo sviluppo di R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -213,7 +212,7 @@ Quando si usa [RStudio](https://www.rstudio.com/), è possibile configurare l'am
 Quando si riapre RStudio, R eseguibile dal Client R (o server autonomo) è il motore R predefinita.
 
 
-### <a name="r-tools-for-visual-studio-rtvs"></a>R Tools for Visual Studio (RTVS)
+### <a name="r-tools-for-visual-studio-rtvs"></a>R Tools per Visual Studio (RTVS)
 
 Se si ha già un IDE preferito per R, è consigliabile **R Tools per Visual Studio**.
 

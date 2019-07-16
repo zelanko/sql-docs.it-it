@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: edbe8a3404217f330b5b62a9d433c7d560b28656
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e78241252733e8298c0bc727f9c45dd6df2768ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502691"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008209"
 ---
 # <a name="operators---arithmetic"></a>Operatori aritmetici
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,11 +22,11 @@ ms.locfileid: "62502691"
   
  Gli operatori aritmetici supportati da DMX sono indicati nella tabella seguente.  
   
-|Operatore|Descrizione|  
+|Operator|Descrizione|  
 |--------------|-----------------|  
 |[+ &#40;Add&#41; &#40;DMX&#41;](../dmx/add-dmx.md)|Somma due numeri.|  
-|[- &#40;Subtract&#41; &#40;DMX&#41;](../dmx/subtract-dmx.md)|Sottrae un numero da un altro.|  
-|[&#42; &#40;Multiply&#41; &#40;DMX&#41;](../dmx/multiply-dmx.md)|Esegue una moltiplicazione tra due numeri.|  
+|[- &#40;Sottrarre&#41; &#40;DMX&#41;](../dmx/subtract-dmx.md)|Sottrae un numero da un altro.|  
+|[&#42;&#40;Moltiplica&#41; &#40;DMX&#41;](../dmx/multiply-dmx.md)|Esegue una moltiplicazione tra due numeri.|  
 |[&#40;Divide&#41; &#40;DMX&#41;](../dmx/divide-dmx.md)|Esegue una divisione di un numero per un altro.|  
   
  L'ordine di precedenza per gli operatori aritmetici in un'espressione DMX è determinato dalle regole seguenti:  
@@ -45,7 +44,7 @@ ms.locfileid: "62502691"
  [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle istruzioni](../dmx/data-mining-extensions-dmx-statements.md)   
  [Le estensioni di Data Mining di dati &#40;DMX&#41; convenzioni della sintassi](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Le estensioni di Data Mining di dati &#40;DMX&#41; gli elementi della sintassi](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Expressions &#40;DMX&#41;](../dmx/expressions-dmx.md)   
+ [Le espressioni &#40;DMX&#41;](../dmx/expressions-dmx.md)   
  [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)   
  [Struttura e utilizzo di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   

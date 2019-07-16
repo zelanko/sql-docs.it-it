@@ -1,5 +1,5 @@
 ---
-title: sys.remote_data_archive_tables (Transact-SQL) | Microsoft Docs
+title: Sys. remote_data_archive_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,13 +18,12 @@ ms.assetid: 765069b7-60fd-414c-875f-3455460b75cd
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: 93dfc97acab31b5078bcba569b52c64f773c775b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65e42e6303b467abd38ddadb6be0c0d0fece46e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945674"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018188"
 ---
 # <a name="stretch-database-catalog-views---sysremotedataarchivetables"></a>Stretch Database - viste del catalogo sys. remote_data_archive_tables
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
