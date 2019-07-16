@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 320b572f-bd5b-4055-95a6-dec5718c0041
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c0b5847cb5d4b4d6643edceadbd4d95cec5f152
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 1927d6e483683699196cfc7e87928f27bf23446a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292737"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946548"
 ---
 # <a name="numeric-values-functions---round"></a>Funzioni per valori numerici - round
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce il numero senza parte frazionaria più vicino all'argomento. Se esiste più di un numero, viene restituito quello più vicino a infinito positivo. Esempio:  
+  Restituisce il numero senza parte frazionaria più vicino all'argomento. Se esiste più di un numero, viene restituito quello più vicino a infinito positivo. Ad esempio:  
   
  Se l'argomento è 2.5 **Round ()** restituisce 3.  
   

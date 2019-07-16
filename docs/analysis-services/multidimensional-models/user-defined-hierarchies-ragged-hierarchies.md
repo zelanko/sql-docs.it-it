@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cf8844188330a408c29c8b959994637e097f7043
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529341"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164845"
 ---
 # <a name="user-defined-hierarchies---ragged-hierarchies"></a>Gerarchie definite dall'utente - Gerarchie incomplete
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52529341"
   
  Innanzitutto, controllare il modo in cui l'applicazione client gestisce il percorso di drill-down. Ad esempio, tramite Excel i nomi padre vengono ripetuti come segnaposto per i valori mancanti. Per visualizzare questo comportamento, creare una tabella pivot utilizzando la dimensione Territorio vendita nel modello multidimensionale Adventure Works. In una tabella pivot che contiene gli attributi Gruppo, Paese e Regione per Territorio vendita, ai paesi che non presentano un valore relativo alla regione verrà assegnato un segnaposto, in questo caso una ripetizione dell'elemento padre al livello superiore (il nome del paese). Questo comportamento deriva dalla proprietà della stringa di connessione MDX Compatibility=1 che è fissa in Excel. Se il client non fornisce naturalmente i comportamenti di drill-down desiderati, è possibile impostare le proprietà nel modello, in modo da modificare almeno alcuni di questi comportamenti.  
   
- In questo argomento sono incluse le sezioni seguenti:  
+ Di seguito sono elencate le diverse sezioni di questo argomento:  
   
 -   [Approcci per la modifica della navigazione drill-down in una gerarchia incompleta](#bkmk_approach)  
   
