@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 883cd29d8628f1e9270ae95a772c4d116b896710
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39ebda5de5820cdfd7333ad1d0997593922e0a4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63034918"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039888"
 ---
 # <a name="diagnostic-messages"></a>Messaggi di diagnostica
 Viene restituito un messaggio di diagnostica con SQLSTATE ogni. Il valore SQLSTATE stesso spesso viene restituito con un numero di messaggi diversi. SQLSTATE 42000 (sintassi o violazione di accesso), ad esempio, viene restituito per la maggior parte degli errori nella sintassi SQL. Tuttavia, ogni errore di sintassi è probabile che essere descritti da un messaggio diverso.  

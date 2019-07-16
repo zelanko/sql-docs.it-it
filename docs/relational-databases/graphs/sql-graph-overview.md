@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 010d985245052949451a0b519ee4d7b312a97f4a
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: eb84f1cc40a05078910d10a48de67f1ac3467fe3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413071"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035904"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Graph processing con SQL Server e Database SQL di Azure
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ Sta iniziando l'aggiunta di estensioni graph per SQL Server, per rendere più se
 
 
 ### <a name="create-graph-objects"></a>Creare gli oggetti di graph
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)] le estensioni consentirà agli utenti di creare le tabelle nodi o bordi. I nodi e bordi possono avere proprietà associate a essi. Poiché, nodi e archi vengono archiviati come tabelle, tutte le operazioni che sono supportate nelle tabelle relazionali sono supportate nella tabella nodi o bordi. Esempio:  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] le estensioni consentirà agli utenti di creare le tabelle nodi o bordi. I nodi e bordi possono avere proprietà associate a essi. Poiché, nodi e archi vengono archiviati come tabelle, tutte le operazioni che sono supportate nelle tabelle relazionali sono supportate nella tabella nodi o bordi. Di seguito è fornito un esempio:  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;

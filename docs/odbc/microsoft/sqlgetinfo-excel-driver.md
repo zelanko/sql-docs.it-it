@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo (Excel Driver) | Microsoft Docs
+title: SQLGetInfo (Driver Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fed4aea2-6d3d-4199-a5db-3d033eb63927
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a2524c51f1b4b9297b6e3483a27fd78e6c1836e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba2e23bf4b3c464c5483897c0a9dd3e6c9dea626
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63301993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003283"
 ---
 # <a name="sqlgetinfo-excel-driver"></a>SQLGetInfo (driver Excel)
 > [!NOTE]  
@@ -60,7 +59,7 @@ ms.locfileid: "63301993"
  64 (Excel 5.0/7.0/97)  
   
 ## <a name="sqlmaxtablenamelen"></a>SQL_MAX_TABLE_NAME_LEN  
- 12 (Excel 3.0/4.0)  
+ 12 (Excel versione 3.0 o 4.0)  
   
  31 (Excel 5.0/7.0/97)  
   
@@ -70,7 +69,7 @@ ms.locfileid: "63301993"
  "." (Excel 5.0/7.0/97)  
   
 ## <a name="sqlcatalogterm"></a>SQL_CATALOG_TERM  
- "Directory" (Excel 3.0/4.0)  
+ "Directory" (Excel 3.0 o 4.0)  
   
  "Workbook" (Excel 5.0/7.0/97)  
   
@@ -78,4 +77,4 @@ ms.locfileid: "63301993"
  SQL_QU_DML_STATEMENTS &#124; SQL_QU_TABLE_DEFINITION  
   
 ## <a name="sqltimedatefunctions"></a>SQL_TIMEDATE_FUNCTIONS  
- SQL_FN_TD_CURDATE &AMP;#124; SQL_FN_TD_CURTIME &AMP;#124; SQL_FN_TD_DAYOFMONTH &AMP;#124; SQL_FN_TD_DAYOFWEEK &AMP;#124; SQL_FN_TD_DAYOFYEAR &AMP;#124; SQL_FN_TD_HOUR &AMP;#124; SQL_FN_TD_MINUTE &AMP;#124; SQL_FN_TD_MONTH &AMP;#124; SQL_FN_TD_NOW &AMP;#124; SQL_FN_TD_SECOND &AMP;#124; SQL_FN_TD_WEEK &AMP;#124; SQL_FN_TD_YEAR
+ SQL_FN_TD_CURDATE &#124; SQL_FN_TD_CURTIME &#124; SQL_FN_TD_DAYOFMONTH &#124; SQL_FN_TD_DAYOFWEEK &#124; SQL_FN_TD_DAYOFYEAR &#124; SQL_FN_TD_HOUR &#124; SQL_FN_TD_MINUTE &#124; SQL_FN_TD_MONTH &#124; SQL_FN_TD_NOW &#124; SQL_FN_TD_SECOND &#124; SQL_FN_TD_WEEK &#124; SQL_FN_TD_YEAR

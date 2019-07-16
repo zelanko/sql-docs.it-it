@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f12ce5837e47ce9cb647d1f7364ce23ad921e26c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 74558320df59414a756e1655bb073e9bf0d7d73c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107983"
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,21 +47,21 @@ sp_notify_operator
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @profile_name = ] 'profilename'` Il nome del profilo di posta elettronica Database da usare per inviare il messaggio. *ProfileName* viene **nvarchar (128)**. Se *profilename* viene omesso, viene utilizzato il profilo di posta elettronica Database predefinito.  
+`[ @profile_name = ] 'profilename'` Il nome del profilo di posta elettronica Database da usare per inviare il messaggio. *ProfileName* viene **nvarchar (128)** . Se *profilename* viene omesso, viene utilizzato il profilo di posta elettronica Database predefinito.  
   
 `[ @id = ] id` L'identificatore per l'operatore a cui inviare il messaggio. *ID* viene **int**, con un valore predefinito è NULL. Uno dei *id* oppure *nome* deve essere specificato.  
   
-`[ @name = ] 'name'` Il nome dell'operatore a cui inviare il messaggio. *nome* viene **nvarchar (128)**, con un valore predefinito è NULL. Uno dei *id* oppure *nome* deve essere specificato.  
+`[ @name = ] 'name'` Il nome dell'operatore a cui inviare il messaggio. *nome* viene **nvarchar (128)** , con un valore predefinito è NULL. Uno dei *id* oppure *nome* deve essere specificato.  
   
-> **NOTA:** Affinché un operatore possa ricevere messaggi, è necessario innanzitutto definire il relativo indirizzo di posta elettronica.  
+> **NOTA:** Indirizzo di posta elettronica debba essere definito per l'operatore possa ricevere messaggi.  
   
 `[ @subject = ] 'subject'` Oggetto per il messaggio di posta elettronica. *Subject* viene **nvarchar(256)** non prevede alcun valore predefinito.  
   
 `[ @body = ] 'message'` Il corpo del messaggio di posta elettronica. *messaggio* viene **nvarchar (max)** non prevede alcun valore predefinito.  
   
-`[ @file_attachments = ] 'attachment'` Il nome di un file da allegare al messaggio di posta elettronica. *allegato* viene **nvarchar(512)**, non prevede alcun valore predefinito.  
+`[ @file_attachments = ] 'attachment'` Il nome di un file da allegare al messaggio di posta elettronica. *allegato* viene **nvarchar(512)** , non prevede alcun valore predefinito.  
   
-`[ @mail_database = ] 'mail_host_database'` Specifica il nome del database host della posta elettronica. *mail_host_database* viene **nvarchar (128)**. Se nessun *mail_host_database* è specificato, il **msdb** database viene utilizzato per impostazione predefinita.  
+`[ @mail_database = ] 'mail_host_database'` Specifica il nome del database host della posta elettronica. *mail_host_database* viene **nvarchar (128)** . Se nessun *mail_host_database* è specificato, il **msdb** database viene utilizzato per impostazione predefinita.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

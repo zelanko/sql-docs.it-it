@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17b907be3e2641fe1dcbbb8fbd96586132e054ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3860243580981d995e6581d883e12afe3f033d3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538069"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036226"
 ---
 # <a name="sqlbindcol-function"></a>Funzione SQLBindCol
 **Conformità**  
@@ -277,7 +276,7 @@ SQLRETURN SQLBindCol(
 ## <a name="implicit-resetting-of-count-field"></a>La reimpostazione implicita del campo del conteggio  
  **SQLBindCol** imposta il valore di SQL_DESC_COUNT il *ColumnNumber* argomento solo quando questo aumenterebbe il valore di SQL_DESC_COUNT. Se il valore nel *TargetValuePtr* argomento è un puntatore null e il valore nel *ColumnNumber* argomento è uguale a SQL_DESC_COUNT (vale a dire, se disassociare il più alto vengono associati colonna), quindi SQL_DESC_ CONTEGGIO è impostato per il numero della colonna associata rimanente più alta.  
   
-## <a name="cautions-regarding-sqldefault"></a>Cautions Regarding SQL_DEFAULT  
+## <a name="cautions-regarding-sqldefault"></a>Avvertenze relative SQL_DEFAULT  
  Per recuperare correttamente i dati della colonna, l'applicazione deve determinare correttamente la lunghezza e il punto iniziale dei dati nel buffer dell'applicazione. Quando l'applicazione specifica esplicita *TargetType*, rilevare facilmente convinzioni erronee dell'applicazione. Tuttavia, quando l'applicazione specifica un *TargetType* di SQL_DEFAULT, **SQLBindCol** può essere applicato a una colonna di un tipo di dati diversa da quella desiderata con l'applicazione, da modifiche al i metadati o applicando il codice in una colonna diversa. L'applicazione non può in questo caso, sempre determinare l'inizio o la lunghezza dei dati della colonna recuperata. Ciò potrebbe causare errori dati illegali o violazioni della memoria.  
   
 ## <a name="code-example"></a>Esempio di codice  

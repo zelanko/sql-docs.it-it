@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: be818ed92a3c5a7f9522a6142f5acc815077bd10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e859ed97afdc3dfbb4e39a93b8691d044ceca37d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004288"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032646"
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -121,7 +120,7 @@ sp_syscollector_create_collection_set
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-collection-set-by-using-default-values"></a>A. Creazione di un set di raccolta utilizzando valori predefiniti  
+### <a name="a-creating-a-collection-set-by-using-default-values"></a>R. Creazione di un set di raccolta utilizzando valori predefiniti  
  Nell'esempio seguente viene creato un set di raccolta specificando solo i parametri obbligatori. `@collection_mode` non è obbligatorio, ma per la modalità di raccolta predefinita (cache) è necessario specificare un ID oppure un nome della pianificazione.  
   
 ```  

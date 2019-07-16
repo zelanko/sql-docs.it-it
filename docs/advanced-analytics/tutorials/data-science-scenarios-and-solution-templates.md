@@ -6,13 +6,12 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 7511e630d88e23faa1f0141529e7425c3da882f1
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: 83c659c3982225221c7ad262af925863c821c5ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645493"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962297"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Scenari di data science e modelli di soluzioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -80,7 +79,7 @@ Ogni soluzione include i dati di esempio, codice R o Python code e le stored pro
 
 [Modello con SQL Server R Services la previsione della domanda di energia](https://gallery.cortanaintelligence.com/Tutorial/Energy-Demand-Forecast-Template-with-SQL-Server-R-Services-1)
 
-**Cosa:**: Previsione della domanda è un problema importante in domini diversi tra cui energia delle vendite al dettaglio e servizi. Previsione della domanda accurata aiuta le aziende condurre produzione migliore pianificazione, l'allocazione delle risorse e prendere altre decisioni aziendali più importanti. Nel settore dell'energia, è fondamentale per ridurre il costo di archiviazione di energia e bilanciamento di domanda e la previsione della domanda.
+**Cosa:** : Previsione della domanda è un problema importante in domini diversi tra cui energia delle vendite al dettaglio e servizi. Previsione della domanda accurata aiuta le aziende condurre produzione migliore pianificazione, l'allocazione delle risorse e prendere altre decisioni aziendali più importanti. Nel settore dell'energia, è fondamentale per ridurre il costo di archiviazione di energia e bilanciamento di domanda e la previsione della domanda.
 
 **Procedura:** Questo modello Usa SQL Server R Services per stimare la domanda di energia elettrica. Il modello utilizzato per la stima è basato su un modello di regressione foresta casuale **rxDForest**, un'ad alte prestazioni algoritmo di machine learning inclusa in Microsoft R Server. La soluzione include un simulatore di domanda, tutto il codice R e T-SQL necessario per il training del modello e le stored procedure da usare per generare le previsioni e includerle in report. 
 

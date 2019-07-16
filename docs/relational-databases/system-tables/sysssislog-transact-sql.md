@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bde0c339b369aaccce107ded51f3b124be3b37f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d837049f36e4f7925f8e62a18987f51235f19c14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489772"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029614"
 ---
 # <a name="sysssislog-transact-sql"></a>sysssislog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,9 +36,9 @@ ms.locfileid: "65489772"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |id|**int**|Identificatore univoco della voce del log.|  
-|evento|**sysname**|Nome dell'evento che ha generato la voce del log.|  
+|event|**sysname**|Nome dell'evento che ha generato la voce del log.|  
 |computer|**nvarchar**|Computer in cui era in esecuzione il pacchetto al momento della generazione della voce del log.|  
-|operatore|**nvarchar**|Nome utente della persona che ha eseguito il pacchetto che ha generato la voce del log.|  
+|operator|**nvarchar**|Nome utente della persona che ha eseguito il pacchetto che ha generato la voce del log.|  
 |source|**nvarchar**|Nome del file eseguibile nel pacchetto che ha generato la voce del log.|  
 |sourceid|**uniqueidentifier**|GUID del file eseguibile nel pacchetto che ha generato la voce del log.|  
 |executionid|**uniqueidentifier**|GUID dell'istanza di esecuzione del file eseguibile che ha generato la voce del log.|  

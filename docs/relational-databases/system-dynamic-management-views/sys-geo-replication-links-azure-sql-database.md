@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: cd552d357284ce6fefd85df43baa38ad52ebb310
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: 6e768f447cd53321861eae91bbe40e2e34ad12f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716643"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043156"
 ---
 # <a name="sysgeoreplicationlinks-azure-sql-database"></a>sys.geo_replication_links (database SQL di Azure)
 
@@ -43,7 +42,7 @@ ms.locfileid: "67716643"
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
 |role|**tinyint**|Ruolo replica geografica, uno di:<br /><br /> 0 = database primario. Il database_id fa riferimento al database primario nella relazione di replica geografica.<br /><br /> 1 = database secondario.  Il database_id fa riferimento al database primario nella relazione di replica geografica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
-|secondary_allow_connections|**tinyint**|Tipo secondario, uno di:<br /><br /> 0 = No. Il database secondario non accessibile fino al failover.<br /><br /> 1 = ReadOnly. Il database secondario è accessibile solo per le connessioni client con ApplicationIntent = ReadOnly.<br /><br /> 2 = Tutte. Il database secondario è accessibile da qualsiasi connessione client.|  
+|secondary_allow_connections|**tinyint**|Tipo secondario, uno di:<br /><br /> 0 = No. Il database secondario non accessibile fino al failover.<br /><br /> 1 = sola lettura. Il database secondario è accessibile solo per le connessioni client con ApplicationIntent = ReadOnly.<br /><br /> 2 = Tutte. Il database secondario è accessibile da qualsiasi connessione client.|  
 |DESC secondary_allow_connections|**nvarchar(256)**|No<br /><br /> Tutti<br /><br /> Sola lettura|  
   
 ## <a name="permissions"></a>Permissions

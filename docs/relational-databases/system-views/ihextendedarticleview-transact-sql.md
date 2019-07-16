@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7bc5734c0c8bed79516d94b96e7c6060e3650066
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0abca8ca826ec986a9cbf71f4fb577291e095e39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771403"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029539"
 ---
 # <a name="ihextendedarticleview-transact-sql"></a>IHextendedArticleView (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "52771403"
 |**status**|**tinyint**|Maschera di bit delle opzioni e dello stato dell'articolo, che può corrispondere al risultato dell'applicazione dell'operatore OR logico bit per bit a uno o più dei valori seguenti:<br /><br /> **1** = articolo è attivo.<br /><br /> **8** = Include il nome della colonna nelle istruzioni INSERT.<br /><br /> **16** = utilizza istruzioni con parametrizzata.<br /><br /> **24** = entrambi includono il nome della colonna nelle istruzioni INSERT e utilizza istruzioni con parametri.<br /><br /> Ad esempio, un articolo attivo che utilizza istruzioni con parametri potrebbe disporre di un valore **17** in questa colonna. Un valore pari **0** significa che l'articolo è inattivo e proprietà aggiuntive non definite.|  
 |**type**|**tinyint**|Tipo di articolo:<br /><br /> **1** = articolo basato su log.<br /><br /> **3** = articolo basato su log con filtro manuale.<br /><br /> **5** = articolo basato su log con vista manuale.<br /><br /> **7** = articolo basato su log con filtro manuale e vista manuale.|  
 |**upd_cmd**|**nvarchar(255)**|Comando eseguito per un'operazione UPDATE.|  
-|**schema_option**|**binary**|Specifica gli elementi da inserire nello script. Visualizzare [sp_addarticle &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) per un elenco delle opzioni dello schema supportate.|  
+|**schema_option**|**binary**|Indica ciò che viene inserita nello script. Visualizzare [sp_addarticle &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) per un elenco delle opzioni dello schema supportate.|  
 |**dest_owner**|**sysname**|Proprietario dell'oggetto pubblicato nel database di destinazione.|  
   
 ## <a name="see-also"></a>Vedere anche  

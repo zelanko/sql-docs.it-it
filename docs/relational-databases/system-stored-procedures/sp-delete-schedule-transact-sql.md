@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 257e91babf98fcbd7a2a54e8b9d14134a7446d6b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7a2a4e8a7cf58f8c4519d15ae46e2b278fcd1383
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537839"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008950"
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  Per impostazione predefinita, una pianificazione non può essere eliminata se è associata a un processo. Per eliminare una pianificazione collegata a un processo, specificare il valore **1** per *force_delete*. L'eliminazione di una pianificazione non comporta l'arresto dei processi in esecuzione.  
@@ -77,7 +76,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-deleting-a-schedule"></a>A. Eliminazione di una pianificazione  
+### <a name="a-deleting-a-schedule"></a>R. Eliminazione di una pianificazione  
  Nell'esempio seguente viene eliminata la pianificazione `NightlyJobs`. Se è associata a un processo qualsiasi, la pianificazione non verrà eliminata.  
   
 ```  

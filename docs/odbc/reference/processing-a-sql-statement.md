@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: edf912bf3b8073a05dd900cd00511715020ee0c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dfbf23f0be369ae540dac33d33a3e3c1505d5ebe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63045502"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076286"
 ---
 # <a name="processing-a-sql-statement"></a>Elaborazione di un'istruzione SQL
 Prima di illustrare le tecniche per l'utilizzo a livello di codice SQL, è necessario discutere le modalità di elaborazione di un'istruzione SQL. I passaggi necessari sono comuni a tutte le tre tecniche, anche se ogni tecnica vengono eseguite in momenti diversi. Nella figura seguente vengono illustrati i passaggi coinvolti nell'elaborazione di un'istruzione SQL, che sono illustrati nella parte restante di questa sezione.  

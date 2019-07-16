@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6900c60b788c30cadd404cc2d687cf7993aa119c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b08de0ce5acde863d8f2683b9bc8d6f38c2fa4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62507309"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108636"
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ \@name = ] N'*plan_guide_name*'  
+ [ \@name =] N'*plan_guide_name*'  
  Nome della guida di piano. I nomi delle guide di piano vengono definiti a livello dell'ambito del database corrente. *plan_guide_name* devono essere conformi alle regole relative [identificatori](../../relational-databases/databases/database-identifiers.md) e non può iniziare con il simbolo di cancelletto (#). La lunghezza massima del *plan_guide_name* è 124 caratteri.  
   
  [ \@stmt = ] N'*statement_text*'  
@@ -72,7 +71,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  TEMPLATE  
  Indica che la Guida di piano corrisponde a qualsiasi query che Parametrizza il form indicato nella *statement_text*. Se viene specificato di modello, solo il PARAMETERIZATION {FORCED | Hint di query semplice} possono essere specificati nel \@gli hint di parametro. Per altre informazioni sulle guide di piano TEMPLATE, vedere [specificare parametrizzazione delle Query per le guide di piano utilizzando](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
   
- [\@module_or_batch =]{ N'[ *schema_name*. ] *object_name*' | N'*batch_text*' | NULL}  
+ [\@module_or_batch =] {N'[ *schema_name*. ] *object_name*' | N'*batch_text*' | NULL}  
  Specifica il nome dell'oggetto in cui *statement_text* viene visualizzata, o il testo del batch in cui *statement_text* viene visualizzata. Il testo del batch non può includere un uso*database* istruzione.  
   
  Per una Guida di piano corrisponda a un batch sottomesso da un'applicazione *batch_tex*t deve essere specificato nello stesso formato, carattere per carattere, così come viene inviato a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per semplificare questa corrispondenza, non viene eseguita alcuna conversione interna. Per altre informazioni, vedere la sezione Osservazioni.  
@@ -89,7 +88,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  *\@data_type parameter_name* devono essere specificati nello stesso formato con cui è stato sottomesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'utilizzo di sp_executesql oppure inviandolo internamente dopo la parametrizzazione. Per altre informazioni, vedere la sezione Osservazioni. Se il batch non include parametri, è necessario specificare NULL. Le dimensioni di \@params è limitata solo dalla memoria disponibile del server.  
   
  [\@hints = ]{ N'OPTION (*query_hint* [ , *...n* ] )' | N'*XML_showplan*' | NULL }  
- N'OPTION (*query_hint* [ , *...n* ] )  
+ N'Option (*query_hint* [, *... n* ])  
  Specifica una clausola OPTION da associare a una query che corrisponde a \@istr. \@hint deve essere sintatticamente identica a una clausola OPTION in un'istruzione SELECT e può contenere qualsiasi sequenza valida di hint per la query.  
   
  N'*XML_showplan*'  
@@ -147,7 +146,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-plan-guide-of-type-object-for-a-query-in-a-stored-procedure"></a>A. Creazione di una guida di piano di tipo OBJECT per una query in una stored procedure  
+### <a name="a-creating-a-plan-guide-of-type-object-for-a-query-in-a-stored-procedure"></a>R. Creazione di una guida di piano di tipo OBJECT per una query in una stored procedure  
  Nell'esempio seguente viene creata una guida di piano corrispondente a una query eseguita nel contesto di una stored procedure basata sull'applicazione e alla query viene applicato l'hint `OPTIMIZE FOR`.  
   
  Di seguito è riportata la stored procedure:  

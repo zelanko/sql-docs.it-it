@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc104efc9700e5f45bae3a95d9ac412586feca86
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 95569262bc55da45390705486871a73f0eb5f5ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67579635"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027113"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>Definizione di funzioni booleane in query XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "67579635"
   
 ## <a name="examples"></a>Esempi  
   
-## <a name="a-specify-the-not-boolean-function"></a>A. Definizione della funzione booleana not()  
+## <a name="a-specify-the-not-boolean-function"></a>R. Definizione della funzione booleana not()  
  Questa query restituisce tutti i  **\<cliente >** elementi figlio del nodo di contesto che non hanno  **\<ordine >** gli elementi figlio:  
   
 ```  

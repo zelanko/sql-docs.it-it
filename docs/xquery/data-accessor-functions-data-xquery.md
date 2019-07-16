@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6ac37c6d3a55be4f11a4ad925a950724d5d791d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7376c57f809fa97168b27b158678d931a696b5df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62934836"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038975"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>Funzioni di accesso dati - data (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ select @x.query('data(<SomeNode>value</SomeNode>)')
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
   
-### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>A. Utilizzo della funzione XQuery data() per estrarre il valore tipizzato di un nodo  
+### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>R. Utilizzo della funzione XQuery data() per estrarre il valore tipizzato di un nodo  
  La query seguente viene illustrato come la **data ()** funzione viene utilizzata per recuperare i valori di attributo, un elemento e un nodo di testo:  
   
 ```  

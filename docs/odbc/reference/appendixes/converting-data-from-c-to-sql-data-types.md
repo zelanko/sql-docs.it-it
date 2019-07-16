@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 168fa55d89488277cd17f4bdca3105f7d879c8f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aca333a6f3006b1f12cf44d1670e38556027e476
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224667"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019125"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Conversione di dati da C ai tipi di dati SQL
 Quando un'applicazione chiama **SQLExecute** oppure **SQLExecDirect**, il driver può recuperare i dati per i parametri associati con **SQLBindParameter** nei percorsi di archiviazione in l'applicazione. Quando un'applicazione chiama **SQLSetPos**, il driver recupera i dati per un aggiornamento o l'aggiunta di operazione da colonne associate **SQLBindCol**. Per i parametri data-at-execution, l'applicazione invia i dati del parametro con **SQLPutData**. Se necessario, il driver converte i dati dal tipo di dati specificato dal *ValueType* argomento nella **SQLBindParameter** al tipo di dati specificato da di *ParameterType*nell'argomento **SQLBindParameter**e quindi invia i dati all'origine dati.  
@@ -60,7 +59,7 @@ Quando un'applicazione chiama **SQLExecute** oppure **SQLExecDirect**, il driver
   
 -   [C a SQL: Carattere](../../../odbc/reference/appendixes/c-to-sql-character.md)  
   
--   [C a SQL: Numeric](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
+-   [C a SQL: Numerico](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
   
 -   [C a SQL: Bit](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
   

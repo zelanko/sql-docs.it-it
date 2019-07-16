@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cd8520a26b28c16876163cf8f2c0f7a57b3c33ad
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0a4e0e62121d289f9eb897c79abb2991a57890a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136031"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043055"
 ---
 # <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce una riga per ciascuna modifica applicata alla tabella di origine all'interno dell'intervallo del numero di sequenza del file di log (LSN) specificato. Se a una riga di origine vengono applicate più modifiche durante l'intervallo, ogni modifica è riportata nel set di risultati restituito. Oltre alla restituzione dei dati delle modifiche, quattro colonne di metadati forniscono le informazioni necessarie per applicare le modifiche a un'altra origine dati. Al contenuto delle colonne dei metadati e alle righe restituite nel set di risultati vengono applicate le opzioni di filtro di riga. Quando è specificata l'opzione di filtro di riga 'all', per l'identificazione di ogni modifica è disponibile esattamente una riga. Quando è specificata l'opzione 'all update old', le operazioni di aggiornamento sono rappresentate su due righe: una contiene i valori delle colonne acquisite prima dell'aggiornamento e l'altra contiene i valori delle colonne acquisite dopo l'aggiornamento.  
   
- Questa funzione di enumerazione viene creata nel momento in cui una tabella di origine è abilitata per Change Data Capture. Il nome della funzione è derivato e utilizza il formato **CDC. fn_cdc_get_all_changes _**_capture_instance_ in cui *capture_instance* è il valore specificato per l'acquisizione istanza quando la tabella di origine è abilitata per change data capture.  
+ Questa funzione di enumerazione viene creata nel momento in cui una tabella di origine è abilitata per Change Data Capture. Il nome della funzione è derivato e utilizza il formato **CDC. fn_cdc_get_all_changes _** _capture_instance_ in cui *capture_instance* è il valore specificato per l'acquisizione istanza quando la tabella di origine è abilitata per change data capture.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,16 +46,16 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>Argomenti  
  *from_lsn*  
- Valore LSN che rappresenta l'endpoint inferiore dell'intervallo LSN da includere nel set di risultati. *from_lsn* viene **binary(10)**.  
+ Valore LSN che rappresenta l'endpoint inferiore dell'intervallo LSN da includere nel set di risultati. *from_lsn* viene **binary(10)** .  
   
  Solo le righe di [cdc.&#91; capture_instance&#93;CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) con un valore nella tabella delle modifiche **_ $start_lsn** maggiore o uguale a *from_lsn* sono inclusi nel set di risultati.  
   
  *to_lsn*  
- Valore LSN che rappresenta l'endpoint superiore dell'intervallo LSN da includere nel set di risultati. *to_lsn* viene **binary(10)**.  
+ Valore LSN che rappresenta l'endpoint superiore dell'intervallo LSN da includere nel set di risultati. *to_lsn* viene **binary(10)** .  
   
  Solo le righe di [cdc.&#91; capture_instance&#93;CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) con un valore nella tabella delle modifiche **_ $start_lsn** minore o uguale a *from_lsn* o uguale a *to_lsn* sono inclusi nel set di risultati.  
   
- <row_filter_option> ::= { all | all update old }  
+ < row_filter_option >:: = {tutte | tutti i aggiornamento precedente}  
  Opzione applicata al contenuto delle colonne dei metadati e alle righe restituite nel set di risultati.  
   
  Le opzioni possibili sono le seguenti:  
@@ -83,7 +82,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="remarks"></a>Note  
  Se l'intervallo LSN specificato è esterno alla cronologia di rilevamento delle modifiche per l'istanza di acquisizione, la funzione restituisce l'errore 208 ("Numero di argomenti insufficienti per la procedura o la funzione cdc.fn_cdc_get_all_changes").  
   
- Colonne di tipo di dati **immagine**, **testo**, e **ntext** viene sempre assegnato un valore NULL valore quando **_ $operation** = 1 o **_ $ operazione** = 3. Colonne di tipo di dati **varbinary (max)**, **varchar (max)**, o **nvarchar (max)** vengono assegnati un NULL valore quando **_ $operation** = 3 a meno che la colonna modificata durante l'aggiornamento. Quando **_ $operation** = 1, queste colonne vengono assegnate i rispettivi valori al momento dell'eliminazione. Le colonne calcolate incluse in un'istanza di acquisizione hanno sempre un valore NULL.  
+ Colonne di tipo di dati **immagine**, **testo**, e **ntext** viene sempre assegnato un valore NULL valore quando **_ $operation** = 1 o **_ $ operazione** = 3. Colonne di tipo di dati **varbinary (max)** , **varchar (max)** , o **nvarchar (max)** vengono assegnati un NULL valore quando **_ $operation** = 3 a meno che la colonna modificata durante l'aggiornamento. Quando **_ $operation** = 1, queste colonne vengono assegnate i rispettivi valori al momento dell'eliminazione. Le colonne calcolate incluse in un'istanza di acquisizione hanno sempre un valore NULL.  
   
 ## <a name="examples"></a>Esempi  
  Diversi [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sono disponibili modelli che illustrano come usare le funzioni di query di change data capture. Questi modelli sono disponibili nel **View** dal menu [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Per altre informazioni, vedere [Esplora modelli](../../ssms/template/template-explorer.md).  

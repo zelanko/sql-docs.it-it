@@ -1,5 +1,5 @@
 ---
-title: 'Panoramica: Importazione di dati da tabelle (Master Data Services) | Microsoft Docs'
+title: Panoramica Importazione di dati da tabelle (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e32932bff030fd187349c4b2c7adcaf65aed304f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45dcf3f21a87d81289d6445014f4157db4ab8e67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489596"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097385"
 ---
-# <a name="overview-importing-data-from-tables-master-data-services"></a>Panoramica: Importazione di dati da tabelle (Master Data Services)
+# <a name="overview-importing-data-from-tables-master-data-services"></a>Panoramica Importazione di dati da tabelle (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

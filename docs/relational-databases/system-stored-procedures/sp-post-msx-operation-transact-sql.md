@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f36ad40a2b16401218fe2a5927407464fe6ac11b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 93e9c574346ad57a6947645552616cd8db46fe85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536127"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056376"
 ---
 # <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @operation = ] 'operation'` Il tipo di operazione per l'operazione da richiedere. *operazione*viene **varchar(64)**, non prevede alcun valore predefinito. Operazioni valide dipendono *object_type*.  
+`[ @operation = ] 'operation'` Il tipo di operazione per l'operazione da richiedere. *operazione*viene **varchar(64)** , non prevede alcun valore predefinito. Operazioni valide dipendono *object_type*.  
   
 |Tipo oggetto|Operazione|  
 |-----------------|---------------|  
@@ -54,11 +53,11 @@ sp_post_msx_operation
 |**SERVER**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**PIANIFICAZIONE**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
   
-`[ @object_type = ] 'object'` Il tipo di oggetto per cui si desidera richiedere un'operazione. I tipi validi sono **processo**, **SERVER**, e **pianificazione**. *oggetto* viene **varchar(64)**, il valore predefinito è **processo**.  
+`[ @object_type = ] 'object'` Il tipo di oggetto per cui si desidera richiedere un'operazione. I tipi validi sono **processo**, **SERVER**, e **pianificazione**. *oggetto* viene **varchar(64)** , il valore predefinito è **processo**.  
   
 `[ @job_id = ] job_id` Il numero di identificazione del processo a cui viene applicata l'operazione. *job_id* viene **uniqueidentifier**, non prevede alcun valore predefinito. **0x00** indica tutti i processi. Se *oggetti* viene **SERVER**, quindi *job_id*non è obbligatorio.  
   
-`[ @specific_target_server = ] 'target_server'` Il nome del server di destinazione per il quale si applica l'operazione specificata. Se *job_id* è specificato, ma *target_server* viene omesso, le operazioni vengono richieste per tutti i server del processo del processo. *target_server* viene **nvarchar(30)**, con un valore predefinito è NULL.  
+`[ @specific_target_server = ] 'target_server'` Il nome del server di destinazione per il quale si applica l'operazione specificata. Se *job_id* è specificato, ma *target_server* viene omesso, le operazioni vengono richieste per tutti i server del processo del processo. *target_server* viene **nvarchar(30)** , con un valore predefinito è NULL.  
   
 `[ @value = ] value` L'intervallo di polling in secondi. *value* è **int**e il valore predefinito è NULL. Specificare questo parametro solo se *operazione* viene **SET-POLL**.  
   
@@ -68,7 +67,7 @@ sp_post_msx_operation
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  **SP_POST_MSX_OPERATION** deve essere eseguita la **msdb** database.  

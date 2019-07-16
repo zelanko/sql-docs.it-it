@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cdfebdf5-12ff-4e28-8055-41f49b77f664
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a16262d562ca2088f38cd863a6f44e537e65d40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1eaa07ce22436bc8bfae215c0431480081ee0f06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63254213"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086356"
 ---
 # <a name="multithreading"></a>Multithreading
 Nei sistemi operativi con multithreading, i driver devono essere thread-safe. Vale a dire, deve essere possibile usare lo stesso handle su più thread delle applicazioni. Come si ottiene questo risultato è specifico del driver ed è probabile che i driver serializzerà qualsiasi tentativo di utilizzare contemporaneamente lo stesso handle su due thread diversi.  

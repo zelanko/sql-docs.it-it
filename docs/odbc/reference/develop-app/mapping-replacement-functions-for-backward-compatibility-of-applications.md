@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 099fd0ff318a77f1f1916395fbd13087ab8ba18b
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 45cec32e818eab1ec5586196eadef998b8f988ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036395"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Mapping di funzioni di sostituzione per la compatibilità con le versioni precedenti delle applicazioni
 Un database ODBC *3.x* applicazione funziona tramite ODBC *3.x* gestione Driver funzionerà con un database ODBC *2.x* driver fino a quando non nuove funzionalità vengono usati. Entrambi duplicati funzionalità e modifiche del comportamento, tuttavia, hanno effetto che ODBC *3.x* funzionamento dell'applicazione in un database ODBC *2.x* driver. Quando si lavora con un database ODBC *2.x* driver, gestione Driver ODBC seguenti esegue il mapping *3.x* funzioni, che sono sostituiti ODBC uno o più *2.x* funzioni, nel ODBC corrispondente *2.x* funzioni.  
@@ -46,7 +45,7 @@ Un database ODBC *3.x* applicazione funziona tramite ODBC *3.x* gestione Driver 
   
  [1] altre azioni potrebbero anche essere eseguite, a seconda dell'attributo richiesto.  
   
-## <a name="sqlallochandle"></a>SQLAllocHandle  
+## <a name="sqlallochandle"></a>Funzione SQLAllocHandle  
  Gestione Driver esegue il mapping a **SQLAllocEnv**, **SQLAllocConnect**, o **SQLAllocStmt**, nel modo appropriato. La chiamata seguente a **SQLAllocHandle**:  
   
 ```  
@@ -453,8 +452,8 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |------------|-----------|  
 |ColumnName|"" (stringa vuota)|  
 |*NameLengthPtr|0|  
-|*DataTypePtr|SQL_BINARY|  
-|*ColumnSizePtr|4|  
+|\* DataTypePtr|SQL_BINARY|  
+|\* ColumnSizePtr|4|  
 |\* DecimalDigitsPtr|0|  
 |*NullablePtr|SQL_NO_NULLS|  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7d6981879f08b65c334eae9cd81e73223bc353bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5868120af1e98c4b2f3be78f2cf7927df53b42d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724571"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072658"
 ---
 # <a name="spaddlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_addlogin [ @loginame = ] 'login'
  [ @loginame=] '*login*'  
  Nome dell'account di accesso. *account di accesso* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ @passwd=] '*password*'  
+ [ @passwd= ] '*password*'  
  Password dell'account di accesso. *la password* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!IMPORTANT]  
@@ -68,14 +67,14 @@ sp_addlogin [ @loginame = ] 'login'
  Lingua predefinita dell'account di accesso. *linguaggio* viene **sysname**, con un valore predefinito è NULL. Se *language* non viene specificato, il valore predefinito *language* del nuovo account di accesso è impostato sulla lingua predefinita corrente del server.  
   
  [ @sid=] '*sid*'  
- ID di sicurezza (SID, Security Identification Number). *SID* viene **varbinary(16)**, con un valore predefinito è NULL. Se *sid* è NULL, il sistema genera un SID per il nuovo account di accesso. Nonostante l'uso di un **varbinary** tipo di dati, valori diversi da NULL devono contenere esattamente 16 byte di lunghezza e non deve essere già presente. Che specifica *sid* è utile, ad esempio, durante la creazione di script o lo spostamento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli account di accesso da un server a un altro e si desidera che gli account di accesso per avere lo stesso SID in server diversi.  
+ ID di sicurezza (SID, Security Identification Number). *SID* viene **varbinary(16)** , con un valore predefinito è NULL. Se *sid* è NULL, il sistema genera un SID per il nuovo account di accesso. Nonostante l'uso di un **varbinary** tipo di dati, valori diversi da NULL devono contenere esattamente 16 byte di lunghezza e non deve essere già presente. Che specifica *sid* è utile, ad esempio, durante la creazione di script o lo spostamento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli account di accesso da un server a un altro e si desidera che gli account di accesso per avere lo stesso SID in server diversi.  
   
  [ @encryptopt=] '*encryption_option*'  
- Specifica se la password viene passata in forma non crittografata o come hash della password non crittografata. Si noti che non viene applicata alcuna crittografia. Le parole "crittografia" ed "encryption" vengono utilizzate in questa descrizione per compatibilità con le versioni precedenti. Se la password viene passata in forma non crittografata, per la password viene eseguito l'hashing. Il valore hash viene archiviato. *encryption_option* viene **varchar (20)**, e può essere uno dei valori seguenti.  
+ Specifica se la password viene passata in forma non crittografata o come hash della password non crittografata. Si noti che non viene applicata alcuna crittografia. Le parole "crittografia" ed "encryption" vengono utilizzate in questa descrizione per compatibilità con le versioni precedenti. Se la password viene passata in forma non crittografata, per la password viene eseguito l'hashing. Il valore hash viene archiviato. *encryption_option* viene **varchar (20)** , e può essere uno dei valori seguenti.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
-|NULL|La password viene passata in forma non crittografata. Impostazione predefinita.|  
+|NULL|La password viene passata in forma non crittografata. Questa è l'impostazione predefinita.|  
 |**della procedura skip_encryption**|Per la password è già stato eseguito l'hashing. [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve archiviare il valore senza ripetere l'hashing.|  
 |**procedura skip_encryption_old**|Per la password specificata è stato eseguito l'hashing con una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve archiviare il valore senza ripetere l'hashing. Questa opzione è disponibile solo in funzione delle operazioni di aggiornamento.|  
   
@@ -97,7 +96,7 @@ sp_addlogin [ @loginame = ] 'login'
   
  Nella tabella seguente sono elencate varie stored procedure utilizzate in combinazione con sp_addlogin.  
   
-|Stored procedure|Description|  
+|Stored procedure|Descrizione|  
 |----------------------|-----------------|  
 |[sp_grantlogin](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)|Aggiunge un utente o un gruppo di Windows.|  
 |[sp_password](../../relational-databases/system-stored-procedures/sp-password-transact-sql.md)|Modifica la password di un utente.|  
@@ -109,7 +108,7 @@ sp_addlogin [ @loginame = ] 'login'
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-sql-server-login"></a>A. Creazione di un account di accesso di SQL Server  
+### <a name="a-creating-a-sql-server-login"></a>R. Creazione di un account di accesso di SQL Server  
  Nell'esempio seguente viene creato un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'utente `Victoria` con la password `B1r12-36`, senza specificare un database predefinito.  
   
 ```  

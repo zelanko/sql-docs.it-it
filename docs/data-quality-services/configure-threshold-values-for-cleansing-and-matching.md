@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 6c89f673f7fae82c451021724c07db8b66239e32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1cf5a91891323083266ac76bb041485bf0104234
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66793871"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992316"
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching"></a>Configurazione dei valori soglia per le attività di pulizia e di individuazione delle corrispondenze
 
@@ -53,6 +52,6 @@ ms.locfileid: "66793871"
   
 5.  Per specificare il valore soglia per l'attività di individuazione delle corrispondenze, specificare un valore nella casella **Punteggio record minimo** nell'area **Corrispondenza** . Questo valore rappresenta il punteggio minimo per considerare un record come corrispondenza per un altro record. Il valore predefinito è 80.  
   
-6.  Scegliere **Chiudi**.  
+6.  Fare clic su **Chiudi**.  
   
   

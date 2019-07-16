@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b5e0086-156d-471d-8e7f-6c5fa9686cd5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5efbd7e98b430128e52634f5c7d71597afc89ace
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54900f00e03e1f236baf0b6eef152081b1f384a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997741"
 ---
 # <a name="set-deleted-command"></a>SET DELETED (comando)
 Specifica se vengono elaborati i record contrassegnati per l'eliminazione e se sono disponibili per l'uso in altri comandi.  

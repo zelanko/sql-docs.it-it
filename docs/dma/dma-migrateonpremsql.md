@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-manager: jroth
-ms.openlocfilehash: f424e8e799c7550ff426a7b4c2a2022fe4b0c4bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8366b04be48df3e47e9c6d531738ebebfee45da0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058818"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>Eseguire l'aggiornamento in SQL Server locale a SQL Server o SQL Server in macchine virtuali di Azure usando Data Migration Assistant
 
@@ -50,7 +49,7 @@ Questo articolo vengono fornite istruzioni dettagliate per l'aggiornamento di SQ
 
 5. È consigliabile crittografare la connessione selezionando **Encrypt connection** nel **delle proprietà di connessione** sezione.
 
-6. Scegliere **Avanti**.
+6. Fare clic su **Avanti**.
 
    ![Pagina di origine e di destinazione specifica](../dma/media/SourceTarget.png)
 
@@ -83,7 +82,7 @@ Questo articolo vengono fornite istruzioni dettagliate per l'aggiornamento di SQ
 
 Data Migration Assistant esegue le convalide di cartelle di backup, dati e file di log. Se qualsiasi convalida non riesce, correggere le opzioni e quindi selezionare **successivo**.
 
-## <a name="select-logins"></a>Selezionare gli account di accesso
+## <a name="select-logins"></a>Seleziona account di accesso
 
 1. Selezionare un account di accesso specifici per la migrazione.
 

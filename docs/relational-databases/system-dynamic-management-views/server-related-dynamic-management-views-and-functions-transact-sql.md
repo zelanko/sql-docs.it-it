@@ -11,20 +11,19 @@ dev_langs:
 ms.assetid: d8f4e155-c2fb-4a1f-aa0d-e9790bdab925
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ea8ad2d6b46e3d08b542d327d3881de4b5486ccc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e9b99934a3d931810e29d821ba0124334bac2c12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061902"
 ---
 # <a name="server-related-dynamic-management-views-and-functions-transact-sql"></a>Funzioni a gestione dinamica e DMV correlate al server (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   In questa sezione sono contenute le DMV associate ai servizi SQL Server, Full-text e SQL Server Agent installate nel server host. È possibile utilizzare le viste per restituire le informazioni sulle proprietà per tali servizi. Inoltre, nelle viste sono contenute informazioni relative alla configurazione, all'installazione e ai file di dump della memoria.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 |||  
 |-|-|  

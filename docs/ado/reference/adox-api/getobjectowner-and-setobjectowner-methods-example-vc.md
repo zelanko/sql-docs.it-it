@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c61765f473874a7e5469a52ba87b813dfa09655a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1cf3526681095fd5d1cc1dd67b5dd16061f601b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712141"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966368"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>Esempio dei metodi GetObjectOwner e SetObjectOwner (VC++)
 Questo esempio viene illustrato il [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) e [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) metodi. Questo codice presuppone l'esistenza del gruppo Contabilità (vedere la [i gruppi e utenti di aggiunta, esempio di metodi ChangePassword (VC + +)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) per informazioni su come aggiungere il gruppo al sistema). Il proprietario della tabella delle categorie è impostato su Accounting.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8d68a61a-683f-4b20-92f9-c0a8d9ba0ad1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e5aa95edeb1a947aea517de30efcbbbc3c6c799c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a4be6cffcc7e4f13b88d8037b53d438d604b9650
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750383"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089940"
 ---
 # <a name="msmergecontents-transact-sql"></a>MSmerge_contents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "52750383"
 |**rowguid**|**uniqueidentifier**|Identificatore della riga specificata.|  
 |**generazione**|**bigint**|La generazione della riga identificata per il **tablenick** e **rowguid**.|  
 |**partchangegen**|**bigint**|Generazione associata all'ultima modifica dei dati che potrebbe aver modificato l'appartenenza della riga a una pubblicazione filtrata.|  
-|**derivazione**|**varbinary(501)**|Coppie di nome alternativo del Sottoscrittore e numero di versione utilizzate per memorizzare una cronologia delle modifiche apportate alla riga.|  
+|**lineage**|**varbinary(501)**|Coppie di nome alternativo del Sottoscrittore e numero di versione utilizzate per memorizzare una cronologia delle modifiche apportate alla riga.|  
 |**colvl**|**varbinary(7489)**|Informazioni sulla versione della colonna.|  
 |**marcatore**|**uniqueidentifier**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**logical_record_parent_rowguid**|**uniqueidentifier**|Identifica la riga padre di livello principale nel **MSmerge_contents** (dal **rowguid**) per ogni riga figlio corrispondente in un record logico.|  

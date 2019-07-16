@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8e2f3b1e63578af7c0b42f00113fbb9e87cb8003
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e8478e80ae2ebd19a3e0f2aa8307e0985b2c092d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208427"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043694"
 ---
 # <a name="paradox-data-types"></a>Tipi di dati Paradox
 Il driver ODBC Paradox esegue il mapping di tipi di dati Paradox ai tipi di dati SQL ODBC. Nella tabella seguente sono elencati tutti i tipi di dati Paradox e illustra i tipi di dati a che vengono mappati ODBC SQL.  
   
 |Tipo di dati Paradox|Tipo di dati ODBC|  
 |-----------------------|--------------------|  
-|ALPHANUMERIC|SQL_VARCHAR|  
+|ALFANUMERICO|SQL_VARCHAR|  
 |INCREMENTO AUTOMATICO [1]|SQL_INTEGER|  
 |BCD[1]|SQL_DOUBLE|  
 |BYTES[1]|SQL_BINARY|  
@@ -56,9 +55,9 @@ Il driver ODBC Paradox esegue il mapping di tipi di dati Paradox ai tipi di dati
   
 |Tipo di dati|Descrizione|  
 |---------------|-----------------|  
-|ALPHANUMERIC|Creazione di una colonna ALFANUMERICA pari a zero o di lunghezza non specificata restituisce effettivamente una colonna a 255 byte.|  
+|ALFANUMERICO|Creazione di una colonna ALFANUMERICA pari a zero o di lunghezza non specificata restituisce effettivamente una colonna a 255 byte.|  
 |BYTES|Se si inserisce NULL in una colonna binaria con il driver Paradox5, si viene modificato a 0.|  
 |LONG|Il valore negativo massimo supportato dal driver Paradox per il tipo di dati Long in 5 Paradox. *x* non è -2 ^ 31 (-2147483648), come deve essere dal momento che lungo associato ai dati ODBC digitare SQL_INTEGER. Il valore negativo massimo supportato per Long è effettivamente -2 ^ 31 + 1 (-2147483647).|  
-|timestamp|Quando un valore viene inserito in una colonna TIMESTAMP dal driver Paradox, quindi in seguito recuperato dalla colonna, il valore recuperato può differire dal valore inserito da più di 1 secondo a causa dell'arrotondamento.|  
+|TIMESTAMP|Quando un valore viene inserito in una colonna TIMESTAMP dal driver Paradox, quindi in seguito recuperato dalla colonna, il valore recuperato può differire dal valore inserito da più di 1 secondo a causa dell'arrotondamento.|  
   
  Altre limitazioni sui tipi di dati sono disponibili nel [limitazioni del tipo di dati](../../odbc/microsoft/data-type-limitations.md).

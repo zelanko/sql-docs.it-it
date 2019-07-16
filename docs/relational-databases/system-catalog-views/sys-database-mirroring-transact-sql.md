@@ -1,5 +1,5 @@
 ---
-title: sys.database_mirroring (Transact-SQL) | Microsoft Docs
+title: Sys. DATABASE_MIRRORING (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bea7712fd4efa1934117937a5168843d727d0dc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 515f3dad1f07535a5d0c8e590adadce0923180db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62693909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022755"
 ---
 # <a name="sysdatabasemirroring-transact-sql"></a>sys.database_mirroring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ ms.locfileid: "62693909"
 |**mirroring_failover_lsn**|**numeric(25,0)**|Numero di sequenza del file di log (LSN) del record del log delle transazioni più recente di cui è certo il salvataggio sul disco per entrambi i partner. Dopo un failover, il **mirroring_failover_lsn** viene usato dai partner come punto di riconciliazione in corrispondenza del quale il nuovo server mirror inizia la sincronizzazione del nuovo database mirror con il nuovo database principale.|  
 |**mirroring_connection_timeout**|**int**|Timeout della connessione per il mirroring, espresso in secondi. Numero di secondi di attesa della risposta da parte di un partner o del server di controllo del mirroring prima che venga considerato non disponibile. Il valore di timeout predefinito è di 10 secondi.<br /><br /> NULL = Database inaccessibile o non sottoposto a mirroring.|  
 |**mirroring_redo_queue**|**int**|Quantità massima del log di cui il database mirror esegue il rollforward. Se mirroring_redo_queue_type è impostato su UNLIMITED, ovvero l'impostazione predefinita, questa colonna è NULL. La colonna è NULL anche se il database non è online.<br /><br /> Negli altri casi la colonna contiene la quantità massima del log espressa in MB. Quando viene raggiunta la quantità massima, il log viene sospeso temporaneamente nel server principale mentre il server mirror si aggiorna. Questa funzionalità limita il tempo di failover.<br /><br /> Per altre informazioni, vedere [Stimare l'interruzione del servizio durante il cambio di ruolo &#40;mirroring del database&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|  
-|**mirroring_redo_queue_type**|**nvarchar(60)**|UNLIMITED indica che il mirroring non impedisce l'esecuzione della coda rollforward. Si tratta dell'impostazione predefinita.<br /><br /> MB per le dimensioni massime della coda rollforward in megabyte. Se le dimensioni della coda sono state specificate in KB o GB, [!INCLUDE[ssDE](../../includes/ssde-md.md)] converte il valore in MB.<br /><br /> Se il database non è online, la colonna è NULL.|  
+|**mirroring_redo_queue_type**|**nvarchar(60)**|UNLIMITED indica che il mirroring non impedisce l'esecuzione della coda rollforward. Questa è l'impostazione predefinita.<br /><br /> MB per le dimensioni massime della coda rollforward in megabyte. Se le dimensioni della coda sono state specificate in KB o GB, [!INCLUDE[ssDE](../../includes/ssde-md.md)] converte il valore in MB.<br /><br /> Se il database non è online, la colonna è NULL.|  
 |**mirroring_end_of_log_lsn**|**numeric(25,0)**|La fine del log locale è stata scaricata sul disco. Ciò è paragonabile al valore LSN dal server mirror (vedere la **mirroring_failover_lsn** colonna).|  
 |**mirroring_replication_lsn**|**numeric(25,0)**|Il valore LSN massimo che la replica può inviare.|  
   

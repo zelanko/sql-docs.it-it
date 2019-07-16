@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 879ee3d55a178e2ef5fc7feca3f6ef475e683a8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57b24ed1096078529e4e46a094737c8b37bf7020
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477172"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092261"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>Finestra di dialogo Filtro (componente aggiuntivo MDS per Excel)
 
@@ -44,10 +43,10 @@ ms.locfileid: "65477172"
 |Nome del controllo|Descrizione|  
 |------------------|-----------------|  
 |attribute|Visualizza un attributo in base al quale si desidera filtrare. Se non è elencato alcun attributo, è perché non sono stati aggiunti attributi.<br /><br /> Nota: È possibile filtrare per gli attributi che non si intendono mostrare nel foglio di lavoro.|  
-|Operatore|Visualizza gli operatori che corrispondono al tipo di attributo selezionato. Per altre informazioni, vedere [Operatori di filtro &#40;Master Data Services&#41;](../../master-data-services/filter-operators-master-data-services.md).|  
+|Operator|Visualizza gli operatori che corrispondono al tipo di attributo selezionato. Per altre informazioni, vedere [Operatori di filtro &#40;Master Data Services&#41;](../../master-data-services/filter-operators-master-data-services.md).|  
 |Criteri|I criteri in base ai quali si desidera filtrare.|  
 |Aggiornare il riepilogo|Quando si usano set di dati di grandi dimensioni, fare clic per aggiornare la sezione **Riepilogo** con i dettagli sulla quantità di dati che verrà caricata.|  
-|Aggiungi|Quando si fa clic su un attributo nella sezione **Colonne** , quindi su **Aggiungi**, un attributo viene aggiunto all'elenco di filtri.|  
+|Aggiunta|Quando si fa clic su un attributo nella sezione **Colonne** , quindi su **Aggiungi**, un attributo viene aggiunto all'elenco di filtri.|  
 |Rimuovi tutto|Rimuove tutti i filtri dall'elenco.|  
 |Rimuovi|Rimuove il filtro selezionato dall'elenco.|  
   

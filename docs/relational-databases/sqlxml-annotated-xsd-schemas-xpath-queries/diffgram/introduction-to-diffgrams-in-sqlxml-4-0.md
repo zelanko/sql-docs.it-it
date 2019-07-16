@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1902d67f-baf3-46e6-a36c-b24b5ba6f8ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c0213344f518139573f5f9b95e71704689a637c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7b232b2a6f6458139236595b2cac29afb54c0099
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073388"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>Introduzione ai DiffGram in SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "56016402"
   
  Il formato DiffGram è costituito dai blocchi seguenti:  
   
- **\<DataInstance>**  
+ **\<DataInstance >**  
  Il nome di questo elemento **DataInstance**, viene usato a scopo esplicativo nella presente documentazione. Se, ad esempio, il DiffGram è stato generato da un set di dati .NET Framework, il valore della **nome** proprietà del set di dati viene utilizzata come nome di questo elemento. Questo blocco contiene tutti i dati rilevanti dopo la modifica, inclusi eventualmente i dati che non sono stati modificati. La logica di elaborazione DiffGram ignora gli elementi in questo blocco per il quale il **diffgr: HasChanges** attributo non è specificato.  
   
  **\<diffgr:before>**  
@@ -60,7 +59,7 @@ ms.locfileid: "56016402"
  Questo blocco facoltativo viene ignorato dalla logica di elaborazione DiffGram.  
   
 ## <a name="diffgram-annotations"></a>Annotazioni DiffGram  
- Queste annotazioni sono definite nello spazio dei nomi DiffGram **"urn: schemas-microsoft-com: xml-diffgram-01"**:  
+ Queste annotazioni sono definite nello spazio dei nomi DiffGram **"urn: schemas-microsoft-com: xml-diffgram-01"** :  
   
  **id**  
  Questo attributo viene utilizzato per abbinare gli elementi nel  **\<prima di >** e il  **\<DataInstance >** blocchi.  
@@ -77,8 +76,8 @@ ms.locfileid: "56016402"
 |Operazione|Descrizione|  
 |---------------|-----------------|  
 |Insert|Un DiffGram indica un'operazione di inserimento quando un elemento viene visualizzato nei  **\<DataInstance >** blocco ma non nel corrispondente  **\<prima >** si blocca e il **diffgr: HasChanges** viene specificato l'attributo (**diffgr: HasChanges = inserito**) sull'elemento. In questo caso, il DiffGram inserisce l'istanza del record specificata nel  **\<DataInstance >** blocco nel database.<br /><br /> Se il **diffgr: HasChanges** attributo non viene specificato, l'elemento viene ignorato dalla logica di elaborazione e viene eseguito alcun inserimento. Per esempi reali, vedere [esempi di DiffGram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).|  
-|Update|Il DiffGram indica un'operazione di aggiornamento quando c'è un elemento nel \<prima di > per cui è disponibile un elemento corrispondente nel blocco la  **\<DataInstance >** blocco (ovvero, entrambi gli elementi hanno un **diffgr: ID** attributo con valore stesso) e il **diffgr: HasChanges** attributo è specificato con il valore **modificato** sull'elemento nel  **\<DataInstance >** blocco.<br /><br /> Se il **diffgr: HasChanges** attributo non viene specificato nell'elemento le  **\<DataInstance >** blocco, viene restituito un errore dalla logica di elaborazione. Per esempi reali, vedere [esempi di DiffGram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).<br /><br /> Se **diffgr: parentId** specificato nella  **\<prima >** block, la relazione padre-figlio degli elementi specificati da **parentID** vengono utilizzati in determinare l'ordine in cui vengono aggiornati i record.|  
-|DELETE|Un DiffGram indica un'operazione di eliminazione quando un elemento viene visualizzato nei  **\<prima di >** blocco ma non nel corrispondente  **\<DataInstance >** blocco. In questo caso, il DiffGram Elimina l'istanza del record specificata nel  **\<prima di >** blocco dal database. Per esempi reali, vedere [esempi di DiffGram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).<br /><br /> Se **diffgr: parentId** specificato nella  **\<prima >** block, la relazione padre-figlio degli elementi specificati da **parentID** vengono utilizzati in determinare l'ordine in cui vengono eliminati i record.|  
+|Aggiorna|Il DiffGram indica un'operazione di aggiornamento quando c'è un elemento nel \<prima di > per cui è disponibile un elemento corrispondente nel blocco la  **\<DataInstance >** blocco (ovvero, entrambi gli elementi hanno un **diffgr: ID** attributo con valore stesso) e il **diffgr: HasChanges** attributo è specificato con il valore **modificato** sull'elemento nel  **\<DataInstance >** blocco.<br /><br /> Se il **diffgr: HasChanges** attributo non viene specificato nell'elemento le  **\<DataInstance >** blocco, viene restituito un errore dalla logica di elaborazione. Per esempi reali, vedere [esempi di DiffGram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).<br /><br /> Se **diffgr: parentId** specificato nella  **\<prima >** block, la relazione padre-figlio degli elementi specificati da **parentID** vengono utilizzati in determinare l'ordine in cui vengono aggiornati i record.|  
+|Eliminare|Un DiffGram indica un'operazione di eliminazione quando un elemento viene visualizzato nei  **\<prima di >** blocco ma non nel corrispondente  **\<DataInstance >** blocco. In questo caso, il DiffGram Elimina l'istanza del record specificata nel  **\<prima di >** blocco dal database. Per esempi reali, vedere [esempi di DiffGram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).<br /><br /> Se **diffgr: parentId** specificato nella  **\<prima >** block, la relazione padre-figlio degli elementi specificati da **parentID** vengono utilizzati in determinare l'ordine in cui vengono eliminati i record.|  
   
 > [!NOTE]  
 >  Non è possibile passare parametri ai DiffGram.  

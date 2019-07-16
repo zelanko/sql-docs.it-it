@@ -1,5 +1,5 @@
 ---
-title: Data Migration Report  (MySQLToSQL) | Microsoft Docs
+title: Report di migrazione dati (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,25 +9,24 @@ ms.topic: conceptual
 ms.assetid: 5524a575-67dd-4ef6-9d17-3412df9b9f9c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: f44ef4421419d3b3dd452fb7fab2e4a8768f1b06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0bb755336e3d26dd54ea1820ed4fdcfab75e757
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183107"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026606"
 ---
 # <a name="data-migration-report--mysqltosql"></a>Report di migrazione dati (MySQLToSQL)
 Il **Report di migrazione dati** verrà visualizzata la finestra di dialogo dopo la migrazione dei dati a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Opzioni  
-**Stato**  
+**Status**  
 Mostra lo stato della migrazione dei dati dall'origine al database di destinazione.  
   
 **From**  
 La tabella di origine.  
   
-**Per**  
+**To**  
 La tabella di destinazione.  
   
 **Numero totale di righe**  

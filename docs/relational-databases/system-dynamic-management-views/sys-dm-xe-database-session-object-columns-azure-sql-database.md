@@ -9,14 +9,13 @@ ms.topic: language-reference
 ms.assetid: 0e6adc54-4d97-4ef0-bf4f-b4538d69f136
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a4a1807adb4d04c3e38332ffd9fe71e874c82233
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0e193f51aef6c01edeb0900956f152dae212434b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035272"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090398"
 ---
 # <a name="sysdmxedatabasesessionobjectcolumns-azure-sql-database"></a>sys.dm_xe_database_session_object_columns (database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "56035272"
 |column_name|**nvarchar(60)**|Nome del valore di configurazione. Non ammette i valori Null.|  
 |column_id|**int**|ID della colonna. Valore univoco all'interno dell'oggetto. Non ammette i valori Null.|  
 |column_value|**nvarchar(2048)**|Valore configurato della colonna. Ammette i valori Null.|  
-|object_type|**nvarchar(60)**|Tipo dell'oggetto.  Non è nullable.object_type è uno di:<br /><br /> evento<br /><br /> target|  
+|object_type|**nvarchar(60)**|Tipo dell'oggetto.  Non è nullable.object_type è uno di:<br /><br /> event<br /><br /> target|  
 |object_name|**nvarchar(60)**|Nome dell'oggetto a cui appartiene la colonna. Non ammette i valori Null.|  
 |object_package_guid|**uniqueidentifier**|GUID del pacchetto che contiene l'oggetto. Non ammette i valori Null.|  
   
