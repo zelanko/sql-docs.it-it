@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d459bafe395a10af75f8c0a721f0a8a08f39b3c6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509679"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208514"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Esecuzione della Distribuzione guidata Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52509679"
   
 -   Fare clic su **avviare** > **di Microsoft SQL Server** > **distribuzione guidata**.  
   
-     oppure  
+     -oppure-  
   
 -   Nel **progetti** cartella del [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] del progetto, fare doppio clic su di \<nome progetto > file con estensione asdatabase.
     > [!NOTE]  

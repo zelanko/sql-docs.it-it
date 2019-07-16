@@ -1,5 +1,5 @@
 ---
-title: Le formule di convalida incrociata | Documenti Microsoft
+title: Formule per la convalida incrociata | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4776dffb30382c58ceb63ec0c2b55f8e4fcb42a4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014968"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210125"
 ---
 # <a name="cross-validation-formulas"></a>Formule per la convalida incrociata
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34014968"
 ## <a name="formulas-used-for-cross-validation-measures"></a>Formule utilizzate per le misure di convalida incrociata  
   
 > [!NOTE]  
->  **Importante:** queste misure di accuratezza vengono calcolate per ogni attributo di destinazione. Per ogni attributo è possibile specificare o omettere un valore di destinazione. Se un case nel set di dati non dispone di alcun valore per l'attributo di destinazione, il case viene trattato come se avesse un valore speciale denominato *valore mancante*. Le righe associate a valori mancanti non vengono conteggiate durante il calcolo della misura di accuratezza per un attributo di destinazione specifico. Si noti che poiché i punteggi vengono calcolati singolarmente per ogni attributo, se i valori sono presenti per l'attributo di destinazione, ma mancanti per altri attributi, questa situazione non influisce sul punteggio per l'attributo di destinazione.  
+>  **Importante:** Queste misure di accuratezza vengono calcolate per ogni attributo di destinazione. Per ogni attributo è possibile specificare o omettere un valore di destinazione. Se un case nel set di dati non dispone di alcun valore per l'attributo di destinazione, il case viene trattato come se avesse un valore speciale denominato *valore mancante*. Le righe associate a valori mancanti non vengono conteggiate durante il calcolo della misura di accuratezza per un attributo di destinazione specifico. Si noti che poiché i punteggi vengono calcolati singolarmente per ogni attributo, se i valori sono presenti per l'attributo di destinazione, ma mancanti per altri attributi, questa situazione non influisce sul punteggio per l'attributo di destinazione.  
   
 |Misura|Si applica a|Implementazione|  
 |-------------|----------------|--------------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "34014968"
 |**Radice errore quadratico medio**|Attributo discreto, nessuna destinazione specificata.|Radice quadrata della media dei quadrati di complemento del punteggio di probabilità, divisa per il numero di case nella partizione, esclusi i case con valori mancanti per l'attributo di destinazione.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Test e convalida & #40; Data Mining & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
- [La convalida incrociata & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
+ [Test e convalida &#40;Data mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
+ [Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
   
   

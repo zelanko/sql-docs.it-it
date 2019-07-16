@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b00fecf6712d8ab1d4ba8b810485af6d432479ac
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147271"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209135"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Compilare progetti di Analysis Services (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "50147271"
   
  Se la convalida ha esito positivo, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] vengono generati i file XML. Al termine della compilazione, la cartella di output contiene i file descritti nella tabella seguente.  
   
-|File (nella cartella bin)|Description|  
+|File (nella cartella bin)|Descrizione|  
 |-----------------------------|-----------------|  
 |*Nomeprogetto*.asdatabase|Contiene gli elementi ASSL che definiscono i metadati per gli oggetti nel progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] all'interno di un file di script di distribuzione. Questo file viene usato dal motore di distribuzione per distribuire gli oggetti in un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |*Nomeprogetto*.configsettings|Contiene le impostazioni di configurazione usate durante la distribuzione, che possono essere modificate direttamente oppure usando la Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ad esempio, la stringa di connessione per le origini dati).|  
@@ -46,7 +46,7 @@ ms.locfileid: "50147271"
 |*Nomeprogetto*.deploymentoptions|Contiene diverse impostazioni di opzioni usate durante la distribuzione, che possono essere modificate direttamente oppure usando la Distribuzione guidata [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ad esempio, i percorsi di archiviazione).|  
 |*Nomeassembly*/*nomedll*.dll|Cartelle separate per ogni assembly a cui viene fatto riferimento, ognuna delle quali contiene la DLL per l'assembly, qualsiasi assembly di riferimento e qualsiasi file con estensione pdb associato per le informazioni di debug dell'output.|  
   
-|File (nella cartella obj)|Description|  
+|File (nella cartella obj)|Descrizione|  
 |-----------------------------|-----------------|  
 |\<Nome configurazione > \LastBuilt.xml|Contiene il timestamp e il codice hash che identificano l'ultima compilazione del progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   

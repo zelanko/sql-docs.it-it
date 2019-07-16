@@ -1,5 +1,5 @@
 ---
-title: Disporre le forme nel diagramma delle relazioni tra attributi | Documenti Microsoft
+title: Disporre le forme nel diagramma delle relazioni tra attributi | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ac5c1ad668a9b3e5df47f41109a8aac2e8a1ff42
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026588"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209158"
 ---
-# <a name="attribute-relationships---arrange-shapes-in-the-diagram"></a>Relazioni tra attributi - Disponi forme nel diagramma
+# <a name="attribute-relationships---arrange-shapes-in-the-diagram"></a>Relazioni tra attributi - Disporre le forme nel diagramma
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   È possibile modificare il layout delle forme nella scheda **Relazioni tra attributi** della vista Struttura dimensione vista in Progettazione dimensioni in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   

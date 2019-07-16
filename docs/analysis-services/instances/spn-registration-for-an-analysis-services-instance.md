@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7b4516470b1b55c697cbfee065dbf53c3187a6a1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526489"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209421"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>Registrazione del nome SPN per un'istanza di Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52526489"
 > [!TIP]  
 >  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** è uno strumento di diagnostica che semplifica la risoluzione dei problemi di connettività correlati a Kerberos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Microsoft Kerberos Configuration Manager per SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
   
- In questo argomento sono incluse le sezioni seguenti:  
+ Di seguito sono elencate le diverse sezioni di questo argomento:  
   
  [Quando è necessaria la registrazione del nome SPN](#bkmk_scnearios)  
   
@@ -76,7 +76,7 @@ ms.locfileid: "52526489"
 |Account servizio|Si tratta dell'account di avvio del servizio Windows **MSSQLServerOLAPService** . Può essere un account utente di dominio di Windows, un account virtuale, un account dei servizi gestiti o un account predefinito, ad esempio un SID per servizio, NetworkService o LocalSystem. Un account utente di dominio di Windows possono essere formattate come dominio\utente o user@domain.|  
   
 ##  <a name="bkmk_virtual"></a> Registrazione del nome SPN per un account virtuale  
- Gli account virtuali sono il tipo di account predefinito per i servizi di SQL Server. L'account virtuale è **NT Service\MSOLAPService** per un'istanza predefinita e **NT Service\MSOLAP$**\<nome-istanza > per un'istanza denominata.  
+ Gli account virtuali sono il tipo di account predefinito per i servizi di SQL Server. L'account virtuale è **NT Service\MSOLAPService** per un'istanza predefinita e **NT Service\MSOLAP$** \<nome-istanza > per un'istanza denominata.  
   
  Come indicato dal nome, questi account non esistono in Active Directory. Un account virtuale esiste solo nel computer locale. Quando si effettua la connessione a servizi, applicazioni o dispositivi esterni, l'operazione viene eseguita tramite l'account del computer locale. Per questo motivo, la registrazione di un nome SPN per Analysis Services in esecuzione con un account virtuale è in effetti la registrazione di un nome SPN per l'account del computer.  
   
@@ -93,7 +93,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
   
  **Sintassi di esempio per un'istanza denominata in esecuzione come NT Service\MSOLAP$\<nome-istanza >**  
   
- In questo esempio viene mostrata la sintassi **setspn** per un'istanza denominata in esecuzione con l'account virtuale predefinito. Nell'esempio, il nome host del computer è **AW-SRV02** e il nome dell'istanza è **AW-FINANCE**. Anche in questo caso è l'account del computer specificato per il nome SPN, anziché l'account virtuale **NT Service\MSOLAP$**\<nome-istanza >.  
+ In questo esempio viene mostrata la sintassi **setspn** per un'istanza denominata in esecuzione con l'account virtuale predefinito. Nell'esempio, il nome host del computer è **AW-SRV02** e il nome dell'istanza è **AW-FINANCE**. Anche in questo caso è l'account del computer specificato per il nome SPN, anziché l'account virtuale **NT Service\MSOLAP$** \<nome-istanza >.  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02  

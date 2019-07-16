@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 316fe295473d106d0bea8150deed6a19c07bc3bc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408559"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208055"
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>Pianificazione dell'aggiornamento dati e origini dati: Nessuna autenticazione di Windows
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,13 +24,13 @@ ms.locfileid: "52408559"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2010 &#124; SharePoint 2013.|  
   
- **Panoramica:** creare due applicazioni di destinazione dell'archiviazione sicura. Configurare la prima applicazione di destinazione (PowerPivotDataRefresh) per l'utilizzo delle credenziali Windows. Configurare la seconda applicazione di destinazione con le credenziali di un'origine dati che non supporta l'autenticazione di Windows, ad esempio un database Oracle. La seconda applicazione di destinazione utilizza anche la prima applicazione di destinazione per l'account di aggiornamento dati automatico.  
+ **Panoramica:** Creare due Secure Store le applicazioni di destinazione. Configurare la prima applicazione di destinazione (PowerPivotDataRefresh) per l'utilizzo delle credenziali Windows. Configurare la seconda applicazione di destinazione con le credenziali di un'origine dati che non supporta l'autenticazione di Windows, ad esempio un database Oracle. La seconda applicazione di destinazione utilizza anche la prima applicazione di destinazione per l'account di aggiornamento dati automatico.  
   
  ![as_powerpivot_refresh_no_windows_auth](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-no-windows-auth.gif "as_powerpivot_refresh_no_windows_auth")  
   
--   **(1) PowerPivotDatarefresh:** ID dell'applicazione di destinazione di archiviazione sicura impostato con l'autenticazione di Windows.  
+-   **(1) PowerPivotDatarefresh:** Una Secure Store ID applicazione di destinazione impostato con l'autenticazione di windows.  
   
--   **(2) OracleAuthentication:** ID dell'applicazione di destinazione di archiviazione sicura impostato con le credenziali Oracle.  
+-   **(2) OracleAuthentication:** Una Secure Store ID applicazione di destinazione impostato con le credenziali Oracle.  
   
 -   **(3)**  il [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] applicazione di servizio viene configurata per usare l'applicazione di destinazione "PowerPivotDataRefresh" per il **Account di aggiornamento dati automatico**.  
   
@@ -60,15 +60,15 @@ ms.locfileid: "52408559"
   
     -   **Posta elettronica contatto:** ?  
   
-    -   **Tipo di applicazione di destinazione:** Gruppo.  
+    -   **Tipo di applicazione di destinazione:** gruppo.  
   
-    -   **URL pagina di destinazione dell'applicazione:** Nessuna.  
+    -   **URL pagina di destinazione dell'applicazione:** No.  
   
-5.  Scegliere **Avanti**.  
+5.  Fare clic su **Avanti**.  
   
 6.  Nella pagina Credenziali lasciare i due nomi di campo e tipi di campo predefiniti per **Nome utente Windows** e **Password Windows**.  
   
-7.  Scegliere **Avanti**.  
+7.  Fare clic su **Avanti**.  
   
 8.  Nella pagina **Impostazioni di appartenenza** aggiungere almeno un **Amministratore dell'applicazione di destinazione** e quindi aggiungere i membri che richiedono l'accesso all'applicazione di destinazione.  
   
@@ -94,17 +94,17 @@ ms.locfileid: "52408559"
   
     -   **Posta elettronica contatto:** ?  
   
-    -   **Tipo di applicazione di destinazione:** Gruppo.  
+    -   **Tipo di applicazione di destinazione:** gruppo.  
   
-    -   **URL pagina di destinazione dell'applicazione:** Nessuna.  
+    -   **URL pagina di destinazione dell'applicazione:** No.  
   
-5.  Scegliere **Avanti**.  
+5.  Fare clic su **Avanti**.  
   
 6.  Nella pagina **Credenziali** modificare il primo nome di campo in **Oracle User ID** e il **Tipo di campo** in **User Name**.  
   
      Modificare il secondo nome di campo in **Oracle Password** e il **Tipo di campo** in **Password**.  
   
-7.  Scegliere **Avanti**.  
+7.  Fare clic su **Avanti**.  
   
 8.  Nella pagina **Impostazioni di appartenenza** aggiungere almeno un **Amministratore dell'applicazione di destinazione** e quindi aggiungere i membri che richiedono l'accesso all'applicazione di destinazione.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "52408559"
 ## <a name="to-verify-data-refresh-with-the-new-authentication"></a>Per verificare l'aggiornamento dati con la nuova autenticazione  
  Quando si fa clic su **OK**, viene visualizzata la pagina **Cronologia aggiornamento** . Nell'arco di pochi minuti verrà visualizzato un nuovo elemento nella cronologia di aggiornamento perché nei passaggi precedenti è stato selezionato **Aggiorna anche appena possibile**. Il valore predefinito per il processo timer **Processo timer di aggiornamento dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** è di 1 minuto. Se non viene visualizzato un nuovo elemento nella cronologia di aggiornamento, attendere qualche minuto e aggiornare il browser. Se il nuovo elemento continua a non essere visualizzato, verificare il valore corrente del processo timer.  
   
-## <a name="more-information"></a>Ulteriori informazioni  
+## <a name="more-information"></a>Altre informazioni  
   
 -   [Configurare il servizio di archiviazione sicura in SharePoint 2013](http://technet.microsoft.com/library/ee806866.aspx).  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3f2fd0817aeae714ca1e217b9dc2011df92c4b28
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579381"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210106"
 ---
 # <a name="data-mining-projects"></a>Progetti di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "57579381"
 ##  <a name="bkmk_Objects"></a> Oggetti nei progetti di data mining  
  Tutti i progetti di data mining contengono i quattro tipi di oggetti seguenti. È possibile disporre di più oggetti di tutti i tipi.  
   
--   Origini dei dati  
+-   Origini dati  
   
 -   Viste origine dati  
   

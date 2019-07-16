@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 29a49478d75d7af5670f3e693cd87a5238c4ae11
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: c74e457d29f39201601a3a62d651cce97c52fa70
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57684938"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207309"
 ---
 # <a name="create-perspectives"></a>Creare prospettive
 
@@ -45,11 +45,11 @@ Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve 
   
 4.  Selezionare tutte le tabelle *eccetto* **DimCustomer**.  
   
-    ![as-lesson8-perspectives](../tutorial-tabular-1400/media/as-lesson8-perspectives.png)
+    ![prospettive come lesson8](../tutorial-tabular-1400/media/as-lesson8-perspectives.png)
   
     In una lezione successiva si userà l'analizza nella funzionalità di Excel per testare questa prospettiva. L'elenco campi tabella pivot di Excel include tutte le tabelle tranne DimCustomer.  
 
-## <a name="whats-next"></a>Quali sono le operazioni successive?
+## <a name="whats-next"></a>Argomenti successivi
 
 [Lezione 9: Creare gerarchie](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md).
   

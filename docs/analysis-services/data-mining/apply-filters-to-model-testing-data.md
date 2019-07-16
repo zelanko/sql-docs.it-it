@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d9254d42d61fdf6bf087d83d0ced4ff1761dd077
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539948"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210191"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Applicare filtri ai dati di test del modello
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

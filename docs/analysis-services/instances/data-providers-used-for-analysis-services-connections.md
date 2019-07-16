@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f5ba97f90b877896d68cd62598f11d0845fb698e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057849"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209535"
 ---
 # <a name="client-libraries-data-providers-used-for-analysis-services-connections"></a>Librerie client (provider di dati) usate per le connessioni di Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -29,6 +29,6 @@ Librerie client incluse nei precedenti Feature Pack di SQL Server corrispondono 
 Per ottenere la versione più recente, vedere [librerie Client per la connessione ad Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-data-providers). 
   
 ## <a name="see-also"></a>Vedere anche  
- [Connetti ad Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
+ [Connettersi ad Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   

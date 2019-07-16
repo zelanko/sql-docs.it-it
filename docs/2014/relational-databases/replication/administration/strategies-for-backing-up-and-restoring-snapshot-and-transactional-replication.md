@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125231"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210776"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Strategie per il backup e il ripristino della replica snapshot e della replica transazionale
   Quando si progetta una strategia di backup e ripristino per la replica snapshot e la replica transazionale, è necessario considerare le tre aree di fattori seguenti:  
@@ -213,7 +213,7 @@ ms.locfileid: "54125231"
   
 9. In seguito al ripristino, l'intervallo di valori Identity assegnato a ogni tabella nel database **A** verrà usato anche nel database **B**. Assicurarsi che il database **B** ripristinato abbia ricevuto tutte le modifiche del database **B** bloccato propagate nel database **A** e nel database **C** e quindi reinizializzare l'intervallo di valori Identity per ogni tabella.  
   
-    1.  Eseguire [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) nel database **B** e recuperare il parametro di output **@request_id**. Andare al passaggio b.  
+    1.  Eseguire [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) nel database **B** e recuperare il parametro di output **@request_id** . Andare al passaggio b.  
   
     2.  Per impostazione predefinita, l'agente di distribuzione è impostato per l'esecuzione continua. I token dovrebbero pertanto essere inviati automaticamente a tutti i nodi. Se l'agente di distribuzione non viene eseguito in modalità continua, eseguire l'agente. Per altre informazioni, vedere [Concetti di base relativi ai file eseguibili dell’agente di replica](../concepts/replication-agent-executables-concepts.md) o [Avviare e arrestare un agente di replica &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Andare al passaggio c.  
   
@@ -229,7 +229,7 @@ ms.locfileid: "54125231"
   
     1.  Arrestare qualsiasi attività sulle tabelle pubblicate nella topologia peer-to-peer. Andare al passaggio b.  
   
-    2.  Eseguire [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) nel database **B** e recuperare il parametro di output **@request_id**. Andare al passaggio c.  
+    2.  Eseguire [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) nel database **B** e recuperare il parametro di output **@request_id** . Andare al passaggio c.  
   
     3.  Per impostazione predefinita, l'agente di distribuzione è impostato per l'esecuzione continua. I token dovrebbero pertanto essere inviati automaticamente a tutti i nodi. Se l'agente di distribuzione non viene eseguito in modalità continua, eseguire l'agente. Andare al passaggio d.  
   
@@ -321,7 +321,7 @@ ms.locfileid: "54125231"
   
 2.  Ripristinare il backup del database di sottoscrizione più recente. Andare al passaggio 3.  
   
-3.  Se il database di sottoscrizione contiene solo sottoscrizioni push, andare al passaggio 4. Se il database di sottoscrizione contiene sottoscrizioni pull, porsi le domande seguenti: Sia le informazioni sulla sottoscrizione corrente? Nel database sono incluse tutte le tabelle e le opzioni impostate al momento dell'errore? In caso affermativo, andare al passaggio 4. In caso contrario, reinizializzare la sottoscrizione. Il recupero viene completato.  
+3.  Se il database di sottoscrizione contiene solo sottoscrizioni push, andare al passaggio 4. Se il database di sottoscrizione contiene sottoscrizioni pull, determinare quanto segue: le informazioni sulla sottoscrizione sono aggiornate? Nel database sono incluse tutte le tabelle e le opzioni impostate al momento dell'errore? In caso affermativo, andare al passaggio 4. In caso contrario, reinizializzare la sottoscrizione. Il recupero viene completato.  
   
 4.  Per sincronizzare il Sottoscrittore, eseguire l'agente di distribuzione. Il recupero viene completato.  
   
@@ -350,7 +350,7 @@ ms.locfileid: "54125231"
  [Backup e ripristino di database replicati](back-up-and-restore-replicated-databases.md)   
  [Configura distribuzione](../configure-distribution.md)   
  [Pubblicare dati e oggetti di database](../publish/publish-data-and-database-objects.md)   
- [Subscribe to Publications](../subscribe-to-publications.md)   
+ [Sottoscrivere le pubblicazioni](../subscribe-to-publications.md)   
  [Inizializzare una sottoscrizione](../initialize-a-subscription.md)   
  [Sincronizzare i dati](../synchronize-data.md)  
   

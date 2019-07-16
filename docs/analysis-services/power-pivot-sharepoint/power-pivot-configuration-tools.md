@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2d15054f3d6ebbcd25627df42aab5b9248db1f6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207500"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163940"
 ---
 # <a name="power-pivot-configuration-tools"></a>Power Pivot Configuration Tools
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "53207500"
   
  Gli strumenti possono essere utilizzati solo con un'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] di [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Non utilizzarli con installazioni di [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
-|nome|Versione supportata di SharePoint|Configurazione dettagliata|  
+|NOME|Versione supportata di SharePoint|Configurazione dettagliata|  
 |----------|-------------------------------------|----------------------------|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint 2013|SharePoint 2013|[Configurare o ripristinare Power Pivot per SharePoint 2013 &#40;strumento di configurazione Power Pivot&#41;](../../analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Strumento di configurazione|SharePoint 2010 con SharePoint 2010 Service Pack 1 (SP1)|[Configurare o ripristinare Power Pivot per SharePoint 2010 (strumento di configurazione Power Pivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)|  
@@ -66,7 +66,7 @@ ms.locfileid: "53207500"
 |La pagina principale contiene una nuova opzione per server **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel Services**. L'opzione supporta la nuova architettura con [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione all'esterno della farm di SharePoint. Configurare Excel Services per utilizzare uno o più server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione in modalità SharePoint.<br /><br /> ![PowerPivot Server nel nuovo strumento di configurazione](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-mainpage.gif "PowerPivot Server nel nuovo strumento di configurazione")||  
 ||Lo strumento 2010 include la pagina **Registrare SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) sul server locale** per configurare un'istanza locale di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Questa pagina non fa parte dello strumento 2013 perché non è presente alcuna istanza locale di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> ![COME account del servizio nello strumento di configurazione precedente](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "come account del servizio nello strumento di configurazione precedente")|  
 ||La pagina **Creare applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** contiene l'opzione aggiuntiva **Aggiorna le cartelle di lavoro per abilitare l'aggiornamento dei dati**. Questa opzione non è disponibile nello strumento 2013.<br /><br /> ![aggiornare le cartelle di lavoro nello strumento di configurazione precedente](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "aggiornare le cartelle di lavoro nello strumento di configurazione precedente")|  
-|Lo strumento 2013 contiene una nuova pagina **Configura server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**. Questa pagina supporta la nuova architettura di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione all'esterno della farm di SharePoint. Per impostazione predefinita, il nome del server digitato nella pagina principale nella casella di testo **Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel Services** viene elencato anche in **Configura server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.<br /><br /> ![Registrare PowerPivot server nuovo strumento di configurazione](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "PowerPivot registrare server nuovo strumento di configurazione")||  
+|Lo strumento 2013 contiene una nuova pagina **Configura server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** . Questa pagina supporta la nuova architettura di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione all'esterno della farm di SharePoint. Per impostazione predefinita, il nome del server digitato nella pagina principale nella casella di testo **Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel Services** viene elencato anche in **Configura server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .<br /><br /> ![Registrare PowerPivot server nuovo strumento di configurazione](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "PowerPivot registrare server nuovo strumento di configurazione")||  
 |Lo strumento 2013 contiene una nuova pagina **Registra componente aggiuntivo di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] come Analisi utilizzo di Excel Services**. SharePoint 2010 Excel Services non tiene traccia dei dati di utilizzo per [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].||  
 ||Lo strumento 2010 include la pagina **Aggiungere MSOLAP.5 come provider attendibile[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per registrare MSOLAP in modo da consentire a Excel Services in SharePoint 2010 di caricare i modelli** . Questa pagina non fa parte dello strumento 2013. SharePoint 2013 Excel Services non utilizza il provider MSOLAP per caricare i modelli.|  
   

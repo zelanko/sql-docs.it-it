@@ -1,5 +1,5 @@
 ---
-title: SystemGetAccuracyResults (Analysis Services - Data Mining) | Documenti Microsoft
+title: SystemGetAccuracyResults (Analysis Services - Data Mining) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 54fc91b67a695110383c19422befab0d7b0f7a9d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017798"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209668"
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -97,21 +97,21 @@ SystemGetAccuracyResults(<mining structure>,
   
  Nella tabella seguente vengono elencate le colonne restituite da **GetValidationResults**.  
   
-|Nome colonna|Description|  
+|Nome colonna|Descrizione|  
 |-----------------|-----------------|  
 |Modello|Nome del modello sottoposto a test. **All** indica che il risultato è un'aggregazione per tutti i modelli.|  
 |AttributeName|Nome della colonna stimabile.|  
 |AttributeState|Valore di destinazione nella colonna stimabile.<br /><br /> Se questa colonna contiene un valore, la metrica viene raccolta solo per lo stato specifico.<br /><br /> Se questo valore non è specificato oppure è null, viene calcolata la metrica per lo stato più probabile per ogni stima.|  
 |PartitionIndex|Indica la partizione a cui si applica il risultato.<br /><br /> Per questa procedura, è sempre 0.|  
-|PartitionCases|Un intero che indica il numero di righe nel set di case, in base il  *\<set di dati >* parametro.|  
+|PartitionCases|Un intero che indica il numero di righe nel case set, in base il  *\<set di dati >* parametro.|  
 |Test|Tipo di test eseguito.|  
 |Misura|Nome della misura restituita dal test. Le misure per ogni modello dipendono dal tipo di modello e dal tipo del valore stimabile.<br /><br /> Per un elenco delle misure restituite per ogni tipo stimabile, vedere [Misure nel report di convalida incrociata](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).<br /><br /> Per la definizione delle diverse misure, vedere [Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).|  
 |Value|Valore per la misura specificata.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Nella tabella seguente vengono forniti esempi dei valori che è possibile utilizzare per specificare i dati nella struttura di data mining utilizzata per la convalida incrociata. Se si desidera utilizzare test case per la convalida incrociata, è necessario che la struttura di data mining contenga già un set di dati di testing. Per informazioni sulla definizione di un set di dati di testing quando si crea una struttura di data mining, vedere [Set di dati di training e di testing](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
   
-|Valore integer|Description|  
+|Valore integer|Descrizione|  
 |-------------------|-----------------|  
 |1|Vengono utilizzati solo i case di training.|  
 |2|Vengono utilizzati solo i test case.|  
@@ -143,10 +143,10 @@ CALL SystemGetAccuracyResults (
   
 |ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Misura|Value|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
-|v Target Mail DT|Bike Buyer|1|0|1638|Classificazione|Vero positivo|605|  
-|v Target Mail DT|Bike Buyer|1|0|1638|Classificazione|Falso positivo|177|  
-|v Target Mail DT|Bike Buyer|1|0|1638|Classificazione|Vero negativo|501|  
-|v Target Mail DT|Bike Buyer|1|0|1638|Classificazione|Falso negativo|355|  
+|v Target Mail DT|Bike Buyer|1|0|1638|classificazione|Vero positivo|605|  
+|v Target Mail DT|Bike Buyer|1|0|1638|classificazione|Falso positivo|177|  
+|v Target Mail DT|Bike Buyer|1|0|1638|classificazione|Vero negativo|501|  
+|v Target Mail DT|Bike Buyer|1|0|1638|classificazione|Falso negativo|355|  
 |v Target Mail DT|Bike Buyer|1|0|1638|Probabilità|Punteggio in forma logaritmica|-0.598454638753028|  
 |v Target Mail DT|Bike Buyer|1|0|1638|Probabilità|Accuratezza|0.0936717116894395|  
 |v Target Mail DT|Bike Buyer|1|0|1638|Probabilità|Radice errore quadratico medio|0.361630800104946|  
@@ -157,7 +157,7 @@ CALL SystemGetAccuracyResults (
 ## <a name="see-also"></a>Vedere anche  
  [SystemGetCrossValidationResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterCrossValidationResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterAccuracyResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

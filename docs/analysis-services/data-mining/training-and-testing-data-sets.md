@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 15ee82c04372528d29289a3ed6c5c55271acf5fb
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145616"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209605"
 ---
 # <a name="training-and-testing-data-sets"></a>Set di dati di training e di testing
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "50145616"
 ### <a name="modifying-structure-properties-to-create-a-test-data-set"></a>Modifica delle proprietà di una struttura per creare un set di dati di test  
  Se si crea ed elabora una struttura di data mining, e in un secondo momento si desidera riservare un set di dati di test, è possibile modificare le proprietà della struttura di data mining. Per modificare la modalità di partizionamento dei dati, modificare le proprietà seguenti:  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**HoldoutMaxCases**|Specifica il numero massimo di case da includere nel set di testing.|  
 |**HoldoutMaxPercent**|Specifica il numero di case da includere nel set di testing come percentuale del set di dati completo. Se non sono presenti set di dati, specificare 0.|  

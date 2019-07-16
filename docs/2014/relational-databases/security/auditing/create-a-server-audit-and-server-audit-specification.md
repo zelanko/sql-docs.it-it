@@ -18,11 +18,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ec1c7205597224e5fca27942ca25ad4e197ec0d0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135761"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198407"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Creazione di un controllo del server e di una specifica del controllo del server
   In questo argomento viene illustrato come creare un controllo del server e la specifica di un controllo del server in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Il*controllo* di un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o di un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comporta il rilevamento e la registrazione di eventi che si verificano nel sistema. L'oggetto *SQL Server Audit* raccoglie un'unica istanza di azioni a livello di server o di database e gruppi di azioni da monitorare. Il controllo si trova a livello dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile disporre di più controlli. L'oggetto *specifica controllo server* appartiene a un controllo. È possibile creare una specifica del controllo del server per ogni controllo, poiché entrambi vengono creati nell'ambito dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](sql-server-audit-database-engine.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "54135761"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
   
 -   Per creare, modificare o eliminare un controllo del server, le entità devono disporre dell'autorizzazione ALTER ANY SERVER AUDIT o CONTROL SERVER.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "54135761"
   
 1.  In Esplora oggetti espandere la cartella **Sicurezza** .  
   
-2.  Fare clic con il pulsante destro del mouse sulla cartella **Controlli** e scegliere **Nuovo controllo...**.  
+2.  Fare clic con il pulsante destro del mouse sulla cartella **Controlli** e scegliere **Nuovo controllo...** .  
   
      Nella pagina **Generale** della finestra di dialogo **Crea controllo** sono disponibili le opzioni indicate di seguito.  
   
@@ -88,14 +88,14 @@ ms.locfileid: "54135761"
     > [!IMPORTANT]  
     >  Quando il controllo è in uno stato di errore, l'esecuzione di eventi controllati può continuare tramite la connessione amministrativa dedicata.  
   
-     Elenco**Destinazione controllo**   
+     Elenco**Destinazione controllo**  
      Indica la destinazione per i dati del controllo. Le opzioni disponibili sono un file binario, il registro applicazioni di Windows o il registro di sicurezza di Windows. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Se non si configurano impostazioni aggiuntive in Windows, non sarà possibile scrivere nel registro di sicurezza di Windows. Per altre informazioni, vedere [Scrivere eventi di controllo di SQL Server nel registro di sicurezza](write-sql-server-audit-events-to-the-security-log.md).  
   
      **Percorso file**  
      Indica il percorso della cartella in cui vengono scritti i dati del controllo quando in **Destinazione controllo** è specificato un file.  
   
      **Puntini di sospensione (...)**  
-     Apre la **individua cartella -**_nome_server_ finestra di dialogo per specificare un percorso di file o creare una cartella in cui viene scritto il file di controllo.  
+     Apre la **individua cartella -** _nome_server_ finestra di dialogo per specificare un percorso di file o creare una cartella in cui viene scritto il file di controllo.  
   
      **Limite massimo di file di controllo:**  
      **Numero massimo file di rollover**  
@@ -104,16 +104,16 @@ ms.locfileid: "54135761"
      **Numero massimo di file**  
      Specifica che quando viene raggiunto il numero massimo di file di controllo, qualsiasi azione che causa la generazione di eventi di controllo aggiuntivi avrà esito negativo e verrà visualizzato un errore.  
   
-     Casella di controllo**Senza limiti**   
+     Casella di controllo**Senza limiti**  
      Quando si seleziona la casella di controllo **Senza limiti** in **Numero massimo file di rollover** , non viene applicato alcun limite al numero di file di controllo che verranno creati. La casella di controllo **Senza limiti** viene selezionata per impostazione predefinita e si applica alle selezioni **Numero massimo file di rollover** e **Numero massimo di file** .  
   
-     Casella**Numero di file**   
+     Casella**Numero di file**  
      Specifica il numero di file di controllo da creare, fino a un massimo di 2.147.483.647. Questa opzione è disponibile solo se non è selezionato **Senza limiti** .  
   
      **Dimensioni massime del file**  
      Specifica la dimensione massima per un file di controllo in megabyte (MB), gigabyte (GB) o terabyte (TB). È possibile specificare una dimensione compresa tra 1024 MB e 2.147.483.647 TB. Se si seleziona la casella di controllo **Senza limiti** non si impono alcun limite alle dimensioni del file. Se si specifica un valore minore di 1024 MB, verrà restituito un errore. La casella di controllo **Senza limiti** è selezionata per impostazione predefinita.  
   
-     Casella di controllo**Riserva spazio su disco**   
+     Casella di controllo**Riserva spazio su disco**  
      Indica che sul disco viene preallocata una quantità di spazio uguale alle dimensioni massime del file specificate. Questa impostazione può essere utilizzata solo se non è selezionata la casella di controllo **Senza limiti** in **Dimensioni massime file** . Questa casella di controllo non è selezionata per impostazione predefinita.  
   
 3.  Facoltativamente, nella pagina **Filtro** , immettere un predicato o clausola `WHERE` per il controllo del server per specificare opzioni aggiuntive non disponibili nella pagina **Generale** . Racchiudere il predicato tra le parentesi, ad esempio `(object_name = 'EmployeesTable')`.  
@@ -124,7 +124,7 @@ ms.locfileid: "54135761"
   
 1.  In Esplora oggetti fare clic sul segno più per espandere la cartella **Sicurezza** .  
   
-2.  Fare clic con il pulsante destro del mouse sulla cartella **Specifiche controllo server** e selezionare **Nuova specifica controllo server...**.  
+2.  Fare clic con il pulsante destro del mouse sulla cartella **Specifiche controllo server** e selezionare **Nuova specifica controllo server...** .  
   
      Nella finestra di dialogo **Crea specifica controllo server** sono disponibili le opzioni indicate di seguito.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "54135761"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- Creates a server audit called "HIPAA_Audit" with a binary file as the target and no options.  
@@ -176,7 +176,7 @@ ms.locfileid: "54135761"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     /*Creates a server audit specification called "HIPAA_Audit_Specification" that audits failed logins for the SQL Server audit "HIPAA_Audit" created above.  

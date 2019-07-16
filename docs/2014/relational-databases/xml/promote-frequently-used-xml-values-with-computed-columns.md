@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5b2d167ca9bb2f5a39802bacceb3dd0eb3c96d5
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533313"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195580"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promuovere i valori XML di uso frequente mediante colonne calcolate
   Se le query vengono eseguite principalmente su un piccolo numero di valori di attributi e di elementi, sarà possibile promuovere tali quantità al livello di colonne relazionali. Ciò risulta utile quando le query vengono eseguite su una piccola parte dei dati XML mentre viene recuperata l'intera istanza XML. Non è necessario creare un indice XML sulla colonna XML, ma è possibile indicizzare la colonna promossa. Le query devono essere scritte in modo da utilizzare la colonna promossa, poiché il Query Optimizer non reindirizza alla colonna promossa le query eseguite sulla colonna XML.  
@@ -28,7 +28,7 @@ ms.locfileid: "58533313"
 ## <a name="computed-column-based-on-the-xml-data-type"></a>Colonna calcolata basata sul tipo di dati xml  
  Una colonna calcolata può essere creata utilizzando una funzione definita dall'utente che richiama `xml` metodi con tipo di dati. Il tipo della colonna calcolata può essere qualsiasi tipo SQL, incluso il tipo XML, come illustrato nell'esempio seguente.  
   
-### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Esempio: Colonna calcolata basata sul metodo con tipo di dati xml  
+### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Esempio: Colonna calcolata basata su un metodo per il tipo di dati xml  
  Creare la funzione definita dall'utente per il codice ISBN di un libro:  
   
 ```  
@@ -50,7 +50,7 @@ ADD   ISBN AS dbo.udf_get_book_ISBN(xCol)
   
  La colonna calcolata può essere indicizzata come di consueto.  
   
-### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>Esempio: Query su una colonna calcolata basata sui metodi con tipo di dati xml  
+### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>Esempio: Query su una colonna calcolata basata sui metodi per il tipo di dati XML  
  Per ottenere l'elemento <`book`> il cui ISBN è 0-7356-1588-2:  
   
 ```  
@@ -78,7 +78,7 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   Creare trigger sulla colonna XML per eseguire operazioni di manutenzione delle tabelle di proprietà. Nell'ambito dei trigger, eseguire una delle operazioni seguenti:  
   
-    -   Uso `xml` tipo di dati, i metodi, ad esempio **Nodes ()** e **Value ()**, per inserire ed eliminare le righe delle tabelle di proprietà.  
+    -   Uso `xml` tipo di dati, i metodi, ad esempio **Nodes ()** e **Value ()** , per inserire ed eliminare le righe delle tabelle di proprietà.  
   
     -   Creare funzioni di flusso con valori di tabella in Common Language Runtime (CLR) per inserire ed eliminare righe nelle tabelle di proprietà.  
   
@@ -91,7 +91,7 @@ WHERE  ISBN = '0-7356-1588-2'
 create table tblPropAuthor (propPK int, propAuthor varchar(max))  
 ```  
   
-### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>Esempio: Creare una funzione definita dall'utente per generare un set di righe da un'istanza XML  
+### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>Esempio: Creare una funzione definita dall'utente per la generazione di un set di righe da un'istanza XML  
  La seguente funzione con valori di tabella, udf_XML2Table, accetta un valore di chiave primaria e un'istanza XML. Recupera il nome di tutti gli autori degli elementi <`book`> e restituisce un set di righe composto da coppie di chiave primaria e nome.  
   
 ```  
@@ -107,7 +107,7 @@ begin
 end  
 ```  
   
-### <a name="example-create-triggers-to-populate-a-property-table"></a>Esempio: Creare trigger per popolare una tabella di proprietà  
+### <a name="example-create-triggers-to-populate-a-property-table"></a>Esempio: Creare trigger per il popolamento di una tabella di proprietà  
  Il trigger di inserimento consente di inserire righe nella tabella di proprietà:  
   
 ```  
@@ -154,8 +154,8 @@ begin
 end  
 ```  
   
-### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Esempio: Trovare le istanze XML cui autori hanno lo stesso nome  
- È possibile creare la query nella colonna XML oppure è possibile ricercare il nome "David" nella tabella di proprietà ed eseguire un join all'indietro alla tabella di base, per restituire l'istanza XML. Esempio:  
+### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Esempio: Cercare istanze XML i cui autori hanno lo stesso nome  
+ È possibile creare la query nella colonna XML oppure è possibile ricercare il nome "David" nella tabella di proprietà ed eseguire un join all'indietro alla tabella di base, per restituire l'istanza XML. Ad esempio:  
   
 ```  
 SELECT xCol   
@@ -163,7 +163,7 @@ FROM     T JOIN tblPropAuthor ON T.pk = tblPropAuthor.propPK
 WHERE    tblPropAuthor.propAuthor = 'David'  
 ```  
   
-### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Esempio: Soluzione che utilizza CLR Streaming Table-valued Function  
+### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Esempio: Soluzione che usa una funzione di flusso CLR con valori di tabella  
  Per creare questa soluzione è necessario eseguire i passaggi seguenti:  
   
 1.  Definire una classe CLR, SqlReaderBase, che implementa ISqlReader e genera un output di flusso valutato a livello di tabella, applicando un'espressione di percorso a un'istanza XML.  

@@ -1,5 +1,5 @@
 ---
-title: Utilizzare il drill-through dai visualizzatori modello | Documenti Microsoft
+title: Utilizzare il drill-through dai visualizzatori modello | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9c1d636b4435aca63ffadbef3b45e93f3215a40c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016928"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209585"
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>Utilizzare il drill-through dai visualizzatori modello
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "34016928"
   
 2.  Fare clic con il pulsante destro del mouse su qualsiasi nodo del grafico dell'albero e selezionare **Drill-through**.  
   
-3.  Selezionare una delle opzioni seguenti: **Solo colonne modello** o **Colonne struttura e modello**. Se non si dispone delle autorizzazioni necessarie, è possibile che un'opzione non sia disponibile.  
+3.  Selezionare una delle opzioni seguenti: **Colonne del modello solo** oppure **modellare e strutturare le colonne**. Se non si dispone delle autorizzazioni necessarie, è possibile che un'opzione non sia disponibile.  
   
 4.  Verrà visualizzata la finestra di dialogo **Drill-through** contenente i dati del case e/o i dati della struttura. La barra del titolo della finestra di dialogo contiene inoltre una descrizione del nodo da cui è stata eseguita la query drill-through.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "34016928"
   
 2.  Nella scheda **Cluster** fare clic con il pulsante destro del mouse su un nodo qualsiasi.  
   
-3.  Selezionare **Drill-through**, quindi scegliere una delle opzioni seguenti: **Solo colonne modello** o **Colonne struttura e modello**. Se non si dispone delle autorizzazioni necessarie, è possibile che un'opzione non sia disponibile.  
+3.  Selezionare **drill-through**, quindi selezionare una delle opzioni seguenti: **Colonne del modello solo** oppure **modellare e strutturare le colonne**. Se non si dispone delle autorizzazioni necessarie, è possibile che un'opzione non sia disponibile.  
   
 4.  Verrà visualizzata la finestra di dialogo **Drill-through** contenente i dati del case e/o i dati della struttura. La barra del titolo della finestra di dialogo contiene inoltre una descrizione del cluster per i case.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "34016928"
   
 2.  Nella scheda **Regole** fare clic con il pulsante destro del mouse sulla riga di una regola. Nella scheda **Set di elementi** fare clic su una riga che contiene un set di elementi.  
   
-3.  Selezionare **Drill-through**, quindi scegliere una delle opzioni seguenti: **Solo colonne modello** o **Colonne struttura e modello**. Se non si dispone delle autorizzazioni necessarie, è possibile che un'opzione non sia disponibile.  
+3.  Selezionare **drill-through**, quindi selezionare una delle opzioni seguenti: **Colonne del modello solo** oppure **modellare e strutturare le colonne**. Se non si dispone delle autorizzazioni necessarie, è possibile che un'opzione non sia disponibile.  
   
 4.  Verrà visualizzata la finestra di dialogo **Drill-through** contenente i dati del case e/o i dati della struttura. La barra del titolo della finestra di dialogo contiene inoltre una descrizione del nome della regola.  
   
@@ -64,15 +64,15 @@ ms.locfileid: "34016928"
   
 2.  Nella scheda **Diagramma dei cluster**fare clic con il pulsante destro del mouse su qualsiasi nodo che rappresenta un cluster. Nella scheda **Profili cluster** fare clic in qualsiasi punto di un profilo cluster o nel cluster che rappresenta il popolamento totale del modello.  
   
-3.  Selezionare **Drill-through**, quindi scegliere una delle opzioni seguenti: **Solo colonne modello** o **Colonne struttura e modello**. Se non si dispone delle autorizzazioni necessarie, è possibile che un'opzione non sia disponibile.  
+3.  Selezionare **drill-through**, quindi selezionare una delle opzioni seguenti: **Colonne del modello solo** oppure **modellare e strutturare le colonne**. Se non si dispone delle autorizzazioni necessarie, è possibile che un'opzione non sia disponibile.  
   
 4.  Verrà visualizzata la finestra di dialogo **Drill-through** contenente i dati del case e/o i dati della struttura. La barra del titolo della finestra di dialogo contiene inoltre una descrizione del cluster per i case.  
   
 5.  Fare clic con il pulsante destro del mouse in qualsiasi punto nei risultati e selezionare **Copia tutto** per salvare i risultati negli Appunti. Se il modello contiene una colonna di una tabella nidificata, verrà incollato solo il nome della colonna della tabella nidificata. Per recuperare i valori dei dati all'interno della colonna della tabella nidificata per ogni case, è necessario creare una query sul contenuto del modello.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure dettagliate e attività del visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Drill-through sui modelli di Data Mining](../../analysis-services/data-mining/drillthrough-on-mining-models.md)   
- [Drill-through sulle strutture di Data Mining](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
+ [Attività e procedure relative al visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Drill-through sui modelli di data mining](../../analysis-services/data-mining/drillthrough-on-mining-models.md)   
+ [Drill-through sulle strutture di data mining](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
   
   

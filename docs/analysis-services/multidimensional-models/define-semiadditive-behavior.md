@@ -1,5 +1,5 @@
 ---
-title: Definisci funzioni semiadditive | Documenti Microsoft
+title: Definisci funzioni semiadditive | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1ab36e1835af05010fa3fa206e49feec6161c31d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023438"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178638"
 ---
 # <a name="define-semiadditive-behavior"></a>Definire una funzione semiadditiva
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,11 +44,11 @@ ms.locfileid: "34023438"
   
 -   First Nonempty Child  
   
--   Nessuno  
+-   Nessuna  
   
- Questa opzione non modifica le misure che includono una funzione di aggregazione regolare: **Sum**, **Min**, **Max**, **Count**o **Distinct****Count**.  
+ Questa opzione non modifica le misure con una funzione di aggregazione regolare: **Somma**, **Min**, **Max**, **conteggio**, o **Distinct * * * conteggio**.  
   
- **È stata rilevata la dimensione di tipo Conti, "Conto", che contiene membri semiadditivi. Il server aggregherà i membri di questa dimensione in base alle funzioni semiadditive specificate per ogni tipo di account.**  
+ **La procedura guidata ha rilevato il ' Account "dimensione di tipo conti, che contiene membri semiadditivi. Il server aggregherà i membri di questa dimensione in base alle funzioni semiadditive specificate per ogni tipo di account.**  
  Tutte le misure di un gruppo di misure dimensionate in base a una dimensione di tipo Conti verranno impostate dal sistema sulla funzione di aggregazione By Account e i membri della dimensione verranno aggregati dal server in base alle funzioni semiadditive specificate per ogni tipo di conto.  
   
 > [!NOTE]  
@@ -62,7 +62,7 @@ ms.locfileid: "34023438"
   
  Per ogni misura è possibile selezionare tra i tipi di funzionalità semiadditive descritti nella tabella seguente.  
   
-|Funzione semiadditiva|Description|  
+|Funzione semiadditiva|Descrizione|  
 |---------------------------|-----------------|  
 |Average of Children|La funzione di aggregazione di un membro corrisponde alla media dei relativi figli.|  
 |ByAccount|Il sistema legge le funzioni semiadditive specificate per il tipo di conto.|  
@@ -74,7 +74,7 @@ ms.locfileid: "34023438"
 |LastNonEmpty|Il valore del membro viene valutato come il valore del relativo ultimo figlio assieme alla dimensione temporale contenente dati.|  
 |Max|Viene applicata la funzione di aggregazione massima standard.|  
 |Min|Viene applicata la funzione di aggregazione minima standard.|  
-|Nessuno|Non viene applicata alcuna funzione di aggregazione.|  
+|Nessuna|Non viene applicata alcuna funzione di aggregazione.|  
 |SUM|Viene applicata la funzione di somma standard.|  
   
  Al termine della procedura guidata le funzioni semiadditive esistenti vengono sovrascritte.  

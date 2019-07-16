@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 81592abc0224b2898b64d834857d23484750b326
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410668"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210001"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtri per i modelli di data mining (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "52410668"
 ### <a name="creating-model-filters-using-data-mining-designer"></a>Creazione di filtri dei modelli utilizzando la Progettazione modelli di data mining  
  Filtrare un modello nella Progettazione modelli di data mining modificando la proprietà **Filter** del modello di data mining. È possibile digitare direttamente un'espressione di filtro nel riquadro **Proprietà** oppure è possibile aprire una finestra di dialogo del filtro per compilare le condizioni.  
   
- Sono disponibili due finestre di dialogo del filtro. La prima consente di creare le condizioni applicate alla tabella del case. Se l'origine dati contiene più tabelle, selezionare in primo luogo una tabella, quindi selezionare una colonna e specificare gli operatori e le condizioni applicabili alla colonna. È possibile collegare più condizioni usando gli operatori **AND**/**OR** . Gli operatori disponibili per la definizione dei valori variano a seconda che la colonna contenga valori discreti o continui. Con i valori continui, ad esempio, è possibile usare gli operatori **maggiore di** e **minore di** . Per i valori discreti, tuttavia, è possibile usare soltanto gli operatori **= (uguale a)**, **!= (non uguale a)** e **is null** .  
+ Sono disponibili due finestre di dialogo del filtro. La prima consente di creare le condizioni applicate alla tabella del case. Se l'origine dati contiene più tabelle, selezionare in primo luogo una tabella, quindi selezionare una colonna e specificare gli operatori e le condizioni applicabili alla colonna. È possibile collegare più condizioni usando gli operatori **AND**/**OR** . Gli operatori disponibili per la definizione dei valori variano a seconda che la colonna contenga valori discreti o continui. Con i valori continui, ad esempio, è possibile usare gli operatori **maggiore di** e **minore di** . Per i valori discreti, tuttavia, è possibile usare soltanto gli operatori **= (uguale a)** , **!= (non uguale a)** e **is null** .  
   
 > [!NOTE]  
 >  La parola chiave **LIKE** non è supportata. Se si vuole includere più attributi discreti, è necessario creare condizioni distinte e collegarle usando l'operatore **OR** .  
