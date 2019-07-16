@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b18f9c9979121856fc04941438b9e7ce7d461fc8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349289"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207008"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Inviare dati BLOB a SQL Server utilizzando IROWSETFASTLOAD e ISEQUENTIALSTREAM (OLE DB)
   In questo esempio viene illustrato come trasmettere dati BLOB di lunghezza variabile per riga mediante IRowsetFastLoad.  
@@ -24,7 +24,7 @@ ms.locfileid: "53349289"
   
  Quando si rimuovono i simboli di commento da #define USE_ISEQSTREAM nel codice sorgente, nell'esempio viene utilizzato ISequentialStream. L'implementazione del flusso è definita nell'esempio e consente di inviare dati BLOB di qualsiasi dimensione semplicemente modificando MAX_BLOB. Non è necessario che i dati del flusso rientrino nella memoria o siano disponibili in un blocco. Questo provider viene chiamato tramite IRowsetFastLoad::InsertRow. Passare un puntatore mediante IRowsetFastLoad::InsertRow all'implementazione del flusso nel buffer di dati (offset rgBinding.obValue) insieme alla quantità di dati disponibile per la lettura dal flusso. Alcuni provider potrebbero non dover conoscere la lunghezza dei dati al momento dell'associazione. In questo caso, è possibile omettere la lunghezza dall'associazione.  
   
- L'esempio non utilizza l'interfaccia del provider del flusso per scrivere i dati al provider. Nell'esempio viene invece passato un puntatore all'oggetto flusso che il provider utilizzerà per leggere i dati. I provider (SQLOLEDB e SQLNCLI) di Microsoft in genere leggeranno i dati in blocchi di 1024 byte dall'oggetto finché non verranno elaborati tutti i dati. SQLOLEDB e SQLNCLI non dispongono di implementazioni complete per consentire al consumer di scrivere i dati nell'oggetto flusso del provider. Tramite l'oggetto flusso del provider è possibile inviare solo dati di lunghezza zero.  
+ Nell'esempio non viene usata l'interfaccia del flusso del provider per scrivere i dati nel provider. Nell'esempio viene invece passato un puntatore all'oggetto flusso che il provider utilizzerà per leggere i dati. I provider (SQLOLEDB e SQLNCLI) di Microsoft in genere leggeranno i dati in blocchi di 1024 byte dall'oggetto finché non verranno elaborati tutti i dati. SQLOLEDB e SQLNCLI non dispongono di implementazioni complete per consentire al consumer di scrivere i dati nell'oggetto flusso del provider. Tramite l'oggetto flusso del provider è possibile inviare solo dati di lunghezza zero.  
   
  È possibile utilizzare l'oggetto ISequentialStream implementato dal consumer con dati del set di righe (IRowsetChange::InsertRow, IRowsetChange::SetData) e con parametri associando un parametro come DBTYPE_IUNKNOWN.  
   

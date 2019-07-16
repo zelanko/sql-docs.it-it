@@ -1,5 +1,5 @@
 ---
-title: Utilizzo della funzione RollupChildren (MDX) | Documenti Microsoft
+title: Utilizzo della funzione RollupChildren (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 135ab6e43a0b751639bd1ce1d93bf2183039f713
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024100"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208767"
 ---
-# <a name="mdx-data-manipulation---rollupchildren-function"></a>Manipolazione dei dati MDX - funzione RollupChildren
+# <a name="mdx-data-manipulation---rollupchildren-function"></a>Manipolazione dei dati MDX - Funzione RollupChildren
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   La funzione MDX (Multidimensional Expressions) [RollupChildren](../../../mdx/rollupchildren-mdx.md) esegue il rollup degli elementi figlio di un membro, applicando un operatore unario diverso a ogni elemento figlio, e restituisce il valore di tale rollup sotto forma di numero. L'operatore unario utilizzato può essere specificato da una proprietà del membro associata al membro figlio oppure può essere costituito da un'espressione stringa fornita direttamente alla funzione.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "34024100"
 ### <a name="using-a-custom-member-property"></a>Utilizzo di una proprietà personalizzata del membro  
  Se il calcolo del rollup deve essere eseguito di frequente, è consigliabile creare una proprietà di membro in cui memorizzare l'operatore da utilizzare per ogni membro figlio per una funzione specifica. Nella tabella seguente sono indicati gli operatori unari validi e vengono descritti i risultati previsti.  
   
-|Operatore|Risultato|  
+|Operator|Risultato|  
 |--------------|------------|  
 |+|totale = totale + membro figlio corrente|  
 |-|totale = totale - membro figlio corrente|  
@@ -68,6 +68,6 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
  L'istruzione MDX esamina l'operatore unario del membro figlio. Se l'operatore unario viene usato per eseguire una sottrazione, ad esempio quando sono presenti resi nazionali ed esteri, la funzione **IIf** sostituisce l'operatore unario ~, in caso contrario la funzione **IIf** usa l'operatore unario del membro figlio. Il totale di rollup restituito viene infine moltiplicato per 1,1 per determinare il valore della stima per le vendite nazionali ed estere lorde.  
   
 ## <a name="see-also"></a>Vedere anche  
- [La modifica di dati & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [Manipolazione dei dati &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

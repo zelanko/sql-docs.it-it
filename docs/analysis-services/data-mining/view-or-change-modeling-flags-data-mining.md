@@ -1,5 +1,5 @@
 ---
-title: Visualizzare o modificare flag di modellazione (Data Mining) | Documenti Microsoft
+title: Visualizzare o modificare flag di modellazione (Data Mining) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e587be4fe975ee35752e668f9a5d49e0afdf4488
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015468"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182272"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>Visualizzare o modificare flag di modellazione (Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "34015468"
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure dettagliate e attività di modello di data mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Modello di Data Mining flag & #40; & #41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
+ [Attività e procedure relative al modello di data mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Flag di modellazione &#40;data mining&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   

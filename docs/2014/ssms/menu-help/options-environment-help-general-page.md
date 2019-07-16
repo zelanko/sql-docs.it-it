@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e9f8e5d5f196452a8cd0f56e26aac40895bcd9d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774991"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188537"
 ---
 # <a name="options-environment-help-general-page"></a>Opzioni (pagina ambiente-Guida-generale)
   Usare la finestra di dialogo **Opzioni** per selezionare i set di documenti e indicare se gli argomenti devono essere visualizzati all'interno di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o in una finestra separata esterna. Per accedere a questa finestra di dialogo, scegliere **Opzioni** dal menu **Strumenti** , espandere **Guida** nel nodo **Ambiente** e fare clic su **Generale**.  

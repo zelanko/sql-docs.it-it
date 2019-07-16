@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 54be969446b9c1b234860ce2a68c1208634246ce
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572774"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178363"
 ---
 # <a name="deployment-script-files---specifying-processing-options"></a>File di Script di distribuzione - specificare le opzioni di elaborazione
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -56,11 +56,11 @@ ms.locfileid: "57572774"
   
 -   Eseguire Distribuzione guidata di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in modo interattivo. Nella pagina **Opzioni di elaborazione** specificare le opzioni di elaborazione per il progetto da distribuire.  
   
-     oppure  
+     -oppure-  
   
 -   Eseguire Distribuzione guidata di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] attraverso il prompt dei comandi e impostarla in modo che venga eseguita in modalità file di risposte. Per altre informazioni sulla modalità file di risposte, vedere [Esecuzione della Distribuzione guidata Analysis Services](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md).  
   
-     oppure  
+     -oppure-  
   
 -   Modificare il \< *nome progetto*>. deploymentoptions file utilizzando un editor di testo.  
   

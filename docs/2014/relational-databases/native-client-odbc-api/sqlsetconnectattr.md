@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b1b48f9ee2e7ee3092e3f31fd6ef97e91c5cd9db
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351678"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207097"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
   Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ignora l'impostazione di SQL_ATTR_CONNECTION_TIMEOUT.  
@@ -146,7 +146,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |Value|Descrizione|  
 |-----------|-----------------|  
 |SQL_EN_ON|La connessione verrà crittografata.|  
-|SQL_EN_OFF|La connessione non verrà crittografata. Impostazione predefinita.|  
+|SQL_EN_OFF|La connessione non verrà crittografata. Questa è l'impostazione predefinita.|  
   
 ## <a name="sqlcoptssenlistindtc"></a>SQL_COPT_SS_ENLIST_IN_DTC  
  Il client chiama Microsoft Distributed Transaction Coordinator (MS DTC) OLE DB **ITransactionDispenser:: BeginTransaction** metodo per iniziare una transazione MS DTC e creare un oggetto transazione MS DTC che rappresenta il transazione. L'applicazione chiama quindi `SQLSetConnectAttr` con l'opzione SQL_COPT_SS_ENLIST_IN_DTC per associare l'oggetto di transazione alla connessione ODBC. Tutte le attività del database correlate verranno eseguite sotto la protezione della transazione MS DTC. L'applicazione chiama `SQLSetConnectAttr` con SQL_DTC_DONE per terminare l'associazione DTC della connessione.  

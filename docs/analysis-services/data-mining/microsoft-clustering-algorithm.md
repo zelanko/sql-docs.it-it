@@ -1,5 +1,5 @@
 ---
-title: Algoritmo Microsoft Clustering | Documenti Microsoft
+title: Algoritmo Microsoft Clustering | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 21177dba0c17ec2ba8bd7af73585b4ede5a7d7e8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015358"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209907"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Algoritmo Microsoft Clustering
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "34015358"
 ## <a name="how-the-algorithm-works"></a>Funzionamento dell'algoritmo  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering identifica innanzitutto le relazioni esistenti in un set di dati e genera una serie di cluster basati su tali relazioni. Un grafico a dispersione costituisce un metodo utile per rappresentare visivamente il modo in cui l'algoritmo raggruppa i dati, come illustrato nel diagramma seguente. Tale grafico rappresenta tutti i case del set di dati e ogni case corrisponde a un punto del grafico. I cluster corrispondono ai raggruppamenti dei punti nel grafico e illustrano le relazioni identificate dall'algoritmo.  
   
- ![Grafico a dispersione dei case in un set di dati](../../analysis-services/data-mining/media/clustering-plot.gif "dispersione dei case in un set di dati")  
+ ![Grafico a dispersione dei case in un set di dati](../../analysis-services/data-mining/media/clustering-plot.gif "grafico a dispersione dei case in un set di dati")  
   
  Dopo aver definito i cluster, l'algoritmo calcola l'accuratezza con cui i cluster rappresentano i raggruppamenti dei punti e quindi tenta di ridefinire tali raggruppamenti per creare cluster in grado di rappresentare i dati con maggiore accuratezza. L'algoritmo esegue l'iterazione di questo processo fino a quando non è più possibile migliorare ulteriormente i risultati mediante la ridefinizione dei cluster.  
   
- È possibile personalizzare il funzionamento dell'algoritmo specificando una tecnica di clustering, limitando il numero massimo di cluster o modificando la quantità di supporto necessaria per creare un cluster. Per altre informazioni, vedere [Riferimento tecnico per l'algoritmo Microsoft Clustering](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md). questo algoritmo include due metodi di clustering diffusi: clustering K-means ed Expectation Maximization.  
+ È possibile personalizzare il funzionamento dell'algoritmo specificando una tecnica di clustering, limitando il numero massimo di cluster o modificando la quantità di supporto necessaria per creare un cluster. Per altre informazioni, vedere [Riferimento tecnico per l'algoritmo Microsoft Clustering](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md). Questo algoritmo include due metodi di clustering diffusi: Clustering K-means e il metodo Expectation Maximization.  
   
 ## <a name="data-required-for-clustering-models"></a>Dati richiesti per i modelli di clustering  
  Quando si preparano i dati da utilizzare nel training di un modello di clustering, verificare che siano chiari i requisiti per l'algoritmo specifico, tra cui la quantità di dati necessari e la modalità di utilizzo dei dati.  
@@ -54,7 +54,7 @@ ms.locfileid: "34015358"
 ## <a name="viewing-a-clustering-model"></a>Visualizzazione di un modello di clustering  
  Per esplorare il modello, è possibile usare il **Visualizzatore Microsoft Clustering**. Quando si visualizza un modello di clustering, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mostra i cluster in un diagramma che indica le relazioni tra essi, oltre a fornire un profilo dettagliato di ogni cluster, un elenco degli attributi che distinguono ogni cluster dagli altri e le caratteristiche dell'intero set di dati di training. Per altre informazioni, vedere [Visualizzare un modello usando il Visualizzatore Microsoft Clustering](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md).  
   
- Per maggiori dettagli, è possibile esplorare il modello in [Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). Il contenuto archiviato per il modello include la distribuzione per tutti i valori in ogni nodo, la probabilità di ogni cluster e altre informazioni. Per altre informazioni, vedere [Mining Model Content for Clustering Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
+ Per maggiori dettagli, è possibile esplorare il modello in [Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). Il contenuto archiviato per il modello include la distribuzione per tutti i valori in ogni nodo, la probabilità di ogni cluster e altre informazioni. Per altre informazioni, vedere [Contenuto dei modelli di data mining per i modelli di clustering &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
   
 ## <a name="creating-predictions"></a>Creazione di stime  
  In seguito al training del modello, i risultati vengono archiviati come set di modelli, esplorabili o utilizzabili per eseguire stime.  
@@ -63,7 +63,7 @@ ms.locfileid: "34015358"
   
  Per informazioni sulla creazione di query in base a un modello di data mining, vedere [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md). Per alcuni esempi su come usare le query con un modello di clustering, vedere [Esempi di query sul modello di clustering](../../analysis-services/data-mining/clustering-model-query-examples.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
 -   Supporta l'utilizzo del linguaggio PMML (Predictive Model Markup Language) per la creazione di modelli di data mining.  
   
@@ -72,9 +72,9 @@ ms.locfileid: "34015358"
 -   Supporta l'utilizzo di modelli di data mining OLAP e la creazione di dimensioni di data mining.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Riferimento tecnico per Microsoft Clustering algoritmo](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
- [Contenuto del modello di data mining per il Clustering modelli & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
- [Esempi di Query sul modello di clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)  
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Riferimento tecnico per l'algoritmo Microsoft Clustering](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
+ [Contenuto dei modelli di data mining per i modelli di clustering &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
+ [Esempi di query sul modello di clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
   

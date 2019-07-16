@@ -1,5 +1,5 @@
 ---
-title: Configurare le proprietà del gruppo di misure | Documenti Microsoft
+title: Configurare le proprietà del gruppo di misure | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eed879fa9bdeab12398f53d424bb5eaf8aea5bc7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023895"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209119"
 ---
 # <a name="configure-measure-group-properties"></a>Configurare le proprietà dei gruppi di misure
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,13 +27,13 @@ ms.locfileid: "34023895"
 |--------------|----------------|  
 |**AggregationPrefix**|Si applica all'archiviazione ROLAP. Assegna un prefisso comune alle viste indicizzate in SQL Server, usato per archiviare le aggregazioni per le partizioni associate a questo gruppo di misure.|  
 |**DataAggregation**|Questa proprietà è riservata per utilizzi futuri e attualmente non ha alcun effetto. Pertanto, è consigliabile non modificare questa impostazione.|  
-|**Description**|È possibile usare questa proprietà per documentare il gruppo di misure.|  
+|**Descrizione**|È possibile usare questa proprietà per documentare il gruppo di misure.|  
 |**ErrorConfiguration**|Impostazioni configurabili per la gestione degli errori, relative alla gestione di chiavi duplicate, chiavi sconosciute, chiavi Null, limiti di errore, azione da eseguire in caso di rilevamento di un errore e file di log degli errori. Vedere [Configurazione errori per l'elaborazione di cubi, partizioni e dimensioni &#40;SSAS - multidimensionale&#41;](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md).|  
 |**EstimatedRows**|Specifica il numero stimato di righe della tabella dei fatti.|  
 |**EstimatedSize**|Specifica la dimensione stimata (in byte) del gruppo di misure.|  
 |**ID**|Specifica l'identificatore dell'oggetto.|  
 |**IgnoreUnrelatedDimensions**|Determina se le dimensioni non correlate devono essere forzate al livello principale in caso di inclusione in una query di membri di dimensioni non correlate al gruppo di misure. L'impostazione predefinita è **True**.|  
-|**Nome**|Nome della misura. Questa proprietà è di sola lettura.|  
+|**Name**|Nome della misura. Questa proprietà è di sola lettura.|  
 |**ProactiveCaching**|Impostazioni configurabili per la gestione degli errori, relative alla gestione di chiavi duplicate, chiavi sconosciute, chiavi Null, limiti di errore, azione da eseguire in caso di rilevamento di un errore e file di log degli errori.|  
 |**ProcessingMode**|Indica se l'indicizzazione e l'aggregazione devono essere eseguite durante o dopo l'elaborazione. Le opzioni sono Regular e LazyAggregations. LazyAggregations consente di eseguire l'aggregazione come attività in background.|  
 |**ProcessingPriority**|Determina la priorità di elaborazione del cubo durante operazioni in background, ad esempio indicizzazione e aggregazioni lente Il valore predefinito è **0**.|  

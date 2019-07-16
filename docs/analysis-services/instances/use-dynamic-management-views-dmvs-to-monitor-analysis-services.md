@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52984102"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209415"
 ---
 # <a name="dynamic-management-views-dmvs"></a>Viste a gestione dinamica (DMV) 
 

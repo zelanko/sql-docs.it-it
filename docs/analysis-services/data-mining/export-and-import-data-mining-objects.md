@@ -1,5 +1,5 @@
 ---
-title: Esportare e importare oggetti di Data Mining | Documenti Microsoft
+title: Esportare e importare oggetti di Data Mining | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb1726006db1693e94e12326617436bdff7ae73e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018938"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210018"
 ---
 # <a name="export-and-import-data-mining-objects"></a>Esportare e importare gli oggetti di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,10 +42,10 @@ ms.locfileid: "34018938"
   
  È inoltre possibile importare una struttura o un modello di data mining mediante il comando **Restore** . I modelli o le strutture verranno ripristinate nel database che presenta lo stesso nome del database dal quale sono stati esportati. Per altre informazioni, vedere [Opzioni di ripristino](../../analysis-services/multidimensional-models/restore-options.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Non è possibile importare un modello o una struttura in un server se in tale server è già presente un modello o una struttura con lo stesso nome. Inoltre, non è possibile esportare un oggetto di data mining, quindi modificarne il nome nel file di esportazione. Pertanto, se si prevedono conflitti di denominazione, è necessario eliminare l'oggetto di data mining nel server di destinazione o rinominare l'oggetto di data mining prima di esportare la definizione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione di soluzioni di Data Mining e gli oggetti](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
+ [Gestione degli oggetti e delle soluzioni di data mining](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

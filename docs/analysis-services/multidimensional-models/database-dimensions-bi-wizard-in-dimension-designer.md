@@ -1,5 +1,5 @@
 ---
-title: Avviare la procedura guidata di Business Intelligence in Progettazione dimensioni | Documenti Microsoft
+title: Avviare la procedura guidata di Business Intelligence in Progettazione dimensioni | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dac1d67f4a3027b31deeb3b27feb754da80dd6c3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023568"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178941"
 ---
-# <a name="database-dimensions---bi-wizard-in-dimension-designer"></a>Dimensioni - procedura guidata di Business Intelligence in Progettazione dimensioni del database
+# <a name="database-dimensions---bi-wizard-in-dimension-designer"></a>Dimensioni del database - procedura guidata per BI in Progettazione dimensioni
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile creare operatori personalizzati di rollup e formule personalizzate membro, nonché configurare dimensioni per writeback tramite la Configurazione guidata funzionalità di Business Intelligence o Progettazione dimensioni. La configurazione guidata può essere avviata da Esplora soluzioni o Progettazione cubi di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. È possibile accedere a Progettazione dimensioni da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   

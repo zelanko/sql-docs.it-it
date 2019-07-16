@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a670a78f6e906221638fb67c1cf5be8398b415b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762583"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210738"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Utilizzare gli avvisi per gli eventi degli agenti di replica
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent consentono di monitorare gli eventi, ad esempio quelli dell'agente di replica, mediante gli avvisi. Utilizzando[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent è possibile monitorare il registro applicazioni di Windows per rilevare gli eventi associati ad avvisi. Se si verifica un evento di questo tipo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent risponde automaticamente eseguendo un'attività definita dall'utente e/o inviando un messaggio di posta elettronica o tramite cercapersone a un operatore specificato. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] include un set di avvisi predefiniti per gli agenti di replica che è possibile configurare per l'esecuzione di un'attività e/o la notifica di un operatore. Per ulteriori informazioni sulla definizione di un'attività da eseguire, vedere la sezione "Risposte automatiche a un avviso" in questo argomento.  
@@ -39,9 +39,9 @@ ms.locfileid: "52762583"
 |14151|**Replica: errore dell'agente**|Si è verificato un errore durante la chiusura dell'agente.|Yes|  
 |14152|**Replica: nuovo tentativo dell'agente**|La chiusura dell'agente avviene in seguito al tentativo non riuscito di ripetere un'operazione. In questo caso, l'agente rileva un errore quale la non disponibilità del server, un deadlock, un errore di connessione o un errore di timeout.|Yes|  
 |14157|**Replica: eliminata sottoscrizione scaduta**|La sottoscrizione scaduta è stata eliminata.|No|  
-|20572|**Replica: Sottoscrizione è stata reinizializzata dopo un errore di convalida**|Il processo di risposta "Reinizializzazione delle sottoscrizioni con errori di convalida dei dati" reinizializza una sottoscrizione correttamente.|No|  
-|20574|**Replica: Sottoscrittore non supera la convalida dei dati**|La convalida dei dati dell'agente di distribuzione o di merge non è riuscita.|Yes|  
-|20575|**Replica: Convalida dei dati nel Sottoscrittore è riuscita**|La convalida dei dati dell'agente di distribuzione o di merge ha avuto esito positivo.|Yes|  
+|20572|**Replica: la sottoscrizione è stata reinizializzata dopo l'errore di convalida**|Il processo di risposta "Reinizializzazione delle sottoscrizioni con errori di convalida dei dati" reinizializza una sottoscrizione correttamente.|No|  
+|20574|**Replica: la convalida dei dati nel Sottoscrittore non è riuscita**|La convalida dei dati dell'agente di distribuzione o di merge non è riuscita.|Yes|  
+|20575|**Replica: la convalida dei dati nel Sottoscrittore è riuscita**|La convalida dei dati dell'agente di distribuzione o di merge ha avuto esito positivo.|Yes|  
 |20578|**Replica: arresto dell'agente personalizzato**|||  
 |22815|**Avviso di rilevamento dei conflitti peer-to-peer**|L'agente di distribuzione ha rilevato un conflitto durante il tentativo di applicare una modifica a un nodo peer-to-peer.|Yes|  
   

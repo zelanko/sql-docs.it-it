@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5cfb2590ea31003446bcb7027049e70924fd3f16
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185761"
 ---
 # <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>Lezione 1: Preparazione del Database di Analysis Services (esercitazione di base di Data Mining)
   Si è un nuovo dipendenti [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] chi viene affidato l'incarico di progettare un'applicazione di business intelligence in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] spera di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] esperienza di data mining dei dati per individuare interessanti informazioni utilizzabili sulle persone che hanno acquistato una bicicletta. Si è quindi incaricati di eseguire una stima dei potenziali clienti che con maggiore probabilità acquisteranno una bicicletta in futuro.  

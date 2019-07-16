@@ -1,5 +1,5 @@
 ---
-title: Abilitazione writeback della dimensione | Documenti Microsoft
+title: Abilitazione writeback della dimensione | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 561dc878302afe7636a2660a9e194ac14a35c7f1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020318"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179111"
 ---
-# <a name="bi-wizard---enable-dimension-writeback"></a>Creazione guidata BI - Abilita il Writeback delle dimensioni
+# <a name="bi-wizard---enable-dimension-writeback"></a>Procedura guidata per BI - Abilitare il writeback della dimensione
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Aggiungere a un cubo o a una dimensione la funzionalità avanzata di writeback della dimensione per consentire agli utenti di modificare manualmente la struttura e i membri della dimensione. Gli aggiornamenti di una dimensione abilitata per la scrittura vengono registrati direttamente nella tabella della dimensione. Questa funzionalità avanzata modifica l'impostazione della proprietà **WriteEnabled** per una dimensione.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34020318"
 ## <a name="setting-dimension-writeback-capability"></a>Impostazione della funzionalità di writeback della dimensione  
  Nella seconda pagina della procedura guidata **Abilitazione writeback della dimensione** è possibile effettivamente impostare l'opzione **Consenti writeback della dimensione** . Selezionando questa opzione, la proprietà **WriteEnabled** della dimensione viene impostata automaticamente su **True**. Deselezionando questa opzione la proprietà viene impostata automaticamente su **False**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Quando si crea un nuovo membro, è necessario includere ogni attributo di una dimensione. Non è possibile inserire un membro senza specificare un valore per l'attributo chiave della dimensione. La creazione di membri è pertanto soggetta a tutti i vincoli, ad esempio valori di chiave non Null, definiti nella tabella della dimensione. È consigliabile inoltre considerare le colonne che possono essere specificate dalle proprietà della dimensione, ad esempio quelle specificate nella proprietà della dimensione **CustomRollupColumn**, **CustomRollupPropertiesColumn** o **UnaryOperatorColumn** .  
   
 > [!WARNING]  
@@ -44,6 +44,6 @@ ms.locfileid: "34020318"
 >  Per altre informazioni vedere [Utilizzo di MARS &#40;Multiple Active Result Set&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Dimensioni abilitate per scrittura](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
+ [Dimensioni abilitate per la scrittura](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   

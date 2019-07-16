@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c2306f89ba724d6ba799f6bda6ec03f7f6377a97
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210860"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208330"
 ---
 # <a name="configure-or-repair-power-pivot-for-sharepoint-2013"></a>Configurare o ripristinare Power Pivot per SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "53210860"
   
      **Passphrase** : digitare una passphrase. Se la farm di SharePoint è nuova, la passphrase viene utilizzata ogni volta che si aggiungono nuovi server o nuove applicazioni alla farm di SharePoint. Se la farm esiste, immettere la passphrase che consente di aggiungere un'applicazione server alla farm.  
   
-5.  **Porta:** facoltativamente, digitare un numero di porta per la connessione all'applicazione Web Amministrazione centrale oppure usare il numero generato casualmente che viene fornito. Viene verificato che il numero sia disponibile prima di fornirlo come opzione.  
+5.  **Porta:** Facoltativamente, digitare un numero di porta per la connessione all'applicazione web Amministrazione centrale oppure utilizzare il numero generato casualmente fornito. Viene verificato che il numero sia disponibile prima di fornirlo come opzione.  
   
 6.  Nella pagina principale digitare il nome di un server [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] eseguito in modalità SharePoint.  
   
@@ -107,22 +107,22 @@ ms.locfileid: "53210860"
   
  Nella tabella seguente vengono descritti i valori usati per configurare il server.  
   
-|Pagina|Valore di input|Origine|Descrizione|  
+|Pagina|Valore di input|`Source`|Descrizione|  
 |----------|-----------------|------------|-----------------|  
 |**Configurare o ripristinare [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint**|Account predefinito|Utente corrente|L'account predefinito è un account utente di Windows di dominio utilizzato per effettuare il provisioning di servizi condivisi nella farm. Viene utilizzato per il provisioning degli elementi seguenti:|  
 ||||-<br />                    [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] predefinita|  
-||||- Servizio di archiviazione sicura|  
-||||- Excel Services|  
-||||- Identità del pool di applicazioni Web|  
-||||- Amministratore della raccolta siti|  
-||||- Account di aggiornamento dati automatico di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
+||||\- Servizio di archiviazione sicura|  
+||||\- Excel Services|  
+||||\- Identità del pool di applicazioni Web|  
+||||\- Amministratore della raccolta siti|  
+||||\- Account di aggiornamento dati automatico di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 ||||Per impostazione predefinita, viene usato l'account di dominio dell'utente corrente.<br /><br /> Nota: È consigliabile sostituire il valore predefinito, a meno che non si configuri un server per fini di valutazione e non di produzione.<br /><br /> È possibile modificare le identità del servizio dopo la configurazione o la riparazione usando Amministrazione centrale.<br /><br /> Facoltativamente, nello strumento di configurazione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] specificare gli account dedicati per gli elementi seguenti:|  
 ||||-Applicazione Web, tramite la pagina **Creare applicazione Web predefinita** (supponendo che si stia creando un'applicazione Web per la farm).|  
 ||||-<br />                    [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , con la pagina **Creare account automatico per DataRefresh** in questo strumento.|  
 ||Server di database|Istanza denominata di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] locale, se disponibile|Se un'istanza del motore di database è installata come istanza denominata di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , il campo del server di database viene popolato dallo strumento con il nome di questa istanza. Se il motore di database non è installato, questo campo è vuoto.<br /><br /> **Server di database**  è un parametro obbligatorio. Può trattarsi di qualsiasi versione o edizione di SQL Server supportata per le farm SharePoint.|  
 ||Passphrase|Input dell'utente|Se si crea una nuova farm, come relativa passphrase viene utilizzata quella immessa. Se si aggiunge [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint a una farm esistente, digitare la passphrase esistente della farm.|  
 ||Porta di Amministrazione centrale SharePoint|Predefinito, se necessario|Se la farm non è configurata, vengono fornite opzioni per creare la farm e un endpoint HTTP ad Amministrazione centrale. Viene selezionato un numero di porta generato casualmente che non è in uso.|  
-||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel Services ([NomeServer]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|Input dell'utente|Il server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è necessario in Excel Services per abilitare le caratteristiche principali di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il nome del server digitato in questa pagina viene aggiunto anche all'elenco nella pagina **Configura server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.|  
+||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel Services ([NomeServer]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|Input dell'utente|Il server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è necessario in Excel Services per abilitare le caratteristiche principali di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il nome del server digitato in questa pagina viene aggiunto anche all'elenco nella pagina **Configura server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .|  
 |**Configurare la nuova farm**|Server di database<br /><br /> Account farm<br /><br /> Passphrase<br /><br /> Porta di Amministrazione centrale SharePoint|Predefinito, se necessario|Per le impostazioni, vengono usati come predefiniti i valori immessi nella pagina principale.|  
 |**Creare un'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**|Nome applicazione di servizio|Impostazione predefinita|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è **Valore predefinito [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service Application**. È possibile usare un valore diverso nello strumento.|  
 ||Server di database|Impostazione predefinita|Server di database che ospita il database dell'applicazione di servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il nome del server predefinito corrisponde al server di database usato per la farm. Questo nome può essere sostituito con un valore diverso.|  
@@ -138,7 +138,7 @@ ms.locfileid: "53210860"
 |**Creare raccolta siti**|Amministratore del sito|Predefinito, se necessario|Viene usato l'account predefinito. È possibile eseguire l'override di questo account nella pagina **Creare raccolta siti** .|  
 ||Posta elettronica contatto|Predefinito, se necessario|Se Microsoft Outlook è configurato nel server, viene usato l'indirizzo di posta elettronica dell'utente corrente. In caso contrario, viene usato un segnaposto.|  
 ||URL sito|Predefinito, se necessario|Viene creato l'URL del sito usando le stesse convenzioni di denominazione per gli URL di SharePoint.|  
-||Titolo sito|Predefinito, se necessario|Come titolo predefinito viene aggiunto **Sito [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.|  
+||Titolo sito|Predefinito, se necessario|Come titolo predefinito viene aggiunto **Sito [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .|  
 |**Attivare la funzionalità [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in una raccolta siti**|URL sito||URL della raccolta siti per cui si stanno attivando le funzionalità di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 ||Abilitare la funzionalità avanzata per questo sito||Abilitare la funzionalità "premiumsite" per siti SharePoint.|  
 |**Creare applicazione del servizio di archiviazione sicura**|Nome applicazione di servizio|Predefinito, se necessario|Digitare il nome per l'applicazione del servizio di archiviazione sicura.|  

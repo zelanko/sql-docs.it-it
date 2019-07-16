@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b292e20880dcb77c4f448f7e141355edff67417f
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579001"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209508"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Determinare la modalità server di un'istanza di Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  È possibile installare Analysis Services in una di tre modalità server: Multidimensionale e Data Mining (impostazione predefinita), [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint e tabulare. La modalità server di un'istanza di Analysis Services è determinata durante l'installazione quando si scelgono le opzioni per l'installazione del server.  
+  Analysis Services può essere installato in una delle tre modalità server: Multidimensionale e Data Mining (impostazione predefinita), [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint e tabulare. La modalità server di un'istanza di Analysis Services è determinata durante l'installazione quando si scelgono le opzioni per l'installazione del server.  
   
  La modalità server determina il tipo di soluzione creata e distribuita. Se non è stato installato il software server e si desidera sapere in quale modalità è stato installato il server, è possibile usare le informazioni di questo argomento per determinare tale modalità. Per altre informazioni sulle funzionalità disponibili in una modalità specifica, vedere [confronto tra tabulari e multidimensionali](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   

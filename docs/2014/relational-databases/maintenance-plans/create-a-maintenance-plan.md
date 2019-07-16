@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de7ff72e7ce135ab477e3d254eeb26193c8bbc69
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801543"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206048"
 ---
 # <a name="create-a-maintenance-plan"></a>Creare un piano di manutenzione
   In questo argomento viene illustrato come creare un piano di manutenzione a uno o più server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Tramite [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]è possibile creare questi piani di manutenzione in uno di due modi: utilizzando la Creazione guidata piano di manutenzione o l'area di progettazione. La procedura guidata è più appropriata per la creazione di piani di manutenzione di base, mentre con l'area di progettazione sono disponibili funzionalità avanzate per i flussi di lavoro.  
@@ -43,7 +43,7 @@ ms.locfileid: "52801543"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per creare o gestire piani di manutenzione, è necessario essere membri del ruolo predefinito del server **sysadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -76,7 +76,7 @@ ms.locfileid: "52801543"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     USE msdb;  

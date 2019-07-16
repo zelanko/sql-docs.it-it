@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9d1cab01b6fc496de90975966bfcf29b70e041fa
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100326"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188749"
 ---
 # <a name="view-information-about-an-operator"></a>Visualizzazione delle informazioni relative a un operatore
   In questo argomento viene descritta la procedura per visualizzare le infomazioni relative a un operatoe di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -43,7 +43,7 @@ ms.locfileid: "54100326"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -84,7 +84,7 @@ ms.locfileid: "54100326"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- reports information about operator Fran??ois Ajenstat   

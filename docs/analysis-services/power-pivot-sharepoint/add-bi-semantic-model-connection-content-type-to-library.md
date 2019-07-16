@@ -1,5 +1,5 @@
 ---
-title: Tipo di contenuto connessione BI Semantic Model di aggiungere alla libreria | Documenti Microsoft
+title: Aggiungi tipo di contenuto connessione BI Semantic Model alla libreria | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ce6afcf0a00473760a35a062f51ef3b87c5a75d4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021368"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208358"
 ---
-# <a name="add-bi-semantic-model-connection-content-type-to-library"></a>Tipo di contenuto connessione BI Semantic Model di aggiungere alla raccolta
+# <a name="add-bi-semantic-model-connection-content-type-to-library"></a>Aggiungi tipo di contenuto connessione BI Semantic Model alla libreria
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Una connessione BISM viene creata in SharePoint e fornisce il reindirizzamento ai dati Business Intelligence Semantic Model in una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o un database modello tabulare di Analysis Services in un server di rete. Prima di creare una connessione BISM in SharePoint, è necessario estendere una raccolta documenti per consentire la creazione di un file con estensione bism. Questo passaggio deve essere eseguito solo una volta per ogni raccolta, tuttavia sarà necessario ripeterlo per qualsiasi raccolta da cui si desidera creare file con estensione bism. In base alle procedure consigliate, è opportuno creare una raccolta centralizzata per l'archiviazione di file con estensione bism in modo da poter gestire le autorizzazioni da un'unica posizione.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "34021368"
   
 5.  In Tipi di contenuto nella sezione "Consenti la gestione di più tipi di contenuto:" scegliere **Sì**.  
   
-6.  Scegliere **OK**.  
+6.  Fare clic su **OK**.  
   
 7.  Nella sezione Tipi di contenuto fare clic su **Aggiungi da tipi di contenuto del sito esistenti**. Se questa pagina non viene visualizzata, tornare al sito, fare clic su **Raccolta** in Strumenti raccolta, quindi scegliere **Impostazioni raccolta**.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "34021368"
   
 10. In Tipi di contenuto del sito disponibili selezionare **File di connessione BISM**, quindi scegliere **Aggiungi** per spostare il tipo di contenuto selezionato nell'elenco Tipi di contenuto da aggiungere.  
   
-11. Scegliere **OK**.  
+11. Fare clic su **OK**.  
   
 12. Per verificare l'aggiunta del tipo di contenuto, tornare alla raccolta e fare clic su **Nuovo documento** nell'area Documenti della barra multifunzione della raccolta. Nell'elenco Nuovi documenti dovrebbe essere presente **File di connessione BISM** .  
   
@@ -62,6 +62,6 @@ ms.locfileid: "34021368"
   
 ## <a name="see-also"></a>Vedere anche  
  [Connessione BI Semantic Model di PowerPivot &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
- [Utilizzare una connessione BI Semantic Model in Excel o Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
+ [Utilizzare una connessione BISM (BI Semantic Model) in Excel o Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
   

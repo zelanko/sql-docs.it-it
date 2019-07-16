@@ -1,5 +1,5 @@
 ---
-title: Algoritmo Microsoft Linear Regression | Documenti Microsoft
+title: Algoritmo Microsoft Linear Regression | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 20d052ad91a00a7b70b658ff9118dfb73736a410
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017928"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183017"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Algoritmo Microsoft Linear Regression
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34017928"
   
  La relazione assume la forma di un'equazione relativa alla linea che rappresenta meglio una serie di dati. Ad esempio, la linea contenuta nel diagramma seguente è la migliore rappresentazione lineare possibile dei dati.  
   
- ![Una riga che modella un set di dati](../../analysis-services/data-mining/media/linear-regression.gif "una riga che modella un set di dati")  
+ ![Retta di modellazione di un set di dati](../../analysis-services/data-mining/media/linear-regression.gif "retta di modellazione di un set di dati")  
   
  A ogni punto dati del diagramma corrisponde un errore associato alla relativa distanza dalla retta di regressione. I coefficienti a e b dell'equazione di regressione regolano l'angolo e la posizione della retta di regressione. È possibile ottenere l'equazione di regressione modificando i coefficienti a e b fino a quando la somma degli errori associati a tutti i punti raggiunge il minimo.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "34017928"
   
  Selezionando l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression, se l'attributo stimabile è un tipo di dati numerico continuo, oltre a creare un modello di regressione lineare, è possibile creare un modello di albero delle decisioni che contenga regressioni. In questo caso, l'algoritmo suddividerà i dati quando rileverà punti di separazione appropriati, ma per alcune aree di dati creerà una formula di regressione. Per altre informazioni sugli alberi di regressione con un modello di albero delle decisioni, vedere [Contenuto dei modelli di data mining per i modelli di albero delle decisioni &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
 -   Non supporta l'utilizzo del linguaggio PMML (Predictive Model Markup Language) per la creazione di modelli di data mining.  
   
@@ -72,9 +72,9 @@ ms.locfileid: "34017928"
 -   Supporta l'utilizzo di modelli di data mining OLAP.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Riferimento tecnico l'algoritmo Microsoft Linear Regression](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
- [Esempi di Query del modello di regressione lineare](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [Contenuto del modello di data mining per i modelli di regressione lineare & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Riferimento tecnico per l'algoritmo Microsoft Linear Regression](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Esempi di query sul modello di regressione lineare](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
+ [Contenuto dei modelli di data mining per i modelli di regressione lineare &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

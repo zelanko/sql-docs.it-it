@@ -1,5 +1,5 @@
 ---
-title: Non è stato possibile caricare 'Microsoft.AnalysisServices.SharePoint.Integration' | Documenti Microsoft
+title: Non è riuscito a caricare 'Microsoft.AnalysisServices.SharePoint.Integration' | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4da716ab3797f4f6ea54d94c53f753685972df25
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022508"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208289"
 ---
-# <a name="could-not-load-microsoftanalysisservicessharepointintegration"></a>Non è stato possibile caricare Microsoft.AnalysisServices.SharePoint.Integration
+# <a name="could-not-load-microsoftanalysisservicessharepointintegration"></a>Non è riuscito a caricare Microsoft.AnalysisServices.SharePoint.Integration
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Negli ambienti di SharePoint 2010 in cui è disponibile [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint, questo errore si verifica se la distribuzione della soluzione a livello di applicazione per [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] non è avvenuta correttamente.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "34022508"
   
 4.  Scegliere l'applicazione Web per la quale si sta verificando questo errore. Se sono presenti più applicazioni Web, ridistribuire la soluzione per tutte.  
   
-5.  Scegliere **OK**.  
+5.  Fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Distribuire soluzioni PowerPivot in SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)  

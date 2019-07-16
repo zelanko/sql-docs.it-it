@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791913"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185966"
 ---
 # <a name="tablediff-utility"></a>utilità tablediff
   L'utilità **tablediff** viene usata per confrontare i dati in due tabelle per rilevarne l'eventuale non convergenza e risulta particolarmente utile per la risoluzione dei problemi relativi alla non convergenza in una topologia di replica. Questa utilità può essere utilizzata dal prompt dei comandi oppure in un file batch per eseguire le attività seguenti:  
@@ -76,8 +76,8 @@ ms.locfileid: "52791913"
  [ **-?** ]  
  Restituisce l'elenco dei parametri supportati.  
   
- **-sourceserver** *source_server_name*[**\\**_instance_name_]  
- Nome del server di origine. Specificare _origine\_server\_name_ per l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare _origine\_server\_name_**\\**_istanza\_nome_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-sourceserver** *source_server_name*[ **\\** _instance_name_]  
+ Nome del server di origine. Specificare _origine\_server\_name_ per l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare _origine\_server\_name_ **\\** _istanza\_nome_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *source_database*  
  Nome del database di origine.  
@@ -100,8 +100,8 @@ ms.locfileid: "52791913"
  **-sourcelocked**  
  La tabella di origine viene bloccata durante il confronto mediante gli hint di tabella TABLOCK e HOLDLOCK.  
   
- **-destinationserver** *destination_server_name*[**\\**_istanza\_nome_]  
- Nome del server di destinazione. Specificare *destination_server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare _destinazione\_server\_name_**\\**_istanza\_nome_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-destinationserver** *destination_server_name*[ **\\** _istanza\_nome_]  
+ Nome del server di destinazione. Specificare *destination_server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare _destinazione\_server\_name_ **\\** _istanza\_nome_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** *subscription_database*  
  Nome del database di destinazione.  

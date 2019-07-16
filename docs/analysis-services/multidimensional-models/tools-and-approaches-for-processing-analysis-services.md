@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 10f07b04523aeafeb3166bb2e1dbf7072a7b53b5
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147736"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208455"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Strumenti e approcci per l'elaborazione (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "50147736"
   
 4.  Nella finestra di dialogo **Elaborazione dimensione** , nella colonna **Opzioni elaborazione** di **Elenco oggetti**, verificare che l'opzione per la colonna sia **Elaborazione completa**. In caso contrario, in **Opzioni elaborazione**fare clic sull’opzione e selezionare **Elaborazione completa** nell'elenco a discesa.  
   
-5.  Fare clic su **Esegui**.  
+5.  Fai clic su **Esegui**.  
   
 6.  Al termine dell'elaborazione, fare clic su **Chiudi**.  
   

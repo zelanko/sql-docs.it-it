@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 01d2ee847c87fdab013b19edde3c20c9a03c8499
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763183"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199408"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Gestione delle partizioni di una pubblicazione di tipo merge con filtri con parametri
   In questo argomento viene descritto come gestire le partizioni per una pubblicazione di tipo merge con i filtri con parametri in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO). È possibile utilizzare i filtri di riga con parametri per generare partizioni non sovrapposte. È possibile limitare tali partizioni in modo che solo una sottoscrizione riceva una determinata partizione. In questi casi, la presenza di un numero elevato di Sottoscrittori comporta un numero elevato di partizioni, che richiedono anche un numero uguale di snapshot partizionati. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../merge/parameterized-filters-parameterized-row-filters.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "52763183"
 -   Se una pubblicazione contiene filtri con parametri che producono sottoscrizioni con partizioni non sovrapposte ed è necessario ricreare un'eventuale sottoscrizione persa, rimuovere la partizione sottoscritta, ricreare la sottoscrizione, quindi ricreare la partizione. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../merge/parameterized-filters-parameterized-row-filters.md). La replica genera script di creazione per le partizioni del Sottoscrittore esistenti al momento della generazione di uno script per la creazione della pubblicazione. Per altre informazioni, vedere [Scripting Replication](../scripting-replication.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
- Gestire le partizioni nella pagina **Partizioni dati** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](view-and-modify-publication-properties.md). In questa pagina è possibile creare ed eliminare partizioni, consentire ai Sottoscrittori di avviare la generazione e il recapito di snapshot, generare snapshot per una o più partizioni ed eliminare snapshot.  
+ Gestire le partizioni nella pagina **Partizioni dati** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](view-and-modify-publication-properties.md). In questa pagina è possibile creare ed eliminare partizioni, consentire ai Sottoscrittori di avviare la generazione e il recapito di snapshot, generare snapshot per una o più partizioni ed eliminare snapshot.  
   
 #### <a name="to-create-a-partition"></a>Per creare una partizione  
   
@@ -100,15 +100,15 @@ ms.locfileid: "52763183"
   
 #### <a name="to-view-information-on-existing-partitions"></a>Per visualizzare informazioni sulle partizioni esistenti  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql). Specificare il nome della pubblicazione per **@publication**. (Facoltativo) Specificare **@suser_sname** o **@host_name** per ottenere esclusivamente informazioni basate su un solo criterio di filtro.  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql). Specificare il nome della pubblicazione per **@publication** . (Facoltativo) Specificare **@suser_sname** o **@host_name** per ottenere esclusivamente informazioni basate su un solo criterio di filtro.  
   
 #### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>Per definire una nuova partizione e generare un nuovo snapshot partizionato  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql). Specificare il nome della pubblicazione per **@publication**e il valore con parametri che definisce la partizione per uno degli elementi indicati di seguito.  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql). Specificare il nome della pubblicazione per **@publication** e il valore con parametri che definisce la partizione per uno degli elementi indicati di seguito.  
   
-    -   **@suser_sname**: se il filtro con parametri è definito dal valore restituito da [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql).  
+    -   **@suser_sname** : se il filtro con parametri è definito dal valore restituito da [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql).  
   
-    -   **@host_name**: se il filtro con parametri è definito dal valore restituito da [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql).  
+    -   **@host_name** : se il filtro con parametri è definito dal valore restituito da [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql).  
   
 2.  Creare e inizializzare lo snapshot con parametri per la nuova partizione. Per altre informazioni, vedere [Creazione di uno snapshot per una pubblicazione di tipo merge con filtri con parametri](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
@@ -116,9 +116,9 @@ ms.locfileid: "52763183"
   
 1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_dropmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql). Specificare il nome della pubblicazione per **@publication** e il valore con parametri che definisce la partizione per uno degli elementi indicati di seguito.  
   
-    -   **@suser_sname**: se il filtro con parametri è definito dal valore restituito da [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql).  
+    -   **@suser_sname** : se il filtro con parametri è definito dal valore restituito da [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql).  
   
-    -   **@host_name**: se il filtro con parametri è definito dal valore restituito da [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql).  
+    -   **@host_name** : se il filtro con parametri è definito dal valore restituito da [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql).  
   
      Viene inoltre effettuata la rimozione del processo di snapshot e degli eventuali file di snapshot per la partizione.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "52763183"
   
 1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione, quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sull'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePublication>. Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione, quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sull'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1.  
   
 3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce `false`, le proprietà della pubblicazione sono state definite in modo non corretto nel passaggio 2 oppure la pubblicazione non esiste.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "52763183"
   
 1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione, quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sull'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.MergePublication>. Impostare le proprietà <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> e <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> per la pubblicazione, quindi impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sull'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creato nel passaggio 1.  
   
 3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per recuperare le proprietà dell'oggetto. Se questo metodo restituisce `false`, le proprietà della pubblicazione sono state definite in modo non corretto nel passaggio 2 oppure la pubblicazione non esiste.  
   

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783883"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188826"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent è un servizio di Microsoft Windows per l'esecuzione di attività amministrative pianificate, denominate *processi* in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -42,7 +42,7 @@ ms.locfileid: "52783883"
 ##  <a name="Components"></a> Componenti di SQL Server Agent  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilizza i componenti seguenti per definire le attività da eseguire, quando eseguirle e come fornire informazioni in merito alla riuscita o meno delle attività.  
   
-### <a name="jobs"></a>processi  
+### <a name="jobs"></a>Processi  
  Un *processo* è una serie specificata di azioni eseguite da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. I processi consentono la definizione di un'attività amministrativa eseguibile una o più volte e il monitoraggio della riuscita o non riuscita di ogni esecuzione. Un processo può essere eseguito su un server locale oppure su più server remoti.  
   
 > [!IMPORTANT]  

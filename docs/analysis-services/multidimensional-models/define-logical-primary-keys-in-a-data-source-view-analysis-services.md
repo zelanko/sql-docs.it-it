@@ -1,5 +1,5 @@
 ---
-title: Definire chiavi primarie logiche in una vista origine dati (Analysis Services) | Documenti Microsoft
+title: Definire chiavi primarie logiche in una vista origine dati (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 90684f55414fa9e3f0d68a8ec90884fdae4d2c0a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021064"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178740"
 ---
 # <a name="define-logical-primary-keys-in-a-data-source-view-analysis-services"></a>Definire chiavi primarie logiche in una vista origine dati (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34021064"
      Una volta impostata la chiave, le colonne chiave primaria saranno identificate da un'icona a forma di chiave.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste origine dati nei modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Definire calcoli denominati in una vista origine dati & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [Viste origine dati in modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

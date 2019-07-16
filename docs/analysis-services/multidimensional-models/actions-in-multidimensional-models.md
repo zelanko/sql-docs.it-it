@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c3bf71447581375fca06d8190cf6a5a863c136dc
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145706"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209205"
 ---
 # <a name="actions-in-multidimensional-models"></a>Azioni nei modelli multidimensionali
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "50145706"
   
  Usare la scheda **Azioni** di Progettazione cubi per compilare azioni per un cubo. Specificare le opzioni seguenti:  
   
- **Nome**  
+ **Name**  
  Selezionare un nome che identifichi l'azione.  
   
  **Destinazione azione**  
@@ -52,7 +52,7 @@ ms.locfileid: "50145706"
  **Contenuto azione**  
  Selezionare il tipo di azione. Nella tabella seguente vengono riepilogati i tipi disponibili.  
   
-|Tipo|Description|  
+|type|Descrizione|  
 |----------|-----------------|  
 |Set di dati|Consente di recuperare un set di dati.|  
 |Proprietario|Esegue un'operazione utilizzando un'interfaccia diversa da quelle elencate in questa tabella.|  
@@ -65,7 +65,7 @@ ms.locfileid: "50145706"
  **Proprietà aggiuntive**  
  Selezionare la proprietà. Nella tabella seguente vengono riepilogate le proprietà disponibili.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**Chiamata**|Specifica la modalità di esecuzione dell'azione. L'impostazione predefinita Interattiva specifica che l'azione viene eseguita quando un utente accede a un oggetto. Le impostazioni possibili sono:<br /><br /> Batch<br /><br /> Interattiva<br /><br /> Su apertura|  
 |**Applicazione**|Descrive l'applicazione dell'azione.|  
@@ -82,7 +82,7 @@ ms.locfileid: "50145706"
  **Server di report**  
  Le proprietà descritte nella tabella seguente sono specifiche del server di report.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**Nome server**|Nome del computer in cui il server di report è in esecuzione.|  
 |**Percorso server**|Percorso esposto dal server di report.|  
@@ -109,7 +109,7 @@ parametervalue1
 & ...  
 ```  
   
- Esempio:  
+ Ad esempio:  
   
 ```  
 http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Region=West  

@@ -1,5 +1,5 @@
 ---
-title: Colonne del modello di data mining | Documenti Microsoft
+title: Colonne del modello di data mining | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 60967ccdd9339f12f0b684c8dea1375554180617
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016828"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182838"
 ---
 # <a name="mining-model-columns"></a>Colonne del modello di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "34016828"
  Per altre informazioni sull'impostazione della proprietà di utilizzo e sulla definizione di flag di modellazione a livello di programmazione tramite DMX, vedere [CREATE MINING MODEL &#40;DMX&#41;](../../dmx/create-mining-model-dmx.md). Per altre informazioni sull'impostazione della proprietà di utilizzo e sulla definizione di flag di modellazione in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vedere [Spostamento di oggetti di data mining](../../analysis-services/data-mining/moving-data-mining-objects.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Strutture di data mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Modificare le proprietà di un modello di Data Mining](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)   
- [Escludere una colonna da un modello di Data Mining](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)   
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Strutture di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Modificare le proprietà di un modello di data mining](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)   
+ [Escludere una colonna da un modello di data mining](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)   
  [Colonne della struttura di data mining](../../analysis-services/data-mining/mining-structure-columns.md)  
   
   

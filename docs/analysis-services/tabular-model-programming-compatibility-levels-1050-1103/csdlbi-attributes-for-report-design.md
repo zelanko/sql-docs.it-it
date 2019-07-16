@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c7f4b1ef3b46e4564ffc4622b39e8326adf443a6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407911"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163458"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>Attributi CSDLBI per la progettazione di report
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

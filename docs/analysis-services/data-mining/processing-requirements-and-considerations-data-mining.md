@@ -1,5 +1,5 @@
 ---
-title: L'elaborazione di requisiti e considerazioni (Data Mining) | Documenti Microsoft
+title: L'elaborazione di requisiti e considerazioni (Data Mining) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4228f5ae90f7fdd2510787b6fca6ad10f7302e4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016148"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182472"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>Requisiti e considerazioni sull'elaborazione (data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "34016148"
   
  Quando si elabora il modello, quest'ultimo non legge nuovamente i dati dall'origine dati, ma ne ottiene il riepilogo dalla struttura di data mining. Utilizzando il cubo creato e i dati dell'indice e del case memorizzati nella cache, nel server vengono creati thread indipendenti per eseguire il training dei modelli.  
   
- Per ulteriori informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano l'elaborazione parallela di modello, vedere [funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+ Per altre informazioni sulle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che supportano l'elaborazione parallela dei modelli, vedere [funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 ##  <a name="bkmk_ProcessStructures"></a> Elaborazione di strutture di data mining  
  È possibile elaborare una struttura di data mining insieme a tutti i modelli dipendenti o separatamente. L'elaborazione di una struttura di data mining separatamente dai modelli può essere utile quando si prevede che l'elaborazione di alcuni modelli richieda molto tempo e si desidera rinviare tale operazione.  
@@ -58,13 +58,13 @@ ms.locfileid: "34016148"
   
  I modelli di data mining vengono inoltre elaborati in questi scenari:  
   
- **Distribuzione di un progetto**: in base alle impostazioni e allo stato corrente del progetto, i modelli di data mining in esso contenuti sono in genere elaborati completamente al momento della distribuzione del progetto.  
+ **Distribuzione di un progetto**: A seconda delle impostazioni del progetto e lo stato corrente del progetto, modelli di data mining nel progetto vengono in genere elaborati completamente quando viene distribuito il progetto.  
   
  Quando si inizia la distribuzione, l'elaborazione viene avviata automaticamente, a meno che nel server di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vi sia una versione elaborata in precedenza e non siano state apportate modifiche strutturali. È possibile distribuire un progetto selezionando **Distribuisci soluzione** nell'elenco a discesa o premendo F5. È possibile:  
   
  Per altre informazioni sull'impostazione delle proprietà di distribuzione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che consentono di controllare la modalità di distribuzione dei modelli di data mining, vedere [Deployment of Data Mining Solutions](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md)(Distribuzione di soluzioni di data mining).  
   
- **Spostamento di un modello di data mining**: quando si sposta un modello di data mining tramite il comando EXPORT, viene esportata solo la definizione del modello, incluso il nome della struttura di data mining che si prevede fornisca i dati al modello.  
+ **Spostamento di un modello di data mining**: Quando si sposta un modello di data mining tramite il comando EXPORT, viene esportata solo la definizione del modello, che include il nome della struttura di data mining che si prevede di fornire dati al modello.  
   
  Requisiti di rielaborazione per gli scenari seguenti utilizzando i comandi EXPORT e IMPORT:  
   
@@ -83,8 +83,8 @@ ms.locfileid: "34016148"
  Per altre informazioni, vedere [Esportare e importare gli oggetti di data mining](../../analysis-services/data-mining/export-and-import-data-mining-objects.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strutture di data mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Strutture di data mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Strutture di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Strutture di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Elaborazione di un modello multidimensionale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

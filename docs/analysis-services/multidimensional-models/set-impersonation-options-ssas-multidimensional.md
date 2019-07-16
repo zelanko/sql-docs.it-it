@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 279aff4acd671318b75988919d7625591f17812f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533807"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165194"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Impostare opzioni di rappresentazione (SSAS - Multidimensionale)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "52533807"
 3.  Scegliere un'opzione descritta nella sezione [Opzioni di rappresentazione](#bkmk_options) di questo argomento.  
   
 ## <a name="set-impersonation-options-in-management-studio"></a>Impostare le opzioni di rappresentazione in Management Studio  
- In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]aprire la finestra di dialogo **Impostazioni di rappresentazione** facendo clic sul pulsante con i puntini di sospensione (**...**) per le proprietà seguenti di queste finestre di dialogo:  
+ In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]aprire la finestra di dialogo **Impostazioni di rappresentazione** facendo clic sul pulsante con i puntini di sospensione ( **...** ) per le proprietà seguenti di queste finestre di dialogo:  
   
 -   Finestra di dialogo**Proprietà database** , attraverso la proprietà Impostazioni di rappresentazione origine dati.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "52533807"
  Nella finestra di dialogo sono disponibili tutte le opzioni, ma solo alcune sono appropriate per ogni scenario. Utilizzare le informazioni seguenti per determinare l'opzione più adatta per il proprio scenario.  
   
  **Usa nome utente e password specifici**  
- Selezionare questa opzione per disporre il [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oggetto utilizza le credenziali di sicurezza di un account utente di Windows specificato nel formato seguente: *\<Nome di dominio >***\\***\<nome dell'account utente >*.  
+ Selezionare questa opzione per disporre il [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oggetto utilizza le credenziali di sicurezza di un account utente di Windows specificato nel formato seguente: *\<Nome di dominio >***\\***\<nome dell'account utente >* .  
   
  Scegliere questa opzione per utilizzare un'identità utente di Windows dedicata e con privilegi minimi, creata specificamente a scopo di accesso ai dati. Se, ad esempio, si crea regolarmente un account di uso generale per il recupero dei dati utilizzati nei report, è possibile specificarlo qui.  
   

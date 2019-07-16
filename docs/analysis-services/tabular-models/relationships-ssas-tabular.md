@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6314331be3a844b86ff8790c8c38abb4c0d3758e
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072528"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207515"
 ---
 # <a name="relationships"></a>Relazioni 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "53072528"
 ##  <a name="what"></a> Vantaggi  
  Una relazione è una connessione tra due tabelle di dati, in base a una o più colonne in ogni tabella. Per capire perché le relazioni sono utili, provare a immaginare di tenere traccia degli ordini di un cliente della propria azienda. È possibile tenere traccia di tutti i dati in un'unica tabella che dispone di una struttura simile alla seguente:  
   
-|CustomerID|nome|EMail|DiscountRate|OrderID|OrderDate|Prodotto|Quantity|  
+|CustomerID|Nome|EMail|DiscountRate|OrderID|OrderDate|Prodotto|Quantity|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|07/01/2010|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|.05|255|03/01/2010|SLR Camera|15|  
@@ -41,7 +41,7 @@ ms.locfileid: "53072528"
   
 ### <a name="customers"></a>Customers  
   
-|[CustomerID]|nome|EMail|  
+|[CustomerID]|NOME|EMail|  
 |--------------------|----------|-----------|  
 |1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
@@ -83,7 +83,7 @@ ms.locfileid: "53072528"
   
  Nella tabella seguente sono riportate le relazioni tra le tre tabelle:  
   
-|Relazione|Tipo|colonna di ricerca|colonna|  
+|Relazione|type|colonna di ricerca|colonna|  
 |------------------|----------|-------------------|------------|  
 |Customers-CustomerDiscounts|uno-a-uno|Customers.CustomerID|CustomerDiscounts.CustomerID|  
 |Customers-Orders|uno-a-molti|Customers.CustomerID|Orders.CustomerID|  
@@ -164,7 +164,7 @@ ms.locfileid: "53072528"
 ##  <a name="bkmk_dupl_errors"></a> Duplicate values and other errors  
  Se si sceglie una colonna che non può essere utilizzata nella relazione, accanto alla colonna viene visualizzata una X rossa. È possibile passare il cursore sull'icona di errore per visualizzare un messaggio in cui sono contenute ulteriori informazioni sul problema. Di seguito sono riportati alcuni dei problemi che possono impedire la creazione di una relazione tra le colonne selezionate:  
   
-|Problema o messaggio|Soluzione|  
+|Problema o messaggio|Risoluzione|  
 |------------------------|----------------|  
 |Impossibile creare la relazione perché in entrambe le colonne selezionate sono contenuti valori duplicati.|Per creare una relazione valida, in almeno una colonna della coppia selezionata devono essere contenuti solo valori univoci.<br /><br /> È possibile modificare le colonne per rimuovere i duplicati o invertire l'ordine delle colonne in modo che la colonna in cui sono contenuti i valori univoci venga usata come **Colonna di ricerca correlata**.|  
 |Nella colonna è presente un valore Null o vuoto.|Non è possibile creare un join tra le colonne di dati in base a un valore Null. In entrambe le colonne utilizzate in una relazione deve essere presente un valore per ogni riga.|  

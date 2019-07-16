@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9b9a581a4f5331479c7dc5ed87fc5d213e8d465
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377353"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205570"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>Elaborare codici restituiti e parametri di output (ODBC)
   Le stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono includere parametri di output e codici restituiti di tipo integer. I codici restituiti e parametri di output vengono inviati nell'ultimo pacchetto dal server e non sono disponibili per l'applicazione fino a quando [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) restituisce SQL_NO_DATA. Se viene restituito un errore da una stored procedure, chiamare SQLMoreResults per passare al risultato successivo fino a quando non viene restituito SQL_NO_DATA.  

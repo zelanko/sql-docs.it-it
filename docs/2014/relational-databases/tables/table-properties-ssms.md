@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356284"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196712"
 ---
 # <a name="table-properties"></a>Table Properties
   In questo argomento vengono descritte le proprietà della tabella visualizzate nella finestra di dialogo Proprietà tabella in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni su come visualizzare queste proprietà, vedere [Visualizzare la definizione di una tabella](view-the-table-definition.md).  

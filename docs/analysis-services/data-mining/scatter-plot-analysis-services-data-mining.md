@@ -1,5 +1,5 @@
 ---
-title: Grafico a dispersione (Analysis Services - Data Mining) | Documenti Microsoft
+title: Grafico a dispersione (Analysis Services - Data Mining) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fa64802b565034829030869dd6242eb57525a0f4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019808"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182366"
 ---
 # <a name="scatter-plot-analysis-services---data-mining"></a>Grafico a dispersione (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,12 +42,12 @@ ms.locfileid: "34019808"
   
 |Argomento|Collegamenti|  
 |------------|-----------|  
-|Viene fornita una procedura dettagliata relativa alla creazione di un grafico di accuratezza per il modello Targeted Mailing.|[Esercitazione di base di Data Mining](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [Test dell'accuratezza con i grafici di accuratezza & #40; Esercitazione di base di Data Mining & #41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
-|Vengono illustrati i tipi di grafici correlati.|[Grafico di accuratezza & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Grafico dei profitti & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Matrice di classificazione & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
-|Vengono descritti gli utilizzi della convalida incrociata per modelli e strutture di data mining.|[La convalida incrociata & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|Vengono descritti i passaggi per la creazione di grafici di accuratezza e di altri grafici simili.|[Test e convalida le attività e procedure relative alla & #40; Data Mining & #41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Viene fornita una procedura dettagliata relativa alla creazione di un grafico di accuratezza per il modello Targeted Mailing.|[Esercitazione di base sul data mining](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [Test dell'accuratezza con i grafici di accuratezza &#40;Esercitazione di base sul data mining&#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
+|Vengono illustrati i tipi di grafici correlati.|[Grafico di accuratezza &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Grafico dei profitti &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Matrice di classificazione &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
+|Vengono descritti gli utilizzi della convalida incrociata per modelli e strutture di data mining.|[Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|Vengono descritti i passaggi per la creazione di grafici di accuratezza e di altri grafici simili.|[Attività e procedure di test e convalida &#40;data mining&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Test e convalida & #40; Data Mining & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Test e convalida &#40;Data mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b2956dba6bb5c5107c5421f32bfa354e603a5b18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118361"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205458"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Invio di dati come parametro con valori di tabella utilizzando data-at-execution (ODBC)
   Come avviene per i [tutto in memoria](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) routine, ma Usa data-at-execution per il parametro con valori di tabella.  
@@ -183,7 +183,7 @@ from @Items
   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  In questo esempio mostra che è possibile usare un flusso di righe, una riga per ogni chiamata a SQLPutData, con ODBC TVP, analogamente a come si potrebbe utilizzare BCP.exe per caricare dati in un database.  
   
  Prima di compilare l'esempio, modificare il nome del server nella stringa di connessione.  
@@ -211,7 +211,7 @@ create procedure MCLOGInsert (@TableVariable MCLOGType READONLY)
 go  
 ```  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 #define UNICODE  
@@ -371,7 +371,7 @@ EXIT:
   
 ## <a name="example"></a>Esempio  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrizione  
  In questo esempio mostra che è possibile usare un flusso di righe, più righe per ogni chiamata a SQLPutData, con ODBC TVP, analogamente a come si potrebbe utilizzare BCP.exe per caricare dati in un database.  
   
  Prima di compilare l'esempio, modificare il nome del server nella stringa di connessione.  
@@ -399,7 +399,7 @@ create procedure MCLOGInsert (@TableVariable MCLOGType READONLY)
 go  
 ```  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 #define UNICODE  

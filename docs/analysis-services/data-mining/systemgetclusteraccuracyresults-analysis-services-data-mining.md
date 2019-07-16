@@ -1,5 +1,5 @@
 ---
-title: SystemGetClusterAccuracyResults (Analysis Services - Data Mining) | Documenti Microsoft
+title: SystemGetClusterAccuracyResults (Analysis Services - Data Mining) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b9521cfd6e2b9ec0d08f290c60167c682c98e46f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019158"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209659"
 ---
 # <a name="systemgetclusteraccuracyresults-analysis-services---data-mining"></a>SystemGetClusterAccuracyResults (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -72,7 +72,7 @@ SystemGetClusterAccuracyResults(
   
  Nella tabella seguente vengono elencate le colonne restituite da **SystemGetClusterAccuracyResults**. Per altre informazioni sull'interpretazione delle informazioni restituite dalla stored procedure, vedere [Misure nel report di convalida incrociata](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).  
   
-|Nome colonna|Description|  
+|Nome colonna|Descrizione|  
 |-----------------|-----------------|  
 |ModelName|Nome del modello sottoposto a test. **All** indica che il risultato è un'aggregazione per tutti i modelli.|  
 |AttributeName|Non applicabile a modelli di clustering.|  
@@ -83,10 +83,10 @@ SystemGetClusterAccuracyResults(
 |Misura|Nome della misura restituita dal test. Le misure per ogni modello dipendono dal tipo di modello e dal tipo del valore stimabile.<br /><br /> Per un elenco delle misure restituite per ogni tipo stimabile, vedere [Misure nel report di convalida incrociata](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).<br /><br /> Per la definizione delle diverse misure, vedere [Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).|  
 |Value|Punteggio di probabilità che indica la probabilità del case di cluster.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Nella tabella seguente vengono forniti esempi dei valori che è possibile utilizzare per specificare i dati nella struttura di data mining utilizzata per la convalida incrociata. Se si desidera utilizzare test case per la convalida incrociata, è necessario che la struttura di data mining contenga già un set di dati di testing. Per informazioni sulla definizione di un set di dati di testing quando si crea una struttura di data mining, vedere [Set di dati di training e di testing](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
   
-|Valore integer|Description|  
+|Valore integer|Descrizione|  
 |-------------------|-----------------|  
 |1|Vengono utilizzati solo i case di training.|  
 |2|Vengono utilizzati solo i test case.|  
@@ -121,7 +121,7 @@ CALL SystemGetClusterAccuracyResults (
   
 ## <a name="see-also"></a>Vedere anche  
  [SystemGetCrossValidationResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetAccuracyResults &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
  [SystemClusterGetAccuracyResults](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   

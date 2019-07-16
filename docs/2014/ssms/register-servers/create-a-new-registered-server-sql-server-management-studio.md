@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8561eb723337530818f45c5a845f7b352b328653
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757963"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188144"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Creazione di un nuovo server registrato (SQL Server Management Studio)
   In questo argomento viene illustrato come salvare le informazioni di connessione per i server ai quali si accede di frequente, registrando il server nel componente Server registrati di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. La registrazione di un server può essere eseguita prima della connessione o durante la connessione da Esplora oggetti. È disponibile un comando di menu speciale che consente di registrare le istanze del server nel computer locale.  
@@ -52,7 +52,7 @@ ms.locfileid: "52757963"
      Per la registrazione di un server da Server registrati, la casella **Tipo di server** è di sola lettura e corrisponde al tipo di server visualizzato nel riquadro Server registrati. Per registrare un tipo diverso di server, fare clic su **Motore di database**, **Analysis Server**, **Reporting Services**o **Integration Services** o sulla barra degli strumenti **Server registrati** prima di avviare la registrazione di un nuovo server.  
   
      **Nome server**  
-     Selezionare l'istanza del server da registrare nel formato *\<nomeserver>*[\\*\<nomeistanza>*].  
+     Selezionare l'istanza del server da registrare nel formato *\<nomeserver>* [\\ *\<nomeistanza>* ].  
   
      **Autenticazione**  
      Per la connessione a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sono disponibili due modalità di autenticazione.  

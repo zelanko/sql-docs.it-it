@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0b9276d0a8684023d8e6dba1a890b5f1698a017a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700329"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181990"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Cancellare le cache di Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,13 +46,13 @@ ms.locfileid: "51700329"
   
  La cancellazione della cache richiede che si fornisca un identificatore di oggetto all'istruzione **ClearCache** in una query XMLA. Nel primo passaggio di questo argomento viene illustrato come ottenere un identificatore di oggetto.  
   
-#### <a name="step-1-get-the-object-identifier"></a>Passaggio 1: ottenere l'identificatore di oggetto  
+#### <a name="step-1-get-the-object-identifier"></a>Passaggio 1: Ottenere l'identificatore di oggetto  
   
 1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]fare clic con il pulsante destro del mouse su un oggetto, selezionare **Proprietà**e copiare il valore dell'ID proprietà nel riquadro **Proprietà** . Questo approccio funziona per database, cubi, dimensioni o tabelle.  
   
 2.  Per ottenere l'ID del gruppo di misure, fare clic con il pulsante destro del mouse sul gruppo di misure e selezionare **Crea script per gruppo di misure**. Scegliere **Crea** o **Modifica**e inviare la query a una finestra. L'ID del gruppo di misure sarà visibile nella definizione dell'oggetto. Copiare l'ID della definizione dell'oggetto.  
   
-#### <a name="step-2-run-the-query"></a>Passaggio 2: eseguire la query  
+#### <a name="step-2-run-the-query"></a>Passaggio 2: Eseguire la query  
   
 1.  In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]fare clic con il pulsante destro del mouse su un database, scegliere **Nuova query**, quindi **XMLA**.  
   

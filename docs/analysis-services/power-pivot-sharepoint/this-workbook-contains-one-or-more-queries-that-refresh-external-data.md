@@ -1,5 +1,5 @@
 ---
-title: Questa cartella di lavoro contiene una o più query che aggiornano dati esterni | Documenti Microsoft
+title: Questa cartella di lavoro contiene una o più query che aggiornano dati esterni | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 61056ecc8b49e7d21cd15702116da511a517ef31
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027701"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207999"
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>Questa cartella di lavoro contiene una o più query che aggiornano dati esterni
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "34027701"
   
 5.  In Dati esterni deselezionare la casella di controllo per **Avvisa in caso di aggiornamento**.  
   
-6.  Scegliere **OK**.  
+6.  Fare clic su **OK**.  
   
  In alternativa, è possibile creare un nuovo percorso attendibile per i siti che contengono cartelle di lavoro di [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] e quindi modificare le impostazioni di configurazione solo per questo sito. Per altre informazioni, vedere [Creare un percorso attendibile per i siti PowerPivot in Amministrazione centrale](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   

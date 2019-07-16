@@ -1,5 +1,5 @@
 ---
-title: Strumenti di Data Mining | Documenti Microsoft
+title: Strumenti di Data Mining | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 70d08ebe145e64f21299f5e46d33bbc7ae41536f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015148"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210082"
 ---
 # <a name="data-mining-tools"></a>Strumenti di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "34015148"
 ## <a name="data-mining-wizard"></a>Creazione guidata modello di data mining  
  Utilizzare la Creazione guidata modello di data mining per iniziare la creazione di soluzioni di data mining. Questa procedura guidata è rapida e facile, consente di eseguire in modo semplificato il processo di creazione di una struttura di data mining e di un modello iniziale correlato e dispone di attività quali la selezione di un tipo di algoritmo e di un'origine dati e la definizione dei dati del case utilizzati per l'analisi.  
   
- **Per altre informazioni, vedere** [Creazione guidata modello di data mining &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+ **Per altre informazioni:** [Creazione guidata modello di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
-## <a name="data-mining-designer"></a>Progettazione modelli di data mining  
+## <a name="data-mining-designer"></a>Data Mining Designer  
  Dopo aver creato una struttura e un modello di data mining tramite la Creazione guidata modello di data mining, è possibile utilizzare Progettazione modelli di data mining da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per utilizzare modelli e strutture esistenti.  
   
  Nella finestra di progettazione sono inclusi strumenti per le attività seguenti:  
@@ -64,7 +64,7 @@ ms.locfileid: "34015148"
 ## <a name="integration-services-data-mining-tasks-and-transformations"></a>Attività di data mining e trasformazioni in Integration Services  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dispone di numerosi componenti che supportano il data mining.  
   
- Alcuni strumenti in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono progettati per consentire di automatizzare attività di data mining comuni, tra cui stime, compilazioni di modelli ed elaborazioni. Esempio:  
+ Alcuni strumenti in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono progettati per consentire di automatizzare attività di data mining comuni, tra cui stime, compilazioni di modelli ed elaborazioni. Ad esempio:  
   
 -   Creare un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che consenta di aggiornare automaticamente il modello ogni volta che il set di dati viene aggiornato con nuovi clienti.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "34015148"
   
 -   Generare automaticamente modelli passati sui parametri.  
   
- Tuttavia, è possibile utilizzare il data mining anche in un flusso di lavoro del pacchetto, come input ad altri processi. Esempio:  
+ Tuttavia, è possibile utilizzare il data mining anche in un flusso di lavoro del pacchetto, come input ad altri processi. Ad esempio:  
   
 -   Utilizzare i valori delle probabilità generati dal modello per ponderare i punteggi per il text mining o per altre attività di classificazione.  
   
@@ -80,12 +80,12 @@ ms.locfileid: "34015148"
   
 -   Utilizzare la regressione logistica per segmentare potenziali clienti in base ai rischi.  
   
- **Per altre informazioni, vedere** [Progetti correlati per soluzioni di data mining](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
+ **Per altre informazioni:** [Progetti correlati per soluzioni di data mining](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining Extensions & #40; DMX & #41; Riferimento](../../dmx/data-mining-extensions-dmx-reference.md)   
- [Procedure dettagliate e attività di modello di data mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Procedure dettagliate e attività del visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Soluzioni di Data Mining](../../analysis-services/data-mining/data-mining-solutions.md)  
+ [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [Attività e procedure relative al modello di data mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Attività e procedure relative al visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Soluzioni di data mining](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   

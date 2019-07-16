@@ -1,5 +1,5 @@
 ---
-title: Riferimento tecnico per l'algoritmo di Clustering Microsoft | Documenti Microsoft
+title: Riferimento tecnico per l'algoritmo di Clustering Microsoft | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb86c8271599b56deb27fd3143fd205c11f52f35
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018358"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183118"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Clustering
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,9 +22,9 @@ ms.locfileid: "34018358"
   
  Per ulteriori informazioni sull'utilizzo dei modelli di clustering, vedere gli argomenti seguenti:  
   
--   [Contenuto del modello di data mining per il Clustering modelli & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [Contenuto dei modelli di data mining per i modelli di clustering &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
--   [Esempi di Query sul modello di clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)  
+-   [Esempi di query sul modello di clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
 ## <a name="implementation-of-the-microsoft-clustering-algorithm"></a>Implementazione dell'algoritmo Microsoft Clustering  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering rende disponibili due metodi per la creazione di cluster e l'assegnazione di punti dati ai cluster. Il primo, l'algoritmo *K-means* , è un metodo di tipo hard clustering, ovvero un punto dati può appartenere a un unico cluster e viene calcolata una singola probabilità per l'appartenenza di ogni punto dati a tale cluster. Il secondo, *Expectation Maximization* (EM), è un metodo di tipo *soft clustering* , ovvero un punto dati appartiene sempre a più cluster e viene calcolata una probabilità per ogni combinazione di punto dati e cluster.  
@@ -81,7 +81,7 @@ ms.locfileid: "34018358"
  CLUSTERING_METHOD  
  Specifica il metodo di clustering utilizzato dall'algoritmo. Sono disponibili i metodi di clustering seguenti:  
   
-|ID|Metodo|  
+|id|Metodo|  
 |--------|------------|  
 |1|EM scalabile|  
 |2|EM non scalabile|  
@@ -146,16 +146,16 @@ ms.locfileid: "34018358"
 ### <a name="modeling-flags"></a>Flag di modellazione  
  L'algoritmo supporta i flag di modellazione seguenti. I flag di modellazione, definiti durante la creazione della struttura o del modello di data mining, specificano la modalità di gestione dei valori in ogni colonna durante l'analisi.  
   
-|Flag di modellazione|Description|  
+|Flag di modellazione|Descrizione|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|La colonna verrà considerata come se disponesse di due stati possibili: Missing ed Existing. Un valore Null è un valore mancante.<br /><br /> Si applica alla colonna del modello di data mining.|  
+|MODEL_EXISTENCE_ONLY|La colonna verrà considerata come se presentasse due stati possibili: Missing ed Existing. Un valore Null è un valore mancante.<br /><br /> Si applica alla colonna del modello di data mining.|  
 |NOT NULL|La colonna non può contenere un valore Null. Se Analysis Services rileva un valore Null durante il training del modello, viene generato un errore.<br /><br /> Si applica alla colonna della struttura di data mining.|  
   
 ## <a name="requirements"></a>Requisiti  
  Un modello di clustering deve contenere una colonna chiave e le colonne di input. È inoltre possibile definire le colonne di input come stimabili. Le colonne impostate su **Solo stima** non vengono usate per la compilazione di cluster. La distribuzione di questi valori nel cluster viene calcolata dopo la compilazione dei cluster.  
   
 ### <a name="input-and-predictable-columns"></a>Colonne di input e stimabili  
- L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering supporta specifiche colonne di input e colonne stimabili, riportate nella tabella seguente. Per altre informazioni sul significato dei tipi di contenuto usati in un modello di data mining, vedere [Tipi di contenuto &#40;Data Mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
+ L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering supporta specifiche colonne di input e colonne stimabili, riportate nella tabella seguente. Per altre informazioni sul significato dei tipi di contenuto usati in un modello di data mining, vedere [Tipi di contenuto &#40;Data mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
 |Colonna|Tipi di contenuto|  
 |------------|-------------------|  
@@ -167,7 +167,7 @@ ms.locfileid: "34018358"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Clustering](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
- [Esempi di Query sul modello di clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)   
- [Contenuto del modello di data mining per il Clustering modelli & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Esempi di query sul modello di clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)   
+ [Contenuto dei modelli di data mining per i modelli di clustering &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

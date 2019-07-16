@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4cb1b821604d125bc81148a06fb613c8547a449
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755873"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68186709"
 ---
 # <a name="sql-server-integration-services-properties-service-tab"></a>Proprietà - SQL Server Integration Services (scheda Servizio)
   Usare la scheda **Servizio**nella finestra di dialogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **Proprietà** per visualizzare o specificare le opzioni seguenti.  
@@ -45,13 +45,13 @@ ms.locfileid: "52755873"
  **Modalità di avvio**  
  Impostare una delle opzioni seguenti per il servizio:  
   
--   Manuale: Il servizio non viene avviato automaticamente all'avvio del computer. In questo caso è necessario avviare il servizio tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un altro strumento.  
+-   Manuale: Questo servizio non viene avviato automaticamente all'avvio del computer. In questo caso è necessario avviare il servizio tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un altro strumento.  
   
--   Automatico: viene eseguito un tentativo automatico di avvio del servizio all'avvio del computer.  
+-   Automatico: Il servizio tenta di avviare all'avvio del computer.  
   
--   Disabilitato: il servizio non può essere avviato.  
+-   Disabilitato: Il servizio non può essere avviato.  
   
  **Stato**  
- Indica se il servizio è in esecuzione, arrestato o disabilitato. "**...**" indica una modifica di stato in sospeso.  
+ Indica se il servizio è in esecuzione, arrestato o disabilitato. " **...** " indica una modifica di stato in sospeso.  
   
   

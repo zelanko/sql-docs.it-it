@@ -1,5 +1,5 @@
 ---
-title: Gli attributi in gerarchie padre-figlio | Documenti Microsoft
+title: Attributi nelle gerarchie padre-figlio | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f6b6c10c8b1c7f311f7ba5e876c1b8d96c9e9701
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023458"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165404"
 ---
 # <a name="parent-child-dimension-attributes"></a>Attributi della dimensione padre-figlio
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34023458"
  Le commissioni individuali per ogni membro del personale addetto alle vendite, inoltre, possono essere diverse. In questo caso, vengono utilizzate due scale diverse per calcolare le commissioni per le vendite lorde individuali dei responsabili delle vendite rispetto alle vendite lorde totali generate dai rappresentanti. Pertanto, è importante poter accedere ai dati della tabella dei fatti sottostante per i membri non foglia. Per recuperare il volume delle vendite lorde individuali per il membro Sales Manager 1, è possibile usare la funzione MDX **DataMember** , mentre per escludere il membro dei dati dal valore aggregato del membro Sales Manager 1 in modo da ottenere il volume delle vendite lorde per i rappresentanti associati a tale membro, è possibile usare un'espressione di rollup personalizzata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
+ [Riferimento alle proprietà degli attributo delle dimensioni](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
  [Dimensioni padre-figlio](../../analysis-services/multidimensional-models/parent-child-dimension.md)  
   
   

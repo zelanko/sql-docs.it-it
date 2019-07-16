@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0cc45718f864f14ade20348b5dae76286ea14f3a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417122"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208251"
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>Creare e personalizzare la Raccolta PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "52417122"
     >  Con la raccolta di Power Pivot è richiesto Microsoft Silverlight.  Il browser Microsoft Edge non supporta Silverlight.   
     > Per visualizzare il contenuto della raccolta in Microsoft Edge, fare clic sulla scheda **Raccolta** nella raccolta di Power Pivot e quindi impostare la visualizzazione della raccolta documenti su **Tutti i documenti**.    
     > Per cambiare la visualizzazione predefinita, fare clic sulla scheda **Raccolta** e quindi scegliere Modifica visualizzazione. Fare clic su "Imposta come visualizzazione predefinita" e quindi su OK per salvare la visualizzazione predefinita.  
-    >  Per altre informazioni su funzionalità supportate di Microsoft Edge, vedere il blog di Windows, [un'interruzione passata, parte 2: Dire addio ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+    >  Per altre informazioni su funzionalità supportate di Edge, vedere il blog di Windows, [un'interruzione passata, parte 2: Dire addio ActiveX, VBScript...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
 -   Per creare una raccolta, è necessario essere proprietari del sito.  
   
@@ -68,13 +68,13 @@ ms.locfileid: "52417122"
   
     2.  Fare clic su **Altre opzioni**.  
   
-    3.  In Raccolte fare clic su **Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+    3.  In Raccolte fare clic su **Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
     1.  **SharePoint 2013**: Fare clic sull'icona delle impostazioni ![impostazioni SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "impostazioni SharePoint"). Fare clic su **Contenuto sito**.  
   
     2.  Fare clic su **Aggiungi applicazione**.  
   
-    3.  Fare clic su **Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+    3.  Fare clic su **Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
 2.  Digitare un nome per la raccolta. Assicurarsi di includere informazioni descrittive che consentono agli utenti di identificare questa raccolta come anteprima dettagliata per le cartelle di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e i report di Reporting Services.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "52417122"
 |----------|-----------------|  
 |Vista Raccolta (impostazione predefinita)|Raccolta è la vista predefinita per una raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . L'anteprima viene visualizzata a sinistra. Le immagini più piccole di ogni foglio di lavoro vengono visualizzate accanto all'anteprima in ordine sequenziale da sinistra a destra.|  
 |Tutti i documenti|Si tratta del layout standard per le raccolte documenti. È possibile scegliere questa vista per gestire singoli documenti o visualizzare il contenuto delle raccolte in un formato elenco.<br /><br /> Utilizzare questa vista per modificare le proprietà ed eliminare o spostare singoli documenti.<br /><br /> Se è stato abilitato il controllo delle versioni, è necessario utilizzare questa vista per archiviare o estrarre i documenti dalla raccolta.|  
-|Vista teatro e vista sequenza|Si tratta di viste specializzate molto utili se si sta illustrando un piccolo numero di documenti correlati. Nella rotazione completa delle anteprime sono incluse tutte le pagine di tutti i documenti della raccolta. Se si dispone di molti documenti, queste viste potrebbero non risultare utili per gli utenti che desiderano individuare o aprire una specifica cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Vista teatro: l'area di anteprima è centrata. Le anteprime più piccole di ogni foglio di lavoro vengono visualizzate nella parte inferiore della pagina, su uno qualsiasi dei lati.<br /><br /> Vista sequenza: l'area di anteprima è centrata. Le anteprime che precedono e seguono immediatamente l'anteprima corrente sono adiacenti all'area di anteprima.|  
+|Vista teatro e vista sequenza|Si tratta di viste specializzate molto utili se si sta illustrando un piccolo numero di documenti correlati. Nella rotazione completa delle anteprime sono incluse tutte le pagine di tutti i documenti della raccolta. Se si dispone di molti documenti, queste viste potrebbero non risultare utili per gli utenti che desiderano individuare o aprire una specifica cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Vista teatro: L'area di anteprima è centrata. Le anteprime più piccole di ogni foglio di lavoro vengono visualizzate nella parte inferiore della pagina, su uno qualsiasi dei lati.<br /><br /> Vista sequenza: L'area di anteprima è centrata. Le anteprime che precedono e seguono immediatamente l'anteprima corrente sono adiacenti all'area di anteprima.|  
   
 ### <a name="switch-to-a-different-view"></a>Passare a una vista diversa  
   

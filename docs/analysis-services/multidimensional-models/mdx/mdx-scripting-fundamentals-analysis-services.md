@@ -1,5 +1,5 @@
 ---
-title: MDX (Analysis Services) di nozioni fondamentali sullo Scripting | Documenti Microsoft
+title: MDX (Analysis Services) di nozioni fondamentali sullo Scripting | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9ca77b9c10f1dba24127e35e5fe55d7ffcdad3dc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021728"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165840"
 ---
 # <a name="mdx-scripting-fundamentals-analysis-services"></a>Nozioni fondamentali sullo scripting MDX (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -26,17 +26,17 @@ ms.locfileid: "34021728"
   
  Per problemi di prestazioni relativi a query e calcoli MDX, vedere la sezione relativa all'ottimizzazione MDX nella [guida alle prestazioni di SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=399050).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Lo Script MDX di base & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)|Include informazioni dettagliate sullo script MDX di base, compreso lo script MDX predefinito inserito in ogni cubo, e sui principi generali di funzionamento degli script MDX nei cubi di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
-|[La gestione di ambito e contesto & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/managing-scope-and-context-mdx.md)|Descrive come usare l'istruzione [CALCULATE](../../../mdx/mdx-scripting-calculate.md), l'istruzione [SCOPE](../../../mdx/mdx-scripting-scope.md) e la funzione [This](../../../mdx/this-mdx.md) per gestire il contesto e l'ambito in uno script MDX.|  
-|[Utilizzo di variabili e parametri & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/using-variables-and-parameters-mdx.md)|Descrive come usare le variabili e i parametri in uno script MDX.|  
-|[Gestione degli errori & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/error-handling-mdx.md)|Illustra la gestione degli errori in uno script MDX.|  
-|[MDX supportati & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/supported-mdx-mdx.md)|Include un elenco di istruzioni, funzioni e operatori MDX supportati negli script MDX.|  
+|[Script MDX di base &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)|Include informazioni dettagliate sullo script MDX di base, compreso lo script MDX predefinito inserito in ogni cubo, e sui principi generali di funzionamento degli script MDX nei cubi di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Gestione di ambito e contesto &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/managing-scope-and-context-mdx.md)|Descrive come usare l'istruzione [CALCULATE](../../../mdx/mdx-scripting-calculate.md) , l'istruzione [SCOPE](../../../mdx/mdx-scripting-scope.md) e la funzione [This](../../../mdx/this-mdx.md) per gestire il contesto e l'ambito in uno script MDX.|  
+|[Utilizzo di variabili e parametri &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/using-variables-and-parameters-mdx.md)|Descrive come usare le variabili e i parametri in uno script MDX.|  
+|[Gestione degli errori &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/error-handling-mdx.md)|Illustra la gestione degli errori in uno script MDX.|  
+|[Istruzioni e funzioni MDX supportate &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/supported-mdx-mdx.md)|Include un elenco di istruzioni, funzioni e operatori MDX supportati negli script MDX.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti al linguaggio MDX & #40; MDX & #41;](../../../mdx/mdx-language-reference-mdx.md)  
+ [Guida di riferimento al linguaggio MDX](../../../mdx/mdx-language-reference-mdx.md)  
   
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc0286a3799aa56090fc6861b0a79b302b47aa26
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544274"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208219"
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Distribuire soluzioni PowerPivot in SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "52544274"
   
  Prima della distribuzione delle soluzioni è necessario installare [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint tramite il supporto di installazione di SQL Server 2012. I pacchetti di soluzioni che si desidera distribuire verranno installati dal programma di installazione di SQL Server.  
   
- In questo argomento sono incluse le sezioni seguenti:  
+ Di seguito sono elencate le diverse sezioni di questo argomento:  
   
  [Prerequisito: Verificare che l'applicazione Web utilizzi l'autenticazione in modalità classica](#bkmk_classic)  
   

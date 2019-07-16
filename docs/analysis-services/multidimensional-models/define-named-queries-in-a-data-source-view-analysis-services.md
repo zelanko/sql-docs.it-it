@@ -1,5 +1,5 @@
 ---
-title: Definire query denominate in una vista origine dati (Analysis Services) | Documenti Microsoft
+title: Definire query denominate in una vista origine dati (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bee48d9927e9caaea28fd201480e507e5cfa7d9d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026228"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208979"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>Definire query denominate in una vista origine dati (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -54,10 +54,10 @@ ms.locfileid: "34026228"
     > [!NOTE]  
     >  L'interfaccia utente per la compilazione di query dipende dall'origine dei dati. Anziché un'interfaccia utente grafica, potrebbe venire visualizzata un'interfaccia utente generica, basata su testo. È possibile ottenere gli stessi risultati con interfacce utente diverse, ma è necessario eseguire procedure diverse. Per altre informazioni, vedere [Finestra di dialogo Crea query denominata o Modifica query denominata &#40;Analysis Services - Dati multidimensionali&#41;](http://msdn.microsoft.com/library/8e192ad6-a0b1-4e21-bb3f-087c93e62941).  
   
-5.  Scegliere **OK**. Nell'intestazione di tabella verrà visualizzata un'icona con due tabelle sovrapposte, indicante che la tabella è stata sostituita da una query denominata.  
+5.  Fare clic su **OK**. Nell'intestazione di tabella verrà visualizzata un'icona con due tabelle sovrapposte, indicante che la tabella è stata sostituita da una query denominata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste origine dati nei modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Definire calcoli denominati in una vista origine dati & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [Viste origine dati in modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [Definire calcoli denominati in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

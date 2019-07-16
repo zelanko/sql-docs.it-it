@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815433"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199443"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Modifiche allo schema nei database di pubblicazione
   La replica supporta una vasta gamma di modifiche dello schema negli oggetti pubblicati. Quando si apporta una delle modifiche di schema seguenti nell'oggetto pubblicato appropriato in un server di pubblicazione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , la modifica viene propagata per impostazione predefinita a tutti i Sottoscrittori [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -89,7 +89,7 @@ ms.locfileid: "52815433"
   
 -   Per aggiungere una nuova colonna a una tabella e non includere la colonna in una pubblicazione esistente, disabilitare la replica delle modifiche dello schema e quindi eseguire ALTER TABLE \<Tabella> ADD \<Colonna>.  
   
--   Per includere una colonna esistente in una pubblicazione esistente, usare [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) o la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**.  
+-   Per includere una colonna esistente in una pubblicazione esistente, usare [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) o la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** .  
   
      Per altre informazioni, vedere [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). Sarà necessario reinizializzare le sottoscrizioni.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "52815433"
   
 -   Per eliminare una colonna da una pubblicazione esistente e dalla tabella nel server di pubblicazione, eseguire ALTER TABLE \<Tabella> DROP \<Colonna>. Per impostazione predefinita, la colonna viene quindi eliminata dalla tabella in tutti i Sottoscrittori.  
   
--   Per eliminare una colonna da una pubblicazione esistente, ma mantenerla nella tabella del server di pubblicazione, usare [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) o la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**.  
+-   Per eliminare una colonna da una pubblicazione esistente, ma mantenerla nella tabella del server di pubblicazione, usare [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) o la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** .  
   
      Per altre informazioni, vedere [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). Sarà necessario generare un nuovo snapshot.  
   

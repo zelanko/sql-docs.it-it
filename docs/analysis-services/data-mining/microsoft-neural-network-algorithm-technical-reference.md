@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a9895eb3e52c83c1ee3594b40fa7257fc53fd4d0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525490"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209817"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -174,7 +174,7 @@ ms.locfileid: "52525490"
 ### <a name="input-and-predictable-columns"></a>Colonne di input e stimabili  
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network supporta le colonne di input e le colonne stimabili specifiche riportate nella tabella seguente.  
   
-|colonna|Tipi di contenuto|  
+|Colonna|Tipi di contenuto|  
 |------------|-------------------|  
 |Attributo di input|Continuous, Cyclical, Discrete, Discretized, Key, Table e Ordered|  
 |Attributo stimabile|Continuous, Cyclical, Discrete, Discretized e Ordered|  

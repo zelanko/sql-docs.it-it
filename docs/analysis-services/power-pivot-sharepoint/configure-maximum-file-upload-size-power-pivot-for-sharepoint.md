@@ -1,5 +1,5 @@
 ---
-title: Configurare le dimensioni di caricamento massime del File (PowerPivot per SharePoint) | Documenti Microsoft
+title: Configurare le dimensioni di caricamento File massime (Power Pivot per SharePoint) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 15ce366acc4244db16f0b58bbdc8226e9327416c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027228"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164272"
 ---
 # <a name="configure-maximum-file-upload-size-power-pivot-for-sharepoint"></a>Configurare la dimensione massima per il caricamento dei file (PowerPivot per SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "34027228"
   
      Il valore massimo che è possibile specificare è 2 gigabyte (o 2047 megabyte come specificato in Amministrazione centrale).  
   
-7.  Scegliere **OK**.  
+7.  Fare clic su **OK**.  
   
 ### <a name="configure-maximum-file-size-for-a-sharepoint-web-application"></a>Configurare le dimensioni massime del file per un'applicazione Web di SharePoint  
   
@@ -63,6 +63,6 @@ ms.locfileid: "34027228"
   
 6.  Impostare la proprietà sul numero uguale o maggiore di quello impostato in Dimensioni massime cartella di lavoro in Excel Services.  
   
-7.  Scegliere **OK**.  
+7.  Fare clic su **OK**.  
   
   

@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a149e8940896210a408b36c7cb06814646fd322
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375943"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206605"
 ---
 # <a name="working-with-query-notifications"></a>Utilizzo delle notifiche delle query
   Le notifiche delle query sono state introdotte in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Basate sull'infrastruttura di Service Broker introdotta in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], tali notifiche consentono di comunicare alle applicazioni che i dati sono stati modificati. Questa caratteristica è particolarmente utile per le applicazioni che forniscono una cache di informazioni provenienti da un database, ad esempio un'applicazione Web, e devono essere notificate quando i dati di origine vengono modificati.  
@@ -73,7 +73,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 ### <a name="the-dbpropsetsqlserverrowset-property-set"></a>Set di proprietà DBPROPSET_SQLSERVERROWSET  
  Per supportare le notifiche delle query tramite OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client aggiunge le nuove proprietà seguenti di proprietà dbpropset_sqlserverrowset.  
   
-|nome|Tipo|Descrizione|  
+|Name|Type|Descrizione|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Numero di secondi durante i quali la notifica di query deve rimanere attiva.<br /><br /> Il valore predefinito è 432000 secondi (5 giorni). Il valore minimo è 1 secondo e il valore massimo è 2^31-1 secondi.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Testo del messaggio di notifica. Tale testo è definito dall'utente e non presenta un formato predefinito.<br /><br /> Per impostazione predefinita, la stringa è vuota. È possibile specificare un messaggio utilizzando da 1 a 2000 caratteri.|  
@@ -131,7 +131,7 @@ RECEIVE * FROM MyQueue
   
  Se una richiesta di sottoscrizione viene eseguita per un batch o una stored procedure, verrà eseguita una richiesta di sottoscrizione separata per ogni istruzione eseguita all'interno del batch o della stored procedure. Le istruzioni EXECUTE non registreranno una notifica, ma invieranno la richiesta di notifica al comando eseguito. Nel caso di un batch, il contesto verrà applicato alle istruzioni eseguite e verranno applicate le stesse regole illustrate in precedenza.  
   
- L'inoltro di una query per una notifica inviata dallo stesso utente nello stesso contesto di database e con modello, valori di parametro, ID di notifica e posizione di recapito identici a quelli di una sottoscrizione attiva esistente comporterà il rinnovo della sottoscrizione esistente e la reimpostazione del nuovo timeout specificato. Se, pertanto, viene richiesta una notifica per query identiche, ne verrà inviata una sola. Questa restrizione è applicabile a una query duplicata in un batch o a una query in una stored procedure chiamata più volte.  
+ Invio di una query per la notifica inviata dallo stesso utente nello stesso contesto del database e con il modello stesso, stessi valori di parametro, lo stesso ID di notifica e stessa posizione di recapito di una sottoscrizione attiva esistente, verrà rinnovati esistente sottoscrizione, reimpostare il nuovo specificati timeout. Ciò significa che se viene richiesta la notifica per query identiche, verrà inviata solo una notifica. Questa restrizione è applicabile a una query duplicata in un batch o a una query in una stored procedure chiamata più volte.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità di SQL Server Native Client](sql-server-native-client-features.md)  

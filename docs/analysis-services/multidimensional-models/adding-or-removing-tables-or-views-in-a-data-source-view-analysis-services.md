@@ -1,5 +1,5 @@
 ---
-title: Aggiungendo o rimuovendo tabelle o viste in un tipo di dati di origine vista (Analysis Services) | Documenti Microsoft
+title: Aggiungendo o rimuovendo tabelle o viste in dati di origine vista (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: de75b3dfe13d5a640537f2bbc1a09b6c097687f9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022118"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209187"
 ---
 # <a name="adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services"></a>Aggiunta o rimozione di tabelle o viste in una vista origine dati (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "34022118"
 >  L'aggiunta o la rimozione di oggetti in una vista origine dati non influisce sull'origine dati sottostante.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste origine dati nei modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Utilizzare diagrammi in Progettazione vista origine dati & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Viste origine dati in modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [Usare diagrammi in Progettazione vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

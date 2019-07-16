@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1853281863fe3d1e6f4fcc6b36f228f7df523bda
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797613"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189274"
 ---
-# <a name="job-properties-new-job-alerts-page"></a>Proprietà processo: Nuovo processo (pagina avvisi)
+# <a name="job-properties-new-job-alerts-page"></a>Proprietà processo: Nuovo processo (pagina Avvisi)
   Utilizzare questa pagina per visualizzare e organizzare gli avvisi per un processo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="options"></a>Opzioni  

@@ -1,5 +1,5 @@
 ---
-title: Contenuto per i modelli di associazione del modello di data mining (Analysis Services - Data Mining) | Documenti Microsoft
+title: Contenuto dei modelli di associazione modelli di data mining (Analysis Services - Data Mining) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e5b9c977cbe5a31672d6738e2aaa7f3f911975e8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017578"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182780"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli di associazione (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "34017578"
  Nomi degli attributi che corrispondono a questo nodo.  
   
  NODE_NAME  
- Nome del nodo. Per un modello di associazione, questa colonna contiene lo stesso valore di NODE_UNIQUE_NAME.  
+ Il nome del nodo. Per un modello di associazione, questa colonna contiene lo stesso valore di NODE_UNIQUE_NAME.  
   
  NODE_UNIQUE_NAME  
  Nome univoco del nodo.  
@@ -54,10 +54,10 @@ ms.locfileid: "34017578"
  NODE_TYPE  
  Un modello di associazione restituisce solo i tipi di nodo seguenti:  
   
-|ID tipo di nodo|Tipo|  
+|ID tipo di nodo|type|  
 |------------------|----------|  
 |1 (Model)|Radice o nodo padre.|  
-|7 (Itemset)|Set di elementi, ovvero raccolta di coppie attributo-valore. Esempi:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> o<br /><br /> `Gender = Male`.|  
+|7 (Itemset)|Set di elementi, ovvero raccolta di coppie attributo-valore. Esempi:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> oppure<br /><br /> `Gender = Male`.|  
 |8 (Rule)|Regola che definisce la modalità di correlazione tra gli elementi.<br /><br /> Esempio:<br /><br /> `Product 1 = Existing, Product 2 = Existing -> Product 3 = Existing`.|  
   
  NODE_CAPTION  
@@ -89,7 +89,7 @@ ms.locfileid: "34017578"
   
  **Nodo padre** Include un elenco delimitato da virgole delle informazioni seguenti sul modello:  
   
-|Elemento|Description|  
+|Elemento|Descrizione|  
 |----------|-----------------|  
 |ITEMSET_COUNT|Conteggio di tutti i set di elementi nel modello.|  
 |RULE_COUNT|Conteggio di tutte le regole nel modello.|  
@@ -97,10 +97,10 @@ ms.locfileid: "34017578"
 |MAX_SUPPORT|Supporto massimo individuato per ogni singolo set di elementi.<br /><br /> **Nota** Questo valore potrebbe essere diverso da quello impostato per il parametro *MAXIMUM_SUPPORT* .|  
 |MIN_ITEMSET_SIZE|Dimensione del set di elementi più piccolo, rappresentata come conteggio di elementi.<br /><br /> Il valore 0 indica che lo stato **Mancante** è stato considerato un elemento indipendente.<br /><br /> **Nota** Il valore predefinito del parametro *MINIMUM_ITEMSET_SIZE* è 1.|  
 |MAX_ITEMSET_SIZE|Indica la dimensione del set di elementi più grande individuato.<br /><br /> **Nota** Questo valore è vincolato dal valore impostato per il parametro *MAX_ITEMSET_SIZE* durante la creazione del modello. Non può mai superare tale valore, ma può essere minore. Il valore predefinito è 3.|  
-|MIN_PROBABILITY|Probabilità minima individuata per ogni singolo set di elementi o regola nel modello.<br /><br /> Esempio: 0,400390625<br /><br /> **Nota** Per i set di elementi, questo valore è sempre maggiore del valore impostato per il parametro *MINIMUM_PROBABILITY* durante la creazione del modello.|  
+|MIN_PROBABILITY|Probabilità minima individuata per ogni singolo set di elementi o regola nel modello.<br /><br /> Esempio: 0.400390625<br /><br /> **Nota** Per i set di elementi, questo valore è sempre maggiore del valore impostato per il parametro *MINIMUM_PROBABILITY* durante la creazione del modello.|  
 |MAX_PROBABILITY|Probabilità massima individuata per ogni singolo set di elementi o regola nel modello.<br /><br /> Esempio: 1<br /><br /> **Nota** Non esistono parametri che vincolano la probabilità massima dei set di elementi. Per eliminare gli elementi troppo frequenti, usare il parametro *MAXIMUM_SUPPORT* .|  
-|MIN_LIFT|Livello minimo di accuratezza fornito dal modello per un set di elementi.<br /><br /> Esempio: 0,4309369632511<br /><br /> Nota: conoscendo questo valore, è possibile determinare se l'accuratezza è significativa per ogni singolo set di elementi.|  
-|MAX_LIFT|Livello massimo di accuratezza fornito dal modello per ogni set di elementi.<br /><br /> Esempio: 1,95758227647523 **Nota** Conoscendo questo valore, è possibile determinare se l'accuratezza è significativa per ogni singolo set di elementi.|  
+|MIN_LIFT|Livello minimo di accuratezza fornito dal modello per un set di elementi.<br /><br /> Esempio: 0.14309369632511<br /><br /> Nota: Conoscendo questo valore consente di determinare se il livello di accuratezza per un singolo set di elementi è significativa.|  
+|MAX_LIFT|Livello massimo di accuratezza fornito dal modello per ogni set di elementi.<br /><br /> Esempio: 1,95758227647523 **nota** conoscendo consente di determinare se il livello di accuratezza per un singolo set di elementi è significativa.|  
   
  **Nodo di set di elementi** I nodi di set di elementi contengono un elenco di elementi, visualizzato come stringa di testo delimitato da virgole.  
   
@@ -187,8 +187,8 @@ ms.locfileid: "34017578"
  Vuoto.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto del modello di data mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo Microsoft Association Rules](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
- [Esempi di Query sul modello Association](../../analysis-services/data-mining/association-model-query-examples.md)  
+ [Esempi di query sul modello di associazione](../../analysis-services/data-mining/association-model-query-examples.md)  
   
   

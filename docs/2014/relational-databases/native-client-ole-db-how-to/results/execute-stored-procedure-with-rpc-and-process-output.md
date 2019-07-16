@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e00adccfa6e75434fe398e21faafccc22f99914e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361743"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206683"
 ---
 # <a name="execute-a-stored-procedure-using-rpc-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>Eseguire una stored procedure mediante la sintassi dell'istruzione RPC ed elaborare i codici restituiti e i parametri di output (OLE DB)
   Le stored procedure di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possono includere parametri di output e codici restituiti di tipo integer. I codici restituiti e i parametri di output vengono inviati nell'ultimo pacchetto dal server e non sono pertanto disponibili all'applicazione fino al completo rilascio del set di righe. Se il comando restituisce più risultati, i dati del parametro di output sono disponibili quando `IMultipleResults::GetResult` restituisce DB_S_NORESULT o l'interfaccia `IMultipleResults` viene completamente rilasciata, indipendentemente da quale dei due eventi si verifica per primo.  

@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 94d3faab4c831fe64e54a582a5f70b2ae6b664e4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125351"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210781"
 ---
 # <a name="compare-replicated-tables-for-differences-replication-programming"></a>Confronto di tabelle replicate al fine di individuare le differenze (programmazione della replica)
   La convalida degli articoli consente di determinare se i dati pubblicati per gli articoli di tabella nel server di pubblicazione e nel Sottoscrittore non sono identici, fattore che può indicare la mancanza di convergenza. Per altre informazioni, vedere [Convalidare i dati replicati](../validate-data-at-the-subscriber.md). La convalida restituisce tuttavia solo un risultato positivo o negativo e non fornisce informazioni sulle differenze specifiche tra le tabelle di origine e di destinazione. L'utilità del prompt dei comandi **tablediff** restituisce informazioni dettagliate sulle differenze tra due tabelle e può anche generare uno script [!INCLUDE[tsql](../../../includes/tsql-md.md)] per ripristinare la convergenza tra una sottoscrizione e i dati nel server di pubblicazione.  

@@ -1,5 +1,5 @@
 ---
-title: Impostare la proprietà Slice delle partizioni (Analysis Services) | Documenti Microsoft
+title: Impostare la proprietà Slice delle partizioni (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1e0eaeb3238f3d3d728f9c05cbe6d01bdcb05755
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021338"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165202"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>Impostare la proprietà Slice delle partizioni (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,6 +43,6 @@ ms.locfileid: "34021338"
 >  Se occorre definire una sezione complessa, è consigliabile definire le tuple nella sezione mediante uno script XMLA Alter. È quindi possibile usare lo strumento da riga di comando ascmd o [Attività Esegui DDL Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) in Integration Services per eseguire lo script e creare il set di membri specificato immediatamente prima dell'elaborazione della partizione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare e gestire una partizione locale & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
+ [Creare e gestire una partizione locale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
   
