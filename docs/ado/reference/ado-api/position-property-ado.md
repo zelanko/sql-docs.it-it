@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7b777179ad83250d9707f7717b5833bbbff4fec7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dba8636f07b88f1c05d465b844376c6ef3e61240
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703408"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931650"
 ---
 # <a name="position-property-ado"></a>Proprietà Position (ADO)
 Indica la posizione corrente all'interno di un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oggetto.  

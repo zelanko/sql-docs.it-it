@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3b6155de4c1bbc04e921b3b019eb0128694f6412
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3ddf4e26d015067c0b5bf06f6e2adeecd39f041
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920890"
 ---
 # <a name="ado-properties"></a>Proprietà ADO
 
@@ -59,9 +58,9 @@ ms.locfileid: "66696630"
 |[Index](../../../ado/reference/ado-api/index-property.md)|Indica il nome dell'indice attualmente attiva per un **Recordset** oggetto.|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|Indica il livello di isolamento per una **connessione** oggetto.|  
 |[Elemento](../../../ado/reference/ado-api/item-property-ado.md)|Indica un membro specifico di una raccolta, per nome o numero ordinale.|  
-|[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)|Indica il carattere da usare come separatore di riga nel testo binario **Stream** oggetti.|  
+|[Proprietà LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)|Indica il carattere da usare come separatore di riga nel testo binario **Stream** oggetti.|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Indica il tipo di blocchi sul record durante la modifica.|  
-|[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|Indica quali record devono essere sottoposte a marshalling nel server.|  
+|[MarshalOptions (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|Indica quali record devono essere sottoposte a marshalling nel server.|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|Indica il numero massimo di record da restituire per una **Recordset** da una query.|  
 |[Mode](../../../ado/reference/ado-api/mode-property-ado.md)|Indica le autorizzazioni disponibili per la modifica dei dati in un **Connection**, **Record**, o **Stream** oggetto.|  
 |[Name](../../../ado/reference/ado-api/name-property-ado.md)|Indica il nome di un oggetto.|  
@@ -84,7 +83,7 @@ ms.locfileid: "66696630"
 |[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|Ottiene o imposta un DB OLE **Rowset** oggetto da/in un **ADORecordsetConstruction** oggetto.|  
 |[Origine (errore ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)|Indica il nome dell'oggetto o applicazione che ha generato un errore.|  
 |[Origine (Record ADO)](../../../ado/reference/ado-api/source-property-ado-record.md)|Indica l'entità rappresentata dal **Record** oggetto.|  
-|[Source (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)|Indica l'origine per i dati in un **Recordset** oggetto|  
+|[Source (Recordset ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)|Indica l'origine per i dati in un **Recordset** oggetto|  
 |[SQLState](../../../ado/reference/ado-api/sqlstate-property.md)|Indica lo stato SQL per uno specifico **errore** oggetto.|  
 |[Stato](../../../ado/reference/ado-api/state-property-ado.md)|Indica tutti gli oggetti applicabili se lo stato dell'oggetto è aperto o chiuso. Indica per l'esecuzione di un metodo asincrono, se lo stato corrente dell'oggetto è la connessione, l'esecuzione o il recupero di tutti gli oggetti applicabili|  
 |[Stato (campo ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)|Indica lo stato di un **campo** oggetto.|  
@@ -93,7 +92,7 @@ ms.locfileid: "66696630"
 |[Proprietà Stream](../../../ado/reference/ado-api/stream-property.md)|Ottiene o imposta un DB OLE **Stream** oggetto da/in un **ADOStreamConstruction** oggetto.|  
 |[Tipo](../../../ado/reference/ado-api/type-property-ado.md)|Indica il tipo di dati o di tipo operativo di una **parametri**, **campo**, o **proprietà** oggetto.|  
 |[Tipo (Stream ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)|Indica il tipo di dati contenuti nel **Stream** (binario o testo).|  
-|[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|Indica il valore corrente del database per un **campo** oggetto.|  
+|[Proprietà UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|Indica il valore corrente del database per un **campo** oggetto.|  
 |[Valore](../../../ado/reference/ado-api/value-property-ado.md)|Indica il valore assegnato a un **campo**, **parametro**, o **proprietà** oggetto.|  
 |[Version](../../../ado/reference/ado-api/version-property-ado.md)|Indica il numero di versione ADO.|  
   

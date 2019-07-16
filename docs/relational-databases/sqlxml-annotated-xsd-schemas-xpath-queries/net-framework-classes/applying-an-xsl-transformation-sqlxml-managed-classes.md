@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cefa1cfe2bd7ea792035bdc16de93ccc35591aee
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 3422f785cb57254695d0960b27d03604a4af6101
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67580886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934309"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>Applicazione di una trasformazione XSL (classi gestite SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -96,7 +95,7 @@ class Test
   
  Per testare questo esempio, è necessario che nel computer sia installato [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework.  
   
-### <a name="to-test-the-application"></a>Per testare l'applicazione  
+### <a name="to-test-the-application"></a>Per eseguire il test dell'applicazione  
   
 1.  Salvare il foglio di stile XSL in un file (MyXSL.xsl).  
   

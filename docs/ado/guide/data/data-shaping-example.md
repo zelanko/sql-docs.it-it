@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5690b104cea4cf29cb51c77d8dc8554dd5a31d50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a946329ad95a2b226f186e571152268baa5f37c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701092"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925660"
 ---
 # <a name="data-shaping-example"></a>Esempio di data shaping
 I seguenti dati di data shaping comando illustra come compilare un modello gerarchico **Recordset** dalle **clienti** e **ordini** tabelle nel database Northwind.  
@@ -35,7 +34,7 @@ RELATE customerID TO customerID)
   
 |CustomerID|ContactName|OrderID|OrderDate|CustomerID|  
 |----------------|-----------------|-------------|---------------|----------------|  
-|ALFKI|Maria Ander|10643<br /><br /> 10692<br /><br /> 10702<br /><br /> 10835<br /><br /> 10952<br /><br /> 11011|1997-08-25<br /><br /> 1997-10-03<br /><br /> 1997-10-13<br /><br /> 1998-01-15<br /><br /> 1998-03-16<br /><br /> 1998-04-09|ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI|  
+|ALFKI|Maria inferiore|10643<br /><br /> 10692<br /><br /> 10702<br /><br /> 10835<br /><br /> 10952<br /><br /> 11011|1997-08-25<br /><br /> 1997-10-03<br /><br /> 1997-10-13<br /><br /> 1998-01-15<br /><br /> 1998-03-16<br /><br /> 1998-04-09|ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI|  
 |ANATR|Ana Trujillo|10308<br /><br /> 10625<br /><br /> 10759<br /><br /> 10926|1996-09-18<br /><br /> 1997-08-08<br /><br /> 1997-11-28<br /><br /> 1998-03-04|ANATR<br /><br /> ANATR<br /><br /> ANATR<br /><br /> ANATR|  
   
  In un comando SHAPE, Accodamento consente di creare un elemento figlio **Recordset** correlato al padre **Recordset** (come restituito dal comando specifico del provider immediatamente dopo la parola chiave forma cui avevo precedente) dalla clausola RELATE. L'elemento padre e figlio è in genere hanno almeno una colonna in comune: Il valore della colonna in una riga dell'elemento padre è identico al valore della colonna in tutte le righe dell'elemento figlio.  

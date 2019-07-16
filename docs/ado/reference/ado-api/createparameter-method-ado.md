@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 251c35977421d63027fbc9d6042e193125da854d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af796c36bd2960730536ec07ac49614876311e84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933294"
 ---
 # <a name="createparameter-method-ado"></a>Metodo CreateParameter (ADO)
 Crea un nuovo [parametro](../../../ado/reference/ado-api/parameter-object.md) oggetto con le proprietà specificate.  
@@ -39,19 +38,19 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
   
 #### <a name="parameters"></a>Parametri  
  *Name*  
- Facoltativo. Un **stringa** che contiene il nome del valore il **parametro** oggetto.  
+ facoltativo. Un **stringa** che contiene il nome del valore il **parametro** oggetto.  
   
  *Tipo*  
- Facoltativo. Oggetto [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valore che specifica il tipo di dati di **parametro** oggetto.  
+ facoltativo. Oggetto [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valore che specifica il tipo di dati di **parametro** oggetto.  
   
  *Direzione*  
- Facoltativo. Oggetto [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) che specifica il tipo di valore **parametro** oggetto.  
+ facoltativo. Oggetto [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) che specifica il tipo di valore **parametro** oggetto.  
   
  *Dimensione*  
  Facoltativo. Oggetto **lungo** valore che specifica la lunghezza massima per il valore del parametro in caratteri o byte.  
   
  *Valore*  
- Facoltativo. Oggetto **Variant** che specifica il valore per il **parametro** oggetto.  
+ facoltativo. Oggetto **Variant** che specifica il valore per il **parametro** oggetto.  
   
 ## <a name="remarks"></a>Note  
  Usare la **CreateParameter** per creare un nuovo metodo **parametro** oggetto con un nome specificato, tipo, direzione, dimensione e valore. Per il corrispondente vengono scritti i valori passati negli argomenti **parametro** proprietà.  

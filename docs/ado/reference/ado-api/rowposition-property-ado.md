@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fad2ee85ef40431a6a4e16814f4711404c851d3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a333a2be2728f3c0b412246b0a793dae64096ae5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711454"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931226"
 ---
 # <a name="rowposition-property-ado"></a>Proprietà RowPosition (ADO)
 Ottiene o imposta un DB OLE **RowPosition** oggetto da/in un **ADORecordsetConstruction** oggetto. Quando si usa **put_RowPosition** per impostare il **RowPosition** oggetto, risultante **Recordset** oggetto utilizza il **RowPosition** dell'oggetto a determinare la riga corrente.  

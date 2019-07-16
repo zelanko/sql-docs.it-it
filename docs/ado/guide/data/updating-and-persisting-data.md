@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b251da97fe14abb8b10abe974c40b9adf0b37898
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26fabdc205018b8e94575cfb5bd5e945a8fb28ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699891"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923729"
 ---
 # <a name="updating-and-persisting-data"></a>Aggiornamento e persistenza dei dati
 Nei capitoli precedenti hanno illustrato come utilizzare ADO per recuperare i dati in un'origine dati, come spostarsi all'interno dei dati e anche come modificare i dati. Naturalmente, se l'obiettivo dell'applicazione è consentire agli utenti di apportare modifiche ai dati, è necessario conoscere le modalità salvare le modifiche. È ovvero possibile rendere persistenti la **Recordset** viene modificato in un file usando la **salvare** (metodo), oppure è possibile restituire le modifiche all'origine dati per l'uso di archiviazione il **Update** o  **Metodo UpdateBatch** metodi.  

@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 65374ec0499d6dbb549a14af239c03c06dca4062
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 487fb5c04d623f2a4ef408cf35784dd57b067f4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913843"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,14 +51,14 @@ USING <algorithm> [(<parameter list>)]
  *criteri di filtro annidati*  
  Espressione di filtro applicata alle colonne di una tabella nidificata.  
   
- *algoritmo*  
+ *algorithm*  
  Nome di un algoritmo di data mining, definito dal provider.  
   
 > [!NOTE]  
 >  Un elenco degli algoritmi supportati dal provider corrente può essere recuperato tramite [set di righe DMSCHEMA_MINING_SERVICES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Per visualizzare gli algoritmi supportati nell'istanza corrente di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vedere [proprietà di Data Mining](../analysis-services/server-properties/data-mining-properties.md).  
   
  *elenco di parametri*  
- Facoltativo. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
+ facoltativo. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
   
  *criteri di filtro*  
  Espressione di filtro applicata alle colonne della tabella del case.  

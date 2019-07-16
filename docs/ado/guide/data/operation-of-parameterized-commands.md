@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c07c42a1f864c3dc6888003cd31b06fce9e6893c
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: e7d4399a8cf279ed2283061fff9064ffcc1adfba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597461"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924731"
 ---
 # <a name="operation-of-parameterized-commands"></a>Funzionamento dei comandi con parametri
 Se si lavora con un elemento figlio di grandi dimensioni **Recordset**, in particolare rispetto alle dimensioni dell'elemento padre **Recordset**, ma è necessario accedere solo ad alcuni capitoli figlio, può risultare più efficiente usare un' comando con parametri.  

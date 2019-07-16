@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 512f9cee-ffad-439b-b612-b49c34c32658
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d82fde382bf3ed92f400dbbe234790ccd510cc93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2610383df0f3dde453fe3ba40b10dea85582b9c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63244623"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915758"
 ---
 # <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>Funzioni ODBC e driver ODBC Visual FoxPro
 Gli argomenti in questa sezione forniscono un breve riepilogo delle funzioni API ODBC e i dettagli di specifiche di Visual FoxPro.  

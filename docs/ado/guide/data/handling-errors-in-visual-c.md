@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b7576f07-020a-45f7-9e79-b5756f33f7ab
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5d78e135a3cea0c9dcfc472f59368d33b0106b84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb9eb29a78c3ec5f47e3ff09641ba04ca01d204a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702035"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925120"
 ---
 # <a name="handling-errors-in-visual-c"></a>Gestione degli errori in Visual C++
 In COM, la maggior parte delle operazioni restituiscono un codice restituito HRESULT che indica se una funzione è stata completata. La direttiva #import genera il codice wrapper intorno a ogni metodo "non elaborato" o una proprietà e controlla il valore HRESULT restituito. Se il valore HRESULT indica un esito negativo, il codice wrapper genera un errore COM da con il codice restituito HRESULT è com_issue_errorex (chiamata) come argomento. Gli oggetti di errore COM possono essere rilevati un **try-catch** blocco. (Per i migliori risultati ottenere, intercettare un riferimento a un oggetto com_error).  

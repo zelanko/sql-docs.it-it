@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0c2d991afa179fdfbb536853e302b33de8bf12e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85f281aefe79a09806c42e13cd771f976362d053
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127871"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943780"
 ---
 # <a name="select---sql-command"></a>SELECT (comando SQL)
 Recupera i dati da una o più tabelle.  
@@ -104,7 +103,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  *Local_Alias* specifica un nome temporaneo per la tabella denominata nella *tabella*. Se si specifica un alias locale, è necessario usare l'alias locale anziché il nome della tabella in tutto l'istruzione SELECT. L'alias locale non influenza l'ambiente di Visual FoxPro.  
   
- WHERE *JoinCondition* [AND *JoinCondition* ...]    [AND &#124; OR *FilterCondition* [AND &#124; OR *FilterCondition* ...]]  
+ In cui *JoinCondition* [AND *JoinCondition* ...]    [AND &#124; oppure *FilterCondition* [AND &#124; oppure *FilterCondition* ...]]  
  Indica a Visual FoxPro da includere solo alcuni record nei risultati della query. Quando viene richiesto per recuperare i dati da più tabelle.  
   
  *JoinCondition* specifica i campi che si collegano tabelle nella clausola FROM. Se si include più di una tabella in una query, è necessario specificare una condizione di join per ogni tabella dopo il primo.  
@@ -122,12 +121,12 @@ FROM [DatabaseName!]Table [Local_Alias]
   
      *FieldName1* è il nome di un campo da una tabella, *FieldName2* è il nome di un campo da un'altra tabella, e *confronto* è uno degli operatori descritti nella tabella seguente.  
   
-|Operatore|Confronto|  
+|Operator|Confronto|  
 |--------------|----------------|  
-|=|Uguale a|  
+|=|Uguale|  
 |==|Esattamente uguale a|  
 |LIKE|SIMILE A SQL|  
-|<>, !=, #|Diverso da|  
+|<>, !=, #|Non uguaglianza|  
 |>|Più di|  
 |>=|Maggiore o uguale a|  
 |<|Minore di|  

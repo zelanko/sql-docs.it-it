@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ff7c5a2a2817fbe93d626ca7883107103edc58cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce90b13a677246fb64462fbe691eb9e3efaa3c7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918275"
 ---
 # <a name="loadfromfile-method-ado"></a>Metodo LoadFromFile (ADO)
 Carica il contenuto di un file esistente in un [Stream](../../../ado/reference/ado-api/stream-object-ado.md).  

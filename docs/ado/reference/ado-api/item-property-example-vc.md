@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4b3014c9fa1eccd6b1efa04987293e464111e14d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f157532dd1029e2966f0259701c59ffb50928c4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697576"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932298"
 ---
 # <a name="item-property-example-vc"></a>Esempio della proprietà Item (VC++)
 Questo esempio viene illustrato come la [elemento](../../../ado/reference/ado-api/item-property-ado.md) proprietà accede ai membri di una raccolta. Nell'esempio viene aperto il ***autori*** tabella del ***Pubs*** database con un comando con parametri.  
@@ -234,7 +233,7 @@ void PrintComError(_com_error &e) {
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Proprietà Item (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
- [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [Raccolta di parametri (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

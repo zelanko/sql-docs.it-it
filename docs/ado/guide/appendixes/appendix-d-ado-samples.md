@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0299d3ca7ab96b8e054a6fd8ddc99d9ce4ed0139
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b4a1289755d04c2d9f861fbdcb704fad3d8707d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926861"
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>Appendice D: Esempi di ADO in Windows SDK
 il SDK di Windows contiene molte applicazioni di esempio che illustrano l'uso di codice ADO e servizi desktop remoto. Questi esempi sono utili per imparare a utilizzare ADO e servizi desktop remoto, ma non sono progettati per essere distribuito nei server di produzione.

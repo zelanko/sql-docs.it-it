@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 089a261eaea2701354af6082827c12491810b74c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bbce299e2e9f67b705f940480913c7d8ac367d0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699008"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919790"
 ---
 # <a name="command-object-ado"></a>Oggetto Command (ADO)
 Definisce un comando specifico che si prevede di eseguire su un'origine dati.  
@@ -79,6 +78,6 @@ objCmd(0)
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [Raccolta di parametri (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Raccolta delle proprietà (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [Appendice A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Appendice A: provider](../../../ado/guide/appendixes/appendix-a-providers.md)

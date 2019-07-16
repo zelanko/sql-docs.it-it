@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 14bb7fd2e4a6dd8e6eb8f369342923ce1a9728c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72526eca57d08152d7eaa773be50d68d4b3688e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932466"
 ---
 # <a name="getstring-method-ado"></a>Metodo GetString (ADO)
 Restituisce il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sotto forma di stringa.  
@@ -45,13 +44,13 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
  Facoltativo. Il numero di righe da convertire nel **Recordset**. Se *NumRows* non viene specificato, oppure se è maggiore del numero totale di righe nel **Recordset**, quindi tutte le righe nel **Recordset** vengono convertiti.  
   
  *ColumnDelimiter*  
- Facoltativo. Delimitatore utilizzato tra le colonne, se specificato, in caso contrario, il carattere di tabulazione.  
+ facoltativo. Delimitatore utilizzato tra le colonne, se specificato, in caso contrario, il carattere di tabulazione.  
   
  *RowDelimiter*  
- Facoltativo. Delimitatore utilizzato tra le righe, se specificato, in caso contrario, il carattere di ritorno a capo.  
+ facoltativo. Delimitatore utilizzato tra le righe, se specificato, in caso contrario, il carattere di ritorno a capo.  
   
  *NullExpr*  
- Facoltativo. Espressione utilizzata al posto di un valore null, se specificato, in caso contrario una stringa vuota.  
+ facoltativo. Espressione utilizzata al posto di un valore null, se specificato, in caso contrario una stringa vuota.  
   
 ## <a name="remarks"></a>Note  
  Dati delle righe, ma non i dati dello schema, viene salvato nella stringa. Pertanto, un **Recordset** non può essere riaperto utilizzando questa stringa.  

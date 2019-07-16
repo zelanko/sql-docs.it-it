@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fd8374eaa97ffc08528c245569ec7bff8499747a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926630"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Provider Microsoft OLE DB per ODBC Panoramica
 Per un programmatore di ADO o servizi desktop remoto, un mondo ideale sarebbe uno dei dati di ogni origine espone un'interfaccia OLE DB, in modo da ADO è stato possibile chiamare direttamente nell'origine dati. Anche se un numero sempre maggiore di fornitori di database implementa le interfacce OLE DB, alcune origini dati non sono ancora esposti in questo modo. Tuttavia, la maggior parte dei sistemi DBMS in uso oggi accessibili tramite ODBC.
@@ -100,7 +99,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Istruzioni attive (KAGPROP_ACTIVESTATEMENTS)|Indica il numero di handle che può supportare un driver ODBC in una connessione.|
 |Nome driver (KAGPROP_DRIVERNAME)|Indica il nome del file del driver ODBC.|
 |Versione del driver ODBC (KAGPROP_DRIVERODBCVER)|Indica la versione di ODBC che supporta questo driver.|
-|File Usage (KAGPROP_FILEUSAGE)|Indica il modo in cui il driver considera un file in un'origine dati. come una tabella o come un catalogo.|
+|Utilizzo di file (KAGPROP_FILEUSAGE)|Indica il modo in cui il driver considera un file in un'origine dati. come una tabella o come un catalogo.|
 |Ad esempio la clausola di Escape (KAGPROP_LIKEESCAPECLAUSE)|Indica se il driver supporta la definizione e l'uso di un carattere di escape per il carattere di percentuale (%) e sottolineare il carattere (_) nel predicato LIKE di una clausola WHERE.|
 |Numero massimo di colonne in Group By (KAGPROP_MAXCOLUMNSINGROUPBY)|Indica il numero massimo di colonne che possono essere incluse nella clausola GROUP BY di un'istruzione SELECT.|
 |Numero massimo di colonne nell'indice (KAGPROP_MAXCOLUMNSININDEX)|Indica il numero massimo di colonne che possono essere inclusi in un indice.|
@@ -122,7 +121,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
 |Nome proprietà|Descrizione|
 |-------------------|-----------------|
-|Query Based Updates/Deletes/Inserts (KAGPROP_QUERYBASEDUPDATES)|Indica se gli aggiornamenti, eliminazioni e inserimenti possono essere eseguiti tramite query SQL.|
+|Aggiornamenti/eliminazioni o inserimenti (KAGPROP_QUERYBASEDUPDATES) basati su query|Indica se gli aggiornamenti, eliminazioni e inserimenti possono essere eseguiti tramite query SQL.|
 |Tipo di concorrenza ODBC (KAGPROP_CONCURRENCY)|Indica il metodo utilizzato per ridurre i potenziali problemi causati da due utenti che cercano di accedere contemporaneamente gli stessi dati dall'origine dati.|
 |Accessibilità BLOB sul cursore Forward-Only (KAGPROP_BLOBSONFOCURSOR)|Indica se BLOB **campi** sono accessibili quando si usa un cursore forward-only.|
 |Includere SQL_FLOAT e SQL_DOUBLE SQL_REAL nelle clausole WHERE QBU (KAGPROP_INCLUDENONEXACT)|Indica se i valori SQL_FLOAT e SQL_DOUBLE SQL_REAL possono essere incluso in una clausola WHERE QBU.|
@@ -186,14 +185,14 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
-|[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
+|[MarshalOptions (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|lettura/scrittura|non disponibile|Sola lettura|Sola lettura|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|lettura/scrittura|non disponibile|Sola lettura|Sola lettura|
 |[Origine](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
 |[Stato](../../../ado/reference/ado-api/state-property-ado.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
-|[Stato](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
+|[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
 
  Il [esempio di AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) e [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) proprietà sono di sola scrittura se ADO viene usato con la versione 1.0 di Provider Microsoft OLE DB per ODBC.
 
@@ -205,19 +204,19 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|Yes|Yes|Yes|Yes|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Yes|Yes|Yes|Yes|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Yes|Yes|Yes|Yes|
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|no|No|Yes|Yes|
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|No|No|Yes|Yes|
 |[Chiudi](../../../ado/reference/ado-api/close-method-ado.md)|Yes|Yes|Yes|Yes|
 |[Elimina](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Yes|Yes|Yes|Yes|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Yes|Yes|Yes|Yes|
 |[Sposta](../../../ado/reference/ado-api/move-method-ado.md)|Yes|Yes|Yes|Yes|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Yes|Yes|Yes|Yes|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|no|Yes|Yes|Yes|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|No|Yes|Yes|Yes|
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Yes|Yes|Yes|Yes|
 |[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|No|Yes|Yes|Yes|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Yes|Yes|Yes|Yes|
 |[Aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Yes|Yes|Yes|Yes|
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|Yes|Yes|Yes|Yes|
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|no|No|Yes|Yes|
+|[Rieseguire una query](../../../ado/reference/ado-api/requery-method.md)|Yes|Yes|Yes|Yes|
+|[Risincronizzazione](../../../ado/reference/ado-api/resync-method.md)|No|No|Yes|Yes|
 |[Supporti](../../../ado/reference/ado-api/supports-method.md)|Yes|Yes|Yes|Yes|
 |[Update](../../../ado/reference/ado-api/update-method.md)|Yes|Yes|Yes|Yes|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Yes|Yes|Yes|Yes|

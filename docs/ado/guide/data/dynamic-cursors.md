@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b2fe669c521e1d21b46b6eb503f0ca03944e12e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86e51b7880004117e8efc96bd310c6de705d43a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702072"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925500"
 ---
 # <a name="dynamic-cursors"></a>Cursori dinamici
 I cursori dinamici rilevano tutte le modifiche apportate alle righe nel set di risultati, indipendentemente dal fatto che si verificano le modifiche dall'interno del cursore o da altri utenti all'esterno del cursore. Tutti i insert, update e istruzioni delete eseguite da tutti gli utenti sono visibili nel cursore. Il cursore dinamico può rilevare eventuali modifiche apportate alle righe, ordine e i valori nel set di risultati dopo l'apertura del cursore. Gli aggiornamenti apportati all'esterno del cursore non sono visibili fino a quando non sono state assegnate (a meno che il livello di isolamento delle transazioni di cursore è impostato su "commit").  

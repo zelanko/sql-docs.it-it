@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ada9b4c6b1e22769e15714f4da8c81ce5e1f48ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25cac9bffce7602ce211be7f83c7e55239061282
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699703"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923468"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Funzioni di Visual Basic, Applications Edition
 Nell'esempio Visual Basic per le funzioni di applicazioni è utilizzabile nelle espressioni di calcolo di shaping dei dati:  
@@ -37,12 +36,12 @@ Nell'esempio Visual Basic per le funzioni di applicazioni è utilizzabile nelle 
 |FV|Hex|Hex$|Ora|IIF|InStr|  
 |Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|LCase|LCase$|Left|  
-|LeftB|Left$|LeftB$|Len|File di log|LTrim|  
-|LTrim$|Mid|Mid$|Minuto|MIRR|Month|  
+|LeftB|Left$|LeftB$|Len|Log|LTrim|  
+|LTrim$|Mid|Mid$|Minuto|MIRR|Mese|  
 |Adesso|NPer|NPV|Oct|Oct$|Pmt|  
 |PPmt|PV|QBColor|replica|RGB|Right|  
 |RightB|Right$|RightB$|Rnd|RTrim|RTrim$|  
-|Secondo|Sgn|Sin|SLN|Space|Space$|  
+|Secondo|Sgn|Sin|SLN|Spazio|Space$|  
 |Sqr|Str|Str$|StrComp|StrConv|String|  
 |String$|SYD|Tan|Time|Time$|Timer|  
 |TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  

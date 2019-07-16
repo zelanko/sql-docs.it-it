@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a709b8c26c3cdee3a6087444e4acebbd212caf66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 80e6576b236db44452c4e89b1d8f3bb8976ab120
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718659"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923989"
 ---
 # <a name="the-field-object"></a>Oggetto Field
 Ciascuna **campo** oggetto in genere corrisponde a una colonna in una tabella di database. Tuttavia, un **campo** può inoltre rappresentare un puntatore a un'altra **Recordset**, chiamato un capitolo. Eccezioni, ad esempio le colonne a capitoli, verranno trattate più avanti in questa Guida.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6234ca377497ad3f03bd0d05441ae361b80bc220
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2092b830501ca22b28e867090623a4343f27eca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930963"
 ---
 # <a name="sort-property-example-vc"></a>Esempio della proprietà Sort (VC++)
 Questo esempio Usa il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto [ordinamento](../../../ado/reference/ado-api/sort-property.md) proprietà per riordinare le righe di una **Recordset** derivato dal ***autori*** tabella di il **Pubs** database. Una routine di utilità secondario consente di stampare ogni riga.  

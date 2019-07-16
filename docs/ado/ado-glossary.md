@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6f139965c4235b84c66c460767d5c6d1695b68ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 67d791820e9dd22b035f98eb76e27723ebfb8fb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927172"
 ---
 # <a name="ado-glossary-terms"></a>Termini del Glossario ADO
 In questo argomento definisce termini rilevanti per ADO.
@@ -38,7 +37,7 @@ In questo argomento definisce termini rilevanti per ADO.
 
  operazione asincrona di un'operazione che restituisce il controllo al programma chiamante senza attendere il completamento dell'operazione. Prima che l'operazione è stata completata, continua l'esecuzione di codice. Vedere anche *operazione sincrona*.
 
-## <a name="b"></a>B
+## <a name="b"></a>b
  mapping di una voce di associazione di un campo in una tabella a una variabile. Nelle estensioni ADO di Visual C++, **Recordset** mapping dei campi per le variabili di C/C++.
 
  maschera di bit un valore numerico previsto per confrontare i valori di bit per bit con altri valori numerici, in genere per le opzioni di flag di parametri o valori restituiti. In genere questo confronto viene eseguito con gli operatori logici bit per bit, ad esempio **e** e **oppure** in Visual Basic **&** e **&#124;** in C++.
@@ -53,7 +52,7 @@ In questo argomento definisce termini rilevanti per ADO.
 
  regola di business la combinazione di modifiche di convalida, verifiche di accesso, le ricerche nel database, i criteri e trasformazioni algoritmiche che costituiscono un'azienda di attività di business. Noto anche come *logica di business*.
 
-## <a name="c"></a>c
+## <a name="c"></a>C
  calcolato espressione un'espressione non costante, ma il cui valore dipende da altri valori. Per poter essere valutata, un'espressione calcolata necessario ottenere e calcolare i valori da altre origini, in genere in altri campi o righe.
 
  riferimento di capitolo oggetto a un intervallo di righe da un'origine dati. In ADO un capitolo viene in genere un riferimento a un'altra **Recordset**.

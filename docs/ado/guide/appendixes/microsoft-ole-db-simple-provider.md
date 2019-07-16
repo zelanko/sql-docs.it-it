@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bc17df7bad00205803b33cb4af17cb3c6ddaac56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3acdfc7e03115b415e7641047e7621d5ab463e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926601"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Panoramica di Simple Provider Microsoft OLE DB
 Il Microsoft OLE DB semplici Provider (OSP) consente di ADO accedere ai dati per il quale un provider è stata scritta usando la [OLE DB semplici Provider (OSP) Toolkit](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). I provider di semplici sono utili per accedere alle origini dati che richiedono il supporto OLE DB solo fondamentale, ad esempio le matrici in memoria o documenti XML.

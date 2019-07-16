@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3f31e5522fdac506e31ffe0bbaa5ad76e3fae87b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4ffecfc87ec23fc4d62174dae31220511c9f72d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926975"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Appendice A: Provider di servizi e dati
 Questa sezione vengono illustrati tre tipi di provider: provider di dati, i provider di servizi e componenti del servizio. I provider possono essere suddivise in due categorie: quelli che forniscono i dati e quelli che forniscono servizi. Oggetto *provider di dati* possiede i propri dati e la espone in formato tabulare per l'applicazione. Oggetto *provider di servizi* incapsula un servizio tramite producono e usano i dati, in modo da integrare le funzionalità nelle applicazioni ADO. Un provider di servizi può inoltre essere definito un *componente servizio*, che è necessario collaborare con altri provider di servizi o componenti.

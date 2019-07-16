@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b4d105d648c7877e7099dea637c2a2c6a094985f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 97c7f1c143c83dd35ca5ff17e9776d79fb734ff9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63241092"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917920"
 ---
 # <a name="open-method-ado-record"></a>Metodo Open (Record - ADO)
 Apre un oggetto esistente [Record](../../../ado/reference/ado-api/record-object-ado.md) dell'oggetto oppure crea un nuovo elemento rappresentato dalle **Record**, ad esempio un file o directory.  
@@ -36,16 +35,16 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
   
 #### <a name="parameters"></a>Parametri  
  *Origine*  
- Facoltativo. Oggetto **Variant** che può rappresentare l'URL dell'entità per essere rappresentato da questa **Record** oggetto, una **comando**, un elemento aperto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) o un'altra **Record** object, una stringa che contiene un'istruzione SQL SELECT o un nome di tabella.  
+ facoltativo. Oggetto **Variant** che può rappresentare l'URL dell'entità per essere rappresentato da questa **Record** oggetto, una **comando**, un elemento aperto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) o un'altra **Record** object, una stringa che contiene un'istruzione SQL SELECT o un nome di tabella.  
   
  *ActiveConnection*  
  Facoltativo. Oggetto **Variant** che rappresenta la stringa di connessione o open [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto.  
   
  *Mode*  
- Facoltativo. Oggetto [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) valore che specifica la modalità di accesso per i risultanti **Record** oggetto. Valore predefinito è **adModeUnknown**.  
+ facoltativo. Oggetto [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) valore che specifica la modalità di accesso per i risultanti **Record** oggetto. Valore predefinito è **adModeUnknown**.  
   
  *CreateOptions*  
- Facoltativo. Oggetto [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) valore che specifica se un file o directory deve essere aperta o se deve essere creata un nuovo file o directory. Valore predefinito è **adFailIfNotExists**. Se impostato sul valore predefinito, la modalità di accesso viene ottenuta dal [modalità](../../../ado/reference/ado-api/mode-property-ado.md) proprietà. Questo parametro viene ignorato quando le *origine* parametro non contiene un URL.  
+ facoltativo. Oggetto [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) valore che specifica se un file o directory deve essere aperta o se deve essere creata un nuovo file o directory. Valore predefinito è **adFailIfNotExists**. Se impostato sul valore predefinito, la modalità di accesso viene ottenuta dal [modalità](../../../ado/reference/ado-api/mode-property-ado.md) proprietà. Questo parametro viene ignorato quando le *origine* parametro non contiene un URL.  
   
  *Opzioni*  
  Facoltativo. Oggetto [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) valore che specifica le opzioni per l'apertura di **Record**. Valore predefinito è **adOpenRecordUnspecified dell'oggetto**. Questi valori possono essere combinati.  
@@ -54,7 +53,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  Facoltativo. Oggetto **stringa** valore contenente l'ID utente, se necessario, autorizza l'accesso al *origine*.  
   
  *Password*  
- Facoltativo. Oggetto **stringa** valore contenente la password, se necessario, verifica *UserName*.  
+ facoltativo. Oggetto **stringa** valore contenente la password, se necessario, verifica *UserName*.  
   
 ## <a name="remarks"></a>Note  
  *Origine* potrebbe essere:  

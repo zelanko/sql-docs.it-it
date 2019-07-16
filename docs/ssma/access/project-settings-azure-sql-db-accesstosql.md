@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bbb8a204-d0e4-4f0b-9709-271feb1f136e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2307a62c05503a231c3ee16b79efb25e964f55bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60140559f94cdeebea935b423fbbeef24bce7a08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453473"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929464"
 ---
 # <a name="project-settings-azure-sql-db-accesstosql"></a>Impostazioni progetto (database SQL di Azure) (AccessToSQL)
 Le impostazioni del progetto di SQL Azure consentono di configurare il suffisso del database SQL Azure da aggiungere nella finestra di dialogo di connessione e consente inoltre l'implementazione di meccanismo di heartbeat in connessione SQL Azure.  

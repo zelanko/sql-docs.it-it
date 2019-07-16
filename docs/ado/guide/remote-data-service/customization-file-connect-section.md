@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c9ec47ffb89724e8a7991dae1d2296aa813e0c5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1de3710590cf49de30ff8e79a6ff829b124c42dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922801"
 ---
 # <a name="customization-file-connect-section"></a>Sezione sulla connessione del file di personalizzazione
 Il comportamento predefinito del gestore consiste nel rifiutare tutte le connessioni. Il **connettere** sezione specifica le eccezioni a tale comportamento. Ad esempio, se tutti i **connettere** sezioni sono assenti o vuota, quindi per impostazione predefinita è stato possibile stabilire alcuna connessione.  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0d9917c4-9ef0-4d7a-b4ce-4f1fa6ce1817
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c3594159665e76c68e0b135878d4b2bb0391e2c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ff30099e951ec5b461b9f0e22c21164e7258ccc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921625"
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vc"></a>ActiveConnection, CommandText, CommandTimeout, CommandType, dimensioni ed esempio di proprietà direzione (VC + +)
 Questo esempio Usa la [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [dimensioni](../../../ado/reference/ado-api/size-property-ado-parameter.md), e [direzione](../../../ado/reference/ado-api/direction-property.md) le proprietà per eseguire una stored procedure.  

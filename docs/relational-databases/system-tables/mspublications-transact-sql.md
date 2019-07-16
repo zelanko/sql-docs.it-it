@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bb939681cb97b80a7bd0498a2e0c1fa30202c404
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: de4970e82155454b3d05d6200bc7413baca97aef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939019"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +43,8 @@ ms.locfileid: "52791543"
 |**allow_pull**|**bit**|Indica se è possibile creare sottoscrizioni di tipo pull per la pubblicazione specificata.|  
 |**allow_anonymous**|**bit**|Indica se è possibile creare sottoscrizioni anonime per la pubblicazione specificata.|  
 |**description**|**nvarchar(255)**|Descrizione della pubblicazione.|  
-|**vendor_name**|**Nvarchar(100)**|Nome del produttore se il server di pubblicazione non è un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**conservazione**|**int**|Periodo di memorizzazione della pubblicazione in ore.|  
+|**vendor_name**|**nvarchar(100)**|Nome del produttore se il server di pubblicazione non è un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**retention**|**int**|Periodo di memorizzazione della pubblicazione in ore.|  
 |**sync_method**|**int**|Metodo di sincronizzazione:<br /><br /> **0** = native (genera l'output di copia bulk in modalità nativa di tutte le tabelle).<br /><br /> **1** = character (genera un output di copia bulk in modalità carattere di tutte le tabelle).<br /><br /> **3** = concurrent (genera output di copia bulk in modalità nativa di tutte le tabelle senza tuttavia bloccare la tabella durante lo snapshot).<br /><br /> **4** = Concurrent_c (genera un output di copia bulk in modalità carattere di tutte le tabelle senza bloccare le tabelle durante lo snapshot)<br /><br /> I valori **3** e **4** sono disponibili per la replica transazionale e di tipo merge, ma non per la replica snapshot.|  
 |**allow_subscription_copy**|**bit**|Abilita o disabilita la funzione di copia dei database di sottoscrizione che sottoscrivono la pubblicazione. **0** significa che la copia è disabilitata, e **1** significa che è abilitata.|  
 |**thirdparty_options**|**int**|Specifica se la visualizzazione di una pubblicazione nella cartella replica in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] viene eliminata:<br /><br /> **0** = Visualizza una pubblicazione eterogenea nella cartella replica in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].<br /><br /> **1** = disattiva la visualizzazione una pubblicazione eterogenea nella cartella replica in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  

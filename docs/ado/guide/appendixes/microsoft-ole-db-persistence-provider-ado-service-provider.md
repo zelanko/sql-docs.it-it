@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d1ae4f8cba9235700edf410904862d39ed4f7f64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2bd341a3af2d1fdb076312b4c0993184fb4fae39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926762"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Panoramica di Provider Microsoft OLE DB Persistence
 Provider Microsoft OLE DB Persistence consente di salvare un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto in un file e il ripristino in un secondo momento che **Recordset** oggetto dal file. Le informazioni sullo schema, i dati e le modifiche in sospeso vengono mantenute.
@@ -34,7 +33,7 @@ Provider Microsoft OLE DB Persistence consente di salvare un [Recordset](../../.
 "Provider=MSPersist"
 ```
 
-## <a name="errors"></a>Errori
+## <a name="errors"></a>Errors
  I seguenti errori generati da questo provider possono essere rilevati nell'applicazione.
 
 |Costante|Descrizione|

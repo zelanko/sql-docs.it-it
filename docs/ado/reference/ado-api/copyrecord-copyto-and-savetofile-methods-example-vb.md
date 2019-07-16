@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ea4614191ea8be88f801f92f1ca90eb5110b7dec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b128c935ec0119344a213dbe5289cc8a3cd190fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919361"
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord, CopyTo e SaveToFile (esempio di metodi (VB)
 In questo esempio viene illustrato come creare copie di un file usando [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oppure [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetti. Viene creata una copia in una cartella Web per Internet publishing. Includono altre proprietà e metodi illustrati [tipo Stream](../../../ado/reference/ado-api/type-property-ado-stream.md), **Open**, [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md), e [Record Open](../../../ado/reference/ado-api/open-method-ado-record.md).  
@@ -131,7 +130,7 @@ End Sub
  [Metodo LoadFromFile (ADO)](../../../ado/reference/ado-api/loadfromfile-method-ado.md)   
  [Metodo Open (Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Metodo Open (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Oggetto record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Metodo SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)   
  [Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Proprietà Type (flusso ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)

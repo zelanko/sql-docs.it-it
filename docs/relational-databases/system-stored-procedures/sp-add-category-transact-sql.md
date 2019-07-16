@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ac78863fd2bad39675bfe3f486a8a88a8d026e37
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: b29f3e348800c300698533fb8aad47066bd0b46a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492983"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941773"
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_add_category
 |ALERT|Aggiunge una categoria di avvisi.|  
 |OPERATOR|Aggiunge una categoria di operatori.|  
   
-`[ @type = ] 'type'` Tipo di categoria da aggiungere. *tipo di* viene **varchar(12)**, con valore predefinito è **locale**, i possibili valori sono i seguenti.  
+`[ @type = ] 'type'` Tipo di categoria da aggiungere. *tipo di* viene **varchar(12)** , con valore predefinito è **locale**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -65,7 +64,7 @@ sp_add_category
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  **sp_add_category** deve essere eseguita la **msdb** database.  

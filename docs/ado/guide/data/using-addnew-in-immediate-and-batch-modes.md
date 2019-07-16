@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed314bb9-e188-4658-a68c-a2abc49610be
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7bcd9d42ef214d7b1a2a40d2f00eeba85f9399b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 265b1dcd3cdc1aa7f18f0ca54dc2cf54df2da158
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923620"
 ---
 # <a name="using-addnew-in-immediate-and-batch-modes"></a>Uso di AddNew in modalità batch e immediata
 Il comportamento dei **AddNew** metodo dipende dalla modalità di aggiornamento del **Recordset** oggetto e se si passa il *FieldList* e *valori*argomenti.  

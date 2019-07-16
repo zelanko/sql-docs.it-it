@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f083f62a67a2255b59fe9ca7cffc03e5aaf5f0a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd28ece0e82c4551409920c876d54fbd7dc501ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926611"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Provider Microsoft OLE DB per la panoramica di SQL Server
 Il Provider Microsoft OLE DB per SQL Server, SQLOLEDB, consente di ADO per accedere a Microsoft SQL Server.

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2cfba2b659ed03f67d94c2c80812d7712e481f50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06bf7c811074ba70741fe77b06037f9f69c9cda4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922471"
 ---
 # <a name="rds-programming-model-with-objects"></a>Modello di programmazione RDS con oggetti
 L'obiettivo di servizi desktop remoto è per ottenere l'accesso a e aggiornare le origini dei dati tramite un intermediario, ad esempio IIS. Il modello di programmazione indica la sequenza di attività necessarie per portare a termine questo obiettivo. Il modello a oggetti specifica gli oggetti cui metodi e proprietà influiscono sul modello di programmazione.  
@@ -45,8 +44,8 @@ L'obiettivo di servizi desktop remoto è per ottenere l'accesso a e aggiornare l
  [Riepilogo del modello a oggetti servizi desktop remoto](../../../ado/guide/remote-data-service/rds-object-model-summary.md)   
  [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Oggetto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [DataSpace Object (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
- [RDS Scenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
+ [Oggetto DataSpace (Servizi Desktop remoto)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
+ [Scenario RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Esercitazione su RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Utilizzo e sicurezza per RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)

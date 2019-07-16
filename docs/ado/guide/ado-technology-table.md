@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8403af8dec6e3d96f955b6b4523662a164931be3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e260ba5e9bfa4cc0d55187dff09072dd5842828
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702831"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927018"
 ---
 # <a name="products-and-technologies-table"></a>Prodotti e tecnologie tabella
 La tabella seguente elenca i prodotti Microsoft, strumenti e tecnologie illustrate nella Guida per programmatori ADO. Fornisce i collegamenti, laddove possibile, agli argomenti rilevanti nella Guida.
@@ -34,7 +33,7 @@ La tabella seguente elenca i prodotti Microsoft, strumenti e tecnologie illustra
 |Internet Information Services (IIS)|[Record e flussi](../../ado/guide/data/records-and-streams.md)<br /><br /> [Flussi e persistenza](../../ado/guide/data/streams-and-persistence.md)<br /><br /> [Flussi di comandi](../../ado/guide/data/command-streams.md)<br /><br /> [Uso di ADO per Internet Publishing](../../ado/guide/data/using-ado-for-internet-publishing.md)<br /><br /> [Soluzioni per RDA (Remote Data Access)](../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)<br /><br /> [Scenario RDS](../../ado/guide/remote-data-service/rds-scenario.md)<br /><br /> [Configurazione dei server virtuali su IIS](../../ado/guide/remote-data-service/configuring-virtual-servers-on-iis.md)<br /><br /> [Sicurezza delle applicazioni RDS](../../ado/guide/remote-data-service/securing-rds-applications.md)<br /><br /> ["Errore del Server Internet: Accesso negato"](../../ado/guide/remote-data-service/internet-server-error-access-denied.md)<br /><br /> [Provider Microsoft OLE DB per Internet Publishing](../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)<br /><br /> [Codici di errore di Internet Information Services (IIS)](../../ado/guide/appendixes/internet-information-services-error-codes.md)|
 |JScript|[Gestione degli errori in altri linguaggi](../../ado/guide/data/handling-errors-in-other-languages.md)<br /><br /> [Programmazione ADO JScript](../../ado/guide/appendixes/jscript-ado-programming.md)<br /><br /> [Esempi di codice ADO in Microsoft JScript](../../ado/reference/ado-api/ado-code-examples-in-microsoft-jscript.md)|
 |ODBC|[Uso di RDS con pool di connessioni ODBC](../../ado/guide/remote-data-service/using-rds-with-odbc-connection-pooling.md)<br /><br /> [Provider Microsoft OLE DB per ODBC](../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)|
-|OLE DB|[Provider OLE DB](../../ado/guide/data/ole-db-providers-ado.md)<br /><br /> [Appendice A: Providers](../../ado/guide/appendixes/appendix-a-providers.md)<br /><br /> [Errori del provider](../../ado/guide/data/provider-errors.md)|
+|OLE DB|[Provider OLE DB](../../ado/guide/data/ole-db-providers-ado.md)<br /><br /> [Appendice A: provider](../../ado/guide/appendixes/appendix-a-providers.md)<br /><br /> [Errori del provider](../../ado/guide/data/provider-errors.md)|
 |Oracle|[Provider Microsoft OLE DB per Oracle](../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|
 |SQL Server|[Controllo delle transazioni](../../ado/guide/data/controlling-transactions-ado.md)<br /><br /> [Chiamata di una stored procedure con Command](../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)<br /><br /> [Record corrente e dimensioni del recordset](../../ado/guide/data/current-record-and-size-of-recordset.md)<br /><br /> [Cursori forward-only](../../ado/guide/data/forward-only-cursors.md)<br /><br /> [Flussi di comandi](../../ado/guide/data/command-streams.md)<br /><br /> [Recupero di set di risultati nei flussi](../../ado/guide/data/retrieving-resultsets-into-streams.md)<br /><br /> [Esecuzione dello script SQL per Address Book](../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)<br /><br /> [Garantire spazio sufficiente per TempDB](../../ado/guide/remote-data-service/ensuring-sufficient-tempdb-space.md)<br /><br /> [Riduzione al minimo dell'utilizzo dello spazio per il file di log](../../ado/guide/remote-data-service/minimizing-log-file-space-usage.md)<br /><br /> [Provider Microsoft OLE DB per SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
 |Server di transazione|[Esecuzione di oggetti business nei Servizi componenti](../../ado/guide/remote-data-service/running-business-objects-in-component-services.md)|

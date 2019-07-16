@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3d602faed36d2348652aa8fd026f0c0810928b6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5000a537e068136de98e8635f348ff6aa3d9e364
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707118"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931835"
 ---
 # <a name="optimize-property-example-vc"></a>Esempio della proprietà Optimize (VC++)
 Questo esempio viene illustrato il [campo](../../../ado/reference/ado-api/field-object.md) oggetti dinamici **Optimize** proprietà. Il **zip** campo del **autori** nella tabella di **Pubs** database non è indicizzato. Impostando il [Ottimizza](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) proprietà **True** sul **zip** campo autorizza ADO per compilare un indice che consente di migliorare le prestazioni del [trovare](../../../ado/reference/ado-api/find-method-ado.md)metodo.  
@@ -133,7 +132,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Akiko Yokomoto    3 Silver Ct. Autorità di certificazione Walnut Creek**   
+ **Akiko Yokomoto CT Silver 3 Autorità di certificazione Walnut Creek**   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Field](../../../ado/reference/ado-api/field-object.md)   
  [Proprietà dinamica Optimize (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
