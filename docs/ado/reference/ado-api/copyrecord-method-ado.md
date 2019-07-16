@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d11a8d5d775499246bd8af709764dec3f2ad61e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aaabb32234cefe2e3c3727ce5a18dd2d98549a77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698514"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933411"
 ---
 # <a name="copyrecord-method-ado"></a>Metodo CopyRecord (ADO)
 Copia di un'entità rappresentata da un [record](../../../ado/reference/ado-api/record-object-ado.md) in un'altra posizione.  
@@ -39,19 +38,19 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  Facoltativo. Oggetto **stringa** valore contenente un URL che specifica l'entità deve essere copiato (ad esempio, un file o directory). Se *origine* viene omesso oppure specifica una stringa vuota, il file o directory rappresentata dall'oggetto corrente [Record](../../../ado/reference/ado-api/record-object-ado.md) verranno copiati.  
   
  *Destinazione*  
- Facoltativo. Oggetto **stringa** contenente un URL che specifica la posizione in cui *origine* verranno copiati.  
+ facoltativo. Oggetto **stringa** contenente un URL che specifica la posizione in cui *origine* verranno copiati.  
   
  *UserName*  
- Facoltativo. Oggetto **stringa** valore contenente l'ID utente, se necessario, autorizza l'accesso al *destinazione*.  
+ facoltativo. Oggetto **stringa** valore contenente l'ID utente, se necessario, autorizza l'accesso al *destinazione*.  
   
  *Password*  
- Facoltativo. Oggetto **stringa** valore contenente la password, se necessario, verifica *UserName*.  
+ facoltativo. Oggetto **stringa** valore contenente la password, se necessario, verifica *UserName*.  
   
  *Opzioni*  
- Facoltativo. Oggetto [CopyRecordOptionsEnum uguale al](../../../ado/reference/ado-api/copyrecordoptionsenum.md) valore con valore predefinito è **adCopyUnspecified**. Specifica il comportamento di questo metodo.  
+ facoltativo. Oggetto [CopyRecordOptionsEnum uguale al](../../../ado/reference/ado-api/copyrecordoptionsenum.md) valore con valore predefinito è **adCopyUnspecified**. Specifica il comportamento di questo metodo.  
   
  *Async*  
- Facoltativo. Oggetto **booleana** valore che, quando **True**, specifica che questa operazione deve essere asincrona.  
+ facoltativo. Oggetto **booleana** valore che, quando **True**, specifica che questa operazione deve essere asincrona.  
   
 ## <a name="return-value"></a>Valore restituito  
  Oggetto **stringa** valore che restituisce in genere il valore di *destinazione*. Tuttavia, il valore esatto restituito è dipendente dal provider.  

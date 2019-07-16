@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4af21c912ce5a703cd46f0f9b00b5dd4bda7d2d3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135831"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212057"
 ---
 # <a name="view-and-modify-publication-properties"></a>Visualizzazione e modifica delle proprietà della pubblicazione
   In questo argomento viene descritto come modificare le proprietà delle pubblicazioni in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o RMO (Replication Management Objects).  
@@ -109,7 +109,7 @@ ms.locfileid: "54135831"
 1.  Eseguire [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), specificando la proprietà della pubblicazione da modificare nel parametro **@property** e il nuovo valore di questa proprietà nel parametro **@value** .  
   
     > [!NOTE]  
-    >  Se la modifica richiederà la generazione di un nuovo snapshot, è necessario specificare anche il valore **1** per **@force_invalidate_snapshot**e se richiederà la reinizializzazione dei Sottoscrittori, è necessario specificare il valore **1** per **@force_reinit_subscription**. Per altre informazioni sulle proprietà che, in caso di modifica, richiedono un nuovo snapshot o una reinizializzazione, vedere [Modificare le proprietà di pubblicazioni e articoli](change-publication-and-article-properties.md).  
+    >  Se la modifica richiederà la generazione di un nuovo snapshot, è necessario specificare anche il valore **1** per **@force_invalidate_snapshot** e se richiederà la reinizializzazione dei Sottoscrittori, è necessario specificare il valore **1** per **@force_reinit_subscription** . Per altre informazioni sulle proprietà che, in caso di modifica, richiedono un nuovo snapshot o una reinizializzazione, vedere [Modificare le proprietà di pubblicazioni e articoli](change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>Per visualizzare le proprietà di una pubblicazione di tipo merge  
   
@@ -120,7 +120,7 @@ ms.locfileid: "54135831"
 1.  Eseguire [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), specificando la proprietà della pubblicazione da modificare nel parametro **@property** e il nuovo valore di questa proprietà nel parametro **@value** .  
   
     > [!NOTE]  
-    >  Se la modifica richiederà la generazione di un nuovo snapshot, è necessario specificare anche il valore **1** per **@force_invalidate_snapshot** e se richiederà la reinizializzazione dei Sottoscrittori, è necessario specificare il valore **1** per **@force_reinit_subscription**. Per altre informazioni sulle proprietà che, in caso di modifica, richiedono un nuovo snapshot o una reinizializzazione, vedere [Modificare le proprietà di pubblicazioni e articoli](change-publication-and-article-properties.md).  
+    >  Se la modifica richiederà la generazione di un nuovo snapshot, è necessario specificare anche il valore **1** per **@force_invalidate_snapshot** e se richiederà la reinizializzazione dei Sottoscrittori, è necessario specificare il valore **1** per **@force_reinit_subscription** . Per altre informazioni sulle proprietà che, in caso di modifica, richiedono un nuovo snapshot o una reinizializzazione, vedere [Modificare le proprietà di pubblicazioni e articoli](change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>Per visualizzare le proprietà di uno snapshot  
   
@@ -193,7 +193,7 @@ ms.locfileid: "54135831"
  [Apportare modifiche allo schema nei database di pubblicazione](make-schema-changes-on-publication-databases.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Aggiungere ed eliminare articoli in una pubblicazione](add-articles-to-and-drop-articles-from-a-publication.md)   
- [Visualizzare informazioni ed eseguire attività con Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Visualizzare e modificare le proprietà degli articoli](view-and-modify-article-properties.md)  
   
   

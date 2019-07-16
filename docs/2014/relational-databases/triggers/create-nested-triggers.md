@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ba5b5edf57bf877827fefe4f8764b8b71124a550
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078331"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196542"
 ---
 # <a name="create-nested-triggers"></a>Creazione di trigger annidati
   Entrambi i trigger DML e DDL vengono nidificati quando un trigger esegue un'operazione che ne avvia un altro. Tali operazioni possono quindi avviare altri trigger e così via. I trigger DML e DDL possono essere nidificati fino a un massimo di 32 livelli. Per gestire la nidificazione dei trigger AFTER, utilizzare l'opzione di configurazione del server **nested triggers** . I trigger INSTEAD OF (solo DML) possono essere nidificati indipendentemente da questa impostazione.  
@@ -35,7 +35,7 @@ ms.locfileid: "48078331"
   
  Se è consentito l'utilizzo di trigger nidificati e un trigger della catena avvia un ciclo infinito, il livello di nidificazione viene superato e il trigger viene interrotto.  
   
- È possibile utilizzare i trigger nidificati per eseguire funzioni di manutenzione, utili quali l'archiviazione di una copia di backup delle righe interessate da un trigger precedente. È ad esempio possibile creare un trigger su `PurchaseOrderDetail` per salvare una copia di backup delle righe di `PurchaseOrderDetail` eliminate dal trigger `delcascadetrig` . Se il trigger `delcascadetrig` è attivo, l'eliminazione di `PurchaseOrderID` 1965 dalla tabella `PurchaseOrderHeader` implica l'eliminazione della riga o delle righe corrispondenti da `PurchaseOrderDetail`. Per salvare i dati eliminati in un'altra tabella creata separatamente denominata `PurchaseOrderDetail` , creare un trigger DELETE su `del_save`. Esempio:  
+ È possibile utilizzare i trigger nidificati per eseguire funzioni di manutenzione, utili quali l'archiviazione di una copia di backup delle righe interessate da un trigger precedente. È ad esempio possibile creare un trigger su `PurchaseOrderDetail` per salvare una copia di backup delle righe di `PurchaseOrderDetail` eliminate dal trigger `delcascadetrig` . Se il trigger `delcascadetrig` è attivo, l'eliminazione di `PurchaseOrderID` 1965 dalla tabella `PurchaseOrderHeader` implica l'eliminazione della riga o delle righe corrispondenti da `PurchaseOrderDetail`. Per salvare i dati eliminati in un'altra tabella creata separatamente denominata `PurchaseOrderDetail` , creare un trigger DELETE su `del_save`. Ad esempio:  
   
 ```  
 CREATE TRIGGER Purchasing.savedel  
@@ -182,7 +182,7 @@ Paul                           Alice                          0
   
  **Per impostare l'opzione di database RECURSIVE_TRIGGERS**  
   
--   [Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)  
+-   [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)  
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   

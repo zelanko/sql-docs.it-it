@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0643c6fbf8e9a6aa649d4d335117bcb4f5b35208
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803073"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206847"
 ---
 # <a name="maintenance-plans"></a>Piani di manutenzione
   Con i piani di manutenzione è possibile creare un flusso di lavoro per le attività necessarie per assicurare prestazioni ottimali del database, eseguire regolarmente il backup del database e verificare che nel database non siano presenti incoerenze. Sebbene sia possibile utilizzare anche Creazione guidata piano di manutenzione per creare i piani di manutenzione principali, la creazione manuale dei piani offre una maggiore flessibilità.  

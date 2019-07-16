@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 22355696fda59f984e21b72e1070aaa69cba9b97
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792353"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199246"
 ---
 # <a name="view-and-modify-article-properties"></a>Visualizzazione e modifica delle proprietà degli articoli
   In questo argomento viene descritto come modificare le proprietà degli articoli in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o RMO (Replication Management Objects).  
@@ -86,23 +86,23 @@ ms.locfileid: "52792353"
   
 2.  Selezionare gli articoli a cui si applicano le modifiche delle proprietà:  
   
-    -   Fare clic su **Imposta proprietà dell'articolo di \<TipoOggetto> evidenziato** per aprire la finestra di dialogo **Proprietà articolo - \<NomeOggetto>**. Le modifiche apportate alle proprietà in questa finestra di dialogo vengono applicate solo all'oggetto evidenziato nel riquadro degli oggetti nella pagina **Articoli**.  
+    -   Fare clic su **Imposta proprietà dell'articolo di \<TipoOggetto> evidenziato** per aprire la finestra di dialogo **Proprietà articolo - \<NomeOggetto>** . Le modifiche apportate alle proprietà in questa finestra di dialogo vengono applicate solo all'oggetto evidenziato nel riquadro degli oggetti nella pagina **Articoli**.  
   
-    -   Fare clic su **Imposta proprietà di tutti gli articoli di \<TipoOggetto>** per aprire la finestra di dialogo **Proprietà di tutti gli articoli \<TipoOggetto>**. Le modifiche apportate alle proprietà in questa finestra di dialogo vengono applicate a tutti gli oggetti del tipo indicato nel riquadro degli oggetti all'interno della pagina **Articoli**, inclusi quelli non ancora selezionati per la pubblicazione.  
+    -   Fare clic su **Imposta proprietà di tutti gli articoli di \<TipoOggetto>** per aprire la finestra di dialogo **Proprietà di tutti gli articoli \<TipoOggetto>** . Le modifiche apportate alle proprietà in questa finestra di dialogo vengono applicate a tutti gli oggetti del tipo indicato nel riquadro degli oggetti all'interno della pagina **Articoli**, inclusi quelli non ancora selezionati per la pubblicazione.  
   
         > [!NOTE]  
-        >  Le modifiche apportate alle proprietà nella finestra di dialogo **Proprietà di tutti gli articoli \<TipoOggetto>** sostituiscono tutte le modifiche eseguite precedentemente nella finestra di dialogo **Proprietà articolo - \<NomeOggetto>**. Se ad esempio si desidera impostare alcuni valori predefiniti per tutti gli articoli di un tipo di oggetto e, al contempo, alcune proprietà per singoli oggetti, è necessario impostare innanzitutto i valori predefiniti per tutti gli articoli, quindi le proprietà relative ai singoli oggetti.  
+        >  Le modifiche apportate alle proprietà nella finestra di dialogo **Proprietà di tutti gli articoli \<TipoOggetto>** sostituiscono tutte le modifiche eseguite precedentemente nella finestra di dialogo **Proprietà articolo - \<NomeOggetto>** . Se ad esempio si desidera impostare alcuni valori predefiniti per tutti gli articoli di un tipo di oggetto e, al contempo, alcune proprietà per singoli oggetti, è necessario impostare innanzitutto i valori predefiniti per tutti gli articoli, quindi le proprietà relative ai singoli oggetti.  
   
 3.  Se necessario, modificare le proprietà e quindi fare clic su **OK**.  
   
-4.  Fare clic su **OK** nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**.  
+4.  Fare clic su **OK** nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** .  
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
  È possibile modificare gli articoli e restituire a livello di programmazione le relative proprietà tramite le stored procedure di replica. Le stored procedure utilizzate dipenderanno dal tipo di pubblicazione a cui appartiene l'articolo.  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>Per visualizzare le proprietà di un articolo appartenente a una pubblicazione snapshot o transazionale  
   
-1.  Eseguire [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql), specificando il nome della pubblicazione per il parametro **@publication** e il nome dell'articolo per il parametro **@article** . Se **@article**viene omesso, verranno restituite informazioni su tutti gli articoli della pubblicazione.  
+1.  Eseguire [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql), specificando il nome della pubblicazione per il parametro **@publication** e il nome dell'articolo per il parametro **@article** . Se **@article** viene omesso, verranno restituite informazioni su tutti gli articoli della pubblicazione.  
   
 2.  Eseguire [sp_helparticlecolumns](/sql/relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql) per gli articoli di tabella per elencare tutte le colonne disponibili nella tabella di base.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "52792353"
 1.  Eseguire [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql), specificando la proprietà dell'articolo da modificare nel parametro **@property** e il nuovo valore di questa proprietà nel parametro **@value** .  
   
     > [!NOTE]  
-    >  Se la modifica richiede la generazione di un nuovo snapshot, è necessario specificare anche il valore **1** per **@force_invalidate_snapshot**e se richiede la reinizializzazione dei Sottoscrittori, è necessario specificare anche il valore **1** per **@force_reinit_subscription**. Per altre informazioni sulle proprietà che, in caso di modifica, richiedono un nuovo snapshot o una reinizializzazione, vedere [Modificare le proprietà di pubblicazioni e articoli](change-publication-and-article-properties.md).  
+    >  Se la modifica richiede la generazione di un nuovo snapshot, è necessario specificare anche il valore **1** per **@force_invalidate_snapshot** e se richiede la reinizializzazione dei Sottoscrittori, è necessario specificare anche il valore **1** per **@force_reinit_subscription** . Per altre informazioni sulle proprietà che, in caso di modifica, richiedono un nuovo snapshot o una reinizializzazione, vedere [Modificare le proprietà di pubblicazioni e articoli](change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-merge-publication"></a>Per visualizzare le proprietà di un articolo appartenente a una pubblicazione di tipo merge  
   
@@ -124,7 +124,7 @@ ms.locfileid: "52792353"
 1.  Eseguire [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), specificando la proprietà dell'articolo da modificare nel parametro **@property** e il nuovo valore di questa proprietà nel parametro **@value** .  
   
     > [!NOTE]  
-    >  Se la modifica richiede la generazione di un nuovo snapshot, è necessario specificare anche il valore **1** per **@force_invalidate_snapshot**e se richiede la reinizializzazione dei Sottoscrittori, è necessario specificare anche il valore **1** per **@force_reinit_subscription**. Per altre informazioni sulle proprietà che, in caso di modifica, richiedono un nuovo snapshot o una reinizializzazione, vedere [Modificare le proprietà di pubblicazioni e articoli](change-publication-and-article-properties.md).  
+    >  Se la modifica richiede la generazione di un nuovo snapshot, è necessario specificare anche il valore **1** per **@force_invalidate_snapshot** e se richiede la reinizializzazione dei Sottoscrittori, è necessario specificare anche il valore **1** per **@force_reinit_subscription** . Per altre informazioni sulle proprietà che, in caso di modifica, richiedono un nuovo snapshot o una reinizializzazione, vedere [Modificare le proprietà di pubblicazioni e articoli](change-publication-and-article-properties.md).  
   
 ###  <a name="TsqlExample"></a> Esempio (Transact-SQL)  
  In questo esempio di replica transazionale vengono restituite le proprietà dell'articolo pubblicato.  

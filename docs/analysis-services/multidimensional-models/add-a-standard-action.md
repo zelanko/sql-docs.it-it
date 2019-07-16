@@ -1,5 +1,5 @@
 ---
-title: Aggiungere un'azione Standard | Documenti Microsoft
+title: Aggiungere un'azione Standard | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a6af04d1ed2b8db53425ad0aaf83d95d73dd6f8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020638"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180274"
 ---
 # <a name="add-a-standard-action"></a>Aggiungere un'azione standard
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "34020638"
   
     -   Nell'elenco a discesa **Tipo** selezionare il tipo di azione che si desidera creare. Nella tabella seguente sono elencati i tipi di azioni disponibili.  
   
-        |Tipo|Description|  
+        |type|Descrizione|  
         |----------|-----------------|  
         |Set di dati|Consente di recuperare un set di dati.|  
         |Proprietario|Consente di eseguire un'operazione utilizzando un'interfaccia diversa da quelle elencate in questa tabella.|  
@@ -55,13 +55,13 @@ ms.locfileid: "34020638"
         |Istruzione|Esegue un comando OLE DB.|  
         |URL|Consente di visualizzare una pagina Web in un browser Internet.|  
   
-    -   In **Espressione azione**creare un'espressione che definisca l'azione. L'espressione deve restituire una stringa. È possibile digitare manualmente l'espressione oppure trascinare gli elementi dalle schede **Metadati** e **Funzioni**.  
+    -   In **Espressione azione**creare un'espressione che definisca l'azione. L'espressione deve restituire una stringa. È possibile digitare manualmente l'espressione oppure trascinare gli elementi dalle schede **Metadati** e **Funzioni** .  
   
 3.  Facoltativo. Espandere **Proprietà aggiuntive**, quindi effettuare uno dei passaggi seguenti:  
   
     -   Nell'elenco a discesa **Chiamata** specificare come viene richiamata l'azione. Nella tabella seguente sono descritte le opzioni disponibili per il richiamo di un'azione.  
   
-        |Opzione|Description|  
+        |Opzione|Descrizione|  
         |------------|-----------------|  
         |Interattiva|L'azione viene attivata dall'interazione dell'utente.|  
         |Batch|L'azione viene eseguita come operazione batch.|  
@@ -72,7 +72,7 @@ ms.locfileid: "34020638"
         > [!NOTE]  
         >  Le azioni proprietarie non vengono restituite al server a meno che l'applicazione client non consenta di limitare in modo esplicito il set di righe dello schema in modo da restituire solo le azioni che corrispondono al nome specificato in **Applicazione**.  
   
-    -   In **contenuto azione**, se si utilizza il tipo di URL, racchiudere l'indirizzo Internet tra virgolette, ad esempio, "http://www.adventure-works.com".  
+    -   Nelle **contenuto azione**, se si usa il tipo URL, racchiudere l'indirizzo Internet tra virgolette, ad esempio, "http://www.adventure-works.com".  
   
     -   In **Descrizione**digitare una descrizione per l'azione.  
   

@@ -1,5 +1,5 @@
 ---
-title: Definire il tipo di relazione di una relazione tra attributi | Documenti Microsoft
+title: Definire il tipo di relazione di una relazione tra attributi | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c6ae9dd941ecf13d05b62b1b5f8bcdd3d3784188
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022128"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179227"
 ---
-# <a name="attribute-relationships---define-the-relationship-type"></a>Relazioni tra attributi: definire il tipo di relazione
+# <a name="attribute-relationships---define-the-relationship-type"></a>Relazioni tra attributi - Definire il tipo di relazione
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Si definisce il tipo di relazione di una relazione tra attributi utilizzando la scheda **Relazioni tra attributi** in Progettazione dimensioni a cui è possibile accedere da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   

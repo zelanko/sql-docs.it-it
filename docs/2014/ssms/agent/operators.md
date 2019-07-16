@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 03deab738f374716002c4d78e07078e90fb41822
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797993"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189022"
 ---
 # <a name="operators"></a>Operatori
   Gli operatori sono alias per persone o gruppi che possono ricevere notifiche elettroniche a completamento dei processi o quando vengono generati avvisi. Il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent supporta il servizio di notifica degli amministratori tramite gli operatori. Gli operatori consentono di abilitare la notifica e le funzionalità di monitoraggio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  

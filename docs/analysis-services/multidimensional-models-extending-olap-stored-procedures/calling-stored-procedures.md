@@ -1,5 +1,5 @@
 ---
-title: Chiamata di Stored procedure | Documenti Microsoft
+title: Chiamata di Stored procedure | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a0bdf517f2845e28a9d3520034d9de16ff65a25e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020988"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181161"
 ---
 # <a name="calling-stored-procedures"></a>Chiamata di stored procedure
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,17 +58,17 @@ SELECT Country.Members on 0, MySproc(Measures.Sales) ON 1 FROM Sales
 ```  
   
 ## <a name="calling-stored-procedures-with-the-call-statement"></a>Chiamata di stored procedure con l'istruzione Call  
- Stored procedure possono essere chiamate all'esterno del contesto di una query MDX utilizzando MDX **chiamare** istruzione.  
+ Le stored procedure possono essere chiamate all'esterno del contesto di una query MDX utilizzando MDX **chiamare** istruzione.  
   
- È possibile utilizzare questo metodo per creare un'istanza degli effetti collaterali di una query archiviata oppure per l'applicazione per ottenere i risultati di una query archiviata. Un utilizzo comune del **chiamare** istruzione, è possibile utilizzare oggetti AMO (Analysis Management) per eseguire funzioni amministrative che non dispongono di un risultato restituito. Ad esempio, per chiamare una stored procedure è possibile utilizzare i comandi seguenti:  
+ È possibile utilizzare questo metodo per creare un'istanza degli effetti collaterali di una query archiviata oppure per l'applicazione per ottenere i risultati di una query archiviata. Un utilizzo comune della **chiamare** istruzione, è possibile utilizzare oggetti AMO (Analysis Management) per eseguire funzioni amministrative che non è un valore restituito. Ad esempio, per chiamare una stored procedure è possibile utilizzare i comandi seguenti:  
   
 ```  
 Call MyStoredProcedure(a,b,c)  
 ```  
   
- L'unico tipo supportato restituito dalla stored procedure in un **chiamare** istruzione è un set di righe. La serializzazione di un set di righe viene definita tramite XML for Analysis. Se una stored procedure in un **chiamare** l'istruzione restituisce qualsiasi altro tipo, viene ignorata e non restituita in XML all'applicazione chiamante. Per ulteriori informazioni sui set di righe di schema di XML for Analysis, vedere l'argomento corrispondente.  
+ L'unico tipo supportato restituito dalla stored procedure in un **chiamare** istruzione è un set di righe. La serializzazione di un set di righe viene definita tramite XML for Analysis. Se una stored procedure in un **chiamare** istruzione restituisce qualsiasi altro tipo, viene ignorata e non restituito in XML all'applicazione chiamante. Per ulteriori informazioni sui set di righe di schema di XML for Analysis, vedere l'argomento corrispondente.  
   
- Se una stored procedure restituisce un set di righe .NET, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] converte il risultato nel server in un set di righe XML for Analysis. XML for Analysis set di righe viene sempre restituito da una stored procedure nel **chiamare** (funzione). Se un set di dati contiene caratteristiche che non possono essere espresse nel set di righe di XML for Analysis, si verifica un errore.  
+ Se una stored procedure restituisce un set di righe .NET, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] converte il risultato nel server in un set di righe XML for Analysis. Il codice XML per set di righe Analysis viene sempre restituito da una stored procedure nel **chiamare** (funzione). Se un set di dati contiene caratteristiche che non possono essere espresse nel set di righe di XML for Analysis, si verifica un errore.  
   
  Le stored procedure che restituiscono valori void, ad esempio subroutine di Visual Basic, possono essere utilizzate con la parola chiave CALL. Se ad esempio si desidera utilizzare la funzione MyVoidFunction() in un'istruzione MDX, è necessario utilizzare la sintassi seguente:  
   
@@ -78,6 +78,6 @@ CALL(MyVoidFunction)
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione di assembly di modelli multidimensionali](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)   
- [Definizione delle Stored procedure](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
+ [Definizione delle stored procedure](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

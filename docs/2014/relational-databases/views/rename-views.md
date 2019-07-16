@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a0dfa9a95697c4bb1fcb2e4e5d3798f18e305e42
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393705"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211650"
 ---
 # <a name="rename-views"></a>Rinominare viste
   È possibile rinominare una vista in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "52393705"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Completamento:**  [Dopo la rinomina di una vista](#FollowUp)  
+-   **Completamento:**  [dopo che una vista è stata rinominata](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -49,7 +49,7 @@ ms.locfileid: "52393705"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Sono richieste l'autorizzazione ALTER per SCHEMA o CONTROL per OBJECT e l'autorizzazione CREATE VIEW per il database.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -69,7 +69,7 @@ ms.locfileid: "52393705"
   
  Per altre informazioni, vedere [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql) e [DROP VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-view-transact-sql).  
   
-##  <a name="FollowUp"></a> Completamento: Dopo la rinomina di una vista  
+##  <a name="FollowUp"></a> Completamento: dopo che una vista è stata rinominata  
  Assicurarsi che tutti gli oggetti, gli script e le applicazioni che fanno riferimento al nome precedente della vista usino ora il nuovo nome.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SystemGetCrossValidationResults (Analysis Services - Data Mining) | Documenti Microsoft
+title: SystemGetCrossValidationResults (Analysis Services - Data Mining) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2febed19e2bd481a8e442f115f9691e5abb6be4b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018618"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209779"
 ---
 # <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -108,7 +108,7 @@ SystemGetCrossValidationResults(
  Il valore predefinito è **null**.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non genererà un errore se si imposta *soglia di stato* su 0.0, ma non utilizzare mai questo valore. Con una soglia di 0.0, le stime con una probabilità dello 0 percento vengono di fatto conteggiate come corrette.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non genererà un errore se si imposta la *state threshold* su 0.0, sebbene non sia mai consigliabile usare questo valore. Con una soglia di 0.0, le stime con una probabilità dello 0 percento vengono di fatto conteggiate come corrette.  
   
  (facoltativo).  
   
@@ -124,7 +124,7 @@ SystemGetCrossValidationResults(
   
  Nella tabella seguente vengono descritte le colonne nel set di righe.  
   
-|Nome colonna|Description|  
+|Nome colonna|Descrizione|  
 |-----------------|-----------------|  
 |ModelName|Nome del modello sottoposto a test.|  
 |AttributeName|Nome della colonna stimabile.|  
@@ -135,7 +135,7 @@ SystemGetCrossValidationResults(
 |Misura|Nome della misura restituita dal test. Le misure per ogni modello dipendono dal tipo del valore stimabile. Per la definizione delle diverse misure, vedere [Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).<br /><br /> Per un elenco delle misure restituite per ogni tipo stimabile, vedere [Misure nel report di convalida incrociata](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
 |Value|Valore della misura di test specificata.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Per restituire la metrica di accuratezza per l'intero set di dati, usare [SystemGetAccuracyResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md).  
   
  Se il modello di data mining è già stato partizionato in riduzioni, è possibile ignorare l'elaborazione e restituire solo i risultati della convalida incrociata usando [SystemGetAccuracyResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md).  
@@ -164,17 +164,17 @@ NULL
   
 |ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Misura|Value|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
-|Target Mail DT|Bike Buyer|1|1|500|Classificazione|Vero positivo|144|  
-|Target Mail DT|Bike Buyer|1|1|500|Classificazione|Falso positivo|105|  
-|Target Mail DT|Bike Buyer|1|1|500|Classificazione|Vero negativo|186|  
-|Target Mail DT|Bike Buyer|1|1|500|Classificazione|Falso negativo|65|  
+|Target Mail DT|Bike Buyer|1|1|500|classificazione|Vero positivo|144|  
+|Target Mail DT|Bike Buyer|1|1|500|classificazione|Falso positivo|105|  
+|Target Mail DT|Bike Buyer|1|1|500|classificazione|Vero negativo|186|  
+|Target Mail DT|Bike Buyer|1|1|500|classificazione|Falso negativo|65|  
 |Target Mail DT|Bike Buyer|1|1|500|Probabilità|Punteggio in forma logaritmica|-0.619042807138345|  
 |Target Mail DT|Bike Buyer|1|1|500|Probabilità|Accuratezza|0.0740963734002671|  
 |Target Mail DT|Bike Buyer|1|1|500|Probabilità|Radice errore quadratico medio|0.346946279977653|  
-|Target Mail DT|Bike Buyer|1|2|500|Classificazione|Vero positivo|162|  
-|Target Mail DT|Bike Buyer|1|2|500|Classificazione|Falso positivo|86|  
-|Target Mail DT|Bike Buyer|1|2|500|Classificazione|Vero negativo|165|  
-|Target Mail DT|Bike Buyer|1|2|500|Classificazione|Falso negativo|87|  
+|Target Mail DT|Bike Buyer|1|2|500|classificazione|Vero positivo|162|  
+|Target Mail DT|Bike Buyer|1|2|500|classificazione|Falso positivo|86|  
+|Target Mail DT|Bike Buyer|1|2|500|classificazione|Vero negativo|165|  
+|Target Mail DT|Bike Buyer|1|2|500|classificazione|Falso negativo|87|  
 |Target Mail DT|Bike Buyer|1|2|500|Probabilità|Punteggio in forma logaritmica|-0.654117781086519|  
 |Target Mail DT|Bike Buyer|1|2|500|Probabilità|Accuratezza|0.038997399132084|  
 |Target Mail DT|Bike Buyer|1|2|500|Probabilità|Radice errore quadratico medio|0.342721344892651|  
@@ -186,6 +186,6 @@ NULL
  [SystemGetCrossValidationResults](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterAccuracyResults &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

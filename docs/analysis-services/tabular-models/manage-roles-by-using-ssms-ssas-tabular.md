@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 22fd8242de50f73eee634d1bc6bc3fcf5e887f0b
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072618"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162806"
 ---
 # <a name="manage-roles-by-using-ssms"></a>Gestire ruoli tramite SSMS 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "53072618"
   
 4.  In **Impostare le autorizzazioni del ruolo per il database**selezionare una delle opzioni delle autorizzazioni seguenti:  
   
-    |Autorizzazione|Descrizione|  
+    |Autorizzazioni|Descrizione|  
     |----------------|-----------------|  
     |**Controllo completo (amministratore)**|I membri possono apportare modifiche allo schema del modello e visualizzare tutti i dati.|  
     |**Elaborazione database**|I membri possono effettuare le operazioni relative alle opzioni Elabora ed Elabora tutto, ma non possono modificare lo schema del modello, né visualizzare dati.|  

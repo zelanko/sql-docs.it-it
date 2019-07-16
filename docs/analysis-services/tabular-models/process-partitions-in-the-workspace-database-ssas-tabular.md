@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 71d2eea055276558765d7787e736e74400b2c7a9
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405911"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162664"
 ---
 # <a name="process-partitions-in-the-workspace-database"></a>Elaborare partizioni nel database dell'area di lavoro 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

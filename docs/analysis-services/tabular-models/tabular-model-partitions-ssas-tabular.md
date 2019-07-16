@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5e8fbbfe1aaf7c97a5739768413cdc04644be6a6
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072648"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162503"
 ---
 # <a name="tabular-model-partitions"></a>Partizioni di modelli tabulari 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -51,14 +51,14 @@ ms.locfileid: "53072648"
   
  Modalità di implementazione di una strategia di partizione per i modelli tabulari dell'organizzazione in gran parte dipenderanno le necessità di elaborazione dei dati di modello specifico e le risorse disponibili.  
   
-##  <a name="bkmk_permissions"></a> Permissions  
+##  <a name="bkmk_permissions"></a> Autorizzazioni  
  Per creare, gestire ed elaborare partizioni in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], è necessario disporre delle autorizzazioni appropriate di Analysis Services definite in un ruolo di sicurezza. In ogni ruolo di sicurezza è disponibile una delle autorizzazioni seguenti:  
   
-|Autorizzazione|Azioni|  
+|Autorizzazioni|Azioni|  
 |----------------|-------------|  
 |Amministratore|Lettura, elaborazione, creazione, copia, unione, eliminazione|  
 |Process|Lettura, elaborazione|  
-|Read Only|lettura|  
+|Read Only|Lettura|  
   
  Per altre informazioni sulla creazione di ruoli durante la creazione di modelli utilizzando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vedere [ruoli](../../analysis-services/tabular-models/roles-ssas-tabular.md). Per altre informazioni sulla gestione dei membri del ruolo dei ruoli di modello tabulare distribuito tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vedere [ruoli nei modelli tabulari](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   

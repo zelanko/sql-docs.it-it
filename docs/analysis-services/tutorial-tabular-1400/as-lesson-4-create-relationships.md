@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 16fcf8e5f85464dbba7666f0f4ebebba829405af
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 7f593dafc1a734cd5f3a0c9fde4f47987f0b92af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685615"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207392"
 ---
 # <a name="create-relationships"></a>Creare relazioni
 
@@ -58,7 +58,7 @@ Prima di procedere alla creazione del modello, è necessario verificare le relaz
   
 3.  Verificare le relazioni seguenti siano state create quando ognuna delle tabelle è stata importata dal database AdventureWorksDW:  
   
-    |Attiva|Tabella|Tabella di ricerca correlata|  
+    |Attivo|Tabella|Tabella di ricerca correlata|  
     |----------|---------|------------------------|  
     |Yes|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
     |Yes|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
@@ -101,7 +101,7 @@ In alcuni casi, potrebbe essere necessario creare relazioni aggiuntive tra tabel
     
      ![as-lesson4-newinactive](../tutorial-tabular-1400/media/as-lesson4-newinactive.png)
   
-## <a name="whats-next"></a>Quali sono le operazioni successive?
+## <a name="whats-next"></a>Argomenti successivi
 
 [Lezione 5: Creare colonne calcolate](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).
   

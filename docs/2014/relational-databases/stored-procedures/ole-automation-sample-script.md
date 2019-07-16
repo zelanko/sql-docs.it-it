@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4cfe904cc6a808efc6c8a7208b3825117b2909d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194071"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68197127"
 ---
 # <a name="ole-automation-sample-script"></a>Script di automazione OLE di esempio
   Questo argomento include un esempio di un batch di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che usa le stored procedure dell'automazione OLE per creare e utilizzare un oggetto SQL-DMO di SQLServer nell'istanza locale di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Parti del codice vengono utilizzate come esempi negli argomenti di riferimento per le stored procedure di sistema dell'automazione OLE.  

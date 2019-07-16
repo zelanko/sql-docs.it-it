@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 27748ee6f4c70ebbcb4d1d28738130ddea07232b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134401"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211664"
 ---
 # <a name="create-views"></a>Creare viste
   È possibile creare viste in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Una vista può essere utilizzata per gli scopi seguenti:  
@@ -51,7 +51,7 @@ ms.locfileid: "54134401"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Sono richieste l'autorizzazione CREATE VIEW per il database e l'autorizzazione ALTER per lo schema in cui viene creata la vista.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -62,7 +62,7 @@ ms.locfileid: "54134401"
   
 2.  Fare clic con il pulsante destro del mouse sulla cartella **Viste** e quindi selezionare **Nuova vista**.  
   
-3.  Nel **Aggiungi tabella** finestra di dialogo, selezionare uno o più elementi che si desidera includere nella nuova vista da una delle schede seguenti: Le tabelle, viste, funzioni e sinonimi.  
+3.  Nella finestra di dialogo **Aggiungi tabella** selezionare gli elementi che si vuole includere nella nuova vista da una delle schede seguenti: Tabelle, Viste, Funzioni e Sinonimi.  
   
 4.  Fare clic su **Aggiungi**, quindi su **Chiudi**.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "54134401"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012 ;   

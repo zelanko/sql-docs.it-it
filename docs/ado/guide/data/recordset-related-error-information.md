@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e103574-59ad-4790-b5f9-fa8d715e711e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ef5f6cc4a262cecc81a8dd72f2d3e3f6a7e2fded
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3f8e8d9802b5d0c73af73aff20d929c188b9292
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924377"
 ---
 # <a name="recordset-related-error-information"></a>Informazioni sugli errori correlati ai recordset
 Durante l'elaborazione batch, il **lo stato** proprietà delle **Recordset** oggetto fornisce informazioni relative ai singoli record nel **Recordset**. Prima di un aggiornamento batch viene eseguita, il **lo stato** proprietà delle **Recordset** riflette informazioni sui record a essere aggiunte, modificate ed eliminate. Dopo aver **UpdateBatch** è stato chiamato, il **stato** proprietà indica l'esito positivo o negativo dell'operazione. Durante lo spostamento tra i vari record nel **Recordset**, il valore della **stato** le modifiche alle proprietà per descrivere lo stato del record corrente.

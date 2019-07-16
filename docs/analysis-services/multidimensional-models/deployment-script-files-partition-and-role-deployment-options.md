@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8bd62cc5fef3ef13dede85c06b28b0501a83de2f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513913"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178450"
 ---
 # <a name="deployment-script-files---partition-and-role-deployment-options"></a>File di script di distribuzione - Opzioni di distribuzione dei ruoli e delle partizioni
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -50,11 +50,11 @@ ms.locfileid: "52513913"
   
 -   Eseguire Distribuzione guidata di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in modo interattivo e specificare nuove opzioni di distribuzione delle partizioni e dei ruoli nella pagina relativa alle **opzioni partizioni e ruoli della distribuzione** .  
   
-     oppure  
+     -oppure-  
   
 -   Eseguire Distribuzione guidata di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] attraverso il prompt dei comandi e impostarla in modo che venga eseguita in modalità file di risposte. Per altre informazioni sulla modalità file di risposte, vedere [Esecuzione della Distribuzione guidata Analysis Services](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md).  
   
-     oppure  
+     -oppure-  
   
 -   Aprire il \< *nome progetto*>. deploymentoptions in un editor di testo e manualmente modificare le opzioni. Le opzioni per PartitionDeployment sono DeployPartitions, RetainPartitions. Le opzioni per RoleDeployment sono DeployRolesAndMembers, DeployRolesRetainMembers, RetainRoles.
   

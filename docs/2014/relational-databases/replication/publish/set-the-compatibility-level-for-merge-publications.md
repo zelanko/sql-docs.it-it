@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7aecff691139b1041a928c42c3df2987c992cd91
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781963"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199315"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>Impostazione del livello di compatibilità per le pubblicazioni di tipo merge
   In questo argomento si illustra come impostare il livello di compatibilità per le pubblicazioni di tipo merge in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Il livello di compatibilità delle pubblicazioni viene utilizzato nella replica di tipo merge per determinare le funzionalità che possono essere utilizzate dalle pubblicazioni in un determinato database.  
@@ -33,7 +33,7 @@ ms.locfileid: "52781963"
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
- Impostare il livello di compatibilità nella pagina **Tipi di Sottoscrittore** della Creazione guidata nuova pubblicazione. Per ulteriori informazioni sull'accesso a questa procedura guidata, vedere [Create a Publication](create-a-publication.md). Dopo la creazione di uno snapshot della pubblicazione, il livello di compatibilità può essere incrementato, ma non ridotto. Incrementare il livello di compatibilità nella pagina **Generale** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](view-and-modify-publication-properties.md). Incrementando il livello di compatibilità della pubblicazione, qualsiasi sottoscrizione esistente in server che eseguono versioni che risultano precedenti a tale livello di compatibilità non saranno più in grado di eseguire la sincronizzazione.  
+ Impostare il livello di compatibilità nella pagina **Tipi di Sottoscrittore** della Creazione guidata nuova pubblicazione. Per ulteriori informazioni sull'accesso a questa procedura guidata, vedere [Create a Publication](create-a-publication.md). Dopo la creazione di uno snapshot della pubblicazione, il livello di compatibilità può essere incrementato, ma non ridotto. Incrementare il livello di compatibilità nella pagina **Generale** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](view-and-modify-publication-properties.md). Incrementando il livello di compatibilità della pubblicazione, qualsiasi sottoscrizione esistente in server che eseguono versioni che risultano precedenti a tale livello di compatibilità non saranno più in grado di eseguire la sincronizzazione.  
   
 > [!NOTE]  
 >  Poiché il livello di compatibilità influisce su altre proprietà della pubblicazione e sugli articoli per cui tali proprietà sono valide, non modificare il livello di compatibilità e le altre proprietà in un'unica operazione all'interno della finestra di dialogo. Dopo la modifica della proprietà, lo snapshot per la pubblicazione dovrà essere rigenerato.  
@@ -55,7 +55,7 @@ ms.locfileid: "52781963"
   
 #### <a name="to-change-the-publication-compatibility-level-of-a-merge-publication"></a>Per modificare il livello di compatibilità di una pubblicazione di tipo merge  
   
-1.  Eseguire [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), specificando **publication_compatibility_level** per **@property** e il livello di compatibilità della pubblicazione appropriato per **@value**.  
+1.  Eseguire [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), specificando **publication_compatibility_level** per **@property** e il livello di compatibilità della pubblicazione appropriato per **@value** .  
   
 #### <a name="to-determine-the-publication-compatibility-level-of-a-merge-publication"></a>Per determinare il livello di compatibilità di una pubblicazione di tipo merge  
   

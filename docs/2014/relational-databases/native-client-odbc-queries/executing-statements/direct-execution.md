@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e912ac2dd63fa63ce57647f0c4e95e6702a22ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072332"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207075"
 ---
 # <a name="direct-execution"></a>Esecuzione diretta
   L'esecuzione diretta rappresenta la modalità più semplice di esecuzione di un'istruzione. Un'applicazione viene compilata una stringa di caratteri contenente un' [!INCLUDE[tsql](../../../includes/tsql-md.md)] istruzione che viene inviata per l'esecuzione mediante il **SQLExecDirect** (funzione). Dopo avere raggiunto il server, l'istruzione viene compilata da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un piano di esecuzione, che viene quindi immediatamente eseguito.  

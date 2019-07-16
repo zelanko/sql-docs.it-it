@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2786295b344cfc2df6ae613e42a39f71aee4d3d8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b113fbd8111072790d1f0904b3e751c6629725b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038892"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945953"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>Operatori di XQuery per il tipo di dati xml
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "56038892"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-general-operators"></a>A. Utilizzo degli operatori generali  
+### <a name="a-using-general-operators"></a>R. Utilizzo degli operatori generali  
  La query seguente illustra l'utilizzo degli operatori generali validi per le sequenze e inoltre per le sequenze di confronto. La query recupera una sequenza di numeri di telefono per ogni cliente dal **AdditionalContactInfo** della colonna della **contatto** tabella. La sequenza viene quindi confrontata con la sequenza di due numeri di telefono ("111-111-1111", "222-2222").  
   
  La query Usa la **=** operatore di confronto. Ogni nodo nella sequenza sul lato destro del **=** operatore viene confrontato con ogni nodo nella sequenza di sinistra. Se i nodi corrispondono, il confronto nodo viene **TRUE**. Viene quindi convertito in un tipo di dati int e confrontato con 1, quindi la query restituisce l'ID del cliente.  
@@ -58,7 +57,7 @@ WHERE  AdditionalContactInfo.value('
   
  È presente un altro modo per osservare come funziona la query precedente: Ogni valore di numero telefonico telefono recuperati dal **AdditionalContactInfo** colonna viene confrontata con il set di due numeri di telefono. Se il numero è presente nel set, nel risultato viene restituito il cliente.  
   
-### <a name="b-using-a-numeric-operator"></a>b. Utilizzo di un operatore numerico  
+### <a name="b-using-a-numeric-operator"></a>B. Utilizzo di un operatore numerico  
  L'operatore + nella query è un operatore per i valori, perché viene applicato a un singolo elemento. Ad esempio, il valore 1 viene aggiunto alle dimensioni di un lotto restituite dalla query:  
   
 ```sql
@@ -79,7 +78,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-using-a-value-operator"></a>C. Utilizzo di un operatore per valori  
- La query seguente recupera gli elementi <`Picture`> per un modello di prodotto per cui le dimensioni dell'immagine sono "small":  
+ La query seguente recupera il <`Picture`> elementi di un modello di prodotto in cui la dimensione dell'immagine è "small":  
   
 ```sql
 SELECT CatalogDescription.query('  

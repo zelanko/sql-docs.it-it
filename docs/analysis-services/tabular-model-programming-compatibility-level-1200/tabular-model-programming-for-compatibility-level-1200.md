@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7493c09964db2e0a8cbd17c6a2278dd554a2dcc
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579451"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207893"
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>Livello di compatibilità di programmazione dei modelli tabulari 1200 e superiori
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -39,7 +39,7 @@ L'aggiornamento di una soluzione tabulare esistente è consigliata ma non richie
 ## <a name="query-languages"></a>Linguaggi di query  
  DAX e MDX sono supportati per tutti i modelli tabulari.  
   
-## <a name="expression-language"></a>Expression Language  
+## <a name="expression-language"></a>Linguaggio delle espressioni  
  I filtri e le espressioni usate per creare oggetti calcolati, tra cui le misure e indicatori KPI, vengono formulate in DAX. Visualizzare [capire DAX nei modelli tabulari](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md) e [Data Analysis Expressions &#40;DAX&#41; in Analysis Services](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5).  
   
 ## <a name="managed-code-for-tabular-models-and-databases"></a>Codice gestito per i modelli tabulari e i database  

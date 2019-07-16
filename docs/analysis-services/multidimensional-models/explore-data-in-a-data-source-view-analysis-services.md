@@ -1,5 +1,5 @@
 ---
-title: Esplorare i dati in una vista origine dati (Analysis Services) | Documenti Microsoft
+title: Esplorare i dati in una vista origine dati (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a7cb3d9895c7524bf0517270b50ac7830774dd9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026838"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68177797"
 ---
 # <a name="explore-data-in-a-data-source-view-analysis-services"></a>Esplorare dati in una vista origine dati (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,17 +34,17 @@ ms.locfileid: "34026838"
   
 3.  Fare clic con il pulsante destro del mouse sulla tabella, sulla vista o sulla query denominata contenente i dati che si desidera visualizzare, quindi scegliere **Esplora dati**.  
   
-     L'origine dati sottostante la tabella, vista o query denominata nella vista origine dati sono le query e i risultati vengono visualizzati nel **Esplora \<nome oggetto > tabella** scheda.  
+     L'origine dati sottostante la tabella, vista o query denominata nella vista origine dati sono le query e i risultati vengono visualizzati nei **Explore \<nome oggetto > tabella** scheda.  
   
-4.  Nel **Esplora \<nome oggetto > tabella** sulla barra degli strumenti, fare clic su di **opzioni di campionamento** icona.  
+4.  Nel **Explore \<nome dell'oggetto > tabella** sulla barra degli strumenti, fare clic sul **opzioni di campionamento** icona.  
   
      Verrà visualizzata la finestra di dialogo **Opzioni di esplorazione dati** . In tale finestra di dialogo è possibile specificare il metodo di campionamento (un numero di record inferiore o superiore alla dimensione di campionamento predefinita pari a 5000 righe) o il conteggio campione.  
   
 5.  Fare clic su **OK** o **Annulla** , a seconda dei casi.  
   
-6.  Per ricampionare i dati, fare clic su **Ricampiona dati** sul **Esplora \<nome oggetto > tabella** sulla barra degli strumenti.  
+6.  Per ricampionare i dati, fare clic su **Ricampiona dati** nel **Explore \<nome oggetto > tabella** sulla barra degli strumenti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste origine dati nei modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+ [Viste origine dati in modelli multidimensionali](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

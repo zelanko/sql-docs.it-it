@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 930a848ea01d128cb248c7929408ce7510937ad9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a42c8767228c75d3b7b0da308d739516875cf966
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188894"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947552"
 ---
 # <a name="interval-data-types"></a>Tipi di dati intervallo
 Un intervallo viene definito come la differenza tra due date e ore. Gli intervalli sono espressi in uno dei due modi diversi. Uno è un *mese anno* intervallo che esprime intervalli in termini di un numero integrale di mesi e anni. L'altro è un *diurno* intervallo che esprime intervalli in termini di giorni, minuti e secondi. Questi due tipi di intervalli sono diversi e non possono essere combinati, poiché mesi possono avere un numero variabile di giorni.  

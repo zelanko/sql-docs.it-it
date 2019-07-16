@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 905a0a4189a97b6cd8ef3cc461f805adf0afd727
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131501"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210706"
 ---
 # <a name="parameterized-row-filters"></a>Filtri di riga con parametri
   I filtri di riga con parametri consentono l'invio di partizioni di dati diverse a Sottoscrittori diversi senza che sia necessario creare più pubblicazioni. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], i filtri con parametri vengono definiti filtri dinamici. Una partizione è un subset delle righe di una tabella. In base alle impostazioni scelte durante la creazione di un filtro di riga con parametri, ogni riga di una tabella pubblicata può appartenere a un'unica partizione, con la conseguente produzione di partizioni non sovrapposte, o a due o più partizioni, con la conseguente produzione di partizioni sovrapposte.  
@@ -37,7 +37,7 @@ ms.locfileid: "54131501"
  Per definire o modificare un filtro di riga con parametri, vedere [Definizione e modifica di un filtro di riga con parametri per un articolo di merge](../publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 ## <a name="how-parameterized-filters-work"></a>Modalità di funzionamento dei filtri con parametri  
- Un filtro di riga con parametri utilizza una clausola WHERE per selezionare i dati appropriati da pubblicare. Anziché specificare un valore letterale nella clausola, come avviene con il filtro di riga statico, specificare una o entrambe le funzioni di sistema seguenti: SUSER_SNAME () e HOST_NAME (). È anche possibile utilizzare funzioni definite dall'utente, ma è necessario che le funzioni di sistema SUSER_SNAME() o HOST_NAME() siano incluse nel corpo della funzione oppure vengano valutate, ad esempio `MyUDF(SUSER_SNAME()`. Se una funzione definita dall'utente include SUSER_SNAME() o HOST_NAME() nel corpo della funzione, non è possibile passare parametri alla funzione.  
+ Un filtro di riga con parametri utilizza una clausola WHERE per selezionare i dati appropriati da pubblicare. Anziché specificare un valore letterale nella clausola, come avviene con il filtro di riga statico, specificare una o entrambe le funzioni di sistema seguenti: SUSER_SNAME() e HOST_NAME(). È anche possibile utilizzare funzioni definite dall'utente, ma è necessario che le funzioni di sistema SUSER_SNAME() o HOST_NAME() siano incluse nel corpo della funzione oppure vengano valutate, ad esempio `MyUDF(SUSER_SNAME()`. Se una funzione definita dall'utente include SUSER_SNAME() o HOST_NAME() nel corpo della funzione, non è possibile passare parametri alla funzione.  
   
  Le funzioni di sistema SUSER_SNAME() e HOST_NAME() non sono specifiche della replica di tipo merge, ma vengono utilizzate da questo tipo di replica per il filtro con parametri:  
   

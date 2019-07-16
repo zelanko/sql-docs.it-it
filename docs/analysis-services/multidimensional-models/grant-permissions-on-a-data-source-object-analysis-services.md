@@ -1,5 +1,5 @@
 ---
-title: Concedere le autorizzazioni per un oggetto di origine dati (Analysis Services) | Documenti Microsoft
+title: Concedere le autorizzazioni per un oggetto origine dati (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9d550b376a644592a228708decb59ca436756ddc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024188"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208852"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>Concedere le autorizzazioni per un oggetto origine dati (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  In genere la maggior parte degli utenti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non necessita dell'accesso alle origini dati sottostanti di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Gli utenti in genere eseguono query solo sui dati inclusi in un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . In un contesto di data mining, tuttavia, ad esempio per l'esecuzione di stime basate su un modello di data mining, un utente deve unire in join i dati risultanti di un modello di data mining e i dati specificati dall'utente. Per connettersi all'origine dati contenente i dati specificati dall'utente, l'utente usa una query DMX (Data Mining Extensions) che include le clausole [OPENQUERY &#40;DMX&#41;](../../dmx/source-data-query-openquery.md) e [OPENROWSET &#40;DMX&#41;](../../dmx/source-data-query-openrowset.md).  
+  In genere la maggior parte degli utenti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non necessita dell'accesso alle origini dati sottostanti di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Gli utenti in genere eseguono query solo sui dati inclusi in un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . In un contesto di data mining, tuttavia, ad esempio per l'esecuzione di stime basate su un modello di data mining, un utente deve unire in join i dati risultanti di un modello di data mining e i dati specificati dall'utente. Per connettersi all'origine dati contenente i dati specificati dall'utente, l'utente usa una query DMX (Data Mining Extensions) che include le clausole [OPENQUERY &#40;DMX&#41;](../../dmx/source-data-query-openquery.md) e [OPENROWSET &#40;DMX&#41;](../../dmx/source-data-query-openrowset.md).  
   
  Per eseguire una query DMX per la connessione a un'origine dei dati, l'utente deve poter accedere all'oggetto origine dei dati nel database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per impostazione predefinita, solo gli amministratori del server o del database possono accedere agli oggetti origine dati. Ciò significa che un utente non può accedere a un oggetto origine dati a meno che un amministratore non conceda le autorizzazioni.  
   
@@ -47,10 +47,10 @@ ms.locfileid: "34024188"
   
 ## <a name="see-also"></a>Vedere anche  
  [Origini dati nei modelli multidimensionali](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
- [Proprietà della stringa di connessione & #40; Analysis Services & #41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)   
+ [Proprietà delle stringhe di connessione &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)   
  [Metodologie di autenticazione supportate da Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Concedere l'accesso personalizzato alla dimensione dei dati & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [Concedere al cubo o modello autorizzazioni & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [Concedere l'accesso personalizzato a una cella di dati & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
+ [Concedere l'accesso personalizzato ai dati della dimensione &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Concedere le autorizzazioni per un cubo o un modello &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
+ [Concedere l'accesso personalizzato ai dati delle celle &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   

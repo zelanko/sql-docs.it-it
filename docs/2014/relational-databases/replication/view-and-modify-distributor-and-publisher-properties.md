@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4049cfa36020431e9cae8cbe2431c1c270d5deb
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131141"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212021"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Visualizzazione e modifica delle proprietà del server di pubblicazione e del database di distribuzione
   In questo argomento viene descritto come visualizzare e modificare le proprietà del database di distribuzione e del server di pubblicazione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o RMO (Replication Management Objects).  
@@ -58,11 +58,11 @@ ms.locfileid: "54131141"
   
 2.  Fare clic con il pulsante destro del mouse sulla cartella **Replica** e quindi scegliere **Proprietà server di distribuzione**.  
   
-3.  Visualizzare e modificare le proprietà nella finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>**.  
+3.  Visualizzare e modificare le proprietà nella finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>** .  
   
-    -   Per visualizzare e modificare le proprietà di un database di distribuzione, fare clic sul pulsante delle proprietà (**...**) relativo al database nella pagina **Generale** della finestra di dialogo.  
+    -   Per visualizzare e modificare le proprietà di un database di distribuzione, fare clic sul pulsante delle proprietà ( **...** ) relativo al database nella pagina **Generale** della finestra di dialogo.  
   
-    -   Per visualizzare e modificare le proprietà del server di pubblicazione associato al database di distribuzione, fare clic sul pulsante delle proprietà (**...**) relativo al server di pubblicazione nella pagina **Server di pubblicazione** della finestra di dialogo.  
+    -   Per visualizzare e modificare le proprietà del server di pubblicazione associato al database di distribuzione, fare clic sul pulsante delle proprietà ( **...** ) relativo al server di pubblicazione nella pagina **Server di pubblicazione** della finestra di dialogo.  
   
     -   Per accedere ai profili degli agenti di replica, fare clic sul pulsante **Impostazioni predefinite profili** nella pagina **Generale** della finestra di dialogo. Per altre informazioni, vedere [Replication Agent Profiles](agents/replication-agent-profiles.md).  
   
@@ -128,7 +128,7 @@ ms.locfileid: "54131141"
   
 1.  Creare una connessione al server di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> indicato nel passaggio 1.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> indicato nel passaggio 1.  
   
 3.  (Facoltativo) Controllare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationServer.IsDistributor%2A> per verificare che il server attualmente connesso sia un server di distribuzione.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "54131141"
   
 1.  Creare una connessione al server di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.DistributionDatabase> . Specificare la proprietà relativa al nome e passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> indicato nel passaggio 1.  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.DistributionDatabase>. Specificare la proprietà relativa al nome e passare l'oggetto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> indicato nel passaggio 1.  
   
 3.  Chiamare il metodo <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> per ottenere le proprietà dal server. Se il metodo restituisce `false`, il database con il nome specificato non esiste nel server.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "54131141"
   
 1.  Creare una connessione al server di distribuzione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> .  
+2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>.  
   
 3.  Impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sulla connessione creata nel passaggio 1.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "54131141"
   
     1.  Creare una connessione al server di pubblicazione tramite la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-    2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> .  
+    2.  Creare un'istanza della classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>.  
   
     3.  Impostare la proprietà <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sulla connessione creata nel passaggio 6a.  
   
@@ -204,6 +204,6 @@ ms.locfileid: "54131141"
  [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [Script di informazioni su database di distribuzione e server di pubblicazione](administration/distributor-and-publisher-information-script.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
- [Visualizzare informazioni ed eseguire attività con Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md)  
+ [Visualizzare le informazioni ed eseguire attività usando Monitoraggio replica](monitor/view-information-and-perform-tasks-replication-monitor.md)  
   
   

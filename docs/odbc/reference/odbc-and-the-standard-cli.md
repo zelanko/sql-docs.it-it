@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: adddf32a29d3a891a4a2c6fb2353648e62b0d9c5
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 5222282bce2acf49cc6a144667ddd691528b3693
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794098"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944840"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC e l'interfaccia della riga di comando standard
 Consente di allineare ODBC con le seguenti specifiche degli standard in grado di gestire con l'interfaccia a livello di chiamata (CLI). (Le funzioni ODBC sono un superset della ognuno di questi standard).  
   
 -   La specifica di CAE Open Group "gestione dei dati: SQL a livello di chiamata Interface (CLI)"  
   
--   ISO/IEC 9075-3:1995 (E) Call-Level Interface (SQL/CLI)  
+-   ISO/IEC 9075-3:1995 (E) a livello di chiamata interfaccia (SQL/CLI)  
   
  In seguito a questa allineamento, si verifica quanto segue:  
   

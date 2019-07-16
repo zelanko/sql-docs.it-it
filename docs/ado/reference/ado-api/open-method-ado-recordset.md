@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9aee9b4f6054b5cbfca41db35f34a27000a7ac01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16142f200e6fd6e7c141b4f1fe6d45fe8917bc28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931908"
 ---
 # <a name="open-method-ado-recordset"></a>Metodo Open (Recordset - ADO)
 Apre un cursore in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
@@ -36,7 +35,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
 #### <a name="parameters"></a>Parametri  
  *Origine*  
- Facoltativo. Oggetto **Variant** che restituisce un valore valido [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto, un'istruzione SQL, un nome di tabella, una chiamata alla stored procedure, un URL o il nome di un file oppure [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oggetto contenente un archiviati in modo permanente [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+ facoltativo. Oggetto **Variant** che restituisce un valore valido [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto, un'istruzione SQL, un nome di tabella, una chiamata alla stored procedure, un URL o il nome di un file oppure [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oggetto contenente un archiviati in modo permanente [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
  *ActiveConnection*  
  Facoltativo. Entrambi una **Variant** che restituisce un valore valido [connessione](../../../ado/reference/ado-api/connection-object-ado.md) nome della variabile oggetto, o un **stringa** contenente [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) parametri.  
@@ -45,7 +44,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
  Facoltativo. Oggetto [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) valore che determina il tipo di cursore che il provider deve utilizzare quando si apre il **Recordset**. Il valore predefinito è **adOpenForwardOnly**.  
   
  *LockType*  
- Facoltativo. Oggetto [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) valore che determina il tipo di blocco (concorrenza) il provider deve utilizzare quando si apre il **Recordset**. Il valore predefinito è **adLockReadOnly**.  
+ facoltativo. Oggetto [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) valore che determina il tipo di blocco (concorrenza) il provider deve utilizzare quando si apre il **Recordset**. Il valore predefinito è **adLockReadOnly**.  
   
  *Opzioni*  
  Facoltativo. Oggetto **lungo** valore che indica come il provider deve valutare il *origine* argomento se rappresenta un elemento diverso da un **comando** oggetto o che il **Recordset** deve essere ripristinato da un file in cui è stato precedentemente salvato. Può essere uno o più [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) oppure [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valori, che possono essere combinati con un operatore OR bit per bit.  

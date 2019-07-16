@@ -1,5 +1,5 @@
 ---
-title: Operatori di Rollup personalizzati nelle dimensioni padre-figlio | Documenti Microsoft
+title: Operatori di Rollup personalizzati nelle dimensioni padre-figlio | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 000d6355aee1fc38aa4fdcb97cf02df2a4ef09da
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020958"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165423"
 ---
-# <a name="parent-child-dimension-attributes---custom-rollup-operators"></a>Attributi della dimensione padre-figlio - operatori personalizzati di Rollup
+# <a name="parent-child-dimension-attributes---custom-rollup-operators"></a>Attributi della dimensione padre-figlio - Operatori del rollup personalizzato
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Gli operatori personalizzati di rollup rappresentano un modo semplice per determinare la modalità di esecuzione del rollup dei valori padre di una gerarchia padre-figlio. In una dimensione che contiene una relazione padre-figlio, specificare una colonna che contiene operatori unari che determinano il rollup di tutti i membri non calcolati dell'attributo padre. L'operatore unario viene applicato ai membri ogni volta che i valori dei membri padre vengono valutati.  
   

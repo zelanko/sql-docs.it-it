@@ -1,5 +1,5 @@
 ---
-title: Creare query drill-through tramite DMX | Documenti Microsoft
+title: Creare query drill-through tramite DMX | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6616f90f475da91f3f5c38c0f5922d16d72a5408
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014498"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210144"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>Creare query drill-through tramite DMX
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ WHERE [Model Region] = 'M200 Pacific'
  In questo esempio viene utilizzato un alias per rinominare la colonna della struttura. Se non si assegna un alias alla colonna della struttura, la colonna viene restituita con il nome 'Expression'. Si tratta del comportamento predefinito per tutte le colonne senza nome.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining query drill-through & #40; & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
- [Drill-through sulle strutture di Data Mining](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
+ [Query drill-through &#40;Data mining&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
+ [Drill-through sulle strutture di data mining](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
   
   

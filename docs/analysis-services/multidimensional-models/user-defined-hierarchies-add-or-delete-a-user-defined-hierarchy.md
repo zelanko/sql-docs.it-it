@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 89f92c07753462fc26cb6de7447395f02e571e7a
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578713"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164902"
 ---
 # <a name="user-defined-hierarchies---add-or-delete-a-user-defined-hierarchy"></a>Gerarchie definite dall'utente - Aggiungere o eliminare una gerarchia definita dall'utente
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,11 +47,11 @@ ms.locfileid: "57578713"
   
 -   Nella scheda **Struttura dimensione** fare clic sulla gerarchia definita dall'utente che si vuole rimuovere nel riquadro **Gerarchie** . Fare clic su **Elimina**sulla barra degli strumenti.  
   
-     - - oppure -  
+     - oppure -  
   
 -   Fare clic con il pulsante destro del mouse sulla gerarchia definita dall'utente che si vuole rimuovere nel riquadro **Gerarchie** e quindi scegliere **Elimina**.  
   
-     - - oppure -  
+     - oppure -  
   
 -   Trascinare la gerarchia definita dall'utente al di fuori dell'area di progettazione.  
   

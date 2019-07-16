@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 62a652321bf98cbddb2f07cf65baa5317b45447c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9441e956c51accf2af55624b311f28a18d39ed20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718525"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920810"
 ---
 # <a name="ado---wfc-syntax-index"></a>Indice sintassi ADO/WFC
 Riferimenti al linguaggio ADO utilizza il linguaggio di programmazione Microsoft Visual Basic per illustrare la sintassi di metodi e le proprietà di ADO. Questo indice è un riferimento incrociato per gli argomenti di riferimento al linguaggio di ADO, basato su ADO per Windows Foundation Classes (ADO/WFC). Quando si verificano differenze nella sintassi, usare le firme di funzione in questo indice, anziché gli elenchi di sintassi nella Guida di riferimento del linguaggio.  

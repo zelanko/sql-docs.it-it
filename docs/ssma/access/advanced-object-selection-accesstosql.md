@@ -9,15 +9,14 @@ ms.topic: conceptual
 ms.assetid: 4d2b367f-8ac7-4534-b66f-10300ef64ebc
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: a44e3882121347235141aacf879beea8127e3133
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d65cac7c857e8b6357dc31ca130dcdbdaa43b58f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910706"
 ---
-# <a name="advanced-object-selection--accesstosql"></a>Advanced Object Selection  (AccessToSQL)
+# <a name="advanced-object-selection--accesstosql"></a>Selezione avanzata di oggetti (AccessToSQL)
 Il **Advanced sezione oggetto** nella finestra di dialogo consente di filtrare gli oggetti di database usando le stringhe e le sottostringhe nel nome dell'oggetto e quindi selezionare o deselezionare gli oggetti. SSMA esegue operazioni di conversione e la migrazione per oggetti selezionati.  
   
 Per accedere a questa finestra di dialogo, fare doppio clic in una finestra di esplorazione di metadati e quindi selezionare **Selezione oggetto avanzata**.  

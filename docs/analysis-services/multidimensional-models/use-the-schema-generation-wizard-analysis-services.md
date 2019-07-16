@@ -1,5 +1,5 @@
 ---
-title: Utilizzare la generazione guidata Schema (Analysis Services) | Documenti Microsoft
+title: Utilizzare la generazione guidata Schema (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a9f60b324a706d28145fb9e843957b20da5ed90a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022808"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208417"
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>Utilizzare la Generazione guidata schema (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34022808"
   
 -   Avviare la procedura guidata da Creazione guidata dimensione facendo clic sulla casella di controllo **Genera schema adesso** nell'ultima pagina della procedura.  
   
-## <a name="step-1-specify-targets"></a>Passaggio 1: Impostazione delle destinazioni  
+## <a name="step-1-specify-targets"></a>Passaggio 1: Specificare le destinazioni  
  È necessario specificare la vista origine dati in cui si desidera venga generato lo schema del database dell'area di interesse mediante la Generazione guidata schema. Anche se è possibile selezionare una vista origine dati esistente, viene in genere creata una nuova in base a un'origine dati. È possibile creare l'origine dati in base a una connessione esistente o nuova oppure in base a un altro oggetto. Lo schema del database dell'area di interesse viene generato dalla Generazione guidata schema sia nel database a cui fa riferimento l'origine dei dati sia nella vista origine dati. La Generazione guidata schema non crea il database dell'area di interesse, bensì lo schema relazionale in grado di supportare i cubi e le dimensioni contenuti in un database esistente specificato.  
   
  Quando Generazione guidata schema genera gli oggetti sottostanti, le dimensioni e i cubi di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono associati alle tabelle e alle colonne generate usando associazioni di tipo vista origine dati.  
@@ -37,7 +37,7 @@ ms.locfileid: "34022808"
 > [!NOTE]  
 >  Per disassociare dimensioni e cubi di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] da oggetti generati in precedenza, eliminare la vista origine dati a cui sono associati i cubi e le dimensioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e quindi definire una nuova vista origine dati per i cubi e le dimensioni mediante la Generazione guidata schema.  
   
-## <a name="step-3-specify-schema-options-for-the-subject-area-database"></a>Passaggio 3: Impostazione delle opzioni dello schema per il database dell'area di interesse  
+## <a name="step-3-specify-schema-options-for-the-subject-area-database"></a>Passaggio 3: Specificare le opzioni dello Schema per il Database dell'Area di interesse  
  In Generazione guidata schema sono disponibili varie opzioni per la definizione dello schema da generare per il database dell'area di interesse. È possibile impostare queste opzioni nella pagina **Opzioni schema database area di interesse** della procedura guidata.  
   
 ### <a name="specifying-the-schema-owner"></a>Impostazione del proprietario dello schema  
@@ -53,7 +53,7 @@ ms.locfileid: "34022808"
 ### <a name="preserving-data-for-incremental-generation"></a>Mantenimento dei dati per la generazione incrementale  
  Per impostazione predefinita, Generazione guidata schema tenta di mantenere i dati durante la rigenerazione dello schema del database. Nel caso in cui durante l'esecuzione di Generazione guidata schema sia necessario eliminare una riga in seguito a una modifica dello schema, verrà visualizzato un avviso prima dell'eliminazione effettiva delle righe. Ad esempio, può rivelarsi necessario eliminare determinate righe per risolvere problemi di integrità referenziale in seguito all'eliminazione di una dimensione oppure in seguito alla modifica del tipo di dati dovuta alla modifica di un attributo della dimensione. Per mantenere i dati durante la rigenerazione dello schema del database, selezionare **Mantieni dati in caso di rigenerazione**.  
   
-## <a name="step-4-specify-naming-conventions"></a>Passaggio 4: Impostazione delle convenzioni di denominazione  
+## <a name="step-4-specify-naming-conventions"></a>Passaggio 4: Impostazione convenzioni di denominazione  
  È possibile definire convenzioni di denominazione da usare in Generazione guidata schema per la generazione di determinati oggetti nel database dell'area di interesse tramite la pagina **Impostazione convenzioni di denominazione** della procedura guidata. Per altre informazioni sulle opzioni disponibili nella pagina **Impostazione convenzioni di denominazione** , vedere [Impostazione convenzioni di denominazione &#40;Generazione guidata schema&#41; &#40;Analysis Services - Dati multidimensionali&#41;](http://msdn.microsoft.com/library/02d830ea-5b1f-4485-9f94-d64b8bea592b).  
   
   

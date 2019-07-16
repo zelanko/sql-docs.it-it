@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c6abbbc-012b-41aa-bded-5e7e362d015b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 77187802bb57a832263ec2070564754e87f21345
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72672cfc20b5d363229fd1ba49278d11e6d6793d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632924"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912408"
 ---
 # <a name="thread-support-visual-foxpro-odbc-driver"></a>Supporto dei thread (driver ODBC Visual FoxPro)
 Il Driver ODBC Visual FoxPro è thread-safe. Accesso agli handle di ambiente (*uando*), gli handle di connessione (*hdbc*) e gli handle di istruzione (*hstmt*) viene eseguito il wrapping in semafori appropriati per impedire ad altri processi accedere e potenzialmente modificare le strutture dati interne del driver.  

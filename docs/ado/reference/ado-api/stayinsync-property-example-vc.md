@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4a198b1e74e0f6fad93525cbebd5c2c66faee161
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b5df87b29a0fc73a83d8b6dde568a7c173876cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930759"
 ---
 # <a name="stayinsync-property-example-vc"></a>Esempio della proprietà StayInSync (VC++)
 Questo esempio viene illustrato come la [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) proprietà semplifica l'accesso alle righe in un modello gerarchico [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -145,6 +144,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Raccolta Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Proprietà StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)

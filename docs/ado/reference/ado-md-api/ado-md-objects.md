@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c06214d23441782cbe5e14433b16928224d5d48c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d568ca20cca6c12a04c0f3d54a2c134d59a0d7fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930578"
 ---
 # <a name="ado-md-objects"></a>Oggetti ADO MD
 
@@ -27,8 +26,8 @@ ms.locfileid: "66709845"
 |-|-|  
 |[Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|Rappresenta un posizionali o asse di filtro di un set di celle, che contiene i membri selezionati di una o più dimensioni.|  
 |[Catalogo](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|Contiene informazioni sullo schema multidimensionale (vale a dire, i cubi e sottostante dimensioni, gerarchie, livelli e membri) specifiche di un provider di dati multidimensionali (dati Multidimensionali).|  
-|[Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Rappresenta i dati in corrispondenza dell'intersezione di coordinate assiali, contenuti in un set di celle.|  
-|[Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|Rappresenta i risultati di una query multidimensionale. È una raccolta di celle selezionate da cubi o altri set di celle.|  
+|[cella](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Rappresenta i dati in corrispondenza dell'intersezione di coordinate assiali, contenuti in un set di celle.|  
+|[Set di celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|Rappresenta i risultati di una query multidimensionale. È una raccolta di celle selezionate da cubi o altri set di celle.|  
 |[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Rappresenta un cubo da uno schema multidimensionale, contenente un set di dimensioni correlate.|  
 |[Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Rappresenta una delle dimensioni di un cubo multidimensionale, contenente una o più gerarchie dei membri.|  
 |[Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Rappresenta uno dei modi in cui i membri di una dimensione possono essere aggregati o "raggruppati". Una dimensione può essere aggregata una o più gerarchie.|  

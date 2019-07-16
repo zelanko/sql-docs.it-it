@@ -1,5 +1,5 @@
 ---
-title: Progettazione di aggregazioni (Analysis Services - multidimensionale) | Documenti Microsoft
+title: Progettazione di aggregazioni (Analysis Services - multidimensionale) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c720b45a0ac674282ad78bafd5dcd67bba8b60cc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021063"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178287"
 ---
 # <a name="designing-aggregations-analysis-services---multidimensional"></a>Progettazione di aggregazioni (Analysis Services - Multidimensionale)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,6 +39,6 @@ ms.locfileid: "34021063"
  Il passaggio finale della procedura guidata consente di scegliere se eseguire immediatamente l'elaborazione o posticiparla. In caso di elaborazione immediata, vengono create le aggregazioni progettate con la procedura guidata. Se invece si posticipa il processo, le aggregazioni progettate vengono salvate per la futura elaborazione, consentendo tuttavia di proseguire le attività di configurazione. A seconda delle dimensioni della partizione, l'elaborazione potrebbe richiedere tempi lunghi. Se necessario, è possibile scegliere di interrompere l'elaborazione di una partizione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le aggregazioni e progettazione di aggregazioni](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
+ [Aggregazioni e progettazione di aggregazioni](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

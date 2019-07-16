@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 98fff978408aa53e030efeceb67af6cc0977597a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145076"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210152"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Creare una query sul contenuto di un modello di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "50145076"
   
      Il modello **Query contenuto** si apre nell'editor del codice adatto. Nel riquadro dei metadati sono elencati i modelli disponibili nel database corrente. Per modificare il database, selezionare un altro database nell'elenco **Database disponibili** .  
   
-5.  Immettere il nome di un modello di data mining nella riga `FROM` [*\<modello di data mining, name, MyModel >*]`.CONTENT`. Se nel nome del modello di data mining sono inclusi spazi, tale nome deve essere racchiuso tra parentesi.  
+5.  Immettere il nome di un modello di data mining nella riga `FROM` [ *\<modello di data mining, name, MyModel >* ]`.CONTENT`. Se nel nome del modello di data mining sono inclusi spazi, tale nome deve essere racchiuso tra parentesi.  
   
      Se non si vuole digitare il nome, è possibile selezionare un modello di data mining in **Esplora oggetti** e trascinarlo nel modello.  
   
-6.  Nella riga `SELECT` *\<elenco di selezione dall'elenco expr \* >*, digitare i nomi delle colonne nel set di righe dello schema del contenuto del modello data mining.  
+6.  Nella riga `SELECT` *\<elenco di selezione dall'elenco expr \* >* , digitare i nomi delle colonne nel set di righe dello schema del contenuto del modello data mining.  
   
      Per visualizzare un elenco di colonne che è possibile restituire nelle query del contenuto del modello di data mining, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "50145076"
      Nel riquadro Risultati verrà visualizzato il contenuto del modello.  
   
     > [!NOTE]  
-    >  Per visualizzare un elenco di tutti i set di righe dello schema su cui è possibile eseguire una query nell'istanza corrente, utilizzare la query `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. In alternativa, per un elenco di set di righe dello schema specifici del data mining, vedere [Set di righe dello schema di data mining](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets).  
+    >  Per visualizzare un elenco di tutte le righe dello schema che è possibile eseguire una query sull'istanza corrente, usare questa query: `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. In alternativa, per un elenco di set di righe dello schema specifici del data mining, vedere [Set di righe dello schema di data mining](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   

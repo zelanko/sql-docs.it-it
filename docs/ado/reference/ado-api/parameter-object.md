@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 152186c0bb1c2fb75197a920e06e0b6bb96dadd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15df27e3dc48decf743a78dd4d147a22dc7cf276
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931667"
 ---
 # <a name="parameter-object"></a>Oggetto Parameter
 Rappresenta un parametro o un argomento associato a un [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto basato su una query con parametri o stored procedure.  
@@ -54,5 +53,5 @@ Rappresenta un parametro o un argomento associato a un [comando](../../../ado/re
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Metodo CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [Raccolta di parametri (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Raccolta delle proprietà (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
