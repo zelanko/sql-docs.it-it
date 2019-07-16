@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 29f468f2-f557-4a92-b31d-569c63cc6272
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f4eabc3e0c354e02ad8df790d896dc43ae49c9bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56ee50071f622c114bd6d8d04444e78c0fb69d67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915559"
 ---
 # <a name="literal-prefixes-and-suffixes"></a>Prefissi e suffissi per valori letterali
 In un'istruzione SQL, un *letterale* è una rappresentazione di caratteri di un valore effettivo dei dati. Nell'istruzione seguente, ad esempio, ABC, FFFF e 10 sono valori letterali:  

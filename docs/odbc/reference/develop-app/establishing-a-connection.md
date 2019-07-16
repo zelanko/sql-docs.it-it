@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8e3c717e-35e3-47ef-b5d3-3a96eeb7b869
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 70f459f60616e7edd77078a7e9653ab9dff097e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fd8d7a68e993aa6b35897ca14a7a87c08fc8763
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248351"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901367"
 ---
 # <a name="establishing-a-connection"></a>Istituzione di una connessione
 Dopo l'allocazione di handle di ambiente e di connessione e impostando gli attributi di connessione, l'applicazione è pronta per la connessione all'origine dati o driver. Esistono tre funzioni differenti che l'applicazione può usare per eseguire questa operazione: **SQLConnect** (livello di conformità di interfaccia di base), **SQLDriverConnect** (Core), e **SQLBrowseConnect** (livello 1). Ognuno dei tre è progettato per essere usato in uno scenario diverso. Prima della connessione, l'applicazione può determinare quali di queste funzioni è supportata con il **ConnectFunctions** restituito dalla parola chiave **SQLDrivers**.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 925eefdbe8f5ff9196689026edb685c8f76d7d0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c56ba0b9d7ebebbf4a9e4baf669bbdc6eb84355e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718171"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920803"
 ---
 # <a name="adorecordconstruction-interface"></a>Interfaccia ADORecordConstruction
 Il **ADORecordConstruction**interfaccia viene utilizzata per costruire un oggetto ADO **Record** oggetto da OLE DB **riga** oggetto in un'applicazione C/C++.  
@@ -36,10 +35,10 @@ Il **ADORecordConstruction**interfaccia viene utilizzata per costruire un oggett
 |[Riga](../../../ado/reference/ado-api/row-property-ado.md)|Lettura/scrittura.<br />Ottiene o imposta un DB OLE **riga** oggetto da/in questa ADO **Record** oggetto.|  
   
 ## <a name="methods"></a>Metodi  
- Nessuna.  
+ No.  
   
 ## <a name="events"></a>Events  
- Nessuna.  
+ No.  
   
 ## <a name="remarks"></a>Note  
  Dato un OLE DB **riga** oggetto (`pRow`), la costruzione di un oggetto ADO **Record** oggetto (`adoR`), gli importi per le tre operazioni fondamentali seguenti:  

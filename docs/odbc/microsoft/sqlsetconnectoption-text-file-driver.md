@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b631a20c-2f60-4102-a61d-93b8780a4620
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ed5c3230a12e79c79624d69b4714a828a865f1dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 32c4a0219b049ee66a38d6c7c10295245dd48ebc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305654"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905479"
 ---
 # <a name="sqlsetconnectoption-text-file-driver"></a>SQLSetConnectOption (driver file di testo)
 > [!NOTE]  
@@ -30,11 +29,11 @@ ms.locfileid: "63305654"
 |SQL_ACCESS_MODE|Il fOption SQL_ACCESS_MODE può essere impostato su SQL_MODE_READ_ONLY o SQL_MODE_READ_WRITE. Tuttavia, il driver non impedisce gli aggiornamenti se SQL_ACCESS_MODE è impostato su SQL_MODE_READ_ONLY.|  
 |SQL_AUTOCOMMIT|Il driver di testo supporta solo SQL_AUTOCOMMIT che viene impostato su (stato predefinito), perché non supportano transazioni.|  
 |SQL_CURRENT_QUALIFIER|Supportato.|  
-|SQL_LOGIN_TIMEOUT|Non supportato.|  
+|SQL_LOGIN_TIMEOUT|Non supportati.|  
 |SQL_OPT_TRACE|Supportato.|  
 |SQL_OPT_TRACEFILE|Supportato.|  
-|SQL_PACKET_SIZE|Non supportato.|  
-|SQL_QUIET_MODE|Non supportato.|  
-|SQL_TRANSLATE_DLL|Non supportato.|  
-|SQL_TRANSLATION_OPTION|Non supportato.|  
-|SQL_TXN_ISOLATION|Non supportato.|
+|SQL_PACKET_SIZE|Non supportati.|  
+|SQL_QUIET_MODE|Non supportati.|  
+|SQL_TRANSLATE_DLL|Non supportati.|  
+|SQL_TRANSLATION_OPTION|Non supportati.|  
+|SQL_TXN_ISOLATION|Non supportati.|

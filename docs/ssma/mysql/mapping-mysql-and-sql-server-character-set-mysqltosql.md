@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: cebdf2ed28287a59ec9d4f0daaa1d0c200f8fe20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 32d5e23579b99b323da870d2608b2d197520f99f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312364"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909026"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Mapping dei set di caratteri MySQL e SQL Server (MySQLToSQL)
 Set di caratteri (set di caratteri) può essere specificato per tipi di dati character, espressioni e valori letterali di MySQL.  
@@ -80,12 +79,12 @@ Mapping di set di caratteri varia in base a diversi livelli di nodo, vale a dire
     ||||  
     |-|-|-|  
     |**Nome del set di caratteri**|**Descrizione set di caratteri**|**Tipo di set di caratteri di destinazione (impostazione predefinita)**|  
-    |big5|Cinese tradizionale Big5|NCHAR/NVARCHAR (impostazione predefinita)|  
+    |BIG5|Cinese tradizionale Big5|NCHAR/NVARCHAR (impostazione predefinita)|  
     |dec8|Europa occidentale dic|CHAR/VARCHAR (impostazione predefinita)|  
     |cp850|Europa occidentale DOS|CHAR/VARCHAR (impostazione predefinita)|  
     |hp8|Europa occidentale HP|CHAR/VARCHAR (impostazione predefinita)|  
     |koi8r|Russo Relcom KOI8-R|CHAR/VARCHAR (impostazione predefinita)|  
-    |latin 1|Europa occidentale CP1252|CHAR/VARCHAR (impostazione predefinita)|  
+    |alfabeto latino 1|Europa occidentale CP1252|CHAR/VARCHAR (impostazione predefinita)|  
     |Latin2|ISO 8859-2 Europa centrale|CHAR/VARCHAR (impostazione predefinita)|  
     |swe7|a 7 bit svedese|CHAR/VARCHAR (impostazione predefinita)|  
     |ascii|US ASCII|CHAR/VARCHAR (impostazione predefinita)|  
@@ -98,22 +97,22 @@ Mapping di set di caratteri varia in base a diversi livelli di nodo, vale a dire
     |gb2312|GB2312 Cinese semplificato|NCHAR/NVARCHAR (impostazione predefinita)|  
     |Greco|ISO 8859-7 Greco|CHAR/VARCHAR (impostazione predefinita)|  
     |cp 1250|Europa centrale di Windows|CHAR/VARCHAR (impostazione predefinita)|  
-    |gbk|Cinese semplificato GBK|NCHAR/NVARCHAR (impostazione predefinita)|  
+    |GBK|Cinese semplificato GBK|NCHAR/NVARCHAR (impostazione predefinita)|  
     |Latin5|ISO 8859-9 Turco|CHAR/VARCHAR (impostazione predefinita)|  
     |armscii8|Armeno ARMSCII-8|CHAR/VARCHAR (impostazione predefinita)|  
-    |utf8|Unicode UTF-8|NCHAR/NVARCHAR (impostazione predefinita)|  
+    |UTF8|Unicode UTF-8|NCHAR/NVARCHAR (impostazione predefinita)|  
     |ucs2|Unicode UCS-2|NCHAR/NVARCHAR (impostazione predefinita)|  
     |cp866|Russo DOS|CHAR/VARCHAR (impostazione predefinita)|  
     |keybcs2|Ceco-Slovak Kamenicky di DOS|CHAR/VARCHAR (impostazione predefinita)|  
     |macce|Europa centrale Mac|CHAR/VARCHAR (impostazione predefinita)|  
     |MacRoman|Europa occidentale Mac|CHAR/VARCHAR (impostazione predefinita)|  
     |cp852|Europa centrale DOS|CHAR/VARCHAR (impostazione predefinita)|  
-    |Latin7|ISO 8859-13 Baltic|CHAR/VARCHAR (impostazione predefinita)|  
-    |cp 1251|Windows Cyrillic|CHAR/VARCHAR (impostazione predefinita)|  
+    |Latin7|Pobaltské Jazyky ISO 8859-13|CHAR/VARCHAR (impostazione predefinita)|  
+    |cp 1251|Cyrillic Windows|CHAR/VARCHAR (impostazione predefinita)|  
     |cp 1256|Arabo di Windows|CHAR/VARCHAR (impostazione predefinita)|  
     |cp 1257|Pobaltské Jazyky Windows|CHAR/VARCHAR (impostazione predefinita)|  
-    |BINARY|Binary pseudo charset|CHAR/VARCHAR (impostazione predefinita)|  
-    |geostd8|GEOSTD8 Georgian|CHAR/VARCHAR (impostazione predefinita)|  
+    |binary|Set di caratteri binari pseudo|CHAR/VARCHAR (impostazione predefinita)|  
+    |geostd8|Georgian GEOSTD8|CHAR/VARCHAR (impostazione predefinita)|  
     |cp932|SJIS per il giapponese di Windows|NCHAR/NVARCHAR (impostazione predefinita)|  
     |eucjpms|UJIS per il giapponese di Windows|NCHAR/NVARCHAR (impostazione predefinita)|  
   

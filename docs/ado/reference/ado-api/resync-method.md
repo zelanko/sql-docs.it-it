@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 251c2f67861dd996ac78efc9a8e599d7ec191072
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e2f83a3637af8f0e89c4125d3207c8c54b86763
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917164"
 ---
 # <a name="resync-method"></a>Metodo Resync
 Aggiorna i dati nell'attuale [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto, o [campi](../../../ado/reference/ado-api/fields-collection-ado.md) raccolta di un [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto, dal database sottostante.  
@@ -38,10 +37,10 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
 #### <a name="parameters"></a>Parametri  
  *AffectRecords*  
- Facoltativo. Un' [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valore che determina il numero di record la **Risincronizza** saranno influenzati dal metodo. Il valore predefinito è **adAffectAll**. Questo valore non è disponibile con la **Risincronizza** metodo per il **campi** raccolta di un **Record** oggetto.  
+ facoltativo. Un' [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valore che determina il numero di record la **Risincronizza** saranno influenzati dal metodo. Il valore predefinito è **adAffectAll**. Questo valore non è disponibile con la **Risincronizza** metodo per il **campi** raccolta di un **Record** oggetto.  
   
  *ResyncValues*  
- Facoltativo. Oggetto [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) valore che specifica se i valori sottostanti vengono sovrascritti. Il valore predefinito è **adResyncAllValues**.  
+ facoltativo. Oggetto [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) valore che specifica se i valori sottostanti vengono sovrascritti. Il valore predefinito è **adResyncAllValues**.  
   
 ## <a name="remarks"></a>Note  
   

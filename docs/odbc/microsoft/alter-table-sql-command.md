@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f656396455a8d5669debc158c3edc866491fcb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c78d3f20e5a03fc80029549318c9c53662e4121
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63457631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901373"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE (comando SQL)
 A livello di codice modifica la struttura di una tabella.  
@@ -82,7 +81,7 @@ ALTER TABLE TableName1
   
  Se omette NULL e NOT NULL, l'impostazione corrente di SET NULL determina se sono consentiti valori null nel campo. Tuttavia, se si omette NULL e non NULL, include la clausola UNIQUE o PRIMARY KEY, viene ignorata l'impostazione corrente di SET NULL e il campo non è NULL per impostazione predefinita.  
   
- CHECK *lExpression1*  
+ CONTROLLARE *lExpression1*  
  Specifica una regola di convalida per il campo. *lExpression1* deve restituire un'espressione logica e può essere una funzione definita dall'utente o una stored procedure. Ogni volta che viene aggiunto un record vuoto, viene verificata la regola di convalida. Viene generato un errore se la regola di convalida non supporta un valore di campo vuoto in un record accodato.  
   
  ERROR *cMessageText1*  
@@ -122,10 +121,10 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  ALTER [COLUMN] *FieldName2*  
  Specifica il nome di un campo esistente da modificare.  
   
- SET DEFAULT *eExpression2*  
+ IMPOSTAZIONE del valore predefinito *eExpression2*  
  Specifica un nuovo valore predefinito per un campo esistente. Il tipo di dati *eExpression2* deve essere lo stesso come il tipo di dati per il campo.  
   
- SET CHECK *lExpression2*  
+ CONTROLLO di SET *lExpression2*  
  Specifica una nuova regola di convalida per un campo esistente. *lExpression2* deve restituire un'espressione logica e può essere una funzione definita dall'utente o una stored procedure.  
   
  ERROR *cMessageText2*  
@@ -142,7 +141,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  Se le espressioni chiave o un trigger di indice fa riferimento il campo, le espressioni diventano non valide quando il campo viene rimosso. In questo caso, un errore non viene generato quando il campo viene rimosso, ma le espressioni di chiave o un trigger di indice non valido verranno generati degli errori in fase di esecuzione.  
   
- SET CHECK *lExpression3*  
+ CONTROLLO di SET *lExpression3*  
  Specifica la regola di convalida della tabella. *lExpression3* deve restituire un'espressione logica e può essere una funzione definita dall'utente o una stored procedure.  
   
  ERROR *cMessageText3*  
@@ -166,7 +165,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  ADD FOREIGN KEY [ *eExpression5*] TAG *TagName4*  
  Aggiunge un indice (non primaria) esterno alla tabella. *eExpression5* specifica l'espressione della chiave esterna dell'indice, e *TagName4* specifica il nome del tag indice esterna. I nomi di tag di indice possono contenere fino a 10 caratteri.  
   
- REFERENCES *TableName2*[TAG *TagName5*]  
+ I riferimenti *TableName2*[TAG *TagName5*]  
  Specifica la tabella padre alla quale viene stabilita una relazione permanente. Includere TAG *TagName5* per stabilire una relazione basata su un tag di indice esistente per la tabella padre. I nomi di tag di indice possono contenere fino a 10 caratteri. Se si omette TAG *TagName5*, la relazione viene stabilita tramite tag di indice primario della tabella padre.  
   
  TAG di chiave esterna di rilascio *TagName6*[salvare]  

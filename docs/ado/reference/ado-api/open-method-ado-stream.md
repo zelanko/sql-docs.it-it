@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c1d1863b28367ba825541c6e334613f65d3bc657
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6549fd10b173a8e133c941ea4315634badb3f35f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707088"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917832"
 ---
 # <a name="open-method-ado-stream"></a>Metodo Open (Stream - ADO)
 Consente di aprire una [Stream](../../../ado/reference/ado-api/stream-object-ado.md) oggetto per gestire i flussi di dati binari o testo.  
@@ -39,16 +38,16 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  Facoltativo. Oggetto **Variant** valore che specifica l'origine dei dati per il **Stream**. *Origine* può contenere una stringa URL assoluto che punta a un nodo esistente in una struttura ad albero ben noti, ad esempio un sistema di posta elettronica o un file. Un URL deve essere specificato usando la parola chiave URL ("URL =*combinazione*://*server*/*cartella*"). In alternativa *origine* può contenere un riferimento a un a cui è già aperta [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto, che viene aperto il flusso predefinito associato il **Record**. Se *origine* non viene specificato, un **Stream** viene creata e aperta, associata a Nessuna origine sottostante per impostazione predefinita. Per altre informazioni sugli schemi URL e i provider associati, vedere [URL assoluti e relativi](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
  *Mode*  
- Facoltativo. Oggetto [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) valore che specifica la modalità di accesso per i risultanti **Stream** (ad esempio, di lettura/scrittura o sola lettura). Valore predefinito è **adModeUnknown**. Vedere le [modalità](../../../ado/reference/ado-api/mode-property-ado.md) proprietà per altre informazioni sulle modalità di accesso. Se *modalità* non viene specificato, viene ereditato dall'oggetto di origine. Ad esempio, se l'origine **Record** viene aperto in modalità di sola lettura, il **Stream** verrà inoltre aperta in modalità di sola lettura per impostazione predefinita.  
+ facoltativo. Oggetto [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) valore che specifica la modalità di accesso per i risultanti **Stream** (ad esempio, di lettura/scrittura o sola lettura). Valore predefinito è **adModeUnknown**. Vedere le [modalità](../../../ado/reference/ado-api/mode-property-ado.md) proprietà per altre informazioni sulle modalità di accesso. Se *modalità* non viene specificato, viene ereditato dall'oggetto di origine. Ad esempio, se l'origine **Record** viene aperto in modalità di sola lettura, il **Stream** verrà inoltre aperta in modalità di sola lettura per impostazione predefinita.  
   
  *OpenOptions*  
- Facoltativo. Oggetto [StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md) valore. Valore predefinito è **adOpenStreamUnspecified**.  
+ facoltativo. Oggetto [StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md) valore. Valore predefinito è **adOpenStreamUnspecified**.  
   
  *UserName*  
- Facoltativo. Oggetto **stringa** valore contenente l'ID utente che, se necessario, accede il **Stream** oggetto.  
+ facoltativo. Oggetto **stringa** valore contenente l'ID utente che, se necessario, accede il **Stream** oggetto.  
   
  *Password*  
- Facoltativo. Oggetto **stringa** valore contenente la password, se necessario, accederà il **Stream** oggetto.  
+ facoltativo. Oggetto **stringa** valore contenente la password, se necessario, accederà il **Stream** oggetto.  
   
 ## <a name="remarks"></a>Note  
  Quando un **Record** oggetto viene passato come parametro di origine, il *UserID* e *Password* parametri non vengono utilizzati perché l'accesso al **Record** l'oggetto è già disponibile. Allo stesso modo, il [modalità](../../../ado/reference/ado-api/mode-property-ado.md) delle **Record** oggetto viene trasferito al **Stream** oggetto. Quando *origine* non viene specificato, il **Stream** aperto non contiene dati e dispone di un [dimensioni](../../../ado/reference/ado-api/size-property-ado-stream.md) pari a zero (0). Per evitare la perdita di dati che viene scritto in questo **Stream** quando il **Stream** viene chiusa, salvare il **Stream** con il [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) o[ SaveToFile](../../../ado/reference/ado-api/savetofile-method.md) metodi, o salvarlo in un'altra posizione di memoria.  

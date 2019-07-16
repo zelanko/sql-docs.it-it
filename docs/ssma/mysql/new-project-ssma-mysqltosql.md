@@ -1,5 +1,5 @@
 ---
-title: New Project (SSMA) (MySQLToSQL) | Microsoft Docs
+title: Nuovo progetto (SSMA) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7a3846ee-b221-47a5-ac8c-d08a962931af
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d6a8943ab1cc22da90208c10a5dcbfe5b8f5e369
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4ef40fbc5acafeaaba76953940f763c663cb121c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312023"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908848"
 ---
 # <a name="new-project-ssma-mysqltosql"></a>Nuovo progetto (SSMA) (MySQLToSQL)
 Usare la **nuovo progetto** finestra di dialogo per creare un nuovo progetto SSMA. Per l'accesso di **nuovo progetto** finestra di dialogo il **File** dal menu fare clic su **nuovo progetto**.  

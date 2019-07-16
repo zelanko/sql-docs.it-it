@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d92e0c5c-d176-4282-bbe1-d449e2223d50
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45d9203a08b9c70809e81fb3d9cf84a521017068
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 803da51c8507faa47f92b295d3749f00317bc413
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628601"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915379"
 ---
 # <a name="file-based-drivers"></a>Driver basati su file
 Driver basati su file vengono utilizzati con origini dati quali file dBASE che non si forniscono un motore di database autonomo per il driver da usare. Questi driver accedere direttamente ai dati fisici e devono implementare un motore di database per elaborare istruzioni SQL. Una procedura standard, i motori di database nei driver basati su file implementano il subset di ODBC SQL, definito dal livello di conformità SQL minima. per un elenco delle istruzioni SQL in questo livello di conformità, vedere [appendice c: Grammatica SQL](../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  

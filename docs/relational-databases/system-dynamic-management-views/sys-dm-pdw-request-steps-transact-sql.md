@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 63a39ab5ace1ec3666b3f5c70cc628268304ce92
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ae1a8aa94eebe6eae203c0b09641b13a18eca9d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039052"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899154"
 ---
 # <a name="sysdmpdwrequeststeps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "56039052"
 |end_time|**datetime**|Ora in cui questo passaggio completato l'esecuzione, è stato annullato o non è riuscito.|Minore o uguale all'ora corrente e maggiore o uguale a start_time. Impostare su NULL per la procedura attualmente in esecuzione o in coda.|  
 |total_elapsed_time|**int**|Quantità totale di tempo che è stato eseguito il passaggio della query, in millisecondi.|Compreso tra 0 e la differenza tra start_time ed end_time. 0 per i passaggi in coda.<br /><br /> Se total_elapsed_time supera il valore massimo per un numero intero, total_elapsed_time continuerà a essere il valore massimo. Questa condizione verrà generato l'avviso "il valore massimo è stato superato."<br /><br /> Il valore massimo in millisecondi è equivalente a 24,8 giorni.|  
 |row_count|**bigint**|Numero totale di righe modificate o restituito da questa richiesta.|0 per i passaggi che non sono stati cambiare o restituire i dati. In caso contrario, numero di righe interessate.|  
-|comando|**nvarchar(4000)**|Contiene il testo completo del comando di questo passaggio.|Qualsiasi stringa di richiesta valido per un passaggio. NULL quando l'operazione è di tipo MetaDataCreateOperation. Troncata se supera i 4000 caratteri.|  
+|command|**nvarchar(4000)**|Contiene il testo completo del comando di questo passaggio.|Qualsiasi stringa di richiesta valido per un passaggio. NULL quando l'operazione è di tipo MetaDataCreateOperation. Troncata se supera i 4000 caratteri.|  
   
  Per informazioni sul numero massimo di righe mantenuto da questa vista, vedere la sezione i valori massimi vista di sistema il "minimo e massimo dei valori" nel [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   

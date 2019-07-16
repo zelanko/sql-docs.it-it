@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 19e643c82653ecb10bc2006eb5ed14bd2dede9b7
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: 9f394d5e3b3021ca240675d6979152c63b903190
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597561"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918623"
 ---
 # <a name="find-method-ado"></a>Metodo Find (ADO)
 Cerca un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per la riga che soddisfa i criteri specificati. Facoltativamente, può essere specificata la direzione della ricerca, la riga iniziale e offset della riga iniziale. Se vengono soddisfatti i criteri, la posizione della riga corrente è impostata sul record trovato. in caso contrario, la posizione è impostata su finale (o avvio) del **Recordset**.  
@@ -39,13 +38,13 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  Oggetto **stringa** valore contenente un'istruzione che specifica il nome della colonna, l'operatore di confronto e valore da utilizzare nella ricerca.  
   
  *SkipRows*  
- Facoltativo. Oggetto **lungo** valore, il cui valore predefinito è zero, che specifica l'offset di riga rispetto alla riga corrente oppure *avviare* segnalibro per iniziare la ricerca. Per impostazione predefinita, verrà avviata la ricerca nella riga corrente.  
+ facoltativo. Oggetto **lungo** valore, il cui valore predefinito è zero, che specifica l'offset di riga rispetto alla riga corrente oppure *avviare* segnalibro per iniziare la ricerca. Per impostazione predefinita, verrà avviata la ricerca nella riga corrente.  
   
  *SearchDirection*  
  Facoltativo. Oggetto [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) valore che specifica se la ricerca inizierà nella riga corrente o la successiva riga disponibile nella direzione della ricerca. Arresta una ricerca in fondo il **Recordset** se il valore è **adSearchForward**. Arresta una ricerca all'inizio del **Recordset** se il valore è **adSearchBackward**.  
   
  *Start*  
- Facoltativo. Oggetto **Variant** segnalibro che funziona come la posizione iniziale per la ricerca.  
+ facoltativo. Oggetto **Variant** segnalibro che funziona come la posizione iniziale per la ricerca.  
   
 ## <a name="remarks"></a>Note  
  Solo un nome di colonna singola può essere specificato *criteri*. Questo metodo non supporta le ricerche su più colonne.  

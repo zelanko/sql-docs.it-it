@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6af8fcd665fdfe503eab5aec591419982d0d3958
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60510302525562d9c3007a6ef57213fc261b4c60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926627"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Provider Microsoft OLE DB per Oracle Panoramica
 > [!IMPORTANT]
@@ -68,7 +67,7 @@ MSDAORA
 |**Handle di finestra**|Indica l'handle di finestra da usare per la richiesta di informazioni aggiuntive.|
 |**Locale Identifier**|Indica un numero a 32 bit univoco (ad esempio, 1033) che specifica le preferenze relative alla lingua dell'utente. Queste preferenze indicano vengono formattati come date e ore, gli elementi vengono ordinati in ordine alfabetico, le stringhe vengono confrontate e così via.|
 |**Servizi OLE DB**|Indica una maschera di bit che specifica i servizi OLE DB per abilitare o disabilitare.|
-|**Prompt**|Indica se richiedere all'utente mentre viene stabilita una connessione.|
+|**Richiesta**|Indica se richiedere all'utente mentre viene stabilita una connessione.|
 |**Proprietà estese**|Stringa che contiene le informazioni di connessione estese specifiche del provider. Utilizzare questa proprietà solo per le informazioni di connessione specifica del provider che non possono essere descritta mediante il meccanismo di proprietà.|
 
 ## <a name="see-also"></a>Vedere anche
