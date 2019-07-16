@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f68f58bc-ad28-46cc-9fb3-099e1a678397
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c0b1a69ebbc96197a5bf8fc1cb617e7fde65c731
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 485d011fa6762acd04cad54ff7fffc8d8136e063
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917950"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (sintassi ADO/WFC)
 Un **ObjectProxy** oggetto rappresenta un server e viene restituito dal **createObject** metodo per il [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) oggetto. La classe ObjectProxy dispone del metodo **chiamare**, che può richiamare un metodo nel server e restituire un oggetto risultante dalla chiamata.  
@@ -46,8 +45,8 @@ public Object ObjectProxy.( String method, Object[] args)
  *ObjectProxy*  
  Un' **ObjectProxy** oggetto che rappresenta il server.  
   
- *method*  
+ *(Metodo)*  
  Stringa contenente il nome del metodo da richiamare sul server.  
   
  *args*  
- Facoltativo. Matrice di oggetti che rappresentano argomenti del metodo nel server. Tipi di dati Java vengono automaticamente convertiti in tipi di dati adatti per l'uso nel server.
+ facoltativo. Matrice di oggetti che rappresentano argomenti del metodo nel server. Tipi di dati Java vengono automaticamente convertiti in tipi di dati adatti per l'uso nel server.
