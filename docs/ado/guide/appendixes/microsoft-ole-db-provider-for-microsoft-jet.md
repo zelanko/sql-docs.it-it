@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 71df952769ae509ba25b256ecdc9ddef3a54ebe5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702846"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926641"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Provider Microsoft OLE DB per Microsoft Jet Panoramica
 Il Provider OLE DB per Microsoft Jet consente ADO accedere ai database Microsoft Jet.
