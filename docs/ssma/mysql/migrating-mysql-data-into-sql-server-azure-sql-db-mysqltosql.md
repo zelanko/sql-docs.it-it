@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1e5c4c996a7dea9da3eccb24da2b6021a13d2590
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83a4a2d1bea5074cc268590d4074bde631f28694
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312004"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908828"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>La migrazione dei dati di MySQL in SQL Server - Azure SQL database (MySQLToSQL)
 Dopo aver sincronizzato gli oggetti convertiti con correttamente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, è possibile migrare i dati da MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
@@ -64,7 +63,7 @@ Per visualizzare i messaggi di migrazione, verificare che sia visibile il riquad
   
 **Per eseguire la migrazione dei dati**  
   
-1.  Verificare gli elementi seguenti:  
+1.  Verificare quanto segue:  
   
     -   I provider di MySQL sono installati nel computer che esegue SSMA.  
   

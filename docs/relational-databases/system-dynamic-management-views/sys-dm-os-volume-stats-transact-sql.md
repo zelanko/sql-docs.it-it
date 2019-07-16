@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 954cb83176ea64be11bd37b44303091f15604dcd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e7ec8171b569adbf887c1e153fb2b41619778f48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802564"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899713"
 ---
 # <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ||||  
 |-|-|-|  
-|**Colonna**|**Data type**|**Descrizione**|  
+|**Colonna**|**Tipo di dati**|**Descrizione**|  
 |**database_id**|**int**|ID del database. Non può essere null.|  
 |**file_id**|**int**|ID del file. Non può essere null.|  
 |**volume_mount_point**|**nvarchar(512)**|Punto di montaggio in corrispondenza del quale si trova la radice del volume. Può restituire una stringa vuota.|  
@@ -72,7 +71,7 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-return-total-space-and-available-space-for-all-database-files"></a>A. Restituzione dello spazio totale e dello spazio disponibile per tutti i file di database  
+### <a name="a-return-total-space-and-available-space-for-all-database-files"></a>R. Restituzione dello spazio totale e dello spazio disponibile per tutti i file di database  
  Nell'esempio seguente vengono restituiti lo spazio totale e lo spazio disponibile (in byte) per tutti i file di database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```sql  

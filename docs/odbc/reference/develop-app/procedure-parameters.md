@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 54fd857e-d2cb-467d-bb72-121e67a8e88d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1cab0fea9c39e4946122698f2476668464e556c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f85512a1686df26cad739dc906e49cc5499f62e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912307"
 ---
 # <a name="procedure-parameters"></a>Parametri di procedure
 I parametri nelle chiamate a procedure possono essere di input, input/output o i parametri di output. Questo è diverso dai parametri di tutte le altre istruzioni di SQL, che sono sempre i parametri di input.  

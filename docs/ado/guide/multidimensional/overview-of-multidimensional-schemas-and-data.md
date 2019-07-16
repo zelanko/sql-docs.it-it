@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5c3aa056447bd6e2eb7451db4d9af8090edc54d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e4681bb9e1fd1028ee1ddc2bd7f72efc03fb6c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699669"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923183"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Panoramica di schemi e dati multidimensionali
 ## <a name="understanding-multidimensional-schemas"></a>Informazioni sugli schemi multidimensionale  
@@ -69,7 +68,7 @@ Hamburg, Munich, Stuttgart}
   
 -   Città `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
-### <a name="members"></a>Membri  
+### <a name="members"></a>Members  
  I membri al livello foglia di una gerarchia non hanno elementi figlio e i membri al livello radice non hanno elementi padre. Tutti gli altri membri hanno almeno un elemento padre e almeno un elemento figlio. Ad esempio, un attraversamento dell'albero gerarchico nella dimensione Geography parziale genera le relazioni padre-figlio seguenti:  
   
 -   `{All} (parent of) {Europe, North America}`  

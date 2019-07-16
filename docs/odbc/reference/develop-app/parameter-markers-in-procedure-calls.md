@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cda56f2b-6eec-4cbc-8dbb-36d8fa9f9216
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00aa87461c1b4a82fbedc7bd7faf1da6ff327265
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3bb24fb628e9e49fd94104af05217511a8f57c3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912310"
 ---
 # <a name="parameter-markers-in-procedure-calls"></a>Marcatori di parametro nelle chiamate di procedura
 Quando si chiamano le procedure che accettano parametri, applicazioni interoperative utilizzino i marcatori di parametro anziché i valori di parametro del valore letterale. Alcune origini dati non supportano l'utilizzo di valori di parametro letterali nelle chiamate a procedure. Per altre informazioni sui parametri, vedere [parametri delle istruzioni](../../../odbc/reference/develop-app/statement-parameters.md). Per altre informazioni sulle chiamate di procedure, vedere [le chiamate di procedura](../../../odbc/reference/develop-app/procedure-calls.md), più avanti in questa sezione.

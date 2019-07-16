@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3d117224e9afb331979556d12c6cddc0869382f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5279284c905384ea93c90ab10522a3998c906029
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477163"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896909"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>Creare una gerarchia esplicita (Master Data Services)
 
@@ -59,12 +58,12 @@ ms.locfileid: "65477163"
 ## <a name="grid-columns"></a>Colonne della griglia  
  Per ogni gerarchia esplicita creata, viene aggiunta una riga con sette colonne alla griglia. Di seguito sono descritte le colonne.  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |Stato|Stato dell'entità. Quando si fa clic su **Salva** , viene visualizzata l'immagine seguente che indica che l'entità è in fase di aggiornamento.<br /><br /> ![Icona di aggiornamento dello stato](../master-data-services/media/mds-statusicon-updating.png "Icona di aggiornamento dello stato")<br /><br /> Se si verificano errori durante la creazione o la modifica di un'entità, viene visualizzata l'immagine seguente.<br /><br /> ![Icona di errore](../master-data-services/media/mds-statusicon-error.png "Icona di errore")<br /><br /> Se lo stato è OK, viene visualizzata l'immagine seguente.<br /><br /> ![Icona dello stato OK](../master-data-services/media/mds-statusicon-ok.png "Icona dello stato OK")|  
-|Nome|Il nome della gerarchia esplicita.|  
+|Name|Il nome della gerarchia esplicita.|  
 |Obbligatorio|Specifica se la gerarchia esplicita è obbligatoria.|  
-|Creato da|Nome utente dell'utente che ha creato la gerarchia esplicita.|  
+|Created By (Creato da)|Nome utente dell'utente che ha creato la gerarchia esplicita.|  
 |Data creazione|Data e ora di creazione della gerarchia esplicita.|  
 |Aggiornato da|Nome utente dell'ultimo utente che ha aggiornato la gerarchia esplicita.|  
 |Data aggiornamento|Data e ora dell'ultimo aggiornamento della gerarchia esplicita.|  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b82e56dd7998ca19ce9e401369cd8d2f52b58573
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02577370218a799faf86a7f8986859c415962f5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636229"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897741"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Sviluppo del rilevamento di pool di connessioni in un driver ODBC
 Questo argomento illustra i dettagli dello sviluppo di un driver ODBC che contiene informazioni sul modo in cui il driver deve fornire i servizi del pool di connessione.  
@@ -82,7 +81,7 @@ Questo argomento illustra i dettagli dello sviluppo di un driver ODBC che contie
   
  Un punteggio compreso tra 0 e 100 viene possibile, dove 0 indica che non riutilizzare e 100 indica che perfettamente corrispondente. [SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md) è la funzione per la valutazione di una connessione.  
   
-## <a name="new-odbc-handle---sqlhandledbcinfotoken"></a>New ODBC Handle - SQL_HANDLE_DBC_INFO_TOKEN  
+## <a name="new-odbc-handle---sqlhandledbcinfotoken"></a>Nuovo Handle ODBC - SQL_HANDLE_DBC_INFO_TOKEN  
  Per supportare i pool di connessioni compatibile con il driver, il driver ha bisogno delle informazioni di connessione per calcolare l'ID del Pool. Il driver deve anche le informazioni di connessione per confrontare le nuove richieste di connessione con le connessioni del pool.  Quando nessuna connessione nel pool può essere riutilizzata, il driver deve stabilire una nuova connessione, richiedendo pertanto le informazioni di connessione.  
   
  Poiché le informazioni di connessione possono provenire da più origini (stringa di connessione, gli attributi di connessione e DSN), il driver potrebbe essere necessario analizzare la stringa di connessione e risolvere il conflitto tra le origini dati in ogni chiamata di funzione precedente.  

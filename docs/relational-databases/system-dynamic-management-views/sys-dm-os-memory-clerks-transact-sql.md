@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b308f17a7b5555f77f36174c7d11dd9979cf4ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d03c1f06133257543a20ba70edce801faba0ae92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725899"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899938"
 ---
 # <a name="sysdmosmemoryclerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47725899"
 > [!NOTE]  
 >  Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_os_memory_clerks**.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**memory_clerk_address**|**varbinary(8)**|Specifica l'indirizzo di memoria univoco del clerk di memoria. Si tratta della colonna chiave primaria. Non ammette i valori Null.|  
 |**type**|**nvarchar(60)**|Specifica il tipo di clerk di memoria. Ogni clerk è associato a un tipo specifico, ad esempio i clerk CLR MEMORYCLERK_SQLCLR. Non ammette i valori Null.|  
@@ -58,7 +57,7 @@ ms.locfileid: "47725899"
 ## <a name="permissions"></a>Permissions 
 
 Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
-Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
+In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] è richiesta l'autorizzazione `VIEW DATABASE STATE` per il database.   
   
 ## <a name="remarks"></a>Note  
  Il gestore della memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è strutturato in una gerarchia a tre livelli. I nodi di memoria occupano la parte inferiore della gerarchia. Il livello intermedio è occupato da clerk di memoria, cache in memoria e pool di memoria. Il primo livello è costituito dagli oggetti memoria. Questi oggetti vengono in genere utilizzati per allocare memoria in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

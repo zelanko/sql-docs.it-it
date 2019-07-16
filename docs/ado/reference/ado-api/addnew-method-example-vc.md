@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9cc8774b-6711-4837-b442-959eaf79343e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1badd8074c010ec4e87a92412dd41a6918921e4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5962d04ddae54f2455a99eb29587d3dc98d69420
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704113"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921250"
 ---
 # <a name="addnew-method-example-vc"></a>Esempio del metodo AddNew (VC++)
 Questo esempio Usa la [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) metodo per creare un nuovo record con il nome specificato.  

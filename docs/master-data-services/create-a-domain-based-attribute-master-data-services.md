@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 09d0b3b339a70b5d2ccae3c9edca11ddf942e95c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0d0fdda8512167111b03c72f4c64e067493adb3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896889"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>Creare un attributo basato su dominio (Master Data Services)
 
@@ -42,7 +41,7 @@ ms.locfileid: "65487590"
 ## <a name="attribute-information"></a>Informazioni sugli attributi  
  Per ogni indice creato, viene aggiunta alla griglia una riga con sette colonne. La tabella seguente descrive le colonne.  
   
-|colonna|Descrizione|  
+|Colonna|Descrizione|  
 |------------|-----------------|  
 |Stato|Stato dell'attributo.<br /><br /> Quando si fa clic su Salva, viene visualizzata l'immagine ![Icona di aggiornamento dello stato](../master-data-services/media/mds-statusicon-updating.png "Icona di aggiornamento dello stato") che indica che è in corso l'aggiornamento dell'attributo.<br /><br /> Se si verificano errori durante la creazione o la modifica di un attributo viene visualizzata l'immagine ![Icona di errore](../master-data-services/media/mds-statusicon-error.png "Icona di errore").<br /><br /> In caso contrario lo stato è OK e viene visualizzata l'immagine ![Icona di stato OK](../master-data-services/media/mds-statusicon-ok.png "Icona di stato OK").|  
 |Nome|Nome dell'attributo.|  

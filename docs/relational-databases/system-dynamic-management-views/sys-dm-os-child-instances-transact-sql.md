@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_child_instances (Transact-SQL) | Microsoft Docs
+title: Sys.dm_os_child_instances (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a57719becab0c7dda9d684e4de3218e29418b6a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59a58348f5428f568f40d28b4e83bc6bc040647c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62504970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900239"
 ---
 # <a name="sysdmoschildinstances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "62504970"
 > 
 > **Nota** chiamarla da [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_os_child_instances**.  
   
-|colonna|Tipo di dati|Descrizione|  
+|Colonna|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
 |**owning_principal_name**|**nvarchar(256)**|Nome dell'utente per cui è stata creata l'istanza utente.|  
 |owning_principal_sid|nvarchar(256)|ID di sicurezza (SID) dell'entità proprietaria dell'istanza utente. Questo valore corrisponde al SID di Windows.|  

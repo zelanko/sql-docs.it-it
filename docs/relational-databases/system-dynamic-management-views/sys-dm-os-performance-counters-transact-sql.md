@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_performance_counters (Transact-SQL) | Microsoft Docs
+title: DM os_performance_counters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: a1c3e892-cd48-40d4-b6be-2a9246e8fbff
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcfe7869767bc9178f9241c3ffa82d166685d7ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d23a0f8cbf3d0cb712cd0796256c1a6c7beb0ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62939689"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899852"
 ---
 # <a name="sysdmosperformancecounters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,10 +53,10 @@ SELECT COUNT(*) FROM sys.dm_os_performance_counters;
   
  Se il valore restituito è di 0 righe, i contatori delle prestazioni sono stati disabilitati. È necessario quindi analizzare il log del programma di installazione e ricercare l'errore 3409 "Reinstallare sqlctr.ini e verificare che l'account di accesso dell'istanza disponga delle autorizzazioni di Registro di sistema appropriate".  Questo errore indica che i contatori delle prestazioni non sono stati abilitati. Gli errori immediatamente precedenti all'errore 3409 dovrebbero indicare la causa principale per l'errore relativo all'abilitazione dei contatori delle prestazioni. Per altre informazioni sui file di log di installazione, vedere [visualizzare e leggere i file Log di SQL Server Setup](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="permission"></a>Autorizzazione
+## <a name="permission"></a>Autorizzazioni
 
 Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
-Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
+In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] è richiesta l'autorizzazione `VIEW DATABASE STATE` per il database.   
  
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituiti i valori dei contatori di prestazioni.  

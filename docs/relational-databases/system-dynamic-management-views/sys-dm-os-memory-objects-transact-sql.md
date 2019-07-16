@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc006a940318ba84c3670ed9d10b96f728219668
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd7d1ddf40805eb94ca71594c7e4f7f6dae6ca7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800649"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899948"
 ---
 # <a name="sysdmosmemoryobjects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Vengono restituiti gli oggetti di memoria attualmente allocati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile usare **DM os_memory_objects** per analizzare il consumo di memoria e identificare possibili memoria perdite.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**memory_object_address**|**varbinary(8)**|Indirizzo dell'oggetto memoria. Non ammette i valori Null.|  
 |**parent_address**|**varbinary(8)**|Indirizzo dell'oggetto memoria padre. Ammette i valori Null.|  
@@ -62,7 +61,7 @@ ms.locfileid: "47800649"
 ## <a name="permissions"></a>Permissions
 
 Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
-Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
+In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] è richiesta l'autorizzazione `VIEW DATABASE STATE` per il database.   
 
 ## <a name="remarks"></a>Note  
  Gli oggetti memoria sono heap. Le allocazioni implementate dagli oggetti sono caratterizzate da una maggiore granularità rispetto alle allocazioni implementate dai clerk di memoria. I componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzano oggetti memoria anziché clerk di memoria. Gli oggetti memoria utilizzano l'interfaccia dell'allocatore di pagine del clerk di memoria per allocare le pagine. Gli oggetti memoria non utilizzano interfacce di memoria virtuale o condivisa. In base al modello di allocazione, i componenti possono creare tipi diversi di oggetti memoria per allocare aree di dimensioni arbitrarie.  

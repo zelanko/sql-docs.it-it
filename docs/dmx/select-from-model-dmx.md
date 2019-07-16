@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: aac800e225eb5323b1bffeafda77d059f0a837e2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5611ce3da4f12bca5cb271cabe8af3e149dcbf35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989903"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928335"
 ---
 # <a name="select-from-ltmodelgt-dmx"></a>SELECT FROM &lt;modello&gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,10 +40,10 @@ SELECT <expression list> [TOP <n>] FROM <model>
  Identificatore del modello.  
   
  *Elenco condizioni*  
- Facoltativo. Condizioni per limitare i valori restituiti dall'elenco di colonne.  
+ facoltativo. Condizioni per limitare i valori restituiti dall'elenco di colonne.  
   
  *expression*  
- Facoltativo. Espressione che restituisce un valore scalare.  
+ facoltativo. Espressione che restituisce un valore scalare.  
   
 ## <a name="remarks"></a>Note  
  Le colonne di *elenco di espressioni* devono essere definite come predict o predict only oppure correlate a una colonna stimabile.  
@@ -65,7 +64,7 @@ FROM Forecasting
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [SELEZIONARE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
  [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  

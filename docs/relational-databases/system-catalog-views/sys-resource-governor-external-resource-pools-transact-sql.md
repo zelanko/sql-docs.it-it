@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e9ed2152873f40fd2f2ded34a11a2cfded2fbe2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 379dae51b913fc02a16a562037776620b1e0433c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904468"
 ---
 # <a name="sysresourcegovernorexternalresourcepools-transact-sql"></a>Sys. resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,10 +31,10 @@ ms.locfileid: "47823540"
 
 Restituisce la configurazione del pool di risorse esterne stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ogni riga della vista determina la configurazione di un pool.
   
-|Nome colonna|Tipo di dati|Description|
+|Nome colonna|Tipo di dati|Descrizione|
 |-----------------|---------------|-----------------|
-|pool_id|**int**|ID univoco del pool di risorse. Non ammette i valori Null.<br /><br /> **Nota:** venga rinominato in futuro.|
-|NAME|**sysname**|Nome del pool di risorse. Non ammette i valori Null.|
+|pool_id|**int**|ID univoco del pool di risorse. Non ammette i valori Null.<br /><br /> **Nota:** Può essere rinominato in futuro.|
+|name|**sysname**|Nome del pool di risorse. Non ammette i valori Null.|
 |max_cpu_percent|**int**|Larghezza di banda media massima della CPU concessa per tutte le richieste nel pool di risorse, in caso di contesa di CPU. Non ammette i valori Null.|
 |max_memory_percent|**int**|Percentuale di memoria totale del server utilizzabile dalle richieste in questo pool di risorse. Non ammette i valori Null. Il valore massimo effettivo dipende dai valori minimi del pool. Ad esempio, impostando max_memory_percent su 100, il valore massimo effettivo risulta inferiore.|
 |max_processes|**int**|Numero massimo di processi esterni simultanei. Il valore predefinito, 0, non specifica alcun limite. Non ammette i valori Null.|

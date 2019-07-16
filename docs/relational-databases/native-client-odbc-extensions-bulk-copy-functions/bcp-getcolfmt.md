@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: f8bdada5-7b2d-4475-8c98-f93e9d77b130
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e9b87bcfd88b4401ad79d3a3a6afe174df94a29d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7aec6cf3345a0693384835f433bd445fd5079c82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761149"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895677"
 ---
 # <a name="bcpgetcolfmt"></a>bcp_getcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +45,7 @@ RETCODE bcp_getcolfmt (
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *HDBC*  
+ *hdbc*  
  Handle di connessione ODBC abilitato per la copia bulk.  
   
  *field*  

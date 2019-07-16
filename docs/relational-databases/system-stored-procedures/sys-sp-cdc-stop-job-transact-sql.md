@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0d682c839b8fa51ac8671d190e9fbb5ab322aa6b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 3c166fe18ad7fdd651f07025aa7deb6ea2f599e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535513"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905148"
 ---
 # <a name="sysspcdcstopjob-transact-sql"></a>sys.sp_cdc_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  sys.sp_cdc_stop_job può essere utilizzato da un amministratore per arrestare in modo esplicito il processo di acquisizione o di pulizia.  

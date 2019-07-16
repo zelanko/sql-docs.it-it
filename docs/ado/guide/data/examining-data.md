@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 257d9c604d441d8fae9fb34da5ddfce816336f20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0245d492b7014b2dfc0097a9d3f2c9a7098eae51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702058"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925350"
 ---
 # <a name="examining-data"></a>Esame dei dati
 Il [recupero di dati](../../../ado/guide/data/getting-data.md) sezione illustrato come recuperare i dati da un'origine dati come uno o più **Recordset** oggetti. In questa sezione verrà illustrate **Recordset** in modo più dettagliato, incluse le procedure per spostarsi tra le **Recordset** e visualizzarne i dati.  

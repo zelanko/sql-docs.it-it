@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 604718c747819517bd323b73f276eb1fcc2a220f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d9ce81a0d7aad6b41945b1564076004db80cd5e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900274"
 ---
 # <a name="sysdmoperationstatus-azure-sql-database"></a>sys.dm_operation_status (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "56024997"
 |resource_type_desc|**nvarchar(2048)**|Descrizione del tipo di risorsa in cui viene eseguita l'operazione. Nella versione corrente, questa vista tiene traccia delle operazioni eseguite solo nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
 |major_resource_id|**sql_variant**|Nome del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] in cui viene eseguita l'operazione. Non Null.|  
 |minor_resource_id|**sql_variant**|Solo per uso interno. Non Null.|  
-|operazione|**nvarchar(60)**|Operazione eseguita su un [!INCLUDE[ssSDS](../../includes/sssds-md.md)], ad esempio CREATE o ALTER.|  
+|operation|**nvarchar(60)**|Operazione eseguita su un [!INCLUDE[ssSDS](../../includes/sssds-md.md)], ad esempio CREATE o ALTER.|  
 |state|**tinyint**|Stato dell'operazione.<br /><br /> 0 = In sospeso<br />1 = In corso<br />2 = Completato<br />3 = Non completato<br />4 = Annullato|  
 |state_desc|**nvarchar(120)**|PENDING = l'operazione è in attesa della disponibilità della quota o delle risorse.<br /><br /> IN_PROGRESS = l'operazione è stata avviata ed è in esecuzione.<br /><br /> COMPLETED = operazione completata.<br /><br /> FAILED = operazione non riuscita. Vedere le **error_desc** colonna per i dettagli.<br /><br /> CANCELLED = l'operazione è stata arrestata su richiesta dell'utente.|  
 |percent_complete|**int**|Percentuale dell'operazione completata. I valori non sono continui e i valori validi sono elencati di seguito. Non è NULL.<br/><br/>0 = operazione non è stato avviato<br/>50 = operazione in corso<br/>100 = operazione completata|  

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 29449905da888d0f7c85b66d3731eed381dc582c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52d2a0284666c7b26c40fad62e8fdf9455379b49
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62506058"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900246"
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "62506058"
 ## <a name="permissions"></a>Permissions  
 
 Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
-Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
+In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] è richiesta l'autorizzazione `VIEW DATABASE STATE` per il database.   
    
 ## <a name="remarks"></a>Note  
  DM os_buffer_descriptors restituisce le pagine utilizzate dal database delle risorse. DM os_buffer_descriptors non restituisce invece informazioni sulle pagine libere o prelevate, né sulle pagine in cui si sono verificati errori quando essi sono stati letti.  
@@ -70,7 +69,7 @@ Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DAT
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-cached-page-count-for-each-database"></a>A. Restituzione del conteggio delle pagine memorizzate nella cache per ogni database  
+### <a name="a-returning-cached-page-count-for-each-database"></a>R. Restituzione del conteggio delle pagine memorizzate nella cache per ogni database  
  Nell'esempio seguente viene restituito il conteggio delle pagine caricate per ogni database.  
   
 ```  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 55665bd2-9e1d-4efc-8f60-c63a24f66b28
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 305223fca45bb1916598f02c16cc4e38981e861d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1053181486dba8c8119f9160d9c08cb8d2bbe56b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62903696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907396"
 ---
 # <a name="msdistributionhistory-transact-sql"></a>MSdistribution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +34,11 @@ ms.locfileid: "62903696"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|ID dell'agente di distribuzione.|  
-|**runstatus**|**int**|Stato di esecuzione:<br /><br /> **1** = Start.<br /><br /> **2** = Succeed.<br /><br /> **3** = in corso.<br /><br /> **4** = inattivo.<br /><br /> **5** = nuovo tentativo.<br /><br /> **6** = esito negativo.|  
+|**runstatus**|**int**|Stato di esecuzione:<br /><br /> **1** = avvio.<br /><br /> **2** = esito positivo.<br /><br /> **3** = in corso.<br /><br /> **4** = inattivo.<br /><br /> **5** = nuovo tentativo.<br /><br /> **6** = esito negativo.|  
 |**start_time**|**datetime**|Ora di inizio dell'esecuzione del processo.|  
 |**time**|**datetime**|Ora di registrazione del messaggio.|  
 |**duration**|**int**|Durata espressa in secondi della sessione del messaggio.|  
-|**comments**|**nvarchar(4000)**|Testo del messaggio.|  
+|**Commenti**|**nvarchar(4000)**|Testo del messaggio.|  
 |**xact_seqno**|**varbinary(16)**|Numero di sequenza dell'ultima transazione elaborata.|  
 |**current_delivery_rate**|**float**|Numero medio di comandi recapitati al secondo dopo l'ultima voce di cronologia.|  
 |**current_delivery_latency**|**int**|Latenza tra l'immissione del comando nel database di distribuzione e l'applicazione del comando al Sottoscrittore dopo l'ultima voce di sottoscrizione. In millisecondi.|  

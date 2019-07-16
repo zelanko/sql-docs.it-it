@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8e3c3c7ff7d623d3bec0adf60773266bb6e53571
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3025140929d7a7cf281f72c035bf79e0a5883b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923412"
 ---
 # <a name="working-with-recordsets"></a>Utilizzo dei recordset
 Il **Recordset** oggetto offre funzionalità incorporate che consentono di ottimizzare l'ordine dei dati nel set di risultati, per cercare un record specifico in base ai criteri che viene fornito e anche per ottimizzare le operazioni di ricerca tramite indici. Se queste funzionalità sono disponibili per l'utilizzo dipende dal provider e in alcuni casi, ad esempio quella del [indice](../../../ado/reference/ado-api/index-property.md) proprietà - la struttura dell'origine dati stessa.  

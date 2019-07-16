@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 95c80c5b-9252-4612-9ea7-544c48834fd2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f46dd0bbedfebec5e21800b477a23d664446bf24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12d703b03483e1ea4641a822291106de3598f05e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982949"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905016"
 ---
 # <a name="syssprdasetrpoduration-transact-sql"></a>sys.sp_rda_set_rpo_duration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

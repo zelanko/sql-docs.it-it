@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 357d0cf774d3e95d700c840f88bb0165bdb9a12f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c138f2e97bf80f00f77c519bb4b9467c715f95b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907409"
 ---
 # <a name="msdistributionagents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +36,10 @@ ms.locfileid: "62817140"
 |**publisher_database_id**|**int**|ID del database del server di pubblicazione.|  
 |**publisher_id**|**smallint**|ID del server di pubblicazione.|  
 |**publisher_db**|**sysname**|Nome del database del server di pubblicazione.|  
-|**publication**|**sysname**|Nome della pubblicazione.|  
+|**pubblicazione**|**sysname**|Nome della pubblicazione.|  
 |**subscriber_id**|**smallint**|ID del Sottoscrittore, utilizzato solo da agenti noti. Per gli agenti anonimi questa colonna è riservata.|  
 |**subscriber_db**|**sysname**|Nome del database di sottoscrizione.|  
-|**subscription_type**|**int**|Tipo di sottoscrizione:<br /><br /> **0** = Push.<br /><br /> **1** = Pull.<br /><br /> **2** = anonimo.|  
+|**subscription_type**|**int**|Tipo di sottoscrizione:<br /><br /> **0** = push.<br /><br /> **1** = pull.<br /><br /> **2** = anonimo.|  
 |**local_job**|**bit**|Indica se è presente un processo di SQL Server Agent nel server di distribuzione locale.|  
 |**job_id**|**binary(16)**|Numero di identificazione del processo.|  
 |**subscription_guid**|**binary(16)**|ID delle sottoscrizioni dell'agente.|  

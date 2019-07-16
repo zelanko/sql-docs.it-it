@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: 56793e9c-aa90-452e-88c6-d9b799239888
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 87392911d8fa393777e1b2d7b9e5bec1c416e939
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06ed4b4820ce7a6e6483df6efd1de2e8fbadf954
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755829"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904459"
 ---
 # <a name="sysresourcegovernorresourcepools-transact-sql"></a>sys.resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce la configurazione memorizzata del pool di risorse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ogni riga della vista determina la configurazione di un pool.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|ID univoco del pool di risorse. Non ammette i valori Null.|  
-|NAME|**sysname**|Nome del pool di risorse. Non ammette i valori Null.|  
+|name|**sysname**|Nome del pool di risorse. Non ammette i valori Null.|  
 |min_cpu_percent|**int**|Larghezza di banda media garantita della CPU per tutte le richieste nel pool di risorse, in caso di contesa di CPU. Non ammette i valori Null.|  
 |max_cpu_percent|**int**|Larghezza di banda media massima della CPU concessa per tutte le richieste nel pool di risorse, in caso di contesa di CPU. Non ammette i valori Null.|  
 |min_memory_percent|**int**|Quantità di memoria garantita per tutte le richieste nel pool di risorse. Non è condivisa con altri pool di risorse. Non ammette i valori Null.|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1af86e92d689f262833e1bc00d8caf0fb0c78b39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96307c0106a99ae1b95d58d9ec08cf2732863eb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911696"
 ---
 # <a name="ado-glossary"></a>Glossario di ADO
 In questo argomento definisce termini rilevanti per ADO.  
@@ -30,7 +29,7 @@ In questo argomento definisce termini rilevanti per ADO.
  Controllo ActiveX  
  Registrazione automatica, in-process componente COM che spesso ha un elemento visivo in fase di progettazione o di esecuzione. Controlli ActiveX sono inoltre in grado di comunicare con un contenitore di documenti attivi, ad esempio Microsoft Internet Explorer.  
   
- ADISAPI (Advanced Data Internet Server Application Programming Interface)  
+ ADISAPI (avanzate dei dati Internet Server Application Programming Interface)  
  Una DLL ISAPI che fornisce l'analisi, controllo di automazione, il marshalling di Recordset e creazione del pacchetto MIME. Il componente ADISAPI funziona tramite l'API fornita da Internet Information Services (IIS). Vedere anche *ISAPI*.  
   
  funzione di aggregazione  
@@ -45,7 +44,7 @@ In questo argomento definisce termini rilevanti per ADO.
  operazione asincrona  
  Un'operazione che restituisce il controllo al programma chiamante senza attendere il completamento dell'operazione. Prima che l'operazione è stata completata, continua l'esecuzione di codice. Vedere anche *operazione sincrona*.  
   
-## <a name="b"></a>B  
+## <a name="b"></a>b  
  voce binding  
  Un mapping tra un campo in una tabella e una variabile. Nelle estensioni ADO di Visual C++, **Recordset** mapping dei campi per le variabili di C/C++.  
   
@@ -65,7 +64,7 @@ In questo argomento definisce termini rilevanti per ADO.
  regola di Business  
  La combinazione di modifiche di convalida, verifiche di accesso, le ricerche nel database, i criteri e trasformazioni algoritmiche che costituiscono un'azienda di attività di business. Noto anche come *logica di business*.  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
  espressione calcolata  
  Un'espressione che non è costante, ma il cui valore dipende da altri valori. Per poter essere valutata, un'espressione calcolata necessario ottenere e calcolare i valori da altre origini, in genere in altri campi o righe.  
   
@@ -165,7 +164,7 @@ In questo argomento definisce termini rilevanti per ADO.
   
  Detta anche *costante enumerata*. Vedere anche *costante*.  
   
- evento  
+ event  
  Un'azione che viene riconosciuta da un oggetto, per cui è possibile scrivere codice per rispondere. Gli eventi possono essere generati dall'esecuzione del comando, il completamento delle transazioni, navigazione del recordset e gli aggiornamenti dei dati, tra le altre azioni. Vedere anche *gestore dell'evento*.  
   
  gestore dell'evento  

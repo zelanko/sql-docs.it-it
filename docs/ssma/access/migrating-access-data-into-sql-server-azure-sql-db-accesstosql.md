@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d15d7608879d9116832e083654cc07717c72e23e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f0e93efee0c57c904c32ec52fbb560f973f21b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453489"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907139"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-db-accesstosql"></a>La migrazione dei dati di accesso a SQL Server - Azure SQL database (AccessToSQL)
 Dopo avere creato gli oggetti di database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile migrare i dati da Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  

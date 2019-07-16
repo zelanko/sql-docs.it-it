@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 008c1915c793eedb27d70cac27e135c2c7e753c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68b0ac877b812d78e3eddf433a08a87b8f9d45f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477079"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896867"
 ---
 # <a name="create-an-index-master-data-services"></a>Creare un indice (Master Data Services)
 
@@ -54,7 +53,7 @@ ms.locfileid: "65477079"
 |Nome colonna|Descrizione|  
 |-----------------|-----------------|  
 |Stato|Stato dell'indice.<br /><br /> Quando si fa clic su **Salva** viene visualizzata l'immagine ![Icona di aggiornamento dello stato](../master-data-services/media/mds-statusicon-updating.png "Icona di aggiornamento dello stato") che indica che è in corso l'aggiornamento dell'indice.<br /><br /> Se si verificano errori durante la creazione o la modifica di un indice viene visualizzata l'immagine ![Icona di errore](../master-data-services/media/mds-statusicon-error.png "Icona di errore").<br /><br /> In caso contrario lo stato è OK e viene visualizzata l'immagine ![Icona di stato OK](../master-data-services/media/mds-statusicon-ok.png "Icona di stato OK").|  
-|Nome|Nome dell'indice.|  
+|Name|Nome dell'indice.|  
 |Univoco|Specifica se l'indice è univoco.|  
 |Con attributi|Mostra i nomi visualizzati degli attributi su cui è definito l'indice.|  
   

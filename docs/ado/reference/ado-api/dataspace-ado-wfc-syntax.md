@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 950d45d8-07de-467b-b255-f9a7b997204c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 52e58cb358a28169a11b16e2c4d9f64ba4745bad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 569944991c029c091f0f17be4e5d943a893333a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919194"
 ---
 # <a name="dataspace-ado---wfc-syntax"></a>DataSpace (sintassi ADO/WFC)
 Il **createObject** metodo per il **DataSpace** classe specifica sia un oggetto business per elaborare le richieste dell'applicazione client (*progid*) e il protocollo di comunicazione e il server (*connessione*). **createObject** restituisce un [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md) oggetto che rappresenta il server.  

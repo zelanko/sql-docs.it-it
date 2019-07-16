@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 38ba526abcafb8d8bd046cbb1624b778bab52090
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c85332cb1c26f81cdbbaa7bffa5410cf29e711e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816299"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904557"
 ---
 # <a name="sysresourcegovernorconfiguration-transact-sql"></a>sys.resource_governor_configuration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce lo stato di Resource Governor memorizzato.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |classifier_function_id|**int**|ID della funzione di classificazione memorizzata nei metadati. Non ammette i valori Null.<br /><br /> **Nota** questa funzione viene usata per classificare le nuove sessioni e utilizza regole per indirizzare il carico di lavoro al gruppo di carico di lavoro appropriato. Per altre informazioni, vedere [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).|  
 |is_enabled|**bit**|Indica lo stato corrente di Resource Governor:<br /><br /> 0 = resource Governor non è abilitato.<br /><br /> 1 = resource Governor è abilitato.<br /><br /> Non ammette i valori Null.|  

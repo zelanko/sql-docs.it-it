@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2912328aa61437b663a290952deaaea7b5c06bca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26caf2b54b4f0affbbe7cdc58fa2bf742f0d4101
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700753"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925361"
 ---
 # <a name="event-parameters"></a>Parametri evento
 Ogni gestore di evento include un parametro di stato che controlla il gestore dell'evento. Per gli eventi completati, questo parametro viene utilizzato anche per indicare l'esito positivo o negativo dell'operazione che ha generato l'evento. Gli eventi più completi hanno anche un parametro di errore per fornire informazioni su eventuali errori che potrebbero essersi verificati e uno o più parametri di oggetti che fanno riferimento a oggetti ADO usati per eseguire l'operazione. Ad esempio, il [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) evento include i parametri di oggetto per il **comando**, **Recordset**, e **connessione** oggetti associato all'evento. Nell'esempio seguente di Microsoft® Visual Basic®, è possibile visualizzare il pCommand, pCommand e pConnection gli oggetti che rappresentano il **comandi**, **Recordset**, e **connessione** gli oggetti utilizzati per il **Execute** (metodo).  

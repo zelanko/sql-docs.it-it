@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e0a44320072f11a56b735502be3f1776f29cc1c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86f888955e6188cd7f90e54f39eeef3723dcfbe8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538013"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897722"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions Function
 **Conformità**  
@@ -139,7 +138,7 @@ SQLRETURN SQLGetFunctions(
   
  [2] **SQLCancelHandle** verranno restituiti come supportato solo se il driver supporta entrambi **SQLCancel** e **SQLCancelHandle**. Se **SQLCancel** è supportata ma **SQLCancelHandle** non lo è, l'applicazione potrà ancora chiamare **SQLCancelHandle** su un handle di istruzione, perché ne verrà eseguito il mapping a  **SQLCancel**.  
   
-## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS Macro  
+## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS (macro)  
  Il SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) macro viene usata per determinare il supporto di ODBC 3*x* o le funzioni precedenti dopo **SQLGetFunctions**  è stato chiamato con un *FunctionId* argomento di SQL_API_ODBC3_ALL_FUNCTIONS. L'applicazione chiama SQL_FUNC_EXISTS con il *SupportedPtr* argomento impostato sulle *SupportedPtr* passato *SQLGetFunctions*e con il  *FunctionID* argomento impostato il **#define** per la funzione. SQL_FUNC_EXISTS restituisce SQL_TRUE se la funzione è supportata e SQL_FALSE in caso contrario.  
   
 > [!NOTE]

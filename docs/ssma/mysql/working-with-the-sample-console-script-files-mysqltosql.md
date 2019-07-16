@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7d00385c7346d7602719326dbe700f7cd44c63fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6dacba33ecbaa7bdeb51d0a31438c3cbdb21969f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288564"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904890"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>Lavorare con i file di Script di esempio Console (MySQLToSQL)
 Alcuni file di esempio sono stati forniti insieme al prodotto per il riferimento all'utente e l'utilizzo. In questa sezione descrive il modo con facilità personalizzare questi script per soddisfare le esigenze degli utenti finali.  
@@ -125,5 +124,5 @@ I seguenti file script di esempio console relativi a diversi scenari sono stati 
 ## <a name="see-also"></a>Vedere anche  
 [Creazione di file di valore della variabile &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
 [Creazione di file di connessione del Server &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
-[Generating Reports &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)  
+[Generazione di report &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)  
   

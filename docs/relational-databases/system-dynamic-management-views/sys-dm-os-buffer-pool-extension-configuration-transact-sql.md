@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d6d647fc2a1a4d5f88a85ec5917125527004570c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 38e4e1ad85a5e968d4b0bb33a3a72a829942585b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62503802"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900213"
 ---
 # <a name="sysdmosbufferpoolextensionconfiguration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 
@@ -36,7 +35,7 @@ ms.locfileid: "62503802"
   
 | Nome colonna | Tipo di dati | Descrizione |
 | :---------- | :-------- | :---------- |
-|percorso|**nvarchar**(256)|Percorso e nome del file della cache di estensione del pool di buffer. Ammette valori Null.|  
+|path|**nvarchar**(256)|Percorso e nome del file della cache di estensione del pool di buffer. Ammette valori Null.|  
 |file_id|**int**|ID del file di estensione del pool di buffer. Non ammette i valori Null.|  
 |state|**int**|Stato della funzionalità di estensione del pool di buffer. Non ammette i valori Null.<br /><br /> 0 - Estensione pool di buffer disabilitata<br /><br /> 1 - Disabilitazione estensione pool di buffer<br /><br /> 2: riservato per utilizzi futuri<br /><br /> 3 - Abilitazione estensione pool di buffer<br /><br /> 4 - Riservato per utilizzi futuri<br /><br /> 5 - Estensione pool di buffer abilitata|  
 |state_description|**nvarchar**(60)|Descrive lo stato della funzionalità di estensione del pool di buffer. Ammette i valori Null.<br /><br /> 0 = BUFFER POOL EXTENSION DISABLED<br /><br /> 5 = ESTENSIONE DEL POOL DI BUFFER ABILITATA|
@@ -48,7 +47,7 @@ ms.locfileid: "62503802"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-configuration-buffer-pool-extension-information"></a>A. Restituzione delle informazioni di configurazione sull'estensione del pool di buffer  
+### <a name="a-returning-configuration-buffer-pool-extension-information"></a>R. Restituzione delle informazioni di configurazione sull'estensione del pool di buffer  
  Nell'esempio seguente vengono restituite tutte le colonne dalla DMV sys.dm_os_buffer_pool_extension_configuration.  
   
 ```sql  

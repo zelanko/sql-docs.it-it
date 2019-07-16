@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 49a3c276aa17d8f2bd7f48296eeecb69ad91d04d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e2d1c30546a8466ba9950f31cffdfb9447bd89ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718372"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923382"
 ---
 # <a name="xml-persistence-format"></a>Formato di persistenza XML
 ADO utilizza la codifica UTF-8 per il flusso XML che viene mantenuto.  

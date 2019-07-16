@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2ad6c2804b70011380a12b5b9e0cd1f52fd56398
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71396a071a42d7dd40a6537a2834541aab2b6bad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696869"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921098"
 ---
 # <a name="ado-dynamic-properties"></a>Proprietà dinamiche ADO
 Proprietà dinamica possono essere aggiunte alle [le proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolte del [connessione](../../../ado/reference/ado-api/connection-object-ado.md), [comando](../../../ado/reference/ado-api/command-object-ado.md), o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetti. L'origine per queste proprietà è di provider di dati, ad esempio la [il Provider OLE DB per SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), o un provider di servizi, ad esempio le [Microsoft Cursor Service per OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Vedere la documentazione di provider di servizio per altre informazioni su una proprietà dinamica specifica o provider di dati appropriato.  
@@ -31,7 +30,7 @@ Proprietà dinamica possono essere aggiunte alle [le proprietà](../../../ado/re
 |||  
 |-|-|  
 |[Ottimizzazione](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Specifica se è necessario creare un indice su questo campo.|  
-|[Prompt](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|Specifica se il provider OLE DB deve richiedere all'utente le informazioni di inizializzazione.|  
+|[Richiesta](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|Specifica se il provider OLE DB deve richiedere all'utente le informazioni di inizializzazione.|  
 |[Proprietà dinamica Reshape Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Specifica un nome per il **Recordset** oggetto.|  
 |[La risincronizzazione di comando](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Specifica un comando fornito dall'utente di stringhe che il **Risincronizza** i problemi di metodi per aggiornare i dati nella tabella denominata nel **tabella univoca** proprietà dinamica.|  
 |[Tabella univoca, Schema univoco, catalogo univoco](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**Tabella univoca** specifica il nome della tabella di base su cui sono consentite aggiornamenti, inserimenti ed eliminazioni.<br /><br /> **Schema univoco** specifica lo schema, o nome del proprietario della tabella.<br /><br /> **Catalogo univoco** specifica il catalogo, o il nome del database contenente la tabella.|  

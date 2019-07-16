@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 62118034106187081ba41be91026ecd6d7330ec5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 755e9c6baa708033f166f7026164590c2119e44d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485058"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896913"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Creare una vista sottoscrizioni per esportare i dati (Master Data Services)
 
@@ -66,7 +65,7 @@ ms.locfileid: "65485058"
 ## <a name="view-information"></a>Visualizzare informazioni  
  Per ogni vista creata, viene aggiunta alla griglia una riga con dieci colonne. La tabella seguente descrive le colonne.  
   
-|colonna|Descrizione|  
+|Colonna|Descrizione|  
 |------------|-----------------|  
 |Stato|Stato della vista.<br /><br /> Quando si fa clic su **Salva** viene visualizzata l'immagine ![Icona di aggiornamento dello stato](../master-data-services/media/mds-statusicon-updating.png "Icona di aggiornamento dello stato") che indica che è in corso l'aggiornamento della visualizzazione.<br /><br /> Se si verificano errori durante la creazione o la modifica di una vista viene visualizzata l'immagine ![Icona di errore](../master-data-services/media/mds-statusicon-error.png "Icona di errore").<br /><br /> In caso contrario lo stato è OK e viene visualizzata l'immagine ![Icona di stato OK](../master-data-services/media/mds-statusicon-ok.png "Icona di stato OK").|  
 |Nome|Nome della vista sottoscrizioni.|  

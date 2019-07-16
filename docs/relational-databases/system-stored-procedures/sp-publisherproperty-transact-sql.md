@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 49be961d1bc34bcc06b046e95b73d0b5c8ed33ac
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5c4ba291619ae756fa9803606eda4427a155ae39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896486"
 ---
 # <a name="sppublisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +39,10 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [**@publisher** =] **'***publisher***'**  
+ [ **@publisher** = ] **'***publisher***'**  
  Nome del server di pubblicazione eterogeneo. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [**@propertyname** =] **'***propertyname***'**  
+ [ **@propertyname** =] **'***propertyname***'**  
  Nome della proprietà da impostare. *PropertyName* viene **sysname**, e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
@@ -54,7 +53,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
  Quando *propertyname* viene omessa vengono restituite tutte le proprietà impostabili.  
   
- [**@propertyvalue** =] **'***propertyvalue***'**  
+ [ **@propertyvalue** =] **'***propertyvalue***'**  
  Nuovo valore per la proprietà. *PropertyValue* viene **sysname**, con un valore predefinito NULL. Quando *propertyvalue* viene omesso, l'impostazione corrente per la proprietà viene restituita.  
   
 ## <a name="result-sets"></a>Set di risultati  

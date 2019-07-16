@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8dd1263d19972124166e1e11d91c8370fc3a9ff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696739"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921089"
 ---
 # <a name="ado-dynamic-property-index"></a>Indice delle proprietà dinamiche ADO
 Provider di dati, i provider di servizi e componenti del servizio possono aggiungere proprietà dinamiche per le **delle proprietà** raccolte di oggetti [connessione](../../../ado/reference/ado-api/connection-object-ado.md) e [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetti. Un determinato provider può inoltre inserire le proprietà aggiuntive quando questi oggetti sono aperti. Alcune di queste proprietà sono elencate le [proprietà dinamiche ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) sezione. Più sono elencati sotto il provider specifici nel [appendice a: I provider](../../../ado/guide/appendixes/appendix-a-providers.md) sezione.  

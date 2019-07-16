@@ -1,5 +1,5 @@
 ---
-title: 'Panoramica: Esportazione di dati (Master Data Services) | Microsoft Docs'
+title: Panoramica Esportazione di dati (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e575aeaad1250e2795a75f525954218985cb71ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db511e86162ff841e9ec97d8f696a3f37c4c75f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488108"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904003"
 ---
-# <a name="overview-exporting-data-master-data-services"></a>Panoramica: Esportazione di dati (Master Data Services)
+# <a name="overview-exporting-data-master-data-services"></a>Panoramica Esportazione di dati (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

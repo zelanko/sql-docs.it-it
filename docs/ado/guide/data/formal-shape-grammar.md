@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0af2421a0d1f80922560be556062c89074c21838
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91bdf0cfbfe87075d2c9484bca7edd835a950ee6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925345"
 ---
 # <a name="formal-shape-grammar"></a>Grammatica formale per Shape
 Questa è la grammatica formale per la creazione di qualsiasi comando shape:  
@@ -43,26 +42,26 @@ Questa è la grammatica formale per la creazione di qualsiasi comando shape:
 |Nome|Definizione|  
 |----------|----------------|  
 |\<shape-command>|SHAPE [\<table-exp> [[AS] \<alias>]][\<shape-action>]|  
-|\<table-exp>|{\<provider-command-text>} &#124;<br /><br /> (\<shape-command>) &#124;<br /><br /> TABELLA \<racchiusi tra virgolette-name >&#124;<br /><br /> \<quoted-name>|  
-|\<shape-action>|APPEND \<elenco di campi con alias >&#124;<br /><br /> COMPUTE \<aliased-field-list> [BY \<field-list>]|  
-|\<aliased-field-list>|\<aliased-field> [, \<aliased-field...>]|  
-|\<aliased-field>|\<field-exp> [[AS] \<alias>]|  
+|\<table-exp>|{\<provider-command-text>} &#124;<br /><br /> (\<comando shape >)&#124;<br /><br /> TABELLA \<racchiusi tra virgolette-name >&#124;<br /><br /> \<quoted-name>|  
+|\<shape-action>|APPEND \<elenco di campi con alias >&#124;<br /><br /> CALCOLARE \<elenco di campi con alias > [BY \<-elenco dei campi >]|  
+|\<aliased-field-list>|\<alias-field > [, \<con alias-campo... >]|  
+|\<aliased-field>|\<campo exp > [[AS] \<alias >]|  
 |\<field-exp>|(\<relation-exp>) &#124;<br /><br /> \<calculated-exp> &#124;<br /><br /> \<aggregate-exp> &#124;<br /><br /> \<new-exp>|  
-|<relation_exp>|\<table-exp> [[AS] \<alias>]<br /><br /> RELATE \<relazione-cond-list >|  
-|\<relation-cond-list>|\<relation-cond> [, \<relation-cond>...]|  
-|\<relation-cond>|\<campo-name > a \<figlio-ref >|  
-|\<child-ref>|\<field-name> &#124;<br /><br /> PARAMETRO \<-ref param >|  
-|\<param-ref>|\<number>|  
-|\<field-list>|\<field-name> [, \<field-name>]|  
-|\<aggregate-exp>|SUM(\<qualified-field-name>) &#124;<br /><br /> AVG(\<qualified-field-name>) &#124;<br /><br /> MIN(\<qualified-field-name>) &#124;<br /><br /> MAX(\<qualified-field-name>) &#124;<br /><br /> COUNT(\<qualified-alias> &#124; \<qualified-name>) &#124;<br /><br /> STDEV(\<qualified-field-name>) &#124;<br /><br /> QUALSIASI (\<qualified-campo-name >)|  
-|\<calculated-exp>|CALC(\<expression>)|  
+|<relation_exp>|\<exp-tabella > [[AS] \<alias >]<br /><br /> RELATE \<relazione-cond-list >|  
+|\<relation-cond-list>|\<relazione cond > [, \<relazione cond >...]|  
+|\<relazione cond >|\<campo-name > a \<figlio-ref >|  
+|\<child-ref>|\<nome del campo >&#124;<br /><br /> PARAMETRO \<-ref param >|  
+|\<param-ref>|\<numero >|  
+|\<field-list>|\<nome del campo > [, \<campo-name >]|  
+|\<aggregate-exp>|SUM (\<qualified-campo-name >)&#124;<br /><br /> AVG (\<qualified-campo-name >)&#124;<br /><br /> MIN (\<qualified-campo-name >)&#124;<br /><br /> MAX(\<qualified-field-name>) &#124;<br /><br /> COUNT(\<qualified-alias> &#124; \<qualified-name>) &#124;<br /><br /> STDEV(\<qualified-field-name>) &#124;<br /><br /> QUALSIASI (\<qualified-campo-name >)|  
+|\<calculated-exp>|CALC (\<espressione >)|  
 |\<qualified-field-name>|\<alias>.[\<alias>...]\<field-name>|  
 |\<alias>|\<quoted-name>|  
-|\<field-name>|\<quoted-name> [[AS] \<alias>]|  
+|\<field-name>|\<racchiuso tra virgolette-name > [[AS] \<alias >]|  
 |\<quoted-name>|"\<string>" &#124;<br /><br /> '\<string>' &#124;<br /><br /> [\<string>] &#124;<br /><br /> \<Nome >|  
 |\<qualified-name>|alias[.alias...]|  
 |\<Nome >|alpha [ alpha &#124; digit &#124; _ &#124; # &#124; : &#124; ...]|  
-|\<number>|cifra [numero]|  
+|\<numero >|cifra [numero]|  
 |\<new-exp>|NUOVE \<-tipo di campo > [(\<numero > [, \<numero >])]|  
 |\<field-type>|Un tipo di dati OLE DB o ADO.|  
 |\<string>|Unicode-char [-char unicode...]|  

@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 88f05392-1e97-4693-ba60-a4910af3c000
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7b3c6cb1c61c15cb81a5c9452b874263cf62bc02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 770ddc4d1e182360b13d4f9e27d9e0bbf80cceee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899578"
 ---
 # <a name="sysdmpdwcomponenthealthalerts-transact-sql"></a>sys.dm_pdw_component_health_alerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "62690485"
 |pdw_node_id|**int**|Identificatore univoco di un [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] nodo.<br /><br /> pdw_node_id, id_componente, component_instance_id, alert_id e alert_instance_id formano la chiave per questa visualizzazione.|NOT NULL|  
 |component_id|**int**|L'ID del componente. Visualizzare [sys.pdw_health_components &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).<br /><br /> pdw_node_id, id_componente, component_instance_id, alert_id e alert_instance_id formano la chiave per questa visualizzazione.|NOT NULL|  
 |component_instance_id|**nvarchar(255)**|pdw_node_id, id_componente, component_instance_id, alert_id e alert_instance_id formano la chiave per questa visualizzazione.|NOT NULL|  
-|alert_id|**int**|L'ID per il tipo di avviso. See [sys.pdw_health_alerts &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-alerts-transact-sql.md).<br /><br /> pdw_node_id, id_componente, component_instance_id, alert_id e alert_instance_id formano la chiave per questa visualizzazione.|NOT NULL|  
+|alert_id|**int**|L'ID per il tipo di avviso. Visualizzare [sys.pdw_health_alerts &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-alerts-transact-sql.md).<br /><br /> pdw_node_id, id_componente, component_instance_id, alert_id e alert_instance_id formano la chiave per questa visualizzazione.|NOT NULL|  
 |alert_instance_id|**nvarchar(36)**|Identifica un'istanza di un determinato avviso.<br /><br /> pdw_node_id, id_componente, component_instance_id, alert_id e alert_instance_id formano la chiave per questa visualizzazione.|NOT NULL|  
 |previous_value|**nvarchar(255)**|Utilizzato quando l'avviso è di tipo StatusChange. Questo è lo stato del componente precedente. Valore è NULL per gli avvisi di tipo soglia. Visualizzare [sys.pdw_health_alerts &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-pdw-health-alerts-transact-sql.md) per un elenco dei tipi di avviso.|NULL|  
 |current_value|**nvarchar(255)**|Utilizzato quando l'avviso è di tipo StatusChange. Questo è lo stato del componente corrente. Valore è NULL per gli avvisi di tipo soglia. Visualizzare [sys.pdw_health_alerts &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-pdw-health-alerts-transact-sql.md) per un elenco dei tipi di avviso.|NULL|  

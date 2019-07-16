@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f5c9091e3a949e5a358f5bd1305d096491782012
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9c4dcd79945644f0bc44d9ca3e948fa4f85d4e40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537314"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905183"
 ---
 # <a name="spmschangesnapshotagentproperties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +99,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
   
 `[ @active_end_time_of_day = ] active_end_time_of_day` L'ora del giorno quando si arresta l'agente Snapshot viene pianificata, nel formato HHMMSS. *active_end_time_of_day* viene **int**, non prevede alcun valore predefinito.  
   
-`[ @snapshot_job_name = ] 'snapshot_agent_name'` È il nome di un processo dell'agente Snapshot esistente se viene utilizzato un processo esistente. *snapshot_agent_name* viene **nvarchar(100)**, non prevede alcun valore predefinito.  
+`[ @snapshot_job_name = ] 'snapshot_agent_name'` È il nome di un processo dell'agente Snapshot esistente se viene utilizzato un processo esistente. *snapshot_agent_name* viene **nvarchar(100)** , non prevede alcun valore predefinito.  
   
 `[ @publisher_security_mode = ] publisher_security_mode` La modalità di sicurezza utilizzata dall'agente quando ci si connette al server di pubblicazione. *publisher_security_mode* viene **int**, non prevede alcun valore predefinito. **0** specifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione, e **1** specifica l'autenticazione di Windows. Un valore pari **0** deve essere specificato per non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
@@ -111,7 +110,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 > [!IMPORTANT]  
 >  Non archiviare informazioni di autenticazione in file script. Per migliorare la sicurezza, si consiglia di specificare nomi e password di accesso in fase di esecuzione.  
   
-`[ @job_login = ] 'job_login'` È l'account di accesso per l'account di Windows con cui viene eseguito l'agente. *job_login* viene **nvarchar(257)**, non prevede alcun valore predefinito. Questo account di Windows viene sempre utilizzato per le connessioni dell'agente al server di distribuzione. È necessario specificare questo parametro per la creazione di un nuovo processo per l'agente snapshot. *Non può essere modificato per non -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *server di pubblicazione.*  
+`[ @job_login = ] 'job_login'` È l'account di accesso per l'account di Windows con cui viene eseguito l'agente. *job_login* viene **nvarchar(257)** , non prevede alcun valore predefinito. Questo account di Windows viene sempre utilizzato per le connessioni dell'agente al server di distribuzione. È necessario specificare questo parametro per la creazione di un nuovo processo per l'agente snapshot. *Non può essere modificato per non -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *server di pubblicazione.*  
   
 `[ @job_password = ] 'job_password'` È la password per l'account di Windows con cui viene eseguito l'agente. *job_password* viene **sysname**, non prevede alcun valore predefinito. È necessario specificare questo parametro per la creazione di un nuovo processo per l'agente snapshot.  
   

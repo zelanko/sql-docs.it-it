@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a6741b5f07f2427ef502f5177bbf01acd56c4d5b
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: a91f051badfabe19373825edd156e6b2c21ca2c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911359"
 ---
 # <a name="odbc-glossary"></a>Glossario di ODBC
 ## <a name="a"></a>A  
@@ -38,7 +37,7 @@ ms.locfileid: "67794173"
  **API**  
  Application Programming Interface. Un set di routine che un'applicazione utilizza per richiedere e svolgere servizi di livello inferiore. L'API ODBC è costituita da funzioni di ODBC.  
   
- **application**  
+ **Applicazione**  
  Un programma eseguibile che chiama le funzioni dell'API ODBC.  
   
  **descrittore del parametro dell'applicazione (APD)**  
@@ -164,7 +163,7 @@ ms.locfileid: "67794173"
  **database desktop**  
  Un DBMS progettato per essere eseguito su un personal computer. Questi DBMS in generale, non si fornisce un motore di database autonoma e deve essere accessibile tramite un driver basati su file. I motori di questi driver in genere hanno ridotto il supporto per SQL e le transazioni. Ad esempio, dBASE, Paradox, Btrieve o Microsoft® FoxPro.  
   
- **diagnostic**  
+ **Diagnostica**  
  Un record contenente informazioni diagnostiche sull'ultima funzione chiamata che è usato un handle specifico. I record di diagnostica associati all'ambiente, connessione, istruzione e gli handle di descrittore.  
   
  **DML**  
@@ -173,7 +172,7 @@ ms.locfileid: "67794173"
  **driver**  
  Una routine della libreria che espone le funzioni dell'API ODBC. I driver sono specifici di un singolo DBMS.  
   
- **Driver Manager**  
+ **Gestione driver**  
  Una libreria di routine che gestisce l'accesso al driver per l'applicazione. Gestione Driver carica e scarica (o si connette a e si disconnette dalla) i driver e passa le chiamate a funzioni ODBC per il driver corretto.  
   
  **DLL di installazione di driver**  
@@ -318,7 +317,7 @@ ms.locfileid: "67794173"
  **outer join**  
  Un join in cui vengono restituite le righe senza corrispondenza e corrispondenti. I valori di tutte le colonne della tabella non corrispondenti nelle righe non corrispondenti vengono impostati su NULL.  
   
- **owner**  
+ **Proprietario**  
  Il proprietario di una tabella.  
   
 ## <a name="p"></a>P  
@@ -415,7 +414,7 @@ ms.locfileid: "67794173"
  **con cursori scorrevoli**  
  Un cursore che può spostarsi avanti o indietro tra il set di risultati.  
   
- **serializability**  
+ **serializzabilità è infatti**  
  Se due transazioni simultaneamente producono un risultato che è quello utilizzato per l'esecuzione seriale (o sequenziale) di tali transazioni. Le transazioni serializzabili sono tenute a mantenere l'integrità del database.  
   
  **database del server**  
@@ -498,5 +497,5 @@ ms.locfileid: "67794173"
  Valore intero passato a o restituito da una funzione ODBC per indicare il tipo di dati di una variabile di applicazione, un parametro o una colonna. ODBC sono definiti gli indicatori di tipo per tipi di dati C sia SQL.  
   
 ## <a name="v"></a>V  
- **view**  
+ **Visualizzazione**  
  Un modo alternativo per visualizzare i dati in una o più tabelle. Una vista in genere viene creata un subset delle colonne da una o più tabelle. In ODBC le visualizzazioni sono generalmente equivalenti alle tabelle.

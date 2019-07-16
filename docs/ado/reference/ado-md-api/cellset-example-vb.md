@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d98c465bdf3890cde10a405b7f2d139330fe9c05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b099a1eb5d513285b33b26f5623f1e14b322731
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911587"
 ---
 # <a name="cellset-example-vb"></a>Esempio di Cellset (VB)
 Questo progetto di Visual Basic illustra le nozioni di base dell'uso di ADO MD per accedere ai dati del cubo. Visualizza le didascalie dei membri per le intestazioni di riga e colonna, quindi Visualizza i valori di celle specifiche nel set di celle formattati.  

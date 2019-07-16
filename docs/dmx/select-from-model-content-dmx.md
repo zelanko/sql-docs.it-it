@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3498e841b70ca7a19d9353d277221a88b9cbf86f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 63cd10aaddfb0a22f8942e48007d36f8e634b233
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512249"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906728"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;modello&gt;. CONTENUTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +31,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
   
 ## <a name="arguments"></a>Argomenti  
  *n*  
- Facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
+ facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
   
  *elenco di espressioni*  
  Elenco delimitato da virgole contenente colonne derivate dal set di righe dello schema relativo al contenuto.  
@@ -41,13 +40,13 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Identificatore del modello.  
   
  *espressione della condizione*  
- Facoltativo. Condizione per limitare i valori restituiti dall'elenco di colonne.  
+ facoltativo. Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
  *expression*  
- Facoltativo. Espressione che restituisce un valore scalare.  
+ facoltativo. Espressione che restituisce un valore scalare.  
   
 ## <a name="remarks"></a>Note  
- Il **SELECT FROM**  _\<modello >_**. CONTENUTO** contenuto specifico per ogni algoritmo restituito dall'istruzione. È ad esempio possibile utilizzare le descrizioni di tutte le regole di un modello Association Rules in un'applicazione personalizzata. È possibile usare una **SELECT FROM \<modello >. CONTENUTO** istruzione per restituire i valori nella colonna NODE_RULE del modello.  
+ Il **SELECT FROM**  _\<modello >_ **. CONTENUTO** contenuto specifico per ogni algoritmo restituito dall'istruzione. È ad esempio possibile utilizzare le descrizioni di tutte le regole di un modello Association Rules in un'applicazione personalizzata. È possibile usare una **SELECT FROM \<modello >. CONTENUTO** istruzione per restituire i valori nella colonna NODE_RULE del modello.  
   
  Nella tabella seguente vengono elencate le colonne incluse nel contenuto del modello di data mining.  
   
@@ -60,7 +59,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |MODEL_SCHEMA|Nome di schema non qualificato. Se il provider non supporta gli schemi, ha valore NULL.|  
 |MODEL_NAME|Nome di modello. Questa colonna non può contenere valori NULL.|  
 |ATTRIBUTE_NAME|Nome dell'attributo che corrisponde al nodo.|  
-|NODE_NAME|Nome del nodo.|  
+|NODE_NAME|Il nome del nodo.|  
 |NODE_UNIQUE_NAME|Nome univoco del nodo all'interno del modello.|  
 |NODE_TYPE|Valore intero che rappresenta il tipo del nodo. .|  
 |NODE_GUID|GUID del nodo. Se il GUID non è presente, ha valore NULL.|  
@@ -144,7 +143,7 @@ WHERE NODE_TYPE = 26
 |TM_NaiveBayes|Bike Buyer|1|6383|  
   
 ## <a name="see-also"></a>Vedere anche  
- [SELEZIONARE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
  [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   

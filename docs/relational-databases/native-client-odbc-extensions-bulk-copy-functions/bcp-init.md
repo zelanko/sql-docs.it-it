@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74400acc3030967a985fca6041a60b96947ef64b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e47c7c4f5324da021db2624e5e936493fd54ea45
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630299"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895527"
 ---
 # <a name="bcpinit"></a>bcp_init
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +44,7 @@ RETCODE bcp_init (
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *HDBC*  
+ *hdbc*  
  Handle di connessione ODBC abilitato per la copia bulk.  
   
  *szTable*  
@@ -84,7 +83,7 @@ RETCODE bcp_init (
   
 -   Quando si esegue la copia dati di in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la posizione ordinale di una colonna nel file di dati deve essere identica alla posizione ordinale della colonna nella tabella di database. Durante la copia da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp_exec** inserisce dati in base alla posizione ordinale della colonna nella tabella di database.  
   
--   Se un tipo di dati di database è di lunghezza variabile (ad esempio, **varbinary(22)**) o se una colonna del database può contenere valori null, i dati nel file di dati sono preceduti da un indicatore di lunghezza o null. La larghezza dell'indicatore varia in base al tipo di dati e alla versione della copia bulk.  
+-   Se un tipo di dati di database è di lunghezza variabile (ad esempio, **varbinary(22)** ) o se una colonna del database può contenere valori null, i dati nel file di dati sono preceduti da un indicatore di lunghezza o null. La larghezza dell'indicatore varia in base al tipo di dati e alla versione della copia bulk.  
   
  Per modificare i valori del formato dati specificati per un file di dati, chiamare [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) e [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md).  
   

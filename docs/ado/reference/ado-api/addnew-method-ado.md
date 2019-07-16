@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: da8ef8208ae3edd1219eb81ec93e77ba5a275f87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2f9efa8f5042fab603c794edada5aacab001936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704223"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921322"
 ---
 # <a name="addnew-method-ado"></a>Metodo AddNew (ADO)
 Crea un nuovo record per un aggiornabile [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
@@ -42,7 +41,7 @@ recordset.AddNew FieldList, Values
  Facoltativo. Un singolo nome o una matrice di nomi o le posizioni ordinali dei campi nel nuovo record.  
   
  *Valori*  
- Facoltativo. Un singolo valore o una matrice di valori per i campi nel nuovo record. Se *Fieldlist* è una matrice *valori* deve anche essere una matrice con lo stesso numero di membri; in caso contrario, si verifica un errore. L'ordine dei nomi di campo deve corrispondere all'ordine dei valori di campo in ogni matrice.  
+ facoltativo. Un singolo valore o una matrice di valori per i campi nel nuovo record. Se *Fieldlist* è una matrice *valori* deve anche essere una matrice con lo stesso numero di membri; in caso contrario, si verifica un errore. L'ordine dei nomi di campo deve corrispondere all'ordine dei valori di campo in ogni matrice.  
   
 ## <a name="remarks"></a>Note  
  Usare la **AddNew** metodo per creare e inizializzare un nuovo record. Usare la [supporta](../../../ado/reference/ado-api/supports-method.md) metodo con **adAddNew** (una [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) valore) per verificare se è possibile aggiungere record corrente **Recordset**oggetto.  

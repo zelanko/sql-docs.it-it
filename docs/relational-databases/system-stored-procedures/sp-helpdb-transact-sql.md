@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d47f8d8ebd0e37f106e7610937af8f6585820cce
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7acc14d3950e0e2d1004727b2efbffd2e4963a2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533433"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903023"
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome del database.|  
 |**db_size**|**nvarchar(13)**|Dimensioni totali del database.|  
-|**owner**|**sysname**|Proprietario del database, ad esempio **sa**.|  
+|**Proprietario**|**sysname**|Proprietario del database, ad esempio **sa**.|  
 |**dbid**|**smallint**|ID del database.|  
 |**created**|**nvarchar(11)**|Data di creazione del database.|  
 |**status**|**nvarchar(600)**|Elenco separato da virgola dei valori delle opzioni impostate nel database.<br /><br /> Le opzioni con valori booleani vengono elencate solo se sono abilitate. Sono elencate le opzioni non booleane con i relativi valori nel formato *option_name*=*valore*.<br /><br /> Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
@@ -68,7 +67,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**size**|**nvarchar(18)**|Dimensione del file espressa in megabyte.|  
 |**maxsize**|**nvarchar(18)**|Dimensioni massime consentite per il file. Se questo campo include il valore UNLIMITED, le dimensioni del file possono aumentare fino a riempire il disco.|  
 |**growth**|**nvarchar(18)**|Incremento per l'aumento delle dimensioni del file. Indica la quantità di spazio aggiunta al file ogni volta che è necessario spazio aggiuntivo.|  
-|**usage**|**varchar(9)**|Utilizzo del file. Per un file di dati, il valore è **'solo data'** e per il file di log è il valore **'di log solo'**.|  
+|**usage**|**varchar(9)**|Utilizzo del file. Per un file di dati, il valore è **'solo data'** e per il file di log è il valore **'di log solo'** .|  
   
 ## <a name="remarks"></a>Note  
  Il **stato** colonna nel risultato del set di report quali opzioni sono state impostate su ON nel database. Tutte le opzioni di database non vengono segnalate dal **stato** colonna. Per visualizzare un elenco completo delle impostazioni correnti del database, usare il **Sys. Databases** vista del catalogo.  
@@ -80,7 +79,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-information-about-a-single-database"></a>A. Restituzione di informazioni su un solo database  
+### <a name="a-returning-information-about-a-single-database"></a>R. Restituzione di informazioni su un solo database  
  Nell'esempio seguente vengono visualizzate informazioni sul database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  

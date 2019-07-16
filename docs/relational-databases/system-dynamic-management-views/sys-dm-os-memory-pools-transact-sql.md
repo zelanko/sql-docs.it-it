@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 1ef053f3-c6f3-456e-82b6-26e4bd630d46
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0483d616a8e95662b7501b1d5de74abd6ad3cfef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4292c659e796a61e601296a2ac984de987526cad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013291"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899899"
 ---
 # <a name="sysdmosmemorypools-transact-sql"></a>sys.dm_os_memory_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "63013291"
 ## <a name="permissions"></a>Permissions
 
 Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
-Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
+In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] è richiesta l'autorizzazione `VIEW DATABASE STATE` per il database.   
 
 ## <a name="remarks"></a>Note  
  I componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] talvolta utilizzano una struttura comune di pool per memorizzare nella cache tipi di dati omogenei e senza informazioni sullo stato. La struttura di pool è più semplice della struttura di cache. Tutte le voci nei pool sono considerate uguali. Internamente i pool sono clerk di memoria e possono essere utilizzati nelle stesse posizioni in cui vengono utilizzati i clerk di memoria.  

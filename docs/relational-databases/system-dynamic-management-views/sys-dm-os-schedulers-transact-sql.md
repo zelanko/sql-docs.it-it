@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86b2ed6f19f17147eb5622f120898e6f579cb77a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f167aa6f4572fc1a44db83cfb9f7ea7b7a092b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65626765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899837"
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "65626765"
 |parent_node_id|**int**|ID del nodo a cui appartiene l'utilità di pianificazione, definito anche nodo padre. Rappresenta un nodo NUMA (Non-Uniform Memory Access). Non ammette i valori Null.|  
 |scheduler_id|**int**|ID dell'utilità di pianificazione. Tutte le utilità di pianificazione utilizzate per eseguire query normali sono identificate da numeri ID minori di 1048576. Quelle con ID maggiori o uguali a 1048576 vengono utilizzate internamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio l'utilità di pianificazione della connessione amministrativa dedicata. Non ammette i valori Null.|  
 |cpu_id|**smallint**|ID CPU assegnato all'utilità di pianificazione.<br /><br /> Non ammette i valori Null.<br /><br /> **Nota:** 255 non indica alcuna affinità come accadeva nel [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Visualizzare [DM os_threads &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) per ulteriori informazioni sull'affinità.|  
-|status|**nvarchar(60)**|Indica lo stato dell'utilità di pianificazione. Il valore può essere uno dei seguenti:<br /><br /> -NASCOSTO ONLINE<br />-NASCOSTO NON IN LINEA<br />-VISIBILE ONLINE<br />-VISIBILE IN MODALITÀ OFFLINE<br />-ONLINE VISIBILE (DAC)<br />-   HOT_ADDED<br /><br /> Non ammette i valori Null.<br /><br /> Le utilità di pianificazione HIDDEN vengono utilizzate per l'elaborazione delle richieste interne a [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Le utilità di pianificazione VISIBLE vengono utilizzate per l'elaborazione delle richieste dell'utente.<br /><br /> Le utilità di pianificazione OFFLINE eseguono il mapping ai processori che sono offline nella maschera di affinità e che non vengono pertanto utilizzati per l'elaborazione di alcuna richiesta. Le utilità di pianificazione ONLINE eseguono il mapping ai processori che sono online nella maschera di affinità e che sono disponibili per l'elaborazione di thread.<br /><br /> Il valore DAC indica che l'utilità di pianificazione è in esecuzione nell'ambito di una connessione amministrativa dedicata.<br /><br /> HOT ADDED indica le utilità di pianificazione aggiunte in risposta a un evento di aggiunta di CPU a caldo.|  
+|status|**nvarchar(60)**|Indica lo stato dell'utilità di pianificazione. Il valore può essere uno dei seguenti:<br /><br /> -NASCOSTO ONLINE<br />-NASCOSTO NON IN LINEA<br />-VISIBILE ONLINE<br />-VISIBILE IN MODALITÀ OFFLINE<br />-ONLINE VISIBILE (DAC)<br />-HOT_ADDED<br /><br /> Non ammette i valori Null.<br /><br /> Le utilità di pianificazione HIDDEN vengono utilizzate per l'elaborazione delle richieste interne a [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Le utilità di pianificazione VISIBLE vengono utilizzate per l'elaborazione delle richieste dell'utente.<br /><br /> Le utilità di pianificazione OFFLINE eseguono il mapping ai processori che sono offline nella maschera di affinità e che non vengono pertanto utilizzati per l'elaborazione di alcuna richiesta. Le utilità di pianificazione ONLINE eseguono il mapping ai processori che sono online nella maschera di affinità e che sono disponibili per l'elaborazione di thread.<br /><br /> Il valore DAC indica che l'utilità di pianificazione è in esecuzione nell'ambito di una connessione amministrativa dedicata.<br /><br /> HOT ADDED indica le utilità di pianificazione aggiunte in risposta a un evento di aggiunta di CPU a caldo.|  
 |is_online|**bit**|Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è configurato in modo da utilizzare solo alcuni dei processori disponibili nel server, è possibile che sia stato eseguito il mapping di alcune utilità di pianificazione a processori non inclusi nella maschera di affinità. In tal caso, questa colonna restituisce 0, a indicare che l'utilità di pianificazione non viene utilizzata per elaborare query o batch.<br /><br /> Non ammette i valori Null.|  
 |is_idle|**bit**|1 = L'utilità di pianificazione è inattiva. Nessun thread di lavoro è in esecuzione. Non ammette i valori Null.|  
 |preemptive_switches_count|**int**|Numero di volte in cui i thread di lavoro nell'utilità di pianificazione corrente sono passati alla modalità preemptive.<br /><br /> Per eseguire codice esterno a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio stored procedure estese e query distribuite, è necessario che un thread venga eseguito esternamente al controllo dell'utilità di pianificazione in modalità non preemptive. A tale scopo, un thread di lavoro passa alla modalità preemptive.|  
@@ -71,11 +70,11 @@ ms.locfileid: "65626765"
 ## <a name="permissions"></a>Permissions
 
 Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
-Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
+In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] è richiesta l'autorizzazione `VIEW DATABASE STATE` per il database.   
 
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-monitoring-hidden-and-nonhidden-schedulers"></a>A. Monitoraggio delle utilità di pianificazione nascoste e non nascoste  
+### <a name="a-monitoring-hidden-and-nonhidden-schedulers"></a>R. Monitoraggio delle utilità di pianificazione nascoste e non nascoste  
  La query seguente restituisce lo stato dei thread di lavoro e delle attività di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per tutte le utilità di pianificazione. La query viene eseguita su un computer dotato di:  
   
 -   Due processori (CPU)  

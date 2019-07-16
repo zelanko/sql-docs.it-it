@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f4443f05fbee790f5f1d266f451e1105b9c00197
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e0838c688b0518bf1fc7ed6c5d65c3ef03d0a7aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992043"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928313"
 ---
 # <a name="select-from-ltmodelgtsamplecases-dmx"></a>SELECT FROM &lt;modello&gt;. SAMPLE_CASES (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +32,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
   
 ## <a name="arguments"></a>Argomenti  
  *n*  
- Facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
+ facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
   
  *elenco di espressioni*  
  Elenco delimitato da virgole contenente identificatori di colonna correlati.  
@@ -42,10 +41,10 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
  Identificatore del modello.  
   
  *Elenco condizioni*  
- Facoltativo. Condizioni per limitare i valori restituiti dall'elenco di colonne.  
+ facoltativo. Condizioni per limitare i valori restituiti dall'elenco di colonne.  
   
  *expression*  
- Facoltativo. Espressione che restituisce un valore scalare.  
+ facoltativo. Espressione che restituisce un valore scalare.  
   
 ## <a name="remarks"></a>Note  
  I case di esempio potrebbero essere generati e potrebbero non esistere effettivamente nei dati utilizzati per il training. Il case restituito è rappresentativo del nodo di contenuto specificato.  
@@ -61,7 +60,7 @@ WHERE IsInNode('000000003')
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [SELEZIONARE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
  [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  

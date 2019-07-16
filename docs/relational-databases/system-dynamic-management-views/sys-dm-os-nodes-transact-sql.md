@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dec718bfea5748db1baa4bb5d9be8c01b85ace26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b2d0004204829225d7767c53a7d2406ff557f36
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013067"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899874"
 ---
 # <a name="sysdmosnodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +43,7 @@ Nella tabella seguente sono incluse informazioni su questi nodi.
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|ID del nodo.|  
-|node_state_desc|**nvarchar(256)**|Descrizione dello stato del nodo. I valori sono visualizzati con i valori reciprocamente esclusivi all'inizio, seguiti dai valori combinabili. Ad esempio:<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />Esistono quattro valori node_state_desc reciprocamente esclusivi. Vengono elencate di seguito con le relative descrizioni.<br /><ul><li>ONLINE: Il nodo è online<li>OFFLINE: Il nodo è offline<li>IDLE: Nodo non dispone di alcuna richiesta di lavoro in sospeso ed entrato in uno stato di inattività.<li>IDLE_READY: Nodo non ha richieste di lavoro in sospeso ed è pronto per lo stato inattivo.</li></ul><br />Esistono tre valori node_state_desc combinabili, elencati di seguito con le relative descrizioni.<br /><ul><li>DAC: Questo nodo è riservato per il [connessione amministrativa dedicata](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<li>THREAD_RESOURCES_LOW: È possibile creare nessun nuovo thread in questo nodo a causa di una condizione di memoria insufficiente.<li>AGGIUNTA A CALDO: Indica i nodi sono stati aggiunti in risposta a un caldo eventi della CPU.</li></ul>|  
+|node_state_desc|**nvarchar(256)**|Descrizione dello stato del nodo. I valori sono visualizzati con i valori reciprocamente esclusivi all'inizio, seguiti dai valori combinabili. Ad esempio:<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />Esistono quattro valori node_state_desc reciprocamente esclusivi. Vengono elencate di seguito con le relative descrizioni.<br /><ul><li>ONLINE: Il nodo è online<li>OFFLINE: Il nodo è offline<li>IDLE: Nodo non dispone di alcuna richiesta di lavoro in sospeso ed entrato in uno stato di inattività.<li>IDLE_READY: Nodo non ha richieste di lavoro in sospeso ed è pronto per lo stato inattivo.</li></ul><br />Esistono tre valori node_state_desc combinabili, elencati di seguito con le relative descrizioni.<br /><ul><li>APPLICAZIONE LIVELLO DATI: Questo nodo è riservato per il [connessione amministrativa dedicata](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<li>THREAD_RESOURCES_LOW: È possibile creare nessun nuovo thread in questo nodo a causa di una condizione di memoria insufficiente.<li>AGGIUNTA A CALDO: Indica i nodi sono stati aggiunti in risposta a un caldo eventi della CPU.</li></ul>|  
 |memory_object_address|**varbinary(8)**|Indirizzo dell'oggetto memoria associato al nodo. Vi è una relazione a [DM os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).memory_object_address.|  
 |memory_clerk_address|**varbinary(8)**|Indirizzo del clerk di memoria associato al nodo. Vi è una relazione a [DM os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).memory_clerk_address.|  
 |io_completion_worker_address|**varbinary(8)**|Indirizzo del thread di lavoro assegnato al completamento I/O per il nodo. Vi è una relazione a [DM os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).worker_address.|  
@@ -65,7 +64,7 @@ Nella tabella seguente sono incluse informazioni su questi nodi.
 ## <a name="permissions"></a>Permissions
 
 Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
-Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
+In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] è richiesta l'autorizzazione `VIEW DATABASE STATE` per il database.   
 
 ## <a name="see-also"></a>Vedere anche    
  [Viste a gestione dinamica relative al sistema di operativo SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   

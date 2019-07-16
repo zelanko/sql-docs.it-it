@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 85420043030110d3f214ef86d95aae1a5e99a37e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27a177b6a3d23f20790490e1f16fac2be4ec958f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698124"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918808"
 ---
 # <a name="execute-requery-and-clear-methods-example-vbscript"></a>Eseguire, rieseguire una query ed eliminare i metodi esempio (VBScript)
 Questo esempio viene illustrato il **Execute** metodo quando viene eseguito dallo entrambi una [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto e un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Usa anche il [Requery](../../../ado/reference/ado-api/requery-method.md) metodo per recuperare i dati correnti in un [recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e il [cancellare](../../../ado/reference/ado-api/clear-method-ado.md) metodo per cancellare il contenuto del [errori](../../../ado/reference/ado-api/errors-collection-ado.md)collection. Le procedure ExecuteCommand e PrintOutput sono necessari per eseguire questa procedura.  
@@ -183,7 +182,7 @@ BODY {
  [Oggetto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Oggetto Error](../../../ado/reference/ado-api/error-object.md)   
- [Errors Collection (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [Raccolta di errori (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Eseguire il metodo (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
  [Eseguire il metodo (connessione ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   

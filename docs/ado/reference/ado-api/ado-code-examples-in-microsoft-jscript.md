@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 08dbea83f84a1b4606d48a79c80b8b6ef082d023
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a7ddf42eb5a34d17c735066cd4e936c75e64ff64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697022"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921212"
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>Esempi di codice ADO in Microsoft JScript
 Usare gli esempi di codice seguente per informazioni su come usare i metodi ADO, proprietà ed eventi durante la scrittura in JScript.  

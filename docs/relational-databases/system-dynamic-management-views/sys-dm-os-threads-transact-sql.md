@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 740dcc22d53ff6cd60bbc491fb6bb7b7f44947a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6dd627a8361b29157b4e45bcba04dc78c72f26bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899771"
 ---
 # <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "65577993"
 |stack_bytes_committed|**int**|Numero di byte di cui è stato eseguito il commit nello stack.|  
 |stack_bytes_used|**int**|Numero di byte attivamente utilizzati nel thread.|  
 |affinity|**bigint**|Maschera della CPU nella quale il thread è in esecuzione. Ciò dipende dal valore configurato per il **ALTER SERVER CONFIGURATION SET PROCESS AFFINITY** istruzione. Potrebbe essere diverso dall'utilità di pianificazione in caso di affinità soft.|  
-|Priorità|**int**|Valore di priorità del thread.|  
+|Priority|**int**|Valore di priorità del thread.|  
 |Impostazioni locali|**int**|Identificatore delle impostazioni locali (LCID) nella cache per il thread.|  
 |Token|**varbinary(8)**|Handle del token di rappresentazione nella cache per il thread.|  
 |is_impersonating|**int**|Indica se il thread utilizza la rappresentazione Win32.<br /><br /> 1 = Il thread utilizza credenziali di sicurezza diverse da quelle predefinite del processo. Ciò indica che il thread rappresenta un'entità diversa da quella che ha creato il processo.|  
@@ -69,7 +68,7 @@ ms.locfileid: "65577993"
 ## <a name="permissions"></a>Permissions
 
 Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
-Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
+In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] è richiesta l'autorizzazione `VIEW DATABASE STATE` per il database.   
 
 ## <a name="notes-on-linux-version"></a>Note sulla versione di Linux
 

@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 68cc3f7a-693c-4d5d-a76b-455352af8d7f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 602b8ed0c338ba85c35137cd2752fa4357bf63ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 51e364650f8b8f8dae386126bdc820f9c72e571c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62692707"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899515"
 ---
 # <a name="sysdmpdwcomponenthealthstatus-transact-sql"></a>sys.dm_pdw_component_health_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "62692707"
 |Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**||Non NULL|  
-|component_id|INT|L'ID del componente. Visualizzare [sys.pdw_health_components &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).<br /><br /> pdw_node_id, id_componente, property_id e component_instance_id formano la chiave per questa visualizzazione.|Non NULL|  
+|component_id|int|L'ID del componente. Visualizzare [sys.pdw_health_components &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).<br /><br /> pdw_node_id, id_componente, property_id e component_instance_id formano la chiave per questa visualizzazione.|Non NULL|  
 |property_id|**int**|L'ID della proprietà. Visualizzare [sys.pdw_health_component_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-component-properties-transact-sql.md).|NOT NULL|  
 |component_instance_id|**nvarchar(255)**|Identifica un'istanza di un componente. Ad esempio, un'istanza di una CPU può essere identificata da component_instance_id = 'CPU1'.<br /><br /> pdw_node_id, id_componente, property_id e component_instance_id formano la chiave per questa visualizzazione.|NOT NULL|  
 |property_value|**nvarchar(255)**|Il valore della proprietà corrente.|NULL|  

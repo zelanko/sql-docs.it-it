@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 88718c492702018b77e89597faec8897aa8f51f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4ef42c04944f39e0b2d1930cc6520df2b6c5fa5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918852"
 ---
 # <a name="execute-method-ado-command"></a>Metodo Execute (Command - ADO)
 Esegue la query, l'istruzione SQL o stored procedure specificata nel [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) oppure [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) proprietà del [oggetto comando](../../../ado/reference/ado-api/command-object-ado.md).  
@@ -45,7 +44,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
  Facoltativo. Oggetto **Variant** matrice di valori dei parametri usati in combinazione con la stringa di input o di un flusso specificato **CommandText** oppure **CommandStream**. (I parametri di output non restituisce i valori corretti quando viene passato in questo argomento).  
   
  *Opzioni*  
- Facoltativo. Oggetto **lungo** valore che indica come il provider deve valutare il [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) o la [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) proprietà del [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto. Può essere un valore di maschera di bit effettuato utilizzando [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) e/o [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valori. Ad esempio, è possibile usare **adCmdText** e **adExecuteStream** in combinazione, se si desidera utilizzare ADO valutare il valore della **CommandText** proprietà come testo, e indica che il comando deve annullare e viene restituito alcun record che potrebbe essere generato quando viene eseguito il testo del comando.  
+ facoltativo. Oggetto **lungo** valore che indica come il provider deve valutare il [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) o la [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) proprietà del [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto. Può essere un valore di maschera di bit effettuato utilizzando [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) e/o [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valori. Ad esempio, è possibile usare **adCmdText** e **adExecuteStream** in combinazione, se si desidera utilizzare ADO valutare il valore della **CommandText** proprietà come testo, e indica che il comando deve annullare e viene restituito alcun record che potrebbe essere generato quando viene eseguito il testo del comando.  
   
 > [!NOTE]
 >  Usare la **ExecuteOptionEnum** valore **adExecuteStream** per migliorare le prestazioni riducendo al minimo l'elaborazione interna. Se **adExecuteStream** è stato specificato, le opzioni **adAsyncFetch** e **adAsynchFetchNonBlocking** vengono ignorati. Non usare la **CommandTypeEnum** i valori di **adCmdFile** oppure **adCmdTableDirect** con **Execute**. Questi valori possono essere usati solo come opzioni con il [aperto](../../../ado/reference/ado-api/open-method-ado-recordset.md) e [Requery](../../../ado/reference/ado-api/requery-method.md) metodi di una **Recordset**.  

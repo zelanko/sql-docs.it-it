@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5acaaa20667ac13f89b41391c1cc1d567eccf580
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e81fa9ffb28ba31f50d77cacf372bc24d09787ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711671"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917142"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Proprietà dinamica Resync Command (ADO)
 Specifica un comando fornito dall'utente di stringhe che il [Risincronizza](../../../ado/reference/ado-api/resync-method.md) i problemi di metodi per aggiornare i dati nella tabella denominata nel [tabella univoca](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) proprietà dinamica.  

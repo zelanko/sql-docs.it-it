@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e0cd3573c108cdd5a57bbb2cf6d542415710f24c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ebc71c304939a977ac34cc2fad819edd463614fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62957156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894989"
 ---
 # <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @action = ] 'action'` L'azione da intraprendere per l'account di accesso specificato. *azione* viene **varchar (10)**, non prevede alcun valore predefinito. Quando *azione*viene **eliminare**, **sp_manage_jobs_by_login** Elimina tutti i processi di proprietà *current_owner_login_name*. Quando *azione* viene **RIASSEGNA**, tutti i processi vengono assegnati al *new_owner_login_name*.  
+`[ @action = ] 'action'` L'azione da intraprendere per l'account di accesso specificato. *azione* viene **varchar (10)** , non prevede alcun valore predefinito. Quando *azione*viene **eliminare**, **sp_manage_jobs_by_login** Elimina tutti i processi di proprietà *current_owner_login_name*. Quando *azione* viene **RIASSEGNA**, tutti i processi vengono assegnati al *new_owner_login_name*.  
   
 `[ @current_owner_login_name = ] 'current_owner_login_name'` Il nome di account di accesso del proprietario del processo corrente. *current_owner_login_name* viene **sysname**, non prevede alcun valore predefinito.  
   
@@ -53,7 +52,7 @@ sp_manage_jobs_by_login
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="permissions"></a>Permissions  
  Per eseguire questa stored procedure, gli utenti devono disporre i **sysadmin** ruolo predefinito del server.  

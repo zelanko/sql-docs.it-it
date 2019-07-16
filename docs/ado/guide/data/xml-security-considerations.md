@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fadbd38e-6e7b-4b81-96ea-85169c664374
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8e5ef2215725382650540d24f90e7cbd61102a71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa0e9e2df1e8ba3f44b10e662d25e536ac7962f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923351"
 ---
 # <a name="xml-security-considerations"></a>Considerazioni sulla sicurezza per XML
 I metodi Open nell'oggetto Recordset e salvare ADO non sono considerati operazioni di sicuro per l'esecuzione in Internet Explorer. Di conseguenza, se questi metodi vengono usati in un codice di script che è in esecuzione in un'applicazione o un controllo che è ospitato in un browser, la configurazione della sicurezza del browser avrà un effetto sul relativo comportamento.  

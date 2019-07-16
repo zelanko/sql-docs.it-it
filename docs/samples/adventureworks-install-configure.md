@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 474cc691a8adc0e022e10e52c766368e9f655d8a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 99cdd6fdf5db075cc8fd46b738f468fd5d9a028d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894922"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>Configurazione e installazione di AdventureWorks
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +66,7 @@ Seguire i passaggi seguenti per ripristinare un backup del database usando SQL S
 
 1. Aprire SQL Server Management Studio e connettersi all'istanza di SQL Server di destinazione.
 2. Fare clic sui **database** nodo e selezionare **Ripristina Database**.
-3. Selezionare **periferica** e fare clic sui puntini di sospensione (**...** )
+3. Selezionare **periferica** e fare clic sui puntini di sospensione ( **...** )
 4. Nella finestra di dialogo **Seleziona dispositivi di backup**, fare clic su **Add**, passare al backup del database nel file System del server e selezionare il backup. Fare clic su **OK**.
 5. Se necessario, modificare il percorso di destinazione per i dati e file di log, nelle **file** riquadro. Si noti che è buona norma inserire i dati di file e di log su unità differenti.
 6. Fare clic su **OK**. Verrà avviata il ripristino di database. Al termine, sarà necessario il database AdventureWorks installato nell'istanza di SQL Server.
@@ -82,7 +81,7 @@ Seguire i passaggi seguenti per collegare il file di dati per il database usando
 2. Fare clic sui **database** nodo e selezionare **Attach**.
 3. Selezionare **Add** e passare ai. Si desidera collegare il file MDF. 
 1. Selezionare il file e fare clic su **OK**. 
-    1. Il database selezionato deve essere visualizzato nella finestra inferiore. Se il file è elencato come "non trovato", selezionare i puntini di sospensione (**...** ) accanto al nome del file e aggiornare il percorso al percorso corretto. 
+    1. Il database selezionato deve essere visualizzato nella finestra inferiore. Se il file è elencato come "non trovato", selezionare i puntini di sospensione ( **...** ) accanto al nome del file e aggiornare il percorso al percorso corretto. 
     1. Se hai solo il file di dati (mdf) e non il file di log (ldf), quindi evidenziare il file ldf nella finestra in basso e selezionare **rimuovere**. Si creerà un nuovo file di log. 
 1. Selezionare **OK** per collegare il file. Dopo che il file è collegato, hai installato nell'istanza di SQL Server il database AdventureWorks.  
 

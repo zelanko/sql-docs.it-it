@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d4fa43746db12f8a1ee2957e3846bf1082ff219
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
+ms.openlocfilehash: fc1c8cff535d44cedeb5f42301f010278b87c96d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899735"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +47,7 @@ Restituisce informazioni su tutte le attese rilevate dai thread eseguiti. È pos
 ## <a name="permissions"></a>Permissions
 
 Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
-Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
+In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] è richiesta l'autorizzazione `VIEW DATABASE STATE` per il database.   
 
 ##  <a name="WaitTypes"></a> Tipi di attese  
  **Attese risorse** attesa si verifica quando un ruolo di lavoro richiede l'accesso a una risorsa che non è disponibile perché la risorsa è usata da un altro thread di lavoro o non è ancora disponibile. Un esempio di attesa di risorse è rappresentato da blocchi, latch e attese di I/O su rete e su disco. Le attese di blocchi e latch sono attese a livello di oggetti di sincronizzazione.  
@@ -270,14 +269,14 @@ Questo comando reimposta tutti i contatori su 0.
 |FSAGENT |Si verifica quando un'operazione di I/O del file FILESTREAM attende una risorsa dell'agente di FILESTREAM usata da un'altra operazione di I/O di file.| 
 |FSTR_CONFIG_MUTEX |Si verifica in caso di attesa per il completamento di un'altra riconfigurazione di funzionalità di FILESTREAM.| 
 |FSTR_CONFIG_RWLOCK |Si verifica in caso di attesa per serializzare l'accesso ai parametri di configurazione di FILESTREAM.| 
-|FT_COMPROWSET_RWLOCK |Full-text è in attesa di un'operazione di metadati di frammenti. Documentato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
-|FT_IFTS_RWLOCK |Full-text è in attesa di sincronizzazione interna. Documentato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|FT_COMPROWSET_RWLOCK |Full-text è in attesa di un'operazione di metadati di frammenti. Documentato solo a scopo informativo. Non supportati. Non è garantita la compatibilità con le versioni future.| 
+|FT_IFTS_RWLOCK |Full-text è in attesa di sincronizzazione interna. Documentato solo a scopo informativo. Non supportati. Non è garantita la compatibilità con le versioni future.| 
 |FT_IFTS_SCHEDULER_IDLE_WAIT |Tipo di attesa sospensione dell'utilità di pianificazione full-text. L'utilità di pianificazione è inattiva.| 
-|FT_IFTSHC_MUTEX |Full-text è in attesa di un'operazione di controllo fdhost. Documentato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
-|FT_IFTSISM_MUTEX |Full-text è in attesa di un'operazione di comunicazione. Documentato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
-|FT_MASTER_MERGE |Full-text è in attesa di un'operazione di unione nell'indice master. Documentato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|FT_IFTSHC_MUTEX |Full-text è in attesa di un'operazione di controllo fdhost. Documentato solo a scopo informativo. Non supportati. Non è garantita la compatibilità con le versioni future.| 
+|FT_IFTSISM_MUTEX |Full-text è in attesa di un'operazione di comunicazione. Documentato solo a scopo informativo. Non supportati. Non è garantita la compatibilità con le versioni future.| 
+|FT_MASTER_MERGE |Full-text è in attesa di un'operazione di unione nell'indice master. Documentato solo a scopo informativo. Non supportati. Non è garantita la compatibilità con le versioni future.| 
 |FT_MASTER_MERGE_COORDINATOR |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|FT_METADATA_MUTEX |Documentato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
+|FT_METADATA_MUTEX |Documentato solo a scopo informativo. Non supportati. Non è garantita la compatibilità con le versioni future.| 
 |FT_PROPERTYLIST_CACHE |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |FT_RESTART_CRAWL |Si verifica quando è necessario riavviare una ricerca per indicizzazione full-text dall'ultimo punto valido noto per correggere un errore temporaneo. L'attesa consente alle attività di lavoro usate per il popolamento di completare il passaggio corrente o uscirne.| 
 |FULLTEXT GATHERER |Si verifica durante la sincronizzazione delle operazioni full-text.| 
@@ -768,8 +767,8 @@ Questo comando reimposta tutti i contatori su 0.
 |QRY_MEM_GRANT_INFO_MUTEX |Si verifica quando la gestione della memoria dell'esecuzione di query cerca di controllare l'accesso all'elenco di informazioni statiche sulle concessioni. Questo stato elenca le informazioni sulle richieste di memoria correnti concesse e in attesa. Questo stato rappresenta un semplice stato di controllo dell'accesso. In questo stato non si dovrebbero mai verificare attese lunghe. Se questo mutex non viene rilasciato, tutte le nuove query che utilizzano memoria non risponderanno più.| 
 |QRY_PARALLEL_THREAD_MUTEX |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QRY_PROFILE_LIST_MUTEX |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|QUERY_ERRHDL_SERVICE_DONE |Identificato solo a scopo informativo. Non supportato. <br /> **Si applica a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] solo. |  
-|QUERY_WAIT_ERRHDL_SERVICE |Identificato solo a scopo informativo.  Non supportato. <br /> **Si applica a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] solo.  |  
+|QUERY_ERRHDL_SERVICE_DONE |Identificato solo a scopo informativo. Non supportati. <br /> **Si applica a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] solo. |  
+|QUERY_WAIT_ERRHDL_SERVICE |Identificato solo a scopo informativo.  Non supportati. <br /> **Si applica a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] solo.  |  
 |QUERY_EXECUTION_INDEX_SORT_EVENT_OPEN |Si verifica in determinati casi in cui la compilazione di indici offline viene eseguita in parallelo e i diversi thread di lavoro in cui viene eseguito l'ordinamento sincronizzano l'accesso ai file di ordinamento.| 
 |QUERY_NOTIFICATION_MGR_MUTEX |Si verifica durante la sincronizzazione della coda di Garbage Collection nell'utilità di gestione delle notifiche delle query.| 
 |QUERY_NOTIFICATION_SUBSCRIPTION_MUTEX |Si verifica durante la sincronizzazione dello stato per le transazioni nelle notifiche delle query.| 
@@ -989,7 +988,7 @@ Questo comando reimposta tutti i contatori su 0.
 |XE_LIVE_TARGET_TVF |Solo per uso interno. <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |XE_MODULEMGR_SYNC |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
 |XE_OLS_LOCK |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| 
-|XE_PACKAGE_LOCK_BACKOFF |Identificato solo a scopo informativo. Non supportato. <br /> **Si applica a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] solo. |  
+|XE_PACKAGE_LOCK_BACKOFF |Identificato solo a scopo informativo. Non supportati. <br /> **Si applica a**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] solo. |  
 |XE_SERVICES_EVENTMANUAL |Solo per uso interno.| 
 |XE_SERVICES_MUTEX |Solo per uso interno.| 
 |XE_SERVICES_RWLOCK |Solo per uso interno.| 

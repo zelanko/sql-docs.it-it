@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc6511c6a0999dfd366c87fcfa18630614215efa
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 524f0d82b5f426ae41169b8358dd8ad8be66da03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407298"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900283"
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,7 +57,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  *database_id* | NULL
 
- **SI APPLICA A:** SQL Server (a partire da 2008), Database SQL di Azure
+ **SI APPLICA A:** SQL Server (a partire dalla versione 2008), database SQL di Azure
 
  ID del database. *database_id* è int, non prevede alcun valore predefinito. Gli input validi sono il numero di ID di un database o NULL. Se si specifica NULL, vengono restituiti tutti i database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -66,7 +65,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 *file_id* | NULL
 
-**SI APPLICA A:** SQL Server (a partire da 2008), Database SQL di Azure
+**SI APPLICA A:** SQL Server (a partire dalla versione 2008), database SQL di Azure
  
 ID del file. *file_id* è int, non prevede alcun valore predefinito. Gli input validi sono il numero di ID di un file o NULL. Se si specifica NULL, vengono restituiti tutti i file nel database.  
   
@@ -89,8 +88,8 @@ ID del file. *file_id* è int, non prevede alcun valore predefinito. Gli input v
 |**io_stall**|**bigint**|Tempo totale di attesa degli utenti, in millisecondi, per il completamento delle operazioni di I/O nel file.|  
 |**size_on_disk_bytes**|**bigint**|Numero di byte utilizzati nel disco per il file. Per i file sparse, questo numero corrisponde al numero effettivo di byte nel disco utilizzati per gli snapshot di database.|  
 |**file_handle**|**varbinary**|Handle di file Windows per il file.|  
-|**io_stall_queued_read_ms**|**bigint**|**Non si applica a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Latenza di I/O totale introdotta dalla governance delle risorse di I/O per le letture. Non ammette i valori Null. Per altre informazioni, vedere [DM resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
-|**io_stall_queued_write_ms**|**bigint**|**Non si applica a:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Latenza di I/O totale introdotta dalla governance delle risorse di I/O per le scritture. Non ammette i valori Null.|
+|**io_stall_queued_read_ms**|**bigint**|**Non si applica a:** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Latenza di I/O totale introdotta dalla governance delle risorse di I/O per le letture. Non ammette i valori Null. Per altre informazioni, vedere [DM resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
+|**io_stall_queued_write_ms**|**bigint**|**Non si applica a:** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Latenza di I/O totale introdotta dalla governance delle risorse di I/O per le scritture. Non ammette i valori Null.|
 |**pdw_node_id**|**int**|**Si applica a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificatore del nodo per la distribuzione.
  
   
@@ -99,9 +98,9 @@ ID del file. *file_id* è int, non prevede alcun valore predefinito. Gli input v
   
 ## <a name="examples"></a>Esempi  
 
-### <a name="a-return-statistics-for-a-log-file"></a>A. Restituisce le statistiche per un file di log
+### <a name="a-return-statistics-for-a-log-file"></a>R. Restituisce le statistiche per un file di log
 
-**Si applica a:** SQL Server (a partire da 2008), Database SQL di Azure
+**Si applica a:** SQL Server (a partire dalla versione 2008), database SQL di Azure
 
  Nell'esempio seguente vengono restituite le statistiche per il file di log nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
@@ -110,7 +109,7 @@ SELECT * FROM sys.dm_io_virtual_file_stats(DB_ID(N'AdventureWorks2012'), 2);
 GO  
 ```  
   
-### <a name="b-return-statistics-for-file-in-tempdb"></a>b. Restituisce le statistiche per il file nel database tempdb
+### <a name="b-return-statistics-for-file-in-tempdb"></a>B. Restituisce le statistiche per il file nel database tempdb
 
 **Si applica a:** Azure SQL Data Warehouse
 

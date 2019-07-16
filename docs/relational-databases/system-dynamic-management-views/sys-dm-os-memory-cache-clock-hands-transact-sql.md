@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6b39f40a36a9b9a639b8b6c90f6a6a37f7a32a4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47dbe34459bc3774a9588fb347eca019f9de3e1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047184"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900070"
 ---
 # <a name="sysdmosmemorycacheclockhands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +38,8 @@ ms.locfileid: "63047184"
 |**cache_address**|**varbinary(8)**|Indirizzo della cache associata all'orologio. Non ammette i valori Null.|  
 |**name**|**nvarchar(256)**|Nome della cache. Non ammette i valori Null.|  
 |**type**|**nvarchar(60)**|Tipo di archivio di cache. Possono essere presenti diverse cache dello stesso tipo. Non ammette i valori Null.|  
-|**clock_hand**|**nvarchar(60)**|Tipo di indicatore. I possibili valori sono i seguenti:<br /><br /> External<br /><br /> Interno<br /><br /> Non ammette i valori Null.|  
-|**clock_status**|**nvarchar(60)**|Stato dell'orologio. I possibili valori sono i seguenti:<br /><br /> Sospeso<br /><br /> In esecuzione<br /><br /> Non ammette i valori Null.|  
+|**clock_hand**|**nvarchar(60)**|Tipo di indicatore. I possibili valori sono i seguenti:<br /><br /> Altre informazioni<br /><br /> Interno<br /><br /> Non ammette i valori Null.|  
+|**clock_status**|**nvarchar(60)**|Stato dell'orologio. I possibili valori sono i seguenti:<br /><br /> Suspended<br /><br /> In esecuzione<br /><br /> Non ammette i valori Null.|  
 |**rounds_count**|**bigint**|Numero di operazioni eseguite nella cache per rimuovere le voci. Non ammette i valori Null.|  
 |**removed_all_rounds_count**|**bigint**|Numero di voci rimosse da tutte le operazioni. Non ammette i valori Null.|  
 |**updated_last_round_count**|**bigint**|Numero di voci aggiornate durante l'ultima operazione. Non ammette i valori Null.|  
@@ -53,7 +52,7 @@ ms.locfileid: "63047184"
 ## <a name="permissions"></a>Permissions  
 
 Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
-Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
+In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] è richiesta l'autorizzazione `VIEW DATABASE STATE` per il database.   
   
 ## <a name="remarks"></a>Note  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le informazioni vengono archiviate in memoria in una struttura denominata cache in memoria. Le informazioni archiviate nella cache possono essere dati, voci di indice, piani di procedure compilati e un'ampia gamma di altri tipi di informazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per evitare la nuova creazione delle informazioni, queste vengono mantenute nella cache in memoria per il maggior tempo possibile e vengono in genere rimosse quando risultano obsolete oppure quando è necessario spazio di memoria per nuove informazioni. Il processo di rimozione delle informazioni meno recenti è denominato operazione della memoria. L'operazione della memoria è un'attività frequente, ma non continua. Un algoritmo di orologio controlla l'operazione nella cache in memoria. Ogni orologio può controllare diverse operazioni della memoria tramite indicatori. L'indicatore dell'orologio della cache in memoria rappresenta la posizione corrente di uno degli indicatori di un'operazione della memoria.  

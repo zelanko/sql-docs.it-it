@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0de43bfdce0f5ec232beaf0f9e10dc5d7fec067c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a06e51f5c5077a70f9b5a76ecdf4922d8e006f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696774"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921105"
 ---
 # <a name="ado-collections"></a>Raccolte di ADO
 Le relazioni tra queste raccolte e gli oggetti ADO sono rappresentate nel [modello a oggetti ADO](../../../ado/reference/ado-api/ado-object-model.md).  

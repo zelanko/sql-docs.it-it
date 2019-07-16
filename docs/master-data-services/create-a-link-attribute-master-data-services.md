@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7d39dcfa1d3351434a6e35b1b74f7551648f2281
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2689a75ed48e2affbe0c34bccb96014447cd7fae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66354360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906714"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Creare un attributo di collegamento (Master Data Services)
 
@@ -42,7 +41,7 @@ ms.locfileid: "66354360"
 ## <a name="attribute-information"></a>Informazioni sugli attributi  
  Per ogni indice creato, viene aggiunta alla griglia una riga con sette colonne. La tabella seguente descrive le colonne.  
   
-|colonna|Descrizione|  
+|Colonna|Descrizione|  
 |------------|-----------------|  
 |Stato|Stato dell'attributo.<br /><br /> Quando si fa clic su Salva, viene visualizzata l'immagine ![Icona di aggiornamento dello stato](../master-data-services/media/mds-statusicon-updating.png "Icona di aggiornamento dello stato") che indica che è in corso l'aggiornamento dell'attributo.<br /><br /> Se si verificano errori durante la creazione o la modifica di un attributo viene visualizzata l'immagine ![Icona di errore](../master-data-services/media/mds-statusicon-error.png "Icona di errore").<br /><br /> In caso contrario lo stato è OK e viene visualizzata l'immagine ![Icona di stato OK](../master-data-services/media/mds-statusicon-ok.png "Icona di stato OK").|  
 |Nome|Nome dell'attributo.|  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c6b69c8bf15b4d56872c4030725638e4b61571e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db6aff35944b8811e79627c6076ab61e838edf3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912326"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>Comandi e funzioni Visual FoxPro non supportati (driver ODBC Visual FoxPro)
 Nella tabella seguente elenca i comandi di FoxPro e funzioni che non sono supportate dal Driver ODBC Visual FoxPro ma supportate da Microsoft® Visual FoxPro.  
@@ -52,7 +51,7 @@ Nella tabella seguente elenca i comandi di FoxPro e funzioni che non sono suppor
 |Funzione AMEMBERS)|Funzione ANSITOOEM)|Funzione APRINTERS)|  
 |Funzione ASELOBJ)|Comando ASSIST||  
   
-## <a name="b"></a>B  
+## <a name="b"></a>b  
   
 ||||  
 |-|-|-|  
@@ -61,7 +60,7 @@ Nella tabella seguente elenca i comandi di FoxPro e funzioni che non sono suppor
 |Variabile di memoria di sistema browser|COMPILARE APP comando|Comando EXE di compilazione|  
 |Comando di progetto di compilazione|Variabile di memoria di sistema _BUILDER||  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
   
 ||||  
 |-|-|-|  
@@ -69,7 +68,7 @@ Nella tabella seguente elenca i comandi di FoxPro e funzioni che non sono suppor
 |Variabile di memoria di sistema _CUROBJ|Comando di chiamata|Comando CANCEL|  
 |CAPSLOCK () (funzione)|Comando CD|Comando di modifica|  
 |Comando CHDIR|Funzione CHRSAW)|Comando Chiudi promemoria|  
-|Funzione CNTBAR)|CNTPAD( ) Function|Funzione di COL)|  
+|Funzione CNTBAR)|Funzione CNTPAD)|Funzione di COL)|  
 |Comando di compilazione|COMPILARE comandi DATABASE|FORM comando di compilazione|  
 |Funzione COMPOBJ)|Oggetto contenitore|Oggetto di controllo|  
 |COPIARE i FILE (comando)|Comando COPY di credito|CLASSE comando CREATE|  
@@ -84,7 +83,7 @@ Nella tabella seguente elenca i comandi di FoxPro e funzioni che non sono suppor
   
 ||||  
 |-|-|-|  
-|Variabile di memoria di sistema _DBLCLICK|_DIARYDATE System Memory Variable|Funzione DBSETPROP)|  
+|Variabile di memoria di sistema _DBLCLICK|Variabile di memoria di sistema _DIARYDATE|Funzione DBSETPROP)|  
 |Funzioni DDE|DISATTIVARE il comando MENU|DISATTIVARE comando POPUP|  
 |DISATTIVARE la finestra di comando|DICHIARARE - comando DLL|DICHIARARE comando|  
 |DEFINIRE della barra di comando|DEFINIRE finestra comando|DEFINIRE comandi di classe|  
@@ -287,7 +286,7 @@ Nella tabella seguente elenca i comandi di FoxPro e funzioni che non sono suppor
   
 ||||  
 |-|-|-|  
-|_TABS System Memory Variable|TESTO... Comando ENDTEXT|Funzione TXTWIDTH)|  
+|Variabile di memoria di sistema _TABS|TESTO... Comando ENDTEXT|Funzione TXTWIDTH)|  
 |TRANSFORM () (funzione)|Variabile di memoria di sistema _TRANSPORT||  
 |Comando TYPE|Variabile di memoria di sistema _THROTTLE||  
   

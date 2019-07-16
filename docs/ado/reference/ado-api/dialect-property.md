@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 329c3a71-ba88-4009-b04f-2f52195a5957
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5c7e6aab3e3b33d02adcb067fff46b49973191b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b5c5709a63183bf4c92963dafecb2cf234e2d92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918991"
 ---
 # <a name="dialect-property"></a>Proprietà Dialect
 Indica il dialetto del [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) oppure [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) proprietà. Il sottolinguaggio definisce la sintassi e le regole generali utilizzata dal provider di analisi di flusso o nella stringa.  

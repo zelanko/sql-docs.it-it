@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 124d5d14f810a32e32ce92cbb96afe4569804c67
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c7e6323c8a20aec7d464f7aa6f11a27fc24728d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896625"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,19 +41,19 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [**@publication=**] **'**_publication'_  
+ [ **@publication=** ] **'** _pubblicazione '_  
  Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [**@rowcount_only=**] *rowcount_only*  
+ [ **@rowcount_only=** ] *rowcount_only*  
  Indica se restituire solo il conteggio delle righe per la tabella. *rowcount_only* viene **smallint** e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|**0**|Esegue un checksum compatibile con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Nota: Quando a un articolo è applicato un filtro orizzontale, viene eseguita un'operazione di conteggio delle righe anziché di checksum.|  
+|**0**|Esegue un checksum compatibile con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Nota: Quando un articolo è filtrato orizzontalmente, viene eseguita un'operazione di conteggio delle righe anziché un'operazione di checksum.|  
 |**1** (impostazione predefinita)|Esegue solo la convalida mediante conteggio delle righe.|  
-|**2**|Esegue la convalida mediante conteggio delle righe e checksum binario.<br /><br /> Nota: Per i Sottoscrittori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7.0, viene eseguita solo la convalida con conteggio delle righe.|  
+|**2**|Esegue la convalida mediante conteggio delle righe e checksum binario.<br /><br /> Nota: Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori versione 7.0, solo una convalida mediante conteggio delle righe viene eseguito.|  
   
- [**@full_or_fast=**] *full_or_fast*  
+ [ **@full_or_fast=** ] *full_or_fast*  
  Metodo utilizzato per il conteggio delle righe. *full_or_fast* viene **tinyint** e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  

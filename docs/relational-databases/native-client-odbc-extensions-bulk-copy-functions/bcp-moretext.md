@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 262280be894eb446d5a097f53f96306e4de410e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6b88e9931ab7575e46f6179680ad721ce40dea8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665439"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895502"
 ---
 # <a name="bcpmoretext"></a>bcp_moretext
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +42,7 @@ RETCODE bcp_moretext (
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *HDBC*  
+ *hdbc*  
  Handle di connessione ODBC abilitato per la copia bulk.  
   
  *cbData*  
@@ -56,7 +55,7 @@ RETCODE bcp_moretext (
  SUCCEED o FAIL.  
   
 ## <a name="remarks"></a>Note  
- Questa funzione può essere usata in combinazione con [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) e [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) long, copiare i valori di dati a lunghezza variabile a SQL Server in un numero di blocchi più piccoli. **bcp_moretext** può essere usato con colonne che presentano i seguenti tipi di dati di SQL Server: **testo**, **ntext**, **immagine**, **varchar (max)** , **nvarchar (max)**, **varbinary (max)**, tipo definito dall'utente (UDT) e XML. **bcp_moretext** non supporto per le conversioni di dati, i dati forniti devono corrispondere il tipo di dati della colonna di destinazione.  
+ Questa funzione può essere usata in combinazione con [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) e [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) long, copiare i valori di dati a lunghezza variabile a SQL Server in un numero di blocchi più piccoli. **bcp_moretext** può essere usato con colonne che presentano i seguenti tipi di dati di SQL Server: **testo**, **ntext**, **immagine**, **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , tipo definito dall'utente (UDT) e XML. **bcp_moretext** non supporto per le conversioni di dati, i dati forniti devono corrispondere il tipo di dati della colonna di destinazione.  
   
  Se **bcp_bind** viene chiamato con un valore non NULL *pData* parametro per i tipi di dati supportate da **bcp_moretext**, **bcp_sendrow** invia il valore di tutti i dati, indipendentemente dalla lunghezza. Se, tuttavia **bcp_bind** ha un valore NULL *pData* parametro per tipi di dati supportati **bcp_moretext** può essere utilizzato per copiare i dati immediatamente dopo una corretta restituzione da **bcp_sendrow** che indica che qualsiasi colonna associata contenente dati presenti è stati elaborati.  
   

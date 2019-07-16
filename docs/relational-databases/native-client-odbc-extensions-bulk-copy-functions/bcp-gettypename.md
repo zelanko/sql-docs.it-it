@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de5b4a62dbb86008f686cb0d630386340238f42c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57d2a7562efce015f5fb693cbb9a2f6114826e6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895545"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,15 +67,15 @@ RETCODE bcp_gettypename (
 |**SQLDATETIME**|Prima o dopo|**datetime**|  
 |**SQLBITN**|Prima o dopo|**bit-null**|  
 |**SQLBIT**|Prima o dopo|**bit**|  
-|**SQLBIGCHAR**|no|**char**|  
-|**SQLCHARACTER**|no|**char**|  
-|**SQLBIGVARCHAR**|no|**varchar**|  
-|**SQLVARCHAR**|no|**varchar**|  
+|**SQLBIGCHAR**|No|**char**|  
+|**SQLCHARACTER**|No|**char**|  
+|**SQLBIGVARCHAR**|No|**varchar**|  
+|**SQLVARCHAR**|No|**varchar**|  
 |**SQLTEXT**|Prima o dopo|**text**|  
-|**SQLBIGBINARY**|no|**binary**|  
-|**SQLBINARY**|no|**Binario**|  
-|**SQLBIGVARBINARY**|no|**varbinary**|  
-|**SQLVARBINARY**|no|**varbinary**|  
+|**SQLBIGBINARY**|No|**binary**|  
+|**SQLBINARY**|No|**Binario**|  
+|**SQLBIGVARBINARY**|No|**varbinary**|  
+|**SQLVARBINARY**|No|**varbinary**|  
 |**SQLIMAGE**|Prima o dopo|**Immagine**|  
 |**SQLINTN**|Prima o dopo|**int-null**|  
 |**SQLDATETIMN**|Prima o dopo|**datetime-null**|  
@@ -91,22 +90,22 @@ RETCODE bcp_gettypename (
 |**SQLMONEY4**|Prima o dopo|**smallmoney**|  
 |**SQLFLT4**|Prima o dopo|**Real**|  
 |**SQLUNIQUEID**|Prima o dopo|**uniqueidentifier**|  
-|**SQLNCHAR**|no|**nchar**|  
-|**SQLNVARCHAR**|no|**Nvarchar**|  
-|**SQLNTEXT**|Prima o dopo|**ntext**|  
+|**SQLNCHAR**|No|**Nchar**|  
+|**SQLNVARCHAR**|No|**Nvarchar**|  
+|**SQLNTEXT**|Prima o dopo|**Ntext**|  
 |**SQLVARIANT**|Prima o dopo|**sql_variant**|  
 |**SQLINT8**|Prima o dopo|**Bigint**|  
-|**SQLCHARACTER**|Sì|**ntext**|  
-|**SQLBIGCHAR**|Sì|**ntext**|  
-|**SQLBIGVARCHAR**|Sì|**ntext**|  
-|**SQLVARCHAR**|Sì|**ntext**|  
-|**SQLBINARY**|Sì|**varbinary(max)**|  
-|**SQLBIGBINARY**|Sì|**varbinary(max)**|  
-|**SQLBIGVARBINARY**|Sì|**varbinary(max)**|  
-|**SQLVARBINARY**|Sì|**varbinary(max)**|  
-|**SQLNCHAR**|Sì|**nvarchar(max)**|  
-|**SQLNVARCHAR**|Sì|**nvarchar(max)**|  
-|**SQLXML**|Sì|**Xml**|  
+|**SQLCHARACTER**|Yes|**ntext**|  
+|**SQLBIGCHAR**|Yes|**ntext**|  
+|**SQLBIGVARCHAR**|Yes|**ntext**|  
+|**SQLVARCHAR**|Yes|**ntext**|  
+|**SQLBINARY**|Yes|**varbinary(max)**|  
+|**SQLBIGBINARY**|Yes|**varbinary(max)**|  
+|**SQLBIGVARBINARY**|Yes|**varbinary(max)**|  
+|**SQLVARBINARY**|Yes|**varbinary(max)**|  
+|**SQLNCHAR**|Yes|**nvarchar(max)**|  
+|**SQLNVARCHAR**|Yes|**nvarchar(max)**|  
+|**SQLXML**|Yes|**Xml**|  
 |**SQLUDT**|Prima o dopo|**tipo definito dall'utente**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>Supporto di bcp_gettypename per le caratteristiche avanzate di data e ora  

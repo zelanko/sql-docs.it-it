@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8670b3e6a12f6e512788586a69348f0ddb7ee25
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0944145ae740b7448a19a2607122c8ad07fd33ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215507"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908269"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Eseguire la stored procedure con la chiamata ODBC e l'output del processo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,11 +51,11 @@ ms.locfileid: "53215507"
   
  Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
   
- Eseguire il primo ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) per creare la stored procedure utilizzata dall'applicazione listato di codice.  
+ Eseguire il primo listato di codice ( [!INCLUDE[tsql](../../../includes/tsql-md.md)] ) per creare la stored procedure usata dall'applicazione.  
   
  Compilare il secondo listato di codice (C++) con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   
- Eseguire il terzo ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) per eliminare la stored procedure utilizzata dall'applicazione listato di codice.  
+ Eseguire il terzo listato di codice ( [!INCLUDE[tsql](../../../includes/tsql-md.md)] ) per eliminare la stored procedure usata dall'applicazione.  
   
 ```  
 USE AdventureWorks  
