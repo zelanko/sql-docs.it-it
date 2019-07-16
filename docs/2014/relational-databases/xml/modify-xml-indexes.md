@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 67767ae7ec3bda62783281385333fef89481f45d
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536565"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195596"
 ---
 # <a name="modify-xml-indexes"></a>Modifica di indici XML
   È possibile usare l’istruzione DDL di [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] per modificare gli indici XML e non XML esistenti. Per gli indici XML, tuttavia, non sono disponibili tutte le opzioni ALTER INDEX. Per la modifica degli indici XML non sono valide le opzioni seguenti:  

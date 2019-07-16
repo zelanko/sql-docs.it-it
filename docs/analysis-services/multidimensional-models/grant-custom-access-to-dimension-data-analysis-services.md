@@ -1,5 +1,5 @@
 ---
-title: Concedere l'accesso personalizzato ai dati della dimensione (Analysis Services) | Documenti Microsoft
+title: Concedere l'accesso personalizzato ai dati della dimensione (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb93b4aeeaae9d659a225763286fc15a7d9f52a3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024728"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208868"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Concedere l'accesso personalizzato ai dati della dimensione (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "34024728"
   
  Per scrivere l'istruzione MDX, è possibile usare Generatore MDX. Per informazioni dettagliate, vedere [Generatore MDX &#40;Analysis Services - Dati multidimensionali&#41;](http://msdn.microsoft.com/library/fecbf093-65ea-4e1b-b637-f04876f1cb0f). Nella scheda **Avanzate** sono disponibili le opzioni seguenti:  
   
- **Attributo**  
+ **Attribute**  
  Consente di selezionare l'attributo per cui gestire la sicurezza dei membri.  
   
  **Set di membri autorizzati**  
@@ -87,7 +87,7 @@ ms.locfileid: "34024728"
  La creazione di AllowedSet genera una reazione a catena quando l'attributo fa parte di una gerarchia a più livelli. Si supponga, ad esempio, che un ruolo consenta l'accesso allo stato di Washington. Si consideri uno scenario in cui il ruolo conceda le autorizzazioni alla divisione vendite dello stato di Washington di una società. Per gli utenti che si connettono tramite questo ruolo, le query che includono predecessori (Stati Uniti) o discendenti (Seattle e Redmond) visualizzeranno solo i membri in una catena che includono lo stato di Washington. Poiché gli altri stati non vengono consentiti in modo esplicito, l'effetto sarà identico a quello del caso in cui gli stati vengano negati.  
   
 > [!NOTE]  
->  Se si definisce un set vuoto ({}) dei membri dell'attributo, nessun membro dell'attributo sarà visibile nel ruolo del database. L'assenza di un set delle autorizzazioni concesse non viene interpretata come set vuoto.  
+>  Se si definisce un set vuoto ({}) dei membri dell'attributo, nessun membro dell'attributo sarà visibile al ruolo del database. L'assenza di un set delle autorizzazioni concesse non viene interpretata come set vuoto.  
   
  **Set di membri non autorizzati**  
  La proprietà DeniedSet può restituire nessun membro, tutti i membri (impostazione predefinita) o alcuni membri dell'attributo. Se il set delle autorizzazioni negate contiene solo un set specifico di membri dell'attributo, al ruolo del database viene negato l'accesso solo a tali membri specifici, oltre ai discendenti se l'attributo fa parte di una gerarchia a più livelli. Si consideri l'esempio della divisione vendite dello stato di Washington. Se Washington viene inserito in DeniedSet, gli utenti che si connettono tramite questo ruolo visualizzeranno tutti gli altri stati eccetto Washington e gli attributi dei relativi discendenti.  
@@ -118,7 +118,7 @@ ms.locfileid: "34024728"
 ## <a name="see-also"></a>Vedere anche  
  [Concedere le autorizzazioni per un cubo o un modello &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
  [Concedere l'accesso personalizzato ai dati delle celle &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
- [Concedere le autorizzazioni per modelli e strutture di data mining &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Concedere le autorizzazioni per un oggetto origine dati & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Concedere le autorizzazioni per le strutture e i modelli di data mining &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Concedere le autorizzazioni per un oggetto origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

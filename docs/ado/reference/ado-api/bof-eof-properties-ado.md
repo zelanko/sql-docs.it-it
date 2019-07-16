@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9a449c0e635c7fe0e63bc1f4d8b1b0b91712135d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696284"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920380"
 ---
 # <a name="bof-eof-properties-ado"></a>Proprietà BOF ed EOF (ADO)
 -   **Proprietà BOF** indica che la posizione del record corrente è precedente al primo record in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
@@ -50,8 +49,8 @@ ms.locfileid: "66696284"
   
 ||Metodi MoveFirst,<br /><br /> MoveLast|MovePrevious,<br /><br /> Spostare < 0|Spostare 0|MoveNext,<br /><br /> Sposta > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**True**, **EOF**=**False**|Allowed|Errore|Errore|Allowed|  
-|**BOF**=**False**, **EOF**=**True**|Allowed|Allowed|Errore|Errore|  
+|**Proprietà BOF**=**True**, **EOF**=**False**|Allowed|Errore|Errore|Allowed|  
+|**Proprietà BOF**=**False**, **EOF**=**True**|Allowed|Allowed|Errore|Errore|  
 |Entrambi **True**|Errore|Errore|Errore|Errore|  
 |Entrambi **False**|Allowed|Allowed|Allowed|Allowed|  
   
@@ -63,7 +62,7 @@ ms.locfileid: "66696284"
 |------|---------|---------|  
 |**MoveFirst**, **MoveLast**|Impostare su **True**|Impostare su **True**|  
 |**Spostare** 0|Nessuna modifica|Nessuna modifica|  
-|**MovePrevious**, **Move** < 0|Impostare su **True**|Nessuna modifica|  
+|**MovePrevious**, **spostare** < 0|Impostare su **True**|Nessuna modifica|  
 |**MoveNext**, **spostare** > 0|Nessuna modifica|Impostare su **True**|  
   
 ## <a name="applies-to"></a>Si applica a  

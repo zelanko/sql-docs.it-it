@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10a8184fdad0c25c2377c5ed9df0a318aba736a2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 777e9b2afceb3e9a58030a225a0cbff34375165b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914958"
 ---
 # <a name="sphelppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +40,11 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'` È il nome del server remoto. *server di pubblicazione* viene **sysname**, il valore predefinito è **%**, che restituisce informazioni per tutti i server di pubblicazione.  
+`[ @publisher = ] 'publisher'` È il nome del server remoto. *server di pubblicazione* viene **sysname**, il valore predefinito è **%** , che restituisce informazioni per tutti i server di pubblicazione.  
   
-`[ @publisher_db = ] 'publisher_db'` È il nome del server di pubblicazione. *publisher_db* viene **sysname**, il valore predefinito è **%**, che restituisce tutti i database di pubblicazione.  
+`[ @publisher_db = ] 'publisher_db'` È il nome del server di pubblicazione. *publisher_db* viene **sysname**, il valore predefinito è **%** , che restituisce tutti i database di pubblicazione.  
   
-`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%**, che restituisce tutte le pubblicazioni. Se questo parametro è uguale a tutti, solo le sottoscrizioni pull con independent_agent = **0** vengono restituiti.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%** , che restituisce tutte le pubblicazioni. Se questo parametro è uguale a tutti, solo le sottoscrizioni pull con independent_agent = **0** vengono restituiti.  
   
 `[ @show_push = ] 'show_push'` È se devono essere restituite tutte le sottoscrizioni push. *show_push*viene **nvarchar(5**, con un valore predefinito è FALSE, che non restituisce le sottoscrizioni push.  
   
@@ -55,7 +54,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|Nome del server di pubblicazione.|  
 |**server di pubblicazione**|**sysname**|Nome del database del server di pubblicazione.|  
-|**publication**|**sysname**|Nome della pubblicazione.|  
+|**pubblicazione**|**sysname**|Nome della pubblicazione.|  
 |**independent_agent**|**bit**|Indica se per questa pubblicazione è disponibile un agente di distribuzione autonomo.|  
 |**tipo di sottoscrizione**|**int**|Tipo di sottoscrizione della pubblicazione.|  
 |**agente di distribuzione**|**nvarchar(100)**|Agente di distribuzione che gestisce la sottoscrizione.|  
@@ -71,8 +70,8 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**immediate_sync**|**bit**|Indica se i file di sincronizzazione vengono creati o ricreati a ogni esecuzione dell'agente snapshot.|  
 |**account di accesso server di pubblicazione**|**sysname**|ID dell'account di accesso utilizzato nel server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**password server di pubblicazione**|**nvarchar(524)**|Password (crittografata) utilizzata dal server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**publisher security_mode**|**int**|Modalità di sicurezza implementata nel server di pubblicazione:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione<br /><br /> **1** = autenticazione di Windows<br /><br /> **2** = i trigger di sincronizzazione utilizzano un valore statico **sysservers** voce per eseguire la chiamata di procedura remota (RPC), e *server di pubblicazione* deve essere definito nel **sysservers**tabella come un server remoto o un server collegato.|  
-|**distributor**|**sysname**|Nome del server di distribuzione.|  
+|**security_mode server di pubblicazione**|**int**|Modalità di sicurezza implementata nel server di pubblicazione:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione<br /><br /> **1** = autenticazione di Windows<br /><br /> **2** = i trigger di sincronizzazione utilizzano un valore statico **sysservers** voce per eseguire la chiamata di procedura remota (RPC), e *server di pubblicazione* deve essere definito nel **sysservers**tabella come un server remoto o un server collegato.|  
+|**server di distribuzione**|**sysname**|Nome del server di distribuzione.|  
 |**distributor_login**|**sysname**|ID dell'account di accesso utilizzato nel server di distribuzione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_password**|**nvarchar(524)**|Password (crittografata) utilizzata nel server di distribuzione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_security_mode**|**int**|Modalità di sicurezza implementata nel server di distribuzione:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione<br /><br /> **1** = autenticazione di Windows|  
@@ -92,7 +91,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**last_sync_summary**|**sysname**|Descrizione dei risultati dell'ultima sincronizzazione.|  
 |**last_sync_time**|**datetime**|Data e ora dell'aggiornamento delle informazioni della sottoscrizione. Si tratta di una stringa UNICODE con data ISO (114) + ora ODBC (121). Il formato è yyyymmdd hh:mi:sss.mmm dove 'yyyy' rappresenta l'anno, 'mm' il mese, 'dd' il giorno, 'hh' l'ora, 'mi' i minuti, 'sss' i secondi e 'mmm' i millisecondi.|  
 |**job_login**|**nvarchar(512)**|L'account di Windows con cui viene eseguito l'agente di distribuzione, viene restituito nel formato *domain*\\*username*.|  
-|**job_password**|**sysname**|Per motivi di sicurezza, un valore di "**\*\*\*\*\*\*\*\*\*\***" è sempre restituiti.|  
+|**job_password**|**sysname**|Per motivi di sicurezza, un valore di " **\*\*\*\*\*\*\*\*\*\*** " è sempre restituiti.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

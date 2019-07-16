@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: f3592f1494661fa603e6dc252d3cd2e10093c24e
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 715fe6144cc430e545feb3c484d148531cff6ec9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685648"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207327"
 ---
 # <a name="create-measures"></a>Creare misure
 
@@ -87,9 +87,9 @@ Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve 
   
 1.  Utilizzando la funzionalità Somma automatica, è possibile creare le misure seguenti e assegnare loro un nome:  
 
-    |colonna|Nome misura|Somma automatica (∑)|Formula|  
+    |Colonna|Nome misura|Somma automatica (∑)|Formula|  
     |----------------|----------|-----------------|-----------|  
-    |SalesOrderLineNumber|InternetOrderLinesCount|Conteggio|=COUNTA([SalesOrderLineNumber])|  
+    |SalesOrderLineNumber|InternetOrderLinesCount|Count|=COUNTA([SalesOrderLineNumber])|  
     |OrderQuantity|InternetTotalUnits|Sum|=SUM([OrderQuantity])|  
     |DiscountAmount|InternetTotalDiscountAmount|Sum|=SUM([DiscountAmount])|  
     |TotalProductCost|InternetTotalProductCost|Sum|=SUM([TotalProductCost])|  
@@ -126,7 +126,7 @@ Questo articolo fa parte di un'esercitazione di modellazione tabulare, che deve 
   
 Le misure create per la tabella FactInternetSales utilizzabile per analizzare dati finanziari critici, ad esempio vendite, costi e margine di profitto per gli elementi definiti dal filtro selezionato di utenti.  
   
-## <a name="whats-next"></a>Quali sono le operazioni successive?
+## <a name="whats-next"></a>Argomenti successivi
 
 [Lezione 7: Creare indicatori di prestazioni chiave](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md).  
 

@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4bd73d32a58e156a3ae8577d41bbdd4725f85656
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040232"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206637"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Supporto di SQL Server Native Client per il ripristino di emergenza a disponibilità elevata
   In questo argomento viene illustrato il supporto in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (aggiunto in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Per altre informazioni sulle [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [listener del gruppo di disponibilità, connettività Client e Failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md), [la creazione e configurazione di gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering di Failover e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), e [repliche secondarie attive: Repliche secondarie leggibili (gruppi di disponibilità AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "56040232"
   
 -   La connessione a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurata con più di 64 indirizzi IP determinerà un errore di connessione.  
   
--   Il comportamento di un'applicazione in cui viene utilizzata la proprietà di connessione `MultiSubnetFailover` non è influenzato dal tipo di autenticazione, cioè Autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Autenticazione Kerberos o Autenticazione di Windows.  
+-   Comportamento di un'applicazione che utilizza il `MultiSubnetFailover` proprietà di connessione non è interessata in base al tipo di autenticazione: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L'autenticazione, l'autenticazione Kerberos o autenticazione di Windows.  
   
 -   È possibile aumentare il valore di `loginTimeout` per adattarlo alla durata del failover e ridurre il numero di nuovi tentativi di connessione dell'applicazione.  
   

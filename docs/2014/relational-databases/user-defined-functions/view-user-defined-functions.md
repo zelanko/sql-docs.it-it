@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ea37fdca56c222cbebbdcb00956938a92fe2c203
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100556"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211686"
 ---
 # <a name="view-user-defined-functions"></a>Visualizzare le funzioni definite dall'utente
   È possibile acquisire informazioni sulla definizione o le proprietà di una funzione definita dall'utente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Potrebbe essere necessario visualizzare la definizione della funzione per determinare come vengono derivati i dati dalle tabelle di origine o per visualizzare i dati definiti dalla funzione.  
@@ -47,7 +47,7 @@ ms.locfileid: "54100556"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  L'uso di **sys.sql_expression_dependencies** per trovare tutte le dipendenze da una funzione richiede l'autorizzazione VIEW DEFINITION per il database e l'autorizzazione SELECT per **sys.sql_expression_dependencies** per il database. Le definizioni dell'oggetto di sistema, come quelle restituite in OBJECT_DEFINITION sono visibili pubblicamente.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -158,7 +158,7 @@ ms.locfileid: "54100556"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;  

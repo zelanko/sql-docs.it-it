@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2419b057f6bc3fbe85c937911dd76bc8b9729b95
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144856"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180269"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Collegamento e scollegamento di database di Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "50144856"
   
 |Scollegamento di un database di lettura/scrittura|Scollegamento di un database di sola lettura|  
 |--------------------------------------|-------------------------------------|  
-|1) Il server invia una richiesta per un blocco CommitExclusive sul database<br /><br /> 2) Il server attende il commit o il rollback di tutte le transazioni in corso<br /><br /> 3) Il server compila tutti i metadati necessari per scollegare il database<br /><br /> 4) Il database viene contrassegnato come eliminato<br /><br /> 5) Il server esegue il commit della transazione|1) Il database viene contrassegnato come eliminato<br /><br /> 2) Il server esegue il commit della transazione<br /><br /> Nota: la password di scollegamento non può essere modificata per un database di sola lettura. Se viene fornito il parametro password per un database collegato che contiene già una password, verrà generato un errore.|  
+|1) Il server invia una richiesta per un blocco CommitExclusive sul database<br /><br /> 2) Il server attende il commit o il rollback di tutte le transazioni in corso<br /><br /> 3) Il server compila tutti i metadati necessari per scollegare il database<br /><br /> 4) Il database viene contrassegnato come eliminato<br /><br /> 5) Il server esegue il commit della transazione|1) Il database viene contrassegnato come eliminato<br /><br /> 2) Il server esegue il commit della transazione<br /><br /> Nota: La password di scollegamento non può essere modificata per un database di sola lettura. Se viene fornito il parametro password per un database collegato che contiene già una password, verrà generato un errore.|  
   
  I comandi **Attach** e **Detach** devono essere eseguiti come singole operazioni. Non possono essere combinati con altre operazioni nella stessa transazione. Inoltre, i comandi **Attach** e **Detach** sono comandi transazionali atomici, ovvero l'operazione avrà esito positivo o negativo. Nessun database verrà lasciato in uno stato incompleto.  
   

@@ -1,5 +1,5 @@
 ---
-title: Impostare formule personalizzate membro per gli attributi in una dimensione | Documenti Microsoft
+title: Impostare formule personalizzate membro per gli attributi in una dimensione | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 29b4d83956e6963aa7df0b4a1afd11edda6c83c4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025558"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179103"
 ---
-# <a name="bi-wizard---custom-member-formulas-for-attributes-in-a-dimension"></a>Creazione guidata BI - formule personalizzate membro per gli attributi in una dimensione
+# <a name="bi-wizard---custom-member-formulas-for-attributes-in-a-dimension"></a>Procedura guidata per BI - Impostare formule personalizzate membro per gli attributi in una dimensione
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   L'aggiunta della funzionalità avanzata delle formule personalizzate membro a un cubo o a una dimensione consente di sostituire la funzione di aggregazione predefinita associata a un membro della dimensione con i risultati di un'espressione MDX (Multidimensional Expressions). Questa funzionalità avanzata imposta la proprietà **CustomRollupColumn** di un attributo specifico in una dimensione.  
   
@@ -29,9 +29,9 @@ ms.locfileid: "34025558"
  Nella prima pagina **Creazione formula personalizzata membro** della procedura guidata specificare la dimensione alla quale applicare una formula personalizzata membro. L'aggiunta della funzionalità avanzata della formula personalizzata membro alla dimensione selezionata implica modifiche alla dimensione. Tali modifiche verranno ereditate da tutti i cubi che includono la dimensione selezionata.  
   
 ## <a name="enabling-a-custom-member-formula"></a>Abilitazione di una formula personalizzata membro  
- Nella seconda pagina **Creazione formula personalizzata membro** associare la colonna di origine contenente la formula personalizzata membro a uno o più attributi nella dimensione. Nella colonna **Attributo** selezionare la casella di controllo accanto all'attributo da associare alla colonna della formula personalizzata membro. Dopo aver selezionato ogni attributo, viene visualizzata la finestra di dialogo **Seleziona colonna** . In questa finestra di dialogo fare clic nella colonna della tabella della dimensione contenente la formula. Se dopo aver chiuso la finestra di dialogo **Seleziona colonna** si desidera modificare una selezione, fare clic nella cella **Colonna di origine** da modificare e quindi sui puntini di sospensione (**...**) per visualizzare nuovamente la finestra di dialogo **Seleziona colonna** .  
+ Nella seconda pagina **Creazione formula personalizzata membro** associare la colonna di origine contenente la formula personalizzata membro a uno o più attributi nella dimensione. Nella colonna **Attributo** selezionare la casella di controllo accanto all'attributo da associare alla colonna della formula personalizzata membro. Dopo aver selezionato ogni attributo, viene visualizzata la finestra di dialogo **Seleziona colonna** . In questa finestra di dialogo fare clic nella colonna della tabella della dimensione contenente la formula. Se dopo aver chiuso la finestra di dialogo **Seleziona colonna** si desidera modificare una selezione, fare clic nella cella **Colonna di origine** da modificare e quindi sui puntini di sospensione ( **...** ) per visualizzare nuovamente la finestra di dialogo **Seleziona colonna** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzare la procedura guidata di Business Intelligence per migliorare le dimensioni](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  
+ [Utilizzare la Configurazione guidata funzionalità di Business Intelligence per migliorare le dimensioni](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 14e1012530745e0e695c70efaf8b1b1e16b8a064
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb39288499e2a78523ca29f2e1e4feff4ea9a310
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694777"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932315"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>Esempio IsolationLevel e modalità proprietà (VC + +)
 Questo esempio Usa il [modalità](../../../ado/reference/ado-api/mode-property-ado.md) per aprire una connessione esclusiva e il [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) proprietà per aprire una transazione di cui viene eseguita in isolamento di altre transazioni.  
