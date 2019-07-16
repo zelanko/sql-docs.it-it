@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: db245c80-981a-4638-bd03-69d04bc67af0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 733b958ee883aa62034b4acc1eec67100b35a74d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d27f168640b25652ed0fd40154ebfb677ef9300
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628454"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068643"
 ---
 # <a name="file-data-sources"></a>Origini dati di file
 *Origini dati del file* vengono archiviati in un file e consentire le informazioni di connessione da usare più volte da un singolo utente o condiviso da più utenti. Quando viene usata un'origine dati file, gestione Driver stabilisce la connessione all'origine dati usando le informazioni in un file DSN. Questo file può essere modificato come qualsiasi altro file. Un'origine dati file non è un nome dell'origine dati, perché esegue un'origine dati di computer e non è registrato per qualsiasi utente o computer.  

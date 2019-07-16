@@ -1,5 +1,5 @@
 ---
-title: sys.objects (Transact-SQL) | Microsoft Docs
+title: Sys. Objects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: sql
@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35ca43c379e896072ecebf1c313c9ce9b210d73f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47e332d8dfda76bbf2702335b72793c112c15d75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997865"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102317"
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "62997865"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|NAME|**sysname**|Nome dell'oggetto.|  
+|name|**sysname**|Nome dell'oggetto.|  
 |object_id|**int**|Numero di identificazione dell'oggetto. Valore univoco all'interno di un database.|  
 |principal_id|**int**|ID del singolo proprietario, se diverso dal proprietario dello schema. Per impostazione predefinita, gli oggetti contenuti nello schema appartengono al proprietario dello schema stesso. È tuttavia possibile specificare un altro proprietario modificando la proprietà mediante l'istruzione ALTER AUTHORIZATION.<br /><br /> È NULL se non esiste un singolo proprietario alternativo.<br /><br /> È NULL se il tipo di oggetto è uno dei seguenti:<br /><br /> C = vincolo CHECK<br /><br /> D = DEFAULT (vincolo o valore autonomo)<br /><br /> F = vincolo FOREIGN KEY<br /><br /> PK = vincolo PRIMARY KEY<br /><br /> R = regola (tipo obsoleto, autonoma)<br /><br /> TA = trigger di assembly (integrazione con CLR)<br /><br /> TR = trigger SQL<br /><br /> UQ = vincolo UNIQUE<br /><br /> EC = vincolo di arco |  
 |schema_id|**int**|ID dello schema che contiene l'oggetto.<br /><br /> Gli oggetti di sistema con ambito costituito dallo schema sono sempre inclusi negli schemi sys o INFORMATION_SCHEMA.|  
@@ -80,7 +79,7 @@ Subset di oggetti possono essere visualizzati utilizzando viste di sistema per u
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-all-the-objects-that-have-been-modified-in-the-last-n-days"></a>A. Restituzione di tutti gli oggetti modificati negli ultimi N giorni  
+### <a name="a-returning-all-the-objects-that-have-been-modified-in-the-last-n-days"></a>R. Restituzione di tutti gli oggetti modificati negli ultimi N giorni  
  Prima di eseguire la query seguente, sostituire `<database_name>` e `<n_days>` con valori validi.  
   
 ```sql  

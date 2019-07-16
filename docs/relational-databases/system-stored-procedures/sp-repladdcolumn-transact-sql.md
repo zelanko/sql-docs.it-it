@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8d50f940b191ee057febb81a59b90d6c842cf821
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1b01a48e15c06f021b41b3bded35a0cd2739313c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006922"
 ---
 # <a name="sprepladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,16 +53,16 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  Nome della colonna della tabella da aggiungere per la replica. *colonna* viene **sysname**, non prevede alcun valore predefinito.  
   
  [ @typetext =] '*typetext*'  
- Definizione della colonna da aggiungere. *TypeText* viene **nvarchar(3000)**, non prevede alcun valore predefinito. Ad esempio, se la colonna order_filled viene aggiunto ed è un singolo campo, non NULL di caratteri e ha un valore predefinito di **N**, order_filled le *colonna* parametro, mentre la definizione del colonna **char (1) non NULL CONSTRAINT nome_vincolo DEFAULT ' n'** sarebbe il *typetext* valore del parametro.  
+ Definizione della colonna da aggiungere. *TypeText* viene **nvarchar(3000)** , non prevede alcun valore predefinito. Ad esempio, se la colonna order_filled viene aggiunto ed è un singolo campo, non NULL di caratteri e ha un valore predefinito di **N**, order_filled le *colonna* parametro, mentre la definizione del colonna **char (1) non NULL CONSTRAINT nome_vincolo DEFAULT ' n'** sarebbe il *typetext* valore del parametro.  
   
  [ @publication_to_add =] '*publication_to_add*'  
- Nome della pubblicazione cui si desidera aggiungere la nuova colonna. *publication_to_add* viene **nvarchar (4000)**, il valore predefinito è **tutti**. Se **tutti**, quindi tutte le pubblicazioni che contiene la tabella sono interessate. Se *publication_to_add* è specificato, solo questa pubblicazione è la nuova colonna aggiunta.  
+ Nome della pubblicazione cui si desidera aggiungere la nuova colonna. *publication_to_add* viene **nvarchar (4000)** , il valore predefinito è **tutti**. Se **tutti**, quindi tutte le pubblicazioni che contiene la tabella sono interessate. Se *publication_to_add* è specificato, solo questa pubblicazione è la nuova colonna aggiunta.  
   
  [ @from_agent =] *from_agent*  
  Specifica se la stored procedure viene eseguita da un agente di replica. *from_agent* viene **int**, il valore predefinito è **0**, dove il valore **1** viene usato quando viene eseguita questa stored procedure da un agente di replica e in ogni altro caso, il valore predefinito di **0**deve essere utilizzato.  
   
  [ @schema_change_script =] '*schema_change_script*'  
- Specifica il nome e il percorso di uno script di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato per modificare le stored procedure personalizzate generate dal sistema. *schema_change_script* viene **nvarchar (4000)**, con un valore predefinito è NULL. La replica consente di sostituire una o più stored procedure predefinite utilizzate per la replica transazionale con stored procedure personalizzate definite dall'utente. *schema_change_script* viene eseguito dopo una modifica dello schema in un articolo di tabella replicato utilizzando sp_repladdcolumn e può essere utilizzata per eseguire una delle operazioni seguenti:  
+ Specifica il nome e il percorso di uno script di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato per modificare le stored procedure personalizzate generate dal sistema. *schema_change_script* viene **nvarchar (4000)** , con un valore predefinito è NULL. La replica consente di sostituire una o più stored procedure predefinite utilizzate per la replica transazionale con stored procedure personalizzate definite dall'utente. *schema_change_script* viene eseguito dopo una modifica dello schema in un articolo di tabella replicato utilizzando sp_repladdcolumn e può essere utilizzata per eseguire una delle operazioni seguenti:  
   
 -   Se le stored procedure personalizzate vengono rigenerate automaticamente, *schema_change_script* può essere utilizzato per eliminare le stored procedure personalizzate e sostituirle con definito dall'utente stored procedure personalizzate che supportano il nuovo schema.  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 533b096b11ded9c76db81e640c961449a2785330
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b01628e339e4a3ce1f824f27edd75e2e5aea2526
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123766"
 ---
 # <a name="xpcmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ xp_cmdshell { 'command_string' } [ , no_output ]
   
 ## <a name="arguments"></a>Argomenti  
  **'** *command_string* **'**  
- Stringa che contiene un comando da passare al sistema operativo. *command_string* è **varchar(8000)** o **nvarchar (4000)**, non prevede alcun valore predefinito. *command_string* non può contenere più di un set di virgolette doppie. Una singola coppia di virgolette è necessaria se gli spazi sono presenti i percorsi di file o i nomi a cui fa riferimento di programma *command_string*. In caso di problemi nell'utilizzo di spazi incorporati nelle stringhe, valutare l'utilizzo di nomi di file in formato FAT 8.3 come soluzione alternativa.  
+ Stringa che contiene un comando da passare al sistema operativo. *command_string* è **varchar(8000)** o **nvarchar (4000)** , non prevede alcun valore predefinito. *command_string* non può contenere più di un set di virgolette doppie. Una singola coppia di virgolette è necessaria se gli spazi sono presenti i percorsi di file o i nomi a cui fa riferimento di programma *command_string*. In caso di problemi nell'utilizzo di spazi incorporati nelle stringhe, valutare l'utilizzo di nomi di file in formato FAT 8.3 come soluzione alternativa.  
   
  **no_output**  
  Parametro facoltativo che indica che non è richiesta la restituzione di output al client.  
@@ -74,7 +73,7 @@ The command(s) completed successfully.
 >  Se **xp_cmdshell** viene eseguita all'interno di un batch e restituisce un errore, il batch avrà esito negativo. Questa è una differenza funzionale Nelle versioni precedenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] batch continuerebbe a eseguire.  
   
 ## <a name="xpcmdshell-proxy-account"></a>Account proxy per xp_cmdshell  
- Quando viene chiamato da un utente che non è un membro del **sysadmin** ruolo predefinito del server **xp_cmdshell** si connette a Windows usando il nome dell'account e una password archiviati nella credenziale denominata **# # xp_cmdshell_proxy_account # #**. Se questa credenziale proxy non esiste, **xp_cmdshell** avrà esito negativo.  
+ Quando viene chiamato da un utente che non è un membro del **sysadmin** ruolo predefinito del server **xp_cmdshell** si connette a Windows usando il nome dell'account e una password archiviati nella credenziale denominata **# # xp_cmdshell_proxy_account # #** . Se questa credenziale proxy non esiste, **xp_cmdshell** avrà esito negativo.  
   
  La credenziale dell'account proxy può essere creata eseguendo **sp_xp_cmdshell_proxy_account**. Questa stored procedure accetta un nome utente e una password di Windows come argomenti. Il comando seguente, ad esempio, crea una credenziale proxy per l'utente di dominio di Windows `SHIPPING\KobeR` con la password di Windows `sdfh%dkc93vcMt0`.  
   
@@ -121,14 +120,14 @@ REVERT ;
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-a-list-of-executable-files"></a>A. Restituzione di un elenco di file eseguibili  
+### <a name="a-returning-a-list-of-executable-files"></a>R. Restituzione di un elenco di file eseguibili  
  Nell'esempio seguente viene mostrato l'utilizzo della stored procedure estesa `xp_cmdshell` per eseguire un comando di directory.  
   
 ```  
 EXEC master..xp_cmdshell 'dir *.exe''  
 ```  
   
-### <a name="b-returning-no-output"></a>b. Esecuzione di un comando senza restituzione dell'output  
+### <a name="b-returning-no-output"></a>B. Esecuzione di un comando senza restituzione dell'output  
  Nell'esempio seguente viene mostrato l'utilizzo di `xp_cmdshell` per eseguire una stringa di comandi senza restituire alcun output al client.  
   
 ```  

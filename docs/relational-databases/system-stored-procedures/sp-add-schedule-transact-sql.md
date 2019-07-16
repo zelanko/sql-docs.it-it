@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16468053ee1e0d09b5be37c034800c122c1d16c9
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 438fe71bcc32c63f97aea95c7105399c2ff8a479
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088513"
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,9 +76,9 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |---------------------------|--------------------------------|  
 |**1** (once)|*freq_interval* risulta inutilizzato.|  
 |**4** (giornaliera)|Ogni *freq_interval* giorni.|  
-|**8** (settimanale)|*freq_interval* corrisponde a uno o più dei valori seguenti (in combinazione con un operatore logico OR):<br /><br /> **1** = Sunday<br /><br /> **2** = lunedì<br /><br /> **4** = martedì<br /><br /> **8** = mercoledì<br /><br /> **16** = giovedì<br /><br /> **32** = venerdì<br /><br /> **64** = Saturday|  
+|**8** (settimanale)|*freq_interval* corrisponde a uno o più dei valori seguenti (in combinazione con un operatore logico OR):<br /><br /> **1** = domenica<br /><br /> **2** = lunedì<br /><br /> **4** = martedì<br /><br /> **8** = mercoledì<br /><br /> **16** = giovedì<br /><br /> **32** = venerdì<br /><br /> **64** = sabato|  
 |**16** (mensile)|Nel *freq_interval* giorno del mese.|  
-|**32** (mensile relativo)|*freq_interval* è uno dei seguenti:<br /><br /> **1** = Sunday<br /><br /> **2** = lunedì<br /><br /> **3** = martedì<br /><br /> **4** = mercoledì<br /><br /> **5** = giovedì<br /><br /> **6** = Friday<br /><br /> **7** = sabato<br /><br /> **8** = giorno<br /><br /> **9** = giorno feriale<br /><br /> **10** = giorno festivo|  
+|**32** (mensile relativo)|*freq_interval* è uno dei seguenti:<br /><br /> **1** = domenica<br /><br /> **2** = lunedì<br /><br /> **3** = martedì<br /><br /> **4** = mercoledì<br /><br /> **5** = giovedì<br /><br /> **6** = venerdì<br /><br /> **7** = sabato<br /><br /> **8** = giorno<br /><br /> **9** = giorno feriale<br /><br /> **10** = giorno festivo|  
 |**64** (all'avvio del servizio SQLServerAgent)|*freq_interval* risulta inutilizzato.|  
 |**128**|*freq_interval* risulta inutilizzato.|  
   
@@ -130,7 +129,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
@@ -148,7 +147,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-schedule"></a>A. Creazione di una pianificazione  
+### <a name="a-creating-a-schedule"></a>R. Creazione di una pianificazione  
  Nell'esempio seguente viene creata una pianificazione denominata `RunOnce`. La pianificazione viene eseguita una volta, alle `23:30` del giorno in cui è stata creata.  
   
 ```  
@@ -163,7 +162,7 @@ EXEC dbo.sp_add_schedule
 GO  
 ```  
   
-### <a name="b-creating-a-schedule-attaching-the-schedule-to-multiple-jobs"></a>b. Creazione di una pianificazione e associazione della pianificazione a più processi  
+### <a name="b-creating-a-schedule-attaching-the-schedule-to-multiple-jobs"></a>B. Creazione di una pianificazione e associazione della pianificazione a più processi  
  Nell'esempio seguente viene creata una pianificazione denominata `NightlyJobs`. I processi che utilizzano questa pianificazione vengono eseguiti ogni giorno quando l'ora indicata dal server è `01:00`. Nell'esempio la pianificazione viene collegata al processo `BackupDatabase` e al processo `RunReports`.  
   
 > [!NOTE]  

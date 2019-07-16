@@ -10,13 +10,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2d1cd12ff92b45c78eaf3dbe17a08c4e83d0f3b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3d9346d301357fff052566cf66b7ce133b5e4ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65994121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985289"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Installazione e configurazione di Master Data Services
 
@@ -132,7 +131,7 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
 
     >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] Aggiunge il supporto per l'istanza gestita di SQL Server. Impostare il valore della **istanza di SQL Server** all'host di un Database SQL di Azure a istanza gestita. Ad esempio `xxxxxx.xxxxxx.database.windows.net`.
 
-4. Selezionare il **tipo di autenticazione** e quindi fare clic su **Test connessione** per confermare che sia possibile connettersi al database usando le credenziali per il tipo di autenticazione selezionato. Scegliere **Avanti**.
+4. Selezionare il **tipo di autenticazione** e quindi fare clic su **Test connessione** per confermare che sia possibile connettersi al database usando le credenziali per il tipo di autenticazione selezionato. Fare clic su **Avanti**.
 
     >Per [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], istanza gestita di connettersi al Database SQL di Azure, usare uno dei tipi di autenticazione seguenti:
     >
@@ -146,7 +145,7 @@ Se si vogliono apportare modifiche all'installazione di [!INCLUDE[ssCurrent_md](
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  Digitare un nome nel campo **Nome database** . Facoltativamente, per selezionare regole di confronto di Windows, deselezionare la casella di controllo **Regole di confronto predefinite di SQL Server** e fare clic su una o più delle opzioni disponibili, ad esempio **Distinzione maiuscole/minuscole**. Scegliere **Avanti**.
+4.  Digitare un nome nel campo **Nome database** . Facoltativamente, per selezionare regole di confronto di Windows, deselezionare la casella di controllo **Regole di confronto predefinite di SQL Server** e fare clic su una o più delle opzioni disponibili, ad esempio **Distinzione maiuscole/minuscole**. Fare clic su **Avanti**.
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   

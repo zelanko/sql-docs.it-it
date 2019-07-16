@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 886cab83-d599-4fbc-9c88-e8cb833aac4b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 634fbcdbf78515e59295e679072ffa5fd08e4823
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d60296a73367b4718c4da5df036befa0cd34b505
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62686928"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114367"
 ---
 # <a name="sqlstatistics-paradox-driver"></a>SQLStatistics (driver Paradox)
 > [!NOTE]  
 >  In questo argomento fornisce informazioni specifiche del Driver Paradox. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
-|colonna|Commenti|  
+|Colonna|Commenti|  
 |------------|--------------|  
 |TABLE_QUALIFIER|Il percorso di una directory.<br /><br /> Criteri di ricerca non sono supportata nel *szTableQualifier* argomento.|  
 |TABLE_OWNER|Poiché il nome del proprietario non è supportato in questa colonna viene restituito NULL.|  

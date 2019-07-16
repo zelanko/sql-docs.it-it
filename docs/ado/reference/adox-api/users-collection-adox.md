@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bbf05e0b177cc61ed9de757db46f8950aaa7dccd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a6146a942e572e28692ceaafd77d6958cdab9dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705622"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964958"
 ---
 # <a name="users-collection-adox"></a>Raccolta Users (ADOX)
 Contiene tutti archiviati [utente](../../../ado/reference/adox-api/user-object-adox.md) gli oggetti di un [catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) oppure [gruppo](../../../ado/reference/adox-api/group-object-adox.md).  
@@ -31,11 +30,11 @@ Contiene tutti archiviati [utente](../../../ado/reference/adox-api/user-object-a
 ## <a name="remarks"></a>Note  
  Il **gli utenti** raccolta di un [catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) rappresenta gli utenti del catalogo. Il **gli utenti** raccolta per un [gruppo](../../../ado/reference/adox-api/group-object-adox.md) rappresenta solo gli utenti che hanno l'appartenenza a un gruppo specifico.  
   
- Il [Append](../../../ado/reference/adox-api/append-method-adox-users.md) metodo per un **utenti** raccolta sia univoca per ADOX. È possibile effettuare le operazioni seguenti:  
+ Il [Append](../../../ado/reference/adox-api/append-method-adox-users.md) metodo per un **utenti** raccolta sia univoca per ADOX. È possibile:  
   
 -   Aggiungere un nuovo utente alla raccolta utilizzando il **Append** (metodo).  
   
- Le proprietà e metodi restanti sono standard per le raccolte di ADO. È possibile effettuare le operazioni seguenti:  
+ Le proprietà e metodi restanti sono standard per le raccolte di ADO. È possibile:  
   
 -   Accedere a un utente nella raccolta con il [elemento](../../../ado/reference/ado-api/item-property-ado.md) proprietà.  
   

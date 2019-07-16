@@ -2,7 +2,6 @@
 title: Opzione della funzionalità (sistema di piattaforma Analitica)
 description: Visualizza le informazioni sulle opzioni di due funzionalità che sono stati introdotti in AU7 sistema di piattaforma Analitica.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -10,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: b4fa05bcc33c9a305253563e40bf071338f19461
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e9929d4729cc1027c82b61c9fab6ebfcddbd54d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63276162"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961510"
 ---
 # <a name="appliance-feature-switches"></a>Opzioni di funzionalità delle Appliance
 

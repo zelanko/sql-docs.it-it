@@ -2,19 +2,18 @@
 title: Determinare la frequenza di polling - sistema di piattaforma Analitica | Microsoft Docs
 description: Questo articolo illustra come determinare la frequenza di polling per gli avvisi di sistema di piattaforma Analitica appliance.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: eec9e3e211c68b7f56fe6829a70064317b96e646
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d305c766801ce27268e2d3bc873d9c361c034f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63221993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961079"
 ---
 # <a name="determine-polling-frequency"></a>Determinare la frequenza di Polling
 Questo articolo illustra come determinare la frequenza di polling per gli avvisi di sistema di piattaforma Analitica appliance.  

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 820542c25947157b9e062608f1134e4bdeaa702a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fd00cae14d5dd3f00a848edc166b7fbe8c4b7c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62737691"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102415"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Definizione di assi in query XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "62737691"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-retrieve-child-elements-of-the-context-node"></a>A. Recuperare elementi figlio del nodo di contesto  
+### <a name="a-retrieve-child-elements-of-the-context-node"></a>R. Recuperare elementi figlio del nodo di contesto  
  La query XPath seguente seleziona tutti i  **\<contatto >** gli elementi figlio del nodo di contesto:  
   
 ```  

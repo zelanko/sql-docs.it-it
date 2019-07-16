@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 1d82ab7eb58b9c7aa76683e09b8017fb21799eef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c6e5138cb3f33054c9118e3a3b264639f043005
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63284934"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016971"
 ---
 # <a name="bitwise-operators"></a>Operatori bit per bit
 
@@ -23,7 +22,7 @@ ms.locfileid: "63284934"
   
  MDX supporta gli operatori logici elencati nella tabella seguente.  
   
-|Operatore|Descrizione|  
+|Operator|Descrizione|  
 |--------------|-----------------|  
 |[AND](../mdx/and-mdx.md)|Esegue la congiunzione logica di due espressioni numeriche.|  
 |[IS](../mdx/is-mdx.md)|Esegue un confronto logico tra due espressioni di oggetto.|  

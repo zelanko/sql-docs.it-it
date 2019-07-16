@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: fabc454fe6adc77ec3e9789925e099fb6b0de6b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03d622c50a8760bbf1767bc8a4f79e215773695f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006612"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>Creazione del server di file di connessione (AccessToSQL)
 Informazioni sul server può essere specificato nella sezione dei server del file di script. Informazioni sul server può anche essere specificati in un file di connessione server separato. Il parametro della riga di comando per il file di connessione del server è `-c <serverconnectionfile>`. Se lo stesso id di server è presente nel file di connessione dello script sia nel server, viene considerata la definizione del server nel file di script.  

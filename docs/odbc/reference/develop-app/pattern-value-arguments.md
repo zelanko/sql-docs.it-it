@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8f4a32d9ab637de5b52466cfcb628a57ff6c044b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 53c091fd0b7a6cfdf390997fb5163fbc9d98e18c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861728"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023345"
 ---
 # <a name="pattern-value-arguments"></a>Argomenti del valore dei criteri
 Alcuni argomenti nel catalogo di funzioni, ad esempio la *TableName* nell'argomento **SQLTables**, accettare i criteri di ricerca. Questi argomenti accettano criteri di ricerca se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_FALSE; argomenti di tipo identificatore che non accettano un criterio di ricerca se questo attributo è impostato su SQL_TRUE sono.  
@@ -37,7 +36,7 @@ Alcuni argomenti nel catalogo di funzioni, ad esempio la *TableName* nell'argome
   
 |Criterio di ricerca|Descrizione|  
 |--------------------|-----------------|  
-|%A%|Tutti gli identificatori che contengono la lettera A|  
+|%A %|Tutti gli identificatori che contengono la lettera A|  
 |ABC_|Tutti gli identificatori di quattro caratteri iniziano con ABC|  
 |ABC\\_|L'identificatore ABC, presupponendo che il carattere di escape è una barra rovesciata (\\)|  
 |\\\\%|Tutti gli identificatori che iniziano con una barra rovesciata (\\), presupponendo che il carattere di escape è una barra rovesciata|  

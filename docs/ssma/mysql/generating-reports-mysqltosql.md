@@ -1,5 +1,5 @@
 ---
-title: Generating Reports (MySQLToSQL) | Microsoft Docs
+title: Generazione di report (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: beebb6df04675e87ff65b51161191700e07f0199
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5b94ef545285cd7dfa4597820da00552b9f3930
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183052"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103015"
 ---
 # <a name="generating-reports-mysqltosql"></a>Generazione di report (MySQLToSQL)
 I report di determinate attività eseguite usando i comandi vengono generati nella Console SSMA a livello di oggetto dell'albero.  
@@ -31,7 +30,7 @@ Utilizzare la procedura seguente per generare report:
     ||||  
     |-|-|-|  
     |**SL. No.**|**Command**|**Titolo del report**|  
-    |1|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
+    |1|generare report di valutazione|AssessmentReport&lt;n&gt;.XML|  
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
     |3|migrate-data|DataMigrationReport&lt;n&gt;.XML|  
     |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
@@ -59,8 +58,8 @@ Utilizzare la procedura seguente per generare report:
     ||||  
     |-|-|-|  
     |**SL. No.**|**Comando e parametri**|**Descrizione di output**|  
-    |1|report-errors="false"|Nessun dettaglio in caso di errore / avviso / i messaggi di informazioni.|  
-    |2|report-errors="true"|Dettagli errore / avviso / i messaggi di informazioni.|  
+    |1|Segnala errori = "false"|Nessun dettaglio in caso di errore / avviso / i messaggi di informazioni.|  
+    |2|Segnala errori = "true"|Dettagli errore / avviso / i messaggi di informazioni.|  
   
     > [!NOTE]  
     > Le impostazioni di segnalazione di errori specificato in precedenza sono applicabili per generare report di valutazione, convert-schema, eseguire la migrazione di dati, i comandi di convert-sql-statement.  
@@ -105,13 +104,13 @@ Il comando **destinazione sincronizzare** ha **report errori-a-** parametro che 
 ```  
 **object-name:** Specifica gli oggetti considerati per la sincronizzazione (può anche avere un nome di oggetto gruppo o nomi di oggetto individuali).  
   
-**on-error:** Specifica se specificare gli errori di sincronizzazione come avvisi o errori. Opzioni disponibili per in caso di errore:  
+**in errore:** Specifica se specificare gli errori di sincronizzazione come avvisi o errori. Opzioni disponibili per in caso di errore:  
   
--   report-total-as-warning  
+-   -Totale report come avviso  
   
--   report-each-as-warning  
+-   report-each-come-avviso  
   
--   fail-script  
+-   Errore-script  
   
 ### <a name="refresh-from-database"></a>aggiornamento dal database:  
 Il comando **dal database di aggiornamento** ha **report errori-a-** parametro che specifica il percorso del report di errore per l'operazione di aggiornamento. Quindi, un file con nome **SourceDBRefreshReport&lt;n&gt;. XML** viene creato nella posizione specificata, in cui **&lt;n&gt;** è il numero di file univoco che viene incrementato con una cifra a ogni esecuzione del comando stesso.  
@@ -135,13 +134,13 @@ Il comando **dal database di aggiornamento** ha **report errori-a-** parametro c
 ```  
 **object-name:** Specifica gli oggetti considerati per l'aggiornamento (può anche avere un nome di oggetto gruppo o nomi di oggetto individuali).  
   
-**on-error:** Specifica se occorre indicare errori di aggiornamento come avvisi o errori. Opzioni disponibili per in caso di errore:  
+**in errore:** Specifica se occorre indicare errori di aggiornamento come avvisi o errori. Opzioni disponibili per in caso di errore:  
   
--   report-total-as-warning  
+-   -Totale report come avviso  
   
--   report-each-as-warning  
+-   report-each-come-avviso  
   
--   fail-script  
+-   Errore-script  
   
 ## <a name="see-also"></a>Vedere anche  
 [Esecuzione della Console SSMA (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  

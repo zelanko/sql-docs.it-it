@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d7fff3c65aaf6a5670be2d457440f4384f7c5fdd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ec3fae7d4e2a649ea05c48d400728e229607d92f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011992"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079267"
 ---
 # <a name="syselasticpoolresourcestats-azure-sql-database"></a>Sys. elastic_pool_resource_stats (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "56011992"
 |-----------------|---------------|-----------------|  
 |**start_time**|**datetime2**|Ora UTC che indica l'inizio dei periodo di 15 secondi.|  
 |**end_time**|**datetime2**|Ora UTC che indica la fine del secondo intervallo di reporting 15.|  
-|**elastic_pool_name**|**nvarchar(128)**|Nome del pool di database elastici.|  
+|**nome_pool_elastico**|**nvarchar(128)**|Nome del pool di database elastici.|  
 |**avg_cpu_percent**|**decimal(5,2)**|Utilizzo di calcolo medio in percentuale del limite del pool.|  
 |**avg_data_io_percent**|**decimal(5,2)**|Utilizzo dei / o medio espresso in percentuale sulla base del limite del pool.|  
 |**avg_log_write_percent**|**decimal(5,2)**|Medio scrittura utilizzo delle risorse in percentuale del limite del pool.|  
@@ -47,7 +46,7 @@ ms.locfileid: "56011992"
 |**max_session_percent**|**decimal(5,2)**|Numero massimo di sessioni simultaneo espresso in percentuale sulla base del limite del pool.|  
 |**elastic_pool_dtu_limit**|**int**|Pool elastico max DTU impostazione corrente per questo pool elastico durante questo intervallo.|  
 |**elastic_pool_storage_limit_mb**|**bigint**|Limite di archiviazione massima del pool elastico corrente l'impostazione per questo pool elastico in megabyte durante questo intervallo.|
-|**avg_allocated_storage_percent**|**decimal(5,2)**|La percentuale di dati spazio allocato per tutti i database nel pool elastico.  Questa è la percentuale di spazio per i dati allocato alla dimensione massima dei dati per il pool elastico.  Per ulteriori informazioni, vedere [Gestione dello spazio file nel database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
+|**avg_allocated_storage_percent**|**decimal(5,2)**|La percentuale di dati spazio allocato per tutti i database nel pool elastico.  Questa è la percentuale di spazio per i dati allocato alla dimensione massima dei dati per il pool elastico.  Per altre informazioni, vedere: [Gestione dello spazio file nel database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
 ## <a name="remarks"></a>Note
 

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cdf171c66c19d87ea4919eeb55dca65f14b89ebd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a63a88e24f62ba9d8a4a70107663ab2d585f4640
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061796"
 ---
 # <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -71,9 +70,9 @@ EXECUTE sys.sp_rda_test_connection
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|link_state|INT|Uno dei valori seguenti, che corrispondono ai valori per **link_state_desc**.<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
-|link_state_desc|varchar(32)|Uno dei valori seguenti, che corrispondono agli ultimi valori per **link_state**.<br /><br /> -INTEGRO<br />     Il tra SQL Server e di Azure remoto server è integro.<br />-   ERROR_AZURE_FIREWALL<br />     Il firewall di Azure impedisce il collegamento tra SQL Server e il server Azure remoto.<br />-   ERROR_NO_CONNECTION<br />     SQL Server non è possibile stabilire una connessione al server Azure remoto.<br />-   ERROR_AUTH_FAILURE<br />     Errore di autenticazione impedisce il collegamento tra SQL Server e il server Azure remoto.<br />-ERRORE<br />     Un errore che non è un problema di autenticazione, un problema di connettività o un problema del firewall impedisce il collegamento tra SQL Server e il server Azure remoto.|  
-|error_number|INT|Il numero dell'errore. Se non si verificano errori, questo campo è NULL.|  
+|link_state|int|Uno dei valori seguenti, che corrispondono ai valori per **link_state_desc**.<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
+|link_state_desc|varchar(32)|Uno dei valori seguenti, che corrispondono agli ultimi valori per **link_state**.<br /><br /> -INTEGRO<br />     Il tra SQL Server e di Azure remoto server è integro.<br />-   ERROR_AZURE_FIREWALL<br />     Il firewall di Azure impedisce il collegamento tra SQL Server e il server Azure remoto.<br />-ERROR_NO_CONNECTION<br />     SQL Server non è possibile stabilire una connessione al server Azure remoto.<br />-ERROR_AUTH_FAILURE<br />     Errore di autenticazione impedisce il collegamento tra SQL Server e il server Azure remoto.<br />-ERRORE<br />     Un errore che non è un problema di autenticazione, un problema di connettività o un problema del firewall impedisce il collegamento tra SQL Server e il server Azure remoto.|  
+|error_number|int|Il numero dell'errore. Se non si verificano errori, questo campo è NULL.|  
 |error_message|nvarchar(1024)|Messaggio di errore. Se non si verificano errori, questo campo è NULL.|  
   
 ## <a name="permissions"></a>Permissions  

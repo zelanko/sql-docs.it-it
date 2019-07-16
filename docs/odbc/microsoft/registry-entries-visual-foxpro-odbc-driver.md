@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a63d92d-ca3a-46ae-911f-6788292c801e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: de287802693adb18e39509fdc0e7577d05984949
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00a24ffca764c029b87470b7aa07d15f33b4c673
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63316830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996446"
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>Voci del Registro di sistema (driver ODBC Visual FoxPro)
 Quando si installa il Driver ODBC Visual FoxPro, il programma di installazione aggiorna il Registro di sistema nella chiave del Registro di sistema HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini, aggiungere una nuova chiave denominata driver per Microsoft Visual FoxPro. Con la chiave, vengono aggiunti valori descritti nella tabella seguente.  

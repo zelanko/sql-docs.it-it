@@ -2,19 +2,18 @@
 title: Caricare i dati con Integration Services - Data Warehouse parallelo | Microsoft Docs
 description: Fornisce informazioni di riferimento e la distribuzione per il caricamento dei dati in Parallel Data Warehouse (PDW) con i pacchetti di SQL Server Integration Services (SSIS).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90d9f7422a3073df79a93949b3b7ed2e94208412
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213379"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960675"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Caricare dati con Integration Services per Parallel Data Warehouse
 Fornisce informazioni di riferimento e la distribuzione per il caricamento di dati in SQL Server Parallel Data Warehouse usando i pacchetti di SQL Server Integration Services (SSIS).  
@@ -71,7 +70,7 @@ Quindi i dati viene eseguito il mapping da Integration Services ai tipi di dati 
 |Tipo di dati PDW|Dati tipi di Integration Services (s) che eseguono il mapping al tipo di dati PDW|  
 |---------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|  
 |BIT|DT_BOOL|  
-|bigint|DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4|  
+|BIGINT|DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4|  
 |CHAR|DT_STR|  
 |DATE|DT_DBDATE|  
 |DATETIME|DT_DATE, DT_DBDATE, DT_DBTIMESTAMP, DT_DBTIMESTAMP2|  
@@ -84,7 +83,7 @@ Quindi i dati viene eseguito il mapping da Integration Services ai tipi di dati 
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |NVARCHAR|DT_WSTR, DT_STR|  
-|real|DT_R4|  
+|REAL|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1, DT_I2, DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -216,7 +215,7 @@ Specificare la destinazione del flusso di dati.
   
 4.  Selezionare **creare una nuova connessione**.  
   
-5.  Immettere le informazioni per il database del server, utente, password e destinazione con informazioni specifiche per l'appliance. (Di seguito sono riportati alcuni esempi.) Fare clic su **OK**.  
+5.  Immettere le informazioni per il database del server, utente, password e destinazione con informazioni specifiche per l'appliance. (Di seguito sono riportati alcuni esempi.) Fare quindi clic su **OK**.  
   
     Per le connessioni InfiniBand **nome Server**: Immettere < appliance-name >-SQLCTL01, 17001.  
   

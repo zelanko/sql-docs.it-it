@@ -2,19 +2,18 @@
 title: Transparent data encryption, Parallel Data Warehouse | Microsoft Docs
 description: Transparent data encryption (TDE) per Parallel Data Warehouse (PDW) esegue la crittografia dei / o in tempo reale e la decrittografia dei dati e i file di log delle transazioni e i file di log speciali di PDW."
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e9067416365e56dccf9c09f2e826c01fb3ecfa3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 582c237819dab5f0a1e30e2bd4e27fe3cc9ae57f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63156958"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959988"
 ---
 # <a name="transparent-data-encryption"></a>Transparent Data Encryption
 Per proteggere il database è possibile adottare alcune accortezze, tra cui la progettazione di un sistema sicuro, la crittografia dei dati riservati e la compilazione di un firewall attorno ai server di database. Tuttavia, per uno scenario in cui si appropria i supporti fisici (ad esempio le unità o nastri di backup), un utente malintenzionato può semplicemente ripristinare o collegare il database ed esplorare i dati. Una soluzione per ovviare al problema consiste nel crittografare i dati sensibili nel database e proteggere con un certificato le chiavi usate per la crittografia. In questo modo si impedisce a chi è sprovvisto delle chiavi di usare i dati; tuttavia, questo tipo di protezione deve essere pianificato in anticipo.  
@@ -144,7 +143,7 @@ Durante un'analisi di una nuova crittografia di un database, le operazioni di ma
   
 È possibile trovare lo stato della crittografia del database utilizzando la **sys.dm_pdw_nodes_database_encryption_keys** vista a gestione dinamica. Per altre informazioni, vedere la *viste del catalogo e viste a gestione dinamica* sezione più indietro in questo articolo.  
   
-### <a name="restrictions"></a>Restrictions  
+### <a name="restrictions"></a>Restrizioni  
 Le operazioni seguenti non sono consentite durante la `CREATE DATABASE ENCRYPTION KEY`, `ALTER DATABASE ENCRYPTION KEY`, `DROP DATABASE ENCRYPTION KEY`, o `ALTER DATABASE...SET ENCRYPTION` istruzioni.  
   
 -   Eliminazione del database.  

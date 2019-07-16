@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 6fa6606d7daf4a1b61ff986d1d7c5675b5ae5f1f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e138a8845336c41a031bd6e25b92138ae03ed63b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531813"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099057"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione  
   
-`[ @login = ] 'login'` È il nome dell'account di Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso da modificare. *account di accesso* viene **nvarchar(257)**, non prevede alcun valore predefinito  
+`[ @login = ] 'login'` È il nome dell'account di Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso da modificare. *account di accesso* viene **nvarchar(257)** , non prevede alcun valore predefinito  
   
 `[ @password = ] 'password'` Nuova password da archiviare per l'oggetto specificato *account di accesso*. *la password* viene **sysname**, non prevede alcun valore predefinito.  
   
@@ -58,7 +57,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|**distributor**|Tutte le connessioni di agenti al server di distribuzione.|  
+|**server di distribuzione**|Tutte le connessioni di agenti al server di distribuzione.|  
 |**publisher**|Tutte le connessioni di agenti al server di pubblicazione.|  
 |**subscriber**|Tutte le connessioni di agenti al Sottoscrittore.|  
 |**%** (impostazione predefinita)|Tutte le connessioni di agenti a tutti i server di una topologia di replica.|  

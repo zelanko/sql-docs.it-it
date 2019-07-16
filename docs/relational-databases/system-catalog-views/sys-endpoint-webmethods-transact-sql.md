@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7dad0cf6-eafa-47cf-98cc-75ba8d3c7959
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e36ad44360f34a7af383eaeaacb703607832cbdd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14e3534671cc36d8c2cac46f627d158056f985e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689349"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079248"
 ---
 # <a name="sysendpointwebmethods-transact-sql"></a>sys.endpoint_webmethods (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +35,10 @@ ms.locfileid: "47689349"
   
  Contiene una riga per ogni metodo SOAP definito in un endpoint HTTP abilitato per SOAP. La combinazione delle colonne endpoint_id e dello spazio dei nomi è univoca.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |endpoint_id|**int**|ID dell'endpoint in base al quale è definito il metodo Web.|  
-|spazio dei nomi|**nvarchar(384)**|Spazio dei nomi per il metodo Web.|  
+|namespace|**nvarchar(384)**|Spazio dei nomi per il metodo Web.|  
 |method_alias|**nvarchar(64)**|Alias del metodo.<br /><br /> Nota: [!INCLUDE[tsql](../../includes/tsql-md.md)] identificatori consentono i caratteri che non sono validi nei nomi di metodo WSDL.<br /><br /> L'alias viene utilizzato per eseguire il mapping del nome esposto nella descrizione WSDL dell'endpoint all'effettivo oggetto eseguibile [!INCLUDE[tsql](../../includes/tsql-md.md)] sottostante richiamato quando viene eseguita la chiamata al metodo Web.|  
 |object_name|**nvarchar(776)**|Nome dell'oggetto al quale il metodo Web è reindirizzato, come specificato dall'opzione NAME =. Parti di nomi sono separate da un punto (.) e delimitate tramite parentesi quadre, `[``]`.<br /><br /> Il nome dell'oggetto deve essere composto da tre parti, come specificato dall'opzione WSDL.|  
 |result_schema|**tinyint**|Opzione che determina l'eventuale schema XSD inviato assieme a una risposta.<br /><br /> 0 = Nessuno<br /><br /> 1 = Standard<br /><br /> 2 = Predefinito|  

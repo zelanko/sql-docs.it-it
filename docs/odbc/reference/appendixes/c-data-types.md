@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3f948b50fae0995e16024ac41d8dd891630d1dbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9fe4383e397c0fd06197be2ff25e6dbb876f6c0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037775"
 ---
 # <a name="c-data-types"></a>Tipi di dati C
 Tipi di dati C ODBC indicano il tipo di dati di C buffer usato per archiviare i dati nell'applicazione.  
@@ -40,12 +39,12 @@ Tipi di dati C ODBC indicano il tipo di dati di C buffer usato per archiviare i 
 |SQL_C_USHORT[j]|SQLUSMALLINT|Unsigned Integer a breve|  
 |SQL_C_SLONG[j]|SQLINTEGER|long int|  
 |SQL_C_ULONG[j]|SQLUINTEGER|long int senza segno|  
-|SQL_C_FLOAT|SQLREAL|FLOAT|  
-|SQL_C_DOUBLE|SQLDOUBLE, SQLFLOAT|double|  
+|SQL_C_FLOAT|SQLREAL|float|  
+|SQL_C_DOUBLE|SQLDOUBLE, SQLFLOAT|Double|  
 |SQL_C_BIT|SQLCHAR|unsigned char|  
 |SQL_C_STINYINT[j]|SQLSCHAR|char con segno|  
 |SQL_C_UTINYINT[j]|SQLCHAR|unsigned char|  
-|SQL_C_SBIGINT|SQLBIGINT|_int64[h]|  
+|SQL_C_SBIGINT|SQLBIGINT|_int64 [h]|  
 |SQL_C_UBIGINT|SQLUBIGINT|_int64 non firmati [h]|  
 |SQL_C_BINARY|SQLCHAR *|unsigned char *|  
 |SQL_C_BOOKMARK[i]|SEGNALIBRO|long int senza segno [d]|  
@@ -68,7 +67,7 @@ struct tagDATE_STRUCT {
   
  **Identificatore di tipo C** SQL_C_TYPE_TIME [c]  
   
- **ODBC C typedef** SQL_TIME_STRUCT  
+ **Typedef di ODBC C** SQL_TIME_STRUCT  
   
  **Tipo C**  
   
@@ -82,7 +81,7 @@ struct tagTIME_STRUCT {
   
  **Identificatore di tipo C** SQL_C_TYPE_TIMESTAMP [c]  
   
- **ODBC C typedef** SQL_TIMESTAMP_STRUCT  
+ **Typedef di ODBC C** SQL_TIMESTAMP_STRUCT  
   
  **Tipo C**  
   

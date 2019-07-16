@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d9ad01fb0aa73dc34739c5584a510dbe1bc854da
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 07158d4131c60cf46f49a860721333c78213c982
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004536"
 ---
 # <a name="handling-namespaces-in-xquery"></a>Gestione degli spazi dei nomi in XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "54254826"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-declaring-a-namespace"></a>A. Dichiarazione di uno spazio dei nomi  
+### <a name="a-declaring-a-namespace"></a>R. Dichiarazione di uno spazio dei nomi  
  La query seguente recupera le fasi di produzione di un modello di prodotto specifico.  
   
 ```  
@@ -52,7 +51,7 @@ WHERE ProductModelID=7
   
  Si noti che il **dello spazio dei nomi** parola chiave viene usata per definire un nuovo prefisso dello spazio dei nomi, "AWMI:". Questo prefisso dovrà pertanto essere utilizzato nella query per tutti gli elementi che rientrano nell'ambito dello spazio dei nomi specifico.  
   
-### <a name="b-declaring-a-default-namespace"></a>b. Dichiarazione di uno spazio dei nomi predefinito  
+### <a name="b-declaring-a-default-namespace"></a>B. Dichiarazione di uno spazio dei nomi predefinito  
  Nella query precedente è stato definito un nuovo prefisso dello spazio dei nomi. È stato quindi necessario utilizzare tale prefisso nella query per selezionare le strutture XML desiderate. In alternativa, è possibile dichiarare uno spazio dei nomi predefinito, come illustrato nella query modificata seguente:  
   
 ```  

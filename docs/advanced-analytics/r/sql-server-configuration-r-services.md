@@ -6,13 +6,12 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 9ad4d1a23a05db35e0c4b55473903dbf7e4265da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: efeb55e9fb3a241978fd31944f662250b0f36d48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962441"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configurazione di SQL Server per l'uso con R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -162,7 +161,7 @@ Per informazioni dettagliate, incluso il codice di esempio, vedere l'esercitazio
 
 **Altre risorse:**
 
-+ [Soft-NUMA in SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Architettura soft-NUMA in SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
     Come eseguire il mapping di nodi soft-NUMA alle CPU
 
@@ -170,7 +169,7 @@ Per informazioni dettagliate, incluso il codice di esempio, vedere l'esercitazio
 
 Questa sezione vengono riepilogati i metodi adottati in questi casi di Studio e in altri test, per l'ottimizzazione di carichi di lavoro di apprendimento automatico specifica. Carichi di lavoro comuni includono training del modello, estrazione di funzioni e la progettazione di funzionalità e diversi scenari per l'assegnazione dei punteggi: riga singola, batch di piccole dimensioni e batch di grandi dimensioni.
 
-### <a name="feature-engineering"></a>Progettazione delle funzionalità
+### <a name="feature-engineering"></a>Progettazione delle funzioni
 
 Un punto debole di r è che viene in genere elaborato in una singola CPU. Si tratta di un collo di bottiglia importante per molte attività, soprattutto alla progettazione di funzionalità. Nella soluzione di ripresa di ricerca, l'attività di progettazione di funzionalità da solo creato le funzionalità del prodotto incrociato 2.500 che dovevano essere combinati con le funzionalità di 100 originale. Questa operazione richiederebbe una quantità significativa di tempo se tutto ciò che è stata eseguita su una singola CPU.
 

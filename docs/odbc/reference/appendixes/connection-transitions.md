@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f808460a1421a9ab4cb3a76c2810d810b9636b11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00ebbe36f8668e83697ff3a0038fbeb38f23ffd2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019196"
 ---
 # <a name="connection-transitions"></a>Transizioni di connessione
 Connessioni ODBC presentano gli stati seguenti.  
   
-|State|Descrizione|  
+|Stato|Descrizione|  
 |-----------|-----------------|  
 |C0|Ambiente non allocato, non allocato connessione|  
 |C1|Ambiente allocato, non allocato connessione|  
@@ -37,7 +36,7 @@ Connessioni ODBC presentano gli stati seguenti.
   
  Le tabelle seguenti mostrano come ogni funzione ODBC riguarda lo stato della connessione.  
   
-## <a name="sqlallochandle"></a>SQLAllocHandle  
+## <a name="sqlallochandle"></a>Funzione SQLAllocHandle  
   
 |C0<br /><br /> Nessun Env.|C1 non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
 |--------------------|--------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
@@ -60,7 +59,7 @@ Connessioni ODBC presentano gli stati seguenti.
   
 |C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|C3 [d] C4 [s]|-[d] C2 C4 [e] [s]|(08002)|(08002)|(08002)|  
+|(IH)|(IH)|C4 C3 [d] [s]|-[d] C2 C4 [e] [s]|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlclosecursor"></a>SQLCloseCursor  
   
@@ -112,7 +111,7 @@ Connessioni ODBC presentano gli stati seguenti.
   
 |C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|C4 s -- n[f]|(08002)|(08002)|(08002)|(08002)|  
+|(IH)|(IH)|S C4--n [f]|(08002)|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlendtran"></a>SQLEndTran  
   
@@ -157,7 +156,7 @@ Connessioni ODBC presentano gli stati seguenti.
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(IH)[1]|C0|(HY010)|(HY010)|(HY010)|(HY010)|(HY010)|  
 |(IH)[2]|(IH)|(C1)|(HY010)|(HY010)|(HY010)|(HY010)|  
-|(IH)[3]|(IH)|(IH)|(IH)|(IH)|C4[5] --[6]|-C4 [7] [5] e [8] C5 [6] e [8]|  
+|(IH)[3]|(IH)|(IH)|(IH)|(IH)|C4 [5], [6]|-C4 [7] [5] e [8] C5 [6] e [8]|  
 |(IH)[4]|(IH)|(IH)|(IH)|--|--|--|  
   
  [1] questa riga Mostra le transizioni quando *HandleType* era SQL_HANDLE_ENV.  

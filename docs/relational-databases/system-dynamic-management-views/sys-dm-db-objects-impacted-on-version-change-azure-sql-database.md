@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b6f6538aa13b2236c7dca52189b37addad85ae53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9934771b6a887f6ae0984e79ce11729145e3d410
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62507263"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051542"
 ---
 # <a name="sysdmdbobjectsimpactedonversionchange-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -34,11 +33,11 @@ ms.locfileid: "62507263"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|class|**int** non NULL|Classe dell'oggetto che sarà interessato:<br /><br /> **1** = vincolo<br /><br /> **7** = indici e heap|  
-|class_desc|**nvarchar(60)** NOT NULL|Descrizione della classe:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
+|classe|**int** non NULL|Classe dell'oggetto che sarà interessato:<br /><br /> **1** = vincolo<br /><br /> **7** = indici e heap|  
+|class_desc|**nvarchar(60)** non NULL|Descrizione della classe:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
 |major_id|**int** non NULL|ID oggetto del vincolo o ID oggetto della tabella che contiene l'indice o l'heap.|  
 |minor_id|**int** NULL|**NULL** per i vincoli<br /><br /> Index_id per indici e heap|  
-|dependency|**nvarchar(60)** NOT NULL|Descrizione della dipendenza che causerà l'interessamento di un vincolo o di un indice. Lo stesso valore viene inoltre utilizzato per gli avvisi generati durante l'aggiornamento.<br /><br /> Esempi:<br /><br /> **spazio** (per la funzione intrinseca)<br /><br /> **geometria** (per sistema definito dall'utente)<br /><br /> **Geography:: Parse** (per sistema metodo UDT)|  
+|dependency|**nvarchar(60)** non NULL|Descrizione della dipendenza che causerà l'interessamento di un vincolo o di un indice. Lo stesso valore viene inoltre utilizzato per gli avvisi generati durante l'aggiornamento.<br /><br /> Esempi:<br /><br /> **spazio** (per la funzione intrinseca)<br /><br /> **geometria** (per sistema definito dall'utente)<br /><br /> **Geography:: Parse** (per sistema metodo UDT)|  
   
 ## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione VIEW DATABASE STATE.  
@@ -67,7 +66,7 @@ class  class_desc        major_id    minor_id    dependency
   
 |JSON|Oggetto interessato|Azione correttiva|  
 |-----------|---------------------|-----------------------|  
-|1|**Indici**|Ricompilare gli indici identificati da **sys.dm_db_objects_impacted_on_version_change** , ad esempio:  `ALTER INDEX ALL ON <table> REBUILD`<br />o Gestione configurazione<br />`ALTER TABLE <table> REBUILD`|  
-|2|**Oggetto**|Tutti i vincoli identificati da **sys.dm_db_objects_impacted_on_version_change** devono essere riconvalidati dopo che i dati geometry e geography nella tabella sottostante viene ricalcolati. Per i convalidi, riconvalidare utilizzando ALTER TABLE. <br />Ad esempio: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />o Gestione configurazione<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
+|1|**Indici**|Ricompilare gli indici identificati da **sys.dm_db_objects_impacted_on_version_change** , ad esempio:  `ALTER INDEX ALL ON <table> REBUILD`<br />oppure<br />`ALTER TABLE <table> REBUILD`|  
+|2|**Oggetto**|Tutti i vincoli identificati da **sys.dm_db_objects_impacted_on_version_change** devono essere riconvalidati dopo che i dati geometry e geography nella tabella sottostante viene ricalcolati. Per i convalidi, riconvalidare utilizzando ALTER TABLE. <br />Ad esempio: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />oppure<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

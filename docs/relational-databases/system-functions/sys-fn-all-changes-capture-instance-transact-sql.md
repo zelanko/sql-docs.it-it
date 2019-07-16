@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 40bf73a1cdca0bc582ac3e6ed6a977980d2aa24f
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: de589bbe1fe5f590ef3d75c884aae70b5276804a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585104"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140525"
 ---
 # <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +87,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|Valore LSN di commit per la transazione associata alla modifica. Tutte le modifiche di cui è stato eseguito il commit nella stessa transazione condividono lo stesso valore LSN di commit.|  
 |__CDC_SEQVAL|**binary(10)**|Valore di sequenza utilizzato per ordinare le modifiche alle righe in una transazione.|  
-|\<le colonne da @column_list>|**varies**|Le colonne identificate nel *column_list* argomento sp_cdc_generate_wrapper_function funzione quando viene chiamato per generare lo script che crea la funzione wrapper.|  
+|\<le colonne da @column_list>|**varia in base**|Le colonne identificate nel *column_list* argomento sp_cdc_generate_wrapper_function funzione quando viene chiamato per generare lo script che crea la funzione wrapper.|  
 |__CDC_OPERATION|**nvarchar(2)**|Codice operativo che indica l'operazione necessaria per applicare la riga all'ambiente di destinazione. Varia in base al valore dell'argomento *row_filter_option* fornito nella chiamata:<br /><br /> *row_filter_option* = 'all'<br /><br /> 'D' - operazione di eliminazione<br /><br /> 'I' - operazione di inserimento<br /><br /> 'UN' - operazione di aggiornamento ai nuovi valori<br /><br /> *row_filter_option* = 'all update old'<br /><br /> 'D' - operazione di eliminazione<br /><br /> 'I' - operazione di inserimento<br /><br /> 'UN' - operazione di aggiornamento ai nuovi valori<br /><br /> 'UO' - operazione di aggiornamento ai valori obsoleti|  
 |\<le colonne da @update_flag_list>|**bit**|Un flag di bit viene denominato aggiungendo _uflag al nome della colonna. Il flag viene sempre impostato su NULL quando \__CDC_OPERATION sia ', 'I' o 'UO'. Quando \__CDC_OPERATION è un' ', è impostato su 1 se l'aggiornamento ha una modifica alla colonna corrispondente. Altrimenti, è impostato su 0.|  
   

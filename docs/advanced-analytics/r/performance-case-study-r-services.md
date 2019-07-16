@@ -6,13 +6,12 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 392a6da09827355e6bc9a901b0e4580e5eb72bf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce4bb94efa8c8ffb1b0a3b0c52c29de74a2b966e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642672"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962554"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Le prestazioni per R Services: risorse e i risultati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -90,7 +89,7 @@ Questa sezione vengono confrontate prima e dopo i risultati per ogni test.
 
 Il primo test confrontati l'utilizzo della compressione e una tabella a colonne per ridurre le dimensioni dei dati.
 
-| Nome tabella            | Righe     | Riservato   | Dati       | index_size | Non utilizzato  | % salvataggio (riservato) |
+| Nome tabella            | Righe     | Riservato   | Data       | index_size | Non utilizzato  | % salvataggio (riservato) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2978816 KB | 2972160 KB | 6128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625784 KB  | 623744 KB  | 1352 KB    | 688 KB  | 79%                 |
@@ -180,7 +179,7 @@ Questo test valutato l'impatto della modifica del codice R per evitare un proble
 
 | Nome tabella          | Nome test   | Durata media |
 |---------------------|-------------|--------------|
-| *Airline*           | *FactorCol* | 10.72        |
+| *Delle compagnie aeree*           | *FactorCol* | 10.72        |
 | *airlineWithIntCol* | *IntCol*    | 3.4475       |
 
 **Conclusioni**

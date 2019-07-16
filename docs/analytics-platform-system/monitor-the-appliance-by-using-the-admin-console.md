@@ -2,19 +2,18 @@
 title: Monitoraggio con Console di Amministrazione - sistema di piattaforma Analitica | Microsoft Docs
 description: Per il sistema di piattaforma Analitica, la Console di amministrazione è un'applicazione web che espone le informazioni di stato, l'integrità e prestazioni dell'appliance. Gli utenti di connettersi alla Console di amministrazione tramite un browser internet.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d094f809052222238806e679e38c6578422fd9aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7fb3bf769d3145118359af0e33e3cf01a0b6d325
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63027542"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960485"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>Monitorare l'appliance con la Console di Amministrazione - sistema di piattaforma Analitica
 La Console di amministrazione è un'applicazione web di SQL Server PDW che copre le informazioni di stato, l'integrità e prestazioni dell'appliance. Gli utenti di connettersi alla Console di amministrazione tramite Internet Explorer.  
@@ -31,7 +30,7 @@ Consente di visualizzare la topologia dello strumento con gli indicatori che mos
   
 Visualizza gli avvisi di hardware e software.  
   
-Performance Monitor  
+Monitoraggio delle prestazioni  
 Consente di visualizzare i grafici di monitoraggio delle prestazioni.  
   
 **Parallel Data Warehouse**  
@@ -61,7 +60,7 @@ Visualizza un elenco di blocchi risorse PDW e il relativo stato corrente.
 Archiviazione  
 Riepiloga l'uso di archiviazione PDW.  
   
-Performance Monitor  
+Monitoraggio delle prestazioni  
 Consente di visualizzare i grafici di monitoraggio delle prestazioni di PDW.  
  
 > [!NOTE]  

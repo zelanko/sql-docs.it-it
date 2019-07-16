@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a580492c-1b41-4393-9604-faa0bd28854b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7fe70b1e484039593c9bb02a28788259f9afaf18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3aadec3adbf7b3928f182c99e5545165b5cfd372
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63242371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039874"
 ---
 # <a name="diagnostic-tools"></a>Strumenti di diagnostica
 Due funzionalità può semplificare la diagnosi dei problemi nelle applicazioni ODBC. Entrambi sono disponibili dall'amministratore ODBC e implementati da Gestione Driver. *Traccia* fornisce un mezzo per registrazione in un file di log della sequenza di chiamate di funzione. Visual Studio Analyzer consente l'analisi delle informazioni sull'interazione dei componenti in un ambiente distribuito.  

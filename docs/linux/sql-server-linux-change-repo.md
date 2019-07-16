@@ -3,18 +3,17 @@ title: Configurare i repository di Linux per SQL Server 2017 e 2019
 description: Controllare e configurare i repository del codice sorgente per 2019 di SQL Server e SQL Server 2017 in Linux. Il repository del codice sorgente riguarda la versione di SQL Server che vengono applicati durante l'installazione e aggiornamento.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 05299a2efd374dc7d58b5e32fcdea918b12fc1d3
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 33616b9a7767156e4cfd69d233f7dcfe5fc080f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967528"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurare i repository per l'installazione e aggiornamento di SQL Server in Linux
 
@@ -39,7 +38,7 @@ Questo articolo descrive come configurare il repository corretto per gli aggiorn
 
 Quando si installa SQL Server in Linux, è necessario configurare un repository di Microsoft. Questo repository viene usato per acquisire il pacchetto, motore di database **mssql-server**e i relativi pacchetti di SQL Server. Esistono attualmente tre repository principali:
 
-| Archivio | Nome | Descrizione |
+| Archivio | NOME | Descrizione |
 |---|---|---|
 | **Anteprima (2017)** | **mssql-server** | Repository di SQL Server 2017 CTP e RC (sospeso). |
 | **Anteprima (2019)** | **mssql-server-preview** | Anteprima di SQL Server 2019 e repository RC. |

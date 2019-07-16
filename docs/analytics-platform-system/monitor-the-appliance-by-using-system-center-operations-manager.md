@@ -2,19 +2,18 @@
 title: Monitorare con SCOM - sistema di piattaforma Analitica | Microsoft Docs
 description: Usare System Center Operations Manager (SCOM) per monitorare l'appliance del sistema di piattaforma Analitica (AP).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3c43734dbd7ef1a766f3f1258f97565ab82e175d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0da122b7ff4f17621a896e3a9f5076f8564d32c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639828"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960546"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Monitoraggio con System Center Operations Manager - sistema di piattaforma Analitica
 Usare System Center Operations Manager (SCOM) per monitorare l'appliance del sistema di piattaforma Analitica (AP).
@@ -49,7 +48,7 @@ Gli avvisi sono in cui è possibile trovare gli avvisi correnti per la gestione.
 ### <a name="appliances"></a>Strumenti  
 I dispositivi sono in cui si troverà l'attualmente individuati e monitorati SQL Server PDW Appliance nell'ambiente in uso. Se un dispositivo non vengono visualizzati qui e aver creato la connessione ODBC per tale, può essere presente un problema con il proprio account PDWWatcher. Se vengono visualizzati come "Non monitorato", potrebbe esserci un problema con il proprio account PDWMonitor. Essere paziente poiché SCOM non apporta modifiche in tempo reale, ma periodicamente le nuove Appliance per il monitoraggio e invia periodicamente le query per Appliance per il monitoraggio.  
   
-![Appliances](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
+![Appliance](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
   
 ### <a name="appliances-diagram"></a>Diagramma strumenti  
 Pagina del diagramma Appliance è dove è possibile ottenere un aspetto dello stato del dispositivo con una visualizzazione albero:  
@@ -59,7 +58,7 @@ Pagina del diagramma Appliance è dove è possibile ottenere un aspetto dello st
 ### <a name="nodes"></a>Nodi  
 Infine, la visualizzazione di nodi consente di visualizzare l'integrità del dispositivo a ogni nodo:  
   
-![Nodes](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
+![I nodi](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
   
 ## <a name="see-also"></a>Vedere anche  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

@@ -19,13 +19,12 @@ ms.assetid: 70142d3a-f8b5-4ee2-8287-3935f0f67aa2
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: 7066592f665309cfbe476c3ff8f05ab57306deef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b9ab66e0a25067440a496c6c5eb04b5d8b61e64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945919"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039285"
 ---
 # <a name="sysxmlschemacomponents-transact-sql"></a>sys.xml_schema_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "64945919"
 |**symbol_space_desc**|**nvarchar**<br /><br /> **(60)**|Descrizione dello spazio in cui il nome del simbolo è univoco, in base **tipo**:<br /><br /> Nessuno<br /><br /> TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP|  
 |**kind**|**char(1)**|Tipo di componente di XML Schema.<br /><br /> N = Qualsiasi tipo (componente intrinseco speciale)<br /><br /> Z = Qualsiasi tipo semplice (componente intrinseco speciale)<br /><br /> P = Tipo primitivo (tipi intrinseci)<br /><br /> S = Tipo semplice<br /><br /> L = Tipo elenco<br /><br /> U = Tipo unione<br /><br /> C = Tipo semplice complesso (derivato da semplice)<br /><br /> K = Tipo complesso<br /><br /> E = Elemento<br /><br /> M = Gruppo di modelli<br /><br /> W = Carattere jolly dell'elemento<br /><br /> A = Attributo<br /><br /> G = Gruppo di attributi<br /><br /> V = Carattere jolly dell'attributo|  
 |**kind_desc**|**nvarchar**<br /><br /> **(60)**|Descrizione del tipo di componente di XML Schema:<br /><br /> ANY_TYPE<br /><br /> ANY_SIMPLE_TYPE<br /><br /> PRIMITIVE_TYPE<br /><br /> SIMPLE_TYPE<br /><br /> LIST_TYPE<br /><br /> UNION_TYPE<br /><br /> COMPLEX_SIMPLE_TYPE<br /><br /> COMPLEX_TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ELEMENT_WILDCARD<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP<br /><br /> ATTRIBUTE_WILDCARD|  
-|**derivation**|**char(1)**|Metodo di derivazione per i tipi derivati:<br /><br /> N = Nessuno (non derivato)<br /><br /> X = Estensione<br /><br /> R = Restrizione<br /><br /> S = Sostituzione|  
+|**Derivazione**|**char(1)**|Metodo di derivazione per i tipi derivati:<br /><br /> N = Nessuno (non derivato)<br /><br /> X = Estensione<br /><br /> R = Restrizione<br /><br /> S = Sostituzione|  
 |**derivation_desc**|**nvarchar**<br /><br /> **(60)**|Descrizione del metodo di derivazione per i tipi derivati:<br /><br /> Nessuno<br /><br /> EXTENSION<br /><br /> RESTRICTION<br /><br /> SUBSTITUTION|  
 |**base_xml_component_id**|**int**|ID del componente da cui viene derivato il componente. È NULL se non è presente alcun ID.|  
 |**scoping_xml_component_id**|**int**|ID univoco del componente di definizione dell'ambito. È NULL se non è presente alcun ID (ambito globale).|  

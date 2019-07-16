@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dafea3c43e8287b92665cbdc5c901ab2ba0116d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43f5e96a280614d3f69472c7d794489bf1a5ba58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029566"
 ---
 # <a name="system-base-tables"></a>Tabelle di base di sistema
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,15 +42,15 @@ ms.locfileid: "47833629"
 ## <a name="system-base-tables"></a>Tabelle di base di sistema  
  Nella tabella seguente viene indicata e descritta ogni un tabella di base sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Tabella di base|Description|  
+|Tabella di base|Descrizione|  
 |----------------|-----------------|  
 |**Sys.sysschobjs**|Esiste in ogni database. Ogni riga rappresenta un oggetto del database.|  
-|**Sys.sysbinobjs**|Esiste in ogni database. Contiene una riga per ogni entità Service Broker del database. Le entità Service Broker includono gli elementi seguenti:<br /><br /> Tipo di messaggio<br /><br /> Contratto servizio<br /><br /> Servizio<br /><br /> I nomi e i tipi utilizzano regole di confronto binarie predefinite.|  
-|**Sys.sysclsobjs**|Esiste in ogni database. Contiene una riga per ogni entità classificata che condivide le stesse proprietà comuni che includono gli elementi seguenti:<br /><br /> Assembly<br /><br /> Dispositivo di backup<br /><br /> Catalogo full-text<br /><br /> Funzione di partizione<br /><br /> Schema di partizione<br /><br /> Filegroup<br /><br /> Chiave di offuscamento|  
+|**Sys.sysbinobjs**|Esiste in ogni database. Contiene una riga per ogni entità Service Broker del database. Le entità Service Broker includono gli elementi seguenti:<br /><br /> Tipo di messaggio<br /><br /> Contratto servizio<br /><br /> Service<br /><br /> I nomi e i tipi utilizzano regole di confronto binarie predefinite.|  
+|**Sys.sysclsobjs**|Esiste in ogni database. Contiene una riga per ogni entità classificata che condivide le stesse proprietà comuni che includono gli elementi seguenti:<br /><br /> Assembly<br /><br /> Dispositivo di backup<br /><br /> Catalogo full-text<br /><br /> partition (funzione)<br /><br /> Schema di partizione<br /><br /> Filegroup<br /><br /> Chiave di offuscamento|  
 |**Sys.sysnsobjs**|Esiste in ogni database. Contiene una riga per ogni entità dell'ambito dello spazio dei nomi. Questa tabella viene utilizzata per archiviare le entità di raccolta XML.|  
 |**Sys.syscolpars**|Esiste in ogni database. Contiene una riga per ogni colonna di una tabella, vista o funzione con valori di tabella. Contiene anche righe per ogni parametro di una procedura o funzione.|  
 |**Sys.systypedsubobjs**|Esiste in ogni database. Contiene una riga per ogni sottoentità tipizzata. In questa categoria rientrano solo i parametri relativi alla funzione di partizione.|  
-|**Sys.sysidxstats**|Esiste in ogni database. Contiene una riga per ogni indice o statistica di tabelle e viste indicizzate<br /><br /> Nota: Ogni indice (eccetto heap) è associato a una statistica che ha lo stesso nome dell'indice.|  
+|**Sys.sysidxstats**|Esiste in ogni database. Contiene una riga per ogni indice o statistica di tabelle e viste indicizzate<br /><br /> Nota: Ogni indice (eccetto heap) è associata una statistica che ha lo stesso nome dell'indice.|  
 |**Sys.sysiscols**|Esiste in ogni database. Contiene una riga per ogni indice persistente e colonna delle statistiche.|  
 |**Sys.sysscalartypes**|Esiste in ogni database. Contiene una riga per ogni tipo di sistema o tipo definito dall'utente.|  
 |**Sys.sysdbreg**|Esiste nel **master** solo del database. Contiene una riga per ogni database registrato.|  
@@ -61,7 +60,7 @@ ms.locfileid: "47833629"
 |**Sys.sysxlgns**|Esiste nel **master** solo del database. Contiene una riga per ogni entità di server.|  
 |**Sys.sysdbfiles**|Esiste in ogni database. Se la colonna **dbid** è uguale a zero, la riga rappresenta un file appartenente a questo database. Nel **master** del database, la colonna **dbid** può essere diverso da zero. In questo caso, la riga rappresenta un file master.|  
 |**Sys.sysusermsg**|Esiste nel **master** solo del database. Ogni riga rappresenta un messaggio di errore definito dall'utente.|  
-|**Sys.sysprivs**|Esiste in ogni database. Contiene una riga per ogni database o autorizzazione a livello di server.<br /><br /> Nota: Le autorizzazioni a livello di Server vengono archiviate nel **master** database.|  
+|**Sys.sysprivs**|Esiste in ogni database. Contiene una riga per ogni database o autorizzazione a livello di server.<br /><br /> Nota: Le autorizzazioni a livello di server vengono archiviate nel **master** database.|  
 |**Sys.sysowners**|Esiste in ogni database. Ogni riga rappresenta un'entità di database.|  
 |**Sys.sysobjkeycrypts**|Esiste in ogni database. Contiene una riga per ogni chiave simmetrica, crittografia o proprietà crittografica associata a un oggetto.|  
 |**Sys.syscerts**|Esiste in ogni database. Contiene una riga per ogni certificato di un database.|  

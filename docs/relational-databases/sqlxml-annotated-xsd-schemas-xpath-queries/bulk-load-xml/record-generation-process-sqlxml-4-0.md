@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c89d3859ad7f9f8f32dfc1cddd1ed805aa466867
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 73b7a8b42832c2d0a6c8c6d9589f953a93f39ce8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038422"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005292"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Processo di generazione di record (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,7 +102,7 @@ ms.locfileid: "56038422"
 >  In questo modello, poiché viene inserito un record quando viene raggiunto il tag di fine (o il nodo è esterno all'ambito), è necessario definire tutti i dati associati al record all'interno dell'ambito del nodo.  
   
 ## <a name="record-subset-and-the-key-ordering-rule"></a>Subset di record e regola di ordinamento delle chiavi  
- Quando si specifica uno schema di mapping che utilizza  **\<SQL: Relationship >**, il termine sottoinsieme indica il set di record che viene generato sul lato della relazione esterna. Nell'esempio seguente, i record di CustOrder sono sul lato esterno,  **\<SQL: Relationship >**.  
+ Quando si specifica uno schema di mapping che utilizza  **\<SQL: Relationship >** , il termine sottoinsieme indica il set di record che viene generato sul lato della relazione esterna. Nell'esempio seguente, i record di CustOrder sono sul lato esterno,  **\<SQL: Relationship >** .  
   
  Si supponga, ad esempio, un database contenente le tabelle seguenti:  
   
@@ -149,9 +148,9 @@ ms.locfileid: "56038422"
   
  I dati XML di esempio e la procedura per creare un esempio reale vengono forniti di seguito.  
   
--   Quando un  **\<cliente >** inserisce il nodo dell'elemento nel file di dati XML nell'ambito, il caricamento di massa XML genera un record della tabella Cust. Caricamento di massa XML quindi copia i valori della colonna necessari (CustomerID, CompanyName e City) dalla  **\<CustomerID >**,  **\<CompanyName >** e la  **\<Città >** immettere elementi figlio come questi elementi nell'ambito.  
+-   Quando un  **\<cliente >** inserisce il nodo dell'elemento nel file di dati XML nell'ambito, il caricamento di massa XML genera un record della tabella Cust. Caricamento di massa XML quindi copia i valori della colonna necessari (CustomerID, CompanyName e City) dalla  **\<CustomerID >** ,  **\<CompanyName >** e la  **\<Città >** immettere elementi figlio come questi elementi nell'ambito.  
   
--   Quando un  **\<ordine >** nodo elemento entra in ambito, il caricamento di massa XML genera un record per la tabella CustOrder. Caricamento di massa XML viene copiato il valore di **OrderID** attribuire a questo record. Il valore richiesto per la colonna CustomerID viene ottenuta dalla  **\<CustomerID >** elemento figlio dell'elemento di  **\<cliente >** elemento. Caricamento di massa XML utilizza le informazioni specificate nel  **\<SQL: Relationship >** per ottenere il valore della chiave esterno CustomerID per questo record, a meno che non la **CustomerID** attributo era specificato nel  **\<ordine >** elemento. La regola generale è che, se l'elemento figlio specifica in modo esplicito un valore per l'attributo di chiave esterna, il caricamento di massa XML utilizza tale valore e non ottenere il valore dall'elemento padre utilizzando l'oggetto specificato **\<SQL: Relationship >**. Come si  **\<ordine >** nodo elemento abbandona l'ambito, il caricamento Bulk XML invia il record a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e quindi elabora tutti i successivi  **\<ordine >** nodi elemento allo stesso modo.  
+-   Quando un  **\<ordine >** nodo elemento entra in ambito, il caricamento di massa XML genera un record per la tabella CustOrder. Caricamento di massa XML viene copiato il valore di **OrderID** attribuire a questo record. Il valore richiesto per la colonna CustomerID viene ottenuta dalla  **\<CustomerID >** elemento figlio dell'elemento di  **\<cliente >** elemento. Caricamento di massa XML utilizza le informazioni specificate nel  **\<SQL: Relationship >** per ottenere il valore della chiave esterno CustomerID per questo record, a meno che non la **CustomerID** attributo era specificato nel  **\<ordine >** elemento. La regola generale è che, se l'elemento figlio specifica in modo esplicito un valore per l'attributo di chiave esterna, il caricamento di massa XML utilizza tale valore e non ottenere il valore dall'elemento padre utilizzando l'oggetto specificato **\<SQL: Relationship >** . Come si  **\<ordine >** nodo elemento abbandona l'ambito, il caricamento Bulk XML invia il record a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e quindi elabora tutti i successivi  **\<ordine >** nodi elemento allo stesso modo.  
   
 -   Infine, il  **\<cliente >** nodo elemento abbandona l'ambito. A questo punto, il caricamento bulk XML invia il record del cliente a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il caricamento bulk XML segue questo processo per tutti i clienti successivi nel flusso di dati XML.  
   

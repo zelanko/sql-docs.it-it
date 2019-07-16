@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9da3879f-b1f4-4ab4-abd4-a9a8ac395eba
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cec59e0b5cb933822790a1f2497ca1bd5a3cbb2e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2bf5659dc8a5a440b764b3264556359205646d75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794163"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088521"
 ---
 # <a name="mspublicationthresholds-transact-sql"></a>MSpublicationthresholds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "52794163"
 |**metric_id**|**int**|Identifica una misurazione delle prestazioni di replica da monitorare, definita nel [MSreplmonthresholdmetrics](../../relational-databases/system-tables/msreplmonthresholdmetrics-transact-sql.md) tabella di sistema.|  
 |**Valore**|**sql_variant**|Valore soglia della misurazione da monitorare.|  
 |**shouldalert**|**bit**|Un valore pari **1** indica che deve essere generato un avviso quando la metrica supera la soglia definita.|  
-|**IsEnabled**|**bit**|Un valore pari **1** indica che il monitoraggio è abilitato per la metrica di prestazioni di replica.|  
+|**isenabled**|**bit**|Un valore pari **1** indica che il monitoraggio è abilitato per la metrica di prestazioni di replica.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle di replica &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

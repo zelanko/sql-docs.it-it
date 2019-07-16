@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a0eb7b55-9db0-4375-9210-bddec4593880
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d12727f9298eb63fe10b44c48b9d3b7996a839d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3db8d61bacefa8588db4c0081c6be591d7ffdacf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159283"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019281"
 ---
 # <a name="c-to-sql-year-month-intervals"></a>Da C a SQL: intervalli anno-mese
 Gli identificatori per i tipi di dati ODBC C intervallo anno-mese sono:  

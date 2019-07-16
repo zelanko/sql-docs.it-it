@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e94146a-5b80-4a01-b586-1e03ff05b9ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bc8133241ad0b76579e87164350a5c6fe2a39f2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ef460a7d004227e34e0043223abdf3769c92520
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63186338"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135655"
 ---
 # <a name="compiling-an-embedded-sql-program"></a>Compilazione di un programma Embedded SQL
 Poiché un programma SQL incorporato contiene una combinazione delle istruzioni del linguaggio SQL e host, non possono essere inviata direttamente a un compilatore per il linguaggio host. Al contrario, viene compilato tramite un processo in più passaggi. Anche se questo processo è diverso da prodotto a prodotto, i passaggi sono all'incirca lo stesso per tutti i prodotti.  

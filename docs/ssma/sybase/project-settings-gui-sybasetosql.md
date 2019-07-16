@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cbd6ddc9-8abd-4fa9-bffd-631e54894ce8
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 34fe42a645965f141a7250ea5f272cfdbabc6bac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb9a324d30790ac8a96b286ec658334d81884cfd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127808"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028727"
 ---
 # <a name="project-settings-gui-sybasetosql"></a>Impostazioni del progetto (interfaccia utente grafica) (SybaseToSQL)
 Le impostazioni del progetto GUI consentono di configurare l'aspetto dei dati nel **dati** scheda e se visualizzare il report di valutazione dopo la conversione o No.  

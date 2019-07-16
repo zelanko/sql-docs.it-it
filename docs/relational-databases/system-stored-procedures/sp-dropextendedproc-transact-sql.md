@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f3690d4c954ae3cde5159100280597af14a796d3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b12ebcfb662db9740efdf918f0857b94144e0ceb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054302"
 ---
 # <a name="spdropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +42,13 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @functname = ] 'procedure'` È il nome della stored procedure estesa da eliminare. *routine* viene **nvarchar(517)**, non prevede alcun valore predefinito.  
+`[ @functname = ] 'procedure'` È il nome della stored procedure estesa da eliminare. *routine* viene **nvarchar(517)** , non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  L'esecuzione **sp_dropextendedproc** Elimina il nome di stored procedure estese definite dall'utente dalle [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) vista del catalogo e rimuove la voce dal [Sys. extended_procedures ](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) vista del catalogo. Questa stored procedure può essere eseguita solo nel **master** database.  

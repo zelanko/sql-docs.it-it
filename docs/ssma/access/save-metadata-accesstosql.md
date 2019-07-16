@@ -9,15 +9,14 @@ ms.topic: conceptual
 ms.assetid: fa4ce8ad-9935-4195-90f9-3fdac587a4ee
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c5ce10a437ecba5e865ce1e2436ee5041839b7e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f987e03ad8dda27e436f22ef54fc3c2646579f4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299236"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051556"
 ---
-# <a name="save-metadata-accesstosql"></a>Save Metadata (AccessToSQL)
+# <a name="save-metadata-accesstosql"></a>Salvare i metadati (AccessToSQL)
 Il **salvare i metadati** nella finestra di dialogo viene richiesto di caricare i metadati nel progetto SSMA prima di salvarlo. In questo modo si dispone di un file di progetto completo che è possibile usare in modalità offline e inviare ad altri utenti, ad esempio il personale di supporto tecnico.  
   
 Per l'accesso di **salvare i metadati** nella finestra di dialogo Salva il progetto. Se tutti i metadati mancanti, SSMA verrà visualizzato il **salvare i metadati** nella finestra di dialogo.  
@@ -26,7 +25,7 @@ Per l'accesso di **salvare i metadati** nella finestra di dialogo Salva il proge
 **Name**  
 Il nome di ogni database nel progetto.  
   
-**Stato**  
+**Status**  
 Indica se i metadati vengono caricati nel progetto SSMA o se mancano i metadati.  
   
 SSMA carica i metadati nel progetto in base alle esigenze. I metadati vengono caricati automaticamente quando si Sfoglia i metadati e convertire gli schemi.  

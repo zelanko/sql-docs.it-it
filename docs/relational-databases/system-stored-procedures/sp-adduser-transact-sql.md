@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 46b1548f1eb587aa62c0d0427661d97d97bf3cc7
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: a2984479c8a1be35f8ccfa63d14b3250939f56c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117897"
 ---
 # <a name="spadduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,14 +78,14 @@ GO
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-adding-a-database-user"></a>A. Aggiunta di un utente del database  
+### <a name="a-adding-a-database-user"></a>R. Aggiunta di un utente del database  
  Nell'esempio seguente l'utente del database `Vidur` viene aggiunto al ruolo esistente `Recruiting` nel database corrente utilizzando l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esistente `Vidur`.  
   
 ```  
 EXEC sp_adduser 'Vidur', 'Vidur', 'Recruiting';  
 ```  
   
-### <a name="b-adding-a-database-user-with-the-same-login-id"></a>b. Aggiunta di un utente del database con lo stesso ID di accesso  
+### <a name="b-adding-a-database-user-with-the-same-login-id"></a>B. Aggiunta di un utente del database con lo stesso ID di accesso  
  Nell'esempio seguente l'utente `Arvind` viene aggiunto al database corrente per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Arvind`. L'utente a cui appartiene il valore predefinito **pubblica** ruolo.  
   
 ```  

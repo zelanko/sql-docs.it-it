@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dbad5e77-b213-4eb8-aecf-d60f203fdb59
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2612fdc52bde6b199080bcdd7b67a8e8401e6805
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ba8b5aa1f59fbb161da878f5930f83d2f6ff0bdd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281026"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964562"
 ---
 # <a name="connect-property-rds"></a>Proprietà Connect (Servizi Desktop remoto)
 Indica il nome del database da cui vengono eseguite le operazioni di query e aggiornamento.  

@@ -8,20 +8,19 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4b907ca844c80dcdb0953776a5cfb73b57937ff3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 28f7788b0dc11c8c06e98b385d6814cb7fe81142
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061727"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>Esercitazioni su DMX (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Nelle seguenti esercitazioni vengono fornite informazioni sull'utilizzo delle istruzioni DMX (Data Mining Extensions) con le strutture e i modelli di data mining.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Esercitazione su DMX per Bike Buyer](https://msdn.microsoft.com/library/4b634cc1-86dc-42ec-9804-a19292fe8448)  
   
  In questa esercitazione vengono descritte le procedure per la creazione, il training e l'esplorazione di modelli di data mining utilizzando il linguaggio di query DMX. Questi modelli di data mining verranno quindi utilizzati per la creazione di stime sulla probabilità che un cliente acquisti un prodotto specifico.  
@@ -30,7 +29,7 @@ ms.locfileid: "51599942"
   
  In questa esercitazione vengono descritte le procedure per la creazione di un modello di data mining che stima quali prodotti tendono a essere acquistati contemporaneamente. Viene inoltre illustrato l'utilizzo delle tabelle nidificate in data mining.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  [Le estensioni di Data Mining di dati &#40;DMX&#41; gli elementi della sintassi](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
  [Istruzioni DMX &#40;Data Mining Extensions&#41; per la definizione dei dati](../dmx/dmx-statements-data-definition.md)  

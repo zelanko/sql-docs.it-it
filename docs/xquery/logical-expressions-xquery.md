@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fd6417c10be286164b9d56a0c2587dfd63a1de23
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5b1dc7b961dd0b85824ea180cbc4815d5488a360
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004502"
 ---
 # <a name="logical-expressions-xquery"></a>Espressioni logiche (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ expression1 or expression2
   
  L'operatore logico **e** e **o** operatore viene quindi applicato ai valori booleani risultanti delle espressioni con la semantica logica standard.  
   
- La query recupera dal catalogo prodotti la versione piccola delle foto con angolazione frontale, corrispondenti all'elemento <`Picture`>, relative a un modello di prodotto specifico. Si noti che, per ogni documento di descrizione del prodotto, nel catalogo è possibile archiviare uno o più foto del prodotto con attributi diversi, ad esempio le dimensioni e l'angolazione.  
+ La query seguente recupera dal catalogo dei prodotti le immagini di piccole dimensioni con angolazione, la <`Picture`> (elemento), per un modello di prodotto specifico. Si noti che, per ogni documento di descrizione del prodotto, nel catalogo è possibile archiviare uno o più foto del prodotto con attributi diversi, ad esempio le dimensioni e l'angolazione.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -62,7 +61,7 @@ FROM  Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <PD:Picture   

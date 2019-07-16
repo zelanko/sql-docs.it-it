@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: 9cbe2b62-4cf7-43ab-8fb4-9a53df2c6b3f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d472b36b62a8b3142a0127f29d013e8ebfce38de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66a944c22c5f3c31ac1bd4cd8f556e97f28d331d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62742179"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039568"
 ---
 # <a name="sqlsetstmtoption-function"></a>Funzione SQLSetStmtOption
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 ODBC: Deprecato  
+ Versione introdotta: Conformità agli standard 1.0 ODBC: Funzionalità deprecate  
   
  **Riepilogo**  
  In ODBC 3 *. x*, la funzione ODBC 2.0 **SQLSetStmtOption** è stata sostituita da **SQLSetStmtAttr**. Per altre informazioni, vedere [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  

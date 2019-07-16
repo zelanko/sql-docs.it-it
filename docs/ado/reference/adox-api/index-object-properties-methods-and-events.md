@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f4e92e1-e7cb-45d8-aa86-cd749474f825
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b5a5e52b89765003da69f9bf7e0b691bd654616c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ffd5987d79ce539baf536a3221ebc1bb5b470a15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966061"
 ---
 # <a name="index-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto Index
 ## <a name="propertiescollections"></a>Le proprietà e le raccolte  
@@ -37,10 +36,10 @@ ms.locfileid: "66706656"
  [Proprietà Unique](../../../ado/reference/adox-api/unique-property-adox.md)  
   
 ## <a name="methods"></a>Metodi  
- Nessuna.  
+ No.  
   
 ## <a name="events"></a>Events  
- Nessuna.  
+ No.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

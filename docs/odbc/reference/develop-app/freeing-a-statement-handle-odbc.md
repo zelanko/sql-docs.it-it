@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee18e2f1-2690-4cc1-9e5c-e20244e5d480
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bc16e820671aa69c15365413d44fb9bcf807236b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 638cf9fb3c7af73130cf1413559b9baee2a354c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069783"
 ---
 # <a name="freeing-a-statement-handle-odbc"></a>Rilascio di un handle di istruzione ODBC
 Come accennato in precedenza, è più efficiente riutilizzare le istruzioni di to eliminarli e allocarne di nuovi. Prima di eseguire una nuova istruzione SQL in un'istruzione, le applicazioni devono assicurarsi che le impostazioni delle istruzioni correnti siano appropriate. Tra le impostazioni sono inclusi gli attributi di istruzione, le associazioni di parametri e le associazioni dei set di risultati. In generale, i parametri e set di risultati per l'istruzione SQL precedente devono essere non associata (chiamando **SQLFreeStmt** con le opzioni SQL_RESET_PARAMS e SQL_UNBIND) e riassociato per la nuova istruzione SQL.  

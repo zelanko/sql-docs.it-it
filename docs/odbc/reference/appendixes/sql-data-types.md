@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 56caa8131cea834b88eeb338bb05d20c25349ea9
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 4be0e017988670d740067011f775f8477037aa18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057033"
 ---
 # <a name="sql-data-types"></a>Tipi di dati SQL
 Ogni sistema DBMS definisce i proprio tipi SQL. Ogni driver ODBC espone solo questi tipi di dati SQL che definisce il sistema DBMS associato. Informazioni sulle modalità di mapping di un driver SQL DBMS tipi per gli identificatori di tipo definite da ODBC SQL e come un driver esegue il mapping di tipi SQL DBMS per i proprio identificatori dei tipi specifici del driver SQL viene restituito tramite una chiamata a **SQLGetTypeInfo**. Un driver restituisce anche i tipi di dati SQL quando si descrivono i tipi di dati delle colonne e i parametri tramite le chiamate a **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, e **SQLSpecialColumns**.  
@@ -35,7 +34,7 @@ Ogni sistema DBMS definisce i proprio tipi SQL. Ogni driver ODBC espone solo que
   
  Nella tabella seguente sono elencati gli identificatori di tipo SQL validi per tutti i tipi di dati SQL. La tabella elenca anche il nome e la descrizione del tipo di dati corrispondente da SQL-92 (se presente).  
   
-|Identificatore di tipo SQL [1]|Dati SQL tipica<br /><br /> type[2]|Descrizione del tipo tipico|  
+|Identificatore di tipo SQL [1]|Dati SQL tipica<br /><br /> tipo [2]|Descrizione del tipo tipico|  
 |------------------------------|------------------------------------|------------------------------|  
 |SQL_CHAR|CHAR(*n*)|Stringa di lunghezza fissa di caratteri *n*.|  
 |SQL_VARCHAR|VARCHAR(*n*)|Stringa di caratteri a lunghezza variabile con lunghezza massima delle stringhe *n*.|  
@@ -58,7 +57,7 @@ Ogni sistema DBMS definisce i proprio tipi SQL. Ogni driver ODBC espone solo que
 |SQL_LONGVARBINARY|LONG VARBINARY|Dati binari a lunghezza variabile. Lunghezza massima è dipendente dall'origine dati. [9]|  
 |SQL_TYPE_DATE[6]|DATE|Anno, mese e giorno campi, conforme alle regole del calendario gregoriano. (Vedere [vincoli del calendario gregoriano](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md), più avanti in questa appendice.)|  
 |SQL_TYPE_TIME[6]|TIME(*p*)|Ora, minuto e secondo campi, con i valori validi per ore di valori validi da 00 a 23, da 00 a 59 minuti e i valori validi per i secondi da 00 a 61. Precisione *p* indica la precisione dei secondi.|  
-|SQL_TYPE_TIMESTAMP[6]|TIMESTAMP(*p*)|Anno, mese, giorno, ora, minuto e secondo campi, con i valori validi come definito per i tipi di dati data e ora.|  
+|SQL_TYPE_TIMESTAMP[6]|TIMESTAMP (*p*)|Anno, mese, giorno, ora, minuto e secondo campi, con i valori validi come definito per i tipi di dati data e ora.|  
 |SQL_TYPE_UTCDATETIME|UTCDATETIME|Anno, mese, giorno, ora, minuto, secondo, utchour e utcminute campi. I campi utchour e utcminute ha una precisione di microsecondo 1/10.|  
 |SQL_TYPE_UTCTIME|UTCTIME|Ora, minuto, secondo, utchour e utcminute campi. I campi utchour e utcminute ha una precisione di 1/10 microsecondo...|  
 |SQL_INTERVAL_MONTH[7]|INTERVALLO mese (*p*)|Numero di mesi tra due date; *p* è l'intervallo di precisione iniziale.|  

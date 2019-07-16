@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b2ee476694098f4734c31439b48a7ec9efdc892
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534433"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054936"
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,20 +77,20 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|**0**|Non riuscito|  
+|**0**|Failed|  
 |**1**|Operazione completata|  
 |**2**|Nuovo tentativo (solo passaggio)|  
 |**3**|Canceled|  
 |**4**|Messaggio di esecuzione in corso|  
-|**5**|Unknown|  
+|**5**|Sconosciuto|  
   
 `[ @minimum_retries = ] minimum_retries` Il numero minimo di volte in cui un processo di tentativi per l'esecuzione. *minimum_retries* viene **int**, con un valore predefinito è NULL.  
   
 `[ @oldest_first = ] oldest_first` Indica se per primi nell'output con i processi meno recenti. *oldest_first* viene **int**, il valore predefinito è **0**, che presenta i processi più recenti prima di tutto. **1** presenta prima di tutto i processi meno recenti.  
   
-`[ @server = ] 'server'` Il nome del server in cui è stato eseguito il processo. *server* viene **nvarchar(30)**, con un valore predefinito è NULL.  
+`[ @server = ] 'server'` Il nome del server in cui è stato eseguito il processo. *server* viene **nvarchar(30)** , con un valore predefinito è NULL.  
   
-`[ @mode = ] 'mode'` Indica se stampare tutte le colonne nel set di risultati (**completo**) o un riepilogo delle colonne. *modalità* viene **varchar(7)**, il valore predefinito è **riepilogo**.  
+`[ @mode = ] 'mode'` Indica se stampare tutte le colonne nel set di risultati (**completo**) o un riepilogo delle colonne. *modalità* viene **varchar(7)** , il valore predefinito è **riepilogo**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -137,7 +136,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-listing-all-job-information-for-a-job"></a>A. Visualizzazione di un elenco di tutte le informazioni di un processo  
+### <a name="a-listing-all-job-information-for-a-job"></a>R. Visualizzazione di un elenco di tutte le informazioni di un processo  
  Nell'esempio seguente viene visualizzato un elenco di informazioni per il processo `NightlyBackups`  
   
 ```  

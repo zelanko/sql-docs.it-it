@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 142e4ac0-2977-4a2b-96ae-c9e5bd2c448a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e7972fb72607edca8c1599c2d028b073c184642
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49552e7333d8cac2b55a9ae6e8dd7a41ff4c5955
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094330"
 ---
 # <a name="serializability"></a>Serializzabilità
 In teoria, le transazioni devono essere *serializzabile*. Le transazioni vengono detti essere serializzabile se i risultati dell'esecuzione simultanea di transazioni sono uguali come i risultati di eseguirli in modo seriale, vale a dire, uno dopo l'altro. Non è importante la transazione viene eseguita in primo luogo, solo che il risultato non riflette qualsiasi combinazione delle transazioni.  

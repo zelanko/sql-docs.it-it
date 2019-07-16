@@ -7,13 +7,12 @@ ms.date: 10/29/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 8d701d9e8595eee3a583e913baabc2148af214fe
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 4fd41ebb8f486b6117ba3e99c080566771bd4a63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963146"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Il monitoraggio usando viste a gestione dinamica (DMV) di SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -78,7 +77,7 @@ WHERE name = 'external scripts enabled';
 
 La query restituisce le colonne seguenti:
 
-| colonna | Descrizione |
+| Colonna | Descrizione |
 |--------|-------------|
 | IsMLServicesInstalled | Restituisce 1 se è installato Servizi di SQL Server Machine Learning per l'istanza. In caso contrario, restituisce 0. |
 | ExternalScriptsEnabled | Restituisce 1 se gli script esterni è abilitata per l'istanza. In caso contrario, restituisce 0. |
@@ -106,7 +105,7 @@ ON s.session_id = r.session_id;
 
 La query restituisce le colonne seguenti:
 
-| colonna | Descrizione |
+| Colonna | Descrizione |
 |--------|-------------|
 | session_id | Identifica la sessione associata a ogni connessione principale attiva. |
 | blocking_session_id | ID della sessione che sta bloccando la richiesta. Se questa colonna è NULL, la richiesta non è bloccata oppure non sono disponibili o identificabili informazioni di sessione per la sessione da cui è bloccata. |
@@ -142,7 +141,7 @@ ORDER BY language, counter_name;
 
 La query restituisce le colonne seguenti:
 
-| colonna | Descrizione |
+| Colonna | Descrizione |
 |--------|-------------|
 | language | Nome del linguaggio di script esterni registrato. |
 | counter_name | Nome di una funzione di script esterni registrata. |
@@ -174,7 +173,7 @@ WHERE object_name LIKE '%External Scripts%'
 | Total Execution Time (ms) | Tempo trascorso tra la chiamata e il completamento della chiamata. |
 | Execution Errors | Numero di volte in cui gli script hanno segnalato errori. Questo numero non include gli errori di R o Python. |
 
-## <a name="memory-usage"></a>Utilizzo della memoria
+## <a name="memory-usage"></a>Utilizzo memoria
 
 Visualizzare le informazioni sulla quantità di memoria utilizzata dal sistema operativo, SQL Server e i pool esterni.
 
@@ -192,7 +191,7 @@ FROM sys.dm_os_sys_info;
 
 La query restituisce le colonne seguenti:
 
-| colonna | Descrizione |
+| Colonna | Descrizione |
 |--------|-------------|
 | physical_memory_kb | La quantità totale di memoria fisica nel computer. |
 | committed_kb | La memoria vincolata in kilobyte (KB) nel gestore della memoria. Non include la memoria riservata nel gestore della memoria. |
@@ -221,9 +220,9 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 La query restituisce le colonne seguenti:
 
-| colonna | Descrizione |
+| Colonna | Descrizione |
 |--------|-------------|
-| NAME | Nome del pool di risorse esterne o SQL Server. |
+| name | Nome del pool di risorse esterne o SQL Server. |
 | max_memory_percent | Memoria massima che è possibile usare SQL Server o il pool di risorse esterne. |
 
 ## <a name="resource-pools"></a>Pool di risorse
@@ -246,7 +245,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 La query restituisce le colonne seguenti:
 
-| colonna | Descrizione |
+| Colonna | Descrizione |
 |--------|-------------|
 | pool_name | Nome del pool di risorse. I pool di risorse di SQL Server sono preceduti `SQL Server` e sono caratterizzate dal pool di risorse esterne `External Pool`.
 | total_cpu_usage_hours | L'utilizzo cumulativo della CPU in millisecondi dal momento che sono state reimpostate le statistiche di Resource Govenor. |
@@ -275,7 +274,7 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 Le colonne restituite sono:
 
-| colonna | Descrizione |
+| Colonna | Descrizione |
 |--------|-------------|
 | Pacchetto | Nome del pacchetto installato. |
 | Version | Versione del pacchetto. |
@@ -301,7 +300,7 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 
 Le colonne restituite sono:
 
-| colonna | Descrizione |
+| Colonna | Descrizione |
 |--------|-------------|
 | Pacchetto | Nome del pacchetto installato. |
 | Version | Versione del pacchetto. |

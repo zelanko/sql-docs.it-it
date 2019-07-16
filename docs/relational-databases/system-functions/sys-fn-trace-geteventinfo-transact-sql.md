@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5b1c858a-ca43-4e2b-9d67-8654daaf0cc5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d5bcb1856b9ee6206040b292ecd4642bac3066f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62296eb8d1ef53969e33f3807bd81f47025a4893
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781869"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059285"
 ---
 # <a name="sysfntracegeteventinfo-transact-sql"></a>sys.fn_trace_geteventinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ fn_trace_geteventinfo ( trace_id )
   
 ## <a name="tables-returned"></a>Tabelle restituite  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**eventid**|**int**|ID dell'evento tracciato|  
 |**columnid**|**int**|ID di tutte le colonne raccolte da ogni evento|  

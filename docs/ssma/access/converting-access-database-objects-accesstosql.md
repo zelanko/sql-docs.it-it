@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c4bb3d1b6fdc57e1251e9c8ca39f0c7437ffb126
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63139022"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006625"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Conversione di oggetti di Database di Access (AccessToSQL)
 Dopo aver aggiunto i database di Access e connesso al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, SSMA consente di visualizzare metadati per l'accesso e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o oggetti di database di SQL Azure. È possibile selezionare gli oggetti di database di Access e quindi eseguire la conversione degli schemi in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o degli schemi di SQL Azure.  
@@ -58,9 +57,9 @@ La tabella seguente mostra quali oggetti di Access vengono convertiti e risultan
 |-----------------|-------------------------------|  
 |table|table|  
 |column|column|  
-|indice|indice|  
+|index|index|  
 |chiave esterna|chiave esterna|  
-|Query|vista<br /><br />Le query più SELECT vengono convertite alle visualizzazioni. Altre query, ad esempio le query di aggiornamento, non vengono migrate.<br /><br />Query SELECT che accettano parametri non vengono convertite, né lo sono le query tra più schede.|  
+|query|vista<br /><br />Le query più SELECT vengono convertite alle visualizzazioni. Altre query, ad esempio le query di aggiornamento, non vengono migrate.<br /><br />Query SELECT che accettano parametri non vengono convertite, né lo sono le query tra più schede.|  
 |report|non convertito|  
 |Form|non convertito|  
 |macro|non convertito|  

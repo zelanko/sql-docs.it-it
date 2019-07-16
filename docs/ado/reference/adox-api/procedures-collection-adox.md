@@ -16,23 +16,22 @@ helpviewer_keywords:
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 101cb855ea4d73b5f537e8738ab3177b7f618fbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 693029bf83fe28343b450906da3e16e2665819d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706061"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965439"
 ---
 # <a name="procedures-collection-adox"></a>Raccolta Procedures (ADOX)
 Contiene tutti [Procedure](../../../ado/reference/adox-api/procedure-object-adox.md) gli oggetti di un catalogo.  
   
 ## <a name="remarks"></a>Note  
- Il [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) metodo per un **procedure** raccolta sia univoca per ADOX. È possibile effettuare le operazioni seguenti:  
+ Il [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) metodo per un **procedure** raccolta sia univoca per ADOX. È possibile:  
   
 -   Aggiungere una nuova stored procedure alla raccolta con il **Append** (metodo).  
   
- Le proprietà e metodi restanti sono standard per le raccolte di ADO. È possibile effettuare le operazioni seguenti:  
+ Le proprietà e metodi restanti sono standard per le raccolte di ADO. È possibile:  
   
 -   Accedere a una routine nell'insieme con il [elemento](../../../ado/reference/ado-api/item-property-ado.md) proprietà.  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3a7446027be3ec8df4d3ff35a2b806ffdda6f8f8
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 3bad8ec68ddeccd9ad8082b4f7b98422780581b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118554"
 ---
 # <a name="deploying-clr-database-objects"></a>Distribuzione di oggetti di database CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +94,7 @@ ms.locfileid: "67585690"
   
 4.  Nel **selezione opzioni generazione Script** riquadro, fare clic su **successiva**, o modificare le opzioni e quindi fare clic su **Next**.  
   
-5.  Nel **selezione tipi di oggetti** riquadro, scegliere il tipo di oggetto di database da distribuire. Scegliere **Avanti**.  
+5.  Nel **selezione tipi di oggetti** riquadro, scegliere il tipo di oggetto di database da distribuire. Fare clic su **Avanti**.  
   
 6.  Per ogni tipo di oggetto selezionato nel **selezione tipi di oggetti** riquadro, un **Scegli \<tipo >** riquadro viene visualizzato. In questo riquadro è possibile scegliere tra tutte le istanze del tipo di oggetto di database registrato nel database specificato. Selezionare uno o più oggetti e fare clic su **successivo**.  
   

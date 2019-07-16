@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 48d5305854d214e61036e00ca23a94b85313138a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667508"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020996"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Selezione e configurazione degli oggetti interessati (SybaseToSQL)
 In questa pagina è possibile selezionare tabelle e le chiavi esterne, le modifiche in cui devono essere confrontate quando SSMA verifica i risultati dell'esecuzione per gli oggetti scelto nel passaggio precedente. Inoltre, è possibile personalizzare i parametri di verifica.  
@@ -34,9 +33,9 @@ Scheda della tabella contiene la visualizzazione griglia della tabella seleziona
   
 -   Tipo di dati  
   
--   Precisione  
+-   Precision  
   
--   Scala  
+-   Scalabilità  
   
 -   Regola  
   
@@ -49,7 +48,7 @@ Scheda della tabella contiene la visualizzazione griglia della tabella seleziona
 ## <a name="sql"></a>Sql  
 Scheda SQL contiene la tabella"Crea" SQL della tabella selezionata.  
   
-## <a name="data"></a>Dati  
+## <a name="data"></a>Data  
 Scheda dati consente di visualizzare i dati presenti nella tabella selezionata.  
   
 ## <a name="properties"></a>Proprietà  

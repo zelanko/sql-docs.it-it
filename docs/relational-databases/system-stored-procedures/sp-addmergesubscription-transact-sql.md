@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 639c090f1c133183dc4b864a3e0215e4c64b6773
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 5c8d968a3baa17749acccdde5ef54b4da7394ca5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493013"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117915"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,23 +67,23 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscriber_db = ] 'subscriber_db'` È il nome del database di sottoscrizione. *subscriber_db*viene **sysname**, con un valore predefinito è NULL.  
   
-`[ @subscription_type = ] 'subscription_type'` È il tipo di sottoscrizione. *subscription_type*viene **nvarchar(15)**, con un valore predefinito è PUSH. Se **push**, viene aggiunta una sottoscrizione push e l'agente di Merge viene aggiunto nel server di distribuzione. Se **pull**, viene aggiunta una sottoscrizione pull senza aggiungere un agente di Merge nel server di distribuzione.  
+`[ @subscription_type = ] 'subscription_type'` È il tipo di sottoscrizione. *subscription_type*viene **nvarchar(15)** , con un valore predefinito è PUSH. Se **push**, viene aggiunta una sottoscrizione push e l'agente di Merge viene aggiunto nel server di distribuzione. Se **pull**, viene aggiunta una sottoscrizione pull senza aggiungere un agente di Merge nel server di distribuzione.  
   
 > [!NOTE]  
 >  Con le sottoscrizioni anonime non è necessario utilizzare questa stored procedure.  
   
-`[ @subscriber_type = ] 'subscriber_type'` È il tipo di sottoscrittore. *subscriber_type*viene **nvarchar(15)**, e può essere uno dei valori seguenti.  
+`[ @subscriber_type = ] 'subscriber_type'` È il tipo di sottoscrittore. *subscriber_type*viene **nvarchar(15)** , e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|**local** (default)|Sottoscrittore noto solo al server di pubblicazione.|  
+|**locale** (impostazione predefinita)|Sottoscrittore noto solo al server di pubblicazione.|  
 |**global**|Sottoscrittore noto a tutti i server.|  
   
  In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive le sottoscrizioni locali vengono dette sottoscrizioni client e le sottoscrizioni globali vengono dette sottoscrizioni server.  
   
 `[ @subscription_priority = ] subscription_priority` È un numero che indica la priorità per la sottoscrizione. *subscription_priority*viene **reale**, con un valore predefinito è NULL. Per le sottoscrizioni locali e anonime, il livello di priorità è 0.0. Per le sottoscrizioni globali, la priorità deve essere inferiore a 100.0.  
   
-`[ @sync_type = ] 'sync_type'` È il tipo di sincronizzazione della sottoscrizione. *sync_type*viene **nvarchar(15)**, il valore predefinito è **automatica**. Può essere **automatici** oppure **none**. Se **automatica**, lo schema e i dati iniziali per le tabelle pubblicate vengono trasferiti nel Sottoscrittore prima di tutto. Se **none**, si presuppone il sottoscrittore dispone già dello schema e i dati iniziali per le tabelle pubblicate. Le tabelle e i dati di sistema vengono sempre trasferiti.  
+`[ @sync_type = ] 'sync_type'` È il tipo di sincronizzazione della sottoscrizione. *sync_type*viene **nvarchar(15)** , il valore predefinito è **automatica**. Può essere **automatici** oppure **none**. Se **automatica**, lo schema e i dati iniziali per le tabelle pubblicate vengono trasferiti nel Sottoscrittore prima di tutto. Se **none**, si presuppone il sottoscrittore dispone già dello schema e i dati iniziali per le tabelle pubblicate. Le tabelle e i dati di sistema vengono sempre trasferiti.  
   
 > [!NOTE]  
 >  È consigliabile non specificare un valore pari **none**.  
@@ -150,7 +149,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @active_end_date = ] active_end_date` La data di arresto dell'agente di Merge viene pianificata, nel formato aaaammgg. *active_end_date* viene **int**, con un valore predefinito è NULL.  
   
-`[ @optional_command_line = ] 'optional_command_line'` È il prompt dei comandi facoltativo da eseguire. *optional_command_line*viene **nvarchar (4000)**, con un valore predefinito è NULL. Questo parametro viene utilizzato per aggiungere un comando per l'acquisizione e il salvataggio dell'output in un file o per specificare un file o un attributo di configurazione.  
+`[ @optional_command_line = ] 'optional_command_line'` È il prompt dei comandi facoltativo da eseguire. *optional_command_line*viene **nvarchar (4000)** , con un valore predefinito è NULL. Questo parametro viene utilizzato per aggiungere un comando per l'acquisizione e il salvataggio dell'output in un file o per specificare un file o un attributo di configurazione.  
   
 `[ @description = ] 'description'` È una breve descrizione della sottoscrizione di tipo merge. *Descrizione*viene **nvarchar(255**, con un valore predefinito è NULL. Questo valore viene visualizzato da Monitoraggio replica nella **soprannome** colonna, che può essere usato per ordinare le sottoscrizioni per una pubblicazione monitorata.  
   
@@ -178,7 +177,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>Note  
  **sp_addmergesubscription** viene utilizzata nella replica di tipo merge.  
   
- Quando **sp_addmergesubscription** viene eseguita da un membro delle **sysadmin** ruolo predefinito del server per creare una sottoscrizione push, il processo dell'agente di Merge viene creato in modo implicito e viene eseguito utilizzando il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente account del servizio. È consigliabile eseguirla [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) e specificare le credenziali di un account Windows diverso specifico dell'agente per **@job_login** e **@job_password**. Per altre informazioni, vedere [Modello di sicurezza dell'agente di replica](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ Quando **sp_addmergesubscription** viene eseguita da un membro delle **sysadmin** ruolo predefinito del server per creare una sottoscrizione push, il processo dell'agente di Merge viene creato in modo implicito e viene eseguito utilizzando il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente account del servizio. È consigliabile eseguirla [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) e specificare le credenziali di un account Windows diverso specifico dell'agente per **@job_login** e **@job_password** . Per altre informazioni, vedere [Modello di sicurezza dell'agente di replica](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  

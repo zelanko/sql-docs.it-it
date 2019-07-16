@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8f0506b6-a4ac-4e4d-91db-8077c40cb17a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 93acd6ad9e904e1e3db5dfe7e244b459e7853d70
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e5363e741c827a0fb16528a8b617e26a5b95f8a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025462"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025696"
 ---
 # <a name="spsetdatabasefirewallrule-azure-sql-database"></a>sp_set_database_firewall_rule (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,13 +43,13 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **[@name** = ] [N]'*name*'  
+ **[@name**  =] [N]'*nome*'  
  Il nome utilizzato per descrivere e distinguere l'impostazione del firewall a livello di database. *nome* viene **nvarchar (128)** non prevede alcun valore predefinito. L'identificatore di Unicode `N` è facoltativo per [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
   
  **[@start_ip_address** =] '*start_ip_address*'  
  L'indirizzo IP più basso nell'intervallo dell'impostazione del firewall a livello di database. Gli indirizzi IP uguali o maggiori di questo possono tentare la connessione all'istanza del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L'indirizzo IP più basso possibile è `0.0.0.0`. *start_ip_address* viene **varchar (50)** non prevede alcun valore predefinito.  
   
- [**@end_ip_address** =] '*end_ip_address*'  
+ [ **@end_ip_address** =] '*end_ip_address*'  
  L'indirizzo IP più alto nell'intervallo dell'impostazione del firewall a livello di database. Gli indirizzi IP uguali o minori di questo possono tentare la connessione all'istanza del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L'indirizzo IP più alto possibile è `255.255.255.255`. *end_ip_address* viene **varchar (50)** non prevede alcun valore predefinito.  
   
  Nella tabella seguente vengono illustrati gli argomenti supportati e le opzioni presenti nella [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

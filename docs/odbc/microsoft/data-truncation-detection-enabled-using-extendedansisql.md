@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cec2359b-917d-4e1d-9625-5cd678b62f10
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 95b7d538c2ace45b42c947b56ca5a5bd5f981ec5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7fb67171a796755bf8d6229b9d562f69bd588ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62744273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096513"
 ---
 # <a name="data-truncation-detection-enabled-using-extendedansisql"></a>Rilevamento dei dati troncati abilitato con ExtendedAnsiSQL
 Quando il flag ExtendedAnsiSQL è attivato e l'applicazione è di inserimento dei dati in un char o colonna di dati binari e i dati vengono troncati, il troncamento viene rilevato. Quando il flag ExtendedAnsiSQL è disattivato, i dati vengono troncati senza alcun avviso, come accadeva nelle versioni precedenti dei driver di Database Desktop ODBC.

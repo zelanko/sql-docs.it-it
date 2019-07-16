@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: d67db384747ff0ea57fea1604282d55a6709fec0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: aa06adc7f81341c96b44bde6da3b32f2f6a477ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041239"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074037"
 ---
 # <a name="-equal-to-dmx"></a>= (uguale a) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,6 +37,6 @@ DMX_Expression = DMX_Expression
 ## <a name="see-also"></a>Vedere anche  
  [Gli operatori di confronto &#40;DMX&#41;](../dmx/operators-comparison.md)   
  [Le estensioni di Data Mining di dati &#40;DMX&#41; di riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Gli operatori &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

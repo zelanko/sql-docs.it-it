@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e0ac86f4ceac4c806bfa3f6df5cc9e2024b4d03d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3c65f7d415864b169b683e0c9ab858506d31783b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712591"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964518"
 ---
 # <a name="createrecordset-method-rds"></a>Metodo CreateRecordset (Servizi Desktop remoto)
 Crea un oggetto vuoto, disconnesso [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -49,9 +48,9 @@ object.CreateRecordset(ColumnInfos)
   
 |attribute|Descrizione|  
 |---------------|-----------------|  
-|Nome|Nome dell'intestazione di colonna.|  
-|Type|Valore intero del tipo di dati.|  
-|Dimensione|Valore intero della larghezza in caratteri, indipendentemente dal tipo di dati.|  
+|Name|Nome dell'intestazione di colonna.|  
+|type|Valore intero del tipo di dati.|  
+|Size|Valore intero della larghezza in caratteri, indipendentemente dal tipo di dati.|  
 |Supporto di valori Null|Valore booleano.|  
 |Scalabilità (facoltativo)|Questo attributo facoltativo definisce la scala per i campi numerici. Se questo valore viene omesso, verranno troncati in una scala pari a tre valori numerici. Precisione non è interessata, ma verrà troncato a tre il numero di cifre dopo il separatore decimale.|  
   

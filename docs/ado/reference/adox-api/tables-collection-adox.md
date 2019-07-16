@@ -16,23 +16,22 @@ helpviewer_keywords:
 ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1ba06c10b3f890f08abac371346c3d03a0278aa8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0bf28af10084a30a5c81c76fe7e44781178979ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705731"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965136"
 ---
 # <a name="tables-collection-adox"></a>Raccolta Tables (ADOX)
 Contiene tutti [tabella](../../../ado/reference/adox-api/table-object-adox.md) gli oggetti di un catalogo.  
   
 ## <a name="remarks"></a>Note  
- Il [Append](../../../ado/reference/adox-api/append-method-adox-tables.md) metodo per un **tabelle** raccolta sia univoca per ADOX. È possibile effettuare le operazioni seguenti:  
+ Il [Append](../../../ado/reference/adox-api/append-method-adox-tables.md) metodo per un **tabelle** raccolta sia univoca per ADOX. È possibile:  
   
 -   Aggiungere una nuova tabella alla raccolta con il **Append** (metodo).  
   
- Le proprietà e metodi restanti sono standard per le raccolte di ADO. È possibile effettuare le operazioni seguenti:  
+ Le proprietà e metodi restanti sono standard per le raccolte di ADO. È possibile:  
   
 -   Accedere a una tabella nella raccolta con il [elemento](../../../ado/reference/ado-api/item-property-ado.md) proprietà.  
   

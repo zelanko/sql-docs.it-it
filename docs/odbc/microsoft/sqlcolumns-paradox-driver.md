@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: d7831c7d-8be9-40a7-bc70-8d89db8fe8c9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0bf6d08859c0ea8fb71ce398dbf4b71fe0d0a1c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1738e17742e61a285a4d2d070b179d2832aaf40f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132506"
 ---
 # <a name="sqlcolumns-paradox-driver"></a>SQLColumns (driver Paradox)
 > [!NOTE]  
 >  In questo argomento fornisce informazioni specifiche del Driver Paradox. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
-|colonna|Commenti|  
+|Colonna|Commenti|  
 |------------|--------------|  
 |TABLE_QUALIFIER|Viene restituito il percorso di una directory.|  
 |TABLE_OWNER|Poiché il nome del proprietario non è supportato in questa colonna viene restituito NULL.|  

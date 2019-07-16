@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 12222653-f04d-46d6-bdee-61348f5d550f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 77fdb63f346ada40346544a53c3ff69db0a8a9a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab8b94835fb9a6103436026a669c86f2401d57b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280844"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036436"
 ---
 # <a name="connection-handles"></a>Handle di connessione
 Oggetto *connessione* è costituito da un driver e un'origine dati. Un handle di connessione identifica ogni connessione. L'handle di connessione definisce non solo il driver da usare, ma l'origine dati da utilizzare con tale driver. All'interno di un segmento di codice che implementa ODBC (gestione Driver o un driver), l'handle di connessione identifica una struttura che contiene informazioni di connessione, ad esempio il seguente:  

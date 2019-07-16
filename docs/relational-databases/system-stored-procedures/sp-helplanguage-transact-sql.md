@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1b567b7d20f4d588fe0ca70f68be4318ce24398
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d46e178fc1872a84bb573f16629803c59f2fb6c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531673"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122507"
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |**upgrade**|**int**|Versione dell'ultimo aggiornamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la lingua specificata.|  
 |**name**|**sysname**|Nome della lingua.|  
 |**alias**|**sysname**|Nome alternativo per la lingua.|  
-|**Mesi**|**nvarchar(372)**|Nomi dei mesi.|  
+|**months**|**nvarchar(372)**|Nomi dei mesi.|  
 |**shortmonths**|**nvarchar(132)**|Nomi brevi dei mesi.|  
 |**Giorni**|**nvarchar(217)**|Nomi dei giorni.|  
 |**lcid**|**int**|ID delle impostazioni locali di Windows relative alla lingua.|  
@@ -68,7 +67,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-information-about-a-single-language"></a>A. Restituzione di informazioni su una sola lingua  
+### <a name="a-returning-information-about-a-single-language"></a>R. Restituzione di informazioni su una sola lingua  
  Nell'esempio seguente vengono visualizzate informazioni sulla lingua alternativa `French`.  
   
 ```  
