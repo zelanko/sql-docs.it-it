@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d23a16fab200c3c6ef55a1cac8f1838a2f51468d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812753"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211721"
 ---
 # <a name="ddl-event-groups"></a>gruppi di eventi DDL
   Nelle tabelle seguenti vengono elencati i gruppi di eventi DLL che è possibile utilizzare per eseguire un trigger DDL o una notifica degli eventi e vengono indicate le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] incluse. Si noti la natura inclusiva dei gruppi di eventi. Ad esempio, un trigger DDL o una notifica degli eventi che specifica FOR DDL_TABLE_EVENTS (10018) include le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE e DROP TABLE. In un trigger DDL o una notifica degli eventi che consente di specificare FOR DDL_TABLE_VIEW_EVENTS (type 10017) sono incluse tutte le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] nei tipi DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS e DDL_STATISTICS_EVENTS.  
@@ -27,12 +27,12 @@ ms.locfileid: "52812753"
 > [!NOTE]  
 >  Alcune stored procedure di sistema che eseguono operazioni di tipo DDL possono inoltre attivare trigger DDL o notifiche degli eventi. Testare i trigger DDL e le notifiche degli eventi per determinarne la risposta alle stored procedure di sistema eseguite. Ad esempio, l'istruzione CREATE TYPE e la stored procedure **sp_addtype** consentono entrambe di attivare un trigger DDL o una notifica degli eventi creata in un evento CREATE_TYPE.  
   
-## <a name="events"></a>Eventi  
+## <a name="events"></a>Events  
  Gli eventi elencati in DDL_DATABASE_LEVEL_EVENTS vengono eseguiti a livello di server (istanza) o di database. Gli eventi elencati in DDL_SERVER_LEVEL_EVENTS vengono eseguiti solo a livello di server.  
   
 ||||  
 |-|-|-|  
-|parent_type|Tipo|NAME|  
+|parent_type|type|name|  
 |NULL|296|ALTER_SERVER_CONFIGURATION|  
 |NULL|10001|DDL_EVENTS|  
 |10001|10016|&#124;    DDL_DATABASE_LEVEL_EVENTS|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: da2c0761-fe23-421b-acbf-d97dfa02d2b9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8755392b0189f759359d4cf243fbc7236a5a97e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e61574fb352a38b22141577c5f73229ae987792
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949423"
 ---
 # <a name="members-collection-properties-methods-and-events"></a>Proprietà, metodi ed eventi della raccolta Members
 ## <a name="properties"></a>Proprietà  
@@ -30,7 +29,7 @@ ms.locfileid: "66709010"
  [Metodo Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Events  
- Nessuna.  
+ No.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta Members (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)

@@ -1,5 +1,5 @@
 ---
-title: Definire calcoli denominati in una vista origine dati (Analysis Services) | Documenti Microsoft
+title: Definire calcoli denominati in una vista origine dati (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8f0324dc3b2b2c5f250cb6c49a136a5fb7e2a06e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026998"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178666"
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>Definire calcoli denominati in una vista origine dati (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +59,7 @@ FROM
   
 3.  Fare clic con il pulsante destro del mouse sulla tabella in cui si desidera definire il calcolo denominato all'interno del riquadro **Tabelle** o **Diagramma** , quindi scegliere **Nuovo calcolo denominato**. Assicurarsi di fare clic con il pulsante destro del mouse sul nome della tabella e non su un attributo. Il menu sarà simile al seguente:  
   
-     ![Schermata dell'area di lavoro di diagramma, menu di scelta rapida](../../analysis-services/multidimensional-models/media/ssas-olapdsv-diagram.gif "schermata dell'area di lavoro di diagramma, menu di scelta rapida")  
+     ![Screenshot dell'area di lavoro di diagramma, menu di scelta rapida](../../analysis-services/multidimensional-models/media/ssas-olapdsv-diagram.gif "Screenshot dell'area di lavoro di diagramma, menu di scelta rapida")  
   
     > [!NOTE]  
     >  Per individuare una tabella o una vista, è possibile usare l'opzione **Trova tabella** scegliendola dal menu **Vista origine dati** o facendo clic con il pulsante destro del mouse su un'area vuota nei riquadri **Tabelle** o **Diagramma** .  
@@ -72,7 +72,7 @@ FROM
   
     -   Nella casella di testo **Espressione** digitare l'espressione che restituisce il contenuto della nuova colonna nel sottolinguaggio SQL appropriato per il provider di dati.  
   
-5.  Scegliere **OK**.  
+5.  Fare clic su **OK**.  
   
      La colonna del calcolo denominato viene visualizzata come ultima colonna nella tabella della vista origine dati. L'icona della calcolatrice indica che nella colonna è contenuto un calcolo denominato.  
   
@@ -80,6 +80,6 @@ FROM
  Quando si tenta di eliminare un calcolo denominato, viene visualizzato un elenco degli oggetti definiti nel progetto o nel database che verranno invalidati dall'eliminazione. Esaminare attentamente l'elenco prima di eliminare il calcolo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Definire query denominate in una vista origine dati & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [Definire query denominate in una vista origine dati &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

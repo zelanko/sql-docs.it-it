@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 032677452fa80502d37383af8172ff9475dea363
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cab6638704856baf873274807c0e2eff9a1f92d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704817"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923869"
 ---
 # <a name="transaction-processing"></a>Elaborazione di transazioni
 Oggetto *transazione* delimita l'inizio e alla fine di una serie di operazioni di accesso ai dati eseguite attraverso una connessione. Soggetti alle funzionalità transazionali di origine dati, il **connessione** oggetto consente inoltre di creare e gestire le transazioni. Ad esempio, Usa il Provider Microsoft OLE DB per SQL Server per accedere a un database in Microsoft SQL Server, è possibile creare più transazioni nidificate per i comandi da eseguire.  
