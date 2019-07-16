@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a844f429409210b1b7ba6de9784714b5af336eb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768453"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189156"
 ---
 # <a name="manage-job-steps"></a>Gestire passaggi di processo
   Un passaggio di processo è un'operazione eseguita dal processo in un database o in un server. Ogni processo deve essere composto da almeno un passaggio. I passaggi di processo possono essere costituiti dagli elementi seguenti:  
@@ -75,7 +75,7 @@ ms.locfileid: "52768453"
   
 -   Il codice di uscita del processo, restituito se il comando ha esito positivo.  
   
--   Comando da eseguire. Per eseguire un comando del sistema operativo, è necessario immettere solo il comando specifico. Per un programma esterno, questo è il nome del programma e gli argomenti del programma, ad esempio: **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e - q "sp_who"**  
+-   Comando da eseguire. Per eseguire un comando del sistema operativo, è necessario immettere solo il comando specifico. Per un programma esterno, questo è il nome del programma e degli argomenti del programma, ad esempio: **C:\Programmi\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
   
     > [!NOTE]  
     >  È necessario indicare il percorso completo del programma eseguibile se questo non è incluso in una directory specificata nel percorso di sistema o nel percorso per l'account utente con cui viene eseguito il passaggio di processo.  

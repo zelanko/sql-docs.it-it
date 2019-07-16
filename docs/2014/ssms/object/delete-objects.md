@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e8912b0e3cac7ccde8f89c1818fd9737c29ebc0a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822015"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211241"
 ---
 # <a name="delete-objects"></a>Elimina oggetti
   Utilizzare questa finestra di dialogo per eliminare un database o un oggetto di database.  

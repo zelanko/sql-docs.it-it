@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c016d54d9272409e3edc3d6fc379980b952dd917
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120181"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182739"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli di regressione lineare (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "49120181"
  Nome del modello.  
   
  ATTRIBUTE_NAME  
- **Nodo radice:** vuoto  
+ **Nodo radice:** Vuoto  
   
- **Nodo di regressione:** nome dell'attributo stimabile.  
+ **Nodo di regressione:** Il nome dell'attributo stimabile.  
   
  NODE_NAME  
  Sempre uguale a NODE_UNIQUE_NAME.  
@@ -54,23 +54,23 @@ ms.locfileid: "49120181"
  NODE_TYPE  
  Un modello di regressione lineare restituisce i tipi di nodo seguenti:  
   
-|ID tipo di nodo|Tipo|Description|  
+|ID tipo di nodo|type|Descrizione|  
 |------------------|----------|-----------------|  
 |25|Nodo radice dell'albero di regressione|Contiene la formula che descrive la relazione tra la variabile di input e quella di output.|  
   
  NODE_CAPTION  
  Etichetta o didascalia associata al nodo. Questa proprietà viene utilizzata principalmente per scopi di visualizzazione.  
   
- **Nodo radice:** vuoto  
+ **Nodo radice:** Vuoto  
   
- **Nodo di regressione:** tutti.  
+ **Nodo di regressione:** Tutti.  
   
  CHILDREN_CARDINALITY  
  Stima del numero di nodi figlio del nodo.  
   
- **Nodo radice:** indica il numero di nodi di regressione. Per ogni attributo stimabile del modello viene creato un nodo di regressione.  
+ **Nodo radice:** Indica il numero di nodi di regressione. Per ogni attributo stimabile del modello viene creato un nodo di regressione.  
   
- **Nodo di regressione:** sempre 0.  
+ **Nodo di regressione:** Sempre 0.  
   
  PARENT_UNIQUE_NAME  
  Nome univoco dell'elemento padre del nodo. Per tutti i nodi a livello di radice viene restituito NULL.  
@@ -78,9 +78,9 @@ ms.locfileid: "49120181"
  NODE_DESCRIPTION  
  Descrizione del nodo.  
   
- **Nodo radice:** vuoto  
+ **Nodo radice:** Vuoto  
   
- **Nodo di regressione:** tutti.  
+ **Nodo di regressione:** Tutti.  
   
  NODE_RULE  
  Non utilizzato per i modelli di regressione lineare.  
@@ -107,7 +107,7 @@ ms.locfileid: "49120181"
   
  **Nodo radice:** 0  
   
- **Nodo di regressione:** tabella che contiene gli elementi utilizzati per compilare la formula di regressione. Un nodo di regressione contiene i tipi di valore seguenti:  
+ **Nodo di regressione:** Una tabella che contiene gli elementi utilizzati per compilare la formula di regressione. Un nodo di regressione contiene i tipi di valore seguenti:  
   
 |VALUETYPE|  
 |---------------|  
@@ -123,7 +123,7 @@ ms.locfileid: "49120181"
   
  **Nodo radice:** 0  
   
- **Nodo di regressione:** conteggio dei case di training.  
+ **Nodo di regressione:** Conteggio dei case di training.  
   
  MSOLAP_MODEL_COLUMN  
  Nome dell'attributo stimabile.  

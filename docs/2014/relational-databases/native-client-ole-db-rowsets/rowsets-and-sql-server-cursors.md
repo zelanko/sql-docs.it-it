@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d87706d53190552734785b5310cba7ec81056a40
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535448"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207006"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Set di righe e cursori di Server SQL
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce i set di risultati ai consumer utilizzando due metodi.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c357efe4636c1b502cdb57305b9072907d4b2e98
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532074"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165216"
 ---
 # <a name="assl-xml-conventions"></a>Convenzioni XML di ASSL
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "52532074"
   
  In genere l'ereditarietà non viene utilizzata quando a più tipi è associata una proprietà con lo stesso nome. Ad esempio, il **Name** e **ID** proprietà vengono visualizzate in molti elementi, ma queste proprietà non sono state promosse a un tipo astratto.  
   
-## <a name="whitespace"></a>Spazi vuoti  
+## <a name="whitespace"></a>Whitespace  
  Gli spazi vuoti all'interno di un valore di elemento vengono mantenuti, mentre gli spazi vuoti iniziali e finali vengono sempre rimossi. Gli elementi seguenti contengono ad esempio lo stesso testo che differisce tuttavia per il numero di spazi vuoti all'interno. Di conseguenza tali elementi vengono considerati come se i relativi valori fossero diversi:  
   
  `<Description>My text<Description>`  

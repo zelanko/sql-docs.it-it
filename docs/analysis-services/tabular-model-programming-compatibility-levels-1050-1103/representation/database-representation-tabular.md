@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 807e1f2c864f4e6574188e3f3d717e9bdf571c93
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525668"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207878"
 ---
 # <a name="database-representationtabular"></a>Rappresentazione del database(tabulare)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -86,6 +86,6 @@ catch (Exception createDBxc)
   
 ```  
   
- Per informazioni pratiche su come usare AMO per creare e modificare le rappresentazioni di database, vedere il codice sorgente nell'esempio Tabular AMO 2012, verificando in particolare il file di origine seguente: Database.cs. L'esempio è disponibile in Codeplex. Il codice di esempio viene fornito solo come supporto ai concetti logici illustrati in questo argomento e non deve essere utilizzato in un ambiente di produzione.  
+ Per informazioni pratiche su come usare AMO per creare e modificare le rappresentazioni di database, vedere il codice sorgente nell'esempio di Tabular AMO 2012; in particolare controllare nel seguente file di origine: Database.cs. L'esempio è disponibile in Codeplex. Il codice di esempio viene fornito solo come supporto ai concetti logici illustrati in questo argomento e non deve essere utilizzato in un ambiente di produzione.  
   
   

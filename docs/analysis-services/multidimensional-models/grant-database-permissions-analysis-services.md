@@ -1,5 +1,5 @@
 ---
-title: Concedere le autorizzazioni di database (Analysis Services) | Documenti Microsoft
+title: Concedere le autorizzazioni di database (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f799b086833f0be7b08786aff08e65d202f29674
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024638"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68177627"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Concedere le autorizzazioni per il database (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Se si affronta l'amministrazione del database di Analysis Services avendo già esperienza con i database relazionali, il primo aspetto da comprendere è che, per quanto riguarda l'accesso ai dati, il database non è l'oggetto principale a protezione diretta in Analysis Services.  
   
- La struttura di query primaria in Analysis Services è rappresentata da un cubo (o un modello tabulare), con le autorizzazioni utente impostate per specifici oggetti. A differenza del motore di database relazionale, in cui gli account di accesso al database e le autorizzazioni utente (spesso **db_datareader**) vengono impostati nel database stesso, un database di Analysis Services è per lo più un contenitore per gli oggetti query principali in un modello di dati. Se l'obiettivo immediato è consentire l'accesso ai dati per un cubo o un modello tabulare, per ora è possibile ignorare le autorizzazioni di database e passare direttamente all'argomento: [Concedere le autorizzazioni per un cubo o un modello &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
+ La struttura di query primaria in Analysis Services è rappresentata da un cubo (o un modello tabulare), con le autorizzazioni utente impostate per specifici oggetti. A differenza del motore di database relazionale, in cui gli account di accesso al database e le autorizzazioni utente (spesso **db_datareader**) vengono impostati nel database stesso, un database di Analysis Services è per lo più un contenitore per gli oggetti query principali in un modello di dati. Se l'obiettivo immediato è consentire l'accesso ai dati per un cubo o un modello tabulare, è possibile ignorare le autorizzazioni di database per il momento e passare direttamente all'argomento: [Concedere le autorizzazioni del cubo o un modello &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
  Le autorizzazioni di database in Analysis Services consentono di eseguire funzioni amministrative, che in senso lato equivalgono all'autorizzazione del database Controllo completo, mentre in un contesto più specifico consentono di delegare le operazioni di elaborazione. I livelli di autorizzazione per un database di Analysis Services sono specificati nel riquadro **Generale** della finestra di dialogo **Crea ruolo** , illustrata nella figura seguente e descritta di seguito.  
   
  In Analysis Services non ci sono account di accesso. È sufficiente creare i ruoli e assegnare gli account di Windows nel riquadro **Appartenenza** . Tutti gli utenti, compresi gli amministratori, si connettono ad Analysis Services con un account di Windows.  
   
- ![Ruolo di finestra di dialogo con autorizzazioni create database](../../analysis-services/multidimensional-models/media/ssas-permsdbrole.png "ruolo finestra di dialogo con autorizzazioni Create database")  
+ ![Crea ruolo le autorizzazioni del database che Visualizza finestra di dialogo](../../analysis-services/multidimensional-models/media/ssas-permsdbrole.png "creare ruolo le autorizzazioni del database che Visualizza finestra di dialogo")  
   
  Esistono tre tipi di autorizzazioni specificate a livello di database.  
   
@@ -76,6 +76,6 @@ ms.locfileid: "34024638"
   
 ## <a name="see-also"></a>Vedere anche  
  [Concedere i diritti di amministratore del server a un'istanza di Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [Concedere le autorizzazioni di elaborazione & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
+ [Concedere le autorizzazioni di elaborazione &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
   

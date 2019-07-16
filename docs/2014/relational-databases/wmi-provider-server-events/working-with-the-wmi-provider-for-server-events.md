@@ -21,11 +21,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0519561b24d8aff32adc7c375657fa85b9dfa496
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376215"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195737"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>Utilizzo del provider WMI per eventi del server
   In questo argomento vengono fornite linee guida che è consigliabile tenere presenti prima di programmare tramite il provider WMI per eventi del server.  
@@ -109,7 +109,7 @@ WHERE DatabaseName = "AdventureWorks2012"
     -   DENY o REVOKE (si applica solo alle autorizzazioni ALTER DATABASE, ALTER ANY DATABASE EVENT NOTIFICATION, CREATE DATABASE DDL EVENT NOTIFICATION, CONTROL SERVER, ALTER ANY EVENT NOTIFICATION, CREATE DDL EVENT NOTIFICATION O CREATE TRACE EVENT NOTIFICATION)  
   
 ## <a name="working-with-event-data-on-the-client-side"></a>Utilizzo dei dati degli eventi sul lato client  
- Quando il Provider WMI per eventi del Server crea la notifica dell'evento richiesta nel database di destinazione, tale notifica invia i dati dell'evento al servizio di destinazione in msdb denominato **SQL/notifiche/ProcessWMIEventProviderNotification /V1.0**. Il servizio di destinazione inserisce l'evento in una coda in `msdb` denominata **WMIEventProviderNotificationQueue**. Sia il servizio sia la coda vengono creati dinamicamente dal provider quando si connette per la prima volta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il provider legge quindi i dati degli eventi XML dalla coda e li trasforma in dati MOF (Managed Object Format) prima di restituirli all'applicazione client. I dati MOF sono costituiti dalle proprietà dell'evento richiesto dalla query WQL come definizione della classe CIM (Common Information Model). Ogni proprietà dispone di un tipo CIM corrispondente. La proprietà `SPID`, ad esempio, viene restituita come tipo CIM `Sint32`. I tipi CIM per ogni proprietà sono elencati all'interno di ogni classe di evento in [Classi e proprietà del provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
+ Quando il Provider WMI per eventi del Server crea la notifica dell'evento richiesta nel database di destinazione, tale notifica invia i dati dell'evento al servizio di destinazione in msdb denominato **SQL/notifiche/ProcessWMIEventProviderNotification /V1.0**. Il servizio di destinazione inserisce l'evento in una coda in `msdb` denominata **WMIEventProviderNotificationQueue**. (Il servizio e la coda vengono creati dinamicamente dal provider quando si connette prima al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Quindi, il provider legge i dati degli eventi XML dalla coda e li trasforma in formato di oggetto gestito (MOF) prima di restituirlo all'applicazione client. I dati MOF sono costituiti dalle proprietà dell'evento richiesto dalla query WQL come definizione della classe CIM (Common Information Model). Ogni proprietà dispone di un tipo CIM corrispondente. La proprietà `SPID`, ad esempio, viene restituita come tipo CIM `Sint32`. I tipi CIM per ogni proprietà sono elencati all'interno di ogni classe di evento in [Classi e proprietà del provider WMI per eventi del server](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Concetti relativi al provider WMI per eventi del server](https://technet.microsoft.com/library/ms180560.aspx)  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d36c20e0278a90bc5afcbd312afea2cb596e9c51
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: c1ca9d710ca0e87e69bcc237848c02b758c724cc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072543"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210250"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Confronto tra soluzioni tabulari e multidimensionali
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "53072543"
 |Gerarchie incomplete|Yes|Sì<sup>1</sup>|  
 |Gerarchie padre-figlio|Yes|Sì (tramite DAX)|
 |Partizioni|Yes|Yes| 
-|prospettive|Yes|Yes|
+|Prospettive|Yes|Yes|
 |Sicurezza a livello di riga|Yes|Yes| 
 |Sicurezza a livello di oggetto|Yes|Sì<sup>1</sup>|
 |Misure semiadditive|Yes|Yes| 

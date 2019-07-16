@@ -1,5 +1,5 @@
 ---
-title: Esempi di Query sul modello di Clustering delle sequenze | Documenti Microsoft
+title: Sequence Clustering Model Query Examples | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e14fd39a1e917532b61b9f55415281e53598e564
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019258"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209678"
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Sequence Clustering Model Query Examples
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34019258"
 ##  <a name="bkmk_ContentQueries"></a> Ricerca di informazioni sul modello Sequence Clustering  
  Per creare query significative sul contenuto di un modello di data mining, è necessario comprendere la struttura del contenuto del modello ed essere in grado di individuare il tipo di informazioni archiviate dai diversi tipi di nodo. Per altre informazioni, vedere [Contenuto dei modelli di data mining per i modelli Sequence Clustering &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md).  
   
-###  <a name="bkmk_Query1"></a> Esempio di query 1: Utilizzo di un set di righe dello schema di data mining per la restituzione di parametri del modello  
+###  <a name="bkmk_Query1"></a> Esempio di Query 1: Utilizzo dei set di righe dello Schema di Data Mining per restituire i parametri di modello  
  L'esecuzione di una query sul set di righe dello schema di data mining consente di trovare vari tipi di informazioni sul modello, inclusi i metadati di base, la data e l'ora di creazione e dell'ultima elaborazione del modello, il nome della struttura di data mining su cui si basa il modello e la colonna utilizzata come attributo stimabile.  
   
  Nella query seguente vengono restituiti i parametri utilizzati per la compilazione e il training del modello, `[Sequence Clustering]`. È possibile creare questo modello nella Lezione 5 dell' [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
@@ -62,7 +62,7 @@ WHERE MODEL_NAME = 'Sequence Clustering'
   
  Per impostazione predefinita, viene utilizzato il valore pari a 10 in quanto in genere la riduzione del numero di cluster consente di esplorare e comprendere più facilmente i raggruppamenti nei dati. Tuttavia, ogni modello e set di dati è diverso. È possibile provare a utilizzare altri numeri di cluster per vedere quale valore del parametro produce il modello più accurato.  
   
-###  <a name="bkmk_Query2"></a> Esempio di query 2: Come ottenere un elenco di sequenze per uno stato  
+###  <a name="bkmk_Query2"></a> Esempio di Query 2: Come ottenere un elenco di sequenze per uno stato  
  Il contenuto del modello di data mining archivia le sequenze trovate nei dati di training come primo stato associato a un elenco di tutti i secondi stati correlati. Il primo stato viene utilizzato come etichetta della sequenza e i secondi stati correlati vengono definiti transizioni.  
   
  La query seguente, ad esempio, restituisce l'elenco completo dei primi stati del modello, prima che le sequenze vengono raggruppate in cluster.  È possibile ottenere questo elenco restituendo l'elenco di sequenze (NODE_TYPE = 13) che dispongono del nodo radice del modello come elemento padre (PARENT_UNIQUE_NAME = 0). La parola chiave FLATTENED rende più semplice la lettura dei risultati.  
@@ -138,7 +138,7 @@ WHERE NODE_UNIQUE_NAME = '1081365'
   
  Se ad esempio ci sono quattro cluster, una determinata sequenza potrebbe avere un'opportunità del 40% di appartenere al cluster 1, un'opportunità del 30% di appartenere al cluster 2, un'opportunità del 20% di appartenere al cluster 3 e un'opportunità del 10% di appartenere al cluster 4. Dopo che l'algoritmo ha determinato il cluster a cui la transizione appartiene con maggiore probabilità, pondera le probabilità all'interno del cluster rispetto alla probabilità precedente del cluster.  
   
-###  <a name="bkmk_Query3"></a> Esempio di query 3: Uso di stored procedure di sistema  
+###  <a name="bkmk_Query3"></a> Esempio di Query 3: Utilizzo del sistema di Stored procedure  
  Gli esempi di query appena descritti dimostrano che le informazioni archiviate nel modello sono complesse e che per ottenere quelle desiderate potrebbe essere necessario creare più query. Tuttavia, il visualizzatore Microsoft Sequence Clustering offre un set di potenti strumenti per l'esplorazione grafica delle informazioni contenute in un modello Sequence Clustering e consente anche di eseguire query e il drill-down nel modello.  
   
  Nella maggior parte dei casi le informazioni presentate nel visualizzatore di Microsoft Sequence Clustering vengono create tramite le stored procedure di sistema di Analysis Services per eseguire query sul modello. È possibile scrivere query DMX (Data Mining Extensions) sul contenuto del modello per recuperare le stesse informazioni, ma le stored procedure di sistema di Analysis Services forniscono un comodo collegamento per l'esplorazione o il test dei modelli.  
@@ -180,7 +180,7 @@ SELECT * FROM [Sequence Clustering].SAMPLE_CASES WHERE IsInNode('12')
  Per altre informazioni, vedere [SELECT FROM &#60;model&#62;.SAMPLE_CASES &#40;DMX&#41;](../../dmx/select-from-model-sample-cases-dmx.md).  
   
 #### <a name="cluster-characteristics-and-cluster-discrimination"></a>Caratteristiche cluster e analisi discriminante tra cluster.  
- La scheda **Caratteristiche cluster** riepiloga gli attributi principali di ogni cluster, classificati per probabilità. È possibile scoprire quanti case appartengono a un cluster e il tipo di distribuzione di case nel cluster. Ogni caratteristica dispone di un determinato supporto. Per vedere le caratteristiche di un determinato cluster, è necessario conoscerne l'ID.  
+ La scheda **Caratteristiche cluster** riepiloga gli attributi principali di ogni cluster, classificati per probabilità. È possibile scoprire quanti case appartengono a un cluster e novità la distribuzione di case nel cluster: Ogni caratteristica dispone di un determinato supporto. Per vedere le caratteristiche di un determinato cluster, è necessario conoscerne l'ID.  
   
  Negli esempi seguenti viene utilizzata la stored procedure di sistema, `GetClusterCharacteristics`, per restituire tutte le caratteristiche di Cluster 12 che hanno un punteggio di probabilità superiore alla soglia specificata di 0.0005.  
   
@@ -210,7 +210,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
 ## <a name="using-the-model-to-make-predictions"></a>Utilizzo del modello per l'esecuzione di stime  
  Le query di stima su un modello Sequence Clustering possono utilizzare molte delle funzioni di stima utilizzate con gli altri modelli di clustering. È anche possibile usare la funzione di stima speciale [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md)per generare indicazioni o eseguire stime degli stati successivi.  
   
-###  <a name="bkmk_Query4"></a> Esempio di query 4: Stima dello stato o degli stati successivi  
+###  <a name="bkmk_Query4"></a> Esempio di Query 4: Stimare lo stato successivo o gli Stati  
  È possibile usare la funzione [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md) per stimare lo stato successivo più probabile, dato un determinato valore. È inoltre possibile stimare più stati successivi e restituire, ad esempio, un elenco dei primi tre prodotti che un cliente potrebbe acquistare per presentare un elenco di raccomandazioni.  
   
  La query di esempio seguente è una query di stima singleton che restituisce le prime cinque stime, insieme alla relativa probabilità. Poiché il modello include una tabella nidificata, è necessario utilizzare la tabella nidificata, `[v Assoc Seq Line Items]`, come riferimento della colonna durante l'esecuzione di stime. Inoltre, quando vengono forniti valori come input, è necessario unire la tabella del case e le colonne della tabella nidificata, come mostrato dalle istruzioni SELECT nidificate.  
@@ -249,28 +249,28 @@ AS t
   
 |||  
 |-|-|  
-|Funzione di stima|Utilizzo|  
+|Funzione di stima|Uso|  
 |[Cluster &#40;DMX&#41;](../../dmx/cluster-dmx.md)|Viene restituito il cluster con la più alta probabilità di contenere il case di input.|  
 |[ClusterDistance &#40;DMX&#41;](../../dmx/clusterdistance-dmx.md)|Viene restituita la distanza del case di input dal cluster specificato o la distanza del case di input dal cluster più probabile, se non viene specificato alcun cluster.<br /><br /> Questa funzione può essere utilizzata con qualsiasi tipo di modello di clustering (EM, K-medie, ecc.), ma i risultati variano in base all'algoritmo.|  
 |[ClusterProbability &#40;DMX&#41;](../../dmx/clusterprobability-dmx.md)|Restituisce la probabilità che il case di input appartenga al cluster specificato.|  
 |[IsInNode &#40;DMX&#41;](../../dmx/isinnode-dmx.md)|Indica se il nodo specificato contiene o meno il case corrente.|  
-|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|Viene restituita la probabilità adattata dello stato specificato.|  
+|[PredictAdjustedProbability &#40;DMX&#41;](../../dmx/predictadjustedprobability-dmx.md)|Viene restituita la probabilità adattata dello stato specificato.|  
 |[PredictAssociation &#40;DMX&#41;](../../dmx/predictassociation-dmx.md)|Consente di stimare l'appartenenza associativa.|  
 |[PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md)|Viene restituita la probabilità che un case di input risulti adatto al modello esistente.|  
-|[DMX PredictHistogram & #40; & #41;](../../dmx/predicthistogram-dmx.md)|Restituisce una tabella che rappresenta un istogramma per la stima di una colonna specificata.|  
-|[DMX PredictNodeId & #40; & #41;](../../dmx/predictnodeid-dmx.md)|Viene restituito il Node_ID del nodo in cui è classificato il case.|  
-|[DMX PredictProbability & #40; & #41;](../../dmx/predictprobability-dmx.md)|Viene restituita la probabilità per uno stato specificato.|  
+|[PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)|Restituisce una tabella che rappresenta un istogramma per la stima di una colonna specificata.|  
+|[PredictNodeId &#40;DMX&#41;](../../dmx/predictnodeid-dmx.md)|Viene restituito il Node_ID del nodo in cui è classificato il case.|  
+|[PredictProbability &#40;DMX&#41;](../../dmx/predictprobability-dmx.md)|Viene restituita la probabilità per uno stato specificato.|  
 |[PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md)|Vengono stimati i valori di sequenza futuri per un set specificato di dati in sequenza.|  
 |[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|Restituisce la deviazione standard stimata per la colonna specificata.|  
-|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|Viene restituito il valore di supporto per uno stato specificato.|  
-|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|Restituisce la varianza di una colonna specificata.|  
+|[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|Viene restituito il valore di supporto per uno stato specificato.|  
+|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|Restituisce la varianza di una colonna specificata.|  
   
  Per un elenco delle funzioni comuni a tutti gli algoritmi di [!INCLUDE[msCoName](../../includes/msconame-md.md)], vedere [Funzioni di stima correlate &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). Per la sintassi di funzioni specifiche, vedere [Guida di riferimento alle funzioni DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Query di Data Mining](../../analysis-services/data-mining/data-mining-queries.md)   
- [Riferimento tecnico algoritmo Microsoft Sequence Clustering](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Algoritmo Microsoft Sequence Clustering](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Contenuto del modello di data mining per i modelli di Clustering sequenza & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md)   
+ [Riferimento tecnico per l'algoritmo Microsoft Sequence Clustering](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Contenuto dei modelli di data mining per i modelli Sequence Clustering &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

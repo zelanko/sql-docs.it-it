@@ -1,5 +1,5 @@
 ---
-title: SQLGetStmtOption (Visual FoxPro ODBC Driver) | Microsoft Docs
+title: SQLGetStmtOption (Driver ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 984a8b1d-f12c-420c-8be4-f555114c764b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 373f5e13712ef7b0864401ea3d2c204cb03ebb09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5521fb11cad064cf487d38562f4146fd32587993
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240258"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898789"
 ---
 # <a name="sqlgetstmtoption-visual-foxpro-odbc-driver"></a>SQLGetStmtOption (driver ODBC Visual FoxPro)
 > [!NOTE]  

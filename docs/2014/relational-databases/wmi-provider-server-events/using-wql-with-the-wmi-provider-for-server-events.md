@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 18c4b6448438ebb8c95f999569d51edfecf04206
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375824"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211580"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Utilizzo di WQL con il provider WMI per eventi del server
   Le applicazioni di gestione accedono agli eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il provider WMI per eventi del server ed eseguendo istruzioni WQL (WMI Query Language). WQL è un subset semplificato del linguaggio SQL (Structured Query Language), con alcune estensioni specifiche di WMI. Quando si utilizza WQL, un'applicazione recupera un tipo di evento da un'istanza specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un database o un oggetto di database (l'unico oggetto attualmente supportato è la coda). Il Provider WMI per eventi del Server converte la query in una notifica degli eventi creata nel database di destinazione per le notifiche degli eventi con ambito database o con ambito oggetto o nel **master** database per eventi con ambito server notifiche.  
@@ -91,7 +91,7 @@ WHERE where_condition
   
  Il provider WMI per eventi del server utilizza un algoritmo bottom-up, first-fit per produrre l'ambito più ristretto possibile per l'oggetto EVENT NOTIFICATION sottostante. L'algoritmo tenta di ridurre l'attività interna sul server e il traffico di rete tra l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il processo host WMI. Il provider esamina il *event_type* specificato nella clausola FROM e le condizioni nella clausola WHERE e prova a registrare la notifica degli eventi sottostante con l'ambito più ristretto possibile. Se tale registrazione non riesce, prova a eseguirla nei successivi ambiti di livello più alto finché l'operazione non riesce. Se l'esito dell'operazione è ancora negativo dopo aver raggiunto l'ambito di livello più alto, ovvero il livello del server, restituisce un errore al consumer.  
   
- Ad esempio, se DatabaseName =**'** AdventureWorks **'** viene specificato nella clausola WHERE, il provider prova a registrare una notifica degli eventi nel [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. Se il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] esiste e il client chiamante dispone delle autorizzazioni necessarie per creare una notifica degli eventi in [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], la registrazione riesce. In caso contrario, viene eseguito un tentativo di registrazione della notifica degli eventi a livello di server. La registrazione riesce se il client WMI dispone delle autorizzazioni necessarie. In questo scenario, tuttavia, gli eventi non vengono restituiti al client finché il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] non sarà stato creato.  
+ Ad esempio, se DatabaseName = **'** AdventureWorks **'** viene specificato nella clausola WHERE, il provider prova a registrare una notifica degli eventi nel [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. Se il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] esiste e il client chiamante dispone delle autorizzazioni necessarie per creare una notifica degli eventi in [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], la registrazione riesce. In caso contrario, viene eseguito un tentativo di registrazione della notifica degli eventi a livello di server. La registrazione riesce se il client WMI dispone delle autorizzazioni necessarie. In questo scenario, tuttavia, gli eventi non vengono restituiti al client finché il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] non sarà stato creato.  
   
  Il *where_condition* può anche agire come un filtro per limitare ulteriormente la query per un determinato database, schema o object. Si consideri, ad esempio, la query WQL seguente:  
   
@@ -115,14 +115,14 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-querying-for-events-at-the-server-scope"></a>A. Query su eventi nell'ambito server  
+### <a name="a-querying-for-events-at-the-server-scope"></a>R. Query su eventi nell'ambito server  
  Nella query WQL seguente vengono recuperate tutte le proprietà di evento per qualsiasi evento di traccia `SERVER_MEMORY_CHANGE` che si verifica sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 SELECT * FROM SERVER_MEMORY_CHANGE  
 ```  
   
-### <a name="b-querying-for-events-at-the-database-scope"></a>b. Query su eventi nell'ambito database  
+### <a name="b-querying-for-events-at-the-database-scope"></a>B. Query su eventi nell'ambito database  
  Nella query WQL seguente vengono recuperate proprietà di evento specifiche per qualsiasi evento che si verifica nel database `AdventureWorks` ed è incluso nel gruppo di eventi `DDL_DATABASE_LEVEL_EVENTS`.  
   
 ```  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b5f47146f02559e9b546d7e5ec164462ad2fdba1
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042400"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180716"
 ---
 # <a name="dimensions---introduction"></a>Dimensioni - Introduzione
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "59042400"
   
  Nel diagramma precedente, il **FactResellerSales** tabella dei fatti non dispone di una relazione di chiave esterna con la **DimGeography** tabella della dimensione. Tuttavia, il **FactResellerSales** tabella dei fatti ha una relazione di chiave esterna con la **DimReseller** tabella della dimensione, che a sua volta ha una relazione di chiave esterna con la  **DimGeography** tabella della dimensione. Per definire una dimensione Reseller contenente informazioni geografiche per ogni rivenditore, è necessario recuperare questi attributi dal **DimGeography** e il **DimReseller** tabelle delle dimensioni. In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], tuttavia, è possibile ottenere lo stesso risultato creando due dimensioni separate e collegandole in un gruppo di misure definendo una relazione di tipo Riferimento tra le due dimensioni. Per altre informazioni sulle relazioni tra dimensioni di riferimento, vedere [relazioni di tipo](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
- Un vantaggio dell'utilizzo di relazioni di tipo Riferimento in questo scenario consiste nella possibilità di creare un'unica dimensione Geography e quindi di creare più dimensioni del cubo basate sulla dimensione Geography, senza che sia necessario ulteriore spazio di archiviazione. È ad esempio possibile collegare una delle dimensioni Geography del cubo a una dimensione Reseller e un'altra delle dimensioni Geography del cubo a una dimensione Customer. **Argomenti correlati:**[relazioni di tipo](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md), [definire una relazione di tipo riferimento e le proprietà della relazione di cui viene fatto riferimento](../../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
+ Un vantaggio dell'utilizzo di relazioni di tipo Riferimento in questo scenario consiste nella possibilità di creare un'unica dimensione Geography e quindi di creare più dimensioni del cubo basate sulla dimensione Geography, senza che sia necessario ulteriore spazio di archiviazione. È ad esempio possibile collegare una delle dimensioni Geography del cubo a una dimensione Reseller e un'altra delle dimensioni Geography del cubo a una dimensione Customer. **Argomenti correlati:** [relazioni di tipo](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md), [definire una relazione di tipo riferimento e le proprietà della relazione di cui viene fatto riferimento](../../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   
 ## <a name="processing-a-dimension"></a>Elaborazione di una dimensione  
  Dopo avere creato una dimensione, per poter visualizzare i membri degli attributi e delle gerarchie della dimensione, è necessario elaborare la dimensione stessa. Dopo la modifica della struttura di una dimensione o l'aggiornamento delle informazioni nelle tabelle sottostanti, è necessario elaborare di nuovo la dimensione per poter visualizzare le modifiche. Quando si elabora una dimensione dopo modifiche strutturali, è inoltre necessario elaborare qualsiasi cubo in cui la dimensione è inclusa. In caso contrario, il cubo non sarà visualizzabile.  

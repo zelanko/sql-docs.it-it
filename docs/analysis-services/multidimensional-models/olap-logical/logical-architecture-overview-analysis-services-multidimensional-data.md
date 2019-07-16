@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: aca12552338eb05549199b22af3a63e9f4b4a101
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579441"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208657"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Panoramica dell'architettura logica (Analysis Services - Dati multidimensionali)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -86,19 +86,19 @@ ms.locfileid: "57579441"
 |||3rd quarter|6119|1444|4675|Sep-30-99|Sep-18-99|Sep-30-99|  
 |||4th quarter|7818|2126|5692|DEC-29-99|Dec-22-99|DEC-29-99|  
   
- Dopo avere definito un cubo, è possibile creare nuove aggregazioni o modificare quelle esistenti in modo da impostare le opzioni per determinare, ad esempio, se le aggregazioni devono essere precalcolate durante la fase di elaborazione o calcolate durante l'esecuzione della query. **Argomento correlato:**[aggregazioni e progettazione di aggregazioni](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+ Dopo avere definito un cubo, è possibile creare nuove aggregazioni o modificare quelle esistenti in modo da impostare le opzioni per determinare, ad esempio, se le aggregazioni devono essere precalcolate durante la fase di elaborazione o calcolate durante l'esecuzione della query. **Argomento correlato:** [aggregazioni e progettazione di aggregazioni](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>Mapping di misure, attributi e gerarchie  
  Le misure, gli attributi e le gerarchie del cubo di esempio derivano dalle colonne seguenti nelle tabelle dei fatti e delle dimensioni del cubo.  
   
-|Misura o attributo (livello)|Membri|Tabella di origine|Colonna di origine|Valore della colonna di esempio|  
+|Misura o attributo (livello)|Members|Tabella di origine|Colonna di origine|Valore della colonna di esempio|  
 |------------------------------------|-------------|------------------|-------------------|-------------------------|  
 |Misura Packages|Non applicabile|ImportsFactTable|Pacchetti|12|  
 |Misura Last|Non applicabile|ImportsFactTable|Ultimo|May-03-99|  
 |Livello Route Category nella dimensione Route|nonground,ground|RouteDimensionTable|Route_Category|Nonground|  
 |Attributo Route nella dimensione Route|air,sea,road,rail|RouteDimensionTable|Route|Sea|  
 |Attributo Hemisphere nella dimensione Source|Eastern Hemisphere,Western Hemisphere|SourceDimensionTable|Hemisphere|Eastern Hemisphere|  
-|Attributo Continent nella dimensione Source|Africa,Asia,AustraliaEurope,N. America,S. America|SourceDimensionTable|Continent|Europe|  
+|Attributo Continent nella dimensione Source|Africa,Asia,AustraliaEurope,N. America,S. America|SourceDimensionTable|Continent|Europa|  
 |Attributo Half nella dimensione Time|1st half,2nd half|TimeDimensionTable|Half|2nd half|  
 |Attributo Quarter nella dimensione Time|1st quarter,2nd quarter,3rd quarter,4th quarter|TimeDimensionTable|Quarter|3rd quarter|  
   
@@ -116,9 +116,9 @@ ms.locfileid: "57579441"
   
  Nella tabella precedente, ogni riga dispone degli stessi valori per il **RouteKey**, **SourceKey**, e **TimeKey** colonne, che indica che queste righe contribuiscono alla cella del cubo stesso.  
   
- Nell'esempio illustrato di seguito viene rappresentato un cubo molto semplice, in quanto contiene un solo gruppo di misure, e tutte le tabelle delle dimensioni vengono unite in join alla tabella dei fatti in uno schema star. Un altro schema comune è quello snowflake, in cui una o più tabelle delle dimensioni sono unite in join a un'altra tabella delle dimensioni, anziché direttamente alla tabella dei fatti. **Argomento correlato:**[dimensioni &#40;Analysis Services - dati multidimensionali&#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
+ Nell'esempio illustrato di seguito viene rappresentato un cubo molto semplice, in quanto contiene un solo gruppo di misure, e tutte le tabelle delle dimensioni vengono unite in join alla tabella dei fatti in uno schema star. Un altro schema comune è quello snowflake, in cui una o più tabelle delle dimensioni sono unite in join a un'altra tabella delle dimensioni, anziché direttamente alla tabella dei fatti. **Argomento correlato:** [dimensioni &#40;Analysis Services - dati multidimensionali&#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
   
- Nell'esempio illustrato di seguito viene utilizzata una sola tabella dei fatti. Quando un cubo utilizza più tabelle dei fatti, le misure di ogni tabella dei fatti vengono organizzate in gruppi di misure, ognuno dei quali è correlato a un set di dimensioni specifico mediante le relazioni tra dimensioni definite. Queste relazioni vengono definite specificando le tabelle della vista origine dati coinvolte e il livello di granularità della relazione. **Argomento correlato:**[relazioni tra dimensioni](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
+ Nell'esempio illustrato di seguito viene utilizzata una sola tabella dei fatti. Quando un cubo utilizza più tabelle dei fatti, le misure di ogni tabella dei fatti vengono organizzate in gruppi di misure, ognuno dei quali è correlato a un set di dimensioni specifico mediante le relazioni tra dimensioni definite. Queste relazioni vengono definite specificando le tabelle della vista origine dati coinvolte e il livello di granularità della relazione. **Argomento correlato:** [relazioni tra dimensioni](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Database modello multidimensionale](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  

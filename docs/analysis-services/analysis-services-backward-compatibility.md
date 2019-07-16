@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5ab4f304d865992a3269b4ee83c9e25f61069e8c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984693"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210265"
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Compatibilità con le versioni precedenti di Analysis Services (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -39,7 +39,7 @@ Le funzionalità seguenti sono deprecate in questa versione:
 |Tabella|I livelli di compatibilità 1100 e 1103 del modello tabulare saranno supportati in una versione futura. La sostituzione prevede l'impostazione di modelli a livello di compatibilità 1200 o superiore, la conversione di definizioni del modello in metadati tabulari. Vedere [Livello di compatibilità per i modelli tabulari in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).|  
 |Strumenti|SQL Server Profiler per l'acquisizione della traccia<br /><br /> La sostituzione prevede l'uso del profiler di eventi estesi incorporato in SQL Server Management Studio.  <br /> Vedere [Monitorare Analysis Services con eventi estesi di SQL Server](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
 |Strumenti|Server Profiler per la riproduzione della traccia <br />Sostituzione. Non è prevista alcuna sostituzione.|  
-|Trace Management Objects e API di traccia|Oggetti Microsoft.AnalysisServices.Trace (contiene le API per gli oggetti Analysis Services Trace e Replay). La sostituzione è multiparte:<br /><br /> -Configurazione della traccia: Microsoft.SqlServer.Management.XEvent<br />-Lettura della traccia: Microsoft.SqlServer.XEvent.Linq<br />-   Riproduzione della traccia: nessuna|  
+|Trace Management Objects e API di traccia|Oggetti Microsoft.AnalysisServices.Trace (contiene le API per gli oggetti Analysis Services Trace e Replay). La sostituzione è multiparte:<br /><br /> -Configurazione della traccia: Microsoft.SqlServer.Management.XEvent<br />-Lettura della traccia: Microsoft.SqlServer.XEvent.Linq<br />-Riproduzione della traccia: Nessuna|  
   
 > [!NOTE]  
 >  Gli annunci di funzionalità precedentemente deprecate di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] rimangono validi. Considerato che il codice che supporta tali funzionalità non è ancora stato eliminato dal prodotto, molte di queste funzionalità sono ancora presenti in questa versione. Durante la funzionalità precedentemente deprecate potrebbe essere accessibile, che essi vengono ancora considerate deprecate e possono essere fisicamente rimosse dal prodotto in qualsiasi momento.  
@@ -52,11 +52,11 @@ Le funzionalità seguenti sono state deprecate in una versione precedente e non 
 |||  
 |-|-|  
 |**Funzionalità**|**Sostituzione o soluzione alternativa**|  
-|[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|Nessuna. Questa funzionalità è stata deprecata in SQL Server 2005.|  
-|[CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)|Nessuna. Questa funzionalità è stata deprecata in SQL Server 2005.|  
-|Hint di Query Optimizer NON_EMPTY_BEHAVIOR|Nessuna. Questa funzionalità è stata deprecata in SQL Server 2008.|  
-|Assembly COM|Nessuna. Questa funzionalità è stata deprecata in SQL Server 2008.|  
-|Proprietà intrinseca di cella CELL_EVALUATION_LIST|Nessuna. Questa funzionalità è stata deprecata in SQL Server 2005.|  
+|[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|No. Questa funzionalità è stata deprecata in SQL Server 2005.|  
+|[CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)|No. Questa funzionalità è stata deprecata in SQL Server 2005.|  
+|Hint di Query Optimizer NON_EMPTY_BEHAVIOR|No. Questa funzionalità è stata deprecata in SQL Server 2008.|  
+|Assembly COM|No. Questa funzionalità è stata deprecata in SQL Server 2008.|  
+|Proprietà intrinseca di cella CELL_EVALUATION_LIST|No. Questa funzionalità è stata deprecata in SQL Server 2005.|  
   
 > [!NOTE]  
 >  Gli annunci di funzionalità precedentemente deprecate di [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] rimangono validi. Considerato che il codice che supporta tali funzionalità non è ancora stato eliminato dal prodotto, molte di queste funzionalità sono ancora presenti in questa versione. Durante la funzionalità precedentemente deprecate potrebbe essere accessibile, che essi vengono ancora considerate deprecate e possono essere fisicamente rimosse dal prodotto in qualsiasi momento.  

@@ -1,5 +1,5 @@
 ---
-title: Cenni preliminari sulla sicurezza (Data Mining) | Documenti Microsoft
+title: Panoramica della sicurezza (Data Mining) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8cf7958cdde480bf48c26dfed7e3056385439a4d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016888"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209696"
 ---
 # <a name="security-overview-data-mining"></a>Panoramica della sicurezza (data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,13 +23,13 @@ ms.locfileid: "34016888"
 ##  <a name="bkmk_Architecture"></a> Architettura di sicurezza  
  Per ulteriori informazioni sull'architettura di sicurezza di base di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], incluso il modo in cui in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene utilizzata l'autenticazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows per autenticare l'accesso utente, vedere le risorse seguenti.  
   
--   [Ruoli di sicurezza & #40; Analysis Services - dati multidimensionali & #41;](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+-   [Ruoli di sicurezza &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
 -   [Proprietà di sicurezza](../../analysis-services/server-properties/security-properties.md)  
   
--   [Configurare gli account del servizio & #40; Analysis Services & #41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)  
+-   [Configurare gli account del servizio &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)  
   
--   [Per l'autorizzazione di accesso per gli oggetti e operazioni & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Autorizzazione dell'accesso a oggetti e operazioni &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_Logon"></a> Configurazione dell'account di accesso per Analysis Services  
  È necessario selezionare un account di accesso appropriato per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e specificare le autorizzazioni per questo account. È necessario verificare che l'account di accesso di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] disponga solo delle autorizzazioni necessarie per eseguire determinate attività, incluse le autorizzazioni appropriate per le origini dati sottostanti.  
@@ -54,6 +54,6 @@ ms.locfileid: "34016888"
  Se si utilizzano pacchetti di Integration Services per pulire i dati, aggiornare modelli di data mining o eseguire stime, è necessario assicurarsi che il servizio Integration Services disponga delle autorizzazioni appropriate per il database in cui è archiviato il modello e delle autorizzazioni appropriate per i dati di origine.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ruoli e autorizzazioni & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
+ [Ruoli e autorizzazioni &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

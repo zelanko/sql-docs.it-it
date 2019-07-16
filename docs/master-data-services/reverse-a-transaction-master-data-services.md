@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d44c240962e27f04e44414866c12dcee07b6b50c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44424916a27220713ab5b31639ba86bea365026f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897813"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>Invertire una transazione (Master Data Services)
 

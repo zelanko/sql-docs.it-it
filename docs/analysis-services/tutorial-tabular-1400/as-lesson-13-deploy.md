@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: ab561b096c4436349580201eec3b3ea10a8aaa75
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 4e8e6bea11794545a2b0ab9c340e85344ec23d33
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685308"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162189"
 ---
 # <a name="deploy"></a>Distribuzione
 
@@ -76,7 +76,7 @@ La procedura è stata completata. Si è finito di creazione e distribuzione del 
   
   
   
-## <a name="whats-next"></a>Quali sono le operazioni successive?
+## <a name="whats-next"></a>Argomenti successivi
 [Connettersi con Power BI Desktop](https://docs.microsoft.com/azure/analysis-services/analysis-services-connect-pbi)   
 [Lezione supplementare: sicurezza dinamica](../tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)   
 [Lezione supplementare: righe di dettaglio](../tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md)   

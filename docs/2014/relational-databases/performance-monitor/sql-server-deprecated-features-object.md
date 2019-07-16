@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763943"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206965"
 ---
 # <a name="sql-server-deprecated-features-object"></a>Oggetto SQL Server:Deprecated Features
   L'oggetto SQLServer:Caratteristiche deprecate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce un contatore per monitorare le caratteristiche definite deprecate. In ognuno dei casi il contatore fornisce un conteggio dell'utilizzo indicante il numero di volte in cui è stata rilevata la funzionalità deprecata dall'ultimo avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -30,7 +30,7 @@ ms.locfileid: "52763943"
 |Istanze del contatore SQL Server Deprecated Features|Descrizione|  
 |------------------------------------------------------|-----------------|  
 |'#' e '##' come nomi di tabelle e stored procedure temporanee|È stato rilevato un identificatore che non contiene alcun carattere diverso da #. Usare almeno un carattere aggiuntivo. Si verifica una volta per ogni compilazione.|  
-|Sintassi per la chiamata di funzioni '::'|È stata rilevata la sintassi per la chiamata di funzioni :: per una funzione con valori di tabella. Sostituire con `SELECT column_list FROM`  *\< nome_funzione >*`()`. Sostituire, ad esempio, `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Si verifica una volta per ogni compilazione.|  
+|Sintassi per la chiamata di funzioni '::'|È stata rilevata la sintassi per la chiamata di funzioni :: per una funzione con valori di tabella. Sostituire con `SELECT column_list FROM`  *\< nome_funzione >* `()`. Sostituire, ad esempio, `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Si verifica una volta per ogni compilazione.|  
 |"\@" e nomi che iniziano con "\@\@" come identificatori [!INCLUDE[tsql](../../includes/tsql-md.md)]|È stato rilevato un identificatore che inizia con \@ o \@\@. Non usare come identificatori \@ o \@\@ o nomi che iniziano con \@\@. Si verifica una volta per ogni compilazione.|  
 |ADDING TAPE DEVICE|La caratteristica deprecata sp_addumpdevice'`tape`' è stata rilevata. Utilizzare sp_addumpdevice'`disk`' invece. Si verifica una volta per ogni utilizzo.|  
 |Autorizzazione ALL|Numero totale di volte in cui è stata rilevata la sintassi GRANT ALL, DENY ALL o REVOKE ALL. Modificare la sintassi in modo da negare autorizzazioni specifiche. Si verifica una volta per ogni query.|  
@@ -112,7 +112,7 @@ ms.locfileid: "52763943"
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Sono stati rilevati riferimenti alla vista deprecata sys.numbered_procedure_parameters. Non usare. Si verifica una volta per ogni compilazione.|  
 |numbered_procedures|Sono stati rilevati riferimenti alla vista deprecata sys.numbered_procedures. Non usare. Si verifica una volta per ogni compilazione.|  
-|Oldstyle RAISEERROR|È stata rilevata la sintassi deprecata RAISERROR (formato: RAISERROR stringa di tipo integer). Riscrivere l'istruzione in modo che utilizzi la sintassi RAISERROR corrente. Si verifica una volta per ogni compilazione.|  
+|Oldstyle RAISEERROR|Deprecata RAISERROR (formato: È stata rilevata la sintassi RAISERROR stringa di integer). Riscrivere l'istruzione in modo che utilizzi la sintassi RAISERROR corrente. Si verifica una volta per ogni compilazione.|  
 |OLEDB per connessioni ad hoc|SQLOLEDB non è un provider supportato. Per le connessioni ad hoc, usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.|  
 |PERMISSIONS|Sono stati rilevati riferimenti alla funzione intrinseca PERMISSIONS. Eseguire una query su sys.fn_my_permissions. Si verifica una volta per ogni query.|  
 |ProcNums|È stata rilevata la sintassi deprecata ProcNums. Riscrivere le istruzioni per rimuovere i riferimenti. Si verifica una volta per ogni compilazione.|  
@@ -162,7 +162,7 @@ ms.locfileid: "52763943"
 |sp_control_dbmasterkey_password|La stored procedure sp_control_dbmasterkey_password non controlla se una chiave master è esistente. Questo è consentito solo per la compatibilità con le versioni precedenti, ma viene visualizzato un avviso. Questo comportamento è deprecato. In una versione futura la chiave master deve esistere e la password usata nella stored procedure sp_control_dbmasterkey_password deve essere una delle password usate per crittografare la chiave master del database.|  
 |sp_create_removable|È stata rilevata la procedura sp_create_removable. In alternativa, usare CREATE DATABASE. Si verifica una volta per ogni query.|  
 |sp_db_vardecimal_storage_format|È stato rilevato l'utilizzo del formato di archiviazione `vardecimal`. Usare la compressione dei dati.|  
-|sp_dbcmptlevel|È stata rilevata la procedura sp_dbcmptlevel. Utilizzare ALTER DATABASE ... SET COMPATIBILITY_LEVEL. Si verifica una volta per ogni query.|  
+|sp_dbcmptlevel|È stata rilevata la procedura sp_dbcmptlevel. Usare ALTER DATABASE ... SET COMPATIBILITY_LEVEL. Si verifica una volta per ogni query.|  
 |sp_dbfixedrolepermission|È stata rilevata la procedura sp_dbfixedrolepermission. Non usare. Si verifica una volta per ogni query.|  
 |sp_dboption|È stata rilevata la procedura sp_dboption. In alternativa, usare ALTER DATABASE e DATABASEPROPERTYEX. Si verifica una volta per ogni compilazione.|  
 |sp_dbremove|È stata rilevata la procedura sp_dbremove. In alternativa, usare DROP DATABASE. Si verifica una volta per ogni query.|  
@@ -251,7 +251,7 @@ ms.locfileid: "52763943"
 |Opzione di tabella text in row|Sono stati rilevati riferimenti all'opzione di tabella 'text in row'. Utilizzare sp_tableoption 'large value types out of row'. Si verifica una volta per ogni query.|  
 |TEXTPTR|Sono stati rilevati riferimenti alla funzione TEXTPTR. Riscrivere le applicazioni in modo che utilizzino il tipo di dati `varchar(max)` e rimuovere la sintassi dei tipi di dati `text`, `ntext` e `image`. Si verifica una volta per ogni query.|  
 |TEXTVALID|Sono stati rilevati riferimenti alla funzione TEXTVALID. Riscrivere le applicazioni in modo che utilizzino il tipo di dati `varchar(max)` e rimuovere la sintassi dei tipi di dati `text`, `ntext` e `image`. Si verifica una volta per ogni query.|  
-|timestamp|Numero totale di volte in cui è stato rilevato il tipo di dati deprecato `timestamp` in un'istruzione DDL. Usare il tipo di dati `rowversion`.|  
+|TIMESTAMP|Numero totale di volte in cui è stato rilevato il tipo di dati deprecato `timestamp` in un'istruzione DDL. Usare il tipo di dati `rowversion`.|  
 |UPDATETEXT o WRITETEXT|È stata rilevata l'istruzione UPDATETEXT o WRITETEXT. Riscrivere le applicazioni in modo che utilizzino il tipo di dati `varchar(max)` e rimuovere la sintassi dei tipi di dati `text`, `ntext` e `image`. Si verifica una volta per ogni query.|  
 |USER_ID|Sono stati rilevati riferimenti alla funzione USER_ID. Usare la funzione DATABASE_PRINCIPAL_ID. Si verifica una volta per ogni compilazione.|  
 |Utilizzo di OLEDB per server collegati||  

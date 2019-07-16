@@ -1,5 +1,5 @@
 ---
-title: Avviare o arrestare un Power Pivot per SharePoint Server | Documenti Microsoft
+title: Avviare o arrestare un Power Pivot per SharePoint Server | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4b53cc7730f962d790ebdb9a0373bf98e9bf32bf
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34037405"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208093"
 ---
 # <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>Avviare o arrestare un server Power Pivot per SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Il servizio di sistema e un'istanza di [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] vengono usati insieme nello stesso server applicazioni locale per supportare l'elaborazione dati e richieste coordinata in una farm di SharePoint.  
   
- In questo argomento sono incluse le sezioni seguenti:  
+ Di seguito sono elencate le diverse sezioni di questo argomento:  
   
  [Dipendenze dei servizi](#dependencies)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "34037405"
 ##  <a name="effects"></a> Effetti dell'arresto di un server Power Pivot  
  La tabella seguente descrive gli effetti dell'arresto del servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e del servizio Analysis Services in un server SharePoint.  
   
-|Effetto su|Description|  
+|Effetto su|Descrizione|  
 |---------------|-----------------|  
 |Query esistenti|Le query in esecuzione in un server Analysis Services verranno arrestate immediatamente. L'utente otterrà un errore di dati non trovati o di connessione all'origine dati non trovata.|  
 |Processi di aggiornamento dati esistenti in fase di elaborazione|I processi in esecuzione nel server Analysis Services corrente verranno arrestati immediatamente. L'aggiornamento dati avrà esito negativo e un errore verrà registrato nella cronologia dell'aggiornamento dati.<br /><br /> È possibile visualizzare lo stato dei processi correnti prima di arrestare il servizio tramite la pagina Controlla stato processo in Amministrazione centrale SharePoint.<br /><br /> Anche se è possibile conoscere quali processi sono in fase di elaborazione, non vi è modo di visualizzare la coda per verificare se stanno per essere avviati altri processi.|  

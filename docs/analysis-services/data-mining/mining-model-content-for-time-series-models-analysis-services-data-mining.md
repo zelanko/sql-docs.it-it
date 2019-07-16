@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 18013587c8c6eb23989f8f22150b8980d0e5afc1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513785"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182649"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli Time Series (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "52513785"
  Nelle sezioni seguenti viene illustrata la disposizione dei nodi all'interno di ognuno di questi tipi di modello.  
   
 ### <a name="structure-of-an-artxp-model"></a>Struttura di un modello ARTXP  
- L'algoritmo ARTXP consente di creare un modello simile a un modello di albero delle decisioni. Vengono raggruppati attributi stimabili che vengono divisi ogni volta che vengono rilevate differenze significative. Pertanto, in ogni modello ARTXP è contenuto un ramo separato per ogni attributo stimabile. Ad esempio, l'esercitazione di base sul data mining consente di creare un modello per la stima dei ricavi delle vendite per molte aree. In questo caso, **[Amount]** è l'attributo stimabile e viene creato un ramo distinto per ogni area. Se fossero presenti due attributi stimabili, ovvero **[Amount]** e **[Quantity]**, verrebbe creato un ramo distinto per ogni combinazione di attributo e area.  
+ L'algoritmo ARTXP consente di creare un modello simile a un modello di albero delle decisioni. Vengono raggruppati attributi stimabili che vengono divisi ogni volta che vengono rilevate differenze significative. Pertanto, in ogni modello ARTXP è contenuto un ramo separato per ogni attributo stimabile. Ad esempio, l'esercitazione di base sul data mining consente di creare un modello per la stima dei ricavi delle vendite per molte aree. In questo caso, **[Amount]** è l'attributo stimabile e viene creato un ramo distinto per ogni area. Se fossero presenti due attributi stimabili, ovvero **[Amount]** e **[Quantity]** , verrebbe creato un ramo distinto per ogni combinazione di attributo e area.  
   
  Nel nodo di livello superiore del ramo ARTXP sono contenute le stesse informazioni del nodo radice dell'albero delle decisioni. Tra queste, il numero di elementi figlio del nodo (CHILDREN_CARDINALITY), il numero di case che soddisfano le condizioni del nodo (NODE_SUPPORT) e varie statistiche descrittive (NODE_DISTRIBUTION).  
   
@@ -59,7 +59,7 @@ ms.locfileid: "52513785"
 >  Per visualizzare le formule, è possibile trovare la formula di regressione completa a livello del nodo foglia, ma non in un nodo intermedio o radice.  
   
 ### <a name="structure-of-an-arima-model"></a>Struttura di un modello ARIMA  
- L'algoritmo ARIMA consente di creare una singola informazione per ogni combinazione di una serie di dati (ad esempio **[Region]**) e un attributo stimabile (ad esempio **[Sales Amount]**)-l'equazione che descrive il Modifica dell'attributo stimabile nel tempo.  
+ L'algoritmo ARIMA consente di creare una singola informazione per ogni combinazione di una serie di dati (ad esempio **[Region]** ) e un attributo stimabile (ad esempio **[Sales Amount]** )-l'equazione che descrive il Modifica dell'attributo stimabile nel tempo.  
   
  L'equazione per ogni serie deriva da più componenti, uno per ogni struttura periodica rilevata nei dati. Ad esempio, se si dispone di dati delle vendite raccolti su base mensile, l'algoritmo potrebbe rilevare strutture periodiche mensili, trimestrali o annuali.  
   
@@ -90,18 +90,18 @@ ms.locfileid: "52513785"
  Attributo stimabile della serie di dati rappresentata nel nodo. Stesso valore di MSOLAP_MODEL_COLUMN.  
   
  NODE_NAME  
- Nome del nodo.  
+ Il nome del nodo.  
   
  Attualmente, questa colonna contiene lo stesso valore di NODE_UNIQUE_NAME, anche se nelle versioni future il valore potrebbe essere diverso.  
   
  NODE_UNIQUE_NAME  
  Nome univoco del nodo. Il nodo padre del modello è sempre denominato **TS**.  
   
- **ARTXP:** ogni nodo è rappresentato da TS seguito da un valore numerico esadecimale. L'ordine dei nodi non è importante.  
+ **ARTXP:** Ogni nodo è rappresentato da TS seguito da un valore numerico esadecimale. L'ordine dei nodi non è importante.  
   
  Ad esempio, i nodi ARTXP direttamente sotto l'albero TS potrebbero essere numerati come segue: TS00000001-TS0000000b.  
   
- **ARIMA:** ogni nodo in un albero ARIMA è rappresentato da TA seguito da un valore numerico esadecimale. I nodi figlio contengono il nome univoco del nodo padre seguito da un altro numero esadecimale che indica la sequenza all'interno del nodo.  
+ **ARIMA:** Ogni nodo in un albero ARIMA è rappresentato da TA seguito da un valore numerico esadecimale. I nodi figlio contengono il nome univoco del nodo padre seguito da un altro numero esadecimale che indica la sequenza all'interno del nodo.  
   
  Tutti gli alberi ARIMA sono strutturati allo stesso modo. Ogni radice contiene i nodi e la convenzione di denominazione indicati nella tabella seguente:  
   
@@ -138,9 +138,9 @@ ms.locfileid: "52513785"
   
  Questa proprietà viene utilizzata principalmente per scopi di visualizzazione.  
   
- **ARTXP:** contiene la condizione di divisione del nodo, visualizzata come una combinazione di attributo e intervallo di valori.  
+ **ARTXP:** Contiene la condizione di divisione per il nodo, visualizzata come una combinazione di attributo e intervallo di valori.  
   
- **ARIMA:** contiene la forma abbreviata dell'equazione ARIMA.  
+ **ARIMA:** Contiene la forma abbreviata dell'equazione ARIMA.  
   
  Per ulteriori informazioni sul formato dell'equazione ARIMA, vedere [Legenda data mining per la formula ARIMA](#bkmk_ARIMA_2).  
   
@@ -160,7 +160,7 @@ ms.locfileid: "52513785"
  NODE_RULE  
  Descrizione XML delle regole, delle divisioni o delle formule nel nodo corrente.  
   
- **ARTXP:** NODE_RULE corrisponde in genera a NODE_CAPTION.  
+ **ARTXP:** NODE_RULE corrisponde in genere a NODE_CAPTION.  
   
  **ARIMA:** Per altre informazioni, vedere [informazioni sull'albero ARIMA](#bkmk_ARIMA_1).  
   
@@ -169,15 +169,15 @@ ms.locfileid: "52513785"
   
  **ARTXP:** MARGINAL_RULE corrisponde in genere a NODE_DESCRIPTION.  
   
- **ARIMA:** sempre vuoto; utilizzare invece NODE_RULE.  
+ **ARIMA:** Sempre vuoto; Utilizzare invece NODE_RULE.  
   
  NODE_PROBABILITY  
- **ARTXP:** per i nodi dell'albero, sempre 1. Per i nodi foglia, la probabilità di raggiungere il nodo dal nodo radice del modello.  
+ **ARTXP:** Per i nodi dell'albero, sempre 1. Per i nodi foglia, la probabilità di raggiungere il nodo dal nodo radice del modello.  
   
  **ARIMA:** Sempre 0.  
   
  MARGINAL_PROBABILITY  
- **ARTXP:** per i nodi dell'albero, sempre 1. Per i nodi foglia, la probabilità di raggiungere il nodo dal nodo padre diretto.  
+ **ARTXP:** Per i nodi dell'albero, sempre 1. Per i nodi foglia, la probabilità di raggiungere il nodo dal nodo padre diretto.  
   
  **ARIMA:** Sempre 0.  
   
@@ -197,7 +197,7 @@ ms.locfileid: "52513785"
   
  Nei nodi finali, indica il numero di intervalli di tempo inclusi nell'intervallo descritto da NODE_CAPTION. Il numero di periodi temporali nei nodi terminali viene sempre sommato al valore di NODE_SUPPORT del nodo **(Tutti)** del ramo.  
   
- **ARIMA:** conteggio dei case che supportano la struttura periodica corrente. Il valore del supporto viene ripetuto in tutti i nodi della struttura periodica corrente.  
+ **ARIMA:** Conteggio dei case che supportano la struttura periodica corrente. Il valore del supporto viene ripetuto in tutti i nodi della struttura periodica corrente.  
   
  MSOLAP_MODEL_COLUMN  
  Attributo stimabile della serie di dati rappresentata nel nodo. Stesso valore di ATTRIBUTE_NAME.  
@@ -205,16 +205,16 @@ ms.locfileid: "52513785"
  MSOLAP_NODE_SCORE  
  Valore numerico che consente di caratterizzare il valore delle informazioni dell'albero o della divisione.  
   
- **ARTXP:** il valore è sempre 0,0 per i nodi senza divisione. Per i nodi che contengono una divisione, il valore rappresenta il punteggio di interesse della divisione.  
+ **ARTXP:** Valore è sempre 0,0 per i nodi senza divisione. Per i nodi che contengono una divisione, il valore rappresenta il punteggio di interesse della divisione.  
   
  Per altre informazioni sui metodi di valutazione, vedere [Selezione delle caratteristiche &#40;Data mining&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md).  
   
- **ARIMA:**  punteggio BIC (Bayesian Information Criterion) del modello ARIMA. Lo stesso punteggio viene impostato su tutti i nodi ARIMA correlati all'equazione.  
+ **ARIMA:**  Il punteggio di (Bayesian Information Criterion) del modello ARIMA. Lo stesso punteggio viene impostato su tutti i nodi ARIMA correlati all'equazione.  
   
  MSOLAP_NODE_SHORT_CAPTION  
- **ARTXP:**  stesse informazioni di NODE_DESCRIPTION.  
+ **ARTXP:**  Stesse informazioni di node_description.  
   
- **ARIMA:** stesse informazioni di NODE_CAPTION, ovvero la forma abbreviata dell'equazione ARIMA.  
+ **ARIMA:** Stesse informazioni di NODE_CAPTION: vale a dire la forma abbreviata dell'equazione ARIMA.  
   
 ##  <a name="bkmk_ARTXP_1"></a> Informazioni sull'albero ARTXP  
  Il modello ARTXP consente di separare chiaramente le aree dei dati lineari dalle aree dei dati divisi in altri fattori. Dove le modifiche nell'attributo stimabile possono essere rappresentate direttamente come una funzione delle variabili indipendenti, viene calcolata una formula di regressione per rappresentare la relazione.  
@@ -303,7 +303,7 @@ WHERE NODE_TYPE = 15
 ##  <a name="bkmk_ARIMA_1"></a> Informazioni sull'albero ARIMA  
  Ogni struttura in un modello ARIMA corrisponde a una *periodicità* o a una *struttura periodica*. Una struttura periodica è uno schema di dati ripetuto in tutta la serie di dati. Sono consentite variazioni secondarie entro limiti statistici. La periodicità viene misurata secondo le unità di tempo predefinite utilizzate nei dati di training. Ad esempio, se i dati di training forniscono dati di vendita per ogni giorno, l'unità di tempo predefinita è un giorno e tutte le strutture periodiche vengono definite come un numero specifico di giorni.  
   
- Ogni periodo rilevato dall'algoritmo ottiene il proprio nodo della struttura. Ad esempio, se si analizzano i dati di vendita giornalieri, potrebbero essere rilevate strutture periodiche che rappresentano le settimane. In questo caso, verranno create due strutture periodiche nel modello finito: una per il periodo giornaliero predefinito, indicata come {1}, e una per le settimane, indicata da {7}.  
+ Ogni periodo rilevato dall'algoritmo ottiene il proprio nodo della struttura. Ad esempio, se si analizzano i dati di vendita giornalieri, potrebbero essere rilevate strutture periodiche che rappresentano le settimane. In questo caso, l'algoritmo creerà due strutture periodiche nel modello finito: una per il periodo giornaliero predefinito, indicato come {1}, e una per le settimane, indicata da {7}.  
   
  Ad esempio, nella query seguente vengono restituite tutte le strutture ARIMA da un modello di data mining.  
   
@@ -388,11 +388,11 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  Un modello ARIMA per una serie di dati contiene l'equazione periodica di base in quattro formati diversi, selezionabili a seconda dell'applicazione.  
   
- **NODE_CAPTION:** visualizza il formato abbreviato dell'equazione. Il formato abbreviato indica la quantità di strutture periodiche rappresentate e dei relativi coefficienti. Se, ad esempio, il formato abbreviato dell'equazione è `{4,0,6}`, il nodo rappresenta una struttura periodica con 6 coefficienti. Se il formato abbreviato è simile a `{2,0,8} x {1,0,0}(4)`, , il nodo contiene due strutture periodiche.  
+ **NODE_CAPTION:** Visualizza il formato abbreviato dell'equazione. Il formato abbreviato indica la quantità di strutture periodiche rappresentate e dei relativi coefficienti. Se, ad esempio, il formato abbreviato dell'equazione è `{4,0,6}`, il nodo rappresenta una struttura periodica con 6 coefficienti. Se il formato abbreviato è simile a `{2,0,8} x {1,0,0}(4)`, , il nodo contiene due strutture periodiche.  
   
  **DESCRIZIONE DEL NODO:** Consente di visualizzare il formato esteso dell'equazione, corrispondente al formato dell'equazione visualizzata nel **legenda Data Mining**. La forma estesa dell'equazione è simile alla forma breve, con l'eccezione che i valori effettivi dei coefficienti vengono visualizzati anziché contati.  
   
- **NODE_RULE:** visualizza una rappresentazione XML dell'equazione. A seconda del tipo di nodo, la rappresentazione XML può includere una o più strutture periodiche. Nella tabella seguente viene illustrato come viene eseguito il rollup dei nodi XML a livelli più elevati del modello ARIMA.  
+ **NODE_RULE:** Visualizza una rappresentazione XML dell'equazione. A seconda del tipo di nodo, la rappresentazione XML può includere una o più strutture periodiche. Nella tabella seguente viene illustrato come viene eseguito il rollup dei nodi XML a livelli più elevati del modello ARIMA.  
   
 |Tipo di nodo|Contenuto XML|  
 |---------------|-----------------|  
@@ -401,7 +401,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 |29 (Autoregressione ARIMA)|Elenca i termini di una singola struttura periodica.|  
 |30 (Media mobile ARIMA)|Elenca i coefficienti di una singola struttura periodica.|  
   
- **NODE_DISTRIBUTION:** visualizza i termini dell'equazione in una tabella nidificata in cui è possibile eseguire una query per ottenere termini specifici. La tabella di distribuzione del nodo segue la stessa struttura gerarchica delle regole XML: nel nodo radice della serie ARIMA (NODE_TYPE = 27) sono contenuti il valore di intersezione e le periodicità dell'equazione completa, che può includere più periodicità, mentre nei nodi figlio sono contenute solo informazioni specifiche su una certa struttura periodica o sui nodi figlio di tale struttura periodica.  
+ **NODE_DISTRIBUTION:** Visualizza i termini dell'equazione in una tabella nidificata, è possibile eseguire una query per ottenere termini specifici. La tabella di distribuzione del nodo segue la stessa struttura gerarchica delle regole XML: nel nodo radice della serie ARIMA (NODE_TYPE = 27) sono contenuti il valore di intersezione e le periodicità dell'equazione completa, che può includere più periodicità, mentre nei nodi figlio sono contenute solo informazioni specifiche su una certa struttura periodica o sui nodi figlio di tale struttura periodica.  
   
 |Tipo di nodo|attribute|Tipo valore|  
 |---------------|---------------|----------------|  

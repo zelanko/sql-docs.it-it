@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 52a2754a4c6410430042f2b31805db42def4ec1f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420282"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164155"
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Configurare la raccolta dati di utilizzo per PowerPivot per SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "52420282"
   
 4.  Fare clic su **Esegui**. Se il pulsante **Esegui ora** è disabilitato fare clic su **Abilita** , quindi selezionare **Esegui ora**.  
   
-5.  Nell'elenco Definizioni processi fare clic su **Processo timer di elaborazione dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+5.  Nell'elenco Definizioni processi fare clic su **Processo timer di elaborazione dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
 6.  Fare clic su **Esegui**.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "52420282"
  Per altre informazioni sulla raccolta e sull'archiviazione dei dati di utilizzo, vedere [Raccolta dati di utilizzo di PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md).  
   
 ##  <a name="qrh"></a> Definire le categorie delle risposte alle query veloce, media e lenta per la creazione di report  
- Le prestazioni di elaborazione query vengono misurate rispetto a categorie predefinite che definiscono un ciclo di risposta alle richieste in base al tempo necessario per il completamento. Le categorie predefinite includono: Semplice, rapida, prevista, con esecuzione prolungata e superata. Ogni richiesta a un server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] rientrerà in una di queste categorie in base al tempo necessario per il completamento.  
+ Le prestazioni di elaborazione query vengono misurate rispetto a categorie predefinite che definiscono un ciclo di risposta alle richieste in base al tempo necessario per il completamento. Le categorie predefinite includono: Semplice, rapida, prevista, a esecuzione prolungata e superata. Ogni richiesta a un server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] rientrerà in una di queste categorie in base al tempo necessario per il completamento.  
   
  Le informazioni sulle risposte alle query vengono utilizzate nei report di attività. All'interno dei report, ogni categoria viene usata in modo diverso per rivelare nel modo migliore le tendenze delle prestazioni del sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Ad esempio, le richieste semplici vengono escluse completamente per mostrare unicamente le tendenze più significative attraverso le categorie rimanenti. Le statistiche sulle richieste con esecuzione prolungata o superate sono invece molto presenti nei report per dare la possibilità agli amministratori o ai proprietari della cartella di lavoro di intraprendere immediatamente azioni correttive.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "52420282"
   
 1.  In **Gestione applicazioni**di Amministrazione centrale SharePoint fare clic su **Gestisci applicazioni di servizio**.  
   
-2.  Trovare l'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . È possibile identificare un'applicazione di servizio in base al tipo. Un tipo di applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è **Applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+2.  Trovare l'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . È possibile identificare un'applicazione di servizio in base al tipo. Un tipo di applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è **Applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
 3.  Fare clic sul nome dell'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Verrà aperto il dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
@@ -179,9 +179,9 @@ ms.locfileid: "52420282"
   
  Nella tabella seguente sono riportati i valori predefiniti per la configurazione della raccolta dei dati sull'utilizzo.  
   
-|Impostazione|Valore predefinito|Tipo|Intervallo valido|  
+|Impostazione|Default Value|type|Intervallo valido|  
 |-------------|-------------------|----------|-----------------|  
-|**Eventi di uso di Analysis Services** (Connessione, Caricamento, Scaricamento, Richieste)|\<abilitato >|Boolean|Questi valori sono abilitati o disabilitati.|  
+|**Eventi di uso di Analysis Services** (Connessione, Caricamento, Scaricamento, Richieste)|\<enabled>|Boolean|Questi valori sono abilitati o disabilitati.|  
 |**Query Reporting interval**|300 (in secondi)|Integer|Tra 1 e qualsiasi numero intero positivo. Il valore predefinito è 5 minuti.|  
 |**Usage data history**|365 (in giorni)|Integer|0 specifica nessun limite, ma è anche possibile impostare un limite massimo per imporre una scadenza sui dati cronologici e l'eliminazione automatica. I valori validi per un periodo di memorizzazione limitato sono compresi tra 1 e 5000 (in giorni).|  
 |Limite massimo risposta semplice|500 (in millisecondi)|Integer|Imposta un limite massimo che definisce uno scambio richiesta-risposta semplice. Qualsiasi richiesta completata entro un intervallo di tempo compreso tra 0 e 500 millisecondi viene considerata una richiesta semplice e ignorata ai fini del report.|  

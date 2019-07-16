@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: feca89ac2ac888c2fa9f082595e761e898dea971
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815053"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211925"
 ---
 # <a name="programming-languages"></a>Linguaggi di programmazione
   Questa sezione viene descritto come programmare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET, Visual Basic [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual c# .NET, e [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++.  

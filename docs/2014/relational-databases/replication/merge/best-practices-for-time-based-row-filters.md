@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786143"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210718"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Procedure consigliate per i filtri di riga basati sul tempo
   Gli utenti delle applicazioni hanno spesso la necessità di recuperare da diverse tabelle determinati subset di dati basati sul tempo. Un venditore potrebbe ad esempio richiedere i dati relativi agli ordini dell'ultima settimana, così come un responsabile della pianificazione di eventi potrebbe aver bisogno di recuperare i dati relativi agli eventi della settimana in arrivo. Per soddisfare queste richieste, le applicazioni utilizzano, in numerosi casi, query contenenti la funzione `GETDATE()`. Si consideri l'istruzione di filtro di riga seguente:  

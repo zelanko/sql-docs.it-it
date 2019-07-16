@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b2539995f50e31e7342a4cd27fe7277a103d041f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748532"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211738"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Informazioni su Change Data Capture (SQL Server)
   Change Data Capture consente di registrare le attività di inserimento, aggiornamento ed eliminazione applicate a una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , rendendo disponibili i dettagli delle modifiche in un formato relazionale facilmente utilizzabile. Le informazioni sulla colonna e i metadati necessari per applicare le modifiche a un ambiente di destinazione vengono acquisiti per le righe modificate e archiviati in tabelle delle modifiche che riflettono la struttura della colonna delle tabelle di origine con rilevamento. Per consentire ai consumer di accedere in modo sistematico ai dati delle modifiche, sono disponibili funzioni con valori di tabella.  
@@ -43,7 +43,7 @@ ms.locfileid: "52748532"
   
  Ogni operazione di inserimento o eliminazione applicata a una tabella di origine viene visualizzata in un'unica riga all'interno della tabella delle modifiche. Le colonne di dati della riga che costituisce il risultato di un'operazione di inserimento contengono i valori della colonna dopo l'inserimento, mentre le colonne di dati della riga che costituisce il risultato di un'operazione di eliminazione contengono i valori della colonna prima dell'eliminazione. Per eseguire un'operazione di aggiornamento sono necessarie due voci di riga, una per identificare i valori della colonna prima dell'aggiornamento e l'altra per identificare i valori della colonna dopo l'aggiornamento.  
   
- Ogni riga di una tabella delle modifiche contiene inoltre metadati aggiuntivi che consentono di interpretare l'attività di modifica. La colonna __$start_lsn identifica il numero di sequenza del file di log (LSN) del commit assegnato alla modifica. Il valore LSN di commit identifica le modifiche di cui è stato eseguito il commit all'interno della stessa transazione e ordina inoltre tali transazioni. La colonna \_\_$seqval può essere usata per ordinare più modifiche che si verificano all'interno di una stessa transazione, La colonna \_ \_$operation registra l'operazione che è associata alla modifica: 1 = eliminazione, 2 = inserimento, 3 = aggiornamento (prima immagine) e 4 = aggiornamento (dopo l'immagine). La colonna \_\_$update_mask, infine, è una maschera di bit variabile con un bit definito per ogni colonna acquisita. Per le voci relative all'inserimento e all'eliminazione dei dati, tutti i bit della maschera di aggiornamento verranno sempre impostati. Per le righe aggiornate, tuttavia, saranno impostati solo i bit corrispondenti alle colonne modificate.  
+ Ogni riga di una tabella delle modifiche contiene inoltre metadati aggiuntivi che consentono di interpretare l'attività di modifica. La colonna __$start_lsn identifica il numero di sequenza del file di log (LSN) del commit assegnato alla modifica. Il valore LSN di commit identifica le modifiche di cui è stato eseguito il commit all'interno della stessa transazione e ordina inoltre tali transazioni. La colonna \_\_$seqval può essere usata per ordinare più modifiche che si verificano all'interno di una stessa transazione, La colonna \_\_$operation registra l'operazione associata alla modifica: 1 = eliminazione, 2 = inserimento, 3 = aggiornamento (prima dell'immagine) e 4 = aggiornamento (dopo l'immagine). La colonna \_\_$update_mask, infine, è una maschera di bit variabile con un bit definito per ogni colonna acquisita. Per le voci relative all'inserimento e all'eliminazione dei dati, tutti i bit della maschera di aggiornamento verranno sempre impostati. Per le righe aggiornate, tuttavia, saranno impostati solo i bit corrispondenti alle colonne modificate.  
   
 ## <a name="change-data-capture-validity-interval-for-a-database"></a>Intervallo di validità di Change Data Capture per un database  
  L'intervallo di validità di Change Data Capture per un database è rappresentato dal periodo di tempo durante il quale i dati delle modifiche sono disponibili per le istanze di acquisizione. L'intervallo di validità ha inizio nel momento in cui viene creata la prima istanza di acquisizione e si estende fino al momento corrente.  

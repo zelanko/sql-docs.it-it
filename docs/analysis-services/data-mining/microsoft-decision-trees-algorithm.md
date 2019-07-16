@@ -1,5 +1,5 @@
 ---
-title: Algoritmo Microsoft Decision Trees | Documenti Microsoft
+title: Algoritmo Microsoft Decision Trees | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9d4bbe16f28adf0fe3f3cf73f12a18e9d0e7f20f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017488"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209863"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Algoritmo Microsoft Decision Trees
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "34017488"
 ### <a name="predicting-continuous-columns"></a>Stima di colonne continue  
  Quando l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees compila un albero basato su una colonna stimabile continua, ogni nodo contiene una formula di regressione. Nella formula di regressione viene eseguita una divisione in corrispondenza di un punto di non linearità. Si consideri ad esempio il diagramma seguente.  
   
- ![Più rette di regressione con non linearità](../../analysis-services/data-mining/media/regression-tree1.gif "più rette di regressione con non linearità")  
+ ![Più rette di regressione che mostra non linearità](../../analysis-services/data-mining/media/regression-tree1.gif "più rette di regressione che mostra non linearità")  
   
  In un modello di regressione standard, si tenterebbe di derivare una singola formula che rappresenta la tendenza e le relazioni per i dati nel suo complesso.  Una singola formula, tuttavia, potrebbe non essere appropriata per acquisire la discontinuità in dati complessi. Al contrario, l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees cerca i segmenti dell'albero che sono in gran parte lineari e crea formule separate per questi segmenti. Suddividendo i dati in segmenti diversi, il modello consentirà di ottenere una migliore approssimazione.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "34017488"
 ## <a name="viewing-a-decision-trees-model"></a>Visualizzazione di un modello di albero delle decisioni  
  Per esplorare il modello, è possibile usare il **Visualizzatore Microsoft Decision Trees**. Se il modello genera più alberi, è possibile selezionare un albero per visualizzare dettagli sulla classificazione dei case per ciascun attributo stimabile. È inoltre possibile visualizzare l'interazione degli alberi utilizzando il Visualizzatore rete di dipendenze. Per altre informazioni, vedere [Visualizzare un modello usando il Visualizzatore Microsoft Decision Trees](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md).  
   
- Per ulteriori dettagli sui nodi o sui rami dell'albero, è anche possibile esplorare il modello in [Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). Il contenuto memorizzato per il modello include la distribuzione per tutti i valori in ogni nodo, le probabilità di ogni livello dell'albero e le formule di regressione degli attributi continui. Per altre informazioni, vedere [Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
+ Per ulteriori dettagli sui nodi o sui rami dell'albero, è anche possibile esplorare il modello in [Microsoft Generic Content Tree Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). Il contenuto memorizzato per il modello include la distribuzione per tutti i valori in ogni nodo, le probabilità di ogni livello dell'albero e le formule di regressione degli attributi continui. Per altre informazioni, vedere [Contenuto dei modelli di data mining per i modelli di albero delle decisioni &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
   
 ## <a name="creating-predictions"></a>Creazione di stime  
  In seguito all'elaborazione del modello, i risultati vengono archiviati come un set di modelli e statistiche che è possibile utilizzare per esplorare le relazioni o per eseguire stime.  
@@ -85,7 +85,7 @@ ms.locfileid: "34017488"
   
  Per informazioni generali sulla creazione di query in base ai modelli di data mining, vedere [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
 -   Supporta l'utilizzo del linguaggio PMML (Predictive Model Markup Language) per la creazione di modelli di data mining.  
   
@@ -94,9 +94,9 @@ ms.locfileid: "34017488"
 -   Supporta l'utilizzo di modelli di data mining OLAP e la creazione di dimensioni di data mining.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft Decision Trees riferimento tecnico per l'algoritmo](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)   
- [Esempi di Query modello di alberi delle decisioni](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
- [Contenuto del modello di data mining per i modelli di albero delle decisioni & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Guida di riferimento tecnico per l'algoritmo Microsoft Decision Trees](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)   
+ [Esempi di query sul modello di alberi delle decisioni](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
+ [Contenuto dei modelli di data mining per i modelli di albero delle decisioni &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

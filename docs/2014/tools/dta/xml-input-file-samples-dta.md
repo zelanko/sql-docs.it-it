@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3cf9ec0ff53fced20701b0b5b3379c1ec8dac219
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781793"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68186524"
 ---
 # <a name="xml-input-file-samples-dta"></a>Esempi di file di input XML (DTA)
   Questa sezione contiene esempi di file di input XML che possono essere usati con lo strumento della riga di comando **dta** . Questo strumento è una delle interfacce utente di Ottimizzazione guidata motore di database, un ulteriore strumento che consente di ottimizzare le prestazioni delle query. Ottimizzazione guidata motore di database analizza gli effetti di un carico di lavoro su uno o più database. Un carico di lavoro è un set di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguite sui database che si desidera ottimizzare. Dopo aver analizzato gli effetti del carico di lavoro, Ottimizzazione guidata motore di database genera un'indicazione per l'aggiunta di indici, viste indicizzate o strategie di partizionamento che consentono di migliorare le prestazioni delle query sui database.  

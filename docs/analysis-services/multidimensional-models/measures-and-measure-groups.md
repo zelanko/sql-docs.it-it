@@ -1,5 +1,5 @@
 ---
-title: Le misure e gruppi di misure | Documenti Microsoft
+title: Le misure e gruppi di misure | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 04eb5a41bec6e9abb62cfde516f2dad2ff820521
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024248"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165744"
 ---
 # <a name="measures-and-measure-groups"></a>Misure e gruppi di misure
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,13 +22,13 @@ ms.locfileid: "34024248"
   
  Questo argomento descrive le [misure](#bkmk_measure) e i [gruppi di misure](#bkmk_mg). Include anche la tabella seguente, con collegamenti alle procedure per la creazione e configurazione di misure e di gruppi di misure.  
   
-|**Collegamento**|**Description**|  
+|**Collegamento**|**Descrizione**|  
 |--------------|---------------------|  
 |[Creare misure e gruppi di misure nei modelli multidimensionali](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|Scegliere uno dei diversi approcci per la creazione di misure e gruppi di misure.|  
 |[Configurare le proprietà delle misure](../../analysis-services/multidimensional-models/configure-measure-properties.md)|Se è stata usata la Creazione guidata cubo per avviare il cubo, è necessario modificare il metodo di aggregazione, applicare un formato dati, impostare la visibilità della misura in applicazioni client o eventualmente aggiungere un'espressione di misura per modificare i dati prima che i valori vengano aggregati.|  
-|[Configurare le proprietà del gruppo di misure](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)|In un modello multidimensionale, un gruppo di misure equivale a una tabella dei fatti nel data warehouse di origine. Le proprietà in un gruppo di misure consentono di specificare i comportamenti di memorizzazione nella cache, l'archiviazione e l'elaborazione delle istruzioni che operano collettivamente a livello del gruppo di misure. La configurazione della partizione dipende in parte dalle proprietà impostate per gli oggetti del gruppo di misure.|  
+|[Configurare le proprietà dei gruppi di misure](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)|In un modello multidimensionale, un gruppo di misure equivale a una tabella dei fatti nel data warehouse di origine. Le proprietà in un gruppo di misure consentono di specificare i comportamenti di memorizzazione nella cache, l'archiviazione e l'elaborazione delle istruzioni che operano collettivamente a livello del gruppo di misure. La configurazione della partizione dipende in parte dalle proprietà impostate per gli oggetti del gruppo di misure.|  
 |[Utilizzare le funzioni di aggregazione](../../analysis-services/multidimensional-models/use-aggregate-functions.md)|Informazioni sui metodi di aggregazione che possono essere assegnati a una misura.|  
-|[Definisci funzioni semiadditive](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)|Le funzioni semiadditive fanno riferimento alle aggregazioni valide solo per alcune dimensioni. Un esempio comune è un saldo del conto bancario. L'utente potrebbe voler aggregare i saldi in base al cliente e alla regione, ma non al tempo. Ad esempio, l'utente potrebbe non voler aggiungere i saldi dallo stesso conto per più giorni consecutivi. Per definire le funzioni semiadditive, usare la procedura guidata Aggiungi funzionalità di Business Intelligence.|  
+|[Definire una funzione semiadditiva](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)|Le funzioni semiadditive fanno riferimento alle aggregazioni valide solo per alcune dimensioni. Un esempio comune è un saldo del conto bancario. L'utente potrebbe voler aggregare i saldi in base al cliente e alla regione, ma non al tempo. Ad esempio, l'utente potrebbe non voler aggiungere i saldi dallo stesso conto per più giorni consecutivi. Per definire le funzioni semiadditive, usare la procedura guidata Aggiungi funzionalità di Business Intelligence.|  
 |[Gruppi di misure collegati](../../analysis-services/multidimensional-models/linked-measure-groups.md)|Ridefinire un gruppo di misure esistente in altri cubi dello stesso database o in diversi database di Analysis Services.|  
   
 ##  <a name="bkmk_measure"></a> Measures  
@@ -40,13 +40,13 @@ ms.locfileid: "34024248"
   
  In questo esempio il valore di **Vendite rivenditore** viene aggregato in diversi livelli della gerarchia **Territorio vendita** .  
   
- ![Tabella pivot con callout di dimensioni e misure](../../analysis-services/multidimensional-models/media/ssas-keyconcepts-pivot1-measures-dimensions.png "tabella pivot con callout di dimensioni e misure")  
+ ![Tabella pivot con misure e dimensioni indicate](../../analysis-services/multidimensional-models/media/ssas-keyconcepts-pivot1-measures-dimensions.png "tabella pivot con misure e dimensioni indicate")  
   
  Le misure producono risultati validi quando la tabella dei fatti che contiene i dati numerici di origine comprende anche i puntatori alle tabelle delle dimensioni usate nella query. Usando l'esempio di Vendite rivenditore, se in ogni riga dove viene archiviato un importo di vendita viene archiviato anche un puntatore a una tabella prodotto, a una tabella data o a una tabella area di vendita, le query che includono i membri di queste dimensioni verranno risolte correttamente.  
   
  Cosa accade se la misura non è correlata alle dimensioni usate nella query? Di norma, Analysis Services visualizzerà la misura predefinita e il valore sarà lo stesso per tutti i membri. In questo esempio, **Vendite Internet**, che misura le vendite dirette effettuate dai clienti usando il catalogo online, non ha alcuna relazione con l'organizzazione addetta alle vendite.  
   
- ![Valori di tabella pivot che mostra ripetuti misure](../../analysis-services/multidimensional-models/media/ssas-unrelatedmeasure.PNG "valori di tabella pivot che mostra ripetuti misure")  
+ ![I valori di tabella pivot che mostra ripetute misure](../../analysis-services/multidimensional-models/media/ssas-unrelatedmeasure.PNG "valori di tabella pivot che mostra ripetute misure")  
   
  Per ridurre al minimo la probabilità che questi comportamenti si verifichino in un'applicazione client, è possibile creare più cubi o prospettive nello stesso database e assicurarsi che ogni cubo o prospettiva contenga solo gli oggetti correlati. Le relazioni da controllare sono quelle tra il gruppo di misure (mappato alla tabella dei fatti) e le dimensioni.  
   

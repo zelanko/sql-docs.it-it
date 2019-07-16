@@ -1,5 +1,5 @@
 ---
-title: La creazione di calcoli di celle in MDX (MultiDimensional Expression) | Documenti Microsoft
+title: Creazione di calcoli di celle in MDX (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2263ac667b65def1bd59745e3cfef711820b494
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021648"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208795"
 ---
-# <a name="mdx-cell-calculations---build-cell-calculations"></a>Calcoli MDX di cella - calcoli di celle di compilazione
+# <a name="mdx-cell-calculations---build-cell-calculations"></a>Calcoli di celle MDX - calcoli di celle di compilazione
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Nel linguaggio MDX (Multidimensional Expressions) sono disponibili numerosi strumenti per la generazione di valori calcolati, ad esempio membri calcolati, rollup personalizzati e membri personalizzati. Utilizzando tali caratteristiche è tuttavia difficile agire su un set specifico di celle o su una singola cella.  
   
@@ -35,9 +35,9 @@ ms.locfileid: "34021648"
      Per altre informazioni sulla creazione di celle calcolate in una sessione mediante l'istruzione CREATE CELL CALCULATION o l'istruzione ALTER CUBE, vedere [Creazione di celle calcolate con ambito sessione](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Istruzione ALTER CUBE & #40; MDX & #41;](../../../mdx/mdx-data-definition-alter-cube.md)   
- [CREARE l'istruzione di calcolo di celle & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)   
- [Creazione di calcoli di celle con ambito Query & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
- [Nozioni fondamentali sulle Query MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Istruzione ALTER CUBE &#40;MDX&#41;](../../../mdx/mdx-data-definition-alter-cube.md)   
+ [Istruzione CREATE CELL CALCULATION &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)   
+ [Creazione di formule per il calcolo di celle con ambito query &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
+ [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

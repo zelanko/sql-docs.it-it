@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6bdf66ed9214a151886caedcf2247935a07f7811
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144861"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206735"
 ---
 # <a name="running-stored-procedures"></a>Esecuzione delle stored procedure
   Una stored procedure è un oggetto eseguibile archiviato in un database. Supporti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
@@ -57,7 +57,7 @@ ms.locfileid: "48144861"
   
      Per un esempio di come chiamare una stored procedure, vedere [processo codici e i parametri di Output &#40;ODBC&#41;](../native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Chiamata di una stored procedure](calling-a-stored-procedure.md)  
   

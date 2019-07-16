@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 76d1a3e3cfff777f610bb00f52644af3903ac615
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975162"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178507"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Distribuire soluzioni di modelli con l'utilità di distribuzione
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -67,7 +67,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 ##  <a name="Modes"></a> Modalità  
  L'utilità può essere eseguita nelle modalità riportate nella tabella seguente.  
   
-|Mode|Description|  
+|Modalità|Descrizione|  
 |----------|-----------------|  
 |Modalità automatica|Non viene visualizzata alcuna interfaccia utente e tutte le informazioni necessarie per la distribuzione vengono recuperate dai file di input. In questa modalità lo stato di avanzamento non viene visualizzato. È invece possibile utilizzare un file di log facoltativo per acquisire le informazioni sullo stato e sugli errori per una verifica successiva.|  
 |Modalità di risposta|Viene visualizzata l'interfaccia utente Distribuzione guidata e le risposte dell'utente vengono memorizzate nei file di input specificati per la distribuzione successiva. In questa modalità la distribuzione non viene eseguita. Questa modalità ha lo scopo di acquisire le risposte dell'utente.|  

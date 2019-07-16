@@ -1,5 +1,5 @@
 ---
-title: 'Opzioni (ambiente: Tipi di carattere e colori&#41) | Microsoft Docs'
+title: 'Opzioni (pagina Ambiente: Tipi di carattere e colori&#41) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40bd2c5735b68a165bcdff4a26069505994dbd85
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818753"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211250"
 ---
-# <a name="options-environment-fonts-and-colors-page"></a>Opzioni (ambiente: Tipi di carattere e colori&#41)
+# <a name="options-environment-fonts-and-colors-page"></a>Opzioni (pagina Ambiente: Tipi di carattere e colori)
   La finestra di dialogo **Opzioni** consente di specificare una combinazione colori e un tipo di carattere personalizzati per vari elementi dell'interfaccia utente in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Scegliere **Opzioni** dal menu **Strumenti** , espandere la cartella **Ambiente** e selezionare **Tipi di carattere e colori**.  
   
  Le modifiche apportate alla combinazione colori non diventano effettive durante la sessione in cui vengono eseguite. Per valutare le modifiche dei colori, aprire un'altra istanza di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e riprodurre le condizioni in cui si prevede che tali modifiche vengano applicate.  
@@ -29,10 +29,10 @@ ms.locfileid: "52818753"
 |Nome|Definizione|  
 |----------|----------------|  
 |Editor di testo|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere dell'editor di testo influiscono sull'aspetto del testo nell'editor predefinito. I documenti aperti in un editor di testo all'esterno di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] non verranno influenzati da queste impostazioni.|  
-|Stampante|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore della stampante influiscono sull'aspetto del testo nei documenti stampati.<br /><br /> Suggerimento: Se necessario, è possibile selezionare un tipo di carattere predefinito per la stampa diverso da quello utilizzato per la visualizzazione nell'editor di testo. Questa operazione può essere utile quando si esegue la stampa di codice contenente sia caratteri SBCS sia caratteri DBCS.|  
-|[Tutte le finestre degli strumenti di testo **]**|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo nelle finestre degli strumenti contenenti riquadri di output in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ad esempio la finestra di output, la finestra Risultati in formato testo e così via.<br /><br /> Nota: Modifiche al testo degli elementi [tutti i Windows lo strumento di testo] non diventano effettive durante la sessione in cui vengono eseguite. Per valutare tali modifiche, aprire un'altra istanza di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
+|Stampante|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore della stampante influiscono sull'aspetto del testo nei documenti stampati.<br /><br /> Suggerimento: Se necessario, è possibile selezionare un tipo di carattere predefinito per la stampa diverso da quello usato per la visualizzazione nell'Editor di testo. Questa operazione può essere utile quando si esegue la stampa di codice contenente sia caratteri SBCS sia caratteri DBCS.|  
+|[Tutte le finestre degli strumenti di testo **]**|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo nelle finestre degli strumenti contenenti riquadri di output in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ad esempio la finestra di output, la finestra Risultati in formato testo e così via.<br /><br /> Nota: le modifiche apportate al testo degli elementi di [Tutte le finestre degli strumenti di testo] non diventano effettive durante la sessione in cui vengono eseguite. Per valutare tali modifiche, aprire un'altra istanza di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
 |Finestra Risultati ricerca|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo nella finestra Risultati ricerca.|  
-|Finestra Output|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo nella finestra di output.|  
+|Finestra di output|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo nella finestra di output.|  
 |Risultati in formato griglia|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo nell'area **Risultati in formato griglia** della finestra Query.|  
 |Piano di esecuzione|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo in Piano di esecuzione delle query di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssEW](../../includes/ssew-md.md)] .|  
 |Risultati in formato testo|Le modifiche delle impostazioni di visualizzazione dello stile, della dimensione e del colore del tipo di carattere per questo elemento influiscono sull'aspetto del testo nell'area **Risultati in formato testo** della finestra Query.|  
@@ -55,14 +55,14 @@ ms.locfileid: "52818753"
   
  Alcuni elementi di visualizzazione includono:  
   
--   Margine indicatore: Il margine a sinistra dell'Editor di codice in cui vengono visualizzate i punti di interruzione e le icone dei segnalibri.  
+-   Margine indicatore, ovvero il margine a sinistra dell'editor del codice in cui vengono visualizzati i punti di interruzione e le icone dei segnalibri.  
   
--   Testo comprimibile, ovvero Un blocco di testo o codice che può essere usato all'interno e all'interno di visualizzato (solo XML).  
+-   Testo comprimibile, ovvero un blocco di testo o di codice che può essere visualizzato o meno all'interno dell'editor del codice (solo XML).  
   
  **Primo piano elemento**  
  Visualizza l'elenco dei colori disponibili che è possibile scegliere per il primo piano dell'elemento selezionato in **Elementi visualizzati**. Poiché alcuni elementi sono correlati, deve essere mantenuto uno schema di visualizzazione coerente. La modifica del colore di primo piano del testo, ad esempio, modifica anche il colore di primo piano di elementi come Stringa.  
   
- **Custom**  
+ **Impostazione personalizzata**  
  Visualizza la finestra di dialogo **Colore** , in cui è possibile impostare un colore personalizzato per l'elemento selezionato nell'elenco **Elementi visualizzati** .  
   
 > [!NOTE]  

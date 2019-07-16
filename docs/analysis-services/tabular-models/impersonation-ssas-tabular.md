@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 981b98523a53e0c828de5e9cdf8a6c35c6843805
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852906"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207653"
 ---
 # <a name="impersonation"></a>Rappresentazione 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -58,7 +58,7 @@ Quando i dati vengono importati o elaborati, credenziali di rappresentazione ven
  
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|**Rappresenta l'Account**|Specifica il modello viene utilizzato un account utente di Windows per importare o elaborare i dati dall'origine dati. Il dominio e il nome dell'account utente nel formato seguente:**\<nome di dominio >\\< nome dell'account utente\>**.|  
+|**Rappresenta l'Account**|Specifica il modello viene utilizzato un account utente di Windows per importare o elaborare i dati dall'origine dati. Il dominio e il nome dell'account utente nel formato seguente: **\<nome di dominio >\\< nome dell'account utente\>** .|  
 |**Rappresentare l'utente corrente**|Specifica che devono accedere ai dati dall'origine dati usando l'identità dell'utente che ha inviato la richiesta. Questa impostazione si applica solo alla modalità DirectQuery.|  
 |**Rappresenta identità**|Specifica un nome utente per accedere a origine dati, ma non è necessario specificare la password dell'account. Questa impostazione si applica solo quando la delega Kerberos è abilitata e specifica che l'autenticazione S4U deve essere utilizzato.|  
 |**Rappresenta l'Account del servizio**|Specifica l'utilizzo di modello le credenziali di sicurezza associate all'istanza del servizio Analysis Services che gestisce il modello.|  
@@ -72,7 +72,7 @@ Quando i dati vengono importati o elaborati, credenziali di rappresentazione ven
  
 |Opzione|Descrizione|  
 |------------|-----------------|  
-|**Specifica nome utente di Windows e password**|Questa opzione specifica il modello viene utilizzato un account utente di Windows per importare o elaborare i dati dall'origine dati. Il dominio e il nome dell'account utente nel formato seguente:**\<nome di dominio >\\< nome dell'account utente\>**. Quando si crea un nuovo modello utilizzando l'importazione guidata tabella, questa impostazione è l'opzione predefinita.|  
+|**Specifica nome utente di Windows e password**|Questa opzione specifica il modello viene utilizzato un account utente di Windows per importare o elaborare i dati dall'origine dati. Il dominio e il nome dell'account utente nel formato seguente: **\<nome di dominio >\\< nome dell'account utente\>** . Quando si crea un nuovo modello utilizzando l'importazione guidata tabella, questa impostazione è l'opzione predefinita.|  
 |**Account servizio**|Questa opzione consente di specificare che nel modello vengono utilizzate le credenziali di sicurezza associate all'istanza del servizio Analysis Services tramite cui viene gestito il modello.|  
   
 ##  <a name="bkmk_impers_sec"></a> Sicurezza  

@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 23f45c0a2e47381b60fe8f6852f24fd8f5f200fc
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591865"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211012"
 ---
 # <a name="sqlservr-application"></a>Applicazione sqlservr
   L'applicazione **sqlservr** avvia, arresta, sospende e riprende un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dal prompt dei comandi.  
@@ -61,7 +61,7 @@ ms.locfileid: "53591865"
  Avvia un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la configurazione minima. È utile nel caso in cui l'impostazione di un valore di configurazione, ad esempio un'allocazione eccessiva di memoria, abbia impedito l'avvio del server.  
   
  **-e** _error_log_path_  
- Indica il percorso completo del file di log degli errori. Se omesso, il percorso predefinito è *Unità>\<*:\Programmi\Microsoft SQL Server\MSSQL\Log\Errorlog per l'istanza predefinita e *Unità>\<*:\Programmi\Microsoft SQL Server\MSSQL$*nome_istanza*\Log\Errorlog per un'istanza denominata. Non sono presenti spazi tra **-e** e *error_log_path*.  
+ Indica il percorso completo del file di log degli errori. Se omesso, il percorso predefinito è *Unità>\<* :\Programmi\Microsoft SQL Server\MSSQL\Log\Errorlog per l'istanza predefinita e *Unità>\<* :\Programmi\Microsoft SQL Server\MSSQL$*nome_istanza*\Log\Errorlog per un'istanza denominata. Non sono presenti spazi tra **-e** e *error_log_path*.  
   
  **-l** _master_log_path_  
  Indica il percorso completo del file del log delle transazioni del database **master** . Non sono presenti spazi tra **-l** e *master_log_path*.  
@@ -73,10 +73,10 @@ ms.locfileid: "53591865"
  Avvia un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se non si specifica il set di parametri **-s** , viene avviata l'istanza predefinita. Al prompt dei comandi è necessario passare alla directory BINN appropriata per l'istanza prima di avviare **sqlservr.exe**. Ad esempio, se Instance1 usa \mssql$Instance1 per i relativi file binari, l'utente deve passare alla directory \mssql$Instance1\binn per avviare **sqlservr.exe -s instance1**. Se si avvia un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con l'opzione **-n** , è consigliabile usare anche l'opzione **-e** . In caso contrario, gli eventi di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non vengono registrati.  
   
  **-T** _trace#_  
- Indica l'avvio di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con uno specifico flag di traccia (*trace#*) attivo. I flag di traccia vengono utilizzati per avviare il server con un funzionamento non standard. Per altre informazioni, vedere [Flag di traccia &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
+ Indica l'avvio di un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con uno specifico flag di traccia (*trace#* ) attivo. I flag di traccia vengono utilizzati per avviare il server con un funzionamento non standard. Per altre informazioni, vedere [Flag di traccia &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
 > [!IMPORTANT]  
->  Quando si specifica un flag di traccia, indicarne il numero usando **-T**. La lettera minuscola t (**-t**) è accettata da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ma **-t** imposta altri flag di traccia interni necessari per i tecnici del supporto tecnico per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+>  Quando si specifica un flag di traccia, indicarne il numero usando **-T**. La lettera minuscola t ( **-t**) è accettata da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ma **-t** imposta altri flag di traccia interni necessari per i tecnici del supporto tecnico per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **-v**  
  Visualizza il numero di versione del server.  
@@ -91,9 +91,9 @@ ms.locfileid: "53591865"
   
  Usare il valore predefinito per il parametro **-g** a meno che nel log degli errori di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non venga visualizzato uno degli avvisi seguenti:  
   
--   "Non è stato possibile virtuale allocare byte: FAIL_VIRTUAL_RESERVE \<dimensioni > "  
+-   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE \<size>"  
   
--   "Non è stato possibile virtuale allocare byte: FAIL_VIRTUAL_COMMIT \<dimensioni > "  
+-   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT \<size>"  
   
  Questi messaggi possono indicare che [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sta cercando di liberare settori del pool di memoria di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per l'inserimento di oggetti quali file dll per stored procedure estese o oggetti di automazione. In questo caso è consigliabile aumentare la quantità di memoria riservata usando l'opzione **-g**.  
   

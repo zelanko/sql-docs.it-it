@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39f8bcc63b7e5344f70a6d4a3b6c44ae3e69e108
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 420b1ca4e6cdd72d86c715301957be1f14074fee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685398"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207125"
 ---
 # <a name="supplemental-lesson---ragged-hierarchies"></a>Lezione supplementare - Gerarchie incomplete
 
@@ -46,11 +46,11 @@ Se è stato creato il progetto AW Internet Sales come parte dell'esercitazione, 
 
 4.  Creare la seguente [relazioni](../tutorial-tabular-1400/as-lesson-4-create-relationships.md):
 
-    | Tabella 1           | colonna       | Direzione del filtro   | tabella 2     | colonna      | Attiva |
+    | Tabella 1           | Colonna       | Direzione del filtro   | tabella 2     | Colonna      | Attivo |
     |-------------------|--------------|--------------------|-------------|-------------|--------|
-    | FactResellerSales | OrderDateKey | Impostazione predefinita            | DimDate     | date        | Yes    |
-    | FactResellerSales | DueDate      | Impostazione predefinita            | DimDate     | date        | No     |
-    | FactResellerSales | ShipDateKey  | Impostazione predefinita            | DimDate     | date        | No     |
+    | FactResellerSales | OrderDateKey | Impostazione predefinita            | DimDate     | Date        | Yes    |
+    | FactResellerSales | DueDate      | Impostazione predefinita            | DimDate     | Date        | No     |
+    | FactResellerSales | ShipDateKey  | Impostazione predefinita            | DimDate     | Date        | No     |
     | FactResellerSales | ProductKey   | Impostazione predefinita            | DimProduct  | ProductKey  | Yes    |
     | FactResellerSales | EmployeeKey  | Per entrambe le tabelle | DimEmployee | EmployeeKey | Yes    |
 
@@ -61,7 +61,7 @@ Se è stato creato il progetto AW Internet Sales come parte dell'esercitazione, 
     =PATH([EmployeeKey],[ParentEmployeeKey])
     ```
 
-    **FullName** 
+    **nome completo** 
     ```
     =[FirstName] & " " & [MiddleName] & " " & [LastName]
     ```

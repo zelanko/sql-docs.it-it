@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 21abcfbec94808df6560af887ff0598d97fcb068
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072378"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207667"
 ---
 # <a name="import-from-power-pivot"></a>Importare da Power Pivot 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "53072378"
   
 1.  In [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.  
   
-2.  In **Modelli installati** della finestra di dialogo **Nuovo progetto** fare clic su **Business Intelligence**, quindi selezionare **Importa da [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+2.  In **Modelli installati** della finestra di dialogo **Nuovo progetto** fare clic su **Business Intelligence**, quindi selezionare **Importa da [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
 3.  In  **Nome**digitare un nome per il progetto, quindi specificare un percorso e un nome per la soluzione e scegliere **OK**.  
   

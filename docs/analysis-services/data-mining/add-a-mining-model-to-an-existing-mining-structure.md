@@ -1,5 +1,5 @@
 ---
-title: Aggiungere un modello di Data Mining a una struttura di Data Mining esistente | Documenti Microsoft
+title: Aggiungere un modello di Data Mining a una struttura di Data Mining esistente | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f8b995a5b3fb89956e690598c786dc0a09474021
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019778"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210220"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>Aggiungere un modello di data mining a una struttura di data mining esistente
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "34019778"
   
 3.  In **Nome algoritmo**selezionare l'algoritmo che si vuole usare per la compilazione del modello di data mining.  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
  Nella scheda **Modelli di data mining** verrà visualizzato un nuovo modello di data mining. Nel modello verranno utilizzate le colonne predefinite presenti nella struttura. Per informazioni sull'impostazione delle proprietà di un modello di data mining, vedere [Modificare le proprietà di un modello di data mining](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure dettagliate e attività di modello di data mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Attività e procedure relative al modello di data mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

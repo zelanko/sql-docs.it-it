@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131811"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196433"
 ---
 # <a name="create-indexed-views"></a>Creazione di viste indicizzate
   In questo argomento si illustra come creare una vista indicizzata in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il primo indice creato per una vista deve essere un indice cluster univoco. Dopo aver creato l'indice cluster univoco, è possibile creare più indici non cluster. La creazione di un indice cluster univoco per una vista consente un miglioramento delle prestazioni delle query, in quanto la vista viene archiviata nel database in modo analogo a una tabella con un indice cluster. Le viste indicizzate possono essere usate da Query Optimizer per velocizzare l'esecuzione delle query. Non è necessario fare riferimento alla vista nella query affinché venga usata da Query Optimizer per una sostituzione.  
@@ -43,7 +43,7 @@ ms.locfileid: "54131811"
 5.  Creare l'indice cluster univoco per la vista.  
   
 ###  <a name="Restrictions"></a> Opzioni SET necessarie per le viste indicizzate  
- La valutazione di una stessa espressione può produrre risultati diversi nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] se sono attive diverse opzioni SET quando la query viene eseguita. Ad esempio, se l'opzione SET CONCAT_NULL_YIELDS_NULL è impostata su ON, l'espressione **'** abc **'** + NULL restituisce il valore NULL. Se tuttavia l'opzione CONCAT_NULL_YIEDS_NULL è impostata su OFF, la stessa espressione restituisce **'** abc **'**.  
+ La valutazione di una stessa espressione può produrre risultati diversi nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] se sono attive diverse opzioni SET quando la query viene eseguita. Ad esempio, se l'opzione SET CONCAT_NULL_YIELDS_NULL è impostata su ON, l'espressione **'** abc **'** + NULL restituisce il valore NULL. Se tuttavia l'opzione CONCAT_NULL_YIEDS_NULL è impostata su OFF, la stessa espressione restituisce **'** abc **'** .  
   
  Per essere certi che le viste possano essere gestite in modo corretto e restituiscano risultati coerenti, è necessario usare valori fissi per varie opzioni SET delle viste indicizzate. Le opzioni SET nella tabella seguente devono essere impostate sui valori indicati nel **RequiredValue** colonna ogni volta che si verificano le condizioni seguenti:  
   
@@ -86,11 +86,11 @@ ms.locfileid: "54131811"
   
 -   Quando si crea l'indice, l'opzione IGNORE_DUP_KEY deve essere impostata su OFF (impostazione predefinita).  
   
--   I riferimenti alle tabelle devono essere specificati come nomi composti da due parti, ovvero _schema_**.**_nometabella_ , nella definizione della vista.  
+-   I riferimenti alle tabelle devono essere specificati come nomi composti da due parti, ovvero _schema_ **.** _nometabella_ , nella definizione della vista.  
   
 -   Le funzioni definite dall'utente a cui viene fatto riferimento nella vista devono essere create usando l'opzione WITH SCHEMABINDING.  
   
--   A qualsiasi funzione definita dall'utente a cui si fa riferimento nella vista è necessario fare riferimento mediante nomi composti da due parti, _schema_**.**_funzione_.  
+-   A qualsiasi funzione definita dall'utente a cui si fa riferimento nella vista è necessario fare riferimento mediante nomi composti da due parti, _schema_ **.** _funzione_.  
   
 -   La proprietà di accesso ai dati di una funzione definita dall'utente deve essere NO SQL e la proprietà di accesso esterno deve essere NO.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "54131811"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Sono richieste l'autorizzazione CREATE VIEW per il database e l'autorizzazione ALTER per lo schema in cui viene creata la vista.  
   
 ##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
@@ -159,7 +159,7 @@ ms.locfileid: "54131811"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio vengono creati una vista e un indice per tale vista, quindi vengono eseguite due query in cui viene usata la vista indicizzata.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio vengono creati una vista e un indice per tale vista, quindi vengono eseguite due query in cui viene usata la vista indicizzata.  
   
     ```  
     USE AdventureWorks2012;  

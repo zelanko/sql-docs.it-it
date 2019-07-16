@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c108689f2b06fca884978de68c106c2c8f28f741
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899024"
 ---
 # <a name="functions-on-string-values---contains"></a>Funzioni su valori stringa - contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce un valore di tipo xs: Boolean che indica se il valore di *$arg1* contiene un valore stringa specificato da *arg2 $*.  
+  Restituisce un valore di tipo xs: Boolean che indica se il valore di *$arg1* contiene un valore stringa specificato da *arg2 $* .  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -59,8 +58,8 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse colonne di tipo xml nel database AdventureWorks.  
   
-### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>A. Utilizzo della funzione XQuery contains() per cercare una stringa di caratteri specifica  
- La query seguente trova i prodotti per i quali la descrizione di riepilogo contiene la parola Aerodynamic. La query restituisce il valore ProductID e l'elemento <`Summary`> relativi a tali prodotti.  
+### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>R. Utilizzo della funzione XQuery contains() per cercare una stringa di caratteri specifica  
+ La query seguente trova i prodotti per i quali la descrizione di riepilogo contiene la parola Aerodynamic. La query restituisce il valore ProductID e il <`Summary`> (elemento) per tali prodotti.  
   
 ```  
 --The product model description document uses  

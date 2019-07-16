@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e79087f98d5947706720b1dc63c000ae9d9e0ad5
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982603"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164047"
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>Creare e configurare l'applicazione del servizio PowerPivot nella CA
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Un'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] è un'istanza di servizio condiviso del servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Ogni applicazione del servizio possiede impostazioni di configurazione, proprietà, un'identità e un sistema di archiviazione dati interno propri.  
   
- In questo argomento sono incluse le sezioni seguenti:  
+ Di seguito sono elencate le diverse sezioni di questo argomento:  
   
  [Determinare se creare una nuova applicazione del servizio Power Pivot](#determine)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "38982603"
   
      Per altre informazioni sulle associazioni di servizio, vedere [Connettere un'applicazione del servizio PowerPivot a un'applicazione Web SharePoint in Amministrazione centrale](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md).  
   
-10. Scegliere **OK.** Il servizio verrà visualizzato con altri servizi gestiti nell'elenco di applicazioni di servizio della farm.  
+10. Fare clic su **OK**. Il servizio verrà visualizzato con altri servizi gestiti nell'elenco di applicazioni di servizio della farm.  
   
 ##  <a name="ConfigApp"></a> Configurare l'applicazione del servizio Power Pivot  
  Viene creata una nuova applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] usando una configurazione predefinita. Le impostazioni predefinite sono consigliate per la maggior parte degli scenari. Modificarle solo in caso di connessioni interrotte o tempi di risposta lunghi o se si intende variare la configurazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per applicazioni Web di SharePoint specifiche.  
@@ -123,7 +123,7 @@ ms.locfileid: "38982603"
      Le modifiche apportate al timeout di caricamento o al metodo di allocazione vengono applicate unicamente alle nuove richieste in arrivo. Le richieste già in corso sono soggette ai valori che erano attivi nel momento in cui era stata ricevuta la richiesta.  
   
 ##  <a name="AssignGSA"></a> Assegnare un'applicazione del servizio Power Pivot a un'applicazione Web  
- Dopo avere configurato un'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , è possibile assegnarla a un'applicazione Web aggiungendola all'elenco delle connessioni all'applicazione di servizio per quell'applicazione Web. Questa operazione può essere eseguita in due modi:  
+ Dopo avere configurato un'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , è possibile assegnarla a un'applicazione Web aggiungendola all'elenco delle connessioni all'applicazione di servizio per quell'applicazione Web. Questo risultato può essere raggiunto in due modi:  
   
 -   Aggiungere l'applicazione di servizio al gruppo di connessioni **predefinito** . Il *gruppo di connessioni predefinito* è una raccolta di connessioni all'applicazione di servizio disponibili a qualsiasi applicazione Web che fa riferimento a tale gruppo. È necessario aggiungere un'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a questo elenco.  
   
@@ -137,9 +137,9 @@ ms.locfileid: "38982603"
   
 3.  Fare clic su **Connessioni servizio**.  
   
-4.  In **Edit the following group of associations**(Modifica il gruppo di associazioni seguente) selezionare **default** o **[custom]**.  
+4.  In **Edit the following group of associations**(Modifica il gruppo di associazioni seguente) selezionare **default** o **[custom]** .  
   
-5.  Per **[custom]**, selezionare la casella di controllo accanto a ogni connessione all'applicazione di servizio che si desidera usare. Se sono presenti più applicazioni di servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , indicato dal tipo impostato su **Power Pivot Service Application Proxy**(Proxy dell'applicazione di servizio PowerPivot), assicurarsi di sceglierne una sola.  
+5.  Per **[custom]** , selezionare la casella di controllo accanto a ogni connessione all'applicazione di servizio che si desidera usare. Se sono presenti più applicazioni di servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , indicato dal tipo impostato su **Power Pivot Service Application Proxy**(Proxy dell'applicazione di servizio PowerPivot), assicurarsi di sceglierne una sola.  
   
 6.  Fare clic su **OK**.  
   

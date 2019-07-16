@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 0649e167ebaa90267422594ccd193ba468838e6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182011"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68187294"
 ---
 # <a name="reading-the-data-in-a-table-tutorial"></a>Esercitazione per la lettura dei dati di una tabella
   Utilizzare l'istruzione SELECT per leggere i dati archiviati in una tabella. L'istruzione SELECT è una delle più importanti istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] e la relativa sintassi presenta numerose variazioni. Ai fini di questa esercitazione ne verranno utilizzate cinque semplici versioni.  
@@ -80,8 +80,8 @@ ms.locfileid: "48182011"
   
 |||  
 |-|-|  
-|[Funzioni per i valori stringa &#40;Transact-SQL&#41;](/sql/t-sql/functions/string-functions-transact-sql)|[Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|  
-|[Funzioni matematiche &#40;Transact-SQL&#41;](/sql/t-sql/functions/mathematical-functions-transact-sql)|[Testo e immagine le funzioni &#40;Transact-SQL&#41;](/sql/t-sql/functions/text-and-image-functions-textptr-transact-sql)|  
+|[Funzioni stringa &#40;Transact-SQL&#41;](/sql/t-sql/functions/string-functions-transact-sql)|[Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|  
+|[Funzioni matematiche &#40;Transact-SQL&#41;](/sql/t-sql/functions/mathematical-functions-transact-sql)|[Funzioni per i valori text e image &#40;Transact-SQL&#41;](/sql/t-sql/functions/text-and-image-functions-textptr-transact-sql)|  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Riepilogo: Creazione di oggetti di database](lesson-1-5-summary-creating-database-objects.md)  

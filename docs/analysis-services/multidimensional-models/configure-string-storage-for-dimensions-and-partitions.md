@@ -1,5 +1,5 @@
 ---
-title: Configurare l'archiviazione delle stringhe per partizioni e dimensioni | Documenti Microsoft
+title: Configurare l'archivio di stringhe per partizioni e dimensioni | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f6a5aff8822d3fceb05d22433094dc952c6cb872
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023858"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209114"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurare l'archivio di stringhe per dimensioni e partizioni
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34023858"
   
  Tra i valori validi per questa proprietà sono inclusi i seguenti:  
   
-|Valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1050**|Viene specificata l'architettura dell'archivio di stringhe predefinita, soggetta a dimensioni del file massime di 4 GB per archivio.|  
 |**1100**|Viene specificato un archivio di stringhe più ampio in grado di supportare fino a 4 miliardi di stringhe univoche per archivio.|  
@@ -32,7 +32,7 @@ ms.locfileid: "34023858"
 > [!IMPORTANT]  
 >  La modifica delle impostazioni dell'archivio di stringhe di un oggetto richiede la rielaborazione dell'oggetto stesso e di qualsiasi oggetto dipendente. L'elaborazione è necessaria per completare la routine.  
   
- In questo argomento sono incluse le sezioni seguenti:  
+ Di seguito sono elencate le diverse sezioni di questo argomento:  
   
 -   [Informazioni sugli archivi di stringhe](#bkmk_background)  
   
@@ -88,8 +88,8 @@ ms.locfileid: "34023858"
   
 ## <a name="see-also"></a>Vedere anche  
  [Strumenti e approcci per l'elaborazione &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [Le opzioni di elaborazione e le impostazioni di & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
- [Elaborazione e modalità di archiviazione di partizioni](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
- [Archiviazione della dimensione](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
+ [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [Elaborazione e modalità di archiviazione delle partizioni](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
+ [Archiviazione di dimensioni](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   
   

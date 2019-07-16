@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 80fc86c4b3d9385dc056b0c0ea9633f9f5f26675
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782069"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68220599"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>Introduzione a SSMA per Oracle (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per Oracle consente rapidamente gli schemi di database Oracle per convertire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schemi, caricare gli schemi risultanti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed eseguire la migrazione dei dati da Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -64,8 +64,8 @@ Visualizzatore metadati Oracle Mostra informazioni sugli schemi Oracle. Tramite 
   
 Per altre informazioni, vedere [caricamento di convertire gli oggetti di Database in SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/loading-converted-database-objects-into-sql-server-oracletosql.md).  
   
-### <a name="metadata"></a>Metadati  
-A destra di ogni Visualizzatore metadati sono schede che descrivono l'oggetto selezionato. Ad esempio, se si seleziona una tabella nel Visualizzatore metadati Oracle, verranno visualizzate sei schede: **tabella**, **SQL**, **mapping tra i tipi, Report**, **proprietà**, e **dati**. Il **Report** scheda contiene informazioni solo dopo aver creato un report che contiene l'oggetto selezionato. Se si seleziona una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Visualizzatore metadati, verranno visualizzate tre schede: **tabella**, **SQL**, e **dati**.  
+### <a name="metadata"></a>Metadata  
+A destra di ogni Visualizzatore metadati sono schede che descrivono l'oggetto selezionato. Ad esempio, se si seleziona una tabella nel Visualizzatore metadati Oracle, verranno visualizzate sei schede: **Nella tabella**, **SQL**, **digitare Mapping, Report**, **proprietà**, e **dati**. Il **Report** scheda contiene informazioni solo dopo aver creato un report che contiene l'oggetto selezionato. Se si seleziona una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Visualizzatore metadati, verranno visualizzate tre schede: **Nella tabella**, **SQL**, e **dati**.  
   
 La maggior parte delle impostazioni dei metadati sono di sola lettura. Tuttavia, è possibile modificare i metadati seguenti:  
   
@@ -94,7 +94,7 @@ La tabella seguente illustra la migrazione i comandi della barra degli strumenti
 ### <a name="menus"></a>Menu  
 La tabella seguente mostra i menu SSMA.  
   
-|Menu|Description|  
+|Menu|Descrizione|  
 |----|-----------|  
 |**File**|Comandi per l'uso dei progetti, la connessione a Oracle e la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Modifica**|Contiene i comandi per la ricerca e lavora sul testo nelle pagine di dettagli, ad esempio la copia [!INCLUDE[tsql](../../includes/tsql-md.md)] dal riquadro dei dettagli SQL. Contiene anche il **gestire i segnalibri** opzione, in cui sarà in grado di visualizzare un elenco dei propri segnalibri esistenti. È possibile usare i pulsanti sul lato destro della finestra di dialogo per gestire i segnalibri.|  

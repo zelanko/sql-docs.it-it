@@ -1,5 +1,5 @@
 ---
-title: Funzionalità di selezione (Data Mining) | Documenti Microsoft
+title: Funzionalità di selezione (Data Mining) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a93e503978779e56250ddf190c61b1b2411050b9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019188"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183276"
 ---
 # <a name="feature-selection-data-mining"></a>Selezione delle caratteristiche (Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34019188"
   
  Durante il processo di selezione delle caratteristiche, l'analista o lo strumento o l'algoritmo di modellazione seleziona o elimina attivamente gli attributi in base alla loro utilità per l'analisi.  Gli analisti possono eseguire la progettazione delle caratteristiche per aggiungere caratteristiche e rimuovere o modificare i dati esistenti, mentre l'algoritmo di Machine Learning in genere assegna punteggi alle colonne e convalida la loro utilità nel modello.  
   
- ![Funzionalità di selezione e processo di progettazione](../../analysis-services/data-mining/media/ssdm-featureselectionprocess.png "funzionalità di selezione e processo di progettazione")  
+ ![Processo di progettazione e selezione di funzioni](../../analysis-services/data-mining/media/ssdm-featureselectionprocess.png "processo di progettazione e selezione di funzioni")  
   
  In breve, la selezione delle caratteristiche consente di risolvere due problemi: la presenza di una quantità eccessiva di dati di scarso valore o di una quantità ridotta di dati di valore elevato. L'obiettivo della selezione delle caratteristiche deve essere identificare il numero minimo di colonne dell'origine dati che sono significative per la creazione di un modello.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "34019188"
   
 |Algoritmo|Metodo di analisi|Commenti|  
 |---------------|------------------------|--------------|  
-|Naive Bayes|entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Poiché l'algoritmo Microsoft Naive Bayes accetta solo attributi discreti o discretizzati, non può utilizzare il punteggio di interesse.<br /><br /> Per altre informazioni su questo algoritmo, vedere [Riferimento tecnico per l'algoritmo Microsoft Naive Bayes](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md).|  
+|Naive Bayes|Entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Poiché l'algoritmo Microsoft Naive Bayes accetta solo attributi discreti o discretizzati, non può utilizzare il punteggio di interesse.<br /><br /> Per altre informazioni su questo algoritmo, vedere [Riferimento tecnico per l'algoritmo Microsoft Naive Bayes](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md).|  
 |Decision Trees|Punteggio di interesse<br /><br /> Entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Se esistono colonne contenenti valori continui non binari, viene utilizzato il punteggio di interesse per tutte le colonne, per assicurare coerenza. In caso contrario, viene utilizzato il metodo per implementare la caratteristica di selezione degli attributi predefinito oppure il metodo specificato quando è stato creato il modello.<br /><br /> Per altre informazioni su questo algoritmo, vedere [Guida di riferimento tecnico per l'algoritmo Microsoft Decision Trees](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md).|  
 |Neural Network|Punteggio di interesse<br /><br /> Entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Nell'algoritmo Microsoft Neural Network possono essere utilizzati sia i metodi Bayes sia quelli basati sull'entropia, purché nei dati siano contenute colonne continue.<br /><br /> Per altre informazioni su questo algoritmo, vedere [Riferimento tecnico per l'algoritmo Microsoft Neural Network](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md).|  
 |Logistic Regression|Punteggio di interesse<br /><br /> Entropia di Shannon<br /><br /> Bayes con probabilità a priori K2<br /><br /> Equivalente Bayes Dirichlet con probabilità a priori a distribuzione uniforme (impostazione predefinita)|Sebbene l'algoritmo Microsoft Logistic Regression sia basato sull'algoritmo Microsoft Neural Network, non è possibile personalizzare modelli di regressione logistica per controllare il comportamento della caratteristica di selezione degli attributi. Di conseguenza tale caratteristica viene impostata automaticamente sempre sul metodo più appropriato per l'attributo.<br /><br /> Se tutti gli attributi sono discreti o discretizzati, l'impostazione predefinita è BDEU.<br /><br /> Per altre informazioni su questo algoritmo, vedere [Riferimento tecnico per l'algoritmo Microsoft Logistic Regression](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md).|  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 28b1b0068f9ddd9bf47bc2fe93177db469c8b4f1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057819"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181858"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Creare script per Analysis Services in Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "38057819"
   
 2.  Fare clic con il pulsante destro del mouse e quindi scegliere **Backup**. Viene aperta la finestra di dialogo Backup database. Specificare un nome per il file di backup e scegliere le opzioni desiderate per questo backup.  
   
-3.  Fare clic su **Script** nella parte superiore della finestra di dialogo. La funzionalità Script fa parte di tutte le finestre di dialogo basate su attività in Management Studio. Include le opzioni seguenti: **Genera script azione in nuova finestra Query** per aprire la finestra dell'editor di query, **Genera script azione su file** per salvare lo script XMLA in un file o **Genera script azione negli Appunti** per salvare lo script XMLA negli Appunti.  
+3.  Fare clic su **Script** nella parte superiore della finestra di dialogo. La funzionalità Script fa parte di tutte le finestre di dialogo basate su attività in Management Studio. Include le opzioni seguenti: **Creare uno script azione in nuova finestra Query** per aprire la finestra dell'editor di query, **genera Script azione nel File** per salvare lo script XMLA in un file, o **genera Script azione negli Appunti** per salvare lo script XMLA per il Appunti.  
   
      Notare che l'opzione **Genera script azione nel processo** elencata come un'opzione per script in Management Studio non è supportata per gli script di Analysis Services.  
   
@@ -56,12 +56,12 @@ ms.locfileid: "38057819"
   
 2.  Individuare l'oggetto per cui si desidera creare lo script da utilizzare per creare, modificare o eliminare oggetti.  
   
-3.  Fare clic con il pulsante destro del mouse sull'oggetto, scegliere **Crea script per cubo**, quindi **Genera codice per istruzione CREATE in**, **Genera codice per istruzione ALTER in**o **Genera codice per istruzione DELETE in**e quindi fare clic su una delle opzioni seguenti: **Nuova finestra editor di query** per aprire la finestra dell'editor di query, **File** per salvare lo script XMLA in un file o **Appunti** per salvare lo script XMLA negli Appunti.  
+3.  Pulsante destro del mouse dell'oggetto, scegliere **crea Script per cubo**, scegliere **CREATE in**, **ALTER To**, o **Elimina a**e quindi fare clic su uno del le opzioni seguenti: **Nuova finestra Editor di Query** per aprire la finestra dell'editor di query, **File** per salvare lo script XMLA in un file, o **Appunti** per salvare lo script XMLA negli Appunti.  
   
     > [!NOTE]  
     >  In genere, è consigliabile selezionare **File** per creare più versioni diverse del file.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Editor di Query XMLA &#40;Analysis Services - dati multidimensionali&#41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
+ [Editor di query XMLA &#40;Analysis Services - Dati multidimensionali&#41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
   
   

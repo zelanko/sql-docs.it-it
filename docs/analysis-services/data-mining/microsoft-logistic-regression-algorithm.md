@@ -1,5 +1,5 @@
 ---
-title: Algoritmo Microsoft Logistic Regression | Documenti Microsoft
+title: Algoritmo Microsoft Logistic Regression | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5d293b386cf02d492e3a78a6cef34396f22277ee
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016938"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183002"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Algoritmo Microsoft Logistic Regression
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "34016938"
   
 -   Per esempi di query su un modello di regressione lineare, vedere [Esempi di query sul modello di clustering](../../analysis-services/data-mining/clustering-model-query-examples.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
   
 -   Non supporta il drill-through. Questo perché la struttura di nodi nel modello di data mining non corrisponde necessariamente in modo diretto ai dati sottostanti.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "34016938"
   
 ## <a name="see-also"></a>Vedere anche  
  [Contenuto dei modelli di data mining per i modelli di regressione logistica &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
- [Riferimento tecnico l'algoritmo Microsoft Logistic Regression](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
+ [Riferimento tecnico per l'algoritmo Microsoft Logistic Regression](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
  [Esempi di query sul modello di regressione logistica](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)  
   
   

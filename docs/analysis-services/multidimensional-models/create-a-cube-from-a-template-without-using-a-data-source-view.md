@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 28f87d9cbe6dfa0bf41a0d0547e8da7bec5659bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521352"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209104"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Creare un cubo da un modello senza utilizzare una vista origine dati
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "52521352"
 ## <a name="selecting-dimensions"></a>Selezione delle dimensioni  
  Utilizzare la pagina per **selezionare le dimensioni** della procedura guidata per aggiungere dimensioni esistenti al cubo. Questa pagina viene visualizzata solo se esistono già dimensioni condivise senza un'origine dati nel progetto o nel database. In essa non sono elencate dimensioni che dispongono di un'origine dati.  
   
- Per aggiungere dimensioni esistenti, selezionare una o più dimensioni nell'elenco **Dimensioni condivise** e fare clic sul pulsante con la freccia a destra (**>**) per spostarle nell'elenco **Dimensioni cubo** . Fare clic sul pulsante con la doppia freccia (**>>**) per spostare tutte le dimensioni nell'elenco.  
+ Per aggiungere dimensioni esistenti, selezionare una o più dimensioni nell'elenco **Dimensioni condivise** e fare clic sul pulsante con la freccia a destra ( **>** ) per spostarle nell'elenco **Dimensioni cubo** . Fare clic sul pulsante con la doppia freccia ( **>>** ) per spostare tutte le dimensioni nell'elenco.  
   
 ## <a name="defining-new-measures"></a>Definizione di nuove misure  
  Usare la pagina **Definizione nuove misure** della procedura guidata per specificare le misure e i gruppi di misure nel nuovo cubo. I gruppi di misure che vengono specificati in questa pagina corrisponderanno alle tabelle dei fatti nello schema generato, mentre le misure corrisponderanno alle colonne non chiave numeriche nelle tabelle.  
@@ -39,7 +39,7 @@ ms.locfileid: "52521352"
   
  Sia nella griglia **Selezionare le misure dal modello** sia nella griglia **Aggiungi nuove misure** vengono visualizzati i valori delle colonne descritte nella tabella seguente. È possibile fare clic su un valore in entrambi gli elenchi per modificarlo.  
   
-|colonna|Descrizione|  
+|Colonna|Descrizione|  
 |------------|-----------------|  
 |**Nome misura**|Un valore in questa colonna consente di definire il nome di una misura nel cubo. Fare clic su un valore in questa colonna per digitare un nome. Fare clic su **Aggiungi nuova misura** in questa colonna per creare una nuova misura. Questa colonna consente di impostare la proprietà **Name** nell'oggetto misura.|  
 |**Gruppo di misure**|Nome del gruppo di misure contenente la misura. Fare clic su questo valore per scegliere o digitare un nome. Se si eliminano tutte le misure che appartengono a un particolare gruppo, viene rimosso anche quest'ultimo. Questa colonna consente di impostare la proprietà **Name** per l'oggetto gruppo di misure.|  
@@ -55,7 +55,7 @@ ms.locfileid: "52521352"
   
  Sia nella griglia **Selezionare le dimensioni dal modello** sia nella griglia **Aggiungi nuove dimensioni** vengono visualizzati i valori delle colonne descritte nella tabella seguente. È possibile fare clic su un valore in entrambi gli elenchi per modificarlo.  
   
-|colonna|Descrizione|  
+|Colonna|Descrizione|  
 |------------|-----------------|  
 |**Tipo**|Viene visualizzato il tipo di dimensione per una dimensione del modello. Fare clic su questa cella per modificare il tipo di dimensione per una dimensione. Questa colonna consente di impostare la proprietà **Tipo** per l'oggetto dimensione.|  
 |**Name**|Viene visualizzato il nome della dimensione. Fare clic su questa cella per digitare un nome diverso. Questo valore consente di impostare la proprietà **Nome** per l'oggetto dimensione.|  

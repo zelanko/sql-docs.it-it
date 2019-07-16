@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d2aadd055334c7ee64871c2fdfe5239c9849e90
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028282"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210941"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>Esecuzione di una valutazione su richiesta utilizzando Esplora oggetti
   In questa attività verrà utilizzato Esplora oggetti per eseguire una valutazione su richiesta di criteri per procedure consigliate per il [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] in una singola istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -38,13 +38,13 @@ ms.locfileid: "56028282"
     > [!NOTE]  
     >  Per impostazione predefinita, l'istanza locale viene utilizzata come origine dei criteri. Se in precedenza sono stati importati criteri per procedure consigliate, questi verranno elencati insieme agli altri criteri creati. È possibile selezionare uno qualsiasi dei criteri consigliate importati e quindi fare clic su **Evaluate**. Se non sono stati importati criteri per procedure consigliate, continuare con questa procedura.  
   
-3.  Nel **valuta criteri** accanto alla finestra di dialogo il **origine** fare clic sui puntini di sospensione (**...** ) pulsante.  
+3.  Nel **valuta criteri** accanto alla finestra di dialogo il **origine** fare clic sui puntini di sospensione ( **...** ) pulsante.  
   
-4.  Nel **Seleziona origine** nella finestra di dialogo è possibile selezionare uno **file** oppure **Server** come origine dei file di criteri da valutare. Se si sceglie **Server**, è possibile eseguire una valutazione su richiesta di eventuali criteri consigliate precedentemente importati nella gestione basata su criteri in un server locale o remoto. In questa esercitazione, si farà clic sul **file**e quindi selezionare i file dei criteri individuali che si desidera valutare. A tale scopo, eseguire le operazioni seguenti:  
+4.  Nel **Seleziona origine** nella finestra di dialogo è possibile selezionare uno **file** oppure **Server** come origine dei file di criteri da valutare. Se si sceglie **Server**, è possibile eseguire una valutazione su richiesta di eventuali criteri consigliate precedentemente importati nella gestione basata su criteri in un server locale o remoto. In questa esercitazione, si farà clic sul **file**e quindi selezionare i file dei criteri individuali che si desidera valutare. A tale scopo, effettuare le operazioni seguenti:  
   
     1.  Fare clic su **file**.  
   
-    2.  Accanto a **file**, fare clic sui puntini di sospensione (**...** ) pulsante.  
+    2.  Accanto a **file**, fare clic sui puntini di sospensione ( **...** ) pulsante.  
   
     3.  Nel **Seleziona criteri** della finestra di dialogo passare alla cartella seguente, che contiene i criteri per procedure consigliate migliori:  
   

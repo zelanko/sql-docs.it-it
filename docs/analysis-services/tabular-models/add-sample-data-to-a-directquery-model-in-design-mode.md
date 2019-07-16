@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: db5ef518a715553b1eecbeeaf5a5ba248b365bf5
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071538"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207862"
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>Aggiungere dati di esempio a un modello DirectQuery in modalità progettazione
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "53071538"
   
 2.  Fare clic su **Tabella** > **Proprietà** per aprire la finestra di dialogo Gestione partizioni.  
   
-    Si noti che la partizione predefinita è **(DirectQuery) \<nome tabella >**. Si tratta della visualizzazione completa di dati. Non eliminare la partizione. Questa partizione sarà usata durante la distribuzione del modello.  
+    Si noti che la partizione predefinita è **(DirectQuery) \<nome tabella >** . Si tratta della visualizzazione completa di dati. Non eliminare la partizione. Questa partizione sarà usata durante la distribuzione del modello.  
   
 4.  Selezionare la partizione e fare clic su **Copia**.  
 

@@ -1,5 +1,5 @@
 ---
-title: Filtro modello delle regole di un set di elementi in un'associazione | Documenti Microsoft
+title: Filtro modello delle regole di un set di elementi in un'associazione | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8cb507be05ae8f8ad3b25b386d55785c966f14f7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014198"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183238"
 ---
 # <a name="filter-an-itemset-in-an-association-rules-model"></a>Filtrare un set di elementi in un modello Association Rules
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile filtrare i set di elementi visualizzati nella scheda **Set di elementi** del Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules.  
+  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile filtrare i set di elementi visualizzati nella scheda **Set di elementi** del Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules.  
   
 ### <a name="to-filter-an-itemset"></a>Per filtrare un set di elementi  
   
@@ -31,6 +31,6 @@ ms.locfileid: "34014198"
  Il set di elementi verrà filtrato per visualizzare solo i set contenenti gli elementi selezionati. Nella casella non viene fatta distinzione tra maiuscole e minuscole. I filtri vengono archiviati in memoria affinché sia possibile selezionare un filtro già utilizzato nell'elenco.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure dettagliate e attività del visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+ [Attività e procedure relative al visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

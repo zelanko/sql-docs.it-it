@@ -1,5 +1,5 @@
 ---
-title: Creare una connessione BI Semantic Model a una cartella di lavoro di Power Pivot | Documenti Microsoft
+title: Creare una connessione BI Semantic Model a una cartella di lavoro di Power Pivot | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 992e8a3f84af3de9cb9c8ae461b5c6c0505c1b66
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026508"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164132"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-power-pivot-workbook"></a>Creare una connessione BI Semantic Model a una cartella di lavoro di PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "34026508"
   
      La pagina dovrebbe essere simile a quanto illustrato nella figura seguente.  
   
-     ![Pagina di connessione BISM con l'URL alla cartella di lavoro](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-ppvtds.gif "pagina della connessione BISM con l'URL alla cartella di lavoro")  
+     ![Pagina di connessione BISM con URL alla cartella di lavoro](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-ppvtds.gif "pagina della connessione BISM che mostra URL alla cartella di lavoro")  
   
      Facoltativamente, se si dispone di autorizzazioni di SharePoint per la cartella di lavoro, viene eseguito un passaggio di convalida aggiuntivo, per verificare la validità del percorso. Se non si dispone dell'autorizzazione per accedere ai dati, è possibile salvare la connessione BISM senza la risposta della convalida.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "34026508"
   
 ## <a name="see-also"></a>Vedere anche  
  [Connessione BI Semantic Model di PowerPivot &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
- [Utilizzare una connessione BI Semantic Model in Excel o Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
+ [Utilizzare una connessione BISM (BI Semantic Model) in Excel o Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
  [Creare una connessione BISM a un database modello tabulare](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
   

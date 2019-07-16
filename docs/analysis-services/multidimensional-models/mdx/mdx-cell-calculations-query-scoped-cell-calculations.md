@@ -1,5 +1,5 @@
 ---
-title: Creazione di calcoli di celle con ambito Query (MDX) | Documenti Microsoft
+title: Creazione di calcoli di celle con ambito Query (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c9cb6f083751b14ad3cd8f2ffaac692ef4e6eb86
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022838"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208785"
 ---
-# <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>Calcoli MDX di cella - calcoli di celle con ambito Query
+# <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>Calcoli di celle MDX - calcoli di celle con ambito Query
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Nel linguaggio MDX (Multidimensional Expressions) è possibile usare la parola chiave **WITH** per descrivere celle calcolate nel contesto di una query. La parola chiave **WITH** ha la sintassi seguente:  
   
@@ -26,7 +26,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
   
  Il valore `CellCalc_Identifier` contiene il nome delle celle calcolate. Il valore `String_Expression` contiene un elenco di espressioni set MDX ortogonali e unidimensionali. Ognuna di tali espressioni set deve essere risolta in una delle categorie elencate nella tabella seguente.  
   
-|Category|Description|  
+|Category|Descrizione|  
 |--------------|-----------------|  
 |Set vuoto|Espressione set MDX che restituisce un set vuoto. In questo caso l'ambito della cella calcolata è costituito dall'intero cubo.|  
 |Set con un singolo membro|Espressione set MDX che restituisce un singolo membro.|  
@@ -51,6 +51,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  La formula di calcolo, invece, viene elaborata ogni volta che sul cubo viene eseguita una query MDX che coinvolge celle incluse nella definizione delle celle calcolate, indipendentemente dall'ambito di creazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [CREARE l'istruzione di calcolo di celle & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+ [Istruzione CREATE CELL CALCULATION &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 76afbfcd2cd7668cfc65fc5078a1015ac33bc964
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178968"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Origini dati e associazioni (SSAS - multidimensionale)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,12 +38,12 @@ ms.locfileid: "52529112"
 |BigInt|Intero con segno a 64 bit. Per questo tipo di dati viene eseguito il mapping al tipo di dati Int64 in Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_I8 in OLE DB.|  
 |Bool|Valore booleano. Per questo tipo di dati viene eseguito il mapping al tipo di dati Boolean in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_BOOL in OLE DB.|  
 |Currency|Valore di valuta compreso nell'intervallo tra -2 63 (o -922337.203.685.477,5808) e 2 63 -1 (o +922.337.203.685.477,5807) con un'approssimazione pari a dieci millesimi di unità di valuta. Per questo tipo di dati viene eseguito il mapping al tipo di dati Decimal in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_CY in OLE DB.|  
-|date|Dati di data, archiviati come numero a virgola mobile a precisione doppia. La parte intera è il numero di giorni a partire dal 30 dicembre 1899 mentre la parte frazionaria rappresenta una frazione del giorno. Per questo tipo di dati viene eseguito il mapping al tipo di dati DateTime in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_DATE in OLE DB.|  
+|Date|Dati di data, archiviati come numero a virgola mobile a precisione doppia. La parte intera è il numero di giorni a partire dal 30 dicembre 1899 mentre la parte frazionaria rappresenta una frazione del giorno. Per questo tipo di dati viene eseguito il mapping al tipo di dati DateTime in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_DATE in OLE DB.|  
 |Double|Numero a virgola mobile a precisione doppia compreso tra -1.79E +308 e 1.79E +308. Per questo tipo di dati viene eseguito il mapping al tipo di dati Double in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_R8 in OLE DB.|  
 |Integer|Intero con segno a 32 bit. Per questo tipo di dati viene eseguito il mapping al tipo di dati Int32 in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_I4 in OLE DB.|  
 |Single|Numero a virgola mobile a precisione singola compreso tra -3.40E +38 e 3.40E +38. Per questo tipo di dati viene eseguito il mapping al tipo di dati Single in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_R4 in OLE DB.|  
 |SmallInt|Intero con segno a 16 bit. Per questo tipo di dati viene eseguito il mapping al tipo di dati Int16 in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_I2 in OLE DB.|  
-|TinyInt|Numero intero con segno a 8 bit. Per questo tipo di dati viene eseguito il mapping al tipo di dati SByte in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_I1 in OLE DB.<br /><br /> Nota: Se un'origine dati contiene campi di tipo tinyint e la proprietà AutoIncrement è impostata su True, i valori dei campi saranno convertiti in valori interi nella vista origine dati.|  
+|TinyInt|Numero intero con segno a 8 bit. Per questo tipo di dati viene eseguito il mapping al tipo di dati SByte in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_I1 in OLE DB.<br /><br /> Nota: Se un'origine dati contiene campi che sono di tipo tinyint e la proprietà AutoIncrement è impostata su True, verranno convertiti in numeri interi nella vista origine dati.|  
 |UnsignedBigInt|Intero senza segno a 64 bit. Per questo tipo di dati viene eseguito il mapping al tipo di dati UInt64 in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_UI8 in OLE DB.|  
 |UnsignedInt|Intero senza segno a 32 bit. Per questo tipo di dati viene eseguito il mapping al tipo di dati UInt32 in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_UI4 in OLE DB.|  
 |UnsignedSmallInt|Numero intero non firmato a 16 bit. Per questo tipo di dati viene eseguito il mapping al tipo di dati UInt16 in [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e al tipo di dati DBTYPE_UI2 in OLE DB.|  
@@ -145,7 +145,7 @@ ms.locfileid: "52529112"
   
  Le associazioni out-of-line vengono specificate includendo l'oggetto raccolta **Bindings** facoltativo nel comando di elaborazione. La raccolta **Bindings** facoltativa contiene i seguenti elementi.  
   
-|Proprietà|Cardinalità|Tipo|Descrizione|  
+|Proprietà|Cardinalità|type|Descrizione|  
 |--------------|-----------------|----------|-----------------|  
 |**Associazione**|0-n|**Associazione**|Fornisce una raccolta di nuove associazioni.|  
 |**DataSource**|0-1|**DataSource**|Sostituisce **DataSource** dal server da utilizzare.|  

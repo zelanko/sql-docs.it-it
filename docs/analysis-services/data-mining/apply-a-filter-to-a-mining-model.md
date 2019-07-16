@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5430aa0125e621a574d8fb9cc6b28f6b73794b46
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519265"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68184450"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Applicare un filtro a un modello di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  Selezionare il modello, quindi fare clic con il pulsante destro del mouse per aprire il menu di scelta rapida.  
   
-     oppure  
+     -oppure-  
   
      Selezionare il modello. quindi scegliere **Imposta filtro modello** dal menu **Modello di data mining**.  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 583059b93268f3652cf2e8f324574ec739d449dd
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658231"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208167"
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>Aggiornamento dati PowerPivot con SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,25 +36,25 @@ ms.locfileid: "58658231"
   
 -   [Ulteriori informazioni](#bkmk_moreinformation)  
   
-## <a name="background"></a>Informazioni preliminari  
+## <a name="background"></a>Sfondo  
  SharePoint Server 2013 Excel Services gestisce l'aggiornamento dei dati per le cartelle di lavoro di Excel 2013 e attiva l'elaborazione del modello di dati in un server [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione in modalità SharePoint. In caso di cartelle di lavoro di Excel 2010, tramite Excel Services è inoltre possibile gestire il caricamento e il salvataggio delle cartelle di lavoro e dei modelli di dati. Tuttavia, Excel Services si basa sul servizio di sistema [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per inviare i comandi di elaborazione al modello di dati. Nella tabella seguente sono riepilogati i componenti mediante i quali vengono inviati i comandi di elaborazione per l'aggiornamento dati in base alla versione della cartella di lavoro. L'ambiente considerato è una farm di SharePoint 2013 configurata per usare un server [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services in modalità SharePoint.  
   
 ||||  
 |-|-|-|  
 ||Cartelle di lavoro di Excel 2013|Cartelle di lavoro di Excel 2010|  
-|Attivazione dell'aggiornamento dati|**Interactive:** Authenticated User<br /><br /> **Pianificata:** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servizio di sistema|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servizio di sistema|  
+|Attivazione dell'aggiornamento dati|**Interattiva:** Authenticated User<br /><br /> **Pianificata:** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servizio di sistema|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servizio di sistema|  
 |Caricamento della cartella di lavoro da database di contenuto|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
 |Caricamento del modello di dati in un'istanza di Analysis Services|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
 |Invio dei comandi di elaborazione all'istanza di Analysis Services|SharePoint 2013 Excel Services|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Servizio di sistema|  
 |Aggiornamento dei dati della cartella di lavoro|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
-|Salvataggio della cartella di lavoro e del modello di dati nel database di contenuto|**Interactive:** N/D<br /><br /> **Pianificata:** SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
+|Salvataggio della cartella di lavoro e del modello di dati nel database di contenuto|**Interattiva:** N/D<br /><br /> **Pianificata:** SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
   
  Nella tabella seguente sono riepilogate le funzionalità di aggiornamento supportate in una farm di SharePoint 2013 configurata per usare un server [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services in modalità SharePoint:  
   
 |Cartella di lavoro creata in|aggiornamento dati pianificato|Aggiornamento interattivo|  
 |-------------------------|----------------------------|-------------------------|  
-|2008 R2 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel|Non supportato. Aggiornare la cartella di lavoro **(\*)**|Non supportato. Aggiornare la cartella di lavoro **(\*)**|  
-|2012 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel|Supportato|Non supportato. Aggiornare la cartella di lavoro **(\*)**|  
+|2008 R2 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel|Non supportati. Aggiornare la cartella di lavoro **(\*)**|Non supportati. Aggiornare la cartella di lavoro **(\*)**|  
+|2012 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per Excel|Supportato|Non supportati. Aggiornare la cartella di lavoro **(\*)**|  
 |Excel 2013|Supportato|Supportato|  
   
  **(\*)** Per altre informazioni, vedere [Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
@@ -69,7 +69,7 @@ ms.locfileid: "58658231"
   
 -   L'aggiornamento dati interattivo viene eseguito solo per i dati nella sessione utente corrente. I dati non vengono salvati di nuovo automaticamente nell'elemento della cartella di lavoro nel database del contenuto di SharePoint.  
   
--   **Credenziali:** Per l'aggiornamento dati interattivo è possibile utilizzare l'identità dell'utente attualmente connesso come credenziali o credenziali archiviate per connettersi all'origine dati. Le credenziali utilizzate dipendono dalle impostazioni di autenticazione di Excel Services definite per la connessione della cartella di lavoro all'origine dati esterna.  
+-   **Credenziali:** L'aggiornamento dati interattivo è possibile usare l'identità dell'utente attualmente connesso come credenziali o credenziali archiviate per connettersi all'origine dati. Le credenziali utilizzate dipendono dalle impostazioni di autenticazione di Excel Services definite per la connessione della cartella di lavoro all'origine dati esterna.  
   
 -   **Cartelle di lavoro supportate:**  Cartelle di lavoro create in Excel 2013.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "58658231"
   
 3.  Con Excel Services il database [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] viene caricato, elaborato e successivamente sottoposto a query per aggiornare la cache della cartella di lavoro di Excel.  
   
-4.  **Nota:** la cartella di lavoro aggiornata non viene salvata di nuovo automaticamente nella raccolta documenti.  
+4.  **Nota:** La cartella di lavoro aggiornata non viene salvata automaticamente torna alla raccolta documenti.  
   
  ![aggiornamento dati interattivo](../../analysis-services/power-pivot-sharepoint/media/as-interactive-datarefresh-sharepoint2013.gif "aggiornamento dati interattivo")  
   
@@ -92,21 +92,21 @@ ms.locfileid: "58658231"
   
  Esperienza utente tipica: Quando un cliente seleziona "Aggiorna tutte le connessioni" in una cartella di lavoro di Excel 2013 contenente un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modello, viene visualizzato un errore di un messaggio simile al seguente:  
   
--   **Aggiornamento dei dati esterni non riuscito:** C'è stato un errore durante l'uso del modello di dati nella cartella di lavoro. Riprovare. Non è possibile aggiornare i dati per una o più connessioni dati nella cartella di lavoro.  
+-   **Aggiornamento dei dati esterni non riuscito:** Si è verificato un errore mentre si utilizza il modello di dati nella cartella di lavoro. Riprovare. Non è possibile aggiornare i dati per una o più connessioni dati nella cartella di lavoro.  
   
  A seconda del provider di dati utilizzato, è possibile che vengano visualizzati messaggi simili ai seguenti nel log ULS.  
   
  **Con SQL Native Client:**  
   
--   Non è possibile creare una connessione esterna o eseguire una query. Messaggio provider: L'oggetto out-of-line 'DataSource', che fa riferimento all'ID '20102481-39c8-4d21-bf63-68f583ad22bb', è stato specificato, ma non è stato usato.  Errore OLE DB o ODBC: Si è verificato un errore specifico dell'istanza o relativo alla rete durante il tentativo di stabilire una connessione a SQL Server. Server non trovato o non accessibile. Verificare che il nome dell'istanza sia corretto e che il server sia configurato in modo da consentire connessioni remote. Per altre informazioni, vedere la documentazione online di SQL Server.; 08001; Provider SSL: Il pacchetto di sicurezza richiesto non esiste; 08001; Il client non è in grado di effettuare la connessione; 08001; Crittografia non supportata dal client; 08001.  , NomeConnessione: ThisWorkbookDataModel, cartella di lavoro: book1.xlsx.  
+-   Non è possibile creare una connessione esterna o eseguire una query. Messaggio provider: Oggetto of line "DataSource", che fa riferimento all'ID ' 20102481-39 c 21 8-4 d-bf63-68f583ad22bb', è stato specificato ma non è stato utilizzato.  Errore OLE DB o ODBC: Si è verificato un errore relativo alla rete o specifico dell'istanza mentre veniva stabilita una connessione a SQL Server. Server non trovato o non accessibile. Verificare che il nome dell'istanza sia corretto e che il server sia configurato in modo da consentire connessioni remote. Per altre informazioni, vedere la documentazione Online di SQL Server.; 08001; Provider SSL: Il pacchetto di sicurezza richiesto non esiste; 08001; Impossibile stabilire la connessione; client 08001; Crittografia non supportata nel client.; 08001.  , ConnectionName: ThisWorkbookDataModel, cartella di lavoro: book1.xlsx.  
   
  **Con il provider Microsoft OLE DB per SQL Server:**  
   
--   Non è possibile creare una connessione esterna o eseguire una query. Messaggio provider: l'oggetto out-of-line "DataSource", che fa riferimento all'ID "6e711bfa-b62f-4879-a177-c5dd61d9c242", è stato specificato ma non è stato usato. Errore OLE DB o ODBC, , NomeConnessione: ModelloDatiCartellaDiLavoro, cartella di lavoro: Provider OLEDB.xlsx.  
+-   Non è possibile creare una connessione esterna o eseguire una query. Messaggio provider: Oggetto of line "DataSource", che fa riferimento all'ID "6e711bfa-b62f-4879-a177-c5dd61d9c242", è stato specificato ma non è stato utilizzato. Errore OLE DB o ODBC, , ConnectionName: ThisWorkbookDataModel, cartella di lavoro: Provider OLEDB. xlsx.  
   
  **Con il provider di dati .NET Framework per SQL Server:**  
   
--   Non è possibile creare una connessione esterna o eseguire una query. Messaggio provider: L'oggetto out-of-line 'DataSource', che fa riferimento all'ID 'f5fb916c-3eac-4d07-a542-531524c0d44a', è stato specificato, ma non è stato usato.  Errori nel motore relazionale di alto livello. È stata generata la seguente eccezione durante l'uso dell'interfaccia IDbConnection gestita: Non è stato possibile caricare il file o l'assembly "System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" o una delle relative dipendenze. Non è stato fornito il livello richiesto di rappresentazione di client oppure il livello di rappresentazione fornito non è valido. (Eccezione da HRESULT: 0x80070542).  , NomeConnessione: ModelloDatiCartellaDiLavoro, cartella di lavoro: Provider NET.xlsx.  
+-   Non è possibile creare una connessione esterna o eseguire una query. Messaggio provider: Line "DataSource", che fa riferimento a '07 f5fb916c-3eac - 4D-a542-531524c0d44a', ID di oggetto è stato specificato ma non è stato utilizzato.  Errori nel motore relazionale di alto livello. Si è verificato l'eccezione seguente durante l'utilizzo dell'interfaccia IDbConnection gestita: Impossibile caricare il file o l'assembly ' System. Transactions, versione version=4.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089' o una delle relative dipendenze. Non è stato fornito il livello richiesto di rappresentazione di client oppure il livello di rappresentazione fornito non è valido. (Eccezione da HRESULT: 0x80070542).  , ConnectionName: ThisWorkbookDataModel, cartella di lavoro: Netprovider.  
   
  **Riepilogo dei passaggi di configurazione** Per configurare il privilegio **Agire come parte del sistema operativo** nel server locale:  
   
@@ -139,7 +139,7 @@ ms.locfileid: "58658231"
   
     -   Salvare di nuovo la cartella di lavoro nel database di contenuto.  
   
--   **Credenziali:** vengono utilizzate le credenziali archiviate. Non usare l'identità dell'utente corrente.  
+-   **Credenziali:** Usa le credenziali archiviate. Non usare l'identità dell'utente corrente.  
   
 -   **Cartelle di lavoro supportate:** Cartelle di lavoro create tramite il [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aggiuntivo per Excel 2010 o tramite Excel 2013. Le cartelle di lavoro create in Excel 2010 con il componente aggiuntivo [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] non sono supportate. Aggiornare la cartella di lavoro almeno al formato [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Per altre informazioni sugli aggiornamenti delle cartelle di lavoro, vedere [Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
@@ -147,9 +147,9 @@ ms.locfileid: "58658231"
   
 -   Vedere i passaggi nell'illustrazione riportata di seguito.  
   
-1.  In una raccolta documenti di SharePoint fare clic su **Menu Apri** (**...**) per una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+1.  In una raccolta documenti di SharePoint fare clic su **Menu Apri** ( **...** ) per una cartella di lavoro di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
   
-2.  Fare clic sul secondo **Menu Apri** e quindi scegliere **Gestisci aggiornamento dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+2.  Fare clic sul secondo **Menu Apri** e quindi scegliere **Gestisci aggiornamento dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
 3.  Nella pagina **Gestisci aggiornamento dati** fare clic su **Abilita** , quindi configurare la pianificazione dell'aggiornamento.  
   
@@ -193,17 +193,17 @@ ms.locfileid: "58658231"
 ## <a name="data-refresh-log-data"></a>Dati del log di aggiornamento dati  
  **Dati di utilizzo:** È possibile visualizzare i dati di utilizzo di aggiornamento dati nel [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Dashboard di gestione. Per visualizzare i dati di utilizzo:  
   
-1.  Nel gruppo **Impostazioni generali applicazione** di Amministrazione centrale SharePoint fare clic su **Dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+1.  Nel gruppo **Impostazioni generali applicazione** di Amministrazione centrale SharePoint fare clic su **Dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
 2.  Nella parte inferiore del dashboard, vedere la **aggiornamento dati: attività recente** e **aggiornamento dati: errori recenti**.  
   
 3.  Per altre informazioni sui dati di utilizzo e sulla relativa abilitazione, vedere [Power Pivot Management Dashboard and Usage Data](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
- **Dati di log di diagnostica:** è possibile visualizzare i dati del log di diagnostica di SharePoint correlati all'aggiornamento dati. Prima di tutto, verificare la configurazione della registrazione dei dati di diagnostica per il **servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** nella pagina **Monitoraggio** di Amministrazione centrale SharePoint. Potrebbe essere necessario aumentare il livello di registrazione per l'evento"critico" log. Impostare, ad esempio, temporaneamente il valore su **Dettagliato** , quindi eseguire di nuovo le operazioni di aggiornamento dati.  
+ **Dati di log di diagnostica:** È possibile visualizzare i dati di log di diagnostica di SharePoint correlati all'aggiornamento dati. Prima di tutto, verificare la configurazione della registrazione dei dati di diagnostica per il **servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** nella pagina **Monitoraggio** di Amministrazione centrale SharePoint. Potrebbe essere necessario aumentare il livello di registrazione per l'evento"critico" log. Impostare, ad esempio, temporaneamente il valore su **Dettagliato** , quindi eseguire di nuovo le operazioni di aggiornamento dati.  
   
  Tra le voci di log sono incluse:  
   
--   L'**area** del **servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+-   L'**area** del **servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
 -   La categoria **Aggiornamento dati**.  
   
@@ -212,9 +212,9 @@ ms.locfileid: "58658231"
 ##  <a name="datarefresh_additional_authentication"></a> Considerazioni aggiuntive sull'autenticazione  
  Tramite le impostazioni della finestra di dialogo **Impostazioni autenticazione Excel Services** in Excel 2013 è possibile stabilire l'identità Windows utilizzata da Excel Services e [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per l'aggiornamento dati.  
   
--   **Usare l'account utente autenticato**: in Excel Services l'aggiornamento dati viene eseguito usando l'identità dell'utente attualmente connesso.  
+-   **Usare l'account utente autenticato**: Excel Services esegue l'aggiornamento dei dati in base all'identità dell'utente connesso.  
   
--   **Usa account archiviato**: presuppone un ID dell'applicazione del servizio di archiviazione sicura di SharePoint usato da Excel Services per recuperare il nome utente e la password e consentire l'autenticazione dell'aggiornamento dati.  
+-   **Usa account archiviato**: Si presuppone un ID dell'applicazione SharePoint Secure Store Service, che utilizza Excel Services per recuperare il nome utente e password per autenticare l'autenticazione dell'aggiornamento dati.  
   
 -   **Nessuno**: I servizi Excel **Account servizio automatico** viene usato. L'account del servizio è associato a un proxy dell'archiviazione sicura. Configurare le impostazioni nella sezione **Dati esterni** della pagina **Impostazioni applicazioni Excel Services** .  
   

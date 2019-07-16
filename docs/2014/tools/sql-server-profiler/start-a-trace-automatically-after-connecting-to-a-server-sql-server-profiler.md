@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: facde89ad6b476fa01b34badce10dd3cae52ecac
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753723"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68186122"
 ---
 # <a name="start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler"></a>Avviare una traccia automaticamente dopo la connessione a un server (SQL Server Profiler)
   In questo argomento viene descritta la procedura per l'avvio automatico delle tracce tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dopo la connessione a un'istanza di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

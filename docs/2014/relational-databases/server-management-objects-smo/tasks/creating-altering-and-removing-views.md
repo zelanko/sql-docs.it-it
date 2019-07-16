@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1f19027d4707220306accfe451314f52a22cfe35
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805313"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211887"
 ---
 # <a name="creating-altering-and-removing-views"></a>Creazione, modifica e rimozione di viste
   In SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects), le viste di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sono rappresentate dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.View>.  

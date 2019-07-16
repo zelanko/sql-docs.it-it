@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 40e87650a36f717aea1a333c134e7722383f4ec4
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405831"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207725"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database"></a>Creare e gestire partizioni nel database dell'area di lavoro 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

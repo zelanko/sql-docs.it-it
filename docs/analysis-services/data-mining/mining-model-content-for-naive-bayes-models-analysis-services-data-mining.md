@@ -1,5 +1,5 @@
 ---
-title: Per i modelli Naive Bayes contenuto del modello di data mining (Analysis Services - Data Mining) | Documenti Microsoft
+title: Contenuto data mining Model per i modelli Naive Bayes (Analysis Services - Data Mining) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbfb701bf6c4a90cf285e4643377b38e51121dd3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019408"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182697"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli Naive Bayes (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes. Per una spiegazione dell'interpretazione delle statistiche e della struttura condivise da tutti i tipi di modello e per definizioni generali dei termini relativi al contenuto dei modelli di data mining, vedere [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+  In questo argomento viene descritto il contenuto dei modelli di data mining specifico dei modelli che utilizzano l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes. Per una spiegazione dell'interpretazione delle statistiche e della struttura condivise da tutti i tipi di modello e per definizioni generali dei termini relativi al contenuto dei modelli di data mining, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-naive-bayes-model"></a>Informazioni sulla struttura di un modello Naive Bayes  
  La struttura di un modello Naive Bayes è data da un solo nodo padre, che rappresenta il modello e i metadati, e da un numero qualsiasi di alberi indipendenti che rappresentano gli attributi stimabili selezionati. Oltre agli alberi per gli attributi, ogni modello contiene un nodo delle statistiche marginali (NODE_TYPE = 26) che fornisce statistiche descrittive sul set di case di training. Per ulteriori informazioni, vedere [Informazioni nel nodo delle statistiche marginali](#bkmk_margstats).  
@@ -33,7 +33,7 @@ ms.locfileid: "34019408"
 ## <a name="model-content-for-a-naive-bayes-model"></a>Contenuto di un modello Naive Bayes  
  In questa sezione vengono forniti dettagli ed esempi relativi unicamente alle colonne del contenuto dei modelli di data mining particolarmente importanti per i modelli Naive Bayes.  
   
- Per informazioni sulle colonne generiche del set di righe dello schema, ad esempio MODEL_CATALOG e MODEL_NAME, non descritte in questo argomento o per spiegazioni sulla terminologia dei modelli di data mining, vedere [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+ Per informazioni sulle colonne generiche del set di righe dello schema, ad esempio MODEL_CATALOG e MODEL_NAME, non descritte in questo argomento o per spiegazioni sulla terminologia dei modelli di data mining, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Nome del database in cui è archiviato il modello.  
@@ -67,7 +67,7 @@ ms.locfileid: "34019408"
  NODE_TYPE  
  Un modello Naive Bayes restituisce i tipi di nodo seguenti:  
   
-|ID tipo di nodo|Description|  
+|ID tipo di nodo|Descrizione|  
 |------------------|-----------------|  
 |26 (NaiveBayesMarginalStatNode)|Contiene statistiche che descrivono il set intero di case di training per il modello.|  
 |9 (Attributo stimabile)|Contiene il nome dell'attributo stimabile.|  
@@ -252,13 +252,13 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  Risultati previsti:  
   
-|NODE_CAPTION|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
+|NODE_CAPTION|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |-------------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|Missing|0|0|1|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|0|3783|0,472934117|4|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|1|4216|0,527065883|4|  
   
- In questi risultati il valore della colonna SUPPORT suggerisce il conteggio di clienti con lo stato civile specificato che hanno acquistato una bicicletta. La colonna PROBABILITY contiene la probabilità di ogni valore dell'attributo, calcolato solo per questo nodo. Per definizioni generali dei termini usati nella tabella NODE_DISTRIBUTION, vedere [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+ In questi risultati il valore della colonna SUPPORT suggerisce il conteggio di clienti con lo stato civile specificato che hanno acquistato una bicicletta. La colonna PROBABILITY contiene la probabilità di ogni valore dell'attributo, calcolato solo per questo nodo. Per definizioni generali dei termini usati nella tabella NODE_DISTRIBUTION, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ###  <a name="bkmk_margstats"></a> Informazioni nel nodo delle statistiche marginali  
  In un modello Naive Bayes la tabella nidificata per il nodo delle statistiche marginali contiene la distribuzione di valori per l'intero set di dati di training. Ad esempio, la tabella seguente contiene un elenco parziale delle statistiche della tabella NODE_DISTRIBUTION nidificata per il modello, `TM_NaiveBayes`:  
@@ -283,9 +283,9 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
  Un valore **Missing** (VALUE_TYPE = 1) viene aggiunto a ogni attributo di input e di output per rappresentare i valori potenziali che non erano presenti nei dati di training. È necessario prestare attenzione alla distinzione tra "mancante" riferito a una stringa e il valore **Missing** predefinito. Per altre informazioni, vedere [Valori mancanti &#40; Analysis Services - Data mining&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto del modello di data mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Visualizzatori modello di Data Mining](../../analysis-services/data-mining/data-mining-model-viewers.md)   
- [Query di Data Mining](../../analysis-services/data-mining/data-mining-queries.md)   
+ [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Visualizzatori modello di data mining](../../analysis-services/data-mining/data-mining-model-viewers.md)   
+ [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md)   
  [Algoritmo Microsoft Naive Bayes](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)  
   
   

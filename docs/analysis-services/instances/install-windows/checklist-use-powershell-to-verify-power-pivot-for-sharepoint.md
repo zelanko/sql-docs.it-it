@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 46cfdd9075bd950b287bef399ca3a505a1261f5d
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087830"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181585"
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>Elenco di controllo: Usare PowerShell per verificare PowerPivot per SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
   
 |||  
 |-|-|  
-|![PowerPivot nel set di applicazioni generali sharepoint](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "powerpivot nel set di applicazioni generali sharepoint")|È possibile verificare facoltativamente la maggior parte dei componenti in Amministrazione centrale utilizzando il dashboard di gestione [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Per aprire il dashboard in Amministrazione centrale, fare clic su **Impostazioni generali applicazione**, quindi scegliere **Dashboard di gestione** in **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**. Per ulteriori informazioni sul dashboard, vedere [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).|  
+|![PowerPivot nel set di applicazioni generali sharepoint](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "powerpivot nel set di applicazioni generali sharepoint")|È possibile verificare facoltativamente la maggior parte dei componenti in Amministrazione centrale utilizzando il dashboard di gestione [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Per aprire il dashboard in Amministrazione centrale, fare clic su **Impostazioni generali applicazione**, quindi scegliere **Dashboard di gestione** in **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]** . Per ulteriori informazioni sul dashboard, vedere [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).|  
   
 ##  <a name="bkmk_symptoms"></a> Sintomi e azioni consigliate  
  Nella tabella seguente è riportato un elenco di sintomi o problemi e la sezione suggerita di questo argomento da consultare per consentire la risoluzione del problema.  

@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 253959175db3519c00874db43466fa21c31cf5e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fbd066113f5ad4394b83e0151643ab9ea3b7b82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636679"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900673"
 ---
 # <a name="sysdmhadrdatabasereplicaclusterstates-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce una riga contenente informazioni destinato a fornire informazioni dettagliate sull'integrità dei database di disponibilità nei gruppi di disponibilità Always On in ogni gruppo di disponibilità Always On nel cluster di Windows Server Failover Clustering (WSFC). Query **DM hadr_database_replica_states** per rispondere alle domande seguenti:  
+  Restituisce una riga contenente informazioni relative all'integrità dei database di disponibilità nei gruppi di disponibilità Always On nel cluster WSFC (Windows Server Failover Clustering). Query **DM hadr_database_replica_states** per rispondere alle domande seguenti:  
   
 -   Tutti i database di un gruppo di disponibilità sono pronti per un failover?  
   
@@ -39,9 +38,9 @@ ms.locfileid: "47636679"
   
 -   Se la replica primaria non è attualmente disponibile, quale replica secondaria limiterebbe la perdita di dati se diventasse la replica primaria?  
   
--   Quando il valore della [Sys. Databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**log_reuse_wait_desc** colonna è "AVAILABILITY_REPLICA", quale replica secondaria in un gruppo di disponibilità trattiene il troncamento del log in un determinato database primario ?     
+-   Quando il valore della [Sys. Databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**log_reuse_wait_desc** colonna è "AVAILABILITY_REPLICA", quale replica secondaria in un gruppo di disponibilità trattiene il troncamento del log in un determinato database primario ?  
    
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**replica_id**|**uniqueidentifier**|Identificatore della replica di disponibilità all'interno del gruppo di disponibilità.|  
 |**group_database_id**|**uniqueidentifier**|Identificatore del database nel gruppo di disponibilità. L'identificatore è identico su ogni replica a cui è stato aggiunto questo database.|  
