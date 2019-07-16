@@ -5,17 +5,16 @@ description: Distribuire uno script Python o R come un'applicazione nel cluster 
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2309fd7a318222ef337815ddf511359f5b305e26
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: e3768ff5bfc01f2068b10ebd8afc18d12fa808c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958861"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Come distribuire un'app nel cluster di big data di SQL Server (anteprima)
 
@@ -73,7 +72,7 @@ Prima di distribuire o interagire con le applicazioni, accedere prima all'istanz
 mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
 ```
 
-## <a name="aks"></a>AKS
+## <a name="aks"></a>SERVIZIO CONTENITORE DI AZURE
 
 Se si usa servizio contenitore di AZURE, è necessario eseguire il comando seguente per ottenere l'indirizzo IP del `mgmtproxy-svc-external` servizio eseguendo questo comando in una finestra bash o cmd:
 
@@ -118,7 +117,7 @@ Per distribuire questa app di esempio di app, creare i seguenti file in una dire
         return result
     result=add(x,y)
    ```
-- `spec.yaml` (Indici per tabelle con ottimizzazione per la memoria). Copiare il codice seguente nel file:
+- `spec.yaml`. Copiare il codice seguente nel file:
    ```yaml
    #spec.yaml
    name: add-app #name of your python script

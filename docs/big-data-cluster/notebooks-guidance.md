@@ -5,17 +5,16 @@ description: Questo articolo illustra come eseguire i notebook di Jupyter in Azu
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ea907e507c9b37b8a6b911b7e1705ce31f231796
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 166964f97f5201d906ea2d1f6262b7a221eb2cba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728753"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958293"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Come usare i notebook in fase di anteprima di SQL Server 2019
 

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6c73d2be8550bd6ce3dad9e6c9e07e2403785f7b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7fa45029557cc217b89293fa7963bf29b39f373f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946300"
 ---
 # <a name="sequence-expressions-xquery"></a>Espressioni di sequenze (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +113,7 @@ FROM Person.Contact
 WHERE ContactID=3  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <act:telephoneNumber xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
@@ -132,7 +131,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>Applicazione di filtri alle sequenze  
- È possibile applicare filtri alla sequenza restituita da un'espressione, aggiungendo un predicato all'espressione. Per altre informazioni, vedere [espressioni di percorso &#40;XQuery&#41;](../xquery/path-expressions-xquery.md). Ad esempio, la query seguente restituisce una sequenza di tre nodi elemento <`a`>:  
+ È possibile applicare filtri alla sequenza restituita da un'espressione, aggiungendo un predicato all'espressione. Per altre informazioni, vedere [espressioni di percorso &#40;XQuery&#41;](../xquery/path-expressions-xquery.md). Ad esempio, la query seguente restituisce una sequenza di tre <`a`> nodi elemento:  
   
 ```  
 declare @x xml  
@@ -144,7 +143,7 @@ set @x = '<root>
 SELECT @x.query('/root/a')  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <a attrA="1">111</a>  
@@ -152,7 +151,7 @@ SELECT @x.query('/root/a')
 <a />  
 ```  
   
- Per recuperare solo gli elementi <`a`> con l'attributo attrA, è possibile specificare un filtro nel predicato. Nella sequenza risultante sarà presente un solo elemento <`a`>.  
+ Per recuperare solo <`a`> elementi con l'attributo attrA, è possibile specificare un filtro nel predicato. La sequenza risultante sarà presente un solo <`a`> elemento.  
   
 ```  
 declare @x xml  
@@ -164,7 +163,7 @@ set @x = '<root>
 SELECT @x.query('/root/a[@attrA]')  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <a attrA="1">111</a>  
@@ -196,14 +195,14 @@ SELECT @x.query('
 ')  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <c>C under a</c>  
 <c>C under b</c>  
 ```  
   
- Nell'esempio seguente viene applicato un filtro del predicato. L'espressione trova gli elementi <`a`> e <`b`> che contengono elemento <`c`>.  
+ Nell'esempio seguente viene applicato un filtro del predicato. L'espressione Trova gli elementi <`a`> e <`b`> che contengono elemento <`c`>.  
   
 ```  
 declare @x xml  
@@ -223,7 +222,7 @@ SELECT @x.query('
 ')  
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <a>  

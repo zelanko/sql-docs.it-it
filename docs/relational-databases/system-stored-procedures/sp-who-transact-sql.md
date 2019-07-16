@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dbed86af1415f89a59b7de85061a6db1db324307
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5d758c7ca2d21183b9486030704c31b9d5f621d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536347"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950511"
 ---
 # <a name="spwho-transact-sql"></a>sp_who (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,11 +55,11 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ## <a name="result-sets"></a>Set di risultati  
  **sp_who** restituisce un set di risultati con le informazioni seguenti.  
   
-|colonna|Tipo di dati|Descrizione|  
+|Colonna|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
 |**spid**|**smallint**|ID di sessione.|  
 |**ecid**|**smallint**|ID del contesto di esecuzione di un determinato thread associato a un ID di sessione specifico.<br /><br /> ECID = {0 1, 2, 3,... *n*}, dove 0 rappresenta sempre principale o thread, padre e {1, 2, 3,... *n*} rappresenta i thread secondari.|  
-|**status**|**nchar(30)**|Stato del processo. I valori possibili sono:<br /><br /> **dormant**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sta reimpostando la sessione.<br /><br /> **running**. Nella sessione vengono eseguiti uno o più batch. Se si abilita la funzionalità MARS (Multiple Active Result Sets), una sessione può eseguire più batch. Per altre informazioni vedere [Uso di MARS &#40;Multiple Active Result Set&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **background**. Nella sessione viene eseguita un'attività in background, ad esempio il rilevamento dei deadlock.<br /><br /> **rollback**. Nella sessione è in corso il rollback di una transazione.<br /><br /> **in sospeso**. La sessione è in attesa che un thread di lavoro diventi disponibile.<br /><br /> **Runnable**. L'attività della sessione si trova nella coda eseguibile di un'utilità di pianificazione in attesa di un quantum temporale.<br /><br /> **spinloop**. L'attività della sessione è in attesa che venga liberato uno spinlock.<br /><br /> **sospeso**. La sessione è in attesa del completamento di un evento, ad esempio di I/O.|  
+|**status**|**nchar(30)**|Stato del processo. I valori possibili sono:<br /><br /> **inattive**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sta reimpostando la sessione.<br /><br /> **esecuzione**. Nella sessione vengono eseguiti uno o più batch. Se si abilita la funzionalità MARS (Multiple Active Result Sets), una sessione può eseguire più batch. Per altre informazioni vedere [Uso di MARS &#40;Multiple Active Result Set&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **sfondo**. Nella sessione viene eseguita un'attività in background, ad esempio il rilevamento dei deadlock.<br /><br /> **eseguire il rollback**. Nella sessione è in corso il rollback di una transazione.<br /><br /> **in sospeso**. La sessione è in attesa che un thread di lavoro diventi disponibile.<br /><br /> **Runnable**. L'attività della sessione si trova nella coda eseguibile di un'utilità di pianificazione in attesa di un quantum temporale.<br /><br /> **spinloop**. L'attività della sessione è in attesa che venga liberato uno spinlock.<br /><br /> **sospeso**. La sessione è in attesa del completamento di un evento, ad esempio di I/O.|  
 |**loginame**|**nchar(128)**|Nome dell'account di accesso associato a un particolare processo.|  
 |**hostname**|**nchar(128)**|Nome host o di computer per ogni processo.|  
 |**blk**|**char(5)**|ID di sessione del processo di blocco, se esistente. In caso contrario, il valore di questa colonna è zero.<br /><br /> Quando una transazione associata a un ID di sessione specificato viene bloccata da una transazione distribuita orfana, questa colonna restituirà il valore -2 per tale transazione.|  
@@ -82,7 +81,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-listing-all-current-processes"></a>A. Elenco di tutti i processi correnti  
+### <a name="a-listing-all-current-processes"></a>R. Elenco di tutti i processi correnti  
  Nell'esempio seguente la stored procedure `sp_who` viene eseguita senza parametri in modo che vengano restituiti tutti gli utenti correnti.  
   
 ```  
