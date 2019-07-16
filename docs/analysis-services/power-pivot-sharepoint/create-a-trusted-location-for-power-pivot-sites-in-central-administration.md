@@ -1,5 +1,5 @@
 ---
-title: Creare un percorso attendibile per i siti di Power Pivot in Amministrazione centrale | Documenti Microsoft
+title: Creare un percorso attendibile per siti PowerPivot in Amministrazione centrale | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 24a779a751ac93c4c132c2dbf8ae63987de2666a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027348"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208227"
 ---
 # <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>Creare un percorso attendibile per i siti PowerPivot in Amministrazione centrale
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34027348"
 ## <a name="prerequisites"></a>Prerequisiti  
  È necessario essere un amministratore del servizio o della farm per definire un URL come percorso attendibile.  
   
- È necessario conoscere l'indirizzo URL del sito di SharePoint contenente la raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o un'altra raccolta in cui sono archiviate le cartelle di lavoro. Per ottenere l'indirizzo, aprire il sito che contiene la raccolta, fare clic con il pulsante destro del mouse su **Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, scegliere **Proprietà** e quindi copiare la prima parte dell'indirizzo (URL) che contiene il nome del server e il percorso del sito.  
+ È necessario conoscere l'indirizzo URL del sito di SharePoint contenente la raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o un'altra raccolta in cui sono archiviate le cartelle di lavoro. Per ottenere l'indirizzo, aprire il sito che contiene la raccolta, fare clic con il pulsante destro del mouse su **Raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** , scegliere **Proprietà** e quindi copiare la prima parte dell'indirizzo (URL) che contiene il nome del server e il percorso del sito.  
   
 ##  <a name="overview"></a> Panoramica  
  Un'installazione iniziale di Excel Services specifica "http://" come percorso attendibile, pertanto, nel server, possono essere aperte cartelle di lavoro di qualsiasi sito della farm. Se è necessario un controllo più rigido sui percorsi considerati attendibili, è possibile creare nuovi percorsi attendibili che eseguono il mapping a siti specifici della farm, quindi variare le impostazioni e le autorizzazioni per ognuno.  
@@ -58,11 +58,11 @@ ms.locfileid: "34027348"
   
 10. Anche in Dati esterni, per Avviso in caso di aggiornamento, deselezionare la casella di controllo **Attiva avviso di aggiornamento**. Se si deseleziona la casella di controllo, la raccolta [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] può ignorare i messaggi di avviso di routine e mostrare le immagini di anteprima di una cartella di lavoro.  
   
-11. Scegliere **OK**.  
+11. Fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta Power Pivot](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)   
- [Creare e personalizzare la raccolta Power Pivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
+ [Creare e personalizzare la Raccolta Power Pivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
  [Usare la Raccolta Power Pivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)  
   
   
