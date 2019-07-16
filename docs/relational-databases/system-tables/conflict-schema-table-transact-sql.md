@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dd226aef62c2d05eead5e2b5f72b2f358422025a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4725da28e9cd83df4979d1cc476cd60a488c0aa4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084773"
 ---
-# <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL)
+# <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;schema&gt;_&lt;tabella&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Il conflict_\<schema > _\<tabella > tabella contiene informazioni sulle righe in conflitto nella replica peer-to-peer. Per ogni tabella replicata di una pubblicazione è disponibile una tabella dei conflitti, il cui nome è seguito dai nomi dello schema e dell'articolo. Queste tabelle dei conflitti specifiche dell'articolo sono presenti in ogni database di pubblicazione.  
@@ -45,7 +44,7 @@ ms.locfileid: "62471080"
 |__$update_bitmap|**varbinary(** *n* **)** . Dimensioni variano a seconda del contenuto.|Bitmap che indica le colonne aggiornate nel caso di un conflitto aggiornamento-aggiornamento.|  
 |__$inserted_date|**datetime**|Data e ora in cui la riga in conflitto è stata inserita in questa tabella.|  
 |__$row_id|**timestamp**|Versione della riga associata alla riga che ha causato il conflitto.|  
-|__$change_id|**binary (8)**|Per una riga locale, questo valore è uguale a __$row_id della riga in ingresso in conflitto con la riga locale. Questo valore è NULL per una riga in ingresso.|  
+|__$change_id|**file binario (8)**|Per una riga locale, questo valore è uguale a __$row_id della riga in ingresso in conflitto con la riga locale. Questo valore è NULL per una riga in ingresso.|  
 |\<i nomi di colonna nella tabella di base >|\<tipi di colonna nella tabella di base >|Questa tabella dei conflitti contiene una colonna per ogni colonna presente nella tabella di base.|  
   
 ## <a name="see-also"></a>Vedere anche  

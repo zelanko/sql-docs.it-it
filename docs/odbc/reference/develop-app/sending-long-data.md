@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc7a140d7de8548f02fde6ab309823bbe1c9c656
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: acb4ff1637c1530527af88affaf437334596016b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62465927"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094346"
 ---
 # <a name="sending-long-data"></a>Invio di dati Long
 Definiscono DBMS *dati di tipo long* come qualsiasi carattere o dati binari in una determinata dimensione, ad esempio di 254 caratteri. Potrebbe non essere possibile archiviare l'intero elemento di dati long in memoria, ad esempio quando l'elemento rappresenta un documento di testo lungo o in una bitmap. Perché questo tipo di dati non può essere archiviati in un singolo buffer, lo invia al driver in parti con l'origine dati **SQLPutData** quando viene eseguita l'istruzione. I parametri per il quale i dati vengono inviati in fase di esecuzione sono noti come *parametri data-at-execution*.  

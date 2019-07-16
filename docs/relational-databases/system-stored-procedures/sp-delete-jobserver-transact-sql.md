@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 04874761ce88069f35c75d5e2ac3b6354a5af5fe
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a2f4b2e8dbcf8e8427f51388c7bead75263d95a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130644"
 ---
 # <a name="spdeletejobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +47,13 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 > [!NOTE]  
 >  Entrambi *job_id* oppure *job_name* deve essere specificato; non è possibile specificarli entrambi.  
   
-`[ @server_name = ] 'server'` Il nome del server di destinazione da rimuovere dal processo specificato. *server* viene **nvarchar(30)**, non prevede alcun valore predefinito. *server* può essere **(locale)** o il nome di un server di destinazione remoto.  
+`[ @server_name = ] 'server'` Il nome del server di destinazione da rimuovere dal processo specificato. *server* viene **nvarchar(30)** , non prevede alcun valore predefinito. *server* può essere **(locale)** o il nome di un server di destinazione remoto.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="permissions"></a>Permissions  
  Per eseguire questa stored procedure, gli utenti devono essere membri del **sysadmin** ruolo predefinito del server.  

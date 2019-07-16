@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f7716b7e41e739a100c16e34560e737d2350e122
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 81a8e4ae45f8652b5928bb768e506dc1acc682d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66015095"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135843"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Disponibilità elevata e ripristino di emergenza per Master Data Services
 
@@ -331,7 +330,7 @@ Se questa casella di controllo non è selezionata, viene usato il commit asincro
 
     Figura 18
 
-9.  Nella pagina **Seleziona sincronizzazione dati** fare clic su **Completa** e specificare una condivisione di rete cui possano accedere tutti i nodi. Per continuare, fare clic su **Avanti** . Vedere Figura 19.
+9.  Nella pagina **Seleziona sincronizzazione dati** fare clic su **Completa** e specificare una condivisione di rete cui possano accedere tutti i nodi. Fare clic su **Avanti** per continuare. Vedere Figura 19.
 
     Tale condivisione di rete verrà usata per archiviare il backup di database per creare le repliche secondarie. Se tale preferenza non è disponibile per l'organizzazione, scegliere un altro tipo di sincronizzazione dei dati. Fare riferimento a [Gruppi di disponibilità AlwaysOn di SQL Server 2016](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server) per informazioni su come usare altre opzioni per creare repliche secondarie. Nella figura 17 vengono elencate anche altre opzioni.
 
@@ -339,7 +338,7 @@ Se questa casella di controllo non è selezionata, viene usato il commit asincro
 
     Figura 19 
 
-10. Nella pagina **Convalida** assicurarsi che tutte le convalide siano state passate correttamente e correggere eventuali errori. Per continuare, fare clic su **Avanti** .
+10. Nella pagina **Convalida** assicurarsi che tutte le convalide siano state passate correttamente e correggere eventuali errori. Fare clic su **Avanti** per continuare.
 
 11. Nella pagina **Riepilogo** esaminare tutte le impostazioni di configurazione e fare clic su **Fine**. In questo modo verrà creato e configurato il gruppo di disponibilità.
 

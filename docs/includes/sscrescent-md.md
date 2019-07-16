@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 7c229339c5e66cf4bc4c95ac7a1e57121a6adad0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225618"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68162705"
 ---
-Power View
+ Power View 

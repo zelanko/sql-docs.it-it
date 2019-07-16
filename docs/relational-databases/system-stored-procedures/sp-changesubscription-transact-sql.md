@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c81843220b9613bfc59f03d197f369e77a850f84
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: cddc14c14054ecfa81a963d15a7a604e8d71d085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534043"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016543"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,11 +56,11 @@ sp_changesubscription [ @publication = ] 'publication'
   
 `[ @destination_db = ] 'destination_db'` È il nome del database di sottoscrizione. *destination_db* viene **sysname**, non prevede alcun valore predefinito.  
   
-`[ @property = ] 'property'` È la proprietà da modificare per la sottoscrizione specificata. *proprietà* viene **nvarchar(30)**, e può essere uno dei valori nella tabella.  
+`[ @property = ] 'property'` È la proprietà da modificare per la sottoscrizione specificata. *proprietà* viene **nvarchar(30)** , e può essere uno dei valori nella tabella.  
   
-`[ @value = ] 'value'` Nuovo valore per l'oggetto specificato *proprietà*. *valore* viene **nvarchar (4000)**, e può essere uno dei valori nella tabella.  
+`[ @value = ] 'value'` Nuovo valore per l'oggetto specificato *proprietà*. *valore* viene **nvarchar (4000)** , e può essere uno dei valori nella tabella.  
   
-|Proprietà|Value|Descrizione|  
+|Proprietà|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||Account di accesso per l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows utilizzato per l'esecuzione dell'agente.|  
 |**distrib_job_password**||Password dell'account di Windows utilizzato per l'esecuzione dell'agente.|  

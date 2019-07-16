@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c1904b1549613e53c685d784628696e84b134a03
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c02b9327dbff75e3c0816bb3eec19e3cb3135d50
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534713"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008926"
 ---
 # <a name="sppassword-transact-sql"></a>sp_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ sp_password [ [ @old = ] 'old_password' , ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-changing-the-password-of-a-login-without-knowing-the-old-password"></a>A. Modifica della password di un account di accesso con vecchia password non nota  
+### <a name="a-changing-the-password-of-a-login-without-knowing-the-old-password"></a>R. Modifica della password di un account di accesso con vecchia password non nota  
  Nell'esempio seguente viene illustrato l'utilizzo di `ALTER LOGIN` per modificare la password dell'account di accesso `Victoria` impostandola su `B3r1000d#2-36`. Questo è il metodo consigliato. L'utente che esegue questo comando deve disporre dell'autorizzazione CONTROL SERVER.  
   
 ```  

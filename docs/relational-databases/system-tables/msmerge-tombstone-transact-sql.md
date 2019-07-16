@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8b3fc7bf-729b-40f2-8a26-e7dfbe8ddb38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ab57e69118edfe4a647d6baeedf5a10ee8460247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12caefe8b764090d46051912c876272c9efe86bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092664"
 ---
 # <a name="msmergetombstone-transact-sql"></a>MSmerge_tombstone (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "63026460"
 |**tablenick**|**int**|Nome alternativo della tabella.|  
 |**type**|**tinyint**|Tipo di eliminazione:<br /><br /> 1 = Eliminazione eseguita dall'utente.<br /><br /> 5 = La riga non appartiene più alla partizione filtrata.<br /><br /> 6 = Eliminazione del sistema.|  
 |**lineage**|**varbinary(249)**|Indica la versione del record eliminato e gli aggiornamenti noti al momento dell'eliminazione. Consente di utilizzare le regole per la risoluzione coerente di un conflitto quando un Sottoscrittore esegue l'aggiornamento di una riga mentre questa viene eliminata in un altro Sottoscrittore.|  
-|**generation**|**int**|Viene assegnato quando si elimina una riga. Se un sottoscrittore richiede generazione N, solo rimozioni definitive con generazione > = N vengono inviati.|  
+|**generazione**|**int**|Viene assegnato quando si elimina una riga. Se un sottoscrittore richiede generazione N, solo rimozioni definitive con generazione > = N vengono inviati.|  
 |**logical_record_parent_rowguid**|**uniqueidentifier**|Identificatore del record logico al quale appartiene una riga eliminata.|  
 |**logical_record_lineage**|**Varbinary(501)**|Coppie di nome alternativo del Sottoscrittore e numero di versione utilizzate per memorizzare la cronologia delle eliminazioni del record logico al quale appartiene la riga corrente.|  
   

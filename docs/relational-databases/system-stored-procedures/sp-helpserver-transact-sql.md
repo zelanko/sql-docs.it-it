@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31caafde6ea3cdd93355910f244ed5872b6990ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 844e96d765f9ed06f88b140b906b78eb4ea16ea0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62635888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997438"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**convalida differita dello schema**|Ignora il controllo dello schema delle tabelle remote all'inizio della query.|  
 |**pub**|Server di pubblicazione.|  
 |**rpc**|Attiva l'esecuzione di chiamate RPC dal server specificato.|  
-|**rpc out**|Viene abilitata l'esecuzione di chiamate RPC al server specificato.|  
+|**chiamate RPC in uscita**|Viene abilitata l'esecuzione di chiamate RPC al server specificato.|  
 |**sub**|Sottoscrittore.|  
 |**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**usare regole di confronto remote**|Consente di utilizzare le regole di confronto di una colonna remota anziché quelle del server locale.|  
@@ -70,7 +69,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome del server.|  
-|**network_name**|**sysname**|Nome di rete del server.|  
+|**nome_rete**|**sysname**|Nome di rete del server.|  
 |**status**|**varchar(** 70 **)**|Stato del server.|  
 |**id**|**char(** 4 **)**|Numero di identificazione del server.|  
 |**nome_regole_di_confronto**|**sysname**|Regole di confronto del server.|  
@@ -85,7 +84,7 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-displaying-information-about-all-servers"></a>A. Visualizzazione di informazioni su tutti i server  
+### <a name="a-displaying-information-about-all-servers"></a>R. Visualizzazione di informazioni su tutti i server  
  Nell'esempio seguente vengono visualizzate informazioni su tutti i server tramite l'esecuzione di `sp_helpserver` senza parametri.  
   
 ```  

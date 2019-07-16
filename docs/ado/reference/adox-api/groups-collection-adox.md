@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5e0fe23c41f6a22a05e6a4c1d61f94a357f3c28c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e39be3cf32f04a60e554928f66cdc6123322f19c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966185"
 ---
 # <a name="groups-collection-adox"></a>Raccolta di Groups (ADOX)
 Contiene tutti archiviati [gruppo](../../../ado/reference/adox-api/group-object-adox.md) gli oggetti di un catalogo o un utente.  
@@ -31,11 +30,11 @@ Contiene tutti archiviati [gruppo](../../../ado/reference/adox-api/group-object-
 ## <a name="remarks"></a>Note  
  Il **gruppi** raccolta di un [catalogo](../../../ado/reference/adox-api/catalog-object-adox.md) rappresenta tutti gli account di gruppo del catalogo. Il **gruppi** raccolta per un [utente](../../../ado/reference/adox-api/user-object-adox.md) rappresenta solo il gruppo a cui appartiene l'utente.  
   
- Il [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) metodo per un **gruppi** raccolta sia univoca per ADOX. È possibile effettuare le operazioni seguenti:  
+ Il [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) metodo per un **gruppi** raccolta sia univoca per ADOX. È possibile:  
   
 -   Aggiungere un nuovo gruppo di sicurezza alla raccolta con il **Append** (metodo).  
   
- Le proprietà e metodi restanti sono standard per le raccolte di ADO. È possibile effettuare le operazioni seguenti:  
+ Le proprietà e metodi restanti sono standard per le raccolte di ADO. È possibile:  
   
 -   Accedere a un gruppo di nell'insieme con il [elemento](../../../ado/reference/ado-api/item-property-ado.md) proprietà.  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d21de1f416344202911f80e48afc025cd423b1e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 279492503ba8ce31e3c5d4027d8fd184c4a81587
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62995455"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045965"
 ---
 # <a name="spcantlogbeapplied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @backup_file_name = ] 'backup_file_name'` È il nome di un file di backup. *backup_file_name* is **nvarchar(128)** .  
+`[ @backup_file_name = ] 'backup_file_name'` È il nome di un file di backup. *backup_file_name* viene **nvarchar (128)** .  
   
 `[ @database_name = ] 'database_name'` È il nome del database. *database_name* è di tipo **sysname**.  
   

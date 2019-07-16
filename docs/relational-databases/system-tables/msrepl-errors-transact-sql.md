@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c6e023c1-2c32-4269-8d76-e442ea309e4b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e79b997540ecf8dbe95b3bb0423c3524b941c433
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 70d737e8c73d3e5b6876c2669fbafbc71bea66e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986475"
 ---
 # <a name="msreplerrors-transact-sql"></a>MSrepl_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "52823825"
 |**time**|**datetime**|Ora in cui si è verificato l'errore.|  
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id**|**int**|ID del tipo di origine dell'errore.|  
-|**source_name**|**Nvarchar(100)**|Nome dell'origine dell'errore.|  
+|**source_name**|**nvarchar(100)**|Nome dell'origine dell'errore.|  
 |**error_code**|**sysname**|Codice di errore.|  
 |**error_text**|**ntext**|Messaggio di errore.|  
 |**xact_seqno**|**varbinary(16)**|Numero di sequenza iniziale del log delle transazioni per il batch con errori di esecuzione. Viene utilizzato solo dagli agenti di distribuzione e corrisponde al numero di sequenza del log delle transazioni per la prima transazione nel batch con errori di esecuzione.|  

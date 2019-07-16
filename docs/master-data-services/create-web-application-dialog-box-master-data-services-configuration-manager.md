@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e97b3f75cf38842d4a9260f49d423725470b2d0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc9885ae506dcf9fff065f99ef4a8729c0cdd05d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094446"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>Finestra di dialogo Crea applicazione Web (Gestione configurazione Master Data Services)
 

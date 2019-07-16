@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 021d213ac83c02be7811fa3b5ea1ec470dfd527e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2b89f082105b0723e3e9b725d2f7941502e16d04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664331"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044326"
 ---
 # <a name="cinstance-class---setdefaults-method"></a>Classe CInstance - Metodo SetDefaults
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ object.SetDefaults(OverwriteAll)
   
 #### <a name="parameters"></a>Parametri  
   
-|Parametro|Description|  
+|Parametro|Descrizione|  
 |---------------|-----------------|  
 |*OverwriteAll*|Valore booleano che specifica se sovrascrivere valori esistenti nell'istanza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client: **true** per sovrascrivere dati esistenti, o **false** se i dati esistenti non devono essere sovrascritti.|  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed585ea7-4d56-4df9-8dc3-53ca82382450
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2b5dac8ae14f01dd464aab42eaed42480f1e715c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 05b8f71d6f4c885c7dc64887dd92b1f600005ca7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446802"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138916"
 ---
 # <a name="inserting-rows-with-sqlbulkoperations"></a>Inserimento di righe con SQLBulkOperations
 Inserimento di dati con **SQLBulkOperations** è simile all'aggiornamento dati con **SQLBulkOperations** poiché utilizza i dati dai buffer di applicazione associate.  

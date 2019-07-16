@@ -6,13 +6,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 96b791d98aa7fee588e4f72b76a733f48917f77a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce4aae5c9725768a9c4c85fc7aaeaf4884dfba0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962666"
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>Eventi estesi per SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,7 +46,7 @@ Per altre informazioni su come eseguire questa operazione, vedere la sezione [ra
 
 ##  <a name="bkmk_xeventtable"></a> Tabella degli eventi estesi
 
-|Evento|Descrizione|Note|  
+|event|Descrizione|Note|  
 |-----------|-----------------|---------|  
 |connection_accept|Si verifica quando viene accettata una nuova connessione. Questo evento viene usato per registrare tutti i tentativi di connessione.||  
 |failed_launching|Avvio non riuscito.|Indica un errore.|  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 92c73f9b-3ed7-410d-9cec-2771004aae60
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 928e9ffa4701568aac8c519a23e7e371596a36eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90133b4a18876c52b9b6b6bffbe4c8c02c953e07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63242339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039884"
 ---
 # <a name="diagnostic-records"></a>Record di diagnostica
 Associato a ogni ambiente, connessione, istruzione e descrittore handle vengono *record di diagnostica*. Questi record contengono informazioni diagnostiche sull'ultima funzione chiamata che è usato un handle specifico. I record vengono sostituiti solo quando viene chiamata un'altra funzione utilizzando l'handle. Non sono previsti limiti al numero di record di diagnostica che possono essere archiviati in qualsiasi momento.  

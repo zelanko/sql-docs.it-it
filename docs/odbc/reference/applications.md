@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39d6461f-0d24-4b7d-a723-843ade15ad73
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dc655740701822d8c6ff9595327b906ee9a67026
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f15b5e8eb6eb7c63ab771030f0c31e8c9ff92724
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62734997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135681"
 ---
 # <a name="applications"></a>Applicazioni
 Un' *applicazione* è un programma che chiama l'API ODBC per accedere ai dati. Anche se sono possibili molti tipi di applicazioni, la maggior parte rientrano in tre categorie, che vengono usate come esempi in questa Guida.  

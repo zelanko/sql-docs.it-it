@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9aa68c8c0dbc702b7f0db3e3186c7ddb56266dbc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fc4f107ef1c26aa51f3f1d58f910be9721f2a51a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664967"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067830"
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce informazioni su ogni transazione replicata o di acquisizione dati delle modifiche.  
 
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**fp2p_pub_exists**|**tinyint**|Indica se la transazione si trova in un database pubblicato tramite la replica transazionale peer-to-peer. Se è true, il valore è 1; altrimenti è 0.|  
 |**db_ver**|**int**|Versione del database.|  

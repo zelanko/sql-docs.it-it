@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ab1ed7614ff315986f38d497f00687784785790b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4e15f0755cac41f0f262582417e0e22ead39f9be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213692"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124557"
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ sp_estimate_data_compression_savings
 |-----------------|---------------|-----------------|  
 |object_name|**sysname**|Nome della tabella o della vista indicizzata.|  
 |schema_name|**sysname**|Schema della tabella o della vista indicizzata.|  
-|index_id|**int**|ID di un indice:<br /><br /> 0 = heap<br /><br /> 1 = indice cluster<br /><br /> > 1 = Indice non cluster|  
+|index_id|**int**|ID di un indice:<br /><br /> 0 = heap<br /><br /> 1 = indice cluster<br /><br /> > 1 = indice non cluster|  
 |partition_number|**int**|Numero di partizioni. Per una tabella o un indice non partizionato viene restituito 1.|  
 |size_with_current_compression_setting (KB)|**bigint**|Dimensioni attuali della tabella, della partizione o dell'indice richiesto.|  
 |size_with_requested_compression_setting (KB)|**bigint**|Dimensioni stimate della tabella, della partizione o dell'indice in caso di utilizzo dell'impostazione di compressione richiesta e, se applicabile, del fattore di riempimento esistente e presupponendo che non vi sia frammentazione.|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 8e50253b7c7fb6c59b4303c528c1ef7267ccf644
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 79313d2344f6feb978a064f3fbd92e1f7bc7dce5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62706075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028888"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Mapping dei tipi di dati di Sybase ASE e SQL Server (SybaseToSQL)
 Tipi di database di Sybase Adaptive Server Enterprise (ASE) sono diversi dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tipi di database di SQL Azure. Quando si convertono oggetti di database ambiente del servizio app [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o gli oggetti di SQL Azure, è necessario specificare come eseguire il mapping di tipi di dati dall'ambiente del servizio app [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. È possibile accettare i mapping dei tipi di dati predefinito, oppure è possibile personalizzare i mapping come illustrato nelle sezioni seguenti.  
@@ -52,7 +51,7 @@ La procedura seguente illustra come eseguire il mapping di tipi di dati nel prog
   
 2.  Per aggiungere un nuovo mapping, procedere come segue:  
   
-    1.  Scegliere **Aggiungi**.  
+    1.  Fare clic su **Aggiungi**.  
   
     2.  Sotto **tipo di origine**, selezionare il tipo di dati di ambiente del servizio App per eseguire il mapping.  
   

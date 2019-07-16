@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: af2441fadc30254871a5d74209d645fc93a99456
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 2c1aaa12ed6ffb86b6e3f7979deac0e6f933dff8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533823"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124383"
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +60,10 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 `[ @fktab_catalog = ] 'fktab_catalog'` È il nome del catalogo contenente una chiave esterna. *fktab_catalog*viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- None  
+ Nessuna  
   
 ## <a name="result-sets"></a>Set di risultati  
- Vari prodotti DBMS supportano nomi di tabelle in tre parti (_catalog_**.** _schema_**.** _tabella_), adottati nel set di risultati.  
+ Vari prodotti DBMS supportano nomi di tabelle in tre parti (_catalog_ **.** _schema_ **.** _tabella_), adottati nel set di risultati.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 81cdf1738d35d89c35c34500900be79f7702f877
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ee91a2e544babdd02a22bcbe426a7fb0d770f66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63045953"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109678"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Driver di database desktop ODBC Microsoft
 ODBC è un'API che usa Structured Query Language (SQL) come lingua di accesso del database. È possibile accedere a un'ampia gamma di sistemi di gestione di database (DBMS) con lo stesso codice di origine ODBC che è direttamente incorporato nel codice sorgente dell'applicazione. Con i driver di Database Desktop ODBC di Microsoft, un utente di un'applicazione ODBC compatibile può aprire, query e aggiornare un database desktop tramite l'interfaccia ODBC.  
@@ -36,7 +35,7 @@ ODBC è un'API che usa Structured Query Language (SQL) come lingua di accesso de
   
 -   Paradox  
   
--   dBASE  
+-   file dBASE  
   
 -   Testo  
   

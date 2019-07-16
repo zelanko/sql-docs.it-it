@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f9d9530-6c04-41d9-bbe7-d91820a30066
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2bbe1636db483ad24f7744fe4d9902c520e07dbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d41fc2f01e2cfbc2b20c58ea9be640f2afd8ea0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138872"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006578"
 ---
 # <a name="edit-type-mapping-accesstosql"></a>Modificare il mapping dei tipi (AccessToSQL)
 Il **modifica del mapping dei tipi** nella finestra di dialogo consente di specificare la modalità di mapping dei tipi tra gli oggetti di database di origine e destinazione.  
@@ -37,7 +36,7 @@ Se il tipo di dati è di lunghezza variabile, i campi seguenti verranno visualiz
 **From**  
 Specificare la lunghezza minima per questo mapping. Ad esempio, per il **testo** tipo di dati, è possibile immettere 10 per specificare che questo mapping è per un intervallo di partire **text(10)** .  
   
-**Per**  
+**To**  
 Specificare la lunghezza massima consentita per questo mapping. Ad esempio, per il **testo** tipo di dati, è possibile immettere 20 per specificare che questo mapping è per un intervallo termina **text(20)** .  
   
 **Tipo di destinazione**  

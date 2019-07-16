@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6c5a65210f7789d49a05785c05df45cda7272040
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cd677e516048aa52badec7fc9875e5a5b13f25a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715929"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138661"
 ---
 # <a name="sysdmclrloadedassemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47715929"
  Gli assembly sono costituiti da file DLL di codice gestito utilizzati per definire e distribuire gli oggetti di database gestito in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ogni volta che un utente esegue uno di questi oggetti di database gestito, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il CLR caricano l'assembly in cui l'oggetto di database gestito viene definito e i relativi riferimenti. L'assembly rimane caricato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per migliorare le prestazioni. In seguito sarà infatti possibile chiamare gli oggetti di database gestito contenuti nell'assembly senza che sia necessario ricaricare l'assembly. L'assembly non viene scaricato finché la quantità di memoria in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non risulta insufficiente. Per altre informazioni sugli assembly e integrazione con CLR, vedere [ambiente CLR ospitato](../../relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md). Per altre informazioni sugli oggetti di database gestito, vedere [compilazione di oggetti di Database con Common Language Runtime &#40;/CLR&#41; integrazione](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md).  
 
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**assembly_id**|**int**|ID dell'assembly caricato. Il **assembly_id** può essere utilizzata per cercare ulteriori informazioni sull'assembly nella [Assemblies &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) vista del catalogo. Si noti che il [!INCLUDE[tsql](../../includes/tsql-md.md)] [Assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) catalogo include gli assembly nel database corrente. Il **sqs.dm_clr_loaded_assemblies** visualizzazione Mostra tutti gli assembly caricati nel server.|  
 |**appdomain_address**|**int**|Indirizzo del dominio dell'applicazione (**AppDomain**) in cui l'assembly viene caricato. Tutti gli assembly appartenenti a un singolo utente vengono sempre caricati nello stesso **AppDomain**. Il **appdomain_address** può essere utilizzato per cercare ulteriori informazioni sul **AppDomain** nel [DM clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md) visualizzazione.|  

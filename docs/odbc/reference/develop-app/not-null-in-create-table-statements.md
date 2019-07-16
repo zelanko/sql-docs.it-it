@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3fb69943-f0c9-4ed2-aa42-20440e37e49d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4147e560d953b97ecba2e707d354bb6bf2ead59b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 808cddbd805db09d1b5c356d5b5af5734a5dcc16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63254230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086323"
 ---
 # <a name="not-null-in-create-table-statements"></a>Istruzioni NOT NULL in CREATE TABLE
 Alcuni database di e in particolar modo desktop, non supportano il **non è NULL** vincolo di colonna in **CREATE TABLE** istruzioni. Per altre informazioni, vedere l'opzione SQL_NON_NULLABLE_COLUMNS nel [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descrizione della funzione.

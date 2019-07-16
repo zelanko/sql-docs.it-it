@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 68feb3b7-c01a-4f42-8df9-f9c182d89325
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3ebd6f25758f73e75fd96abb734bc7b0347d5ee0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4be5d2cacaeca7cf53caa330a126284370ec80f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63209981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088188"
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>Uso delle applicazioni a 16 bit con driver a 32 bit
 > [!IMPORTANT]  
@@ -27,7 +26,7 @@ ms.locfileid: "63209981"
   
  È possibile eseguire applicazioni a 16 bit con driver a 32 bit nel sistema basato su Windows, purché il driver a 32 bit non chiama in modo esplicito le funzioni API Win32 che creano thread. Il Windows nel sottosistema Windows (WOW) esegue le applicazioni in modalità a 16 bit e risolve le chiamate a 16 bit del sistema operativo. ODBC thunk delle chiamate a 16 bit DLL resolve dall'applicazione al driver a 32 bit. Le applicazioni a 16 bit usano l'API di Windows e driver a 32 bit usano l'API Win32.  
   
-## <a name="architecture"></a>Architecture  
+## <a name="architecture"></a>Architettura  
  La figura seguente mostra le applicazioni a 16 come comunicare con driver a 32 bit. Tra la gestione di Driver a 16 bit e il driver a 32 bit sono generici thunk delle DLL che consentono di convertire le chiamate ODBC 16 bit a chiamate ODBC 32-bit.  
   
  ![16 come&#45;di comunicare con 32 bit app&#45;i driver di bit](../../odbc/microsoft/media/sdka2.gif "sdka2")  

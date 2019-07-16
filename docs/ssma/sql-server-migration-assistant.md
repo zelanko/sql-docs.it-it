@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: a5cc32ab3579555bff85e4e18052bd0126372517
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b6c0f5d54f8a6d3ac1dd35c7d02b05e1b5900278
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240231"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083565"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 Microsoft SQL Server Migration Assistant (SSMA) è uno strumento progettato per automatizzare la migrazione del database a SQL Server da Microsoft Access, DB2, MySQL, Oracle e SAP ASE.  
@@ -78,7 +77,7 @@ La presente documentazione, incluse le applicazioni di esempio in essa contenute
   
 Obiettivo principale degli esempi inclusi nella documentazione è quello di illustrare un concetto o l'utilizzo comune di un'istruzione o di una clausola specifica. La maggior parte degli esempi non include il codice completo normalmente disponibile in un sistema completo e finale, in quanto una parte dei normali dati di convalida o la gestione degli errori vengono in genere rimossi dagli esempi per mettere in maggiore evidenza il concetto o l'istruzione specifici illustrati nell'esempio stesso. I servizi del Servizio Supporto Tecnico Clienti Microsoft non sono disponibili per gli esempi e il codice sorgente incluso.  
   
-Se non diversamente specificato, ad aziende, organizzazioni, prodotti, nomi di dominio, indirizzi di posta elettronica, persone, luoghi ed eventi citati in questo documento sono fittizio e nessuna associazione con qualsiasi società, organizzazione, prodotto, nome di dominio, indirizzo di posta elettronica persona, luogo o evento è intenzionale o può essere presupposta. Il rispetto di tutte le applicabili leggi in materia di copyright è esclusivamente a carico dell'utente. Fermi restando tutti i diritti coperti da copyright, nessuna parte di questa documentazione potrà comunque essere riprodotta o inserita in un sistema di riproduzione o trasmessa in qualsiasi forma e con qualsiasi mezzo (in formato elettronico, meccanico, fotocopia, tramite registrazione o altro) per qualsiasi scopo, senza il permesso scritto di Microsoft Corporation.  
+Se non diversamente specificato, ad aziende, organizzazioni, prodotti, nomi di dominio, indirizzi di posta elettronica, persone, luoghi ed eventi citati in questo documento sono fittizio e nessuna associazione con qualsiasi società, organizzazione, prodotto, nome di dominio, indirizzo di posta elettronica persona, luogo o evento è intenzionale o può essere presupposta. Il rispetto di tutte le leggi applicabili in materia di copyright è a esclusivo carico dell'utente. Fermi restando tutti i diritti coperti da copyright, nessuna parte di questa documentazione potrà comunque essere riprodotta o inserita in un sistema di riproduzione o trasmessa in qualsiasi forma e con qualsiasi mezzo (in formato elettronico, meccanico, fotocopia, tramite registrazione o altro) per qualsiasi scopo, senza il permesso scritto di Microsoft Corporation.  
   
 Microsoft può essere titolare di brevetti, domande di brevetto, marchi, copyright o altri diritti di proprietà intellettuale relativi all'oggetto della presente documentazione. Salvo quanto espressamente previsto in un contratto scritto di licenza Microsoft, la consegna della presente documentazione non implica la concessione di alcuna licenza su tali brevetti, marchi, copyright o altra proprietà intellettuale.  
   
