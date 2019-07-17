@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c64e89fd5d965b98b59107d6047e6f43c0bcc9b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1dffb53a2b6436725a2b7dc19dfb209a58b1134e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716709"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053119"
 ---
 # <a name="spdescribecursorcolumns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,28 +51,28 @@ sp_describe_cursor_columns
  Nome di una variabile di cursore dichiarata per ricevere l'output del cursore. *output_cursor_variable* viene **cursore**e non prevede alcuna impostazione predefinita, non essere associata ad alcun cursore al momento della chiamata di stored procedure sp_describe_cursor_columns. Il cursore restituito è di tipo scorrevole, dinamico e di sola lettura.  
   
  [ @cursor_source=] {N'local' | N'global' | N'variable'}  
- Specifica se il cursore di cui viene generato il report viene specificato utilizzando il nome di un cursore locale, di un cursore globale o di una variabile di cursore. Il parametro è **nvarchar(30)**.  
+ Specifica se il cursore di cui viene generato il report viene specificato utilizzando il nome di un cursore locale, di un cursore globale o di una variabile di cursore. Il parametro è **nvarchar(30)** .  
   
  [ @cursor_identity=] N'*local_cursor_name*'  
- Nome di un cursore creato da un'istruzione DECLARE CURSOR con la parola chiave LOCAL o impostato sul valore predefinito LOCAL. *local_cursor_name* viene **nvarchar (128)**.  
+ Nome di un cursore creato da un'istruzione DECLARE CURSOR con la parola chiave LOCAL o impostato sul valore predefinito LOCAL. *local_cursor_name* viene **nvarchar (128)** .  
   
  [ @cursor_identity=] N'*global_cursor_name*'  
- Nome di un cursore creato da un'istruzione DECLARE CURSOR con la parola chiave GLOBAL o impostato sul valore predefinito GLOBAL. *global_cursor_name* viene **nvarchar (128)**.  
+ Nome di un cursore creato da un'istruzione DECLARE CURSOR con la parola chiave GLOBAL o impostato sul valore predefinito GLOBAL. *global_cursor_name* viene **nvarchar (128)** .  
   
  *global_cursor_name* può anche essere il nome di un cursore API del server aperto da un'applicazione ODBC e quindi denominato tramite una chiamata SQLSetCursorName.  
   
  [ @cursor_identity=] N'*input_cursor_variable*'  
- Nome di una variabile di cursore associata a un cursore aperto. *input_cursor_variable* viene **nvarchar (128)**.  
+ Nome di una variabile di cursore associata a un cursore aperto. *input_cursor_variable* viene **nvarchar (128)** .  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- None  
+ Nessuna  
   
 ## <a name="cursors-returned"></a>Cursori restituiti  
  sp_describe_cursor_columns incapsula il report in un [!INCLUDE[tsql](../../includes/tsql-md.md)] **cursore** parametro di output. In questo modo i batch, le stored procedure e i trigger [!INCLUDE[tsql](../../includes/tsql-md.md)] possono elaborare l'output una riga alla volta. Questo significa inoltre che non è possibile richiamare direttamente la procedura da funzioni API del database. Il **cursore** parametro di output deve essere associato a una variabile di programma, ma le API del database non supportano l'associazione **cursore** parametri o variabili.  
   
  Nella seguente tabella viene descritto il formato del cursore restituito da sp_describe_cursor_columns.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |column_name|**sysname** (nullable)|Nome assegnato alla colonna del set di risultati. La colonna è NULL se è stata specificata senza la clausola AS.|  
 |ordinal_position|**int**|Posizione relativa della colonna a partire dalla prima colonna a sinistra del set di risultati. La prima colonna si trova nella posizione 0.|  
@@ -83,10 +82,10 @@ sp_describe_cursor_columns
 |column_precision|**tinyint**|Precisione massima della colonna in base il *bPrecision* valore in OLE DB.|  
 |column_scale|**tinyint**|Numero di cifre a destra del separatore decimale per il **numerico** oppure **decimale** i tipi di dati in base il *bScale* valore in OLE DB.|  
 |order_position|**int**|Se la colonna partecipa all'ordinamento del set di risultati, posizione della colonna nella chiave di ordinamento relativa alla prima colonna a sinistra.|  
-|order_direction|**varchar (1)**(nullable)|A = La colonna è inclusa nella chiave di ordinamento e l'ordine è crescente.<br /><br /> D = La colonna è inclusa nella chiave di ordinamento e l'ordine è decrescente.<br /><br /> NULL = La colonna non partecipa all'ordinamento.|  
+|order_direction|**varchar (1)** (nullable)|A = La colonna è inclusa nella chiave di ordinamento e l'ordine è crescente.<br /><br /> D = La colonna è inclusa nella chiave di ordinamento e l'ordine è decrescente.<br /><br /> NULL = La colonna non partecipa all'ordinamento.|  
 |hidden_column|**smallint**|0 = La colonna è inclusa nell'elenco di selezione.<br /><br /> 1 = Riservato per utilizzi futuri.|  
 |columnid|**int**|ID della colonna di base. Se la colonna del set di risultati è stata creata in base a un'espressione, columnid è -1.|  
-|objectid|**int**|ID dell'oggetto o della tabella di base che include la colonna. Se la colonna del set di risultati è stata creata in base a un'espressione, objectid è -1.|  
+|objectId|**int**|ID dell'oggetto o della tabella di base che include la colonna. Se la colonna del set di risultati è stata creata in base a un'espressione, objectid è -1.|  
 |dbid|**int**|ID del database contenente la tabella di base che include la colonna. Se la colonna del set di risultati è stata creata in base a un'espressione, dbid è -1.|  
 |dbname|**sysname**<br /><br /> (ammette valori Null)|Nome del database contenente la tabella di base che include la colonna. Se la colonna del set di risultati è stata creata in base a un'espressione, dbname è NULL.|  
   

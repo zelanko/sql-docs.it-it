@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4de00026a0d48a9850d7c13b18525c1a1d84820f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 269afec77614cdcd92e23b1fa66915c44cfa28e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511804"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069507"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>Aggiornamento di un'applicazione da MDAC a SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +77,7 @@ ms.locfileid: "52511804"
   
 -   Il provider OLE DB di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client restituisce sinonimi nei set di righe degli schemi TABLES e TABLE_INFO, con TABLE_TYPE impostato su SYNONYM.  
   
--   I valori del tipo di dati restituiti **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, **udt**, o altri tipi di oggetti di grandi dimensioni non possono essere restituiti a versioni client precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Se si desidera utilizzare questi tipi come valori restituiti, è necessario utilizzare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
+-   I valori del tipo di dati restituiti **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , **xml**, **udt**, o altri tipi di oggetti di grandi dimensioni non possono essere restituiti a versioni client precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Se si desidera utilizzare questi tipi come valori restituiti, è necessario utilizzare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 -   A differenza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, MDAC consente l'esecuzione delle istruzioni seguenti all'inizio delle transazioni manuali e implicite. L'esecuzione deve avvenire in modalità autocommit.  
   
@@ -112,7 +111,7 @@ ms.locfileid: "52511804"
   
 -   Con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, ITransactionLocal::BeginTransaction causerà una transazione deve essere avviata immediatamente. Con MDAC l'avvio della transazione viene ritardato fino all'esecuzione da parte dell'applicazione di un'istruzione che ha richiesto una transazione in modalità implicita. Per altre informazioni, vedere [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
   
--   Possono verificarsi errori quando si usa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver del Client nativo con System.Data.Odbc per accedere a un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computer server che espone nuove [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-specifici tipi di dati o funzionalità. System.Data.Odbc fornisce un'implementazione ODBC generica e successivamente non espone fornitore funzionalità o estensioni specifiche. Il driver di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client viene aggiornato per supportare a livello nativo le caratteristiche più aggiornate di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per risolvere questo problema, è possibile ripristinare MDAC o eseguire la migrazione a SqlClient.  
+-   Possono verificarsi errori quando si usa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver del Client nativo con System.Data.Odbc per accedere a un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computer server che espone nuove [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-specifici tipi di dati o funzionalità. System.Data.Odbc fornisce un'implementazione ODBC generica e successivamente non espone fornitore funzionalità o estensioni specifiche. (Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver Native Client viene aggiornato per supportare in modo nativo la versione più recente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] funzionalità.) Per risolvere questo problema, è possibile ripristinare MDAC o eseguire la migrazione a SqlClient.  
   
  Sia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client che MDAC supportano l'isolamento delle transazioni Read Committed mediante il controllo delle versioni delle righe, ma solo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client supporta l'isolamento delle transazioni snapshot. In termini di programmazione, l'isolamento della transazione Read Committed mediante il controllo delle versioni delle righe equivale a una transazione Read Committed.  
   

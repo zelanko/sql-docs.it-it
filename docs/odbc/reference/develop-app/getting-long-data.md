@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d61f6e2d5c2999a1ff7cea86d497eb4f0fb13244
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49f0023f726dd4bb290ffba1018ce2608800dd90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061599"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68216363"
 ---
 # <a name="getting-long-data"></a>Recupero di dati Long
 Definiscono DBMS *dati di tipo long* come qualsiasi carattere o dati binari in una determinata dimensione, ad esempio i 255 caratteri. Questi dati possono essere sufficientemente piccoli da archiviare in un singolo buffer, ad esempio una descrizione di parte di diverse migliaia di caratteri. Tuttavia, potrebbe essere troppo lungo per l'archiviazione in memoria, ad esempio documenti di testo lungo o bitmap. Perché questo tipo di dati non può essere archiviati in un singolo buffer, viene recuperato dal driver nelle parti con **SQLGetData** dopo gli altri dati nella riga sono stati recuperati.  

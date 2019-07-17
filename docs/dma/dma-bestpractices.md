@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: b122c8dbd5e087ab8b871eb7a29e3bb2b330acaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a717c47163e03e6430272ca44d2120c7328289e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794406"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061777"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Le procedure consigliate per l'esecuzione di Data Migration Assistant
 Questo articolo fornisce alcune procedure consigliate per l'installazione, valutazione e migrazione.

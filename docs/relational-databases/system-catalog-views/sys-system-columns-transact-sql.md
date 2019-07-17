@@ -19,30 +19,29 @@ helpviewer_keywords:
 ms.assetid: 4ab1d48a-d57a-4e76-a08c-9627eeaf4588
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2bc916f827fb190142dd07b56485b8a9d6005d94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd94f90a823ba57910809a54aed470ddd0bb0010
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775259"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108863"
 ---
 # <a name="syssystemcolumns-transact-sql"></a>sys.system_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contiene una riga per ogni colonna di oggetti di sistema che includono colonne.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID dell'oggetto a cui appartiene la colonna.|  
 |**name**|**sysname**|Nome della colonna. Valore univoco all'interno dell'oggetto.|  
 |**column_id**|**int**|ID della colonna. Valore univoco all'interno dell'oggetto.<br /><br /> È possibile che gli ID di colonna non siano sequenziali.|  
 |**system_type_id**|**tinyint**|ID del tipo di sistema della colonna.|  
 |**user_type_id**|**int**|ID del tipo di colonna definito dall'utente.<br /><br /> Per restituire il nome del tipo, aggiungere il [Sys. Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) su questa colonna vista del catalogo.|  
-|**max_length**|**smallint**|Lunghezza massima, espressa in byte, della colonna.<br /><br /> -1 = il tipo di dati della colonna **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, oppure **xml**.<br /><br /> Per la **testo** colonne, il **max_length** valore sarà 16 o il valore impostato dal **sp_tableoption** 'text in row'.|  
-|**Precisione**|**tinyint**|Precisione della colonna se la colonna è di tipo numerico. In caso contrario, 0.|  
-|**Scalabilità**|**tinyint**|Scala della colonna se la colonna è di tipo numerico. In caso contrario, 0.|  
+|**max_length**|**smallint**|Lunghezza massima, espressa in byte, della colonna.<br /><br /> -1 = il tipo di dati della colonna **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , oppure **xml**.<br /><br /> Per la **testo** colonne, il **max_length** valore sarà 16 o il valore impostato dal **sp_tableoption** 'text in row'.|  
+|**precisione**|**tinyint**|Precisione della colonna se la colonna è di tipo numerico. In caso contrario, 0.|  
+|**scala**|**tinyint**|Scala della colonna se la colonna è di tipo numerico. In caso contrario, 0.|  
 |**nome_regole_di_confronto**|**sysname**|Nome delle regole di confronto della colonna se la colonna è di tipo carattere. In caso contrario, NULL.|  
 |**is_nullable**|**bit**|1 = La colonna ammette valori Null.|  
 |**is_ansi_padded**|**bit**|1 = La colonna utilizza l'opzione ANSI_PADDING ON se è di tipo carattere, binary o variant.<br /><br /> 0 = La colonna non è di tipo carattere, binary o variant.|  

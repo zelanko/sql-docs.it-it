@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5b7a56afb2ffa11dbe4ec8937efb602c13c9599d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ad8059466ac520b6f9f793af7670cbd73b96b38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65450027"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107928"
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  Ad esempio, {00026BA1-0000-0000-C000-000000000046} è il CLSID dell'oggetto SQL-DMO **SQLServer** oggetto.  
   
- _objecttoken_ **OUTPUT**  
+ _vengono restituite le_ **OUTPUT**  
  È il token di oggetto restituito, e deve essere una variabile locale del tipo di dati **int**. Questo token, che identifica l'oggetto OLE creato e viene usato nelle chiamate per le altre procedure di automazione OLE archiviati.  
   
  *context*  
@@ -88,7 +87,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-progid"></a>A. Utilizzo di un valore ProgID  
+### <a name="a-using-progid"></a>R. Utilizzo di un valore ProgID  
  L'esempio seguente crea un SQL-DMO **SQLServer** oggetto utilizzando il ProgID.  
   
 ```  

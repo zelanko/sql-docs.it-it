@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3514f15156de2856be6e13b0df29affa23e78303
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f45fb5484d5c8c2d34cde9042018a0eb0370d29a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062728"
 ---
 # <a name="master-data-services-overview-mds"></a>Panoramica di Master Data Services (MDS)
 
@@ -57,7 +56,7 @@ In questo argomento sono descritte le principali funzionalità di organizzazione
 > [!NOTE]  
 >  Si consiglia di completare le attività seguenti in un ambiente di test e di utilizzare i dati di esempio forniti al momento dell'installazione di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Per altre informazioni, vedere [Distribuzione di modelli &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md).  
   
-|Azione|Dettagli|Argomenti correlati|  
+|Action|Dettagli|Argomenti correlati|  
 |------------|-------------|--------------------|  
 |Creare un modello|Quando si crea un modello, questo viene considerato come VERSION_1.|[Modelli &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)<br /><br /> [Creare un modello &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)|  
 |Creare entità|Creare tutte le entità che saranno necessarie per contenere i membri.|[Entità &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)<br /><br /> [Creare un'entità &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)|  

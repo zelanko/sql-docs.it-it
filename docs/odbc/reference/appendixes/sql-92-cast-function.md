@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 982f09e5-8205-41b9-98b3-8f898e24743f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db5077b9df2673593b6eaec9622aafd1d2c77234
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6682ae98f2da64f6936049bee96fe2fff2a84db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057065"
 ---
 # <a name="sql-92-cast-function"></a>Funzione SQL-92 CAST
 Il **CAST** definito in SQL-92 è equivalente alle **CONVERTIRE** funzione definita in ODBC. La sintassi di funzioni equivalenti è come segue:  

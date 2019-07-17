@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b28967d1000a8e307c99d05ea840dd62ced09fb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e6ee58a9c04c64c71ab63c3bbd639ae0c3357a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635729"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059097"
 ---
 # <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,16 +48,16 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="arguments"></a>Argomenti  
  *path*  
- Percorso dei file da leggere. *percorso* può contenere caratteri jolly e può includere il nome di un file. *percorso* viene **nvarchar(260)**. Non prevede alcun valore predefinito. Nel contesto del Database SQL di Azure, questo valore è un URL HTTP a un file in archiviazione di Azure.
+ Percorso dei file da leggere. *percorso* può contenere caratteri jolly e può includere il nome di un file. *percorso* viene **nvarchar(260)** . Non prevede alcun valore predefinito. Nel contesto del Database SQL di Azure, questo valore è un URL HTTP a un file in archiviazione di Azure.
   
  *mdpath*  
- Il percorso del file di metadati che corrisponde al file o ai file specificati dal *percorso* argomento. *mdpath* viene **nvarchar(260)**. Non prevede alcun valore predefinito. A partire da SQL Server 2016, questo parametro può essere specificato come null.
+ Il percorso del file di metadati che corrisponde al file o ai file specificati dal *percorso* argomento. *mdpath* viene **nvarchar(260)** . Non prevede alcun valore predefinito. A partire da SQL Server 2016, questo parametro può essere specificato come null.
   
 > [!NOTE]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] non richiede la *mdpath* parametro. È tuttavia disponibile per la compatibilità con i file di log generati in versioni precedenti di SQL Server.  
   
  *initial_file_name*  
- Il primo file da leggere dal *percorso*. *initial_file_name* viene **nvarchar(260)**. Non prevede alcun valore predefinito. Se **null** è specificato come argomento di tutti i file trovati in *percorso* vengono letti.  
+ Il primo file da leggere dal *percorso*. *initial_file_name* viene **nvarchar(260)** . Non prevede alcun valore predefinito. Se **null** è specificato come argomento di tutti i file trovati in *percorso* vengono letti.  
   
 > [!NOTE]  
 >  *initial_file_name* e *initial_offset* sono argomenti accoppiati. Se si specifica un valore per uno dei due argomenti, è necessario specificare un valore anche per l'altro.  
@@ -68,7 +67,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="table-returned"></a>Tabella restituita  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |module_guid|**uniqueidentifier**|GUID del modulo dell'evento. Non ammette i valori Null.|  
 |package_guid|**uniqueidentifier**|GUID del pacchetto dell'evento. Non ammette i valori Null.|  
@@ -87,7 +86,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-retrieving-data-from-file-targets"></a>A. Recupero di dati da destinazioni di file  
+### <a name="a-retrieving-data-from-file-targets"></a>R. Recupero di dati da destinazioni di file  
  Nell'esempio seguente vengono restituite tutte le righe di tutti i file. Nell'esempio le destinazioni di file e i metafile si trovano nella cartella della traccia in C:\unità.  
   
 ```  

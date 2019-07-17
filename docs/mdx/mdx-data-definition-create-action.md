@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 1e55a35144fce7b90cf4bb33cbbb82f26d8db62c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b723a706521b24c9aa216c46f617d8ff94997137
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63233614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098550"
 ---
 # <a name="mdx-data-definition---create-action"></a>Definizione dei dati MDX - CREATE ACTION
 
@@ -96,7 +95,7 @@ FOR
   
 |Tipo di chiamata|Descrizione|  
 |---------------------|-----------------|  
-|**INTERACTIVE**|L'azione deve essere richiamata dall'applicazione client tramite l'interazione dell'utente.|  
+|**INTERATTIVO**|L'azione deve essere richiamata dall'applicazione client tramite l'interazione dell'utente.|  
 |**ON_OPEN**|L'azione deve essere richiamata dall'applicazione client quando viene aperto l'oggetto di destinazione. Questo tipo di chiamata non è attualmente implementato.|  
 |**BATCH**|L'azione deve essere richiamata dall'applicazione client quando l'oggetto di destinazione è coinvolto in un'operazione batch, secondo quanto determinato dall'applicazione client. Questo tipo di chiamata non è attualmente implementato.|  
   

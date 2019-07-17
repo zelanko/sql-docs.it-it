@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f8092182bff23580936e17923985739525309097
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: d665b16c6b635da8b267ac0549ab8d918af8c06b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038925"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Contesto delle espressioni e valutazione delle query (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ ms.locfileid: "54256876"
   
 -   Se una query su un oggetto tipizzato **xml** colonna o una variabile, i componenti della raccolta di XML schema associata alla colonna o variabile vengono importati nel contesto statico. Per altre informazioni, vedere [Confrontare dati XML tipizzati con dati XML non tipizzati](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
--   Per ogni tipo atomico presente negli schemi importati, nel contesto statico viene inoltre resa disponibile una funzione di cast, come illustrato nell'esempio seguente. In questo esempio viene specificata una query su un oggetto tipizzato **xml** variabile. La raccolta di XML Schema associata alla variabile definisce un tipo atomico, myType. Corrispondente a questo tipo, una funzione di cast **myType()**, è disponibile durante l'analisi statica. L'espressione della query (`ns:myType(0)`) restituisce un valore di tipo myType.  
+-   Per ogni tipo atomico presente negli schemi importati, nel contesto statico viene inoltre resa disponibile una funzione di cast, come illustrato nell'esempio seguente. In questo esempio viene specificata una query su un oggetto tipizzato **xml** variabile. La raccolta di XML Schema associata alla variabile definisce un tipo atomico, myType. Corrispondente a questo tipo, una funzione di cast **myType()** , è disponibile durante l'analisi statica. L'espressione della query (`ns:myType(0)`) restituisce un valore di tipo myType.  
   
     ```  
     -- DROP XML SCHEMA COLLECTION SC  
@@ -153,7 +152,7 @@ ms.locfileid: "54256876"
   
 -   La modalità di compatibilità XPath non è supportata.  
   
--   Per la costruzione del codice XML, è supportata solo la modalità di costruzione con rimozione. Si tratta dell'impostazione predefinita. Pertanto, il tipo di nodo elemento costruito è della **xdt: non tipizzato** tipo e gli attributi sono dello **xdt: untypedAtomic** tipo.  
+-   Per la costruzione del codice XML, è supportata solo la modalità di costruzione con rimozione. Questa è l'impostazione predefinita. Pertanto, il tipo di nodo elemento costruito è della **xdt: non tipizzato** tipo e gli attributi sono dello **xdt: untypedAtomic** tipo.  
   
 -   È supportata solo la modalità ordinata.  
   
@@ -192,7 +191,7 @@ ms.locfileid: "54256876"
 -   Il **fn:collection()** funzione non è supportata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [XQuery Basics](../xquery/xquery-basics.md)   
+ [Nozioni fondamentali su XQuery](../xquery/xquery-basics.md)   
  [Confronto dati XML tipizzati con dati XML non tipizzati](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Raccolte di XML Schema &#40;SQL Server&#41;](../relational-databases/xml/xml-schema-collections-sql-server.md)  
   

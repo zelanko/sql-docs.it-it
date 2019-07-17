@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baf454d021f64931d06c39b49ee0a18f92841507
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b138a299edbb1e9f3a2314e92b7e77418594a711
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402855"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119326"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "52402855"
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|Numero di identificazione univoco del set di backup. Identità, chiave primaria.|  
 |**backup_set_uuid**|**uniqueidentifier**|Numero di identificazione univoco del set di backup.|  
-|**media_set_id**|**int**|Numero di identificazione univoco del set di supporti che include il set di backup. I riferimenti **backupmediaset (media_set_id)**.|  
+|**media_set_id**|**int**|Numero di identificazione univoco del set di supporti che include il set di backup. I riferimenti **backupmediaset (media_set_id)** .|  
 |**first_family_number**|**tinyint**|Numero del gruppo di supporti in cui inizia il set di backup. Può essere NULL.|  
 |**first_media_number**|**smallint**|Numero del supporto in cui inizia il set di backup. Può essere NULL.|  
 |**last_family_number**|**tinyint**|Numero del gruppo di supporti in cui termina il set di backup. Può essere NULL.|  

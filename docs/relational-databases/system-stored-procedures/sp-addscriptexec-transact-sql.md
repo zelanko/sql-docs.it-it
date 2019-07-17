@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 97e6d74a619bc19571dda69a63ac8b3caf27f6d3
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: e8ae792ba7f8422e841abbbe2f80b096497df993
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492949"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022456"
 ---
 # <a name="spaddscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_addscriptexec [ @publication = ] publication
 ## <a name="arguments"></a>Argomenti  
 `[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
-`[ @scriptfile = ] 'scriptfile'` È il percorso completo del file script SQL. *scriptfile* viene **nvarchar (4000)**, non prevede alcun valore predefinito.  
+`[ @scriptfile = ] 'scriptfile'` È il percorso completo del file script SQL. *scriptfile* viene **nvarchar (4000)** , non prevede alcun valore predefinito.  
   
 `[ @skiperror = ] 'skiperror'` Indica se l'agente di distribuzione o dell'agente di Merge verrà interrotta quando viene rilevato un errore durante l'elaborazione di script. *SkipError* viene **bit**, con un valore predefinito è 0.  
   

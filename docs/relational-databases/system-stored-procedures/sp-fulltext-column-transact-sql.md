@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4b972abd2674d88274545d1ce4394be88f43c65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e17a87a04c8c4286a66c6e7a0746f2d7de48d72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124344"
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -73,7 +72,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  Se l'indice full-text è attivo, l'eventuale processo di popolamento in corso viene arrestato. Inoltre, se in una tabella con indice full-text attivo è abilitato il rilevamento delle modifiche, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assicura che l'indice sia aggiornato. Ad esempio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arresta l'eventuale processo di popolamento in corso nella tabella, elimina l'indice esistente e avvia un nuovo popolamento.  

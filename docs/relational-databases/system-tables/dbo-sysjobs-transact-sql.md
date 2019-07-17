@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e244a6a5-54c2-47a6-8039-dd1852b0ae59
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e7735873fcad0447099c97171a940d570354552d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ea2b3196e159b19a1baaa032c622a4cf9132402
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097605"
 ---
 # <a name="dbosysjobs-transact-sql"></a>dbo.sysjobs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +41,14 @@ ms.locfileid: "62471090"
 |**start_step_id**|**int**|ID del passaggio del processo da cui deve iniziare l'esecuzione.|  
 |**category_id**|**int**|ID della categoria del processo.|  
 |**owner_sid**|**varbinary(85)**|ID di sicurezza (SID) del proprietario del processo.|  
-|**notify_level_eventlog**|**int**|**Maschera di bit** che indica in quali circostanze un evento di notifica deve essere registrato nel registro applicazioni di Microsoft Windows:<br /><br /> **0** = Never<br /><br /> **1** = in caso di esito positivo processo<br /><br /> **2** = in caso di esito negativo del processo<br /><br /> **3** = ogni volta che il completamento del processo (indipendentemente dal risultato processo)|  
-|**notify_level_email**|**int**|Maschera di bit che indica le condizioni per l'invio di un messaggio di posta elettronica di notifica al termine di un processo:<br /><br /> **0** = Never<br /><br /> **1** = in caso di esito positivo processo<br /><br /> **2** = in caso di esito negativo del processo<br /><br /> **3** = ogni volta che il completamento del processo (indipendentemente dal risultato processo)|  
-|**notify_level_netsend**|**int**|Maschera di bit che indica le condizioni per l'invio di un messaggio in rete al termine di un processo:<br /><br /> **0** = Never<br /><br /> **1** = in caso di esito positivo processo<br /><br /> **2** = in caso di esito negativo del processo<br /><br /> **3** = ogni volta che il completamento del processo (indipendentemente dal risultato processo)|  
-|**notify_level_page**|**int**|Maschera di bit che indica le condizioni per l'invio di un messaggio su cercapersone al termine di un processo:<br /><br /> **0** = Never<br /><br /> **1** = in caso di esito positivo processo<br /><br /> **2** = in caso di esito negativo del processo<br /><br /> **3** = ogni volta che il completamento del processo (indipendentemente dal risultato processo)|  
+|**notify_level_eventlog**|**int**|**Maschera di bit** che indica in quali circostanze un evento di notifica deve essere registrato nel registro applicazioni di Microsoft Windows:<br /><br /> **0** non = mai<br /><br /> **1** = in caso di esito positivo processo<br /><br /> **2** = in caso di esito negativo del processo<br /><br /> **3** = ogni volta che il completamento del processo (indipendentemente dal risultato processo)|  
+|**notify_level_email**|**int**|Maschera di bit che indica le condizioni per l'invio di un messaggio di posta elettronica di notifica al termine di un processo:<br /><br /> **0** non = mai<br /><br /> **1** = in caso di esito positivo processo<br /><br /> **2** = in caso di esito negativo del processo<br /><br /> **3** = ogni volta che il completamento del processo (indipendentemente dal risultato processo)|  
+|**notify_level_netsend**|**int**|Maschera di bit che indica le condizioni per l'invio di un messaggio in rete al termine di un processo:<br /><br /> **0** non = mai<br /><br /> **1** = in caso di esito positivo processo<br /><br /> **2** = in caso di esito negativo del processo<br /><br /> **3** = ogni volta che il completamento del processo (indipendentemente dal risultato processo)|  
+|**notify_level_page**|**int**|Maschera di bit che indica le condizioni per l'invio di un messaggio su cercapersone al termine di un processo:<br /><br /> **0** non = mai<br /><br /> **1** = in caso di esito positivo processo<br /><br /> **2** = in caso di esito negativo del processo<br /><br /> **3** = ogni volta che il completamento del processo (indipendentemente dal risultato processo)|  
 |**notify_email_operator_id**|**int**|Nome di posta elettronica dell'operatore a cui inviare la notifica.|  
 |**notify_netsend_operator_id**|**int**|ID del computer o dell'utente utilizzato quando si invia un messaggio in rete.|  
 |**notify_page_operator_id**|**int**|ID del computer o dell'utente utilizzato quando si invia un messaggio su cercapersone.|  
-|**delete_level**|**int**|**Maschera di bit** che indica in quali circostanze l'eliminazione di un processo al termine:<br /><br /> **0** = Never<br /><br /> **1** = in caso di esito positivo processo<br /><br /> **2** = in caso di esito negativo del processo<br /><br /> **3** = ogni volta che il completamento del processo (indipendentemente dal risultato processo)|  
+|**delete_level**|**int**|**Maschera di bit** che indica in quali circostanze l'eliminazione di un processo al termine:<br /><br /> **0** non = mai<br /><br /> **1** = in caso di esito positivo processo<br /><br /> **2** = in caso di esito negativo del processo<br /><br /> **3** = ogni volta che il completamento del processo (indipendentemente dal risultato processo)|  
 |**date_created**|**datetime**|Data di creazione del processo.|  
 |**date_modified**|**datetime**|Data dell'ultima modifica del processo.|  
 |**version_number**|**int**|Versione del processo.|  

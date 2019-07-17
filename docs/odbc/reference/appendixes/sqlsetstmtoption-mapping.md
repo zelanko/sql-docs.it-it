@@ -1,5 +1,5 @@
 ---
-title: SQLSetStmtOption Mapping | Microsoft Docs
+title: Mapping di SQLSetStmtOption | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6a9921aa-8a53-4668-9b13-87164062f1e5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5284fd0065e3d1b2c23725a05b71dbb5d2f0810b
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: dc4ed430b301f2b191c0586c0a54af19a2d2d526
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091674"
 ---
 # <a name="sqlsetstmtoption-mapping"></a>Mapping di SQLSetStmtOption
 Quando un'applicazione chiama **SQLSetStmtOption** tramite un database ODBC *3.x* driver, la chiamata a  

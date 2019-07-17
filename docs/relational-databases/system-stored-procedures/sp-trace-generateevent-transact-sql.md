@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a24bb05e8f10e2920bd206531723c228d6c1734
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: cfeacf9f3c18d3f80b7ad83a3697e33a5797ba22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529353"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096018"
 ---
 # <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_trace_generateevent [ @eventid = ] event_id
 ## <a name="arguments"></a>Argomenti  
 `[ @eventid = ] event_id` È l'ID dell'evento da attivare. *event_id* viene **int**, non prevede alcun valore predefinito. L'ID deve essere uno dei numeri di evento compreso tra 82 e 91, che rappresentano eventi definiti dall'utente come set con [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
-`[ @userinfo = ] 'user_info'` Stringa facoltativa definita dall'utente consiste nell'identificare il motivo per l'evento. *user_info* viene **nvarchar (128)**, con un valore predefinito è NULL.  
+`[ @userinfo = ] 'user_info'` Stringa facoltativa definita dall'utente consiste nell'identificare il motivo per l'evento. *user_info* viene **nvarchar (128)** , con un valore predefinito è NULL.  
   
 `[ @userdata = ] user_data` Contiene i dati specificati dall'utente facoltativi per l'evento. *user_data* viene **varbinary(8000**, con un valore predefinito è NULL.  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef448c39-a9ad-4f07-8ef3-65bd4cef672a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: da5a674f86228c71a26e621936dc711a688a684d
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 447a0892049317813fa9fe6986e6219922a11e28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068695"
 ---
 # <a name="calling-sqlclosecursor"></a>Chiamata di SQLCloseCursor
 In quanto **SQLCloseCursor** è quasi identico **SQLFreeStmt** con SQL_CLOSE, gestione Driver non esegue il mapping a questa funzione. Funzioni di sostituzione vengono mappate in modo che esistente ODBC *2.x* spostare facilmente le applicazioni a ODBC *3.x* usando le nuove funzioni. Tale cambiamento rende più semplice per tali applicazioni iniziare a usare nuovi ODBC *3.x* funzionalità all'interno di codice condizionale in modo modulare. **SQLCloseCursor** non rappresenta alcuna nuova funzionalità. Un'applicazione non riuscirà a ottenere alcun vantaggio spostando **SQLCloseCursor** dalla **SQLFreeStmt** con SQL_CLOSE.

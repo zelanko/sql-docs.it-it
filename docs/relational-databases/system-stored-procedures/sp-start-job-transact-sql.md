@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 85878b79ec98b3523f18ed1c5c4d3f1bf08fc540
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1b3015651dc263d95aa80e6108db2e8017e112d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526673"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032835"
 ---
 # <a name="spstartjob-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_start_job
   
 `[ @error_flag = ] error_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @server_name = ] 'server_name'` Server di destinazione in cui si desidera avviare il processo. *nome_server* viene **nvarchar (128)**, con un valore predefinito è NULL. *nome_server* deve essere uno dei server di destinazione a cui è indirizzato il processo.  
+`[ @server_name = ] 'server_name'` Server di destinazione in cui si desidera avviare il processo. *nome_server* viene **nvarchar (128)** , con un valore predefinito è NULL. *nome_server* deve essere uno dei server di destinazione a cui è indirizzato il processo.  
   
 `[ @step_name = ] 'step_name'` Il nome del passaggio da cui iniziare l'esecuzione del processo. Viene applicato solo ai processi locali. *step_name* viene **sysname**, con un valore predefinito è NULL  
   
@@ -62,7 +61,7 @@ sp_start_job
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  Questa stored procedure è nel **msdb** database.  

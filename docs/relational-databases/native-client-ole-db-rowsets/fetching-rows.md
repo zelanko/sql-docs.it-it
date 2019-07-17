@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 374ebcdb22f8e3efa04a8fc5be4134130f9e4663
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dcdb6fed061cb9f3783985d3cdf934e2d11df151
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115205"
 ---
 # <a name="fetching-rows"></a>Recupero di righe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +63,7 @@ ms.locfileid: "47785640"
   
  Al termine delle operazioni relative al set di righe, il consumer chiama il metodo **IAccessor::ReleaseAccessor** per rilasciare le funzioni di accesso e il metodo **IUnknown::Release** su tutte le interfacce esposte dal set di righe per rilasciare il set di righe. Quando il set di righe viene rilasciato, forza il rilascio delle eventuali righe o funzioni di accesso rimanenti ancora in gestione da parte del consumer.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [posizione del recupero successivo](../../relational-databases/native-client-ole-db-rowsets/fetching-rows-next-fetch-position.md)  
   

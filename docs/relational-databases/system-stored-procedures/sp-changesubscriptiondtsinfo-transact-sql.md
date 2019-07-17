@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f252d55a41def8e816e6e7843fb57574caacf385
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 55f5597af15a264d85cd31175d570cc33ee47f63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536063"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081298"
 ---
 # <a name="spchangesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] job_id` È l'ID processo dell'agente di distribuzione per la sottoscrizione push. *job_id* viene **varbinary(16)**, non prevede alcun valore predefinito. Per trovare l'ID di processo di distribuzione, eseguire **sp_helpsubscription** oppure **sp_helppullsubscription**.  
+`[ @job_id = ] job_id` È l'ID processo dell'agente di distribuzione per la sottoscrizione push. *job_id* viene **varbinary(16)** , non prevede alcun valore predefinito. Per trovare l'ID di processo di distribuzione, eseguire **sp_helpsubscription** oppure **sp_helppullsubscription**.  
   
 `[ @dts_package_name = ] 'dts_package_name'` Specifica il nome del pacchetto DTS. *dts_package_name* è un **sysname**, con un valore predefinito è NULL. Ad esempio, specificare un pacchetto denominato **DTSPub_Package**, si specificherà `@dts_package_name = N'DTSPub_Package'`.  
   
@@ -50,7 +49,7 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 > [!NOTE]  
 >  A ogni pacchetto DTS deve essere associata una password.  
   
-`[ @dts_package_location = ] 'dts_package_location'` Specifica il percorso del pacchetto. *dts_package_location* è un **nvarchar (12)**, con un valore predefinito è NULL, che indica che il percorso del pacchetto rimane invariata. Il percorso del pacchetto può essere modificato da **distributore** oppure **sottoscrittore**.  
+`[ @dts_package_location = ] 'dts_package_location'` Specifica il percorso del pacchetto. *dts_package_location* è un **nvarchar (12)** , con un valore predefinito è NULL, che indica che il percorso del pacchetto rimane invariata. Il percorso del pacchetto può essere modificato da **distributore** oppure **sottoscrittore**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

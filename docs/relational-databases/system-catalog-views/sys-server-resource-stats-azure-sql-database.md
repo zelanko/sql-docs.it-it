@@ -18,19 +18,18 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 1f3d69d8fdfffaa6573f4813392509d0ca71c684
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72e363b05e8f14dda535abd70e4218c949c42c91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133065"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>Sys.server_resource_stats (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-Restituisce i dati di archiviazione, i/o e utilizzo della CPU per un'istanza gestita di Azure SQL. I dati vengono raccolti e aggregati in intervalli di cinque minuti. È disponibile una riga per ogni 15 secondi reporting. I dati restituiti includono utilizzo della CPU, dimensioni di archiviazione, utilizzo di IO e SKU delle istanze gestito. I dati cronologici vengono mantenuti per circa 14 giorni.
+Restituisce i dati di archiviazione, i/o e utilizzo della CPU per un'istanza gestita di Azure SQL. I dati vengono raccolti e aggregati per intervalli di cinque minuti. È disponibile una riga per ogni 15 secondi reporting. I dati restituiti includono utilizzo della CPU, dimensioni di archiviazione, utilizzo di IO e SKU delle istanze gestito. I dati cronologici vengono mantenuti per circa 14 giorni.
 
 Il **sys.server_resource_stats** visualizzazione contiene diverse definizioni a seconda della versione dell'istanza gestita SQL di Azure che è associato il database. Prendere in considerazione queste differenze e le eventuali modifiche richieste dall'applicazione durante l'aggiornamento a una nuova versione del server.
  
@@ -45,13 +44,13 @@ Il **sys.server_resource_stats** visualizzazione contiene diverse definizioni a 
 |resource_name|nvarchar(128)|Nome della risorsa.|
 |sku|nvarchar(128)|Gestito istanza livello di servizio dell'istanza. Di seguito sono indicati i valori possibili: <br><ul><li>Utilizzo generico</li></ul><ul><li>Business Critical</li></ul>|
 |hardware_generation|nvarchar(128)|Identificatore di generazione di hardware: ad esempio Gen 4 o generazione 5|
-|virtual_core_count|INT|Rappresenta i numero di core virtuali per ogni istanza (8, 16 o 24 in anteprima pubblica)|
+|virtual_core_count|int|Rappresenta i numero di core virtuali per ogni istanza (8, 16 o 24 in anteprima pubblica)|
 |avg_cpu_percent|Decimal(5,2)|Utilizzo di calcolo medio in percentuale del limite del livello di servizio istanza gestita utilizzato dall'istanza. Viene calcolata come somma del tempo di CPU di tutti i pool di risorse per tutti i database nell'istanza e diviso per tempo di CPU disponibile per tale livello nell'intervallo specificato.|
-|reserved_storage_mb|BIGINT|Spazio di archiviazione per istanza riservata (quantità di spazio di archiviazione spazio quel cliente acquistato per l'istanza gestita)|
+|reserved_storage_mb|bigint|Spazio di archiviazione per istanza riservata (quantità di spazio di archiviazione spazio quel cliente acquistato per l'istanza gestita)|
 |storage_space_used_mb|Decimal(18,2)|Spazio di archiviazione usato dai file di tutti i database istanza gestita (inclusi i database utente e di sistema)|
-|io_request|BIGINT|Numero totale di operazioni fisiche dei / o entro l'intervallo|
-|io_bytes_read|BIGINT|Numero di byte fisici entro l'intervallo di lettura|
-|io_bytes_written|BIGINT|Numero di byte fisici scritti all'interno dell'intervallo|
+|io_request|bigint|Numero totale di operazioni fisiche dei / o entro l'intervallo|
+|io_bytes_read|bigint|Numero di byte fisici entro l'intervallo di lettura|
+|io_bytes_written|bigint|Numero di byte fisici scritti all'interno dell'intervallo|
 
  
 > [!TIP]  

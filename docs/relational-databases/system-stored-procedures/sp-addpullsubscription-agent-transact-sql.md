@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ef3f22ffa0456c69b7e46f8c5aadfc89f95ccc67
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 220e21713935409d7d85ecd156524883dbbace08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493493"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022459"
 ---
 # <a name="spaddpullsubscriptionagent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -127,7 +126,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!IMPORTANT]  
 >  Non usare una password vuota. Usare una password complessa. Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
   
-`[ @optional_command_line = ] 'optional_command_line'` È un prompt dei comandi facoltativo specificato per l'agente di distribuzione. Ad esempio, **- DefinitionFile** C:\Distdef.txt o **- CommitBatchSize** 10. *optional_command_line* viene **nvarchar (4000)**, con un valore predefinito di una stringa vuota.  
+`[ @optional_command_line = ] 'optional_command_line'` È un prompt dei comandi facoltativo specificato per l'agente di distribuzione. Ad esempio, **- DefinitionFile** C:\Distdef.txt o **- CommitBatchSize** 10. *optional_command_line* viene **nvarchar (4000)** , con un valore predefinito di una stringa vuota.  
   
 `[ @frequency_type = ] frequency_type` È la frequenza con cui pianificare l'agente di distribuzione. *frequency_type* viene **int**, e può essere uno dei valori seguenti.  
   
@@ -178,7 +177,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @active_end_date = ] active_end_date` La data di arresto dell'agente di distribuzione è pianificata, nel formato aaaammgg. *active_end_date* viene **int**, il valore predefinito è **0**.  
   
-`[ @distribution_jobid = ] _distribution_jobidOUTPUT` È l'ID dell'agente di distribuzione per questo processo. *distribution_jobid* viene **Binary (16)**, valore predefinito NULL che è un parametro di OUTPUT.  
+`[ @distribution_jobid = ] _distribution_jobidOUTPUT` È l'ID dell'agente di distribuzione per questo processo. *distribution_jobid* viene **Binary (16)** , valore predefinito NULL che è un parametro di OUTPUT.  
   
 `[ @encrypted_distributor_password = ] encrypted_distributor_password` L'impostazione *encrypted_distributor_password* non è più supportata. Tentativo di impostare questo **bit** parametro per **1** comporterà un errore.  
   
@@ -207,7 +206,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!NOTE]  
 >  È necessario specificare una password se *dts_package_name* è specificato.  
   
-`[ @dts_package_location = ] 'dts_package_location'` Specifica il percorso del pacchetto. *dts_package_location* è un **nvarchar (12)**, il valore predefinito è **sottoscrittore**. La posizione del pacchetto può essere **distributore** oppure **sottoscrittore**.  
+`[ @dts_package_location = ] 'dts_package_location'` Specifica il percorso del pacchetto. *dts_package_location* è un **nvarchar (12)** , il valore predefinito è **sottoscrittore**. La posizione del pacchetto può essere **distributore** oppure **sottoscrittore**.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -221,7 +220,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @job_name = ] 'job_name'` È il nome di un processo dell'agente esistente. *nome_processo* viene **sysname**, con un valore predefinito NULL. Questo parametro viene specificato solo quando la sottoscrizione verrà sincronizzata mediante un processo esistente anziché un nuovo processo creato (impostazione predefinita). Se non si è un membro del **sysadmin** ruolo predefinito del server, è necessario specificare *job_login* e *job_password* quando si specifica *job_name*.  
   
-`[ @job_login = ] 'job_login'` È l'account di accesso per l'account di Windows con cui viene eseguito l'agente. *job_login* viene **nvarchar(257)**, non prevede alcun valore predefinito. Questo account di Windows viene sempre utilizzato per le connessioni dell'agente al Sottoscrittore.  
+`[ @job_login = ] 'job_login'` È l'account di accesso per l'account di Windows con cui viene eseguito l'agente. *job_login* viene **nvarchar(257)** , non prevede alcun valore predefinito. Questo account di Windows viene sempre utilizzato per le connessioni dell'agente al Sottoscrittore.  
   
 `[ @job_password = ] 'job_password'` È la password per l'account di Windows con cui viene eseguito l'agente. *job_password* viene **sysname**, non prevede alcun valore predefinito.  
   

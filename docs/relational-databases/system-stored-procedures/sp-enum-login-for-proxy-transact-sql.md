@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
-manager: jroth
-ms.openlocfilehash: fd5b172b7029376d6f9641552315fc64e734cc8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee6b6a701d4ff81863973c4c8e098bd9ed49c967
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822636"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124675"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 
@@ -59,7 +58,7 @@ sp_enum_login_for_proxy
 |**proxy_id**|**int**|Numero di identificazione del proxy.|  
 |**proxy_name**|**sysname**|Nome del proxy.|  
 |**name**|**sysname**|Nome dell'entità di sicurezza per l'associazione.|  
-|**flags**|**int**|Tipo dell'entità di sicurezza.<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login<br /><br /> **1** = ruolo predefinito del sistema<br /><br /> **2** = ruolo del database in **msdb**|  
+|**flags**|**int**|Tipo dell'entità di sicurezza.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso<br /><br /> **1** = ruolo predefinito del sistema<br /><br /> **2** = ruolo del database in **msdb**|  
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>Note  
@@ -76,7 +75,7 @@ sp_enum_login_for_proxy
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-listing-all-associations"></a>A. Visualizzazione di un elenco di tutte le associazioni  
+### <a name="a-listing-all-associations"></a>R. Visualizzazione di un elenco di tutte le associazioni  
  Nell'esempio seguente viene visualizzato un elenco di tutte le autorizzazioni stabilite tra gli account di accesso e i proxy nell'istanza corrente.  
   
 ```sql

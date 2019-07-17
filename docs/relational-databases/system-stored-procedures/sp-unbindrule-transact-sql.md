@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 86efa9f7951277e6effdae9f59669fb7101f6f67
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b409b76d3a7c07ac03173346059f38ac616f5a87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527283"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095864"
 ---
 # <a name="spunbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +43,12 @@ sp_unbindrule [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @objname = ] 'object_name'` È il nome della tabella e colonna o tipo di dati alias da cui viene disassociata la regola. *object_name* viene **nvarchar(776)**, non prevede alcun valore predefinito. Tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si tenta innanzitutto di risolvere gli identificatori costituiti da due parti in nomi di colonne e quindi in tipi di dati alias. La disassociazione di una regola da un tipo di dati alias viene estesa anche alle colonne dello stesso tipo di dati a cui è applicata la regola. Non vengono tuttavia modificate le colonne di questo stesso tipo di dati a cui la regola è associata in modo diretto.  
+`[ @objname = ] 'object_name'` È il nome della tabella e colonna o tipo di dati alias da cui viene disassociata la regola. *object_name* viene **nvarchar(776)** , non prevede alcun valore predefinito. Tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si tenta innanzitutto di risolvere gli identificatori costituiti da due parti in nomi di colonne e quindi in tipi di dati alias. La disassociazione di una regola da un tipo di dati alias viene estesa anche alle colonne dello stesso tipo di dati a cui è applicata la regola. Non vengono tuttavia modificate le colonne di questo stesso tipo di dati a cui la regola è associata in modo diretto.  
   
 > [!NOTE]  
 >  *object_name* può contenere parentesi quadre **[]** come caratteri delimitatori degli identificatori. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md).  
   
-`[ @futureonly = ] 'futureonly_flag'` Viene utilizzato solo per disassociare una regola da un tipo di dati alias. *futureonly_flag* viene **varchar(15)**, con un valore predefinito è NULL. Quando *futureonly_flag* viene **futureonly**, le colonne esistenti di tale tipo di dati non si perdono la regola specificata.  
+`[ @futureonly = ] 'futureonly_flag'` Viene utilizzato solo per disassociare una regola da un tipo di dati alias. *futureonly_flag* viene **varchar(15)** , con un valore predefinito è NULL. Quando *futureonly_flag* viene **futureonly**, le colonne esistenti di tale tipo di dati non si perdono la regola specificata.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -66,7 +65,7 @@ sp_unbindrule [ @objname = ] 'object_name'
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-unbinding-a-rule-from-a-column"></a>A. Disassociazione di una regola da una colonna  
+### <a name="a-unbinding-a-rule-from-a-column"></a>R. Disassociazione di una regola da una colonna  
  Nell'esempio seguente la regola viene disassociata dalla colonna `startdate` di una tabella `employees`.  
   
 ```  

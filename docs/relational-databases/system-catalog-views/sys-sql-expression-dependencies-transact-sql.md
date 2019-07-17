@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4ef878879fb5c2896c45aedbf2a86f83557804c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bee68e3ba1863602d9a96635cdfa4c533a00c649
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62856101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073168"
 ---
 # <a name="syssqlexpressiondependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -73,12 +72,12 @@ ms.locfileid: "62856101"
 |Tabella|Sì*|Yes|  
 |visualizzazione|Yes|Yes|  
 |Indice filtrato|Sì**|No|  
-|Statistiche filtrate|Sì**|no|  
+|Statistiche filtrate|Sì**|No|  
 |Stored procedure*** [!INCLUDE[tsql](../../includes/tsql-md.md)]|Yes|Yes|  
 |stored procedure CLR|No|Yes|  
 |Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Yes|Yes|  
-|Funzione CLR definita dall'utente|no|Yes|  
-|Trigger CLR (DML e DDL)|No|no|  
+|Funzione CLR definita dall'utente|No|Yes|  
+|Trigger CLR (DML e DDL)|No|No|  
 |Trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Yes|No|  
 |Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di database|Yes|No|  
 |Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di server|Yes|No|  
@@ -87,7 +86,7 @@ ms.locfileid: "62856101"
 |Sinonimo|No|Yes|  
 |Tipo (alias e tipo di CLR definito dall'utente)|No|Yes|  
 |Raccolta di XML Schema|No|Yes|  
-|Funzione di partizione|No|Yes|  
+|partition (funzione)|No|Yes|  
   
  \* Una tabella viene registrata come un'entità di riferimento solo quando si fa riferimento a un [!INCLUDE[tsql](../../includes/tsql-md.md)] modulo, tipo definito dall'utente o raccolta di XML schema nella definizione di una colonna calcolata, un vincolo CHECK o un vincolo predefinito.  
   
@@ -100,7 +99,7 @@ ms.locfileid: "62856101"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-entities-that-are-referenced-by-another-entity"></a>A. Restituzione di entità con riferimenti da un'altra entità  
+### <a name="a-returning-entities-that-are-referenced-by-another-entity"></a>R. Restituzione di entità con riferimenti da un'altra entità  
  Nell'esempio seguente sono restituite le tabelle e colonne con riferimenti nella vista `Production.vProductAndDescription`. La vista dipende dalle entità (tabelle e colonne) restituite nelle colonne `referenced_entity_name` e `referenced_column_name`.  
   
 ```  

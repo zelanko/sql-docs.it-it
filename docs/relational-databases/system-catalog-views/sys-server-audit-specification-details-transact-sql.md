@@ -19,25 +19,24 @@ helpviewer_keywords:
 ms.assetid: 792724dc-402e-4b17-9f2c-029d910bf88e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98256d8c38daf33ada116e1f19578bed2c35ba3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43f5a4ca7dbad88fe98734576fd23368cc280fa2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125017"
 ---
 # <a name="sysserverauditspecificationdetails-transact-sql"></a>sys.server_audit_specification_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene informazioni sui dettagli (azioni) delle specifiche del controllo del server in un controllo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza del server. Per altre informazioni, vedere [SQL Server Audit &#40;Motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Per un elenco di tutti audit_action_id e dei relativi nomi, eseguire una query [DM audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |server_specification_id|**int**|ID della specifica del controllo del server|  
 |audit_action_id|**int**|ID dell'azione di controllo|  
 |audit_action_name|**sysname**|Nome del gruppo o dell'azione di controllo|  
-|class|**tinyint**|Riservato|  
+|classe|**tinyint**|Riservato|  
 |class_desc|**nvarchar(60)**|Riservato|  
 |major_id|**int**|Riservato|  
 |minor_id|**int**|Riservato|  

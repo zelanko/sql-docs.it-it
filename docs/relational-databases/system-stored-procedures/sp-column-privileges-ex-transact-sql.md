@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 822b017c41c9d7fbd205f25a8694e6a3ccd8d19d
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: cd4251c4b47f67d348b6978c05c07d0ae64d16c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528003"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070365"
 ---
 # <a name="spcolumnprivilegesex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,13 +58,13 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nome del qualificatore della tabella. Vari prodotti DBMS supportano nomi di tabelle in tre parti (_qualificatore_**.** _owner_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella. Questo campo può essere NULL.|  
+|**TABLE_CAT**|**sysname**|Nome del qualificatore della tabella. Vari prodotti DBMS supportano nomi di tabelle in tre parti (_qualificatore_ **.** _owner_ **.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella. Questo campo può essere NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nome del proprietario della tabella. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome dell'utente del database che ha creato la tabella. Questo campo restituisce sempre un valore.|  
 |**TABLE_NAME**|**sysname**|Nome della tabella. Questo campo restituisce sempre un valore.|  
 |**COLUMN_NAME**|**sysname**|Nome della colonna, per ogni colonna della **TABLE_NAME** restituito. Questo campo restituisce sempre un valore.|  
 |**UTENTE CHE CONCEDE**|**sysname**|Nome utente del database che ha concesso autorizzazioni al **COLUMN_NAME** per la tabella **all'utente autorizzato**. Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa colonna è sempre lo stesso come il **TABLE_OWNER**. Questo campo restituisce sempre un valore.<br /><br /> Il **GRANTOR** colonna può essere il proprietario del database (**TABLE_OWNER**) o un utente a cui il proprietario del database concesso autorizzazioni tramite la clausola WITH GRANT OPTION dell'istruzione GRANT.|  
 |**ALL'UTENTE AUTORIZZATO**|**sysname**|Nome utente del database che disponga delle autorizzazioni per questo **COLUMN_NAME** per la tabella **GRANTOR**. Questo campo restituisce sempre un valore.|  
-|**PRIVILEGE**|**varchar(** 32 **)**|Una delle autorizzazioni di colonna disponibili. Le autorizzazioni di colonna possono essere rappresentate da uno dei valori riportati di seguito o da altri valori supportati dall'origine dei dati in fase di definizione dell'implementazione:<br /><br /> Selezionare = **al BENEFICIARIO** può recuperare dati per le colonne.<br /><br /> INSERT = **all'utente autorizzato** può fornire dati per questa colonna quando vengono inserite nuove righe (per il **all'utente autorizzato**) nella tabella.<br /><br /> UPDATE = **al BENEFICIARIO** può modificare i dati della colonna.<br /><br /> I riferimenti = **al BENEFICIARIO** può fare riferimento a una colonna in una tabella esterna in una relazione chiave primaria/esterna principale. Questo tipo di relazione viene definito tramite vincoli di tabella.|  
+|**CON PRIVILEGI**|**varchar(** 32 **)**|Una delle autorizzazioni di colonna disponibili. Le autorizzazioni di colonna possono essere rappresentate da uno dei valori riportati di seguito o da altri valori supportati dall'origine dei dati in fase di definizione dell'implementazione:<br /><br /> Selezionare = **al BENEFICIARIO** può recuperare dati per le colonne.<br /><br /> INSERT = **all'utente autorizzato** può fornire dati per questa colonna quando vengono inserite nuove righe (per il **all'utente autorizzato**) nella tabella.<br /><br /> UPDATE = **al BENEFICIARIO** può modificare i dati della colonna.<br /><br /> I riferimenti = **al BENEFICIARIO** può fare riferimento a una colonna in una tabella esterna in una relazione chiave primaria/esterna principale. Questo tipo di relazione viene definito tramite vincoli di tabella.|  
 |**IS_GRANTABLE**|**varchar(** 3 **)**|Indica se il **al BENEFICIARIO** è la possibilità di concedere autorizzazioni ad altri utenti (noto anche come "Concedi" autorizzazione). I possibili valori sono YES, NO e NULL. Un valore sconosciuto, o NULL, corrisponde a un'origine dei dati per la quale questo tipo di assegnazione delle autorizzazioni non è consentito.|  
   
 ## <a name="permissions"></a>Permissions  

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cf1f5b633b432d24ea143d857dcd7fbdf72968fd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b5bd5257e06b784418625616c71cfb7d3e5510a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090659"
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "53204540"
   
 -   Trigger DDL a livello di server  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] attraverso [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -66,7 +65,7 @@ sys.dm_sql_referencing_entities (
   
  *schema_name* è obbligatoria, tranne quando la classe di riferimento è PARTITION_FUNCTION.  
   
- *schema_name.referenced_entity_name* viene **nvarchar(517)**.  
+ *schema_name.referenced_entity_name* viene **nvarchar(517)** .  
   
  *< Referenced_class >* :: = {oggetto | TIPO | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
  Classe dell'entità a cui si fa riferimento. È possibile specificare solo una classe per istruzione.  
@@ -117,7 +116,7 @@ sys.dm_sql_referencing_entities (
 |Sinonimo|No|Yes|  
 |Tipo (alias e tipo di CLR definito dall'utente)|No|Yes|  
 |Raccolta di XML Schema|No|Yes|  
-|Funzione di partizione|No|Yes|  
+|partition (funzione)|No|Yes|  
   
  \* Una tabella viene registrata come un'entità di riferimento solo quando si fa riferimento a un [!INCLUDE[tsql](../../includes/tsql-md.md)] modulo, tipo definito dall'utente o raccolta di XML schema nella definizione di una colonna calcolata, un vincolo CHECK o un vincolo predefinito.  
   
@@ -143,7 +142,7 @@ sys.dm_sql_referencing_entities (
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-the-entities-that-refer-to-a-given-entity"></a>A. Restituzione delle entità che fanno riferimento a un'entità specificata  
+### <a name="a-returning-the-entities-that-refer-to-a-given-entity"></a>R. Restituzione delle entità che fanno riferimento a un'entità specificata  
  Nell'esempio seguente vengono restituite le entità nel database corrente che fanno riferimento alla tabella specificata.  
   
 ```sql  
@@ -154,7 +153,7 @@ FROM sys.dm_sql_referencing_entities ('Production.Product', 'OBJECT');
 GO  
 ```  
   
-### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>b. Restituzione delle entità che fanno riferimento a un tipo specificato  
+### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. Restituzione delle entità che fanno riferimento a un tipo specificato  
  Nell'esempio seguente vengono restituite le entità che fanno riferimento al tipo alias `dbo.Flag`. Il set di risultati mostra che questo tipo è usato da due stored procedure. Il `dbo.Flag` tipo viene usato anche nella definizione di diverse colonne di `HumanResources.Employee` tabella; tuttavia, poiché il tipo non è presente nella definizione di una colonna calcolata, un vincolo CHECK o un vincolo predefinito nella tabella, viene restituita alcuna riga per il `HumanResources.Employee`nella tabella.  
   
 ```sql  

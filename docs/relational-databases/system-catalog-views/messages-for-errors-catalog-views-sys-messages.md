@@ -1,5 +1,5 @@
 ---
-title: sys.messages (Transact-SQL) | Microsoft Docs
+title: Sys. Messages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 215ff84696cfc3d7590777ab1a2ad0f17c48d2a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44ab2e3106610f7b7130f997e9641e4aba685fd1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62501802"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127926"
 ---
 # <a name="messages-for-errors-catalog-views---sysmessages"></a>Viste del catalogo dei messaggi (di errore) - Sys. Messages
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

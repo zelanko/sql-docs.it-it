@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e20d30b63a1cc387c6b997c8a8a11bab835e21f8
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: fb19fc3dc6b97e6381e9839c22a05ee71a93bfb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493363"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078198"
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +53,12 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ## <a name="arguments"></a>Argomenti  
 `[ @job_id = ] job_id` Numero di identificazione del processo a cui viene aggiunta la pianificazione. *job_id* viene **uniqueidentifier**, non prevede alcun valore predefinito.  
   
-`[ @job_name = ] 'job_name'` Nome del processo a cui viene aggiunta la pianificazione. *nome_processo* viene **nvarchar (128)**, non prevede alcun valore predefinito.  
+`[ @job_name = ] 'job_name'` Nome del processo a cui viene aggiunta la pianificazione. *nome_processo* viene **nvarchar (128)** , non prevede alcun valore predefinito.  
   
 > [!NOTE]  
 >  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
-`[ @name = ] 'name'` Nome della pianificazione. *nome* viene **nvarchar (128)**, non prevede alcun valore predefinito.  
+`[ @name = ] 'name'` Nome della pianificazione. *nome* viene **nvarchar (128)** , non prevede alcun valore predefinito.  
   
 `[ @enabled = ] enabled_flag` Indica lo stato corrente della pianificazione. *enabled_flag* viene **tinyint**, il valore predefinito è **1** (abilitato). Se **0**, la pianificazione non è abilitata. Quando la pianificazione è disabilitata, il processo non viene eseguito.  
   
@@ -131,7 +130,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  È possibile gestire le pianificazioni dei processi in modo indipendente dai processi. Per aggiungere una pianificazione a un processo, usare **sp_add_schedule** per creare la pianificazione e **sp_attach_schedule** per associare la pianificazione a un processo.  
