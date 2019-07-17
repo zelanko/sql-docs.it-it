@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 1b0b1d0c-5f7b-470b-bd52-8bfa922d7889
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4acf3466615548e9c88b7743c48e39d3915f9c8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5533e521ba28c0190a5be57ed7637632213d7447
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018086"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,13 +36,13 @@ ms.locfileid: "47602690"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome del tipo di dati.|  
 |**tipoX**|**tinyint**|Tipo di dati per l'archiviazione fisica.|  
 |**status**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|Tipo di dati esteso definito dall'utente. Causa un errore di overflow o restituisce NULL se il numero di tipi di dati è maggiore di 32.767.|  
-|**Lunghezza**|**smallint**|Lunghezza fisica del tipo di dati.|  
+|**length**|**smallint**|Lunghezza fisica del tipo di dati.|  
 |**xprec**|**tinyint**|Precisione interna utilizzata dal server, da non utilizzare nelle query.|  
 |**XScale**|**tinyint**|Scala interna utilizzata dal server, da non utilizzare nelle query.|  
 |**TImpossibile**|**int**|ID della stored procedure che include i controlli di integrità per questo tipo di dati.|  
@@ -57,7 +56,7 @@ ms.locfileid: "47602690"
 |**type**|**tinyint**|Tipo di dati per l'archiviazione fisica.|  
 |**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**Prec**|**smallint**|Livello di precisione per il tipo di dati.<br /><br /> -1 = **xml** o tipi di valori di grandi dimensioni.|  
-|**Scalabilità**|**tinyint**|Scala per il tipo di dati, basata sulla precisione.<br /><br /> NULL = Tipo di dati non numerico.|  
+|**scala**|**tinyint**|Scala per il tipo di dati, basata sulla precisione.<br /><br /> NULL = Tipo di dati non numerico.|  
 |**regole di confronto**|**sysname**|Se di tipo carattere, **regole di confronto** regole di confronto del database corrente; in caso contrario, è NULL.|  
   
 ## <a name="see-also"></a>Vedere anche  

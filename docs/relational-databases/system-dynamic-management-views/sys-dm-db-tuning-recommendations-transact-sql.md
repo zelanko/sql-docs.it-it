@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21756cadbfb924e95edd261942f018fb6aef6a4c
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: dbee7422bdf58d753c31c7aa57a81bc4b29d2568
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226518"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096232"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_tuning\_recommendations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "54226518"
   
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene filtrata.
 
-| **Nome colonna** | **Data type** | **Descrizione** |
+| **Nome colonna** | **Tipo di dati** | **Descrizione** |
 | --- | --- | --- |
 | **name** | **nvarchar(4000)** | Nome univoco della raccomandazione. |
 | **type** | **nvarchar(4000)** | Il nome dell'opzione ottimizzazione automatica che ha generato la raccomandazione, ad esempio, `FORCE_LAST_GOOD_PLAN` |
@@ -73,7 +72,7 @@ ms.locfileid: "54226518"
 
 Documento JSON in `state` colonna contiene il motivo per cui viene descritto il motivo per cui è l'indicazione dello stato corrente. I valori del campo motivo potrebbero essere: 
 
-| Motivo | Descrizione |
+| `Reason` | Descrizione |
 |--------|-------------|
 | `SchemaChanged` | Raccomandazione è scaduta perché lo schema di una tabella cui viene fatto riferimento viene modificato. |
 | `StatisticsChanged`| Indicazione scaduto a causa della modifica di statistiche in una tabella cui viene fatto riferimento. |

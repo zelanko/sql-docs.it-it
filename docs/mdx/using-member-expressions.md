@@ -8,20 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 7abc83ae3483afedaa540c8fdcff0383af6ae994
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41ff63d47a62b9b83fb583c55ff2405638de22cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251452"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097108"
 ---
 # <a name="using-member-expressions"></a>Utilizzo delle espressioni di membro
 
 
   Un'espressione di membro contiene un identificatore di membro, una funzione per i membri o un'espressione che può essere convertita in un membro.  
   
- Gli identificatori di membro possono avere molti formati diversi. Il formato più semplice di un identificatore di membro è costituito dal nome del membro. Ad esempio:   
+ Gli identificatori di membro possono avere molti formati diversi. Il formato più semplice di un identificatore di membro è costituito dal nome del membro. Ad esempio:  
   
 ```  
 SELECT Amount ON 0  

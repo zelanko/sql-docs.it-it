@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6ca4142ca78d0842b535036e99464b9a1b7dc2c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7bcedfb666b5fffb2f31b6bf73ee02972ea30067
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097678"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  Nella tabella seguente vengono descritte le proprietà della pubblicazione che è possibile modificare e le limitazioni previste per i valori di tali proprietà.  
   
-|Proprietà|Value|Descrizione|  
+|Proprietà|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Le sottoscrizioni anonime sono consentite.|  
 ||**false**|Le sottoscrizioni anonime non sono consentite.|  
@@ -103,9 +102,9 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**replicate_ddl**|**1**|Le istruzioni DDL (Data Definition Language) eseguite nel server di pubblicazione vengono replicate.|  
 ||**0**|Non viene eseguita la replica delle istruzioni DDL.|  
 |**retention**||Si tratta di un' **int** che rappresenta il numero della *retention_period_unit* unità per cui si desidera salvare le modifiche per la pubblicazione specificata. Se la sottoscrizione non viene sincronizzata entro il periodo di memorizzazione specificato e se le modifiche che tale sottoscrizione avrebbe dovuto ricevere sono state rimosse tramite un'operazione di rimozione nel server di distribuzione, la sottoscrizione scade e pertanto dovrà essere reinizializzata. Il periodo di memorizzazione massimo consentito è il periodo compreso tra la data corrente e 31 dicembre 9999.<br /><br /> Nota: Il periodo di memorizzazione per le pubblicazioni di tipo merge è caratterizzato da un periodo di tolleranza di 24 ore per consentire l'adeguamento dei Sottoscrittori appartenenti a fusi orari diversi.|  
-|**retention_period_unit**|**day**|Il periodo di memorizzazione è specificato in giorni.|  
+|**retention_period_unit**|**giorno**|Il periodo di memorizzazione è specificato in giorni.|  
 ||**week**|Il periodo di memorizzazione è specificato in settimane.|  
-||**month**|Il periodo di memorizzazione è specificato in mesi.|  
+||**mese**|Il periodo di memorizzazione è specificato in mesi.|  
 ||**year**|Il periodo di memorizzazione è specificato in anni.|  
 |**snapshot_in_defaultfolder**|**true**|I file di snapshot sono memorizzati nella cartella snapshot predefinita.|  
 ||**false**|I file di snapshot sono archiviati nel percorso alternativo specificato da *alt_snapshot_folder*. Tale combinazione indica che i file di snapshot vengono archiviati sia nella posizione predefinita che in posizioni alternative.|  

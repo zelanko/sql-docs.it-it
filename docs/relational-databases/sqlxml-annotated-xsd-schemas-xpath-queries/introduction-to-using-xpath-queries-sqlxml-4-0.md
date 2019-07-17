@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57029e2aad7497e68eba2b2007102654f6aa58e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa7b7004f1cfca9a1fbec27742af7df515c05c59
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013356"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073355"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introduzione all'utilizzo di query XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -108,10 +107,10 @@ ms.locfileid: "63013356"
   
 |Funzionalità|Elemento|  
 |-------------|----------|  
-|Assi|**ancestor**, **ancestor-or-self**, **descendant**, **descendant-or-self (//)** , **following**, **following-sibling**, **namespace**, **preceding**, **preceding-sibling**|  
+|Assi|**predecessore**, **ancestor-or-self**, **discendenti**, **descendant-or-self (/ /)** , **seguenti**,  **successivi**, **dello spazio dei nomi**, **precedente**, **pari livello precedenti**|  
 |Predicati con valori numerici||  
 |Operatori aritmetici|mod|  
-|Funzioni nodo|**ancestor**, **ancestor-or-self**, **descendant**, **descendant-or-self (//)** , **following**, **following-sibling**, **namespace**, **preceding**, **preceding-sibling**|  
+|Funzioni nodo|**predecessore**, **ancestor-or-self**, **discendenti**, **descendant-or-self (/ /)** , **seguenti**,  **successivi**, **dello spazio dei nomi**, **precedente**, **pari livello precedenti**|  
 |Funzioni per i valori stringa|**String ()** , **Concat ()** , **starts-with**, **Contains ()** , **substring-before()** ,  **substring-after()** , **substring ()** , **string-length()** , **normalize()** , **Translate)**|  
 |funzioni booleane|**lang()**|  
 |Funzioni numeriche|**sum()** , **floor()** , **ceiling()** , **round()**|  

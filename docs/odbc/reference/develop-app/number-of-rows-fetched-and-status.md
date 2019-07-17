@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a069b979-5108-4905-932f-8ae8e7905ff2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab4830ddd56335959dd7049a1dabdcc3a0354213
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc1f556873221faa3f86c5272120a786f6f25025
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086328"
 ---
 # <a name="number-of-rows-fetched-and-status"></a>Numero di righe recuperate e stato
 Se è stato impostato l'attributo di istruzione SQL_ATTR_ROWS_FETCHED_PTR, specifica un buffer che restituisce il numero di righe recuperate dalla chiamata a **SQLFetch** oppure **SQLFetchScroll**e le righe di errore. (Questo numero è un conteggio di tutte le righe che non è stato SQL_ROW_NO_ROWS). Dopo una chiamata a **SQLBulkOperations** oppure **SQLSetPos**, il buffer contiene il numero di righe interessate da un'operazione bulk eseguita dalla funzione. Se è stato impostato l'attributo di istruzione vengono impostati SQL_ATTR_ROW_STATUS_PTR, **SQLFetch** oppure **SQLFetchScroll** restituisce il *matrice di stato di riga,* che fornisce lo stato di ogni riga restituita. Entrambi i buffer a cui fa riferimento a questi campi vengono allocati dall'applicazione e popolati dal driver. Un'applicazione deve assicurarsi che questi puntatori rimangono validi fino a quando il cursore è chiuso.  

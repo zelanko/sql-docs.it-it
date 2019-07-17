@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 244e8935a580a8febc483673d6d747b6cc4b7b1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659249"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122629"
 ---
 # <a name="sysfnmypermissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +46,12 @@ fn_my_permissions ( securable , 'securable_class' )
  Nome dell'entità a protezione diretta. Se l'entità a sicurezza diretta è il server o un database, questo valore deve essere impostato su NULL. *securable* è un'espressione scalare di tipo **sysname**. *entità a protezione diretta* può essere un nome in più parti.  
   
  «*securable Class*»  
- Nome della classe dell'entità a sicurezza diretta per cui vengono elencate le autorizzazioni. *securable_class* è un **sysname**. *securable_class* deve essere uno dei seguenti: APPLICATION ROLE, ASSEMBLY, chiave asimmetrica, certificato, contratto, DATABASE, ENDPOINT, FULLTEXT CATALOG, account di accesso, il tipo di messaggio, oggetto, REMOTE SERVICE BINDING, ruolo, ROUTE, SCHEMA, SERVER, servizio , CHIAVE SIMMETRICA, TIPO, UTENTE, RACCOLTA DI XML SCHEMA.  
+ Nome della classe dell'entità a sicurezza diretta per cui vengono elencate le autorizzazioni. *securable_class* è un **sysname**. *securable_class* deve essere uno dei seguenti: RUOLO APPLICAZIONE, ASSEMBLY, CHIAVE ASIMMETRICA, CERTIFICATO, CONTRATTO, DATABASE, ENDPOINT, FULLTEXT CATALOG, ACCOUNT DI ACCESSO, IL TIPO DI MESSAGGIO, OGGETTO, ASSOCIAZIONE AL SERVIZIO REMOTO, RUOLO, ROUTE, SCHEMA, SERVER, SERVIZIO, CHIAVE SIMMETRICA, TIPO, UTENTE, RACCOLTA DI XML SCHEMA.  
   
 ## <a name="columns-returned"></a>Colonne restituite  
  Nella tabella seguente vengono elencate le colonne che **fn_my_permissions** restituisce. Ogni riga restituita descrive un'autorizzazione assegnata al contesto di sicurezza corrente per l'entità a protezione diretta. Restituisce NULL se la query non viene eseguita correttamente.  
   
-|Nome colonna|Tipo|Description|  
+|Nome colonna|type|Descrizione|  
 |-----------------|----------|-----------------|  
 |nome_entità|**sysname**|Nome dell'entità a sicurezza diretta per la quale sono state concesse le autorizzazioni valide elencate.|  
 |subentity_name|**sysname**|Nome della colonna nel caso in cui l'entità a sicurezza diretta contenga colonne. In caso contrario, NULL.|  
@@ -85,7 +84,7 @@ GO
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-listing-effective-permissions-on-the-server"></a>A. Elenco delle autorizzazioni valide per il server  
+### <a name="a-listing-effective-permissions-on-the-server"></a>R. Elenco delle autorizzazioni valide per il server  
  Nell'esempio seguente viene restituito un elenco delle autorizzazioni valide di cui il chiamante dispone per il server.  
   
 ```  

@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 9109f10d-326b-4a6d-8c97-831f60da8c4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a27e23710cb0b620152991c96516d58df8d92fca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b45e71e5501a1c294760c4e7cadba5f96b169e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748489"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078808"
 ---
 # <a name="scrolling-and-fetching-rows"></a>Scorrimento e recupero di righe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +58,7 @@ ms.locfileid: "47748489"
 |Casella di scorrimento alla fine|SQL_FETCH_LAST|  
 |Posizione casuale della casella di scorrimento|SQL_FETCH_ABSOLUTE|  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Applicazione di segnalibri alle righe in ODBC](../../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md)  
   

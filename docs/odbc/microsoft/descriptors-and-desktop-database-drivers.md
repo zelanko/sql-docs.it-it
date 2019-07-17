@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9ae2d9b5-365f-4f0a-9116-defe9498b401
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17058af1d7f0ab1e35c2d6b31c0337daed4c9e01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c0096dad8fbb4cf9847385759702e39ac074c4c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240392"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112053"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>Descrittori e driver di database desktop
 Un descrittore è una struttura di dati che contiene informazioni sui dati delle colonne o parametri dinamici. **SQLGetDescField** può essere utilizzato per recuperare i descrittori supportati elencati di seguito. I descrittori di parametri di implementazione (IPD) non vengono popolate automaticamente in quanto **SQLDescribeParam** non è supportato. I campi di descrizione che non sono disponibili tramite Jet (ad esempio SQL_DESC_BASE_TABLE_NAME) non sono inoltre supportati.  
@@ -43,7 +42,7 @@ Un descrittore è una struttura di dati che contiene informazioni sui dati delle
 |SQL_DESC_BASE_COLUMN_NAME|Supportato (nuovo)|  
 |SQL_DESC_BASE_TABLE_NAME|Supportato (nuovo)|  
 |SQL_DESC_CASE_SENSITIVE|Sempre FALSE|  
-|SQL_DESC_CATALOG_NAME|Non supportato|  
+|SQL_DESC_CATALOG_NAME|Non supportate|  
 |SQL_DESC_CONCISE_TYPE|Supportato|  
 |SQL_DESC_DATA_PTR|Supportato|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|Supportato|  
@@ -64,9 +63,9 @@ Un descrittore è una struttura di dati che contiene informazioni sui dati delle
 |SQL_DESC_PARAMETER_TYPE|Solo i parametri di input|  
 |SQL_DESC_PRECISION|Supportato|  
 |SQL_DESC_SCALE|Supportato|  
-|SQL_DESC_SCHEMA_NAME|Non supportato|  
+|SQL_DESC_SCHEMA_NAME|Non supportate|  
 |SQL_DESC_SEARCHABLE|Supportato|  
-|SQL_DESC_TABLE_NAME|Non supportato|  
+|SQL_DESC_TABLE_NAME|Non supportate|  
 |SQL_DESC_TYPE|Supportato|  
 |SQL_DESC_TYPE_NAME|Supportato|  
 |SQL_DESC_UNNAMED|Supportato|  

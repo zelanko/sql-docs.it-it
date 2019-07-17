@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 52322c9b3bf9d7b795458e379f5a8db65fcdbdee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e9baab08f4295b2c51fd942f6153cc9425dd958
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141014"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Mapping dei tipi di dati SQL Server (DB2ToSQL) e DB2
 Tipi di database DB2 sono diversi da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di database. Quando si convertono oggetti di database DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetti, è necessario specificare come eseguire il mapping di tipi di dati da DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile accettare i mapping dei tipi di dati predefinito, oppure è possibile personalizzare i mapping come illustrato nelle sezioni seguenti.  
@@ -49,7 +48,7 @@ La procedura seguente illustra come eseguire il mapping di tipi di dati nel prog
   
 2.  Per aggiungere un nuovo mapping, procedere come segue:  
   
-    1.  Scegliere **Aggiungi**.  
+    1.  Fare clic su **Aggiungi**.  
   
     2.  Sotto **tipo di origine**, selezionare il tipo di dati DB2 per eseguire il mapping.  
   

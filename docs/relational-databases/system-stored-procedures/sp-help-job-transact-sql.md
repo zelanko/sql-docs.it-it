@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 509dd27a784fd14b5aefc811065b265f37c3f6c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6c2929062451d139cc3452b6bd272dd85bac951
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62660783"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054987"
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,8 +66,8 @@ sp_help_job { [ @job_id = ] job_id
 |**ALL**|Informazioni sugli attributi del processo|  
 |**JOB**|Informazioni sul processo|  
 |**PIANIFICAZIONI**|Informazioni sulla pianificazione|  
-|**STEPS**|Informazioni sui passaggi del processo|  
-|**TARGETS**|Informazioni sul server di destinazione|  
+|**PROCEDURA**|Informazioni sui passaggi del processo|  
+|**DESTINAZIONI**|Informazioni sul server di destinazione|  
   
 `[ @job_type = ] 'job_type'` Il tipo di processo da includere nel report. *job_type* viene **varchar(12)** , con un valore predefinito è NULL. *job_type* può essere **locale** oppure **MULTISERVER**.  
   
@@ -115,8 +114,8 @@ sp_help_job { [ @job_id = ] job_id
 |**description**|**nvarchar(512)**|Descrizione del processo.|  
 |**start_step_id**|**int**|ID del passaggio del processo da cui deve iniziare l'esecuzione.|  
 |**category**|**sysname**|Categoria del processo.|  
-|**owner**|**sysname**|Proprietario del processo.|  
-|**notify_level_eventlog**|**int**|**Maschera di bit** che indica in quali circostanze un evento di notifica deve essere registrato nel registro applicazioni di Microsoft Windows. I possibili valori sono i seguenti:<br /><br /> **0** = Never<br /><br /> **1** = in caso di esito positivo del processo<br /><br /> **2** = in caso di esito negativo del processo<br /><br /> **3** = ogni volta che il completamento del processo (indipendentemente dal risultato processo)|  
+|**Proprietario**|**sysname**|Proprietario del processo.|  
+|**notify_level_eventlog**|**int**|**Maschera di bit** che indica in quali circostanze un evento di notifica deve essere registrato nel registro applicazioni di Microsoft Windows. I possibili valori sono i seguenti:<br /><br /> **0** non = mai<br /><br /> **1** = in caso di esito positivo del processo<br /><br /> **2** = in caso di esito negativo del processo<br /><br /> **3** = ogni volta che il completamento del processo (indipendentemente dal risultato processo)|  
 |**notify_level_email**|**int**|**Maschera di bit** che indica in quali circostanze deve essere inviato un messaggio di posta elettronica di notifica quando un processo viene completato. I valori possibili sono uguali a quelle per **notify_level_eventlog**.|  
 |**notify_level_netsend**|**int**|**Maschera di bit** che indica in quali circostanze deve essere inviato un messaggio di rete quando un processo viene completato. I valori possibili sono uguali a quelle per **notify_level_eventlog**.|  
 |**notify_level_page**|**int**|**Maschera di bit** che indica in quali casi una pagina deve essere inviata quando un processo viene completato. I valori possibili sono uguali a quelle per **notify_level_eventlog**.|  
@@ -129,7 +128,7 @@ sp_help_job { [ @job_id = ] job_id
 |**version_number**|**int**|Versione del processo aggiornata automaticamente in corrispondenza di ogni modifica del processo.|  
 |**last_run_date**|**int**|Data dell'ultimo avvio dell'esecuzione del processo.|  
 |**last_run_time**|**int**|Ora dell'ultimo avvio dell'esecuzione del processo.|  
-|**last_run_outcome**|**int**|Risultato dell'ultima esecuzione del processo:<br /><br /> **0** = non è riuscita<br /><br /> **1** = Succeeded<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
+|**last_run_outcome**|**int**|Risultato dell'ultima esecuzione del processo:<br /><br /> **0** = non è riuscita<br /><br /> **1** = ha avuto esito positivo<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
 |**next_run_date**|**int**|Data pianificata per la successiva esecuzione del processo.|  
 |**next_run_time**|**int**|Ora pianificata per la successiva esecuzione del processo.|  
 |**next_run_schedule_id**|**int**|ID della successiva pianificazione di esecuzione.|  
@@ -164,7 +163,7 @@ sp_help_job { [ @job_id = ] job_id
 |**retry_interval**|**int**|Intervallo di tempo in minuti che intercorre tra un tentativo e il successivo.|  
 |**os_run_priority**|**varchar(4000)**|Riservato.|  
 |**output_file_name**|**varchar(200)**|In quale comando deve essere scritto l'output di file ([!INCLUDE[tsql](../../includes/tsql-md.md)] e **CmdExec** solo per i passaggi).|  
-|**last_run_outcome**|**int**|Risultato dell'ultima esecuzione del passaggio:<br /><br /> **0** = non è riuscita<br /><br /> **1** = Succeeded<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
+|**last_run_outcome**|**int**|Risultato dell'ultima esecuzione del passaggio:<br /><br /> **0** = non è riuscita<br /><br /> **1** = ha avuto esito positivo<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
 |**last_run_duration**|**int**|Durata in secondi dell'ultima esecuzione del passaggio.|  
 |**last_run_retries**|**int**|Numero di tentativi di esecuzione del comando durante l'ultima esecuzione del passaggio.|  
 |**last_run_date**|**int**|Data di inizio dell'ultima esecuzione del passaggio.|  
@@ -178,7 +177,7 @@ sp_help_job { [ @job_id = ] job_id
 |**schedule_id**|**int**|ID della pianificazione, univoco per tutti i processi.|  
 |**schedule_name**|**sysname**|Nome della pianificazione, univoco soltanto per il processo specificato.|  
 |**enabled**|**int**|Indica se la pianificazione è attiva (**1**) o No (**0**).|  
-|**freq_type**|**int**|Valore che indica la frequenza di esecuzione del processo:<br /><br /> **1** = Once<br /><br /> **4** = giornaliera<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativa al **freq_interval**<br /><br /> **64** = vengono eseguite quando **SQLServerAgent** all'avvio del servizio.|  
+|**freq_type**|**int**|Valore che indica la frequenza di esecuzione del processo:<br /><br /> **1** = una sola volta<br /><br /> **4** = giornaliera<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativa al **freq_interval**<br /><br /> **64** = vengono eseguite quando **SQLServerAgent** all'avvio del servizio.|  
 |**freq_interval**|**int**|Giorni in cui viene eseguito il processo. Il valore dipende dal valore della **freq_type**. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_subday_type**|**Int**|Unità di misura per **freq_subday_interval**. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_subday_interval**|**int**|Numerosi **freq_subday_type** periodi intercorrere tra ogni esecuzione del processo. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
@@ -206,7 +205,7 @@ sp_help_job { [ @job_id = ] job_id
 |**last_run_date**|**int**|Data di inizio dell'ultima esecuzione del processo nel server di destinazione.|  
 |**last_run_time**|**int**|Ora di inizio dell'ultima esecuzione del processo nel server di destinazione.|  
 |**last_run_duration**|**int**|Durata dell'ultima esecuzione del processo nel server di destinazione.|  
-|**last_run_outcome**|**tinyint**|Risultato dell'ultima esecuzione del processo nel server specificato:<br /><br /> **0** = non è riuscita<br /><br /> **1** = Succeeded<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
+|**last_run_outcome**|**tinyint**|Risultato dell'ultima esecuzione del processo nel server specificato:<br /><br /> **0** = non è riuscita<br /><br /> **1** = ha avuto esito positivo<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
 |**last_outcome_message**|**nvarchar(1024)**|Messaggio visualizzato dopo l'ultima esecuzione del processo nel server di destinazione.|  
   
 ## <a name="permissions"></a>Permissions  
@@ -224,7 +223,7 @@ sp_help_job { [ @job_id = ] job_id
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-list-information-for-all-jobs"></a>A. Visualizzazione di un elenco di informazioni per tutti i processi  
+### <a name="a-list-information-for-all-jobs"></a>R. Visualizzazione di un elenco di informazioni per tutti i processi  
  Nell'esempio seguente la stored procedure `sp_help_job` viene eseguita senza parametri in modo da ottenere informazioni su tutti i processi definiti nel database `msdb`.  
   
 ```  

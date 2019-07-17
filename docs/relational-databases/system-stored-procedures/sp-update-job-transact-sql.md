@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c12e078505c8049511e59973c26d6a1417c7eae0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5428ae9130646db662c6c960f777c6a7dfe25000
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537853"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084887"
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,21 +56,21 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_id = ] job_id` Il numero di identificazione del processo da aggiornare. *job_id*is **uniqueidentifier**.  
+`[ @job_id = ] job_id` Il numero di identificazione del processo da aggiornare. *job_id*viene **uniqueidentifier**.  
   
-`[ @job_name = ] 'job_name'` Il nome del processo. *nome_processo* viene **nvarchar (128)**.  
+`[ @job_name = ] 'job_name'` Il nome del processo. *nome_processo* viene **nvarchar (128)** .  
   
 > **NOTA:** Entrambi *job_id* oppure *job_name* deve essere specificato ma non è possibile specificarli entrambi.  
   
-`[ @new_name = ] 'new_name'` Il nuovo nome per il processo. *new_name* viene **nvarchar (128)**.  
+`[ @new_name = ] 'new_name'` Il nuovo nome per il processo. *new_name* viene **nvarchar (128)** .  
   
 `[ @enabled = ] enabled` Specifica se il processo è abilitato (**1**) o non abilitato (**0**). *abilitata* viene **tinyint**.  
   
-`[ @description = ] 'description'` La descrizione del processo. *Descrizione* viene **nvarchar(512)**.  
+`[ @description = ] 'description'` La descrizione del processo. *Descrizione* viene **nvarchar(512)** .  
   
 `[ @start_step_id = ] step_id` Il numero di identificazione del primo passaggio da eseguire per il processo. *step_id* viene **int**.  
   
-`[ @category_name = ] 'category'` La categoria del processo. *category* is **nvarchar(128)**.  
+`[ @category_name = ] 'category'` La categoria del processo. *categoria* viene **nvarchar (128)** .  
   
 `[ @owner_login_name = ] 'login'` Il nome dell'account di accesso proprietario del processo. *account di accesso* viene **nvarchar (128)** solo i membri del **sysadmin** ruolo predefinito del server è possibile modificare la proprietà dei processi.  
   
@@ -90,11 +89,11 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 `[ @notify_level_page = ] page_level` Specifica quando inviare una pagina al termine del processo. *page_level* viene **int**. *page_level*Usa gli stessi valori *eventlog_level*.  
   
-`[ @notify_email_operator_name = ] 'operator_name'` Il nome dell'operatore a cui viene inviato il messaggio di posta elettronica quando *email_level* viene raggiunto. *nome_posta_elettronica* viene **nvarchar (128)**.  
+`[ @notify_email_operator_name = ] 'operator_name'` Il nome dell'operatore a cui viene inviato il messaggio di posta elettronica quando *email_level* viene raggiunto. *nome_posta_elettronica* viene **nvarchar (128)** .  
   
-`[ @notify_netsend_operator_name = ] 'netsend_operator'` Il nome dell'operatore a cui viene inviato il messaggio di rete. *netsend_operator* is **nvarchar(128)**.  
+`[ @notify_netsend_operator_name = ] 'netsend_operator'` Il nome dell'operatore a cui viene inviato il messaggio di rete. *netsend_operator* viene **nvarchar (128)** .  
   
-`[ @notify_page_operator_name = ] 'page_operator'` Il nome dell'operatore a cui viene inviata una pagina. *page_operator* viene **nvarchar (128)**.  
+`[ @notify_page_operator_name = ] 'page_operator'` Il nome dell'operatore a cui viene inviata una pagina. *page_operator* viene **nvarchar (128)** .  
   
 `[ @delete_level = ] delete_level` Specifica quando eliminare il processo. *delete_value*viene **int**. *i possibili*Usa gli stessi valori *eventlog_level*.  
   

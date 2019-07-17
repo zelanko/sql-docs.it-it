@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5e0bbf6e8befa751ee680cd97c2a29ad9f0fe084
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527693"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085281"
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ sp_help_proxy
 |Dts|Esecuzione pacchetti SSIS|  
 |PowerShell|Script di PowerShell|  
   
-`[ @name = ] 'name'` Il nome di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso per l'elenco dei proxy. Il nome è **nvarchar(256)**, con un valore predefinito è NULL. Quando *nome* omette *subsystem_name* deve essere specificato anche.  
+`[ @name = ] 'name'` Il nome di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso per l'elenco dei proxy. Il nome è **nvarchar(256)** , con un valore predefinito è NULL. Quando *nome* omette *subsystem_name* deve essere specificato anche.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -99,7 +98,7 @@ sp_help_proxy
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-listing-information-for-all-proxies"></a>A. Visualizzazione di un elenco di informazioni per tutti i proxy  
+### <a name="a-listing-information-for-all-proxies"></a>R. Visualizzazione di un elenco di informazioni per tutti i proxy  
  Nell'esempio seguente viene visualizzato un elenco di informazioni per tutti i proxy nell'istanza.  
   
 ```  

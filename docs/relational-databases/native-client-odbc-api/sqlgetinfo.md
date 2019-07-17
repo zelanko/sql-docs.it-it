@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15add88f6a244b81b13bf9f63d4a53381fe091eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3703def58bf36d7aaf6fca839658c5fad096254
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014393"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131444"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -136,7 +135,7 @@ ms.locfileid: "63014393"
 |SQL_MAX_COLUMNS_IN_GROUP_BY|16|  
 |SQL_MAX_COLUMNS_IN_INDEX|16|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|16|  
-|SQL_MAX_COLUMNS_IN_SELECT|4\.000|  
+|SQL_MAX_COLUMNS_IN_SELECT|4000|  
 |SQL_MAX_COLUMNS_IN_TABLE|250|  
 |SQL_MAX_CONCURRENT_ACTIVITIES|1|  
 |SQL_MAX_CURSOR_NAME_LEN|128|  

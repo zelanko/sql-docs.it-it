@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbf518fa74c15afbc990bf4a5c1349bdfd6c4f78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68458e8d24bd56c3293d0bf2547180394db8ee61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997913"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120446"
 ---
 # <a name="using-large-value-types"></a>Utilizzo di tipi di dati per valori di grandi dimensioni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "62997913"
   
  I tipi di dati **varchar(max)** , **varbinary(max)** e **nvarchar(max)** presenti nelle colonne con dimensioni **max** (massime) impostate come illimitate vengono rappresentati come ISLONG nei set di righe dello schema OLE DB principale e nelle interfacce che restituiscono tipi di dati colonna.  
   
- Dell'oggetto command **IAccessor** implementazione è stata modificata per consentire l'associazione come DBTYPE_IUNKNOWN. Se il consumer specifica DBTYPE_IUNKNOWN e imposta *pObject* su Null, il provider restituisce l'interfaccia **ISequentialStream** in modo che il consumer possa inviare come flusso i dati **varchar(max)** , **nvarchar(max)** o **varbinary(max)** dalle variabili di output.  
+ L'implementazione di **IAccessor** dell'oggetto comando è stata modificata per consentire l'associazione come DBTYPE_IUNKNOWN. Se il consumer specifica DBTYPE_IUNKNOWN e imposta *pObject* su Null, il provider restituisce l'interfaccia **ISequentialStream** in modo che il consumer possa inviare come flusso i dati **varchar(max)** , **nvarchar(max)** o **varbinary(max)** dalle variabili di output.  
   
  I valori dei parametri di output inviati come flusso vengono restituiti dopo tutte le righe di risultati. Se l'applicazione tenta di passare al set di risultati successivo chiamando **IMultipleResults::GetResult** senza usare tutti i valori dei parametri di output restituiti, verrà restituito DB_E_OBJECTOPEN.  
   

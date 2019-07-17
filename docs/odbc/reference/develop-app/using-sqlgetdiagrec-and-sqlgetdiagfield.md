@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1db402e7c015ef50ce47b5137e670d9f1836a326
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23b7539c32b6cb675f8616d9b8ec9db89be1208b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022147"
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>Uso di SQLGetDiagRec e SQLGetDiagField
 Le applicazioni chiamano **SQLGetDiagRec** oppure **SQLGetDiagField** per recuperare le informazioni di diagnostica. Queste funzioni accettano un handle di ambiente, connessione, istruzione o descrittore e restituiscono diagnostica dalla funzione che infine utilizzato tale handle. I dati di diagnostica registrati su un handle specifico vengono rimossi quando viene chiamata una funzione di nuovo utilizzando l'handle. Se la funzione ha restituito più record di diagnostica, l'applicazione chiama le funzioni più volte; il numero totale di record di stato viene recuperato chiamando **SQLGetDiagField** per il record di intestazione (record 0) con l'opzione SQL_DIAG_NUMBER.  

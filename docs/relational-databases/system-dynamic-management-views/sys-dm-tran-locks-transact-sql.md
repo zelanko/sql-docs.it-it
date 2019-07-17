@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5f68abdfc2458284927cab68efad9c0b23eabe4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.openlocfilehash: bf16f34ae878b03890a180c20d84ab64c6e7a34d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681989"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090598"
 ---
 # <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,9 +37,9 @@ ms.locfileid: "47681989"
 > [!NOTE]  
 > Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_tran_locks**.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**resource_type**|**nvarchar(60)**|Rappresenta il tipo di risorsa. Può essere uno dei valori seguenti: DATABASE, FILE, OBJECT, PAGE, KEY, EXTENT, RID, APPLICATION, METADATA, HOBT o ALLOCATION_UNIT.|  
+|**resource_type**|**nvarchar(60)**|Rappresenta il tipo di risorsa. I possibili valori sono i seguenti: DATABASE, FILE, oggetto, pagina, KEY, EXTENT, RID, APPLICATION, metadati, HOBT o ALLOCATION_UNIT.|  
 |**resource_subtype**|**nvarchar(60)**|Rappresenta un sottotipo di **resource_type**. È tecnicamente possibile acquisire un blocco di un sottotipo senza mantenere un blocco senza sottotipi del tipo padre. Sottotipi diversi non sono in conflitto reciproco o con il tipo padre senza sottotipi. Non tutti i tipi di risorse hanno sottotipi.|  
 |**resource_database_id**|**int**|ID del database in cui la risorsa è definita a livello di ambito. Tutte le risorse gestite da Gestione blocchi sono definite a livello di ambito dell'ID del database.|  
 |**resource_description**|**nvarchar(256)**|Descrizione della risorsa contenente solo le informazioni non disponibili in altre colonne delle risorse.|  
@@ -54,8 +53,8 @@ ms.locfileid: "47681989"
 |**request_session_id**|**int**|ID di sessione attualmente proprietario della richiesta. L'ID di sessione proprietario può cambiare per le transazioni distribuite e associate. Il valore -2 indica che la richiesta appartiene a una transazione distribuita orfana. Il valore -3 indica che la richiesta appartiene a una transazione di recupero posticipata, ad esempio una transazione per cui durante il recupero un rollback è stato posticipato poiché non poteva essere completato correttamente.|  
 |**request_exec_context_id**|**int**|ID del contesto di esecuzione del processo attualmente proprietario della richiesta.|  
 |**request_request_id**|**int**|ID della richiesta (ID batch) del processo attualmente proprietario della richiesta. Questo valore verrà modificato ogni volta che viene modificata la connessione MARS (Multiple Active Result Set) attiva per una transazione.|  
-|**request_owner_type**|**nvarchar(60)**|Tipo di entità proprietaria della richiesta. Le richieste di Gestione blocchi possono appartenere a varie entità. I valori possibili sono:<br /><br /> TRANSACTION = La richiesta appartiene a una transazione.<br /><br /> CURSOR = La richiesta appartiene a un cursore.<br /><br /> SESSION = La richiesta appartiene a una sessione utente.<br /><br /> SHARED_TRANSACTION_WORKSPACE = La richiesta appartiene alla parte condivisa dell'area di lavoro della transazione.<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = la richiesta è di proprietà della parte esclusiva dell'area di lavoro della transazione.<br /><br /> NOTIFICATION_OBJECT = la richiesta è di proprietà di un componente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interno. Questo componente ha richiesto a Gestione blocchi di inviare una notifica quando un altro componente è in attesa del blocco. La caratteristica FileTable è un componente che utilizza questo valore.<br /><br /> **Nota:** aree di lavoro vengono utilizzate internamente per mantenere attivi i blocchi per le sessioni integrate.|  
-|**request_owner_id**|**bigint**|ID del proprietario specifico della richiesta.<br /><br /> Quando una transazione è il proprietario della richiesta, questo valore contiene l'ID transazione.<br /><br /> Quando una tabella FileTable è il proprietario della richiesta **request_owner_id** presenta uno dei valori seguenti.<br /><br /> <br /><br /> -4: una tabella FileTable ha preso un blocco di database.<br /><br /> -3: una tabella FileTable ha preso un blocco di tabella.<br /><br /> Altro valore: il valore rappresenta un handle di file. Questo valore viene inoltre visualizzato come **fcb_id** nella vista a gestione dinamica [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).|  
+|**request_owner_type**|**nvarchar(60)**|Tipo di entità proprietaria della richiesta. Le richieste di Gestione blocchi possono appartenere a varie entità. I valori possibili sono:<br /><br /> TRANSACTION = La richiesta appartiene a una transazione.<br /><br /> CURSOR = La richiesta appartiene a un cursore.<br /><br /> SESSION = La richiesta appartiene a una sessione utente.<br /><br /> SHARED_TRANSACTION_WORKSPACE = La richiesta appartiene alla parte condivisa dell'area di lavoro della transazione.<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = la richiesta è di proprietà della parte esclusiva dell'area di lavoro della transazione.<br /><br /> NOTIFICATION_OBJECT = la richiesta è di proprietà di un componente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interno. Questo componente ha richiesto a Gestione blocchi di inviare una notifica quando un altro componente è in attesa del blocco. La caratteristica FileTable è un componente che utilizza questo valore.<br /><br /> **Nota:** Aree di lavoro vengono utilizzati internamente per mantenere attivi i blocchi per le sessioni integrate.|  
+|**request_owner_id**|**bigint**|ID del proprietario specifico della richiesta.<br /><br /> Quando una transazione è il proprietario della richiesta, questo valore contiene l'ID transazione.<br /><br /> Quando una tabella FileTable è il proprietario della richiesta **request_owner_id** presenta uno dei valori seguenti.<br /><br /> <br /><br /> -4: Una tabella FileTable ha richiesto un blocco di database.<br /><br /> -3: Una tabella FileTable ha richiesto un blocco di tabella.<br /><br /> Altro valore: Il valore rappresenta un handle di file. Questo valore viene inoltre visualizzato come **fcb_id** nella vista a gestione dinamica [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).|  
 |**request_owner_guid**|**uniqueidentifier**|GUID del proprietario specifico della richiesta. Questo valore viene utilizzato soltanto da una transazione distribuita nei casi in cui corrisponde al GUID MS DTC della transazione.|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Questo valore rappresenta l'ID dello spazio di blocco del richiedente. L'ID dello spazio di blocco determina se due richiedenti sono reciprocamente compatibili e possono ottenere blocchi in modalità altrimenti in conflitto.|  
 |**lock_owner_address**|**varbinary(8)**|Indirizzo di memoria della struttura dei dati interna utilizzata per tener traccia della richiesta. Questa colonna può essere unita in join il con **resource_address** colonna nelle **DM os_waiting_tasks**.|  
@@ -64,7 +63,7 @@ ms.locfileid: "47681989"
 ## <a name="permissions"></a>Permissions
 
 Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
-Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
+In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] è richiesta l'autorizzazione `VIEW DATABASE STATE` per il database.   
  
 ## <a name="remarks"></a>Note  
  Uno stato di richiesta concessa indica che un blocco è stato concesso per una risorsa al richiedente. Una richiesta in attesa indica che la richiesta non è stata ancora concessa. I seguenti tipi di richieste in attesa vengono restituiti per il **request_status** colonna:  
@@ -196,15 +195,15 @@ Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DAT
   
  Nella tabella seguente fornisce il formato del **resource_description** colonna per ogni tipo di risorsa.  
   
-|Risorsa|Formato|Description|  
+|Resource|Formato|Descrizione|  
 |--------------|------------|-----------------|  
 |DATABASE|Non applicabile|ID del database è già disponibile nel **resource_database_id** colonna.|  
 |FILE|<file_id>|ID del file rappresentato dalla risorsa.|  
 |OBJECT|<object_id>|ID dell'oggetto rappresentato dalla risorsa. Questo oggetto può essere qualsiasi oggetto elencato in **Sys. Objects**, non solo una tabella.|  
-|PAGE|<file_id>:<page_in_file>|Rappresenta l'ID di pagina e di file della pagina rappresentata dalla risorsa.|  
+|PAGE|< file_id >: < page_in_file >|Rappresenta l'ID di pagina e di file della pagina rappresentata dalla risorsa.|  
 |KEY|< hash_value >|Rappresenta un hash delle colonne chiave dalla riga rappresentata dalla risorsa.|  
-|EXTENT|<file_id>:<page_in_files>|Rappresenta l'ID di pagina e di file dell'extent rappresentato dalla risorsa. L'ID di extent corrisponde all'ID di pagina della prima pagina nell'extent.|  
-|RID|<file_id>:<page_in_file>:<row_on_page>|Rappresenta l'ID di pagina e l'ID di riga della riga rappresentata dalla risorsa. Se l'ID dell'oggetto associato è 99, la risorsa rappresenta uno degli otto slot di pagine miste nella prima pagina IAM di una catena IAM.|  
+|EXTENT|< file_id >: < page_in_files >|Rappresenta l'ID di pagina e di file dell'extent rappresentato dalla risorsa. L'ID di extent corrisponde all'ID di pagina della prima pagina nell'extent.|  
+|RID|< file_id >: < page_in_file >: < row_on_page >|Rappresenta l'ID di pagina e l'ID di riga della riga rappresentata dalla risorsa. Se l'ID dell'oggetto associato è 99, la risorsa rappresenta uno degli otto slot di pagine miste nella prima pagina IAM di una catena IAM.|  
 |APPLICATION|\<DbPrincipalId >:\<fino a 32 caratteri > :(< hash_value >)|Rappresenta l'ID dell'entità di database utilizzata per definire l'ambito della risorsa di blocco dell'applicazione. È incluso anche un massimo di 32 caratteri della stringa della risorsa corrispondente alla risorsa di blocco dell'applicazione. In certi casi, è possibile visualizzare solo 2 caratteri perché la stringa completa non è più disponibile. Ciò si verifica solo in fase di recupero del database per i blocchi dell'applicazione che vengono riacquisiti nell'ambito del processo di recupero. Il valore hash rappresenta un hash della stringa di risorsa completa corrispondente a questa risorsa di blocco dell'applicazione.|  
 |HOBT|Non applicabile|ID HoBt è incluso come le **resource_associated_entity_id**.|  
 |ALLOCATION_UNIT|Non applicabile|ID di unità di allocazione è incluso come le **resource_associated_entity_id**.|  
@@ -286,7 +285,7 @@ Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DAT
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-sysdmtranlocks-with-other-tools"></a>A. Utilizzo di sys.dm_tran_locks con altri strumenti  
+### <a name="a-using-sysdmtranlocks-with-other-tools"></a>R. Utilizzo di sys.dm_tran_locks con altri strumenti  
  L'esempio seguente illustra uno scenario in cui un'operazione di aggiornamento è bloccata da un'altra transazione. Usando **DM tran_locks** e altri strumenti, vengono fornite informazioni sulle risorse di blocco.  
   
 ```sql  

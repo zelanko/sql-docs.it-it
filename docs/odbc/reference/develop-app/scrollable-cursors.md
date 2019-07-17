@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c8a5f50-9b37-452f-8160-05f42bc4d97e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 80be6994c7094b365bc24dd135bdda6ec4e561ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 38eb4c8e5cc859297a36115ba5cc6dd2c0529304
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061608"
 ---
 # <a name="scrollable-cursors"></a>Cursori scorrevoli
 Nelle moderne applicazioni basate su schermo, l'utente scorre avanti e indietro tra i dati. Per tali applicazioni, tornare a una riga recuperata in precedenza è un problema. Una possibilità consiste nel chiudere e riaprire il cursore e quindi recuperare le righe finché il cursore raggiunge la riga necessaria. Un'altra possibilità consiste nel leggere il set di risultati, memorizzarlo nella cache in locale e implementare lo scorrimento nell'applicazione. Entrambe le possibilità funzionano bene solo con set di risultati di piccole dimensioni e la possibilità di quest'ultima è difficile da implementare. Una soluzione migliore consiste nell'usare un *cursori scorrevoli,* che può spostarsi avanti e indietro nel set di risultati.  

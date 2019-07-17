@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6d1fc46d8ccffa84ad820153a060b6b02c2deb71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 205347e9d70ae378e10245c45d2580767eafbd8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808029"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028030"
 ---
 # <a name="assemblies---designing"></a>Assembly - Progettazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47808029"
 -   Se una parte di codice gestito richiede un'autorizzazione di livello superiore, è opportuno inserirla in un assembly separato.  
   
 ## <a name="managing-assembly-security"></a>Gestione della sicurezza degli assembly  
- È possibile controllare l'accesso di un assembly alle risorse protette dalla sicurezza dall'accesso di codice .NET quando esegue codice gestito. A questo scopo, quando si crea o modifica l'assembly è necessario specificare uno dei tre set di autorizzazioni disponibili: SAFE, EXTERNAL_ACCESS oppure UNSAFE.  
+ È possibile controllare l'accesso di un assembly alle risorse protette dalla sicurezza dall'accesso di codice .NET quando esegue codice gestito. Eseguire questa operazione specificando uno dei tre set di autorizzazioni quando si crea o si modifica un assembly: -SAFE, EXTERNAL_ACCESS oppure UNSAFE.  
   
 ### <a name="safe"></a>SAFE  
  SAFE è il set di autorizzazioni predefinito ed è il più restrittivo. Il codice eseguito da un assembly con autorizzazioni SAFE non può accedere a risorse di sistema esterne, ad esempio file, la rete, variabili di ambiente o il Registro di sistema. Il codice SAFE può accedere ai dati dei database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locali o eseguire calcoli e logiche di business che non comportino l'accesso a risorse esterne ai database locali.  

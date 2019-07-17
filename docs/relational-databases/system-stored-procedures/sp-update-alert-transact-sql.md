@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54d96cf86b55a7c5a24917672bcae470a3bf7335
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: baecdca82d7edcb27196c7c43d9d071a82adf792
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529573"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084954"
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,21 +74,21 @@ sp_update_alert
   
 `[ @delay_between_responses = ] delay_between_responses` Nuovo intervallo di attesa, espresso in secondi, tra le risposte all'avviso. *delay_between_responses* viene **int**, con un valore predefinito è NULL.  
   
-`[ @notification_message = ] 'notification_message'` Testo modificato di un messaggio aggiuntivo inviato all'operatore come parte del messaggio di posta elettronica, **net send**, o notifica tramite cercapersone. *notification_message* viene **nvarchar(512)**, con un valore predefinito è NULL.  
+`[ @notification_message = ] 'notification_message'` Testo modificato di un messaggio aggiuntivo inviato all'operatore come parte del messaggio di posta elettronica, **net send**, o notifica tramite cercapersone. *notification_message* viene **nvarchar(512)** , con un valore predefinito è NULL.  
   
 `[ @include_event_description_in = ] include_event_description_in` Specifica se la descrizione del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] errore nel registro applicazioni di Windows deve essere inclusi nel messaggio di notifica. *include_event_description_in* viene **tinyint**, con un valore predefinito è NULL, e può essere uno o più dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|**0**|None|  
+|**0**|Nessuna|  
 |**1**|Posta elettronica|  
 |**2**|Cercapersone|  
 |**4**|**net send**|  
-|**7**|All|  
+|**7**|Tutti|  
   
 `[ @database_name = ] 'database'` Il nome del database in cui deve verificarsi l'errore affinché l'avviso venga generato. *database* è **sysname.** I nomi racchiusi tra parentesi quadre ([ ]) non sono ammessi. Il valore predefinito è NULL.  
   
-`[ @event_description_keyword = ] 'event_description_keyword'` Una sequenza di caratteri che deve trovarsi nella descrizione dell'errore nel log dei messaggi di errore. È possibile utilizzare i caratteri dei criteri di ricerca dell'espressione LIKE [!INCLUDE[tsql](../../includes/tsql-md.md)]. *event_description_keyword* viene **nvarchar(100)**, con un valore predefinito è NULL. Questo parametro è utile per filtrare i nomi degli oggetti (ad esempio, **% customer_table %**).  
+`[ @event_description_keyword = ] 'event_description_keyword'` Una sequenza di caratteri che deve trovarsi nella descrizione dell'errore nel log dei messaggi di errore. È possibile utilizzare i caratteri dei criteri di ricerca dell'espressione LIKE [!INCLUDE[tsql](../../includes/tsql-md.md)]. *event_description_keyword* viene **nvarchar(100)** , con un valore predefinito è NULL. Questo parametro è utile per filtrare i nomi degli oggetti (ad esempio, **% customer_table %** ).  
   
 `[ @job_id = ] job_id` ID del processo. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL. Se *job_id* omette *job_name* deve essere omessa.  
   
@@ -111,19 +110,19 @@ sp_update_alert
   
 `[ @raise_snmp_trap = ] raise_snmp_trap` Riservato.  
   
-`[ @performance_condition = ] 'performance_condition'` Un valore espresso nel formato **»***itemcomparatorvalue***'**. *performance_condition* viene **nvarchar(512)**, con un valore predefinito è NULL ed è costituito da questi elementi.  
+`[ @performance_condition = ] 'performance_condition'` Un valore espresso nel formato **»***itemcomparatorvalue***'** . *performance_condition* viene **nvarchar(512)** , con un valore predefinito è NULL ed è costituito da questi elementi.  
   
 |Componente del formato|Descrizione|  
 |--------------------|-----------------|  
 |*Elemento*|Oggetto prestazioni, contatore delle prestazioni o istanza denominata del contatore|  
-|*Criterio di confronto*|Uno degli operatori seguenti: **>**, **<**, **=**|  
+|*Criterio di confronto*|Uno degli operatori seguenti: **>** , **<** , **=**|  
 |*Valore*|Valore numerico del contatore|  
   
 `[ @category_name = ] 'category'` Il nome della categoria di avvisi. *categoria* viene **sysname** con valore predefinito è NULL.  
   
 `[ @wmi_namespace = ] 'wmi_namespace'` Lo spazio dei nomi WMI per eseguire query per gli eventi. *wmi_namespace* viene **sysname**, con un valore predefinito è NULL.  
   
-`[ @wmi_query = ] 'wmi_query'` La query che specifica l'evento WMI per l'avviso. *Wmi_query* viene **nvarchar(512)**, con un valore predefinito è NULL.  
+`[ @wmi_query = ] 'wmi_query'` La query che specifica l'evento WMI per l'avviso. *Wmi_query* viene **nvarchar(512)** , con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f3d810e66249779b2d3706e92ea39f89a0f87cff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57685731bc5eb86381816d0cbb91a4942b5bfeff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063642"
 ---
 # <a name="set-path-command"></a>SET PATH (comando)
 Specifica un percorso per la ricerca di file. Per informazioni specifiche del driver, vedere la sezione Osservazioni.  
@@ -31,7 +30,7 @@ SET PATH TO [Path]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- TO [ *Path*]  
+ DA [ *percorso*]  
  Specifica le directory in cui che si desidera eseguire la ricerca di Visual FoxPro. Utilizzare virgole o punti e virgola per separare le directory.  
   
 ## <a name="remarks"></a>Note  
@@ -53,5 +52,5 @@ SET PATH TO [Path]
 ## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo Configurazione ODBC Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)   
  [SQLColumns (Driver ODBC Visual FoxPro)](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md)   
- [SQLDriverConnect (Visual FoxPro ODBC Driver)](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)   
+ [SQLDriverConnect (Driver ODBC Visual FoxPro)](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)   
  [SQLTables (driver ODBC Visual FoxPro)](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)

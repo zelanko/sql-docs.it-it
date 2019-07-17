@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: da5b708c4dbf80a1faa7fa74f237b1cc750ea975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15c4ff470c78814745be6f3f4c8f898bf4b809ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63132322"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103055"
 ---
 # <a name="creating-script-files-mysqltosql"></a>Creazione di file di script (MySQLToSQL)
 Il primo passaggio prima di avviare l'applicazione console SSMA consiste nel creare il file di script e, se è necessario creare il file di valore della variabile e il file di connessione del server.  
@@ -91,7 +90,7 @@ Le opzioni configurabili dall'utente includono:
   
     - origine utilizzare-ultimo usato = "true" (impostazione predefinita) o server di origine = "source_servername"  
   
-    - target-use-last-used="true" (default) or target-server="target_servername"  
+    - destinazione Usa-ultimo usato = "true" (impostazione predefinita) o server di destinazione = "target_servername"  
   
     **Esempio:**  
   
@@ -205,7 +204,7 @@ Le opzioni configurabili dall'utente includono:
   
     -   Skip: La console ignora gli oggetti che esistono già nel database  
   
-    -   ask-user: Richiede l'input dell'utente ('Sì' / 'no')  
+    -   chiedere-utente: Richiede l'input dell'utente ('Sì' / 'no')  
   
     **Esempio:**  
   
@@ -297,7 +296,7 @@ Le opzioni configurabili dall'utente includono:
   
     -   Info: Tutti i livelli ad eccezione del fatto che vengono registrati i messaggi di debug.  
   
-    -   debug: Tutti i livelli di messaggi registrati.  
+    -   Eseguire il debug: Tutti i livelli di messaggi registrati.  
   
     > [!NOTE]  
     > Obbligatori vengono registrati a qualsiasi livello.  

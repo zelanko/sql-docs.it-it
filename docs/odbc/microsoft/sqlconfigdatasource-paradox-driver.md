@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 59e84c4e-debe-49d7-b97b-84c736b0c793
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad9c944af33da86e0d4f85769288f4ab7b6c369f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 33cc778d921b90a460dab6bda352fd7627d2cf7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054067"
 ---
 # <a name="sqlconfigdatasource-paradox-driver"></a>SQLConfigDataSource (driver Paradox)
 > [!NOTE]  
@@ -34,7 +33,7 @@ ms.locfileid: "62665343"
 |DEFAULTDIR|La specifica del percorso della directory.|  
 |DESCRIPTION|Una descrizione dei dati nell'origine dati.<br /><br /> Consente di impostare la stessa opzione come **descrizione** nella finestra di dialogo programma di installazione.|  
 |DRIVER|Specifica il percorso alla DLL del driver.|  
-|DRIVERID|Un ID intero per il driver.<br /><br /> 26 (paradox 3.x)<br /><br /> 282 (paradox 4.x)<br /><br /> 538 (Paradox 5.x)|  
+|DRIVERID|Un ID intero per il driver.<br /><br /> 26 (paradox 3.x)<br /><br /> 282 (paradox 4.x)<br /><br /> 538 (paradox 5.x)|  
 |ESCLUSIVO|Determina se il database verrà aperto in modalità esclusiva (accessibili da un solo utente alla volta) o condiviso in modalità (accessibili da più di un utente alla volta). Può essere true (modalità esclusiva) o false (modalità condivisa).<br /><br /> Consente di impostare la stessa opzione come **esclusivo** nella finestra di dialogo programma di installazione.|  
 |FIL|Tipo Paradox file 3.x, Paradox 4.x o Paradox 5.x|  
 |FILETYPE|Tipo di file per il driver di testo (testo).|  

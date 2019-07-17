@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 686c3f487207a430136feac2588e4b4b2dda9b1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c47104459cfe9e764c857162be0baa7c84d74a24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65476995"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133650"
 ---
 # <a name="create-an-entity-master-data-services"></a>Creare un'entità (Master Data Services)
 
@@ -61,19 +60,19 @@ ms.locfileid: "65476995"
   
      Per altre informazioni, vedere [Modificare il tipo di log delle transazioni dell'entità &#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
   
-8.  Facoltativo. Selezionare la casella di controllo **Crea valori Code automaticamente** . Per altre informazioni, vedere [Creazione di codice automatica &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md).  
+8.  facoltativo. Selezionare la casella di controllo **Crea valori Code automaticamente** . Per altre informazioni, vedere [Creazione di codice automatica &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md).  
   
-9. Facoltativo. Selezionare la casella di controllo **Abilita compressione dei dati** . La compressione di riga è attivata per impostazione predefinita. Per altre informazioni, vedere [Compressione dei dati](../relational-databases/data-compression/data-compression.md).  
+9. facoltativo. Selezionare la casella di controllo **Abilita compressione dei dati** . La compressione di riga è attivata per impostazione predefinita. Per altre informazioni, vedere [Compressione dei dati](../relational-databases/data-compression/data-compression.md).  
   
 10. Fare clic su **Salva**.  
   
 ## <a name="grid-columns"></a>Colonne della griglia  
  Per ogni entità creata, viene aggiunta alla griglia una riga con tredici colonne. Di seguito sono elencate le colonne.  
   
-|Nome|Descrizione|  
+|Name|Descrizione|  
 |----------|-----------------|  
 |Stato|Stato dell'entità. Quando si fa clic su **Salva** , viene visualizzata l'immagine seguente che indica che l'entità è in fase di aggiornamento.<br /><br /> ![Icona di aggiornamento dello stato](../master-data-services/media/mds-statusicon-updating.png "Icona di aggiornamento dello stato")<br /><br /> Se si verificano errori durante la creazione o la modifica di un'entità, viene visualizzata l'immagine seguente.<br /><br /> ![Icona di errore](../master-data-services/media/mds-statusicon-error.png "Icona di errore")<br /><br /> Se lo stato è OK, viene visualizzata l'immagine seguente.<br /><br /> ![Icona dello stato OK](../master-data-services/media/mds-statusicon-ok.png "Icona dello stato OK")|  
-|Nome|Nome dell'entità.|  
+|Name|Nome dell'entità.|  
 |Descrizione|Descrizione dell'entità.|  
 |Tabella di gestione temporanea|Nome di prefisso della tabella usata per l'archiviazione dei dati.|  
 |Tipo di log delle transazioni|Tipo di log delle transazioni dell'entità.|  
@@ -81,7 +80,7 @@ ms.locfileid: "65476995"
 |Compressione dei dati|Specifica se la compressione dei dati è abilitata per l'entità.|  
 |Destinazione di sincronizzazione|Specifica se l'entità rappresenta la destinazione di una relazione di sincronizzazione.|  
 |Abilitata per le gerarchie|Specifica se l'entità è abilitata per le operazioni con le gerarchie esplicite. Questa colonna mostra Sì se almeno una gerarchia esplicita viene creata per l'entità.|  
-|Creato da|Nome utente dell'utente che ha creato l'entità.|  
+|Created By (Creato da)|Nome utente dell'utente che ha creato l'entità.|  
 |Data creazione|Data e ora di creazione dell'entità.|  
 |Aggiornato da|Nome utente dell'ultimo utente che ha aggiornato l'entità.|  
 |Data aggiornamento|Data e ora dell'ultimo aggiornamento dell'entità.|  

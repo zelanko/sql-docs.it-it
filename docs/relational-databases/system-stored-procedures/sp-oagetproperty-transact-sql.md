@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6611998b8aa22242693ec5d44bf842671a777c98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6efc0b620dcec300b5342ea5a0f63358fcdfadc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65449722"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107883"
 ---
 # <a name="spoagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +82,7 @@ sp_OAGetProperty objecttoken , propertyname
   
  Se a tutti i valori di dati di una colonna è associato lo stesso tipo di dati, tale tipo verrà applicato all'intera colonna. Se i valori di dati di una colonna sono tipi di dati diversi, il tipo di dati della colonna viene scelto in base allo schema seguente.  
   
-||INT|FLOAT|money|datetime|varchar|NVARCHAR|  
+||int|float|money|datetime|varchar|nvarchar|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -100,7 +99,7 @@ sp_OAGetProperty objecttoken , propertyname
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-a-local-variable"></a>A. Utilizzo di una variabile locale  
+### <a name="a-using-a-local-variable"></a>R. Utilizzo di una variabile locale  
  L'esempio seguente ottiene i `HostName` proprietà (dell'oggetto creato in precedenza **SQLServer** oggetto) e lo archivia in una variabile locale.  
   
 ```  

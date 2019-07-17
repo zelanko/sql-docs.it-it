@@ -1,5 +1,5 @@
 ---
-title: = (Equal To) (MDX) | Microsoft Docs
+title: = (Uguale a) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 1fac06690d811c3ae3d4b00a82ad9088b2df4aae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 189facb54de244ff220b41ec08c8b02faf5a2c27
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139321"
 ---
 # <a name="-equal-to-mdx"></a>= (uguale a) (MDX)
 

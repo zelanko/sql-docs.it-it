@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e5c46d9051fb1760791c16c9274a1803c58c1e90
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: 9b42a6808d9cab6a3431a68bff9e29e83354a2af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785882"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090215"
 ---
 # <a name="sysdmxesessions-transact-sql"></a>sys.dm_xe_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,12 +33,12 @@ ms.locfileid: "53785882"
     
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|address|**varbinary(8)**|Indirizzo di memoria della sessione. indirizzo è univoco nel sistema locale. Non ammette i valori Null.|  
-|NAME|**nvarchar(256)**|Nome della sessione. nome è univoco nel sistema locale. Non ammette i valori Null.|  
+|Address|**varbinary(8)**|Indirizzo di memoria della sessione. indirizzo è univoco nel sistema locale. Non ammette i valori Null.|  
+|name|**nvarchar(256)**|Nome della sessione. nome è univoco nel sistema locale. Non ammette i valori Null.|  
 |pending_buffers|**int**|Numero di buffer completi in sospeso per l'elaborazione. Non ammette i valori Null.|  
-|total_regular_buffers|**int**|Numero totale di buffer standard associati alla sessione. Non ammette i valori Null.<br /><br /> Nota: I buffer standard vengono utilizzati nella maggior parte dei casi. Tali buffer sono di dimensioni sufficienti per contenere molti eventi. In genere, vengono utilizzati tre o più buffer per sessione. Il numero di buffer standard viene determinato automaticamente dal server, in base alla partizione della memoria impostata tramite l'opzione MEMORY_PARTITION_MODE. Le dimensioni dei buffer standard corrispondono al valore dell'opzione MAX_MEMORY (4 MB per impostazione predefinita) diviso per il numero di buffer. Per altre informazioni sulle MEMORY_PARTITION_MODE e MAX_MEMORY sulle opzioni, vedere [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
+|total_regular_buffers|**int**|Numero totale di buffer standard associati alla sessione. Non ammette i valori Null.<br /><br /> Nota: I buffer standard vengono usati nella maggior parte dei casi. Tali buffer sono di dimensioni sufficienti per contenere molti eventi. In genere, vengono utilizzati tre o più buffer per sessione. Il numero di buffer standard viene determinato automaticamente dal server, in base alla partizione della memoria impostata tramite l'opzione MEMORY_PARTITION_MODE. Le dimensioni dei buffer standard corrispondono al valore dell'opzione MAX_MEMORY (4 MB per impostazione predefinita) diviso per il numero di buffer. Per altre informazioni sulle MEMORY_PARTITION_MODE e MAX_MEMORY sulle opzioni, vedere [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
 |regular_buffer_size|**bigint**|Dimensione in byte dei buffer standard. Non ammette i valori Null.|  
-|total_large_buffers|**int**|Numero totale di buffer di grandi dimensioni. Non ammette i valori Null.<br /><br /> Nota: I buffer di grandi dimensioni vengono utilizzati quando un evento ha dimensioni maggiori di un buffer standard. Tali buffer sono riservati in modo esplicito per questo scopo. I buffer di grandi dimensioni vengono allocati all'avvio della sessione degli eventi e vengono ridimensionati in base all'opzione MAX_EVENT_SIZE. Per altre informazioni sull'opzione MAX_EVENT_SIZE, vedere [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
+|total_large_buffers|**int**|Numero totale di buffer di grandi dimensioni. Non ammette i valori Null.<br /><br /> Nota: Buffer di grandi dimensioni vengono usati quando un evento ha dimensioni superiore a un buffer standard. Tali buffer sono riservati in modo esplicito per questo scopo. I buffer di grandi dimensioni vengono allocati all'avvio della sessione degli eventi e vengono ridimensionati in base all'opzione MAX_EVENT_SIZE. Per altre informazioni sull'opzione MAX_EVENT_SIZE, vedere [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
 |large_buffer_size|**bigint**|Dimensione in byte dei buffer di grandi dimensioni. Non ammette i valori Null.|  
 |total_buffer_size|**bigint**|Dimensione totale in byte del buffer di memoria utilizzato per archiviare eventi per la sessione. Non ammette i valori Null.|  
 |buffer_policy_flags|**int**|Bitmap che indica il comportamento dei buffer di evento della sessione quando tutti i buffer sono completi e viene generato un nuovo evento. Non ammette i valori Null.|  

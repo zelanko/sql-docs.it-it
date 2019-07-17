@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0f892bf81811538eeb06b18feb725778464910b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1713974a8ba90474393ff9bb65f6b98a5c74b601
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528383"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054902"
 ---
 # <a name="sphelpjobsinschedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,8 +60,8 @@ sp_help_jobs_in_schedule
 |**description**|**nvarchar(512)**|Descrizione del processo.|  
 |**start_step_id**|**int**|ID del passaggio del processo da cui deve iniziare l'esecuzione.|  
 |**category**|**sysname**|Categoria del processo.|  
-|**owner**|**sysname**|Proprietario del processo.|  
-|**notify_level_eventlog**|**int**|Maschera di bit che indica le condizioni per la registrazione dell'evento di notifica nel registro applicazioni di Microsoft Windows. I possibili valori sono i seguenti:<br /><br /> **0** = Never<br /><br /> **1** = in caso di esito positivo del processo<br /><br /> **2** = in caso di esito negativo del processo<br /><br /> **3** = ogni volta che il completamento del processo (indipendentemente dal risultato processo)|  
+|**Proprietario**|**sysname**|Proprietario del processo.|  
+|**notify_level_eventlog**|**int**|Maschera di bit che indica le condizioni per la registrazione dell'evento di notifica nel registro applicazioni di Microsoft Windows. I possibili valori sono i seguenti:<br /><br /> **0** non = mai<br /><br /> **1** = in caso di esito positivo del processo<br /><br /> **2** = in caso di esito negativo del processo<br /><br /> **3** = ogni volta che il completamento del processo (indipendentemente dal risultato processo)|  
 |**notify_level_email**|**int**|Maschera di bit che indica le condizioni per l'invio di un messaggio di posta elettronica di notifica al termine di un processo. I valori possibili sono uguali a quelle per **notify_level_eventlog**.|  
 |**notify_level_netsend**|**int**|Maschera di bit che indica le condizioni per l'invio di un messaggio in rete al termine di un processo. I valori possibili sono uguali a quelle per **notify_level_eventlog**.|  
 |**notify_level_page**|**int**|Maschera di bit che indica le condizioni per l'invio di un messaggio su cercapersone al termine di un processo. I valori possibili sono uguali a quelle per **notify_level_eventlog**.|  
@@ -75,7 +74,7 @@ sp_help_jobs_in_schedule
 |**version_number**|**int**|Versione del processo aggiornata automaticamente in corrispondenza di ogni modifica del processo.|  
 |**last_run_date**|**int**|Data dell'ultimo avvio dell'esecuzione del processo.|  
 |**last_run_time**|**int**|Ora dell'ultimo avvio dell'esecuzione del processo.|  
-|**last_run_outcome**|**int**|Risultato dell'ultima esecuzione del processo:<br /><br /> **0** = non è riuscita<br /><br /> **1** = Succeeded<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
+|**last_run_outcome**|**int**|Risultato dell'ultima esecuzione del processo:<br /><br /> **0** = non è riuscita<br /><br /> **1** = ha avuto esito positivo<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
 |**next_run_date**|**int**|Data pianificata per la successiva esecuzione del processo.|  
 |**next_run_time**|**int**|Ora pianificata per la successiva esecuzione del processo.|  
 |**next_run_schedule_id**|**int**|ID della successiva pianificazione di esecuzione.|  

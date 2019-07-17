@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f76729b419fccf3d17e66ddd8ab00e8b54b1b264
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 114f1d52db15cd98298d855714c482d959e86a7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398074"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065338"
 ---
 # <a name="understanding-the-dmx-select-statement"></a>Informazioni sull'istruzione DMX Select
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -74,9 +73,9 @@ ms.locfileid: "52398074"
 |Tipo di query|Descrizione|  
 |----------------|-----------------|  
 |SELECT DISTINCT FROM  *\<modello >*|Restituisce tutti i valori di stato dal modello di data mining per la colonna specificata.<br /><br /> Per questo tipo di query il dominio dati è costituito dal modello di data mining.<br /><br /> [SELECT DISTINCT FROM &#60;modello &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [Query sul contenuto &#40;Data mining&#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
-|SELECT FROM  *\<modello >*. CONTENUTO|Restituisce il contenuto che descrive il modello di data mining.<br /><br /> Per questo tipo di query il dominio dati è costituito dal set di righe dello schema relativo al contenuto.<br /><br /> [SELECT FROM &#60;modello&#62;. CONTENUTO &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [Query sul contenuto &#40;Data mining&#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
-|SELECT FROM  *\<modello >*. DIMENSION_CONTENT|Restituisce il contenuto che descrive il modello di data mining.<br /><br /> Per questo tipo di query il dominio dati è costituito dal set di righe dello schema relativo al contenuto.<br /><br /> [SELECT FROM &#60;modello&#62;. DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)|  
-|SELECT FROM  *\<modello >*. PMML|Restituisce la rappresentazione PMML (Predictive Model Markup Language) del modello di data mining, per gli algoritmi che supportano questa funzionalità.<br /><br /> Per questo tipo di query il dominio è costituito dal set di righe dello schema relativo alla rappresentazione PMML.<br /><br /> [Set di righe DMSCHEMA_MINING_MODEL_CONTENT_PMML](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset)|  
+|SELECT FROM  *\<modello >* . CONTENUTO|Restituisce il contenuto che descrive il modello di data mining.<br /><br /> Per questo tipo di query il dominio dati è costituito dal set di righe dello schema relativo al contenuto.<br /><br /> [SELECT FROM &#60;modello&#62;. CONTENUTO &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [Query sul contenuto &#40;Data mining&#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
+|SELECT FROM  *\<modello >* . DIMENSION_CONTENT|Restituisce il contenuto che descrive il modello di data mining.<br /><br /> Per questo tipo di query il dominio dati è costituito dal set di righe dello schema relativo al contenuto.<br /><br /> [SELECT FROM &#60;modello&#62;. DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)|  
+|SELECT FROM  *\<modello >* . PMML|Restituisce la rappresentazione PMML (Predictive Model Markup Language) del modello di data mining, per gli algoritmi che supportano questa funzionalità.<br /><br /> Per questo tipo di query il dominio è costituito dal set di righe dello schema relativo alla rappresentazione PMML.<br /><br /> [Set di righe DMSCHEMA_MINING_MODEL_CONTENT_PMML](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset)|  
   
  [Selezionare i tipi di informazioni al](#Select_Types)  
   
@@ -85,7 +84,7 @@ ms.locfileid: "52398074"
   
 |Tipo di query|Descrizione|  
 |----------------|-----------------|  
-|SELECT INTO  *\<nuovo modello >*|Crea una copia del modello di data mining.<br /><br /> Per questo tipo di query il dominio è costituito dal modello di data mining.<br /><br /> [SELECT INTO &AMP;#40;DMX&AMP;#41;](../dmx/select-into-dmx.md)|  
+|SELECT INTO  *\<nuovo modello >*|Crea una copia del modello di data mining.<br /><br /> Per questo tipo di query il dominio è costituito dal modello di data mining.<br /><br /> [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md)|  
   
  [Selezionare i tipi di informazioni al](#Select_Types)  
   
@@ -94,9 +93,9 @@ ms.locfileid: "52398074"
   
 |Tipo di query|Descrizione|  
 |----------------|-----------------|  
-|SELECT FROM  *\<modello >*. CASE|Restituisce i case utilizzati per eseguire il training del modello di data mining.<br /><br /> Per questo tipo di query il dominio è costituito dal modello di data mining.<br /><br /> [SELECT FROM &#60;modello&#62;. I casi &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [Creare query drill-through tramite DMX](../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)|  
-|SELECT FROM  *\<modello >*. SAMPLE_CASES|Restituisce un case di esempio, rappresentativo dei case utilizzati per eseguire il training del modello di data mining.<br /><br /> Per questo tipo di query il dominio è costituito dal modello di data mining.<br /><br /> [SELECT FROM &#60;modello&#62;. SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)|  
-|SELECT FROM  *\<struttura >*. CASE|Restituisce le righe di dati dettagliate dalla struttura di data mining sottostante, anche se alcuni dettagli non sono stati utilizzati per eseguire il training del modello di data mining.<br /><br /> [SELECT FROM &#60;struttura&#62;. CASE](../dmx/select-from-structure-cases.md)<br /><br /> [Query drill-through &#40;Data Mining&#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)|  
+|SELECT FROM  *\<modello >* . CASE|Restituisce i case utilizzati per eseguire il training del modello di data mining.<br /><br /> Per questo tipo di query il dominio è costituito dal modello di data mining.<br /><br /> [SELECT FROM &#60;modello&#62;. I casi &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [Creare query drill-through tramite DMX](../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)|  
+|SELECT FROM  *\<modello >* . SAMPLE_CASES|Restituisce un case di esempio, rappresentativo dei case utilizzati per eseguire il training del modello di data mining.<br /><br /> Per questo tipo di query il dominio è costituito dal modello di data mining.<br /><br /> [SELECT FROM &#60;model&#62;.SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)|  
+|SELECT FROM  *\<struttura >* . CASE|Restituisce le righe di dati dettagliate dalla struttura di data mining sottostante, anche se alcuni dettagli non sono stati utilizzati per eseguire il training del modello di data mining.<br /><br /> [SELECT FROM &#60;struttura&#62;. CASE](../dmx/select-from-structure-cases.md)<br /><br /> [Query drill-through &#40;Data Mining&#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md)|  
   
  [Selezionare i tipi di informazioni al](#Select_Types)  
   

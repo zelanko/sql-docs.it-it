@@ -20,30 +20,29 @@ helpviewer_keywords:
 ms.assetid: a5dbc842-71a0-4f62-b5e0-f560a99b7f8c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a07c599c484f2efb85905be07e29a0ac89175fac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff4cd58fcd7d11679cf410c9f379b101d42ce4bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733119"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095576"
 ---
 # <a name="systypes-transact-sql"></a>sys.types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contiene una riga per ogni tipo di sistema e definito dall'utente.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome del tipo. Valore univoco all'interno dello schema.|  
 |**system_type_id**|**tinyint**|ID del tipo di sistema interno del tipo.|  
 |**user_type_id**|**int**|ID del tipo. Valore univoco all'interno del database. Per tipi di dati di sistema **user_type_id** = **system_type_id**.|  
 |**schema_id**|**int**|ID dello schema a cui appartiene il tipo.|  
 |**principal_id**|**int**|ID del proprietario, se diverso dal proprietario dello schema. Per impostazione predefinita, gli oggetti contenuti nello schema appartengono al proprietario dello schema stesso. È tuttavia possibile specificare un altro proprietario modificando la proprietà mediante l'istruzione ALTER AUTHORIZATION.<br /><br /> NULL se non esiste un proprietario alternativo.|  
-|**max_length**|**smallint**|Lunghezza massima (in byte) del tipo.<br /><br /> -1 = il tipo di dati della colonna **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, oppure **xml**.<br /><br /> Per la **testo** colonne, il **max_length** valore sarà 16.|  
-|**Precisione**|**tinyint**|Precisione massima del tipo se numerica. In caso contrario 0.|  
-|**Scalabilità**|**tinyint**|Scala massima del tipo se numerica. In caso contrario 0.|  
+|**max_length**|**smallint**|Lunghezza massima (in byte) del tipo.<br /><br /> -1 = il tipo di dati della colonna **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , oppure **xml**.<br /><br /> Per la **testo** colonne, il **max_length** valore sarà 16.|  
+|**precisione**|**tinyint**|Precisione massima del tipo se numerica. In caso contrario 0.|  
+|**scala**|**tinyint**|Scala massima del tipo se numerica. In caso contrario 0.|  
 |**nome_regole_di_confronto**|**sysname**|Nome delle regole di confronto del tipo se di tipo carattere. In caso contrario NULL.|  
 |**is_nullable**|**bit**|Il tipo ammette valori Null.|  
 |**is_user_defined**|**bit**|1 = Tipo definito dall'utente.<br /><br /> 0 = Tipo di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

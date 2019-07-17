@@ -21,14 +21,13 @@ ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd87ee0f409a4775d2189b4947ca19eaf6b22386
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: c88c55a6a846a0907664730b3c185707a30c2600
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067061"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identificazione delle colonne chiave mediante sql:key-fields (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "67583820"
 ## <a name="examples"></a>Esempi  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per altre informazioni, vedere [requisiti per l'esecuzione di esempi di SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Creazione della nidificazione appropriata quando \<SQL: Relationship > non fornisce informazioni sufficienti  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>R. Creazione della nidificazione appropriata quando \<SQL: Relationship > non fornisce informazioni sufficienti  
  Questo esempio viene illustrato dove **SQL: Key-campi** deve essere specificato.  
   
  Si consideri lo schema seguente: Lo schema specifica una gerarchia tra i  **\<ordine >** e  **\<cliente >** elementi in cui la  **\<ordine >** è l'elemento padre e il  **\<cliente >** è un elemento figlio.  

@@ -1,5 +1,5 @@
 ---
-title: Cluster (DMX) | Documenti Microsoft
+title: Cluster (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 41f835a93e5976945281b6b04258c516b0322236
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: fa7df2782b8102e386c70d5e874a25f7868dbb1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071083"
 ---
 # <a name="cluster-dmx"></a>Cluster (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,13 +33,13 @@ Cluster()
 ## <a name="return-type"></a>Tipo restituito  
  Il **Cluster** funzione non richiede parametri.  
   
- Il **Cluster** funzione restituisce un valore scalare di un nome di cluster. Tuttavia, se si utilizza questa funzione come argomento di un'altra funzione, è necessario considerare come un \<cluster riferimento di colonna >.  
+ Il **Cluster** funzione restituisce un valore scalare di un nome del cluster. Tuttavia, se si usa questa funzione come argomento di un'altra funzione, il risultato costituirà come un \<riferimento alla colonna del cluster >.  
   
-## <a name="remarks"></a>Remarks  
- **Cluster** può essere utilizzato anche come un `<`riferimento a una colonna del cluster`>` per un **PredictHistogram** (funzione).  
+## <a name="remarks"></a>Note  
+ **Cluster** può essere utilizzato anche come un `<`riferimento a una colonna del cluster`>` per una **PredictHistogram** (funzione).  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene utilizzata una query singleton con il [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) e funzioni per restituire la distanza del singolo case da ogni cluster del modello di data mining TM Clustering del Cluster e il probabilità che il singolo case esista in ogni cluster.  
+ L'esempio seguente usa una query singleton con le [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) e alle funzioni di restituire la distanza del singolo case da ogni cluster del modello di data mining TM Clustering del Cluster e il probabilità che il singolo case esista in ogni cluster.  
   
 ```  
 SELECT  
@@ -57,7 +56,7 @@ FROM
   
 ## <a name="see-also"></a>Vedere anche  
  [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
- [Estensioni Data Mining &#40;DMX&#41; riferimento alla funzione](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle funzioni](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

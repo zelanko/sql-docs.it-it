@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6f2843456f4f95d1019b51f82082d59977ce14d5
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ce5d59e050aafa69a0b2584c66328c568f5ddee1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118062"
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @join_articlename = ] 'join_articlename'` Articolo padre al quale l'articolo figlio specificato da *articolo*, deve essere unito tramite la clausola join specificata da *join_filterclause*per determinare le righe dell'articolo figlio che soddisfano il criterio di filtro di filtro di merge. *join_articlename* viene **sysname**, non prevede alcun valore predefinito. L'articolo deve essere incluso nella pubblicazione specificata da *publication*.  
   
-`[ @join_filterclause = ] join_filterclause` Clausola join che deve essere utilizzata per unire l'articolo figlio specificato da *articolo*e l'articolo padre specificato da *join_article*per determinare le righe che soddisfano il filtro di merge. *join_filterclause* viene **nvarchar(1000)**.  
+`[ @join_filterclause = ] join_filterclause` Clausola join che deve essere utilizzata per unire l'articolo figlio specificato da *articolo*e l'articolo padre specificato da *join_article*per determinare le righe che soddisfano il filtro di merge. *join_filterclause* viene **nvarchar(1000)** .  
   
 `[ @join_unique_key = ] join_unique_key` Specifica se il join tra l'articolo figlio *articolo*e l'articolo padre *join_article*è uno-a-molti, uno a uno, molti-a-uno oppure molti-a-molti. *join_unique_key* viene **int**, con un valore predefinito è 0. **0** indica un join molti-a-uno o molti-a-molti. **1** indica un join uno a uno o uno-a-molti. Questo valore è **1** quando le colonne di join formano una chiave univoca *join_article*, o se *join_filterclause* tra una chiave esterna in *articolo* e una chiave primaria *join_article*.  
   

@@ -8,20 +8,19 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: a745449428a0a348dc60a5b47304612bb889556c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 17d24c6924b03e4ed0415e73bfefc0d372ca45bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989923"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070855"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>Elementi della sintassi DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Nelle [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], è possibile usare diversi elementi della sintassi per definire le istruzioni di Data Mining Extensions (DMX) che è possibile usare per compilare, gestire e usare modelli di data mining. Tali elementi di sintassi sono descritti nelle sezioni seguenti.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Gli identificatori &#40;DMX&#41;](../dmx/identifiers-dmx.md)  
  Oggetti che identificano ad esempio colonne o modelli e strutture di data mining.  
   
@@ -31,7 +30,7 @@ ms.locfileid: "37989923"
  [Le espressioni &#40;DMX&#41;](../dmx/expressions-dmx.md)  
  Unità di sintassi che [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] è in grado di risolvere in valori singoli, o scalari, oggetti o valori di tabella.  
   
- [Gli operatori &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
  Consentono di collegare una o più espressioni DMX semplici in modo da formare espressioni DMX più complesse.  
   
  [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)  
@@ -56,13 +55,13 @@ ms.locfileid: "37989923"
  Definiscono ulteriori hint che possono essere utilizzati dall'algoritmo per elaborare un modello di data mining.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle funzioni](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Le estensioni di Data Mining di dati &#40;DMX&#41; di riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle istruzioni](../dmx/data-mining-extensions-dmx-statements.md)   
  [Le estensioni di Data Mining di dati &#40;DMX&#41; convenzioni della sintassi](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Struttura e l'utilizzo di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [Struttura e utilizzo di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Informazioni sull'istruzione DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   

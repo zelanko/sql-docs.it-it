@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 20316f2a7932768951633ae24e1b1e180c1dfb49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e324b1f49bd6f8d0cad15ac2bcde73f558220330
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537581"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121451"
 ---
 # <a name="sqlconfigdriver-function"></a>Funzione SQLConfigDriver
 **Conformità**  
@@ -109,7 +108,7 @@ BOOL SQLConfigDriver(
   
  Quando **SQLConfigDriver** viene chiamato con *trattano* impostato su ODBC_INSTALL_DRIVER o ODBC_REMOVE_DRIVER, gestione Driver carica la DLL di installazione di driver appropriato e chiama il  **ConfigDriver** (funzione). Quando **SQLConfigDriver** viene chiamato con un *trattano* di ODBC_CONFIG_DRIVER, tutta l'elaborazione viene eseguita nel programma di installazione ODBC, in modo che la DLL di installazione di driver non deve essere caricato.  
   
-## <a name="messages"></a>Messaggi  
+## <a name="messages"></a>Messages  
  Una routine di installazione di driver può inviare un messaggio di testo a un'applicazione sotto forma di stringhe con terminazione null nel *lpszMsg* buffer. Il messaggio verrà troncato a *cbMsgMax* meno il carattere di terminazione null per il **ConfigDriver** funzione se è maggiore o uguale a *cbMsgMax* caratteri.  
   
 ## <a name="related-functions"></a>Funzioni correlate  

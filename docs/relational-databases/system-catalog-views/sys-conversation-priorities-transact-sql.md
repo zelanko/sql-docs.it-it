@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7cbb9171-3310-4aae-8458-755c882d6462
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf94358d5d4f06f787546ab98a8cbfcab2693bcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a1278426b6774c8f5c2d9bb13577e1499930c13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63051411"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109473"
 ---
 # <a name="sysconversationpriorities-transact-sql"></a>sys.conversation_priorities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +36,11 @@ ms.locfileid: "63051411"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |Priority_id|**int**|Numero che identifica in modo univoco la priorità di conversazione. Non ammette i valori Null.|  
-|NAME|**sysname**|Nome della priorità di conversazione. Non ammette i valori Null.|  
+|name|**sysname**|Nome della priorità di conversazione. Non ammette i valori Null.|  
 |service_contract_id|**int**|Identificatore del contratto specificato per la priorità di conversazione. Questa colonna può essere unita alla colonna service_contract_id in sys.service_contracts. Ammette valori Null.|  
 |local_service_id|**int**|Identificatore del servizio specificato come servizio locale per la priorità di conversazione. Questa colonna può essere unita alla colonna service_id in sys.services. Ammette valori Null.|  
 |remote_service_name|**nvarchar(256)**|Nome del servizio specificato come servizio remoto per la priorità di conversazione. Ammette valori Null.|  
-|priority|**tinyint**|Livello di priorità specificato nella priorità di conversazione. Non ammette i valori Null.|  
+|priorità|**tinyint**|Livello di priorità specificato nella priorità di conversazione. Non ammette i valori Null.|  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

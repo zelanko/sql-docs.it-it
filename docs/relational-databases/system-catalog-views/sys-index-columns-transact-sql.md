@@ -1,5 +1,5 @@
 ---
-title: sys.index_columns (Transact-SQL) | Microsoft Docs
+title: Sys. index_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 211471aa-558a-475c-9b94-5913c143ed12
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8707cb6cfb4f535a634f501e9113406c26b7e4a8
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
+ms.openlocfilehash: e20bd7ecc783e0449a1deaa21c9f3db6e07abbc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67564184"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122674"
 ---
 # <a name="sysindexcolumns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "67564184"
 |**partition_ordinal**|**tinyint**|Numero ordinale (in base 1) nel set di colonne di partizionamento. In un indice columnstore cluster può essere presente al massimo 1 colonna di partizionamento.<br /><br /> 0 = La colonna non è una colonna di partizionamento.|  
 |**is_descending_key**|**bit**|1 = Direzione di ordinamento decrescente per la colonna chiave dell'indice.<br /><br /> 0 = La colonna chiave dell'indice presenta una direzione di ordinamento crescente oppure la colonna fa parte di un indice hash.|  
 |**is_included_column**|**bit**|1 = La colonna è una colonna non chiave aggiunta all'indice tramite la clausola CREATE INDEX INCLUDE oppure la colonna fa parte di un indice columnstore.<br /><br /> 0 = La colonna non è una colonna inclusa.<br /><br /> Le colonne aggiunte in modo implicito perché fanno parte della chiave di clustering non sono elencate nel **Sys. index_columns**.<br /><br /> Le colonne aggiunte in modo implicito perché colonne di partizionamento vengono restituite come 0.| 
-|**column_store_order_ordinal**</br> Si applica a: Azure SQL Data Warehouse (anteprima)|**tinyint**|Numero ordinale (in base 1) all'interno di set di colonne di ordinamento in un indice columnstore cluster ordinato.|
+|**column_store_order_ordinal**</br> Si applica a Azure SQL Data Warehouse (anteprima)|**tinyint**|Numero ordinale (in base 1) all'interno di set di colonne di ordinamento in un indice columnstore cluster ordinato.|
   
 ## <a name="permissions"></a>Permissions
 

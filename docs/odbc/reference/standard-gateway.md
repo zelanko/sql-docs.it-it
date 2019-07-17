@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b8341492-2141-4bab-80bd-f2752223079e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c70a558b065765dd9f8c0895345959e8aa22ebfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8120f3cda584240b0b58ed5d6758621b18fe44d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070485"
 ---
 # <a name="standard-gateway"></a>Gateway standard
 Oggetto *gateway* è un componente software che provoca un DBMS simile a un altro. Vale a dire, il gateway accetta l'interfaccia di programmazione, grammatica SQL e protocollo di DBMS singolo del flusso di dati e lo converte per l'interfaccia di programmazione, grammatica SQL, e protocollo del sistema DBMS nascosto del flusso di dati. Ad esempio, le applicazioni scritte per l'utilizzo di Microsoft® SQL Server™ accessibile anche dati DB2 tramite il Gateway di DB2 Decisionware Micro; Questo prodotto provoca DB2 simile a SQL Server. Quando i gateway vengono usati, un altro gateway deve essere scritto per ogni database di destinazione.  

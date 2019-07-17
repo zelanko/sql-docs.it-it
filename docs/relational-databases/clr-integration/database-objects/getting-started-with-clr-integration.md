@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e49d95cb7a675985039969003d80872a0b9cbad3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 15e4a750e2568598fc5db2bab175643b50310db2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138613"
 ---
 # <a name="getting-started-with-clr-integration"></a>Introduzione all'integrazione con CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ End Class
   
 ```  
   
- Questo semplice programma contiene un singolo metodo statico su una classe pubblica. Questo metodo utilizza due nuove classi, **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** e  **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**, per la creazione di gestiti gli oggetti per un semplice testo di output di database Messaggio. Il metodo assegna inoltre la stringa "Hello world!" come valore di un parametro out. Questo metodo può essere dichiarato come stored procedure in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e quindi eseguito allo stesso modo come stored procedure [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+ Questo semplice programma contiene un singolo metodo statico su una classe pubblica. Questo metodo utilizza due nuove classi, **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** e  **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)** , per la creazione di gestiti gli oggetti per un semplice testo di output di database Messaggio. Il metodo assegna inoltre la stringa "Hello world!" come valore di un parametro out. Questo metodo può essere dichiarato come stored procedure in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e quindi eseguito allo stesso modo come stored procedure [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  Compilare questo programma come una libreria, caricato in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ed eseguirlo come una stored procedure.  
   
@@ -97,7 +96,7 @@ End Class
 C:\Windows\Microsoft.NET\Framework\(version)  
 ```  
   
- version contiene il numero di versione del file di ridistribuzione di .NET Framework installato. Esempio:  
+ version contiene il numero di versione del file di ridistribuzione di .NET Framework installato. Ad esempio:  
   
 ```  
 C:\Windows\Microsoft.NET\Framework\v4.6.1  
@@ -143,7 +142,7 @@ EXTERNAL NAME helloworld.HelloWorldProc.HelloWorld
 -- EXTERNAL NAME helloworld.[MyNS.HelloWorldProc].HelloWorld  
 ```  
   
- Una volta creata, la stored procedure può essere eseguita come una normale stored procedure scritta in [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Eseguire il comando seguente:  
+ Una volta creata, la stored procedure può essere eseguita come una normale stored procedure scritta in [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Eseguire il seguente comando:  
   
 ```  
 DECLARE @J nchar(25)  

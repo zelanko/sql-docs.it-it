@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 538b274a-822e-4126-993e-7d9a92c6a7d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7227198eab5508666cf22f62d8d223251ae79049
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5fef8e32545b25e9b7925b973cadee135d818215
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126901"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096473"
 ---
 # <a name="date-arithmetic"></a>Aritmetica delle date
 Il driver supporta l'aggiunta e sottrazione di un numero intero compreso tra una colonna data, ora o TIMESTAMP. Per una colonna di DATE, l'integer che specifica il numero di giorni da aggiungere o sottrarre. Per una colonna di ora o TIMESTAMP, l'integer che specifica il numero di secondi da aggiungere o sottrarre.

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dceda172caab5f93295eac9cf4cf86a07495fe3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df55c4e17640710b5ada50a0aa12edb046822821
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053240"
 ---
 # <a name="sysdmresourcegovernorworkloadgroups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,10 +35,10 @@ ms.locfileid: "47825001"
 > [!NOTE]  
 >  Per chiamare questo elemento dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oppure [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare il nome **sys.dm_pdw_nodes_resource_governor_workload_groups**.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |group_id|**int**|ID del gruppo del carico di lavoro. Non ammette i valori Null.|  
-|NAME|**sysname**|Nome del gruppo del carico di lavoro. Non ammette i valori Null.|  
+|name|**sysname**|Nome del gruppo del carico di lavoro. Non ammette i valori Null.|  
 |pool_id|**int**|ID del pool di risorse. Non ammette i valori Null.|  
 |external_pool_id|**int**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID del pool di risorse esterno. Non ammette i valori Null.|  
 |statistics_start_time|**datetime**|Ora di reimpostazione della raccolta di statistiche per il gruppo del carico di lavoro. Non ammette i valori Null.|  
@@ -49,7 +48,7 @@ ms.locfileid: "47825001"
 |queued_request_count|**int**|Conteggio corrente richieste in coda. Non ammette i valori Null.|  
 |total_cpu_limit_violation_count|**bigint**|Conteggio cumulativo delle richieste superiore al limite della CPU. Non ammette i valori Null.|  
 |total_cpu_usage_ms|**bigint**|Utilizzo cumulativo della CPU, in millisecondi, da parte di questo gruppo del carico di lavoro. Non ammette i valori Null.|  
-|max_request_cpu_time_ms|**bigint**|Limite massimo di utilizzo della CPU, in millisecondi, per una singola richiesta. Non ammette i valori Null.<br /><br /> **Nota:** questo è un valore misurato, a differenza di request_max_cpu_time_sec che rappresenta un'impostazione configurabile. Per altre informazioni, vedere [Classe di evento CPU Threshold Exceeded](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).|  
+|max_request_cpu_time_ms|**bigint**|Limite massimo di utilizzo della CPU, in millisecondi, per una singola richiesta. Non ammette i valori Null.<br /><br /> **Nota:** Questo è un valore misurato, a differenza di request_max_cpu_time_sec che rappresenta un'impostazione configurabile. Per altre informazioni, vedere [Classe di evento CPU Threshold Exceeded](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).|  
 |blocked_task_count|**int**|Conteggio corrente delle attività bloccate. Non ammette i valori Null.|  
 |total_lock_wait_count|**bigint**|Conteggio cumulativo delle attese di blocco che si sono verificate. Non ammette i valori Null.|  
 |total_lock_wait_time_ms|**bigint**|Somma cumulativa del tempo per cui viene mantenuto un blocco, espressa in millisecondi. Non ammette i valori Null.|  
@@ -58,7 +57,7 @@ ms.locfileid: "47825001"
 |total_reduced_memgrant_count|**bigint**|Conteggio cumulativo delle concessioni di memoria che hanno raggiunto il limite massimo di dimensioni delle query. Non ammette i valori Null.|  
 |max_request_grant_memory_kb|**bigint**|Dimensioni della concessione massima di memoria, in kilobyte, di una singola richiesta a partire dal ripristino delle statistiche. Non ammette i valori Null.|  
 |active_parallel_thread_count|**bigint**|Conteggio corrente dell'utilizzo di thread paralleli. Non ammette i valori Null.|  
-|importance|**sysname**|Valore di configurazione corrente per l'importanza relativa di una richiesta in questo gruppo del carico di lavoro. Importanza è uno dei valori seguenti, Medium è l'impostazione predefinita: Low, Medium o High.<br /><br /> Non ammette i valori Null.|  
+|importance|**sysname**|Valore di configurazione corrente per l'importanza relativa di una richiesta in questo gruppo del carico di lavoro. Importanza è uno dei valori seguenti, Medium è l'impostazione predefinita: Bassa, Media o alta.<br /><br /> Non ammette i valori Null.|  
 |request_max_memory_grant_percent|**int**|Impostazione corrente per la concessione massima di memoria, espressa in percentuale, per una singola richiesta. Non ammette i valori Null.|  
 |request_max_cpu_time_sec|**int**|Impostazione corrente per il limite massimo di utilizzo della CPU, espresso in secondi, per una singola richiesta. Non ammette i valori Null.|  
 |request_memory_grant_timeout_sec|**int**|Impostazione corrente per il timeout di concessione di memoria, in secondi, per una singola richiesta. Non ammette i valori Null.|  

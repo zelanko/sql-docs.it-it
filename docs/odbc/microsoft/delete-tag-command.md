@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4e1362-a5f3-4b15-8a3c-d4e96605f221
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eabecbc399751f03e9e5c25b32423ce0839072dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 576e7e10d9d6f5c7e8616f57bde2dfed05503eae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198245"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112076"
 ---
 # <a name="delete-tag-command"></a>DELETE TAG (comando)
 Rimuove un tag o i tag da un file di indice composto (cdx).  
@@ -34,7 +33,7 @@ DELETE TAG ALL [OF CDXFileName]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *TagName1*OF *CDXFileName1*[, *TagName2*[OF *CDXFileName2*]] ...  
+ *TagName1*OF *CDXFileName1*[, *TagName2*[OF *CDXFileName2*]]...  
  Specifica un tag da rimuovere da un file di indice composto. È possibile eliminare più tag con un TAG DELETE includendo un elenco di nomi di tag separati da virgole. Se due o più tag con lo stesso nome esiste nel file di indice aperta, è possibile rimuovere un tag da un file di indice specifico includendo OF *CDXFileName*.  
   
  Tutti i [OF *CDXFileName*]  

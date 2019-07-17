@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a2310b10-68ad-4285-a08b-c8694cf84416
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 42f731f93f0344d5b96a8e3cba41f28dd7fadada
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 017136669bd6478bb4e08ed0ff5c2adc01786d20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63253206"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103254"
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>Opzioni della riga di comando nella console SSMA (MySQLToSQL)
 Microsoft offre un solido set opzioni riga di comando per eseguire e controllare le attività SSMA. Le sezioni che seguono in modo dettagliato lo stesso.  

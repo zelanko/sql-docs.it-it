@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 4a87b213731ac0b8cb1b76eb87b1997f86157c6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe9e05f0078f0d1a9d3ab5ea6e2763ac28207085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62902673"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091796"
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>Uso dei file script di esempio della console (SybaseToSQL)
 Alcuni file di esempio sono stati forniti insieme al prodotto per il riferimento all'utente e l'utilizzo. In questa sezione descrive il modo con facilità personalizzare questi script per soddisfare le esigenze degli utenti finali.  
@@ -125,5 +124,5 @@ I seguenti file script di esempio console relativi a diversi scenari sono stati 
 ## <a name="see-also"></a>Vedere anche  
 [Creazione di file di valore della variabile &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
 [Creazione di file di connessione del Server &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
-[Generating Reports &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)  
+[Generazione di report &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)  
   

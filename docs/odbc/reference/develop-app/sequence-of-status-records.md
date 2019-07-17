@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e0436cc-230f-44b0-b373-04a57e83ee76
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17a88095611a5f551708f3950359063317368757
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 67eac22a630305f32f141ea18861e5638445f19b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62465919"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094353"
 ---
 # <a name="sequence-of-status-records"></a>Sequenza di record di stato
 Se vengono restituiti due o più record di stato, il gestore dei Driver e il driver necessario classificarle in base alle regole seguenti. Il record con il valore più alto è il primo record. L'origine di un record (gestione Driver, driver, gateway e così via) non viene considerato quando i record di rango.  

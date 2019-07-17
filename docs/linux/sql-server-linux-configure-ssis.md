@@ -4,17 +4,16 @@ description: Questo articolo descrive come configurare SQL Server Integration Se
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
-manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 0a6fc4a73d8991626c53d9caa8671673c0164a10
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 51dc2ba27e346dea75f1bd347491d4932695fd43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833987"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077530"
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Configurare SQL Server Integration Services in Linux con ssis-conf
 

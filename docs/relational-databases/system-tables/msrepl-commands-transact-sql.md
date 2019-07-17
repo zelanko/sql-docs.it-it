@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a4a55e595f925c8b542f14e34c8c88110472df89
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c02a0201483617966d7d1c8aadfbad4ab39971e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822095"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127427"
 ---
 # <a name="msreplcommands-transact-sql"></a>MSrepl_commands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +37,9 @@ ms.locfileid: "52822095"
 |**article_id**|**int**|ID dell'articolo.|  
 |**originator_id**|**int**|ID dell'origine.|  
 |**command_id**|**int**|ID del comando.|  
-|**che**|**bit**|Indica se si tratta di un comando parziale.|  
+|**partial_command**|**bit**|Indica se si tratta di un comando parziale.|  
 |**comando**|**varbinary(1024)**|Valore del comando.|  
-|**hashKey**|**int**|Solo per uso interno.|  
+|**hashkey**|**int**|Solo per uso interno.|  
 |**originator_lsn**|**varbinary(16)**|Identifica il numero di sequenza del file di log (LSN) per il comando nella pubblicazione di origine. Viene utilizzato nella replica transazionale peer-to-peer.|  
   
 ## <a name="see-also"></a>Vedere anche  

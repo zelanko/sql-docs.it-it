@@ -25,14 +25,13 @@ helpviewer_keywords:
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da2dacf6fcb34d5a5caba14ccb60cbb9eec43467
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9ed393edf79c3502bf3e054e23eb459d490ce998
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075799"
 ---
 # <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -59,7 +58,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="arguments"></a>Argomenti  
 `[ @name = ] 'module\_name'` È il nome della stored procedure, funzioni definite dall'utente, vista, trigger DML, trigger DDL a livello di database o trigger DDL a livello di server. *module_name* non può essere un common language runtime (CLR) stored procedure o una funzione CLR. *module_name* non può essere associata a schema. *module_name* viene **nvarchar**, non prevede alcun valore predefinito. *module_name* può essere un identificatore in più parti, ma può fare riferimento solo agli oggetti nel database corrente.  
   
-`[ , @namespace = ] ' \<class> '` È la classe del modulo specificato. Quando *module_name* è un trigger DDL, \<classe > è obbligatorio. *\<class>* is **nvarchar**(20). Gli input validi sono:  
+`[ , @namespace = ] ' \<class> '` È la classe del modulo specificato. Quando *module_name* è un trigger DDL, \<classe > è obbligatorio. *\<classe >* viene **nvarchar**(20). Gli input validi sono:  
   
 |||  
 |-|-|  
@@ -86,7 +85,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-refreshing-a-user-defined-function"></a>A. Aggiornamento di una funzione definita dall'utente  
+### <a name="a-refreshing-a-user-defined-function"></a>R. Aggiornamento di una funzione definita dall'utente  
  Nell'esempio seguente viene aggiornata una funzione definita dall'utente. Nell'esempio vengono creati il tipo di dati alias `mytype` e la funzione definita dall'utente `to_upper` che utilizza `mytype`. Il tipo di dati `mytype` viene quindi rinominato in `myoldtype` e viene creato un nuovo `mytype` con una diversa definizione. La funzione `dbo.to_upper` viene aggiornata in modo da fare riferimento alla nuova implementazione di `mytype`, anziché alla precedente.  
   
 ```  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 528d21d1-4516-4497-9da4-7b87d77e622a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e04623c42df58f920620299d9dce7094039a406
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70bca38a81b59b7113f0873849609837bf8f48ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63306049"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071729"
 ---
 # <a name="sqlsetconnectoption-excel-driver"></a>SQLSetConnectOption (driver Excel)
 > [!NOTE]  
@@ -30,11 +29,11 @@ ms.locfileid: "63306049"
 |SQL_ACCESS_MODE|Il fOption SQL_ACCESS_MODE può essere impostato su SQL_MODE_READ_ONLY o SQL_MODE_READ_WRITE. Tuttavia, il driver non impedisce gli aggiornamenti se SQL_ACCESS_MODE è impostato su SQL_MODE_READ_ONLY.|  
 |SQL_AUTOCOMMIT|Il driver di Microsoft Excel supporta solo SQL_AUTOCOMMIT che viene impostato su (stato predefinito), perché non supportano transazioni.|  
 |SQL_CURRENT_QUALIFIER|Supportato.|  
-|SQL_LOGIN_TIMEOUT|Non supportato.|  
+|SQL_LOGIN_TIMEOUT|Non supportati.|  
 |SQL_OPT_TRACE|Supportato.|  
 |SQL_OPT_TRACEFILE|Supportato.|  
-|SQL_PACKET_SIZE|Non supportato.|  
-|SQL_QUIET_MODE|Non supportato.|  
-|SQL_TRANSLATE_DLL|Non supportato.|  
-|SQL_TRANSLATION_OPTION|Non supportato.|  
-|SQL_TXN_ISOLATION|Non supportato.|
+|SQL_PACKET_SIZE|Non supportati.|  
+|SQL_QUIET_MODE|Non supportati.|  
+|SQL_TRANSLATE_DLL|Non supportati.|  
+|SQL_TRANSLATION_OPTION|Non supportati.|  
+|SQL_TXN_ISOLATION|Non supportati.|

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 27f62ab5-46c4-417e-814d-8d6437034d1c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa06da06ae057839a9d0e6433e57edb1f8a603d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MT
+ms.openlocfilehash: 0f05caa24afe4b1c083adab9b6199ac5f34e1a46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013516"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097917"
 ---
 # <a name="sysdmexecbackgroundjobqueuestats-transact-sql"></a>sys.dm_exec_background_job_queue_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,11 +56,11 @@ ms.locfileid: "63013516"
 ## <a name="permissions"></a>Permissions
 
 Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
-Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
+In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] è richiesta l'autorizzazione `VIEW DATABASE STATE` per il database.   
 
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-determining-the-percentage-of-failed-background-jobs"></a>A. Individuazione della percentuale di processi in background non riusciti  
+### <a name="a-determining-the-percentage-of-failed-background-jobs"></a>R. Individuazione della percentuale di processi in background non riusciti  
  Nell'esempio seguente viene restituita la percentuale di processi in background non riusciti per tutte le query eseguite.  
   
 ```  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8a01041f-3572-46f9-8213-b817f3cf929c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d5cf669883ce81528adbe1fbd8faeff2ed716218
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2082a97b24284afcc879048bb08e86a7b2bb3ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62735139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070116"
 ---
 # <a name="sqltransact-mapping"></a>Mapping di SQLTransact
 **SQLTransact** è stata sostituita dal **SQLEndTran**. La differenza principale tra le due funzioni è che **SQLEndTran** contiene un argomento *HandleType*, che consente di specificare l'ambito delle operazioni da eseguire. Il *HandleType* argomento può specificare l'ambiente o l'handle di connessione. La chiamata seguente a **SQLTransact**:  

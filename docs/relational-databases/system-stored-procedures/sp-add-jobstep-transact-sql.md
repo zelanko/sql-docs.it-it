@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 112afe8f7a8eaea87c860264c820c874788cbc7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6a3551716ad6841a7ed14c92afd4ae96d3cc297b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500363"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140485"
 ---
 # <a name="spaddjobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
@@ -75,17 +74,17 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 |Value|Descrizione|  
 |-----------|-----------------|  
-|'**ACTIVESCRIPTING**'|Script ActiveX<br /><br /> **\*\* Importante \*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
-|'**CMDEXEC**'|Comando del sistema operativo o programma eseguibile|  
+|«**ACTIVESCRIPTING**»|Script ActiveX<br /><br /> **\*\* Importante \*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|«**CMDEXEC**»|Comando del sistema operativo o programma eseguibile|  
 |«**DISTRIBUZIONE**»|Processo di Agente distribuzione repliche|  
 |'**SNAPSHOT**'|Processo di Agente snapshot repliche|  
-|'**LOGREADER**'|Processo di Agente lettura log repliche|  
-|'**MERGE**'|Processo di Agente merge repliche|  
-|'**QueueReader**'|Processo di Agente di lettura coda repliche|  
+|«**LOGREADER**»|Processo di Agente lettura log repliche|  
+|«**MERGE**»|Processo di Agente merge repliche|  
+|«**QueueReader**»|Processo di Agente di lettura coda repliche|  
 |«**ANALYSISQUERY**»|Query di Analysis Services (MDX, DMX).|  
-|'**ANALYSISCOMMAND**'|Comando di Analysis Services (XMLA).|  
+|«**ANALYSISCOMMAND**»|Comando di Analysis Services (XMLA).|  
 |«**Dts**»|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] esecuzione del pacchetto|  
-|'**PowerShell**'|Script di PowerShell|  
+|«**PowerShell**»|Script di PowerShell|  
 |«**TSQL**' (impostazione predefinita)|[!INCLUDE[tsql](../../includes/tsql-md.md)] - istruzione|  
   
 `[ @command = ] 'command'` I comandi da eseguire tramite **SQLServerAgent** servizio attraverso *sottosistema*. *comando* viene **nvarchar (max)** , con un valore predefinito è NULL. SQL Server Agent consente di eseguire la sostituzione dei token, che garantisce la stessa flessibilità assicurata dalle variabili durante la scrittura dei programmi software.  
@@ -162,7 +161,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  **sp_add_jobstep** deve essere eseguita la **msdb** database.  

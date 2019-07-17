@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a82ff66-c137-4757-99bb-787d189b4295
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b4707a918768e4fd261512fe9ca5bfd1ca590057
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d62f40807c4e7be3c2e585540dfd79ae85a6228
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084204"
 ---
 # <a name="derived-hierarchies-with-explicit-caps-master-data-services"></a>Gerarchie derivate con estremità esplicite (Master Data Services)
 

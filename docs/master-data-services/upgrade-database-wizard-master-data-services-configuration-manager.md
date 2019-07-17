@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4e587d29d8e711fa3e61a7e80fa447566b2e1411
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28330ba902b32f0b9622a3b8df0ca316848e1752
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485044"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102574"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Aggiornamento guidato database (Gestione configurazione Master Data Services)
 
@@ -24,7 +23,7 @@ ms.locfileid: "65485044"
 
   Usare l' **Aggiornamento guidato database** per aggiornare un database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## <a name="action"></a>Azione  
+## <a name="action"></a>Action  
  Si tratta della pagina introduttiva della procedura guidata. Fare clic su **Avanti** per iniziare il processo di aggiornamento del database.  
   
 ## <a name="upgrade-review"></a>Controllo aggiornamento  

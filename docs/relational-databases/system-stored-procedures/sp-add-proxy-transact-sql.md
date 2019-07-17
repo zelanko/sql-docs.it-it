@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 247c834abfbc47485628702bf4cd87c7662c44a8
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 4aa4120db7b45cb0b3a7d7a10bb53931b8300d9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088485"
 ---
 # <a name="spaddproxy-transact-sql"></a>sp_add_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_add_proxy
   
 `[ @enabled = ] is_enabled` Specifica se il proxy è abilitato. Il *is_enabled* flag è **tinyint**, con un valore predefinito è 1. Quando *is_enabled* viene **0**, il proxy non è abilitato e non può essere utilizzato da un passaggio di processo.  
   
-`[ @description = ] 'description'` Descrizione del proxy. La descrizione è **nvarchar(512)**, con un valore predefinito è NULL. La descrizione consente di documentare il proxy, ma non viene altrimenti utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Questo argomento è pertanto facoltativo.  
+`[ @description = ] 'description'` Descrizione del proxy. La descrizione è **nvarchar(512)** , con un valore predefinito è NULL. La descrizione consente di documentare il proxy, ma non viene altrimenti utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Questo argomento è pertanto facoltativo.  
   
 `[ @credential_name = ] 'credential_name'` Il nome delle credenziali per il proxy. Il *credential_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *credential_name* oppure *credential_id* deve essere specificato.  
   
@@ -63,7 +62,7 @@ sp_add_proxy
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  Questa stored procedure deve essere eseguita **msdb** database.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fdfa56f5-e324-4ec2-9267-fdf95ab99373
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 66dab60f4a9a180d2a8b74ce4d0c8f4d7bf8d242
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9a0a57c3dce920c6d5fbc2510932066cb5a2659
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096366"
 ---
 # <a name="dbase-indexes"></a>Indici dBASE
 Il driver dBASE ODBC apre automaticamente e aggiorna i file degli indici dBASE IV. È necessario usare il **indici selezionare** finestra di dialogo visualizzata tramite Amministrazione origine dati ODBC per associare i file di dBASE III ndx ai file dBASE.  

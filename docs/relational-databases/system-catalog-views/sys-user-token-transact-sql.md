@@ -1,5 +1,5 @@
 ---
-title: sys.user_token (Transact-SQL) | Microsoft Docs
+title: Sys. user_token (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: be018103-5e57-43a4-9160-9bf420892aa7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a120fe3802235ff0d5548693d9bf7f4638ef5e42
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 42214bc08d0d4eb24c3b51f3edd8010ba8bdb0e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59506488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095548"
 ---
 # <a name="sysusertoken-transact-sql"></a>sys.user_token (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
