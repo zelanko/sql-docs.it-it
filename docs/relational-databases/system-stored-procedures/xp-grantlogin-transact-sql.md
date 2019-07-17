@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c6a6e31b4dc36e0f280dfb03d8eadf09a7d4ff7c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 957bbdc43c0f0adf3a545fee76e9f69df130d8f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534863"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116667"
 ---
 # <a name="xpgrantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ## <a name="arguments"></a>Argomenti  
 `[ @loginame = ] 'login'` È il nome dell'utente di Windows o del gruppo da aggiungere. L'utente di Windows o il gruppo deve essere qualificato con un nome di dominio Windows nel formato *Domain*\\*utente*. *account di accesso* viene **sysname**, non prevede alcun valore predefinito.  
   
-`[ @logintype = ] 'logintype'` Il livello di sicurezza dell'account di accesso viene concesso l'accesso. *LoginType* viene **varchar (5)**, con un valore predefinito è NULL. Solo **admin** può essere specificato. Se **admin** è specificato, *login* viene concesso l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e aggiunti come membro del **sysadmin** ruolo predefinito del server.  
+`[ @logintype = ] 'logintype'` Il livello di sicurezza dell'account di accesso viene concesso l'accesso. *LoginType* viene **varchar (5)** , con un valore predefinito è NULL. Solo **admin** può essere specificato. Se **admin** è specificato, *login* viene concesso l'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e aggiunti come membro del **sysadmin** ruolo predefinito del server.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

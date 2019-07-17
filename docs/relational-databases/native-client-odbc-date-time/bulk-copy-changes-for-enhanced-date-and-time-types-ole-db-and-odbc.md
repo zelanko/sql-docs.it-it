@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4688fd344bbc0576aa30e2afc70a32f16cf78588
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 784917e29c0b0a407eb66006bb0e8798602722ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416622"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106117"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Modifiche della copia bulk per i tipi di data e ora migliorati (OLE DB e ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +29,11 @@ ms.locfileid: "52416622"
 ## <a name="format-files"></a>File di formato  
  Nella tabella seguente viene descritto l'input utilizzato per specificare i tipi di data/ora e i nomi dei tipi di dati del file host corrispondenti quando si compilano file di formato in modo interattivo.  
   
-|tipo di archiviazione di file|Tipo di dati del file host|Risposta alla richiesta "Specificare il tipo di archiviazione di file del campo < nome_campo > [\<predefinito >]:"|  
+|tipo di archiviazione di file|Tipo di dati del file host|Risposta alla richiesta: "Specificare il tipo di archiviazione di file del campo < nome_campo > [\<predefinito >]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
-|DATETIME|SQLDATETIME|d|  
+|Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
-|date|SQLDATE|de|  
+|Date|SQLDATE|de|  
 |Time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
@@ -65,7 +64,7 @@ ms.locfileid: "52416622"
 ```  
   
 ## <a name="character-data-files"></a>File di dati di tipo carattere  
- Nei file di dati di tipo carattere i valori di data e ora vengono rappresentati come descritto nella sezione "Formati di dati: Sezione stringhe e valori letterali"di [supporto dei tipi di dati per ODBC Date e miglioramenti per la fase](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md) per ODBC o di [supporto dei tipi di dati per data OLE DB e miglioramenti per la fase](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) per OLE DB.  
+ Nei file di dati di tipo carattere, i valori di data e ora sono rappresentati come descritto nel "formati di dati: Sezione stringhe e valori letterali"di [supporto dei tipi di dati per ODBC Date e miglioramenti per la fase](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md) per ODBC o di [supporto dei tipi di dati per data OLE DB e miglioramenti per la fase](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) per OLE DB.  
   
  In file di dati nativi, i valori di data e ora per i quattro nuovi tipi vengono rappresentati come rispettive rappresentazioni TDS con una scala pari a 7 (poiché si tratta di al massimo supportato dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e file di dati bcp non archiviano la scala di tali colonne). Non è stata apportata alcuna modifica all'archiviazione dei tipi **datetime** e **smalldatetime** esistenti o delle rispettive rappresentazioni TDS.  
   
@@ -73,9 +72,9 @@ ms.locfileid: "52416622"
   
 |tipo di archiviazione di file|Dimensioni dello spazio di archiviazione in byte|  
 |-----------------------|---------------------------|  
-|DATETIME|8|  
+|datetime|8|  
 |smalldatetime|4|  
-|Data|3|  
+|date|3|  
 |time|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
@@ -96,9 +95,9 @@ ms.locfileid: "52416622"
   
 |tipo di archiviazione di file|Tipo di dati del file host|Tipo in SQLNCLI. h per l'uso con ibcpsession:: BCPColFmt|Value|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
-|DATETIME|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
+|Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
-|date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|Date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
 |Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
@@ -108,12 +107,12 @@ ms.locfileid: "52416622"
   
  **Nota per OLE DB** Le conversioni seguenti vengono eseguite da IBCPSession. IRowsetFastLoad utilizza conversioni OLE DB come definito in [conversioni eseguite da Client a Server](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md). Si noti che i valori datetime vengono arrotondati a 1/300 di secondo, mentre per i valori smalldatetime i secondi vengono impostati su zero in seguito all'esecuzione delle conversioni client descritte di seguito. L'arrotondamento dei valori datetime viene applicato a ore e minuti, ma non alla data.  
   
-|A --><br /><br /> From|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
+|A -><br /><br /> From|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
+|Date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
 |Time|N/D|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
-|DATETIME|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
+|Datetime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1, 10 (ODBC) 1, 12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
 |Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
 |char/wchar (date)|9|-|9, 6 (ODBC) 9, 6, 12 (OLE DB)|9, 6 (ODBC) 9, 6, 12 (OLE DB)|9,6|9,5,6|N/D|N/D|  

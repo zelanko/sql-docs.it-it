@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0cc9b40a-36ce-485b-9bc2-d4abd5aa6727
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2ce0bca2913dc6b0fbc9c8deaa4e4dd28f32f747
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b3e8b9c2443a6fa74e113dc1a3f25880ac753dc0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796354"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079945"
 ---
 # <a name="msreplmonthresholdmetrics-transact-sql"></a>MSreplmonthresholdmetrics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +37,8 @@ ms.locfileid: "52796354"
 |**alertmessageid**|**int**|ID del messaggio di errore visualizzato quando si verifica la condizione per la generazione di un avviso per la violazione del valore soglia.|  
 |**description**|**nvarchar(3000)**|Descrizione della misurazione delle prestazioni di replica.|  
 |**default_value**|**sql_variant**|Valore predefinito della misurazione delle prestazioni di replica.|  
-|**MIN_VALUE**|**sql_variant**|Valore minimo per una misurazione delle prestazioni di replica con limitazioni.|  
-|**MAX_VALUE**|**sql_variant**|Valore massimo per una misurazione delle prestazioni di replica con limitazioni.|  
+|**min_value**|**sql_variant**|Valore minimo per una misurazione delle prestazioni di replica con limitazioni.|  
+|**max_value**|**sql_variant**|Valore massimo per una misurazione delle prestazioni di replica con limitazioni.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle di replica &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

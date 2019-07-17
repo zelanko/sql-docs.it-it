@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2aad7d6b-216e-47e7-b3cb-f95ad096f21a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 388995cd5cb8a711d72533685c14088a7e908475
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 529b71540b4abde5fce868975fcbf2749e31dc8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313513"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135543"
 ---
 # <a name="using-block-cursors"></a>Uso di cursori rettangolari
 Supporto per cursori a blocchi è incorporato in ODBC 3. *x*. **SQLFetch** può essere usato solo per operazioni di recupero con più righe quando viene chiamato in ODBC 3. *x*; se un database ODBC 2. *x* applicazione chiama **SQLFetch**, verrà aperta solo un singola riga-cursore forward only. Quando un'applicazione ODBC 3. *x* applicazione chiama **SQLFetch** in un'API ODBC 2. *x* driver, restituisce una singola riga, a meno che il driver supporta **SQLExtendedFetch**. Per altre informazioni, vedere [cursori rettangolari, cursori scorrevoli e compatibilità con le versioni precedenti](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) nell'appendice g: Driver linee guida per la compatibilità con le versioni precedenti.  

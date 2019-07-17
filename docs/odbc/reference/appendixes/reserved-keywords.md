@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d77d6632d689a1f169c61cb636e3bc89a900419
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a89a24ddbbe14938824819e24fd9112597168507
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057215"
 ---
 # <a name="reserved-keywords"></a>Parole chiave riservate
 Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzioni di ODBC. Queste parole non limitano la grammatica SQL minima; Tuttavia, per garantire la compatibilità con driver che supportano la grammatica SQL di base, le applicazioni devono evitare di usare queste parole chiave. Il simbolo #**definire** valore SQL_ODBC_KEYWORDS contiene un elenco delimitato da virgole di queste parole chiave.  
@@ -45,7 +44,7 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
 |BEGIN|MODULE|  
 |BETWEEN|MONTH|  
 |BIT|NAMES|  
-|BIT_LENGTH|NATIONAL|  
+|FUNZIONE BIT_LENGTH|NATIONAL|  
 |BOTH|NATURAL|  
 |BY|NCHAR|  
 |CASCADE|NEXT|  
@@ -61,14 +60,14 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
 |CLOSE|ONLY|  
 |COALESCE|OPEN|  
 |COLLATE|OPTION|  
-|COLLATION|o|  
+|COLLATION|Oppure|  
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
 |CONNECT|OUTPUT|  
 |CONNECTION|OVERLAPS|  
 |CONSTRAINT|PAD|  
 |CONSTRAINTS|PARTIAL|  
-|CONTINUE|PASCAL|  
+|CONTINUE|CONVENZIONE PASCAL|  
 |CONVERT|POSIZIONE|  
 |CORRESPONDING|PRECISION|  
 |COUNT|PREPARE|  
@@ -79,7 +78,7 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
 |CURRENT_TIME|PROCEDURE|  
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
-|CURSOR|real|  
+|CURSOR|REAL|  
 |DATE|REFERENCES|  
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
@@ -112,7 +111,7 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
 |EXTRACT|TEMPORARY|  
 |FALSE|THEN|  
 |FETCH|TIME|  
-|FIRST|timestamp|  
+|FIRST|TIMESTAMP|  
 |FLOAT|TIMEZONE_HOUR|  
 |FOR|TIMEZONE_MINUTE|  
 |FOREIGN|TO|  
@@ -130,7 +129,7 @@ Le parole elencate di seguito sono riservate per l'utilizzo in chiamate di funzi
 |HOUR|USAGE|  
 |IDENTITY|Utente|  
 |IMMEDIATE|USING|  
-|IN|Value|  
+|IN|VALUE|  
 |INCLUDE|VALUES|  
 |INDEX|VARCHAR|  
 |INDICATOR|VARYING|  

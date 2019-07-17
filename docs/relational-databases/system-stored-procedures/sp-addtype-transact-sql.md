@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ead23c8feb428772fcde5bcdb59f19e1a23b6cd9
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 4e52fb6700d0af133a687c8b93e28cd12f72221c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117927"
 ---
 # <a name="spaddtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ sp_addtype [ @typename = ] type,
  *s*  
  Valore intero non negativo che indica il numero massimo di cifre decimali che è possibile archiviare a destra del separatore decimale. Deve essere minore o uguale al valore della precisione. Per altre informazioni, vedere [decimal e numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
-`[ @nulltype = ] 'null_type'` Indica il modo in cui il tipo di dati alias gestisce valori null. *null_type* viene **varchar (** 8 **)**, con un valore predefinito è NULL e deve essere racchiuso tra virgolette singole ('NULL', 'NOT NULL' o 'NONULL'). Se *null_type* non è definito in modo esplicito dal **sp_addtype**, impostarlo su valori null predefinito corrente. Utilizzare la funzione di sistema GETANSINULL per determinare l'impostazione predefinita corrente per il supporto dei valori Null. Questa impostazione può essere modificata tramite l'istruzione SET o ALTER DATABASE. L'impostazione relativa al supporto dei valori Null deve essere definita in modo esplicito. Se **@phystype** viene **bit**, e **@nulltype** viene omesso, il valore predefinito non è NULL.  
+`[ @nulltype = ] 'null_type'` Indica il modo in cui il tipo di dati alias gestisce valori null. *null_type* viene **varchar (** 8 **)** , con un valore predefinito è NULL e deve essere racchiuso tra virgolette singole ('NULL', 'NOT NULL' o 'NONULL'). Se *null_type* non è definito in modo esplicito dal **sp_addtype**, impostarlo su valori null predefinito corrente. Utilizzare la funzione di sistema GETANSINULL per determinare l'impostazione predefinita corrente per il supporto dei valori Null. Questa impostazione può essere modificata tramite l'istruzione SET o ALTER DATABASE. L'impostazione relativa al supporto dei valori Null deve essere definita in modo esplicito. Se **@phystype** viene **bit**, e **@nulltype** viene omesso, il valore predefinito non è NULL.  
   
 > [!NOTE]  
 >  Il *null_type* parametro definisce solo i valori null predefinito per questo tipo di dati. Se l'impostazione per il supporto dei valori Null viene definita in modo esplicito quando si utilizza il tipo di dati alias durante la creazione di tabelle, questo valore sarà prioritario rispetto all'impostazione predefinita. Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) e [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
@@ -80,7 +79,7 @@ sp_addtype [ @typename = ] type,
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  Il nome di un tipo di dati alias deve essere univoco all'interno del database, ma è possibile utilizzare la stessa definizione per tipi di dati alias con nomi diversi.  
@@ -92,14 +91,14 @@ sp_addtype [ @typename = ] type,
 > [!IMPORTANT]  
 >  Per motivi di compatibilità con le versioni precedenti, il **pubbliche** ruolo predefinito del database viene concessa automaticamente l'autorizzazione REFERENCES per i tipi di dati alias creati tramite **sp_addtype**. Si noti quando vengono creati tipi di dati alias tramite l'istruzione CREATE TYPE anziché **sp_addtype**, si verifica questa assegnazione automatica non.  
   
- Tipi di dati alias non possono essere definiti tramite il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp**, **tabella**, **xml**, **varchar (max)**, **nvarchar (max)** oppure **varbinary (max)** i tipi di dati.  
+ Tipi di dati alias non possono essere definiti tramite il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp**, **tabella**, **xml**, **varchar (max)** , **nvarchar (max)** oppure **varbinary (max)** i tipi di dati.  
   
 ## <a name="permissions"></a>Permissions  
  Richiede l'appartenenza al **db_owner** oppure **db_ddladmin** ruolo predefinito del database.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-an-alias-data-type-that-does-not-allow-for-null-values"></a>A. Creazione di un tipo di dati alias che non consente valori Null  
+### <a name="a-creating-an-alias-data-type-that-does-not-allow-for-null-values"></a>R. Creazione di un tipo di dati alias che non consente valori Null  
  L'esempio seguente crea un tipo di dati alias `ssn` (numero di previdenza sociale) che si basa sul [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-fornito **varchar** tipo di dati. Il tipo di dati `ssn` viene utilizzato per colonne contenenti numeri di previdenza sociale a 11 cifre (999-99-9999). Questa colonna non può contenere valori NULL.  
   
  Si noti che `varchar(11)` è racchiuso tra virgolette singole in quanto contiene segni di punteggiatura (le parentesi).  
@@ -111,7 +110,7 @@ EXEC sp_addtype ssn, 'varchar(11)', 'NOT NULL';
 GO  
 ```  
   
-### <a name="b-creating-an-alias-data-type-that-allows-for-null-values"></a>b. Creazione di un tipo di dati alias che consente valori Null  
+### <a name="b-creating-an-alias-data-type-that-allows-for-null-values"></a>B. Creazione di un tipo di dati alias che consente valori Null  
  Nell'esempio seguente viene creato un tipo di dati alias basato sul tipo di dati `datetime` e denominato `birthday` che consente valori Null.  
   
 ```  

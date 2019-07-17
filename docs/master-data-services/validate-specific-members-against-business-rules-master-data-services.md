@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2288ef43-5392-47ea-b651-ec25e5692a14
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5b0d7a9965d1453441384b09690be7ac97a7f36c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 867f56234801e7eb659128ebeb35c38dddd2742e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085576"
 ---
 # <a name="validate-specific-members-against-business-rules-master-data-services"></a>Convalidare membri specifici rispetto a regole business (Master Data Services)
 

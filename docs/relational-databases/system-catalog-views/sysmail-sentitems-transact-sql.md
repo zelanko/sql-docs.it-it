@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 57fee409bbaa286f052c2fa11e15a956fcd7d540
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0a2cf94ed3575a6da1ec072e9cf19df0b467741
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699229"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086237"
 ---
 # <a name="sysmailsentitems-transact-sql"></a>sysmail_sentitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47699229"
   
  Per visualizzare tutti i messaggi elaborati da posta elettronica Database, usare [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md). Per visualizzare solo i messaggi con lo stato non riuscito, usare [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Per visualizzare solo messaggi non inviati oppure ritentare i messaggi, usare [sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). Per visualizzare allegati di posta elettronica, usare [sysmail_attachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md).  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Identificatore dell'elemento di posta nella coda della posta.|  
 |**profile_id**|**int**|Identificatore del profilo utilizzato per l'invio del messaggio.|  
@@ -40,13 +39,13 @@ ms.locfileid: "47699229"
 |**copy_recipients**|**ntext**|Indirizzi di posta elettronica degli utenti che ricevono una copia del messaggio.|  
 |**blind_copy_recipients**|**ntext**|Indirizzi di posta elettronica degli utenti che ricevono una copia del messaggio, ma i cui nomi non sono indicati nell'intestazione del messaggio.|  
 |**subject**|**nvarchar(510)**|Oggetto del messaggio.|  
-|**Corpo**|**ntext**|Corpo del messaggio.|  
+|**body**|**ntext**|Corpo del messaggio.|  
 |**body_format**|**varchar(20)**|Formato del corpo del messaggio. I valori possibili sono **testo** e **HTML**.|  
-|**importanza**|**varchar(6)**|Il **importanza** parametro del messaggio.|  
+|**importance**|**varchar(6)**|Il **importanza** parametro del messaggio.|  
 |**Sensibilità**|**varchar(12)**|Il **sensibilità** parametro del messaggio.|  
 |**file_attachments**|**ntext**|Elenco delimitato da punti e virgola dei nomi dei file allegati al messaggio di posta elettronica.|  
 |**attachment_encoding**|**varchar(20)**|Tipo di allegato del messaggio di posta elettronica.|  
-|**Query**|**ntext**|Query eseguita dal programma di posta elettronica.|  
+|**query**|**ntext**|Query eseguita dal programma di posta elettronica.|  
 |**execute_query_database**|**sysname**|Contesto di database all'interno del quale il programma di posta elettronica ha eseguito la query.|  
 |**attach_query_result_as_file**|**bit**|Quando il valore è 0, i risultati della query sono inclusi nel corpo del messaggio di posta elettronica, dopo il contenuto del corpo. Quando il valore è 1, i risultati sono restituiti come file allegato.|  
 |**query_result_header**|**bit**|Quando il valore è 1, i risultati della query includono le intestazioni di colonna. Quando il valore è 0, i risultati della query non includono le intestazioni di colonna.|  

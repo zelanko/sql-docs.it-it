@@ -10,14 +10,13 @@ dev_langs:
 ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a24007abad9148a02da3542587967ae9dcc63f16
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 18798dece1c801ad0cc4854b7fccc15529a56d5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535652"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056455"
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "58535652"
 > [!IMPORTANT]  
 >  Il [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] log attività interessate da **sp_pdw_log_user_data_masking** certezze [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] i log attività. **sp_pdw_log_user_data_masking** influisce sui registri delle transazioni del database o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i log degli errori.  
   
- **Sfondo:** Nella configurazione predefinita [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] log attività contengono completi [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni ed è possibile in alcuni casi includono i dati utente contenuti nelle operazioni, ad esempio **Inserisci**, **UPDATE**, e **Seleziona** istruzioni. In caso di un problema nell'appliance, in questo modo, l'analisi delle condizioni che ha causato il problema senza la necessità di riprodurre il problema. Allo scopo di impedire che i dati utente su cui scrivere [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] i log attività, i clienti possono scegliere di abilitare il mascheramento dei dati utente tramite questa stored procedure. Le istruzioni verranno ancora scritti [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] i log attività, ma tutti i valori letterali nelle istruzioni che possono contenere i dati dell'utente verranno applicata la maschera; sostituiti con alcuni valori costanti predefinite.  
+ **Contesto**: Nella configurazione predefinita [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] log attività contengono completi [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni ed è possibile in alcuni casi includono i dati utente contenuti nelle operazioni, ad esempio **Inserisci**, **UPDATE**, e **Seleziona** istruzioni. In caso di un problema nell'appliance, in questo modo, l'analisi delle condizioni che ha causato il problema senza la necessità di riprodurre il problema. Allo scopo di impedire che i dati utente su cui scrivere [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] i log attività, i clienti possono scegliere di abilitare il mascheramento dei dati utente tramite questa stored procedure. Le istruzioni verranno ancora scritti [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] i log attività, ma tutti i valori letterali nelle istruzioni che possono contenere i dati dell'utente verranno applicata la maschera; sostituiti con alcuni valori costanti predefinite.  
   
  Quando transparent data encryption è abilitato nell'appliance, mascheramento dei dati utente in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] i log attività vengono attivati automaticamente.  
   

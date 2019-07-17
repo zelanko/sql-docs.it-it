@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: 704b1ad3-3534-4cf3-aff4-9fb70064b6cc
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 460e620f9b91b3b616b487f6324e640dbaf4f83a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 730508fca6b6f9d3e9515e9ec496971a4b758279
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046517"
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,16 +67,16 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
  *empty_string*  
  Equivale a DEFAULT.  
   
- **«**< securable_class >**»**  
+ **«** < securable_class > **»**  
  Quando viene chiamata con il nome di una classe di entità a protezione diretta, sys. fn_builtin_permissions restituirà tutte le autorizzazioni valide per la classe. < securable_class > è una stringa letterale che richiede virgolette. **nvarchar(60)**  
   
 ## <a name="tables-returned"></a>Tabelle restituite  
   
-|Nome colonna|Tipo di dati|Confronto|Description|  
+|Nome colonna|Tipo di dati|Regole di confronto|Descrizione|  
 |-----------------|---------------|---------------|-----------------|  
 |class_desc|**nvarchar(60)**|Regole di confronto del server|Descrizione della classe a protezione diretta.|  
 |permission_name|**nvarchar(60)**|Regole di confronto del server|Nome dell'autorizzazione.|  
-|Tipo|**varchar(4)**|Regole di confronto del server|Codice abbreviato del tipo di autorizzazione. Vedere la tabella seguente.|  
+|type|**varchar(4)**|Regole di confronto del server|Codice abbreviato del tipo di autorizzazione. Vedere la tabella seguente.|  
 |covering_permission_name|**nvarchar(60)**|Regole di confronto del server|Se non è NULL, corrisponde al nome dell'autorizzazione per la classe specifica, che implica altre autorizzazioni per tale classe.|  
 |parent_class_desc|**nvarchar(60)**|Regole di confronto del server|Se non è NULL, corrisponde al nome della classe padre contenente la classe corrente.|  
 |parent_covering_permission_name|**nvarchar(60)**|Regole di confronto del server|Se non è NULL, corrisponde al nome dell'autorizzazione per la classe padre specifica, che implica tutte le altre autorizzazioni per tale classe.|  
@@ -221,9 +220,9 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO|ADMINISTER DATABASE BULK OPERATIONS<br /> **Si applica a**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|DATABASE|  
-|DL|Elimina|DATABASE|  
-|DL|Elimina|OBJECT|  
-|DL|Elimina|SCHEMA|  
+|DL|DELETE|DATABASE|  
+|DL|DELETE|OBJECT|  
+|DL|DELETE|SCHEMA|  
 |EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |EX|EXECUTE|DATABASE|  
 |EX|EXECUTE|OBJECT|  
@@ -337,7 +336,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-listing-all-built-in-permissions"></a>A. Elenco di tutte le autorizzazioni predefinite   
+### <a name="a-listing-all-built-in-permissions"></a>R. Elenco di tutte le autorizzazioni predefinite   
 Usare `DEFAULT` o una stringa vuota per restituire tutte le autorizzazioni.   
 ```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT);

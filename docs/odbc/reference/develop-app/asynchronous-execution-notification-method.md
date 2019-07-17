@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6aa634f154eb0594c76ae7e65b8d237175a3f92e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66b806b698164b306eee4dc7d4c48fbe7835adae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077057"
 ---
 # <a name="asynchronous-execution-notification-method"></a>Esecuzione asincrona (metodo di notifica)
 ODBC consente l'esecuzione asincrona di connessione e le operazioni di istruzione. Un thread dell'applicazione può chiamare una funzione ODBC in modalità asincrona e la funzione può restituire prima che l'operazione è stata completata, consentendo il thread dell'applicazione eseguire altre attività. In Windows 7 SDK, per istruzione asincrona o operazioni di connessione, un'applicazione determinato che l'operazione asincrona è completa usando il metodo di polling. Per altre informazioni, vedere [esecuzione asincrona (metodo di Polling)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). A partire da Windows 8 SDK, è possibile determinare che un'operazione asincrona viene completata tramite il metodo di notifica.  
@@ -42,9 +41,9 @@ ODBC consente l'esecuzione asincrona di connessione e le operazioni di istruzion
   
 |Versione ODBC dell'applicazione|Versione di Gestione driver|Versione driver|Comportamento|  
 |------------------------------|----------------------------|--------------------|--------------|  
-|Nuova applicazione di qualsiasi versione ODBC|ODBC 3.81|ODBC 3.80 Driver|Applicazione può usare questa funzionalità se il driver supporta questa funzionalità, in caso contrario, gestione Driver verrà generato un errore.|  
+|Nuova applicazione di qualsiasi versione ODBC|ODBC 3.81|3\.80 ODBC Driver|Applicazione può usare questa funzionalità se il driver supporta questa funzionalità, in caso contrario, gestione Driver verrà generato un errore.|  
 |Nuova applicazione di qualsiasi versione ODBC|ODBC 3.81|Driver pre-ODBC 3.80|Gestione Driver verrà generato un errore se il driver non supporta questa funzionalità.|  
-|Nuova applicazione di qualsiasi versione ODBC|Pre-ODBC 3.81|Qualsiasi|Quando l'applicazione usa questa funzionalità, un vecchio gestione Driver considererà i nuovi attributi come attributi specifici del driver e il driver deve generato un errore. Una nuova gestione Driver non supera tali attributi del driver.|  
+|Nuova applicazione di qualsiasi versione ODBC|Pre-ODBC 3,81|Any|Quando l'applicazione usa questa funzionalità, un vecchio gestione Driver considererà i nuovi attributi come attributi specifici del driver e il driver deve generato un errore. Una nuova gestione Driver non supera tali attributi del driver.|  
   
  Un'applicazione deve controllare la versione di gestione Driver prima di usare questa funzionalità. In caso contrario, se un driver mediocre non non errore e la versione di gestione Driver è precedente alla 3,81 ODBC, il comportamento è indefinito.  
   
@@ -327,7 +326,7 @@ if (SQL_ASYNC_NOTIFICATION_CAPABLE == InfoValue)
   
  Gli attributi di connessione SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE e SQL_ATTR_ASYNC_DBC_EVENT determinano se ODBC viene eseguita in modalità asincrona e ODBC che abilita la modalità di notifica per un handle di connessione. Gli attributi di istruzione SQL_ATTR_ASYNC_ENABLE e SQL_ATTR_ASYNC_STMT_EVENT determinano se ODBC viene eseguita in modalità asincrona e ODBC che abilita la modalità di notifica per un handle di istruzione.  
   
-|SQL_ATTR_ASYNC_ENABLE or SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT or SQL_ATTR_ASYNC_DBC_EVENT|Modalità|  
+|SQL_ATTR_ASYNC_ENABLE o SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT o SQL_ATTR_ASYNC_DBC_EVENT|Modalità|  
 |-------------------------------------------------------------------------|-------------------------------------------------------------------|----------|  
 |Abilitare|non null|Notifica asincrona|  
 |Abilitare|null|Polling asincrono|  

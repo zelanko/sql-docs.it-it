@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 67377f638459a37f25fbc78b9acff395192a2f3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a4d8864c28cb3569d4177103d10dd4d3da9b2e3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628264"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029979"
 ---
 # <a name="spmarkpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_markpendingschemachange [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@publication=** ] **'***publication***'**  
+ [ **@publication=** ] **'***pubblicazione***'**  
  Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
 `[ @schemaversion = ] schemaversion` Identifica una modifica dello schema in sospeso. *SchemaVersion* viene **int**, con valore predefinito è **0**. Uso [sp_enumeratependingschemachanges &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) per elencare le modifiche dello schema in sospeso per la pubblicazione.  

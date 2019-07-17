@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 146bf10a-c898-4676-a2a1-673fb1cee7a2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 61936891ecd31b3bf5421a8cac49aad9f0dd37f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c785ee1c4d3c5382aa42adf48ad9880f00297137
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635319"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089198"
 ---
 # <a name="syssysconfigures-transact-sql"></a>sys.sysconfigures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +35,11 @@ ms.locfileid: "47635319"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**Valore**|**int**|Valore modificabile dall'utente per la variabile. Questo valore viene utilizzato da [!INCLUDE[ssDE](../../includes/ssde-md.md)] solo dopo l'esecuzione di RECONFIGURE.|  
 |**config**|**int**|Numero di variabile di configurazione.|  
-|**Commento**|**nvarchar(255)**|Descrizione dell'opzione di configurazione.|  
+|**comment**|**nvarchar(255)**|Descrizione dell'opzione di configurazione.|  
 |**status**|**smallint**|Mappa di bit che indica lo stato dell'opzione. I possibili valori sono i seguenti:<br /><br /> 0 = statica. L'impostazione diventa effettiva al riavvio del server.<br /><br /> 1 = dinamica. La variabile diventa attiva quando viene eseguita l'istruzione RECONFIGURE.<br /><br /> 2 = avanzata. Variabile viene visualizzata solo quando la **Mostra opzioni avanzate** è impostata. L'impostazione diventa effettiva al riavvio del server.<br /><br /> 3 = dinamica e avanzata.|  
   
 ## <a name="see-also"></a>Vedere anche  

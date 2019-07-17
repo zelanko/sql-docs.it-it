@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c06902e4-721d-42e2-b818-05f0e18e4ce0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e93e9dd8da111d367657d99dfba19513ff7f7539
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c16ec959f847f1b2dba5bdfbea8f886bb00545a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996241"
 ---
 # <a name="appendix-a-odbc-error-codes"></a>Appendice A: Codici di errore ODBC
 In questo argomento vengono descritti i valori SQLSTATE per ODBC 3. *x*. Per altre informazioni su ODBC 3. *x* valori SQLSTATE, vedere [mapping di SQLSTATE](../../../odbc/reference/develop-app/sqlstate-mappings.md).  

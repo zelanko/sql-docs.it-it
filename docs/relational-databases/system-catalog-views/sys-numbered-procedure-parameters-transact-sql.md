@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a441d46d-1f30-41c2-8d94-e9442f59786e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 437b25af01544a1df6197a0d63e21ae2f7bee605
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d07ca74ffb2b793038f230d2b3a5b265101a7eb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824239"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102342"
 ---
 # <a name="sysnumberedprocedureparameters-transact-sql"></a>sys.numbered_procedure_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47824239"
 > [!NOTE]  
 >  I parametri XML e CLR non sono supportati per le stored procedure numerate.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID dell'oggetto a cui appartiene il parametro.|  
 |**procedure_number**|**smallint**|Numero della procedura nell'oggetto, maggiore o uguale a 2.|  
@@ -47,8 +46,8 @@ ms.locfileid: "47824239"
 |**system_type_id**|**tinyint**|ID del tipo di sistema del parametro|  
 |**user_type_id**|**int**|ID del tipo di parametro, come definito dall'utente.|  
 |**max_length**|**smallint**|Lunghezza massima del parametro in byte.<br /><br /> -1 = Il tipo di dati della colonna è varchar(max), nvarchar(max) o varbinary(max).|  
-|**Precisione**|**tinyint**|Precisione del parametro se numerica. In caso contrario 0.|  
-|**Scalabilità**|**tinyint**|Scala del parametro se numerica. In caso contrario 0.|  
+|**precisione**|**tinyint**|Precisione del parametro se numerica. In caso contrario 0.|  
+|**scala**|**tinyint**|Scala del parametro se numerica. In caso contrario 0.|  
 |**is_output**|**bit**|1 = Il parametro è un parametro di output o restituito. In caso contrario 0|  
 |**is_cursor_ref**|**bit**|1 = Il parametro è un parametro di riferimento a un cursore.|  
   

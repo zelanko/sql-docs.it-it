@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: f8910aae-2013-4645-880c-134577cbcbe0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b7c52b665dcf8ec7c7a945a4e75f3b44564ddee2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f36b2f6f52b87fb844bbe9ccb5604f2c4056b15d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670539"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095745"
 ---
 # <a name="log-shipping-tables-transact-sql"></a>Tabelle di log shipping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gli argomenti seguenti descrivono le tabelle di sistema che archiviano le informazioni utilizzate dalle operazioni di log shipping.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)  
  Archivia gli ID dei processi di gestione degli avvisi per il log shipping.  
   

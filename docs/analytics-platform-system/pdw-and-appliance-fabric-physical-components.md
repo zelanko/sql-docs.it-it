@@ -2,19 +2,18 @@
 title: Componenti fisici Appliance - sistema di piattaforma Analitica | Microsoft Docs
 description: I nomi e descrizioni per i componenti fisici dell'infrastruttura appliance e PDW.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0adbd92d1a29a98a80de65268c53ea63e3941d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb7ad8715d3f7a885bc48f6bdcc7f1ec2842f269
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639933"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960423"
 ---
 # <a name="appliance-physical-components---analytics-platform-system"></a>Componenti fisici Appliance - sistema di piattaforma Analitica
 I nomi e descrizioni per i componenti fisici dell'infrastruttura appliance e PDW. 
@@ -65,7 +64,7 @@ Active Directory Domain Services, che contiene il sistema DNS (Domain Name), vie
 Una macchina virtuale ISCSI viene eseguito in ognuno degli host con archiviazione collegata (HSA01 HSA06). Questa macchina virtuale non esegue il failover.  
   
 ### <a name="hosts"></a>Host  
-*appliance_domain*-HST01 through *appliance_domain*-HST06  
+*appliance_domain*-HST01 attraverso *appliance_domain*-HST06  
 Gli host per controllo PDW appliance e nodo fabric macchine virtuali. HST03 è host passivo facoltativo.  
   
 *appliance_domain*-HSA01 attraverso *appliance_domain*-HSA08  
@@ -76,7 +75,7 @@ Gli host con archiviazione collegata (HSA). Ogni HAS host viene eseguito un nodo
 Il cluster PDW è denominato WFOHST01. Gestisce tutti gli host fisici e macchine virtuali che appartengono a PDW.  
   
 ### <a name="direct-attached-storage"></a>Direct Attached Storage  
-*appliance_domain*-DAS01 through *appliance_domain*-DAS03  
+*appliance_domain*-DAS01 attraverso *appliance_domain*-DAS03  
 Questo è l'archiviazione collegata direttamente connesso ai nodi di calcolo. HP è uno DAS per ogni due nodi di calcolo. Dell e quantum hanno uno DAS per ogni tre nodi di calcolo.  
   
 ## <a name="see-also"></a>Vedere anche  

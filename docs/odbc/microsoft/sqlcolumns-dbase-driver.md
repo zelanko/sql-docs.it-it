@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 168171de-ab7d-4b5b-af7f-6e2106adfcce
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f3a3227556a3adfe63431f0cf10169a29d434495
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5afad2cc08910e036a571e3f32b144bc0b922dda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666131"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132599"
 ---
 # <a name="sqlcolumns-dbase-driver"></a>SQLColumns (driver dBASE)
 > [!NOTE]  
 >  In questo argomento fornisce informazioni specifiche del Driver dBASE. Per informazioni generali su questa funzione, vedere l'argomento appropriato nel [riferimento all'API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
-|colonna|Commenti|  
+|Colonna|Commenti|  
 |------------|--------------|  
 |TABLE_QUALIFIER|Viene restituito il percorso di una directory.|  
 |TABLE_OWNER|Poiché il nome del proprietario non è supportato in questa colonna viene restituito NULL.|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3636ce2bb082d4686d0895716fb10567b5dc750
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac8bc2087b4c100b784aadac8458e106538f76d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853409"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123998"
 ---
 # <a name="spgetbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +46,13 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
  Token da utilizzare per associare le sessioni. *return_value* viene **nvarchar (255)** non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- None  
+ Nessuna  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
- sp_getbindtoken restituisce un token valido solo quando la stored procedure viene eseguita all'interno di una transazione attiva. In caso contrario, [!INCLUDE[ssDE](../../includes/ssde-md.md)] restituisce un errore. Esempio:  
+ sp_getbindtoken restituisce un token valido solo quando la stored procedure viene eseguita all'interno di una transazione attiva. In caso contrario, [!INCLUDE[ssDE](../../includes/ssde-md.md)] restituisce un errore. Ad esempio:  
   
 ```  
 -- Declare a variable to hold the bind token.  
@@ -66,7 +65,7 @@ Cannot get a transaction token if there is no transaction active.
 Reissue the statement after a transaction has been started.  
 ```  
   
- Quando sp_getbindtoken viene utilizzata per integrare una connessione di transazione distribuita all'interno di una transazione aperta, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce lo stesso token. Esempio:  
+ Quando sp_getbindtoken viene utilizzata per integrare una connessione di transazione distribuita all'interno di una transazione aperta, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce lo stesso token. Ad esempio:  
   
 ```  
 USE AdventureWorks2012;  

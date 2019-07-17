@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 43366fd6463c885a41ad0304d45c2df1375015f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 885e29f8abbeb185017bc2472566e41596a56900
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792049"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116766"
 ---
 # <a name="xpenumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +47,10 @@ xp_enumgroups [ 'domain_name' ]
   
 ## <a name="result-sets"></a>Set di risultati  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**Gruppo**|**sysname**|Nome del gruppo di Windows.|  
-|**Commento**|**sysname**|Descrizione del gruppo di Windows fornita da Windows.|  
+|**comment**|**sysname**|Descrizione del gruppo di Windows fornita da Windows.|  
   
 ## <a name="remarks"></a>Note  
  Se *domain_name* è il nome del computer basato su Windows che un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione in o nessun nome di dominio viene specificato, **xp_enumgroups** enumera i gruppi locali dal computer che è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

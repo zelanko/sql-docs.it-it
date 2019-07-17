@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c18aa6fefb23bb3d388069773aa1633c29859e90
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 44e7b670ef5f16b6df861e939f9b8b2d9ace8dd5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533533"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104424"
 ---
 # <a name="spsetapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
@@ -56,7 +55,7 @@ sp_setapprole [ @rolename = ] 'role',
 > ODBC **crittografare** funzione non supporta la crittografia. È consigliabile evitare l'utilizzo di questa funzione per proteggere le password trasmesse in rete. Per informazioni da trasmettere in rete, utilizzare i protocolli SSL o IPSec.
   
  **@encrypt = 'none'**  
- Indica che non è richiesto l'utilizzo di tecniche di offuscamento. La password viene passata a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come testo normale. Impostazione predefinita.  
+ Indica che non è richiesto l'utilizzo di tecniche di offuscamento. La password viene passata a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come testo normale. Questa è l'impostazione predefinita.  
   
  **@encrypt= 'odbc'**  
  Specifica che ODBC eseguirà l'offuscamento della password usando ODBC **crittografare** funzione prima di inviare la password per il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. È possibile specificare questa opzione solo se si utilizza un client ODBC o il provider OLE DB per SQL Server.  
@@ -66,7 +65,7 @@ sp_setapprole [ @rolename = ] 'role',
 `[ @cookie = ] @cookie OUTPUT` Specifica un parametro di output per il cookie. Il cookie viene generato solo se il valore di **@fCreateCookie** viene **true**. **varbinary(8000)**  
   
 > [!NOTE]  
-> Il parametro **OUTPUT** del cookie per **sp_setapprole** è attualmente documentato come **varbinary(8000)** che rappresenta la lunghezza massima corretta. Tuttavia, l'implementazione corrente restituisce **varbinary(50)**. Le applicazioni devono continuare a riservare **varbinary(8000** in modo che l'applicazione continua a funzionare correttamente se il cookie di restituisce le dimensioni aumentano in una versione futura.
+> Il parametro **OUTPUT** del cookie per **sp_setapprole** è attualmente documentato come **varbinary(8000)** che rappresenta la lunghezza massima corretta. Tuttavia, l'implementazione corrente restituisce **varbinary(50)** . Le applicazioni devono continuare a riservare **varbinary(8000** in modo che l'applicazione continua a funzionare correttamente se il cookie di restituisce le dimensioni aumentano in una versione futura.
   
 ## <a name="return-code-values"></a>Valori restituiti
 
@@ -88,7 +87,7 @@ Richiede l'appartenenza al **pubblica** e conoscere la password per il ruolo.
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-activating-an-application-role-without-the-encrypt-option"></a>A. Attivazione di un ruolo applicazione senza l'opzione encrypt
+### <a name="a-activating-an-application-role-without-the-encrypt-option"></a>R. Attivazione di un ruolo applicazione senza l'opzione encrypt
 
  Nell'esempio seguente viene attivato il ruolo applicazione `SalesAppRole` con la password non crittografata `AsDeF00MbXX`, creato con autorizzazioni specifiche per l'applicazione utilizzata dall'utente corrente.
 

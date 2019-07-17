@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48ca32fc-1830-4d1f-add7-480ba5ad02e8
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 86a931c9132a23d9ceb3d46b48fbdce23bf76f92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0eab4f23e342c95d83baa70dd03aba2f5d4bc8d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298858"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989644"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>Introduzione a SSMA per DB2 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per DB2 consente rapidamente gli schemi di database DB2 per convertire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schemi, caricare gli schemi risultanti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed eseguire la migrazione dei dati da DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -54,12 +53,12 @@ Visualizzatore metadati DB2 Mostra informazioni sugli schemi DB2. Tramite Visual
   
 -   Selezionare le tabelle per la migrazione dei dati e quindi migrare i dati da tali tabelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [migrazione di database DB2 a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md).  
   
-#### <a name="sql-server-metadata-explorer"></a>SQL Server Metadata Explorer  
+#### <a name="sql-server-metadata-explorer"></a>Esplora i metadati SQL Server  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Visualizzatore metadati Mostra le informazioni su un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando ci si connette a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA recupera i metadati relativi a tale istanza e lo archivia nel file di progetto.  
   
 È possibile usare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Visualizzatore metadati per selezionare gli oggetti di database DB2 convertiti e quindi sincronizzare gli oggetti con l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="metadata"></a>Metadati  
+### <a name="metadata"></a>Metadata  
 A destra di ogni Visualizzatore metadati sono schede che descrivono l'oggetto selezionato. Ad esempio, se si seleziona una tabella in DB2 metadati Esplora, verranno visualizzate sei schede: **Nella tabella**, **SQL**, **digitare Mapping, Report**, **proprietà**, e **dati**. Il **Report** scheda contiene informazioni solo dopo aver creato un report che contiene l'oggetto selezionato. Se si seleziona una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Visualizzatore metadati, verranno visualizzate tre schede: **Nella tabella**, **SQL**, e **dati**.  
   
 La maggior parte delle impostazioni dei metadati sono di sola lettura. Tuttavia, è possibile modificare i metadati seguenti:  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fb4dc6bce6ae10c040123b4a00c29e5ad0f57506
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a170c5e43329d90a4977db12a98bd9d2e556e91d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535963"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048158"
 ---
 # <a name="sphelpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**Role_name**|**sysname**|Nome del ruolo nel database corrente.|  
 |**Role_id**|**smallint**|ID del ruolo nel database corrente.|  
 |**Users_in_role**|**sysname**|Membro del ruolo nel database corrente.|  
-|**Userid**|**smallint**|ID utente del membro del ruolo.|  
+|**ID utente**|**smallint**|ID utente del membro del ruolo.|  
   
 ## <a name="remarks"></a>Note  
  Per visualizzare le informazioni sulle appartenenze dei ruoli predefiniti del database, usare [database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md). Per visualizzare informazioni sui membri del ruolo server, usare [Sys. server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)e per visualizzare le informazioni sulle entità a livello di server, usare [Sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
@@ -87,7 +86,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-listing-all-users"></a>A. Visualizzazione di un elenco di tutti gli utenti  
+### <a name="a-listing-all-users"></a>R. Visualizzazione di un elenco di tutti gli utenti  
  Nell'esempio seguente vengono elencati tutti gli utenti nel database corrente.  
   
 ```  

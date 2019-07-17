@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01769f43-1d9c-4685-84fa-15a6465335e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: be6dc5a164220befb534368eace4f51f4dbd84e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c40fe8c823115c3131a1719185bce8f1506df81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213441"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138837"
 ---
 # <a name="keyset-driven-cursors"></a>Cursori gestiti da keyset
 Un cursore gestito da keyset è compresa tra un valore statico e un cursore dinamico nella sua capacità di rilevare le modifiche. Come un cursore statico, non sempre rileva le modifiche all'appartenenza e all'ordine del set di risultati. Un cursore dinamico, è di rilevare le modifiche ai valori delle righe nel set (soggetto a livello di isolamento della transazione, come impostato dall'attributo di connessione SQL_ATTR_TXN_ISOLATION) di risultati.  

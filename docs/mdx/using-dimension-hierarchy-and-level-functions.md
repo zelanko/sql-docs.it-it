@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: fb6460ed28c856ef6b5ceea8bf89c7bf33f54f2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8fa374ef93f56f8cddaed81bc9e3872d1eb206c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62982193"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097181"
 ---
 # <a name="using-dimension-hierarchy-and-level-functions"></a>Utilizzo di funzioni per dimensioni, gerarchie e livelli
 
@@ -46,7 +45,7 @@ ms.locfileid: "62982193"
 ## <a name="see-also"></a>Vedere anche  
  [Dimensione &#40;MDX&#41;](../mdx/dimension-mdx.md)   
  [Le funzioni &#40;sintassi MDX&#41;](../mdx/functions-mdx-syntax.md)   
- [Hierarchy &#40;MDX&#41;](../mdx/hierarchy-mdx.md)   
+ [Gerarchia di &#40;MDX&#41;](../mdx/hierarchy-mdx.md)   
  [Livello &#40;MDX&#41;](../mdx/level-mdx.md)  
   
   

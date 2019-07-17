@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 055b31fc-f96c-450b-a596-d4570079fbf2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5c95c4e28a5f32131307daeaa61e214af887b577
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98c9380083eb5a0ad796f436af271564676b757d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63069700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094015"
 ---
 # <a name="odbc-core-subkey"></a>Sottochiave ODBC Core
 Il valore della sottochiave ODBC Core fornisce il conteggio di utilizzo per i componenti di base (gestione Driver, libreria di cursori, programma di installazione di DLL e così via). Nella tabella seguente viene illustrato il formato di questo valore.  
   
-|Nome|Tipo di dati|Dati|  
+|Name|Tipo di dati|Data|  
 |----------|---------------|----------|  
 |UsageCount|REG_DWORD|*count*|  
   

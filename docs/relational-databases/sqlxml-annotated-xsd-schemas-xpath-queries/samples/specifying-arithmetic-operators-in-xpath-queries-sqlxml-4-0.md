@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e2329a8d251447665838999a937314f9ef220b6
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 4594fadb7c12ac187219c16cf8505dd77fa0c479
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67579667"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119445"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Specifica di operatori aritmetici nelle query XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "67579667"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-specify-the--arithmetic-operator"></a>A. Specificare l'operatore aritmetico *  
+### <a name="a-specify-the--arithmetic-operator"></a>R. Specificare l'operatore aritmetico *  
  Questa query XPath restituisce  **\<OrderDetail >** gli elementi che soddisfanno il predicato specificato:  
   
 ```  

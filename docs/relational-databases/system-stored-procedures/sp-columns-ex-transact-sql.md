@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47a8665027ce251a391049aa71ba12b246c1c625
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 799c45755d9d3866a1cbe3b61b8582787331123c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528884"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070337"
 ---
 # <a name="spcolumnsex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,13 +57,13 @@ sp_columns_ex [ @table_server = ] 'table_server'
 `[ @ODBCVer = ] 'ODBCVer'` È la versione di ODBC utilizzata. *ODBCVer* viene **int**, con un valore predefinito è 2. che indica ODBC versione 2. I valori validi sono 2 e 3. Per informazioni sulle differenze di comportamento tra le versioni 2 e 3, vedere la specifica relativa a SQLColumns di ODBC.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- None  
+ Nessuna  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nome del qualificatore della tabella o della vista. Vari prodotti DBMS supportano nomi di tabelle in tre parti (_qualificatore_**.** _owner_**.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella. Questo campo può essere NULL.|  
+|**TABLE_CAT**|**sysname**|Nome del qualificatore della tabella o della vista. Vari prodotti DBMS supportano nomi di tabelle in tre parti (_qualificatore_ **.** _owner_ **.** _nome_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella. Questo campo può essere NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nome del proprietario della tabella o della vista. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome dell'utente del database che ha creato la tabella. Questo campo restituisce sempre un valore.|  
 |**TABLE_NAME**|**sysname**|Nome della tabella o della vista. Questo campo restituisce sempre un valore.|  
 |**COLUMN_NAME**|**sysname**|Nome della colonna, per ogni colonna della **TABLE_NAME** restituito. Questo campo restituisce sempre un valore.|  
@@ -75,7 +74,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 |**DECIMAL_DIGITS**|**smallint**|Numero di cifre a destra del separatore decimale.|  
 |**NUM_PREC_RADIX**|**smallint**|Base per i tipi di dati numerici.|  
 |**AMMETTE VALORI NULL**|**smallint**|Specifica se i valori Null sono supportati.<br /><br /> 1 = I valori Null sono supportati.<br /><br /> 0 = I valori Null non sono supportati (NOT NULL).|  
-|**REMARKS**|**varchar(** 254 **)**|In questo campo viene sempre restituito NULL.|  
+|**SEZIONE OSSERVAZIONI**|**varchar(** 254 **)**|In questo campo viene sempre restituito NULL.|  
 |**COLUMN_DEF**|**varchar(** 254 **)**|Valore predefinito della colonna.|  
 |**SQL_DATA_TYPE**|**smallint**|Valore del tipo di dati SQL visualizzato nel campo TYPE del descrittore. Questa colonna corrisponde al **DATA_TYPE** colonna, tranne che per il **datetime** e SQL-92 **intervallo** i tipi di dati. In questa colonna viene sempre restituito un valore.|  
 |**SQL_DATETIME_SUB**|**smallint**|Codice di sottotipo per **data/ora** e SQL-92 **intervallo** i tipi di dati. Per gli altri tipi di dati in questa colonna viene restituito NULL.|  

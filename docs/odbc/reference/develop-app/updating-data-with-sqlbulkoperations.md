@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7645a704-341e-4267-adbe-061a9fda225b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 958514adc02452cdc75a05e7ad28cd31f4e8e0e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4d1aa9b3300cba78f34e876a8501dbaaa421390a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632444"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091658"
 ---
 # <a name="updating-data-with-sqlbulkoperations"></a>Aggiornamento dei dati con SQLBulkOperations
 Le applicazioni possono eseguire operazioni update, delete, fetch o inserimento bulk nella tabella sottostante nell'origine dati con una chiamata a **SQLBulkOperations**. La chiamata **SQLBulkOperations** rappresenta un'alternativa utile alla creazione ed esecuzione di un'istruzione SQL. In questo modo, un driver ODBC supportano gli aggiornamenti posizionati anche quando l'origine dati non supporta le istruzioni SQL posizionate. Fa parte del paradigma di ottenere accesso completo al database tramite le chiamate di funzione.  

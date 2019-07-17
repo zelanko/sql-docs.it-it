@@ -19,13 +19,12 @@ ms.assetid: b42a85e6-1db9-4a22-8a70-014574c95198
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: f1acc995223ba9785055839beb5e12b11ea7494f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c060f08ff70e04a22af1eb9de09aeb1e3bf4ff71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945665"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133781"
 ---
 # <a name="sysfulltextsemanticlanguages-transact-sql"></a>sys.fulltext_semantic_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,13 +36,13 @@ ms.locfileid: "64945665"
 ||||  
 |-|-|-|  
 |**Nome colonna**|**Tipo**|**Descrizione**|  
-|lcid|INT|ID delle impostazioni locali (LCID) di Microsoft Windows per la lingua.|  
-|NAME|sysname|È il valore dell'alias in [Sys. syslanguages &#40;Transact-SQL&#41; ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) corrispondente al valore di **lcid**, o la rappresentazione di stringa dell'identificatore LCID numerico.|  
+|lcid|int|ID delle impostazioni locali (LCID) di Microsoft Windows per la lingua.|  
+|name|sysname|È il valore dell'alias in [Sys. syslanguages &#40;Transact-SQL&#41; ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) corrispondente al valore di **lcid**, o la rappresentazione di stringa dell'identificatore LCID numerico.|  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Per altre informazioni, vedere [Installazione e configurazione della ricerca semantica](../../relational-databases/search/install-and-configure-semantic-search.md).  
   
-## <a name="metadata"></a>Metadati  
+## <a name="metadata"></a>Metadata  
  Per altre informazioni sul database di statistiche lingua semantica installato per supportare l'indicizzazione semantica, eseguire una query sulla vista del catalogo [Sys. fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
   
 ## <a name="security"></a>Sicurezza  

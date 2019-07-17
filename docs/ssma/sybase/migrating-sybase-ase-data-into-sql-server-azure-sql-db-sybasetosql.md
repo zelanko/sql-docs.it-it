@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c358b0b4285a6512b2c0ac5db101bd7eed0f2ba5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28a07c08fd801a9d5fdcdde4206f7aa6fe7b926f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705725"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028841"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>Migrazione dei dati di Sybase ASE in SQL Server - Azure SQL database (SybaseToSQL)
 Dopo che sono stati caricati correttamente gli oggetti di database di Sybase Adaptive Server Enterprise (ASE) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o il database SQL di Azure, è possibile migrare i dati dall'ambiente del servizio app [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database SQL di Azure.  
@@ -64,7 +63,7 @@ Per visualizzare i messaggi di migrazione, verificare che sia visibile il riquad
   
 **Per eseguire la migrazione dei dati**  
   
-1.  Verificare gli elementi seguenti:  
+1.  Verificare quanto segue:  
   
     -   I provider di ambiente del servizio App installati nel computer in cui è in esecuzione SSMA.  
   

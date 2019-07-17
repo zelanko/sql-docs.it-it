@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c0857066ba5f8f57a5a6d088a4f37d69315225ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a71c4d61ec920b51146cc3d3111adefc09f23b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124225"
 ---
 # <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 
@@ -45,7 +44,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  *lcid*  
  Valore intero che esegue il mapping dell'identificatore delle impostazioni locali (LCID) della lingua per cui si desidera caricare la definizione XML del thesaurus. Per ottenere gli identificatori LCID delle lingue disponibili in un'istanza del server, usare il [Sys. fulltext_languages &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) vista del catalogo.  
   
- **@loadOnlyIfNotLoaded**  = *action*  
+ **@loadOnlyIfNotLoaded**  = *Azione*  
  Specifica se il file del thesaurus viene caricato nelle tabelle interne del thesaurus anche se è già stato caricato. *azione* è uno di:  
   
 |Value|Definizione|  
@@ -54,10 +53,10 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
 |1|Il file del thesaurus viene caricato solo se non è ancora caricato.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- None  
+ Nessuna  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  I file del thesaurus vengono caricati automaticamente da query full-text che utilizzano il thesaurus. Per evitare questo impatto sulle prestazioni di primo nella query full-text, è consigliabile eseguire **sp_fulltext_load_thesaurus_file**.  
@@ -71,7 +70,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-load-a-thesaurus-file-even-if-it-is-already-loaded"></a>A. Caricamento di un file del thesaurus anche se è già caricato  
+### <a name="a-load-a-thesaurus-file-even-if-it-is-already-loaded"></a>R. Caricamento di un file del thesaurus anche se è già caricato  
  Nell'esempio seguente viene analizzato e caricato il file del thesaurus inglese.  
   
 ```sql

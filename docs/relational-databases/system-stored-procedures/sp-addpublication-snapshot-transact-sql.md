@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 35b18161e9d0022e0f7df29498a94c40646a5055
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 4fbba559eceae58483419c0f1e3826b9db79bef5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061828"
 ---
 # <a name="spaddpublicationsnapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -78,9 +77,9 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |------------------------------|-----------------------------------|  
 |**1**|*frequency_interval* risulta inutilizzato.|  
 |**4** (impostazione predefinita)|Ogni *frequency_interval* giorni, con un valore predefinito di ogni giorno.|  
-|**8**|*frequency_interval* corrisponde a uno o più dei valori seguenti (combinato con un [ &#124; (OR bit per bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) operatore logico):<br /><br /> **1** = Sunday &#124;<br /><br /> **2** = Monday &#124;<br /><br /> **4** = martedì&#124;<br /><br /> **8** = mercoledì&#124;<br /><br /> **16** = giovedì&#124;<br /><br /> **32** = venerdì&#124;<br /><br /> **64** = Saturday|  
+|**8**|*frequency_interval* corrisponde a uno o più dei valori seguenti (combinato con un [ &#124; (OR bit per bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) operatore logico):<br /><br /> **1** = domenica&#124;<br /><br /> **2** = lunedì&#124;<br /><br /> **4** = martedì&#124;<br /><br /> **8** = mercoledì&#124;<br /><br /> **16** = giovedì&#124;<br /><br /> **32** = venerdì&#124;<br /><br /> **64** = sabato|  
 |**16**|Nel *frequency_interval* giorno del mese.|  
-|**32**|*frequency_interval* è uno dei seguenti:<br /><br /> **1** = Sunday &#124;<br /><br /> **2** = Monday &#124;<br /><br /> **3** = Tuesday &#124;<br /><br /> **4** = mercoledì&#124;<br /><br /> **5** = giovedì&#124;<br /><br /> **6** = Friday &#124;<br /><br /> **7** = Saturday &#124;<br /><br /> **8** = giorno&#124;<br /><br /> **9** = giorno feriale&#124;<br /><br /> **10** = giorno festivo|  
+|**32**|*frequency_interval* è uno dei seguenti:<br /><br /> **1** = domenica&#124;<br /><br /> **2** = lunedì&#124;<br /><br /> **3** = martedì&#124;<br /><br /> **4** = mercoledì&#124;<br /><br /> **5** = giovedì&#124;<br /><br /> **6** = venerdì&#124;<br /><br /> **7** = sabato&#124;<br /><br /> **8** = giorno&#124;<br /><br /> **9** = giorno feriale&#124;<br /><br /> **10** = giorno festivo|  
 |**64**|*frequency_interval* risulta inutilizzato.|  
 |**128**|*frequency_interval* risulta inutilizzato.|  
   
@@ -118,7 +117,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 > [!IMPORTANT]  
 >  Non archiviare informazioni di autenticazione in file script. Per migliorare la sicurezza, si consiglia di specificare nomi e password di accesso in fase di esecuzione.  
   
-`[ @job_login = ] 'job_login'` È l'account di accesso per l'account con cui viene eseguito l'agente. SQL Database istanza gestita di Azure, usare un account di SQL Server. *job_login* viene **nvarchar(257)**, con un valore predefinito è NULL. Questo account viene sempre utilizzato per le connessioni dell'agente al server di distribuzione. È necessario specificare questo parametro per la creazione di un nuovo processo per l'agente snapshot.  
+`[ @job_login = ] 'job_login'` È l'account di accesso per l'account con cui viene eseguito l'agente. SQL Database istanza gestita di Azure, usare un account di SQL Server. *job_login* viene **nvarchar(257)** , con un valore predefinito è NULL. Questo account viene sempre utilizzato per le connessioni dell'agente al server di distribuzione. È necessario specificare questo parametro per la creazione di un nuovo processo per l'agente snapshot.  
   
 > [!NOTE]
 >  Per non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione deve essere l'account di accesso specificato [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  

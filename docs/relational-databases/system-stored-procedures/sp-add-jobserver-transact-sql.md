@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6514f5378c04652ec62cbad0b4899f28a2ade672
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: fecd704d5f6b6f0384ecb17787bd8423852356ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492709"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078200"
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +47,13 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  Entrambi *job_id* oppure *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
-`[ @server_name = ] 'server'` Il nome del server a cui indirizzare il processo. *server* viene **nvarchar(30)**, con un valore predefinito di N' (Local) '. *server* può essere rappresentata **(locale)** per un server locale o il nome di un server di destinazione esistente.  
+`[ @server_name = ] 'server'` Il nome del server a cui indirizzare il processo. *server* viene **nvarchar(30)** , con un valore predefinito di N' (Local) '. *server* può essere rappresentata **(locale)** per un server locale o il nome di un server di destinazione esistente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  **@automatic_post** esiste **sp_add_jobserver**, ma non è elencato nella sezione argomenti. **@automatic_post** è riservato per uso interno.  
@@ -76,7 +75,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-assigning-a-job-to-the-local-server"></a>A. Assegnazione di un processo al server locale  
+### <a name="a-assigning-a-job-to-the-local-server"></a>R. Assegnazione di un processo al server locale  
  Nell'esempio seguente viene assegnato il processo `NightlyBackups` da eseguire nel server locale.  
   
 > [!NOTE]  
@@ -91,7 +90,7 @@ EXEC dbo.sp_add_jobserver
 GO  
 ```  
   
-### <a name="b-assigning-a-job-to-run-on-a-different-server"></a>b. Assegnazione di un processo da eseguire su un server diverso  
+### <a name="b-assigning-a-job-to-run-on-a-different-server"></a>B. Assegnazione di un processo da eseguire su un server diverso  
  Nell'esempio seguente il processo multiserver `Weekly Sales Backups` viene assegnato al server `SEATTLE2`.  
   
 > [!NOTE]  

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 24135456-05f0-427c-884b-93cf38dd47a8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b518c7b79ca6a054b5d6435ea7cb2fe10e419b7
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 160d52c8c145828f6a63c104aecb17e04867cee8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536323"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048291"
 ---
 # <a name="sphelptext-transact-sql"></a>sp_helptext (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @objname = ] 'name'` È il nome completo o non qualificato di un oggetto con ambito schema definito dall'utente. Le virgolette sono necessarie solo se viene specificato un oggetto qualificato. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. L'oggetto deve essere presente nel database corrente. *nome* viene **nvarchar(776)**, non prevede alcun valore predefinito.  
+`[ @objname = ] 'name'` È il nome completo o non qualificato di un oggetto con ambito schema definito dall'utente. Le virgolette sono necessarie solo se viene specificato un oggetto qualificato. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. L'oggetto deve essere presente nel database corrente. *nome* viene **nvarchar(776)** , non prevede alcun valore predefinito.  
   
 `[ @columnname = ] 'computed_column_name'` È il nome della colonna calcolata per cui visualizzare le informazioni sulla definizione. La tabella che contiene la colonna deve essere specificata come *nome*. *column_name* viene **sysname**, non prevede alcun valore predefinito.  
   
@@ -58,11 +57,11 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
  sp_helptext visualizza la definizione utilizzata per creare un oggetto in più righe. Ogni riga include 255 caratteri della definizione [!INCLUDE[tsql](../../includes/tsql-md.md)]. La definizione si trova nel **definition** colonna il [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vista del catalogo.  
   
 ## <a name="permissions"></a>Permissions  
- È richiesta l'appartenenza al ruolo **public** . Le definizioni degli oggetti di sistema sono visibili pubblicamente. La definizione degli oggetti utente è visibile al proprietario degli oggetti o agli utenti autorizzati che dispongono di una delle autorizzazioni seguenti: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION.  
+ È richiesta l'appartenenza al ruolo **public** . Le definizioni degli oggetti di sistema sono visibili pubblicamente. La definizione degli oggetti utente è visibile al proprietario degli oggetti o agli utenti autorizzati che hanno una delle autorizzazioni seguenti: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-displaying-the-definition-of-a-trigger"></a>A. Visualizzazione della definizione di un trigger  
+### <a name="a-displaying-the-definition-of-a-trigger"></a>R. Visualizzazione della definizione di un trigger  
  Nell'esempio seguente viene visualizzata la definizione del trigger `dEmployee` nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  

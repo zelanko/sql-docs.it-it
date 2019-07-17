@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: cefa4fc4-b8b9-4cd7-b124-eed5283acbfc
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e9493f0f4b4ff782e14fadf3c366c95e7d91efd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33eb5a1c4176041d64ba60a3a684b75bc4816350
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843399"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091935"
 ---
 # <a name="systriggers-transact-sql"></a>sys.triggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,13 +34,13 @@ ms.locfileid: "47843399"
   
  Il **parent_class** e **nome** colonne che identificano in modo univoco il trigger nel database.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome del trigger. I nomi di trigger DML sono definiti a livello di ambito dello schema. I nomi di trigger DDL sono definiti a livello di ambito rispetto all'entità padre.|  
 |**object_id**|**int**|Numero di identificazione dell'oggetto. Valore univoco all'interno di un database.|  
 |**parent_class**|**tinyint**|Classe dell'entità padre del trigger.<br /><br /> 0 = Database per i trigger DDL.<br /><br /> 1 = Oggetto o colonna per i trigger DML.|  
 |**parent_class_desc**|**nvarchar(60)**|Descrizione della classe padre del trigger.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN|  
-|**parent_ID**|**int**|ID dell'entità padre del trigger. I possibili valori sono i seguenti:<br /><br /> 0 = Trigger che hanno come entità padre un database.<br /><br /> Per i trigger DML, questo è il **object_id** della tabella o vista in cui è definito il trigger DML.|  
+|**parent_id**|**int**|ID dell'entità padre del trigger. I possibili valori sono i seguenti:<br /><br /> 0 = Trigger che hanno come entità padre un database.<br /><br /> Per i trigger DML, questo è il **object_id** della tabella o vista in cui è definito il trigger DML.|  
 |**type**|**char(2)**|Tipo di oggetto:<br /><br /> TA = Trigger di assembly (CLR)<br /><br /> TR = trigger SQL|  
 |**type_desc**|**nvarchar(60)**|Descrizione del tipo di oggetto.<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**create_date**|**datetime**|Data di creazione del trigger.|  

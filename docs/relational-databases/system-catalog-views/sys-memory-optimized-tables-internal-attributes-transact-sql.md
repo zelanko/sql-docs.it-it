@@ -19,25 +19,24 @@ helpviewer_keywords:
 ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
 author: jodebrui
 ms.author: jodebrui
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4a85fedcd5eaddf5383f6f84360765bc60ad2556
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea116b0d4a70b647c6c3a719443f8e35f177169b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829688"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102377"
 ---
 # <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Contiene una riga per ogni tabella interna ottimizzata per la memoria usata per archiviare tabelle utente ottimizzate per la memoria. Ogni tabella utente corrisponde a una o più tabelle interne. Una singola tabella viene usata per l'archivio dati principale. Tabelle interne aggiuntive vengono usate per supportare funzionalità come l'archiviazione temporale, dell'indice columnstore e all'esterno di righe (LOB) per le tabelle ottimizzate per la memoria.
  
-| Nome colonna  | Tipo di dati  | Description |
+| Nome colonna  | Tipo di dati  | Descrizione |
 | :------ |:----------| :-----|
 |object_id  |**int**|       ID della tabella utente. Le tabelle interne ottimizzate per la memoria presenti per supportare una tabella utente (ad esempio l'archiviazione all'esterno di righe o le righe eliminate in caso di combinazioni Hk/Columnstore) hanno lo stesso valore di object_id dell'elemento padre. |
 |xtp_object_id  |**bigint**|    ID di oggetto OLTP in memoria corrispondente alla tabella interna ottimizzata per la memoria usata per supportare la tabella utente. È univoco all'interno del database e può cambiare nel corso della durata dell'oggetto. 
-|Tipo|  **int** |   Tipo di tabella interna.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
+|type|  **int** |   Tipo di tabella interna.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
 |type_desc| **nvarchar(60)**|   Descrizione del tipo<br/><br/>DELETED_ROWS_TABLE -> Tabella interna che tiene traccia delle righe eliminate per un indice columnstore.<br/>USER_TABLE -> Tabella contenente i dati utente all'interno di righe.<br/>DICTIONARIES_TABLE -> Dizionari per un indice columnstore.<br/>SEGMENTS_TABLE -> Segmenti compressi per un indice columnstore.<br/>ROW_GROUPS_INFO_TABLE -> Metadati relativi ai gruppi di righe compressi di un indice columnstore.<br/>INTERNAL OFF-ROW DATA TABLE -> Tabella interna usata per l'archiviazione di una colonna all'esterno di righe. In questo caso, minor_id riflette column_id.<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> Parte finale, ad accesso frequente, della tabella di cronologia basata su disco. Le righe inserite nella cronologia vengono inserite prima in questa tabella ottimizzata per la memoria interna. Viene eseguita un'attività in background che sposta in modo asincrono le righe da questa tabella interna alla tabella di cronologia basata su disco. |
 |minor_id|  **int**|    0 indica un utente o una tabella interna<br/><br/>Un valore diverso da 0 indica l'ID di una colonna archiviata all'esterno di righe. Si unisce a column_id in sys.columns.<br/><br/>Ogni colonna archiviata all'esterno di righe ha una riga corrispondente in questa vista di sistema.|
 
@@ -46,7 +45,7 @@ Contiene una riga per ogni tabella interna ottimizzata per la memoria usata per 
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-all-columns-that-are-stored-off-row"></a>A. Restituzione di tutte le colonne archiviate all'esterno di righe
+### <a name="a-returning-all-columns-that-are-stored-off-row"></a>R. Restituzione di tutte le colonne archiviate all'esterno di righe
 
 Lo script T-SQL seguente illustra una tabella con più colonne non LOB di grandi dimensioni e una singola colonna LOB:
 

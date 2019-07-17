@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: e10b5431-1bb0-47ca-8fd0-c04bd73a4410
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a110059cd635e2bc89a6e794082d706da1269179
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae1c39d5c3ddc36f4ca3007cf9e17c2543055b85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099205"
 ---
 # <a name="sysdmauditclasstypemap-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Restituisce una tabella che esegue il mapping del campo class_type nel log di controllo al campo class_desc in sys.dm_audit_actions. Per altre informazioni sulle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit, vedere [SQL Server Audit &#40;motore di Database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
 
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**class_type**|**char(2)**|Tipo di classe dell'entità controllata. Esegue il mapping al campo class_type scritto nel log di controllo e restituito dal **get_audit_file ()** (funzione). Non ammette i valori Null.|  
 |**class_type_desc**|**nvarchar(120)**|Nome dell'entità controllabile. Non ammette i valori Null.|  

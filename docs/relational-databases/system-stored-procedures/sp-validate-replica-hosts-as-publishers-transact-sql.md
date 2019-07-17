@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a6786b8f26cd9040492bb03fff8ed18cd14be5ff
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: f9cb198b8083a525c6416af17df774ecfe605bd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528423"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119381"
 ---
 # <a name="spvalidatereplicahostsaspublishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +50,10 @@ sp_validate_replica_hosts_as_publishers
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Nessuna.  
+ No.  
   
 ## <a name="remarks"></a>Note  
- Se non esiste alcuna voce per il server di pubblicazione e il database di pubblicazione **sp_validate_redirected_publisher** restituisce null per il parametro di output *@redirected_publisher*. In caso contrario, viene restituito il server di pubblicazione reindirizzato associato, sia in caso di esito positivo che di esito negativo.  
+ Se non esiste alcuna voce per il server di pubblicazione e il database di pubblicazione **sp_validate_redirected_publisher** restituisce null per il parametro di output *@redirected_publisher* . In caso contrario, viene restituito il server di pubblicazione reindirizzato associato, sia in caso di esito positivo che di esito negativo.  
   
  Se la convalida ha esito positivo, **sp_validate_redirected_publisher** restituisce un'indicazione di esito positivo.  
   

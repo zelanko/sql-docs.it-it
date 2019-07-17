@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: 2766005287a522a84d209d995be0de9a94e45c02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9aaadf6f4226b2c9a457c7437412f35c1bbe20fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794349"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054715"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Panoramica di Data Migration Assistant
 L'aggiornamento a una piattaforma dati moderna individuando i problemi di compatibilità che possono influire sulla funzionalità del database nella nuova versione di SQL Server o Database SQL di Azure aiuta a Data Migration Assistant (DMA). DMA consiglia miglioramenti di prestazioni e affidabilità per l'ambiente di destinazione e consente di spostare lo schema, dati e gli oggetti non contenuti dal server di origine al server di destinazione.
@@ -31,7 +30,7 @@ L'aggiornamento a una piattaforma dati moderna individuando i problemi di compat
 ## <a name="get-data-migration-assistant"></a>Ottenere Data Migration Assistant
 Per installare DMA, scaricare la versione più recente dello strumento dal [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53595), quindi eseguire il **DataMigrationAssistant.msi** file.
 
-## <a name="capabilities"></a>Capabilities
+## <a name="capabilities"></a>Funzionalità
 - Consente di valutare le istanze di SQL Server in locale la migrazione a uno o più database SQL di Azure. Il flusso di lavoro di valutazione ti aiuta a rilevare i problemi che possono influire sulla migrazione del database SQL di Azure e fornisce indicazioni dettagliate su come risolverli.
 
   - Problemi di blocco della migrazione: Consente di individuare i problemi di compatibilità che bloccano la migrazione dei database di SQL Server in locale per database SQL di Azure. DMA fornisce indicazioni che consentono di risolvere tali problemi.

@@ -2,19 +2,18 @@
 title: Utilizzo di un database di gestione temporanea - Parallel Data Warehouse | Microsoft Docs
 description: SQL Server Parallel Data Warehouse (PDW) usa un database di gestione temporanea per archiviare i dati temporaneamente durante il processo di caricamento.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 52ede16185515c3df00ff21ece784d62eec984ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 824ad4dedee0224023f50b6855b2de1e53581304
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157693"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960039"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>Utilizzo di un database di gestione temporanea in Parallel Data Warehouse (PDW)
 SQL Server Parallel Data Warehouse (PDW) usa un database di gestione temporanea per archiviare i dati temporaneamente durante il processo di caricamento. Per impostazione predefinita, SQL Server PDW Usa il database di destinazione come database di gestione temporanea, causando la frammentazione della tabella. Per ridurre la frammentazione della tabella, è possibile creare un database di gestione temporanea definita dall'utente. In alternativa, eseguire il rollback di un errore di caricamento non è un problema, è possibile usare la modalità di caricamento di fastappend per migliorare le prestazioni ignorando la tabella temporanea e caricando direttamente nella tabella di destinazione.  
@@ -63,7 +62,7 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
   
 ## <a name="Examples"></a>Esempi  
   
-### <a name="a-create-a-staging-database"></a>A. Creare un database di gestione temporanea 
+### <a name="a-create-a-staging-database"></a>R. Creare un database di gestione temporanea 
 L'esempio seguente crea un database di gestione temporanea, Stagedb, per l'utilizzo con tutti i caricamenti nell'appliance. Si supponga che si prevede che cinque replicate le tabelle delle dimensioni da 5 GB ogni caricherà contemporaneamente. Questa concorrenza comporta l'allocazione di almeno 25 GB per le dimensioni replicata. Si supponga che si stima che sei distribuito le tabelle delle dimensioni di 100, 200, 400, 500, 500 e 550 GB caricherà contemporaneamente. Questa concorrenza comporta l'allocazione di almeno 2 250 GB per le dimensioni delle tabelle distribuite.  
   
 ```sql  

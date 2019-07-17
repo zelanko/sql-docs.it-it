@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5802891f-27f6-48b3-aeeb-aaef400b318c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db1a26c1cf83c94c9bafa3fbabe0af92b3d748e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f3c29fc4a24afd44621e279ae4da2cbc5de01eb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63301924"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138066"
 ---
 # <a name="call-statement-limitations"></a>Limitazioni dell'istruzione CALL
 (Questa limitazione si applica solo al driver di Microsoft Access).  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d3c60e8c-f0a7-4590-8ece-c68ceaeaea4a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1068811d987745b5c4404079230a1a625deb9316
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6081551a19b832e4fb518f80dcd85c04ec54c8f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028826"
 ---
 # <a name="new-gui-features-in-ssma-for-sybase-sybasetosql"></a>Nuove funzionalità GUI in SSMA per Sybase (SybaseToSQL)
 In questo capitolo vengono descritte nuove funzionalità dell'interfaccia utente di SSMA.  

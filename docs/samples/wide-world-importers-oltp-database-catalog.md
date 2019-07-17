@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e26299f221facfc6828369e1c75225f206937eb4
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 7e9d8fe2dba82e83594c73e442a2e52260900ba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579581"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091247"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catalogo del database WideWorldImporters
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ Dettagli dei parametri e gli utenti (utenti e contatti), insieme a tabelle di ri
 |Utenti|Contiene i nomi utente, informazioni di contatto, per tutti coloro che usano l'applicazione e per le persone che si occupa di Wide World Importers in organizzazioni del cliente. Ciò include personale, i clienti, fornitori e gli eventuali altri contatti. Per gli utenti che dispongono dell'autorizzazione per utilizzare il sistema o un sito Web, le informazioni includono i dettagli di accesso.|
 |Città|Esistono molti indirizzi archiviati nel sistema, per gli utenti, indirizzi di recapito di organizzazione dei clienti, gli indirizzi di inizio corsa a fornitori e così via. Ogni volta che viene archiviato un indirizzo, è presente un riferimento a una città in questa tabella. È inoltre disponibile una posizione spaziale per ogni città.|
 |StateProvinces|Città fanno parte di stati o province. Questa tabella contiene i dettagli di questi strumenti, tra cui i dati spaziali che descrive i limiti di ogni stato o provincia.|
-|Countries|Stati o province fanno parte di terzi. Questa tabella contiene i dettagli di questi strumenti, tra cui i dati spaziali che descrive i limiti di ogni paese.|
+|Paesi|Stati o province fanno parte di terzi. Questa tabella contiene i dettagli di questi strumenti, tra cui i dati spaziali che descrive i limiti di ogni paese.|
 |DeliveryMethods|Possibilità per fornire elementi azionari (ad esempio, furgone/furgone, post, pickup, courier e così via)|
 |PaymentMethods|Opzioni per eseguire pagamenti (ad esempio, contanti, assegno, EFT, ecc.)|
 |TransactionTypes|Tipi di clienti, fornitore o transazioni azionarie (ad esempio, fatturazione, nota di credito e così via)|

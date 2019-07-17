@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3748758a-f16a-4f3b-9c40-06f2e300704e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e3852e713e517828e83e74bf7fb291ef20865532
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69f2c98678739a8b7879e152e13546f2bf9b9cc1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63238706"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046927"
 ---
 # <a name="driver-specific-connection-information"></a>Informazioni di connessione specifiche del driver
 **SQLConnect** presuppone che un nome dell'origine dati, l'ID utente e password siano sufficienti per connettersi a un'origine dati e che tutte le altre informazioni di connessione possono essere archiviati nel sistema. Non si tratta spesso il caso. Ad esempio, un driver potrebbe essere necessario un ID utente e password per accedere a un server e un ID utente diverso e una password per accedere a un sistema DBMS. In quanto **SQLConnect** accetta un ID singolo utente e una password, ciò significa che l'altro ID utente e password devono essere archiviati con le informazioni di origine dati nel sistema se **SQLConnect** deve essere utilizzato. Si tratta di una potenziale violazione della sicurezza e deve essere evitata, a meno che la password viene crittografata.  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e23b7dd9ce81f02a822bece3546bf1c604030df1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4577b97c827d527422fe2448656496d7c196c40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118695"
 ---
 # <a name="sqlcolattribute-function"></a>Funzione SQLColAttribute
 **Conformità**  
@@ -77,7 +76,7 @@ SQLRETURN SQLColAttribute (
   
 -   Se *CharacterAttributePtr* è un puntatore a un buffer binario, le posizioni dell'applicazione il risultato del SQL_LEN_BINARY_ATTR (*lunghezza*) (macro) in *BufferLength*. Un valore negativo in questo modo vengono inserite *BufferLength*.  
   
--   Se *CharacterAttributePtr* è un puntatore a un tipo di dati a lunghezza fissa *BufferLength* deve essere uno dei seguenti: SQL_IS_INTEGER, SQL_IS_UNINTEGER, SQL_SMALLINT, or SQLUSMALLINT.  
+-   Se *CharacterAttributePtr* è un puntatore a un tipo di dati a lunghezza fissa *BufferLength* deve essere uno dei seguenti: SQL_IS_INTEGER, SQL_IS_UNINTEGER, SQL_SMALLINT o SQLUSMALLINT.  
   
  *StringLengthPtr*  
  [Output] Puntatore a un buffer in cui restituire il numero totale di byte (escluso il byte di terminazione null per i dati di tipo carattere) disponibile da restituire in **CharacterAttributePtr*.  
@@ -146,7 +145,7 @@ SQLRETURN SQLColAttribute (
   
  Nella tabella seguente sono elencati i tipi di descrittore restituiti da **SQLColAttribute**. Il tipo per *NumericAttributePtr* valori viene **SQLLEN \*** .  
   
-|*FieldIdentifier*|Informazioni<br /><br /> restituito in|Descrizione|  
+|*FieldIdentifier*|Information<br /><br /> restituito in|Descrizione|  
 |-----------------------|---------------------------------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE se la colonna è di tipo incrementata automaticamente.<br /><br /> SQL_FALSE se la colonna non è di tipo incrementata automaticamente o non è numerica.<br /><br /> Questo campo è valido per solo colonne di tipo di dati numerici. Un'applicazione può inserire i valori in una riga che contiene una colonna a incremento automatico, ma in genere non è possibile aggiornare i valori della colonna.<br /><br /> Quando un'operazione di inserimento viene effettuata in Pro sloupec autoincrement, viene inserito un valore univoco nella colonna al momento dell'inserimento. L'incremento non è definito, ma è specifiche dell'origine dati. Un'applicazione non deve presupporre che Pro sloupec autoincrement inizia in corrispondenza di qualsiasi particolare punto o incrementi da un particolare valore.|  
 |SQL_DESC_BASE_COLUMN_NAME (ODBC 3.0)|*CharacterAttributePtr*|Il nome di colonna di base per il risultato del set di colonne. Se non esiste un nome di colonna di base (come nel caso delle colonne che sono espressioni), questa variabile contiene una stringa vuota.<br /><br /> Queste informazioni vengono restituite dal campo del record SQL_DESC_BASE_COLUMN_NAME di implementazione, che è un campo di sola lettura.|  

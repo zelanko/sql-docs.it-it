@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7caab48e-cbb5-4bbc-a09b-5cf902e5bc45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 73379b769da61fe14ba18815446337d0172c2805
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34d2ceb19bce2e466ff5cae7647125e94fdb7c03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63045485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044991"
 ---
 # <a name="numeric-functions-visual-foxpro-odbc-driver"></a>Funzioni numeriche (driver ODBC Visual FoxPro)
 La tabella seguente descrive le funzioni numeriche ODBC supportate dal Driver ODBC Visual FoxPro; Quando la grammatica di Visual FoxPro per la stessa funzione differisce dalla sintassi ODBC, viene elencato l'equivalente di Visual FoxPro.  
@@ -45,7 +44,7 @@ La tabella seguente descrive le funzioni numeriche ODBC supportate dal Driver OD
 |PI *( )*||  
 |RADIANS *(numeric_exp)*|DTOR *(numeric_exp)*|  
 |RAND *([integer_exp])*||  
-|ROUND *(numeric_exp, integer_exp)*||  
+|Funzione ROUND *(numeric_exp, integer_exp)*||  
 |SIGN *(numeric_exp)*||  
 |SIN *(float_exp)*||  
 |SQRT *(float_exp)*||  

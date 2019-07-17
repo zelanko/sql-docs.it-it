@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0d4d19f7b32297401ff036e61806308b54e44c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810279"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124078"
 ---
 # <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +43,13 @@ sp_get_query_template
   
 ## <a name="arguments"></a>Argomenti  
  «*query_text*»  
- Query per la quale la versione con parametri deve essere generata. «*query_text*' deve essere racchiuso tra virgolette singole ed essere preceduto dall'identificatore Unicode N. N'*query_text*' è il valore assegnato per il @querytext parametro. Il tipo è **nvarchar (max)**.  
+ Query per la quale la versione con parametri deve essere generata. «*query_text*' deve essere racchiuso tra virgolette singole ed essere preceduto dall'identificatore Unicode N. N'*query_text*' è il valore assegnato per il @querytext parametro. Il tipo è **nvarchar (max)** .  
   
  @templatetext  
- È un parametro di output di tipo **nvarchar (max)**, specificato come indicato, che riceve la forma parametrizzata della *query_text* come valore letterale stringa.  
+ È un parametro di output di tipo **nvarchar (max)** , specificato come indicato, che riceve la forma parametrizzata della *query_text* come valore letterale stringa.  
   
  @parameters  
- È un parametro di output di tipo **nvarchar (max)**, specificato come indicato, che riceve un valore letterale stringa dei dati e i nomi dei tipi di parametro che sono stati associati parametri in @templatetext.  
+ È un parametro di output di tipo **nvarchar (max)** , specificato come indicato, che riceve un valore letterale stringa dei dati e i nomi dei tipi di parametro che sono stati associati parametri in @templatetext.  
   
 ## <a name="remarks"></a>Note  
  sp_get_query_template restituisce un errore se:  

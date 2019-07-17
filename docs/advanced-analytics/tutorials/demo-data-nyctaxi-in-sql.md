@@ -7,13 +7,12 @@ ms.date: 10/31/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 502f46b67dbf282a7b3daeac76882915a7c3ac84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d20c37f0f136ad3f0ddf1b5ce046306101aafa78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64505440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962100"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Dati demo dei Taxi di NYC per le esercitazioni di SQL Server Python e R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +26,7 @@ Esercitazioni e guide introduttive utilizzano questo set di dati seguenti:
 + [Informazioni su analitica nel database con R in SQL Server](sqldev-in-database-r-for-sql-developers.md)
 + [Informazioni su analitica nel database usando Python in SQL Server](sqldev-in-database-python-for-sql-developers.md)
 
-## <a name="download-files"></a>Scaricare i file
+## <a name="download-files"></a>Download dei file
 
 Il database di esempio è un file di SQL Server 2016 BAK ospitato da Microsoft. È possibile ripristinarlo in SQL Server 2016 e versioni successive. Download di file inizia immediatamente quando si fa clic sul collegamento. 
 
@@ -57,7 +56,7 @@ La tabella seguente riepiloga gli oggetti creati nel database di esempio dei Tax
 
 |**Nome oggetto**|**Tipo oggetto**|**Descrizione**|
 |----------|------------------------|---------------|
-|**NYCTaxi_Sample** | Database | Crea un database e due tabelle:<br /><br />Nella tabella dbo. nyctaxi_sample: Contiene il set di dati principale NYC Taxi. Alla tabella viene aggiunto un indice columnstore cluster per migliorare le prestazioni di archiviazione e query. Il campione dell'1% del set di dati dei Taxi di NYC viene inserito in questa tabella.<br /><br />tabella dbo.nyc_taxi_models: Utilizzato per rendere permanente il modello con training analitica avanzata.|
+|**NYCTaxi_Sample** | database | Crea un database e due tabelle:<br /><br />Nella tabella dbo. nyctaxi_sample: Contiene il set di dati principale NYC Taxi. Alla tabella viene aggiunto un indice columnstore cluster per migliorare le prestazioni di archiviazione e query. Il campione dell'1% del set di dati dei Taxi di NYC viene inserito in questa tabella.<br /><br />tabella dbo.nyc_taxi_models: Utilizzato per rendere permanente il modello con training analitica avanzata.|
 |**fnCalculateDistance** |funzione a valori scalari | Calcola la distanza diretta tra posizioni di salita e. Questa funzione viene utilizzata [creare funzionalità di dati](sqldev-create-data-features-using-t-sql.md), [training e salvataggio di un modello](sqldev-train-and-save-a-model-using-t-sql.md) e [Operazionalizzare il modello R](sqldev-operationalize-the-model.md).|
 |**fnEngineerFeatures** |funzione con valori di tabella | Crea nuova funzionalità di dati per il training del modello. Questa funzione viene utilizzata [creare funzionalità di dati](sqldev-create-data-features-using-t-sql.md) e [Operazionalizzare il modello R](sqldev-operationalize-the-model.md).|
 

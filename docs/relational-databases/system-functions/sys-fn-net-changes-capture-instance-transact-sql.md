@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 081eaa3995507edf20be0b83f3e0ce766135139c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 556518a5fc2950ff69e6a872df5387b4c8367c6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416322"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122573"
 ---
 # <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -98,10 +97,10 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
 |-----------------|-----------------|-----------------|  
 |\<le colonne da @column_list>|**varia in base**|Le colonne identificate nel **column_list** argomento di sp_cdc_generate_wrapper_function quando viene chiamato per generare lo script di creazione del wrapper di funzione. Se *column_list* è NULL, tutte le colonne di origine rilevate verranno visualizzati nel set di risultati.|  
 |__CDC_OPERATION|**nvarchar(2)**|Codice operativo che indica che l'operazione è necessaria per applicare la riga all'ambiente di destinazione. L'operazione varia in base al valore dell'argomento *row_filter_option* che viene fornito nella chiamata seguente:<br /><br /> *row_filter_option* = 'tutti', 'all with mask'<br /><br /> 'D' - operazione di eliminazione<br /><br /> 'I' - operazione di inserimento<br /><br /> 'UN' - operazione di aggiornamento<br /><br /> *row_filter_option* = 'all with merge'<br /><br /> 'D' - operazione di eliminazione<br /><br /> 'M' - operazione di inserimento oppure di aggiornamento|  
-|\<le colonne da @update_flag_list>|**bit**|Flag di bit denominato aggiungendo _uflag al nome della colonna. Il flag assume un valore non null solo quando *row_filter_option* **= 'all with mask'** e \__CDC_OPERATION **= un' '**. È impostato su 1 se la colonna corrispondente è stata modificata all'interno della finestra di query. Altrimenti, è impostato su 0.|  
+|\<le colonne da @update_flag_list>|**bit**|Flag di bit denominato aggiungendo _uflag al nome della colonna. Il flag assume un valore non null solo quando *row_filter_option* **= 'all with mask'** e \__CDC_OPERATION **= un' '** . È impostato su 1 se la colonna corrispondente è stata modificata all'interno della finestra di query. Altrimenti, è impostato su 0.|  
   
 ## <a name="remarks"></a>Note  
- La funzione fn_net_changes_<capture_instance> viene utilizzata come wrapper per la funzione di query cdc.fn_cdc_get_net_changes_<capture_instance>. La stored procedure sys.sp_cdc_generate_wrapper viene utilizzata per creare lo script per il wrapper.  
+ La funzione fn_net_changes _. fn_cdc_get_net_changes < capture_instance > viene utilizzata come wrapper per la funzione di query CDC. fn_cdc_get_net_changes < capture_instance >. La stored procedure sys.sp_cdc_generate_wrapper viene utilizzata per creare lo script per il wrapper.  
   
  Le funzioni wrapper non vengono create automaticamente. Per creare le funzioni wrapper, è necessario eseguire due operazioni:  
   

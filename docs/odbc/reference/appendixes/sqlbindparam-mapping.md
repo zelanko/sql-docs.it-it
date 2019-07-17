@@ -1,5 +1,5 @@
 ---
-title: SQLBindParam Mapping | Microsoft Docs
+title: Mapping di SQLBindParam | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 375f8f24-36de-4946-916e-c75abc6f070d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15772c3bf74001084985d81d6560baf8accbaa3a
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: ecec6116ee16f4affa615518a690d2c665648464
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793562"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091241"
 ---
 # <a name="sqlbindparam-mapping"></a>Mapping di SQLBindParam
 **SQLBindParam** non può essere chiamato deprecato perché non è mai stato presente in ODBC; tuttavia, ancora rappresenta funzionalità duplicate: è necessario esportarlo perché le applicazioni ISO e conforme a Open gruppo verranno utilizzato Gestione Driver. In quanto **SQLBindParameter** contiene tutte le funzionalità di **SQLBindParam**, **SQLBindParam** verrà mappato in cima **SQLBindParameter** (quando il driver sottostante è un database ODBC *3.x* driver). Un database ODBC *3.x* driver non è necessario implementare **SQLBindParam**.  

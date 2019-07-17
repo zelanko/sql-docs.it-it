@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 17e6f87f-8f56-489d-9aed-216afc8ef310
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf3910b432d803ce74e0bf24d83a974072028f33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f80ec78e37707058a354a03bb2605a38abdfa803
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099196"
 ---
 # <a name="sysdmbrokeractivatedtasks-transact-sql"></a>sys.dm_broker_activated_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47704879"
   Restituisce una riga per ogni stored procedure attivata da Service Broker.  
  
 
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**spid**|**int**|ID della sessione della stored procedure attivata. Ammette valori Null.|  
 |**database_id**|**smallint**|ID del database nel quale è stata definita la coda. Ammette valori Null.|  

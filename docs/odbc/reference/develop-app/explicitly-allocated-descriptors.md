@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f590251d-56a6-4d58-a405-9e85e68fbc47
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fbec69e0d984d843abc2b8754e111a1199c79a5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5808265a9ab70b9947cea64fef790497c7229da8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069936"
 ---
 # <a name="explicitly-allocated-descriptors"></a>Descrittori allocati in modo esplicito
 Un'applicazione può allocare in modo esplicito un descrittore applicazione su una connessione in qualsiasi momento che è connesso al database. Specificando l'handle descrittore come un attributo di un'istruzione di gestire tramite **SQLSetStmtAttr**, l'applicazione indirizza il driver da usare quel descrittore al posto di corrispondente allocata in modo implicito dell'applicazione descrittori. L'applicazione non è possibile specificare i descrittori di implementazione alternativa.  

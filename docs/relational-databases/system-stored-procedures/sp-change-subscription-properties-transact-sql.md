@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7f783b86757cbc54fe47671f75082228d8ddc1e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6152e7f1c1b64cfdeafffe7d5d9eb021bfd4c4a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997104"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045785"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
  Nella tabella seguente vengono descritte le proprietà degli articoli e i valori corrispondenti.  
   
-|Proprietà|Value|Descrizione|  
+|Proprietà|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Specifica la posizione della cartella alternativa per lo snapshot. Se il valore è NULL, i file di snapshot vengono prelevati dalla posizione predefinita specificata dal server di pubblicazione.|  
 |**distrib_job_login**||Account di accesso per l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows utilizzato per l'esecuzione dell'agente.|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 23cf10d7-8bc1-4368-b5eb-e5576421e776
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4bb4c4568c220df16f9f5592f8e38d143340f96b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c48a57b876cde41d6bb514c522bcaa241eec11fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757943"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062998"
 ---
 # <a name="msreplicationoptions-transact-sql"></a>MSreplication_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,9 +33,9 @@ ms.locfileid: "52757943"
 |-----------------|---------------|-----------------|  
 |**optname**|**sysname**|Solo per uso interno.|  
 |**Valore**|**bit**|Solo per uso interno.|  
-|**versione_principale**|**int**|Solo per uso interno.|  
-|**versione_secondaria**|**int**|Solo per uso interno.|  
-|**revisione**|**int**|Solo per uso interno.|  
+|**major_version**|**int**|Solo per uso interno.|  
+|**minor_version**|**int**|Solo per uso interno.|  
+|**revision**|**int**|Solo per uso interno.|  
 |**install_failures**|**int**|Solo per uso interno.|  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: f2b2e2ad-ba24-48a1-913c-8ee4e0895dc4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fce3ca4a2055d7f4eb10cfdcac7f09c7fd004282
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfd88dec92d2707b72c829aa53f2798d3d64fee3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089189"
 ---
 # <a name="syssysconstraints-transact-sql"></a>sys.sysconstraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47806879"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**constid**|**int**|Numero del vincolo.|  
 |**id**|**int**|ID della tabella a cui appartiene il vincolo.|  
@@ -44,7 +43,7 @@ ms.locfileid: "47806879"
 |**spare1**|**tinyint**|Riservato|  
 |**status**|**int**|Pseudomaschera di bit che indica lo stato. I possibili valori sono i seguenti:<br /><br /> 1 = vincolo PRIMARY KEY<br /><br /> 2 = vincolo UNIQUE KEY<br /><br /> 3 = vincolo FOREIGN KEY<br /><br /> 4 = vincolo CHECK<br /><br /> 5 = vincolo DEFAULT<br /><br /> 16 = vincolo a livello di colonna<br /><br /> 32 = vincolo a livello di tabella|  
 |**Azioni**|**int**|Riservato|  
-|**Errore**|**int**|Riservato|  
+|**error**|**int**|Riservato|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Mapping di tabelle di sistema a viste di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

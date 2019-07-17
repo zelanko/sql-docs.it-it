@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bd5e23d47eaeeab77dce95dbed43e1adb541b396
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0594066f044288757e5e31f8e078fabb4c2f3775
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120233"
 ---
 # <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_change_users_login [ @Action = ] 'action'
   
 ## <a name="arguments"></a>Argomenti  
  [ @Action=] '*azione*'  
- Descrive l'azione che deve essere eseguita dalla procedura. *action* is **varchar(10)** . *azione* può avere uno dei valori seguenti.  
+ Descrive l'azione che deve essere eseguita dalla procedura. *azione* viene **varchar (10)** . *azione* può avere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -54,10 +53,10 @@ sp_change_users_login [ @Action = ] 'action'
 |**Report**|Elenca gli utenti e gli ID di sicurezza (SID) corrispondenti disponibili nel database corrente e non collegati ad alcun account di accesso. *utente*, *login*, e *password* deve essere NULL o non specificato.<br /><br /> Per sostituire l'opzione di report con una query utilizzando le tabelle di sistema, confrontare le voci in **Sys. server_prinicpals** con le voci **Sys. database_principals**.|  
 |**Update_One**|Collega l'oggetto specificato *utente* nel database corrente a un oggetto esistente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *login*. *utente* e *login* deve essere specificato. *password* deve essere NULL o non specificato.|  
   
- [ @UserNamePattern= ] '*user*'  
+ [ @UserNamePattern=] '*utente*'  
  Nome di un utente nel database corrente. *utente* viene **sysname**, con un valore predefinito è NULL.  
   
- [ @LoginName= ] '*login*'  
+ [ @LoginName=] '*login*'  
  Nome di un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* è di tipo **sysname** e il valore predefinito è NULL.  
   
  [ @Password= ] '*password*'  
@@ -89,7 +88,7 @@ sp_change_users_login [ @Action = ] 'action'
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-showing-a-report-of-the-current-user-to-login-mappings"></a>A. Visualizzazione di un report dei mapping tra utente corrente e account di accesso  
+### <a name="a-showing-a-report-of-the-current-user-to-login-mappings"></a>R. Visualizzazione di un report dei mapping tra utente corrente e account di accesso  
  Nell'esempio seguente viene creato un report che include gli utenti del database corrente e i relativi ID di sicurezza (SID).  
   
 ```  

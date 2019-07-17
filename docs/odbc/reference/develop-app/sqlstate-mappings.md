@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6e6cabcf-a204-40eb-b77d-8a0c4a5e8524
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 597fe4f7697375cc2e75bef79059beeba9d91e14
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 3987085d7d04bf248bcc728c3bcd1ee5503d9af1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107357"
 ---
 # <a name="sqlstate-mappings"></a>Mapping di SQLSTATE
 Questo argomento vengono descritti i valori SQLSTATE per ODBC *2.x* e ODBC *3.x*. Per altre informazioni su ODBC *3.x* valori SQLSTATE, vedere [appendice a: Codici di errore ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
@@ -57,7 +56,7 @@ Questo argomento vengono descritti i valori SQLSTATE per ODBC *2.x* e ODBC *3.x*
 |S1009|HY009|Restituito per un uso non valido di un puntatore null.|  
 |S1009|HY024|Restituito per un valore di attributo non valido.|  
 |S1009|HY092|Per l'aggiornamento o eliminazione dei dati restituiti da una chiamata a **SQLSetPos**, o l'aggiunta, aggiornamento o eliminazione dei dati da una chiamata a **SQLBulkOperations**, quando la concorrenza è di sola lettura.|  
-|S1010|HY007 HY010|Viene eseguito il mapping di SQLSTATE S1010 a hy007 l'errore SQLSTATE quando **SQLDescribeCol** viene chiamato prima di chiamare **SQLPrepare**, **SQLExecDirect**, o una funzione di catalogo per il *StatementHandle*. SQLSTATE S1010 in caso contrario, viene eseguito il mapping di SQLSTATE HY010.|  
+|S1010|HY010 HY007 L'|Viene eseguito il mapping di SQLSTATE S1010 a hy007 l'errore SQLSTATE quando **SQLDescribeCol** viene chiamato prima di chiamare **SQLPrepare**, **SQLExecDirect**, o una funzione di catalogo per il *StatementHandle*. SQLSTATE S1010 in caso contrario, viene eseguito il mapping di SQLSTATE HY010.|  
 |S1011|HY011||  
 |S1012|HY012||  
 |S1090|HY090||  

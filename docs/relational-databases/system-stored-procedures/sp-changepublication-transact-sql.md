@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 45c61b33a7cc1669ae34f7888fda1450524b079b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: f963aa920a1e783cfec5b467d1c57fdb2e805893
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536823"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124855"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
  Nella tabella seguente vengono descritte le proprietà della pubblicazione che è possibile modificare e le limitazioni previste per i valori di tali proprietà.  
   
-|Proprietà|Value|Descrizione|  
+|Proprietà|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|È possibile creare sottoscrizioni anonime per la pubblicazione specificata, e *immediate_sync* deve essere anche **true**. Non è possibile modificare questa proprietà per pubblicazioni peer-to-peer.|  
 ||**false**|Non è consentito creare sottoscrizioni anonime per la pubblicazione specificata. Non è possibile modificare questa proprietà per pubblicazioni peer-to-peer.|  
@@ -85,7 +84,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**ftp_password**||Password del nome utente utilizzato per la connessione al servizio FTP. Non è possibile modificare questa proprietà per pubblicazioni non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ftp_port**||Numero di porta del servizio FTP per il server di distribuzione. Non è possibile modificare questa proprietà per pubblicazioni non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ftp_subdirectory**||Specifica la posizione in cui vengono creati i file di snapshot se la pubblicazione supporta la propagazione di snapshot tramite FTP. Non è possibile modificare questa proprietà per pubblicazioni non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**immediate_sync**|**true**|I file di sincronizzazione della pubblicazione vengono creati o ricreati a ogni esecuzione dell'agente snapshot. Se l'esecuzione dell'agente snapshot è stata completata una volta prima della sottoscrizione, i Sottoscrittori possono ricevere i file di sincronizzazione immediatamente dopo la sottoscrizione. Le nuove sottoscrizioni ricevono i file di sottoscrizione più recenti generati dall'ultima esecuzione dell'agente snapshot. *independent_agent* must also be **true**. Vedere la sezione Osservazioni di seguito per altre informazioni **immediate_sync**.|  
+|**immediate_sync**|**true**|I file di sincronizzazione della pubblicazione vengono creati o ricreati a ogni esecuzione dell'agente snapshot. Se l'esecuzione dell'agente snapshot è stata completata una volta prima della sottoscrizione, i Sottoscrittori possono ricevere i file di sincronizzazione immediatamente dopo la sottoscrizione. Le nuove sottoscrizioni ricevono i file di sottoscrizione più recenti generati dall'ultima esecuzione dell'agente snapshot. *independent_agent* deve essere inoltre **true**. Vedere la sezione Osservazioni di seguito per altre informazioni **immediate_sync**.|  
 ||**false**|I file di sincronizzazione vengono creati solo se esistono nuove sottoscrizioni. I Sottoscrittori ricevono i file di sincronizzazione dopo la sottoscrizione solo se l'agente snapshot è stato avviato e completato.|  
 |**independent_agent**|**true**|Per la pubblicazione viene utilizzato un agente di distribuzione dedicato.|  
 ||**false**|Per la pubblicazione viene utilizzato un agente di distribuzione condiviso e a ogni coppia database di pubblicazione/database di sottoscrizione è associato un agente condiviso.|  

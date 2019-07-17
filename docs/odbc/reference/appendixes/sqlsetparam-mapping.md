@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 022dfbc0-8d18-4c35-8a28-d9eb16063188
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5d420bc68c4704705018a37c6459181481b1d7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c8d2d567f899c30dfe91cd35445956cd6214da9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297466"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125545"
 ---
 # <a name="sqlsetparam-mapping"></a>Mapping di SQLSetParam
 **SQLSetParam** continua a eseguire il mapping in cima **SQLBindParameter** Analogamente ODBC 2. *x*. Anche se è concettualmente simile a **SQLBindParam**, gestione Driver non esegue il mapping **SQLSetParam** al **SQLBindParam**. Determinati esistente ODBC 2. *x* driver viene utilizzato il valore speciale *BufferLength* (SQL_SETPARAM_VALUE_MAX) che genera l'errore gestione Driver quando si esegue il mapping **SQLSetParam** nella parte superiore della  **SQLBindParameter** per determinare quando viene chiamato da 1. *x* applicazione ODBC.  

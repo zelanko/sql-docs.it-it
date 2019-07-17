@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 533f37252fa16e2e139f29ac843d6d4a933f13de
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7dd10d28855cc4c10f5496c74f1f39a91826052f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532143"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106540"
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @job_type = ] 'job\_type'` Tipo di processo da aggiungere. *job_type* viene **nvarchar(20)** e non può essere NULL. Gli input validi sono **'capture'** e **'cleanup'**.  
+`[ @job_type = ] 'job\_type'` Tipo di processo da aggiungere. *job_type* viene **nvarchar(20)** e non può essere NULL. Gli input validi sono **'capture'** e **'cleanup'** .  
   
 `[ @start_job = ] start_job` Flag che indica se il processo deve essere avviato immediatamente dopo l'aggiunta. *start_job* viene **bit** con valore predefinito è 1.  
   
@@ -83,14 +82,14 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  Un processo di pulizia viene creato utilizzando i valori predefiniti quando la prima tabella nel database è abilitata per Change Data Capture. Un processo di acquisizione viene creato utilizzando i valori predefiniti quando la prima tabella nel database è abilitata per Change Data Capture e per il database non esistono pubblicazioni transazionali. Se esiste una pubblicazione transazionale, per attivare il meccanismo di acquisizione viene utilizzato l'agente di lettura del log delle transazioni. Non è quindi necessario né consentito un processo di acquisizione separato.  
   
  Poiché i processi di pulizia e di acquisizione vengono creati per impostazione predefinita, questa stored procedure è necessaria solo quando un processo è stato eliminato in modo esplicito e deve essere ricreato.  
   
- Il nome del processo è **cdc.**  _\<database\_name\>_**\_pulizia** oppure **cdc.**  _\<database\_name\>_**\_acquisire**, dove *< database_name >* corrisponde al nome del database corrente. Se un processo con lo stesso nome esiste già, il nome viene aggiunto un punto (**.**) seguita da un identificatore univoco, ad esempio: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
+ Il nome del processo è **cdc.**  _\<database\_name\>_ **\_pulizia** oppure **cdc.**  _\<database\_name\>_ **\_acquisire**, dove *< database_name >* corrisponde al nome del database corrente. Se un processo con lo stesso nome esiste già, il nome viene aggiunto un punto ( **.** ) seguita da un identificatore univoco, ad esempio: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
  Per visualizzare la configurazione corrente di un processo di pulizia o di acquisizione, usare [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). Per modificare la configurazione di un processo, usare [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
   
@@ -99,7 +98,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-capture-job"></a>A. Creazione di un processo di acquisizione  
+### <a name="a-creating-a-capture-job"></a>R. Creazione di un processo di acquisizione  
  Nell'esempio seguente viene creato un processo di acquisizione. Questo esempio presuppone che il processo di pulizia esistente sia stato eliminato in modo esplicito e debba essere ricreato. Il processo viene creato utilizzando i valori predefiniti.  
   
 ```  

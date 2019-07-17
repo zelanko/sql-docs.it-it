@@ -19,14 +19,13 @@ ms.assetid: f3df9877-6672-4444-8245-2670063c9310
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a52ce206eee69fa585a72788e46f8f7174d936a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e4d0ec8118fd7496c34d4107f0e824145ca6ae0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980824"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066995"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Specifica di uno spazio dei nomi di destinazione mediante l'attributo targetNamespace (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "65980824"
 ## <a name="examples"></a>Esempi  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per altre informazioni, vedere [requisiti per l'esecuzione di esempi di SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-a-target-namespace"></a>A. Specificare uno spazio dei nomi di destinazione  
+### <a name="a-specifying-a-target-namespace"></a>R. Specificare uno spazio dei nomi di destinazione  
  Il seguente schema XSD specifica uno spazio dei nomi di destinazione utilizzando il **xsd:targetNamespace** attributo. Lo schema imposta anche il **elementFormDefault** e **attributeFormDefault** per i valori dell'attributo **"unqualified"** (il valore predefinito per questi attributi). Si tratta di una dichiarazione globale e ha effetto su tutti gli elementi locali ( **\<ordine >** nello schema) e gli attributi (**CustomerID**, **ContactName**, e **OrderID** nello schema).  
   
 ```  

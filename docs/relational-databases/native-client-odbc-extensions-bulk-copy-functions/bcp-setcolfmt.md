@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fd6ac6c5dccd9f33e2e8389f5847a5ac73b795d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f3666c6951fcacea031c5d86dc9d17381a2f963
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099435"
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +48,7 @@ RETCODE bcp_setcolfmt (
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *HDBC*  
+ *hdbc*  
  Handle di connessione ODBC abilitato per la copia bulk.  
   
  *field*  
@@ -58,7 +57,7 @@ RETCODE bcp_setcolfmt (
  *property*  
  Una delle costanti di proprietà. Le costanti della proprietà sono definite nella tabella seguente.  
   
-|Proprietà|valore|Description|  
+|Proprietà|Valore|Descrizione|  
 |--------------|-----------|-----------------|  
 |BCP_FMT_TYPE|BYTE|Tipo di dati della colonna nel file utente. Se differisce dal tipo di dati della colonna corrispondente nella tabella del database, la copia bulk converte i dati, se possibile.<br /><br /> Il parametro BCP_FMT_TYPE viene enumerato in base ai token dei tipi di dati in sqlncli.h e non in base agli enumeratori dei tipi di dati C ODBC. È possibile, ad esempio, specificare una stringa di caratteri SQL_C_CHAR di tipo ODBC utilizzando il tipo SQLCHARACTER specifico di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Per specificare la rappresentazione predefinita dei dati per il tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], impostare questo parametro su 0.<br /><br /> Per una copia bulk esterna a SQL Server in un file, quando BCP_FMT_TYPE è SQLDECIMAL o SQLNUMERIC, se la colonna di origine non è **decimale** oppure **numerico**, vengono utilizzate la precisione predefinita e la scala. In caso contrario, se la colonna di origine **decimale** oppure **numerico**, vengono utilizzate la precisione e scala della colonna di origine.|  
 |BCP_FMT_INDICATOR_LEN|INT|Lunghezza in byte dell'indicatore (prefisso).<br /><br /> Lunghezza, espressa in byte, di un indicatore di lunghezza o Null nei dati della colonna. I valori validi per la lunghezza dell'indicatore sono 0 (quando non si utilizza alcun indicatore), 1, 2 o 4.<br /><br /> Per specificare l'utilizzo di un indicatore di copia bulk predefinito, impostare questo parametro su SQL_VARLEN_DATA.<br /><br /> Gli indicatori vengono visualizzati in memoria direttamente prima dei dati e nel file di dati immediatamente prima dei dati a cui si riferiscono.<br /><br /> Se si utilizzano più modalità per specificare la lunghezza delle colonne del file di dati, ad esempio un indicatore e una lunghezza di colonna massima o un indicatore e una sequenza di caratteri di terminazione, la copia bulk sceglie quella che comporta la copia del minor numero di dati.<br /><br /> I file di dati generati dalla copia bulk quando il formato dei dati non viene modificato dall'utente contengono indicatori se la lunghezza dei dati di colonna può variare o se la colonna può accettare NULL come valore.|  
@@ -99,7 +98,7 @@ RETCODE bcp_setcolfmt (
   
 -   La lunghezza della sequenza di byte di terminazione facoltativa.  
   
- Ogni chiamata a **bcp_setcolfmt** specifica il formato per una colonna del file utente. Ad esempio, per modificare le impostazioni predefinite per tre colonne in un file di dati utente cinque colonne, chiamare innanzitutto [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)**, quindi chiamare **bcp_setcolfmt** cinque volte, con tre di queste chiamate impostano il formato personalizzato. Per le due chiamate rimanenti, impostare BCP_FMT_TYPE su 0 e bcp_fmt_indicator_length, BCP_FMT_DATA_LEN e *cbValue* su 0, SQL_VARLEN_DATA e 0 rispettivamente. Questa procedura consente di copiare tutte e cinque le colonne, tre con il formato personalizzato e due con il formato predefinito.  
+ Ogni chiamata a **bcp_setcolfmt** specifica il formato per una colonna del file utente. Ad esempio, per modificare le impostazioni predefinite per tre colonne in un file di dati utente cinque colonne, chiamare innanzitutto [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) **(5)** , quindi chiamare **bcp_setcolfmt** cinque volte, con tre di queste chiamate impostano il formato personalizzato. Per le due chiamate rimanenti, impostare BCP_FMT_TYPE su 0 e bcp_fmt_indicator_length, BCP_FMT_DATA_LEN e *cbValue* su 0, SQL_VARLEN_DATA e 0 rispettivamente. Questa procedura consente di copiare tutte e cinque le colonne, tre con il formato personalizzato e due con il formato predefinito.  
   
  Il **bcp_columns** funzione deve essere chiamata prima di chiamare **bcp_setcolfmt**.  
   

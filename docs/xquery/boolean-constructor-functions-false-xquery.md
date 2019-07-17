@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 577d84c1-9285-4580-b6f5-86fbc4827547
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 918a5b7d2d2c4b378172c60afab711a3334176d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a8c013a5fd87058a202e6d24f4b3148947b5319
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63046904"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093206"
 ---
 # <a name="boolean-constructor-functions---false-xquery"></a>Funzioni costruttore booleane - false (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ fn:false() as xs:boolean
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
   
-### <a name="a-using-the-false-xquery-boolean-function"></a>A. Utilizzo della funzione booleana XQuery false()  
+### <a name="a-using-the-false-xquery-boolean-function"></a>R. Utilizzo della funzione booleana XQuery false()  
  Per un esempio funzionante, vedere [funzione true &#40;XQuery&#41;](../xquery/boolean-constructor-functions-true-xquery.md).  
   
 ## <a name="see-also"></a>Vedere anche  

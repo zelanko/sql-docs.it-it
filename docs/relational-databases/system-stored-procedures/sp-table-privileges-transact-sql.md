@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dcc3d02505a1bd568d440d5b70fc06bcfff93ae9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14e532d76f70f6a2d4fa623d80fa02e6c756348a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62688366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096137"
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
  [ @table_name=] '*table_name*'  
  Tabella utilizzata per restituire informazioni del catalogo. *TABLE_NAME* viene **nvarchar (** 384 **)** , non prevede alcun valore predefinito. La ricerca con caratteri jolly è supportata.  
   
- [ @table_owner= ] '*table_owner*'  
+ [ @table_owner=] '*table_owner*'  
  Proprietario della tabella utilizzata per restituire informazioni sul catalogo. *TABLE_OWNER*viene **nvarchar (** 384 **)** , con un valore predefinito è NULL. La ricerca con caratteri jolly è supportata. Se owner viene omesso, vengono applicate le regole di visibilità della tabella predefinite nel sistema DBMS sottostante.  
   
  Se l'utente corrente è il proprietario di una tabella con il nome specificato, vengono restituite le colonne di tale tabella. Se *proprietario* non viene specificato e l'utente corrente non dispone di una tabella con la proprietà specificata *nome*, viene eseguita la ricerca per una tabella con la proprietà specificata *table_name* di proprietà di proprietario del database. Se viene individuata, vengono restituite le colonne di tale tabella.  
@@ -54,11 +53,11 @@ sp_table_privileges [ @table_name = ] 'table_name'
  [ @table_qualifier=] '*table_qualifier*'  
  Nome del qualificatore di tabella. *TABLE_QUALIFIER* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano nomi di tabelle in tre parti (*composti*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
- [ @fUsePattern= ] '*fUsePattern*'  
+ [ @fUsePattern=] '*fUsePattern*'  
  Determina se il carattere di sottolineatura (_), simbolo di percentuale (%) e tra parentesi quadre ([o]) caratteri vengono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* viene **bit**, con un valore predefinito è 1.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- None  
+ Nessuna  
   
 ## <a name="result-sets"></a>Set di risultati  
   

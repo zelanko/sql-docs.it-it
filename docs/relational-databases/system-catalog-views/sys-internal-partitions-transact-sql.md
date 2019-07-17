@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5795ec9feaef483dd3ee9b5f3e31dbb619a89331
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: ca65e1a4e7af69bc1259b856a76c729b5210cc4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122636"
 ---
 # <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "67388343"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-view-all-of-the-internal-rowsets-for-a-table"></a>A. Visualizzare tutti i set di righe interno per una tabella  
+### <a name="a-view-all-of-the-internal-rowsets-for-a-table"></a>R. Visualizzare tutti i set di righe interno per una tabella  
  In questo esempio restituisce tutti i set di righe columnstore interno per una tabella. È anche possibile usare hobt_id per trovare altre informazioni sul set di righe specifico.  
   
 ```  

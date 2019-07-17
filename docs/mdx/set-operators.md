@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: df58b5c7f6da05700f00b4ec5fd46b81926dd3bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ad0b92a970c3618584365d9ad6e99420daef05d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150164"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037007"
 ---
 # <a name="set-operators"></a>Operatori sui set
 
@@ -23,7 +22,7 @@ ms.locfileid: "63150164"
   
  MDX supporta gli operatori sui set elencati nella tabella seguente.  
   
-|Operatore|Descrizione|  
+|Operator|Descrizione|  
 |--------------|-----------------|  
 |[- (Eccezione)](../mdx/except-mdx-operator.md)|Restituisce le differenze tra due set, rimuovendo i membri duplicati.<br /><br /> Questo operatore è funzionalmente equivalente per la [tranne](../mdx/except-mdx-function.md) (funzione).|  
 |[* (Crossjoin)](../mdx/crossjoin-mdx-operator-reference.md)|Restituisce il prodotto incrociato di due set.<br /><br /> Questo operatore è funzionalmente equivalente per la [Crossjoin](../mdx/crossjoin-mdx.md) (funzione).|  

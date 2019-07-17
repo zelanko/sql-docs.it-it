@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fa6ce6b4e0d1c3fbefe7256f3ca96c84d59e664d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad7521eed3cd25d067e3ea253ff2a4362350c889
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62500428"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123935"
 ---
 # <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
   
 `[ @owner = ] 'owner'` È il proprietario della sottoscrizione. *proprietario* viene **sysname**, con un valore predefinito è NULL.  
   
-`[ @tranid = ] 'transaction_id'` Consente l'output di venire filtrato in base all'ID di transazione. *transaction_id* viene **nvarchar(70)**, con un valore predefinito è NULL. Se specificato, viene visualizzato l'ID della transazione associato al comando in coda. Se è NULL, vengono visualizzati tutti i comandi nella coda.  
+`[ @tranid = ] 'transaction_id'` Consente l'output di venire filtrato in base all'ID di transazione. *transaction_id* viene **nvarchar(70)** , con un valore predefinito è NULL. Se specificato, viene visualizzato l'ID della transazione associato al comando in coda. Se è NULL, vengono visualizzati tutti i comandi nella coda.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  
@@ -55,7 +54,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**Azione**|**nvarchar(10)**|Tipo di azione da eseguire in corrispondenza della sincronizzazione.<br /><br /> INS= inserimento<br /><br /> DEL = eliminazione<br /><br /> UPD = aggiornamento|  
-|**Tranid**|**nvarchar(70)**|ID della transazione in cui è stato eseguito il comando.|  
+|**tranid**|**nvarchar(70)**|ID della transazione in cui è stato eseguito il comando.|  
 |**tabella column1... n**||Il valore per ogni colonna della tabella specificata *tablename*.|  
 |**msrepl_tran_version**|**uniqueidentifier**|Questa colonna viene utilizzata per tenere traccia delle modifiche ai dati replicati e per eseguire il rilevamento dei conflitti nel server di pubblicazione. La colonna viene aggiunta alla tabella automaticamente.|  
   

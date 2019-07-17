@@ -14,27 +14,26 @@ helpviewer_keywords:
 ms.assetid: 209eb175-2514-4de1-bc32-b2e6a469d945
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 579a7bacb9264a7adff2477ba94b122b58e046c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 21b431b121e9ded13352309404014d5a851bbfa0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785089"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098169"
 ---
 # <a name="using-collections"></a>Utilizzo delle raccolte
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Una raccolta è un elenco di oggetti costruiti dalla stessa classe di oggetti e che condividono lo stesso oggetto padre. L'oggetto raccolta contiene sempre il nome del tipo di oggetto con il suffisso Collection. Per accedere ad esempio alle colonne di una tabella specificata, utilizzare il tipo di oggetto <xref:Microsoft.SqlServer.Management.Smo.ColumnCollection>. Questo tipo contiene tutti gli oggetti <xref:Microsoft.SqlServer.Management.Smo.Column> che appartengono allo stesso oggetto <xref:Microsoft.SqlServer.Management.Smo.Table>.  
   
- Il [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] **per... Ciascuna** istruzione o il [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] **foreach** istruzione può essere utilizzata per scorrere ogni membro della raccolta.  
+ L'istruzione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] **For...Each** o l'istruzione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] **foreach** può essere utilizzata per scorrere ogni membro della raccolta.  
   
 ## <a name="examples"></a>Esempi  
 Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un Visual C&#35; progetto SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="referencing-an-object-by-using-a-collection-in-visual-basic"></a>Riferimento a un oggetto tramite una raccolta in Visual Basic  
- Questo esempio di codice viene illustrato come impostare una proprietà di colonna usando il <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>, e <xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A> proprietà. Queste proprietà rappresentano le raccolte che è possibile utilizzare per identificare un determinato oggetto quando sono utilizzate con un parametro che ne specifica il nome. Il nome e lo schema sono necessari per il <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A> proprietà dell'oggetto raccolta.  
+ In questo esempio di codice viene illustrato come impostare la proprietà di una colonna mediante le proprietà <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A> e <xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A>. Queste proprietà rappresentano le raccolte che è possibile utilizzare per identificare un determinato oggetto quando sono utilizzate con un parametro che ne specifica il nome. Il nome e lo schema sono necessari per la proprietà dell'oggetto della raccolta <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -47,7 +46,7 @@ srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("Modified
 ```
   
 ## <a name="referencing-an-object-by-using-a-collection-in-visual-c"></a>Riferimento a un oggetto tramite una raccolta in Visual C#  
- Questo esempio di codice viene illustrato come impostare una proprietà di colonna usando il <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>, e <xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A> proprietà. Queste proprietà rappresentano le raccolte che è possibile utilizzare per identificare un determinato oggetto quando sono utilizzate con un parametro che ne specifica il nome. Il nome e lo schema sono necessari per il <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A> proprietà dell'oggetto raccolta.  
+ In questo esempio di codice viene illustrato come impostare la proprietà di una colonna mediante le proprietà <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A> e <xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A>. Queste proprietà rappresentano le raccolte che è possibile utilizzare per identificare un determinato oggetto quando sono utilizzate con un parametro che ne specifica il nome. Il nome e lo schema sono necessari per la proprietà dell'oggetto della raccolta <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>.  
   
 ```csharp  
 {   
@@ -62,7 +61,7 @@ srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("LastName
 ```  
   
 ## <a name="iterating-through-the-members-of-a-collection-in-visual-basic"></a>Scorrimento dei membri di una raccolta in Visual Basic  
- Questo esempio di codice esegue l'iterazione attraverso il <xref:Microsoft.AnalysisServices.Server.Databases%2A> proprietà di raccolta e consente di visualizzare tutte le connessioni all'istanza del database [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ In questo esempio di codice viene eseguito lo scorrimento della proprietà della raccolta <xref:Microsoft.AnalysisServices.Server.Databases%2A> e vengono visualizzate tutte le connessioni di database all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -83,7 +82,7 @@ Console.WriteLine("Total connections =" & total)
 ```
   
 ## <a name="iterating-through-the-members-of-a-collection-in-visual-c"></a>Scorrimento dei membri di una raccolta in Visual C#  
- Questo esempio di codice esegue l'iterazione attraverso il <xref:Microsoft.AnalysisServices.Server.Databases%2A> proprietà di raccolta e consente di visualizzare tutte le connessioni all'istanza del database [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ In questo esempio di codice viene eseguito lo scorrimento della proprietà della raccolta <xref:Microsoft.AnalysisServices.Server.Databases%2A> e vengono visualizzate tutte le connessioni di database all'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```csharp  
 //Connect to the local, default instance of SQL Server.   

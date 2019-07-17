@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b904e4aa73034151e6be23b721e870d4fcd5d9cf
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: eaab973d2554e22d9fc7244850dcfbc0e8f3d4e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582133"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130830"
 ---
 # <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>Funzioni e viste a gestione dinamica relative all'esecuzione (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "59582133"
 
   
 > [!NOTE]  
->  Il **DM exec_query_transformation_stats** vista a gestione dinamica viene identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.  
+>  Il **DM exec_query_transformation_stats** vista a gestione dinamica viene identificato solo a scopo informativo. Non supportati. Non è garantita la compatibilità con le versioni future.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

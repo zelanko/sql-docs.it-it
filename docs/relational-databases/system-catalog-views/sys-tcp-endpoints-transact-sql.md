@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ad6a7f9e9c727f88015b9b815a37a5825e3b2f47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e4b711a7d36e7677f6f32b87ff4c696db231730
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805509"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116725"
 ---
 # <a name="systcpendpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,10 +32,10 @@ ms.locfileid: "47805509"
   Contiene una riga per ogni endpoint TCP nel sistema. Gli endpoint a cui sono descritti dai **Sys. tcp_endpoints** forniscono un oggetto per concedere e revocare il privilegio di connessione. Le informazioni visualizzate relative alle porte e agli indirizzi IP non vengono utilizzate per configurare i protocolli e potrebbero non corrispondere alla configurazione effettiva del protocollo. Per visualizzare e configurare i protocolli, utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**< colonne ereditate >**||Eredita le colonne da [Sys. Endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
-|**port**|INT|Numero della porta su cui è in attesa l'endpoint. Non ammette i valori Null.|  
+|**port**|int|Numero della porta su cui è in attesa l'endpoint. Non ammette i valori Null.|  
 |**is_dynamic_port**|bit|1 = Il numero della porta è stato assegnato dinamicamente.<br /><br /> Non ammette i valori Null.|  
 |**ip_address**|**nvarchar(45)**|Indirizzo IP del listener specificato dalla clausola LISTENER_IP. Ammette i valori Null.|  
   

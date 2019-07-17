@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 8de9b27a58d277191a4d40da6b34dbcbbd43e497
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39df13a3cab2d842a313ca37fc4a98d0c331ba83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104210"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Aggiunta e rimozione di file di Database di Access (AccessToSQL)
 Per eseguire la migrazione di dati Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, è necessario aggiungere uno o più database di Access al progetto SSMA. Questi database devono essere Access 97 o versioni successive. Se sono presenti database da una versione precedente di accesso, è necessario convertire i database in una versione più recente. Eseguire questa operazione aprendo e salvando i database di Access 97 o versione successiva prima di aggiungerli a SSMA.  
@@ -85,7 +84,7 @@ Se si desidera aggiungere più database di Access da cartelle diverse a un proge
   
     È possibile usare la **Seleziona tutto** e **Clear All** pulsanti nella parte superiore dell'elenco per selezionare o deselezionare tutti i database. È possibile tenere premuto il tasto CTRL per selezionare più database o tenere premuto il tasto MAIUSC basso per selezionare un intervallo di database.  
   
-7.  Scegliere **Avanti**.  
+7.  Fare clic su **Avanti**.  
   
 8.  Nella pagina di verifica, fare clic su **fine**.  
   

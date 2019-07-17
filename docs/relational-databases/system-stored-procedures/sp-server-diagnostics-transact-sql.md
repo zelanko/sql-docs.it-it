@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fb0923c57006041c8d01fd0beecbc7cef08c1135
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 30ea7fba212cc99b8d6d7e58397d29731048c6f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535263"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056304"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -57,20 +56,20 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>Set di risultati  
 **sp_server_diagnostics** restituisce le informazioni seguenti  
   
-|colonna|Tipo di dati|Descrizione|  
+|Colonna|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Indica il timestamp della creazione della riga. Ogni riga di un singolo set di righe dispone dello stesso timestamp.|  
-|**component_type**|**sysname**|Indica se la riga contiene le informazioni per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza livello di componente o per un gruppo di disponibilità Always On:<br /><br /> istanza<br /><br /> AlwaysOn: AvailabilityGroup|  
-|**component_name**|**sysname**|Indica il nome del componente o il nome del gruppo di disponibilità:<br /><br /> sistema<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventi<br /><br /> *\<nome del gruppo di disponibilità >*|  
+|**component_type**|**sysname**|Indica se la riga contiene le informazioni per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza livello di componente o per un gruppo di disponibilità Always On:<br /><br /> instance<br /><br /> AlwaysOn: AvailabilityGroup|  
+|**nome_componente**|**sysname**|Indica il nome del componente o il nome del gruppo di disponibilità:<br /><br /> sistema<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventi<br /><br /> *\<nome del gruppo di disponibilità >*|  
 |**state**|**int**|Indica lo stato di integrità del componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
-|**state_desc**|**sysname**|Descrive la colonna contenente gli stati. Le descrizioni che corrispondono ai valori nella colonna contenente gli stati sono:<br /><br /> 0: Unknown<br /><br /> 1: pulita<br /><br /> 2: avviso<br /><br /> 3: errore|  
+|**state_desc**|**sysname**|Descrive la colonna contenente gli stati. Le descrizioni che corrispondono ai valori nella colonna contenente gli stati sono:<br /><br /> 0: Sconosciuto<br /><br /> 1: pulita<br /><br /> 2: avviso<br /><br /> 3: errore|  
 |**data**|**varchar (max)**|Indica dati specifici del componente.|  
   
  Di seguito sono riportate le descrizioni dei cinque componenti:  
   
 -   **system**: Raccoglie i dati da un punto di vista di sistema su spinlock, condizioni gravi di elaborazione, le attività non cede il controllo, gli errori di pagina e l'utilizzo della CPU. Queste informazioni producono un'indicazione dello stato di integrità complessiva.  
   
--   **resource**:  Raccoglie i dati da una prospettiva della risorsa su memoria fisica e virtuale, i pool di buffer, pagine, cache e altri oggetti di memoria. Queste informazioni producono un'indicazione dello stato di integrità complessiva.  
+-   **risorsa**:  Raccoglie i dati da una prospettiva della risorsa su memoria fisica e virtuale, i pool di buffer, pagine, cache e altri oggetti di memoria. Queste informazioni producono un'indicazione dello stato di integrità complessiva.  
   
 -   **query_processing**: Raccoglie i dati da una prospettiva di elaborazione delle query in cui il thread di lavoro, attività, tipi di attesa, sessioni intensive della CPU e attività di blocco. Queste informazioni producono un'indicazione dello stato di integrità complessiva.  
   
@@ -78,7 +77,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **gli eventi**: Raccoglie i dati e superfici tramite la stored procedure su errori ed eventi di interesse registrati dal server, incluse informazioni dettagliate sulle eccezioni del buffer circolare, gli eventi del buffer circolare sul broker di memoria, dalla memoria, il monitoraggio dell'utilità di pianificazione, pool di buffer, gli spinlock, sicurezza e connettività. Gli eventi avranno sempre 0 come stato.  
   
--   **\<nome del gruppo di disponibilità >**: Raccoglie i dati per il gruppo di disponibilità specificato (se component_type = "sempre sul: AvailabilityGroup").  
+-   **\<nome del gruppo di disponibilità >** : Raccoglie i dati per il gruppo di disponibilità specificato (se component_type = "sempre sul: AvailabilityGroup").  
   
 ## <a name="remarks"></a>Note  
 Da una prospettiva di errore, i componenti di elaborazione di query, risorsa e sistema verranno utilizzati per il rilevamento dell'errore mentre i componenti di eventi e io_subsystem verranno utilizzati solo per gli scopi diagnostici.  

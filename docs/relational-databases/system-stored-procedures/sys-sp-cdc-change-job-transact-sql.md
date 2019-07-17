@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 644873dd367705b02c3d14fcc7d95e0c9c81736e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5f5973382b7a09080fa990b0807deb01660ce0d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536103"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106536"
 ---
 # <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  Se si omette un parametro, il valore associato nella [dbo. cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) tabella non viene aggiornata. Un parametro impostato esplicitamente su NULL viene considerato come se fosse stato omesso.  
@@ -98,7 +97,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-changing-a-capture-job"></a>A. Modifica di un processo di acquisizione  
+### <a name="a-changing-a-capture-job"></a>R. Modifica di un processo di acquisizione  
  L'esempio seguente aggiorna il `@job_type`, `@maxscans`, e `@maxtrans` i parametri di un processo di acquisizione nel `AdventureWorks2012` database. Gli altri parametri validi per un processo di acquisizione, `@continuous` e `@pollinginterval`, sono omessi e i relativi valori non vengono modificati.  
   
 ```  
@@ -112,7 +111,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-cleanup-job"></a>B. Modifica di un processo di pulizia  
- Nell'esempio seguente viene aggiornato un processo di pulizia nel database `AdventureWorks2012`. Tutti i parametri validi per questo tipo di processo, tranne **@threshold**, vengono specificati. Il valore di **@threshold** non viene modificato.  
+ Nell'esempio seguente viene aggiornato un processo di pulizia nel database `AdventureWorks2012`. Tutti i parametri validi per questo tipo di processo, tranne **@threshold** , vengono specificati. Il valore di **@threshold** non viene modificato.  
   
 ```  
 USE AdventureWorks2012;  

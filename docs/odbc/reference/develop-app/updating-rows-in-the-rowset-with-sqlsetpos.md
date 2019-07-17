@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d83a8c2a-5aa8-4f19-947c-79a817167ee1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dfb57a6512245c9adb36a511ce48721dd901995c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0575c7ef7e380b1157640f9927e41192838c1ac0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313096"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091604"
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>Aggiornamento delle righe nel set di righe con SQLSetPos
 L'operazione di aggiornamento dei **SQLSetPos** consente all'origine dati di aggiornare uno o più righe selezionate di una tabella, utilizzando i dati nei buffer dell'applicazione per ogni colonna associata (a meno che il valore nel buffer di lunghezza/indicatore SQL_COLUMN_IGNORE). Le colonne che non sono associate non verranno aggiornate.  
