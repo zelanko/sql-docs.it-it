@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 195d226caed68da7131390eaf1985d4e05b2edf3
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: 2f979ccb5a44ada8e86424e0f6134f39d28a021d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597537"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096606"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE (comando SQL)
 Crea una tabella con i campi specificati.  
@@ -47,7 +46,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- CREATE TABLE &#124; DBF *TableName1*  
+ CREARE una tabella &#124; DBF *TableName1*  
  Specifica il nome della tabella da creare. Le opzioni di tabella e DBF sono identiche.  
   
  NOME *LongTableName*  
@@ -73,7 +72,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
   
  Se omette NULL e NOT NULL, l'impostazione corrente di SET NULL determina se sono consentiti valori null nel campo. Tuttavia, se si omette NULL e non NULL, include la clausola UNIQUE o PRIMARY KEY, viene ignorata l'impostazione corrente di SET NULL e il campo valore predefinito è NOT NULL.  
   
- CHECK *lExpression1*  
+ CONTROLLARE *lExpression1*  
  Specifica una regola di convalida per il campo. *lExpression1* può essere una funzione definita dall'utente. Ogni volta che viene aggiunto un record vuoto, viene verificata la regola di convalida. Viene generato un errore se la regola di convalida non consente un valore di campo vuoto in un record accodato.  
   
  ERROR *cMessageText1*  
@@ -93,7 +92,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
   
  I valori null e i record duplicati non consentiti in un campo usato per un indice di primarie o candidate. Tuttavia, Visual FoxPro non genererà un errore se si crea un indice di primarie o candidate per un campo che supporta valori null. Se si tenta di immettere un valore null o duplicato in un campo usato per un indice di primarie o candidate, Visual FoxPro genererà un errore.  
   
- REFERENCES *TableName2*[TAG *TagName1*]  
+ I riferimenti *TableName2*[TAG *TagName1*]  
  Specifica la tabella padre alla quale viene stabilita una relazione permanente. Se si omette TAG *TagName1*, la relazione viene stabilita usando la chiave di indice primario della tabella padre. Se la tabella padre non dispone di un indice primario, Visual FoxPro genera un errore.  
   
  Includere TAG *TagName1* per stabilire una relazione basata su un tag di indice esistente per la tabella padre. I nomi di tag di indice possono contenere fino a 10 caratteri.  
@@ -110,12 +109,12 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
    memo1 M, memo2 M NOCPTRANS)  
 ```  
   
- PRIMARY KEY *eExpression2* TAG *TagName2*  
+ CHIAVE primaria *eExpression2* TAG *TagName2*  
  Specifica un indice primario per creare. *eExpression2* specifica qualsiasi campo o una combinazione dei campi nella tabella. TAG *TagName2* specifica il nome del tag di indice primario che viene creato. I nomi di tag di indice possono contenere fino a 10 caratteri.  
   
  Poiché una tabella può avere un solo indice primario, è possibile includere questa clausola se è già stato creato un indice primario per un campo. Se si include più di una clausola di chiave primaria nell'istruzione CREATE TABLE, Visual FoxPro genera un errore.  
   
- UNIQUE *eExpression3*TAG *TagName3*  
+ UNIVOCO *eExpression3*TAG *TagName3*  
  Crea un indice di candidati. *eExpression3* specifica qualsiasi campo o una combinazione dei campi nella tabella. Tuttavia, se è stato creato un indice primario con una delle opzioni chiave primaria, è possibile includere il campo specificato per l'indice primario. TAG *TagName3* specifica un nome di tag per il tag di indice candidato che viene creato. I nomi di tag di indice possono contenere fino a 10 caratteri.  
   
  Una tabella può avere più indici candidato.  
@@ -125,7 +124,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  È possibile creare più indici esterni per la tabella, ma le espressioni di indice esterna devono specificare diversi campi nella tabella.  
   
- REFERENCES *TableName3*[TAG *TagName5*]  
+ I riferimenti *TableName3*[TAG *TagName5*]  
  Specifica la tabella padre alla quale viene stabilita una relazione permanente. Includere TAG *TagName5* per stabilire una relazione basata su un tag di indice per la tabella padre. I nomi di tag di indice possono contenere fino a 10 caratteri. Per impostazione predefinita, se si omette TAG *TagName5,* la relazione viene stabilita tramite chiave di indice primario della tabella padre.  
   
  CHECK *eExpression2*[ERROR *cMessageText2*]  
@@ -151,7 +150,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
 |Sintassi ODBC|Sintassi di Visual FoxPro|  
 |-----------------|--------------------------|  
-|CREATE TABLE *nome-tabella di base*<br /><br /> (*identificatore di colonna tipo di dati*<br /><br /> [NOT NULL]<br /><br /> [, *-identificatore della colonna tipo di dati*<br /><br /> [NOT NULL] ...)|Crea tabella *TableName1* [nome *LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [NOT NULL])|  
+|CREATE TABLE *nome-tabella di base*<br /><br /> (*identificatore di colonna tipo di dati*<br /><br /> [NON NULL]<br /><br /> [, *-identificatore della colonna tipo di dati*<br /><br /> [NOT NULL] ...)|Crea tabella *TableName1* [nome *LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [NOT NULL])|  
   
  Quando si crea una tabella usando il driver, il driver nella tabella si chiude immediatamente dopo la creazione di consentire l'accesso alla tabella da altri utenti. Questo comportamento è diverso da Visual FoxPro, che rimane aperto in modo esclusivo al momento della creazione della tabella. Tuttavia, se viene eseguita una stored procedure nell'origine dati che contiene un'istruzione CREATE TABLE, la tabella viene lasciata aperta.  
   

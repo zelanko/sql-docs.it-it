@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0398f6d17e5825c68f26be00c5365f240d441307
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 24193b3474b1088a87acb5bdd15a5c5c4459f44d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65103292"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140553"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -70,12 +69,12 @@ SEMANTICSIMILARITYTABLE
   
  Se i risultati vengono richiesti per più di una colonna, i documenti corrispondenti vengono restituiti in base a ogni colonna.  
   
-|Nome della colonna|Type|Descrizione|  
+|Nome della colonna|type|Descrizione|  
 |------------------|----------|-----------------|  
 |**source_column_id**|**int**|ID della colonna da cui è stato utilizzato un documento di origine per la ricerca di documenti simili.<br /><br /> Vedere le funzioni COL_NAME e COLUMNPROPERTY per informazioni dettagliate su come recuperare il nome di colonna da column_id e viceversa.|  
 |**matched_column_id**|**int**|ID della colonna da cui è stato trovato un documento simile.<br /><br /> Vedere le funzioni COL_NAME e COLUMNPROPERTY per informazioni dettagliate su come recuperare il nome di colonna da column_id e viceversa.|  
 |**matched_document_key**|**\***<br /><br /> Questa chiave corrisponde al tipo della chiave univoca nella tabella di origine.|Valore della chiave univoca di estrazione full-text e semantica della riga o del documento individuato come simile al documento specificato nella query.|  
-|**score**|**REAL**|Valore relativo per la somiglianza del documento nella sua relazione con tutti gli altri documenti simili.<br /><br /> Il valore è un valore decimale frazionario compreso nell'intervallo [0.0, 1.0], dove un punteggio maggiore rappresenta una corrispondenza più vicina e 1.0 costituisce un punteggio perfetto.|  
+|**punteggio**|**REAL**|Valore relativo per la somiglianza del documento nella sua relazione con tutti gli altri documenti simili.<br /><br /> Il valore è un valore decimale frazionario compreso nell'intervallo [0.0, 1.0], dove un punteggio maggiore rappresenta una corrispondenza più vicina e 1.0 costituisce un punteggio perfetto.|  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Per altre informazioni, vedere [trovare documenti simili e correlati tramite la ricerca semantica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
@@ -83,7 +82,7 @@ SEMANTICSIMILARITYTABLE
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  Non è possibile eseguire una query su diverse colonne per ottenere documenti simili. Il **SEMANTICSIMILARITYTABLE** funzione recupera solo documenti simili dalla stessa colonna come colonna di origine, identificata dalle **source_key** argomento.  
   
-## <a name="metadata"></a>Metadati  
+## <a name="metadata"></a>Metadata  
  Per informazioni generali e sullo stato relative all'estrazione e al popolamento della somiglianza semantica, eseguire una query sulle DMV seguenti:  
   
 -   [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)  

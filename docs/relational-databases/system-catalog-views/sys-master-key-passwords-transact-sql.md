@@ -19,22 +19,21 @@ helpviewer_keywords:
 ms.assetid: b8e18cff-a9e6-4386-98ce-1cd855506e03
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ac97ef26a358fb48749b7758f32ed5d2f82d3ba1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87bb4a97db318330f253d068febb1309e4eda12a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102400"
 ---
 # <a name="sysmasterkeypasswords-transact-sql"></a>sys.master_key_passwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce una riga per ogni password della chiave master del database aggiunta tramite il **sp_control_dbmasterkey_password** stored procedure. Le password utilizzate per proteggere le chiavi master vengono archiviate nell'archivio credenziali. Il nome della credenziale ha il formato seguente: ##DBMKEY_<database_family_guid>_<random_password_guid>##. La password viene archiviata come segreto della credenziale. Per ogni password aggiunta tramite **sp_control_dbmasterkey_password**, è presente una riga nella **Sys. Credentials**.  
+  Restituisce una riga per ogni password della chiave master del database aggiunta tramite il **sp_control_dbmasterkey_password** stored procedure. Le password utilizzate per proteggere le chiavi master vengono archiviate nell'archivio credenziali. Il nome delle credenziali segue questo formato: # # DBMKEY_ < database_family_guid > _ < random_password_guid > # #. La password viene archiviata come segreto della credenziale. Per ogni password aggiunta tramite **sp_control_dbmasterkey_password**, è presente una riga nella **Sys. Credentials**.  
   
  Ogni riga in questa vista mostra una **credential_id** e il **family_guid** di un database la cui chiave master è protetto con la password associata a tale credenziale. Un join con **Sys. Credentials** nel **credential_id** restituirà campi utili, ad esempio il **create_date** e nome della credenziale.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**credential_id**|**int**|ID della credenziale alla quale appartiene la password. Questo ID è univoco all'interno dell'istanza del server.|  
 |**family_guid**|**uniqueidentifier**|ID univoco del database originale al momento della creazione. Questo GUID rimane invariato in seguito al ripristino o all'aggiunta del database, anche se il nome del database viene modificato.<br /><br /> Se la decrittografia automatica per la chiave master del servizio ha esito negativo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza le **family_guid** per identificare le credenziali che possono contenere la password utilizzata per proteggere la chiave master del database.|  

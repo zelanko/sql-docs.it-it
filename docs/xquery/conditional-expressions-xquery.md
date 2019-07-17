@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 62a061632b5f598932fe29499519d7eb897c78a6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f593455269b8c005a3b4d3725f4360db77ea48f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041742"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039013"
 ---
 # <a name="conditional-expressions-xquery"></a>Espressioni condizionali (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ else
   
 -   Il **else** è necessaria l'espressione. Se non è necessaria, è possibile restituire " ( ) ", come illustrato negli esempi disponibili in questa sezione.  
   
- Ad esempio, la query seguente viene specificata con il **xml** variabile di tipo. Il **se** condizione testa il valore della variabile SQL (@v) all'interno dell'espressione XQuery utilizzando la [funzione SQL: variable](../xquery/xquery-extension-functions-sql-variable.md) funzione dell'estensione. Se il valore della variabile è "FirstName", restituisce l'elemento <`FirstName`>. In caso contrario, restituisce l'elemento <`LastName`>.  
+ Ad esempio, la query seguente viene specificata con il **xml** variabile di tipo. Il **se** condizione testa il valore della variabile SQL (@v) all'interno dell'espressione XQuery utilizzando la [funzione SQL: variable](../xquery/xquery-extension-functions-sql-variable.md) funzione dell'estensione. Se il valore della variabile è "FirstName", verrà restituito il <`FirstName`> elemento. In caso contrario, restituisce il <`LastName`> elemento.  
   
 ```  
 declare @x xml  
@@ -81,7 +80,7 @@ if ( sql:variable("@v")="FirstName" ) then
 <FirstName>fname</FirstName>  
 ```  
   
- La query seguente recupera le prime due descrizioni di caratteristiche dalla descrizione di catalogo di uno specifico modello di prodotto. Se il documento contiene altre caratteristiche, aggiunge un elemento <`there-is-more`> con contenuto vuoto.  
+ La query seguente recupera le prime due descrizioni di caratteristiche dalla descrizione di catalogo di uno specifico modello di prodotto. Se sono presenti altre funzionalità nel documento, viene aggiunto un <`there-is-more`> elemento con contenuto vuoto.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -123,7 +122,7 @@ WHERE ProductModelID = 19
 </Product>  
 ```  
   
- Nella query seguente viene restituito un elemento con un attributo <`Location`> se il centro di lavorazione non specifica le ore di preparazione (SetupHours).  
+ Nella query seguente, un <`Location`> Se il centro di lavorazione non specifica le ore, viene restituito l'elemento con un attributo LocationID.  
   
 ```  
 SELECT Instructions.query('  

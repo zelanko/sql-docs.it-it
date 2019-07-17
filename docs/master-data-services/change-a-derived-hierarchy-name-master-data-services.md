@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3583e737644b4555a25ffd74db6f297953fe09f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec27caad2ee9241701d23795d57a89af9809ffa1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047359"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>Modificare il nome di una gerarchia derivata (Master Data Services)
 

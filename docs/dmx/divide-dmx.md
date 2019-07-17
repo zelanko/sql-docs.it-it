@@ -8,15 +8,14 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 8ab2b355c551b868cec3ee4329460f8bb0532236
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 17f1233310ce8b070e12fbf25dca0e256ff34664
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37972667"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070744"
 ---
-# <a name="divide-dmx"></a>(Divisione) (DMX)
+# <a name="divide-dmx"></a>(divisione) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Esegue un'operazione aritmetica di divisione di un numero per un altro.  
@@ -46,7 +45,7 @@ Dividend / Divisor
 ## <a name="see-also"></a>Vedere anche  
  [Operatori aritmetici &#40;DMX&#41;](../dmx/operators-arithmetic.md)   
  [Le estensioni di Data Mining di dati &#40;DMX&#41; di riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Gli operatori &#40;DMX&#41;](../dmx/operators-dmx.md)   
+ [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)   
  [Dividere &#40;espressione di SSIS&#41;](../integration-services/expressions/divide-ssis-expression.md)   
  [&#40;Dividere&#41; &#40;Transact-SQL&#41;](../t-sql/language-elements/divide-transact-sql.md)  
   

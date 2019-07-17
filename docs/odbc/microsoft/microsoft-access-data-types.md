@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b99fd70e0119aa01d384066aaa2f3b91eed152b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ff069ef0602e419eda93df0ca5a72dbf7c8ef1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026901"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045165"
 ---
 # <a name="microsoft-access-data-types"></a>Tipi di dati Microsoft Access
 Nella tabella seguente illustra i tipi di dati Microsoft Access, tipi di dati utilizzati per creare tabelle e tipi di dati SQL ODBC.  
@@ -38,8 +37,8 @@ Nella tabella seguente illustra i tipi di dati Microsoft Access, tipi di dati ut
 |DATA/ORA|DATETIME|SQL_TIMESTAMP|  
 |GUID|GUID|SQL_GUID|  
 |BINARIO LONG|LONGBINARY|SQL_LONGVARBINARY|  
-|TESTO LUNGO|LONGTEXT|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
-|MEMO|LONGTEXT|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
+|TESTO LUNGO|LONGTEXT|SQL_WLONGVARCHAR SQL_LONGVARCHAR [2] [3]|  
+|MEMO|LONGTEXT|SQL_WLONGVARCHAR SQL_LONGVARCHAR [2] [3]|  
 |NUMERO (Dimensione campo = CELIBE / nubile)|SINGOLO|SQL_REAL|  
 |NUMERO (Dimensione campo = valore DOUBLE)|Double|SQL_DOUBLE|  
 |NUMERO (Dimensione campo = BYTE)|BYTE SENZA SEGNO|SQL_TINYINT|  

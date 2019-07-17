@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1111cb5d-2bd9-4bdb-8de2-dc0e47452dd6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 543f0d0234c6f4bc2f34904bda0cd6b0019aaaa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e01c63fd0961755eefc0afb0493005d3b5c1c6c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62737420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027076"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>Specifica di funzioni di conversione esplicita in query XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "62737420"
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-use-the-number-explicit-conversion-function"></a>A. Utilizzo della funzione di conversione esplicita number ()  
+### <a name="a-use-the-number-explicit-conversion-function"></a>R. Utilizzo della funzione di conversione esplicita number ()  
  Il **Number ()** funzione converte un argomento in un numero.  
   
  Supponendo che il valore di **ContactID** è un valore numerico, la query seguente converte **ContactID** su un numero e lo confronta con il valore 4. La query restituisce quindi tutti  **\<Employee >** figli del nodo di contesto con il **ContactID** attributo che ha un valore numerico 4:  

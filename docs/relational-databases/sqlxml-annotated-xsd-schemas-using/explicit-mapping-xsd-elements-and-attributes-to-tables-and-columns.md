@@ -28,14 +28,13 @@ ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9d363d4e2efd5d288128d6d1a428ddcb00fa54c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4edb639a56e195bf57d4b34f8c1d399e1218b72f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980908"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067125"
 ---
 # <a name="explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns"></a>Mapping esplicito di attributi ed elementi XSD a tabelle e colonne
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ ms.locfileid: "65980908"
 ## <a name="examples"></a>Esempi  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per altre informazioni, vedere [requisiti per l'esecuzione di esempi di SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. Specifica delle annotazioni sql:relation e sql:field  
+### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>R. Specifica delle annotazioni sql:relation e sql:field  
  In questo esempio, lo schema XSD è costituito un  **\<contatto >** elemento di tipo complesso con  **\<FName >** e  **\<LName >** gli elementi figlio e il **ContactID** attributo.  
   
  Il **Relation** mappe annotazione il  **\<contatto >** elemento alla tabella Person. Contact nel database AdventureWorks. Il **SQL: field** annotazione esegue il mapping di  **\<FName >** elemento alla colonna FirstName e la  **\<LName >** elemento LastName colonna.  

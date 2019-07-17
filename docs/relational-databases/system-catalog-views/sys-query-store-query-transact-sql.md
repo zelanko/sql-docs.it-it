@@ -1,5 +1,5 @@
 ---
-title: sys.query_store_query (Transact-SQL) | Microsoft Docs
+title: Sys. query_store_query (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/23/2019
 ms.prod: sql
@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: bdee149e-7556-4fc3-8242-925dd4b7b6ac
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac66d9cd1e7585304aeab182ddf6ccabc8560bc0
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: d5b7eea64a807af96094767ef5aca00167d5946c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067958"
 ---
 # <a name="sysquerystorequery-transact-sql"></a>sys.query_store_query (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -37,8 +36,8 @@ ms.locfileid: "59542101"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**query_id**|**bigint**|Chiave primaria.|  
-|**query_text_id**|**bigint**|Chiave esterna. Joins to [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
-|**context_settings_id**|**bigint**|Chiave esterna. Joins to [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md).<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
+|**query_text_id**|**bigint**|Chiave esterna. Crea un join al [query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
+|**context_settings_id**|**bigint**|Chiave esterna. Crea un join al [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md).<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
 |**object_id**|**bigint**|ID dell'oggetto di database che fa parte della query (stored procedure, trigger, funzioni definite dall'utente CLR/UDAgg, ecc.). 0 se non viene eseguita la query come parte di un oggetto di database (query ad hoc).<br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
 |**batch_sql_handle**|**varbinary(64)**|ID del batch di istruzione della query fa parte di. Popolato solo se la query fa riferimento a tabelle temporanee o variabili di tabella.<br/>**Nota:** Azure SQL Data Warehouse verrà sempre restituito *NULL*.|  
 |**query_hash**|**binary(8)**|Hash MD5 della singola query, basata sull'albero query logica. Include gli hint per query optimizer.|  

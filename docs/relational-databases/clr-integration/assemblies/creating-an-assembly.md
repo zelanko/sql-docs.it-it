@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8d9c14a534dc46f320ddacbf518c2df766292de6
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 87416b9cea3aee133493f93f97c9ccf11823cde7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584052"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027933"
 ---
 # <a name="creating-an-assembly"></a>Creazione di un assembly
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Gli oggetti di database gestiti, ad esempio le stored procedure o i trigger, vengono compilati e quindi distribuiti in unità denominate assembly. Gli assembly DLL gestiti devono essere registrati nella [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prima di poter usare le funzionalità fornite dall'assembly. Per registrare l'assembly in un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], utilizzare l'istruzione CREATE ASSEMBLY. In questo argomento viene descritto come registrare un assembly in un database tramite l'istruzione CREATE ASSEMBLY e specificare le impostazioni di sicurezza per l'assembly.  
   
 ## <a name="the-create-assembly-statement"></a>Istruzione CREATE ASSEMBLY  
- L'istruzione CREATE ASSEMBLY viene utilizzata per creare un assembly in un database. Esempio:  
+ L'istruzione CREATE ASSEMBLY viene utilizzata per creare un assembly in un database. Di seguito è fornito un esempio:  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  

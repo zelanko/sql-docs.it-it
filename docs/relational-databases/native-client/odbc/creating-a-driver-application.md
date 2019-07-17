@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c20fdea1dd7a182ae3925880e1dded6537e297de
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a2ca81717dcf7d5794683a33f2f3f5d080d3f1f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044927"
 ---
 # <a name="creating-a-driver-application"></a>Creazione di un'applicazione driver
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +70,7 @@ ms.locfileid: "51661320"
   
 -   Eseguire operazioni di copia bulk  
   
--   Gestire i dati di grandi dimensioni (**varchar (max)**, **nvarchar (max)**, e **varbinary (max)** colonne) operazioni  
+-   Gestire i dati di grandi dimensioni (**varchar (max)** , **nvarchar (max)** , e **varbinary (max)** colonne) operazioni  
   
 -   Utilizzare logica di riconnessione per semplificare il failover quando è configurato il mirroring del database  
   
@@ -114,7 +113,7 @@ INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Micr
   
  Una decisione di progettazione da adottare nelle fasi iniziali del processo di compilazione di un'applicazione consiste nello stabilire se l'applicazione debba supportare più chiamate ODBC in sospeso simultaneamente. Per supportare più chiamate ODBC simultanee, sono disponibili due metodi, descritti più avanti in questa sezione. Per ulteriori informazioni, vedere la [di riferimento del programmatore di ODBC](https://go.microsoft.com/fwlink/?LinkId=45250).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Modalità asincrona e SQLCancel](../../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md)  
   

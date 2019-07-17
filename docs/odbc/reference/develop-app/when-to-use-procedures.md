@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7dc9e327-dd54-4b10-9f66-9ef5c074f122
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 82e71e6849902eb2f02423560c534056112a139a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f25b629372bbe089489cccdbfa0258dafef3dd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078965"
 ---
 # <a name="when-to-use-procedures"></a>Quando usare le procedure
 Esistono numerosi vantaggi rispetto all'utilizzo delle procedure; tutti basata sul fatto che tramite le procedure passa istruzioni SQL dall'applicazione per l'origine dati. Ciò che resta nell'applicazione è una chiamata di procedura interoperativa. Tali vantaggi includono:  

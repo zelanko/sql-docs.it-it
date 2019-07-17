@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 29e5bd9f5dc682862d636b49d77e6b338fe937b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15fa1de65ada904ecf4b93947e1e9e9f818fd0d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108671"
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +41,10 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @name = ] N'*plan_guide_name*'  
+ [ @name =] N'*plan_guide_name*'  
  Nome della guida di piano. I nomi delle guide di piano vengono definiti a livello dell'ambito del database corrente. *plan_guide_name* devono essere conformi alle regole relative [identificatori](../../relational-databases/databases/database-identifiers.md) e non può iniziare con il simbolo di cancelletto (#). La lunghezza massima del *plan_guide_name* è 124 caratteri.  
   
- [ @plan_handle = ] *plan_handle*  
+ [ @plan_handle =] *plan_handle*  
  Identifica un batch nella cache dei piani. *plan_handle* viene **varbinary(64)** . *plan_handle* può essere ottenuto dal [DM exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) vista a gestione dinamica.  
   
  [ @statement_start_offset =] { *statement_start_offset* | NULL}]  
@@ -78,7 +77,7 @@ CROSS APPLY sys.dm_exec_sql_text(sql_handle) AS st;
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-plan-guide-from-a-query-plan-in-the-plan-cache"></a>A. Creazione di una guida di piano da un piano di query nella cache dei piani  
+### <a name="a-creating-a-plan-guide-from-a-query-plan-in-the-plan-cache"></a>R. Creazione di una guida di piano da un piano di query nella cache dei piani  
  Nell'esempio seguente viene creata una guida di piano per una singola istruzione SELECT specificando un piano di query dalla cache dei piani. Viene innanzitutto eseguita una semplice istruzione `SELECT` per la quale verrà creata la guida di piano. Il piano per la query viene esaminato utilizzando le viste a gestione dinamica `sys.dm_exec_sql_text` e `sys.dm_exec_text_query_plan`. La guida di piano viene quindi creata per la query specificando il piano di query nella cache dei piani a essa associata. Nell'esempio, l'istruzione finale verifica l'esistenza della guida di piano.  
   
 ```sql  

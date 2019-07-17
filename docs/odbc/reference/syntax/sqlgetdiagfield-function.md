@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1446a999029b2c39bfbe4c6c43cf48ad3a09e58f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 620ccce9a035139482b2d9b4630bb2242f720af8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538113"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103780"
 ---
 # <a name="sqlgetdiagfield-function"></a>Funzione SQLGetDiagField
 
@@ -199,7 +198,7 @@ SQLRETURN SQLGetDiagField(
 |*create-index-statement*|"CREA INDICE"|SQL_DIAG_CREATE_INDEX|  
 |*create-table-statement*|"CREAZIONE DI TABELLA"|SQL_DIAG_CREATE_TABLE|  
 |*create-view-statement*|"CREATE VIEW"|SQL_DIAG_CREATE_VIEW|  
-|*cursor-specification*|"SELECT DEL CURSORE"|SQL_DIAG_SELECT_CURSOR|  
+|*Specifica di cursore.*|"SELECT DEL CURSORE"|SQL_DIAG_SELECT_CURSOR|  
 |*delete-statement-positioned*|"CURSORE DINAMICA DI ELIMINAZIONE"|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
 |*delete-statement-searched*|"ELIMINARE WHERE"|SQL_DIAG_DELETE_WHERE|  
 |*drop-assertion-statement*|"DROP ASSERZIONE"|SQL_DIAG_DROP_ASSERTION|  
@@ -213,13 +212,13 @@ SQLRETURN SQLGetDiagField(
 |*drop-view-statement*|"DROP VIEW"|SQL_DIAG_DROP_VIEW|  
 |*grantstatement*|PANNELLO "CONCEDI"|SQL_DIAG_GRANT|
 |*insert-statement*|"INSERT"|SQL_DIAG_INSERT|  
-|*ODBC-procedure-extension*|"CHIAMA"|SQL_DIAG_ CALL|  
+|*ODBC-procedure-extension*|"CHIAMA"|CHIAMATA SQL_DIAG_|  
 |*revoke-statement*|"REVOKE"|SQL_DIAG_REVOKE|  
 |*schema-definition*|"CREAZIONE DI SCHEMI"|SQL_DIAG_CREATE_SCHEMA|  
 |*translation-definition*|"CREAZIONE DI TRADUZIONE"|SQL_DIAG_CREATE_TRANSLATION|  
 |*update-statement-positioned*|"AGGIORNAMENTO DINAMICO CURSOR"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
 |*update-statement-searched*|"AGGIORNARE LA POSIZIONE"|SQL_DIAG_UPDATE_WHERE|  
-|Unknown|*stringa vuota*|SQL_DIAG_UNKNOWN_STATEMENT|  
+|Sconosciuto|*stringa vuota*|SQL_DIAG_UNKNOWN_STATEMENT|  
 
 <!--
 These two malformed table rows were fixed by educated GUESS only.

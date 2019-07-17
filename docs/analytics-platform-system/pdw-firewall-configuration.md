@@ -2,19 +2,18 @@
 title: Configurazione del firewall PDW - sistema di piattaforma Analitica | Microsoft Docs
 description: La pagina firewall di Gestione configurazione SQL Server PDW consente di abilitare o disabilitare le regole del firewall che consentono o impediscono l'accesso a determinate porte nell'appliance di sistema di piattaforma Analitica.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d92d92752b4de105857f5611fbe95262476a4e13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f650aac34e3a5299cabae500a8ee73250c3974d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960415"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Configurazione del firewall Parallel Data Warehouse nel sistema di piattaforma Analitica
 
@@ -30,7 +29,7 @@ Il **Firewall** pagina di Gestione configurazione SQL Server PDW consente di abi
   
 4.  Fare clic su **applica** per salvare le modifiche.  
   
-![DWConfig Appliance PDW Firewall](./media/pdw-firewall-configuration/SQL_Server_PDW_DWConfig_ApplPDWFirewall.png "SQL_Server_PDW_DWConfig_ApplPDWFirewall")  
+![Firewall PDW Appliance DWConfig](./media/pdw-firewall-configuration/SQL_Server_PDW_DWConfig_ApplPDWFirewall.png "SQL_Server_PDW_DWConfig_ApplPDWFirewall")  
   
 ## <a name="external-ports"></a>Le porte esterne  
 Le porte seguenti siano aperte per le connessioni client provenienti all'esterno di PDW.  
@@ -39,8 +38,8 @@ Le porte seguenti siano aperte per le connessioni client provenienti all'esterno
 |-----------|-----------|---------|  
 |Accesso di SQL Client per PDW (TDS)|17001|CTL|  
 |Accesso Client del caricatore (dwloader & SSIS)|8001|CTL|  
-|Accesso desktop remoto|3389|CTL, CMP|  
-|SSIS BinaryLoaderDataChannel|16551|CTL|  
+|Accesso desktop remoto|3389|ELENCO DI SCOPI CONSENTITI, CMP|  
+|BinaryLoaderDataChannel SSIS|16551|CTL|  
 |BinaryLoaderDataChannel dwloader|16551|CMP|  
 |SSL crittografata connessioni (per le comunicazioni interne, per accedere alla Console di amministrazione)|443|Tutti i nodi|  
 |SQL Server PDW carico controllo flusso - le credenziali di Windows|8002|CTL|  
@@ -53,13 +52,13 @@ Le seguenti porte usate da PDW per la comunicazione interna, ma non vengono aper
   
 |Scopo|N. porta|Nodi|  
 |-----------|-----------|---------|  
-|Traffico del canale di controllo DMS|16450|CTL, CMP|  
-|Traffico del canale dati DMS|16550|CTL, CMP|  
-|Diagnostica interna|16650|CTL, CMP|  
-|Stato di failover (DMS)|15000|CTL, CMP|  
+|Traffico del canale di controllo DMS|16450|ELENCO DI SCOPI CONSENTITI, CMP|  
+|Traffico del canale dati DMS|16550|ELENCO DI SCOPI CONSENTITI, CMP|  
+|Diagnostica interna|16650|ELENCO DI SCOPI CONSENTITI, CMP|  
+|Stato di failover (DMS)|15000|ELENCO DI SCOPI CONSENTITI, CMP|  
 |Stato di failover (motore)|15001|CMP|  
-|Intervallo di porte dinamiche (temporaneo)|20000-65535|CTL, CMP|  
-|Intervalli di porte di SQL Server (TDS)|1433, 1500-1508|CTL, CMP|  
+|Intervallo di porte dinamiche (temporaneo)|20000-65535|ELENCO DI SCOPI CONSENTITI, CMP|  
+|Intervalli di porte di SQL Server (TDS)|1433, 1500-1508|ELENCO DI SCOPI CONSENTITI, CMP|  
 | &nbsp; | &nbsp; | &nbsp; |
   
 > [!NOTE]  

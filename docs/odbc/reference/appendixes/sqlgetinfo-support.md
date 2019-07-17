@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo Support | Microsoft Docs
+title: Supporto di SQLGetInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,23 +14,22 @@ helpviewer_keywords:
 ms.assetid: 57326f57-daba-46b6-b0be-6c97213b9ef1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6eb6bedb20e1f61c48776d03df59aa6865cfb2a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f40299dccc0313f662aeadfcb26b71326cdc6d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62751211"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073897"
 ---
 # <a name="sqlgetinfo-support"></a>Supporto per SQLGetInfo
 Quando un'applicazione ODBC 2. *x* chiamate dell'applicazione **SQLGetInfo** a un'applicazione ODBC 3*x* driver, il *InfoType* argomenti nella tabella seguente devono essere supportati.  
   
 |*InfoType*|Valori di codice restituiti|  
 |----------------|-------------|  
-|SQL_ALTER_TABLE (ODBC 2.0) **Note:**  Informazioni di questo tipo non sono deprecata. le maschere di bit della colonna a destra sono deprecati.|Una maschera di bit SQLINTEGER l'enumerazione le clausole nel **ALTER TABLE** istruzione supportata dall'origine dati.<br /><br /> Le maschere di bit seguenti vengono usate per determinare quali clausole sono supportate:<br /><br /> SQL_AT_DROP_COLUMN = è supportata la possibilità di eliminare le colonne. Se ciò comporterà a catena o limitare il comportamento è definito dal driver. (ODBC 2.0)<br /><br /> SQL_AT_ADD_COLUMN = la possibilità di aggiungere più colonne in un'unica istruzione ALTER TABLE è supportato. Questo bit non combinare con altri bits SQL_AT_ADD_COLUMN_XXX o bits SQL_AT_CONSTRAINT_XXX. (ODBC 2.0)|  
+|SQL_ALTER_TABLE (ODBC 2.0) **Nota:**  Informazioni di questo tipo non sono deprecata. le maschere di bit della colonna a destra sono deprecati.|Una maschera di bit SQLINTEGER l'enumerazione le clausole nel **ALTER TABLE** istruzione supportata dall'origine dati.<br /><br /> Le maschere di bit seguenti vengono usate per determinare quali clausole sono supportate:<br /><br /> SQL_AT_DROP_COLUMN = è supportata la possibilità di eliminare le colonne. Se ciò comporterà a catena o limitare il comportamento è definito dal driver. (ODBC 2.0)<br /><br /> SQL_AT_ADD_COLUMN = la possibilità di aggiungere più colonne in un'unica istruzione ALTER TABLE è supportato. Questo bit non combinare con altri bits SQL_AT_ADD_COLUMN_XXX o bits SQL_AT_CONSTRAINT_XXX. (ODBC 2.0)|  
 |SQL_FETCH_DIRECTION (ODBC 1.0)<br /><br /> Il tipo di informazioni è stata introdotta in ODBC 1.0; ogni maschera di bit viene etichettato con la versione in cui è stato introdotto in.|Maschera di bit SQLINTEGER l'enumerazione le opzioni di direzione di recupero supportate.<br /><br /> Le maschere di bit seguenti vengono utilizzate in combinazione con il flag per determinare quali opzioni sono supportate:<br /><br /> SQL_FD_FETCH_NEXT (ODBC 1.0) SQL_FD_FETCH_FIRST (ODBC 1.0) SQL_FD_FETCH_LAST (ODBC 1.0) SQL_FD_FETCH_PRIOR (ODBC 1.0) SQL_FD_FETCH_ABSOLUTE (ODBC 1.0) SQL_FD_FETCH_RELATIVE (ODBC 1.0) SQL_FD_FETCH_BOOKMARK (ODBC 2.0)|  
 |SQL_LOCK_TYPES (ODBC 2.0)|I tipi di una maschera di bit SQLINTEGER l'enumerazione di blocco supportati per il *branco* nell'argomento **SQLSetPos**.<br /><br /> Le maschere di bit seguenti vengono utilizzate in combinazione con il flag per determinare i tipi di blocco supportati:<br /><br /> SQL_LCK_NO_CHANGE SQL_LCK_EXCLUSIVE SQL_LCK_UNLOCK|  
-|SQL_ODBC_API_CONFORMANCE (ODBC 1.0)|Un valore SQLSMALLINT che indica il livello di conformità di ODBC.<br /><br /> SQL_OAC_NONE = nessuno<br /><br /> SQL_OAC_LEVEL1 = Level 1 supported<br /><br /> SQL_OAC_LEVEL2 = Level 2 supported|  
+|SQL_ODBC_API_CONFORMANCE (ODBC 1.0)|Un valore SQLSMALLINT che indica il livello di conformità di ODBC.<br /><br /> SQL_OAC_NONE = nessuno<br /><br /> SQL_OAC_LEVEL1 = Level 1 supported<br /><br /> SQL_OAC_LEVEL2 = livello 2 è supportato|  
 |SQL_ODBC_SQL_CONFORMANCE (ODBC 1.0)|Un valore SQLSMALLINT che indica la grammatica SQL supportata dal driver. Vedere [appendice c: Grammatica SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md) per una definizione dei livelli di conformità SQL.<br /><br /> SQL_OSC_MINIMUM = grammatica minima supportata<br /><br /> SQL_OSC_CORE = supportata la sintassi di base<br /><br /> SQL_OSC_EXTENDED = grammatica estesa supportata|  
 |SQL_POS_OPERATIONS (ODBC 2.0)|Una maschera di bit SQLINTEGER l'enumerazione le operazioni supportate nella **SQLSetPos**.<br /><br /> Le maschere di bit seguenti sono utilizzati in abbinamento con il flag per determinare quali opzioni sono supportate:<br /><br /> SQL_POS_POSITION (ODBC 2.0) SQL_POS_REFRESH   (ODBC 2.0) SQL_POS_UPDATE     (ODBC 2.0) SQL_POS_DELETE     (ODBC 2.0) SQL_POS_ADD          (ODBC 2.0)|  
 |SQL_POSITIONED_STATEMENTS (ODBC 2.0)|Una maschera di bit SQLINTEGER l'enumerazione supportata posizionati istruzioni SQL.<br /><br /> Le maschere di bit seguenti vengono usate per determinare quali le istruzioni sono supportate:<br /><br /> SQL_PS_POSITIONED_DELETE SQL_PS_POSITIONED_UPDATE SQL_PS_SELECT_FOR_UPDATE|  

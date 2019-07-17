@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 09af9a0190b8ba3b01c72cfa29e0647ad6d6b74d
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9ba9e1f0757f23072b5e4f18f73fb5f7c69a005a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528433"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037357"
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,13 +56,13 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @account_name = ] 'account_name'` Il nome dell'account da aggiornare. *account_name* viene **sysname**, con un valore predefinito è NULL. Almeno uno dei *account_id* oppure *account_name* deve essere specificato. Se si specificano entrambi, la stored procedure modifica il nome dell'account.  
   
-`[ @email_address = ] 'email_address'` Il nuovo indirizzo di posta elettronica da cui inviare il messaggio. Deve essere un indirizzo di posta elettronica Internet. Il nome del server nell'indirizzo è il server utilizzato da Posta elettronica database per l'invio di posta da questo account. *email_address* viene **nvarchar (128)**, con un valore predefinito è NULL.  
+`[ @email_address = ] 'email_address'` Il nuovo indirizzo di posta elettronica da cui inviare il messaggio. Deve essere un indirizzo di posta elettronica Internet. Il nome del server nell'indirizzo è il server utilizzato da Posta elettronica database per l'invio di posta da questo account. *email_address* viene **nvarchar (128)** , con un valore predefinito è NULL.  
   
-`[ @display_name = ] 'display_name'` Il nuovo nome visualizzato da utilizzare nei messaggi di posta elettronica da questo account. *DISPLAY_NAME* viene **nvarchar (128)**, non prevede alcun valore predefinito.  
+`[ @display_name = ] 'display_name'` Il nuovo nome visualizzato da utilizzare nei messaggi di posta elettronica da questo account. *DISPLAY_NAME* viene **nvarchar (128)** , non prevede alcun valore predefinito.  
   
-`[ @replyto_address = ] 'replyto_address'` Il nuovo indirizzo da utilizzare nell'intestazione di risposta dei messaggi di posta elettronica da questo account. *replyto_address* viene **nvarchar (128)**, non prevede alcun valore predefinito.  
+`[ @replyto_address = ] 'replyto_address'` Il nuovo indirizzo da utilizzare nell'intestazione di risposta dei messaggi di posta elettronica da questo account. *replyto_address* viene **nvarchar (128)** , non prevede alcun valore predefinito.  
   
-`[ @description = ] 'description'` Nuova descrizione per l'account. *Descrizione* viene **nvarchar(256)**, con un valore predefinito è NULL.  
+`[ @description = ] 'description'` Nuova descrizione per l'account. *Descrizione* viene **nvarchar(256)** , con un valore predefinito è NULL.  
   
 `[ @mailserver_name = ] 'server_name'` Il nuovo nome del server di posta elettronica SMTP da utilizzare per questo account. Il computer che esegue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere in grado di risolvere le *server_name* a un indirizzo IP. *nome_server* viene **sysname**, non prevede alcun valore predefinito.  
   
@@ -94,7 +93,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-changing-the-information-for-an-account"></a>A. Modifica delle informazioni di un account  
+### <a name="a-changing-the-information-for-an-account"></a>R. Modifica delle informazioni di un account  
  L'esempio seguente aggiorna l'account `AdventureWorks Administrator` nella **msdb** database. Le informazioni dell'account vengono impostate in base ai valori specificati.  
   
 ```  

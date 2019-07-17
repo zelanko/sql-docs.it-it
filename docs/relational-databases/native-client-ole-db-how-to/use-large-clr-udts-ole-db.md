@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7734c520d0e97246fe6a87aa6b1d4585b6507c54
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e3d2ed3b506b6df25ed0559944230822f8886a24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109901"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>Utilizzare tipi definiti dall'utente CLR di grandi dimensioni (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +29,11 @@ ms.locfileid: "53204410"
   
  Compilare il primo listato di codice (C#) in una DLL.  Copiare quindi la DLL nella directory radice dell'unità C.  
   
- Eseguire il secondo ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listato di codice per aggiungere l'assembly al database master.  
+ Eseguire il secondo listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) per aggiungere l'assembly al database master.  
   
  Compilare il terzo listato di codice (C++) con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   
- Eseguire il quarto ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listato di codice per eliminare l'assembly al database master.  
+ Eseguire il quarto listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) per eliminare l'assembly nel database master.  
   
 ```  
 // compile with: /target: library  

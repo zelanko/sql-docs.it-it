@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 75dcdea6-ff6b-4ac8-aa11-a1f9edbeb8e6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e9a80167d00a76f667132647b3d152dda5c1a4b3
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 5f27efed55a2ae63b8c3726263077441bdacc49b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792674"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135724"
 ---
 # <a name="what-the-driver-does"></a>Funzionamento del driver
 La tabella seguente riepiloga le funzioni e gli attributi delle istruzioni un ODBC *3.x* driver devono implementare per blocchi e i cursori scorrevoli.  

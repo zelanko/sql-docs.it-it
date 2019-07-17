@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 194395728e60f31c689293191be2cedca4d549f3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 487d88a7580432bf947893920d307e2f0adffd18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528913"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111989"
 ---
 # <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @server_name = ] 'server'` Il nome del server da rimuovere come server di destinazione disponibile. *server* viene **nvarchar(30)**, non prevede alcun valore predefinito.  
+`[ @server_name = ] 'server'` Il nome del server da rimuovere come server di destinazione disponibile. *server* viene **nvarchar(30)** , non prevede alcun valore predefinito.  
   
 `[ @clear_downloadlist = ] clear_downloadlist` Specifica se cancellare l'elenco di download per il server di destinazione. *clear_downloadlist* è di tipo **bit**, il valore predefinito è **1**. Quando *clear_downloadlist* viene **1**, la procedura cancella l'elenco di download per il server prima di eliminare il server. Quando *clear_downloadlist* viene **0**, l'elenco di download non viene cancellata.  
   
@@ -52,7 +51,7 @@ sp_delete_targetserver [ @server_name = ] 'server'
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  Normalmente per eliminare un server di destinazione consiste nel chiamare **sp_msx_defect** nel server di destinazione. Uso **sp_delete_targetserver** solo quando è necessaria un'esclusione in modo manuale.  

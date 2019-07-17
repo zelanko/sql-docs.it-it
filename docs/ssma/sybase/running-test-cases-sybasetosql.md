@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 664c2d3d4e1a1cea78bd93c748d9c17d2f1fe670
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73047e0741d4dee12ecec3e83df308e3f7abd343
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021026"
 ---
 # <a name="running-test-cases-sybasetosql"></a>Esecuzione di test case (SybaseToSQL)
 Quando si SSMA Tester esegue un Test Case, esegue gli oggetti selezionati per il test e viene creato un report sui risultati della verifica. Se i risultati sono identici in entrambe le piattaforme, il test ha esito positivo. La corrispondenza degli oggetti tra Sybase e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene determinato in base alle impostazioni di mapping dello schema per il progetto SSMA corrente.  
@@ -45,7 +44,7 @@ Si supponga che la tabella verificata è denominata USER_TABLE. Per una tabella,
   
 I seguenti oggetti vengono creati Sybase nel database SSMATESTER2005db o SSMATESTER2008db e a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel database ssmatesterdb_syb.  
   
-|Nome|Type|Descrizione|  
+|NOME|Type|Descrizione|  
 |--------|--------|---------------|  
 |USER_TABLE$Trg|Trigger|Attivare il controllo delle modifiche nella tabella verificata.|  
 |USER_TABLE$Aud|Tabella|Tabella in cui vengono salvate le righe eliminate e sovrascritte.|  
@@ -57,7 +56,7 @@ I seguenti oggetti vengono creati Sybase nel database SSMATESTER2005db o SSMATES
   
 L'oggetto seguente viene creato nel database della tabella verificato Sybase e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Nome|Type|Descrizione|  
+|NOME|Type|Descrizione|  
 |--------|--------|---------------|  
 |USER_TABLE$Trg|Trigger|Attivare il controllo delle modifiche nella tabella verificata.|  
   

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2e8182a0fca11105541f8dd435f352ba0d393731
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: af0e10f23d376c96fd7be0a75cf713dd76a2c149
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391654"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041015"
 ---
 # <a name="sysspxtpbinddbresourcepool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sys.sp_xtp_bind_db_resource_pool 'database_name', 'resource_pool_name'
  resource_pool_name  
  Nome di un pool di risorse esistente.  
   
-## <a name="messages"></a>Messaggi  
+## <a name="messages"></a>Messages  
  In caso di errore, tramite `sp_xtp_bind_db_resource_pool` viene restituito uno di questi messaggi.  
   
  **Il database non esiste**  
@@ -108,7 +107,7 @@ Database 'Hekaton_DB' is currently bound to a resource pool. A database must be 
 *Associazione di risorse è stata creata correttamente tra il database con ID %d e il pool di risorse con ID %d.*  
   
 ## <a name="examples"></a>Esempi  
-A.  Nell'esempio di codice seguente viene associato il database Hekaton_DB al pool di risorse Pool_Hekaton.  
+R.  Nell'esempio di codice seguente viene associato il database Hekaton_DB al pool di risorse Pool_Hekaton.  
   
 ```sql  
 sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'  
@@ -116,7 +115,7 @@ sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'
  
  L'associazione viene applicata alla successiva connessione del database.  
  
- b. Esempio esteso di esempio che include alcuni controlli di base precedente.  Eseguire il codice seguente [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
+ B. Esempio esteso di esempio che include alcuni controlli di base precedente.  Eseguire il codice seguente [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
  
 ```sql
 DECLARE @resourcePool sysname = N'Pool_Hekaton';
@@ -154,6 +153,6 @@ END
   
 ## <a name="see-also"></a>Vedere anche  
  [a un pool di risorse, vedere l'argomento](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [Sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
+ [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   
   

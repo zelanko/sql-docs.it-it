@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 46139ec9-7095-481a-bf45-20200a2fdc03
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5895a106c389afe2d1979cf8d9c16e92f570538a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a34f96dd7f5c2f0e2ac4bbb3feae06ea4856a248
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049944"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076812"
 ---
 # <a name="deleting-rows-by-bookmark-with-sqlbulkoperations"></a>Eliminazione di righe tramite segnalibro con SQLBulkOperations
 Quando si elimina una riga dal segnalibro **SQLBulkOperations** consente all'origine dati di eliminare uno o più righe selezionate della tabella. Le righe sono identificate mediante il segnalibro in una colonna del segnalibro associato.  

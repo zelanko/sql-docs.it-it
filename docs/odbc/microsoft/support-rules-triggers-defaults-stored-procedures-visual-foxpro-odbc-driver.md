@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90a39ad540f3320ed78e981030679b59d911eeef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269854"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080767"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Supporto di regole, trigger, valori predefiniti e stored procedure (driver ODBC Visual FoxPro)
 È possibile creare regole di Visual FoxPro, trigger, valori predefiniti o le stored procedure usando il Driver ODBC Visual FoxPro. Tuttavia, l'applicazione potrebbe interagire con le regole esistenti, trigger, valori predefiniti o le stored procedure come che inserisce, aggiorna o Elimina i dati archiviati in un database in Visual FoxPro.  
@@ -71,7 +70,7 @@ ms.locfileid: "63269854"
 |Funzione ATLINE)|Funzione ATN2)||  
 |Comando medio|Funzione ACOS)||  
   
-## <a name="b"></a>B  
+## <a name="b"></a>b  
   
 ||||  
 |-|-|-|  
@@ -81,7 +80,7 @@ ms.locfileid: "63269854"
 |Funzione BITTEST)|Funzione BITXOR)||  
 |Funzione BOF)|Funzione BITAND)||  
   
-## <a name="c"></a>c  
+## <a name="c"></a>C  
   
 ||||  
 |-|-|-|  
@@ -202,7 +201,7 @@ ms.locfileid: "63269854"
 |Parametri comando|Funzione primaria)|Comando privato|  
 |Funzione PI)|Funzione () del programma|Funzione (corretto)|  
 |PROCEDURE (comando)|Funzione va)||  
-|Comando pubblica|PADL( ) &#124; PADR( ) &#124; PADC( ) Functions||  
+|Comando pubblica|PADL () &#124; PADR () &#124; funzioni PADC)||  
   
 ## <a name="r"></a>R  
   
@@ -247,11 +246,11 @@ ms.locfileid: "63269854"
   
 ||||  
 |-|-|-|  
-|_TALLY System Memory Variable|Variabile di memoria di sistema _TRIGGERLEVEL|Funzione TAGCOUNT)|  
+|Variabile di memoria di sistema _TALLY|Variabile di memoria di sistema _TRIGGERLEVEL|Funzione TAGCOUNT)|  
 |Funzione TABLEUPDATE)|TAG () (funzione)|Funzione di destinazione)|  
 |Funzione TAGNO)|Funzione TAN)|TRIM () (funzione)|  
 |Funzione TIME)|TOTALI comandi|Funzione TXNLEVEL)|  
-|TTOC( ) Function|Funzione TTOD)||  
+|Funzione TTOC)|Funzione TTOD)||  
 |Funzione di tipo)|Funzione TABLEREVERT)||  
   
 ## <a name="u"></a>U  

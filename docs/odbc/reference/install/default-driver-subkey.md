@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9e58b24f-ebfc-4286-a272-0843b4d6f2d5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d78101fd564e18467e6833f480cec2409dc2c44b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e82644d3bddab5d4f6fde6f7103bd9731872bab9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198312"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094192"
 ---
 # <a name="default-driver-subkey"></a>Sottochiave Default del driver
 La sottochiave predefinito contiene un singolo valore che descrive il driver utilizzato dall'origine dati predefinito. Nella tabella seguente viene illustrato il formato di questo valore.  
   
-|nome|Tipo di dati|Dati|  
+|Nome|Tipo di dati|Data|  
 |----------|---------------|----------|  
 |**Driver**|REG_SZ|*default-driver-description*|  
   

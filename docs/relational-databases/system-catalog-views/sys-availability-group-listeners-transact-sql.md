@@ -21,18 +21,17 @@ helpviewer_keywords:
 ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 839e471e8861f081762f6129dff731e66bed77a7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b363e410f35eb7880933520dd1dbf47f258b651e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041066"
 ---
 # <a name="sysavailabilitygrouplisteners-transact-sql"></a>sys.availability_group_listeners (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Per ogni sempre nel gruppo di disponibilità, restituisce zero righe, che indica che nessun nome di rete è associato il gruppo di disponibilità, o restituisce una riga per ogni configurazione del listener del gruppo di disponibilità nel Windows Server Failover Clustering (WSFC) cluster. In questa vista viene visualizzata la configurazione in tempo reale raccolta dal cluster.  
+  Per ogni gruppo di disponibilità Always On, restituisce zero righe, che indica che nessun nome di rete è associato al gruppo di disponibilità, o restituisce una riga per ogni configurazione del listener del gruppo di disponibilità nel cluster WSFC (Windows Server Failover Clustering). In questa vista viene visualizzata la configurazione in tempo reale raccolta dal cluster.  
   
 > [!NOTE]  
 >  Questa vista del catalogo non descrive i dettagli di una configurazione IP, definita nel cluster WSFC.  

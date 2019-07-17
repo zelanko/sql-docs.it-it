@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5a39312142a2d81761320c1e5f75cefe2a85b9d7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8711190a6d3cbae0c716f7f62af478b70b9473e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038910"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>Funzioni su valori booleani - not 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +43,8 @@ fn:not($arg as item()*) as xs:boolean
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
   
-### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Utilizzo della funzione XQuery NOT () per trovare modelli di prodotti con descrizioni di catalogo non includono il \<specifiche > elemento.  
- La query seguente genera codice XML contenente l'ID dei modelli di prodotto le cui descrizioni di catalogo non includono l'elemento <`Specifications`>.  
+### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>R. Utilizzo della funzione XQuery NOT () per trovare modelli di prodotti con descrizioni di catalogo non includono il \<specifiche > elemento.  
+ La query seguente costruisce codice XML che contiene gli ID dei modelli di prodotto per i modelli di prodotti con descrizioni di catalogo non includono i <`Specifications`> elemento.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -94,7 +93,7 @@ WHERE ProductModelID=7
   
 -   Nella query, il **non (@MachineHours)** predicato restituisce True se è presente alcun **MachineHours** attributo.  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 ProductModelID Result   

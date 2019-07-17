@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4415f3e0a6ebf773a3a781a5547a50a578d9d4f9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a4cd3b8f186f1ade85f4ed4533b0549bcd449a69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134947"
 ---
 # <a name="clr-integration-architecture----performance"></a>Architettura di integrazione CLR - Prestazioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +52,10 @@ ms.locfileid: "51671990"
  Quando i cursori [!INCLUDE[tsql](../../includes/tsql-md.md)] devono attraversare i dati che sono espressi più facilmente come una matrice, è possibile utilizzare il codice gestito per ottenere prestazioni di gran lunga superiori.  
   
 ### <a name="string-data"></a>Dati di tipo stringa  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dati di tipo carattere, ad esempio **varchar**, può essere di tipo SqlString o SqlChars nelle funzioni gestite. Le variabili SqlString creano un'istanza dell'intero valore in memoria. Le variabili SqlChars forniscono un'interfaccia di flusso che può essere utilizzata per ottenere prestazioni migliori e una maggiore scalabilità creando un'istanza dell'intero valore in memoria. Questo diventa particolarmente importante per i dati di tipo LOB. Inoltre, server dei dati XML sono accessibili tramite un'interfaccia di flusso restituita da **SqlXml.CreateReader()**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dati di tipo carattere, ad esempio **varchar**, può essere di tipo SqlString o SqlChars nelle funzioni gestite. Le variabili SqlString creano un'istanza dell'intero valore in memoria. Le variabili SqlChars forniscono un'interfaccia di flusso che può essere utilizzata per ottenere prestazioni migliori e una maggiore scalabilità creando un'istanza dell'intero valore in memoria. Questo diventa particolarmente importante per i dati di tipo LOB. Inoltre, server dei dati XML sono accessibili tramite un'interfaccia di flusso restituita da **SqlXml.CreateReader()** .  
   
-### <a name="clr-vs-extended-stored-procedures"></a>CLR rispetto a Stored procedure estese  
- Le API Microsoft.SqlServer.Server che consentono alle procedure gestite di inviare di nuovo i set di risultati al client offrono prestazioni migliori rispetto alle API ODS (Open Data Services) utilizzate dalle stored procedure estese. Inoltre, i System.Data.SqlServer APIs supportano tipi di dati, ad esempio **xml**, **varchar (max)**, **nvarchar (max)**, e **varbinary (max)**, introdotta in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], mentre le API ODS non sono state estese per supportare nuovi tipi di dati.  
+### <a name="clr-vs-extended-stored-procedures"></a>Visual Studio CLR. Stored procedure estese  
+ Le API Microsoft.SqlServer.Server che consentono alle procedure gestite di inviare di nuovo i set di risultati al client offrono prestazioni migliori rispetto alle API ODS (Open Data Services) utilizzate dalle stored procedure estese. Inoltre, i System.Data.SqlServer APIs supportano tipi di dati, ad esempio **xml**, **varchar (max)** , **nvarchar (max)** , e **varbinary (max)** , introdotta in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], mentre le API ODS non sono state estese per supportare nuovi tipi di dati.  
   
  Con il codice gestito, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestisce l'utilizzo di risorse come la memoria, i thread e la sincronizzazione. Questo accade in quanto le API gestite che espongono queste risorse vengono implementate nello strumento di gestione delle risorse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Viceversa, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non dispone di una vista o di un controllo sull'utilizzo delle risorse della stored procedure estesa. Ad esempio, se una stored procedure estesa utilizza una quantità eccessiva delle risorse della CPU o memoria, non vi è alcun modo per rilevare o verificare con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il codice gestito consente tuttavia a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di rilevare che un determinato thread non è stato prodotto per un lungo periodo di tempo e quindi imporre l'esecuzione dell'attività in modo da poter pianificare altro lavoro. Di conseguenza, l'utilizzo di codice gestito offre una maggiore scalabilità e un miglior utilizzo delle risorse di sistema.  
   

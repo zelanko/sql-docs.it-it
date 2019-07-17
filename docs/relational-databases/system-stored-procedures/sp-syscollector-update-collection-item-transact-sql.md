@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e1eb288a7bb99f5f24f05e4369836d21031f7e68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 791c20214ff3eda4b5bb1f2bd3214b25ea972d74
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63001394"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010552"
 ---
 # <a name="spsyscollectorupdatecollectionitem-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_syscollector_update_collection_item
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @collection_item_id = ] *collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  Identificatore univoco che identifica l'elemento della raccolta. *collection_item_id* viene **int** con un valore predefinito NULL. *collection_item_id* deve avere un valore se *nome* è NULL.  
   
  [ @name =] '*nome*'  
@@ -92,7 +91,7 @@ WHERE collection_item_id = <collection_item_id>;
 ## <a name="examples"></a>Esempi  
  Gli esempi seguenti sono basati sull'elemento della raccolta creata nell'esempio definito in [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md).  
   
-### <a name="a-changing-the-collection-frequency"></a>A. Modifica della frequenza di raccolta  
+### <a name="a-changing-the-collection-frequency"></a>R. Modifica della frequenza di raccolta  
  Nell'esempio seguente viene modificata la frequenza di raccolta per l'elemento della raccolta specificato.  
   
 ```  

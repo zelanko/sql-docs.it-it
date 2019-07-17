@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 65dd737f-81ce-479e-8219-7b1b4d8f57c7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b899cd9f7512ec4be800fb4178b7a4f103dd3315
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 240046cc2883e91315437780eb41f5058ccb7657
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089107"
 ---
 # <a name="context-property-securitycertificate-class"></a>Proprietà Context (classe SecurityCertificate)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

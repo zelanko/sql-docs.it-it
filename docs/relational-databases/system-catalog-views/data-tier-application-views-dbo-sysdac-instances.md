@@ -20,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 049f3d0201957cfee5d7bc88301c6af97c0b6dcb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b1530e58597947a7e19f4ca264808fbfefd164ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660681"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033121"
 ---
 # <a name="data-tier-application-views---dbosysdacinstances"></a>Viste applicazioni livello dati - dbo.sysdac_instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Consente di visualizzare una riga per ogni istanza di applicazione livello dati distribuita in un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. sysdac_instances appartenga allo schema dbo nel database msdb. Nella tabella seguente vengono descritte le colonne nella vista sysdac_instances.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |instance_id|**uniqueidentifier**|Identificatore dell'istanza di applicazione livello dati.|  
 |nome_istanza|**sysname**|Nome dell'istanza di applicazione livello dati specificata alla distribuzione dell'applicazione livello dati.|  

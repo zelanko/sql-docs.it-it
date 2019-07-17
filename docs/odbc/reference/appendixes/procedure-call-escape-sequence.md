@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 269fbab0-e5f2-4a98-86c0-2d7b647acaae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 914bd4759552680a57c345dc3a7c3bc1bcc103a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa936eb9f8ef3328945d4ece63fb36432a5fd618
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188502"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100595"
 ---
 # <a name="procedure-call-escape-sequence"></a>Sequenza di escape per chiamata di procedura
 ODBC Usa sequenze di escape per le chiamate di procedura. La sintassi di questa sequenza di escape è come segue:  
   
- **{** [?=]**call** *procedure-name*[ **(** [*parameter*][,[*parameter*]]... **)** ] **}**  
+ **{** [? =]**chiamare** *-nome della routine*[ **(** [*parametro*] [, [*parametro*]]... **)** ] **}**  
   
  Nella notazione BNF, la sintassi è come segue:  
   
@@ -33,7 +32,7 @@ ODBC Usa sequenze di escape per le chiamate di procedura. La sintassi di questa 
   
  &#124;*ODBC-esc-iniziatore* [? =] chiamare *procedure ODBC-esc-carattere di terminazione*  
   
- *procedure* ::= *procedure-name* &#124; *procedure-name* (*procedure-parameter-list*)  
+ *routine* :: = *-nome della routine* &#124; *procedure-name* (*procedure-parameter-list*)  
   
  *procedure-identifier* :: = *nome definito dall'utente*  
   
@@ -51,17 +50,17 @@ ODBC Usa sequenze di escape per le chiamate di procedura. La sintassi di questa 
   
  *Nome-catalogo* :: = *nome definito dall'utente*  
   
- *catalog-separator* ::= {*implementation-defined*}  
+ *separatore di catalogo* :: = {*definito dall'implementazione*}  
   
  (Il separatore di catalogo viene restituito tramite **SQLGetInfo** con l'opzione di informazioni SQL_CATALOG_NAME_SEPARATOR.)  
   
  *elenco di parametri di routine* :: = *procedure-parametro*  
   
- &#124; *procedure-parameter*, *procedure-parameter-list*  
+ &#124;*parametro di routine*, *procedure-parameter-list*  
   
  *procedure-parameter* ::= *dynamic-parameter* &#124; *literal* &#124; *empty-string*  
   
- *empty-string* ::=  
+ *stringa vuota* :: =  
   
  *ODBC-esc-iniziatore* :: = {  
   

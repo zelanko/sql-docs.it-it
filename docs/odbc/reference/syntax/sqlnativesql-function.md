@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9f58d262f133fc242592e62e0bb5a4152877adf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 719b34eef3eb51af1e5eeabce3a88d453f005eff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536524"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138820"
 ---
 # <a name="sqlnativesql-function"></a>Funzione SQLNativeSql
 **Conformità**  
@@ -122,7 +121,7 @@ SELECT int2 (empid) FROM employee
  Per altre informazioni, vedere [esecuzione diretta](../../../odbc/reference/develop-app/direct-execution-odbc.md) e [esecuzione preparata](../../../odbc/reference/develop-app/prepared-execution-odbc.md).  
   
 ## <a name="related-functions"></a>Funzioni correlate  
- Nessuna.  
+ No.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento all'API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

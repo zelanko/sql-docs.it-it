@@ -12,13 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
-ms.openlocfilehash: da99a24ab6729e78220aeed3d18819e7b075603f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 066297daff3393304b83b77238277f873e1c97fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794435"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050451"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Visualizzare i report di analisi nel Database sperimentazione Assistant
 
@@ -28,7 +27,7 @@ Dopo aver [creare i report di analisi](database-experimentation-assistant-create
 
 In DEA, selezionare l'icona di menu. Nel menu espanso, selezionare **report di analisi** accanto all'icona di elenco di controllo per aprire la finestra di report di analisi.
 
-Sotto **report di analisi**, immettere il nome di un computer che esegue SQL Server che dispone di un database di analisi. Selezionare **Connetti**. 
+Sotto **report di analisi**, immettere il nome di un computer che esegue SQL Server che dispone di un database di analisi. Selezionare **Connessione**. 
 
 ![Connettersi a un report esistente](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c706dca3a1479a299841f9d47743785d29689f12
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 2d20f2535038b13eac0b8d5ca20dfa77bfc12588
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792563"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139032"
 ---
 # <a name="header-files"></a>File di intestazione
 Il file di intestazione SQL. h contiene prototipi per le funzioni e funzionalità del livello di conformità di interfaccia ODBC Core. Il file di intestazione Sqlext. h contiene prototipi per le funzioni e le funzionalità del livello 1 e livelli di conformità API di livello 2. Il file di intestazione Sqlext contiene le definizioni dei tipi e gli indicatori per i tipi di dati SQL.  

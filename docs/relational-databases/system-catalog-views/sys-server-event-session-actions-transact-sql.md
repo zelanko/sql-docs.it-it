@@ -20,24 +20,23 @@ helpviewer_keywords:
 ms.assetid: 1d8c604e-4361-4846-8661-14cfd1c44f63
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 434d0b3c220685e317f8069183c7be28d0254018
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50ba26f679dd6a3040dea242127661bf7d954a5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124926"
 ---
 # <a name="sysservereventsessionactions-transact-sql"></a>sys.server_event_session_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce una riga per ogni azione su ogni evento di una sessione dell'evento.  
+  Restituisce una riga per ogni azione su ogni evento di una sessione di eventi.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|ID della sessione dell'evento. Non ammette i valori Null.|  
 |event_id|**int**|ID dell'evento. L'ID è univoco all'interno dell'oggetto della sessione di evento. Non ammette i valori Null.|  
-|NAME|**sysname**|Nome dell'azione. Ammette i valori Null.|  
+|name|**sysname**|Nome dell'azione. Ammette i valori Null.|  
 |pacchetto|**sysname**|Nome del pacchetto eventi che contiene l'evento. Ammette i valori Null.|  
 |modulo|**sysname**|Nome del modulo contenente l'evento. Ammette i valori Null.|  
   

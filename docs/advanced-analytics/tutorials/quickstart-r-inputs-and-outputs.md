@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 4df9e266e16e2cc37ce527c19ba7be483e43d50a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 1672cdeb59dfe35e313c999549e46f3fd76b688e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582684"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962004"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>Avvio rapido: Gestire gli input e output usano R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -112,4 +111,4 @@ Esaminiamo l'impostazione predefinita le variabili di input e outpue di sp_execu
 Esaminare alcuni dei problemi che possono verificarsi quando si passano dati tra R e SQL Server, ad esempio le conversioni implicite e le differenze nei dati tabulari tra R e SQL.
 
 > [!div class="nextstepaction"]
-> [Guida introduttiva: Gestire gli oggetti e tipi di dati](quickstart-r-data-types-and-objects.md)
+> [Avvio rapido: Gestire gli oggetti e tipi di dati](quickstart-r-data-types-and-objects.md)

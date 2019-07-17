@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 66811d2364db546c3bddd787c1e0794f936f97c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0bb1115290f53c19fae1aacb0a976cfcef63e086
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62445953"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094227"
 ---
 # <a name="setting-parameter-values"></a>Configurazione dei valori dei parametri
 Per impostare il valore di un parametro, l'applicazione imposta semplicemente il valore della variabile associata al parametro. Non è importante quando questo valore è impostato, fino a quando è impostato prima che venga eseguita l'istruzione. L'applicazione può impostare il valore prima o dopo l'associazione della variabile e può cambiare il valore come tutte le volte che desidera. Quando viene eseguita l'istruzione, il driver recupera semplicemente il valore corrente della variabile. Ciò è particolarmente utile quando viene eseguita un'istruzione preparata più volte. l'applicazione imposta nuovi valori per alcune o tutte le variabili ogni volta che viene eseguita l'istruzione. Per un esempio di questo oggetto, vedere [esecuzione preparata](../../../odbc/reference/develop-app/prepared-execution-odbc.md), più indietro in questa sezione.  
@@ -40,8 +39,8 @@ Per impostare il valore di un parametro, l'applicazione imposta semplicemente il
 |"ABC"|SQL_CHAR|SQL_C_CHAR|ABC\0[a]|SQL_NTS o 3|  
 |10|SQL_INTEGER|SQL_C_SLONG|10|--|  
 |10|SQL_INTEGER|SQL_C_CHAR|10\0[a]|SQL_NTS o 2|  
-|1 P.M.|SQL_TYPE_TIME|SQL_C_TYPE_TIME|13,0,0[b]|--|  
-|1 P.M.|SQL_TYPE_TIME|SQL_C_CHAR|{t ' 13: 00:00'} \0 [a], [c]|SQL_NTS oppure 14|  
+|ORE DI 1|SQL_TYPE_TIME|SQL_C_TYPE_TIME|13,0,0[b]|--|  
+|ORE DI 1|SQL_TYPE_TIME|SQL_C_CHAR|{t ' 13: 00:00'} \0 [a], [c]|SQL_NTS oppure 14|  
 |NULL|SQL_SMALLINT|SQL_C_SSHORT|--|SQL_NULL_DATA|  
   
  [a] "\0" rappresenta un carattere di terminazione null. Il carattere di terminazione null è necessario solo se il valore nel buffer di lunghezza/indicatore è SQL_NTS.  

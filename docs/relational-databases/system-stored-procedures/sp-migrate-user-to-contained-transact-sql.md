@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9bdab8cd50a16913f37115f0d38c00c5c699bc0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d5bcafb24313851f58fd18fc19ebabd0ee98f6dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022329"
 ---
 # <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@username =** ] **N'***user***'**  
+ [ **@username =** ] **N'***utente***'**  
  Nome di un utente nel database indipendente corrente di cui è stato eseguito il mapping a un account di accesso con autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il valore è **sysname**, il valore predefinito è **NULL**.  
   
  [ **@rename =** ] **N'***copy_login_name***'**  | **N'***keep_name***'**  
@@ -80,7 +79,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-migrating-a-single-user"></a>A. Migrazione di un solo utente  
+### <a name="a-migrating-a-single-user"></a>R. Migrazione di un solo utente  
  Nell'esempio seguente viene eseguita la migrazione di un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominato `Barry` a un database indipendente con password. L'esempio non modifica il nome utente e consente di mantenere l'account di accesso come abilitato.  
   
 ```sql  

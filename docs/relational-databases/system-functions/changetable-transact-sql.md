@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3a0ad02f508aea78faa8f3da80e68f8ea6b3c7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11295f953e2f3e4e237838dfdb158fd01c9fa645
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658089"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042906"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ CHANGETABLE (
  *last_sync_version* devono essere convalidate per assicurarsi che non è troppo vecchio, in quanto alcune o tutte le informazioni sulle modifiche potrebbero sono stati puliti in base al periodo di memorizzazione configurato per il database. Per altre informazioni, vedere [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) e [opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  VERSIONE *tabella*, {< primary_key_values >}  
- Restituisce le informazioni più recenti sul rilevamento delle modifiche per una riga specificata. I valori della chiave primaria devono consentire di identificare la riga. <primary_key_values> consente di identificare le colonne chiave primarie e di specificare i valori. I nomi delle colonne chiave primaria possono essere specificati in qualsiasi ordine.  
+ Restituisce le informazioni più recenti sul rilevamento delle modifiche per una riga specificata. I valori della chiave primaria devono consentire di identificare la riga. < primary_key_values > identifica le colonne chiave primaria e specifica i valori. I nomi delle colonne chiave primaria possono essere specificati in qualsiasi ordine.  
   
  *Tabella*  
  Tabella definita dall'utente di cui ottenere le informazioni sul rilevamento delle modifiche. Il rilevamento delle modifiche deve essere abilitato per la tabella. È possibile utilizzare un nome di tabella composto da una, due, tre o quattro parti. Il nome della tabella può esserne un sinonimo.  
@@ -95,7 +94,7 @@ CHANGETABLE (
 ### <a name="changetable-changes"></a>CHANGETABLE CHANGES  
  Specificando CHANGES, vengono restituite zero o più righe che presentano le colonne seguenti.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Valore della versione associato all'ultima modifica alla riga|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|Valori della versione associati all'ultima operazione di inserimento.|  
@@ -107,7 +106,7 @@ CHANGETABLE (
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
  Quando si specifica VERSION, viene restituita una riga con le colonne seguenti.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Il valore della versione corrente associato alla riga.<br /><br /> Il valore è NULL se non è stata effettuata alcuna modifica per un periodo superiore a quello di memorizzazione del rilevamento delle modifiche, oppure se la riga non è stata modificata a partire dall'abilitazione del rilevamento delle modifiche.|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Modificare le informazioni di contesto specificabili liberamente utilizzando la clausola WITH come parte di un'istruzione INSERT, UPDATE o DELETE.|  
@@ -151,7 +150,7 @@ CHANGETABLE (
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-rows-for-an-initial-synchronization-of-data"></a>A. Restituzione delle righe per una sincronizzazione iniziale dei dati  
+### <a name="a-returning-rows-for-an-initial-synchronization-of-data"></a>R. Restituzione delle righe per una sincronizzazione iniziale dei dati  
  Nell'esempio seguente viene illustrato come ottenere i dati per una sincronizzazione iniziale dei dati della tabella. La query restituisce tutti i dati delle righe e le relative versioni associate. Sarà quindi possibile inserire o aggiungere tali dati al sistema che conterrà i dati sincronizzati.  
   
 ```sql  
@@ -212,7 +211,7 @@ WHERE
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di rilevamento delle modifiche &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
- [Rilevare le modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
+ [Tenere traccia delle modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
  [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
  [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  

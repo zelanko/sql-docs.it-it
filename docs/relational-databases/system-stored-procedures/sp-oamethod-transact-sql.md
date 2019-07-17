@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 25eccb27b75028fdebafaa7a855137946465676b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7dbc0d6ccf753f8f11baee2f5c1c479895d0687
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65450106"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107922"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +44,10 @@ sp_OAMethod objecttoken , methodname
  *objecttoken*  
  È il token di oggetto di un oggetto OLE creato in precedenza tramite **sp_OACreate**.  
   
- *methodname*  
+ *MethodName*  
  Nome del metodo dell'oggetto OLE da chiamare.  
   
- _returnvalue_  **OUTPUT**  
+ _ReturnValue_**OUTPUT**  
  Valore restituito del metodo dell'oggetto OLE. Se specificato, deve essere una variabile locale del tipo di dati appropriato.  
   
  Se il metodo restituisce un valore singolo, specificare una variabile locale per *returnvalue*, che restituisce il metodo restituisce un valore nella variabile locale o non si specifica *returnvalue*, che restituisce il metodo restituito al client come set di risultati a colonna singola, singola riga.  
@@ -93,7 +92,7 @@ sp_OAMethod objecttoken , methodname
   
  Se a tutti i valori di dati di una colonna è associato lo stesso tipo di dati, tale tipo verrà applicato all'intera colonna. Se i valori di dati di una colonna sono tipi di dati diversi, il tipo di dati della colonna viene scelto in base allo schema seguente.  
   
-||INT|FLOAT|money|datetime|varchar|NVARCHAR|  
+||int|float|money|datetime|varchar|nvarchar|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -110,7 +109,7 @@ sp_OAMethod objecttoken , methodname
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-calling-a-method"></a>A. Chiamata di un metodo  
+### <a name="a-calling-a-method"></a>R. Chiamata di un metodo  
  L'esempio seguente chiama il `Connect` metodo dell'oggetto creato in precedenza **SQLServer** oggetto.  
   
 ```  

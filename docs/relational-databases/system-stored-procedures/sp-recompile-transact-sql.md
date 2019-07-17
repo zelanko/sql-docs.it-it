@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 67b4523b871e386fed62388a464a42ee6e9e10bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f9b72c1a97c17f975144ad0fd364260afab1fb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002561"
 ---
 # <a name="sprecompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_recompile [ @objname = ] 'object'
   
 ## <a name="arguments"></a>Argomenti  
  [ @objname=] '*oggetto*'  
- Nome qualificato o non qualificato di una stored procedure, un trigger, una tabella, una vista o una funzione definita dall'utente nel database corrente. *oggetto* viene **nvarchar(776)**, non prevede alcun valore predefinito. Se *oggetto* è il nome di una stored procedure, trigger o funzione definita dall'utente, la stored procedure, trigger o funzione verrà ricompilata alla successiva esecuzione. Se *oggetto* è il nome di una tabella o vista, tutte le stored procedure, trigger o funzioni definite dall'utente che fanno riferimento a tabella o della vista verranno ricompilate alla successiva esecuzione degli stessi.  
+ Nome qualificato o non qualificato di una stored procedure, un trigger, una tabella, una vista o una funzione definita dall'utente nel database corrente. *oggetto* viene **nvarchar(776)** , non prevede alcun valore predefinito. Se *oggetto* è il nome di una stored procedure, trigger o funzione definita dall'utente, la stored procedure, trigger o funzione verrà ricompilata alla successiva esecuzione. Se *oggetto* è il nome di una tabella o vista, tutte le stored procedure, trigger o funzioni definite dall'utente che fanno riferimento a tabella o della vista verranno ricompilate alla successiva esecuzione degli stessi.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o un numero diverso da zero (esito negativo)  

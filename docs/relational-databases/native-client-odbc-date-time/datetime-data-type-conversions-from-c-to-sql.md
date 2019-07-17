@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e547a21eb86a76a76bc1d4560005bcd58595dfb3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4f9fe3c7f5753788df339484bbf29e2d6e953dba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417222"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030435"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>Conversioni dei tipi di dati datetime da C a SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "52417222"
 
   In questo argomento elenca i problemi da prendere in considerazione durante le conversioni dai tipi C a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi data/ora.  
   
- Le conversioni descritte nella tabella seguente sono valide se effettuate sul client. Nei casi in cui il client specifica la precisione in secondi frazionari per un parametro che differisce da definiti nel server, la conversione client potrebbe riuscire ma il server restituirà un errore quando si **SQLExecute** o  **SQLExecuteDirect** viene chiamato. In particolare, ODBC considera qualsiasi troncamento dei secondi frazionari come un errore, mentre il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportamento prevede l'arrotondamento; ad esempio arrotondamento si verifica quando si passa da **datetime2(6)** a **datetime2(2)**. I valori della colonna di tipo datetime vengono arrotondati a 1/300° di un secondo e le colonne smalldatetime contengono secondi impostati su zero dal server.  
+ Le conversioni descritte nella tabella seguente sono valide se effettuate sul client. Nei casi in cui il client specifica la precisione in secondi frazionari per un parametro che differisce da definiti nel server, la conversione client potrebbe riuscire ma il server restituirà un errore quando si **SQLExecute** o  **SQLExecuteDirect** viene chiamato. In particolare, ODBC considera qualsiasi troncamento dei secondi frazionari come un errore, mentre il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportamento prevede l'arrotondamento; ad esempio arrotondamento si verifica quando si passa da **datetime2(6)** a **datetime2(2)** . I valori della colonna di tipo datetime vengono arrotondati a 1/300° di un secondo e le colonne smalldatetime contengono secondi impostati su zero dal server.  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -49,7 +48,7 @@ ms.locfileid: "52417222"
   
 ## <a name="key-to-symbols"></a>Descrizione dei simboli  
   
--   **-**: Non viene supportata alcuna conversione. Viene generato un record di diagnostica con SQLSTATE 07006 e il messaggio "Violazione dell'attributo del tipo di dati".  
+-   **-** : Non viene supportata alcuna conversione. Viene generato un record di diagnostica con SQLSTATE 07006 e il messaggio "Violazione dell'attributo del tipo di dati".  
   
 -   **1**: Se i dati forniti non sono validi, viene generato un record di diagnostica con SQLSTATE 22007 e il messaggio "Formato di datetime non valido".  
   
@@ -83,7 +82,7 @@ ms.locfileid: "52417222"
   
     ||||  
     |-|-|-|  
-    |Tipo|Scala implicita<br /><br /> 0|Scala implicita<br /><br /> 1..9|  
+    |type|Scala implicita<br /><br /> 0|Scala implicita<br /><br /> 1..9|  
     |SQL_C_TYPE_TIMESTAMP|19|21..29|  
   
      Per SQL_C_TYPE_TIMESTAMP, tuttavia, se i secondi frazionari possono essere rappresentati con tre cifre senza perdita di dati e la dimensione della colonna è almeno 23, vengono generate esattamente tre cifre di secondi frazionari. Questo comportamento assicura la compatibilità con le versioni precedenti per le applicazioni sviluppate utilizzando driver ODBC meno recenti.  

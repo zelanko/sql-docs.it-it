@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3344ad65a2445a8d39451f6a048f057b7158d135
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7d698932bb7ef7e0fd37a0ced8ab536eeb0d5d68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533403"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096035"
 ---
 # <a name="sptracecreate-transact-sql"></a>sp_trace_create (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -128,7 +127,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
 -   Il valore predefinito *file_size* Analogamente alle altre tracce è 5 MB e può essere modificato.  
   
--   Non è possibile specificare alcun nome di file. Il file verrà salvato come **N'%SQLDIR%\MSSQL\DATA\blackbox.trc'**  
+-   Non è possibile specificare alcun nome di file. Il file verrà salvato come: **N'%SQLDIR%\MSSQL\DATA\blackbox.trc'**  
   
 -   Nella traccia saranno contenuti solo gli eventi seguenti e le relative colonne:  
   

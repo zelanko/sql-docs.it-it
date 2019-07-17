@@ -1,5 +1,5 @@
 ---
-title: sp_grant_proxy_to_subsystem (Transact-SQL) | Microsoft Docs
+title: eseguire sp_grant_proxy_to_subsystem (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
-manager: jroth
-ms.openlocfilehash: c31c10dc5c0917286e6621fedc91f08c8d385555
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123816"
 ---
 # <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 
@@ -88,7 +87,7 @@ sp_grant_proxy_to_subsystem
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-granting-access-to-a-subsystem-by-id"></a>A. Concessione dell'accesso a un sottosistema in base all'ID  
+### <a name="a-granting-access-to-a-subsystem-by-id"></a>R. Concessione dell'accesso a un sottosistema in base all'ID  
  Nell'esempio seguente viene concesso al proxy `Catalog application proxy` l'accesso al sottosistema script ActiveX.  
   
 ```sql

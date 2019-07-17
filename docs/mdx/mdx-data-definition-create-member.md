@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 432438fe9a6e1b39c849188050b67f816d895187
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23b2a58c0099de7d9fd029c9b8370f810ec64e96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250213"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098423"
 ---
 # <a name="mdx-data-definition---create-member"></a>Definizione dei dati MDX - CREATE MEMBER
 
@@ -41,7 +40,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  *MDX_Expression*  
  Espressione MDX (Multidimensional Expression) valida.  
   
- *Property_Name*  
+ *Property_name*  
  Stringa valida che specifica il nome per la proprietà di un membro calcolato.  
   
  *Property_Value*  

@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: bc78718c813ef1aa599c1ab299c634d018bc88d6
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: c1c75a6ff18b26bee65365acbc068de87678a9c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070758"
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,9 +42,9 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
   
 |.|Risultato|  
 |---------------|------------|  
-|DELETE FROM MINING STRUCTURE*\<struttura >*<br /><br /> o Gestione configurazione<br /><br /> DELETE FROM MINING STRUCTURE*\<struttura >*. CONTENUTO|Esegue ProcessClear nella struttura di data mining. Viene cancellato tutto il contenuto della struttura di data mining e dei modelli di data mining associati.|  
-|DELETE FROM MINING STRUCTURE*\<struttura >*. CASE|Esegue ProcessClearStructureOnly nella struttura di data mining. Viene cancellato tutto il contenuto della struttura di data mining, lasciando invariati i modelli di data mining associati. Dopo la cancellazione della struttura di data mining non è possibile eseguire il drill-through sui modelli di data mining associati.|  
-|Elimina dal modello di data MINING*\<modello >*<br /><br /> o Gestione configurazione<br /><br /> Elimina dal modello di data MINING*\<modello >*. CONTENUTO|Esegue ProcessClear sul modello di data mining, ma lascia invariati i valori dello stato. I valori di stato sono i possibili stati di una colonna. Per la colonna del genere, ad esempio, i valori di stato sono maschio e femmina.|  
+|DELETE FROM MINING STRUCTURE *\<struttura >*<br /><br /> oppure<br /><br /> DELETE FROM MINING STRUCTURE *\<struttura >* . CONTENUTO|Esegue ProcessClear nella struttura di data mining. Viene cancellato tutto il contenuto della struttura di data mining e dei modelli di data mining associati.|  
+|DELETE FROM MINING STRUCTURE *\<struttura >* . CASE|Esegue ProcessClearStructureOnly nella struttura di data mining. Viene cancellato tutto il contenuto della struttura di data mining, lasciando invariati i modelli di data mining associati. Dopo la cancellazione della struttura di data mining non è possibile eseguire il drill-through sui modelli di data mining associati.|  
+|Elimina dal modello di data MINING *\<modello >*<br /><br /> oppure<br /><br /> Elimina dal modello di data MINING *\<modello >* . CONTENUTO|Esegue ProcessClear sul modello di data mining, ma lascia invariati i valori dello stato. I valori di stato sono i possibili stati di una colonna. Per la colonna del genere, ad esempio, i valori di stato sono maschio e femmina.|  
   
  Per altre informazioni sui tipi di elaborazione, vedere [elemento di tipo &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla).  
   

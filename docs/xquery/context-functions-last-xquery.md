@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7220b0fe10f88ec9ba78d31a8507d12eba7aafff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 04cb465c5180b829ff7d125c1695c3865c3f33c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038999"
 ---
 # <a name="context-functions---last-xquery"></a>Funzioni di contesto - last (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ fn:last() as xs:integer
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
   
-### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>A. Utilizzo della funzione XQuery last() per recuperare le ultime due fasi di produzione  
+### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>R. Utilizzo della funzione XQuery last() per recuperare le ultime due fasi di produzione  
  La query seguente recupera le ultime due fasi di produzione relative a un modello di prodotto specifico. Il valore, il numero di fasi di produzione, restituiti dai **Last** funzione viene utilizzata nella query seguente per recuperare le ultime due fasi di produzione.  
   
 ```  
@@ -62,7 +61,7 @@ WHERE ProductModelID=7
   
  Nella query precedente, il **Last** funzionare in /`/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` restituisce il numero di fasi di produzione. Tale valore viene utilizzato per recuperare l'ultima fase di produzione nel centro di lavorazione.  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 ProductModelID Result    

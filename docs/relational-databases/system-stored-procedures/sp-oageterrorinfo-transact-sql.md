@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2f4ab09693234d72890524628f4def5afcf447ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65450075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107908"
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_OAGetErrorInfo [ objecttoken ]
  *objecttoken*  
  È il token di oggetto di un oggetto OLE creato in precedenza tramite **sp_OACreate** oppure valore NULL. Se *vengono restituite le* è specificato, vengono restituite informazioni sull'errore per l'oggetto. Se viene specificato NULL, vengono restituite le informazioni sull'errore relative all'intero batch.  
   
- _source_ **OUTPUT**  
+ _origine_ **OUTPUT**  
  Origine delle informazioni sull'errore. Se specificato, deve essere una variabile locale **char**, **nchar**, **varchar**, oppure **nvarchar** variabile. Se necessario, il valore restituito viene troncato in base alla dimensione della variabile locale.  
   
  _Descrizione_ **OUTPUT**  

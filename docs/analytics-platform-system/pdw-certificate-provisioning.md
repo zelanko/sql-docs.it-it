@@ -2,19 +2,18 @@
 title: Provisioning del certificato PDW - sistema di piattaforma Analitica | Microsoft Docs
 description: La pagina di Provisioning del certificato PDW di Analitica piattaforma di sistema di Configuration Manager Importa o rimuove il certificato usato dall'area PDW.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: af6d4df964820ced9f4d79b67859e010a895bc29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 48ad2aed20f497c8400727d9d217dc8f467ac492
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639908"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960430"
 ---
 # <a name="pdw-certificate-provisioning---analytics-platform-system"></a>Provisioning del certificato PDW - sistema di piattaforma Analitica
 Il **Provisioning del certificato PDW** pagina del sistema di piattaforma Analitica **Configuration Manager** Importa o rimuove il certificato usato dall'area PDW. L'uso, un certificato per crittografare le connessioni consente una comunicazione protetta il nodo di controllo tramite client di SQL Server, gli strumenti che utilizzano i driver di SQL Server PDW, il [Console di amministrazione](monitor-the-appliance-by-using-the-admin-console.md), e carica di Integration Services.  
@@ -72,7 +71,7 @@ SQL Server PDW non crittograferà connessione corrente usando il certificato imp
   
 SQL Server PDW continueranno a crittografare le connessioni correnti, ma non utilizzerà la rimozione del certificato per le nuove connessioni.  
   
-![DWConfig Appliance PDW Certificate](./media/pdw-certificate-provisioning/SQL_Server_PDW_DWConfig_ApplPDWCert.png "SQL_Server_PDW_DWConfig_ApplPDWCert")  
+![Certificato PDW strumento DWConfig](./media/pdw-certificate-provisioning/SQL_Server_PDW_DWConfig_ApplPDWCert.png "SQL_Server_PDW_DWConfig_ApplPDWCert")  
   
 ## <a name="see-also"></a>Vedere anche  
 [Avviare Gestione configurazione &#40;sistema di piattaforma Analitica&#41;](launch-the-configuration-manager.md)  

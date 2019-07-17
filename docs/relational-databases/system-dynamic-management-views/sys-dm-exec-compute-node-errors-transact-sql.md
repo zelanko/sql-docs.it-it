@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5a11a5e7090f89f4a31ffd15f8ebbce78ea395a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d47c6ae6d43b48b83be934a0bbfcce822e16fc42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097882"
 ---
 # <a name="sysdmexeccomputenodeerrors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "63013397"
 |rexecution_id|**nvarchar(36)**|Identificatore della query PolyBase, se presente.||  
 |spid|**int**|Identificatore della sessione SQL Server||  
 |thread_id|**int**|Identificatore numerico del thread su cui si è verificato l'errore.||  
-|dettagli|nvarchar(4000)|Descrizione completa dei dettagli dell'errore.||  
+|details|nvarchar(4000)|Descrizione completa dei dettagli dell'errore.||  
   
 ## <a name="see-also"></a>Vedere anche  
  [PolyBase con DMV di risoluzione dei problemi](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   

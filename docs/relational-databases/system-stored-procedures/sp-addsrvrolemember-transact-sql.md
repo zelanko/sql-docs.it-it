@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 80de1581116ddc477ee1d5b8197532a853ee3da7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2c927bdff462922d1846188366fbb92ce0d3663c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022422"
 ---
 # <a name="spaddsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +43,10 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @loginame **=** ] **'**_login_**'**  
+ [ @loginame **=** ] **'** _login_ **'**  
  Nome dell'account di accesso aggiunto al ruolo predefinito del server. *account di accesso* viene **sysname**, non prevede alcun valore predefinito. *account di accesso* può essere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o un account di accesso di Windows. Gli account di Windows che non dispongono ancora dell'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ricevono automaticamente l'autorizzazione di accesso.  
   
- [ @rolename **=** ] **'**_ruolo_**'**  
+ [ @rolename **=** ] **'** _ruolo_ **'**  
  Nome del ruolo predefinito del server a cui verrà aggiunto l'account di accesso. *ruolo* viene **sysname**, con un valore predefinito è NULL e deve essere uno dei valori seguenti:  
   
 -   sysadmin  

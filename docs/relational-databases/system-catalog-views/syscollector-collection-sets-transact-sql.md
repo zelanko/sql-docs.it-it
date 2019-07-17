@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dcc027ad80d4bbe1142a9e17add52f8a42d7d404
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a001a6a2da2532ac6d0e2a00079c8bd7c7036b66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760196"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060378"
 ---
 # <a name="syscollectorcollectionsets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "62760196"
 |-----------------|---------------|-----------------|  
 |collection_set_id|**int**|Identificatore locale del set di raccolta. Non ammette i valori Null.|  
 |collection_set_uid|**uniqueidentifier**|Identificatore univoco globale del set di raccolta. Non ammette i valori Null.|  
-|NAME|**nvarchar(4000)**|Nome del set di raccolta. Ammette i valori Null.|  
+|name|**nvarchar(4000)**|Nome del set di raccolta. Ammette i valori Null.|  
 |target|**nvarchar(max)**|Identifica la destinazione per il set di raccolta. Ammette i valori Null.|  
 |is_system|**bit**|Attivato (1) o disattivato (0) per indicare se il set di raccolta è stato fornito con l'agente di raccolta dati o se è stato aggiunto in seguito da dc_admin. Potrebbe trattarsi di un set di raccolta personalizzato sviluppato internamente o da terze parti. Non ammette i valori Null.|  
 |is_running|**bit**|Indica se il set di raccolta è in esecuzione o no. Non ammette i valori Null.|  

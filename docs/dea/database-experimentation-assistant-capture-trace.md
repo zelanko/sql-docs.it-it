@@ -12,13 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
-ms.openlocfilehash: dc53a9e1d151e07ce7e2eebf1444fd0d0065f8be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab361c4e83ae5e2b2bb6614bdc4a513e0bdd77ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794497"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059000"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Acquisire una traccia nel Database sperimentazione Assistant
 
@@ -74,10 +73,10 @@ Nella tabella seguente fornisce l'elenco di eventi e i dati della colonna corris
   
 |Nome evento|Dati di testo (1)|Dati binari (2)|ID del database (3)|Nome host (8)|Nome dell'applicazione (10)|Nome account di accesso (11)|SPID (12)|Ora di inizio (14)|Ora di fine (15)|Nome del database (35)|Sequenza di eventi (51 su)|IsSystem (60)|  
 |---|---|---|---|---|---|---|---|---|---|---|---|---|  
-|**RPC:Completed (10)**||*|*|*|*|*|*|*|*|*|*|*|  
-|**RPC:Starting (11)**||*|*|*|*|*|*|*||*|*|*|  
+|**RPC: completato (10)**||*|*|*|*|*|*|*|*|*|*|*|  
+|**RPC: avvio (11)**||*|*|*|*|*|*|*||*|*|*|  
 |**RPC Output Parameter (100)**|*||*|*|*|*|*|*||*|*|*|  
-|**SQL:BatchCompleted (12)**|*||*|*|*|*|*|*|*|*|*|*|  
+|**SQL: BatchCompleted (12)**|*||*|*|*|*|*|*|*|*|*|*|  
 |**SQL:BatchStarting (13)**|*||*|*|*|*|*|*||*|*|*|  
 |**Audit Login (14)**|*|*|*|*|*|*|*|*||*|*|*|  
 |**Audit Logout (15)**|*||*|*|*|*|*|*|*|*|*|*|  

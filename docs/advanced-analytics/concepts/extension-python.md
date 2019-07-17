@@ -7,13 +7,12 @@ ms.date: 09/05/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: c0284577d8e30871b354607cf9af978e6d53df63
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: abf7028c8b55f4f97770586f2a678a538f01b29a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512218"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963048"
 ---
 # <a name="python-language-extension-in-sql-server"></a>Estensione del linguaggio Python in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
