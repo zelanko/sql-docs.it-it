@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9a545233-1b0a-488a-a1ec-c33aa608dcc1
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 65f9070aabc6f64e1fc327abe67e595696c04423
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c12a2ddb97c6d599e5adfc57277e0a5f64288e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63266455"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060196"
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a>Impostazioni (caricamento oggetti di sistema) del progetto (DB2ToSQL)
 La pagina di caricamento di oggetti di sistema dei **impostazioni del progetto** finestra di dialogo consente di specificare quali oggetti di sistema DB2 SSMA converte e carica in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -35,7 +34,7 @@ Conversione di oggetti di sistema utilizza le risorse di sistema e richiede temp
   
 -   SYS.DBMS_UTILITY  
   
--   SYS.STANDARD  
+-   SYS. STANDARD  
   
 -   SYS.UTL_FILE  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59799119920170db3dcab21619c01b52e7dda8db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e060411864c0f354ee9107216b86a47f738bf43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800769"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028059"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>Attributi di protezione host e programmazione dell'integrazione con CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47800769"
   
 -   **ExternalProcessMgmt**, che indica se l'API espone una modalità per controllare il processo host.  
   
- Sulla base di tali attributi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specifica un elenco di attributi di protezione host non consentiti nell'ambiente host attraverso la sicurezza da accesso di codice. I requisiti di autorità di certificazione sono specificati da uno di tre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] set di autorizzazioni: **sicuri**, **EXTERNAL_ACCESS**, oppure **UNSAFE**. Uno dei tre livelli di sicurezza viene specificato quando l'assembly viene registrato nel server, usando il **CREATE ASSEMBLY** istruzione. Codice in esecuzione all'interno di **sicura** o **EXTERNAL_ACCESS** set di autorizzazioni devono evitare alcuni tipi o membri che hanno il **System.Security.Permissions.HostProtectionAttribute** attributo viene applicato. Per altre informazioni, vedere [creazione di un Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md) e [restrizioni del modello di programmazione integrazione CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
+ Sulla base di tali attributi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specifica un elenco di attributi di protezione host non consentiti nell'ambiente host attraverso la sicurezza da accesso di codice. I requisiti di autorità di certificazione sono specificati da uno dei tre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] set di autorizzazioni: **-SAFE**, **EXTERNAL_ACCESS**, o **UNSAFE**. Uno dei tre livelli di sicurezza viene specificato quando l'assembly viene registrato nel server, usando il **CREATE ASSEMBLY** istruzione. Codice in esecuzione all'interno di **sicura** o **EXTERNAL_ACCESS** set di autorizzazioni devono evitare alcuni tipi o membri che hanno il **System.Security.Permissions.HostProtectionAttribute** attributo viene applicato. Per altre informazioni, vedere [creazione di un Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md) e [restrizioni del modello di programmazione integrazione CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
  Il **HostProtectionAttribute** non è un'autorizzazione di sicurezza come un modo per migliorare l'affidabilità, in quanto identifica specifici codice costruisce, tipi o metodi, che l'host possono essere disattivati. L'utilizzo dei **HostProtectionAttribute** applica un modello di programmazione che consente di proteggere la stabilità dell'host.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "47800769"
 > [!NOTE]  
 >  Gli elenchi presenti in questi argomenti sono stati generati dagli assembly supportati.  Per altre informazioni, vedere [librerie di .NET Framework supportate](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Tipi e membri non consentiti in Microsoft.VisualBasic.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)  
  Vengono elencati i tipi e i membri di Microsoft.VisualBasic.dll, i cui valori degli attributi di protezione host non sono consentiti.  
   

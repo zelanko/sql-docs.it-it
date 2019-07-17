@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48cb02feac227ad224ffed05fe60c1e78c97406c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6f2a73f44d762a2d17eccc8cf82570b07933426
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742299"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128886"
 ---
 # <a name="blobs-and-ole-objects"></a>Oggetti BLOB e OLE
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client espone il **ISequentialStream** interfaccia per supportare i consumer di accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**, **testo**, **immagine**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, e i tipi di dati xml come binary large object (BLOB ). Il metodo **Read** in **ISequentialStream** consente al consumer di recuperare una quantità elevata di dati in blocchi gestibili.  
+  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client espone il **ISequentialStream** interfaccia per supportare i consumer di accedere a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**, **testo**, **immagine**, **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , e i tipi di dati xml come binary large object (BLOB ). Il metodo **Read** in **ISequentialStream** consente al consumer di recuperare una quantità elevata di dati in blocchi gestibili.  
   
  Per un esempio che illustri questa caratteristica, vedere [impostare dati di grandi dimensioni &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md).  
   
@@ -37,7 +36,7 @@ ms.locfileid: "47742299"
   
  Per i tipi di dati di valori di grandi dimensioni, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client controlla presupposti per le dimensioni tipo in **IRowset** e interfacce DDL. Le colonne con **varchar**, **nvarchar**, e **varbinary** tipi di dati con dimensione massima è impostata su un valore illimitato verranno rappresentati come ISLONG mediante le interfacce e i set di righe dello schema restituzione di tipi di dati di colonna.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client espone il **varchar (max)**, **varbinary (max)** e **nvarchar (max)** tipi come DBTYPE_STR, DBTYPE_BYTES e DbType WSTR rispettivamente.  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client espone il **varchar (max)** , **varbinary (max)** e **nvarchar (max)** tipi come DBTYPE_STR, DBTYPE_BYTES e DbType WSTR rispettivamente.  
   
  In un'applicazione è possibile utilizzare questi tipi nei modi seguenti:  
   
@@ -59,7 +58,7 @@ ms.locfileid: "47742299"
   
 -   Se una riga contiene più di un valore di dati di grandi dimensioni e DBPROP_ACCESSORDER non è DBPROPVAL_AO_RANDOM, il consumer deve utilizzare un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB Native Client provider supportato dal cursore del set di righe per recuperare i dati di riga o elaborare dati di grandi dimensioni tutti i valori prima di recuperare altri valori di riga. Se DBPROP_ACCESSORDER è DBPROPVAL_AO_RANDOM, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client memorizza nella cache tutti i tipi di dati xml come oggetti binari di grandi dimensioni (BLOB) in modo che sia accessibile in qualsiasi ordine.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Recupero di dati di grandi dimensioni](../../relational-databases/native-client-ole-db-blobs/getting-large-data.md)  
   

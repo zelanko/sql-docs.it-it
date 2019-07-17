@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a738712a8fb1b032ef8244f579b10fdcc22becee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa75299f4d8e8f15293064d0bf3fb3979fe382d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241425"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037699"
 ---
 # <a name="c-to-sql-timestamp"></a>Da C a SQL: Timestamp
 L'identificatore per il tipo di dati C ODBC timestamp è:  

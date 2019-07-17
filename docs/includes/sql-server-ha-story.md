@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: bac867f5f3532f931d2708c46979659e2851645f
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 1394414db170826fa96ca51a5d35ff8dea199310
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68212268"
 ---
 Questo articolo offre una panoramica delle soluzioni di continuità aziendale per la disponibilità elevata e il ripristino di emergenza in SQL Server. 
 
@@ -12,7 +12,7 @@ Un'attività comune di cui deve tenere conto chiunque esegua una distribuzione d
 
 SQL Server 2017 introduce molte nuove funzionalità o miglioramenti di quelle già esistenti, alcune delle quali riguardano la disponibilità. L'elemento più importante aggiunto a SQL Server 2017 è il supporto per SQL Server nelle distribuzioni di Linux. Per un elenco completo delle nuove funzionalità in SQL Server 2017, vedere l'argomento [Novità di SQL Server](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2017).
 
-Questo articolo descrive in particolare gli scenari di disponibilità in SQL Server 2017, nonché le funzionalità di disponibilità, sia nuove che ottimizzate, offerte da SQL Server 2017. Gli scenari includono soluzioni ibride in grado di coprire le distribuzioni di SQL Server sia in Windows Server che in Linux, nonché le soluzioni che consentono di aumentare il numero di copie leggibili di un database. L'articolo non tratta le opzioni di disponibilità esterne a SQL Server, ad esempio quelle offerte dalla virtualizzazione, ma tutti gli argomenti trattati qui riguardano le installazioni di SQL Server in una macchina virtuale guest sia nel cloud pubblico, sia in hosting in un server hypervisor locale.
+Questo articolo descrive in particolare gli scenari di disponibilità in SQL Server 2017, nonché le funzionalità di disponibilità, sia nuove che ottimizzate, offerte da SQL Server 2017. Gli scenari includono soluzioni ibride in grado di coprire le distribuzioni di SQL Server sia in Windows Server che in Linux, nonché le soluzioni che consentono di aumentare il numero di copie leggibili di un database. Questo articolo non tratta le opzioni di disponibilità esterne a SQL Server, ad esempio quelle offerte dalla virtualizzazione, ma tutti gli argomenti trattati riguardano le installazioni di SQL Server in una macchina virtuale guest sia nel cloud pubblico, sia in hosting in un server hypervisor locale.
 
 ## <a name="sql-server-2017-scenarios-using-the-availability-features"></a>Scenari di SQL Server 2017 che usano le funzionalità di disponibilità
 

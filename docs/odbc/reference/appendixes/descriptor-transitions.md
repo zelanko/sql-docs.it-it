@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 0cf24fe6-5e3c-45fa-81b8-4f52ddf8501d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 027b711c5c1a2cb2d35e65efdc2b00f441841d8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44e9d92c7371451d6bfdd2e1513c3f8fdac8447b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240974"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130003"
 ---
 # <a name="descriptor-transitions"></a>Transizioni dei descrittori
 I descrittori di ODBC sono i seguenti tre stati.  
   
-|State|Descrizione|  
+|Stato|Descrizione|  
 |-----------|-----------------|  
 |D0|Descrittore non allocato|  
 |D1i|Descrittori allocati in modo implicito|  
@@ -33,12 +32,12 @@ I descrittori di ODBC sono i seguenti tre stati.
   
  Le tabelle seguenti mostrano come ogni funzione ODBC influisce sullo stato del descrittore.  
   
-## <a name="sqlallochandle"></a>SQLAllocHandle  
+## <a name="sqlallochandle"></a>Funzione SQLAllocHandle  
   
 |D0<br /><br /> Non allocato|D1i<br /><br /> implicito|D1e<br /><br /> Esplicito|  
 |------------------------|----------------------|----------------------|  
 |D1i[1]|--|--|  
-|D1e[2]|--|--|  
+|D1e [2]|--|--|  
   
  [1] questa riga Mostra le transizioni quando *HandleType* era SQL_HANDLE_STMT.  
   

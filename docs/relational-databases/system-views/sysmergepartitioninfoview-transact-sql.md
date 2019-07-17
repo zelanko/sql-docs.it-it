@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 46700bb94749269eb56e60cade035fdf4c8f388c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 40b1ebc5319c13b5aa84a28e1a5c5546dd62bd03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124683"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094817"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ ms.locfileid: "54124683"
 |**fast_multicol_updateproc**|**bit**|Specifica se l'agente di merge è stato attivato per l'applicazione di modifiche a più colonne della stessa riga tramite una sola istruzione UPDATE:<br /><br /> **0** = esegue un'istruzione UPDATE distinta per ogni colonna modificata.<br /><br /> **1** = rilasciato nell'istruzione UPDATE che fa in modo che gli aggiornamenti a più colonne in un'unica istruzione.|  
 |**check_permissions**|**int**|Mappa di bit delle autorizzazioni a livello di tabella che verranno verificate quando l'agente di merge applicherà le modifiche nel server di pubblicazione. *check_permissions* può avere uno dei valori seguenti:<br /><br /> **0x00** = le autorizzazioni non vengono controllate.<br /><br /> **0x10** = controlli delle autorizzazioni nel server di pubblicazione prima che gli inserimenti vengono eseguiti in un sottoscrittore possono essere caricate.<br /><br /> **0x20** = le autorizzazioni vengono verificate nel server di pubblicazione prima gli aggiornamenti apportati nel Sottoscrittore possono essere caricati.<br /><br /> **0x40** = le autorizzazioni vengono verificate nel server di pubblicazione prima del caricamento DELETE eseguite in un sottoscrittore.|  
 |**maxversion_at_cleanup**|**int**|Numero massimo di generazioni rimosse alla successiva esecuzione dell'agente di merge.|  
-|**processing_order**|**int**|Indica l'ordine di elaborazione degli articoli in una pubblicazione di tipo merge. dove il valore **0** indica che l'articolo non è ordinato e gli articoli vengono elaborati in ordine dal valore più basso al più alto. Se due articoli hanno lo stesso valore, essi vengono elaborati simultaneamente. Per altre informazioni, vedere [delle proprietà di replica di tipo Merge specificare](../../relational-databases/replication/merge/specify-merge-replication-properties.md).|  
+|**processing_order**|**int**|Indica l'ordine di elaborazione degli articoli in una pubblicazione di tipo merge. dove il valore **0** indica che l'articolo non è ordinato e gli articoli vengono elaborati in ordine dal valore più basso al più alto. Se due articoli hanno lo stesso valore, essi vengono elaborati simultaneamente. Per altre informazioni, vedere [Specificare le proprietà della replica di tipo merge](../../relational-databases/replication/merge/specify-merge-replication-properties.md).|  
 |**upload_options**|**tinyint**|Specifica se è possibile apportare modifiche nel Sottoscrittore o caricare modifiche dal Sottoscrittore. I possibili valori sono i seguenti.<br /><br /> **0** = non esistono restrizioni per gli aggiornamenti eseguiti nel Sottoscrittore; tutte le modifiche vengono caricate nel server di pubblicazione.<br /><br /> **1** = sono consentite modifiche nel Sottoscrittore, ma non vengono caricate nel server di pubblicazione.<br /><br /> **2** = non sono consentite modifiche nel Sottoscrittore.|  
 |**published_in_tran_pub**|**bit**|Indica che un articolo in una pubblicazione di tipo merge viene pubblicato anche in una pubblicazione transazionale.<br /><br /> **0** = l'articolo non viene pubblicato in un articolo transazionale.<br /><br /> **1** = l'articolo è pubblicato anche in un articolo transazionale.|  
 |**lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -88,7 +87,7 @@ ms.locfileid: "54124683"
 |**compensate_for_errors**|**bit**|Specifica se devono essere eseguite azioni di compensazione quando vengono rilevati errori durante la sincronizzazione.<br /><br /> **0** = Compensating le azioni vengono disabilitate.<br /><br /> **1** = le modifiche che non possono essere applicate in un sottoscrittore o un server di pubblicazione generano sempre azioni di compensazione per annullare queste modifiche, ovvero il comportamento predefinito per la replica di tipo merge.<br /><br /> Nota: Un valore pari **0** comporta non convergenza.|  
 |**pub_range**|**bigint**|Dimensioni dell'intervallo di valori Identity del server di pubblicazione.|  
 |**Intervallo**|**bigint**|Dimensioni dei valori Identity consecutivi che verrebbero assegnati nei Sottoscrittori durante un intervento di regolazione.|  
-|**soglia**|**int**|Percentuale di soglia dell'intervallo di valori Identity.|  
+|**threshold**|**int**|Percentuale di soglia dell'intervallo di valori Identity.|  
 |**stream_blob_columns**|**bit**|Indica se per le colonne BLOB (Binary Large Object) viene utilizzata l'ottimizzazione del flusso. **1** significa che viene eseguita l'ottimizzazione.|  
 |**preserve_rowguidcol**|**bit**|Specifica se per la replica viene utilizzata una colonna rowguid esistente. Un valore pari **1** indica che viene utilizzata una colonna ROWGUIDCOL esistente. **0** significa che la replica aggiunto la colonna ROWGUIDCOL.|  
 |**partition_view_id**|**int**|Identifica la vista che definisce una partizione del Sottoscrittore.|  

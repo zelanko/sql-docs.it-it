@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e7542f7619a261a07349c5c55b01a10042ee16bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10fbd3ac410ee5b6944ffe7b32285008f8b11776
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715649"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033085"
 ---
 # <a name="database-mirroring-witness-catalog-views---sysdatabasemirroringwitnesses"></a>Database Mirroring Witness viste del catalogo - sys. database_mirroring_witnesses
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47715649"
   
   In una sessione di mirroring del database, il failover automatico richiede un server di controllo del mirroring. In una situazione ideale, il server di controllo del mirroring risiede su un computer distinto dal server principale e dal server mirror. Il server di controllo non esegue verifiche nel database, ma monitora lo stato del server principale e del server mirror. Se il server principale non riesce, il controllo del mirroring può avviare il failover automatico al server mirror. 
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Nome delle due copie del database nella sessione di mirroring del database.|  
 |**principal_server_name**|**sysname**|Nome del server partner la cui copia del database è attualmente il database principale.|  

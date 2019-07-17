@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 268c77b7-1d71-4197-a2ed-5e2b2b8fc260
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 949d8a90892e1954ee0a96f0025cb623569fbe55
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 201af9001703bb8f1dfbdaf2c41151697b945df3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024422"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059400"
 ---
 # <a name="syspdwnodescolumns-transact-sql"></a>sys.pdw_nodes_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "56024422"
 |Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|ID dell'oggetto a cui appartiene la colonna.||  
-|NAME|**sysname**|Nome della colonna. Deve essere univoco nell'oggetto.||  
+|name|**sysname**|Nome della colonna. Deve essere univoco nell'oggetto.||  
 |column_id|**int**|ID della colonna. Deve essere univoco nell'oggetto.||  
 |system_type_id|**tinyint**|ID del tipo di sistema della colonna.||  
 |user_type_id|**int**|ID del tipo di colonna definito dall'utente.||  
@@ -58,7 +57,7 @@ ms.locfileid: "56024422"
  È richiesta l'autorizzazione CONTROL SERVER.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Data Warehouse e Parallel Data Warehouse viste del catalogo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [Viste del catalogo di SQL Data Warehouse e Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)  
   
   

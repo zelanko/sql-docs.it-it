@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 77d5386f05e371a2e653f4f6097257e99457e910
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7ce26cd3d4e42d6d94e32a3454318a0ee841c486
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67046709"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124492"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
@@ -141,7 +140,7 @@ Entrambi il `@r_rowsPerRead` parametro per lo streaming e il `@parallel` argomen
 > [!NOTE]  
 >  Elaborazione parallela e streaming sono supportati solo nella Enterprise Edition. È possibile includere parametri nelle query in Standard Edition senza generare un errore, ma i parametri non hanno alcun effetto e gli script R eseguiti in un unico processo.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrizioni  
 
 
 ### <a name="data-types"></a>Tipi di dati
@@ -182,7 +181,7 @@ Valori di float (ad esempio, `+Inf`, `-Inf`, `NaN`) non sono supportati in [!INC
 
 In questa sezione contiene esempi di come è possibile utilizzare questa stored procedure per eseguire gli script R o Python usando [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
-### <a name="a-return-an-r-data-set-to-sql-server"></a>A. Restituisce un set di dati R per SQL Server  
+### <a name="a-return-an-r-data-set-to-sql-server"></a>R. Restituisce un set di dati R per SQL Server  
 
 L'esempio seguente crea una stored procedure che utilizza **sp_execute_external_script** per restituire il set di dati Iris incluso in R per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 

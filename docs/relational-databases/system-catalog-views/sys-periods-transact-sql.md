@@ -12,22 +12,21 @@ dev_langs:
 ms.assetid: 25e66ed3-2270-4c5c-9f5a-2c0f165a57ca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eed8badea9b7136cb71c5d89a76494aab190a0d2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: eea7709c67eab0dc9fe1890135f9ae03225cdff2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51655961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068088"
 ---
 # <a name="sysperiods-transact-sql"></a>Sys.Periods (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Restituisce una riga per ogni tabella per cui sono stati definiti i periodi.  
   
-|Intestazione della colonna|Tipo di dati|Description|  
+|Intestazione della colonna|Tipo di dati|Descrizione|  
 |-------------------|---------------|-----------------|  
-|NAME|**sysname**|Nome del periodo|  
+|name|**sysname**|Nome del periodo|  
 |period_type|**tinyint**|Il valore numerico che rappresenta il tipo di periodo:<br /><br /> 1 = periodo con ora di sistema|  
 |period_type_desc|**nvarchar(60)**|La descrizione del tipo di colonna:<br /><br /> SYSTEM_TIME_PERIOD|  
 |object_id|**int**|L'id della tabella che contiene la colonna period_type|  

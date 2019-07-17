@@ -3,18 +3,17 @@ title: Configurare le impostazioni di SQL Server in Linux
 description: Questo articolo descrive come usare lo strumento mssql-conf per configurare le impostazioni di SQL Server in Linux.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 57e43f3afd9c46e3b49e4f1f07ab3038359c8c50
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: ac1f88377b15bf8bd4a92a5dd705716db55deaaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834016"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077605"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurare SQL Server in Linux con lo strumento mssql-conf
 
@@ -27,7 +26,7 @@ ms.locfileid: "67834016"
 
 |||
 |---|---|
-| [Agente](#agent) | Abilitare SQL Server Agent |
+| [Agente](#agent) | Abilitare SQL Server Agent. |
 | [Regole di confronto](#collation) | Impostare nuove regole di confronto per SQL Server in Linux. |
 | [Commenti e suggerimenti dei clienti](#customerfeedback) | Scegliere se SQL Server Invia commenti e suggerimenti a Microsoft. |
 | [Profilo di Posta elettronica database](#dbmail) | Impostare il profilo di posta elettronica database predefinito per SQL Server in Linux. |
@@ -680,7 +679,7 @@ sudo cat /var/opt/mssql/mssql.conf
 Si noti che eventuali impostazioni non illustrate in questo file Usa valori predefiniti. La prossima sezione offre un campione **mssql.conf** file.
 
 
-## <a id="mssql-conf-format"></a> mssql.conf format
+## <a id="mssql-conf-format"></a> formato MSSQL.conf
 
 Quanto segue **/var/opt/mssql/mssql.conf** file fornisce un esempio per ogni impostazione. È possibile usare questo formato apportare manualmente modifiche per il **mssql.conf** file in base alle esigenze. Se si modifica manualmente il file, è necessario riavviare SQL Server prima che vengano applicate le modifiche. Usare la **mssql.conf** file con Docker, è necessario disporre di Docker [persistenti i dati](sql-server-linux-configure-docker.md). Prima di tutto aggiungere completa **mssql.conf** file alla directory di host e quindi eseguire il contenitore. È disponibile un esempio di questo tipo in [commenti e suggerimenti dei clienti](sql-server-linux-customer-feedback.md).
 

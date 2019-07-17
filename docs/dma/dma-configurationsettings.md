@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: a360c86edc08916f1e28157a54503f64c152dec7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb50b5380a305382bfb5494273cd335c8b60f51e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794388"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058867"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Configurare le impostazioni per Data Migration Assistant
 
@@ -87,15 +86,15 @@ Durante la valutazione, Data Migration Assistant estrae dell'applicazione livell
 
 - commandTimeout
 
-   Questo parametro imposta la proprietà IDbCommand.CommandTimeout *secondi*. (Default=60)
+   Questo parametro imposta la proprietà IDbCommand.CommandTimeout *secondi*. (Predefinito = 60)
 
 - databaseLockTimeout
 
-   Questo parametro è equivalente a [blocco impostato\_TIMEOUT timeout\_periodo](../t-sql/statements/set-lock-timeout-transact-sql.md) nelle *millisecondi*. (Default=5000)
+   Questo parametro è equivalente a [blocco impostato\_TIMEOUT timeout\_periodo](../t-sql/statements/set-lock-timeout-transact-sql.md) nelle *millisecondi*. (Predefinito = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-  Questo parametro imposta il numero di connessioni di pool di connessione SQL da usare. (Default=8)
+  Questo parametro imposta il numero di connessioni di pool di connessione SQL da usare. (Predefinito = 8)
 
 ```
 <advisorGroup>

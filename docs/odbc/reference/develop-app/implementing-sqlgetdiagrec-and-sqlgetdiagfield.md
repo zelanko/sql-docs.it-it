@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11ba1857-b533-4517-8131-a2a8a0154a0a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab1f808b005afaa91ed93bf8f8ec7a8385c9c945
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a4b602d5ff4a94d2888395e6a62f03553fb50f98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68216370"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>Implementazione di SQLGetDiagRec e SQLGetDiagField
 **SQLGetDiagRec** e **SQLGetDiagField** implementate da Gestione Driver e ogni driver. Gestione Driver ogni driver di gestire i record di diagnostica per ogni ambiente, connessione, istruzione e descrittore handle e liberare i record solo quando un'altra funzione viene chiamata con che handle o l'handle viene liberata.  

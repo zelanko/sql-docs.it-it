@@ -28,14 +28,13 @@ ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f3bbe0b7ebe9d516ab23339632e96db184db1e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7a1d6dc5c678d4f0e523a757eabc89d18d85944
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980699"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066941"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Definizione di relazioni tramite sql:relationship (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ ms.locfileid: "65980699"
 ## <a name="examples"></a>Esempi  
  Per creare esempi reali utilizzando gli esempi seguenti, è necessario soddisfare alcuni requisiti. Per altre informazioni, vedere [requisiti per l'esecuzione di esempi di SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. Specifica dell'annotazione sql:relationship in un elemento  
+### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>R. Specifica dell'annotazione sql:relationship in un elemento  
  Lo schema XSD con annotazione seguente sono inclusi  **\<cliente >** e  **\<ordine >** elementi. Il  **\<ordine >** è un elemento figlio del  **\<cliente >** elemento.  
   
  Nello schema, il **SQL: Relationship** annotazione viene specificata per il  **\<ordine >** elemento figlio. La relazione stessa è definita nel  **\<xsd: appinfo >** elemento.  

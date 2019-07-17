@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: a446fd4ce116ee19aa8b38d1ae6d8213e35c16e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6918dac33ce0e69116f713cb8906b2774d00575
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273022"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084553"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Impostazioni progetto (conversione) (DB2ToSQL)
 La pagina di conversione del **impostazioni del progetto** finestra di dialogo contiene impostazioni che consentono di personalizzare la modalità SSMA Converte la sintassi di DB2 per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintassi.  
@@ -62,7 +61,7 @@ La parte superiore è necessario che l'espressione di clausole TOP restituisce u
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/Full:** no  
+**Modalità predefinita/Full:** No  
   
 **Ottimistica modalità:** Yes  
   
@@ -136,7 +135,7 @@ DB2 consente la creazione di vincoli di chiave esterna, in cui un'operazione SET
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/ottimistica/Full:** no  
+**Modalità predefinita/ottimistica/Full:** No  
   
 ### <a name="convert-function-calls-to-procedure-calls"></a>Convertire le chiamate di funzione per le chiamate di procedura  
 Alcune funzioni di DB2 sono definite come transazioni autonomi o contenere istruzioni che non è valide in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questi casi, SSMA consente di creare una procedura e una funzione che è un wrapper per la procedura. La funzione convertita chiama la procedura di implementazione.  
@@ -378,7 +377,7 @@ Istruzione ISNULL viene usato nelle chiamate di funzione REPLACE per emulare il 
   
 Quando si seleziona una modalità di conversione di **modalità** SSMA finestra viene applicata l'impostazione seguente:  
   
-**Modalità predefinita/ottimistico:** no  
+**Modalità predefinita/ottimistico:** No  
   
 **Modalità completa:** Yes  
   

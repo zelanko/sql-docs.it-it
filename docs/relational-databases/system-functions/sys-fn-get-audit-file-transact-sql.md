@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 571ed8140e408577626c437d38080ccabb6c241f
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 350b1eca94f8041a0a38105c650e1c0ec7e1f617
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046281"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,11 +45,11 @@ fn_get_audit_file ( file_pattern,
   
 ## <a name="arguments"></a>Argomenti  
  *file_pattern*  
- Specifica la directory o il percorso e il nome di file per il set di file di controllo da leggere. È di tipo **nvarchar(260)**. 
+ Specifica la directory o il percorso e il nome di file per il set di file di controllo da leggere. È di tipo **nvarchar(260)** . 
  
  - **SQL Server**:
     
-    Questo argomento deve includere sia un percorso (lettera di unità o condivisione di rete) che un nome di file, che può includere un carattere jolly. Un asterisco (*) è utilizzabile per raccogliere più file da un set di file di controllo. Esempio:  
+    Questo argomento deve includere sia un percorso (lettera di unità o condivisione di rete) che un nome di file, che può includere un carattere jolly. Un asterisco (*) è utilizzabile per raccogliere più file da un set di file di controllo. Ad esempio:  
   
     -   **\<percorso >\\ \***  : è possibile raccogliere tutti i file si trova nel percorso di controllo.  
   
@@ -60,7 +59,7 @@ fn_get_audit_file ( file_pattern,
   
  - **Database SQL di Azure**:
  
-    Questo argomento viene usato per specificare l'URL blob (tra cui l'endpoint di archiviazione e il contenitore). Mentre non supporta un carattere jolly asterisco, è possibile usare un prefisso del nome del file parziale (blob) (anziché il nome del blob completo) per raccogliere più file (BLOB) che iniziano con questo prefisso. Esempio:
+    Questo argomento viene usato per specificare l'URL blob (tra cui l'endpoint di archiviazione e il contenitore). Mentre non supporta un carattere jolly asterisco, è possibile usare un prefisso del nome del file parziale (blob) (anziché il nome del blob completo) per raccogliere più file (BLOB) che iniziano con questo prefisso. Ad esempio:
  
       - **\<Storage_endpoint\>/\<contenitore\>/\<ServerName\>/\<DatabaseName\> /**  -consente di raccogliere tutti i file di controllo (BLOB) per il database specifico.    
       
@@ -70,7 +69,7 @@ fn_get_audit_file ( file_pattern,
 >  Se si passa un percorso senza un criterio del nome di file, verrà generato un errore.  
   
  *initial_file_name*  
- Specifica il percorso e il nome di un file specifico del set di file di controllo da cui avviare la lettura dei record di controllo. È di tipo **nvarchar(260)**.  
+ Specifica il percorso e il nome di un file specifico del set di file di controllo da cui avviare la lettura dei record di controllo. È di tipo **nvarchar(260)** .  
   
 > [!NOTE]  
 >  Il *initial_file_name* argomento deve contenere voci valide oppure deve contenere l'impostazione predefinita | Valore NULL.  
@@ -84,7 +83,7 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>Tabelle restituite  
  Nella tabella seguente viene descritto il contenuto del file di controllo che può essere restituito da questa funzione.  
   
-| Nome colonna | Tipo | Descrizione |  
+| Nome colonna | type | Descrizione |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | ID dell'azione. Non ammette i valori NULL. |  
 | additional_information | **nvarchar(4000)** | Le informazioni univoche applicabili solo a un singolo evento vengono restituite in formato XML. Questo tipo di informazioni è contenuto in un numero ridotto di azioni controllabili.<br /><br /> Un livello di stack TSQL sarà visualizzato in formato XML per le azioni associate a tale stack. Il formato XML sarà:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level indica il livello di nidificazione corrente del frame. Il nome del modulo viene rappresentato in un formato composto da tre parti (nome_database, nome_schema e nome_oggetto)  Il nome del modulo viene analizzato per eseguire l'escape di caratteri xml non valido, ad esempio `'\<'`, `'>'`, `'/'`, `'_x'`. Saranno sottoposti a escape come `_xHHHH\_`. dove HHHH rappresenta il codice UCS-2 esadecimale a quattro cifre per il carattere.<br /><br /> Ammette i valori Null. Restituisce NULL quando non sono presenti informazioni aggiuntive segnalate dall'evento. |

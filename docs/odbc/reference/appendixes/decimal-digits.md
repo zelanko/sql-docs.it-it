@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f7b9a69941364b32e6b43d79f2d092511fd61f22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e58551ae3c6edda3cd865817223fd8052d03ec5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130045"
 ---
 # <a name="decimal-digits"></a>Cifre decimali
 Il *cifre decimali* di dati decimali e numerici tipi viene definito come il numero massimo di cifre a destra del separatore decimale, o la scala dei dati. Per le colonne di numeri approssimative a virgola mobile o parametri, la scala è definita, poiché il numero di cifre a destra del separatore decimale non è fisso. Per datetime o intervallo di dati che contiene un componente di secondi, le cifre decimali viene definito come il numero di cifre a destra del separatore decimale nel componente di secondi di dati.  

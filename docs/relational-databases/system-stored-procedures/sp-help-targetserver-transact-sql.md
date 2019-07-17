@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5c809679694811d23b01dee426aa1afdd7d5cf06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1eb9a4d1a19f54f9e57e988b350594ce6031b243
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017829"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085080"
 ---
 # <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_help_targetserver
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Numero di identificazione del server.|  
 |**server_name**|**nvarchar(30)**|Nome del server.|  
-|**location**|**nvarchar(200)**|Posizione del server specificato.|  
+|**Posizione**|**nvarchar(200)**|Posizione del server specificato.|  
 |**time_zone_adjustment**|**int**|Regolazione del fuso orario, in ore, rispetto all'ora di Greenwich (GMT).|  
 |**enlist_date**|**datetime**|Data di integrazione del server specificato.|  
 |**last_poll_date**|**datetime**|Data dell'ultimo polling del server per l'individuazione dei processi.|  
@@ -68,7 +67,7 @@ sp_help_targetserver
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-listing-information-for-all-registered-target-servers"></a>A. Visualizzazione dell'elenco delle informazioni per tutti i server di destinazione registrati  
+### <a name="a-listing-information-for-all-registered-target-servers"></a>R. Visualizzazione dell'elenco delle informazioni per tutti i server di destinazione registrati  
  Nell'esempio seguente vengono visualizzate le informazioni relative a tutti i server di destinazione registrati.  
   
 ```  

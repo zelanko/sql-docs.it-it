@@ -1,12 +1,14 @@
 ---
-ms.openlocfilehash: 9c440470361c1bb466ce41e3f78df17484d19a56
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: f9e333e15b6249b0cc9f59777276d93f3c49a3fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59737133"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68201831"
 ---
 
-> [!NOTE]
-> Se si trovano informazioni obsolete o non corrette in questo articolo, ad esempio in un passaggio di una procedura o in un esempio di codice, è possibile comunicarlo a Microsoft. È possibile fare clic sul pulsante **Questa pagina** nella sezione **Commenti** nella parte inferiore della pagina. O meglio, se si conosce la correzione, è possibile fare clic sull'icona **Modifica (a forma di matita)** nella parte superiore della pagina e quindi fare clic sull'icona a forma di matita nella pagina di GitHub. Grazie.
+> _Commenti e suggerimenti:_ se si trovano informazioni obsolete o non corrette in questo articolo, ad esempio in un passaggio di una procedura o in un esempio di codice, è possibile comunicarlo a Microsoft. È possibile fare clic sul pulsante **Questa pagina** nella sezione **Commenti** nella parte inferiore della pagina. Ogni commento o suggerimento su SQL viene letto, in genere il giorno successivo. Grazie.
 
+<!--  The text about Edit-pencil maybe makes the paragraph uncomfortably long?
+_We are listening:_ If you find something outdated or incorrect in this article, such as a step or a code example, please tell us. You can click the **This page** button in the **Feedback** section at the bottom of this page. Or better, if you know the fix, you can click the **Edit-pencil** icon at the top of this page, and then click the pencil icon on the GitHub page. We read every item of feedback about SQL, typically the next day. Thank you.
+-->

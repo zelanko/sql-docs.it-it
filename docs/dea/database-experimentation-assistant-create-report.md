@@ -12,13 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
-ms.openlocfilehash: ff0a31fc4d825966fefafc11d8780862634f1937
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d53d8734e0c01fa2056b9d560f3bc65b7f64d9a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794483"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058964"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant"></a>Creare report di analisi nel Database sperimentazione Assistant
 
@@ -98,7 +97,7 @@ Se si verifica un errore durante la creazione di report, la pagina di avanzament
 |---|---|  
 |RInterop ha restituito un errore all'avvio. Controllare i registri RInterop e riprovare.|DEA richiede l'accesso a internet per scaricare i pacchetti R dipendenti. Controllare i log di RInterop in % temp %\\RInterop e DEA registri in % temp %\\DEA. Se RInterop è stata inizializzata in modo non corretto o se inizializzata senza i pacchetti R corretti, si può vedere l'eccezione "Non è stato possibile generare nuovo report di analisi" dopo il passaggio InitializeRInterop nei log DEA.<br><br>I log RInterop anche potrebbero mostrare un errore simile a "non vi è alcun pacchetto jsonlite disponibile". Se il computer non dispone dell'accesso a internet, è possibile scaricare manualmente il pacchetto richiesto jsonlite R:<br><br><li>Passare a % userprofile %\\DEARPackages cartella nel file system del computer. Questa cartella è costituito da pacchetti usati da R per DEA.</li><br><li>Se la cartella jsonlite è presente nell'elenco dei pacchetti installati, è necessario un computer con accesso a internet per scaricare la versione finale di jsonlite\_1.4.zip dal [ https://cran.r-project.org/web/packages/jsonlite/index.html ](https://cran.r-project.org/web/packages/jsonlite/index.html).</li><br><li>Copiare il file con estensione zip nel computer in cui si esegue DEA.  Estrarre la cartella jsonlite e copiarli in % userprofile %\\DEARPackages. Questo passaggio installa automaticamente il pacchetto jsonlite in R. La cartella deve essere denominata **jsonlite** e deve essere il contenuto direttamente all'interno della cartella, non un livello sotto.</li><br><li>Chiudere DEA, riaprire e l'analisi di riprovare.</li><br>È anche possibile usare il RGUI. Passare a **pacchetti** > **installare dal file zip**. Passare al pacchetto scaricato in precedenza e installare.<br><br>Se RInterop è stato inizializzato e configurato correttamente, dovrebbe essere "Installing dipendenti R pacchetto jsonlite" nei log RInterop.|  
 |Non è possibile connettersi all'istanza di SQL Server, assicurarsi che il nome del server sia corretto e verificare la presenza dell'accesso necessario per l'utente connesso.|Si potrebbe non avere accesso o diritti utente per il server o il nome del server potrebbero non essere corretto.| 
-|Timeout del processo RInterop. Controllare i registri DEA e RInterop, arrestare il processo RInterop in Gestione attività e quindi riprovare.<br><br>o Gestione configurazione<br><br>RInterop è in stato di errore. Arrestare il processo RInterop in Gestione attività e quindi riprovare.|Vedere i log in % temp %\\RInterop per confermare l'errore. Rimuovere il processo RInterop da Gestione attività prima di riprovare. Se il problema persiste, contattare il team del prodotto.| 
+|Timeout del processo RInterop. Controllare i registri DEA e RInterop, arrestare il processo RInterop in Gestione attività e quindi riprovare.<br><br>oppure<br><br>RInterop è in stato di errore. Arrestare il processo RInterop in Gestione attività e quindi riprovare.|Vedere i log in % temp %\\RInterop per confermare l'errore. Rimuovere il processo RInterop da Gestione attività prima di riprovare. Se il problema persiste, contattare il team del prodotto.| 
 
 ### <a name="the-report-is-generated-but-data-appears-to-be-missing"></a>Viene generato il report, ma vengono visualizzati dati mancanti
     

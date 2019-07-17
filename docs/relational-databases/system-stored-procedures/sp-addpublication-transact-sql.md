@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14e35b85b594cadf90a467c5017ac31033bc464b
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: f676acf9b3ee91bb5a1fb46cae2f7c693dc66983
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493963"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061825"
 ---
 # <a name="spaddpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +89,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@restricted = ] 'restricted'` Supportata per compatibilità con le versioni precedenti di sola lettura. usare *default_access*.  
   
-`[ \@sync_method = ] _'sync_method'` È la modalità di sincronizzazione. *sync_method* viene **nvarchar(13)**, e può essere uno dei valori seguenti.  
+`[ \@sync_method = ] _'sync_method'` È la modalità di sincronizzazione. *sync_method* viene **nvarchar(13)** , e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -102,7 +101,7 @@ sp_addpublication [ @publication = ] 'publication'
 |**caratteri di snapshot del database**|Genera output del programma in modalità carattere per la copia bulk di tutte le tabelle da uno snapshot del database. Gli snapshot del database non sono disponibili in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
 |NULL (predefinito)|Per impostazione predefinita **nativi** per [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione. Per non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione, il valore predefinito è **carattere** quando il valore di *repl_freq* viene **Snapshot** e di ottenere **concurrent_c** tutti gli altri casi.|  
   
-`[ \@repl_freq = ] 'repl_freq'` È il tipo di frequenza di replica *repl_freq* viene **nvarchar(10)**, e può essere uno dei valori seguenti.  
+`[ \@repl_freq = ] 'repl_freq'` È il tipo di frequenza di replica *repl_freq* viene **nvarchar(10)** , e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -111,7 +110,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@description = ] 'description'` È una descrizione facoltativa per la pubblicazione. *Descrizione* viene **nvarchar(255**, con un valore predefinito è NULL.  
   
-`[ \@status = ] 'status'` Specifica se i dati della pubblicazione sono disponibili. *lo stato* viene **nvarchar(8)**, e può essere uno dei valori seguenti.  
+`[ \@status = ] 'status'` Specifica se i dati della pubblicazione sono disponibili. *lo stato* viene **nvarchar(8)** , e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -190,7 +189,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@conflict_retention = ] conflict_retention` Specifica il periodo di memorizzazione dei conflitti, in giorni. Si tratta del periodo di tempo durante il quale i metadati dei conflitti rimangono archiviati per la replica transazionale peer-to-peer e le sottoscrizioni ad aggiornamento in coda. *conflict_retention* viene **int**, con un valore predefinito è 14. *Non supportato per il server di pubblicazione Oracle*.  
   
-`[ \@queue_type = ] 'queue_type'` Specifica il tipo di coda viene utilizzato. *queue_type* viene **nvarchar(10)**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
+`[ \@queue_type = ] 'queue_type'` Specifica il tipo di coda viene utilizzato. *queue_type* viene **nvarchar(10)** , con un valore predefinito è NULL, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  

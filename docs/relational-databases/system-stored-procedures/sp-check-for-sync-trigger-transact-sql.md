@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ef51624f3d14ef12be1c37b17727b70f5f31df10
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b7d4d26374d7b582f2ba5ddad79dd317145cecd7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526423"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070434"
 ---
 # <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 `[ @fonpublisher = ] fonpublisher` Specifica la posizione in cui viene eseguita la stored procedure. *fonpublisher* viene **bit**, valore predefinito pari a 0. 0 indica che l'esecuzione avviene nel Sottoscrittore, mentre 1 indica che avviene nel server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- 0 indica che la stored procedure non viene richiamata nel contesto di un trigger per l'aggiornamento immediato. 1 indica che viene richiamata nel contesto di un trigger per l'aggiornamento immediato ed è il tipo di trigger restituito in *@trigger_op*.  
+ 0 indica che la stored procedure non viene richiamata nel contesto di un trigger per l'aggiornamento immediato. 1 indica che viene richiamata nel contesto di un trigger per l'aggiornamento immediato ed è il tipo di trigger restituito in *@trigger_op* .  
   
 ## <a name="remarks"></a>Note  
  **sp_check_for_sync_trigger** viene utilizzata nella replica snapshot e transazionale.  

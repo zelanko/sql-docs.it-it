@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 45d144b583c934ef6599a611255d68d51f9413ef
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8aeb097f2cabac01b0d4108dbcf07ed46f15f971
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110266"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Recuperare colonne mediante IRow::GetColumns (o IRow::Open) e ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,11 +37,11 @@ ms.locfileid: "53205280"
   
 2.  Eseguire il comando (nell'esempio seguente viene chiamato **ICommandExecute::Execute()** con IID_IRow).  
   
-3.  Recuperare i dati di colonna usando **IRow::Open()** oppure **IRow::GetColumns()**.  
+3.  Recuperare i dati di colonna usando **IRow::Open()** oppure **IRow::GetColumns()** .  
   
     -   **IRow::Open()** può essere utilizzato per aprire un' **ISequentialStream** sulla riga. Specificare DBGUID_STREAM per indicare che la colonna contiene un flusso di dati binari. Sarà quindi possibile utilizzare **IStream** o **ISequentialStream** per leggere i dati dalla colonna.  
   
-    -   Se viene utilizzato **IRow::GetColumns()**, l'elemento **pData** della struttura DBCOLUMNACCESS viene impostato in modo da puntare a un oggetto del flusso.  
+    -   Se viene utilizzato **IRow::GetColumns()** , l'elemento **pData** della struttura DBCOLUMNACCESS viene impostato in modo da puntare a un oggetto del flusso.  
   
 4.  Uso **ISequentialStream::Read()** ripetutamente per leggere il numero specificato di byte nel buffer del consumer.  
   
@@ -51,11 +50,11 @@ ms.locfileid: "53205280"
   
  Per l'esempio è necessario il database di esempio AdventureWorks, che è possibile scaricare dalla home page del sito relativo a [progetti della community ed esempi per Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384).  
   
- Il primo ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listato di codice crea una tabella utilizzata dall'esempio.  
+ Il primo listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) consente di creare una tabella usata dall'esempio.  
   
  Compilare il secondo listato di codice (C++) con ole32.lib oleaut32.lib ed eseguirlo. In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" in L"(local)\\\nome", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   
- Il terzo ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) listato di codice elimina la tabella utilizzata dall'esempio.  
+ Il terzo listato di codice ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) consente di eliminare la tabella usata dall'esempio.  
   
 ```  
 USE AdventureWorks  

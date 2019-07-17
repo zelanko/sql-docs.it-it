@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f8ee54383074e624d082d2ab782d6b038fd03d06
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 190b4f0598afa6d434b5dada8c8464cb8209dac7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817061"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061265"
 ---
 # <a name="spdbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +47,10 @@ sp_dbmmonitorupdate [ database_name ]
  Nome del database per cui aggiornare lo stato di mirroring. Se *database_name* non viene specificato, la procedura Aggiorna la tabella dello stato per ogni database con mirroring nell'istanza del server.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- None  
+ Nessuna  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  **sp_dbmmonitorupdate** possono essere eseguite solo nel contesto del **msdb** database.  

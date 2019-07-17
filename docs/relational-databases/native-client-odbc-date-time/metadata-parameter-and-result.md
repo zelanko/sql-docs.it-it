@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0b4937477c1dcf85c4a50aea0b4d26d373389d0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a3be7fae5660bc7f1f8f02de7b683d68ca607f7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409258"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030294"
 ---
 # <a name="metadata---parameter-and-result"></a>Metadati - Parametro e risultato
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "52409258"
 ## <a name="information-returned-in-ipd-fields"></a>Informazioni restituite nei campi IPD  
  Di seguito sono riportate le informazioni restituite nei campi IPD:  
   
-|Tipo di parametro|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Tipo di parametro|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CONCISE_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
@@ -76,7 +75,7 @@ ms.locfileid: "52409258"
 ## <a name="information-returned-in-ird-fields"></a>Informazioni restituite nei campi IRD  
  Di seguito sono riportate le informazioni restituite nei campi IRD:  
   
-|Tipo di colonna|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Tipo di colonna|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  

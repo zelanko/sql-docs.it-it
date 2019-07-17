@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c34d7f326c10ceebb3ee3b97c72b583e13a78ff5
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 1bf39a9a1262f30e3c0bbd6fd2ea5892a55540dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072674"
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  Nome di un server collegato a cui viene applicato il mapping dell'account di accesso. *rmtsrvname* viene **sysname**, non prevede alcun valore predefinito.  
   
  `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'`  
- Determina se la connessione a *rmtsrvname* per rappresentare gli accessi locali o inviando esplicitamente un account di accesso e una password. Il tipo di dati viene **varchar (** 8 **)**, con un valore predefinito è TRUE.  
+ Determina se la connessione a *rmtsrvname* per rappresentare gli accessi locali o inviando esplicitamente un account di accesso e una password. Il tipo di dati viene **varchar (** 8 **)** , con un valore predefinito è TRUE.  
   
  Il valore TRUE specifica che gli account di accesso usare le proprie credenziali per connettersi al *rmtsrvname*, con la *rmtuser* e *rmtpassword* argomenti vengano ignorati. FALSE specifica che il *rmtuser* e *rmtpassword* argomenti vengono utilizzati per connettersi al *rmtsrvname* per l'oggetto specificato *locallogin* . Se *rmtuser* e *rmtpassword* sono anche impostato su NULL, nessun account di accesso o la password viene usato per connettersi al server collegato.  
   
@@ -91,14 +90,14 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-connecting-all-local-logins-to-the-linked-server-by-using-their-own-user-credentials"></a>A. Connessione di tutti gli account di accesso locali al server collegato utilizzando le relative credenziali  
+### <a name="a-connecting-all-local-logins-to-the-linked-server-by-using-their-own-user-credentials"></a>R. Connessione di tutti gli account di accesso locali al server collegato utilizzando le relative credenziali  
  Nell'esempio seguente viene creato un mapping per assicurare che tutti gli account di accesso del server locale si connettano al server collegato `Accounts` utilizzando le proprie credenziali.  
   
 ```  
 EXEC sp_addlinkedsrvlogin 'Accounts';  
 ```  
   
- e  
+ Oppure  
   
 ```  
 EXEC sp_addlinkedsrvlogin 'Accounts', 'true';  

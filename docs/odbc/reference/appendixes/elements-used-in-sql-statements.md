@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e33beff29463172a26d53953dd5f563fe1f3f5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: caf8f68221c1ac14649bf10be0105e1e691c7482
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129962"
 ---
 # <a name="elements-used-in-sql-statements"></a>Elementi usati nelle istruzioni SQL
 Gli elementi seguenti vengono utilizzati nelle istruzioni SQL elencate in precedenza.  
@@ -36,11 +35,11 @@ Gli elementi seguenti vengono utilizzati nelle istruzioni SQL elencate in preced
   
  *valore booleano-termini* :: = *fattore booleano* [AND *boolean-termine*]  
   
- *character-string-literal* ::= ''{*character*}...'' (*carattere* è qualsiasi carattere nel set di caratteri dell'origine dati/driver. Per includere un carattere letterale virgolette (") in una stringa letterale carattere, usare due virgolette letterali [' '].)  
+ *valore letterale stringa di caratteri* :: = ' {*carattere*}... " (*carattere* è qualsiasi carattere nel set di caratteri dell'origine dati/driver. Per includere un carattere letterale virgolette (") in una stringa letterale carattere, usare due virgolette letterali [' '].)  
   
  *Identificatore di colonna* :: = *nome definito dall'utente*  
   
- *column-name* ::= [*table-name*.]*column-identifier*  
+ *nome della colonna* :: = [*nome-tabella*.] *identificatore di colonna*  
   
  *comparison-operator* ::= < &#124; > &#124; \<= &#124; >= &#124; = &#124; <>  
   
@@ -52,7 +51,7 @@ Gli elementi seguenti vengono utilizzati nelle istruzioni SQL elencate in preced
   
  *il parametro dinamico* :: =?  
   
- *expression* ::= term &#124; expression {+&#124;-} term  
+ *espressione* :: = termine &#124; espressione {+&#124;-} termine  
   
  *factor* ::= [ *+* &#124; *-* ]*primary*  
   
@@ -62,7 +61,7 @@ Gli elementi seguenti vengono utilizzati nelle istruzioni SQL elencate in preced
   
  &#124; *literal*  
   
- &#124; NULL  
+ &#124;NULL  
   
  &#124; USER  
   
@@ -80,13 +79,13 @@ Gli elementi seguenti vengono utilizzati nelle istruzioni SQL elencate in preced
   
  &#124; *literal*  
   
- &#124; ( *expression* )  
+ &#124;( *espressione* )  
   
- *search-condition* ::= *boolean-term* [OR *search-condition*]  
+ *condizione di ricerca* :: = *boolean-termine* [oppure *condizione di ricerca*]  
   
  *elenco SELECT* :: = \* &#124; *select-sottoelenco* [, *selezionare sottoelenco*]...  (*elenco select* non può contenere parametri.)  
   
- *select-sublist* ::= *expression*  
+ *Selezionare sottoelenco* :: = *espressione*  
   
  *sort-specification* ::= {*unsigned-integer &#124; column-name*} [*ASC &#124; DESC*]  
   
@@ -100,8 +99,8 @@ Gli elementi seguenti vengono utilizzati nelle istruzioni SQL elencate in preced
   
  *term* ::= *factor* &#124; *term* {\*&#124; */* } *factor*  
   
- *unsigned-integer* ::= {*digit*}  
+ *intero senza segno* :: = {*cifra*}  
   
  *upper-case-letter* :: = *A &#124; B &#124; C &#124; 1!d &#124; E &#124; F &#124; G &#124; H &#124; è &#124; J &#124; K &#124; L &#124; M &#124; N &#124; O &#124; &#124;Q &#124; R &#124; S &#124; T &#124; U &#124; V &#124; W &#124; X &#124; Y &#124; Z*  
   
- *user-defined-name* ::= *letter*[*digit* &#124; *letter* &#124; *_* ]...
+ *nome definito dall'utente* :: = *lettera*[*cifra* &#124; *lettera* &#124; *_* ]...

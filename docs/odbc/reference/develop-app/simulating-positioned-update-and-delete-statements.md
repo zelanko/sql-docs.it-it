@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b24ed59f-f25b-4646-a135-5f3596abc1a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6d98d40ae24c68f90a304edb0293febfe76fac2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85d7642620d510ebba050a3fbc4348898e070070
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62445893"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107528"
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>Simulazione di istruzioni di eliminazione e aggiornamento posizionato
 Se l'origine dati non supporta aggiornamento posizionato, quindi eliminare le istruzioni, il driver consente di simulare questi. Ad esempio, la libreria di cursori ODBC Simula aggiornamento posizionato ed eliminare le istruzioni. La strategia generale per la simulazione di istruzioni di eliminazione e aggiornamento posizionato consiste nel convertire le istruzioni posizionate quelle ricercata. Questa operazione viene eseguita sostituendo il **WHERE CURRENT OF** clausola con un ricercata **in cui** clausola che identifica la riga corrente.  

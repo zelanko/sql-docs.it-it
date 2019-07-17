@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ea4e06fa790e8a360cfb1254b3064b3b540e7842
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd66edb75bec4f4b7e35c53c9ebeabd9b3c75d83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708342"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967295"
 ---
 # <a name="append-method-adox-keys"></a>Metodo Append (raccolta Keys ADOX)
 Aggiunge un nuovo [Key](../../../ado/reference/adox-api/key-object-adox.md) dell'oggetto per il [chiavi](../../../ado/reference/adox-api/keys-collection-adox.md) raccolta.  
@@ -39,13 +38,13 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
  Il **chiave** il nome della chiave da creare e aggiungere o oggetto da accodare.  
   
  *KeyType*  
- Facoltativo. Oggetto **lungo** valore che specifica il tipo di chiave. Il *Key* parametro corrisponde al [tipo](../../../ado/reference/adox-api/type-property-key-adox.md) proprietà di un **chiave** oggetto.  
+ facoltativo. Oggetto **lungo** valore che specifica il tipo di chiave. Il *Key* parametro corrisponde al [tipo](../../../ado/reference/adox-api/type-property-key-adox.md) proprietà di un **chiave** oggetto.  
   
  *Colonna*  
- Facoltativo. Oggetto **stringa** valore che specifica il nome della colonna da indicizzare. Il *colonne* parametro corrisponde al valore della [nome](../../../ado/reference/adox-api/name-property-adox.md) proprietà di un [colonna](../../../ado/reference/adox-api/column-object-adox.md) oggetto.  
+ facoltativo. Oggetto **stringa** valore che specifica il nome della colonna da indicizzare. Il *colonne* parametro corrisponde al valore della [nome](../../../ado/reference/adox-api/name-property-adox.md) proprietà di un [colonna](../../../ado/reference/adox-api/column-object-adox.md) oggetto.  
   
  *RelatedTable*  
- Facoltativo. Oggetto **stringa** valore che specifica il nome della tabella correlata. Il *RelatedTable* parametro corrisponde al valore della **nome** proprietà di un [tabella](../../../ado/reference/adox-api/table-object-adox.md) oggetto.  
+ facoltativo. Oggetto **stringa** valore che specifica il nome della tabella correlata. Il *RelatedTable* parametro corrisponde al valore della **nome** proprietà di un [tabella](../../../ado/reference/adox-api/table-object-adox.md) oggetto.  
   
  *RelatedColumn*  
  Facoltativo. Oggetto **stringa** valore che specifica il nome della colonna correlata per un vincolo foreign key. Il *RelatedColumn* parametro corrisponde al valore delle **Name** proprietà di un [colonna](../../../ado/reference/adox-api/column-object-adox.md) oggetto.  

@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fdebe91359fbe9d7c9ef7aaadc38ba096427f651
-ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
+ms.openlocfilehash: 1be02aa5a19e49788aafdfdb9b6f818a66968283
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54395387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054839"
 ---
 # <a name="spspecialcolumns100-sql-data-warehouse"></a>sp_special_columns_100 (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -56,19 +55,19 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
  Nome del qualificatore di tabella. *qualificatore* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano nomi di tabelle in tre parti (*composti*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In alcuni prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
  [ @col_type=] '*col_type*'  
- Tipo di colonna. *col_type* viene **char (** 1 **)**, con un valore predefinito di R. digitare R restituisce la colonna o ottimale set di colonne, tramite il recupero dei valori di colonna o le colonne, che consente di qualsiasi riga nell'oggetto specificato tabella che deve essere identificato in modo univoco. Una colonna può essere una pseudocolonna progettata a questo scopo oppure la colonna o le colonne di un indice univoco della tabella. Il tipo di colonna V restituisce le eventuali colonne della tabella specificata che vengono aggiornate automaticamente dall'origine dati in corrispondenza dell'aggiornamento di un valore della riga tramite una transazione.  
+ Tipo di colonna. *col_type* viene **char (** 1 **)** , con un valore predefinito di R. digitare R restituisce la colonna o ottimale set di colonne, tramite il recupero dei valori di colonna o le colonne, che consente di qualsiasi riga nell'oggetto specificato tabella che deve essere identificato in modo univoco. Una colonna può essere una pseudocolonna progettata a questo scopo oppure la colonna o le colonne di un indice univoco della tabella. Il tipo di colonna V restituisce le eventuali colonne della tabella specificata che vengono aggiornate automaticamente dall'origine dati in corrispondenza dell'aggiornamento di un valore della riga tramite una transazione.  
   
  [ @scope=] '*scope*'  
- Ambito minimo richiesto per ROWID. *ambito* viene **char (** 1 **)**, valore predefinito T. l'ambito C specifica che il valore ROWID è valido solo se posizionato in tale riga. L'ambito T indica che il valore ROWID è valido per la transazione.  
+ Ambito minimo richiesto per ROWID. *ambito* viene **char (** 1 **)** , valore predefinito T. l'ambito C specifica che il valore ROWID è valido solo se posizionato in tale riga. L'ambito T indica che il valore ROWID è valido per la transazione.  
   
  [ @nullable=] '*nullable*'  
- Indica se le colonne speciali possono accettare un valore null. *nullable* viene **char (** 1 **)**, con un valore predefinito è u. il valore O specifica le colonne speciali che non ammettono valori null. mentre U specifica le colonne che ammettono parzialmente valori Null.  
+ Indica se le colonne speciali possono accettare un valore null. *nullable* viene **char (** 1 **)** , con un valore predefinito è u. il valore O specifica le colonne speciali che non ammettono valori null. mentre U specifica le colonne che ammettono parzialmente valori Null.  
   
  [ @ODBCVer=] '*ODBCVer*'  
- Versione ODBC utilizzata. *ODBCVer* viene **int (** 4 **)**, con un valore predefinito è 2. che indica ODBC versione 2.0. Per altre informazioni sulle differenze tra ODBC versione 2.0 e ODBC versione 3.0, vedere la specifica ODBC SQLSpecialColumns per ODBC versione 3.0.  
+ Versione ODBC utilizzata. *ODBCVer* viene **int (** 4 **)** , con un valore predefinito è 2. che indica ODBC versione 2.0. Per altre informazioni sulle differenze tra ODBC versione 2.0 e ODBC versione 3.0, vedere la specifica ODBC SQLSpecialColumns per ODBC versione 3.0.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- None  
+ Nessuna  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -79,7 +78,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 |DATA_TYPE|**smallint**|Tipo di dati SQL ODBC.|  
 |TYPE_NAME|**sysname**|Nome del tipo di dati dipende dall'origine dati; ad esempio, **char**, **varchar**, **money**, oppure **testo**.|  
 |PRECISION|**Int**|Precisione della colonna nell'origine dati. Questo campo restituisce sempre un valore.|  
-|LENGTH|**Int**|Lunghezza, espressa in byte, necessaria per il tipo di dati in forma binaria nell'origine dati, ad esempio, 10 per **char (** 10 **)**, 4 per **integer**e 2 per **smallint** .|  
+|LENGTH|**Int**|Lunghezza, espressa in byte, necessaria per il tipo di dati in forma binaria nell'origine dati, ad esempio, 10 per **char (** 10 **)** , 4 per **integer**e 2 per **smallint** .|  
 |SCALE|**smallint**|Scala della colonna nell'origine dati. Per i tipi di dati in cui la scala non è applicabile viene restituito NULL.|  
 |PSEUDO_COLUMN|**smallint**|Indica se la colonna è una pseudocolonna. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce sempre 1:<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   

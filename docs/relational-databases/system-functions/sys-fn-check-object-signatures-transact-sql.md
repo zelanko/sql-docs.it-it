@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc6d8bb4c3318f488c7969359c6aa8b18782b6cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046315"
 ---
 # <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -56,14 +55,14 @@ fn_ check_object_signatures (
  \@*classe* viene **sysname**.  
   
  { \@ *identificazione personale* }  
- Hash SHA-1 del certificato con il quale è crittografata la chiave, o GUID della chiave asimmetrica con il quale è crittografata la chiave. \@*identificazione personale* viene **varbinary(20)**.  
+ Hash SHA-1 del certificato con il quale è crittografata la chiave, o GUID della chiave asimmetrica con il quale è crittografata la chiave. \@*identificazione personale* viene **varbinary(20)** .  
   
 ## <a name="tables-returned"></a>Tabelle restituite  
  Nella tabella seguente vengono elencate le colonne che **fn_check_object_signatures** restituisce.  
   
-|colonna|Tipo|Description|  
+|Colonna|type|Descrizione|  
 |------------|----------|-----------------|  
-|Tipo|**nvarchar(120)**|Restituisce la descrizione del tipo o l'assembly.|  
+|type|**nvarchar(120)**|Restituisce la descrizione del tipo o l'assembly.|  
 |entity_id|**int**|Restituisce l'identificatore dell'oggetto valutato.|  
 |is_signed|**int**|Restituisce 0 quando l'oggetto non viene firmato con l'identificazione digitale fornita. Restituisce 1 quando l'oggetto viene firmato con l'identificazione digitale fornita.|  
 |is_signature_valid|**int**|Quando il valore is_signed è 1, restituisce 0 se la firma non è valida e 1 se è valida.<br /><br /> Quando il valore is_signed è 0, restituisce sempre 0.|  

@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 44e19609-902c-46cf-acdf-19ea75011365
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 24bcf44fe2e1e0d35610dba9fb40d64ac2c819bb
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: bca9930ef51de28c8059223c93ea0bb2651f971d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089152"
 ---
 # <a name="sysdmpdwsqlrequests-transact-sql"></a>sys.dm_pdw_sql_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "58658005"
 |total_elapsed_time|**int**|Rappresenta il tempo che di distribuzione delle query è in esecuzione, in millisecondi.|Maggiore o uguale a 0. Uguale al delta di start_time ed end_time che sono state completate, non è riuscita o annullata distribuzioni di query.<br /><br /> Se total_elapsed_time supera il valore massimo per un numero intero, total_elapsed_time continuerà a essere il valore massimo. Questa condizione verrà generato l'avviso "il valore massimo è stato superato."<br /><br /> Il valore massimo in millisecondi è equivalente a 24,8 giorni.|  
 |row_count|**bigint**|Numero di righe modificate o lette dalla distribuzione query.|-1 per le operazioni che non cambiano o restituire dati, ad esempio CREATE TABLE e DROP TABLE.|  
 |spid|**int**|Id di sessione nell'istanza di SQL Server che esegue la distribuzione delle query.||  
-|comando|**nvarchar(4000)**|Testo completo del comando per la distribuzione di query.|Qualsiasi stringa di query o una richiesta valida.|  
+|command|**nvarchar(4000)**|Testo completo del comando per la distribuzione di query.|Qualsiasi stringa di query o una richiesta valida.|  
   
  Per informazioni sul numero massimo di righe mantenuto da questa vista, vedere la sezione di metadati nel [limiti di capacità](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) argomento.  
   

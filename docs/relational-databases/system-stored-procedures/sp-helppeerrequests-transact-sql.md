@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9a51015d8c1e6e6df7f23f32fc7febf7fe9e429f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5b9e2a370c9acc9c22dac7e5e60ceb10e08e46ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537163"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137626"
 ---
 # <a name="sphelppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +40,14 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ## <a name="arguments"></a>Argomenti  
 `[ @publication = ] 'publication'` È il nome della pubblicazione in una topologia peer-to-peer per cui sono state inviate richieste dello stato. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
-`[ @description = ] 'description'` Valore che può essere usato per identificare richieste dello stato individuali, che consente di filtrare le risposte restituite in base all'utente definite le informazioni fornite durante la chiamata [sp_requestpeerresponse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). *Descrizione* viene **nvarchar (4000)**, il valore predefinito è **%**. Per impostazione predefinita, tutte le richieste dello stato per la pubblicazione vengono restituite. Questo parametro viene utilizzato per restituire solo le richieste di stato con una descrizione corrispondente al valore specificato nel *description*, in cui vengono confrontate le stringhe di caratteri tramite un [come &#40;Transact-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)clausola.  
+`[ @description = ] 'description'` Valore che può essere usato per identificare richieste dello stato individuali, che consente di filtrare le risposte restituite in base all'utente definite le informazioni fornite durante la chiamata [sp_requestpeerresponse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). *Descrizione* viene **nvarchar (4000)** , il valore predefinito è **%** . Per impostazione predefinita, tutte le richieste dello stato per la pubblicazione vengono restituite. Questo parametro viene utilizzato per restituire solo le richieste di stato con una descrizione corrispondente al valore specificato nel *description*, in cui vengono confrontate le stringhe di caratteri tramite un [come &#40;Transact-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)clausola.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identifica una richiesta.|  
-|**publication**|**sysname**|Nome della pubblicazione per cui è stata inviata la richiesta dello stato.|  
+|**pubblicazione**|**sysname**|Nome della pubblicazione per cui è stata inviata la richiesta dello stato.|  
 |**sent_date**|**datetime**|Data e ora dell'invio della richiesta dello stato.|  
 |**description**|**nvarchar(4000)**|Informazioni definite dall'utente che possono essere utilizzate per identificare richieste dello stato individuali.|  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_cleanup_change_table (Transact-SQL) | Microsoft Docs
+title: Sys. sp_cdc_cleanup_change_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7bbcc576ab0ff38adde9042a713e0dfd0c7d54be
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: dcf68e23652eb81e163722f69d9645c7502af5b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106517"
 ---
 # <a name="sysspcdccleanupchangetable-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,12 +45,12 @@ sys.sp_cdc_cleanup_change_table
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @capture_instance = ] '*capture_instance*'  
+ [ @capture_instance =] '*capture_instance*'  
  Nome dell'istanza di acquisizione associata alla tabella delle modifiche. *capture_instance* viene **sysname**, non prevede alcun valore predefinito e non può essere NULL.  
   
  *capture_instance* deve denominare un'istanza di acquisizione che esiste nel database corrente.  
   
- [ @low_water_mark = ] *low_water_mark*  
+ [ @low_water_mark =] *low_water_mark*  
  Numero di sequenza del log (LSN) che deve essere utilizzato come nuovo limite minimo per il *istanza di acquisizione*. *low_water_mark* viene **binary(10)** , non prevede alcun valore predefinito.  
   
  Se il valore è diverso da null, deve apparire come valore start_lsn di una voce corrente nella [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) tabella. Se altre voci in cdc.lsn_time_mapping condividono la stessa ora di commit della voce identificata dal nuovo limite minimo, il valore LSN minore associato a tale gruppo di voci viene scelto come limite minimo.  
@@ -65,7 +64,7 @@ sys.sp_cdc_cleanup_change_table
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  sys.sp_cdc_cleanup_change_table esegue le operazioni seguenti:  

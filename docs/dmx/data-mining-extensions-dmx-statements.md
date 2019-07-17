@@ -8,15 +8,14 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 1baab80455cc5267686bf26251629a1d47065344
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7a7a9c18599d13c4db510793a1d75c85bbb7a829
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042119"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070857"
 ---
-# <a name="data-mining-extensions-dmx-statements"></a>Extensions (DMX) istruzioni Data Mining
+# <a name="data-mining-extensions-dmx-statements"></a>Istruzioni DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Utilizzare i dati di data mining in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prevede le attività principali seguenti:  
@@ -59,9 +58,9 @@ ms.locfileid: "38042119"
   
  Queste attività rientrano in due categorie, istruzioni per la definizione dei dati e istruzioni per la manipolazione dei dati, descritte nella tabella seguente.  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
-|[Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)|Fanno parte del linguaggio DDL (Data Definition Language). Consentono di definire un nuovo modello di data mining (incluso il training) o di eliminare un modello di data mining esistente da un database.|  
+|[Istruzioni DMX &#40;Data Mining Extensions&#41; per la definizione dei dati](../dmx/dmx-statements-data-definition.md)|Fanno parte del linguaggio DDL (Data Definition Language). Consentono di definire un nuovo modello di data mining (incluso il training) o di eliminare un modello di data mining esistente da un database.|  
 |[Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)|Fanno parte del linguaggio DML (Data Manipulation Language). Consentono di utilizzare modelli di data mining esistenti, eseguendo operazioni quali la visualizzazione di un modello o la creazione di stime.|  
   
 ## <a name="see-also"></a>Vedere anche  

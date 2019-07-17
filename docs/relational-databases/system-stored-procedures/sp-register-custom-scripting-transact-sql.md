@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 85f9104d9a9bb634dd10dfb588cf07e01d1c1fb1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c10451148c6f9b2fda231691b770bca3928517f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075753"
 ---
 # <a name="spregistercustomscripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 |**delete**|La stored procedure personalizzata registrata viene eseguita quando viene replicata un'istruzione DELETE.|  
 |**custom_script**|Lo script viene eseguito alla fine del trigger DDL (Data Definition Language).|  
   
-`[ @value = ] 'value'` Nome di una stored procedure o nome e percorso completo per il [!INCLUDE[tsql](../../includes/tsql-md.md)] file script da registrare. *valore* viene **nvarchar(1024)**, non prevede alcun valore predefinito.  
+`[ @value = ] 'value'` Nome di una stored procedure o nome e percorso completo per il [!INCLUDE[tsql](../../includes/tsql-md.md)] file script da registrare. *valore* viene **nvarchar(1024)** , non prevede alcun valore predefinito.  
   
 > [!NOTE]  
 >  Specificando NULL per *valore*parametro verrà annullata la registrazione di uno script registrato in precedenza, ovvero lo stesso che [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md).  

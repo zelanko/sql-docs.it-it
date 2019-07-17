@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 13f48722b940c26cda8b29258f16f641f74d15e9
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 751f99cad3a2064dce366a90905918075cb697a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531893"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056483"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_dropmergearticle [ @publication= ] 'publication'
   
 `[ @ignore_distributor = ] ignore_distributor` Indica se questa stored procedure viene eseguita senza stabilire la connessione al server di distribuzione. *ignore_distributor* viene **bit**, il valore predefinito è **0**.  
   
-`[ @reserved = ] reserved` è riservato per utilizzi futuri. *riservato* viene **nvarchar(20)**, con un valore predefinito è NULL.  
+`[ @reserved = ] reserved` è riservato per utilizzi futuri. *riservato* viene **nvarchar(20)** , con un valore predefinito è NULL.  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Abilita o disabilita la possibilità di invalidare uno snapshot. *force_invalidate_snapshot* è un **bit**, con un valore predefinito **0**.  
   

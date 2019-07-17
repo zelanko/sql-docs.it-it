@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e9d2baf65dedf1116a85f7271b1929e0ead4ca23
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 35d1ef721df6f67e4cd5c0f993458238394ac0e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493707"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104515"
 ---
 # <a name="spchangemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ sp_changemergearticle [ @publication = ] 'publication'
   
 `[ @article = ] 'article'` È il nome dell'articolo da modificare. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
   
-`[ @property = ] 'property'` È la proprietà da modificare per l'articolo specificato e la pubblicazione. *proprietà* viene **nvarchar(30)**, e può essere uno dei valori elencato nella tabella.  
+`[ @property = ] 'property'` È la proprietà da modificare per l'articolo specificato e la pubblicazione. *proprietà* viene **nvarchar(30)** , e può essere uno dei valori elencato nella tabella.  
   
-`[ @value = ] 'value'` È il nuovo valore per la proprietà specificata. *valore* viene **nvarchar(1000)**, e può essere uno dei valori elencato nella tabella.  
+`[ @value = ] 'value'` È il nuovo valore per la proprietà specificata. *valore* viene **nvarchar(1000)** , e può essere uno dei valori elencato nella tabella.  
   
  Nella tabella seguente vengono descritte le proprietà degli articoli e i valori corrispondenti.  
   
@@ -62,7 +61,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x10**|Le autorizzazioni a livello di tabella vengono controllate nel server di pubblicazione prima dell'applicazione nel server di pubblicazione delle istruzioni INSERT eseguite nel Sottoscrittore.|  
 ||**0x20**|Le autorizzazioni a livello di tabella vengono controllate nel server di pubblicazione prima dell'applicazione nel server di pubblicazione delle istruzioni UPDATE eseguite nel Sottoscrittore.|  
 ||**0x40**|Le autorizzazioni a livello di tabella vengono controllate nel server di pubblicazione prima dell'applicazione nel server di pubblicazione delle istruzioni DELETE eseguite nel Sottoscrittore.|  
-|**column_tracking**|**true**|Attiva il rilevamento a livello di colonna. Proprietà valida solo per gli articoli di tabelle.<br /><br /> Nota: Il rilevamento a livello di colonna non può essere utilizzato durante la pubblicazione di tabelle contenenti più di 246 colonne.|  
+|**column_tracking**|**true**|Attiva il rilevamento a livello di colonna. Proprietà valida solo per gli articoli di tabelle.<br /><br /> Nota: Rilevamento a livello di colonna non può essere utilizzato durante la pubblicazione di tabelle con più di 246 colonne.|  
 ||**false**|Disattiva il rilevamento a livello di colonna e mantiene il rilevamento dei conflitti a livello di riga. Proprietà valida solo per gli articoli di tabelle.|  
 |**compensate_for_errors**|**true**|Vengono eseguite azioni di compensazione quando si verificano errori durante la sincronizzazione. Per altre informazioni, vedere [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
 ||**false**|Non vengono eseguite azioni di compensazione, situazione corrispondente al funzionamento predefinito. Per altre informazioni, vedere [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).<br /><br /> **\*\* Importanti \* \***  anche se i dati nelle righe interessate potrebbero sembrare non convergenti, non appena si risolvere gli eventuali errori, è possibile applicare modifiche e si otterrà la convergenza dei dati. Se la tabella di origine per un articolo è già pubblicata in un'altra pubblicazione, il valore della *compensate_for_errors* deve coincidere per entrambi gli articoli.|  
@@ -72,7 +71,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**description**||Voce descrittiva per l'articolo.|  
 |**destination_owner**||Nome del proprietario dell'oggetto nel database di sottoscrizione, altrimenti **dbo**.|  
 |**identity_range**||**bigint** che specifica le dimensioni dell'intervallo da utilizzare per l'assegnazione di nuovi valori identity se l'articolo contiene **identityrangemanagementoption** impostata su **automatica** o **auto_identity_ intervallo** impostata su **true**. Proprietà valida solo per gli articoli di tabelle. Per altre informazioni, vedere la sezione "Replica di tipo Merge" del [replicare colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
-|**identityrangemanagementoption**|**manual**|Disabilita la gestione automatica degli intervalli di valori Identity. Contrassegna le colonne Identity con NOT FOR REPLICATION per consentire la gestione manuale degli intervalli di valori Identity. Per altre informazioni, vedere [Replicare colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
+|**identityrangemanagementoption**|**Manuale**|Disabilita la gestione automatica degli intervalli di valori Identity. Contrassegna le colonne Identity con NOT FOR REPLICATION per consentire la gestione manuale degli intervalli di valori Identity. Per altre informazioni, vedere [Replicare colonne Identity](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 ||**Nessuno**|Disabilita tutti i tipi di gestione degli intervalli di valori Identity.|  
 |**logical_record_level_conflict_detection**|**true**|Viene rilevato un conflitto in presenza di modifiche apportate in qualsiasi posizione del record logico. È necessario che **logical_record_level_conflict_resolution** essere impostata su **true**.|  
 ||**false**|Viene utilizzato il rilevamento dei conflitti predefinito come specificato da **column_tracking**.|  
@@ -119,7 +118,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x4000000**|Replica gli indici sul **xml** colonne.|  
 ||**0x8000000**|Crea gli schemi non ancora presenti nel Sottoscrittore.|  
 ||**0x10000000**|Consente di convertire **xml** le colonne da **ntext** nel Sottoscrittore.|  
-||**0x20000000**|Tipi di dati dell'oggetto converte grandi dimensioni (**nvarchar (max)**, **varchar (max)**, e **varbinary (max)**) che sono stati introdotti in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ai tipi di dati supportati in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
+||**0x20000000**|Tipi di dati dell'oggetto converte grandi dimensioni (**nvarchar (max)** , **varchar (max)** , e **varbinary (max)** ) che sono stati introdotti in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ai tipi di dati supportati in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
 ||**0x40000000**|Replica le autorizzazioni.|  
 ||**0x80000000**|Tenta di eliminare le dipendenze da tutti gli oggetti che non fanno parte della pubblicazione.|  
 ||**0x100000000**|Usare questa opzione per replicare l'attributo FILESTREAM se è specificato nel **varbinary (max)** colonne. Non specificare questa opzione se si stanno replicando tabelle nei Sottoscrittori [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. La replica di tabelle con colonne FILESTREAM in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] sottoscrittori non è supportata, indipendentemente dal modo in cui è impostata questa opzione dello schema. Vedere l'opzione correlata **0x800000000**.|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 668233ad7ee79617caa60933a9eef33c5a810164
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a743b03d379276e6842b72e44d346cc1356cf7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502802"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137691"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**join_filterid**|**int**|ID del filtro join.|  
-|**filtername**|**sysname**|Nome del filtro.|  
+|**FilterName**|**sysname**|Nome del filtro.|  
 |**nome di articolo di join**|**sysname**|Nome dell'articolo di join.|  
 |**join_filterclause**|**nvarchar(2000)**|Clausola di filtro che qualifica il join.|  
 |**join_unique_key**|**int**|Indica se il join è basato su una chiave univoca.|  
@@ -60,7 +59,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
 |**proprietario della tabella join**|**sysname**|Nome del proprietario della tabella che si desidera unire in join alla tabella di base.|  
 |**nome della tabella join**|**sysname**|Nome della tabella che si desidera unire in join alla tabella di base.|  
 |**nome dell'articolo**|**sysname**|Nome dell'articolo di tabella che si desidera unire in join alla tabella di base.|  
-|**filter_type**|**tinyint**|Tipo di filtro di merge. I possibili valori sono i seguenti:<br /><br /> **1** = solo filtro join<br /><br /> **2** = relazione tra record logici<br /><br /> **3** = both|  
+|**filter_type**|**tinyint**|Tipo di filtro di merge. I possibili valori sono i seguenti:<br /><br /> **1** = solo filtro join<br /><br /> **2** = relazione tra record logici<br /><br /> **3** = entrambi|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (errore)  

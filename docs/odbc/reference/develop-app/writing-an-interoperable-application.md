@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8e559eab5787a64b6bdf0850147d7d9128fc435c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f24e50b7f6dd8b129a2777ce1132ec426b7ea182
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208573"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078980"
 ---
 # <a name="writing-an-interoperable-application"></a>Scrittura di un'applicazione interoperativa
 Ogni volta che un'applicazione utilizza lo stesso codice rispetto a più di un driver, tale codice deve essere interoperabili tra i driver. Nella maggior parte dei casi, questo è un compito facile. Ad esempio, il codice per recuperare le righe con un cursore forward-only è lo stesso per tutti i driver. In alcuni casi, può essere più difficile. Ad esempio, il codice per costruire gli identificatori per l'uso nelle istruzioni SQL deve prendere in considerazione maiuscole/minuscole identificatore deve essere racchiuso tra e le convenzioni di denominazione di una sola parte, due parti e tre parti.  

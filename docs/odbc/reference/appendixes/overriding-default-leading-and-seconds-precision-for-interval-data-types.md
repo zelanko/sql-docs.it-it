@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3d65493f-dce7-4d29-9f59-c63a4e47918c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fdab9e6e60311aca4ce0ae35f92e38c45fdf3702
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13adfb16b772acc5fac30cf3d10c6199f16f479d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63018476"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100619"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>Override della precisione iniziale e in secondi predefinita per i tipi di dati intervallo
 Quando il campo SQL_DESC_TYPE di un ARD è impostato su un tipo C datetime o intervallo, tramite la chiamata a **SQLBindCol** oppure **SQLSetDescField**, il campo SQL_DESC_PRECISION (che contiene l'intervallo (secondi) la precisione) è impostata per i valori predefiniti seguenti:  

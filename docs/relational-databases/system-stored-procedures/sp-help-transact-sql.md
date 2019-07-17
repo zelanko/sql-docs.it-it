@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 39a1e699b52b29db74209aa5288bb5dc01896a3b
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: fabfac2d228be78efb2fc728d1b405ec7edce035
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085039"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_help [ [ @objname = ] 'name' ]
   
     |Nome colonna|Tipo di dati|Descrizione|  
     |-----------------|---------------|-----------------|  
-    |**Name**|**nvarchar(** 128 **)**|Nome oggetto|  
+    |**Name**|**nvarchar(** 128 **)**|Nome dell'oggetto|  
     |**Proprietario**|**nvarchar(** 128 **)**|Proprietario dell'oggetto. Si tratta dell'entità di database proprietaria dell'oggetto. Corrispondente per impostazione predefinita al proprietario dello schema contenente l'oggetto.|  
     |**Object_type**|**nvarchar(** 31 **)**|Tipo oggetto|  
   
@@ -94,7 +93,7 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar(** 128 **)**|Nome colonna.|  
         |**Tipo**|**nvarchar(** 128 **)**|Tipo di dati della colonna.|  
-        |**Computed**|**varchar(** 35 **)**|Indica se i valori nella colonna sono calcolati: Sì o No.|  
+        |**Calcolata**|**varchar(** 35 **)**|Indica se i valori nella colonna sono calcolati: Sì o No.|  
         |**Lunghezza**|**int**|Lunghezza della colonna in byte.<br /><br /> Nota: Se il tipo di dati di colonna è un tipo di valori di grandi dimensioni (**varchar (max)** , **nvarchar (max)** , **varbinary (max)** , oppure **xml**), il valore verrà vengono visualizzati come -1.|  
         |**Prec**|**char(** 5 **)**|Precisione della colonna.|  
         |**Scala**|**char(** 5 **)**|Scala della colonna.|  
@@ -173,7 +172,7 @@ sp_help [ [ @objname = ] 'name' ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-information-about-all-objects"></a>A. Restituzione di informazioni su tutti gli oggetti  
+### <a name="a-returning-information-about-all-objects"></a>R. Restituzione di informazioni su tutti gli oggetti  
  Nell'esempio seguente vengono elencate le informazioni su ogni oggetto incluso nel database `master`.  
   
 ```  

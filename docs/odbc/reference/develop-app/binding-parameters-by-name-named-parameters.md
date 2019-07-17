@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e2c3da5a-6c10-4dd5-acf9-e951eea71a6b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 68dfb8976312016ee7f2e42fc4fcdecb93fd28cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fdd8d00bd6af5479079e66c1ca42f249e033d29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199372"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107645"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>Associazione di parametri in base al nome (parametri denominati)
 Determinati DBMS consente di specificare i parametri da una stored procedure in base al nome anziché in base alla posizione nella chiamata di procedura. Tali parametri vengono chiamati *parametri denominati*. ODBC supporta l'utilizzo di parametri denominati. In ODBC, i parametri denominati sono utilizzati solo nelle chiamate alle stored procedure e non possono essere utilizzati in altre istruzioni SQL.  

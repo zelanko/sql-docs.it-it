@@ -7,13 +7,12 @@ ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: f4a57f89a89ed8d5cbf81cc3d63fc1f19b42e51a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26358fea3b7d08d986a5078cf6484e7c4e0d3dd1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641063"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962112"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>Dati di iris demo per le esercitazioni di Python e R in SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +23,7 @@ Per completare questo esercizio, è necessario disporre [SQL Server Management S
 
 Esercitazioni e guide introduttive utilizzano questo set di dati seguenti:
 
-+  [Guida introduttiva: Creare, eseguire il training e usare un modello Python con le stored procedure in SQL Server](quickstart-python-train-score-in-tsql.md)
++  [Avvio rapido: Creare, eseguire il training e usare un modello Python con le stored procedure in SQL Server](quickstart-python-train-score-in-tsql.md)
 
 ## <a name="create-the-database"></a>Creare il database
 
@@ -156,4 +155,4 @@ Come passaggio di convalida, eseguire una query per verificare che i dati è sta
 
 Nella seguente Guida introduttiva, si verrà creare un modello di machine learning e salvarlo in una tabella e quindi usare il modello per generare i risultati stimati.
 
-+ [Guida introduttiva: Creare, eseguire il training e usare un modello Python con le stored procedure in SQL Server](quickstart-python-train-score-in-tsql.md)
++ [Avvio rapido: Creare, eseguire il training e usare un modello Python con le stored procedure in SQL Server](quickstart-python-train-score-in-tsql.md)

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f683fdc6-0d4c-4793-8143-567616cb2094
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 9a7303d6791c8320bc2c45fc624c396eaee52e98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e20c89e96b784de1c163035ff54873e5cc5e66e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092418"
 ---
 # <a name="data-quality-matching-columns-mds-add-in-for-excel"></a>Colonne corrispondenti Data Quality (componente aggiuntivo MDS per Excel)
 
@@ -26,7 +25,7 @@ ms.locfileid: "65488200"
   
  Nella tabella seguente vengono illustrate le colonne visualizzate quando si verifica la corrispondenza dei dati.  
   
-|nome|Descrizione|  
+|Nome|Descrizione|  
 |----------|-----------------|  
 |**CLUSTER_ID**|Identificatore univoco utilizzato per raggruppare record simili. Il valore di **CLUSTER_ID**è lo stesso per tutte le righe simili. Se non è visualizzato alcun valore **CLUSTER_ID** per una riga, non sono stati trovati record simili.|  
 |**RECORD_ID**|Identificatore univoco utilizzato per identificare i record. Simile al valore Codice archiviato nel repository MDS, è un valore utilizzato per identificare un record. Viene generato automaticamente ogni volta che viene eseguita la ricerca della corrispondenza.|  

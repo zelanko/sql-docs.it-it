@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 35362f5b-e601-4049-9e1d-c5307e823831
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b93943109267db79b1c8475eb3e1875950f9970a
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: d6eec5c523e2bdd321af145f19d0b5e7e7cba39b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135307"
 ---
 # <a name="syssecuritypolicies-transact-sql"></a>Sys. security_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -36,12 +35,12 @@ ms.locfileid: "58161788"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|NAME|**sysname**|Nome del criterio di sicurezza, univoco all'interno del database.|  
+|name|**sysname**|Nome del criterio di sicurezza, univoco all'interno del database.|  
 |object_id|**int**|ID del criterio di sicurezza.|  
 |principal_id|**int**|ID del proprietario del criterio di sicurezza registrato nel database. NULL se il proprietario viene determinato tramite lo schema.|  
 |schema_id|**int**|ID dello schema in cui si trova l'oggetto.|  
 |parent_object_id|**int**|ID dell'oggetto a cui appartiene il criterio. Deve essere 0.|  
-|Tipo|**vachar(2)**|Deve essere **SP**.|  
+|type|**vachar(2)**|Deve essere **SP**.|  
 |type_desc|**nvarchar(60)**|**SECURITY_POLICY**.|  
 |create_date|**datetime**|Data UTC di creazione del criterio di sicurezza.|  
 |modify_date|**datetime**|Data UTC dell'ultima modifica del criterio di sicurezza.|  

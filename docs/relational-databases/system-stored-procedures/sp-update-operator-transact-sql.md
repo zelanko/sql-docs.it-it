@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ac1fb436ded0d829d9b6a9c8fe4e642f8de8cb16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a766ad74f42336612859c63cf42df654846ff96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690319"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084846"
 ---
 # <a name="spupdateoperator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +63,10 @@ sp_update_operator
  Numero che indica lo stato corrente dell'operatore (**1** se attualmente abilitato **0** in caso contrario). *abilitata* viene **tinyint**, con un valore predefinito è NULL. Gli operatori non abilitati non ricevono le notifiche di avviso.  
   
  [ @email_address=] '*email_address*'  
- Indirizzo di posta elettronica dell'operatore. Questa stringa viene passata direttamente al sistema di posta elettronica. *email_address* viene **nvarchar(100)**, con un valore predefinito è NULL.  
+ Indirizzo di posta elettronica dell'operatore. Questa stringa viene passata direttamente al sistema di posta elettronica. *email_address* viene **nvarchar(100)** , con un valore predefinito è NULL.  
   
  [ @pager_address=] '*pager_number*'  
- Indirizzo del cercapersone dell'operatore. Questa stringa viene passata direttamente al sistema di posta elettronica. *pager_number* viene **nvarchar(100)**, con un valore predefinito è NULL.  
+ Indirizzo del cercapersone dell'operatore. Questa stringa viene passata direttamente al sistema di posta elettronica. *pager_number* viene **nvarchar(100)** , con un valore predefinito è NULL.  
   
  [ @weekday_pager_start_time=] *weekday_pager_start_time*  
  Indica l'ora dei giorni lavorativi da lunedì a venerdì oltre la quale è possibile inviare una notifica al cercapersone dell'operatore specificato. *weekday_pager_start_time*viene **int**, con un valore predefinito è NULL e deve essere immesso nel formato HHMMSS per l'uso con un orologio di 24 ore.  
@@ -90,7 +89,7 @@ sp_update_operator
  [ @pager_days=] *pager_days*  
  Indica i giorni in cui l'operatore può essere rintracciato tramite cercapersone (in base all'ora di inizio e fine specificata). *pager_days*viene **tinyint**, con un valore predefinito è NULL e deve essere un valore compreso **0** tramite **127**. *pager_days* viene calcolato sommando i singoli valori dei giorni necessari. Ad esempio, da lunedì a venerdì viene **2**+**4**+**8**+**16** + **32** = **64**.  
   
-|valore|Description|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Domenica|  
 |**2**|Lunedì|  
@@ -101,7 +100,7 @@ sp_update_operator
 |**64**|Sabato|  
   
  [ @netsend_address=] '*netsend_address*'  
- Indirizzo di rete dell'operatore a cui viene inviato il messaggio di rete. *netsend_address*viene **nvarchar(100)**, con un valore predefinito è NULL.  
+ Indirizzo di rete dell'operatore a cui viene inviato il messaggio di rete. *netsend_address*viene **nvarchar(100)** , con un valore predefinito è NULL.  
   
  [ @category_name=] '*categoria*'  
  Nome della categoria di questo avviso. *categoria* viene **sysname**, con un valore predefinito è NULL.  

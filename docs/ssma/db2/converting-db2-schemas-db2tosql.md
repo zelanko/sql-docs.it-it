@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d509ad58491bca379e3ab86e07aee63e8a5d3946
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a16a28a163acece321cc2229e9988cf7ab01f9e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989873"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Conversione di schemi DB2 (DB2ToSQL)
 Dopo aver connesso a DB2, connesso al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e impostare il progetto e le opzioni di mapping dei dati, è possibile convertire gli oggetti di database DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli oggetti di database.  
@@ -74,7 +73,7 @@ La tabella seguente mostra quali vengono convertiti in oggetti di DB2 e risultan
 |Nomi alternativi|Mapping parziale. È necessaria per l'oggetto sottostante l'elaborazione manuale|  
 |Sinonimi|Viene eseguito il mapping.|  
 |Funzioni standard in DB2|SSMA esegue il mapping di funzioni standard di DB2 quando una funzione equivalente è disponibile in SQL Server:|  
-|Autorizzazione|Non è mappata.|  
+|Authorization|Non è mappata.|  
 |Predicati|Viene eseguito il mapping.|  
 |SELECT INTO - istruzione|Non è mappata.|  
 |I valori nell'istruzione|Non è mappata.|  

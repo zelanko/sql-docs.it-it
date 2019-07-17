@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3866a45a2b55a5372769eacc0bb6b0eb1e5c088f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17183a7eacdc5348eea0ddcd7aee4cc493249e77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62942974"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051118"
 ---
 # <a name="escape-sequences-in-odbc"></a>Sequenze di escape in ODBC
 Un numero di funzionalità del linguaggio, ad esempio gli outer join e le chiamate di funzione scalare, è in genere implementato dai sistemi DBMS. Tuttavia, la sintassi per queste funzionalità tendono a essere specifici del DBMS, anche quando la sintassi standard sono definita da vari organismi standard. Per questo motivo, ODBC definisce sequenze di escape contenenti le sintassi standard per le funzionalità del linguaggio seguenti:  

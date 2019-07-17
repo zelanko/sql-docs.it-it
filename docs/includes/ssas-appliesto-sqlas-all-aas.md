@@ -1,9 +1,14 @@
 ---
-ms.openlocfilehash: 1ab14cdbc63eba8fb263c7787bf2ae71169d796d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: MT
+author: minewiskan
+ms.service: analysis-services
+ms.topic: include
+ms.date: 06/06/2019
+ms.author: owend
+ms.openlocfilehash: ca09964b5eadf79299b39ff982088bfa3d97a4f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63768529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68163468"
 ---
-**Si applica a:** ![yes](media/yes.png)SQL Server Analysis Services ![Sì](media/yes.png)Azure Analysis Services
+**SI APPLICA A:** ![sì](media/yes.png)SQL Server Analysis Services ![sì](media/yes.png)Azure Analysis Services ![no](media/no.png)Power BI Premium

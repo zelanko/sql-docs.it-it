@@ -8,26 +8,25 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 7e1d6e375a43592faeceab8da6bccfc8902c63bd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fe94bd1291100dda6680737fe06c96a08e52f0ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968183"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071057"
 ---
-# <a name="dmx-statements---data-manipulation"></a>Istruzioni DMX - manipolazione dei dati
+# <a name="dmx-statements---data-manipulation"></a>Istruzioni DMX - Manipolazione dei dati
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Nella tabella seguente sono elencate le istruzioni DMX (Data Mining Extensions) che fanno parte del linguaggio di manipolazione dei dati (DML, Data Manipulation Language) per il data mining.  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
-|[ELIMINARE &AMP;#40;DMX&AMP;#41;](../dmx/delete-dmx.md)|Cancella da un modello di data mining il contenuto sottoposto a training.|  
-|[INSERIRE IN &AMP;#40;DMX&AMP;#41;](../dmx/insert-into-dmx.md)|Esegue il training di un modello di data mining.|  
-|[SELEZIONARE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)|Visualizza un modello di data mining.|  
+|[ELIMINARE &#40;DMX&#41;](../dmx/delete-dmx.md)|Cancella da un modello di data mining il contenuto sottoposto a training.|  
+|[INSERIRE IN &#40;DMX&#41;](../dmx/insert-into-dmx.md)|Esegue il training di un modello di data mining.|  
+|[SELEZIONARE &#40;DMX&#41;](../dmx/select-dmx.md)|Visualizza un modello di data mining.|  
 |[&#60;query sull'origine dati&#62;](../dmx/source-data-query.md)|Esegue una query per entrambe le origini dati **INSERT INTO** e **seleziona** istruzioni.|  
-|[AGGIORNAMENTO &AMP;#40;DMX&AMP;#41;](../dmx/update-dmx.md)|Modifica il contenuto nel modello di data mining.|  
+|[AGGIORNAMENTO &#40;DMX&#41;](../dmx/update-dmx.md)|Modifica il contenuto nel modello di data mining.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   

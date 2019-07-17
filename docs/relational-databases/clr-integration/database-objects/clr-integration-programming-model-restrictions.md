@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d9d42017e3dfd6016d8b4a42c6953905e804200f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ecdc3192e0b6de26d7b829883d26cc7bbaa7e04a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136021"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68216394"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Restrizioni relative al modello di programmazione dell'integrazione con CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +37,9 @@ ms.locfileid: "54136021"
   
 -   L'assembly è uno degli assembly supportati. Per altre informazioni, vedere [librerie di .NET Framework supportate](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
--   Si usa **CREATE ASSEMBLY dal**_\<location >,_ e tutti gli assembly di riferimento e le relative dipendenze sono disponibili in *\<percorso >*.  
+-   Si usa **CREATE ASSEMBLY dal** _\<location >,_ e tutti gli assembly di riferimento e le relative dipendenze sono disponibili in *\<percorso >* .  
   
--   Si usa **CREATE ASSEMBLY dal**_\<... Byte >,_ e tutti i riferimenti vengono specificati tramite lo spazio separati byte.  
+-   Si usa **CREATE ASSEMBLY dal** _\<... Byte >,_ e tutti i riferimenti vengono specificati tramite lo spazio separati byte.  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  Tutti i **EXTERNAL_ACCESS** gli assembly devono soddisfare i criteri seguenti:  
@@ -110,7 +109,7 @@ ms.locfileid: "54136021"
   
 -   MayLeakOnAbort  
   
--   UI  
+-   Interfaccia utente  
   
  Per altre informazioni su attributi di protezione host e un elenco di tipi non consentiti e membri nell'assembly supportati, vedere [attributi di protezione Host e programmazione di integrazione CLR](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md).  
   

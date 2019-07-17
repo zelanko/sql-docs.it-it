@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 84292334-0e33-4a1b-84de-8c018dd787f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f071cf4391c760f7d269382537c3cd4f2b758c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66fc728440808314dbdaa30065c68232f4a89fba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63278304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100609"
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>Override della precisione predefinita e della scala per i tipi di dati numerici
 Quando il campo SQL_DESC_TYPE in un ARD è impostato per SQL_C_NUMERIC, tramite la chiamata a **SQLBindCol** oppure **SQLSetDescField**, il campo SQL_DESC_SCALE il ARD è impostato su 0 e viene impostato il campo SQL_DESC_PRECISION per una precisione predefinito definito dal driver. Questo vale anche quando il campo SQL_DESC_TYPE in un APD è impostato su SQL_C_NUMERIC, tramite la chiamata a **SQLBindParameter** oppure **SQLSetDescField**. Questo vale per l'input, input/output o i parametri di output.  

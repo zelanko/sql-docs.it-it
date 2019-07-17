@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c936b9e9-e965-4437-a205-833413320940
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 42f22cc0214929f283209fa12542e9620dbdcc08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98df4ed5de9cc38f017c2fb9c577d12c067c5ebf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63314232"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063682"
 ---
 # <a name="files-to-use-with-the-desktop-database-drivers"></a>File da usare con i driver di database desktop
 I driver di Database Desktop ODBC vengono usati con il motore di Database Microsoft Jet, installable file ISAM e i file di Microsoft ODBC. Non tutti sono obbligatori per la ridistribuzione del prodotto e non tutti i componenti fondamentali.  

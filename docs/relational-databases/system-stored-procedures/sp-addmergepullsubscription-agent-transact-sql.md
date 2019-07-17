@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5859d7e4c026375d5e9ade69628b9cf9e4a76ed0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 8bfa9ff0683f67a1d38aeb17bccd0cfc1443d6d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494363"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117961"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
@@ -220,7 +219,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 @optional_command_line = N'-QueryTimeOut 600'  
 ```  
   
-`[ @merge_jobid = ] merge_jobid` È il parametro di output per l'ID processo. *merge_jobid* viene **Binary (16)**, con un valore predefinito è NULL.  
+`[ @merge_jobid = ] merge_jobid` È il parametro di output per l'ID processo. *merge_jobid* viene **Binary (16)** , con un valore predefinito è NULL.  
   
 `[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Specifica se la sottoscrizione può essere sincronizzata tramite Gestione sincronizzazione Microsoft Windows. *enabled_for_syncmgr* viene **nvarchar(5**, con un valore predefinito è FALSE. Se **false**, la sottoscrizione non è registrata con Gestione sincronizzazione Microsoft. Se **true**, la sottoscrizione viene registrata con Gestione sincronizzazione e può essere sincronizzata senza avviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -252,11 +251,11 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @job_name = ] 'job_name' ]` È il nome di un processo dell'agente esistente. *nome_processo* viene **sysname**, con un valore predefinito NULL. Questo parametro viene specificato solo quando la sottoscrizione verrà sincronizzata mediante un processo esistente anziché un nuovo processo creato (impostazione predefinita). Se non si è un membro del **sysadmin** ruolo predefinito del server, è necessario specificare *job_login* e *job_password* quando si specifica *job_name*.  
   
-`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]` Deve essere utilizzato il percorso della cartella in cui i file di snapshot verranno letti dal server se uno snapshot dei dati filtrati. *dynamic_snapshot_location* viene **nvarchar(260)**, con un valore predefinito è NULL. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]` Deve essere utilizzato il percorso della cartella in cui i file di snapshot verranno letti dal server se uno snapshot dei dati filtrati. *dynamic_snapshot_location* viene **nvarchar(260)** , con un valore predefinito è NULL. Per altre informazioni sui filtri di riga con parametri, vedere [Filtri di riga con parametri](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 `[ @use_web_sync = ] use_web_sync` Indica che la sincronizzazione Web è abilitata. *use_web_sync* viene **bit**, con un valore predefinito è 0. **1** specifica che la sottoscrizione pull può essere sincronizzata su internet tramite HTTP.  
   
-`[ @internet_url = ] 'internet_url'` È il percorso del listener per la replica (REPLISAPI. DLL) per la sincronizzazione Web. *internet_url* viene **nvarchar(260)**, con un valore predefinito è NULL. *internet_url* è un URL completo nel formato `http://server.domain.com/directory/replisapi.dll`. Se il server è configurato per l'attesa su una porta diversa dalla porta 80, è necessario specificare anche il numero di porta nel formato `http://server.domain.com:portnumber/directory/replisapi.dll`, dove `portnumber` rappresenta la porta.  
+`[ @internet_url = ] 'internet_url'` È il percorso del listener per la replica (REPLISAPI. DLL) per la sincronizzazione Web. *internet_url* viene **nvarchar(260)** , con un valore predefinito è NULL. *internet_url* è un URL completo nel formato `http://server.domain.com/directory/replisapi.dll`. Se il server è configurato per l'attesa su una porta diversa dalla porta 80, è necessario specificare anche il numero di porta nel formato `http://server.domain.com:portnumber/directory/replisapi.dll`, dove `portnumber` rappresenta la porta.  
   
 `[ @internet_login = ] 'internet_login'` L'account di accesso utilizzato dall'agente di Merge durante la connessione al server Web che ospita la sincronizzazione Web Usa l'autenticazione di base HTTP. *internet_login* viene **sysname**, con un valore predefinito è NULL.  
   
@@ -279,7 +278,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @hostname = ] 'hostname'` Sostituisce il valore di HOST_NAME () quando questa funzione viene utilizzata nella clausola WHERE di un filtro con parametri. *nome host* viene **sysname**, con un valore predefinito è NULL.  
   
-`[ @job_login = ] 'job_login'` È l'account di accesso per l'account di Windows con cui viene eseguito l'agente. *job_login* viene **nvarchar(257)**, non prevede alcun valore predefinito. Questo account di Windows viene sempre utilizzato per le connessioni dell'agente al Sottoscrittore e per le connessioni al server di distribuzione e al server di pubblicazione quando viene utilizzata l'autenticazione integrata di Windows.  
+`[ @job_login = ] 'job_login'` È l'account di accesso per l'account di Windows con cui viene eseguito l'agente. *job_login* viene **nvarchar(257)** , non prevede alcun valore predefinito. Questo account di Windows viene sempre utilizzato per le connessioni dell'agente al Sottoscrittore e per le connessioni al server di distribuzione e al server di pubblicazione quando viene utilizzata l'autenticazione integrata di Windows.  
   
 `[ @job_password = ] 'job_password'` È la password per l'account di Windows con cui viene eseguito l'agente. *job_password* viene **sysname**, non prevede alcun valore predefinito.  
   

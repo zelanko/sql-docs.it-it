@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1de46c12b0e05b592489e557a80138996ad9767f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b72a821c56f35e1ea7f3542b5746c234012c2da0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528793"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137765"
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +41,9 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%**. Se la pubblicazione viene specificata, vengono restituiti tutti i conflitti risultanti corrispondenti. Ad esempio, se il **MSmerge_conflict_Customers** tabella include le righe con conflitti per il **WA** e il **autorità di certificazione** pubblicazioni, passando un nome della pubblicazione **autorità di certificazione**  recupera i conflitti che riguardano il **autorità di certificazione** pubblicazione.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%** . Se la pubblicazione viene specificata, vengono restituiti tutti i conflitti risultanti corrispondenti. Ad esempio, se il **MSmerge_conflict_Customers** tabella include le righe con conflitti per il **WA** e il **autorità di certificazione** pubblicazioni, passando un nome della pubblicazione **autorità di certificazione**  recupera i conflitti che riguardano il **autorità di certificazione** pubblicazione.  
   
-`[ @conflict_table = ] 'conflict_table'` È il nome della tabella dei conflitti. *conflict_table* viene **sysname**, non prevede alcun valore predefinito. Nelle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive, le tabelle dei conflitti vengono denominate usando i nomi di formato con **MSmerge_conflict\__pubblicazione\_articolo_**, con una tabella per ogni articolo pubblicato.  
+`[ @conflict_table = ] 'conflict_table'` È il nome della tabella dei conflitti. *conflict_table* viene **sysname**, non prevede alcun valore predefinito. Nelle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive, le tabelle dei conflitti vengono denominate usando i nomi di formato con **MSmerge_conflict\__pubblicazione\_articolo_** , con una tabella per ogni articolo pubblicato.  
   
 `[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a39fe7efd35094330b6885094145b5340bd7f2b8
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e9da98ffc01d7ee62ac89a516a7eabe52cae3df1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527473"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048381"
 ---
 # <a name="sphelpsubscriptionproperties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +40,11 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, il valore predefinito è **%**, che restituisce informazioni su tutti i server di pubblicazione.  
+`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, il valore predefinito è **%** , che restituisce informazioni su tutti i server di pubblicazione.  
   
-`[ @publisher_db = ] 'publisher_db'` È il nome del server di pubblicazione. *publisher_db* viene **sysname**, il valore predefinito è **%**, che restituisce informazioni su tutti i database di pubblicazione.  
+`[ @publisher_db = ] 'publisher_db'` È il nome del server di pubblicazione. *publisher_db* viene **sysname**, il valore predefinito è **%** , che restituisce informazioni su tutti i database di pubblicazione.  
   
-`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%**, che restituisce informazioni su tutte le pubblicazioni.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%** , che restituisce informazioni su tutte le pubblicazioni.  
   
 `[ @publication_type = ] publication_type` È il tipo di pubblicazione. *publication_type* viene **int**, con un valore predefinito è NULL. Se fornito, *publication_type* deve essere uno dei valori seguenti:  
   
@@ -61,12 +60,12 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|Nome del server di pubblicazione.|  
 |**publisher_db**|**sysname**|Nome del database del server di pubblicazione.|  
-|**publication**|**sysname**|Nome della pubblicazione.|  
-|**publication_type**|**int**|Tipo di pubblicazione:<br /><br /> **0** = transazionale<br /><br /> **1** = Snapshot<br /><br /> **2** = unione nell'indice|  
+|**pubblicazione**|**sysname**|Nome della pubblicazione.|  
+|**publication_type**|**int**|Tipo di pubblicazione:<br /><br /> **0** = transazionale<br /><br /> **1** = snapshot<br /><br /> **2** = unione nell'indice|  
 |**publisher_login**|**sysname**|ID dell'account di accesso utilizzato nel server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_password**|**nvarchar(524)**|Password (crittografata) utilizzata nel server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_security_mode**|**int**|Modalità di sicurezza utilizzata nel server di pubblicazione:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione<br /><br /> **1** = autenticazione di Windows|  
-|**distributor**|**sysname**|Nome del server di distribuzione.|  
+|**server di distribuzione**|**sysname**|Nome del server di distribuzione.|  
 |**distributor_login**|**sysname**|Account di accesso per il server di distribuzione.|  
 |**distributor_password**|**nvarchar(524)**|Password (crittografata) per il server di distribuzione.|  
 |**distributor_security_mode**|**int**|Modalità di sicurezza utilizzata nel server di distribuzione:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione<br /><br /> **1** = autenticazione di Windows|  

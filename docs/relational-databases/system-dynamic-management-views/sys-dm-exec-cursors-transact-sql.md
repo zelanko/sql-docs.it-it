@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 24648d8c52134e572dce82cf37cb59717f139eb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ebffa740abe55a176c8577f754cf1a18db65022
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013424"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097845"
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ dm_exec_cursors (session_id | 0 )
 |**fetch_buffer_start**|**int**|Per i cursori FAST_FORWARD e DYNAMIC, restituisce 0 se il cursore non è aperto o se è posizionato prima della riga iniziale. In caso contrario, restituisce -1.<br /><br /> Per i cursori STATIC e KEYSET, restituisce 0 se il cursore non è aperto e -1 se il cursore è posizionato oltre l'ultima riga.<br /><br /> In caso contrario, restituisce il numero di riga in cui è posizionato.|  
 |**ansi_position**|**int**|Posizione del cursore all'interno del buffer di recupero.|  
 |**worker_time**|**bigint**|Tempo impiegato, in microsecondi, dai thread worker che eseguono il cursore.|  
-|**reads**|**bigint**|Numero di letture eseguite dal cursore.|  
+|**Operazioni di lettura**|**bigint**|Numero di letture eseguite dal cursore.|  
 |**writes**|**bigint**|Numero di scritture eseguite dal cursore.|  
 |**dormant_duration**|**bigint**|Millisecondi trascorsi a partire dall'avvio dell'ultima query (apertura o recupero) sul cursore.|  
   
@@ -82,7 +81,7 @@ dm_exec_cursors (session_id | 0 )
   
  Nella tabella seguente vengono fornite informazioni sul tipo di cursore e vengono inclusi i possibili valori per la colonna delle proprietà.  
   
-|Type|Descrizione|  
+|type|Descrizione|  
 |----------|-----------------|  
 |Keyset|Il cursore è stato dichiarato come Keyset.|  
 |Dynamic|Il cursore è stato dichiarato come Dynamic.|  
@@ -93,7 +92,7 @@ dm_exec_cursors (session_id | 0 )
   
 |Concorrenza|Descrizione|  
 |-----------------|-----------------|  
-|Read Only|Il cursore è stato dichiarato come di sola lettura.|  
+|Sola lettura|Il cursore è stato dichiarato come di sola lettura.|  
 |Scroll Locks|Il cursore utilizza i blocchi di scorrimento.|  
 |Optimistic|Il cursore utilizza il controllo della concorrenza ottimistica.|  
   
@@ -106,7 +105,7 @@ dm_exec_cursors (session_id | 0 )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-detecting-old-cursors"></a>A. Individuazione dei cursori meno recenti  
+### <a name="a-detecting-old-cursors"></a>R. Individuazione dei cursori meno recenti  
  Nell'esempio seguente vengono restituite informazioni sui cursori che sono rimasti aperti nel server oltre il periodo di tempo specificato di 36 ore.  
   
 ```  

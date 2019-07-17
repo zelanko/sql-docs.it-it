@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 82c19931073aa96eb045f574e8670068f3d3c659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7ceb128aec3a4cbe5ef7180483eb2a033ae57138
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996246"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Appendice B: Tabelle della transizione di stato ODBC
 Le tabelle in questa appendice mostrano come funzioni ODBC causano le transizioni di ambiente, connessione, istruzione e gli stati del descrittore. Lo stato dell'ambiente, connessione, istruzione o descrittore determina in genere quando le funzioni che usano il corrispondente tipo di handle (ambiente, connessione, istruzione o descrittore) possono essere chiamate. Gli stati di ambiente, connessione, istruzione e descrittore si sovrappongono all'incirca, come illustrato nelle figure seguenti. Ad esempio, la sovrapposizione esatta della connessione stati C5 e C6 e istruzione dichiara che s1 tramite S12 sono dati dipende dall'origine, poiché le transazioni iniziano in momenti diversi in origini dati diverse e lo stato di descrittore D1i (allocato in modo implicito descrittore) dipende dal sullo stato dell'istruzione a cui il descrittore è associato, mentre state D1e (allocato in modo esplicito descrittore) è indipendenti dallo stato di qualsiasi istruzione. Per una descrizione di ogni stato, vedere [transizioni di ambiente](../../../odbc/reference/appendixes/environment-transitions.md), [transizioni di connessione](../../../odbc/reference/appendixes/connection-transitions.md), [transizioni di istruzione](../../../odbc/reference/appendixes/statement-transitions.md), e [transizioni dei descrittori ](../../../odbc/reference/appendixes/descriptor-transitions.md), più avanti in questa appendice.  
@@ -69,7 +68,7 @@ Le tabelle in questa appendice mostrano come funzioni ODBC causano le transizion
 |i|Riga non valida. È stato posizionato il cursore su una riga nel risultato del set e la riga è stati eliminati o si è verificato un errore in un'operazione sulla riga. Se la matrice di stato di riga esistente, il valore della matrice di stato di riga per la riga è SQL_ROW_DELETED o SQL_ROW_ERROR. (La matrice di stato di riga a cui punta l'attributo di istruzione vengono impostati SQL_ATTR_ROW_STATUS_PTR.)|  
 |nf|Non è stato trovato. La funzione ha restituito SQL_NO_DATA. Questo non è applicabile quando **SQLExecDirect**, **SQLExecute**, o **SQLParamData** restituisce SQL_NO_DATA dopo l'esecuzione di una ricerca istruzione update o delete.|  
 |np|Non è pronto. L'istruzione non è stato preparato.|  
-|nr|Nessun risultato. L'istruzione non fornirà o non è stato creato un set di risultati.|  
+|Nr|Nessun risultato. L'istruzione non fornirà o non è stato creato un set di risultati.|  
 |o|Altra funzione. Un'altra funzione era in esecuzione in modo asincrono.|  
 |p|Preparati. L'istruzione è stata preparata.|  
 |r|Risultati. L'istruzione verrà o è stato creato un set di risultati (eventualmente vuota).|  

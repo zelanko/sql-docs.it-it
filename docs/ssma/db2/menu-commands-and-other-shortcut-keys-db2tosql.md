@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 9879a065db11bb8e8b8ddff9c57376faf36fe151
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8937eb796d75afdc404ef4815918245cda7f13a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074155"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>Comandi di menu e tasti di scelta rapida (DB2ToSQL)
 Le sezioni seguenti descrivono i tasti di scelta rapida per accedere ai comandi di menu e tasti di scelta rapida usati in varie finestre di dialogo di SSMA per DB2 applicazione.  

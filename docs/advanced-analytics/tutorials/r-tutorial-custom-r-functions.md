@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 5773641f442fe844657e6aabd6b9dcea24f4475b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c9cb9d84637d20f3f0e73f97fa6565d84d12fb4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509908"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961959"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>Eseguire funzioni R personalizzate in SQL Server con rxExec
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +35,7 @@ La distribuzione di R nella workstation client fornisce un oggetto incorporato *
 
 ## <a name="create-the-remote-compute-context"></a>Creare il contesto di calcolo remoto
 
-Eseguire i comandi R seguenti in una workstation client. Ad esempio, si usa **Rgui**, avviarla da questo percorso: C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64\.
+Eseguire i comandi R seguenti in una workstation client. Ad esempio, si usa **Rgui**, avviarla da questo percorso: C:\Programmi\Microsoft Files\Microsoft\R Client\R_SERVER\bin\x64\.
 
 1. Specificare la stringa di connessione per l'istanza di SQL Server in cui vengono eseguiti i calcoli. Il server deve essere configurato per l'integrazione di R. Il nome del database non viene usato in questo esercizio, ma la stringa di connessione richiede uno. Se si dispone di un database di esempio o test, è possibile utilizzarlo.
 

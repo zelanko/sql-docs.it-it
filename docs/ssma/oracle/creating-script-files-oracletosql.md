@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 55e5bc68-3040-4f07-bb00-0408a17c9821
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: fe8dd1ebcc6604b8cff514cff3628abc23275517
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: a4ee7047e2c517f05f311bf4e842f8f4c64ca8fe
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287244"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264237"
 ---
 # <a name="creating-script-files-oracletosql"></a>Creazione di file di script (OracleToSQL)
 Il primo passaggio prima di avviare l'applicazione console SSMA consiste nel creare il file di script e, se è necessario creare il file di valore della variabile e il file di connessione del server.  
@@ -90,7 +90,7 @@ Le opzioni configurabili dall'utente includono:
   
     -   origine utilizzare-ultimo usato = "true" (impostazione predefinita) o server di origine = "source_servername"  
   
-    -   target-use-last-used="true" (default) or target-server="target_servername"  
+    -   destinazione Usa-ultimo usato = "true" (impostazione predefinita) o server di destinazione = "target_servername"  
   
     **Esempio:**  
   
@@ -204,7 +204,7 @@ Le opzioni configurabili dall'utente includono:
   
     -   Skip: La console ignora gli oggetti che esistono già nel database  
   
-    -   ask-user: Richiede l'input dell'utente ('Sì' / 'no')  
+    -   chiedere-utente: Richiede l'input dell'utente ('Sì' / 'no')  
   
     **Esempio:**  
   
@@ -296,7 +296,7 @@ Le opzioni configurabili dall'utente includono:
   
     -   Info: Tutti i livelli ad eccezione del fatto che vengono registrati i messaggi di debug.  
   
-    -   debug: Tutti i livelli di messaggi registrati.  
+    -   Eseguire il debug: Tutti i livelli di messaggi registrati.  
   
     > [!NOTE]  
     > Obbligatori vengono registrati a qualsiasi livello.  

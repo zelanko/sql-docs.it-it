@@ -9,20 +9,20 @@ ms.topic: conceptual
 ms.assetid: 12f7b46f-9228-46d8-9877-cc6a7948c64b
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: ff3acde2d4257412c743958311a050a7879ed2a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 3380531a26e062d6b06c2f08cb5bc36a8df55004
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62816333"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262977"
 ---
 # <a name="legal-notice-ssma-for-oracle"></a>Note legali (SSMA per Oracle)
 La presente documentazione, incluse le applicazioni di esempio in essa contenute, viene fornita a scopo esclusivamente informativo e senza alcuna garanzia, espressa o implicita. Le informazioni contenute nella presente documentazione, compresi indirizzi URL e altri riferimenti a siti Web Internet, sono soggette a modifiche senza preavviso. L'utente utilizza la presente documentazione a proprio rischio.  
   
 Obiettivo principale degli esempi inclusi nella documentazione è quello di illustrare un concetto o l'utilizzo comune di un'istruzione o di una clausola specifica. La maggior parte degli esempi non include il codice completo normalmente disponibile in un sistema completo e finale, in quanto una parte dei normali dati di convalida o la gestione degli errori vengono in genere rimossi dagli esempi per mettere in maggiore evidenza il concetto o l'istruzione specifici illustrati nell'esempio stesso. I servizi del Servizio Supporto Tecnico Clienti Microsoft non sono disponibili per gli esempi e il codice sorgente incluso.  
   
-Se non diversamente specificato, ad aziende, organizzazioni, prodotti, nomi di dominio, indirizzi di posta elettronica, persone, luoghi ed eventi citati in questo documento sono fittizio e nessuna associazione con qualsiasi società, organizzazione, prodotto, nome di dominio, indirizzo di posta elettronica persona, luogo o evento è intenzionale o può essere presupposta. Il rispetto di tutte le applicabili leggi in materia di copyright è esclusivamente a carico dell'utente. Fermi restando tutti i diritti coperti da copyright, nessuna parte di questa documentazione potrà comunque essere riprodotta o inserita in un sistema di riproduzione o trasmessa in qualsiasi forma e con qualsiasi mezzo (in formato elettronico, meccanico, fotocopia, tramite registrazione o altro) per qualsiasi scopo, senza il permesso scritto di Microsoft Corporation.  
+Se non diversamente specificato, ad aziende, organizzazioni, prodotti, nomi di dominio, indirizzi di posta elettronica, persone, luoghi ed eventi citati in questo documento sono fittizio e nessuna associazione con qualsiasi società, organizzazione, prodotto, nome di dominio, indirizzo di posta elettronica persona, luogo o evento è intenzionale o può essere presupposta. Il rispetto di tutte le leggi applicabili in materia di copyright è a esclusivo carico dell'utente. Fermi restando tutti i diritti coperti da copyright, nessuna parte di questa documentazione potrà comunque essere riprodotta o inserita in un sistema di riproduzione o trasmessa in qualsiasi forma e con qualsiasi mezzo (in formato elettronico, meccanico, fotocopia, tramite registrazione o altro) per qualsiasi scopo, senza il permesso scritto di Microsoft Corporation.  
   
 Microsoft può essere titolare di brevetti, domande di brevetto, marchi, copyright o altri diritti di proprietà intellettuale relativi all'oggetto della presente documentazione. Salvo quanto espressamente previsto in un contratto scritto di licenza Microsoft, la consegna della presente documentazione non implica la concessione di alcuna licenza su tali brevetti, marchi, copyright o altra proprietà intellettuale.  
   

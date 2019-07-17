@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: eb2cb75c-dc58-4a5b-b329-664e9fe20ce0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0ee0509469f7a9bddca066a6e05416a13685ad9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27056917d828313eaa97ad204d0297cec0fb7995
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470925"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084669"
 ---
 # <a name="dbosyscategories-transact-sql"></a>dbo.syscategories (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62470925"
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|ID della categoria.|  
 |**category_class**|**int**|Tipo di elemento della categoria:<br /><br /> **1** = Job<br /><br /> **2** = avviso<br /><br /> **3** = (operatore)|  
-|**category_type**|**tinyint**|Tipo di categoria:<br /><br /> **1** = locale<br /><br /> **2** = Multiserver<br /><br /> **3** = None|  
+|**category_type**|**tinyint**|Tipo di categoria:<br /><br /> **1** = locale<br /><br /> **2** = multiserver<br /><br /> **3** = nessuno|  
 |**name**|**sysname**|Nome della categoria.|  
   
   

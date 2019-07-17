@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 42257bb6-0bf1-4533-a4ef-4a6dd2aecb18
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 99ec2d9a1995502a4bfd96dad02157ccc6574f6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6c37084ad91a931c4479ecf826c5cb554765412
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62735007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135671"
 ---
 # <a name="call-level-interfaces"></a>Call Level Interface
 La tecnica finale per l'invio di istruzioni SQL per il sistema DBMS è tramite un'interfaccia a livello di chiamata (comando). Un'interfaccia a livello di chiamata fornisce una libreria di funzioni di sistema DBMS che può essere chiamato dal programma dell'applicazione. In questo modo, invece di tentare di blend SQL con un altro linguaggio di programmazione, un'interfaccia a livello di chiamata è simile alle librerie di routine maggior parte dei programmatori sono abituati a usare, ad esempio la stringa, i/o o delle librerie matematiche in C. si noti che DBMS che supportano SQL incorporato esiste già un'interfaccia a livello di chiamata, le chiamate a cui vengono generate dallo strumento di precompilazione. Tuttavia, queste chiamate sono soggette a modifiche senza preavviso e non documentate.  

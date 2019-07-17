@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dbe0b5a3-d7fa-440d-80b4-6cc00de159dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2a91a26f46b8722c4114c485a9924a83d5669edd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1792161b472e42c42ea2bfc895bf013802cb656c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628194"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093786"
 ---
 # <a name="introduction-to-odbc"></a>Introduzione a ODBC
 Questa sezione fornisce una breve storia di Structured Query Language e ODBC e sono incluse informazioni concettuali sull'interfaccia ODBC.  

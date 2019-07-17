@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 034c4ab2c8ce57ac072e9711fb4e6d621584f273
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 6aae34fb03322a40f1b970df6271bb89d18b3293
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529303"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104448"
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 `[ @attribute_id = ] 'attribute_id'` È l'ID intero dell'attributo. *attribute_id* viene **int**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- None  
+ Nessuna  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -72,7 +71,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**20**|MULTI_RESULT_SETS<br /><br /> Specifica se il database sottostante o il gateway stesso supporta o meno più set di risultati (è possibile inviare più istruzioni attraverso il gateway con più set di risultati restituiti al client).|Y|  
 |**22**|ACCESSIBLE_TABLES<br /><br /> Specifica se nella **sp_tables**, il gateway restituisce solo le tabelle, viste e così via, accessibile all'utente corrente (ovvero, l'utente che dispone almeno delle autorizzazioni SELECT per la tabella).|Y|  
 |**100**|USERID_LENGTH<br /><br /> Specifica il numero massimo di caratteri per un nome utente.|128|  
-|**101**|QUALIFIER_TERM<br /><br /> Specifica il termine del sistema DBMS per il qualificatore di tabella (la prima parte di un nome composto da tre parti).|Database|  
+|**101**|QUALIFIER_TERM<br /><br /> Specifica il termine del sistema DBMS per il qualificatore di tabella (la prima parte di un nome composto da tre parti).|database|  
 |**102**|NAMED_TRANSACTIONS<br /><br /> Specifica se il sistema DBMS sottostante supporta o meno transazioni denominate.|Y|  
 |**103**|SPROC_AS_LANGUAGE<br /><br /> Specifica se è possibile eseguire le stored procedure come eventi del linguaggio.|Y|  
 |**104**|ACCESSIBLE_SPROC<br /><br /> Specifica se nella **sp_stored_procedures**, il gateway restituisce solo le stored procedure eseguibili dall'utente corrente.|Y|  

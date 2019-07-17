@@ -7,13 +7,12 @@ ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 99c96c860d2862b059077326be4f4fe313491cd3
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 07a0ce0688e56f0d7b2edac5cdbc87116c75d5ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961904"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Lezione 1: Esplorare e visualizzare i dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -114,7 +113,7 @@ La stored procedure restituisce l'immagine come un flusso di dati varbinary, che
   
     **Risultati**
     
-    *plot* *0xFFD8FFE000104A4649...*
+    *tracciato* *0xFFD8FFE000104A4649...*
   
 2. Aprire un prompt dei comandi di PowerShell ed eseguire il comando seguente, fornendo il nome dell'istanza appropriata, nome del database, nome utente e le credenziali come argomenti. Per chi usa le identità di Windows, è possibile sostituire **- U** e **-P** con **-T**.
   

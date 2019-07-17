@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 155791eb-8832-4596-8487-7fc70dfba5b9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 042fb188e5a704ed9843bcf98b501a5c315d825f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e4218f6a105f81997c37202421feb689cd3a074
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980218"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055005"
 ---
 # <a name="sphelpfulltexttablescursor-transact-sql"></a>sp_help_fulltext_tables_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,7 +49,7 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
   
 `[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` È il nome del catalogo full-text. *fulltext_catalog_name* viene **sysname**, con un valore predefinito è NULL. Se *fulltext_catalog_name* viene omesso oppure è NULL, vengono restituite tutte le tabelle indicizzate full-text associate al database. Se *fulltext_catalog_name* è specificato, ma *table_name* viene omesso oppure è NULL, viene recuperati le informazioni sugli indici full-text per ogni tabella indicizzata full-text associata al catalogo. Se entrambe *fulltext_catalog_name* e *table_name* vengono specificati, viene restituita una riga se *table_name* associata *fulltext_catalog_name*; in caso contrario, viene generato un errore.  
   
-`[ @table_name = ] 'table_name'` È il nome della tabella una o due parti per cui vengono richiesti i metadati full-text. *TABLE_NAME* viene **nvarchar(517)**, con un valore predefinito NULL. Se solo *nome_tabella* è specificato, solo la riga relativa a *table_name* viene restituito.  
+`[ @table_name = ] 'table_name'` È il nome della tabella una o due parti per cui vengono richiesti i metadati full-text. *TABLE_NAME* viene **nvarchar(517)** , con un valore predefinito NULL. Se solo *nome_tabella* è specificato, solo la riga relativa a *table_name* viene restituito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

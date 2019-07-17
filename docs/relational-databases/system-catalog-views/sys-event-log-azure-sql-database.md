@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: afef7b79c10b3d7f72d69dbe9bfca8721f6d13ec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a239624fcbc3913d636f7f57b496c006d06a64b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061383"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Database di SQL Azure)
 
@@ -77,13 +76,13 @@ ms.locfileid: "56041532"
 |**connectivity**|**connection_failed**|9|**reconfiguration**|2|*Nota: Si applica solo ai Database SQL Azure V11.*<br /><br /> Impossibile stabilire la connessione poiché era in corso una riconfigurazione del database.|  
 |**connectivity**|**connection_terminated**|0|**idle_connection_timeout**|2|*Nota: Si applica solo ai Database SQL Azure V11.*<br /><br /> Il tempo di inattività della connessione è stato maggiore rispetto alla soglia definita dal sistema.|  
 |**connectivity**|**connection_terminated**|1|**reconfiguration**|2|*Nota: Si applica solo ai Database SQL Azure V11.*<br /><br /> La sessione è stata terminata a causa di una riconfigurazione del database.|  
-|**connectivity**|**throttling**|*\<codice motivo >*|**reason_code**|2|*Nota: Si applica solo ai Database SQL Azure V11.*<br /><br /> La richiesta è limitata.  Codice motivo limitazione:  *\<codice motivo >*. Per altre informazioni, vedere [limitazione del motore](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
+|**connectivity**|**throttling**|*\<codice motivo >*|**reason_code**|2|*Nota: Si applica solo ai Database SQL Azure V11.*<br /><br /> La richiesta è limitata.  Codice motivo limitazione:  *\<codice motivo >* . Per altre informazioni, vedere [limitazione del motore](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
 |**connectivity**|**throttling_long_transaction**|40549|**long_transaction**|2|*Nota: Si applica solo ai Database SQL Azure V11.*<br /><br /> Sessione terminata perché è presente una transazione a lunga esecuzione. Provare ad abbreviare la transazione. Per altre informazioni, vedere [dei limiti delle risorse](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**connectivity**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Nota: Si applica solo ai Database SQL Azure V11.*<br /><br /> Sessione terminata perché ha acquisito troppi blocchi. Provare a leggere o modificare meno righe in una sola transazione. Per altre informazioni, vedere [dei limiti delle risorse](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**connectivity**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Nota: Si applica solo ai Database SQL Azure V11.*<br /><br /> Sessione terminata a causa di un utilizzo eccessivo di TEMPDB. Provare a modificare la query per ridurre l'utilizzo dello spazio delle tabelle temporanee. Per altre informazioni, vedere [dei limiti delle risorse](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**connectivity**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*Nota: Si applica solo ai Database SQL Azure V11.*<br /><br /> Sessione terminata a causa di un utilizzo eccessivo dello spazio del log delle transazioni. Provare a modificare meno righe in una sola transazione. Per altre informazioni, vedere [dei limiti delle risorse](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**connectivity**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Nota: Si applica solo ai Database SQL Azure V11.*<br /><br /> Sessione terminata a causa di un utilizzo eccessivo della memoria. Provare a modificare la query per elaborare meno righe. Per altre informazioni, vedere [dei limiti delle risorse](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**engine**|**deadlock**|0|**deadlock**|2|Si è verificato un deadlock.|  
+|**Motore**|**deadlock**|0|**deadlock**|2|Si è verificato un deadlock.|  
   
 ## <a name="permissions"></a>Permissions
 
@@ -231,5 +230,5 @@ SELECT * FROM CTE2;
 
 ## <a name="see-also"></a>Vedere anche
 
- [Eventi estesi nel Database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+ [Eventi estesi nel database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
  

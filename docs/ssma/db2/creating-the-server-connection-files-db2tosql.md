@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 685419f6-8606-462c-be12-8bace45bede6
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: ea6d9a77cc7639bc9adc8daa38f12d0e21dbfb71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 484b9e12d53d22160358d873ddb2a3dc60d0977e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298904"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989810"
 ---
 # <a name="creating-the-server-connection-files-db2tosql"></a>Creazione di file di connessione del Server (DB2ToSQL)
 Nella sezione dei server del file di script o in un file di connessione server separato, è possibile specificare le informazioni sul server. Il parametro della riga di comando per il file di connessione del server è, `-c <serverconnectionfile>`. Se lo stesso id di server è presente nel file di connessione server sia file di script, viene considerata la definizione del server nel file di script.  

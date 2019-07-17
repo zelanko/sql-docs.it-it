@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 032b424c0ac7706962d17520b47d6b8ec447a536
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2ed385026d2bd47912a1a95d237b2adedafa26d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042826"
 ---
 # <a name="fnsyscollectorgetexecutiondetails-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +44,13 @@ fn_syscollector_get_execution_details ( log_id )
   
 ## <a name="table-returned"></a>Tabella restituita  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |id|**int**|Identificatore univoco della voce del log.|  
-|evento|**sysname**|Nome dell'evento che ha generato la voce del log.|  
+|event|**sysname**|Nome dell'evento che ha generato la voce del log.|  
 |computer|**nvarchar**|Computer in cui era in esecuzione il pacchetto al momento della generazione della voce del log.|  
-|operatore|**nvarchar**|Nome utente della persona o dell'agente che ha eseguito il pacchetto che ha generato la voce di log.|  
-|origine|**nvarchar**|Nome del file eseguibile che ha generato la voce di log.|  
+|operator|**nvarchar**|Nome utente della persona o dell'agente che ha eseguito il pacchetto che ha generato la voce di log.|  
+|source|**nvarchar**|Nome del file eseguibile che ha generato la voce di log.|  
 |sourceid|**uniqueidentifier**|GUID del file eseguibile che ha generato la voce di log.|  
 |executionid|**uniqueidentifier**|GUID dell'istanza di esecuzione del file eseguibile che ha generato la voce del log.|  
 |starttime|**datetime**|Ora di inizio dell'esecuzione del pacchetto.|  

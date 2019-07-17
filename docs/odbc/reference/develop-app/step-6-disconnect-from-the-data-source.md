@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6ad759ba-4721-4d8f-9b26-de976d4fc1a0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a42465e763f8f6d520ed9c1dac42612aa1b28575
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65cc2ae8d2c2248a733e6efa9537fd3b40bb8fd1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149223"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114116"
 ---
 # <a name="step-6-disconnect-from-the-data-source"></a>Passaggio 6: Disconnettersi dall'origine dati
 Il passaggio finale consiste nel disconnettere dall'origine dati, come illustrato nella figura seguente. In primo luogo, l'applicazione libera tutti gli handle di istruzione tramite la chiamata **SQLFreeHandle**. Per altre informazioni, vedere [liberando un Handle di istruzione](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md).  

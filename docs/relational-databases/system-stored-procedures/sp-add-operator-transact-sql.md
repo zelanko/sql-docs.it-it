@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c1a6a9e45b1640a82cd15074373f162a97d9a0a6
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 49d7ac030eb8e391f083311fc0248b0f0752e72a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121023"
 ---
 # <a name="spaddoperator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,20 +52,20 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @name = ] 'name'` Il nome di un operatore (destinatario della notifica). Questo nome deve essere univoco e non può contenere la percentuale (**%**) caratteri. *nome* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @name = ] 'name'` Il nome di un operatore (destinatario della notifica). Questo nome deve essere univoco e non può contenere la percentuale ( **%** ) caratteri. *nome* viene **sysname**, non prevede alcun valore predefinito.  
   
 `[ @enabled = ] enabled` Indica lo stato corrente dell'operatore. *abilitata* viene **tinyint**, il valore predefinito è **1** (abilitato). Se **0**, l'operatore non è abilitato e non riceve le notifiche.  
   
-`[ @email_address = ] 'email_address'` L'indirizzo di posta elettronica dell'operatore. Questa stringa viene passata direttamente al sistema di posta elettronica. *email_address* viene **nvarchar(100)**, con un valore predefinito è NULL.  
+`[ @email_address = ] 'email_address'` L'indirizzo di posta elettronica dell'operatore. Questa stringa viene passata direttamente al sistema di posta elettronica. *email_address* viene **nvarchar(100)** , con un valore predefinito è NULL.  
   
  È possibile specificare un indirizzo di posta elettronica fisico o un alias per *email_address*. Ad esempio:  
   
- «**jdoe**'o'**jdoe@xyz.com**»  
+ «**jdoe**'o' **jdoe@xyz.com** »  
   
 > [!NOTE]  
 >  È necessario utilizzare l'indirizzo di posta elettronica per Posta elettronica database.  
   
-`[ @pager_address = ] 'pager_address'` Indirizzo cercapersone dell'operatore. Questa stringa viene passata direttamente al sistema di posta elettronica. *pager_address* viene **narchar(100)**, con un valore predefinito è NULL.  
+`[ @pager_address = ] 'pager_address'` Indirizzo cercapersone dell'operatore. Questa stringa viene passata direttamente al sistema di posta elettronica. *pager_address* viene **narchar(100)** , con un valore predefinito è NULL.  
   
 `[ @weekday_pager_start_time = ] weekday_pager_start_time` Il tempo trascorso il quale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent invia notifiche al cercapersone dell'operatore specificato nei giorni della settimana, dal lunedì al venerdì. *weekday_pager_start_time*viene **int**, il valore predefinito è **090000**, che indica le 9.00 nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
   
@@ -92,7 +91,7 @@ sp_add_operator [ @name = ] 'name'
 |**32**|Venerdì|  
 |**64**|Sabato|  
   
-`[ @netsend_address = ] 'netsend_address'` L'indirizzo di rete dell'operatore a cui viene inviato il messaggio di rete. *netsend_address*viene **nvarchar(100)**, con un valore predefinito è NULL.  
+`[ @netsend_address = ] 'netsend_address'` L'indirizzo di rete dell'operatore a cui viene inviato il messaggio di rete. *netsend_address*viene **nvarchar(100)** , con un valore predefinito è NULL.  
   
 `[ @category_name = ] 'category'` Il nome della categoria per questo operatore. *categoria* viene **sysname**, con un valore predefinito è NULL.  
   
@@ -100,7 +99,7 @@ sp_add_operator [ @name = ] 'name'
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  **sp_add_operator** deve essere eseguita la **msdb** database.  

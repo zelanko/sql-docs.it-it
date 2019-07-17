@@ -19,12 +19,12 @@ ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 1168609d35a266f2ac5fe6641aee7ca131bc9d89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 863e62dc9e2970f7531bba15f7242c73c5b0f9e7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759912"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259918"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>Introduzione a SQL Server Migration Assistant per Access (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) per l'accesso consente di convertire rapidamente oggetti di database di Access da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o gli oggetti di database SQL di Azure, caricare gli oggetti risultanti nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database SQL di Azure ed eseguire la migrazione dei dati da Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database SQL di Azure. Se necessario, è anche possibile collegare le tabelle di accesso al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tabelle di database SQL di Azure in modo che è possibile continuare a usare le applicazioni front-end Access esistenti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database SQL di Azure.  
@@ -87,7 +87,7 @@ Visualizzatore metadati accesso illustra informazioni sui database di Access che
   
 Per altre informazioni, vedere [caricamento di convertire gli oggetti di Database in SQL Server](loading-converted-database-objects-into-sql-server-accesstosql.md).  
   
-### <a name="metadata"></a>Metadati  
+### <a name="metadata"></a>Metadata  
 A destra di ogni Visualizzatore metadati sono schede che descrivono l'oggetto selezionato. Ad esempio, se si seleziona una tabella nel Visualizzatore metadati di accesso, vengono visualizzati quattro schede: **Nella tabella**, **Mapping dei tipi**, **delle proprietà**, e **dati**. Se si seleziona una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Visualizzatore metadati, visualizzati tre schede: **Nella tabella**, **SQL**, e **dati**.  
   
 La maggior parte delle impostazioni dei metadati sono di sola lettura. Tuttavia, è possibile modificare i metadati seguenti:  

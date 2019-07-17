@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b895692bf9ce65d9e063fb1d484cf84734897c86
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 0bc8ea22699762927a026ae4cc811500c193555c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494283"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072750"
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,15 +43,15 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @functname = ] 'procedure'` È il nome della funzione da chiamare all'interno della libreria di collegamento dinamico (DLL). *routine* viene **nvarchar(517)**, non prevede alcun valore predefinito. *routine* può includere facoltativamente il nome del proprietario nel formato *proprietario*.  
+`[ @functname = ] 'procedure'` È il nome della funzione da chiamare all'interno della libreria di collegamento dinamico (DLL). *routine* viene **nvarchar(517)** , non prevede alcun valore predefinito. *routine* può includere facoltativamente il nome del proprietario nel formato *proprietario*.  
   
-`[ @dllname = ] 'dll'` È il nome della DLL che contiene la funzione. *DLL* viene **nvarchar (255)**, non prevede alcun valore predefinito. È consigliabile specificare il percorso completo della DLL.  
+`[ @dllname = ] 'dll'` È il nome della DLL che contiene la funzione. *DLL* viene **nvarchar (255)** , non prevede alcun valore predefinito. È consigliabile specificare il percorso completo della DLL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  Dopo la creazione di una stored procedure estesa, deve essere aggiunto al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando **sp_addextendedproc**. Per altre informazioni, vedere [aggiunta di una Stored Procedure estesa a SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md).  

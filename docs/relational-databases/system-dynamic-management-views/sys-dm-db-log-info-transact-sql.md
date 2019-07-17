@@ -20,12 +20,12 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50549b10793346331d2e5cb8668243db615a443b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7cb87d2d5677085edc8e6bd998f20c3c45013823
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719519"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262085"
 ---
 # <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ Richiede il `VIEW DATABASE STATE` autorizzazione nel database.
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-determing-databases-in-a-sql-server-instance-with-high-number-of-vlfs"></a>A. Metodo database in un'istanza di SQL Server con numero elevato di file di log virtuali
+### <a name="a-determing-databases-in-a-sql-server-instance-with-high-number-of-vlfs"></a>R. Metodo database in un'istanza di SQL Server con numero elevato di file di log virtuali
 La query seguente identifica i database con più di 100 file di log virtuali nei file di log, che possono influenzare il tempo di avvio, ripristino e ripristino di database.
 
 ```sql

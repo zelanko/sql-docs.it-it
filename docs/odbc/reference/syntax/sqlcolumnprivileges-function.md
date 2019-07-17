@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10d05310f7d9580b652f24bffa0896e32b23a40a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e3c54e0e2eb4ad633d35159e1ff010c9388f5d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537704"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118709"
 ---
 # <a name="sqlcolumnprivileges-function"></a>SQLColumnPrivileges Function
 **Conformità**  
@@ -137,7 +136,7 @@ SQLRETURN SQLColumnPrivileges(
   
 |Nome colonna|Numero colonna|Tipo di dati|Commenti|  
 |-----------------|-------------------|---------------|--------------|  
-|TABLE_CAT  (ODBC 1.0)|1|Varchar|Identificatore del catalogo. NULL se non applicabile all'origine dati. Se un driver supporta i cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando i dati vengono recuperati dai diversi DBMS, restituisce una stringa vuota ("") per le tabelle che non dispone di cataloghi.|  
+|TABLE_CAT (ODBC 1.0)|1|Varchar|Identificatore del catalogo. NULL se non applicabile all'origine dati. Se un driver supporta i cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando i dati vengono recuperati dai diversi DBMS, restituisce una stringa vuota ("") per le tabelle che non dispone di cataloghi.|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|Identificatore dello schema. NULL se non applicabile all'origine dati. Se un driver supporta gli schemi per alcune tabelle ma non per altri utenti, ad esempio quando i dati vengono recuperati dai diversi DBMS, restituisce una stringa vuota ("") per le tabelle che non hanno schemi.|  
 |TABLE_NAME (ODBC 1.0)|3|Non NULL varchar|Identificatore di tabella.|  
 |COLUMN_NAME (ODBC 1.0)|4|Non NULL varchar|Nome colonna. Il driver restituisce una stringa vuota per una colonna che non dispone di un nome.|  
