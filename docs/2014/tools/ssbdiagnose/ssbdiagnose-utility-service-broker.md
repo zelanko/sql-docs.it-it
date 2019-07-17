@@ -1,5 +1,5 @@
 ---
-title: ssbdiagnose (Service Broker) utilità | Microsoft Docs
+title: Utilità ssbdiagnose (Service Broker) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 323ccf41b5285f4bc395223025ea164a330c28a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823685"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211002"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilità ssbdiagnose (Service Broker)
   L'utilità **ssbdiagnose** segnala la presenza di problemi in conversazioni di [!INCLUDE[ssSB](../../includes/sssb-md.md)] o nella configurazione di servizi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . I controlli della configurazione possono essere eseguiti per due servizi oppure per un unico servizio. I problemi vengono segnalati nella finestra del prompt dei comandi in testo leggibile oppure in un file XML formattato che può essere reindirizzato a un file oppure a un altro programma.  
@@ -116,7 +116,7 @@ ms.locfileid: "52823685"
  **-IGNORE** *error_id*  
  Specifica che i messaggi o gli errori con il valore *error_id* specificato non devono essere inclusi nei report. È possibile specificare **-IGNORE** più volte per eliminare più ID messaggio.  
   
- **\<baseconnectionoptions >**  
+ **\<baseconnectionoptions>**  
  Specifica le informazioni di connessione di base usate da **ssbdiagnose** quando le opzioni di connessione non sono incluse in una clausola specifica. Le informazioni di connessione indicate in una clausola specifica prevalgono sulle informazioni specificate in **baseconnectionoption** . Questa situazione viene gestita separatamente per ciascun parametro. Ad esempio, se vengono specificati **-S** e **-d** in **baseconnetionoptions**e solo **-d** è specificato in **toconnetionoptions**, **ssbdiagnose** userà -S di **baseconnetionoptions** e -d di **toconnetionoptions**.  
   
  **CONFIGURATION**  
@@ -141,7 +141,7 @@ FROM sys.databases
 WHERE database_id = DB_ID();  
 ```  
   
- **\<toconnectionoptions >**  
+ **\<toconnectionoptions>**  
  Specifica le informazioni necessarie per connettersi al database che contiene il servizio di destinazione. Se **toconnectionoptions** non viene specificato, **ssbdiagnose** usa le informazioni di connessione di **baseconnectionoptions** per la connessione al database di destinazione.  
   
  **MIRROR**  
@@ -156,11 +156,11 @@ WHERE database_id = DB_ID();
  **ENCRYPTION** { **ON** | **OFF** | **ANONYMOUS** }  
  Richiede di verificare che il dialogo sia configurato correttamente per il livello di crittografia specificato:  
   
- **ON**: Impostazione predefinita. Viene configurata la sicurezza completa del dialogo. Questo significa che i certificati sono stati distribuiti in entrambi i lati del dialogo, che è presente un'associazione al servizio remoto e che nell'istruzione GRANT SEND per il servizio di destinazione è stato specificato l'utente che avvia il dialogo.  
+ **ON**: impostazione predefinita. Viene configurata la sicurezza completa del dialogo. Questo significa che i certificati sono stati distribuiti in entrambi i lati del dialogo, che è presente un'associazione al servizio remoto e che nell'istruzione GRANT SEND per il servizio di destinazione è stato specificato l'utente che avvia il dialogo.  
   
- **DISATTIVARE**: È configurata alcuna sicurezza del dialogo. Questo significa che non è stato distribuito alcun certificato, non è stata creata alcuna associazione al servizio remoto e in GRANT SEND per il servizio Initiator è stato specificato il ruolo **public** .  
+ **OFF**: non viene configurata alcuna sicurezza del dialogo. Questo significa che non è stato distribuito alcun certificato, non è stata creata alcuna associazione al servizio remoto e in GRANT SEND per il servizio Initiator è stato specificato il ruolo **public** .  
   
- **ANONIMO**: Sicurezza anonima del dialogo è configurata. Questo significa che è stato distribuito solo un certificato, che nell'associazione al servizio remoto è stata specificata la clausola anonima e che in GRANT SEND per il servizio di destinazione è stato specificato il ruolo **public** .  
+ **ANONYMOUS**: viene configurata la sicurezza anonima del dialogo. Questo significa che è stato distribuito solo un certificato, che nell'associazione al servizio remoto è stata specificata la clausola anonima e che in GRANT SEND per il servizio di destinazione è stato specificato il ruolo **public** .  
   
  **RUNTIME**  
  Richiede che venga generato un report di problemi che provocano errori di run-time per una conversazione di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Se non viene specificata l'opzione **-NEW** o **-ID** , **ssbdiagnose** esegue il monitoraggio di tutte le conversazioni in tutti i database specificati nelle opzioni di connessione. Se viene specificata l'opzione **-NEW** o **-ID** , **ssbdiagnose** compila un elenco degli ID specificati nei parametri.  
@@ -200,7 +200,7 @@ WHERE database_id = DB_ID();
  Gli ID conversazione vengono indicati nel `conversation_id` colonna il **Sys. conversation_endpoints** vista del catalogo.  
   
  **-TIMEOUT** *timeout_interval*  
- Specifica il numero di secondi per l'esecuzione un report **RUNTIME** . Se l'opzione **-TIMEOUT** non viene specificata, il report di runtime viene eseguito per un periodo di tempo illimitato. **- TIMEOUT** viene usata solo nei report **RUNTIME** e non nei report **CONFIGURATION** . Usare CTRL + C per uscire da **ssbdiagnose** se **-TIMEOUT** non è stata specificata oppure per terminare un report di runtime prima che scada l'intervallo di time**-** out. Il valore*timeout_interval* deve essere un numero compreso tra 1 e 2,147,483,647.  
+ Specifica il numero di secondi per l'esecuzione un report **RUNTIME** . Se l'opzione **-TIMEOUT** non viene specificata, il report di runtime viene eseguito per un periodo di tempo illimitato. **- TIMEOUT** viene usata solo nei report **RUNTIME** e non nei report **CONFIGURATION** . Usare CTRL + C per uscire da **ssbdiagnose** se **-TIMEOUT** non è stata specificata oppure per terminare un report di runtime prima che scada l'intervallo di time **-** out. Il valore*timeout_interval* deve essere un numero compreso tra 1 e 2,147,483,647.  
   
  **\<runtimeconnectionoptions>**  
  Specifica le informazioni di connessione per i database che contengono i servizi associati agli elementi di conversazione monitorati. Se tutti i servizi si trovano nello stesso database, è necessario specificare solo una clausola **CONNECT TO** , mentre se i servizi si trovano in database separati è necessario specificare una clausola **CONNECT TO** per ogni database. Se **runtimeconnectionoptions** non viene specificato, **ssbdiagnose** usa le informazioni di connessione di **baseconnectionoptions**.  
@@ -314,7 +314,7 @@ WHERE database_id = DB_ID();
 ## <a name="examples"></a>Esempi  
  Questa sezione include esempi d'uso di **ssbdiagnose** a un prompt dei comandi.  
   
-### <a name="a-checking-the-configuration-of-two-services-in-the-same-database"></a>A. Controllo della configurazione di due servizi nello stesso database  
+### <a name="a-checking-the-configuration-of-two-services-in-the-same-database"></a>R. Controllo della configurazione di due servizi nello stesso database  
  Nell'esempio seguente viene illustrato come richiedere un report di configurazione quando si verificano le seguenti condizioni:  
   
 -   Il servizio Initiator e quello di destinazione si trovano nello stesso database.  
@@ -329,7 +329,7 @@ WHERE database_id = DB_ID();
 ssbdiagnose -E -d MyDatabase CONFIGURATION FROM SERVICE /test/initiator TO SERVICE /test/target  
 ```  
   
-### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>b. Controllo della configurazione di due servizi in computer separati che utilizzano un unico account di accesso  
+### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>B. Controllo della configurazione di due servizi in computer separati che utilizzano un unico account di accesso  
  Nell'esempio seguente viene illustrato come richiedere un report di configurazione quando il servizio Initiator e quello di destinazione si trovano in computer separati, ma l'accesso ai servizi può essere eseguito utilizzando lo stesso account con autenticazione di Windows.  
   
 ```  

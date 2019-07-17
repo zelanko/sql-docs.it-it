@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_index_fragments (Transact-SQL) | Microsoft Docs
+title: fulltext_index_fragments (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,14 +22,13 @@ ms.assetid: a82e5018-5d88-45c0-9a47-c251e17a6cdb
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 818457ae809b6dec653d6d546fc36b75a27fbf6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 295d924422410bbf247d9b96d27b705fdfe3b5d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133824"
 ---
 # <a name="sysfulltextindexfragments-transact-sql"></a>sys.fulltext_index_fragments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "64945556"
 |table_id|**int**|ID oggetto della tabella che contiene il frammento di indice full-text.|  
 |fragment_object_id|**int**|ID oggetto della tabella interna associata al frammento.|  
 |fragment_id|**int**|ID logico del frammento di indice full-text. L'ID è univoco per tutti i frammenti della tabella.|  
-|TIMESTAMP|**timestamp**|Timestamp associato alla creazione del frammento. I timestamp dei frammenti più recenti sono più grandi dei timestamp di frammenti più vecchi.|  
+|timestamp|**timestamp**|Timestamp associato alla creazione del frammento. I timestamp dei frammenti più recenti sono più grandi dei timestamp di frammenti più vecchi.|  
 |data_size|**int**|Dimensione logica del frammento, espressa in byte.|  
 |row_count|**int**|Numero di righe singole nel frammento.|  
 |status|**int**|Stato del frammento. I valori possibili sono:<br /><br /> 0 = Appena creato e non ancora utilizzato.<br /><br /> 1 = Utilizzato per operazioni di inserimento durante il popolamento o l'unione di un indice full-text.<br /><br /> 4 = Chiuso. Pronto per le query<br /><br /> 6 = Utilizzato per l'input unione e pronto per le query.<br /><br /> 8 = Contrassegnato per l'eliminazione. Non verrà utilizzato per le query e l'unione dell'origine.<br /><br /> Stato di 4 o 6 indica che il frammento fa parte dell'indice full-text logico e un possibile effettuarvi; in altre parole, si tratta di un *queryable* frammento.|  

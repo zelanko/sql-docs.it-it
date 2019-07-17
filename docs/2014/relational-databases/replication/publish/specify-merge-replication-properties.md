@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 22460851ce3136301beaf5d94e7b0a3b39f8217c
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582694"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199290"
 ---
 # <a name="specify-merge-replication-properties"></a>Specificare le proprietà della replica di Merge
 Questo argomento illustra come specificare varie proprietà per la replica di tipo merge. 
@@ -33,7 +33,7 @@ Questo argomento illustra come specificare varie proprietà per la replica di ti
 -   Se si specifica che un articolo è di tipo solo download dopo l'inizializzazione delle sottoscrizioni, tutte le sottoscrizioni client a cui è stato inviato l'articolo devono essere reinizializzate. Non è necessario reinizializzare le sottoscrizioni server. Per altre informazioni sugli effetti delle modifiche delle proprietà, vedere [Modifica delle proprietà di pubblicazioni e articoli](change-publication-and-article-properties.md).  
   
 ### <a name="using-sql-server-management-studio"></a>Utilizzo di SQL Server Management Studio  
- Specificare che un articolo è di tipo solo download nella pagina **Articoli** della Creazione guidata nuova pubblicazione o nella scheda **Proprietà** della finestra di dialogo **Proprietà articolo - \<Articolo>**. Questa finestra di dialogo è disponibile nella Creazione guidata nuova pubblicazione e nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](../publish/create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](../publish/view-and-modify-publication-properties.md).  
+ Specificare che un articolo è di tipo solo download nella pagina **Articoli** della Creazione guidata nuova pubblicazione o nella scheda **Proprietà** della finestra di dialogo **Proprietà articolo - \<Articolo>** . Questa finestra di dialogo è disponibile nella Creazione guidata nuova pubblicazione e nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](../publish/create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](../publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-that-an-article-is-download-only-on-the-articles-page"></a>Per specificare che un articolo è di tipo solo download nella pagina Articoli  
   
@@ -52,7 +52,7 @@ Questo argomento illustra come specificare varie proprietà per la replica di ti
 ###  <a name="using-transact-sql"></a>Utilizzo di Transact-SQL  
   
 #### <a name="to-specify-that-a-new-merge-table-article-is-download-only"></a>Per specificare che un nuovo articolo di tabella di merge è di solo download    
-1.  Eseguire [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), specificando il valore **1** o **2** per il parametro **@subscriber_upload_options**. I numeri corrispondono al comportamento seguente:  
+1.  Eseguire [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), specificando il valore **1** o **2** per il parametro **@subscriber_upload_options** . I numeri corrispondono al comportamento seguente:  
   
     -   **0** : nessuna restrizione (valore predefinito). Le modifiche eseguite nel Sottoscrittore vengono caricate nel server di pubblicazione.    
     -   **1** : le modifiche sono consentite nel Sottoscrittore, ma non vengono caricate nel server di pubblicazione.    
@@ -64,7 +64,7 @@ Questo argomento illustra come specificare varie proprietà per la replica di ti
 #### <a name="to-modify-an-existing-merge-table-article-to-be-download-only"></a>Per impostare il tipo di un articolo di tabella di merge esistente su solo download  
   
 1.  Per determinare se un articolo è di tipo solo download, eseguire [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql). Si noti il valore di **upload_options** relativo all'articolo nel set di risultati.    
-2.  Se il valore restituito al passaggio 1 è **0**, eseguire [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), specificando il valore **subscriber_upload_options** per **@property**, il valore **1** per **@force_invalidate_snapshot** e **@force_reinit_subscription**e il valore **1** o **2** per **@value**, che corrisponde al comportamento seguente:  
+2.  Se il valore restituito al passaggio 1 è **0**, eseguire [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), specificando il valore **subscriber_upload_options** per **@property** , il valore **1** per **@force_invalidate_snapshot** e **@force_reinit_subscription** e il valore **1** o **2** per **@value** , che corrisponde al comportamento seguente:  
   
     -   **1** : le modifiche sono consentite nel Sottoscrittore, ma non vengono caricate nel server di pubblicazione.    
     -   **2** : non è consentito apportare modifiche nel Sottoscrittore.  
@@ -84,7 +84,7 @@ La replica di[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ss
   
 #### <a name="enable-interactive-conflict-resolution-for-an-article"></a>Abilitare la risoluzione interattiva dei conflitti per un articolo  
   
-1.  Selezionare una tabella nella pagina **Articoli** della Creazione guidata nuova pubblicazione o nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md).    
+1.  Selezionare una tabella nella pagina **Articoli** della Creazione guidata nuova pubblicazione o nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](view-and-modify-publication-properties.md).    
 2.  Fare clic su **Proprietà articolo**, quindi su **Imposta proprietà dell'articolo di tabella evidenziato** o su **Imposta proprietà di tutti gli articoli di tabelle**.    
 3.  Nella pagina **Proprietà articolo - \<Articolo>** o **Proprietà di tutti gli articoli - \<Tipo articolo>** fare clic sulla scheda **Sistema di risoluzione**.    
 4.  Selezionare **Consenti la risoluzione interattiva dei conflitti nel Sottoscrittore durante la sincronizzazione su richiesta**.    
@@ -101,21 +101,21 @@ La replica di[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ss
   
 #### <a name="create-a-merge-pull-subscription-that-uses-the-interactive-resolver"></a>Creare una sottoscrizione pull di tipo merge che usa il sistema di risoluzione interattivo  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), specificando **@publication**. Notare il valore di **allow_interactive_resolver** relativo a ogni articolo nel set di risultati per il quale verrà utilizzato il sistema di risoluzione interattivo.    
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), specificando **@publication** . Notare il valore di **allow_interactive_resolver** relativo a ogni articolo nel set di risultati per il quale verrà utilizzato il sistema di risoluzione interattivo.    
     -   Se questo valore è **1**, il sistema di risoluzione interattivo verrà utilizzato.    
-    -   Se questo valore è **0**, è prima necessario attivare il sistema di risoluzione interattivo per ogni articolo. A tale scopo, eseguire [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), specificando **@publication**, **@article**, il valore **allow_interactive_resolver** per **@property**e il valore **true** per **@value**.    
+    -   Se questo valore è **0**, è prima necessario attivare il sistema di risoluzione interattivo per ogni articolo. A tale scopo, eseguire [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), specificando **@publication** , **@article** , il valore **allow_interactive_resolver** per **@property** e il valore **true** per **@value** .    
 2.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Per altre informazioni, vedere [Creazione di una sottoscrizione pull](../create-a-pull-subscription.md).    
 3.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)specificando i parametri seguenti:  
   
-    -   **@publisher**, **@publisher_db** (database pubblicato) e **@publication**.    
-    -   Il valore **true** per **@enabled_for_syncmgr**.    
-    -   Il valore **true** per **@use_interactive_resolver**.    
+    -   **@publisher** , **@publisher_db** (database pubblicato) e **@publication** .    
+    -   Il valore **true** per **@enabled_for_syncmgr** .    
+    -   Il valore **true** per **@use_interactive_resolver** .    
     -   Le informazioni sull'account di sicurezza richieste dall'agente di merge. Per altre informazioni, vedere [Create a Pull Subscription](../create-a-pull-subscription.md).    
 4.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql).  
   
 #### <a name="define-an-article-that-supports-the-interactive-resolver"></a>Definire un articolo che supporta il sistema di risoluzione interattivo  
   
-Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Specificare il nome della pubblicazione cui appartiene l'articolo per **@publication**, il nome dell'articolo per **@article**, l'oggetto di database da pubblicare per **@source_object**e il valore **true** per **@allow_interactive_resolver**. Per altre informazioni, vedere [definire un articolo](define-an-article.md).  
+Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Specificare il nome della pubblicazione cui appartiene l'articolo per **@publication** , il nome dell'articolo per **@article** , l'oggetto di database da pubblicare per **@source_object** e il valore **true** per **@allow_interactive_resolver** . Per altre informazioni, vedere [definire un articolo](define-an-article.md).  
 
 ## <a name="specify-the-conflict-tracking-and-resolution-level"></a>Specificare il livello di risoluzione e rilevamento dei conflitti 
 Quando si sincronizza una sottoscrizione di una pubblicazione di tipo merge, la replica verifica la presenza di conflitti causati dalle modifiche apportate agli stessi dati nel server di pubblicazione e nel Sottoscrittore. È possibile specificare se rilevare i conflitti a livello di riga, ovvero considerare un conflitto qualsiasi modifica apportata alla riga, o a livello di colonna, ovvero considerare un conflitto solo le modifiche apportate alla stessa riga e colonna. La risoluzione dei conflitti relativi agli articoli viene eseguita a livello di riga. Per ulteriori informazioni sul rilevamento e sulla risoluzione dei conflitti in caso di utilizzo dei record logici, vedere [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
@@ -128,11 +128,11 @@ Quando si sincronizza una sottoscrizione di una pubblicazione di tipo merge, la 
 -   Con il rilevamento a livello di riga e di colonna, la risoluzione dei conflitti viene sempre eseguita a livello di riga, ovvero la riga che prevale sovrascrive quella perdente. La replica di tipo merge consente inoltre di specificare che i conflitti vengano rilevati e risolti a livello di record logico. Queste opzioni tuttavia non sono disponibili in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Per informazioni sulla relativa impostazione dalle stored procedure di replica, vedere [Definizione di una relazione tra record logici degli articoli di tabelle di merge](../publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
   
 ###  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
- Specificare il rilevamento a livello di riga o colonna per gli articoli di merge nella scheda **Proprietà** della finestra di dialogo **Proprietà articolo**, disponibile nella Creazione guidata nuova pubblicazione e nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](../publish/view-and-modify-publication-properties.md).  
+ Specificare il rilevamento a livello di riga o colonna per gli articoli di merge nella scheda **Proprietà** della finestra di dialogo **Proprietà articolo**, disponibile nella Creazione guidata nuova pubblicazione e nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per altre informazioni sull'uso della creazione guidata e l'accesso alla finestra di dialogo, vedere [Creare una pubblicazione](create-a-publication.md) e [Visualizzare e modificare le proprietà della pubblicazione](../publish/view-and-modify-publication-properties.md).  
   
 #### <a name="specify-row--or-column-level-tracking"></a>Specificare il rilevamento a livello di riga o di colonna  
   
-1.  Selezionare una tabella nella pagina **Articoli** della Creazione guidata nuova pubblicazione o nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**.    
+1.  Selezionare una tabella nella pagina **Articoli** della Creazione guidata nuova pubblicazione o nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** .    
 2.  Fare clic su **Proprietà articolo**, quindi su **Imposta proprietà dell'articolo di tabella evidenziato** o su **Imposta proprietà di tutti gli articoli di tabelle**.   
 3.  Nella scheda **Proprietà** della finestra di dialogo **Proprietà articolo \<Articolo>** selezionare uno dei valori seguenti per la proprietà **Livello rilevamento**: **Rilevamento a livello di riga** o **Rilevamento a livello di colonna**.    
 4.  Se è visualizzata la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** fare clic su **OK** per salvare e chiudere la finestra di dialogo.  
@@ -141,7 +141,7 @@ Quando si sincronizza una sottoscrizione di una pubblicazione di tipo merge, la 
   
 #### <a name="specify-conflict-tracking-options-for-a-new-merge-article"></a>Specificare le opzioni per un nuovo articolo di merge di rilevamento dei conflitti  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) e specificare uno dei valori seguenti per **@column_tracking**:  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) e specificare uno dei valori seguenti per **@column_tracking** :  
   
     -   **true** : consente di utilizzare il rilevamento a livello di colonna per l'articolo.    
     -   **false** : consente di utilizzare il rilevamento a livello di riga, che corrisponde all'impostazione predefinita.  
@@ -149,11 +149,11 @@ Quando si sincronizza una sottoscrizione di una pubblicazione di tipo merge, la 
 #### <a name="change-conflict-tracking-options-for-a-merge-article"></a>Modificare le opzioni di rilevamento dei conflitti per un articolo di merge  
   
 1.  Per determinare le opzioni di rilevamento dei conflitti per un articolo di merge, eseguire [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql). Notare il valore dell'opzione **column_tracking** nel set di risultati relativo l'articolo. Il valore **1** indica che viene utilizzato il rilevamento a livello di colonna, mentre il valore **0** indica che viene utilizzato il rilevamento a livello di riga.    
-2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specificare il valore **column_tracking** per **@property** e uno dei valori seguenti per **@value**:
+2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specificare il valore **column_tracking** per **@property** e uno dei valori seguenti per **@value** :
     -   **true** : consente di utilizzare il rilevamento a livello di colonna per l'articolo.
     -   **false** : consente di utilizzare il rilevamento a livello di riga, che corrisponde all'impostazione predefinita.  
   
-     Specificare il valore **1** sia per **@force_invalidate_snapshot** e **@force_reinit_subscription**.  
+     Specificare il valore **1** sia per **@force_invalidate_snapshot** e **@force_reinit_subscription** .  
 
 ## <a name="tracking-deletes"></a>Rilevamento delle eliminazioni
 
@@ -167,7 +167,7 @@ Quando si sincronizza una sottoscrizione di una pubblicazione di tipo merge, la 
   
 ### <a name="specify-that-deletes-be-ignored-for-a-new-merge-article"></a>Specificare di ignorare le eliminazioni per un nuovo articolo di merge  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Specificare il valore `false` per **@delete_tracking**. Per altre informazioni, vedere [definire un articolo](../publish/define-an-article.md).  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Specificare il valore `false` per **@delete_tracking** . Per altre informazioni, vedere [definire un articolo](../publish/define-an-article.md).  
   
     > [!NOTE]  
     >  Se la tabella di origine di un articolo è già pubblicata in un'altra pubblicazione, il valore di **delete_tracking** deve essere uguale per entrambi gli articoli.  
@@ -175,7 +175,7 @@ Quando si sincronizza una sottoscrizione di una pubblicazione di tipo merge, la 
 ### <a name="specify-that-deletes-be-ignored-for-an-existing-merge-article"></a>Specificare di ignorare le eliminazioni per un articolo di merge esistente  
   
 1.  Per determinare se la compensazione errori è abilitata per un articolo, eseguire [sp_helpmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql) e prendere nota del valore di **delete_tracking** nel set di risultati. Se questo valore è **0**, le eliminazioni vengono già ignorate.    
-2.  Se il valore ottenuto al passaggio 1 è **1**, eseguire [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) nel database di pubblicazione del server di pubblicazione. Specificare il valore **delete_tracking** per **@property**e il valore `false` per **@value**.  
+2.  Se il valore ottenuto al passaggio 1 è **1**, eseguire [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) nel database di pubblicazione del server di pubblicazione. Specificare il valore **delete_tracking** per **@property** e il valore `false` per **@value** .  
   
     > [!NOTE]  
     >  Se la tabella di origine di un articolo è già pubblicata in un'altra pubblicazione, il valore di **delete_tracking** deve essere uguale per entrambi gli articoli.  
@@ -196,7 +196,7 @@ Quando si sincronizza una sottoscrizione di una pubblicazione di tipo merge, la 
 
 ### <a name="new-article"></a>Nuovo articolo
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Specificare un valore integer che rappresenta l'ordine di elaborazione per l'articolo per **@processing_order**. Per altre informazioni, vedere [definire un articolo](define-an-article.md).  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Specificare un valore integer che rappresenta l'ordine di elaborazione per l'articolo per **@processing_order** . Per altre informazioni, vedere [definire un articolo](define-an-article.md).  
   
     > [!NOTE]  
     >  Quando si creano articoli ordinati, è necessario lasciare gap tra i valori relativi all'ordine degli articoli. In questo modo risulta più agevole impostare nuovi valori in futuro. Se ad esempio si dispone di tre articoli per cui è necessario specificare un ordine di elaborazione fisso, impostare il valore di **@processing_order** su 10, 20 e 30 anziché rispettivamente su 1, 2 e 3.  
@@ -205,7 +205,7 @@ Quando si sincronizza una sottoscrizione di una pubblicazione di tipo merge, la 
   
 1.  Per determinare l'ordine di elaborazione di un articolo, eseguire [sp_helpmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql) e prendere nota del valore di **processing_order** nel set di risultati.  
   
-2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specificare il valore **processing_order** per **@property** e un valore integer che rappresenta l'ordine di elaborazione per **@value**.  
+2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Specificare il valore **processing_order** per **@property** e un valore integer che rappresenta l'ordine di elaborazione per **@value** .  
 
 
 

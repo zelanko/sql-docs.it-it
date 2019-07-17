@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: 0678aee9-8256-463c-89dd-77b1a0dfdd60
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ca2a52eb08cdf1b1b9cb5a23805da34aab915b7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: edf9976dd3e5d890b46919808e896a8e81a0cd93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273384"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093789"
 ---
 # <a name="usage-counting"></a>Conteggio utilizzi
 > [!NOTE]  
->  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows.  Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
+>  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows. Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
   
  Due tipi di conteggi dell'utilizzo vengono mantenuti nel Registro di sistema per ogni componente: un conteggio di utilizzo del componente e uno o più conteggi dell'utilizzo di file facoltativa. Il conteggio di utilizzo del componente aiuta il programma di installazione DLL mantenere le voci del Registro di sistema. Viene archiviato nel valore UsageCount sotto la ODBC Core, driver e le sottochiavi di Microsoft translator. Per il formato del valore UsageCount e altre informazioni su queste sottochiavi, vedere [le voci del Registro di sistema per i componenti ODBC](../../../odbc/reference/install/registry-entries-for-odbc-components.md).  
   
@@ -60,7 +59,7 @@ ms.locfileid: "63273384"
   
  Nella tabella seguente viene illustrato il formato del valore di conteggio dell'utilizzo del file.  
   
-|Nome|Tipo di dati|Dati|  
+|Name|Tipo di dati|Data|  
 |----------|---------------|----------|  
 |*full-path*|REG_DWORD|*count*|  
   

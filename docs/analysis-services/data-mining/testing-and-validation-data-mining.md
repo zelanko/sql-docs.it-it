@@ -1,5 +1,5 @@
 ---
-title: Test e convalida (Data Mining) | Documenti Microsoft
+title: Test e convalida (Data Mining) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e4ce983ed5d5a645f32466ab38d5c67ff1c68897
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018408"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182312"
 ---
 # <a name="testing-and-validation-data-mining"></a>Test e convalida (Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34018408"
  L'*utilità* include diverse metriche che indicano se il modello fornisce informazioni vantaggiose. Un modello di data mining che correla ad esempio l'ubicazione di un negozio con le vendite potrebbe essere accurato e affidabile, ma potrebbe non essere utile, poiché non è possibile generalizzare tale risultato aggiungendo altri negozi nella stessa ubicazione. Tale modello inoltre non risponde alla domanda aziendale fondamentale, ovvero non indica perché a ubicazioni specifiche è associato un numero maggiore di vendite. È possibile anche rilevare che un modello apparentemente positivo non è in effetti significativo, poiché si basa su correlazioni incrociate dei dati.  
   
 ## <a name="tools-for-testing-and-validation-of-mining-models"></a>Strumenti per il test e la convalida dei modelli di data mining  
- In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono disponibili più approcci per la convalida di soluzioni di data mining che supportano tutte le fasi della metodologia di test del data mining.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta più approcci per la convalida di soluzioni di data mining e consente di gestire tutte le fasi della metodologia di test del data mining.  
   
 -   Partizionamento dei dati in set di training e di testing.  
   
@@ -67,14 +67,14 @@ ms.locfileid: "34018408"
   
 |Argomento|Collegamenti|  
 |------------|-----------|  
-|Informazioni sulla configurazione di un set di dati di test tramite una procedura guidata o comandi DMX|[Set di training e set di dati di Testing](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
-|Informazioni sul test della distribuzione e della rappresentatività dei dati in una struttura di data mining|[La convalida incrociata & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|Informazioni sui tipi di grafico di accuratezza forniti.|[Grafico di accuratezza & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Grafico dei profitti & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Grafico a dispersione & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|Informazioni sulla creazione di una matrice di classificazione, talvolta denominata matrice di confusione, per valutare il numero di veri e falsi positivi e di veri e falsi negativi.|[Matrice di classificazione & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
+|Informazioni sulla configurazione di un set di dati di test tramite una procedura guidata o comandi DMX|[Set di dati di training e di testing](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
+|Informazioni sul test della distribuzione e della rappresentatività dei dati in una struttura di data mining|[Convalida incrociata &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|Informazioni sui tipi di grafico di accuratezza forniti.|[Grafico di accuratezza &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Grafico dei profitti &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Grafico a dispersione &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|Informazioni sulla creazione di una matrice di classificazione, talvolta denominata matrice di confusione, per valutare il numero di veri e falsi positivi e di veri e falsi negativi.|[Matrice di classificazione &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strumenti di Data Mining](../../analysis-services/data-mining/data-mining-tools.md)   
- [Soluzioni di Data Mining](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Test e convalida le attività e procedure relative alla & #40; Data Mining & #41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Strumenti di data mining](../../analysis-services/data-mining/data-mining-tools.md)   
+ [Soluzioni di data mining](../../analysis-services/data-mining/data-mining-solutions.md)   
+ [Attività e procedure di test e convalida &#40;data mining&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

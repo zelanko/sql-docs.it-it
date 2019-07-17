@@ -9,7 +9,7 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-manager: craigg
+manager: jroth
 helpviewer_keywords:
 - templates [SQL Server], SQL Server Management Studio
 - source controls [SQL Server Management Studio], tutorials
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 30b40d10ec7a4da7df0bfc9e4ba1f3aa6bb68ef5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a634a106704cebd91ce74910de17166c85c6c4de
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822947"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866263"
 ---
 # <a name="use-templates-in-sql-server-management-studio"></a>Usare modelli in SQL Server Management Studio
 
@@ -35,8 +35,9 @@ Questa esercitazione illustra i modelli predefiniti di Transact-SQL (T-SQL) che 
 
 Per completare questa esercitazione, è necessario SQL Server Management Studio e l'accesso a un server SQL.
 
-- Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
-- Installare [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+* Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+
+* Installare [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 
 ## <a name="use-template-browser"></a>Usare il visualizzatore modelli
 
@@ -108,15 +109,17 @@ Quando un modello è aperto, è possibile individuare i modelli che si trovano s
 
 5. Fare clic con il pulsante destro del mouse sul modello creato e quindi scegliere **Modifica**. Viene visualizzata la nuova finestra di query.
 
-6. Immettere il testo T-SQL che si vuole salvare. 
+6. Immettere il testo T-SQL che si vuole salvare.
 
 7. Scegliere **Salva** dal menu **File**.
 
-8. Chiudere la finestra di query esistente e aprire il nuovo modello personalizzato. 
+8. Chiudere la finestra di query esistente e aprire il nuovo modello personalizzato.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-L'articolo successivo offre suggerimenti e consigli aggiuntivi per l'uso di SQL Server Management Studio. 
+Il modo migliore per acquisire familiarità con SSMS è la pratica diretta. Questa *esercitazione* e questi articoli di *procedure* sono utili per varie funzionalità disponibili in SSMS.  Questi articoli illustrano come gestire i componenti di SSMS e individuare le funzionalità usate regolarmente.
 
-> [!div class="nextstepaction"]
-> [Suggerimenti e consigli per l'uso di SSMS](../tutorials/ssms-tricks.md)
+* [Connettersi ed eseguire query su un'istanza](../tutorials/connect-query-sql-server.md)
+* [Scripting](../tutorials/scripting-ssms.md)
+* [Configurazione di SSMS](../tutorials/ssms-configuration.md)
+* [Suggerimenti e consigli per l'uso di SSMS](../tutorials/ssms-tricks.md)

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f89b08d968b5f601c37f89b15196d6ef03db434
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9d60695bd033bfc83e3a091490f27f9432782c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702911"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926459"
 ---
 # <a name="visual-c-extensions"></a>Estensioni di Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>L'interfaccia IADORecordBinding
@@ -87,26 +86,26 @@ Update(CADORecordBinding *binding)
  Per altre informazioni, vedere [appendice a: Tipi di dati](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6), di riferimento per programmatori OLE DB.
 
 ### <a name="begin-binding-entries"></a>Iniziare a voci di associazione
- **BEGIN_ADO_BINDING**(*Class*)
+ **Le macro BEGIN_ADO_BINDING**(*classe*)
 
 ### <a name="fixed-length-data"></a>Dati a lunghezza fissa
- **ADO_FIXED_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Status, Modify*)
+ **ADO_FIXED_LENGTH_ENTRY**(*ordinale, tipo di dati, Buffer, lo stato, modificare*)
 
- **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Modify*)
+ **ADO_FIXED_LENGTH_ENTRY2**(*ordinale, tipo di dati, del Buffer, modificare*)
 
 ### <a name="numeric-data"></a>Dati numerici
- **ADO_NUMERIC_ENTRY**(*Ordinal, DataType, Buffer, Precision, Scale, Status, Modify*)
+ **ADO_NUMERIC_ENTRY**(*ordinale, tipo di dati, Buffer, precisione, scala, lo stato, modificare*)
 
- **ADO_NUMERIC_ENTRY2**(*Ordinal, DataType, Buffer, Precision, Scale, Modify*)
+ **ADO_NUMERIC_ENTRY2**(*ordinale, tipo di dati, Buffer, precisione, scala, modificare*)
 
 ### <a name="variable-length-data"></a>Dati a lunghezza variabile
  **ADO_VARIABLE_LENGTH_ENTRY**(*ordinale, tipo di dati, Buffer, le dimensioni, lo stato, lunghezza, modificare*)
 
- **ADO_VARIABLE_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Size, Status, Modify*)
+ **ADO_VARIABLE_LENGTH_ENTRY2**(*ordinale, tipo di dati, Buffer, le dimensioni, lo stato, modificare*)
 
- **ADO_VARIABLE_LENGTH_ENTRY3**(*Ordinal, DataType, Buffer, Size, Length, Modify*)
+ **ADO_VARIABLE_LENGTH_ENTRY3**(*ordinale, tipo di dati, Buffer, le dimensioni, lunghezza, modificare*)
 
- **ADO_VARIABLE_LENGTH_ENTRY4**(*Ordinal, DataType, Buffer, Size, Modify*)
+ **ADO_VARIABLE_LENGTH_ENTRY4**(*ordinale, tipo di dati, Buffer, le dimensioni, modificare*)
 
 ### <a name="end-binding-entries"></a>Associazione voci finali
  **END_ADO_BINDING**()
@@ -118,7 +117,7 @@ Update(CADORecordBinding *binding)
 |*DataType*|Tipo di dati ADO equivalente della variabile di C/C++ (vedere [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) per un elenco di tipi di dati validi). Il valore della **Recordset** campo verrà convertito in questo tipo di dati se necessario.|
 |*Buffer*|Nome della variabile C/C++ in cui il **Recordset** campo verrà archiviato.|
 |*Dimensione*|Dimensioni massime in byte del *Buffer*. Se *Buffer* conterrà una stringa a lunghezza variabile, consentire spazio per un terminazione zero.|
-|*Stato*|Nome di una variabile che indica se il contenuto del *Buffer* validi e se la conversione del campo da *DataType* ha avuto esito positivo.<br /><br /> I due valori più importanti per questa variabile sono **adFldOK**, ovvero la conversione ha avuto esito positivo; e **adFldNull**, ovvero il valore del campo sarebbe una variante di tipo VT_NULL e non semplicemente vuoto.<br /><br /> I possibili valori per *stato* sono elencati nella tabella seguente, "Valori dello stato".|
+|*Status*|Nome di una variabile che indica se il contenuto del *Buffer* validi e se la conversione del campo da *DataType* ha avuto esito positivo.<br /><br /> I due valori più importanti per questa variabile sono **adFldOK**, ovvero la conversione ha avuto esito positivo; e **adFldNull**, ovvero il valore del campo sarebbe una variante di tipo VT_NULL e non semplicemente vuoto.<br /><br /> I possibili valori per *stato* sono elencati nella tabella seguente, "Valori dello stato".|
 |*Modificare*|Flag booleano. Se TRUE, indica ad ADO è consentito aggiornare corrispondente **Recordset** con il valore contenuto nel campo *Buffer*.<br /><br /> Impostare il valore booleano *modificare* parametro su TRUE per abilitare ADO aggiornare il campo associato e FALSE se si desidera esaminare il campo, ma non modificarlo.|
 |*Precisione*|Numero di cifre che può essere rappresentato in una variabile numerica.|
 |*Scala*|Numero di posizioni decimali in una variabile numerica.|

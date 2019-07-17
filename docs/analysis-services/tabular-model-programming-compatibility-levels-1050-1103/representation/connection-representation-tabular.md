@@ -1,5 +1,5 @@
 ---
-title: Rappresentazione di una connessione (tabulare) | Documenti Microsoft
+title: Rappresentazione di una connessione (tabulare) | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2aa92dddc61d1b09c7a18ad0b334554b0026a228
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039305"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163444"
 ---
 # <a name="connection-representation-tabular"></a>Rappresentazione di una connessione (tabulare)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -68,6 +68,6 @@ newDatasource.Update();
 ```  
   
 ## <a name="tabular-amo-2012-sample"></a>Esempio Tabular AMO 2012  
- Per una migliore comprensione sull'utilizzo di AMO per creare e modificare le rappresentazioni di connessione, vedere il codice sorgente l'esempio di Tabular AMO 2012. in particolare controllare nel seguente file di origine: Database.cs. L'esempio è disponibile in Codeplex. Il codice di esempio viene fornito solo come supporto ai concetti logici illustrati in questo argomento e non deve essere utilizzato in un ambiente di produzione.  
+ Per consentire una migliore comprensione sull'utilizzo di AMO per creare e modificare le rappresentazioni di connessioni, vedere il codice sorgente nell'esempio di Tabular AMO 2012; in particolare controllare nel seguente file di origine: Database.cs. L'esempio è disponibile in Codeplex. Il codice di esempio viene fornito solo come supporto ai concetti logici illustrati in questo argomento e non deve essere utilizzato in un ambiente di produzione.  
   
   

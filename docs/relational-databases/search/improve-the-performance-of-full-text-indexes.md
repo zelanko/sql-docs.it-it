@@ -18,12 +18,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a38cad4af807d5d9d7a64e6ca45a4fdfa0df77c7
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 6d3abb2fe6d16b89ce80b50c5e33d397d1c38403
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973580"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652815"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Miglioramento delle prestazioni di indici full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -133,11 +133,11 @@ Per informazioni essenziali sulle formule seguenti, vedere le note dopo la tabel
   
 |Piattaforma|Stima dei requisiti di memoria di fdhost.exe in MB:*F*^1|Formula per il calcolo di max server memory:*M*^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* = *Numero di intervalli di ricerca per indicizzazione* * 50|*M* =minimo(*T*, 2000) - F - 500|  
-|x64|*F* = *Numero di intervalli di ricerca per indicizzazione* * 10 * 8|*M* = *T* - *F* - 500|  
+|x86|*F* = *Numero di intervalli di ricerca per indicizzazione* \* 50|*M* =minimo(*T*, 2000) - F - 500|  
+|x64|*F* = *Numero di intervalli di ricerca per indicizzazione* \* 10 \* 8|*M* = *T* - *F* - 500|  
 
 **Note sulle formule**
-1.  Se sono in corso più popolamenti completi, calcolare i requisiti di memoria di fdhost.exe per ciascuno separatamente, ad esempio *F1*, *F2* e così via. Calcolare quindi *M* come _T_**-** sigma **(**_F_i **)**.  
+1.  Se sono in corso più popolamenti completi, calcolare i requisiti di memoria di fdhost.exe per ciascuno separatamente, ad esempio *F1*, *F2* e così via. Calcolare quindi *M* come _T_ **-** sigma **(** _F_i **)** .  
 2.  500 MB è una stima della memoria necessaria per gli altri processi del sistema. Se nel sistema sono in corso processi aggiuntivi, aumentare questo valore di conseguenza.  
 3.  .*ism_size* sia 8 MB per le piattaforme x64.  
   

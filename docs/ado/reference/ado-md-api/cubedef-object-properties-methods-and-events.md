@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5dac737a-b77e-47d3-9228-cd52b7a97b0a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 19ac2cb367e076448e4831a3fd5825dfdf17d65e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ea275767e2d4c67af1d03011c8db9f7190618b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938659"
 ---
 # <a name="cubedef-object-properties-methods-and-events"></a>Proprietà, metodi ed eventi dell'oggetto CubeDef
 ## <a name="propertiescollections"></a>Le proprietà e le raccolte  
@@ -34,7 +33,7 @@ ms.locfileid: "66709400"
  [Metodo GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)  
   
 ## <a name="events"></a>Events  
- Nessuna.  
+ No.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto CubeDef (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)

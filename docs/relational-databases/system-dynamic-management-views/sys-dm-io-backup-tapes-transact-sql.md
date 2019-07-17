@@ -18,24 +18,23 @@ helpviewer_keywords:
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 195c8dc2db7011801023e7e21e68ed1f5ed75a6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c58f34404119592308515f95934e23cfc94e1fc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603469"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900401"
 ---
 # <a name="sysdmiobackuptapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restituisce l'elenco dei dispositivi nastro e lo stato delle richieste di montaggio per i backup.   
  
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**physical_device_name**|**nvarchar(520)**|Nome del dispositivo fisico in cui è possibile creare un backup. Non ammette i valori Null.|  
 |**logical_device_name**|**nvarchar(256)**|Nome specificato dall'utente per l'unità (da **Sys. backup_devices**). NULL se non è disponibile alcun nome specificato dall'utente. Ammette i valori Null.|  
-|**status**|**int**|Stato del nastro:<br /><br /> 1 = Aperto, disponibile per l'utilizzo<br /><br /> 2 = Montaggio in sospeso<br /><br /> 3 = In uso<br /><br /> 4 = Caricamento in corso<br /><br /> **Nota:** mentre viene caricato un nastro (**stato = 4**), l'etichetta del supporto non è ancora pronta. Le colonne che copiano i valori di etichetta di supporto, ad esempio **media_sequence_number**, contengono i valori previsti, che può essere diverso dai valori effettivi nel nastro. Dopo che l'etichetta è stata letta, **lo stato** diventa **3** (in uso), e le colonne di etichetta supporti riflettono il nastro effettivo caricato.<br /><br /> Non ammette i valori Null.|  
+|**status**|**int**|Stato del nastro:<br /><br /> 1 = Aperto, disponibile per l'utilizzo<br /><br /> 2 = Montaggio in sospeso<br /><br /> 3 = In uso<br /><br /> 4 = Caricamento in corso<br /><br /> **Nota:** Mentre viene caricato un nastro (**stato = 4**), l'etichetta del supporto non è ancora pronta. Le colonne che copiano i valori di etichetta di supporto, ad esempio **media_sequence_number**, contengono i valori previsti, che può essere diverso dai valori effettivi nel nastro. Dopo che l'etichetta è stata letta, **lo stato** diventa **3** (in uso), e le colonne di etichetta supporti riflettono il nastro effettivo caricato.<br /><br /> Non ammette i valori Null.|  
 |**status_desc**|**nvarchar(520)**|Descrizione dello stato del nastro:<br /><br /> AVAILABLE<br /><br /> MOUNT PENDING<br /><br /> IN USE<br /><br /> LOADING MEDIA<br /><br /> Non ammette i valori Null.|  
 |**mount_request_time**|**datetime**|Data e ora in cui il montaggio è stato richiesto. NULL se vi è alcun montaggio in sospeso (**stato! = 2**). Ammette i valori Null.|  
 |**mount_expiration_time**|**datetime**|Data e ora di scadenza della richiesta di montaggio (timeout). NULL se vi è alcun montaggio in sospeso (**stato! = 2**). Ammette i valori Null.|  

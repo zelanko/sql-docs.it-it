@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f548fff9a7634e0c105fc8ce09fa39d2aa4100c7
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 3ae6d0d35da353a9307832989f562f3282af19e5
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67580744"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860713"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Elaborazione di query intelligenti nei database SQL
 
@@ -130,7 +130,7 @@ Alcune condizioni rendono un join logico idoneo per un join adattivo in modalit√
 Se un join adattivo passa al funzionamento con cicli annidati usa le righe gi√† lette dalla compilazione hash join. L'operatore **non** legge di nuovo le righe del riferimento esterno.
 
 ### <a name="adaptive-threshold-rows"></a>Righe della soglia adattiva
-Il grafico seguente visualizza un esempio di intersezione tra il costo di un hash join e il costo di un join a cicli annidati alternativo.? In questo punto di intersezione viene determinata la soglia, che a sua volta determina l'algoritmo usato per l'operazione di join.
+Il grafico seguente visualizza un esempio di intersezione tra il costo di un hash join e il costo di un join a cicli annidati alternativo. In questo punto di intersezione viene determinata la soglia, che a sua volta determina l'algoritmo usato per l'operazione di join.
 
 ![Soglia di join](./media/6_AQPJoinThreshold.png)
 

@@ -19,12 +19,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 88c74779b60ae25ea381a2814b06a11b4fdd2e22
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: 471b4fac245dcdb1aec537ccd3e8345d99039871
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343861"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624393"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -239,7 +239,10 @@ Le colonne restituite dalla funzione OPENJSON dipendono dall'opzione WITH.
   
      Vengono restituite solo le proprietà di primo livello. L'istruzione ha esito negativo se il testo JSON non è formattato correttamente.  
 
-2. Quando si chiama OPENJSON e si specifica uno schema esplicito nella clausola WITH, la funzione restituisce una tabella con lo schema definito nella clausola WITH.  
+2. Quando si chiama OPENJSON e si specifica uno schema esplicito nella clausola WITH, la funzione restituisce una tabella con lo schema definito nella clausola WITH.
+
+> [!NOTE]  
+> Le colonne **Key**, **Value** e **Type** vengono restituite solo quando si usa OPENJSON con lo schema predefinito e non sono disponibili con uno schema esplicito.
 
 ## <a name="remarks"></a>Remarks  
 

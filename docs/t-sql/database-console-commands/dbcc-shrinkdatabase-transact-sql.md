@@ -29,12 +29,12 @@ author: pmasl
 ms.author: umajay
 manager: craigg
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: ab639417592966f1c591116743d2d38bfacc837f
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+ms.openlocfilehash: d580ed70608dc68fbd86b31177a568e7b74e3796
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342900"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866227"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ Sposta le pagine assegnate dalla fine del file alle pagine non assegnate all'ini
   
 Lo spazio disponibile alla fine del file non viene restituito al sistema operativo e le dimensioni fisiche del file rimangono invariate. Di conseguenza, quando si specifica NOTRUNCATE il database viene visualizzato come non compattato.  
   
-NOTRUNCATE è applicabile solo ai file di dati. NONTRUNCATE non ha effetti sul file di log.  
+NOTRUNCATE è applicabile solo ai file di dati. NOTRUNCATE non ha effetti sul file di log.  
   
 TRUNCATEONLY  
 Restituisce al sistema operativo tutto lo spazio disponibile alla fine del file. Non sposta le pagine all'interno del file. Il file di dati viene compattato solo fino all'ultimo extent assegnato. _target\_percent_ viene ignorato se specificato con TRUNCATEONLY. Azure SQL Data Warehouse non supporta questa opzione.
@@ -165,7 +165,7 @@ DBCC SHRINKDATABASE (UserDB, 10);
 GO  
 ```  
   
-### <a name="b-truncating-a-database"></a>b. Troncamento di un database  
+### <a name="b-truncating-a-database"></a>B. Troncamento di un database  
 Nell'esempio seguente i file di dati e di log nel database di esempio `AdventureWorks` vengono compattati fino all'ultimo extent assegnato.  
   
 ```sql  

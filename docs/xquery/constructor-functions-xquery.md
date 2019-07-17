@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b426d7f4f5056c76e7ccc6807785366f0f12287f
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 7f64c9ff6664410983d9c3ce7ebdbf07e493ca03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293037"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038987"
 ---
 # <a name="constructor-functions-xquery"></a>Funzioni costruttore (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -138,8 +137,8 @@ TYP($atomicvalue as xdt:anyAtomicType?
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
   
-### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. Utilizzo della funzione XQuery dateTime() per recuperare descrizioni di prodotto non recenti  
- In questo esempio, un documento XML di esempio viene innanzitutto assegnato a un **xml** variabile di tipo. Il documento contiene tre elementi <`ProductDescription`> di esempio, ognuno dei quali contiene un elemento figlio <`DateCreated`>.  
+### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>R. Utilizzo della funzione XQuery dateTime() per recuperare descrizioni di prodotto non recenti  
+ In questo esempio, un documento XML di esempio viene innanzitutto assegnato a un **xml** variabile di tipo. Questo documento contiene tre esempi <`ProductDescription`> elementi, con ciascuno di essi che contengono una <`DateCreated`> elemento figlio.  
   
  Viene quindi eseguita una query sulla variabile per recuperare le descrizioni di prodotto create prima di una data specifica. Ai fini del confronto, la query Usa la **tipizzare** funzione del costruttore al tipo date.  
   
@@ -174,13 +173,13 @@ select @x.query('
   
  Dalla query precedente si noti quanto segue:  
   
--   La struttura del ciclo FOR ... Struttura ciclica in cui viene usato per recuperare il \<ProductDescription > elemento che soddisfa la condizione specificata nella clausola WHERE.  
+-   Il ciclo FOR... Struttura ciclica in cui viene usato per recuperare il \<ProductDescription > elemento che soddisfa la condizione specificata nella clausola WHERE.  
   
 -   Il **DateTime ()** funzione del costruttore viene utilizzato per costruire **dateTime** digitare i valori in modo che possono essere confrontati in modo appropriato.  
   
 -   La query genera quindi il codice XML risultante. Poiché si sta creando una sequenza di attributi, nella costruzione di strutture XML vengono utilizzate virgole e parentesi.  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <Product   

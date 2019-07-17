@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ac7922dda2d486f4783d1230296dc89b81cb4fe3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: decbc7c3b377234d91fe6b3e662d9449298041c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923610"
 ---
 # <a name="using-ado-for-internet-publishing"></a>Uso di ADO per Internet Publishing
 [Il Provider OLE DB per Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) Mostra un esempio specifico dell'accesso ai dati eterogenei con ADO. Anche se gli esempi in questa sezione saranno specifici per l'uso di Provider di pubblicazione, i principi illustrati dovrebbero essere simili quando si utilizza ADO con altri provider di dati eterogenei, ad esempio un provider in un archivio di posta elettronica.  
@@ -54,6 +53,6 @@ ms.locfileid: "66718612"
 -   [Record e campi specificati dal provider](../../../ado/guide/data/records-and-provider-supplied-fields.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Oggetto record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Oggetto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Cronologia di ADO](../../../ado/guide/ado-history.md)

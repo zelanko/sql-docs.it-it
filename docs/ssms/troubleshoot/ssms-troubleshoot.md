@@ -11,18 +11,20 @@ ms.author: maghan
 manager: jroth
 ms.custom: ''
 ms.date: 07/01/2019
-ms.openlocfilehash: 424b0863da9d0d2cfb56676bed5c368efc4d9349
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 41f140a00669e1b5809b83b369f86ba8b277a37e
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67501188"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716766"
 ---
 # <a name="get-diagnostic-data-after-a-sql-server-management-studio-ssms-crash"></a>Ottenere dati di diagnostica dopo un arresto anomalo di SQL Server Management Studio (SSMS)
 
 [!INCLUDE[Si applica a](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)
 
-## <a name="get-full-memory-dump-of-sql-server-management-studio-ssms-when-it-hangs-or-crashes"></a>Ottenere il dump della memoria completo di SQL Server Management Studio (SSMS) in seguito a un blocco o un arresto anomalo
+## <a name="get-full-memory-dump-after-a-hang-or-crash"></a>Ottenere il dump della memoria completo dopo un blocco o un arresto anomalo del sistema
+
+Ottenere un dump della memoria completo di SQL Server Management Studio (SSMS) in seguito a un blocco o un arresto anomalo.
 
 Per acquisire le informazioni di diagnostica per risolvere i problemi di un arresto anomalo o un blocco di SSMS, seguire questa procedura.
 
@@ -53,7 +55,9 @@ Per acquisire le informazioni di diagnostica per risolvere i problemi di un arre
 
 9. Zip up the folder
 
-## Get full memory dump of SSMS when it throws an OutOfMemoryException
+## Get full memory dump for an OutOfMemoryException
+
+Get a full memory dump of SSMS when it throws an OutOfMemoryException.
 
 You can get a full memory dump with any managed exception.
 

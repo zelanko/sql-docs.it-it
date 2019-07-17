@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fdbca3ed012e082c899a5015faabc5c0019fcd75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130617"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68197113"
 ---
 # <a name="stored-procedures-database-engine"></a>Stored procedure (Motore di database)
-  Una stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un gruppo di una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] oppure un riferimento a un metodo CLR (Common Runtime Language) di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Le stored procedure assomigliano ai costrutti di altri linguaggi di programmazione perché possono essere utilizzate per:  
+  Una stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un gruppo di una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] oppure un riferimento a un metodo CLR (Common Runtime Language) di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Le stored procedure assomigliano ai costrutti di altri linguaggi di programmazione perché possono essere utilizzate per:  
   
 -   Accettare parametri di input e restituire più valori sotto forma di parametri di output al programma che esegue la chiamata.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48130617"
  Le stored procedure temporanee sono un tipo di stored procedure definite dall'utente. Sono simili alle stored procedure permanenti, ma vengono archiviate in **tempdb**. Esistono due tipi di stored procedure temporanee:locali e globali. I due tipi differiscono per i nomi, la visibilità e la disponibilità. Le stored procedure temporanee locali contengono un solo simbolo di cancelletto (#) come primo carattere del nome, sono visibili solo durante la connessione utente corrente e vengono eliminate alla chiusura della connessione. Le stored procedure temporanee globali contengono due simboli di cancelletto (##) come primi caratteri del nome, sono visibili per tutti gli utenti in seguito alla creazione e vengono eliminate al termine dell'ultima sessione che utilizza la stored procedure.  
   
  Sistema  
- Le stored procedure di sistema sono incluse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sono archiviate fisicamente nel **database delle risorse** , interno e nascosto e livello logico compaiono nello schema **sys** di tutti i database di sistema e di quelli definiti dall'utente. Inoltre, il database **msdb** contiene anche stored procedure di sistema nello schema **dbo** che vengono utilizzate per la pianificazione di avvisi e processi. Dal momento che le stored procedure di sistema iniziano con il prefisso **sp_**, si consiglia di non utilizzare questo prefisso per l'assegnazione di un nome alle procedure definite dall'utente. Per un elenco completo delle stored procedure di sistema, vedere [Stored procedure di sistema &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)  
+ Le stored procedure di sistema sono incluse in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sono archiviate fisicamente nel **database delle risorse** , interno e nascosto e livello logico compaiono nello schema **sys** di tutti i database di sistema e di quelli definiti dall'utente. Inoltre, il database **msdb** contiene anche stored procedure di sistema nello schema **dbo** che vengono utilizzate per la pianificazione di avvisi e processi. Dal momento che le stored procedure di sistema iniziano con il prefisso **sp_** , si consiglia di non utilizzare questo prefisso per l'assegnazione di un nome alle procedure definite dall'utente. Per un elenco completo delle stored procedure di sistema, vedere [Stored procedure di sistema &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta le stored procedure di sistema che forniscono ai programmi esterni un'interfaccia di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per varie attività di manutenzione. Tali stored procedure estese utilizzano il prefisso xp_. Per un elenco completo delle stored procedure estese, vedere [Stored procedure estese generali &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql).  
   

@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: b987c2b9-998a-4a5f-a82d-280dc6963cbe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a64e683ebe83da31f678f1a5ec1e6c97abf1e601
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e6a6c91cb31c9c3036bc95239f0aff9c75fda7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824809"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936971"
 ---
 # <a name="sysdmauditactions-transact-sql"></a>sys.dm_audit_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Restituisce una riga per ogni azione di controllo che può essere segnalata nel log di controllo e per ogni gruppo di azioni di controllo che possono essere configurate come parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Per altre informazioni sulle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit, vedere [SQL Server Audit &#40;motore di Database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**action_id**|**varchar(4)**|ID dell'azione di controllo. Correlato per il **action_id** valore scritto in ogni record di controllo. Ammette i valori Null. Per i gruppi di controllo, il valore è Null.|  
 |**action_in_log**|**bit**|Indica se un'azione può essere scritta in un log di controllo. Sono disponibili i valori seguenti:<br /><br /> 1 = Sì<br /><br /> 0 = No|  

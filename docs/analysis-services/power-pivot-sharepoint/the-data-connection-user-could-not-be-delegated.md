@@ -1,5 +1,5 @@
 ---
-title: L'utente di connessione dati non può essere delegato | Documenti Microsoft
+title: L'utente di connessione dati non può essere delegato | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbf9b41b58e4c492c4b278aa4cad60fa26dbcb08
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34028342"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208007"
 ---
-# <a name="the-data-connection-user-could-not-be-delegated"></a>L'utente di connessione dati non può essere delegato.
+# <a name="the-data-connection-user-could-not-be-delegated"></a>L'utente di connessione dati non può essere delegato
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Per le cartelle di lavoro di Excel contenenti dati di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , Excel Services restituisce questo errore se non riesce a connettersi a un'istanza del server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in SharePoint.  
   
@@ -27,7 +27,7 @@ ms.locfileid: "34028342"
 |Applicabile a|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint|  
 |Versione prodotto|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Causa|Errore di connessione nel tentativo di utilizzare un provider di dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
-|Testo del messaggio|Per la connessione dati viene utilizzata l'autenticazione di Windows e le credenziali utente non possono essere delegate. Impossibile aggiornare le connessioni seguenti: Dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
+|Testo del messaggio|Per la connessione dati viene utilizzata l'autenticazione di Windows e le credenziali utente non possono essere delegate. Impossibile aggiornare le connessioni seguenti: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Dati|  
   
 ## <a name="explanation"></a>Spiegazione  
  Questo messaggio di errore può avere più cause. Il fattore comune a tutte è che tramite Excel Services non è possibile ottenere un'identità utente di Windows valida da un token di attestazione in SharePoint. Nel caso di cartelle di lavoro di Excel contenenti dati di [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , questo errore si verifica in una delle condizioni seguenti:  

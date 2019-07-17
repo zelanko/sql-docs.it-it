@@ -1,5 +1,5 @@
 ---
-title: Esplorare i dati in Progettazione dimensioni | Documenti Microsoft
+title: Esplorare i dati in Progettazione dimensioni | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3692d8f7267531e00f0393149823198cc59bab7d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022868"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178916"
 ---
-# <a name="database-dimensions---browse-dimension-data-in-dimension-designer"></a>Dimensioni del database - Sfoglia dimensione dati in Progettazione dimensioni
+# <a name="database-dimensions---browse-dimension-data-in-dimension-designer"></a>Dimensioni del database - esplorare i dati di dimensione in Progettazione dimensioni
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   È possibile esplorare i dati di una dimensione mediante la visualizzazione **Esplorazione** di Progettazione dimensioni, accessibile da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -34,7 +34,7 @@ ms.locfileid: "34022868"
     >  È necessario che nella dimensione sia disponibile una traduzione definita per la lingua selezionata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Introduzione alle dimensioni & #40; Analysis Services - dati multidimensionali & #41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md)   
+ [Introduzione alle dimensioni &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md)   
  [Dimensioni nei modelli multidimensionali](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

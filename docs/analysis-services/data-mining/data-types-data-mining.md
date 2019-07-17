@@ -1,5 +1,5 @@
 ---
-title: Tipi di dati (Data Mining) | Documenti Microsoft
+title: I tipi di dati (Data Mining) | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4b62c9a4ebc9caf9875a1e5b6aef987bf0b4fa8a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014638"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183359"
 ---
 # <a name="data-types-data-mining"></a>Tipi di dati (data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34014638"
   
 |Tipo di dati|Tipi di contenuto supportati|  
 |---------------|-----------------------------|  
-|**Text**|Cyclical, Discrete, Discretized, Key Sequence, Ordered, Sequence|  
+|**per**|Cyclical, Discrete, Discretized, Key Sequence, Ordered, Sequence|  
 |**Long**|Continuous, Cyclical, Discrete, Discretized, Key, Key Sequence, Key Time, Ordered, Sequence, Time<br /><br /> Classified|  
 |**Boolean**|Cyclical, Discrete, Ordered|  
 |**Double**|Continuous, Cyclical, Discrete, Discretized, Key, Key Sequence, Key Time, Ordered, Sequence, Time<br /><br /> Classified|  
@@ -47,11 +47,11 @@ ms.locfileid: "34014638"
  Se si modifica il tipo di dati di una colonna, è necessario rielaborare sempre la struttura di data mining e qualsiasi modello di data mining basato su tale struttura. Se si modifica il tipo di dati, in alcuni casi tale colonna non può più essere utilizzata in un modello particolare. In una situazione di questo tipo in Analysis Services verrà generato un errore quando si rielabora il modello oppure verrà rielaborato il modello senza la colonna specifica.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto di Data Mining tipi & #40; & #41;](../../analysis-services/data-mining/content-types-data-mining.md)   
- [Contenuto DMX tipi & #40; & #41;](../../dmx/content-types-dmx.md)   
- [Algoritmi di Data Mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Strutture di data mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Tipi di dati & #40; DMX & #41;](../../dmx/data-types-dmx.md)   
+ [Tipi di contenuto &#40;Data mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
+ [Tipi di contenuto &#40;DMX&#41;](../../dmx/content-types-dmx.md)   
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Strutture di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Tipi di dati &#40;DMX&#41;](../../dmx/data-types-dmx.md)   
  [Colonne del modello di data mining](../../analysis-services/data-mining/mining-model-columns.md)   
  [Colonne della struttura di data mining](../../analysis-services/data-mining/mining-structure-columns.md)  
   

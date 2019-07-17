@@ -12,20 +12,19 @@ dev_langs:
 ms.assetid: 166426e1-555d-4ce4-bae3-248dcac56883
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0f5b5657cc0a6ce0bab8afa9fa9dc9aea272f999
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5666ac53572ac728ff8bb0581eeafae9dce185e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717499"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950932"
 ---
 # <a name="system-trace-functions"></a>Funzioni di traccia di sistema
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili le funzioni di traccia di sistema riportate di seguito.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [fn_trace_geteventinfo](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)  
   
  [fn_trace_getfilterinfo](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)  

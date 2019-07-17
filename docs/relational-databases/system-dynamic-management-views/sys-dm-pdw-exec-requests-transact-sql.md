@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuL-Preview
 ms.author: xiaoyul
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a3aa0219e1e8d0733926662b22f929fa923ae071
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
+ms.openlocfilehash: 8e6514991c0819342861a50a2a50b37e7d8748cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67564177"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899393"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -29,7 +28,7 @@ ms.locfileid: "67564177"
 |Nome colonna|Tipo di dati|Descrizione|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Chiave per questa visualizzazione. ID numerico univoco associato alla richiesta.|Deve essere univoco tra tutte le richieste nel sistema.|  
-|session_id|**nvarchar(32)**|ID numerico univoco associato alla sessione in cui è stata eseguita la query. See [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
+|session_id|**nvarchar(32)**|ID numerico univoco associato alla sessione in cui è stata eseguita la query. Visualizzare [DM pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
 |status|**nvarchar(32)**|Stato corrente della richiesta.|'In esecuzione', 'Sospeso', 'Completed', 'Annullato', "Non riuscito".|  
 |submit_time|**datetime**|Ora in cui è stata inviata la richiesta per l'esecuzione.|Valido **datetime** inferiore o uguale a start_time e ora corrente.|  
 |start_time|**datetime**|Ora di inizio dell'esecuzione della richiesta.|NULL per le richieste in coda. in caso contrario, validi **datetime** minore o uguale all'ora corrente.|  
@@ -39,11 +38,11 @@ ms.locfileid: "67564177"
 |Etichetta|**nvarchar(255)**|Stringa di etichetta facoltativa associata alcune istruzioni di query SELECT.|Qualsiasi stringa che contiene 'a-z', 'A-Z','0-9', '_'.|  
 |error_id|**nvarchar(36)**|ID univoco dell'errore associato alla richiesta, se presente.|Visualizzare [sys.dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); se si è verificato alcun errore impostato su NULL.|  
 |database_id|**int**|Identificatore del database utilizzato dal contesto esplicito (ad esempio, usare DB_X).|Vedere ID nel [Sys. Databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
-|comando|**nvarchar(4000)**|Contiene il testo completo della richiesta di stato inviato dall'utente.|Qualsiasi testo di query o di richiesta valido. Le query che durano più di 4000 byte vengono troncate.|  
+|command|**nvarchar(4000)**|Contiene il testo completo della richiesta di stato inviato dall'utente.|Qualsiasi testo di query o di richiesta valido. Le query che durano più di 4000 byte vengono troncate.|  
 |resource_class|**nvarchar(20)**|La classe di risorse per questa richiesta. Vedere correlati **concurrency_slots_used** nelle [sys.dm_pdw_resource_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).  Per altre informazioni sulle classi di risorse, vedere [classi & i carico di lavoro di gestione delle risorse](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |Classi di risorse statiche</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Classi di risorse dinamiche</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
 |importance|**nvarchar(32)**|L'importanza di impostare la richiesta è stata inviata. Le richieste con una priorità inferiore rimarrà in coda in stato sospeso, se vengono inviate le richieste di maggiore importanza.  Le richieste con un'importanza superiore verranno eseguite prima delle richieste di importanza inferiore che sono state inviate in precedenza.  Per altre informazioni sull'importanza, vedere [carico di lavoro di importanza](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>Bassa</br>below_normal</br>normale (impostazione predefinita)</br>above_normal</br>Elevata|
-|group_name| |Riservato per uso interno.</br>Si applica a: Azure SQL Data Warehouse|
-|resource_allocation_percentage| |Riservato per uso interno.</br>Si applica a: Azure SQL Data Warehouse|
+|group_name| |Riservato per uso interno.</br>Si applica a Azure SQL Data Warehouse|
+|resource_allocation_percentage| |Riservato per uso interno.</br>Si applica a Azure SQL Data Warehouse|
 |result_set_cache|**bit**|Dettagliatamente se una query completata ha avuto un riscontro nella cache di risultati (1) o negativo (0).|0,1|
 ||||
   

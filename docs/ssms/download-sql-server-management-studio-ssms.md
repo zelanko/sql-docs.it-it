@@ -21,19 +21,19 @@ keywords:
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
-manager: craigg
+manager: jroth
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: 403ca9e5132a00f003aa67a2011d98d0044b4807
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: e7fb5ecb66552ef4d061c36326788f4be51255bb
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399657"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680385"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Scaricare SQL Server Management Studio (SSMS)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 SQL Server Management Studio (SSMS) è un ambiente integrato per la gestione di qualsiasi infrastruttura SQL, da SQL Server al database SQL di Azure. SSMS offre gli strumenti per configurare, monitorare e amministrare le istanze di SQL Server e i database. SSMS permette di distribuire, monitorare e aggiornare i componenti livello dati usati dalle applicazioni, nonché creare query e script.
 
@@ -45,7 +45,7 @@ SSMS è gratuito.
 
 **È ora disponibile SSMS 18.1, la nuova versione GA (General Availability, disponibilità generale) di *SQL Server Management Studio* che offre il supporto per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]** .
 
-**[![Download](../ssdt/media/download.png) Scarica SQL Server Management Studio 18.1 ](https://go.microsoft.com/fwlink/?linkid=2094583)**
+**[![download](../ssdt/media/download.png) Scaricare SQL Server Management Studio 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)**
 
 SSMS 18.1 è la versione GA più recente di SSMS. Se si ha SSMS 18.0 (GA) già installato, l'installazione di SQL Server Management Studio 18.1 esegue l'aggiornamento alla versione 18.1. Se si ha una versione *precedente* di SSMS 18.0, è necessario disinstallarla prima di installare SSMS 18.1.
 

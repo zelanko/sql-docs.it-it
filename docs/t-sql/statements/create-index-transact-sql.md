@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6ca14f18b89093db5ad3c6b86a381eebcd2fad5
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 195f7d0f298d191845a65864e752ab9a4dea5d06
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500238"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652798"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -734,7 +734,7 @@ Per l'esecuzione di operazioni sull'indice ripristinabili, è necessario attener
 - La creazione dell'indice online viene specificata come ripristinabile usando l'opzione `RESUMABLE = ON`.
 - L'opzione RESUMABLE non è persistente nei metadati per un determinato indice e si applica solo alla durata di un'istruzione DDL corrente. Per abilitare la funzione di ripristino, è necessario quindi che la clausola `RESUMABLE = ON` sia specificata in modo esplicito.
 - L'opzione MAX_DURATION è supportata solo per l'opzione `RESUMABLE = ON`.
-- L'opzione MAX_DURATION per RESUMABLE specifica l'intervallo di tempo per la compilazione di un indice. Trascorso questo tempo, la compilazione dell'indice viene sospesa oppure viene completata. È l'utente a decidere quando riprendere la compilazione di un indice che è stata sospesa. Il valore espresso in minuti in **time** per MAX_DURATION deve essere maggiore di 0 e minore o uguale a una settimana (7 * 24 * 60 = 10080 minuti). Una sospensione prolungata di un'operazione sull'indice può compromettere le prestazioni DML su una tabella specifica, nonché la capacità del disco del database poiché entrambi gli indici, quello originale e quello appena creato, richiedono spazio su disco e devono essere aggiornati durante le operazioni DML. Se l'opzione MAX_DURATION viene omessa, l'operazione sull'indice continuerà fino al suo completamento o fino a quando non si verificherà un errore.
+- L'opzione MAX_DURATION per RESUMABLE specifica l'intervallo di tempo per la compilazione di un indice. Trascorso questo tempo, la compilazione dell'indice viene sospesa oppure viene completata. È l'utente a decidere quando riprendere la compilazione di un indice che è stata sospesa. Il valore espresso in minuti in **time** per MAX_DURATION deve essere maggiore di 0 e minore o uguale a una settimana (7 \* 24 \* 60 = 10080 minuti). Una sospensione prolungata di un'operazione sull'indice può compromettere le prestazioni DML su una tabella specifica, nonché la capacità del disco del database poiché entrambi gli indici, quello originale e quello appena creato, richiedono spazio su disco e devono essere aggiornati durante le operazioni DML. Se l'opzione MAX_DURATION viene omessa, l'operazione sull'indice continuerà fino al suo completamento o fino a quando non si verificherà un errore.
 - Per sospendere immediatamente l'operazione sull'indice, è possibile arrestare il comando in corso (CTRL+C) oppure eseguire il comando [ALTER INDEX](alter-index-transact-sql.md) PAUSE o il comando `KILL <session_id>`. Quando il comando viene sospeso, è possibile riprenderlo usando il comando [ALTER INDEX](alter-index-transact-sql.md).
 - Eseguendo nuovamente l'istruzione CREATE INDEX originale per l'indice ripristinabile, un'operazione di creazione indice sospesa riprende automaticamente.
 - L'opzione `SORT_IN_TEMPDB = ON` non è supportata per l'indice ripristinabile.

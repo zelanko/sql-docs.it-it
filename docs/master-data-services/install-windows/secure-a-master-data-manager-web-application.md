@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 08e73462f3536f1aff6aecbf44692a7f24f54aa9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cbec8d77386985e7f33863793b86eb2db0b8d6bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944897"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Rendere sicura un'applicazione Web Gestione dati master
 
@@ -41,7 +40,7 @@ ms.locfileid: "65480170"
   
 3.  Nel riquadro **Azioni** fare clic su **Binding**.  
   
-4.  Scegliere **Aggiungi**.  
+4.  Fare clic su **Aggiungi**.  
   
 5.  Nell'elenco selezionare **https**.  
   

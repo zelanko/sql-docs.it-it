@@ -1,5 +1,5 @@
 ---
-title: Creare un Report di convalida incrociata | Documenti Microsoft
+title: Creare un Report di convalida incrociata | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 88d3af205a1e92ac07a4c841c80f2abea463de9b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014378"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68184112"
 ---
 # <a name="create-a-cross-validation-report"></a>Creare un report di convalida incrociata
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -86,6 +86,6 @@ ms.locfileid: "34014378"
 4.  Incollare la selezione in una cartella di lavoro di Excel aperta. Se si utilizza l'opzione **Incolla** , il report viene incollato in Excel in formato HTML, mantenendo la formattazione di righe e colonne. Se si usano le opzioni **Incolla speciale** per testo o testo Unicode, il report viene incollato in formato delimitato da righe.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Misure nel Report di convalida incrociata](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
+ [Misure nel report di convalida incrociata](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
   
   

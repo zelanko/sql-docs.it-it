@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 76e619e3bcdc4dc45fd8929aa1046d895b86f013
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 01c2ea6b885ed2619b79413beb09ca4bf2835162
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917567"
 ---
 # <a name="properties-collection-ado"></a>Raccolta Properties (ADO)
 Contiene tutti i [proprietà](../../../ado/reference/ado-api/property-object-ado.md) gli oggetti per un'istanza specifica di un oggetto.  
@@ -42,4 +41,4 @@ Contiene tutti i [proprietà](../../../ado/reference/ado-api/property-object-ado
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Appendice A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Appendice A: provider](../../../ado/guide/appendixes/appendix-a-providers.md)

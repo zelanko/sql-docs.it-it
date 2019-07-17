@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: ff53e873-8ff6-4628-af84-4ec52fa4951c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 75cab555eef1ffd53226f891a264fb1be3195de2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 729374505c322a0b62e762ef27c29f04bebf3c9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627479"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050878"
 ---
 # <a name="always-on-availability-groups-catalog-views-transact-sql"></a>Viste del catalogo (Transact-SQL) di gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   In questa sezione sono contenute le funzioni e le viste del catalogo correlate a [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 |||  
 |-|-|  

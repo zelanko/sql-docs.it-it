@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9cc5d75d-b293-41e5-927c-10f4af2e7af1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f64eda5ad640e50afd25db111de74141e41e652d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dc79bb5d12b53938e3e2ef1c531fd03b0002ed78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280783"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093828"
 ---
 # <a name="setup-program"></a>Programma di installazione
 > **NOTA:** A partire da Windows XP e Windows Server 2003, **ODBC è incluso nel sistema operativo Windows**. Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  

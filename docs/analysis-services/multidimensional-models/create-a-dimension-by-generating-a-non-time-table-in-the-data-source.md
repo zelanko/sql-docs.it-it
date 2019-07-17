@@ -1,5 +1,5 @@
 ---
-title: Creare una dimensione generando una tabella Non temporale nell'origine dati | Documenti Microsoft
+title: Creare una dimensione generando una tabella Non temporale nell'origine dei dati | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0f9f84131307282b00fd99c1d5770ac352e31713
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024078"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209067"
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>Creare una dimensione generando una tabella non temporale nell'origine dati
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34024078"
   
 -   Customer  
   
--   Data  
+-   Date  
   
 -   Department  
   
@@ -34,13 +34,13 @@ ms.locfileid: "34024078"
   
 -   Employee  
   
--   Geography  
+-   Geografia  
   
 -   Internet Sales Order Details  
   
 -   Organization  
   
--   Product  
+-   Prodotto  
   
 -   Promotion  
   
@@ -84,7 +84,7 @@ ms.locfileid: "34024078"
   
  Selezionando la casella di controllo **Dimensione modificabile** , la Creazione guidata dimensione definisce gli attributi indicati nella seguente tabella:  
   
-|Attribute|Tipo|  
+|attribute|type|  
 |---------------|----------|  
 |ID originale dimensione a modifica lenta|SCDOriginalID|  
 |Data fine dimensione a modifica lenta|SCDEndDate|  
@@ -99,7 +99,7 @@ ms.locfileid: "34024078"
  Nella pagina **Completamento procedura guidata** assegnare un nome alla nuova dimensione e quindi verificarne la struttura. Selezionare la casella di controllo **Genera schema adesso** per avviare Generazione guidata schema dopo avere fatto clic su **Fine**. Nella maggior parte dei casi non è necessario selezionare questa casella di controllo quando si pianifica la creazione di oggetti aggiuntivi. Se non si seleziona questa casella di controllo, è possibile utilizzare Progettazione dimensioni per generare lo schema in un secondo momento.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare una dimensione temporale generando una tabella dei tempi](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
- [Creare una dimensione temporale generando una tabella dei tempi](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)  
+ [Create a Time Dimension by Generating a Time Table](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
+ [Create a Time Dimension by Generating a Time Table](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)  
   
   

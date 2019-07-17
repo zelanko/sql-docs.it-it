@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8bb72817-0cf5-4ce9-9fb8-043c89da941c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6c4b3846c2402287660ffd106074b8e7429ce1c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec37df7c37c8117dfdda99faabd746ccd8c3d69f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707213"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932022"
 ---
 # <a name="nextrecordset-method-example-vc"></a>Esempio del metodo NextRecordset (VC++)
 Questo esempio Usa la [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) metodo per visualizzare i dati in un recordset che usa un'istruzione di comando composta costituita da tre separato **seleziona** istruzioni.  

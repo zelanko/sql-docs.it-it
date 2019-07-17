@@ -1,6 +1,6 @@
 ---
-title: Suggerimenti e consigli aggiuntivi per l'uso di SQL Server Management Studio
-description: Esercitazione che illustra suggerimenti e consigli aggiuntivi per usare SSMS.
+title: Suggerimenti e consigli per l'uso di SQL Server Management Studio (SSMS)
+description: Scoprire come aggiungere e rimuovere un commento nel codice, impostare un rientro per il testo, filtrare gli oggetti in Esplora oggetti, accedere ai log degli errori di SQL Server e trovare il nome dell'istanza di SQL Server usando SQL Server Management Studio.
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
@@ -8,7 +8,7 @@ ms.prod_service: sql-tools
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: sstein
-manager: craigg
+manager: jroth
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], tutorials
 - Help [SQL Server], SQL Server Management Studio
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 4c6585e8e2c467c6e0a4a288107fd59cae64f84b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c31c8243ef74b69a5fe050e5487911138db76741
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499416"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860650"
 ---
-# <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Esercitazione: Suggerimenti e consigli per l'uso di SSMS
+# <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Suggerimenti e consigli per l'uso di SQL Server Management Studio (SSMS)
 
-Questa esercitazione offre alcuni suggerimenti aggiuntivi per l'uso di SQL Server Management Studio (SSMS). Questo articolo illustra come: 
+Questo articolo offre alcuni suggerimenti e consigli per l'uso di SQL Server Management Studio (SSMS). Questo articolo illustra come: 
 
 > [!div class="checklist"]
 > * Inserire e rimuovere commenti nel testo Transact-SQL (T-SQL)
@@ -40,7 +40,7 @@ Questa esercitazione offre alcuni suggerimenti aggiuntivi per l'uso di SQL Serve
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Per completare questa esercitazione, sono necessari SQL Server Management Studio, l'accesso a un'istanza di SQL Server e un database AdventureWorks. 
+Per provare le procedure descritte in questo articolo, sono necessari SQL Server Management Studio, l'accesso a un'istanza di SQL Server e un database AdventureWorks. 
 
 * Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 * Installare [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
@@ -267,7 +267,7 @@ Quando si è connessi a SQL Server, il nome del server è disponibile in tre pos
 
 ### <a name="if-youre-connected-to-an-alias-or-availability-group-listener"></a>Se si è connessi a un alias o a un listener del gruppo di disponibilità
 
-Se si è connessi a un alias o a un listener del gruppo di disponibilità, questa informazione viene visualizzata in Esplora oggetti e Proprietà. In questo caso il nome di SQL Server potrebbe non essere immediatamente evidente e deve essere eseguita una query per recuperarlo: 
+Se si è connessi a un alias o a un listener del gruppo di disponibilità, questa informazione viene visualizzata in Esplora oggetti e Proprietà. In questo caso il nome di SQL Server potrebbe non essere immediatamente evidente e deve essere eseguita una query per recuperarlo:
 
 1. Connettersi all'istanza di SQL Server.
 
@@ -282,3 +282,12 @@ Se si è connessi a un alias o a un listener del gruppo di disponibilità, quest
 4. Visualizzare i risultati della query per identificare il nome dell'istanza di SQL Server a cui si è connessi: 
 
     ![Eseguire una query per recuperare il nome di SQL Server](media/ssms-tricks/queryservername.png)
+
+## <a name="next-steps"></a>Passaggi successivi
+
+Il modo migliore per acquisire familiarità con SSMS è la pratica diretta. Questa *esercitazione* e questi articoli di *procedure* sono utili per varie funzionalità disponibili in SSMS.  Questi articoli illustrano come gestire i componenti di SSMS e individuare le funzionalità usate regolarmente.
+
+* [Connettersi ed eseguire query su un'istanza](connect-query-sql-server.md)
+* [Scripting](scripting-ssms.md)
+* [Uso di modelli in SSMS](../template/templates-ssms.md)
+* [Configurazione di SSMS](ssms-configuration.md)

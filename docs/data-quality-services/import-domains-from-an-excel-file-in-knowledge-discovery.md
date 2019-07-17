@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 0256881ffbf3a1729c89cd3a82522fd3e684ebf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57d174bbd24dea36470c4b8ca3e29f77dc4111f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776495"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935261"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>Importare i domini da un file di Excel in Individuazione informazioni
 
@@ -56,7 +55,7 @@ ms.locfileid: "66776495"
   
 8.  Selezionare una colonna, quindi eseguire il mapping di un dominio esistente alla colonna o creare un nuovo dominio facendo clic sull'icona **Crea un dominio** , creando un dominio nella finestra di dialogo **Crea un dominio** e quindi eseguendo il mapping del dominio alla colonna. Il tipo di dati del dominio deve corrispondere al tipo di dati della colonna. Ripetere l'operazione per tutte le colonne del foglio di calcolo.  
   
-9. Scegliere **Avanti**.  
+9. Fare clic su **Avanti**.  
   
 10. Nella pagina **Individua** fare clic su **Avvia** per analizzare i dati nel foglio di calcolo di Excel.  
   

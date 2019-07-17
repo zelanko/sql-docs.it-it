@@ -5,17 +5,16 @@ description: Usare il Server cronologia Spark per eseguire il debug e diagnostic
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cba788fcb61dddce54d8b0c4ad4f2ca87ea0906d
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 5659de24ed9cc0a61290d055049c804c6709b2a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728395"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957859"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>Debug e diagnosticare le applicazioni Spark nei cluster di big data di SQL Server in Server cronologia Spark
 

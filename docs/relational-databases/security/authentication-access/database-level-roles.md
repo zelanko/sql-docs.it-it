@@ -1,7 +1,7 @@
 ---
 title: Ruoli a livello di database | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2019
+ms.date: 07/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -39,12 +39,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a035182b6436f723abfb2a53a034ddac30fe2165
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 65330658d47ad371d992eaf15d648e7abfd4d5b6
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516497"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832956"
 ---
 # <a name="database-level-roles"></a>Ruoli a livello di database
 
@@ -89,7 +89,7 @@ Non è possibile modificare le autorizzazioni concesse ai ruoli predefiniti del 
 
 ## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a>Ruoli speciali per [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
 
-Questi ruoli del database si trovano solo nel database master virtuale. Le autorizzazioni di questi ruoli sono limitate alle azioni eseguite nel database master. Solo gli utenti di database nel database master possono essere aggiunti a questi ruoli. Gli account di accesso non possono essere aggiunti a questi ruoli, ma è possibile creare utenti in base agli account di accesso e quindi aggiungere questi utenti ai ruoli. Anche gli utenti di database indipendenti nel database master possono essere aggiunti a questi ruoli.
+Questi ruoli del database si trovano solo nel database master virtuale. Le autorizzazioni di questi ruoli sono limitate alle azioni eseguite nel database master. Solo gli utenti di database nel database master possono essere aggiunti a questi ruoli. Gli account di accesso non possono essere aggiunti a questi ruoli, ma è possibile creare utenti in base agli account di accesso e quindi aggiungere questi utenti ai ruoli. Anche gli utenti di database indipendenti nel database master possono essere aggiunti a questi ruoli. Gli utenti di database indipendenti aggiunti al ruolo **dbmanager** non possono essere tuttavia usati per creare nuovi database.
 
 |Nome ruolo|Descrizione|  
 |--------------------|-----------------|

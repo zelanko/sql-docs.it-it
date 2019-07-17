@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 8a453fb545fd0a51b7d356c0d855813cea69f272
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a34cdf743ff0bcecbb4b3088d99efdf3bbfef744
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602601"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938165"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,11 +33,11 @@ FROM <existing model>
  *nuovo modello*  
  Nome univoco del nuovo modello da creare.  
   
- *algoritmo*  
+ *algorithm*  
  Nome definito dal provider di un algoritmo di data mining.  
   
  *elenco di parametri*  
- Facoltativo. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
+ facoltativo. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
   
  *expression*  
  Espressione che restituisce una condizione di filtro valida sui dati di training. Per altre informazioni sulle espressioni che possono essere utilizzate come filtri, vedere [i filtri per i modelli di Data Mining &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  

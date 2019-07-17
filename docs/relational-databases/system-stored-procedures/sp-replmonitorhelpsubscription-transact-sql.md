@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 92cd44dcc30a0843409c908cb3cc3a76276519aa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8e8f76699e35c71e7bbf85b972cd76eb0cb3c289
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528203"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950549"
 ---
 # <a name="spreplmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,9 +87,9 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**subscriber**|**sysname**|Nome del Sottoscrittore.|  
 |**subscriber_db**|**sysname**|Nome del database utilizzato per la sottoscrizione.|  
 |**publisher_db**|**sysname**|Nome del database di pubblicazione.|  
-|**publication**|**sysname**|Nome di una pubblicazione.|  
+|**pubblicazione**|**sysname**|Nome di una pubblicazione.|  
 |**publication_type**|**int**|Tipo di pubblicazione. I possibili valori sono i seguenti:<br /><br /> **0** = pubblicazione transazionale<br /><br /> **1** = pubblicazione snapshot<br /><br /> **2** = pubblicazione di tipo merge|  
-|**subtype**|**int**|Tipo di sottoscrizione. I possibili valori sono i seguenti:<br /><br /> **0** = Push<br /><br /> **1** = Pull<br /><br /> **2** = anonima|  
+|**subtype**|**int**|Tipo di sottoscrizione. I possibili valori sono i seguenti:<br /><br /> **0** = push<br /><br /> **1** = Pull<br /><br /> **2** = anonima|  
 |**latency**|**int**|Latenza più alta, espressa in secondi, per le modifiche dei dati propagate dall'agente di lettura log o dagli agenti di distribuzione per una pubblicazione transazionale.|  
 |**latencythreshold**|**int**|Latenza massima per una pubblicazione transazionale, superata la quale viene generato un avviso.|  
 |**agentnotrunning**|**int**|Indica da quante ore l'agente non viene eseguito.|  

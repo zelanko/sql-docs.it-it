@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a21c38506d44c687d639b13ca452e155a97adcef
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 05412c69aa121b9de14f2bab16555db2a8a4fdb4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255106"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929947"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Funzioni su nodi - namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ fn:namespace-uri($arg as node()?) as xs:string
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
   
-### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>A. Recupero dell'URI dello spazio dei nomi di un nodo specifico  
+### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>R. Recupero dell'URI dello spazio dei nomi di un nodo specifico  
  La query seguente viene eseguita su un'istanza XML non tipizzata. L'espressione di query `namespace-uri(/ROOT[1])` recupera la parte relativa all'URI dello spazio dei nomi del nodo specificato.  
   
 ```  
@@ -62,7 +61,7 @@ SELECT @x.query('namespace-uri(/ROOT[1])')
   
  Poiché l'elemento QName specificato non contiene l'URI dello spazio dei nomi, ma solo il nome locale, il risultato è una stringa di lunghezza zero.  
   
- La query seguente viene specificata sulla Instructions di tipo **xml** colonna. L'espressione `namespace-uri(/AWMI:root[1]/AWMI:Location[1])` restituisce l'URI dello spazio dei nomi del primo elemento figlio <`Location`> dell'elemento <`root`>.  
+ La query seguente viene specificata sulla Instructions di tipo **xml** colonna. L'espressione `namespace-uri(/AWMI:root[1]/AWMI:Location[1])`, restituisce lo spazio dei nomi del primo URI <`Location`> figlio dell'elemento di <`root`> elemento.  
   
 ```  
 SELECT Instructions.query('  
@@ -78,7 +77,7 @@ WHERE ProductModelID=7
 https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions  
 ```  
   
-### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>b. Utilizzo di namespace-uri() senza argomento in un predicato  
+### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>B. Utilizzo di namespace-uri() senza argomento in un predicato  
  La query seguente viene specificata sulla colonna XML tipizzata CatalogDescription. L'espressione restituisce tutti i nodi elemento il cui URI dello spazio dei nomi è `https://www.adventure-works.com/schemas/OtherFeatures`. Spazio dei nomi -**URI ()** funzione viene specificata senza un argomento e utilizza il nodo di contesto.  
   
 ```  
@@ -99,7 +98,7 @@ WHERE ProductModelID=19
 ...  
 ```  
   
- È possibile modificare l'URI dello spazio dei nomi nella query precedente in `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. Verranno così restituiti tutti i nodi figlio dell'elemento <`ProductDescription`> in cui la parte dell'URI dello spazio dei nomi del QName esteso è `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`.  
+ È possibile modificare l'URI dello spazio dei nomi nella query precedente in `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. Si riceverà tutto l'elemento figlio del nodo di <`ProductDescription`> elemento la cui parte URI dello spazio dei nomi del QName esteso è `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`.  
   
 ### <a name="implementation-limitations"></a>Limitazioni di implementazione  
  Limitazioni:  

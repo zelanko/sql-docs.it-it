@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 55f5d599ea2399697a0b96cc3d316776179b7562
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d7251e3a403168e8383e636a8e6b5f712b9f7bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699591"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922520"
 ---
 # <a name="rds-programming-model-in-detail"></a>Informazioni dettagliate sul modello di programmazione RDS
 Di seguito sono gli elementi chiave del modello di programmazione di servizi desktop remoto:  
@@ -29,7 +28,7 @@ Di seguito sono gli elementi chiave del modello di programmazione di servizi des
   
 -   RDS.DataControl  
   
--   Evento  
+-   event  
   
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più incluse nel sistema operativo Windows (vedere Windows 8 e [indicazioni sulla compatibilità di Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) per altri dettagli). I componenti client di servizi desktop remoto verranno rimosso in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che usano servizi desktop remoto devono eseguire la migrazione a [di WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -75,8 +74,8 @@ Di seguito sono gli elementi chiave del modello di programmazione di servizi des
  [Modello di programmazione RDS con oggetti](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   
  [Oggetto DataControl (Servizi Desktop remoto)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Oggetto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [DataSpace Object (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
- [RDS Scenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
+ [Oggetto DataSpace (Servizi Desktop remoto)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
+ [Scenario RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Esercitazione su RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Utilizzo e sicurezza per RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 

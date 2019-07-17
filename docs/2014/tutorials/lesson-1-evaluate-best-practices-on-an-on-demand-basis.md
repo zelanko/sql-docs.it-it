@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dc8da3880afe5cf107c7e6df260957e3df6ddc9d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013582"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185751"
 ---
-# <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>Lezione 1: Valutare le procedure consigliate su base On Demand
+# <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>Lezione 1: Valutazione delle procedure consigliate su richiesta
   Utilizzando il metodo su richiesta (o "ad hoc") per la valutazione dei criteri, è possibile valutare rapidamente i criteri per procedure consigliate per determinare se un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] soddisfa le linee guida e le indicazioni delle procedure consigliate.  
   
  In questa lezione si eseguirà una valutazione su richiesta dei criteri consigliate per la [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] su uno o più istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

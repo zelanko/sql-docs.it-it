@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1d203f69-ec46-457f-8d07-b22d282b6bf1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 254145059e56adc0283ea53f79b1719bebba7601
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a114cb546949b97fa94d66980cd53b247712182b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952453"
 ---
 # <a name="group-by-expression-list"></a>Elenco di espressioni GROUP BY
 GROUP BY supporta un elenco di espressioni, nonché un nome di colonna. Elenco di selezione di un'istruzione SELECT che include una clausola GROUP BY può solo includere espressioni dalla clausola GROUP BY o funzioni di set.

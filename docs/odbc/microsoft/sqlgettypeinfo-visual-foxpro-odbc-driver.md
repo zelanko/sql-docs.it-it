@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5f25e20b-a4ef-42da-aeb6-00e0510fb1cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 05cc6dc2647b5297b8d7176cd4bc70261b78cb71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f29be5e03a6cc9c1c91809db2b8ec7c686e90f11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898623"
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (driver ODBC Visual FoxPro)
 > [!NOTE]  
@@ -32,22 +31,22 @@ ms.locfileid: "63181410"
   
 |Tipo ODBC|Tipo di oggetto visivo FoxPro|  
 |---------------|------------------------|  
-|SQL_BIGINT|Non supportato. È disponibile alcun tipo di Visual FoxPro a 64 bit.|  
+|SQL_BIGINT|Non supportati. È disponibile alcun tipo di Visual FoxPro a 64 bit.|  
 |SQL_BIT|Logico|  
 |SQL_CHAR|Carattere|  
 |SQL_DATE|Date|  
 |SQL_DECIMAL|Numeric|  
 |SQL_DOUBLE|Double|  
 |SQL_FLOAT|Double|  
-|SQL_INTEGER|Valore intero|  
+|SQL_INTEGER|Integer|  
 |SQL_LONGVARBINARY|Memo (binario)|  
 |SQL_LONGVARCHAR|Memo|  
 |SQL_NUMERIC|Numerico *, valuta, Float|  
 |SQL_REAL|Double|  
-|SQL_SMALLINT|Valore intero|  
-|SQL_TIME|Non supportato. Non vi è alcun Visual FoxPro *ora* tipo.|  
+|SQL_SMALLINT|Integer|  
+|SQL_TIME|Non supportati. Non vi è alcun Visual FoxPro *ora* tipo.|  
 |SQL_TIMESTAMP|DateTime|  
-|SQL_TINYINT|Valore intero|  
+|SQL_TINYINT|Integer|  
 |SQL_VARBINARY|Memo (binario) *, generale|  
 |SQL_VARCHAR|Carattere|  
   
