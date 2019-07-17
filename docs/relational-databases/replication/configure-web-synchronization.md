@@ -33,12 +33,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 674a785d0e5d3dd6b847c8f26701ad0ce48e2d20
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: c5af94179548923fa29344e3861f91dd0e201b79
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582514"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860504"
 ---
 # <a name="configure-web-synchronization"></a>Configurazione della sincronizzazione Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ ms.locfileid: "67582514"
   
 -   Se si replicano volumi elevati di dati, può essere necessario regolare la dimensione dei batch dell'agente di merge.  
   
- La dimensione dei batch per la replica di tipo merge è misurata in *generazioni*, ovvero raccolte di modifiche per ogni articolo. Per specificare il numero di generazioni in un batch, si usano i parametri ?**DownloadGenerationsPerBatch** e ?**UploadGenerationsPerBatch** dell'agente di merge. Per altre informazioni, vedere [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
+ La dimensione dei batch per la replica di tipo merge è misurata in *generazioni*, ovvero raccolte di modifiche per ogni articolo. Per specificare il numero di generazioni in un batch, si usano i parametri -**DownloadGenerationsPerBatch** e -**UploadGenerationsPerBatch** dell'agente di merge. Per altre informazioni, vedere [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
  Per volumi elevati di dati, specificare un numero basso per ognuno dei parametri di batch. Si consiglia di iniziare con il valore 10, quindi regolarlo in base alle esigenze e alle prestazioni dell'applicazione. In genere, questi parametri sono specificati in un profilo dell'agente. Per ulteriori informazioni sui profili, vedere [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

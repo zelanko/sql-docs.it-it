@@ -1,10 +1,10 @@
 ---
 title: Connettersi a un'istanza di SQL Server ed eseguire query con SQL Server Management Studio (SSMS)
-description: Esercitazione di avvio rapido per la connessione a un'istanza di SQL Server tramite SQL Server Management Studio e l'esecuzione di query T-SQL di base.
+description: Esercitazione per la connessione a un'istanza di SQL Server tramite SQL Server Management Studio e l'esecuzione di query T-SQL di base.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 ms.reviewer: sstein
 ms.topic: quickstart
 ms.prod_service: sql-tools
@@ -12,16 +12,16 @@ ms.prod: sql
 ms.technology: ssms
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 62646a7e2b09c4a733dde0ddff9d078cb0a3c958
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 4f3e1b5e03f70aa0d552e89d3ebdd254909d7b2a
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469224"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834958"
 ---
-# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Esercitazione: Connettersi a un'istanza di SQL Server ed eseguire query con SQL Server Management Studio (SSMS) 
+# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Esercitazione: Connettersi a un'istanza di SQL Server ed eseguire query con SQL Server Management Studio (SSMS)
 
-Questa esercitazione illustra come usare SQL Server Management Studio (SSMS) per connettersi all'istanza di SQL Server ed eseguire alcuni comandi Transact-SQL (T-SQL) di base. Questo articolo illustra come eseguire le operazioni seguenti:
+Questa esercitazione illustra come usare SQL Server Management Studio (SSMS) per connettersi all'istanza di SQL Server ed eseguire alcuni comandi Transact-SQL (T-SQL) di base. Questo articolo illustra come seguire i passaggi seguenti:
 
 > [!div class="checklist"]
 > * Connessione a un'istanza di SQL Server
@@ -54,9 +54,9 @@ Se non si dispone dell'accesso a un'istanza di SQL Server, selezionare la piatta
     * In **Tipo di server** selezionare **Motore di database** (in genere l'opzione predefinita).
     * In **Nome server** immettere il nome dell'istanza di SQL Server in uso. In questo articolo viene usato il nome istanza SQL2016ST sul nome host NODE5 [NODE5\SQL2016ST]. Se non si sa come determinare il nome dell'istanza di SQL Server, vedere [Suggerimenti e consigli per l'uso di SSMS](ssms-tricks.md#determine-sql-server-name).
 
-    ![Campo "Nome server" con l'opzione per l'uso dell'istanza di SQL Server](media/connect-query-sql-server/connection2.png)
-
     * In **Autenticazione** selezionare **Autenticazione di Windows**. In questo articolo viene usata l'autenticazione di Windows, ma è supportato anche l'accesso di SQL Server. Se si seleziona **Account di accesso SQL** viene richiesto di specificare un nome utente e una password. Per altre informazioni sui tipi di autenticazione, vedere [Connetti al server (motore di database)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine).
+
+    ![Campo "Nome server" con l'opzione per l'uso dell'istanza di SQL Server](media/connect-query-sql-server/connection2.png)
 
     È anche possibile modificare altre opzioni di connessione selezionando **Opzioni**. Sono esempi di opzioni di connessione il database al quale ci si connette, il valore di timeout della connessione e il protocollo di rete. In questo articolo vengono usati i valori predefiniti per tutte le opzioni.
 
@@ -129,7 +129,7 @@ In questa sezione si crea una tabella nel database TutorialDB appena creato. L'e
    GO
    ```
 
-Al termine della query la nuova tabella Customers viene visualizzata nell'elenco delle tabelle in Esplora oggetti. Se la tabella non viene visualizzata, fare clic con il pulsante destro del mouse sul nodo **TutorialDB** > **Tabelle** in Esplora oggetti e selezionare **Aggiorna**.
+Al termine della query la nuova tabella Customers viene visualizzata nell'elenco delle tabelle in Esplora oggetti. Se la tabella non viene visualizzata, fare clic con il pulsante destro del mouse sul nodo **TutorialDB** > **Tabelle** in Esplora oggetti e scegliere **Aggiorna**.
 
 ## <a name="insert-rows-into-the-new-table"></a>Inserire righe nella nuova tabella
 
@@ -188,7 +188,7 @@ I risultati di una query vengono visualizzati sotto la finestra di testo della q
 
 1. Fare clic con il pulsante destro del mouse nella finestra di query e selezionare **Connessione** > **Cambia connessione**. Viene visualizzata di nuovo la finestra **Connetti al server**.
 
-2. Modificare il server usato dalla query. 
+2. Modificare il server usato dalla query.
 
    ![Comando Cambia connessione](media/connect-query-sql-server/changeconnection.png)
 
@@ -197,8 +197,9 @@ I risultati di una query vengono visualizzati sotto la finestra di testo della q
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-L'articolo successivo illustra come creare script per vari oggetti in SQL Server Management Studio.
+Il modo migliore per acquisire familiarità con SSMS è la pratica diretta. Questi articoli illustrano le varie funzionalità disponibili in SSMS.  Questi articoli illustrano come gestire i componenti di SSMS e individuare le funzionalità usate regolarmente.
 
-Per altre informazioni, vedere l'articolo successivo:
-> [!div class="nextstepaction"]
-> [Passaggi successivi](scripting-ssms.md)
+* [Scripting](scripting-ssms.md)
+* [Uso di modelli in SSMS](../template/templates-ssms.md)
+* [Configurazione di SSMS](ssms-configuration.md)
+* [Suggerimenti e consigli per l'uso di SSMS](ssms-tricks.md)

@@ -14,12 +14,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: d7035a47368ead8af3a20d9ca56f0c5452395516
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 17879dc4c932ff127b858657a9af0aca340029b5
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586183"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860514"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurare e gestire i file del thesaurus per la ricerca full-text
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Un thesaurus di ricerca full-text è un file di testo XML.
 
 -   Impostazione dei segni diacritici  
   
-     Per un determinato thesaurus, tutti i criteri di ricerca supportano o non supportano la distinzione relativa ai segni diacritici come la tilde ( **~** ), l'accento acuto ( **?** ) o l'umlaut ( **?** ), ovvero *supportano la distinzione tra caratteri accentati e non accentati* o *non supportano la distinzione tra caratteri accentati e non accentati*. Si supponga, ad esempio, di specificare la sostituzione del criterio "caf?" con altri criteri in una query di ricerca full-text. Se il thesaurus non supporta la distinzione tra caratteri accentati e non accentati, tramite la ricerca full-text verranno sostituiti i criteri "caf?" e "cafe". Se il thesaurus supporta la distinzione tra caratteri accentati e non accentati, tramite la ricerca full-text verrà sostituito solo il criterio "caf?". Per impostazione predefinita, un thesaurus non supporta la distinzione tra caratteri accentati e non accentati.  
+     Per un determinato thesaurus, tutti i criteri di ricerca supportano o non supportano la distinzione relativa ai segni diacritici come la tilde ( **~** ), l'accento acuto ( **&acute;** ), o l'umlaut ( **&uml;** ), ovvero *supportano la distinzione tra caratteri accentati e non accentati* o *non supportano la distinzione tra caratteri accentati e non accentati*. Si supponga, ad esempio, di specificare la sostituzione del criterio "caf&eacute;" con altri criteri in una query di ricerca full-text. Se il thesaurus non supporta la distinzione tra caratteri accentati e non accentati, tramite la ricerca full-text verranno sostituiti i criteri "caf&eacute;" e "cafe". Se il thesaurus supporta la distinzione tra caratteri accentati e non accentati, tramite la ricerca full-text verrà sostituito solo il criterio "caf&eacute;". Per impostazione predefinita, un thesaurus non supporta la distinzione tra caratteri accentati e non accentati.  
   
 ##  <a name="initial_thesaurus_files"></a> File del thesaurus predefiniti
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre un set di file XML del thesaurus, uno per ogni lingua supportata. Tali file sono essenzialmente vuoti e contengono solo la struttura XML di livello principale comune a tutti i thesaurus di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e un thesaurus di esempio costituito da commenti.  

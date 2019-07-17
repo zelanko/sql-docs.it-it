@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2370c428d063958079e749c792a60de3b7379ee3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 217ed3b61b3e4da943103f992340210ef8295bb0
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210530"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832936"
 ---
 # <a name="data-compression"></a>Compressione dei dati
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ Nelle viste di sistema seguenti sono contenute informazioni sulla compressione d
 -   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md): le colonne **type** e **type_desc** includono CLUSTERED COLUMNSTORE e NONCLUSTERED COLUMNSTORE.  
 -   [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md): le colonne **data_compression** e **data_compression_desc** includono COLUMNSTORE e COLUMNSTORE_ARCHIVE.  
   
-La procedura [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) non si applica agli indici columnstore.  
+La stored procedure [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) si applica anche agli indici columnstore.  
   
 ## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>Impatto della compressione su tabelle e indici partizionati  
  Quando si utilizza la compressione dei dati con tabelle e indici partizionati, tenere presente le considerazioni seguenti:  
