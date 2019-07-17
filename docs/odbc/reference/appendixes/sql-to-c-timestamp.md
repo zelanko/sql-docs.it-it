@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 69c9f1258f35a69d6554783f5d1b4ca79be313d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee3852c688f495d54eb07ca9c2866ac17a1f5a1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118841"
 ---
 # <a name="sql-to-c-timestamp"></a>Da SQL a C: Timestamp
 
@@ -32,11 +31,11 @@ La tabella seguente illustra i dati ODBC C i tipi di dati a cui possono essere c
 
 |Identificatore di tipo C|Test|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > lunghezza in byte di caratteri<br /><br /> 20 < = *BufferLength* < = lunghezza in byte di caratteri<br /><br /> *BufferLength* < 20|Dati<br /><br /> Dati troncati [b]<br /><br /> Non definito|Lunghezza in byte dei dati<br /><br /> Lunghezza in byte dei dati<br /><br /> Non definito|n/d<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > lunghezza in caratteri<br /><br /> 20 < = *BufferLength* < = lunghezza in caratteri<br /><br /> *BufferLength* < 20|Dati<br /><br /> Dati troncati [b]<br /><br /> Non definito|Lunghezza dei dati in caratteri<br /><br /> Lunghezza dei dati in caratteri<br /><br /> Non definito|n/d<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|Lunghezza in byte dei dati < = *BufferLength*<br /><br /> Lunghezza in byte di dati > *BufferLength*|Dati<br /><br /> Non definito|Lunghezza in byte dei dati<br /><br /> Non definito|n/d<br /><br /> 22003|  
-|SQL_C_TYPE_DATE|Parte relativa all'ora del timestamp è uguale a zero [a]<br /><br /> Parte relativa all'ora del timestamp è diverso da zero [a]|Dati<br /><br /> Dati troncati [c]|6[f]<br /><br /> 6[f]|n/d<br /><br /> 01S07|  
-|SQL_C_TYPE_TIME|Parte relativa ai secondi frazionari di timestamp è uguale a zero [a]<br /><br /> Parte relativa ai secondi frazionari di timestamp è diverso da zero [a]|Data[d]<br /><br /> Dati troncati [d], [e]|6[f]<br /><br /> 6[f]|n/d<br /><br /> 01S07|  
+|SQL_C_CHAR|*BufferLength* > lunghezza in byte di caratteri<br /><br /> 20 < = *BufferLength* < = lunghezza in byte di caratteri<br /><br /> *BufferLength* < 20|Data<br /><br /> Dati troncati [b]<br /><br /> Non definito|Lunghezza in byte dei dati<br /><br /> Lunghezza in byte dei dati<br /><br /> Non definito|n/d<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* > lunghezza in caratteri<br /><br /> 20 < = *BufferLength* < = lunghezza in caratteri<br /><br /> *BufferLength* < 20|Data<br /><br /> Dati troncati [b]<br /><br /> Non definito|Lunghezza dei dati in caratteri<br /><br /> Lunghezza dei dati in caratteri<br /><br /> Non definito|n/d<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|Lunghezza in byte dei dati < = *BufferLength*<br /><br /> Lunghezza in byte di dati > *BufferLength*|Data<br /><br /> Non definito|Lunghezza in byte dei dati<br /><br /> Non definito|n/d<br /><br /> 22003|  
+|SQL_C_TYPE_DATE|Parte relativa all'ora del timestamp è uguale a zero [a]<br /><br /> Parte relativa all'ora del timestamp è diverso da zero [a]|Data<br /><br /> Dati troncati [c]|6[f]<br /><br /> 6[f]|n/d<br /><br /> 01S07|  
+|SQL_C_TYPE_TIME|Parte relativa ai secondi frazionari di timestamp è uguale a zero [a]<br /><br /> Parte relativa ai secondi frazionari di timestamp è diverso da zero [a]|Dati [d]<br /><br /> Dati troncati [d], [e]|6[f]<br /><br /> 6[f]|n/d<br /><br /> 01S07|  
 |SQL_C_TYPE_TIMESTAMP|Parte relativa ai secondi frazionari di timestamp non viene troncato [a]<br /><br /> Parte relativa ai secondi frazionari di timestamp viene troncato [a]|Dati [e]<br /><br /> Dati troncati [e]|16[f]<br /><br /> 16[f]|n/d<br /><br /> 01S07|  
 
  [a] hodnotou *BufferLength* viene ignorata per questa conversione. Il driver presuppone che le dimensioni di **TargetValuePtr* è la dimensione del tipo di dati C.  

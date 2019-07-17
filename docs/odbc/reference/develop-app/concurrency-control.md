@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e54298e9c25777f10b92f322f1b1e6a3d94c243
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c541bf28c1d4c7ec2e2041201bd7c168625bb34
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63191757"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083259"
 ---
 # <a name="concurrency-control"></a>Controllo della concorrenza
 *Concorrenza* è la possibilità di due transazioni utilizzano gli stessi dati allo stesso tempo, e delle transazioni isolamento in genere comporta una riduzione della concorrenza. Infatti di isolamento delle transazioni viene in genere implementato dal blocco di righe e come vengono bloccate altre righe, numero di transazioni può essere completato senza almeno temporaneamente bloccate da una riga bloccata. Mentre una riduzione della concorrenza in genere viene accettata come un compromesso per i livelli di isolamento delle transazioni superiore necessari mantenere l'integrità del database, può diventare un problema di applicazioni interattive con attività di lettura/scrittura elevata che utilizzano i cursori.  

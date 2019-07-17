@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c86f2b8ba6b9cc7223fa9fa16794ee69aa9cf46e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 42c350876037c83505860c65b26f4302d75b6eed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533263"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122563"
 ---
 # <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +49,13 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @distributor = ] 'distributor' OUTPUT` È il nome del server di distribuzione. Server di distribuzione **sysname**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
+`[ @distributor = ] 'distributor' OUTPUT` È il nome del server di distribuzione. Server di distribuzione **sysname**, il valore predefinito è **%** , che è l'unico valore che restituisce un set di risultati.  
   
-`[ @distribdb = ] 'distribdb' OUTPUT` È il nome del database di distribuzione. *distribdb* viene **sysname**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
+`[ @distribdb = ] 'distribdb' OUTPUT` È il nome del database di distribuzione. *distribdb* viene **sysname**, il valore predefinito è **%** , che è l'unico valore che restituisce un set di risultati.  
   
-`[ @directory = ] 'directory' OUTPUT` È la directory di lavoro. *directory* viene **nvarchar(255**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
+`[ @directory = ] 'directory' OUTPUT` È la directory di lavoro. *directory* viene **nvarchar(255**, il valore predefinito è **%** , che è l'unico valore che restituisce un set di risultati.  
   
-`[ @account = ] 'account' OUTPUT` È il [!INCLUDE[msCoName](../../includes/msconame-md.md)] account utente di Windows. *account*viene **nvarchar(255**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
+`[ @account = ] 'account' OUTPUT` È il [!INCLUDE[msCoName](../../includes/msconame-md.md)] account utente di Windows. *account*viene **nvarchar(255**, il valore predefinito è **%** , che è l'unico valore che restituisce un set di risultati.  
   
 `[ @min_distretention = ] _min_distretentionOUTPUT` È il periodo di memorizzazione minimo per la distribuzione espresso in ore. *min_distretention* viene **int**, il valore predefinito è **-1**.  
   
@@ -64,23 +63,23 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 `[ @history_retention = ] _history_retentionOUTPUT` È il periodo di memorizzazione della cronologia espresso in ore. *history_retention* viene **int**, il valore predefinito è **-1**.  
   
-`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` È il nome dell'agente di pulizia della cronologia. *history_cleanupagent* viene **nvarchar(100)**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
+`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` È il nome dell'agente di pulizia della cronologia. *history_cleanupagent* viene **nvarchar(100)** , il valore predefinito è **%** , che è l'unico valore che restituisce un set di risultati.  
   
-`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` È il nome dell'agente di pulizia di distribuzione. *distrib_cleanupagent* viene **nvarchar(100)**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
+`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` È il nome dell'agente di pulizia di distribuzione. *distrib_cleanupagent* viene **nvarchar(100)** , il valore predefinito è **%** , che è l'unico valore che restituisce un set di risultati.  
   
 `[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 `[ @local = ] 'local'` È se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ottenere i valori del server locale. *locale* viene **nvarchar(5**, con un valore predefinito è NULL.  
   
-`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` È il nome del server che esegue chiamate di procedura remota. *rpcsrvname* viene **sysname**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
+`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` È il nome del server che esegue chiamate di procedura remota. *rpcsrvname* viene **sysname**, il valore predefinito è **%** , che è l'unico valore che restituisce un set di risultati.  
   
-`[ @publisher_type = ] 'publisher_type' OUTPUT` È il tipo di server di pubblicazione del server di pubblicazione. *publisher_type* viene **sysname**, il valore predefinito è **%**, che è l'unico valore che restituisce un set di risultati.  
+`[ @publisher_type = ] 'publisher_type' OUTPUT` È il tipo di server di pubblicazione del server di pubblicazione. *publisher_type* viene **sysname**, il valore predefinito è **%** , che è l'unico valore che restituisce un set di risultati.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**distributor**|**sysname**|Nome del server di distribuzione.|  
+|**server di distribuzione**|**sysname**|Nome del server di distribuzione.|  
 |**database di distribuzione**|**sysname**|Nome del database di distribuzione.|  
 |**directory**|**nvarchar(255)**|Nome della directory di lavoro.|  
 |**account**|**nvarchar(255)**|Nome dell'account utente di Windows.|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5faad4f4e0de6f9c56115bff59933360f551ab55
-ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
+ms.openlocfilehash: c65498b25bfbe0a5eee38a43ea212e29edc26295
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67866276"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090049"
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_interval**|**int**|Intervallo in minuti che intercorre tra un tentativo e il successivo.|  
 |**os_run_priority**|**int**|Riservato.|  
 |**output_file_name**|**nvarchar(200)**|In quale comando deve essere scritto l'output di file ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, e **PowerShell** solo per i passaggi).|  
-|**last_run_outcome**|**int**|Risultato dell'ultima esecuzione del passaggio:<br /><br /> **0** = non è riuscita<br /><br /> **1** = Succeeded<br /><br /> **2** = Retry<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
+|**last_run_outcome**|**int**|Risultato dell'ultima esecuzione del passaggio:<br /><br /> **0** = non è riuscita<br /><br /> **1** = ha avuto esito positivo<br /><br /> **2** = nuovo tentativo<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
 |**last_run_duration**|**int**|Durata (hhmmss) dell'ultima esecuzione del passaggio.|  
 |**last_run_retries**|**int**|Numero di tentativi di esecuzione del comando durante l'ultima esecuzione del passaggio.|  
 |**last_run_date**|**int**|Data di inizio dell'ultima esecuzione del passaggio.|  

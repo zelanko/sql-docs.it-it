@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: b3b3a7d7-0b78-46c0-9755-045f7a5692b9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 845b665c108c2d91ef5876667e71a5c883ec8e80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 304e904ab95e4be58ba2a373bd6ed9c11131049f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735016"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094891"
 ---
 # <a name="syspolicypolicycategorysubscriptions-transact-sql"></a>syspolicy_policy_category_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Visualizza una riga per ogni sottoscrizione di gestione basata su criteri nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ogni riga descrive una coppia di categoria di criteri e destinazione. Nella tabella seguente vengono descritte le colonne contenute nella vista syspolicy_policy_group_subscriptions.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |policy_category_subscription_id|**int**|Identificatore del record.|  
 |target_type|**sysname**|Tipo dell'oggetto di database di destinazione della sottoscrizione.|  

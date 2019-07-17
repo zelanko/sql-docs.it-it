@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3ae733d560c227ccf282dfe4caed3935d9ffaebe
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2b9bdabcc11c900ae0a1cbe71280b64efb6ccdaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493643"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096214"
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
   
 `[ @ts_col = ] 'timestamp_col'` È il nome del **timestamp** colonna nel server di pubblicazione. *timestamp_col* viene **sysname**, con un valore predefinito è NULL.  
   
-`[ @filter_clause = ] 'filter_clause'` È una restrizione clausola (WHERE) che definisce un filtro orizzontale. Quando si specifica la clausola di restrizione, omettere la parola chiave WHERE. *filter_clause*viene **nvarchar (4000)**, con un valore predefinito è NULL.  
+`[ @filter_clause = ] 'filter_clause'` È una restrizione clausola (WHERE) che definisce un filtro orizzontale. Quando si specifica la clausola di restrizione, omettere la parola chiave WHERE. *filter_clause*viene **nvarchar (4000)** , con un valore predefinito è NULL.  
   
 `[ @primary_key_bitmap = ] 'primary_key_bitmap'` È una mappa di bit delle colonne chiave primaria nella tabella. *primary_key_bitmap* viene **varbinary(4000**, non prevede alcun valore predefinito.  
   

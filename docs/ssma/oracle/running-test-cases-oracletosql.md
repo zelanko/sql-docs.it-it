@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 537865967d0e43b7dd9501f9fbb7b9605f5b9367
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 79d3905c130e37c973a79a40369f97ae8f30ac5b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62625794"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266554"
 ---
 # <a name="running-test-cases-oracletosql"></a>Esecuzione di test case (OracleToSQL)
 Quando si SSMA Tester esegue un Test Case, esegue gli oggetti selezionati per il test e viene creato un report sui risultati della verifica. Se i risultati sono identici in entrambe le piattaforme, il test ha esito positivo. La corrispondenza degli oggetti tra Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene determinato in base alle impostazioni di mapping dello schema per il progetto SSMA corrente.  
@@ -78,7 +78,7 @@ In questa fase, Tester di SSMA richiama ogni oggetto selezionato per la sperimen
 Durante la finalizzazione SSMA Tester pulisce gli oggetti ausiliari creati nel **inizializzazione** passaggio.  
   
 ## <a name="next-step"></a>Passaggio successivo  
-[Viewing Test Case Reports &#40;OracleToSQL&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
+[Visualizzazione dei report di Test Case &#40;OracleToSQL&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
 [Selezione e configurazione degli oggetti da testare &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 59e639c1dd319d7db074d692d3776105abe89f0f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ef860a30ba5994e25a9d532445af0ec2c39f9e1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493743"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042736"
 ---
 # <a name="spaddmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
   
 `[ @subscription_priority = ] subscription_priority` È la priorità della sottoscrizione. *subscription_priority*viene **reale**, con un valore predefinito è NULL. Per le sottoscrizioni locali e anonime, la priorità è **0,0**. La priorità viene utilizzata dal sistema di risoluzione predefinito per eseguire una selezione in caso di conflitti. Per i Sottoscrittori globali, la priorità della sottoscrizione deve essere minore di 100, che corrisponde al livello di priorità del server di pubblicazione.  
   
-`[ @sync_type = ] 'sync_type'` È il tipo di sincronizzazione della sottoscrizione. *sync_type*viene **nvarchar(15)**, il valore predefinito è **automatica**. Può essere **automatici** oppure **none**. Se **automatica**, lo schema e i dati iniziali per le tabelle pubblicate vengono trasferiti nel Sottoscrittore prima di tutto. Se **none**, si presuppone il sottoscrittore dispone già dello schema e i dati iniziali per le tabelle pubblicate. Le tabelle e i dati di sistema vengono sempre trasferiti.  
+`[ @sync_type = ] 'sync_type'` È il tipo di sincronizzazione della sottoscrizione. *sync_type*viene **nvarchar(15)** , il valore predefinito è **automatica**. Può essere **automatici** oppure **none**. Se **automatica**, lo schema e i dati iniziali per le tabelle pubblicate vengono trasferiti nel Sottoscrittore prima di tutto. Se **none**, si presuppone il sottoscrittore dispone già dello schema e i dati iniziali per le tabelle pubblicate. Le tabelle e i dati di sistema vengono sempre trasferiti.  
   
 > [!NOTE]  
 >  Non è consigliabile specificare un valore di **none**.  

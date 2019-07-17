@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1cad06ee-5940-4361-8d01-7d850db1dd66
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fd051d018cb6f53b8c08110e26bc66910e3ca4c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dbfb09a261d7499e07137b7ed830d5a5b92dc73
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63045528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086008"
 ---
 # <a name="other-driver-architectures"></a>Altre architetture di driver
 Alcuni driver ODBC non sono strettamente conformi per l'architettura descritta in precedenza. È possibile che i driver di eseguono attività diverse da quelle di un driver ODBC tradizionali o non sono driver nel senso normale.  

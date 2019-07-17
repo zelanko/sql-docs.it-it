@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 611d23ad84df3087a259cbaf60870129b841715b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56f2dde1899340f036024253405379e094de59a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047615"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039039"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>Funzioni costruttore booleane - true (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ fn:true() as xs:boolean
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database AdventureWorks.  
   
-### <a name="a-using-the-true-xquery-boolean-function"></a>A. Utilizzo della funzione booleana true() di XQuery  
+### <a name="a-using-the-true-xquery-boolean-function"></a>R. Utilizzo della funzione booleana true() di XQuery  
  Nell'esempio seguente esegue una query non tipizzato **xml** variabile. L'espressione nel **Value ()** metodo viene restituito booleano **true ()** se "aaa" è il valore dell'attributo. Il **Value ()** metodo per il **xml** tipo di dati converte il valore booleano in un bit e lo restituisce.  
   
 ```  

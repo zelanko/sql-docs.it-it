@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fff543b074936f8bf1d69d841a1e81e402e9b0ae
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: f5a68160c8aee1bcb399513051e1f4cc35cea970
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535433"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085208"
 ---
 # <a name="sphelpschedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ sp_help_schedule
 |**schedule_uid**|**uniqueidentifier**|Identificatore della pianificazione.|  
 |**schedule_name**|**sysname**|Nome della pianificazione.|  
 |**enabled**|**int**|Se la pianificazione è abilitato (**1**) o non abilitato (**0**).|  
-|**freq_type**|**int**|Valore che indica la frequenza di esecuzione del processo:<br /><br /> **1** = Once<br /><br /> **4** = giornaliera<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativa al **freq_interval**<br /><br /> **64** = esecuzione all'avvio del servizio SQLServerAgent.|  
+|**freq_type**|**int**|Valore che indica la frequenza di esecuzione del processo:<br /><br /> **1** = una sola volta<br /><br /> **4** = giornaliera<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativa al **freq_interval**<br /><br /> **64** = esecuzione all'avvio del servizio SQLServerAgent.|  
 |**freq_interval**|**int**|Giorni in cui viene eseguito il processo. Il valore dipende dal valore della **freq_type**. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_type**|**int**|Unità di misura per **freq_subday_interval**. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_interval**|**int**|Numerosi **freq_subday_type** periodi intercorrere tra ogni esecuzione del processo. Per altre informazioni, vedere [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
@@ -96,7 +95,7 @@ sp_help_schedule
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-listing-information-for-all-schedules-in-the-instance"></a>A. Visualizzazione di un elenco di informazioni per tutte le pianificazioni nell'istanza  
+### <a name="a-listing-information-for-all-schedules-in-the-instance"></a>R. Visualizzazione di un elenco di informazioni per tutte le pianificazioni nell'istanza  
  Nell'esempio seguente viene visualizzato un elenco di informazioni per tutte le pianificazioni nell'istanza.  
   
 ```  

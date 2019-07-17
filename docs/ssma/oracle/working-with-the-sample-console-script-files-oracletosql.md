@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: c6202dcc-b994-457b-9b2f-0cd89e79792d
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 152d8ba2964c8485a1f158b71717067fdea948a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: fbe3e8c07af283f657926776e906dca4a95f7a7e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62743923"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259597"
 ---
 # <a name="working-with-the-sample-console-script-files-oracletosql"></a>Uso dei file script di esempio della console (OracleToSQL)
 Alcuni file di esempio sono stati forniti insieme al prodotto per il riferimento all'utente e l'utilizzo. In questa sezione descrive il modo con facilità personalizzare questi script per soddisfare le esigenze degli utenti finali.  
@@ -125,5 +125,5 @@ I seguenti file script di esempio console relativi a diversi scenari sono stati 
 ## <a name="see-also"></a>Vedere anche  
 [Creazione di file di valore della variabile &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
 [Creazione di file di connessione del Server &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
-[Generating Reports &#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)  
+[Generazione di report &#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)  
   

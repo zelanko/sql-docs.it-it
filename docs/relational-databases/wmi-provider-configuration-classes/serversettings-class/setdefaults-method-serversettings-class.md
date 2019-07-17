@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76e4cfab-4b15-4da4-bb2f-8aac6f927f79
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5e7a9dfd6d68f25b98469a79850444fc4726d785
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 094406b6bd8a07123049837318c00238ffaa2b84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052816"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>Metodo SetDefaults (classe ServerSettings)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ object.SetDefaults(OverwriteAll)
   
 #### <a name="parameters"></a>Parametri  
   
-|Parametro|Description|  
+|Parametro|Descrizione|  
 |---------------|-----------------|  
 |*OverwriteAll*|Valore booleano che specifica se sovrascrivere valori esistenti nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: **true** per sovrascrivere dati esistenti, o **false** se i dati esistenti non devono essere sovrascritti.|  
   

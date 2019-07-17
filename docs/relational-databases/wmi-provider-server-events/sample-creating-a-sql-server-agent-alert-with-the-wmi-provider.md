@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 03802fba0b2a36716fdac5674053a56061f26c85
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 875751bd4b2dffd0039ffb40aa884bb9731a75d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139486"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>Esempio: Creazione di un avviso di SQL Server Agent con il provider WMI
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Un utilizzo comune del provider di eventi WMI consiste nel creare avvisi di SQL Server Agent in risposta a eventi specifici. Nell'esempio seguente viene presentato un avviso semplice che salva eventi Deadlock Graph XML in una tabella per l'analisi successiva. SQL Server Agent invia una richiesta WQL, riceve eventi WMI ed esegue un processo in risposta all'evento. Si noti che benché diversi oggetti di Service Broker siano interessati dall'elaborazione del messaggio di notifica, il provider di eventi WMI gestisce i dettagli della creazione e della gestione di tali oggetti.  
   
 ## <a name="example"></a>Esempio  
- Viene innanzitutto creata una tabella nel database `AdventureWorks` in cui includere l'evento Deadlock Graph. La tabella è costituita da due colonne: la colonna `AlertTime` contiene la durata di esecuzione dell'avviso, mentre la colonna `DeadlockGraph` contiene il documento XML che include l'evento Deadlock Graph.  
+ Viene innanzitutto creata una tabella nel database `AdventureWorks` in cui includere l'evento Deadlock Graph. La tabella contiene due colonne: Il `AlertTime` colonna contiene la durata di esecuzione dell'avviso, e il `DeadlockGraph` colonna contiene il documento XML che contiene l'evento deadlock graph.  
   
  Viene quindi creato l'avviso. Lo script crea innanzitutto il processo eseguito dall'avviso, aggiunge un passaggio del processo al processo e specifica come destinazione del processo l'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lo script crea quindi l'avviso.  
   
@@ -104,7 +103,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Eseguire lo script seguente nella seconda scheda della query. Lo script produce un set di risultati e quindi si blocca, in attesa di acquisire un blocco su `Production.Product`.  
+ Eseguire lo script seguente nella seconda scheda della query. Questo script produce un set di risultati e quindi si blocca, in attesa di acquisire un blocco su `Production.Product`.  
   
 ```  
 USE AdventureWorks ;  

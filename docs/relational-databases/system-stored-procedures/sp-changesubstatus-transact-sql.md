@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0040f986e5ff3b6de025761b32d2f40e2e127d39
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fe75ffcf1e8cdcc387acb48c882e247b21889c06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113814"
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +64,11 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%**. Se *publication* non viene specificato, tutte le pubblicazioni sono interessate.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%** . Se *publication* non viene specificato, tutte le pubblicazioni sono interessate.  
   
-`[ @article = ] 'article'` È il nome dell'articolo. Deve essere univoco all'interno della pubblicazione. *articolo* viene **sysname**, il valore predefinito è **%**. Se *articolo* non viene specificato, tutti gli articoli sono interessati.  
+`[ @article = ] 'article'` È il nome dell'articolo. Deve essere univoco all'interno della pubblicazione. *articolo* viene **sysname**, il valore predefinito è **%** . Se *articolo* non viene specificato, tutti gli articoli sono interessati.  
   
-`[ @subscriber = ] 'subscriber'` È il nome del sottoscrittore per modificare lo stato di. *Sottoscrittore* viene **sysname**, il valore predefinito è **%**. Se *sottoscrittore* non viene specificato, lo stato viene modificato per tutti i sottoscrittori per l'articolo specificato.  
+`[ @subscriber = ] 'subscriber'` È il nome del sottoscrittore per modificare lo stato di. *Sottoscrittore* viene **sysname**, il valore predefinito è **%** . Se *sottoscrittore* non viene specificato, lo stato viene modificato per tutti i sottoscrittori per l'articolo specificato.  
   
 `[ @status = ] 'status'` Stato della sottoscrizione nella **syssubscriptions** tabella. *lo stato* viene **sysname**e non prevede alcun valore predefinito, i possibili valori sono i seguenti.  
   
@@ -77,11 +76,11 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |-----------|-----------------|  
 |**active**|Il Sottoscrittore è sincronizzato e in fase di ricezione dei dati.|  
 |**inactive**|Alla voce relativa al Sottoscrittore non è associata alcuna sottoscrizione.|  
-|**subscribed**|Il Sottoscrittore richiede dati, ma non è ancora sincronizzato.|  
+|**sottoscritto**|Il Sottoscrittore richiede dati, ma non è ancora sincronizzato.|  
   
 `[ @previous_status = ] 'previous_status'` È lo stato precedente per la sottoscrizione. *previous_status* viene **sysname**, con un valore predefinito è NULL. Questo parametro consente di modificare tutte le sottoscrizioni che hanno attualmente lo stato specificato, consentendo in tal modo le funzioni di gruppo in un set specifico di sottoscrizioni (ad esempio, impostando tutte attive verso le sottoscrizioni **sottoscritto**).  
   
-`[ @destination_db = ] 'destination_db'` È il nome del database di destinazione. *destination_db* viene **sysname**, il valore predefinito è **%**.  
+`[ @destination_db = ] 'destination_db'` È il nome del database di destinazione. *destination_db* viene **sysname**, il valore predefinito è **%** .  
   
 `[ @frequency_type = ] frequency_type` È la frequenza con cui pianificare l'attività di distribuzione. *frequency_type* viene **int**, con un valore predefinito è NULL.  
   
@@ -120,9 +119,9 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @active_end_date = ] active_end_date` Data dell'ultima attività di distribuzione è pianificata, nel formato aaaammgg. *active_end_date* viene **int**, con un valore predefinito è NULL.  
   
-`[ @optional_command_line = ] 'optional_command_line'` È un prompt dei comandi facoltativo. *optional_command_line* viene **nvarchar (4000)**, con un valore predefinito è NULL.  
+`[ @optional_command_line = ] 'optional_command_line'` È un prompt dei comandi facoltativo. *optional_command_line* viene **nvarchar (4000)** , con un valore predefinito è NULL.  
   
-`[ @distribution_jobid = ] distribution_jobid` È l'ID processo dell'agente di distribuzione nel server di distribuzione per la sottoscrizione quando si modifica lo stato della sottoscrizione da inattivo ad attivo. Negli altri casi non è definito. Se una chiamata a questa stored procedure richiede l'utilizzo di più agenti di distribuzione, il risultato non è definito. *distribution_jobid* viene **Binary (16)**, con un valore predefinito è NULL.  
+`[ @distribution_jobid = ] distribution_jobid` È l'ID processo dell'agente di distribuzione nel server di distribuzione per la sottoscrizione quando si modifica lo stato della sottoscrizione da inattivo ad attivo. Negli altri casi non è definito. Se una chiamata a questa stored procedure richiede l'utilizzo di più agenti di distribuzione, il risultato non è definito. *distribution_jobid* viene **Binary (16)** , con un valore predefinito è NULL.  
   
 `[ @from_auto_sync = ] from_auto_sync` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

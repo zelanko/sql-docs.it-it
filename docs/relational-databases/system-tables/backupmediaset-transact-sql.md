@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 831571621256a34611672ae6444379c375370f1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1dbaf429acb94334540f0e147eae2808e1655309
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679275"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119349"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47679275"
   Contiene una riga per ogni set di supporti di backup. Questa tabella è archiviata nel **msdb** database.  
  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**media_set_id**|**int**|Numero di identificazione univoco del set di supporti. Identità, chiave primaria.|  
 |**media_uuid**|**uniqueidentifier**|UUID del set di supporti. Tutti i [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] set di supporti è associato un UUID.<br /><br /> Per le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia, se un set di supporti contiene un gruppo di supporti, il **media_uuid** colonna può essere NULL (**media_family_count** 1).|  

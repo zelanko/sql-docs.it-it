@@ -33,14 +33,13 @@ helpviewer_keywords:
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad4e43d04c16443323358f0b84e6f26a9f9ab6bf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d7526bd23d5b49160748eff653d0e2d9c1e07ce4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086846"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Inserimento di dati mediante updategram XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,7 +92,7 @@ ms.locfileid: "56019012"
   
 -   Nella maggior parte degli esempi viene utilizzato il database di esempio [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]. Tutti gli aggiornamenti vengono applicati alle tabelle di questo database.  
   
-### <a name="a-inserting-a-record-by-using-an-updategram"></a>A. Inserimento di un record mediante un updategram  
+### <a name="a-inserting-a-record-by-using-an-updategram"></a>R. Inserimento di un record mediante un updategram  
  Questo updategram incentrato sugli attributi inserisce un record nella tabella HumanResources.Employee del database [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)].  
   
  In questo esempio l'updategram non specifica uno schema di mapping, pertanto utilizza il mapping predefinito nel quale il nome dell'elemento esegue il mapping a un nome di tabella e gli attributi o gli elementi figlio eseguono il mapping alle colonne della tabella stessa.  
@@ -159,7 +158,7 @@ ms.locfileid: "56019012"
 </ROOT>  
 ```  
   
-### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>b. Inserimento di più record mediante un updategram  
+### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>B. Inserimento di più record mediante un updategram  
  Questo updategram aggiunge due nuovi record di spostamento alla tabella HumanResources.Shift. L'updategram non specifica l'opzione facoltativa  **\<prima di >** blocco.  
   
 ```  
@@ -238,7 +237,7 @@ ms.locfileid: "56019012"
   
  La colonna UnitPrice della tabella Dettagli ordine è il **denaro** tipo. Per applicare la conversione del tipo appropriato (da un **stringa** tipo di un **denaro** tipo), il carattere di segno di dollaro ($) deve essere aggiunti come parte del valore. Se l'updategram non specifica uno schema di mapping, il primo carattere del **stringa** valore viene valutato. Se il primo carattere è un segno di dollaro ($), viene applicata la conversione appropriata.  
   
- Se l'updategram viene specificato in uno schema di mapping in cui la colonna è contrassegnata in modo appropriato come **dt:type="fixed.14.4"** oppure **SQL: DataType = "money"**, il segno di dollaro ($) non è necessario e il la conversione viene gestita dal mapping. Si tratta della modalità consigliata per garantire che venga eseguita la conversione di tipo appropriata.  
+ Se l'updategram viene specificato in uno schema di mapping in cui la colonna è contrassegnata in modo appropriato come **dt:type="fixed.14.4"** oppure **SQL: DataType = "money"** , il segno di dollaro ($) non è necessario e il la conversione viene gestita dal mapping. Si tratta della modalità consigliata per garantire che venga eseguita la conversione di tipo appropriata.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Per testare una query Xpath di esempio sullo schema  
   

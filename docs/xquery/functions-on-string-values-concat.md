@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3a2dd68c36887c373c7102b150ffc1032750eb52
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 063eca49a6a4d69e84e8a3d05221b632d0690bef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099833"
 ---
 # <a name="functions-on-string-values---concat"></a>Funzioni su valori stringa - concat
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,8 +49,8 @@ fn:concat ($string as xs:string?
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo nel database di esempio AdventureWorks.  
   
-### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>A. Utilizzo della funzione XQuery concat() per la concatenazione di stringhe  
- Per un modello di prodotto specifico, questa query restituisce una stringa creata concatenando il periodo di validità e la descrizione della garanzia. Nel documento della descrizione di catalogo, l'elemento <`Warranty`> è costituito dagli elementi figlio <`WarrantyPeriod`> e <`Description`>.  
+### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>R. Utilizzo della funzione XQuery concat() per la concatenazione di stringhe  
+ Per un modello di prodotto specifico, questa query restituisce una stringa creata concatenando il periodo di validità e la descrizione della garanzia. Nel documento di descrizione del catalogo, la <`Warranty`> elemento è costituito da <`WarrantyPeriod`> e <`Description`> gli elementi figlio.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -78,7 +77,7 @@ WHERE  PD.ProductModelID=28
   
 -   Nel documento sul quale viene eseguita la query vengono utilizzati spazi dei nomi. Pertanto, il **dello spazio dei nomi** parola chiave viene usata per definire il prefisso dello spazio dei nomi. Per altre informazioni, vedere [prologo XQuery](../xquery/modules-and-prologs-xquery-prolog.md).  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 <Product ProductModelID="28" ProductModelName="Road-450">1 year-parts and labor</Product>  

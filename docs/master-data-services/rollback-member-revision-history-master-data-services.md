@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d39d3474-20e7-429f-9c8d-fcc4eb0854fc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 50fda3c3fc295ed99a7c11fa8d6b9dd62fba1e6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb1768c056fae60e2ee3784306ac7882e123fe9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085681"
 ---
 # <a name="rollback-member-revision-history-master-data-services"></a>Rollback della cronologia delle revisioni del membro (Master Data Services)
 

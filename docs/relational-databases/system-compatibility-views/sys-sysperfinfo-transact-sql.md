@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: e22a81cd-27de-4690-9443-6aad6393bd3c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 954ad81a9bbc2c2a76e825a944a292b00e478218
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6ce86e7be7d54e95c2336691b53ea12ff0d8575
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076503"
 ---
 # <a name="syssysperfinfo-transact-sql"></a>sys.sysperfinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47596700"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**object_name**|**nchar(128)**|Nome dell'oggetto prestazione, ad esempio **SQLServer:LockManager** oppure **SQLServer:BufferManager**.|  
 |**counter_name**|**nchar(128)**|Nome del contatore delle prestazioni all'interno dell'oggetto, ad esempio **richieste di pagine** oppure **richieste di blocco**.|  

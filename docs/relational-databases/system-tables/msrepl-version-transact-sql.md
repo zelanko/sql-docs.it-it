@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1330f03-940b-4564-ac42-6030c6e21173
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 94cb0913e8122997652786cd4bf09ddccf7fa433
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 45dad1cfaa6057cd50ee4c01b484df8250121a46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775438"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079147"
 ---
 # <a name="msreplversion-transact-sql"></a>MSrepl_version (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,9 +31,9 @@ ms.locfileid: "52775438"
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**versione_principale**|**int**|Numero di versione principale del database di distribuzione.|  
-|**versione_secondaria**|**int**|Numero di versione secondario del database di distribuzione.|  
-|**revisione**|**int**|Numero di revisione.|  
+|**major_version**|**int**|Numero di versione principale del database di distribuzione.|  
+|**minor_version**|**int**|Numero di versione secondario del database di distribuzione.|  
+|**revision**|**int**|Numero di revisione.|  
 |**db_existed**|**bit**|Indica se il database di distribuzione esiste prima **sp_adddistributiondb** viene chiamato.|  
   
 ## <a name="see-also"></a>Vedere anche  

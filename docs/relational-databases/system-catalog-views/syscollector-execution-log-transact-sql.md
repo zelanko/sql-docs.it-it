@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e982c086bdae807220a2c9cf1c9e3260d0d66a83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31270da81f0951702aeef0427e70c6a66db5ff0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773495"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060355"
 ---
 # <a name="syscollectorexecutionlog-transact-sql"></a>syscollector_execution_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fornisce informazioni provenienti dal log di esecuzione per un set di raccolta o un pacchetto.   
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |log_id|**bigint**|Identifica ogni esecuzione del set di raccolta. Utilizzato per unire questa vista agli altri log dettagliati. Non ammette i valori Null.|  
 |parent_log_id|**bigint**|Identifica il pacchetto o il set di raccolta padre. Non ammette i valori Null. Gli ID sono concatenati nella relazione padre-figlio che consente di determinare il pacchetto avviato e il set di raccolta che lo ha avviato. Questa vista raggruppa le voci di log in base al collegamento padre-figlio. I nomi dei pacchetti sono visualizzati con un rientro in maniera tale che la sequenza delle chiamate sia chiaramente visibile.|  
@@ -42,7 +41,7 @@ ms.locfileid: "47773495"
 |finish_time|**datetime**|Ora in cui è stata completata l'esecuzione per i pacchetti e i set di raccolta completati. Ammette i valori Null.|  
 |runtime_execution_mode|**smallint**|Indica se l'attività del set di raccolta era raccogliere o caricare dati. Ammette i valori Null.<br /><br /> I valori possibili sono:<br /><br /> 0 = raccolta<br /><br /> 1 = Caricamento|  
 |status|**smallint**|Indica lo stato corrente del set di raccolta o del pacchetto. Non ammette i valori Null.<br /><br /> I valori possibili sono:<br /><br /> 0 = in fase di esecuzione<br /><br /> 1 = completato<br /><br /> 2 = non è riuscita|  
-|operatore|**nvarchar(128)**|Identifica chi ha avviato il pacchetto o il set di raccolta. Non ammette i valori Null.|  
+|operator|**nvarchar(128)**|Identifica chi ha avviato il pacchetto o il set di raccolta. Non ammette i valori Null.|  
 |package_id|**uniqueidentifier**|Identifica il set di raccolta o il pacchetto che ha generato questo log. Ammette i valori Null.|  
 |package_name|**nvarchar(4000)**|Nome del pacchetto che ha generato il log. Ammette i valori Null.|  
 |package_execution_id|**uniqueidentifier**|Fornisce un collegamento alla tabella di log [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Ammette i valori Null.|  

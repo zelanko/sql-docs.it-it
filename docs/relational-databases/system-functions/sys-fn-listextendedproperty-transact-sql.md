@@ -25,14 +25,13 @@ helpviewer_keywords:
 ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98cde3ea4c7150afd3eb2b547e73cf1b7f88e613
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a2516d24b65e509ffc04c0f9979721ad6eefa22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792292"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082709"
 ---
 # <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ fn_listextendedproperty (
  Nome della proprietà. *property_name* viene **sysname**. I possibili valori sono default, NULL o un nome di proprietà.  
   
  {impostazione predefinita | «*level0_object_type*' | NULL}  
- Utente o tipo definito dall'utente. *level0_object_type* viene **varchar(128)**, con un valore predefinito è NULL. I possibili valori sono ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, TRIGGER, TYPE, USER e NULL.  
+ Utente o tipo definito dall'utente. *level0_object_type* viene **varchar(128)** , con un valore predefinito è NULL. I possibili valori sono ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, TRIGGER, TYPE, USER e NULL.  
   
 > [!IMPORTANT]  
 >  I tipi USER e TYPE come tipi di livello 0 verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare pertanto di utilizzarle in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui sono state implementate. Utilizzare SCHEMA come tipo di livello 0 anziché USER. Per TYPE utilizzare SCHEMA come tipo di livello 0 e TYPE come tipo di livello 1.  
@@ -92,7 +91,7 @@ fn_listextendedproperty (
 |-----------------|---------------|  
 |objtype|**sysname**|  
 |objname|**sysname**|  
-|NAME|**sysname**|  
+|name|**sysname**|  
 |Valore|**sql_variant**|  
   
  Se la tabella restituita è vuota, significa che all'oggetto non sono associate proprietà estese o che l'utente non è autorizzato a elencare le proprietà estese dell'oggetto. In caso di restituzione di proprietà estese per il database, le colonne objtype e objname saranno NULL.  
@@ -121,7 +120,7 @@ WHERE o.name = 'Employee';
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-displaying-extended-properties-on-a-database"></a>A. Visualizzazione delle proprietà estese in un database  
+### <a name="a-displaying-extended-properties-on-a-database"></a>R. Visualizzazione delle proprietà estese in un database  
  Nell'esempio seguente vengono visualizzate tutte le proprietà estese impostate in un oggetto di database.  
   
 ```  

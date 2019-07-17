@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: 18ac429a536b657b7f7c0cf91c100eed8a152e52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ed669adc19dddc96ba953ba73f73805925968d19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058915"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Eseguire Data Migration Assistant dalla riga di comando
 
@@ -259,7 +258,7 @@ I comandi seguenti supportano le raccomandazioni per il database singolo Databas
 |`/SkuRecommendationPreventPriceRefresh` | Impedisce l'aggiornamento di prezzo. Usare se in esecuzione in modalità offline (ad esempio, true). | Y <br> (Selezionare entrambi in questo argomento per i prezzi statici o tutti gli argomenti seguenti devono essere selezionati per ottenere i prezzi più recenti)
 |`/SkuRecommendationCurrencyCode` | La valuta in cui visualizzare i prezzi (ad esempio "USD") | Y <br> (Per i prezzi più recenti)
 |`/SkuRecommendationOfferName` | L'offerta assegnare un nome (ad esempio "MS-AZR-0003P"). Per altre informazioni, vedere la [dettagli dell'offerta Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) pagina. | Y <br> (Per i prezzi più recenti)
-|`/SkuRecommendationRegionName` | L'area assegnare un nome (ad esempio "WestUS") | Y <br> (Per i prezzi più recenti)
+|`/SkuRecommendationRegionName` | L'area assegnare un nome (ad esempio "Stati Uniti occidentali") | Y <br> (Per i prezzi più recenti)
 |`/SkuRecommendationSubscriptionId` | ID della sottoscrizione. | Y <br> (Per i prezzi più recenti)
 |`/SkuRecommendationDatabasesToRecommend` | Elenco delimitato da spazi dei database (ad esempio, è consigliabile per "Database1" "Database2" "Database3"). I nomi sono tra maiuscole e minuscole e devono essere racchiuso tra virgolette doppie. Se omesso, vengono fornite indicazioni per tutti i database. | N
 |`/AzureAuthenticationTenantId` | Il tenant di autenticazione. | Y <br> (Per i prezzi più recenti)

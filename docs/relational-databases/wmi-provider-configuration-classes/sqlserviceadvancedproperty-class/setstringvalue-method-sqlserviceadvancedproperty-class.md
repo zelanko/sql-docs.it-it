@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: aa776b9b87d6742d530d87f08f00e7ac868a0788
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 68eaccce3d82ddb0085a73c6fbbce751b69e245a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139543"
 ---
 # <a name="setstringvalue-method-sqlserviceadvancedproperty-class-"></a>Metodo SetStringValue (classe SqlServiceAdvancedProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +41,9 @@ object.SetStringValue(StrValue)
   
 #### <a name="parameters"></a>Parametri  
   
-|Parametro|Description|  
+|Parametro|Descrizione|  
 |---------------|-----------------|  
-|*strValue*|Valore string che specifica il valore della proprietà avanzata.|  
+|*StrValue*|Valore string che specifica il valore della proprietà avanzata.|  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Valore **uint32** che è 0 se il servizio è stato modificato correttamente, 1 se la richiesta non è supportata e qualsiasi altro numero per indicare un errore.  

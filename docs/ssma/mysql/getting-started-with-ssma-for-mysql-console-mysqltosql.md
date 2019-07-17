@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 07c1c226d33a213dd9bd071c59d9771a0e0ca736
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88cf4716ea02b8c5dbcbd73e9839c6bacfbed10b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183039"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075421"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Introduzione alla console di SSMA per MySQL (MySQLToSQL)
 In questa sezione viene descritta la procedura per avviare e iniziare a usare l'applicazione console MySQL. Anche nell'elenco, nel presente documento, vengono utilizzate le convenzioni di in una finestra di output della Console SSMA tipica.  
@@ -58,7 +57,7 @@ Colore dall'interpretazione dell'output della console nella tabella seguente:
   
 |Colore|Descrizione|  
 |---------|---------------|  
-|Red|Errore irreversibile durante l'esecuzione|  
+|Rosso|Errore irreversibile durante l'esecuzione|  
 |Grigio|Data e un timestamp, messaggio all'utente|  
 |Bianco|Comandi di file di script, il tipo di messaggio|  
 |Giallo|Avviso|  

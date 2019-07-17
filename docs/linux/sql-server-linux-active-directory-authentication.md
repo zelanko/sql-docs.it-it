@@ -6,19 +6,18 @@ author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto
 ms.date: 04/01/2019
-manager: jroth
 ms.topic: tutorial
 ms.prod: sql
 ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: b99d4a7f6b246db75caf1d394d9a4670a574d6af
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 69bbeb31f8da4023bd0630ae0d944165407e2dec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027335"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Esercitazione: Usare l'autenticazione di Active Directory con SQL Server in Linux
 
@@ -321,7 +320,7 @@ systemctl restart mssql-server
 
 Si userà LDAPS su SSSD se Active Directory domain join su host è stato eseguito tramite il pacchetto SSSD e **disablesssd** non è impostata su true. Se **disablesssd** è impostata su true insieme **forcesecureldap** impostato su true, si userà protocollo LDAPS su chiamate alla libreria openldap eseguite da SQL Server.
 
-### <a name="post-sql-server-2017-cu14"></a>Post SQL Server 2017 CU14
+### <a name="post-sql-server-2017-cu14"></a>Registrare SQL Server 2017 CU14
 
 Partire da SQL Server 2017 CU14, se SQL Server è stato aggiunto a un controller di dominio Active Directory usando provider di terze parti ed è configurato per usare openldap chiamate per la ricerca tramite AD generale impostando **disablesssd** per true, è anche possibile usare **enablekdcfromkrb5** opzione per imporre a SQL Server da usare libreria krb5 per ricerca KDC invece di ricerca DNS inversa per il server KDC.
 

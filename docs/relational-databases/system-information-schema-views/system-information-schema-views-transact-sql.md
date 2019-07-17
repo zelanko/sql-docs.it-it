@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d29ac26486c68bcce5b7876732ec398c995e9ee6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2d9216686cca6ed35d089130098026d5d958638a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078456"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>Viste degli schemi delle informazioni del sistema (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "51667310"
 |Database|Catalogo|  
 |schema|schema|  
 |Object|Object|  
-|Tipo di dati definito dall'utente|Dominio|  
+|Tipo di dati definito dall'utente|Domain|  
   
  Questa convenzione di mapping dei nomi è valida per le viste di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compatibili con lo standard ISO riportate di seguito.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "51667310"
   
  Alcune viste contengono inoltre riferimenti a classi di dati diverse, ad esempio dati di tipo carattere o dati binari.  
   
- Quando si fa riferimento alle viste dello schema delle informazioni, è necessario utilizzare un nome completo che includa il nome schema `INFORMATION_SCHEMA`. Esempio:  
+ Quando si fa riferimento alle viste dello schema delle informazioni, è necessario utilizzare un nome completo che includa il nome schema `INFORMATION_SCHEMA`. Ad esempio:  
   
 ```  
 SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_DEFAULT  

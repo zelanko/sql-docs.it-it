@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9dca1aca3883b16b13f4e0abdb842deaf5bbfdd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 55fedd154195b4f5abf230120a0e16e6a41ce6e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537903"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032935"
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @triggername = ] '[ _triggerschema.] _triggername'` È il nome del trigger e lo schema a cui appartiene, se applicabile, il cui ordine deve essere impostato o modificato. [_triggerschema_**.**] *triggername* viene **sysname**. Se il nome specificato non corrisponde a un trigger oppure corrisponde a un trigger INSTEAD OF, viene restituito un errore. *triggerschema* non è possibile specificare per i trigger DDL o logon.  
+`[ @triggername = ] '[ _triggerschema.] _triggername'` È il nome del trigger e lo schema a cui appartiene, se applicabile, il cui ordine deve essere impostato o modificato. [_triggerschema_ **.** ] *triggername* viene **sysname**. Se il nome specificato non corrisponde a un trigger oppure corrisponde a un trigger INSTEAD OF, viene restituito un errore. *triggerschema* non è possibile specificare per i trigger DDL o logon.  
   
 `[ @order = ] 'value'` È l'impostazione del nuovo ordine del trigger. *valore* viene **varchar (10)** e può essere uno dei valori seguenti.  
   
@@ -61,7 +60,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
  Un trigger può essere designato come il **primo** oppure **ultima** trigger per un tipo di istruzione solo dopo che tale trigger è stato definito come trigger per tale tipo di istruzione. Ad esempio, attivare **TR1** può essere designato **primo** per l'inserimento nella tabella **T1** se **TR1** è definito come trigger INSERT. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] restituisce un errore se **TR1**, che è stata definita solo come trigger INSERT, viene impostato come una **prima**, oppure **ultimo**, trigger per un'istruzione UPDATE. Per altre informazioni, vedere la sezione Osservazioni.  
   
- **@namespace=** { **'DATABASE'** | **'SERVER'** | NULL }  
+ **@namespace=** { **'DATABASE'**  |  **'SERVER'** | NULL}  
  Quando *triggername* è un trigger DDL, **@namespace** specifica se *triggername* è stata creata con ambito database o ambito server. Se *triggername* un trigger logon, è necessario specificare SERVER. Per altre informazioni sull'ambito del trigger DDL, vedere [trigger DDL](../../relational-databases/triggers/ddl-triggers.md). Se non specificato o se viene specificato NULL, *triggername* è un trigger DML.  
   
 ||  
@@ -109,7 +108,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-setting-the-firing-order-for-a-dml-trigger"></a>A. Impostazione dell'ordine di attivazione per un trigger DML  
+### <a name="a-setting-the-firing-order-for-a-dml-trigger"></a>R. Impostazione dell'ordine di attivazione per un trigger DML  
  Nell'esempio seguente il trigger `uSalesOrderHeader` viene definito come primo trigger da attivare dopo l'esecuzione di un'operazione `UPDATE` nella tabella `Sales.SalesOrderHeader`.  
   
 ```  

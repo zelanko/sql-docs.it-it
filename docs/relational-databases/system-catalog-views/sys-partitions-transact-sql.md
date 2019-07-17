@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 1c19e1b1-c925-4dad-a652-581692f4ab5e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3bbb2fc8aa232175ab3dd37f580b25c1bfb77129
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 661a37b4136202b9a83b863535670a88a3f100dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823129"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102181"
 ---
 # <a name="syspartitions-transact-sql"></a>sys.partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contiene una riga per ogni partizione di tutte le tabelle e per gran parte degli indici nel database. I tipi di indici speciali, ad esempio Full-Text, Spatial e XML, non sono inclusi in questa vista. Tutti gli indici e le tabelle di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contengono almeno una partizione, anche se non esplicitamente partizionati.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |partition_id|**bigint**|Indica l'ID della partizione. Valore univoco all'interno di un database.|  
 |object_id|**int**|Indica l'ID dell'oggetto a cui appartiene la partizione. Ogni tabella o vista è costituita da almeno una partizione.|  
@@ -42,7 +41,7 @@ ms.locfileid: "47823129"
 |hobt_id|**bigint**|Indica l'ID dell'heap di dati o dell'albero B contenente le righe per la partizione.|  
 |rows|**bigint**|Indica il numero approssimativo di righe nella partizione.|  
 |filestream_filegroup_id|**smallint**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica l'ID del filegroup FILESTREAM archiviato su questa partizione.|  
-|data_compression|**tinyint**|Indica lo stato di compressione per ogni partizione:<br /><br /> 0 = NONE <br />1 = ROW <br />2 = PAGE <br />3 = COLUMNSTORE: **si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br />4 = COLUMNSTORE_ARCHIVE: **si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> **Nota:** indici full-text verranno compressi in qualsiasi edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|data_compression|**tinyint**|Indica lo stato di compressione per ogni partizione:<br /><br /> 0 = NONE <br />1 = ROW <br />2 = PAGE <br />3 = COLUMNSTORE: **Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br />4 = COLUMNSTORE_ARCHIVE: **Si applica a**: da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> **Nota:** Indici full-text verranno compressi in qualsiasi edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |data_compression_desc|**nvarchar(60)**|Indica lo stato di compressione per ogni partizione. I valori possibili per le tabelle rowstore sono NONE, ROW e PAGE. I valori possibili per le tabelle columnstore sono COLUMNSTORE e COLUMNSTORE_ARCHIVE.|  
   
 ## <a name="permissions"></a>Permissions  

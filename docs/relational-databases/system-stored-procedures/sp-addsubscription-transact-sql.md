@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2ca3505d952e1bffa68d23fe2de5b51c050640c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62998305"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096219"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @article=] '*articolo*'  
  Articolo in cui viene sottoscritta la pubblicazione. *articolo* viene **sysname**, con un valore predefinito è all. Se si specifica all, viene aggiunta una sottoscrizione a tutti gli articoli della pubblicazione specificata. Per i server di pubblicazione Oracle sono supportati solo i valori all o NULL.  
   
- [ @subscriber=] '*subscriber*'  
+ [ @subscriber=] '*sottoscrittore*'  
  Nome del Sottoscrittore. *Sottoscrittore* viene **sysname**, con un valore predefinito è NULL.  
   
  [ @destination_db=] '*destination_db*'  
@@ -102,7 +101,7 @@ sp_addsubscription [ @publication = ] 'publication'
 > [!NOTE]  
 >  Le tabelle e i dati di sistema vengono sempre trasferiti.  
   
- [ @status=] '*status*'  
+ [ @status=] '*stato*'  
  Stato della sottoscrizione. *lo stato* viene **sysname**, con un valore predefinito NULL. Se non è impostato in modo esplicito, questo parametro viene impostato automaticamente dalla replica su uno dei valori seguenti.  
   
 |Value|Descrizione|  
@@ -199,7 +198,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @optional_command_line=] '*optional_command_line*'  
  Prompt dei comandi facoltativo da eseguire. *optional_command_line* viene **nvarchar (4000)** , con un valore predefinito è NULL.  
   
- [ @reserved=] '*reserved*'  
+ [ @reserved=] '*riservato*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
@@ -217,7 +216,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @dts_package_name=] '*dts_package_name*'  
  Specifica il nome del pacchetto Data Transformation Services (DTS). *dts_package_name* è un **sysname** con valore predefinito è NULL. Ad esempio, per specificare il pacchetto DTSPub_Package, il parametro deve essere `@dts_package_name = N'DTSPub_Package'`. Questo parametro è disponibile per sottoscrizioni push. Per aggiungere informazioni sul pacchetto DTS a una sottoscrizione pull, utilizzare sp_addpullsubscription_agent.  
   
- [ @dts_package_password= ] '*dts_package_password*'  
+ [ @dts_package_password=] '*dts_package_password*'  
  Password del pacchetto, se è disponibile. *dts_package_password* viene **sysname** con valore predefinito è NULL.  
   
 > [!NOTE]  
@@ -226,16 +225,16 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @dts_package_location=] '*dts_package_location*'  
  Specifica la posizione del pacchetto. *dts_package_location* è un **nvarchar (12)** , con un valore predefinito del server di distribuzione. Per la posizione del pacchetto è possibile specificare distributor o subscriber.  
   
- [ @distribution_job_name= ] '*distribution_job_name*'  
+ [ @distribution_job_name=] '*job_name*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @publisher= ] '*publisher*'  
+ [ @publisher=] '*server di pubblicazione*'  
  Specifica un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  *server di pubblicazione* non deve essere specificato per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
- [ @backupdevicetype= ] '*backupdevicetype*'  
+ [ @backupdevicetype=] '*backupdevicetype*'  
  Specifica il tipo di dispositivo di backup utilizzato durante l'inizializzazione di un Sottoscrittore da un backup. *backupdevicetype* viene **nvarchar(20)** , i possibili valori sono i seguenti:  
   
 |Value|Descrizione|  
@@ -249,7 +248,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @backupdevicename=] '*backupdevicename*'  
  Specifica il nome del dispositivo utilizzato durante l'inizializzazione di un Sottoscrittore da un backup. *backupdevicename* viene **nvarchar(1000)** , con un valore predefinito è NULL.  
   
- [ @mediapassword= ] '*mediapassword*'  
+ [ @mediapassword=] '*mediapassword*'  
  Specifica una password per il set di supporti se durante la formattazione dei supporti è stata impostata una password. *MEDIAPASSWORD* viene **sysname**, con un valore predefinito NULL.  
   
 > [!NOTE]  
@@ -258,10 +257,10 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @password= ] '*password*'  
  Specifica una password per il backup se durante la creazione del backup è stata impostata una password. *la password*viene **sysname**, con un valore predefinito NULL.  
   
- [ @fileidhint= ] *fileidhint*  
+ [ @fileidhint=] *fileidhint*  
  Identifica un valore ordinale del set di backup da ripristinare. *fileidhint* viene **int**, con un valore predefinito NULL.  
   
- [ @unload= ] *unload*  
+ [ @unload=] *scaricamento*  
  Specifica se è necessario scaricare un dispositivo di backup su nastro dopo il completamento dell'inizializzazione dal backup. *scaricamento* viene **bit**, con un valore predefinito 1. il valore 1 specifica che il nastro deve essere scaricato. *scaricamento* viene utilizzato solo quando *backupdevicetype* è un nastro.  
   
  [ @subscriptionlsn=] *subscriptionlsn*  

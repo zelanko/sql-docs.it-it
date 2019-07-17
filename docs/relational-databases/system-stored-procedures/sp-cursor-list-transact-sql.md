@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8c6cef14177e871f35ccd5c84af4a2b28e35aff5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5adcaab96bfe9af3945b479e4bff5180ca8140d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108584"
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
  [ @cursor_return=] *cursor_variable_name*OUTPUT  
  Nome di una variabile di cursore dichiarata. *cursor_variable_name* viene **cursore**, non prevede alcun valore predefinito. Il cursore restituito è di tipo scorrevole, dinamico e di sola lettura.  
   
- [ @cursor_scope= ] *cursor_scope*  
+ [ @cursor_scope=] *cursor_scope*  
  Specifica il livello dei cursori da segnalare. *cursor_scope* viene **int**e non prevede alcun valore predefinito, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
@@ -55,7 +54,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |3|Restituisce i cursori locali e quelli globali.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- None  
+ Nessuna  
   
 ## <a name="cursors-returned"></a>Cursori restituiti  
  sp_cursor_list restituisce un report come parametro di output di un cursore [!INCLUDE[tsql](../../includes/tsql-md.md)], anziché come set di risultati. In questo modo i batch, le stored procedure e i trigger [!INCLUDE[tsql](../../includes/tsql-md.md)] possono elaborare l'output una riga alla volta. Non è possibile richiamare direttamente la procedura da funzioni API del database. Il parametro di output del cursore deve essere associato a una variabile di programma, ma le API del database non supportano l'associazione di parametri o variabili del cursore.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff45f220-9b8b-4c44-82f8-a8e9913fffea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b9af2cfd73556baca4870428cdcdfcee3e07191d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21495e538a554a477336d1a92926c11fe762c5af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63217616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062658"
 ---
 # <a name="checking-feature-support-and-variability"></a>Controllo del supporto e della variabilità delle funzionalità
 Per verificare il supporto delle funzionalità e la variabilità, le applicazioni in genere chiamano **SQLGetInfo**, **SQLGetFunctions**, e **SQLGetTypeInfo**. Un buon punto di partenza è SQL e API grammatica livelli di conformità del driver. In cui sono descritti i livelli di ampi di supporto della funzionalità. L'applicazione può quindi chiamare **SQLGetInfo** con le altre opzioni per determinare il supporto tecnico o variabilità delle funzionalità necessarie, **SQLGetFunctions** per determinare se le funzioni esigenze oltre restituito sono supportate a livello di conformità, e **SQLGetTypeInfo** per determinare quali tipi di dati SQL sono supportati.  

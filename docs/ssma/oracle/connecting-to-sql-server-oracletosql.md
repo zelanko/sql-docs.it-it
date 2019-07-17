@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 1b2a8059-1829-4904-a82f-9c06de1e245f
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 40e591615850d16994c4023b63a354aa2061da59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: cd8f0e57554f32d3b02a6e0e98d3a3645d683bac
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287501"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266156"
 ---
 # <a name="connecting-to-sql-server-oracletosql"></a>Connessione a SQL Server (OracleToSQL)
 Eseguire la migrazione di database Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 R2 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 oppure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 è necessario connettersi a uno di questi come destinazione le istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando ci si connette, SSMA Ottiene i metadati relativi a tutti i database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e visualizza i metadati di database nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Visualizzatore metadati. SSMA archivia le informazioni su quale istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si è connessi a, ma non archivia le password.  

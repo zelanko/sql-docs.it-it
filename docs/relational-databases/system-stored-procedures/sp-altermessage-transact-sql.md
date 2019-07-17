@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: df2bab593e0e945e854e310a394abbc93f75efa4
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 0722bbc713804af6b2b97b5651df5b564d17a136
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493123"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117800"
 ---
 # <a name="spaltermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +49,13 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
 > [!NOTE]  
 >  Se un messaggio viene scritto nel registro applicazioni di Windows, viene registrato inoltre nel file di log degli errori di [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-`[ @parameter_value = ]'value_'` Viene usato con **@parameter** per indicare che l'errore è necessario scrivere il [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro applicazioni di Windows. *valore* viene **varchar (5)**, non prevede alcun valore predefinito. Se **true**, l'errore viene sempre scritto nel registro applicazioni di Windows. Se **false**, l'errore viene scritto nel registro applicazioni di Windows, ma può essere scritta in base al modo in cui è stato generato l'errore. Se *valore* omette *write_to_log* per **@parameter** deve anche essere specificato.  
+`[ @parameter_value = ]'value_'` Viene usato con **@parameter** per indicare che l'errore è necessario scrivere il [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro applicazioni di Windows. *valore* viene **varchar (5)** , non prevede alcun valore predefinito. Se **true**, l'errore viene sempre scritto nel registro applicazioni di Windows. Se **false**, l'errore viene scritto nel registro applicazioni di Windows, ma può essere scritta in base al modo in cui è stato generato l'errore. Se *valore* omette *write_to_log* per **@parameter** deve anche essere specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  L'effetto della **sp_altermessage** con il WITH_LOG è analogo a quello del parametro RAISERROR WITH LOG, con la differenza che opzione **sp_altermessage** cambia il comportamento della registrazione di un messaggio esistente. I messaggi modificati con l'opzione WITH_LOG vengono sempre scritti nel registro applicazioni di Windows, indipendentemente dalla modalità con cui sono stati generati. Gli errori vengono infatti scritti nel registro applicazioni di Windows anche se RAISERROR viene eseguito senza l'opzione WITH_LOG.  

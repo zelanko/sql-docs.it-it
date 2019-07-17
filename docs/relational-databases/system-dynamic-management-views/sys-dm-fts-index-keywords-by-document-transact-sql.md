@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_index_keywords_by_document (Transact-SQL) | Microsoft Docs
+title: DM fts_index_keywords_by_document (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 793b978b-c8a1-428c-90c2-a3e49d81b5c9
 author: pmasl
 ms.author: pelopes
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed1ebf610eafe5c882b2e19ed70129e0cac432fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86ab3a31f53f480713ae27a70bfe59d3817af017
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944363"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078565"
 ---
 # <a name="sysdmftsindexkeywordsbydocument-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -64,9 +63,9 @@ sys.dm_fts_index_keywords_by_document
   
 ## <a name="table-returned"></a>Tabella restituita  
   
-|colonna|Tipo di dati|Descrizione|  
+|Colonna|Tipo di dati|Descrizione|  
 |------------|---------------|-----------------|  
-|parola chiave|**nvarchar(4000)**|Rappresentazione esadecimale della parola chiave archiviata nell'indice full-text.<br /><br /> Nota: OxFF rappresenta il carattere speciale che indica la fine di un file o set di dati.|  
+|keyword|**nvarchar(4000)**|Rappresentazione esadecimale della parola chiave archiviata nell'indice full-text.<br /><br /> Nota: OxFF rappresenta il carattere speciale che indica la fine di un file o set di dati.|  
 |display_term|**nvarchar(4000)**|Formato leggibile della parola chiave derivato dal formato interno archiviato nell'indice full-text.<br /><br /> Nota: OxFF rappresenta il carattere speciale che indica la fine di un file o set di dati.|  
 |column_id|**int**|ID della colonna utilizzata per eseguire l'indicizzazione full-text della parola chiave corrente.|  
 |document_id|**int**|ID della riga o del documento utilizzato per eseguire l'indicizzazione full-text del termine corrente. L'ID corrisponde al valore della chiave full-text della riga o del documento specificato.|  
@@ -116,7 +115,7 @@ GO
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-displaying-full-text-index-content-at-the-document-level"></a>A. Visualizzazione del contenuto dell'indice full-text a livello di documento  
+### <a name="a-displaying-full-text-index-content-at-the-document-level"></a>R. Visualizzazione del contenuto dell'indice full-text a livello di documento  
  Nell'esempio seguente viene visualizzato il contenuto dell'indice full-text a livello di documento nella tabella `HumanResources.JobCandidate` del database di esempio `AdventureWorks2012`.  
   
 > [!NOTE]  

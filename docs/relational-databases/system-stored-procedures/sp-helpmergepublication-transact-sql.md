@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d291288c44341c3a707696b0b3baecdcd15779ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62660802"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137646"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +42,10 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @publication **=** ] **'** _publication_ **'**  
+ [ @publication **=** ] **'** _pubblicazione_ **'**  
  Nome della pubblicazione. *pubblicazione*viene **sysname**, il valore predefinito è **%** , che restituisce informazioni su tutte le pubblicazioni di tipo merge nel database corrente.  
   
- [ @found **=** ] **'***found***'** OUTPUT  
+ [ @found **=** ] **'***trovato***'** OUTPUT  
  Flag che indica le righe che restituiscono valori. *trovato*viene **int** e un parametro di OUTPUT con valore predefinito è NULL. **1** indica la pubblicazione è stata trovata. **0** indica la pubblicazione non è stata trovata.  
   
  [ @publication_id **=** ] **'***publication_id***'** OUTPUT  
@@ -66,7 +65,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |id|**int**|Ordine sequenziale della pubblicazione nell'elenco del set di risultati.|  
-|NAME|**sysname**|Nome della pubblicazione.|  
+|name|**sysname**|Nome della pubblicazione.|  
 |description|**nvarchar(255)**|Descrizione della pubblicazione.|  
 |status|**tinyint**|Viene indicato quando i dati della pubblicazione sono disponibili.|  
 |retention|**int**|Tempo per salvare i metadati delle modifiche per gli articoli nella pubblicazione. Le unità per questo periodo di tempo possono essere giorni, settimane, mesi o anni. Per informazioni sulle unità, vedere la colonna retention_period_unit.|  
@@ -75,9 +74,9 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_pull|**int**|Determina se è possibile creare sottoscrizioni pull per la pubblicazione specificata. **0** significa che una sottoscrizione pull non è consentita.|  
 |allow_anonymous|**int**|Determina se è possibile creare sottoscrizioni anonime per la pubblicazione specificata. **0** significa che non è consentita una sottoscrizione anonima.|  
 |centralized_conflicts|**int**|Viene determinato se i record dei conflitti vengono archiviati nel server di pubblicazione specificato:<br /><br /> **0** = i record dei conflitti vengono archiviati sia il server di pubblicazione e nel Sottoscrittore che ha causato il conflitto.<br /><br /> **1** = tutti i record dei conflitti vengono archiviati nel server di pubblicazione.|  
-|priority|**float(8)**|Priorità della sottoscrizione di loopback.|  
+|priorità|**float(8)**|Priorità della sottoscrizione di loopback.|  
 |snapshot_ready|**tinyint**|Viene indicato se lo snapshot della pubblicazione specificata è pronto:<br /><br /> **0** = lo snapshot è pronto per l'uso.<br /><br /> **1** = lo snapshot non è pronto per l'uso.|  
-|publication_type|**int**|Tipo di pubblicazione:<br /><br /> **0** = Snapshot.<br /><br /> **1** = transazionale.<br /><br /> **2** = unione nell'indice.|  
+|publication_type|**int**|Tipo di pubblicazione:<br /><br /> **0** = snapshot.<br /><br /> **1** = transazionale.<br /><br /> **2** = unione nell'indice.|  
 |pubid|**uniqueidentifier**|Identificatore univoco della pubblicazione.|  
 |snapshot_jobid|**binary(16)**|ID di processo dell'agente snapshot. Per ottenere la voce per il processo di snapshot nel [sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md) tabella di sistema, è necessario convertire questo valore esadecimale a **uniqueidentifier**.|  
 |enabled_for_internet|**int**|Viene determinato se la pubblicazione è abilitata per Internet. Se **1**, i file di sincronizzazione per la pubblicazione vengono inseriti nella `C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp` directory. La directory FTP (File Transfer Protocol) deve essere creata dall'utente. Se **0**, la pubblicazione non è abilitata per l'accesso a Internet.|  

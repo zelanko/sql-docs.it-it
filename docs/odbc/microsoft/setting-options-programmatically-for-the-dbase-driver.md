@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 336d0fd4-5448-4d8c-b7d9-49e857228e36
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a268e72262f9f8252ea89774876f3d04008fe4c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27f675cca5115a8336f2be4b7fa96c091aee1b62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63284951"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063565"
 ---
 # <a name="setting-options-programmatically-for-the-dbase-driver"></a>Impostazione delle opzioni a livello di codice per il driver dBASE
 
@@ -34,6 +33,6 @@ ms.locfileid: "63284951"
 |Descrizione|Una descrizione facoltativa dei dati nell'origine dati; ad esempio, "Hire data, cronologia degli stipendi e situazione corrente di tutti i dipendenti."|Per impostare questa opzione in modo dinamico, usare il **DESCRIPTION** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
 |Exclusive|Se il **esclusivo** casella è selezionata, il database verrà aperto in modalità esclusiva e sono accessibili da un solo utente alla volta. Le prestazioni risultano migliorate quando è in esecuzione in modalità esclusiva.|Per impostare questa opzione in modo dinamico, usare il **esclusivo** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
 |Timeout di pagina|Specifica il periodo di tempo, in decimi di secondo, che una pagina, se non utilizzato, rimane nel buffer prima che venga rimosso. Il valore predefinito è 600 decimi di secondo (60 secondi). Questa opzione si applica a tutte le origini dati che usano il driver ODBC.<br /><br /> Il timeout della pagina non può essere 0 a causa di un ritardo inerente. Il timeout della pagina non può essere minore del ritardo inerente, anche se è impostata l'opzione di timeout della pagina di sotto di tale valore.|Per impostare questa opzione in modo dinamico, usare il **PAGETIMEOUT** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
-|Read Only|Definisce il database in sola lettura.|Per impostare questa opzione in modo dinamico, usare il **READONLY** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
+|Sola lettura|Definisce il database in sola lettura.|Per impostare questa opzione in modo dinamico, usare il **READONLY** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
 |Selezionare la Directory|Visualizza una finestra di dialogo in cui è possibile selezionare una directory che contiene i file che si desidera accedere.<br /><br /> Quando si definisce una directory di origine dati, specificare la directory in cui si trovano i file usati più di frequente. Il driver ODBC usa tale directory come directory predefinita. Copiare altri file in questa directory, se vengono usati frequentemente. In alternativa, è possibile qualificare nomi di file in un'istruzione SELECT con il nome della directory:<br /><br /> SELEZIONARE \* DA C:\MYDIR\EMP<br /><br /> Oppure, è possibile specificare una nuova directory predefinita usando il **SQLSetConnectOption** canonica con l'opzione SQL_CURRENT_QUALIFIER.|Per impostare questa opzione in modo dinamico, usare il **DEFAULTDIR** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
 |Mostra le righe eliminate|Specifica se le righe che sono state contrassegnate come eliminati possono essere recuperate o posizionato in corrispondenza. Se deselezionata, le righe eliminate non vengono visualizzate; Se selezionata, le righe eliminate vengono considerate lo stesso come righe non è stato eliminato. Per impostazione predefinita, l'opzione è deselezionata.|Per impostare questa opzione in modo dinamico, usare il **DELETED** parola chiave in una chiamata a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|

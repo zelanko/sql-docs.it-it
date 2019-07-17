@@ -19,13 +19,12 @@ ms.assetid: cf1489ff-4819-41fa-a62a-4ed797a16207
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: 0183694382851f023c9f6863848a3e525cc0b7aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 114109e0ee7bf7ba8855ad65f4ab7438c9815187
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133862"
 ---
 # <a name="sysfulltextcatalogs-transact-sql"></a>sys.fulltext_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +37,8 @@ ms.locfileid: "64945624"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |fulltext_catalog_id|**int**|ID del catalogo full-text. Valore univoco all'interno dei cataloghi full-text del database.|  
-|NAME|**sysname**|Nome del catalogo. Valore univoco all'interno del database.|  
-|percorso|**nvarchar(260)**|Nome della directory del catalogo nel file system.|  
+|name|**sysname**|Nome del catalogo. Valore univoco all'interno del database.|  
+|path|**nvarchar(260)**|Nome della directory del catalogo nel file system.|  
 |is_default|**bit**|Catalogo full-text predefinito.<br /><br /> True = Predefinito.<br /><br /> False = Non predefinito.|  
 |is_accent_sensitivity_on|**bit**|Impostazione del catalogo relativa alla distinzione tra caratteri accentati/non accentati.<br /><br /> True = Distinzione tra caratteri accentati/non accentati supportata.<br /><br /> False = Distinzione tra caratteri accentati/non accentati non supportata.|  
 |data_space_id|**int**|Filegroup in cui è stato creato il catalogo.|  

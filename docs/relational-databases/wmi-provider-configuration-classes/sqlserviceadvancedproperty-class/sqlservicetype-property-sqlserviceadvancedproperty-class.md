@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 20f1663a-9a14-4f14-8c1b-8aa133e272c3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 440d7a0d90887d6a1bbeb9553306c5453c514d02
-ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
+ms.openlocfilehash: 30b69a61f184738f72fce32920d8aeedd62797eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67351583"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139456"
 ---
 # <a name="sqlservicetype-property-sqlserviceadvancedproperty-class"></a>Proprietà SqlServiceType (classe SqlServiceAdvancedProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ object.SetBoolValue(NumValue)
 ## <a name="remarks"></a>Note  
  I possibili valori restituiti sono i seguenti:  
   
-|Type|Definizione|  
+|type|Definizione|  
 |----------|----------------|  
 |*1*|MSSQLSERVER è il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |*2*|SQLSERVERAGENT è il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent.|  

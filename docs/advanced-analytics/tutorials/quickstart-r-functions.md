@@ -7,15 +7,14 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: d33034a2d18736f47fb32c4d35221bbcd702927d
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: fa2d47729641e8efd13e9e30be7a61186a892b5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046873"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962019"
 ---
-# <a name="quickstart-using-r-functions"></a>Guida introduttiva: Uso delle funzioni R
+# <a name="quickstart-using-r-functions"></a>Avvio rapido: Uso delle funzioni R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Se sono completate le guide introduttive precedenti, si ha familiarità con le operazioni di base ed è pronto per un elemento più complesso, ad esempio funzioni statistiche. Funzioni statistiche avanzate che sono piuttosto complesse da implementare in T-SQL possono essere eseguite in R con una sola riga di codice.
@@ -104,4 +103,4 @@ Per un esempio, vedere l'esercitazione: [Creare funzionalità di dati](../tutori
 Il passaggio successivo consiste nella creazione di un modello predittivo tramite R in SQL Server.
 
 > [!div class="nextstepaction"]
-> [Guida introduttiva: Creare un modello predittivo](quickstart-r-create-predictive-model.md)
+> [Avvio rapido: Creare un modello predittivo](quickstart-r-create-predictive-model.md)

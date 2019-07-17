@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4290f3d41cf4e5210a7fde98132db533f8336810
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 041b8a9123781ca270c3970a04c620b691e85230
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62903702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106349"
 ---
 # <a name="msmergesessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ ms.locfileid: "62903702"
 |**download_rows_retried**|**int**|Numero di righe con tentativi ripetuti di download nel Sottoscrittore.|  
 |**schema_changes**|**int**|Numero di modifiche dello schema applicate durante la sessione.|  
 |**metadata_rows_cleanedup**|**int**|Numero di righe di metadati rimossi durante la sessione.|  
-|**runstatus**|**int**|Stato di esecuzione:<br /><br /> **1** = Start.<br /><br /> **2** = Succeed.<br /><br /> **3** = in corso.<br /><br /> **4** = inattivo.<br /><br /> **5** = nuovo tentativo.<br /><br /> **6** = esito negativo.|  
+|**runstatus**|**int**|Stato di esecuzione:<br /><br /> **1** = avvio.<br /><br /> **2** = esito positivo.<br /><br /> **3** = in corso.<br /><br /> **4** = inattivo.<br /><br /> **5** = nuovo tentativo.<br /><br /> **6** = esito negativo.|  
 |**estimated_upload_changes**|**int**|Numero stimato di modifiche che devono essere applicate nel server di pubblicazione.|  
 |**estimated_download_changes**|**int**|Numero stimato di modifiche che devono essere applicate nel Sottoscrittore.|  
 |**connection_type**|**int**|Connessione utilizzata durante il caricamento:<br /><br /> **1** = rete locale (LAN).<br /><br /> **2** = connessione remota.<br /><br /> **3** = sincronizzazione web.|  

@@ -10,12 +10,12 @@ ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 5258a95b713da0ec1fe526e94ce11c6e5e0b595c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d888fa133e6cb1026ae23486dfabfc5e0b13b57
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138773"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259833"
 ---
 # <a name="creating-script-files-accesstosql"></a>Creazione di file di script (AccessToSQL)
 Il primo passaggio prima di avviare l'applicazione console SSMA consiste nel creare il file di script e, se è necessario creare il file di valore della variabile e il file di connessione del server.  
@@ -86,7 +86,7 @@ Le opzioni configurabili dall'utente includono:
   
     - origine utilizzare-ultimo usato = "true" (impostazione predefinita) o server di origine = "source_servername"  
   
-    - target-use-last-used="true" (default) or target-server="target_servername"  
+    - destinazione Usa-ultimo usato = "true" (impostazione predefinita) o server di destinazione = "target_servername"  
   
     **Esempio:**  
   
@@ -200,7 +200,7 @@ Le opzioni configurabili dall'utente includono:
   
     -   Skip: La console ignora gli oggetti che esistono già nel database  
   
-    -   ask-user: Richiede l'input dell'utente ('Sì' / 'no')  
+    -   chiedere-utente: Richiede l'input dell'utente ('Sì' / 'no')  
   
     **Esempio:**  
   
@@ -292,7 +292,7 @@ Le opzioni configurabili dall'utente includono:
   
     -   Info: Tutti i livelli ad eccezione del fatto che vengono registrati i messaggi di debug.  
   
-    -   debug: Tutti i livelli di messaggi registrati.  
+    -   Eseguire il debug: Tutti i livelli di messaggi registrati.  
   
     > [!NOTE]  
     > Obbligatori vengono registrati a qualsiasi livello.  

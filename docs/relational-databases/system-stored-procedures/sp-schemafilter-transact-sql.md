@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3018d23247a8f4d127d09878cb20c5f48f76c4ff
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: de92a64bb090a053d4cecb03cd9b812744f72fba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206947"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126396"
 ---
 # <a name="spschemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +39,14 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [**@publisher** =] **'***publisher***'**  
+ [ **@publisher** = ] **'***publisher***'**  
  È il nome del non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [**@schema** =] **'***schema***'**  
+ [ **@schema** =] **'***schema***'**  
  Nome dello schema. *lo schema* viene **sysname**, con un valore predefinito NULL.  
   
- [**@operation** =] **'***operazione***'**  
- Operazione da eseguire nello schema. *operazione* viene **nvarchar(4)**, e può essere uno dei valori seguenti.  
+ [ **@operation** =] **'***operazione***'**  
+ Operazione da eseguire nello schema. *operazione* viene **nvarchar(4)** , e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  

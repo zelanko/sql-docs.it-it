@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cd3fab32-13f1-4a86-abc4-5e18667669fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 50d65520e74a4e11bada88795fedc0b2f2e82628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e987c224f2d716fcab3bf898b1cb276e922e48ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471044"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085498"
 ---
 # <a name="international-support-visual-foxpro-odbc-driver"></a>Supporto multilingue (driver ODBC Visual FoxPro)
 Il Driver ODBC Microsoft Visual FoxPro supporta:  
@@ -37,7 +36,7 @@ Il Driver ODBC Microsoft Visual FoxPro supporta:
   
  Per un elenco di sequenze di collazione supportati, vedere [SET COLLATE](../../odbc/microsoft/set-collate-command.md).  
   
-## <a name="locale"></a>impostazioni locali  
+## <a name="locale"></a>locale  
  Il set di informazioni che corrisponde a una determinata lingua e paese/area geografica. Le impostazioni locali indica le impostazioni specifiche, ad esempio separatori decimali, date e formati di ora e ordinamento dei caratteri.  
   
 ## <a name="sort-order"></a>ordinamento  

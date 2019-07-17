@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3fee962111dd6b1316e6740f76f02bf3862745e4
-ms.sourcegitcommit: 9e722cc8d10ecbdb93efc2fc1886fe7b20dbc13c
+ms.openlocfilehash: 8f3e007a0676afd507af54e3b3406297cf40042e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52282023"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108996"
 ---
 # <a name="syssqlmodules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "52282023"
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID dell'oggetto contenitore. Valore univoco all'interno di un database.|  
-|**Definizione**|**nvarchar(max)**|Testo SQL che definisce il modulo. Questo valore può anche essere ottenuto usando il [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) funzione predefinita.<br /><br /> NULL = Crittografato.|  
+|**definition**|**nvarchar(max)**|Testo SQL che definisce il modulo. Questo valore può anche essere ottenuto usando il [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) funzione predefinita.<br /><br /> NULL = Crittografato.|  
 |**uses_ansi_nulls**|**bit**|Modulo creato con SET ANSI_NULLS ON.<br /><br /> È sempre = 0 per regole e impostazioni predefinite.|  
 |**uses_quoted_identifier**|**bit**|Modulo creato con SET QUOTED_IDENTIFIER ON.|  
 |**is_schema_bound**|**bit**|Modulo creato con l'opzione SCHEMABINDING.<br /><br /> Contiene sempre il valore 1 per le stored procedure compilate in modo nativo.|  

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5830d394330778fae6aab795286c7fbc9e211072
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9682535c82f8a579259993e82560dfe6bc930f93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710719"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061360"
 ---
 # <a name="systrustedassemblies-transact-sql"></a>sys.trusted_assemblies (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -34,12 +33,12 @@ Contiene una riga per ogni assembly attendibili per il server.
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 
-|Nome colonna |Tipo di dati |Description |
+|Nome colonna |Tipo di dati |Descrizione |
 |--- |--- |--- |
 |hash |varbinary(8000 |SHA2_512 hash del contenuto di assembly. |
 |description |nvarchar(4000) |Descrizione definita dall'utente facoltativo dell'assembly. Microsoft consiglia di usare il nome canonico che codifica il nome semplice, numero di versione, impostazioni cultura, chiave pubblica e architettura dell'assembly da considerare attendibile. Questo valore identifica in modo univoco identifica l'assembly sul lato di runtime (CLR) di linguaggio comune ed è identico al valore di clr_name in Assemblies. |
 |create_date |datetime2 |Data che l'assembly è stato aggiunto all'elenco di assembly attendibili. |
-|created_by |nvarchar (128) |Nome di account di accesso dell'entità che ha aggiunto l'assembly all'elenco. |
+|created_by |nvarchar(128) |Nome di account di accesso dell'entità che ha aggiunto l'assembly all'elenco. |
 | | | |
 
 

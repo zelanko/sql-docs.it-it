@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e29b2ad4c4049890bef1ee319d37847a0e21cacd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5dbdf757038abbf2c98d3987ee14a9cb9184a61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676151"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081323"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Supporto dei valori Null e confronti di logica a tre valori
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47676151"
 ## <a name="operations-functions-and-null-values"></a>Operazioni, funzioni e valori NULL  
  Tutti gli operatori aritmetici (+, -, \*, /, %), operatori bit per bit (~ &, e |), la maggior parte delle funzioni e restituiscono NULL se uno degli operandi o degli argomenti dei **SqlTypes** sono NULL. Il **IsNull** proprietà restituisce sempre un valore true o false.  
   
-## <a name="precision"></a>Precisione  
+## <a name="precision"></a>Precision  
  I valori massimi dei tipi di dati decimali CLR di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] sono diversi da quelli dei tipi di dati numerici e decimali di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per i tipi di dati CLR decimali di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], inoltre, si presuppone la massima precisione. In CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tuttavia **SqlDecimal** fornisce la stessa precisione massima e scala e la stessa semantica di tipo di dati decimal in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="overflow-detection"></a>Rilevamento dell'overflow  

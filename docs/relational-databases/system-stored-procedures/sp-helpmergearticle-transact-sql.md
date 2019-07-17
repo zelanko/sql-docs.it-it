@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eec9be936a14b0d5c78b5bc183516a8118c339a2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e1c297e050121c3013242c40938fdd4c0ba8b936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533443"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122339"
 ---
 # <a name="sphelpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,9 +38,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` È il nome della pubblicazione per cui recuperare informazioni. *pubblicazione*viene **sysname**, il valore predefinito è **%**, che restituisce informazioni su tutti gli articoli di merge inclusi in tutte le pubblicazioni nel database corrente.  
+`[ @publication = ] 'publication'` È il nome della pubblicazione per cui recuperare informazioni. *pubblicazione*viene **sysname**, il valore predefinito è **%** , che restituisce informazioni su tutti gli articoli di merge inclusi in tutte le pubblicazioni nel database corrente.  
   
-`[ @article = ] 'article'` È il nome dell'articolo per cui si desidera ottenere informazioni. *articolo*viene **sysname**, il valore predefinito è **%**, che restituisce informazioni su tutti gli articoli di merge nella pubblicazione specificata.  
+`[ @article = ] 'article'` È il nome dell'articolo per cui si desidera ottenere informazioni. *articolo*viene **sysname**, il valore predefinito è **%** , che restituisce informazioni su tutti gli articoli di merge nella pubblicazione specificata.  
   
 ## <a name="result-set"></a>Set di risultati  
   
@@ -54,12 +53,12 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**sync_object_owner**|**sysname**|Nome del proprietario della vista che definisce l'articolo pubblicato.|  
 |**sync_object**|**sysname**|Nome dell'oggetto personalizzato utilizzato per stabilire i dati iniziali per la partizione.|  
 |**description**|**nvarchar(255)**|Descrizione dell'articolo.|  
-|**status**|**tinyint**|Stato dell'articolo. I possibili valori sono i seguenti:<br /><br /> **1** = inactive<br /><br /> **2** = attivo<br /><br /> **5** = operazione data definition language (DDL) in sospeso<br /><br /> **6** = operazione DDL con un nuovo snapshot generato<br /><br /> Nota: Quando un articolo viene reinizializzato, i valori della **5** e **6** vengono impostati sul **2**.|  
+|**status**|**tinyint**|Stato dell'articolo. I possibili valori sono i seguenti:<br /><br /> **1** = inattivo<br /><br /> **2** = attivo<br /><br /> **5** = operazione data definition language (DDL) in sospeso<br /><br /> **6** = operazione DDL con un nuovo snapshot generato<br /><br /> Nota: Quando un articolo viene reinizializzato, i valori della **5** e **6** vengono impostati sul **2**.|  
 |**creation_script**|**nvarchar(255)**|Percorso e nome di uno script di schema dell'articolo facoltativo utilizzato per la creazione dell'articolo nel database di sottoscrizione.|  
 |**conflict_table**|**nvarchar(270)**|Nome della tabella in cui sono archiviati i conflitti di inserimento o aggiornamento.|  
 |**article_resolver**|**nvarchar(255)**|Sistema di risoluzione personalizzato per l'articolo.|  
 |**subset_filterclause**|**nvarchar(1000)**|Clausola WHERE che specifica il filtro orizzontale.|  
-|**pre_creation_command**|**tinyint**|Metodo di creazione preliminare. I possibili valori sono i seguenti:<br /><br /> **0** = none<br /><br /> **1** = drop<br /><br /> **2** = delete<br /><br /> **3** = truncate|  
+|**pre_creation_command**|**tinyint**|Metodo di creazione preliminare. I possibili valori sono i seguenti:<br /><br /> **0** = nessuno<br /><br /> **1** = Rimuovi<br /><br /> **2** = delete<br /><br /> **3** = tronca|  
 |**schema_option**|**binary(8)**|Mappa di bit dell'opzione di generazione dello schema per l'articolo. Per informazioni su questa opzione, vedere [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) oppure [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md).|  
 |**type**|**smallint**|Tipo di articolo. I possibili valori sono i seguenti:<br /><br /> **10** = tabella<br /><br /> **32** = stored procedure<br /><br /> **64** = vista o vista indicizzata<br /><br /> **128** = funzione definita dall'utente<br /><br /> **160** = solo schema sinonimo|  
 |**column_tracking**|**int**|Impostazione per il rilevamento a livello di colonna; in cui **1** significa che il rilevamento a livello di colonna è on, e **0** rilevamento a livello di colonna è disattivato.|  

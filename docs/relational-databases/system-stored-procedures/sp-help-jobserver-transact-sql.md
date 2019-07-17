@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ba2120b4c48ac9df9cc901b4ee789d95f9fc0357
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 6a1a2ce1208dcf359bb0586c3de1fe294644e3a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533293"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054886"
 ---
 # <a name="sphelpjobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ sp_help_jobserver
 |**last_run_time**|**int**|Ora di inizio dell'ultima esecuzione del processo nel server corrente|  
 |**last_run_duration**|**int**|Durata in secondi dell'ultima esecuzione del processo nel server di destinazione corrente.|  
 |**last_outcome_message**|**nvarchar(1024)**|Descrive l'ultimo risultato del processo.|  
-|**last_run_outcome**|**int**|Risultato dell'ultima esecuzione del processo nel server specificato:<br /><br /> **0** = non è riuscita<br /><br /> **1** = Succeeded<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
+|**last_run_outcome**|**int**|Risultato dell'ultima esecuzione del processo nel server specificato:<br /><br /> **0** = non è riuscita<br /><br /> **1** = ha avuto esito positivo<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
   
 ## <a name="permissions"></a>Permissions  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  

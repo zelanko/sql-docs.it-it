@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 039728bd18abcd1f3a660297fa0a1d937b7b1eb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 96d76d301e3f937cb0e3c21a43f1939d0149ec9b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288250"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264514"
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>Opzioni della riga di comando nella console SSMA (OracleToSQL)
 Microsoft offre un solido set opzioni riga di comando per eseguire e controllare le attività SSMA. Le sezioni che seguono in modo dettagliato lo stesso.  

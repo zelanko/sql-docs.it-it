@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c43764cb-5841-4b89-9dc0-984a7488b3c1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 884c798e14964fbcaaf3ca9ba6656f4d62738fe8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b326ed0c4e9a196904aa0f5c60b705243ef3bd97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62445997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061579"
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>Scorrimento e recupero di righe (ODBC)
 Quando si usa un cursore scorrevole, le applicazioni chiamano **SQLFetchScroll** per posizionare il cursore e recuperare le righe. **SQLFetchScroll** supporta lo scorrimento relativo (successivo e precedente relativo *n* righe), lo scorrimento assoluto (, cognome e di riga *n*) e il posizionamento dal segnalibro. Il *FetchOrientation* e *FetchOffset* argomenti nel **SQLFetchScroll** specificare quale set di righe da recuperare, come illustrato nelle figure seguenti.  

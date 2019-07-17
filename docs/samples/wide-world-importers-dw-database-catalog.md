@@ -9,14 +9,13 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ead11248d0eebe198890884b427f864cfea756c
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 7c3da2af72743cc8f89273bfce24fe74fc7e4dc1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270164"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104292"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Catalogo del database WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -30,7 +29,7 @@ I dati in WideWorldImportersDW rispecchia pertanto i dati in WideWorldImporters,
 
 I diversi tipi di tabelle sono organizzati in tre schemi.
 
-|schema|Description|
+|schema|Descrizione|
 |-----------------------------|---------------------|
 |Dimension|Tabelle delle dimensioni.|
 |Fatti|Tabelle dei fatti.|  
@@ -46,9 +45,9 @@ WideWorldImportersDW ha le seguenti tabelle delle dimensioni. La descrizione inc
 
 |Tabella|Tabelle di origine|
 |-----------------------------|---------------------|
-|Città|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
+|City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
-|date|Nuova tabella con le informazioni sulle date, inclusi anno fiscale (in base 1 ° novembre avviare per anno fiscale).|
+|Date|Nuova tabella con le informazioni sulle date, inclusi anno fiscale (in base 1 ° novembre avviare per anno fiscale).|
 |Employee|`Application.People` (Indici per tabelle con ottimizzazione per la memoria).|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |Fornitore|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|

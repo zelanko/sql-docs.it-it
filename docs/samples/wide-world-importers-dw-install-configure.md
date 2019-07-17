@@ -9,14 +9,13 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a1335b430346cf64d143ce3e07887d78f65a451
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ed3c5f1a4f2168196a651aea64c9c88311a197b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104249"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>Configurazione e installazione WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -37,7 +36,7 @@ Codice sorgente per ricreare il database di esempio è disponibile dal percorso 
 
 [Wide world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
 
-## <a name="install"></a>Install
+## <a name="install"></a>Installazione
 
 
 ### <a name="sql-server"></a>SQL Server
@@ -61,7 +60,7 @@ Per importare un file bacpac in un nuovo Database SQL, è possibile utilizzare M
 3. Fare clic sui **database** nodo e selezionare **Importa applicazione livello dati**.
 4. Nel **impostazioni di importazione** selezionate **Importa da disco locale** e selezionare il file bacpac del database di esempio dal file system.
 5. Sotto **le impostazioni del Database** cambiare il nome di database in *WideWorldImportersDW* e selezionare l'obiettivo di edizione e il servizio di destinazione da usare.
-6. Fare clic su **successivo** e **fine** per avviare la distribuzione. Richiederà alcuni minuti. Quando si specifica un obiettivo di servizio inferiore a S2 potrebbe richiedere più tempo.
+6. Fare clic su **successivo** e **fine** per avviare la distribuzione. Questa operazione richiederà qualche minuto. Quando si specifica un obiettivo di servizio inferiore a S2 potrebbe richiedere più tempo.
 
 ## <a name="configuration"></a>Configurazione
 

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8e41bcab4680d1e3bbaf08e2fbab112799fd5976
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 3b8c1b95d8d04e2b11982af14971e43e83db146f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533153"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075768"
 ---
 # <a name="sprefreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_refreshview [ @viewname = ] 'viewname'
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-updating-the-metadata-of-a-view"></a>A. Aggiornamento dei metadati di una vista  
+### <a name="a-updating-the-metadata-of-a-view"></a>R. Aggiornamento dei metadati di una vista  
  Nell'esempio seguente vengono aggiornati i metadati della vista `Sales.vIndividualCustomer`.  
   
 ```  

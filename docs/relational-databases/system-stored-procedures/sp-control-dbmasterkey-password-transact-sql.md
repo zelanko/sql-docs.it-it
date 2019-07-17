@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: af6e23ba3cce2ef4dfaa6901f51a9d6c0b034e60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0af97dacdf5927428042d8e67593a0c6ee78542d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108768"
 ---
 # <a name="spcontroldbmasterkeypassword-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,14 +74,14 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 > [!NOTE]  
 >  Quando si utilizza la credenziale aggiunta tramite sp_control_dbmasterkey_password per aprire la chiave del database master, quest'ultima viene nuovamente crittografata dalla chiave master del servizio. Se il database si trova in modalità sola lettura, non sarà possibile eseguire nuovamente la crittografia e la chiave master del database rimarrà non crittografata. Per accedere successivamente alla chiave master del database, è necessario utilizzare l'istruzione OPEN MASTER KEY e una password. Per evitare di utilizzare una password, creare le credenziali prima di applicare al database la modalità sola lettura.  
   
- **Potenziale problema di compatibilità con le versioni precedenti:** attualmente, la stored procedure non verifica se è presente una chiave master. Questo è consentito solo per la compatibilità con le versioni precedenti, ma viene visualizzato un avviso. Questo comportamento è deprecato. In una versione futura la chiave master deve esistere e la password utilizzata nella stored procedure **sp_control_dbmasterkey_password** deve essere la stessa password di un tipo di password usate per crittografare la chiave master del database.  
+ **Potenziale problema di compatibilità con le versioni precedenti:** Attualmente, la stored procedure non verifica se è presente una chiave master. Questo è consentito solo per la compatibilità con le versioni precedenti, ma viene visualizzato un avviso. Questo comportamento è deprecato. In una versione futura la chiave master deve esistere e la password utilizzata nella stored procedure **sp_control_dbmasterkey_password** deve essere la stessa password di un tipo di password usate per crittografare la chiave master del database.  
   
 ## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione CONTROL per il database.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-creating-a-credential-for-the-adventureworks2012-master-key"></a>A. Creazione di una credenziale per la chiave master di AdventureWorks2012  
+### <a name="a-creating-a-credential-for-the-adventureworks2012-master-key"></a>R. Creazione di una credenziale per la chiave master di AdventureWorks2012  
  Nell'esempio seguente viene creata una credenziale per la chiave master del database `AdventureWorks2012` e la password della chiave master viene salvata come segreto nella credenziale. Poiché tutti i parametri passati a `sp_control_dbmasterkey_password` deve essere del tipo di dati **nvarchar**, le stringhe di testo vengono convertite con l'operatore di cast `N`.  
   
 ```  

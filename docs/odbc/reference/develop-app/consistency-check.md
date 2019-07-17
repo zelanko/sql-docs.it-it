@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: deb80efa-ad1f-4ea5-b334-9817cd279e5c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cb73d8a4de482f24eae5794232019af9890e3624
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 419e338a5e96821606dc26a53a4fccecbc72ae3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63043736"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125526"
 ---
 # <a name="consistency-check"></a>Verifica della coerenza
 Verifica di coerenza viene eseguita automaticamente dal driver ogni volta che un'applicazione imposta il campo SQL_DESC_DATA_PTR del APD, ARD o IPD. Ogni volta che questo campo è impostato, il driver verificherà che il valore del campo SQL_DESC_TYPE e i valori applicabili per il campo SQL_DESC_TYPE nello stesso record siano validi e coerenti.  

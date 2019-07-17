@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 528ba1cb776124c72fcb2d6f1d1e97c0b25ea2f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c219189fbd10ca91d91f3f5a527f88c1804d6d84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124367"
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- None  
+ Nessuna  
   
 ## <a name="remarks"></a>Note  
  Il **start_full** azione viene usata per creare uno snapshot completo dei dati full-text nella *fulltext_catalog_name*. Il **start_incremental** azione viene utilizzata per ripetere l'indicizzazione solo delle righe modificate nel database. Popolamento incrementale può essere applicato solo se la tabella include una colonna di tipo **timestamp**. Se una tabella nel catalogo full-text non contiene una colonna di tipo **timestamp**, la tabella viene eseguito un popolamento completo.  
@@ -84,7 +83,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-create-a-full-text-catalog"></a>A. Creazione di un catalogo full-text  
+### <a name="a-create-a-full-text-catalog"></a>R. Creazione di un catalogo full-text  
  In questo esempio viene creato un catalogo full-text vuoto **Cat_Desc**, nella **AdventureWorks2012** database.  
   
 ```  

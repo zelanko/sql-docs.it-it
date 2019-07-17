@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b80afb0e-ef2f-408f-86f5-a392edd99a56
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 59ade343f282933e05619996b119bc08e2dfb2ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c47e534f069f810948189f2668d4ecdfbfa4ad79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62445913"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107538"
 ---
 # <a name="setting-up-the-cursor"></a>Configurazione del cursore
 L'applicazione può specificare il tipo di cursore prima di impostare l'esecuzione di un'istruzione che crea un risultato. Ciò avviene con l'attributo SQL_ATTR_CURSOR_TYPE di istruzione. Se l'applicazione non specifica in modo esplicito un tipo, verrà utilizzato un cursore forward-only. Per ottenere un cursore misto, un'applicazione specifica un cursore gestito da keyset ma dichiara una dimensione del keyset minore di dimensioni del set di risultati.  
