@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3b4742d5-74fb-4aff-aa21-d83a0064d73d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e555ff4a3b33c4c827371dc1ad63546736d7189
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca9b70ee6a96759e496b831f7c12dc3ee78419b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63473033"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087876"
 ---
 # <a name="unicode-drivers"></a>Driver di Unicode
 Se un driver deve essere un driver di Unicode o un driver ANSI dipende interamente la natura dell'origine dati. Se l'origine dati supporta i dati Unicode, il driver deve essere un driver di Unicode. Se l'origine dati supporta solo i dati di ANSI, il driver deve rimanere un driver ANSI.  

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 23b75beb0782fc0a13155d12890cbe3a620e1733
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8b36fffa5c1999033f0cc1902eda9c2cb4ba61d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530243"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061802"
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -98,7 +97,7 @@ RECONFIGURE
   
  L'istruzione RECONFIGURE aggiorna alcune opzioni in modo dinamico. Per altre è necessario arrestare e riavviare il server. Ad esempio, il **memoria server min** e **massima di memoria del server** opzioni memoria server vengono aggiornate dinamicamente la [!INCLUDE[ssDE](../../includes/ssde-md.md)]; pertanto, possono essere modificate senza riavviare il server. Riconfigurazione, al contrario, il valore di **il fattore di riempimento** opzione richiede il riavvio di [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- Dopo aver eseguito RECONFIGURE per un'opzione di configurazione, è possibile visualizzare se l'opzione è stata aggiornata in modo dinamico eseguendo **sp_configure'***nome_opzione***'**. I valori di **run_value** e **config_value** colonne devono corrispondere a un'opzione aggiornato in modo dinamico. È possibile anche verificare quali opzioni sono dinamiche osservando la **is_dynamic** della colonna della **Sys. Configurations** vista del catalogo.  
+ Dopo aver eseguito RECONFIGURE per un'opzione di configurazione, è possibile visualizzare se l'opzione è stata aggiornata in modo dinamico eseguendo **sp_configure'***nome_opzione***'** . I valori di **run_value** e **config_value** colonne devono corrispondere a un'opzione aggiornato in modo dinamico. È possibile anche verificare quali opzioni sono dinamiche osservando la **is_dynamic** della colonna della **Sys. Configurations** vista del catalogo.  
   
 > [!NOTE]  
 >  Se un oggetto specificato *valore* troppo elevato per un'opzione, il **run_value** colonna riflette il fatto che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha impostato come predefinito per la memoria dinamica, anziché usare un'impostazione che non è valida.  
@@ -115,7 +114,7 @@ RECONFIGURE
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-listing-the-advanced-configuration-options"></a>A. Visualizzazione dell'elenco delle opzioni di configurazione avanzate  
+### <a name="a-listing-the-advanced-configuration-options"></a>R. Visualizzazione dell'elenco delle opzioni di configurazione avanzate  
  Nell'esempio seguente viene illustrato come impostare ed elencare tutte le opzioni di configurazione. Le opzioni di configurazione avanzate vengono visualizzate se innanzitutto si imposta `show advanced option` su `1`. In seguito alla modifica di questa opzione, se si esegue `sp_configure` senza parametri, verranno visualizzate tutte le opzioni di configurazione.  
   
 ```  

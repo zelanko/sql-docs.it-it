@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42372b9ed94ad941c4a2436a28d0b9eaeb9f3b67
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: 4ab1797fabd8fb7d77eab85c97604b77e72f25c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597482"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042758"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -104,7 +103,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-simple-example"></a>A. Esempio semplice  
+### <a name="a-simple-example"></a>R. Esempio semplice  
  Nell'esempio seguente crea e popola una tabella semplice delle due colonne, elenco di 3 provincie e i colori nei flag. L'it crea e popola un catalogo full-text e un indice nella tabella. L'oggetto **FREETEXTTABLE** viene illustrata la sintassi.  
   
 ```  

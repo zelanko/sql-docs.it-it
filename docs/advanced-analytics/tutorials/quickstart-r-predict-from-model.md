@@ -7,15 +7,14 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 7175b99eb20710f5dd08689bd055d3a4ec93ae92
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 00fdcb0c8c9c535645268a0212e52eef6f7c88f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046903"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961991"
 ---
-# <a name="quickstart-predict-from-model-using-r-in-sql-server"></a>Guida introduttiva: Stima dal modello usando R in SQL Server
+# <a name="quickstart-predict-from-model-using-r-in-sql-server"></a>Avvio rapido: Stima dal modello usando R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questa Guida introduttiva, usare il modello creato nella precedente Guida introduttiva per assegnare un punteggio stime basate su dati aggiornati. Per eseguire _assegnazione di punteggi_ usando nuovi dati, ottenere uno dei modelli con training dalla tabella e quindi chiamare un nuovo set di dati su cui basare le stime. Assegnazione dei punteggi è un termine usato talvolta in analisi scientifica dei dati per indicare la generazione di stime, le probabilità o altri valori in base a nuovi dati inseriti in un modello con training.

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a3591295-0a76-4e3c-b4fa-8bd4f1cde705
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f19b58ba93c94088c4cae19f1093d89c8decb843
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 557b5505b9eb6a15080a7d0495df2e63aefd2d76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471302"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085539"
 ---
 # <a name="importing-visual-foxpro-data-into-microsoft-access"></a>Importazione di dati Visual FoxPro in Microsoft Access
 È possibile importare i dati archiviati in un database di Visual FoxPro in un database Microsoft Access utilizzando l'opzione di importazione.  

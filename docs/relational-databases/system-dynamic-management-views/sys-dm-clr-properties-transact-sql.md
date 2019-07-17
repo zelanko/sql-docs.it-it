@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f7ff1fd534876d177288dad396276e95d78d681
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 331969c2baa8ec67e0cd7c0ebf8cdd894878f397
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735709"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266058"
 ---
 # <a name="sysdmclrproperties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47735709"
   
  Il **sys.dm_clr_properties** vista contiene le **name** e **valore** colonne. Ogni riga della vista include dettagli su una proprietà del CLR hosted. È possibile utilizzare questa vista per raccogliere informazioni sul CLR hosted, ad esempio la directory di installazione di CLR, la versione di CLR e lo stato corrente del CLR hosted. La vista consente inoltre di determinare se il codice dell'integrazione con CLR non funziona a causa di problemi relativi all'installazione di CLR nel computer server.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|Nome della proprietà.|  
 |**Valore**|**nvarchar(128)**|Valore della proprietà.|  
@@ -75,7 +74,7 @@ ms.locfileid: "47735709"
 ## <a name="permissions"></a>Permissions  
   
 Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
-Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
+Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessario il `VIEW DATABASE STATE` autorizzazione nel database. Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard e i livelli Basic, è necessario il **amministratore del Server** o un' **amministratore di Azure Active Directory** account.   
 
 ## <a name="examples"></a>Esempi  
  L'esempio seguente recupera informazioni relative al CLR hosted:  

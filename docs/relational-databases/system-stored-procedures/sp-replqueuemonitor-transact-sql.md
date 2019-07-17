@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f174940b27adbaba75efd6660f09140c403bf8b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d8c931f4ec38fe6099afa6b098445dcdbc52b0be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529883"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090003"
 ---
 # <a name="spreplqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
   
 `[ @tranid = ] 'tranid' ]` ID della transazione. *tranid*viene **sysname**, con un valore predefinito è NULL. che indica tutte le transazioni.  
   
- [**@queuetype=** ] **'***queuetype***'** ]  
+ [ **@queuetype=** ] **'***queuetype***'** ]  
  Tipo di coda in cui vengono archiviate le transazioni. *queuetype* viene **tinyint** con valore predefinito è **0**, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc5d09bca83724bb956d39512c51c3dc47db1bad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e90f7683c13d8693529c60f1ba893bd645920bb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188812"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041915"
 ---
 # <a name="interval-literals"></a>Valori letterali intervallo
 ODBC è necessario che tutti i driver supportano la conversione del tipo di dati SQL_CHAR o SQL_VARCHAR a tutti i tipi di dati di intervallo C. Se l'origine dati sottostante non supporta tipi di dati di intervallo, tuttavia, il driver deve conoscere il formato corretto del valore nel campo SQL_CHAR per supportare queste conversioni. Analogamente, ODBC richiede che deve disporre di qualsiasi tipo di essere convertibile in SQL_CHAR o SQL_VARCHAR, in modo che un driver deve sapere quale formato di un intervallo archiviato nel campo carattere dati ODBC C. In questa sezione viene descritta la sintassi dei valori letterali di intervallo, che scrive il driver deve utilizzare per convalidare i campi SQL_CHAR durante la conversione da o verso tipi di dati di intervallo C.  

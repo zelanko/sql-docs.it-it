@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 767dd410-6bc9-4c4a-ab0f-6d2cf6163426
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 12d6c57e59ee37443b9ec600d8eb760c7f53018a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 183fa2fc1a674ec1cc987c265f5a0d4c399e27cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010753"
 ---
 # <a name="syssyscomments-transact-sql"></a>sys.syscomments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,18 +35,18 @@ ms.locfileid: "47843779"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] È consigliabile utilizzare in alternativa i moduli sys.sql. Per altre informazioni, vedere [Sys. sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID di oggetto a cui si riferisce il testo.|  
-|**Numero**|**smallint**|Numero all'interno del gruppo di procedure, se raggruppate.<br /><br /> 0 = Le voci immesse non sono procedure.|  
+|**number**|**smallint**|Numero all'interno del gruppo di procedure, se raggruppate.<br /><br /> 0 = Le voci immesse non sono procedure.|  
 |**colid**|**smallint**|Numero di sequenza di riga per definizioni di oggetto con più di 4.000 caratteri.|  
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**ctext**|**varbinary(8000)**|Byte non elaborati dell'istruzione di definizione SQL.|  
 |**texttype**|**smallint**|0 = Commento fornito dall'utente.<br /><br /> 1 = Commento fornito dal sistema.<br /><br /> 4 = Commento crittografato.|  
-|**Lingua**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**Crittografato**|**bit**|Indica se la definizione della stored procedure è offuscata.<br /><br /> 0 = Non offuscata<br /><br /> 1 = Offuscata<br /><br /> **\*\* Importanti \* \***  per offuscare le definizioni delle stored procedure, utilizzare CREATE PROCEDURE con la parola chiave di crittografia.|  
+|**language**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**encrypted**|**bit**|Indica se la definizione della stored procedure è offuscata.<br /><br /> 0 = Non offuscata<br /><br /> 1 = Offuscata<br /><br /> **\*\* Importanti \* \***  per offuscare le definizioni delle stored procedure, utilizzare CREATE PROCEDURE con la parola chiave di crittografia.|  
 |**compressed**|**bit**|Restituisce sempre 0. Indica che la procedura è compressa.|  
-|**text**|**nvarchar(4000)**|Testo effettivo dell'istruzione di definizione SQL.<br /><br /> La semantica dell'espressione decodificata è equivalente al testo originale, tuttavia non è garantito che la sintassi venga mantenuta. Gli spazi vuoti vengono ad esempio eliminati dall'espressione decodificata.<br /><br /> Ciò [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-vista compatibile di acquisizione informazioni dalla posizione corrente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] strutture e può restituire più caratteri il **nvarchar (4000)** definizione. **sp_help** restituisce **nvarchar (4000)** come tipo di dati della colonna di testo. Quando si lavora **syscomments** provare a usare **nvarchar (max)**. Per i nuovi progetti di sviluppo, non utilizzare **syscomments**.|  
+|**text**|**nvarchar(4000)**|Testo effettivo dell'istruzione di definizione SQL.<br /><br /> La semantica dell'espressione decodificata è equivalente al testo originale, tuttavia non è garantito che la sintassi venga mantenuta. Gli spazi vuoti vengono ad esempio eliminati dall'espressione decodificata.<br /><br /> Ciò [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-vista compatibile di acquisizione informazioni dalla posizione corrente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] strutture e può restituire più caratteri il **nvarchar (4000)** definizione. **sp_help** restituisce **nvarchar (4000)** come tipo di dati della colonna di testo. Quando si lavora **syscomments** provare a usare **nvarchar (max)** . Per i nuovi progetti di sviluppo, non utilizzare **syscomments**.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Mapping di tabelle di sistema a viste di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

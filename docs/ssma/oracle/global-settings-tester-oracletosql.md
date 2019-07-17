@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 0cbe66e8298053ef1682e25e97024fa0a96e9abb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: f7e421774d3a09622835b181d5c053c994e905ee
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62864902"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264407"
 ---
 # <a name="global-settings-tester-oracletosql"></a>Impostazioni globali (tester) (OracleToSQL)
 Utilizzare la pagina di Tester della **Global Settings** finestra di dialogo per specificare le impostazioni per Tester SSMA.  
@@ -64,5 +64,5 @@ Le opzioni seguenti sono disponibili per questa impostazione:
 2.  No  
   
 ## <a name="see-also"></a>Vedere anche  
-[Finishing Test Case Preparation &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[Completamento della preparazione del Test Case &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   

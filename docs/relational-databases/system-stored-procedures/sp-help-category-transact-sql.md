@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 69f65ee2e299197504c4bd970a835a28c2f89b21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c297578fabca3c20781c6227307f25dbece1bbfd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62797819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055227"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +48,14 @@ sp_help_category [ [ @class = ] 'class' ]
 |-----------|-----------------|  
 |**JOB**|Restituisce informazioni su una categoria di processi.|  
 |**AVVISO**|Restituisce informazioni su una categoria di avvisi.|  
-|**OPERATOR**|Restituisce informazioni su una categoria di operatori.|  
+|**OPERATORE**|Restituisce informazioni su una categoria di operatori.|  
   
 `[ @type = ] 'type'` Tipo di categoria per il quale vengono richieste informazioni. *tipo di* viene **varchar(12)** , con un valore predefinito è NULL, i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
 |**LOCAL**|Categoria di processi locali.|  
-|**MULTI -SERVER**|Categoria di processi multiserver.|  
+|**MULTI-SERVER**|Categoria di processi multiserver.|  
 |**NONE**|Categoria per una classe diversa da **processo**.|  
   
 `[ @name = ] 'name'` Il nome della categoria per il quale vengono richieste informazioni. *nome* viene **sysname**, con un valore predefinito è NULL.  
@@ -72,7 +71,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|ID della categoria|  
-|**category_type**|**tinyint**|Tipo di categoria:<br /><br /> **1** = locale<br /><br /> **2** = Multiserver<br /><br /> **3** = None|  
+|**category_type**|**tinyint**|Tipo di categoria:<br /><br /> **1** = locale<br /><br /> **2** = multiserver<br /><br /> **3** = nessuno|  
 |**name**|**sysname**|Nome della categoria|  
   
  Quando **@suffix** viene **1**, **sp_help_category** restituisce il set di risultati seguente:  
@@ -101,7 +100,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-local-job-information"></a>A. Restituzione di informazioni sui processi locali  
+### <a name="a-returning-local-job-information"></a>R. Restituzione di informazioni sui processi locali  
  Nell'esempio seguente vengono restituite informazioni sui processi gestiti a livello locale.  
   
 ```  

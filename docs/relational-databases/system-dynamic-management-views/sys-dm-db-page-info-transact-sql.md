@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_page_info (Transact-SQL) | Microsoft Docs
+title: Sys.dm_db_page_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
@@ -20,12 +20,12 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 71e32cbe889a6c8236bf536a83109b37e6845842
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 31b1a282e6d68bf9a31f26536926f9dccd4ff6de
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832998"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263817"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 
@@ -77,7 +77,7 @@ Determina il livello di dettaglio nell'output della funzione. "Limitato" restitu
 |pfs_file_id |smallint |ID file della pagina PFS corrispondente |
 |pfs_page_id |int |ID della pagina PFS corrispondente |
 |pfs_alloc_percent |int |Percentuale di allocazione come indicato dal byte PFS |
-|pfs_status |nvarchar(64) |PFS byte |
+|pfs_status |nvarchar(64) |Byte PFS |
 |pfs_status_desc |nvarchar(64) |Descrizione del byte PFS |
 |gam_file_id |smallint |ID file della pagina GAM corrispondente |
 |gam_page_id |int |ID pagina della pagina GAM corrispondente |
@@ -104,7 +104,7 @@ Determina il livello di dettaglio nell'output della funzione. "Limitato" restitu
 |prev_page_page_id |int |ID di pagina pagina precedente |
 |next_page_file_id |smallint |ID di file di pagina successiva |
 |next_page_page_id |int |ID di pagina pagina successiva |
-|min_len |smallint |Lunghezza delle righe di dimensioni fisse |
+|MIN_LEN |smallint |Lunghezza delle righe di dimensioni fisse |
 |lsn |nvarchar(64) |Numero di sequenza di log / timestamp |
 |header_version |int |Versione dell'intestazione di pagina |
 

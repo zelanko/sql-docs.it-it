@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61cd3c5c4ba15d42c1b1fe261703cfbb67b3e24f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1dc80f17fc88fa665b41a130bb69ebe0d4f1f26c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538553"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032871"
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -51,11 +50,11 @@ Per la [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] e [!INCLUDE[sspdw-md](..
    
  Nome completo o non qualificato della tabella, della vista indicizzata o della coda per cui si desidera ottenere informazioni sull'utilizzo dello spazio. Le virgolette sono necessarie solo se viene specificato un nome di oggetto completo. Se viene specificato un nome di oggetto completo, ovvero contenente un nome di database, il nome del database deve essere quello del database corrente.  
 Se *objname* non viene specificato, vengono restituiti risultati per l'intero database.  
-*objname* viene **nvarchar(776)**, con un valore predefinito è NULL.  
+*objname* viene **nvarchar(776)** , con un valore predefinito è NULL.  
 > [!NOTE]  
 > [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] e [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] supportano solo gli oggetti di database e tabella.
   
-`[ @updateusage = ] 'updateusage'` Indica di che eseguire DBCC UPDATEUSAGE per aggiornare le informazioni sull'utilizzo di spazio. Quando *objname* non è specificato, l'istruzione viene eseguita sull'intero database; in caso contrario, l'istruzione viene eseguita *objname*. I possibili valori sono **true** oppure **false**. *UPDATEUSAGE* viene **varchar (5)**, il valore predefinito è **false**.  
+`[ @updateusage = ] 'updateusage'` Indica di che eseguire DBCC UPDATEUSAGE per aggiornare le informazioni sull'utilizzo di spazio. Quando *objname* non è specificato, l'istruzione viene eseguita sull'intero database; in caso contrario, l'istruzione viene eseguita *objname*. I possibili valori sono **true** oppure **false**. *UPDATEUSAGE* viene **varchar (5)** , il valore predefinito è **false**.  
   
 `[ @mode = ] 'mode'` Indica l'ambito dei risultati. Per una tabella estesa o il database, il *modalità* parametro consente di includere o escludere la parte remota dell'oggetto. Per ulteriori informazioni, vedere [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
@@ -67,7 +66,7 @@ Se *objname* non viene specificato, vengono restituiti risultati per l'intero da
 |LOCAL_ONLY|Restituisce le statistiche di archiviazione di solo la parte locale del database o oggetto. Se l'oggetto o il database non è abilitata per l'estensione, restituisce le stesse statistiche come quando @mode = ALL.|  
 |REMOTE_ONLY|Restituisce le statistiche di archiviazione di solo la parte remota dell'oggetto o database. Questa opzione genera un errore quando viene soddisfatta una delle condizioni seguenti:<br /><br /> La tabella non è abilitata per l'estensione.<br /><br /> La tabella è abilitata per l'estensione, ma è non stata mai abilitata la migrazione dei dati. In questo caso, la tabella remota non ancora disponibile uno schema.<br /><br /> L'utente ha rilasciato manualmente alla tabella remota.<br /><br /> Il provisioning dell'archivio dati remoto ha restituito uno stato di esito positivo, ma in realtà non è riuscita.|  
   
- *modalità* viene **varchar (11)**, il valore predefinito è **al '**.  
+ *modalità* viene **varchar (11)** , il valore predefinito è **al '** .  
   
 `[ @oneresultset = ] oneresultset` Indica se restituire un singolo set di risultati. Il *oneresultset* argomento può avere i valori seguenti:  
   
@@ -182,7 +181,7 @@ Se *objname* viene omesso, il valore di oneresultset è 1, e *include_total_xtp_
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-displaying-disk-space-information-about-a-table"></a>A. Visualizzazione di informazioni relative allo spazio su disco per una tabella  
+### <a name="a-displaying-disk-space-information-about-a-table"></a>R. Visualizzazione di informazioni relative allo spazio su disco per una tabella  
  Nell'esempio seguente vengono visualizzate informazioni relative allo spazio su disco per la tabella `Vendor` e i relativi indici.  
   
 ```sql  

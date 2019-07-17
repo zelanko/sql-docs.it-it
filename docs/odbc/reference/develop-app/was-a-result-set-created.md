@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db287e729678f54aaf637950c89c724724678f08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f748e75f4e1579446b72b519356f2f649889fe0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208392"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078966"
 ---
 # <a name="was-a-result-set-created"></a>Verifica della creazione di un set di risultati
 Nella maggior parte dei casi, i programmatori di applicazioni sapere se le istruzioni in cui che viene eseguita l'applicazione creerà un set di risultati. Questo è il caso se l'applicazione Usa istruzioni SQL hard-coded scritte dal programmatore. Di solito avviene quando l'applicazione crea istruzioni SQL in fase di esecuzione: Il programmatore può facilmente includere codice che consente di contrassegnare se un **seleziona** istruzione o un' **Inserisci** istruzione in fase di costruzione. In alcune situazioni, il programmatore non è possibile conoscere se un'istruzione creerà un set di risultati. Questo è vero se l'applicazione consente all'utente di immettere ed eseguire un'istruzione SQL. È anche true quando l'applicazione crea un'istruzione in fase di esecuzione per eseguire una procedura.  

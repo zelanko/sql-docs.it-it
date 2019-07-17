@@ -7,13 +7,12 @@ ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 1c3ee703bca46bf46dba8225e1d28da3174dc932
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 331184f49918dbb17b7b97590b3155cbc8eb89ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240169"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961980"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>Avvio rapido: Script R di "Hello world" in SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,7 +55,7 @@ L'esercizio seguente è incentrata sul modello di interazione prima: come passar
     0.5 2
     ```
 
-    Durante il recupero **stdout** messaggi è utile quando il test del codice, più spesso è necessario restituire i risultati in formato tabulare, in modo che è possibile usarlo in un'applicazione o scriverlo in una tabella. Vedere [Guida introduttiva: Handle di input e output usano R in SQL Server](rtsql-working-with-inputs-and-outputs.md) per altre informazioni.
+    Durante il recupero **stdout** messaggi è utile quando il test del codice, più spesso è necessario restituire i risultati in formato tabulare, in modo che è possibile usarlo in un'applicazione o scriverlo in una tabella. Vedere [Avvio rapido: Handle di input e output usano R in SQL Server](rtsql-working-with-inputs-and-outputs.md) per altre informazioni.
 
 Tenere presente che tutti gli elementi all'interno di `@script` argomento deve essere un codice R valido.
 
@@ -91,4 +90,4 @@ Gli input per questa stored procedure includono:
 Ora che è stato eseguito un paio di script R semplici, esaminiamo più da vicino strutturazione di input e output.
 
 > [!div class="nextstepaction"]
-> [Guida introduttiva: Gestire gli input e output](quickstart-r-inputs-and-outputs.md)
+> [Avvio rapido: Gestire gli input e output](quickstart-r-inputs-and-outputs.md)

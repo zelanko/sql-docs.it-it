@@ -2,19 +2,18 @@
 title: Ripristinare il database master - sistema di piattaforma Analitica | Microsoft Docs
 description: Ripristinare il database master nel sistema di piattaforma Analitica.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 184184f332225e76e152c2d909cfff788b4fea91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c9931ab6fb0946de83c3113a36de723a7a05cd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678442"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960134"
 ---
 # <a name="restore-the-master-database-in-analytics-platform-system"></a>Ripristinare il database master nel sistema di piattaforma Analitica
 Il **Restore Master** pagina di Gestione configurazione SQL Server PDW consente di ripristinare il database master da un backup.  
@@ -36,5 +35,5 @@ Il **Restore Master** pagina di Gestione configurazione SQL Server PDW consente 
   
 5.  Per eseguire il ripristino, SQL Server PDW arresterà tutti i servizi di appliance e disconnettere tutti gli utenti. Al termine del ripristino, SQL Server PDW verrà riavviato i servizi di appliance.  
   
-![DWConfig Appliance PDW Restore master](./media/restore-the-master-database/SQL_Server_PDW_DWConfig_ApplPDWRestore.png "SQL_Server_PDW_DWConfig_ApplPDWRestore")  
+![DWConfig ripristino master PDW](./media/restore-the-master-database/SQL_Server_PDW_DWConfig_ApplPDWRestore.png "SQL_Server_PDW_DWConfig_ApplPDWRestore")  
   

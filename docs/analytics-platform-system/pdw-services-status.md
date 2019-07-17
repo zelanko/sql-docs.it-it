@@ -2,19 +2,18 @@
 title: -Stato di servizi PDW sistema di piattaforma Analitica | Microsoft Docs
 description: Parallel Data Warehouse (PDW) dello stato dei servizi di sistema di piattaforma Analitica.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6892bfcca05e0f85039dddee65a54b485a7ed433
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3db994b4869c1b017a079b404af3d95db1316dad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63027555"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960363"
 ---
 # <a name="parallel-data-warehouse-services-status-for-analytics-platform-system"></a>Parallel Data Warehouse lo stato dei servizi per il sistema di piattaforma Analitica
 Parallel Data Warehouse **stato dei servizi** pagina in Gestione configurazione di Microsoft Analitica Platform System Mostra lo stato corrente di tutti i servizi di SQL Server PDW e offre la possibilità di arrestare e avviare i servizi PDW. Questo è l'unico metodo supportato per l'avvio e arresto dei servizi PDW. Si noti che i singoli componenti o servizi non possono essere avviati in modo indipendente.  
@@ -27,7 +26,7 @@ Parallel Data Warehouse **stato dei servizi** pagina in Gestione configurazione 
   
 Non è necessario fare clic su **Apply** durante l'avvio e arresto dei servizi appliance usando **avviare Appliance** e **arrestare Appliance**.  
   
-![DWConfig Appliance PDW Services](./media/pdw-services-status/SQL_Server_PDW_DWConfig_ApplPDWServices.png "SQL_Server_PDW_DWConfig_ApplPDWServices")  
+![Servizi PDW strumento DWConfig](./media/pdw-services-status/SQL_Server_PDW_DWConfig_ApplPDWServices.png "SQL_Server_PDW_DWConfig_ApplPDWServices")  
   
 > [!NOTE]  
 > L'arresto dell'area PDW interrompe anche l'agente PDW (sqldwagent) nei nodi. L'agente PDW richiede il nodo di controllo PDW per segnalare il monitoraggio dell'integrità.  

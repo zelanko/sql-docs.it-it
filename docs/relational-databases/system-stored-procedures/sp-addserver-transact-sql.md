@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ab5c15d15c77688c06eedec1d54e82c7b8199380
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 616b835b2b190346df4891caa4d7295c8fb328e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492929"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022428"
 ---
 # <a name="spaddserver-transact-sql"></a>sp_addserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +48,13 @@ sp_addserver [ @server = ] 'server' ,
   
  Se in un computer sono installate più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , un'istanza funziona come se si trovasse in un server distinto. Specificare un'istanza denominata tramite un riferimento a *server* come *nomeserver\nomeistanza*.  
   
-`[ @local = ] 'LOCAL'` Specifica che il server che viene aggiunto come server locale. **@local** viene **varchar (10)**, con un valore predefinito è NULL. Che specifica **@local** come **locale** definisce **@server** come nome del server locale e le cause di @@SERVERNAME funzione per restituire il valore dei *server*.  
+`[ @local = ] 'LOCAL'` Specifica che il server che viene aggiunto come server locale. **@local** viene **varchar (10)** , con un valore predefinito è NULL. Che specifica **@local** come **locale** definisce **@server** come nome del server locale e le cause di @@SERVERNAME funzione per restituire il valore dei *server*.  
   
  Durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa variabile viene impostata sul nome del computer. Per impostazione predefinita, il nome del computer consente agli utenti di connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza ulteriori operazioni di configurazione.  
   
  La definizione locale diventa effettiva solo dopo il riavvio del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . È possibile definire un solo server locale in ogni istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-`[ @duplicate_ok = ] 'duplicate_OK'` Specifica se è consentito un nome di server duplicato. **@duplicate_OK** viene **varchar(13)**, con un valore predefinito è NULL. **@duplicate_OK** può avere solo il valore **duplicate_OK** o NULL. Se **duplicate_OK** specificato e il nome del server da aggiungere già esiste, viene generato alcun errore. Se non si utilizzano parametri denominati, **@local** deve essere specificato.  
+`[ @duplicate_ok = ] 'duplicate_OK'` Specifica se è consentito un nome di server duplicato. **@duplicate_OK** viene **varchar(13)** , con un valore predefinito è NULL. **@duplicate_OK** può avere solo il valore **duplicate_OK** o NULL. Se **duplicate_OK** specificato e il nome del server da aggiungere già esiste, viene generato alcun errore. Se non si utilizzano parametri denominati, **@local** deve essere specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

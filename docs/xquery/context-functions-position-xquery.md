@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c7ec642a516d4ad2ac5a0f8d894351fc6670c117
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: de9f30c3c63030aa956366c222b7cbda94e2becb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038986"
 ---
 # <a name="context-functions---position-xquery"></a>Funzioni di contesto - position (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +40,8 @@ fn:position() as xs:integer
 ## <a name="examples"></a>Esempi  
  In questo argomento vengono forniti esempi di XQuery sulle istanze XML archiviate in diverse **xml** colonne di tipo i [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] database.  
   
-### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. Utilizzo della funzione XQuery position() per recuperare le prime due caratteristiche del prodotto  
- La query seguente recupera le prime due caratteristiche, ovvero i primi due elementi figlio dell'elemento <`Features`>, dalla descrizione del catalogo prodotti. Se sono disponibili più caratteristiche, viene aggiunto un elemento <`there-is-more/`> al risultato.  
+### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>R. Utilizzo della funzione XQuery position() per recuperare le prime due caratteristiche del prodotto  
+ La query seguente recupera le prime due caratteristiche, i primi due elementi figlio del <`Features`> elemento, dalla descrizione di catalogo del modello del prodotto. Se sono disponibili più caratteristiche, aggiunge un <`there-is-more/`> elemento al risultato.  
   
 ```  
 SELECT CatalogDescription.query('  

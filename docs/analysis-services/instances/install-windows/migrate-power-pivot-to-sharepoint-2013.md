@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8df7cc04ea0682212f5a046ca4c614e83ebe9c86
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206820"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68231877"
 ---
 # <a name="migrate-power-pivot-to-sharepoint-2013"></a>Eseguire la migrazione di PowerPivot a SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "53206820"
 |1|2|3|4|  
 |-------|-------|-------|-------|  
 |Preparare la farm di SharePoint 2013|Eseguire il backup, la copia e il ripristino dei database|Montare i database del contenuto|Eseguire la migrazione delle pianificazioni di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]|  
-||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|- Amministrazione centrale SharePoint<br /><br /> - Windows PowerShell|- Pagine dell'applicazione SharePoint<br /><br /> - Windows PowerShell|  
+||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|\- Amministrazione centrale SharePoint<br /><br /> \- Windows PowerShell|\- Pagine dell'applicazione SharePoint<br /><br /> \- Windows PowerShell|  
   
 ##  <a name="bkmk_prepare_sharepoint2013"></a>Preparare la Farm di SharePoint 2013  
   
@@ -92,7 +92,7 @@ ms.locfileid: "53206820"
 ### <a name="troubleshoot-issues-when-you-attempt-to-mount-databases"></a>Risolvere eventuali problemi durante il tentativo di montaggio di database  
  In questa sezione vengono riepilogati i possibili problemi riscontrati durante il montaggio del database.  
   
-1.  **Errori di autenticazione:** se vengono visualizzati errori relativi all'autenticazione, controllare la modalità di autenticazione utilizzata nelle applicazioni Web di origine. L'errore potrebbe essere causato da una mancata corrispondenza dell'autenticazione tra l'applicazione Web SharePoint 2013 e l'applicazione Web SharePoint 2010. Per ulteriori informazioni, vedere [1) Preparare la farm di SharePoint 2013](#bkmk_prepare_sharepoint2013) .  
+1.  **Errori di autenticazione:** Se vengono visualizzati errori relativi all'autenticazione, controllare le modalità di autenticazione utilizzano nelle applicazioni web di origine. L'errore potrebbe essere causato da una mancata corrispondenza dell'autenticazione tra l'applicazione Web SharePoint 2013 e l'applicazione Web SharePoint 2010. Per ulteriori informazioni, vedere [1) Preparare la farm di SharePoint 2013](#bkmk_prepare_sharepoint2013) .  
   
 2.  **File mancante:** Se vengono visualizzati errori relativi alla mancanza [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] file con estensione dll, il **sppowerpivot. msi** non è stato installato oppure il [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] dello strumento di configurazione non è stato usato per configurare [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)].  
   
@@ -142,7 +142,7 @@ ms.locfileid: "53206820"
   
     4.  È possibile selezionare **Aggiorna anche appena possibile**. Tramite questa opzione viene aggiunta un'istanza di aggiornamento alla coda non appena si fa clic su OK. La pianificazione dell'aggiornamento regolare viene tuttavia attivata al momento opportuno.  
   
-    5.  Scegliere **OK**. La cronologia di aggiornamento è ora visibile nella pagina degli aggiornamenti. La pianificazione verrà attivata al momento previsto.  
+    5.  Fare clic su **OK**. La cronologia di aggiornamento è ora visibile nella pagina degli aggiornamenti. La pianificazione verrà attivata al momento previsto.  
   
  **Cartelle di lavoro di SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**  
   

@@ -10,12 +10,12 @@ ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 021458a2c47f9c57f641da575b346ab09c66fee9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6366ed7d6346fb6240a5d56ae6cc4d91575f2ed0
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299032"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259778"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>Uso di SSMA per la Console di accesso (AccessToSQL)
 Microsoft SQL Server Migration Assistant (SSMA) per l'accesso a questo punto è accessibile tramite un'applicazione console dalla riga di comando. I file di script formano l'input per l'applicazione per l'esecuzione di comandi. Come applicazione console SSMA consente l'interazione a livello di script, consente di ridurre il ciclo di migrazione e ridimensiona lo sforzo di migrazione.  
@@ -34,9 +34,9 @@ Gli argomenti trattati in questa sezione includono:
 |[Creazione di file di connessione del Server &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)|Viene illustrato come creare un file di connessione del server.|  
 |[Esecuzione della Console SSMA &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)|Descrive i comandi di file di script per il funzionamento dell'applicazione console SSMA.|  
 |[Utilizzo di FilesExecuting Script di esempio Console della Console SSMA &#40;AccessToSQL&#41;](../../ssma/access/working-sample-console-script-filesexecuting-ssma-console-accesstosql.md)|Descrive il modo per personalizzare facilmente gli script che sono stati forniti nei file di esempio con il prodotto.|  
-|[Managing Passwords &#40;AccessToSQL&#41;](../../ssma/access/managing-passwords-accesstosql.md)|Descrive la crittografia delle password e la decrittografia e le informazioni sulla password di importazione / esportazione.|  
-|[Generating Reports &#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md)|Elenca i comandi per generare i report.|  
-|[Troubleshooting &#40;AccessToSQL&#41;](../../ssma/access/troubleshooting-accesstosql.md)|Vengono fornite brevi istruzioni sulla risoluzione dei problemi di migrazione.|  
+|[La gestione delle password &#40;AccessToSQL&#41;](../../ssma/access/managing-passwords-accesstosql.md)|Descrive la crittografia delle password e la decrittografia e le informazioni sulla password di importazione / esportazione.|  
+|[Generazione di report &#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md)|Elenca i comandi per generare i report.|  
+|[Risoluzione dei problemi &#40;AccessToSQL&#41;](../../ssma/access/troubleshooting-accesstosql.md)|Vengono fornite brevi istruzioni sulla risoluzione dei problemi di migrazione.|  
   
 ## <a name="see-also"></a>Vedere anche  
 [Introduzione a SSMA per la Console di accesso](getting-started-with-ssma-for-access-console-accesstosql.md)  

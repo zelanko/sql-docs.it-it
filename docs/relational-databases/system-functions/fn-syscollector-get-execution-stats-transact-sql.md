@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 91227f3f5d1ef6238b18064b4c978d238f85e4b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71a070de7c74d353be395628566c0bd3f63fd99a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042738"
 ---
 # <a name="fnsyscollectorgetexecutionstats-transact-sql"></a>fn_syscollector_get_execution_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ fn_syscollector_get_execution_stats ( log_id )
   
 ## <a name="table-returned"></a>Tabella restituita  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|avg_row_count_in|**int**|Numero medio di righe passate nelle attività del flusso di dati del pacchetto.<br /><br /> Nota: È un'attività flusso di dati un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] componente che elabora i dati. I dati sono in formato relazionale, pertanto è presente un set di dati di input costituito da righe. Si tratta del numero di righe immesse nell'attività. Dopo la trasformazione dei dati, viene restituito l'output rappresentato da un set di risultati costituito da righe. L'attività Flusso di dati trasforma i dati e restituisce un set di risultati costituito da righe. L'output è costituito dal numero di righe restituite dall'attività.|  
+|avg_row_count_in|**int**|Numero medio di righe passate nelle attività del flusso di dati del pacchetto.<br /><br /> Nota: Un'attività Flusso di dati è un componente di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tramite cui vengono elaborati i dati. I dati sono in formato relazionale, pertanto è presente un set di dati di input costituito da righe. Si tratta del numero di righe immesse nell'attività. Dopo la trasformazione dei dati, viene restituito l'output rappresentato da un set di risultati costituito da righe. L'attività Flusso di dati trasforma i dati e restituisce un set di risultati costituito da righe. L'output è costituito dal numero di righe restituite dall'attività.|  
 |min_row_count_in|**int**|Numero minimo di righe passate nelle attività del flusso di dati del pacchetto.|  
 |max_row_count_in|**int**|Numero massimo di righe passate nelle attività del flusso di dati del pacchetto.|  
 |avg_row_count_out|**int**|Numero medio di righe uscite dalle attività del flusso di dati del pacchetto.|  

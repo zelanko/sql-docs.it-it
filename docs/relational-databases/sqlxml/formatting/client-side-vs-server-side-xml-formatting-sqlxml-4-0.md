@@ -1,5 +1,5 @@
 ---
-title: lato client Programma di formattazione XML sul lato server (SQLXML 4.0) | Microsoft Docs
+title: Lato client e Programma di formattazione XML sul lato server (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ helpviewer_keywords:
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd9f76b11edf684c68658f040b4aa3e0f63727d4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d02eeb0ad64a62343fda53a1907cec2b4bb9e850
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68220358"
 ---
-# <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>lato client Formattazione XML sul lato server (SQLXML 4.0)
+# <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Lato client e Formattazione XML sul lato server (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In questo argomento vengono descritte le differenze generali tra la formattazione XML sul lato client e quella sul lato server in SQLXML.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "56028832"
   
  È possibile eseguire questo modello nel codice dell'applicazione ma viene restituito un errore, poiché la formattazione XML sul lato client non supporta la formattazione di più set di righe. Se si specifica la query in due separare  **\<sql:query >** blocchi, si otterranno i risultati desiderati.  
   
-## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>Il mapping di timestamp viene eseguito in modo diverso nella formattazione sul lato client rispetto a quella sul lato server  
+## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>timestamp mappe in modo diverso in Client-Visual Studio. Formattazione sul lato server  
  Nella colonna del database della formattazione XML sul lato server **timestamp** tipo viene mappato al tipo XDR i8 (quando è specificata l'opzione XMLDATA nella query).  
   
  Nella colonna del database della formattazione XML sul lato client **timestamp** esegue il mapping al tipo di **uri** o nella **bin.base64** tipo XDR (a seconda che binary base64 viene specificata l'opzione nella query). Il **bin.base64** tipo XDR è utile se si usano le funzionalità di updategram e caricamento bulk, perché questo tipo viene convertito nel [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **timestamp** tipo. In questo modo, l'operazione di inserimento, aggiornamento o eliminazione viene eseguita correttamente.  
@@ -78,7 +77,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- Quando si esegue il modello, viene restituito il seguente codice XML. Vengono visualizzati solo i risultati parziali. Notare che i nomi degli elementi sono i nomi delle viste sulle quali è stata eseguita la query.  
+ Quando si esegue il modello, viene restituito il seguente codice XML. (Solo risultati parziali vengono visualizzati). Si noti che i nomi degli elementi sono i nomi delle viste in cui viene eseguita la query.  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -134,7 +133,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>   
 ```  
   
- Quando si utilizza la modalità NESTED di FOR XML sul lato client, vengono restituiti i nomi delle tabelle come nomi degli elementi nel codice XML risultante. Gli alias delle tabelle specificati nella query non vengono utilizzati. Considerare ad esempio il modello seguente:  
+ Quando si utilizza la modalità NESTED di FOR XML sul lato client, vengono restituiti i nomi delle tabelle come nomi degli elementi nel codice XML risultante. (Alias di tabella specificati nella query non vengono usati). Considerare ad esempio il modello seguente:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -182,7 +181,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- Se la formattazione XML viene eseguita sul server (**xml del client = "0"**), è possibile utilizzare l'alias per le colonne che restituiscono dbobject una query nella quale tabella effettiva e una colonna vengono restituiti i nomi (anche se si dispone di alias specificati). Ad esempio, il modello seguente esegue una query e la formattazione XML viene eseguita sul server (il **xml del client** non è specificata l'opzione e la **eseguito sul Client** opzione non è selezionata per il directory principale virtuale). La query specifica anche la modalità AUTO (non la modalità NESTED sul lato client).  
+ Se la formattazione XML viene eseguita sul server (**xml del client = "0"** ), è possibile utilizzare l'alias per le colonne che restituiscono dbobject una query nella quale tabella effettiva e una colonna vengono restituiti i nomi (anche se si dispone di alias specificati). Ad esempio, il modello seguente esegue una query e la formattazione XML viene eseguita sul server (il **xml del client** non è specificata l'opzione e la **eseguito sul Client** opzione non è selezionata per il directory principale virtuale). La query specifica anche la modalità AUTO (non la modalità NESTED sul lato client).  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -206,7 +205,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
-### <a name="client-side-vs-server-side-xpath"></a>lato client XPath sul lato server  
+### <a name="client-side-vs-server-side-xpath"></a>Lato client e XPath sul lato server  
  XPath sul lato client e XPath sul lato server funzionano allo stesso modo ad eccezione delle seguenti differenze:  
   
 -   Le conversioni dei dati applicate quando si utilizzano le query XPath sul lato client sono diverse da quelle applicate quando si utilizzano le query XPath sul lato server. XPath sul lato client utilizza la modalità CAST anziché la modalità CONVERT 126.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2a4627491075dd7b7db9d75188137271edd17804
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c005ff603f21dca387215cafd9dff572db53960
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721699"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053094"
 ---
 # <a name="spdescribecursortables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,26 +52,26 @@ sp_describe_cursor_tables
  Nome di una variabile di cursore dichiarata per ricevere l'output del cursore. *output_cursor_variable* viene **cursore**e non prevede alcuna impostazione predefinita, non essere associata ad alcun cursore al momento della chiamata di stored procedure sp_describe_cursor_tables. Il cursore restituito è di tipo scorrevole, dinamico e di sola lettura.  
   
  [ @cursor_source=] {N'local' | N'global' | N'variable'}  
- Specifica se il cursore di cui viene generato il report viene specificato utilizzando il nome di un cursore locale, di un cursore globale o di una variabile di cursore. Il parametro è **nvarchar(30)**.  
+ Specifica se il cursore di cui viene generato il report viene specificato utilizzando il nome di un cursore locale, di un cursore globale o di una variabile di cursore. Il parametro è **nvarchar(30)** .  
   
  [ @cursor_identity=] N'*local_cursor_name*'  
- Nome di un cursore creato da un'istruzione DECLARE CURSOR con la parola chiave LOCAL specificata in modo esplicito o utilizzata per impostazione predefinita. *local_cursor_name* viene **nvarchar (128)**.  
+ Nome di un cursore creato da un'istruzione DECLARE CURSOR con la parola chiave LOCAL specificata in modo esplicito o utilizzata per impostazione predefinita. *local_cursor_name* viene **nvarchar (128)** .  
   
  [ @cursor_identity=] N'*global_cursor_name*'  
- Nome di un cursore creato da un'istruzione DECLARE CURSOR con la parola chiave GLOBAL o impostato sul valore predefinito GLOBAL. *global_cursor_name* può anche essere il nome di un cursore API del server aperto da un'applicazione ODBC che ha specificato il cursore tramite una chiamata SQLSetCursorName. *global_cursor_name* viene **nvarchar (128)**.  
+ Nome di un cursore creato da un'istruzione DECLARE CURSOR con la parola chiave GLOBAL o impostato sul valore predefinito GLOBAL. *global_cursor_name* può anche essere il nome di un cursore API del server aperto da un'applicazione ODBC che ha specificato il cursore tramite una chiamata SQLSetCursorName. *global_cursor_name* viene **nvarchar (128)** .  
   
  [ @cursor_identity=] N'*input_cursor_variable*'  
- Nome di una variabile di cursore associata a un cursore aperto. *input_cursor_variable* viene **nvarchar (128)**.  
+ Nome di una variabile di cursore associata a un cursore aperto. *input_cursor_variable* viene **nvarchar (128)** .  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- None  
+ Nessuna  
   
 ## <a name="cursors-returned"></a>Cursori restituiti  
  sp_describe_cursor_tables incapsula il report in un [!INCLUDE[tsql](../../includes/tsql-md.md)] **cursore** parametro di output. In questo modo i batch, le stored procedure e i trigger [!INCLUDE[tsql](../../includes/tsql-md.md)] possono elaborare l'output una riga alla volta. Ciò significa inoltre che non è possibile chiamare direttamente la procedura da funzioni API. Il **cursore** parametro di output deve essere associato a una variabile di programma, ma le API non supportano l'associazione **cursore** parametri o variabili.  
   
  Nella tabella seguente viene descritto il formato del cursore restituito da sp_describe_cursor_tables.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |table owner|**sysname**|ID utente del proprietario della tabella.|  
 |Table_name|**sysname**|Nome dell'oggetto o della tabella di base. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i cursori del server restituiscono sempre l'oggetto specificato dall'utente e non le tabelle di base.|  

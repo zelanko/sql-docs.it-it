@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbb52087baa5c11f972ae531f6c619352fbd13a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6817e41f48df740a59e371da9b78e09dd6894af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980983"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079395"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +48,7 @@ Se non è un database `ONLINE`, oppure `AUTO_CLOSE` è impostata su `ON` e il da
 |**is_read_only**|**bit**|1 = Il database è READ_ONLY<br /> 0 = Il database è READ_WRITE|  
 |**is_auto_close_on**|**bit**|1 = AUTO_CLOSE è ON<br /> 0 = AUTO_CLOSE è OFF|  
 |**is_auto_shrink_on**|**bit**|1 = AUTO_SHRINK è ON<br /> 0 = AUTO_SHRINK è OFF|  
-|**state**|**tinyint**|**Valore &#124; si applica a**<br /> 0 = ONLINE <br /> 1 = RESTORING <br /> 2 = recupero in corso &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 3 = RECOVERY_PENDING &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 4 = SUSPECT <br /> 5 = EMERGENCY &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 6 = OFFLINE &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 7 = COPIA&#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /> 10 = OFFLINE_SECONDARY &#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /><br /> **Nota:** Per i database Always On, eseguire una query il `database_state` oppure `database_state_desc` le colonne dei [DM hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).|  
+|**state**|**tinyint**|**Valore &#124; si applica a**<br /> 0 = ONLINE <br /> 1 = RESTORING <br /> 2 = recupero in corso &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 3 = RECOVERY_PENDING &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 4 = SUSPECT <br /> 5 = EMERGENCY &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 6 = OFFLINE &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 7 = COPIA&#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /> 10 = OFFLINE_SECONDARY&#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /><br /> **Nota:** Per i database Always On, eseguire una query il `database_state` oppure `database_state_desc` le colonne dei [DM hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).|  
 |**state_desc**|**nvarchar(60)**|Descrizione dello stato del database. Vedere lo stato.|  
 |**is_in_standby**|**bit**|Il database è di sola lettura per il log di ripristino.|  
 |**is_cleanly_shutdown**|**bit**|1 = Il database è stato chiuso normalmente, recupero non necessario all'avvio<br /> 0 = Il database non è stato chiuso normalmente, recupero necessario all'avvio|  
@@ -106,7 +105,7 @@ Se non è un database `ONLINE`, oppure `AUTO_CLOSE` è impostata su `ON` e il da
 |**is_transform_noise_words_on**|**bit**|Indica se le parole non significative devono essere trasformate nel database indipendente.<br /> 0 = Le parole non significative non devono essere trasformate.<br /> 1 = Le parole non significative devono essere trasformate.<br /> **Nota:** Funziona come le [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md) di `sp_configure`. Questo valore è **null** per un database non indipendente. Visualizzare [Sys. Configurations &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) per altre informazioni.<br /> **Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
 |**two_digit_year_cutoff**|**smallint**|Indica un valore di un numero compreso tra 1753 e 9999 per rappresentare l'anno di cambio data per l'interpretazione degli anni a due cifre come anni a quattro cifre.<br /> **Nota:** Funziona come le [configurare l'anno a due cifre cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) di `sp_configure`. Questo valore è **null** per un database non indipendente. Visualizzare [Sys. Configurations &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) per altre informazioni.<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**containment**|**tinyint non null**|Indica lo stato di indipendenza del database.<br />  0 = L'indipendenza del database è disabilitata. **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 1 = database sia in stato di indipendenza parziale **si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
-|**containment_desc**|**nvarchar(60) not null**|Indica lo stato di indipendenza del database.<br /> NONE = Database legacy (zero indipendenza)<br /> PARTIAL = Database parzialmente indipendente<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**containment_desc**|**nvarchar(60) non null**|Indica lo stato di indipendenza del database.<br /> NONE = Database legacy (zero indipendenza)<br /> PARTIAL = Database parzialmente indipendente<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**target_recovery_time_in_seconds**|**int**|Tempo stimato, in secondi, per il recupero del database. Ammette valori Null.<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**delayed_durability**|**int**|L'impostazione di durabilità ritardata:<br /> 0 = DISABILITATO<br /> 1 = È CONSENTITO<br /> 2 = FORZATO<br /> Per altre informazioni, vedere [Controllo della durabilità delle transazioni](../../relational-databases/logs/control-transaction-durability.md).<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
 |**delayed_durability_desc**|**nvarchar(60)**|L'impostazione di durabilità ritardata:<br /> DISABLED<br /> ALLOWED<br /> FORCED<br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
@@ -132,7 +131,7 @@ Nelle [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] questa vista è disp
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-query-the-sysdatabases-view"></a>A. Eseguire una query sulla vista sys.databases  
+### <a name="a-query-the-sysdatabases-view"></a>R. Eseguire una query sulla vista sys.databases  
  Nell'esempio seguente vengono restituite le colonne disponibili in alcune il `sys.databases` vista.  
   
 ```sql  

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 12dbcd77-2b90-4fa1-9cf9-239231ea5773
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: abe73fd789a74d358c0573b6c0778a15612532a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 374630b5e5eab1602bb33e176e6f205ee1375af9
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63192402"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264435"
 ---
 # <a name="global-settings-logging-oracletosql"></a>Impostazioni globali (registrazione) (OracleToSQL)
 Usare la **Global Settings** finestra di dialogo per specificare le impostazioni di registrazione per SSMA. In genere, è necessario modificare queste impostazioni solo quando si lavora con il supporto tecnico.  
@@ -30,9 +30,9 @@ Le opzioni seguenti sono disponibili nella **a livello di messaggi**:
 |----------|---------------|  
 |**[tutte le categorie]**|Utilizzato per impostare il livello di registrazione per tutte le opzioni seguenti.|  
 |**Agente di raccolta dati**|Raccoglie i metadati relativi a schema di origine e lo salva il progetto.|  
-|**Converter**|Converte le strutture degli oggetti di database di origine, ad esempio tabelle e stored procedure, nella corrispondente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] strutture.|  
+|**Convertitore di tipi**|Converte le strutture degli oggetti di database di origine, ad esempio tabelle e stored procedure, nella corrispondente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] strutture.|  
 |**Migrazione dei dati**|Esegue la migrazione di dati dal database di origine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Formatter**|Componente secondario del convertitore che consente di generare script per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dello schema.|  
+|**Formattatore**|Componente secondario del convertitore che consente di generare script per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dello schema.|  
 |**Interfaccia utente grafica**|Messaggi che vengono visualizzati quando si usa lo strumento SSMA.|  
 |**Linker**|Risolve gli identificatori SQL e vengono fornite informazioni ad altri componenti.|  
 |**Altro**|Tutti i messaggi che non sono in nessun'altra categoria.|  

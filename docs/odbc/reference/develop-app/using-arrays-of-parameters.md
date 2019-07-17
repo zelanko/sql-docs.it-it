@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7ff4a76c38f04c7b9b12842ef800bc8a26a27ed9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf6b5127bac7aedf9e67918d38020c73a4afe186
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079606"
 ---
 # <a name="using-arrays-of-parameters"></a>Uso delle matrici di parametri
 Usare matrici di parametri, l'applicazione chiama **SQLSetStmtAttr** con un *attributo* argomento di SQL_ATTR_PARAMSET_SIZE per specificare il numero di set di parametri. Viene chiamato **SQLSetStmtAttr** con un *attributo* argomento di SQL_ATTR_PARAMS_PROCESSED_PTR per specificare l'indirizzo di una variabile in cui il driver può restituire il numero di set di parametri elaborati, inclusi i set di errore. Viene chiamato **SQLSetStmtAttr** con un *attributo* argomento di SQL_ATTR_PARAM_STATUS_PTR in modo che punti a una matrice in cui si desidera ottenere informazioni sullo stato per ogni riga di valori di parametro. Il driver archivia questi indirizzi nella struttura che viene mantenuta per l'istruzione.  
@@ -29,7 +28,7 @@ Usare matrici di parametri, l'applicazione chiama **SQLSetStmtAttr** con un *att
   
  Prima di eseguire l'istruzione, l'applicazione imposta il valore di ogni elemento di ogni matrice associata. Quando viene eseguita l'istruzione, il driver utilizza le informazioni memorizzata per recuperare i valori dei parametri e inviarli all'origine dati; Se possibile, il driver deve inviare questi valori come matrici. Sebbene l'utilizzo di matrici di parametri ottimale viene implementata tramite l'istruzione SQL con tutti i parametri nella matrice con una singola chiamata all'origine dati, questa funzionalità non è ampiamente disponibile in DBMS oggi stesso. Tuttavia, i driver possono simularla eseguendo un'istruzione SQL più volte, ognuna con un singolo set di parametri.  
   
- Prima di un'applicazione usa le matrici di parametri, è necessario assicurarsi che siano supportati dai driver usato dall'applicazione. Questa operazione può essere eseguita in due modi:  
+ Prima di un'applicazione usa le matrici di parametri, è necessario assicurarsi che siano supportati dai driver usato dall'applicazione. Questo risultato può essere raggiunto in due modi:  
   
 -   Usare solo i driver supportano le matrici di parametri. L'applicazione può come hardcoded i nomi dei driver oppure è possibile indicare all'utente da usare solo questi driver. Applicazioni personalizzate e applicazioni verticali utilizzano comunemente un set limitato di driver.  
   

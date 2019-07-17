@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 002f129e-0868-48ad-a4b4-c68b5007e12e
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 8f6eabe706197e8ab2bfb882510b6063bf4e884c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: d7316721cedc7a3546439fe27048126ad2805582
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287684"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266115"
 ---
 # <a name="creating-the-server-connection-files-oracletosql"></a>Creazione dei file di connessione del server (OracleToSQL)
 Nella sezione dei server del file di script o in un file di connessione server separato, è possibile specificare le informazioni sul server. Il parametro della riga di comando per il file di connessione del server è, `-c <serverconnectionfile>`. Se lo stesso id di server è presente nel file di connessione server sia file di script, viene considerata la definizione del server nel file di script.  

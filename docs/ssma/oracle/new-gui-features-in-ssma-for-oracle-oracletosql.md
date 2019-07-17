@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 62e2d30f-a73f-42d9-a6ab-3510a8198f4e
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: ee8637bb85c390378dc5c886165ddfa12950e03b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 2304865a421c7aa50fc83119854004f9a1c0e5c1
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63209822"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68258999"
 ---
 # <a name="new-gui-features-in-ssma-for-oracle-oracletosql"></a>Nuove funzionalità GUI in SSMA per Oracle (OracleToSQL)
 In questo capitolo vengono descritte nuove funzionalità dell'interfaccia utente di SSMA.  

@@ -1,5 +1,5 @@
 ---
-title: Root (MDX) | Microsoft Docs
+title: Radice (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 2c2301f44cbdac4505bef95d590ce206c8b6b509
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be687d5cbfd4fdbb706ef5c10778a4f3e3f93197
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037045"
 ---
 # <a name="root-mdx"></a>Radice (MDX)
 

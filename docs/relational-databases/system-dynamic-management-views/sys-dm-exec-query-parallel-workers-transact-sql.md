@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_parallel_workers (Transact-SQL) | Microsoft Docs
+title: Sys.dm_exec_query_parallel_workers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql
@@ -21,19 +21,19 @@ author: pelopes
 ms.author: pelopes
 manager: ajayj
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b1ff6dee668cd6bc93d9a3c74ae4b3e25cbe99be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 000dd995427f8eafec759688db1ab76a6546b789
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013166"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263265"
 ---
 # <a name="sysdmexecqueryparallelworkers-transact-sql"></a>sys.dm_exec_query_parallel_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Restituisce informazioni sulla disponibilità di lavoro per ogni nodo.  
   
-|Nome|Tipo di dati|Descrizione|  
+|Name|Tipo di dati|Descrizione|  
 |----------|---------------|-----------------|  
 |**node_id**|**int**|ID del nodo NUMA.|  
 |**scheduler_count**|**int**|Numero di utilità di pianificazione nel nodo corrente.|  
@@ -45,11 +45,11 @@ ms.locfileid: "63013166"
 ## <a name="permissions"></a>Permissions  
 
 Sul [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], è necessario `VIEW SERVER STATE` autorizzazione.   
-Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], è necessario il `VIEW DATABASE STATE` autorizzazione nel database.   
+Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessario il `VIEW DATABASE STATE` autorizzazione nel database. Sul [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard e i livelli Basic, è necessario il **amministratore del Server** o un' **amministratore di Azure Active Directory** account.   
  
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-viewing-current-parallel-worker-availability"></a>A. Visualizzazione corrente della disponibilità di lavoro paralleli  
+### <a name="a-viewing-current-parallel-worker-availability"></a>R. Visualizzazione corrente della disponibilità di lavoro paralleli  
 
 ```sql 
 SELECT * FROM sys.dm_exec_query_parallel_workers;  

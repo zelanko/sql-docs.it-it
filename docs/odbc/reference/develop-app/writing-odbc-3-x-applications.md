@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4a51183964fe36d799e0e62243c6a0012da99727
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 9939d11e3a779cc25d7faeb4950783353947f140
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793282"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081452"
 ---
 # <a name="writing-odbc-3x-applications"></a>Scrittura di applicazioni ODBC 3. x
 Quando un'applicazione ODBC *2.x* dell'applicazione viene aggiornata a ODBC *3.x*, deve essere scritta in modo che funziona con entrambi ODBC *2.x* e *3.x* driver . L'applicazione deve incorporare il codice condizionale per sfruttare appieno ODBC *3.x* funzionalità.  

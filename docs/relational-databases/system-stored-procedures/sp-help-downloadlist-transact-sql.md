@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f6bb56be8654b37eea250122068ef52e165a2d99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40345ed8ad1a10da0088c5c1388c44fa24cad929
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62796184"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055188"
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**DEFECT**|Operazione server che richiede l'esclusione del server di destinazione Master **SQLServerAgent** servizio.|  
 |**DELETE**|Operazione del processo che rimuove un intero processo.|  
 |**INSERT**|Operazione del processo che inserisce un intero processo o ne aggiorna uno esistente. Include tutti i passaggi e le pianificazioni del processo, se applicabile.|  
-|**RE-ENLIST**|Operazione del server con cui viene attivato il rinvio delle informazioni di integrazione del server di destinazione, tra cui l'intervallo di polling e il fuso orario per il dominio multiserver. Il server di destinazione redownloads anche il **MSXOperator** dettagli.|  
+|**REINTEGRARSI**|Operazione del server con cui viene attivato il rinvio delle informazioni di integrazione del server di destinazione, tra cui l'intervallo di polling e il fuso orario per il dominio multiserver. Il server di destinazione redownloads anche il **MSXOperator** dettagli.|  
 |**SET-POLL**|Operazione del server con cui viene impostato l'intervallo di tempo in secondi per il polling del dominio multiserver eseguito dai server di destinazione. Se specificato, *valore* viene interpretato come valore di intervallo obbligatorio e può essere un valore compreso **10** al **28.800**.|  
 |**START**|Operazione del processo con cui viene richiesto l'avvio dell'esecuzione del processo.|  
 |**STOP**|Operazione del processo con cui viene richiesto l'arresto dell'esecuzione del processo.|  

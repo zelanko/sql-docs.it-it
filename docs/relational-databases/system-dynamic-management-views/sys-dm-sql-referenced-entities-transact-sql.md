@@ -1,5 +1,5 @@
 ---
-title: sys.dm_sql_referenced_entities (Transact-SQL) | Microsoft Docs
+title: DM sql_referenced_entities (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2019
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4ed017d1b3571405127177bdb45857be7ccbf1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64ddba95ec5c7fb8dfa6e6e685fcf9d5b6846fe9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66354404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090667"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 
@@ -127,17 +126,17 @@ sys.dm_sql_referenced_entities (
 |Stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Yes|Yes|  
 |stored procedure CLR|No|Yes|  
 |Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Yes|Yes|  
-|Funzione CLR definita dall'utente|no|Yes|  
-|Trigger CLR (DML e DDL)|No|no|  
+|Funzione CLR definita dall'utente|No|Yes|  
+|Trigger CLR (DML e DDL)|No|No|  
 |Trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Yes|No|  
-|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di database|Yes|no|  
-|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di server|Yes|no|  
+|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di database|Yes|No|  
+|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di server|Yes|No|  
 |Stored procedure estese|No|Yes|  
-|Coda|no|Yes|  
+|Coda|No|Yes|  
 |Sinonimo|No|Yes|  
 |Tipo (alias e tipo di CLR definito dall'utente)|No|Yes|  
 |Raccolta di XML Schema|No|Yes|  
-|Funzione di partizione|No|Yes|  
+|partition (funzione)|No|Yes|  
 | &nbsp; | &nbsp; | &nbsp; |
 
  \* Una tabella viene registrata come un'entità di riferimento solo quando si fa riferimento a un [!INCLUDE[tsql](../../includes/tsql-md.md)] modulo, tipo definito dall'utente o raccolta di XML schema nella definizione di una colonna calcolata, un vincolo CHECK o un vincolo predefinito.  
@@ -149,7 +148,7 @@ sys.dm_sql_referenced_entities (
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-return-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>A. Restituisce le entità cui fanno riferimento un trigger DDL a livello di database  
+### <a name="a-return-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>R. Restituisce le entità cui fanno riferimento un trigger DDL a livello di database  
  Nell'esempio seguente vengono restituite le entità (tabelle e colonne) cui fa riferimento il trigger DDL `ddlDatabaseTriggerLog` a livello di database.  
   
 ```sql  

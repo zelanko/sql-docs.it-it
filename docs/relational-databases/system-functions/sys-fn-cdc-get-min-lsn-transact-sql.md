@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7f1be9ff365412444f87ef0abcc3795301d98cf7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52c6b8d2db395560524c2a9fa46aca680ca9eea2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62948943"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046397"
 ---
 # <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **'** *capture_instance_name* **'**  
+ **«** *capture_instance_name* **»**  
  Nome dell'istanza di acquisizione. *capture_instance_name* viene **sysname**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
@@ -59,7 +58,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-returning-the-minimum-lsn-value-for-a-specified-capture-instance"></a>A. Recupero del valore LSN minimo per un'istanza di acquisizione specificata  
+### <a name="a-returning-the-minimum-lsn-value-for-a-specified-capture-instance"></a>R. Recupero del valore LSN minimo per un'istanza di acquisizione specificata  
  Nell'esempio seguente viene restituito il valore LSN minimo per l'istanza di acquisizione `HumanResources_Employee` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

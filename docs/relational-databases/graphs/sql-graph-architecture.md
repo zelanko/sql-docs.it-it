@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed234a487d5c382400b3a839820a4509c8b880f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0124126556967800e37b296a73bd951a18d3936e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026815"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035982"
 ---
 # <a name="sql-graph-architecture"></a>Architettura di grafi SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ Figura 2: Rappresentazione in forma di tabella edge e nodo
 
 
 
-## <a name="metadata"></a>Metadati
+## <a name="metadata"></a>Metadata
 Usare queste viste dei metadati per visualizzare gli attributi di una tabella nodi o bordi.
  
 ### <a name="systables"></a>sys.tables
@@ -78,7 +77,7 @@ Il `sys.columns` visualizzazione contiene colonne aggiuntive `graph_type` e `gra
  
 |Nome colonna |Tipo di dati |Descrizione |
 |--- |---|--- |
-|graph_type |INT |Colonna interna con un set di valori. I valori sono compresi tra 1 a 8 per le colonne di graph e NULL per altri utenti.  |
+|graph_type |int |Colonna interna con un set di valori. I valori sono compresi tra 1 a 8 per le colonne di graph e NULL per altri utenti.  |
 |graph_type_desc |nvarchar(60)  |colonna interna con un set di valori |
  
 Nella tabella seguente sono elencati i valori validi per `graph_type` colonna
@@ -101,20 +100,20 @@ Colonne implicite in una tabella nodi
 
 |Nome colonna    |Tipo di dati  |is_hidden  |Commento  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |bigint |1  |interno `graph_id` colonna  |
+|graph_id_\<hex_string> |BIGINT |1  |interno `graph_id` colonna  |
 |$node_id_\<hex_string> |NVARCHAR   |0  |Nodo esterno `node_id` colonna  |
 
 Colonne implicite in una tabella bordi
 
 |Nome colonna    |Tipo di dati  |is_hidden  |Commento  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |bigint |1  |interno `graph_id` colonna  |
+|graph_id_\<hex_string> |BIGINT |1  |interno `graph_id` colonna  |
 |$edge_id_\<hex_string> |NVARCHAR   |0  |External `edge_id` colonna  |
 |from_obj_id_\<hex_string>  |INT    |1  |interno dal nodo `object_id`  |
-|from_id_\<hex_string>  |bigint |1  |interno dal nodo `graph_id`  |
+|from_id_\<hex_string>  |BIGINT |1  |interno dal nodo `graph_id`  |
 |$from_id_\<hex_string> |NVARCHAR   |0  |esterno dal nodo `node_id`  |
 |to_obj_id_\<hex_string>    |INT    |1  |interni al nodo `object_id`  |
-|to_id_\<hex_string>    |bigint |1  |interni al nodo `graph_id`  |
+|to_id_\<hex_string>    |BIGINT |1  |interni al nodo `graph_id`  |
 |$to_id_\<hex_string>   |NVARCHAR   |0  |esterna al nodo `node_id`  |
  
 ### <a name="system-functions"></a>Funzioni di sistema
@@ -141,7 +140,7 @@ Scopri il [!INCLUDE[tsql-md](../../includes/tsql-md.md)] estensioni introdotte i
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE` viene ora estesa per supportare la creazione di una tabella AS nodi o bordi di AS. Si noti che una tabella edge può o non abbiano gli attributi definiti dall'utente.  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|È possibile modificare nodi e le tabelle bordi esattamente una tabella relazionale, utilizza il `ALTER TABLE`. Gli utenti possono aggiungere o modificare le colonne definite dall'utente, indici o vincoli. Tuttavia, modificare le colonne grafico interne, ad esempio `$node_id` o `$edge_id`, verrà generato un errore.  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Gli utenti possono creare indici su pseudo- colonne e le colonne definite dall'utente nel nodo e le tabelle bordi. Sono supportati tutti i tipi di indice, inclusi gli indici columnstore cluster e non cluster.  |
-|CREARE I VINCOLI DI ARCO    |[EDGE CONSTRAINTS &#40;Transact-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |Gli utenti possono ora creare vincoli di arco sulle tabelle edge per applicare la semantica specifica e anche mantenere l'integrità dei dati  |
+|CREARE I VINCOLI DI ARCO    |[I vincoli di arco &#40;Transact-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |Gli utenti possono ora creare vincoli di arco sulle tabelle edge per applicare la semantica specifica e anche mantenere l'integrità dei dati  |
 |DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |È possibile eliminare nodi e le tabelle bordi esattamente una tabella relazionale, utilizza il `DROP TABLE`. Tuttavia, in questa versione, non sono presenti vincoli per garantire che nessun bordi puntare a un nodo eliminato e propagate l'eliminazione dei bordi, quando si elimina un nodo o una tabella nodi non è supportata. È consigliabile che se viene eliminata una tabella nodi, agli utenti rimuovere tutti i bordi connessi ai nodi in tale tabella nodi manualmente per mantenere l'integrità del grafico.  |
 
 

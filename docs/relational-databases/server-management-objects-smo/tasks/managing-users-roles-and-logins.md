@@ -14,31 +14,30 @@ helpviewer_keywords:
 ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80a84d208ecd75b86df312d8d520a332669a8ce8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae6c07026bbbc12fc526eca1b5079bcc9cf36782
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731049"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030260"
 ---
 # <a name="managing-users-roles-and-logins"></a>Gestione di utenti, ruoli e account di accesso
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  In SMO gli account di accesso sono rappresentati dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Login>. Quando l'account di accesso è presente in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], può essere aggiunto a un ruolo del server. Il ruolo del server è rappresentato dal <xref:Microsoft.SqlServer.Management.Smo.ServerRole> oggetto. Il ruolo del database è rappresentato dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole>, mentre il ruolo dell'applicazione è rappresentato dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole>.  
+  In SMO gli account di accesso sono rappresentati dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.Login>. Quando l'account di accesso è presente in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], può essere aggiunto a un ruolo del server. Il ruolo del server è rappresentato dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.ServerRole>. Il ruolo del database è rappresentato dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole>, mentre il ruolo dell'applicazione è rappresentato dall'oggetto <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole>.  
   
- I privilegi associati al livello di server sono elencati come proprietà del <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> oggetto. I privilegi al livello del server possono essere concessi, negati o revocati da account di accesso singoli.  
+ I privilegi associati al livello del server sono elencati come proprietà dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.ServerPermission>. I privilegi al livello del server possono essere concessi, negati o revocati da account di accesso singoli.  
   
- Ogni <xref:Microsoft.SqlServer.Management.Smo.Database> oggetto ha un <xref:Microsoft.SqlServer.Management.Smo.UserCollection> oggetto che specifica tutti gli utenti nel database. Ogni utente è associato a un accesso. Un accesso può essere associato agli utenti di più database. Il <xref:Microsoft.SqlServer.Management.Smo.Login> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> metodo può essere utilizzato per elencare tutti gli utenti in ogni database associato con l'account di accesso. In alternativa, la proprietà <xref:Microsoft.SqlServer.Management.Smo.User> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Login> specifica l'accesso associato all'utente.  
+ Ogni oggetto <xref:Microsoft.SqlServer.Management.Smo.Database> dispone di un oggetto <xref:Microsoft.SqlServer.Management.Smo.UserCollection> che specifica tutti gli utenti del database. Ogni utente è associato a un accesso. Un accesso può essere associato agli utenti di più database. Il metodo <xref:Microsoft.SqlServer.Management.Smo.Login> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> può essere utilizzato per elencare tutti gli utenti di ogni database associato all'accesso. In alternativa, la proprietà <xref:Microsoft.SqlServer.Management.Smo.User> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Login> specifica l'accesso associato all'utente.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dispongono anche di ruoli che specificano un set di privilegi a livello di database che consentono a un utente di eseguire attività specifiche. A differenza dei ruoli del server, i ruoli del database non sono fissi, ma possono essere creati, modificati e rimossi. Privilegi e utenti possono essere assegnati a un ruolo del database per l'amministrazione bulk.  
+ I database [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dispongono anche di ruoli che specificano un set di privilegi al livello del database che consentono a un utente di eseguire attività specifiche. A differenza dei ruoli del server, i ruoli del database non sono fissi, ma possono essere creati, modificati e rimossi. Privilegi e utenti possono essere assegnati a un ruolo del database per l'amministrazione bulk.  
   
 ## <a name="example"></a>Esempio  
  Per gli esempi di codice seguenti, è necessario selezionare l'ambiente, il modello e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un Visual C&#35; progetto SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-c"></a>Enumerazione di account di accesso e utenti associati in Visual C#  
- A ogni utente di un database è associato un account di accesso. L'account di accesso può essere associato a utenti di più database. Nell'esempio di codice viene illustrato come chiamare il metodo <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Login> per ottenere un elenco di tutti gli utenti del database associati all'accesso. Nell'esempio viene creato un accesso e un utente di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database per assicurarsi che vi sia informazioni di mapping da enumerare.  
+ A ogni utente di un database è associato un account di accesso. L'account di accesso può essere associato a utenti di più database. Nell'esempio di codice viene illustrato come chiamare il metodo <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Login> per ottenere un elenco di tutti gli utenti del database associati all'accesso. Nell'esempio vengono creati un accesso e un utente nel database di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] per garantire la presenza di informazioni di mapping da enumerare.  
   
 ```csharp  
 {   
@@ -64,7 +63,7 @@ foreach ( Database db in srv.Databases) {
 ```  
   
 ## <a name="enumerating-logins-and-associated-users-in-powershell"></a>Enumerazione di account di accesso e utenti associati in PowerShell  
- A ogni utente di un database è associato un account di accesso. L'account di accesso può essere associato a utenti di più database. Nell'esempio di codice viene illustrato come chiamare il metodo <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Login> per ottenere un elenco di tutti gli utenti del database associati all'accesso. Nell'esempio viene creato un accesso e un utente di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database per assicurarsi che vi sia informazioni di mapping da enumerare.  
+ A ogni utente di un database è associato un account di accesso. L'account di accesso può essere associato a utenti di più database. Nell'esempio di codice viene illustrato come chiamare il metodo <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Login> per ottenere un elenco di tutti gli utenti del database associati all'accesso. Nell'esempio vengono creati un accesso e un utente nel database di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] per garantire la presenza di informazioni di mapping da enumerare.  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server.  

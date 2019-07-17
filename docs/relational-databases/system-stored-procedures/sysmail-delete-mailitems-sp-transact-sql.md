@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3a8549d33b000744f4d8430ee306e0083455894c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 23ecda5fd8d91f20133eb2295d38dc9d9ace66f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069097"
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
  **0** (esito positivo) o **1** (errore)  
   
 ## <a name="remarks"></a>Note  
- I messaggi di posta elettronica database e dei relativi allegati sono archiviati nel **msdb** database. I messaggi devono essere eliminati periodicamente per evitare **msdb** dall'aumento delle dimensioni maggiori del previsto e per assicurare la conformità con il programma di conservazione dei documenti di organizzazioni. Usare la **sysmail_delete_mailitems_sp** stored procedure per eliminare definitivamente messaggi di posta elettronica dalle tabelle di posta elettronica Database. Un argomento facoltativo consente di eliminare solo i messaggi di posta elettronica meno recenti tramite l'impostazione di una data e un'ora. I messaggi di posta elettronica con una data anteriore a quella specificata nell'argomento verranno eliminati. Un altro argomento facoltativo consente di eliminare solo i messaggi di posta elettronica di un determinato tipo, specificato come la **sent_status** argomento. È necessario fornire un argomento di tipo **@sent_before** oppure **@sent_status**. Per eliminare tutti i messaggi, usare  **@sent_before GETDATE () =**.  
+ I messaggi di posta elettronica database e dei relativi allegati sono archiviati nel **msdb** database. I messaggi devono essere eliminati periodicamente per evitare **msdb** dall'aumento delle dimensioni maggiori del previsto e per assicurare la conformità con il programma di conservazione dei documenti di organizzazioni. Usare la **sysmail_delete_mailitems_sp** stored procedure per eliminare definitivamente messaggi di posta elettronica dalle tabelle di posta elettronica Database. Un argomento facoltativo consente di eliminare solo i messaggi di posta elettronica meno recenti tramite l'impostazione di una data e un'ora. I messaggi di posta elettronica con una data anteriore a quella specificata nell'argomento verranno eliminati. Un altro argomento facoltativo consente di eliminare solo i messaggi di posta elettronica di un determinato tipo, specificato come la **sent_status** argomento. È necessario fornire un argomento di tipo **@sent_before** oppure **@sent_status** . Per eliminare tutti i messaggi, usare  **@sent_before GETDATE () =** .  
   
  L'eliminazione di un messaggio di posta elettronica comporta la rimozione degli allegati correlati a tale messaggio, L'eliminazione di posta elettronica non elimina le voci corrispondenti nella **sysmail_event_log**. Uso [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) eliminare elementi dal log.  
   
@@ -58,7 +57,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-deleting-all-e-mails"></a>A. Eliminazione di tutti i messaggi di posta elettronica  
+### <a name="a-deleting-all-e-mails"></a>R. Eliminazione di tutti i messaggi di posta elettronica  
  Nell'esempio seguente vengono eliminati tutti i messaggi di posta elettronica nel sistema di Posta elettronica database.  
   
 ```  

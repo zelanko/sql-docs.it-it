@@ -1,7 +1,7 @@
 ---
 title: Novità in Data Migration Assistant (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/18/2019
+ms.date: 07/15/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -13,15 +13,19 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-ms.openlocfilehash: 5251b4da6334e8aeba1c467ff921f6f25b2ab26a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.openlocfilehash: 4bce2ed84dbaac8d6ec95bbcf34827a8113c1f54
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008371"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262266"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novità di Data Migration Assistant
 Questo articolo elenca le aggiunte in ogni versione di Data Migration Assistant (DMA).
+
+## <a name="dma-v44"></a>Versione 4.4 DMA
+
+Il rilascio della versione 4.4 di DMA fornisce supporto per il caricamento delle valutazioni in Azure Migrate.
 
 ## <a name="dma-v43"></a>V4.3 DMA
 

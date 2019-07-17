@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 863fd87b-ff33-4ac5-9aa9-df21140681da
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 935b76922ec40b8bdca28a0766e4c5b7c3d8754a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c158533188db7e3d72235a69bff1b14546a1a1a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830029"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089244"
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -37,14 +36,14 @@ ms.locfileid: "47830029"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome della colonna o del parametro della procedura.|  
 |**id**|**int**|ID di oggetto della tabella a cui appartiene la colonna o ID della stored procedure a cui è associato il parametro.|  
 |**tipoX**|**tinyint**|Tipo di archiviazione fisica **Sys. Types**.|  
 |**typestat**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|ID del tipo di dati esteso definito dall'utente. Causa un errore di overflow o restituisce NULL se il numero di tipi di dati è maggiore di 32.767.|  
-|**Lunghezza**|**smallint**|Lunghezza massima di archiviazione fisica rispetto **sys**. **tipi**.|  
+|**length**|**smallint**|Lunghezza massima di archiviazione fisica rispetto **sys**. **tipi**.|  
 |**xprec**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**XScale**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colid**|**smallint**|ID di colonna o di parametro.|  
@@ -54,7 +53,7 @@ ms.locfileid: "47830029"
 |**colstat**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**int**|ID del valore predefinito della colonna.|  
 |**domain**|**int**|ID della regola o vincolo CHECK per la colonna.|  
-|**Numero**|**smallint**|Numero di sottoprocedura quando la procedura è raggruppata.<br /><br /> 0 = Voci non di procedura|  
+|**number**|**smallint**|Numero di sottoprocedura quando la procedura è raggruppata.<br /><br /> 0 = Voci non di procedura|  
 |**colorder**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**varbinary(8000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**smallint**|Offset nella riga in cui appare la colonna.|  
@@ -64,7 +63,7 @@ ms.locfileid: "47830029"
 |**usertype**|**smallint**|ID del tipo di dati definito dall'utente dal **Sys. Types**. Causa un errore di overflow o restituisce NULL se il numero di tipi di dati è maggiore di 32.767.|  
 |**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**Prec**|**smallint**|Livello di precisione della colonna.<br /><br /> -1 = **xml** o tipo di valore elevato.|  
-|**Scalabilità**|**int**|Scala della colonna.<br /><br /> NULL = Tipo di dati non numerico.|  
+|**scala**|**int**|Scala della colonna.<br /><br /> NULL = Tipo di dati non numerico.|  
 |**iscomputed**|**int**|Flag che indica se si tratta di una colonna calcolata:<br /><br /> 0 = Non calcolata<br /><br /> 1 = Calcolata|  
 |**isoutparam**|**int**|Indica se il parametro della procedura è un parametro di output:<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**IsNullable**|**int**|Indica se la colonna ammette valori Null:<br /><br /> 1 = True<br /><br /> 0 = False|  

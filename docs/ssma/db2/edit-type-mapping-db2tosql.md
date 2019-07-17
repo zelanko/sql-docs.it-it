@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f93c4b7d-74fc-4856-bf42-035289918e83
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 47e1321802b237f02a63535572b1850dbb4c74f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29669535f3544dafea58e7064e6d2c5281f6102f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989706"
 ---
 # <a name="edit-type-mapping-db2tosql"></a>Modificare il mapping dei tipi (DB2ToSQL)
 Il **modifica del mapping dei tipi** nella finestra di dialogo consente di specificare la modalità di mapping dei tipi tra gli oggetti di database di origine e destinazione.  
@@ -35,10 +34,10 @@ Selezionare il tipo di dati di origine eseguire il mapping a un [!INCLUDE[ssNoVe
 Se il tipo di dati è di lunghezza variabile, i campi seguenti verranno visualizzati sotto **tipo di origine**:  
   
 **From**  
-Specificare la lunghezza minima per questo mapping. Ad esempio, per il **nchar** tipo di dati, è possibile immettere 10 per specificare che questo mapping è per un intervallo di partire **nchar (10)**.  
+Specificare la lunghezza minima per questo mapping. Ad esempio, per il **nchar** tipo di dati, è possibile immettere 10 per specificare che questo mapping è per un intervallo di partire **nchar (10)** .  
   
-**Per**  
-Specificare la lunghezza massima consentita per questo mapping. Ad esempio, per il **nchar** tipo di dati, è possibile immettere 20 per specificare che questo mapping è per un intervallo termina **nchar(20)**.  
+**To**  
+Specificare la lunghezza massima consentita per questo mapping. Ad esempio, per il **nchar** tipo di dati, è possibile immettere 20 per specificare che questo mapping è per un intervallo termina **nchar(20)** .  
   
 **Tipo di destinazione**  
 Selezionare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di dati a cui viene eseguito il mapping al tipo di origine. Quando SSMA consente di creare la tabella o una stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il tipo di dati di origine verrà modificato in questo tipo di dati.  
@@ -46,5 +45,5 @@ Selezionare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo di
 Se il tipo di dati è di lunghezza variabile, il campo seguente verrà visualizzato nella **tipo di destinazione**:  
   
 **Replace with**  
-Specificare la lunghezza di destinazione per questo mapping. Ad esempio, per il **nvarchar** tipo di dati, è possibile immettere per specificare che il tipo di dati di origine specificato deve essere mappato a 20 **nvarchar(20)**.  
+Specificare la lunghezza di destinazione per questo mapping. Ad esempio, per il **nvarchar** tipo di dati, è possibile immettere per specificare che il tipo di dati di origine specificato deve essere mappato a 20 **nvarchar(20)** .  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba6eb993-316b-4650-bab8-d76583c00e53
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 871919554975f04fae0aeaa1b8e6ec684c6650a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8cfdd0babe84d309391b3e1ca546c4e05fdf1331
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714148"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049170"
 ---
 # <a name="why-was-odbc-created"></a>Motivi per la creazione di ODBC
 In passato, le aziende utilizzato un singolo DBMS. L'accesso al database è stato eseguito il front-end del sistema o mediante le applicazioni scritte per lavorare esclusivamente con tale sistema. Tuttavia, quando le dimensioni sono aumentate dell'utilizzo di computer e ulteriori componenti hardware e software è diventato disponibile, le aziende è stata avviata acquisire diversi DBMS. I motivi sono numerosi: Persone bought Qual era più conveniente, qual è più veloce, le risorse di cui già conosce, ciò che è stato più recente sul mercato, cosa ha funzionato ottimale per una singola applicazione. Per altri motivi erano riorganizzazione e fusioni, in cui i reparti che in precedenza aveva un DBMS singolo ora include diversi.  

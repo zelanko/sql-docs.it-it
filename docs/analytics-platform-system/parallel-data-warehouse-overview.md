@@ -2,19 +2,18 @@
 title: I componenti Data Warehouse - sistema di piattaforma Analitica in parallelo | Microsoft Docs
 description: Questo articolo illustra il software di appliance e i componenti software non appliance del sistema di piattaforma Analitica.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: aaf90124cc7877b633a997a2c4f170057b965028
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87525a741c1d0081b366394c0c5dd1b152ad15f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639871"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960470"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>I componenti Data Warehouse - sistema di piattaforma Analitica in parallelo
 Questo articolo illustra il software di appliance e i componenti software non appliance del sistema di piattaforma Analitica.  
@@ -95,7 +94,7 @@ Data Movement Service (DMS) in esecuzione in ogni nodo di calcolo per eseguire l
 ### <a name="compute-node-databases"></a>I database di nodo di calcolo 
 Ogni nodo di calcolo viene eseguito un'istanza di SQL Server per elaborare query e gestire i dati utente.  
   
-## <a name="appliance-fabric"></a>Appliance Fabric  
+## <a name="appliance-fabric"></a>Infrastruttura di Appliance  
 L'infrastruttura di appliance fornisce il sistema operativo, servizi e infrastruttura di rete per l'appliance.  
   
 ### <a name="domain-controller"></a>Controller di dominio  
@@ -132,7 +131,7 @@ La tecnologia PolyBase si integra i dati pwd di SQL Server con dati Hadoop ester
   
 -   Distribuzione di Hadoop di Hortonworks  
   
--   Cloudera Distribution of Hadoop  
+-   Cloudera distribuzione di Hadoop  
   
 -   Dati archiviati in archivio Blob di Azure in HDInsight  
   

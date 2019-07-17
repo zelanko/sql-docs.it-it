@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 43989355-cebf-4d8b-ba3d-fa8546e70230
 author: Shamikg
 ms.author: Shamikg
-manager: v-pelars
-ms.openlocfilehash: a85eb72b3c239b8be0141c445e5d4507efb438cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 4fc68e8b8d3fc009b766f0fb0be97f1124797764
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63192348"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259655"
 ---
-# <a name="global-settings-dialogs--oracletosql"></a>Global Settings (Dialogs)  (OracleToSQL)
+# <a name="global-settings-dialogs--oracletosql"></a>Impostazioni globali (finestre di dialogo) (OracleToSQL)
 Utilizzare la pagina di finestre di dialogo del **Global Settings** finestra di dialogo per specificare l'azione predefinita dell'utente e le impostazioni di avviso per SSMA.  
   
 Per accedere alle impostazioni della finestra di dialogo nel **degli strumenti** dal menu **impostazioni globali**, fare clic su **GUI** nella parte inferiore del riquadro a sinistra e quindi selezionare **finestre di dialogo**.  

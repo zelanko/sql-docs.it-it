@@ -1,5 +1,5 @@
 ---
-title: sys.query_store_plan (Transact-SQL) | Microsoft Docs
+title: Sys. query_store_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/23/2019
 ms.prod: sql
@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7adf4a825fb93b6c87714476607b30e9f4ec97a7
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: d1aee3dcdfe287e4d6db64be6c74edb7eb1362a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833567"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068053"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -58,7 +57,7 @@ ms.locfileid: "67833567"
 |**avg_compile_duration**|**float**|Pianificare le statistiche di compilazione. <br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
 |**last_compile_duration**|**bigint**|Pianificare le statistiche di compilazione. <br/>**Nota:** Azure SQL Data Warehouse restituirà sempre zero (0).|  
 |**plan_forcing_type**|**int**|Tipo di utilizzo forzato del piano.<br /><br />0: Nessuno<br /><br />1: MANUAL<br /><br />2: AUTO|  
-|**plan_forcing_type_desc**|**nvarchar(60)**|Descrizione di plan_forcing_type testo.<br /><br />NONE: Nessun utilizzo forzato del piano<br /><br />MANUAL: Piano forzato da utente<br /><br />AUTO: Piano forzato dall'ottimizzazione automatica|  
+|**plan_forcing_type_desc**|**nvarchar(60)**|Descrizione di plan_forcing_type testo.<br /><br />NONE: Nessun utilizzo forzato del piano<br /><br />MANUALE: Piano forzato da utente<br /><br />AUTOMATICO: Piano forzato dall'ottimizzazione automatica|  
 
 ## <a name="plan-forcing-limitations"></a>Limitazioni di uso forzato del piano
 Query Store è dotato di un meccanismo per imporre a Query Optimizer l'uso di determinati piani di esecuzione. Esistono tuttavia alcune limitazioni che possono impedire l'imposizione di un piano. 

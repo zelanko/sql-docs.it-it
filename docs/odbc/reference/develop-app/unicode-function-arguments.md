@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 83cb2faad86268c3270e9386ca10b25e4807e030
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 1fee0aa76bc5b903d65461261a8eb5dbc2349581
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793753"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087761"
 ---
 # <a name="unicode-function-arguments"></a>Argomenti funzione Unicode
 La gestione Driver ODBC 3.5 (o versioni successive) supporta ANSI sia Unicode versioni di tutte le funzioni che accettano puntatori alle stringhe di caratteri o SQLPOINTER nei relativi argomenti. Le funzioni Unicode vengono implementate come funzioni (con suffisso *W*), non come macro. Le funzioni ANSI (che può essere chiamato con o senza un suffisso *oggetto*) sono identiche alle funzioni API ODBC corrente.  

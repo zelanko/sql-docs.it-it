@@ -36,15 +36,14 @@ helpviewer_keywords:
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 71a52a619ba2a3c16c372021181b90bae72ccfe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c140489877be5f34bc6d7a5b20a4ce36fdb3820f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759698"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068951"
 ---
-# <a name="access-inventory-schemas-accesstosql"></a>Access Inventory Schemas (AccessToSQL)
+# <a name="access-inventory-schemas-accesstosql"></a>Schemi di inventario di Access (AccessToSQL)
 Le sezioni seguenti descrivono le tabelle che vengono create da SSMA durante l'esportazione degli schemi di accesso per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="databases"></a>Database  
@@ -160,7 +159,7 @@ Metadati della macro vengono esportati per il **SSMA_Access_InventoryMacros** ta
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica il database che contiene la macro.|  
 |**MacroId**|**int**|Incremento valore intero che identifica la macro. Questa colonna è la chiave primaria per la tabella.|  
-|**MacroName**|**nvarchar(4000)**|Il nome della macro.|  
+|**Nomemacro**|**nvarchar(4000)**|Il nome della macro.|  
   
 ## <a name="reports"></a>Report  
 I metadati del report viene esportato per la **SSMA_Access_InventoryReports** tabella. Questa tabella contiene le colonne seguenti:  
@@ -169,7 +168,7 @@ I metadati del report viene esportato per la **SSMA_Access_InventoryReports** ta
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica il database che contiene il report.|  
 |**ReportId**|**int**|Incremento valore intero che identifica il report. Questa colonna è la chiave primaria per la tabella.|  
-|**ReportName**|**nvarchar(4000)**|Nome del report.|  
+|**NomeReport**|**nvarchar(4000)**|Nome del report.|  
   
 ## <a name="modules"></a>Moduli  
 I metadati di modulo vengono esportati per il **SSMA_Access_InventoryModules** tabella. Questa tabella contiene le colonne seguenti:  

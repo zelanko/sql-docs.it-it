@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215630"
+---
 ## <a name="connect-locally"></a>Eseguire la connessione in locale
 
 Nella procedura seguente viene usato **sqlcmd** per connettersi in locale alla nuova istanza di SQL Server.
@@ -44,7 +52,7 @@ La seguente procedura consente di creare un nuovo database denominato `TestDB`.
    ```
 
 > [!TIP]
-> Per altre informazioni sulla scrittura di istruzioni e query Transact-SQL, vedere [Esercitazione: Scrittura di istruzioni Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
+> Per altre informazioni sulla scrittura di istruzioni e query Transact-SQL, vedere [esercitazione: Scrittura di istruzioni Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
 
 ### <a name="insert-data"></a>Inserire i dati
 
@@ -108,9 +116,10 @@ Oltre a **sqlcmd**, è possibile usare i seguenti strumenti multipiattaforma per
 
 |||
 |---|---|
-| [Studio di dati di Azure](../azure-data-studio/index.md) | Un'utilità di gestione database GUI di multi-piattaforma. |
-| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Un'interfaccia della riga di comando multipiattaforma per l'esecuzione di comandi Transact-SQL. |
+| [Azure Data Studio](../azure-data-studio/index.md) | Un'utilità di gestione database GUI di multi-piattaforma. |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Un editor di codice multipiattaforma con interfaccia utente grafica che eseguono istruzioni Transact-SQL con l'estensione mssql. |
+| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Una configurazione e automazione uno strumento multipiattaforma basato sui cmdlet. |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Un'interfaccia della riga di comando multipiattaforma per l'esecuzione di comandi Transact-SQL. |
 
 ## <a name="connecting-from-windows"></a>La connessione da Windows
 

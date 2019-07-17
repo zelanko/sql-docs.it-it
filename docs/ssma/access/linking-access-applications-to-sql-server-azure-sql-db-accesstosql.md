@@ -23,12 +23,12 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 20efdf681baa8305b3b2be08b2e9f3efe999d3fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 115aa0db8e8d6f2fdc35718ccb60f1d0ed06b5c1
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760140"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259906"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Collegamento delle applicazioni di accesso a SQL Server - database SQL di Azure (AccessToSQL)
 Se si desidera utilizzare le applicazioni Access esistenti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile collegare le tabelle di Access originale dopo la migrazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tabelle di SQL Azure. Collegamento è possibile modificare il database di Access in modo che le pagine di accesso di query, form, i report e dati usano i dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o database di SQL Azure anziché i dati presenti nel database di Access.  
@@ -146,7 +146,7 @@ Recordset.LastModified
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>La funzionalità di collegamento ipertestuale viene persa dopo la migrazione dei dati  
 **Causa:** Dopo la migrazione di dati, collegamenti ipertestuali nelle colonne le loro funzionalità vadano perse e diventano semplici **nvarchar (max)** colonne.  
   
-**Soluzione:** Nessuna.  
+**Soluzione:** No.  
   
 ### <a name="some-sql-server-data-types-are-not-supported-by-access"></a>Alcuni tipi di dati di SQL Server non sono supportati da Access  
 **Causa:** Se si aggiorna in un secondo momento le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tabelle di SQL Azure contengono i tipi di dati che non sono supportati da accesso, non è possibile aprire la tabella di Access.  

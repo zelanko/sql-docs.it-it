@@ -19,28 +19,27 @@ helpviewer_keywords:
 ms.assetid: e6dafa4e-e47e-43ec-acfc-88c0af53c1a1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 61a541457f170ee884a1f0b8c3560b04601ffde5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b814f8cb0013a202f88aba76b99cf52c49dd1c1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061408"
 ---
 # <a name="sysendpoints-transact-sql"></a>sys.endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene una riga per ogni endpoint creato nel sistema. Esiste sempre un solo endpoint SYSTEM.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome dell'endpoint. Valore univoco all'interno del server. Non ammette i valori Null.|  
 |**endpoint_id**|**int**|ID dell'endpoint. Valore univoco all'interno del server. Un endpoint con ID minore di 65536 è un endpoint di sistema. Non ammette i valori Null.|  
 |**principal_id**|**int**|ID dell'entità server che ha creato l'endpoint e ne è proprietaria. Ammette i valori Null.|  
 |**Protocollo**|**tinyint**|Protocollo dell'endpoint.<br /><br /> 1 = HTTP<br /><br /> 2 = TCP<br /><br /> 3 = Named pipe<br /><br /> 4 = Memoria condivisa<br /><br /> 5 = VIA (Virtual Interface Adapter)<br /><br /> Non ammette i valori Null.|  
-|**protocol_desc**|**nvarchar(60)**|Descrizione del protocollo dell'endpoint. Ammette valori Null. I valori validi sono:<br /><br /> **HTTP**<br /><br /> **TCP**<br /><br /> **NAMED_PIPES**<br /><br /> **SHARED_MEMORY**<br /><br /> **TRAMITE** Nota: il protocollo VIA è deprecato. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|**protocol_desc**|**nvarchar(60)**|Descrizione del protocollo dell'endpoint. Ammette valori Null. Uno dei valori seguenti:<br /><br /> **HTTP**<br /><br /> **TCP**<br /><br /> **NAMED_PIPES**<br /><br /> **SHARED_MEMORY**<br /><br /> **TRAMITE** Nota: Il protocollo VIA è deprecato. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |**type**|**tinyint**|Tipo di payload dell'endpoint.<br /><br /> 1 = SOAP<br /><br /> 2 = TSQL<br /><br /> 3 = SERVICE_BROKER<br /><br /> 4 = DATABASE_MIRRORING<br /><br /> Non ammette i valori Null.|  
-|**type_desc**|**nvarchar(60)**|Descrizione del tipo di payload dell'endpoint. Ammette i valori Null. I valori validi sono:<br /><br /> **SOAP**<br /><br /> **TSQL**<br /><br /> **SERVICE_BROKER**<br /><br /> **DATABASE_MIRRORING**|  
+|**type_desc**|**nvarchar(60)**|Descrizione del tipo di payload dell'endpoint. Ammette i valori Null. Uno dei valori seguenti:<br /><br /> **SOAP**<br /><br /> **TSQL**<br /><br /> **SERVICE_BROKER**<br /><br /> **DATABASE_MIRRORING**|  
 |**state**|**tinyint**|Stato dell'endpoint.<br /><br /> 0 = STARTED: l'endpoint è in attesa ed elabora le richieste.<br /><br /> 1 = STOPPED: l'endpoint è in attesa, ma non elabora le richieste.<br /><br /> 2 = DISABLED: l'endpoint non è in attesa.<br /><br /> Il valore predefinito è 1. Ammette i valori Null.|  
 |**state_desc**|**nvarchar(60)**|Descrizione dello stato dell'endpoint:<br /><br /> STARTED = L'endpoint è in attesa ed elabora le richieste.<br /><br /> STOPPED = L'endpoint è in attesa, ma non elabora le richieste.<br /><br /> DISABLED = L'endpoint non è in attesa.<br /><br /> Il valore predefinito è STOPPED.<br /><br /> Ammette i valori Null.|  
 |**is_admin_endpoint**|**bit**|Specifica se l'endpoint è destinato a un utilizzo amministrativo.<br /><br /> 0 = Endpoint non amministrativo.<br /><br /> 1 = Endpoint amministrativo.<br /><br /> Non ammette i valori Null.|  

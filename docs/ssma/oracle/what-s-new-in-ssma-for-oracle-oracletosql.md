@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 author: HJToland3
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: bd80395b4df7957f48cc480ba858af387e870b86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20fc72ce649d8ab66c43fe1c8f3a87775d83f9fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66841098"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086782"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Quali sono le novità di SSMA per Oracle (OracleToSQL)
 Questo articolo elenca SQL Server Migration Assistant (SSMA) per le modifiche di Oracle in ogni versione.
@@ -207,7 +206,7 @@ La versione di maggio 2016 di SSMA per Oracle contiene le seguenti modifiche:
 * Correzione di conversione dei tipi di dati carattere per Oracle.
 * Correzione del bug nelle impostazioni globali.
   
-## <a name="march-2016"></a>Marzo 2016
+## <a name="march-2016"></a>marzo 2016
 
 La versione di anteprima di marzo 2016 di SSMA per Oracle di aggiunta del supporto per:  
   

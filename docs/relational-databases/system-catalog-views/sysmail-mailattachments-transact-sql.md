@@ -17,24 +17,23 @@ helpviewer_keywords:
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c263f7e3df69b6eb3d9517b2dc973a1cb4102f7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bdcea5da463e2501954c4bf96ca58bac216eb58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627309"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060199"
 ---
 # <a name="sysmailmailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene una riga per ogni allegato inviato a Posta elettronica database. Utilizzare questa vista quando si desidera ottenere informazioni sugli allegati di Posta elettronica database. Per esaminare tutti i messaggi di posta elettronica elaborati mediante l'utilizzo di posta elettronica Database [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md).  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**attachment_id**|**int**|Identificatore dell'allegato.|  
 |**mailitem_id**|**int**|Identificatore dell'elemento di posta contenente l'allegato.|  
-|**Nome del file**|**nvarchar(520)**|Nome di file dell'allegato. Quando **attach_query_result** è 1 e **query_attachment_filename** è NULL, posta elettronica Database crea un nome file arbitrario.|  
+|**filename**|**nvarchar(520)**|Nome di file dell'allegato. Quando **attach_query_result** è 1 e **query_attachment_filename** è NULL, posta elettronica Database crea un nome file arbitrario.|  
 |**filesize**|**int**|Dimensioni in byte dell'allegato.|  
 |**attachment**|**varbinary(max)**|Contenuto dell'allegato.|  
 |**last_mod_date**|**datetime**|Data e ora dell'ultima modifica della riga.|  

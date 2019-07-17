@@ -1,5 +1,5 @@
 ---
-title: VIEWS (Transact-SQL) | Microsoft Docs
+title: VISTE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6119bc94-0b22-45d4-a34b-967afd810a9d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c23935ef020763bffe80957f054637a96e6785db
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: b4e2a969450c2ec4593c7daec1b9c9b203b18410
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254776"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078363"
 ---
 # <a name="views-transact-sql"></a>VIEWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "54254776"
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|Qualificatore della vista.|  
 |**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nome dello schema che contiene la vista.<br /><br /> **&#42;&#42;Importante &#42; &#42;**  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
 |**TABLE_NAME**|**nvarchar(** 128 **)**|Nome della vista.|  
-|**VIEW_DEFINITION**|**nvarchar(** 4000 **)**|Se la lunghezza della definizione è più grande **nvarchar (** 4000 **)**, questa colonna è NULL. In caso contrario, questa colonna corrisponde al testo della definizione della vista.|  
+|**VIEW_DEFINITION**|**nvarchar(** 4000 **)**|Se la lunghezza della definizione è più grande **nvarchar (** 4000 **)** , questa colonna è NULL. In caso contrario, questa colonna corrisponde al testo della definizione della vista.|  
 |**CHECK_OPTION**|**varchar(** 7 **)**|Tipo di WITH CHECK OPTION. Restituisce CASCADE se la vista originale è stata creata tramite WITH CHECK OPTION. In caso contrario restituisce NONE.|  
 |**IS_UPDATABLE**|**varchar(** 2 **)**|Specifica se è possibile aggiornare la vista. Restituisce sempre NO.|  
   

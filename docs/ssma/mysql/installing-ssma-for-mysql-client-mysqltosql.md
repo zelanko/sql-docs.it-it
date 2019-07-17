@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1d9317b63b01a4d1e78f5c8d4818c63d9974be4f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9dcdeaff1c4782453a9fd57cc709e17ad3200d28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187192"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086819"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>Installazione di SSMA per il client MySQL (MySQLToSQL)
 SSMA per MySQL client include i file di programma che eseguono le attività seguenti:  

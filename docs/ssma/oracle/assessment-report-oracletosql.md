@@ -1,5 +1,5 @@
 ---
-title: Assessment Report (OracleToSQL) | Microsoft Docs
+title: Report di valutazione (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 168b7465-a6d6-4329-b46e-fc6c5a3f2d9d
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: dd578c40c71b8be4a0567cc2cc1a516f795e288d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 75fdb97b5b7d763694289d762edc65b4536a86c3
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288056"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264520"
 ---
 # <a name="assessment-report-oracletosql"></a>Report di valutazione (OracleToSQL)
 La finestra di Report di valutazione Mostra i risultati della conversione di oggetti di database da [!INCLUDE[tsql](../../includes/tsql-md.md)] informazioni sulla sintassi, e può inoltre la Guida è stimare la complessità e i costi dei progetti di migrazione.  

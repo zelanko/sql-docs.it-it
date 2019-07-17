@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: a63e4112-4b5d-4b7a-a5c2-06a24e86ab1b
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: bb07c2ca671fccbfdb737004ea0786359873a179
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 6fcb9915f6945e2dc8413a4c28003428a4ad3e07
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138853"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264418"
 ---
 # <a name="global-settings-editor-oracletosql"></a>Impostazioni globali (editor) (OracleToSQL)
 Utilizzare la pagina Editor del **Global Settings** finestra di dialogo per specificare le impostazioni per finestre dell'editor di codice.  

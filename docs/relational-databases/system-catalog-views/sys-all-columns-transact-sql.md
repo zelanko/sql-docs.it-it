@@ -19,28 +19,27 @@ helpviewer_keywords:
 ms.assetid: 40e04fe9-0b64-4799-84c0-57f128b2bdc2
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb9fedb07a1e09f975c1012367a43f3f4d992028
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db7f0cf9b75dce672c2d1c61ad86723c4954372f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843719"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018170"
 ---
 # <a name="sysallcolumns-transact-sql"></a>sys.all_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Visualizza l'unione di tutte le colonne appartenenti agli oggetti definiti dall'utente e agli oggetti di sistema.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|ID dell'oggetto a cui appartiene la colonna.|  
-|NAME|**sysname**|Nome della colonna. Valore univoco all'interno dell'oggetto.|  
+|name|**sysname**|Nome della colonna. Valore univoco all'interno dell'oggetto.|  
 |column_id|**int**|ID della colonna. Valore univoco all'interno dell'oggetto.<br /><br /> È possibile che gli ID di colonna non siano sequenziali.|  
 |system_type_id|**tinyint**|ID del tipo di sistema della colonna.|  
 |user_type_id|**int**|ID del tipo di colonna definito dall'utente.<br /><br /> Per restituire il nome del tipo, aggiungere il [Sys. Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) su questa colonna vista del catalogo.|  
-|max_length|**smallint**|Lunghezza massima in byte della colonna.<br /><br /> -1 = il tipo di dati della colonna **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, oppure **xml**.<br /><br /> Per la **testo** colonne, il valore max_length sarà 16 o il valore impostato dall'opzione 'text in row' di sp_tableoption.|  
+|max_length|**smallint**|Lunghezza massima in byte della colonna.<br /><br /> -1 = il tipo di dati della colonna **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , oppure **xml**.<br /><br /> Per la **testo** colonne, il valore max_length sarà 16 o il valore impostato dall'opzione 'text in row' di sp_tableoption.|  
 |precisione|**tinyint**|Precisione della colonna se la colonna è di tipo numerico. In caso contrario, 0.|  
 |scala|**tinyint**|Scala della colonna se la colonna è di tipo numerico. In caso contrario, 0.|  
 |collation_name|**sysname**|Nome delle regole di confronto della colonna se la colonna è di tipo carattere. In caso contrario, NULL.|  

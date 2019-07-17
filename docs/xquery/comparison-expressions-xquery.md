@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ac4e617b7abb220dd2a8767a334ddbdf1c685d2c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7462e089f70b4da76edea25dcfe6e7e314ad7c46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661839"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039035"
 ---
 # <a name="comparison-expressions-xquery"></a>Espressioni di confronto (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +44,10 @@ ms.locfileid: "51661839"
   
  Gli operatori generali sono indicati nella tabella seguente.  
   
-|Operatore|Description|  
+|Operator|Descrizione|  
 |--------------|-----------------|  
-|=|Uguale a|  
-|!=|Diverso da|  
+|=|Uguale|  
+|!=|Non uguaglianza|  
 |\<|Minore di|  
 |>|Maggiore di|  
 |\<=|Minore o uguale a|  
@@ -122,7 +121,7 @@ WHERE ContactID=1
   
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 \<act:number   
@@ -140,10 +139,10 @@ WHERE ContactID=1
   
  Gli operatori di confronto dei valori sono indicati nella tabella seguente.  
   
-|Operatore|Description|  
+|Operator|Descrizione|  
 |--------------|-----------------|  
-|eq|Uguale a|  
-|ne|Diverso da|  
+|eq|Uguale|  
+|ne|Non uguaglianza|  
 |lt|Minore di|  
 |gt|Maggiore di|  
 |le|Minore o uguale a|  
@@ -174,7 +173,7 @@ WHERE ProductModelID=19
   
 -   Si noti che poiché gli operatori funzionano solo su valori atomici, la **data ()** funzione viene utilizzata in modo implicito per recuperare il valore del nodo. Pertanto, `data($P/PD:Size) eq "small"` restituisce lo stesso risultato.  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 \<PD:Picture   
@@ -208,7 +207,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7           
 ```  
   
- Risultato:  
+ Questo è il risultato:  
   
 ```  
 ProductModelID       Result          
