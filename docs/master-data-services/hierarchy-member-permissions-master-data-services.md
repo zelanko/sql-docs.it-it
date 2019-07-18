@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 497bbda56028394547414aff5b360473445da9c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e60af25238f52e9a1f6245fc938cee1aabec0bab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945200"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Autorizzazioni membri gerarchie (Master Data Services)
 
@@ -38,9 +37,9 @@ ms.locfileid: "65485890"
   
  Le autorizzazioni membri gerarchia si applicano alla versione del modello cui sono assegnate e a eventuali copie future della versione. Non si applicano a versioni precedenti a quella a cui sono assegnate.  
   
-|Autorizzazione|Descrizione|  
+|Autorizzazioni|Descrizione|  
 |----------------|-----------------|  
-|**lettura**|I membri vengono visualizzati.<br /><br /> <br /><br /> Nota: se si assegna solo l'autorizzazione **Lettura** a **Root**, i membri in **Root** sono di sola lettura. Nelle gerarchie e nelle raccolte esplicite, tuttavia, l'utente può spostare i membri in **Root** e aggiungere nuovi membri in questa posizione.|  
+|**lettura**|I membri vengono visualizzati.<br /><br /> <br /><br /> Nota: Se si assegna l'autorizzazione di **Read** a **Radice**, i membri in **Radice** sono di sola lettura. Nelle gerarchie esplicite e nelle raccolte l'utente può invece spostare i membri in **Radice** e aggiungere nuovi membri a **Radice**.|  
 |**Creare**|L'autorizzazione di creazione non è disponibile nell'autorizzazione dei membri della gerarchia.|  
 |**Update**|I membri vengono visualizzati e l'utente può modificarli. L'utente può inoltre spostare i membri in qualsiasi gerarchia o raccolta esplicita cui essi appartengono.|  
 |**Elimina**|I membri vengono visualizzati e l'utente può eliminarli.|  

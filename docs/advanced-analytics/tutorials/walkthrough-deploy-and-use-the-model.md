@@ -7,13 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: f1c684aff9c4b31049a04add04e8def642dca1d2
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: e79dd0bce559259863128de1d2490f0fd9197cf1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961691"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Distribuire il modello R e usarlo in SQL Server (procedura dettagliata)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -73,7 +72,7 @@ Creare una stored procedure *PredictTipBatchMode*, che consente di generare più
 
     + Utilizzare un'istruzione SELECT per chiamare il modello archiviato da una tabella SQL. Il modello viene recuperato dalla tabella **varbinary (max)** i dati, archiviati nella variabile SQL  _\@lmodel2_e passato come parametro *mod* al sistema stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + I dati usati come input per l'assegnazione dei punteggi è definito come una query SQL e archiviata come una stringa nella variabile SQL  _\@input_. I dati recuperati dal database, questo viene archiviato in un frame di dati denominato *InputDataSet*, che è semplicemente il nome predefinito per i dati di input per il [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedure; è possibile definire un altro nome di variabile se necessario, usando il parametro   *_\@input_data_1_name_*.
+    + I dati usati come input per l'assegnazione dei punteggi è definito come una query SQL e archiviata come una stringa nella variabile SQL  _\@input_. I dati recuperati dal database, questo viene archiviato in un frame di dati denominato *InputDataSet*, che è semplicemente il nome predefinito per i dati di input per il [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procedure; è possibile definire un altro nome di variabile se necessario, usando il parametro * _\@input_data_1_name_* .
 
     + Per generare i punteggi, la stored procedure chiama la funzione rxPredict dal **RevoScaleR** libreria.
 

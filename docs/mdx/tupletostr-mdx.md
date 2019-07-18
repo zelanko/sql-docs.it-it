@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 5f07e71e5b8314320f76be4496744da5a9d9e81a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6cde1f60274d1437517d89e48b111e9e7298b9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208452"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097367"
 ---
 # <a name="tupletostr-mdx"></a>TupleToStr (MDX)
 
@@ -36,7 +35,7 @@ TupleToStr(Tuple_Expression)
  Questa funzione viene utilizzata per trasferire una rappresentazione stringa di una tupla a una funzione esterna per l'analisi. La stringa restituita è racchiusa tra parentesi graffe {} e ogni membro, se più di uno è espressamente definito nella tupla, è separato da virgole.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente restituisce la stringa ([Date]. [ Anno di calendario]. Year].&[2001],[Geography].[Geography].[Country].&[United], [Geography]. [Geography]. [Paese]. & [United States]):  
+ L'esempio seguente restituisce la stringa ([Date]. [ Anno di calendario. Year].&[2001],[Geography].[Geography].[Country].&[United], [Geography]. [Geography]. [Paese]. & [United States]):  
   
 ```  
 WITH MEMBER Measures.x AS TupleToStr   
