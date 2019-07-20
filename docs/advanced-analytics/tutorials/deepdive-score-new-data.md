@@ -1,36 +1,36 @@
 ---
-title: Valutare nuovi dati con RevoScaleR e rxPredict - SQL Server Machine Learning
-description: Procedura dettagliata su come assegnare un punteggio dei dati tramite il linguaggio R in SQL Server.
+title: Assegnare un punteggio ai nuovi dati usando RevoScaleR e rxPredict
+description: Esercitazione dettagliata su come assegnare un punteggio ai dati usando il linguaggio R in SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 386daeb62262182d40ea0b15cca3eb9714c23d64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e14b01df14c6a7f08b1b25f3db6d55fb7beb130b
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962190"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345246"
 ---
-# <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>Valutare nuovi dati (esercitazione di RevoScaleR e SQL Server)
+# <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>Assegnare un punteggio ai nuovi dati (esercitazione SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In questa lezione fa parte il [esercitazione RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) su come usare [funzioni RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Questa lezione fa parte dell' [esercitazione su RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) su come usare le [funzioni RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-In questo passaggio si usa il modello di regressione logistica creato nella lezione precedente, per assegnare punteggi a un altro set di dati che usa le stesse variabili indipendenti come input.
+In questo passaggio viene usato il modello di regressione logistica creato nella lezione precedente per assegnare un punteggio a un altro set di dati che usa le stesse variabili indipendenti come input.
 
 > [!div class="checklist"]
 > * Assegnare un punteggio ai nuovi dati
 > * Creare un istogramma dei punteggi
 
 > [!NOTE]
-> Sono necessari privilegi di amministratore DDL per alcuni di questi passaggi.
+> Per alcuni di questi passaggi sono necessari i privilegi di amministratore DDL.
 
 ## <a name="generate-and-save-scores"></a>Generare e salvare i punteggi
   
-1. Aggiornare l'origine dati sqlScoreDS (creato nella [lezione due](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)) usare le informazioni di colonna creato nella lezione precedente.
+1. Aggiornare l'origine dati sqlScoreDS (creata nella [lezione 2](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)) per utilizzare le informazioni sulle colonne create nella lezione precedente.
   
     ```R
     sqlScoreDS <- RxSqlServerData(
@@ -40,7 +40,7 @@ In questo passaggio si usa il modello di regressione logistica creato nella lezi
         rowsPerRead = sqlRowsPerRead)
     ```
   
-2. Per assicurarsi di non perdere i risultati, creare un nuovo oggetto origine dati. Quindi, usare il nuovo oggetto origine dati per popolare una nuova tabella nel database RevoDeepDive.
+2. Per assicurarsi di non perdere i risultati, creare un nuovo oggetto origine dati. Usare quindi il nuovo oggetto origine dati per popolare una nuova tabella nel database RevoDeepDive.
   
     ```R
     sqlServerOutDS <- RxSqlServerData(table = "ccScoreOutput",
@@ -49,13 +49,13 @@ In questo passaggio si usa il modello di regressione logistica creato nella lezi
     ```
     A questo punto la tabella non è stata creata. Questa istruzione definisce solo un contenitore per i dati.
      
-3. Controllare il contesto di calcolo corrente utilizzando **rxGetComputeContext()** e impostare il contesto di calcolo per il server, se necessario.
+3. Controllare il contesto di calcolo corrente usando **rxGetComputeContext ()** e impostare il contesto di calcolo sul server, se necessario.
   
     ```R
     rxSetComputeContext(sqlCompute)
     ```
   
-4. Come precauzione, verificare l'esistenza della tabella di output. Se ne esiste già uno con lo stesso nome, si otterrà un errore durante il tentativo di scrivere la nuova tabella.
+4. Per precauzione, verificare l'esistenza della tabella di output. Se ne esiste già uno con lo stesso nome, si otterrà un errore quando si tenta di scrivere la nuova tabella.
   
     A tale scopo, chiamare le funzioni [rxSqlServerTableExists](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) e [rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable), passando il nome della tabella come input.
   
@@ -63,10 +63,10 @@ In questo passaggio si usa il modello di regressione logistica creato nella lezi
     if (rxSqlServerTableExists("ccScoreOutput"))     rxSqlServerDropTable("ccScoreOutput")
     ```
   
-    + **rxSqlServerTableExists** esegue una query il driver ODBC e restituisce TRUE se la tabella esiste, FALSE in caso contrario.
-    + **rxSqlServerDropTable** esegue l'istruzione DDL e restituisce TRUE se la tabella è stata eliminata, FALSE in caso contrario.
+    + **rxSqlServerTableExists** esegue una query sul driver ODBC e restituisce true se la tabella esiste, false in caso contrario.
+    + **rxSqlServerDropTable** esegue il DDL e restituisce true se la tabella viene eliminata correttamente; in caso contrario, false.
 
-5. Eseguire [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) per creare i punteggi e salvarli nella nuova tabella definita in sqlScoreDS origine dati.
+5. Eseguire [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) per creare i punteggi e salvarli nella nuova tabella definita nell'origine dati sqlScoreDS.
   
     ```R
     rxPredict(modelObject = logitObj,
@@ -78,13 +78,13 @@ In questo passaggio si usa il modello di regressione logistica creato nella lezi
         overwrite = TRUE)
     ```
   
-    La funzione **rxPredict** è un'altra funzione che supporta l'esecuzione in contesti di calcolo remoti. È possibile usare la **rxPredict** funzione per creare i punteggi da modelli di base [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod), [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit), oppure [rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm).
+    La funzione **rxPredict** è un'altra funzione che supporta l'esecuzione in contesti di calcolo remoti. È possibile usare la funzione **rxPredict** per creare punteggi da modelli basati su [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod), [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)o [rxGlm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm).
   
     - Il parametro *writeModelVars* è impostato su **TRUE** qui. Ciò significa che le variabili usate per la stima verranno incluse nella nuova tabella.
   
-    - Il parametro *predVarNames* specifica la variabile in cui verranno archiviati i risultati. Qui si passa una nuova variabile, `ccFraudLogitScore`.
+    - Il parametro *predVarNames* specifica la variabile in cui verranno archiviati i risultati. Qui viene passata una nuova variabile, `ccFraudLogitScore`.
   
-    - Il parametro *type* per **rxPredict** definisce la modalità di calcolo delle stime. Specificare la parola chiave **risposta** per generare punteggi basati sulla scala della variabile di risposta. In alternativa, usare la parola chiave **collegamento** per generare punteggi basati sulla funzione di collegamento sottostante, nel qual caso le stime vengono create utilizzando una scala logistica.
+    - Il parametro *type* per **rxPredict** definisce la modalità di calcolo delle stime. Specificare la **risposta** alla parola chiave per generare i punteggi in base alla scala della variabile di risposta. In alternativa, usare la parola chiave **link** per generare punteggi basati sulla funzione di collegamento sottostante, nel qual caso le stime vengono create usando una scala logistica.
 
 6. Attendere un attimo prima di aggiornare l'elenco delle tabelle in Management Studio e visualizzare la nuova tabella con i dati.
 
@@ -101,11 +101,11 @@ In questo passaggio si usa il modello di regressione logistica creato nella lezi
             overwrite = TRUE)
     ```
 
-## <a name="display-scores-in-a-histogram"></a>Punteggi di visualizzazione in un istogramma
+## <a name="display-scores-in-a-histogram"></a>Visualizzare i punteggi in un istogramma
 
-Dopo aver creata la nuova tabella, calcolare e visualizzare un istogramma dei 10.000 punteggi stimati. Calcolo è più veloce se si specificano i valori minimo e massimo, pertanto, estrarli dal database e aggiungerli ai dati in uso.
+Dopo aver creato la nuova tabella, calcolare e visualizzare un istogramma dei punteggi stimati 10.000. Il calcolo è più veloce se si specificano i valori minimo e massimo, quindi è possibile recuperarli dal database e aggiungerli ai dati di lavoro.
 
-1. Creare una nuova origine dati, sqlMinMax, che esegue una query al database per ottenere i valori minimo e massimo.
+1. Creare una nuova origine dati, sqlMinMax, che esegue una query sul database per ottenere i valori minimo e massimo.
   
     ```R
     sqlMinMax <- RxSqlServerData(
@@ -116,7 +116,7 @@ Dopo aver creata la nuova tabella, calcolare e visualizzare un istogramma dei 10
 
      Questo esempio spiega come è facile usare gli oggetti origine dati **RxSqlServerData** per definire set di dati arbitrari basati su query SQL, funzioni o stored procedure e usarli nel codice R. La variabile non archivia i valori effettivi, ma solo la definizione dell'origine dati. La query viene eseguita per generare i valori solo se usata in una funzione come **rxImport**.
       
-2. Chiamare il [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) (funzione) per inserire i valori in un frame di dati che può essere condivisi tra i vari contesti di calcolo.
+2. Chiamare la funzione [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) per inserire i valori in un frame di dati che può essere condiviso tra i contesti di calcolo.
   
     ```R
     minMaxVals <- rxImport(sqlMinMax)
@@ -131,7 +131,7 @@ Dopo aver creata la nuova tabella, calcolare e visualizzare un istogramma dei 10
     [1] -23.970256   9.786345
     ```
 
-3. Ora che i valori minimo e massimi sono disponibili, usare i valori per creare un'altra origine dati per i punteggi generati.
+3. Ora che i valori massimi e minimi sono disponibili, usare i valori per creare un'altra origine dati per i punteggi generati.
   
     ```R
     sqlOutScoreDS <- RxSqlServerData(sqlQuery = "SELECT ccFraudLogitScore FROM ccScoreOutput",
@@ -142,7 +142,7 @@ Dopo aver creata la nuova tabella, calcolare e visualizzare un istogramma dei 10
                         high = ceiling(minMaxVals[2]) ) ) )
     ```
 
-4. Usare il sqlOutScoreDS oggetto origine dati per ottenere i punteggi, calcolare e visualizzare un istogramma. Aggiungere il codice per impostare il contesto di calcolo, se necessario.
+4. Usare l'oggetto origine dati sqlOutScoreDS per ottenere i punteggi e calcolare e visualizzare un istogramma. Aggiungere il codice per impostare il contesto di calcolo, se necessario.
   
     ```R
     # rxSetComputeContext(sqlCompute)

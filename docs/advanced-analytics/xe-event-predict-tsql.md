@@ -1,47 +1,47 @@
 ---
-title: Eventi estesi per il monitoraggio di istruzioni PREDICT - servizi di SQL Server Machine Learning
+title: Eventi estesi per il monitoraggio di istruzioni PREDICT
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8e8e2f43d176bb0f828545c5d7d0abcf5849a7ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1c534681200abf056c8bc7dd3745d8098d59c146
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961628"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345661"
 ---
 # <a name="extended-events-for-monitoring-predict-statements"></a>Eventi estesi per il monitoraggio di istruzioni PREDICT
 
-Questo articolo descrive gli eventi estesi fornito in SQL Server che è possibile usare per monitorare e analizzare i processi che utilizzano [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) per eseguire l'assegnazione dei punteggi in tempo reale in SQL Server.
+Questo articolo descrive gli eventi estesi disponibili in SQL Server che è possibile usare per monitorare e analizzare i processi che usano [Predict](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) per eseguire il punteggio in tempo reale nel SQL Server.
 
-Assegnazione dei punteggi in tempo reale genera i punteggi da un modello di machine learning che è archiviato in SQL Server. La funzione PREDICT non richiede un runtime esterni, ad esempio R o Python, solo un modello che è stato creato usando un formato binario specifico. Per altre informazioni, vedere [assegnazione dei punteggi in tempo reale](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring).
+Il Punteggio in tempo reale genera punteggi da un modello di apprendimento automatico archiviato in SQL Server. La funzione PREDICT non richiede una fase di esecuzione esterna, ad esempio R o Python, ma solo un modello creato con un formato binario specifico. Per ulteriori informazioni, vedere Assegnazione dei [punteggi in tempo reale](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Per informazioni generali su eventi estesi (operazione talvolta denominati XEvents) e su come tenere traccia degli eventi in una sessione, vedere questi articoli:
+Per informazioni generali sugli eventi estesi (talvolta denominati XEvent) e su come tenere traccia degli eventi in una sessione, vedere i seguenti articoli:
 
-+ [Architettura e concetti degli eventi estesi](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
-+ [Configurare l'acquisizione di eventi in SQL Server Management Studio](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)
-+ [Gestire sessioni di eventi in Esplora oggetti](https://docs.microsoft.com/sql/relational-databases/extended-events/manage-event-sessions-in-the-object-explorer)
++ [Concetti e architettura degli eventi estesi](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
++ [Configurare l'acquisizione di eventi in SSMS](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)
++ [Gestire sessioni di eventi nel Esplora oggetti](https://docs.microsoft.com/sql/relational-databases/extended-events/manage-event-sessions-in-the-object-explorer)
 
 ## <a name="table-of-extended-events"></a>Tabella degli eventi estesi
 
-Gli eventi estesi seguenti sono disponibili in tutte le versioni di SQL Server che supportano il [prevedere di T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) istruzione, tra cui SQL Server in Linux e Database SQL di Azure. 
+Gli eventi estesi seguenti sono disponibili in tutte le versioni di SQL Server che supportano l'istruzione [T-SQL Predict](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) , inclusi SQL Server in Linux e il database SQL di Azure. 
 
-L'istruzione T-SQL stimare è stato introdotto in SQL Server 2017. 
+L'istruzione T-SQL PREDICT è stata introdotta in SQL Server 2017. 
 
 |name |object_type|description| 
 |----|----|----|
-|predict_function_completed |event  |Suddivisione tempo di esecuzione Builtin|
-|predict_model_cache_hit |event|Si verifica quando un modello viene recuperato dalla cache del modello di funzione PREDICT. Utilizzare questo evento insieme agli altri eventi predict_model_cache _ * per risolvere i problemi causati dalla cache dei modelli di funzione PREDICT.|
-|predict_model_cache_insert |event  |   Si verifica quando un modello viene inserito nella cache dei modelli di funzione PREDICT. Utilizzare questo evento insieme agli altri eventi predict_model_cache _ * per risolvere i problemi causati dalla cache dei modelli di funzione PREDICT.    |
-|predict_model_cache_miss   |event|Si verifica quando un modello non viene trovato nella cache dei modelli di funzione PREDICT. Le occorrenze di frequente di questo evento può indicare che è necessaria più memoria di SQL Server. Utilizzare questo evento insieme agli altri eventi predict_model_cache _ * per risolvere i problemi causati dalla cache dei modelli di funzione PREDICT.|
-|predict_model_cache_remove |event| Si verifica quando un modello viene rimosso dalla cache dei modelli per la funzione PREDICT. Utilizzare questo evento insieme agli altri eventi predict_model_cache _ * per risolvere i problemi causati dalla cache dei modelli di funzione PREDICT.|
+|predict_function_completed |event  |Suddivisione tempo di esecuzione predefinita|
+|predict_model_cache_hit |event|Si verifica quando un modello viene recuperato dalla cache del modello di funzione PREDICT. Usare questo evento insieme agli altri eventi predict_model_cache_ * per risolvere i problemi causati dalla cache del modello di funzione PREDICT.|
+|predict_model_cache_insert |event  |   Si verifica quando un modello viene inserito nella cache del modello di funzione PREDICT. Usare questo evento insieme agli altri eventi predict_model_cache_ * per risolvere i problemi causati dalla cache del modello di funzione PREDICT.    |
+|predict_model_cache_miss   |event|Si verifica quando un modello non viene trovato nella cache del modello di funzione PREDICT. Le occorrenze frequenti di questo evento potrebbero indicare che SQL Server necessita di più memoria. Usare questo evento insieme agli altri eventi predict_model_cache_ * per risolvere i problemi causati dalla cache del modello di funzione PREDICT.|
+|predict_model_cache_remove |event| Si verifica quando un modello viene rimosso dalla cache dei modelli per la funzione PREDICT. Usare questo evento insieme agli altri eventi predict_model_cache_ * per risolvere i problemi causati dalla cache del modello di funzione PREDICT.|
 
-## <a name="query-for-related-events"></a>Eseguire una query per eventi correlati
+## <a name="query-for-related-events"></a>Query per eventi correlati
 
 Per visualizzare un elenco di tutte le colonne restituite per questi eventi, eseguire la query seguente in SQL Server Management Studio:
 
@@ -53,21 +53,21 @@ SELECT * FROM sys.dm_xe_object_columns WHERE object_name LIKE `predict%'
 
 Per acquisire informazioni sulle prestazioni di una sessione di assegnazione dei punteggi usando PREDICT:
 
-1. Creare un nuovo oggetto esteso sessione eventi, usando Management Studio o un altro supportata [strumento](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools).
+1. Creare una nuova sessione eventi estesi usando Management Studio o un altro [strumento](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools)supportato.
 2. Aggiungere gli eventi `predict_function_completed` e `predict_model_cache_hit` alla sessione.
 3. Avviare la sessione eventi estesi.
-4. Eseguire la query che utilizza la stima.
+4. Eseguire la query che usa PREDICT.
 
-Nei risultati esaminare queste colonne:
+Nei risultati esaminare le colonne seguenti:
 
-+ Il valore per `predict_function_completed` Mostra il tempo impiegato per il caricamento del modello e di assegnazione dei punteggi query.
-+ Il valore booleano per `predict_model_cache_hit` indica se la query usato un modello memorizzato nella cache o meno. 
++ Il valore di `predict_function_completed` indica la quantità di tempo impiegato dalla query per il caricamento del modello e l'assegnazione del punteggio.
++ Il valore booleano `predict_model_cache_hit` per indica se la query ha utilizzato o meno un modello memorizzato nella cache. 
 
-### <a name="native-scoring-model-cache"></a>Cache dei modelli per assegnazione dei punteggi nativa
+### <a name="native-scoring-model-cache"></a>Cache dei modelli di assegnazione dei punteggi nativi
 
-Oltre agli eventi specifici da stimare, è possibile usare le query seguenti per ottenere altre informazioni relative al modello memorizzato nella cache e l'utilizzo della cache:
+Oltre agli eventi specifici per la stima, è possibile utilizzare le query seguenti per ottenere ulteriori informazioni sul modello memorizzato nella cache e sull'utilizzo della cache:
 
-Visualizza cache dei modelli di assegnazione dei punteggi nativa:
+Visualizzare la cache dei modelli di assegnazione dei punteggi nativi:
 
 ```sql
 SELECT *

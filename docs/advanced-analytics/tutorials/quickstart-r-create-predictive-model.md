@@ -1,27 +1,27 @@
 ---
-title: Guida introduttiva per creare un modello predittivo con R - SQL Server Machine Learning
-description: Questa Guida introduttiva descrive come compilare un modello in R con dati di SQL Server per tracciare le stime.
+title: Guida introduttiva per creare un modello predittivo usando R
+description: In questa Guida introduttiva si apprenderà come compilare un modello in R usando i dati SQL Server per tracciare le stime.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f1eaa39e5f22efbe7bea7a44ac2ce93a5e28205e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 39310d935ddefe463b81af495f63304822035818
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962033"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345481"
 ---
-# <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>Avvio rapido: Creare un modello predittivo tramite R in SQL Server
+# <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>Avvio rapido: Creare un modello predittivo usando R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In questa Guida introduttiva, si sarà informazioni su come eseguire il training di un modello usando R e quindi salvare il modello in una tabella in SQL Server. Il modello è un semplice modello lineare generalizzato (GLM) che consente di prevedere probabilità che un veicolo è stato dotato di una trasmissione manuale. Si userà il `mtcars` set di dati incluso in R.
+In questa Guida introduttiva si apprenderà come eseguire il training di un modello usando R e quindi salvare il modello in una tabella in SQL Server. Il modello è un semplice modello lineare generalizzato (GLM) che prevede la probabilità che un veicolo sia stato dotato di una trasmissione manuale. Si userà il `mtcars` set di dati incluso in R.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Una Guida introduttiva precedente [R verificare esiste nel Server SQL](quickstart-r-verify.md), vengono fornite informazioni e collegamenti per configurare l'ambiente R necessario per questa Guida introduttiva.
+Una guida introduttiva precedente, [Verify R exists in SQL Server](quickstart-r-verify.md), fornisce informazioni e collegamenti per la configurazione dell'ambiente R necessario per questa Guida introduttiva.
 
 ## <a name="create-the-source-data"></a>Creare i dati di origine
 
@@ -43,7 +43,7 @@ CREATE TABLE dbo.MTCars(
 );
 ```
 
-Successivamente, inserire i dati dalla compilazione di set di dati `mtcars`.
+Inserire quindi i dati dalla compilazione nel set `mtcars`di dati.
 
 ```SQL
 INSERT INTO dbo.MTCars
@@ -54,15 +54,15 @@ EXEC sp_execute_external_script
         , @output_data_1_name = N'MTCars';
 ```
 
-+ Alcuni utenti preferiscono usare le tabelle temporanee, ma tenere presente che alcuni client R disconnettere le sessioni tra i batch.
++ Alcuni utenti vogliono usare tabelle temporanee, ma tenere presente che alcuni client R disconnettono le sessioni tra i batch.
 
 + Nel runtime R sono inclusi diversi set di dati di piccole e grandi dimensioni. Per ottenere un elenco di set di dati installati con R, digitare `library(help="datasets")` da un prompt dei comandi R.
 
 ## <a name="create-a-model"></a>Creare un modello
 
-I dati di velocità delle auto contengono due colonne, entrambe numeriche, potenza (`hp`) e il peso (`wt`). Da questi dati, si creerà un modello lineare generalizzato (GLM) che stima la probabilità che un veicolo è stato dotato di una trasmissione manuale.
+I dati relativi alla velocità dell'auto contengono due colonne, sia numeriche, potenza`hp`(`wt`) che peso (). Da questi dati verrà creato un modello lineare generalizzato (GLM) che stima la probabilità che un veicolo sia stato dotato di una trasmissione manuale.
 
-Per compilare il modello, definire la formula all'interno del codice R e passare i dati come parametro di input.
+Per compilare il modello, è necessario definire la formula all'interno del codice R e passare i dati come parametro di input.
 
 ```sql
 DROP PROCEDURE IF EXISTS generate_GLM;
@@ -82,12 +82,12 @@ END;
 GO
 ```
 
-+ Il primo argomento `glm` è il *formula* parametro, che definisce `am` come dipendenti nella `hp + wt`.
++ Il primo argomento per `glm` è il parametro della *Formula* , che `am` definisce come dipendente `hp + wt`da.
 + I dati di input vengono archiviati nella variabile `MTCarsData`, popolata dalla query SQL. Se non si assegna un nome specifico ai dati di input, il nome predefinito della variabile sarà _InputDataSet_.
 
 ## <a name="create-a-table-for-the-model"></a>Creare una tabella per il modello
 
-Quindi, archiviare il modello in modo che è possibile ripetere il training o usarlo per la stima. L'output di un pacchetto R che crea un modello è in genere un **oggetto binario**. Pertanto, la tabella in cui si archivia il modello deve contenere una colonna di **varbinary (max)** tipo.
+Successivamente, archiviare il modello in modo che sia possibile ripetere il training o utilizzarlo per la stima. L'output di un pacchetto R che crea un modello è in genere un **oggetto binario**. La tabella in cui è archiviato il modello deve pertanto fornire una colonna di tipo **varbinary (max)** .
 
 ```sql
 CREATE TABLE GLM_models (
@@ -105,7 +105,7 @@ INSERT INTO GLM_models(model)
 EXEC generate_GLM;
 ```
 
-Si noti che se si esegue questo codice una seconda volta, viene visualizzato questo errore:
+Si noti che se si esegue questo codice una seconda volta, si ottiene questo errore:
 
 ```sql
 Violation of PRIMARY KEY constraint...Cannot insert duplicate key in object dbo.stopping_distance_models
@@ -121,7 +121,7 @@ WHERE model_name = 'default model'
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Ora che si dispone di un modello, nella Guida introduttiva finale, si apprenderà come generare le stime da esso e tracciare i risultati.
+Ora che si dispone di un modello, nella Guida introduttiva finale si apprenderà come generare stime e tracciare i risultati.
 
 > [!div class="nextstepaction"]
-> [Avvio rapido: Stimare e creare un tracciato dal modello](quickstart-r-predict-from-model.md)
+> [Avvio rapido: Stimare e tracciare il modello](quickstart-r-predict-from-model.md)

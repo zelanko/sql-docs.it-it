@@ -1,34 +1,34 @@
 ---
-title: Eseguire un'analisi in blocchi tramite rxDataStep RevoScaleR - SQL Server Machine Learning
-description: Procedura dettagliata su come suddividere i dati per l'analisi distribuita usando il linguaggio R in SQL Server.
+title: Eseguire l'analisi di suddivisione in blocchi usando RevoScaleR rxDataStep
+description: Esercitazione dettagliata su come suddividere i dati per l'analisi distribuita usando il linguaggio R in SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 6ccc64c98f0519b33b6ba9da180c01e4478492f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3026fa03ff654079e355364587d694c9c3fe127f
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962201"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344723"
 ---
-# <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Eseguire un'analisi in blocchi tramite rxDataStep (esercitazione di RevoScaleR e SQL Server)
+# <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Eseguire un'analisi in blocchi usando rxDataStep (esercitazione SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In questa lezione fa parte il [esercitazione RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) su come usare [funzioni RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Questa lezione fa parte dell' [esercitazione su RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) su come usare le [funzioni RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-In questa lezione, Usa la **rxDataStep** funzione per elaborare i dati in blocchi invece di richiedere che l'intero set di dati essere caricati in memoria ed elaborati in una sola volta, come nel codice r tradizionale. Il **rxDataStep** funzioni legge i dati in blocco, si applica a sua volta di funzioni R per ogni blocco di dati e quindi Salva i risultati di riepilogo per ogni blocco a un comune [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zdroj dat. Quando tutti i dati sono stati letti, i risultati vengono combinati.
+In questa lezione si userà la funzione **rxDataStep** per elaborare i dati in blocchi, anziché richiedere che l'intero set di dati venga caricato in memoria ed elaborato in una sola volta, come nel tradizionale R. Le funzioni **rxDataStep** leggono i dati in blocco, applica le funzioni R a ogni blocco di dati, quindi Salva i risultati di riepilogo per ogni blocco in un'origine dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comune. Quando tutti i dati sono stati letti, i risultati vengono combinati.
 
 > [!TIP]
-> Per questa lezione, si calcola una tabella di emergenza utilizzando il **tabella** funzione in R. Questo esempio è studiato solo per scopi didattici. 
+> Per questa lezione, si calcola una tabella di contingenza usando la funzione **Table** in R. Questo esempio è progettato solo a scopo informativo. 
 > 
-> Se è necessario catalogare set di dati reali, è consigliabile usare la **rxCrossTabs** oppure **rxCube** delle funzioni **RevoScaleR**, ottimizzati per questa sorta di operazione.
+> Se è necessario catalogare set di dati reali, è consigliabile usare le funzioni **rxCrossTabs** o **rxCube** in **RevoScaleR**, ottimizzate per questo tipo di operazione.
 
-## <a name="partition-data-by-values"></a>Partizionare i dati dai valori
+## <a name="partition-data-by-values"></a>Partizionare i dati in base ai valori
 
-1. Creare una funzione R personalizzata che chiama R **tabella** funzionino in ogni blocco di dati e il nome della nuova funzione **ProcessChunk**.
+1. Creare una funzione R personalizzata che chiama la funzione di **tabella** r per ogni blocco di dati e denominare la nuova funzione **ProcessChunk**.
   
     ```R
     ProcessChunk <- function( dataList) {
@@ -53,7 +53,7 @@ In questa lezione, Usa la **rxDataStep** funzione per elaborare i dati in blocch
     rxSetComputeContext(sqlCompute)
     ```
   
-3. Definire un'origine dati di SQL Server per contenere i dati che si sta elaborando. assegnando prima una query SQL a una variabile. Quindi, usare tale variabile nel *sqlQuery* argomento di una nuova origine dati SQL Server.
+3. Definire un'origine dati SQL Server per conservare i dati che si stanno elaborando. assegnando prima una query SQL a una variabile. Usare quindi tale variabile nell'argomento *sqlQuery* di una nuova origine dati SQL Server.
   
     ```R
     dayQuery <-  "SELECT DayOfWeek FROM AirDemoSmallTest"
@@ -64,9 +64,9 @@ In questa lezione, Usa la **rxDataStep** funzione per elaborare i dati in blocch
             levels = as.character(1:7))))
     ```
 
-4. Facoltativamente, è possibile eseguire **rxGetVarInfo** su questa origine dati. A questo punto, contiene una singola colonna: *VAR 1: DayOfWeek, Type: factor, non livelli di fattore disponibili*
+4. Facoltativamente, è possibile eseguire **rxGetVarInfo** su questa origine dati. A questo punto, contiene una singola colonna: *Var 1: DayOfWeek, tipo: Factor, nessun livello di fattore disponibile*
      
-5. Prima di applicare questa variabile di fattore all'origine dati, creare una tabella separata in cui includere i risultati intermedi. Anche in questo caso, è sufficiente utilizzare il **RxSqlServerData** (funzione) per definire i dati, assicurandosi di eliminare le tabelle esistenti con lo stesso nome.
+5. Prima di applicare questa variabile di fattore all'origine dati, creare una tabella separata in cui includere i risultati intermedi. Anche in questo caso, è sufficiente utilizzare la funzione **RxSqlServerData** per definire i dati, assicurandosi di eliminare tutte le tabelle esistenti con lo stesso nome.
   
     ```R
     iroDataSource = RxSqlServerData(table = "iroResults",   connectionString = sqlConnString)
@@ -74,13 +74,13 @@ In questa lezione, Usa la **rxDataStep** funzione per elaborare i dati in blocch
     if (rxSqlServerTableExists(table = "iroResults",  connectionString = sqlConnString))  { rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString) }
     ```
   
-7.  Chiamare la funzione personalizzata **ProcessChunk** per trasformare i dati man mano che verrà letti, usandola come le *transformFunc* argomento per il **rxDataStep** (funzione).
+7.  Chiamare la funzione personalizzata **ProcessChunk** per trasformare i dati durante la lettura, usandola come argomento *transformFunc* per la funzione **rxDataStep** .
   
     ```R
     rxDataStep( inData = inDataSource, outFile = iroDataSource, transformFunc = ProcessChunk, overwrite = TRUE)
     ```
   
-8.  Per visualizzare i risultati intermedi della **ProcessChunk**, assegnare i risultati del **rxImport** a una variabile e quindi i risultati nella console.
+8.  Per visualizzare i risultati intermedi di **ProcessChunk**, assegnare i risultati di **rxImport** a una variabile e quindi restituire i risultati alla console.
   
     ```R
     iroResults <- rxImport(iroDataSource)

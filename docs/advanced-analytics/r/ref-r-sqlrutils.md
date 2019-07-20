@@ -1,18 +1,18 @@
 ---
-title: funzioni di supporto sqlrutils - servizi di SQL Server Machine Learning
-description: Usare la libreria di funzione sqlrutils in SQL Server 2016 R Services e servizi di SQL Server 2017 Machine Learning con R per generare le stored procedure che contiene lo script R.
+title: funzioni helper sqlrutils
+description: Usare la libreria di funzioni sqlrutils in SQL Server 2016 R Services e SQL Server 2017 Machine Learning Services con R per generare stored procedure contenenti script R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 6a66d79d376806383f1376510bb6de79493cb7ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 361093be372e77a869996e6ffb67a6bd6e701c44
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962479"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345091"
 ---
 # <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils (libreria R in SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,43 +32,43 @@ Il pacchetto **sqlrutils** esegue queste attività:
   > [!NOTE]
   > Se si intende eseguire la stored procedure da un ambiente R chiamando la funzione *executeStoredProcedure* , è necessario usare un provider ODBC 3.8, ad esempio ODBC Driver 13 for SQL Server.  
   
-## <a name="full-reference-documentation"></a>Documentazione di riferimento complete
+## <a name="full-reference-documentation"></a>Documentazione di riferimento completa
 
-Il **sqlrutils** libreria distribuita in vari prodotti Microsoft, ma che utilizzo è lo stesso sia ottenere la libreria in SQL Server o un altro prodotto. Perché le funzioni sono gli stessi, [documentazione per le funzioni sqlrutils singoli](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) pubblicata in un'unica posizione sotto il [riferimento R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) per Microsoft Machine Learning Server. Qualsiasi prodotto specifico deve comportamenti esistono, verranno indicate nella pagina della Guida funzione discrepanze.
+La libreria **sqlrutils** viene distribuita in più prodotti Microsoft, ma l'utilizzo è lo stesso se si ottiene la libreria in SQL Server o in un altro prodotto. Poiché le funzioni sono uguali, la [documentazione per le singole funzioni sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) viene pubblicata in una sola posizione sotto il [riferimento R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) per Microsoft Machine Learning server. Se sono presenti comportamenti specifici del prodotto, le discrepanze verranno indicate nella pagina della guida della funzione.
 
-## <a name="functions-list"></a>Elenco di funzioni
+## <a name="functions-list"></a>Elenco funzioni
 
-La sezione seguente viene fornita una panoramica delle funzioni che è possibile chiamare dal **sqlrutils** incorporati di pacchetto per lo sviluppo di una stored procedure contenente codice R. Per informazioni dettagliate dei parametri per ogni metodo o funzione, vedere la Guida di R per il pacchetto: `help(package="sqlrutils")`
+La sezione seguente offre una panoramica delle funzioni che è possibile chiamare dal pacchetto **sqlrutils** per sviluppare un stored procedure contenente codice R incorporato. Per informazioni dettagliate sui parametri per ogni metodo o funzione, vedere la Guida di R per il pacchetto:`help(package="sqlrutils")`
 
 |Funzione | Descrizione |
 |------|-------------|
-|[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| Eseguire una stored procedure SQL.|
-|[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| Ottenere un elenco di parametri di input per la stored procedure.| 
+|[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| Eseguire un stored procedure SQL.|
+|[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| Ottiene un elenco di parametri di input per la stored procedure.| 
 |[InputData](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputdata)| Definisce l'origine dei dati di SQL Server che verranno usati nel frame di dati R. Specificare il nome del frame di dati in cui archiviare i dati di input e una query per ottenere i dati o un valore predefinito. Sono supportate solo query SELECT. | 
 |[InputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputparameter)| Definisce un singolo parametro di input che verrà incorporato nello script T-SQL. È necessario specificare il nome del parametro e il tipo di dati R corrispondente.| 
 |[OutputData](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/outputdata)| Genera un oggetto dati intermedio che è necessario se la funzione R restituisce un elenco contenente un frame di dati. L'oggetto *OutputData* viene usato per archiviare il nome di un singolo frame di dati ottenuto dall'elenco.| 
 |[OutputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/outputparameter) | Genera un oggetto dati intermedio che è necessario se la funzione R restituisce un elenco. L'oggetto *OutputParameter* archivia il nome e il tipo di dati di un singolo membro dell'elenco, presupponendo che tale membro **non** sia un frame di dati. |
-|[registerStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/registerstoredprocedure) | Registrare la stored procedure con un database.|
-|[setInputDataQuery](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputdataquery)| Assegnare una query a un parametro di dati di input della stored procedure.| 
+|[registerStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/registerstoredprocedure) | Registrare il stored procedure con un database.|
+|[setInputDataQuery](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputdataquery)| Assegnare una query a un parametro di dati di input del stored procedure.| 
 |[setInputParameterValue](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputparametervalue)| Assegnare un valore a un parametro di input della stored procedure.| 
-|[StoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/storedprocedure)| Un oggetto stored procedure.|
+|[StoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/storedprocedure)| Oggetto stored procedure.|
 
 
 ## <a name="how-to-use-sqlrutils"></a>Come usare sqlrutils
 
-Il **sqlrutils** funzioni della libreria è necessario eseguire in un computer con SQL Server Machine Learning con R. Se si lavora in una workstation client, impostare un contesto di calcolo remoto per l'esecuzione di MAIUSC a SQL Server. Il flusso di lavoro per l'uso di questo pacchetto include i passaggi seguenti:
+Le funzioni della libreria **sqlrutils** devono essere eseguite in un computer con SQL Server machine learning con R. Se si sta lavorando su una workstation client, impostare un contesto di calcolo remoto per spostare l'esecuzione in SQL Server. Il flusso di lavoro per l'utilizzo di questo pacchetto include i passaggi seguenti:
 
-+ Definire parametri di stored procedure (input, output o entrambi) 
-+ Generare e registrare la stored procedure    
++ Definire i parametri di stored procedure (input, output o entrambi) 
++ Generare e registrare l'stored procedure    
 + Eseguire la stored procedure  
 
 In una sessione di R, caricare **sqlrutils** dalla riga di comando digitando `library(sqlrutils)`.
 
 > [!Note]
-> È possibile caricare la libreria in computer che non dispone di SQL Server (ad esempio, in un'istanza di R Client) se si modifica il contesto di calcolo di SQL Server ed eseguire il codice in tale contesto di calcolo.
+> È possibile caricare questa libreria in un computer che non dispone di SQL Server (ad esempio, in un'istanza del client R) se si modifica il contesto di calcolo per SQL Server ed eseguire il codice nel contesto di calcolo.
 
 
-### <a name="define-stored-procedure-parameters-and-inputs"></a>Definire i parametri della stored procedure e gli input
+### <a name="define-stored-procedure-parameters-and-inputs"></a>Definire parametri e input stored procedure
 
 `StoredProcedure` è il costruttore principale usato per creare la stored procedure. Questo costruttore genera un oggetto *stored procedure di SQL Server* e, facoltativamente, crea un file di testo contenente una query che può essere usata per generare la stored procedure tramite un comando T-SQL. 
 
@@ -92,7 +92,7 @@ Facoltativamente, la funzione *StoredProcedure* può anche registrare la stored 
 
 All'oggetto stored procedure non sono in genere associati dati o valori, a meno che non sia stato specificato un valore predefinito. I dati non vengono recuperati finché non viene eseguita la stored procedure. 
 
-### <a name="specify-inputs-and-execute"></a>Specificare gli input ed eseguire
+### <a name="specify-inputs-and-execute"></a>Specificare gli input e l'esecuzione
 
 + Usare `setInputDataQuery` per assegnare una query a un oggetto *InputParameter* . Se ad esempio è stato creato un oggetto stored procedure in R, è possibile usare `setInputDataQuery` per passare argomenti alla funzione *StoredProcedure* in modo da eseguire la stored procedure con gli input desiderati.
 
@@ -105,5 +105,5 @@ All'oggetto stored procedure non sono in genere associati dati o valori, a meno 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Come creare una stored procedure con sqlrutils](how-to-create-a-stored-procedure-using-sqlrutils.md)
+[Come creare una stored procedure usando sqlrutils](how-to-create-a-stored-procedure-using-sqlrutils.md)
 

@@ -1,35 +1,35 @@
 ---
-title: Lezione 4 Predict potenziali dei risultati mediante i modelli R - SQL Server Machine Learning
-description: Esercitazione che illustra come rendere operativi script R incorporato in SQL Server stored procedure con funzioni di T-SQL
+title: Lezione 4 stimare i potenziali risultati con i modelli R
+description: Esercitazione che illustra come rendere operativo script R incorporato in SQL Server stored procedure con funzioni T-SQL
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ca5d09b052d80083589189f53a8dc9c059e5cf99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 159fb29bf560e755fdc605330d7d20369f55ba08
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961869"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345893"
 ---
-# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Lezione 4: Eseguire le stime usando R incorporato in una stored procedure
+# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Lezione 4: Eseguire stime usando R incorporato in una stored procedure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Questo articolo fa parte di un'esercitazione per sviluppatori SQL su come usare R in SQL Server.
+Questo articolo fa parte di un'esercitazione per sviluppatori SQL sull'uso di R in SQL Server.
 
-In questo passaggio descrive come utilizzare il modello rispetto a nuove osservazioni per stimare i possibili risultati. Il modello viene eseguito il wrapping in una stored procedure che può essere chiamata direttamente da altre applicazioni. La procedura dettagliata illustra diversi modi per eseguire l'assegnazione dei punteggi:
+In questo passaggio si apprenderà come usare il modello con nuove osservazioni per stimare potenziali risultati. Il modello viene racchiuso in un stored procedure che può essere chiamato direttamente da altre applicazioni. Nella procedura dettagliata vengono illustrati diversi modi per eseguire il Punteggio:
 
-- **Modalità di valutazione batch**: Usare una query di selezione come input per la stored procedure. La stored procedure restituisce una tabella di osservazioni corrispondenti ai casi di input.
+- Modalità di assegnazione dei **punteggi batch**: Usare una query SELECT come input per la stored procedure. La stored procedure restituisce una tabella di osservazioni corrispondenti ai casi di input.
 
-- **Modalità di assegnazione dei punteggi singoli**: Passare un set di valori dei singoli parametri come input.  La stored procedure restituisce una singola riga o un singolo valore.
+- Modalità di assegnazione dei **punteggi individuali**: Passare un set di singoli valori di parametro come input.  La stored procedure restituisce una singola riga o un singolo valore.
 
 In primo luogo si prenderà in analisi il funzionamento generale della valutazione.
 
-## <a name="basic-scoring"></a>Valutazione di base
+## <a name="basic-scoring"></a>Punteggio di base
 
-La stored procedure **RxPredict** viene illustrata la sintassi di base per il wrapping di una chiamata rxPredict RevoScaleR in una stored procedure.
+Il stored procedure **RxPredict** illustra la sintassi di base per il wrapping di una chiamata RevoScaleR RxPredict in una stored procedure.
 
 ```sql
 CREATE PROCEDURE [dbo].[RxPredict] (@model varchar(250), @inquery nvarchar(max))
@@ -53,21 +53,21 @@ END
 GO
 ```
 
-+ L'istruzione SELECT recupera il modello serializzato dal database e il modello viene archiviato nella variabile R `mod` per un'ulteriore elaborazione con R.
++ L'istruzione SELECT ottiene il modello serializzato dal database e archivia il modello nella variabile `mod` R per un'ulteriore elaborazione con R.
 
-+ Per assegnare punteggi ai nuovi casi vengono ottenuti dal [!INCLUDE[tsql](../../includes/tsql-md.md)] specificata nella query `@inquery`, il primo parametro alla stored procedure. Man mano che vengono letti i dati della query, le righe vengono salvate nel frame di dati predefinito `InputDataSet`. Il frame di dati viene passato per il [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) funzionare in [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), che genera i punteggi.
++ I nuovi casi di assegnazione dei punteggi vengono ottenuti dalla [!INCLUDE[tsql](../../includes/tsql-md.md)] query specificata in `@inquery`, il primo parametro per la stored procedure. Man mano che vengono letti i dati della query, le righe vengono salvate nel frame di dati predefinito `InputDataSet`. Questo frame di dati viene passato alla funzione [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) in [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), che genera i punteggi.
   
     `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
     Poiché un data.frame può contenere una riga singola, è possibile usare lo stesso codice per la valutazione batch e la valutazione singola.
   
-+ Il valore restituito per il `rxPredict` funzione è un **float** che rappresenta la probabilità che il driver Ottiene un suggerimento di qualsiasi quantità.
++ Il valore restituito dalla `rxPredict` funzione è un valore **float** che rappresenta la probabilità che il driver ottenga una mancia di qualsiasi quantità.
 
-## <a name="batch-scoring-a-list-of-predictions"></a>(Un elenco di stime) di assegnazione punteggio batch
+## <a name="batch-scoring-a-list-of-predictions"></a>Punteggio batch (un elenco di stime)
 
-Uno scenario più comune consiste nel generare stime per più osservazioni in modalità batch. In questo passaggio vediamo come funziona il punteggio batch.
+Uno scenario più comune è quello di generare stime per più osservazioni in modalità batch. In questo passaggio verrà illustrato il funzionamento del Punteggio batch.
 
-1.  Iniziare recuperando un set di dati di input per lavorare con più piccolo. Questa query crea un elenco "top 10" delle corse, con il numero di passeggeri e altre funzionalità necessarie per effettuare una stima.
+1.  Per iniziare, ottenere un set di dati di input più piccolo da usare. Questa query crea un elenco "top 10" delle corse, con il numero di passeggeri e altre funzionalità necessarie per effettuare una stima.
   
     ```sql
     SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance
@@ -92,7 +92,7 @@ Uno scenario più comune consiste nel generare stime per più osservazioni in mo
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-2. Creare una stored procedure denominata **RxPredictBatchOutput** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+2. Creare un stored procedure denominato **RxPredictBatchOutput** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
     ```sql
     CREATE PROCEDURE [dbo].[RxPredictBatchOutput] (@model varchar(250), @inquery nvarchar(max))
@@ -115,7 +115,7 @@ Uno scenario più comune consiste nel generare stime per più osservazioni in mo
     END
     ```
 
-3.  Specificare il testo della query in una variabile e passarla come parametro alla stored procedure:
+3.  Fornire il testo della query in una variabile e passarlo come parametro al stored procedure:
 
     ```sql
     -- Define the input data
@@ -126,22 +126,22 @@ Uno scenario più comune consiste nel generare stime per più osservazioni in mo
     EXEC [dbo].[RxPredictBatchOutput] @model = 'RxTrainLogit_model', @inquery = @query_string;
     ```
   
-La stored procedure restituisce una serie di valori che rappresentano la stima per ognuna delle corse primi 10. Tuttavia, le corse principali sono anche un singolo passeggero e con una distanza relativamente breve, per i quali il driver è improbabile che riceverà una Mancia.
+Il stored procedure restituisce una serie di valori che rappresentano la stima per ognuno dei primi 10 viaggi. Tuttavia, i viaggi più frequenti sono anche corse a singolo passeggero con una distanza relativamente breve, per cui è improbabile che il driver ottenga un suggerimento.
   
 
 > [!TIP]
 > 
-> Invece di restituire solo il "Mancia Sì" e i risultati di tipo "senza Mancia", è possibile restituire anche il punteggio di probabilità per la stima e quindi applicare una clausola WHERE per il _punteggio_ valori di colonna da classificare il punteggio come "Mancia probabile" o " Mancia poco probabile", usando un valore di soglia, ad esempio 0.5 o 0.7. Questo passaggio non è incluso nella stored procedure, ma la sua implementazione non sarebbe difficile.
+> Anziché restituire solo i risultati "Sì-Tip" e "No-Tip", è possibile restituire anche il Punteggio di probabilità per la stima, quindi applicare una clausola WHERE ai valori della colonna _Score_ per suddividere in categorie il punteggio come "suggerimento" o "suggerimento improbabile", usando un valore soglia, ad esempio 0,5 o 0,7. Questo passaggio non è incluso nella stored procedure, ma la sua implementazione non sarebbe difficile.
 
-## <a name="single-row-scoring-of-multiple-inputs"></a>Riga singola assegnazione dei punteggi di più input
+## <a name="single-row-scoring-of-multiple-inputs"></a>Assegnazione di punteggi a riga singola di più input
 
-Talvolta si desidera passare più valori di input e ottenere una sola stima in base a tali valori. Ad esempio, è possibile impostare backup di un foglio di lavoro di Excel, applicazione web o report di Reporting Services per chiamare la stored procedure e renda disponibili input digitati o selezionati dagli utenti da tali applicazioni.
+In alcuni casi si desidera passare più valori di input e ottenere una singola stima in base a tali valori. Ad esempio, è possibile configurare un foglio di lavoro di Excel, un'applicazione Web o un report Reporting Services per chiamare il stored procedure e fornire input tipizzati o selezionati dagli utenti da tali applicazioni.
 
-In questa sezione descrive come creare stime singole usando una stored procedure che accetta più input, ad esempio il numero di passeggeri, distanza della corsa e così via. La stored procedure crea un punteggio in base al modello R archiviato in precedenza.
+In questa sezione viene illustrato come creare stime singole utilizzando un stored procedure che accetta più input, ad esempio il numero di passeggeri, la distanza di corsa e così via. Il stored procedure crea un punteggio in base al modello R archiviato in precedenza.
   
-Se si chiama la stored procedure da un'applicazione esterna, assicurarsi che i dati soddisfino i requisiti del modello R. Ciò può includere la verifica che i dati di input siano sottoponibili a cast o convertibili in un tipo di dati di R o la convalida del tipo di dati e della lunghezza dei dati. 
+Se si chiama il stored procedure da un'applicazione esterna, assicurarsi che i dati corrispondano ai requisiti del modello R. Ciò può includere la verifica che i dati di input siano sottoponibili a cast o convertibili in un tipo di dati di R o la convalida del tipo di dati e della lunghezza dei dati. 
 
-1. Creare una stored procedure **RxPredictSingleRow**.
+1. Creare un stored procedure **RxPredictSingleRow**.
   
     ```sql
     CREATE PROCEDURE [dbo].[RxPredictSingleRow] @model varchar(50), @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
@@ -166,7 +166,7 @@ Se si chiama la stored procedure da un'applicazione esterna, assicurarsi che i d
 
 2. Provare la stored procedure inserendo manualmente i valori.
   
-    Aprire una nuova **Query** finestra e chiamare la stored procedure, fornire valori per ognuno dei parametri. I parametri rappresentano le colonne di funzionalità utilizzate dal modello e sono necessari.
+    Aprire una nuova finestra di **query** e chiamare il stored procedure, specificando i valori per ognuno dei parametri. I parametri rappresentano le colonne di funzionalità utilizzate dal modello e sono obbligatorie.
 
     ```sql
     EXEC [dbo].[RxPredictSingleRow] @model = 'RxTrainLogit_model',
@@ -179,18 +179,18 @@ Se si chiama la stored procedure da un'applicazione esterna, assicurarsi che i d
     @dropoff_longitude = -73.977303
     ```
 
-    In alternativa, usare questo formato più breve è supportato per [parametri a una stored procedure](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
+    In alternativa, usare questa forma più breve supportata per i [parametri di un stored procedure](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
   
     ```sql
     EXEC [dbo].[RxPredictSingleRow] 'RxTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-3. I risultati indicano che la probabilità di ricevere una Mancia è bassa (zero) in queste corse primi 10, poiché tutti sono un singolo passeggero e su una distanza relativamente breve.
+3. I risultati indicano che la probabilità di ottenere un suggerimento è bassa (zero) per le prime 10 corse, perché tutte sono viaggi a passeggero singolo su una distanza relativamente breve.
 
 ## <a name="conclusions"></a>Conclusioni
 
-In questo modo si conclude l'esercitazione. Ora che si è appreso come incorporare il codice R nelle stored procedure, è possibile estendere queste procedure consigliate per la creazione di modelli personalizzati. L'integrazione con [!INCLUDE[tsql](../../includes/tsql-md.md)] semplifica notevolmente la distribuzione di modelli R per le stime e l'inclusione delle ripetizioni del training dei modelli nel flusso di lavoro dei dati enterprise.
+In questo modo si conclude l'esercitazione. Ora che si è appreso come incorporare il codice R nelle stored procedure, è possibile estendere queste procedure per creare modelli personalizzati. L'integrazione con [!INCLUDE[tsql](../../includes/tsql-md.md)] semplifica notevolmente la distribuzione di modelli R per le stime e l'inclusione delle ripetizioni del training dei modelli nel flusso di lavoro dei dati enterprise.
 
 ## <a name="previous-lesson"></a>Lezione precedente
 
-[Lezione 3: Training e salvataggio di un modello R usando T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)
+[Lezione 3: Eseguire il training e salvare un modello R usando T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)

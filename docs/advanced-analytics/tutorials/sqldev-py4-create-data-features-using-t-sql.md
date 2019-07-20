@@ -1,25 +1,25 @@
 ---
-title: Creare funzionalità di dati mediante le funzioni T-SQL e Python, SQL Server Machine Learning
-description: Esercitazione che illustra come aggiungere calcoli per le stored procedure per l'utilizzo in modelli di Python di machine learning.
+title: Creare funzionalità di dati usando funzioni T-SQL e Python
+description: Esercitazione che illustra come aggiungere calcoli alle stored procedure per l'uso nei modelli di apprendimento automatico di Python.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a7c17af9ab7302e2856130be58759b56430e1341
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d421d4fc3ed28276b950f797529f089f94aaf6a
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961881"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345913"
 ---
-# <a name="create-data-features-using-t-sql"></a>Creare funzionalità di dati mediante T-SQL
+# <a name="create-data-features-using-t-sql"></a>Creare funzionalità di dati con T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dopo l'esplorazione dei dati, si sono raccolte alcune informazioni dettagliate dai dati e si è pronti per passare alla *progettazione di funzionalità*. Questo processo di creazione di funzionalità da dati non elaborati può essere un passaggio critico nella analitica avanzata di modellazione.
+Dopo l'esplorazione dei dati, sono state raccolte alcune informazioni dettagliate dai dati e si è pronti per passare alla *progettazione di funzionalità*. Questo processo di creazione di funzionalità da dati non elaborati può essere un passaggio critico della modellazione di analisi avanzata.
 
-Questo articolo fa parte di un'esercitazione [analitica di Python nel database per sviluppatori SQL](sqldev-in-database-python-for-sql-developers.md). 
+Questo articolo fa parte di un'esercitazione [relativa all'analisi Python nel database per sviluppatori SQL](sqldev-in-database-python-for-sql-developers.md). 
 
 In questo passaggio si apprenderà come creare funzionalità dai dati non elaborati tramite una funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] . Tale funzione verrà quindi chiamata da una stored procedure per creare una tabella contenente i valori della funzionalità.
 
@@ -29,9 +29,9 @@ I valori di distanza inclusi nei dati originali si basano sulla distanza registr
 
 Si userà una funzione T-SQL personalizzata, _fnCalculateDistance_, per calcolare la distanza con la formula dell'emisenoverso e una seconda funzione T-SQL personalizzata, _fnEngineerFeatures_, per creare una tabella contenente tutte le funzionalità.
 
-### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calcolare distanza della corsa mediante fnCalculateDistance
+### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calcolare la distanza della corsa con fnCalculateDistance
 
-1.  La funzione _fnCalculateDistance_ va scaricata e registrata con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come parte della preparazione per questa procedura dettagliata. È opportuno esaminare il codice.
+1.  La funzione _fnCalculateDistance_ va scaricata e registrata con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come parte della preparazione per questa procedura dettagliata. Esaminare il codice.
   
     In [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]espandere **Programmabilità**, **Funzioni** e quindi **Funzioni a valori scalari**.
     Fare clic con il pulsante destro del mouse su _fnCalculateDistance_e selezionare **Modifica** per aprire lo script [!INCLUDE[tsql](../../includes/tsql-md.md)] in una nuova finestra Query.
@@ -106,13 +106,13 @@ Per aggiungere il valore calcolato a una tabella da usare per il training del mo
         ORDER BY trip_time_in_secs DESC
     ```
   
-    Come si può notare, la distanza indicata dal tassametro non corrisponde sempre alla distanza geografica. Ecco perché la progettazione di funzionalità è importante.
+    Come si può notare, la distanza indicata dal tassametro non corrisponde sempre alla distanza geografica. Questo è il motivo per cui la progettazione delle funzionalità è importante.
 
-Nel passaggio successivo si apprenderà come usare queste funzionalità di dati per creare ed eseguire il training di un modello di machine learning tramite Python.
+Nel passaggio successivo si apprenderà come usare queste funzionalità di dati per creare ed eseguire il training di un modello di apprendimento automatico usando Python.
 
 ## <a name="next-step"></a>Passaggio successivo
 
-[Eseguire il training e salvataggio di un modello Python con T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Eseguire il training e salvare un modello Python usando T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>Passaggio precedente
 

@@ -1,35 +1,35 @@
 ---
-title: Set di dati iris demo per Python e R - esercitazioni di SQL Server Machine Learning
-Description: Creare un database che contiene il set di dati Iris e una tabella per archiviare i modelli. Questo set di dati viene utilizzata negli esercizi che illustra come eseguire il wrapping di codice Python o linguaggio R in una stored procedure SQL Server.
+title: Set di dati demo Iris per le esercitazioni su Python e R
+Description: Creare un database contenente il set di dati Iris e una tabella per archiviare i modelli. Questo set di dati viene usato in esercizi che illustrano come eseguire il wrapping del linguaggio R o del codice Python in un SQL Server stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 26358fea3b7d08d986a5078cf6484e7c4e0d3dd1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5050fc0d0fcbb6c70b7aabea1b67d75cc686b96b
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962112"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345230"
 ---
-#  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>Dati di iris demo per le esercitazioni di Python e R in SQL Server 
+#  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>Dati demo di Iris per le esercitazioni su Python e R in SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In questo esercizio, creare un database di SQL Server per archiviare i dati dal [set di dati dei fiori Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) e modelli basati sugli stessi dati. I dati iris sono incluso nelle distribuzioni di R e Python installate da SQL Server e viene usati nelle esercitazioni di machine learning per SQL Server. 
+In questo esercizio viene creato un database di SQL Server per archiviare i dati dal [set di dati del fiore Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) e i modelli basati sugli stessi dati. I dati Iris sono inclusi nelle distribuzioni R e Python installate da SQL Server e vengono usati nelle esercitazioni di machine learning per SQL Server. 
 
-Per completare questo esercizio, è necessario disporre [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) o un altro strumento che è possibile eseguire query T-SQL.
+Per completare questo esercizio, è necessario disporre di [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) o un altro strumento in grado di eseguire query T-SQL.
 
-Esercitazioni e guide introduttive utilizzano questo set di dati seguenti:
+Le esercitazioni e le guide introduttive che usano questo set di dati includono quanto segue:
 
-+  [Avvio rapido: Creare, eseguire il training e usare un modello Python con le stored procedure in SQL Server](quickstart-python-train-score-in-tsql.md)
++  [Avvio rapido: Creare, eseguire il training e usare un modello Python con stored procedure in SQL Server](quickstart-python-train-score-in-tsql.md)
 
 ## <a name="create-the-database"></a>Creare il database
 
-1. Avviare SQL Server Management Studio e aprire una nuova **Query** finestra.  
+1. Avviare SQL Server Management Studio e aprire una nuova finestra **query** .  
 
-2. Creare un nuovo database per questo progetto e modificare il contesto dei **Query** finestra da utilizzare il nuovo database.
+2. Creare un nuovo database per questo progetto e modificare il contesto della finestra di **query** in modo da utilizzare il nuovo database.
 
     ```sql
     CREATE DATABASE irissql
@@ -39,9 +39,9 @@ Esercitazioni e guide introduttive utilizzano questo set di dati seguenti:
     ```
 
     > [!TIP] 
-    > Se si ha familiarità con SQL Server o si sta lavorando in un server si è proprietari, è un errore comune per accedere e iniziare a lavorare senza che vengano rilevate in cui si trova il **master** database. Per verificare che si usa il database corretto, specificare sempre il contesto utilizzando la `USE <database name>` istruzione (ad esempio, `use irissql`).
+    > Se non si ha familiarità con SQL Server o si sta lavorando a un server di cui si è proprietari, un errore comune è quello di eseguire l'accesso e iniziare a lavorare senza accorgersi che ci si trova nel database **Master** . Per assicurarsi di utilizzare il database corretto, specificare sempre il contesto utilizzando l' `USE <database name>` istruzione (ad esempio, `use irissql`).
 
-3. Aggiungere alcune tabelle vuote: uno per archiviare i dati e uno per archiviare i modelli con training. Il **iris_models** tabella viene usata per archiviare i modelli serializzati generati in altri tipi di addestramento.
+3. Aggiungere alcune tabelle vuote: una per archiviare i dati e l'altra per archiviare i modelli sottoposti a training. La tabella **iris_models** viene utilizzata per archiviare i modelli serializzati generati in altri esercizi.
 
     Il codice seguente crea la tabella per i dati di training.
 
@@ -57,9 +57,9 @@ Esercitazioni e guide introduttive utilizzano questo set di dati seguenti:
     ```
 
     > [!TIP] 
-    > Se si ha familiarità con T-SQL, è opportuno memorizzare le `DROP...IF` istruzione. Quando si prova a creare una tabella e ne esiste già, SQL Server restituisce un errore: "Si è già un oggetto denominato 'iris_data' nel database." Un modo per evitare tali errori consiste nell'eliminare tutte le tabelle esistenti o altri oggetti come parte del codice.
+    > Se non si ha familiarità con T-SQL, si paga per memorizzare `DROP...IF` l'istruzione. Quando si tenta di creare una tabella e ne esiste già una, SQL Server restituisce un errore: "Esiste già un oggetto denominato" iris_data "nel database". Un modo per evitare tali errori consiste nell'eliminare tutte le tabelle esistenti o altri oggetti come parte del codice.
 
-4. Eseguire il codice seguente per creare la tabella utilizzata per archiviare il modello con training. Per salvare i modelli di Python (o R) in SQL Server, devono essere serializzati e archiviati in una colonna di tipo **varbinary (max)** . 
+4. Eseguire il codice seguente per creare la tabella utilizzata per archiviare il modello sottoposto a training. Per salvare i modelli Python (o R) in SQL Server, è necessario serializzarli e archiviarli in una colonna di tipo **varbinary (max)** . 
 
     ```sql
     DROP TABLE IF EXISTS iris_models;
@@ -72,17 +72,17 @@ Esercitazioni e guide introduttive utilizzano questo set di dati seguenti:
     GO
     ```
 
-    Oltre al contenuto del modello, in genere, è necessario anche aggiungere le colonne di altri metadati utili, ad esempio il nome del modello, la data che è stato eseguito il training, l'algoritmo di origine e i parametri, dati di origine e così via. Per il momento si sarà tutto più semplice e usare semplicemente il nome del modello.
+    Oltre al contenuto del modello, in genere è possibile aggiungere colonne per altri metadati utili, ad esempio il nome del modello, la data di training, l'algoritmo di origine e i parametri, i dati di origine e così via. Per il momento si manterrà semplice e si userà solo il nome del modello.
 
 ## <a name="populate-the-table"></a>Popolare la tabella
 
-È possibile ottenere i dati Iris predefinite da R o Python. È possibile usare R o Python per caricare i dati in un frame di dati e quindi inserirla in una tabella nel database. Lo spostamento dei dati di training da una sessione esterna in una tabella di SQL Server è un processo in più passaggi:
+È possibile ottenere dati Iris incorporati da R o Python. È possibile usare Python o R per caricare i dati in un frame di dati e quindi inserirli in una tabella del database. Lo stato di trasferimento dei dati di training da una sessione esterna in una tabella SQL Server è un processo in più passaggi:
 
-+ Progettazione di una stored procedure che ottiene i dati desiderati.
-+ Eseguire la stored procedure per ottenere effettivamente i dati.
++ Progettare un stored procedure che ottenga i dati desiderati.
++ Eseguire l'stored procedure per ottenere effettivamente i dati.
 + Costruire un'istruzione INSERT per specificare dove salvare i dati recuperati.
 
-1. Nei sistemi con l'integrazione di Python, creare la stored procedure seguente che usa codice Python per caricare i dati.
+1. Nei sistemi con integrazione con Python creare i stored procedure seguenti che usano il codice Python per caricare i dati.
 
     ```sql
     CREATE PROCEDURE get_iris_dataset
@@ -103,9 +103,9 @@ Esercitazioni e guide introduttive utilizzano questo set di dati seguenti:
     GO
     ```
 
-    Quando si esegue questo codice, è necessario ottenere il messaggio "Comandi riusciti" Tutto ciò significa è che la stored procedure sia stata creata in base alle specifiche.
+    Quando si esegue questo codice, viene ricevuto il messaggio "i comandi sono stati completati". Ciò significa che il stored procedure è stato creato in base alle specifiche.
 
-2. In alternativa, nei sistemi con integrazione di R, creare una routine che usa invece R.
+2. In alternativa, nei sistemi con integrazione R creare una procedura che usi R.
 
     ```sql
     CREATE PROCEDURE get_iris_dataset
@@ -125,26 +125,26 @@ Esercitazioni e guide introduttive utilizzano questo set di dati seguenti:
     GO
     ```
 
-3. Per popolare la tabella, eseguire la stored procedure e specificare la tabella dove devono essere scritti i dati. Quando eseguito, la stored procedure esegue il codice Python o R, che carica il set di dati Iris predefinito e quindi inserisce i dati nella **iris_data** tabella.
+3. Per popolare effettivamente la tabella, eseguire il stored procedure e specificare la tabella in cui devono essere scritti i dati. Quando viene eseguito, il stored procedure esegue il codice Python o R, che carica il set di dati Iris incorporato, quindi inserisce i dati nella tabella **iris_data** .
 
     ```sql
     INSERT INTO iris_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species", "SpeciesId")
     EXEC dbo.get_iris_dataset;
     ```
 
-    Se si ha familiarità con T-SQL, tenere presente che l'istruzione INSERT inserisce solo nuovi dati. non verificare la presenza di dati esistenti, o eliminare e ricompilare la tabella. Per evitare di ricevere più copie degli stessi dati in una tabella, è possibile eseguire questa istruzione prima di tutto: `TRUNCATE TABLE iris_data`. L'istruzione T-SQL [TRUNCATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/truncate-table-transact-sql) istruzione elimina i dati esistenti ma mantiene intatte la struttura della tabella.
+    Se non si ha familiarità con T-SQL, tenere presente che l'istruzione INSERT aggiunge solo nuovi dati; non verifica la presenza di dati esistenti o Elimina e ricompila la tabella. Per evitare di ottenere più copie degli stessi dati in una tabella, è possibile eseguire prima questa istruzione: `TRUNCATE TABLE iris_data`. L'istruzione T-SQL [TRUNCATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/truncate-table-transact-sql) Elimina i dati esistenti ma mantiene intatta la struttura della tabella.
 
     > [!TIP]
-    > Per modificare la stored procedure in un secondo momento, non devi rimuoverla e ricrearla. Usare la [ALTER PROCEDURE](https://docs.microsoft.com/sql/t-sql/statements/alter-procedure-transact-sql) istruzione. 
+    > Per modificare il stored procedure in un secondo momento, non è necessario eliminarlo e ricrearlo. Utilizzare l'istruzione [alter procedure](https://docs.microsoft.com/sql/t-sql/statements/alter-procedure-transact-sql) . 
 
 
 ## <a name="query-the-data"></a>Eseguire query sui dati
 
-Come passaggio di convalida, eseguire una query per verificare che i dati è stati caricati.
+Come passaggio di convalida, eseguire una query per confermare che i dati sono stati caricati.
 
-1. In Esplora oggetti, nel database, fare doppio clic il **irissql** , del database e avviare una nuova query.
+1. In Esplora oggetti, in database, fare clic con il pulsante destro del mouse sul database **irissql** e avviare una nuova query.
 
-2. Eseguire alcune semplici query:
+2. Eseguire alcune query semplici:
 
     ```sql
     SELECT TOP(10) * FROM iris_data;
@@ -153,6 +153,6 @@ Come passaggio di convalida, eseguire una query per verificare che i dati è sta
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Nella seguente Guida introduttiva, si verrà creare un modello di machine learning e salvarlo in una tabella e quindi usare il modello per generare i risultati stimati.
+Nella Guida introduttiva seguente si creerà un modello di apprendimento automatico e lo si salverà in una tabella, quindi si userà il modello per generare risultati stimati.
 
-+ [Avvio rapido: Creare, eseguire il training e usare un modello Python con le stored procedure in SQL Server](quickstart-python-train-score-in-tsql.md)
++ [Avvio rapido: Creare, eseguire il training e usare un modello Python con stored procedure in SQL Server](quickstart-python-train-score-in-tsql.md)

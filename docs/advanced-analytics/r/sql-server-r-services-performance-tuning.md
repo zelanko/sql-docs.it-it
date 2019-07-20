@@ -1,99 +1,99 @@
 ---
-title: SQL Server R Services Performance Tuning - SQL Server Machine Learning Services
+title: Ottimizzazione delle prestazioni di SQL Server R Services
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: bb3f48a9a25b12568497c3583536d8c650a6f702
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 49b96bf2c3381f3b0d44ba0b0192fbe0c0df4a2f
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962439"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344861"
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>Ottimizzazione delle prestazioni per R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Questo articolo è il primo di una serie di quattro articoli che descrivono l'ottimizzazione delle prestazioni per R Services, basato su due case study:
+Questo articolo è il primo di una serie di quattro articoli che descrivono l'ottimizzazione delle prestazioni per R Services, in base a due case study:
 
 - Test delle prestazioni eseguiti dal team di sviluppo del prodotto per convalidare il profilo delle prestazioni delle soluzioni R
 
-- Ottimizzazione delle prestazioni dal team di analisi scientifica dei dati di Microsoft per uno scenario di apprendimento automatico specifica spesso richiesto dai clienti.
+- Ottimizzazione delle prestazioni da parte del team di Microsoft data science per uno scenario di apprendimento automatico specifico spesso richiesto dai clienti.
 
-L'obiettivo di questa serie è fornire indicazioni sui tipi di tecniche che risultano più utili per eseguire processi R in SQL Server l'ottimizzazione delle prestazioni.
+L'obiettivo di questa serie è fornire indicazioni sui tipi di tecniche di ottimizzazione delle prestazioni più utili per l'esecuzione di processi R in SQL Server.
 
-+ In questo argomento (primo) fornisce una panoramica dell'architettura e alcuni problemi comuni durante l'ottimizzazione per attività di analisi scientifica dei dati.
-+ Nel secondo articolo illustra i componenti hardware specifici e le ottimizzazioni di SQL Server.
-+ Il terzo articolo descrive le ottimizzazioni di codice R e le risorse per l'operazionalizzazione.
-+ Il quarto articolo descrive in dettaglio e risultati di report e le conclusioni i metodi di test.
++ Questo argomento (primo) fornisce una panoramica dell'architettura e alcuni problemi comuni durante l'ottimizzazione per le attività data science.
++ Nel secondo articolo vengono illustrate le ottimizzazioni specifiche per hardware e SQL Server.
++ Il terzo articolo illustra le ottimizzazioni nel codice R e le risorse per la messa in funzione.
++ Il quarto articolo descrive in dettaglio i metodi di test e segnala i risultati e le conclusioni.
 
 **Si applica a:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
 
-## <a name="performance-goals-and-targeted-scenarios"></a>Obiettivi di prestazioni e scenari di destinazione
+## <a name="performance-goals-and-targeted-scenarios"></a>Obiettivi di prestazioni e scenari mirati
 
-La funzionalità R Services è stato introdotto in SQL Server 2016 per supportare l'esecuzione di script R da SQL Server. Quando si usa questa funzionalità, il runtime di R viene eseguito in un processo separato dal motore di database, ma consente di scambiare i dati in modo sicuro con il motore di database, usando le risorse del server e servizi che interagiscono con SQL Server, ad esempio il servizio Trusted Launchpad.
+La funzionalità R Services è stata introdotta in SQL Server 2016 per supportare l'esecuzione di script R da SQL Server. Quando si usa questa funzionalità, il runtime di R opera in un processo separato dal motore di database, ma scambia i dati in modo sicuro con il motore di database, usando le risorse del server e i servizi che interagiscono con SQL Server, ad esempio la finestra di avvio attendibile.
 
-In SQL Server 2017 è stato annunciato il supporto per l'esecuzione di script di Python con la stessa architettura, lingua aggiuntiva da seguire in futuro.
+In SQL Server 2017 è stato annunciato il supporto per l'esecuzione di script Python con la stessa architettura, con un linguaggio aggiuntivo da seguire in futuro.
 
-Man mano che aumenta il numero delle versioni supportate e lingua, è importante che l'amministratore del database e progettista database siano consapevoli del potenziale conflitto di risorse a causa dei processi di machine learning, e che siano in grado di configurare il server per supportare i nuovi carichi di lavoro. Anche se mantenere analitica vicino ai dati consente di eliminare gli spostamenti dei dati non protetti, anche spostamento di carichi di lavoro analitici disattivato sul computer portatile del data scientist e nuovamente in server che ospita i dati.
+Con l'aumentare del numero di versioni e linguaggi supportati, è importante che l'amministratore del database e l'architetto del database siano consapevoli del rischio di conflitti di risorse dovuti ai processi di machine learning e che siano in grado di configurare il server per supportare nuovi carichi di lavoro. Sebbene la funzionalità di analisi vicina ai dati elimini gli spostamenti dei dati non sicuri, sposta anche i carichi di lavoro analitici dal computer portatile del data scientist e viceversa nel server che ospita i dati.
 
-Ottimizzazione delle prestazioni per machine learning non è chiaramente una proposta di una soluzione universale. Le seguenti attività comuni potrebbero avere profili di prestazioni molto diversi:
+L'ottimizzazione delle prestazioni per Machine Learning non è ovviamente una proposta di dimensioni adatte per tutti. Le attività comuni seguenti potrebbero avere profili di prestazioni molto diversi:
 
-- Attività di formazione: creazione e training di un modello di regressione rispetto al training di una rete neurale
-- Progettazione di funzionalità con R e l'estrazione di funzioni mediante T-SQL
-- Assegnazione dei punteggi in singole righe o batch di piccole dimensioni, e operazioni bulk tramite input in formato tabulare di punteggio
-- Esecuzione di assegnazione dei punteggi in R e distribuzione dei modelli nell'ambiente di produzione in SQL Server nelle stored procedure
-- La modifica del codice R per ridurre al minimo il trasferimento dei dati o rimuovere le trasformazioni di dati costosa
-- Abilitare test automatizzati e ripetizione del training dei modelli
+- Attività di training: creazione e training di un modello di regressione rispetto al training di una rete neurale
+- Progettazione di funzionalità con R e l'estrazione di funzionalità con T-SQL
+- Assegnazione di punteggi a singole righe o batch piccoli, confronto con l'assegnazione di punteggi in blocco tramite input tabulari
+- Esecuzione del punteggio in R rispetto alla distribuzione di modelli in produzione in SQL Server nelle stored procedure
+- Modifica del codice R per ridurre al minimo il trasferimento dei dati o rimuovere le trasformazioni dei dati costose
+- Abilita test automatizzati e ripetizione del training dei modelli
 
-Poiché la scelta di tecniche di ottimizzazione dipende da quale attività è fondamentale per l'applicazione o un caso d'uso, i case study illustra suggerimenti sulle prestazioni generali e indicazioni su come ottimizzare per uno scenario specifico, ottimizzazione per il punteggio batch.
+Poiché la scelta delle tecniche di ottimizzazione dipende da quale attività è cruciale per l'applicazione o il caso d'uso, i case study coprono sia i suggerimenti generali sulle prestazioni sia le linee guida su come ottimizzare per uno scenario specifico, ottimizzando il Punteggio batch.
 
-+ **Opzioni di ottimizzazione singoli in SQL Server**
++ **Singole opzioni di ottimizzazione in SQL Server**
 
-    Nel primo case study sulle prestazioni, più test eseguiti su un singolo set di dati usando un singolo tipo di modello. È stato utilizzato l'algoritmo rxLinMod in RevoscaleR per compilare un modello e creare punteggi da esso, ma il codice, nonché le tabelle di dati sottostanti sono state modificate in modo sistematico per testare l'impatto di ogni modifica.
+    Nel primo case study delle prestazioni, più test sono stati eseguiti su un singolo set di dati utilizzando un unico tipo di modello. L'algoritmo rxLinMod in RevoscaleR è stato utilizzato per compilare un modello e creare punteggi da esso, ma il codice e le tabelle di dati sottostanti sono stati sistematicamente modificati per verificare l'effetto di ogni modifica.
 
-    In un'esecuzione dei test, ad esempio, il codice R è stato alterato in modo che è stato eseguito un confronto tra la progettazione di funzionalità con una funzione di trasformazione e le funzionalità di pre-elaborazione e quindi caricare funzionalità da una tabella. In un'altra esecuzione dei test, le prestazioni di training del modello è stata confrontata tra l'uso di una tabella con indicizzazione standard VS. dati di una tabella applicando diversi tipi di compressione o nuovi tipi di indice.
+    Ad esempio, in un'esecuzione dei test, il codice R è stato modificato in modo da poter eseguire un confronto tra la progettazione delle funzionalità usando una funzione di trasformazione e il precomputing delle funzionalità e quindi il caricamento delle funzionalità da una tabella. In un'altra esecuzione dei test, le prestazioni di training del modello sono state confrontate tra l'utilizzo di una tabella indicizzata standard e i dati in una tabella con vari tipi di compressione o nuovi tipi di indice.
 
-+ **Ottimizzazione per uno specifico scenario di assegnazione dei punteggi con volumi elevati**
++ **Ottimizzazione per uno scenario specifico di assegnazione dei punteggi a volumi elevati**
 
-    L'attività di machine learning nel secondo caso di Studio prevede l'elaborazione riprende molti inviati per più posizioni e trovare il miglior candidato per ogni posizione lavorativa. Il modello di machine learning stesso viene formulato come un problema di classificazione binaria: accetta una descrizione resume e processo come input e genera la probabilità per ogni coppia resume-job. Poiché l'obiettivo consiste nel trovare la migliore corrispondenza, una soglia di probabilità definita dall'utente viene utilizzata per filtrare ulteriormente e ottenere solo le corrispondenze valida.
+    L'attività machine learning nel secondo case study comporta l'elaborazione di molti riavvii inviati per più posizioni e la ricerca del candidato migliore per ogni posizione di processo. Il modello di apprendimento automatico viene formulato come un problema di classificazione binaria: accetta una descrizione del processo e di ripresa come input e genera la probabilità per ogni coppia Resume-job. Poiché l'obiettivo è trovare la corrispondenza migliore, viene usata una soglia di probabilità definita dall'utente per filtrare ulteriormente e ottenere solo le corrispondenze ottimali.
 
-    Per questa soluzione, l'obiettivo principale consisteva nel raggiungere la bassa latenza durante l'assegnazione dei punteggi. Tuttavia, questa attività è un'operazione costosa anche durante il processo di assegnazione dei punteggi, perché ogni nuovo processo deve essere confrontato con milioni di riattivazioni all'interno di un intervallo di tempo ragionevole. Inoltre, il passaggio di progettazione di funzioni produce funzionalità oltre 2000 per ogni processo o ripresa e costituisce un collo di bottiglia significativo delle prestazioni.
+    Per questa soluzione, l'obiettivo principale era quello di ottenere una bassa latenza durante il punteggio. Questa attività, tuttavia, è costosa dal punto di vista del calcolo anche durante il processo di assegnazione dei punteggi, perché ogni nuovo processo deve corrispondere a milioni di ripristini entro un intervallo di tempo ragionevole. Inoltre, la fase di progettazione delle funzionalità produce più di 2000 funzionalità per ripresa o processo e rappresenta un collo di bottiglia significativo delle prestazioni.
 
-Si consiglia di esaminare tutti i risultati dal primo case study per determinare quali tecniche sono applicabili alla soluzione e valutare l'impatto potenziale.
+Si consiglia di esaminare tutti i risultati del primo case study per determinare quali tecniche sono applicabili alla soluzione e ponderare il loro impatto potenziale.
 
-Quindi, esaminare i risultati dell'assegnazione dei punteggi ottimizzazione case study per informazioni su come l'autore applicate diverse tecniche e ottimizzato il server per supportare un carico di lavoro specifico.
+Esaminare quindi i risultati dell'ottimizzazione per il Punteggio case study per vedere come l'autore ha applicato diverse tecniche e ottimizzato il server per supportare un carico di lavoro specifico.
 
 ## <a name="performance-optimization-process"></a>Processo di ottimizzazione delle prestazioni
 
-Configurazione e ottimizzazione delle prestazioni richiede la creazione di una solida base, in cui a ottimizzazioni del livello progettate per carichi di lavoro specifici:
+Per la configurazione e l'ottimizzazione delle prestazioni è necessario creare una base solida, su cui eseguire l'ottimizzazione dei livelli progettata per carichi di lavoro specifici:
 
-- Scegliere un server appropriato per l'analitica host. In genere, un report secondario, data warehouse o altri server che è già usato per altri report o in analitica è preferito. Tuttavia, in una soluzione ibrida transazionale analytical processing (HTAP), elaborazione, sui dati operativi sono utilizzabile come input a R per il punteggio veloce.
+- Scegliere un server appropriato per ospitare l'analisi. In genere, è preferibile un server di report secondario, data warehouse o un altro server già usato per altri report o analisi. Tuttavia, in una soluzione di elaborazione analitica transazionale (HTAP) ibrida, i dati operativi possono essere usati come input per R per un punteggio rapido.
 
-- Configurare l'istanza di SQL Server per bilanciare le operazioni del motore di database e R o Python di esecuzione ai livelli appropriati di script. Può trattarsi di modifica delle impostazioni predefinite di SQL Server per la memoria e utilizzo della CPU, NUMA e le impostazioni affinità processori e la creazione di gruppi di risorse.
+- Configurare l'istanza di SQL Server per bilanciare le operazioni del motore di database e l'esecuzione di script R o Python a livelli appropriati. Questo può includere la modifica delle impostazioni predefinite SQL Server per l'utilizzo della memoria e della CPU, le impostazioni di affinità del processore e NUMA e la creazione di gruppi di risorse.
 
-- Ottimizzare il computer del server per supportare l'utilizzo efficiente di script esterni. Ciò può includere l'aumento del numero di account usato per l'esecuzione di script esterni, abilitare la gestione del pacchetto, e assegnare gli utenti ai relativi ruoli di sicurezza.
+- Ottimizzare il computer server per supportare l'utilizzo efficiente di script esterni. Ciò può includere l'aumento del numero di account utilizzati per l'esecuzione di script esterni, l'abilitazione della gestione dei pacchetti e l'assegnazione di utenti ai ruoli di sicurezza correlati.
 
-- Applicare le ottimizzazioni specifiche per l'archiviazione dei dati e il trasferimento in SQL Server, tra cui l'indicizzazione e le strategie di statistiche, Progettazione query e l'ottimizzazione delle query e la progettazione di tabelle che vengono usate per machine learning. È anche possibile analizzare le origini dati e metodi di trasporto dei dati o modificare i processi ETL per ottimizzare l'estrazione di funzioni.
+- Applicazione di ottimizzazioni specifiche per l'archiviazione e il trasferimento dei dati in SQL Server, incluse strategie di indicizzazione e statistiche, progettazione di query e ottimizzazione delle query e progettazione di tabelle utilizzate per Machine Learning. È anche possibile analizzare le origini dati e i metodi di trasporto dei dati oppure modificare i processi ETL per ottimizzare l'estrazione delle funzionalità.
 
-- Ottimizzare il modello analitico per evitare le inefficienze. L'ambito delle ottimizzazioni possibili variano a seconda della complessità del codice R e i pacchetti e i dati in uso. Attività principali includono eliminando le trasformazioni dei dati costose o il trasferimento di dati pianificazione o alcuna funzionalità le attività di progettazione da R o Python per SQL o i processi ETL. È anche potrebbe effettuare il refactoring di script, eliminare le installazioni del pacchetto in linea, dividere il codice R necessario seguire procedure separate per il training, assegnazione dei punteggi e valutazione o semplificare il codice per lavorare in modo più efficiente come una stored procedure.
+- Ottimizzare il modello analitico per evitare inefficienze. L'ambito delle ottimizzazioni possibili dipende dalla complessità del codice R e dai pacchetti e dai dati in uso. Le attività principali includono l'eliminazione di trasformazioni di dati costose o l'offload delle attività di preparazione dei dati o di progettazione di funzionalità da R o Python ai processi ETL o SQL. È anche possibile effettuare il refactoring degli script, eliminare le installazioni di pacchetti inline, dividere il codice R in procedure separate per la formazione, il punteggio e la valutazione oppure semplificare il codice per lavorare in modo più efficiente come stored procedure.
 
-## <a name="articles-in-this-series"></a>Articoli di questa serie
+## <a name="articles-in-this-series"></a>Articoli della serie
 
-+ [Ottimizzazione delle prestazioni per R in SQL Server - hardware](../r/sql-server-configuration-r-services.md)
++ [Ottimizzazione delle prestazioni per R in SQL Server-hardware](../r/sql-server-configuration-r-services.md)
 
-    Vengono fornite informazioni aggiuntive sulla configurazione dell'hardware che [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] viene installato e per la configurazione dell'istanza di SQL Server per supportare al meglio gli script esterni. È particolarmente utile per **gli amministratori del database**.
+    Vengono fornite informazioni aggiuntive per la configurazione [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] dell'hardware installato in e per la configurazione dell'istanza di SQL Server per supportare meglio gli script esterni. È particolarmente utile per gli **amministratori di database**.
 
-+ [Ottimizzazione delle prestazioni per R in SQL Server - codice e dati di ottimizzazione](../r/r-and-data-optimization-r-services.md)
++ [Ottimizzazione delle prestazioni per R in SQL Server-codice e ottimizzazione dei dati](../r/r-and-data-optimization-r-services.md)
 
-    Vengono forniti suggerimenti specifici su come ottimizzare script esterno per evitare problemi noti. È più utile **ai data Scientist**.
+    Fornisce suggerimenti specifici su come ottimizzare lo script esterno per evitare problemi noti. È particolarmente utile per **i data scientist**.
 
     > [!NOTE]
-    > Mentre molte delle informazioni in questa sezione si applica a R in generale, alcune informazioni sono specifiche per le funzioni analitiche RevoScaleR. Non sono disponibile per indicazioni dettagliate sulle prestazioni **revoscalepy** e altre librerie di Python è supportato.
+    > Sebbene la maggior parte delle informazioni contenute in questa sezione si applichi a R in generale, alcune informazioni sono specifiche delle funzioni analitiche RevoScaleR. Informazioni dettagliate sulle prestazioni non sono disponibili per **revoscalepy** e altre librerie Python supportate.
     >
 
-+ [Ottimizzazione delle prestazioni per R in SQL Server - metodi e i risultati](../r/performance-case-study-r-services.md)
++ [Ottimizzazione delle prestazioni per R in SQL Server-metodi e risultati](../r/performance-case-study-r-services.md)
 
-    Riepiloga quali dati sono stati usati i due casi di Studio, come è stata testata sulle prestazioni e risultati di influenza le ottimizzazioni.
+    Vengono riepilogati i dati utilizzati nei due casi di studio, il modo in cui le prestazioni sono state testate e il modo in cui le ottimizzazioni hanno influenzato i risultati.

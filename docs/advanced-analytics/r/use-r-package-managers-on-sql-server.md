@@ -1,74 +1,74 @@
 ---
-title: Usare i gestori di pacchetti R - servizi di SQL Server Machine Learning
-description: Usare i comandi R standard, ad esempio Packages per aggiungere nuovi pacchetti R per SQL Server 2016 R Services o SQL Server 2017 Machine Learning Services (In-Database).
+title: Usare i gestori di pacchetti R
+description: Usare i comandi R standard come install. Packages per aggiungere nuovi pacchetti R a SQL Server 2016 R Services o SQL Server 2017 Machine Learning Services (in-database).
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: d53725e708a5aaf6fb8476ce2d7408ffcfa7f102
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da14d2f00a6eb0c0ed52a50d27b6f1d06b062cf5
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962400"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344867"
 ---
-# <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Utilizzare i gestori di pacchetti R per installare pacchetti R in SQL Server
+# <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Usare i gestori di pacchetti R per installare i pacchetti R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-È possibile usare gli strumenti R standard per installare nuovi pacchetti in un'istanza di SQL Server 2016 o SQL Server 2017, fornendo il computer ha una porta 80 aperta e si dispone di diritti di amministratore.
+È possibile usare gli strumenti R standard per installare nuovi pacchetti in un'istanza di SQL Server 2016 o SQL Server 2017, a condizione che il computer disponga di una porta 80 aperta e che si disponga dei diritti di amministratore.
 
 > [!IMPORTANT] 
 > Assicurarsi di installare i pacchetti nella libreria predefinita associata all'istanza corrente. Non installare mai i pacchetti in una directory utente.
 
-Questa procedura Usa RGui ma è possibile usare qualsiasi altro R della riga di comando strumento che supporta l'accesso con privilegi elevato o RTerm.
+Questa procedura usa RGui, ma è possibile usare RTerm o qualsiasi altro strumento da riga di comando R che supporta l'accesso con privilegi elevati.
 
-## <a name="install-a-package-using-rgui"></a>Installare un pacchetto utilizzando RGui
+## <a name="install-a-package-using-rgui"></a>Installare un pacchetto usando RGui
 
-1. [Determinare il percorso della libreria di istanza](../package-management/default-packages.md). Passare alla cartella in cui sono installati gli strumenti R. Ad esempio, il percorso predefinito per un'istanza predefinita di SQL Server 2017 è come segue: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+1. [Determinare il percorso della libreria di istanze](../package-management/default-packages.md). Passare alla cartella in cui sono installati gli strumenti R. Il percorso predefinito per un'istanza predefinita di SQL Server 2017, ad esempio, è il seguente:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
-1. RGui.exe e scegliere **Esegui come amministratore**. Se non hai le autorizzazioni necessarie, contattare l'amministratore del database e fornire un elenco dei pacchetti che necessari.
+1. Fare clic con il pulsante destro del mouse su RGui. exe e scegliere **Esegui come amministratore**. Se non si dispone delle autorizzazioni necessarie, contattare l'amministratore del database e fornire un elenco dei pacchetti necessari.
 
-1. Dalla riga di comando, se si conosce il nome del pacchetto, è possibile digitare: `install.packages("the_package-name")` Le virgolette doppie sono necessari per il nome del pacchetto.
+1. Dalla riga di comando, se si conosce il nome del pacchetto, è possibile digitare: `install.packages("the_package-name")`Per il nome del pacchetto sono necessarie virgolette doppie.
 
-1. Quando viene richiesto un sito mirror, selezionare tutti i siti che sono utile per il percorso.
+1. Quando viene richiesto un sito mirror, selezionare un sito appropriato per la propria posizione.
 
-Se il pacchetto di destinazione dipende da pacchetti aggiuntivi, il programma di installazione di R automaticamente le dipendenze vengono scaricate e li installa automaticamente.
+Se il pacchetto di destinazione dipende da pacchetti aggiuntivi, il programma di installazione di R scaricherà automaticamente le dipendenze e le installerà automaticamente.
 
-Se si dispone di più istanze di SQL Server, ad esempio le istanze side-by-side di SQL Server 2016 R Services e SQL Server 2017 Machine Learning Services, eseguire l'installazione separatamente per ogni istanza se si desidera usare il pacchetto in entrambi i contesti. I pacchetti non possono essere condivisi tra più istanze.
+Se si dispone di più istanze di SQL Server, ad esempio istanze affiancate di SQL Server 2016 R Services e SQL Server 2017 Machine Learning Services, eseguire l'installazione separatamente per ogni istanza se si desidera utilizzare il pacchetto in entrambi i contesti. I pacchetti non possono essere condivisi tra istanze.
 
-## <a name = "bkmk_offlineInstall"></a> Installazione offline usando gli strumenti R
+## <a name = "bkmk_offlineInstall"></a>Installazione offline con strumenti R
 
-Se il server non ha accesso a internet, sono necessari passaggi aggiuntivi per preparare i pacchetti. Per installare pacchetti R in un server che non dispone dell'accesso a internet, è necessario:
+Se il server non dispone di accesso a Internet, per preparare i pacchetti sono necessari passaggi aggiuntivi. Per installare i pacchetti R in un server che non dispone di accesso a Internet, è necessario:
 
 + Analizzare le dipendenze in anticipo.
 + Scaricare il pacchetto di destinazione in un computer con accesso a Internet.
-+ Scaricare tutti i pacchetti necessari con lo stesso computer e inserire tutti i pacchetti in un archivio unico pacchetto.
-+ L'archivio ZIP se non è già in formato compresso.
-+ Copiare l'archivio di pacchetti in un percorso nel server.
-+ Installare il pacchetto di destinazione specificare il file di archivio come origine.
++ Scaricare tutti i pacchetti necessari nello stesso computer e inserire tutti i pacchetti in un unico archivio pacchetti.
++ Se non è già in formato compresso, comprimere l'archivio.
++ Copiare l'archivio del pacchetto in un percorso nel server.
++ Installare il pacchetto di destinazione specificando il file di archivio come origine.
 
 > [!IMPORTANT] 
->  Assicurarsi che si analizza tutte le dipendenze e scaricare **tutte** i pacchetti necessari **prima di** iniziare l'installazione. È consigliabile [miniCRAN](https://mran.microsoft.com/package/miniCRAN) per questo processo. Questo pacchetto R accetta un elenco dei pacchetti da installare, analizza le dipendenze e ottiene tutti i file compressi automaticamente. miniCRAN crea quindi un singolo repository che è possibile copiare nel computer server. Per informazioni dettagliate, vedere [creare un repository di pacchetti locale usando miniCRAN](create-a-local-package-repository-using-minicran.md)
+>  Assicurarsi di analizzare tutte le dipendenze e scaricare **tutti i** pacchetti necessari **prima** di iniziare l'installazione. Per questo processo è consigliabile [miniCRAN](https://mran.microsoft.com/package/miniCRAN) . Questo pacchetto R accetta un elenco di pacchetti che si vuole installare, analizza le dipendenze e ottiene tutti i file compressi. miniCRAN crea quindi un singolo repository che è possibile copiare nel computer server. Per informazioni dettagliate, vedere [creare un repository di pacchetti locale con miniCRAN](create-a-local-package-repository-using-minicran.md)
 
-Questa procedura presuppone di aver preparato tutti i pacchetti che è necessario, in formato compresso e sono pronti per copiarli nel server.
+In questa procedura si presuppone che siano stati preparati tutti i pacchetti necessari, in formato compresso, e che siano pronti per la copia nel server.
 
-1. Copia il pacchetto compressi in file o per più pacchetti, il repository completo che contiene tutti i pacchetti compressi in formato, in un percorso accessibile al server.
+1. Copiare il file compresso del pacchetto o per più pacchetti, il repository completo che contiene tutti i pacchetti in formato compresso, in una posizione a cui il server può accedere.
 
-2. Aprire la cartella nel server in cui sono installati gli strumenti R per l'istanza. Ad esempio, se si usa il prompt dei comandi di Windows in un sistema con SQL Server 2016 R Services, passare a `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`.
+2. Aprire la cartella nel server in cui sono installati gli strumenti R per l'istanza. Se ad esempio si usa il prompt dei comandi di Windows in un sistema con SQL Server 2016 R Services, passare a `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`.
 
-3. Fare clic su RGui o RTerm e selezionare **Esegui come amministratore**.
+3. Fare clic con il pulsante destro del mouse su RGui o RTerm e scegliere **Esegui come amministratore**.
 
-4. Eseguire il comando R `install.packages` e specificare il pacchetto o nome del repository e il percorso dei file compressi.
+4. Eseguire il comando `install.packages` R e specificare il nome del pacchetto o del repository e il percorso dei file compressi.
 
     ```R
     install.packages("C:\\Temp\\Downloaded packages\\mynewpackage.zip", repos=NULL)
     ```
 
-    Questo comando estrae il pacchetto R `mynewpackage` dal file compresso locale, presupponendo che la copia è stato salvato nella directory `C:\Temp\Downloaded packages`e installa il pacchetto nel computer locale. Se il pacchetto include tutte le dipendenze, il programma di installazione cerca i pacchetti esistenti nella raccolta. Se è stato creato un repository che include le dipendenze, il programma di installazione installa anche i pacchetti necessari.
+    Questo comando estrae il pacchetto `mynewpackage` R dal file compresso locale, presupponendo che la copia sia stata salvata nella directory `C:\Temp\Downloaded packages`e che il pacchetto venga installato nel computer locale. Se il pacchetto presenta dipendenze, il programma di installazione verifica la presenza di pacchetti esistenti nella libreria. Se è stato creato un repository che include le dipendenze, il programma di installazione installa anche i pacchetti necessari.
 
-    Se tutti i pacchetti necessari non sono presenti nella libreria di istanza e non sono stati trovati nei file compressi, l'installazione del pacchetto di destinazione ha esito negativo.
+    Se nella libreria di istanze non è presente alcun pacchetto necessario e non è possibile trovarlo nei file compressi, l'installazione del pacchetto di destinazione ha esito negativo.
 
 ## <a name="see-also"></a>Vedere anche
 

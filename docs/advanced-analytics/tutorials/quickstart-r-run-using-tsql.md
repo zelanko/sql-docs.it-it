@@ -1,36 +1,36 @@
 ---
-title: "Guida introduttiva per un'esecuzione di codice \"Hello World\" base R in T-SQL: SQL Server Machine Learning"
-description: Guida introduttiva per lo script R in SQL Server. Informazioni di base della chiamata al metodo di script R usando la stored procedure sp_execute_external_script in un esercizio hello-world.
+title: Guida introduttiva per un'esecuzione di codice R di base "Hello World" in T-SQL
+description: Guida introduttiva per script R in SQL Server. Informazioni di base sulla chiamata di script R con il sistema sp_execute_external_script stored procedure in un esercizio Hello-World.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 331184f49918dbb17b7b97590b3155cbc8eb89ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61b1959b9b3b0769e080a2a4a44b1d4d10ef2b61
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961980"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345979"
 ---
-# <a name="quickstart-hello-world-r-script-in-sql-server"></a>Avvio rapido: Script R di "Hello world" in SQL Server 
+# <a name="quickstart-hello-world-r-script-in-sql-server"></a>Avvio rapido: Script R "Hello World" in SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Questa Guida introduttiva illustra i concetti chiave eseguendo una "Hello World" R script inT-SQL, un'introduzione al **sp_execute_external_script** stored procedure di sistema. 
+Questa Guida introduttiva illustra i concetti chiave eseguendo uno script R "Hello World" inT-SQL, con un'introduzione al stored procedure di sistema **sp_execute_external_script** . 
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Una Guida introduttiva precedente [R verificare esiste nel Server SQL](quickstart-r-verify.md), vengono fornite informazioni e collegamenti per configurare l'ambiente R necessario per questa Guida introduttiva.
+Una guida introduttiva precedente, [Verify R exists in SQL Server](quickstart-r-verify.md), fornisce informazioni e collegamenti per la configurazione dell'ambiente R necessario per questa Guida introduttiva.
 
-## <a name="basic-r-interaction"></a>Interazione di base R
+## <a name="basic-r-interaction"></a>Interazione R di base
 
-Esistono due modi, è possibile eseguire codice R nel Database SQL:
+Esistono due modi per eseguire il codice R nel database SQL:
 
-+ Aggiungere lo script R come argomento delle stored procedure di sistema [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
-+ Da un [client R remoto](https://docs.microsoft.com/sql/advanced-analytics/r/set-up-a-data-science-client), connettersi al database SQL ed eseguire codice che usa il Database SQL come contesto di calcolo.
++ Aggiungere uno script R come argomento del stored procedure di sistema [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
++ Da un [client R remoto](https://docs.microsoft.com/sql/advanced-analytics/r/set-up-a-data-science-client)connettersi al database SQL ed eseguire il codice usando il database SQL come contesto di calcolo.
 
-L'esercizio seguente è incentrata sul modello di interazione prima: come passare il codice R a una stored procedure.
+Il seguente esercizio è incentrato sul primo modello di interazione: come passare il codice R a un stored procedure.
 
 1. Eseguire uno script semplice per vedere come viene eseguito uno script R nel database SQL.
 
@@ -46,7 +46,7 @@ L'esercizio seguente è incentrata sul modello di interazione prima: come passar
     '
     ```
 
-2. Supponendo che si dispone di tutto configurare correttamente la correttezza del risultato viene calcolato e di R `print` funzione restituisce il risultato per il **messaggi** finestra.
+2. Supponendo che tutti gli elementi impostati correttamente siano corretti, viene calcolato il risultato corretto e `print` la funzione R restituisce il risultato nella finestra **messaggi** .
 
     **Risultati**
 
@@ -55,13 +55,13 @@ L'esercizio seguente è incentrata sul modello di interazione prima: come passar
     0.5 2
     ```
 
-    Durante il recupero **stdout** messaggi è utile quando il test del codice, più spesso è necessario restituire i risultati in formato tabulare, in modo che è possibile usarlo in un'applicazione o scriverlo in una tabella. Vedere [Avvio rapido: Handle di input e output usano R in SQL Server](rtsql-working-with-inputs-and-outputs.md) per altre informazioni.
+    Il recupero dei messaggi **stdout** è utile quando si esegue il test del codice, più spesso è necessario restituire i risultati in formato tabulare, in modo che sia possibile utilizzarlo in un'applicazione o scriverlo in una tabella. Vedere [Avvio rapido: Per ulteriori informazioni, gestire input e output](rtsql-working-with-inputs-and-outputs.md) usando R in SQL Server.
 
-Tenere presente che tutti gli elementi all'interno di `@script` argomento deve essere un codice R valido.
+Tenere presente che tutto ciò `@script` che si trova all'interno dell'argomento deve essere un codice R valido.
 
-## <a name="run-a-hello-world-script"></a>Eseguire uno script Hello World
+## <a name="run-a-hello-world-script"></a>Eseguire uno script di Hello World
 
-L'esercizio seguente viene eseguito un altro script R semplici.
+L'esercizio seguente esegue un altro semplice script R.
 
 ```sql
 EXEC sp_execute_external_script
@@ -72,12 +72,12 @@ EXEC sp_execute_external_script
 GO
 ```
 
-Gli input per questa stored procedure includono:
+Gli input per questo stored procedure includono:
 
-+ *@language* parametro definisce l'estensione del linguaggio da chiamare, in questo caso R.
-+ *@script* parametro definisce i comandi passati al runtime di R. L'intero script R deve essere incluso in questo argomento come testo Unicode. È anche possibile aggiungere il testo a una variabile di tipo **nvarchar** e quindi chiamare la variabile.
-+ *@input_data_1* i dati vengono restituiti dalla query, passata al runtime di R, che restituisce i dati in SQL Server come un frame di dati.
-+ SET di risultati di clausola definisce lo schema della tabella dati restituita per SQL Server, aggiunta di "Hello World" come nome della colonna **int** per il tipo di dati.
++ *@language* il parametro definisce l'estensione del linguaggio da chiamare, in questo caso R.
++ *@script* il parametro definisce i comandi passati al runtime di R. L'intero script R deve essere incluso in questo argomento come testo Unicode. È anche possibile aggiungere il testo a una variabile di tipo **nvarchar** e quindi chiamare la variabile.
++ *@input_data_1* i dati vengono restituiti dalla query, passati al runtime di R, che restituisce i dati da SQL Server come frame di dati.
++ CON la clausola set di risultati viene definito lo schema della tabella dati restituita per SQL Server, aggiungendo "Hello World" come nome di colonna, **int** per il tipo di dati.
 
 **Risultati**
 
@@ -87,7 +87,7 @@ Gli input per questa stored procedure includono:
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Ora che è stato eseguito un paio di script R semplici, esaminiamo più da vicino strutturazione di input e output.
+Ora che sono stati eseguiti due semplici script R, è possibile esaminare in modo più approfondito la strutturazione di input e output.
 
 > [!div class="nextstepaction"]
-> [Avvio rapido: Gestire gli input e output](quickstart-r-inputs-and-outputs.md)
+> [Avvio rapido: Gestire input e output](quickstart-r-inputs-and-outputs.md)

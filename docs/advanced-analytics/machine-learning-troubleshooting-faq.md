@@ -1,28 +1,28 @@
 ---
-title: Risoluzione dei problemi e domande frequenti per machine learning - SQL Server Machine Learning Services
+title: Risoluzione dei problemi e domande frequenti per Machine Learning
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 79c03774360340698da82087b88fd8b0b0bec58e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0cd9b4808d361cdbfa661feb31134da46baec3de
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962806"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344986"
 ---
-# <a name="troubleshoot-machine-learning-in-sql-server"></a>Risolvere i problemi di apprendimento automatico in SQL Server
+# <a name="troubleshoot-machine-learning-in-sql-server"></a>Risolvere i problemi di Machine Learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Utilizzare questa pagina come punto di partenza per affrontare i problemi noti.
+Usare questa pagina come punto di partenza per risolvere i problemi noti.
 
 **Si applica a:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (R e Python)
 
 ## <a name="known-issues"></a>Problemi noti
 
-Gli articoli seguenti descrivono i problemi noti con le versioni correnti e precedenti:
+Negli articoli seguenti vengono descritti i problemi noti relativi alle versioni correnti e precedenti:
 
 + [Problemi noti per R Services](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
 + [Note sulla versione di SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)
@@ -30,26 +30,26 @@ Gli articoli seguenti descrivono i problemi noti con le versioni correnti e prec
 
 ## <a name="how-to-gather-system-information"></a>Come raccogliere informazioni di sistema
 
-Se si è verificato un errore o necessario comprendere un problema nell'ambiente in uso, è importante raccogliere le informazioni correlate in modo sistematico. L'articolo seguente fornisce un elenco di informazioni che facilita la risoluzione dei problemi di supporto autonomo o una richiesta per il supporto tecnico.
+Se si è verificato un errore o è necessario comprendere un problema nell'ambiente, è importante raccogliere sistematicamente le informazioni correlate. L'articolo seguente fornisce un elenco di informazioni che facilitano la risoluzione dei problemi di supporto autonomo o una richiesta di supporto tecnico.
 
-+ [Raccolta dei dati per la risoluzione dei problemi di apprendimento automatico](data-collection-ml-troubleshooting-process.md)
++ [Raccolta di dati per la risoluzione dei problemi di Machine Learning](data-collection-ml-troubleshooting-process.md)
 
-## <a name="setup-and-configuration-guides"></a>Guide di installazione e configurazione
+## <a name="setup-and-configuration-guides"></a>Guide all'installazione e alla configurazione
 
-Iniziare da qui se non è stato configurato machine learning con SQL Server o se si desidera aggiungere la funzionalità:
+Iniziare da qui se Machine Learning non è stato configurato con SQL Server o se si vuole aggiungere la funzionalità:
 
-+ [Installare SQL Server 2017 Machine Learning Services (In-Database)](install/sql-machine-learning-services-windows-install.md)
-+ [Installare SQL Server 2017 Machine Learning Server (Standalone)](install/sql-machine-learning-standalone-windows-install.md)
-+ [Installare SQL Server 2016 R Services (In-Database)](install/sql-r-services-windows-install.md)
-+ [Installare SQL Server 2016 R Server (Standalone)](install/sql-r-standalone-windows-install.md)
-+ [Programma di installazione di prompt dei comandi](install/sql-ml-component-commandline-install.md)
++ [Installare SQL Server Machine Learning Services 2017 (in-database)](install/sql-machine-learning-services-windows-install.md)
++ [Installare SQL Server Machine Learning Server 2017 (autonomo)](install/sql-machine-learning-standalone-windows-install.md)
++ [Installare SQL Server 2016 R Services (in-database)](install/sql-r-services-windows-install.md)
++ [Installare SQL Server R Server 2016 (autonomo)](install/sql-r-standalone-windows-install.md)
++ [Installazione dal prompt dei comandi](install/sql-ml-component-commandline-install.md)
 + [Installazione offline (senza Internet)](install/sql-ml-component-install-without-internet-access.md)
 
 ### <a name="configuration"></a>Configurazione
 
-Gli articoli seguenti contengono informazioni sui valori predefiniti e su come personalizzare la configurazione per machine learning in un'istanza di:
+Gli articoli seguenti contengono informazioni sui valori predefiniti e su come personalizzare la configurazione per Machine Learning in un'istanza:
 
-+ [Esecuzione simultanea di scalabilità di script esterni in SQL Server Machine Learning Services](administration/modify-user-account-pool.md)   
-+ [Configurare e gestire le estensioni di analitica avanzata](r/configure-and-manage-advanced-analytics-extensions.md)  
++ [Ridimensionare l'esecuzione simultanea di script esterni in SQL Server Machine Learning Services](administration/modify-user-account-pool.md)   
++ [Configurare e gestire Advanced Analytics Extensions](r/configure-and-manage-advanced-analytics-extensions.md)  
 + [Come creare un pool di risorse](r/how-to-create-a-resource-pool-for-r.md)
 + [Ottimizzazione per carichi di lavoro R](r/operationalizing-your-r-code.md)

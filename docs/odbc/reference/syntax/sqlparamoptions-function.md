@@ -1,7 +1,7 @@
 ---
 title: Funzione SQLParamOptions | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLParamOptions
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLParamOptions
@@ -19,26 +20,26 @@ helpviewer_keywords:
 ms.assetid: ee08e987-0243-4060-ab21-64da11fe444f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 40b3f876993d8c7c334594f11b87cc5d2ed8ff0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ebcd3da4f5e7d57bbc8883ebf7409ff5ea106f1
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947941"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68343534"
 ---
 # <a name="sqlparamoptions-function"></a>Funzione SQLParamOptions
 **Conformità**  
- Versione introdotta: Conformità agli standard 1.0 ODBC: Funzionalità deprecate  
+ Versione introdotta: Conformità agli standard ODBC 1,0: Funzionalità deprecate  
   
  **Riepilogo**  
- La funzione ODBC 2.0 **SQLParamOptions** è stata sostituita in ODBC 3. *x* dalle chiamate a [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
+ La funzione ODBC 2,0 **SQLParamOptions** è stata sostituita in ODBC 3. *x* mediante chiamate a [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
   
 > [!NOTE]  
->  Per altre informazioni su quali il Driver Manager esegue il mapping a questa funzione quando un ODBC 2. *x* applicazione funziona con un'applicazione ODBC 3. *x* driver, vedere [Mapping di funzioni deprecate](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) nell'appendice g: Driver linee guida per la compatibilità con le versioni precedenti.  
+>  Per ulteriori informazioni su ciò che Gestione driver esegue il mapping di questa funzione a quando ODBC 2. l'applicazione *x* funziona con ODBC 3. driver *x* , vedere [mapping di funzioni deprecate](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) nell'appendice G: Linee guida driver per la compatibilità con le versioni precedenti.  
   
 ## <a name="remarks"></a>Note  
- Visualizzare [le informazioni ODBC 64-Bit](../../../odbc/reference/odbc-64-bit-information.md), se l'applicazione verrà eseguita in un sistema operativo a 64 bit.  
+ Vedere [informazioni su ODBC 64 bit](../../../odbc/reference/odbc-64-bit-information.md), se l'applicazione viene eseguita su un sistema operativo a 64 bit.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento all'API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Informazioni di riferimento sulle API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [File di intestazione ODBC](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,43 +1,43 @@
 ---
-title: Configurazione del firewall, servizi di SQL Server Machine Learning
-description: Come configurare il firewall per le connessioni in uscita da servizi di SQL Server Machine Learning.
+title: Configurazione del firewall
+description: Come configurare il firewall per le connessioni in uscita da SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f62b42754b56ac07714eeade0d86e6c8ac582698
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 58a10c36eff06cd4e36f3e326407564b2657fec1
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962349"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345601"
 ---
 # <a name="firewall-configuration-for-sql-server-machine-learning-services"></a>Configurazione del firewall per SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Questo articolo illustra considerazioni sulla configurazione del firewall che l'amministratore o il progettista deve tenere presente quando si usa servizi di machine learning.
+Questo articolo elenca le considerazioni sulla configurazione del firewall che l'amministratore o l'architetto deve tenere in considerazione quando usa i servizi di machine learning.
 
 ## <a name="default-firewall-rules"></a>Regole del firewall predefinite
 
-Per impostazione predefinita, il programma di installazione di SQL Server disabilita le connessioni in uscita tramite la creazione di regole del firewall.
+Per impostazione predefinita, il programma di installazione di SQL Server disabilita le connessioni in uscita creando le regole del firewall.
 
-In SQL Server 2016 e 2017, queste regole sono basate su account utente locale, in cui il programma di installazione creato una regola in uscita per **SQLRUserGroup** che negato l'accesso alla rete per i relativi membri (ogni account di lavoro è stato elencato come un principio soggetto a locale la regola. Per altre informazioni sulle SQLRUserGroup, vedere [Panoramica sulla sicurezza per il framework di estendibilità in SQL Server Machine Learning Services](../../advanced-analytics/concepts/security.md#sqlrusergroup).
+In SQL Server 2016 e 2017 queste regole sono basate su account utente locali, dove il programma di installazione ha creato una regola in uscita per **SQLRUserGroup** che ha negato l'accesso alla rete ai propri membri (ogni account di lavoro è stato elencato come principio locale soggetto alla regola. Per ulteriori informazioni su SQLRUserGroup, vedere [Cenni preliminari sulla sicurezza per il Framework di estendibilità in SQL Server Machine Learning Services](../../advanced-analytics/concepts/security.md#sqlrusergroup).
 
-In SQL Server 2019, come parte del passaggio a AppContainers, sono disponibili nuove regole del firewall basate su AppContainer SIDs: uno per ognuno dei 20 AppContainers creato dal programma di installazione di SQL Server. Le convenzioni di denominazione per il nome della regola firewall **bloccare l'accesso alla rete per AppContainer 00 in SQL Server instance MSSQLSERVER**, dove 00 corrisponde al numero di AppContainer (00-20 per impostazione predefinita), e MSSQLSERVER è il nome di SQL Istanza del server.
+In SQL Server 2019, come parte del passaggio a AppContainers, sono disponibili nuove regole del firewall basate sui SID di AppContainer: una per ognuno dei 20 AppContainers creati da SQL Server installazione. Le convenzioni di denominazione per il nome della regola firewall sono **Blocca accesso alla rete per appcontainer-00 in SQL Server istanza MSSQLSERVER**, dove 00 è il numero di AppContainer (00-20 per impostazione predefinita) e MSSQLServer è il nome dell'istanza di SQL Server.
 
 > [!Note]
-> Se le chiamate di rete sono necessari, è possibile disabilitare le regole in uscita nel Firewall di Windows.
+> Se sono necessarie chiamate di rete, è possibile disabilitare le regole in uscita in Windows Firewall.
 
-## <a name="restrict-network-access"></a>Limitare l'accesso alla rete
+## <a name="restrict-network-access"></a>Limitazione dell'accesso alla rete
 
-In un'installazione predefinita, una regola del firewall Windows consente di bloccare completamente l'accesso di rete in uscita dai processi di runtime esterni. Le regole del firewall devono essere create per evitare che i processi del runtime esterni scarichi pacchetti o effettui altre chiamate di rete che potrebbero essere potenzialmente dannose.
+In un'installazione predefinita, una regola di Windows Firewall viene utilizzata per bloccare l'accesso alla rete in uscita dai processi di runtime esterni. È necessario creare regole del firewall per impedire che i processi di runtime esterni scarichino pacchetti o possano effettuare altre chiamate di rete potenzialmente dannose.
 
-Se si usa un programma firewall diverso, è anche possibile creare regole per bloccare la connessione di rete in uscita per i runtime esterni, impostando le regole per gli account utente locale o per il gruppo rappresentato dal pool di account utente.
+Se si usa un programma firewall diverso, è anche possibile creare regole per bloccare la connessione di rete in uscita per i runtime esterni, impostando regole per gli account utente locali o per il gruppo rappresentato dal pool di account utente.
 
-Si consiglia di attivare Windows Firewall (o un altro firewall di propria scelta) per impedire l'accesso alla rete senza restrizioni per i runtime di R o Python.
+È consigliabile attivare Windows Firewall (o un altro firewall di propria scelta) per impedire l'accesso alla rete senza restrizioni da parte dei runtime di R o Python.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Configurare Windows firewall per le connessioni in ingresso](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
+[Configurare Windows Firewall per le connessioni in ingresso](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
