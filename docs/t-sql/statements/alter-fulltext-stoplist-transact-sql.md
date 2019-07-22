@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fb0a6c02a3211c029c311f07a91da9b26842fc4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 692f62c6a5b9d6268a27de350a860c0cb58c74bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067548"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
 |Formato|Descrizione|  
 |------------|-----------------|  
-|String|*language_term* corrisponde al valore della colonna **alias** nella vista di compatibilità [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). La stringa deve essere racchiusa tra virgolette singole, come in **'***language_term***'**.|  
+|String|*language_term* corrisponde al valore della colonna **alias** nella vista di compatibilità [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). La stringa deve essere racchiusa tra virgolette singole, come in **'***language_term***'** .|  
 |Valore intero|*language_term* è l'identificatore LCID della lingua.|  
 |Valore esadecimale|*language_term* corrisponde a 0x seguito dal valore esadecimale dell'identificatore LCID. Il valore esadecimale non deve superare le otto cifre, inclusi gli zeri iniziali. Se il valore è in formato DBCS (Double-Byte Character Set), verrà convertito in Unicode da SQL Server.|  
   
@@ -90,7 +89,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
 ## <a name="remarks"></a>Remarks  
  CREATE FULLTEXT STOPLIST è supportato solo per il livello di compatibilità 100 e superiore. Per i livelli di compatibilità 80 e 90, l'elenco di parole non significative di sistema viene sempre assegnato al database.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per designare un elenco di parole non significative come elenco predefinito per il database è necessaria l'autorizzazione ALTER DATABASE. Per modificare in altro modo un elenco di parole non significative è necessario essere il proprietario di tale elenco o appartenere al ruolo predefinito del database **db_owner** o **db_ddladmin**.  
   
 ## <a name="examples"></a>Esempi  

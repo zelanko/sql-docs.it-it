@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 3c4afaa25ad5f9b722e47541d546e040f7ebbac1
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: c3b8061b49d0acacedae323645cd8822beaa016e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685838"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102028"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -139,7 +138,7 @@ Al termine del comando DBCC CHECKFILEGROUP, viene scritto un messaggio nel log d
 |2|Si è verificato un errore durante un ripristino di database in modalità di emergenza.|  
 |3|Indica che il comando DBCC è stato terminato a causa di un danneggiamento dei metadati.|  
 |4|È stata rilevata una violazione di accesso o asserzione.|  
-|5|Si è verificato un errore sconosciuto che ha causato l'interruzione del comando DBCC.|  
+|5|il comando DBCC è stato terminato da un errore sconosciuto.|  
   
 ## <a name="error-reporting"></a>Segnalazione errori  
 Quando un comando DBCC CHECKFILEGROUP rileva un errore di danneggiamento, viene creato un piccolo file di dump, denominato SQLDUMP*nnnn*.txt, nella directory LOG di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se le funzionalità di segnalazione degli errori e di raccolta di dati relativi all'utilizzo delle funzionalità sono abilitate per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il file verrà inoltrato automaticamente a [!INCLUDE[msCoName](../../includes/msconame-md.md)]. I dati raccolti consentono di migliorare la funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
@@ -193,7 +192,7 @@ Estimated TEMPDB space needed for CHECKTABLES (KB)
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner** .
   
 ## <a name="examples"></a>Esempi  
@@ -206,7 +205,7 @@ DBCC CHECKFILEGROUP;
 GO  
 ```  
   
-### <a name="b-checking-the-adventureworks-primary-filegroup-without-nonclustered-indexes"></a>b. Controllo del filegroup PRIMARY nel database AdventureWorks senza indici non cluster  
+### <a name="b-checking-the-adventureworks-primary-filegroup-without-nonclustered-indexes"></a>B. Controllo del filegroup PRIMARY nel database AdventureWorks senza indici non cluster  
 Nell'esempio seguente viene controllato il filegroup primario del database `AdventureWorks2012`senza gli indici non cluster, specificando il numero di identificazione del filegroup primario e l'opzione `NOINDEX`.
   
 ```sql  

@@ -7,14 +7,13 @@ ms.custom: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3187c312683713253ec60431f8892fdf0185c933
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 12758c3d340590cedecc2d9f4f149ad82d6987e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136425"
 ---
 # <a name="sql-server-help-and-feedback"></a>Guida e commenti di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +78,7 @@ In diversi forum MSDN è possibile trovare le risposte alle domande su SQL Serve
 - [Installazione e aggiornamento](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
 - [Disponibilità elevata e ripristino di emergenza](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldisasterrecovery%2Csqldatabasemirroring&filter=alltypes&sort=lastpostdesc)
 - [Strumenti di SQL Server](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools%2Cssdt&filter=alltypes&sort=lastpostdesc) 
-- [Sicurezza](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)
+- [Security](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)
 - [Replica](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlreplication&filter=alltypes&sort=lastpostdesc)
 - [Transact-SQL (T-SQL)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)
 - [SQL Server Integration Services (SSIS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices&filter=alltypes&sort=lastpostdesc)

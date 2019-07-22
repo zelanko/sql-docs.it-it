@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9af978588bddb51668acc8757eed9a6bd99e0bd9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5dbd2c35b360d3b3e1e9f6dabe7d011c20795bc0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018293"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071188"
 ---
 # <a name="grant-xml-schema-collection-permissions-transact-sql"></a>GRANT - autorizzazioni per raccolte di XML Schema (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +105,7 @@ GRANT permission  [ ,...n ] ON
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'utente che concede le autorizzazioni (o l'entità specificata con l'opzione AS) deve disporre della relativa autorizzazione con GRANT OPTION oppure di un'autorizzazione di livello superiore che include l'autorizzazione che viene concessa.  
   
  Se si utilizza l'opzione AS, sono previsti i requisiti aggiuntivi seguenti.  

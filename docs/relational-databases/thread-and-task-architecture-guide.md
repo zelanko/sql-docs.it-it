@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d0c25e433fd9e311908d1759bbe75a1e1a1f045
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+ms.openlocfilehash: 5dd4aa4c3beb769509884c6ebb75fd8c82c1c8ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629592"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058135"
 ---
 # <a name="thread-and-task-architecture-guide"></a>guida sull'architettura dei thread e delle attività
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ I thread consentono alle applicazioni complesse di ottimizzare l'utilizzo della 
 ### <a name="allocating-threads-to-a-cpu"></a>Allocazione di thread a una CPU
 Per impostazione predefinita, ogni istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avvia un singolo thread e il sistema operativo distribuisce i thread delle istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tra le CPU di un computer in base al carico. Se è stata abilitata l'affinità del processo a livello di sistema operativo, il sistema operativo assegna ogni thread a una CPU specifica. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] assegna invece thread di lavoro [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alle utilità di pianificazione che distribuiscono uniformemente i thread fra i processori (CPU).
     
-Per eseguire il multitasking, ad esempio quando più applicazioni accedono allo stesso gruppo di processori, in certi casi il sistema operativo distribuisce i thread di processi tra processori diversi. Sebbene in questo modo venga garantita una maggiore efficienza del sistema operativo, tuttavia questa attività può comportare una riduzione delle prestazioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel caso di carichi di lavoro elevati, poiché la cache di ogni processore viene ricaricata più volte con dati. In questi casi, l'assegnazione dei processori a thread specifici consente di aumentare le prestazioni poiché vengono eliminate le operazioni di ricaricamento dei processori e viene ridotta la migrazione dei thread tra i processori, limitando lo scambio di contesto. Questo tipo di associazione tra un thread e un processore è definita affinità processori. Se è stata abilitata l'affinità, il sistema operativo assegna ogni thread a una CPU specifica. 
+Per eseguire il multitasking, ad esempio quando più applicazioni accedono allo stesso gruppo di processori, in certi casi il sistema operativo distribuisce i thread di processi tra processori diversi. Sebbene in questo modo venga garantita una maggiore efficienza del sistema operativo, questa attività può comportare una riduzione delle prestazioni di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel caso di carichi di lavoro elevati, poiché la cache di ogni processore viene ricaricata più volte con dati. In tali casi, l'assegnazione dei processori a thread specifici consente di aumentare le prestazioni, in quanto le operazioni di ricaricamento dei processori vengono eliminate e si riduce la migrazione dei thread tra i processori, limitando lo scambio di contesto. Questo tipo di associazione tra un thread e un processore è definito "affinità processori". Se è stata abilitata l'affinità, il sistema operativo assegna ogni thread a una CPU specifica. 
 
 L'[opzione affinity mask](../database-engine/configure-windows/affinity-mask-server-configuration-option.md) viene impostata tramite [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md). Quando la maschera di affinità non è impostata, l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alloca uniformemente i thread di lavoro fra le utilità di pianificazione che non sono state escluse.
 

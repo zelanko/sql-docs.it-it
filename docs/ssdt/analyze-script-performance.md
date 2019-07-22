@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 01b197d8c196bb94ae399a251563bba48f4fe5ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 355259372566758c48d6a20451627a51e65c6c09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984677"
 ---
 # <a name="analyze-script-performance"></a>Analizzare le prestazioni degli script
 Gli strumenti forniti da SQL Server Data Tools consentono di determinare se è possibile migliorare le prestazioni di query, stored procedure o script. Il monitoraggio delle statistiche client quali i tempi di risposta delle query più frequenti consente, ad esempio, di determinare se sono necessarie modifiche alle query o agli indici nelle tabelle. Tali statistiche possono includere l'ora di esecuzione del client, il profilo delle query e i pacchetti/byte inviati e ricevuti.  

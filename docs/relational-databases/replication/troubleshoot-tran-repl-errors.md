@@ -10,13 +10,12 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7547ce03478e810eac4725b8b543afd9862f9ca2
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 03ffb9e8259e463c261838ffc79cf0b9c5908b39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581345"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895543"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Risoluzione dei problemi: Trovare gli errori con la replica transazionale di SQL Server 
 La risoluzione degli errori di replica può risultare frustrante senza una conoscenza di base del funzionamento della replica transazionale. Il primo passaggio per la creazione di una pubblicazione prevede che l'agente di snapshot crei lo snapshot e lo salvi nella cartella degli snapshot. Successivamente, l'agente di distribuzione applica lo snapshot al sottoscrittore. 

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f88e9da1-2c0b-4bdd-9ec5-44467707cb46
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f10a5ac6202e635d69756fa57430109c7459e353
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 898037be3f55692d7c85dbe92d00dc3f305e2ec7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326442"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082377"
 ---
 # <a name="revoke-assembly-permissions-transact-sql"></a>REVOKE - autorizzazioni per assembly (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *permission*  
  Specifica un'autorizzazione che può essere revocata in un assembly. Vedere l'elenco riportato di seguito.  
   
- ON ASSEMBLY **::**_assembly_name_  
+ ON ASSEMBLY **::** _assembly_name_  
  Specifica l'assembly per cui vengono revocate le autorizzazioni. Il qualificatore di ambito **::** è obbligatorio.  
   
  *database_principal*  
@@ -65,11 +64,11 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
   
--   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
+-   utente del database di cui è stato eseguito il mapping a un gruppo di Windows  
   
--   utente del database sul quale viene eseguito il mapping a un certificato  
+-   utente del database di cui è stato eseguito il mapping a un certificato  
   
--   utente del database mappato a una chiave asimmetrica  
+-   utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
   
 -   utente del database non mappato ad alcuna entità server.  
   
@@ -90,11 +89,11 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
   
--   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
+-   utente del database di cui è stato eseguito il mapping a un gruppo di Windows  
   
--   utente del database sul quale viene eseguito il mapping a un certificato  
+-   utente del database di cui è stato eseguito il mapping a un certificato  
   
--   utente del database mappato a una chiave asimmetrica  
+-   utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
   
 -   utente del database non mappato ad alcuna entità server.  
   
@@ -109,7 +108,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per l'assembly.  
   
 ## <a name="see-also"></a>Vedere anche  

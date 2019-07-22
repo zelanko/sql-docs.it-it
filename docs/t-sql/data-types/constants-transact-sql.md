@@ -31,14 +31,13 @@ helpviewer_keywords:
 ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5611d597145d784905ead0565bd6230b727fea0e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f469222ff5d511447574c1bfb1e0bc2500cfae6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017102"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125974"
 ---
 # <a name="constants-transact-sql"></a>Costanti (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +66,7 @@ Le stringhe vuote vengono rappresentate da due virgolette singole che non racchi
 Le costanti di stringhe di caratteri supportano regole di confronto avanzate.
   
 > [!NOTE]  
->  Le costanti carattere di dimensioni superiori a 8000 byte vengono tipizzate come dati **varchar(max)**.  
+>  Le costanti carattere di dimensioni superiori a 8000 byte vengono tipizzate come dati **varchar(max)** .  
   
 ## <a name="unicode-strings"></a>Stringhe Unicode
 Il formato delle stringhe Unicode è simile a quello delle stringhe di caratteri, ma sono precedute da un identificatore N, che nello standard SQL-92 sta per National Language. Il prefisso N deve essere maiuscolo. 'Michél', ad esempio, è una costante di caratteri, mentre N'Michél' è una costante Unicode. Le costanti Unicode vengono interpretate come dati Unicode e non vengono valutate in base a una tabella codici. Alle costanti Unicode vengono associate regole di confronto, la cui funzione principale è il controllo dei confronti e la rilevanza di maiuscole e minuscole. Non vi sono assegnate tuttavia le regole di confronto predefinite del database corrente, a meno che non siano state specificate regole di confronto specifiche tramite la clausola COLLATE. I dati Unicode vengono archiviati utilizzando 2 byte per carattere, mentre per i dati di caratteri viene utilizzato 1 byte per carattere. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
@@ -75,7 +74,7 @@ Il formato delle stringhe Unicode è simile a quello delle stringhe di caratteri
 Le costanti di stringa Unicode supportano le regole di confronto avanzate.
   
 > [!NOTE]  
->  Le costanti Unicode superiori a 8000 byte vengono tipizzate come dati **nvarchar(max)**.  
+>  Le costanti Unicode superiori a 8000 byte vengono tipizzate come dati **nvarchar(max)** .  
   
 ## <a name="binary-constants"></a>Costanti binarie
 Le costanti binarie hanno il prefisso `0x` e sono stringhe di numeri esadecimali non racchiuse tra virgolette.
@@ -90,7 +89,7 @@ Di seguito sono riportati esempi di stringhe binarie.
 ```  
   
 > [!NOTE]  
->  Le costanti binarie superiori a 8000 byte vengono tipizzate come dati **varbinary(max)**.  
+>  Le costanti binarie superiori a 8000 byte vengono tipizzate come dati **varbinary(max)** .  
   
 ## <a name="bit-constants"></a>Costanti bit
 Le costanti **bit** vengono rappresentate dai numeri 0 o 1 e non sono racchiuse tra virgolette. I numeri maggiori di uno vengono convertiti nel numero uno.

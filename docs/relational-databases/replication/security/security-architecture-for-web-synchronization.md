@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 787e3c18581339de78a5f4fcd653967566f85ece
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: da88119ea55f758d6c56a72a2acd8ac5807bf714
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124661"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051855"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Architettura di sicurezza per la sincronizzazione tramite il Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +35,10 @@ ms.locfileid: "54124661"
 |Tipo di account|Posizione in cui viene specificato l'account|  
 |---------------------|------------------------------------|  
 |Utente di Windows|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: parametri **@job_login** e **@job_password** di [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> RMO (Replication Management Objects): proprietà <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> e <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> per <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>.|  
-|Account di servizio di Windows per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent|Gestione configurazione[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |  
+|Account di servizio di Windows per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent|Gestione configurazione[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |Applicazione autonoma|L'agente di merge viene eseguito nel contesto dell'utente di Windows che esegue l'applicazione.|  
   
-## <a name="b-connection-to-the-subscriber"></a>b. Connessione al Sottoscrittore  
+## <a name="b-connection-to-the-subscriber"></a>B. Connessione al Sottoscrittore  
  L'agente di merge si connette al Sottoscrittore utilizzando l'autenticazione di Windows o l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L'utente di Windows o l'account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] specificato deve essere associato a un utente di database che sia membro del ruolo predefinito del database **dbowner** nel database di sottoscrizione.  
   
 > [!NOTE]  

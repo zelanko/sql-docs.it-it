@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5dd029115c99ae4826bf1070a7556c7fbdcb8c55
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: c10e7259062316454e4e0ecf430f6fdb87c53caf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948107"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ WRITETEXT [BULK]
  Nome della tabella e della colonna di tipo **text**, **ntext** o **image** da aggiornare. I nomi delle tabelle e delle colonne devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). I nomi del database e del proprietario sono facoltativi.  
   
  *text_ptr*  
- Valore che contiene il puntatore nei dati di tipo **text**, **ntext** o **image**. *text_ptr* deve essere di tipo **binary(16)**. Per creare un puntatore di testo, eseguire un'istruzione [INSERT](../../t-sql/statements/insert-transact-sql.md) o [UPDATE](../../t-sql/queries/update-transact-sql.md) con dati non Null per la colonna di tipo **text**, **ntext** o **image**.  
+ Valore che contiene il puntatore nei dati di tipo **text**, **ntext** o **image**. *text_ptr* deve essere di tipo **binary(16)** . Per creare un puntatore di testo, eseguire un'istruzione [INSERT](../../t-sql/statements/insert-transact-sql.md) o [UPDATE](../../t-sql/queries/update-transact-sql.md) con dati non Null per la colonna di tipo **text**, **ntext** o **image**.  
   
  WITH LOG  
  Argomento ignorato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La registrazione è definita dal modello di recupero attivo nel database.  
@@ -87,7 +86,7 @@ WRITETEXT [BULK]
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile che esistano ma non siano validi puntatori di testo all'interno di righe a dati di tipo **text**, **ntext** o **image**. Per informazioni sull'opzione text in row, vedere [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Per informazioni su come invalidare i puntatori di testo, vedere [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione UPDATE per la tabella specificata. L'autorizzazione è trasferibile in caso di trasferimento dell'autorizzazione UPDATE.  
   
 ## <a name="examples"></a>Esempi  

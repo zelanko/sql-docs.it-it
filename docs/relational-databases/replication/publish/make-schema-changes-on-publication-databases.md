@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c82c9913b75ca363d4ace1413c0c4413989c116a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db839c3afa5b3188a7a37f0575f23d3f9ebadce7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081728"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Modifiche allo schema nei database di pubblicazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +92,7 @@ ms.locfileid: "47605369"
   
 -   Per aggiungere una nuova colonna a una tabella e non includere la colonna in una pubblicazione esistente, disabilitare la replica delle modifiche dello schema e quindi eseguire ALTER TABLE \<Tabella> ADD \<Colonna>.  
   
--   Per includere una colonna esistente in una pubblicazione esistente, usare [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) o la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**.  
+-   Per includere una colonna esistente in una pubblicazione esistente, usare [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) o la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** .  
   
      Per altre informazioni, vedere [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Sarà necessario reinizializzare le sottoscrizioni.  
   
@@ -103,13 +102,13 @@ ms.locfileid: "47605369"
   
 -   Per eliminare una colonna da una pubblicazione esistente e dalla tabella nel server di pubblicazione, eseguire ALTER TABLE \<Tabella> DROP \<Colonna>. Per impostazione predefinita, la colonna viene quindi eliminata dalla tabella in tutti i Sottoscrittori.  
   
--   Per eliminare una colonna da una pubblicazione esistente, ma mantenerla nella tabella del server di pubblicazione, usare [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) o la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**.  
+-   Per eliminare una colonna da una pubblicazione esistente, ma mantenerla nella tabella del server di pubblicazione, usare [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) o la finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** .  
   
      Per altre informazioni, vedere [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Sarà necessario generare un nuovo snapshot.  
   
 -   La colonna da eliminare non può essere utilizzata nelle clausole di filtro degli articoli contenuti nelle pubblicazioni del database.  
   
--   Quando si elimina una colonna da un articolo pubblicato, considerare eventuali vincoli, indici o proprietà della colonna che potrebbero avere conseguenze sul database. Ad esempio  
+-   Quando si elimina una colonna da un articolo pubblicato, considerare eventuali vincoli, indici o proprietà della colonna che potrebbero avere conseguenze sul database. Esempio:  
   
     -   Non è possibile eliminare le colonne utilizzate in una chiave primaria dagli articoli nelle pubblicazioni transazionali, in quanto vengono utilizzate dalla replica.  
   
@@ -152,7 +151,7 @@ ms.locfileid: "47605369"
         |**filestream**|Modifica consentita|Modifica bloccata|Modifica bloccata|  
         |**date**, **time**, **datetime2**e **datetimeoffset**|Modifica consentita|Modifica consentita*|Modifica bloccata|  
   
-         * I Sottoscrittori di SQL Server Compact convertono questi tipi di dati nel Sottoscrittore.  
+         \* I Sottoscrittori di SQL Server Compact convertono questi tipi di dati nel Sottoscrittore.  
   
 -   Se si verifica un errore quando si applica una modifica dello schema, ad esempio un errore dovuto all'aggiunta di una chiave esterna che fa riferimento a una tabella non disponibile nel Sottoscrittore, la sincronizzazione ha esito negativo ed è necessario reinizializzare la sottoscrizione.  
   

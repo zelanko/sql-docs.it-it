@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 834a12c24195da635782f00e1bc3c7c4e7b6cc57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a7e0e50e22fc257b3a8429e556fe7fd2cec2c97d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800789"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017498"
 ---
 # <a name="getting-started-with-always-on-availability-groups"></a>Introduzione ai gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

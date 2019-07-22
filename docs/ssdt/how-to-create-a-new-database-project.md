@@ -17,13 +17,12 @@ f1_keywords:
 ms.assetid: 0b7883fa-b6e1-4ccf-b1d8-f522fd03a59d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5861f16d20d95ae6ba9d2024d2199b853934d355
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fb617241f9af31122993bc1d341e433ac62904f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098114"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897170"
 ---
 # <a name="how-to-create-a-new-database-project"></a>Procedura: Creare un nuovo progetto di database
 È possibile creare un nuovo progetto di database e importare lo schema del database da un database esistente, un file di script con estensione sql o un'applicazione di livello dati (con estensione dacpac). È quindi possibile richiamare gli stessi strumenti visivi della finestra di progettazione (Editor Transact\-SQL, Progettazione tabelle) disponibili per lo sviluppo del database connesso per apportare modifiche al progetto di database offline e pubblicare di nuovo le modifiche nel database di produzione. Inoltre, è possibile salvare le modifiche come script da pubblicare in un secondo momento. Se si usa il riquadro **Proprietà progetto**, è possibile impostare la piattaforma di destinazione su versioni differenti di SQL Server (incluso SQL Azure).  

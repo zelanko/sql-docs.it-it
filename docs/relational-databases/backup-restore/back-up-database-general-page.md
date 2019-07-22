@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 38b1d66f66b69f2ea46dfa9c7e74eb2e973d77f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3bbac9bbdc12e5f2c1a0fb318a91860e44131d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940929"
 ---
 # <a name="back-up-database-general-page"></a>Backup database (pagina Generale)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47705910"
   
  **Per utilizzare SQL Server Management Studio per la creazione di un backup**  
   
--   [Creare un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
+-   [Creazione di un backup completo del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
 -   [Creare un backup differenziale del database &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
   
@@ -58,7 +57,7 @@ ms.locfileid: "47705910"
   
 |Tipo di backup|Disponibile per|Restrictions|  
 |-----------------|-------------------|------------------|  
-|Completo|Database, file e filegroup|Per il database **master** è possibile eseguire solo backup completi.<br /><br /> Quando si utilizza il modello di recupero con registrazione minima, i backup di file e filegroup sono disponibili solo per filegroup di sola lettura.|  
+|Full|Database, file e filegroup|Per il database **master** è possibile eseguire solo backup completi.<br /><br /> Quando si utilizza il modello di recupero con registrazione minima, i backup di file e filegroup sono disponibili solo per filegroup di sola lettura.|  
 |Differenziale|Database, file e filegroup|Quando si utilizza il modello di recupero con registrazione minima, i backup di file e filegroup sono disponibili solo per filegroup di sola lettura.|  
 |Log delle transazioni|Log delle transazioni|I backup dei log delle transazioni non sono disponibili per il modello di recupero con registrazione minima.|  
   
@@ -90,7 +89,7 @@ ms.locfileid: "47705910"
 |||  
 |-|-|  
 |**Disco**|Indica di eseguire il backup su disco. Può trattarsi di un file di sistema o di un dispositivo di backup logico su disco creato per il database. I dischi attualmente selezionati vengono visualizzati nell'elenco **Backup su** . È possibile selezionare fino a 64 dispositivi disco per l'operazione di backup.|  
-|**Nastro**|Indica di eseguire il backup su nastro. Può trattarsi di un'unità nastro locale o di un dispositivo di backup logico su nastro creato per il database. I nastri attualmente selezionati vengono visualizzati nell'elenco **Backup su** . Il numero massimo è 64. Se al server non è collegato alcun dispositivo nastro, questa opzione è disattivata. I nastri selezionati vengono visualizzati nell'elenco **Backup su** .<br /><br /> Nota: il supporto per i dispositivi di backup su nastro verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
+|**Nastro**|Indica di eseguire il backup su nastro. Può trattarsi di un'unità nastro locale o di un dispositivo di backup logico su nastro creato per il database. I nastri attualmente selezionati vengono visualizzati nell'elenco **Backup su** . Il numero massimo è 64. Se al server non è collegato alcun dispositivo nastro, questa opzione è disattivata. I nastri selezionati vengono visualizzati nell'elenco **Backup su** .<br /><br /> Nota: Il supporto per i dispositivi di backup su nastro verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
 |**URL**|Indica di eseguire il backup in Archiviazione BLOB di Microsoft Azure.|  
   
  Il set successivo di opzioni visualizzate dipende dal tipo di destinazione selezionata. Se si seleziona Disco o Nastro, vengono visualizzate le opzioni riportate di seguito.  

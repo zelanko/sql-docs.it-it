@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 89a6251bca61f49b5acd6803702dc44cb21584c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4233a277fa20a4bd951b717bfad0039612b5e77e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861497"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037619"
 ---
 # <a name="create-a-database"></a>Creare un database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ ms.locfileid: "62861497"
   
 4.  Per creare il database accettando tutti i valori predefiniti, scegliere **OK**. In caso contrario, continuare con i passaggi facoltativi seguenti.  
   
-5.  Per modificare il nome del proprietario, fare clic su (**...**) per selezionare un nome diverso.  
+5.  Per modificare il nome del proprietario, fare clic su ( **...** ) per selezionare un nome diverso.  
   
     > [!NOTE]  
     >  L'opzione **Usa indicizzazione full-text** è sempre selezionata e visualizzata in grigio, in quanto, a partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], tutti i database utente sono abilitati per la funzionalità full-text.  

@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3829348777930a9184620d21a0969e166ce37efc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5316bb4daa281c0abedd133803965a0b0af63bdb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661309"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912767"
 ---
 # <a name="create-fulltext-stoplist-transact-sql"></a>CREATE FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "47661309"
  Le parole non significative vengono gestite nei database usando oggetti denominati *elenchi di parole non significative*. Un elenco di parole non significative è un elenco che, quando associato a un indice full-text, viene applicato alle query full-text su tale indice. Per altre informazioni, vedere [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
 > [!IMPORTANT]  
->  CREATE FULLTEXT STOPLIST, ALTER FULLTEXT STOPLIST e DROP FULLTEXT STOPLIST sono supportate solo con livello di compatibilità 100. Con livelli di compatibilità 80 e 90, queste istruzioni non sono supportate. Con tutti i livelli di compatibilità, tuttavia, l'elenco di parole non significative di sistema viene automaticamente associato ai nuovi indici full-text.  
+>  CREATE FULLTEXT STOPLIST, ALTER FULLTEXT STOPLIST e DROP FULLTEXT STOPLIST sono supportate solo con il livello di compatibilità 100. Con livelli di compatibilità 80 e 90, queste istruzioni non sono supportate. Con tutti i livelli di compatibilità, tuttavia, l'elenco di parole non significative di sistema viene automaticamente associato ai nuovi indici full-text.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -76,7 +75,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
 ## <a name="remarks"></a>Remarks  
  L'autore di un elenco di parole non significative è il proprietario dell'elenco.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per creare un elenco di parole non significative sono necessarie le autorizzazioni CREATE FULLTEXT CATALOG. Il proprietario dell'elenco di parole non significative può concedere in modo esplicito l'autorizzazione CONTROL per un elenco per consentire agli utenti di aggiungere e rimuovere parole e di eliminare l'elenco.  
   
 > [!NOTE]  

@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 803c1fccf0369497da75554842d34c72d4c5b95f
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 89f1338f2e127742a3e76b4b2dbc2f2ae5e8b8ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326812"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117134"
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
   
  Per informazioni sulla progettazione di un sistema di autorizzazioni, vedere [Introduzione alle autorizzazioni del motore di database](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CREATE SERVER ROLE o l'appartenenza al ruolo predefinito del server sysadmin.  
   
  È anche richiesta l'autorizzazione IMPERSONATE in *server_principal* per gli account di accesso, l'autorizzazione ALTER per i ruoli del server usati come *server_principal*o l'appartenenza a un gruppo di Windows usato come server_principal.  
@@ -85,7 +84,7 @@ CREATE SERVER ROLE buyers AUTHORIZATION BenMiller;
 GO  
 ```  
   
-### <a name="b-creating-a-server-role-that-is-owned-by-a-fixed-server-role"></a>b. Creazione di un ruolo del server di proprietà di un ruolo predefinito del server  
+### <a name="b-creating-a-server-role-that-is-owned-by-a-fixed-server-role"></a>B. Creazione di un ruolo del server di proprietà di un ruolo predefinito del server  
  Nell'esempio seguente viene creato il ruolo del server `auditors` di proprietà del ruolo predefinito del server `securityadmin`.  
   
 ```  

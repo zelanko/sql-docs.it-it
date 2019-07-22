@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 522ff2df33067792979e785b60417c9783d5e46a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f15ddbb8a8a58fad194750ad88f36b397aba1d22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62648810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911758"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -112,12 +111,12 @@ ALTER USER userName
  *userName*  
  Specifica il nome con cui viene identificato l'utente all'interno del database.  
   
- LOGIN **=**_loginName_  
+ LOGIN **=** _loginName_  
  Modifica il mapping di un utente associandolo a un altro account di accesso, modificando l'ID di sicurezza (SID) dell'utente in modo che corrisponda all'ID di sicurezza dell'account di accesso.  
   
  Se l'istruzione ALTER USER è l'unica istruzione in un batch SQL, il database SQL di Microsoft Azure supporta la clausola WITH LOGIN. Se l'istruzione ALTER USER non è l'unica istruzione in un batch SQL o viene eseguita in SQL dinamico, la clausola WITH LOGIN non è supportata.  
   
- NAME **=**_newUserName_  
+ NAME **=** _newUserName_  
  Specifica il nuovo nome dell'utente. *newUserName* non deve essere già presente nel database corrente.  
   
  DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
@@ -131,7 +130,7 @@ ALTER USER userName
 > [!NOTE]  
 >  Questa opzione è disponibile solo per gli utenti contenuti. Vedere [Database indipendenti](../../relational-databases/databases/contained-databases.md) e [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md) per altre informazioni.  
   
- OLD_PASSWORD **=**_'oldpassword'_  
+ OLD_PASSWORD **=** _'oldpassword'_  
  **Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Password dell'utente corrente che verrà sostituita da '*password*'. Per le password viene fatta distinzione tra maiuscole e minuscole. *OLD_PASSWORD* è necessaria per modificare una password, a meno che non si disponga dell'autorizzazione **ALTER ANY USER**. Si richiede *OLD_PASSWORD* per impedire agli utenti con autorizzazione **IMPERSONATION** di modificare la password.  
@@ -139,7 +138,7 @@ ALTER USER userName
 > [!NOTE]  
 >  Questa opzione è disponibile solo per gli utenti contenuti.  
   
- DEFAULT_LANGUAGE **=**_{ NONE | \<lcid> | \<language name> | \<language alias> }_  
+ DEFAULT_LANGUAGE **=** _{ NONE | \<lcid> | \<language name> | \<language alias> }_  
  **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifica una lingua predefinita da assegnare all'utente. Se questa opzione è impostata su NONE, la lingua predefinita viene impostata sulla lingua predefinita corrente del database. Se la lingua predefinita del database viene modificata in seguito, la lingua predefinita dell'utente rimarrà invariata. *DEFAULT_LANGUAGE* può essere l'ID locale (lcid), il nome della lingua o l'alias della lingua.  

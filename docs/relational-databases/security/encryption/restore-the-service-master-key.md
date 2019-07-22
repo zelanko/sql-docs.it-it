@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
 author: aliceku
 ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: cf93c5a2918089bffd8bfe724f165d20722af086
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: c16742fe161f947e6256537ce04f36f9a07a89a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997533"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111618"
 ---
 # <a name="restore-the-service-master-key"></a>Ripristino della chiave master del servizio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "53997533"
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
 È richiesta l'autorizzazione CONTROL SERVER per il server.  
   
 ## <a name="using-transact-sql"></a>Utilizzo di Transact-SQL  
@@ -55,7 +54,7 @@ ms.locfileid: "53997533"
   
 3. Sulla barra Standard fare clic su **Nuova query**.  
   
-4. Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+4. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```sql
     -- Restores the service master key from a backup file.  
