@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 272702dcf1d6fa05af9c8df3fa1562a1752890ec
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 33a8623c3e098589015a00185c8ab2a895b1410b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050766"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT - autorizzazioni per Service Broker (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,19 +55,19 @@ GRANT permission  [ ,...n ] ON
  *permission*  
  Specifica un'autorizzazione che può essere concessa per un'entità a protezione diretta di Service Broker.  Vedere l'elenco riportato di seguito.  
   
- CONTRACT **::**_contract_name_  
+ CONTRACT **::** _contract_name_  
  Specifica il contratto per cui viene concessa l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
- MESSAGE TYPE **::**_message_type_name_  
+ MESSAGE TYPE **::** _message_type_name_  
  Specifica il tipo di messaggio per cui viene concessa l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
- REMOTE SERVICE BINDING **::**_remote_binding_name_  
+ REMOTE SERVICE BINDING **::** _remote_binding_name_  
  Specifica l'associazione al servizio remoto per cui viene concessa l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
- ROUTE **::**_route_name_  
+ ROUTE **::** _route_name_  
  Specifica la route per cui viene concessa l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
- SERVICE **::**_service_name_  
+ SERVICE **::** _service_name_  
  Specifica il servizio per cui viene concessa l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
  *database_principal*  
@@ -82,11 +81,11 @@ GRANT permission  [ ,...n ] ON
   
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
   
--   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
+-   utente del database di cui è stato eseguito il mapping a un gruppo di Windows  
   
--   utente del database sul quale viene eseguito il mapping a un certificato  
+-   utente del database di cui è stato eseguito il mapping a un certificato  
   
--   utente del database mappato a una chiave asimmetrica  
+-   utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
   
 -   utente del database non mappato ad alcuna entità server.  
   
@@ -104,11 +103,11 @@ GRANT permission  [ ,...n ] ON
   
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
   
--   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
+-   utente del database di cui è stato eseguito il mapping a un gruppo di Windows  
   
--   utente del database sul quale viene eseguito il mapping a un certificato  
+-   utente del database di cui è stato eseguito il mapping a un certificato  
   
--   utente del database mappato a una chiave asimmetrica  
+-   utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
   
 -   utente del database non mappato ad alcuna entità server.  
   
@@ -167,7 +166,7 @@ GRANT permission  [ ,...n ] ON
 |ALTER|CONTROL|ALTER ANY SERVICE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'utente che concede le autorizzazioni (o l'entità specificata con l'opzione AS) deve disporre della relativa autorizzazione con GRANT OPTION oppure di un'autorizzazione di livello superiore che include l'autorizzazione che viene concessa.  
   
  Se si usano l'opzione AS, sono previsti questi requisiti aggiuntivi.  

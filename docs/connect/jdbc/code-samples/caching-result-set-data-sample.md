@@ -1,5 +1,5 @@
 ---
-title: Risultato di memorizzazione nella cache Set di dati di esempio | Microsoft Docs
+title: Esempio di dati del set di risultati di memorizzazione nella cache | Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 13a95ebb-996c-4713-a1bd-5834fe22a334
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cce04a407d1407c61c780a0959a16c853adbd452
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7a9a0affa46cb8ca12b8c1f777709bdea84bc617
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957269"
 ---
 # <a name="caching-result-set-data-sample"></a>Esempio di memorizzazione nella cache dei dati dei set di risultati
 
@@ -30,7 +29,7 @@ Con questa applicazione di esempio [!INCLUDE[jdbcNoVersion](../../../includes/jd
 Per impostare un limite per il numero di righe memorizzate nella cache del client, è prima necessario usare un cursore lato server quando si crea uno degli oggetti Statement specificando esplicitamente il tipo di cursore da usare durante la creazione dell'oggetto Statement. Ad esempio, nel driver JDBC è disponibile il tipo di cursore TYPE_SS_SERVER_CURSOR_FORWARD_ONLY, ovvero un cursore lato server di sola lettura, fast forward only, da usare con i database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
-> Un'alternativa all'utilizzo del tipo di cursore specifico per SQL Server è l'utilizzo della proprietà della stringa di connessione selectMethod, impostandone il valore su "cursor". Per altre informazioni sui tipi di cursore supportati dal driver JDBC, vedere [informazioni sui tipi di cursore](../../../connect/jdbc/understanding-cursor-types.md).  
+> Un'alternativa all'utilizzo del tipo di cursore specifico per SQL Server è l'utilizzo della proprietà della stringa di connessione selectMethod, impostandone il valore su "cursor". Per ulteriori informazioni sui tipi di cursore supportati dal driver JDBC per, vedere [informazioni sui tipi di cursore](../../../connect/jdbc/understanding-cursor-types.md).  
   
 Dopo che è stata eseguita la query nell'oggetto Statement e dopo che al client sono stati restituiti i dati come set di risultati, è possibile chiamare il metodo setFetchSize per controllare la quantità dei dati recuperati contemporaneamente dal database. Ad esempio, se si dispone di una tabella che contiene 100 righe di dati e si imposta su 10 la dimensione del recupero, verranno inserite nella cache del client solo 10 righe di dati in qualsiasi momento. In questo modo verrà ridotta la velocità di elaborazione dei dati, ma si otterrà il vantaggio di utilizzare una quantità inferiore di memoria nel client, il che può risultare particolarmente utile quando si elaborano grandi quantità di dati.  
   
@@ -42,7 +41,7 @@ Il file di codice per questo esempio è CacheResultSet.java, disponibile nel per
 
 ## <a name="requirements"></a>Requisiti  
 
-Per eseguire questa applicazione di esempio, è necessario impostare il classpath in modo da includere il file con estensione jar mssql-jdbc. È anche necessario accedere al database di esempio di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Per altre informazioni su come impostare il classpath, vedere [utilizza il Driver JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
+Per eseguire questa applicazione di esempio, è necessario impostare il classpath in modo da includere il file con estensione jar mssql-jdbc. È anche necessario accedere al database di esempio di [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Per ulteriori informazioni su come impostare il classpath, vedere [utilizzo del driver JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
 > Con [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sono inclusi file di libreria di classi mssql-jdbc da usare a seconda delle impostazioni Java Runtime Environment (JRE) preferite. Per altre informazioni su quale file JAR scegliere, vedere [Requisiti di sistema per il driver JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  

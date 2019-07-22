@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 7a4db7bb-c442-4e12-9a8a-114da5bc7710
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df9cc3231b9e883857563b2f7ed0bf8bc8d1a2f3
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070267"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -77,7 +76,7 @@ Per la modifica dell'appartenenza al ruolo, `ALTER SERVER ROLE` sostituisce sp_a
   
 Per modificare il proprietario di un ruolo del server definito dall'utente, usare [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 Per modificare il nome di un ruolo del server definito dall'utente è richiesta l'autorizzazione `ALTER ANY SERVER ROLE` per il server.  
   
 **Ruoli predefiniti del server**  
@@ -105,7 +104,7 @@ ALTER SERVER ROLE Product WITH NAME = Production ;
 GO  
 ```  
   
-### <a name="b-adding-a-domain-account-to-a-server-role"></a>b. Aggiunta di un account di dominio a un ruolo del server  
+### <a name="b-adding-a-domain-account-to-a-server-role"></a>B. Aggiunta di un account di dominio a un ruolo del server  
 Nell'esempio seguente viene aggiunto un account di dominio denominato `adventure-works\roberto0` al ruolo del server definito dall'utente denominato `Production`.  
   
 ```  

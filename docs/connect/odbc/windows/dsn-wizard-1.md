@@ -1,5 +1,5 @@
 ---
-title: Schermata di creazione guidata 1 (Driver ODBC per SQL Server) dell'origine dati | Microsoft Docs
+title: Schermata 1 della creazione guidata origine dati (driver ODBC per SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e8c961487aaff7e6aa57ea8add571ccbc2945dee
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f6edf465f5b853008c9bdc8c420f6e862e360593
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936608"
 ---
 # <a name="data-source-wizard-screen-1"></a>Creazione guidata origine dati - Schermata 1
 
@@ -34,7 +33,7 @@ Descrizione facoltativa dell'origine dati, ad esempio "Date collaborazioni, cron
 
 ### <a name="select-or-enter-a-server-name"></a>Selezionare o immettere il nome di un server
 
-Il nome di un'istanza di SQL Server nella rete. Sarà necessario specificare un server nella casella di modifica successiva.
+Nome di un'istanza di SQL Server sulla rete. Sarà necessario specificare un server nella casella di modifica successiva.
 
 Nella maggior parte dei casi, il driver ODBC può connettersi usando l'ordine dei protocolli predefinito e il nome del server specificato in questa casella. Usare Gestione configurazione SQL Server se si vuole creare un alias per il server o configurare librerie di rete client.
 
@@ -48,7 +47,7 @@ Se le informazioni specificate in questa schermata sono le uniche necessarie per
 
 ### <a name="next"></a>Avanti
 
-Per passare alla schermata successiva della procedura guidata, fare clic su **successivo**.
+Per passare alla schermata successiva della procedura guidata, fare clic su **Avanti**.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d9cdb5c17a74b600b640872d7b153f715da8e15a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1fae39a6cd0fcd61b18419f8e46786067a4a69dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62999603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134814"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Distribuire un database tramite un'applicazione livello dati
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -105,7 +104,7 @@ ms.locfileid: "62999603"
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] :**  
   
--   **Edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** : selezionare l'edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nel menu a discesa.  
+-   **Edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**: selezionare l'edizione di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nel menu a discesa.  
   
 -   **Dimensioni massime database**: selezionare le dimensioni massime del database dal menu a discesa.  
   

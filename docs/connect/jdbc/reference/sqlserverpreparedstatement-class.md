@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a8481c06-fbba-432b-8c69-4f4619c20ad4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7112a20f7811a0796396045c50b1b243ed0c3802
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 96d2e01d4ca8d38b79906ee31cc5b50df0d8cb25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796945"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970764"
 ---
 # <a name="sqlserverpreparedstatement-class"></a>Classe SQLServerPreparedStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public class SQLServerPreparedStatement
   
  SQLServerPreparedStatement supporta l'esecuzione in batch in cui un set di istruzioni preparate viene eseguito in un solo round trip del database per migliorare le prestazioni di esecuzione.  
   
- Questa classe supporta l'annullamento del wrapping nella classe SQLServerPreparedStatement, interfaccia ISQLServerPreparedStatement, interfaccia PreparedStatement e le classi e le interfacce supportate da SQLServerStatement per annullamento del wrapping. Per altre informazioni, vedere [wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Questa classe supporta l'annullamento del wrapping nella classe SQLServerPreparedStatement, l'interfaccia ISQLServerPreparedStatement, l'interfaccia java. SQL. PreparedStatement e le classi e le interfacce supportate da SQLServerStatement per l'annullamento del wrapping. Per ulteriori informazioni, vedere [wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

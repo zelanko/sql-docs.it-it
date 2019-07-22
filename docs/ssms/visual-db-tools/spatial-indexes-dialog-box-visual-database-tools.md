@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 026e2f7bd27f5e21a1cce0afdc3d29704a1ae1e9
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: a4d8ce987edf5595c0f1f75bb0da6d94c5399033
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681238"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263568"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Finestra di dialogo Indici spaziali (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -90,7 +89,7 @@ Se viene espansa, visualizza i campi delle proprietà **Nome** e **Descrizione**
 Visualizza il nome dell'indice spaziale. Quando viene creato un nuovo indice, gli viene assegnato un nome predefinito sulla base della tabella presente nella finestra attiva di Progettazione tabelle. Il nome può essere modificato in qualunque momento.  
   
 **Descrizione**  
-Descrive l'indice. Per inserire una descrizione più dettagliata, fare clic su **Descrizione** e sui puntini di sospensione ( **...** ) a destra del campo della proprietà. Viene così visualizzata un'area più grande in cui scrivere il testo.  
+Descrive l'indice. Per inserire una descrizione più dettagliata, fare clic su **Descrizione** e sui puntini di sospensione (**...**) a destra del campo della proprietà. Viene così visualizzata un'area più grande in cui scrivere il testo.  
   
 **Categoria Progettazione tabelle**  
 Se viene espansa, visualizza le informazioni relative alle proprietà dell'indice spaziale.  

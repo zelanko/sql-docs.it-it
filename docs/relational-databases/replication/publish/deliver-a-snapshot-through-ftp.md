@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e06cc6312c88139be3d4225ddd4e92fe432f4bb3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 3d39fcd8df1f62bd089361a9a32ef7a59aa113a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907697"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Recapito di snapshot tramite FTP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ Per impostazione predefinita, gli snapshot vengono archiviati in cartelle defini
  Se possibile, richiedere agli utenti di immettere le credenziali in fase di esecuzione. Se si archiviano le credenziali in un file script, è necessario proteggere il file.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
- Dopo la configurazione del server FTP specificare la directory e le informazioni di sicurezza relative a questo server nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>**. Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Dopo la configurazione del server FTP specificare la directory e le informazioni di sicurezza relative a questo server nella finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** . Per ulteriori informazioni sull'accesso a questa finestra di dialogo, vedere [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-ftp-information"></a>Per specificare informazioni FTP  
   
@@ -72,18 +71,18 @@ Per altre informazioni su come modificare le proprietà di posizione della carte
 
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  È possibile impostare l'opzione per rendere i file snapshot disponibili in un server FTP e modificare le impostazioni FTP a livello di programmazione utilizzando stored procedure di replica. La stored procedure utilizzata varia a seconda del tipo di pubblicazione. Il recapito di snapshot tramite FTP viene utilizzato solo con le sottoscrizioni pull.  
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-snapshot-or-transactional-publication"></a>Per abilitare il recapito di snapshot tramite FTP per una pubblicazione snapshot o transazionale  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Specificare **@publication**, il valore **true** per **@enabled_for_internet**e valori appropriati per i parametri seguenti:  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Specificare **@publication** , il valore **true** per **@enabled_for_internet** e valori appropriati per i parametri seguenti:  
   
     -   **@ftp_address** : indirizzo del server FTP utilizzato per il recapito dello snapshot.  
   
     -   (Facoltativo) **@ftp_port** : porta utilizzata dal server FTP.  
   
-    -   (Facoltativo) **@ftp_subdirectory** : la sottodirectory della directory FTP predefinita assegnata a un account di accesso FTP. Ad esempio, se la radice del server FTP è \\\serverftp\home e si vogliono archiviare gli snapshot in \\\serverftp\home\snapshot, specificare **\snapshots\ftp** per **@ftp_subdirectory**. La replica aggiungerà "ftp" al percorso della cartella snapshot durante la creazione di file di snapshot.  
+    -   (Facoltativo) **@ftp_subdirectory** : la sottodirectory della directory FTP predefinita assegnata a un account di accesso FTP. Ad esempio, se la radice del server FTP è \\\serverftp\home e si vogliono archiviare gli snapshot in \\\serverftp\home\snapshot, specificare **\snapshots\ftp** per **@ftp_subdirectory** . La replica aggiungerà "ftp" al percorso della cartella snapshot durante la creazione di file di snapshot.  
   
     -   (Facoltativo) **@ftp_login** : account di accesso utilizzato per la connessione al server FTP.  
   
@@ -93,13 +92,13 @@ Per altre informazioni su come modificare le proprietà di posizione della carte
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-merge-publication"></a>Per attivare il recapito di snapshot tramite FTP per una pubblicazione di tipo merge  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Specificare **@publication**, il valore **true** per **@enabled_for_internet** e valori appropriati per i parametri seguenti:  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Specificare **@publication** , il valore **true** per **@enabled_for_internet** e valori appropriati per i parametri seguenti:  
   
     -   **@ftp_address** : indirizzo del server FTP utilizzato per il recapito dello snapshot.  
   
     -   (Facoltativo) **@ftp_port** : porta utilizzata dal server FTP.  
   
-    -   (Facoltativo) **@ftp_subdirectory** : la sottodirectory della directory FTP predefinita assegnata a un account di accesso FTP. Ad esempio, se la radice del server FTP è \\\serverftp\home e si vogliono archiviare gli snapshot in \\\serverftp\home\snapshot, specificare **\snapshots\ftp** per **@ftp_subdirectory**. La replica aggiungerà "ftp" al percorso della cartella snapshot durante la creazione di file di snapshot.  
+    -   (Facoltativo) **@ftp_subdirectory** : la sottodirectory della directory FTP predefinita assegnata a un account di accesso FTP. Ad esempio, se la radice del server FTP è \\\serverftp\home e si vogliono archiviare gli snapshot in \\\serverftp\home\snapshot, specificare **\snapshots\ftp** per **@ftp_subdirectory** . La replica aggiungerà "ftp" al percorso della cartella snapshot durante la creazione di file di snapshot.  
   
     -   (Facoltativo) **@ftp_login** : account di accesso utilizzato per la connessione al server FTP.  
   
@@ -109,23 +108,23 @@ Per altre informazioni su come modificare le proprietà di posizione della carte
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication-that-uses-ftp-snapshot-delivery"></a>Per creare una sottoscrizione pull in una pubblicazione snapshot o transazionale che utilizza il recapito di snapshot tramite FTP  
   
-1.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Specificare **@publisher** e **@publication**.  
+1.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Specificare **@publisher** e **@publication** .  
   
-    -   Nel database di sottoscrizione del Sottoscrittore eseguire [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specificare **@publisher**, **@publisher_db**, **@publication**, le credenziali di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows utilizzate per l'esecuzione dell'agente di distribuzione nel Sottoscrittore per **@job_login** e **@job_password**e il valore **true** per **@use_ftp**.  
+    -   Nel database di sottoscrizione del Sottoscrittore eseguire [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specificare **@publisher** , **@publisher_db** , **@publication** , le credenziali di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows utilizzate per l'esecuzione dell'agente di distribuzione nel Sottoscrittore per **@job_login** e **@job_password** e il valore **true** per **@use_ftp** .  
   
 2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) per registrare la sottoscrizione pull. Per altre informazioni, vedere [Creazione di una sottoscrizione pull](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication-that-uses-ftp-snapshot-delivery"></a>Per creare una sottoscrizione pull in una pubblicazione di tipo merge che utilizza il recapito di snapshot tramite FTP  
   
-1.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Specificare **@publisher** e **@publication**.  
+1.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Specificare **@publisher** e **@publication** .  
   
-2.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). Specificare **@publisher**, **@publisher_db**, **@publication**, le credenziali di Windows utilizzate per l'esecuzione dell'agente di distribuzione nel Sottoscrittore per **@job_login** e **@job_password**e il valore **true** per **@use_ftp**.  
+2.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). Specificare **@publisher** , **@publisher_db** , **@publication** , le credenziali di Windows utilizzate per l'esecuzione dell'agente di distribuzione nel Sottoscrittore per **@job_login** e **@job_password** e il valore **true** per **@use_ftp** .  
   
 3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) per registrare la sottoscrizione pull. Per altre informazioni, vedere [Creazione di una sottoscrizione pull](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
 #### <a name="to-change-one-or-more-ftp-snapshot-delivery-settings-for-a-snapshot-or-transactional-publication"></a>Per modificare una o più impostazioni del recapito di snapshot tramite FTP per una pubblicazione snapshot o transazionale  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Specificare uno dei valori seguenti per **@property** e un nuovo valore di questa impostazione per **@value**:  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Specificare uno dei valori seguenti per **@property** e un nuovo valore di questa impostazione per **@value** :  
   
     -   **ftp_address** : indirizzo del server FTP utilizzato per il recapito dello snapshot.  
   
@@ -139,11 +138,11 @@ Per altre informazioni su come modificare le proprietà di posizione della carte
   
 2.  (Facoltativo) Ripetere il passaggio 1 per ogni impostazione FTP da modificare.  
   
-3.  (Facoltativo) Per disabilitare il recapito di snapshot tramite FTP, eseguire [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) nel database di pubblicazione del server di pubblicazione. Specificare il valore **enabled_for_internet** per **@property** e il valore **false** per **@value**.  
+3.  (Facoltativo) Per disabilitare il recapito di snapshot tramite FTP, eseguire [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) nel database di pubblicazione del server di pubblicazione. Specificare il valore **enabled_for_internet** per **@property** e il valore **false** per **@value** .  
   
 #### <a name="to-change-ftp-snapshot-delivery-settings-for-a-merge-publication"></a>Per modificare le impostazioni del recapito di snapshot tramite FTP per una pubblicazione di tipo merge  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Specificare uno dei valori seguenti per **@property** e un nuovo valore di questa impostazione per **@value**:  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Specificare uno dei valori seguenti per **@property** e un nuovo valore di questa impostazione per **@value** :  
   
     -   **ftp_address** : indirizzo del server FTP utilizzato per il recapito dello snapshot.  
   
@@ -157,7 +156,7 @@ Per altre informazioni su come modificare le proprietà di posizione della carte
   
 2.  (Facoltativo) Ripetere il passaggio 1 per ogni impostazione FTP da modificare.  
   
-3.  (Facoltativo) Per disabilitare il recapito di snapshot tramite FTP, eseguire [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) nel database di pubblicazione del server di pubblicazione. Specificare il valore **enabled_for_internet** per **@property** e il valore **false** per **@value**.  
+3.  (Facoltativo) Per disabilitare il recapito di snapshot tramite FTP, eseguire [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) nel database di pubblicazione del server di pubblicazione. Specificare il valore **enabled_for_internet** per **@property** e il valore **false** per **@value** .  
   
 ###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
  Nell'esempio seguente viene creata una pubblicazione di tipo merge che consente ai Sottoscrittori di accedere ai dati dello snapshot tramite FTP. Il Sottoscrittore deve utilizzare una connessione VPN sicura per l'accesso alla condivisione FTP. I valori dell'account di accesso e della password vengono forniti tramite le variabili di scripting**sqlcmd** . Per altre informazioni, vedere [Usare sqlcmd con variabili di scripting](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  

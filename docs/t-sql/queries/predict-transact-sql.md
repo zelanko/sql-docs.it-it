@@ -16,14 +16,13 @@ helpviewer_keywords:
 - PREDICT clause
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f93217e87bf081ed8f7c551fd4c9e6ccb7807ef
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: c50bdedab94a2bd9dd1c6da6556fbd882412fe45
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334508"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141313"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -101,7 +100,7 @@ Per usare la funzione `PREDICT` non è necessario che nel server sia installato 
 
 Il modello da usare deve essere stato creato con uno degli algoritmi supportati del pacchetto RevoScaleR. Per l'elenco dei modelli attualmente supportati, vedere [Assegnazione dei punteggi in tempo reale](../../advanced-analytics/real-time-scoring.md).
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorizzazioni
 
 Per `PREDICT` non sono necessarie autorizzazioni specifiche. L'utente, tuttavia, ha bisogno dell'autorizzazione `EXECUTE` per il database e dell'autorizzazione per eseguire query su tutti i dati usati come input. Se il modello è stato archiviato in una tabella, l'utente deve anche essere in grado di leggerlo dalla tabella.
 

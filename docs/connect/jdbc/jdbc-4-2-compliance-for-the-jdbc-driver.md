@@ -1,5 +1,5 @@
 ---
-title: JDBC 4.2 conformità per il Driver JDBC | Microsoft Docs
+title: Conformità con JDBC 4,2 per il driver JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f52dd4a9fe86b9c4ab94ddbca2b00872244a4345
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3a35c7592eb6e5b95d1dee4a953b98fcde12845b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956399"
 ---
 # <a name="jdbc-42-compliance-for-the-jdbc-driver"></a>Conformità con JDBC 4.2 per il driver JDBC
 

@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: be0398f868eaac63ca13aaf8989ad8316ae06476
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: c529a7f64fb3db9bdbe7d18cb5a5cb36ebdd9786
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037625"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Creare un alias del tipo di dati definito dall'utente
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ ms.locfileid: "67584290"
      **Lunghezza/Precisione**  
      Consente di visualizzare la lunghezza o la precisione del tipo di dati. L'opzione**Lunghezza** viene applicata ai tipi di dati carattere definiti dall'utente mentre **Precisione** solo ai tipi di dati numerici definiti dall'utente. L'etichetta varia a seconda del tipo di dati selezionato in precedenza. Se la lunghezza o la precisione del tipo di dati selezionato è fissa, la casella non è modificabile.  
   
-     La lunghezza non viene visualizzata per tipi di dati **nvarchar(max)** , **varchar(max)** o **varbinary(max)** .  
+     La lunghezza non viene visualizzata per tipi di dati **nvarchar(max)**, **varchar(max)** o **varbinary(max)** .  
   
      **Nome**  
      Se si crea un nuovo alias del tipo di dati definito dall'utente, digitare un nome univoco da utilizzare nel database per rappresentare il tipo di dati definito dall'utente. Il numero massimo di caratteri deve corrispondere al tipo di dati del sistema **sysname** . Il nome di un alias del tipo di dati definito dall'utente esistente non può essere modificato.  
@@ -97,7 +96,7 @@ ms.locfileid: "67584290"
   
      Per i tipi di dati **nchar** e **nvarchar** il valore di archiviazione è sempre il doppio del valore specificato in **Lunghezza**.  
   
-     L'archiviazione non viene visualizzata per tipi di dati **nvarchar(max)** , **varchar(max)** o **varbinary(max)** .  
+     L'archiviazione non viene visualizzata per tipi di dati **nvarchar(max)**, **varchar(max)** o **varbinary(max)** .  
   
 2.  Nella casella **Schema** della finestra di dialogo **Nuovo tipo di dati definito dall'utente** digitare lo schema proprietario per questo alias del tipo di dati oppure usare il pulsante sfoglia per selezionare lo schema.  
   

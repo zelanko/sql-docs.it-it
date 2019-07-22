@@ -27,13 +27,12 @@ f1_keywords:
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3d95c52bc55df0a7693ee698cc5f01252c05949f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5de3a6bef68955611290cce77b95989b7ff72c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110628"
 ---
 # <a name="transact-sql-editor-options"></a>Opzioni dell'editor Transact-SQL
 In questo argomento sono contenute informazioni su alcune opzioni dell'editor Transact-SQL. Per impostare queste opzioni, passare alla finestra **Opzione** tramite il menu **Strumenti\Opzioni**.  
@@ -68,7 +67,7 @@ In questo argomento sono contenute informazioni su alcune opzioni dell'editor Tr
 |**SET CURSOR_CLOSE_ON_COMMIT**|Controlla se il cursore non viene chiuso quando una transazione viene confermata. Per altre informazioni, vedere [SET CURSOR_CLOSE_ON_COMMIT](https://go.microsoft.com/fwlink/?LinkId=238754).|  
 |**SET ANSI_PADDING**|Controlla la modalità di archiviazione nella colonna dei valori di dimensioni inferiori alle dimensioni definite per la colonna e dei valori che includono spazi vuoti finali con tipo di dati **char**, **varchar**, **binary**e **varbinary** . Per altre informazioni, vedere [SET ANSI_PADDING](https://go.microsoft.com/fwlink/?LinkId=238755).|  
 |**SET ANSI_WARNINGS**|Specifica il comportamento standard SQL-92 per diverse condizioni di errore. Per altre informazioni, vedere [SET ANSI_WARNINGS](https://go.microsoft.com/fwlink/?LinkId=238758).|  
-|**SET ANSI_NULLS**|Specifica la conformità del comportamento agli standard SQL-92 per gli operatori di confronto uguale a ( **=** ) e diverso da ( **<>** ) quando vengono usati con valori Null. Per altre informazioni, vedere [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759).|  
+|**SET ANSI_NULLS**|Specifica la conformità del comportamento agli standard SQL-92 per gli operatori di confronto uguale a (**=**) e diverso da (**<>**) quando vengono usati con valori Null. Per altre informazioni, vedere [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759).|  
   
 ## <a name="QueryResults"></a>Risultati query  
   
