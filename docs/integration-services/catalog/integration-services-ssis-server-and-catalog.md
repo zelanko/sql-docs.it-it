@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 81739ff18b8030194b3cb2d2245abb5983fd2725
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b0911b650d164e1ae53281b70d6822353b1f2cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070686"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Server e catalogo di Integration Services (SSIS)
 

@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 50360a46d7eaba31ad60a94e3e624a641ec1c6ea
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 0e0a46138b9e6c4ccaff09c1ab5261f739deb6b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006485"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +94,7 @@ AS condition_expression
   
  Se a una colonna sono associati sia un valore predefinito che una regola, il valore predefinito deve essere compreso nel dominio definito dalla regola. Un valore predefinito in conflitto con una regola non viene immesso. Ogni tentativo di immettere un valore predefinito di questo tipo causa la visualizzazione di un messaggio di errore.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire l'istruzione CREATE RULE, è necessario disporre almeno dell'autorizzazione CREATE RULE per il database corrente e dell'autorizzazione ALTER per lo schema in cui la regola viene creata.  
   
 ## <a name="examples"></a>Esempi  
@@ -109,7 +108,7 @@ AS
 @range>= $1000 AND @range <$20000;  
 ```  
   
-### <a name="b-creating-a-rule-with-a-list"></a>b. Creazione di una regola con un elenco  
+### <a name="b-creating-a-rule-with-a-list"></a>B. Creazione di una regola con un elenco  
  Nell'esempio seguente viene creata una regola che limita ai soli valori in essa elencati i valori effettivi immessi nella colonna o nelle colonne a cui la regola è associata.  
   
 ```  

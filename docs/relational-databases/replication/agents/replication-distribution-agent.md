@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4c436c6c9b0c20d99e5de168aa375f66f2e76999
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12d61ca049f74268eda66e612d4b79406b42114e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665508"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027746"
 ---
 # <a name="replication-distribution-agent"></a>Agente distribuzione repliche
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,14 +91,14 @@ distrib [-?]
  **-?**  
  Stampa tutti i parametri disponibili.  
   
- **-Publisher** _server_name_[ **\\** _instance_name_]  
- Nome del server di pubblicazione. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server_name_ **\\** _instance_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
+ **-Publisher** _server_name_[**\\**_instance_name_]  
+ Nome del server di pubblicazione. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server_name_**\\**_instance_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
   
  **-PublisherDB** _publisher_database_  
  Nome del database del server di pubblicazione.  
   
- **-Subscriber** _server_name_[ **\\** _instance_name_]  
- Nome del Sottoscrittore. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server_name_ **\\** _instance_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
+ **-Subscriber** _server_name_[**\\**_instance_name_]  
+ Nome del Sottoscrittore. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server_name_**\\**_instance_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
   
  **-SubscriberDB** _subscriber_database_  
  Nome del database Sottoscrittore.  
@@ -233,7 +232,7 @@ distrib [-?]
  **-QuotedIdentifier** _quoted_identifier_  
  Specifica il carattere dell'identificatore tra virgolette da utilizzare. Il primo carattere del valore indica il valore utilizzato dall'agente di distribuzione. Se **QuotedIdentifier** viene usato senza valore, l'agente di distribuzione usa uno spazio. Se **QuotedIdentifier** non viene usato, l'agente di distribuzione usa qualsiasi identificatore delimitato tra virgolette supportato dal Sottoscrittore.  
   
- **-SkipErrors** _native_error_id_ [ **:** _...n_]  
+ **-SkipErrors** _native_error_id_ [**:**_...n_]  
  Elenco delimitato da due punti che specifica i numeri di errore che devono essere ignorati dall'agente.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  

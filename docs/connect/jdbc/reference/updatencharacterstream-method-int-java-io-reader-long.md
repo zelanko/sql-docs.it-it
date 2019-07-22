@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aeec0a56-038e-45b1-98c8-b1046ebd25db
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 175f3e33f77d5f4d082ae8b98780b9f7bcafaa43
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 03d1ea61a0f14baed7e83e27fbc585c96ee0e2ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798449"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998754"
 ---
 # <a name="updatencharacterstream-method-int-javaioreader-long"></a>Metodo updateNCharacterStream (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void updateNCharacterStream(int columnIndex,
   
  *x*  
   
- Oggetto lettore.  
+ Oggetto Reader.  
   
  *length*  
   
@@ -49,9 +48,9 @@ public void updateNCharacterStream(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo updateNCharacterStream viene specificato dal metodo updateNCharacterStream nell'interfaccia ResultSet.  
+ Questo Metodo updateNCharacterStream viene specificato dal Metodo updateNCharacterStream nell'interfaccia java. SQL. ResultSet.  
   
- Questo metodo passa caratteri Unicode da un oggetto lettore selezionati **nchar**, **nvarchar (max)** , **ntext**, e **xml** colonne. L'utilizzo di questo metodo su colonne con altri tipi di dati genererà un'eccezione.  
+ Questo metodo passa caratteri Unicode da un oggetto Reader alle colonne **nchar**, **nvarchar (max)** , **ntext**e **XML** selezionate. L'utilizzo di questo metodo su colonne con altri tipi di dati genererà un'eccezione.  
   
  Se la lunghezza del flusso è diversa da quanto specificato nel parametro *length*, il driver JDBC genera un'eccezione al momento dell'aggiornamento o dell'inserimento della riga.  
   
