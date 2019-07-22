@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f2e6391d-9aaf-4b09-ae1c-a27c1ada6301
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3b6e8238ed5667c88275beb5015d2bff00479b50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69a9db6da093341264953e698cdbb1145093d9a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796918"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980876"
 ---
 # <a name="getpooledconnection-method-javalangstring-javalangstring"></a>Metodo getPooledConnection (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +51,7 @@ public javax.sql.PooledConnection getPooledConnection(java.lang.String user,
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getPooledConnection viene specificato dal metodo getPooledConnection nell'interfaccia ConnectionPoolDataSource.  
+ Questo metodo getPooledConnection viene specificato dal Metodo getPooledConnection nell'interfaccia javax. SQL. ConnectionPoolDataSource.  
   
 ## <a name="see-also"></a>Vedere anche  
  [getPooledConnection](../../../connect/jdbc/reference/getpooledconnection-method-sqlserverconnectionpooldatasource.md)   

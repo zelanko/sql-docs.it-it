@@ -1,5 +1,5 @@
 ---
-title: Sicurezza delle applicazioni | Microsoft Docs
+title: Sicurezza dell'applicazione | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 832cb6991ad095ba13226f80408fbd919db00623
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: aa7681890b09647cb554ef6c80e8646fb69c9f42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770439"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957456"
 ---
 # <a name="application-security"></a>Sicurezza dell'applicazione
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -62,7 +61,7 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
 ## <a name="protecting-server-communication"></a>Protezione delle comunicazioni con il server  
  Quando si usa il driver JDBC per comunicare con un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile proteggere il canale di comunicazione usando il protocollo IPSec (Internet Protocol Security) o SSL (Secure Sockets Layer) oppure entrambi.  
   
- Il supporto SSL può essere utilizzato per fornire un livello aggiuntivo di protezione oltre a IPsec. Per altre informazioni sull'utilizzo di SSL, vedere [Using SSL Encryption](../../connect/jdbc/using-ssl-encryption.md).  
+ Il supporto SSL può essere utilizzato per fornire un livello aggiuntivo di protezione oltre a IPsec. Per ulteriori informazioni sull'utilizzo di SSL, vedere [utilizzo della crittografia SSL](../../connect/jdbc/using-ssl-encryption.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Protezione delle applicazioni del driver JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  

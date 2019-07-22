@@ -1,5 +1,5 @@
 ---
-title: Metodi di SQLServerNClob | Microsoft Docs
+title: Metodi SQLServerNClob | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +10,16 @@ ms.topic: conceptual
 ms.assetid: 04cf56ad-11a8-4ae5-a612-39f3f8680501
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6dcec37b342b226f3a01369c934d6f4b476b53be
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 42120a2f69e554b722d25336ebc8d0aaae8a38a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970927"
 ---
 # <a name="sqlservernclob-methods"></a>Metodi di SQLServerNClob
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Per informazioni sui membri di [SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-class.md), vedere [membri di SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-members.md).  
+  Per informazioni sui membri di [SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-class.md), vedere [membri SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-members.md).  
   
   

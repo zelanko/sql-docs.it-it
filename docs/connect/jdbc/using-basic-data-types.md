@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 58948717ce5d9d3600bef865f75231faa1e5dea1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 83bbe2c28e9b353e5a82fa630660756174ad0dab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790088"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916367"
 ---
 # <a name="using-basic-data-types"></a>Utilizzo di tipi di dati di base
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] usa i tipi di dati JDBC di base per convertire i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un formato comprensibile nel linguaggio di programmazione Java e viceversa. Il driver JDBC fornisce supporto per le API di JDBC 4.0, che include il **SQLXML** tipo di dati e tipi di dati nazionali (Unicode), ad esempio **NCHAR**, **NVARCHAR**, **LONGNVARCHAR**, e **NCLOB**.  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] usa i tipi di dati JDBC di base per convertire i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un formato comprensibile nel linguaggio di programmazione Java e viceversa. Il driver JDBC fornisce supporto per l'API JDBC 4,0, che include il tipo di dati **SQLXML** e i tipi di dati nazionali (Unicode), ad esempio **nchar**, **nvarchar**, **LONGNVARCHAR**e **NCLOB**.  
   
 ## <a name="data-type-mappings"></a>Mapping di tipi di dati
 
@@ -69,7 +68,7 @@ Nella tabella seguente sono elencati i mapping predefiniti tra i tipi di dati di
   
 (1) Per usare java.sql.Time con il tipo time di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario impostare la proprietà di connessione **sendTimeAsDatetime** su false.  
   
-(2) è possibile accedere a livello di codice ai valori della **datetimeoffset** con [classe DateTimeOffset](../../connect/jdbc/reference/datetimeoffset-class.md).  
+(2) è possibile accedere a livello di codice ai valori di **DateTimeOffset** con la [classe DateTimeOffset](../../connect/jdbc/reference/datetimeoffset-class.md).  
   
 Nelle sezioni seguenti vengono forniti esempi di come sia possibile utilizzare il driver JDBC e i tipi di dati di base. Per un esempio più dettagliato dell'utilizzo dei tipi di dati di base in un'applicazione Java, vedere [Esempio di tipi di dati di base](../../connect/jdbc/basic-data-types-sample.md).  
   
@@ -86,11 +85,11 @@ Se è necessario recuperare dati di cui si conosce il tipo da un'origine dati, u
 [!code[JDBC#UsingBasicDataTypes2](../../connect/jdbc/codesnippet/Java/using-basic-data-types_2.java)]  
   
 > [!NOTE]  
-> Il getUnicodeStream getBigDecimal con i metodi di scalabilità sono deprecati e non sono supportati dal driver JDBC.
+> I metodi getUnicodeStream e getBigDecimal con scale sono deprecati e non sono supportati dal driver JDBC.
 
 ## <a name="updating-data-by-data-type"></a>Aggiornamento di dati per tipo di dati
 
-Se è necessario aggiornare il valore di un campo in un'origine dati, usare uno dell'aggiornamento\<tipo > i metodi della classe SQLServerResultSet. Nell'esempio seguente il metodo [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) viene usato insieme al metodo [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) per aggiornare i dati nell'origine dati:  
+Se è necessario aggiornare il valore di un campo in un'origine dati, utilizzare uno dei tipi di aggiornamento\<> metodi della classe SQLServerResultSet. Nell'esempio seguente il metodo [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) viene usato insieme al metodo [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) per aggiornare i dati nell'origine dati:  
   
 [!code[JDBC#UsingBasicDataTypes3](../../connect/jdbc/codesnippet/Java/using-basic-data-types_3.java)]  
   
@@ -103,7 +102,7 @@ Se è necessario aggiornare dati in un'origine dati usando una query con paramet
   
 [!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
   
-Per altre informazioni sulle query con parametri, vedere [tramite un'istruzione SQL con parametri](../../connect/jdbc/using-an-sql-statement-with-parameters.md).  
+Per ulteriori informazioni sulle query con parametri, vedere [utilizzo di un'istruzione SQL con parametri](../../connect/jdbc/using-an-sql-statement-with-parameters.md).  
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>Passaggio di parametri a una stored procedure
 
@@ -114,7 +113,7 @@ Se è necessario passare parametri tipizzati in una stored procedure, è possibi
 > [!NOTE]  
 > In questo esempio viene restituito un set di risultati con i risultati dell'esecuzione della stored procedure.
 
-Per altre informazioni sull'utilizzo del driver JDBC con stored procedure e parametri di input, vedere [utilizzando una Stored Procedure con parametri di Input](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md).  
+Per ulteriori informazioni sull'utilizzo del driver JDBC con stored procedure e parametri di input, vedere [utilizzo di una stored procedure con parametri di input](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md).  
 
 ## <a name="retrieving-parameters-from-a-stored-procedure"></a>Recupero di parametri da una stored procedure
 
@@ -125,7 +124,7 @@ Se è necessario recuperare parametri da una stored procedure, occorre innanzitu
 > [!NOTE]  
 > Oltre al parametro out, può essere restituito anche un set di risultati con i risultati dell'esecuzione della stored procedure.  
   
-Per altre informazioni su come usare il driver JDBC con stored procedure e parametri di output, vedere [utilizzando una Stored Procedure con parametri di Output](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).  
+Per ulteriori informazioni sull'utilizzo del driver JDBC con stored procedure e parametri di output, vedere [utilizzo di una stored procedure con parametri di output](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).  
 
 ## <a name="see-also"></a>Vedere anche
 

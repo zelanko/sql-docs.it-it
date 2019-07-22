@@ -1,5 +1,5 @@
 ---
-title: Guida introduttiva con il Driver JDBC | Microsoft Docs
+title: Introduzione con il driver JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5f4c5d0d-c8d9-48e6-b0a5-56d308140c51
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2b27de6f879fad1e45b83bd9585e4f92ca08fb91
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bc2cc6d9f4a44af8988c167dc09093d6bac7dcb1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781805"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956563"
 ---
 # <a name="getting-started-with-the-jdbc-driver"></a>Introduzione al driver JDBC
 

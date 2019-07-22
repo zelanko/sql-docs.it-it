@@ -1,5 +1,5 @@
 ---
-title: Metodo isValid (SQLServerConnection) | Microsoft Docs
+title: Metodo IsValid (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3b0a8bbf-9369-4456-9ab8-1434ccacdd7e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2868fb92161b5e3458e5c5e0dc72ebdef074b3e7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3915690475e5ce9321af7fc15498c2bde018c640
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796319"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977133"
 ---
 # <a name="isvalid-method-sqlserverconnection"></a>Metodo isValid (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean isValid(int timeout)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo isValid viene specificato dal metodo isValid nell'interfaccia Java.  
+ Questo metodo IsValid viene specificato dal metodo IsValid nell'interfaccia java. SQL. Connection.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

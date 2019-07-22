@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 40f5d727-1ce7-414d-867d-589ead7b2a29
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1630ef0bebfef447074b6ec8c10305638497cb5b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 970f2989b771fc319b77081693bd1dd7809b203d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764232"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969295"
 ---
 # <a name="supportsminimumsqlgrammar-method-sqlserverdatabasemetadata"></a>Metodo supportsMinimumSQLGrammar (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsMinimumSQLGrammar()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se supportata. In caso contrario, **false**.  
+ **true** se supportato. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo supportsMinimumSQLGrammer viene specificato dal metodo supportsMinimumSQLGrammer nell'interfaccia DatabaseMetaData.  
+ Questo metodo supportsMinimumSQLGrammer viene specificato dal metodo supportsMinimumSQLGrammer nell'interfaccia java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

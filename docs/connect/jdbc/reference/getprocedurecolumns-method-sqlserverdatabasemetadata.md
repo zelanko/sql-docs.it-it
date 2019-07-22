@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8c71218c709921cd9180bff2b9a6b5997ae7450c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1767519cc2f36bac4a70da84efeb8da9e2a1ec3c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66771200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980748"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>Metodo getProcedureColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -62,7 +61,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getProcedureColumns viene specificato dal metodo getProcedureColumns nell'interfaccia DatabaseMetaData.  
+ Questo metodo getProcedureColumns viene specificato dal metodo getProcedureColumns nell'interfaccia java. SQL. DatabaseMetaData.  
   
  Il set di risultati restituito dal metodo getProcedureColumns conterrà le informazioni seguenti:  
   
@@ -83,7 +82,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |REMARKS|**String**|Descrizione della colonna della procedura.<br /><br /> <br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non restituisce un valore per questa colonna.|  
 |COLUMN_DEF|**String**|Valore predefinito della colonna.|  
 |SQL_DATA_TYPE|**smallint**|Questa colonna corrisponde alla colonna **DATA_TYPE**, tranne che per i tipi di dati **datetime** e ISO **interval**.|  
-|SQL_DATETIME_SUB|**smallint**|Sottocodice **datetime** ISO **interval** se il valore di **SQL_DATA_TYPE** è **SQL_DATETIME** o **SQL_INTERVAL**. Per i dati di tipi diversi da **data/ora** e ISO **intervallo**, questa colonna è NULL.|  
+|SQL_DATETIME_SUB|**smallint**|Sottocodice **datetime** ISO **interval** se il valore di **SQL_DATA_TYPE** è **SQL_DATETIME** o **SQL_INTERVAL**. Per i tipi di dati diversi da **DateTime** e ISO **Interval**, questa colonna è null.|  
 |CHAR_OCTET_LENGTH|**int**|Numero massimo di byte nella colonna.|  
 |ORDINAL_POSITION|**int**|Indice della colonna all'interno della tabella.|  
 |IS_NULLABLE|**String**|Indica se la colonna ammette valori Null.|  

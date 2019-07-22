@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cd4958db78e2e35d29bcc47428295db50f7e5678
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6c25349d6fbf9495647ae73773d984dfcd269f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774633"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982967"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>Metodo getFunctionColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -80,10 +79,10 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |REMARKS|**String**|Commenti su una colonna o un parametro.|  
 |COLUMN_DEF|**String**|Valore predefinito della colonna.<br /><br /> **Nota:** queste informazioni sono disponibili con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e sono specifiche del driver JDBC.|  
 |SQL_DATA_TYPE|**smallint**|Questa colonna corrisponde alla colonna **DATA_TYPE**, tranne che per i tipi di dati **datetime** e ISO **interval**.<br /><br /> **Nota:** queste informazioni sono disponibili con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e sono specifiche del driver JDBC.|  
-|SQL_DATETIME_SUB|**smallint**|Sottocodice **datetime** ISO **interval** se il valore di **SQL_DATA_TYPE** è **SQL_DATETIME** o **SQL_INTERVAL**. Per i dati di tipi diversi da **data/ora** e ISO **intervallo**, questa colonna è NULL.<br /><br /> **Nota:** queste informazioni sono disponibili con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e sono specifiche del driver JDBC.|  
+|SQL_DATETIME_SUB|**smallint**|Sottocodice **datetime** ISO **interval** se il valore di **SQL_DATA_TYPE** è **SQL_DATETIME** o **SQL_INTERVAL**. Per i tipi di dati diversi da **DateTime** e ISO **Interval**, questa colonna è null.<br /><br /> **Nota:** queste informazioni sono disponibili con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e sono specifiche del driver JDBC.|  
 |CHAR_OCTET_LENGTH|**int**|Lunghezza massima dei parametri o delle colonne di tipo carattere o binario. Per gli altri tipi di dati il valore è NULL.|  
 |ORDINAL_POSITION|**int**|Per i parametri di input e di output, rappresenta la posizione a partire da 1.<br /><br /> Per le colonne del set di risultati, è la posizione della colonna nel set di risultati a partire da 1.<br /><br /> Per il valore restituito, è 0.|  
-|IS_NULLABLE|**String**|Determina se un parametro o una colonna ammette i valori Null.<br /><br /> Può essere uno dei valori seguenti:<br /><br /> **Sì**: parametro o della colonna può includere valori NULL.<br /><br /> **NO**: parametro o della colonna non può includere valori NULL.<br /><br /> Stringa vuota (""): sconosciuto.|  
+|IS_NULLABLE|**String**|Determina se un parametro o una colonna ammette i valori Null.<br /><br /> Può essere uno dei valori seguenti:<br /><br /> **Sì**: il parametro o la colonna può includere valori null.<br /><br /> **No**: il parametro o la colonna non può includere valori null.<br /><br /> Stringa vuota (""): sconosciuto.|  
 |SS_TYPE_CATALOG_NAME|**String**|Nome del catalogo contenente il tipo definito dall'utente (UDT).|  
 |SS_TYPE_SCHEMA_NAME|**String**|Nome dello schema contenente il tipo definito dall'utente (UDT).|  
 |SS_UDT_CATALOG_NAME|**String**|Tipo definito dall'utente (UDT) del nome completo.|  

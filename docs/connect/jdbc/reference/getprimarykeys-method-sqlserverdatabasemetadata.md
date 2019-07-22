@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ebfe236a-dc02-493e-a3ab-5353d3769e36
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bd6249f11c9026c1ec036d3ccf11b010dafda2e9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bdb1eb0053c9bb15c6d03013df13635e022a5072
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66771215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980760"
 ---
 # <a name="getprimarykeys-method-sqlserverdatabasemetadata"></a>Metodo getPrimaryKeys (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,7 +56,7 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getPrimaryKeys viene specificato dal metodo getPrimaryKeys nell'interfaccia DatabaseMetaData.  
+ Questo metodo getPrimaryKeys viene specificato dal metodo getPrimaryKeys nell'interfaccia java. SQL. DatabaseMetaData.  
   
  Il set di risultati restituito dal metodo getPrimaryKeys conterrà le informazioni seguenti:  
   

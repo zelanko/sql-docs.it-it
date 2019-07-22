@@ -10,41 +10,40 @@ ms.topic: conceptual
 ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ff03ce6ec79aede2e056f0154836e77970af9c50
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 38af92d3cb0354bc4b75131a349f6a1c26e90490
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800824"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992467"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo Ruby
-È necessario configurare l'ambiente di sviluppo con i prerequisiti per lo sviluppo di un'applicazione usando il Driver Ruby per SQL Server.    
+È necessario configurare l'ambiente di sviluppo con i prerequisiti per sviluppare un'applicazione mediante il driver Ruby per SQL Server.    
   
-Si noti che il Driver Ruby Usa il protocollo TDS, che è abilitato per impostazione predefinita in SQL Server e Database SQL di Azure.  Non è richiesta alcuna configurazione aggiuntiva.  
+Si noti che il driver Ruby usa il protocollo TDS, che è abilitato per impostazione predefinita in SQL Server e nel database SQL di Azure.  Non è richiesta alcuna configurazione aggiuntiva.  
   
   
 ## <a name="windows"></a>Windows  
   
-1.  **Scarica programma di installazione di Ruby**  
-Se il computer non ha Ruby installarlo. Per i nuovi utenti ruby, è consigliabile che usare i programmi di installazione di Ruby 2.2.X. Forniscono un linguaggio stabile e un elenco completo dei pacchetti (gems) che sono compatibili e aggiornate. Passare il [pagina di download Ruby](https://rubyinstaller.org/downloads/) e scaricare il programma di installazione 2.1.x appropriato. Per esempio, se si usa un computer a 64 bit, scaricare il programma di installazione di Ruby 2.1.6 la proprietà (x64).   
+1.  **Scarica programma di installazione Ruby**  
+Se il computer non dispone di Ruby, installarlo. Per i nuovi utenti Ruby, è consigliabile usare i programmi di installazione Ruby 2.2. X. Questi forniscono un linguaggio stabile e un ampio elenco di pacchetti (gemme) compatibili e aggiornati. Passare alla [pagina di download di Ruby](https://rubyinstaller.org/downloads/) e scaricare il programma di installazione 2.1. x appropriato. Ad esempio, se si è in un computer a 64 bit, scaricare il programma di installazione Ruby 2.1.6 (x64).   
   
 2.  **Installare Ruby**  
-Dopo aver scaricato il programma di installazione, eseguire le operazioni seguenti:  
+Una volta scaricato il programma di installazione, eseguire le operazioni seguenti:  
 A. Fare doppio clic sul file per avviare il programma di installazione.  
 B. Selezionare la lingua e accettare le condizioni.  
-c.  Nella schermata delle impostazioni di installazione, selezionare le caselle di controllo accanto a entrambi i file eseguibili Ruby aggiungere ai file RB e .rbw percorso ed eseguire l'associazione con questa installazione di Ruby.  
+c.  Nella schermata Installa impostazioni selezionare le caselle di controllo accanto a Aggiungi eseguibili Ruby al percorso e associare i file con estensione RB e RBW a questa installazione di Ruby.  
   
-3.  **Scaricare DevKit Ruby**  
+3.  **Scarica Ruby DevKit**  
 Scaricare DevKit dalla pagina RubyInstaller  
   
 4.  **Installare Ruby DevKit**  
-Una volta completato il download, eseguire le operazioni seguenti:  
-A. Fare doppio clic sul file. Verrà richiesto la posizione in cui estrarre i file.  
-B. Fare clic sul pulsante "..." e selezionare "C:\DevKit". Si sarà probabilmente necessario creare questa cartella prima di tutto, fare clic su "Crea una nuova cartella".  
-c. Fare clic su "OK" e quindi "estrarre", per estrarre i file.  
+Al termine del download, eseguire le operazioni seguenti:  
+A. Fare doppio clic sul file. Verrà richiesto dove estrarre i file.  
+B. Fare clic su "..." e selezionare "C:\DevKit". Probabilmente sarà necessario creare prima questa cartella facendo clic su "Crea nuova cartella".  
+c. Fare clic su "OK" e quindi su "Estrai" per estrarre i file.  
   
-5. **Aprire cmd.exe**  
+5. **Apri cmd. exe**  
   
 6. **Inizializzare Ruby DevKit**  
 ```  
@@ -53,7 +52,7 @@ c. Fare clic su "OK" e quindi "estrarre", per estrarre i file.
 > ruby dk.rb install  
 ```  
   
-7.  **Installare la Gemma TinyTDS**  
+7.  **Installare funzione tinytds Gem**  
 ```  
 > gem inst tiny_tds
 ```  
@@ -62,7 +61,7 @@ c. Fare clic su "OK" e quindi "estrarre", per estrarre i file.
   
 1. **Apri terminale**  
   
-2. **Installare Ruby Version Manager (rvm) e i prerequisiti**  
+2. **Installare Ruby Version Manager (RVM) e i prerequisiti**  
 ```  
 > sudo apt-get --assume-yes update  
 > command curl -sSL https://rvm.io/mpapis.asc | gpg --import -  
@@ -70,32 +69,32 @@ c. Fare clic su "OK" e quindi "estrarre", per estrarre i file.
 > source ~/.rvm/scripts/rvm  
 ```  
    
-3. **Usare rvm per installare Ruby**  
+3. **Usare RVM per installare Ruby**  
 Ad esempio, installare la versione 2.3.0 di Ruby:  
 ```  
 > rvm install 2.3.0  
 > rvm use 2.3.0 --default  
 > ruby -v  
 ```  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Assicurarsi che l'output dell'ultimo comando indichi che si esegue la versione 2.3.0.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Verificare che l'output dell'ultimo comando indichi che si sta eseguendo la versione 2.3.0.  
   
 4.  **Installare FreeTDS**  
 ```  
 > sudo apt-get --assume-yes install freetds-dev freetds-bin  
 ```  
   
-5.  **Installare TinyTDS**  
+5.  **Installare funzione tinytds**  
 ```  
 > gem install tiny_tds  
 ```  
   
 ## <a name="mac"></a>Mac  
   
-Si noti che Mac OS X ha già Ruby pre-installati, come il sistema operativo ha una dipendenza.    
+Si noti che Mac OS X dispone già di Ruby pre-installato, perché il sistema operativo ha una dipendenza.    
   
 1.  **Apri terminale**  
   
-2. **Installare Gestione pacchetti Homebrew**  
+2. **Installare Homebrew Package Manager**  
 ```  
 > ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  
 ```  
@@ -105,7 +104,7 @@ Si noti che Mac OS X ha già Ruby pre-installati, come il sistema operativo ha u
 > brew install FreeTDS  
 ```  
   
-4.  **Installare la Gemma TinyTDS**  
+4.  **Installare funzione tinytds Gem**  
 ```  
 > gem install tiny_tds  
 ```

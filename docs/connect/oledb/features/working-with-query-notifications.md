@@ -1,6 +1,6 @@
 ---
-title: Utilizzo delle notifiche delle Query | Microsoft Docs
-description: Utilizzo delle notifiche delle query nel Driver OLE DB per SQL Server
+title: Utilizzo delle notifiche delle query | Microsoft Docs
+description: Utilizzo delle notifiche di query nel driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -21,13 +21,12 @@ helpviewer_keywords:
 - consumer notification for rowset changes [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 20860d018e8971089ee1eb80ec0303bdc63ef211
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
+ms.openlocfilehash: 5b563099b161fa9b55a72820edd3411a4c72b4fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67208349"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988735"
 ---
 # <a name="working-with-query-notifications"></a>Utilizzo delle notifiche delle query
 
@@ -35,7 +34,7 @@ ms.locfileid: "67208349"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-Le notifiche delle query sono state introdotte in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e il Driver OLE DB per SQL Server. Basate sull'infrastruttura di Service Broker introdotta in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], tali notifiche consentono di comunicare alle applicazioni che i dati sono stati modificati. Questa caratteristica è particolarmente utile per le applicazioni che forniscono una cache di informazioni provenienti da un database, ad esempio un'applicazione Web, e devono essere notificate quando i dati di origine vengono modificati.
+Le notifiche delle query sono [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] state introdotte in e OLE DB driver per SQL Server. Basate sull'infrastruttura di Service Broker introdotta in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], tali notifiche consentono di comunicare alle applicazioni che i dati sono stati modificati. Questa caratteristica è particolarmente utile per le applicazioni che forniscono una cache di informazioni provenienti da un database, ad esempio un'applicazione Web, e devono essere notificate quando i dati di origine vengono modificati.
 
 Le notifiche delle query consentono di richiedere una notifica entro un determinato periodo di timeout quando i dati sottostanti di una query cambiano. La richiesta di notifica specifica le opzioni di notifica che includono il nome del servizio, il testo del messaggio e il valore di timeout per il server. Le notifiche vengono recapitate tramite una coda di Service Broker di cui le applicazioni possono eseguire il polling delle notifiche disponibili.
 
@@ -71,7 +70,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 
 ## <a name="ole-db-driver-for-sql-server"></a>Driver OLE DB per SQL Server
 
-Il Driver OLE DB per SQL Server supporta la notifica di tipo consumer nella modifica di set di righe. Il consumer riceve una notifica a ogni fase di modifica dei set di righe e a ogni tentativo di modifica.
+Il driver OLE DB per SQL Server supporta la notifica del consumer per la modifica del set di righe. Il consumer riceve una notifica a ogni fase di modifica dei set di righe e a ogni tentativo di modifica.
 
 > [!NOTE]
 > Il passaggio di una query di notifica al server mediante **ICommand::Execute** rappresenta l'unico modo valido per sottoscrivere le notifiche delle query con il driver OLE DB per SQL Server.
@@ -110,7 +109,7 @@ L'avvio di una sottoscrizione non garantisce il corretto recapito dei messaggi s
 > [!NOTE]
 > La preparazione delle istruzioni non causerà mai l'avvio della sottoscrizione. Tale operazione verrà effettuata solo mediante l'esecuzione delle istruzioni. L'uso dei servizi OLE DB di base non influisce sulle notifiche delle query.
 
-Per altre informazioni sul set di proprietà DBPROPSET_SQLSERVERROWSET, vedere [proprietà set di righe e i comportamenti](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md).
+Per ulteriori informazioni sul set di proprietà DBPROPSET_SQLSERVERROWSET, vedere [proprietà e comportamenti dei set di righe](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md).
 
 ## <a name="see-also"></a>Vedere anche
 

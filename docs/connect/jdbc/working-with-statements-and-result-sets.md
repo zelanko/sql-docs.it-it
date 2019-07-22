@@ -1,5 +1,5 @@
 ---
-title: Uso di istruzioni e set di risultati | Microsoft Docs
+title: Utilizzo di istruzioni e set di risultati | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 16def64ceaf9f6387dacc0486bd125f6999df6e5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fb6d545a3a7f8c3b29e5bc372aa4fdadf95edd52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780795"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003792"
 ---
 # <a name="working-with-statements-and-result-sets"></a>Utilizzo delle istruzioni e dei set di risultati
 
@@ -28,9 +27,9 @@ Quando si usa [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] e gl
 
 Quando si usa uno degli oggetti Statement del driver JDBC, ad esempio l'oggetto [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) o [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), verificare che l'oggetto sia appropriato per il processo che si sta eseguendo.
 
-- Se non hai parametri OUT, non devi usare l'oggetto SQLServerCallableStatement. Usare invece SQLServerStatement oppure l'oggetto SQLServerPreparedStatement.
+- Se non si dispone di parametri OUT, non è necessario utilizzare l'oggetto SQLServerCallableStatement. Usare invece il SQLServerStatement o l'oggetto SQLServerPreparedStatement.
 
-- Se non si intende eseguire l'istruzione più volte o non è IN o i parametri OUT, non devi usare l'oggetto SQLServerPreparedStatement o SQLServerCallableStatement. In alternativa, usare l'oggetto SQLServerStatement.
+- Se non si desidera eseguire l'istruzione più di una volta o se non si dispone di parametri IN o OUT, non è necessario utilizzare SQLServerCallableStatement o l'oggetto SQLServerPreparedStatement. Usare invece l'oggetto SQLServerStatement.
 
 ## <a name="use-the-appropriate-concurrency-for-resultset-objects"></a>Utilizzo della concorrenza appropriata per gli oggetti ResultSet
 
@@ -38,7 +37,7 @@ Non richiedere la concorrenza aggiornabile quando si creano le istruzioni che pr
 
 ## <a name="limit-the-size-of-your-result-sets"></a>Limitazione delle dimensioni dei set di risultati
 
-È consigliabile valutare l'opportunità di usare il metodo [setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) (o la sintassi SET ROWCOUNT o SELECT TOP N SQL) per limitare il numero di righe restituite da set di risultati che potrebbero risultare di grandi dimensioni. Se si opera con set di risultati di grandi dimensioni, valutare l'opportunità di utilizzare un buffer adattivo per le risposte impostando la proprietà della stringa di connessione responseBuffering=adaptive, che corrisponde alla modalità predefinita. Questo approccio consente all'applicazione di elaborare set di risultati di grandi dimensioni senza richiedere i cursori sul lato server e di ridurre al minimo l'utilizzo della memoria dell'applicazione. Per altre informazioni, vedere [Using Adaptive Buffering](../../connect/jdbc/using-adaptive-buffering.md).
+È consigliabile valutare l'opportunità di usare il metodo [setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) (o la sintassi SET ROWCOUNT o SELECT TOP N SQL) per limitare il numero di righe restituite da set di risultati che potrebbero risultare di grandi dimensioni. Se si opera con set di risultati di grandi dimensioni, valutare l'opportunità di utilizzare un buffer adattivo per le risposte impostando la proprietà della stringa di connessione responseBuffering=adaptive, che corrisponde alla modalità predefinita. Questo approccio consente all'applicazione di elaborare set di risultati di grandi dimensioni senza richiedere i cursori sul lato server e di ridurre al minimo l'utilizzo della memoria dell'applicazione. Per ulteriori informazioni, vedere [utilizzo del buffer adattivo](../../connect/jdbc/using-adaptive-buffering.md).
 
 ## <a name="use-the-appropriate-fetch-size"></a>Utilizzo della dimensione di recupero appropriata
 

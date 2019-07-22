@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: eddf7b58456a4730ff783ab4f53a9911da06d8db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f66746b15e96f49d96b428e8cf8844eeea12a12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972924"
 ---
 # <a name="setserverpreparedstatementdiscardthreshold-method-sqlserverconnection"></a>Metodo setServerPreparedStatementDiscardThreshold (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Specifica il comportamento per un'istanza di connessione specifica. Questa impostazione Controlla quanti preparato in sospeso variabile discard istruzione azioni (sp_unprepare) possono rimanere in attesa per ogni connessione prima che venga eseguita una chiamata per pulire l'handle in sospeso nel server. Quando l'impostazione è < = 1 ONU-preparare le azioni vengono eseguite immediatamente in chiusura istruzione preparata. Se il valore è impostato su 1 > queste chiamate vengono eseguite in batch insieme per evitare il sovraccarico della chiamata al metodo sp_unprepare troppo spesso.
+ Specifica il comportamento per un'istanza di connessione specifica. Questa impostazione consente di controllare il numero di azioni di eliminazione di istruzioni preparate (sp_unprepare) in attesa per ogni connessione prima che venga eseguita una chiamata per pulire gli handle in attesa nel server. Quando l'impostazione è < = 1, le azioni di annullamento della preparazione vengono eseguite immediatamente alla chiusura dell'istruzione preparata. Se il valore è impostato su > 1, queste chiamate vengono raggruppate in batch per evitare un sovraccarico della chiamata di sp_unprepare troppo spesso.
 
 
 ## <a name="syntax"></a>Sintassi  
@@ -39,13 +38,13 @@ public void setServerPreparedStatementDiscardThreshold(boolean thresholdValue)
 #### <a name="parameters"></a>Parametri  
  *thresholdValue*  
  
- Il nuovo valore della **serverPreparedStatementDiscardThreshold** proprietà di connessione.  
+ Nuovo valore della proprietà di connessione **serverPreparedStatementDiscardThreshold** .  
  
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- Questo metodo è disponibile dal driver JDBC versione 6.4 e progressiva.
+ Questo metodo è disponibile dal driver JDBC versione 6,4 e successive.
  
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

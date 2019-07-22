@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: fa160884-394e-4fb2-a6e8-0437b81c149d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 75ab28638070e243a8022654ac33e61a017b37ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c2c8a91e3c3f3eee050fefce1d24f87e245cb8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66768210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955340"
 ---
 # <a name="createnclob-method-sqlserverconnection"></a>Metodo createNClob (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,13 +30,13 @@ public java.sql.NClob createNClob()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Un oggetto NClob.  
+ Oggetto NClob.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo createNClob viene specificato dal metodo createNClob nell'interfaccia Java.  
+ Questo metodo createNClob viene specificato dal metodo createNClob nell'interfaccia java. SQL. Connection.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

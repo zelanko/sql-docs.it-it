@@ -1,5 +1,5 @@
 ---
-title: Position (Java, long) (metodo) | Microsoft Docs
+title: Metodo position (Java. SQL. blob, Long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ebd005e5-f6c5-4789-87f9-d2fdacd35060
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e967c02c84943f1fa84eb541cdb28201196a7ce3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cedfe53b8b30152ed4ca2dd3d1c68d6ff885b6bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802441"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976435"
 ---
 # <a name="position-method-javasqlblob-long"></a>Metodo position (java.sql.Blob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,10 +51,10 @@ public long position(java.sql.Blob pattern,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo di posizione viene specificato dal metodo di posizione nell'interfaccia Java.  
+ Questo metodo di posizionamento viene specificato dal metodo position nell'interfaccia java. SQL. blob.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo Position &#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/position-method-sqlserverblob.md)   
+ [Position ( &#40;metodo SQLServerBlob)&#41;](../../../connect/jdbc/reference/position-method-sqlserverblob.md)   
  [Metodi di SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [Membri di SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [Classe SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)  

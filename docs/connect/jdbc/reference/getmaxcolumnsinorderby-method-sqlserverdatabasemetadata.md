@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d6af9bb4-c55d-41f4-a266-d10ebee61194
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0dd929584857b714b37be7d75f648411515e1865
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 60bb089d5c53699cda93c888b959fe71e5ffbfe6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792813"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982237"
 ---
 # <a name="getmaxcolumnsinorderby-method-sqlserverdatabasemetadata"></a>Metodo getMaxColumnsInOrderBy (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxColumnsInOrderBy()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getMaxColumnsInOrderBy viene specificato dal metodo getMaxColumnsInOrderBy nell'interfaccia DatabaseMetaData.  
+ Questo metodo getMaxColumnsInOrderBy viene specificato dal metodo getMaxColumnsInOrderBy nell'interfaccia java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

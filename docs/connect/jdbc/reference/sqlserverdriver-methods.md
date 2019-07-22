@@ -1,5 +1,5 @@
 ---
-title: Metodi di SQLServerDriver | Microsoft Docs
+title: Metodi SQLServerDriver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +10,16 @@ ms.topic: conceptual
 ms.assetid: 66cd2dc1-36b7-4dd7-aaee-41f1ed2d89c3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fad80958224986979c7c8581a1c8a3be886c1668
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9fb86b665901cc774a51bf92c00f10847c8bb293
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800932"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971171"
 ---
 # <a name="sqlserverdriver-methods"></a>Metodi di SQLServerDriver
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Per informazioni sui membri di [SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md), vedere [membri di SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-members.md).  
+  Per informazioni sui membri di [SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md), vedere [membri SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-members.md).  
   
   

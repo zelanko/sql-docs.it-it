@@ -12,12 +12,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: ad963176194300054b97db8b6faa360bce17e558
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2dbe0f90af6d3c51c55698ebd74c4972ea1d4db
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63190551"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68252156"
 ---
 # <a name="using-xa-transactions"></a>Uso delle transazioni XA
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,13 +25,13 @@ ms.locfileid: "63190551"
 
 ## <a name="overview"></a>Panoramica
 
-Microsoft ODBC Driver for SQL Server a partire dalla versione 17.3 fornisce il supporto per le transazioni XA con Distributed Transaction Coordinator (DTC) in Windows, Linux e Mac. L'implementazione XA sul lato driver consente all'applicazione client inviare operazioni seriale (ad esempio inizio, commit, rollback un ramo di transazione e così via) per il Transaction Manager (TM). E quindi al GR comunicherà con il Resource Manager (RM) in base a queste operazioni. Per altre informazioni sulla specifica XA e per l'implementazione di Microsoft per DTC (MS DTC), vedere [funzionamento: SQL Server DTC(MSDTC and XA Transactions)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/).
+Il Microsoft ODBC Driver for SQL Server a partire dalla versione 17,3 fornisce supporto per le transazioni XA con il Distributed Transaction Coordinator (DTC) in Windows, Linux e Mac. L'implementazione XA sul lato driver consente all'applicazione client di inviare operazioni seriali, ad esempio avvio, commit, rollback di un ramo di transazione e così via, alla gestione transazioni (TM). E la TM comunicherà con il Gestione risorse (RM) in base a queste operazioni. Per ulteriori informazioni sulla specifica XA e sull'implementazione Microsoft per DTC (MS DTC), vedere [come funziona: SQL Server DTC (transazioni MSDTC e XA)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/).
 
 
 
-## <a name="the-xacallparam-structure"></a>La struttura XACALLPARAM
+## <a name="the-xacallparam-structure"></a>Struttura XACALLPARAM
 
-Il `XACALLPARAM` struttura definisce le informazioni necessarie per una richiesta di gestione transazioni XA. Viene definito come segue:
+La `XACALLPARAM` struttura definisce le informazioni necessarie per una richiesta di gestione transazioni XA. Viene definito come segue:
 
 ```
 typedef struct XACallParam {    
@@ -46,27 +46,27 @@ typedef struct XACallParam {
 ```
 
 *sizeParam*  
-Dimensioni del `XACALLPARAM` struttura. Sono escluse le dimensioni dei seguenti dati `XACALLPARAM`.
+Dimensione della `XACALLPARAM` struttura. Questa operazione esclude le dimensioni dei dati seguenti `XACALLPARAM`.
 
 *operation*  
-L'operazione XA deve essere passato al GR. Operazioni possibili sono definite nel [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
+Operazione XA da passare alla TM. Le operazioni possibili sono definite in [xadefs. h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
 
 *xid*  
-Identificatore di ramo di transazione.
+Identificatore del ramo di transazione.
 
 *flags*  
-Flag associato alla richiesta TM. I possibili valori sono definiti nella [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
+Flag associati alla richiesta TM. I valori possibili sono definiti in [xadefs. h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
 
 *status*  
-Stato restituito dal gestore transazioni. Visualizzare [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) intestazione per possibili stati restituiti.
+Restituisce lo stato dalla TM. Per i possibili stati restituiti, vedere intestazione [xadefs. h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) .
 
 *sizeData*  
-Le dimensioni dei seguenti dati buffer `XACALLPARAM`. 
+Dimensione del buffer di dati seguente `XACALLPARAM`. 
 
 *sizeReturned*  
-Dimensioni dei dati restituiti.
+Dimensione dei dati restituiti.
 
-Per effettuare una richiesta TM, il [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) funzione deve essere chiamato con l'attributo _sql_copt_ss_enlist_in_xa impostato su_ e un puntatore al `XACALLPARAM` oggetto.  
+Per eseguire una richiesta TM, è necessario chiamare la funzione [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con l'attributo _SQL_COPT_SS_ENLIST_IN_XA_ e un `XACALLPARAM` puntatore all'oggetto.  
 
 ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
@@ -75,7 +75,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 
 ## <a name="code-sample"></a>Codice di esempio 
 
-Nell'esempio seguente viene illustrato come comunicare con il gestore transazioni per le transazioni XA ed eseguire diverse operazioni da un'applicazione client. Se il test viene eseguito in Microsoft SQL Server, MS DTC deve essere configurato correttamente per consentire le transazioni XA. Le definizioni di XA sono reperibili nel [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) file di intestazione. 
+Nell'esempio seguente viene illustrato come comunicare con la TM per le transazioni XA ed eseguire diverse operazioni da un'applicazione client. Se il test viene eseguito su Microsoft SQL Server, MS DTC deve essere configurato correttamente per abilitare le transazioni XA. Le definizioni XA si trovano nel file di intestazione [xadefs. h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) . 
 
 ```
 
@@ -434,7 +434,7 @@ int main(int argc, char** argv)
 
 ```
 
-Il `XATestRunner` classe implementa le chiamate XA possibili durante la comunicazione con il server.
+La `XATestRunner` classe implementa le possibili chiamate XA durante la comunicazione con il server.
 
 ```
 
@@ -601,7 +601,7 @@ void XaTestRunner::XidShortToXid(const XID_SHORT& xids, XID& xid)
 
 ## <a name="appendix"></a>Appendice
 
-### <a name="xadefsh"></a>xadefs.h
+### <a name="xadefsh"></a>xadefs. h
 
 ```
 // xadefs.h : XA specific definitions.

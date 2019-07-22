@@ -1,6 +1,6 @@
 ---
-title: Stabilire una connessione a un'origine dei dati | Microsoft Docs
-description: Stabilire una connessione a un'origine dati tramite il Driver OLE DB per SQL Server
+title: Stabilire una connessione a un'origine dati | Microsoft Docs
+description: Creazione di una connessione a un'origine dati tramite OLE DB driver per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,20 +16,19 @@ helpviewer_keywords:
 - OLE DB data sources [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: d4a01b560c5612df2db873728747fa2481a2760f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 268c81f98a46174aa09df80e8459529e0f854bfc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769184"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995002"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Avvio di una connessione a un'origine dati
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Per accedere al driver OLE DB per SQL Server, il consumer deve prima creare un'istanza di un oggetto origine dati chiamando il metodo **CoCreateInstance**. Un identificatore univoco di classe (CLSID) identifica ogni provider OLE DB. Per il Driver OLE DB per SQL Server, l'identificatore di classe è CLSID_MSOLEDBSQL. È anche possibile usare il simbolo MSOLEDBSQL_CLSID che verrà risolto al Driver OLE DB per SQL Server che viene usato in msoledbsql.h cui si fa riferimento.  
+  Per accedere al driver OLE DB per SQL Server, il consumer deve prima creare un'istanza di un oggetto origine dati chiamando il metodo **CoCreateInstance**. Un identificatore univoco di classe (CLSID) identifica ogni provider OLE DB. Per il driver OLE DB per SQL Server, l'identificatore di classe è CLSID_MSOLEDBSQL. È anche possibile usare il simbolo MSOLEDBSQL_CLSID che verrà risolto nel driver OLE DB per SQL Server usato in MSOLEDBSQL. h a cui si fa riferimento.  
   
  L'oggetto origine dati espone l'interfaccia **IDBProperties** usata dal consumer per fornire informazioni di base sull'autenticazione, ad esempio il nome del server, il nome del database, l'ID utente e la password. Per impostare queste proprietà, viene chiamato il metodo **IDBProperties::SetProperties**.  
   
@@ -47,7 +46,7 @@ CoCreateInstance(CLSID_MSOLEDBSQL,
   
  Questa chiamata a **CoCreateInstance** crea un solo oggetto della classe associato a CLSID_MSOLEDBSQL (CSLID associato ai dati e al codice che verranno usati per creare l'oggetto). IID_IDBInitialize è un riferimento all'identificatore dell'interfaccia (**IDBInitialize**) da usare per comunicare con l'oggetto.  
   
- L'esempio seguente viene illustrato come inizializzare e stabilire una connessione all'origine dati.
+ Nell'esempio seguente viene illustrato come inizializzare e stabilire una connessione all'origine dati.
   
 ```cpp
 #include "msoledbsql.h"

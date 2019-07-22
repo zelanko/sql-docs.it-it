@@ -1,5 +1,5 @@
 ---
-title: Supporto di set di righe dello schema (OLE DB) | Microsoft Docs
+title: Supporto per set di righe dello schema (OLE DB) | Microsoft Docs
 description: Supporto del set di righe dello schema (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -16,13 +16,12 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: b799ebd6205ebac01f832910dff0775afe5c0a93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4734255bc71b7f658b15db5c615910fbf3c6f5a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795953"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993920"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Supporto dei set di righe dello schema (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "66795953"
   Il driver OLE DB per SQL Server supporta anche la restituzione di informazioni sullo schema da un server collegato durante l'elaborazione di query distribuite [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  Sebbene [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporti i sinonimi, i metadati per i sinonimi non viene restituita dal Driver OLE DB per SQL Server.  
+>  Sebbene [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporti i sinonimi, i metadati per i sinonimi non vengono restituiti dal driver OLE DB per SQL Server.  
   
  Nelle tabelle seguenti sono elencati i set di righe dello schema e le colonne di restrizione supportati dal driver OLE DB per SQL Server.  
   

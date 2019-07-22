@@ -1,5 +1,5 @@
 ---
-title: I membri di SQLServerXAConnection | Microsoft Docs
+title: Membri di SQLServerXAConnection | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4b61dabd-369b-460c-8450-9fe424f76541
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1399700551402870a4eeb7cd2339a7a2e937468f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 85d106ad25c1823f873ade24800e44987d78a2f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970257"
 ---
 # <a name="sqlserverxaconnection-members"></a>Membri di SQLServerXAConnection
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 64ac78b8-d5b3-4134-9b72-d2b0c52168a2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 95683f46799802410669ac97035f6a0f03379a37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c305ccf63e1bb8b1253eb8fb0219278d8720cb5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801652"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954967"
 ---
 # <a name="execute-method-javalangstring-sqlserverstatement"></a>Metodo execute (java.lang.String) (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,7 +49,7 @@ public boolean execute(java.lang.String sql)
  Questo metodo execute viene specificato dal metodo execute nell'interfaccia java.sql.Statement.  
   
 ## <a name="see-also"></a>Vedere anche  
- [eseguire il metodo &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)   
+ [Esegui metodo &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)   
  [Membri di SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Classe SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

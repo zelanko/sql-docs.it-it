@@ -1,6 +1,6 @@
 ---
 title: Ottenere un cursore FAST_FORWARD | Microsoft Docs
-description: Ottenere un cursore FAST_FORWARD tramite Driver OLE DB per SQL Server
+description: Ottenere un cursore FAST_FORWARD usando OLE DB driver per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - fast forward-only cursors
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 30c108b0b4f7d8022e5fccf1738b059a15abd687
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2b49071908be3d8093d66358148e305b79476324
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994736"
 ---
 # <a name="obtain-a-fastforward-cursor"></a>Ottenere un cursore FAST_FORWARD
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

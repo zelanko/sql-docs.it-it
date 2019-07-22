@@ -1,5 +1,5 @@
 ---
-title: Metodo getReference (SQLServerXADataSource) | Microsoft Docs
+title: Metodo GetReference (SQLServerXADataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c9e7b904-2e98-459f-9173-382919d741e2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3d45536588b4870f688fc0f8256233f6037c3987
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 189b35b98c6b604563d056f286b9640ee47637a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801335"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980448"
 ---
 # <a name="getreference-method-sqlserverxadatasource"></a>Metodo getReference (SQLServerXADataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,10 +35,10 @@ public javax.naming.Reference getReference()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Un oggetto di riferimento.  
+ Oggetto di riferimento.  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getReference viene specificato dal metodo getReference nell'interfaccia Referenceable.  
+ Questo metodo GetReference viene specificato dal metodo GetReference nell'interfaccia javax. naming. Referenceable.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   

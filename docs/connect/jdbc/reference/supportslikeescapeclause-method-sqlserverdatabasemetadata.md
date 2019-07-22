@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cfb43430-88bf-4386-847a-10ea1e5ce7db
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 587dbb2e00782b1549a643a1c171bd75867e761b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e012626a968605627e8cbec94679d94b1dcaf1c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969311"
 ---
 # <a name="supportslikeescapeclause-method-sqlserverdatabasemetadata"></a>Metodo supportsLikeEscapeClause (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsLikeEscapeClause()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se supportata. In caso contrario, **false**.  
+ **true** se supportato. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo supportsLikeEscapeClause viene specificato dal metodo supportsLikeEscapeClause nell'interfaccia DatabaseMetaData.  
+ Questo metodo supportsLikeEscapeClause viene specificato dal metodo supportsLikeEscapeClause nell'interfaccia java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

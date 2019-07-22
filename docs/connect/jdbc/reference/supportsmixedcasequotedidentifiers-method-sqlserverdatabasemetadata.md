@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 76c68fc2-5af6-4b8d-baee-245716fdc5cc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b6cb9ce098a57d3378ca0ae2d6a4718185221852
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 48f3861991aa56ed79f753acedd4dbd9f27b5744
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66788608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969288"
 ---
 # <a name="supportsmixedcasequotedidentifiers-method-sqlserverdatabasemetadata"></a>Metodo supportsMixedCaseQuotedIdentifiers (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsMixedCaseQuotedIdentifiers()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se gli identificatori vengono archiviati in minuscolo e maiuscolo. In caso contrario, **false**.  
+ **true** se gli identificatori vengono archiviati in lettere maiuscole e minuscole. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo supportsMixedCaseQuotedIdentifiers viene specificato dal metodo supportsMixedCaseQuotedIdentifiers nell'interfaccia DatabaseMetaData.  
+ Questo metodo supportsMixedCaseQuotedIdentifiers viene specificato dal metodo supportsMixedCaseQuotedIdentifiers nell'interfaccia java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

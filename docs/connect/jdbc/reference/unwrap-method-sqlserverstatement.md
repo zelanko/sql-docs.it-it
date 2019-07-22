@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ce680176-ef04-4e44-bb6c-ec50bd06e7e6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cadd692cb6fe3cdedcad04f462dc46e6a8070b94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9b57c0d984198a40e04c1dfe6eeb6ce946d2d13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66790001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985611"
 ---
 # <a name="unwrap-method-sqlserverstatement"></a>Metodo unwrap (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,9 +47,9 @@ public <T> T unwrap(Class<T> iface)
   
  Quando questo metodo viene chiamato, l'oggetto annulla il wrapping nella classe [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).  
   
- Ad esempio di codice, vedere [l'aggiornamento di grandi dimensioni campione di dati](../../../connect/jdbc/updating-large-data-sample.md), o [metodo unwrap &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md).  
+ Per un esempio di codice, vedere aggiornamento di un esempio di [dati di grandi dimensioni](../../../connect/jdbc/updating-large-data-sample.md)o Unwrap [metodo &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md).  
   
- Per altre informazioni, vedere [wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Per ulteriori informazioni, vedere [wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo isWrapperFor &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)   

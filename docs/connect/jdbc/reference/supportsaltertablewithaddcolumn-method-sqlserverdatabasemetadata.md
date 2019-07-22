@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bbac1370-fbf6-4450-8599-4ed3b4db3fc6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b52539f8b97db52e9e42e6f565b3b792b24f6278
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c7df5113dfe83d715408d6ccdcede00482df1438
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766549"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969861"
 ---
 # <a name="supportsaltertablewithaddcolumn-method-sqlserverdatabasemetadata"></a>Metodo supportsAlterTableWithAddColumn (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsAlterTableWithAddColumn()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se supportata. In caso contrario, **false**.  
+ **true** se supportato. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo supportsAlterTableWithAddColumn viene specificato dal metodo supportsAlterTableWithAddColumn nell'interfaccia DatabaseMetaData.  
+ Questo metodo supportsAlterTableWithAddColumn viene specificato dal Metodo supportsAlterTableWithAddColumn nell'interfaccia java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

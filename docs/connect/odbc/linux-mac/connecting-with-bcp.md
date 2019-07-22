@@ -1,5 +1,5 @@
 ---
-title: Connessione a bcp | Microsoft Docs
+title: Connessione con bcp | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d4eaf16d364927b8439bcf98e7ac6655d4a2f7bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1dd80df3a0f7fabec7ae9ddc51b16cb4456c7970
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789865"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996615"
 ---
 # <a name="connecting-with-bcp"></a>Connessione a bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-L'utilità [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) è disponibile in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Linux e macOS. Questa pagina illustra le differenze rispetto alla versione di Windows di `bcp`.
+L'utilità [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) è disponibile in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Linux e macOS. In questa pagina vengono documentate le differenze rispetto alla `bcp`versione di Windows di.
   
 - Il carattere di terminazione del campo è tabulazione ("\t").  
   
@@ -47,7 +46,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>Opzioni disponibili
 Nella versione corrente sono disponibili le opzioni e la sintassi seguenti:  
 
-[_database_ **.** ] _schema_ **.** _tabella_ **nelle** _data\_file_ | **out** _dati\_file_
+[_database_ **.** ] _schema_ di **.** _tabella_ di **in** file di dati in | **uscita dal** _\__ file di dati _\__
 
 - -a *packet_size*  
 Specifica il numero di byte inviati al e dal server per ogni pacchetto di rete.  
@@ -79,7 +78,7 @@ Specifica il numero della prima riga da esportare da una tabella o da importare 
 Specifica che durante l'operazione il valore delle colonne vuote deve essere Null, ovvero che non verranno inseriti valori predefiniti in tali colonne.  
   
 - -l  
-Specifica un timeout accesso. L'opzione -l specifica il numero di secondi che devono trascorrere prima che si verifichi il timeout di un accesso a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando si prova la connessione a un server. Il timeout di accesso predefinito è 15 secondi. Il valore del timeout deve essere un numero compreso tra 0 e 65534. Se il valore specificato non è numerico o non è compreso in tale intervallo, `bcp` genera un messaggio di errore. Un valore pari a 0 specifica un timeout infinito.
+Specifica un timeout accesso. L'opzione -l specifica il numero di secondi che devono trascorrere prima che si verifichi il timeout di un accesso a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando si prova la connessione a un server. Il timeout di accesso predefinito è 15 secondi. Il valore del timeout deve essere un numero compreso tra 0 e 65534. Se il valore specificato non è numerico o non è compreso in tale intervallo, `bcp` genera un messaggio di errore. Il valore 0 specifica un timeout infinito.
   
 - -L *last_row*  
 Specifica il numero dell'ultima riga da esportare da una tabella o da importare da un file di dati.  
@@ -103,7 +102,7 @@ Specifica il carattere di terminazione della riga.
 Specifica che la copia bulk dei dati relativi a valuta, data e ora verrà eseguita in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando il formato definito per le impostazioni locali del computer client.  
   
 - -S *server*  
-Specifica il nome del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza a cui connettersi, o se -D viene usata, un DSN.  
+Specifica il nome dell' [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza a cui connettersi o, se si usa-D, un DSN.  
   
 - -t *field_terminator*  
 Specifica il carattere di terminazione del campo.  

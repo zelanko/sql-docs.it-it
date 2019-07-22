@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b7e8210d-a724-4bae-832a-ae4c63031c9c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 05fa0ddce61d853f0a25ba0fb1c183c1248c5bc0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f9ed19679cb1a173d015152a006f55660fe9f826
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784955"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968468"
 ---
 # <a name="truncate-method-sqlservernclob"></a>Metodo truncate (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void truncate(long len)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo troncamento è specificato dal metodo nell'interfaccia java.sql.NClob truncato.  
+ Questo metodo truncate viene specificato dal metodo truncate nell'interfaccia java. SQL. NClob.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

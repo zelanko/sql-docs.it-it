@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 2048bb9f-7d9b-4aaa-b135-c716910cc800
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 03a11c4479ac860e84009fcd528d932098bdc661
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bbe3bc040ba79ad7699a571b13b48f2c41965c60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66784347"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981426"
 ---
 # <a name="getnstring-method-int"></a>Metodo getNString (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera il valore di designato **NCHAR**, **NVARCHAR**, o **LONGNVARCHAR** parametro sotto forma di stringa in Java linguaggio di programmazione.  
+  Recupera il valore del parametro **nchar**, **nvarchar**o **LONGNVARCHAR** designato come stringa nel linguaggio di programmazione Java.  
   
 ## <a name="syntax"></a>Sintassi  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4af5769f5187fd70387f89aebf07625117da9a49
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9ee3a8d6b0a4c6514864a5990a87de9d732684d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790337"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916488"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>Utilizzo di una stored procedure con parametri di output
 
@@ -29,11 +28,11 @@ Quando si chiama questo tipo di stored procedure usando il driver JDBC, è neces
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> Per altre informazioni sulle sequenze di escape SQL, vedere [usando le sequenze di Escape SQL](../../connect/jdbc/using-sql-escape-sequences.md).
+> Per ulteriori informazioni sulle sequenze di escape SQL, vedere [utilizzo di sequenze di escape SQL](../../connect/jdbc/using-sql-escape-sequences.md).
 
 Quando si costruisce la sequenza di escape `call`, specificare i parametri OUT usando il carattere ? (punto interrogativo), che funge da segnaposto per i valori di parametro che verranno restituiti dalla stored procedure. Per specificare il valore di un parametro OUT, è necessario specificare il tipo di dati di ogni parametro usando il metodo [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) della classe SQLServerCallableStatement prima di eseguire la stored procedure.
 
-Il valore specificato per il parametro OUT nel metodo registerOutParameter deve essere uno dei tipi di dati JDBC presenti in java.sql.Types, che a sua volta corrisponde a uno dei tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nativi. Per altre informazioni su Microsoft JDBC e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati, vedere [informazioni sui tipi di dati del Driver JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).
+Il valore specificato per il parametro OUT nel metodo registerOutParameter deve essere uno dei tipi di dati JDBC presenti in java.sql.Types, che a sua volta corrisponde a uno dei tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nativi. Per ulteriori informazioni sui tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC e, vedere [informazioni sui tipi di dati del driver JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).
 
 Quando si passa un valore al metodo registerOutParameter per un parametro OUT, è necessario specificare non solo il tipo di dati da usare per il parametro, ma anche la posizione ordinale o il nome del parametro nella stored procedure. Ad esempio, se la stored procedure contiene un unico parametro OUT, il valore ordinale sarà 1. Se la stored procedure contiene due parametri, il primo valore ordinale sarà 1 e il secondo sarà 2.
 
@@ -83,9 +82,9 @@ public static void executeStoredProcedure(Connection con) throws SQLException {
 ```
 
 > [!NOTE]  
-> Questi esempi usano il metodo execute della classe SQLServerCallableStatement per eseguire la stored procedure. in quanto la stored procedure non ha restituito alcun set di risultati. In caso contrario, si userebbe il metodo [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md).
+> In questi esempi viene usato il metodo Execute della classe SQLServerCallableStatement per eseguire il stored procedure. in quanto la stored procedure non ha restituito alcun set di risultati. In caso contrario, si userebbe il metodo [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md).
 
-Le stored procedure possono restituire conteggi aggiornamenti e più set di risultati. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] è conforme alla specifica JDBC 3.0, che stabilisce che prima di recuperare i parametri OUT devono essere recuperati più set di risultati e conteggi di aggiornamento. Vale a dire, l'applicazione deve recuperare tutti gli oggetti ResultSet e prima di recuperare i parametri OUT utilizzando i metodi CallableStatement.getter conteggi aggiornamenti. In caso contrario, gli oggetti ResultSet e i conteggi di aggiornamento non ancora recuperati andranno persi quando vengono recuperati i parametri OUT. Per altre informazioni su conteggi aggiornamenti e più set di risultati, vedere [utilizzando una Stored Procedure con un conteggio di aggiornamento](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) e [utilizzo di set di risultati più](../../connect/jdbc/using-multiple-result-sets.md).
+Le stored procedure possono restituire conteggi aggiornamenti e più set di risultati. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] è conforme alla specifica JDBC 3.0, che stabilisce che prima di recuperare i parametri OUT devono essere recuperati più set di risultati e conteggi di aggiornamento. Ovvero, l'applicazione deve recuperare tutti gli oggetti ResultSet e i conteggi di aggiornamento prima di recuperare i parametri OUT usando i metodi CallableStatement. Getter. In caso contrario, gli oggetti ResultSet e i conteggi di aggiornamento non ancora recuperati andranno persi quando vengono recuperati i parametri OUT. Per ulteriori informazioni sui conteggi degli aggiornamenti e su più set di risultati, vedere [utilizzo di una stored procedure con un conteggio degli aggiornamenti](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) e [utilizzo di più set di risultati](../../connect/jdbc/using-multiple-result-sets.md).
 
 ## <a name="see-also"></a>Vedere anche
 

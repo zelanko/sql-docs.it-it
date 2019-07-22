@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 665173d2-14c7-4ce1-954e-4adb53fb9b39
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 92a4e73c388eac1f79eee915e9dd26a79ce9a732
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9dabb3084bf42ed60a408e6158f70f2b9ae20e23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977749"
 ---
 # <a name="iscatalogatstart-method-sqlserverdatabasemetadata"></a>Metodo isCatalogAtStart (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean isCatalogAtStart()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se il nome del catalogo è il primo. In caso contrario, **false**.  
+ **true** se il nome del catalogo è First. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo isCatalogAtStart viene specificato dal metodo isCatalogAtStart nell'interfaccia DatabaseMetaData.  
+ Questo metodo isCatalogAtStart viene specificato dal metodo isCatalogAtStart nell'interfaccia java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

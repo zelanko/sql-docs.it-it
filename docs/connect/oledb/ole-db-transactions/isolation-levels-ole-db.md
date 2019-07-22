@@ -1,5 +1,5 @@
 ---
-title: I livelli di isolamento (OLE DB) | Microsoft Docs
+title: Livelli di isolamento (OLE DB) | Microsoft Docs
 description: Livelli di isolamento (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,24 +15,23 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, transactions
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 0a7e06fe0888767d653f40148efb324f89456460
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2c9f3a7cd06f801555ab373e7e54fbf1b620d894
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766223"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993968"
 ---
 # <a name="isolation-levels-ole-db"></a>Livelli di isolamento (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  I client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possono controllare i livelli di isolamento delle transazioni per una connessione. Per controllare a livello di isolamento delle transazioni, viene utilizzato il Driver OLE DB per il consumer di SQL Server:  
+  I client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possono controllare i livelli di isolamento delle transazioni per una connessione. Per controllare il livello di isolamento delle transazioni, il driver OLE DB per SQL Server consumer utilizza:  
   
 -   DBPROP_SESS_AUTOCOMMITISOLEVELS della proprietà DBPROPSET_SESSION per la modalità di autocommit predefinita del driver OLE DB per SQL Server.  
   
-     Il Driver OLE DB per impostazione predefinita di SQL Server per il livello è DBPROPVAL_TI_READCOMMITTED.  
+     Il driver OLE DB per SQL Server valore predefinito per il livello è DBPROPVAL_TI_READCOMMITTED.  
   
 -   Parametro *isoLevel* del metodo **ITransactionLocal::StartTransaction** per le transazioni locali di cui viene eseguito il commit manuale.  
   

@@ -10,34 +10,34 @@ helpviewer_keywords:
 - formatting, decimal types, money values
 author: yitam
 ms.author: v-yitam
-manager: mbarwin
-ms.openlocfilehash: 76b6d27acedcfe2ec462a764559237a1a2218f78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: v-mabarw
+ms.openlocfilehash: 4a5ac641a98077c09bb38a5fc8fbd3fb1a4bf73d
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62669603"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265139"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>Formattazione di stringhe decimali e valori money (driver SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Accuratezza, mantenere [tipi di dati decimali o numerici](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) vengono sempre recuperati sotto forma di stringhe con valori di precisione esatte e scale. Se qualsiasi valore è minore di 1, lo zero iniziale è manca. È la stessa operazione con i campi di tipo money e smallmoney così come sono campi decimali con una scala fissa pari a 4.
+Per mantenere l'accuratezza, i [tipi decimali o numerici](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) vengono sempre recuperati come stringhe con precisione e scale esatte. Se un valore è minore di 1, lo zero principale risulta mancante. Si tratta dello stesso valore con i campi Money e smallmoney, perché si tratta di campi decimali con una scala fissa uguale a 4.
 
-## <a name="add-leading-zeroes-if-missing"></a>Aggiungere zeri iniziali se mancante
-Partire dalla versione 5.6.0, l'opzione `FormatDecimals` viene aggiunto al livello di connessione e istruzione sqlsrv, che consente all'utente di formattare le stringhe decimali. Questa opzione è previsto un valore booleano (true o false) e influisce solo sulla formattazione di valori numerici o decimali nei risultati recuperati. In altre parole, il `FormatDecimals` opzione non ha alcun effetto sulle altre operazioni, ad esempio inserimento o aggiornamento.
+## <a name="add-leading-zeroes-if-missing"></a>Aggiungi zeri iniziali se mancanti
+A partire dalla versione 5.6.0, l' `FormatDecimals` opzione viene aggiunta alla connessione sqlsrv e ai livelli di istruzione, che consente all'utente di formattare le stringhe decimali. Questa opzione prevede un valore booleano (true o false) e influiscono solo sulla formattazione dei valori decimali o numerici nei risultati recuperati. In altre parole, l' `FormatDecimals` opzione non ha alcun effetto su altre operazioni come l'inserimento o l'aggiornamento.
 
-L'impostazione predefinita di `FormatDecimals` è **false**. Se impostato su true, gli zeri iniziali per le stringhe decimali verrà aggiunti per qualsiasi valore decimale minore di 1.
+L'impostazione predefinita di `FormatDecimals` è **false**. Se è impostato su true, verranno aggiunti gli zeri iniziali alle stringhe decimali per qualsiasi valore decimale minore di 1.
 
-## <a name="configure-number-of-decimal-places"></a>Configurare numero di posizioni decimali
-Con `FormatDecimals` attivata, un'altra opzione, `DecimalPlaces`, consente agli utenti di configurare il numero di posizioni decimali, la visualizzazione di dati money e smallmoney. Accetta i valori integer compreso nell'intervallo [0, 4], e potrebbe verificarsi l'arrotondamento quando visualizzata. Tuttavia, i dati sottostanti di denaro rimangono invariati.
+## <a name="configure-number-of-decimal-places"></a>Configurare il numero di posizioni decimali
+Con `FormatDecimals` attivato, un'altra opzione, `DecimalPlaces`, consente agli utenti di configurare il numero di posizioni decimali durante la visualizzazione dei dati Money e smallmoney. Accetta i valori interi nell'intervallo [0, 4] e l'arrotondamento può verificarsi quando viene visualizzato. Tuttavia, i dati monetari sottostanti rimangono invariati.
 
-Entrambe le opzioni possono essere impostate a livello di istruzione o di connessione e l'istruzione che imposta sempre esegue l'override dell'impostazione di connessione corrispondente. Si noti che il `DecimalPlaces` opzione **solo** influisce sui dati di denaro, e `FormatDecimals` deve essere impostata su true per `DecimalPlaces` abbiano effetto. In caso contrario, la formattazione è stata disattivata indipendentemente `DecimalPlaces` impostazione.
+Entrambe le opzioni possono essere impostate sul livello di connessione o di istruzione e l'impostazione dell'istruzione esegue sempre l'override dell'impostazione di connessione corrispondente. Si noti che `DecimalPlaces` l'opzione influisce **solo** sui dati `FormatDecimals` Money e deve essere impostata su `DecimalPlaces` true per avere effetto. In caso contrario, la formattazione viene disattivata indipendentemente dall' `DecimalPlaces` impostazione.
 
 > [!NOTE]
-> Poiché i campi di denaro o smallmoney hanno scala 4, impostazione `DecimalPlaces` valore per i numeri negativi o qualsiasi valore maggiore di 4 verranno ignorati. È consigliabile non usare tutti i dati formattati denaro come input per un calcolo qualsiasi.
+> Poiché i campi Money o smallmoney hanno scala 4, `DecimalPlaces` l'impostazione del valore su un numero negativo o su un valore maggiore di 4 verrà ignorata. Non è consigliabile usare i dati di Money formattati come input per qualsiasi calcolo.
 
-## <a name="example---a-simple-fetch"></a>Esempio: un'operazione di recupero semplice
-Nell'esempio seguente viene illustrato come usare le nuove opzioni in un'operazione di recupero semplice.
+## <a name="example---a-simple-fetch"></a>Esempio: recupero semplice
+Nell'esempio seguente viene illustrato come utilizzare le nuove opzioni in un recupero semplice.
 
 ```php
 <?php
@@ -65,10 +65,10 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example---format-the-output-parameter"></a>Esempio - formato il parametro di output
-Se un campo di dati decimale o numerico viene restituito come le [parametro di output](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md), il valore restituito sarà considerato come una stringa normale varchar. Tuttavia, se viene specificato SQLSRV_SQLTYPE_DECIMAL o SQLSRV_SQLTYPE_NUMERIC, è possibile impostare `FormatDecimals` su true per assicurarsi che non ci sia alcun mancante zeri iniziali per il valore di stringa numerici. Per altre informazioni, vedere [Procedura: Recuperare i parametri di output mediante il driver SQLSRV](../..//connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).
+## <a name="example---format-the-output-parameter"></a>Esempio: formattare il parametro di output
+Se come [parametro di output](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)viene restituito un campo numerico o decimale, il valore restituito verrà considerato come una normale stringa varchar. Tuttavia, se si specifica SQLSRV_SQLTYPE_DECIMAL o SQLSRV_SQLTYPE_NUMERIC, è possibile impostare `FormatDecimals` su true per assicurarsi che non sia presente zero per il valore della stringa numerica. Per altre informazioni, vedere [Procedura: Recuperare i parametri di output mediante il driver SQLSRV](../..//connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).
 
-Nell'esempio seguente viene illustrato come formattare il parametro di output di una stored procedure che restituisce un valore decimal(8,4).
+Nell'esempio seguente viene illustrato come formattare il parametro di output di un stored procedure che restituisce un valore Decimal (8, 4).
 
 ```php
 $outString = '';

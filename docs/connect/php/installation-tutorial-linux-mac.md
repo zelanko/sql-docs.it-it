@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: 90d2b5850010d49e881ea0169566fe8e7d046f0d
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: 7a2312a4ff6af5a11825274e3e010873ef2d3bd9
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343905"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68256700"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Esercitazione sull'installazione in Linux e macOS dei driver Microsoft per PHP per SQL Server
 Le istruzioni seguenti presuppongono che venga usato un ambiente pulito e illustrano come installare PHP 7.x, il driver Microsoft ODBC, Apache e i driver Microsoft per PHP per SQL Server in Ubuntu 16.04, 18.04 e 18.10, Red Hat 7, Debian 8 e 9, Suse 12 e 15 e macOS 10.12, 10.13 e 10.14. I consigli contenuti in queste istruzioni riguardano l'installazione dei driver con PECL, ma è anche possibile scaricare i file binari precompilati dalla pagina del progetto GitHub relativo ai [driver Microsoft per PHP per SQL Server](https://github.com/Microsoft/msphpsql/releases) e installare tali file seguendo le istruzioni riportate in [Caricamento dei driver Microsoft per PHP per SQL Server](../../connect/php/loading-the-php-sql-driver.md). Per una spiegazione del caricamento delle estensioni e dei motivi per cui non si aggiungeranno le estensioni a php.ini, vedere la sezione relativa al [caricamento dei driver](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup).
@@ -55,7 +55,7 @@ exit
 sudo phpenmod -v 7.3 sqlsrv pdo_sqlsrv
 ```
 
-Se è presente solo una versione PHP nel sistema, l'ultimo passaggio può essere semplificato nel `phpenmod sqlsrv pdo_sqlsrv`.
+Se nel sistema è presente una sola versione di PHP `phpenmod sqlsrv pdo_sqlsrv`, l'ultimo passaggio può essere semplificato in.
 
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>Passaggio 4. Installare Apache e configurare il caricamento dei driver
 ```
@@ -156,7 +156,7 @@ exit
 sudo phpenmod -v 7.3 sqlsrv pdo_sqlsrv
 ```
 
-Se è presente solo una versione PHP nel sistema, l'ultimo passaggio può essere semplificato nel `phpenmod sqlsrv pdo_sqlsrv`.
+Se nel sistema è presente una sola versione di PHP `phpenmod sqlsrv pdo_sqlsrv`, l'ultimo passaggio può essere semplificato in.
 
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>Passaggio 4. Installare Apache e configurare il caricamento dei driver
 ```

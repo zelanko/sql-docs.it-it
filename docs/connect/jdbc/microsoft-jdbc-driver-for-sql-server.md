@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f55ff68ff0e3e4fca63fa284e25fa0c4c0ae4d86
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a12209cc5782c0134c4e14723d7ce73049db1ddd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956328"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver per SQL Server
 
@@ -41,7 +40,7 @@ Microsoft JDBC Driver per SQL Server è stato testato per i principali server ap
 * [Prestazioni e affidabilità](improving-performance-and-reliability-with-the-jdbc-driver.md)  
 * [Risoluzione dei problemi](diagnosing-problems-with-the-jdbc-driver.md)
 * [Esempi di codice](sample-jdbc-driver-applications.md)
-* [Conformità e affari legali](compliance-and-legal-for-the-jdbc-sql-driver.md)  
+* [Conformità e note legali](compliance-and-legal-for-the-jdbc-sql-driver.md)  
   
 ## <a name="community"></a>Community
 
@@ -49,13 +48,13 @@ Microsoft JDBC Driver per SQL Server è stato testato per i principali server ap
   
 ## <a name="download"></a>Scarica
 
-[Scaricare Microsoft JDBC Driver per SQL Server](download-microsoft-jdbc-driver-for-sql-server.md) -contiene altre informazioni sui progetti Maven e altro ancora.
+[Scaricare Microsoft JDBC driver per SQL Server](download-microsoft-jdbc-driver-for-sql-server.md) : contiene informazioni aggiuntive sui progetti Maven e altro ancora.
   
 ## <a name="samples"></a>Esempi  
 
 * [Applicazioni di esempio del driver JDBC](sample-jdbc-driver-applications.md)  
-* [Introduzione a Java su Windows](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
-* [Introduzione a Java in macOS](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
-* [Introduzione a Java su Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
-* [Introduzione a Java su Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
-* [Introduzione a Java su SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)
+* [Introduzione con Java in Windows](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
+* [Introduzione con Java in macOS](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
+* [Introduzione con Java in Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
+* [Introduzione con Java su Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
+* [Introduzione con Java su SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)

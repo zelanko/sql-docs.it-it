@@ -1,5 +1,5 @@
 ---
-title: La connessione e il recupero dei dati | Microsoft Docs
+title: Connessione e recupero di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c87089b59855ef2c68a9e3b1051ed39850d7b17e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 310c66f6951a467b368fc44e1933bc6c8b6b36b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770069"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957272"
 ---
 # <a name="connecting-and-retrieving-data"></a>Connessione e recupero dei dati
 

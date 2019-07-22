@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3ee26412-43d2-404b-bc05-ffd0fc75805c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fb74dd4b80256ad85e03a258a0adc5d93ba1880d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e82f85941899fc05fc8fdf35cd7ae65870100ef3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66765886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983572"
 ---
 # <a name="getdouble-method-javalangstring-sqlserverresultset"></a>Metodo getDouble (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public double getDouble(java.lang.String columnName)
  Valore **String** contenente il nome della colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto **doppie** valore.  
+ Valore **Double** .  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

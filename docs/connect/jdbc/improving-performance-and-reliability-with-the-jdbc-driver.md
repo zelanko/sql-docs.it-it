@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b7cbadb13e5a14fe86a409cedfbffe98bb437e57
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 561b3681336812761f483741ccb7f00833e408ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781672"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956491"
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>Utilizzo del driver JDBC per il miglioramento di prestazioni e affidabilità
 
@@ -32,11 +31,11 @@ Negli argomenti di questa sezione vengono descritte le varie tecniche per il mig
 |-----------|-----------------|  
 |[Chiusura di oggetti non in uso](../../connect/jdbc/closing-objects-when-not-in-use.md)|Descrive l'importanza di chiudere gli oggetti del driver JDBC quando non sono più necessari.|  
 |[Gestione delle dimensioni delle transazioni](../../connect/jdbc/managing-transaction-size.md)|Descrive le tecniche per migliorare le prestazioni delle transazioni.|  
-|[Uso di istruzioni e set di risultati](../../connect/jdbc/working-with-statements-and-result-sets.md)|Descrive le tecniche per migliorare le prestazioni quando si usano gli oggetti di istruzione o un set di risultati.|  
+|[Uso di istruzioni e set di risultati](../../connect/jdbc/working-with-statements-and-result-sets.md)|Vengono descritte le tecniche per migliorare le prestazioni quando si utilizzano gli oggetti istruzione o ResultSet.|  
 |[Uso del buffer adattivo](../../connect/jdbc/using-adaptive-buffering.md)|Viene descritta una caratteristica di buffer adattivo, progettata per recuperare qualsiasi tipo di dati con valori di grandi dimensioni senza l'overhead dei cursori server.|  
 |[Colonne di tipo sparse](../../connect/jdbc/sparse-columns.md)|Viene illustrato il supporto delle colonne di tipo sparse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da parte del driver JDBC.|  
-|[Memorizzazione nella cache dei metadati delle istruzioni preparate per JDBC Driver](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|Vengono descritte le tecniche per migliorare le prestazioni con query di un'istruzione preparata.|
-|[Uso dell'API di copia bulk per un'operazione di inserimento batch](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md)|Viene descritto come abilitare l'API della copia Bulk per le operazioni di inserimento batch e i relativi vantaggi.|
+|[Memorizzazione nella cache dei metadati delle istruzioni preparate per JDBC Driver](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|Vengono illustrate le tecniche per migliorare le prestazioni con le query di istruzioni preparate.|
+|[Uso dell'API di copia bulk per un'operazione di inserimento batch](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md)|Viene descritto come abilitare l'API per la copia bulk per le operazioni di inserimento in batch e i relativi vantaggi.|
 
 ## <a name="see-also"></a>Vedere anche
 

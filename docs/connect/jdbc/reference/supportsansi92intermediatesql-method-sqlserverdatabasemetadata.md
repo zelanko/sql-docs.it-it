@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4d6e8301-0633-4565-91c6-a80910954461
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 636400a77c634652db12aff815941d69bc35434a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fab9580485a4eab7ebb4967b4f8461c7dbc098e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766524"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969792"
 ---
 # <a name="supportsansi92intermediatesql-method-sqlserverdatabasemetadata"></a>Metodo supportsANSI92IntermediateSQL (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsANSI92IntermediateSQL()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se supportata. In caso contrario, **false**.  
+ **true** se supportato. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo supportsANSI92IntermediateSQL viene specificato dal metodo supportsANSI92IntermediateSQL nell'interfaccia DatabaseMetaData.  
+ Questo metodo supportsANSI92IntermediateSQL viene specificato dal Metodo supportsANSI92IntermediateSQL nell'interfaccia java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

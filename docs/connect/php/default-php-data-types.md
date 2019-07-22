@@ -1,5 +1,5 @@
 ---
-title: Default PHP Data Types | Microsoft Docs
+title: Tipi di dati PHP predefiniti | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01f611e0c11d6a2f3671c8911d41b4c0cfeef83c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11026bcb372759f62aa0b0d5f406a6721b65c135
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801479"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993673"
 ---
 # <a name="default-php-data-types"></a>Tipi di dati PHP predefiniti
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -84,7 +83,7 @@ Nella tabella seguente sono elencati i tipi di dati di SQL Server (recuperati da
 
 6. Si tratta di un tipo legacy che esegue il mapping al tipo nvarchar(max).
 
-7.  sql_variant non è supportato nei parametri di output o bidirezionale.
+7.  sql_variant non è supportato nei parametri bidirezionali o di output.
 
 8.  Si tratta di un tipo legacy che esegue il mapping al tipo varchar(max).  
   

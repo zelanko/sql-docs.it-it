@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 75d03ced-3614-4997-9abd-24642b1d1aae
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d1ad967d9f3923b886e3713829830be39412620e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b7b91071c97c46d7516907459539303ddbd45822
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769676"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978336"
 ---
 # <a name="geturl-method-int"></a>Metodo getURL (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.net.URL getURL(int n)
  Valore **int** che specifica l'indice del parametro.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un oggetto URL.  
+ Oggetto URL.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

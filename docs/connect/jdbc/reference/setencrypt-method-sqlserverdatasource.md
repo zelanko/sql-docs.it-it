@@ -1,5 +1,5 @@
 ---
-title: Metodo setEncrypt (SQLServerDataSource) | Microsoft Docs
+title: Metodo seencrypt (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0c85a9c1-f27c-457e-8461-403cc03e2d17
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8bb95e1eb547037d7ecf1855f71fa519102cf621
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 248213fed555ffc029162c44bdcccb656c311703
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974293"
 ---
 # <a name="setencrypt-method-sqlserverdatasource"></a>Metodo setEncrypt (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public void setEncypt(boolean encrypt)
 #### <a name="parameters"></a>Parametri  
  *encrypt*  
   
- **true** se è abilitata la crittografia Secure Sockets Layer (SSL) tra il client e il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. In caso contrario, **false**.  
+ **true** se la crittografia del Secure Sockets Layer (SSL) è abilitata tra il client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]e il. In caso contrario, **false**.  
   
 ## <a name="remarks"></a>Remarks  
  Se la proprietà encrypt è impostata su **true**, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] fa in modo che in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] venga usata la crittografia SSL per tutti i dati inviati tra il client e il server, se nel server è installato un certificato. Il valore predefinito è **false**.  

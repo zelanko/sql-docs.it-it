@@ -1,5 +1,5 @@
 ---
-title: Modificare modelli di traccia | Microsoft Docs
+title: Modificare i modelli di traccia | Microsoft Docs
 ms.custom: ''
 ms.date: 07/12/2017
 ms.prod: sql
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 34d3b69a345a9d7575cc850d4416695206b11a5e
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 55a7cdf539a675fd6d3c86ace8cc837ed1e92358
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733065"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074870"
 ---
 # <a name="modify-trace-templates"></a>Modificare modelli di traccia
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

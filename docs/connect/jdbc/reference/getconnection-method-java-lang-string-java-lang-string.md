@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 78db89d6-a8a0-4116-8885-548e627220ed
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 86c6637a3f502212b2b2f35a47207d7276ce8df5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 87d3dfc2183bdc00261417a024507b41ea5fde28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763288"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952747"
 ---
 # <a name="getconnection-method-javalangstring-javalangstring"></a>Metodo getConnection (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,9 +51,9 @@ public java.sql.Connection getConnection(java.lang.String username,
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getConnection viene specificato dal metodo getConnection nell'interfaccia javax.  
+ Questo metodo getConnection viene specificato dal metodo getConnection nell'interfaccia javax. SQL. DataSource.  
   
- La chiamata di getConnection metodo con un nome utente diverso da null o una password sostituirà le proprietà di nome e una password utente impostati nella classe SQLServerDataSource durante l'inizializzazione dell'oggetto SQLServerConnection. Ad esempio, se il chiamante ha chiamato [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) e [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) nell'origine dati e quindi chiama getConnection e specifica un nome utente non Null o una password non Null, il nome utente e la password impostati da setUser e setPassword verranno sostituiti dal nome utente e dalla password passati in getConnection.  
+ Se si chiama il metodo getConnection con un nome utente o una password non null, le proprietà relative a nome utente e password impostate nella classe SQLServerDataSource verranno sostituite durante l'inizializzazione dell'oggetto SQLServerConnection. Ad esempio, se il chiamante ha chiamato [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) e [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) nell'origine dati e quindi chiama getConnection e specifica un nome utente non Null o una password non Null, il nome utente e la password impostati da setUser e setPassword verranno sostituiti dal nome utente e dalla password passati in getConnection.  
   
 > [!NOTE]  
 >  Il nome utente e la password impostati nell'URL tramite una chiamata al metodo [setURL](../../../connect/jdbc/reference/seturl-method-sqlserverdatasource.md) non verranno modificati in questo caso.  

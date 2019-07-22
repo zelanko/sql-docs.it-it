@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 47b7b0da-e467-465a-aa19-bc702efcfaa0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f7ffdc84d40f68b1f1697357a892fb2d136be2e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bd3027348673bfb85d9ab512a3f89f2e278edde9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766517"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969788"
 ---
 # <a name="supportsbatchupdates-method-sqlserverdatabasemetadata"></a>Metodo supportsBatchUpdates (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsBatchUpdates()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se supportata. In caso contrario, **false**.  
+ **true** se supportato. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo supportsBatchUpdates viene specificato dal metodo supportsBatchUpdates nell'interfaccia DatabaseMetaData.  
+ Questo metodo supportsBatchUpdates viene specificato dal metodo supportsBatchUpdates nell'interfaccia java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

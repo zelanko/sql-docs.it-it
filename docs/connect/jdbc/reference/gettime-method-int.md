@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6c13dea2-511f-48dc-b3db-2d3b72ccc9de
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 454848e471548fbd47e5a0f7985b97546ef87457
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6e0426a89de1e3cf78f1f41e45fc35ba81816362
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66778980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979089"
 ---
 # <a name="gettime-method-int"></a>Metodo getTime (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.Time getTime(int index)
  Valore **int** che specifica l'indice del parametro.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un oggetto di runtime.  
+ Oggetto temporale.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -49,7 +48,7 @@ public java.sql.Time getTime(int index)
 ## <a name="remarks"></a>Remarks  
  Questo metodo getTime viene specificato dal metodo getTime nell'interfaccia java.sql.CallableStatement.  
   
- Vedere il grafico denominato "Conversioni dei metodi di richiamo" nella [informazioni sulle conversioni di tipi di dati](../../../connect/jdbc/understanding-data-type-conversions.md) per vedere quali [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i tipi di dati possono essere recuperati con questo metodo.  
+ Per informazioni sui tipi di dati che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possono essere recuperati con questo metodo, vedere il grafico "conversioni dei metodi di richiamo" in informazioni sulle conversioni [dei tipi di dati](../../../connect/jdbc/understanding-data-type-conversions.md) .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo getTime &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dc3a6edb0d1108123b5ea22ca717a06409582cbc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e0b7054a390f8318b3c4c2db39eda3d2bd2fb842
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803948"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014862"
 ---
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Risorse di supporto dei driver Microsoft per PHP per SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,12 +46,12 @@ Per il supporto peer-to-peer, visitare i [forum di IIS](https://forums.iis.net/)
 ## <a name="php-support-resources"></a>Risorse di supporto per PHP  
 [Documentazione di PHP per Windows](https://windows.php.net/)  
   
-Per informazioni aggiornate su PHP, visitare [ http://www.php.net/ ](http://www.php.net).  
+Per le informazioni più aggiornate su PHP, [http://www.php.net/](http://www.php.net)visitare.  
   
-Per la documentazione di PHP, visitare [ http://www.php.net/docs.php ](http://www.php.net/docs.php).  
+Per la documentazione di PHP [http://www.php.net/docs.php](http://www.php.net/docs.php), visitare.  
   
 ## <a name="microsoft-customer-support"></a>Supporto tecnico Microsoft  
-Per domande riguardo al [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], è possibile contattare [supporto tecnico Microsoft](https://support.microsoft.com/contactus/), oppure porre nel [pagina del progetto Github](https://github.com/Microsoft/msphpsql/issues).  
+Per domande di supporto correlate alla [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], è possibile contattare [supporto tecnico Microsoft](https://support.microsoft.com/contactus/)o richiedere la pagina del [progetto GitHub](https://github.com/Microsoft/msphpsql/issues).  
   
 ## <a name="see-also"></a>Vedere anche  
 [Panoramica dei driver Microsoft per PHP per SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)

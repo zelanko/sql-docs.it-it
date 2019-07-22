@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 11013055-4fd3-45a9-b2da-28b2908dad52
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bf2c9920545d4d17bb8df6979410d849c125e20c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6f6f26909a0ad7c5f33bdf997c48f88c6e7b300a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973009"
 ---
 # <a name="setsavepoint-method-"></a>Metodo setSavepoint ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public java.sql.Savepoint setSavepoint()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Un oggetto punto di salvataggio.  
+ Oggetto salvataggio.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo setSavePoint viene specificato dal metodo setSavePoint nell'interfaccia Java.  
+ Questo metodo setSavePoint viene specificato dal metodo setSavePoint nell'interfaccia java. SQL. Connection.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo setSavepoint &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md)   

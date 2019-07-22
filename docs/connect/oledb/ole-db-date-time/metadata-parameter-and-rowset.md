@@ -1,5 +1,5 @@
 ---
-title: Metadati per parametri e set di righe | Microsoft Docs
+title: Metadati di parametri e set di righe | Microsoft Docs
 description: Metadati per parametri e set di righe
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - metadata [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 1109aeea10d08f3447f789698a5d464475ae4aaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 641859e134a5f3c3201f239023f911b79de1c11e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995102"
 ---
 # <a name="metadata---parameter-and-rowset"></a>Metadati - Parametro e set di righe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,11 +66,11 @@ ms.locfileid: "66769250"
 |datetime2 o DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
- Il *bPrecision* parametro viene ignorato.  
+ Il parametro *bPrecision* viene ignorato.  
   
- "DBPARAMFLAGS_SS_ISVARIABLESCALE" viene ignorato in caso di invio di dati al server. Le applicazioni possono forzare l'uso di tipi di flusso TDS (Tabular-Data Stream) legacy usando i nomi di tipo specifici del provider "**datetime**" e "**smalldatetime**". Se si è connessi ai server [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (o versioni successive), viene usato il formato "**datetime2**" e si verifica una conversione server implicita, se necessario, quando il nome del tipo è "**datetime2**" o "DBTYPE_DBTIMESTAMP". *bScale* viene ignorata se i nomi di tipo specifico del provider "**datetime**"o"**smalldatetime**" vengono usati. In caso contrario, è necessario assicurarsi che le applicazioni *bScale* sia impostata correttamente. Applicazioni aggiornate da MDAC e Driver OLE DB per SQL Server da [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] che utilizzano "DBTYPE_DBTIMESTAMP" avrà esito negativo se non viene impostato *bScale* correttamente. In caso di connessione a istanze server precedenti a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], un valore di *bScale* diverso da 0 o 3 con "DBTYPE_DBTIMESTAMP" è un errore e comporta la restituzione di E_FAIL.  
+ "DBPARAMFLAGS_SS_ISVARIABLESCALE" viene ignorato in caso di invio di dati al server. Le applicazioni possono forzare l'uso di tipi di flusso TDS (Tabular-Data Stream) legacy usando i nomi di tipo specifici del provider "**datetime**" e "**smalldatetime**". Se si è connessi ai server [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (o versioni successive), viene usato il formato "**datetime2**" e si verifica una conversione server implicita, se necessario, quando il nome del tipo è "**datetime2**" o "DBTYPE_DBTIMESTAMP". *bScale* viene ignorato se vengono utilizzati i nomi di tipo specifici del provider "**DateTime**" o "**smalldatetime**". In caso contrario, le applicazioni devono assicurarsi che *bScale* sia impostato correttamente. Le applicazioni aggiornate da MDAC e OLE DB driver per SQL Server [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] da che usano "DBTYPE_DBTIMESTAMP" avranno esito negativo se non impostano correttamente *bScale* . In caso di connessione a istanze server precedenti a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], un valore di *bScale* diverso da 0 o 3 con "DBTYPE_DBTIMESTAMP" è un errore e comporta la restituzione di E_FAIL.  
   
- Quando non viene chiamato ICommandWithParameters:: SetParameterInfo, il provider implica il tipo di server dal tipo di associazione come specificato in IAccessor:: CreateAccessor come indicato di seguito:  
+ Quando ICommandWithParameters:: separameterinfo non viene chiamato, il provider implica il tipo di server dal tipo di associazione come specificato in IAccessor:: CreateAccessor come indicato di seguito:  
   
 |Tipo di associazione|*pwszDataSourceType*<br /><br /> (specifico del provider)|  
 |------------------|----------------------------------------------------|  
@@ -83,7 +82,7 @@ ms.locfileid: "66769250"
 |DBTYPE_DBTIMESTAMPOFFSET|datetimeoffset(7)|  
   
 ## <a name="icolumnsrowsetgetcolumnsrowset"></a>IColumnsRowset::GetColumnsRowset  
- **IColumnsRowset::** restituisce le colonne seguenti:  
+ **IColumnsRowset:: GetColumnsRowset** restituisce le colonne seguenti:  
   
 |Tipo di colonna|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  

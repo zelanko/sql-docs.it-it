@@ -1,5 +1,5 @@
 ---
-title: Classi di SQLServerDataSource | Microsoft Docs
+title: Classe SQLServerDataSource | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 097434fd-2b74-411c-a5ed-eba04481dde5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 916a3c318cf96fa5114b7e0e6bc1a3caae815d4b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a1de4bc16b37c6224c0dfbb5556f59b6e15d825a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971517"
 ---
 # <a name="sqlserverdatasource-class"></a>Classe SQLServerDataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +34,7 @@ public class SQLServerDataSource
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Questa classe supporta l'annullamento del wrapping nella classe SQLServerDataSource, l'interfaccia ISQLServerDataSource e l'interfaccia di origine dati. Per altre informazioni, vedere [wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Questa classe supporta l'annullamento del wrapping alla classe SQLServerDataSource, l'interfaccia ISQLServerDataSource e l'interfaccia DataSource. Per ulteriori informazioni, vedere [wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

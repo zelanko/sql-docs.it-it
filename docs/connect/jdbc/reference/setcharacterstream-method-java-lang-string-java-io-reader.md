@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 43acac5b-5a8a-4685-bee6-7194d2d03a52
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2c2ce690ae3c5c8297d20fde388ce39bd80de947
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3d7bf3883ad7cab14ac2313eda5b00710bfcdbc3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974669"
 ---
 # <a name="setcharacterstream-method-javalangstring-javaioreader"></a>Metodo setCharacterStream (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public final void setCharacterStream(java.lang.String parameterName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo setCharacterStream viene specificato dal metodo setCharacterStream nell'interfaccia CallableStatement.  
+ Questo metodo setCharacterStream viene specificato dal metodo setCharacterStream nell'interfaccia java. SQL. CallableStatement.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo setCharacterStream &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setcharacterstream-method-sqlservercallablestatement.md)   

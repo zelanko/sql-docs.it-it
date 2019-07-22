@@ -1,5 +1,5 @@
 ---
-title: Configurare riesecuzione distribuita | Microsoft Docs
+title: Configurare Riesecuzione distribuita | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4255b78991e557ab36d7d0f97ab9be0fed5194a3
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 092b08697580d79f800dcc539ed90559262ff44f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732111"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023776"
 ---
 # <a name="configure-distributed-replay"></a>Configurare Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +117,7 @@ ms.locfileid: "67732111"
   
  Le impostazioni di configurazione della riproduzione vengono specificate in elementi XML figli degli elementi `<ReplayOptions>` e `<OutputOptions>` del file di configurazione della riproduzione.  
   
-### <a name="replayoptions-element"></a>\<ReplayOptions > elemento  
+### <a name="replayoptions-element"></a>\<Elemento > ReplayOptions  
  Di seguito vengono indicate le impostazioni specificate dal file di configurazione della riproduzione nell'elemento `<ReplayOptions>` :  
   
 |Impostazione|Elemento XML|Descrizione|Valori consentiti|Obbligatorio|  
@@ -133,7 +132,7 @@ ms.locfileid: "67732111"
 |Timeout query|`<QueryTimeout>`|Specifica il valore di timeout query in secondi. Questo valore è valido solo fino a quando non viene restituita la prima riga.|Numero intero >= 1<br /><br /> (`-1` per disabilitare l'impostazione)|No. Per impostazione predefinita, il valore è `3600`.|  
 |Thread per client|`<ThreadsPerClient>`|Specifica il numero di thread di riproduzione da utilizzare per ogni client di riproduzione.|Numero intero compreso tra `1` e `512`.|No. Se non è specificata, in Distributed Replay verrà utilizzato il valore `255`.|  
   
-### <a name="outputoptions-element"></a>\<OutputOptions > elemento  
+### <a name="outputoptions-element"></a>\<Elemento > OutputOptions  
  Di seguito vengono indicate le impostazioni specificate dal file di configurazione della riproduzione nell'elemento `<OutputOptions>` :  
   
 |Impostazione|Elemento XML|Descrizione|Valori consentiti|Obbligatorio|  
@@ -165,20 +164,20 @@ ms.locfileid: "67732111"
 </Options>  
 ```  
 
-### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Possibile problema durante l'esecuzione con la sequenziazione di modalità di sincronizzazione
- È possibile riscontrare un problema in cui la funzionalità di riproduzione sembra "Auto", o eventi riproduzioni molto lentamente. Questo fenomeno può verificarsi se la traccia riprodotta si basa su dati e/o gli eventi che non esistono nel database di destinazione ripristinato. 
+### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Possibile problema durante l'esecuzione con la modalità di sequenziazione della sincronizzazione
+ È possibile riscontrare un sintomo in cui la funzionalità di riproduzione sembra "stallo" o riprodurre gli eventi molto lentamente. Questo fenomeno può verificarsi se la traccia da riprodurre si basa su dati e/o eventi che non esistono nel database di destinazione ripristinato. 
  
- Un esempio è un carico di lavoro acquisita che utilizza l'istruzione WAITFOR, come nell'istruzione WAITFOR di ricezione di Service Broker. Quando si usa la modalità di sequenza di sincronizzazione, batch vengono riprodotte in modo seriale. Se si verifica un inserimento nel database di origine dopo il backup del database, ma prima dell'acquisizione di riproduzione traccia viene avviata, la ricezione di WAITFOR emesso durante la riproduzione potrebbe essere necessario attendere l'intera durata dell'istruzione WAITFOR. Eventi impostati da riprodurre dopo la ricezione di WAITFOR verrà bloccata. Ciò può comportare il contatore richieste Batch/sec performance monitor per il rilascio di destinazione database riproduzione su zero fino al completamento l'istruzione WAITFOR. 
+ Un esempio è un carico di lavoro acquisito che usa il valore di ASPETTER, ad esempio nell'istruzione di ricezione ASPETTER di Service Broker. Quando si utilizza la modalità di sequenziazione della sincronizzazione, i batch vengono riprodotti in serie. Se si verifica un inserimento nel database di origine dopo il backup del database, ma prima dell'avvio della traccia di acquisizione di riproduzione, la ricezione Wait eseguita durante la riproduzione potrebbe dover attendere l'intera durata del periodo di attesa. Gli eventi impostati per la riproduzione dopo il blocco della ricezione di ASPETTER saranno bloccati. Ciò può comportare il contatore di monitoraggio delle prestazioni richieste batch/sec per la destinazione del database di riproduzione che si sta rilasciando a zero fino al completamento dell'attesa. 
  
- Se è necessario usare la modalità di sincronizzazione e desideri per evitare questo comportamento, è necessario eseguire quanto segue:
+ Se è necessario utilizzare la modalità di sincronizzazione e si desidera evitare questo comportamento, è necessario eseguire le operazioni seguenti:
  
-1.  Disattivare i database che verrà usato come destinazioni di riproduzione.
+1.  Mettere in stato i database che verranno utilizzati come destinazioni di riproduzione.
 
-2.  Consenti tutte le attività in sospeso da completare.
+2.  Consentire il completamento di tutte le attività in sospeso.
 
-3.  Il backup dei database e consentire i backup per il completamento.
+3.  Eseguire il backup dei database e consentire il completamento dei backup.
 
-4.  Avviare l'acquisizione di traccia di riproduzione distribuita e riprendere il normale carico di lavoro. 
+4.  Avviare l'acquisizione della traccia di riesecuzione distribuita e riprendere il normale carico di lavoro. 
  
  
 ## <a name="see-also"></a>Vedere anche  

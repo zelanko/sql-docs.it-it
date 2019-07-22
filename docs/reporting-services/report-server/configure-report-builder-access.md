@@ -6,14 +6,13 @@ ms.technology: report-server
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.date: 06/06/2019
-ms.openlocfilehash: a6383eb6bf9c00f6158e0e7adc77605cfc226d9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66826912"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255177"
 ---
 # <a name="configure-report-builder-access"></a>Configurare l'accesso a Generatore report
 Generatore report è uno strumento per il reporting ad hoc installato con un server di report di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurato per la modalità nativa o la modalità integrata SharePoint.  
@@ -30,15 +29,15 @@ L'accesso a Generatore report dipende dai fattori seguenti:
 
 Generatore report non è disponibile in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere l'argomento relativo alle [funzionalità supportate dalle edizioni di SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
 
-Il computer client deve avere il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 o 4.6.1 installato rispettivamente per SSRS 2016 e 2017. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornisce l'infrastruttura per l'esecuzione di applicazioni [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
+Il computer client deve avere [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4,6 o 4.6.1 installato rispettivamente per SSRS 2016 e 2017. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornisce l'infrastruttura per l'esecuzione di applicazioni [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
 
-È necessario usare [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 o versione successiva, o un altro browser moderni.  
+È necessario utilizzare [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 o versione successiva o un altro browser moderno.  
 
 Generatore report viene sempre eseguito con attendibilità totale e non è possibile configurarlo per l'esecuzione con attendibilità parziale. Nelle versioni precedenti è possibile eseguire Generatore report in attendibilità parziale, ma tale opzione non è supportata in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive.  
 
 ## <a name="enabling-and-disabling-report-builder"></a>Abilitazione e disabilitazione di Generatore report  
 
-Generatore report è abilitato per impostazione predefinita. Gli amministratori del server di report hanno la possibilità di disabilitare la funzionalità Generatore report impostando la proprietà di sistema del server di report **ShowDownloadMenu** su **false**. Impostando questa proprietà, vengono disabilitati Generatore Report, Mobile Report Publisher e download di Power BI per dispositivi mobili per tale server di report.  
+Generatore report è abilitato per impostazione predefinita. Gli amministratori del server di report hanno la possibilità di disabilitare la funzionalità Generatore report impostando la proprietà di sistema del server di report **ShowDownloadMenu** su **false**. Impostando questa proprietà, vengono disabilitati i download di Generatore report, Mobile Report Publisher e Power BI mobile per il server di report.  
 
  Per impostare le proprietà di sistema del server di report, è possibile utilizzare Management Studio o uno script:   
 
@@ -110,8 +109,8 @@ Dopo avere creato le assegnazioni di ruolo, gli utenti disporranno dell'autorizz
 
 1. Avviare il portale Web.  
 
-2. Fai clic sull'icona a forma di ingranaggio in alto a destra della home page del portale web e selezionare **Impostazioni sito** dal menu a discesa.  
-![l'icona a forma di ingranaggio portale web e menu](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
+2. Fare clic sull'icona a forma di ingranaggio nella parte superiore destra del portale web home page e selezionare **Impostazioni sito** dal menu a discesa.  
+![icona a forma di ingranaggio e menu del portale Web](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
 3. Fare clic su **Sicurezza**.  
 

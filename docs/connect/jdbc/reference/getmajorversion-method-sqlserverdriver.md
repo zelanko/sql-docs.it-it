@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 027edab7-9b5c-4f5f-9469-fe00cf7798b6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5856879a8391a942859ff287e8e127d28a80e509
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7439a62f8bdb987bf50d76c12277c5341c0dd354
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792927"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982419"
 ---
 # <a name="getmajorversion-method-sqlserverdriver"></a>Metodo getMajorVersion (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public int getMajorVersion()
  Valore **int** contenente il numero di versione principale del driver JDBC.  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getMajorVersion viene specificato dal metodo getMajorVersion nell'interfaccia Java.  
+ Questo metodo getMajorVersion viene specificato dal Metodo getMajorVersion nell'interfaccia java. SQL. driver.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c2876dec-ce29-4b61-9d74-ec3173b8cba5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1b1e27520488c3449fea92485d51a87d764ccf02
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a24871c504be10e766bbbec59a8f03f98cb5e00c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66771516"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980981"
 ---
 # <a name="getparametermetadata-method-sqlserverpreparedstatement"></a>Metodo getParameterMetaData (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public final java.sql.ParameterMetaData getParameterMetaData()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getParameterMetaData viene specificato dal metodo getParameterMetaData nell'interfaccia PreparedStatement.  
+ Questo metodo getParameterMetaData viene specificato dal metodo getParameterMetaData nell'interfaccia java. SQL. PreparedStatement.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

@@ -9,21 +9,20 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ae1ea54ae5f980c84e83922ffcfb9ad6ac83ded9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 08a02ed004c5edd7b849b0c5ae1a43f21da031ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66782063"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956746"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Individuazione dati e classificazione SQL
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Ciò [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] applicazione di esempio illustra come usare i metodi di richiamo di set di risultati per recuperare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 'SQL dati individuazione e classificazione informazioni' delle tabelle che contiene tali informazioni.
+In [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] questa applicazione di esempio viene illustrato come utilizzare i metodi di richiamo del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] set di risultati per recuperare le informazioni di classificazione e individuazione dei dati SQL dalle tabelle che contiene tali informazioni.
   
-Il file di codice per questo esempio è denominato DataDiscoveryAndClassification.java e possono essere trovati nel percorso seguente:  
+Il file di codice per questo esempio è denominato DataDiscoveryAndClassification. Java ed è disponibile nel percorso seguente:  
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\dataclassification  
@@ -31,7 +30,7 @@ Il file di codice per questo esempio è denominato DataDiscoveryAndClassificatio
 
 ## <a name="requirements"></a>Requisiti  
 
-Per eseguire questa applicazione di esempio, è necessario impostare il classpath in modo da includere il file con estensione jar mssql-jdbc. È anche necessario accedere al database di esempio di [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Per altre informazioni su come impostare il classpath, vedere [utilizza il Driver JDBC](../../connect/jdbc/using-the-jdbc-driver.md).
+Per eseguire questa applicazione di esempio, è necessario impostare il classpath in modo da includere il file con estensione jar mssql-jdbc. È anche necessario accedere al database di esempio di [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Per ulteriori informazioni su come impostare il classpath, vedere [utilizzo del driver JDBC](../../connect/jdbc/using-the-jdbc-driver.md).
 
 ```java
 import java.sql.Connection;

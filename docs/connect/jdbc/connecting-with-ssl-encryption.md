@@ -1,5 +1,5 @@
 ---
-title: La connessione tramite la crittografia SSL | Microsoft Docs
+title: Connessione con la crittografia SSL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/21/2019
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c88caea8916cf7b3cd2b6655613135f7cbe10e19
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 209ced9fbf6d1ceb21ed4e5b6d686dd87eec0de2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803164"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956808"
 ---
 # <a name="connecting-with-ssl-encryption"></a>Connessione tramite la crittografia SSL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ String connectionUrl =
   
  Se la proprietà **encrypt** è impostata su **true** e la proprietà **trustServerCertificate** è impostata su **false**, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] convalida il certificato SSL di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La convalida del certificato del server fa parte dell'handshake SSL e assicura che il server a cui si esegue la connessione sia quello corretto. Per la convalida del certificato del server è necessario che in fase di connessione venga fornito il materiale relativo all'attendibilità usando in modo esplicito le proprietà di connessione **trustStore** e **trustStorePassword** oppure usando in modo implicito l'archivio di scopi predefinito di JVM (Java Virtual Machine) sottostante.  
   
- La proprietà **trustStore** specifica il percorso (incluso il nome file) del file trustStore, che contiene l'elenco di certificati considerati attendibili dal client. La proprietà **trustStorePassword** specifica la password usata per verificare l'integrità dei dati del file trustStore. Per altre informazioni sull'uso di archivio di attendibilità predefinito di JVM, vedere la [configurazione del Client per la crittografia SSL](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md).  
+ La proprietà **trustStore** specifica il percorso (incluso il nome file) del file trustStore, che contiene l'elenco di certificati considerati attendibili dal client. La proprietà **trustStorePassword** specifica la password usata per verificare l'integrità dei dati del file trustStore. Per ulteriori informazioni sull'utilizzo dell'archivio di attendibilità predefinito di JVM, vedere la pagina relativa alla [configurazione del client per la crittografia SSL](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md).  
   
  L'esempio di codice seguente illustra come impostare le proprietà **trustStore** e **trustStorePassword** in una stringa di connessione:  
   
@@ -64,7 +63,7 @@ String connectionUrl =
 > [!NOTE]  
 >  In alternativa, è possibile impostare il valore delle proprietà di connessione usando i metodi **setter** appropriati offerti dalla classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
- Se il **crittografare** è impostata su **true** e il **trustServerCertificate** è impostata su **false** e se il server nome nel stringa di connessione non corrisponde al nome di server nel certificato SSL, verrà generato l'errore seguente: `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`. A partire dalla versione 7.2, il driver supporta la corrispondenza dei caratteri jolly nell'etichetta più a sinistra del nome del server nel certificato SSL.
+ Se la proprietà **Encrypt** è impostata su **true** e la proprietà **TrustServerCertificate** è impostata su **false** e il nome del server nella stringa di connessione non corrisponde al nome del server nel certificato SSL, verrà riportato l'errore seguente: Rilasciato: `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`. A partire dalla versione 7,2, il driver supporta i criteri di ricerca con caratteri jolly nell'etichetta a sinistra del nome del server nel certificato SSL.
 ## <a name="see-also"></a>Vedere anche  
  [Uso della crittografia SSL](../../connect/jdbc/using-ssl-encryption.md)   
  [Protezione delle applicazioni del driver JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  

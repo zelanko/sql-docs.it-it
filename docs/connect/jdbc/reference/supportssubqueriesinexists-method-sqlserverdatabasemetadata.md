@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 14c08c7f-5c1e-4e21-8373-ae32c22e47d4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7bf0bec6386c0c452c219a223cae47532649ba7b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 22da8ae3f7f86501bdd15669c439a8d177ebd5f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968746"
 ---
 # <a name="supportssubqueriesinexists-method-sqlserverdatabasemetadata"></a>Metodo supportsSubqueriesInExists (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsSubqueriesInExists()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se supportata. In caso contrario, **false**.  
+ **true** se supportato. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo supportsSubqueriesInExists viene specificato dal metodo supportsSubqueriesInExists nell'interfaccia DatabaseMetaData.  
+ Questo metodo supportsSubqueriesInExists viene specificato dal metodo supportsSubqueriesInExists nell'interfaccia java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

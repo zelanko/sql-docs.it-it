@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 316f067c-9e08-456a-af19-b80b0bbd4a5c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ec8d033bc6d9bc451eaa606a00881bd4e533aa97
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5fe82d2709aa8efa32408a9d9d86f0f660bed823
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66793172"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982552"
 ---
 # <a name="getlogintimeout-method-sqlserverdatasource"></a>Metodo getLoginTimeout (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public int getLoginTimeout()
 ## <a name="remarks"></a>Remarks  
  Se l'applicazione non specifica in modo esplicito un valore di timeout, questo metodo restituisce un valore predefinito di 15 secondi.  
   
- Questo metodo getLoginTimeout viene specificato dal metodo getLoginTimeout nell'interfaccia javax.  
+ Questo metodo getLoginTimeout viene specificato dal Metodo getLoginTimeout nell'interfaccia javax. SQL. DataSource.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

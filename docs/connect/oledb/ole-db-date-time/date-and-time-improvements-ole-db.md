@@ -1,5 +1,5 @@
 ---
-title: Data e ora miglioramenti (OLE DB) | Microsoft Docs
+title: Miglioramenti di data e ora (OLE DB) | Microsoft Docs
 description: Miglioramenti relativi a data e ora (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,29 +13,28 @@ helpviewer_keywords:
 - OLE DB, date/time improvements
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 5518461fade08e6f23e1594056c284865957274c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c4a93078b84cf5146f94043496bea0fdaed9fc80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769342"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015699"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>Miglioramenti relativi a data e ora (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  In [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] sono stati introdotti nuovi tipi di dati di data e ora. Questa sezione descrive come questi nuovi tipi vengono esposti come estensioni nel Driver OLE DB per SQL Server. Per una panoramica del Driver OLE DB per il supporto di SQL Server per i nuovi tipi data e ora dei dati, vedere [data e ora miglioramenti](../../oledb/features/date-and-time-improvements.md). Per un esempio, vedere [utilizzo avanzate di data e ora funzionalità &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
+  In [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] sono stati introdotti nuovi tipi di dati di data e ora. In questa sezione viene descritto il modo in cui questi nuovi tipi vengono esposti come estensioni nel driver OLE DB per SQL Server. Per una panoramica del driver OLE DB per SQL Server supporto per i nuovi tipi di dati relativi a data e ora, vedere [miglioramenti di data e ora](../../oledb/features/date-and-time-improvements.md). Per un esempio, vedere [usare le funzionalità &#40;avanzate di data e&#41;ora OLE DB](../../oledb/ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
   
- Per informazioni più generali sui tipi di dati di data e ora, vedere [datetime &#40;Transact-SQL&#41;](../../../t-sql/data-types/datetime-transact-sql.md).  
+ Per informazioni più generali sui tipi di dati di data e ora, vedere [DateTime &#40;Transact&#41;-SQL](../../../t-sql/data-types/datetime-transact-sql.md).  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
  [Supporto dei tipi di dati per i miglioramenti relativi a data e ora OLE DB](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
- Fornisce informazioni su OLE DB (Driver OLE DB per SQL Server) i tipi che supportano [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipi di dati di data e ora.  
+ Vengono fornite informazioni sui tipi di OLE DB (driver OLE DB per SQL Server) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che supportano i tipi di dati di data e ora.  
   
- [Metadati &#40;OLE DB&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
- Contiene informazioni sulla struttura DBBINDING, **ICommandWithParameters:: GetParameterInfo**, **ICommandWithParameters:: SetParameterInfo**, **IColumnsRowset:: GetColumnsRowset**e voglio**ColumnsInfo::GetColumnInfo**. Vengono inoltre fornite informazioni sugli aggiornamenti ai set di righe dello schema OLE DB.  
+ [OLE DB &#40;metadati&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
+ Contiene informazioni sulla struttura DBBINDING, **ICommandWithParameters:: GetParameterInfo**, **ICommandWithParameters:: separameterinfo**, **IColumnsRowset:: GetColumnsRowset**e i**ColumnsInfo:: GetColumnInfo** . Vengono inoltre fornite informazioni sugli aggiornamenti ai set di righe dello schema OLE DB.  
   
  [Associazioni e conversioni &#40;OLE DB&#41;](../../oledb/ole-db-date-time/conversions-ole-db.md)  
  Vengono illustrate le regole per la conversione fra server e client per tipi di dati sia nuovi che esistenti.  
@@ -47,7 +46,7 @@ ms.locfileid: "66769342"
  Vengono descritte le API OLE DB che supportano le caratteristiche avanzate dei tipi di dati date/time.  
   
  [Possibilità di confronto per IRowsetFind](../../oledb/ole-db-date-time/comparability-for-irowsetfind.md)  
- Vengono descritti i tipi data/ora e **IRowsetFind**.  
+ Descrive i tipi di data/ora e **IRowsetFind**.  
  
   
 ## <a name="see-also"></a>Vedere anche  

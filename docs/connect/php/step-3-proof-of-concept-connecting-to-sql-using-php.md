@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f4828be81914eddbbb5c26b5a6f65cd8b81d85df
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8d685c15b4cc30dc093a47b37e6bfc29368e91f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801435"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014805"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Passaggio 3: Modello di verifica per la connessione a SQL tramite PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,7 +23,7 @@ ms.locfileid: "66801435"
 ## <a name="step-1--connect"></a>Passaggio 1: connettersi  
   
   
-Ciò **OpenConnection** funzione viene chiamata nella parte superiore in tutte le funzioni che seguono.  
+Questa funzione **OpenConnection** viene chiamata nella parte superiore di tutte le funzioni che seguono.  
   
   
 ```php 
@@ -46,9 +45,9 @@ Ciò **OpenConnection** funzione viene chiamata nella parte superiore in tutte l
     }  
 ```  
   
-## <a name="step-2--execute-query"></a>Passaggio 2: Eseguire query  
+## <a name="step-2--execute-query"></a>Passaggio 2: eseguire la query  
   
-Il [sqlsrv_query ()](https://php.net/manual/en/function.sqlsrv-query.php) funzione può essere utilizzata per recuperare un set di risultati da una query sul Database SQL. Questa funzione accetta qualsiasi query e l'oggetto di connessione e restituisce un set di risultati che può eseguire l'iterazione tramite l'uso di essenzialmente [sqlsrv_fetch_array ()](https://php.net/manual/en/function.sqlsrv-fetch-array.php).  
+La funzione [sqlsrv_query ()](https://php.net/manual/en/function.sqlsrv-query.php) può essere utilizzata per recuperare un set di risultati da una query sul database SQL. Questa funzione accetta essenzialmente qualsiasi query e l'oggetto Connection e restituisce un set di risultati su cui è possibile eseguire l'iterazione con l'utilizzo di [sqlsrv_fetch_array ()](https://php.net/manual/en/function.sqlsrv-fetch-array.php).  
   
 ```php  
     function ReadData()  
@@ -78,9 +77,9 @@ Il [sqlsrv_query ()](https://php.net/manual/en/function.sqlsrv-query.php) funzio
 ```  
   
   
-## <a name="step-3--insert-a-row"></a>Passaggio 3: Inserire una riga  
+## <a name="step-3--insert-a-row"></a>Passaggio 3: inserire una riga  
   
-In questo esempio illustra come eseguire un' [inserire](../../t-sql/statements/insert-transact-sql.md) istruzione in modo sicuro, passare i parametri che proteggono l'applicazione dal [attacchi SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) valore.    
+In questo esempio si vedrà come eseguire un'istruzione [Insert](../../t-sql/statements/insert-transact-sql.md) in modo sicuro, passare i parametri che proteggono l'applicazione da un valore [SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) .    
   
   
 ```php 
@@ -110,16 +109,16 @@ In questo esempio illustra come eseguire un' [inserire](../../t-sql/statements/i
     }  
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>Passaggio 4: Rollback di una transazione  
+## <a name="step-4--rollback-a-transaction"></a>Passaggio 4: eseguire il rollback di una transazione  
   
   
-Questo esempio di codice viene illustrato l'utilizzo di transazioni in cui è:  
+In questo esempio di codice viene illustrato l'utilizzo delle transazioni in cui è possibile:  
   
--Avviare una transazione  
+-Iniziare una transazione  
   
--Inserimento di una riga di dati, aggiornare un'altra riga di dati  
+-Inserire una riga di dati, aggiornare un'altra riga di dati  
   
--Eseguire il commit di transazione se l'inserimento e aggiornamento hanno avuto esito positivo e il rollback della transazione se non è uno di essi  
+-Eseguire il commit della transazione se l'inserimento e l'aggiornamento hanno avuto esito positivo ed eseguire il rollback della transazione se una di esse non è stata  
   
   
 ```php 

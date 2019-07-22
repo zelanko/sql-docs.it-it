@@ -1,5 +1,5 @@
 ---
-title: PDO::__construct | Microsoft Docs
+title: 'DOP:: __construct | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2822c0f80aa342881e820b2edce2f99388efdc68
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a5a181d6e8b9a3ffbf9d65dc74cae967d6a1f40c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66772785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936251"
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +36,7 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
   
 *$password*: parametro facoltativo. Stringa che contiene la password dell'utente. Per connettersi usando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare la password. Per connettersi usando l'autenticazione di Windows, specificare `""`.  
   
-*$driver_options*: facoltativo. È possibile specificare gli attributi di Gestione driver del PDO e gli attributi dei driver specifici di [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]: PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY. Un attributo non valido non genera un'eccezione. Gli attributi non validi generano eccezioni quando viene specificato [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
+*$driver _options*: facoltativo. È possibile specificare gli attributi di Gestione driver del PDO e gli attributi dei driver specifici di [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]: PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY. Un attributo non valido non genera un'eccezione. Gli attributi non validi generano eccezioni quando viene specificato [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
   
 ## <a name="return-value"></a>Valore restituito  
 Restituisce un oggetto PDO. In caso di errore, viene restituito un oggetto PDOException.  
@@ -48,7 +47,7 @@ PDOException
 ## <a name="remarks"></a>Remarks  
 È possibile chiudere un oggetto di connessione impostando l'istanza su Null.  
   
-Dopo la connessione, PDO:: ErrorCode Visualizza 01000 anziché 00000.  
+Dopo la connessione, DOP:: errorCode Visualizza 01000 anziché 00000.  
   
 Se per qualsiasi motivo PDO::__construct non viene eseguito correttamente, viene generata un'eccezione, anche se PDO::ATTR_ERRMODE è impostato su PDO::ERRMODE_SILENT.  
   

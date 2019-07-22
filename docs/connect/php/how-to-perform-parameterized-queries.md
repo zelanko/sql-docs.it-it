@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a7783ac898dff9176a2a148f7c8e01a0ac28047b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7e406d64bd8c56b467c9b331eb4aef132dc0cc67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993499"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>Procedura: Eseguire query con parametri
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +31,7 @@ I passaggi per l'esecuzione di una query con parametri sono fondamentalmente qua
   
 2.  Inizializzare o aggiornare le variabili PHP che corrispondono ai segnaposto della query Transact-SQL.  
   
-3.  Usare le variabili PHP del passaggio 2 per creare o aggiornare una matrice di valori di parametri che corrispondono ai segnaposto della stringa di Transact-SQL. I valori dei parametri nella matrice devono essere nello stesso ordine in cui i segnaposto devono rappresentare tali.
+3.  Usare le variabili PHP del passaggio 2 per creare o aggiornare una matrice di valori di parametri che corrispondono ai segnaposto della stringa di Transact-SQL. I valori dei parametri nella matrice devono essere nello stesso ordine dei segnaposti destinati a rappresentarli.
   
 4.  Eseguire la query:  
   

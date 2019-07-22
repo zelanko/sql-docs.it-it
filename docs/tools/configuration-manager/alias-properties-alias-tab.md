@@ -1,5 +1,5 @@
 ---
-title: '&lt;Alias&gt; proprietà (scheda Alias) | Microsoft Docs'
+title: '&lt;Proprietà&gt; alias (scheda alias) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ ms.assetid: 2d1498e2-129c-4ce7-88e5-408e4037243c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: f1c6201489a01626bc3905d2a30a937fa48e046c
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 86eaf407b95a08a26933f478f8b0ec0fd4157e2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010408"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>Proprietà &lt;Alias&gt; (scheda Alias)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

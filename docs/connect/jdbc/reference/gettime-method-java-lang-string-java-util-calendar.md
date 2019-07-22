@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3d4c67c2-a3c8-4a26-a159-89c5d63fda0b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6b9d74778d3ff1fc62b5549fbea7e0f97bf1e477
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6b8f6239fbc229af009fc9745b0f19ed27e7ee1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979040"
 ---
 # <a name="gettime-method-javalangstring-javautilcalendar"></a>Metodo getTime (java.lang.String, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,10 +42,10 @@ public java.sql.Time getTime(java.lang.String sCol,
   
  *cal*  
   
- Un oggetto calendario.  
+ Oggetto Calendar.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un oggetto di runtime.  
+ Oggetto temporale.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -54,7 +53,7 @@ public java.sql.Time getTime(java.lang.String sCol,
 ## <a name="remarks"></a>Remarks  
  Questo metodo getTime viene specificato dal metodo getTime nell'interfaccia java.sql.CallableStatement.  
   
- Vedere il grafico denominato "Conversioni dei metodi di richiamo" nella [informazioni sulle conversioni di tipi di dati](../../../connect/jdbc/understanding-data-type-conversions.md) per vedere quali [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i tipi di dati possono essere recuperati con questo metodo.  
+ Per informazioni sui tipi di dati che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possono essere recuperati con questo metodo, vedere il grafico "conversioni dei metodi di richiamo" in informazioni sulle conversioni [dei tipi di dati](../../../connect/jdbc/understanding-data-type-conversions.md) .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo getTime &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

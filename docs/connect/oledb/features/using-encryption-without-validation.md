@@ -16,13 +16,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, encryption
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 108aef449d80fa01e88fac29e6058754626b6aed
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ef21cdb2a223aaa50b690f5b2b3c30696dd9e196
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802892"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988856"
 ---
 # <a name="using-encryption-without-validation"></a>Utilizzo della crittografia senza convalida
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,9 +30,9 @@ ms.locfileid: "66802892"
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crittografa sempre pacchetti di rete associati all'accesso. Se non è stato eseguito il provisioning di nessun certificato nel server quando viene avviato, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] genera un certificato autofirmato utilizzato per crittografare pacchetti di accesso.  
 
-I certificati autofirmati non garantisce la sicurezza. L'handshake di crittografia si basa su NT LAN Manager (NTLM). Si consiglia vivamente di effettuare il provisioning di un certificato verificabile in SQL Server per la connettività sicura. Transport Layer Security (TLS) è possibile proteggere solo con convalida del certificato.
+I certificati autofirmati non garantiscono la sicurezza. L'handshake crittografato è basato su NT LAN Manager (NTLM). Si consiglia di effettuare il provisioning di un certificato verificabile in SQL Server per la connettività sicura. Il protocollo TLS (Transport Security Layer) può essere reso sicuro solo con la convalida del certificato.
 
-Le applicazioni possono inoltre richiedere l'attivazione della crittografia per tutto il traffico di rete mediante le parole chiave della stringa di connessione o le proprietà di connessione. Le parole chiave sono "Encrypt" per OLE DB se si usa una stringa del provider con **IDbInitialize::Initialize** o "Use Encryption for Data" per ADO e OLE DB se si usa una stringa di inizializzazione con **IDataInitialize**. Ciò può anche essere configurata facendo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager usando il **Forza crittografia protocollo** opzione e configurare il client richieda connessioni crittografate. Per impostazione predefinita, la crittografia di tutto il traffico di rete per una connessione richiede che nel server sia stato eseguito il provisioning di un certificato. Tramite l'impostazione client per considerare attendibile il certificato nel server, potrebbe diventare vulnerabili ad attacchi man-in-the-middle. Se si distribuisce un certificato verificabile nel server, assicurarsi di modificare le impostazioni del client sull'attendibilità del certificato su FALSE.
+Le applicazioni possono inoltre richiedere l'attivazione della crittografia per tutto il traffico di rete mediante le parole chiave della stringa di connessione o le proprietà di connessione. Le parole chiave sono "Encrypt" per OLE DB se si usa una stringa del provider con **IDbInitialize::Initialize** o "Use Encryption for Data" per ADO e OLE DB se si usa una stringa di inizializzazione con **IDataInitialize**. Questo può essere configurato anche da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager usando l'opzione **Forza crittografia protocollo** e configurando il client per richiedere connessioni crittografate. Per impostazione predefinita, la crittografia di tutto il traffico di rete per una connessione richiede che nel server sia stato eseguito il provisioning di un certificato. Impostando il client in modo che consideri attendibile il certificato nel server, è possibile che si siano vulnerabili agli attacchi man-in-the-Middle. Se si distribuisce un certificato verificabile nel server, assicurarsi di modificare le impostazioni client relative all'attendibilità del certificato su FALSE.
 
 Per informazioni sulle parole chiave della stringa di connessione, vedere [Uso delle parole chiave delle stringhe di connessione con driver OLE DB per SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md ).  
   
@@ -53,12 +52,12 @@ Per informazioni sulle parole chiave della stringa di connessione, vedere [Uso d
 ||||||
 
 > [!CAUTION]
-> Nella tabella precedente offre solo una Guida sul comportamento del sistema in configurazioni diverse. Per una connettività sicura, assicurarsi che il client e server di richiedere la crittografia. Verificare inoltre che il server disponga di un certificato verificabile e che il **TrustServerCertificate** impostazione sul client è impostata su FALSE.
+> La tabella precedente fornisce solo una guida al comportamento del sistema in configurazioni diverse. Per una connettività sicura, assicurarsi che sia il client che il server richiedano la crittografia. Verificare inoltre che il server disponga di un certificato verificabile e che l'impostazione **TrustServerCertificate** nel client sia impostata su false.
 
 ## <a name="ole-db-driver-for-sql-server"></a>Driver OLE DB per SQL Server 
  Il provider OLE DB per SQL Server supporta la crittografia senza convalida tramite l'aggiunta della proprietà di inizializzazione dell'origine dati SSPROP_INIT_TRUST_SERVER_CERTIFICATE, implementata nel set di proprietà DBPROPSET_SQLSERVERDBINIT. È stata inoltre aggiunta una nuova parola chiave, "TrustServerCertificate", per la stringa di connessione. Accetta i valori yes o no. Il valore predefinito è no. Quando si utilizzano i componenti del servizio, accetta i valori true o false; false è l'impostazione predefinita.  
   
- Per altre informazioni sui miglioramenti apportati al set di proprietà DBPROPSET_SQLSERVERDBINIT, vedere [proprietà di inizializzazione e autorizzazione](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Per ulteriori informazioni sui miglioramenti apportati al set di proprietà DBPROPSET_SQLSERVERDBINIT, vedere [proprietà di inizializzazione e di autorizzazione](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
 
   
 ## <a name="see-also"></a>Vedere anche  

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f296cc42-9d26-48c3-a360-bcf51c31f7fb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a7d27da8ff8baf048e7890efab212b7835f4037e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4d2889af814e7c7122c9784f5ac9a70421731c09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801242"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977871"
 ---
 # <a name="insertsaredetected-method-sqlserverdatabasemetadata"></a>Metodo insertsAreDetected (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,16 +58,16 @@ public boolean insertsAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se l'inserimento di righe può essere rilevato. In caso contrario, **false**.  
+ **true** se è possibile rilevare l'inserimento di righe. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo insertsAreDetected viene specificato dal metodo insertsAreDetected nell'interfaccia DatabaseMetaData.  
+ Questo metodo insertsAreDetected viene specificato dal Metodo insertsAreDetected nell'interfaccia java. SQL. DatabaseMetaData.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non rilevare le righe inserite per qualsiasi tipo di cursore.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]non rileva le righe inserite per qualsiasi tipo di cursore.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

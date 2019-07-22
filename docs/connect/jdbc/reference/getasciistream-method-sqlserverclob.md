@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 134abe5e-5add-4d27-b333-b4b0f4d94c31
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4dfd2c53ab5fb883edbaabbc33c8ac8255b284ed
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: dfa7ed5314d75ba0bec0d2a000575e8d9ed4d3fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954131"
 ---
 # <a name="getasciistream-method-sqlserverclob"></a>Metodo getAsciiStream (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.io.InputStream getAsciiStream()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getAsciiStream viene specificato dal metodo getAsciiStream nell'interfaccia CLOB.  
+ Questo metodo getAsciiStream viene specificato dal metodo getAsciiStream nell'interfaccia java. SQL. Clob.  
   
  Restituisce sempre un flusso di byte e presuppone che i dati nell'oggetto CLOB siano in un formato ASCII in quanto non può sapere se siano in Unicode o qualsiasi altra tabella codici multibyte.  
   

@@ -1,5 +1,5 @@
 ---
-title: Utilizzo della crittografia SSL | Microsoft Docs
+title: Uso della crittografia SSL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2cb0e7789e5b75aeed1f8e7bcbe50e25925606da
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 98c9cd99d8fd8a54c96a9301ac3a050b54614c17
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798582"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003963"
 ---
 # <a name="using-ssl-encryption"></a>Utilizzo della crittografia SSL
 
@@ -33,7 +32,7 @@ L'abilitazione della crittografia SSL contribuisce alla sicurezza del traffico d
 Negli argomenti di questa sezione viene descritto il supporto della crittografia SSL in [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] e vengono illustrate le nuove proprietà di connessione e le modalità disponibili per la configurazione dell'archivio di attendibilità sul lato client.  
   
 > [!NOTE]  
-> Il **hostNameInCertificate** proprietà di connessione è consigliata per convalidare un certificato SSL.  
+> È consigliabile utilizzare la proprietà di connessione **hostNameInCertificate** per convalidare un certificato SSL.  
 
 ## <a name="in-this-section"></a>Contenuto della sezione  
 
