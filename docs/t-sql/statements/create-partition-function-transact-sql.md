@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 52e2d08a629a2e7272a409f0e84ab9b79299649b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2693b552008760025977a4c0ed0d3f3c3065713a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132131"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912610"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  Nome della funzione di partizione. I nomi delle funzioni di partizione devono essere univoci nel database e devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
  *input_parameter_type*  
- Tipo di dati della colonna usata per il partizionamento. Come colonne di partizionamento possono essere usati tutti i tipi di dati tranne **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, tipi di dati alias o tipi di dati CLR definiti dall'utente.  
+ Tipo di dati della colonna usata per il partizionamento. Come colonne di partizionamento possono essere usati tutti i tipi di dati tranne **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , tipi di dati alias o tipi di dati CLR definiti dall'utente.  
   
  La colonna effettiva, ovvero la colonna di partizionamento, è specificata nell'istruzione CREATE TABLE o CREATE INDEX.  
   
@@ -74,14 +73,14 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  Specifica il numero di valori forniti da *boundary_value* che non deve superare 14.999. Il numero di partizioni create è uguale a *n* + 1. Non è necessario elencare i valori in ordine. Se i valori non sono in ordine, [!INCLUDE[ssDE](../../includes/ssde-md.md)] li ordina, crea la funzione e restituisce un avviso che informa che i valori non sono in ordine. Il motore di database restituisce un errore se *n* include valori duplicati.  
   
  **LEFT** | RIGHT  
- Specifica il lato (sinistro o destro) di ogni intervallo di valori limite a cui appartiene *boundary_value* [ **,**_...n_ ] quando i valori dell'intervallo vengono ordinati dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] in ordine crescente da sinistra a destra. Se omesso, il valore predefinito è LEFT.  
+ Specifica il lato (sinistro o destro) di ogni intervallo di valori limite a cui appartiene *boundary_value* [ **,** _...n_ ] quando i valori dell'intervallo vengono ordinati dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] in ordine crescente da sinistra a destra. Se omesso, il valore predefinito è LEFT.  
   
 ## <a name="remarks"></a>Remarks  
  L'ambito di una funzione di partizione è limitato al database in cui la funzione viene creata. All'interno del database le funzioni di partizione si trovano in uno spazio dei nomi separato rispetto alle funzioni.  
   
  Tutte le righe la cui colonna di partizionamento contiene valori NULL vengono inserite nella prima partizione a sinistra, a meno che non sia specificato NULL come valore limite e indicato RIGHT. In questo caso la prima partizione a sinistra sarà una partizione vuota e i valori NULL verranno inseriti nella partizione successiva.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire CREATE PARTITION FUNCTION è possibile usare qualsiasi delle autorizzazioni seguenti:  
   
 -   Autorizzazione ALTER ANY DATASPACE. Questa autorizzazione viene concessa per impostazione predefinita al ruolo predefinito del server **sysadmin** e ai ruoli predefiniti del database **db_owner** e **db_ddladmin** .  
@@ -106,8 +105,8 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
 |---------------|-------|-------|-------|-------|  
 |**Valori**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <=`1000`|**col1** > `1000`|  
   
-### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>b. Creazione di una funzione di partizione RANGE RIGHT in una colonna int  
- La funzione di partizione seguente usa gli stessi valori di *boundary_value* [ **,**_...n_ ] dell'esempio precedente, con la differenza che qui specifica RANGE RIGHT.  
+### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>B. Creazione di una funzione di partizione RANGE RIGHT in una colonna int  
+ La funzione di partizione seguente usa gli stessi valori di *boundary_value* [ **,** _...n_ ] dell'esempio precedente, con la differenza che qui specifica RANGE RIGHT.  
   
 ```sql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  

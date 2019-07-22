@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 4ed8568dd53d02df3e0788b79d0b9240f47dbe5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a262ba4daf1a54e4a57a71baa0b97308d473720
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057895"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Configurare il log shipping (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ ms.locfileid: "66794641"
   
 5.  Nella casella **Percorso di rete della cartella di backup** digitare il percorso di rete della condivisione creata per la cartella di backup dei log delle transazioni.  
   
-6.  Casella **Se la cartella di backup si trova nel server primario, digitare il percorso locale della cartella (ad esempio: c:\\backup)** . Se la cartella di backup non si trova nel server primario, è possibile lasciare vuota la casella.  
+6.  Casella **Se la cartella di backup si trova nel server primario, digitare il percorso locale della cartella (ad esempio: c:\\backup)**. Se la cartella di backup non si trova nel server primario, è possibile lasciare vuota la casella.  
   
     > [!IMPORTANT]  
     >  Se l'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del server principale viene eseguito utilizzando l'account di sistema locale, è necessario creare la cartella di backup nel server primario e specificare il percorso locale della cartella.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 149fc4781c0a93db423a863c98f7eeaf0afcf2da
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 39183d699bfa27430a35012d353b8f3bc70d6be0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034777"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Lezione 1: Navigazione di base in Ottimizzazione guidata motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,25 +35,25 @@ Per completare questa esercitazione, sono necessari SQL Server Management Studio
 Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristinare un database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017).
 
   >[!NOTE]
-  > Questa esercitazione è destinata a un utente ha familiarità con SQL Server Management Studio e le attività di amministrazione di base dei database. 
+  > Questa esercitazione è destinata agli utenti che hanno familiarità con l'uso di SQL Server Management Studio e le attività di amministrazione del database di base. 
   
 
 ## <a name="launch-database-tuning-advisor"></a>Avviare Ottimizzazione guidata motore di database 
 Per iniziare, aprire l'interfaccia utente grafica (GUI) di Ottimizzazione guidata motore di database. Al primo uso, per inizializzare l'applicazione è necessario che lo strumento Ottimizzazione guidata motore di database sia avviato da un membro del ruolo predefinito del server **sysadmin** . Dopo l'inizializzazione i membri del ruolo predefinito del database **db_owner** possono usare lo strumento Ottimizzazione guidata motore di database per ottimizzare i database di cui sono proprietari. Per altre informazioni sull'inizializzazione di Ottimizzazione guidata motore di database, vedere [Avvio e utilizzo di Ottimizzazione guidata motore di database](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-1. Avviare SQL Server Management Studio (SSMS). Nella finestra di Windows **dal Menu Start**, scegliere **tutti i programmi** e individuare **SQL Server Management Studio**. 
-2. Una volta aperto SQL Server Management Studio, selezionare la **degli strumenti** menu e selezionare **Ottimizzazione guidata Database**. 
+1. Avviare SQL Server Management Studio (SSMS). Dal **menu Start**di Windows scegliere **tutti i programmi** e individuare **SQL Server Management Studio**. 
+2. Quando SSMS è aperto, selezionare il menu **strumenti** e selezionare **Ottimizzazione guidata database**. 
 
   ![avviare DTA da SSMS](media/dta-tutorials/launch-dta.png)
 
-3. Consente di avviare Ottimizzazione guidata del database e si apre la **Connetti al Server** nella finestra di dialogo. Verificare le impostazioni predefinite e quindi selezionare **Connect** per connettersi a SQL Server.  
+3. Viene avviato Ottimizzazione guidata database e viene visualizzata la finestra **di dialogo Connetti al server** . Verificare le impostazioni predefinite e quindi fare clic su **Connetti** per connettersi al SQL Server.  
   
 Per impostazione predefinita, la configurazione all'avvio dello strumento Ottimizzazione guidata motore di database è quella illustrata nella figura seguente:  
   
 ![Finestra predefinita di Ottimizzazione guidata motore di database](media/dta-tutorials/dta-default-gui.png)
   
 > [!NOTE]  
-> Il **monitoraggio sessione** scheda Visualizza il nome della sessione che è il nome dell'utente connesso e i dati correnti. 
+> Nella scheda **Monitoraggio sessione** viene visualizzato il nome della sessione, ovvero il nome dell'utente connesso e i dati correnti. 
   
 Al primo avvio dell'interfaccia utente grafica dello strumento Ottimizzazione guidata motore di database vengono visualizzati due riquadri principali.  
   
@@ -65,11 +64,11 @@ Al primo avvio dell'interfaccia utente grafica dello strumento Ottimizzazione gu
 > [!NOTE]
 > Lo strumento Ottimizzazione guidata motore di database può usare come input file in formato XML quando uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] viene importato dall'editor di query di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Per altre informazioni, vedere la sezione relativa all'avvio dello strumento Ottimizzazione guidata motore di database dall'editor di query di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [Avvio e utilizzo di Ottimizzazione guidata motore di database](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-## <a name="configure-tool-options-and-layout"></a>Configurare le opzioni dello strumento e layout 
+## <a name="configure-tool-options-and-layout"></a>Configurare il layout e le opzioni dello strumento 
 
 1.  Scegliere **Opzioni** dal menu **Strumenti**.  
 
-   ![Opzioni di DTA](media/dta-tutorials/dta-settings.png) 
+   ![Opzioni DTA](media/dta-tutorials/dta-settings.png) 
   
 2.  Nella finestra di dialogo **Opzioni** visualizzare le opzioni seguenti:  
   

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6a358aacd5bbfe165b908a3c737d4809cf1555f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3df2d5cd644fdff3371c2814705a18dbd2dfdfb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65461823"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111168"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Panoramica del ripristino e del recupero (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,9 +90,9 @@ ms.locfileid: "65461823"
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |Recupero dati|Recupero completo (se il log è disponibile).|Rischio parziale di perdita di dati.|Tutti i dati successivi all'ultimo backup completo o differenziale vanno perduti.|  
 |Ripristino temporizzato|Qualsiasi periodo di tempo coperto dai backup del log.|Non consentito se il backup del log contiene modifiche con registrazione minima delle operazioni bulk.|Non supportato.|  
-|File restore **\***|Supporto completo.|In casi specifici. **\*\***|Disponibile solo per i file secondari di sola lettura.|  
-|Page restore **\***|Supporto completo.|In casi specifici. **\*\***|Nessuna.|  
-|Ripristino a fasi (a livello di filegroup) **\***|Supporto completo.|In casi specifici. **\*\***|Disponibile solo per i file secondari di sola lettura.|  
+|File restore **\***|Supporto completo.|In casi specifici.**\*\***|Disponibile solo per i file secondari di sola lettura.|  
+|Page restore **\***|Supporto completo.|In casi specifici.**\*\***|Nessuna.|  
+|Ripristino a fasi (a livello di filegroup) **\***|Supporto completo.|In casi specifici.**\*\***|Disponibile solo per i file secondari di sola lettura.|  
   
  **\*** Disponibile solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   

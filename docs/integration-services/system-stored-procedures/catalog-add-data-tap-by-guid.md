@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bbe729ebef5d156f6c946e0c5cda62c1cefdcd81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d966b147c8475b357a3239ca36654e087f9ccbeb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65717204"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068699"
 ---
 # <a name="catalogadddatatapbyguid"></a>catalog.add_data_tap_by_guid 
 
@@ -50,10 +49,10 @@ catalog add_data_tap_by_guid [ @execution_id = ] execution_id
   
  Per individuare la stringa di identificazione, in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] fare clic con il pulsante destro del mouse sul percorso tra due componenti flusso dati e scegliere **Proprietà**. La proprietà **IdentificationString** viene visualizzata nella finestra **Proprietà**.  
   
- *dataflow_path_id_string* è di tipo **nvarchar(4000)** .  
+ *dataflow_path_id_string* è di tipo **nvarchar(4000)**.  
   
  [ @data_filename = ] *data_filename*  
- Nome del file in cui sono archiviati i data tap. Se l'attività Flusso di dati viene eseguita in un contenitore Ciclo Foreach o Ciclo For, i data tap per ogni iterazione del ciclo vengono archiviati in file separati. Ogni file ha un prefisso dato da un numero corrispondente a un'iterazione. I file di scelta dei dati vengono scritti nella cartella " *\<cartella di installazione di SQL Server>* \130\DTS\\". *data_filename* è di tipo **nvarchar(4000)** .  
+ Nome del file in cui sono archiviati i data tap. Se l'attività Flusso di dati viene eseguita in un contenitore Ciclo Foreach o Ciclo For, i data tap per ogni iterazione del ciclo vengono archiviati in file separati. Ogni file ha un prefisso dato da un numero corrispondente a un'iterazione. I file di scelta dei dati vengono scritti nella cartella "*\<cartella di installazione di SQL Server>* \130\DTS\\". *data_filename* è di tipo **nvarchar(4000)**.  
   
  [ @max_rows = ] max_rows  
  Numero di righe acquisite durante la scelta dei dati. Se questo valore non è specificato, vengono acquisite tutte le righe. Il valore max_rows è di tipo **int**.  

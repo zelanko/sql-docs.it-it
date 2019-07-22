@@ -37,13 +37,12 @@ helpviewer_keywords:
 ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 00726a70cc40548f3c75b786a9fa2b601ec9dd57
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 2fc021cec09a7f62d05f5e435db9d6fc2597fce3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326372"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117336"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +87,7 @@ CREATE REMOTE SERVICE BINDING binding_name
   
  Se un utente possiede più di un certificato, [!INCLUDE[ssSB](../../includes/sssb-md.md)] seleziona il certificato con la data di scadenza più recente tra i certificati validi e contrassegnati con AVAILABLE FOR BEGIN_DIALOG.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni per la creazione di un'associazione al servizio remoto vengono assegnate per impostazione predefinita all'utente indicato nella clausola USER, ai membri del ruolo predefinito del database **db_owner**, ai membri del ruolo predefinito del database **db_ddladmin** e ai membri del ruolo predefinito del server **sysadmin**.  
   
  L'utente che esegue l'istruzione CREATE REMOTE SERVICE BINDING deve disporre dell'autorizzazione di rappresentazione per l'entità specificata nell'istruzione.  
@@ -106,7 +105,7 @@ CREATE REMOTE SERVICE BINDING APBinding
     WITH USER = APUser ;  
 ```  
   
-### <a name="b-creating-a-remote-service-binding-using-anonymous-authentication"></a>b. Creazione di un'associazione al servizio remoto utilizzando l'autenticazione anonima  
+### <a name="b-creating-a-remote-service-binding-using-anonymous-authentication"></a>B. Creazione di un'associazione al servizio remoto utilizzando l'autenticazione anonima  
  Nell'esempio seguente viene creata un'associazione per il servizio `//Adventure-Works.com/services/AccountsPayable`. [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilizza il certificato di proprietà dell'entità database `APUser` per scambiare la chiave di crittografia della sessione con il servizio remoto. Service Broker non esegue l'autenticazione per il servizio remoto. Nel database che ospita il servizio remoto i messaggi vengono recapitati come utente **guest**.  
   
 ```  

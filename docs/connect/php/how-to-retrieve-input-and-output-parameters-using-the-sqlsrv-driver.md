@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c27dc3cddc8dac57edc4afdcc2f4191934e243f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27290272b72b27d3bb051da4e7d9a8df202461c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993464"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>Procedura: Recuperare i parametri di input e output usando il driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -123,10 +122,10 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> Quando si associa un parametro di input/output a un tipo bigint, se il valore potrebbe finire compreso nell'intervallo di un' [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), è necessario specificarne il tipo di campo SQL come SQLSRV_SQLTYPE_BIGINT. In caso contrario, può comportare un'eccezione di "valore non compreso nell'intervallo".
+> Quando si associa un parametro di input/output a un tipo bigint, se il valore può finire al di fuori dell'intervallo di un [numero intero](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), sarà necessario specificare il tipo di campo SQL come SQLSRV_SQLTYPE_BIGINT. In caso contrario, è possibile che venga generata un'eccezione "valore non compreso nell'intervallo".
 
 ## <a name="example-2"></a>Esempio 2
-Questo esempio di codice viene illustrato come associare un valore bigint grande come parametro di input/output.  
+In questo esempio di codice viene illustrato come associare un valore bigint di grandi dimensioni come parametro di input/output.  
 
 ```
 <?php

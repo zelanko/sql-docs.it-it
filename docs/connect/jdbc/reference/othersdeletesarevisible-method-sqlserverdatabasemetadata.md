@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c4692a8c-e6b7-4edc-9dad-7af816988de5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 421de1ae536c6bc0ff25f573f131f048df978c3d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 710d06a43aa1eb23ae9750c1cee1b5c4d1460085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66789202"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976626"
 ---
 # <a name="othersdeletesarevisible-method-sqlserverdatabasemetadata"></a>Metodo othersDeletesAreVisible (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -65,7 +64,7 @@ public boolean othersDeletesAreVisible(int type)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo othersDeletesAreVisible viene specificato dal metodo othersDeletesAreVisible nell'interfaccia DatabaseMetaData.  
+ Questo metodo othersDeletesAreVisible viene specificato dal Metodo othersDeletesAreVisible nell'interfaccia java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

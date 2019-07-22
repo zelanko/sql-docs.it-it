@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 21f7f959-7b8e-4335-8681-bebcd957692c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 70fc970a214c001e00703ddaa79438d59e31e487
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a072483769e4e75ac21b992b0fefa462640fa31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105772"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984601"
 ---
 # <a name="connected-database-development"></a>Sviluppo del database connesso
 Questa sezione descrive le funzionalità fornite da SQL Server Data Tools per la progettazione di un database connesso e l'esecuzione di query su tale database.  

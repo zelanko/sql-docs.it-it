@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f5732c63ae381c0ca9c120b64aef3915dc6db926
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 8cf0332d2a82113145e549d9419b855a222f7441
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117289"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
   
  I predicati di blocco vengono valutati dopo l'esecuzione dell'operazione DML corrispondente. Pertanto una query READ UNCOMMITTED può rilevare valori temporanei che saranno sottoposti a rollback.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione ALTER ANY SECURITY POLICY e l'autorizzazione ALTER per lo schema.  
   
  Inoltre, per ogni predicato che viene aggiunto sono richieste le autorizzazioni seguenti:  
@@ -117,7 +116,7 @@ ADD FILTER PREDICATE [rls].[fn_securitypredicate]([CustomerId])
 ON [dbo].[Customer];  
 ```  
   
-### <a name="b-creating-a-policy-that-affects-multiple-tables"></a>b. Creazione di un criterio che interessa più tabelle  
+### <a name="b-creating-a-policy-that-affects-multiple-tables"></a>B. Creazione di un criterio che interessa più tabelle  
  La sintassi seguente crea un criterio di sicurezza con tre predicati del filtro per tre tabelle diverse e abilita il criterio di sicurezza.  
   
 ```  

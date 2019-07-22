@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ae385bd59de5f282ce383c6f819c6b5feb6521e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4d0d364e803fc544ee4f317ee55b597fef9e79fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65721801"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055833"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>Lezione 4-3: Aggiungere il reindirizzamento del flusso degli errori
 
@@ -52,7 +51,7 @@ Per impostazione predefinita, le due colonne supplementari in un output degli er
   
 8.  Nella pagina **Input e output** espandere **Output 0**, selezionare **Colonne di output**, quindi selezionare **Aggiungi colonna**.  
   
-9. Nella proprietà **Name**, immettere *ErrorDescription* e impostare la proprietà **DataType** su **Stringa Unicode [DT_WSTR]**.  
+9. Nella proprietà **Name**, immettere *ErrorDescription* e impostare la proprietà **DataType** su **Stringa Unicode [DT_WSTR]** .  
   
 10. Nella pagina **Script** verificare che la proprietà **LocaleID** sia impostata su **Inglese (Stati Uniti).**
   
