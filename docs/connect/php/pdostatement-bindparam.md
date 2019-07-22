@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d8186b87e5dde50b07aa69e4dde870d8474265bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd3332f9dc12d1cf7df22c097ab9370606985a68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795585"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936151"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +38,7 @@ $*data_type*: costante (intero) PDO::PARAM_* facoltativa. Il valore predefinito 
   
 $*length*: lunghezza (intero) facoltativa del tipo di dati. È possibile specificare PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE per indicare le dimensioni predefinite quando si usa PDO::PARAM_INT o PDO::PARAM_BOOL in $*data_type*.  
   
-$*driver_options*: le opzioni specifiche del driver (miste) facoltative. Ad esempio, è possibile specificare PDO::SQLSRV_ENCODING_UTF8 per associare la colonna a una variabile come stringa codificata in UTF-8.  
+$*driver_options*: opzioni specifiche del driver (misto) facoltative. Ad esempio, è possibile specificare PDO::SQLSRV_ENCODING_UTF8 per associare la colonna a una variabile come stringa codificata in UTF-8.  
   
 ## <a name="return-value"></a>Valore restituito  
 TRUE in caso di esito positivo; in caso contrario, FALSE.  
@@ -100,7 +99,7 @@ echo $input1;
 ```  
   
 > [!NOTE]
-> Quando si associa un parametro di output a un tipo bigint, se il valore potrebbe finire compreso nell'intervallo di un' [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), uso di PDO:: param_int con PDO:: sqlsrv_param_out_default_size può comportare un'eccezione di "valore non compreso nell'intervallo". Pertanto, Usa invece il valore predefinito di PDO:: param_str e indicano le dimensioni della stringa risulta, che è al massimo 21. È il numero massimo di cifre, incluso il segno negativo, di qualsiasi valore bigint. 
+> Quando si associa un parametro di output a un tipo bigint, se il valore può finire al di fuori dell'intervallo di un [Integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), l'uso di dop::P ARAM_INT con DOP:: SQLSRV_PARAM_OUT_DEFAULT_SIZE può comportare un'eccezione "valore non compreso nell'intervallo". Quindi, usare invece il valore predefinito DOP::P ARAM_STR e specificare la dimensione della stringa risultante, che è al massimo 21. È il numero massimo di cifre, incluso il segno negativo, di qualsiasi valore bigint. 
 
 ## <a name="example"></a>Esempio  
 In questo esempio di codice viene illustrato come usare un parametro di input/output.  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 63ee219cc956942c5bd814c03e10ac94b10a5de9
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 6f0600f663e00e0318a933e7824f3e0b78166f55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512916"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087192"
 ---
 # <a name="manage-policy-categories"></a>Gestione categorie di criteri
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "51512916"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Questa stored procedure viene eseguita nel contesto del proprietario corrente della stessa.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -81,7 +80,7 @@ ms.locfileid: "51512916"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     USE msdb;  

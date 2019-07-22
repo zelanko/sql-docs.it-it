@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d83cfe9e409d9634f9853bfc02b4ff8dc7d9e70a
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 4795f3567f1e9b0067d7811c1631c73bac2b0ac8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67679571"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259016"
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Debugger Transact-SQL - Finestra Punti di interruzione
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "67679571"
  Consente di visualizzare il nome del punto di interruzione. I nomi dei punti di interruzione vengono forniti dal debugger. Questo nome include il nome della finestra dell'editor di query del Motore di database che contiene il punto di interruzione e il numero di riga nell'editor di query in cui è impostato il punto di interruzione.  
   
  **Condizione**  
- Viene visualizzato **(nessuna condizione)** . Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] non supporta l'impostazione di condizioni per i punti di interruzione.  
+ Viene visualizzato **(nessuna condizione)**. Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] non supporta l'impostazione di condizioni per i punti di interruzione.  
   
  **Passaggi**  
  Viene visualizzato**interrompi sempre**.  
@@ -44,7 +43,7 @@ ms.locfileid: "67679571"
  È possibile aggiungere e rimuovere le colonne seguenti selezionandole nell'elenco **Colonne** .  
   
  **Filter**  
- Viene visualizzato **(nessuno)** . Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] non supporta l'impostazione di filtri per i punti di interruzione.  
+ Viene visualizzato **(nessuno)**. Il debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] non supporta l'impostazione di filtri per i punti di interruzione.  
   
  **Quando raggiunto**  
  Viene visualizzato **Interrompi**.  

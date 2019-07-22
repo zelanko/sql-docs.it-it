@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 75b5a13a30b9808971107c0ba463fdccbd1ccb89
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 67261d22212a2c3c865e44b0160830e2d11cf5f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133171"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085918"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>Avviare e arrestare un agente di replica (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ ms.locfileid: "54133171"
   
 2.  Espandere la cartella **SQL Server Agent** e quindi la cartella **Processi** .  
   
-3.  Fare clic con il pulsante destro del mouse sul processo dell'agente e quindi scegliere **Avvia processo** o **Arresta processo**. Il nome del processo relativo all'agente di lettura coda si trova nel form **[\<Server di distribuzione>].\<numero intero>**.  
+3.  Fare clic con il pulsante destro del mouse sul processo dell'agente e quindi scegliere **Avvia processo** o **Arresta processo**. Il nome del processo relativo all'agente di lettura coda si trova nel form **[\<Server di distribuzione>].\<numero intero>** .  
   
 ### <a name="to-start-and-stop-a-snapshot-agent-log-reader-agent-or-queue-reader-agent-from-replication-monitor"></a>Per avviare e arrestare un agente snapshot, un agente di lettura log o un agente di lettura coda da Monitoraggio replica  
   

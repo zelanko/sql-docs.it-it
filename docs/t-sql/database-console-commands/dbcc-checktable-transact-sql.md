@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: c3c8e4e2617e3bf1cd7f5f3627aab0c9a4cf0be4
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: bf9207498575a52c5d9c2c1a6076110260c1f588
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102007"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -188,7 +187,7 @@ Dopo il completamento del comando DBCC CHECKTABLE, nel log degli errori di [!INC
 |2|Si è verificato un errore durante un ripristino di database in modalità di emergenza.|    
 |3|Indica che il comando DBCC è stato terminato a causa di un danneggiamento dei metadati.|    
 |4|È stata rilevata una violazione di accesso o asserzione.|    
-|5|Si è verificato un errore sconosciuto che ha causato l'interruzione del comando DBCC.|    
+|5|il comando DBCC è stato terminato da un errore sconosciuto.|    
     
 ## <a name="error-reporting"></a>Segnalazione errori    
 Quando DBCC CHECKTABLE rileva un errore di danneggiamento, viene creato un piccolo file di dump denominato `SQLDUMP*nnnn*.txt` nella directory LOG di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando la raccolta di dati *Utilizzo caratteristiche* e le funzionalità *Segnalazione errori* sono abilitate per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il file viene inoltrato automaticamente a [!INCLUDE[msCoName](../../includes/msconame-md.md)]. I dati raccolti consentono di migliorare la funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
@@ -217,7 +216,7 @@ Estimated TEMPDB space needed for CHECKTABLES (KB)
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.    
 ```    
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>Autorizzazioni    
 L'utente deve essere il proprietario della tabella oppure un membro del ruolo predefinito del server sysadmin o dei ruoli predefiniti del database db_owner o db_ddladmin.    
     
 ## <a name="examples"></a>Esempi    
@@ -230,7 +229,7 @@ DBCC CHECKTABLE ('HumanResources.Employee');
 GO    
 ```    
     
-### <a name="b-performing-a-low-overhead-check-of-the-table"></a>b. Esecuzione di un controllo della tabella a basso overhead    
+### <a name="b-performing-a-low-overhead-check-of-the-table"></a>B. Esecuzione di un controllo della tabella a basso overhead    
  Nell'esempio seguente viene eseguito un controllo a basso overhead della tabella `Employee` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].    
     
 ```sql    

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 816f1983723b119d7092013fad6296668621fe75
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: e431b51db33f889acd9bcce5e93222b451ad3237
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662815"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000470"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -83,7 +82,7 @@ JOIN Employee on (m.EmployeeID =Employee.EmployeeID AND
 ```  
   
 Per query in scala ridotta con piani di query che non vengono modificati e quando la ricompilazione è una preoccupazione dominante, le variabili di tipo **table** offrono i vantaggi seguenti:
--   Le variabili di tipo **table** funzionano in modo analogo alle variabili locali. Queste variabili hanno un ambito ben definito. La variabile corrisponde alla funzione, alla stored procedure o al batch in cui è dichiarata.  
+-   Le variabili di tipo **table** funzionano in modo analogo alle variabili locali. Queste variabili hanno un ambito ben definito, La variabile corrisponde alla funzione, alla stored procedure o al batch in cui è dichiarata.  
      All'interno del proprio ambito, le variabili **table** possono essere usate come normali tabelle. in tutti i casi in cui è possibile utilizzare una tabella o espressione di tabella in istruzioni SELECT, INSERT, UPDATE e DELETE. Non è tuttavia possibile usare **table** nell'istruzione seguente:  
   
 ```sql
@@ -98,7 +97,7 @@ La pulizia delle variabili di tipo **table** viene eseguita automaticamente alla
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni
 Le variabili di tipo **table** non includono statistiche di distribuzione e non attivano ricompilazioni. In molti casi, l'utilità di ottimizzazione creerà un piano di query basandosi sul presupposto che la variabile di tabella non contenga righe. Per questo motivo, è necessario prestare attenzione in caso di utilizzo di una variabile di tabella se si prevede un numero elevato di righe (maggiore di 100). In tal caso, le tabelle temporanee potrebbero rappresentare una soluzione migliore. Per le query che uniscono in join la variabile di tabella con altre tabelle, usare l'hint RECOMPILE, con cui l'utilità di ottimizzazione userà la cardinalità corretta per la variabile di tabella.
   
-Le variabili di tipo **table** non sono supportate nel modello di ragionamento basato sui costi dell'utilità di ottimizzazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È quindi consigliabile non usarle quando sono necessarie scelte basate sui costi per ottenere un piano di query efficiente. È preferibile utilizzare le tabelle temporanee quando sono necessarie scelte basate sui costi. Tale piano include in genere query con join, decisioni di parallelismo e scelte di selezione degli indici.
+Le variabili di tipo **table** non sono supportate nel modello di ragionamento basato sui costi dell'utilità di ottimizzazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È quindi consigliabile non usarle quando sono necessarie scelte basate sui costi per ottenere un piano di query efficiente. È preferibile utilizzare le tabelle temporanee quando sono necessarie scelte basate sui costi, Tale piano include in genere query con join, decisioni di parallelismo e scelte di selezione degli indici.
   
 Per le query che modificano le variabili di tipo **table** non vengono generati piani di esecuzione di query parallele. La modifica di variabili di tipo **table** di grandi dimensioni o di variabili di tipo **table** in query complesse può influire sulle prestazioni. Nei casi in cui le variabili di tipo **table** vengono modificate, valutare la possibilità di usare invece tabelle temporanee. Per altre informazioni, vedere [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md). Le query che leggono le variabili di tipo **table** senza modificarle possono comunque essere eseguite in parallelo.
   
@@ -141,7 +140,7 @@ Per riabilitare la compilazione posticipata delle variabili di tabella per tutte
 ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
 ```
 
-È anche possibile disabilitare la compilazione posticipata delle variabili di tabella per una query specifica assegnando DISABLE_DEFERRED_COMPILATION_TV come hint per la query USE HINT.  Ad esempio
+È anche possibile disabilitare la compilazione posticipata delle variabili di tabella per una query specifica assegnando DISABLE_DEFERRED_COMPILATION_TV come hint per la query USE HINT.  Esempio:
 
 ```sql
 DECLARE @LINEITEMS TABLE 
@@ -199,7 +198,7 @@ FROM HumanResources.Employee;
 GO  
 ```  
   
-### <a name="b-creating-an-inline-table-valued-function"></a>b. Creazione di una funzione inline con valori di tabella  
+### <a name="b-creating-an-inline-table-valued-function"></a>B. Creazione di una funzione inline con valori di tabella  
 Nell'esempio seguente viene restituita una funzione inline con valori di tabella. L'esempio restituisce tre colonne `ProductID`, `Name` e l'aggregazione dei totali da inizio anno per negozio, come `YTD Total` per ogni prodotto venduto al negozio.
   
 ```sql

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-manager: jroth
-ms.openlocfilehash: a1b25ea57ef34ebe8dd0c098695a0b59b6f87472
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 94430d6b32567f7f185f1a515f8391d4ee01b3a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789637"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991574"
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Guida alla risoluzione dei problemi e al monitoraggio dei gruppi di disponibilità Always On
  Questa guida consente di iniziare rapidamente a monitorare i gruppi di disponibilità Always On e a risolvere alcuni problemi più comuni dei gruppi di disponibilità. Riporta contenuto originale nonché una pagina di destinazione con informazioni utili pubblicate anche altrove. Sebbene in questa guida non sia possibile trattare in modo approfondito tutti i problemi che possono verificarsi nell'ambito dei gruppi di disponibilità, l'utente troverà un'indicazione della direzione da seguire per l'analisi della causa principale e la risoluzione dei problemi. 

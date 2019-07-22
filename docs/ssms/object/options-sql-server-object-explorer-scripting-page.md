@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: b06e64d3b503aa011aea00be54f7d9089056f0d8
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 7ccd2812261b4d71fb7553f3f1ab40216cc89016
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67683446"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264065"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Opzioni (Esplora oggetti di SQL Server - pagina Generazione script)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +43,7 @@ Specificare le opzioni di scripting selezionando le impostazioni desiderate tra 
 Consente di separare istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] singole utilizzando un separatore batch. Per modificare il separatore batch predefinito per l' **editor di query**, scegliere **Strumenti**/**Opzioni**/**Esecuzione query**/**SQL Server**/**Generale**/**Separatore batch**. Il valore predefinito è False. Per altre informazioni, vedere [GO (Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738).  
   
 **Includi intestazioni descrittive**  
-Consente di aggiungere commenti descrittivi allo script dividendolo in sezioni per ogni oggetto. Il valore predefinito è True. Per altre informazioni, vedere [/ *...* / (Comment) (Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c).  
+Consente di aggiungere commenti descrittivi allo script dividendolo in sezioni per ogni oggetto. Il valore predefinito è True. Per altre informazioni, vedere [/*...*/ (Comment) (Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c).  
   
 **Includi abilitazione compressione VarDecimal**  
 Consente di includere le opzioni per l'archiviazione vardecimal. Il valore predefinito è False. Per altre informazioni, vedere [sp_db_vardecimal_storage_format (Transact-SQL)](https://msdn.microsoft.com/9920b2f7-b802-4003-913c-978c17ae4542).  

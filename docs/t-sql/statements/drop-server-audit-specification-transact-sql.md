@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 76635b80-5c05-4d01-a4e2-8277cd09251b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5429eef67ea10a1303e98228ce9af9a3d867d988
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2bdba5db08472a137362300c48faa242c189e6db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929294"
 ---
 # <a name="drop-server-audit-specification-transact-sql"></a>DROP SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ DROP SERVER AUDIT SPECIFICATION audit_specification_name
 ## <a name="remarks"></a>Remarks  
  DROP SERVER AUDIT SPECIFICATION rimuove i metadati per la specifica del controllo, ma non i dati di controllo raccolti prima dell'esecuzione del comando DROP. Prima di procedere con l'eliminazione, è necessario impostare lo stato di una specifica del controllo del server su OFF usando ALTER SERVER AUDIT SPECIFICATION.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Gli utenti con l'autorizzazione ALTER ANY SERVER AUDIT possono eliminare le specifiche del controllo del server.  
   
 ## <a name="examples"></a>Esempi  

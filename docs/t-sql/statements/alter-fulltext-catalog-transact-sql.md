@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b79d00b02f06395a083ee93a2916a7d3aa5f0233
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f6888525a9b213806267d253fca9c8f2c391766
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712009"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065588"
 ---
 # <a name="alter-fulltext-catalog-transact-sql"></a>ALTER FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ ALTER FULLTEXT CATALOG catalog_name
  AS DEFAULT  
  Specifica che il catalogo è il catalogo predefinito. Quando vengono creati indici full-text senza che siano stati specificati cataloghi, viene utilizzato il catalogo predefinito. Se esiste già un catalogo full-text predefinito e si imposta AS DEFAULT per questo catalogo, il catalogo predefinito esistente verrà ignorato.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'utente deve disporre dell'autorizzazione ALTER nel catalogo full-text oppure deve essere membro del ruolo predefinito del server sysadmin o del ruolo predefinito del database **db_owner** o **db_ddladmin**.  
   
 > [!NOTE]  

@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 620314ec11154737dc6d35bcf1d3e2587aaab2a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 042d304dcdd0519d858fcf7369e9b200a57f1959
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65722992"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902585"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>Lezione 1-7: Aggiungere e configurare la destinazione OLE DB
 
@@ -42,7 +41,7 @@ In questa attività verrà aggiunta e configurata una destinazione OLE DB in mod
   
 6.  Nella finestra di dialogo **Editor destinazione OLE DB** verificare che **localhost.AdventureWorksDW2012** sia selezionato nella casella **Gestione connessione OLE DB**.  
   
-7.  Nella casella **Nome tabella o vista** immettere o selezionare **[dbo].[FactCurrencyRate]**.  
+7.  Nella casella **Nome tabella o vista** immettere o selezionare **[dbo].[FactCurrencyRate]** .  
   
 8.  Selezionare il pulsante **Nuova** per creare una nuova tabella.  Cambiare il nome della tabella nello script da **Sample OLE DB Destination** a **NewFactCurrencyRate**.  Fare clic su **OK**.  
   

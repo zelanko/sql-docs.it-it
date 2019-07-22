@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: fdd0f81e-3c22-4cdf-9416-b4977a6ac3b6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2d43c52920c3b868c06d2369f718a0b0fa5fd4e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 479d00aec0cbd4c9cd81359a0a1f633e80bce521
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800049"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898271"
 ---
 # <a name="drop-contract-transact-sql"></a>DROP CONTRACT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ DROP CONTRACT contract_name
   
  Quando si elimina un contratto, tramite [!INCLUDE[ssSB](../../includes/sssb-md.md)] viene interrotta qualsiasi conversazione esistente che utilizza tale contratto e viene generato un errore.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'autorizzazione per eliminare un contratto viene assegnata per impostazione predefinita al proprietario del contratto, ai membri del ruolo predefinito del database db_ddladmin o db_owner e ai membri del ruolo predefinito del server sysadmin.  
   
 ## <a name="examples"></a>Esempi  

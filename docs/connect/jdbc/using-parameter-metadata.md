@@ -1,5 +1,5 @@
 ---
-title: Usando i metadati del parametro | Microsoft Docs
+title: Uso dei metadati dei parametri | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: db2c1957-91c6-4989-a07b-9f8be6d2033a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e2c0e9f7589f58a1ef3c1cc5ee4026dd9eea5076
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 168a153ecf12acda5adfbae22d13618669c6c2a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798571"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916211"
 ---
 # <a name="using-parameter-metadata"></a>Utilizzo dei metadati dei parametri
 
@@ -24,9 +23,9 @@ ms.locfileid: "66798571"
 
 Per eseguire una query su un oggetto [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) o [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) per recuperare i parametri in esso contenuti, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] implementa la classe [SQLServerParameterMetaData](../../connect/jdbc/reference/sqlserverparametermetadata-class.md). Questa classe contiene numerosi campi e metodi che restituiscono informazioni in forma di singolo valore.
 
-Per creare un oggetto SQLServerParameterMetaData, è possibile usare la [getParameterMetaData](../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md) metodi delle classi SQLServerPreparedStatement e SQLServerCallableStatement.
+Per creare un oggetto SQLServerParameterMetaData, è possibile usare i metodi [getParameterMetaData](../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md) delle classi SQLServerPreparedStatement e SQLServerCallableStatement.
 
-Nell'esempio seguente, una connessione aperta al [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] database di esempio viene passato alla funzione, il metodo getParameterMetaData della classe SQLServerCallableStatement viene utilizzato per restituire un oggetto SQLServerParameterMetaData e quindi vari metodi dell'oggetto SQLServerParameterMetaData vengono utilizzati per visualizzare informazioni sul tipo e la modalità dei parametri che sono contenuti all'interno della routine Uspupdateemployeehireinfo archiviati.
+Nell'esempio seguente viene passata alla funzione una connessione aperta [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] al database di esempio, viene usato il metodo getParameterMetaData della classe SQLServerCallableStatement per restituire un oggetto SQLServerParameterMetaData e quindi varie i metodi dell'oggetto SQLServerParameterMetaData vengono utilizzati per visualizzare le informazioni sul tipo e sulla modalità dei parametri contenuti all'interno del stored procedure HumanResources. uspUpdateEmployeeHireInfo.
 
 [!code[JDBC#UsingParamMetaData1](../../connect/jdbc/codesnippet/Java/using-parameter-metadata_1.java)]  
 
@@ -37,4 +36,4 @@ Nell'esempio seguente, una connessione aperta al [!INCLUDE[ssSampleDBnormal](../
 
 Le query MERGE  inoltre non sono supportate per la classe SQLServerParameterMetaData quando si utilizza SQL Server 2008 o 2008 R2. Sono supportati per SQL Server 2012 e versioni successive i metadati del parametro con query complesse.
 
-Recupero dei metadati di parametro per le colonne crittografate non sono supportati. **Con Microsoft JDBC Driver 4.1 o 4.2 per SQL Server**: il driver JDBC supporta le istruzioni SELECT, DELETE, INSERT e UPDATE purché queste istruzioni non contengano sottoquery e/o join. MERGE di query non è inoltre supportati per la classe SQLServerParameterMetaData.
+Il recupero dei metadati del parametro per le colonne crittografate non è supportato. **Con Microsoft JDBC Driver 4.1 o 4.2 per SQL Server**: il driver JDBC supporta le istruzioni SELECT, DELETE, INSERT e UPDATE purché queste istruzioni non contengano sottoquery e/o join. Anche le query di MERGE non sono supportate per la classe SQLServerParameterMetaData.

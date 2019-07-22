@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 82c14fd14460f3b134441931493357a33a2cacf4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cade91c9c654b9cfae83c1dbf8a7684c2f7dba81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070241"
 ---
 # <a name="alter-service-transact-sql"></a>ALTER SERVICE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ ALTER SERVICE service_name
   
  Per modificare il parametro AUTHORIZATION per un servizio, utilizzare l'istruzione ALTER AUTHORIZATION.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'autorizzazione per la modifica di un servizio viene assegnata per impostazione predefinita al proprietario del servizio, ai membri del ruolo predefinito del database **db_ddladmin** o **db_owner** e ai membri del ruolo predefinito del server **sysadmin**.  
   
 ## <a name="examples"></a>Esempi  

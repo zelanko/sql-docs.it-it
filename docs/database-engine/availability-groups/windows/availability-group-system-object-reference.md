@@ -8,14 +8,13 @@ ms.technology: high-availability
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 monikerRange: '>=sql-server-2014||=sqlallproducts-allversions'
-ms.openlocfilehash: 8eff161c24275ee86938bf5d57bbe39473ac19cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9bdf352a566917678294c6c63ac52bd0d27de8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991387"
 ---
 # <a name="always-on-availability-group-system-object-reference"></a>Informazioni di riferimento sugli oggetti di sistema per i gruppi di disponibilità Always On
 

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ba52dfc0ff41cb1ee4a92fda4a37e368f0533474
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f7edcc2212ab54765d92cc119dfd86322ae0d523
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140936"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>Procedura dettagliata per la creazione di un assembly di regole personalizzate di analisi del codice statica per SQL Server
 Questa procedura dettagliata illustra i passaggi necessari per creare una regola di analisi del codice di SQL Server. La regola creata in questa procedura dettagliata viene usata per evitare le istruzioni WAITFOR DELAY in stored procedure, trigger e funzioni.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 280d5d37ca364e32e2bd8638cdd03563a2b86f49
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: fd74479464d23ab6ce85a92babf6ba92fa8baf49
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361501"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984350"
 ---
 # <a name="deny-type-permissions-transact-sql"></a>DENY - autorizzazioni per tipi (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,8 +54,8 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *permission*  
  Specifica un'autorizzazione che può essere negata per un tipo. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- ON TYPE **::** [ _schema_name_**.** ] *type_name*  
- Specifica il tipo per cui viene negata l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio. Se si omette *schema_name*, viene usato lo schema predefinito. Se si specifica *schema_name*, il qualificatore di ambito dello schema (**.**) è obbligatorio.  
+ ON TYPE **::** [ _schema_name_ **.** ] *type_name*  
+ Specifica il tipo per cui viene negata l'autorizzazione. Il qualificatore di ambito ( **::** ) è obbligatorio. Se si omette *schema_name*, viene usato lo schema predefinito. Se si specifica *schema_name*, il qualificatore di ambito dello schema ( **.** ) è obbligatorio.  
   
  TO \<database_principal>  
  Specifica l'entità a cui viene negata l'autorizzazione.  
@@ -112,7 +111,7 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per il tipo. Se si utilizza la clausola AS, l'entità specificata deve essere proprietaria del tipo per cui vengono negate le autorizzazioni.  
   
 ## <a name="examples"></a>Esempi  

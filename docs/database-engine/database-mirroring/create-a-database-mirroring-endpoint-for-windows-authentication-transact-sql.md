@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 630dee3126fe6c122f3e2d034252260769e3ed03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2fbe4c5188bc728b8b8b58872ca805e1460c3a04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774945"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951992"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Creare un endpoint del mirroring del database per l'autenticazione Windows (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

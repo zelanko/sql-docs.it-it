@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4f0e4659-14e7-4743-aed8-1768ee2b29dd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c1726b93bb7d569ce64e4313d80670cf3e27e269
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a212f6e8c320140edfb8092a9c15649bf9b792db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764362"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969408"
 ---
 # <a name="supportsgetgeneratedkeys-method-sqlserverdatabasemetadata"></a>Metodo supportsGetGeneratedKeys (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsGetGeneratedKeys()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se supportata. In caso contrario, **false**.  
+ **true** se supportato. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo supportsGetGeneratedKeys viene specificato dal metodo supportsGetGeneratedKeys nell'interfaccia DatabaseMetaData.  
+ Questo metodo supportsGetGeneratedKeys viene specificato dal metodo supportsGetGeneratedKeys nell'interfaccia java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

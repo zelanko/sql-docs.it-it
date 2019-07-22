@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 39be659b50c7cc068c3887a0c0139b312c46cf0b
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: a5cbc96390799219347415719ddf6754e3c33bbb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657985"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984747"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Novità di SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -56,7 +55,7 @@ Questa pagina include informazioni di riepilogo e collegamenti a informazioni pi
 Vedere [Motore di database](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)
 SQL Server 2016 Analysis Services offre prestazioni migliori, funzionalità di creazione, gestione di database, filtraggio, elaborazione e molto altro per i database con modello tabulare basati sul **livello di compatibilità 1200**.
-- **[SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)**  integra in SQL Server il linguaggio di programmazione R, usato per l'analisi statistica. 
+- **[SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md) ** integra in SQL Server il linguaggio di programmazione R, usato per l'analisi statistica. 
 - La nuova funzionalità di **verifica di coerenza del database (DBCC)** viene eseguita internamente per rilevare possibili problemi di danneggiamento dei dati.
 - La funzionalità **query diretta**, che consente di eseguire query su dati esterni dinamici invece di importarli in primo luogo, ora supporta più origini dati, tra le quali SQL Azure, Oracle e Teradata. 
 - Sono disponibili numerose nuove **funzioni DAX (Data Access Expressions)**.

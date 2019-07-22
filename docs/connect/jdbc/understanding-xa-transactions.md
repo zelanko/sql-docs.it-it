@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e61d9fbb562bda9ea400024598b1c7107ce5542e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7caa67e019ce60f955abf60d215b6c049f3dc708
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004159"
 ---
 # <a name="understanding-xa-transactions"></a>Informazioni sulle transazioni XA
 
@@ -25,7 +24,7 @@ ms.locfileid: "66788429"
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta transazioni distribuite facoltative Java Platform, Enterprise Edition/JDBC 2.0. Le connessioni JDBC ottenute dalla classe [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) possono partecipare ad ambienti standard di elaborazione delle transazioni distribuite quali i server applicazioni Java Platform, Enterprise Edition (Java EE).  
 
 > [!WARNING]  
-> Microsoft JDBC Driver 4.2 (e versioni successive) per SQL include nuove opzioni di timeout per la funzionalità di rollback automatico delle transazioni non preparate esistente. Visualizzare [la configurazione delle impostazioni di timeout sul lato server per il rollback automatico delle transazioni non preparate](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide) più avanti in questo argomento per informazioni dettagliate.  
+> Microsoft JDBC Driver 4.2 (e versioni successive) per SQL include nuove opzioni di timeout per la funzionalità di rollback automatico delle transazioni non preparate esistente. Per ulteriori informazioni, vedere [configurazione delle impostazioni di timeout lato server per il rollback automatico delle transazioni](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide) non preparate più avanti in questo argomento.  
 
 ## <a name="remarks"></a>Remarks
 
@@ -47,7 +46,7 @@ Le seguenti linee guida aggiuntive si applicano alle transazioni a "regime di co
   
      L'hotfix fornito in [MSDTC and Tightly Coupled Transactions](https://support.microsoft.com/kb/938653) (MS DTC e transazioni strettamente associate) fornisce il supporto per i rami XA strettamente associati in caso di mapping tra più rami XA con lo stesso ID di transazione globale (GTRID) e un singolo ID di transazione MS DTC. Questo supporto consente a più rami XA strettamente associati di vedere le modifiche degli altri rami nello strumento di gestione delle risorse, ad esempio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-- Un flag [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) consente alle applicazioni di usare le transazioni XA strettamente associate con ID di transazione dei rami XA (BQUAL) diversi ma con lo stesso ID di transazione globale (GTRID) e ID di formato (FormatID). Per utilizzare questa funzionalità, è necessario impostare il [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) sul parametro del metodo XAResource.start flag:
+- Un flag [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) consente alle applicazioni di usare le transazioni XA strettamente associate con ID di transazione dei rami XA (BQUAL) diversi ma con lo stesso ID di transazione globale (GTRID) e ID di formato (FormatID). Per usare tale funzionalità, è necessario impostare [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) nel parametro Flags del metodo XAResource. Start:
   
     ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
@@ -61,14 +60,14 @@ Per utilizzare le origini dei dati XA con Microsoft Distributed Transaction Coor
 > I componenti della transazione distribuita JDBC sono inclusi nella directory xa dell'installazione del driver JDBC. Tali componenti includono i file xa_install.sql e sqljdbc_xa.dll.  
 
 > [!NOTE]  
-> A partire da SQL Server 2019 anteprima pubblica di versioni da CTP 2.0, il XA JDBC i componenti delle transazioni distribuite sono inclusi nel motore di SQL Server e possono essere abilitati o disabilitati con un sistema di stored procedure.
-> Per abilitare i componenti necessari eseguire le transazioni distribuite XA utilizza il driver JDBC, eseguire la stored procedure seguente.
+> A partire da SQL Server 2019 Public Preview CTP 2,0, i componenti di transazione distribuiti JDBC XA sono inclusi nel motore di SQL Server e possono essere abilitati o disabilitati con un stored procedure di sistema.
+> Per abilitare i componenti necessari per l'esecuzione di transazioni distribuite XA tramite il driver JDBC, eseguire le stored procedure seguenti.
 >
-> EXEC sp_sqljdbc_xa_install
+> Sp_sqljdbc_xa_install EXEC
 >
-> Per disabilitare i componenti installati in precedenza, eseguire la stored procedure seguente.
+> Per disabilitare i componenti installati in precedenza, eseguire le stored procedure seguenti.
 >
-> EXEC sp_sqljdbc_xa_uninstall
+> Sp_sqljdbc_xa_uninstall EXEC
 
 ### <a name="running-the-ms-dtc-service"></a>Esecuzione del servizio MS DTC
 
@@ -122,9 +121,9 @@ Per configurare i componenti delle transazioni distribuite del driver JDBC, proc
 
 Sono disponibili due impostazioni del Registro di sistema (valori DWORD) per controllare il comportamento di timeout delle transazioni distribuite:  
   
-- **XADefaultTimeout** (in secondi): il valore di timeout predefinito da utilizzare quando l'utente non specifica alcun timeout. Il valore predefinito è 0.  
+- **XADefaultTimeout** (in secondi): valore di timeout predefinito da usare quando l'utente non specifica alcun timeout. Il valore predefinito è 0.  
   
-- **XAMaxTimeout** (in secondi): il valore massimo di timeout che un utente può impostare. Il valore predefinito è 0.  
+- **XAMaxTimeout** (in secondi): valore massimo del timeout che un utente può impostare. Il valore predefinito è 0.  
   
 Queste impostazioni sono specifiche dell'istanza di SQL Server e devono essere create nella seguente chiave del Registro di sistema:  
 
@@ -160,7 +159,7 @@ Quando si installa una nuova versione del driver JDBC, è consigliabile utilizza
 > [!IMPORTANT]  
 > Aggiornare il file sqljdbc_xa.dll durante il periodo di manutenzione o quando non è in corso nessuna transazione MS DTC.
   
-1. Scaricare il file sqljdbc_xa. dll usando il [!INCLUDE[tsql](../../includes/tsql-md.md)] comandi **DBCC sqljdbc_xa (gratuito)** .  
+1. Scaricare sqljdbc_xa. dll usando il [!INCLUDE[tsql](../../includes/tsql-md.md)] comando **DBCC sqljdbc_xa (free)** .  
   
 2. Copiare il nuovo file sqljdbc_xa.dll dalla directory di installazione del driver JDBC alla directory Binn di ogni computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che parteciperà alle transazioni distribuite.  
   

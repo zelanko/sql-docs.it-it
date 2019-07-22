@@ -19,11 +19,11 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 4af50c6df7ef8ea451f38a038d19e39491604308
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516557"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68231706"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Aggiornamento di database mediante l'Assistente ottimizzazione query
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -161,7 +161,7 @@ L'Assistente ottimizzazione Query è una funzionalità basata sulla sessione che
 
         L'elenco contiene le informazioni seguenti:
         -  **ID query** 
-        -  **Testo query**: istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che può essere espansa facendo clic sul pulsante **...**.
+        -  **Testo query**: istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che può essere espansa facendo clic sul pulsante **...** .
         -  **Esecuzioni**: numero di esecuzioni della query per l'intera raccolta del carico di lavoro.
         -  **Metrica baseline**: metrica selezionata (Durata o CpuTime) in millisecondi per la raccolta di dati baseline prima dell'aggiornamento di compatibilità del database.
         -  **Metrica osservata**: metrica selezionata (Durata o CpuTime) in millisecondi per la raccolta di dati dopo l'aggiornamento di compatibilità del database.
@@ -183,7 +183,7 @@ L'Assistente ottimizzazione Query è una funzionalità basata sulla sessione che
 
     L'elenco contiene le informazioni seguenti:
     -  **ID query** 
-    -  **Testo query**: istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che può essere espansa facendo clic sul pulsante **...**.
+    -  **Testo query**: istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che può essere espansa facendo clic sul pulsante **...** .
     -  **Stato**: visualizza lo stato di sperimentazione corrente per la query.
     -  **Metrica baseline**: la metrica selezionata (Durata o CpuTime) in ms per le query eseguita nel **Passaggio 2, passaggio secondario 3** che rappresenta la query regredita dopo l'aggiornamento di compatibilità del database.
     -  **Metrica osservata**: la metrica selezionata (durata o CpuTime) in ms per la query dopo la sperimentazione, per un'ottimizzazione proposta con risultati soddisfacenti.

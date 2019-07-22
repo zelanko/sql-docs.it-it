@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21298500f7d5bc135b8e9068c97e2928d1853b6f
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 72f0717ad537eea88948a156b5bc2756ab64b677
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583582"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136712"
 ---
 # <a name="recompile-a-stored-procedure"></a>Ricompilare una stored procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "67583582"
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- Opzione**WITH RECOMPILE**  
+ Opzione**WITH RECOMPILE**   
  Se si utilizza questa opzione alla creazione della definizione della stored procedure, è necessario disporre dell'autorizzazione CREATE PROCEDURE per il database e dell'autorizzazione ALTER per lo schema in cui verrà creata la stored procedure.  
   
  Se questa opzione viene utilizzata in un'istruzione EXECUTE, richiede autorizzazioni EXECUTE sulla stored procedure. Le autorizzazioni non sono richieste per l'istruzione EXECUTE stessa, ma le autorizzazioni di esecuzione sono necessarie per la stored procedure a cui fa riferimento l'istruzione EXECUTE. Per altre informazioni, vedere [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
@@ -64,7 +63,7 @@ ms.locfileid: "67583582"
  Hint per la query **RECOMPILE**  
  Questa funzionalità viene usata quando si crea la stored procedure e si include l'hint nelle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] nella stored procedure. È pertanto necessario disporre dell'autorizzazione CREATE PROCEDURE per il database e dell'autorizzazione ALTER per lo schema in cui la stored procedure viene creata.  
   
- Stored procedure di sistema**sp_recompile**  
+ Stored procedure di sistema**sp_recompile**   
  È richiesta l'autorizzazione ALTER per la stored procedure specificata.  
   
 ##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  

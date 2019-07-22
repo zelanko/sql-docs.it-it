@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 711ac97cd2376cc924075d67b2f25ece1a4744e0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6b95fd77e973e918dda99ef4a1053b45d3f3f067
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518734"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927198"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- { *pool_name* | **"default"** }  
+ { *pool_name* |  **"default"** }  
  Nome di un pool di risorse esistente definito dall'utente o del pool di risorse predefinito creato all'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Se usato con ALTER RESOURCE POOL, "default" deve essere racchiuso tra virgolette ("") o parentesi quadre ([]) per evitare conflitti con DEFAULT, che è una parola di sistema riservata. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md).  
@@ -135,7 +134,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
 > [!CAUTION]  
 >  La cancellazione dei piani memorizzati nella cache da un pool di risorse associato a più di un gruppo del carico di lavoro avrà effetto su tutti i gruppi di carico di lavoro che hanno il pool di risorse definito dall'utente identificato da *pool_name*.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL SERVER.  
   
 ## <a name="examples"></a>Esempi  

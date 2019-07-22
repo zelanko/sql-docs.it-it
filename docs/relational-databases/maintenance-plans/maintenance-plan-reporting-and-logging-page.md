@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 93cf0f8cc14722789777459f3046b773dfa4383e
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 2905877f907e932be058a07ba3a9fbbd892e7ae6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115704"
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>Piano di manutenzione (pagina Report e registrazione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

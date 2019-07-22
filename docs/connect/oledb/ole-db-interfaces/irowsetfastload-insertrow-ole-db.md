@@ -15,20 +15,19 @@ helpviewer_keywords:
 - InsertRow method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 8acbcf78a7f8e3e108b93076d5596c0f09edd226
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b01c63e74ee26cea327a01e3bf9a3595bc5012d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66761487"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015454"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Aggiunge una riga al set di righe della copia bulk. Per esempi, vedere [Bulk copia i dati usando IRowsetFastLoad &#40;OLE DB&#41; ](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) e [inviare dati BLOB a SQL SERVER utilizzando IROWSETFASTLOAD e ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md).  
+  Aggiunge una riga al set di righe della copia bulk. Per gli esempi, vedere [copia dati bulk con &#40;IRowsetFastLoad&#41; OLE DB](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) e [inviare dati BLOB a SQL Server utilizzando IRowsetFastLoad e &#40;ISequentialStream&#41;OLE DB](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -71,11 +70,11 @@ HRESULT InsertRow(
 ## <a name="remarks"></a>Remarks  
  Un errore di conversione dei dati del consumer nel tipo di dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per una colonna causa la restituzione di E_FAIL da parte del driver OLE DB per SQL Server. I dati possono essere trasmessi a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con qualsiasi metodo **InsertRow** o solo con il metodo **Commit**. L'applicazione consumer può chiamare il metodo **InsertRow** diverse volte usando i dati errati prima di ricevere un avviso relativo all'errore di conversione del tipo di dati. Poiché il metodo **Commit** verifica che tutti i dati vengano specificati correttamente dal consumer, se necessario, il consumer può usare **Commit** in modo appropriato per convalidare i dati.  
   
- Il Driver OLE DB per set di righe copia bulk SQL Server sono in sola lettura. Il Driver OLE DB per SQL Server non espone alcun metodo che consenta di query di tipo consumer del set di righe. Per terminare l'elaborazione, il consumer può rilasciare il riferimento all'interfaccia [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) senza chiamare il metodo **Commit**. Non sono disponibili funzioni per accedere alle righe inserite dal consumer nel set di righe e modificarne i valori o per rimuoverle singolarmente dal set di righe.  
+ Il driver OLE DB per SQL Server set di righe della copia bulk sono di sola scrittura. Il driver OLE DB per SQL Server non espone metodi che consentono di eseguire query sul set di righe. Per terminare l'elaborazione, il consumer può rilasciare il riferimento all'interfaccia [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) senza chiamare il metodo **Commit**. Non sono disponibili funzioni per accedere alle righe inserite dal consumer nel set di righe e modificarne i valori o per rimuoverle singolarmente dal set di righe.  
   
- Le righe oggetto di copia bulk vengono formattate sul server per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le opzioni eventualmente impostate per la connessione o per la sessione, ad esempio ANSI_PADDING, influiscono sul formato di riga. Questa opzione è impostata su per impostazione predefinita per qualsiasi connessione stabilita tramite il Driver OLE DB per SQL Server.  
+ Le righe oggetto di copia bulk vengono formattate sul server per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le opzioni eventualmente impostate per la connessione o per la sessione, ad esempio ANSI_PADDING, influiscono sul formato di riga. Per impostazione predefinita, questa opzione è impostata su per tutte le connessioni effettuate tramite il driver OLE DB per SQL Server.  
   
 ## <a name="see-also"></a>Vedere anche  
- [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)  
+ [OLE DB &#40;IRowsetFastLoad&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)  
   
   

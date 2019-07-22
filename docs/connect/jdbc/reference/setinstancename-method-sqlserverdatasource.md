@@ -1,5 +1,5 @@
 ---
-title: Metodo setInstanceName (SQLServerDataSource) | Microsoft Docs
+title: Metodo seinstancename (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 58833726-3a7e-46be-ac0e-4c602d865262
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 38ac937808d335b6402a28271f2d5eb5c2595d79
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c5f71c162b4be606be1aedcc56a0c3f9edcd29db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974195"
 ---
 # <a name="setinstancename-method-sqlserverdatasource"></a>Metodo setInstanceName (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public void setInstanceName(java.lang.String instanceName)
 #### <a name="parameters"></a>Parametri  
  *instanceName*  
   
- Oggetto **stringa** che contiene il nome dell'istanza.  
+ **Stringa** che contiene il nome dell'istanza.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

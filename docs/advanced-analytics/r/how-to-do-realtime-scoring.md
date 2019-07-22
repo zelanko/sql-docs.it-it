@@ -1,106 +1,106 @@
 ---
-title: Generare le previsioni e stime usando modelli di machine learning - SQL Server Machine Learning Services
-description: Usare rxPredict o sp_rxPredict per l'assegnazione dei punteggi in tempo reale o prevedere T-SQL per le stime di assegnazione dei punteggi nativa e le previsioni in R e Pythin in SQL Server Machine Learning.
+title: Generare previsioni e stime usando modelli di apprendimento automatico
+description: Usare rxPredict o sp_rxPredict per il punteggio in tempo reale oppure prevedere T-SQL per il Punteggio nativo per le stime e la previsione in R e in Pythin in SQL Server Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/30/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 4af5fff7581ae2ae8f74e09603b75bca620ca775
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7aee673eb548531798f98a5a49266a2cd7211b63
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962639"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345553"
 ---
-# <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Come generare le previsioni e stime usando modelli di machine learning in SQL Server
+# <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Come generare previsioni e stime usando modelli di Machine Learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Usando un modello esistente per prevedere o prevedere risultati utili per nuovi input di dati è un'attività principale nell'apprendimento automatico. Questo articolo consente di enumerare gli approcci per la generazione di stime in SQL Server. Tra gli approcci vengono eseguite dipendenze in fase di elaborazione interna delle metodologie per stime ad alta velocità, in cui velocità si basa su incrementale riduzioni dei. Un minor numero di dipendenze significa che le stime più veloci.
+L'uso di un modello esistente per prevedere o stimare i risultati per i nuovi input di dati è un'attività fondamentale in Machine Learning. Questo articolo enumera gli approcci per la generazione di stime in SQL Server. Tra gli approcci sono disponibili metodologie di elaborazione interne per le stime ad alta velocità, in cui la velocità è basata sulle riduzioni incrementali delle dipendenze in fase di esecuzione. Meno dipendenze significano stime più veloci.
 
-Usando l'infrastruttura di elaborazione interna (punteggio in tempo reale o nativa) include requisiti della libreria. Le funzioni devono essere compresi le librerie di Microsoft. Codice R o Python che chiama funzioni open source o di terze parti non è supportato nelle estensioni CLR o C++.
+L'uso dell'infrastruttura di elaborazione interna (Punteggio in tempo reale o nativo) viene fornita con i requisiti della libreria. Le funzioni devono provenire da Microsoft Libraries. Il codice R o Python che chiama funzioni open source o di terze parti non è supportato in C++ CLR o nelle estensioni.
 
-La tabella seguente riepiloga i framework di assegnazione dei punteggi per la previsione e stime. 
+Nella tabella seguente sono riepilogati i Framework di assegnazione dei punteggi per la previsione e le stime. 
 
 | Metodologia           | Interfaccia         | Requisiti della libreria | Velocità di elaborazione |
 |-----------------------|-------------------|----------------------|----------------------|
-| Framework di estendibilità | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | No. I modelli possono essere basati su qualsiasi funzione R o Python | Centinaia di millisecondi. <br/>Il caricamento di un ambiente di runtime ha un costo fisso, il calcolo della media di tre a 600 millisecondi, prima di tutti i nuovi dati viene assegnato un punteggio. |
-| [Estensione CLR assegnazione dei punteggi in tempo reale](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) su un modello serializzato | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy, microsoftml | Decine di millisecondi, in Media. |
-| [Estensione di C++ di assegnazione dei punteggi nativa](../sql-native-scoring.md) | [Funzione T-SQL stimare](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) su un modello serializzato | R: RevoScaleR <br/>Python: revoscalepy | Meno di 20 millisecondi, in Media. | 
+| Framework di estendibilità | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | No. I modelli possono essere basati su qualsiasi funzione R o Python | Centinaia di millisecondi. <br/>Il caricamento di un ambiente di runtime comporta un costo fisso, con una media di tre a 600 millisecondi, prima di assegnare un punteggio ai nuovi dati. |
+| [Estensione CLR di assegnazione dei punteggi in tempo reale](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) su un modello serializzato | R RevoScaleR, MicrosoftML <br/>Python: revoscalepy, microsoftml | In media, decine di millisecondi. |
+| [Estensione per C++ il Punteggio nativo](../sql-native-scoring.md) | [Stimare la funzione T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) su un modello serializzato | R RevoScaleR <br/>Python: revoscalepy | Meno di 20 millisecondi, in media. | 
 
-Velocità di elaborazione e non sostanza dell'output è la funzionalità di differenziazione. Supponendo che le stesse funzioni e gli input, l'output con punteggio deve non variano in base utilizzato.
+La velocità di elaborazione e non la sostanza dell'output è la funzionalità di differenziazione. Presumendo gli stessi input e funzioni, l'output con punteggio non dovrebbe variare a seconda dell'approccio usato.
 
-Il modello deve essere creato utilizzando una funzione supportata, quindi serializzato in un flusso di byte non elaborati salvato su disco o vengono archiviati in formato binario in un database. Usare una stored procedure o T-SQL, è possibile caricare e usare un modello binario senza l'overhead di un tempo di linguaggio eseguire R o Python, risultante in tempi più rapidi al completamento durante la generazione di punteggi di stima sui nuovi input.
+Il modello deve essere creato utilizzando una funzione supportata, quindi serializzato in un flusso di byte non elaborati salvato su disco o archiviato in formato binario in un database. Usando un stored procedure o T-SQL, è possibile caricare e usare un modello binario senza l'overhead di un runtime del linguaggio R o Python, causando un tempo di completamento più rapido durante la generazione di punteggi di stima sui nuovi input.
 
-L'importanza delle estensioni di C++ e CLR è prossimità al motore di database stesso. Il linguaggio nativo del motore di database è C++, ovvero estensioni scritte in C++ eseguito con un minor numero di dipendenze. Al contrario, le estensioni CLR dipendono da .NET Core. 
+Il significato di CLR ed C++ Extensions è la prossimità del motore di database stesso. La lingua nativa del motore di database è C++, il che significa che le C++ estensioni scritte in vengono eseguite con un minor numero di dipendenze. Al contrario, le estensioni CLR dipendono da .NET Core. 
 
-Come è prevedibile, supporto della piattaforma è stato interessato da questi ambienti di runtime. Estensioni del motore di database nativo esecuzione ovunque che è supportato nel database relazionale: Windows, Linux e Azure. Le estensioni CLR con il requisito di .NET Core attualmente è solo Windows.
+Come ci si può aspettare, il supporto per la piattaforma è influenzato da questi ambienti di run-time. Le estensioni del motore di database native vengono eseguite ovunque sia supportato il database relazionale: Windows, Linux, Azure. Le estensioni CLR con il requisito di .NET Core sono attualmente solo Windows.
 
-## <a name="scoring-overview"></a>Panoramica di assegnazione dei punteggi
+## <a name="scoring-overview"></a>Panoramica dei punteggi
 
-_Assegnazione dei punteggi_ è un processo in due passaggi. È possibile specificare un modello già sottoposto a training per caricare da una tabella. In secondo luogo, passare di nuovo i dati alla funzione, per generare i valori di stima di input (o _punteggi_). L'input è spesso una query T-SQL, che restituisce righe tabulari o singole. È possibile scegliere di generare un valore di colonna singola che rappresenta una probabilità o si potrebbero restituire valori diversi, ad esempio un intervallo di confidenza, errore o di altri complemento utile per la stima.
+Il _Punteggio_ è un processo in due passaggi. Per prima cosa, è necessario specificare un modello già sottoposto a training da caricare da una tabella. In secondo luogo, passare i nuovi dati di input alla funzione per generare valori di stima (o _punteggi_). L'input è spesso una query T-SQL, restituendo righe tabulari o singole. È possibile scegliere di restituire un valore di colonna singola che rappresenta una probabilità oppure è possibile che vengano restituiti diversi valori, ad esempio un intervallo di confidenza, un errore o un altro complemento utile alla stima.
 
-Un passo indietro, il processo complessivo di preparazione del modello e quindi la generazione di punteggi può essere riepilogata in questo modo:
+Eseguendo un ulteriore passaggio, il processo complessivo di preparazione del modello e di generazione dei punteggi può essere riepilogato in questo modo:
 
-1. Creare un modello usando un algoritmo supportato. Supporto varia in base alla metodologia di assegnazione dei punteggi che scelto.
-2. Il training del modello.
-3. Serializza il modello utilizzando un formato binario speciale.
-3. Salvare il modello in SQL Server. In genere questo si intende archiviare il modello serializzato in una tabella di SQL Server.
-4. Chiamare la funzione o una stored procedure, specifica il modello e i dati di input come parametri.
+1. Creare un modello usando un algoritmo supportato. Il supporto varia in base alla metodologia di assegnazione dei punteggi scelta.
+2. Eseguire il training del modello.
+3. Serializzare il modello utilizzando un formato binario speciale.
+3. Salvare il modello in SQL Server. Ciò significa in genere archiviare il modello serializzato in una tabella SQL Server.
+4. Chiamare la funzione o stored procedure, specificando gli input del modello e dei dati come parametri.
 
-Quando l'input include molte righe di dati, è in genere più veloce per inserire i valori di stima in una tabella come parte del processo di assegnazione dei punteggi. La generazione di un singolo punteggio è più adatta in uno scenario in cui ottenere i valori di input da una richiesta di form o utente e restituire il punteggio a un'applicazione client. Per migliorare le prestazioni durante la generazione di punteggi successivi, SQL Server potrebbe memorizzare nella cache il modello in modo che possa essere ricaricato in memoria.
+Quando l'input include molte righe di dati, in genere è più veloce inserire i valori di stima in una tabella come parte del processo di assegnazione dei punteggi. La generazione di un singolo punteggio è più tipica in uno scenario in cui si ottengono valori di input da un form o una richiesta utente e si restituisce il punteggio a un'applicazione client. Per migliorare le prestazioni durante la generazione di punteggi successivi, SQL Server possibile memorizzare nella cache il modello in modo che possa essere ricaricato in memoria.
 
-## <a name="compare-methods"></a>Confronto tra i metodi
+## <a name="compare-methods"></a>Metodi di confronto
 
-Per mantenere l'integrità dei processi del motore di database base, il supporto per R e Python è abilitato in un'architettura a doppio che consente di isolare l'elaborazione del linguaggio dall'elaborazione RDBMS. A partire da SQL Server 2016, Microsoft ha aggiunto un framework di estensibilità che gli script R possono essere eseguite da T-SQL. In SQL Server 2017 è stata aggiunta l'integrazione di Python. 
+Per mantenere l'integrità dei processi del motore di database di base, il supporto per R e Python è abilitato in un'architettura doppia che isola l'elaborazione del linguaggio dall'elaborazione RDBMS. A partire da SQL Server 2016, Microsoft ha aggiunto un Framework di estendibilità che consente l'esecuzione di script R da T-SQL. In SQL Server 2017 è stata aggiunta l'integrazione con Python. 
 
-Il framework di estendibilità supporta qualsiasi operazione che è possibile eseguire in R o Python, compreso tra le funzioni semplici e corsi di formazione complessi modelli di machine learning. Tuttavia, l'architettura dual-process richiede richiamo di un processo esterno di R o Python per ogni chiamata, indipendentemente dalla complessità dell'operazione. Quando il carico di lavoro comporta il caricamento di un modello con training preliminare da una tabella e di assegnazione dei punteggi contrastarla sui dati già in SQL Server, l'overhead della chiamata al metodo i processi esterni aggiunge latenza che può essere inaccettabile in determinate circostanze. Ad esempio, la rilevazione di frodi richiede redatto veloce di assegnazione dei punteggi.
+Il Framework di estendibilità supporta qualsiasi operazione che può essere eseguita in R o Python, da semplici funzioni a training di modelli di apprendimento automatico complessi. Tuttavia, l'architettura a doppio processo richiede il richiamo di un processo R o Python esterno per ogni chiamata, indipendentemente dalla complessità dell'operazione. Quando il carico di lavoro comporta il caricamento di un modello con training preliminare da una tabella e l'assegnazione dei punteggi ai dati già presenti in SQL Server, l'overhead associato alla chiamata dei processi esterni aggiunge latenza che può essere inaccettabile in determinate circostanze. Il rilevamento delle frodi, ad esempio, richiede un punteggio rapido per essere pertinente.
 
-Per aumentare la velocità di assegnazione dei punteggi per gli scenari di rilevamento di frodi, SQL Server aggiunta librerie di punteggio predefinite come estensioni di C++ e CLR che eliminano il sovraccarico dei processi di avvio R e Python.
+Per aumentare le velocità di assegnazione dei punteggi per scenari come il rilevamento delle frodi, SQL Server aggiunte C++ librerie di Punteggio predefinite come e le estensioni CLR che eliminano il sovraccarico dei processi di avvio di R e Python.
 
-[**Assegnazione dei punteggi in tempo reale** ](../real-time-scoring.md) era la prima soluzione di assegnazione dei punteggi a prestazioni elevate. Introdotta nelle prime versioni di SQL Server 2017 e versioni successive degli aggiornamenti per SQL Server 2016, assegnazione dei punteggi in tempo reale si basa sulle librerie di Common Language Runtime che ostacolano il settore per l'elaborazione su funzioni controllate da Microsoft in RevoScaleR, MicrosoftML (R), revoscalepy, Python e R e microsoftml (Python). Le librerie Common Language Runtime vengono richiamate utilizzando il **sp_rxPredict** stored procedure che genera l'errore punteggi da qualsiasi tipo di modello supportati, senza chiamare il runtime di R o Python.
+Il [**punteggio in tempo reale**](../real-time-scoring.md) è stato la prima soluzione per il punteggio a prestazioni elevate. Introdotta nelle prime versioni di SQL Server 2017 e negli aggiornamenti successivi a SQL Server 2016, il punteggio in tempo reale si basa sulle librerie CLR che si trovano per l'elaborazione R e Python sulle funzioni controllate da Microsoft in RevoScaleR, MicrosoftML (R), revoscalepy e microsoftml (Python). Le librerie CLR vengono richiamate usando il stored procedure **sp_rxPredict** per generare i punteggi da qualsiasi tipo di modello supportato, senza chiamare il runtime di R o Python.
 
-[**Assegnazione dei punteggi nativa** ](../sql-native-scoring.md) è una funzionalità di SQL Server 2017, implementata come libreria di C++ nativa, ma solo per i modelli di RevoScaleR e revoscalepy. È l'approccio più rapido e più sicuro, ma supporta un set ridotto di funzioni rispetto ad altre metodologie.
+Il [**Punteggio nativo**](../sql-native-scoring.md) è una funzionalità di SQL Server 2017, implementata C++ come libreria nativa, ma solo per i modelli RevoScaleR e revoscalepy. Si tratta dell'approccio più veloce e più sicuro, ma supporta un set ridotto di funzioni rispetto ad altre metodologie.
 
 ## <a name="choose-a-scoring-method"></a>Scegliere un metodo di assegnazione dei punteggi
 
-Requisiti di piattaforma spesso determinano quali metodologia di assegnazione dei punteggi da utilizzare.
+I requisiti della piattaforma spesso stabiliscono la metodologia di assegnazione dei punteggi da usare.
 
-| Piattaforma e versione del prodotto | Metodologia |
+| Versione e piattaforma del prodotto | Metodologia |
 |------------------------------|-------------|
-| SQL Server 2017 in Windows, SQL Server 2017 su Linux e il Database SQL di Azure | **Assegnazione dei punteggi nativa** con T-SQL prevedere |
-| SQL Server 2017 (solo Windows), SQL Server 2016 R Services in SP1 o versione successiva | **Assegnazione dei punteggi in tempo reale** con Service Pack\_rxPredict stored procedure |
+| SQL Server 2017 in Windows, SQL Server 2017 Linux e database SQL di Azure | Assegnazione dei **punteggi nativi** con T-SQL Predict |
+| SQL Server 2017 (solo Windows), SQL Server 2016 R Services a SP1 o versione successiva | Assegnazione di **punteggi in tempo reale** con SP\_rxPredict stored procedure |
 
-Si consiglia di assegnazione dei punteggi nativa con la funzione PREDICT. Con sp\_rxPredict richiede l'abilitazione integrazione SQLCLR. Prima di abilitare questa opzione, prendere in considerazione le implicazioni di sicurezza.
+È consigliabile assegnare punteggi nativi con la funzione PREDICT. Per usare\_SP rxPredict è necessario abilitare l'integrazione di SQLCLR. Prendere in considerazione le implicazioni di sicurezza prima di abilitare questa opzione.
 
 ## <a name="serialization-and-storage"></a>Serializzazione e archiviazione
 
-Per usare un modello con una delle opzioni di assegnazione dei punteggi veloce, salvare il modello usando un formato serializzato speciale, cui è stato ottimizzato per le dimensioni e l'efficienza di assegnazione dei punteggi.
+Per utilizzare un modello con una delle opzioni di Punteggio rapido, salvare il modello utilizzando un formato speciale serializzato, ottimizzato per le dimensioni e l'efficienza dei punteggi.
 
-+ Chiamare [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) scrivere un modello supportato per il **raw** formato.
++ Chiamare [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) per scrivere un modello supportato nel formato non **elaborato** .
 + Chiamare [rxUnserializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)' per ricostituire il modello per l'uso in un altro codice R o per visualizzare il modello.
 
-**Con SQL**
+**Uso di SQL**
 
-Dal codice SQL, è possibile eseguire il training usando il modello [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)e inserire direttamente i modelli addestrati in una tabella, in una colonna di tipo **varbinary (max)** . Per un esempio semplice, vedere [creare un modello preditive in R](../tutorials/rtsql-create-a-predictive-model-r.md)
+Dal codice SQL è possibile eseguire il training del modello usando [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)e inserire direttamente i modelli sottoposti a training in una tabella, in una colonna di tipo **varbinary (max)** . Per un esempio semplice, vedere [creare un modello Preditive in R](../tutorials/rtsql-create-a-predictive-model-r.md)
 
 **Uso di R**
 
-Dal codice R, chiamare il [rxWriteObject](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxwriteobject) funzione dal pacchetto RevoScaleR a scrivere il modello direttamente nel database. Il **rxWriteObject()** funzione può recuperare gli oggetti R da un'origine dati ODBC, ad esempio SQL Server, o scrivere gli oggetti di SQL Server. L'API viene modellato un semplice archivio chiave-valore.
+Dal codice R, chiamare la funzione [rxWriteObject](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxwriteobject) dal pacchetto RevoScaleR per scrivere il modello direttamente nel database. La funzione **rxWriteObject ()** può recuperare oggetti R da un'origine dati ODBC, ad esempio SQL Server, oppure scrivere oggetti in SQL Server. L'API viene modellata dopo un semplice archivio chiave-valore.
   
-Se si usa questa funzione, assicurarsi di serializzare il modello usando [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) prima. Quindi, impostare il *serializzare* nell'argomento **rxWriteObject** su FALSE, per evitare di ripetere il passaggio di serializzazione.
+Se si utilizza questa funzione, assicurarsi di serializzare il modello utilizzando prima [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) . Impostare quindi l'argomento *Serialize* in **rxWriteObject** su false per evitare di ripetere il passaggio di serializzazione.
 
-La serializzazione di un modello in un formato binario è utile, ma non è necessario se si assegna un punteggio stime usando R e Python esegue ambiente nel framework di estendibilità. È possibile salvare un modello in formato byte non elaborati in un file e quindi leggere dal file in SQL Server. Questa opzione potrebbe essere utile se si sta spostando o copia di modelli tra ambienti.
+La serializzazione di un modello in un formato binario è utile, ma non è necessaria se si assegna un punteggio alle stime usando R e l'ambiente di runtime Python in Extensibility Framework. È possibile salvare un modello in formato byte non elaborato in un file e quindi leggere dal file in SQL Server. Questa opzione può essere utile se si stanno muovendo o copiando modelli tra ambienti.
 
-## <a name="scoring-in-related-products"></a>Assegnazione dei punteggi in prodotti correlati
+## <a name="scoring-in-related-products"></a>Assegnazione dei punteggi nei prodotti correlati
 
-Se si usa la [server autonomi](r-server-standalone.md) o una [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), sono disponibili altre opzioni oltre a stored procedure e funzioni T-SQL per la generazione di stime rapidamente. Il server autonomo e il Machine Learning Server supportano il concetto di una *servizio web* per la distribuzione di codice. È possibile aggregare una R o Python eseguito il training del modello come servizio web, chiamato in fase di esecuzione per valutare nuovi input di dati. Per altre informazioni, vedere questi articoli:
+Se si utilizza il [server autonomo](r-server-standalone.md) o un [Microsoft Machine Learning server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), sono disponibili altre opzioni oltre alle stored procedure e alle funzioni T-SQL per la generazione rapida delle stime. Sia il server autonomo che Machine Learning Server supportano il concetto di *servizio Web* per la distribuzione del codice. È possibile aggregare un modello con training preliminare R o Python come servizio Web, chiamato in fase di esecuzione per valutare i nuovi input di dati. Per altre informazioni, vedere questi articoli:
 
-+ [Quali sono i servizi web in Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
-+ [Che cos'è messa in funzione?](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)
-+ [Distribuire un modello Python come un servizio web con Azure ml-model-management-sdk](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
-+ [Pubblicare un blocco di codice R o un modello in tempo reale come nuovo servizio web](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
++ [Che cosa sono i servizi Web in Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
++ [Che cos'è la operatività?](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)
++ [Distribuire un modello Python come servizio Web con azureml-Model-Management-SDK](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
++ [Pubblicare un blocco di codice R o un modello in tempo reale come nuovo servizio Web](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [pacchetto mrsdeploy per R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)
 
 
@@ -109,4 +109,4 @@ Se si usa la [server autonomi](r-server-standalone.md) o una [Microsoft Machine 
 + [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)  
 + [rxRealTimeScoring](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxrealtimescoring)
 + [sp-rxPredict](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)
-+ [PREVEDERE T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)
++ [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)

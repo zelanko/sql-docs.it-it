@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4a12576e083a30a939964803687198ae0842fb73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3796b56d66ec2a4862d71454422bb2b248469977
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65715850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897816"
 ---
 # <a name="catalogsetexecutionpropertyoverridevalue"></a>catalog.set_execution_property_override_value 
 
@@ -41,10 +40,10 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  Identificatore univoco per l'istanza di esecuzione. *execution_id* è di tipo **bigint**.  
   
  [ @property_path = ] *property_path*  
- Percorso alla proprietà nel pacchetto. *property_path* è di tipo **nvarchar(4000)**.  
+ Percorso alla proprietà nel pacchetto. *property_path* è di tipo **nvarchar(4000)** .  
   
  [ @property_value = ] *property_value*  
- Valore di override da assegnare alla proprietà. *property_value* è di tipo **nvarchar(max)**.  
+ Valore di override da assegnare alla proprietà. *property_value* è di tipo **nvarchar(max)** .  
   
  [ @sensitive = ] *sensitive*  
  Quando il valore è 1, la proprietà è importante e viene crittografata quando viene archiviata. Quando il valore è 0, la proprietà non è importante e il valore viene archiviato non crittografato. L'argomento *sensitive* è di tipo **bit**.  

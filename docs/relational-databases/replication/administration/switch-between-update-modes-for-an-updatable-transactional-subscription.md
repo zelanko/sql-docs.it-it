@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: eef28dde084a7ec0f4a782a22e77485ca477dec5
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 0b7ea891c0c4ee5dfbcd8301cff4e364dcd5cae7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909231"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>Passaggio da una modalità di aggiornamento all'altra per una sottoscrizione transazionale aggiornabile
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

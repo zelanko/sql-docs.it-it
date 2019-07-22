@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a70e2ee6-59b0-4543-b883-e9cbae6199be
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: e4e2eafc126a092a3507e49b5eb7e1ca92a25e43
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: f128cbf86d30cabe0aa00ce7033b7cd5b04c93e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326752"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065598"
 ---
 # <a name="grant-asymmetric-key-permissions-transact-sql"></a>GRANT (autorizzazioni per chiavi asimmetriche) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ GRANT { permission  [ ,...n ] }
  *permission*  
  Specifica un'autorizzazione che può essere concessa per una chiave asimmetrica. Vedere l'elenco riportato di seguito.  
   
- ON ASYMMETRIC KEY **::**_asymmetric_key_name_  
+ ON ASYMMETRIC KEY **::** _asymmetric_key_name_  
  Specifica la chiave asimmetrica a cui viene concessa l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
  *database_principal*  
@@ -56,9 +55,9 @@ GRANT { permission  [ ,...n ] }
 -   ruolo del database  
 -   ruolo applicazione  
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
--   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
--   utente del database sul quale viene eseguito il mapping a un certificato  
--   utente del database mappato a una chiave asimmetrica  
+-   utente del database di cui è stato eseguito il mapping a un gruppo di Windows  
+-   utente del database di cui è stato eseguito il mapping a un certificato  
+-   utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
 -   utente del database non mappato ad alcuna entità server.  
   
 GRANT OPTION  
@@ -71,9 +70,9 @@ AS *granting_principal*
 -   ruolo del database  
 -   ruolo applicazione  
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
--   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
--   utente del database sul quale viene eseguito il mapping a un certificato  
--   utente del database mappato a una chiave asimmetrica  
+-   utente del database di cui è stato eseguito il mapping a un gruppo di Windows  
+-   utente del database di cui è stato eseguito il mapping a un certificato  
+-   utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
 -   utente del database non mappato ad alcuna entità server.  
   
 ## <a name="remarks"></a>Remarks  
@@ -87,7 +86,7 @@ AS *granting_principal*
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'utente che concede le autorizzazioni (o l'entità specificata con l'opzione AS) deve disporre della relativa autorizzazione con GRANT OPTION oppure di un'autorizzazione di livello superiore che include l'autorizzazione che viene concessa.  
   
  Se si usano l'opzione AS, sono previsti questi requisiti aggiuntivi.  

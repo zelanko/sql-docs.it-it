@@ -136,14 +136,13 @@ helpviewer_keywords:
 ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2fb9b4f90b40b70c67e27233f84ee7b2a99635cf
-ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
+ms.openlocfilehash: 46578b4795bc02b0d426564b357dea580665ceeb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069091"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048838"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Guida di riferimento a operatori Showplan logici e fisici
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

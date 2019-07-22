@@ -9,14 +9,13 @@ ms.technology: xevents
 ms.topic: reference
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fec2d9eea6e78902ee0a1fdde50221d49224af64
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: a8be742db65127eaeac24c54fbcf9386d49453c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58419065"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903391"
 ---
 # <a name="system-objects-that-support-extended-events"></a>Oggetti di sistema che supportano eventi estesi
 

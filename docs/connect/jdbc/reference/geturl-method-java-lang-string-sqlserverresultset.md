@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 105a5319-0f4c-4d08-964b-cc52f8e28ec1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e7554c761d35c6683802cfb4e5428221f697089c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0407ac8ec711d6d7ab8b1b2fb8afa245f53049d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769592"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978319"
 ---
 # <a name="geturl-method-javalangstring-sqlserverresultset"></a>Metodo getURL (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.net.URL getURL(java.lang.String sColumn)
  Valore **String** contenente il nome della colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un oggetto URL.  
+ Oggetto URL.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -50,7 +49,7 @@ public java.net.URL getURL(java.lang.String sColumn)
  Questo metodo getURL viene specificato dal metodo getURL nell'interfaccia java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo getURL &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/geturl-method-sqlserverresultset.md)   
+ [Metodo &#40;getURL SQLServerResultSet&#41;](../../../connect/jdbc/reference/geturl-method-sqlserverresultset.md)   
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

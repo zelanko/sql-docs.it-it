@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8f491b70-7d1b-42bd-964f-9a8b86af5eaa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f14589bfdf5197bdb80e535e00d0fdbeba913529
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 954883c4c69e07493a15ef77eecfed606e9cf9a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790396"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916519"
 ---
 # <a name="using-a-stored-procedure-with-input-parameters"></a>Utilizzo di una stored procedure con parametri di input
 
@@ -29,7 +28,7 @@ Quando si chiama una stored procedure usando il driver JDBC con parametri IN, è
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> Per altre informazioni sulle sequenze di escape SQL, vedere [usando le sequenze di Escape SQL](../../connect/jdbc/using-sql-escape-sequences.md).
+> Per ulteriori informazioni sulle sequenze di escape SQL, vedere [utilizzo di sequenze di escape SQL](../../connect/jdbc/using-sql-escape-sequences.md).
 
 Quando si costruisce la sequenza di escape `call`, specificare i parametri IN usando il carattere ? (punto interrogativo), che funge da segnaposto per i valori di parametro che verranno passati alla stored procedure. Per specificare un valore per un parametro, è possibile usare uno dei metodi setter della classe SQLServerPreparedStatement. Il metodo Set che è possibile utilizzare è determinato dal tipo di dati del parametro IN.
 

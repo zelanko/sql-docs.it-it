@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 4fa512ba301aa1fc0c1783b96717545eca2790db
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 07c1743107d3edce7012740a3f1600d2157bf001
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689764"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136891"
 ---
 # <a name="create-a-resource-pool"></a>Creare un pool di risorse
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "55689764"
   
  La somma delle percentuali minime della CPU e delle percentuali minime della memoria per tutti i pool di risorse non deve superare 100.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorizzazioni  
  Per creare un pool di risorse è necessaria l'autorizzazione CONTROL SERVER.  
   
 ##  <a name="CreRPProp"></a> Creare un pool di risorse utilizzando SQL Server Management Studio  

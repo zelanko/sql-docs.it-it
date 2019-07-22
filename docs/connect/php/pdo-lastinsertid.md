@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6106d830a48b4ef89d85b88e7264e08209947ecc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2068b4099649b7ebd8aa2bcb4c58aa0d59e123d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66762013"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936211"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Restituisce l'identificatore dell'ultima riga inserita in una tabella del database. La tabella deve includere una colonna IDENTITY NOT NULL. Se viene fornito un nome di sequenza, `lastInsertId` restituisce inserita l'ultimo numero di sequenza per il nome della sequenza specificati (per altre informazioni sui numeri di sequenza, vedere [qui](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers)).
+Restituisce l'identificatore dell'ultima riga inserita in una tabella del database. La tabella deve includere una colonna IDENTITY NOT NULL. Se viene fornito un nome di sequenza `lastInsertId` , restituisce il numero di sequenza inserito più di recente per il nome di sequenza fornito. per ulteriori informazioni sui numeri di sequenza, vedere [qui](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers).
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,15 +33,15 @@ string PDO::lastInsertId ([ $name = NULL ] );
 $*name*: stringa facoltativa che consente di specificare un nome di sequenza. 
   
 ## <a name="return-value"></a>Valore restituito  
-Se viene fornito alcun nome di sequenza, una stringa dell'identificatore per la riga viene aggiunto più di recente.
-Se viene fornito un nome di sequenza, una stringa dell'identificatore per la sequenza viene aggiunto più di recente.
+Se non viene specificato alcun nome di sequenza, viene aggiunta una stringa dell'identificatore per la riga aggiunta più di recente.
+Se viene specificato un nome di sequenza, una stringa dell'identificatore per la sequenza aggiunta più di recente.
 Se la chiamata al metodo ha esito negativo, viene restituita una stringa vuota.
   
 ## <a name="remarks"></a>Remarks  
 Nella versione 2.0 dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]è stato aggiunto il supporto per PDO.  
-Tra le versioni 2.0 e 4.3, il parametro facoltativo è un nome di tabella e il valore restituito è l'ID di riga più di recente aggiunta alla tabella specificata.
-A partire da 5.0, il parametro facoltativo viene considerato come un nome di sequenza e il valore restituito è la sequenza di più di recente aggiunta per il nome della sequenza specificata.
-Se viene fornito un nome di tabella per le versioni dopo 4.3, `lastInsertId` restituisce una stringa vuota.
+Tra la versione 2,0 e la 4,3, il parametro facoltativo è un nome di tabella e il valore restituito è l'ID della riga aggiunta più di recente alla tabella fornita.
+A partire da 5,0, il parametro facoltativo viene considerato come un nome di sequenza e il valore restituito è la sequenza aggiunta più di recente per il nome di sequenza fornito.
+Se viene fornito un nome di tabella per le versioni successive `lastInsertId` a 4,3, restituisce una stringa vuota.
 Le sequenze sono supportate solo in SQL Server 2012 e versioni successive.
   
 ## <a name="example"></a>Esempio

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: da5e69d974f33f7eeb60e185a5a4a67dae6c01a8
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 7030f40419850454e90978168e72846331b5e865
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589695"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134659"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ ms.locfileid: "53589695"
 ###  <a name="Security"></a> Sicurezza  
  Per migliorare la sicurezza, gli account di accesso dell'autenticazione di SQL Server vengono archiviati in un pacchetto di applicazione livello dati senza password. Quando il pacchetto viene distribuito o aggiornato, l'account di accesso viene creato come account disabilitato con una password generata. Per abilitare gli account di accesso, è necessario accedere usando un account che dispone dell'autorizzazione ALTER ANY LOGIN e usare ALTER LOGIN per abilitare l'account di accesso e assegnare una nuova password che può essere comunicata all'utente. Questa operazione non è necessaria per gli account di accesso dell'autenticazione di Windows, in quanto le relative password non sono gestite da SQL Server.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  Un'applicazione livello dati può essere aggiornata unicamente da membri del ruolo predefinito del server **sysadmin** o **serveradmin** oppure tramite account di accesso nel ruolo predefinito del server **dbcreator** con autorizzazioni ALTER ANY LOGIN. È necessario che l'accesso venga eseguito come proprietario del database esistente. È anche possibile aggiornare un'applicazione livello dati con l'account amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito denominato **sa** .  
   
 ##  <a name="UsingDACUpgradeWizard"></a> Utilizzo della procedura guidata Aggiorna applicazione di livello dati  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bcab3eb3b41cf0dbbcb46a48a612d35bde66de14
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: 51fd9271fc84f23c331c671aca3b88ee981b19af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227153"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070207"
 ---
 # <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

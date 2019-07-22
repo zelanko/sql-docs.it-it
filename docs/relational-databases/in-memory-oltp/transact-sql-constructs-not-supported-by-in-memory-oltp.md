@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5023d29379ab254e85c38e0b9e0b6ae3c8772133
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: e39f991982fbde13259039e8794218819f366b89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081827"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Costrutti Transact-SQL non supportati da OLTP in memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -172,7 +171,7 @@ ms.locfileid: "53590765"
 |Funzionalità|Dichiarazioni di variabili di tabelle inline.|Le variabili di tabella devono fare riferimento ai tipi di tabella ottimizzata per la memoria definiti in modo esplicito. È consigliabile creare un tipo di tabella ottimizzata per la memoria e usare tale tipo per la dichiarazione di variabili, anziché specificare il tipo inline.|  
 |Funzionalità|Tabelle basate su disco|Non è possibile accedere alle tabelle basate su dico dalle stored procedure compilate in modo nativo. Rimuovere i riferimenti alle tabelle basate su disco dalle stored procedure compilate in modo nativo. In alternativa, eseguire la migrazione delle tabelle basate su disco alle tabelle con ottimizzazione per la memoria.|  
 |Funzionalità|Viste|Non è possibile accedere alle viste dalle stored procedure compilate in modo nativo. Anziché alle viste, fare riferimento alle tabelle di base sottostanti.|  
-|Funzionalità|Funzioni con valori di tabella|**Si applica a:**  [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partire da [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Non è possibile accedere alle funzioni con valori di tabella con istruzioni multiple dai moduli T-SQL compilati in modo nativo. Le funzioni con valori di tabella inline sono supportate, ma devono essere create con la clausola WITH NATIVE_COMPILATION.<br/><br/>**Si applica a**: [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)]<br/>Non è possibile fare riferimento alle funzioni con valori di tabella da moduli T-SQL compilati in modo nativo.|  
+|Funzionalità|Funzioni con valori di tabella|**Si applica a: ** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] e SQL Server a partire da [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Non è possibile accedere alle funzioni con valori di tabella con istruzioni multiple dai moduli T-SQL compilati in modo nativo. Le funzioni con valori di tabella inline sono supportate, ma devono essere create con la clausola WITH NATIVE_COMPILATION.<br/><br/>**Si applica a**: [!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)]<br/>Non è possibile fare riferimento alle funzioni con valori di tabella da moduli T-SQL compilati in modo nativo.|  
 |Opzione|PRINT|Rimuovere il riferimento.|  
 |Funzionalità|DDL|All'interno di moduli T-SQL compilati in modo nativo non sono supportate DLL.|  
 |Opzione|STATISTICS XML|Non supportato. Quando si esegue una query, con l'opzione STATISTICS XML abilitata, viene restituito il contenuto XML senza la parte per la stored procedure compilata in modo nativo.|  

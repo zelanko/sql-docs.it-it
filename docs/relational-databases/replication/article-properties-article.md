@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8d33dc0d7103e821eaf2796630cada56f199eebd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 77aa27a444437a9d1fb887fe01e4cff64051f524
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133931"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085876"
 ---
 # <a name="article-properties---ltarticlegt"></a>Proprietà articolo - &lt;Articolo&gt;
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

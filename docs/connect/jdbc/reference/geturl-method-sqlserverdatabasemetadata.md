@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fcb66851-db5f-4ae8-b728-d129480b6f42
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f170e15ec0096d02fd98acb16e15a6ac05257f31
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4aa608851ddbe00c8d7c09523c0f3b8f9ec95ff6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978210"
 ---
 # <a name="geturl-method-sqlserverdatabasemetadata"></a>Metodo getURL (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +47,7 @@ public java.lang.String getURL()
   
 -   Un valore URL di "jdbc:sqlserver://"  
   
--   Proprietà di connessione facoltative, ad esempio **serverName**, **instanceName**, e **NumeroPorta**  
+-   Proprietà di connessione facoltative, ad esempio **nomeserver**, **NomeIstanza**e **NumeroPorta**  
   
 -   Altre proprietà di connessione impostate dall'utente e tutte le proprietà di connessione con i valori predefiniti del driver non vuoti o non Null eccetto **userName**, **password** e **integratedSecurity**.  
   

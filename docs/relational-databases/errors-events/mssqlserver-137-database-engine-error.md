@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 617fed01d22eebba515966a0c820824d6fd39896
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 729443d2e9a9758a6ebedb15ac981e945128fa17
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62859956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002826"
 ---
 # <a name="mssqlserver137"></a>MSSQLSERVER_137
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "62859956"
 |Testo del messaggio|Dichiarare la variabile scalare "%.*ls".|  
   
 ## <a name="explanation"></a>Spiegazione  
-Questo errore si verifica quando una variabile viene utilizzata in uno script SQL senza essere stata dichiarata in precedenza. Nell'esempio seguente viene restituito l'errore 137 per entrambe le istruzioni SET e SELECT poiché non è stata dichiarata la variabile **@mycol**.  
+Questo errore si verifica quando una variabile viene utilizzata in uno script SQL senza essere stata dichiarata in precedenza. Nell'esempio seguente viene restituito l'errore 137 per entrambe le istruzioni SET e SELECT poiché non è stata dichiarata la variabile **@mycol** .  
   
 SET @mycol = 'ContactName';  
   

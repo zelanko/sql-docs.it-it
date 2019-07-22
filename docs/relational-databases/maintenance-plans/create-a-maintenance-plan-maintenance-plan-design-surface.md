@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 78f09611e71c39902e81580d752d302fee604be9
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 7b39b4391780a8133dae199e39638a6db77d73aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584135"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083897"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Creare un piano di manutenzione (area di progettazione del piano di manutenzione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +108,7 @@ ms.locfileid: "67584135"
      **Pianificazione**  
      Indica la pianificazione in base alla quale verrà eseguito il sottopiano. Fare clic su **Pianificazione sottopiano** per aprire la finestra di dialogo **Nuova pianificazione processo** . Fare clic su **Rimuovi pianificazione** per eliminare la pianificazione dal sottopiano.  
   
-     Elenco**Esegui come**  
+     Elenco**Esegui come**   
      Consente di selezionare l'account da utilizzare per l'esecuzione di questa sottoattività.  
   
 6.  Fare clic su **Pianificazione sottopiano** per immettere i dettagli della pianificazione nella finestra di dialogo **Nuova pianificazione processo** .  
@@ -161,10 +160,10 @@ ms.locfileid: "67584135"
          **Opzioni vincolo**  
          Consente di definire il funzionamento di un vincolo tra due attività.  
   
-         Elenco**Operazione valutazione**  
+         Elenco**Operazione valutazione**    
          Consente di specificare l'operazione di valutazione utilizzata dal vincolo di precedenza. Le operazioni sono: **Vincolo**, **Espressione**, **Espressione e vincolo** e **Espressione o vincolo**.  
   
-         Elenco**Valore**  
+         Elenco**Valore**   
          Specificare il valore del vincolo: **Esito positivo**, **Esito negativo** o **Completamento**. Il valore predefinito è**Esito positivo** .  
   
         > [!NOTE]  
@@ -217,7 +216,7 @@ ms.locfileid: "67584135"
   
         1.  Se si seleziona **Genera report in un file di testo**, selezionare **Crea nuovo file** o **Accoda a file**.  
   
-        2.  A seconda della selezione effettuata nel passaggio precedente, immettere il nome e il percorso completo del nuovo file o del file da accodare nella casella **Cartella** o **Nome file** . In alternativa, fare clic sui puntini di sospensione **(...)** e selezionare il percorso della cartella o il nome del file dalla finestra di dialogo **Individua cartella -** _nome\_server_ o **Individua file di database -** _nome\_server_.  
+        2.  A seconda della selezione effettuata nel passaggio precedente, immettere il nome e il percorso completo del nuovo file o del file da accodare nella casella **Cartella** o **Nome file** . In alternativa, fare clic sui puntini di sospensione **(...)** e selezionare il percorso della cartella o il nome del file dalla finestra di dialogo **Individua cartella -**_nome\_server_ o **Individua file di database -**_nome\_server_.  
   
         3.  Se si seleziona **Invia report a destinatario di posta elettronica**, nell'elenco **Operatore agente** selezionare il destinatario del report da inviare tramite posta elettronica.  
   

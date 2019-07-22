@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: cf9e1aec04b5a91b097c8bc533290473c4197b3d
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: d75739e2a8594bbd049a7d9b1c2a6908b1c0e29c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685808"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102206"
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ Dopo il completamento del comando DBCC CATALOG, viene scritto un messaggio nel l
 |2|Si è verificato un errore durante un ripristino di database in modalità di emergenza.|  
 |3|Indica che il comando DBCC è stato terminato a causa di un danneggiamento dei metadati.|  
 |4|È stata rilevata una violazione di accesso o asserzione.|  
-|5|Si è verificato un errore sconosciuto che ha causato l'interruzione del comando DBCC.|  
+|5|il comando DBCC è stato terminato da un errore sconosciuto.|  
   
 DBCC CHECKCATALOG esegue vari controlli di consistenza tra le tabelle di metadati di sistema. DBCC CHECKCATALOG utilizza uno snapshot interno del database per garantire la consistenza necessaria a livello di transazioni per eseguire queste verifiche. Per altre informazioni, vedere [Visualizzare le dimensioni del file sparse di uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) e la sezione "Utilizzo dello snapshot interno del database DBCC" in [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md).
 Se risulta impossibile creare uno snapshot, DBCC CHECKCATALOG acquisisce un blocco esclusivo a livello di database per ottenere la consistenza richiesta. Le eventuali inconsistenze rilevate non potranno essere riparate e pertanto sarà necessario ripristinare il database da un backup.
@@ -93,7 +92,7 @@ Se come nome del database si specifica [!INCLUDE[ssSampleDBobject](../../include
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner** .  
   
 ## <a name="examples"></a>Esempi  

@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 42d83c5adf9afa268bb7ec6e069731d6f8a05219
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2db5b171f0f853383c2bae99202c511151c38d8d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007227"
 ---
 # <a name="catalogrenameenvironment-ssisdb-database"></a>catalog.rename_environment (database SSISDB)
 
@@ -37,13 +36,13 @@ catalog.rename_environment [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argomenti  
  [ @folder_name = ] *folder_name*  
- Nome della cartella in cui è contenuto l'ambiente. *folder_name* è di tipo **nvarchar(128)** .  
+ Nome della cartella in cui è contenuto l'ambiente. *folder_name* è di tipo **nvarchar(128)**.  
   
  [ @environment_name = ] *environment_name*  
- Nome originale dell'ambiente. *environment_name* è di tipo **nvarchar(128)** .  
+ Nome originale dell'ambiente. *environment_name* è di tipo **nvarchar(128)**.  
   
  [ @new_environment_name = ] *new_environment_name*  
- Nuovo nome dell'ambiente. *new_environment_name* è di tipo **nvarchar(128)** .  
+ Nuovo nome dell'ambiente. *new_environment_name* è di tipo **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  

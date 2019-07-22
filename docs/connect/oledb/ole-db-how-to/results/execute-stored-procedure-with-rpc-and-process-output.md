@@ -13,13 +13,12 @@ helpviewer_keywords:
 - stored procedures [SQL Server], RPC syntax
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 4a0691795bdca0ec24b307362c6b2137c5741362
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 749a406a071c549f47ea41ead9fdf21574e0b523
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791264"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994732"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Eseguire la stored procedure con RPC e l'output del processo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,13 +38,13 @@ ms.locfileid: "66791264"
   
 3.  Creare un set di associazioni (uno per ogni creatore di parametro) tramite una matrice di strutture DBBINDING.  
   
-4.  Creare una funzione di accesso per i parametri definiti tramite il **IAccessor:: CreateAccessor** (metodo). **CreateAccessor** crea una funzione di accesso da un set di associazioni.  
+4.  Creare una funzione di accesso per i parametri definiti usando il metodo **IAccessor:: CreateAccessor** . **CreateAccessor** crea una funzione di accesso da un set di associazioni.  
   
 5.  Completare la struttura DBPARAMS.  
   
 6.  Chiamare il comando **Execute**, rappresentato in questo caso da una chiamata a una stored procedure.  
   
-7.  Elaborare set di righe e rilasciarlo utilizzando il **IRowset:: Release** (metodo).  
+7.  Elaborare il set di righe e rilasciarlo utilizzando il metodo **IRowset:: Release** .  
   
 8.  Elaborare il codice restituito e i valori del parametro di output ricevuti dalla stored procedure.  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 96e9da6c6bf1c394032abff79b7b869e08f4d3e9
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: 1e0c9d8d91bce3cc632e6cfd8a5f50353a55793a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085935"
 ---
 # <a name="replication-snapshot-agent"></a>Agente snapshot repliche
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +110,7 @@ snapshot [ -?]
  Account di accesso utilizzato per la connessione al server di distribuzione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  **-DistributorPassword** _distributor_password_  
- Password utilizzata per la connessione al server di distribuzione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . ,  
+ Password utilizzata per la connessione al server di distribuzione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . .  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
  Specifica la modalità di sicurezza del database di distribuzione. Un valore **0** indica la modalità di autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (impostazione predefinita), mentre un valore **1** indica la modalità di autenticazione di Windows.  
@@ -233,7 +232,7 @@ snapshot [ -?]
  Account di accesso utilizzato per la connessione al server di pubblicazione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  **-PublisherPassword**  _password_server_pubblicazione_  
- Password utilizzata per la connessione al server di pubblicazione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . ,  
+ Password utilizzata per la connessione al server di pubblicazione mediante l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . .  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
  Specifica la modalità di sicurezza del server di pubblicazione. Un valore **0** indica la modalità di autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (impostazione predefinita), mentre un valore **1** indica la modalità di autenticazione di Windows.  

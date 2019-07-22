@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84a2318f89872f490d8d3fc08902438f7a189443
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 1c5bd7fef54ee28993472bd6b3f4e4df3bba739f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326492"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060979"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,7 +82,7 @@ WITH IDENTITY = 'identity_name'
 
 - [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) e [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) usano le credenziali con ambito database per accedere ai dati dall'archiviazione BLOB di Azure. Per altre informazioni, vedere [Esempi di accesso bulk ai dati nell'archiviazione BLOB di Azure](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md). 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione **CONTROL** per il database.  
   
 ## <a name="examples"></a>Esempi  
@@ -100,7 +99,7 @@ CREATE DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'Mary5',
 GO  
 ```  
 
-### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>b. Creazione di credenziali con ambito database per una firma di accesso condiviso.   
+### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. Creazione di credenziali con ambito database per una firma di accesso condiviso.   
 Nell'esempio seguente viene creata una credenziale con ambito database che può essere usata per creare un'[origine dati esterna](../../t-sql/statements/create-external-data-source-transact-sql.md) che può eseguire operazioni in blocco, come ad esempio [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) e [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). Le firme di accesso condiviso non possono essere usate con PolyBase in SQL Server, nella piattaforma di strumenti analitici o in SQL DW.
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL MyCredentials  

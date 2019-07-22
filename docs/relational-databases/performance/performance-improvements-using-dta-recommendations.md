@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: a0f114c9e2783c8989a2bb4682d488eaea087814
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 700deff13eba1ce6320a49f997c20a9b40769eee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369983"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915200"
 ---
 # <a name="performance-improvements-using-dta-recommendations"></a>Miglioramenti delle prestazioni mediante le indicazioni di Ottimizzazione guidata motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,8 +30,8 @@ A partire da SQL Server 2016, Ottimizzazione guidata motore di database può pro
 Per illustrare i vantaggi delle indicazioni di Ottimizzazione guidata motore di database relative alle prestazioni del carico di lavoro, abbiamo provato diversi carichi di lavoro reali dei clienti. Per ogni carico di lavoro dei clienti, Ottimizzazione guidata motore di database analizza le singole query e il carico di lavoro completo delle query. Consideriamo tre alternative:
   
   1. **Solo indici columnstore**: compilare solo gli indici columnstore per tutte le tabelle senza usare Ottimizzazione guidata motore di database. 
-  2. **Ottimizzazione guidata motore di database (solo indici rowstore)**: eseguire Ottimizzazione guidata motore di database con l'opzione di specificare indicazioni solo per gli indici rowstore.
-  3. **Ottimizzazione guidata motore di database (indici rowstore + columnstore)**: eseguire Ottimizzazione guidata motore di database con l'opzione per specificare indicazioni sia per gli indici rowstore che per gli indici columnstore.  
+  2. **Ottimizzazione guidata motore di database (solo indici rowstore)** : eseguire Ottimizzazione guidata motore di database con l'opzione di specificare indicazioni solo per gli indici rowstore.
+  3. **Ottimizzazione guidata motore di database (indici rowstore + columnstore)** : eseguire Ottimizzazione guidata motore di database con l'opzione per specificare indicazioni sia per gli indici rowstore che per gli indici columnstore.  
    
 In ogni caso abbiamo implementato gli indici consigliati. Viene evidenziato il tempo di CPU (in millisecondi) come valore medio di più esecuzioni della query o del carico di lavoro. Nella figura seguente è riportato il tempo di CPU in millisecondi per i carichi di lavoro tra due diversi database dei clienti. Si noti che l'asse y (tempo di CPU) usa una scala logaritmica.   
 

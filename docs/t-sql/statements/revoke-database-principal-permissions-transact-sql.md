@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: afb12785dd744ddfd938fd2ddfd02e058f2e4034
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee69855ebc242218e0a254c538e3c7e00fee7747
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63033839"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082324"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE - autorizzazioni per entità di database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,15 +62,15 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  Specifica un'autorizzazione che può essere revocata per un'entità di database. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
  USER ::*database_user*  
- Specifica la classe e il nome dell'utente per cui viene revocata l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio.  
+ Specifica la classe e il nome dell'utente per cui viene revocata l'autorizzazione. Il qualificatore di ambito ( **::** ) è obbligatorio.  
   
  ROLE ::*database_role*  
- Specifica la classe e il nome del ruolo per cui viene revocata l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio.  
+ Specifica la classe e il nome del ruolo per cui viene revocata l'autorizzazione. Il qualificatore di ambito ( **::** ) è obbligatorio.  
   
  APPLICATION ROLE ::*application_role*  
 **Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
- Specifica la classe e il nome del ruolo applicazione per cui viene revocata l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio.  
+ Specifica la classe e il nome del ruolo applicazione per cui viene revocata l'autorizzazione. Il qualificatore di ambito ( **::** ) è obbligatorio.  
   
  GRANT OPTION  
  Indica che verrà revocato il diritto di concedere l'autorizzazione specificata ad altre entità. L'autorizzazione stessa non verrà revocata.  

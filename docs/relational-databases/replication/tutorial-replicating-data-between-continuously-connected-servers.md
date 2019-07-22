@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 23169fd3625c2501e295645201da89667731f0b6
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: 9c0a47062d50f4306af3ffb92e9e575317a014f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895386"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Esercitazione: Configurare la replica tra due server sempre connessi (replica transazionale)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,11 +101,11 @@ In questa sezione viene creata una pubblicazione transazionale usando [!INCLUDE[
   
 10. Nella pagina **Sicurezza agente** deselezionare la casella di controllo **Usa le impostazioni di sicurezza dell'agente snapshot**.   
   
-    Selezionare **Impostazioni di sicurezza** per l'agente snapshot. Immettere <*Nome_server_pubblicazione*> **\repl_snapshot** nella casella **Account processo**, specificare la password per l'account e quindi selezionare **OK**.  
+    Selezionare **Impostazioni di sicurezza** per l'agente snapshot. Immettere <*Nome_server_pubblicazione*>**\repl_snapshot** nella casella **Account processo**, specificare la password per l'account e quindi selezionare **OK**.  
 
     ![Pagina "Sicurezza agente" e finestra di dialogo "Sicurezza agente snapshot"](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagentsecurity.png)
   
-12. Ripetere il passaggio precedente per impostare <*Nome_server_pubblicazione*> **\repl_logreader** come account di processo per l'agente di lettura log e quindi selezionare **OK**.  
+12. Ripetere il passaggio precedente per impostare <*Nome_server_pubblicazione*>**\repl_logreader** come account di processo per l'agente di lettura log e quindi selezionare **OK**.  
 
     ![Finestra di dialogo "Sicurezza agente di lettura log" e pagina "Sicurezza agente"](media/tutorial-replicating-data-between-continuously-connected-servers/logreaderagentsecurity.png)   
 
@@ -148,7 +147,7 @@ Se a questo punto viene visualizzato un errore, vedere [Troubleshooting Snapshot
 2. Nella cartella **Pubblicazioni locali** fare clic con il pulsante destro del mouse su **AdvWorksProductTrans** e quindi selezionare **Proprietà**.  Verrà visualizzata la finestra di dialogo **Proprietà pubblicazione**.    
   
    A. Selezionare la pagina **Elenco di accesso alla pubblicazione** e selezionare **Aggiungi**.  
-   B. Nella finestra di dialogo **Aggiungi accesso alla pubblicazione** selezionare <*Nome_server_pubblicazione*> **\repl_distribution** e selezionare **OK**.
+   B. Nella finestra di dialogo **Aggiungi accesso alla pubblicazione** selezionare <*Nome_server_pubblicazione*>**\repl_distribution** e selezionare **OK**.
    
    ![Selezioni per l'aggiunta di un account di accesso all'elenco di accesso alla pubblicazione](media/tutorial-replicating-data-between-continuously-connected-servers/tranreplproperties.png)
 
@@ -184,7 +183,7 @@ In questa sezione si aggiunge un sottoscrittore alla pubblicazione creata in pre
   
    ![Immissione di un nome per il database di sottoscrizione](media/tutorial-replicating-data-between-continuously-connected-servers/productreplica.png)
   
-8. Nella pagina **Sicurezza agente di distribuzione** selezionare il pulsante con i puntini di sospensione ( **...** ). Immettere <*Nome_server_pubblicazione*> **\repl_distribution** nella casella **Account processo**, immettere la password per l'account, selezionare **OK**, e quindi selezionare **Avanti**.
+8. Nella pagina **Sicurezza agente di distribuzione** selezionare il pulsante con i puntini di sospensione (**...**). Immettere <*Nome_server_pubblicazione*>**\repl_distribution** nella casella **Account processo**, immettere la password per l'account, selezionare **OK**, e quindi selezionare **Avanti**.
 
    ![Informazioni dell'account di distribuzione nella finestra di dialogo "Sicurezza agente di distribuzione"](media/tutorial-replicating-data-between-continuously-connected-servers/adddistaccount.png)
   
@@ -194,7 +193,7 @@ In questa sezione si aggiunge un sottoscrittore alla pubblicazione creata in pre
   
 1. Connettersi al sottoscrittore in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Espandere la cartella **Sicurezza**, fare clic con il pulsante destro del mouse su **Account di accesso** e quindi scegliere **Nuovo account accesso**.     
   
-   A. Nella pagina **Generale**, in **Nome account di accesso**, selezionare **Cerca** e aggiungere l'account di accesso per <*Nome_computer_sottoscrittore*> **\repl_distribution**.
+   A. Nella pagina **Generale**, in **Nome account di accesso**, selezionare **Cerca** e aggiungere l'account di accesso per <*Nome_computer_sottoscrittore*>**\repl_distribution**.
 
    B. Nella pagina **Mapping utenti** concedere all'account di accesso **db_owner** l'appartenenza per il database **ProductReplica**. 
 

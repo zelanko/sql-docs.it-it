@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2a40d617-9724-4f7d-80a4-a85c702f14d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5abea91a38a1866a5b1e9409bce5990c94dc3a5c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 2e738002850c372642413c3ffb0b829f899d4060
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511278"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943206"
 ---
 # <a name="generate-an-inline-xdr-schema"></a>Generazione di uno schema XDR inline
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "58511278"
   
 -   Se il risultato della query FOR XML include colonne di tipo **xml** e viene richiesto uno schema XDR inline, sarà generato un errore. Gli schemi XDR inline non supportano infatti questi tipi.  
   
--   Verrà eseguito il mapping dei tipi **(n)varchar(max)** e **(n)varbinary(max)** rispettivamente a **(n)varchar(n)** e **varbinary(n)**.  
+-   Verrà eseguito il mapping dei tipi **(n)varchar(max)** e **(n)varbinary(max)** rispettivamente a **(n)varchar(n)** e **varbinary(n)** .  
   
 -   Se la modalità di compatibilità è impostata su 90 o superiore, i valori **timestamp** vengono considerati come dati **varbinary(8)** , trattati come dati binari e restituiti nel risultato nel modo seguente:  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 099dd0bf-b017-479d-9696-f5b06f4c6bf9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2fc70ed3e449840793dbd32e4d2014031256f3bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f23da4d83217fbed39e6dddacfe92541eae0db23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66763010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984223"
 ---
 # <a name="getcrossreference-method-sqlserverdatabasemetadata"></a>Metodo getCrossReference (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -72,7 +71,7 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getCrossReference viene specificato dal metodo getCrossReference nell'interfaccia DatabaseMetaData.  
+ Questo metodo getCrossReference viene specificato dal metodo getCrossReference nell'interfaccia java. SQL. DatabaseMetaData.  
   
  Il set di risultati restituito dal metodo getCrossReference conterrà le informazioni seguenti:  
   

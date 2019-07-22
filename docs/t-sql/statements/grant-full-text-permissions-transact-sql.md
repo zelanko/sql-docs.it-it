@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1f0a85482a663b9be77ea455bdbabe87acf3b1e1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 527e59ef18d152b4546619cf67130dc7aecbfe6a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050830"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT - autorizzazioni per il catalogo full-text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,9 +66,9 @@ GRANT permission [ ,...n ] ON
 -   ruolo del database  
 -   ruolo applicazione  
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
--   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
--   utente del database sul quale viene eseguito il mapping a un certificato  
--   utente del database mappato a una chiave asimmetrica  
+-   utente del database di cui è stato eseguito il mapping a un gruppo di Windows  
+-   utente del database di cui è stato eseguito il mapping a un certificato  
+-   utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
 -   utente del database non mappato ad alcuna entità server.  
   
 GRANT OPTION  
@@ -82,9 +81,9 @@ AS *granting_principal*
 -   ruolo del database  
 -   ruolo applicazione  
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
--   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
--   utente del database sul quale viene eseguito il mapping a un certificato  
--   utente del database mappato a una chiave asimmetrica  
+-   utente del database di cui è stato eseguito il mapping a un gruppo di Windows  
+-   utente del database di cui è stato eseguito il mapping a un certificato  
+-   utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
 -   utente del database non mappato ad alcuna entità server.  
   
 ## <a name="remarks"></a>Remarks  
@@ -111,7 +110,7 @@ AS *granting_principal*
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'utente che concede le autorizzazioni (o l'entità specificata con l'opzione AS) deve disporre della relativa autorizzazione con GRANT OPTION oppure di un'autorizzazione di livello superiore che include l'autorizzazione che viene concessa.  
   
  Se si usano l'opzione AS, sono previsti questi requisiti aggiuntivi.  
@@ -142,7 +141,7 @@ GRANT CONTROL
     TO Ted ;  
 ```  
   
-### <a name="b-granting-permissions-to-a-stoplist"></a>b. Concessione di autorizzazioni per un elenco di parole non significative  
+### <a name="b-granting-permissions-to-a-stoplist"></a>B. Concessione di autorizzazioni per un elenco di parole non significative  
  Nell'esempio seguente, a `Mary` viene concessa l'autorizzazione `VIEW DEFINITION` per l'elenco di parole non significative full-text `ProductStoplist`.  
   
 ```  

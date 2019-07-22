@@ -1,5 +1,5 @@
 ---
-title: Chiama una Stored Procedure (OLE DB) | Microsoft Docs
+title: Chiamata di una stored procedure (OLE DB) | Microsoft Docs
 description: Esecuzione di una chiamata a una stored procedure (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -18,27 +18,26 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, stored procedures
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 3221a4593bf3d7534c3f9def115e69edc3cfeb07
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 26e97354d54cb65578bcbb35d2c96fb6914270d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795933"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015205"
 ---
 # <a name="stored-procedures---calling"></a>Stored procedure - Chiamata
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Una stored procedure può avere zero o più parametri. Può inoltre restituire un valore. Quando si usa il Driver OLE DB per SQL Server, è possibile passare parametri a una stored procedure:  
+  Una stored procedure può avere zero o più parametri. Può inoltre restituire un valore. Quando si usa il driver OLE DB per SQL Server, i parametri per un stored procedure possono essere passati:  
   
 -   Specificando il valore dei dati a livello di codice.  
   
 -   Utilizzando un marcatore di parametro (?) per specificare i parametri, associare una variabile di programma all'marcatore di parametro e quindi inserire il valore dei dati nella variabile di programma.  
   
 > [!NOTE]  
->  Quando si esegue una chiamata alle stored procedure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando parametri denominati con OLE DB, i nomi dei parametri devono iniziare con il carattere "\@". Si tratta di una restrizione specifica di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il Driver OLE DB per SQL Server applica questa limitazione in modo più restrittivo rispetto a MDAC.  
+>  Quando si esegue una chiamata alle stored procedure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando parametri denominati con OLE DB, i nomi dei parametri devono iniziare con il carattere "\@". Si tratta di una restrizione specifica di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il driver OLE DB per SQL Server impone questa restrizione in modo più rigoroso di MDAC.  
   
  Per supportare i parametri, l'interfaccia **ICommandWithParameters** viene esposta nell'oggetto comando. Per usare i parametri, il consumer descrive prima i parametri al provider chiamando il metodo **ICommandWithParameters::SetParameterInfo** (o facoltativamente prepara un'istruzione di chiamata che chiama il metodo **GetParameterInfo**). Il consumer crea quindi una funzione di accesso che specifica la struttura di un buffer e inserisce i valori dei parametri in questo buffer. Infine, passa l'handle della funzione di accesso e un puntatore al buffer a **Execute**. Nelle chiamate successive a **Execute**, il consumer inserisce i nuovi valori dei parametri nel buffer e chiama **Execute** con l'handle della funzione di accesso e il puntatore al buffer.  
   
@@ -81,7 +80,7 @@ ms.locfileid: "66795933"
 5.  Eseguire il comando usando **ICommand::Execute**.  
   
 ## <a name="methods-of-calling-a-stored-procedure"></a>Metodi per l'esecuzione di una chiamata a una stored procedure  
- Quando si esegue una stored procedure in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], il Driver OLE DB per SQL Server supporta il:  
+ Quando si esegue un stored procedure in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], il driver OLE DB per SQL Server supporta:  
   
 -   Sequenza di escape ODBC CALL.  
   
@@ -109,7 +108,7 @@ ms.locfileid: "66795933"
   
  Quando la sequenza di escape RPC viene utilizzata per eseguire una stored procedure, il provider non chiama la funzione di supporto per determinare le informazioni sui parametri (come avviene nel caso della sintassi ODBC CALL). La sintassi RPC è più semplice della sintassi ODBC CALL, pertanto il comando viene analizzato più velocemente, migliorando le prestazioni. In questo caso, è necessario fornire le informazioni sui parametri eseguendo **ICommandWithParameters::SetParameterInfo**.  
   
- Per utilizzare la sequenza di escape RPC è necessario disporre di un valore restituito. Se la stored procedure non restituisce un valore, il server restituisce per impostazione predefinita il valore 0. Inoltre, non è possibile aprire un cursore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stored procedure. La stored procedure viene preparata in modo implicito e la chiamata a **ICommandPrepare::Prepare** avrà esito negativo. A causa dell'impossibilità di preparare una chiamata RPC, non è possibile richiedere i metadati della colonna; IColumnsInfo:: GetColumnInfo e IColumnsRowset:: GetColumnsRowset restituiranno DB_E_NOTPREPARED.  
+ Per utilizzare la sequenza di escape RPC è necessario disporre di un valore restituito. Se la stored procedure non restituisce un valore, il server restituisce per impostazione predefinita il valore 0. Inoltre, non è possibile aprire un cursore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nella stored procedure. La stored procedure viene preparata in modo implicito e la chiamata a **ICommandPrepare::Prepare** avrà esito negativo. A causa dell'impossibilità di preparare una chiamata RPC, non è possibile eseguire query sui metadati della colonna. IColumnsInfo:: GetColumnInfo e IColumnsRowset:: GetColumnsRowset restituiranno DB_E_NOTPREPARED.  
   
  Se si conoscono tutti i metadati dei parametri, la sequenza di escape RPC è la modalità consigliata per eseguire le stored procedure.  
   
@@ -119,10 +118,10 @@ ms.locfileid: "66795933"
 {rpc SalesByCategory}  
 ```  
   
- Per un'applicazione di esempio che illustra una sequenza di escape RPC, vedere [eseguire una Stored Procedure &#40;utilizzando la sintassi RPC&#41; e processo di codici restituiti e parametri di Output &#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ Per un'applicazione di esempio che illustra una sequenza di escape RPC, vedere [eseguire una &#40;stored procedure usando&#41; la sintassi RPC ed elaborare i codici &#40;restituiti&#41;e i parametri di output OLE DB](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Istruzione Transact-SQL EXECUTE  
- La sequenza di escape ODBC CALL e la sequenza di escape RPC rappresentano i metodi preferiti per la chiamata a una stored procedure rispetto all'istruzione [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). Il Driver OLE DB per SQL Server utilizza il meccanismo RPC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per ottimizzare l'elaborazione del comando. Questo protocollo RPC migliora le prestazioni riducendo l'elaborazione dei parametri e l'analisi delle istruzioni eseguite sul server.  
+ La sequenza di escape ODBC CALL e la sequenza di escape RPC rappresentano i metodi preferiti per la chiamata a una stored procedure rispetto all'istruzione [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). Il driver OLE DB per SQL Server usa il meccanismo RPC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per ottimizzare l'elaborazione dei comandi. Questo protocollo RPC migliora le prestazioni riducendo l'elaborazione dei parametri e l'analisi delle istruzioni eseguite sul server.  
   
  Di seguito è riportato un esempio dell'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE**:  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 890e5d02f72f9af0d0609602e3815b872d870b45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b354f824da86e3bfcc5fb8d6279cb755048046d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62928972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051304"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Linee guida per l'utilizzo dei metodi con tipo di dati xml
 
@@ -70,11 +69,11 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 
 ## <a name="singleton-checks"></a>Verifiche dei singleton
 
-Se il compilatore non è in grado di determinare se un determinato valore singleton è garantito in fase di esecuzione, i passi, i parametri delle funzioni e gli operatori che richiedono un singleton restituiranno un errore. Questo problema si verifica di frequente con i dati non tipizzati. Per la ricerca di un attributo, ad esempio, è necessario un elemento padre singleton. È sufficiente un numero ordinale che seleziona un nodo padre singolo. Per valutare una combinazione **node()** -**value()** per l'estrazione dei valori degli attributi potrebbe non essere necessario specificare il numero ordinale, come illustrato nell'esempio seguente.
+Se il compilatore non è in grado di determinare se un determinato valore singleton è garantito in fase di esecuzione, i passi, i parametri delle funzioni e gli operatori che richiedono un singleton restituiranno un errore. Questo problema si verifica di frequente con i dati non tipizzati. Per la ricerca di un attributo, ad esempio, è necessario un elemento padre singleton. È sufficiente un numero ordinale che seleziona un nodo padre singolo. Per valutare una combinazione **node()**-**value()** per l'estrazione dei valori degli attributi potrebbe non essere necessario specificare il numero ordinale, come illustrato nell'esempio seguente.
 
 ### <a name="example-known-singleton"></a>Esempio: singleton noto
 
-In questo esempio il metodo **nodes()** genera una riga distinta per ogni elemento `<book>`. Il metodo **value()** , valutato su un nodo `<book>`, estrae il valore di `@genre` e, essendo un attributo, è un singleton.
+In questo esempio il metodo **nodes()** genera una riga distinta per ogni elemento `<book>`. Il metodo **value()**, valutato su un nodo `<book>`, estrae il valore di `@genre` e, essendo un attributo, è un singleton.
 
 ```sql
 SELECT nref.value('@genre', 'varchar(max)') LastName

@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 501f2c8a-6aeb-41af-bf0b-974d17af33c0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a9f176a193ad81b5ce2dc44a9d589f9413dd1a3
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 3d820e8740740335a576385a7c971d1e0fe5eb5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327732"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942944"
 ---
 # <a name="grant-database-scoped-credential-permissions-transact-sql"></a>GRANT - Autorizzazioni per credenziali con ambito database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ GRANT permission  [ ,...n ]
  *permission*  
  Specifica un'autorizzazione che può essere concessa per credenziali con ambito database. Vedere l'elenco riportato di seguito.  
   
- ON DATABASE SCOPED CREDENTIAL **::**_credential_name_  
+ ON DATABASE SCOPED CREDENTIAL **::** _credential_name_  
  Specifica il tipo di credenziali con ambito database per cui viene concessa l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
  *database_principal*  
@@ -59,9 +58,9 @@ GRANT permission  [ ,...n ]
 -   ruolo del database  
 -   ruolo applicazione  
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
--   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
--   utente del database sul quale viene eseguito il mapping a un certificato  
--   utente del database mappato a una chiave asimmetrica  
+-   utente del database di cui è stato eseguito il mapping a un gruppo di Windows  
+-   utente del database di cui è stato eseguito il mapping a un certificato  
+-   utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
 -   utente del database non mappato ad alcuna entità server.  
   
 GRANT OPTION  
@@ -74,9 +73,9 @@ AS *granting_principal*
 -   ruolo del database  
 -   ruolo applicazione  
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
--   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
--   utente del database sul quale viene eseguito il mapping a un certificato  
--   utente del database mappato a una chiave asimmetrica  
+-   utente del database di cui è stato eseguito il mapping a un gruppo di Windows  
+-   utente del database di cui è stato eseguito il mapping a un certificato  
+-   utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
 -   utente del database non mappato ad alcuna entità server.  
   
 ## <a name="remarks"></a>Remarks  
@@ -90,7 +89,7 @@ AS *granting_principal*
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'utente che concede le autorizzazioni (o l'entità specificata con l'opzione AS) deve disporre della relativa autorizzazione con GRANT OPTION oppure di un'autorizzazione di livello superiore che include l'autorizzazione che viene concessa.  
   
  Se si usano l'opzione AS, sono previsti questi requisiti aggiuntivi.  

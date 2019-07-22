@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 94409316db28a3e122457e81037a9a4eadb60509
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: ef284f2f09493ce0bd201efbd691c8ee1ba07c29
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67686310"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262586"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>Finestra di dialogo Confronto (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +28,7 @@ Questa finestra di dialogo viene visualizzata quando si eseguono le operazioni s
   
 -   Se si specifica un nome di confronto non valido nel campo **Confronto** della scheda **Proprietà colonne** .  
   
--   Se si fa clic nel campo **Confronto** della scheda **Proprietà colonne** e sui puntini di sospensione ( **...** ) a destra del campo.  
+-   Se si fa clic nel campo **Confronto** della scheda **Proprietà colonne** e sui puntini di sospensione (**...**) a destra del campo.  
   
 ## <a name="options"></a>Opzioni  
 **Confronto SQL**  

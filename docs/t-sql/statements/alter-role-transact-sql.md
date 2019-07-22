@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 535a64f7ab8ca820149313d9b5add1de65239675
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 3d49f852c69af4335d3243fb84c921e11268669f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326572"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927209"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,7 +94,7 @@ WITH NAME = *new_name*
   
  La modifica del nome di un ruolo del database non comporta la modifica del numero di ID, del proprietario o delle autorizzazioni del ruolo.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire questo comando sono necessarie una più delle autorizzazioni o appartenenze seguenti:  
   
 -   Autorizzazione **ALTER** per il ruolo  
@@ -127,7 +126,7 @@ Per modificare l'appartenenza a un ruolo predefinito del database è anche neces
 ALTER ROLE buyers WITH NAME = purchasing;  
 ```  
   
-### <a name="b-add-or-remove-role-members"></a>b. Aggiungere o rimuovere i membri del ruolo  
+### <a name="b-add-or-remove-role-members"></a>B. Aggiungere o rimuovere i membri del ruolo  
  **SI APPLICA A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire dalla versione 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  In questo esempio viene creato un nuovo ruolo del database denominato `Sales`. Viene aggiunto un utente del database denominato Barry all'appartenenza e viene illustrato come rimuovere il membro Barry.   Questo esempio può essere eseguito nel database di esempio [AdventureWorks](https://msftdbprodsamples.codeplex.com/).

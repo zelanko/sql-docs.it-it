@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: def9df7e03f596cf519eebebd7b2ca83a912fe98
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: aa39a4752952a3d214d7dea8eaeb236c75d9f5d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67580014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021321"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>Finestra di dialogo Proprietà server di pubblicazione di replica di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ La finestra di dialogo **Proprietà server di pubblicazione** consente di visual
   
 ### <a name="options"></a>Opzioni  
  **Sottoscrittori**  
- La griglia delle proprietà **Sottoscrittori** visualizza i Sottoscrittori abilitati al ricevimento di dati dalle pubblicazioni incluse nel server di pubblicazione corrente. Per visualizzare e impostare proprietà aggiuntive fare clic sul pulsante delle proprietà ( **...** ) accanto a un Sottoscrittore.  
+ La griglia delle proprietà **Sottoscrittori** visualizza i Sottoscrittori abilitati al ricevimento di dati dalle pubblicazioni incluse nel server di pubblicazione corrente. Per visualizzare e impostare proprietà aggiuntive fare clic sul pulsante delle proprietà (**...**) accanto a un Sottoscrittore.  
   
  **Aggiungi**  
  Fare clic su **Aggiungi** per aggiungere un Sottoscrittore e quindi fare clic su **Aggiungi Sottoscrittore SQL Server** o su **Aggiungi Sottoscrittore non SQL Server**.  

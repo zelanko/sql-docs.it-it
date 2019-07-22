@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 876b6348-fb29-49e1-befc-4217979f6416
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: e9baa18550da37f0abe379b3842389fae7100287
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: b27695eba9f1092b09d147c373877a9b44789497
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065898"
 ---
 # <a name="alter-cryptographic-provider-transact-sql"></a>ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ Quando il file di intestazione utilizzato per creare la dll del provider EKM non
   
  `SQL Crypto API version '%02d.%02d' implemented by provider is not supported. Supported version is '%02d.%02d'.`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per il provider di crittografia.  
   
 ## <a name="examples"></a>Esempi  

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bb2b43324d9147dfdd55f3109842dceb2ffcb975
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 2fc90354abf3c18a5eba7a92b7a5ffa54a84ce3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984510"
 ---
 # <a name="deny-server-principal-permissions-transact-sql"></a>Autorizzazioni per entità server DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +108,7 @@ DENY permission [ ,...n ] }
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |ALTER|CONTROL|ALTER ANY LOGIN<br /><br /> ALTER ANY SERVER ROLE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per gli account di accesso, è richiesta l'autorizzazione CONTROL per l'account di accesso o l'autorizzazione ALTER ANY LOGIN per il server.  
   
  Per i ruoli del server, è richiesta l'autorizzazione CONTROL per il ruolo del server o l'autorizzazione ALTER ANY SERVER ROLE per il server.  
@@ -125,7 +124,7 @@ DENY IMPERSONATE ON LOGIN::WanidaBenshoof TO [AdvWorks\YoonM];
 GO  
 ```  
   
-### <a name="b-denying-view-definition-permission-with-cascade"></a>b. Negazione dell'autorizzazione VIEW DEFINITION con CASCADE  
+### <a name="b-denying-view-definition-permission-with-cascade"></a>B. Negazione dell'autorizzazione VIEW DEFINITION con CASCADE  
  Nell'esempio seguente viene negata l'autorizzazione `VIEW DEFINITION` per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `EricKurjan` all'account accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `RMeyyappan`. L'opzione `CASCADE` indica che l'autorizzazione `VIEW DEFINITION` per `EricKurjan` verrà negata anche alle entità a cui `RMeyyappan` ha concesso tale autorizzazione.  
   
 ```  

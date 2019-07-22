@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 3152bf516975dc88d9b1bf826dc01775d98f4f05
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: dbacf31bf3fcbb9cafd88e57e7c798a584b74ef7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67682507"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264378"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>Creazione di query di creazione tabella (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +66,7 @@ Per utilizzare correttamente una query di creazione tabella è necessario che:
   
     Per creare una tabella di destinazione in un altro database è necessario specificare il nome completo di una tabella, compreso il nome del database di destinazione, il proprietario (se necessario) e il nome della tabella.  
   
-4.  Specificare le colonne da copiare aggiungendole alla query. Per informazioni dettagliate, vedere [Aggiunta di colonne a query (Visual Database Tools)](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md). Verranno copiate solo le colonne aggiunte alla query. Per copiare righe intere, scegliere **&#42; (Tutte le colonne)** .  
+4.  Specificare le colonne da copiare aggiungendole alla query. Per informazioni dettagliate, vedere [Aggiunta di colonne a query (Visual Database Tools)](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md). Verranno copiate solo le colonne aggiunte alla query. Per copiare righe intere, scegliere **&#42; (Tutte le colonne)**.  
   
     Le colonne selezionate verranno aggiunte alla colonna **Colonna** del riquadro Criteri.  
   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 07cf3d71690dd7f7b493970b62ac0130a8530b16
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 4593a57ab3d6b0c4b5cfff067c0f34b87f50796c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558558"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137315"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiare database tramite backup e ripristino
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ Considerazioni aggiuntive che possono avere effetto su questo processo:
  Per evitare errori e conseguenze impreviste, prima dell'operazione di ripristino è possibile usare la tabella della cronologia [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) per trovare i file di database e di log nel backup che si intende ripristinare.  
   
 ## <a name="moving-the-database-files"></a>Spostamento dei file di database  
- Se non è possibile ripristinare i file di backup del database nel computer di destinazione, sarà necessario spostarli in un nuovo percorso man mano che vengono ripristinati. Ad esempio  
+ Se non è possibile ripristinare i file di backup del database nel computer di destinazione, sarà necessario spostarli in un nuovo percorso man mano che vengono ripristinati. Esempio:  
   
 -   Si supponga di voler ripristinare un database da backup creati nella posizione predefinita di versioni precedenti.  
   
@@ -82,7 +81,7 @@ Considerazioni aggiuntive che possono avere effetto su questo processo:
  Il nome del database specificato esplicitamente al momento del ripristino viene usato automaticamente come nuovo nome del database. Poiché il nome del database non esiste, viene creato un database con il nuovo nome tramite i file presenti nel backup.  
   
 ## <a name="when-upgrading-a-database-by-using-restore"></a>Quando si aggiorna un database usando il ripristino  
- Nel ripristino dei backup da una versione precedente può essere utile sapere in anticipo se il percorso (unità e directory) di ogni catalogo full-text di un backup sia esistente sul computer di destinazione. Per un elenco dei nomi logici e fisici (percorso e nome file) di ogni file in un backup, inclusi i file di catalogo, usare un'istruzione RESTORE FILELISTONLY FROM *<dispositivo_backup>*. Per altre informazioni, vedere [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
+ Nel ripristino dei backup da una versione precedente può essere utile sapere in anticipo se il percorso (unità e directory) di ogni catalogo full-text di un backup sia esistente sul computer di destinazione. Per un elenco dei nomi logici e fisici (percorso e nome file) di ogni file in un backup, inclusi i file di catalogo, usare un'istruzione RESTORE FILELISTONLY FROM *<dispositivo_backup>* . Per altre informazioni, vedere [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
   
  Se lo stesso percorso non esiste sul computer di destinazione, sono disponibili due alternative:  
   

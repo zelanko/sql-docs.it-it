@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8303b8639ff72ad8bf6f9e3ebfc0b2232aae147b
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 0352e9f9c9d9e263e2e1e8ec980ae07d4d33df0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412661"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010805"
 ---
 # <a name="permissions-database-engine"></a>Autorizzazioni (Motore di database)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -108,7 +107,7 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 |EXECUTE|Tipi CLR, script esterni, procedure ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR), funzioni scalari e di aggregazione ([!INCLUDE[tsql](../../includes/tsql-md.md)] e CLR) e sinonimi|  
 |IMPERSONATE|Account di accesso e utenti|  
 |INSERT|Sinonimi, tabelle e colonne, viste e colonne. L'autorizzazione può essere concesso a livello di database, schema oppure oggetto|  
-|RECEIVE|Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)]|  
+|RECEIVE|Code di[!INCLUDE[ssSB](../../includes/sssb-md.md)] |  
 |REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT, <br />SYMMETRIC KEY,<br />TABLE,<br />TYPE,<br />VIEW e<br />XML SCHEMA COLLECTION|  
 |SELECT|Sinonimi, tabelle e colonne, viste e colonne. L'autorizzazione può essere concesso a livello di database, schema oppure oggetto|  
 |TAKE OWNERSHIP|Tutte le classi di oggetti ad eccezione di DATABASE SCOPED CONFIGURATION LOGIN, SERVER e USER|  
@@ -418,7 +417,7 @@ Per suggerimenti sulla pianificazione di un sistema di autorizzazioni, vedere [I
 
 ## <a name="special-considerations-for-column-level-permissions"></a>Considerazioni speciali per le autorizzazioni a livello di colonna
 
-Le autorizzazioni a livello di colonna vengono concesse con la sintassi *<NomeTabella>(\<NomeColonna>)* . Esempio:
+Le autorizzazioni a livello di colonna vengono concesse con la sintassi *<NomeTabella>(\<NomeColonna>)*. Esempio:
 ```sql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```

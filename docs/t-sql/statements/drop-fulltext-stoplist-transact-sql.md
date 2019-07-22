@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3ee2a2bb-1dfb-4e7c-90e9-9d917cd84a15
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9ed184138e4bec2f973cfe6df8ea758b90b4a6af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4396fe9586dfffe5e88bf7949216206d95e2a96b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044233"
 ---
 # <a name="drop-fulltext-stoplist-transact-sql"></a>DROP FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ DROP FULLTEXT STOPLIST stoplist_name
 ## <a name="remarks"></a>Remarks  
  DROP FULLTEXT STOPLIST ha esito negativo se qualsiasi indice full-text fa riferimento all'elenco di parole non significative full-text da eliminare.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eliminare un elenco di parole non significative è necessaria l'autorizzazione DROP per tale elenco o l'appartenenza al ruolo predefinito del database **db_owner** o **db_ddladmin**.  
   
 ## <a name="examples"></a>Esempi  

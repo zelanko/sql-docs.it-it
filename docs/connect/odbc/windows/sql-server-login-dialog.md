@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo account di accesso SQL Server (ODBC) | Microsoft Docs
+title: Finestra di dialogo SQL Server login (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/21/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: v-jizho2
-manager: jroth
-ms.openlocfilehash: 2d7cf1f31ce5cf42b9c2e4c7b72938b8def2ed4f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fcfde122b978fa1e77baa690a1f3e09417dab1c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797734"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989417"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>Finestra di dialogo Account di accesso di SQL Server (ODBC)
 
@@ -26,7 +25,7 @@ Quando si chiama una connessione ODBC senza specificare informazioni sufficienti
 
 ### <a name="server"></a>Server
 
-Il nome di un'istanza di SQL Server nella rete. Selezionare un nome di server o di istanza nell'elenco oppure digitarlo nella casella **Server**. Facoltativamente, è possibile creare un alias del server nel computer client tramite **Gestione configurazione SQL Server** e digitarlo nella casella **Server**.
+Nome di un'istanza di SQL Server sulla rete. Selezionare un nome di server o di istanza nell'elenco oppure digitarlo nella casella **Server**. Facoltativamente, è possibile creare un alias del server nel computer client tramite **Gestione configurazione SQL Server** e digitarlo nella casella **Server**.
 
 È possibile immettere "(locale)" quando si usa lo stesso computer in cui è presente SQL Server. È quindi possibile connettersi a un'istanza locale di SQL Server anche in caso di esecuzione di una versione non in rete di SQL Server.
 
@@ -34,14 +33,14 @@ Per altre informazioni sui nomi dei server per tipi diversi di reti, vedere la d
 
 ### <a name="authentication-mode"></a>Modalità di autenticazione
 
-Seleziona la modalità di autenticazione da uno dei seguenti:
-- **SQL Server** con ID di accesso e password
-- **Integrata di Windows** autenticazione mediante account dell'utente connesso
-- **Password di Active Directory** con ID di accesso e password
-- **Integrata di Active Directory** autenticazione mediante account dell'utente connesso
+Consente di selezionare la modalità di autenticazione da uno dei seguenti elementi:
+- **SQL Server** con ID e password di accesso
+- Autenticazione **integrata di Windows** con l'account dell'utente attualmente connesso
+- **Active Directory password** con ID e password di accesso
+- **Active Directory** l'autenticazione integrata con l'account dell'utente attualmente connesso
 - **Autenticazione interattiva di Active Directory** con ID di accesso
 
-Visualizzare [Data Source Wizard schermata 2](../../../connect/odbc/windows/dsn-wizard-2.md) per altre informazioni sulle modalità di autenticazione.
+Per ulteriori informazioni sulle modalità di autenticazione, vedere la [creazione guidata origine dati (schermata 2](../../../connect/odbc/windows/dsn-wizard-2.md) ).
 
 ### <a name="server-spn"></a>SPN server
 
@@ -49,11 +48,11 @@ Se si utilizza una connessione trusted, è possibile specificare un nome dell'en
 
 ### <a name="login-id"></a>ID accesso
 
-Specifica l'ID di accesso di SQL Server o Azure Active Directory da usare per la connessione se **modalità di autenticazione** è impostata su **SQL Server** oppure **Password di Active Directory** o **Active Directory Interactive**. In caso contrario, il **ID di accesso** casella è disabilitata.
+Specifica il SQL Server o Azure Active Directory ID di accesso da utilizzare per la connessione se la **modalità di autenticazione** è impostata su **SQL Server** o **Active Directory password** o **Active Directory interattiva**. In caso contrario, la casella **ID di accesso** è disabilitata.
 
 ### <a name="password"></a>Password
 
-Specifica la password per l'ID di accesso di SQL Server o Azure Active Directory usato per la connessione se **modalità di autenticazione** è impostata su **SQL Server** o **PassworddiActiveDirectory**. In caso contrario, il **Password** casella è disabilitata.
+Specifica la password per il SQL Server o Azure Active Directory ID di accesso utilizzato per la connessione se la **modalità di autenticazione** è impostata su **SQL Server** o **Active Directory password**. In caso contrario, la casella **password** è disabilitata.
 
 ### <a name="options"></a>Opzioni
 
@@ -97,11 +96,11 @@ Indica la lingua nazionale da usare per i messaggi di sistema di SQL Server. Tal
 
 ### <a name="use-strong-encryption-for-data"></a>Usa crittografia avanzata per i dati
 
-Se selezionata, verranno crittografati i dati passati tramite la connessione. Gli account di accesso sono crittografati per impostazione predefinita, anche se questa casella di controllo è deselezionata.
+Quando questa opzione è selezionata, i dati passati attraverso la connessione verranno crittografati. Gli account di accesso sono crittografati per impostazione predefinita, anche se questa casella di controllo è deselezionata.
 
 ### <a name="trust-server-certificate"></a>Certificato server attendibile
 
-Questa opzione è applicabile solo quando **Usa crittografia avanzata per i dati** è abilitata. Se selezionata, il certificato del server non verrà convalidato per avere il nome host corretto del server ed essere emesso da un'autorità di certificazione attendibile.
+Questa opzione è applicabile solo quando è abilitata l'opzione **Usa crittografia avanzata per i dati** . Quando questa opzione è selezionata, il certificato del server non viene convalidato in modo da avere il nome host corretto del server ed essere emesso da un'autorità di certificazione attendibile.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,5 +1,5 @@
 ---
-title: Preparare i dati di traccia di Input | Microsoft Docs
+title: Preparare i dati di traccia di input | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b99d260c61a8d64ed7ad64003bdf3f85c6de50ba
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 3fbf4e9b2607638d37217dc5862a36446d592b5e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732342"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949990"
 ---
 # <a name="prepare-the-input-trace-data"></a>Preparazione dei dati di traccia di input
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Prima di avviare una riesecuzione distribuita con la funzionalità Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario preparare i dati di traccia di input avviando la fase di pre-elaborazione dallo strumento di amministrazione Riesecuzione distribuita. Nella fase di pre-elaborazione Distributed Replay Controller elabora i dati di traccia e genera un file intermedio:  
   
- ![Distributed replay di pre-elaborazione fase](../../tools/distributed-replay/media/preprocess.gif "Distributed replay di pre-elaborazione fase")  
+ ![Fase pre-elaborazione Distributed Replay](../../tools/distributed-replay/media/preprocess.gif "Fase pre-elaborazione Distributed Replay")  
   
  Per altre informazioni sulla fase di pre-elaborazione, vedere [Riesecuzione distribuita di SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md).  
   

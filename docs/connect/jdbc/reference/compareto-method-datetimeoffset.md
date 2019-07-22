@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: e4cf2ea4-0fe9-40ce-ba79-f2a2b616997e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cb06138639be09378baa8dfe94d110c0ded41223
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3f70413a7624b9bbd380a664fbf61b9a33f8989b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955511"
 ---
 # <a name="compareto-method-datetimeoffset"></a>Metodo compareTo (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Confronta questo **DateTimeOffset** oggetto a altra **DateTimeOffset** oggetto in base all'ora gtm.  
+  Confronta questo oggetto **DateTimeOffset** con un altro oggetto **DateTimeOffset** in base all'ora GMT.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,9 +37,9 @@ public int compareTo(DateTimeOffset other)
   
 |Valore restituito|Descrizione|  
 |------------------|-----------------|  
-|0|Entrambe **DateTimeOffset** oggetti rappresentano lo stesso punto nel tempo.|  
-|numero negativo|Ciò **DateTimeOffset** oggetto rappresenta un punto nel tempo che precede *altri*.|  
-|numero positivo|Ciò **DateTimeOffset** oggetto rappresenta un punto nel tempo successivo *altri*.|  
+|0|Entrambi gli oggetti **DateTimeOffset** rappresentano lo stesso punto nel tempo.|  
+|numero negativo|Questo oggetto **DateTimeOffset** rappresenta un punto nel tempo precedente all' *altro*.|  
+|numero positivo|Questo oggetto **DateTimeOffset** rappresenta un punto nel tempo successivo a un *altro*.|  
   
 ## <a name="remarks"></a>Remarks  
  Quando due oggetti **DateTimeOffset** specificano la stessa ora GMT, non viene applicato alcun ordinamento aggiuntivo in base alla differenza.  

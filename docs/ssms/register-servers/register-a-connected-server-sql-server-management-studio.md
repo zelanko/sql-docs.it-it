@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 66e01df7c294a684e646af2864f0284813684bf5
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 24751639dcd0484bb31f1783ca936dddd3e9240c
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67683937"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68256306"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>Registrazione di un server connesso (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

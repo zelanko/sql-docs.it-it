@@ -28,14 +28,13 @@ helpviewer_keywords:
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c9beeacd220108b2df83049716387439f0e2a90
-ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
+ms.openlocfilehash: 046ce79c989fdfb24c6615968e6bad951aeb7280
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024897"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Creare tabelle e indici partizionati
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,13 +50,13 @@ ms.locfileid: "53414186"
   
 4.  Creazione o modifica di una tabella o un indice e specificazione dello schema di partizione come percorso di archiviazione.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per creare una tabella o un indice partizionato tramite:**  
   
@@ -75,7 +74,7 @@ ms.locfileid: "53414186"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  La creazione di una tabella partizionata richiede l'autorizzazione CREATE TABLE per il database e l'autorizzazione ALTER per lo schema in cui viene creata la tabella. La creazione di un indice partizionato richiede l'autorizzazione ALTER per la tabella o la vista in cui viene creato l'indice. Per la creazione di una tabella o un indice partizionato è richiesta una delle seguenti autorizzazioni aggiuntive:  
   
 -   Autorizzazione ALTER ANY DATASPACE. Questa autorizzazione viene concessa per impostazione predefinita al ruolo predefinito del server **sysadmin** e ai ruoli predefiniti del database **db_owner** e **db_ddladmin** .  
@@ -112,13 +111,13 @@ ms.locfileid: "53414186"
   
 #### <a name="to-create-a-partitioned-table"></a>Per creare una tabella partizionata  
   
-1.  Fare clic con il pulsante destro del mouse sulla tabella che si vuole partizionare e scegliere **Archiviazione**e quindi selezionare **Create Partition (Crea partizione)**.  
+1.  Fare clic con il pulsante destro del mouse sulla tabella che si vuole partizionare e scegliere **Archiviazione**e quindi selezionare **Create Partition (Crea partizione)** .  
   
 2.  Nella pagina **Creazione guidata partizione**della **relativa procedura guidata** fare clic su **Avanti**.  
   
 3.  Nella griglia **Colonne di partizionamento disponibili** della pagina **Seleziona una colonna di partizionamento** selezionare la colonna in cui partizionare la tabella. Nella griglia **Colonne di partizionamento disponibili** verranno visualizzate solo le colonne con i tipi di dati che possono essere utilizzati per partizionare dati. Se come colonna di partizionamento se ne sceglie una calcolata, la colonna deve essere definita come persistente.  
   
-     Le scelte disponibili per la colonna di partizionamento e per l'intervallo di valori sono determinate innanzitutto dalla possibilità di raggruppare i dati in modo logico. È possibile, ad esempio, scegliere di dividere i dati in raggruppamenti logici in base ai mesi o ai trimestri di un anno. Le query che verranno eseguite sui dati consentiranno di determinare se questo raggruppamento logico sia appropriato per la gestione delle partizioni delle tabelle. Come colonne di partizionamento possono essere usati tutti i tipi di dati tranne **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, tipi di dati alias o tipi di dati CLR definiti dall'utente.  
+     Le scelte disponibili per la colonna di partizionamento e per l'intervallo di valori sono determinate innanzitutto dalla possibilità di raggruppare i dati in modo logico. È possibile, ad esempio, scegliere di dividere i dati in raggruppamenti logici in base ai mesi o ai trimestri di un anno. Le query che verranno eseguite sui dati consentiranno di determinare se questo raggruppamento logico sia appropriato per la gestione delle partizioni delle tabelle. Come colonne di partizionamento possono essere usati tutti i tipi di dati tranne **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , tipi di dati alias o tipi di dati CLR definiti dall'utente.  
   
      In questa pagina sono disponibili le seguenti opzioni aggiuntive:  
   
@@ -261,7 +260,7 @@ ms.locfileid: "53414186"
   
  Creazione guidata partizione crea la funzione e lo schema di partizione, quindi applica il partizionamento alla tabella specificata. Per verificare il partizionamento della tabella, in Esplora oggetti fare clic con il pulsante destro del mouse sulla tabella e scegliere **Proprietà**. Fare clic sulla pagina **Archiviazione** . Nella pagina vengono visualizzate informazioni come il nome della funzione e dello schema di partizione e il numero di partizioni.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-create-a-partitioned-table"></a>Per creare una tabella partizionata  
   
@@ -269,7 +268,7 @@ ms.locfileid: "53414186"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio vengono creati i nuovi filegroup, una funzione di partizione e un schema di partizione. Una nuova tabella viene creata con lo schema di partizione specificato come percorso di archiviazione.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio vengono creati i nuovi filegroup, una funzione di partizione e un schema di partizione. Una nuova tabella viene creata con lo schema di partizione specificato come percorso di archiviazione.  
   
     ```  
     USE AdventureWorks2012;  

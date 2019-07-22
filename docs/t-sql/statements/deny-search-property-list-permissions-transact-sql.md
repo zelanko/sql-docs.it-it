@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 96513cb4-a9c0-4834-97a4-ddc0777b8415
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61961ff888b5de3ffa55ffb47c4986a60583b79e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: ad51052db3f5e86f5d349f8a4fc10fb46a5e311e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327712"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114806"
 ---
 # <a name="deny-search-property-list-permissions-transact-sql"></a>Autorizzazioni per l'elenco delle proprietà di ricerca DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -57,9 +56,9 @@ ON SEARCH PROPERTY LIST **::**_search_property_list_name_
 -   ruolo del database  
 -   ruolo applicazione  
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
--   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
--   utente del database sul quale viene eseguito il mapping a un certificato  
--   utente del database mappato a una chiave asimmetrica  
+-   utente del database di cui è stato eseguito il mapping a un gruppo di Windows  
+-   utente del database di cui è stato eseguito il mapping a un certificato  
+-   utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
 -   utente del database non mappato ad alcuna entità server.  
   
 CASCADE  
@@ -72,9 +71,9 @@ CASCADE
 -   ruolo del database  
 -   ruolo applicazione  
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
--   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
--   utente del database sul quale viene eseguito il mapping a un certificato  
--   utente del database mappato a una chiave asimmetrica  
+-   utente del database di cui è stato eseguito il mapping a un gruppo di Windows  
+-   utente del database di cui è stato eseguito il mapping a un certificato  
+-   utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
 -   utente del database non mappato ad alcuna entità server.  
   
 ## <a name="remarks"></a>Remarks  
@@ -90,7 +89,7 @@ CASCADE
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per il catalogo full-text. Se si utilizza l'opzione AS, l'entità specificata deve essere proprietaria del catalogo full-text.  
   
 ## <a name="see-also"></a>Vedere anche  

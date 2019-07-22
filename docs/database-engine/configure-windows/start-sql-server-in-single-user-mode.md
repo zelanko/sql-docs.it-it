@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 34e5533d442dbbc91807a533ba53ebcc8b115d19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1cb488b6ce3dc21567b4f64738f9c26910c61f17
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66775334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037158"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Avvio di SQL Server in modalità utente singolo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ Quando si usa l'opzione **-m** con **SQLCMD** o [!INCLUDE[ssManStudio](../../inc
 > [!NOTE]
 > In Linux **SQLCMD** deve essere scritto in maiuscolo come illustrato.
 
-Ad esempio, **-m"SQLCMD"** limita le connessioni a una singola connessione che deve identificarsi come programma client **SQLCMD**. Utilizzare questa opzione quando si avvia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità utente singolo e un'applicazione client sconosciuta accede all'unica connessione disponibile. Per connettersi con l'editor di query in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], usare **-m"Microsoft SQL Server Management Studio - Query"** .  
+Ad esempio, **-m"SQLCMD"** limita le connessioni a una singola connessione che deve identificarsi come programma client **SQLCMD**. Utilizzare questa opzione quando si avvia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modalità utente singolo e un'applicazione client sconosciuta accede all'unica connessione disponibile. Per connettersi con l'editor di query in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], usare **-m"Microsoft SQL Server Management Studio - Query"**.  
   
 > [!IMPORTANT]  
 >  Non utilizzare tale opzione come caratteristica di sicurezza. L'applicazione client fornisce il nome dell'applicazione client stessa e può indicare un nome falso come parte della stringa di connessione.  

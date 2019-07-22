@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: a6f41c5c-d950-4d64-9e42-d062925917b6
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: f7f822feaba2fd4f340a8c0b02088244c9373a52
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 304854a203b4c8e57a9dde003448c526de98bf24
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67682339"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68254567"
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>Finestra di dialogo Colonne indice full-text (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-In questa finestra di dialogo sono elencate le colonne utilizzate nell'indice full-text per la tabella aperta in Progettazione tabelle. Per accedere a tale finestra di dialogo, fare clic con il pulsante destro del mouse sulla tabella in Progettazione tabelle, scegliere **Indice full-text** e nella finestra di dialogo **Indice full-text** fare clic sull'indice con le colonne da visualizzare o modificare, nel campo **Colonne** nella griglia a destra e infine sui puntini di sospensione ( **...** ).  
+In questa finestra di dialogo sono elencate le colonne utilizzate nell'indice full-text per la tabella aperta in Progettazione tabelle. Per accedere a tale finestra di dialogo, fare clic con il pulsante destro del mouse sulla tabella in Progettazione tabelle, scegliere **Indice full-text** e nella finestra di dialogo **Indice full-text** fare clic sull'indice con le colonne da visualizzare o modificare, nel campo **Colonne** nella griglia a destra e infine sui puntini di sospensione (**...**).  
   
 ## <a name="options"></a>Opzioni  
 **Colonna**  

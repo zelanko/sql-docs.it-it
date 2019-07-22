@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 467d32e6-b47e-4095-9f8b-73e07fb814e8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cbe03e6e976908d359e7f5f34879f67105c3d9a7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6766181d669498dedd09a475d75315cb2770f414
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797264"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968758"
 ---
 # <a name="supportssubqueriesincomparisons-method-sqlserverdatabasemetadata"></a>Metodo supportsSubqueriesInComparisons (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsSubqueriesInComparisons()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se supportata. In caso contrario, **false**.  
+ **true** se supportato. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo supportsSubqueriesInComparisons viene specificato dal metodo supportsSubqueriesInComparisons nell'interfaccia DatabaseMetaData.  
+ Questo metodo supportsSubqueriesInComparisons viene specificato dal metodo supportsSubqueriesInComparisons nell'interfaccia java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

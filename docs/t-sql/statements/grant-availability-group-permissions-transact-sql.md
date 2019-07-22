@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 70a595b13bde3f013e07af02d0599b240a7bdbfc
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 15f7c220cbf167c91e052c18d61b2c0c579ea63e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065554"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>GRANT, autorizzazioni del gruppo di disponibilità (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +51,8 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  *permission*  
  Specifica un'autorizzazione che può essere concessa su un gruppo di disponibilità. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- ON AVAILABILITY GROUP **::**_availability_group_name_  
- Specifica il gruppo di disponibilità per cui viene concessa l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio.  
+ ON AVAILABILITY GROUP **::** _availability_group_name_  
+ Specifica il gruppo di disponibilità per cui viene concessa l'autorizzazione. Il qualificatore di ambito ( **::** ) è obbligatorio.  
   
  TO \<server_principal>  
  Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui viene concessa l'autorizzazione.  
@@ -93,7 +92,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
   
  Per un grafico di tutte le autorizzazioni del [!INCLUDE[ssDE](../../includes/ssde-md.md)], vedere il documento relativo alle [autorizzazioni del motore di database](https://aka.ms/sql-permissions-poster).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per il gruppo di disponibilità o l'autorizzazione ALTER ANY AVAILABILITY GROUP per il server.  
   
 ## <a name="examples"></a>Esempi  
@@ -107,7 +106,7 @@ GRANT VIEW DEFINITION ON AVAILABILITY GROUP::MyAg TO ZArifin;
 GO  
 ```  
   
-### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>b. Concessione dell'autorizzazione TAKE OWNERSHIP con GRANT OPTION  
+### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. Concessione dell'autorizzazione TAKE OWNERSHIP con GRANT OPTION  
  Nell'esempio seguente viene concessa l'autorizzazione `TAKE OWNERSHIP` per il gruppo di disponibilità `MyAg` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` con `GRANT OPTION`.  
   
 ```  

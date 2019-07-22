@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 574045de5626d3f573988b96dd3c40b3d08df03b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e90fcec386868a87ccca9faaf349dcb1a4064aff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795473"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997854"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Stimare l'interruzione del servizio durante il cambio di ruolo (mirroring del database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

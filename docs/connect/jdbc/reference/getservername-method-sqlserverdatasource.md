@@ -1,5 +1,5 @@
 ---
-title: Metodo getServerName (SQLServerDataSource) | Microsoft Docs
+title: Metodo GetServerName (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3004ed22-5d69-4dd0-8761-d39f0b7dde13
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8fd762ff700b543345dc9c2abbba3eabf6dcb2fb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 487d214dbdd6974442749dd0cff6ac24fe9d1977
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979949"
 ---
 # <a name="getservername-method-sqlserverdatasource"></a>Metodo getServerName (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

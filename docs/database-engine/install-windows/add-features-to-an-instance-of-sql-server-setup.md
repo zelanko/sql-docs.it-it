@@ -14,13 +14,12 @@ ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: jroth
-ms.openlocfilehash: 1d5cc341dfdf35bafdd8cca63e5b7fd330890551
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b7cdfe016a1010bef5322c3d39b7ee436437aa5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795038"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051198"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>Aggiungere funzionalità a un'istanza di SQL Server (programma di installazione)
 
@@ -49,7 +48,7 @@ ms.locfileid: "66795038"
   
 3.  Controllo configurazione sistema consentirà di eseguire un'operazione di individuazione nel computer. Per visualizzare i dettagli da verificare fare clic su **Visualizza dettagli**. Per continuare, [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
-4.  Nella pagina Aggiornamenti prodotto vengono visualizzati gli aggiornamenti più recenti sul prodotto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se non si vogliono includere gli aggiornamenti, deselezionare la casella di controllo **Includi aggiornamenti prodotto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Se non viene individuato alcun aggiornamento del prodotto, durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa pagina non viene visualizzata e viene aperta automaticamente la pagina **Installazione dei file di installazione** .  
+4.  Nella pagina Aggiornamenti prodotto vengono visualizzati gli aggiornamenti più recenti sul prodotto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se non si vogliono includere gli aggiornamenti, deselezionare la casella di controllo **Includi aggiornamenti prodotto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Se non viene individuato alcun aggiornamento del prodotto, durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa pagina non viene visualizzata e viene aperta automaticamente la pagina **Installazione dei file di installazione** .  
   
 5.  Nella pagina Installa i file di installazione viene mostrato lo stato di avanzamento del download, dell'estrazione e dell'installazione dei file di installazione. Se viene individuato un aggiornamento per il programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e ne viene specificata l'inclusione, verrà installato anche questo aggiornamento. Fare clic su **Installa** per installare i file di supporto per l'installazione.  
   

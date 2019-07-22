@@ -9,14 +9,13 @@ ms.technology: data-movement
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5c0cd5f10facf66c4f79ec1741d5cddcf3a3012
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f28d7905d8c5c7e37b95602aa3ee45cba4b9885
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946643"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063189"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>Importare ed esportare dati da SQL Server e dal database SQL di Microsoft Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

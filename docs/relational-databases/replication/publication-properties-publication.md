@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: da86b20dba26536626010d14c1f81a1bbd852156
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a7478f259dce1654584e3a9b50b081be0ea07f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65620376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908072"
 ---
 # <a name="sql-server-replication-publication-properties--dialog-box"></a>Finestra di dialogo Proprietà pubblicazione di replica di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +106,7 @@ Per ottimizzare le prestazioni dell'applicazione e ridurre la quantità di spazi
  **Trova tabella**  
  Solo per le pubblicazioni di tipo merge. Fare clic su **Trova tabella** per trovare una tabella in un'albero di filtro complesso. In un database con relazioni complesse una tabella può essere unita in join a più tabelle e pertanto può apparire in più posizioni all'interno dell'albero di filtro.  
   
- La tabella effettiva appare solo in una posizione all'interno dell'albero, mentre nelle altre posizioni è rappresentata da un collegamento. Un collegamento a una tabella è semplicemente un riferimento alla tabella e non ne visualizza i nodi figlio. Un nodo collegamento è contrassegnato dalla freccia di collegamento ed espandendo tale nodo viene visualizzato il testo **Fare clic su Trova tabella per vedere la tabella per \<NomeTabella>**.  
+ La tabella effettiva appare solo in una posizione all'interno dell'albero, mentre nelle altre posizioni è rappresentata da un collegamento. Un collegamento a una tabella è semplicemente un riferimento alla tabella e non ne visualizza i nodi figlio. Un nodo collegamento è contrassegnato dalla freccia di collegamento ed espandendo tale nodo viene visualizzato il testo **Fare clic su Trova tabella per vedere la tabella per \<NomeTabella>** .  
   
  Selezionare un nodo collegamento nel riquadro e fare clic su **Trova tabella** . Il riquadro verrà espanso e la tabella verrà evidenziata. Se si fa clic su **Trova tabella** senza aver selezionato un nodo collegamento verrà visualizzata la finestra di dialogo **Trova tabella** .  
   

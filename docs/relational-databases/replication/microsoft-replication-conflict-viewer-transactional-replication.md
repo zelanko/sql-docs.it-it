@@ -12,14 +12,13 @@ f1_keywords:
 ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f649899e0f68dda76a7b10ae661fa575df9b4781
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 807af3881bececb71e7e1570550f06336c588c03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130092"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018665"
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Visualizzatore conflitti di replica Microsoft (replica transazionale)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ ms.locfileid: "54130092"
  **Mostra le prime cinque colonne e le altre colonne con dati in conflitto**  
  Selezionare questa opzione per visualizzare le prime cinque colonne e tutte le colonne contenenti conflitti. Questa opzione risulta utile quando nella tabella sono presenti numerose colonne, ma si desidera visualizzare solo le colonne più significative per la risoluzione dei conflitti. Le prime cinque colonne vengono sempre visualizzate perché i campi di identificazione di una riga, ad esempio i campi del nome o della chiave primaria, sono solitamente inclusi tra le prime colonne della tabella.  
   
- **Visualizza informazioni sulla colonna** (**…**)  
+ **Visualizza informazioni sulla colonna** ( **…** )  
  Fare clic per visualizzare le informazioni sulla colonna: **Nome tabella**, **Nome colonna**, **Tipo di dati** e **Valore colonna**.  
   
  **Registra informazioni dettagliate sul conflitto**  

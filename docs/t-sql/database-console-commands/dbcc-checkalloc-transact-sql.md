@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 4e0bdec7737c98b8b28267344dd9b8e2acb86f1c
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: b1d4cfe23511175ab794cc505509133b4dfb745a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685548"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102130"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -121,7 +120,7 @@ Dopo il completamento del comando DBCC CHECKALLOC, nel log degli errori di [!INC
 |2|Si è verificato un errore durante un ripristino di database in modalità di emergenza.|  
 |3|Indica che il comando DBCC è stato terminato a causa di un danneggiamento dei metadati.|  
 |4|È stata rilevata una violazione di accesso o asserzione.|  
-|5|Si è verificato un errore sconosciuto che ha causato l'interruzione del comando DBCC.|  
+|5|il comando DBCC è stato terminato da un errore sconosciuto.|  
   
 ## <a name="error-reporting"></a>Segnalazione errori  
 Quando un comando DBCC CHECKALLOC rileva un errore di danneggiamento, viene creato un piccolo file di dump denominato SQLDUMP*nnnn*.txt nella directory LOG di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se le funzionalità di segnalazione degli errori e di raccolta di dati relativi all'utilizzo delle funzionalità sono abilitate per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il file verrà inoltrato automaticamente a [!INCLUDE[msCoName](../../includes/msconame-md.md)]. I dati raccolti consentono di migliorare la funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
@@ -228,7 +227,7 @@ Estimated TEMPDB space needed for CHECKALLOC (KB)
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 È richiesta l'appartenenza al ruolo predefinito del server sysadmin o al ruolo predefinito del database db_owner.
   
 ## <a name="examples"></a>Esempi  

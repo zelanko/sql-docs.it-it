@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d54c9880353ef8352624dcdd59cf187283fdd2e2
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 330bdd5e1857df0ad605ca42e3bd5f83c8072b8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558688"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127391"
 ---
 # <a name="shrink-a-file"></a>Compattare un file
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "51558688"
   
  Compattando i file di dati si recupera spazio spostando le pagine di dati dalla fine del file allo spazio non occupato più vicino all'inizio del file. Quando alla fine del file viene creato sufficiente spazio libero, le pagine di dati possono essere deallocate e restituite al file system.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -61,7 +60,7 @@ ms.locfileid: "51558688"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -133,7 +132,7 @@ ms.locfileid: "51558688"
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio si usano [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) per compattare le dimensioni di un file di dati denominato `DataFile1` nel database `UserDB` a 7 MB.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. In questo esempio si usano [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) per compattare le dimensioni di un file di dati denominato `DataFile1` nel database `UserDB` a 7 MB.  
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../relational-databases/databases/codesnippet/tsql/shrink-a-file_1.sql)]  
   

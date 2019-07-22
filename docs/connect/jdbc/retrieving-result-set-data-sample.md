@@ -1,5 +1,5 @@
 ---
-title: Recupero dei risultati Set di dati di esempio | Microsoft Docs
+title: Esempio di recupero dei dati del set di risultati | Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1b190c36-3d38-49a2-8599-612329675851
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e404752b21b4ea573cdc14469a6e41e5ab9db911
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 31be5c4755415da348f19d1104f930e366ced6eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781374"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945814"
 ---
 # <a name="retrieving-result-set-data-sample"></a>Esempio di recupero dei dati del set di risultati
 
@@ -32,7 +31,7 @@ Il file di codice per questo esempio è denominato RetrieveResultSet.java e si t
 
 ## <a name="requirements"></a>Requisiti
 
-Per eseguire questa applicazione di esempio, è necessario impostare il classpath in modo da includere il file con estensione jar mssql-jdbc. È anche necessario accedere al database di esempio di [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Per altre informazioni su come impostare il classpath, vedere [utilizza il Driver JDBC](../../connect/jdbc/using-the-jdbc-driver.md).
+Per eseguire questa applicazione di esempio, è necessario impostare il classpath in modo da includere il file con estensione jar mssql-jdbc. È anche necessario accedere al database di esempio di [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Per ulteriori informazioni su come impostare il classpath, vedere [utilizzo del driver JDBC](../../connect/jdbc/using-the-jdbc-driver.md).
 
 > [!NOTE]  
 > Con [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sono inclusi file di libreria di classi mssql-jdbc da usare a seconda delle impostazioni Java Runtime Environment (JRE) preferite. Per altre informazioni su quale file JAR scegliere, vedere [Requisiti di sistema per il driver JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).

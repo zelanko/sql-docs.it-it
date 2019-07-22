@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 3b67961b62e3d6629aaa23b485a96d855fe72a9c
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 4ed6e67bbf6f3fcda872650c2d3394d6311802b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914222"
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE (autorizzazioni di Service Broker) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,19 +62,19 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  Specifica un'autorizzazione che può essere revocata per un'entità a sicurezza diretta di [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Per un elenco di queste autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- CONTRACT **::**_contract_name_  
+ CONTRACT **::** _contract_name_  
  Specifica il contratto a cui viene revocata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
- MESSAGE TYPE **::**_message_type_name_  
+ MESSAGE TYPE **::** _message_type_name_  
  Specifica il tipo di messaggio a cui viene revocata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
- REMOTE SERVICE BINDING **::**_remote_binding_name_  
+ REMOTE SERVICE BINDING **::** _remote_binding_name_  
  Specifica l'associazione al servizio remoto a cui viene revocata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
- ROUTE **::**_route_name_  
+ ROUTE **::** _route_name_  
  Specifica la route a cui viene revocata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
- SERVICE **::**_message_type_name_  
+ SERVICE **::** _message_type_name_  
  Specifica il servizio a cui viene revocata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
  *database_principal*  
@@ -177,7 +176,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |ALTER|CONTROL|ALTER ANY SERVICE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessaria l'autorizzazione CONTROL per il contratto, il tipo di messaggio, l'associazione al servizio remoto, la route o il servizio di [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  

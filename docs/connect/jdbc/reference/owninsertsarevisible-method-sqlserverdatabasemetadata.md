@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9fe76aa3-a539-4335-822f-69cc35a9e7e0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 851074a7b9eb930dcb2f94d3e45a1aa055e8c606
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a78b6d90c58f7d04f5a3d9f6c8225cf592153d2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66789071"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976533"
 ---
 # <a name="owninsertsarevisible-method-sqlserverdatabasemetadata"></a>Metodo ownInsertsAreVisible (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,13 +58,13 @@ public boolean ownInsertsAreVisible(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se sono visibili le operazioni di inserimento. In caso contrario, **false**.  
+ **true** se gli inserimenti sono visibili. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo ownInsertsAreVisible viene specificato dal metodo ownInsertsAreVisible nell'interfaccia DatabaseMetaData.  
+ Questo metodo ownInsertsAreVisible viene specificato dal metodo ownInsertsAreVisible nell'interfaccia java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e90952527e5510d4a49fa7b7a72843c059686b96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e1844ae19de96b13b36fad59f5032fe68caaf19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102044"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069014"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Procedura dettagliata: Estendere la compilazione del progetto del database per generare statistiche del modello
 È possibile creare un collaboratore alla compilazione per eseguire azioni personalizzate quando si compila un progetto di database. In questa procedura dettagliata, si crea un collaboratore alla compilazione denominato ModelStatistics che restituisce statistiche dal modello di database SQL quando si compila un progetto di database. Poiché questo collaboratore alla compilazione accetta i parametri durante la compilazione, sono richiesti alcuni passaggi aggiuntivi.  
@@ -438,7 +437,7 @@ Per creare un collaboratore alla compilazione, è necessario effettuare le attiv
   
 3.  Fare clic su **Firma assembly**.  
   
-4.  In **Scegli un file chiave con nome sicuro** fare clic su **<New>** .  
+4.  In **Scegli un file chiave con nome sicuro** fare clic su **<New>**.  
   
 5.  Nella finestra di dialogo **Crea chiave con nome sicuro** , in **Nome file di chiave**, digitare **MyRefKey**.  
   
@@ -525,7 +524,7 @@ Dopo aver seguito uno di questi approcci, è possibile utilizzare MSBuild per pa
   
 1.  In Visual Studio fare clic con il pulsante destro del mouse sul progetto e selezionare "Ricompila". In questo modo il progetto verrà ricompilato ed è necessario verificare le statistiche del modello generate, con l'output incluso nell'output di compilazione e salvato in ModelStatistics.xml. Si noti che può essere necessario scegliere "Mostra tutti i file" in Esplora soluzioni per visualizzare il file XML.  
   
-2.  Aprire un prompt dei comandi di Visual Studio: dal menu **Start** scegliere **Tutti i programmi**, fare clic su **Microsoft Visual Studio <Visual Studio Version>** , su **Strumenti di Visual Studio** e quindi su **Prompt dei comandi di Visual Studio (<Visual Studio Version>)** .  
+2.  Aprire un prompt dei comandi di Visual Studio: dal menu **Start** scegliere **Tutti i programmi**, fare clic su **Microsoft Visual Studio <Visual Studio Version>**, su **Strumenti di Visual Studio** e quindi su **Prompt dei comandi di Visual Studio (<Visual Studio Version>)**.  
   
 3.  Al prompt dei comandi, passare alla cartella contenente il progetto SQL.  
   

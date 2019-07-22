@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: cf0ba215-cf83-48e0-bd98-a8ddc8810eab
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ce01f4820e24ea93693cd83f6a3a6ab1e508539
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 6b71f68ad0c85f95af5d069eae8249b1d729cb42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127105"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>Valore per proprietà estesa - finestra di dialogo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

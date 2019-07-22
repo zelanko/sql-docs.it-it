@@ -16,13 +16,12 @@ f1_keywords:
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cd48c91bee175e3cc2bdb0031d70a9d8e68d95c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce83808ac5953902f8f655c619f87feeffa4e8c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097508"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Procedura: Usare il confronto schema per confrontare definizioni di database diverse
 In SQL Server Data Tools (SSDT) è inclusa un'utilità Confronto schema che è possibile usare per confrontare due definizioni di database.  L'origine e la destinazione del confronto possono essere qualsiasi combinazione di un database connesso, un progetto di database di SQL Server, uno snapshot o un file con estensione dacpac.  I risultati del confronto vengono visualizzati come un set di azioni da intraprendere sulla destinazione per renderla uguale all'origine.  Una volta completato il confronto, è possibile aggiornare direttamente la destinazione (se la destinazione è un progetto o un database) oppure generare uno script di aggiornamento che produce gli stessi effetti.  

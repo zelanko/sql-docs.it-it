@@ -10,25 +10,24 @@ ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7f4ebdc95ec105b4905ae9886abc59afe68a1f40
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7a462fcb1e8fe91cc2a140716968bd6b6f188ac1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800502"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003749"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Passaggio 3: Modello di verifica per la connessione a SQL con Node.js
 
-![Download-FRECCIAGIÙ cerchiato](../../ssdt/media/download.png)[per scaricare il driver SQL Node. js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-FrecciaGIÙ-Circled](../../ssdt/media/download.png)[per scaricare il driver SQL node. js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-In questo esempio deve essere considerato un modello di verifica solo.  Il codice di esempio è semplificato per maggiore chiarezza e non rappresenta necessariamente le procedure consigliate da Microsoft. Altri esempi che usano le stesse funzioni fondamentali sono disponibili in Github:
+Questo esempio deve essere considerato solo un modello di prova.  Il codice di esempio è semplificato per maggiore chiarezza e non rappresenta necessariamente le procedure consigliate da Microsoft. Altri esempi che usano le stesse funzioni cruciali sono disponibili in GitHub:
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
 ## <a name="step-1-connect"></a>Passaggio 1: connettersi  
   
-Il **nuova connessione** funzione viene utilizzata per connettersi al Database SQL.  
+La **nuova** funzione di connessione viene utilizzata per la connessione al database SQL.  
   
 ```javascript  
     var Connection = require('tedious').Connection;  
@@ -49,7 +48,7 @@ Il **nuova connessione** funzione viene utilizzata per connettersi al Database S
 ## <a name="step-2--execute-a-query"></a>Passaggio 2: Eseguire una query  
   
   
-Tutte le istruzioni SQL vengono eseguite usando il **Request (nuova)** (funzione). Se l'istruzione restituisce righe, ad esempio un'istruzione select, è possibile recuperarli usando il **Request** (funzione). Se non sono presenti righe, la funzione Request restituisce elenchi vuoti.  
+Tutte le istruzioni SQL vengono eseguite utilizzando la **nuova funzione Request ()** . Se l'istruzione restituisce righe, ad esempio un'istruzione SELECT, è possibile recuperarle utilizzando la funzione **Request. on ()** . Se non sono presenti righe, la funzione request. on () restituisce elenchi vuoti.  
   
   
 ```javascript  
@@ -96,9 +95,9 @@ Tutte le istruzioni SQL vengono eseguite usando il **Request (nuova)** (funzione
     }  
 ```  
   
-## <a name="step-3-insert-a-row"></a>Passaggio 3: Inserire una riga  
+## <a name="step-3-insert-a-row"></a>Passaggio 3: inserire una riga  
   
-In questo esempio illustra come eseguire un' [inserire](../../t-sql/statements/insert-transact-sql.md) istruzione in modo sicuro, passare i parametri che proteggono l'applicazione dal [attacchi SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) valore.    
+In questo esempio si vedrà come eseguire un'istruzione [Insert](../../t-sql/statements/insert-transact-sql.md) in modo sicuro, passare i parametri che proteggono l'applicazione da un valore [SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) .    
   
   
 ```javascript  

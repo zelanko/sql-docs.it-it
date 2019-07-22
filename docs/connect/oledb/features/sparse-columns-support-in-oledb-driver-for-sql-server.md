@@ -13,41 +13,40 @@ helpviewer_keywords:
 - sparse columns, OLE DB
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 598d640362ea164673d198b0dc57b3743350673e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7b617ecdbf2977372dbb006baaec4c791b988ef8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802916"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988910"
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>Supporto per colonne di tipo sparse nel driver OLE DB per SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Driver OLE DB per SQL Server supporta colonne di tipo sparse. Per altre informazioni sulle colonne di tipo sparse [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vedere [usare le colonne di tipo Sparse](../../../relational-databases/tables/use-sparse-columns.md) e [usare set di colonne](../../../relational-databases/tables/use-column-sets.md).  
+  OLE DB driver per SQL Server supporta le colonne di tipo sparse. Per ulteriori informazioni sulle colonne di tipo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]sparse in, vedere [utilizzo di colonne di tipo sparse](../../../relational-databases/tables/use-sparse-columns.md) e [utilizzo di set di colonne](../../../relational-databases/tables/use-column-sets.md).  
   
- Per altre informazioni sul supporto di colonne di tipo sparse nel Driver OLE DB per SQL Server, [supportare colonne di tipo Sparse &#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md).  
+ Per ulteriori informazioni sul supporto delle colonne di tipo sparse nel driver OLE DB per SQL Server, le [colonne di tipo sparse supportano &#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md).  
   
  Per informazioni sulle applicazioni di esempio in cui viene illustrata questa funzionalità, vedere la [pagina relativa agli esempi di programmazione dati di SQL Server](https://msftdpprodsamples.codeplex.com/).  
   
-## <a name="user-scenarios-for-sparse-columns-and-ole-db-driver-for-sql-server"></a>Scenari utente per colonne di tipo Sparse e il Driver OLE DB per SQL Server  
- Nella tabella seguente sono riepilogati gli scenari comuni per Driver OLE DB per gli utenti di SQL Server con colonne di tipo sparse:  
+## <a name="user-scenarios-for-sparse-columns-and-ole-db-driver-for-sql-server"></a>Scenari utente per colonne di tipo sparse e driver OLE DB per SQL Server  
+ Nella tabella seguente sono riepilogati gli scenari utente comuni per OLE DB driver per SQL Server utenti con colonne di tipo sparse:  
   
 |Scenario|Comportamento|  
 |--------------|--------------|  
-|**Selezionare \* dalla tabella** o IOpenRowset:: OPENROWSET.|Restituisce tutte le colonne che non sono membri del set di colonne **column_set** di tipo sparse, nonché una colonna XML che contiene i valori di tutte le colonne non Null che sono membri del set di colonne **column_set** di tipo sparse.|  
+|**Select\* from table** o IOpenRowset:: OPENROWSET.|Restituisce tutte le colonne che non sono membri del set di colonne **column_set** di tipo sparse, nonché una colonna XML che contiene i valori di tutte le colonne non Null che sono membri del set di colonne **column_set** di tipo sparse.|  
 |Fare riferimento a una colonna in base al nome.|È possibile fare riferimento alla colonna indipendentemente dal relativo stato di colonna di tipo sparse o dall'appartenenza al set di colonne **column_set**.|  
 |Accedere alle colonne che sono membri del set di colonne **column_set** tramite una colonna XML calcolata.|È possibile accedere alle colonne che sono membri del set di colonne **column_set** di tipo sparse selezionando il set di colonne **column_set** in base al nome; inoltre, i valori di tali colonne possono essere inseriti e aggiornati aggiornando i dati XML nella colonna **column_set**.<br /><br /> Il valore deve essere conforme allo schema per le colonne **column_set**.|  
-|Recuperare i metadati per tutte le colonne in una tabella tramite il set di righe dello schema DBSCHEMA_COLUMNS senza restrizioni di colonna (OLE DB).|Restituisce una riga per tutte le colonne che non sono membri di un set di colonne **column_set**. Se la tabella include un set di colonne **column_set** di tipo sparse, verrà restituita una riga per la tabella.<br /><br /> Si noti che questo comportamento non restituisce metadati per colonne membri di un set di colonne **column_set**.|  
+|Recuperare i metadati per tutte le colonne di una tabella tramite il set di righe dello schema DBSCHEMA_COLUMNS senza alcuna restrizione di colonna (OLE DB).|Restituisce una riga per tutte le colonne che non sono membri di un set di colonne **column_set**. Se la tabella include un set di colonne **column_set** di tipo sparse, verrà restituita una riga per la tabella.<br /><br /> Si noti che questo comportamento non restituisce metadati per colonne membri di un set di colonne **column_set**.|  
 |Recuperare metadati per tutte le colonne, indipendentemente dal fatto che siano o meno di tipo sparse o dall'appartenenza a un set di colonne **column_set**. È possibile che venga restituito un numero molto elevato di righe.|Chiamare IDBSchemaRowset:: GetRowset per il set di righe dello schema DBSCHEMA_COLUMNS_EXTENDED.|  
 |Recuperare metadati solo per le colonne che sono membri di un set di colonne **column_set**. È possibile che venga restituito un numero molto elevato di righe.|Chiamare IDBSchemaRowset:: GetRowset per il set di righe dello schema DBSCHEMA_SPARSE_COLUMN_SET.|  
 |Determinare se una colonna è di tipo sparse.|Esaminare la colonna SS_IS_SPARSE del set di righe dello schema DBSCHEMA_COLUMNS (OLE DB).|  
-|Determinare se una colonna è una **column_set**.|Esaminare la colonna SS_IS_COLUMN_SET del set di righe dello schema DBSCHEMA_COLUMNS. O, consultare *dwFlags* restituiti da IColumnsInfo:: GetColumnInfo o DBCOLUMNFLAGS nel set di righe restituito da IColumnsRowset::. Per le colonne **column_set** sarà impostato DBCOLUMNFLAGS_SS_ISCOLUMNSET.|  
-|Importazione ed esportazione di colonne di tipo sparse tramite BCP per una tabella senza **column_set**.|Nessuna modifica nel comportamento rispetto alle versioni precedenti del Driver OLE DB per SQL Server.|  
-|Importazione ed esportazione di colonne di tipo sparse tramite BCP per una tabella con **column_set**.|Il **column_set** viene importato ed esportato nello stesso modo come XML; vale a dire come **varbinary (max)** se associato come tipo binario oppure come **nvarchar (max)** se associato come un **char** oppure **wchar** tipo.<br /><br /> Le colonne che sono membri del set di colonne **column_set** di tipo sparse non vengono esportate come colonne distinte, ma vengono esportate solo nel valore di **column_set**.|  
-|**QUERYOUT** comportamento per BCP.|Nessuna modifica nella gestione delle colonne denominate in modo esplicito rispetto alle versioni precedenti del Driver OLE DB per SQL Server.<br /><br /> Gli scenari che comportano l'importazione e l'esportazione tra tabelle con schemi diversi possono richiedere una gestione speciale.<br /><br /> Per ulteriori informazioni su BCP, vedere Supporto per la copia bulk (BCP) per colonne di tipo sparse più avanti in questo argomento.|  
+|Determinare se una colonna è un **column_set**.|Esaminare la colonna SS_IS_COLUMN_SET del set di righe dello schema DBSCHEMA_COLUMNS. In alternativa, consultare *dwFlags* restituito da IColumnsInfo:: GETCOLUMNINFO o DBCOLUMNFLAGS nel set di righe restituito da IColumnsRowset:: GetColumnsRowset. Per le colonne **column_set** sarà impostato DBCOLUMNFLAGS_SS_ISCOLUMNSET.|  
+|Importazione ed esportazione di colonne di tipo sparse tramite BCP per una tabella senza **column_set**.|Non sono state apportate modifiche al comportamento da versioni precedenti del driver OLE DB per SQL Server.|  
+|Importazione ed esportazione di colonne di tipo sparse tramite BCP per una tabella con **column_set**.|**Column_set** viene importato ed esportato in modo analogo a XML. ovvero, come **varbinary (max)** se associato come tipo binario o come **nvarchar (max)** se associato come tipo **char** o **WCHAR** .<br /><br /> Le colonne che sono membri del set di colonne **column_set** di tipo sparse non vengono esportate come colonne distinte, ma vengono esportate solo nel valore di **column_set**.|  
+|comportamento di **query** per BCP.|Non è stata apportata alcuna modifica alla gestione delle colonne denominate in modo esplicito da versioni precedenti del driver OLE DB per SQL Server.<br /><br /> Gli scenari che comportano l'importazione e l'esportazione tra tabelle con schemi diversi possono richiedere una gestione speciale.<br /><br /> Per ulteriori informazioni su BCP, vedere Supporto per la copia bulk (BCP) per colonne di tipo sparse più avanti in questo argomento.|  
   
 ## <a name="down-level-client-behavior"></a>Comportamento dei client legacy  
  I client restituiscono metadati solo per le colonne che non sono membri del set di colonne **column_set** di tipo sparse per SQLColumns e DBSCHMA_COLUMNS.
@@ -57,7 +56,7 @@ ms.locfileid: "66802916"
 ## <a name="bulk-copy-bcp-support-for-sparse-columns"></a>Supporto per la copia bulk (BCP) per colonne di tipo sparse  
  Non è stata apportata alcuna modifica all'API BCP in OLE DB per le colonne di tipo sparse e per le caratteristiche **column_set**.  
   
- Se una tabella include un set di colonne **column_set**, le colonne di tipo sparse non verranno gestite come colonne distinte. I valori di tutte le colonne di tipo sparse sono inclusi nel valore della **column_set**, che viene esportata esattamente come una colonna XML; vale a dire, come **varbinary (max)** se associato come tipo binario oppure come  **nvarchar (max)** se associato come un **char** oppure **wchar** tipo). Al momento dell'importazione, il **column_set** valore deve essere conforme allo schema del **column_set**.  
+ Se una tabella include un set di colonne **column_set**, le colonne di tipo sparse non verranno gestite come colonne distinte. I valori di tutte le colonne di tipo sparse sono inclusi nel valore di **column_set**, che viene esportato in modo analogo a una colonna XML. ovvero, come **varbinary (max)** se associato come tipo binario o come **nvarchar (max)** se associato come tipo **char** o **WCHAR** ). Durante l'importazione, il valore **column_set** deve essere conforme allo schema di **column_set**.  
   
  Per le operazioni **queryout** non esiste alcuna modifica al modo in cui sono gestite le colonne a cui si fa esplicitamente riferimento. Le colonne **queryout** dispongono dello stesso comportamento delle colonne XML e il fatto che siano o meno di tipo sparse non ha effetto sulla gestione delle colonne di tipo sparse denominate.  
   

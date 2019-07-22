@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b6b540227212058518a62debc6b113f31beab37
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a0df5b572fe7c26f250c2172e5fa87b9fd01da85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127126"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Aggiornamento di un database utilizzando le operazioni di scollegamento e collegamento (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 In questo argomento si illustra come utilizzare le operazioni di collegamento e scollegamento per aggiornare un database di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Dopo essere stato collegato a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database è immediatamente disponibile e viene aggiornato automaticamente. Questo impedisce l'uso del database con una versione precedente di [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Tuttavia l'aggiornamento dei metadati non interessa l'impostazione [Livello di compatibilità database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) per un database. Per altre informazioni, vedere [Livello di compatibilità del database dopo l'aggiornamento](#dbcompat) più avanti in questo argomento.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   

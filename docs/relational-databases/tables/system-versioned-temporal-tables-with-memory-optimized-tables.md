@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3bd467691d8b96a823013fa3f9f45655b0857cf0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16c081c33757e54a94683bae228264b51a3976ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62751621"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899208"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tabelle temporali con controllo delle versioni di sistema con tabelle con ottimizzazione per la memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ ms.locfileid: "62751621"
   
 -   La tabella consente di replicare lo schema della tabella temporale corrente e una colonna di tipo BIGINT. Questa colonna aggiuntiva garantisce l'univocità delle righe spostate nel buffer interno della cronologia.  
   
--   Il nome della colonna aggiuntiva ha il formato seguente: **Change_ID[_< suffisso>]** , dove *_\<suffisso>* viene aggiunto facoltativamente nel caso in cui la tabella includa già una colonna *Change_ID*.  
+-   Il nome della colonna aggiuntiva ha il formato seguente: **Change_ID[_< suffisso>]**, dove *_\<suffisso>* viene aggiunto facoltativamente nel caso in cui la tabella includa già una colonna *Change_ID*.  
   
 -   Le dimensioni massime delle righe per una tabella ottimizzata per la memoria con controllo delle versioni di sistema vengono ridotte di 8 byte a causa della colonna BIGINT aggiuntiva della tabella di staging. La nuova dimensione massima è ora di 8052 byte.  
   
@@ -77,7 +76,7 @@ ms.locfileid: "62751621"
  Lo scaricamento dei dati consente di eliminare tutti i record dal buffer in memoria interno precedenti alla transazione corrente meno recente al fine di spostare questi record sulla tabella di cronologia basata su disco.  
   
  È possibile applicare uno scaricamento dati chiamando [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md) e specificando il nome dello schema e della tabella:   
-**sys.sp_xtp_flush_temporal_history  @schema_name, @object_name** . Con questo comando eseguito dall'utente viene richiamato lo stesso processo di spostamento dei dati richiamato per questa attività dal sistema su pianificazione interna.  
+**sys.sp_xtp_flush_temporal_history  @schema_name, @object_name**. Con questo comando eseguito dall'utente viene richiamato lo stesso processo di spostamento dei dati richiamato per questa attività dal sistema su pianificazione interna.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle temporali](../../relational-databases/tables/temporal-tables.md)   

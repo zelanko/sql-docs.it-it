@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: bb67ce83-a87a-4e14-84cd-9a5930fe74c8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7d58efcf38da2e444a606967d2daa806c74df4b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6a59755f3c6675830324a314cbf364333e105c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099593"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140996"
 ---
 # <a name="how-to-view-and-edit-data-in-a-table"></a>Procedura: Visualizzare e modificare dati in una tabella
 È possibile visualizzare, modificare ed eliminare dati di una tabella esistente utilizzando un editor dei dati visivo.  

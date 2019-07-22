@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ee2c54b072cf9cd219bed10b0ade7f59fa8bc354
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66388abaf9e1434abd78d595da25fc08ebeea1b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65721517"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911517"
 ---
 # <a name="lesson-5-2-enable-and-configure-package-configurations"></a>Lezione 5-2: Abilitare e configurare le configurazioni di pacchetti
 
@@ -45,11 +44,11 @@ In questa attività si converte il progetto nel modello di distribuzione del pac
   
 7.  Tornare alla scheda **Flusso di controllo** e fare doppio clic sul contenitore **Foreach File in Folder** .  
   
-8.  Nella pagina **Raccolta** di **Editor ciclo Foreach** selezionare **Espressioni** e quindi il pulsante con i puntini di sospensione **(...)**.  
+8.  Nella pagina **Raccolta** di **Editor ciclo Foreach** selezionare **Espressioni** e quindi il pulsante con i puntini di sospensione **(...)** .  
   
 9. In **Editor espressioni di proprietà** fare clic nell'elenco **Proprietà** e selezionare **Directory**.  
   
-10. Nella casella **Espressione** selezionare il pulsante con i puntini di sospensione **(...)**.  
+10. Nella casella **Espressione** selezionare il pulsante con i puntini di sospensione **(...)** .  
   
 11. In **Generatore di espressioni** espandere la cartella di **variabili e parametri** e trascinare la variabile **User::varFolderName** nella casella **Espressione**.  
   
@@ -109,7 +108,7 @@ In questa attività si converte il progetto nel modello di distribuzione del pac
   
 ## <a name="create-and-populate-a-new-sample-data-folder"></a>Creare e popolare una nuova cartella di dati di esempio  
   
-1.  In Esplora risorse di Windows creare al livello di radice dell'unità disco, ad esempio **C:\\**, una cartella denominata **New Sample Data**.  
+1.  In Esplora risorse di Windows creare al livello di radice dell'unità disco, ad esempio **C:\\** , una cartella denominata **New Sample Data**.  
   
 2.  Individuare i file di esempio nel computer e copiare tre dei file nella cartella.  
   

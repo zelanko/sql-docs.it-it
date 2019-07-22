@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 640c0a4fb5c34deb3eb2fd58fdcafa11fa897117
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13eb5b436bc813ae448fd88045e2726ab6a0ebcc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783495"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972225"
 ---
 # <a name="settrustmanagerconstructorarg-method-sqlserverdatasource"></a>Metodo setTrustManagerConstructorArg (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Imposta il valore di stringa della proprietà di connessione TrustManagerConstructorArg.
+  Imposta il valore stringa della proprietà di connessione Trustmanagerclass.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -38,7 +37,7 @@ public void setTrustManagerConstructorArg(java.lang.String trustManagerClass)
 #### <a name="parameters"></a>Parametri  
  *trustManagerClass*  
   
- Oggetto **stringa** che contiene il nome completo della classe di un javax.net.ssl.TrustManager personalizzato.
+ **Stringa** che contiene il nome completo della classe di un oggetto javax. NET. SSL. TrustManager personalizzato.
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

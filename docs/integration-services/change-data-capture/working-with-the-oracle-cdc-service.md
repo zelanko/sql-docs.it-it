@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5fecc4e8454842c059ecd74ca7da5e78135342c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1844396dfda42dd7a20292977b792dd731fbb3cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728426"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898935"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Utilizzo del servizio Oracle CDC
 
@@ -113,7 +112,7 @@ ms.locfileid: "65728426"
 |ref_count|Tramite questo elemento viene contato il numero di computer in cui è installato lo stesso servizio Oracle CDC. A ogni aggiunta di un servizio Oracle CDC con lo stesso nome il conteggio aumenta, mentre diminuisce alla rimozione di un servizio. Quando il conteggio raggiunge lo zero, questa riga viene eliminata.|  
 |active_service_node|Nome del nodo Windows che attualmente gestisce il servizio CDC. Quando il servizio viene arrestato correttamente, questa colonna viene impostata su null, per indicare che non vi sono più servizi attivi.|  
 |active_service_heartbeat|Tramite questo elemento si tiene traccia del servizio CDC corrente per determinare se è ancora attivo.<br /><br /> Questo elemento viene aggiornato con il timestamp UTC del database corrente per il servizio CDC attivo a intervalli regolari. L'intervallo predefinito è 30 secondi, anche se può essere configurato.<br /><br /> Quando un servizio CDC in sospeso rileva che l'heartbeat non è stato aggiornato dopo il superamento dell'intervallo configurato, il servizio in sospeso tenta di assumere il ruolo del servizio CDC attivo.|  
-|opzioni|Questo elemento specifica le opzioni secondarie, ad esempio traccia o ottimizzazione. Presenta il formato **name[=value][; ]** . La stringa delle opzioni utilizza la stessa semantica della stringa di connessione ODBC. Se l'opzione è Boolean (con un valore yes/no), il valore può includere solo il nome.<br /><br /> trace può avere i valori seguenti.<br /><br /> **true**<br /><br /> **on**<br /><br /> **false**<br /><br /> **off**<br /><br /> **\<nome classe[,nome classe>]**<br /><br /> <br /><br /> Il valore predefinito è **false**.<br /><br /> **service_heartbeat_interval** è l'intervallo di tempo (in secondi) entro il quale il servizio può aggiornare la colonna active_service_heartbeat. Il valore predefinito è **30**. Il valore massimo è **3600**.<br /><br /> **service_config_polling_interval** è l'intervallo di polling (in secondi) entro il quale il servizio CDC deve individuare eventuali modifiche apportate alla configurazione. Il valore predefinito è **30**. Il valore massimo è **3600**.<br /><br /> **sql_command_timeout** è il timeout comando che funziona con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il valore predefinito è **1**. Il valore massimo è **3600**.|  
+|opzioni|Questo elemento specifica le opzioni secondarie, ad esempio traccia o ottimizzazione. Presenta il formato **name[=value][; ]**. La stringa delle opzioni utilizza la stessa semantica della stringa di connessione ODBC. Se l'opzione è Boolean (con un valore yes/no), il valore può includere solo il nome.<br /><br /> trace può avere i valori seguenti.<br /><br /> **true**<br /><br /> **on**<br /><br /> **false**<br /><br /> **off**<br /><br /> **\<nome classe[,nome classe>]**<br /><br /> <br /><br /> Il valore predefinito è **false**.<br /><br /> **service_heartbeat_interval** è l'intervallo di tempo (in secondi) entro il quale il servizio può aggiornare la colonna active_service_heartbeat. Il valore predefinito è **30**. Il valore massimo è **3600**.<br /><br /> **service_config_polling_interval** è l'intervallo di polling (in secondi) entro il quale il servizio CDC deve individuare eventuali modifiche apportate alla configurazione. Il valore predefinito è **30**. Il valore massimo è **3600**.<br /><br /> **sql_command_timeout** è il timeout comando che funziona con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il valore predefinito è **1**. Il valore massimo è **3600**.|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>Stored procedure del database MSXDBCDC  
@@ -162,7 +161,7 @@ ms.locfileid: "65728426"
 ###  <a name="BKMK_dboxcbcdc_add_service"></a> dbo.xcbcdc_add_service(svcname,sqlusr)  
  Tramite la stored procedure **dbo.xcbcdc_add_service** è possibile aggiungere una voce alla tabella **MSXDBCDC.xdbcdc_services** e un incremento di uno alla colonna ref_count per il nome del servizio nella tabella **MSXDBCDC.xdbcdc_services** . Quando **ref_count** è pari a 0, la riga viene eliminata.  
   
- Per usare la stored procedure **dbo.xcbcdc_add_service\<nome servizio, nome utente>** , l'utente deve essere un membro del ruolo del database **db_owner** per l'istanza di CDC da rinominare oppure un membro del ruolo predefinito del server **sysadmin** o **serveradmin**.  
+ Per usare la stored procedure **dbo.xcbcdc_add_service\<nome servizio, nome utente>**, l'utente deve essere un membro del ruolo del database **db_owner** per l'istanza di CDC da rinominare oppure un membro del ruolo predefinito del server **sysadmin** o **serveradmin**.  
   
 ###  <a name="BKMK_dboxdbcdc_start"></a> dbo.xdbcdc_start(dbname)  
  Tramite la stored procedure **dbo.xdbcdc_start** è possibile inviare una richiesta di avvio al servizio CDC che gestisce l'istanza di CDC selezionata per avviare l'elaborazione delle modifiche.  
@@ -177,7 +176,7 @@ ms.locfileid: "65728426"
 ##  <a name="BKMK_CDCdatabase"></a> Database CDC  
  Ogni istanza di Oracle CDC utilizzata in un servizio CDC è associata a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specifico denominato database CDC. Questo database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è ospitato nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associata a un servizio Oracle CDC.  
   
- Il database CDC contiene uno schema cdc speciale. Il servizio Oracle CDC usa questo schema con i nomi di tabella con prefisso **xdbcdc_** . Questo schema viene utilizzato a scopo di sicurezza e coerenza.  
+ Il database CDC contiene uno schema cdc speciale. Il servizio Oracle CDC usa questo schema con i nomi di tabella con prefisso **xdbcdc_**. Questo schema viene utilizzato a scopo di sicurezza e coerenza.  
   
  Sia i database CDC sia l'istanza di Oracle CDC vengono creati tramite Oracle CDC Designer Console. Per ulteriori informazioni sui database CDC, vedere la documentazione inclusa con l'installazione di Oracle CDC Designer Console.  
   
@@ -222,7 +221,7 @@ ms.locfileid: "65728426"
   
  **sql-username**e **sql-password** sono le credenziali di autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da aggiornare. Se per sqlacct non sono stati specificati password e nome utente, la connessione tra il servizio Oracle CDC e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene effettuata tramite l'autenticazione di Windows.  
   
- **Nota**: qualsiasi parametro contenente spazi o virgolette doppie deve essere racchiuso tra virgolette doppie ("). Le virgolette doppie incorporate devono essere raddoppiate, ad esempio per usare **"A#B" D** come password immettere **""A#B"" D"** .  
+ **Nota**: qualsiasi parametro contenente spazi o virgolette doppie deve essere racchiuso tra virgolette doppie ("). Le virgolette doppie incorporate devono essere raddoppiate, ad esempio per usare **"A#B" D** come password immettere **""A#B"" D"**.  
   
 ###  <a name="BKMK_create"></a> Create  
  Utilizzare `Create` per creare un servizio Oracle CDC da uno script. Il comando deve essere eseguito dall'amministratore di un computer. Di seguito è riportato un esempio del comando `Create` :  
@@ -248,7 +247,7 @@ ms.locfileid: "65728426"
   
  **sql-username**e **sql-password** sono il nome dell'account e la password di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usati per la connessione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se entrambi questi parametri sono vuoti, la connessione tra il servizio CDC per Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene effettuata utilizzando l'autenticazione di Windows.  
   
- **Nota**: qualsiasi parametro contenente spazi o virgolette doppie deve essere racchiuso tra virgolette doppie ("). Le virgolette doppie incorporate devono essere raddoppiate, ad esempio per usare **"A#B" D** come password immettere **""A#B"" D"** .  
+ **Nota**: qualsiasi parametro contenente spazi o virgolette doppie deve essere racchiuso tra virgolette doppie ("). Le virgolette doppie incorporate devono essere raddoppiate, ad esempio per usare **"A#B" D** come password immettere **""A#B"" D"**.  
   
 ###  <a name="BKMK_delete"></a> Elimina  
  Utilizzare `Delete` per eliminare il servizio Oracle CDC da uno script. Questo comando deve essere eseguito dall'amministratore di un computer. Di seguito è riportato un esempio del comando `Delete` .  
@@ -263,7 +262,7 @@ ms.locfileid: "65728426"
   
  **cdc-service-name** è il nome del servizio CDC da eliminare.  
   
- **Nota**: qualsiasi parametro contenente spazi o virgolette doppie deve essere racchiuso tra virgolette doppie ("). Le virgolette doppie incorporate devono essere raddoppiate, ad esempio per usare **"A#B" D** come password immettere **""A#B"" D"** .  
+ **Nota**: qualsiasi parametro contenente spazi o virgolette doppie deve essere racchiuso tra virgolette doppie ("). Le virgolette doppie incorporate devono essere raddoppiate, ad esempio per usare **"A#B" D** come password immettere **""A#B"" D"**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Procedura di utilizzo dell'interfaccia della riga di comando del servizio CDC](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)   

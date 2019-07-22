@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d1c0b3c7332fdb2583800f3aa600175f06f8928f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17e12a45f8f5aa9e94936a85f62d21c88ccb8c08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62999594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134827"
 ---
 # <a name="delete-a-data-tier-application"></a>Eliminazione di un'applicazione livello dati
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ ms.locfileid: "62999594"
   
  **Non visualizzare più questa pagina** - Fare clic sulla casella di controllo per evitare che la pagina venga visualizzata nuovamente in futuro.  
   
- **Avanti >** : consente di passare alla pagina **Seleziona metodo**.  
+ **Avanti >**: consente di passare alla pagina **Seleziona metodo**.  
   
  **Annulla** : consente di terminare la procedura guidata senza eliminare un'applicazione livello dati o un database.  
   
@@ -105,7 +104,7 @@ ms.locfileid: "62999594"
   
  **< Indietro**: consente di tornare alla pagina **Introduzione**.  
   
- **Avanti >** : consente di passare alla pagina **Riepilogo**.  
+ **Avanti >**: consente di passare alla pagina **Riepilogo**.  
   
  **Annulla** : consente di terminare la procedura guidata senza eliminare l'applicazione livello dati o il database.  
   
@@ -118,7 +117,7 @@ ms.locfileid: "62999594"
   
  **< Indietro**: consente di tornare alla pagina **Seleziona metodo** per selezionare un altro metodo di eliminazione.  
   
- **Avanti >** : consente di eliminare l'istanza DAC usando il metodo selezionato nella pagina precedente e passare alla pagina **Elimina applicazione del livello dati**.  
+ **Avanti >**: consente di eliminare l'istanza DAC usando il metodo selezionato nella pagina precedente e passare alla pagina **Elimina applicazione del livello dati**.  
   
  **Annulla** : consente di terminare la procedura guidata senza eliminare l'istanza di applicazione livello dati.  
   

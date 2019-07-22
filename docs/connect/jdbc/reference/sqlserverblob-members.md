@@ -1,5 +1,5 @@
 ---
-title: I membri di SQLServerBlob | Microsoft Docs
+title: Membri di SQLServerBlob | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 90e48555-ea83-4a90-80a3-51bc685015ec
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 96746297f7ff083665c1ef79a0b672cb8c4bb124
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 81ce2d655214de3d31eb233deb4de2b1c3ae49f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971951"
 ---
 # <a name="sqlserverblob-members"></a>Membri di SQLServerBlob
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

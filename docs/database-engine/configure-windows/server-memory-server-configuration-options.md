@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: b3fd6813d68dd1562a001206d759ebd09f34ef12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 384647c51e738bf96335ac481fcc250476748ae2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66771921"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025606"
 ---
 # <a name="server-memory-server-configuration-options"></a>Opzioni di configurazione del server Server Memory
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ L'impostazione predefinita per **min server memory** è 0, mentre quella per **m
 La quantità di memoria minima consentita per **max server memory** è 128 MB.
   
 > [!IMPORTANT]  
-> Se si imposta **max server memory** su un valore troppo alto, una singola istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe essere in competizione per la memoria con altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ospitate nello stesso host. Tuttavia, un valore troppo basso per questa impostazione potrebbe causare un utilizzo molto elevato di memoria e problemi di prestazioni. L'impostazione di **max server memory** sul valore minimo può persino impedire l'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se non è possibile avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dopo la modifica di questa opzione, usare l'opzione di avvio ** _-f_** e reimpostare **max server memory** sul valore precedente. Per altre informazioni, vedere [Opzioni di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
+> Se si imposta **max server memory** su un valore troppo alto, una singola istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe essere in competizione per la memoria con altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ospitate nello stesso host. Tuttavia, un valore troppo basso per questa impostazione potrebbe causare un utilizzo molto elevato di memoria e problemi di prestazioni. L'impostazione di **max server memory** sul valore minimo può persino impedire l'avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se non è possibile avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dopo la modifica di questa opzione, usare l'opzione di avvio **_-f_** e reimpostare **max server memory** sul valore precedente. Per altre informazioni, vedere [Opzioni di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
     
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può usare la memoria in modo dinamico. È possibile, tuttavia, impostare manualmente le opzioni per la memoria e limitare la quantità di memoria a cui può accedere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Prima di impostare la quantità di memoria per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], determinare l'impostazione appropriata per la memoria sottraendo dalla memoria fisica totale la memoria necessaria per il sistema operativo, per le allocazioni di memoria non controllate dall'impostazione max server memory e per qualsiasi altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nonché per eventuali altri utilizzi del sistema se il computer non è completamente dedicato a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La differenza così ottenuta rappresenta la quantità di memoria massima assegnabile all'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  
@@ -56,7 +55,7 @@ Le opzioni per la memoria **min server memory** e **max server memory** possono 
   
 <a name="max_server_memory"></a> Usare **max server memory** per garantire che il sistema operativo non subisca un pregiudizievole utilizzo elevato di memoria. Per impostare la configurazione di max server memory, monitorare il consumo complessivo del processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per determinare i requisiti di memoria. Per ottenere calcoli più precisi per una singola istanza:
  -  Dalla memoria totale del sistema operativo riservare 1-4 GB al sistema operativo stesso.
- -  Sottrarre quindi l'equivalente delle allocazioni di memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potenziali dal controllo **max server memory** costituito da **_dimensioni dello stack <sup>1</sup> \* numero massimo thread di lavoro calcolati <sup>2</sup> + parametro di avvio -g <sup>3</sup>_ ** (o 256 MB per impostazione predefinita se *-g* non è impostato). Il valore restante dovrebbe corrispondere all'impostazione di max server memory per la configurazione di una singola istanza.
+ -  Sottrarre quindi l'equivalente delle allocazioni di memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potenziali dal controllo **max server memory** costituito da **_dimensioni dello stack <sup>1</sup> \* numero massimo thread di lavoro calcolati <sup>2</sup> + parametro di avvio -g <sup>3</sup>_** (o 256 MB per impostazione predefinita se *-g* non è impostato). Il valore restante dovrebbe corrispondere all'impostazione di max server memory per la configurazione di una singola istanza.
  
 <sup>1</sup> Fare riferimento alla [Guida sull'architettura di gestione della memoria](../../relational-databases/memory-management-architecture-guide.md#stacksizes) per informazioni sulle dimensioni degli stack di thread per ogni architettura.
 

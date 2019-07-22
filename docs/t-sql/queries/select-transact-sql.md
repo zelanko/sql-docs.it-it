@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b92d260901efdec91add2d785774bfd826c8b46
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 160d2e384dec5a0c0f3cc5ff40bcf62e3941d096
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334688"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948283"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -141,7 +140,7 @@ SELECT <select_criteria>
 >
 > Si supponga, ad esempio, di avere un indice cluster in una vista, che la vista escluda alcune righe di tabella e che l'elenco della colonna SELECT della vista usi una funzione CONVERT che modifica un tipo di dati da *varchar* a *integer*. In questo caso la funzione CONVERT può essere eseguita prima della clausola WHERE. Si tratta di una situazione molto insolita. Spesso è possibile modificare la vista per evitare una sequenza diversa, se è importante nel caso specifico. 
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  La selezione di dati richiede l'autorizzazione **SELECT** per la tabella o la vista che potrebbe essere ereditata da un ambito più elevato, ad esempio l'autorizzazione **SELECT** per lo schema o l'autorizzazione **CONTROL** per la tabella. Oppure richiede l'appartenenza al ruolo predefinito del database **db_datareader** o **db_owner** o il ruolo predefinito del server **sysadmin**. La creazione di una nuova tabella tramite **SELECTINTO** richiede anche le autorizzazioni **CREATETABLE** e **ALTERSCHEMA** per lo schema proprietario della nuova tabella.  
   
 ## <a name="examples"></a>Esempi:   
@@ -182,7 +181,7 @@ AND MaritalStatus = 'M'
 ORDER BY LastName;  
 ```  
   
-### <a name="b-using-select-with-column-headings-and-calculations"></a>b. Utilizzo dell'istruzione SELECT con intestazioni e calcoli di colonna  
+### <a name="b-using-select-with-column-headings-and-calculations"></a>B. Utilizzo dell'istruzione SELECT con intestazioni e calcoli di colonna  
  Nell'esempio seguente vengono restituite tutte le righe della tabella `DimEmployee` e viene calcolata la retribuzione lorda per ogni dipendente in base al valore di `BaseRate` e considerando 40 ore di lavoro alla settimana.  
   
 ```sql  

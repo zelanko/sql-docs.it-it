@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: a6b1df2a-06ed-4fc3-8a84-f0becd5810d5
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4e605de455f3b02d618349ee41335cc21b248f02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bde8e1552b13f165d928f1e9275512e22426f9f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691513"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078848"
 ---
 # <a name="lockacquired-event-class"></a>Classe Lock:Acquired Event
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

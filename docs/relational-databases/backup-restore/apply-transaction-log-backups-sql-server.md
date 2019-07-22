@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 777b83d5021a61ea42610680d52345ad4ca001b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b59c6973c8b1662d61a0ec022eba830558d51cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64478539"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934546"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Applicazione dei backup di log delle transazioni (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,11 +54,11 @@ ms.locfileid: "64478539"
 |Time|Evento|  
 |----------|-----------|  
 |8\.00|Backup del database per creare un backup completo del database.|  
-|12\.00|Backup del log delle transazioni|  
-|16\.00|Backup del log delle transazioni|  
-|18\.00|Backup del database per creare un backup completo del database.|  
-|20\.00|Backup del log delle transazioni|  
-|21\.45|Si verifica un errore.|  
+|12.00|Backup del log delle transazioni|  
+|16.00|Backup del log delle transazioni|  
+|18.00|Backup del database per creare un backup completo del database.|  
+|20.00|Backup del log delle transazioni|  
+|21.45|Si verifica un errore.|  
   
 > Per la spiegazione di questa sequenza esemplificativa di backup, vedere [Backup di log delle transazioni &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 71c55c20-439e-4897-aef5-f20e556d668f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 403cef4e8c1e3336be9a2d7df8ae8c14a06f045b
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 578026f567fc844cf2d0fdd13ce53d83e23f24ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898194"
 ---
 # <a name="drop-cryptographic-provider-transact-sql"></a>DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
   
  In presenza di chiavi associate a un provider EKM, una volta eliminato i GUID per le chiavi restano memorizzati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se successivamente viene creato un provider con gli stessi GUID chiave, le chiavi verranno riutilizzate.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per la chiave simmetrica.  
   
 ## <a name="examples"></a>Esempi  

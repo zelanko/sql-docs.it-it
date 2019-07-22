@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: c2addb0ed4dea6114b1abaa5e7474d6de6912f75
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 5389413091f57a5a0dfdad887edad675ee68ff64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136926"
 ---
 # <a name="change-workload-group-settings"></a>Modificare le impostazioni dei gruppi di carico di lavoro
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "55689814"
   
  Per la creazione dell'indice è possibile utilizzare un'area di lavoro per la memoria maggiore rispetto a quanto inizialmente garantito per le prestazioni. Questa speciale gestione è supportata da Resource Governor, tuttavia, la concessione iniziale ed eventuali concessioni di memoria aggiuntiva sono limitate dalle impostazioni di gruppo del carico di lavoro e dal pool di risorse.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorizzazioni  
  Per modificare le impostazioni di un gruppo di carico di lavoro è necessaria l'autorizzazione CONTROL SERVER.  
   
 ##  <a name="ChgWGProp"></a> Modificare le impostazioni di un gruppo di carico di lavoro utilizzando SQL Server Management Studio  

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5d923201600adcf0e1bb4026e3feee28dea7e97
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 37da86b825ee68be83d0aa653005a1ea12db5ed7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327622"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050814"
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>GRANT (autorizzazioni per schemi) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,9 +55,9 @@ GRANT permission  [ ,...n ] ON SCHEMA :: schema_name
 -   ruolo del database  
 -   ruolo applicazione  
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
--   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
--   utente del database sul quale viene eseguito il mapping a un certificato  
--   utente del database mappato a una chiave asimmetrica  
+-   utente del database di cui è stato eseguito il mapping a un gruppo di Windows  
+-   utente del database di cui è stato eseguito il mapping a un certificato  
+-   utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
 -   utente del database non mappato ad alcuna entità server.  
   
 GRANT OPTION  
@@ -71,15 +70,15 @@ AS *granting_principal*
 -   ruolo del database  
 -   ruolo applicazione  
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
--   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
--   utente del database sul quale viene eseguito il mapping a un certificato  
--   utente del database mappato a una chiave asimmetrica  
+-   utente del database di cui è stato eseguito il mapping a un gruppo di Windows  
+-   utente del database di cui è stato eseguito il mapping a un certificato  
+-   utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
 -   utente del database non mappato ad alcuna entità server.  
   
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  Una combinazione di autorizzazioni ALTER e REFERENCE potrebbe consentire in alcuni casi al beneficiario di visualizzare dati o eseguire funzioni non autorizzate. Ad esempio un utente con autorizzazione ALTER per una tabella e autorizzazione REFERENCE per una funzione può creare una colonna calcolata su una funzione e determinarne l'esecuzione. In questo caso, è inoltre necessario disporre dell'autorizzazione SELECT per la colonna calcolata.  
+>  Una combinazione di autorizzazioni ALTER e REFERENCE potrebbe consentire in alcuni casi al beneficiario di visualizzare dati o eseguire funzioni non autorizzate. Esempio: un utente con autorizzazione ALTER per una tabella e autorizzazione REFERENCE per una funzione può creare una colonna calcolata su una funzione e determinarne l'esecuzione. In questo caso, è inoltre necessario disporre dell'autorizzazione SELECT per la colonna calcolata.  
   
  Uno schema è un'entità a protezione diretta a livello di database contenuta nel database padre nella gerarchia di autorizzazioni. Di seguito sono elencate le autorizzazioni più specifiche e limitate che è possibile concedere per uno schema, insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
@@ -111,7 +110,7 @@ AS *granting_principal*
   
  Per ulteriori informazioni, vedere l'articolo della Knowledge Base 914847.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'utente che concede le autorizzazioni (o l'entità specificata con l'opzione AS) deve disporre della relativa autorizzazione con GRANT OPTION oppure di un'autorizzazione di livello superiore che include l'autorizzazione che viene concessa.  
   
  Se si usano l'opzione AS, sono previsti questi requisiti aggiuntivi.  
@@ -139,7 +138,7 @@ AS *granting_principal*
 GRANT INSERT ON SCHEMA :: HumanResources TO guest;  
 ```  
   
-### <a name="b-granting-select-permission-on-schema-person-to-database-user-wiljo"></a>b. Concessione dell'autorizzazione SELECT per lo schema Person all'utente di database WilJo  
+### <a name="b-granting-select-permission-on-schema-person-to-database-user-wiljo"></a>B. Concessione dell'autorizzazione SELECT per lo schema Person all'utente di database WilJo  
   
 ```  
 GRANT SELECT ON SCHEMA :: Person TO WilJo WITH GRANT OPTION;  

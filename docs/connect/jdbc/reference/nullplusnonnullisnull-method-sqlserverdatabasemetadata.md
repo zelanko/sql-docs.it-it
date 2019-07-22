@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c594736f-3a9b-463f-bbd8-eaf9221230ea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 096113ec5fa76be364dcf7e51fd3d457a2a76f1f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 314c3bd05db19d795ce203308b9a9ab87a10e338
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976734"
 ---
 # <a name="nullplusnonnullisnull-method-sqlserverdatabasemetadata"></a>Metodo nullPlusNonNullIsNull (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean nullPlusNonNullIsNull()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se sono supportate le concatenazioni. In caso contrario, **false**.  
+ **true** se le concatenazioni sono supportate. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo nullPlusNonNullIsNull viene specificato dal metodo nullPlusNonNullIsNull nell'interfaccia DatabaseMetaData.  
+ Questo metodo nullPlusNonNullIsNull viene specificato dal Metodo nullPlusNonNullIsNull nell'interfaccia java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   

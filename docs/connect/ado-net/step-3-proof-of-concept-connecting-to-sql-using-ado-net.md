@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3ceea73eba8f1c01590218c106f3b2b10237408e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 743eab241fa9feb4a622054b3be48b887b804813
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770569"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957611"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Passaggio 3: Modello di verifica per la connessione a SQL con ADO.NET
 
@@ -24,11 +23,11 @@ ms.locfileid: "66770569"
 - Articolo successivo:&nbsp;&nbsp;&nbsp;[Passaggio 4: Connettersi in modo resiliente a SQL con ADO.NET](step-4-connect-resiliently-to-sql-with-ado-net.md)  
 
   
-Questo esempio di codice c# deve essere considerato un modello di verifica solo. Il codice di esempio è semplificato per maggiore chiarezza e non rappresenta necessariamente le procedure consigliate da Microsoft.  
+Questo C# esempio di codice deve essere considerato solo un modello di prova. Il codice di esempio è semplificato per maggiore chiarezza e non rappresenta necessariamente le procedure consigliate da Microsoft.  
   
 ## <a name="step-1-connect"></a>Passaggio 1: connettersi
   
-Il metodo **SqlConnection** utilizzato per la connessione al database SQL.  
+Il metodo **SqlConnection. Open** viene usato per connettersi al database SQL.  
 
 
 ```csharp
@@ -69,8 +68,8 @@ Il metodo **SqlConnection** utilizzato per la connessione al database SQL.
   
 Il metodo SqlCommand. ExecuteReader:  
   
-- Esegue l'istruzione SQL SELECT per il sistema SQL.  
-- Restituisce un'istanza di SqlDataReader per fornire l'accesso per le righe di risultati.  
+- Rilascia l'istruzione SQL SELECT al sistema SQL.  
+- Restituisce un'istanza di SqlDataReader per fornire l'accesso alle righe di risultati.  
   
   
   
@@ -151,13 +150,13 @@ Il metodo SqlCommand. ExecuteReader:
   
   
   
-## <a name="step-3-insert-a-row"></a>Passaggio 3: Inserire una riga  
+## <a name="step-3-insert-a-row"></a>Passaggio 3: inserire una riga  
   
   
 Questo esempio illustra come:  
   
-- Eseguire un'istruzione SQL INSERT in modo sicuro mediante il passaggio di parametri.  
-  - Utilizzo dei parametri consente di proteggere da attacchi SQL injection.  
+- Eseguire un'istruzione SQL INSERT in modo sicuro passando i parametri.  
+  - L'uso di parametri protegge da attacchi SQL injection.  
 - Recuperare il valore generato automaticamente.  
   
   
