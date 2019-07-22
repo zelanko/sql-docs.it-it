@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6e0c0dbcb9f1cfea08ca1713f7ec46a698944255
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2293f8cf40bcd5b3d104f63df80abacf282686ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65836155"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096888"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Colonne e tipo di dati XML (SQL Server)
 
@@ -55,7 +54,7 @@ ms.locfileid: "65836155"
   
 -   Per la gestione dei dati XML si desidera utilizzare le funzionalità amministrative del server di database, ad esempio le funzionalità di backup, recupero e replica.  
   
- Se nessuna di queste condizioni è soddisfatta, è preferibile archiviare i dati in un formato diverso da XML usando un tipo di dati per oggetti di grandi dimensioni, ad esempio **[n]varchar(max)** o **varbinary(max)**.  
+ Se nessuna di queste condizioni è soddisfatta, è preferibile archiviare i dati in un formato diverso da XML usando un tipo di dati per oggetti di grandi dimensioni, ad esempio **[n]varchar(max)** o **varbinary(max)** .  
   
 ## <a name="xml-storage-options"></a>Opzioni di archiviazione per i dati XML  
  Le opzioni di archiviazione per i dati XML disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includono le seguenti:  

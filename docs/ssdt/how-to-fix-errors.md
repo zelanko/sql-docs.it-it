@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0d504e00-4ff0-4fdf-b874-85280bbd8668
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6ef6cb6bce9173a849dbe406971028e3f452767c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba41850e214de60da9a7e64f328939e4660a9367
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090243"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035168"
 ---
 # <a name="how-to-fix-errors"></a>Procedura: Correggere gli errori
 Nel riquadro Elenco errori vengono visualizzati tutti gli errori di distribuzione e di compilazione. Vengono inoltre visualizzati gli errori di sintassi e semantici causati dalle modifiche nell'Editor Transact\-SQL o in Progettazione tabelle quando si modificano entità del database e relative definizioni. L'Elenco errori viene aggiornato dinamicamente quando si modificano gli script nelle diverse schede. È quindi possibile seguire gli errori identificati per un'ulteriore risoluzione dei problemi.  

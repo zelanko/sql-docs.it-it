@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 352cbbbbb0ea3e67d8025e36bc4e90d7571aa893
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 5eeda80431c403fd1178399b4c2c3500154acd48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050787"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT - autorizzazioni per server (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +139,7 @@ GRANT permission [ ,...n ]
  Autorizzazione **SELECT ALL USER SECURABLES**  
  Quando viene concessa, un account di accesso, ad esempio un revisore, può visualizzare i dati in tutti i database a cui l'utente può connettersi. Quando negata, impedisce l'accesso agli oggetti a meno che non siano nello schema **sys**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'utente che concede le autorizzazioni (o l'entità specificata con l'opzione AS) deve disporre della relativa autorizzazione con GRANT OPTION oppure di un'autorizzazione di livello superiore che include l'autorizzazione che viene concessa. I membri del ruolo predefinito del server sysadmin possono concedere qualsiasi autorizzazione.  
   
 ## <a name="examples"></a>Esempi  
@@ -154,7 +153,7 @@ GRANT CONTROL SERVER TO TerryEminhizer;
 GO  
 ```  
   
-### <a name="b-granting-a-permission-that-has-grant-permission"></a>b. Concessione di un'autorizzazione che include l'autorizzazione GRANT  
+### <a name="b-granting-a-permission-that-has-grant-permission"></a>B. Concessione di un'autorizzazione che include l'autorizzazione GRANT  
  Nell'esempio seguente viene concessa l'autorizzazione `ALTER ANY EVENT NOTIFICATION` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `JanethEsteves` con il diritto di concedere tale autorizzazione a un altro account di accesso.  
   
 ```  

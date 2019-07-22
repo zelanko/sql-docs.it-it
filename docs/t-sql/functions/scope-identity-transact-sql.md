@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 83d1ad7e793e7072345ad0b4ada34162d039ed45
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 86afd9bb2036edb77934f6ae622fafe93bd2d5a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033032"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111328"
 ---
 # <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -133,7 +132,7 @@ SCOPE_IDENTITY
 115  
 ```  
   
-### <a name="b-using-identity-and-scopeidentity-with-replication"></a>b. Uso di @@IDENTITY e SCOPE_IDENTITY() con la replica  
+### <a name="b-using-identity-and-scopeidentity-with-replication"></a>B. Uso di @@IDENTITY e SCOPE_IDENTITY() con la replica  
  Negli esempi seguenti viene illustrato come utilizzare`@@IDENTITY` e `SCOPE_IDENTITY()` per inserimenti in un database pubblicato per la replica di tipo merge. Entrambe le tabelle degli esempi sono incluse nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. La tabella `Person.ContactType` non viene pubblicata, mentre la tabella `Sales.Customer` viene pubblicata. Con la replica di tipo merge vengono aggiunti trigger alle tabelle pubblicate. `@@IDENTITY` può pertanto restituire il valore dell'inserimento in una tabella del sistema di replica anziché dell'inserimento in una tabella utente.  
   
  Il valore Identity massimo consentito per la tabella `Person.ContactType` è 20. Se si inserisce una riga nella tabella, `@@IDENTITY` e `SCOPE_IDENTITY()` restituiscono lo stesso valore.  

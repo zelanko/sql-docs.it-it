@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc6b596f6cd55fbd0642768a3323fddb611033ba
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 8c4cfba19dc16e043ba6325fb6c9acb1665a597f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071176"
 ---
 # <a name="insert-sql-graph"></a>INSERT (grafo SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -127,7 +126,7 @@ L'inserimento bulk per la tabella nodi è identico a quello di una tabella relaz
 Prima dell'inserimento bulk in una tabella bordi, è necessario importare le tabelle nodi. I valori di `$from_id` e `$to_id` possono essere estratti dalla colonna `$node_id` della tabella nodi ed essere inseriti come bordi. 
 
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
 È richiesta l'autorizzazione INSERT per la tabella di destinazione.  
   
 Le autorizzazioni INSERT vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e ai membri dei ruoli predefiniti del database **db_owner** e **db_datawriter** nonché al proprietario della tabella. I membri dei ruoli **sysadmin**, **db_owner** e **db_securityadmin** e il proprietario della tabella possono trasferire le autorizzazioni ad altri utenti.  
@@ -149,7 +148,7 @@ INSERT INTO dbo.Person VALUES (1, 'Alice');
 INSERT INTO dbo.Person VALUES (2,'John');
 ```
   
-#### <a name="b--insert-into-edge-table"></a>b.  INSERT nella tabella bordi  
+#### <a name="b--insert-into-edge-table"></a>B.  INSERT nella tabella bordi  
 Nell'esempio seguente viene creata una tabella bordi di amici in cui viene inserito un bordo.
 
 ```sql

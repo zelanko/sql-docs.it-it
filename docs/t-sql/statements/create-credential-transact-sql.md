@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e9fba374be6a12a440138e3fa6a70975c5d3fdd7
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: 875b66df7f2788d253bad98b92f19c7d63393885
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556163"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061034"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -56,19 +55,19 @@ WITH IDENTITY = 'identity_name'
  *credential_name*  
  Viene specificato il nome delle credenziali create. *credential_name* non può iniziare con il simbolo del cancelletto (#). perché tale simbolo viene utilizzato per le credenziali di sistema.  Quando si usa una firma di accesso condiviso (SAS), questo nome deve corrispondere al percorso del contenitore, iniziare con https e non deve contenere una barra. Vedere l'esempio D riportato di seguito.  
   
- IDENTITY **='**_identity\_name_**'**  
+ IDENTITY **='** _identity\_name_ **'**  
  Specifica il nome dell'account da utilizzare per la connessione all'esterno del server. Quando la credenziale viene usata per accedere a Azure Key Vault, **IDENTITY** è il nome dell'insieme di credenziali delle chiavi. Vedere l'esempio C riportato di seguito. Quando le credenziali usano una firma di accesso condiviso (SAS), il valore di **IDENTITY** è *SHARED ACCESS SIGNATURE*. Vedere l'esempio D riportato di seguito.  
  
 > [!IMPORTANT]
 > Database SQL di Azure supporta solo le identità Azure Key Vault e di firma di accesso condiviso. Le identità utente di Windows non sono supportate.
  
- SECRET **='**_secret_**'**  
+ SECRET **='** _secret_ **'**  
  Specifica il segreto richiesto per l'autenticazione in uscita.  
   
- Quando la credenziale viene usata per accedere ad Azure Key Vault, l'argomento **SECRET** di **CREATE CREDENTIAL** richiede che l'*\<ID client>* (senza trattini) e il valore *\<Secret>* di un'**Entità servizio** in Azure Active Directory vengano passati insieme senza essere separati da uno spazio. Vedere l'esempio C riportato di seguito. Quando le credenziali usano una firma di accesso condiviso, il valore di **SECRET** è il token della firma di accesso condiviso. Vedere l'esempio D riportato di seguito.  Per informazioni sulla creazione di criteri di accesso archiviati e una firma di accesso condiviso in un contenitore di Azure, vedere [Lezione 1: Creare criteri di accesso archiviati e una firma di accesso condiviso in un contenitore di Azure](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
+ Quando la credenziale viene usata per accedere ad Azure Key Vault, l'argomento **SECRET** di **CREATE CREDENTIAL** richiede che l' *\<ID client>* (senza trattini) e il valore *\<Secret>* di un'**Entità servizio** in Azure Active Directory vengano passati insieme senza essere separati da uno spazio. Vedere l'esempio C riportato di seguito. Quando le credenziali usano una firma di accesso condiviso, il valore di **SECRET** è il token della firma di accesso condiviso. Vedere l'esempio D riportato di seguito.  Per informazioni sulla creazione di criteri di accesso archiviati e una firma di accesso condiviso in un contenitore di Azure, vedere [Lezione 1: Creare criteri di accesso archiviati e una firma di accesso condiviso in un contenitore di Azure](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
   
  FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name*  
- Specifica il nome di un *provider EKM (Extensible Key Management)*. Per altre informazioni sulla gestione delle chiavi, vedere [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ Specifica il nome di un *provider EKM (Extensible Key Management)* . Per altre informazioni sulla gestione delle chiavi, vedere [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
 ## <a name="remarks"></a>Remarks  
 
@@ -82,7 +81,7 @@ WITH IDENTITY = 'identity_name'
   
  A un account di accesso è possibile eseguire il mapping di più credenziali, a condizione che vengano utilizzate con provider distinti. È possibile eseguire il mapping di una sola credenziale per provider per ogni account di accesso. Sulla stessa credenziale è possibile eseguire il mapping ad altri account di accesso.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione **ALTER ANY CREDENTIAL**.  
   
 ## <a name="examples"></a>Esempi  
@@ -96,7 +95,7 @@ CREATE CREDENTIAL AlterEgo WITH IDENTITY = 'Mary5',
 GO  
 ```  
   
-### <a name="b-creating-a-credential-for-ekm"></a>b. Creazione di una credenziale per EKM  
+### <a name="b-creating-a-credential-for-ekm"></a>B. Creazione di una credenziale per EKM  
  Nell'esempio seguente viene usato un account creato in precedenza e denominato `User1OnEKM` in un modulo EKM tramite gli strumenti di gestione di EKM, con un tipo di account di base e una password. L'account **sysadmin** nel server crea una credenziale usata per connettersi all'account EKM e la assegna all'account `User1` di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 ```  
@@ -151,7 +150,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 > [!IMPORTANT]  
 >  L'argomento **CREDENTIAL NAME** richiede che il nome corrisponda al percorso del contenitore, inizi con https e non contenga una barra finale. L'argomento **IDENTITY** richiede il nome, *SHARED ACCESS SIGNATURE*. L'argomento **SECRET** richiede il token della firma di accesso condiviso.  
 >
->  L'argomento SECRET di **SHARED ACCESS SIGNATURE** non deve essere preceduto da **?**.
+>  L'argomento SECRET di **SHARED ACCESS SIGNATURE** non deve essere preceduto da **?** .
   
 ```  
 USE master  

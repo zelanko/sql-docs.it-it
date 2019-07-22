@@ -9,14 +9,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 87ae14a8acaa94873b81238d998f755a8ee0a8bd
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 7fd710359f6a2d97bebd9785dd010ff586f43cd1
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583663"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307590"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Configurare Always Encrypted con enclave sicuri
 
@@ -151,7 +150,7 @@ Per effettuare il provisioning di una chiave di crittografia di colonna abilitat
 
 Per il provisioning delle chiavi abilitate per l'enclave esistono attualmente le limitazioni seguenti:
 
-- Le chiavi master della colonna abilitate per l'enclave devono essere archiviate in [Archivio certificati Windows](/windows/desktop/seccrypto/managing-certificates-with-certificate-stores/) o in [Azure Key Vault](/azure/key-vault/key-vault-whatis/). L'archiviazione di chiavi master della colonna abilitate per l'enclave in altri tipi di archivi chiavi, ad esempio moduli di protezione hardware o archivi chiavi personalizzati, non è attualmente supportata.
+- Le chiavi master della colonna abilitate per l'enclave devono essere archiviate in [Archivio certificati Windows](/windows/desktop/seccrypto/managing-certificates-with-certificate-stores) o in [Azure Key Vault](/azure/key-vault/key-vault-whatis/). L'archiviazione di chiavi master della colonna abilitate per l'enclave in altri tipi di archivi chiavi, ad esempio moduli di protezione hardware o archivi chiavi personalizzati, non è attualmente supportata.
 
 ### <a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>Effettuare il provisioning di chiavi abilitate per l'enclave con SQL Server Management Studio (SSMS)
 

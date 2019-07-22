@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 737f337369b04c59d34bb8ab4335a2491e843927
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 900d91223aea28d0809c3d3aab9acd574c3d2df2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130133"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -263,7 +262,7 @@ I trigger DDL e LOGON acquisiscono informazioni sull'evento che attiva il trigge
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile aggiornare le colonne di tipo **text**, **ntext** o **image** di tabelle o viste tramite il trigger INSTEAD OF.  
   
 > [!IMPORTANT]
->  I tipi di dati **ntext**, **text** e **image** verranno rimossi in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente li utilizzano. Usare in alternativa [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)e [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) . I trigger AFTER e INSTEAD OF supportano i dati **varchar(MAX)**, **nvarchar(MAX)** e **varbinary(MAX)** nelle tabelle inserted e deleted.  
+>  I tipi di dati **ntext**, **text** e **image** verranno rimossi in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente li utilizzano. Usare in alternativa [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)e [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) . I trigger AFTER e INSTEAD OF supportano i dati **varchar(MAX)** , **nvarchar(MAX)** e **varbinary(MAX)** nelle tabelle inserted e deleted.  
   
 Per i trigger sulle tabelle ottimizzate per la memoria, un blocco ATOMIC è l'unica istruzione *sql_statement* consentita al livello superiore. L'unico codice T-SQL consentito all'interno del blocco ATOMIC è quello consentito nelle procedure native.  
   
@@ -409,7 +408,7 @@ Il primo trigger AFTER annidato in un trigger INSTEAD OF viene attivato anche se
 ### <a name="deferred-name-resolution"></a>Risoluzione dei nomi posticipata  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile includere all'interno di stored procedure, trigger e batch [!INCLUDE[tsql](../../includes/tsql-md.md)] riferimenti a tabelle che non esistono in fase di compilazione. Questa funzionalità è denominata risoluzione dei nomi posticipata.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 Per creare un trigger DML, è necessaria l'autorizzazione ALTER per la tabella o la vista in cui creare il trigger.  
   
 Per creare un trigger DDL con ambito server (ON ALL SERVER) o un trigger LOGON, è necessaria l'autorizzazione CONTROL SERVER per il server. Per creare un trigger DDL con ambito database (ON DATABASE), è necessaria l'autorizzazione ALTER ANY DATABASE DDL TRIGGER per il database corrente.  
@@ -427,7 +426,7 @@ AS RAISERROR ('Notify Customer Relations', 16, 10);
 GO  
 ```  
   
-### <a name="b-using-a-dml-trigger-with-a-reminder-e-mail-message"></a>b. Utilizzo di un trigger DML con un messaggio di promemoria inviato tramite posta elettronica  
+### <a name="b-using-a-dml-trigger-with-a-reminder-e-mail-message"></a>B. Utilizzo di un trigger DML con un messaggio di promemoria inviato tramite posta elettronica  
 Nell'esempio seguente viene inviato un messaggio di posta elettronica a un utente specificato (`MaryM`) quando viene apportata una modifica alla tabella `Customer`.  
   
 ```sql  
