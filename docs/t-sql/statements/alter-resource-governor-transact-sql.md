@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 7c3b106d89db436ebf2a2d60abe7f5eee5fca2f1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 710604102132d3b50b328c80f12cf41cd66a1219
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514717"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927219"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +87,7 @@ ALTER RESOURCE GOVERNOR
 > [!IMPORTANT]  
 >  ALTER RESOURCE GOVERNOR RECONFIGURE deve essere eseguito per rendere operativa ogni modifica di configurazione.  
   
- CLASSIFIER_FUNCTION = { _schema_name_**.**_function_name_ | NULL }  
+ CLASSIFIER_FUNCTION = { _schema_name_ **.** _function_name_ | NULL }  
  Registra la funzione di classificazione specificata da *schema_name.function_name*. La funzione classifica ogni nuova sessione e assegna le richieste e le query della sessione a un gruppo del carico di lavoro. Quando viene utilizzato NULL, le nuove sessioni vengono assegnate automaticamente al gruppo del carico di lavoro predefinito.  
   
  RESET STATISTICS  
@@ -99,7 +98,7 @@ ALTER RESOURCE GOVERNOR
   
  Imposta il numero massimo di operazioni di I/O in coda per ogni volume del disco. Queste operazioni di I/O possono essere letture o scritture di qualsiasi dimensione.  Il valore massimo per MAX_OUTSTANDING_IO_PER_VOLUME è 100. Non è una percentuale. Questa impostazione è progettata per ottimizzare la governance delle risorse rispetto alle caratteristiche di I/O di un volume del disco. È consigliabile provare diversi valori e usare uno strumento di calibrazione come IOMeter, [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223), o SQLIO (deprecato) per identificare il valore massimo per il sottosistema di archiviazione usato. Questa impostazione fornisce un controllo di sicurezza a livello di sistema che consente a SQL Server di soddisfare l'IOPS minimo per i pool di risorse anche se per gli altri pool MAX_IOPS_PER_VOLUME è impostato su illimitato. Per altre informazioni su MAX_IOPS_PER_VOLUME, vedere [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  ALTER RESOURCE GOVERNOR DISABLE, ALTER RESOURCE GOVERNOR RECONFIGURE e ALTER RESOURCE GOVERNOR RESET STATISTICS non possono essere utilizzate in una transazione utente.  
   
  Il parametro RECONFIGURE appartiene alla sintassi di Resource Governor e non deve essere confuso con [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md), che è un'istruzione DDL diversa.  

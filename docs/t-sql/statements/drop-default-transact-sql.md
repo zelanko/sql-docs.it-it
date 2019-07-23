@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 72accd7718280b4994c3339531c8e5d0fef067c1
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 885336e48d7b8820ac7c1015be6d770b851978af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898074"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
   
  Se si aggiungono nuove righe senza specificare in modo esplicito un valore dopo avere eliminato un valore predefinito da una colonna che ammette valori Null, in tale posizione verrà inserita la stringa NULL. Se si aggiungono nuove righe senza specificare in modo esplicito un valore dopo avere eliminato un valore predefinito da una colonna NOT NULL, verrà visualizzato un messaggio di errore. Queste righe vengono aggiunte successivamente durante la normale esecuzione dell'istruzione INSERT.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire l'istruzione DROP DEFAULT, è necessario disporre almeno dell'autorizzazione ALTER per lo schema a cui appartiene il valore predefinito.  
   
 ## <a name="examples"></a>Esempi  
@@ -84,7 +83,7 @@ DROP DEFAULT IF EXISTS datedflt;
 GO  
 ```  
   
-### <a name="b-dropping-a-default-that-has-been-bound-to-a-column"></a>b. Eliminazione di un valore predefinito associato a una colonna  
+### <a name="b-dropping-a-default-that-has-been-bound-to-a-column"></a>B. Eliminazione di un valore predefinito associato a una colonna  
  Nell'esempio seguente viene disassociato e quindi eliminato il valore predefinito `EmergencyContactPhone` associato alla colonna `Contact` della tabella `phonedflt`.  
   
 ```  

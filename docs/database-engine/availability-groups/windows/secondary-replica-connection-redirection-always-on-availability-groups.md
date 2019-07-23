@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e64768dcfaf4342c3ea52f1b01c29940fb1c8cf0
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 181dd36096daacc5a1c3787cdd21cb9619d87491
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014206"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Reindirizzamento della connessione in lettura/scrittura dalla replica secondaria alla primaria (Gruppi di disponibilità AlwaysOn)
 
@@ -35,7 +34,7 @@ Ad esempio la stringa di connessione può avere come destinazione una replica se
 
 ## <a name="use-cases"></a>Casi d'uso
 
-Nelle versioni precedenti a [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] il listener del gruppo di disponibilità e la risorsa cluster corrispondente reindirizzano il traffico utente alla replica primaria per garantire la riconnessione dopo il failover. [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] continua a supportare la funzionalità listener del gruppo di disponibilità e aggiunge il reindirizzamento della connessione di replica per gli scenari che non possono includere un listener. Ad esempio
+Nelle versioni precedenti a [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] il listener del gruppo di disponibilità e la risorsa cluster corrispondente reindirizzano il traffico utente alla replica primaria per garantire la riconnessione dopo il failover. [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] continua a supportare la funzionalità listener del gruppo di disponibilità e aggiunge il reindirizzamento della connessione di replica per gli scenari che non possono includere un listener. Esempio:
 
 * La tecnologia cluster con cui si integrano i gruppi di disponibilità SQL Server non offre una funzionalità di tipo listener 
 * Una configurazione con più subnet come nel cloud o un IP variabile per più subnet, dove le configurazioni diventano complesse, soggette a errori e con una risoluzione dei problemi impegnativa a causa del numero di componenti attivi

@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d29e39a10b71a58878a7a8bcb00ffd274f253b50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 413a77ecb0ad93e64d05f528217597184c03b9a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413576"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914719"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -192,19 +191,19 @@ Origine dati esterna denominata che punta alla posizione di archiviazione BLOB d
   
  Se le righe effettive del file di dati non sono ordinate in base all'ordine specificato o se l'hint UNIQUE viene specificato e sono presenti chiavi duplicate, viene restituito un errore.  
   
- Gli alias di colonna sono richiesti quando si utilizza ORDER. L'elenco di alias di colonna deve fare riferimento alla tabella derivata a cui è possibile accedere tramite la clausola BULK. I nomi di colonna specificati nella clausola ORDER si riferiscono a questo elenco di alias di colonna. Non è possibile specificare colonne di tipi valore di grandi dimensioni (**varchar(max)**, **nvarchar(max)**, **varbinary(max)** e **xml**) e di tipi Large Object (LOB) (**text**, **ntext** e **image**).  
+ Gli alias di colonna sono richiesti quando si utilizza ORDER. L'elenco di alias di colonna deve fare riferimento alla tabella derivata a cui è possibile accedere tramite la clausola BULK. I nomi di colonna specificati nella clausola ORDER si riferiscono a questo elenco di alias di colonna. Non è possibile specificare colonne di tipi valore di grandi dimensioni (**varchar(max)** , **nvarchar(max)** , **varbinary(max)** e **xml**) e di tipi Large Object (LOB) (**text**, **ntext** e **image**).  
   
  SINGLE_BLOB  
- Restituisce il contenuto di *data_file* come set di righe a riga singola e a colonna singola di tipo **varbinary(max)**.  
+ Restituisce il contenuto di *data_file* come set di righe a riga singola e a colonna singola di tipo **varbinary(max)** .  
   
 > [!IMPORTANT]  
 > Per l'importazione di dati XML è consigliabile utilizzare solo l'opzione SINGLE_BLOB anziché SINGLE_CLOB e SINGLE_NCLOB, in quanto solo SINGLE_BLOB supporta tutti i tipi di conversione di codifica di Windows.  
   
  SINGLE_CLOB  
- Leggendo *data_file* come ASCII, restituisce il contenuto come set di righe a riga singola e colonna singola di tipo **varchar(max)**, usando le regole di confronto del database corrente.  
+ Leggendo *data_file* come ASCII, restituisce il contenuto come set di righe a riga singola e colonna singola di tipo **varchar(max)** , usando le regole di confronto del database corrente.  
   
  SINGLE_NCLOB  
- Leggendo *data_file* come UNICODE, restituisce il contenuto come set di righe a riga singola e colonna singola di tipo **varchar(max)**, usando le regole di confronto del database corrente.  
+ Leggendo *data_file* come UNICODE, restituisce il contenuto come set di righe a riga singola e colonna singola di tipo **varchar(max)** , usando le regole di confronto del database corrente.  
 
 ### <a name="input-file-format-options"></a>Opzioni di formato del file di input
   
@@ -232,7 +231,7 @@ Specifica il carattere da usare come carattere virgolette nel file CSV. Se non v
   
  Quando si accede alle origini dati OLE DB remote, l'identità dell'account di accesso delle connessioni trusted non viene delegata automaticamente dal server in cui il client è connesso al server su cui viene eseguita la query. È necessario configurare la delega dell'autenticazione.  
   
- Se il provider OLE DB supporta più cataloghi e schemi nell'origine dati specificata, è necessario specificare i nomi di catalogo e di schema. I valori per _catalog_ e )_schema_ possono essere omessi se il provider OLE DB non li supporta. Se il provider supporta solo nomi di schema, è necessario specificare un nome composto da due parti nel formato _schema_**.**_oggetto_. Se il provider supporta solo nomi di catalogo, è necessario specificare un nome composto da tre parti nel formato _catalogo_**.**_schema_**.**_oggetto_. È necessario specificare nomi composti da tre parti per le query pass-through che usano il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Per altre informazioni, vedere [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ Se il provider OLE DB supporta più cataloghi e schemi nell'origine dati specificata, è necessario specificare i nomi di catalogo e di schema. I valori per _catalog_ e )_schema_ possono essere omessi se il provider OLE DB non li supporta. Se il provider supporta solo nomi di schema, è necessario specificare un nome composto da due parti nel formato _schema_ **.** _oggetto_. Se il provider supporta solo nomi di catalogo, è necessario specificare un nome composto da tre parti nel formato _catalogo_ **.** _schema_ **.** _oggetto_. È necessario specificare nomi composti da tre parti per le query pass-through che usano il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Per altre informazioni, vedere [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
  La funzione `OPENROWSET` non accetta variabili come argomenti.  
   
@@ -265,7 +264,7 @@ Specifica il carattere da usare come carattere virgolette nel file CSV. Se non v
 > Quando si usa `OPENROWSET`, è importante comprendere il modo in cui la rappresentazione viene gestita da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per considerazioni sulla sicurezza, vedere [Importazione di dati per operazioni bulk con BULK INSERT o OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### <a name="bulk-importing-sqlchar-sqlnchar-or-sqlbinary-data"></a>Importazione bulk di dati SQLCHAR, SQLNCHAR o SQLBINARY  
- OPENROWSET(BULK...) presuppone che, se non è specificata, la lunghezza massima dei dati SQLCHAR, SQLNCHAR o SQLBINARY non supera 8000 byte. Se i dati in corso di importazione sono in un campo dati di tipo LOB contenente un oggetto **varchar(max)**, **nvarchar(max)** o **varbinary(max)** che supera 8000 byte, è necessario usare un file di formato XML che definisca la lunghezza massima per il campo dati. Per specificare la lunghezza massima, modificare il file di formato dichiarando l'attributo MAX_LENGTH.  
+ OPENROWSET(BULK...) presuppone che, se non è specificata, la lunghezza massima dei dati SQLCHAR, SQLNCHAR o SQLBINARY non supera 8000 byte. Se i dati in corso di importazione sono in un campo dati di tipo LOB contenente un oggetto **varchar(max)** , **nvarchar(max)** o **varbinary(max)** che supera 8000 byte, è necessario usare un file di formato XML che definisca la lunghezza massima per il campo dati. Per specificare la lunghezza massima, modificare il file di formato dichiarando l'attributo MAX_LENGTH.  
   
 > [!NOTE]  
 > Un file di formato generato automaticamente non specifica la lunghezza o la lunghezza massima per un campo di tipo LOB. Tuttavia, è possibile modificare un file di formato e specificare la lunghezza o la lunghezza massima manualmente.  

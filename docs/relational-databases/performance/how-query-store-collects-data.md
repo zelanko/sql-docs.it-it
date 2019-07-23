@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b74ad99ac0ade660e524241a0368cacc92e6852
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 83fbc6c183216cedcbb664a0c3a2e3a9337e1513
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542201"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946775"
 ---
 # <a name="how-query-store-collects-data"></a>Come Archivio query raccoglie i dati
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -58,7 +57,7 @@ ms.locfileid: "59542201"
   
  ![query-store-process-2processor](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor")  
   
- Per ridurre al minimo il sovraccarico di I/O, i nuovi dati sono acquisiti in memoria. Le operazioni di scrittura sono messe in coda e scaricate sul disco in un secondo momento. Le informazioni relative alle query e ai piani (Archivio piano nel diagramma riportato di seguito) vengono scaricate con latenza minima, mentre le statistiche di runtime (Statistiche runtime) sono mantenute in memoria per un periodo di tempo definito con l'opzione `DATA_FLUSH_INTERVAL_SECONDS` dell'istruzione `SET QUERY_STORE` . La finestra di dialogo Archivio query di SSMS consente di immettere il valore **Intervallo di scaricamento dati (minuti)**, che viene convertito in secondi.  
+ Per ridurre al minimo il sovraccarico di I/O, i nuovi dati sono acquisiti in memoria. Le operazioni di scrittura sono messe in coda e scaricate sul disco in un secondo momento. Le informazioni relative alle query e ai piani (Archivio piano nel diagramma riportato di seguito) vengono scaricate con latenza minima, mentre le statistiche di runtime (Statistiche runtime) sono mantenute in memoria per un periodo di tempo definito con l'opzione `DATA_FLUSH_INTERVAL_SECONDS` dell'istruzione `SET QUERY_STORE` . La finestra di dialogo Archivio query di SSMS consente di immettere il valore **Intervallo di scaricamento dati (minuti)** , che viene convertito in secondi.  
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   

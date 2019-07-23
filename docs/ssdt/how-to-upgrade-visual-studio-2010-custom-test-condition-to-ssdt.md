@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44c895a3-dee0-4032-a60f-812f5fe3c713
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 887e43ef6bc4f3c8105cb51256f35f400368fec9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b46be709cb14ff9105bcfbcacd65bc32af8de77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035007"
 ---
 # <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Procedura: Aggiornare una condizione di test personalizzata di Visual Studio 2010 da una versione precedente a SQL Server Data Tools
 Per usare una condizione di test creata in una versione precedente a SQL Server Data Tools, è necessario aggiornarla:  
