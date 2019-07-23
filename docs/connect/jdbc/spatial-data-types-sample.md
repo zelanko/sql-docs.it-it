@@ -1,5 +1,5 @@
 ---
-title: Esempio di tipi di dati spaziali per il Driver JDBC MSSQL | Microsoft Docs
+title: Esempio di tipi di dati spaziali per il driver JDBC per MSSQL | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2018
 ms.prod: sql
@@ -9,19 +9,18 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b05182b5dbed154aafd86feec9f73e433f569791
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a92320dc854a31384df87806bf4eca4615c819fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798345"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004392"
 ---
 # <a name="spatial-data-types-sample"></a>Esempio di tipi di dati spaziali
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Ciò [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] applicazione di esempio illustra come creare, inserire e recuperare i tipi di dati spaziali (Geometry e Geography).
+Questa [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] applicazione di esempio illustra come creare, inserire e recuperare i tipi di dati spaziali (Geometry e geography).
   
 Il file di codice per questo esempio è denominato SpatialDataTypes.java e si trova nella seguente posizione:  
 
@@ -31,18 +30,18 @@ Il file di codice per questo esempio è denominato SpatialDataTypes.java e si tr
 
 ## <a name="requirements"></a>Requisiti  
 
-Per eseguire questa applicazione di esempio, è necessario impostare il classpath in modo da includere il file con estensione jar mssql-jdbc. Per altre informazioni su come impostare il classpath, vedere [utilizza il Driver JDBC](../../connect/jdbc/using-the-jdbc-driver.md).  
+Per eseguire questa applicazione di esempio, è necessario impostare il classpath in modo da includere il file con estensione jar mssql-jdbc. Per ulteriori informazioni su come impostare il classpath, vedere [utilizzo del driver JDBC](../../connect/jdbc/using-the-jdbc-driver.md).  
 
 > [!NOTE]  
 > Con [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sono inclusi file di libreria di classi mssql-jdbc da usare a seconda delle impostazioni Java Runtime Environment (JRE) preferite. Per altre informazioni su quale file JAR scegliere, vedere [Requisiti di sistema per il driver JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente, il codice di esempio crea una tabella denominata SpatialDataTypesTable_JDBC_Sample contenente le colonne 'Geometry' e 'Geography'.
+Nell'esempio seguente, il codice di esempio crea una tabella denominata SpatialDataTypesTable_JDBC_Sample che contiene le colonne ' Geometry ' è Geography '.
 
-L'esempio crea prima di tutto 'Geometry' e 'Geography' oggetti da un ben-Known-Text (WKT) che rappresenta un punto. Usa un SQLServerPreparedStatement con una query con parametri per eseguire il mapping dei dati per ogni colonna di conseguenza.
+Nell'esempio vengono prima creati oggetti ' Geometry ' è Geography ' da un WKT (Well-Known-Text) che rappresenta un punto. Usa un SQLServerPreparedStatement con una query con parametri per eseguire il mapping dei dati a ogni colonna di conseguenza.
 
-Infine, l'esempio inserisce i dati nella tabella e li recupera. I dati vengono visualizzati in formato WKT.
+Infine, l'esempio inserisce i dati nella tabella e li recupera. I dati vengono visualizzati sotto forma di WKT.
 
 ```java
 import java.sql.Connection;
@@ -98,5 +97,5 @@ public class SpatialDataTypes {
 
 ## <a name="see-also"></a>Vedere anche  
 
-[Utilizzo di tipi di dati JDBC](../../connect/jdbc/working-with-data-types-jdbc.md)  
+[Utilizzo dei tipi di dati JDBC](../../connect/jdbc/working-with-data-types-jdbc.md)  
   

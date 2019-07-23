@@ -1,5 +1,5 @@
 ---
-title: Metodo setBytes (SQLServerCallableStatement) | Microsoft Docs
+title: Metodo sebytes (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f264f1a6-ee35-4eaf-81d8-ecf99f03b35d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 66a8bf6ec9fbfbf2cbdba050aa6ef36afae2bf98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 53a75e8bd85a3601673f51111d87c34eb050a980
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797593"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974868"
 ---
 # <a name="setbytes-method-sqlservercallablestatement"></a>Metodo setBytes (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public void setBytes(java.lang.String sCol,
   
  *b*  
   
- Matrice di **byte** valori.  
+ Matrice di valori di **byte** .  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

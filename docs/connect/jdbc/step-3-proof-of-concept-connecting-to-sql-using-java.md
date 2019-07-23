@@ -10,21 +10,20 @@ ms.topic: conceptual
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: af6fc51c3aba34e8118d5519b5acf2fc9583738f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a801afabe78625f7914d5fc5accfb6a97084c183
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798317"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004283"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>Passaggio 3: Modello di verifica per la connessione a SQL tramite Java
   
-In questo esempio deve essere considerato un modello di verifica solo. Il codice di esempio è semplificato per maggiore chiarezza e non rappresenta necessariamente le procedure consigliate da Microsoft.  
+Questo esempio deve essere considerato solo un modello di prova. Il codice di esempio è semplificato per maggiore chiarezza e non rappresenta necessariamente le procedure consigliate da Microsoft.  
   
 ## <a name="step-1--connect"></a>Passaggio 1: connettersi  
   
-Usare la classe di connessione per connettersi al Database SQL.   
+Usare la classe Connection per connettersi al database SQL.   
   
 ```java  
 import java.sql.Connection;
@@ -56,7 +55,7 @@ public class SQLDatabaseConnection {
 ```  
   
 ## <a name="step-2-execute-a-query"></a>Passaggio 2: Eseguire una query  
-In questo esempio, connettersi al Database SQL di Azure, eseguire un'istruzione SELECT e restituire le righe selezionate.   
+In questo esempio connettersi al database SQL di Azure, eseguire un'istruzione SELECT e restituire le righe selezionate.   
   
 ```java  
 import java.sql.Connection;
@@ -100,8 +99,8 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## <a name="step-3-insert-a-row"></a>Passaggio 3: Inserire una riga  
-In questo esempio, eseguire un'istruzione INSERT, passare i parametri e recuperare il valore di chiave primaria generata automaticamente.   
+## <a name="step-3-insert-a-row"></a>Passaggio 3: inserire una riga  
+In questo esempio, eseguire un'istruzione INSERT, passare i parametri e recuperare il valore di chiave primaria generato automaticamente.   
   
 ```java  
 import java.sql.Connection;

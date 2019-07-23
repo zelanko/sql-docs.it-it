@@ -1,5 +1,5 @@
 ---
-title: Informazioni sugli esempi di codice nella documentazione di | Microsoft Docs
+title: Informazioni sugli esempi di codice nella documentazione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e2b9178b057d7f8a2a4c9c663101c99df1d468df
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: dc76cee723c11d49a4d6149a7c3a1df4cedbc256
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795852"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015174"
 ---
 # <a name="about-code-examples-in-the-documentation"></a>Informazioni sugli esempi di codice nella documentazione
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,15 +23,15 @@ ms.locfileid: "66795852"
 ## <a name="remarks-about-the-code-examples"></a>Osservazioni sugli esempi di codice
 Esistono diversi aspetti da tenere presenti durante l'esecuzione degli esempi di codice presenti nella documentazione di [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] :  
   
--   Quasi tutti gli esempi si presuppongono che SQL Server 2008 o versione successiva e il database AdventureWorks siano installati nel computer locale.  
+-   Quasi tutti gli esempi presuppongono che SQL Server 2008 o versione successiva e il database AdventureWorks siano installati nel computer locale.  
   
     Per informazioni su come scaricare versioni gratuite e versioni di valutazione di SQL Server, vedere [SQL Server](https://go.microsoft.com/fwlink/?LinkID=120193).  
   
-    Per informazioni su come scaricare e installare il database AdventureWorks, vedere la [pagina di AdventureWorks nel repository Github degli esempi di SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works).
+    Per informazioni su come scaricare e installare il database AdventureWorks, vedere la [pagina relativa a AdventureWorks nel repository SQL Server Samples di GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works).
   
 -   Quasi tutti gli esempi di codice di questa documentazione sono destinati a essere eseguiti dalla riga di comando, che consente il test automatizzato di tutti gli esempi di codice. Per informazioni sull'esecuzione di PHP dalla riga di comando, vedere [Utilizzo PHP da linea di comando](https://php.net/manual/en/features.commandline.php).  
   
--   Sebbene gli esempi siano scritti per essere eseguiti dalla riga di comando, è possibile eseguire ogni esempio tramite chiamata da un browser senza apportare modifiche allo script. Per formattare l'output perfettamente, sostituire ogni "\n" con "\<\/br >" in ogni esempio prima di richiamarla da un browser.  
+-   Sebbene gli esempi siano scritti per essere eseguiti dalla riga di comando, è possibile eseguire ogni esempio tramite chiamata da un browser senza apportare modifiche allo script. Per formattare l'output, sostituire ogni "\n" con "\<\/br >" in ogni esempio prima di richiamarlo da un browser.  
   
 -   Allo scopo di mantenere ogni esempio mirato, non è stata eseguita una gestione degli errori corretta in tutti gli esempi. Si consiglia, pertanto, di ricercare eventuali errori in tutte le chiamate a una funzione **sqlsrv** o a un metodo PDO e di gestirli in base alle esigenze dell'applicazione.  
   
