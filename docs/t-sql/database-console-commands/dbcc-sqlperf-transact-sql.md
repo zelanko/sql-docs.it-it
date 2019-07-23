@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 52ef837c789d9fd33c357cd5013549b7c47f48be
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: f3142f2474dbf00e165878d20fbdda53528fa930
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040619"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,10 +57,10 @@ Restituisce la dimensione corrente del log delle transazioni e la percentuale di
 > [!IMPORTANT]
 > Per altre informazioni sui dati di uso dello spazio per il log delle transazioni a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vedere la sezione [Osservazioni](#Remarks) in questo argomento.
   
-**"sys.dm_os_latch_stats"**, CLEAR  
+**"sys.dm_os_latch_stats"** , CLEAR  
 Reimposta le statistiche relative ai latch. Per altre informazioni, vedere [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md). Questa opzione non è disponibile in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-**"sys.dm_os_wait_stats"**, CLEAR  
+**"sys.dm_os_wait_stats"** , CLEAR  
 Reimposta le statistiche relative alle attese. Per altre informazioni, vedere [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). Questa opzione non è disponibile in [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 WITH NO_INFOMSGS  
@@ -82,7 +81,7 @@ A partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] usare la DMV [sys
  
 Nel log delle transazioni viene registrata ogni transazione eseguita in un database. Per altre informazioni, vedere [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) e [Guida sull'architettura e gestione del log delle transazioni di SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per eseguire `DBCC SQLPERF(LOGSPACE)` è richiesta l'autorizzazione `VIEW SERVER STATE` nel server. Per reimpostare le statistiche relative a latch e attese è richiesta l'autorizzazione `ALTER SERVER STATE` per il server.
   
 Nei livelli Premium e Business Critical di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] è richiesta l'autorizzazione `VIEW DATABASE STATE` nel database. Nei livelli Standard, Basic e Utilizzo generico del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] è richiesto l'account amministratore del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Le statistiche di reimpostazione di latch e attese non sono supportate.
@@ -109,7 +108,7 @@ msdb           3.99219      17.0132            0
 AdventureWorks 19.554688    17.748701          0  
 ```  
   
-### <a name="b-resetting-wait-statistics"></a>b. Reimpostazione delle statistiche relative alle attese  
+### <a name="b-resetting-wait-statistics"></a>B. Reimpostazione delle statistiche relative alle attese  
 Nell'esempio seguente vengono reimpostate le statistiche relative alle attese per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 ```sql  

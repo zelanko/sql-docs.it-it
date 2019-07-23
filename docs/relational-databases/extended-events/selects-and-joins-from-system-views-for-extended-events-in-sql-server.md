@@ -10,14 +10,13 @@ ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7bfaaca6a0f3c35814264d404ceaae9daebc34d4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 4194c869574812d9035a9b51ed44b6aa62efdbcc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58788028"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903448"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>Istruzioni SELECT e JOIN da viste di sistema per eventi estesi in SQL Server
 
@@ -574,8 +573,8 @@ type           package0       xml                           Well formed XML frag
 
 L'istruzione SELECT seguente restituisce tutti i campi dati specifici di un particolare tipo di evento.
 
-- Si noti l'elemento della clausola WHERE: *column_type = 'data'*.
-- È anche necessario modificare il valore della clausola WHERE in *o.name =*.
+- Si noti l'elemento della clausola WHERE: *column_type = 'data'* .
+- È anche necessario modificare il valore della clausola WHERE in *o.name =* .
 
 
 ```sql
@@ -727,8 +726,8 @@ you could put:
 
 L'istruzione SELECT seguente restituisce ogni parametro per la destinazione. Ogni parametro è contrassegnato come obbligatorio o meno. I valori assegnati ai parametri influiscono sul comportamento della destinazione.
 
-- Si noti l'elemento della clausola WHERE: *object_type = 'customizable'*.
-- È anche necessario modificare il valore della clausola WHERE in *o.name =*.
+- Si noti l'elemento della clausola WHERE: *object_type = 'customizable'* .
+- È anche necessario modificare il valore della clausola WHERE in *o.name =* .
 
 
 ```sql
@@ -793,7 +792,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 Questa istruzione SELECT di DMV restituisce righe di dati provenienti dalla destinazione della sessione evento attiva. Viene eseguito il cast dei dati in XML. In questo modo è possibile fare clic sulla cella restituita per visualizzarla in modo semplice in SSMS.
 
 - Se la sessione evento viene arrestata, l'istruzione SELECT restituirà zero righe.
-- È necessario modificare il valore della clausola WHERE in *s.name =*.
+- È necessario modificare il valore della clausola WHERE in *s.name =* .
 
 
 ```sql

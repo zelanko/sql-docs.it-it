@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: f263c9e4-a7db-4888-a458-70ae99b1f729
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 79756562767943d89efd199007941cf9bf29b702
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b6eaef69d6984494543dc730e19a8436a3a9b658
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007835"
 ---
 # <a name="cataloggetproject-ssisdb-database"></a>catalog.get_project (database SSISDB)
 
@@ -35,16 +34,16 @@ catalog.get_project [ @folder_name = ] folder_name , [ @project_name = ] project
   
 ## <a name="arguments"></a>Argomenti  
  [ @folder_name = ] *folder_name*  
- Nome della cartella in cui è contenuto il progetto. *folder_name* è di tipo **nvarchar(128)**.  
+ Nome della cartella in cui è contenuto il progetto. *folder_name* è di tipo **nvarchar(128)** .  
   
  [ @project_name = ] *project_name*  
- Nome del progetto. *project_name* è di tipo **nvarchar(128)**.  
+ Nome del progetto. *project_name* è di tipo **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Valore del codice restituito  
  0 (esito positivo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Il flusso binario del progetto viene restituito come **varbinary(MAX)**. Non viene restituito alcun risultato se la cartella o il progetto non viene trovato.  
+ Il flusso binario del progetto viene restituito come **varbinary(MAX)** . Non viene restituito alcun risultato se la cartella o il progetto non viene trovato.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per questa stored procedure è necessaria una delle autorizzazioni seguenti:  

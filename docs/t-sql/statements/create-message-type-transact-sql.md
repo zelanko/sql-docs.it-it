@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5c19e21af440dd7f3293b706d38498e102c76248
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 834a5ba4ee456ad7e9dfd538468b66fe3472cd1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006535"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +84,7 @@ CREATE MESSAGE TYPE message_type_name
   
  Un tipo di messaggio non può essere un oggetto temporaneo. I nomi dei tipi di messaggio che iniziano con **#** sono consentiti, ma sono oggetti permanenti.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'autorizzazione per la creazione di un tipo di messaggio viene assegnata per impostazione predefinita ai membri del ruolo predefinito del database **db_ddladmin** o **db_owner** e del ruolo predefinito del server **sysadmin**.  
   
  Per impostazione predefinita l'autorizzazione REFERENCES per un tipo di messaggio viene assegnata al proprietario del tipo di messaggio, ai membri del ruolo predefinito del database **db_owner** e ai membri del ruolo predefinito del server **sysadmin**.  
@@ -103,7 +102,7 @@ CREATE MESSAGE TYPE
   VALIDATION = WELL_FORMED_XML ;     
 ```  
   
-### <a name="b-creating-a-message-type-containing-typed-xml"></a>b. Creazione di un tipo di messaggio contenente codice XML tipizzato  
+### <a name="b-creating-a-message-type-containing-typed-xml"></a>B. Creazione di un tipo di messaggio contenente codice XML tipizzato  
  Nell'esempio seguente viene creato un tipo di messaggio per un rapporto spese in codice XML. In questo esempio viene creata una raccolta di XML Schema che contiene lo schema per un semplice rapporto spese. Viene quindi creato un nuovo tipo di messaggio che convalida i messaggi rispetto allo schema.  
   
 ```  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b687e376-ee33-470d-b65a-87246bfefe6f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 0f13aaf724ef2b02b6f2ce844e2c6f19cdcd1359
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0a678d3b5df450377517bc9c94d3771c45f22e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66767616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012076"
 ---
 # <a name="create-or-delete-a-server-alias-for-use-by-a-client"></a>Creare o eliminare un alias server per l'uso da parte di un client
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

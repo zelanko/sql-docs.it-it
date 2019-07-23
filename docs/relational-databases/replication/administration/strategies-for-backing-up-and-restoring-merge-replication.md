@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 16f7701ab70e3edab1194732dca70e5c10f98a65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a965da708880fc3411dbdd33e372e197afc9dff8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948742"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Strategie di backup e ripristino della replica di tipo merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 22891968234e0ad81e95e6aa78c76a2f8e5d4910
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: d0b6f9dac0cb065a9509040b5693b09b1fa9d5e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685378"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039102"
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -88,7 +87,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 > [!NOTE]
 > A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, usare [sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) per restituire informazioni sulle istruzioni inviate a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è richiesta una delle condizioni seguenti:
 -   L'utente deve essere membro del ruolo predefinito del server **sysadmin**.  
 -   L'utente deve disporre di autorizzazione VIEW SERVER STATE.  

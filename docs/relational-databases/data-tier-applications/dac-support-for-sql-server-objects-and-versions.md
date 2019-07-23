@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 34f30a8eb8a2d894b1de0a62f5151956c80f5653
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 3e2b32c6804de71d9af074de15b8506c493dfa99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588725"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030479"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>Supporto dell'applicazione livello dati per oggetti e versioni di SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Un'applicazione livello dati (DAC) supporta gli oggetti del [!INCLUDE[ssDE](../../includes/ssde-md.md)] più comunemente utilizzati.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
 
 
 > [!IMPORTANT]
@@ -52,11 +51,11 @@ ms.locfileid: "53588725"
 |FUNZIONE: con valori di tabella con istruzioni multiple|FUNZIONE: Scalare|  
 |INDICE: Cluster|INDICE: non cluster|  
 |INDICE: spaziale|INDICE: Univoco|  
-|Account di accesso|Permissions|  
+|Account di accesso|Autorizzazioni|  
 |Appartenenze a ruoli|SCHEMA|  
 |Statistiche|STORED PROCEDURE: Transact-SQL|  
 |Sinonimi|TABELLA: Vincolo CHECK|  
-|TABELLA: Confronto|TABELLA: colonna, incluse le colonne calcolate|  
+|TABELLA: Regole di confronto|TABELLA: colonna, incluse le colonne calcolate|  
 |TABELLA: vincolo, valore predefinito|TABELLA: vincolo, chiave esterna|  
 |TABELLA: vincolo, indice|TABELLA: vincolo, chiave primaria|  
 |TABELLA: vincolo, valore univoco|TRIGGER: DML|  

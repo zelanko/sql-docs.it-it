@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a7790e54a3418a7771f2355a071db9b8aab7a1d9
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: c2418bedb172464002fd640a50c8b57f3daca712
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570774"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071252"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -101,7 +100,7 @@ L'istruzione ALTER PARTITION FUNCTION ha esito negativo in presenza di un indice
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non fornisce il supporto di replica per la modifica di una funzione di partizione. Le modifiche a una funzione di partizione nel database di pubblicazione deve essere applicato manualmente nel database di sottoscrizione.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 Per eseguire l'istruzione ALTER PARTITION FUNCTION, è necessario utilizzare le autorizzazioni seguenti:  
   
 -   Autorizzazione ALTER ANY DATASPACE. Questa autorizzazione viene concessa per impostazione predefinita al ruolo predefinito del server **sysadmin** e ai ruoli predefiniti del database **db_owner** e **db_ddladmin** .  
@@ -130,7 +129,7 @@ ALTER PARTITION FUNCTION myRangePF1 ()
 SPLIT RANGE (500);  
 ```  
   
-### <a name="b-merging-two-partitions-of-a-partitioned-table-into-one-partition"></a>b. Unione di due partizioni di una tabella partizionata  
+### <a name="b-merging-two-partitions-of-a-partitioned-table-into-one-partition"></a>B. Unione di due partizioni di una tabella partizionata  
 Nell'esempio seguente viene creata la stessa funzione di partizione dell'esempio precedente e quindi due partizioni vengono unite in modo da formare un totale di tre partizioni.  
   
 ```sql  

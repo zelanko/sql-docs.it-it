@@ -9,14 +9,13 @@ ms.technology: configuration
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-manager: jroth
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1031bdfa3aa6c728d3e33b500fe942d5e52c5fdc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec0b088d7ed1f32661a9ca171eb5f889c09ae5d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799465"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012804"
 ---
 # <a name="column-encryption-enclave-type-server-configuration-option"></a>Opzione di configurazione del server column encryption enclave type
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "66799465"
 |valore|Descrizione|  
 |-------------------|-----------------|  
 |0|**No secure enclave** (Nessun enclave sicuro). [!INCLUDE[ssDE](../../includes/ssde-md.md)] non inizializza l'enclave sicuro per Always Encrypted. Di conseguenza non è disponibile la funzionalità Always Encrypted con enclave sicuri.|  
-|1|**Sicurezza basata sulla virtualizzazione (VBS)**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] inizializza l'enclave sicuro (un enclave di memoria sicuro VBS) per Always Encrypted.|    
+|1|**Sicurezza basata sulla virtualizzazione (VBS)** . [!INCLUDE[ssDE](../../includes/ssde-md.md)] inizializza l'enclave sicuro (un enclave di memoria sicuro VBS) per Always Encrypted.|    
 
 > [!IMPORTANT]
 > Le modifiche a **column encryption enclave type** non hanno effetto finché non si riavvia l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].

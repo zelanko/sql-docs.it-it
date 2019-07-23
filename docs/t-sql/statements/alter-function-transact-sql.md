@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02860ad96192b9f67820381d34f9dc05c6fb54db
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d33471982d291ba1f57d7d3d64a918cec1cc5e91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132941"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067489"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -217,7 +216,7 @@ RETURNS return_data_type
   
  Una funzione può avere al massimo 2.100 parametri. Il valore di ciascun parametro dichiarato deve essere specificato dall'utente quando viene eseguita la funzione, a meno che non venga definito un valore predefinito per tale parametro.  
   
- Specificare un nome di parametro usando come primo carattere il simbolo di chiocciola (**@**). Il nome di parametro deve essere conforme alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). I parametri sono locali rispetto alla funzione. È pertanto possibile utilizzare gli stessi nomi di parametro in altre funzioni. I parametri possono rappresentare solo costanti, non nomi di tabella, di colonna o di altri oggetti di database.  
+ Specificare un nome di parametro usando come primo carattere il simbolo di chiocciola ( **@** ). Il nome di parametro deve essere conforme alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). I parametri sono locali rispetto alla funzione. È pertanto possibile utilizzare gli stessi nomi di parametro in altre funzioni. I parametri possono rappresentare solo costanti, non nomi di tabella, di colonna o di altri oggetti di database.  
   
 > [!NOTE]  
 >  ANSI_WARNINGS non viene applicata quando vengono trasmessi parametri in una stored procedure o in una funzione definita dall'utente oppure in caso di dichiarazione e impostazione delle variabili in un'istruzione batch. Se, ad esempio, la variabile viene definita come **char(3)** e quindi impostata su un valore maggiore di tre caratteri, i dati verranno troncati alla dimensione definita e l'istruzione INSERT o UPDATE avrà esito positivo.  
@@ -233,11 +232,11 @@ RETURNS return_data_type
   
 -   Schema **dbo** nel database corrente.  
   
- [ **=**_default_ ]  
+ [ **=** _default_ ]  
  Valore predefinito del parametro. Se viene definito un valore *default*, è possibile eseguire la funzione senza specificare un valore per il parametro corrispondente a tale valore.  
   
 > [!NOTE]  
->  È possibile specificare parametri predefiniti per le funzioni CLR, ad eccezione dei tipi di dati **varchar(max)** e **varbinary(max)**.  
+>  È possibile specificare parametri predefiniti per le funzioni CLR, ad eccezione dei tipi di dati **varchar(max)** e **varbinary(max)** .  
   
  Se a un parametro della funzione è associato un valore predefinito, quando si richiama la funzione per ottenere il valore predefinito è necessario specificare la parola chiave "default". Questo comportamento risulta diverso dall'utilizzo di parametri con valore predefinito nelle stored procedure in cui l'omissione del parametro implica l'utilizzo del valore predefinito.  
   
@@ -255,11 +254,11 @@ RETURNS return_data_type
  Specifica che la funzione scalare restituisce un valore scalare.  
   
  TABLE  
- Specifica che il valore restituito della funzione con valori di tabella è una tabella. Alle funzioni con valori di tabella è possibile passare solo costanti e **@**_local\_variables_.  
+ Specifica che il valore restituito della funzione con valori di tabella è una tabella. Alle funzioni con valori di tabella è possibile passare solo costanti e **@** _local\_variables_.  
   
  Nelle funzioni inline con valori di tabella, il valore restituito TABLE viene definito tramite una sola istruzione SELECT. Alle funzioni inline non sono associate variabili restituite.  
   
- Nelle funzioni con valori di tabella composte da più istruzioni **@**_return\_variable_ è una variabile TABLE usata per l'archiviazione e l'accumulo delle righe da restituire come valore della funzione. È possibile specificare **@**_return\_variable_ solo per le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e non per le funzioni CLR.  
+ Nelle funzioni con valori di tabella composte da più istruzioni **@** _return\_variable_ è una variabile TABLE usata per l'archiviazione e l'accumulo delle righe da restituire come valore della funzione. È possibile specificare **@** _return\_variable_ solo per le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e non per le funzioni CLR.  
   
  *select-stmt*  
  Istruzione SELECT che definisce il valore restituito di una funzione inline con valori di tabella.  
@@ -267,7 +266,7 @@ RETURNS return_data_type
  EXTERNAL NAME \<method_specifier>*assembly_name.class_name*.*method_name*  
  **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Specifica il metodo di un assembly da associare alla funzione. *assembly_name* deve corrispondere a un assembly esistente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel database corrente con visibilità attivata. *class_name* deve essere un identificatore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido e deve esistere come classe nell'assembly. Se alla classe è stato assegnato un nome qualificato dallo spazio dei nomi le cui parti sono separate da un punto (**.**), il nome della classe deve essere delimitato tramite parentesi quadre (**[]**) o virgolette (**""**). *method_name* deve essere un identificatore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido e deve esistere come metodo statico nella classe specificata.  
+ Specifica il metodo di un assembly da associare alla funzione. *assembly_name* deve corrispondere a un assembly esistente in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel database corrente con visibilità attivata. *class_name* deve essere un identificatore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido e deve esistere come classe nell'assembly. Se alla classe è stato assegnato un nome qualificato dallo spazio dei nomi le cui parti sono separate da un punto ( **.** ), il nome della classe deve essere delimitato tramite parentesi quadre ( **[]** ) o virgolette ( **""** ). *method_name* deve essere un identificatore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido e deve esistere come metodo statico nella classe specificata.  
   
 > [!NOTE]  
 >  Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può eseguire il codice CLR. È possibile creare, modificare ed eliminare gli oggetti di database che fanno riferimento a moduli CLR; tuttavia non è possibile eseguire questi riferimenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finché non viene abilitata l'opzione [clr enabled option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Per abilitare questa opzione, usare [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
@@ -275,10 +274,10 @@ RETURNS return_data_type
 > [!NOTE]  
 >  Questa opzione non è disponibile in un database indipendente.  
   
- _\<_table\_type\_definition_\>_**(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,**...*n* ]**)**  
+ _\<_table\_type\_definition_\>_ **(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,** ...*n* ] **)**  
  Definisce il tipo di dati della tabella per una funzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. La dichiarazione di tabella include definizioni di colonna, nonché vincoli di colonna o tabella.  
   
-\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,**...*n* ] **)** **Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([in anteprima in alcune aree](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,** ...*n* ] **)** **Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([in anteprima in alcune aree](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Definisce i tipi di dati della tabella per una funzione CLR. La dichiarazione di tabella include solo nomi di colonna e tipi di dati.  
   
@@ -355,7 +354,7 @@ Per un elenco delle condizioni che devono essere soddisfatte per consentire l'as
  La proprietà ROWGUIDCOL non impone l'univocità dei valori archiviati nella colonna e non genera automaticamente valori per le nuove righe inserite nella tabella. Per generare valori univoci per ogni colonna, utilizzare la funzione NEWID nelle istruzioni INSERT. È possibile specificare un valore predefinito. Non è tuttavia possibile specificare l'opzione NEWID come valore predefinito.  
   
  IDENTITY  
- Indica che la nuova colonna è una colonna Identity. Quando si aggiunge una nuova riga alla tabella, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna alla colonna un valore univoco e incrementale. Le colonne Identity vengono comunemente utilizzate in combinazione con vincoli PRIMARY KEY e svolgono la funzione di identificatore di riga univoco per la tabella. La proprietà IDENTITY può essere assegnata a colonne **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** o **numeric(p,0)**. Ogni tabella può includere una sola colonna Identity. Non è consentito associare valori predefiniti e vincoli DEFAULT alle colonne Identity. È necessario specificare sia il valore di *seed* che di *increment* oppure è possibile omettere entrambi questi valori. In questo secondo caso, il valore predefinito è (1,1).  
+ Indica che la nuova colonna è una colonna Identity. Quando si aggiunge una nuova riga alla tabella, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna alla colonna un valore univoco e incrementale. Le colonne Identity vengono comunemente utilizzate in combinazione con vincoli PRIMARY KEY e svolgono la funzione di identificatore di riga univoco per la tabella. La proprietà IDENTITY può essere assegnata a colonne **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** o **numeric(p,0)** . Ogni tabella può includere una sola colonna Identity. Non è consentito associare valori predefiniti e vincoli DEFAULT alle colonne Identity. È necessario specificare sia il valore di *seed* che di *increment* oppure è possibile omettere entrambi questi valori. In questo secondo caso, il valore predefinito è (1,1).  
   
  Non è possibile specificare l'opzione IDENTITY per le funzioni CLR con valori di tabella.  
   
@@ -379,9 +378,9 @@ Per un elenco delle condizioni che devono essere soddisfatte per consentire l'as
  Vincolo che impone l'integrità di entità per una o più colonne specificate tramite un indice univoco. Una tabella può includere più vincoli UNIQUE. Non è possibile specificare il vincolo UNIQUE per le funzioni CLR con valori di tabella.  
   
  CLUSTERED | NONCLUSTERED  
- Definisce la creazione di un indice cluster o non cluster per il vincolo PRIMARY KEY o UNIQUE. I vincoli PRIMARY KEY utilizzano l'opzione CLUSTERED, mentre i vincoli UNIQUE utilizzano l'opzione NONCLUSTERED.  
+ Definisce la creazione di un indice cluster o non cluster per il vincolo PRIMARY KEY o UNIQUE. I vincoli PRIMARY KEY usano l'opzione CLUSTERED, mentre i vincoli UNIQUE usano l'opzione NONCLUSTERED.  
   
- L'opzione CLUSTERED può essere specificata solo per un vincolo. Se per un vincolo UNIQUE si specifica CLUSTERED e viene specificato anche un vincolo PRIMARY KEY, quest'ultimo utilizza l'opzione NONCLUSTERED.  
+ L'opzione CLUSTERED può essere specificata solo per un vincolo. Se per un vincolo UNIQUE si specifica CLUSTERED e viene specificato anche un vincolo PRIMARY KEY, quest'ultimo usano l'opzione NONCLUSTERED.  
   
  Non è possibile specificare le opzioni CLUSTERED e NON CLUSTERED per le funzioni CLR con valori di tabella.  
   
@@ -435,7 +434,7 @@ Per un elenco delle condizioni che devono essere soddisfatte per consentire l'as
 -   RECEIVE  
 -   SEND  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la funzione o lo schema. Se per la funzione viene specificato un tipo definito dall'utente, è necessario disporre dell'autorizzazione EXECUTE per tale tipo.  
   
 ## <a name="see-also"></a>Vedere anche  

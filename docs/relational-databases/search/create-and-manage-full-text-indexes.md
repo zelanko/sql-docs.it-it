@@ -12,14 +12,13 @@ ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5798c0048d10e074f0aa64c3d50ce14027865e4a
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: cd0efece05be169ce220d6e16a4bebf10b5ca36d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657916"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082928"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Creazione e gestione di indici full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -166,7 +165,7 @@ GO
  Nell'esempio viene restituita una colonna del set di risultati denominata `Unique Key Column`in cui viene visualizzata una sola riga contenente il nome della colonna chiave univoca della tabella Document, DocumentID. Si noti che se questa query contenesse un nome di indice non valido, il nome di indice non corrispondesse alla tabella, la tabella non esistesse e così via, il risultato restituito sarebbe NULL.  
 
 ## <a name="index-varbinarymax-and-xml-columns"></a>Indicizzare colonne varbinary(max) e xml  
- Se una colonna **varbinary(max)**, **varbinary**o **xml** viene sottoposta a indicizzazione full-text, le query su questa colonna possono essere eseguite usando predicati (CONTAINS e FREETEXT) e funzioni (CONTAINSTABLE e FREETEXTTABLE) full-text, proprio come su ogni altra colonna con indicizzazione full-text.
+ Se una colonna **varbinary(max)** , **varbinary**o **xml** viene sottoposta a indicizzazione full-text, le query su questa colonna possono essere eseguite usando predicati (CONTAINS e FREETEXT) e funzioni (CONTAINSTABLE e FREETEXTTABLE) full-text, proprio come su ogni altra colonna con indicizzazione full-text.
    
 ### <a name="index-varbinarymax-or-varbinary-data"></a>Indicizzare colonne varbinary(max) o varbinary  
  In una singola colonna **varbinary(max)** o **varbinary** possono essere archiviati molti tipi di documenti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta qualsiasi tipo di documento per cui viene installato un filtro e disponibile nel sistema operativo. Il tipo di ogni documento è identificato dall'estensione file relativa. Per un'estensione file doc, ad esempio, la ricerca full-text utilizza il filtro che supporta i documenti di Microsoft Word. Per un elenco dei tipi di documento disponibili, eseguire una query sulla vista del catalogo [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) .  
