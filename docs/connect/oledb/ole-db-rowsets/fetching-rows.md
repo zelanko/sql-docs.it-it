@@ -1,6 +1,6 @@
 ---
-title: Il recupero di righe | Microsoft Docs
-description: Il recupero di righe usando l'interfaccia IRowset
+title: Recupero di righe | Microsoft Docs
+description: Recupero di righe mediante l'interfaccia IRowset
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,13 +16,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, fetching
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: c4955b36c5a0d95c4fa4e8bfe0fceb77fc65efd9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d47e94795f3bb81dd7a2d870190f081436c47e07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803824"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015360"
 ---
 # <a name="fetching-rows"></a>Recupero di righe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 41d0cca3-8556-4573-bb90-8e9402d9379f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b3c1c79da6d1efc51778cb09eb6bd2fed460576a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 014f679480caaabd42863d2551cfa4c25bbe94d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799144"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992984"
 ---
 # <a name="pdostatementgetattribute"></a>PDOStatement::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +30,7 @@ mixed PDOStatement::getAttribute( $attribute );
 ```  
   
 #### <a name="parameters"></a>Parametri  
-$*attribute*: numero intero, una delle costanti PDO::ATTR_* o PDO::SQLSRV_ATTR_\*. Sono supportati gli attributi che è possibile impostare con [pdostatement:: SetAttribute](../../connect/php/pdostatement-setattribute.md), PDO:: sqlsrv_attr_direct_query (per altre informazioni, vedere [esecuzione di istruzioni diretta e preparata nel il Driver PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)), PDO:: attr_cursor e PDO:: sqlsrv_attr_cursor_scroll_type (per altre informazioni, vedere [tipi di cursore (Driver PDO_SQLSRV)](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)).  
+$*attribute*: numero intero, una delle costanti PDO::ATTR_* o PDO::SQLSRV_ATTR_\*. Gli attributi supportati sono gli attributi che è possibile impostare con [PDOStatement:: SetAttribute](../../connect/php/pdostatement-setattribute.md), DOP:: SQLSRV_ATTR_DIRECT_QUERY (per altre informazioni, vedere [esecuzione di istruzioni dirette ed esecuzione di istruzioni preparate nel driver PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)), DOP: : ATTR_CURSOR e DOP:: SQLSRV_ATTR_CURSOR_SCROLL_TYPE. per ulteriori informazioni, vedere [tipi di cursore (driver PDO_SQLSRV)](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).  
   
 ## <a name="return-value"></a>Valore restituito  
 In caso di esito positivo, restituisce un valore misto per un attributo predefinito del PDO o per un attributo personalizzato del driver. In caso di errore, restituisce Null.  

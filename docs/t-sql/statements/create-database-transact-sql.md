@@ -36,14 +36,13 @@ helpviewer_keywords:
 ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 04339f2553d2eb6787fec1b83d61b71623159308
-ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
+ms.openlocfilehash: cb2dc637dff24b6e3864d3c14f94ea817767de41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67351687"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060969"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -61,7 +60,7 @@ Nella riga seguente fare clic su qualsiasi nome di prodotto. Viene visualizzato 
 
 |||||
 |-|-|-|-|
-|** _\* SQL Server \*_** &nbsp;| [Database singolo/pool elastico<br />database SQL](create-database-transact-sql.md?view=azuresqldb-current) | [Istanza gestita<br />database SQL](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Piattaforma di strumenti<br />analitici (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+|**\* _SQL Server \*_** &nbsp;| [Database singolo/pool elastico<br />database SQL](create-database-transact-sql.md?view=azuresqldb-current) | [Istanza gestita<br />database SQL](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Piattaforma di strumenti<br />analitici (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 |||||
 
 &nbsp;
@@ -865,7 +864,7 @@ GO
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| ** _\*Database singolo/pool elastico<br />database SQL\*_** | [Istanza gestita<br />database SQL](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Piattaforma di strumenti<br />analitici (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| **_\*Database singolo/pool elastico<br />database SQL\*_** | [Istanza gestita<br />database SQL](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Piattaforma di strumenti<br />analitici (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1192,7 +1191,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Database singolo/pool elastico<br />database SQL](create-database-transact-sql.md?view=azuresqldb-current)| ** _\* Istanza gestita<br />database SQL\*_** | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Piattaforma di strumenti<br />analitici (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Database singolo/pool elastico<br />database SQL](create-database-transact-sql.md?view=azuresqldb-current)| **_\* Istanza gestita<br />database SQL\*_** | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Piattaforma di strumenti<br />analitici (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1259,7 +1258,7 @@ Vedere [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-curren
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Database singolo/pool elastico<br />database SQL](create-database-transact-sql.md?view=azuresqldb-current)| [Istanza gestita<br />database SQL](create-database-transact-sql.md?view=azuresqldb-mi-current)| ** _\* SQL Data<br />Warehouse \*_**| [Piattaforma di strumenti<br />analitici (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Database singolo/pool elastico<br />database SQL](create-database-transact-sql.md?view=azuresqldb-current)| [Istanza gestita<br />database SQL](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* SQL Data<br />Warehouse \*_**| [Piattaforma di strumenti<br />analitici (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1371,7 +1370,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Database singolo/pool elastico<br />database SQL](create-database-transact-sql.md?view=azuresqldb-current)| [Istanza gestita<br />database SQL](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|** _\*Piattaforma di strumenti<br />analitici (PDW)\*_** |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Database singolo/pool elastico<br />database SQL](create-database-transact-sql.md?view=azuresqldb-current)| [Istanza gestita<br />database SQL](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|**_\*Piattaforma di strumenti<br />analitici (PDW)\*_** |
 
 &nbsp;
 

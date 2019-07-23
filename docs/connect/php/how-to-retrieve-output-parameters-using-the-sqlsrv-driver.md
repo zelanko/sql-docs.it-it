@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a2dac9b1561fbe5b05c96ce8a9ba5f5dd74594ce
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: db1216f513f353a6c703805c7aabe7b8dd468115
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799312"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993397"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Procedura: Recuperare i parametri di output mediante il driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -121,10 +120,10 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> Quando si associa un parametro di output a un tipo bigint, se il valore potrebbe finire compreso nell'intervallo di un' [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), è necessario specificarne il tipo di campo SQL come SQLSRV_SQLTYPE_BIGINT. In caso contrario, può comportare un'eccezione di "valore non compreso nell'intervallo".
+> Quando si associa un parametro di output a un tipo bigint, se il valore può finire al di fuori dell'intervallo di un [numero intero](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), sarà necessario specificare il tipo di campo SQL come SQLSRV_SQLTYPE_BIGINT. In caso contrario, è possibile che venga generata un'eccezione "valore non compreso nell'intervallo".
 
 ## <a name="example-2"></a>Esempio 2
-Questo esempio di codice viene illustrato come associare un valore bigint grande come parametro di output.  
+In questo esempio di codice viene illustrato come associare un valore bigint di grandi dimensioni come parametro di output.  
 
 ```
 <?php

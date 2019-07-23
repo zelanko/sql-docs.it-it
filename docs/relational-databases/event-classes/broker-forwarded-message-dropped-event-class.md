@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2fb2e65589e8cec209eb1d7336ec83da3b14737
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5eff5410ecd53148a16ae1e726407a7883606a89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66265521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999716"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped - classe di evento
 
@@ -50,7 +49,7 @@ ms.locfileid: "66265521"
 |ObjectId|**int**|Valore di durata (TTL) del messaggio inoltrato.|22|no|  
 |ObjectName|**nvarchar**|ID del messaggio inoltrato.|34|no|  
 |OwnerName|**nvarchar**|Identificatore dell'istanza di Service Broker che rappresenta la destinazione del messaggio.|37|no|  
-|RoleName|**nvarchar**|Ruolo dell'handle di conversazione. I possibili valori sono i seguenti:<br /><br /> - Iniziatore. Istanza di Service Broker che ha iniziato la conversazione.<br /><br /> - Destinazione. Istanza di Service Broker che funge da destinazione della conversazione.|38|no|  
+|RoleName|**nvarchar**|Ruolo dell'handle di conversazione. I possibili valori sono i seguenti:<br /><br /> \- Iniziatore. Istanza di Service Broker che ha iniziato la conversazione.<br /><br /> \- Destinazione. Istanza di Service Broker che funge da destinazione della conversazione.|38|no|  
 |ServerName|**nvarchar**|Nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracciata.|26|no|  
 |Severity|**int**|Numero di gravità per il testo dell'evento.|29|no|  
 |SPID|**int**|ID del processo server assegnato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al processo associato al client.|12|Sì|  

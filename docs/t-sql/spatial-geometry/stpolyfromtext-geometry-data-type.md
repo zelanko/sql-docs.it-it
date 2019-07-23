@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a7c1c9f0-1dd5-493b-b206-83bbfa33452b
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: b8f772e429b7d22c7403b618064c7f33e4d43a5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 292f043085cc04ee58a29ead730518b723854ed9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938357"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066338"
 ---
 # <a name="stpolyfromtext-geometry-data-type"></a>STPolyFromText (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argomenti  
  *polygon_tagged_text*  
- Rappresentazione WKT dell'istanza **geometryPolygon** da restituire. *polygon_tagged_text* è un'espressione **nvarchar(max)**.  
+ Rappresentazione WKT dell'istanza **geometryPolygon** da restituire. *polygon_tagged_text* è un'espressione **nvarchar(max)** .  
   
  *SRID*  
  Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geometryPolygon** da restituire.  
