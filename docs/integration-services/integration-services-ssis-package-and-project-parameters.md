@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 97c652c257b6d2aea6eec532c14ffebb6044ed45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dfab14edde8351d014714e314c500c5319a265f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057491"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Parametri del pacchetto e del progetto di Integration Services (SSIS)
 
@@ -107,7 +106,7 @@ ms.locfileid: "65723597"
 ## <a name="create-parameters"></a>Create Parameters
 Usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per creare parametri di progetto e parametri di pacchetto. Le procedure riportate di seguito contengono istruzioni dettagliate per la creazione di parametri di pacchetto/progetto.  
   
-> **NOTA:** Se si converte un progetto creato con una versione precedente di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nel modello di distribuzione del progetto, è possibile usare la **Conversione guidata progetto di Integration Services** per creare parametri basati su configurazioni. Per altre informazioni, vedere [Distribuire progetti e pacchetti di Integration Services (SSIS)](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+> **NOTA** Se si converte un progetto creato con una versione precedente di [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nel modello di distribuzione del progetto, è possibile usare la **Conversione guidata progetto di Integration Services** per creare parametri basati su configurazioni. Per altre informazioni, vedere [Distribuire progetti e pacchetti di Integration Services (SSIS)](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
 ### <a name="create-package-parameters"></a>Creare parametri del pacchetto  
   
@@ -130,13 +129,13 @@ Usare [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] per cre
     |Obbligatorio|Richiede che un valore diverso dal valore predefinito di progettazione venga specificato prima dell'esecuzione del pacchetto.|  
     |Descrizione|Per manutenzione, la descrizione del parametro. In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], impostare la descrizione del parametro nella finestra Proprietà di Visual Studio quando il parametro viene selezionato nella finestra dei parametri applicabile.|  
   
-    > **NOTA:** Quando si distribuisce un progetto nel catalogo, molte più proprietà vengono associate al progetto. Per visualizzare tutte le proprietà di tutti i parametri nel catalogo, usare la vista [catalog.object_parameters &#40;database SSISDB&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md).  
+    > **NOTA** Quando si distribuisce un progetto nel catalogo, molte più proprietà vengono associate al progetto. Per visualizzare tutte le proprietà di tutti i parametri nel catalogo, usare la vista [catalog.object_parameters &#40;database SSISDB&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md).  
   
 4.  Salvare il progetto per salvare le modifiche ai parametri. I valori dei parametri vengono archiviati nel file di progetto.  
   
     > **AVVISO** È possibile modificare direttamente l'elenco oppure usare la finestra **Proprietà** per modificare i valori delle proprietà dei parametri. È possibile eliminare un parametro tramite il pulsante **Elimina (X)** . Utilizzando l'ultimo pulsante della barra degli strumenti, è possibile specificare un valore per un parametro utilizzato solo quando si esegue il pacchetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
-    > **NOTA:** Se si riapre il file di pacchetto senza aprire il progetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], la scheda **Parametri** sarà vuota e disabilitata.  
+    > **NOTA** Se si riapre il file di pacchetto senza aprire il progetto in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], la scheda **Parametri** sarà vuota e disabilitata.  
   
 ### <a name="create-project-parameters"></a>Creare parametri del progetto  
   

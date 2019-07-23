@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: add5c623faef50f1b5a0d7b582524d446a0080d5
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: c0ed09a881d0bbf7a1f284b3b2971077725e6d91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67579906"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094959"
 ---
 # <a name="create-a-login"></a>Creazione di un account di accesso
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "67579906"
   
  È possibile concedere autorizzazioni agli account di accesso, in quanto entità di sicurezza. L'ambito di un account di sicurezza è l'intero [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Affinché un account di accesso possa eseguire la connessione a un database specifico nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è necessario eseguirne il mapping a un utente del database. Le autorizzazioni all'interno del database vengono concesse e negate all'utente del database, non all'account di accesso. È possibile concedere a un account di accesso autorizzazioni il cui ambito è l'intera istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (ad esempio, l'autorizzazione **CREATE ENDPOINT** ).  
   
-> **NOTA:** Quando un account di accesso si connette a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'identità viene convalidata nel database master. Usare gli utenti di database indipendente per autenticare le connessioni [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] a livello di database. Quando si usano gli utenti di database indipendente, non è necessario un account di accesso. Un database indipendente è un database isolato dagli altri database e dall'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (e del database master) che ospita il database. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta gli utenti di database indipendente per l'autenticazione di Windows e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Quando si usa [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], combinare gli utenti di del database indipendente con le regole firewall a livello di database. Per altre informazioni, vedere [Utenti di database indipendente: rendere portabile un database](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+> **NOTA** Quando un account di accesso si connette a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'identità viene convalidata nel database master. Usare gli utenti di database indipendente per autenticare le connessioni [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] a livello di database. Quando si usano gli utenti di database indipendente, non è necessario un account di accesso. Un database indipendente è un database isolato dagli altri database e dall'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (e del database master) che ospita il database. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta gli utenti di database indipendente per l'autenticazione di Windows e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Quando si usa [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], combinare gli utenti di del database indipendente con le regole firewall a livello di database. Per altre informazioni, vedere [Utenti di database indipendente: rendere portabile un database](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ##  <a name="Security"></a> Security  
 

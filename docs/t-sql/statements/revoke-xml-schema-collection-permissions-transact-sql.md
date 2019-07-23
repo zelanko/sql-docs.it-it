@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 8ca0973c-30b2-4633-a165-c09b13cc81ae
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 09927ba3835b1a5e633adfec6e865600386336e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db84729a448ce1d90c016696aef85d2580ede913
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62638647"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913958"
 ---
 # <a name="revoke-xml-schema-collection-permissions-transact-sql"></a>REVOKE - autorizzazioni per raccolte di XML Schema (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -58,7 +57,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  Specifica un'autorizzazione che può essere revocata per una raccolta di XML Schema. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- ON XML SCHEMA COLLECTION :: [ _schema_name_**.** ] *XML_schema_collection_name*  
+ ON XML SCHEMA COLLECTION :: [ _schema_name_ **.** ] *XML_schema_collection_name*  
  Specifica la raccolta di XML Schema per cui viene revocata l'autorizzazione. Il qualificatore di ambito (::) è obbligatorio. Se si omette *schema_name*, verrà usato lo schema predefinito. Se si specifica *schema_name*, il qualificatore di ambito dello schema (.) è obbligatorio.  
   
  GRANT OPTION  

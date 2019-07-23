@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 5b60d4190ad25dd57098ef4cd107f1838886a767
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 96b7659d84ce548ee95ae23bc437f60575df5e35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368413"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051878"
 ---
 # <a name="live-query-statistics"></a>Live Query Statistics
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ ms.locfileid: "53368413"
 ## <a name="remarks"></a>Remarks  
  Perché le statistiche delle query dinamiche possano acquisire informazioni sullo stato di avanzamento delle query, è necessario che l'infrastruttura del profilo delle statistiche sia stata abilitata. A seconda della versione, l'overhead può essere notevole. Per altre informazioni su questo overhead, vedere [Infrastruttura di profilatura query](../../relational-databases/performance/query-profiling-infrastructure.md).
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Sono richieste l'autorizzazione a livello di database `SHOWPLAN` per popolare la pagina dei risultati delle **statistiche sulle query dinamiche**, l'autorizzazione a livello di server `VIEW SERVER STATE` per visualizzare le statistiche dinamiche e le autorizzazioni necessarie per eseguire la query.  
   
 ## <a name="see-also"></a>Vedere anche  

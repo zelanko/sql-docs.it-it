@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0ce241446bdcb928b0edc976117731e78dca7f9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cabd08fa2e4ba8797d5fe7fc5e4f623f24cda856
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737751"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984310"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
   
  La modifica del trigger tramite l'istruzione **ALTER TRIGGER** comporta l'abilitazione del trigger.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per disabilitare un trigger DML, è necessario disporre almeno dell'autorizzazione ALTER per la tabella o la vista per cui il trigger è stato creato.  
   
  Per disabilitare un trigger DDL con ambito server (ON ALL SERVER) o un trigger LOGON, è necessario disporre dell'autorizzazione CONTROL SERVER per il server. Per disabilitare un trigger DDL con ambito database (ON DATABASE), è necessario disporre almeno dell'autorizzazione ALTER ANY DATABASE DDL TRIGGER nel database corrente.  

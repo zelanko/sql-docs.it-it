@@ -16,21 +16,20 @@ helpviewer_keywords:
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 514ec88554282cf6e2cf0cc74eb1f35e77091fa9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 79ce697e86adcd7a2b11d4ec1d5f4564d51692e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539033"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024994"
 ---
 # <a name="create-clustered-indexes"></a>Creare indici cluster
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   È possibile creare indici cluster nelle tabelle usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A parte poche eccezioni, ogni tabella deve disporre di un indice cluster. Oltre a migliorare le prestazioni di esecuzione delle query, un indice può essere ricompilato o riorganizzato su richiesta per controllare la frammentazione della tabella. È inoltre possibile creare un indice cluster in una vista. Gli indici cluster sono descritti nell'argomento [Descrizione di indici cluster e non cluster](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -75,7 +74,7 @@ ms.locfileid: "52539033"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -88,7 +87,7 @@ ms.locfileid: "52539033"
   
 3.  Nella pagina **Generale** della finestra di dialogo **Nuovo indice** immettere il nome del nuovo indice nella casella **Nome indice** .  
   
-4.  In **Colonne chiave indice** fare clic su **Aggiungi**.  
+4.  In **Colonne chiave indice**fare clic su **Aggiungi**.  
   
 5.  Nella finestra di dialogo **Seleziona colonne da**_nome\_tabella_ selezionare la casella di controllo della colonna della tabella da aggiungere all'indice cluster.  
   
@@ -126,7 +125,7 @@ ms.locfileid: "52539033"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;  

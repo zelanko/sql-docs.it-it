@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 003713e2-de6b-4277-a0a8-7d1f2f4ffb39
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 597cebf9db40c2e119949c86341b4817a51c38ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3e720389f790282f1ad7a33302e2d277128178f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102002"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140947"
 ---
 # <a name="verifying-database-code-by-using-sql-server-unit-tests"></a>Verifica del codice di database tramite unit test di SQL Server
 È possibile usare unit test di SQL Server per definire uno stato di base del database e verificare quindi eventuali modifiche apportate successivamente agli oggetti di database.  
@@ -50,7 +49,7 @@ Nella tabella seguente sono incluse le descrizioni di attività comuni che suppo
 |**Gestire gruppi di test (Visual Studio 2010):** è possibile organizzare in gruppi i test che in genere è opportuno eseguire contemporaneamente. Gli elenchi di test sono comunque supportati, ma per i nuovi gruppi di test è consigliabile utilizzare invece le categorie di test. È possibile, ad esempio, creare una categoria di test per i test destinati ai trigger o a tutti gli oggetti in un particolare *schema*.|[Definizione di categorie per raggruppare i test](https://msdn.microsoft.com/library/dd286595(VS.100).aspx)<br /><br />[Definizione di elenchi di test per raggruppare i test](https://msdn.microsoft.com/library/dd286584(VS.100).aspx)|  
 |**Archiviare i progetti di test e i test nel controllo delle versioni:** dopo aver eseguito i test e verificato se funzionano correttamente, è consigliabile archiviare il progetto di test e tutti i file associati nel controllo delle versioni, in modo che tutti i membri del team possano eseguire i test. Archiviando il progetto di test nel controllo delle versioni insieme al progetto di database di SQL Server è possibile ripristinare facilmente le versioni compatibili sia del database che dei test per il database.|[Aggiungere file al controllo della versione](https://msdn.microsoft.com/library/ms181374(VS.100).aspx)<br /><br />[Uso delle finestre Archivia e Modifiche in sospeso](https://msdn.microsoft.com/library/ms245462(VS.100).aspx)|  
 |**Definire condizioni di test personalizzate:** è possibile creare condizioni di test personalizzate se è necessario verificare comportamenti non previsti nel set predefinito di condizioni di test. È necessario distribuire queste condizioni a tutti i membri del team che desiderano eseguire i test in cui vengono utilizzate le nuove condizioni.|[Scenario: Definire condizioni di test personalizzate per unit test di SQL Server](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)|  
-|**Aggiornare gli unit test esistenti:** nel caso di unit test di database creati in una versione precedente di Visual Studio, è necessario aggiornarli prima che vengano compilati ed eseguiti correttamente con questa versione.<br /><br />**NOTA:** se si apre una soluzione contenente sia un progetto di database sia un progetto di unit test di database di una versione precedente di Visual Studio, verrà richiesto di aggiornare il progetto di database. Verrà richiesto di aggiornare i progetti di unit test di database. L'aggiornamento deve essere eseguito manualmente.|[Aggiornare un progetto di test precedente contenente unit test del database](../ssdt/upgrade-an-older-test-project-containing-database-unit-tests.md)|  
+|**Aggiornare gli unit test esistenti:** nel caso di unit test di database creati in una versione precedente di Visual Studio, è necessario aggiornarli prima che vengano compilati ed eseguiti correttamente con questa versione.<br /><br />**NOTA** se si apre una soluzione contenente sia un progetto di database sia un progetto di unit test di database di una versione precedente di Visual Studio, verrà richiesto di aggiornare il progetto di database. Verrà richiesto di aggiornare i progetti di unit test di database. L'aggiornamento deve essere eseguito manualmente.|[Aggiornare un progetto di test precedente contenente unit test del database](../ssdt/upgrade-an-older-test-project-containing-database-unit-tests.md)|  
 |**Estendibilità:** è possibile estendere SQL Server Data Tools tramite la creazione di estensioni di funzionalità.|[Condizioni di test personalizzate per unit test di SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)|  
 |**Risolvere i problemi:** è possibile acquisire altre informazioni sulla risoluzione dei problemi comuni relativi agli unit test di SQL Server.|[Risoluzione dei problemi relativi a unit test del database di SQL Server](../ssdt/troubleshooting-sql-server-database-unit-testing-issues.md)|  
   

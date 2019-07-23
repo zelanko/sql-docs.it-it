@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: b1a57d5e-3f03-4901-8b2b-bb8b371b595b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 255068b1d20d67b18a9c0a1679b8ee424192045e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18b424d7984c5fcde406b8de8482923b81ba246e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716009"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007235"
 ---
 # <a name="catalogrenamecustomizedlogginglevel"></a>catalog.rename_customized_logging_level 
 
@@ -38,12 +37,12 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
  [ @old_name = ] *old_name*  
  Nome del livello di registrazione personalizzato esistente da rinominare.  
   
- *old_name* è di tipo **nvarchar(128)**.  
+ *old_name* è di tipo **nvarchar(128)** .  
   
  [ @new_name = ] *new_name*  
  Nuovo nome del livello di registrazione personalizzato specificato.  
   
- *new_name* è di tipo **nvarchar(128)**.  
+ *new_name* è di tipo **nvarchar(128)** .  
   
 ## <a name="remarks"></a>Remarks  
   

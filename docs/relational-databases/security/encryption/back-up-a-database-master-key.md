@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 author: aliceku
 ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: 337646527cfaabfb3b803f37088f398cfd63808e
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 0a45b7977d19603387e51b9ed824d9e8a4d759b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997513"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997677"
 ---
 # <a name="back-up-a-database-master-key"></a>Backup della chiave master di un database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "53997513"
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorizzazioni
 È richiesta l'autorizzazione CONTROL per il database.  
   
 ## <a name="using-sql-server-management-studio-with-transact-sql"></a>Utilizzo di SQL Server Management Studio con Transact-SQL  
@@ -52,7 +51,7 @@ ms.locfileid: "53997513"
   
 6. Sulla barra Standard fare clic su **Nuova query**.  
   
-7. Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+7. Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```sql
     -- Creates a backup of the "AdventureWorks2012" master key. Because this master key is not encrypted by the service master key, a password must be specified when it is opened.  

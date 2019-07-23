@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ca9de3172458d22d13ac6260138aa9895bdeff72
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 14333d96ce4a1022979a2998cb808bfa16cd7a0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51511907"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087377"
 ---
 # <a name="export-as-policy-dialog-box"></a>Finestra di dialogo Esporta come criteri
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "51511907"
  Selezionare questa opzione per salvare i criteri nell'istanza del server locale.  
   
  **Al file**  
- Per salvare i criteri come file XML, digitare il percorso e il nome del file oppure usare il pulsante Sfoglia (**...**).  
+ Per salvare i criteri come file XML, digitare il percorso e il nome del file oppure usare il pulsante Sfoglia ( **...** ).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Amministrazione di server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

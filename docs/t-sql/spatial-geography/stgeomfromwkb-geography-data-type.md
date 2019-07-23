@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 79d39d88-5440-49a7-9247-190eafce3f4f
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: d0ca85d39df85fc48a9aad779414db1dcc1b4de6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34fcb2841d414d56a8718f3864039aa85d390d85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042104"
 ---
 # <a name="stgeomfromwkb-geography-data-type"></a>STGeomFromWKB (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ STGeomFromWKB ( 'WKB_geography' , SRID )
   
 ## <a name="arguments"></a>Argomenti  
  *WKB_geography*  
- Rappresentazione WKB dell'istanza **geography** da restituire. *WKB_geography* è un'espressione **varbinary(max)**.  
+ Rappresentazione WKB dell'istanza **geography** da restituire. *WKB_geography* è un'espressione **varbinary(max)** .  
   
  *SRID*  
  Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geography** da restituire.  

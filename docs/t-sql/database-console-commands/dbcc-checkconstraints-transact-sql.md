@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 911cb0643318e98b46746c7cd11ef2ebbfcaca2b
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 8653b197e0fa16b4e939ab94865395d68bf1f852
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102117"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -112,7 +111,7 @@ DBCC CHECKCONSTRAINTS restituisce un set di righe con le colonne seguenti.
 |Constraint Name|**varchar**|Nome del vincolo violato.|  
 |Where|**varchar**|Assegnazioni di valori di colonna che identificano una o più righe che violano il vincolo.<br /><br /> È possibile utilizzare il valore di questa colonna in una clausola WHERE di un'istruzione SELECT che esegue una query per individuare le righe che violano il vincolo.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner** .
   
 ## <a name="examples"></a>Esempi  
@@ -133,7 +132,7 @@ DBCC CHECKCONSTRAINTS(Table1);
 GO  
 ```  
   
-### <a name="b-checking-a-specific-constraint"></a>b. Controllo di un vincolo specifico  
+### <a name="b-checking-a-specific-constraint"></a>B. Controllo di un vincolo specifico  
 Nell'esempio seguente viene controllata l'integrità del vincolo `CK_ProductCostHistory_EndDate`.
   
 ```sql  

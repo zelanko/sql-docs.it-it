@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5bc7c5c22bdad37eee4e5a711b77555088404b0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d781778f46617a8961506fb022854835717ea0bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62644583"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114887"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY - autorizzazioni per entità di database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,15 +70,15 @@ DENY permission [ ,...n ]
  Specifica un'autorizzazione che può essere negata per un'entità di database. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
  USER ::*database_user*  
- Specifica la classe e il nome dell'utente per cui viene negata l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio.  
+ Specifica la classe e il nome dell'utente per cui viene negata l'autorizzazione. Il qualificatore di ambito ( **::** ) è obbligatorio.  
   
  ROLE ::*database_role*  
- Specifica la classe e il nome del ruolo per cui viene negata l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio.  
+ Specifica la classe e il nome del ruolo per cui viene negata l'autorizzazione. Il qualificatore di ambito ( **::** ) è obbligatorio.  
   
  APPLICATION ROLE ::*application_role*  
  **Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Specifica la classe e il nome del ruolo applicazione per cui viene negata l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio.  
+ Specifica la classe e il nome del ruolo applicazione per cui viene negata l'autorizzazione. Il qualificatore di ambito ( **::** ) è obbligatorio.  
   
  CASCADE  
  Indica che l'autorizzazione negata viene negata anche ad altre entità alle quali è stata concessa da questa entità.  

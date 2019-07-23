@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b2474bc1f0d0111c4dedd2fa8ce3a9f885503d52
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: bf64036b88b6f29da0404b6e611ae891db93da70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912660"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -309,7 +308,7 @@ Se *type_schema_name* non viene specificato, [!INCLUDE[ssDE](../../includes/ssde
 Valore predefinito del parametro. Se viene definito un valore *default*, è possibile eseguire la funzione senza specificare un valore per il parametro corrispondente a tale valore.  
   
 > [!NOTE]  
-> È possibile specificare parametri predefiniti per le funzioni CLR, ad eccezione dei tipi di dati **varchar(max)** e **varbinary(max)**.  
+> È possibile specificare parametri predefiniti per le funzioni CLR, ad eccezione dei tipi di dati **varchar(max)** e **varbinary(max)** .  
   
  Se a un parametro della funzione è associato un valore predefinito, alla chiamata della funzione è necessario specificare la parola chiave DEFAULT per recuperare il valore predefinito. Questo comportamento risulta diverso dall'utilizzo di parametri con valore predefinito nelle stored procedure in cui l'omissione del parametro implica l'utilizzo del valore predefinito. Tuttavia, la parola chiave DEFAULT non è richiesta in caso di richiamo di una funzione scalare tramite l'istruzione EXECUTE.  
   
@@ -334,7 +333,7 @@ Valore predefinito del parametro. Se viene definito un valore *default*, è poss
   
  Nelle funzioni inline con valori di tabella il valore restituito TABLE viene definito tramite una sola istruzione SELECT. Alle funzioni inline non sono associate variabili restituite.  
   
- <a name="mstvf"></a> Nelle funzioni con valori di tabella con istruzioni multiple \@*@return_variable* è una variabile TABLE usata per l'archiviazione e l'accumulo delle righe da restituire come valore della funzione. È possibile specificare \@ *return_variable* solo per le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e non per le funzioni CLR.  
+ <a name="mstvf"></a> Nelle funzioni con valori di tabella con istruzioni multiple \@ *@return_variable* è una variabile TABLE usata per l'archiviazione e l'accumulo delle righe da restituire come valore della funzione. È possibile specificare \@ *return_variable* solo per le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] e non per le funzioni CLR.  
   
  *select_stmt*  
  Istruzione SELECT che definisce il valore restituito di una funzione inline con valori di tabella.  
@@ -367,7 +366,7 @@ In un tipico esempio di MyFood.DLL, in cui tutti i tipi sono nello spazio dei no
 > [!NOTE]  
 > Questa opzione non è disponibile in un database indipendente.  
   
- *\<* table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) Definisce il tipo di dati table per una funzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. La dichiarazione di tabella include definizioni di colonna, nonché vincoli di colonna o tabella. La tabella viene sempre inserita nel filegroup primario.  
+ *\<* table_type_definition *>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) Definisce il tipo di dati table per una funzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. La dichiarazione di tabella include definizioni di colonna, nonché vincoli di colonna o tabella. La tabella viene sempre inserita nel filegroup primario.  
   
  \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] )    
  **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([anteprima in alcune aree](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
@@ -464,7 +463,7 @@ Specifica se questa funzione scalare definita dall'utente deve essere impostata 
  La proprietà ROWGUIDCOL non impone l'univocità dei valori archiviati nella colonna e non genera automaticamente valori per le nuove righe inserite nella tabella. Per generare valori univoci per ogni colonna, utilizzare la funzione NEWID nelle istruzioni INSERT. È possibile specificare un valore predefinito. Non è tuttavia possibile specificare l'opzione NEWID come valore predefinito.  
   
  IDENTITY  
- Indica che la nuova colonna è una colonna Identity. Quando si aggiunge una nuova riga alla tabella, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna alla colonna un valore univoco e incrementale. Le colonne Identity vengono comunemente utilizzate in combinazione con vincoli PRIMARY KEY e svolgono la funzione di identificatore di riga univoco per la tabella. La proprietà IDENTITY può essere assegnata a colonne **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** o **numeric(p,0)**. Ogni tabella può includere una sola colonna Identity. Non è consentito associare valori predefiniti e vincoli DEFAULT alle colonne Identity. È necessario specificare sia il valore di *seed* che di *increment* oppure è possibile omettere entrambi questi valori. In questo secondo caso, il valore predefinito è (1,1).  
+ Indica che la nuova colonna è una colonna Identity. Quando si aggiunge una nuova riga alla tabella, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna alla colonna un valore univoco e incrementale. Le colonne Identity vengono comunemente utilizzate in combinazione con vincoli PRIMARY KEY e svolgono la funzione di identificatore di riga univoco per la tabella. La proprietà IDENTITY può essere assegnata a colonne **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** o **numeric(p,0)** . Ogni tabella può includere una sola colonna Identity. Non è consentito associare valori predefiniti e vincoli DEFAULT alle colonne Identity. È necessario specificare sia il valore di *seed* che di *increment* oppure è possibile omettere entrambi questi valori. In questo secondo caso, il valore predefinito è (1,1).  
   
  Non è possibile specificare l'opzione IDENTITY per le funzioni CLR con valori di tabella.  
   
@@ -558,7 +557,7 @@ Se una funzione definita dall'utente non viene creata tramite la clausola `SCHEM
  Per altre informazioni sulla programmazione delle funzioni CLR, vedere [Funzioni CLR definite dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md).  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
- È possibile richiamare funzioni scalari laddove vengono usate espressioni scalari. Sono incluse le colonne calcolate e le definizioni dei vincoli CHECK. Le funzioni scalari possono essere eseguite anche tramite l'uso dell'istruzione [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md). È necessario richiamare funzioni scalari usando almeno il nome in due parti della funzione (*<schema>.<function>*). Per altre informazioni sui nomi a più parti, vedere [Convenzioni della sintassi Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). Le funzioni con valori di tabella possono essere richiamate laddove sono consentite le espressioni di tabella nella clausola `FROM` delle istruzioni `SELECT`, `INSERT`, `UPDATE`, o `DELETE`. Per altre informazioni, vedere [Eseguire funzioni definite dall'utente](../../relational-databases/user-defined-functions/execute-user-defined-functions.md).  
+ È possibile richiamare funzioni scalari laddove vengono usate espressioni scalari. Sono incluse le colonne calcolate e le definizioni dei vincoli CHECK. Le funzioni scalari possono essere eseguite anche tramite l'uso dell'istruzione [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md). È necessario richiamare funzioni scalari usando almeno il nome in due parti della funzione ( *<schema>.<function>* ). Per altre informazioni sui nomi a più parti, vedere [Convenzioni della sintassi Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). Le funzioni con valori di tabella possono essere richiamate laddove sono consentite le espressioni di tabella nella clausola `FROM` delle istruzioni `SELECT`, `INSERT`, `UPDATE`, o `DELETE`. Per altre informazioni, vedere [Eseguire funzioni definite dall'utente](../../relational-databases/user-defined-functions/execute-user-defined-functions.md).  
   
 ## <a name="interoperability"></a>Interoperabilità  
  In una funzione le istruzioni seguenti sono valide:  

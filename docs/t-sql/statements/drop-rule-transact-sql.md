@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 8370b730-7fd5-43fe-a7f6-8300b3caa16d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8e101334a5957349beaf7fcac9e8355ee17acdc6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: cce8533a1ac74feb95577d28f73cb6f87c15aa31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68223605"
 ---
 # <a name="drop-rule-transact-sql"></a>DROP RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]
   
  L'istruzione DROP RULE non ha alcun effetto sui vincoli CHECK. Per altre informazioni sull'eliminazione dei vincoli CHECK, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire l'istruzione DROP RULE, è necessario disporre almeno dell'autorizzazione ALTER per lo schema a cui appartiene la regola.  
   
 ## <a name="examples"></a>Esempi  

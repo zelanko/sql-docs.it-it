@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e8e60159-d5b0-49d5-91f3-af8e9cb994c1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 36c9972d6e0376f344abc290bd4fa0df42245601
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: ef46a36296da926f2cb62599b41774b1d29f5ba1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109823"
 ---
 # <a name="configure-alerts-to-notify-policy-administrators-of-policy-failures"></a>Configurare avvisi per notificare agli amministratori eventuali errori dei criteri
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "51512686"
   
 -   [Assegnazione di avvisi a un operatore](../../ssms/agent/assign-alerts-to-an-operator.md)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Quando i criteri vengono valutati su richiesta, vengono eseguiti nel contesto di sicurezza dell'utente. Per poter scrivere nel log degli errori, l'utente deve disporre di autorizzazioni ALTER TRACE o deve essere un membro del ruolo predefinito del server sysadmin. I criteri valutati da un utente che dispone di privilegi di livello inferiore non verranno scritti nel registro eventi e non genereranno un avviso.  
   
  Le modalità di esecuzione automatiche possono essere eseguite solo da membri del ruolo sysadmin. Tale ruolo consente la scrittura dei criteri nel log degli errori e la generazione di un avviso.  
