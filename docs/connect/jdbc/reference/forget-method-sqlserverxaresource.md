@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6d83138d-aa45-4d94-9da6-fdfe7ed28edc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d20fc3669cbe933b78ec7475b4172baf5d17bbcf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5eaaa98b2d79dc29558d32a254d338c9891372f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799031"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954540"
 ---
 # <a name="forget-method-sqlserverxaresource"></a>Metodo forget (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public void forget(javax.transaction.xa.Xid xid)
 #### <a name="parameters"></a>Parametri  
  *xid*  
   
- Oggetto Xid.  
+ Oggetto XID.  
   
 ## <a name="exceptions"></a>Eccezioni  
  javax.transaction.xa.XAException  

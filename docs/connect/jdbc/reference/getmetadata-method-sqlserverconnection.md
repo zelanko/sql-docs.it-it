@@ -1,5 +1,5 @@
 ---
-title: Metodo getMetaData (SQLServerConnection) | Microsoft Docs
+title: Metodo GetMetadata (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 86223cb5-3bf4-489a-8c82-669a91764f2b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 21da83dd2ca7c5c85c2d98fe8d69061f0b3abc11
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4fdf49c68acd2ef1b1544ad02efcb4079ceeac67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981874"
 ---
 # <a name="getmetadata-method-sqlserverconnection"></a>Metodo getMetaData (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public java.sql.DatabaseMetaData getMetaData()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- L'oggetto DatabaseMetaData.  
+ Oggetto DatabaseMetaData.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getMetaData viene specificato dal metodo getMetaData nell'interfaccia Java.  
+ Questo metodo getMetaData viene specificato dal metodo getMetaData nell'interfaccia java. SQL. Connection.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

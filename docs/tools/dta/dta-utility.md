@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4c5f6df2e302b96d5f49785ee835650a2ef2f788
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ca26b36501052323553eb2c5a2a25557492eec85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132774"
 ---
 # <a name="dta-utility"></a>dta - utilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +177,7 @@ dta -d AdventureWorks2012 ...
  Specifica gli indici filtrati da considerare per le nuove indicazioni. Per altre informazioni, vedere [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
 **-fc**  
- Specifica che gli indici columnstore devono essere considerati per nuove indicazioni. DTA prenderà in considerazione entrambi gli indici columnstore cluster e non cluster. Per ulteriori informazioni, vedere    
+ Specifica che gli indici columnstore devono essere considerati per nuove indicazioni. DTA considererà gli indici columnstore cluster e non cluster. Per ulteriori informazioni, vedere    
 [Indicazioni relative agli indici columnstore in Ottimizzazione guidata motore di database](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
@@ -217,7 +216,7 @@ dta -d AdventureWorks2012 ...
  Specifica che la cache dei piani deve essere utilizzata come carico di lavoro. Vengono analizzati i primi 1.000 eventi della cache dei piani per i database selezionati in modo esplicito. Questo valore può essere modificato tramite l'opzione **-n**.  
  
 **-iq**  
- Specifica che il Query Store sia usato come carico di lavoro. Vengono analizzati i primi 1.000 eventi del Query Store per i database selezionati in modo esplicito. Questo valore può essere modificato tramite l'opzione **-n**.  Per altre informazioni, vedere [Archivio query](../../relational-databases/performance/how-query-store-collects-data.md) e [Ottimizzazione del database tramite un carico di lavoro dell'archivio query](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
+ Specifica che il Query Store essere utilizzato come carico di lavoro. Verranno analizzati i primi 1.000 eventi del Query Store per i database selezionati in modo esplicito. Questo valore può essere modificato tramite l'opzione **-n**.  Per altre informazioni, vedere [Archivio query](../../relational-databases/performance/how-query-store-collects-data.md) e [Ottimizzazione del database tramite un carico di lavoro dell'archivio query](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
  ||  
 |-|  
 |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
@@ -267,11 +266,11 @@ dta -n number_of_events -A 0
  In questo caso, è importante specificare un tempo di ottimizzazione illimitato (`-A 0`). In caso contrario, Ottimizzazione guidata motore di database utilizza il tempo di ottimizzazione predefinito pari a 8 ore.
  
  **-I** _time_window_in_hours_   
-   Specifica l'intervallo di tempo (in ore) quando una query deve essere stata eseguita per essere considerata da DTA per l'ottimizzazione quando si usa **-iq** opzione (carico di lavoro da Query Store). 
+   Specifica l'intervallo di tempo (in ore) in cui una query deve essere eseguita per essere considerata da DTA per l'ottimizzazione quando si usa l'opzione **-IQ** (carico di lavoro di query Store). 
 ```  
 dta -iq -I 48  
 ```  
-In questo caso, DTA verrà usare Query Store come origine del carico di lavoro e considerare solo le query eseguite con le ultime 48 ore.  
+In questo caso DTA utilizzerà Query Store come origine del carico di lavoro e considererà solo le query eseguite con le ultime 48 ore.  
   ||  
 |-|  
 |**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  

@@ -1,5 +1,5 @@
 ---
-title: setAsciiStream, metodo di input di flusso byte - long) | Microsoft Docs
+title: Metodo setAsciiStream per l'input del flusso bytes-long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6bc486cd-e432-4057-8789-9957ba23dd30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 470ce0c14253229e096aec36ac9d0c019f27353c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1c4e5244ba0798fdd02f30faafa3459aa801e8dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975472"
 ---
 # <a name="setasciistream-method-javalangstring-javaioinputstream-long"></a>Metodo setAsciiStream (java.lang.String, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public final void setAsciiStream(java.lang.String parameterName,
   
  *x*  
   
- Un oggetto InputStream.  
+ Oggetto InputStream.  
   
  *length*  
   
@@ -49,7 +48,7 @@ public final void setAsciiStream(java.lang.String parameterName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo setAsciiStream viene specificato dal metodo setAsciiStream nell'interfaccia PreparedStatement.  
+ Questo metodo setAsciiStream viene specificato dal metodo setAsciiStream nell'interfaccia java. SQL. PreparedStatement.  
   
  Se la lunghezza del flusso è diversa da quanto specificato nel parametro *length*, il driver JDBC genera un'eccezione al momento dell'aggiornamento o dell'inserimento della riga.  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 840ecfcf-0dd3-4b7b-976f-dc9a96cd1464
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1ca9d0fede758b99f442a9553e4266e79fa81134
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 92d7b0db997a6b77b43efb6d8104f629bb5507e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794028"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976027"
 ---
 # <a name="recover-method-sqlserverxaresource"></a>Metodo recover (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +37,10 @@ public javax.transaction.xa.Xid[] recover(int flags)
 #### <a name="parameters"></a>Parametri  
  *flags*  
   
- Un' **int** valore che può assumere uno dei seguenti valori: XAResource.TMSTARTRSCAN o XAResource.TMENDRSCAN o XAResource.TMNOFLAGS o XAResource.TMSTARTTRSCAN | XAResource.TMENDRSCAN.  
+ Valore **int** che può assumere uno dei valori seguenti: XARESOURCE. TMSTARTRSCAN o XARESOURCE. TMENDRSCAN o XARESOURCE. TMNOFLAGS o XARESOURCE. TMSTARTTRSCAN | XAResource. TMENDRSCAN.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto Xid.  
+ Oggetto XID.  
   
 ## <a name="exceptions"></a>Eccezioni  
  javax.transaction.xa.XAException  
@@ -49,7 +48,7 @@ public javax.transaction.xa.Xid[] recover(int flags)
 ## <a name="remarks"></a>Remarks  
  Questo metodo recover viene specificato dal metodo recover nell'interfaccia javax.transaction.xa.XAResource.  
   
- Se il parametro **flag** non XAResource.TMSTARTRSCAN o XAResource.TMSTARTRSCAN | XAResource.TMENDRSCAN, un'analisi di ripristino deve essere in corso.  
+ Se il **flag** del parametro non è XARESOURCE. TMSTARTRSCAN o XARESOURCE. TMSTARTRSCAN | XAResource. TMENDRSCAN è necessario che sia in corso un'analisi del ripristino.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   

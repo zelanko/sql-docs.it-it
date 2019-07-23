@@ -1,5 +1,5 @@
 ---
-title: Metodo isSigned (SQLServerParameterMetaData) | Microsoft Docs
+title: Metodo signed (SQLServerParameterMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1a4af386-e379-4a60-a107-a99e63a490ac
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ccfd2816bf81035b893ea8a7ddf30adebd325840
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 46b93b2b5c45491ad91be8b1e40fc909f0c4510d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977231"
 ---
 # <a name="issigned-method-sqlserverparametermetadata"></a>Metodo isSigned (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public boolean isSigned(int param)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo isSigned viene specificato dal metodo isSigned nell'interfaccia parametermetadata.  
+ Questo metodo viene specificato dal metodo signed nell'interfaccia java. SQL. ParameterMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

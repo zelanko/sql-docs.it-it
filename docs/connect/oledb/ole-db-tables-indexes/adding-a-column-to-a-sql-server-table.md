@@ -1,6 +1,6 @@
 ---
-title: Aggiunta di una colonna in una tabella SQL Server | Microsoft Docs
-description: Aggiunta di una colonna a una tabella di SQL Server usando il Driver OLE DB per SQL Server
+title: Aggiunta di una colonna a una tabella SQL Server | Microsoft Docs
+description: Aggiunta di una colonna a una tabella SQL Server utilizzando OLE DB driver per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,22 +15,21 @@ helpviewer_keywords:
 - adding columns
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 282166444597245ad70be565ce6db9f01533a227
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2c6cd539e499f80342a30371d047c9870c4fda08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994097"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>Aggiunta di una colonna a una tabella di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Il Driver OLE DB per SQL Server espone il **itabledefinition:: AddColumn** (funzione). Questo consente ai consumer di aggiungere una colonna a una tabella di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Il driver OLE DB per SQL Server espone la funzione **ITableDefinition:: AddColumn** . Questo consente ai consumer di aggiungere una colonna a una tabella di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Quando si aggiunge una colonna da un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabella, il Driver OLE DB consumer di SQL Server è limitato come segue:  
+ Quando si aggiunge una colonna a una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabella, il driver OLE DB per SQL Server consumer è vincolato come indicato di seguito:  
   
 -   Se DBPROP_COL_AUTOINCREMENT è VARIANT_TRUE, DBPROP_COL_NULLABLE deve essere VARIANT_FALSE.  
   

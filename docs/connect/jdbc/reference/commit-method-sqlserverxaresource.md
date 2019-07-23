@@ -1,5 +1,5 @@
 ---
-title: Metodo Commit (SQLServerXAResource) | Microsoft Docs
+title: Metodo commit (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1d0f8612-fb4a-4eca-bc37-8342e1419fd4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0ec1307adb0c2eab58c73a7978c93d366f0209bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85bc4f123dd29025e906d57d64f21746df5f2e07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66777407"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955553"
 ---
 # <a name="commit-method-sqlserverxaresource"></a>Metodo commit (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void commit(javax.transaction.xa.Xid xid,
 #### <a name="parameters"></a>Parametri  
  *xid*  
   
- Oggetto Xid.  
+ Oggetto XID.  
   
  *onePhase*  
   

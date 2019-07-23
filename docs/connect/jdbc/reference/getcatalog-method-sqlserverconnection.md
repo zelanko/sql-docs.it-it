@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e87ef65f-4b5a-4e1c-8db5-7f0932390bb0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 93cd6a4f612af7de32dc790f497a3d7a11b9cd1e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a0f6d74b8dee21333c1358a9f998371e38b5c0cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953346"
 ---
 # <a name="getcatalog-method-sqlserverconnection"></a>Metodo getCatalog (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,9 +41,9 @@ public java.lang.String getCatalog()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getCatalog viene specificato dal metodo getCatalog nell'interfaccia Java.  
+ Questo metodo getCatalog viene specificato dal metodo getCatalog nell'interfaccia java. SQL. Connection.  
   
- Restituisce le proprietà del catalogo corrente dell'oggetto SQLServerConnection, o null se non è impostata. La proprietà del catalogo viene impostata in modo esplicito con il metodo [setCatalog](../../../connect/jdbc/reference/setcatalog-method-sqlserverconnection.md) oppure viene aggiornata in modo implicito leggendo la modifica dell'ambiente in TDS per il catalogo corrente.  
+ Restituisce la proprietà del catalogo corrente dell'oggetto SQLServerConnection oppure null se non è impostato. La proprietà del catalogo viene impostata in modo esplicito con il metodo [setCatalog](../../../connect/jdbc/reference/setcatalog-method-sqlserverconnection.md) oppure viene aggiornata in modo implicito leggendo la modifica dell'ambiente in TDS per il catalogo corrente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

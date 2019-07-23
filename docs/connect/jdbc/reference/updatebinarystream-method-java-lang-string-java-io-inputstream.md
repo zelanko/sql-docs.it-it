@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 56883144-26a0-4f45-ad36-4f616369af3e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3557c60f36ea48a8cb03f58997bc2d8093f432e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc247cd3f97aeebeb6f52e1b4f3f36d8d97f6548
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66787307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997155"
 ---
 # <a name="updatebinarystream-method-javalangstring-javaioinputstream"></a>Metodo updateBinaryStream (java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,15 +37,15 @@ public void updateBinaryStream(java.lang.String columnLabel,
   
  *x*  
   
- Un oggetto InputStream.  
+ Oggetto InputStream.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo updateBinaryStream viene specificato dal metodo updateBinaryStream nell'interfaccia ResultSet.  
+ Questo metodo updateBinaryStream viene specificato dal metodo updateBinaryStream nell'interfaccia java. SQL. ResultSet.  
   
- Utilizzo di questo metodo per la **immagine**, **testo**, e **ntext** tipi di dati di SQL Server potrebbero compromettere le prestazioni.  
+ L'utilizzo di questo metodo per i tipi di dati **Image**, **text**e **ntext** SQL Server può compromettere le prestazioni.  
   
  Questo metodo passa byte da un oggetto InputStream a colonne binarie di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] selezionate, ad esempio binary, varbinary, varbinary(max), image, xml e udt. L'aggiornamento delle colonne di tipo carattere non è supportato con questo metodo. Per aggiornare le colonne di tipo carattere con un InputStream, usare il metodo [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md).  
   

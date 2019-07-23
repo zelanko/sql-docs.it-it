@@ -1,5 +1,5 @@
 ---
-title: Metodo setBytes (SQLServerBlob) | Microsoft Docs
+title: Metodo sebytes (SQLServerBlob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cd193265-3a65-4b1e-86ec-7818c3c0c1e2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6ccc86efcc74fddcc40cc7bb51740cfaebff275e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00bc342081260af4740f20e6ec88c02061623b28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797621"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974900"
 ---
 # <a name="setbytes-method-sqlserverblob"></a>Metodo setBytes (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,5 +1,5 @@
 ---
-title: I set di righe e cursori SQL Server | Microsoft Docs
+title: Set di righe e cursori SQL Server | Microsoft Docs
 description: Set di righe e cursori SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,13 +16,12 @@ helpviewer_keywords:
 - cursors [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 503e0f8fcc7cac9a3001ec00fb872642c1fcecd8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9ba062c9718203c52659dd0c35fa7bcb76b1a40c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803793"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994184"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Set di righe e cursori di Server SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +62,7 @@ ms.locfileid: "66803793"
   
  I consumer possono richiedere comportamenti del cursore diversi in un set di righe attraverso l'impostazione di determinate proprietà specifiche del set di righe. Se il consumer non imposta alcuna proprietà del set di righe o le imposta tutte sui rispettivi valori predefiniti, il driver OLE DB per SQL Server implementa il set di righe usando un set di risultati predefinito. Se una di queste proprietà è impostata su un valore diverso da quello predefinito, il driver OLE DB per SQL Server implementa il set di righe usando un cursore del server.  
   
- Le seguenti proprietà set di righe indirizzare il Driver OLE DB per SQL Server da usare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursori. Alcune proprietà possono essere combinate con altre senza rischi. Un set di righe che indica le proprietà DBPROP_IRowsetScroll e DBPROP_IRowsetChange, ad esempio, sarà un set di righe del segnalibro che esibisce un comportamento di aggiornamento immediato. Altre proprietà si escludono a vicenda. Un set di righe che esibisce DBPROP_OTHERINSERT, ad esempio, non può contenere segnalibri.  
+ Le seguenti proprietà del set di righe indirizzano il driver OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per SQL Server per l'utilizzo dei cursori. Alcune proprietà possono essere combinate con altre senza rischi. Un set di righe che indica le proprietà DBPROP_IRowsetScroll e DBPROP_IRowsetChange, ad esempio, sarà un set di righe del segnalibro che esibisce un comportamento di aggiornamento immediato. Altre proprietà si escludono a vicenda. Un set di righe che esibisce DBPROP_OTHERINSERT, ad esempio, non può contenere segnalibri.  
   
 |ID proprietà|valore|Comportamento del set di righe|  
 |-----------------|-----------|---------------------|  

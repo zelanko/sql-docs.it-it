@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: de58a006717a64d400e40ba2126eebcdb138aa3f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 13e1075cd25fa352543837afa31ff2a3d540704f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796232"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015118"
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>Pool di connessioni (Driver Microsoft per PHP per SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +26,7 @@ Di seguito vengono segnalati aspetti importanti da tenere presenti circa il pool
   
 -   I [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] usano i pool di connessioni ODBC.  
   
--   Per impostazione predefinita, i pool di connessioni sono abilitati in Windows. In Linux e macOS, le connessioni vengono rese disponibili solo se il pool di connessioni è abilitato per ODBC (vedere [pool di connessioni di abilitazione/disabilitazione](#enablingdisabling-connection-pooling)). Quando il pool di connessioni è abilitato e si connette a un server, il driver prova a usare una connessione in pool prima di crearne uno nuovo. Se nel pool non viene trovata una connessione equivalente, una nuova connessione viene creata e aggiunta al pool. Il driver determina se le connessioni sono equivalenti confrontando le stringhe di connessione.  
+-   Per impostazione predefinita, i pool di connessioni sono abilitati in Windows. In Linux e macOS le connessioni vengono rimesse in pool solo se il pool di connessioni è abilitato per ODBC. vedere [Abilitazione/disabilitazione del pool](#enablingdisabling-connection-pooling)di connessioni. Quando il pool di connessioni è abilitato e ci si connette a un server, il driver tenta di usare una connessione in pool prima di crearne una nuova. Se nel pool non viene trovata una connessione equivalente, una nuova connessione viene creata e aggiunta al pool. Il driver determina se le connessioni sono equivalenti confrontando le stringhe di connessione.  
   
 -   Quando si usa una connessione del pool, lo stato della connessione viene ripristinato.  
   
@@ -35,7 +34,7 @@ Di seguito vengono segnalati aspetti importanti da tenere presenti circa il pool
   
 Per altre informazioni sui pool di connessioni, vedere [Pool di connessioni di Gestione driver](../../odbc/reference/develop-app/driver-manager-connection-pooling.md).  
   
-## <a name="enablingdisabling-connection-pooling"></a>Il pool di abilitazione/disabilitazione della connessione
+## <a name="enablingdisabling-connection-pooling"></a>Abilitazione/disabilitazione del pool di connessioni
 ### <a name="windows"></a>Windows
 È possibile forzare il driver a creare una nuova connessione, anziché cercarne una equivalente nel pool di connessioni, impostando il valore dell'attributo *ConnectionPooling* nella stringa di connessione su **false** o 0.  
   
@@ -43,11 +42,11 @@ Se l'attributo *ConnectionPooling* viene omesso dalla stringa di connessione o s
   
 Per informazioni sugli altri attributi di connessione, vedere [Connection Options](../../connect/php/connection-options.md).  
 ### <a name="linux-and-macos"></a>Linux e macOS
-Il *ConnectionPooling* attributo non può essere utilizzato per abilitare o disabilitare il pool di connessioni. 
+Non è possibile usare l'attributo *ConnectionPooling* per abilitare o disabilitare il pool di connessioni. 
 
-Pool di connessioni può essere abilitata o disabilitata, modificando il file di configurazione Odbcinst. ini. Il driver deve essere ricaricato rendere effettive le modifiche.
+È possibile abilitare o disabilitare il pool di connessioni modificando il file di configurazione Odbcinst. ini. Per rendere effettive le modifiche, è necessario ricaricare il driver.
 
-L'impostazione `Pooling` al `Yes` e un numero positivo `CPTimeout` valore nel file Odbcinst. ini consente il pool di connessioni. 
+`Pooling` Impostando `Yes` su e un `CPTimeout` valore positivo nel file ODBCINST. ini viene abilitato il pool di connessioni. 
 ```
 [ODBC]
 Pooling=Yes
@@ -56,7 +55,7 @@ Pooling=Yes
 CPTimeout=<int value>
 ```
   
-Minima, il file Odbcinst ini avrà un aspetto simile all'esempio:
+Il file ODBCINST. ini dovrebbe avere un aspetto simile a quello riportato nell'esempio seguente:
 
 ```
 [ODBC]
@@ -69,16 +68,16 @@ UsageCount=1
 CPTimeout=120
 ```
 
-L'impostazione `Pooling` a `No` nell'Odbcinst. ini file forza il driver a creare una nuova connessione.
+L' `Pooling` impostazione `No` di su nel file ODBCINST. ini impone al driver di creare una nuova connessione.
 ```
 [ODBC]
 Pooling=No
 ```
 
 ## <a name="remarks"></a>Remarks
-- In Linux o macOS, tutte le connessioni verranno raggruppate se il pool è abilitato nel file Odbcinst ini. Ciò significa che l'opzione di connessione ConnectionPooling non ha alcun effetto. Per disabilitare la limitazione delle richieste, impostare il pool di = No nel file Odbcinst. ini e ricaricare i driver.
-  - unixODBC < = 2.3.4 (Linux e macOS) potrebbe non restituire le informazioni di diagnostica appropriate, ad esempio i messaggi di errore, gli avvisi e messaggi informativi
-  - Per questo motivo, i driver PDO_SQLSRV e SQLSRV potrebbero non essere in grado di recuperare correttamente i dati lunghi (ad esempio xml, binario) come stringhe. Dati lunghi possono essere recuperati come flussi come soluzione alternativa. Vedere l'esempio seguente per SQLSRV.
+- In Linux o macOS tutte le connessioni verranno raggruppate Se il pool è abilitato nel file ODBCINST. ini. Ciò significa che l'opzione di connessione ConnectionPooling non ha alcun effetto. Per disabilitare il pool, impostare pooling = No nel file ODBCINST. ini e ricaricare i driver.
+  - unixODBC < = 2.3.4 (Linux e macOS) potrebbe non restituire informazioni di diagnostica appropriate, ad esempio messaggi di errore, avvisi e messaggi informativi
+  - per questo motivo, i driver SQLSRV e PDO_SQLSRV potrebbero non essere in grado di recuperare correttamente i dati lunghi (ad esempio XML, Binary) come stringhe. I dati Long possono essere recuperati come flussi come soluzione alternativa. Vedere l'esempio seguente per SQLSRV.
 
 ```
 <?php

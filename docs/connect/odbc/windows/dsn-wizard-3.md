@@ -1,5 +1,5 @@
 ---
-title: Origine di dati guidata schermata 3 (Driver ODBC per SQL Server) | Microsoft Docs
+title: Schermata 3 della creazione guidata origine dati (driver ODBC per SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d8220eebb82a5c0e513e14fc9b582b10183d293f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 63391969f378fdefbfa9547c079dcce4ff259e22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797775"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936541"
 ---
 # <a name="data-source-wizard-screen-3"></a>Creazione guidata origine dati - Schermata 3
 
@@ -68,27 +67,27 @@ Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a 
 
 ### <a name="multi-subnet-failover"></a>Failover su più subnet
 
-Se l'applicazione si connette a un disponibilità elevata, disaster recovery (gruppi di disponibilità AlwaysOn) gruppo di disponibilità (AG) in subnet diverse, abilitando **failover su più subnet.** configura il driver ODBC per SQL Server per fornire un rilevamento e una connessione più veloci al server (attualmente) attivo.
+Se l'applicazione si connette a un gruppo di disponibilità di ripristino di emergenza a disponibilità elevata (Gruppi di disponibilità AlwaysOn) in subnet diverse, abilitando il **failover su più subnet.** configura il driver ODBC per SQL Server per fornire un rilevamento e una connessione più veloci al server (attualmente) attivo.
 
 ### <a name="transparent-network-ip-resolution"></a>Risoluzione dell'IP di rete trasparente.
 
-Modifica il comportamento della **failover su più subnet** per consentire una riconnessione più veloce durante il failover. Per altre informazioni, vedere [Uso della risoluzione dell'IP di rete trasparente](../../../connect/odbc/using-transparent-network-ip-resolution.md).
+Modifica il comportamento del failover su più **subnet** per consentire una riconnessione più veloce durante il failover. Per altre informazioni, vedere [Uso della risoluzione dell'IP di rete trasparente](../../../connect/odbc/using-transparent-network-ip-resolution.md).
 
 ### <a name="column-encryption"></a>Crittografia di colonna.
 
-Consente la decrittografia automatica e la crittografia dei trasferimenti di dati da e verso le colonne crittografate con la [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) funzionalità disponibili in SQL Server 2016 e versioni successive.
+Consente la decrittografia e la crittografia automatiche dei trasferimenti di dati da e verso le colonne crittografate con la funzionalità [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) disponibile in SQL Server 2016 e versioni successive.
 
-### <a name="use-fmtonly-metadata-discovery"></a>Utilizzare l'individuazione dei metadati FMTONLY:
+### <a name="use-fmtonly-metadata-discovery"></a>Usare l'individuazione dei metadati di FMTONLY:
 
-Usare il metodo di individuazione dei metadati SET FMTONLY legacy quando la connessione a SQL Server 2012 o versione successiva. Abilitare questa opzione solo quando si usano query non supportata dal [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), ad esempio quelli che contiene le tabelle temporanee. 
+Usare il metodo di individuazione dei metadati SET legacy FMTONLY quando ci si connette a SQL Server 2012 o versione successiva. Abilitare questa impostazione solo quando si usano query non supportate da [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), ad esempio quelle che contengono tabelle temporanee. 
 
 ### <a name="next"></a>Avanti
 
-Procede alla schermata successiva della procedura guidata.
+Consente di passare alla schermata successiva della procedura guidata.
 
 ### <a name="back"></a>Indietro
 
-Tornare alla schermata precedente della procedura guidata.
+Torna alla schermata precedente della procedura guidata.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

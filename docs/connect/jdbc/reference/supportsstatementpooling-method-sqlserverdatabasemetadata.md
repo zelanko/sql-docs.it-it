@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 83777807-5838-4f81-94ab-3ba4fc5aaa47
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 333cec44f0b406f80067af2fcb497ab0a8cbcd75
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b9a0c1be55ed478127488b4abee3364e5818a514
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797315"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968785"
 ---
 # <a name="supportsstatementpooling-method-sqlserverdatabasemetadata"></a>Metodo supportsStatementPooling (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsStatementPooling()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se supportata. In caso contrario, **false**.  
+ **true** se supportato. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo supportsStatementPooling viene specificato dal metodo supportsStatementPooling nell'interfaccia DatabaseMetaData.  
+ Questo metodo supportsStatementPooling viene specificato dal metodo supportsStatementPooling nell'interfaccia java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

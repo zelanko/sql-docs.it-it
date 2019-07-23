@@ -1,5 +1,5 @@
 ---
-title: Le finestre di dialogo di SQL Server Profiler | Microsoft Docs
+title: Finestre di dialogo SQL Server Profiler | Microsoft Docs
 ms.custom: ''
 ms.date: 07/07/2017
 ms.prod: sql
@@ -41,17 +41,16 @@ helpviewer_keywords:
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e042e9d81d389a323e092b2f370b03cb66c2921c
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 32cc19df636f6e0fa98dca0ab45dd8142d9db54f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729759"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059704"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Finestre di dialogo di SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] è uno strumento in grado di acquisire gli eventi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un server. Gli eventi vengono salvati in un file di traccia che è possibile analizzare o utilizzare in un momento successivo per riprodurre una serie specifica di passaggi allo scopo di diagnosticare un problema. Di seguito sono i comandi e le impostazioni disponibili nelle finestre di dialogo di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] è uno strumento in grado di acquisire gli eventi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un server. Gli eventi vengono salvati in un file di traccia che è possibile analizzare o utilizzare in un momento successivo per riprodurre una serie specifica di passaggi allo scopo di diagnosticare un problema. Di seguito sono riportati i comandi e le impostazioni disponibili nelle finestre di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]dialogo di.  
 ## <a name="trace-properties"></a>Proprietà traccia
 ### <a name="general-tab"></a>Scheda Generale
 Usare la scheda **Generale** della finestra di dialogo **Proprietà traccia** per visualizzare o specificare le proprietà di una traccia.  
@@ -87,7 +86,7 @@ Usare la scheda **Selezione eventi** della finestra di dialogo **Proprietà trac
 |**Organizza colonne**|Consente di modificare l'ordine delle colonne nella traccia e di raggruppare i risultati in base a una o più colonne.  
 
 ## <a name="trace-template-properties"></a>Proprietà modello di traccia 
-### <a name="new-general-tab"></a>Nuovo (scheda Generale)
+### <a name="new-general-tab"></a>Nuovo (scheda generale)
 Utilizzare la scheda **Generale** della finestra di dialogo **Proprietà modello di traccia** per creare nuovi modelli di traccia utilizzando le opzioni seguenti. Per accedere a questa finestra di dialogo, nel menu **File** di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] scegliere **Modelli**e quindi fare clic su **Nuovo**.
 
 |Elemento|Descrizione
@@ -97,7 +96,7 @@ Utilizzare la scheda **Generale** della finestra di dialogo **Proprietà modello
 |**Basa il nuovo modello sul seguente modello esistente**|Consente di utilizzare un modello incluso nell'elenco come base per il modello corrente. Tutti gli eventi, le colonne di dati e i filtri corrispondono inizialmente a quelli presenti nel modello esistente e sarà possibile modificarli in base alle necessità.  
 |**Usa come modello predefinito per il tipo di server selezionato**|Consente di utilizzare il modello corrente per impostazione predefinita per le tracce create per questo tipo di server.  
 
-### <a name="edit-general-tab"></a>Modifica (scheda Generale)
+### <a name="edit-general-tab"></a>Modifica (scheda generale)
  Utilizzare la scheda **Generale** della finestra di dialogo **Proprietà modello di traccia** per visualizzare o modificare i modelli di traccia esistenti utilizzando le opzioni seguenti. Per accedere a questa finestra di dialogo, scegliere [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **dal menu** File **di**e quindi fare clic su **Modifica modello**.  
 
 |Elemento|Descrizione
@@ -171,7 +170,7 @@ La finestra di dialogo **Limite contatori prestazioni** viene popolata con i con
 2.  Selezionare i contatori da correlare con il file di traccia di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
 
 Per selezionare tutti i contatori relativi a un oggetto prestazione, selezionare la casella adiacente all'oggetto in questione. Se si seleziona il nodo di livello più alto, che indica il computer, verranno selezionati tutti i contatori e gli oggetti prestazioni contenuti nel file di log delle prestazioni. 
-## <a name="toolsoptions-general-options-page"></a>Strumenti/Opzioni (pagina Opzioni generali)
+## <a name="toolsoptions-general-options-page"></a>Strumenti/opzioni (pagina Opzioni generali)
 Usare la finestra di dialogo **Opzioni generali** per visualizzare o specificare le opzioni seguenti.  
 ### <a name="display-options"></a>Opzioni di visualizzazione  
 

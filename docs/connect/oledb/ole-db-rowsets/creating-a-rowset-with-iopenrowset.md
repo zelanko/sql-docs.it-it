@@ -1,6 +1,6 @@
 ---
 title: Creazione di un set di righe con IOpenRowset | Microsoft Docs
-description: Creazione di un set di righe con IOpenRowset interfaccia del Driver OLE DB per SQL Server
+description: Creazione di un set di righe con interfaccia IOpenRowset del driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,20 +15,19 @@ helpviewer_keywords:
 - OLE DB rowsets, creating
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 78b08a3da3da89e0db0d801945416dcdb1ff9c03
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2c6da41d19fed61fd83a7d4a1521ddba8726ba46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799204"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994305"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>Creazione di un set di righe con IOpenRowset
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Il Driver OLE DB per SQL Server supporta il **IOpenRowset:: OPENROWSET** metodo con le restrizioni seguenti:  
+  Il driver OLE DB per SQL Server supporta il metodo **IOpenRowset:: OPENROWSET** con le restrizioni seguenti:  
   
 -   Una vista o una tabella di base deve essere specificata in una struttura del database (DBID) a cui punta il parametro *pTableID*.  
   
