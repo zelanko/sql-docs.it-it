@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9a262107294988e0d624e4b423147b5e5183a629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ef888bf2cf4259ec904194a39aa74ed44040586
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65097434"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068986"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Procedura dettagliata: Uso di una condizione di test personalizzata per verificare i risultati di una stored procedure
 In questa procedura dettagliata dell'estensione di funzionalità verrà creata una condizione di test di cui ne verrà verificata la funzionalità tramite la creazione di uno unit test di SQL Server. Il processo include la creazione di un progetto libreria di classi per la condizione di test, nonché la firma e l'installazione della condizione di test. Se si dispone di una condizione di test da aggiornare, vedere [Procedura: Aggiornare una condizione di test personalizzata di Visual Studio 2010 da una versione precedente a SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md).  

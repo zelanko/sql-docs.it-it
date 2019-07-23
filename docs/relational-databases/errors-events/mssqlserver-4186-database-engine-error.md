@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1ae88554-f291-45bc-a186-6f41d9cd0fca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 70223a62c0592a889bfcbb1f6377313fe4a65e68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3efa12b744d331949fc0af18f555e603f18e33ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769089"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123103"
 ---
 # <a name="mssqlserver4186"></a>MSSQLSERVER_4186
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +104,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
   
 -   Esaminare la definizione della funzione definita dall'utente. Se la funzione non esegue l'accesso ai dati dell'utente o del sistema, modificarla in modo da includere la clausola WITH SCHEMABINDING.  
   
--   Rimuovere la colonna dalla clausola OUTPUT.   
+-   Rimuovere la colonna dalla clausola OUTPUT.  
   
 ## <a name="see-also"></a>Vedere anche  
 [Clausola OUTPUT &#40;Transact-SQL&#41;](~/t-sql/queries/output-clause-transact-sql.md)  

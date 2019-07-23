@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d27c90646aa8bae800780af97f9100427ccc06b6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: dc4df167c1bc8cf68edf062b294022247041f0b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025815"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Visualizzatore conflitti di replica Microsoft (Merge repliche)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ ms.locfileid: "54124481"
  **Mostra le prime cinque colonne e le altre colonne con dati in conflitto**  
  Selezionare questa opzione per visualizzare le prime cinque colonne e tutte le colonne contenenti conflitti. Questa opzione risulta utile quando nella tabella sono presenti numerose colonne, ma si desidera visualizzare solo le colonne più significative per la risoluzione dei conflitti. Le prime cinque colonne vengono sempre visualizzate perché i campi di identificazione di una riga, ad esempio i campi del nome o della chiave primaria, sono solitamente inclusi tra le prime colonne della tabella.  
   
- **Visualizza informazioni sulla colonna** (**…**)  
+ **Visualizza informazioni sulla colonna** ( **…** )  
  Fare clic per visualizzare le informazioni sulla colonna: **Nome tabella**, **Nome colonna**, **Tipo di dati** e **Valore colonna**. È possibile modificare**Valore colonna** , purché il valore non sia visualizzato in modalità di sola lettura.  
   
  **Invia riga in conflitto confermata**  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cbb02c95f606f6a5fdcca694d35fef6ee4447383
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6974e8c3d07bd1da5fd48a4bbbc8e49c86e2d314
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637459"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128093"
 ---
 # <a name="filter-table-rows"></a>Filtro righe tabella
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47637459"
  Questo riquadro viene popolato di filtri mano a mano che vengono aggiunti agli articoli di tabella nella pubblicazione. Le tabelle con filtri di riga vengono visualizzate nel riquadro come nodi di livello principale. Per le pubblicazioni di tipo merge, le tabelle alle quali sono stati estesi i filtri tramite un filtro di join vengono visualizzate come nodi figlio.  
   
  **Aggiungi**  
- Fare clic su **Aggiungi** per visualizzare una finestra di dialogo che consente di filtrare gli articoli di tabella. Facendo clic su **Aggiungi** per una pubblicazione snapshot o transazionale verrà visualizzata immediatamente una finestra di dialogo. Facendo clic su **Aggiungi** per una pubblicazione di tipo merge verranno visualizzate tre opzioni: **Aggiungi filtro**, **Aggiungi join per estendere il filtro selezionato**e **Genera filtri automaticamente**.  
+ Fare clic su **Aggiungi** per visualizzare una finestra di dialogo che consente di filtrare gli articoli di tabella. Facendo clic su **Aggiungi** per una pubblicazione snapshot o transazionale verrà visualizzata immediatamente una finestra di dialogo. Facendo clic su **Aggiungi** per una pubblicazione di tipo merge verranno visualizzate tre opzioni: **Aggiungi filtro**; **Aggiungi join per estendere il filtro selezionato**; **Genera filtri automaticamente**.  
   
 -   Selezionare l'opzione **Aggiungi filtro** per visualizzare la finestra di dialogo **Aggiungi filtro** , che consente di applicare i filtri di riga a un articolo di tabella. Nella finestra di dialogo **Aggiungi filtro** è possibile, ad esempio, specificare che una tabella contenente dati sui clienti possa contenere solo dati sui clienti francesi quando viene replicata nei Sottoscrittori.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "47637459"
  **Trova tabella**  
  Solo per pubblicazioni di tipo merge con filtri join. Fare clic su **Trova tabella** per trovare una tabella in un'albero di filtro complesso. In un database con relazioni complesse una tabella può essere unita in join a più tabelle e pertanto può apparire in più posizioni all'interno dell'albero di filtro.  
   
- La tabella effettiva appare solo in una posizione all'interno dell'albero, mentre nelle altre posizioni è rappresentata da un collegamento. Un collegamento a una tabella è semplicemente un riferimento alla tabella e non ne visualizza i nodi figlio. Un nodo collegamento è contrassegnato dalla freccia di collegamento ed espandendo tale nodo viene visualizzato il testo **Fare clic su Trova tabella per vedere la tabella per \<nometabella>**.  
+ La tabella effettiva appare solo in una posizione all'interno dell'albero, mentre nelle altre posizioni è rappresentata da un collegamento. Un collegamento a una tabella è semplicemente un riferimento alla tabella e non ne visualizza i nodi figlio. Un nodo collegamento è contrassegnato dalla freccia di collegamento ed espandendo tale nodo viene visualizzato il testo **Fare clic su Trova tabella per vedere la tabella per \<nometabella>** .  
   
  Selezionare un nodo di collegamento nel riquadro e fare clic su **Trova tabella**. Il riquadro viene esteso e la tabella evidenziata. Se si fa clic su **Trova tabella** senza aver selezionato un nodo collegamento verrà visualizzata la finestra di dialogo **Trova tabella** .  
   

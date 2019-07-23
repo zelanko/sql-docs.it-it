@@ -1,5 +1,5 @@
 ---
-title: Metodo setNCharacterStream all'oggetto java.io.Reader | Microsoft Docs
+title: Metodo setNCharacterStream per l'oggetto Java. io. Reader | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2c245f0e-85ec-4d94-93ac-4957aa52b984
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 58a7debd5e352ffa1bdfc26ceaa6b1af3c5ef7af
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4f64854a45318af22d50705a69ac4c5d7dd63786
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800435"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973823"
 ---
 # <a name="setncharacterstream-method-sqlserverpreparedstatement"></a>Metodo setNCharacterStream (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

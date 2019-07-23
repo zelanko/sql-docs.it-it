@@ -16,21 +16,20 @@ helpviewer_keywords:
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 646a0e6b7885c2b220d7ea5c0165dbcd5a3c4de4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ca7964d61cd272af8adc93aac89f8da68827acac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139596"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modifica di relazioni di chiave esterna
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   È possibile modificare il lato chiave esterna di una relazione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cambiando la chiave esterna di una tabella vengono modificate le colonne correlate alle colonne della tabella della chiave primaria.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "52517084"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -86,7 +85,7 @@ ms.locfileid: "52517084"
      Consente di verificare in base al vincolo tutti i dati esistenti nella tabella prima della creazione o della riabilitazione del vincolo.  
   
      **Categoria Specifica tabelle e colonne**  
-     Viene espansa per visualizzare le colonne che fungono da chiave esterna e chiave primaria o univoca nella relazione, nonché le tabelle in cui sono contenute. Per modificare o definire questi valori, fare clic sul pulsante con puntini di sospensione (**...**) a destra del campo della proprietà.  
+     Viene espansa per visualizzare le colonne che fungono da chiave esterna e chiave primaria o univoca nella relazione, nonché le tabelle in cui sono contenute. Per modificare o definire questi valori, fare clic sul pulsante con puntini di sospensione ( **...** ) a destra del campo della proprietà.  
   
      **Tabella di base chiavi esterne**  
      Visualizza la tabella in cui è contenuta la colonna che funge da chiave esterna nella relazione selezionata.  

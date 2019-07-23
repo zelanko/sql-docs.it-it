@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d7a3b3027489b819cd5058f9080ca9633a2cf3ed
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a25b2b40b147cd0bd23e8c7554e548b6a577d539
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099587"
 ---
 # <a name="database-properties-mirroring-page"></a>Proprietà database (pagina Mirroring)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "54132531"
   
  L'indirizzo di rete del server segue la sintassi di base illustrata di seguito:  
   
- TCP **://**_fully_qualified_domain_name_**:**_port_  
+ TCP **://** _fully_qualified_domain_name_ **:** _port_  
   
  dove  
   
@@ -100,7 +99,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  **Failover**  
  Fare clic per eseguire manualmente il failover del database principale sul database mirror.  
   
-> **NOTA:** Se la sessione di mirroring è in esecuzione in modalità a prestazioni elevate, il failover manuale non è supportato. Per eseguire il failover manualmente, è prima necessario modificare la modalità operativa in **Protezione elevata senza failover automatico (sincrona)**. Dopo il completamento del failover è possibile reimpostare la modalità su **Prestazioni elevate (asincrona)** per la nuova istanza del server principale.  
+> **NOTA:** Se la sessione di mirroring è in esecuzione in modalità a prestazioni elevate, il failover manuale non è supportato. Per eseguire il failover manualmente, è prima necessario modificare la modalità operativa in **Protezione elevata senza failover automatico (sincrona)** . Dopo il completamento del failover è possibile reimpostare la modalità su **Prestazioni elevate (asincrona)** per la nuova istanza del server principale.  
   
  Verrà richiesta una conferma. Se si fa clic su **Sì**, verrà tentato il failover. Il server principale prova a connettersi al server mirror utilizzando l'autenticazione di Windows. Se l'autenticazione di Windows non funziona, sul server principale viene visualizzata la finestra di dialogo **Connetti al server** . Se il server mirror usa l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , selezionare **Autenticazione di SQL Server** nella casella **Autenticazione** . Nella casella di testo **Account di accesso** specificare l'account di accesso con cui connettersi al server mirror e nella casella di testo **Password** specificare la password per tale account.  
   

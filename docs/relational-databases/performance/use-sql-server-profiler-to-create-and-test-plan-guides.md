@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: bc1fb5a5d5c397c8d7eb1a3d784394b46ca5a6fe
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 3137bffef524faf061322224e92941687bb16046
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987278"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Usare SQL Server Profiler per creare e testare guide di piano
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  Aprire il file del testo del batch nel Blocco note e copiare il testo.  
   
-8.  Creare la guida di piano e incollare il testo copiato tra le virgolette (**"**) specificate per l'argomento **@stmt** . È necessario usare caratteri di escape per ogni virgoletta singola nell'argomento **@stmt** facendola precedere da un'altra virgoletta singola. Fare attenzione a non aggiungere o rimuovere altri caratteri quando si inseriscono queste virgolette. Ad esempio, il valore letterale di data **'** 20000101 **'** deve essere delimitato come **''** 20000101 **''**.  
+8.  Creare la guida di piano e incollare il testo copiato tra le virgolette ( **"** ) specificate per l'argomento **@stmt** . È necessario usare caratteri di escape per ogni virgoletta singola nell'argomento **@stmt** facendola precedere da un'altra virgoletta singola. Fare attenzione a non aggiungere o rimuovere altri caratteri quando si inseriscono queste virgolette. Ad esempio, il valore letterale di data **'** 20000101 **'** deve essere delimitato come **''** 20000101 **''** .  
   
  La guida di piano ottenuta è la seguente:  
   

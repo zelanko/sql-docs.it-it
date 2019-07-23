@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e99b9c4fbfa9b0d20a78a9d76e4730ce46966d3b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 1948f42f5a572a7a7737b58afab8f407932660d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511808"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078034"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Direttiva TYPE in query FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ GO
 ```  
   
 ### <a name="querying-results-of-a-for-xml-query"></a>Esecuzione di una query sui risultati di una query FOR XML  
- La query FOR XML restituisce codice XML. È quindi possibile applicare i metodi con tipo **xml** , ad esempio **query()** e **value()**, al risultato XML restituito dalle query FOR XML.  
+ La query FOR XML restituisce codice XML. È quindi possibile applicare i metodi con tipo **xml** , ad esempio **query()** e **value()** , al risultato XML restituito dalle query FOR XML.  
   
  Nella query seguente il metodo `query()` del tipo di dati **xml** viene usato per l'esecuzione di una query sui risultati della query `FOR XML`. Per altre informazioni, vedere [Metodo query&#40;&#41; con tipo di dati XML](../../t-sql/xml/query-method-xml-data-type.md).  
   
@@ -128,7 +127,7 @@ SELECT @FirstPhoneFromAdditionalContactInfo;
  L'espressione di percorso XQuery nel metodo `value()` recupera il primo numero di telefono di un cliente il cui `BusinessEntityID` è `1`.  
   
 > [!NOTE]  
->  Se non si specifica la direttiva TYPE, il risultato della query FOR XML viene restituito come tipo **nvarchar(max)**.  
+>  Se non si specifica la direttiva TYPE, il risultato della query FOR XML viene restituito come tipo **nvarchar(max)** .  
   
 ### <a name="using-for-xml-query-results-in-insert-update-and-delete-transact-sql-dml"></a>Utilizzo dei risultati di query FOR XML in istruzioni INSERT, UPDATE e DELETE (DML Transact-SQL)  
  Nell'esempio seguente viene illustrato l'utilizzo delle query FOR XML nelle istruzioni DML (Data Manipulation Language). Nell'esempio la query `FOR XML` restituisce un'istanza di tipo **xml** . L'istruzione `INSERT` inserisce il codice XML in una tabella.  

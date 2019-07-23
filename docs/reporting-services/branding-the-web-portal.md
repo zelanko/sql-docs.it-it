@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 description: Questo articolo illustra come modificare l'aspetto del portale Web personalizzandolo per l'azienda tramite un pacchetto del marchio. Il pacchetto del marchio è progettato in modo che per crearlo non è necessaria una conoscenza approfondita dei fogli di stile CSS.
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d7117aa94aa2b91573f9cd3b6443bed2d212bd00
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2303ae2f21f9bbdc9c15c2d60f62d10f65b5a624
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59506508"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68221712"
 ---
 # <a name="branding-the-web-portal"></a>Personalizzazione del portale Web
 

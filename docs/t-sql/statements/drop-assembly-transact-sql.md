@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 356fd02aad93f523aa621927997fb50182730a05
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6b5b788ef8978ce88fdb3d8aa0567724023fd5cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984289"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
   
  DROP ASSEMBLY non interferisce con il codice che fa riferimento all'assembly in esecuzione. Tuttavia, dopo l'esecuzione di DROP ASSEMBLY qualsiasi tentativo di richiamare l'assembly avrà esito negativo.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessario essere il proprietario dell'assembly oppure è richiesta l'autorizzazione CONTROL per l'assembly.  
   
 ## <a name="examples"></a>Esempi  

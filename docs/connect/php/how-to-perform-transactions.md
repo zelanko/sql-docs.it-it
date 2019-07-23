@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ee3e77677a3ae52fb112ae8a280e91086a483875
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 26ca7fbe56a17e1bf2a7c69b9e8c2dcd63073f87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796093"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936431"
 ---
 # <a name="how-to-perform-transactions"></a>Procedura: Eseguire le transazioni
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -151,7 +150,7 @@ function perform_trans_ops($conn, $orderId)
 ```  
   
 ### <a name="comments"></a>Commenti  
-Per porre l'attenzione sul comportamento delle transazioni, una parte della gestione degli errori consigliata non è inclusa nell'esempio. Per un'applicazione di produzione è consigliabile controllare tutte le chiamate a un **sqlsrv** funzionare per gli errori e gestirli di conseguenza.
+Per porre l'attenzione sul comportamento delle transazioni, una parte della gestione degli errori consigliata non è inclusa nell'esempio. Per un'applicazione di produzione, è consigliabile controllare qualsiasi chiamata a una funzione **sqlsrv** per individuare eventuali errori e gestirli di conseguenza.
   
 ## <a name="see-also"></a>Vedere anche  
 [Aggiornamento dei dati &#40;Driver Microsoft per PHP per SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)

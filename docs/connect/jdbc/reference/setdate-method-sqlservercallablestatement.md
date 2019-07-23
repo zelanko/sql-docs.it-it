@@ -1,5 +1,5 @@
 ---
-title: Metodo setDate (SQLServerCallableStatement) | Microsoft Docs
+title: Metodo sedate (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2a134217-276a-4d0e-8a75-4e1bf300c946
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f8b55e571f6eda74443599010d2660c29ec05a2c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 09696aba368f5dcec6f13fb97bd290dab17e552a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66793941"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974415"
 ---
 # <a name="setdate-method-sqlservercallablestatement"></a>Metodo setDate (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e8f4c34c1b6b945c28193a549a06546ec952a5d9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 87faa60456dd6d03f23d45346ab0dd103dc07c82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992512"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>Passaggio 3: Modello di verifica per la connessione a SQL tramite pyodbc
 
-In questo esempio deve essere considerato un modello di verifica solo.  Il codice di esempio è semplificato per maggiore chiarezza e non rappresenta necessariamente le procedure consigliate da Microsoft.  
+Questo esempio deve essere considerato solo un modello di prova.  Il codice di esempio è semplificato per maggiore chiarezza e non rappresenta necessariamente le procedure consigliate da Microsoft.  
 
-**Eseguire script di esempio riportato di seguito** creare un file denominato test.py e aggiungere ogni frammento di codice mentre si procede. 
+**Esegui script di esempio di seguito**  Creare un file denominato test.py e aggiungere ogni frammento di codice man mano che si procede. 
 
 ```
 > python test.py
@@ -46,9 +45,9 @@ cursor = cnxn.cursor()
 ```  
   
   
-## <a name="step-2--execute-query"></a>Passaggio 2: Eseguire query  
+## <a name="step-2--execute-query"></a>Passaggio 2: eseguire la query  
   
-Il cursor.executefunction utilizzabile per recuperare un set di risultati da una query sul Database SQL. Questa funzione accetta qualsiasi query essenzialmente e restituisce un set di risultati che può eseguire l'iterazione tramite l'uso di fetchone)
+Cursor. ExecuteFunction può essere utilizzato per recuperare un set di risultati da una query sul database SQL. Questa funzione accetta essenzialmente qualsiasi query e restituisce un set di risultati su cui è possibile eseguire l'iterazione con l'uso di Cursor. fetchOne ()
   
   
 ```python
@@ -61,9 +60,9 @@ while row:
 
 ```  
   
-## <a name="step-3--insert-a-row"></a>Passaggio 3: Inserire una riga  
+## <a name="step-3--insert-a-row"></a>Passaggio 3: inserire una riga  
   
-In questo esempio illustra come eseguire un' [inserire](../../../t-sql/statements/insert-transact-sql.md) istruzione in modo sicuro, passare i parametri che proteggono l'applicazione dal [attacchi SQL injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) valore.    
+In questo esempio si vedrà come eseguire un'istruzione [Insert](../../../t-sql/statements/insert-transact-sql.md) in modo sicuro, passare i parametri che proteggono l'applicazione da un valore [SQL injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) .    
   
   
 ```python
@@ -79,4 +78,4 @@ while row:
   `      
   ## <a name="next-steps"></a>Passaggi successivi  
   
-Per altre informazioni, vedere la [Centro per sviluppatori Python](https://azure.microsoft.com/develop/python/).
+Per ulteriori informazioni, vedere il [centro per sviluppatori Python](https://azure.microsoft.com/develop/python/).

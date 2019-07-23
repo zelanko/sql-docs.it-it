@@ -15,20 +15,19 @@ helpviewer_keywords:
 - stored procedures [OLE DB], about OLE DB stored procedures
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 64654f5ba2f4356a4bb6efad5455ca4610689f3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06379ee06ec4b6f6663488b90dace90de97474cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015211"
 ---
 # <a name="stored-procedures"></a>Stored procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Una stored procedure ([Stored procedure &#40;motore di Database&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) è un oggetto eseguibile archiviato in un database. Supporti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+  Un stored procedure ([stored procedure &#40;motore di database&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) è un oggetto eseguibile archiviato in un database. Supporti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   Stored procedure  
   

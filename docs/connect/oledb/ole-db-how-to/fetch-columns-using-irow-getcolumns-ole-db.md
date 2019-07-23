@@ -1,5 +1,5 @@
 ---
-title: 'Recuperare colonne usando IRow:: GetColumns (OLE DB) | Microsoft Docs'
+title: 'Recuperare colonne tramite IRow:: GetColumns (OLE DB) | Microsoft Docs'
 description: Recuperare colonne usando IRow::GetColumns (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - IRow interface
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: cbc97de598e05d6045a5f7f142a67b39dcb9dd05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 336b5b12eaf0744afd63510ce287edbb5439c3ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66791556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015577"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Recuperare colonne tramite IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

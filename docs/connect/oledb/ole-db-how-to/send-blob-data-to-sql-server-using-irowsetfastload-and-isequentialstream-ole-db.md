@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: c17cfbb6ba82b94c3f00aff9034c31b332df0e0d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 18dc87158bc1a6086cf8406423c123b0789b0f08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015546"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Inviare dati BLOB a SQL Server utilizzando IROWSETFASTLOAD e ISEQUENTIALSTREAM (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "66791181"
   
  Poiché DBTYPE_IUNKNOWN viene specificato come tipo di dati nell'associazione, deve corrispondere al tipo della colonna o del parametro di destinazione. Le conversioni non sono possibili in caso di invio di dati tramite ISequentialStream dalle interfacce del set di righe. Per i parametri, è consigliabile non utilizzare ICommandWithParameters::SetParameterInfo e specificare un tipo diverso per forzare una conversione. Questa operazione richiederebbe la memorizzazione nella cache in locale di tutti i dati BLOB da parte del provider, per convertirli prima di eseguire l'invio a SQL Server. La memorizzazione nella cache di un oggetto BLOB di grandi dimensioni e la conversione dello stesso in locale non forniscono un buon livello di prestazioni.  
   
- Per altre informazioni, vedere [BLOB e gli oggetti OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
+ Per altre informazioni, vedere [oggetti BLOB e oggetti OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
   
 > [!IMPORTANT]  
 >  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2e4fa385-8f61-4394-8f75-3e839930a57d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 99d01841ca24cc1a7e34864b42018dac51fa1861
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 74cc1b97c121b5e1a6e7d55127ec18cd2caec4fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66768225"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955351"
 ---
 # <a name="createstatement-method-int-int-int"></a>Metodo createStatement (int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,13 +50,13 @@ public java.sql.Statement createStatement(int nType,
  Valore **int** che rappresenta la trattenibilità.  
   
 ## <a name="return-value"></a>Valore restituito  
- L'oggetto istruzione.  
+ Oggetto istruzione.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo createStatement viene specificato dal metodo createStatement nell'interfaccia Java.  
+ Questo metodo createStatement viene specificato dal metodo createStatement nell'interfaccia java. SQL. Connection.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo createStatement &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)   

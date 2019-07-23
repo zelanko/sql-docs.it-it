@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 923c6fc93418cf2e46bf3970632ae0454f5a611d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa2bce398b6ac03422044c9ffad23f91ab81818c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140971"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Utilizzo di condizioni di test in unit test di SQL Server
 In uno unit test di SQL Server vengono eseguiti uno o più script di test Transact\-SQL. I risultati possono essere valutati nello script Transact\-SQL e nell'istruzione THROW o RAISERROR usata per restituire un errore e interrompere il test. In alternativa, per valutare i risultati è possibile definire nel test le relative condizioni. Tramite il test viene restituita un'istanza della classe [SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx). Nell'istanza di questa classe sono contenuti uno o più set di dati, il tempo di esecuzione e le righe interessate dallo script. Tutte queste informazioni vengono raccolte durante l'esecuzione dello script. Questi risultati possono essere valutati usando le condizioni di test. SQL Server Data Tools fornisce un set di condizioni di test predefinite. È anche possibile creare e usare condizioni personalizzate. Vedere [Condizioni di test personalizzate per unit test di SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  

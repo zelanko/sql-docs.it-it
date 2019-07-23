@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5314cee7-fef0-47fc-bfb4-284b8700d612
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7db765d7857a690c38615269df403ead67691afd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4d91821957a2e33238238ca17af60b88bb15dcab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66777267"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955429"
 ---
 # <a name="concurssoptimisticccval-field-sqlserverresultset"></a>Campo CONCUR_SS_OPTIMISTIC_CCVAL (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public static final int CONCUR_SS_OPTIMISTIC_CCVAL
 ```  
   
 ## <a name="field-value"></a>Valore di campo  
- Un' **int** pari a 1010.  
+ Valore **int** 1010.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dc092d095835caa5422f01c2f9a9b3a85ec94d55
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: b858cc4930cdfe9792e08c991c3ebdf8f319d0f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948227"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  Nome della tabella e della colonna di tipo **text**, **ntext** o **image** da aggiornare. I nomi delle tabelle e delle colonne devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). I nomi del database e del proprietario sono facoltativi.  
   
  *dest_text_ptr*  
- Valore di un puntatore di testo, restituito dalla funzione TEXTPTR, che fa riferimento ai dati di tipo **text**, **ntext** o **image** da aggiornare. *dest_text_ptr* deve essere **binary(** 16 **)**.  
+ Valore di un puntatore di testo, restituito dalla funzione TEXTPTR, che fa riferimento ai dati di tipo **text**, **ntext** o **image** da aggiornare. *dest_text_ptr* deve essere **binary(** 16 **)** .  
   
  *insert_offset*  
  Posizione iniziale in base zero dell'aggiornamento. Per le colonne di tipo **text** o **image**, *insert_offset* rappresenta il numero di byte da ignorare a partire dall'inizio della colonna esistente prima di inserire nuovi dati. Per le colonne di tipo **ntext**, *insert_offset* è il numero di caratteri (ogni carattere **ntext** usa 2 byte). I dati di tipo **text**, **ntext**, o **image** esistenti che iniziano nella posizione iniziale in base zero specificata vengono spostati a destra per creare spazio per i nuovi dati. Il valore 0 inserisce i nuovi dati all'inizio dei dati esistenti. Il valore NULL accoda i nuovi dati al valore dei dati esistenti.  
@@ -99,7 +98,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
   
  Per inizializzare le colonne di tipo **text** sul valore NULL, usare WRITETEXT; UPDATETEXT inizializza le colonne di tipo **text** su una stringa vuota.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione UPDATE per la tabella specificata.  
   
 ## <a name="examples"></a>Esempi  

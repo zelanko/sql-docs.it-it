@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 404a4ad46fccc4cb8d00df653e6f482cc1aa63d5
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 0766c4d8cdbd49ca6e6bc266072ca6c3eba7c674
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67679668"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259174"
 ---
 # <a name="transact-sql-code-snippets"></a>Frammenti di codice Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 2148e517-ed42-41c6-b753-1ac625f594c8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0a7c0599cf45e822dfca7cef48414512fffa4a74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d7654d02cfc35b0dfbaa82b100b9a82a8edacb0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090128"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929470"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Procedura: Confrontare e sincronizzare i dati di due database
 È possibile confrontare i dati contenuti in due database. I database che si confrontano sono chiamati *origine* e *destinazione*.  

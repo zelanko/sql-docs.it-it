@@ -1,5 +1,5 @@
 ---
-title: Metodo setBytes (long, byte) | Microsoft Docs
+title: Metodo sebytes (Long, byte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ffb8f107-0f9d-4410-957f-62b718e1e872
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f0d47be46aac25807fd9f97bb3ee40cf96ffd4fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02c8e541b237cbf72fc2b3da3ed5c2b0759b0eb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974915"
 ---
 # <a name="setbytes-method-long-byte"></a>Metodo setBytes (long, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,7 +56,7 @@ public int setBytes(long pos,
  I dati vengono sovrascritti a partire dalla posizione specificata e possono superare la lunghezza iniziale dell'oggetto BLOB. Se si specifica un valore posizione+1, verranno aggiunti byte. Se si passa un valore posizione+2 o superiore (o zero o inferiore) verrà generato un errore di posizione. Se si passa una matrice **byte** di lunghezza zero verrà restituito zero in quanto non sono stati scritti byte.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo setBytes &#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
+ [Metodo &#40;sebytes SQLServerBlob&#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
  [Metodi di SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [Membri di SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [Classe SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)  

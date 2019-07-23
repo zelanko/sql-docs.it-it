@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: faace8a3-daa9-4208-a2cd-4249eb32175c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 3e6e67c4be74332bb9faf25eeac62f811ad86526
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: f0bb90a3dd13ffd245c1cac5a9ee1610055aae55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327412"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929289"
 ---
 # <a name="drop-server-audit--transact-sql"></a>DROP SERVER AUDIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ DROP SERVER AUDIT audit_name
   
  DROP SERVER AUDIT non elimina le specifiche del controllo del database o del server associate. Queste specifiche devono essere eliminate manualmente o lasciate orfane e sottoposte al mapping in un secondo momento un nuovo controllo del server.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per creare, modificare o eliminare un'entità del controllo del server, è necessario disporre dell'autorizzazione ALTER ANY SERVER AUDIT o CONTROL SERVER.  
   
 ## <a name="examples"></a>Esempi  

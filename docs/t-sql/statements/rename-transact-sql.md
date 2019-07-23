@@ -8,14 +8,13 @@ ms.topic: language-reference
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1299b67b30561ffcd8168879a04840c3efebfe25
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 624131beece632cffd13bde3d6ad378f67b3a340
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56827971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141266"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -51,7 +50,7 @@ RENAME DATABASE [::] database_name TO new_database_name
 ## <a name="arguments"></a>Argomenti
 
 RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ]. ] | [ *schema_name*. ] ]*table_name* TO *new_table_name*
-**SI APPLICA A:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**SI APPLICA A:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 Modifica il nome di una tabella definita dall'utente. Specificare la tabella da rinominare con un nome in una, due o tre parti. Specificare il nome *new_table_name* della nuova tabella come nome in una parte.
 
@@ -70,7 +69,7 @@ Modifica il nome di un database definito dall'utente da *database_name* a *new_d
 - DWDiagnostics
 - DWQueue
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorizzazioni
 
 Per eseguire questo comando, è necessaria questa autorizzazione:
 
@@ -112,7 +111,7 @@ RENAME DATABASE AdWorks to AdWorks2;
 
  Quando si rinomina una tabella, tutti gli oggetti e tutte le proprietà associate alla tabella vengono aggiornati in modo che facciano riferimento al nuovo nome della tabella. Vengono aggiornati, ad esempio, le definizioni di tabella, gli indici, i vincoli e le autorizzazioni. Le viste non vengono aggiornate.
 
-### <a name="b-rename-a-table"></a>b. Rinominare una tabella
+### <a name="b-rename-a-table"></a>B. Rinominare una tabella
 
 **SI APPLICA A:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 

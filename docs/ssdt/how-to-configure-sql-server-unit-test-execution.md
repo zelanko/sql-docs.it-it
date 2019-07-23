@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a1c1d288b79d9058a9aff7609290d2381c715575
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da9a53fa2811589b58ec3001ae5b92d46b4c1aec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090187"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911843"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>Procedura: Configurare l'esecuzione di unit test di SQL Server
 Con la configurazione del progetto di test è possibile specificare diverse impostazioni tramite cui vengono controllati gli aspetti della modalità di esecuzione degli unit test di SQL Server. Queste impostazioni di configurazione vengono archiviate nel file app.config del progetto di test. Se si modifica direttamente il file, i nuovi valori vengono visualizzati nella finestra di dialogo relativa alla configurazione di test.  

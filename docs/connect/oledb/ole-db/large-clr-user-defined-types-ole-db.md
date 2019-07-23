@@ -1,5 +1,5 @@
 ---
-title: Tipi definiti dall'utente CLR di grandi dimensioni (OLE DB) | Microsoft Docs
+title: Tipi CLR definiti dall'utente di grandi dimensioni (OLE DB) | Microsoft Docs
 description: Tipi CLR definiti dall'utente di grandi dimensioni (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 2af61fea9909597736769eb3d28fda43753a800b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 228054b56d6b26bf4439c01363d6cad24422f938
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015218"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Tipi CLR definiti dall'utente di grandi dimensioni (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "66795975"
 
   In questo argomento vengono illustrate le modifiche apportate a OLE DB nel driver OLE DB per SQL Server per supportare i tipi CLR (Common Language Runtime) definiti dall'utente di grandi dimensioni.  
   
- Per altre informazioni sul supporto per i tipi UDT CLR di grandi dimensioni nel Driver OLE DB per SQL Server, vedere [Large CLR User-Defined tipi](../../oledb/features/large-clr-user-defined-types.md). Per un esempio, vedere [UDT CLR di grandi dimensioni Usa &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md).  
+ Per ulteriori informazioni sul supporto di tipi definiti dall'utente CLR di grandi dimensioni in OLE DB driver per SQL Server, vedere [tipi CLR definiti dall'utente di grandi dimensioni](../../oledb/features/large-clr-user-defined-types.md). Per un esempio, vedere [usare i tipi definiti &#40;dall'&#41;utente CLR di grandi dimensioni OLE DB](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md).  
   
 ## <a name="data-format"></a>Formato dati  
  Nel driver OLE DB per SQL Server viene usato ~0 per rappresentare la lunghezza dei valori con dimensioni illimitate nel caso di tipi di oggetti LOB. ~ 0 rappresenta anche le dimensioni dei tipi CLR definiti dall'utente che superano 8.000 byte.  
@@ -140,7 +139,7 @@ ms.locfileid: "66795975"
 |3|I dati vengono convertiti dal formato binario nel formato di stringa esadecimale.|  
 |4|È possibile che venga eseguita la convalida quando si usa **CreateAccessor** o **GetNextRows**. L'errore corrispondente è DB_E_ERRORSOCCURRED. Lo stato di associazione viene impostato su DBBINDSTATUS_UNSUPPORTEDCONVERSION.|  
 |5|È possibile utilizzare BY_REF.|  
-|6|I parametri con tipo definito dall'utente possono essere associati come DBTYPE_IUNKNOWN in DBBINDING. L'associazione a DBTYPE_IUNKNOWN indica che l'applicazione richiede l'elaborazione dei dati come flusso usando l'interfaccia ISequentialStream. Quando un consumer specifica *wType* in un'associazione come tipo DBTYPE_IUNKNOWN e la colonna corrispondente o output parametro della stored procedure è un tipo definito dall'utente, il Driver OLE DB per SQL Server restituirà ISequentialStream. Per un parametro di input, il Driver OLE DB per SQL Server eseguirà una query per i per l'interfaccia ISequentialStream.<br /><br /> È possibile scegliere di non associare la lunghezza del tipo definito dall'utente quando si utilizza l'associazione DBTYPE_IUNKNOWN nel caso di tipi definiti dall'utente di grandi dimensioni. La lunghezza deve essere invece associata nel caso di tipi definiti dall'utente di piccole dimensioni. Un parametro DBTYPE_UDT può essere specificato come tipo definito dall'utente di grandi dimensioni se si verificano una o più delle condizioni seguenti:<br />*ulParamParamSize* è ~ 0.<br />DBPARAMFLAGS_ISLONG è impostato nella struttura DBPARAMBINDINFO.<br /><br /> Per i dati di riga, l'associazione DBTYPE_IUNKNOWN è consentita solo per i tipi definiti dall'utente di grandi dimensioni. È possibile determinare se una colonna è un tipo definito dall'utente di grandi dimensioni usando il metodo IColumnsInfo:: GetColumnInfo su un set di righe o interfaccia IColumnsInfo dell'oggetto comando. Una colonna DBTYPE_UDT è una colonna con tipo definito dall'utente di grandi dimensioni se si verificano una o più delle condizioni seguenti:<br />Il flag DBCOLUMNFLAGS_ISLONG è impostato sul membro *dwFlags* della struttura DBCOLUMNINFO. <br />*ulColumnSize* membro di DBCOLUMNINFO è ~ 0.|  
+|6|I parametri con tipo definito dall'utente possono essere associati come DBTYPE_IUNKNOWN in DBBINDING. L'associazione a DBTYPE_IUNKNOWN indica che l'applicazione richiede l'elaborazione dei dati come flusso usando l'interfaccia ISequentialStream. Quando un consumer specifica *wType* in un'associazione come tipo DBTYPE_IUNKNOWN e la colonna o il parametro di output corrispondente del stored procedure è un tipo definito dall'utente, OLE DB Driver per SQL Server restituirà ISequentialStream. Per un parametro di input, OLE DB driver per SQL Server eseguirà una query per per l'interfaccia ISequentialStream.<br /><br /> È possibile scegliere di non associare la lunghezza del tipo definito dall'utente quando si utilizza l'associazione DBTYPE_IUNKNOWN nel caso di tipi definiti dall'utente di grandi dimensioni. La lunghezza deve essere invece associata nel caso di tipi definiti dall'utente di piccole dimensioni. Un parametro DBTYPE_UDT può essere specificato come tipo definito dall'utente di grandi dimensioni se si verificano una o più delle condizioni seguenti:<br />*ulParamParamSize* è ~ 0.<br />DBPARAMFLAGS_ISLONG è impostato nella struttura DBPARAMBINDINFO.<br /><br /> Per i dati di riga, l'associazione DBTYPE_IUNKNOWN è consentita solo per i tipi definiti dall'utente di grandi dimensioni. È possibile verificare se una colonna è un tipo definito dall'utente di grandi dimensioni usando il metodo IColumnsInfo:: GetColumnInfo su un set di righe o sull'interfaccia IColumnsInfo dell'oggetto comando. Una colonna DBTYPE_UDT è una colonna con tipo definito dall'utente di grandi dimensioni se si verificano una o più delle condizioni seguenti:<br />Il flag DBCOLUMNFLAGS_ISLONG è impostato sul membro *dwFlags* della struttura DBCOLUMNINFO. <br />il membro *ulColumnSize* di DBCOLUMNINFO è ~ 0.|  
   
  DBTYPE_NULL e DBTYPE_EMPTY possono essere associati per i parametri di input ma non per i parametri di output o per i risultati. Se vengono associati per i parametri di input, lo stato deve essere impostato su DBSTATUS_S_ISNULL per DBTYPE_NULL o su DBSTATUS_S_DEFAULT per DBTYPE_EMPTY. Non è possibile utilizzare DBTYPE_BYREF con DBTYPE_NULL o DBTYPE_EMPTY.  
   

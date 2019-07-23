@@ -1,5 +1,5 @@
 ---
-title: Metodi di SQLServerXAConnection | Microsoft Docs
+title: Metodi SQLServerXAConnection | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +10,16 @@ ms.topic: conceptual
 ms.assetid: 89543177-b77c-4220-9f49-5d0c5379b567
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2b1d92e90f93909aa8639e35ba8d2d1ececb0c01
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 20a0f24b36380995e7f317ce3979a9b24c49a5de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798484"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970232"
 ---
 # <a name="sqlserverxaconnection-methods"></a>Metodi di SQLServerXAConnection
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Per informazioni sui membri di [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md), vedere [membri di SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-members.md).  
+  Per informazioni sui membri di [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md), vedere [membri SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-members.md).  
   
   
