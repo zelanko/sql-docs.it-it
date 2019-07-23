@@ -1,5 +1,5 @@
 ---
-title: Recuperare righe mediante segnalibri (OLE DB) | Microsoft Docs
+title: Recuperare le righe usando i segnalibri (OLE DB) | Microsoft Docs
 description: Recuperare le righe usando i segnalibri (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,13 +13,12 @@ helpviewer_keywords:
 - rows [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 1ae3556f4e78b71b714ced11ea9e7ee64dda619c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b2ab2e7be75e10ff97fcf254f885bfaa9dd25ec9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994710"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>Recuperare righe utilizzando i segnalibri (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "66791185"
   
 4.  Impostare il campo **dwFlag** della struttura di associazione sul flag DBCOLUMNSINFO_ISBOOKMARK della colonna che verrà utilizzata come segnalibro.  
   
-5.  Uso **IRowsetLocate:: GetRowsAt** per recuperare righe a partire dalla riga specificata da un offset dal segnalibro.  
+5.  Usare **IRowsetLocate:: GetRowsAt** per recuperare le righe, a partire dalla riga specificata da un offset dal segnalibro.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrato come recuperare righe mediante un segnalibro. Questo esempio non è supportato in IA64.  

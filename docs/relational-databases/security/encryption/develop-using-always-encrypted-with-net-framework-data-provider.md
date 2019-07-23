@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db78cdc744ec73e0f2fb8b465187eaac84a2fae2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4771d3a0fbf49c2d8c87c96d99b3e387b392e3bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62661128"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049940"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Sviluppare con Always Encrypted e il provider di dati .NET Framework
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

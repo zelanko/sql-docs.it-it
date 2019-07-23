@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a3bbb45c7ef3d9d30cee90de66b7db4b47b11873
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0d667b80d2ad7d5b58351ff25d3b1d5b60176b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842239"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121267"
 ---
 # <a name="transactional-articles---regenerate-to-reflect-schema-changes"></a>Articoli transazionali - Rigenerare per riflettere le modifiche dello schema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47842239"
   
     1.  Quando si esegue [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), assicurarsi che il bit 0x02 di **@schema_option** sia impostato su **true**.  
   
-    2.  Eseguire [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) e specificare un valore "insert", "update" o "delete" per il parametro **@type** e il nome della procedura di scripting personalizzata per il parametro **@value**.  
+    2.  Eseguire [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) e specificare un valore "insert", "update" o "delete" per il parametro **@type** e il nome della procedura di scripting personalizzata per il parametro **@value** .  
   
      Alla successiva modifica dello schema, la replica chiama questa stored procedure per inserire nello script la definizione per la nuova stored procedure personalizzata definita dall'utente e quindi propaga la procedura a ogni Sottoscrittore.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "47842239"
   
     1.  Quando si esegue [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), impostare il bit 0x02 di **@schema_option** su **false** affinché la replica non generi automaticamente procedure personalizzate nel Sottoscrittore.  
   
-    2.  Prima di ogni modifica dello schema, creare un nuovo file script e registrare lo script con la replica eseguendo [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md). Specificare un valore "custom_script" per il parametro **@type** e il percorso dello script nel server di pubblicazione per il parametro **@value**.  
+    2.  Prima di ogni modifica dello schema, creare un nuovo file script e registrare lo script con la replica eseguendo [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md). Specificare un valore "custom_script" per il parametro **@type** e il percorso dello script nel server di pubblicazione per il parametro **@value** .  
   
      Alla successiva modifica significativa dello schema, questo script viene eseguito in ogni Sottoscrittore all'interno della stessa transazione del comando DDL. Dopo che è stata apportata la modifica dello schema, la registrazione dello script viene annullata. Per consentire l'esecuzione dello script dopo una successiva modifica dello schema, è necessario registrarlo nuovamente.  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 336ef7d2bf0f81994bbd004f60062d98df91eb54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d53abd4dc5d4a233e7b517fc9b5fecaa64185e0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801137"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015287"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Supporto dei tipi di parametri con valori di tabella OLE DB (proprietà)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "66801137"
   In questo argomento sono incluse informazioni sulle proprietà e i set di proprietà OLE DB associati a oggetti set di righe di parametri con valori di tabella.  
   
 ## <a name="properties"></a>Proprietà  
- Di seguito viene specificato l'elenco delle proprietà esposte tramite il metodo IRowsetInfo::GetProperties sugli oggetti set di righe di parametri con valori di tabella. Si noti che tutte le proprietà dei set di righe di parametri con valori di tabella sono di sola lettura. Pertanto, il tentativo di impostare le proprietà tramite IOpenRowset:: OPENROWSET o ITableDefinitionWithConstraints::CreateTableWithConstraints metodi per i relativi valori non predefiniti comporterà un errore e non verrà creato alcun oggetto.  
+ Di seguito viene specificato l'elenco delle proprietà esposte tramite il metodo IRowsetInfo::GetProperties sugli oggetti set di righe di parametri con valori di tabella. Si noti che tutte le proprietà dei set di righe di parametri con valori di tabella sono di sola lettura. Pertanto, il tentativo di impostare una delle proprietà tramite i metodi IOpenRowset:: OpenRowset o ITableDefinitionWithConstraints:: CreateTableWithConstraints sui rispettivi valori non predefiniti comporterà un errore e non verrà creato alcun oggetto.  
   
  Le proprietà non implementate nell'oggetto set di righe di parametri con valori di tabella non sono incluse nell'elenco. Per un elenco completo delle proprietà, vedere la documentazione di OLE DB in Windows Data Access Components.  
   
@@ -79,14 +78,14 @@ ms.locfileid: "66801137"
  I set di proprietà seguenti supportano i parametri con valori di tabella.  
   
 ### <a name="dbpropsetsqlservercolumn"></a>DBPROPSET_SQLSERVERCOLUMN  
- Questa proprietà viene utilizzata dal consumer nel processo di creazione di un oggetto set di righe di parametri con valori di tabella con ITableDefinitionWithConstraints::CreateTableWithConstraints per ogni colonna della struttura DBCOLUMNDESC, se necessario.  
+ Questa proprietà viene utilizzata dal consumer nel processo di creazione di un oggetto set di righe di parametri con valori di tabella utilizzando ITableDefinitionWithConstraints:: CreateTableWithConstraints per ogni colonna tramite la struttura DBCOLUMNDESC, se necessario.  
   
 |ID proprietà|Valore proprietà|  
 |-----------------|--------------------|  
 |SSPROP_COL_COMPUTED|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Tipo: VT_BOOL<br /><br /> Descrizione: se impostata su VARIANT_TRUE, indica che la colonna è una colonna calcolata. VARIANT_FALSE indica che non si tratta di una colonna calcolata.|  
   
 ### <a name="dbpropsetsqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- Queste proprietà vengono lette dal consumer durante l'individuazione di informazioni sul tipo di parametro con valori di tabella nelle chiamate a isscommandwithparameters:: Getparameterproperties e impostate dal consumer durante l'impostazione delle proprietà specifiche relative al parametro con valori di tabella tramite isscommandwithparameters:: Setparameterproperties.  
+ Queste proprietà vengono lette dal consumer durante l'individuazione delle informazioni sul tipo di parametro con valori di tabella nelle chiamate a ISSCommandWithParameters:: GetParameterProperties e impostate dall'utente durante l'impostazione delle proprietà specifiche relative al parametro con valori di tabella. tramite ISSCommandWithParameters:: SetParameterProperties.  
   
  Tali proprietà vengono descritte in modo dettagliato nella tabella seguente.  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b3783bbaa861ad857efce87b82c50536757fd499
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e4866e0878411f6e81718df4184c1e5f2ac57f06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135472"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111156"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Impostazione di valore soglia e avvisi in Monitoraggio replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "54135472"
   
  Per altre informazioni sugli avvisi **Prestazioni critiche** e **Merge con esecuzione prolungata**, vedere [Monitoraggio delle prestazioni con Monitoraggio replica](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   [Impostare soglie e avvisi per una pubblicazione transazionale](#Transactional)  
   
@@ -77,7 +76,7 @@ ms.locfileid: "54135472"
   
      In questa finestra di dialogo vengono visualizzati gli avvisi per tutti i tipi di pubblicazione, inclusi quelli che non sono relativi al monitoraggio delle soglie. Per altre informazioni, vedere [Usare gli avvisi per gli eventi degli agenti di replica](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Impostare le opzioni nella finestra di dialogo **Proprietà dell'avviso \<NomeAvviso>**:  
+3.  Impostare le opzioni nella finestra di dialogo **Proprietà dell'avviso \<NomeAvviso>** :  
   
     -   Nella pagina **Generale** fare clic su **Abilita**e specificare il database a cui si desidera applicare l'avviso.  
   
@@ -119,7 +118,7 @@ ms.locfileid: "54135472"
   
      In questa finestra di dialogo vengono visualizzati gli avvisi per tutti i tipi di pubblicazione, inclusi quelli che non sono relativi al monitoraggio delle soglie.  
   
-3.  Impostare le opzioni nella finestra di dialogo **Proprietà dell'avviso \<NomeAvviso>**:  
+3.  Impostare le opzioni nella finestra di dialogo **Proprietà dell'avviso \<NomeAvviso>** :  
   
     -   Nella pagina **Generale** fare clic su **Abilita**e specificare il database a cui si desidera applicare l'avviso.  
   
@@ -151,7 +150,7 @@ ms.locfileid: "54135472"
   
      In questa finestra di dialogo vengono visualizzati gli avvisi per tutti i tipi di pubblicazione, inclusi quelli che non sono relativi al monitoraggio delle soglie. Per altre informazioni, vedere [Usare gli avvisi per gli eventi degli agenti di replica](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Impostare le opzioni nella finestra di dialogo **Proprietà dell'avviso \<NomeAvviso>**:  
+3.  Impostare le opzioni nella finestra di dialogo **Proprietà dell'avviso \<NomeAvviso>** :  
   
     -   Nella pagina **Generale** fare clic su **Abilita**e specificare il database a cui si desidera applicare l'avviso.  
   

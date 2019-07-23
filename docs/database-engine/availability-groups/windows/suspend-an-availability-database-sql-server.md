@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 86c7677754faca57723e93cccc3e55cf76da7a01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61b8ccb7a52cee68e709200c4d1d376379b5dd0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803497"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013889"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Sospendere un database di disponibilità (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

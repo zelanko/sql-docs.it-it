@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9a26def9-8fbd-43e4-9e57-414840b73ed8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7cf13ec0608dd3340e37307f5040172311ed7463
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4df947eec003f171fd962299ad116972bd798151
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101856"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110815"
 ---
 # <a name="project-oriented-database-development-using-command-line-tools"></a>Sviluppo di database orientato ai progetti utilizzando gli strumenti della riga di comando
 SQL Server Data Tools offre strumenti della riga di comando che consentono numerosi scenari di sviluppo di database orientato ai progetti.  

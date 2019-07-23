@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 201e7de473a344d0d41269b259c503dc34f2a78c
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: adbceb87d5191cd279130ca53209265cdc1c14d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327798"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082347"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>REVOKE, autorizzazioni del gruppo di disponibilità (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -53,8 +52,8 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  Specifica un'autorizzazione che può essere revocata su un gruppo di disponibilità. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- ON AVAILABILITY GROUP **::**_availability_group_name_  
- Specifica il gruppo di disponibilità per cui vengono revocate le autorizzazioni. Il qualificatore di ambito (**::**) è obbligatorio.  
+ ON AVAILABILITY GROUP **::** _availability_group_name_  
+ Specifica il gruppo di disponibilità per cui vengono revocate le autorizzazioni. Il qualificatore di ambito ( **::** ) è obbligatorio.  
   
  { FROM | TO } \<server_principal> Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per cui viene revocata l'autorizzazione.  
   
@@ -100,7 +99,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per il gruppo di disponibilità o l'autorizzazione ALTER ANY AVAILABILITY GROUP per il server.  
   
 ## <a name="examples"></a>Esempi  
@@ -114,7 +113,7 @@ REVOKE VIEW DEFINITION ON AVAILABILITY GROUP::MyAg TO ZArifin;
 GO  
 ```  
   
-### <a name="b-revoking-take-ownership-permission-with-the-cascade"></a>b. Revoca dell'autorizzazione TAKE OWNERSHIP con l'opzione CASCADE  
+### <a name="b-revoking-take-ownership-permission-with-the-cascade"></a>B. Revoca dell'autorizzazione TAKE OWNERSHIP con l'opzione CASCADE  
  Nell'esempio seguente viene revocata l'autorizzazione `TAKE OWNERSHIP` sul gruppo di disponibilità `MyAg` per l'utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` e da tutte le entità di sicurezza a cui `PKomosinski` ha concesso l'autorizzazione TAKE OWNERSHIP per MyAg.  
   
 ```  

@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 17e717fd999109390c001bdab9aeee5629c1a119
-ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
+ms.openlocfilehash: 6405f27391915af7305ab4615f4b3746fd17e5ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061060"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -175,7 +174,7 @@ Creare una voce di metadati della chiave master di colonna prima di creare una v
 
 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 È necessaria l'autorizzazione **ALTER ANY COLUMN MASTER KEY**.  
   
 ## <a name="examples"></a>Esempi  
@@ -220,7 +219,7 @@ WITH (
     KEY_PATH = 'https://contoso.vault/sales_db_tce_key'  
 );  
 ```  
-### <a name="b-creating-an-enclave-enabled-column-master-key"></a>b. Creazione di una chiave master della colonna abilitata da enclave  
+### <a name="b-creating-an-enclave-enabled-column-master-key"></a>B. Creazione di una chiave master della colonna abilitata da enclave  
 L'esempio seguente crea una voce di metadati per una chiave master di colonna abilitata per l'enclave. La chiave master di colonna abilitata per l'enclave viene archiviata in un archivio certificati per consentire alle applicazioni client che usano il provider MSSQL_CERTIFICATE_STORE di accedere alla chiave master di colonna:  
   
 ```  

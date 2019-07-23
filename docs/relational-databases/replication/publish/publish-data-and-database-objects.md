@@ -41,13 +41,12 @@ helpviewer_keywords:
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e0f959c6bc5a34fe2c2a3aec08f87f1e703749cf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cdf69cebcb9bae567ebaf4df898a7d6940e881b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085338"
 ---
 # <a name="publish-data-and-database-objects"></a>Pubblicazione di dati e oggetti di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -153,7 +152,7 @@ ms.locfileid: "54129011"
 -   Se si pubblica un oggetto di database che dipende da uno o più oggetti di database diversi, è necessario pubblicare tutti gli oggetti a cui si fa riferimento. Se ad esempio si pubblica una vista che dipende da una tabella, sarà necessario pubblicare anche la tabella.  
   
     > [!NOTE]  
-    >  Se in una pubblicazione di tipo merge si aggiunge un nuovo articolo dal quale dipende un articolo esistente, è necessario specificare l'ordine di elaborazione dei due articoli tramite il parametro **@processing_order** di [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) e [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Si consideri lo scenario seguente: viene pubblicata una tabella, ma non viene pubblicata una funzione a cui fa riferimento la tabella. Se non si pubblica la funzione, la tabella non può essere creata nel Sottoscrittore. Quando si aggiunge la funzione alla pubblicazione, specificare un valore **1** per il parametro **@processing_order** di **sp_addmergearticle**e un valore **2** per il parametro **@processing_order** di **sp_changemergearticle**, indicando il nome della tabella per il parametro **@article**. Questo ordine di elaborazione consente di creare la funzione nel Sottoscrittore prima della tabella dipendente. È possibile utilizzare numeri diversi per ogni articolo, a condizione che il numero della funzione sia inferiore al numero della tabella.  
+    >  Se in una pubblicazione di tipo merge si aggiunge un nuovo articolo dal quale dipende un articolo esistente, è necessario specificare l'ordine di elaborazione dei due articoli tramite il parametro **@processing_order** di [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) e [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Si consideri lo scenario seguente: viene pubblicata una tabella, ma non viene pubblicata una funzione a cui fa riferimento la tabella. Se non si pubblica la funzione, la tabella non può essere creata nel Sottoscrittore. Quando si aggiunge la funzione alla pubblicazione, specificare un valore **1** per il parametro **@processing_order** di **sp_addmergearticle**e un valore **2** per il parametro **@processing_order** di **sp_changemergearticle**, indicando il nome della tabella per il parametro **@article** . Questo ordine di elaborazione consente di creare la funzione nel Sottoscrittore prima della tabella dipendente. È possibile utilizzare numeri diversi per ogni articolo, a condizione che il numero della funzione sia inferiore al numero della tabella.  
   
 -   I nomi delle pubblicazioni non possono includere i caratteri seguenti: % * [ ] | : " ? \ / < >.  
   
@@ -182,7 +181,7 @@ ms.locfileid: "54129011"
   
 -   Per articoli di pubblicazioni che usano snapshot in modalità carattere (usati per Sottoscrittori non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e Sottoscrittori [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ): per impostazione predefinita, il proprietario rimane vuoto. Il proprietario viene impostato sul proprietario associato all'account utilizzato dall'agente di distribuzione o dall'agente di merge per la connessione al Sottoscrittore.  
   
- Il proprietario dell'oggetto può essere modificato tramite la finestra di dialogo **Proprietà articolo - \<**_Articolo_**>** e tramite le stored procedure **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** e **sp_changemergearticle**. Per altre informazioni, vedere [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definire un articolo](../../../relational-databases/replication/publish/define-an-article.md) e [Visualizzare e modificare le proprietà degli articoli](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ Il proprietario dell'oggetto può essere modificato tramite la finestra di dialogo **Proprietà articolo - \<** _Articolo_ **>** e tramite le stored procedure **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** e **sp_changemergearticle**. Per altre informazioni, vedere [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definire un articolo](../../../relational-databases/replication/publish/define-an-article.md) e [Visualizzare e modificare le proprietà degli articoli](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>Pubblicazione di dati per Sottoscrittori che eseguono versioni precedenti di SQL Server  
   

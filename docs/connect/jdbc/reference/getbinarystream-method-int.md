@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: de22a6c4-1ba3-4ed0-91a2-bf235c2ceec3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d45d0ce6b5d6509ffd7b561352a41c69592f86b0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e0add171861f2ea9e021b9f9342968baf1601557
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953705"
 ---
 # <a name="getbinarystream-method-int"></a>Metodo getBinaryStream (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public java.io.InputStream getBinaryStream(int columnIndex)
  Valore **int** che indica l'indice di colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un oggetto InputStream.  
+ Oggetto InputStream.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getBinaryStream viene specificato dal metodo getBinaryStream nell'interfaccia ResultSet.  
+ Questo metodo getBinaryStream viene specificato dal metodo getBinaryStream nell'interfaccia java. SQL. ResultSet.  
   
  Questo metodo può essere usato solo con i tipi di dati binary, varbinary, varbinary(max) e image di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se si tenta di utilizzarlo con altri tipi di dati genererà un'eccezione.  
   

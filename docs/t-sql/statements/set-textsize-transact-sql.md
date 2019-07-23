@@ -23,22 +23,21 @@ helpviewer_keywords:
 ms.assetid: 787154a6-39a6-4dd6-a6d0-67b4364f95d5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f23352e40c7b068eb0341c97c5f86d1b6f07ad66
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b7e0a949e132f01ce82e46a6e8b4c1d761c1a52a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100048"
 ---
 # <a name="set-textsize-transact-sql"></a>SET TEXTSIZE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Specifica la dimensione dei dati **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext** e **image** restituiti da un'istruzione SELECT.  
+  Specifica la dimensione dei dati **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **text**, **ntext** e **image** restituiti da un'istruzione SELECT.  
   
 > [!IMPORTANT]
->  I tipi di dati **ntext**, **text** e **image** verranno rimossi in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente li utilizzano. Usare in alternativa **nvarchar(max)**, **varchar(max)** e **varbinary(max)** .  
+>  I tipi di dati **ntext**, **text** e **image** verranno rimossi in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente li utilizzano. Usare in alternativa **nvarchar(max)** , **varchar(max)** e **varbinary(max)** .  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +49,7 @@ SET TEXTSIZE { number }
   
 ## <a name="arguments"></a>Argomenti  
  *number*  
- Lunghezza in byte dei dati **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext** o **image**. *number* è un intero con un valore massimo di 2147483647 (2 GB).  Il valore -1 indica dimensioni illimitate. Il valore 0 reimposta le dimensioni sul valore predefinito (4 KB).  
+ Lunghezza in byte dei dati **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **text**, **ntext** o **image**. *number* è un intero con un valore massimo di 2147483647 (2 GB).  Il valore -1 indica dimensioni illimitate. Il valore 0 reimposta le dimensioni sul valore predefinito (4 KB).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (10.0 e versioni successive) e ODBC Driver per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificano automaticamente `-1` (illimitate) al momento della connessione.  
   
@@ -61,7 +60,7 @@ SET TEXTSIZE { number }
   
  L'opzione TEXTSIZE viene impostata in fase di esecuzione, non in fase di analisi.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="see-also"></a>Vedere anche  

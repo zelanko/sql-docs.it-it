@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: a160c68ee3d1d80835ce1eb97057de2748a37ee6
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 01fd079810c59cd1b7f17d3c5503ed5083ee6998
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680953"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266348"
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>Esecuzione di operazioni di base con le query (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

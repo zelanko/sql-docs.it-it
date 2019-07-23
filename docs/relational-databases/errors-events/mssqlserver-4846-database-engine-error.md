@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a455e809-1883-4c7d-b3e3-835ee5bfe258
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4fd6b9b539488baacb9dbe5b7ec962789b9da177
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9e763c2873c018ca53a0c36db2b5c72b3b5d22b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123071"
 ---
 # <a name="mssqlserver4846"></a>MSSQLSERVER_4846
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ Per risolvere gli errori di memoria, eseguire la procedura seguente:
   
 1.  Verificare se altre applicazioni o servizi utilizzano la memoria nel server specificato. Riconfigurare le applicazioni o i servizi meno critici per utilizzare una quantità di memoria inferiore.  
   
-2.  Iniziare a raccogliere i dati dei contatori di monitoraggio delle prestazioni per **SQL Server: Gestione buffer** e **SQL Server: Gestione memoria**.  
+2.  Iniziare a raccogliere i dati dei contatori di Performance Monitor per **SQL Server: Gestione buffer**, **SQL Server: Memory Manager**.  
   
 3.  Verificare i seguenti parametri di configurazione della memoria di SQL Server:  
   
@@ -61,7 +60,7 @@ Per aumentare la quantità di memoria disponibile per [!INCLUDE[ssNoVersion](../
   
 -   Se le risorse vengono utilizzate da altre applicazioni oltre a SQL Server, provare a interromperne l'esecuzione o a eseguirle in un server distinto. In questo modo sarà possibile eliminare le richieste di memoria esterne.  
   
--   Se è stata configurata l'opzione **max server memory,**, aumentarne il valore impostato.  
+-   Se è stata configurata l'opzione **max server memory,** , aumentarne il valore impostato.  
   
 Eseguire i comandi DBCC seguenti per liberare diverse cache in memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 94845da5a211c1f5b3ebf9f27a8a7ba780bc4b71
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: eecf4868791a9dcd963a31963f742f90a2cf3843
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797821"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008427"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Resilienza di connessione nel driver ODBC di Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -72,7 +71,7 @@ ms.locfileid: "66797821"
 |IMC06|La connessione è interrotta e il ripristino non è possibile. La connessione è stata contrassegnata dal driver client come non ripristinabile. Non è stato eseguito alcun tentativo di ripristinare la connessione.|  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente contiene due funzioni. **func1** illustra come connettersi con un nome origine dati (DSN) che usa ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Windows. DSN usa l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e specifica l'ID utente. **func1** quindi recupera il numero di tentativi di connessione con **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
+ L'esempio seguente contiene due funzioni. **func1** illustra come connettersi con un nome origine dati (DSN) che usa ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Windows. DSN usa l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e specifica l'ID utente. **func1** recupera quindi il numero di tentativi di connessione con **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
   
  **func2** usa **SQLDriverConnect**, la parola chiave della stringa di connessione **ConnectRetryCount** e attributi di connessione per recuperare l'impostazione relativa ai tentativi di connessione e all'intervallo tra i tentativi.  
   

@@ -13,20 +13,19 @@ helpviewer_keywords:
 - OLE DB, date/time improvements
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 5b8f304d7681d3df4ae4c6f065a6128beb5822d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e6ceaa3fae1efd04490932dd1fdc42a9805b2f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995116"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Supporto dei tipi di dati per i miglioramenti relativi a data e ora OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Questo articolo fornisce informazioni su OLE DB (Driver OLE DB per SQL Server) i tipi che supportano [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipi di dati Data/ora.  
+  Questo articolo fornisce informazioni sui tipi di OLE DB (driver OLE DB per SQL Server) che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supportano i tipi di dati di data/ora.  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Mapping dei tipi di dati in set di righe e parametri  
  OLE DB fornisce due nuovi tipi di dati per supportare i nuovi tipi di server: DBTYPE_DBTIME2 e DBTYPE_DBTIMESTAMPOFFSET. Nella tabella seguente viene illustrato il mapping completo per il tipo di server:  
@@ -161,7 +160,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- La migrazione a Driver OLE DB per SQL Server le applicazioni che usano **sql_variant** e si basano sulla precisione limitata di **datetime** dovranno essere aggiornate se lo schema sottostante è aggiornato per usare **datetime2** anziché da **datetime**.  
+ Le applicazioni che eseguono la migrazione al driver OLE DB per SQL Server che utilizzano **sql_variant** e si basano sulla precisione limitata di **DateTime** dovranno essere aggiornate se lo schema sottostante viene aggiornato per utilizzare **datetime2** anziché **DateTime**.  
   
  Le macro di accesso per SSVARIANT sono state estese anche con l'aggiunta degli elementi seguenti:  
   
@@ -173,16 +172,16 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Mapping dei tipi di dati in ITableDefinition::CreateTable  
- Con strutture DBCOLUMNDESC utilizzate da itabledefinition:: CreateTable viene usato il mapping dei tipi seguenti:  
+ Il mapping dei tipi seguente viene usato con le strutture DBCOLUMNDESC usate da ITableDefinition:: CreateTable:  
   
 |Tipo di dati OLE DB (*wType*)|Tipo di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Note|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|Data||  
-|DBTYPE_DBTIMESTAMP|**datetime2**(p)|Il Driver OLE DB per SQL Server esamina il DBCOLUMDESC *bScale* membro per determinare la precisione frazionaria dei secondi.|  
-|DBTYPE_DBTIME2|**time**(p)|Il Driver OLE DB per SQL Server esamina il DBCOLUMDESC *bScale* membro per determinare la precisione frazionaria dei secondi.|  
-|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|Il Driver OLE DB per SQL Server esamina il DBCOLUMDESC *bScale* membro per determinare la precisione frazionaria dei secondi.|  
+|DBTYPE_DBTIMESTAMP|**datetime2**(p)|Il driver OLE DB per SQL Server controlla il membro *bScale* di DBCOLUMDESC per determinare la precisione dei secondi frazionari.|  
+|DBTYPE_DBTIME2|**time**(p)|Il driver OLE DB per SQL Server controlla il membro *bScale* di DBCOLUMDESC per determinare la precisione dei secondi frazionari.|  
+|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|Il driver OLE DB per SQL Server controlla il membro *bScale* di DBCOLUMDESC per determinare la precisione dei secondi frazionari.|  
   
- Quando un'applicazione specifica DBTYPE_DBTIMESTAMP in *wType*, è possibile eseguire l'override del mapping al **datetime2** specificando un nome di tipo nella *pwszTypeName*. Se **data/ora** omette *bScale* deve essere 3. Se **smalldatetime** omette *bScale* deve essere 0. Se *bScale* non è coerente con *wType* e *pwszTypeName*, viene restituito DB_E_BADSCALE.  
+ Quando un'applicazione specifica DBTYPE_DBTIMESTAMP in *wType*, può eseguire l'override del mapping a **datetime2** fornendo un nome di tipo in *pwszTypeName*. Se viene specificato **DateTime** , *bScale* deve essere 3. Se viene specificato **smalldatetime** , *bScale* deve essere 0. Se *bScale* non è coerente con *wType* e *pwszTypeName*, viene restituito DB_E_BADSCALE.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Miglioramenti relativi a data e ora &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  

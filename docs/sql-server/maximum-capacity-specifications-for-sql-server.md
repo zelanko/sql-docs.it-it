@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b92410945bd9d123b103272943a663b87b8adec8
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: 0d8baf8700afde2b6534a173a5d81912dbe61a13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045640"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Specifiche di capacità massima per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +46,16 @@ ms.locfileid: "57973810"
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] oggetto||Quantità/dimensioni massime [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 bit)|Informazioni aggiuntive|  
 |---------------------------------------------------------|-|------------------------------------------------------------------|----------------------------|  
 |Dimensioni batch||65.536 * dimensioni del pacchetto di rete|Dimensioni pacchetto di rete corrisponde alle dimensioni dei pacchetti del flusso TDS (Tabular Data Stream) usati per le comunicazioni tra applicazioni e [!INCLUDE[ssDE](../includes/ssde-md.md)]relazionale. La dimensione predefinita del pacchetto è 4 KB e viene controllata dall'opzione di configurazione delle dimensioni del pacchetto di rete.|  
-|Byte per ogni colonna di stringhe brevi||8.000||  
-|Byte per ogni clausola GROUP BY, ORDER BY||8.060||  
+|Byte per ogni colonna di stringhe brevi||8\.000||  
+|Byte per ogni clausola GROUP BY, ORDER BY||8\.060||  
 |Byte per ogni chiave di indice||900 byte per un indice cluster. 1700 per un indice non cluster.|Il numero massimo di byte in una chiave di indice cluster non può essere maggiore di 900 in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per una chiave di indice non cluster, il valore massimo è 1700 byte.<br /><br /> È possibile definire una chiave usando colonne a lunghezza variabile le cui dimensioni massime superano il limite. Tuttavia, le dimensioni combinate dei dati di tali colonne non possono mai superare il limite.<br /><br /> In un indice non cluster, è possibile includere colonne non chiave aggiuntive che non vengono incluse nel conteggio per il limite di dimensioni della chiave. Le colonne non chiave potrebbero migliorare le prestazioni di alcune query.|  
 |Byte per ogni chiave di indice per tabelle ottimizzate per la memoria||2500 byte per un indice non cluster. Nessun limite per un indice hash purché tutte le chiavi di indice rientrino nella riga.|In una tabella ottimizzata per la memoria, un indice non cluster non può contenere colonne chiave le cui dimensioni massime dichiarate superano i 2500 byte. È irrilevante se i dati effettivi nelle colonne chiave sono minori delle dimensioni massime dichiarate.<br /><br /> Per una chiave di indice hash non esiste alcun limite fisico alle dimensioni.<br /><br /> Per gli indici delle tabelle ottimizzate per la memoria, non è disponibile alcun concetto di colonne incluse poiché tutti gli indici coprono implicitamente tutte le colonne.<br /><br /> Per una tabella ottimizzata per la memoria, anche se le dimensioni delle righe sono di 8060 byte, alcune colonne a lunghezza variabile possono essere fisicamente archiviate all'esterno di tali 8060 byte. Tuttavia, le dimensioni massime dichiarate di tutte le colonne chiave per tutti gli indici in una tabella, oltre a eventuali colonne a lunghezza fissa aggiuntive nella tabella, non devono superare 8060 byte.|  
 |Byte per ogni chiave esterna||900||  
 |Byte per ogni chiave primaria||900||  
-|Byte per ogni riga||8.060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta l'archiviazione dei dati di overflow della riga che consente di spostare le colonne di lunghezza variabile all'esterno delle righe. Solo una radice di 24 byte viene archiviata nel record principale per le colonne di lunghezza variabile spostate all'esterno di righe. Di conseguenza, il limite delle righe effettivo è maggiore di quello delle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Supporto per righe di grandi dimensioni](../relational-databases/pages-and-extents-architecture-guide.md#large-row-support).|  
-|Byte per ogni riga nelle tabelle ottimizzate per la memoria||8.060|A partire da [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] le tabelle ottimizzate per la memoria supportano l'archiviazione all'esterno delle righe. Le colonne a lunghezza variabile vengono spostare all'esterno delle righe se le dimensioni massime di tutte le colonne nella tabella superano 8060 byte. La decisione avviene in fase di compilazione. Per le colonne archiviate all'esterno delle righe viene archiviato un solo riferimento a 8 byte. Per altre informazioni, vedere [Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|  
+|Byte per ogni riga||8\.060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supporta l'archiviazione dei dati di overflow della riga che consente di spostare le colonne di lunghezza variabile all'esterno delle righe. Solo una radice di 24 byte viene archiviata nel record principale per le colonne di lunghezza variabile spostate all'esterno di righe. Di conseguenza, il limite delle righe effettivo è maggiore di quello delle versioni precedenti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Supporto per righe di grandi dimensioni](../relational-databases/pages-and-extents-architecture-guide.md#large-row-support).|  
+|Byte per ogni riga nelle tabelle ottimizzate per la memoria||8\.060|A partire da [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] le tabelle ottimizzate per la memoria supportano l'archiviazione all'esterno delle righe. Le colonne a lunghezza variabile vengono spostare all'esterno delle righe se le dimensioni massime di tutte le colonne nella tabella superano 8060 byte. La decisione avviene in fase di compilazione. Per le colonne archiviate all'esterno delle righe viene archiviato un solo riferimento a 8 byte. Per altre informazioni, vedere [Dimensioni di tabelle e righe per le tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|  
 |Byte nel testo di origine di una stored procedure||Minore delle dimensioni batch o 250 MB||  
-|Byte per ogni colonna **varchar(max)**, **varbinary(max)**, **xml**, **text**o **image**||2^31-1||  
+|Byte per ogni colonna **varchar(max)** , **varbinary(max)** , **xml**, **text**o **image**||2^31-1||  
 |Caratteri per ogni colonna **ntext** o **nvarchar(max)**||2^30-1||  
 |Indici cluster per tabella||1||  
 |Colonne in GROUP BY, ORDER BY||Limitato solo dal numero di byte||  
@@ -64,10 +63,10 @@ ms.locfileid: "57973810"
 |Colonne per ogni chiave di indice||32|Se la tabella contiene uno o più indici XML, la chiave di clustering della tabella utente viene limitata a 31 colonne perché la colonna XML viene aggiunta alla chiave di clustering dell'indice XML primario. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]è possibile includere colonne non chiave in un indice non cluster per evitare di raggiungere il limite massimo di 32 colonne chiave. Per altre informazioni, vedere [Creare indici con colonne incluse](../relational-databases/indexes/create-indexes-with-included-columns.md).|  
 |Colonne per ogni chiave esterna||32||  
 |Colonne per ogni chiave primaria||32||  
-|Colonne per ogni tabella non estesa in larghezza||1.024||  
+|Colonne per ogni tabella non estesa in larghezza||1\.024||  
 |Colonne per ogni tabella estesa in larghezza||30.000||  
-|Colonne per ogni istruzione SELECT||4.096||  
-|Colonne per ogni istruzione INSERT||4.096||  
+|Colonne per ogni istruzione SELECT||4\.096||  
+|Colonne per ogni istruzione INSERT||4\.096||  
 |Connessioni per ogni client||Valore massimo delle connessioni configurate||  
 |Dimensioni di database||524.272 terabytes||  
 |Database per ogni istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32.767||  
@@ -76,7 +75,7 @@ ms.locfileid: "57973810"
 |File per ogni database||32.767||  
 |Dimensioni di file (dati)||16 terabyte||  
 |Dimensioni del file (log)||2 terabyte||  
-|File di dati per dati ottimizzati per la memoria per ogni database||4.096 in [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)]. Le versioni successive di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non impongono un limite rigido di questo tipo.||  
+|File di dati per dati ottimizzati per la memoria per ogni database||4\.096 in [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)]. Le versioni successive di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non impongono un limite rigido di questo tipo.||  
 |File differenziale per ogni file di dati per dati ottimizzati per la memoria||1||  
 |Riferimenti alla tabella della chiave esterna per ogni tabella||In uscita = 253. In ingresso = 10.000.|Per informazioni sulle restrizioni, vedere [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md).|  
 |Lunghezza di identificatore (in caratteri)||128||  
@@ -90,9 +89,9 @@ ms.locfileid: "57973810"
 |Livelli di nidificazione dei trigger||32||  
 |Indici non cluster per tabella||999||  
 |Numero di espressioni distinte nella clausola GROUP BY quando è presente una delle seguenti opzioni: CUBE, ROLLUP, GROUPING SETS, WITH CUBE, WITH ROLLUP||32||  
-|Numero di set di raggruppamento generati dagli operatori nella clausola GROUP BY||4.096||  
-|Parametri per ogni stored procedure||2.100||  
-|Parametri per ogni funzionalità definita dall'utente||2.100||  
+|Numero di set di raggruppamento generati dagli operatori nella clausola GROUP BY||4\.096||  
+|Parametri per ogni stored procedure||2\.100||  
+|Parametri per ogni funzionalità definita dall'utente||2\.100||  
 |REFERENCES per ogni tabella||253||  
 |Righe per ogni tabella||Limitato dall'archiviazione disponibile||  
 |Tabelle per ogni database||Limitato dal numero di oggetti di un database|Gli oggetti di database possono essere tabelle, viste, stored procedure, funzioni definite dall'utente, trigger, regole, impostazioni predefinite e vincoli. La somma del numero di tutti gli oggetti in un database non può essere maggiore di 2.147.483.647.|  
@@ -113,7 +112,7 @@ ms.locfileid: "57973810"
 |Istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per ogni computer||5|  
 |Numero complessivo di istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||200*|  
 |Database utente per ogni istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], incluse applicazioni livello dati||50|  
-|Numero complessivo di database utente per Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||1.000|  
+|Numero complessivo di database utente per Utilità [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||1\.000|  
 |Filegroup per ogni database||1|  
 |File di dati per filegroup||1|  
 |File di log per ogni database||1|  
@@ -139,10 +138,10 @@ ms.locfileid: "57973810"
 |Articoli (pubblicazione di tipo merge)||2048|  
 |Articoli (pubblicazione snapshot o transazionale)||32.767|  
 |Colonne in una tabella* (pubblicazione di tipo merge)||246|  
-|Colonne in una tabella** (pubblicazione snapshot o transazionale di[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] )||1.000|  
+|Colonne in una tabella** (pubblicazione snapshot o transazionale di[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] )||1\.000|  
 |Colonne in una tabella** (pubblicazione snapshot o transazionale di Oracle)||995|  
-|Byte per una colonna utilizzata in un filtro di riga (pubblicazione di tipo merge)||1.024|  
-|Byte per una colonna utilizzata in un filtro di riga (pubblicazione snapshot o transazionale)||8.000|  
+|Byte per una colonna utilizzata in un filtro di riga (pubblicazione di tipo merge)||1\.024|  
+|Byte per una colonna utilizzata in un filtro di riga (pubblicazione snapshot o transazionale)||8\.000|  
 
  *Se si usa il rilevamento a livello di riga per il rilevamento dei conflitti (impostazione predefinita), la tabella di base può includere fino a 1.024 colonne, che devono tuttavia essere filtrate dall'articolo in modo da pubblicare un massimo di 246 colonne. Se viene utilizzato il rilevamento a livello di colonna, nella tabella di base possono essere incluse al massimo 246 colonne.  
   

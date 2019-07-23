@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 88f5919c1bd36b912c2205da2032413ec39150f1
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: fd8f7ff879e3e5a6ec2729abce4c294f69ad2c83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087098"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Lezione 1: Creare e applicare criteri Disattivata per impostazione predefinita
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ Per completare questa esercitazione, sono necessari SQL Server Management Studio
   
 2.  Nella finestra di dialogo **Crea nuova condizione** digitare **Posta disattivata** nella casella **Nome**.   
     1. Nella casella **Facet** verificare che il facet **Configurazione superficie di attacco** sia selezionato.
-    1. Nella finestra di dialogo **Campo** nell'area **Espressione** selezionare **@DatabaseMailEnabled**, nella casella **Operatore** selezionare **=** e in **Valore** selezionare **False**.  
+    1. Nella finestra di dialogo **Campo** nell'area **Espressione** selezionare **@DatabaseMailEnabled** , nella casella **Operatore** selezionare **=** e in **Valore** selezionare **False**.  
     1. Nella pagina **Descrizione** digitare una descrizione per la condizione, quindi scegliere **OK** per creare la condizione.  
 
     ![Condizione Posta disattivata](Media/lesson-1-create-and-apply-an-off-by-default-policy/mail-off-condition.png) 

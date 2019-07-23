@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7b8d8d9c-74aa-4e6e-88f1-2fc5c74004ae
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2526d43416382f5cf46cb9b0be1d745487a67848
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 29c2da8d8b6645ec9d5186f79db80b03626b2978
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66762418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980200"
 ---
 # <a name="getscale-method-sqlserverparametermetadata"></a>Metodo getScale (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public int getScale(int param)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getScale viene specificato dal metodo getScale nell'interfaccia parametermetadata.  
+ Questo Metodo getScale viene specificato dal Metodo getScale nell'interfaccia java. SQL. ParameterMetaData.  
   
  Questo metodo ottiene le cifre della colonna a destra del separatore decimale. Per tipi che non dispongono di un separatore decimale, questo metodo restituisce "0".  
   

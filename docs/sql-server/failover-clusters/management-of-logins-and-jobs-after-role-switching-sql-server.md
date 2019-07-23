@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 39ddb99758833a5f942822e2639768480bf1bc99
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2887cfe969afd8739b15646efb8ee4700c8affff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530137"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063849"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Gestione di account di accesso e di processi dopo un cambio di ruolo (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Quando si distribuisce una soluzione di recupero di emergenza o a disponibilità elevata per un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è importante riprodurre le informazioni più significative archiviate per il database nei database **master** o **msdb** . In genere, tra queste informazioni sono inclusi i processi del database primario/principale e gli account di accesso di utenti o processi necessari per la connessione al database. È consigliabile duplicare queste informazioni in qualsiasi istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene ospitato un database secondario/mirror. Se possibile, dopo il cambio di ruolo, è opportuno riprodurre le informazioni a livello di programmazione nel nuovo database primario/principale.  
   
-## <a name="logins"></a>Account di accesso  
+## <a name="logins"></a>Logins  
  In tutte le istanze del server in cui viene ospitata una copia del database, è consigliabile riprodurre gli account di accesso con l'autorizzazione ad accedere al database principale. Quando il ruolo primario/principale cambia, solo gli utenti con account di accesso presenti nella nuova istanza del server primario/principale possono accedere al nuovo database primario/principale. Gli utenti i cui account di accesso non sono definiti nella nuova istanza del server primario/principale sono orfani e non possono accedere al database.  
   
  Se un utente è orfano, creare l'account di accesso nella nuova istanza del server primario/principale ed eseguire [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md). Per altre informazioni, vedere [Risolvere i problemi relativi agli utenti isolati &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md).  
