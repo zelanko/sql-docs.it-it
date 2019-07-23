@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: dae91654a04921340b043518d6d5cf3363ad6a1b
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: ff66ea5a2e66ddd1f416d21d32130aabce0e6507
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041292"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Visualizzazione o modifica del modello di recupero di un database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,13 +112,13 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
     -   Dopo il passaggio dal modello di recupero con registrazione minima delle operazioni bulk al modello di recupero con registrazione completa, eseguire il backup del log.  
   
-        >**NOTA:** La strategia di backup rimane invariata, cioè continua l'esecuzione di backup del database, del log e differenziali periodici.  
+        >**NOTA** La strategia di backup rimane invariata, cioè continua l'esecuzione di backup del database, del log e differenziali periodici.  
   
 -   **Dopo il passaggio dal modello di recupero con registrazione minima**  
   
     -   Immediatamente dopo il passaggio al modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk, eseguire un backup di database completo o differenziale per avviare la catena di log.  
   
-        >**NOTA:** Il passaggio al modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk ha effetto solo dopo il primo backup dei dati.  
+        >**NOTA** Il passaggio al modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk ha effetto solo dopo il primo backup dei dati.  
   
     -   Pianificare backup regolari dei log e aggiornare il piano di ripristino di conseguenza.  
   

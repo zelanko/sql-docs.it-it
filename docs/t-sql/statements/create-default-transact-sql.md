@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 230a87a1138bf2b97ece66246d86a8264341446c
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 0d6b786725dfb50fceb1376fd104a4b5e5afbc76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154706"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902851"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ AS constant_expression [ ; ]
  Nome del valore predefinito. I nomi dei valori predefiniti devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). Il nome del proprietario del valore predefinito è facoltativo.  
   
 *constant_expression*  
-[Espressione](../../t-sql/language-elements/expressions-transact-sql.md) che include solo valori costanti. Non può includere i nomi di colonne o di altri oggetti di database. È possibile usare qualsiasi costante, funzione predefinita o espressione matematica, ad eccezione di quelle contenenti tipi di dati alias. Non è possibile usare funzioni definite dall'utente. Racchiudere le costanti per valori di carattere e data tra virgolette singole (**'**). Le costanti per valori di valuta, interi e a virgola mobile non richiedono le virgolette. I dati binari devono essere preceduti da 0x, mentre i dati di valuta devono essere preceduti dal simbolo di valuta. Il valore predefinito deve essere compatibile con il tipo di dati della colonna.  
+[Espressione](../../t-sql/language-elements/expressions-transact-sql.md) che include solo valori costanti. Non può includere i nomi di colonne o di altri oggetti di database. È possibile usare qualsiasi costante, funzione predefinita o espressione matematica, ad eccezione di quelle contenenti tipi di dati alias. Non è possibile usare funzioni definite dall'utente. Racchiudere le costanti per valori di carattere e data tra virgolette singole ( **'** ). Le costanti per valori di valuta, interi e a virgola mobile non richiedono le virgolette. I dati binari devono essere preceduti da 0x, mentre i dati di valuta devono essere preceduti dal simbolo di valuta. Il valore predefinito deve essere compatibile con il tipo di dati della colonna.  
   
 ## <a name="remarks"></a>Remarks  
  È possibile creare un nome predefinito solo nel database corrente. I nomi di valore predefinito in un database devono essere univoci per ogni schema. Quando si crea un valore predefinito, usare **sp_bindefault** per associarlo a una colonna o a un tipo di dati alias.  
@@ -85,7 +84,7 @@ AS constant_expression [ ; ]
   
  Per rinominare un valore predefinito, usare **sp_rename**. Per ottenere un report relativo a un valore predefinito, usare **sp_help**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per usare CREATE DEFAULT, un utente deve avere almeno l'autorizzazione CREATE DEFAULT nel database corrente e l'autorizzazione ALTER per lo schema in cui viene creato il valore predefinito.  
   
 ## <a name="examples"></a>Esempi  
@@ -99,7 +98,7 @@ GO
 CREATE DEFAULT phonedflt AS 'unknown';  
 ```  
   
-### <a name="b-binding-a-default"></a>b. Associazione di un valore predefinito  
+### <a name="b-binding-a-default"></a>B. Associazione di un valore predefinito  
  Nell'esempio seguente viene associato il valore predefinito creato nell'esempio A. Il valore predefinito viene utilizzato solo se non vengono specificate voci per la colonna `Phone` della tabella `Contact`. 
  
  > [!Note] 

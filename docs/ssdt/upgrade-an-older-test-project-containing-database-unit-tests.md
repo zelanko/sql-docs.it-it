@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 42782ff3-e8cf-4c9d-8dac-a95b236edfc4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d1b91df1ecce9749ebdec3515a339ac31f2507b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2ad973cf845817a0dbd251bbee23ac6f13d7c04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101989"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110581"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>Aggiornare un progetto di test precedente contenente unit test del database
 È possibile aggiornare un progetto di test precedente creato in Visual Studio 2010 contenente gli unit test del database in modo da usare i nuovi strumenti e runtime per unit test del database SQL Server Data Tools. Dopo aver aggiornato un progetto precedente è possibile aggiungere unit test di SQL Server al progetto. Per altre informazioni, vedere [Creazione e definizione di unit test di SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md).  

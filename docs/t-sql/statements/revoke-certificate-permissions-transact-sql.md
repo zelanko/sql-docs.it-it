@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2272324a-98f2-42c6-88b1-96a99020c9e9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 4cd2c67c8dd24a7e6a39a98285235090017adb1e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: fc7a59b36d7fce90315833baf8461a1860be2a64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326742"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140911"
 ---
 # <a name="revoke-certificate-permissions-transact-sql"></a>REVOKE (autorizzazioni per certificati) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  Specifica un'autorizzazione che può essere revocata per un certificato. Vedere l'elenco riportato di seguito.  
   
- ON CERTIFICATE **::**_certificate_name_  
+ ON CERTIFICATE **::** _certificate_name_  
  Specifica il certificato per cui viene revocata l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
  *database_principal*  
@@ -66,11 +65,11 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
   
--   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
+-   utente del database di cui è stato eseguito il mapping a un gruppo di Windows  
   
--   utente del database sul quale viene eseguito il mapping a un certificato  
+-   utente del database di cui è stato eseguito il mapping a un certificato  
   
--   utente del database mappato a una chiave asimmetrica  
+-   utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
   
 -   utente del database non mappato ad alcuna entità server.  
   
@@ -91,11 +90,11 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
   
--   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
+-   utente del database di cui è stato eseguito il mapping a un gruppo di Windows  
   
--   utente del database sul quale viene eseguito il mapping a un certificato  
+-   utente del database di cui è stato eseguito il mapping a un certificato  
   
--   utente del database mappato a una chiave asimmetrica  
+-   utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
   
 -   utente del database non mappato ad alcuna entità server.  
   
@@ -110,7 +109,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per il certificato.  
   
 ## <a name="see-also"></a>Vedere anche  

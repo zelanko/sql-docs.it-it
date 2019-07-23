@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dda1ea78f8a3c795562faa52478d736f9525a252
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e26d8a84a93c5164fa10894bc444cfbac999a22f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327762"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129372"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Autorizzazioni: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -78,7 +77,7 @@ REVOKE
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- \<permission>[ **,**...*n* ]  
+ \<permission>[ **,** ...*n* ]  
  Una o più autorizzazioni da concedere, negare o revocare.  
   
  ON [ \<class_type> :: ] *securable* La clausola **ON** descrive il parametro dell'entità a protezione diretta in cui concedere, negare o revocare le autorizzazioni.  
@@ -88,10 +87,10 @@ REVOKE
  *securable*  
  Nome di account di accesso, database, tabella, visualizzazione, schema, procedura, ruolo o utente in cui concedere, negare o revocare le autorizzazioni. Il nome dell'oggetto può essere specificato con le regole di denominazione in tre parti descritte in [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
- TO *principal* [ **,**...*n* ]  
+ TO *principal* [ **,** ...*n* ]  
  Una o più entità di sicurezza a cui vengono concesse, negate o revocate le autorizzazioni. L'entità di sicurezza corrisponde al nome di un account di accesso, di un utente database o di un ruolo del database.  
   
- FROM *principal* [ **,**...*n* ]  
+ FROM *principal* [ **,** ...*n* ]  
  Una o più entità di sicurezza a cui revocare le autorizzazioni.  L'entità di sicurezza corrisponde al nome di un account di accesso, di un utente database o di un ruolo del database. **FROM** può essere usato solo con un'istruzione **REVOKE**. **TO** può essere usato con **GRANT**, **DENY** o **REVOKE**.  
   
  WITH GRANT OPTION  
@@ -106,7 +105,7 @@ REVOKE
 > [!IMPORTANT]  
 >  Se l'autorizzazione specificata è stata concessa all'entità senza l'opzione **GRANT**, l'autorizzazione stessa verrà revocata.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per concedere un'autorizzazione, l'utente che concede le autorizzazioni deve disporre dell'autorizzazione con **WITH GRANT OPTION** oppure di un'autorizzazione di livello superiore che include l'autorizzazione che viene concessa.  I proprietari degli oggetti possono concedere autorizzazioni per gli oggetti di cui sono proprietari. Le entità con l'autorizzazione **CONTROL** per un'entità a sicurezza diretta possono concedere l'autorizzazione per l'entità.  I membri dei ruoli del database predefiniti **db_owner** e **db_securityadmin** possono concedere qualsiasi autorizzazione nel database.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
@@ -244,7 +243,7 @@ REVOKE
   
  ![Poster delle autorizzazioni di sicurezza della piattaforma di strumenti analitici](../../t-sql/statements/media/aps-security-perms-poster.png "Poster delle autorizzazioni di sicurezza della piattaforma di strumenti analitici")  
   
- Per scaricare la versione completa del poster, vedere [SQL Server PDW Permissions](https://go.microsoft.com/fwlink/?LinkId=244249) (Autorizzazioni di SQL Server PDW) nella sezione dei file del sito APS Yammer (oppure richiederla tramite posta elettronica a **apsdoc@microsoft.com**.  
+ Per scaricare la versione completa del poster, vedere [SQL Server PDW Permissions](https://go.microsoft.com/fwlink/?LinkId=244249) (Autorizzazioni di SQL Server PDW) nella sezione dei file del sito APS Yammer (oppure richiederla tramite posta elettronica a **apsdoc@microsoft.com** .  
   
 ## <a name="default-permissions"></a>Autorizzazioni predefinite  
  L'elenco seguente descrive le autorizzazioni predefinite:  
@@ -276,7 +275,7 @@ GRANT CONTROL SERVER TO [Ted];
 GRANT ALTER ANY DATABASE TO Mary;  
 ```  
   
-### <a name="b-granting-a-server-level-permission-to-a-login"></a>b. Concessione di un'autorizzazione a livello di server a un account di accesso  
+### <a name="b-granting-a-server-level-permission-to-a-login"></a>B. Concessione di un'autorizzazione a livello di server a un account di accesso  
  L'esempio seguente concede un'autorizzazione a livello di server in un account di accesso a un'entità di sicurezza del server (un altro account di accesso).  
   
 ```  

@@ -27,14 +27,13 @@ helpviewer_keywords:
 ms.assetid: 9bda5b0b-2380-4931-a1c8-f362fdefa99b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 758b31fc070c78e4129447cd02ef5c3360c9fc5e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: c61ca9f853f851bb531abdbcba66773f9e9d9e1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077908"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int, bigint, smallint e tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,9 +57,9 @@ Le funzioni restituiscono **bigint** solo se l'espressione per il parametro è u
 > [!CAUTION]  
 >  Quando si utilizzano gli operatori aritmetici +, -, \*, / o % per eseguire conversioni implicite o esplicite di costanti di tipo **int**, **smallint**, **tinyint**, o **bigint** per tipi di dati **mobili**, **reali**, **decimali** o **numerici**, le regole applicate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per calcolare il tipo di dati e la precisione dei risultati delle espressioni variano a seconda del fatto che per la query sia attivata o meno la parametrizzazione automatica.  
 >   
->  Per questo motivo, in alcuni casi espressioni simili nelle query possono dare risultati diversi. Se per una query non è attivata la parametrizzazione automatica, il valore costante viene prima convertito nel tipo **numerico**, la cui precisione è sufficiente a contenere il valore della costante, quindi viene convertito nel tipo di dati specificato. Il valore costante 1, ad esempio, viene convertito in **numerico (1, 0)** e il valore costante 250 viene convertito in **numerico (3, 0)**.  
+>  Per questo motivo, in alcuni casi espressioni simili nelle query possono dare risultati diversi. Se per una query non è attivata la parametrizzazione automatica, il valore costante viene prima convertito nel tipo **numerico**, la cui precisione è sufficiente a contenere il valore della costante, quindi viene convertito nel tipo di dati specificato. Il valore costante 1, ad esempio, viene convertito in **numerico (1, 0)** e il valore costante 250 viene convertito in **numerico (3, 0)** .  
 >   
->  Se per una query è attivata la parametrizzazione automatica, il valore costante viene sempre convertito in **numerico (10, 0)** prima di essere convertito nel tipo di dati finale. Se viene utilizzato l'operatore /, sia la precisione del tipo di risultati che il valore del risultato di query simili possono essere diversi. Ad esempio, il valore del risultato di una query con parametrizzazione automatica che include l'espressione `SELECT CAST (1.0 / 7 AS float)` è diverso dal valore del risultato della stessa query ma senza parametrizzazione automatica, perché i risultati della query con parametrizzazione automatica vengono troncati per rientrare nel tipo di dati **numerico (10, 0)**.  
+>  Se per una query è attivata la parametrizzazione automatica, il valore costante viene sempre convertito in **numerico (10, 0)** prima di essere convertito nel tipo di dati finale. Se viene utilizzato l'operatore /, sia la precisione del tipo di risultati che il valore del risultato di query simili possono essere diversi. Ad esempio, il valore del risultato di una query con parametrizzazione automatica che include l'espressione `SELECT CAST (1.0 / 7 AS float)` è diverso dal valore del risultato della stessa query ma senza parametrizzazione automatica, perché i risultati della query con parametrizzazione automatica vengono troncati per rientrare nel tipo di dati **numerico (10, 0)** .  
   
 ## <a name="converting-integer-data"></a>Conversione di dati di tipo integer
 Quando i numeri interi vengono convertiti implicitamente in un tipo di dati carattere, se il numero intero è troppo grande per adattarsi al campo del carattere, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] immette il carattere ASCII 42, l'asterisco (*).

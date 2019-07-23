@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ec90c3ca632a917bd0905063d2fee94f4c0dfa32
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: cbfc9ffa9ba188506e887201ca17ef630f1d04ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326762"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065946"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ ALTER COLUMN ENCRYPTION KEY key_name
 
 Usare [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) e [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) per visualizzare le informazioni sulle chiavi di crittografia della colonna.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessaria l'autorizzazione **ALTER ANY COLUMN ENCRYPTION KEY** per il database.  
   
 ## <a name="examples"></a>Esempi  
@@ -93,7 +92,7 @@ GO
   
 ```  
   
-### <a name="b-dropping-a-column-encryption-key-value"></a>b. Eliminazione di un valore della chiave di crittografia della colonna  
+### <a name="b-dropping-a-column-encryption-key-value"></a>B. Eliminazione di un valore della chiave di crittografia della colonna  
  Nell'esempio seguente viene modificata una chiave di crittografia della colonna denominata `MyCEK` eliminando un valore.  
   
 ```  

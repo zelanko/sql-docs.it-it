@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: febcc87f-eb18-4c12-ba30-82ef0d49aaa3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ddc31964a018bec7dc0829d21e85283db5f069e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a36cfa888b5a00e8f69404db3989cf9852f0d47e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110748"
 ---
 # <a name="running-sql-server-unit-tests"></a>Esecuzione di unit test di SQL Server
 Per migliorare e gestire la qualità del codice, è possibile creare ed eseguire unit test di SQL Server per verificare il comportamento di qualsiasi oggetto di database e archiviare quindi questi test nel controllo delle versioni. Quando l'utente o qualsiasi membro del team modifica lo schema del database, eseguire sia unit test di SQL Server sia unit test del software per verificare che le modifiche non abbiano interrotto le funzionalità esistenti. È possibile eseguire singoli test o gruppi di test, detti elenchi di test. Per altre informazioni, vedere [Utilizzo di elenchi di test (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182461(VS.100).aspx).  

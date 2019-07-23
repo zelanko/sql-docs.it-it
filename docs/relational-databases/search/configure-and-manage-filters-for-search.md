@@ -12,23 +12,22 @@ ms.assetid: 7ccf2ee0-9854-4253-8cca-1faed43b7095
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f7d50aac6cea5d7089ee891e533712cc64fd46b
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 5dd9719ea0f10b3bbac6aae5171a2c941cdf7e1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093298"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Configurazione e gestione di filtri per la ricerca
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  L'indicizzazione di un documento in una colonna con tipo di dati **varbinary**, **varbinary(max)**, **image** o **xml** richiede operazioni di elaborazione aggiuntive. che devono essere eseguite mediante un filtro. Il filtro estrae le informazioni testuali dal documento rimuovendo la formattazione, quindi invia il testo al word breaker per la lingua associata alla colonna della tabella.  
+  L'indicizzazione di un documento in una colonna con tipo di dati **varbinary**, **varbinary(max)** , **image** o **xml** richiede operazioni di elaborazione aggiuntive. che devono essere eseguite mediante un filtro. Il filtro estrae le informazioni testuali dal documento rimuovendo la formattazione, quindi invia il testo al word breaker per la lingua associata alla colonna della tabella.  
  
 ## <a name="filters-and-document-types"></a>Filtri e tipi di documento
 Un determinato filtro è specifico di un determinato tipo di documento (file con estensione doc, pdf, xls, xml e così via). Questi filtri implementano l'interfaccia IFilter. Per altre informazioni su questi tipi di documento, eseguire una query nella vista del catalogo [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) .  
   
-I documenti binari possono essere archiviati in una singola colonna **varbinary(max)** o **image** . Per ogni documento, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sceglie il filtro corretto da utilizzare in base all'estensione file. Considerato che l'estensione non è visibile quando il file viene archiviato in una colonna **varbinary(max)** o **image** , l'estensione file (DOC, XLS, PDF e così via) deve essere archiviata in una colonna distinta della tabella, denominata colonna del tipo. Questa colonna può includere qualsiasi tipo di dati basato su caratteri e contiene l'estensione file del documento, ad esempio l'estensione doc per un documento di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word. Nella tabella **Document** in [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]la colonna **Document** è di tipo **varbinary(max)** mentre la colonna del tipo, **FileExtension**, è di tipo **nvarchar(8)**.  
+I documenti binari possono essere archiviati in una singola colonna **varbinary(max)** o **image** . Per ogni documento, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sceglie il filtro corretto da utilizzare in base all'estensione file. Considerato che l'estensione non è visibile quando il file viene archiviato in una colonna **varbinary(max)** o **image** , l'estensione file (DOC, XLS, PDF e così via) deve essere archiviata in una colonna distinta della tabella, denominata colonna del tipo. Questa colonna può includere qualsiasi tipo di dati basato su caratteri e contiene l'estensione file del documento, ad esempio l'estensione doc per un documento di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word. Nella tabella **Document** in [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]la colonna **Document** è di tipo **varbinary(max)** mentre la colonna del tipo, **FileExtension**, è di tipo **nvarchar(8)** .  
 
 **Per visualizzare la colonna del tipo in un indice full-text esistente**  
   

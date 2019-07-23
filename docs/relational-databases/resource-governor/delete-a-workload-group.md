@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 22fc66d9f579305a4160b2de0ee6ad047e560ea3
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: b4b322231f546871d5581de470fdc894ed4fe41e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689844"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099263"
 ---
 # <a name="delete-a-workload-group"></a>Eliminare un gruppo di carico di lavoro
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "55689844"
   
 -   Riavviare il server. Una volta completato il processo di riavvio, il gruppo eliminato non verrà creato e in un gruppo spostato verrà utilizzata la nuova assegnazione del pool di risorse.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorizzazioni  
  Per eliminare un gruppo di carico di lavoro è necessaria l'autorizzazione CONTROL SERVER.  
   
 ##  <a name="DelWGObjEx"></a> Eliminare un gruppo di carico di lavoro utilizzando Esplora oggetti  

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 11caad507a8d8af50bae6c3d2b51807287ee694c
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 81a8422cbab7eb10d0c74ad5cd758817a665eaa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050781"
 ---
 # <a name="grant-server-principal-permissions-transact-sql"></a>Autorizzazioni per entità server GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +60,10 @@ GRANT permission [ ,...n ] }
  Specifica un'autorizzazione che può essere concessa per un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
  LOGIN **::** *SQL_Server_login*  
- Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per cui viene concessa l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio.  
+ Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per cui viene concessa l'autorizzazione. Il qualificatore di ambito ( **::** ) è obbligatorio.  
   
  SERVER ROLE **::** *server_role*  
- Specifica il ruolo del server definito dall'utente per cui viene concessa l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio.  
+ Specifica il ruolo del server definito dall'utente per cui viene concessa l'autorizzazione. Il qualificatore di ambito ( **::** ) è obbligatorio.  
   
  TO \<server_principal> Specifica l'account di accesso o il ruolo del server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui viene concessa l'autorizzazione.  
   
@@ -103,7 +102,7 @@ GRANT permission [ ,...n ] }
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |ALTER|CONTROL|ALTER ANY LOGIN<br /><br /> ALTER ANY SERVER ROLE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per gli account di accesso, è richiesta l'autorizzazione CONTROL per l'account di accesso o l'autorizzazione ALTER ANY LOGIN per il server.  
   
  Per i ruoli del server, è richiesta l'autorizzazione CONTROL per il ruolo del server o l'autorizzazione ALTER ANY SERVER ROLE per il server.  
@@ -119,7 +118,7 @@ GRANT IMPERSONATE ON LOGIN::WanidaBenshoof to [AdvWorks\YoonM];
 GO  
 ```  
   
-### <a name="b-granting-view-definition-permission-with-grant-option"></a>b. Concessione dell'autorizzazione VIEW DEFINITION con GRANT OPTION  
+### <a name="b-granting-view-definition-permission-with-grant-option"></a>B. Concessione dell'autorizzazione VIEW DEFINITION con GRANT OPTION  
  Nell'esempio seguente viene concessa l'autorizzazione `VIEW DEFINITION` per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `EricKurjan` all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `RMeyyappan` con `GRANT OPTION`.  
   
 ```  

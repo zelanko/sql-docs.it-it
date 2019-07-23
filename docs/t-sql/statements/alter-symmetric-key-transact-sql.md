@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 6c9a5f59a076c857b335a4a8f82298b94b1c4ea3
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 7314659cc8d0ba18b5b7b7b562ad5df467988638
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327652"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070255"
 ---
 # <a name="alter-symmetric-key-transact-sql"></a>ALTER SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  CERTIFICATE *Certificate_name*  
  Specifica il certificato utilizzato per crittografare la chiave simmetrica. Il certificato deve esistere nel database corrente.  
   
- PASSWORD **='**_password_**'**  
+ PASSWORD **='** _password_ **'**  
  Specifica la password utilizzata per crittografare la chiave simmetrica. *password* deve soddisfare i requisiti per i criteri password di Windows del computer che sta eseguendo l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  SYMMETRIC KEY *Symmetric_Key_Name*  
@@ -90,7 +89,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
 > [!NOTE]  
 >  L'algoritmo RC4 è supportato solo per motivi di compatibilità con le versioni precedenti. È possibile crittografare il nuovo materiale usando RC4 o RC4_128 solo quando il livello di compatibilità del database è 90 o 100. (Non consigliato.) Usare un algoritmo più recente, ad esempio uno degli algoritmi AES. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] il materiale crittografato utilizzando RC4 o RC4_128 può essere decrittografato in qualsiasi livello di compatibilità.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la chiave simmetrica. Se la crittografia viene applicata con un certificato o una chiave asimmetrica, è richiesta l'autorizzazione VIEW DEFINITION per il certificato o la chiave asimmetrica. Se la crittografia viene rimossa con un certificato o una chiave asimmetrica, è richiesta l'autorizzazione CONTROL per il certificato o la chiave asimmetrica.  
   
 ## <a name="examples"></a>Esempi  

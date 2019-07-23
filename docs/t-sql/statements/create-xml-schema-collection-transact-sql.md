@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d79f0859a79496878ce0ca257b66bb3635d1380d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 28409675fda41f030e82337b1fcf0f1a6ec5821e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042801"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927722"
 ---
 # <a name="create-xml-schema-collection-transact-sql"></a>CREATE XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
   
  Per rimuovere raccolte, usare [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per creare un'istruzione XML SCHEMA COLLECTION, è richiesto almeno uno dei set di autorizzazioni seguenti:  
   
 -   Autorizzazione CONTROL nel server  
@@ -171,8 +170,8 @@ CREATE XML SCHEMA COLLECTION MyCollection AS @MySchemaCollection
   
  L'istruzione CREATE XML SCHEMA COLLECTION archivia solo i componenti di schema supportati da SQL Server. Il contenuto dell'XML Schema non viene archiviato nel database. Pertanto, se si desidera una copia esatta della raccolta di XML Schema, è consigliabile salvare gli XML Schema in una colonna di database o in un'altra cartella nel computer.  
   
-### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>b. Specifica di spazi dei nomi relativi a più schemi in una raccolta di schemi  
- È possibile specificare più XML Schema quando si crea una raccolta di XML Schema. Ad esempio  
+### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. Specifica di spazi dei nomi relativi a più schemi in una raccolta di schemi  
+ È possibile specificare più XML Schema quando si crea una raccolta di XML Schema. Esempio:  
   
 ```  
 CREATE XML SCHEMA COLLECTION MyCollection AS N'  

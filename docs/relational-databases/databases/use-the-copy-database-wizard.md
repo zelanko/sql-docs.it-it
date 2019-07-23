@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 67aad831c3e5a98817af9ecd34b17501089a1609
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 67488a92a14a2533c9ba6ef14941b11b8bcbb8c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127124"
 ---
 # <a name="use-the-copy-database-wizard"></a>Utilizzo di Copia guidata database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +98,7 @@ Copia guidata database consente di spostare o copiare facilmente database e dete
   
 
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorizzazioni  
  È necessario essere membri del ruolo predefinito del server **sysadmin** sia nel server di origine sia in quello di destinazione.  
   
 ##  <a name="Overview"></a> Pagine della Copia guidata database 
@@ -323,7 +322,7 @@ Nell'esempio seguente vengono spostati il database `Sales` , un account di acces
   
 9.  Pagina **Configurare il database di destinazione**:  la **procedura guidata** ha rilevato che `Sales` esiste già nel server di destinazione, perché è stato creato nel **passaggio 6** descritto in precedenza, e ha accodato `_new` al nome del **database di destinazione**.  Eliminare `_new` dalla casella di testo **Database di destinazione** .  Facoltativamente, modificare il **Nome file**e la **Cartella di destinazione**.  Selezionare **Elimina il database con lo stesso nome nel server di destinazione, quindi continua il trasferimento sovrascrivendo i file di database esistenti**.  Scegliere **Avanti**.
   
-10. Pagina **Selezionare gli oggetti server**: nel pannello **Oggetti correlati selezionati:** fare clic sul pulsante con i puntini di sospensione relativo a **Object name Logins** (Account di accesso nome oggetto).  In **Opzioni copia** selezionare **Copia solo gli account di accesso selezionati:**.  Selezionare la casella relativa a **Mostra tutti gli account di accesso al server**.  Controllare la casella **Account di accesso** per `contoso\Jennie`.  Fare clic su **OK**.  Nel pannello **Oggetti correlati disponibili:** selezionare **Processi di SQL Server Agent** e quindi fare clic sul pulsante **>** .  Nel pannello **Oggetti correlati selezionati:** fare clic sul pulsante con puntini di sospensione relativo a **Processi di SQL Server Agent**.  In **Opzioni copia** selezionare **Copia solo i processi selezionati:**.  Selezionare la casella per `Jennie's Report`.  Fare clic su **OK**.  Scegliere **Avanti**.  
+10. Pagina **Selezionare gli oggetti server**: nel pannello **Oggetti correlati selezionati:** fare clic sul pulsante con i puntini di sospensione relativo a **Object name Logins** (Account di accesso nome oggetto).  In **Opzioni copia** selezionare **Copia solo gli account di accesso selezionati:** .  Selezionare la casella relativa a **Mostra tutti gli account di accesso al server**.  Controllare la casella **Account di accesso** per `contoso\Jennie`.  Fare clic su **OK**.  Nel pannello **Oggetti correlati disponibili:** selezionare **Processi di SQL Server Agent** e quindi fare clic sul pulsante **>** .  Nel pannello **Oggetti correlati selezionati:** fare clic sul pulsante con puntini di sospensione relativo a **Processi di SQL Server Agent**.  In **Opzioni copia** selezionare **Copia solo i processi selezionati:** .  Selezionare la casella per `Jennie's Report`.  Fare clic su **OK**.  Scegliere **Avanti**.  
   
 11. Pagina **Percorso dei file di database di origine**:  fare clic sul pulsante con i puntini di sospensione relativo a **Condivisione file nel server di origine** e passare al percorso della cartella specificata.  Ad esempio, per il percorso di cartella `D:\MSSQL13.MSSQLSERVER\MSSQL\DATA` usare `\\Server1\D$\MSSQL13.MSSQLSERVER\MSSQL\DATA` per **Condivisione file nel server di origine**.  Scegliere **Avanti**.
   

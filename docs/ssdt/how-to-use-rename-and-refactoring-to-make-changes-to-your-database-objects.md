@@ -16,13 +16,12 @@ f1_keywords:
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a9da86a5e15f1b683a0e7c040cd4e6d906d54f47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0897d9498ca93e915dba5df9c32c4544fe08767d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090091"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097471"
 ---
 # <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>Procedura: Usare la ridenominazione e il refactoring per apportare modifiche agli oggetti di database
 Il menu contestuale Refactoring nell'Editor Transact\-SQL consente di rinominare o spostare un oggetto in uno schema differente e di generare un'anteprima di tutte le aree interessate prima di eseguire il commit della modifica. È inoltre possibile usare il menu Refactoring per indicare il nome completo di tutti i riferimenti agli oggetti di database o per espandere alcuni caratteri jolly nelle istruzioni `SELECT` del progetto di database in uso.  

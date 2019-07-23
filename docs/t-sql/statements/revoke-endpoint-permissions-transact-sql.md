@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a6b7b9e2fdb8673571803e9b98de80dd1d26040f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db85df99a2b37e2d92997dce579d77d0f31f7c0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62659994"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082284"
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>REVOKE - autorizzazioni per endpoint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +51,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *permission*  
  Specifica un'autorizzazione che può essere concessa per un endpoint. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- ON ENDPOINT **::**_endpoint_name_  
- Specifica l'endpoint per cui viene concessa l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio.  
+ ON ENDPOINT **::** _endpoint_name_  
+ Specifica l'endpoint per cui viene concessa l'autorizzazione. Il qualificatore di ambito ( **::** ) è obbligatorio.  
   
  { FROM | TO } \<server_principal> Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da cui viene revocata l'autorizzazione.  
   

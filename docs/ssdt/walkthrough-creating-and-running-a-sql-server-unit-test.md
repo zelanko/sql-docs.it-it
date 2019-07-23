@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f49d7d43e136adaadb2bda5b37fa6f7e8b63f4e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8ed1dbfa5ffcb61200f7838753dc1681f8c6509
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101943"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141214"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Procedura dettagliata: Creazione ed esecuzione di uno unit test di SQL Server
 In questa procedura dettagliata viene creato uno unit test di SQL Server tramite cui viene verificato il comportamento di diverse stored procedure. Vengono creati unit test di SQL Server per semplificare l'identificazione di eventuali difetti del codice che potrebbero causare il comportamento non corretto dell'applicazione. È possibile eseguire test dell'applicazione e unit test di SQL Server come parte di un gruppo di test automatizzato.  

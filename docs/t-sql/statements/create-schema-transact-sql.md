@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9b2fad9fc09736a335e8fc5797cda836f907191
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 365abc8df7c64650e3be6c79bcd00725149ec25d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117296"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -130,7 +129,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
 ## <a name="deprecation-notice"></a>Informativa sulle funzionalità deprecate  
  Le istruzioni CREATE SCHEMA che non specificano un nome di schema sono attualmente supportate per compatibilità con le versioni precedenti. Tali istruzioni in realtà non creano uno schema all'interno del database, ma creano tabelle e viste e concedono autorizzazioni. Le entità non necessitano dell'autorizzazione CREATE SCHEMA per eseguire questa versione meno recente di CREATE SCHEMA, perché non viene creato alcuno schema. Questa funzionalità verrà rimossa a partire da una delle prossime versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CREATE SCHEMA per il database.  
   
  Per creare un oggetto specificato all'interno dell'istruzione CREATE SCHEMA, l'utente deve disporre dell'autorizzazione CREATE corrispondente.  
@@ -157,7 +156,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>b. Creazione di uno schema e di una tabella nello schema  
+### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>B. Creazione di uno schema e di una tabella nello schema  
  Nell'esempio seguente viene creato lo schema `Sales` e poi la tabella `Sales.Region` nello schema.  
   
 ```  
