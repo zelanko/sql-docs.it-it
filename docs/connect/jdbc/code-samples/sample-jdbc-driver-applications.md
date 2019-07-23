@@ -1,5 +1,5 @@
 ---
-title: Applicazioni del Driver JDBC di esempio | Microsoft Docs
+title: Applicazioni di esempio del driver JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5cbab5a72d076e6a66b306ec9bf11c13b56c599e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7e99e122f1e18c320c6ea6e5b18409ca39780d03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769885"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957075"
 ---
 # <a name="sample-jdbc-driver-applications"></a>Applicazioni di esempio del driver JDBC
 
@@ -40,7 +39,7 @@ Tutte le applicazioni di esempio sono contenute nei file di codice *.java che è
 | [Uso dei tipi di dati &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)                        | Queste applicazioni di esempio illustrano come usare i metodi del tipo di dati del driver JDBC per utilizzare i dati in un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].                                                                                              |
 | [Utilizzo dei set di risultati](../../../connect/jdbc/code-samples/working-with-result-sets.md)                                          | Queste applicazioni di esempio illustrano come usare i set di risultati per elaborare i dati contenuti in un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].                                                                                                            |
 | [Utilizzo di dati di grandi dimensioni](../../../connect/jdbc/code-samples/working-with-large-data.md)                                            | Queste applicazioni di esempio illustrano come usare il buffer adattivo per recuperare dati con valori di grandi dimensioni da un database di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] senza l'overhead dei cursori server.                                                         |
-| [Individuazione dati e classificazione SQL](../../jdbc/code-samples/data-discovery-and-classification-sample.md) | Questa applicazione di esempio viene illustrato come recuperare le informazioni di individuazione dati e classificazione contenuti in un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database da un oggetto set di risultati tramite il Driver JDBC.                                            |
+| [Individuazione dati e classificazione SQL](../../jdbc/code-samples/data-discovery-and-classification-sample.md) | In questa applicazione di esempio viene illustrato come recuperare le informazioni di individuazione e classificazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dei dati contenute in un database da un oggetto ResultSet utilizzando il driver JDBC.                                            |
   
 ## <a name="see-also"></a>Vedere anche
 

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0b13f081338e26aaa33306998d3e562088609a6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e43c9e6c284a5a546f7648b72158597921aa922
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770518"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957489"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Accesso alle informazioni di diagnostica nel registro eventi estesi
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "66770518"
 ## <a name="details"></a>Dettagli  
  Per operazioni di connessione, tramite [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] verrà inviato un ID connessione client. In caso di errore di connessione, è possibile accedere al buffer circolare della connettività, [Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer](https://go.microsoft.com/fwlink/?LinkId=207752) (Risoluzione dei problemi relativi alla connettività in SQL Server 2008 con il buffer circolare della connettività), individuare il campo **ClientConnectionID** e ottenere le informazioni di diagnostica sul problema di connessione. Gli ID di connessione client vengono registrati nel buffer circolare solo se si verifica un errore. In caso di errore di connessione prima dell'invio del pacchetto di preaccesso, l'ID di connessione client non verrà generato. L'ID di connessione client è un GUID a 16 byte. È possibile trovare l'ID di connessione client anche nell'output di destinazione degli eventi estesi, se l'azione **client_connection_id** viene aggiunta agli eventi in una sessione di eventi estesi. Se si necessita di un ulteriore supporto diagnostico del driver client, è possibile abilitare la traccia e rieseguire il comando di connessione per osservare il campo **ClientConnectionID** nella traccia.  
   
- È possibile ottenere il client di ID di connessione a livello di codice usando [interfaccia ISQLServerConnection](../../connect/jdbc/reference/isqlserverconnection-interface.md). L'ID connessione sarà inoltre disponibile in tutte le eccezioni correlate alla connessione.  
+ È possibile ottenere l'ID connessione client a livello di codice tramite l' [Interfaccia ISQLServerConnection](../../connect/jdbc/reference/isqlserverconnection-interface.md). L'ID connessione sarà inoltre disponibile in tutte le eccezioni correlate alla connessione.  
   
  Quando si verifica un errore di connessione, con l'ID connessione client nelle informazioni relative alla traccia Built-In Diagnostics (BID) del server e nel buffer circolare è possibile semplificare la correlazione delle connessioni client alle connessioni nel server. Per altre informazioni sulle tracce BID nel server, vedere la pagina relativa alla [traccia di accesso ai dati](https://go.microsoft.com/fwlink/?LinkId=125805). Si noti che nell'articolo sulla traccia di accesso ai dati sono inoltre contenute informazioni su una traccia di accesso ai dati che non si applica a [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]. Vedere [Creazione di tracce](../../connect/jdbc/tracing-driver-operation.md) per informazioni sull'esecuzione di una traccia di accesso ai dati usando [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
   

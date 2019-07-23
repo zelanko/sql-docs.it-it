@@ -1,5 +1,5 @@
 ---
-title: Usando i metadati del Database | Microsoft Docs
+title: Uso dei metadati del database | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8b048371-e912-4ed1-afd7-436978f48888
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0bad06da093edd83b7df2e1c10f2b68bdca7a210
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fbe290c558dd8c64605bad0a977657904582c696
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798671"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916264"
 ---
 # <a name="using-database-metadata"></a>Utilizzo dei metadati del database
 
@@ -26,7 +25,7 @@ Per eseguire una query su un database e ottenere informazioni sugli oggetti supp
 
 Per creare un oggetto SQLServerDatabaseMetaData, è possibile usare il metodo [getMetaData](../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md) della classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) per ottenere informazioni sul database a cui è connesso.
 
-Nell'esempio seguente, una connessione aperta al [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] database di esempio viene passato alla funzione, viene usato il metodo getMetaData della classe SQLServerConnection per restituire un oggetto SQLServerDatabaseMetadata e quindi vari metodi del Oggetto SQLServerDatabaseMetaData consentono di visualizzare informazioni su driver, versione del driver, nome del database e versione del database.
+Nell'esempio seguente viene passata alla funzione una connessione aperta [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] al database di esempio, viene usato il metodo getMetaData della classe SQLServerConnection per restituire un oggetto SQLServerDatabaseMetaData e quindi vari metodi di L'oggetto SQLServerDatabaseMetaData viene utilizzato per visualizzare informazioni sul driver, sulla versione del driver, sul nome del database e sulla versione del database.
 
 [!code[JDBC#UsingDBMetaData1](../../connect/jdbc/codesnippet/Java/using-database-metadata_1.java)]
 

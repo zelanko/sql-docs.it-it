@@ -1,5 +1,5 @@
 ---
-title: Metodi di SQLServerResultSetMetaData | Microsoft Docs
+title: Metodi SQLServerResultSetMetaData | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +10,16 @@ ms.topic: conceptual
 ms.assetid: 3a75f521-c321-4ce2-a14e-9bdaf5b6bf6a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0b21b1d01dcf7b62c3c46b5640fc2899e62395d1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 18a9e5f8ed16f8821e8d11261de1a06bec4572f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970450"
 ---
 # <a name="sqlserverresultsetmetadata-methods"></a>Metodi di SQLServerResultSetMetaData
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Per informazioni sui membri di [SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md), vedere [membri di SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md).  
+  Per informazioni sui membri di [SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md), vedere [membri SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md).  
   
   

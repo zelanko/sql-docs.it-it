@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ec24963c-8b51-4838-91e9-1fbfa2347451
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0901763b2f7b6c62e365df953012c2f54dba6f6d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 89547655fd734ca9e6e340d94832dea5816f2733
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66776729"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970372"
 ---
 # <a name="sqlserverstatement-class"></a>Classe SQLServerStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public class SQLServerStatement
 ## <a name="remarks"></a>Remarks  
  La classe SQLServerStatement fornisce anche alcuni metodi di implementazione della classe di base per l'istruzione preparata di JDBC e per le istruzioni richiamabili. Il ruolo di base della classe SQLServerStatement è quello di eseguire le istruzioni SQL e quindi restituire i conteggi aggiornamenti e i set di risultati all'applicazione utente.  
   
- Questa classe supporta l'annullamento del wrapping nella classe SQLServerStatement, l'interfaccia ISQLServerStatement e l'interfaccia Statement. Per altre informazioni, vedere [wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Questa classe supporta l'annullamento del wrapping alla classe SQLServerStatement, l'interfaccia ISQLServerStatement e l'interfaccia java. SQL. Statement. Per ulteriori informazioni, vedere [wrapper e interfacce](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

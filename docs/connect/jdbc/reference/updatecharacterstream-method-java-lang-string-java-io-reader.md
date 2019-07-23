@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a8ec22a9-4bbd-4759-9f21-957304ef3a5e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4a44d8a6ea91697c45588c93dfdaf109ac548d75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5300c381b7b64e90cdd9d6a9d3555ffce6a9af52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66784080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996670"
 ---
 # <a name="updatecharacterstream-method-javalangstring-javaioreader"></a>Metodo updateCharacterStream (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,17 +37,17 @@ public void updateCharacterStream(java.lang.String columnLabel,
   
  *reader*  
   
- Oggetto lettore.  
+ Oggetto Reader.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo updateCharacterStream viene specificato dal metodo updateCharacterStream nell'interfaccia ResultSet.  
+ Questo metodo updateCharacterStream viene specificato dal metodo updateCharacterStream nell'interfaccia java. SQL. ResultSet.  
   
  Questo metodo passa caratteri Unicode da un oggetto Reader alle colonne di testo e binarie selezionate. Include tutte le colonne di testo e le colonne **binary**, **varbinary**, **varbinary(max)** , **image** e **xml**, ma non le colonne **udt**.  
   
- Utilizzo di questo metodo per la **immagine**, **testo**, e **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i tipi di dati potrebbero influire sulle prestazioni.  
+ L'utilizzo di questo metodo per i tipi di dati **Image**, **Text**e **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] può compromettere le prestazioni.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo updateCharacterStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)   

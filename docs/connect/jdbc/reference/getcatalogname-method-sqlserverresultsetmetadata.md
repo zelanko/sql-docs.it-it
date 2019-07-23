@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 64f62569-5d8e-411f-a98d-ddc52798391e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7eabe3aec185042d5bf0853f4ade8c4f1dfe7f0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f734a6779847aa72b9a41015470b377489c686bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213706"
 ---
 # <a name="getcatalogname-method-sqlserverresultsetmetadata"></a>Metodo getCatalogName (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.lang.String getCatalogName(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getCatalogName viene specificato dal metodo getCatalogName nell'interfaccia ResultSetMetaData.  
+ Questo metodo getCatalogName viene specificato dal metodo getCatalogName nell'interfaccia java. SQL. ResultSetMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

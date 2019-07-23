@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 246f38d757015dbc2a27bea8f9d783b4fbb1d545
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb9b1b632d5a17b7c8f497e30a4f033932f09b33
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66788629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978511"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>Metodo getTypeInfo (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,11 +54,11 @@ public java.sql.ResultSet getTypeInfo()
 |LITERAL_SUFFIX|**String**|Uno o più caratteri che seguono il nome di una costante.|  
 |CREATE_PARAMS|**String**|Descrizione dei parametri di creazione per il tipo di dati.|  
 |NULLABLE|**short**|Indica se la colonna può contenere un valore Null. Può essere uno dei valori seguenti:<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
-|CASE_SENSITIVE|**boolean**|Indica se il tipo di dati supporta la distinzione tra maiuscole e minuscole. "**true**"se il tipo è distinzione maiuscole / minuscole; in caso contrario,"**false**".|  
+|CASE_SENSITIVE|**boolean**|Indica se il tipo di dati supporta la distinzione tra maiuscole e minuscole. "**true**" Se il tipo fa distinzione tra maiuscole e minuscole; in caso contrario, "**false**".|  
 |SEARCHABLE|**short**|Indica se la colonna può essere utilizzata in una clausola WHERE SQL. Può essere uno dei valori seguenti:<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
-|UNSIGNED_ATTRIBUTE|**boolean**|Indica il segno del tipo di dati. "**true**"se il tipo è senza segno; in caso contrario,"**false**".|  
-|FIXED_PREC_SCALE|**boolean**|Indica se il tipo di dati può essere un valore money. "**true**" se il tipo di dati è di tipo money; in caso contrario, "**false**".|  
-|AUTO_INCREMENT|**boolean**|Indica se il tipo di dati può essere incrementato automaticamente. "**true**"se il tipo può essere auto incrementato; in caso contrario,"**false**".|  
+|UNSIGNED_ATTRIBUTE|**boolean**|Indica il segno del tipo di dati. "**true**" Se il tipo è senza segno; in caso contrario, "**false**".|  
+|FIXED_PREC_SCALE|**boolean**|Indica se il tipo di dati può essere un valore money. "**true**" Se il tipo di dati è Money; in caso contrario, "**false**".|  
+|AUTO_INCREMENT|**boolean**|Indica se il tipo di dati può essere incrementato automaticamente. "**true**" Se il tipo può essere incrementato automaticamente; in caso contrario, "**false**".|  
 |LOCAL_TYPE_NAME|**String**|Nome localizzato del tipo di dati.|  
 |MINIMUM_SCALE|**short**|Numero massimo di cifre a destra del separatore decimale.|  
 |MAXIMUM_SCALE|**short**|Numero minimo di cifre a destra del separatore decimale.|  

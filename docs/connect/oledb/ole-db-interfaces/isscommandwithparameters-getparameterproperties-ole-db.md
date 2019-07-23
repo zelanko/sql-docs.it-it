@@ -1,5 +1,5 @@
 ---
-title: 'Isscommandwithparameters:: Getparameterproperties (OLE DB) | Microsoft Docs'
+title: 'ISSCommandWithParameters:: GetParameterProperties (OLE DB) | Microsoft Docs'
 description: ISSCommandWithParameters::GetParameterProperties (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - GetParameterProperties method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 5b492706895a774d5b916058394ff352123bd708
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4ed73892ae0ebe88d4b18f2d2114143423570c60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66783942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015425"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,6 +70,6 @@ HRESULT GetParameterProperties(
 |*rgPropertySets*|Puntatore alla memoria nel quale restituire una matrice di strutture DBPROPSET.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [OLE DB &#40;ISSCommandWithParameters&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

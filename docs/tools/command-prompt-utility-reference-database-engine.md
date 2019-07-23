@@ -1,5 +1,5 @@
 ---
-title: Utilità della riga di comando SQL (motore di Database) | Microsoft Docs
+title: Utilità del prompt dei comandi SQL (motore di database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5e83792a7d982dedf41e525fc7801fb76f1db7d5
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 8fdcb3b307f525ff9eda14006e6fd4f6378f418c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010425"
 ---
-# <a name="sql-command-prompt-utilities-database-engine"></a>Utilità della riga di comando SQL (motore di Database)
+# <a name="sql-command-prompt-utilities-database-engine"></a>Utilità del prompt dei comandi SQL (motore di database)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Le utilità del prompt dei comandi consentono di generare script di operazioni [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . La tabella seguente contiene un elenco delle utilità del prompt dei comandi fornite con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
-Per informazioni sul *principale* dell'interfaccia utente SQL e gli strumenti da riga di comando, vedere [Cenni preliminari sugli strumenti di SQL](overview-sql-tools.md).
+Per informazioni sulla *principale* GUI SQL e sugli strumenti da riga di comando, vedere [Panoramica degli strumenti SQL](overview-sql-tools.md).
 
   
 |**Utilità**|**Descrizione**|**Posizione di installazione**|  

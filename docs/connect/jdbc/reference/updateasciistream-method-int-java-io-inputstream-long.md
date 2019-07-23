@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 143bff3e-2b5c-485d-9529-1c2387560094
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7a359f078ce42c1bf9a11637db1281c2257c1bfc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b3e75b36daaccb0526674da64591b409f5c9856e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797195"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985524"
 ---
 # <a name="updateasciistream-method-int-javaioinputstream-long"></a>Metodo updateAsciiStream (int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void updateAsciiStream(int columnIndex,
   
  *x*  
   
- Un oggetto InputStream.  
+ Oggetto InputStream.  
   
  *length*  
   
@@ -49,7 +48,7 @@ public void updateAsciiStream(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo updateAsciiStream viene specificato dal metodo updateAsciiStream nell'interfaccia ResultSet.  
+ Questo Metodo updateAsciiStream viene specificato dal Metodo updateAsciiStream nell'interfaccia java. SQL. ResultSet.  
   
  Questo metodo passa caratteri ASCII (byte) da un oggetto InputStream a colonne di tipo carattere convertibili, ovvero l'intervallo ASCII [0x00 - 0x7F] di Unicode e le tabelle codici 874, 932, 936 949 e 950 e da 1250 a 1258. Esegue una conversione nella pagina delle regole di confronto di destinazione. Se si tenta di aggiornare una colonna di destinazione non convertibile, verrà generata un'eccezione. Per le colonne binarie, vengono passati byte non elaborati.  
   

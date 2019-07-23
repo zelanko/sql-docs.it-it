@@ -1,5 +1,5 @@
 ---
-title: La connessione a un database SQL di Azure | Microsoft Docs
+title: Connessione a un database SQL di Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 01/21/2019
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2eef48c472ee9b23d941be88ae76cb0349067739
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f62ca071f091fb812550315a81accff723422f09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66789326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956859"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Connessione a un database SQL di Azure
 
@@ -32,8 +31,8 @@ In questo argomento vengono illustrati i problemi dell'uso di [!INCLUDE[jdbcNoVe
   
 ## <a name="details"></a>Dettagli
 
-Quando ci si connette a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], è necessario connettersi al database master per chiamare **SQLServerDatabaseMetaData.getCatalogs**.  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] non supporta la restituzione dell'intero set di cataloghi da un database utente. **SQLServerDatabaseMetaData.getCatalogs** utilizzare la vista sys. Databases per ottenere i cataloghi. Fare riferimento alla trattazione delle autorizzazioni in [Sys. Databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) comprendere **SQLServerDatabaseMetaData.getCatalogs** comportamento su una [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
+Quando ci si connette [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]a, è necessario connettersi al database master per chiamare **SQLServerDatabaseMetaData.** getCatalogs.  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] non supporta la restituzione dell'intero set di cataloghi da un database utente. **SQLServerDatabaseMetaData.** getCatalogs usa la vista sys. databases per ottenere i cataloghi. Vedere la discussione sulle autorizzazioni in [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] [sys. databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) per comprendere il comportamento di **SQLServerDatabaseMetaData.** getCatalogs su.  
   
 ## <a name="connections-dropped"></a>Connessioni eliminate
 
@@ -47,9 +46,9 @@ Per evitare l'eliminazione di connessioni inattive da un componente di rete, è 
   
 |Impostazione del Registro di sistema|Valore consigliato|  
 |----------------------|-----------------------|  
-|HKEY_LOCAL_MACHINE \ sistema \ CurrentControlSet \ Services \ Tcpip \ parametri \ parametro KeepAliveTime della connessione|30000|  
-|HKEY_LOCAL_MACHINE \ sistema \ CurrentControlSet \ Services \ Tcpip \ parametri \ parametro KeepAliveInterval della connessione|1000|  
-|HKEY_LOCAL_MACHINE \ sistema \ CurrentControlSet \ Services \ Tcpip \ parametri \ TcpMaxDataRetransmissions|10|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveTime|30000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveInterval|1000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ TcpMaxDataRetransmissions|10|  
   
 Riavviare il computer per attivare le impostazioni del Registro di sistema.  
 
@@ -81,7 +80,7 @@ Prima della versione 4.0 di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversio
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Impostazione di hostNameInCertificate obbligatoria per l'utilizzo della crittografia
 
-Prima della versione 7.2 del [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], quando ci si connette a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], è necessario specificare **hostNameInCertificate** se si specifica **crittografa = true** (se il server di nome della connessione stringa è *shortName*. *domainName*, impostare il **hostNameInCertificate** proprietà \*. *domainName*.). Questa proprietà è facoltativa a partire dalla versione 7.2 del driver.
+Prima della versione [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]7,2 di, quando ci si connette a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], è necessario specificare **hostNameInCertificate** se si specifica **Encrypt = True** (se il nome del server nella stringa di connessione è *ShortName*. *NomeDominio*, impostare la proprietà **hostNameInCertificate** su \*. *NomeDominio*.). Questa proprietà è facoltativa a partire dalla versione 7,2 del driver.
 
 Esempio:
 

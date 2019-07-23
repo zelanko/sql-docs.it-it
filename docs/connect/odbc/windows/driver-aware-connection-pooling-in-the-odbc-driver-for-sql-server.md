@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d920d15bb633828dd2ad614c6789f397e229f0b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97ddd5aa4abf926ecd4e68e89bef63b8f25ce323
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797795"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009967"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Pool di connessioni compatibile con il driver nel driver ODBC per SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -25,12 +24,12 @@ ms.locfileid: "66797795"
   
 -   Indipendentemente dalle proprietà delle connessioni, le connessioni che usano `SQLDriverConnect` vengono inserite in un pool separato rispetto alle connessioni che usano `SQLConnect`.
 - Quando si usa l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e il pool di connessioni compatibile con il driver, il driver non usa il contesto di sicurezza dell'utente di Windows per il thread corrente per separare le connessioni nel pool. Ovvero, se le connessioni hanno parametri equivalenti negli scenari di rappresentazione di Windows con l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e usano le stesse credenziali dell'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per connettersi al back-end, diversi utenti di Windows possono potenzialmente usare lo stesso pool di connessioni. Quando si usa l'autenticazione di Windows e il pool di connessioni compatibile con il driver, il driver usa il contesto di sicurezza dell'utente corrente di Windows per separare le connessioni nel pool. Ovvero, per gli scenari di rappresentazione di Windows, diversi utenti di Windows non condividono le connessioni anche se le connessioni usano gli stessi parametri.
-- Quando si usa Azure Active Directory e il pool di connessioni compatibile con il driver, il driver Usa anche il valore di autenticazione per determinare l'appartenenza nel pool di connessioni.
+- Quando si usa Azure Active Directory e il pool di connessioni compatibile con il driver, il driver usa anche il valore di autenticazione per determinare l'appartenenza al pool di connessioni.
   
 -   Il pool di connessioni compatibile con il driver impedisce la restituzione di una connessione non valida dal pool.  
   
--   Il pool di connessioni compatibile con il driver riconosce gli attributi di connessione specifici del driver. Pertanto, se una connessione Usa `SQL_COPT_SS_APPLICATION_INTENT` impostato in sola lettura, tale connessione Ottiene il proprio pool di connessioni.
--   L'impostazione di `SQL_COPT_SS_ACCESS_TOKEN` attributo causa una connessione a essere inserite in pool separatamente 
+-   Il pool di connessioni compatibile con il driver riconosce gli attributi di connessione specifici del driver. Quindi, se una connessione USA `SQL_COPT_SS_APPLICATION_INTENT` impostata su sola lettura, tale connessione ottiene il proprio pool di connessioni.
+-   Impostando `SQL_COPT_SS_ACCESS_TOKEN` l'attributo si crea un pool di connessioni separatamente 
   
 Se uno dei seguenti ID dell'attributo di connessione o delle seguenti parole chiave della stringa di connessione differisce tra la stringa di connessione e la stringa di connessione in pool, il driver usa una connessione in pool. Tuttavia, le prestazioni sono migliori se tutti gli ID dell'attributo di connessione o tutte le parole chiave della stringa di connessione corrispondono. (Per abbinare una connessione a una connessione in pool, il driver reimposta l'attributo.) Le prestazioni diminuiscono perché la reimpostazione dei parametri seguenti rende necessaria una chiamata di rete aggiuntiva.  
   

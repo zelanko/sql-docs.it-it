@@ -1,5 +1,5 @@
 ---
-title: I BLOB e gli oggetti OLE | Microsoft Docs
+title: Oggetti BLOB e OLE | Microsoft Docs
 description: Oggetti BLOB e OLE
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,13 +16,12 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 0cc1f42d438c7216cf9b1f6f9ee9167747447e66
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 70d3ffccfc9613434b09335944e445a2705b95c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800697"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988675"
 ---
 # <a name="blobs-and-ole-objects"></a>Oggetti BLOB e OLE
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "66800697"
 
   Il driver OLE DB per SQL Server espone l'interfaccia **ISequentialStream** per supportare l'accesso del consumer ai tipi di dati [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** e xml come oggetti binari di grandi dimensioni (BLOB). Il metodo **Read** in **ISequentialStream** consente al consumer di recuperare una quantità elevata di dati in blocchi gestibili.  
   
- Per un esempio che illustri questa caratteristica, vedere [impostare dati di grandi dimensioni &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
+ Per un esempio che illustra questa funzionalità, vedere [impostare OLE DB&#41;di &#40;dati di grandi dimensioni](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
   
  Il driver OLE DB per SQL Server può usare un'interfaccia **IStorage** implementata dal consumer quando quest'ultimo fornisce il puntatore di interfaccia in una funzione di accesso associata per la modifica dei dati.  
   
@@ -47,11 +46,11 @@ ms.locfileid: "66800697"
   
 -   Eseguire l'associazione come DBTYPE_IUNKNOWN e utilizzare il flusso.  
   
- Se si esegue l'associazione a DBTYPE_IUNKNOWN, viene utilizzata la funzionalità di flusso di ISequentialStream. Il Driver OLE DB per SQL Server supporta i parametri di output di associazione come DBTYPE_IUNKNOWN per i tipi di dati di valori di grandi dimensioni. Si tratta per supportare scenari in cui una stored procedure restituisce questi tipi di dati come valori restituiti, che verranno restituiti come DBTYPE_IUNKNOWN al client.  
+ Se si esegue l'associazione a DBTYPE_IUNKNOWN, viene utilizzata la funzionalità di flusso di ISequentialStream. Il driver OLE DB per SQL Server supporta i parametri di output di associazione come DBTYPE_IUNKNOWN per i tipi di dati con valori di grandi dimensioni. Ciò consente di supportare scenari in cui un stored procedure restituisce questi tipi di dati come valori restituiti, che verranno restituiti come DBTYPE_IUNKNOWN al client.  
   
 ## <a name="storage-object-limitations"></a>Limitazioni degli oggetti di archiviazione  
   
--   Il Driver OLE DB per SQL Server può supportare solo un oggetto di archiviazione open singolo. I tentativi di aprire più di un oggetto di archiviazione (per ottenere un riferimento su più di un puntatore di interfaccia **ISequentialStream**) restituiscono DBSTATUS_E_CANTCREATE.  
+-   Il driver OLE DB per SQL Server può supportare solo un singolo oggetto di archiviazione aperto. I tentativi di aprire più di un oggetto di archiviazione (per ottenere un riferimento su più di un puntatore di interfaccia **ISequentialStream**) restituiscono DBSTATUS_E_CANTCREATE.  
   
 -   Nel driver OLE DB per SQL Server il valore predefinito della proprietà di sola lettura DBPROP_BLOCKINGSTORAGEOBJECTS è VARIANT_TRUE. Pertanto, se un oggetto di archiviazione è attivo, alcuni metodi (diversi da quelli degli oggetti di archiviazione) non riusciranno e verrà restituito E_UNEXPECTED.  
   

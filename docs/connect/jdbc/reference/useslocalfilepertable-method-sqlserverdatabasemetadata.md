@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1fafb076-2bb7-4845-9c02-788479f00ca2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ac94bcab076912437e00f24e9f6acababcf01902
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: de5afaab5a6d5d0cce1f895330a3409e4f96709a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788887"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998102"
 ---
 # <a name="useslocalfilepertable-method-sqlserverdatabasemetadata"></a>Metodo usesLocalFilePerTable (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean usesLocalFilePerTable()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** Usa un file per ogni tabella. In caso contrario, **false**.  
+ **true** utilizza un file per ogni tabella. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo usesLocalFilePerTable viene specificato dal metodo usesLocalFilePerTable nell'interfaccia DatabaseMetaData.  
+ Questo metodo usesLocalFilePerTable viene specificato dal metodo usesLocalFilePerTable nell'interfaccia java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

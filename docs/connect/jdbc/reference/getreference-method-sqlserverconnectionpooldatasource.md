@@ -1,5 +1,5 @@
 ---
-title: Metodo getReference (SQLServerConnectionPoolDataSource) | Microsoft Docs
+title: Metodo GetReference (SQLServerConnectionPoolDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8c48de91-de55-4f25-a5f1-36a8e8c4629e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 36e5e372ccf126a5f2e5da438c3f610571ad6fe0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: afb317bfcca6ccea14c9a25c98e1c0bfbe29e19f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980497"
 ---
 # <a name="getreference-method-sqlserverconnectionpooldatasource"></a>Metodo getReference (SQLServerConnectionPoolDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,10 +35,10 @@ public javax.naming.Reference getReference()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Un oggetto di riferimento.  
+ Oggetto di riferimento.  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getReference viene specificato dal metodo getReference nell'interfaccia Referenceable. Esegue l'override del metodo [getReference](../../../connect/jdbc/reference/getreference-method-sqlserverdatasource.md) della classe [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).  
+ Questo metodo GetReference viene specificato dal metodo GetReference nell'interfaccia javax. naming. Referenceable. Esegue l'override del metodo [getReference](../../../connect/jdbc/reference/getreference-method-sqlserverdatasource.md) della classe [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-methods.md)   

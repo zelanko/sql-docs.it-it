@@ -1,5 +1,5 @@
 ---
-title: 'Issasynchstatus:: Abort (OLE DB) | Microsoft Docs'
+title: 'ISSAsynchStatus:: Abort (OLE DB) | Microsoft Docs'
 description: ISSAsynchStatus::Abort (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - Abort method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 36a8f97580176b4999d8429fb18c9b20da9285d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cb57bfac5af957bd9f2f539b025f32b5f481d66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789742"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015433"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +61,7 @@ HRESULT Abort(
  Si è verificato un errore specifico del provider.  
   
  E_INVALIDARG  
- Il *hChapter* il parametro non è DB_NULL_HCHAPTER oppure *eOperation* non è DBASYNCH_OPEN.  
+ Il parametro *hChapter* non è DB_NULL_HCHAPTER o *eOperation* è DBASYNCH_OPEN.  
   
  E_UNEXPECTED  
  **ISSAsynchStatus::Abort** è stato chiamato su un oggetto origine dati su cui **IDBInitialize::Initialize** non è stato chiamato o non è stato completato.  

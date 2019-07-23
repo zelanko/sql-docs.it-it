@@ -1,5 +1,5 @@
 ---
-title: Aprire un File di traccia (SQL Server Profiler) | Microsoft Docs
+title: Aprire un file di traccia (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f9ec6032-c961-4b00-ba38-208454fd2bdb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 79b076926d4b81813cc3e7fa8dfeab6ccc988d9c
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 7a940fb7f0c42aebe982124d9699a96437a0df1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911745"
 ---
 # <a name="open-a-trace-file-sql-server-profiler"></a>Aprire un file di traccia (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9fb59b09-e825-46a6-ba5d-85d4a8dc143a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 604e39fcf2d8bd6bfb218fe33fda391c2b53403a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5741f8ba74009327befc8f940e1d3b37df6ef1ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66762235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972704"
 ---
 # <a name="setstring-method-long-javalangstring-int-int"></a>Metodo setString (long, java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -67,7 +66,7 @@ public int setString(long pos,
  I dati di tipo carattere vengono sovrascritti a partire dalla posizione specificata e possono sovrascrivere la lunghezza iniziale dell'oggetto CLOB. Se si specifica un valore posizione+1, verrà aggiunta la stringa. Se si specifica un valore posizione+2 o superiore (o zero o inferiore) verrà generato un errore di posizione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo setString &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
+ [Metodo &#40;sestring SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
  [Metodi di SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [Membri di SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [Classe SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md)  

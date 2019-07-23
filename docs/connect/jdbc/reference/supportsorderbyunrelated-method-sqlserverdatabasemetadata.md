@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9ea6c534-8132-49f3-aac3-a12ec4c46df2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 54f0fb8c780c79c1857a6e027ddf24a51fad7477
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5ddbb8fa811a4370db06b4992eb43e26845e1298
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763872"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969078"
 ---
 # <a name="supportsorderbyunrelated-method-sqlserverdatabasemetadata"></a>Metodo supportsOrderByUnrelated (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsOrderByUnrelated()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se supportata. In caso contrario, **false**.  
+ **true** se supportato. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo supportsOrderByUnrelated viene specificato dal metodo supportsOrderByUnrelated nell'interfaccia DatabaseMetaData.  
+ Questo metodo supportsOrderByUnrelated viene specificato dal metodo supportsOrderByUnrelated nell'interfaccia java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

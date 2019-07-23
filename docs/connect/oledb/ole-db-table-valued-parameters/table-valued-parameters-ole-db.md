@@ -13,25 +13,24 @@ helpviewer_keywords:
 - table-valued parameters (OLE DB)
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 0c146939a0bc980b61e3871b57fb13bd8891f519
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3f942130244aaf08d533ac4a1abdc1752971209d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801092"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015275"
 ---
 # <a name="table-valued-parameters-ole-db"></a>Parametri con valori di tabella (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  In questa sezione viene descritto il supporto per i parametri con valori di tabella nel Driver OLE DB per SQL Server. Per informazioni generali aggiuntive, vedere [parametri con valori di tabella &#40;Driver OLE DB per SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md). Per un esempio, vedere [usare parametri &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md).  
+  In questa sezione viene descritto il supporto per i parametri con valori di tabella nel driver OLE DB per SQL Server. Per ulteriori informazioni sulla panoramica, vedere [parametri &#40;con valori di tabella OLE DB driver&#41;per SQL Server](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md). Per un esempio, vedere [usare i parametri &#40;con valori di&#41;tabella OLE DB](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md).  
   
 ## <a name="remarks"></a>Remarks  
  Attualmente, è possibile inviare al server dati a più righe come parametri di una procedura con set di parametri (parametro DBPARAMS in **ICommand::Execute**). Con i set di parametri, ogni elemento del set deve essere inviato al server in una richiesta di chiamata di procedura remota (RPC) separata. I parametri con valori di tabella forniscono funzionalità simili, ma offrono una maggiore integrazione con il server. Ciò determina la riduzione del numero di richieste RPC e l'abilitazione delle operazioni basate sul set nel server.  
   
- I parametri con valori di tabella sono supportati nel Driver OLE DB per SQL Server come OLE DB **set di righe** oggetti. Gli oggetti **Rowset** possono essere offerti dal consumer, ovvero dall'applicazione client che usa il driver OLE DB per SQL Server, come segnaposto per i parametri con valori di tabella. I parametri con valori di tabella vengono considerati come gli altri tipi di parametro di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il Driver OLE DB per SQL Server fornisce la creazione, individuazione, specifica, associazione e le interfacce dello schema.  
+ I parametri con valori di tabella sono supportati nel driver OLE DB per SQL Server OLE DB oggetti **set di righe** . Gli oggetti **Rowset** possono essere offerti dal consumer, ovvero dall'applicazione client che usa il driver OLE DB per SQL Server, come segnaposto per i parametri con valori di tabella. I parametri con valori di tabella vengono considerati come gli altri tipi di parametro di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il driver OLE DB per SQL Server fornisce interfacce di creazione, individuazione, specifica, associazione e schema.  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   

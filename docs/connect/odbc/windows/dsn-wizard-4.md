@@ -1,5 +1,5 @@
 ---
-title: Origine di dati guidata schermata 4 (Driver ODBC per SQL Server) | Microsoft Docs
+title: Schermata 4 della creazione guidata origine dati (driver ODBC per SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 93145892c96d2b255dca758e7028d2884cec359b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 177888dd1034bb1edcb870db38b00bbc418cb261
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989461"
 ---
 # <a name="data-source-wizard-screen-4"></a>Creazione guidata origine dati - Schermata 4
 
@@ -34,7 +33,7 @@ Se questa opzione è selezionata, i dati passati tramite connessioni stabilite u
 
 ### <a name="trust-server-certificate"></a>Certificato server attendibile
 
-Questa opzione è applicabile solo quando **Usa crittografia avanzata per i dati** è abilitata. Se selezionata, il certificato del server non verrà convalidato per avere il nome host corretto del server ed essere emesso da un'autorità di certificazione attendibile. 
+Questa opzione è applicabile solo quando è abilitata l'opzione **Usa crittografia avanzata per i dati** . Quando questa opzione è selezionata, il certificato del server non viene convalidato in modo da avere il nome host corretto del server ed essere emesso da un'autorità di certificazione attendibile. 
 
 ### <a name="perform-translation-for-character-data"></a>Converti dati caratteri
 
@@ -62,11 +61,11 @@ Il log delle statistiche è un file delimitato da tabulazioni che può essere an
 
 ### <a name="connect-retry-count"></a>Conteggio tentativi di connessione
 
-Specifica il numero di tentativi di un tentativo di connessione non riuscito.
+Specifica il numero di tentativi di connessione non riusciti.
 
 ### <a name="connect-retry-interval-seconds"></a>Intervallo tentativi di connessione (secondi)
 
-Specifica il numero di secondi tra ogni tentativo di ripetizione dei tentativi di connessione. Per altre informazioni sul funzionamento di questo oggetto e il **conteggio tentativi di connessione** opzioni, vedere [resilienza della connessione nel Driver ODBC Windows](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).
+Specifica il numero di secondi tra i tentativi di connessione. Per ulteriori informazioni sul funzionamento di questo e sulle opzioni di **conteggio dei tentativi** di connessione, vedere resilienza delle [connessioni nel driver ODBC di Windows](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).
 
 ### <a name="back"></a>Indietro
 
@@ -74,7 +73,7 @@ Fare clic su questo pulsante per tornare alla pagina precedente della procedura 
 
 ### <a name="finish"></a>Fine
 
-Se le informazioni specificate in questa schermata sono state complete, è possibile fare clic su **fine**. Il DSN creato con tutti gli attributi specificati su questa e altre schermate della procedura guidata e l'utente ha la possibilità di testare il DSN appena creato.
+Se le informazioni specificate in questa schermata sono completate, è possibile fare clic su **fine**. Il DSN viene creato utilizzando tutti gli attributi specificati in questa e in altre schermate della procedura guidata e viene offerta la possibilità di testare il DSN appena creato.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

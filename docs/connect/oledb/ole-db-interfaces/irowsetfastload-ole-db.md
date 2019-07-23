@@ -13,20 +13,19 @@ helpviewer_keywords:
 - IRowsetFastLoad interface
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 5bc52fcf28f6c50c491087e74e0d004ba7382940
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d21e270eb7e2d387201d66df0bb566c3924d53c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66761554"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994402"
 ---
 # <a name="irowsetfastload-ole-db"></a>IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  L'interfaccia **IRowsetFastLoad** espone il supporto per operazioni di copia bulk di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] basate sulla memoria. Driver OLE DB per i consumer di SQL Server utilizzano rapidamente l'interfaccia per aggiungere dati a un oggetto esistente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabella.  
+  L'interfaccia **IRowsetFastLoad** espone il supporto per operazioni di copia bulk di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] basate sulla memoria. OLE DB driver per SQL Server consumer utilizzano l'interfaccia per aggiungere rapidamente dati a una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabella esistente.  
   
  Se si imposta SSPROP_ENABLEFASTLOAD su VARIANT_TRUE per una sessione, non è possibile leggere dati dai set di righe restituiti successivamente dalla sessione. Quando SSPROP_ENABLEFASTLOAD è impostato su VARIANT_TRUE, tutti i set di righe creati nella sessione saranno del tipo IRowsetFastLoad. I set di righe IRowsetFastLoad non supportano la funzionalità di recupero del set di righe, quindi non è possibile leggere i set di righe.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "66761554"
 |[IRowsetFastLoad::InsertRow &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-insertrow-ole-db.md)|Aggiunge una riga al set di righe della copia bulk.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le interfacce &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)   
+ [Interfacce &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)   
  [Eseguire una copia bulk dei dati usando IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)   
  [Inviare dati BLOB a SQL Server usando IROWSETFASTLOAD e ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   

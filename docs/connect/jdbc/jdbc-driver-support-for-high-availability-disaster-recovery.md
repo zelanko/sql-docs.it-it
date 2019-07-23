@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6e760523026251463f80d7f7e3e14b7e52b36ab2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 322a22c2236898876ae2fd5e942a1ad3617c1959
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956386"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>Supporto di Microsoft JDBC Driver per il ripristino di emergenza a disponibilità elevata
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,19 +28,19 @@ ms.locfileid: "66781543"
   
 -   **applicationIntent**
  
-Specificare multiSubnetFailover=true in caso di connessione al listener di un gruppo di disponibilità o a un'istanza del cluster di failover. Si noti che **multiSubnetFailover** è false per impostazione predefinita. Uso **applicationIntent** per dichiarare il tipo di carico di lavoro dell'applicazione. Nelle sezioni seguenti per altre informazioni, vedere.
+Specificare multiSubnetFailover=true in caso di connessione al listener di un gruppo di disponibilità o a un'istanza del cluster di failover. Si noti che **MultiSubnetFailover** è false per impostazione predefinita. Usare **ApplicationIntent** per dichiarare il tipo di carico di lavoro dell'applicazione. Per altri dettagli, vedere le sezioni seguenti.
  
-Partire dalla versione 6.0 di Microsoft JDBC Driver per SQL Server, una nuova proprietà di connessione **transparentNetworkIPResolution** (TNIR) viene aggiunto per la connessione trasparente ai gruppi di disponibilità Always On o a un server che ha più indirizzi IP associati. Quando **transparentNetworkIPResolution** è true, il driver tenta di connettersi al primo indirizzo IP disponibile. Se il primo tentativo non riesce, il driver prova a connettersi a tutti gli indirizzi IP in parallelo fino a quando non scade il timeout, ignorando eventuali tentativi di connessione in sospeso quando uno di essi ha esito positivo.   
+A partire dalla versione 6,0 di Microsoft JDBC driver per SQL Server, viene aggiunta una nuova proprietà di connessione **transparentnetworkipresolution (** (TNIR) per la connessione trasparente al gruppi di disponibilità always on o a un server che dispone di più indirizzi IP associato. Quando **transparentnetworkipresolution (** è true, il driver tenta di connettersi al primo indirizzo IP disponibile. Se il primo tentativo non riesce, il driver tenta di connettersi a tutti gli indirizzi IP in parallelo fino alla scadenza del timeout, eliminando eventuali tentativi di connessione in sospeso quando uno di essi ha esito positivo.   
 
 Si noti che:
-* transparentNetworkIPResolution è true per impostazione predefinita
-* transparentNetworkIPResolution viene ignorato se multiSubnetFailover è true
-* transparentNetworkIPResolution viene ignorato se viene utilizzato il mirroring del database
-* transparentNetworkIPResolution viene ignorato se sono presenti più di 64 indirizzi IP
-* Quando transparentNetworkIPResolution è true, il primo tentativo di connessione Usa un valore di timeout di 500 ms. REST di tentativi di connessione seguire la stessa logica della funzionalità multiSubnetFailover. 
+* Transparentnetworkipresolution (è true per impostazione predefinita
+* Transparentnetworkipresolution (viene ignorato se multiSubnetFailover è true
+* Transparentnetworkipresolution (viene ignorato se viene utilizzato il mirroring del database
+* Transparentnetworkipresolution (viene ignorato se sono presenti più di 64 indirizzi IP
+* Quando Transparentnetworkipresolution (è true, il primo tentativo di connessione usa un valore di timeout di 500 ms. I tentativi di connessione restanti seguono la stessa logica della funzionalità multiSubnetFailover. 
 
 > [!NOTE]
-> Se si utilizza Microsoft JDBC Driver 4.2 (o inferiore) per SQL Server e se **multiSubnetFailover** è false, il [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] tenta di connettersi al primo indirizzo IP. Se [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] non stabilisce una connessione con il primo indirizzo IP, la connessione avrà esito negativo. Tramite [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] non verranno eseguiti tentativi di connessione ad altri indirizzi IP successivi associati al server. 
+> Se si utilizza Microsoft JDBC Driver 4,2 (o inferiore) per SQL Server e se **MultiSubnetFailover** è false, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] tenta di connettersi al primo indirizzo IP. Se [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] non stabilisce una connessione con il primo indirizzo IP, la connessione avrà esito negativo. Tramite [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] non verranno eseguiti tentativi di connessione ad altri indirizzi IP successivi associati al server. 
 > 
 > 
 > [!NOTE]
@@ -54,15 +53,15 @@ Si noti che:
   
  La proprietà di connessione **multiSubnetFailover** indica che l'applicazione viene distribuita in un gruppo di disponibilità o nell'istanza del cluster di failover e che [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] tenterà di connettersi al database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] primaria tramite la connessione a tutti gli indirizzi IP. Quando si specifica **MultiSubnetFailover=true** per una connessione, i ripetuti tentativi di connessione TCP del client vengono eseguiti più rapidamente rispetto agli intervalli di ritrasmissione TCP predefiniti del sistema operativo. In tal modo si abilita la riconnessione a seguito di failover di un gruppo di disponibilità AlwaysOn o un'istanza del cluster di failover AlwaysOn ed è applicabile a istanze del cluster di failover o a gruppi di disponibilità su una singola subnet o su più subnet.  
   
- Per altre informazioni sulle parole chiave delle stringhe di connessione nel [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], vedere [impostando le proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md).  
+ Per ulteriori informazioni sulle parole chiave della stringa di [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]connessione in, vedere [impostazione delle proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md).  
   
  La specifica di **multiSubnetFailover=true** durante la connessione a un oggetto diverso da un listener del gruppo di disponibilità o dall'istanza del cluster di failover non è supportata, perché può causare un calo delle prestazioni.  
   
- Se lo strumento di gestione della sicurezza non è installato, gli indirizzi IP virtuali vengono memorizzati nella cache di Java Virtual Machine per un periodo di tempo limitato definito, per impostazione predefinita, dall'implementazione JDK e dalle proprietà Java networkaddress.cache.ttl e networkaddress.cache.negative.ttl. Se lo strumento di gestione della sicurezza JDK è installato, gli indirizzi IP virtuali vengono memorizzati nella cache di Java Virtual Machine, ma la cache non viene aggiornata per impostazione predefinita. È consigliabile impostare "time-to-live" (networkaddress.cache.ttl) su un giorno per la cache di Java Virtual Machine. Se non si imposta il valore predefinito su un giorno (o un valore simile), il valore precedente non verrà eliminato dalla cache di Java Virtual Machine quando viene aggiunto o aggiornato un indirizzo IP virtuale. Per altre informazioni sulle TTL e networkAddress, vedere [ https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html ](https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html).  
+ Se lo strumento di gestione della sicurezza non è installato, gli indirizzi IP virtuali vengono memorizzati nella cache di Java Virtual Machine per un periodo di tempo limitato definito, per impostazione predefinita, dall'implementazione JDK e dalle proprietà Java networkaddress.cache.ttl e networkaddress.cache.negative.ttl. Se lo strumento di gestione della sicurezza JDK è installato, gli indirizzi IP virtuali vengono memorizzati nella cache di Java Virtual Machine, ma la cache non viene aggiornata per impostazione predefinita. È consigliabile impostare "time-to-live" (networkaddress.cache.ttl) su un giorno per la cache di Java Virtual Machine. Se non si imposta il valore predefinito su un giorno (o un valore simile), il valore precedente non verrà eliminato dalla cache di Java Virtual Machine quando viene aggiunto o aggiornato un indirizzo IP virtuale. Per ulteriori informazioni su NetworkAddress. cache. TTL e NetworkAddress. cache. negative. TTL, vedere [https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html](https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html).  
   
  Utilizzare le linee guida seguenti per connettersi a un server in un gruppo di disponibilità o nell'istanza del cluster di failover:  
   
--   Il driver genererà un errore se il **instanceName** proprietà di connessione viene utilizzata nella stringa di connessione stessa come le **multiSubnetFailover** proprietà di connessione. Ciò riflette il fatto che SQL Browser non viene utilizzato in un gruppo di disponibilità. Tuttavia, se il **NumeroPorta** viene specificata anche proprietà di connessione, il driver ignorerà **instanceName** e usare **NumeroPorta**.  
+-   Se la proprietà di connessione **NomeIstanza** viene utilizzata nella stessa stringa di connessione della proprietà di connessione **MultiSubnetFailover** , il driver genererà un errore. Ciò riflette il fatto che SQL Browser non viene utilizzato in un gruppo di disponibilità. Tuttavia, se viene specificata anche la proprietà di connessione **NumeroPorta** , il driver ignorerà **NomeIstanza** e userà **NumeroPorta**.  
   
 -   Usare la proprietà di connessione **multiSubnetFailover** in caso di connessione a una singola subnet o a più subnet, in modo da migliorare le prestazioni.  
   
@@ -94,7 +93,7 @@ Si noti che:
 
 
 ## <a name="new-methods-supporting-multisubnetfailover-and-applicationintent"></a>Nuovi metodi che supportano multiSubnetFailover e applicationIntent  
- I metodi seguenti forniscono accesso programmatico per il **multiSubnetFailover**, **applicationIntent** e **transparentNetworkIPResolution** stringa di connessione parole chiave:  
+ I metodi seguenti consentono di accedere a livello di codice alle parole chiave della stringa di connessione **MultiSubnetFailover**, **ApplicationIntent** e **transparentnetworkipresolution (** :  
   
 -   [SQLServerDataSource.getApplicationIntent](../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)  
   
@@ -110,10 +109,10 @@ Si noti che:
 
 -   SQLServerDataSource.getTransparentNetworkIPResolution
   
- Il **getMultiSubnetFailover**, **setMultiSubnetFailover**, **getApplicationIntent**, **setApplicationIntent**, **getTransparentNetworkIPResolution** e **setTransparentNetworkIPResolution** vengono aggiunti anche i metodi [classi di SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md), [ Classe SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md), e [classe SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md).  
+ I metodi **getMultiSubnetFailover**, **setMultiSubnetFailover**, **getApplicationIntent**, **setApplicationIntent**, **getTransparentNetworkIPResolution** e **setTransparentNetworkIPResolution** sono aggiunto anche alla classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md), alla [classe SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)e alla [classe SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md).  
   
 ## <a name="ssl-certificate-validation"></a>Convalida del certificato SSL  
- Un gruppo di disponibilità è costituito da più server fisici. In [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] è stato aggiunto il supporto per **Subject Alternate Name** nei certificati SSL, in modo che più host possano essere associati allo stesso certificato. Per altre informazioni su SSL, vedere [informazioni sul supporto SSL](../../connect/jdbc/understanding-ssl-support.md).  
+ Un gruppo di disponibilità è costituito da più server fisici. In [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] è stato aggiunto il supporto per **Subject Alternate Name** nei certificati SSL, in modo che più host possano essere associati allo stesso certificato. Per ulteriori informazioni su SSL, vedere informazioni sul [supporto SSL](../../connect/jdbc/understanding-ssl-support.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Connessione a SQL Server con il driver JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   

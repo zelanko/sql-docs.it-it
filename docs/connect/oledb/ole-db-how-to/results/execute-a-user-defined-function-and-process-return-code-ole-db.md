@@ -1,6 +1,6 @@
 ---
 title: Eseguire una funzione definita dall'utente ed elaborare il codice restituito (OLE DB) | Microsoft Docs
-description: Eseguire un definite dall'utente funzione ed elaborare il codice restituito tramite il Driver OLE DB per SQL Server
+description: Eseguire una funzione definita dall'utente ed elaborare codice restituito utilizzando OLE DB driver per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - user-defined functions [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 6ba52aeb855abd7e5d6325dd6de743f28f402993
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8964bb97acef2a26f65740522f5f5a05aa7a9810
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791287"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994746"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>Eseguire una funzione definita dall'utente ed elaborare il codice restituito (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

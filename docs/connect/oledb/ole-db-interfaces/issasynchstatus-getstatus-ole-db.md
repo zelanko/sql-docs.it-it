@@ -1,5 +1,5 @@
 ---
-title: 'Issasynchstatus:: getStatus (OLE DB) | Microsoft Docs'
+title: 'ISSAsynchStatus:: GetStatus (OLE DB) | Microsoft Docs'
 description: ISSAsynchStatus::GetStatus (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - GetStatus method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: d22bc6d19aa4593d400b62c19f72c9fbe3745005
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6f05b5c7c7b03fa1b68f3da5c6fbed29ed98a3c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66789750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994381"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +44,7 @@ HRESULT GetStatus(
   
 ## <a name="arguments"></a>Argomenti  
  *hChapter*[in]  
- Handle del capitolo. Se l'oggetto polling non è un oggetto set di righe o l'operazione non è applicabile a un capitolo, deve essere impostato sul valore DB_NULL_HCHAPTER, che viene ignorato dal provider.  
+ Handle del capitolo. Se l'oggetto di cui è stato eseguito il polling non è un oggetto set di righe o l'operazione non è applicabile a un capitolo, deve essere impostata su DB_NULL_HCHAPTER, che viene ignorato dal provider.  
   
  *eOperation*[in]  
  Operazione per la quale viene richiesto lo stato asincrono. Usare il valore seguente:  
@@ -98,7 +97,7 @@ HRESULT GetStatus(
  L'elaborazione asincrona è stata annullata durante l'inizializzazione dell'oggetto origine dati. L'oggetto origine dati si trova in uno stato non inizializzato.  
   
  E_INVALIDARG  
- Il *hChapter* parametro non è corretto.  
+ Il parametro *hChapter* non è corretto.  
   
  E_UNEXPECTED  
  Il metodo **ISSAsynchStatus::GetStatus** è stato chiamato su un oggetto origine dati e **IDBInitialize::Initialize** non è stato chiamato su tale oggetto.  
@@ -127,6 +126,6 @@ HRESULT GetStatus(
   
 ## <a name="see-also"></a>Vedere anche  
  [Esecuzione di operazioni asincrone](../../oledb/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [OLE DB &#40;ISSAsynchStatus&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

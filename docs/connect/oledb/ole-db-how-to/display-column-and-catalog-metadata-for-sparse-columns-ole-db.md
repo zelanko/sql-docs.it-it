@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: e85e7ef0410e90f6f2a750b6380230dccc172fa9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c4886ba812a18ea6571e10c8b1fe2060fa8fc5ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786067"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015610"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Visualizzare i metadati della colonna e del catalogo per le colonne di tipo sparse (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "66786067"
 
   In questo esempio viene creata una tabella con tre colonne, ovvero una colonna di tipo sparse, una colonna non di tipo sparse e una colonna ColumnSet. Nell'esempio vengono quindi visualizzati i flag OLE DB che indicano i metadati della colonna e del catalogo per la colonna non di tipo sparse e per quella ColumnSet.  
   
- Questo esempio può essere eseguito solo in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o versione successiva. Per altre informazioni sulle colonne di tipo sparse, vedere [supporto per colonne di tipo Sparse nel Driver OLE DB per SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md).  
+ Questo esempio può essere eseguito solo in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o versione successiva. Per ulteriori informazioni sulle colonne di tipo sparse, vedere [supporto di colonne di tipo sparse nel Driver OLE DB per SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md).  
   
 ## <a name="example"></a>Esempio  
  Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene msoledbsql.h.  

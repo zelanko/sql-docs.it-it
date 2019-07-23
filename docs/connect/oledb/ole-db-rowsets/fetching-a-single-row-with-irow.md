@@ -1,6 +1,6 @@
 ---
-title: Recupero di una sola riga con IRow | Microsoft Docs
-description: Il recupero di una singola riga mediante IRow interfaccia del Driver OLE DB per SQL Server
+title: Recupero di una singola riga con IRow | Microsoft Docs
+description: Recupero di una singola riga mediante l'interfaccia IRow del driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,20 +17,19 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, fetching
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 6e9f48ba7f2472fa215b267c915900d7c616dba0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 542875dc322cd94970c238747db0adb139b9a480
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994288"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>Recupero di una sola riga utilizzando IRow
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Il **IRow** interfaccia implementazione nel Driver OLE DB per SQL Server è semplificata per migliorare le prestazioni. **IRow** consente l'accesso diretto alle colonne di un singolo oggetto riga. Se si prevede che il risultato dell'esecuzione di un comando produca esattamente una riga, **IRow** recupererà le colonne della riga in questione. Se il set di risultati include più righe, **IRow** esporrà solo la prima.  
+  L'implementazione dell'interfaccia **IRow** nel driver OLE DB per SQL Server è stata semplificata per migliorare le prestazioni. **IRow** consente l'accesso diretto alle colonne di un singolo oggetto riga. Se si prevede che il risultato dell'esecuzione di un comando produca esattamente una riga, **IRow** recupererà le colonne della riga in questione. Se il set di risultati include più righe, **IRow** esporrà solo la prima.  
   
  L'implementazione dell'interfaccia **IRow** non consente la navigazione all'interno della riga. A ogni colonna della riga è possibile accedere una sola volta, con un'eccezione. È infatti possibile accedere a una colonna una volta per trovarne le dimensioni e una seconda volta per recuperare i dati.  
   

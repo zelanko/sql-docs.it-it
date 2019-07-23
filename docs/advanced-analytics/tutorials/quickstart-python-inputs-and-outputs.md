@@ -1,33 +1,33 @@
 ---
-title: Guida introduttiva per l'utilizzo di input e output in Python - SQL Server Machine Learning
-description: In questa Guida introduttiva per script di Python in SQL Server, informazioni su come strutturare gli input e output per la stored procedure sp_execute_external_script.
+title: Guida introduttiva per l'uso di input e output in Python
+description: In questa Guida introduttiva per script Python in SQL Server, informazioni su come strutturare input e output per il sistema sp_execute_external_script stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 80bb86beedf54c29fbe67e2362a4163cb489c05a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a23896f5242e0f1182b2864e426bbb20aeda763f
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962071"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344813"
 ---
-# <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>Avvio rapido: Gestire gli input e output con Python in SQL Server
+# <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>Avvio rapido: Gestire input e output usando Python in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Questa Guida introduttiva illustra come gestire gli input e restituisce quando si usano Python in SQL Server Machine Learning Services.
+Questa Guida introduttiva illustra come gestire input e output quando si usa Python in SQL Server Machine Learning Services.
 
-Per impostazione predefinita [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) accetta un singolo set di dati input, che in genere è fornire sotto forma di una query SQL valida.
+Per impostazione predefinita, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) accetta un singolo set di dati di input, che in genere viene fornito sotto forma di query SQL valida.
 
-Altri tipi di input possono essere passati come variabili SQL: ad esempio, è possibile passare un modello con training come una variabile, usando una funzione di serializzazione, ad esempio [pickle](https://docs.python.org/3.0/library/pickle.html) oppure [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) per scrivere il modello un formato binario.
+Altri tipi di input possono essere passati come variabili SQL: ad esempio, è possibile passare un modello sottoposto a training come variabile, usando una funzione di serializzazione, ad esempio [Pickle](https://docs.python.org/3.0/library/pickle.html) o [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) , per scrivere il modello in un formato binario.
 
-La stored procedure restituisce un singolo Python [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) frame di dati come output, ma è anche possibile restituire valori scalari e i modelli come variabili. Ad esempio, è possibile restituire un modello con training come una variabile binaria e che passare a un'istruzione T-SQL INSERT, per scrivere tale modello in una tabella. È anche possibile generare grafici (in formato binario) o valori scalari (valori singoli, ad esempio la data e ora, il tempo trascorso per il training del modello e così via).
+Il stored procedure restituisce un singolo frame di dati di Python [Pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) come output, ma è anche possibile restituire scalari e modelli come variabili. Ad esempio, è possibile generare un modello sottoposto a training come variabile binaria e passarlo a un'istruzione T-SQL INSERT, per scrivere tale modello in una tabella. È anche possibile generare grafici (in formato binario) o scalari (singoli valori, ad esempio la data e l'ora, il tempo trascorso per il training del modello e così via).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Una Guida introduttiva precedente [Python verificare esiste nel Server SQL](quickstart-python-verify.md), vengono fornite informazioni e collegamenti per la configurazione dell'ambiente di Python necessario per questa Guida introduttiva.
+Una guida introduttiva precedente, [Verify Python exists in SQL Server](quickstart-python-verify.md), fornisce informazioni e collegamenti per la configurazione dell'ambiente Python necessario per questa Guida introduttiva.
 
 ## <a name="create-the-source-data"></a>Creare i dati di origine
 
@@ -53,11 +53,11 @@ SELECT * FROM PythonTestData
 
 ## <a name="inputs-and-outputs"></a>Input e output
 
-Esaminiamo l'impostazione predefinita le variabili di input e outpue di sp_execute_external_script: `InputDataSet` e `OutputDataSet`.
+Esaminiamo le variabili di input e output predefinite di sp_execute_external_script: `InputDataSet` e. `OutputDataSet`
 
-1. È possibile ottenere i dati dalla tabella come input allo script di Python. Eseguire l'istruzione seguente. Ottiene i dati dalla tabella, effettua un round trip tramite il runtime di Python e restituisce i valori con il nome della colonna *NewColName*.
+1. È possibile ottenere i dati dalla tabella come input per lo script Python. Eseguire l'istruzione seguente. Ottiene i dati dalla tabella, esegue una round trip tramite il runtime di Python e restituisce i valori con il nome di colonna *NewColName*.
 
-    I dati restituiti dalla query vengono passati al runtime di Python, che restituisce i dati al Database SQL come un DataFrame di pandas. La clausola WITH RESULT SETS definisce lo schema della tabella di dati restituiti per il Database SQL.
+    I dati restituiti dalla query vengono passati al runtime di Python, che restituisce i dati al database SQL come frame di dati Pandas. La clausola WITH RESULT SETS definisce lo schema della tabella dati restituiti per il database SQL.
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -71,9 +71,9 @@ Esaminiamo l'impostazione predefinita le variabili di input e outpue di sp_execu
 
     ![Output dello script Python che restituisce i dati da una tabella](./media/python-output-pythontestdata.png)
 
-2. È possibile modificare il nome delle variabili di input o outpue. Lo script precedente usato l'input predefinito e i nomi delle variabili, di output _InputDataSet_ e _OutputDataSet_. Per definire i dati di input associati _InputDataSet_, si utilizza il *@input_data_1* variabile.
+2. Modificare il nome delle variabili di input o di output. Lo script precedente usava i nomi delle variabili di input e output predefinite, _InputDataSet_ e _OutputDataSet_. Per definire i dati di input associati a _InputDataSet_, usare la *@input_data_1* variabile.
 
-    In questo script, i nomi dell'output e le variabili di input per la stored procedure sono stati modificati per *SQL_out* e *SQL_in*:
+    In questo script, i nomi delle variabili di input e di output per il stored procedure sono stati modificati in *SQL_out* e *SQL_in*:
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -85,13 +85,13 @@ Esaminiamo l'impostazione predefinita le variabili di input e outpue di sp_execu
       WITH RESULT SETS (([NewColName] INT NOT NULL));
     ```
 
-    Il caso delle variabili di input e outpue in `@input_data_1_name` e `@output_data_1_name` devono corrispondere il caso di quelli nel codice Python in `@script`, poiché Python è tra maiuscole e minuscole.
+    Il caso delle variabili di input e output in `@input_data_1_name` e `@output_data_1_name` deve corrispondere al caso di quelli nel codice Python in, in `@script`quanto Python fa distinzione tra maiuscole e minuscole.
 
-    È possibile passare come parametro un solo set di dati di input ed è possibile restituire un solo set di dati. Tuttavia, è possibile chiamare altri set di dati dall'interno del codice Python ed è possibile restituire output di altri tipi oltre il set di dati. È anche possibile aggiungere la parola chiave OUTPUT a qualsiasi parametro in modo che venga restituito con i risultati. 
+    È possibile passare come parametro un solo set di dati di input ed è possibile restituire un solo set di dati. Tuttavia, è possibile chiamare altri set di dati dall'interno del codice Python ed è possibile restituire output di altri tipi oltre al set di dati. È anche possibile aggiungere la parola chiave OUTPUT a qualsiasi parametro in modo che venga restituito con i risultati. 
 
-    Il `WITH RESULT SETS` istruzione definisce lo schema per i dati che viene usati in SQL Server. È necessario specificare i tipi di dati compatibili con SQL per ogni colonna restituita da Python. È possibile usare la definizione dello schema per fornire nuovi nomi di colonna troppo perché non è necessaria usare i nomi di colonna dal frame di dati Python.
+    L' `WITH RESULT SETS` istruzione definisce lo schema per i dati utilizzati in SQL Server. È necessario fornire tipi di dati compatibili con SQL per ogni colonna restituita da Python. È possibile usare la definizione dello schema per fornire nuovi nomi di colonna, perché non è necessario usare i nomi di colonna del frame di dati Python.
 
-3. È anche possibile generare valori usando lo script Python e lasciare la stringa di query di input nel _@input_data_1_ vuoto.
+3. È anche possibile generare valori usando lo script Python e lasciare vuota la stringa di query _@input_data_1_ di input.
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -106,11 +106,11 @@ Esaminiamo l'impostazione predefinita le variabili di input e outpue di sp_execu
 
     **Risultati**
 
-    ![I risultati della query usando @script come input](./media/python-data-generated-output.png)
+    ![Risultati della query @script utilizzando come input](./media/python-data-generated-output.png)
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Esaminare alcuni dei problemi che possono verificarsi quando si passano dati tabulari tra codice Python e SQL Server.
+Esaminare alcuni dei problemi che potrebbero verificarsi durante il passaggio di dati tabulari tra Python e SQL Server.
 
 > [!div class="nextstepaction"]
-> [Avvio rapido: Strutture di dati di Python in SQL Server](quickstart-python-data-structures.md)
+> [Avvio rapido: Strutture di dati Python in SQL Server](quickstart-python-data-structures.md)

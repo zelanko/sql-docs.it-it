@@ -1,6 +1,6 @@
 ---
 title: Individuazione dei metadati | Microsoft Docs
-description: Individuazione dei metadati nel Driver OLE DB per SQL Server
+description: Individuazione dei metadati nel driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 3ed5020498dee14a34bd66076fc74a578bc09e69
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9891e5708110be83a4ef33cb2a142accaf93ffe2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989057"
 ---
 # <a name="metadata-discovery"></a>Individuazione dei metadati
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "66765969"
   
  È inoltre possibile notare un miglioramento nelle prestazioni quando si specifica il formato dei metadati utilizzando IBCPSession::BCPSetBulkMode  
   
- L'individuazione dei metadati migliorata nel Driver OLE DB per SQL Server è possibile grazie all'aggiunta di due stored procedure in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]:  
+ L'individuazione dei metadati migliorata nel driver OLE DB per SQL Server è possibile a causa dell'aggiunta di due stored procedure [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]in:  
   
 -   sp_describe_first_result_set  
   

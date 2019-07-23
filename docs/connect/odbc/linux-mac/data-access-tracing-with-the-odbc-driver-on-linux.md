@@ -13,21 +13,20 @@ helpviewer_keywords:
 ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cd71429e5a407e595cc3f65e73e984bfc12280b1
-ms.sourcegitcommit: 5d27fb187006e676d652884f0c1f5133a1bd62b2
+ms.openlocfilehash: 1fa39cd11f70a661de5c284e56f2ccc0f7a5777f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67152219"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008818"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Traccia di accesso ai dati con il driver ODBC in Linux e macOS
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-La gestione Driver unixODBC in macOS e Linux supporta la traccia di chiamate all'API ODBC in ingresso e uscita del Driver ODBC per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+Gestione driver unixODBC in macOS e Linux supporta la traccia delle chiamate all'API ODBC per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]l'ingresso e l'uscita del driver ODBC.
 
-Per tracciare il comportamento dell'applicazione ODBC, modificare il `odbcinst.ini` del file `[ODBC]` sezione per impostare i valori `Trace=Yes` e `TraceFile` al percorso del file che conterrà la traccia di output; ad esempio:
+Per tracciare il comportamento ODBC dell'applicazione, modificare `odbcinst.ini` la `[ODBC]` sezione del file per impostare i `Trace=Yes` valori `TraceFile` e sul percorso del file che deve contenere l'output di traccia, ad esempio:
 
 ```ini
 [ODBC]
@@ -35,9 +34,9 @@ Trace=Yes
 TraceFile=/home/myappuser/odbctrace.log
 ```
 
-(È anche possibile usare `/dev/stdout` o qualsiasi altro nome di dispositivo per l'invio di output sono invece che in un file permanente di analisi.) Con le impostazioni sopra riportate, ogni volta che un'applicazione carica la gestione Driver unixODBC registrerà tutte le chiamate di API ODBC che eseguita nel file di output.
+(È anche possibile usare `/dev/stdout` o qualsiasi altro nome di dispositivo per inviare l'output di traccia invece di un file persistente). Con le impostazioni precedenti, ogni volta che un'applicazione carica Gestione driver unixODBC, registrerà tutte le chiamate API ODBC eseguite nel file di output.
 
-Dopo aver completato la traccia dell'applicazione, rimuovere `Trace=Yes` dal `odbcinst.ini` file per evitare la riduzione delle prestazioni di traccia e assicurarsi di rimuovere eventuali file di traccia non necessari.
+Al termine della traccia dell'applicazione, rimuovere `Trace=Yes` `odbcinst.ini` dal file per evitare la riduzione delle prestazioni della traccia e verificare che i file di traccia non necessari vengano rimossi.
 
 La traccia si applica a tutte le applicazioni che usano il driver in `odbcinst.ini`. Per non tracciare tutte le applicazioni, ad esempio per evitare di rivelare informazioni riservate dei singoli utenti, è possibile tracciare una singola istanza dell'applicazione specificando il percorso di un file `odbcinst.ini` privato tramite la variabile di ambiente `ODBCSYSINI`. Esempio:
 
@@ -45,11 +44,11 @@ La traccia si applica a tutte le applicazioni che usano il driver in `odbcinst.i
 $ ODBCSYSINI=/home/myappuser myapp
 ```
 
-In questo caso, è possibile aggiungere `Trace=Yes` per il `[ODBC Driver 13 for SQL Server]` sezione `/home/myappuser/odbcinst.ini`.
+In questo caso, è possibile aggiungere `Trace=Yes` `[ODBC Driver 13 for SQL Server]` alla sezione di `/home/myappuser/odbcinst.ini`.
 
 ## <a name="determining-which-odbcini-file-the-driver-is-using"></a>Individuazione del file odbc.ini usato dal driver
 
-I driver ODBC in Linux e macOS non conosce quale `odbc.ini` è in uso o il percorso di `odbc.ini` file. Tuttavia, informazioni su quali `odbc.ini` file è in uso è disponibile in strumenti unixODBC `odbc_config` e `odbcinst`e la documentazione di gestione Driver unixODBC.
+I driver ODBC Linux e MacOS non sanno quale `odbc.ini` sia in uso o il percorso `odbc.ini` del file. Tuttavia, le informazioni sul `odbc.ini` file in uso sono disponibili negli strumenti `odbc_config` unixODBC e `odbcinst`nella documentazione di gestione driver unixodbc.
 
 Ad esempio, il comando seguente stampa tra le altre informazioni il percorso dei file `odbc.ini` di sistema e dell'utente che contengono rispettivamente il DSN di sistema e dell'utente:
 
@@ -65,11 +64,11 @@ SQLLEN Size........: 8
 SQLSETPOSIROW Size.: 8
 ```
 
-Il [documentazione unixODBC](http://www.unixodbc.org/doc/UserManual/) vengono illustrate le differenze tra l'utente e DSN di sistema. In breve:
+La [documentazione di unixODBC](http://www.unixodbc.org/doc/UserManual/) illustra le differenze tra i DSN utente e di sistema. In breve:
 
-- I DSN utente---si tratta di DSN di cui sono disponibili solo per un utente specifico. Gli utenti possono connettersi tramite, aggiungere, modificare e rimuovere i propri DSN utente. DSN utente vengono archiviati in un file nella directory home dell'utente o una sottodirectory della stessa.
+- I DSN utente---sono DSN disponibili solo per un utente specifico. Gli utenti possono connettersi usando, aggiungono, modificano e rimuovono i propri DSN utente. I DSN utente vengono archiviati in un file nella home directory dell'utente o in una sottodirectory.
 
-- DSN di sistema---questi DSN disponibili per ogni utente del sistema per la connessione con essi, ma può solo essere aggiunto, modificato e rimosso da un amministratore di sistema. Se un utente dispone di un DSN dell'utente con lo stesso nome di DSN di sistema, il DSN utente verrà utilizzato al momento le connessioni da tale utente.
+- I DSN di sistema---questi DSN sono disponibili per ogni utente del sistema per la connessione utilizzandoli, ma possono essere aggiunti, modificati e rimossi solo da un amministratore di sistema. Se un utente dispone di un DSN utente con lo stesso nome di un DSN di sistema, il DSN utente verrà usato al momento delle connessioni da tale utente.
 
 ## <a name="see-also"></a>Vedere anche
 
