@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 486f361ab7915c0a7be0076a7f90b2359887cabc
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: b47560883fa845abb2758c7d96b8892c1bebbde2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581862"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092145"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>Risoluzione dei problemi per gli indici hash per tabelle ottimizzate per la memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

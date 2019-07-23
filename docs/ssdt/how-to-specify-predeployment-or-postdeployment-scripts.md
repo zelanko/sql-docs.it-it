@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: be518cfacfefa76f380eefab1e45348e037cc0c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1531bffd50bb14838e74b5315c30a870563f86f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098466"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035016"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>Procedura: Specificare script pre-distribuzione o post-distribuzione
 Gli script pre-distribuzione e post-distribuzione consentono di eseguire le istruzioni Transact\-SQL prima e dopo lo script di distribuzione principale generato dal progetto di database. Un progetto può contenere un solo script pre-distribuzione e un solo script post-distribuzione. Tali script possono essere utilizzati per molti scopi. Esempio:  

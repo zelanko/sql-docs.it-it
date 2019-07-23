@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: fc9d1639-5efa-44fe-a04f-4d4d0def2833
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 7f404ea039dbab27ad88422df2acc9c5fed0cff7
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: d258f93f5b6ada2199e7375d73ae870244268815
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67679272"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267803"
 ---
 # <a name="save-change-script-dialog-box-visual-database-tools"></a>Finestra di dialogo Salva script modifiche (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

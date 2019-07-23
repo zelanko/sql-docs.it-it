@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 87205984-507a-49f3-b27c-36a0075c234d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7b88ac613067f4921bc2dfdbc0ccf7fc26e60719
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02ed7296f1ad5a83dd005973c210c5cb34d7ee97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727865"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043886"
 ---
 # <a name="column-statistics-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Statistiche di colonna (Attività Profiling dati)
 
@@ -62,7 +61,7 @@ ms.locfileid: "65727865"
   
 #### <a name="column-options"></a>Opzioni relative alle colonne  
  **IsWildCard**  
- Specifica se è stato selezionato il carattere jolly **(\*)**. Questa opzione è impostata su **True** se è stato selezionato **(\*)** per profilare tutte le colonne. È impostata su **False** se è stata selezionata una singola colonna da analizzare. Questa opzione è di sola lettura.  
+ Specifica se è stato selezionato il carattere jolly **(\*)** . Questa opzione è impostata su **True** se è stato selezionato **(\*)** per profilare tutte le colonne. È impostata su **False** se è stata selezionata una singola colonna da analizzare. Questa opzione è di sola lettura.  
   
  **ColumnName**  
  Visualizza il nome della colonna selezionata. È vuota se è stato selezionato **(\*)** per profilare tutte le colonne. Questa opzione è di sola lettura.  

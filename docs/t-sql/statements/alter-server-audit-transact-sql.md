@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 14ee8d172f48640f414bb27d4c600248acac99cb
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 85820073391fe2c61c297fc3b5d1ddae7e6163bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55420988"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070308"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,13 +81,13 @@ ALTER SERVER AUDIT audit_name
 > [!IMPORTANT]
 > Nell'istanza gestita di database SQL di Azure, il controllo SQL opera a livello di server e archivia i file `.xel` in Archiviazione BLOB di Azure.
   
- FILEPATH **= '**_os\_file\_path_**'**  
+ FILEPATH **= '** _os\_file\_path_ **'**  
  Percorso dell'itinerario di controllo. Il nome del file viene generato in base al nome e al GUID del controllo.  
   
- MAXSIZE **=**_max\_size_  
+ MAXSIZE **=** _max\_size_  
  Specifica le dimensioni massime consentite per il file di controllo. *max_size* deve essere un valore intero seguito da **MB**, **GB**, **TB** o **UNLIMITED**. Il valore minimo che è possibile specificare per *max_size* è 2 **MB**, mentre il valore massimo è 2.147.483.647 **TB**. Se si specifica **UNLIMITED**, le dimensioni del file possono aumentare fino a quando non si esaurisce lo spazio su disco. Se si specifica un valore minore di 2 MB, viene generato l'errore MSG_MAXSIZE_TOO_SMALL. Il valore predefinito è **UNLIMITED**.  
   
- MAX_ROLLOVER_FILES **=**_integer_ | **UNLIMITED**  
+ MAX_ROLLOVER_FILES **=** _integer_ | **UNLIMITED**  
  Viene specificato il numero massimo di file da mantenere nel file system. Quando si imposta MAX_ROLLOVER_FILES=0, non esistono limiti al numero di file di rollover che vengono creati. Il valore predefinito è 0. Il numero massimo di file specificabili è 2.147.483.647.  
   
  MAX_FILES =*integer*  
@@ -98,7 +97,7 @@ ALTER SERVER AUDIT audit_name
  RESERVE_DISK_SPACE **=** { ON | OFF }  
  Questa opzione consente di preallocare il file sul disco in base al valore MAXSIZE. Viene applicata solo se MAXSIZE non è uguale a UNLIMITED. Il valore predefinito è OFF.  
   
- QUEUE_DELAY **=**_integer_  
+ QUEUE_DELAY **=** _integer_  
  Specifica la quantità di tempo in millisecondi che può trascorrere prima che venga forzata l'esecuzione delle azioni di controllo. Il valore 0 indica un recapito sincrono. Il valore minimo di ritardo di query che è possibile impostare è 1000 (1 secondo). Tale valore è quello predefinito. Il valore massimo è 2.147.483.647 (2.147.483,647 secondi o 24 giorni, 20 ore, 31 minuti e 23,647 secondi). Se si specifica un numero non valido, viene generato l'errore MSG_INVALID_QUEUE_DELAY.  
   
  ON_FAILURE **=** { CONTINUE | SHUTDOWN | FAIL_OPERATION}  
@@ -145,7 +144,7 @@ Forza l'arresto dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversio
   
  Non è possibile modificare il GUID di un controllo dopo che il controllo è stato creato.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per creare, modificare o eliminare un'entità del controllo del server, è necessario disporre dell'autorizzazione ALTER ANY SERVER AUDIT o CONTROL SERVER.  
   
 ## <a name="examples"></a>Esempi  
@@ -167,7 +166,7 @@ WITH (STATE = ON);
 GO  
 ```  
   
-### <a name="b-changing-a-server-audit-target"></a>b. Modifica della destinazione di un controllo del server  
+### <a name="b-changing-a-server-audit-target"></a>B. Modifica della destinazione di un controllo del server  
  Nell'esempio seguente il controllo del server denominato `HIPAA_Audit` viene modificato in una destinazione file.  
   
 ```  

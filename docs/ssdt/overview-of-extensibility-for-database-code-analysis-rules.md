@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 62f5c980-18d5-43fe-b443-c9e149d01fc7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 32462daf6d747b278be788d2364e01c2e8912114
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd64a7c3152941a88122543dc4b8b80045f175a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101934"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984485"
 ---
 # <a name="overview-of-extensibility-for-database-code-analysis-rules"></a>Panoramica dell'estendibilità delle regole di analisi del codice del database
 Le edizioni di Visual Studio contenenti SQL Server Data Tools includono regole di analisi del codice per segnalare avvisi relativi alla progettazione, alla denominazione e alle prestazioni di Transact\-SQL nel codice del database. Per altre informazioni, vedere [Analisi del codice di database per migliorare la qualità del codice](https://msdn.microsoft.com/library/dd172133(v=vs.100).aspx).  

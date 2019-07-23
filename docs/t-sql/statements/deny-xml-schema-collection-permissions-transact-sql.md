@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 159969a7-8313-41bc-bb19-c55af76597e6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f5938d06c836e4b523c1e21df91c449db88bc7f4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 811c9532486b8f9c9a910254185de69096be9c8f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023073"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984337"
 ---
 # <a name="deny-xml-schema-collection-permissions-transact-sql"></a>DENY - autorizzazioni per raccolte di XML Schema (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ DENY permission  [ ,...n ] ON
  *permission*  
  Specifica un'autorizzazione che può essere negata per una raccolta di XML Schema. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- ON XML SCHEMA COLLECTION :: [ _schema_name_**.** ] *XML_schema_collection_name*  
+ ON XML SCHEMA COLLECTION :: [ _schema_name_ **.** ] *XML_schema_collection_name*  
  Specifica la raccolta di XML Schema per cui viene negata l'autorizzazione. Il qualificatore di ambito (::) è obbligatorio. Se si omette *schema_name*, viene usato lo schema predefinito. Se si specifica *schema_name*, il qualificatore di ambito dello schema (.) è obbligatorio.  
   
  TO \<database_principal>  
@@ -108,7 +107,7 @@ DENY permission  [ ,...n ] ON
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per la raccolta di XML Schema. Se si utilizza l'opzione AS, l'entità specificata deve essere proprietaria della raccolta di XML Schema.  
   
 ## <a name="examples"></a>Esempi  

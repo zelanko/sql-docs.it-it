@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 1bc364890a2bb678b8ad9ef5dad5238656443acf
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 6e3a4a360f4a317139908b57421e420e8cd68402
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685244"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040601"
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ Disattiva tutti i messaggi informativi.
 ## <a name="remarks"></a>Remarks  
 In un server di produzione, per evitare comportamenti imprevisti è consigliabile abilitare i flag di traccia solo a livello di server mediante uno dei metodi seguenti:
 -   Usare l'opzione di avvio della riga di comando **-T** di Sqlservr.exe. È una procedura consigliata, in quanto consente di eseguire tutte le istruzioni con il flag di traccia abilitato, inclusi i comandi negli script di avvio. Per altre informazioni, vedere [sqlservr Application](../../tools/sqlservr-application.md).  
--   Usare DBCC TRACEON **(**_trace#_ [**,** ...*.n*]**,-1)** solo se gli utenti o le applicazioni non stanno eseguendo contemporaneamente istruzioni nel sistema.  
+-   Usare DBCC TRACEON **(** _trace#_ [ **,** ... *.n*] **,-1)** solo se gli utenti o le applicazioni non stanno eseguendo contemporaneamente istruzioni nel sistema.  
 
 I flag di traccia consentono di personalizzare alcune caratteristiche controllando il funzionamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dopo essere stati abilitati, i flag rimangono abilitati nel server fino a quando non vengono disabilitati tramite l'istruzione DBCC TRACEOFF. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili due tipi di flag di traccia: di sessione e globali. I flag di traccia di sessione sono attivi per una connessione e sono visibili solo per tale connessione. I flag di traccia globali vengono impostati a livello del server e sono visibili per tutte le connessioni nel server. Per determinare lo stato dei flag di traccia, eseguire DBCC TRACESTATUS. Per disabilitare i flag di traccia, eseguire DBCC TRACEOFF.
   
@@ -70,7 +69,7 @@ Dopo avere attivato un flag di traccia che interessa i piani di query, eseguire 
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .
   
 ## <a name="examples"></a>Esempi  

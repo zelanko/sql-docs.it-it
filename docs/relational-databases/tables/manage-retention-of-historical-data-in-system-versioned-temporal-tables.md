@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef2848efb4a66ccf2d8d1b2271bd70c455b27fd9
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: e569d7676d363dc6526354ed6087a778fccce79d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582639"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031634"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gestire la conservazione dei dati cronologici nelle tabelle temporali con controllo delle versioni di sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,11 +44,11 @@ ms.locfileid: "67582639"
 
  In ogni approccio la logica per la migrazione o la pulizia dei dati cronologici è basata sulla colonna che corrisponde alla fine del periodo nella tabella corrente. Il valore relativo alla fine del periodo per ogni riga determina il momento in cui la versione della riga diventa "chiusa", ovvero quando viene inserita nella tabella di cronologia. Ad esempio, la condizione `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` specifica che i dati cronologici più vecchi di un mese devono essere rimossi o spostati dalla tabella di cronologia.  
   
-> **NOTA:**  Gli esempi in questo argomento usano questo [esempio di tabella temporale](creating-a-system-versioned-temporal-table.md).  
+> **NOTA**  Gli esempi in questo argomento usano questo [esempio di tabella temporale](creating-a-system-versioned-temporal-table.md).  
   
 ## <a name="using-stretch-database-approach"></a>Uso dell'approccio con Stretch Database  
   
-> **NOTA:**  L'approccio con Stretch Database si applica solo a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e non a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+> **NOTA**  L'approccio con Stretch Database si applica solo a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e non a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] esegue la migrazione dei dati cronologici in modo trasparente in Azure. Per una maggiore sicurezza, è possibile crittografare i dati in transito usando la funzionalità [Crittografia sempre attiva](https://msdn.microsoft.com/library/mt163865.aspx) di SQL Server. È anche possibile usare la [sicurezza a livello di riga](../../relational-databases/security/row-level-security.md) e altre funzionalità avanzate per la sicurezza di SQL Server con Estensione database e un database temporale per proteggere i dati.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "67582639"
     L'uso di una funzione di predicato deterministica consente di mantenere una parte della cronologia nello stesso database con i dati correnti, mentre viene eseguita la migrazione del resto della cronologia in Azure.    
     Per esempi e limitazioni, vedere [Selezionare le righe di cui eseguire la migrazione tramite una funzione di filtro (Estensione database)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Poiché le funzioni non deterministiche non sono valide, per trasferire i dati cronologici usando una finestra temporale scorrevole è necessario modificare in modo regolare la definizione della funzione di predicato inline, in modo che la finestra di righe mantenuta in locale sia costante a livello di età. La finestra temporale scorrevole consente di spostare in modo costante i dati temporali più vecchi di un mese in Azure. Ecco un esempio di questo approccio.  
   
-> **NOTA:** Stretch Database esegue la migrazione dei dati in Azure. È quindi necessario avere un account Azure e una sottoscrizione per la fatturazione. Per ottenere un account di valutazione gratuito di Azure, fare clic sulla [versione di valutazione gratuita di un mese](https://azure.microsoft.com/pricing/free-trial/).  
+> **NOTA** Stretch Database esegue la migrazione dei dati in Azure. È quindi necessario avere un account Azure e una sottoscrizione per la fatturazione. Per ottenere un account di valutazione gratuito di Azure, fare clic sulla [versione di valutazione gratuita di un mese](https://azure.microsoft.com/pricing/free-trial/).  
   
  È possibile configurare una tabella di cronologia temporale per l'estensione usando la procedura guidata per l'estensione o Transact-SQL ed è possibile abilitare una tabella di cronologia temporale per l'estensione se il controllo delle versioni di sistema è **attivato**. L'estensione della tabella corrente non è consentita perché si tratta di un'operazione superflua.  
   
@@ -91,7 +90,7 @@ ms.locfileid: "67582639"
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-> **NOTA:** Se l'abilitazione del database per l'estensione ha esito negativo,controllare il log degli errori. Un errore comune consiste nella configurazione non corretta della regola del firewall.  
+> **NOTA** Se l'abilitazione del database per l'estensione ha esito negativo,controllare il log degli errori. Un errore comune consiste nella configurazione non corretta della regola del firewall.  
   
  Vedere anche:  
   
@@ -168,7 +167,7 @@ COMMIT ;
   
  Il partizionamento delle tabelle consente di implementare un approccio con finestra temporale scorrevole per spostare le parti più vecchie dalla tabella di cronologia e mantenere costanti le dimensioni della parte conservata in termini di età, mantenendo i dati della tabella di cronologia uguali al periodo di conservazione necessario. L'operazione di disattivazione dei dati dalla tabella di cronologia è supportata se SYSTEM_VERSIONING è ON, ovvero è possibile pulire una parte dei dati di cronologia senza introdurre una finestra di manutenzione o bloccare i carichi di lavoro normali.  
   
-> **NOTA:** Per eseguire la disattivazione delle partizioni, è necessario che l'indice cluster sulla tabella di cronologia sia allineato allo schema di partizionamento, ovvero che contenga SysEndTime. La tabella di cronologia predefinita creata dal sistema contiene un indice cluster che include le colonne SysEndTime e SysStartTime, ottimali per il partizionamento, l'inserimento di nuovi dati di cronologia e le query temporali tipiche. Per altre informazioni, vedere [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
+> **NOTA** Per eseguire la disattivazione delle partizioni, è necessario che l'indice cluster sulla tabella di cronologia sia allineato allo schema di partizionamento, ovvero che contenga SysEndTime. La tabella di cronologia predefinita creata dal sistema contiene un indice cluster che include le colonne SysEndTime e SysStartTime, ottimali per il partizionamento, l'inserimento di nuovi dati di cronologia e le query temporali tipiche. Per altre informazioni, vedere [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
   
  In un approccio con finestra temporale scorrevole è necessario eseguire due set di attività:  
   
@@ -184,7 +183,7 @@ COMMIT ;
   
  ![Partizionamento](../../relational-databases/tables/media/partitioning.png "Partizionamento")  
   
-> **NOTA:** Vedere Considerazioni sulle prestazioni con il partizionamento delle tabelle più avanti per informazioni sulle conseguenze dell'uso di RANGE LEFT invece di RANGE RIGHT sulle prestazioni durante la configurazione del partizionamento.  
+> **NOTA** Vedere Considerazioni sulle prestazioni con il partizionamento delle tabelle più avanti per informazioni sulle conseguenze dell'uso di RANGE LEFT invece di RANGE RIGHT sulle prestazioni durante la configurazione del partizionamento.  
   
  Si noti che la prima e l'ultima partizione sono "aperte" rispettivamente sul limite inferiore e superiore, per garantire che ogni nuova riga abbia una partizione di destinazione, indipendentemente dal valore della colonna di partizionamento.   
 Con il passare del tempo, le nuove righe della tabella di cronologia verranno inserite in partizioni superiori. Quando la sesta partizione viene riempita, si raggiunge il limite del periodo di conservazione specificato. Questo è il momento in cui avviare per la prima volta l'attività ricorrente di manutenzione della partizione. Questa attività deve essere pianificata per l'esecuzione periodica, una volta al mese in questo esempio.  
@@ -435,7 +434,7 @@ COMMIT;
 ```  
 
 ## <a name="using-temporal-history-retention-policy-approach"></a>Uso dell'approccio con criteri di conservazione della cronologia temporale
-> **NOTA:**  l'uso dell'approccio con criteri di conservazione della cronologia temporale si applica a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e a SQL Server 2017 a partire da CTP 1.3.  
+> **NOTA**  l'uso dell'approccio con criteri di conservazione della cronologia temporale si applica a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e a SQL Server 2017 a partire da CTP 1.3.  
 
 La conservazione della cronologia temporale può essere configurata a livello di singola tabella. Ciò consente agli utenti di creare criteri di aging flessibili. L'applicazione della conservazione della cronologia temporale è semplice e richiede l'impostazione di un solo parametro durante la creazione della tabella o la modifica dello schema.
 

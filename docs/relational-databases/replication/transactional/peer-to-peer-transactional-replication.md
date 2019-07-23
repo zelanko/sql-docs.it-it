@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 51b083073e38c44708f4d017ee1fd1eb86278f24
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 20469bf6d6d7050c79346afea0f96e4167708f08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121330"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Peer-to-peer - Replica transazionale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +139,7 @@ ms.locfileid: "54129311"
   
 -   Il parametro **-SubscriptionStreams** dell'agente di distribuzione e il parametro **-MaxCmdsInTran**dell'agente di lettura log.  
   
--   Le proprietà di articolo **@destination_owner** e **@destination_table**.
+-   Le proprietà di articolo **@destination_owner** e **@destination_table** .
 
 -   La replica transazionale peer-to-peer non supporta la creazione di una sottoscrizione transazionale unidirezionale di una pubblicazione peer-to-peer.   
   
@@ -150,7 +149,7 @@ ms.locfileid: "54129311"
   
 -   La proprietà di articolo **@replicate_ddl** richiede il valore **true**, **@identityrangemanagementoption** richiede il valore **manual**e **@status** richiede che l'opzione **24** sia impostata.  
   
--   Il valore delle proprietà di articolo **@ins_cmd**, **@del_cmd**e **@upd_cmd** non può essere impostato su **SQL**.  
+-   Il valore delle proprietà di articolo **@ins_cmd** , **@del_cmd** e **@upd_cmd** non può essere impostato su **SQL**.  
   
 -   La proprietà di sottoscrizione **@sync_type** richiede il valore **none** o **automatic**.  
   

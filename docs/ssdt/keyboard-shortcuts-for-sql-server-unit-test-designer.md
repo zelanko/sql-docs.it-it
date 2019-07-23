@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b1c61454-242f-4948-a9ca-e2cd5df26102
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 757eebf28764c3332b54143424d525a0f2de9ae8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 424d36ea56d2c47886cd0b1cfc169bee93fb9f7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037217"
 ---
 # <a name="keyboard-shortcuts-for-sql-server-unit-test-designer"></a>Tasti di scelta rapida per la finestra di progettazione unit test di SQL Server
 È possibile usare i tasti di scelta rapida seguenti per spostarsi all'interno della finestra di progettazione unit test di SQL Server.  
@@ -27,7 +26,7 @@ ms.locfileid: "65088910"
 |Passare dall'editor Transact\-SQL alla barra di spostamento.|CTRL + F2|  
 |Spostarsi avanti tra gli elementi della barra di navigazione.|TAB|  
 |Spostarsi indietro tra gli elementi della barra di navigazione.|MAIUSC+TAB|  
-|Spostarsi tra i diversi riquadri nella finestra di progettazione unit test del database.<br /><br />**NOTA:** questo tasto di scelta rapida non funzionerà se alla prima apertura di Visual Studio è stato specificato C# per il profilo di sviluppo.|F6/MAIUSC+F6|  
+|Spostarsi tra i diversi riquadri nella finestra di progettazione unit test del database.<br /><br />**NOTA** questo tasto di scelta rapida non funzionerà se alla prima apertura di Visual Studio è stato specificato C# per il profilo di sviluppo.|F6/MAIUSC+F6|  
   
 ## <a name="see-also"></a>Vedere anche  
 [Creazione e definizione di unit test di SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

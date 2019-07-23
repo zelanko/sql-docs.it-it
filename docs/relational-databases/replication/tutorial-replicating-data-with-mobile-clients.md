@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f967453ff629a7827d47b25085edd4aa304b1aa
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7e7a186efb5da3ef509f3ada02e301d0777ffd2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895372"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Esercitazione: Configurare la replica tra un server e più client per dispositivi mobili (replica di tipo merge)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +107,7 @@ In questa sezione viene creata una pubblicazione di tipo merge con [!INCLUDE[ssM
 
     
   
-10. Nella pagina **Filtro righe tabella** selezionare **Employee (Human Resources)**, selezionare **Aggiungi** e quindi **Aggiungi join per estendere il filtro selezionato**.  
+10. Nella pagina **Filtro righe tabella** selezionare **Employee (Human Resources)** , selezionare **Aggiungi** e quindi **Aggiungi join per estendere il filtro selezionato**.  
   
     A. Nella finestra di dialogo **Aggiungi join** selezionare **Sales.SalesOrderHeader** in **Tabella unita in join**. Selezionare **L'istruzione per il join verrà scritta manualmente** e completare l'istruzione per il join come indicato di seguito:  
   
@@ -139,7 +138,7 @@ In questa sezione viene creata una pubblicazione di tipo merge con [!INCLUDE[ssM
 
     ![Selezione per creare uno snapshot immediatamente](media/tutorial-replicating-data-with-mobile-clients/snapshotagent.png)
   
-22. Nella pagina **Sicurezza agente** selezionare **Impostazioni di sicurezza**. Immettere <*Nome_server_pubblicazione*>**\repl_snapshot** nella casella **Account processo**, specificare la password per l'account e quindi selezionare **OK**. Fare clic su **Avanti**.  
+22. Nella pagina **Sicurezza agente** selezionare **Impostazioni di sicurezza**. Immettere <*Nome_server_pubblicazione*> **\repl_snapshot** nella casella **Account processo**, specificare la password per l'account e quindi selezionare **OK**. Fare clic su **Avanti**.  
 
     ![Selezioni per impostare la sicurezza dell'agente di snapshot](media/tutorial-replicating-data-with-mobile-clients/snapshotagentsecurity.png)
   
@@ -167,7 +166,7 @@ In questa sezione viene creata una pubblicazione di tipo merge con [!INCLUDE[ssM
   
    A. Selezionare la pagina **Elenco di accesso alla pubblicazione** e selezionare **Aggiungi**. 
   
-   B. Nella finestra di dialogo **Aggiungi accesso alla pubblicazione** selezionare <*Nome_server_pubblicazione*>**\repl_merge** e selezionare **OK**. Selezionare di nuovo **OK**. 
+   B. Nella finestra di dialogo **Aggiungi accesso alla pubblicazione** selezionare <*Nome_server_pubblicazione*> **\repl_merge** e selezionare **OK**. Selezionare di nuovo **OK**. 
 
    ![Selezioni per aggiungere l'account di accesso dell'agente di merge](media/tutorial-replicating-data-with-mobile-clients/mergepal.png) 
 
@@ -205,7 +204,7 @@ In questa sezione si aggiungerà una sottoscrizione alla pubblicazione di tipo m
 
    ![Selezioni per aggiungere un database al sottoscrittore](media/tutorial-replicating-data-with-mobile-clients/addsubdb.png)
   
-8. Nella pagina **Sicurezza agente di merge** selezionare il pulsante con i tre puntini (**…**). Immettere <*Nome_computer_sottoscrittore*>**\repl_merge** nella casella **Account processo** e specificare la password per questo account. Selezionare **OK**, **Avanti** e quindi di nuovo **Avanti**.  
+8. Nella pagina **Sicurezza agente di merge** selezionare il pulsante con i tre puntini ( **…** ). Immettere <*Nome_computer_sottoscrittore*> **\repl_merge** nella casella **Account processo** e specificare la password per questo account. Selezionare **OK**, **Avanti** e quindi di nuovo **Avanti**.  
 
    ![Selezioni per la sicurezza dell'agente di merge](media/tutorial-replicating-data-with-mobile-clients/mergeagentsecurity.png)
 
@@ -227,7 +226,7 @@ In questa sezione si aggiungerà una sottoscrizione alla pubblicazione di tipo m
   
 1. Connettersi al sottoscrittore in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Espandere la cartella **Sicurezza**, fare clic con il pulsante destro del mouse su **Account di accesso** e quindi scegliere **Nuovo account accesso**.  
   
-   Nella pagina **Generale** selezionare **Cerca** e quindi immettere <*Nome_ computer_sottoscrittore*>**\repl_merge** nella casella **Immettere il nome dell'oggetto**. Selezionare **Verifica nomi** e quindi selezionare **OK**. 
+   Nella pagina **Generale** selezionare **Cerca** e quindi immettere <*Nome_ computer_sottoscrittore*> **\repl_merge** nella casella **Immettere il nome dell'oggetto**. Selezionare **Verifica nomi** e quindi selezionare **OK**. 
     
    ![Selezioni per impostare l'account di accesso](media/tutorial-replicating-data-with-mobile-clients/sublogin.png)
   

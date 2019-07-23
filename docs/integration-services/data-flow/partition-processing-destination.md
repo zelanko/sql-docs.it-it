@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 22fa9d76887451e57f41c8536efc71d954e2e78c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f062b4a9edcab9e7214155cea6ad4451107b936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034495"
 ---
 # <a name="partition-processing-destination"></a>Destinazione elaborazione partizione
 
