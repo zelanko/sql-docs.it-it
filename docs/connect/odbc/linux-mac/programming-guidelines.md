@@ -9,13 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 45d1fc9d06dd814e4ee6d80ec5ecbbe9e58d09c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4ab43eb8fce50513ae5d9dd726a15223f0f722b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798746"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264147"
 ---
 # <a name="programming-guidelines"></a>Linee guida per la programmazione
 
@@ -130,6 +129,8 @@ In ODBC Driver 13 e 13.1, quando caratteri multibyte UTF-8 o caratteri sostituti
     > Le connessioni DAC devono usare l'autenticazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
     
 2.  Gestione driver UnixODBC restituisce "Identificatore di opzione o di attributo non valido" per tutti gli attributi di istruzione quando questi vengono passati tramite SQLSetConnectAttr. In Windows, quando SQLSetConnectAttr riceve il valore di un attributo di istruzione, il driver imposta questo valore in tutte le istruzioni attive figlio dell'handle di connessione.  
+
+3.  Quando si usa il driver con applicazioni a multithreading, la convalida dell'handle di unixODBC può diventare un collo di bottiglia delle prestazioni. In questi scenari, è possibile ottenere prestazioni significativamente maggiori compilando unixODBC con l' `--enable-fastvalidate` opzione. Tuttavia, tenere presente che ciò potrebbe causare l'arresto anomalo di applicazioni che passano handle non validi alle `SQL_INVALID_HANDLE` API ODBC anziché restituire errori.
 
 ## <a name="see-also"></a>Vedere anche  
 [Domande frequenti](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)

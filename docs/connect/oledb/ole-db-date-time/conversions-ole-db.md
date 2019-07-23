@@ -14,24 +14,23 @@ helpviewer_keywords:
 - OLE DB, bindings and conversions
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 19c732a38c5237811f4f2219292ab4589018f4e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dc86193f40474fc373c1b0e7dd48e579e8548821
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769406"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015842"
 ---
 # <a name="conversions-ole-db"></a>Conversioni (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Questa sezione illustra come eseguire la conversione tra **data/ora** e **datetimeoffset** valori. Le conversioni descritte in questa sezione sono già disponibili in OLE DB o costituiscono un'estensione coerente di OLE DB.  
+  In questa sezione viene illustrato come eseguire la conversione tra valori **DateTime** e **DateTimeOffset** . Le conversioni descritte in questa sezione sono già disponibili in OLE DB o costituiscono un'estensione coerente di OLE DB.  
   
- Il formato di valori letterali e stringhe per date e ore in OLE DB segue in genere lo standard ISO e non dipende dalle impostazioni locali del client. Un'eccezione è rappresentata da DBTYPE_DATE, che utilizza come standard l'automazione OLE. Tuttavia, poiché il Driver OLE DB per SQL Server esegue solo la conversione tra tipi quando i dati vengono trasmessi al o dal client, non è in alcun modo per un'applicazione forzare il Driver OLE DB per SQL Server per la conversione tra DBTYPE_DATE e formati stringa. In caso contrario, le stringhe utilizzano i formati indicati di seguito. Il testo tra parentesi indica un elemento facoltativo.  
+ Il formato di valori letterali e stringhe per date e ore in OLE DB segue in genere lo standard ISO e non dipende dalle impostazioni locali del client. Un'eccezione è rappresentata da DBTYPE_DATE, che utilizza come standard l'automazione OLE. Tuttavia, poiché OLE DB driver per SQL Server si converte solo tra tipi quando i dati vengono trasmessi da e verso il client, non esiste alcun modo per un'applicazione forzare OLE DB driver per la conversione SQL Server tra i formati DBTYPE_DATE e String. In caso contrario, le stringhe utilizzano i formati indicati di seguito. Il testo tra parentesi indica un elemento facoltativo.  
   
--   Il formato del **data/ora** e **datetimeoffset** stringhe è:  
+-   Il formato delle stringhe **DateTime** e **DateTimeOffset** è il seguente:  
   
      *aaaa*-*mm*-*gg*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
   
@@ -39,14 +38,14 @@ ms.locfileid: "66769406"
   
      *hh*:*mm*:*ss*[.*9999999*]  
   
--   Il formato del **data** stringhe è:  
+-   Il formato delle stringhe di **Data** è:  
   
      *aaaa*-*mm*-*gg*  
   
 > [!NOTE]  
->  Le versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e SQLOLEDB implementano conversioni OLE se le conversioni standard non vengono eseguite correttamente. Il Driver OLE DB per SQL Server segue lo stesso comportamento [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Di conseguenza, alcune conversioni eseguite da Driver OLE DB per SQL Server differiscono dalla specifica OLE DB.  
+>  Le versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e SQLOLEDB implementano conversioni OLE se le conversioni standard non vengono eseguite correttamente. Il driver OLE DB per SQL Server segue lo stesso comportamento di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Di conseguenza, alcune conversioni eseguite dal driver OLE DB per SQL Server differiscono dalla specifica OLE DB.  
   
- Le conversioni dalle stringhe consentono flessibilità nella larghezza degli spazi vuoti e dei campi. Per altre informazioni, vedere la sezione "Dati nei formati: stringhe e valori letterali" in [supporto dei tipi di dati per data OLE DB e miglioramenti per la fase](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
+ Le conversioni dalle stringhe consentono flessibilità nella larghezza degli spazi vuoti e dei campi. Per ulteriori informazioni, vedere la sezione "formati di dati: stringhe e valori letterali" in [supporto dei tipi di dati per OLE DB miglioramenti di data e ora](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
   
  Di seguito vengono fornite le regole di conversione generali:  
   

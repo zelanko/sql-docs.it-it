@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6494300b-7fc0-4076-8311-22d35a96cdc6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 690f4e43fcbc1064fe0e59143be76d24e5cfc556
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5891b971bcf6129ec3b5fcec4e9ae8f0301283b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973592"
 ---
 # <a name="setnstring-method-sqlservercallablestatement"></a>Metodo setNString (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,13 +36,13 @@ public final void setNString(java.lang.String parameterName, java.lang.String va
   
  *Valore*  
   
- Oggetto stringa.  
+ Oggetto String.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo deve essere usato per **NCHAR**, **NVARCHAR**, **NTEXT**, e **XML** i tipi di dati.  
+ Questo metodo deve essere utilizzato per i tipi di dati **nchar**, **nvarchar**, **ntext**e **XML** .  
   
  Questo metodo setNString viene specificato dal metodo setNString nell'interfaccia java.sql.CallableStatement.  
   

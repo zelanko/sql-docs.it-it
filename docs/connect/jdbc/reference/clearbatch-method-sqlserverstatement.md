@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e6fc1461-bbc6-45ae-85b1-a824aba51085
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 22967f2b1e4bc74f297db8a2b4782166e037af69
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: dbd52e2576bc9924c623a2a4627d998b74571edb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803671"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955776"
 ---
 # <a name="clearbatch-method-sqlserverstatement"></a>Metodo clearBatch (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void clearBatch()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo clearBatch viene specificato dal metodo clearBatch nell'interfaccia Statement.  
+ Questo metodo clearBatch viene specificato dal metodo clearBatch nell'interfaccia java. SQL. Statement.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

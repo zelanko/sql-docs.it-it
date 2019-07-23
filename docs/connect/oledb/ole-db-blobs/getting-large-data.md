@@ -1,6 +1,6 @@
 ---
 title: Recupero di dati di grandi dimensioni | Microsoft Docs
-description: Recupero di dati di grandi dimensioni usando il Driver OLE DB per SQL Server
+description: Recupero di dati di grandi dimensioni con OLE DB driver per SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 968ab9c3d586a9a1b49d356a6e55ff35336c28cd
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fc9b1ccc24a31083e2a6ef111ad2e79781eef6d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803932"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936530"
 ---
 # <a name="getting-large-data"></a>Recupero di dati di grandi dimensioni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,9 +37,9 @@ ms.locfileid: "66803932"
   
 -   ICommand::Execute  
   
- Il consumer deve recuperare una singola riga di dati in una chiamata al metodo **GetNextRows** quando la proprietà DBPROP_ACCESSORDER, nel gruppo di proprietà del set di righe, è impostata su DBPROPVAL_AO_SEQUENTIAL o DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS. Questo avviene perché i dati BLOB non viene memorizzato nel buffer. Se il valore di DBPROP_ACCESSORDER è impostato su DBPROPVAL_AO_RANDOM, il consumer può recuperare più righe di dati in **GetNextRows**.  
+ Il consumer deve recuperare una singola riga di dati in una chiamata al metodo **GetNextRows** quando la proprietà DBPROP_ACCESSORDER, nel gruppo di proprietà del set di righe, è impostata su DBPROPVAL_AO_SEQUENTIAL o DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS. Poiché i dati BLOB non vengono memorizzati nel buffer. Se il valore di DBPROP_ACCESSORDER è impostato su DBPROPVAL_AO_RANDOM, il consumer può recuperare più righe di dati in **GetNextRows**.  
   
- Il Driver OLE DB per SQL Server non recuperare i dati di grandi dimensioni da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] finché non viene richiesto di farlo dal consumer. Il consumer deve associare tutti i dati di tipo short in una funzione di accesso e quindi utilizzare una o più funzioni di accesso temporanee per recuperare valori di dati di grandi dimensioni come richiesto.  
+ Il driver OLE DB per SQL Server non recupera dati di grandi dimensioni [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da fino a quando non viene richiesto dal consumer. Il consumer deve associare tutti i dati di tipo short in una funzione di accesso e quindi utilizzare una o più funzioni di accesso temporanee per recuperare valori di dati di grandi dimensioni come richiesto.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene recuperato un valore di dati di grandi dimensioni da una singola colonna:  

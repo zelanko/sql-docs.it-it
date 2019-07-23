@@ -1,5 +1,5 @@
 ---
-title: Creazione di tracce | Microsoft Docs
+title: Traccia operazione driver | Microsoft Docs
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d19cd119ca2d0832f3e3b7fe261245a2a55987a8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a8e04fe67605c97e12c688e0b05b8c437b6aa182
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916680"
 ---
 # <a name="tracing-driver-operation"></a>Creazione di tracce
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "66798260"
 > [!NOTE]  
 >  Per il componente nativo (sqljdbc_xa.dll) incluso nel driver JDBC, la creazione di tracce è abilitata grazie al framework Built-In Diagnostics (BID). Per informazioni sul BID, vedere la pagina relativa alla [traccia di accesso ai dati in SQL Server](https://go.microsoft.com/fwlink/?LinkId=70042).  
   
- Quando si sviluppa l'applicazione, è possibile eseguire chiamate a oggetti Logger che consentono di creare oggetti LogRecord, i quali vengono quindi passati a oggetti Handler per l'elaborazione. Logger e gestore dagli oggetti di entrambi i livelli di registrazione e, facoltativamente, in cui vengono elaborati i filtri di registrazione per definire quali LogRecords. Al termine delle operazioni di registrazione, con gli oggetti Handler possono facoltativamente essere utilizzati gli oggetti Formatter per pubblicare le informazioni sul log.  
+ Quando si sviluppa l'applicazione, è possibile eseguire chiamate a oggetti Logger che consentono di creare oggetti LogRecord, i quali vengono quindi passati a oggetti Handler per l'elaborazione. Gli oggetti logger e handler usano entrambi i livelli di registrazione e, facoltativamente, i filtri di registrazione per regolare quali LogRecords vengono elaborati. Al termine delle operazioni di registrazione, con gli oggetti Handler possono facoltativamente essere utilizzati gli oggetti Formatter per pubblicare le informazioni sul log.  
   
  Per impostazione predefinita, l'output del framework java.util.logging viene scritto su un file. Tale file deve disporre di autorizzazioni di scrittura per il contesto su cui è in esecuzione il driver JDBC.  
   
@@ -80,7 +79,7 @@ ms.locfileid: "66798260"
   
 |nome|Descrizione|  
 |----------|-----------------|  
-|AuthenticationJNI|Registra i messaggi riguardanti il Windows integrato problemi di autenticazione (quando il **authenticationScheme** proprietà di connessione è impostata in modo implicito o esplicito su **NativeAuthentication**).<br /><br /> Le applicazioni possono impostare il livello di registrazione su FINEST e FINE.|  
+|AuthenticationJNI|Registra i messaggi relativi ai problemi di autenticazione integrata di Windows (quando la proprietà di connessione **authenticationScheme** è impostata in modo implicito o esplicito su **NativeAuthentication**).<br /><br /> Le applicazioni possono impostare il livello di registrazione su FINEST e FINE.|  
 |SQLServerConnection|Consente di registrare i messaggi nella classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Le applicazioni possono impostare il livello di registrazione su FINE e FINER.|  
 |SQLServerDataSource|Consente di registrare i messaggi nelle classi [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) e [SQLServerPooledConnection](../../connect/jdbc/reference/sqlserverpooledconnection-class.md).<br /><br /> Le applicazioni possono impostare il livello di registrazione su FINER.|  
 |InputStream|Consente di registrare i messaggi relativi ai tipi di dati java.io.InputStream e java.io.Reader, nonché ai tipi di dati per i quali è disponibile un identificatore max, ad esempio varchar, nvarchar e varbinary.<br /><br /> Le applicazioni possono impostare il livello di registrazione su FINER.|  
@@ -88,7 +87,7 @@ ms.locfileid: "66798260"
 |SQLServerResultSet|Consente di registrare i messaggi nella classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md). Le applicazioni possono impostare il livello di registrazione su FINE, FINER e FINEST.|  
 |SQLServerStatement|Consente di registrare i messaggi nella classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). Le applicazioni possono impostare il livello di registrazione su FINE, FINER e FINEST.|  
 |XA|Consente di registrare i messaggi per tutte le transazioni XA nella classe [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md). Le applicazioni possono impostare il livello di registrazione su FINE e FINER.|  
-|KerbAuthentication|Registrati messaggi relativi all'autenticazione Kerberos di tipo 4 (quando il **authenticationScheme** proprietà di connessione è impostata su **JavaKerberos**). L'applicazione può impostare il livello di registrazione su FINE o FINER.|  
+|KerbAuthentication|Registra i messaggi relativi all'autenticazione Kerberos di tipo 4, quando la proprietà di connessione **authenticationScheme** è impostata su **JavaKerberos**. L'applicazione può impostare il livello di registrazione su FINE o FINER.|  
 |TDS.DATA|Registra i messaggi contenenti la conversazione a livello di protocollo TDS tra il driver e SQL Server. Il contenuto dettagliato di ogni pacchetto TDS inviato e ricevuto viene registrato in formato ASCII ed esadecimale. Le credenziali di accesso (nomi utente e password) non vengono registrate. Tutti gli altri dati vengono registrati.<br /><br /> Questa categoria consente di creare messaggi molto dettagliati ed esaustivi e può essere abilitata solo impostando il livello di registrazione su FINEST.|  
 |TDS.Channel|Questa categoria consente di eseguire le tracce delle azioni del canale di comunicazione TCP con SQL Server. I messaggi registrati includono l'apertura e la chiusura di socket, nonché le operazioni di lettura e scrittura. Vengono inoltre eseguite le tracce dei messaggi correlati alla definizione di una connessione SSL (Secure Socket Layer) con SQL Server.<br /><br /> Può essere abilitata solo impostando il livello di registrazione su FINE, FINER o FINEST.|  
 |TDS.Writer|Questa categoria consente di eseguire le tracce delle operazioni di scrittura nel canale TDS. Si noti che vengono eseguite le tracce solo della lunghezza delle operazioni di scrittura e non del contenuto. Vengono inoltre eseguite le tracce dei problemi quando al server viene inviato un segnale di attenzione per annullare l'esecuzione di un'istruzione.<br /><br /> Può essere abilitata solo impostando il livello di registrazione su FINEST.|  

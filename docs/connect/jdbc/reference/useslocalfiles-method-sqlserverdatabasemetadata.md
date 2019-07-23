@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 69afb3a9-ed56-4191-88b8-bc46c03b817b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9fdbdf51d97a8b28bb7b357ea45cee09dc40133c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a88b6645445b9b9a4c644444ad3996377436112f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788949"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001598"
 ---
 # <a name="useslocalfiles-method-sqlserverdatabasemetadata"></a>Metodo usesLocalFiles (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean usesLocalFiles()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se il database Usa i file locali. In caso contrario, **false**.  
+ **true** se il database utilizza file locali. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo usesLocalFiles viene specificato dal metodo usesLocalFiles nell'interfaccia DatabaseMetaData.  
+ Questo metodo usesLocalFiles viene specificato dal Metodo usesLocalFiles nell'interfaccia java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

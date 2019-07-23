@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 20bbeacd-ccca-4a46-8184-ff941ae2ec5f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b3bed617efc3f2c646f237629ca8d737729915c0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1d697554d246d9bcc1720455137287029880d90a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66772801"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955165"
 ---
 # <a name="datetimeoffset-class"></a>Classe DateTimeOffset
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Questo tipo rappresenta un oggetto di tipo DateTimeOffset ed è il tipo Java che corrisponde alla [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetimeoffset** tipo di dati.  
+  Questo tipo rappresenta un oggetto di tipo Microsoft. SQL. DateTimeOffset ed è il tipo Java che corrisponde al tipo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di dati **DateTimeOffset** .  
   
  **Pacchetto:** microsoft.sql  
   
@@ -37,7 +36,7 @@ public final class DateTimeOffset
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Per altre informazioni sui tipi di dati, vedere [informazioni sui tipi di dati del Driver JDBC](../../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).  
+ Per ulteriori informazioni sui tipi di dati, vedere informazioni sui [tipi di dati del driver JDBC](../../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni di riferimento sull'API del driver JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 05a8e57b4d531d05cdf14cb57ab164851d0c1800
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7bfb8eee85e9eede4dcf3e47ad4ecbe13a08d2ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004240"
 ---
 # <a name="troubleshooting-connectivity"></a>Risoluzione dei problemi di connettività
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "66798247"
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è installato ma TCP/IP non è stato installato come protocollo di rete per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando l'utilità Configurazione di rete di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] o Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.  
   
-    -   TCP/IP è installato come protocollo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma non è in attesa sulla porta specificata nell'URL della connessione JDBC. La porta predefinita è la 1433, ma al momento dell'installazione del prodotto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere configurato per restare in attesa su qualsiasi porta. Verificare che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia in attesa sulla porta 1433. In alternativa, se la porta è stata modificata, assicurarsi che la porta specificata nell'URL della connessione JDBC corrisponda al nuovo valore. Per altre informazioni sugli URL delle connessioni JDBC, vedere [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md).  
+    -   TCP/IP è installato come protocollo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma non è in attesa sulla porta specificata nell'URL della connessione JDBC. La porta predefinita è la 1433, ma al momento dell'installazione del prodotto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere configurato per restare in attesa su qualsiasi porta. Verificare che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sia in attesa sulla porta 1433. In alternativa, se la porta è stata modificata, assicurarsi che la porta specificata nell'URL della connessione JDBC corrisponda al nuovo valore. Per ulteriori informazioni sugli URL di connessione JDBC, vedere [compilazione dell'URL](../../connect/jdbc/building-the-connection-url.md)di connessione.  
   
     -   L'indirizzo del computer specificato nell'URL della connessione JDBC non fa riferimento a un server in cui è installato e avviato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -15,22 +15,21 @@ helpviewer_keywords:
 - GetErrorInfo method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 6a43a5882529353a05b41a111ead20d0dd148078
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 54e9c71ca21647004ea3899306dcb15689dcc3d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799336"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015446"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Restituisce un puntatore a un Driver OLE DB per SQL Server SSERRORINFO struttura che contiene il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] i dettagli dell'errore.  
+  Restituisce un puntatore a un driver OLE DB per SQL Server struttura SSERRORINFO contenente i [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dettagli dell'errore.  
   
- Il Driver OLE DB per SQL Server definisce la **ISQLServerErrorInfo** interfaccia degli errori. Questa interfaccia restituisce i dettagli di un errore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], inclusi la gravità e lo stato.  
+ Il driver OLE DB per SQL Server definisce l'interfaccia degli errori **ISQLServerErrorInfo** . Questa interfaccia restituisce i dettagli di un errore di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], inclusi la gravità e lo stato.  
 
   
 ## <a name="syntax"></a>Sintassi  
@@ -54,10 +53,10 @@ HRESULT GetErrorInfo(
  Il metodo è riuscito.  
   
  E_INVALIDARG  
- Entrambi i *ppSSErrorInfo* o nella *ppErrorStrings* argomento era NULL.  
+ L'argomento *ppSSErrorInfo* o *ppErrorStrings* è null.  
   
  E_OUTOFMEMORY  
- Il Driver OLE DB per SQL Server non è riuscito ad allocare memoria sufficiente per completare la richiesta.  
+ Il driver OLE DB per SQL Server non è stato in grado di allocare memoria sufficiente per completare la richiesta.  
   
 ## <a name="remarks"></a>Remarks  
  Il driver OLE DB per SQL Server alloca memoria per le stringhe SSERRORINFO e OLECHAR restituite tramite i puntatori passati dal consumer. Il consumer deve deallocare questa memoria tramite il metodo **IMalloc::Free** quando l'accesso ai dati dell'errore non è più necessario.  
@@ -91,7 +90,7 @@ SSERRORINFO;
  I puntatori nella struttura fanno riferimento agli indirizzi nella stringa restituita nell'argomento *ppErrorStrings*.  
   
 ## <a name="see-also"></a>Vedere anche  
- [ISQLServerErrorInfo &#40;OLE DB&#41;](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
+ [OLE DB &#40;ISQLServerErrorInfo&#41;](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
  [RAISERROR &#40;Transact-SQL&#41;](../../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

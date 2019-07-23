@@ -1,6 +1,6 @@
 ---
-title: Modifica delle password a livello di codice | Microsoft Docs
-description: Modifica delle password a livello di codice usando il Driver OLE DB per SQL Server
+title: Modifica delle password a livello di programmazione | Microsoft Docs
+description: Modifica delle password a livello di codice tramite OLE DB driver per SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -20,20 +20,19 @@ helpviewer_keywords:
 - modifying passwords
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: fdf5afb7cc9eea9beed43726d3c107c9fde9b6e2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a6c9e52dc46818d3d188f2fa742e2bccad769cf8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777889"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989128"
 ---
 # <a name="changing-passwords-programmatically"></a>Modifica delle password a livello di programmazione
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Nelle versioni precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] una password di un utente scaduta può essere reimpostata solo da un amministratore. A partire [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], il Driver OLE DB per SQL Server supporta la gestione della scadenza della password a livello di programmazione tramite Driver OLE DB e le modifiche per il **account di accesso di SQL Server** finestre di dialogo.  
+  Nelle versioni precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] una password di un utente scaduta può essere reimpostata solo da un amministratore. A partire [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]da, OLE DB driver per SQL Server supporta la gestione della scadenza delle password a livello di programmazione tramite OLE DB driver e le modifiche apportate alle finestre di dialogo di **accesso SQL Server** .  
   
 > [!NOTE]  
 >  Quando possibile, richiedere agli utenti di immettere le credenziali in fase di esecuzione ed evitare di archiviarle in un formato persistente. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](https://go.microsoft.com/fwlink/?LinkId=64532). Per altre informazioni sull'uso delle password, vedere [Password complesse](../../../relational-databases/security/strong-passwords.md).  
@@ -54,7 +53,7 @@ ms.locfileid: "66777889"
 |18488|Accesso non riuscito per l'utente '%.*ls'. Motivo: è necessario modificare la password dell'account.|  
   
 ## <a name="ole-db-driver-for-sql-server"></a>Driver OLE DB per SQL Server  
- Il Driver OLE DB per SQL Server supporta la scadenza password mediante un'interfaccia utente e a livello di codice.  
+ Il driver OLE DB per SQL Server supporta la scadenza delle password tramite un'interfaccia utente e a livello di codice.  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>Scadenza password dell'interfaccia utente OLE DB  
  Il driver OLE DB per SQL Server supporta la scadenza password mediante le modifiche apportate alle finestre di dialogo **Account di accesso di SQL Server**. Se il valore di DBPROP_INIT_PROMPT è impostato su DBPROMPT_NOPROMPT, il tentativo di connessione iniziale non riesce se la password è scaduta.  
@@ -90,7 +89,7 @@ ms.locfileid: "66777889"
   
  Se un tentativo di modificare la password non riesce in modo imprevisto, il server restituisce il codice di errore 18468. Dal tentativo di connessione viene restituito un errore OLE DB standard.  
   
- Per altre informazioni sul set di proprietà DBPROPSET_SQLSERVERDBINIT, vedere [proprietà di inizializzazione e autorizzazione](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Per ulteriori informazioni sul set di proprietà DBPROPSET_SQLSERVERDBINIT, vedere [proprietà di inizializzazione e di autorizzazione](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
 
   
 ## <a name="see-also"></a>Vedere anche  

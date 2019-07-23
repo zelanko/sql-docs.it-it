@@ -1,5 +1,5 @@
 ---
-title: Metodo setUser (SQLServerDataSource) | Microsoft Docs
+title: Metodo seuser (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d2ea7906-2d10-438d-aa51-f576eea923c7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 13ea4a88b4b7a233695e134ef79daccd608d5813
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 945033f96b5c8c36ea7b3d4c75aafa382a057164
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972070"
 ---
 # <a name="setuser-method-sqlserverdatasource"></a>Metodo setUser (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

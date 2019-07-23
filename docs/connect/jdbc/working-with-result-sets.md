@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di set di risultati | Microsoft Docs
+title: Utilizzo dei set di risultati | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3efeec0dee1f1bd66e64b3a1449bbaf1bf08722e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fe44efec59b78fe025cd08207c2026e658466554
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768562"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003833"
 ---
 # <a name="working-with-result-sets"></a>Utilizzo dei set di risultati
 
@@ -27,7 +26,7 @@ Quando si usano i dati contenuti in un database di [!INCLUDE[ssNoVersion](../../
 L'oggetto SQLServerResultSet offre anche metodi per la navigazione nelle righe di dati, per il recupero o l'impostazione dei dati in esso contenuti, per la creazione di vari livelli di sensibilità alle modifiche nel database sottostante.  
   
 > [!NOTE]  
-> Per altre informazioni sulla gestione dei set di risultati, inclusa la sensibilità alle modifiche, vedere [gestione dei set di risultati con il Driver JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md).  
+> Per ulteriori informazioni sulla gestione dei set di risultati, inclusa la sensibilità alle modifiche, vedere [gestione dei set di risultati con il driver JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md).  
   
 Negli argomenti della sezione vengono descritti vari modi di usare un set di risultati per manipolare i dati contenuti in un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

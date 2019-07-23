@@ -1,5 +1,5 @@
 ---
-title: Comandi che generano risultati di più set di righe | Microsoft Docs
+title: Comandi che generano risultati con più set di righe | Microsoft Docs
 description: Comandi che generano risultati con più set di righe
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,27 +17,26 @@ helpviewer_keywords:
 - multiple-rowset results
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 29504408c66cb5bada0e180eeda8f41834e10288
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5374e1ccd1024993369091b431a025676bccf1f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795748"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016061"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Comandi che generano risultati con più set di righe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Il Driver OLE DB per SQL Server può restituire più set di righe da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istruzioni. Tramite le istruzioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono restituiti più set di righe nelle condizioni seguenti:  
+  Il driver OLE DB per SQL Server può restituire più set di righe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dalle istruzioni. Tramite le istruzioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono restituiti più set di righe nelle condizioni seguenti:  
   
 -   Le istruzioni SQL in batch vengono inviate come singolo comando.  
   
 -   Le stored procedure consentono di implementare un batch di istruzioni SQL.  
   
 ## <a name="batches"></a>Batch  
- Il Driver OLE DB per SQL Server riconosce il carattere punto e virgola come delimitatore di batch per le istruzioni SQL:  
+ Il driver OLE DB per SQL Server riconosce il carattere punto e virgola come delimitatore di batch per le istruzioni SQL:  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

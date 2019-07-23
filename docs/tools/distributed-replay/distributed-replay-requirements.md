@@ -1,5 +1,5 @@
 ---
-title: Requisiti relativi a riesecuzione distribuita | Microsoft Docs
+title: Requisiti di Riesecuzione distribuita | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2018
 ms.prod: sql
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 73aca1900afc191dd3df795b1716b624d5c36201
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 12b27321182e19d2a366e44c0a5ad1c325ee486d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527655"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075028"
 ---
 # <a name="distributed-replay-requirements"></a>Requisiti relativi a Riesecuzione distribuita
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "52527655"
 ### <a name="input-trace-versions"></a>Versioni della traccia di input  
  Riesecuzione distribuita supporta dati di traccia di input raccolti nelle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]seguenti:  
   
--   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]  Aggiornamento cumulativo 1 e versioni successiva. Vedere - [gli aggiornamenti cumulativi di SQL Server 2017](https://aka.ms/sql2017cu).
+-   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]Aggiornamento cumulativo 1 e versioni successive. Vedere- [SQL Server 2017 aggiornamenti cumulativi](https://aka.ms/sql2017cu).
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  

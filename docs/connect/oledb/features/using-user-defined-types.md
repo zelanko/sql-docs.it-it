@@ -1,6 +1,6 @@
 ---
-title: Usare tipi definiti dall'utente | Microsoft Docs
-description: Uso di tipi definiti dall'utente con Driver OLE DB per SQL Server
+title: Uso di tipi definiti dall'utente | Microsoft Docs
+description: Uso di tipi definiti dall'utente con OLE DB driver per SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -21,13 +21,12 @@ helpviewer_keywords:
 - ISSCommandWithParameters interface
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: efc2c82f047beca82f1daeda6318f16803499f86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 731e00fdf4c9f073348389f537fa812e10bcbab5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802856"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988801"
 ---
 # <a name="using-user-defined-types"></a>Utilizzo dei tipi definiti dall'utente (UDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "66802856"
 >  Il metodo **IRowsetFind::FindNextRow** non funziona con il tipo di dati UDT. Se il tipo definito dall'utente viene utilizzato come tipo di colonna di ricerca, viene restituito DB_E_BADCOMPAREOP.  
   
 ### <a name="data-bindings-and-coercions"></a>Associazione dati e coercizioni  
- Nella tabella seguente vengono descritte l'associazione e la coercizione che si verificano quando si utilizzano i tipi di dati elencati con un tipo definito dall'utente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le colonne di tipo definito dall'utente vengono esposte tramite il Driver OLE DB per SQL Server come DBTYPE_UDT. È possibile ottenere i metadati tramite i set di righe dello schema appropriati in modo da potere gestire i tipi definiti personalizzati come oggetti.  
+ Nella tabella seguente vengono descritte l'associazione e la coercizione che si verificano quando si utilizzano i tipi di dati elencati con un tipo definito dall'utente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le colonne con tipo definito dall'utente vengono esposte tramite il driver OLE DB per SQL Server come DBTYPE_UDT. È possibile ottenere i metadati tramite i set di righe dello schema appropriati in modo da potere gestire i tipi definiti personalizzati come oggetti.  
   
 |Tipo di dati|Al server<br /><br /> **UDT**|Al server<br /><br /> **non UDT**|Dal server<br /><br /> **UDT**|Dal server<br /><br /> **non UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
@@ -82,7 +81,7 @@ ms.locfileid: "66802856"
  Le conversioni dei dati fornite dai servizi principali OLE DB (**IDataConvert**) non sono applicabili a DBTYPE_UDT. Non sono supportate altre associazioni.  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>Aggiunte e modifiche ai set di righe OLE DB  
- Driver OLE DB per SQL Server aggiunti nuovi valori o modifiche a molti dei set di righe dello schema OLE DB principali.  
+ OLE DB driver per SQL Server aggiunge nuovi valori o modifiche a molti dei set di righe dello schema OLE DB principali.  
   
 #### <a name="the-procedureparameters-schema-rowset"></a>Set di righe dello schema PROCEDURE_PARAMETERS  
  Al set di righe dello schema PROCEDURE_PARAMETERS sono state effettuate le seguenti aggiunte.  
@@ -137,7 +136,7 @@ ms.locfileid: "66802856"
 |SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|Il nome completo del tipo (AQN) include il nome del tipo preceduto dallo spazio dei nomi se applicabile.|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>Aggiunte e modifiche ai set di proprietà OLE DB  
- Driver OLE DB per SQL Server aggiunti nuovi valori o modifiche a molte delle proprietà OLE DB principali set.  
+ OLE DB driver per SQL Server aggiunge nuovi valori o modifiche a molti dei set di proprietà OLE DB principali.  
   
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>Set di proprietà DBPROPSET_SQLSERVERPARAMETER  
  Ai fini del supporto dei tipi definiti dall'utente (UDT) tramite OLE DB, nel driver OLE DB per SQL Server è stato implementato il nuovo set di proprietà DBPROPSET_SQLSERVERPARAMETER che contiene i valori seguenti:  
@@ -173,7 +172,7 @@ ms.locfileid: "66802856"
  Se la definizione UDT è presente in un database diverso, sarà necessario specificare SSPROP_COL_UDT_CATALOGNAME e SSPROP_COL_UDT_SCHEMANAME.  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>Aggiunte e modifiche alle interfacce OLE DB  
- Driver OLE DB per SQL Server aggiunti nuovi valori o modifiche a molte delle interfacce OLE DB principali.  
+ OLE DB driver per SQL Server aggiunge nuovi valori o modifiche a molte delle interfacce di OLE DB principali.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>Interfaccia ISSCommandWithParameters  
  Ai fini del supporto dei tipi definiti dall'utente (UDT) tramite OLE DB, nel driver OLE DB per SQL Server sono state implementate alcune modifiche, ad esempio l'aggiunta dell'interfaccia **ISSCommandWithParameters**. Questa nuova interfaccia eredita dall'interfaccia OLE DB principale **ICommandWithParameters**. Oltre ai tre metodi ereditati da **ICommandWithParameters**, **GetParameterInfo**, **MapParameterNames** e **SetParameterInfo**, **ISSCommandWithParameters** fornisce i metodi **GetParameterProperties** e **SetParameterProperties** usati per gestire i tipi di dati specifici del server.  
@@ -196,6 +195,6 @@ ms.locfileid: "66802856"
   
 ## <a name="see-also"></a>Vedere anche  
  [Driver OLE DB per funzionalità di SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)    
- [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [OLE DB &#40;ISSCommandWithParameters&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

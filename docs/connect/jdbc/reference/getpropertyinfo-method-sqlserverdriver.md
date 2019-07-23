@@ -1,5 +1,5 @@
 ---
-title: Metodo getPropertyInfo (SQLServerDriver) | Microsoft Docs
+title: Metodo GetPropertyInfo (SQLServerDriver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b5eaad8a-31ef-44ac-af11-d5caa13ac3e2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 946bcde93c9f024d921322b0d84b0ad162aec66d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d89a29af5aa3d2518f94101854371cea757e135c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785025"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980676"
 ---
 # <a name="getpropertyinfo-method-sqlserverdriver"></a>Metodo getPropertyInfo (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,13 +45,13 @@ public java.sql.DriverPropertyInfo[] getPropertyInfo(java.lang.String Url,
  Elenco di coppie di valori delle proprietà, Null al primo utilizzo.  
   
 ## <a name="return-value"></a>Valore restituito  
- Una matrice di oggetti DriverPropertyInfo.  
+ Matrice di oggetti DriverPropertyInfo.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getPropertyInfo viene specificato dal metodo getPropertyInfo nell'interfaccia Java.  
+ Questo metodo getPropertyInfo viene specificato dal metodo getPropertyInfo nell'interfaccia java. SQL. driver.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

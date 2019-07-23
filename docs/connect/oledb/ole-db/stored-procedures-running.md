@@ -1,5 +1,5 @@
 ---
-title: Esecuzione di Stored procedure (OLE DB) | Microsoft Docs
+title: Esecuzione di stored procedure (OLE DB) | Microsoft Docs
 description: Esecuzione di stored procedure (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -14,13 +14,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, stored procedures
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 0059c7c6e03c9abb9edf4cb3db35f8435174d8fc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4297feae08376871c68ffab2aa9b977e034c6364
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993801"
 ---
 # <a name="stored-procedures---running"></a>Stored procedure - Esecuzione
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "66795895"
   
 -   Maggior numero di funzionalità.  
   
- Il Driver OLE DB per SQL Server supporta tre dei meccanismi che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usano stored procedure per restituire i dati:  
+ Il driver OLE DB per SQL Server supporta tre dei meccanismi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzati dalle stored procedure per restituire i dati:  
   
 -   Ogni istruzione SELECT nella procedura genera un set di risultati.  
   

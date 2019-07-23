@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4b126e95-8458-41d6-af37-fc6662859f19
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d4077f11e28bc382976eb3da441cfd42a24a567f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: eb5654563a0894abd497dfb0053b3e5667bf433d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916517"
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>Utilizzo di una stored procedure con stato restituito
 
@@ -29,7 +28,7 @@ Quando si chiama questo tipo di stored procedure usando il driver JDBC, è neces
 `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> Per altre informazioni sulle sequenze di escape SQL, vedere [usando le sequenze di Escape SQL](../../connect/jdbc/using-sql-escape-sequences.md).
+> Per ulteriori informazioni sulle sequenze di escape SQL, vedere [utilizzo di sequenze di escape SQL](../../connect/jdbc/using-sql-escape-sequences.md).
 
 Quando si costruisce la sequenza escape `call`, specificare il parametro return status usando il carattere ? (punto interrogativo), che funge da segnaposto per il valore di parametro che verrà restituito dalla stored procedure. Per specificare il valore di un parametro return status, è necessario specificare il tipo di dati del parametro usando il metodo [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) della classe SQLServerCallableStatement prima di eseguire la stored procedure.
 

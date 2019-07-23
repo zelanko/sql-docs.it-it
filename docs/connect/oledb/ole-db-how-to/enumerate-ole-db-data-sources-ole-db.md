@@ -1,6 +1,6 @@
 ---
-title: Enumerare origini dati OLE DB (OLE DB) | Microsoft Docs
-description: Enumerare origini dati OLE DB utilizza MSOLEDBSQL enumeratore
+title: Enumerare OLE DB origini dati (OLE DB) | Microsoft Docs
+description: Enumerare OLE DB origini dati mediante l'enumeratore MSOLEDBSQL
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - data sources [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 248a3a681bb7d52d54e7e052539aa9257f6bca03
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b9e14ef426a07705c51c0aa77c908dd1c2b8bbcf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994825"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Enumerare origini dati OLE DB (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,11 +41,11 @@ ms.locfileid: "66785926"
   
 1.  Recuperare il set di righe di origine chiamando **ISourceRowset:: GetSourcesRowset**.  
   
-2.  Individuare la descrizione del set di righe enumeratori chiamando **GetColumnInfo:: IColumnInfo**.  
+2.  Trovare la descrizione del set di righe degli enumeratori chiamando **GetColumnInfo:: IColumnInfo**.  
   
 3.  Creare le strutture di associazione dalle informazioni di colonna.  
   
-4.  Creare la funzione di accesso set di righe chiamando **IAccessor:: CreateAccessor**.  
+4.  Creare la funzione di accesso del set di righe chiamando **IAccessor:: CreateAccessor**.  
   
 5.  Recuperare le righe chiamando **IRowset:: GetNextRows**.  
   
