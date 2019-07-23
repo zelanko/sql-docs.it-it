@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 12d36899d27e73d2176e0ad3c5c40c80119406ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6a95082cd732b644105c14c4ba598f859f48456e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66779169"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014702"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Monitorare Gruppi di disponibilità (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -170,7 +169,7 @@ ms.locfileid: "66779169"
 >  Il percorso della replica primaria è l'origine autorevole per un gruppo di disponibilità.  
   
 > [!NOTE]  
->  Per informazioni sui contatori delle prestazioni di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] per i database di disponibilità (oggetto prestazioni **SQLServer:Database Replica** ), vedere [SQL Server, replica di database](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Inoltre, per monitorare l'attività del log delle transazioni sui database di disponibilità, usare i seguenti contatori dell'oggetto prestazione **SQLServer:Databases**: **Ora di scrittura scaricamento log (ms)**, **Scaricamenti log/sec**, **Mancati riscontri cache del pool di log/sec**, **Letture disco del pool di log/sec** e **Richieste del pool di log/sec**. Per altre informazioni, vedere [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
+>  Per informazioni sui contatori delle prestazioni di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] per i database di disponibilità (oggetto prestazioni **SQLServer:Database Replica** ), vedere [SQL Server, replica di database](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Inoltre, per monitorare l'attività del log delle transazioni sui database di disponibilità, usare i seguenti contatori dell'oggetto prestazione **SQLServer:Databases**: **Ora di scrittura scaricamento log (ms)** , **Scaricamenti log/sec**, **Mancati riscontri cache del pool di log/sec**, **Letture disco del pool di log/sec** e **Richieste del pool di log/sec**. Per altre informazioni, vedere [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   
 ##  <a name="AGlisteners"></a> Monitoraggio dei listener del gruppo di disponibilità  
  Per monitorare i listener del gruppo di disponibilità sulle subnet del cluster WSFC, utilizzare le viste seguenti:  

@@ -14,23 +14,22 @@ helpviewer_keywords:
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 35e69092efe820f5da955f982e04ef9b356decaa
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 22101d8ec2f24eeb1a93708adf52b2b24060ce28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987146"
 ---
 # <a name="view-plan-guide-properties"></a>Visualizzare le proprietà delle guide di piano
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   È possibile visualizzare le proprietà delle guide di piano in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per visualizzare le proprietà delle guide di piano utilizzando:**  
   
@@ -42,7 +41,7 @@ ms.locfileid: "54143367"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  La visibilità dei metadati nelle viste del catalogo è limitata alle entità a protezione diretta di cui un utente è proprietario o per le quali dispone di autorizzazioni.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -86,7 +85,7 @@ ms.locfileid: "54143367"
   
 4.  Fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-view-the-properties-of-a-plan-guide"></a>Per visualizzare le proprietà di una guida di piano  
   
@@ -94,7 +93,7 @@ ms.locfileid: "54143367"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- If a plan guide named "Guide1" already exists in the AdventureWorks2012 database, delete it.  

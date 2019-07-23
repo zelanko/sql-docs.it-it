@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 383992f5e1fc9891fb570dec168d1648913f4254
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 778783c61be2d3b9cfac784d271bce584ef37f68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897195"
 ---
 # <a name="how-to-create-new-database-objects-using-queries"></a>Procedura: Creare nuovi oggetti di database tramite query
 Se si preferisce usare script per creare o modificare viste, stored procedure, funzioni, trigger o tipi definiti dall'utente, è possibile usare l'Editor Transact\-SQL. L'Editor Transact\-SQL fornisce IntelliSense e altro supporto del linguaggio. Per altre informazioni, vedere [Usare l'Editor Transact-SQL per modificare ed eseguire script](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md).  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2f33399282eb92cd2fbdb2a0a57befcf362379d1
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 42e114c1d3f884c40ce47edca84261c2582d8576
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58788068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117326"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ Associa il pool di risorse a utilità di pianificazione specifiche. Il valore pr
   
 AFFINITY SCHEDULER = **(** \<scheduler_range_spec> **)** esegue il mapping del pool di risorse alle pianificazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificate dagli ID specificati. Questi ID eseguono il mapping ai valori nella colonna scheduler_id di [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
   
-Se si usa AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)**, viene creata un'affinità tra il pool di risorse e le utilità di pianificazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che eseguono il mapping alle CPU fisiche corrispondenti al nodo o all'intervallo di nodi NUMA specificato. È possibile utilizzare la seguente query [!INCLUDE[tsql](../../includes/tsql-md.md)] per individuare il mapping tra la configurazione NUMA fisica e gli ID delle utilità di pianificazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+Se si usa AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** , viene creata un'affinità tra il pool di risorse e le utilità di pianificazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che eseguono il mapping alle CPU fisiche corrispondenti al nodo o all'intervallo di nodi NUMA specificato. È possibile utilizzare la seguente query [!INCLUDE[tsql](../../includes/tsql-md.md)] per individuare il mapping tra la configurazione NUMA fisica e gli ID delle utilità di pianificazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
 ```sql  
 SELECT osn.memory_node_id AS [numa_node_id], sc.cpu_id, sc.scheduler_id  

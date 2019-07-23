@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: f04b38a4-f4e2-4d4c-bdac-7cc70e5a5684
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 4e6918227b7aa76bac8dfed8d9eb8845da93cb0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 166d9d3b1c5f685564bdca16f154413459901cd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68212618"
 ---
 # <a name="include-witness-server-configure-database-mirroring-security-wizard"></a>Aggiunta server di controllo del mirroring (Configurazione guidata sicurezza mirroring del database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

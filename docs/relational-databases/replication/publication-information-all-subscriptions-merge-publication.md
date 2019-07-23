@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fc5fb9ba2354c8ceb77066b5730a99949edc5ca6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 86f2d59e142458e68fe3946f7d6f56956b6562e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136151"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120413"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>Informazioni sulla pubblicazione, Tutte le sottoscrizioni (Pubblicazione di tipo merge)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ ms.locfileid: "54136151"
  I valori di stato **Scadenza imminente/Scaduta** e **Merge con esecuzione prolungata** possono essere visualizzati solo se sono impostati i valore soglia. Il valore di stato **Prestazioni critiche** può essere visualizzato solo dopo cinque sincronizzazioni di sottoscrizioni con lo stesso tipo di connessione (remota o LAN). Per informazioni sulle misurazioni delle prestazioni e sull'impostazione dei valori soglia, vedere [Monitorare le prestazioni con Monitoraggio replica](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md) e [Impostare valori di soglia e avvisi in Monitoraggio replica](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
  **Sottoscrizione**  
- Nome della sottoscrizione nel formato: *SubscriberName: SubscriptionDatabaseName*.  
+ Nome di ogni sottoscrizione nel formato: *SubscriberName: SubscriptionDatabaseName*.  
   
  **Nome descrittivo**  
  Solo[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive. Descrizione di ogni sottoscrizione. La descrizione può essere immessa nella finestra di dialogo **Proprietà sottoscrizione** oppure può essere specificata tramite il parametro **@description** di [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) o di [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Gli utenti utilizzano spesso la descrizione come "nome descrittivo" o come nome alternativo per la sottoscrizione.  

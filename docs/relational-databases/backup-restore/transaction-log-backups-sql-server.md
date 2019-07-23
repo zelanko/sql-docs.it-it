@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9bf516256277abc02a8499f06707a518f2aadf75
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 491016d02dfdb890914633333e19a3138c01779d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664941"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041350"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Backup di log delle transazioni (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ In genere, un amministratore del database crea un backup completo occasionale de
   
 |Time|Evento|  
 |----------|-----------|  
-|8.00|Backup del database|  
+|8\.00|Backup del database|  
 |12.00|Backup del log delle transazioni|  
 |16.00|Backup del log delle transazioni|  
 |18.00|Backup del database|  

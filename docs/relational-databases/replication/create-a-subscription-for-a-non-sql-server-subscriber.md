@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4ae569fa5f7a15435fc69f84fd4254c692e1eb1d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d199fff8243584ee86dd97f97bcc3b8b68beb3dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126511"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063110"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Creazione di una sottoscrizione per un Sottoscrittore non SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In questo argomento viene descritto come creare una sottoscrizione per un Sottoscrittore non SQL Server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La replica transazionale e la replica snapshot supportano la pubblicazione di dati su sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per informazioni sulle piattaforme di Sottoscrittori supportate, vedere [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Per creare una sottoscrizione per un Sottoscrittore non SQL Server, utilizzando:**  
   
@@ -47,7 +46,7 @@ ms.locfileid: "54126511"
   
          Lo snapshot viene creato dopo che la pubblicazione è stata attivata per i Sottoscrittori non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , in modo da garantire che l'agente snapshot generi uno snapshot e script di inizializzazione che siano adatti ai Sottoscrittori non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-3.  Abilitare la pubblicazione per i Sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando la finestra di dialogo **Proprietà pubblicazione - \<NomePubblicazione>**. Per ulteriori informazioni su questo passaggio, vedere [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) .  
+3.  Abilitare la pubblicazione per i Sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando la finestra di dialogo **Proprietà pubblicazione - \<NomePubblicazione>** . Per ulteriori informazioni su questo passaggio, vedere [Publication Properties, Subscription Options](../../relational-databases/replication/publication-properties-subscription-options.md) .  
   
 4.  Creare una sottoscrizione utilizzando la Creazione guidata nuova sottoscrizione. In questo argomento sono presenti ulteriori informazioni su questo passaggio.  
   
@@ -98,7 +97,7 @@ ms.locfileid: "54126511"
   
     -   Per IBM DB2, il database viene specificato nella proprietà **Catalogo iniziale** della stringa di connessione DB2, che può essere inserita nel campo **Opzioni di connessione aggiuntive** descritto più avanti in questo processo.  
   
-8.  Nella pagina **Sicurezza agente di distribuzione** , fare clic sul pulsante delle proprietà (**...**) accanto al Sottoscrittore per accedere alla finestra di dialogo **Sicurezza agente di distribuzione** .  
+8.  Nella pagina **Sicurezza agente di distribuzione** , fare clic sul pulsante delle proprietà ( **...** ) accanto al Sottoscrittore per accedere alla finestra di dialogo **Sicurezza agente di distribuzione** .  
   
 9. Nella finestra di dialogo **Sicurezza agente di distribuzione** :  
   
@@ -143,7 +142,7 @@ ms.locfileid: "54126511"
   
  Al termine della generazione dello snapshot da parte dell'agente, viene visualizzato un messaggio come ""[100%] Generato uno snapshot di 17 articoli."  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  È possibile creare sottoscrizioni push a sottoscrittori non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a livello di programmazione usando le stored procedure di replica.  
   
 > [!IMPORTANT]  
@@ -157,27 +156,27 @@ ms.locfileid: "54126511"
   
     -   Se il valore di **enabled_for_het_sub** è 1, i Sottoscrittori non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati.  
   
-    -   Se il valore di **enabled_for_het_sub** è 0, eseguire [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specificando **enabled_for_het_sub** per **@property** e **true** per **@value**.  
+    -   Se il valore di **enabled_for_het_sub** è 0, eseguire [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), specificando **enabled_for_het_sub** per **@property** e **true** per **@value** .  
   
         > [!NOTE]  
         >  Prima di impostare **enabled_for_het_sub** su **true**, è necessario eliminare eventuali sottoscrizioni esistenti nella pubblicazione. Non è possibile impostare **enabled_for_het_sub** su **true** se la pubblicazione supporta anche sottoscrizioni aggiornabili. La modifica dell'impostazione **enabled_for_het_sub** influirà su altre proprietà della pubblicazione. Per altre informazioni, vedere [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
-3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Specificare **@publication**, **@subscriber**, il valore **(destinazione predefinita)** per **@destination_db**, il valore **push** per **@subscription_type**e il valore 3 per **@subscriber_type** (per indicare un provider OLE DB).  
+3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Specificare **@publication** , **@subscriber** , il valore **(destinazione predefinita)** per **@destination_db** , il valore **push** per **@subscription_type** e il valore 3 per **@subscriber_type** (per indicare un provider OLE DB).  
   
 4.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Specificare le opzioni seguenti:  
   
-    -   I parametri **@subscriber**e **@publication** .  
+    -   I parametri **@subscriber** e **@publication** .  
   
-    -   Il valore **(destinazione predefinita)** per **@subscriber_db**,  
+    -   Il valore **(destinazione predefinita)** per **@subscriber_db** ,  
   
-    -   Le proprietà dell'origine dati non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per **@subscriber_provider**, **@subscriber_datasrc**, **@subscriber_location**, **@subscriber_provider_string**e **@subscriber_catalog**.  
+    -   Le proprietà dell'origine dati non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per **@subscriber_provider** , **@subscriber_datasrc** , **@subscriber_location** , **@subscriber_provider_string** e **@subscriber_catalog** .  
   
-    -   I parametri [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows utilizzate per l'esecuzione dell'agente di distribuzione nel server di distribuzione per **@job_login** e **@job_password**.  
+    -   I parametri [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows utilizzate per l'esecuzione dell'agente di distribuzione nel server di distribuzione per **@job_login** e **@job_password** .  
   
         > [!NOTE]  
-        >  Per le connessioni effettuate con l'autenticazione integrata di Windows vengono utilizzate sempre le credenziali di Windows specificate da **@job_login** e **@job_password**. L'agente di distribuzione esegue sempre la connessione locale al server di distribuzione utilizzando l'autenticazione integrata di Windows. Per impostazione predefinita, l'agente si connette al Sottoscrittore utilizzando l'autenticazione integrata di Windows.  
+        >  Per le connessioni effettuate con l'autenticazione integrata di Windows vengono utilizzate sempre le credenziali di Windows specificate da **@job_login** e **@job_password** . L'agente di distribuzione esegue sempre la connessione locale al server di distribuzione utilizzando l'autenticazione integrata di Windows. Per impostazione predefinita, l'agente si connette al Sottoscrittore utilizzando l'autenticazione integrata di Windows.  
   
-    -   Il valore **0** per **@subscriber_security_mode** e le informazioni sull'account di accesso del provider OLE DB per **@subscriber_login** e **@subscriber_password**.  
+    -   Il valore **0** per **@subscriber_security_mode** e le informazioni sull'account di accesso del provider OLE DB per **@subscriber_login** e **@subscriber_password** .  
   
     -   Specificare una pianificazione per il processo dell'agente di distribuzione da eseguire per la sottoscrizione. Per altre informazioni, vedere [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   

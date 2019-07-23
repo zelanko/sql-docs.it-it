@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fb256646e7bf71a2829cfa35ef70184d0b267748
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5046708ffd705ca937b89a7780e47cd62cdc3f97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65805257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913700"
 ---
 # <a name="run-integration-services-ssis-packages"></a>Eseguire pacchetti di Integration Services (SSIS)
 
@@ -55,8 +54,8 @@ ms.locfileid: "65805257"
 |**dtexecui**<br /><br /> Per altre informazioni, vedere [Riferimento all’interfaccia utente dell’utilità di esecuzione pacchetti &#40;DtExecUI&#41;](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md)|no|Sì|Sì|  
 |**SQL Server Agent**<br /><br /> Per pianificare un pacchetto, è possibile utilizzare un processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.<br /><br /> Per altre informazioni, vedere [Processi di SQL Server Agent per i pacchetti](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).|Sì|Sì|Sì|  
 |**Stored procedure predefinita**<br /><br /> Per altre informazioni, vedere [catalog.start_execution &#40;database SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)|Sì|no|no|  
-|**API gestita, tramite tipi e membri dello spazio dei nomi ** <xref:Microsoft.SqlServer.Management.IntegrationServices>|Sì|no|no|  
-|**API gestita, tramite tipi e membri dello spazio dei nomi ** <xref:Microsoft.SqlServer.Dts.Runtime>|Non attualmente|Sì|Sì|  
+|**API gestita, tramite tipi e membri dello spazio dei nomi**  <xref:Microsoft.SqlServer.Management.IntegrationServices>|Sì|no|no|  
+|**API gestita, tramite tipi e membri dello spazio dei nomi**  <xref:Microsoft.SqlServer.Dts.Runtime>|Non attualmente|Sì|Sì|  
 
 ## <a name="execution-and-logging"></a>Esecuzione e registrazione  
  È possibile abilitare la registrazione per i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], nonché acquisire informazioni di run-time in file di log. Per altre informazioni, vedere [registrazione di Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  

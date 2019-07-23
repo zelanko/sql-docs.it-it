@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8cd068e23315edcef7df3a677a52530a767c685
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efc1a13d0ed05560558e0386ea051d3a9aaa85f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714459"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140371"
 ---
 # <a name="use-column-sets"></a>Utilizzare set di colonne
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -116,7 +115,7 @@ GO
 |Tipo di dati|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Lunghezza massima|Precisione|Scala|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
 |**char**, **varchar**, **binary**|-1|Impostazione predefinita|0|0|8000|Non applicabile**|Non applicabile|  
-|**nvarchar**|-1|Impostazione predefinita|0|0|4.000|Non applicabile|Non applicabile|  
+|**nvarchar**|-1|Impostazione predefinita|0|0|4\.000|Non applicabile|Non applicabile|  
 |**decimal**, **float**, **real**|Non applicabile|Non applicabile|Non applicabile|Non applicabile|Non applicabile|18|0|  
 |**integer**, **bigint**, **tinyint**, **smallint**|Non applicabile|Non applicabile|Non applicabile|Non applicabile|Non applicabile|Non applicabile|Non applicabile|  
 |**datetime2**|Non applicabile|Non applicabile|Non applicabile|Non applicabile|Non applicabile|Non applicabile|7|  

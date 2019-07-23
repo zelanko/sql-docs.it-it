@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 9fd3ee0706e30d6a7077f22488a1f64084b5ae8a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 2c928db781c6e7d31f07e1cea37ed80481b8fed6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58797011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136476"
 ---
 # <a name="sql-server-2017-release-notes"></a>Note sulla versione di SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ Questo articolo descrive le limitazioni e i problemi relativi a SQL Server 2017.
     3. Selezionare di nuovo **Abilita FILESTREAM per l'accesso tramite il flusso di I/O dei file** con il nome di condivisione originale e fare clic su **Applica**.
 
 ### <a name="master-data-services-mds"></a>Master Data Services (MDS)
-- **Problema e impatto per i clienti:**  nella pagina delle autorizzazioni utente, quando si concede l'autorizzazione a livello radice nella visualizzazione albero entità, viene visualizzato l'errore seguente: `"The model permission cannot be saved. The object guid is not valid"`
+- **Problema e impatto per i clienti:**   nella pagina delle autorizzazioni utente, quando si concede l'autorizzazione a livello radice nella visualizzazione albero entità, viene visualizzato l'errore seguente: `"The model permission cannot be saved. The object guid is not valid"`
 
 - **Soluzione alternativa:** 
   - Concedere l'autorizzazione per i nodi figlio nella visualizzazione albero anziché a livello radice.
@@ -74,7 +73,7 @@ Non sono disponibili note sulla versione di SQL Server in Windows per questa ver
 - **Problema e impatto per i clienti:** Il parametro *runincluster* della stored procedure **[catalog].[create_execution]** è stato rinominato in *runinscaleout* per coerenza e leggibilità.
 - **Soluzione alternativa:** Se esistono script che eseguono pacchetti in Scale Out, è necessario modificare il nome del parametro da *runincluster* a *runinscaleout* affinché gli script possano essere usati nella versione RC1.
 
-- **Problema e impatto per i clienti:** In SQL Server Management Studio (SSMS) 17.1 e nelle versioni precedenti non è possibile eseguire i pacchetti in Scale Out nella versione RC1. Messaggio di errore: "*@runincluster* non è un parametro per la procedura **create_execution**." Questo problema viene risolto nella versione 17.2 di SSMS. La versione 17.2 e le versioni successive di SSMS supportano il nuovo nome di parametro ed eseguono i pacchetti in Scale Out. 
+- **Problema e impatto per i clienti:** In SQL Server Management Studio (SSMS) 17.1 e nelle versioni precedenti non è possibile eseguire i pacchetti in Scale Out nella versione RC1. Messaggio di errore: " *@runincluster* non è un parametro per la procedura **create_execution**." Questo problema viene risolto nella versione 17.2 di SSMS. La versione 17.2 e le versioni successive di SSMS supportano il nuovo nome di parametro ed eseguono i pacchetti in Scale Out. 
 - **Soluzione alternativa:** fino a quando non sarà disponibile SSMS versione 17.2:
   1. Usare la versione esistente di SSMS per generare lo script di esecuzione del pacchetto.
   2. Modificare il nome del parametro *runincluster* in *runinscaleout* nello script.

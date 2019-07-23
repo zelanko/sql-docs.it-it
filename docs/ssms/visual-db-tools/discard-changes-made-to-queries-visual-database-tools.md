@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 263e60e087a47218f195aaec3a3b3ff43cef76bd
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: cb5db1e50e23772219bd7cd822d8e04615b13a29
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690322"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263765"
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>Annullamento di modifiche apportate alle query (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

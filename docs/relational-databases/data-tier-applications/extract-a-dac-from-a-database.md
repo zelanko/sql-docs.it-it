@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a056ecc18ed933b1f1fe18e3da0c62d239ea0a4e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 86482b666c2ecfc5e9fcc09c1d06df14640386d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134790"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Estrarre un'applicazione livello dati da un database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "53589875"
 ##  <a name="LimitationsRestrictions"></a> Limitazioni e restrizioni  
  Un'applicazione livello dati può essere estratta solo da un database in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o versioni successive. Non è possibile estrarre un'applicazione livello dati se il database include oggetti non supportati nell'applicazione livello dati o utenti contenuti. Per ulteriori informazioni sui tipi di oggetti supportati in un'applicazione livello dati, vedere [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorizzazioni  
  L'estrazione di un'applicazione livello dati richiede almeno le autorizzazioni ALTER ANY LOGIN e VIEW DEFINITION nell'ambito del database, oltre alle autorizzazioni SELECT su **sys.sql_expression_dependencies**. L'estrazione di un'applicazione del livello dati può essere effettuata da membri del ruolo predefinito del server securityadmin che sono anche membri del ruolo predefinito del database database_owner nel database dal cui viene estratta l'applicazione del livello dati. Possono estrarre un'applicazione livello dati anche i membri del ruolo predefinito del server sysadmin o dell'account amministratore di sistema SQL Server predefinito denominato **sa** .  
   
 ##  <a name="UsingDACExtractWizard"></a> Utilizzo della Procedura guidata Estrai applicazione livello dati  
@@ -67,7 +66,7 @@ ms.locfileid: "53589875"
   
  **Non visualizzare più questa pagina** - Fare clic sulla casella di controllo per evitare che la pagina venga visualizzata nuovamente in futuro.  
   
- **Avanti >**: consente di passare alla pagina **Seleziona metodo**.  
+ **Avanti >** : consente di passare alla pagina **Seleziona metodo**.  
   
  **Annulla** : termina la procedura guidata senza estrarre un'applicazione livello dati dal database.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "53589875"
 ###  <a name="SelectData"></a> Select data page  
 Selezionare i dati di riferimento che si vuole includere nel file del pacchetto di applicazione livello dati. L'inserimento di dati nel pacchetto di applicazione livello dati è facoltativo. Il pacchetto di applicazione livello dati include già lo schema di tutti gli oggetti di database e gli oggetti istanza supportati correlati al database.  
   
- È possibile includere un massimo di 10 MB di dati di riferimento nel file di pacchetto di applicazione livello dati. Per poter essere incluse nell'applicazione livello dati, tuttavia, le tabelle non devono contenere tipi di dati BLOB (Binary Large Object, oggetto binario di grandi dimensioni), ad esempio **image** o **varchar(max)**. Per estrarre maggiori quantità di dati per il trasferimento a un altro database, utilizzare SQL Server Integration Services, l'utilità di copia bulk o una delle numerose altre tecniche di migrazione dei dati.  
+ È possibile includere un massimo di 10 MB di dati di riferimento nel file di pacchetto di applicazione livello dati. Per poter essere incluse nell'applicazione livello dati, tuttavia, le tabelle non devono contenere tipi di dati BLOB (Binary Large Object, oggetto binario di grandi dimensioni), ad esempio **image** o **varchar(max)** . Per estrarre maggiori quantità di dati per il trasferimento a un altro database, utilizzare SQL Server Integration Services, l'utilità di copia bulk o una delle numerose altre tecniche di migrazione dei dati.  
   
  **Tabella di database** : selezionare la casella di controllo accanto alle tabelle di database contenenti i dati da includere nel pacchetto di applicazione livello dati. È possibile selezionare fino a dieci tabelle contenenti un massimo di 10.000 righe.  
   

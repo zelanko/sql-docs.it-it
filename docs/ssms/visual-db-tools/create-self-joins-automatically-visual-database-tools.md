@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9ec90e8-3aad-415c-a5c4-8dfa9540e37f
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 7958ed99aa26de79893329d57471ead88ea4519b
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 66ba00a9ec4a8d39afd805c0dca45dbc70e4932e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680242"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264317"
 ---
 # <a name="create-self-joins-automatically-visual-database-tools"></a>Creare self-join in modo automatico (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

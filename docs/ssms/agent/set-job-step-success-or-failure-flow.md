@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0d04cbff4d55a9c34968de3a0eb4e2b3487e86bf
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 03ad99ecb4ebe274e50cc040715f6266ddea4a4f
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67685080"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267847"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Impostare il flusso di interventi in caso di esito positivo o negativo del passaggio di processo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

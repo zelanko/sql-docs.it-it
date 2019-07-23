@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 9bd1cc5b-227b-4032-95d6-7581ddcc9924
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4b6b8e386ee8391ab40bf6152d3c8c3cf6e315f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 6567861c2150362e0d5b5cf386512daec6d758f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113719"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,7 +78,7 @@ Nelle tabelle seguenti sono elencati i formati di valore letterale stringa suppo
   
 |ODBC|Descrizione|  
 |---|---|
-|{ ts '1998-05-02 01:23:56.123' }<br /><br /> { d '1990-10-02' }<br /><br /> { t '13:33:41' }|L'API ODBC definisce sequenze di escape per la rappresentazione dei valori di data e ora, che in ODBC sono denominati dati timestamp. Il formato timestamp di ODBC è supportato anche dalla definizione del linguaggio OLE DB (DBGUID-SQL) supportata dal provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nelle applicazioni che utilizzano API basate su ADO, OLE DB e ODBC è possibile utilizzare il formato timestamp ODBC per la rappresentazione di valori di data e ora.<br /><br /> Il formato delle sequenze di escape del timestamp ODBC è il seguente: { *literal_type* '*constant_value*' }:<br /><br /> <br /><br /> - *literal_type* specifica il tipo di sequenza di escape. I timestamp sono caratterizzati da tre identificatori di tipo *literal_type*:<br />1) d = solo data<br />2) t = solo ora<br />3) ts = timestamp (ora + data)<br /><br /> <br /><br /> - "*constant_value*" rappresenta il valore della sequenza di escape. *constant_value* deve seguire questi formati per ogni elemento *literal_type:*.<br />d : yyyy-mm-dd<br />t : hh:mm:ss[.fff]<br />ts : yyyy-mm-dd hh:mm:ss[.fff]|  
+|{ ts '1998-05-02 01:23:56.123' }<br /><br /> { d '1990-10-02' }<br /><br /> { t '13:33:41' }|L'API ODBC definisce sequenze di escape per la rappresentazione dei valori di data e ora, che in ODBC sono denominati dati timestamp. Il formato timestamp di ODBC è supportato anche dalla definizione del linguaggio OLE DB (DBGUID-SQL) supportata dal provider [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nelle applicazioni che utilizzano API basate su ADO, OLE DB e ODBC è possibile utilizzare il formato timestamp ODBC per la rappresentazione di valori di data e ora.<br /><br /> Il formato delle sequenze di escape del timestamp ODBC è il seguente: { *literal_type* '*constant_value*' }:<br /><br /> <br /><br /> - *literal_type* specifica il tipo di sequenza di escape. I timestamp sono caratterizzati da tre identificatori di tipo *literal_type*:<br />1) d = solo data<br />2) t = solo ora<br />3) ts = timestamp (ora + data)<br /><br /> <br /><br /> - "*constant_value*" rappresenta il valore della sequenza di escape. *constant_value* deve seguire questi formati per ogni elemento *literal_type:* .<br />d : yyyy-mm-dd<br />t : hh:mm:ss[.fff]<br />ts : yyyy-mm-dd hh:mm:ss[.fff]|  
   
 ## <a name="rounding-of-datetime-fractional-second-precision"></a>Arrotondamento della precisione in secondi frazionari dei valori datetime  
 I valori **datetime** vengono arrotondati con incrementi di 0,000, 0,003 o 0,007 secondi, come illustrato nella tabella seguente.
@@ -114,7 +113,7 @@ SELECT @datetime AS '@datetime', @date AS '@date';
 --2016-12-21 00:00:00.000 2016-12-21  
 ```  
   
-Quando la conversione è da **time(n)**, il componente relativo all'ora viene copiato e quello relativo alla data viene impostato su "1900-01-01". Quando la precisione frazionaria del valore **time(n)** è maggiore di tre cifre, il valore verrà troncato. Nell'esempio seguente vengono illustrati i risultati della conversione di un valore `time(4)` in un valore `datetime`.  
+Quando la conversione è da **time(n)** , il componente relativo all'ora viene copiato e quello relativo alla data viene impostato su "1900-01-01". Quando la precisione frazionaria del valore **time(n)** è maggiore di tre cifre, il valore verrà troncato. Nell'esempio seguente vengono illustrati i risultati della conversione di un valore `time(4)` in un valore `datetime`.  
   
 ```sql
 DECLARE @time time(4) = '12:10:05.1237';  
@@ -142,7 +141,7 @@ SELECT @datetime AS '@datetime', @smalldatetime AS '@smalldatetime';
 --2016-12-01 12:32:00.000 2016-12-01 12:32:00  
 ```  
   
-Quando la conversione viene eseguita da **datetimeoffset(n)**, i componenti di data e ora vengono copiati. Il fuso orario viene troncato. Quando la precisione frazionaria del valore **datetimeoffset(n)** è maggiore di tre cifre, il valore viene troncato. Nell'esempio seguente vengono illustrati i risultati della conversione di un valore `datetimeoffset(4)` in un valore `datetime`.  
+Quando la conversione viene eseguita da **datetimeoffset(n)** , i componenti di data e ora vengono copiati. Il fuso orario viene troncato. Quando la precisione frazionaria del valore **datetimeoffset(n)** è maggiore di tre cifre, il valore viene troncato. Nell'esempio seguente vengono illustrati i risultati della conversione di un valore `datetimeoffset(4)` in un valore `datetime`.  
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '1968-10-23 12:45:37.1234 +10:0';  
@@ -156,7 +155,7 @@ SELECT @datetime AS '@datetime', @datetimeoffset AS '@datetimeoffset';
 --1968-10-23 12:45:37.123 1968-10-23 12:45:37.1237 +01:0   
 ```  
   
-Quando la conversione viene eseguita da **datetime2(n)**, la data e l'ora vengono copiate. Quando la precisione frazionaria del valore **datetime2(n)** è maggiore di tre cifre, il valore viene troncato. Nell'esempio seguente vengono illustrati i risultati della conversione di un valore `datetime2(4)` in un valore `datetime`.  
+Quando la conversione viene eseguita da **datetime2(n)** , la data e l'ora vengono copiate. Quando la precisione frazionaria del valore **datetime2(n)** è maggiore di tre cifre, il valore viene troncato. Nell'esempio seguente vengono illustrati i risultati della conversione di un valore `datetime2(4)` in un valore `datetime`.  
   
 ```sql
 DECLARE @datetime2 datetime2(4) = '1968-10-23 12:45:37.1237';  

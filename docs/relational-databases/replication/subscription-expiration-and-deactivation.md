@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30636d3dca44e93b67d67d330dbabd04d6feb4ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90163caba595936f5c9ef9854b8e1f0af2890673
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820389"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129836"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Scadenza e disattivazione delle sottoscrizioni
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "47820389"
      Se una sottoscrizione push scade, viene completamente rimossa, a differenza delle sottoscrizioni pull, che devono essere eliminate nel Sottoscrittore. Per altre informazioni, vedere [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md).  
   
 ## <a name="merge-replication"></a>Replica di tipo merge  
- La replica di tipo merge usa il periodo di memorizzazione per la pubblicazione (i parametri **@retention** e **@retention_period_unit** di [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)). Se una sottoscrizione è scaduta, è necessario reinizializzarla, poiché i relativi metadati vengono rimossi. Le sottoscrizioni che non vengono reinizializzate vengono rimosse mediante il processo **Pulizia dei riferimenti alla sottoscrizione scaduta** eseguito sul server di pubblicazione. Per impostazione predefinita, questo processo viene eseguito ogni giorno e rimuove tutte le sottoscrizioni push che non sono state sincronizzate per il doppio della durata del periodo di memorizzazione per la pubblicazione. Ad esempio  
+ La replica di tipo merge usa il periodo di memorizzazione per la pubblicazione (i parametri **@retention** e **@retention_period_unit** di [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)). Se una sottoscrizione è scaduta, è necessario reinizializzarla, poiché i relativi metadati vengono rimossi. Le sottoscrizioni che non vengono reinizializzate vengono rimosse mediante il processo **Pulizia dei riferimenti alla sottoscrizione scaduta** eseguito sul server di pubblicazione. Per impostazione predefinita, questo processo viene eseguito ogni giorno e rimuove tutte le sottoscrizioni push che non sono state sincronizzate per il doppio della durata del periodo di memorizzazione per la pubblicazione. Esempio:  
   
 -   Se una pubblicazione ha un periodo di memorizzazione di 14 giorni, una sottoscrizione può scadere se non è stata sincronizzata entro 14 giorni.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "47820389"
   
     -   La replica non è in grado di eliminare i metadati dei database di pubblicazione e sottoscrizione prima della scadenza del periodo di memorizzazione. Quando si imposta un valore elevato per il periodo di memorizzazione, verificare che non sia tale da avere effetti negativi sulle prestazioni della replica. Se si prevede che la sincronizzazione di tutti i Sottoscrittori verrà eseguita regolarmente entro tale periodo di tempo, è consigliabile specificare un valore inferiore.  
   
-    -   È possibile specificare che le sottoscrizioni non devono scadere (impostando il valore 0 per **@retention**), ma è consigliabile non utilizzare questo valore, poiché impedisce l'eliminazione dei metadati.  
+    -   È possibile specificare che le sottoscrizioni non devono scadere (impostando il valore 0 per **@retention** ), ma è consigliabile non utilizzare questo valore, poiché impedisce l'eliminazione dei metadati.  
   
 -   Il periodo di memorizzazione per i server di ripubblicazione deve essere impostato su un valore uguale o minore del periodo di memorizzazione impostato nel server di pubblicazione originale. Impostare lo stesso periodo di memorizzazione delle pubblicazioni per tutti i server di pubblicazione e i relativi partner di sincronizzazione alternativi. L'impostazione di periodi di memorizzazione diversi potrebbe causare la non convergenza dei dati. Se è necessario modificare il periodo di memorizzazione della pubblicazione, reinizializzare manualmente il Sottoscrittore per evitare la non convergenza dei dati.  
   

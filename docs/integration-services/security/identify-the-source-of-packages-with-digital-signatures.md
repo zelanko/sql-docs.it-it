@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3bc5b6cc425ad04e9ad1f2cafbae2a3d88f8599c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 978e85814e403ea6fe0a510b1791b0b4d1cf9bf0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65718245"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125305"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identificazione dell'origine dei pacchetti con firme digitali
 
@@ -46,7 +45,7 @@ ms.locfileid: "65718245"
 ## <a name="set-a-registry-value-to-check-package-signature"></a>Impostazione di un valore del Registro di sistema per la verifica della firma del pacchetto  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta anche un valore facoltativo del Registro di sistema, **BlockedSignatureStates**, che può essere usato per gestire i criteri di un'organizzazione per il caricamento di pacchetti firmati e non firmati. Il valore del Registro di sistema consente di impedire il caricamento di pacchetti non firmati o con firme non valide o non attendibili. Per altre informazioni su come impostare questo valore del Registro di sistema, vedere [Implementare criteri per le firme tramite l'impostazione di un valore del Registro di sistema](#registry).  
   
-> **NOTA:** Il valore facoltativo **BlockedSignatureStates** del registro di sistema può specificare un'impostazione più restrittiva rispetto all'opzione per la firma digitale impostata in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o alla riga di comando **dtexec** . In questo caso, l'impostazione del Registro di sistema più restrittiva ha la precedenza rispetto ad altre impostazioni.  
+> **NOTA** Il valore facoltativo **BlockedSignatureStates** del registro di sistema può specificare un'impostazione più restrittiva rispetto all'opzione per la firma digitale impostata in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o alla riga di comando **dtexec** . In questo caso, l'impostazione del Registro di sistema più restrittiva ha la precedenza rispetto ad altre impostazioni.  
 
 ## <a name="registry"></a> Implementare criteri per le firme tramite l'impostazione di un valore del Registro di sistema
   È possibile utilizzare un valore facoltativo del Registro di sistema per gestire i criteri dell'organizzazione per il caricamento dei pacchetti firmati o non firmati. Se si utilizza questo valore del Registro di sistema, è necessario crearlo in ogni computer in cui verranno eseguiti i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e in cui si desidera applicare i criteri. Dopo l'impostazione del valore del Registro di sistema, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] controllerà o verificherà le firme prima di caricare i pacchetti.  

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3a6b17b2e157042c41690c3c2cdf6ab92cd84a09
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d811d5d36b88024604d217f440911d0dabad2b14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141126"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  Nome della funzione di aggregazione che si desidera creare.  
   
  **@** _param_name_  
- Uno o più parametri della funzione di aggregazione definita dall'utente. Il valore di un parametro deve essere fornito dall'utente quando la funzione di aggregazione viene eseguita. Specificare un nome di parametro usando come primo carattere il simbolo di chiocciola (**@**). Il nome di parametro deve essere conforme alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). I parametri sono locali rispetto alla funzione.  
+ Uno o più parametri della funzione di aggregazione definita dall'utente. Il valore di un parametro deve essere fornito dall'utente quando la funzione di aggregazione viene eseguita. Specificare un nome di parametro usando come primo carattere il simbolo di chiocciola ( **@** ). Il nome di parametro deve essere conforme alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). I parametri sono locali rispetto alla funzione.  
   
  *system_scalar_type*  
  Qualsiasi tipo di dati scalare di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la memorizzazione del valore del parametro di input o del valore restituito. È possibile usare tutti i tipi di dati scalari come parametri di una funzione di aggregazione definita dall'utente, eccetto **text**, **ntext** e **image**. Non è possibile specificare tipi di dati non scalari, come **cursor** e **table**.  
@@ -79,7 +78,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *udt_type_name*  
  Nome di un tipo CLR definito dall'utente già creato nel database corrente. Se *udt_schema_name* viene omesso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presume che il tipo appartenga allo schema dell'utente corrente.  
   
- *assembly_name* [ **.**_class_name_ ]  
+ *assembly_name* [ **.** _class_name_ ]  
  Specifica l'assembly da associare alla funzione di aggregazione definita dall'utente e, facoltativamente, il nome dello schema a cui l'assembly appartiene e il nome della classe nell'assembly che implementa la funzione di aggregazione definita dall'utente. È necessario che l'assembly sia già stato creato nel database tramite un'istruzione CREATE ASSEMBLY. *class_name* deve essere un identificatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido e corrispondere al nome di una classe esistente nell'assembly. *class_name* può essere un nome qualificato con lo spazio dei nomi se il linguaggio di programmazione usato per scrivere la classe usa spazi dei nomi, ad esempio C#. Se *class_name* viene omesso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presume che equivalga ad *aggregate_name*.  
   
 ## <a name="remarks"></a>Remarks  
@@ -87,7 +86,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
   
  La classe dell'assembly a cui viene fatto riferimento in *assembly_name* e i relativi metodi devono soddisfare tutti i requisiti di implementazione di una funzione di aggregazione definita dall'utente in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Aggregazioni CLR definite dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessario disporre dell'autorizzazione CREATE AGGREGATE e anche dell'autorizzazione REFERENCES per l'assembly specificato nella clausola EXTERNAL NAME.  
   
 ## <a name="examples"></a>Esempi  
