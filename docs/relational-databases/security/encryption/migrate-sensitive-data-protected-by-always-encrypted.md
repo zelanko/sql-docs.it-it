@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: aliceku
 ms.author: aliceku
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45a3b887688186aaedfc66423b4982629914f159
-ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
+ms.openlocfilehash: ff72a94df79c6f8fe7b8bb37caeb57587e44b034
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54880534"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111668"
 ---
 # <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>Migrare dati sensibili protetti da Crittografia sempre attiva
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ La tabella seguente mostra le impostazioni consigliate appropriate per diversi s
 ## <a name="bulk-loading-of-encrypted-data"></a>Caricamento bulk di dati crittografati  
 Usare la seguente procedura per caricare dati crittografati.  
 
-1.  Impostare l'opzione su ON per l'utente nel database di destinazione dell'operazione di copia bulk. Ad esempio  
+1.  Impostare l'opzione su ON per l'utente nel database di destinazione dell'operazione di copia bulk. Esempio:  
  
    ```  
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON;  
@@ -45,7 +44,7 @@ Usare la seguente procedura per caricare dati crittografati.
 
 2.  Eseguire l'applicazione o lo strumento di copia bulk connettendosi con le credenziali di quell'utente. Se l'applicazione usa un driver client con Always Encrypted, verificare che la stringa di connessione per l'origine dati non contenga **column encryption setting=enabled** per garantire che i dati recuperati dalle colonne crittografate rimangano crittografati. Per altre informazioni, vedere [Always Encrypted &#40;client development&#41; (Always Encrypted - sviluppo client)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)(Always Encrypted - sviluppo client).  
   
-3.  Impostare di nuovo l'opzione ALLOW_ENCRYPTED_VALUE_MODIFICATIONS su OFF. Ad esempio  
+3.  Impostare di nuovo l'opzione ALLOW_ENCRYPTED_VALUE_MODIFICATIONS su OFF. Esempio:  
 
     ```  
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = OFF;  

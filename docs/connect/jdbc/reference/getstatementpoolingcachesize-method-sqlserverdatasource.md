@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2a65be16b8558603dfa90611ad0057f0a0689a10
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a90d00957310c64f908816198a47e4c3ba7293b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979517"
 ---
 # <a name="getstatementpoolingcachesize-method-sqlserverdatasource"></a>Metodo getStatementPoolingCacheSize (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Restituisce il valore del **statementPoolingCacheSize** proprietà di connessione. Restituisce le dimensioni della cache dell'istruzione preparata per la connessione. '0' indica che la memorizzazione nella cache non abilitata.
+  Restituisce il valore della proprietà di connessione **disablestatementpooling** . Restituisce le dimensioni della cache delle istruzioni preparate per questa connessione. ' 0' indica che la memorizzazione nella cache non è abilitata.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -30,13 +29,13 @@ public boolean getStatementPoolingCacheSize();
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Il **int** pari al **statementPoolingCacheSize** proprietà di connessione.  
+ Valore **int** della proprietà di connessione **disablestatementpooling** .  
 
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- Questo metodo è disponibile dal driver JDBC versione 6.4 e progressiva.
+ Questo metodo è disponibile dal driver JDBC versione 6,4 e successive.
  
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

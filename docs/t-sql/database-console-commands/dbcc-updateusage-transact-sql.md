@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: c880ac0db330ce03f45d469cffd717970d0b2d5e
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 7d983f2e7e370ec9fe385e6d46602c4703ca6d1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685478"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040460"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -92,7 +91,7 @@ DBCC UPDATEUSAGE restituisce il messaggio seguente (i valori possono variare):
   
 `DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner** .
   
 ## <a name="examples"></a>Esempi  
@@ -105,7 +104,7 @@ DBCC UPDATEUSAGE (0);
 GO  
 ```  
   
-### <a name="b-updating-page-or-row-counts-or-both-for-adventureworks-and-suppressing-informational-messages"></a>b. Aggiornamento del conteggio delle pagine, delle righe o di entrambi per il database AdventureWorks e disattivazione dei messaggi informativi  
+### <a name="b-updating-page-or-row-counts-or-both-for-adventureworks-and-suppressing-informational-messages"></a>B. Aggiornamento del conteggio delle pagine, delle righe o di entrambi per il database AdventureWorks e disattivazione dei messaggi informativi  
 Nell'esempio seguente viene specificato [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] come nome del database e vengono disattivati tutti i messaggi informativi.
   
 ```sql

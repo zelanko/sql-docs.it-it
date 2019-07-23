@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: fd5e77c8-a3ae-4795-bb46-b322c0500041
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 89ff78ad0c8cd82b4235adaa247a34a4a6442db5
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 6d3be4cb1c92f964d914c782abfa6a46caf47a48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073147"
 ---
 # <a name="drop-column-master-key-transact-sql"></a>DROP COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ DROP COLUMN MASTER KEY key_name;
 ## <a name="remarks"></a>Remarks  
  La chiave master della colonna può essere eliminata solo se non sono presenti valori della chiave di crittografia della colonna crittografati con tale chiave. Per eliminare i valori della chiave di crittografia della colonna, usare l'istruzione [DROP COLUMN ENCRYPTION KEY](../../t-sql/statements/drop-column-encryption-key-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessaria l'autorizzazione **ALTER ANY COLUMN MASTER KEY** per il database.  
   
 ## <a name="examples"></a>Esempi  

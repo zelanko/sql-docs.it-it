@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8cdded8444f4778ec7ad46c8b677e6ebb496847b
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 32cc95fa56d909602ab66d3ddad403bf4ceacebc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065824"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>Mirroring del database ALTER DATABASE (Transact-SQL)
 
@@ -88,11 +87,11 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 
 **'** _partner_server_ **'** specifica l'indirizzo di rete del server di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che fungerà da partner di failover in una nuova sessione di mirroring del database. Ogni sessione deve includere due partner, uno avviato come server principale e l'altro come server mirror. È consigliabile che tali partner si trovino in computer diversi.
 
-Questa opzione viene specificata una sola volta per sessione in ogni partner. Per iniziare una sessione di mirroring del database sono necessarie due istruzioni ALTER DATABASE *database* SET PARTNER **='**_partner_server_**'**. L'ordine con cui vengono specificate è significativo. Prima è necessario connettersi al server mirror e specificare l'istanza del server principale come *partner_server* (SET PARTNER **='**_principal_server_**'**). Connettersi poi al server principale e specificare l'istanza del server mirror come *partner_server* (SET PARTNER **='**_mirror_server_**'**). In questo modo viene avviata una sessione di mirroring del database tra i due partner. Per altre informazioni, vedere [Impostazione del mirroring del database](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).
+Questa opzione viene specificata una sola volta per sessione in ogni partner. Per iniziare una sessione di mirroring del database sono necessarie due istruzioni ALTER DATABASE *database* SET PARTNER **='** _partner_server_ **'** . L'ordine con cui vengono specificate è significativo. Prima è necessario connettersi al server mirror e specificare l'istanza del server principale come *partner_server* (SET PARTNER **='** _principal_server_ **'** ). Connettersi poi al server principale e specificare l'istanza del server mirror come *partner_server* (SET PARTNER **='** _mirror_server_ **'** ). In questo modo viene avviata una sessione di mirroring del database tra i due partner. Per altre informazioni, vedere [Impostazione del mirroring del database](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).
 
 Il valore di *partner_server* è un indirizzo di rete del server. La sintassi è la seguente:
 
-TCP **://**_\<indirizzo_sistema>_**:**_\<porta>_
+TCP **://** _\<indirizzo_sistema>_ **:** _\<porta>_
 
 dove
 
@@ -101,7 +100,7 @@ dove
 
 Per altre informazioni, vedere [Specificare un indirizzo di rete del server - Mirroring del database](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).
 
-Nell'esempio seguente viene illustrata la clausola SET PARTNER **='**_partner_server_**'**:
+Nell'esempio seguente viene illustrata la clausola SET PARTNER **='** _partner_server_ **'** :
 
 ```
 'TCP://MYSERVER.mydomain.Adventure-Works.com:7777'
@@ -182,7 +181,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 
  **'** _witness_server_ **'** specifica un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] da usare come server di controllo del mirroring per una sessione di mirroring del database. È possibile specificare istruzioni SET WITNESS solo nel server principale.
 
-In un'istruzione SET WITNESS **='**_witness_server_**'** la sintassi di *witness_server* è uguale alla sintassi di *partner_server*.
+In un'istruzione SET WITNESS **='** _witness_server_ **'** la sintassi di *witness_server* è uguale alla sintassi di *partner_server*.
 
 OFF rimuove il server di controllo del mirroring da una sessione di mirroring del database. L'impostazione del server di controllo del mirroring su OFF disabilita il failover automatico. Se per il database l'opzione SAFETY è impostata su FULL e il server di controllo del mirroring è impostato su OFF, in caso di errore nel server mirror, il server principale rende il database non disponibile.
 
@@ -194,7 +193,7 @@ OFF rimuove il server di controllo del mirroring da una sessione di mirroring de
 
 Per configurare il mirroring del database con un server di controllo del mirroring, è necessario configurare la sicurezza e preparare il database mirror, nonché utilizzare l'istruzione ALTER DATABASE per l'impostazione dei partner. Per un esempio del processo di configurazione completo, vedere [Impostazione del mirroring del database](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).
 
-### <a name="b-manually-failing-over-a-database-mirroring-session"></a>b. Failover manuale di una sessione di mirroring del database
+### <a name="b-manually-failing-over-a-database-mirroring-session"></a>B. Failover manuale di una sessione di mirroring del database
 
 È possibile avviare il failover manuale da qualsiasi partner di mirroring del database. Prima di eseguire il failover, è necessario verificare che il server che si ritiene essere il server principale corrente, sia effettivamente il server principale. Nel caso del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], ad esempio, eseguire la query seguente nell'istanza del server che si ritiene essere il server principale corrente:
 

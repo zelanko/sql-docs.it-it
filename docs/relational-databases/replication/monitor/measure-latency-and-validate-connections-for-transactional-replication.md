@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 36db42ae91837a8a003558878f4b59801e3059af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8593dc13115815792bb7912a220e2ad88c15fa3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640889"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083050"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Misurazione della latenza e convalida delle connessioni per la replica transazionale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47640889"
   
 -   Tra i Sottoscrittori destinati a ricevere il token di traccia, quali non lo hanno eventualmente ricevuto?  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -90,7 +89,7 @@ ms.locfileid: "47640889"
   
 3.  Fare clic su **Inserisci utilità di traccia**.  
   
-4.  Visualizzare il tempo trascorso per il token di traccia nelle colonne **Dal server di pubblicazione al server di distribuzione**, **Dal server di distribuzione al Sottoscrittore**e **Latenza totale**. Il valore **In sospeso** indica che il token non ha raggiunto un determinato punto.  
+4.  Visualizzare il tempo trascorso per il token di traccia nelle colonne seguenti: **Dal server di pubblicazione al server di distribuzione**, **Dal server di distribuzione al Sottoscrittore**, **Latenza totale**. Il valore **In sospeso** indica che il token non ha raggiunto un determinato punto.  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>Per visualizzare informazioni su un token di traccia inserito in precedenza  
   
@@ -100,7 +99,7 @@ ms.locfileid: "47640889"
   
 3.  Selezionare un'ora dall'elenco a discesa **Ora di inserimento** .  
   
-4.  Visualizzare il tempo trascorso per il token di traccia nelle colonne **Dal server di pubblicazione al server di distribuzione**, **Dal server di distribuzione al Sottoscrittore**e **Latenza totale**. Il valore **In sospeso** indica che il token non ha raggiunto un determinato punto.  
+4.  Visualizzare il tempo trascorso per il token di traccia nelle colonne seguenti: **Dal server di pubblicazione al server di distribuzione**, **Dal server di distribuzione al Sottoscrittore**, **Latenza totale**. Il valore **In sospeso** indica che il token non ha raggiunto un determinato punto.  
   
     > [!NOTE]  
     >  Le informazioni sul token di traccia vengono mantenute per lo stesso periodo di tempo degli altri dati cronologici, ovvero in base all'impostazione del periodo di memorizzazione della cronologia del database di distribuzione. Per informazioni sulla modifica delle proprietà del database di distribuzione, vedere [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
@@ -113,21 +112,21 @@ ms.locfileid: "47640889"
   
 2.  (Facoltativo) Nel database di pubblicazione del server di pubblicazione eseguire [sp_helpsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md). Verificare che la sottoscrizione esista e che lo stato sia attivo.  
   
-3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_posttracertoken &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md) specificando **@publication**. Tenere presente il valore del parametro di output **@tracer_token_id** .  
+3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_posttracertoken &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md) specificando **@publication** . Tenere presente il valore del parametro di output **@tracer_token_id** .  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>Per determinare la latenza e convalidare le connessioni per una pubblicazione transazionale  
   
 1.  Inviare un token di traccia alla pubblicazione utilizzando la procedura precedente.  
   
-2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) specificando **@publication**. Viene restituito un elenco di tutti i token di traccia inviati alla pubblicazione. Tenere presente il valore di **tracer_id** desiderato nel set di risultati.  
+2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) specificando **@publication** . Viene restituito un elenco di tutti i token di traccia inviati alla pubblicazione. Tenere presente il valore di **tracer_id** desiderato nel set di risultati.  
   
-3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) specificando **@publication** e l'ID del token di traccia indicato nel passaggio 2 per **@tracer_id**. Vengono restituite le informazioni sulla latenza per il token di traccia selezionato.  
+3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) specificando **@publication** e l'ID del token di traccia indicato nel passaggio 2 per **@tracer_id** . Vengono restituite le informazioni sulla latenza per il token di traccia selezionato.  
   
 #### <a name="to-remove-tracer-tokens"></a>Per rimuovere token di traccia  
   
-1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) specificando **@publication**. Viene restituito un elenco di tutti i token di traccia inviati alla pubblicazione. Tenere presente il valore di **tracer_id** del token di traccia da eliminare nel set di risultati.  
+1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) specificando **@publication** . Viene restituito un elenco di tutti i token di traccia inviati alla pubblicazione. Tenere presente il valore di **tracer_id** del token di traccia da eliminare nel set di risultati.  
   
-2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) specificando **@publication** e l'ID del token di traccia da eliminare indicato nel passaggio 2 per **@tracer_id**.  
+2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) specificando **@publication** e l'ID del token di traccia da eliminare indicato nel passaggio 2 per **@tracer_id** .  
   
 ###  <a name="TsqlExample"></a> Esempio (Transact-SQL)  
  In questo esempio viene inserito un record di token di traccia e viene utilizzato l'ID restituito del token di traccia inviato per visualizzare le informazioni sulla latenza.  
