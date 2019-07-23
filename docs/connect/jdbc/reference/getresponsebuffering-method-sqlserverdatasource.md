@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 19585a93-88a4-415e-a20e-12ba58cddeaa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7ea9552ff9a9bf8d0a591f35670ca7147c67e18d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4b3e53579b8c95cce0585e9614152053f39cafa8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801354"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980430"
 ---
 # <a name="getresponsebuffering-method-sqlserverdatasource"></a>Metodo getResponseBuffering (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,14 +35,14 @@ public java.lang.String getResponseBuffering()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto **stringa** che contiene una minuscola **completo** oppure **adattivo**.  
+ **Stringa** che contiene una **versione completa** o **adattiva** in minuscolo.  
   
 ## <a name="remarks"></a>Remarks  
  Il valore **full** specifica la lettura dell'intero risultato dal server in fase di esecuzione.  
   
  Il valore **adaptive** specifica la memorizzazione nel buffer della quantità di dati minima possibile, quando necessario. Il valore **adaptive** rappresenta la modalità di memorizzazione nel buffer predefinita.  
   
- Per altre informazioni sull'uso la modalità di memorizzazione delle risposte, vedere [Using Adaptive Buffering](../../../connect/jdbc/using-adaptive-buffering.md).  
+ Per ulteriori informazioni sull'utilizzo della modalità di buffering delle risposte, vedere [utilizzo del buffer adattivo](../../../connect/jdbc/using-adaptive-buffering.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo setResponseBuffering &#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md)   

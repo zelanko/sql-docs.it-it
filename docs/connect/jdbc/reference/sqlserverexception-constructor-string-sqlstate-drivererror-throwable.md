@@ -1,5 +1,5 @@
 ---
-title: Costruttore SQLServerException (lang, SQLState, DriverError, Throwable) | Microsoft Docs
+title: Costruttore SQLServerException (Java. lang. String, SQLState, DriverError, Java. lang. Throwable) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -13,18 +13,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 726cbd2c1a2106168532b34bd64db269a2031ac4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13b0e3aea694b0cedb3594cb76650ca7c938eb55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971098"
 ---
-# <a name="sqlserverexception-constructor-javalangstring-sqlstate-drivererror-javalangthrowable"></a>Costruttore SQLServerException (lang. Throwable SQLState, DriverError)
+# <a name="sqlserverexception-constructor-javalangstring-sqlstate-drivererror-javalangthrowable"></a>Costruttore SQLServerException (Java. lang. String, SQLState, DriverError, Java. lang. Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Inizializza una nuova istanza della [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) classe quando viene specificato un **stringa** oggetto, una **sqlstate** oggetto, un **drivererror** oggetto e un **throwable** oggetto.
+  Inizializza una nuova istanza della classe [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) quando vengono specificati un oggetto **stringa** , un oggetto **SQLSTATE** , un oggetto **drivererror** e un oggetto **generabile** .
 
 ## <a name="syntax"></a>Sintassi  
   
@@ -39,19 +38,19 @@ public SQLServerException(java.lang.String errText,
 #### <a name="parameters"></a>Parametri  
  *errText*  
   
- Stringa che contiene il testo dell'errore.
+ Stringa che include il testo dell'errore.
   
  *sqlState*  
   
- Un oggetto di enumerazione che contiene lo stato SQL.
+ Oggetto enum che include lo stato SQL.
  
  *driverError*  
   
- Un oggetto di enumerazione che contiene l'errore di driver.
+ Oggetto enum che include l'errore del driver.
  
  *cause*  
   
- Un oggetto throwable che contiene la causa dell'eccezione.
+ Oggetto generabile che include la ragione dell'eccezione.
   
 ## <a name="see-also"></a>Vedere anche  
  [Costruttori di SQLServerException](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   
