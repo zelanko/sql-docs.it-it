@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 145130cc-40e7-4722-8417-dff131084752
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 775b48eb5a7f2089d65c6e9548a986b2f7b9bec7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 926ee91fae207d50248df4c82d1b82bb6424e239
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63284580"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023248"
 ---
 # <a name="procedure-calls"></a>Chiamate di procedura
 Oggetto *procedure* è un oggetto eseguibile archiviato nell'origine dati. In genere, si tratta di una o più istruzioni SQL precompilate. La sequenza di escape per chiamare una routine  
   
- **{** [ **?=** ]**call** *procedure-name*[ **(** [*parameter*][ **,** [*parameter*]]... **)** ] **}**  
+ **{** [ **? =** ]**chiamare** *nome procedura*[ **(** [*parametro*] [ **,** [*parametro*]]... **)** ] **}**  
   
  in cui *-nome della routine* specifica il nome di una stored procedure e *parametro* specifica un parametro di routine.  
   
