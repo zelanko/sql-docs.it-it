@@ -39,12 +39,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2686eb387854823ff16a722fe3219c6e2acb2adc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e480363941d8928d270f978471b5474a8e24b0a1
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872217"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418878"
 ---
 # <a name="configure-database-mail"></a>Configurare Posta elettronica database
   In questo argomento viene illustrato come abilitare e configurare Posta elettronica database utilizzando la Configurazione guidata Posta elettronica database e come creare uno script di configurazione per Posta elettronica database utilizzando i modelli.  
@@ -67,7 +67,7 @@ ms.locfileid: "62872217"
   
 2.  Espandere il nodo **Gestione** .  
   
-3.  Una stretta clic **posta elettronica Database**, quindi fare clic su **Configura posta elettronica Database**.  
+3.  Fare clic con il pulsante destro del mouse su **Posta elettronica database**e quindi scegliere **Configura Posta elettronica database**.  
   
 4.  Completare le finestre di dialogo della procedura guidata  
   
@@ -129,7 +129,7 @@ ms.locfileid: "62872217"
  Consente di digitare l'indirizzo di posta elettronica che verrà utilizzato per le risposte ai messaggi di posta elettronica inviati da questo account. L'indirizzo risposte è facoltativo. Le risposte a un account di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, ad esempio, possono essere indirizzate all'amministratore del database danw@Adventure-Works.com.  
   
  **Nome server**  
- Digitare il nome o l'indirizzo IP del server SMTP utilizzato dall'account per l'invio della posta. In genere, presenta un formato simile a quello `smtp.` *< nome_società >* `.com`. Per informazioni, rivolgersi all'amministratore del sistema di posta.  
+ Digitare il nome o l'indirizzo IP del server SMTP utilizzato dall'account per l'invio della posta. Si tratta in genere di un formato simile `smtp.`a *< your_company >* `.com`. Per informazioni, rivolgersi all'amministratore del sistema di posta.  
   
  **Numero di porta**  
  Digitare il numero di porta del server SMTP per l'account. La maggior parte dei server SMTP utilizza la porta 25.  

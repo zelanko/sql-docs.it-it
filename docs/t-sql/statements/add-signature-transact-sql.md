@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c86a8bf325bc12ce9fc4843038898a579c2308be
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: eb6a57ae483b36aba960a2b10423d38e72d32c5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066106"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -99,7 +98,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
 Se invece si controfirma procSelectT1 con lo stesso certificato usato per firmare ProcSelectT1ForAlice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrà mantenere la firma attraverso la catena di chiamate e consentirà l'accesso a T1. Se Alice prova a chiamare direttamente procSelectT1, non potrà accedere a T1, poiché la controfirma non concede diritti. Nell'esempio C di seguito viene mostrato l'uso di [!INCLUDE[tsql](../../includes/tsql-md.md)] per l'esempio proposto.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Sono richieste l'autorizzazione ALTER per l'oggetto e l'autorizzazione CONTROL per il certificato o la chiave asimmetrica. Se una chiave privata associata è protetta tramite una password, è necessario che anche l'utente disponga della password.  
   
 ## <a name="examples"></a>Esempi  
@@ -114,7 +113,7 @@ ADD SIGNATURE TO HumanResources.uspUpdateEmployeeLogin
 GO  
 ```  
   
-### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>b. Firma di una stored procedure tramite un oggetto BLOB firmato  
+### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>B. Firma di una stored procedure tramite un oggetto BLOB firmato  
  Nell'esempio seguente viene creato un nuovo database e un certificato da utilizzare nell'esempio. Nell'esempio viene creata e firmata una stored procedure semplice e viene recuperato l'oggetto BLOB della firma da `sys.crypt_properties`. La firma viene quindi eliminata e aggiunta nuovamente. Nell'esempio la stored procedure viene firmata tramite la sintassi WITH SIGNATURE.  
   
 ```  

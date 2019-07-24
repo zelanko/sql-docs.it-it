@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1fabf35-1f42-48db-b0b8-7181f413ba3a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a033eb0e5d4064c3289a3275763150e097a7e4a5
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: eb41f051eca6a837abb61c308b67167a1874a44d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327752"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914284"
 ---
 # <a name="revoke-schema-permissions-transact-sql"></a>REVOKE (autorizzazioni per schemi) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,11 +65,11 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
   
--   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
+-   utente del database di cui è stato eseguito il mapping a un gruppo di Windows  
   
--   utente del database sul quale viene eseguito il mapping a un certificato  
+-   utente del database di cui è stato eseguito il mapping a un certificato  
   
--   utente del database mappato a una chiave asimmetrica  
+-   utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
   
 -   utente del database non mappato ad alcuna entità server.  
   
@@ -91,11 +90,11 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   utente del database sul quale viene eseguito il mapping a un account di accesso di Windows  
   
--   utente del database sul quale viene eseguito il mapping a un gruppo di Windows  
+-   utente del database di cui è stato eseguito il mapping a un gruppo di Windows  
   
--   utente del database sul quale viene eseguito il mapping a un certificato  
+-   utente del database di cui è stato eseguito il mapping a un certificato  
   
--   utente del database mappato a una chiave asimmetrica  
+-   utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
   
 -   utente del database non mappato ad alcuna entità server.  
   
@@ -117,7 +116,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |VIEW CHANGE TRACKING|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per lo schema.  
   
 ## <a name="see-also"></a>Vedere anche  

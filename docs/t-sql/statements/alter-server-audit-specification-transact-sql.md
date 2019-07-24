@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 63b42ffb940e4e456cb1b000477914abd73930fb
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: ab14188a10dfe96eea63b88a1ffa0b379a9523af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326462"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070323"
 ---
 # <a name="alter-server-audit-specification-transact-sql"></a>ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
 ## <a name="remarks"></a>Remarks  
  Per apportare modifiche a una specifica del controllo, è necessario impostarne lo stato sull'opzione OFF. Se ALTER DATABASE AUDIT SPECIFICATION viene eseguita quando una specifica del controllo è abilitata con qualsiasi altra opzione diversa da STATE=OFF, verrà visualizzato un messaggio di errore.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Gli utenti che dispongono dell'autorizzazione ALTER ANY SERVER AUDIT possono modificare specifiche del controllo del server e associarle a qualsiasi controllo.  
   
  Dopo essere stata creata, la specifica del controllo del server può essere visualizzata dalle entità che dispongono dell'autorizzazione CONTROL SERVER oALTER ANY SERVER AUDIT o dell'account sysadmin oppure dalle entità che possono accedere esplicitamente al controllo.  

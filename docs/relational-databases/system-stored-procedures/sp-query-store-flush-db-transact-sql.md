@@ -21,17 +21,17 @@ ms.assetid: 580c03ae-57fc-4562-a6bb-5ec89521e38c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2027e284e40a28ed8636b9c4043c8ce4d49ca93
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 96c4e7a366c1235fa1062e5d66c2d6be160a6d22
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896447"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418886"
 ---
 # <a name="spquerystoreflushdb-transact-sql"></a>sp_query_store_flush_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Scarica la parte in memoria dei dati di Query Store su disco.  
+  Scarica la parte in memoria dei dati del Query Store su disco.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,10 +48,10 @@ sp_query_store_flush_db [;]
 ## <a name="remarks"></a>Note  
   
 ## <a name="permissions"></a>Permissions  
- Richiede la **EXECUTE** autorizzazione per il database, e **eliminare** l'autorizzazione per le viste del catalogo di archivio query.  
+ Richiede l'autorizzazione **ALTER** per il database.
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente Scarica la parte in memoria dei dati di Query Store su disco.  
+ Nell'esempio seguente viene svuotata la parte in memoria dei dati del Query Store su disco.  
   
 ```  
 EXEC sp_query_store_flush_db;  

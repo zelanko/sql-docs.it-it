@@ -1,6 +1,6 @@
 ---
-title: I gruppi di calcolo nei modelli tabulari di Analysis Services | Microsoft Docs
-ms.date: 06/17/2019
+title: Gruppi di calcolo in Analysis Services modelli tabulari | Microsoft Docs
+ms.date: 07/24/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6dfe3516a36fa0ee6e8644b46b5caeb2a7cca92b
-ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
+ms.openlocfilehash: af63f41555a021fc720c7d1e15778265fe7de500
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263443"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419532"
 ---
 # <a name="calculation-groups-preview"></a>Gruppi di calcolo (anteprima)
  
 [!INCLUDE[ssas-appliesto-sql2019-aas](../../includes/ssas-appliesto-sql2019-aas.md)]
 
-I gruppi di calcolo possono ridurre significativamente il numero di misure con ridondanza mediante il raggruppamento di espressioni di misura più comuni come *elementi di calcolo*. I gruppi di calcolo sono supportati in Azure Analysis Services e SQL Server Analysis Services 2019 tabulare modella il 1470 e versioni successive [livello di compatibilità](compatibility-level-for-tabular-models-in-analysis-services.md). Sono attualmente in modelli a livello di compatibilità 1470 **Preview**.  
+I gruppi di calcolo possono ridurre significativamente il numero di misure ridondanti raggruppando espressioni di misura comuni come *elementi di calcolo*. I gruppi di calcolo sono supportati in Azure Analysis Services e SQL Server Analysis Services modelli tabulari 2019 a 1470 e a un [livello di compatibilità](compatibility-level-for-tabular-models-in-analysis-services.md)superiore. I modelli con livello di compatibilità 1470 sono attualmente in **Anteprima**.  
 
 Questo articolo descrive: 
 
@@ -29,6 +29,7 @@ Questo articolo descrive:
 > * Vantaggi 
 > * Come funzionano i gruppi di calcolo
 > * Stringhe di formato dinamico
+> * Ordinare
 > * Precedenza
 > * Strumenti
 > * Limitazioni
@@ -37,42 +38,42 @@ Questo articolo descrive:
 
 ## <a name="benefits"></a>Vantaggi
 
-I gruppi di calcolo risolvere un problema nei modelli complessi in cui può esserci una proliferazione di misure ridondanti con stessi calcoli eseguiti - più comune con calcoli di business intelligence. Ad esempio, un analista delle vendite di visualizzare i totali delle vendite e Ordina per mese-to-date (MTD), quarter-to-date (trimestre), year-to-date (YTD), gli ordini year-to-date per l'anno precedente (PIA) e così via. I creatori di modelli di dati è necessario creare misure separate per ogni calcolo, che possono causare decine di misure. Per l'utente, questo significa che sia necessario ordinare tramite anche molte misure e applicarli singolarmente ai report. 
+I gruppi di calcolo si rivolgono a un problema nei modelli complessi in cui può essere presente una proliferazione di misure ridondanti utilizzando gli stessi calcoli, più comuni con i calcoli di business intelligence. Un analista delle vendite, ad esempio, vuole visualizzare i totali e gli ordini di vendita in base al mese (MTD), da trimestre a data (QTD), da inizio anno (YTD), dagli ordini da inizio anno all'anno precedente (PY) e così via. Il Data Modeler deve creare misure separate per ogni calcolo, il che può causare decine di misure. Per l'utente, questo può comportare la necessità di eseguire l'ordinamento in base a un numero così elevato di misure e di applicarle singolarmente al report. 
 
-Diamo prima un'occhiata a come i gruppi di calcolo vengono visualizzate agli utenti in uno strumento di creazione report come Power BI. Qui verranno quindi un'occhiata a come è costituito da un gruppo di calcolo e come vengono create in un modello.
+Esaminiamo innanzitutto il modo in cui i gruppi di calcolo vengono visualizzati agli utenti in uno strumento di creazione di report come Power BI. Verranno quindi esaminati gli elementi che costituiscono un gruppo di calcolo e il modo in cui vengono creati in un modello.
 
-I gruppi di calcolo vengono visualizzati nei client di creazione report sotto forma di tabella con una singola colonna. La colonna non è ad esempio una tipica colonna o una dimensione, rappresenta invece uno o più calcoli riutilizzabili, oppure *elementi di calcolo* che possono essere applicati a qualsiasi misura già aggiunto al filtro i valori per una visualizzazione.
+I gruppi di calcolo vengono visualizzati nei client di creazione report sotto forma di tabella con una singola colonna. La colonna non è simile a una colonna o una dimensione tipica, bensì rappresenta uno o più calcoli riutilizzabili o *elementi di calcolo* che possono essere applicati a qualsiasi misura già aggiunta al filtro valori per una visualizzazione.
 
-Nell'animazione seguente, un'analisi dei dati di vendita per gli anni 2012 e 2013. Prima di applicare un gruppo di calcolo, la misura di base comune **vendita** calcolare una somma delle vendite totali per ogni mese. Quindi, l'utente desidera applicare calcoli di business intelligence per ottenere i totali delle vendite per data di fine, da inizio trimestre, da inizio anno, mese e così via. Senza gruppi di calcolo, l'utente dovrà selezionare singole misure di business intelligence.
+Nell'animazione seguente un utente analizza i dati delle vendite per gli anni 2012 e 2013. Prima di applicare un gruppo di calcolo, le **vendite** della misura di base comuni calcolano una somma delle vendite totali per ogni mese. L'utente desidera quindi applicare calcoli relativi all'intelligence temporale per ottenere i totali delle vendite da inizio mese, da inizio trimestre, da inizio anno e così via. Senza gruppi di calcolo, l'utente deve selezionare singole misure di Business Intelligence per l'ora.
 
-Con un gruppo di calcolo, in questo esempio denominata **Intelligence in tempo**, quando l'utente trascina il **calcolo del tempo** elemento per il **colonne** area, ogni elemento di calcolo del filtro viene visualizzata come una colonna separata. I valori per ogni riga vengono calcolati da misura di base, **Sales**.  
+Con un gruppo di calcolo, in questo esempio denominato **Time Intelligence**, quando l'utente trascina l'elemento di **calcolo dell'ora** nell'area filtro **colonne** , ogni elemento di calcolo viene visualizzato come colonna separata. I valori per ogni riga vengono calcolati dalla misura di base **Sales**.  
 
-![Gruppo di calcolo viene applicata in Power BI](media/calculation-groups/calc-groups-pbi.gif)
+![Gruppo di calcolo applicato in Power BI](media/calculation-groups/calc-groups-pbi.gif)
 
 
-Usare i gruppi di calcolo **esplicita** le misure DAX. In questo esempio **Sales** è una misura esplicita già creata nel modello. I gruppi di calcolo non funzionano con le misure implicite DAX. In Power BI, ad esempio, le misure implicite vengono create quando un utente trascina colonne su oggetti visivi per visualizzare valori aggregati, senza creare una misura esplicita. In questo momento, Power BI genera DAX per misure implicite scritte come inline calcoli DAX, vale a dire le misure implicite non è possibile usare i gruppi di calcolo. È stata introdotta una nuova proprietà del modello visibile in modello di oggetto tabulare (TOM), **DiscourageImplicitMeasures**. Attualmente, per creare i gruppi di calcolo di questa proprietà deve essere impostata su **true**. Se impostato su true, Power BI Desktop in Live Connect in modalità disabilita la creazione di misure implicite.
+I gruppi di calcolo  funzionano con misure DAX esplicite. In questo esempio, **Sales** è una misura esplicita già creata nel modello. I gruppi di calcolo non funzionano con le misure DAX implicite. Ad esempio, in Power BI le misure implicite vengono create quando un utente trascina le colonne sugli oggetti visivi per visualizzare i valori aggregati, senza creare una misura esplicita. A questo punto, Power BI genera DAX per le misure implicite scritte come calcoli DAX inline, ovvero le misure implicite non possono essere utilizzate con i gruppi di calcolo. È stata introdotta una nuova proprietà del modello visibile nel modello a oggetti tabulare (TOM), **DiscourageImplicitMeasures**. Attualmente, per creare gruppi di calcolo questa proprietà deve essere impostata su **true**. Se impostato su true, Power BI Desktop in modalità di connessione dinamica Disabilita la creazione di misure implicite.
 
 ## <a name="how-they-work"></a>Come funzionano
 
-Ora che si è appreso come gruppi di calcolo avvantaggiare utenti, diamo un'occhiata a come viene creata nell'esempio di gruppo calcolo tempo Intelligence illustrato.
+Ora che si è appreso come i gruppi di calcolo traggono vantaggio dagli utenti, esaminiamo il modo in cui viene creato l'esempio di gruppo di calcolo dell'intelligenza temporale illustrato.
 
-Prima di analizzare i dettagli, è possibile introdurre alcune nuove funzioni DAX in modo specifico per i gruppi di calcolo: 
+Prima di esaminare i dettagli, verranno introdotte alcune nuove funzioni DAX specifiche per i gruppi di calcolo: 
 
-[SELECTEDMEASURE](https://docs.microsoft.com/dax/selectedmeasure-function-dax) : utilizzate dalle espressioni per elementi di calcolo fare riferimento alla misura che attualmente si trova nel contesto. In questo esempio, la misura Sales.
+[SELECTEDMEASURE](https://docs.microsoft.com/dax/selectedmeasure-function-dax) : utilizzata dalle espressioni per gli elementi di calcolo per fare riferimento alla misura attualmente nel contesto. In questo esempio, la misura Sales.
 
-[SELECTEDMEASURENAME](https://docs.microsoft.com/dax/selectedmeasurename-function-dax) : utilizzate dalle espressioni per elementi di calcolo determinare la misura che si trova nel contesto in base al nome.
+[SELECTEDMEASURENAME](https://docs.microsoft.com/dax/selectedmeasurename-function-dax) : utilizzata dalle espressioni per gli elementi di calcolo per determinare la misura nel contesto in base al nome.
 
-[ISSELECTEDMEASURE](https://docs.microsoft.com/dax/isselectedmeasure-function-dax) : utilizzate dalle espressioni per elementi di calcolo determinare la misura che si trova nel contesto è specificata in un elenco delle misure.
+[ISSELECTEDMEASURE](https://docs.microsoft.com/dax/isselectedmeasure-function-dax) : utilizzata dalle espressioni per gli elementi di calcolo per determinare la misura nel contesto specificata in un elenco di misure.
 
-[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) : utilizzate dalle espressioni per elementi di calcolo recuperare la stringa di formato della misura che si trova nel contesto.
+[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) : utilizzata dalle espressioni per gli elementi di calcolo per recuperare la stringa di formato della misura nel contesto.
 
-### <a name="time-intelligence-example"></a>Esempio di Intelligence tempo
+### <a name="time-intelligence-example"></a>Esempio di Business Intelligence per l'ora
 
-Nome tabella - **Intelligence tempo**   
-Nome della colonna - **calcolo del tempo**   
-La precedenza - **20**   
+Nome tabella- **Business Intelligence in tempo**   
+Calcolo nome colonna- **ora**   
+Precedenza- **20**   
 
-#### <a name="time-intelligence-calculation-items"></a>Ora gli elementi di calcolo di Business Intelligence
+#### <a name="time-intelligence-calculation-items"></a>Elementi di calcolo Time Intelligence
 
 **Current**
 
@@ -104,7 +105,7 @@ CALCULATE(SELECTEDMEASURE(), DATESYTD(DimDate[Date]))
 CALCULATE(SELECTEDMEASURE(), SAMEPERIODLASTYEAR(DimDate[Date]))
 ```
 
-**PIA MTD**
+**PY MTD**
 
 ```dax
 CALCULATE(
@@ -114,7 +115,7 @@ CALCULATE(
 )
 ```
 
-**QTD PY**
+**PY QTD**
 
 ```dax
 CALCULATE(
@@ -124,7 +125,7 @@ CALCULATE(
 )
 ```
 
-**PIA YTD**
+**PY YTD**
 
 ```dax
 CALCULATE(
@@ -159,9 +160,9 @@ DIVIDE(
 )
 ```
 
-Per testare questo gruppo di calcolo, è possibile eseguire una query DAX in SQL Server Management Studio o open source [DAX Studio](http://daxstudio.org/). YOY e YOY % vengono omesse da questo esempio di query.
+Per testare questo gruppo di calcolo, è possibile eseguire una query DAX in SSMS o nell'Open Source [DAX Studio](http://daxstudio.org/). In questo esempio di query vengono omessi il% di base e annuo.
 
-#### <a name="time-intelligence-query"></a>Query di Intelligence temporale
+#### <a name="time-intelligence-query"></a>Query di Business Intelligence per l'ora
 
 ```dax
 EVALUATE
@@ -180,46 +181,46 @@ CALCULATETABLE (
 )
 ```
 
-#### <a name="time-intelligence-query-return"></a>Query di Intelligence ora restituire
+#### <a name="time-intelligence-query-return"></a>Tempo di risposta della query di Business Intelligence
 
-La tabella restituita Mostra calcoli per ogni elemento è stato applicato il calcolo. Ad esempio, è possibile visualizzare che QTD per marzo 2012 è la somma di gennaio, febbraio e marzo 2012.
+La tabella return Mostra i calcoli per ogni elemento di calcolo applicato. Ad esempio, è possibile vedere QTD per il 2012 marzo è la somma di gennaio, febbraio e marzo 2012.
 
-![Query restituito](media/calculation-groups/calc-groups-query-return.png)
+![Risultato della query](media/calculation-groups/calc-groups-query-return.png)
 
 
 ## <a name="dynamic-format-strings"></a>Stringhe di formato dinamico
 
-*Le stringhe di formato dinamico* con calcolo i gruppi di consentono l'applicazione condizionale di stringhe di formato per misure senza costringerli a restituire le stringhe.
+Le *stringhe di formato dinamico* con gruppi di calcolo consentono l'applicazione condizionale di stringhe di formato alle misure senza forzare la restituzione delle stringhe.
 
-I modelli tabulari supportano la formattazione dinamica delle misure tramite DAX [formato](https://docs.microsoft.com/dax/format-function-dax) (funzione). Tuttavia, la funzione FORMAT presenta lo svantaggio di restituzione di una stringa, forzando le misure che altrimenti sarebbero numeriche da restituire anche sotto forma di stringa. Ciò può avere alcune limitazioni, ad esempio non funziona con la maggior parte degli oggetti visivi di Power BI in base a valori numerici, come i grafici.
+I modelli tabulari supportano la formattazione dinamica delle misure tramite la funzione [Format](https://docs.microsoft.com/dax/format-function-dax) di DAX. Tuttavia, la funzione FORMAT presenta gli svantaggi della restituzione di una stringa, forzando le misure che altrimenti sarebbero numeric da restituire anche come stringa. Questo può presentare alcune limitazioni, ad esempio non usare la maggior parte degli oggetti visivi Power BI a seconda dei valori numerici, ad esempio i grafici.
 
-### <a name="dynamic-format-strings-for-time-intelligence"></a>Stringhe di formato dinamico per business intelligence
+### <a name="dynamic-format-strings-for-time-intelligence"></a>Stringhe di formato dinamico per l'intelligence del tempo
 
-Se si esamina l'esempio di Intelligence ora illustrato in precedenza, tutto il calcolo degli elementi tranne **YOY %** deve utilizzare il formato della misura corrente nel contesto. Ad esempio, **YTD** calcolato sulla misura Sales base deve essere valuta. Se si trattasse di un gruppo di calcolo per simile a una misura di base di ordini, il formato è numerico. **YOY %**, tuttavia, deve essere una percentuale indipendentemente dal formato della misura di base.
+Se si esamina l'esempio di Business Intelligence per l'ora illustrato in precedenza, tutti gli elementi di calcolo ad eccezione della **percentuale** di tempo di attività devono usare il formato della misura corrente nel contesto. Ad esempio, **YTD** calcolato sulla misura Sales base deve essere Currency. Se si tratta di un gruppo di calcolo per un elemento come una misura di base Orders, il formato sarà numerico. Il valore **annuo%** , tuttavia, deve essere una percentuale indipendentemente dal formato della misura di base.
 
-Per la **YOY %**, è possibile ignorare la stringa di formato impostando la proprietà di espressione di stringa di formato **0,00%;-0.00%; % 0,00**. Per altre informazioni sulle proprietà dell'espressione stringa di formato, vedere [proprietà delle celle MDX - contenuti di stringa di formato](../multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md#numeric-values).
+Per il **%** , è possibile eseguire l'override della stringa di formato impostando la proprietà espressione stringa di formato su **0.00%;-0.00%; 0.00%** . Per ulteriori informazioni sulle proprietà dell'espressione stringa di formato, vedere [proprietà delle celle MDX-contenuto della stringa di formato](../multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md#numeric-values).
 
-In questo oggetto visivo matrice in Power BI, vedrai **vendite corrente/YOY** e **ordini corrente/YOY** mantengono le relative stringhe di formato di misura di base corrispondente. **Vendite YOY %** e **Ordina YOY %**, tuttavia, sostituisce la stringa di formato da utilizzare *percentuale* formato.
+In questo oggetto visivo matrice in Power BI, viene visualizzato **Current/annue Sales** e **Orders Current/** si mantiene le rispettive stringhe di formato della misura di base. Le **vendite a%** e **gli ordini**, invece, eseguono l'override della stringa di formato per utilizzare il formato *percentuale* .
 
-![Intelligence ora nell'oggetto visivo matrice](media/calculation-groups/calc-groups-dynamicstring-timeintel.png)
+![Business Intelligence per l'ora nell'oggetti visivi matrice](media/calculation-groups/calc-groups-dynamicstring-timeintel.png)
 
 ### <a name="dynamic-format-strings-for-currency-conversion"></a>Stringhe di formato dinamico per la conversione di valuta
 
-Le stringhe di formato dinamico forniscono la conversione di valuta semplice. Si consideri il seguente modello di dati di Adventure Works. Si è modellato per *uno-a-molti* conversione di valuta come definito dal [tipi di conversione](../currency-conversions-analysis-services.md#conversion-types).
+Le stringhe di formato dinamico forniscono una semplice conversione di valuta. Si consideri il modello di dati Adventure Works seguente. Viene modellato per la conversione di valuta *uno-a-molti* come definito dai [tipi di conversione](../currency-conversions-analysis-services.md#conversion-types).
 
-![Frequenza di valuta in modelli tabulari](media/calculation-groups/calc-groups-currency-conversion.png)
+![Tasso di valuta nel modello tabulare](media/calculation-groups/calc-groups-currency-conversion.png)
 
-Oggetto **FormatString** viene aggiunta la **DimCurrency** di tabella e popolato con le stringhe di formato per le rispettive valute.
+Una colonna **FormatString** viene aggiunta alla tabella **DimCurrency** e popolata con stringhe di formato per le rispettive valute.
 
-![Colonna di stringhe di formato](media/calculation-groups/calc-groups-formatstringcolumn.png)
+![Colonna stringa formato](media/calculation-groups/calc-groups-formatstringcolumn.png)
 
-In questo esempio il seguente gruppo di calcolo viene quindi definito come:
+Per questo esempio, il gruppo di calcolo seguente viene definito come:
 
-### <a name="currency-conversion-example"></a>Esempio di conversione valuta
+### <a name="currency-conversion-example"></a>Esempio di conversione di valuta
 
-Nome tabella - **conversione di valuta**   
-Nome della colonna - **calcoli di conversione**   
-La precedenza - **5**   
+Nome tabella- **conversione valuta**   
+Nome colonna- **calcolo conversione**   
+Precedenza- **5**   
 
 #### <a name="calculation-items-for-currency-conversion"></a>Elementi di calcolo per la conversione di valuta
 
@@ -229,7 +230,7 @@ La precedenza - **5**
 SELECTEDMEASURE()
 ```
 
-**Valuta convertito**
+**Valuta convertita**
 
 ```dax
 IF(
@@ -251,31 +252,31 @@ SELECTEDVALUE(
     SELECTEDMEASUREFORMATSTRING()
 )
 ```
-L'espressione di stringa di formato deve restituire una stringa scalare. Viene utilizzato il nuovo [SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) funzione per ripristinare la stringa di formato della misura di base se sono presenti più valute in contesto di filtro.
+L'espressione stringa di formato deve restituire una stringa scalare. Usa la nuova funzione [SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) per ripristinare la stringa di formato della misura di base se sono presenti più valute nel contesto di filtro.
 
-L'animazione seguente mostra la conversione di valuta formato dinamico del **Sales** misure in un report.
+Nell'animazione seguente viene illustrata la conversione di valuta del formato dinamico della misura **Sales** in un report.
 
-![Stringa di formato dinamico di conversione valuta applicata](media/calculation-groups/calc-groups-dynamic-format-string.gif)
+![Stringa di formato dinamico per la conversione di valuta applicata](media/calculation-groups/calc-groups-dynamic-format-string.gif)
 
 ## <a name="precedence"></a>Precedenza
 
-La priorità è una proprietà definita per un gruppo di calcolo. Specifica l'ordine di valutazione quando è presente più di un gruppo di calcolo. Un numero più elevato indica la precedenza maggiore, vale a dire che verrà valutata prima i gruppi di calcolo con precedenza inferiore.
+La precedenza è una proprietà definita per un gruppo di calcolo. Specifica l'ordine di valutazione quando è presente più di un gruppo di calcolo. Un numero più alto indica una maggiore precedenza, ovvero verrà valutato prima dei gruppi di calcolo con precedenza più bassa.
 
-Per questo esempio, verranno usare dello stesso modello come il business intelligence esempio precedente, ma anche aggiungere un **medie** gruppo di calcolo. Il gruppo di calcolo delle medie mobili contiene calcoli medi che sono indipendenti da business intelligence tradizionali tempo in quanto non modificano il contesto di filtro di data, ma solo i calcoli medi in esso contenuti.
+Per questo esempio verrà usato lo stesso modello dell'esempio di business intelligence precedente, ma viene aggiunto anche un gruppo di calcolo delle **medie** . Il gruppo calcolo medio contiene calcoli medi indipendenti dalle funzionalità di Business Intelligence per l'ora tradizionale, in quanto non modificano il contesto del filtro di data, ma semplicemente applicano calcoli medi al suo interno.
 
-In questo esempio viene definito un calcolo della media giornaliero. I calcoli, ad esempio barili Media olio al giorno d' sono comuni nelle applicazioni di petrolio e gas. Altri esempi di business comuni includono Media delle vendite del Negozio nella vendita al dettaglio.
+In questo esempio viene definito un calcolo medio giornaliero. I calcoli, ad esempio i barilotti medi di petrolio al giorno, sono comuni nelle applicazioni di petrolio e gas. Altri esempi aziendali comuni includono la media delle vendite dei negozi in vendita al dettaglio.
 
-Anche se tali calcoli vengono calcolati indipendentemente da calcoli di business intelligence, potrebbe anche esserci un requisito per combinarle. Ad esempio, un utente potrebbe essere necessario visualizzare fuoco dell'olio al giorno da inizio anno per visualizzare la frequenza giornaliera petrolio dall'inizio dell'anno alla data corrente. In questo scenario, la precedenza deve essere impostata per gli elementi di calcolo.
+Sebbene questi calcoli vengano calcolati in modo indipendente dai calcoli relativi all'intelligence temporale, potrebbe essere necessario combinarli. Ad esempio, è possibile che un utente desideri visualizzare i barili di petrolio al giorno YTD per visualizzare la tariffa di petrolio giornaliera dall'inizio dell'anno alla data corrente. In questo scenario è necessario impostare la precedenza per gli elementi di calcolo.
 
-### <a name="averages-example"></a>Esempio di medie mobili
+### <a name="averages-example"></a>Esempio di medie
 
-Nome della tabella **medie**.   
-Nome della colonna **calcolo della media**.   
-È la precedenza **10**.   
+Il nome della tabella corrisponde alle **medie**.   
+Il nome della colonna è **calcolo medio**.   
+La precedenza è **10**.   
 
 #### <a name="calculation-items-for-averages"></a>Elementi di calcolo per le medie
 
-**Nessun Media**
+**Nessuna Media**
 
 ```dax
 SELECTEDMEASURE()
@@ -287,9 +288,9 @@ SELECTEDMEASURE()
 DIVIDE(SELECTEDMEASURE(), COUNTROWS(DimDate))
 ```
 
-Di seguito è riportato un esempio di una query DAX e di tabella restituita:
+Di seguito è riportato un esempio di una query DAX e di una tabella restituita:
 
-#### <a name="averages-query"></a>Query di medie mobili
+#### <a name="averages-query"></a>Query medie
 
 ```dax
 EVALUATE
@@ -322,40 +323,40 @@ EVALUATE
 )
 ```
 
-#### <a name="averages-query-return"></a>Query di medie mobili restituito
+#### <a name="averages-query-return"></a>Valore medio restituito dalla query
 
-![Query restituito](media/calculation-groups/calc-groups-ytd-daily-avg.png)
+![Risultato della query](media/calculation-groups/calc-groups-ytd-daily-avg.png)
 
-La tabella seguente illustra come vengono calcolati i valori di marzo 2012.
+Nella tabella seguente viene illustrato come vengono calcolati i valori del 2012 marzo.
 
 
 |Nome colonna  |Calcolo |
 |---------|---------|
-|YTD     |    Somma delle vendite per Jan, Feb, Mar 2012<br />= 495,364 + 506,994 + 373,483     |
-|Media giornaliera    |     Vendite per marzo 2012 diviso per n. di giorni nel mese di marzo<br />= 373,483 / 31       |
-|Media giornaliera di YTD     | YTD per marzo 2012 diviso per n. di giorni in gennaio, febbraio e marzo<br />=  1,375,841 / (31 + 29 + 31)       |
+|YTD     |    Somma delle vendite per Jan, feb, mar 2012<br />= 495.364 + 506.994 + 373.483     |
+|Media giornaliera    |     Vendite per il mar 2012 divise per il numero di giorni nel marzo<br />= 373.483/31       |
+|Media giornaliera YTD     | YTD per il mar 2012 diviso per il numero di giorni di gennaio, febbraio e marzo<br />= 1.375.841/(31 + 29 + 31)       |
 
-Ecco la definizione dell'elemento di calcolo da inizio anno, applicata con ordine di precedenza degli **20**.
+Di seguito è illustrata la definizione dell'elemento di calcolo YTD, applicato con precedenza pari a **20**.
 
 ```dax
 CALCULATE(SELECTEDMEASURE(), DATESYTD(DimDate[Date]))
 ```
 
-Di seguito è giornaliera media, applicate con una priorità pari **10**.
+Questa è la media giornaliera, applicata con una precedenza di **10**.
 
 ```dax
 DIVIDE(SELECTEDMEASURE(), COUNTROWS(DimDate))
 ```
 
-Poiché la precedenza del gruppo di calcolo tempo Intelligence è superiore a quello del gruppo di calcolo delle medie mobili, viene applicato come possibile su vasta scala. Calcolo della media giornaliera di YTD applica YTD sia il numeratore e il denominatore (numero di giorni) di calcolo della media giornaliero.
+Poiché la precedenza del gruppo di calcoli Time Intelligence è superiore a quella del gruppo di calcolo Averages, viene applicata nel modo più ampio possibile. Il calcolo della media giornaliera YTD applica YTD sia al numeratore che al denominatore (numero di giorni) del calcolo medio giornaliero.
 
-Ciò equivale all'espressione seguente:
+Equivale all'espressione seguente:
 
 ```dax
 CALCULATE(DIVIDE(SELECTEDMEASURE(), COUNTROWS(DimDate)), DATESYTD(DimDate[Date]))
 ```
 
-Non è questa espressione:
+Non questa espressione:
 
 ```dax
 DIVIDE(CALCULATE(SELECTEDMEASURE(), DATESYTD(DimDate[Date])), COUNTROWS(DimDate)))
@@ -363,7 +364,7 @@ DIVIDE(CALCULATE(SELECTEDMEASURE(), DATESYTD(DimDate[Date])), COUNTROWS(DimDate)
 
 ## <a name="sideways-recursion"></a>Ricorsione laterale
 
-Nell'esempio Business Intelligence di tempo precedente, alcuni degli elementi di calcolo fanno riferimento ad altri utenti nello stesso gruppo di calcolo. Questa operazione viene definita *ricorsione lateralmente*. Ad esempio, **YOY %** fa riferimento a entrambi **YOY** e **PY**.
+Nell'esempio di intelligenza temporale precedente, alcuni elementi di calcolo fanno riferimento ad altri nello stesso gruppo di calcolo. Questa operazione viene definita ricorsione *laterale*. Ad esempio, la **percentuale** di tempo di riferimento è sia **annua** che **py**.
 
 ```dax
 DIVIDE(
@@ -378,11 +379,11 @@ DIVIDE(
 )
 ```
 
-In questo caso, entrambe le espressioni vengono valutate separatamente perché usano diversi calcolare le istruzioni. Non sono supportati altri tipi di ricorsione.
+In questo caso, entrambe le espressioni vengono valutate separatamente perché utilizzano istruzioni Calculate diverse. Altri tipi di ricorsione non sono supportati.
 
-## <a name="single-calculation-item-in-filter-context"></a>Elemento singolo calcolo nel contesto di filtro
+## <a name="single-calculation-item-in-filter-context"></a>Singolo elemento di calcolo nel contesto di filtro
 
-Nel nostro esempio Intelligence in tempo, il **PY YTD** elemento di calcolo ha un unico calcolare espressione:
+Nell'esempio di Business Intelligence per il tempo, l'elemento di calcolo **py YTD** ha una singola espressione CALCULATE:
 
 ```dax
 CALCULATE(
@@ -392,23 +393,23 @@ CALCULATE(
 )
 ```
 
-L'argomento YTD della funzione CALCULATE() sostituisce il contesto di filtro per riutilizzare la logica già definita nell'elemento di calcolo da inizio anno. Non è possibile applicare sia PY e YTD in una singola valutazione. I gruppi di calcolo vengono *applicate solo* se un elemento singolo calcolo dal gruppo di calcolo nel contesto di filtro.
+L'argomento YTD della funzione CALCULATE () esegue l'override del contesto di filtro per riutilizzare la logica già definita nell'elemento di calcolo YTD. Non è possibile applicare sia PY che YTD in una singola valutazione. I gruppi di calcolo vengono *applicati solo* se un singolo elemento di calcolo del gruppo di calcolo è in contesto di filtro.
 
-## <a name="mdx-support"></a>Supporto per MDX
+## <a name="mdx-support"></a>Supporto MDX
 
-I gruppi di calcolo supportano le query di dati (Multidimensional Expression). Ciò significa, gli utenti di Microsoft Excel, quali modelli di dati tabulari di query tramite MDX, è possibile sfruttare al meglio di gruppi di calcolo nel foglio di lavoro di tabelle pivot e grafici.
+I gruppi di calcolo supportano le query MDX (Multidimensional Data Expressions). Questo significa che gli utenti di Microsoft Excel, che eseguono query su modelli di dati tabulari tramite MDX, possono sfruttare appieno i gruppi di calcolo nelle tabelle pivot e nei grafici del foglio di lavoro.
 
 ## <a name="tools"></a>Strumenti
 
-I gruppi di calcolo non sono ancora supportati in SQL Server Data Tools, Visual Studio con le estensioni di Analysis Services. Tuttavia, i gruppi di calcolo possono essere creati usando TMSL Tabular Model Scripting Language () o open source [Editor di modelli tabulari](https://github.com/otykier/TabularEditor).
+I gruppi di calcolo non sono ancora supportati in SQL Server Data Tools, Visual Studio con Analysis Services estensioni. È tuttavia possibile creare gruppi di calcoli utilizzando Tabular Model Scripting Language (TMSL) o l' [Editor tabulare](https://github.com/otykier/TabularEditor)open source.
 
 ## <a name="limitations"></a>Limitazioni
 
-[Sicurezza a livello dell'oggetto](object-level-security.md) (amministrazione) definiti nel calcolo tabelle del gruppo non è supportato. Tuttavia, amministrazione può essere definito in altre tabelle nello stesso modello. Se un elemento di calcolo fa riferimento a un oggetto protetto di amministrazione, viene restituito un errore generico.
+[Sicurezza a livello di oggetto](object-level-security.md) (OLS) definito nelle tabelle del gruppo di calcolo non è supportato. Tuttavia, OLS può essere definito in altre tabelle nello stesso modello. Se un elemento di calcolo fa riferimento a un oggetto protetto con OLS, viene restituito un errore generico.
 
-[Sicurezza a livello di riga](roles-ssas-tabular.md#bkmk_rowfliters) (RLS) non è supportato. È possibile definire a livello di riga nelle tabelle nel modello stesso, ma non su stessi gruppi di calcolo (direttamente o indirettamente).
+[Sicurezza a livello di riga](roles-ssas-tabular.md#bkmk_rowfliters) (RLS) non è supportato. È possibile definire la sicurezza a livello di riga nelle tabelle nello stesso modello, ma non nei gruppi di calcolo stessi (direttamente o indirettamente).
 
 ## <a name="see-also"></a>Vedere anche  
 
-[Il linguaggio DAX nei modelli tabulari](understanding-dax-in-tabular-models-ssas-tabular.md)   
-[Riferimento a DAX](https://docs.microsoft.com/dax/data-analysis-expressions-dax-reference)  
+[DAX nei modelli tabulari](understanding-dax-in-tabular-models-ssas-tabular.md)   
+[Riferimento DAX](https://docs.microsoft.com/dax/data-analysis-expressions-dax-reference)  

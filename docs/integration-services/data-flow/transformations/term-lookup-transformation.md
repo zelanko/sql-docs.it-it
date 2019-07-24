@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4f9dc06cb17b0135f6368824235e264bfcddddb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eae1f4798d1c98e5b6ef02e8fef9f450588fc799
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725787"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943925"
 ---
 # <a name="term-lookup-transformation"></a>Ricerca termini - trasformazione
 
@@ -70,7 +69,7 @@ ms.locfileid: "65725787"
 |Termini di riferimento|Windows 7 x64 Professional|  
 |Output|Windows|  
   
- La trasformazione Ricerca termini può trovare anche sostantivi e sintagmi nominali contenenti caratteri speciali che possono essere presenti anche nei dati della tabella di riferimento. I caratteri speciali sono i seguenti: %, @, &, $, #, \*, :, ;, ., **,**, !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " e '.  
+ La trasformazione Ricerca termini può trovare anche sostantivi e sintagmi nominali contenenti caratteri speciali che possono essere presenti anche nei dati della tabella di riferimento. I caratteri speciali sono i seguenti: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " e '.  
   
 ## <a name="data-types"></a>Tipi di dati  
  La trasformazione Ricerca termini può utilizzare solo colonne con tipo di dati DT_WSTR o DT_NTEXT. Se una colonna contiene testo ma non ha uno di questi tipi di dati, sarà possibile utilizzare la trasformazione Conversione dati per aggiungere al flusso di dati una colonna con tipo di dati DT_WSTR o DT_NTEXT e copiare nella nuova colonna i valori della colonna originale. L'output della trasformazione Conversione dati può essere quindi utilizzato come input della trasformazione Ricerca termini. Per altre informazioni, vedere [Trasformazione Conversione dati](../../../integration-services/data-flow/transformations/data-conversion-transformation.md).  

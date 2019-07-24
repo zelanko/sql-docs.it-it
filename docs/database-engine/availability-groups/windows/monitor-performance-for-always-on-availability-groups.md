@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-manager: jroth
-ms.openlocfilehash: 480975d4bbcf0ec33a51509e2ca10b633cd8aef7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782519"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014685"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Monitorare le prestazioni di gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

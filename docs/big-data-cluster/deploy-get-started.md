@@ -1,68 +1,70 @@
 ---
 title: Attività iniziali
 titleSuffix: SQL Server big data clusters
-description: Descrive i passaggi e le risorse per la distribuzione di cluster di big data 2019 Server SQL (anteprima).
+description: Informazioni sui passaggi e sulle risorse per la distribuzione di SQL Server cluster 2019 Big Data (anteprima).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8583610606e5d554f039a69688af3ddff8dc8bb3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 41dd39c7aa613083f8ff47824ed6238b6f3c61b9
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958539"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419430"
 ---
-# <a name="get-started-with-sql-server-big-data-clusters"></a>Introduzione ai cluster di SQL Server i big Data
+# <a name="get-started-with-sql-server-big-data-clusters"></a>Introduzione ai cluster SQL Server Big Data
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo fornisce una panoramica su come distribuire un' [cluster di big data 2019 Server SQL (anteprima)](big-data-cluster-overview.md). Lo scopo è quello di acquisire i concetti e forniscono un framework per comprendere altri articoli sulla distribuzione in questa sezione. I passaggi di distribuzione specifici variano a seconda delle scelte effettuate piattaforma per il client e server.
+Questo articolo fornisce una panoramica della distribuzione di un [cluster SQL Server 2019 Big Data (anteprima)](big-data-cluster-overview.md). È concepito per orientarsi ai concetti e fornire un Framework per comprendere gli altri articoli sulla distribuzione in questa sezione. I passaggi di distribuzione specifici variano in base alle scelte della piattaforma per il client e il server.
 
-## <a id="tools"></a> Strumenti client
+## <a id="tools"></a>Strumenti client
 
-I cluster di big data richiedono un set di strumenti client specifico. Prima di distribuire un cluster di big data in Kubernetes, è consigliabile installare gli strumenti seguenti:
+I cluster di Big data richiedono un set specifico di strumenti client. Prima di distribuire un cluster Big Data in Kubernetes, è necessario installare gli strumenti seguenti:
 
 | Strumento | Descrizione |
 |---|---|
-| **mssqlctl** | Distribuisce e gestisce i cluster di big data. |
+| **azdata** | Distribuisce e gestisce i cluster Big Data. |
 | **kubectl** | Crea e gestisce il cluster Kubernetes sottostante. |
-| **Azure Data Studio** | Interfaccia grafica per l'uso di cluster di big data. |
-| **Estensione di SQL Server 2019** | Estensione di Azure Data Studio che abilita le funzionalità di cluster di big data. |
+| **Azure Data Studio** | Interfaccia grafica per l'uso del cluster Big Data. |
+| **Estensione SQL Server 2019** | Azure Data Studio estensione che Abilita Big Data le funzionalità del cluster. |
 
-Altri strumenti sono necessari per scenari diversi. Ogni articolo deve spiegare gli strumenti dei prerequisiti per l'esecuzione di un'attività specifica. Per un elenco completo di strumenti e i collegamenti di installazione, vedere [strumenti di big data di installazione di SQL Server 2019](deploy-big-data-tools.md).
+Per diversi scenari sono necessari altri strumenti. Ogni articolo dovrebbe illustrare gli strumenti prerequisiti per l'esecuzione di un'attività specifica. Per un elenco completo degli strumenti e dei collegamenti di installazione, vedere [Install SQL Server 2019 Big Data Tools](deploy-big-data-tools.md).
 
 ## <a name="kubernetes"></a>kubernetes
 
-I cluster di big data vengono distribuiti come una serie di contenitori correlati che vengono gestite nei [Kubernetes](https://kubernetes.io/docs/home). È possibile ospitare Kubernetes in diversi modi. Anche se si dispone già di un ambiente Kubernetes esistente, è consigliabile esaminare i requisiti correlati per i cluster di big data.
+I cluster di Big data vengono distribuiti come una serie di contenitori intercorrelati gestiti in [Kubernetes](https://kubernetes.io/docs/home). È possibile ospitare Kubernetes in diversi modi. Anche se si dispone già di un ambiente Kubernetes esistente, è necessario esaminare i requisiti correlati per i cluster Big Data.
 
-- **Azure Kubernetes Service (AKS)** : Servizio contenitore di AZURE consente di distribuire un cluster Kubernetes gestito in Azure. Solo gestire e mantenere i nodi agente. Con servizio contenitore di AZURE, si è autorizzati a eseguire il provisioning di un hardware per il cluster. È anche facile da usare un cluster di big data [script di distribuzione](quickstart-big-data-cluster-deploy.md) per creare il cluster AKS e distribuire il cluster di big data in un unico passaggio. Per altre informazioni sull'uso di servizio contenitore di AZURE con i cluster di big data, vedere [configurare Azure Kubernetes Service per le distribuzioni di cluster (anteprima) di SQL Server 2019 dei big data](deploy-on-aks.md).
+- **Azure Kubernetes Service (AKS)** : AKS consente di distribuire un cluster Kubernetes gestito in Azure. È possibile gestire e gestire solo i nodi dell'agente. Con AKS non è necessario effettuare il provisioning del proprio hardware per il cluster. È anche facile usare uno [script di distribuzione](quickstart-big-data-cluster-deploy.md) di Big Data cluster per creare il cluster AKS e distribuire il cluster Big data in un unico passaggio. Per altre informazioni sull'uso di AKS con Big Data cluster, vedere [configurare il servizio Azure Kubernetes per le distribuzioni di SQL Server 2019 Big Data cluster (anteprima)](deploy-on-aks.md).
 
-- **Più macchine**: È anche possibile distribuire Kubernetes a più computer Linux, che può essere server fisici o macchine virtuali. Il [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) strumento può essere usato per creare il cluster Kubernetes. Questo metodo funziona bene se si dispone già di infrastruttura esistente che si desidera utilizzare per il cluster di big data. Per altre informazioni sull'uso **kubeadm** le distribuzioni con i cluster di big data, vedere [configurare su Kubernetes in più computer per le distribuzioni di cluster (anteprima) di SQL Server 2019 dei big data](deploy-with-kubeadm.md).
+- **Più computer**: È anche possibile distribuire Kubernetes in più computer Linux, che possono essere server fisici o macchine virtuali. Lo strumento [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) può essere usato per creare il cluster Kubernetes. Questo metodo funziona correttamente se si dispone già di un'infrastruttura che si vuole usare per il cluster Big Data. Per altre informazioni sull'uso di distribuzioni di **kubeadm** con Big Data cluster, vedere [configurare Kubernetes in più computer per le distribuzioni di SQL Server 2019 Big Data cluster (anteprima)](deploy-with-kubeadm.md).
 
-- **Minikube**: Minikube consente di eseguire Kubernetes in locale in un singolo server. È una scelta ottimale se si sta tentando di usare i cluster di big data o necessario utilizzarlo in uno scenario di test o sviluppo. Per altre informazioni sull'uso di Minikube, vedere la [Minikube documentazione](https://kubernetes.io/docs/setup/minikube/). Per requisiti specifici per l'uso di Minikube con i cluster di big data, vedere [configurare minikube per le distribuzioni di cluster di SQL Server 2019 dei big data](deploy-on-minikube.md).
+- **Minikube**: Minikube consente di eseguire Kubernetes localmente in un singolo server. Si tratta di un'opzione utile se si sta provando Big Data cluster o se è necessario usarla in uno scenario di test o di sviluppo. Per ulteriori informazioni sull'utilizzo di Minikube, vedere la [documentazione di Minikube](https://kubernetes.io/docs/setup/minikube/). Per requisiti specifici per l'uso di Minikube con i cluster di Big Data, vedere [configurare Minikube per le distribuzioni di cluster SQL Server 2019 Big Data](deploy-on-minikube.md).
 
 ## <a name="deploy-a-big-data-cluster"></a>Distribuire un cluster Big Data
 
-Dopo la configurazione di Kubernetes, si distribuisce un cluster di big data con il `mssqlctl bdc create` comando. Quando si distribuisce, è possibile eseguire diversi approcci.
+Dopo la configurazione di Kubernetes, è possibile distribuire un cluster `azdata bdc create` di Big data con il comando. Quando si distribuisce, è possibile adottare diversi approcci.
 
-- Se si distribuisce in un ambiente di sviluppo e test, è possibile scegliere di usare uno dei [le configurazioni predefinite](deployment-guidance.md#deploy) disql **mssqlctl**.
+- Se si esegue la distribuzione in un ambiente di sviluppo e test, è possibile scegliere di usare una delle [configurazioni predefinite](deployment-guidance.md#deploy) fornite da **azdata**.
 
-- Per personalizzare la distribuzione, è possibile creare e usare la propria [i file di configurazione di distribuzione](deployment-guidance.md#configfile).
+- Per personalizzare la distribuzione, è possibile creare e usare i [file di configurazione della distribuzione](deployment-guidance.md#configfile).
 
-- Per un'installazione completamente automatica, è possibile passare tutte le altre impostazioni nelle variabili di ambiente. Per altre informazioni, vedere [distribuzioni automatiche](deployment-guidance.md#unattended).
+- Per un'installazione completamente automatica, è possibile passare tutte le altre impostazioni nelle variabili di ambiente. Per ulteriori informazioni, vedere [distribuzioni automatiche](deployment-guidance.md#unattended).
 
 ## <a name="deployment-scripts"></a>Script di distribuzione
 
-Gli script di distribuzione per distribuzione di Kubernetes sia i cluster di big data in un unico passaggio. Offrono inoltre spesso valori predefiniti per le impostazioni del cluster di big data. Per un esempio di uno script di distribuzione per il cluster di big data in Azure Kubernetes Service (AKS), vedere l'articolo seguente:
+Gli script di distribuzione consentono di distribuire i cluster Kubernetes e Big Data in un unico passaggio. Spesso forniscono anche valori predefiniti per Big Data impostazioni del cluster. Per un esempio di uno script di distribuzione per Big Data cluster in Azure Kubernetes Service (AKS), vedere l'articolo seguente:
 
-[Distribuire un 2019 di Server SQL cluster dei big data con uno script di distribuzione (AKS)](quickstart-big-data-cluster-deploy.md).
+[Distribuire un cluster SQL Server 2019 Big data con uno script di distribuzione (AKS)](quickstart-big-data-cluster-deploy.md).
 
-È possibile personalizzare qualsiasi script di distribuzione tramite la creazione di una versione personalizzata che consente di configurare le variabili di ambiente cluster di big data in modo diverso.
+È possibile personalizzare qualsiasi script di distribuzione creando una versione personalizzata che configura le variabili di ambiente del cluster Big Data in modo diverso.
+
+[Distribuire un cluster SQL Server 2019 Big data con Azure Data Studio notebook](deploy-notebooks.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Dopo aver correttamente distribuito un cluster di big data, [connettersi al cluster](connect-to-big-data-cluster.md) e prendere in considerazione [il caricamento dei dati di esempio](tutorial-load-sample-data.md) per l'uso con diverse procedure dettagliate.
+Dopo aver distribuito correttamente un cluster di Big Data, [connettersi al cluster](connect-to-big-data-cluster.md) e prendere in considerazione il [caricamento dei dati di esempio](tutorial-load-sample-data.md) da usare con diverse procedure dettagliate.

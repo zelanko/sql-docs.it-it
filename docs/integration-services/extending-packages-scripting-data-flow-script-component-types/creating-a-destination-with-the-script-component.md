@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f4a1fe05a5662dad7e674831c5e5b76b9c8c8263
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a357eea4f29dc65365db7d5ca7274cf8c385aaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65801357"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112410"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Creazione di una destinazione con il componente script
 
@@ -73,7 +72,7 @@ ms.locfileid: "65801357"
 ### <a name="adding-variables"></a>Aggiunta di variabili  
  Se si vuole usare variabili esistenti nello script, è possibile aggiungerle nei campi delle proprietà **ReadOnlyVariables** e **ReadWriteVariables** della pagina **Script** di **Editor trasformazione Script**.  
   
- Quando si aggiungono più variabili nei campi delle proprietà, separare i relativi nomi con virgole. È anche possibile selezionare più variabili facendo clic sul pulsante con i puntini di sospensione (**...**) accanto ai campi delle proprietà **ReadOnlyVariables** e **ReadWriteVariables** e selezionando le variabili nella finestra di dialogo **Seleziona variabili**.  
+ Quando si aggiungono più variabili nei campi delle proprietà, separare i relativi nomi con virgole. È anche possibile selezionare più variabili facendo clic sul pulsante con i puntini di sospensione ( **...** ) accanto ai campi delle proprietà **ReadOnlyVariables** e **ReadWriteVariables** e selezionando le variabili nella finestra di dialogo **Seleziona variabili**.  
   
  Per informazioni generali sull'uso delle variabili con il componente script, vedere [Uso di variabili nel componente script](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   

@@ -1,79 +1,79 @@
 ---
 title: Eseguire l'aggiornamento a una nuova versione
 titleSuffix: SQL Server big data clusters
-description: Informazioni su come aggiornare i cluster di big data di SQL Server 2019 (anteprima) a una nuova versione.
+description: Informazioni su come eseguire l'aggiornamento di SQL Server cluster di 2019 Big Data (anteprima) a una nuova versione.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 67ca9b09db398538b4adeedc9008dcb2f14f258f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7bdb1eb59fd36d065df9dba0f6d6879c1a294914
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958403"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419390"
 ---
-# <a name="how-to-upgrade-sql-server-big-data-clusters"></a>Come aggiornare i cluster di SQL Server i big Data
+# <a name="how-to-upgrade-sql-server-big-data-clusters"></a>Come aggiornare SQL Server cluster Big Data
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo fornisce indicazioni su come aggiornare un cluster di big data di SQL Server a una nuova versione. I passaggi descritti in questo articolo si applicano specificamente al modo in cui eseguire l'aggiornamento tra versioni di anteprima.
+Questo articolo fornisce indicazioni su come eseguire l'aggiornamento di un cluster SQL Server Big Data a una nuova versione. I passaggi descritti in questo articolo si applicano in modo specifico a come eseguire l'aggiornamento tra versioni di anteprima.
 
 ## <a name="backup-and-delete-the-old-cluster"></a>Eseguire il backup ed eliminare il vecchio cluster
 
-Attualmente, l'unico modo per aggiornare un cluster di big data a una nuova versione è manualmente, rimuovere e ricreare il cluster. Ogni versione ha una versione univoca del **mssqlctl** che non è compatibile con la versione precedente. Inoltre, se un cluster precedente è stato necessario scaricare un'immagine in un nuovo nodo, l'immagine più recente potrebbe non essere compatibile con le immagini precedenti nel cluster. Per eseguire l'aggiornamento alla versione più recente, procedere come segue:
+Attualmente, l'unico modo per aggiornare un cluster Big Data a una nuova versione consiste nel rimuovere e ricreare manualmente il cluster. Ogni versione ha una versione univoca di **azdata** che non è compatibile con la versione precedente. Inoltre, se un cluster precedente doveva scaricare un'immagine in un nuovo nodo, l'immagine più recente potrebbe non essere compatibile con le immagini precedenti del cluster. Per eseguire l'aggiornamento alla versione più recente, attenersi alla procedura seguente:
 
-1. Prima di eliminare il vecchio cluster, eseguire il backup dei dati nell'istanza di master di SQL Server e in HDFS. Per l'istanza master di SQL Server, è possibile usare [SQL Server backup e ripristino](data-ingestion-restore-database.md). Per un HDFS, si [possibile copiare i dati con **curl**](data-ingestion-curl.md).
+1. Prima di eliminare il vecchio cluster, eseguire il backup dei dati nell'istanza di SQL Server master e in HDFS. Per l'istanza SQL Server Master è possibile utilizzare [SQL Server backup e ripristino](data-ingestion-restore-database.md). Per HDFS, è [possibile copiare i dati con **curl**](data-ingestion-curl.md).
 
-1. Eliminare il vecchio cluster con il `mssqlctl delete cluster` comando.
+1. Eliminare il vecchio cluster con il `azdata delete cluster` comando.
 
    ```bash
-    mssqlctl bdc delete --name <old-cluster-name>
+    azdata bdc delete --name <old-cluster-name>
    ```
 
    > [!Important]
-   > Usare la versione di **mssqlctl** che corrisponde al cluster. Non eliminare un cluster con la versione più recente di meno recente **mssqlctl**.
+   > Usare la versione di **azdata** che corrisponde al cluster. Non eliminare un cluster precedente con la versione più recente di **azdata**.
 
-1. Se si dispone di tutte le versioni precedenti di **mssqlctl** installato, è importante disinstallare **mssqlctl** prima prima di installare la versione più recente.
+1. Prima della versione CTP 3,2, **azdata** è stato chiamato **mssqlctl**. Se sono installate versioni precedenti di **mssqlctl** o **azdata** , è importante disinstallarlo prima di installare la versione più recente di **azdata**.
 
-   Per versioni da CTP 2.3 o versione successiva, eseguire il comando seguente. Sostituire `ctp3.0` nel comando con la versione di **mssqlctl** che si desidera disinstallare. Se la versione è precedente alla versione CTP 3.0, aggiungere un trattino prima il numero di versione (ad esempio, `ctp-2.5`).
+   Per CTP 2,3 o versioni successive, eseguire il comando seguente. Sostituire `ctp3.1` nel comando con la versione di **mssqlctl** che si sta disinstallando. Se la versione è precedente alla CTP 3,1, aggiungere un trattino prima del numero di versione (ad `ctp-2.5`esempio,).
 
    ```powershell
-   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt
+   pip3 uninstall -r https://mcr.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
    ```
 
-1. Installare la versione più recente di **mssqlctl**. I seguenti comandi installano **mssqlctl** per la versione CTP 3.1:
+1. Installare la versione più recente di **azdata**. I comandi seguenti installano **azdata** per CTP 3,2:
 
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
+   pip3 install -r https://aka.ms/azdata
    ```
 
-   **Linux:**
+   **Linux**
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt --user
+   pip3 install -r https://aka.ms/azdata --user
    ```
 
    > [!IMPORTANT]
-   > Per ogni versione e il percorso **mssqlctl** le modifiche. Anche se è installato in precedenza **mssqlctl**, è necessario reinstallare dal percorso più recente prima di creare il nuovo cluster.
+   > Per ogni versione, il percorso di **azdata** cambia. Anche se in precedenza è stato installato **azdata** o **mssqlctl**, è necessario reinstallare dal percorso più recente prima di creare il nuovo cluster.
 
-## <a id="mssqlctlversion"></a> Verificare la versione mssqlctl
+## <a id="azdataversion"></a>Verificare la versione di azdata
 
-Prima di distribuire un nuovo cluster di big data, verificare che si stia utilizzando la versione più recente di **mssqlctl** con il `--version` parametro:
+Prima di distribuire un nuovo cluster di Big data, verificare che sia in uso la versione  più recente di `--version` azdata con il parametro:
 
 ```bash
-mssqlctl --version
+azdata --version
 ```
 
 ## <a name="install-the-new-release"></a>Installare la nuova versione
 
-Dopo avere rimosso il cluster di big data precedente e installare la versione più recente **mssqlctl**, distribuire il nuovo cluster di big data usando le istruzioni di distribuzione corrente. Per altre informazioni, vedere [come distribuire i dati di grandi dimensioni di SQL Server di cluster in Kubernetes](deployment-guidance.md). Quindi, ripristinare eventuali file o database necessari.
+Dopo aver rimosso il cluster di Big Data precedente e aver installato la versione più recente di **azdata**, distribuire il nuovo cluster Big data usando le istruzioni di distribuzione correnti. Per ulteriori informazioni, vedere [How to deploy SQL Server Big Data Clusters on Kubernetes](deployment-guidance.md). Ripristinare quindi i database o i file necessari.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sui cluster di big data, vedere [quali sono i cluster di SQL Server i big data](big-data-cluster-overview.md).
+Per ulteriori informazioni sui cluster di Big Data, vedere [che cosa sono i cluster SQL Server Big Data](big-data-cluster-overview.md).

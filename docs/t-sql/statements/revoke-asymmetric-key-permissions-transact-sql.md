@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1a1063e8-ffc7-4775-a40d-e155740ad7b2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c77dbfc9ba5e7d2d7672cc339bdedba0dae3f9ef
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: baf3fd0a03beb185a43180599352b6f64f8044cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082361"
 ---
 # <a name="revoke-asymmetric-key-permissions-transact-sql"></a>REVOKE (autorizzazioni per chiavi asimmetriche) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
  *permission*  
  Specifica un'autorizzazione che può essere revocata in un assembly. Vedere l'elenco riportato di seguito.  
   
- ON ASYMMETRIC KEY **::**_asymmetric_key_name_  
+ ON ASYMMETRIC KEY **::** _asymmetric_key_name_  
  Specifica la chiave asimmetrica per cui viene revocata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
  *database_principal*  
@@ -110,7 +109,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per la chiave asimmetrica.  
   
 ## <a name="see-also"></a>Vedere anche  

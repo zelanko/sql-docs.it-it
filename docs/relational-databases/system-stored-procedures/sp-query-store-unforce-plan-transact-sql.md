@@ -21,17 +21,17 @@ ms.assetid: a52f91d0-ff1e-46ad-ba36-b32d9623c9ab
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a00ac999dd3b6f96595f6abaf02b81e4684c55b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0cdb3fc64a18965594c315b589922b14b66be49b
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002615"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418922"
 ---
 # <a name="spquerystoreunforceplan-transact-sql"></a>sp_query_store_unforce_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Abilita unforcing un piano specifico per una determinata query.  
+  Consente di forzare un piano specifico per una query specifica.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +43,9 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @query_id = ] query_id` È l'id della query. *query_id* è un **bigint**, non prevede alcun valore predefinito.  
+`[ @query_id = ] query_id`ID della query. *query_id* è di tipo **bigint**e non prevede alcun valore predefinito.  
   
-`[ @plan_id = ] plan_id` È l'id del piano di query che non verrà più applicato. *plan_id* è un **bigint**, non prevede alcun valore predefinito.  
+`[ @plan_id = ] plan_id`ID del piano di query che non verrà più applicato. *plan_id* è di tipo **bigint**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -53,10 +53,10 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ## <a name="remarks"></a>Note  
   
 ## <a name="permissions"></a>Permissions  
- Richiede la **EXECUTE** autorizzazione per il database, e **Inserisci**, **UPDATE**, e **Elimina** l'autorizzazione per il catalogo di archivio query Visualizzazioni.  
+ Richiede l'autorizzazione **ALTER** per il database.
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente restituisce informazioni sulle query in query store.  
+ Nell'esempio seguente vengono restituite informazioni sulle query nell'archivio query.  
   
 ```  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
@@ -67,7 +67,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Dopo aver identificato il query_id e plan_id che si desidera annullare la forzatura, usare l'esempio seguente, annullare la forzatura del piano.  
+ Dopo aver identificato i query_id e plan_id che si desidera disforzare, utilizzare l'esempio seguente per disforzare il piano.  
   
 ```  
 EXEC sp_query_store_unforce_plan 3, 3;  

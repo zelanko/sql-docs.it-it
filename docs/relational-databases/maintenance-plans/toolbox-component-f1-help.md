@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 40e4dac5c3efaf4df04b8afec3d028d39978e397
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: c71cc0537f79330742282e7a0389187c8424d1f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328801"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115525"
 ---
 # <a name="toolbox-component-f1-help"></a>Guida sensibile al contesto del componente Casella degli strumenti
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "53328801"
  Le icone della**Casella degli strumenti** possono essere trascinate con il mouse oppure copiate e incollate nell'area di visualizzazione della finestra di progettazione all'interno di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="how-the-toolbox-works"></a>Funzionamento della casella degli strumenti  
- La Casella degli strumenti è un controllo di albero reimpostabile che funziona come Esplora risorse di [!INCLUDE[msCoName](../../includes/msconame-md.md)] , ma senza linee di collegamento o griglie. È possibile espandere più segmenti ("schede") della **Casella degli strumenti** contemporaneamente, in modo che l'intero albero scorra all'interno della finestra **Casella degli strumenti** . Per espandere una scheda della **Casella di controllo**, fare clic sul segno più (**+**) accanto al nome. Per comprimere una scheda espansa, fare clic sul segno meno (**-**) accanto al nome.  
+ La Casella degli strumenti è un controllo di albero reimpostabile che funziona come Esplora risorse di [!INCLUDE[msCoName](../../includes/msconame-md.md)] , ma senza linee di collegamento o griglie. È possibile espandere più segmenti ("schede") della **Casella degli strumenti** contemporaneamente, in modo che l'intero albero scorra all'interno della finestra **Casella degli strumenti** . Per espandere una scheda della **Casella di controllo**, fare clic sul segno più ( **+** ) accanto al nome. Per comprimere una scheda espansa, fare clic sul segno meno ( **-** ) accanto al nome.  
   
  Quando si ritorna a un editor o a una finestra di progettazione, nella **Casella degli strumenti** vengono visualizzati automaticamente la scheda e l'elemento selezionati più di recente. Quando si attiva una finestra di progettazione o un editor diverso, la selezione corrente nella **Casella degli strumenti** viene aggiornata di conseguenza.  
   

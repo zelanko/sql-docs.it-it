@@ -1,75 +1,79 @@
 ---
-title: Configurare la suddivisione in livelli di HDFS
+title: Configurare la suddivisione in livelli HDFS
 titleSuffix: SQL Server big data clusters
-description: Questo articolo illustra come configurare la suddivisione in livelli per montare un file system di archivio Azure Data Lake esterni in HDFS in un cluster di big data (anteprima) di SQL Server 2019 HDFS.
+description: Questo articolo illustra come configurare la suddivisione in livelli di HDFS per montare un file system di Azure Data Lake Storage esterno in HDFS in un cluster Big Data SQL Server 2019 (anteprima).
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 04/23/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0397b0a27b98bb43a7513e0552124bba0972dfdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17eedf9f0797a0adb5eda6ca8ee090fc762e1491
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958304"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419382"
 ---
-# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>Configurare la suddivisione in livelli nel cluster di big data di SQL Server HDFS
+# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>Configurare la suddivisione in livelli di HDFS nei cluster SQL Server Big Data
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-La suddivisione in livelli di HDFS offre la possibilità di montaggio esterni, compatibile con HDFS file system HDFS. Questo articolo illustra come configurare HDFS la suddivisione in livelli per i cluster di big data di SQL Server 2019 (anteprima). A questo punto, Supportiamo la connessione a Azure Data Lake Storage Gen2 e Amazon S3. 
+La suddivisione in livelli di HDFS offre la possibilità di montare file system esterni compatibili con HDFS in HDFS. Questo articolo illustra come configurare la suddivisione in livelli di HDFS per SQL Server cluster 2019 Big Data (anteprima). A questo punto, è supportata la connessione a Azure Data Lake Storage Gen2 e Amazon S3. 
 
-## <a name="hdfs-tiering-overview"></a>Cenni preliminari sulla suddivisione in livelli di HDFS
+## <a name="hdfs-tiering-overview"></a>Panoramica sulla suddivisione in livelli HDFS
 
-Con la suddivisione in livelli, le applicazioni possono accedere con facilità i dati in un'ampia gamma di archivi esterni come se i dati risiedono in al sistema HDFS locale. Il montaggio è un'operazione di metadati, in cui viene copiato i metadati che descrive lo spazio dei nomi per il sistema di file esterno per il sistema HDFS locale. Questi metadati includono informazioni sulle directory esterne e i file con le autorizzazioni e gli ACL. I dati corrispondenti sono solo copiati su richiesta, quando si accede ai dati stessi attraverso, ad esempio una query. I dati di sistema di file esterno sono ora accessibile dal cluster di big data di SQL Server. È possibile eseguire Spark processi e le query SQL in merito ai dati nello stesso modo che è necessario eseguirli su eventuali dati locali archiviati in HDFS nel cluster.
+Con la suddivisione in livelli, le applicazioni possono accedere facilmente ai dati in un'ampia gamma di archivi esterni come se i dati risiedano nella HDFS locale. Il montaggio è un'operazione di metadati, in cui i metadati che descrivono lo spazio dei nomi nel file system esterno vengono copiati nel HDFS locale. Questi metadati includono informazioni sulle directory e i file esterni insieme alle relative autorizzazioni e ACL. I dati corrispondenti vengono copiati su richiesta solo quando si accede ai dati, ad esempio una query. È ora possibile accedere ai dati del file System esterno dal cluster SQL Server Big Data. È possibile eseguire processi Spark e query SQL su questi dati nello stesso modo in cui vengono eseguiti nei dati locali archiviati in HDFS nel cluster.
 
 ### <a name="caching"></a>Memorizzazione nella cache
-Attualmente, per impostazione predefinita, 1% dello spazio di archiviazione HDFS totale verrà riservato per la memorizzazione nella cache dei dati montati. La memorizzazione nella cache è un'impostazione globale nei punti di montaggio.
+Attualmente, per impostazione predefinita, l'1% dello spazio di archiviazione HDFS totale sarà riservato per la memorizzazione nella cache dei dati montati. La memorizzazione nella cache è un'impostazione globale tra i montaggi.
 
 > [!NOTE]
-> La suddivisione in livelli di HDFS è una funzionalità sviluppata da Microsoft e una versione precedente di esso è stata rilasciata come parte della distribuzione di Apache Hadoop 3.1. Per altre informazioni, vedere [ https://issues.apache.org/jira/browse/HDFS-9806 ](https://issues.apache.org/jira/browse/HDFS-9806) per informazioni dettagliate.
+> La suddivisione in livelli di HDFS è una funzionalità sviluppata da Microsoft e una versione precedente è stata rilasciata come parte della distribuzione di Apache Hadoop 3,1. Per ulteriori informazioni, vedere [https://issues.apache.org/jira/browse/HDFS-9806](https://issues.apache.org/jira/browse/HDFS-9806) per informazioni dettagliate.
 
-Le sezioni seguenti forniscono un esempio di come configurare la suddivisione in livelli con un'origine dati di Azure Data Lake Storage Gen2 HDFS.
+Le sezioni seguenti forniscono un esempio di come configurare la suddivisione in livelli di HDFS con un'origine dati Azure Data Lake Storage Gen2.
+
+## <a name="refresh"></a>Aggiorna
+
+La suddivisione in livelli di HDFS supporta l'aggiornamento. Aggiornare un montaggio esistente per l'ultimo snapshot dei dati remoti.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- [Cluster di big data distribuita](deployment-guidance.md)
-- [Strumenti dei big Data](deploy-big-data-tools.md)
-  - **mssqlctl**
+- [Cluster Big Data distribuito](deployment-guidance.md)
+- [Strumenti per Big Data](deploy-big-data-tools.md)
+  - **azdata**
   - **kubectl**
 
-## <a name="mounting-instructions"></a>Istruzioni sul montaggio
+## <a name="mounting-instructions"></a>Istruzioni di montaggio
 
-Supportiamo la connessione a Azure Data Lake Storage Gen2 e Amazon S3. Istruzioni su come montare contro questi tipi di archiviazione sono disponibili negli articoli seguenti:
+È supportata la connessione a Azure Data Lake Storage Gen2 e Amazon S3. Le istruzioni su come eseguire il montaggio in questi tipi di archiviazione sono disponibili negli articoli seguenti:
 
-- [Come Azure Data Lake Store montaggio Gen2 per HDFS la suddivisione in livelli in un cluster di big data](hdfs-tiering-mount-adlsgen2.md)
-- [Come montare S3 per HDFS la suddivisione in livelli in un cluster di big data](hdfs-tiering-mount-s3.md)
+- [Come montare ADLS Gen2 per la suddivisione in livelli di HDFS in un cluster Big Data](hdfs-tiering-mount-adlsgen2.md)
+- [Come montare S3 per la suddivisione in livelli di HDFS in un cluster Big Data](hdfs-tiering-mount-s3.md)
 
-## <a id="issues"></a> Problemi noti e limitazioni
+## <a id="issues"></a>Problemi noti e limitazioni
 
-Quando si usa HDFS la suddivisione in livelli nel cluster di big data di SQL Server nell'elenco seguente offre i problemi noti e sulle limitazioni attuali:
+L'elenco seguente fornisce problemi noti e limitazioni correnti quando si usa la suddivisione in livelli di HDFS in SQL Server Big Data cluster:
 
-- Se il montaggio è bloccato in un `CREATING` sullo stato per un lungo periodo di tempo, molto probabilmente non è riuscito. In questo caso, annullare il comando ed eliminare il montaggio, se necessario. Verificare che i parametri e le credenziali siano corrette prima di riprovare.
+- Se il montaggio è bloccato in uno `CREATING` stato da molto tempo, è molto probabile che abbia esito negativo. In questa situazione, annullare il comando ed eliminare il montaggio se necessario. Verificare che i parametri e le credenziali siano corretti prima di riprovare.
 
-- Impossibile creare punti di montaggio di directory esistenti.
+- Non è possibile creare montaggi nelle directory esistenti.
 
-- Impossibile creare punti di montaggio all'interno di punti di montaggio esistente.
+- Non è possibile creare montaggi nei montaggi esistenti.
 
-- Se uno dei predecessori del punto di montaggio non esiste, verrà creati con le autorizzazioni impostate come predefinite per r-xr-xr-x (555).
+- Se uno dei predecessori del punto di montaggio non esiste, verranno creati con le autorizzazioni assegnate per impostazione predefinita a r-xr-xr-x (555).
 
-- La creazione di montaggio può richiedere tempo a seconda del numero e dimensioni dei file in cui vengono montati. Durante questo processo, i file sotto il montaggio non sono visibili agli utenti. Mentre viene creato il montaggio, tutti i file verranno aggiunti a un percorso temporaneo, che per impostazione predefinita `/_temporary/_mounts/<mount-location>`.
+- La creazione del montaggio può richiedere del tempo in base al numero e alle dimensioni dei file montati. Durante questo processo, i file nel montaggio non sono visibili agli utenti. Durante la creazione del montaggio, tutti i file verranno aggiunti a un percorso temporaneo, il cui valore predefinito `/_temporary/_mounts/<mount-location>`è.
 
-- Il comando di creazione di montaggio è asincrono. Dopo il comando viene eseguito, lo stato di montaggio può essere controllato per comprendere lo stato del montaggio.
+- Il comando di creazione montaggio è asincrono. Dopo l'esecuzione del comando, è possibile controllare lo stato di montaggio per comprendere lo stato del montaggio.
 
-- Quando si crea il montaggio, utilizzato per l'argomento **-percorso di montaggio** è essenzialmente un identificatore univoco del montaggio. La stessa stringa (tra cui "/" alla fine, se presente) deve essere usata nei comandi successivi.
+- Quando si crea il montaggio, l'argomento usato per **--Mount-Path** è essenzialmente un identificatore univoco del montaggio. La stessa stringa (incluso "/" alla fine se presente) deve essere utilizzata nei comandi successivi.
 
-- I punti di montaggio sono di sola lettura. Non è possibile creare alcuna directory o file in un montaggio.
+- I montaggi sono di sola lettura. Non è possibile creare directory o file in un montaggio.
 
-- Si sconsiglia di directory di montaggio e i file che possono cambiare. Dopo aver creato il montaggio, eventuali modifiche o aggiornamenti alla sede remota non si rifletteranno nel montaggio in HDFS. Se vengono apportate modifiche nella posizione remota, è possibile eliminare e ricreare il montaggio in modo da riflettere lo stato aggiornato.
+- Non è consigliabile installare Directory e file che possono cambiare. Dopo la creazione del montaggio, eventuali modifiche o aggiornamenti della posizione remota non verranno riflesse nel montaggio in HDFS. Se si verificano modifiche nella posizione remota, è possibile scegliere di eliminare e ricreare il montaggio per riflettere lo stato aggiornato.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sui cluster di SQL Server 2019 dei big data, vedere [quali sono i cluster di SQL Server 2019 dei big data?](big-data-cluster-overview.md).
+Per ulteriori informazioni sui cluster SQL Server 2019 Big Data, vedere [che cosa sono i cluster SQL Server 2019 Big Data?](big-data-cluster-overview.md).

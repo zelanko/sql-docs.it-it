@@ -1,29 +1,29 @@
 ---
 title: Che cos'è la distribuzione di applicazioni?
 titleSuffix: SQL Server 2019 big data clusters
-description: Questo articolo descrive la distribuzione di applicazioni in un cluster di big data di SQL Server 2019 (anteprima).
+description: Questo articolo descrive la distribuzione di applicazioni in un cluster SQL Server 2019 Big Data (anteprima).
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 03/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 43d65ce9b9335d22b453114139f7032613ac5359
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8cc44862af21c54bdbd0e4adbb35db912c3f7c9
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958822"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419411"
 ---
-# <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>Che cos'è la distribuzione di applicazioni in un cluster di SQL Server 2019 dei big Data?
+# <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>Che cos'è la distribuzione di applicazioni in un cluster SQL Server 2019 Big Data?
 
-Distribuzione dell'applicazione consente la distribuzione di applicazioni nel cluster di big data, fornendo le interfacce per creare, gestire ed eseguire le applicazioni. Le applicazioni distribuite nel cluster di big data usufruire la potenza di calcolo del cluster e possono accedere ai dati che sono disponibili nel cluster. In questo modo si aumenta la scalabilità e prestazioni delle applicazioni, gestendo le applicazioni in cui si trovano i dati.
-Le sezioni seguenti descrivono l'architettura e la funzionalità di distribuzione dell'applicazione.
+La distribuzione dell'applicazione consente la distribuzione di applicazioni nel cluster Big Data fornendo interfacce per la creazione, la gestione e l'esecuzione di applicazioni. Le applicazioni distribuite nel cluster Big Data traggono vantaggio dalla potenza di calcolo del cluster e possono accedere ai dati disponibili nel cluster. Ciò aumenta la scalabilità e le prestazioni delle applicazioni, gestendo al tempo stesso le applicazioni in cui si trovano i dati.
+Le sezioni seguenti descrivono l'architettura e le funzionalità della distribuzione di applicazioni.
 
-## <a name="application-deployment-architecture"></a>Architettura di distribuzione applicazione
+## <a name="application-deployment-architecture"></a>Architettura di distribuzione delle applicazioni
 
-Distribuzione di applicazioni è costituito da un controller e i gestori di runtime delle app. Quando si crea un'applicazione, un file di specifica (`spec.yaml`) viene fornito. Ciò `spec.yaml` file contiene tutto ciò che il controller deve sapere per distribuire correttamente l'applicazione. Di seguito è riportato un esempio del contenuto per `spec.yaml`:
+La distribuzione dell'applicazione è costituita da un controller e da gestori di runtime dell'app. Quando si crea un'applicazione, viene fornito un`spec.yaml`file di specifica (). Questo `spec.yaml` file contiene tutte le informazioni necessarie per la distribuzione corretta dell'applicazione da parte del controller. Di seguito è riportato un esempio del contenuto per `spec.yaml`:
 
 ```yaml
 #spec.yaml
@@ -41,32 +41,32 @@ output: #output parameter the app expects and the type
   result: int
 ```
 
-Controlla se il controller la `runtime` specificato nella `spec.yaml` file e chiama il gestore di runtime corrispondenti. Il gestore di runtime crea l'applicazione. Prima di tutto un Kubernetes ReplicaSet viene creata contenente uno o più POD, ognuno dei quali contiene l'applicazione da distribuire. Il numero di POD è definito per il `replicas` parametro impostato `spec.yaml` file per l'applicazione. Ogni pod può avere uno dei più pool. Il numero di pool è definito per il `poolsize` parametro set nel `spec.yaml` file.
+Il controller esamina l' `runtime` oggetto specificato `spec.yaml` nel file e chiama il gestore di runtime corrispondente. Il gestore di runtime crea l'applicazione. Viene innanzitutto creato un ReplicaSet Kubernetes contenente uno o più POD, ognuno dei quali contiene l'applicazione da distribuire. Il numero di Pod è definito dal `replicas` set di parametri `spec.yaml` nel file per l'applicazione. Ogni pod può avere uno o più pool. Il numero di pool è definito dal `poolsize` set di parametri `spec.yaml` nel file.
 
-Queste impostazioni hanno un impatto sulla quantità di richieste che può gestire la distribuzione in parallelo. Il numero massimo di richieste in un determinato momento è uguale a `replicas` volte `poolsize`. Se sono presenti 5 repliche e 2 pool per ogni replica la distribuzione può gestire 10 richieste in parallelo. Vedere l'immagine seguente per una rappresentazione grafica dei `replicas` e `poolsize`:
+Queste impostazioni hanno un effetto sulla quantità di richieste che la distribuzione è in grado di gestire in parallelo. Il numero massimo di richieste in un determinato momento è uguale a `replicas` times. `poolsize` Se si dispone di 5 repliche e 2 pool per replica, la distribuzione può gestire 10 richieste in parallelo. Vedere l'immagine seguente per una rappresentazione grafica di `replicas` e `poolsize`:
 
-![DimensionePool e repliche](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
+![PoolSize e repliche](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
 
-Dopo aver ReplicaSet è stata creata e il numero di POD sono stati avviati, viene creato un processo cron se un `schedule` è stato impostato nel `spec.yaml` file. Infine, viene creato un Kubernetes Service che consente di gestire ed eseguire l'applicazione (vedere sotto).
+Dopo la creazione di REPLICASET e l'avvio dei Pod, viene creato un processo cron se è stato `schedule` impostato un valore `spec.yaml` nel file. Infine, viene creato un servizio Kubernetes che può essere usato per gestire ed eseguire l'applicazione (vedere di seguito).
 
-Quando viene eseguita un'applicazione, il servizio di Kubernetes per i proxy di applicazione, le richieste a una replica e restituisce i risultati.
+Quando viene eseguita un'applicazione, il servizio Kubernetes per l'applicazione inoltra le richieste a una replica e restituisce i risultati.
 
-## <a name="how-to-work-with-application-deployment"></a>Come lavorare con la distribuzione di applicazioni
+## <a name="how-to-work-with-application-deployment"></a>Come usare la distribuzione di applicazioni
 
-Le due interfacce principali per la distribuzione dell'applicazione sono: 
-- [Interfaccia della riga di comando `mssqlctl`](big-data-cluster-create-apps.md)
-- [Estensione di Visual Studio Code e Data Studio di Azure](app-deployment-extension.md)
+Le due interfacce principali per la distribuzione di applicazioni sono: 
+- [Interfaccia della riga di comando`azdata`](big-data-cluster-create-apps.md)
+- [Estensione Visual Studio Code e Azure Data Studio](app-deployment-extension.md)
 
-È anche possibile che un'applicazione può essere eseguito tramite un servizio web RESTful. Per altre informazioni, vedere [utilizzo di applicazioni nei cluster di big data](big-data-cluster-consume-apps.md).
+È anche possibile che un'applicazione venga eseguita usando un servizio Web RESTful. Per ulteriori informazioni, vedere [utilizzo di applicazioni in cluster Big Data](big-data-cluster-consume-apps.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni su come creare ed eseguire applicazioni nel cluster di big data di SQL Server, vedere gli argomenti seguenti:
+Per ulteriori informazioni su come creare ed eseguire applicazioni in cluster SQL Server Big Data, vedere gli argomenti seguenti:
 
-- [Distribuire applicazioni con mssqlctl](big-data-cluster-create-apps.md)
-- [Distribuire le applicazioni usando l'estensione per la distribuzione di App](app-deployment-extension.md)
-- [Utilizzo di applicazioni nei cluster di big data](big-data-cluster-consume-apps.md)
+- [Distribuire applicazioni con azdata](big-data-cluster-create-apps.md)
+- [Distribuire applicazioni usando l'estensione per la distribuzione di app](app-deployment-extension.md)
+- [Utilizzare le applicazioni in cluster Big Data](big-data-cluster-consume-apps.md)
 
-Per altre informazioni sui cluster di big data di SQL Server, vedere Panoramica riportata di seguito:
+Per ulteriori informazioni sui cluster SQL Server Big Data, vedere la panoramica seguente:
 
-- [Quali sono i cluster di SQL Server 2019 dei big Data?](big-data-cluster-overview.md)
+- [Che cosa sono i cluster SQL Server 2019 Big Data?](big-data-cluster-overview.md)

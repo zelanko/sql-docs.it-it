@@ -1,6 +1,6 @@
 ---
-title: Proprietà generali di Analysis Services | Microsoft Docs
-ms.date: 04/04/2019
+title: Proprietà generali Analysis Services | Microsoft Docs
+ms.date: 07/24/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0683a8eb03cb0d5d17072825cfc90f8c9ba2500e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0d2a1fd8a83c4b181dfc182f5fb5630e29c9efb
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714698"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419514"
 ---
 # <a name="general-properties"></a>Proprietà generali
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà del server elencate nelle tabelle seguenti. In questo argomento vengono documentate le proprietà del server disponibili nel file msmdsrv.ini che non sono incluse in una sezione specifica, ad esempio Sicurezza, Rete o Pool di thread. Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Proprietà server in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **Si applica a:** Modalità server multidimensionale e tabulare, se non diversamente specificato  
+ Queste proprietà si applicano alla modalità server multidimensionale e tabulare, se non specificato diversamente.  
   
 ## <a name="non-specific-category"></a>Categoria Non-Specific  
  **AdminTimeout**  
@@ -33,11 +33,11 @@ ms.locfileid: "62714698"
  Proprietà stringa che specifica in un elenco delimitato le cartelle che è possibile esplorare durante il salvataggio, l'apertura e la ricerca di file nelle finestra di dialogo di Analysis Services. È necessario che l'account del servizio Analysis Services abbia letto e scritto le autorizzazioni a qualsiasi cartella aggiunta all'elenco.  
   
  **BackupDir**  
- Proprietà stringa che identifica il nome della directory in cui sono archiviati i file di backup per impostazione predefinita, nel caso in cui un percorso non è specificato come parte del comando Backup.  
+ Proprietà di stringa che identifica il nome della directory in cui vengono archiviati i file di backup per impostazione predefinita, nel caso in cui non sia stato specificato un percorso come parte del comando backup.  
  
-**ClientCacheRefreshPolicy** si applica ad Azure Analysis Services solo. Esegue l'override di **aggiornamento pianificato della cache** impostazione per tutti i set di dati di Power BI. Tutti i report di Live Connect verranno considerato dall'impostazione a livello di server indipendentemente dal livello di set di dati di configurazione o l'area di lavoro si trovano in.
+**ClientCacheRefreshPolicy** Per i modelli tabulari in SSAS e Azure Analysis Services, questa proprietà esegue l'override dell'impostazione di **aggiornamento della cache pianificata** per tutti i set di impostazioni di Power bi. Tutti i report di Live Connect osserveranno l'impostazione a livello di server indipendentemente dall'impostazione a livello di set di dati o dall'area di lavoro in cui risiedono.
 
-Il valore predefinito per questa proprietà è -1, che consente che tutte le cache in background viene aggiornato come specificato nella configurazione per il set di dati di aggiornamento pianificato della cache. Per impedire tutte le cache in background viene aggiornato, specificare zero (0).
+Il valore predefinito per questa proprietà è-1, che consente tutti gli aggiornamenti della cache in background come specificato nell'impostazione di aggiornamento della cache pianificata per il set di dati. Per scoraggiare tutti gli aggiornamenti della cache in background, specificare zero (0).
 
   
  **CollationName**  
@@ -69,7 +69,7 @@ Il valore predefinito per questa proprietà è -1, che consente che tutte le cac
  Proprietà di stringa che consente l'identificazione del nome della directory in cui sono archiviati i dati.  
   
  **DeploymentMode**  
- Consente di determinare il contesto operativo di un'istanza del server Analysis Services. Questa proprietà è definita 'modalità server' in finestre di dialogo, messaggi e documentazione. Questa proprietà viene configurata tramite il programma di installazione di SQL Server in base alla modalità server selezionata durante l'installazione di Analysis Services e deve essere considerata solo per uso interno, usando sempre il valore specificato dal programma di installazione.  
+ Consente di determinare il contesto operativo di un'istanza del server Analysis Services. Questa proprietà viene definità modalità server ' in finestre di dialogo, messaggi e documentazione. Questa proprietà viene configurata tramite il programma di installazione di SQL Server in base alla modalità server selezionata durante l'installazione di Analysis Services e deve essere considerata solo per uso interno, usando sempre il valore specificato dal programma di installazione.  
   
  Tra i valori validi per questa proprietà sono inclusi i seguenti:  
   

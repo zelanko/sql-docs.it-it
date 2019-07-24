@@ -1,108 +1,112 @@
 ---
-title: Quali sono i cluster di big data?
+title: Che cosa sono i cluster Big Data?
 titleSuffix: SQL Server big data clusters
-description: Informazioni sui cluster di big data 2019 di SQL Server (anteprima) che vengono eseguiti su Kubernetes e fornire le opzioni di scalabilità orizzontale per relazionali e dati di HDFS.
+description: Informazioni sui cluster SQL Server 2019 Big Data (anteprima) che vengono eseguiti in Kubernetes e offrono opzioni di scalabilità orizzontale per dati relazionali e HDFS.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 166fa1d5b736720b8bab7dff6a8ea56c63a702fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0beb4ea57ba6c2591e5b2c06a7775fc2d7e8b26c
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958859"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419503"
 ---
 # <a name="what-are-sql-server-big-data-clusters"></a>Cluster di Big Data di SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-A partire da [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], i cluster di big data di SQL Server consentono di distribuire cluster scalabili di contenitori di SQL Server, Spark e HDFS in esecuzione in Kubernetes. Questi componenti sono in esecuzione side-by-side per consentire la lettura, scrittura ed elaborazione di big data da Transact-SQL o Spark, consentendo con facilità combinare e analizzare i dati relazionali di valore elevato con volumi elevati di big data.
+A partire [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]da, i cluster SQL Server Big Data consentono di distribuire cluster scalabili di contenitori SQL Server, Spark e HDFS in esecuzione in Kubernetes. Questi componenti vengono eseguiti side-by-side per consentire la lettura, la scrittura e l'elaborazione di Big Data da Transact-SQL o Spark, consentendo di combinare e analizzare facilmente i dati relazionali di alto valore con Big Data di volumi elevati.
 
-Per altre informazioni sulle nuove funzionalità e problemi noti per la versione più recente, vedere la [note sulla versione](release-notes-big-data-cluster.md).
+Per ulteriori informazioni sulle nuove funzionalità e sui problemi noti per la versione più recente, vedere le [Note sulla versione](release-notes-big-data-cluster.md).
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## <a name="scenarios"></a>Scenari
 
-I cluster di SQL Server i big data offrono flessibilità nella modalità di interazione con i big data. È possibile eseguire query delle origini dati esterne, archivia i big data in HDFS gestiti da SQL Server o eseguire query sui dati da più origini dati esterne tramite il cluster. È quindi possibile usare i dati per intelligenza artificiale, apprendimento automatico e altre attività di analisi. Le sezioni seguenti forniscono altre informazioni su questi scenari.
+I cluster SQL Server Big Data offrono la flessibilità necessaria per interagire con il Big Data. È possibile eseguire query sulle origini dati esterne, archiviare Big Data in HDFS gestite da SQL Server o eseguire query sui dati da più origini dati esterne tramite il cluster. È quindi possibile usare i dati per intelligenza artificiale, Machine Learning e altre attività di analisi. Nelle sezioni seguenti vengono fornite ulteriori informazioni su questi scenari.
 
 ### <a name="data-virtualization"></a>Virtualizzazione dei dati
 
-Sfruttando [PolyBase di SQL Server](../relational-databases/polybase/polybase-guide.md), i cluster di big data di SQL Server possono eseguire una query su origini dati esterne lo spostamento o copia dei dati. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduce nuovi connettori alle origini dati.
+Sfruttando [SQL Server polibase](../relational-databases/polybase/polybase-guide.md), SQL Server i cluster Big data possono eseguire query sulle origini dati esterne senza dover trasferire o copiare i dati. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]introduce nuovi connettori per le origini dati.
 
 ![Virtualizzazione dei dati](media/big-data-cluster-overview/data-virtualization.png)
 
-### <a name="data-lake"></a>Lake dati
+### <a name="data-lake"></a>Data Lake
 
-Un cluster di big data di SQL Server include un HDFS scalabile *pool di archiviazione*. Utilizzabile per archiviare big data, potenzialmente acquisiti da più origini esterne. Una volta che i dati di grandi dimensioni archiviati in HDFS nel cluster di big data, è possibile analizzare e query sui dati e combinarli con i dati relazionali.
+Un cluster SQL Server Big Data include un pool di *archiviazione*HDFS scalabile. Questa operazione può essere usata per archiviare Big Data, potenzialmente inserite da più origini esterne. Una volta archiviato il Big Data in HDFS nel cluster Big Data, è possibile analizzare ed eseguire query sui dati e combinarli con i dati relazionali.
 
-![Lake dati](media/big-data-cluster-overview/data-lake.png)
+![Data Lake](media/big-data-cluster-overview/data-lake.png)
 
-### <a name="scale-out-data-mart"></a>Data mart di dati di tipo scale-out
+### <a name="scale-out-data-mart"></a>Scalabilità orizzontale data mart
 
-I cluster di big data di SQL Server forniscono scalabilità orizzontale calcolo e archiviazione per migliorare le prestazioni di analisi dei dati. I dati da diverse origini possono essere inseriti e distribuiti tra *pool di dati* nodi come una cache per un'ulteriore analisi.
+SQL Server cluster di Big Data offrono risorse di calcolo e archiviazione con scalabilità orizzontale per migliorare le prestazioni di analisi dei dati. I dati provenienti da un'ampia gamma di origini possono essere inseriti e distribuiti tra i nodi del *pool di dati* come cache per un'ulteriore analisi.
 
-![data mart di data](media/big-data-cluster-overview/data-mart.png)
+![Data Mart](media/big-data-cluster-overview/data-mart.png)
 
-### <a name="integrated-ai-and-machine-learning"></a>Machine Learning e intelligenza artificiale integrata
+### <a name="integrated-ai-and-machine-learning"></a>Intelligenza artificiale integrata e Machine Learning
 
-I cluster di big data di SQL Server consentono di attività sui dati archiviati nel pool di archiviazione HDFS e i pool di dati di machine learning e intelligenza artificiale. È possibile usare Spark e gli strumenti di intelligenza artificiale incorporati in SQL Server con R, Python, Scala o Java.
+SQL Server cluster Big Data abilitano le attività di intelligenza artificiale e di machine learning sui dati archiviati nei pool di archiviazione HDFS e nei pool di dati. È possibile usare Spark e gli strumenti di intelligenza artificiale integrati in SQL Server, usando R, Python, scala o Java.
 
-![Machine Learning e intelligenza artificiale](media/big-data-cluster-overview/ai-ml-spark.png)
+![Intelligenza artificiale e ML](media/big-data-cluster-overview/ai-ml-spark.png)
 
 ### <a name="management-and-monitoring"></a>Gestione e monitoraggio
 
-Gestione e monitoraggio vengono forniti tramite una combinazione di strumenti da riga di comando, API, portali e viste a gestione dinamica.
+La gestione e il monitoraggio sono forniti tramite una combinazione di strumenti da riga di comando, API, portali e viste a gestione dinamica.
 
-È possibile utilizzare Data Studio di Azure per eseguire una serie di attività nel cluster di big data. Questa opzione è abilitata per il nuovo **estensione 2019 per Server SQL (anteprima)** . Questa estensione offre:
+È possibile usare Azure Data Studio per eseguire una serie di attività nel cluster Big Data. Questa funzionalità è abilitata dalla nuova **estensione SQL Server 2019 (anteprima)** . Questa estensione fornisce:
 
-- Frammenti predefiniti per attività comuni di gestione.
-- Possibilità di esplorare HDFS, caricare i file, i file di anteprima e creare una directory.
-- Possibilità di creare, aprire ed eseguire i notebook di Jupyter compatibile.
-- Data virtualization procedura guidata per semplificare la creazione di origini dati esterne.
+- Frammenti predefiniti per le attività di gestione comuni.
+- Possibilità di esplorare HDFS, caricare file, visualizzare in anteprima i file e creare directory.
+- Possibilità di creare, aprire ed eseguire notebook compatibili con Jupyter.
+- Data Virtualization Wizard per semplificare la creazione di origini dati esterne.
 
-## <a id="architecture"></a> Architettura
+## <a id="architecture"></a>Architettura
 
-Un cluster di big data di SQL Server è un cluster di contenitori Linux orchestrata dal [Kubernetes](https://kubernetes.io/docs/concepts/).
+Un cluster SQL Server Big Data è un cluster di contenitori Linux orchestrati da [Kubernetes](https://kubernetes.io/docs/concepts/).
 
-### <a name="kubernetes-concepts"></a>Concetti relativi a Kubernetes
+### <a name="kubernetes-concepts"></a>Concetti di Kubernetes
 
-Kubernetes è un agente di orchestrazione di contenitori di open source, che è possibile ridimensionare le distribuzioni di contenitori in base alle esigenze. La tabella seguente vengono definiti alcuni termini importanti di Kubernetes:
+Kubernetes è un agente di orchestrazione di contenitori open source, che consente di ridimensionare le distribuzioni di contenitori in base alle esigenze. La tabella seguente definisce alcuni importanti termini di Kubernetes:
 
 |||
 |:--|:--|
-| **Cluster** | Un cluster Kubernetes è un set di computer, noti come nodi. Un nodo controlla il cluster e viene designato del nodo master; i nodi rimanenti sono nodi di lavoro. Il master di Kubernetes è responsabile per la distribuzione del lavoro tra i ruoli di lavoro e per il monitoraggio dell'integrità del cluster. |
-| **Node** | Un nodo esegue le applicazioni nei contenitori. Può trattarsi di un computer fisico o una macchina virtuale. Un cluster Kubernetes può contenere una combinazione di nodi macchina virtuale e computer fisici. |
-| **POD** | Un pod è l'unità atomica di distribuzione di Kubernetes. Un pod è un gruppo logico di uno o più contenitori- e associate le risorse necessarie per eseguire un'applicazione. Ogni pod viene eseguito su un nodo. un nodo può essere eseguito una o più POD. Il master di Kubernetes assegna automaticamente i POD per i nodi del cluster. |
+| **Cluster** | Un cluster Kubernetes è un set di computer, noti come nodi. Un nodo controlla il cluster e viene designato come nodo master; i nodi rimanenti sono nodi di lavoro. Il Master Kubernetes è responsabile della distribuzione del lavoro tra i dipendenti e del monitoraggio dell'integrità del cluster. |
+| **Node** | Un nodo esegue applicazioni incluse in contenitori. Può essere un computer fisico o una macchina virtuale. Un cluster Kubernetes può contenere una combinazione di nodi computer fisico e macchina virtuale. |
+| **Pod** | Un pod è l'unità di distribuzione atomica di Kubernetes. Un pod è un gruppo logico di uno o più contenitori e risorse associate, necessari per eseguire un'applicazione. Ogni pod viene eseguito in un nodo; un nodo può eseguire uno o più POD. Il Master Kubernetes assegna automaticamente i pod ai nodi del cluster. |
 | &nbsp; ||
 
-Nei cluster di SQL Server i big data, Kubernetes è responsabile per lo stato dei cluster di big data di SQL Server; Kubernetes compila e configura i nodi del cluster, assegna i POD a nodi e monitora l'integrità del cluster.
+In SQL Server cluster Big Data, Kubernetes è responsabile dello stato dei cluster di Big Data di SQL Server. Kubernetes compila e configura i nodi del cluster, assegna i pod ai nodi e monitora l'integrità del cluster.
 
-### <a name="big-data-clusters-architecture"></a>architettura per big data cluster
+### <a name="big-data-clusters-architecture"></a>Architettura di cluster di Big Data
 
-I nodi del cluster sono organizzati in tre piani logici: il piano di controllo, il piano di calcolo e il piano dati. Ogni piano ha responsabilità diverse nel cluster. Tutti i nodi Kubernetes in un cluster di big data di SQL Server ospita i POD per i componenti di almeno un piano.
+Il diagramma seguente illustra i componenti di un cluster di Big Data per SQL Server.
 
-![Panoramica dell'architettura](media/big-data-cluster-overview/architecture-diagram-planes.png)
+![Panoramica dell'architettura](media/big-data-cluster-overview/architecture-diagram-overview.png)
 
-### <a id="controlplane"></a> Piano di controllo
+### <a id="controlplane"></a>Controller
 
-Il piano di controllo offre gestione e sicurezza per il cluster. Contiene il master di Kubernetes, il *istanza master di SQL Server*e altri servizi a livello di cluster, ad esempio il Metastore Hive e il Driver Spark.
+Il controller fornisce la gestione e la sicurezza per il cluster. Contiene il servizio cntrol, l'archivio di configurazione e altri servizi a livello di cluster, ad esempio Kibana, Grafana e la ricerca elastica.
 
-### <a id="computeplane"></a> Piano di calcolo
+### <a id="computeplane"></a>Pool di calcolo
 
-Il piano di calcolo offre le risorse di calcolo al cluster. Contiene i nodi in esecuzione SQL Server in Linux POD. I POD nel piano di calcolo sono suddivise *pool di calcolo* per specifiche attività di elaborazione. Un pool di calcolo può agire come un [PolyBase](../relational-databases/polybase/polybase-guide.md) gruppo di scalabilità orizzontale per le query distribuite sui dati di diverse origini, quali come HDFS, Oracle, MongoDB o Teradata.
+Il pool di calcolo fornisce risorse di calcolo al cluster. Contiene nodi che eseguono SQL Server in Linux pod. I Pod nel pool di calcolo sono divisi in *istanze di calcolo SQL* per attività di elaborazione specifiche. 
 
-### <a id="dataplane"></a> Piano dati
+### <a id="dataplane"></a>Pool di dati
 
-Il piano dati viene usato per la persistenza dei dati e la memorizzazione nella cache. Contiene il pool di dati SQL e pool di archiviazione.  Il pool di dati SQL è costituito da uno o più POD che eseguono SQL Server in Linux. Viene utilizzato per inserire i dati dalla query SQL o i processi Spark. Dati di SQL Server big data mart vengono rese persistenti nel pool di dati del cluster. Il pool di archiviazione è costituito da POD di pool di archiviazione costituito da SQL Server in Linux, Spark e HDFS. Tutti i nodi di archiviazione in un cluster di big data di SQL Server sono membri di un cluster HDFS.
+Il pool di dati viene utilizzato per la persistenza e la memorizzazione nella cache dei dati. Il pool di dati è costituito da uno o più pod in esecuzione SQL Server in Linux. Viene usato per inserire dati da query SQL o processi Spark. SQL Server i Data Mart del cluster Big Data sono salvati in permanenza nel pool di dati. 
+
+### <a name="storage-pool"></a>Pool di archiviazione
+
+Il pool di archiviazione è costituito da Pod del pool di archiviazione costituiti da SQL Server in Linux, Spark e HDFS. Tutti i nodi di archiviazione in un cluster SQL Server Big Data sono membri di un cluster HDFS.
 
 > [!TIP]
-> Per un'analisi approfondita nell'architettura di cluster di big data e l'installazione, vedere [Workshop: I dati di big data Microsoft SQL Server architettura di cluster](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).
+> Per informazioni dettagliate sull'architettura e sull'installazione di Big Data cluster, vedere [workshop: Microsoft SQL Server architettura](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)Big Data cluster.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-I cluster di big data di SQL Server sia disponibile come anteprima pubblica limitata tramite il programma di adozione anticipata SQL Server 2019. Per richiedere l'accesso, registrare [qui](https://aka.ms/eapsignup)e specificare l'interesse dimostrato per provare i cluster di big data. Microsoft valuta tutte le richieste e risposta appena possibile.
+SQL Server cluster Big Data è disponibile per la prima volta come anteprima pubblica limitata tramite il programma di adozione anticipato SQL Server 2019. Per richiedere l'accesso, registrarsi [qui](https://aka.ms/eapsignup)e specificare l'interesse per provare a Big Data cluster. Microsoft effettuerà la valutazione di tutte le richieste e risponderà il prima possibile.

@@ -1,89 +1,89 @@
 ---
-title: Distribuire le applicazioni usando mssqlctl
+title: Distribuire applicazioni con azdata
 titleSuffix: SQL Server big data clusters
-description: Distribuire uno script Python o R come un'applicazione nel cluster di big data 2019 Server SQL (anteprima).
+description: Distribuire uno script Python o R come applicazione in SQL Server 2019 Big Data cluster (anteprima).
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e3768ff5bfc01f2068b10ebd8afc18d12fa808c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 06b76e7eb8eec8db1993ca558a1f57355457c4ad
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958861"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419489"
 ---
-# <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Come distribuire un'app nel cluster di big data di SQL Server (anteprima)
+# <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Come distribuire un'app in un cluster SQL Server Big Data (anteprima)
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo descrive come distribuire e gestire lo script R e Python come un'applicazione all'interno di un cluster di big data di SQL Server 2019 (anteprima).
+Questo articolo descrive come distribuire e gestire lo script R e Python come applicazione all'interno di un cluster SQL Server 2019 Big Data (anteprima).
 
-## <a name="whats-new-and-improved"></a>Che cos'è nuovo e migliorato
+## <a name="whats-new-and-improved"></a>Novità e miglioramenti
 
-- Un'unica utilità della riga di comando per la gestione di cluster e l'app.
-- Distribuzione dell'app semplificata, fornendo un controllo granulare tramite file di specifiche.
-- Supporta l'hosting di tipi di applicazione aggiuntivi - SSIS e MLeap (novità di CTP 2.3)
-- [Estensione di Visual Studio Code](app-deployment-extension.md) per gestire la distribuzione di applicazioni
+- Una singola utilità della riga di comando per la gestione di cluster e app.
+- Semplifica la distribuzione delle app offrendo un controllo granulare tramite file di specifiche.
+- Supporto per l'hosting di tipi di applicazione aggiuntivi-SSIS e MLeap (novità di CTP 2,3)
+- [Estensione vs code](app-deployment-extension.md) per gestire la distribuzione delle applicazioni
 
-Le applicazioni vengono distribuite e gestite usando `mssqlctl` utilità della riga di comando. Questo articolo fornisce esempi su come distribuire le app dalla riga di comando. Per informazioni su come usare in Visual Studio Code, vedere [estensione di Visual Studio Code](app-deployment-extension.md).
+Le applicazioni vengono distribuite e `azdata` gestite mediante l'utilità della riga di comando. Questo articolo fornisce esempi su come distribuire le app dalla riga di comando. Per informazioni su come usarlo in Visual Studio Code fare riferimento a [vs code estensione](app-deployment-extension.md).
 
-Sono supportati i tipi di App seguenti:
-- App di R e Python (funzioni, i modelli e App)
-- MLeap Serving
+Sono supportati i tipi di app seguenti:
+- App R e Python (funzioni, modelli e app)
+- Servizio MLeap
 - SQL Server Integration Services (SSIS)
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- [Cluster di big data di SQL Server 2019](deployment-guidance.md)
-- [utilità della riga di comando mssqlctl](deploy-install-mssqlctl.md)
+- [SQL Server 2019 Big Data cluster](deployment-guidance.md)
+- [utilità della riga di comando azdata](deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>Funzionalità
 
-In SQL Server 2019 (anteprima) è possibile creare, eliminare, descrivere, inizializzare, elenco eseguire e aggiornare l'applicazione. La tabella seguente descrive i comandi di distribuzione dell'applicazione che è possibile usare con **mssqlctl**.
+In SQL Server 2019 (anteprima) è possibile creare, eliminare, descrivere, inizializzare, elencare l'esecuzione e aggiornare l'applicazione. La tabella seguente descrive i comandi di distribuzione dell'applicazione che è possibile usare con **azdata**.
 
 |Comando |Descrizione |
 |:---|:---|
-|`mssqlctl login` | Accedere a un cluster di big data di SQL Server |
-|`mssqlctl app create` | Creare l'applicazione. |
-|`mssqlctl app delete` | Eliminare l'applicazione. |
-|`mssqlctl app describe` | Descrivere l'applicazione. |
-|`mssqlctl app init` | Kickstart nuova struttura dell'applicazione. |
-|`mssqlctl app list` | Elencare le applicazioni. |
-|`mssqlctl app run` | Esegui l'applicazione. |
-|`mssqlctl app update`| Aggiornare l'applicazione. |
+|`azdata login` | Accedere a un cluster SQL Server Big Data |
+|`azdata app create` | Creare un'applicazione. |
+|`azdata app delete` | Eliminare l'applicazione. |
+|`azdata app describe` | Descrivere l'applicazione. |
+|`azdata app init` | Avvia la nuova ossatura dell'applicazione. |
+|`azdata app list` | Elencare le applicazioni. |
+|`azdata app run` | Eseguire l'applicazione. |
+|`azdata app update`| Aggiornare l'applicazione. |
 
-È possibile ottenere assistenza con la `--help` parametro come nell'esempio seguente:
+È possibile ottenere informazioni sul `--help` parametro, come nell'esempio seguente:
 
 ```bash
-mssqlctl app create --help
+azdata app create --help
 ```
 
 Le sezioni seguenti descrivono questi comandi in modo più dettagliato.
 
 ## <a name="sign-in"></a>Accesso
 
-Prima di distribuire o interagire con le applicazioni, accedere prima all'istanza di SQL Server del cluster di big data con il `mssqlctl login` comando. Specificare l'indirizzo IP esterno del `controller-svc-external` servizio (ad esempio: `https://ip-address:30080`) con il nome utente e la password per il cluster.
+Prima di distribuire o interagire con le applicazioni, accedere prima al cluster SQL Server Big data con il `azdata login` comando. Specificare l'indirizzo IP esterno del `controller-svc-external` servizio (ad `https://ip-address:30080`esempio,) insieme al nome utente e alla password del cluster.
 
 ```bash
-mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
+azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
 ```
 
-## <a name="aks"></a>SERVIZIO CONTENITORE DI AZURE
+## <a name="aks"></a>AKS
 
-Se si usa servizio contenitore di AZURE, è necessario eseguire il comando seguente per ottenere l'indirizzo IP del `mgmtproxy-svc-external` servizio eseguendo questo comando in una finestra bash o cmd:
+Se si usa AKS, è necessario eseguire il comando seguente per ottenere l'indirizzo IP del `mgmtproxy-svc-external` servizio eseguendo questo comando in una finestra bash o cmd:
 
 
 ```bash
 kubectl get svc mgmtproxy-svc-external -n <name of your big data cluster>
 ```
 
-## <a name="kubeadm-or-minikube"></a>Kubeadm oppure Minikube
+## <a name="kubeadm-or-minikube"></a>Kubeadm o Minikube
 
-Se si usa Kubeadm oppure Minikube eseguire il comando seguente per ottenere l'indirizzo IP per l'accesso al cluster
+Se si usa Kubeadm o Minikube, eseguire il comando seguente per ottenere l'indirizzo IP per accedere al cluster
 
 ```bash
 kubectl get node --selector='node-role.kubernetes.io/master'
@@ -91,25 +91,25 @@ kubectl get node --selector='node-role.kubernetes.io/master'
 
 ## <a name="create-an-app"></a>Creare un'app
 
-Per creare un'applicazione, usare `mssqlctl` con il `app create` comando. Questi file si trovano in locale nel computer che si sta creando l'app.
+Per creare un'applicazione, usare `azdata` con il `app create` comando. Questi file risiedono localmente nel computer da cui si sta creando l'app.
 
-Usare la sintassi seguente per creare una nuova app nel cluster di big data:
-
-```bash
-mssqlctl app create --spec <directory containing spec file>
-```
-
-Il comando seguente illustra un esempio di ciò che potrebbe essere simile questo comando:
+Usare la sintassi seguente per creare una nuova app in Big Data cluster:
 
 ```bash
-mssqlctl app create --spec ./addpy
+azdata app create --spec <directory containing spec file>
 ```
 
-Ciò presuppone che si disponga dell'applicazione archiviato nel `addpy` cartella. Questa cartella deve contenere anche un file della specifica per l'applicazione, denominata `spec.yaml`. Vedi [la pagina distribuzione delle applicazioni](concept-application-deployment.md) per altre informazioni sul `spec.yaml` file.
+Il comando seguente mostra un esempio di come potrebbe apparire questo comando:
 
-Per distribuire questa app di esempio di app, creare i seguenti file in una directory denominata `addpy`:
+```bash
+azdata app create --spec ./addpy
+```
 
-- `add.py` (Indici per tabelle con ottimizzazione per la memoria). Copiare il seguente codice Python in questo file:
+Si presuppone che l'applicazione sia archiviata nella `addpy` cartella. Questa cartella deve inoltre contenere un file di specifica per l'applicazione, `spec.yaml`denominato. Per ulteriori informazioni sul `spec.yaml` file, vedere [la pagina](concept-application-deployment.md) relativa alla distribuzione di applicazioni.
+
+Per distribuire l'app di esempio app, creare i file seguenti in una directory `addpy`denominata:
+
+- `add.py` (Indici per tabelle con ottimizzazione per la memoria). Copiare il codice Python seguente in questo file:
    ```py
    #add.py
    def add(x,y):
@@ -117,7 +117,7 @@ Per distribuire questa app di esempio di app, creare i seguenti file in una dire
         return result
     result=add(x,y)
    ```
-- `spec.yaml`. Copiare il codice seguente nel file:
+- `spec.yaml` (Indici per tabelle con ottimizzazione per la memoria). Copiare il codice seguente nel file:
    ```yaml
    #spec.yaml
    name: add-app #name of your python script
@@ -134,19 +134,19 @@ Per distribuire questa app di esempio di app, creare i seguenti file in una dire
      result: int
    ```
 
-Quindi, eseguire il comando seguente:
+Eseguire quindi il comando seguente:
 
 ```bash
-mssqlctl app create --spec ./addpy
+azdata app create --spec ./addpy
 ```
 
-È possibile controllare se l'app viene distribuita usando il comando di elenco:
+È possibile verificare se l'app viene distribuita usando il comando list:
 
 ```bash
-mssqlctl app list
+azdata app list
 ```
 
-Se la distribuzione non è stata completata dovrebbe essere il `state` mostrare `WaitingforCreate` come illustrato nell'esempio seguente:
+Se la distribuzione non è completa `state` `WaitingforCreate` , verrà visualizzato il seguente esempio:
 
 ```json
 [
@@ -158,7 +158,7 @@ Se la distribuzione non è stata completata dovrebbe essere il `state` mostrare 
 ]
 ```
 
-Dopo la distribuzione ha esito positivo, viene visualizzato il `state` passare alla `Ready` stato:
+Una volta completata la distribuzione, verrà visualizzata la `state` `Ready` modifica dello stato:
 
 ```json
 [
@@ -170,29 +170,29 @@ Dopo la distribuzione ha esito positivo, viene visualizzato il `state` passare a
 ]
 ```
 
-## <a name="list-an-app"></a>Pubblica un'app
+## <a name="list-an-app"></a>Elencare un'app
 
-È possibile elencare tutte le app che sono state create correttamente con il `app list` comando.
+È possibile elencare tutte le app create correttamente con il `app list` comando.
 
-Il seguente comando Elenca tutte le applicazioni disponibili nel cluster di big data:
-
-```bash
-mssqlctl app list
-```
-
-Se si specifica un nome e la versione, elenca app specifici e il relativo stato (creazione in corso o pronta):
+Il comando seguente elenca tutte le applicazioni disponibili nel cluster Big Data:
 
 ```bash
-mssqlctl app list --name <app_name> --version <app_version>
+azdata app list
 ```
 
-L'esempio seguente illustra questo comando:
+Se si specifica un nome e una versione, vengono elencate l'app specifica e il relativo stato (creazione o preparazione):
 
 ```bash
-mssqlctl app list --name add-app --version v1
+azdata app list --name <app_name> --version <app_version>
 ```
 
-Si dovrebbe visualizzato un output simile all'esempio seguente:
+Nell'esempio seguente viene illustrato questo comando:
+
+```bash
+azdata app list --name add-app --version v1
+```
+
+Verrà visualizzato un output simile all'esempio seguente:
 
 ```json
 [
@@ -206,19 +206,19 @@ Si dovrebbe visualizzato un output simile all'esempio seguente:
 
 ## <a name="run-an-app"></a>Eseguire un'app
 
-Se l'app si trova in un `Ready` lo stato, è possibile usarlo eseguendolo con i parametri di input specificati. Usare la sintassi seguente per eseguire un'app:
+Se l'app è in uno `Ready` stato, è possibile usarla eseguendola con i parametri di input specificati. Per eseguire un'app, usare la sintassi seguente:
 
 ```bash
-mssqlctl app run --name <app_name> --version <app_version> --inputs <inputs_params>
+azdata app run --name <app_name> --version <app_version> --inputs <inputs_params>
 ```
 
-Il comando seguente viene illustrato il comando di esecuzione:
+Il comando di esempio seguente illustra il comando Run:
 
 ```bash
-mssqlctl app run --name add-app --version v1 --inputs x=1,y=2
+azdata app run --name add-app --version v1 --inputs x=1,y=2
 ```
 
-Se l'esecuzione ha avuto esito positivo, si verrà visualizzato l'output come specificato durante la creazione dell'app. Di seguito è riportato un esempio.
+Se l'esecuzione ha avuto esito positivo, l'output dovrebbe essere visualizzato come specificato al momento della creazione dell'app. Di seguito è riportato un esempio.
 
 ```json
 {
@@ -233,17 +233,17 @@ Se l'esecuzione ha avuto esito positivo, si verrà visualizzato l'output come sp
 }
 ```
 
-## <a name="create-an-app-skeleton"></a>Creare una struttura dell'app
+## <a name="create-an-app-skeleton"></a>Creare uno scheletro di app
 
-Il comando init fornisce uno scaffold con gli elementi pertinenti che è necessario per la distribuzione di un'app. L'esempio seguente crea hello è possibile farlo eseguendo il comando seguente.
+Il comando init fornisce un patibolo con gli elementi rilevanti necessari per la distribuzione di un'app. Nell'esempio seguente viene creato Hello a tale scopo, eseguendo il comando seguente.
 
 ```bash
-mssqlctl app init --name hello --version v1 --template python
+azdata app init --name hello --version v1 --template python
 ```
 
-Si creerà una cartella denominata hello.  È possibile `cd` nella directory ed esaminare i file generati nella cartella. Spec.yaml definisce l'app, ad esempio nome, versione e il codice sorgente. È possibile modificare la specifica per modificare nome, versione, input e output.
+Verrà creata una cartella denominata Hello.  È possibile `cd` accedere alla directory ed esaminare i file generati nella cartella. spec. YAML definisce l'app, ad esempio il nome, la versione e il codice sorgente. È possibile modificare le specifiche per modificare nome, versione, input e output.
 
-Di seguito è riportato l'output del comando init che verrà visualizzato nella cartella
+Di seguito è riportato un esempio di output del comando init che verrà visualizzato nella cartella
 
 ```
 hello.py
@@ -255,7 +255,7 @@ spec.yaml
 
 ## <a name="describe-an-app"></a>Descrivere un'app
 
-Il comando descrizione fornisce informazioni dettagliate sull'app tra cui il punto finale nel cluster. Ciò in genere viene usato da uno sviluppatore di app per compilare un'app usando il client di swagger e usando il servizio Web per interagire con l'app in modalità RESTful. Visualizzare [utilizzo di applicazioni nei cluster di big data](big-data-cluster-consume-apps.md) per altre informazioni.
+Il comando Descrivi fornisce informazioni dettagliate sull'app, incluso l'endpoint nel cluster. Questa operazione viene in genere usata da uno sviluppatore di app per compilare un'app usando il client di spavalderia e usando il servizio Web per interagire con l'app in modo RESTful. Per ulteriori informazioni, vedere [utilizzo di applicazioni in cluster Big Data](big-data-cluster-consume-apps.md) .
 
 ```json
 {
@@ -287,14 +287,14 @@ Il comando descrizione fornisce informazioni dettagliate sull'app tra cui il pun
 
 ## <a name="delete-an-app"></a>Eliminare un'app
 
-Per eliminare un'app dal cluster i big data, usare la sintassi seguente:
+Per eliminare un'app dal cluster Big Data, usare la sintassi seguente:
 
 ```bash
-mssqlctl app delete --name add-app --version v1
+azdata app delete --name add-app --version v1
 ```
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Scopri come integrare le app distribuite nel cluster di big data nelle proprie applicazioni in SQL Server [utilizzo di applicazioni nei cluster di big data](big-data-cluster-consume-apps.md) per altre informazioni. È anche possibile consultare esempi aggiuntivi in [esempi di distribuire App](https://aka.ms/sql-app-deploy).
+Per altre informazioni, vedere come integrare le app distribuite in SQL Server cluster Big Data nelle proprie [Big Data](big-data-cluster-consume-apps.md) applicazioni. È anche possibile vedere esempi aggiuntivi in [esempi di distribuzione di app](https://aka.ms/sql-app-deploy).
 
-Per altre informazioni sui cluster dei big data a SQL Server, vedere [quali sono i cluster di SQL Server 2019 dei big data?](big-data-cluster-overview.md).
+Per ulteriori informazioni sui cluster SQL Server Big Data, vedere [che cosa sono SQL Server 2019 cluster Big Data?](big-data-cluster-overview.md).

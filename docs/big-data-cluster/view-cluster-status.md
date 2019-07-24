@@ -1,123 +1,123 @@
 ---
 title: Visualizzare lo stato del cluster
 titleSuffix: SQL Server big data clusters
-description: Questo articolo illustra come visualizzare lo stato di un cluster di big data usando comandi mssqlctl, notebook e Studio di Azure Data.
+description: Questo articolo illustra come visualizzare lo stato di un cluster Big Data usando i comandi Azure Data Studio, Notebooks e azdata.
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-ms.date: 06/27/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1a8d04ab43adac77a534a82626cc4a018c24b68f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6dca94b8bd7547222394d7809cb003b9e936982
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957675"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419285"
 ---
-# <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Come visualizzare lo stato di un cluster di big data
+# <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Come visualizzare lo stato di un cluster di Big Data
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo descrive come accedere agli endpoint di servizio e visualizzare lo stato di un cluster di big data di SQL Server (anteprima). È possibile usare entrambi Data Studio di Azure e **mssqlctl**, e questo articolo descrive entrambe le tecniche.
+Questo articolo descrive come accedere agli endpoint di servizio e visualizzare lo stato di un cluster SQL Server Big Data (anteprima). È possibile usare sia Azure Data Studio che **azdata**e questo articolo illustra entrambe le tecniche.
 
-## <a id="datastudio"></a> Usare Studio dei dati di Azure
+## <a id="datastudio"></a>USA Azure Data Studio
 
-Dopo aver scaricato la versione più recente **build insiders** dei [Studio di Azure Data](https://aka.ms/azdata-insiders), è possibile visualizzare gli endpoint di servizio e lo stato di un big data del cluster con il dashboard del cluster SQL Server i big Data. Si noti che alcune delle funzionalità riportate di seguito sono innanzitutto disponibili solo nella build Insider di Studio di Azure Data.
+Dopo aver scaricato la **Build** più recente di [Azure Data Studio](https://aka.ms/azdata-insiders), è possibile visualizzare gli endpoint del servizio e lo stato di un cluster Big data con il dashboard di SQL Server Big Data cluster. Si noti che alcune delle funzionalità seguenti sono disponibili solo per la prima volta nella compilazione Insider di Azure Data Studio.
 
-1. In primo luogo, creare una connessione al cluster di big data in Azure Data Studio. Per altre informazioni, vedere [Connetti a SQL Server del cluster di big data con Azure Data Studio](connect-to-big-data-cluster.md).
+1. Per prima cosa, creare una connessione al cluster Big Data in Azure Data Studio. Per altre informazioni, vedere [connettersi a un cluster SQL Server Big data con Azure Data Studio](connect-to-big-data-cluster.md).
 
-1. Fare doppio clic sull'endpoint cluster dei big data e fare clic su **Gestisci**.
+1. Fare clic con il pulsante destro del mouse sull'endpoint del cluster Big Data e scegliere Gestisci.
 
-   ![a destra fare clic su Gestisci](media/view-cluster-status/right-click-manage.png)
+   ![pulsante destro del mouse su Gestisci](media/view-cluster-status/right-click-manage.png)
 
-1. Selezionare il **Cluster di Big Data di SQL Server** pressione di tab per accedere al dashboard del cluster di big data.
+1. Selezionare la scheda **cluster SQL Server Big Data** per accedere al dashboard del cluster di Big Data.
 
-   ![Dashboard del cluster dei big Data](media/view-cluster-status/bdc-dashboard.png)
+   ![Dashboard del cluster di Big Data](media/view-cluster-status/bdc-dashboard.png)
 
 ### <a name="service-endpoints"></a>Endpoint di servizio
 
-È importante essere in grado di accedere più facilmente i diversi servizi all'interno di un cluster di big data. Dashboard del cluster di big data fornisce una tabella di endpoint di servizio che consente di visualizzare e copiare l'endpoint del servizio.
+È importante poter accedere facilmente ai vari servizi all'interno di un cluster Big Data. Il dashboard del cluster Big Data fornisce una tabella degli endpoint di servizio che consente di visualizzare e copiare gli endpoint di servizio.
 
-![Endpoint di servizio](media/view-cluster-status/service-endpoints.png)
+![endpoint di servizio](media/view-cluster-status/service-endpoints.png)
 
-Le prime righe diversi espongono i servizi seguenti:
+Le prime righe espongono i servizi seguenti:
 
-- Proxy dell'applicazione
-- Servizio di Gestione cluster
+- Proxy di applicazione
+- Servizio Gestione cluster
 - HDFS e Spark
 - Proxy di gestione
 
-Questi servizi elencare gli endpoint che possono essere copiati e incollati quando è necessario l'endpoint per la connessione a tali servizi. Ad esempio, è possibile fare clic sull'icona di copia a destra dell'endpoint e quindi incollarla in una finestra di testo che richiede che l'endpoint. L'endpoint del servizio di gestione di Cluster è necessario eseguire la [notebook di stato cluster](#notebook).
+Questi servizi elencano gli endpoint che possono essere copiati e incollati quando è necessario l'endpoint per la connessione a tali servizi. Ad esempio, è possibile fare clic sull'icona di copia a destra dell'endpoint e quindi incollarla in una finestra di testo che richiede tale endpoint. L'endpoint del servizio Gestione cluster è necessario per eseguire il [notebook di stato del cluster](#notebook).
 
 ### <a name="dashboards"></a>Dashboard
 
-La tabella di endpoint di servizio espone anche diversi dashboard per il monitoraggio:
+La tabella endpoint di servizio espone inoltre diversi dashboard per il monitoraggio:
 
 - Metriche (Grafana)
 - Log (Kibana)
-- Monitoraggio dei processi di Spark
-- Gestione delle risorse di Spark
+- Monitoraggio processi Spark
+- Gestione delle risorse Spark
 
-È possibile fare direttamente clic su tali collegamenti. Viene chiesto di immettere due volte per fornire il nome utente e la password prima di connettersi al servizio.
+È possibile fare clic direttamente su questi collegamenti. Viene chiesto due volte di specificare il nome utente e la password prima di connettersi al servizio.
 
-### <a id="notebook"></a> Notebook lo stato del cluster
+### <a id="notebook"></a>Notebook stato del cluster
 
-1. È anche possibile visualizzare lo stato del cluster del cluster di big data, avviare il notebook lo stato del Cluster. Per avviare il notebook, fare clic il **lo stato del Cluster** attività.
+1. È anche possibile visualizzare lo stato del cluster del cluster di Big Data avviando il notebook dello stato del cluster. Per avviare il notebook, fare clic sull'attività **stato cluster** .
 
-    ![avvio veloce](media/view-cluster-status/cluster-status-launch.png)
+    ![Avviare](media/view-cluster-status/cluster-status-launch.png)
 
-2. Prima di iniziare, sono necessari gli elementi seguenti:
+2. Prima di iniziare, saranno necessari gli elementi seguenti:
 
-    - Nome del cluster di big data
+    - Nome del cluster di Big Data
     - Nome utente controller
-    - Password del controlle
+    - Password controller
     - Endpoint controller
 
-    Il nome del cluster di big data predefinito è **mssql-cluster** a meno che non è stato personalizzato durante la distribuzione. Nella tabella gli endpoint di servizio, è possibile trovare l'endpoint controller dal dashboard del cluster di big data. L'endpoint viene elencato come **servizio di gestione Cluster**. Se non si conosce le credenziali, chiedere all'amministratore che ha distribuito il cluster.
+    Il nome predefinito del cluster Big Data è **MSSQL-cluster** , a meno che non sia stato personalizzato durante la distribuzione. È possibile trovare l'endpoint controller dal dashboard del cluster Big Data nella tabella degli endpoint di servizio. L'endpoint è elencato come **servizio di gestione cluster**. Se non si conoscono le credenziali, rivolgersi all'amministratore che ha distribuito il cluster.
 
-3. Fare clic su **eseguire le celle** sulla barra degli strumenti superiore.
+3. Fare clic su **Esegui celle** sulla barra degli strumenti in alto.
 
-4. Attenersi alla richiesta delle credenziali. Premere INVIO dopo aver ogni credenziale per il nome del cluster di big data, controller il nome utente e la password del controlle di tipo.
+4. Seguire la richiesta delle credenziali. Premere il tasto INVIO dopo aver digitato ogni credenziale per il nome del cluster Big Data, il nome utente del controller e la password del controller.
 
     > [!Note]
-    > Se non è un programma di installazione di file di configurazione con i big data, verrà richiesto per l'endpoint del controller. Digitare o incollare il codice e quindi premere INVIO per continuare.
+    > Se non si dispone di un file di configurazione configurato con il Big Data, verrà richiesto l'endpoint del controller. Digitare o incollare il testo, quindi premere INVIO per continuare.
 
-5. Se connesso correttamente, il resto del notebook verrà visualizzato l'output di ogni componente del cluster di big data. Quando si desidera eseguire nuovamente una determinati cella di codice, passare il mouse su una cella di codice e scegliere il **eseguire** icona.
+5. Se la connessione è stata eseguita correttamente, nel resto del notebook viene visualizzato l'output di ogni componente del cluster Big Data. Quando si desidera eseguire nuovamente una determinata cella di codice, passare il mouse sulla cella di codice e fare clic sull'icona **Esegui** .
 
-## <a name="use-mssqlctl"></a>Usare mssqlctl
+## <a name="use-azdata"></a>Usare azdata
 
-È anche possibile usare [mssqlctl](deploy-install-mssqlctl.md) comandi per visualizzare gli endpoint e lo stato del cluster.
+È anche possibile usare i comandi [azdata](deploy-install-azdata.md) per visualizzare sia gli endpoint che lo stato del cluster.
 
 ### <a name="service-endpoints"></a>Endpoint di servizio
 
-È possibile ottenere gli indirizzi IP degli endpoint esterni per il cluster di big data usando la procedura seguente.
+È possibile ottenere gli indirizzi IP degli endpoint esterni per il cluster Big Data usando la procedura seguente.
 
-1. Trovare l'indirizzo IP dell'endpoint del controller, esaminando l'output di EXTERNAL-IP di quanto segue **kubectl** comando:
+1. Trovare l'indirizzo IP dell'endpoint controller osservando l'output IP esterno del comando **kubectl** seguente:
 
    ```bash
    kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
    > [!TIP]
-   > Se non è modificato il nome predefinito durante la distribuzione, usare `-n mssql-cluster` nel comando precedente. **MSSQL-cluster** è il nome predefinito per il cluster di big data.
+   > Se durante la distribuzione non è stato modificato il nome predefinito, `-n mssql-cluster` usare il comando precedente. **MSSQL-cluster** è il nome predefinito per il cluster Big Data.
 
-1. Accedere al cluster di big data con [mssqlctl login](reference-mssqlctl.md). Impostare il **-controller-endpoint** parametro per l'indirizzo IP esterno dell'endpoint del controller.
-
-   ```bash
-   mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
-   ```
-
-   Specificare il nome utente e la password configurata per il controller (CONTROLLER_USERNAME e CONTROLLER_PASSWORD) durante la distribuzione.
-
-1. Eseguire [elenco di endpoint di integrazione applicativa dei dati mssqlctl](reference-mssqlctl-bdc-endpoint.md) per ottenere un elenco con una descrizione di ogni endpoint e i relativi valori di porta e indirizzo IP. 
+1. Accedere al cluster di Big Data con l' [account di accesso azdata](reference-azdata.md). Impostare il parametro **--controller-endpoint** sull'indirizzo IP esterno dell'endpoint del controller.
 
    ```bash
-   mssqlctl bdc endpoint list -o table
+   azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
    ```
 
-   L'elenco seguente mostra l'output di esempio da questo comando:
+   Specificare il nome utente e la password configurati per il controller (CONTROLLER_USERNAME e CONTROLLER_PASSWORD) durante la distribuzione.
+
+1. Eseguire l' [elenco di endpoint BDC azdata](reference-azdata-bdc-endpoint.md) per ottenere un elenco con una descrizione di ogni endpoint e i valori di porta e indirizzo IP corrispondenti. 
+
+   ```bash
+   azdata bdc endpoint list -o table
+   ```
+
+   L'elenco seguente mostra l'output di esempio di questo comando:
 
    ```output
    Description                                             Endpoint                                                   Ip              Name               Port    Protocol
@@ -137,16 +137,16 @@ La tabella di endpoint di servizio espone anche diversi dashboard per il monitor
 
 ### <a name="view-cluster-status"></a>Visualizzare lo stato del cluster
 
-È possibile visualizzare lo stato del cluster con il [Mostra lo stato di integrazione applicativa dei dati mssqlctl](reference-mssqlctl-bdc-status.md) comando.
+È possibile visualizzare lo stato del cluster con il comando [azdata BDC status Show](reference-azdata-bdc-status.md) .
 
 ```bash
-mssqlctl bdc status show -o table
+azdata bdc status show -o table
 ```
 
 > [!TIP]
-> Per eseguire i comandi di stato, è prima necessario accedere con il **mssqlctl login** comando, che è stato illustrato nella sezione endpoint precedente.
+> Per eseguire i comandi di stato, è necessario prima accedere con il comando **azdata login** , illustrato nella sezione endpoint precedenti.
 
-Il seguente esempio di output da questo comando:
+Di seguito è riportato un esempio di output di questo comando:
 
 ```output
 Kind     Name           State
@@ -159,23 +159,23 @@ Data     default        Ready
 Storage  default        Ready
 ```
 
-### <a name="view-pool-status"></a>Visualizzare lo stato del pool
+### <a name="view-pool-status"></a>Visualizza lo stato del pool
 
-È possibile visualizzare lo stato dei pool all'interno del cluster con il [Mostra lo stato del pool di mssqlctl bdc](reference-mssqlctl-bdc-pool-status.md) comando. Per usare questo comando, specificare il tipo di pool con la `--kind` parametro. I tipi di pool sono:
+È possibile visualizzare lo stato dei pool nel cluster con il comando [azdata BDC pool status Show](reference-azdata-bdc-pool-status.md) . Per usare questo comando, specificare il tipo di pool con il `--kind` parametro. I tipi di pool sono:
 
-- Calcolo
+- Calcolare
 - data
 - master
-- Spark
+- Scintilla
 - Archiviazione
 
-Ad esempio, il comando seguente consente di visualizzare lo stato del pool del pool di archiviazione:
+Ad esempio, il comando seguente visualizza lo stato del pool di archiviazione:
 
 ```bash
-mssqlctl bdc pool status show --kind storage
+azdata bdc pool status show --kind storage
 ```
 
-Testo dovrebbe essere simile all'output seguente:
+Verrà visualizzato un testo simile all'output seguente:
 
 ```output
 [
@@ -198,20 +198,20 @@ Testo dovrebbe essere simile all'output seguente:
 ]
 ```
 
-Il `logsUrl` valore collegamenti a un dashboard kibana con le informazioni sul log:
+Il `logsUrl` valore si collega a un dashboard di Kibana con le informazioni di log:
 
-![dashboard kibana](./media/view-cluster-status/kibana-dashboard.png)
+![Dashboard di Kibana](./media/view-cluster-status/kibana-dashboard.png)
 
-Il `nodeMetricsUrl` e `sqlMetricsUrl` collegano valori a un dashboard di grafana per il monitoraggio di integrità del nodo e le metriche SQL:
+I `nodeMetricsUrl` valori `sqlMetricsUrl` e si collegano a un dashboard di grafana per il monitoraggio dell'integrità del nodo e della metrica SQL:
 
 ![Dashboard di Grafana](./media/view-cluster-status/grafana-dashboard.png)
 
 ![SQL](./media/view-cluster-status/grafana-sql-status.png)
 
-### <a name="view-controller-status"></a>Stato del controller di visualizzazione
+### <a name="view-controller-status"></a>Visualizza lo stato del controller
 
-È possibile visualizzare lo stato del controller con la [mssqlctl integrazione applicativa dei dati controllo stato Mostra](reference-mssqlctl-bdc-control-status.md) comando. Vengono forniti collegamenti simili per il dashboard di monitoraggio correlate ai nodi del controller del cluster di big data.
+È possibile visualizzare lo stato del controller con il comando [azdata BDC Control Status Show](reference-azdata-bdc-control-status.md) . Fornisce collegamenti simili ai dashboard di monitoraggio correlati ai nodi controller del cluster Big Data.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sui cluster di big data, vedere [quali sono i cluster di SQL Server i big data](big-data-cluster-overview.md).
+Per ulteriori informazioni sui cluster di Big Data, vedere [che cosa sono i cluster SQL Server Big Data](big-data-cluster-overview.md).

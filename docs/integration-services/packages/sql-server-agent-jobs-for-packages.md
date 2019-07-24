@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 253625d364bb8ae918ee9bdd2402e3cf249b26ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 881694f9249c2e538d55f03feb7c3515e0f50cfb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65719873"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913715"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Processi di SQL Server Agent per i pacchetti
 
@@ -190,7 +189,7 @@ La mancata predisposizione di questi elementi di sicurezza determina l'esito neg
   
 9. Scegliere **OK** per salvare le impostazioni e chiudere la finestra di dialogo **Nuovo passaggio di processo** .  
   
-    > **NOTA:** Per i pacchetti archiviati nel **Catalogo SSIS**il pulsante **OK** è disabilitato se è presente un parametro o un'impostazione della proprietà di gestione connessione non risolto. Un'impostazione non risolta si verifica quando si usa un valore contenuto in una variabile di ambiente server per impostare il parametro o la proprietà e si verifica una delle condizioni seguenti:  
+    > **NOTA** Per i pacchetti archiviati nel **Catalogo SSIS**il pulsante **OK** è disabilitato se è presente un parametro o un'impostazione della proprietà di gestione connessione non risolto. Un'impostazione non risolta si verifica quando si usa un valore contenuto in una variabile di ambiente server per impostare il parametro o la proprietà e si verifica una delle condizioni seguenti:  
     >   
     >  La casella di controllo **Ambiente** nella scheda **Configurazione** non è selezionata.  
     >   
