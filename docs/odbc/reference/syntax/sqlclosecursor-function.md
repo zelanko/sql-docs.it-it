@@ -1,7 +1,7 @@
 ---
 title: Funzione SQLCloseCursor | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLCloseCursor
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLCloseCursor
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 05b0a054-e28d-4e16-b5b0-07418486b372
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 47766dbbb273d9e5e4d42e8df6b5cf3c26bf356a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef336a4deb734c0e44f9c15ae7f9faf0dcb32d93
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68036040"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68343151"
 ---
 # <a name="sqlclosecursor-function"></a>Funzione SQLCloseCursor
 **Conformità**  
- Versione introdotta: Conformità agli standard 3.0 di ODBC: ISO 92  
+ Versione introdotta: Conformità agli standard ODBC 3,0: ISO 92  
   
  **Riepilogo**  
- **SQLCloseCursor** chiude un cursore che è stato aperto in un'istruzione e Ignora risultati in sospeso.  
+ **SQLCloseCursor** chiude un cursore aperto su un'istruzione e rimuove i risultati in sospeso.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,45 +44,45 @@ SQLRETURN SQLCloseCursor(
   
 ## <a name="arguments"></a>Argomenti  
  *StatementHandle*  
- [Input] Handle di istruzione.  
+ Input Handle di istruzione.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLCloseCursor** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL _HANDLE_STMT e un *gestiscono* dei *StatementHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLCloseCursor** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
+ Quando **SQLCloseCursor** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, è possibile ottenere un valore SQLSTATE associato chiamando **SQLGetDiagRec** con HandleType SQL_HANDLE_STMT  e un *handle* di *statementHandle*. La tabella seguente elenca i valori SQLSTATE restituiti comunemente da **SQLCloseCursor** e ne illustra ognuno nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituite da Gestione driver. Il codice restituito associato a ogni valore SQLSTATE è SQL_ERROR, a meno che non sia specificato diversamente.  
   
 |SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
-|01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
-|24000|Stato del cursore non valido|Nessun cursore è stato aperto nel *StatementHandle*. (Ciò viene restituita solo se un'applicazione ODBC 3. *x* driver.)|  
-|HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  
-|HY001|Errore di allocazione della memoria|Il driver è stato in grado di allocare la memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
-|HY010|Errore nella sequenza della funzione|(DM) a cui è stata chiamata per l'handle di connessione associata a una funzione in modo asincrono in esecuzione la *StatementHandle* ed era ancora in esecuzione quando è stata chiamata questa funzione.<br /><br /> (DM) a cui è stata chiamata per una funzione in modo asincrono in esecuzione la *StatementHandle* ed era ancora in esecuzione quando è stata chiamata questa funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oppure **SQLSetPos** è stato chiamato per il  *StatementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dei dati è stati inviati per tutti i parametri data-at-execution o più colonne.|  
-|HY013|Errore di gestione della memoria|La chiamata di funzione non è stato possibile elaborare perché gli oggetti di memoria sottostante non sono accessibile, probabilmente a causa di condizioni di memoria insufficiente.|  
-|HY117|Connessione viene sospesa a causa dello stato di transazione sconosciuto. Solo disconnettere e le funzioni di sola lettura sono consentite.|(DM) per altre informazioni sullo stato sospeso, vedere [SQLEndTran-funzione](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYT01|Timeout di connessione scaduto|Il periodo di timeout di connessione è scaduto prima che l'origine dati ha risposto alla richiesta. Il periodo di timeout di connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Driver non supporta questa funzione|Il driver (DM) associato il *StatementHandle* non supporta la funzione.|  
+|01000|Avviso generale|Messaggio informativo specifico del driver. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
+|24000|Stato del cursore non valido|Nessun cursore aperto in *statementHandle*. Questa operazione viene restituita solo da ODBC 3. driver *x* .)|  
+|HY000|Errore generale|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*buffer MessageText* descrive l'errore e la sua origine.|  
+|HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
+|HY010|Errore sequenza funzione|(DM) è stata chiamata una funzione in esecuzione asincrona per l'handle di connessione associato a *statementHandle* ed è ancora in esecuzione quando è stata chiamata la funzione.<br /><br /> (DM) è stata chiamata una funzione in esecuzione asincrona per *statementHandle* ed è stata ancora eseguita quando è stata chiamata la funzione.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** è stato chiamato per *statementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima dell'invio dei dati per tutti i parametri o le colonne data-at-execution.|  
+|HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
+|HY117|Connessione sospesa a causa di uno stato di transazione sconosciuto. Sono consentite solo le funzioni di disconnessione e di sola lettura.|(DM) per ulteriori informazioni sullo stato Suspended, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYT01|Timeout connessione scaduto|Il periodo di timeout della connessione è scaduto prima che l'origine dati abbia risposto alla richiesta. Il periodo di timeout della connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|Il driver non supporta questa funzione|(DM) il driver associato a *statementHandle* non supporta la funzione.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLCloseCursor** restituisce SQLSTATE 24000 (stato del cursore non valido) se non è aperto alcun cursore. La chiamata **SQLCloseCursor** equivale alla chiamata **SQLFreeStmt** con l'opzione di SQL_CLOSE, con l'eccezione che **SQLFreeStmt** con SQL_CLOSE non ha alcun effetto sul applicazione se nessun cursore è aperto nell'istruzione, mentre **SQLCloseCursor** restituisce SQLSTATE 24000 (stato del cursore non valido).  
+ **SQLCloseCursor** restituisce SQLSTATE 24000 (stato del cursore non valido) se non è aperto alcun cursore. La chiamata a **SQLCloseCursor** equivale alla chiamata di **SQLFreeStmt** con l'opzione SQL_CLOSE, con l'eccezione che **SQLFreeStmt** con SQL_CLOSE non ha alcun effetto sull'applicazione se nessun cursore è aperto nell'istruzione, mentre  **SQLCloseCursor** restituisce SQLSTATE 24000 (stato del cursore non valido).  
   
 > [!NOTE]  
->  Se un ODBC 3. *x* funziona con un'API ODBC 2. *x* driver chiama **SQLCloseCursor** quando nessun cursore è aperto, SQLSTATE 24000 (stato del cursore non valido) non viene restituito, perché esegue il mapping di gestione Driver **SQLCloseCursor** a **SQLFreeStmt** con SQL_CLOSE.  
+>  Se ODBC 3. applicazione *x* che utilizza ODBC 2. il driver *x* chiama **SQLCloseCursor** quando non è aperto alcun cursore, SQLSTATE 24000 (stato del cursore non valido) non viene restituito, perché Gestione driver esegue il mapping di **SQLCloseCursor** a **SQLFreeStmt** con SQL_CLOSE.  
   
- Per altre informazioni, vedere [chiusura del cursore](../../../odbc/reference/develop-app/closing-the-cursor.md).  
+ Per ulteriori informazioni, vedere [chiusura del cursore](../../../odbc/reference/develop-app/closing-the-cursor.md).  
   
 ## <a name="code-example"></a>Esempio di codice  
- Visualizzare [funzione SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md) e [funzione SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md).  
+ Vedere [funzione SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md) e [funzione SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md).  
   
 ## <a name="related-functions"></a>Funzioni correlate  
   
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
-|Annullare l'elaborazione di istruzione|[Funzione SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|Rilascio di un handle|[Funzione SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
-|L'elaborazione di più set di risultati|[Funzione SQLMoreResults](../../../odbc/reference/syntax/sqlmoreresults-function.md)|  
+|Annullamento dell'elaborazione di istruzioni|[Funzione SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Liberare un handle|[Funzione SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
+|Elaborazione di più set di risultati|[Funzione SQLMoreResults](../../../odbc/reference/syntax/sqlmoreresults-function.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento all'API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Informazioni di riferimento sulle API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [File di intestazione ODBC](../../../odbc/reference/install/odbc-header-files.md)

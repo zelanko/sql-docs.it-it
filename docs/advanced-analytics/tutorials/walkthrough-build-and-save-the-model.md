@@ -1,38 +1,38 @@
 ---
-title: Compilare un modello R e salvare in SQL Server (procedura dettagliata) - SQL Server Machine Learning
-description: Esercitazione che illustra come compilare un modello di linguaggio R usato per analitica nel database di SQL Server.
+title: Compilare un modello R e salvarlo in SQL Server (procedura dettagliata)
+description: Esercitazione che illustra come creare un modello di linguaggio R usato per SQL Server analisi nel database.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 4ad8446f52f5bf85794e8444d8d1b53f53bc54dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eec6d165b8e3aa4130246aae6d4aaf5b4102fc0f
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961816"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345830"
 ---
-# <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>Compilare un modello R e salvare in SQL Server (procedura dettagliata)
+# <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>Compilare un modello R e salvarlo in SQL Server (procedura dettagliata)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In questo passaggio, informazioni su come creare un modello di machine learning e salvare il modello in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Salvando un modello, è possibile chiamarlo direttamente dal [!INCLUDE[tsql](../../includes/tsql-md.md)] il codice, tramite la stored procedure di sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) o il [funzione PREDICT (T-SQL)](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql).
+In questo passaggio si apprenderà come creare un modello di machine learning e salvare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]modello in. Salvando un modello, è possibile chiamarlo direttamente dal [!INCLUDE[tsql](../../includes/tsql-md.md)] codice, usando il stored procedure di sistema, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) o la [funzione Predict (T-SQL)](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Questo passaggio si presuppone una sessione di R in corso in base a quello precedente in questa procedura dettagliata. Usa connessione dati e stringhe di origine oggetti creati in tali passaggi. Gli strumenti e i pacchetti seguenti vengono utilizzati per eseguire lo script.
+Questo passaggio presuppone una sessione R in corso in base ai passaggi precedenti di questa procedura dettagliata. Usa le stringhe di connessione e gli oggetti origine dati creati in questi passaggi. Per eseguire lo script vengono usati gli strumenti e i pacchetti seguenti.
 
-+ Rgui.exe per eseguire i comandi di R
++ Rgui. exe per l'esecuzione di comandi R
 + Management Studio per eseguire T-SQL
 + Pacchetto ROCR
 + Pacchetto RODBC
 
 ### <a name="create-a-stored-procedure-to-save-models"></a>Creare una stored procedure per salvare i modelli
 
-Questo passaggio Usa una stored procedure per salvare un modello con Training in SQL Server. Creazione di una stored procedure per eseguire questa operazione semplifica l'attività.
+Questo passaggio usa un stored procedure per salvare un modello sottoposto a training in modo da SQL Server. La creazione di un stored procedure per eseguire questa operazione rende più semplice l'attività.
 
-Eseguire il codice T-SQL seguente in una finestra di query in Management Studio per creare la stored procedure.
+Eseguire il codice T-SQL seguente in una finestra di query in Management Studio per creare il stored procedure.
 
 ```sql
 USE [NYCTaxi_Sample]
@@ -59,11 +59,11 @@ GO
 ```
 
 > [!NOTE]
-> Se si verifica un errore, assicurarsi che l'account di accesso disponga dell'autorizzazione per creare oggetti. È possibile concedere autorizzazioni esplicite per creare gli oggetti eseguendo un'istruzione T-SQL simile al seguente: `exec sp_addrolemember 'db_owner', '<user_name>'`.
+> Se viene ricevuto un errore, verificare che l'account di accesso disponga dell'autorizzazione per la creazione di oggetti. È possibile concedere autorizzazioni esplicite per la creazione di oggetti eseguendo un'istruzione T-SQL simile `exec sp_addrolemember 'db_owner', '<user_name>'`alla seguente:.
 
-## <a name="create-a-classification-model-using-rxlogit"></a>Creare un modello di classificazione tramite rxLogit
+## <a name="create-a-classification-model-using-rxlogit"></a>Creare un modello di classificazione usando rxLogit
 
-Il modello è un classificatore binario che consente di prevedere se il driver di taxi è tassista riceverà una Mancia in una particolare corsa oppure No. Si userà l'origine dati creata nella lezione precedente per eseguire il training del classificatore delle mance, uso della regressione logistica.
+Il modello è un classificatore binario che prevede se è probabile che il driver taxi ottenga un suggerimento su una particolare corsa. Si userà l'origine dati creata nella lezione precedente per eseguire il training del classificatore Tip, usando la regressione logistica.
 
 1. Chiamare la funzione [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) inclusa nel pacchetto **RevoScaleR** per creare un modello di regressione logistica. 
 
@@ -73,7 +73,7 @@ Il modello è un classificatore binario che consente di prevedere se il driver d
 
     La chiamata che crea il modello è racchiusa nella funzione system.time. Ciò consente di ottenere il tempo necessario per compilare il modello.
 
-2. Dopo aver compilato il modello, è possibile esaminare utilizzando il `summary` funzione e visualizzare i coefficienti.
+2. Dopo aver compilato il modello, è possibile esaminarlo usando la `summary` funzione e visualizzare i coefficienti.
 
     ```R
     summary(logitObj);
@@ -107,7 +107,7 @@ Il modello è un classificatore binario che consente di prevedere se il driver d
 
 Dopo aver compilato il modello, è possibile usarlo per prevedere se il tassista riceverà una mancia in una specifica corsa.
 
-1. In primo luogo, usare il [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) (funzione) per definire un oggetto origine dati per l'archiviazione del risultato di assegnazione dei punteggi.
+1. Utilizzare innanzitutto la funzione [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) per definire un oggetto origine dei dati per l'archiviazione del risultato del punteggio.
 
     ```R
     scoredOutput <- RxSqlServerData(
@@ -115,11 +115,11 @@ Dopo aver compilato il modello, è possibile usarlo per prevedere se il tassista
       table = "taxiScoreOutput"  )
     ```
 
-    + Per semplificare questo esempio, l'input per il modello di regressione logistica è la stessa origine dati di funzionalità (`sql_feature_ds`) usato per il training del modello.  Più generalmente è possibile usare nuovi dati per i punteggi oppure riservare alcuni dati per il test e non per il training.
+    + Per semplificare questo esempio, l'input per il modello di regressione logistica è la stessa origine dati della funzionalità (`sql_feature_ds`) utilizzata per eseguire il training del modello.  Più generalmente è possibile usare nuovi dati per i punteggi oppure riservare alcuni dati per il test e non per il training.
   
-    + I risultati della stima verrà salvati nella tabella _taxiscoreOutput_. Si noti che lo schema per questa tabella non è definito quando si crea usando rxSqlServerData. Lo schema viene ottenuto dall'output rxPredict.
+    + I risultati della stima verranno salvati nella tabella _taxiscoreOutput_. Si noti che lo schema per questa tabella non è definito quando lo si crea con rxSqlServerData. Lo schema viene ottenuto dall'output rxPredict.
   
-    + Per creare la tabella che archivia i valori stimati, l'account di accesso SQL che esegue la funzione dati rxSqlServer deve avere privilegi DDL nel database. Se l'account di accesso non è possibile creare tabelle, l'istruzione ha esito negativo.
+    + Per creare la tabella in cui sono archiviati i valori stimati, è necessario che l'account di accesso SQL che esegue la funzione dati rxSqlServer disponga dei privilegi DDL nel database. Se l'account di accesso non può creare tabelle, l'istruzione ha esito negativo.
 
 2. Chiamare la funzione [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) per generare i risultati.
 
@@ -132,17 +132,17 @@ Dopo aver compilato il modello, è possibile usarlo per prevedere se il tassista
         writeModelVars = TRUE, overwrite = TRUE)
     ```
     
-    Se l'istruzione ha esito positivo, dovrebbe richiedere del tempo per l'esecuzione. Al termine dell'esercitazione, è possibile aprire SQL Server Management Studio e verificare che la tabella è stata creata e che contiene la colonna di punteggio e altri output previsto.
+    Se l'istruzione ha esito positivo, l'esecuzione potrebbe richiedere del tempo. Al termine, è possibile aprire SQL Server Management Studio e verificare che la tabella sia stata creata e che contenga la colonna score e altro output previsto.
 
-## <a name="plot-model-accuracy"></a>Tracciare l'accuratezza del modello
+## <a name="plot-model-accuracy"></a>Accuratezza del modello di traccia
 
-Per ottenere un'idea dell'accuratezza del modello, è possibile usare la [rxRoc](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) funzione per tracciare la curva operativa del ricevitore. Poiché rxRoc è una delle nuove funzioni fornite dal pacchetto RevoScaleR che supporta contesti di calcolo remoti, sono disponibili due opzioni:
+Per avere un'idea dell'accuratezza del modello, è possibile usare la funzione [rxRoc](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) per tracciare la curva operativa del ricevitore. Poiché rxRoc è una delle nuove funzioni offerte dal pacchetto RevoScaleR che supporta i contesti di calcolo remoti, sono disponibili due opzioni:
 
 + È possibile usare la funzione rxRoc per eseguire il tracciato nel contesto di calcolo remoto e quindi restituire il tracciato al client locale.
 
 + È inoltre possibile importare i dati nel computer client R e usare altre funzioni di tracciato R per creare il grafico delle prestazioni.
 
-In questa sezione proverà a usare entrambe le tecniche.
+In questa sezione verranno sperimentate entrambe le tecniche.
 
 ### <a name="execute-a-plot-in-the-remote-sql-server-compute-context"></a>Eseguire un tracciato nel contesto di calcolo remoto (SQL Server)
 
@@ -153,9 +153,9 @@ In questa sezione proverà a usare entrambe le tecniche.
     rxRoc(actualVarName= "tipped", predVarNames = "Score", scoredOutput);
     ```
 
-    Questa chiamata restituisce i valori utilizzati nel calcolo grafico ROC. La colonna etichetta è _tipped_, che contiene i risultati effettivi si sta tentando di stimare, mentre le _punteggio_ della colonna è la stima.
+    Questa chiamata restituisce i valori utilizzati per il calcolo del grafico ROC. La colonna dell'etichetta è tipped, con i risultati effettivi che si sta tentando di stimare, mentre nella colonna _Score_ è presente la stima.
 
-2. Per tracciare effettivamente il grafico, è possibile salvare l'oggetto ROC e quindi disegnare con la funzione del tracciato. Il grafico viene creato nel contesto di calcolo remoti e restituito all'ambiente R.
+2. Per tracciare effettivamente il grafico, è possibile salvare l'oggetto ROC, quindi disegnarlo con la funzione Plot. Il grafo viene creato nel contesto di calcolo remoto e restituito all'ambiente R.
 
     ```R
     scoredOutput = rxImport(scoredOutput);
@@ -163,28 +163,28 @@ In questa sezione proverà a usare entrambe le tecniche.
     plot(rocObjectOut);
     ```
 
-    Visualizzare il grafico aprendo il dispositivo di grafica R oppure facendo il **tracciare** finestra in RStudio.
+    Visualizzare il grafico aprendo il dispositivo di grafica R oppure facendo clic sulla finestra **tracciato** in rstudio.
 
     ![tracciato ROC per il modello](media/rsql-e2e-rocplot.png "tracciato ROC per il modello")
 
 ### <a name="create-the-plots-in-the-local-compute-context-using-data-from-sql-server"></a>Creare i tracciati nel contesto di calcolo locale usando i dati di SQL Server
 
-È possibile verificare il contesto di calcolo è locale eseguendo `rxGetComputeContext()` al prompt dei comandi. Il valore restituito deve essere "RxLocalSeq il contesto di calcolo".
+È possibile verificare che il contesto di `rxGetComputeContext()` calcolo sia locale eseguendo al prompt dei comandi. Il valore restituito deve essere "contesto di calcolo RxLocalSeq".
 
-1. Per il contesto di calcolo locale, il processo è molto simile. Si utilizza il [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) funzione per portare i dati specificati nell'ambiente R locale.
+1. Per il contesto di calcolo locale, il processo è molto simile. Usare la funzione [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) per portare i dati specificati nell'ambiente R locale.
 
     ```R
     scoredOutput = rxImport(scoredOutput)
     ```
 
-2. Usando i dati nella memoria locale, si caricano i **ROCR** pacchetto e usare la funzione di stima di tale pacchetto per creare alcune nuove stime.
+2. Utilizzando i dati nella memoria locale, è possibile caricare il pacchetto **ROCR** e utilizzare la funzione di stima del pacchetto per creare nuove stime.
 
     ```R
     library('ROCR');
     pred <- prediction(scoredOutput$Score, scoredOutput$tipped);
     ```
 
-3. Generare un tracciato locale, in base ai valori archiviati nella variabile di output `pred`.
+3. Genera un tracciato locale, in base ai valori archiviati nella variabile `pred`di output.
 
     ```R
     acc.perf = performance(pred, measure = 'acc');
@@ -197,23 +197,23 @@ In questa sezione proverà a usare entrambe le tecniche.
     ![tracciare le prestazioni del modello con R](media/rsql-e2e-performanceplot.png "tracciare le prestazioni del modello con R")
 
 > [!NOTE]
-> I grafici potrebbero essere diversi da questi elementi, a seconda del numero di punti dati è stato usato.
+> I grafici potrebbero avere un aspetto diverso da questi, a seconda del numero di punti dati usati.
 
 ## <a name="deploy-the-model"></a>Distribuire il modello
 
-Dopo aver compilato un modello e ha accertato che stia funzionando correttamente, consigliabile distribuirla in un sito in cui gli utenti o gli utenti dell'organizzazione possono rendere utilizzare il modello, o forse ripetere il training e ricalibrare il modello a intervalli regolari. Questo processo è detto *messa in funzione* un modello. In SQL Server, messa in funzione consiste nell'incorporare codice R in una stored procedure. Poiché nella procedura si trova codice, può essere chiamato da qualsiasi applicazione in grado di connettersi a SQL Server.
+Dopo aver compilato un modello e aver verificato che funzioni correttamente, è probabile che si voglia distribuirlo in un sito in cui gli utenti o gli utenti dell'organizzazione possano usare il modello o eventualmente ripetere il training e ricalibrare il modello a intervalli regolari. Questo processo viene talvolta denominato *operatività* un modello. In SQL Server la messa in funzione viene eseguita incorporando il codice R in una stored procedure. Poiché il codice risiede nella procedura, può essere chiamato da qualsiasi applicazione in grado di connettersi a SQL Server.
 
-Prima di chiamare il modello da un'applicazione esterna, è necessario salvare il modello per il database utilizzato per la produzione. Modelli di training vengono archiviati in formato binario, in una singola colonna di tipo **varbinary (max)** .
+Prima di poter chiamare il modello da un'applicazione esterna, è necessario salvare il modello nel database utilizzato per la produzione. I modelli sottoposti a training vengono archiviati in formato binario, in una singola colonna di tipo **varbinary (max)** .
 
-Un flusso di lavoro di distribuzione tipica è costituita dai passaggi seguenti:
+Un flusso di lavoro di distribuzione tipico prevede i passaggi seguenti:
 
-1. Serializza il modello in una stringa esadecimale
+1. Serializzare il modello in una stringa esadecimale
 2. Trasmettere l'oggetto serializzato al database
 3. Salvare il modello in una colonna varbinary (max)
 
-In questa sezione, informazioni su come usare una stored procedure per rendere permanente il modello e renderlo disponibile per le stime. La stored procedure utilizzata in questa sezione è PersistModel. La definizione di PersistModel è [prerequisiti](#prerequisites).
+In questa sezione viene illustrato come utilizzare un stored procedure per salvare in modo permanente il modello e renderlo disponibile per le stime. Il stored procedure usato in questa sezione è PersistModel. La definizione di PersistModel è conforme ai [prerequisiti](#prerequisites).
 
-1. Se non usi già, passare all'ambiente R locale serializzare il modello e salvarlo in una variabile.
+1. Tornare all'ambiente R locale se non è già in uso, serializzare il modello e salvarlo in una variabile.
 
     ```R
     rxSetComputeContext("local");
@@ -221,27 +221,27 @@ In questa sezione, informazioni su come usare una stored procedure per rendere p
     modelbinstr=paste(modelbin, collapse="");
     ```
 
-2. Aprire una connessione ODBC mediante **RODBC**. È possibile omettere la chiamata a RODBC se hai già il pacchetto caricato.
+2. Aprire una connessione ODBC utilizzando **RODBC**. Se il pacchetto è già stato caricato, è possibile omettere la chiamata a RODBC.
 
     ```R
     library(RODBC);
     conn <- odbcDriverConnect(connStr);
     ```
 
-3. Chiamare la routine PersistModel archiviati in SQL Server a transmite l'oggetto serializzato al database e archiviare la rappresentazione binaria del modello in una colonna. 
+3. Chiamare il stored procedure PersistModel su SQL Server per trasmettere l'oggetto serializzato al database e archiviare la rappresentazione binaria del modello in una colonna. 
 
     ```R
     q <- paste("EXEC PersistModel @m='", modelbinstr,"'", sep="");
     sqlQuery (conn, q);
     ```
 
-4. Usare Management Studio per verificare il modello esistente. In Esplora oggetti fare clic sui **nyc_taxi_models** tabella e fare clic su **seleziona le prime 1000 righe**. Nei risultati, si dovrebbe essere una rappresentazione binaria nel **modelli** colonna.
+4. Utilizzare Management Studio per verificare che il modello esista. In Esplora oggetti fare clic con il pulsante destro del mouse sulla tabella **nyc_taxi_models** e scegliere **seleziona le prime 1000 righe**. Nei risultati dovrebbe essere visualizzata una rappresentazione binaria nella colonna **Models** .
 
-Il salvataggio di un modello in una tabella richiede solo un'istruzione INSERT. Tuttavia, è spesso più semplice quando è stato eseguito il wrapping in una stored procedure, ad esempio *PersistModel*.
+Il salvataggio di un modello in una tabella richiede solo un'istruzione INSERT. Tuttavia, è spesso più semplice quando viene eseguito il wrapper in un stored procedure, ad esempio *PersistModel*.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Nella lezione successiva e ultima informazioni su come eseguire l'assegnazione dei punteggi in uso il modello salvato [!INCLUDE[tsql](../../includes/tsql-md.md)].
+Nella lezione successiva e finale, informazioni su come eseguire il punteggio rispetto al modello salvato usando [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
 > [!div class="nextstepaction"]
-> [Distribuire il modello R e usare in SQL](walkthrough-deploy-and-use-the-model.md)
+> [Distribuire il modello R e usarlo in SQL](walkthrough-deploy-and-use-the-model.md)

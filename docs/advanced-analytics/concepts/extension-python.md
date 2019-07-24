@@ -1,99 +1,99 @@
 ---
-title: SQL Server Machine Learning - estensione del linguaggio di programmazione Python
-description: Informazioni sull'esecuzione del codice Python e predefiniti delle librerie di Python in Machine Learning Services di SQL Server 2017.
+title: Estensione del linguaggio di programmazione Python
+description: Informazioni sull'esecuzione di codice Python e sulle librerie Python predefinite in SQL Server 2017 Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/05/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: abf7028c8b55f4f97770586f2a678a538f01b29a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e95fa47911b3942b44624a141a5c1c4c574b25a
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67963048"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68343382"
 ---
 # <a name="python-language-extension-in-sql-server"></a>Estensione del linguaggio Python in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-L'estensione Python fa parte del componente aggiuntivo SQL Server Machine Learning Services al motore di database relazionale. Aggiunge un ambiente di esecuzione di Python, la distribuzione Anaconda con il runtime di Python 3.5 e dell'interprete, le librerie standard e gli strumenti e le librerie di prodotto Microsoft per Python: [revoscalepy](../python/ref-py-revoscalepy.md) per analitica in scala e a [microsoftml](../python/ref-py-microsoftml.md) per machine learning algoritmi. 
+L'estensione Python fa parte dell'SQL Server Machine Learning Services componente aggiuntivo per il motore di database relazionale. Aggiunge un ambiente di esecuzione Python, una distribuzione anaconda con il runtime e l'interprete Python 3,5, librerie e strumenti standard e le librerie di prodotti Microsoft per Python: [revoscalepy](../python/ref-py-revoscalepy.md) per l'analisi su larga scala e [microsoftml](../python/ref-py-microsoftml.md) per algoritmi di machine learning. 
 
-Integrazione di Python viene installato come [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
+L'integrazione di Python viene installata come [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
 
-Installazione del runtime di Python 3.5 e dell'interprete assicura la compatibilità pressoché completa con le soluzioni di Python standard. Python viene eseguito in un processo separato da SQL Server, per garantire che le operazioni di database non vengano compromesse.
+L'installazione del runtime e dell'interprete Python 3,5 garantisce la compatibilità quasi completa con le soluzioni Python standard. Python viene eseguito in un processo separato da SQL Server, per garantire che le operazioni di database non vengano compromesse.
 
 ## <a name="python-components"></a>Componenti Python
 
-SQL Server include pacchetti open source e proprietari. Il runtime di Python installato dal programma di installazione è 4.2 Anaconda con Python 3.5. Il runtime di Python viene installato indipendentemente da strumenti di SQL e viene eseguito all'esterno di processi del motore di base, nel framework di estendibilità. Come parte dell'installazione di servizi di Machine Learning con Python, è necessario accettare le condizioni della licenza GNU Public License. 
+SQL Server include i pacchetti open source e proprietari. Il runtime di Python installato dal programma di installazione è Anaconda 4,2 con Python 3,5. Il runtime di Python viene installato indipendentemente dagli strumenti SQL e viene eseguito all'esterno dei processi del motore di base in Extensibility Framework. Nell'ambito dell'installazione di Machine Learning Services con Python, è necessario accettare i termini della licenza GNU Public. 
 
-SQL Server non modifica gli eseguibili di Python, ma è necessario usare la versione di Python installata dal programma di installazione perché tale versione è quello che i pacchetti proprietari vengano compilati e testati in. Per un elenco dei pacchetti supportati per la distribuzione Anaconda, visitare il sito di analitica Continuum: [Elenco dei pacchetti anaconda](https://docs.continuum.io/anaconda/packages/pkg-docs).
+SQL Server non modifica i file eseguibili di Python, ma è necessario usare la versione di Python installata dal programma di installazione, perché tale versione è quella in cui vengono compilati e testati i pacchetti proprietari. Per un elenco dei pacchetti supportati dalla distribuzione anaconda, vedere il sito di analisi continua: [Elenco dei pacchetti Anaconda](https://docs.continuum.io/anaconda/packages/pkg-docs).
 
-La distribuzione Anaconda associata a un'istanza del motore di database specifico è reperibile nella cartella associata all'istanza. Ad esempio, se è installato il motore di database di SQL Server 2017 con Python e Machine Learning Services sull'istanza predefinita, cercarlo in `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`.
+La distribuzione anaconda associata a un'istanza specifica del motore di database è reperibile nella cartella associata all'istanza. Se, ad esempio, è stato installato SQL Server motore di database 2017 con Machine Learning Services e Python nell'istanza predefinita, `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`cercare in.
 
-I pacchetti Python aggiunti per carichi di lavoro paralleli e distribuiti da Microsoft includono le librerie seguenti.
+I pacchetti Python aggiunti da Microsoft per i carichi di lavoro paralleli e distribuiti includono le librerie seguenti.
 
 | Libreria | Descrizione |
 |---------|-------------|
-| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | Supporta gli oggetti origine dati ed esplorazione dei dati, manipolazione, trasformazione e la visualizzazione. Supporta la creazione di contesti di calcolo remoti, nonché un vari modelli scalabili di machine learning, ad esempio **rxLinMod**. Per altre informazioni, vedere [revoscalepy modulo con SQL Server](../python/ref-py-revoscalepy.md).  |
-| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Contiene algoritmi di machine learning che sono stati ottimizzati per la velocità e la precisione, nonché le trasformazioni per l'utilizzo di testo e immagini in linea. Per altre informazioni, vedere [modulo di microsoftml con SQL Server](../python/ref-py-microsoftml.md). |
+| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | Supporta oggetti origine dati e esplorazione, manipolazione, trasformazione e visualizzazione dei dati. Supporta la creazione di contesti di calcolo remoti, oltre a diversi modelli di apprendimento automatico scalabili, ad esempio **rxLinMod**. Per ulteriori informazioni, vedere il [modulo revoscalepy con SQL Server](../python/ref-py-revoscalepy.md).  |
+| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Contiene gli algoritmi di Machine Learning ottimizzati per la velocità e l'accuratezza, nonché le trasformazioni inline per l'utilizzo di testo e immagini. Per ulteriori informazioni, vedere il [modulo microsoftml con SQL Server](../python/ref-py-microsoftml.md). |
 
-Microsoftml e revoscalepy sono strettamente collegati; origini dati utilizzate nel microsoftml sono definite come oggetti revoscalepy. Limiti del contesto di trasferimento revoscalepy microsoftml di calcolo. Vale a dire, tutte le funzionalità sono disponibile per operazioni locali, ma il passaggio a un contesto di calcolo remoto richiede RxInSqlServer.
+Microsoftml e revoscalepy sono strettamente collegati; le origini dati utilizzate in microsoftml sono definite come oggetti revoscalepy. Limitazioni del contesto di calcolo nel trasferimento di revoscalepy a microsoftml. In particolare, tutte le funzionalità sono disponibili per le operazioni locali, ma per passare a un contesto di calcolo remoto è necessario RxInSqlServer.
 
 ## <a name="using-python-in-sql-server"></a>Uso di Python in SQL Server
 
-Importare il **revoscalepy** modulo nel codice Python e quindi chiamano funzioni del modulo, come qualsiasi altra funzione di Python.
+Il modulo **revoscalepy** viene importato nel codice Python e quindi vengono chiamate funzioni dal modulo, come qualsiasi altra funzione di Python.
 
-Origini dati supportate includono database ODBC, SQL Server e il formato di file XDF per lo scambio di dati con altre origini, o con soluzioni R. I dati di input per Python devono essere in formato tabulare. Tutti i risultati di Python devono essere restituiti sotto forma di una **pandas** frame di dati.
+Le origini dati supportate includono i database ODBC, SQL Server e il formato di file XDF per lo scambio di dati con altre origini o con soluzioni R. I dati di input per Python devono essere tabulari. Tutti i risultati Python devono essere restituiti sotto forma di frame  di dati Pandas.
 
-Contesti di calcolo supportati includono contesto di calcolo di SQL Server locale o remoto. Un contesto di calcolo remoto si riferisce all'esecuzione di codice che avvia in un computer, ad esempio una workstation, ma, commutatori lo script di esecuzione a un computer remoto. Passare il contesto di calcolo, è necessario che entrambi i sistemi abbiano la stessa libreria revoscalepy.
+I contesti di calcolo supportati includono il contesto di calcolo locale o remoto SQL Server. Un contesto di calcolo remoto si riferisce all'esecuzione del codice che viene avviata in un computer, ad esempio una workstation, ma quindi passa l'esecuzione dello script a un computer remoto. Per cambiare il contesto di calcolo è necessario che entrambi i sistemi abbiano la stessa libreria revoscalepy.
 
-Contesto di calcolo locale, come è prevedibile, include l'esecuzione del codice Python nello stesso server come istanza del motore di database, con il codice all'interno di T-SQL o incorporato in una stored procedure. È possibile anche eseguire il codice da un ambiente IDE Python locale e lo script di esecuzione nel computer SQL Server, contesto di calcolo con la definizione di un server remoto.
+Il contesto di calcolo locale, come ci si può aspettare, include l'esecuzione del codice Python nello stesso server dell'istanza del motore di database, con codice all'interno di T-SQL o incorporato in un stored procedure. È anche possibile eseguire il codice da un ambiente IDE di Python locale e far eseguire lo script nel computer SQL Server, definendo un contesto di calcolo remoto.
 
 ## <a name="execution-architecture"></a>Architettura di esecuzione
 
-Il diagramma seguente è illustrato l'interazione dei componenti di SQL Server con il runtime di Python in ognuno degli scenari supportati: in esecuzione l'esecuzione di script nel database e remoto da un terminale di Python, utilizzando un contesto di calcolo di SQL Server.
+I diagrammi seguenti illustrano l'interazione dei componenti di SQL Server con il runtime di Python in ognuno degli scenari supportati: esecuzione di script nel database ed esecuzione remota da un terminale Python, usando un SQL Server contesto di calcolo.
 
-### <a name="python-scripts-executed-in-database"></a>Gli script Python eseguito nel database
+### <a name="python-scripts-executed-in-database"></a>Script Python eseguiti nel database
 
-Quando si esegue Python "all'interno di" SQL Server, lo script di Python all'interno di una stored procedure speciale, è necessario incapsulare [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+Quando si esegue il SQL Server "interno" di Python, è necessario incapsulare lo script Python all'interno di uno Speciale stored procedure, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-Dopo che lo script è stato incorporato nella stored procedure, qualsiasi applicazione in grado di eseguire una stored procedure chiamata può avviare l'esecuzione del codice Python.  Successivamente, SQL Server gestisce l'esecuzione di codice come riepilogato nel diagramma seguente.
+Dopo che lo script è stato incorporato nel stored procedure, qualsiasi applicazione che può effettuare una chiamata stored procedure può avviare l'esecuzione del codice Python.  Successivamente SQL Server gestisce l'esecuzione del codice come riepilogato nel diagramma seguente.
 
 ![script-in-db-python](../../advanced-analytics/python/media/script-in-db-python2.png)
 
-1. Una richiesta per il runtime di Python è indicata dal parametro `@language='Python'` passato alla stored procedure. SQL Server invia la richiesta al servizio Launchpad.
-2. Il servizio Launchpad avvia l'utilità di avvio appropriata; In questo caso, PythonLauncher.
+1. Una richiesta per il runtime di Python è indicata dal parametro `@language='Python'` passato al stored procedure. SQL Server invia la richiesta al servizio launchpad.
+2. Il servizio Launchpad avvia l'utilità di avvio appropriata; in questo caso, PythonLauncher.
 3. PythonLauncher avvia il processo Python35 esterno.
-4. BxlServer interagisce con il runtime di Python per gestire gli scambi di dati e archiviazione dei risultati.
-5. SQL Satellite gestisce le comunicazioni sulle attività correlate e i processi con SQL Server.
-6. BxlServer Usa SQL Satellite per comunicare lo stato e i risultati a SQL Server.
-7. SQL Server Ottiene i risultati e chiude i processi e attività correlate.
+4. BxlServer coordina con il runtime di Python per gestire lo scambio di dati e l'archiviazione dei risultati di lavoro.
+5. Il satellite SQL gestisce le comunicazioni sulle attività e i processi correlati con SQL Server.
+6. BxlServer usa SQL satellite per comunicare lo stato e i risultati a SQL Server.
+7. SQL Server Ottiene i risultati e chiude le attività e i processi correlati.
 
 ### <a name="python-scripts-executed-from-a-remote-client"></a>Script Python eseguiti da un client remoto
 
-È possibile eseguire gli script di Python da un computer remoto, ad esempio un computer portatile e li vengono eseguite nel contesto del computer SQl Server, se vengono soddisfatte queste condizioni:
+È possibile eseguire script Python da un computer remoto, ad esempio un computer portatile, e fare in modo che vengano eseguiti nel contesto del computer SQl server, se vengono soddisfatte le condizioni seguenti:
 
-+ Progettare in modo appropriato gli script
-+ Nel computer remoto sia installato le librerie di estendibilità usati da servizi di Machine Learning. Il [revoscalepy](../python/ref-py-revoscalepy.md) pacchetto è necessario usare contesti di calcolo remoti.
++ Progettare gli script in modo appropriato
++ Il computer remoto ha installato le librerie di estensibilità utilizzate da Machine Learning Services. Il pacchetto [revoscalepy](../python/ref-py-revoscalepy.md) è necessario per usare i contesti di calcolo remoti.
 
-Il diagramma seguente riepiloga il flusso di lavoro globale quando gli script vengono inviati da un computer remoto.
+Nel diagramma seguente viene riepilogato il flusso di lavoro complessivo quando gli script vengono inviati da un computer remoto.
 
 ![remote-sqlcc-from-python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
 
-1. Per le funzioni che sono supportate in **revoscalepy**, il runtime di Python chiama una funzione di collegamento, che a sua volta chiama BxlServer.
-2. BxlServer è incluso in Machine Learning Services (In-Database) e viene eseguito in un processo separato dal runtime di Python.
+1. Per le funzioni supportate in **revoscalepy**, il runtime di Python chiama una funzione di collegamento, che a sua volta chiama BxlServer.
+2. BxlServer è incluso in Machine Learning Services (in-database) e viene eseguito in un processo separato dal runtime di Python.
 3. BxlServer determina la destinazione della connessione e avvia una connessione tramite ODBC, passando le credenziali fornite come parte della stringa di connessione nello script Python.
 4. BxlServer apre una connessione all'istanza di SQL Server.
-5. Quando viene chiamato un tempo di esecuzione dello script esterno, viene richiamato il servizio Launchpad, che a sua volta avvia l'utilità di avvio appropriata: in questo caso, PythonLauncher.dll. Successivamente, l'elaborazione del codice Python viene gestita in un flusso di lavoro simile a quella quando codice Python viene richiamato da una stored procedure in T-SQL.
+5. Quando viene chiamato un runtime di script esterno, viene richiamato il servizio Launchpad, che a sua volta avvia l'utilità di avvio appropriata: in questo caso, PythonLauncher. dll. Successivamente, l'elaborazione del codice Python viene gestita in un flusso di lavoro simile a quando il codice Python viene richiamato da un stored procedure in T-SQL.
 6. PythonLauncher effettua una chiamata all'istanza di Python installata nel computer SQL Server.
 7. I risultati vengono restituiti a BxlServer.
-8. SQL Satellite gestisce la comunicazione con SQL Server e la pulizia degli oggetti processo correlati.
-9. SQL Server passa i risultati al client.
+8. SQL satellite gestisce la comunicazione con SQL Server e la pulizia di oggetti processo correlati.
+9. SQL Server passa nuovamente i risultati al client.
 
 ## <a name="see-also"></a>Vedere anche
 
 + [modulo revoscalepy in SQL Server](../python/ref-py-revoscalepy.md)
-+ [riferimento a una funzione revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
++ [riferimento alla funzione revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
 + [Framework di estendibilità in SQL Server](extensibility-framework.md)
-+ [R e machine learning le estensioni in SQL Server](extension-r.md)
++ [Estensioni R e Machine Learning in SQL Server](extension-r.md)
