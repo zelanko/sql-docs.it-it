@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2d50c789-eb9d-4f8a-81ca-974563040bbb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 80a2310da7f630ab517057c5fae96d86a5227bea
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e7c74f251ebc915082f3d6249a84a258d3c84682
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998314"
 ---
 # <a name="updateshort-method-sqlserverresultset"></a>Metodo updateShort (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

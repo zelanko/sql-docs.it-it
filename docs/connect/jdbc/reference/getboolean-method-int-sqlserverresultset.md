@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 50fcc0c3-36a1-47b2-b18c-7aa2ac9b27d3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3380b26cb0401e35c59b50b349c279566612c50f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9cd1d57581a92df0423de09dfe672f29c2cabf81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66771648"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953577"
 ---
 # <a name="getboolean-method-int-sqlserverresultset"></a>Metodo getBoolean (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public boolean getBoolean(int columnIndex)
 ## <a name="remarks"></a>Remarks  
  Questo metodo getBoolean viene specificato dal metodo getBoolean nell'interfaccia java.sql.ResultSet.  
   
- Questo metodo è supportato solo sui tipi di dati numerici e di tipo carattere. Converte i valori "1", 1, e "**true**" al **true**e i valori "0", 0, e "**false**" per **false**. Per tutti gli altri valori il comportamento non è definito.  
+ Questo metodo è supportato solo sui tipi di dati numerici e di tipo carattere. Converte i valori "1", 1 e "**true**" in **true**e i valori "0", 0 e "**false**" in **false**. Per tutti gli altri valori il comportamento non è definito.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo getBoolean &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   

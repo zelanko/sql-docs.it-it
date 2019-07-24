@@ -10,22 +10,21 @@ ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cbcb076d33b45d8db58360c6c3741493aab2ed62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ccd2ce331f6e88933ff546c18446b5edbc956511
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935672"
 ---
 # <a name="python-sql-driver"></a>Driver SQL Python
 
-![Download-FRECCIAGIÙ cerchiato](../../ssdt/media/download.png)[per installare driver SQL per Python](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-FrecciaGIÙ-Circled](../../ssdt/media/download.png)[per installare il driver SQL per Python](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-È possibile connettersi a un Database SQL tramite Python su Windows, Linux o Mac.   
+È possibile connettersi a un database SQL tramite Python in Windows, Linux o Mac.   
   
 ## <a name="getting-started"></a>Introduzione  
-Sono disponibili diversi driver SQL python. Tuttavia, Microsoft genera le attività di test e la propria fiducia nel **pyodbc** driver. Scegliere un driver e configurare l'ambiente di sviluppo in modo appropriato:
+Sono disponibili diversi driver SQL Python. Tuttavia, Microsoft pone le proprie attività di test e la relativa confidenza nel driver **pyodbc** . Scegliere un driver e configurare l'ambiente di sviluppo di conseguenza:
 * [Driver SQL per Python - pyodbc](pyodbc/python-sql-driver-pyodbc.md)
 * [Driver SQL per Python - pymssql](pymssql/python-sql-driver-pymssql.md)
   
@@ -37,9 +36,9 @@ Sono disponibili diversi driver SQL python. Tuttavia, Microsoft genera le attivi
 * [Community python.org](https://www.python.org/community/)  
   
 ## <a name="more-samples"></a>Altri esempi  
-* [Creare un'app web Python con DJango e Database SQL nel sito Web di Azure](https://github.com/Microsoft/PTVS/wiki/Django-and-SQL-Database-on-Azure)
-* [Getting Started with Python in Windows](https://www.microsoft.com/sql-server/developer-get-started/python/windows/)
-* [Introduzione a Python in macOS](https://www.microsoft.com/sql-server/developer-get-started/python/mac/)
-* [Getting Started with Python in Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu/)
-* [Getting Started with Python in Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/python/rhel/)
-* [Getting Started with Python in SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/python/sles/)
+* [Creare un'app Web Python usando DJango e il database SQL nel sito Web di Azure](https://github.com/Microsoft/PTVS/wiki/Django-and-SQL-Database-on-Azure)
+* [Introduzione con Python in Windows](https://www.microsoft.com/sql-server/developer-get-started/python/windows/)
+* [Introduzione con Python in macOS](https://www.microsoft.com/sql-server/developer-get-started/python/mac/)
+* [Introduzione con Python in Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu/)
+* [Introduzione con Python in Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/python/rhel/)
+* [Introduzione con Python in SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/python/sles/)

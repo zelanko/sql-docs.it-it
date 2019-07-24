@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: abcec31f-1a60-4765-9725-8cf7e9f1f8ab
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3ca2b8afe197c2509f0a2633266ea21c619bdeb1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4555dfb9256f3ffe2ba61e82fe90307991a5a580
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764685"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975088"
 ---
 # <a name="setbinarystream-method-sqlserverblob"></a>Metodo setBinaryStream (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public java.io.OutputStream setBinaryStream(long pos)
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *POS*  
+ *Pos*  
   
  Posizione nel valore BLOB in corrispondenza della quale iniziare la scrittura.  
   
@@ -47,7 +46,7 @@ public java.io.OutputStream setBinaryStream(long pos)
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo setBinaryStream viene specificato dal metodo setBinaryStream nell'interfaccia Java.  
+ Questo metodo setBinaryStream viene specificato dal metodo setBinaryStream nell'interfaccia java. SQL. blob.  
   
  I dati nel valore BLOB vengono sovrascritti dal flusso di output a partire dalla posizione specificata e possono superare la lunghezza iniziale di tale valore. Se si specifica un valore posizione+1, verranno aggiunti byte. Se si passa un valore posizione+2 o superiore (o zero o inferiore) verrà generato un errore di posizione.  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2bcdbb69-95fd-4ae8-8488-1a75a91fe2e0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b8907a5e2eb2ead5202e8aec9fd5320a6047a5f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b2e644feff3cd2787cc6bd80bce54562ad20794
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797706"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975787"
 ---
 # <a name="relative-method-sqlserverresultset"></a>Metodo relative (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public boolean relative(int nRows)
  Valore **int** che indica il numero di righe da spostare.  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se il cursore si trova in una riga. In caso contrario, **false**.  
+ **true** se il cursore si trova su una riga. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo relativo viene specificato dal relativo metodo nell'interfaccia ResultSet.  
+ Questo metodo relativo viene specificato dal metodo relativo nell'interfaccia java. SQL. ResultSet.  
   
  Se si tenta di spostare oltre la prima o ultima riga nel set di risultati, il cursore viene posizionato prima o dopo la prima o ultima riga. La chiamata al metodo `relative(0)` è valida, ma non modifica la posizione del cursore.  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c465ff91-ab96-41de-8917-96c4974c2624
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fcf1e472ef62a2df8656063eda01cf4dfec3bda1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a0c0d06a4e4d9f6b83ba938dad9abfbf9c58b7fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982760"
 ---
 # <a name="getint-method-int-sqlserverresultset"></a>Metodo getInt (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public int getInt(int columnIndex)
  Valore **int** che indica l'indice di colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un' **int** valore.  
+ Valore **int** .  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -52,7 +51,7 @@ public int getInt(int columnIndex)
  Questo metodo è supportato solo sui tipi di dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che possono restituire in modo sicuro un valore integer, ad esempio int, smallint, tinyint e bit. L'utilizzo di questo metodo su qualsiasi altro tipo di dati genererà un'eccezione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo getInt &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getint-method-sqlserverresultset.md)   
+ [Metodo &#40;GetInt SQLServerResultSet&#41;](../../../connect/jdbc/reference/getint-method-sqlserverresultset.md)   
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

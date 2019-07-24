@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7fe25d90-693c-4d3b-9dd2-0f8351c5a9ed
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cf38e568d723f72c673a85d31093ffe7e1bae26f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 33d21e8bfe8a774d8b5b21584ba9fd3f02246f4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977680"
 ---
 # <a name="iscurrency-method-sqlserverresultsetmetadata"></a>Metodo isCurrency (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public boolean isCurrency(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo isCurrency viene specificato dal metodo isCurrency nell'interfaccia ResultSetMetaData.  
+ Questo metodo di valuta viene specificato dal metodo IsValid nell'interfaccia java. SQL. ResultSetMetaData.  
   
  Questo metodo restituirà **true** solo con tipi di dati money e smallmoney di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

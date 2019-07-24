@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c8cc4636-01e9-4dc8-a40c-728337ca08f5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0b52d434f3add9cfe2590519e90267bbfb93e160
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 336192ffefd750ba3e817ba1b961fd3726d9a6e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66784382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981409"
 ---
 # <a name="getnstring-method-int-sqlserverresultset"></a>Metodo getNString (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public java.lang.String getNString(int columnIndex)
  Valore **int** che indica l'indice di colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto stringa.  
+ Oggetto String.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -44,7 +43,7 @@ public java.lang.String getNString(int columnIndex)
 ## <a name="remarks"></a>Remarks  
  Questo metodo getNString viene specificato dal metodo getNString nell'interfaccia java.sql.SQLServerResultSet.  
   
- Questo metodo può essere utilizzato per recuperare il valore di un' **nvarchar**, **nchar**, **nvarchar (max)** , **ntext**, o **xml** colonna nella riga corrente di questo [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto. Se si tenta di utilizzare questo metodo per recuperare valori di altri tipi di dati, verrà generata un'eccezione.  
+ Questo metodo può essere utilizzato per recuperare il valore di una colonna **nvarchar**, **nchar**, **nvarchar (max)** , **ntext**o **XML** nella riga corrente di questo oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) . Se si tenta di utilizzare questo metodo per recuperare valori di altri tipi di dati, verrà generata un'eccezione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo getNString &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)   

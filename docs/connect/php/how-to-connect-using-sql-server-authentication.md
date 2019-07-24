@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6518e45d529f39f5621f2adfa8b46e4eb5f29ffa
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e7d894b48fc6ec82450c42599f13725f0cd8ee1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993554"
 ---
 # <a name="how-to-connect-using-sql-server-authentication"></a>Procedura: Connessione con l'autenticazione di SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -133,7 +132,7 @@ Questo esempio usa il driver PDO_SQLSRV per illustrare la procedura di connessio
 ## <a name="see-also"></a>Vedere anche  
 [Procedura: Connessione con l'autenticazione di SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)
 
-[Guida di programmazione per i driver Microsoft per PHP per SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guida alla programmazione per i driver Microsoft per PHP per SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)
 

@@ -1,5 +1,5 @@
 ---
-title: La connessione con sqlcmd | Microsoft Docs
+title: Connessione con sqlcmd | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 48e4771b8d538775ae2e2faec053f0263bd6d653
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a782db89033da42ebf17ed33565ec680fafa0d04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005915"
 ---
 # <a name="connecting-with-sqlcmd"></a>Connessione con sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 L'utilità [sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481) è disponibile in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Linux e macOS.
   
-I comandi seguenti mostrano come usare l'autenticazione di Windows (Kerberos) e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] l'autenticazione, rispettivamente:
+I comandi seguenti mostrano come usare l'autenticazione di Windows (Kerberos) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e l'autenticazione, rispettivamente:
   
 ```  
 sqlcmd -E -Sxxx.xxx.xxx.xxx  
@@ -36,23 +35,23 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 
 Nella versione corrente, sono disponibili le opzioni seguenti:  
   
-- -? Visualizzazione `sqlcmd` utilizzo.  
+- -? Visualizza `sqlcmd` l'utilizzo.  
   
 - -a Richiede la dimensione di un pacchetto.  
   
 - -b Termina il processo batch se viene rilevato un errore.  
   
-- -c *batch_terminator* specificare il carattere di terminazione di batch.  
+- -c *batch_terminator* specifica il carattere di terminazione del batch.  
   
 - -C Considera attendibile il certificato del server.  
 
-- -d *database_name* problema un `USE` *database_name* istruzione quando si avvia `sqlcmd`.  
+- -d *database_name* Invia un' `USE` istruzione *database_name* all'avvio `sqlcmd`.  
 
 - -D Indica che il valore passato all'opzione -S di `sqlcmd` deve essere interpretato come nome dell'origine dati (DSN). Per altre informazioni, vedere "Supporto di DSN in `sqlcmd` e `bcp`" alla fine di questo argomento.  
   
 - -e Scrive gli script di input nel dispositivo di output standard (stdout).
 
-- Usa una connessione trusted e l'autenticazione integrata. Per altre informazioni su come rendere attendibili le connessioni che usano l'autenticazione integrata da un client Linux o macOS, vedere [Using Integrated Authentication](../../../connect/odbc/linux-mac/using-integrated-authentication.md).
+- Usa una connessione trusted e l'autenticazione integrata. Per altre informazioni sull'esecuzione di connessioni trusted che usano l'autenticazione integrata da un client Linux o macOS, vedere [uso dell'autenticazione integrata](../../../connect/odbc/linux-mac/using-integrated-authentication.md).
 
 - -h *numero_di_righe* Specifica il numero di righe da stampare tra le intestazioni delle colonne.  
   
@@ -60,7 +59,7 @@ Nella versione corrente, sono disponibili le opzioni seguenti:
   
 - -i *file_input*[,*file_input*[,…]] Identifica il file che contiene un batch di istruzioni o stored procedure SQL.  
   
-- -I Set di `SET QUOTED_IDENTIFIER` opzione di connessione su ON.  
+- -Impostare l' `SET QUOTED_IDENTIFIER` opzione di connessione su on.  
   
 - -k Rimuove o sostituisce i caratteri di controllo.  
   
@@ -74,8 +73,8 @@ Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a 
 
 - -m *livello_errore* Controlla i messaggi di errore inviati a stdout.  
   
-- **-M**_a più subnet\_failover_  
-Specificare sempre **-M** in caso di connessione al listener di un gruppo di disponibilità di [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] o a un'istanza del cluster di failover di [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. **-M** consente un rilevamento più veloce dei failover e una connessione più rapida al server attualmente attivo. Se non si specifica **-M**, significa che l'opzione **-M** è disattivata. Per altre informazioni sulle [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], vedere [Driver ODBC in Linux e macOS - disponibilità elevata e ripristino di emergenza](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+- **-M** _failover su\_più subnet_  
+Specificare sempre **-M** in caso di connessione al listener di un gruppo di disponibilità di [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] o a un'istanza del cluster di failover di [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. **-M** consente un rilevamento più veloce dei failover e una connessione più rapida al server attualmente attivo. Se non si specifica **-M**, significa che l'opzione **-M** è disattivata. Per altre informazioni su [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], vedere [Driver ODBC in Linux e macOS - Disponibilità elevata e ripristino di emergenza](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > **-M** non è supportata in CTP per SUSE Linux. È tuttavia possibile specificare la parola chiave **MultiSubnetFailover=Yes** in un file DSN passato a `sqlcmd`. Per altre informazioni, vedere "Supporto di DSN in `sqlcmd` e `bcp`" alla fine di questo argomento.  
@@ -88,9 +87,9 @@ Specificare sempre **-M** in caso di connessione al listener di un gruppo di dis
   
 - -P Specifica una password utente.  
   
-- -q *commandline_query* eseguire una query quando `sqlcmd` viene avviato, ma non viene chiuso al termine dell'esecuzione della query.  
+- -q *commandline_query* esegue una query all' `sqlcmd` avvio, ma non viene chiusa al termine dell'esecuzione della query.  
 
-- -Q *commandline_query* eseguire una query quando `sqlcmd` viene avviato. `sqlcmd` verrà chiuso al termine della query.  
+- -Q *commandline_query* esegue una query all' `sqlcmd` avvio di. `sqlcmd` verrà chiuso al termine della query.  
 
 - -r Reindirizza i messaggi di errore a stderr.
 
@@ -99,17 +98,17 @@ Specificare sempre **-M** in caso di connessione al listener di un gruppo di dis
 - -s *column_separator_char* specificare il carattere separatore di colonna.  
 
 - -S [*protocol*:] *server*[ **,** _port_]  
-Specificare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per connettersi a, o se -D viene usata, un DSN. Il driver ODBC in Linux e macOS richiede - S. Si noti che **tcp** è l'unico protocollo valido.  
+Specificare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a cui connettersi oppure, se si utilizza-D, un DSN. Il driver ODBC in Linux e macOS richiede-S. Si noti che **TCP** è l'unico protocollo valido.  
   
 - -t *timeout_query* Specifica il numero di secondi prima del timeout di un comando o di un'istruzione SQL.  
   
 - -u Specifica l'archiviazione di file_output in formato Unicode, indipendentemente dal formato di file_input.  
   
-- -U *login_id* specificare un ID di accesso utente.  
+- -U *login_ID* specificare un ID di accesso utente.  
   
 - -V *livello_gravità_errore* Controlla il livello di gravità usato per impostare la variabile ERRORLEVEL.  
   
-- -w *column_width* specificare la larghezza della schermata per l'output.  
+- -w *column_width* specificare la larghezza dello schermo per l'output.  
   
 - -W Rimuove gli spazi finali da una colonna.  
   
@@ -117,9 +116,9 @@ Specificare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md
   
 - -X Disabilita i comandi, lo script di avvio e le variabili di ambiente.  
   
-- -y *variable_length_type_display_width* impostare il `sqlcmd` variabile di scripting `SQLCMDMAXFIXEDTYPEWIDTH`.
+- -y *variable_length_type_display_width* imposta la `sqlcmd` variabile `SQLCMDMAXFIXEDTYPEWIDTH`di scripting.
   
-- -Y *fixed_length_type_display_width* impostare il `sqlcmd` variabile di scripting `SQLCMDMAXVARTYPEWIDTH`.
+- -Y *fixed_length_type_display_width* imposta la `sqlcmd` variabile `SQLCMDMAXVARTYPEWIDTH`di scripting.
 
 
 ## <a name="available-commands"></a>Comandi disponibili
@@ -167,7 +166,7 @@ Nella versione corrente non sono disponibili le opzioni seguenti:
   
 - -v Crea una variabile di scripting di `sqlcmd` che può essere usata in uno script `sqlcmd`.  
   
-È possibile usare il seguente metodo alternativo: inserire i parametri all'interno di un file, è quindi possibile aggiungere a un altro file. Ciò consentirà di usare un file di parametri per sostituire i valori. Creare ad esempio un file denominato `a.sql` (file dei parametri) con il contenuto seguente:
+È possibile usare il metodo alternativo seguente: inserire i parametri all'interno di un file, che è quindi possibile aggiungere a un altro file. Ciò consentirà di usare un file di parametri per sostituire i valori. Creare ad esempio un file denominato `a.sql` (file dei parametri) con il contenuto seguente:
   
     :setvar ColumnName object_id  
     :setvar TableName sys.objects  
@@ -182,13 +181,13 @@ Nella riga di comando, combinare `a.sql` e `b.sql` in `c.sql` usando i comandi s
   
     cat b.sql >> c.sql  
   
-Eseguire `sqlcmd` e usare `c.sql` come file di input:  
+Esegui `sqlcmd` e USA `c.sql` come file di input:  
   
     slqcmd -S<...> -P<..> -U<..> -I c.sql  
 
-- -z *password* Cambia password.  
+- -z password di modifica della *password* .  
   
-- -Z *password* modificare la password e uscita.  
+- -Z *modificare* la password e uscire.  
 
 ## <a name="unavailable-commands"></a>Comandi non disponibili
 
@@ -202,21 +201,21 @@ Nella versione corrente non sono disponibili i comandi seguenti:
   
 ## <a name="dsn-support-in-sqlcmd-and-bcp"></a>Supporto di DSN in sqlcmd e bcp
 
-È possibile specificare un nome origine dati (DSN, Data Source Name) anziché un nome server nell'opzione **sqlcmd** o **bcp** `-S` (o nel comando **sqlcmd** :Connect) se si specifica -D. -D fa sì che **sqlcmd** oppure **bcp** per connettersi al server specificato nel DSN per l'opzione -S.  
+È possibile specificare un nome origine dati (DSN, Data Source Name) anziché un nome server nell'opzione **sqlcmd** o **bcp** `-S` (o nel comando **sqlcmd** :Connect) se si specifica -D. -D fa sì che **SQLCMD** o **bcp** si connettano al server specificato nel DSN con l'opzione-S.  
   
-DSN di sistema vengono archiviate nel `odbc.ini` file nella directory SysConfigDir ODBC (`/etc/odbc.ini` nelle installazioni standard). DSN utente vengono archiviati `.odbc.ini` nella home directory dell'utente (`~/.odbc.ini`).
+I DSN di sistema vengono archiviati `odbc.ini` nel file nella directory ODBC SysConfigDir (`/etc/odbc.ini` nelle installazioni standard). I DSN utente vengono archiviati `.odbc.ini` in nella home directory dell'utente (`~/.odbc.ini`).
   
 In un DSN in Linux o macOS sono supportate le voci seguenti:
 
 -   **ApplicationIntent=ReadOnly**  
 
--   **Database =** _database\_nome_  
+-   **Database =** _nome\_database_  
   
--   **Driver = ODBC Driver 11 for SQL Server** o **Driver = ODBC Driver 13 for SQL Server**
+-   **Driver = ODBC driver 11 for SQL Server** o **driver = ODBC driver 13 for SQL Server**
   
 -   **MultiSubnetFailover=Yes**  
   
--   **Server =** _server\_name\_oppure\_IP\_indirizzo_  
+-   **Server =** _nome\_delserver\_o indirizzoIP\_\__  
   
 -   **Trusted_Connection=yes**|**no**  
   

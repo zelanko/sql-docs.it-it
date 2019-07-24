@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b343b2b2-7215-4bcd-b12d-de4a9662e536
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b5314932281224811ac5dbe3efd4bcf6c5023c0f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 09adf678236a636cfe0fbdfa581c094be1e7e619
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953009"
 ---
 # <a name="getclob-method-sqlserverresultset"></a>Metodo getClob (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

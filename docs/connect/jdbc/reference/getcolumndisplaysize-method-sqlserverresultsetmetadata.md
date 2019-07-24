@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 21c25443-bd2b-4b60-9798-4efe2c158952
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: caf5b0a71fe179aa58da59a4434c485693939b9b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3de927351c2474c60af8ba1e168b0d7e76f98260
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763593"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952965"
 ---
 # <a name="getcolumndisplaysize-method-sqlserverresultsetmetadata"></a>Metodo getColumnDisplaySize (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,9 +46,9 @@ public int getColumnDisplaySize(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getColumnDisplaySize viene specificato dal metodo getColumnDisplaySize nell'interfaccia ResultSetMetaData.  
+ Questo metodo getColumnDisplaySize viene specificato dal Metodo getColumnDisplaySize nell'interfaccia java. SQL. ResultSetMetaData.  
   
- [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Microsoft JDBC Driver 3.0 include modifiche di comportamento nella colonna COLUMN_SIZE. Per altre informazioni, vedere [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md).  
+ [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Il driver JDBC 3,0 presenta modifiche del comportamento nella colonna COLUMN_SIZE. Per altre informazioni, vedere [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   

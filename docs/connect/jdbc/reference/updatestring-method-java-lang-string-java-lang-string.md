@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3a9236bb-a307-45a8-b7d2-c4cbd9b3cb35
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 09bb0a355a643f38b8ba9a2c1bb0cdbc0736b17e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 19a54fbfe280a4a5a16b57befee87a8f46de6a6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801184"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998241"
 ---
 # <a name="updatestring-method-javalangstring-javalangstring"></a>Metodo updateString (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,13 +42,13 @@ public void updateString(java.lang.String columnName,
   
  *x*  
   
- Oggetto **stringa** oggetto.  
+ Oggetto **String** .  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo updateString viene specificato dal metodo updateString nell'interfaccia ResultSet.  
+ Questo metodo updateString viene specificato dal metodo updateString nell'interfaccia java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo updateString &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md)   

@@ -12,27 +12,26 @@ helpviewer_keywords:
 ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4b2f02fc81b969f8633a5a951483745c1d2635b0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e3c6614425cf8796bd7ec462a62f9410b9ca5857
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799642"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936388"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>Caricamento dei Driver Microsoft per PHP per SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 In questa pagina vengono specificate le istruzioni per il caricamento dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] nello spazio di elaborazione PHP.  
   
-È possibile scaricare i driver predefiniti per la piattaforma nella [Microsoft Drivers per PHP per SQL Server](https://github.com/Microsoft/msphpsql/releases) pagina del progetto Github. Ogni pacchetto di installazione contiene file di driver SQLSRV e PDO_SQLSRV le varianti con thread e non a thread singolo. In Windows, sono anche disponibili le varianti a 32 e 64 bit. Visualizzare [requisiti di sistema per Microsoft Drivers per PHP per SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md) per un elenco dei file di driver che sono contenuti in ogni pacchetto. Il file del driver deve corrispondere la versione PHP, architettura e threadedness dell'ambiente di PHP.
+È possibile scaricare i driver predefiniti per la piattaforma dalla pagina dei [driver Microsoft per php per SQL Server](https://github.com/Microsoft/msphpsql/releases) progetto GitHub. Ogni pacchetto di installazione contiene i file di driver SQLSRV e PDO_SQLSRV nelle varianti con thread e senza thread. In Windows sono disponibili anche in varianti a 32 bit e a 64 bit. Vedere [requisiti di sistema per i driver Microsoft per php per SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md) per un elenco dei file di driver contenuti in ogni pacchetto. Il file del driver deve corrispondere alla versione, all'architettura e al threadedness di PHP dell'ambiente PHP.
 
-In Linux e macOS, i driver possono in alternativa essere installati usando PECL, come individuata nel [esercitazione sull'installazione](../../connect/php/installation-tutorial-linux-mac.md).
+In Linux e macOS i driver possono essere installati in alternativa usando PECL, come indicato nell'esercitazione sull' [installazione](../../connect/php/installation-tutorial-linux-mac.md).
 
-È anche possibile compilare i driver dall'origine o durante la compilazione di PHP o tramite `phpize`. Se si sceglie di creare i driver dall'origine, è possibile scegliere di crearle in modo statico in PHP invece di compilare le estensioni come condivise aggiungendo `--enable-sqlsrv=static --with-pdo_sqlsrv=static` (in Linux e macOS) o `--enable-sqlsrv=static --with-pdo-sqlsrv=static` (on Windows) per il `./configure` comando prima di compilazione di PHP. Per altre informazioni su PHP sistema di compilazione e `phpize`, vedere la [documentazione di PHP](http://php.net/manual/install.php).
+È anche possibile compilare i driver dall'origine quando si compila PHP o usando `phpize`. Se si sceglie di compilare i driver dall'origine, è possibile crearli in modo statico in php anziché crearli come estensioni condivise aggiungendo `--enable-sqlsrv=static --with-pdo_sqlsrv=static` (in Linux e MacOS) o `--enable-sqlsrv=static --with-pdo-sqlsrv=static` ( `./configure` in Windows) al comando quando compilazione di PHP. Per ulteriori informazioni sul sistema di compilazione php e `phpize`, vedere la [documentazione di php](http://php.net/manual/install.php).
   
 ## <a name="moving-the-driver-file-into-your-extension-directory"></a>Spostamento del file del driver nella directory dell'estensione  
-Il file del driver debba trovarsi in una directory in cui possibile trovare il runtime PHP. È più semplice inserire il file di driver nella directory dell'estensione PHP predefinito, per trovare la directory predefinita, eseguire `php -i | sls extension_dir` in Windows o `php -i | grep extension_dir` su Linux/macOS. Se non si usa la directory di estensione predefinite, specificare una directory nel file di configurazione PHP (PHP. ini), usando il **extension_dir** opzione. Ad esempio, in Windows, se è stato inserito il file del driver `c:\php\ext` directory, aggiungere la riga seguente al file PHP. ini:
+Il file del driver deve trovarsi in una directory in cui è possibile trovare il runtime PHP. È più semplice inserire il file del driver nella directory dell'estensione php predefinita: per trovare la directory predefinita, eseguirla `php -i | sls extension_dir` in Windows o `php -i | grep extension_dir` in Linux/MacOS. Se non si usa la directory dell'estensione predefinita, specificare una directory nel file di configurazione PHP (php. ini), usando l'opzione **extension_dir** . Ad esempio, in Windows, se il file del driver è stato inserito nella `c:\php\ext` directory, aggiungere la riga seguente a php. ini:
   
 ```  
 extension_dir = "c:\PHP\ext"  
@@ -41,40 +40,40 @@ extension_dir = "c:\PHP\ext"
 ## <a name="loading-the-driver-at-php-startup"></a>Caricamento del driver all'avvio di PHP  
 Prima di caricare il driver SQLSRV all'avvio di PHP, spostare un file di driver nella directory dell'estensione. Quindi eseguire la procedura seguente:  
   
-1.  Per abilitare la **SQLSRV** driver, modificare **PHP. ini** aggiungendo la riga seguente alla sezione dell'estensione, modificare il nome del file come appropriato:  
+1.  Per abilitare il driver **sqlsrv** , modificare **php. ini** aggiungendo la riga seguente alla sezione Extension, modificando il nome del file in base alle esigenze:  
   
     In Windows: 
     ```  
     extension=php_sqlsrv_72_ts.dll  
     ```  
-    In Linux, se sono stati scaricati i file binari precompilati per la distribuzione: 
+    In Linux, se sono stati scaricati i file binari predefiniti per la distribuzione: 
     ```  
     extension=php_sqlsrv_72_nts.so  
     ```
-    Se sono stati compilati SQLSRV binaria dall'origine o con PECL, verrà invece denominata sqlsrv.so:
+    Se il file binario SQLSRV è stato compilato dall'origine o con PECL, sarà invece denominato sqlsrv.so:
     ```
     extension=sqlsrv.so
     ```
   
-2.  Per abilitare la **PDO_SQLSRV** driver, l'estensione di oggetti dati PHP (PDO) deve essere disponibile come estensione incorporata o come un'estensione caricata in modo dinamico.
+2.  Per abilitare il driver **PDO_SQLSRV** , è necessario che l'estensione di oggetti dati PHP (DOP) sia disponibile, come estensione predefinita, o come estensione caricata dinamicamente.
 
-    In Windows, i file binari PHP predefiniti forniti con PDO predefinito, in modo che non è necessario modificare PHP. ini per caricarlo. Se, tuttavia, si hanno compilato PHP dall'origine e un'estensione PDO separata da compilare, verranno denominate `php_pdo.dll`, ed è necessario copiarlo nella directory dell'estensione e aggiungere la riga seguente al file PHP. ini:  
+    In Windows, i file binari di PHP predefiniti sono dotati di DOP incorporato, quindi non è necessario modificare php. ini per caricarlo. Se, tuttavia, è stato compilato PHP dall'origine ed è stata specificata un'estensione DOP separata da compilare, questa verrà denominata `php_pdo.dll`ed è necessario copiarla nella directory dell'estensione e aggiungere la riga seguente a php. ini:  
     ```
     extension=php_pdo.dll  
     ```
-    In Linux, se è stato installato PHP usando Gestione pacchetti del sistema, PDO è probabilmente installato come estensione di caricato in modo dinamico denominata pdo.so. L'estensione PDO deve essere caricato prima l'estensione PDO_SQLSRV o il caricamento avrà esito negativo. Le estensioni vengono caricate in genere utilizzando i file ini singoli e questi file vengono lette dopo PHP. ini. Pertanto, se pdo.so viene caricato tramite il proprio file con estensione ini, è necessario un file separato, il caricamento del driver PDO_SQLSRV dopo PDO. 
+    In Linux, se è stato installato PHP usando la gestione pacchetti del sistema, è probabile che la DOP sia installata come estensione caricata dinamicamente denominata pdo.so. L'estensione DOP deve essere caricata prima dell'estensione PDO_SQLSRV o il caricamento avrà esito negativo. Le estensioni vengono in genere caricate usando singoli file ini e questi file vengono letti dopo php. ini. Se, pertanto, pdo.so viene caricato tramite il proprio file ini, viene richiesto un file separato che carica il driver PDO_SQLSRV dopo la richiesta di DOP. 
 
-    Per scoprire quale directory si trovano i file ini specifici dell'estensione, eseguire `php --ini` e prendere nota della directory indicata sotto `Scan for additional .ini files in:`. Trovare il file che consente di caricare pdo.so, che probabilmente è preceduto da un numero, ad esempio 10 pdo.ini. Il prefisso numerico indica l'ordine di caricamento dei file. ini, mentre i file che non hanno un prefisso numerico vengono caricati in ordine alfabetico. Creare un file per caricare il file del driver PDO_SQLSRV chiamato 30-pdo_sqlsrv.ini (qualsiasi numero maggiore di quello che i prefissi works pdo.ini) oppure pdo_sqlsrv.ini (se pdo.ini non preceduta da un numero) e aggiungere la riga seguente, modificando il nome del file come appropriato:  
+    Per individuare la directory in cui si trovano i file ini specifici dell'estensione, eseguire `php --ini` e prendere nota della directory indicata `Scan for additional .ini files in:`in. Trovare il file che carica pdo.so. è probabile che sia preceduto da un numero, ad esempio 10-PDO. ini. Il prefisso numerico indica l'ordine di caricamento dei file ini, mentre i file che non dispongono di un prefisso numerico vengono caricati in ordine alfabetico. Creare un file per caricare il file del driver PDO_SQLSRV denominato 30-PDO_SQLSRV. ini (qualsiasi numero maggiore di quello che prefissi i prefissi DOP. ini funziona) o PDO_SQLSRV. ini (se DOP. ini non è preceduto da un numero) e aggiungere la riga seguente, modificando il nome del file come appropriato  
     ```
     extension=php_pdo_sqlsrv_72_nts.so
     ```
-    Come con SQLSRV, se sono stati compilati PDO_SQLSRV binaria dall'origine o con PECL, verrà invece denominata pdo_sqlsrv.so:
+    Come per SQLSRV, se il file binario PDO_SQLSRV è stato compilato dall'origine o con PECL, sarà invece denominato PDO_SQLSRV. so:
     ```
     extension=pdo_sqlsrv.so
     ```
-    Copiare questo file nella directory che contiene altri file. ini. 
+    Copiare questo file nella directory che contiene gli altri file ini. 
 
-    Se sono stati compilati PHP dall'origine con il supporto PDO predefinito, non è necessario un file. ini separato ed è possibile aggiungere la riga appropriata in precedenza in PHP. ini.
+    Se è stato compilato PHP dall'origine con il supporto di DOP incorporato, non è necessario un file con estensione ini separato ed è possibile aggiungere la riga appropriata sopra a php. ini.
   
 3.  Riavviare il server Web.  
   
@@ -88,7 +87,7 @@ Per altre informazioni sulle direttive di **php.ini**, vedere [Descrizione delle
 
 [Requisiti di sistema dei driver Microsoft per PHP per SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md)
 
-[Guida di programmazione per i driver Microsoft per PHP per SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guida alla programmazione per i driver Microsoft per PHP per SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Riferimento all'API del driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 

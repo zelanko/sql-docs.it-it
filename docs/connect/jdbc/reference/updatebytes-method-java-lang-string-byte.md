@@ -1,5 +1,5 @@
 ---
-title: Metodo updateBytes (lang, byte) | Microsoft Docs
+title: Metodo updateBytes (Java. lang. String, byte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4fb9de2b-61bc-4c96-89a5-c07cd7ee201a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 80fca41da217b3f13d7aadc688f96c7ca6ffa360
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 19ebdfb5b13cd528e5690fe2eeae9bec35e2134d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784198"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996897"
 ---
 # <a name="updatebytes-method-javalangstring-byte"></a>Metodo updateBytes (java.lang.String, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,13 +42,13 @@ public void updateBytes(java.lang.String columnName,
   
  *x*  
   
- Matrice di **byte** valori.  
+ Matrice di valori di **byte** .  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo updateBytes viene specificato dal metodo updateBytes nell'interfaccia ResultSet.  
+ Questo metodo updateBytes viene specificato dal metodo updateBytes nell'interfaccia java.sql.ResultSet.  
   
  In una versione precedente di [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] era possibile usare SQLServerResultSet.updateBytes per convertire valori tra matrici di byte e i tipi di dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **date**, **time**, **datetime2** e **datetimeoffset**. In questa versione l'utilizzo del metodo con questi tipi di dati provoca un'eccezione indicante che la conversione non è supportata.  
   

@@ -1,5 +1,5 @@
 ---
-title: Metodo Absolute (SQLServerResultSet) | Microsoft Docs
+title: Metodo absolute (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 638e8148-8ca0-4e1f-9ec2-04a11bc9809b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b0572ed756bd8b347c01e05168873ac543a0ea7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66bdbfa417077e70be7969b28ae851a0244e54ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783557"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956063"
 ---
 # <a name="absolute-method-sqlserverresultset"></a>Metodo absolute (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public boolean absolute(int row)
  Valore **int** che indica il numero di riga in cui spostarsi. Può essere positivo, negativo o 0.  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se il cursore viene spostato nella posizione specificata. **false** se è precedente alla prima riga o dopo l'ultima riga.  
+ **true** se il cursore viene spostato nella posizione specificata. **false** se precede la prima riga o dopo l'ultima riga.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a00275cb-0299-4a21-a518-2640598a5bbf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ee489b856dc75bc2fbd09b843de77f42cefbef0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70f0faaa9babb4ddaa1512fd18cbbd1f5f34d337
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799736"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953604"
 ---
 # <a name="getblob-method-int-sqlserverresultset"></a>Metodo getBlob (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.Blob getBlob(int i)
  Valore **int** che indica l'indice di colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un oggetto Blob.  
+ Oggetto BLOB.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

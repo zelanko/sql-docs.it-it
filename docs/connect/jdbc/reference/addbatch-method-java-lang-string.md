@@ -1,5 +1,5 @@
 ---
-title: Metodo (lang) addBatch | Microsoft Docs
+title: Metodo addBatch (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 093f6c3b-49a6-4043-9993-bd0482de04dd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4cbd38eddb3fb5dcdb3f614b53c7d8d6399fa79f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 42045bee1dca5d2a9c5fc748f5d7a1c5ebbca9de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956019"
 ---
 # <a name="addbatch-method-javalangstring"></a>Metodo addBatch (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public void addBatch(java.lang.String sql)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo addBatch viene specificato dal metodo addBatch nell'interfaccia Statement.  
+ Questo metodo addBatch viene specificato dal metodo addBatch nell'interfaccia java. SQL. Statement.  
   
  La chiamata di questo metodo genera un'eccezione perché l'istruzione SQL per l'oggetto SQLServerPreparedStatement viene specificata quando viene creato l'oggetto.  
   

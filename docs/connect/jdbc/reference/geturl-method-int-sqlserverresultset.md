@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5d0b665c-e1a7-43f7-88c3-db432773de7d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ad8136c9f973781f8142912c89b41b0ff676a54e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: dc5d6924976dfcddfcc502ac0550cb1e1ff5e1f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790591"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978367"
 ---
 # <a name="geturl-method-int-sqlserverresultset"></a>Metodo getURL (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.net.URL getURL(int columnIndex)
  Valore **int** che indica l'indice di colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un oggetto URL.  
+ Oggetto URL.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -50,7 +49,7 @@ public java.net.URL getURL(int columnIndex)
  Questo metodo getURL viene specificato dal metodo getURL nell'interfaccia java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo getURL &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/geturl-method-sqlserverresultset.md)   
+ [Metodo &#40;getURL SQLServerResultSet&#41;](../../../connect/jdbc/reference/geturl-method-sqlserverresultset.md)   
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

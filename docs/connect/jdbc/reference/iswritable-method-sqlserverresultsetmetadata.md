@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 50846aa8-e4e5-4fc3-a638-0e5fa8b597be
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 73b9541904e833d47be1e458aa9ee4cddeb2aa6f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8d5a22e4fa9a3bd27da1862b0157324e3fbe9098
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977014"
 ---
 # <a name="iswritable-method-sqlserverresultsetmetadata"></a>Metodo isWritable (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public boolean isWritable(int column)
  Valore **int** che indica l'indice di colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se operazioni di scrittura avranno esito positivo sulla colonna. In caso contrario, **false**.  
+ **true** se le Scritture riusciranno sulla colonna. In caso contrario, **false**.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo isWritable viene specificato dal metodo isWritable nell'interfaccia ResultSetMetaData.  
+ Questo metodo scrivibile viene specificato dal metodo scrivibile nell'interfaccia java. SQL. ResultSetMetaData.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

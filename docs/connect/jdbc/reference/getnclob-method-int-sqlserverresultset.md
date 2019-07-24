@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 103082e3-de98-4dff-8dc7-eaa5c64b1597
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 96ab1084104b39cda6e52dc6fb80b67d3810b832
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: dfe7b70d4a176832873bb9f5dcd7db3c8d8c553b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784568"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981532"
 ---
 # <a name="getnclob-method-int-sqlserverresultset"></a>Metodo getNClob (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public java.sql.NClob getNClob(int columnIndex)
  Valore **int** che indica l'indice di colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un oggetto NClob.  
+ Oggetto NClob.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -44,7 +43,7 @@ public java.sql.NClob getNClob(int columnIndex)
 ## <a name="remarks"></a>Remarks  
  Questo metodo getNClob viene specificato dal metodo getNClob nell'interfaccia java.sql.ResultSet.  
   
- Questo metodo è supportato solo sul **nvarchar (max)** , **ntext**, e **xml** colonne. L'utilizzo di questo metodo su qualsiasi altro tipo di dati genererà un'eccezione.  
+ Questo metodo è supportato solo in colonne **nvarchar (max)** , **ntext**e **XML** . L'utilizzo di questo metodo su qualsiasi altro tipo di dati genererà un'eccezione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo getNClob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnclob-method-sqlserverresultset.md)   

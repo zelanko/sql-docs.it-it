@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 018cd71b-4b58-49a7-990e-d28dbb12da70
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fa262429dbe7558e36bb3f9f73b37ec33aa740df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23eaa798e05ae9653695cc33753e14cb57b72c61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66787106"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997105"
 ---
 # <a name="updateblob-method-javalangstring-javaioinputstream"></a>Metodo updateBlob (java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,13 +37,13 @@ public void updateBlob(java.lang.String columnLabel,
   
  *inputStream*  
   
- Un oggetto InputStream.  
+ Oggetto InputStream.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo updateBlob viene specificato dal metodo updateBlob nell'interfaccia ResultSet.  
+ Questo metodo updateBlob viene specificato dal metodo updateBlob nell'interfaccia java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo updateBlob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   

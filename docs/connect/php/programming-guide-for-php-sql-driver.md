@@ -10,15 +10,14 @@ ms.topic: conceptual
 ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 10269896b8c145293d5733a3fb34b2ac645a5e43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9470b5e4a9e7283930a38c393a4117333fb0fb08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66781000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992934"
 ---
-# <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>Guida di programmazione per i driver Microsoft per PHP per SQL Server
+# <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>Guida alla programmazione per i driver Microsoft per PHP per SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Questa sezione contiene argomenti che consentono di sviluppare applicazioni con [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
@@ -35,7 +34,7 @@ Questa sezione contiene argomenti che consentono di sviluppare applicazioni con 
 |[Conversione dei tipi di dati](../../connect/php/converting-data-types.md)|Illustra come specificare tipi di dati e fornisce dettagli sui tipi di dati predefiniti.|  
 |[Gestione di errori e avvisi](../../connect/php/handling-errors-and-warnings.md)|Illustra come gestire errori e avvisi.|  
 |[Attività di registrazione](../../connect/php/logging-activity.md)|Fornisce informazioni sulla registrazione di errori e avvisi.|  
-|[Uso di Always Encrypted con i driver Microsoft per PHP per SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)|Vengono fornite informazioni sull'uso di funzionalità Always Encrypted con il driver PHP.|  
+|[Uso di Always Encrypted con i driver Microsoft per PHP per SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)|Vengono fornite informazioni sull'utilizzo di Always Encrypted funzionalità con i driver PHP.|  
 |[Considerazioni sulla sicurezza per i driver Microsoft per PHP per SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)|Descrive considerazioni sulla sicurezza per lo sviluppo, la distribuzione e l'esecuzione di applicazioni.|  
   
 ## <a name="see-also"></a>Vedere anche  

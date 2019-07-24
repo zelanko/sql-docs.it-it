@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2f44a689-65c8-4c94-9574-e9c08ea7918e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 11cbfbbe9e703867c2030c902ace6eedab38d77d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5c905c11d76f6f9928cb621ce5a35caa4dd1419
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66786668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954744"
 ---
 # <a name="executeupdate-method-javalangstring-javalangstring"></a>Metodo executeUpdate (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +51,7 @@ public final int executeUpdate(java.lang.String sql,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo executeUpdate viene specificato dal metodo nell'interfaccia Statement executeUpdate.  
+ Questo metodo executeUpdate viene specificato dal metodo executeUpdate nell'interfaccia java.sql.Statement.  
   
  Se l'esecuzione di una stored procedure restituisce un conteggio di aggiornamenti maggiore di uno o genera più set di risultati, usare il metodo [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) per eseguire la stored procedure.  
   

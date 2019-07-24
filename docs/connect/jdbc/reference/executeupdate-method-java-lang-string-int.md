@@ -1,5 +1,5 @@
 ---
-title: Metodo executeUpdate (lang, int) | Microsoft Docs
+title: Metodo executeUpdate (java.lang.String, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4c52a20e-527e-4d14-9a5a-4cd195aac8ed
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 86906a5c0c31f29b77fc899a3553e01adc822e46
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 783058a764963637f2c91808424bac7bdd403c02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954751"
 ---
 # <a name="executeupdate-method-javalangstring-int"></a>Metodo executeUpdate (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,7 +55,7 @@ public final int executeUpdate(java.lang.String sql,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo executeUpdate viene specificato dal metodo nell'interfaccia Statement executeUpdate.  
+ Questo metodo executeUpdate viene specificato dal metodo executeUpdate nell'interfaccia java.sql.Statement.  
   
  Se l'esecuzione di una stored procedure restituisce un conteggio di aggiornamenti maggiore di uno o genera più set di risultati, usare il metodo [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) per eseguire la stored procedure.  
   

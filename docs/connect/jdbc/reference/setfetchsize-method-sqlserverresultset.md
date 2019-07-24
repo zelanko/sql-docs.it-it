@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 233bf4f8-4758-42d0-a80b-33e34fa78027
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c5d0bd8714714a479f9370ed2c60b626006e1964
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b253ad989593fa88b2281d933387dfe38fee1732
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803365"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974249"
 ---
 # <a name="setfetchsize-method-sqlserverresultset"></a>Metodo setFetchSize (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public void setFetchSize(int rows)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo setFetchSize viene specificato dal metodo setFetchSize dell'interfaccia ResultSet.  
+ Questo metodo setFetchSize viene specificato dal metodo setFetchSize nell'interfaccia java. SQL. ResultSet.  
   
  Se la dimensione di recupero specificata è pari a zero, il driver JDBC ignora il valore e valuta la dimensione necessaria. Il valore predefinito viene impostato dall'oggetto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) che ha creato il set di risultati. È possibile modificare la dimensione di recupero in qualunque momento.  
   

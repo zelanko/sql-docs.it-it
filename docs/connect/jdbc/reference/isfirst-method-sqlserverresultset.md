@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2ff94b95-32ad-4378-8bb1-970030527bb2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c27320c78db2bd04ec9747079beb4b306446bab4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b847361621ad8d44840aa4bab02e4877128e8f48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796542"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977618"
 ---
 # <a name="isfirst-method-sqlserverresultset"></a>Metodo isFirst (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public boolean isFirst()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se il cursore si trova nella prima riga. **false** se il cursore si trova in qualsiasi altra posizione oppure se il set di risultati non contiene righe.  
+ **true** se il cursore si trova nella prima riga. **false** se il cursore si trova in un'altra posizione o se il set di risultati non contiene righe.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

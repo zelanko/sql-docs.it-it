@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7bc96930-b0c9-42f6-8df9-1d8d824408b3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b96c3112e2e207edc7cf9bbe3ae80eb5393eb9b2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 874d4032fc3306b180d0fafefc7a4ac085b5af29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983216"
 ---
 # <a name="getfetchsize-method-sqlserverresultset"></a>Metodo getFetchSize (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getFetchSize()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo getFetchSize viene specificato dal metodo getFetchSize dell'interfaccia ResultSet.  
+ Questo metodo getFetchSize viene specificato dal metodo getFetchSize nell'interfaccia java. SQL. ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 599cf463-e19f-4baa-bacb-513cad7c6cd8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8755695a805684338378efa4427c24c333c3da08
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d66ceda5c9afee28240de5af9fe833acd4e25bbb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796936"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954772"
 ---
 # <a name="executequery-method-sqlserverstatement"></a>Metodo executeQuery (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.sql.ResultSet executeQuery(java.lang.String sql)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo executeQuery viene specificato dal metodo executeQuery nell'interfaccia Statement.  
+ Questo metodo executeQuery viene specificato dal metodo executeQuery nell'interfaccia java.sql.Statement.  
   
  Viene generata l'eccezione [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) se l'istruzione SQL specificata produce un risultato diverso da un solo oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   

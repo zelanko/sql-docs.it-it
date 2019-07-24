@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ac363670-78ae-49f1-aeda-4fba3329a258
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6d40bcf6f43f0323131ece954889459018340379
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2b902ddf8e9e05900e55492116ee9e22a3dbbccc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977226"
 ---
 # <a name="issparsecolumnset-method-sqlserverresultsetmetadata"></a>Metodo isSparseColumnSet (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +34,7 @@ public boolean isSparseColumnSet(int column)
  Indice della colonna (in base uno).  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se una colonna in un set di risultati è un set di colonne di tipo sparse, in caso contrario **false**.  
+ **true** se una colonna in un set di risultati è un set di colonne di tipo sparse; in caso contrario, **false**.  
   
 ## <a name="remarks"></a>Remarks  
  Questo metodo non consente di recuperare informazioni dal database.  

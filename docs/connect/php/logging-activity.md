@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8612874b351af1cfd9370b8ef29dae4a0c4235e2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 29c7c1e3b536e237e2c61a8e3303313ec53fe679
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993332"
 ---
 # <a name="logging-activity"></a>Attività di registrazione
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +42,7 @@ pdo_sqlsrv.log_severity = <number>
 |-1|Specifica la registrazione di errori, avvisi e notifiche.|  
 |1|Specifica che gli errori vengono registrati.|  
 |2|Specifica che gli avvisi vengono registrati.|  
-|4|Specifica che le comunicazioni vengono registrate.|  
+|4|Specifica che le notifiche vengono registrate.|  
   
 Le informazioni di registrazione vengono aggiunte al file phperrors.log.  
   
@@ -98,7 +97,7 @@ Nella tabella seguente sono descritte le costanti che possono essere usate come 
 |SQLSRV_LOG_SEVERITY_ALL (-1)|Specifica la registrazione di errori, avvisi e notifiche.|  
 |SQLSRV_LOG_SEVERITY_ERROR (1)|Specifica che gli errori vengono registrati. Impostazione predefinita.|  
 |SQLSRV_LOG_SEVERITY_WARNING (2)|Specifica che gli avvisi vengono registrati.|  
-|SQLSRV_LOG_SEVERITY_NOTICE (4)|Specifica che le comunicazioni vengono registrate.|  
+|SQLSRV_LOG_SEVERITY_NOTICE (4)|Specifica che le notifiche vengono registrate.|  
   
 È possibile impostare più valori per l'impostazione **LogSeverity** usando l'operatore logico OR (|). Ad esempio, la riga di codice seguente specifica la registrazione di errori e avvisi:  
   
@@ -116,7 +115,7 @@ Sommando i valori interi è possibile specificare più opzioni alla volta. Ad es
 `sqlsrv.LogSeverity = 3`  
   
 ## <a name="see-also"></a>Vedere anche  
-[Guida di programmazione per i driver Microsoft per PHP per SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guida alla programmazione per i driver Microsoft per PHP per SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 

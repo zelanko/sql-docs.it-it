@@ -1,5 +1,5 @@
 ---
-title: Metodo updateBlob (int, Java) | Microsoft Docs
+title: Metodo updateBlob (int, Java. SQL. BLOB) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1e86f588-1365-4011-9412-f0acf7009880
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01b7e30b72fdd41c5397aebee92c7cb9aeecec1f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3ce5c1c2e8ce635e5b53f5b5e609666e39e36bc0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66787137"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997133"
 ---
 # <a name="updateblob-method-int-javasqlblob"></a>Metodo updateBlob (int, java.sql.Blob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,13 +42,13 @@ public void updateBlob(int index,
   
  *x*  
   
- Un oggetto Blob.  
+ Oggetto BLOB.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo updateBlob viene specificato dal metodo updateBlob nell'interfaccia ResultSet.  
+ Questo metodo updateBlob viene specificato dal metodo updateBlob nell'interfaccia java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo updateBlob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   

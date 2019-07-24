@@ -1,5 +1,5 @@
 ---
-title: Metodo Previous (SQLServerResultSet) | Microsoft Docs
+title: Metodo previous (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 66eb4e10-c375-4b31-ac46-3ba1d9dbf6a0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e2eb9db321fc8c2b8b20ca41b685cb27f8595072
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e1f13c3fedc3cfaa0645eec5a769ed482b339563
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798715"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976006"
 ---
 # <a name="previous-method-sqlserverresultset"></a>Metodo previous (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean previous()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se la nuova riga corrente è valida. **false** se sono presenti altre righe da elaborare.  
+ **true** se la nuova riga corrente è valida. **false** se non sono presenti altre righe da elaborare.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo precedente viene specificato dal metodo nell'interfaccia ResultSet precedente.  
+ Questo metodo precedente viene specificato dal metodo precedente nell'interfaccia java. SQL. ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

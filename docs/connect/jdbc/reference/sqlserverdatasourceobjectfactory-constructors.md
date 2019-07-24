@@ -1,5 +1,5 @@
 ---
-title: Costruttori di SQLServerDataSourceObjectFactory | Microsoft Docs
+title: Costruttori SQLServerDataSourceObjectFactory | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +10,16 @@ ms.topic: conceptual
 ms.assetid: b00f8108-9fbc-4e39-a31a-2eef76060eaf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 391b8b5906af2fc9f0700e8d2b910eb3e3092c24
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c9894b3db172044a597e1229676f3d22e2a07998
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971365"
 ---
 # <a name="sqlserverdatasourceobjectfactory-constructors"></a>Costruttori di SQLServerDataSourceObjectFactory
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Per informazioni sui membri di [SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md), vedere [membri di SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-members.md).  
+  Per informazioni sui membri di [SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md), vedere [membri SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-members.md).  
   
   

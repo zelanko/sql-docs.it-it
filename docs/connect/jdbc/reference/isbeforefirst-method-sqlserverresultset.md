@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e0e2bd28-6949-47dc-b9dd-145ffb337069
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 699eb3385baba2d9db8f37237f3cc0af90b4912d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ffe17993b3a03563ec20e8f509e6eae2f6ed47cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801209"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977797"
 ---
 # <a name="isbeforefirst-method-sqlserverresultset"></a>Metodo isBeforeFirst (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean isBeforeFirst()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- **true** se il cursore si trova prima della prima riga. **false** se il cursore si trova in qualsiasi altra posizione oppure se il set di risultati non contiene righe.  
+ **true** se il cursore precede la prima riga. **false** se il cursore si trova in un'altra posizione o se il set di risultati non contiene righe.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo isBeforeFirst viene specificato dal metodo isBeforeFirst nell'interfaccia ResultSet.  
+ Questo metodo isBeforeFirst viene specificato dal Metodo isBeforeFirst nell'interfaccia java. SQL. ResultSet.  
   
  Se questo metodo viene utilizzato con cursori dinamici, inclusi i cursori di sola lettura forward-only, e la proprietà di connessione selectMethod viene impostata su "cursor", si verificherà un'eccezione.  
   

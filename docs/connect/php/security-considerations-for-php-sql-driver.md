@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 50c0d6bf2b9c413e6085451383f2ae4a6791442a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1fecf1add70a7b3bd96484cbd3634db2cfda01cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797056"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992894"
 ---
 # <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>Considerazioni sulla sicurezza per i driver Microsoft per PHP per SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-In questo argomento vengono descritte considerazioni sulla sicurezza specifiche per lo sviluppo, la distribuzione e l'esecuzione di applicazioni che usano [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Per altre informazioni sulla sicurezza di SQL Server, vedere [Panoramica della sicurezza di SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security).  
+In questo argomento vengono descritte considerazioni sulla sicurezza specifiche per lo sviluppo, la distribuzione e l'esecuzione di applicazioni che usano [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Per informazioni più dettagliate su SQL Server sicurezza, vedere [Panoramica di SQL Server sicurezza](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security).  
   
 ## <a name="connect-using-windows-authentication"></a>Connettersi con l'autenticazione di Windows  
 L'autenticazione di Windows deve essere usata per connettersi a SQL Server ogni volta che è possibile per i motivi seguenti:  
@@ -54,5 +53,5 @@ Sviluppare applicazioni con l'impostazione **WarningsAsErrors** su **true** in m
 Per le applicazioni distribuite, assicurarsi che i log vengano scritti in un percorso protetto o che la registrazione sia disabilitata. Ciò consente di evitare la possibilità che utenti finali accedano alle informazioni scritte nei file di log. Per altre informazioni, vedere [Logging Activity](../../connect/php/logging-activity.md).  
   
 ## <a name="see-also"></a>Vedere anche  
-[Guida di programmazione per i driver Microsoft per PHP per SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guida alla programmazione per i driver Microsoft per PHP per SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

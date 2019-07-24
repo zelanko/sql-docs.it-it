@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e6b6cfe2-b7c4-4d41-8e09-c68b5086a503
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7218830d14db7b5c6532c6091aa974c55ed0e69c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12da04a9aa4c3f818960c8683d66e0ca1f1fc31c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66785661"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984052"
 ---
 # <a name="getdate-method-int-sqlserverresultset"></a>Metodo getDate (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.Date getDate(int columnIndex)
  Valore **int** che indica l'indice di colonna.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un oggetto Data.  
+ Oggetto Data.  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

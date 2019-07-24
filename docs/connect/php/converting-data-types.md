@@ -1,5 +1,5 @@
 ---
-title: Conversione dei tipi di dati | Microsoft Docs
+title: Conversione di tipi di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e29fd659e2119682325b3df6725aefc37953b452
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ca79a13146df59b0c7159de112feee3ec478249d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015103"
 ---
 # <a name="converting-data-types"></a>Conversione dei tipi di dati
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,10 +31,10 @@ I [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] permettono di specif
 |[Procedura: Specificare i tipi di dati di SQL Server](../../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)|Viene illustrato come specificare i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'invio di dati al server.|  
 |[Procedura: Specificare i tipi di dati PHP](../../connect/php/how-to-specify-php-data-types.md)|Viene illustrato come specificare i tipi di dati PHP per il recupero di dati dal server.|  
 |[Procedura: Inviare e recuperare dati UTF-8 con il supporto incorporato di UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)|Viene illustrato come usare il supporto incorporato per UTF-8 dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].<br /><br />Nella versione 1.1 dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] è stato aggiunto il supporto per UTF-8.|  
-|[Procedura: Inviare e recuperare dati ASCII in Linux e macOS](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|Viene illustrato come utilizzare [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]del supporto per i dati ASCII in Linux o macOS.<br /><br />Supporto per i caratteri ASCII in ambienti non Windows è stato aggiunto nella versione 5.2 del [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|
+|[Procedura: Inviare e recuperare dati ASCII in Linux e macOS](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|Viene illustrato come usare [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]il supporto di per i dati ASCII in Linux o MacOS.<br /><br />Il supporto per i [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]caratteri ASCII negli ambienti non Windows è stato aggiunto nella versione 5,2 del.|
   
 ## <a name="see-also"></a>Vedere anche  
-[Guida di programmazione per i driver Microsoft per PHP per SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guida alla programmazione per i driver Microsoft per PHP per SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Riferimento all'API del driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 023a238b-37f2-4966-bc91-ef2b22aebc46
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bf198e05e6f483160f50ee2ee4d94e4d139d9614
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a9c9fe4b14d3dc9eaf1ec735a9be2b6e1018b06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796718"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981324"
 ---
 # <a name="getnstring-method-sqlserverresultset"></a>Metodo getNString (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "66796718"
 |nome|Descrizione|  
 |----------|-----------------|  
 |[Metodo getNString &#40;int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnstring-method-int-sqlserverresultset.md)|Recupera il valore della colonna designata nella riga corrente dell'oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) come oggetto String nel linguaggio di programmazione Java.|  
-|[Metodo getNString &#40;lang&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnstring-method-java-lang-string-sqlserverresultset.md)|Recupera il valore della colonna designata nella riga corrente dell'oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) come oggetto String nel linguaggio di programmazione Java.|  
+|[metodo &#40;getNString Java. lang. String&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnstring-method-java-lang-string-sqlserverresultset.md)|Recupera il valore della colonna designata nella riga corrente dell'oggetto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) come oggetto String nel linguaggio di programmazione Java.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

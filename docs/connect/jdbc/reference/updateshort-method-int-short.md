@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 155b9189-cb97-4264-b42c-bbda1c7d624f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0e00abb9a2590f0e3fe34608e89280df7a50fad7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9e146aacff54a934687b57d6b971e02c14d38e0a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799374"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998329"
 ---
 # <a name="updateshort-method-int-short"></a>Metodo updateShort (int, short)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,13 +42,13 @@ public void updateShort(int index,
   
  *x*  
   
- Oggetto **breve** valore.  
+ Valore **breve** .  
   
 ## <a name="exceptions"></a>Eccezioni  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Questo metodo updateShort viene specificato dal metodo updateShort nell'interfaccia ResultSet.  
+ Questo metodo updateShort viene specificato dal metodo updateShort nell'interfaccia java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo updateShort &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateshort-method-sqlserverresultset.md)   
