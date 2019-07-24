@@ -13,18 +13,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 33b5d593cfc5ac4b46fdfe7dcf7a845f754d5f3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1cc42a09e455fa42d3f89b05903a22afc945424
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800921"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971129"
 ---
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-streamerror-boolean"></a>Costruttore SQLServerException (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Inizializza una nuova istanza della [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) classe quando viene specificato un **oggetto**, una **stringa** oggetto, un **stringa** (oggetto), un  **StreamError** oggetti e una **booleano**.
+  Inizializza una nuova istanza della classe [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) quando vengono specificati un **oggetto, un**oggetto **stringa** , un oggetto **stringa** , un oggetto **StreamError** e un **valore booleano**.
 
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,7 +41,7 @@ public SQLServerException(java.lang.Object obj,
 #### <a name="parameters"></a>Parametri  
  *obj*  
   
- Il buffer dei / o che ha generato l'eccezione.
+ Buffer IO che ha generato l'eccezione.
 
  *errText*  
   
@@ -50,15 +49,15 @@ public SQLServerException(java.lang.Object obj,
   
  *sqlState*  
   
- Un oggetto di enumerazione che contiene lo stato SQL.
+ Oggetto enum che contiene lo stato SQL.
  
  *streamError*  
   
- Un oggetto StreamError contenente i dettagli dell'errore.
+ Oggetto StreamError che contiene i dettagli sull'errore.
  
  *bStack*  
   
- Valore booleano che indica se l'analisi dello stack deve essere generato.
+ Valore booleano che indica se deve essere generata la traccia dello stack.
   
 ## <a name="see-also"></a>Vedere anche  
  [Costruttori di SQLServerException](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   

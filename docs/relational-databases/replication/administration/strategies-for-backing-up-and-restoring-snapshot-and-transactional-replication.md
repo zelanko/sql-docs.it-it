@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 148fdfd642c18a2cc4e583edab73778cffa5c71e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 695839b7687fb649ffd529ecb3fde7b78d65f3ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125271"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948687"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Strategie per il backup e il ripristino della replica snapshot e della replica transazionale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -215,7 +214,7 @@ ms.locfileid: "54125271"
   
 9. In seguito al ripristino, l'intervallo di valori Identity assegnato a ogni tabella nel database **A** verrà usato anche nel database **B**. Assicurarsi che il database **B** ripristinato abbia ricevuto tutte le modifiche del database **B** bloccato propagate nel database **A** e nel database **C** e quindi reinizializzare l'intervallo di valori Identity per ogni tabella.  
   
-    1.  Eseguire [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) nel database **B** e recuperare il parametro di output **@request_id**. Andare al passaggio b.  
+    1.  Eseguire [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) nel database **B** e recuperare il parametro di output **@request_id** . Andare al passaggio b.  
   
     2.  Per impostazione predefinita, l'agente di distribuzione è impostato per l'esecuzione continua. I token dovrebbero pertanto essere inviati automaticamente a tutti i nodi. Se l'agente di distribuzione non viene eseguito in modalità continua, eseguire l'agente. Per altre informazioni, vedere [Concetti di base relativi ai file eseguibili dell’agente di replica](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md) o [Avviare e arrestare un agente di replica &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Andare al passaggio c.  
   
@@ -231,7 +230,7 @@ ms.locfileid: "54125271"
   
     1.  Arrestare qualsiasi attività sulle tabelle pubblicate nella topologia peer-to-peer. Andare al passaggio b.  
   
-    2.  Eseguire [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) nel database **B** e recuperare il parametro di output **@request_id**. Andare al passaggio c.  
+    2.  Eseguire [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) nel database **B** e recuperare il parametro di output **@request_id** . Andare al passaggio c.  
   
     3.  Per impostazione predefinita, l'agente di distribuzione è impostato per l'esecuzione continua. I token dovrebbero pertanto essere inviati automaticamente a tutti i nodi. Se l'agente di distribuzione non viene eseguito in modalità continua, eseguire l'agente. Andare al passaggio d.  
   

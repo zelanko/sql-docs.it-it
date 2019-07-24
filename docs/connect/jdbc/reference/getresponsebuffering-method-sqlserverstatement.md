@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a9a9ffdd-7ce3-4e0a-907c-34d6a54e6865
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9c0d96ded45fe1b6cb68eda222039e01901ebc65
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cf5a9ee4d4aa001103840ba8768ba338baa42db8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801331"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980405"
 ---
 # <a name="getresponsebuffering-method-sqlserverstatement"></a>Metodo getResponseBuffering (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,16 +35,16 @@ public final java.lang.String getResponseBuffering()
 ```  
   
 ## <a name="return-value"></a>Valore restituito  
- Oggetto **stringa** che contiene una minuscola **completo** oppure **adattivo**.  
+ **Stringa** che contiene una **versione completa** o **adattiva** in minuscolo.  
   
 ## <a name="remarks"></a>Remarks  
  Il valore **adaptive** specifica la memorizzazione nel buffer della quantità di dati minima possibile, quando necessario.  
   
  Il valore **full** specifica la lettura dell'intero risultato dal server in fase di esecuzione.  
   
- **Adaptive** è il valore predefinito nel Driver JDBC versione 2.0 e 3.0. **completa** era l'impostazione predefinita prima della versione 2.0 del Driver JDBC.  
+ **Adaptive** è il valore predefinito nel driver JDBC versione 2,0 e 3,0. **full** è l'impostazione predefinita precedente alla versione 2,0 del driver JDBC.  
   
- Per altre informazioni sull'uso la modalità di memorizzazione delle risposte, vedere [Using Adaptive Buffering](../../../connect/jdbc/using-adaptive-buffering.md).  
+ Per ulteriori informazioni sull'utilizzo della modalità di buffering delle risposte, vedere [utilizzo del buffer adattivo](../../../connect/jdbc/using-adaptive-buffering.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo setResponseBuffering &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)   
