@@ -1,24 +1,24 @@
 ---
-title: Distribuire in modalità offline
+title: Distribuzione offline
 titleSuffix: SQL Server big data clusters
-description: Informazioni su come eseguire una distribuzione non in linea di un cluster di big data di SQL Server.
+description: Informazioni su come eseguire una distribuzione offline di un cluster SQL Server Big Data.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 25145a7278f5b0feb85641d8798a34e4258f6b3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cd8b3128fc11037a5ade494813611d473c995f8f
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958519"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419373"
 ---
-# <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Eseguire una distribuzione non in linea di un cluster di big data di SQL Server
+# <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Eseguire una distribuzione offline di un cluster SQL Server Big Data
 
-Questo articolo descrive come eseguire una distribuzione non in linea di un cluster di big data di SQL Server 2019 (anteprima). I cluster di big data necessari affinché l'accesso a un repository di Docker da cui pull delle immagini del contenitore. Un'installazione offline è uno in cui le immagini necessarie vengono inserite in un repository di Docker privato. Tale repository privato viene quindi utilizzato come origine dell'immagine di una nuova distribuzione.
+Questo articolo descrive come eseguire una distribuzione offline di un cluster SQL Server 2019 Big Data (anteprima). I cluster di Big data devono avere accesso a un repository Docker da cui estrarre le immagini del contenitore. Un'installazione offline è una posizione in cui le immagini obbligatorie vengono inserite in un repository Docker privato. Il repository privato viene quindi utilizzato come origine dell'immagine per una nuova distribuzione.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -28,27 +28,18 @@ Questo articolo descrive come eseguire una distribuzione non in linea di un clus
 
 ## <a name="load-images-into-a-private-repository"></a>Caricare immagini in un repository privato
 
-I passaggi seguenti descrivono come il cluster di big data il pull delle immagini del contenitore dal repository Microsoft e quindi eseguirne il push nel repository privato.
+I passaggi seguenti descrivono come eseguire il pull delle immagini del contenitore del cluster Big Data dal repository Microsoft e quindi eseguirne il push nel repository privato.
 
 > [!TIP]
-> I passaggi seguenti illustrano il processo. Tuttavia, per semplificare l'attività, è possibile usare la [script automatico](#automated) invece di eseguire manualmente questi comandi.
+> I passaggi seguenti illustrano il processo. Tuttavia, per semplificare l'attività, è possibile usare lo [script automatizzato](#automated) anziché eseguire manualmente questi comandi.
 
-1. In primo luogo, accedere al Registro di sistema Microsoft Docker con il **accesso a docker** comando. Usare il nome utente e password che Microsoft fornito come parte del programma di adozione anticipata.
-
-   ```PowerShell
-   docker login private-repo.microsoft.com -u  <SOURCE_DOCKER_USERNAME> -p <SOURCE_DOCKER_PASSWORD>
-   ```
-
-   > [!TIP]
-   > Questi comandi usano PowerShell ad esempio, ma è possibile eseguirli da cmd, bash o da qualunque shell dei comandi eseguibili docker. In Linux, aggiungere `sudo` per ogni comando.
-
-1. Eseguire il pull di cluster di big data le immagini del contenitore, ripetere il comando seguente. Sostituire `<SOURCE_IMAGE_NAME>` con ogni [nome immagine](#images). Sostituire `<SOURCE_DOCKER_TAG>` con il tag per i big data cluster versione, ad esempio **ctp3.1**.  
+1. Estrarre le immagini del contenitore del cluster Big Data ripetendo il comando seguente. Sostituire `<SOURCE_IMAGE_NAME>` con ogni [nome di immagine](#images). Sostituire `<SOURCE_DOCKER_TAG>` con il tag per la versione del cluster Big data, ad esempio **2019-CTP 3.2-Ubuntu**.  
 
    ```PowerShell
-   docker pull private-repo.microsoft.com/mssql-private-preview/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
+   docker pull mcr.microsoft.com/mssql/bdc/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
    ```
 
-1. Accedere alla destinazione privato registro Docker.
+1. Accedere al registro Docker privato di destinazione.
 
    ```PowerShell
    docker login <TARGET_DOCKER_REGISTRY> -u <TARGET_DOCKER_USERNAME> -p <TARGET_DOCKER_PASSWORD>
@@ -57,27 +48,24 @@ I passaggi seguenti descrivono come il cluster di big data il pull delle immagin
 1. Contrassegnare le immagini locali con il comando seguente per ogni immagine:
 
    ```PowerShell
-   docker tag private-repo.microsoft.com/mssql-private-preview/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG> <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
+   docker tag mcr.microsoft.com/mssql/bdc/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG> <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
    ```
 
-1. Effettuare il push di immagini locale al repository Docker privato:
+1. Eseguire il push delle immagini locali nel repository Docker privato:
 
    ```PowerShell
    docker push <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
    ```
 
-### <a id="images"></a> Immagini dei contenitori del cluster dei big Data
+### <a id="images"></a>Immagini del contenitore cluster di Big Data
 
-Le seguenti immagini del contenitore del cluster dei big data sono necessarie per un'installazione offline:
+Per un'installazione offline sono necessarie le seguenti Big Data immagini del contenitore cluster:
 
  - **mssql-appdeploy-init**
  - **mssql-monitor-fluentbit**
  - **mssql-monitor-collectd**
  - **mssql-server-data**
  - **mssql-hadoop**
- - **mssql-java**
- - **mssql-mlservices-pythonserver**
- - **mssql-mlservices-rserver**
  - **mssql-monitor-elasticsearch**
  - **mssql-monitor-influxdb**
  - **mssql-security-knox**
@@ -92,22 +80,22 @@ Le seguenti immagini del contenitore del cluster dei big data sono necessarie pe
  - **mssql-ssis-app-runtime**
  - **mssql-monitor-telegraf**
  - **mssql-mleap-serving-runtime**
-  
+ - **MSSQL-supporto per la sicurezza**
 
-## <a id="automated"></a> Script automatizzato
+## <a id="automated"></a>Script automatizzato
 
-È possibile usare uno script automatizzato python che verrà automaticamente pull di tutte le immagini del contenitore necessarie ed eseguirne il push in un repository privato.
+È possibile usare uno script Python automatizzato che effettuerà automaticamente il pull di tutte le immagini del contenitore necessarie e ne effettuerà il push in un repository privato.
 
 > [!NOTE]
 > Python è un prerequisito per l'uso dello script. Per altre informazioni su come installare Python, vedere la [documentazione di Python](https://wiki.python.org/moin/BeginnersGuide/Download).
 
-1. Tramite bash o PowerShell, scaricare lo script con **curl**:
+1. Da bash o PowerShell scaricare lo script con **curl**:
 
    ```PowerShell
    curl -o push-bdc-images-to-custom-private-repo.py "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/offline/push-bdc-images-to-custom-private-repo.py"
    ```
 
-1. Quindi eseguire lo script con uno dei seguenti comandi:
+1. Eseguire quindi lo script con uno dei comandi seguenti:
 
    **Windows:**
 
@@ -115,21 +103,21 @@ Le seguenti immagini del contenitore del cluster dei big data sono necessarie pe
    python deploy-sql-big-data-aks.py
    ```
 
-   **Linux:**
+   **Linux**
 
    ```bash
    sudo python deploy-sql-big-data-aks.py
    ```
 
-1. Seguire le istruzioni per l'immissione nel repository di Microsoft e le informazioni del repository privato. Al termine dell'esecuzione dello script, tutte le necessarie immagini devono trovarsi nel tuo repository privato.
+1. Seguire le istruzioni per immettere il repository Microsoft e le informazioni sul repository privato. Al termine dello script, tutte le immagini obbligatorie dovrebbero trovarsi nel repository privato.
 
-## <a name="install-tools-offline"></a>Installare gli strumenti non in linea
+## <a name="install-tools-offline"></a>Installare gli strumenti offline
 
-Le distribuzioni cluster di big data richiedono vari strumenti, tra cui **Python**, **mssqlctl**, e **kubectl**. Usare la procedura seguente per installare questi strumenti in un server offline.
+Le distribuzioni di cluster di Big data richiedono diversi strumenti, tra cui **Python**, **azdata**e **kubectl**. Usare la procedura seguente per installare questi strumenti in un server offline.
 
-### <a id="python"></a> Installare python in modalità offline
+### <a id="python"></a>Installare Python offline
 
-1. In un computer con accesso a internet, scaricare uno dei seguenti file compressi contenente Python:
+1. In un computer con accesso a Internet, scaricare uno dei file compressi seguenti contenenti Python:
 
    | Sistema operativo | Scarica |
    |---|---|
@@ -137,56 +125,50 @@ Le distribuzioni cluster di big data richiedono vari strumenti, tra cui **Python
    | Linux   | [https://go.microsoft.com/fwlink/?linkid=2065975](https://go.microsoft.com/fwlink/?linkid=2065975) |
    | OSX     | [https://go.microsoft.com/fwlink/?linkid=2065976](https://go.microsoft.com/fwlink/?linkid=2065976) |
 
-1. Copiare il file compresso nel computer di destinazione ed estrarre i file in una cartella di propria scelta.
+1. Copiare il file compresso nel computer di destinazione ed estrarlo in una cartella di propria scelta.
 
-1. Per Windows in esecuzione, solo `installLocalPythonPackages.bat` da tale cartella e passare il percorso completo nella stessa cartella come parametro.
+1. Solo per Windows, eseguire `installLocalPythonPackages.bat` da tale cartella e passare il percorso completo della stessa cartella come parametro.
 
    ```PowerShell
    installLocalPythonPackages.bat "C:\python-3.6.6-win-x64-0.0.1-offline\0.0.1"
    ```
 
-### <a id="mssqlctl"></a> Installare mssqlctl offline
+### <a id="azdata"></a>Installare azdata offline
 
-1. In un computer con accesso a internet e [Python](https://wiki.python.org/moin/BeginnersGuide/Download), eseguire il comando seguente per scaricare tutti disattivare il **mssqlctl** pacchetti nella cartella corrente.
-
-   ```PowerShell
-   pip download -r https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
-   ```
-
-1. Scaricare il **Requirements. txt** file.
+1. In un computer con accesso a Internet e [Python](https://wiki.python.org/moin/BeginnersGuide/Download)eseguire il comando seguente per scaricare tutti i pacchetti **azdata** nella cartella corrente.
 
    ```PowerShell
-   curl -o requirements.txt "https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt"
+   pip download -r https://aka.ms/azdata
    ```
 
-1. Copiare i pacchetti scaricati e le **Requirements. txt** file nel computer di destinazione.
+1. Copiare i pacchetti scaricati e il file **requirements. txt** nel computer di destinazione.
 
-1. Eseguire il comando seguente nel computer di destinazione, specificando la cartella che è stato copiato i file precedenti in.
+1. Eseguire il comando seguente nel computer di destinazione, specificando la cartella in cui sono stati copiati i file precedenti.
 
    ```PowerShell
    pip install --no-index --find-links <path-to-packages> -r <path-to-requirements.txt>
    ```
 
-### <a id="kubectl"></a> Installare kubectl offline
+### <a id="kubectl"></a>Installare kubectl offline
 
-Per installare **kubectl** a un computer offline, usare la procedura seguente.
+Per installare **kubectl** in un computer offline, seguire questa procedura.
 
-1. Uso **curl** per scaricare **kubectl** in una cartella di propria scelta. Per altre informazioni, vedere [installare kubectl binario usando curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl).
+1. Usare **curl** per scaricare **kubectl** in una cartella di propria scelta. Per altre informazioni, vedere [Install kubectl Binary using curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl).
 
 1. Copiare la cartella nel computer di destinazione.
 
-## <a name="deploy-from-private-repository"></a>Distribuire da repository privato
+## <a name="deploy-from-private-repository"></a>Distribuisci da repository privato
 
-Per distribuire dal repository privato, usare la procedura descritta nel [Guida alla distribuzione](deployment-guidance.md), ma usare un file di configurazione di distribuzione personalizzato che specifica le informazioni del repository Docker private. Quanto segue **mssqlctl** comandi illustrano come modificare le impostazioni di Docker in un file di configurazione di distribuzione personalizzato denominato **custom.json**:
+Per eseguire la distribuzione dal repository privato, attenersi alla procedura descritta nella [Guida alla distribuzione](deployment-guidance.md), ma usare un file di configurazione della distribuzione personalizzato che specifichi le informazioni del repository Docker privato. I comandi **azdata** seguenti illustrano come modificare le impostazioni di Docker in un file di configurazione della distribuzione personalizzato denominato **Control. JSON**:
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.repository=<your-docker-repository>"
-mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.registry=<your-docker-registry>"
-mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.imageTag=<your-docker-image-tag>"
+azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"
+azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.registry=<your-docker-registry>"
+azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.imageTag=<your-docker-image-tag>"
 ```
 
-La distribuzione richiede il nome utente di docker e la password, oppure è possibile specificarli nel **DOCKER_USERNAME** e **DOCKER_PASSWORD** le variabili di ambiente.
+La distribuzione richiede il nome utente e la password Docker oppure è possibile specificarli nelle variabili di ambiente **DOCKER_USERNAME** e **DOCKER_PASSWORD** .
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sulle distribuzioni di cluster di big data, vedere [come distribuire i dati di grandi dimensioni di SQL Server di cluster in Kubernetes](deployment-guidance.md).
+Per ulteriori informazioni sulle distribuzioni Big Data cluster, vedere [How to deploy SQL Server Big Data Clusters on Kubernetes](deployment-guidance.md).
