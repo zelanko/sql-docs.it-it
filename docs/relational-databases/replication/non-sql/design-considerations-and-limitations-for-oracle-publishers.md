@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7488391716a4ebc094bd6e783b591252bd24590f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 159a2f0b75371aa24661d3e33f3e2108dc93432b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125857"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901088"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Considerazioni e limitazioni relative alla progettazione dei server di pubblicazione Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -151,7 +150,7 @@ ms.locfileid: "54125857"
   
 -   L'account con il quale l'agente snapshot e l'agente di lettura log effettuano la connessione dal server di distribuzione al server di pubblicazione viene specificato mediante uno dei metodi seguenti:  
   
-    -   Il parametro **@security_mode** di [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md). Se si usa l'autenticazione Oracle, vengono specificati anche i valori dei parametri **@login** e **@password**.  
+    -   Il parametro **@security_mode** di [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md). Se si usa l'autenticazione Oracle, vengono specificati anche i valori dei parametri **@login** e **@password** .  
   
     -   La finestra di dialogo **Connetti al server** di SQL Server Management Studio, che viene utilizzata durante la configurazione del server di pubblicazione Oracle nel server di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   

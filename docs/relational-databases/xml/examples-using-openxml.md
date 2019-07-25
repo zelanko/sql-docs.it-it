@@ -26,15 +26,14 @@ helpviewer_keywords:
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c072fc97536259b16938cc36dcbc21dbbbb97b57
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4ea3ad1c2f7cb482888f0cd4d31a91f9975745b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511268"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943380"
 ---
-# <a name="examples-using-openxml"></a>Esempi: Utilizzo di OPENXML
+# <a name="examples-using-openxml"></a>Esempi: Uso di OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Negli esempi presentati in questo argomento viene illustrato come utilizzare l'istruzione OPENXML per visualizzare un documento XML come set di righe. Per informazioni sulla sintassi di OPENXML, vedere [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). Negli esempi vengono illustrati tutti gli aspetti dell'istruzione OPENXML, ma non ne vengono specificate le metaproprietà. Per altre informazioni su come specificare le metaproprietà in OPENXML, vedere [Specificare metaproprietà in OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
   
@@ -97,7 +96,7 @@ LILAS      Carlos Gonzlez
   
  Gli elementi <`Customer`> non hanno sottoelementi, quindi, se si esegue la stessa istruzione SELECT con il parametro *flags* impostato su **2** per indicare il mapping incentrato sugli elementi, i valori **CustomerID** e **ContactName** verranno restituiti come NULL per entrambi i clienti.  
   
- La variabile \@xmlDocument può essere anche di tipo **xml** o di tipo **(n)varchar(max)**.  
+ La variabile \@xmlDocument può essere anche di tipo **xml** o di tipo **(n)varchar(max)** .  
   
  Se nel documento XML <`CustomerID`> e <`ContactName`> sono sottoelementi, il mapping incentrato sugli elementi ne recupererà i valori.  
   
@@ -476,7 +475,7 @@ EXEC sp_xml_removedocument @docHandle
   
  Nella clausola WITH di *SchemaDeclaration* il parametro *ColPattern* è specificato anche con i parametri *ColName* e *ColType* . Il parametro *ColPattern* facoltativo è il modello XPath specificato e indica quanto segue:  
   
--   Il modello XPath (**.**) specificato come *ColPattern* per la colonna **ProdID** nel set di righe identifica il nodo di contesto, ovvero il nodo corrente. Il valore specificato per *rowpattern* è l'attributo **ProductID** dell'elemento <`OrderDetail`>.  
+-   Il modello XPath ( **.** ) specificato come *ColPattern* per la colonna **ProdID** nel set di righe identifica il nodo di contesto, ovvero il nodo corrente. Il valore specificato per *rowpattern* è l'attributo **ProductID** dell'elemento <`OrderDetail`>.  
   
 -   Il valore di *ColPattern*, **../\@Quantity**, specificato per la colonna **Qty** nel set di righe identifica l'attributo **Quantity** del nodo padre, <`OrderDetail`>, del nodo di contesto, \<ProductID>.  
   
@@ -578,7 +577,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- In particolare, viene passata una variabile di tipo **xml**, \@x, alla funzione **sp_xml_preparedocument()**.  
+ In particolare, viene passata una variabile di tipo **xml**, \@x, alla funzione **sp_xml_preparedocument()** .  
   
  Risultato:  
   

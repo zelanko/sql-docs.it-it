@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1b4bcffb5ec575c90561daf5c8c3757b3cdcb65
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 909a8156556cd4a654dcfd6406de2bd45826e31b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539128"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990491"
 ---
 # <a name="join-a-role"></a>aggiungere un ruolo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "52539128"
   
  I ruoli predefiniti sono automaticamente disponibili in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. I ruoli predefiniti dispongono delle autorizzazioni necessarie per completare attività comuni. Per ulteriori informazioni sui ruoli predefiniti, vedere i collegamenti seguenti. I ruoli definiti dall'utente vengono creati dall'utente e possono essere personalizzati con le autorizzazioni desiderate. Per ulteriori informazioni sui ruoli definiti dall'utente, vedere i collegamenti seguenti.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -64,7 +63,7 @@ ms.locfileid: "52539128"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione **ALTER ANY ROLE** per il database, l'autorizzazione **ALTER** per il ruolo o l'appartenenza a **db_securityadmin**.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -79,9 +78,9 @@ ms.locfileid: "52539128"
   
 4.  Fare clic con il pulsante destro del mouse sul ruolo da modificare e selezionare **Proprietà**.  
   
-5.  Nella finestra di dialogo **Proprietà ruolo del server -**_nome\_ruolo\_server_ scegliere **Aggiungi** nella pagina **Membri**.  
+5.  Nella finestra di dialogo **Proprietà ruolo del server -** _nome\_ruolo\_server_ scegliere **Aggiungi** nella pagina **Membri**.  
   
-6.  Nella finestra di dialogo **Seleziona account di accesso o ruolo del server** immettere l'account di accesso o il ruolo del server da aggiungere a questo ruolo del server in **Immettere i nomi degli oggetti da selezionare (esempi)**. In alternativa, fare clic su **Sfoglia...** e selezionare uno, alcuni o tutti gli oggetti disponibili nella finestra di dialogo **Cerca oggetti**. Fare clic su **OK** per tornare alla finestra di dialogo **Proprietà ruolo del server -**_nome\_ruolo\_server_.  
+6.  Nella finestra di dialogo **Seleziona account di accesso o ruolo del server** immettere l'account di accesso o il ruolo del server da aggiungere a questo ruolo del server in **Immettere i nomi degli oggetti da selezionare (esempi)** . In alternativa, fare clic su **Sfoglia...** e selezionare uno, alcuni o tutti gli oggetti disponibili nella finestra di dialogo **Cerca oggetti**. Fare clic su **OK** per tornare alla finestra di dialogo **Proprietà ruolo del server -** _nome\_ruolo\_server_.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -101,9 +100,9 @@ ms.locfileid: "52539128"
   
 7.  Fare clic con il pulsante destro del mouse sul ruolo da modificare e selezionare **Proprietà**.  
   
-8.  Nella finestra di dialogo **Proprietà ruolo database -**_nome\_ruolo\_database_ fare clic su **Aggiungi** nella pagina **Generale**.  
+8.  Nella finestra di dialogo **Proprietà ruolo database -** _nome\_ruolo\_database_ fare clic su **Aggiungi** nella pagina **Generale**.  
   
-9. Nella finestra di dialogo **Seleziona utente o ruolo del database** immettere l'account di accesso o il ruolo del database da aggiungere a questo ruolo del database in **Immettere i nomi degli oggetti da selezionare (esempi)**. In alternativa, fare clic su **Sfoglia...** e selezionare uno, alcuni o tutti gli oggetti disponibili nella finestra di dialogo **Cerca oggetti**. Fare clic su **OK** per tornare alla finestra di dialogo **Proprietà ruolo database -**_nome\_ruolo\_database_.  
+9. Nella finestra di dialogo **Seleziona utente o ruolo del database** immettere l'account di accesso o il ruolo del database da aggiungere a questo ruolo del database in **Immettere i nomi degli oggetti da selezionare (esempi)** . In alternativa, fare clic su **Sfoglia...** e selezionare uno, alcuni o tutti gli oggetti disponibili nella finestra di dialogo **Cerca oggetti**. Fare clic su **OK** per tornare alla finestra di dialogo **Proprietà ruolo database -** _nome\_ruolo\_database_.  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -115,7 +114,7 @@ ms.locfileid: "52539128"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     ALTER SERVER ROLE diskadmin ADD MEMBER [Domain\Juan] ;  
@@ -130,7 +129,7 @@ ms.locfileid: "52539128"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     ALTER ROLE Marketing ADD MEMBER [Domain\Juan] ;  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: c1e9105b104d6fb79c43d23bdda6da4b4603d339
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: d405373dbd22b66310768a727f236d7596d05809
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585681"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111658"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Spostare un database protetto da TDE in un'altra istanza di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -174,7 +173,7 @@ Le procedure riportate di seguito mostrano che è necessario spostare un databas
   
     -   Quando un database è coinvolto nella replica, lo **Stato** è **Non pronto** e nella colonna **Messaggio** viene visualizzato **Database replicato**.  
   
-    -   Quando un database ha una o più connessioni attive, il valore di **Stato** è **Non pronto** e la colonna **Messaggio** visualizza _\<Connessioni attive: numero\_di\_connessioni\_attive\>_ **** , ad esempio: **Connessioni attive: 1**. Prima di poter scollegare il database è necessario disconnettere tutte le connessioni attive selezionando **Interrompi connessioni**.  
+    -   Quando un database ha una o più connessioni attive, il valore di **Stato** è **Non pronto** e la colonna **Messaggio** visualizza _**Connessioni attive**: \<numero\_di\_connessioni\_attive\>_ , ad esempio: **Connessioni attive: 1**. Prima di poter scollegare il database è necessario disconnettere tutte le connessioni attive selezionando **Interrompi connessioni**.  
   
      Per ottenere ulteriori informazioni su un messaggio, fare clic sul testo del collegamento ipertestuale per aprire Monitoraggio attività.  
   

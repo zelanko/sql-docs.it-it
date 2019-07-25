@@ -1,5 +1,5 @@
 ---
-title: Costruttore SQLServerException (lang, lang, int, Throwable) | Microsoft Docs
+title: Costruttore SQLServerException (java.lang.String, java.lang.String, int, java.lang.Throwable) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -13,18 +13,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fbd40c6edb2e4b623f0e2fbf7e00ad91dc683a04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18827d05bc5567b4566eaa006d88c249874132cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66766867"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971083"
 ---
-# <a name="sqlserverexception-constructor-javalangstring-javalangstring-int-javalangthrowable"></a>Costruttore SQLServerException (lang, lang, int, Throwable)
+# <a name="sqlserverexception-constructor-javalangstring-javalangstring-int-javalangthrowable"></a>Costruttore SQLServerException (java.lang.String, java.lang.String, int, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Inizializza una nuova istanza della [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) classe quando viene specificato un **stringa** oggetto, una **stringa** oggetto, un **int**e un **throwable** oggetto.
+  Inizializza una nuova istanza della classe [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) quando vengono specificati un oggetto **stringa** , un oggetto **stringa** , un **int**e un oggetto **generabile** .
 
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,15 +42,15 @@ public SQLServerException(java.lang.String errText,
   
  *errState*  
   
- Stringa che contiene lo stato dell'errore.
+ Stringa contenente lo stato dell'errore.
  
  *errNum*  
   
- Valore int che contiene il codice di errore per l'eccezione.
+ Int che contiene il codice di errore per l'eccezione.
  
  *cause*  
   
- Un oggetto throwable che contiene la causa dell'eccezione.
+ Oggetto generabile che contiene la ragione dell'eccezione.
   
 ## <a name="see-also"></a>Vedere anche  
  [Costruttori di SQLServerException](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   

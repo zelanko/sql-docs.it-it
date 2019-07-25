@@ -29,7 +29,7 @@ ms.locfileid: "66014435"
 # <a name="architecture-of-client-side-and-server-side-xml-formatting-sqlxml-40"></a>Architettura della formattazione XML sul lato client e sul lato server (SQLXML 4.0)
   Nell'illustrazione seguente viene mostrata l'architettura della formattazione XML sul lato server.  
   
- ![Architettura della formattazione XML sul lato server. ] (../../../database-engine/dev-guide/media/serversidexml.gif "Formattazione sul lato server architettura di XML.")  
+ ![Architettura della formattazione XML sul lato server.](../../../database-engine/dev-guide/media/serversidexml.gif "Formattazione sul lato server architettura di XML.")  
   
  In questo esempio il comando specificato sul client viene inviato al server. Il server produce un documento XML e lo restituisce al client. In questo caso, il server dispone di un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Grazie alla formattazione XML sul lato server, è possibile utilizzare il provider SQLXMLOLEDB o il provider SQLOLEDB.  Il provider SQLXMLOLEDB utilizza Sqlxml4.dll che è incluso in SQLXML 4.0. Quando si utilizza il provider SQLOLEDB, per impostazione predefinita si ottiene la funzionalità SQLXML fornita dal file Sqlxmlx.dll incluso in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows o in Microsoft Data Access Components (MDAC) 2.6 o versione successiva. Per utilizzare Sqlxml4.dll con SQLOLEDB, è necessario impostare la proprietà SQLXML Version su "SQLXML.4.0" nell'oggetto SQLOLEDB connessione. In entrambi i casi, il server produce il documento XML e lo invia al client.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66014435"
   
  Nell'illustrazione seguente viene mostrata l'architettura della formattazione XML sul lato client.  
   
- ![Architettura della formattazione XML sul lato client. ] (../../../database-engine/dev-guide/media/clientsidexml.gif "Formattazione architettura di XML sul lato client.")  
+ ![Architettura della formattazione XML sul lato client.](../../../database-engine/dev-guide/media/clientsidexml.gif "Formattazione architettura di XML sul lato client.")  
   
  In questo esempio il client utilizza il provider SQLXMLOLEDB. Nella stringa di connessione, la proprietà Provider di dati deve essere impostata su SQLOLEDB. (Questo è l'unico valore accettato in SQLXML 4.0). Il comando che viene eseguito sul client viene inviato al server. Il set di righe generato nel server viene inviato al client. Sul client viene eseguita la formattazione del documento XML dal set di righe.  
   

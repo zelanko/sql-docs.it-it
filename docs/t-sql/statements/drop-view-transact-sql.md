@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 03cea355-e39c-46e1-b7db-8832038669dd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c211fa83d1b2e0d8a1b6c499f20705b2459e2431
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ede74cb467b0ee9f83c72c5c07ee1b933c1a7fa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072105"
 ---
 # <a name="drop-view-transact-sql"></a>DROP VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,7 +76,7 @@ DROP VIEW [ schema_name . ] view_name [ ; ]
   
  Per altre informazioni sulla visualizzazione del testo della vista, vedere [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Sono necessarie l'autorizzazione **CONTROL** per la vista, l'autorizzazione **ALTER** per lo schema contenente la vista o l'appartenenza al ruolo predefinito del server **db_ddladmin**.  
   
 ## <a name="examples"></a>Esempi  

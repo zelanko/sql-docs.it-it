@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4bca90e100baf2a7509636966ee1391645827bb9
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: 3d8b691febc1f52074451a777c7e163be8e10f80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077958"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (Motore di database)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ Consente di modificare l'albero spostando nodi da _oldRoot_ a _newRoot_. GetRepa
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-comparing-two-node-locations"></a>A. Confronto tra due percorsi di nodi  
-Nell'esempio seguente viene illustrato il valore hierarchyid corrente di un nodo. Viene anche mostrato il valore **hierarchyid** del nodo nel caso in cui venga spostato in modo da diventare un discendente del nodo **@NewParent**. Per visualizzare le relazioni gerarchiche, viene utilizzato il metodo `ToString()`.
+Nell'esempio seguente viene illustrato il valore hierarchyid corrente di un nodo. Viene anche mostrato il valore **hierarchyid** del nodo nel caso in cui venga spostato in modo da diventare un discendente del nodo **@NewParent** . Per visualizzare le relazioni gerarchiche, viene utilizzato il metodo `ToString()`.
   
 ```sql
 DECLARE @SubjectEmployee hierarchyid , @OldParent hierarchyid, @NewParent hierarchyid  
@@ -81,7 +80,7 @@ WHERE OrgNode = @SubjectEmployee ;
 GO  
 ```  
   
-### <a name="b-updating-a-node-to-a-new-location"></a>b. Aggiornamento di un nodo in un nuovo percorso  
+### <a name="b-updating-a-node-to-a-new-location"></a>B. Aggiornamento di un nodo in un nuovo percorso  
 Nell'esempio seguente viene utilizzato `GetReparentedValue()` in un'istruzione UPDATE per spostare un nodo da un percorso obsoleto in un nuovo percorso nella gerarchia:
   
 ```sql

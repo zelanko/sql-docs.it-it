@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70102127d7d48160c5320e02a97113cdd903fb0b
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334648"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948245"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -182,7 +181,7 @@ ORDER BY HireDate DESC;
 GO  
 ```  
   
-#### <a name="b-using-top-with-a-variable"></a>b. Utilizzo di TOP con una variabile  
+#### <a name="b-using-top-with-a-variable"></a>B. Utilizzo di TOP con una variabile  
 Nell'esempio seguente viene utilizzata una variabile per specificare il numero di dipendenti restituiti nel set di risultati della query.  
   
 ```sql  
@@ -253,7 +252,7 @@ WHERE PurchaseOrderDetailID IN
 GO  
 ```  
   
-#### <a name="b-using-top-to-limit-the-number-of-rows-inserted"></a>b. Utilizzo di TOP per limitare il numero di righe inserite  
+#### <a name="b-using-top-to-limit-the-number-of-rows-inserted"></a>B. Utilizzo di TOP per limitare il numero di righe inserite  
 L'esempio seguente crea la tabella `EmployeeSales` e inserisce il nome e i dati sulle vendite da inizio anno per i primi cinque dipendenti della tabella `HumanResources.Employee`. L'istruzione INSERT sceglie cinque righe qualsiasi restituite dall'istruzione `SELECT` che soddisfano i criteri definiti nella clausola WHERE. La clausola OUTPUT consente di visualizzare le righe inserite nella tabella `EmployeeSales`. Si noti che la clausola ORDER BY nell'istruzione SELECT non viene usate per determinare i primi cinque dipendenti.  
   
 ```sql  
