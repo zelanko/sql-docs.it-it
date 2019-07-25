@@ -10,12 +10,12 @@ author: nelgson
 ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2185c40562e6ad7102ebde10cacb34c56d36f714
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 5a3d66d95907c8ddbc4efd33fe58ee4ddbbb9423
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399965"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68475995"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "67399965"
 Registra estensioni di linguaggio esterno nel database partendo dal percorso file specificato o dal flusso di byte. Questa istruzione funge da meccanismo generico per l'amministratore del database per la registrazione di nuove estensioni di linguaggio esterno in tutte le piattaforme del sistema operativo supportate da SQL Server. Per altre informazioni, vedere [Estensioni del linguaggio](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
 
 > [!NOTE]
-> Attualmente, solo **Java** è supportato come linguaggio esterno. **R** e **Python** sono nomi riservati e nessun linguaggio esterno può essere creato con tali nomi specifici. Per altre informazioni su come usare **R** e **Python**, vedere [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/advanced-analytics/sql-server-machine-learning-services).
+> Attualmente, solo **Java** è supportato come linguaggio esterno. **R** e **Python** sono nomi riservati e nessun linguaggio esterno può essere creato con tali nomi specifici. Per altre informazioni su come usare **R** e **Python**, vedere [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/advanced-analytics/).
 
 ## <a name="syntax"></a>Sintassi
 
