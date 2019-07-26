@@ -6,15 +6,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 359ed7abfb8afd9fea38b96f9d822d379d69a91e
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: e0e685543fe1e99f7adbfeb69567c366b0714ef7
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345620"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470171"
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>Eventi estesi per SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server fornisce un set di eventi estesi da usare per la [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]risoluzione dei problemi relativi a, oltre ai processi Python o R inviati a. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -87,7 +87,7 @@ SQL Server Machine Learning Services avvia alcuni servizi che vengono eseguiti a
   
     Per acquisire gli eventi correlati a Launchpad, inserire il file *config* nella directory Binn per l'istanza di SQL Server.  In un'installazione predefinita, si tratta di:
 
-    `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn` (Indici per tabelle con ottimizzazione per la memoria).  
+    `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`.  
   
 + **BXLServer** è il processo satellite che supporta l'estendibilità di SQL con linguaggi di script esterni, ad esempio R o Python. Viene avviata un'istanza separata di BxlServer per ogni istanza di linguaggio esterno.
   

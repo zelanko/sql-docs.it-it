@@ -10,41 +10,44 @@ ms.assetid: 0209055e-cb6b-4a07-909e-836596727a2c
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e31b673d7bb80a74cccd664f1e29b72dcd49f4a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 92a4c3e650ce375a1e80079bbad83c5ab2b9bcd9
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489325"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495286"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>Attività 6: Aggiunta dell'origine Excel al flusso di dati
-  In questa attività viene aggiunta un'origine Excel al flusso di dati per leggere i dati del fornitore dal file di Excel di origine. Tramite l'origine Excel vengono estratti dati da fogli di lavoro o intervalli in cartelle di lavoro di Microsoft Excel. Visualizzare [origine Excel](../integration-services/data-flow/excel-source.md) per altre informazioni.  
+  In questa attività viene aggiunta un'origine Excel al flusso di dati per leggere i dati del fornitore dal file di Excel di origine. Tramite l'origine Excel vengono estratti dati da fogli di lavoro o intervalli in cartelle di lavoro di Microsoft Excel. Per ulteriori informazioni, vedere l'argomento [origine Excel](../integration-services/data-flow/excel-source.md) .  
   
-1.  Trascinare **origine Excel** dal **altre origini** nelle **casella degli strumenti SSIS** per il **del flusso di dati** scheda.  
+1.  Trascinare **origine Excel** da **altre origini** nella **casella degli strumenti SSIS** alla scheda **flusso di dati** .  
   
-2.  Fare clic su **origine Excel** nel **flusso di dati** scheda, quindi scegliere **rinominare**.  
+2.  Fare clic con il pulsante destro del mouse su **origine Excel** nella scheda **flusso di dati** e quindi scegliere **Rinomina**.  
   
-3.  Tipo di **Leggi dati fornitore dal File di Excel** , quindi premere **invio**.  
+3.  Digitare **Leggi dati fornitore dal file di Excel** e premere **invio**.  
   
-4.  Fare doppio clic su **Leggi dati fornitore dal File di Excel** per avviare la **Editor origine Excel** nella finestra di dialogo.  
+4.  Fare doppio clic su **Leggi dati fornitore dal file di Excel** per aprire la finestra di dialogo **Editor origine Excel** .  
   
-5.  Nel **Editor origine Excel** finestra di dialogo, fare clic su **New** per creare una connessione di Excel.  
+5.  Nella finestra di dialogo **Editor origine Excel** fare clic su **nuovo** per creare una connessione Excel.  
   
-6.  Nel **gestione connessione Excel** della finestra di dialogo fare clic su **Sfoglia**e quindi selezionare il **Suppliers. xls** del file nei **esercitazione su EIM** cartella . Verificare che **Microsoft Excel 97-2003** sia selezionato nel **versione di Excel** casella e quindi fare clic su **OK**.  
+6.  Nella finestra di dialogo **gestione connessione Excel** fare clic su **Sfoglia**, quindi selezionare il file **Suppliers. xls** nella cartella **EIM tutorial** . Verificare che **Microsoft excel 97-2003** sia selezionato nella casella **versione di Excel** , quindi fare clic su **OK**.  
   
-     ![Finestra di dialogo Gestione connessione Excel](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-01.jpg "nella finestra di dialogo Gestione connessione Excel")  
+     Finestra di ![dialogo Gestione connessione Excel] Finestra di (../../2014/tutorials/media/et-addingexcelsourcetothedataflow-01.jpg "dialogo Gestione connessione Excel")  
   
-7.  Nel **Editor origine Excel** finestra di dialogo **IncomingSuppliers$** nel **nome del foglio di Excel** casella di riepilogo.  
+7.  Nella finestra di dialogo **Editor origine Excel** selezionare **IncomingSuppliers $** nella casella **di riepilogo nome del foglio di Excel** .  
   
-     ![Nome del foglio di Excel - fornitori$ in entrata](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-02.jpg "nome del foglio di Excel - fornitori$ in entrata")  
+     ![Nome del foglio di Excel-fornitori in ingresso $](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-02.jpg "Nome del foglio di Excel-fornitori in ingresso $")  
   
-8.  Fare clic su **Preview** in anteprima i dati in file di Excel.  
+8.  Fare clic su **Anteprima** per visualizzare in anteprima i dati nel file di Excel.  
   
-9. Scegliere **OK** per chiudere la finestra di dialogo.  
+9. Fare clic su **OK** per chiudere la finestra di dialogo.  
   
-10. Trascinare **DQS Cleansing** trasforma nello **altre trasformazioni** sul **casella degli strumenti SSIS** per il **del flusso di dati** disponibile nella scheda  **Leggere i dati fornitore dal File di Excel**. Nella trasformazione DQS Cleansing viene utilizzato Data Quality Services (DQS) per correggere i dati applicando le regole approvate nella Knowledge Base. In fase di esecuzione, tramite questa trasformazione viene creato un progetto DQS Cleansing nel server DQS. Visualizzare [trasformazione DQS Cleansing](https://msdn.microsoft.com/library/ee677619.aspx) per altre informazioni.  
+10. Trascinare la trasformazione **pulizia DQS** in **altre** trasformazioni nella **casella degli strumenti SSIS** nella scheda **flusso di dati** in **Leggi dati fornitore dal file di Excel**. Nella trasformazione DQS Cleansing viene utilizzato Data Quality Services (DQS) per correggere i dati applicando le regole approvate nella Knowledge Base. In fase di esecuzione, tramite questa trasformazione viene creato un progetto DQS Cleansing nel server DQS. Per ulteriori informazioni, vedere l'argomento [trasformazione della pulizia DQS](https://msdn.microsoft.com/library/ee677619.aspx) .  
   
-## <a name="next-step"></a>Passaggio successivo  
- [Attività 7: Trasformazione Aggiunta DQS Cleansing al flusso di dati](../integration-services/data-flow/data-flow.md)  
-  
-  
+## <a name="next-step"></a>Passaggio successivo
+
+[Attività 7: Aggiunta della trasformazione pulizia DQS al flusso di dati](task-7-adding-dqs-cleansing-transform-to-the-data-flow.md)  
+
+### <a name="see-also"></a>Vedere anche
+
+[Flusso di dati](../integration-services/data-flow/data-flow.md)  

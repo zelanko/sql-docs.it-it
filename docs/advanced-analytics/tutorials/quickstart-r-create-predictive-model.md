@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 39310d935ddefe463b81af495f63304822035818
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 7de37b16c04cf2f972e36c11ba5dfb53721e6094
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345481"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469437"
 ---
 # <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>Avvio rapido: Creare un modello predittivo usando R in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In questa Guida introduttiva si apprenderà come eseguire il training di un modello usando R e quindi salvare il modello in una tabella in SQL Server. Il modello è un semplice modello lineare generalizzato (GLM) che prevede la probabilità che un veicolo sia stato dotato di una trasmissione manuale. Si userà il `mtcars` set di dati incluso in R.
 

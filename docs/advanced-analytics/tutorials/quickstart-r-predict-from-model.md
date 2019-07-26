@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e81731683fb71b074ed754ab6ab4eaab40d08c20
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: aa3a65020f2900bc4d9e0b5c5fd5a200f3334435
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345402"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469333"
 ---
 # <a name="quickstart-predict-from-model-using-r-in-sql-server"></a>Avvio rapido: Eseguire stime dal modello usando R in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In questa Guida introduttiva, usare il modello creato nella Guida introduttiva precedente per assegnare punteggi alle stime rispetto ai dati aggiornati. Per eseguire il _Punteggio_ usando nuovi dati, ottenere uno dei modelli sottoposti a training dalla tabella e quindi chiamare un nuovo set di dati su cui basare le stime. Il Punteggio è un termine usato a volte in data science per indicare la generazione di stime, probabilità o altri valori in base ai nuovi dati inseriti in un modello sottoposto a training.
 

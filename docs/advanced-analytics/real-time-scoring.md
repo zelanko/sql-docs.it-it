@@ -7,15 +7,15 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2e9c9353acdc0a2641203788c8e4883a9accb021
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: b4284d77464597857eca500b4a8ad29e1f4d06ee
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345684"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469962"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>Assegnazione di punteggi in tempo reale con sp_rxPredict in SQL Server machine learning
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Il Punteggio in tempo reale usa il stored procedure di sistema [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) e le funzionalità di estensione CLR in SQL Server per stime a prestazioni elevate o punteggi nei carichi di lavoro di previsione. Il Punteggio in tempo reale è indipendente dal linguaggio e viene eseguito senza dipendenze dai tempi di esecuzione di R o Python. Supponendo che un modello sia stato creato e sottoposto a training usando le funzioni Microsoft e quindi serializzato in un formato binario in SQL Server, è possibile usare il punteggio in tempo reale per generare risultati stimati in nuovi input di dati in istanze di SQL Server che non hanno il componente aggiuntivo R o Python installato.
 

@@ -7,15 +7,15 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a6b2fb46cb2ee361d858fa460119e6960d78fda7
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: be6d23c6b176e8d7b2c9bf0d7ff7a02212509a10
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345099"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469835"
 ---
 # <a name="give-users-permission-to-sql-server-machine-learning-services"></a>Concedere agli utenti le autorizzazioni per SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Questo articolo descrive come concedere agli utenti le autorizzazioni per l'esecuzione di script esterni in SQL Server Machine Learning Services e per concedere autorizzazioni di lettura, scrittura o Data Definition Language (DDL) ai database.
 
