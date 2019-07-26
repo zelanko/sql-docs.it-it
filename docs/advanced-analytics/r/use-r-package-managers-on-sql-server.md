@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: da14d2f00a6eb0c0ed52a50d27b6f1d06b062cf5
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 1977e616b8f5ac41f533d49fab684db146cdb204
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344867"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469880"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Usare i gestori di pacchetti R per installare i pacchetti R in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 È possibile usare gli strumenti R standard per installare nuovi pacchetti in un'istanza di SQL Server 2016 o SQL Server 2017, a condizione che il computer disponga di una porta 80 aperta e che si disponga dei diritti di amministratore.
 

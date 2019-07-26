@@ -7,15 +7,15 @@ ms.date: 10/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: fab91e142fad3bcb1ce23816d6705f7a7d208851
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 705df9d06a7dbf4563df3670894351d15c0962a5
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345322"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470093"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>Gestisci e integra i carichi di lavoro di Machine Learning in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Questo articolo è per gli amministratori di database SQL Server responsabili della distribuzione di un'infrastruttura data science efficiente in un asset server che supporta più carichi di lavoro. Incornicia lo spazio del problema amministrativo pertinente per la gestione dell'esecuzione del codice R e Python in SQL Server. 
 

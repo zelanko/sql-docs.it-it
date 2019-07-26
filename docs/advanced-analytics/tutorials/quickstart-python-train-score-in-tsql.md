@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c2c36c5aa81da098064885fd5b006d78494cd962
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 47ee23d945ded9fac97fe3eddc2137eeead00ae1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345768"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469505"
 ---
 # <a name="quickstart-create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>Avvio rapido: Creare, eseguire il training e usare un modello Python con stored procedure in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In questa Guida introduttiva con Python si creeranno ed eseguiranno due stored procedure. Il primo usa il set di dati del fiore Iris classico e genera un modello Naive Bayes per stimare una specie di Iris in base alle caratteristiche floreali. La seconda procedura riguarda l'assegnazione dei punteggi. Chiama il modello generato nella prima procedura per restituire un set di stime. Inserendo il codice in un stored procedure, le operazioni sono contenute, riutilizzabili e richiamabili da altre stored procedure e applicazioni client. 
 

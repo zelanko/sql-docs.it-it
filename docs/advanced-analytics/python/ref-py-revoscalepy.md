@@ -7,15 +7,15 @@ ms.date: 12/12/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e38cac8969544a93d7487d83636c866ec7b09ce9
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 297e58fe089b0f68670a9d2a994f05d9c8bf4344
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344607"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470323"
 ---
 # <a name="revoscalepy-python-module-in-sql-server"></a>revoscalepy (modulo Python in SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **revoscalepy** è un modulo compatibile con Python35 di Microsoft che supporta l'elaborazione distribuita, i contesti di calcolo remoti e gli algoritmi a elevate prestazioni Data Science. Si basa sul pacchetto **RevoScaleR** per R (distribuito con Microsoft R Server e R Services per SQL Server), che offre funzionalità simili:
 

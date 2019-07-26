@@ -7,15 +7,15 @@ ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5050fc0d0fcbb6c70b7aabea1b67d75cc686b96b
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 9e5fb470e9045060e6cf2423470c2e4e1ee14f30
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345230"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469642"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>Dati demo di Iris per le esercitazioni su Python e R in SQL Server 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In questo esercizio viene creato un database di SQL Server per archiviare i dati dal [set di dati del fiore Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) e i modelli basati sugli stessi dati. I dati Iris sono inclusi nelle distribuzioni R e Python installate da SQL Server e vengono usati nelle esercitazioni di machine learning per SQL Server. 
 

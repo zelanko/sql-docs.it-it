@@ -7,15 +7,15 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1d421d4fc3ed28276b950f797529f089f94aaf6a
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: f1e07ffa4423ccfc2cc0082910a2ca8aff8fd087
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345913"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68468675"
 ---
 # <a name="create-data-features-using-t-sql"></a>Creare funzionalità di dati con T-SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Dopo l'esplorazione dei dati, sono state raccolte alcune informazioni dettagliate dai dati e si è pronti per passare alla *progettazione di funzionalità*. Questo processo di creazione di funzionalità da dati non elaborati può essere un passaggio critico della modellazione di analisi avanzata.
 

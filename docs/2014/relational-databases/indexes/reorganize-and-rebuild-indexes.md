@@ -30,12 +30,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: af52376ae4749d42c8d746a64518632e6a047591
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2de93079289ffda8ff6287ad09aa4dea150932d7
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63036224"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68475963"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Riorganizzare e ricompilare gli indici
   In questo argomento viene descritto come riorganizzare o ricompilare un indice frammentato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Tramite il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] la manutenzione degli indici viene automaticamente eseguita dopo ogni operazione di modifica, inserimento o eliminazione dei dati sottostanti. Nel tempo, queste modifiche possono provocare la frammentazione dell'indice nel database. La frammentazione si verifica quando negli indici sono presenti pagine in cui l'ordinamento logico, basato sul valore chiave, non corrisponde all'ordinamento fisico all'interno del file di dati. Gli indici con un alto grado di frammentazione possono essere causa del calo delle prestazioni delle query e rallentare l'applicazione.  
@@ -71,7 +71,7 @@ ms.locfileid: "63036224"
   
  Il set di risultati restituito dalla funzione **sys.dm_db_index_physical_stats** include le colonne seguenti.  
   
-|colonna|Descrizione|  
+|Colonna|Descrizione|  
 |------------|-----------------|  
 |**avg_fragmentation_in_percent**|Percentuale di frammentazione logica (pagine non ordinate nell'indice).|  
 |**fragment_count**|Numero di frammenti (pagine foglia fisicamente consecutive) nell'indice.|  
@@ -82,25 +82,47 @@ ms.locfileid: "63036224"
 |Valore di**avg_fragmentation_in_percent**|Istruzione correttiva|  
 |-----------------------------------------------|--------------------------|  
 |> 5% e \< = 30%|ALTER INDEX REORGANIZE|  
-|> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON)*|  
+|> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|
+
+<sup>1</sup> È possibile eseguire la ricompilazione di un indice online oppure offline. La riorganizzazione di un indice viene sempre eseguita online. Per ottenere una disponibilità simile a quella offerta dall'opzione di riorganizzazione è necessario ricompilare gli indici in modalità online.  
   
- \* È possibile eseguire la ricompilazione di un indice online oppure offline. La riorganizzazione di un indice viene sempre eseguita online. Per ottenere una disponibilità simile a quella offerta dall'opzione di riorganizzazione è necessario ricompilare gli indici in modalità online.  
-  
- Questi valori costituiscono un'indicazione approssimativa per determinare il punto in cui passare da ALTER INDEX REORGANIZE a ALTER INDEX REBUILD. I valori effettivi, in realtà, variano da caso a caso. È importante riuscire a determinare la soglia migliore per l'ambiente in uso. Non è consigliabile usare questi comandi per livelli ridotti di frammentazione (inferiori al 5%) poiché i vantaggi offerti dalla rimozione di una frammentazione così limitata sono praticamente annullati dal costo della riorganizzazione o della ricompilazione dell'indice.  
-  
-> [!NOTE]  
->  In generale, non è possibile controllare la frammentazione sugli indici di dimensioni ridotte. Le pagine di indici di dimensioni ridotte vengono archiviate in extent misti. Poiché gli extent misti possono essere condivisi al massimo da otto oggetti, la frammentazione di un indice di dimensioni ridotte potrebbe non ridursi dopo la riorganizzazione o la ricompilazione dello stesso.  
+> [!TIP]
+> Questi valori costituiscono un'indicazione approssimativa per determinare il punto in cui passare da `ALTER INDEX REORGANIZE` a `ALTER INDEX REBUILD`. I valori effettivi, in realtà, variano da caso a caso. È importante riuscire a determinare la soglia migliore per l'ambiente in uso. Se, ad esempio, un determinato indice viene utilizzato principalmente per le operazioni di analisi, la rimozione della frammentazione può migliorare le prestazioni di tali operazioni. Il vantaggio in merito alle prestazioni è meno evidente per gli indici utilizzati principalmente per le operazioni di ricerca. Analogamente, la rimozione della frammentazione in un heap, ovvero una tabella senza un indice cluster, è particolarmente utile per le operazioni di analisi degli indici non cluster, ma ha un effetto ridotto nelle operazioni di ricerca.
+
+Non è in genere consigliabile usare questi comandi per livelli di frammentazione ridotti (inferiori al 5%), poiché i vantaggi offerti dalla rimozione di una frammentazione così limitata sono praticamente annullati dal costo della riorganizzazione o della ricompilazione dell'indice. 
+
+> [!NOTE]
+> La ricompilazione o la riorganizzazione degli indici di dimensioni ridotte spesso non riduce la frammentazione. Le pagine di indici di dimensioni ridotte vengono talvolta archiviate in extent misti. Poiché gli extent misti possono essere condivisi al massimo da otto oggetti, la frammentazione in un indice di dimensioni ridotte potrebbe non ridursi dopo la riorganizzazione o la ricompilazione dell'indice.
+
+### <a name="index-defragmentation-considerations"></a>Considerazioni sulla deframmentazione dell'indice
+In determinate condizioni, la ricompilazione di un indice cluster ricreerà automaticamente tutti gli indici non cluster che fanno riferimento alla chiave di clustering, se è necessario modificare gli identificatori fisici o logici contenuti nei record degli indici non cluster.
+
+Scenari che forzano la ricompilazione automatica di tutti gli indici non cluster in una tabella:
+
+-  Creazione di un indice cluster in una tabella
+-  Rimozione di un indice cluster, causa dell'archiviazione della tabella come heap
+-  Modifica della chiave di clustering per includere o escludere colonne
+
+Scenari che non richiedono la ricompilazione automatica di tutti gli indici non cluster in una tabella:
+
+-  Ricompilazione di un indice cluster univoco
+-  Ricompilazione di un indice cluster non univoco
+-  Modifica dello schema dell'indice, ad esempio l'applicazione di uno schema di partizionamento a un indice cluster o il trasferimento dell'indice cluster in un filegroup diverso
   
 ###  <a name="Restrictions"></a> Limitazioni e restrizioni  
   
--   Gli indici con più di 128 extent vengono ricompilati in due fasi separate, logica e fisica. Nella fase logica, le unità di allocazione esistenti usate dall'indice vengono contrassegnate per la deallocazione, le righe di dati vengono copiate e ordinate, quindi spostate nelle nuove unità di allocazione create per archiviare l'indice ricompilato. Nella fase fisica, le unità di allocazione precedentemente contrassegnate per la deallocazione vengono fisicamente eliminate nelle transazioni brevi eseguite in background e non richiedono molti blocchi.  
-  
--   Durante la riorganizzazione, non è possibile specificare le opzioni relative a un indice.  
+Gli indici con più di 128 extent vengono ricompilati in due fasi separate, logica e fisica. Nella fase logica, le unità di allocazione esistenti usate dall'indice vengono contrassegnate per la deallocazione, le righe di dati vengono copiate e ordinate, quindi spostate nelle nuove unità di allocazione create per archiviare l'indice ricompilato. Nella fase fisica, le unità di allocazione precedentemente contrassegnate per la deallocazione vengono fisicamente eliminate nelle transazioni brevi eseguite in background e non richiedono molti blocchi. Per altre informazioni sugli extent, vedere la [Guida all'architettura di pagine ed extent](https://docs.microsoft.com/sql/relational-databases/pages-and-extents-architecture-guide).
+
+L'istruzione `ALTER INDEX REORGANIZE` richiede che nel file di dati che include l'indice sia disponibile spazio, perché l'operazione può allocare solo pagine di lavoro temporanee nello stesso file, non in un altro file nel filegroup. Anche se nel filegroup possono essere disponibili pagine libere, è tuttavia possibile che l'utente incontri l'errore 1105: `Could not allocate space for object '###' in database '###' because the '###' filegroup is full. Create disk space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.`
+
+La creazione e la ricompilazione di indici non allineati per una tabella con oltre 1000 partizioni sono possibili, ma non consigliate. Questo tipo di operazioni può causare riduzioni delle prestazioni e un eccessivo consumo della memoria.
+
+Non è possibile riorganizzare o ricompilare indici contenuti in un filegroup offline o di sola lettura. Quando viene specificata la parola chiave `ALL` e uno o più indici si trovano in un filegroup offline o di sola lettura, l'istruzione ha esito negativo.
   
 ###  <a name="Security"></a> Sicurezza  
   
 ####  <a name="Permissions"></a> Autorizzazioni  
- È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
+ È richiesta l'autorizzazione `ALTER` per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
 ##  <a name="SSMSProcedureFrag"></a> Utilizzo di SQL Server Management Studio  
   
@@ -231,7 +253,7 @@ ms.locfileid: "63036224"
   
 6.  Selezionare la casella di controllo **Compatta dati di colonne LOB** per specificare che tutte le pagine che contengono dati LOB vengano compattate.  
   
-7.  Scegliere **OK.**  
+7.  Fare clic su **OK**.  
   
 #### <a name="to-rebuild-an-index"></a>Per ricompilare un indice  
   

@@ -21,12 +21,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d4447d7df594e9542982d6ba05de05f42b0628a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c366a239ca3459bc8fe4517736a4c0bcc64301cb
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62810064"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68475968"
 ---
 # <a name="server-memory-server-configuration-options"></a>Opzioni di configurazione del server Server Memory
   Usare le due opzioni per la memoria del server **min server memory** e **max server memory**per riconfigurare la quantità di memoria, in megabyte, gestita con Gestione memoria di SQL Server per un processo di SQL Server usato da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -45,23 +45,36 @@ ms.locfileid: "62810064"
  È consigliabile consentire a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di usare la memoria in modo dinamico. È possibile, tuttavia, impostare manualmente le opzioni per la memoria e limitare la quantità di memoria a cui può accedere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Prima di impostare la quantità di memoria per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], determinare l'impostazione appropriata per la memoria sottraendo dalla memoria fisica totale la memoria necessaria per il sistema operativo e per qualsiasi altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , nonché per eventuali altri utilizzi del sistema se il computer non è completamente dedicato a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La differenza così ottenuta rappresenta la quantità di memoria massima assegnabile a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="setting-the-memory-options-manually"></a>Impostazione manuale delle opzioni per la memoria  
- Impostare **min server memory** e **max server memory** per estendere l'intervallo di valori di memoria. Questo metodo è utile per gli amministratori di sistema o di database che desiderano configurare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] insieme ai requisiti di memoria di altre applicazioni eseguite nello stesso computer.  
+Le opzioni per la memoria **min server memory** e **max server memory** possono essere impostate come valori limite di un intervallo di valori di memoria. Questo metodo è utile per gli amministratori di sistema o di database che desiderano configurare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] insieme ai requisiti di memoria di altre applicazioni o altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguite nello stesso host.
+
+> [!NOTE]
+> **min server memory** e **max server memory** sono opzioni avanzate. Se si utilizza la stored procedure di sistema **sp_configure** per modificare queste impostazioni, è possibile modificarle solo se il valore di **show advanced options** è impostato su 1. Queste impostazioni diventano effettive immediatamente e non richiedono il riavvio del server.  
   
- Usare **min server memory** per garantire una quantità minima di memoria disponibile per Gestione memoria di SQL Server per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non alloca immediatamente la quantità di memoria specificata in **min server memory** all'avvio. Se, tuttavia, l'utilizzo della memoria raggiunge tale valore a causa del carico di lavoro del client, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può liberare memoria solo se si riduce il valore di **min server memory** .  
-  
+<a name="min_server_memory"></a> Usare **min server memory** per garantire una quantità minima di memoria disponibile per lo strumento di gestione della memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non alloca immediatamente la quantità di memoria specificata in **min server memory** all'avvio. Se, tuttavia, l'utilizzo della memoria raggiunge tale valore a causa del carico di lavoro del client, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può liberare memoria solo se si riduce il valore di **min server memory** . Ad esempio, quando più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono esistere contemporaneamente nello stesso host, impostare il parametro min server memory anziché max server memory allo scopo di riservare memoria per un'istanza. In un ambiente virtualizzato, inoltre, è essenziale impostare un valore min server memory per assicurarsi che un utilizzo elevato di memoria dall'host sottostante non tenti di deallocare memoria dal pool di buffer in una macchina virtuale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] guest, oltre i livelli necessari per garantire prestazioni accettabili.
+ 
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non esegue necessariamente l'allocazione della quantità di memoria specificata in **min server memory**. Se il carico sul server non richiede mai l'allocazione della quantità di memoria specificata in **min server memory**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà eseguito con una quantità di memoria inferiore.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non esegue necessariamente l'allocazione della quantità di memoria specificata in **min server memory**. Se il carico sul server non richiede mai l'allocazione della quantità di memoria specificata in **min server memory**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà eseguito con una quantità di memoria inferiore.  
   
-|Tipo di sistema operativo|Consentita quantità di memoria minima per **numero massimo di memoria del server**|  
+<a name="max_server_memory"></a> Usare **max server memory** per garantire che il sistema operativo non subisca un pregiudizievole utilizzo elevato di memoria. Per impostare la configurazione di max server memory, monitorare il consumo complessivo del processo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per determinare i requisiti di memoria. Per ottenere calcoli più precisi per una singola istanza:
+ -  Dalla memoria totale del sistema operativo riservare 1-4 GB al sistema operativo stesso.
+ -  Sottrarre quindi l'equivalente delle allocazioni di memoria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potenziali dal controllo **max server memory** costituito da **_dimensioni dello stack <sup>1</sup> \* numero massimo thread di lavoro calcolati <sup>2</sup> + parametro di avvio -g <sup>3</sup>_** (o 256 MB per impostazione predefinita se *-g* non è impostato). Il valore restante dovrebbe corrispondere all'impostazione di max server memory per la configurazione di una singola istanza.
+ 
+<sup>1</sup> Fare riferimento alla [Guida sull'architettura di gestione della memoria](https://docs.microsoft.com/sql/relational-databases/memory-management-architecture-guide#stacksizes) per informazioni sulle dimensioni degli stack di thread per ogni architettura.
+
+<sup>2</sup> Fare riferimento alla pagina della documentazione [Configurare l'opzione di configurazione del server max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) per informazioni sui thread di lavoro predefiniti calcolati per un determinato numero di CPU per cui è stata impostata l'affinità nell'host corrente.
+
+<sup>3</sup> Fare riferimento alla pagina della documentazione [Opzioni di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md) per informazioni sul parametro di avvio *-g*. Aplicable solo a 32 bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] da a).
+
+|Tipo di sistema operativo|Quantità di memoria minima consentite per **max server memory**|  
 |-------------|----------------------------------------------------------------|  
 |32 bit|64 MB|  
-|64 bit|128 MB|  
-  
+|64 bit|128 MB| 
+
 ## <a name="how-to-configure-memory-options-using-sql-server-management-studio"></a>Come configurare le opzioni per la memoria tramite SQL Server Management Studio  
  Usare le due opzioni per la memoria del server **min server memory** e **max server memory**per riconfigurare la quantità di memoria, in megabyte, gestita tramite Gestione memoria di SQL Server per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per impostazione predefinita, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i requisiti di memoria possono variare dinamicamente in base alle risorse di sistema disponibili.  
   
 ### <a name="procedure-for-configuring-a-fixed-amount-of-memory"></a>Procedura per la configurazione di una quantità di memoria fissa  
- **Per impostare una quantità fissa di memoria:**  
+ **Per impostare una quantità di memoria fissa:**  
   
 1.  In Esplora oggetti fare clic con il pulsante destro del mouse su un server e scegliere **Proprietà**.  
   
@@ -83,14 +96,14 @@ ms.locfileid: "62810064"
 3.  Se l'opzione **Massimizza la velocità di trasmissione dati per le applicazioni di rete** è selezionata, scegliere un'altra opzione, fare clic su **OK**, quindi chiudere tutte le finestre di dialogo rimanenti.  
   
 ## <a name="lock-pages-in-memory"></a>Blocco di pagine in memoria  
- Questi criteri di Windows determinano gli account autorizzati a usare un processo per mantenere i dati nella memoria fisica, impedendo al sistema di eseguire il paging dei dati nella memoria virtuale su disco. Il blocco delle pagine in memoria può garantire il corretto funzionamento del server quando si verifica il paging della memoria su disco. SQL Server **Lock Pages in Memory** opzione è impostata su ON nelle istanze a 32 e 64 bit di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard edition ed edizioni superiori quando l'account con privilegi per eseguire sqlservr.exe dispone di Windows "Locked pagine in Diritto utente di memoria (LPIM). In versioni precedenti di SQL Server, l'impostazione dell'opzione Blocco pagine per un'istanza a 32 bit di SQL Server richiede che l'account con i privilegi per eseguire sqlservr.exe disponga del diritto utente LPIM e che l'opzione "awe_enabled"sia impostata su ON.  
+ Questi criteri di Windows determinano gli account autorizzati a usare un processo per mantenere i dati nella memoria fisica, impedendo al sistema di eseguire il paging dei dati nella memoria virtuale su disco. Il blocco delle pagine in memoria può garantire il corretto funzionamento del server quando si verifica il paging della memoria su disco. L'opzione SQL Server **blocco di pagine in memoria** è impostata su on nelle istanze a 32 bit e a 64 bit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] di Standard Edition e versioni successive quando all'account con privilegi per l'esecuzione di sqlservr. exe è stato concesso il diritto utente "blocco di pagine in memoria" di Windows (LPIM). In versioni precedenti di SQL Server, l'impostazione dell'opzione Blocco pagine per un'istanza a 32 bit di SQL Server richiede che l'account con i privilegi per eseguire sqlservr.exe disponga del diritto utente LPIM e che l'opzione "awe_enabled"sia impostata su ON.  
   
- Per disabilitare il **Lock Pages In Memory** opzione per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], rimuovere l'utente "Blocco di pagine in memoria" a destra per l'account di avvio di SQL Server.  
+ Per disabilitare l'opzione **blocco di pagine in memoria** per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], rimuovere il diritto utente "blocco di pagine in memoria" per l'account di avvio SQL Server.  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>Per disabilitare l'opzione Blocco di pagine in memoria  
- **Per disabilitare il lock pages in memory-opzione:**  
+ **Per disabilitare l'opzione blocco di pagine in memoria:**  
   
-1.  Fare clic sul menu **Start** e scegliere **Esegui**. Nel **aperto** , digitare `gpedit.msc`.  
+1.  Fare clic sul menu **Start** e scegliere **Esegui**. Nella casella **Apri** Digitare `gpedit.msc`.  
   
      Viene visualizzata la finestra di dialogo **Criteri gruppo** .  
   
@@ -132,11 +145,11 @@ ms.locfileid: "62810064"
   
 ||32 bit|64 bit|  
 |-|-------------|-------------|  
-|Memoria convenzionale|In tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], fino al limite dello spazio degli indirizzi virtuali di processo:<br /><br /> 2 GB<br /><br /> 3 GB con **3 gb** avvio parametro *<br /><br /> 4 GB su WOW64\*\*|In tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], fino al limite dello spazio degli indirizzi virtuali di processo:<br /><br /> 8 TB in sistemi con architettura x64|  
+|Memoria convenzionale|In tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], fino al limite dello spazio degli indirizzi virtuali di processo:<br /><br /> 2 GB<br /><br /> 3 GB con parametro di avvio **/3GB** *<br /><br /> 4 GB in WOW64\*\*|In tutte le edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], fino al limite dello spazio degli indirizzi virtuali di processo:<br /><br /> 8 TB in sistemi con architettura x64|  
   
  * **/3gb** è un parametro di avvio del sistema operativo. Per altre informazioni, consultare [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
- \* * WOW64 (Windows on Windows 64) è una modalità che 32 bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito in un sistema operativo a 64 bit. Per altre informazioni, consultare [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ \* * WOW64 (Windows in Windows 64) è una modalità in cui 32 bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito in un sistema operativo a 64 bit. Per altre informazioni, consultare [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
 ## <a name="examples"></a>Esempi  
   

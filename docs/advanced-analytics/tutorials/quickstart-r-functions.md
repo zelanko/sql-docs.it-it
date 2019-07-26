@@ -1,33 +1,33 @@
 ---
-title: Guida introduttiva che illustra R funzioni SQL Server Machine Learning
-description: Questa Guida introduttiva descrive come scrivere una funzione R per i calcoli statistici avanzati.
+title: Guida introduttiva che mostra funzioni R-SQL Server Machine Learning
+description: Questa Guida introduttiva illustra come scrivere una funzione R per un calcolo statistico avanzato.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: fa2d47729641e8efd13e9e30be7a61186a892b5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f43709f563d1dc5838cdd6636bcac4dc5664a6da
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962019"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469275"
 ---
 # <a name="quickstart-using-r-functions"></a>Avvio rapido: Uso delle funzioni R
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Se sono completate le guide introduttive precedenti, si ha familiarità con le operazioni di base ed è pronto per un elemento più complesso, ad esempio funzioni statistiche. Funzioni statistiche avanzate che sono piuttosto complesse da implementare in T-SQL possono essere eseguite in R con una sola riga di codice.
+Se sono state completate le guide introduttive precedenti, si ha familiarità con le operazioni di base e si è pronti per qualcosa di più complesso, ad esempio per le funzioni statistiche. Le funzioni statistiche avanzate complesse da implementare in T-SQL possono essere eseguite in R con una sola riga di codice.
 
-In questa Guida introduttiva, verranno incorporate R matematica e stored procedure di funzioni di utilità SQL Server.
+In questa Guida introduttiva verranno incorporate le funzioni matematiche e di utilità R in una stored procedure SQL Server.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Una Guida introduttiva precedente [R verificare esiste nel Server SQL](quickstart-r-verify.md), vengono fornite informazioni e collegamenti per configurare l'ambiente R necessario per questa Guida introduttiva.
+Una guida introduttiva precedente, [Verify R exists in SQL Server](quickstart-r-verify.md), fornisce informazioni e collegamenti per la configurazione dell'ambiente R necessario per questa Guida introduttiva.
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>Creare una stored procedure per generare numeri casuali
 
-Per semplicità, si userà R `stats` pacchetto, che viene installato e caricato per impostazione predefinita quando si installa il supporto di funzionalità di R in SQL Server. Il pacchetto contiene centinaia di funzioni per le attività statistiche comuni, tra cui la funzione `rnorm`, che genera una quantità specificata di numeri casuali usando la distribuzione normale, in base a una deviazione e a una media standard.
+Per semplicità, usare il pacchetto r `stats` , che viene installato e caricato per impostazione predefinita quando si installa il supporto della funzionalità r in SQL Server. Il pacchetto contiene centinaia di funzioni per le attività statistiche comuni, tra cui la funzione `rnorm`, che genera una quantità specificata di numeri casuali usando la distribuzione normale, in base a una deviazione e a una media standard.
 
 Ad esempio, questo codice R restituisce 100 numeri, in una media di 50, in base alla deviazione standard 3.
 
@@ -48,7 +48,7 @@ EXEC sp_execute_external_script
 
 Si vuole semplificare la generazione di un set diverso di numeri casuali?
 
-La risposta è semplice quando combinato con SQL Server: definire una stored procedure che ottiene gli argomenti da parte dell'utente. Passare quindi gli argomenti nello script R come variabili.
+Questa operazione è facile quando viene combinata con SQL Server: definire una stored procedure che ottenga gli argomenti dall'utente. Passare quindi gli argomenti nello script R come variabili.
 
 ```sql
 CREATE PROCEDURE MyRNorm (@param1 int, @param2 int, @param3 int)
@@ -79,7 +79,7 @@ EXEC MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 
 ## <a name="use-r-utility-functions-for-troubleshooting"></a>Usare funzioni di utilità R per la risoluzione dei problemi
 
-Per impostazione predefinita, un'installazione di R include la `utils` pacchetto, che offre un'ampia gamma di funzioni di utilità per esaminare l'ambiente R corrente. Questo può essere utile se si riscontrano discrepanze nel modo in cui il codice R viene eseguito in SQL Server e in ambienti esterni.
+Per impostazione predefinita, un'installazione di R include `utils` il pacchetto, che fornisce un'ampia gamma di funzioni di utilità per l'analisi dell'ambiente R corrente. Questo può essere utile se si riscontrano discrepanze nel modo in cui il codice R viene eseguito in SQL Server e in ambienti esterni.
 
 Ad esempio, è possibile usare la funzione R `memory.limit()` per ottenere memoria per l'ambiente R corrente. Poiché il pacchetto `utils` viene installato, ma non viene caricato per impostazione predefinita, prima di tutto è necessario usare la funzione `library()` per caricarlo.
 
@@ -94,13 +94,13 @@ EXECUTE sp_execute_external_script
 WITH RESULT SETS (([Col1] int not null));
 ```
 
-Numero di utenti come usare le funzioni di temporizzazione di sistema in R, ad esempio `system.time` e `proc.time`, per acquisire il tempo usato dai processi R e analizzare i problemi di prestazioni.
+Molti utenti vogliono usare le funzioni di temporizzazione del sistema in R, `system.time` ad `proc.time`esempio e, per acquisire il tempo usato dai processi r e analizzare i problemi di prestazioni.
 
-Per un esempio, vedere l'esercitazione: [Creare funzionalità di dati](../tutorials/walkthrough-create-data-features.md). In questa procedura dettagliata, funzioni di temporizzazione R vengono incorporate nella soluzione per confrontare le prestazioni dei due metodi per la creazione di funzioni dai dati: Visual Studio funzioni R. e funzioni T-SQL.
+Per un esempio, vedere questa esercitazione: [Creare funzionalità di dati](../tutorials/walkthrough-create-data-features.md). In questa procedura dettagliata le funzioni di temporizzazione R sono incorporate nella soluzione per confrontare le prestazioni di due metodi per la creazione di funzionalità dai dati: Confronto tra funzioni R e e funzioni T-SQL.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 Il passaggio successivo consiste nella creazione di un modello predittivo tramite R in SQL Server.
 
 > [!div class="nextstepaction"]
-> [Avvio rapido: Creare un modello predittivo](quickstart-r-create-predictive-model.md)
+> [Avvio rapido: Creazione di un modello predittivo](quickstart-r-create-predictive-model.md)

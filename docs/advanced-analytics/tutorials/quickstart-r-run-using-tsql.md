@@ -7,15 +7,15 @@ ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 61b1959b9b3b0769e080a2a4a44b1d4d10ef2b61
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: ab73e0231f462504652e0e1af62fed80c706f061
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345979"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469040"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>Avvio rapido: Script R "Hello World" in SQL Server 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Questa Guida introduttiva illustra i concetti chiave eseguendo uno script R "Hello World" inT-SQL, con un'introduzione al stored procedure di sistema **sp_execute_external_script** . 
 

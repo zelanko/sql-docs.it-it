@@ -7,15 +7,15 @@ ms.date: 09/05/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3bf8e77cec92cde0e5a8adf4d3e1e36f1689b917
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 300b5d25d62be24c1e5590f5cd9795d08da7f2c1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343406"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470493"
 ---
 # <a name="r-language-extension-in-sql-server"></a>Estensione del linguaggio R in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 L'estensione R fa parte dell'SQL Server Machine Learning Services componente aggiuntivo per il motore di database relazionale. Aggiunge un ambiente di esecuzione R, una distribuzione R di base con librerie e strumenti standard e le librerie Microsoft R: [RevoScaleR](../r/ref-r-revoscaler.md) per l'analisi su larga scala, [MicrosoftML](../r/ref-r-microsoftml.md) per gli algoritmi di machine learning e altre librerie per accedere ai dati o al codice R in SQL Server.
 

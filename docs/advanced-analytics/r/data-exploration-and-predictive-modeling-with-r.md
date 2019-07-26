@@ -6,15 +6,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ecf9015fcb8f28a37343267d32f8e63aeb667e38
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 7cdd1e6dbb0438c1eb3d7404bc0aed672d088206
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345652"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470193"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>Esplorazione dei dati e modellazione predittiva con R in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Questo articolo descrive i miglioramenti apportati al processo di data science possibile tramite l'integrazione con SQL Server.
 
@@ -69,7 +69,7 @@ Quando si sviluppa la soluzione R, assicurarsi di scaricare Microsoft R Client. 
 
 + **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** Una distribuzione del runtime di R e un set di pacchetti, ad esempio la libreria del kernel matematico di Intel, che migliorano le prestazioni delle operazioni standard di R.  
   
-+ **RevoScaleR:** Un pacchetto R che consente di effettuare il push dei calcoli a un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]istanza di. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)] (Indici per tabelle con ottimizzazione per la memoria). Include anche un set di funzioni R comuni riprogettate per offrire scalabilità e prestazioni migliori. È possibile identificare queste funzioni migliorate dal prefisso **rx** . Include anche provider di dati avanzati per diverse origini. Queste funzioni sono precedute dal prefisso **Rx**.
++ **RevoScaleR:** Un pacchetto R che consente di effettuare il push dei calcoli a un' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]istanza di. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]. Include anche un set di funzioni R comuni riprogettate per offrire scalabilità e prestazioni migliori. È possibile identificare queste funzioni migliorate dal prefisso **rx** . Include anche provider di dati avanzati per diverse origini. Queste funzioni sono precedute dal prefisso **Rx**.
 
 È possibile usare qualsiasi editor di codice basato su Windows che supporta R, ad [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] esempio o rstudio. Il download di [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] include anche strumenti comuni della riga di comando per R, ad esempio RGui.exe.
 

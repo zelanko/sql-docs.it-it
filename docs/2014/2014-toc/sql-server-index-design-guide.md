@@ -10,26 +10,26 @@ ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ee47da3e97240ec4573303700e9793ee482821c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 726fb1ffd4175afa0d247d2029db559db2ff3231
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513042"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68475979"
 ---
 # <a name="sql-server-index-design-guide"></a>Guida per la progettazione di indici di SQL Server
 
   Gli indici progettati in modo non corretto e la mancanza di indici costituiscono le cause principali dei colli di bottiglia delle applicazioni di database. La progettazione di indici efficienti è fondamentale per ottenere buone prestazioni del database e dell'applicazione. In questa guida per la progettazione di indici di SQL Server sono contenute informazioni e procedure consigliate che consentono di progettare indici validi per soddisfare le esigenze dell'applicazione.  
   
-**Si applica a**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] tramite [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] se non specificato diversamente.  
+**Si applica a** [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] : [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] tramite, se non specificato diversamente.  
   
  In questa guida si presuppone che il lettore conosca i tipi di indice disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per una descrizione generale dei tipi di indice, vedere [Tipi di indice](../relational-databases/indexes/indexes.md).  
   
-##  <a name="Top"></a> In questa Guida  
+##  <a name="Top"></a>Contenuto della Guida  
 
  [Nozioni fondamentali sulla progettazione di indici](#Basics)  
   
- [Linee guida generali per la progettazione dell'indice](#General_Design)  
+ [Linee guida generali per la progettazione degli indici](#General_Design)  
   
  [Linee guida per la progettazione di indici cluster](#Clustered)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62513042"
   
  [Linee guida per la progettazione di indici filtrati](#Filtered)  
   
- [Informazioni aggiuntive](#Additional_Reading)  
+ [Letture aggiuntive](#Additional_Reading)  
   
 ##  <a name="Basics"></a> Nozioni fondamentali sulla progettazione di indici  
 
@@ -55,7 +55,7 @@ ms.locfileid: "62513042"
 
  Le attività seguenti costituiscono la strategia consigliata per la progettazione di indici:  
   
-1.  Comprendere le caratteristiche del database. Stabilire, ad esempio, se si tratta di un database OLTP (Online Transaction Processing) in cui avvengono frequenti modifiche dei dati o di un database DSS (Decision Support System) o di data warehouse (OLAP) contenente principalmente dati di sola lettura e tramite cui è necessario elaborare rapidamente set di dati di grandi dimensioni. In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]l'indice *columnstore con ottimizzazione per la memoria di xVelocity* è particolarmente appropriato per set di dati di data warehousing tipici. Gli indici columnstore possono trasformare l'ambiente di data warehousing per gli utenti consentendo prestazioni più veloci per le query di data warehousing comuni quali quelle di filtro, aggregazione, raggruppamento e join a stella. Per altre informazioni, vedere [descrizione degli indici Columnstore](../relational-databases/indexes/columnstore-indexes-described.md).  
+1.  Comprendere le caratteristiche del database. Stabilire, ad esempio, se si tratta di un database OLTP (Online Transaction Processing) in cui avvengono frequenti modifiche dei dati o di un database DSS (Decision Support System) o di data warehouse (OLAP) contenente principalmente dati di sola lettura e tramite cui è necessario elaborare rapidamente set di dati di grandi dimensioni. In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]l'indice *columnstore con ottimizzazione per la memoria di xVelocity* è particolarmente appropriato per set di dati di data warehousing tipici. Gli indici columnstore possono trasformare l'ambiente di data warehousing per gli utenti consentendo prestazioni più veloci per le query di data warehousing comuni quali quelle di filtro, aggregazione, raggruppamento e join a stella. Per altre informazioni, vedere gli [indici columnstore descritti](../relational-databases/indexes/columnstore-indexes-described.md).  
   
 2.  Comprendere le caratteristiche delle query utilizzate più di frequente. Se, ad esempio, si stabilisce che una query utilizzata di frequente unisce in join due o più tabelle, è possibile determinare il tipo più adatto di indici da utilizzare.  
   
@@ -180,7 +180,7 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  Il piano di esecuzione seguente per questa query mostra che in Query Optimizer viene utilizzato un operatore SORT per restituire il set di risultati nell'ordine specificato dalla clausola ORDER BY.  
   
- ![Piano di esecuzione indica un ordinamento viene utilizzato l'operatore. ](media/indexsort1.gif "Piano di esecuzione indica un ordinamento viene utilizzato l'operatore.")  
+ ![Il piano di esecuzione Mostra l'uso di un operatore di ordinamento.](media/indexsort1.gif "Il piano di esecuzione Mostra l'uso di un operatore di ordinamento.")  
   
  Se un indice viene creato con colonne chiave che corrispondono a quelle della clausola ORDER BY nella query, è possibile eliminare l'operatore SORT nel piano della query, migliorando l'efficienza della query.  
   
@@ -192,13 +192,13 @@ ON Purchasing.PurchaseOrderDetail
   
  Dopo che la query è stata eseguita di nuovo, il piano di esecuzione seguente mostra che l'operatore SORT è stato eliminato ed è stato utilizzato il nuovo indice non cluster creato.  
   
- ![Piano di esecuzione indica un ordinamento non viene usato](media/insertsort2.gif "piano di esecuzione indica un ordinamento non viene usato")  
+ ![Il piano di esecuzione Mostra un operatore di ordinamento non usato](media/insertsort2.gif "Il piano di esecuzione Mostra un operatore di ordinamento non usato")  
   
  Il [!INCLUDE[ssDE](../includes/ssde-md.md)] consente di spostarsi con la stessa efficienza in entrambe le direzioni. Un indice definito come `(RejectedQty DESC, ProductID ASC)` può comunque essere utilizzato per una query in cui l'ordinamento delle colonne nella clausola ORDER BY viene invertito. L'indice può ad esempio essere utilizzato da una query con la clausola ORDER BY `ORDER BY RejectedQty ASC, ProductID DESC` .  
   
  È possibile specificare l'ordinamento solo per le colonne chiave. La vista del catalogo [sys.index_columns](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) e la funzione INDEXKEY_PROPERTY indicano se una colonna di un indice è archiviata in ordine crescente o decrescente.  
   
- ![Icona freccia usata con il collegamento superiore](media/uparrow16x16.gif "icona freccia usata con il collegamento superiore") [In questa Guida](#Top)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") Contenuto [della Guida](#Top)  
   
 ##  <a name="Clustered"></a> Linee guida per la progettazione di indici cluster  
 
@@ -213,7 +213,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   Possono essere utilizzate in query di intervallo.  
   
- Se l'indice cluster non viene creato con la proprietà UNIQUE, tramite il [!INCLUDE[ssDE](../includes/ssde-md.md)] viene aggiunta automaticamente una colonna uniqueifier a 4 byte alla tabella. Se necessario, tramite il [!INCLUDE[ssDE](../includes/ssde-md.md)] viene aggiunto automaticamente un valore uniqueifier a una riga per rendere univoca ciascuna chiave. Questa colonna e i relativi valori sono per uso interno e non sono visualizzati o accessibili dagli utenti.  
+ Se l'indice cluster non viene creato con la proprietà Unique, [!INCLUDE[ssDE](../includes/ssde-md.md)] aggiunge automaticamente una colonna uniquifier a 4 byte alla tabella. Quando necessario, [!INCLUDE[ssDE](../includes/ssde-md.md)] aggiunge automaticamente un valore uniquifier a una riga per rendere univoca ciascuna chiave. Questa colonna e i relativi valori sono per uso interno e non sono visualizzati o accessibili dagli utenti.  
   
 ### <a name="clustered-index-architecture"></a>Architettura dell'indice cluster  
 
@@ -227,7 +227,7 @@ ON Purchasing.PurchaseOrderDetail
   
  Nella figura seguente viene illustrata la struttura di un indice cluster in una singola partizione.  
   
- ![I livelli di un indice cluster](media/bokind2.gif "livelli di un indice cluster")  
+ ![Livelli di un indice cluster](media/bokind2.gif "Livelli di un indice cluster")  
   
 ### <a name="query-considerations"></a>Considerazioni sulle query  
 
@@ -273,7 +273,7 @@ ON Purchasing.PurchaseOrderDetail
   
      Le chiavi estese sono costituite da diverse colonne normali o di grandi dimensioni. I valori di chiave dell'indice cluster vengono utilizzati come chiavi di ricerca da tutti gli indici non cluster. Gli indici non cluster definiti nella stessa tabella saranno significativamente più grandi perché le voci di indice non cluster includono la chiave di clustering, nonché le colonne chiave definite per l'indice non cluster.  
   
- ![Icona freccia usata con il collegamento superiore](media/uparrow16x16.gif "icona freccia usata con il collegamento superiore") [In questa Guida](#Top)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") Contenuto [della Guida](#Top)  
   
 ##  <a name="Nonclustered"></a> Linee guida per la progettazione di un indice non cluster  
 
@@ -301,7 +301,7 @@ ON Purchasing.PurchaseOrderDetail
   
  Nella figura seguente viene illustrata la struttura di un indice non cluster in una singola partizione.  
   
- ![Livelli di un indice nonclustered](media/bokind1.gif "livelli di un indice non cluster")  
+ ![Livelli di un indice non cluster](media/bokind1.gif "Livelli di un indice non cluster")  
   
 ### <a name="database-considerations"></a>Considerazioni sui database  
 
@@ -453,7 +453,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Sarà necessario determinare se i guadagni in termini di prestazioni delle query offrano maggiore vantaggio rispetto all'influenza sulle prestazioni durante la modifica dei dati e ai maggiori requisiti di spazio su disco.  
   
- ![Icona freccia usata con il collegamento superiore](media/uparrow16x16.gif "icona freccia usata con il collegamento superiore") [In questa Guida](#Top)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") Contenuto [della Guida](#Top)  
   
 ##  <a name="Unique"></a> Linee guida per la progettazione di indici univoci  
 
@@ -479,7 +479,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   In un indice non cluster univoco possono essere contenute colonne non chiave. Per altre informazioni, vedere [Indice con colonne incluse](#Included_Columns).  
   
- ![Icona freccia usata con il collegamento superiore](media/uparrow16x16.gif "icona freccia usata con il collegamento superiore") [In questa Guida](#Top)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") Contenuto [della Guida](#Top)  
   
 ##  <a name="Filtered"></a> Linee guida per la progettazione di indici filtrati  
 
@@ -626,7 +626,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  Lo spostamento della conversione dei dati dal lato sinistro a quello destro di un operatore di confronto potrebbe modificare il significato della conversione. Nell'esempio precedente, quando l'operatore CONVERT è stato aggiunto al lato destro, il confronto è stato modificato da un confronto di un tipo integer in un confronto di tipo `varbinary`.  
   
- ![Icona freccia usata con il collegamento superiore](media/uparrow16x16.gif "icona freccia usata con il collegamento superiore") [In questa Guida](#Top)  
+ ![Icona freccia usata con il collegamento Torna all'inizio](media/uparrow16x16.gif "Icona freccia usata con il collegamento Torna all'inizio") Contenuto [della Guida](#Top)  
   
 ##  <a name="Additional_Reading"></a> Ulteriori informazioni  
 

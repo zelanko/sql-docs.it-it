@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2cf89b26ffad2902223a84e19ccaf425aa6f8b2d
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 6808fa01bd4b62a67b220cec86d025820958298d
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344902"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470014"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (libreria R in SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **MicrosoftML** è una libreria di funzioni R offerta da Microsoft che fornisce algoritmi di apprendimento automatico a prestazioni elevate. Include funzioni per il training e le trasformazioni, l'assegnazione di punteggi, l'analisi di testo e immagini e l'estrazione delle funzionalità per la derivazione di valori da dati esistenti.
 

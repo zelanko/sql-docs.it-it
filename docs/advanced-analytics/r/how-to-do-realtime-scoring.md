@@ -7,15 +7,15 @@ ms.date: 08/30/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 7aee673eb548531798f98a5a49266a2cd7211b63
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 39edb40da1ebbddfff805aca321b99ea766f085c
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345553"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470120"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Come generare previsioni e stime usando modelli di Machine Learning in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 L'uso di un modello esistente per prevedere o stimare i risultati per i nuovi input di dati è un'attività fondamentale in Machine Learning. Questo articolo enumera gli approcci per la generazione di stime in SQL Server. Tra gli approcci sono disponibili metodologie di elaborazione interne per le stime ad alta velocità, in cui la velocità è basata sulle riduzioni incrementali delle dipendenze in fase di esecuzione. Meno dipendenze significano stime più veloci.
 
