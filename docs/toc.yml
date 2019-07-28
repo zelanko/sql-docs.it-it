@@ -75,7 +75,7 @@
               href: big-data-cluster/concept-data-persistence.md
             - name: Distribuzioni offline
               href: big-data-cluster/deploy-offline.md
-            - name: Destinazioni della distribuzione
+            - name: Cluster Kubernetes
               items:
                 - name: Servizio Azure Kubernetes
                   href: big-data-cluster/deploy-on-aks.md
@@ -85,9 +85,11 @@
                   href: big-data-cluster/deploy-on-minikube.md
             - name: Script di distribuzione
               items:
-                - name: Servizio Azure Kubernetes
+                - name: Script Python per il servizio Azure Kubernetes
                   href: big-data-cluster/quickstart-big-data-cluster-deploy.md
-                - name: Eseguire la distribuzione con i notebook di Azure Data Studio
+                - name: Script kubeadm per nodo singolo
+                  href: big-data-cluster/deployment-script-single-node-kubeadm.md
+                - name: Distribuire con notebook
                   href: big-data-cluster/deploy-notebooks.md
     - name: Concetti
       items:
@@ -6670,6 +6672,8 @@
                   href: relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md
         - name: Utilità SQL Server
           href: relational-databases/manage/sql-server-utility-features-and-tasks.md
+        - name: API Valutazione SQL
+          href: sql-assessment-api/sql-assessment-api-overview.md
           items:
             - name: Considerazioni per l'esecuzione di set di raccolta dell'utilità e non appartenenti all'utilità nella stessa istanza di SQL Server
               href: relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md
@@ -7500,7 +7504,7 @@
 - name: Report e analisi
   items:
     - name: Analisi avanzata e Machine Learning >>
-      href: advanced-analytics/index.md
+      href: advanced-analytics/
     - name: Piattaforma di strumenti analitici >>
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md
