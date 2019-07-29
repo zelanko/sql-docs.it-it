@@ -1,7 +1,7 @@
 ---
 title: Funzione SQLGetEnvAttr | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLGetEnvAttr
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLGetEnvAttr
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 01f4590f-427a-4280-a1c3-18de9f7d86c1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4e3bfc22e4205657107f11b4eec145028aee6397
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0940a5a2c70a7b670ca6a81521759fd08e60461e
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911282"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345624"
 ---
 # <a name="sqlgetenvattr-function"></a>Funzione SQLGetEnvAttr
 **Conformità**  
- Versione introdotta: Conformità agli standard 3.0 di ODBC: ISO 92  
+ Versione introdotta: Conformità agli standard ODBC 3,0: ISO 92  
   
  **Riepilogo**  
- **SQLGetEnvAttr** restituisce l'impostazione corrente di un attributo di ambiente.  
+ **SQLGetEnvAttr** restituisce l'impostazione corrente di un attributo Environment.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,59 +48,59 @@ SQLRETURN SQLGetEnvAttr(
   
 ## <a name="arguments"></a>Argomenti  
  *EnvironmentHandle*  
- [Input] Handle di ambiente.  
+ Input Handle di ambiente.  
   
  *Attribute*  
- [Input] Attributo da recuperare.  
+ Input Attributo da recuperare.  
   
  *ValuePtr*  
- [Output] Puntatore a un buffer in cui restituire il valore corrente dell'attributo specificato da *attributo*.  
+ Output Puntatore a un buffer in cui restituire il valore corrente dell'attributo specificato dall' *attributo*.  
   
- Se *ValuePtr* sia impostato su NULL *StringLengthPtr* continuerà a restituire il numero totale di byte (escluso il carattere di terminazione null per i dati di tipo carattere) disponibile da restituire nel buffer a cui punta  *ValuePtr*.  
+ Se *ValuePtr* è null, *StringLengthPtr* restituisce comunque il numero totale di byte (escluso il carattere di terminazione null per i dati di tipo carattere) disponibili per restituire nel buffer a cui punta *ValuePtr*.  
   
  *BufferLength*  
- [Input] Se *ValuePtr* punta a una stringa di caratteri, la lunghezza di questo argomento deve essere \* *ValuePtr*. Se \* *ValuePtr* è un intero *BufferLength* viene ignorato. Se  *\*ValuePtr* è una stringa Unicode (quando si chiama **SQLGetEnvAttrW**), il *BufferLength* argomento deve essere un numero pari. Se il valore dell'attributo non è una stringa di caratteri *BufferLength* risulta inutilizzato.  
+ Input Se *ValuePtr* punta a una stringa di caratteri, questo argomento deve essere la lunghezza \*di *ValuePtr*. Se \* *ValuePtr* è un numero intero, *bufferLength* viene ignorato. *Se\*ValuePtr* è una stringa Unicode (quando si chiama **SQLGetEnvAttrW**), l'argomento *bufferLength* deve essere un numero pari. Se il valore dell'attributo non è una stringa di caratteri, *bufferLength* è inutilizzato.  
   
  *StringLengthPtr*  
- [Output] Un puntatore a un buffer in cui restituire il numero totale di byte (escluso il carattere di terminazione null) disponibili per restituire  *\*ValuePtr*. Se *ValuePtr* è un puntatore null, non viene restituita alcuna lunghezza. Se il valore dell'attributo è una stringa di caratteri e il numero di byte disponibili da restituire è maggiore o uguale a *BufferLength*, i dati in \* *ValuePtr* viene troncato a  *BufferLength* meno la lunghezza di un carattere di terminazione null ed è con terminazione null dal driver.  
+ Output Puntatore a un buffer in cui restituire il numero totale di byte, escluso il carattere di terminazione null, disponibile per restituire in  *\*ValuePtr*. Se *ValuePtr* è un puntatore null, non viene restituita alcuna lunghezza. Se il valore dell'attributo è una stringa di caratteri e il numero di byte disponibili per restituire è maggiore o uguale a *bufferLength*, i dati \*in *ValuePtr* vengono troncati a *bufferLength* meno la lunghezza di una terminazione null. il carattere e termina con null dal driver.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- Quando **SQLGetEnvAttr** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valore SQLSTATE associato possono essere ottenuti chiamando **SQLGetDiagRec** con un *HandleType* di SQL _ HANDLE_ENV e un *gestiscono* dei *EnvironmentHandle*. Nella tabella seguente sono elencati i valori SQLSTATE comunemente restituiti da **SQLGetEnvAttr** e illustra ognuna nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituiti da Gestione Driver. Il codice restituito a ogni valore SQLSTATE è SQL_ERROR, se non specificato diversamente.  
+ Quando **SQLGetEnvAttr** restituisce SQL_ERROR o SQL_SUCCESS_WITH_INFO, è possibile ottenere un valore SQLSTATE associato chiamando **SQLGetDiagRec** con HandleType SQL_HANDLE_ENV  e un *handle* di *EnvironmentHandle*. La tabella seguente elenca i valori SQLSTATE restituiti comunemente da **SQLGetEnvAttr** e ne illustra ognuno nel contesto di questa funzione; la notazione "(DM)" precede le descrizioni di SQLSTATE restituite da Gestione driver. Il codice restituito associato a ogni valore SQLSTATE è SQL_ERROR, a meno che non sia specificato diversamente.  
   
 |SQLSTATE|Errore|Descrizione|  
 |--------------|-----------|-----------------|  
-|01000|Avviso generale|Messaggio informativo specifico del driver. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
-|01004|Stringa troncati di dati a destra|I dati restituiti nella \* *ValuePtr* sono stati troncati per essere *BufferLength* meno il carattere di terminazione null. Viene restituita la lunghezza del valore della stringa non troncato **StringLengthPtr*. (Funzione restituisce SQL_SUCCESS_WITH_INFO).|  
-|HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  
-|HY001|Errore di allocazione della memoria|Il driver è stato in grado di allocare la memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
-|HY010|Errore nella sequenza della funzione|(DM) **SQL_ATTR_ODBC_VERSION** non è ancora stata impostata tramite **SQLSetEnvAttr**. Non è necessario impostare **SQL_ATTR_ODBC_VERSION** in modo esplicito se si usa **SQLAllocHandleStd**.|  
-|HY013|Errore di gestione della memoria|La chiamata di funzione non è stato possibile elaborare perché gli oggetti di memoria sottostante non sono accessibile, probabilmente a causa di condizioni di memoria insufficiente.|  
-|HY092|Identificatore di attributo/opzione non è valido|Il valore specificato per l'argomento *attributo* non è valido per la versione di ODBC supportati dal driver.|  
-|HY117|Connessione viene sospesa a causa dello stato di transazione sconosciuto. Solo disconnettere e le funzioni di sola lettura sono consentite.|(DM) per altre informazioni sullo stato sospeso, vedere [SQLEndTran-funzione](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Funzionalità opzionale non implementata|Il valore specificato per l'argomento *attributo* era un attributo di ambiente ODBC valido per la versione di ODBC supportati dal driver, ma non era supportata dal driver.|  
-|IM001|Driver non supporta questa funzione|(DM) il driver corrispondente per il *EnvironmentHandle* non supporta la funzione.|  
+|01000|Avviso generale|Messaggio informativo specifico del driver. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
+|01004|Dati stringa, troncati a destra|I dati restituiti in \* *ValuePtr* sono stati troncati in modo da essere *bufferLength* meno il carattere di terminazione null. La lunghezza del valore stringa untruncated viene restituita in **StringLengthPtr*. (La funzione restituisce SQL_SUCCESS_WITH_INFO.)|  
+|HY000|Errore generale|Si è verificato un errore per il quale non esiste un valore SQLSTATE specifico e per il quale non è stato definito alcun valore SQLSTATE specifico dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*buffer MessageText* descrive l'errore e la sua origine.|  
+|HY001|Errore di allocazione della memoria|Il driver non è stato in grado di allocare memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
+|HY010|Errore sequenza funzione|(DM) **SQL_ATTR_ODBC_VERSION** non è stato ancora impostato tramite **SQLSetEnvAttr**. Non è necessario impostare **SQL_ATTR_ODBC_VERSION** in modo esplicito se si usa **SQLAllocHandleStd**.|  
+|HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché non è possibile accedere agli oggetti memoria sottostante, probabilmente a causa di condizioni di memoria insufficiente.|  
+|HY092|Identificatore di attributo/opzione non valido|Il valore specificato per l' *attributo* argument non è valido per la versione di ODBC supportata dal driver.|  
+|HY117|Connessione sospesa a causa di uno stato di transazione sconosciuto. Sono consentite solo le funzioni di disconnessione e di sola lettura.|(DM) per ulteriori informazioni sullo stato Suspended, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYC00|Funzionalità facoltativa non implementata|Il valore specificato per l' *attributo* argument è un attributo dell'ambiente ODBC valido per la versione di ODBC supportata dal driver ma non supportato dal driver.|  
+|IM001|Il driver non supporta questa funzione|(DM) il driver corrispondente a *EnvironmentHandle* non supporta la funzione.|  
   
 ## <a name="comments"></a>Commenti  
- Per un elenco di attributi, vedere [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md). Non sono presenti attributi di ambiente specifiche del driver. Se *attributo* specifica un attributo che restituisce una stringa *ValuePtr* deve essere un puntatore a un buffer in cui restituire la stringa. La lunghezza massima della stringa, incluso il byte di terminazione null, saranno *BufferLength* byte.  
+ Per un elenco di attributi, vedere [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md). Non sono presenti attributi di ambiente specifici del driver. Se *attribute* specifica un attributo che restituisce una stringa, *ValuePtr* deve essere un puntatore a un buffer in cui restituire la stringa. La lunghezza massima della stringa, incluso il byte di terminazione null, sarà *bufferLength* byte.  
   
- **SQLGetEnvAttr** può essere chiamato in qualsiasi momento tra l'allocazione e la liberazione di un handle di ambiente. Tutti gli attributi di ambiente è stati impostati dall'applicazione per l'ambiente vengono mantenute fino **SQLFreeHandle** viene chiamato sulle *EnvironmentHandle* con un *HandleType*SQL_HANDLE_ENV. Più di un handle di ambiente può essere allocato contemporaneamente in ODBC 3*x*. Un attributo di ambiente in un unico ambiente non viene modificato quando è stato allocato un altro ambiente.  
+ **SQLGetEnvAttr** può essere chiamato in qualsiasi momento tra l'allocazione e la liberazione di un handle di ambiente. Tutti gli attributi dell'ambiente impostati correttamente dall'applicazione per l'ambiente vengono mantenuti fino a quando non viene chiamato **SQLFreeHandle** su *ENVIRONMENTHANDLE* con *HandleType* SQL_HANDLE_ENV. È possibile allocare più di un handle di ambiente simultaneamente in ODBC 3 *. x*. Un attributo di ambiente in un ambiente non è influenzato quando è stato allocato un altro ambiente.  
   
 > [!NOTE]
->  L'attributo di ambiente SQL_ATTR_OUTPUT_NTS è supportato dalle applicazioni conformi agli standard. Quando **SQLGetEnvAttr** viene chiamato, ODBC 3*x* gestione Driver restituisce sempre SQL_TRUE per questo attributo. SQL_ATTR_OUTPUT_NTS può essere impostato su SQL_TRUE solo da una chiamata a **SQLSetEnvAttr**.  
+>  L'attributo di ambiente SQL_ATTR_OUTPUT_NTS è supportato dalle applicazioni conformi agli standard. Quando viene chiamato **SQLGetEnvAttr** , gestione driver ODBC 3 *. x* restituisce sempre SQL_TRUE per questo attributo. SQL_ATTR_OUTPUT_NTS può essere impostato su SQL_TRUE solo tramite una chiamata a **SQLSetEnvAttr**.  
   
 ## <a name="related-functions"></a>Funzioni correlate  
   
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
-|Restituisce l'impostazione di un attributo di connessione|[Funzione SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
-|Restituisce l'impostazione di un attributo di istruzione|[Funzione SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)|  
-|Impostare un attributo di connessione|[Funzione SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
-|L'impostazione di un attributo di ambiente|[Funzione SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
-|L'impostazione di un attributo di istruzione|[Funzione SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
+|Restituzione dell'impostazione di un attributo di connessione|[Funzione SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
+|Restituzione dell'impostazione di un attributo di istruzione|[Funzione SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)|  
+|Impostazione di un attributo di connessione|[Funzione SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
+|Impostazione di un attributo Environment|[Funzione SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
+|Impostazione di un attributo di istruzione|[Funzione SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento all'API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Informazioni di riferimento sulle API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [File di intestazione ODBC](../../../odbc/reference/install/odbc-header-files.md)
