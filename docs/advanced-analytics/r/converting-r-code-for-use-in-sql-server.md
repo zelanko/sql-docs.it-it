@@ -7,15 +7,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5a3bd47d8a16a784115136935f669c420cb65e8f
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
-ms.translationtype: HT
+ms.openlocfilehash: a2bd6db3aaae2c07f6f46aecce3e7df913fc2a9e
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345122"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470243"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>Conversione del codice R per l'esecuzione in istanze di SQL Server (in-database)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Questo articolo fornisce indicazioni generali su come modificare il codice R per lavorare in SQL Server. 
 
@@ -41,9 +41,9 @@ Tuttavia, il codice potrebbe richiedere modifiche sostanziali se si verifica una
 
 + Se si intende incorporare il codice R in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), identificare le origini dati primarie e secondarie. 
 
-    + Le origini dati primarie sono set di dati di grandi dimensioni, ad esempio dati di training del modello o dati di input per le stime. Pianificare il mapping del set di dati più grande al parametro di input di [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+    + Le origini dati **primarie** sono set di dati di grandi dimensioni, ad esempio dati di training del modello o dati di input per le stime. Pianificare il mapping del set di dati più grande al parametro di input di [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + Le origini dati secondarie sono in genere set di dati più piccoli, ad esempio elenchi di fattori o variabili di raggruppamento aggiuntive. 
+    + Le origini dati **secondarie** sono in genere set di dati più piccoli, ad esempio elenchi di fattori o variabili di raggruppamento aggiuntive. 
     
     Attualmente, sp_execute_external_script supporta solo un singolo set di dati come input per il stored procedure. Tuttavia, è possibile aggiungere più input scalari o binari.
 

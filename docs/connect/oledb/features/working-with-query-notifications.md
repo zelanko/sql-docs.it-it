@@ -21,12 +21,12 @@ helpviewer_keywords:
 - consumer notification for rowset changes [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 5b563099b161fa9b55a72820edd3411a4c72b4fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 29aaab523b3a754c65b1b7a0312ceb5ea122f2d3
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988735"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419323"
 ---
 # <a name="working-with-query-notifications"></a>Utilizzo delle notifiche delle query
 
@@ -34,9 +34,9 @@ ms.locfileid: "67988735"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-Le notifiche delle query sono [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] state introdotte in e OLE DB driver per SQL Server. Basate sull'infrastruttura di Service Broker introdotta in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], tali notifiche consentono di comunicare alle applicazioni che i dati sono stati modificati. Questa caratteristica è particolarmente utile per le applicazioni che forniscono una cache di informazioni provenienti da un database, ad esempio un'applicazione Web, e devono essere notificate quando i dati di origine vengono modificati.
+Le notifiche delle query sono [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] state introdotte in e OLE DB driver per SQL Server. Basate sull'infrastruttura di Service Broker introdotta in SQL Server 2005 (9.x), tali notifiche consentono di segnalare modifiche dei dati alle applicazioni. Questa funzionalità è particolarmente utile per le applicazioni che forniscono una cache di informazioni da un database, ad esempio un'applicazione Web, e devono ricevere notifica della modifica dei dati di origine.
 
-Le notifiche delle query consentono di richiedere una notifica entro un determinato periodo di timeout quando i dati sottostanti di una query cambiano. La richiesta di notifica specifica le opzioni di notifica che includono il nome del servizio, il testo del messaggio e il valore di timeout per il server. Le notifiche vengono recapitate tramite una coda di Service Broker di cui le applicazioni possono eseguire il polling delle notifiche disponibili.
+Utilizzando le notifiche delle query, è possibile richiedere notifiche entro un periodo di timeout specificato quando vengono modificati i dati sottostanti di una query. La richiesta specifica le opzioni di notifica che includono il nome del servizio, il testo del messaggio e il valore di timeout per il server. Le notifiche vengono recapitate tramite una coda di Service Broker di cui le applicazioni possono eseguire il polling per recuperare le notifiche disponibili.
 
 La sintassi delle opzioni delle notifiche delle query è la seguente:
 
@@ -46,18 +46,18 @@ La sintassi delle opzioni delle notifiche delle query è la seguente:
 
 `service=mySSBService;local database=mydb`
 
-Le sottoscrizioni di notifica sopravvivono al processo che le avvia, in quanto un'applicazione può creare una sottoscrizione di notifica e quindi terminare. La sottoscrizione rimane valida e la notifica verrà creata se i dati vengono modificati nel periodo di timeout specificato al momento della creazione della sottoscrizione. Una notifica viene identificata dalla query eseguita, dalle opzioni di notifica e dal testo del messaggio e può essere annullata impostandone il valore di timeout su zero.
+Le sottoscrizioni di notifica sopravvivono al processo che le ha avviate. Ciò è dovuto al fatto che un'applicazione può creare una sottoscrizione di notifica e quindi terminare. La sottoscrizione rimane valida e la notifica viene creata se i dati vengono modificati entro il periodo di timeout specificato al momento della creazione della sottoscrizione. Una notifica viene identificata dalla query eseguita, dalle opzioni di notifica e dal testo del messaggio. È possibile annullarlo impostando il relativo valore di timeout su zero.
 
-Le notifiche vengono inviate una sola volta. Per la notifica continua delle modifiche dei dati, è necessario creare una nuova sottoscrizione rieseguendo la query al termine dell'elaborazione di ogni notifica.
+Le notifiche vengono inviate una sola volta. Per ricevere una notifica continua delle modifiche dei dati, creare una nuova sottoscrizione eseguendo nuovamente la query dopo l'elaborazione di ogni notifica.
 
-Le applicazioni del driver OLE DB per SQL Server in genere ricevono notifiche mediante il comando [!INCLUDE[tsql](../../../includes/tsql-md.md)] [RECEIVE](../../../t-sql/statements/receive-transact-sql.md) che consente di leggerle dalla coda associata al servizio specificato nelle opzioni di notifica.
+OLE DB driver per le applicazioni SQL Server in genere riceve le notifiche [!INCLUDE[tsql](../../../includes/tsql-md.md)] tramite il comando [Receive](../../../t-sql/statements/receive-transact-sql.md) . Usa questo comando per leggere le notifiche dalla coda associata al servizio specificato nelle opzioni di notifica.
 
 > [!NOTE]
-> I nomi di tabella devono essere qualificati nelle query per le quali è necessaria la notifica, ad esempio `dbo.myTable`, e devono essere qualificati con nomi in due parti. La sottoscrizione non è valida se vengono utilizzati nomi in tre o quattro parti.
+> I nomi di tabella devono essere qualificati nelle query per le quali è richiesta la notifica. Ad esempio, `dbo.myTable`. I nomi di tabella devono essere qualificati con nomi in due parti. La sottoscrizione non è valida se vengono utilizzati nomi in tre o quattro parti.
 
-L'infrastruttura della notifica si basa su una caratteristica di accodamento introdotta in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. In genere, le notifiche generate sul server vengono inviate tramite queste code in modo da essere elaborate in un secondo momento.
+L'infrastruttura della notifica si basa su una caratteristica di accodamento introdotta in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. In genere, le notifiche generate nel server vengono inviate tramite queste code in modo da essere elaborate in un secondo momento.
 
-Per utilizzare le notifiche delle query è necessario che sul server siano disponibili una coda e un servizio. Tali elementi possono essere creati utilizzando [!INCLUDE[tsql](../../../includes/tsql-md.md)] come illustrato di seguito:
+Per usare le notifiche delle query, è necessario che nel server siano disponibili una coda e un servizio. Questi possono essere creati usando il [!INCLUDE[tsql](../../../includes/tsql-md.md)] comando, simile al seguente:
 
 ```sql
 CREATE QUEUE myQueue
@@ -66,26 +66,28 @@ CREATE SERVICE myService ON QUEUE myQueue
 ```
 
 > [!NOTE]
-> Come indicato sopra, il servizio deve usare il contratto predefinito.
+> Come mostrato sopra, il servizio deve usare il contratto predefinito.
 
 ## <a name="ole-db-driver-for-sql-server"></a>Driver OLE DB per SQL Server
 
-Il driver OLE DB per SQL Server supporta la notifica del consumer per la modifica del set di righe. Il consumer riceve una notifica a ogni fase di modifica dei set di righe e a ogni tentativo di modifica.
+Il driver OLE DB per SQL Server supporta le notifiche del consumer durante la modifica del set di righe. Il consumer riceve una notifica a ogni fase di modifica dei set di righe e a ogni tentativo di modifica.
 
 > [!NOTE]
 > Il passaggio di una query di notifica al server mediante **ICommand::Execute** rappresenta l'unico modo valido per sottoscrivere le notifiche delle query con il driver OLE DB per SQL Server.
 
-### <a name="the-dbpropsetsqlserverrowset-property-set"></a>Set di proprietà DBPROPSET_SQLSERVERROWSET
+### <a name="dbpropsetsqlserverrowset-property-set"></a>Set di proprietà DBPROPSET_SQLSERVERROWSET
 
-Per supportare le notifiche delle query tramite OLE DB, il driver OLE DB per SQL Server aggiunge le nuove proprietà seguenti al set di proprietà DBPROPSET_SQLSERVERROWSET.
+Per supportare le notifiche delle query tramite OLE DB, il driver OLE DB per SQL Server aggiunge le nuove proprietà seguenti al set di proprietà `DBPROPSET_SQLSERVERROWSET`.
 
 |nome|Tipo|Descrizione|
 |----------|----------|-----------------|
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Numero di secondi durante i quali la notifica di query deve rimanere attiva.<br /><br /> Il valore predefinito è 432,000 secondi (5 giorni). Il valore minimo è 1 secondo e il valore massimo è 2^31-1 secondi.|
-|SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Testo del messaggio di notifica. Tale testo è definito dall'utente e non presenta un formato predefinito.<br /><br /> Per impostazione predefinita, la stringa è vuota. È possibile specificare un messaggio utilizzando da 1 a 2000 caratteri.|
+|SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Testo del messaggio di notifica. Tale testo è definito dall'utente e non ha un formato predefinito.<br /><br /> Per impostazione predefinita, la stringa è vuota. Specificare un messaggio usando da 1 a 2000 caratteri.|
 |SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Opzioni di notifica delle query. Tali opzioni vengono specificate in una stringa con la sintassi *nome*=*valore*. L'utente è responsabile della creazione del servizio e della lettura delle notifiche all'esterno della coda.<br /><br /> Il valore predefinito è una stringa vuota.|
 
-Il commit della sottoscrizione di notifica viene sempre eseguito, indipendentemente dall'esecuzione dell'istruzione in una transazione utente o in modalità di commit automatico o a prescindere se la transazione in cui è stata eseguita l'istruzione sia stata sottoposta a commit o a rollback. La notifica server viene generata in seguito a una delle condizioni di notifica non valide seguenti: modifica dello schema o dei dati sottostanti o raggiungimento del periodo di timeout, a seconda dell'evento che si verifica per primo. Le registrazioni della notifica vengono eliminate subito dopo essere state generate. In seguito alla ricezione delle notifiche, è pertanto necessario che venga effettuata nuovamente la sottoscrizione se si desidera ottenere ulteriori aggiornamenti.
+Viene sempre eseguito il commit della sottoscrizione di notifica. Ciò si verifica indipendentemente dal fatto che l'istruzione sia stata eseguita in una transazione utente o in un autocommit o se la transazione in cui è stata eseguita l'istruzione è stata sottoposta a commit o rollback. La notifica server viene generata in seguito a una delle condizioni di notifica non valide seguenti: modifica dello schema o dei dati sottostanti o raggiungimento del periodo di timeout, a seconda dell'evento che si verifica per primo. 
+
+Le registrazioni della notifica vengono eliminate subito dopo essere state generate. Al momento della ricezione delle notifiche, l'applicazione deve pertanto effettuare nuovamente la sottoscrizione se si vogliono ottenere ulteriori aggiornamenti.
 
 Un'altra connessione o un altro thread può verificare la presenza di notifiche nella coda di destinazione. Esempio:
 
@@ -94,22 +96,22 @@ WAITFOR (RECEIVE * FROM MyQueue); -- Where MyQueue is the queue name.
 ```
 
 > [!NOTE]
-> SELECT * non elimina la voce dalla coda, diversamente da RECEIVE \* FROM. Di conseguenza un thread del server viene bloccato se la coda è vuota. Se al momento della chiamata sono presenti voci nella coda, vengono restituite immediatamente. In caso contrario, la chiamata resta in attesa finché non viene creata una voce della coda.
+> `SELECT *`non elimina la voce dalla coda. Tuttavia, `RECEIVE * FROM` fa. Di conseguenza un thread del server viene bloccato se la coda è vuota. Se al momento della chiamata sono presenti voci della coda, vengono restituite immediatamente. In caso contrario, la chiamata attende fino a quando non viene eseguita una voce della coda.
 
 ```sql
 RECEIVE * FROM MyQueue
 ```
 
-Questa istruzione restituisce immediatamente un set di risultati vuoto se la coda è vuota. In caso contrario, restituisce tutte le notifiche della coda.
+Questa istruzione restituisce immediatamente un set di risultati vuoto se la coda è vuota. In caso contrario, vengono restituite tutte le notifiche della coda.
 
-Se le proprietà SSPROP_QP_NOTIFICATION_MSGTEXT e SSPROP_QP_NOTIFICATION_OPTIONS sono diverse da Null e non vuote, l'intestazione TDS delle notifiche delle query contenente le tre proprietà definite sopra viene inviata al server a ogni esecuzione del comando. Se una di esse è Null o vuota, l'intestazione non viene inviata e viene generato DB_E_ERRORSOCCURRED, o DB_S_ERRORSOCCURRED se le proprietà sono entrambe contrassegnate come facoltative, e il valore dello stato viene impostato su DBPROPSTATUS_BADVALUE. La convalida viene effettuata in fase di esecuzione/preparazione. Analogamente, DB_S_ERRORSOCCURED viene generato quando le proprietà della notifica di query sono impostate per le connessioni alle versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Il valore dello stato in questo caso è DBPROPSTATUS_NOTSUPPORTED.
+Se `SSPROP_QP_NOTIFICATION_MSGTEXT` e`SSPROP_QP_NOTIFICATION_OPTIONS` sono non null e non vuoti, l'intestazione TDS per le notifiche delle query che contiene le tre proprietà definite in precedenza viene inviata al server. Questa operazione si verifica a ogni esecuzione del comando. Se una di esse è null (o vuota), l'intestazione non viene inviata `DB_E_ERRORSOCCURRED` e viene generata ( `DB_S_ERRORSOCCURRED` o viene generato se le proprietà sono entrambe contrassegnate come facoltative). Il valore di stato viene quindi impostato `DBPROPSTATUS_BADVALUE`su. La convalida si verifica al momento dell'esecuzione e della preparazione. Analogamente, `DB_S_ERRORSOCCURED` viene generato quando le proprietà della notifica di query sono impostate per le connessioni alle versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Il valore di stato in questo caso `DBPROPSTATUS_NOTSUPPORTED`è.
 
 L'avvio di una sottoscrizione non garantisce il corretto recapito dei messaggi successivi. Inoltre, non viene effettuato alcun controllo della validità del nome di servizio specificato.
 
 > [!NOTE]
-> La preparazione delle istruzioni non causerà mai l'avvio della sottoscrizione. Tale operazione verrà effettuata solo mediante l'esecuzione delle istruzioni. L'uso dei servizi OLE DB di base non influisce sulle notifiche delle query.
+> La preparazione delle istruzioni non causerà mai l'avvio della sottoscrizione. L'avvio viene raggiunto solo dall'esecuzione di istruzioni. Le notifiche delle query non influiscono sull'uso dei servizi OLE DB Core.
 
-Per ulteriori informazioni sul set di proprietà DBPROPSET_SQLSERVERROWSET, vedere [proprietà e comportamenti dei set di righe](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md).
+Per ulteriori informazioni sul `DBPROPSET_SQLSERVERROWSET` set di proprietà, vedere [proprietà e comportamenti dei set di righe](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md).
 
 ## <a name="see-also"></a>Vedere anche
 
