@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b7f9083bc5021415691d04da25d6e5e6297031a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b77faf60734e6aad7248c59d37033b26bb6b92e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620131"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903205"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurare IIS 7 per la sincronizzazione Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47620131"
  Per una panoramica del processo di configurazione, vedere [Configurare la sincronizzazione Web](../../relational-databases/replication/configure-web-synchronization.md).  
   
 > [!IMPORTANT]  
->  Verificare che nell'applicazione venga utilizzato solo [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] o versione successiva e che le versioni precedenti di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] non siano installate sul server IIS. Le versioni precedenti di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] possono causare errori, ad esempio "Formato di messaggio non valido durante la sincronizzazione Web. Verificare che i componenti di replica siano configurati correttamente nel server Web".  
+>  Verificare che nell'applicazione venga utilizzato solo [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] o versione successiva e che le versioni precedenti di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] non siano installate sul server IIS. Le versioni precedenti di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] possono causare errori, ad esempio: "Formato di messaggio non valido durante la sincronizzazione Web. Verificare che i componenti di replica siano configurati correttamente nel server Web".  
   
  Per utilizzare la sincronizzazione Web, è necessario configurare IIS eseguendo la procedura seguente. Ogni passaggio è descritto in dettaglio in questo argomento.  
   
@@ -67,7 +66,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
 6.  Creare una directory virtuale in IIS. È consigliabile creare la directory virtuale nel sito Web creato nel passaggio 4 ed eseguirne il mapping alla directory creata nel passaggio 1. È consigliabile applicare le massime restrizioni nell'assegnazione delle autorizzazioni per questa directory. È necessario selezionare almeno autorizzazioni **Lettura** ed **Esecuzione** .  
   
-    1.  In **Gestione Internet Information Services (IIS)**, nel riquadro **Connessioni** fare clic con il pulsante destro del mouse su **Sito Web predefinito**, quindi selezionare **Aggiungi directory virtuale**.  
+    1.  In **Gestione Internet Information Services (IIS)** , nel riquadro **Connessioni** fare clic con il pulsante destro del mouse su **Sito Web predefinito**, quindi selezionare **Aggiungi directory virtuale**.  
   
     2.  In **Alias**immettere **SQLReplication**.  
   
@@ -160,9 +159,9 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
 1.  In **Gestione Internet Information Services (IIS)** fare clic su **Sito Web predefinito.**  
   
-2.  Nel riquadro **Azioni** fare clic su **Sfoglia \*:443 (https)**.  
+2.  Nel riquadro **Azioni** fare clic su **Sfoglia \*:443 (https)** .  
   
-3.  Verrà aperto Internet Explorer e verrà visualizzato il messaggio "Si è verificato un problema con il certificato di sicurezza del sito Web". Questo avviso suggerisce che il certificato associato non è stato rilasciato da una CA riconosciuta e potrebbe non essere attendibile. Si tratta di un avviso previsto, pertanto fare clic su **Continuare con il sito Web (scelta non consigliata)**.  
+3.  Verrà aperto Internet Explorer e verrà visualizzato il messaggio "Si è verificato un problema con il certificato di sicurezza del sito Web". Questo avviso suggerisce che il certificato associato non è stato rilasciato da una CA riconosciuta e potrebbe non essere attendibile. Si tratta di un avviso previsto, pertanto fare clic su **Continuare con il sito Web (scelta non consigliata)** .  
   
 4.  Se viene visualizzata la richiesta **Connetti a localhost**, immettere un nome utente e una password per continuare. Dovrebbe venire visualizzata la pagina predefinita del sito Web.  
   
@@ -229,9 +228,9 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
     6.  Selezionare gli utenti o i gruppi che non necessitano dell'accesso alla directory, quindi fare clic su **Rimuovi**e su **OK**.  
   
-4.  Creare un pool di applicazioni in **Gestione Internet Information Services (IIS)**:  
+4.  Creare un pool di applicazioni in **Gestione Internet Information Services (IIS)** :  
   
-    1.  In **Gestione Internet Information Services (IIS)**, nel riquadro **Connessioni** espandere il nodo del server locale.  
+    1.  In **Gestione Internet Information Services (IIS)** , nel riquadro **Connessioni** espandere il nodo del server locale.  
   
     2.  Fare clic con il pulsante destro del mouse su **Pool di applicazioni**, quindi scegliere **Aggiungi pool di applicazioni**.  
   

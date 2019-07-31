@@ -36,13 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: be67801f6f386bd4d63a5edc3459820075628864
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 9c09ce1ef34e7355651be0aab473ca39bd2dae1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334778"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901967"
 ---
 # <a name="hints-transact-sql---table"></a>Hint (Transact-SQL) - Tabella
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -122,13 +121,13 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-WITH **(** \<table_hint> **)** [ [**,** ]...*n* ]  
+WITH **(** \<table_hint> **)** [ [ **,** ]...*n* ]  
 Con alcune eccezioni, gli hint di tabella sono supportati nella clausola FROM solo se vengono specificati con la parola chiave WITH. Tali hint devono inoltre essere racchiusi tra parentesi.  
   
 > [!IMPORTANT]  
 > L'omissione della parola chiave WITH è una funzionalità deprecata: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-Gli hint di tabella seguenti sono supportati con e senza la parola chiave WITH: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT e NOEXPAND. Se vengono specificati senza la parola chiave WITH, questi hint devono essere specificati da soli. Ad esempio  
+Gli hint di tabella seguenti sono supportati con e senza la parola chiave WITH: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT e NOEXPAND. Se vengono specificati senza la parola chiave WITH, questi hint devono essere specificati da soli. Esempio:  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -148,7 +147,7 @@ Si consiglia di separare gli hint di tabella tramite virgole.
 NOEXPAND  
 Specifica che qualsiasi vista indicizzata non verrà espansa per accedere alle tabelle sottostanti quando Query Optimizer elabora la query. In Query Optimizer la vista viene gestita come una tabella con indici cluster. L'hint NOEXPAND è applicabile solo alle viste indicizzate. Per altre informazioni, vedere [Utilizzo di NOEXPAND](#using-noexpand).  
   
-INDEX  **(**_index\_value_ [**,**... _n_ ] ) | INDEX =  ( _index\_value_**)**  
+INDEX  **(** _index\_value_ [ **,** ... _n_ ] ) | INDEX =  ( _index\_value_ **)**  
 La sintassi INDEX() consente di specificare i nomi o gli ID di uno o più indici che devono essere usati in Query Optimizer quando viene elaborata l'istruzione. La sintassi alternativa INDEX = specifica un singolo valore di indice. È possibile specificare solo un hint per l'indice per ogni tabella.  
   
 Se esiste un indice cluster, INDEX(0) attiva un'analisi degli indici cluster, mentre INDEX(1) esegue un'analisi o una ricerca degli indici cluster. Se non esiste alcun indice cluster, INDEX(0) attiva un'analisi di tabella, mentre INDEX(1) viene interpretato come errore.  
@@ -177,9 +176,9 @@ Applicabile solo in un'istruzione INSERT se viene usata l'opzione BULK con [OPEN
   
 Specifica l'inserimento di un valore predefinito per la colonna della tabella, se disponibile, al posto del valore NULL quando nel record di dati non è presente un valore per la colonna.  
   
-Per un esempio di utilizzo di questo hint in un'istruzione INSERT ... SELECT * FROM OPENROWSET(BULK...), vedere [Mantenere i valori Null o usare i valori predefiniti durante un'importazione bulk &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
+Per un esempio d'uso di questo hint in un'istruzione INSERT... SELECT * FROM OPENROWSET(BULK...), vedere [Mantenere i valori Null o usare i valori predefiniti durante un'importazione bulk &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
-FORCESEEK [ **(**_index\_value_**(**_index\_column\_name_ [ **,**... _n_ ] **))** ]  
+FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] **))** ]  
 Specifica che Query Optimizer deve usare solo un'operazione di ricerca nell'indice come percorso di accesso ai dati della tabella o della vista. 
 
 > [!NOTE]
@@ -412,7 +411,7 @@ Tuttavia, affinché Query Optimizer utilizzi le viste indicizzate oppure una vis
 ## <a name="using-a-table-hint-as-a-query-hint"></a>Utilizzo di un hint di tabella come hint per la query  
  Gli *hint di tabella* possono anche essere specificati come hint per la query tramite la clausola OPTION (TABLE HINT). È consigliabile usare un hint di tabella come hint per la query solo nel contesto di una [guida di piano](../../relational-databases/performance/plan-guides.md). Per le query ad hoc, specificare questi hint solo come hint di tabella. Per altre informazioni, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Gli hint KEEPIDENTITY, IGNORE_CONSTRAINTS e IGNORE_TRIGGERS richiedono l'autorizzazione ALTER sulla tabella.  
   
 ## <a name="examples"></a>Esempi  
@@ -428,7 +427,7 @@ WHERE ProductNumber LIKE 'BK-%';
 GO  
 ```  
   
-### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>b. Utilizzo dell'hint FORCESEEK per specificare un'operazione di ricerca nell'indice  
+### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>B. Utilizzo dell'hint FORCESEEK per specificare un'operazione di ricerca nell'indice  
  Nell'esempio seguente viene utilizzato l'hint FORCESEEK senza specificare un indice per forzare l'esecuzione di un'operazione Index Seek da parte di Query Optimizer nella tabella `Sales.SalesOrderDetail` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql

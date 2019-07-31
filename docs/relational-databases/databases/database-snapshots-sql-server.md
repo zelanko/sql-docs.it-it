@@ -18,17 +18,18 @@ helpviewer_keywords:
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4507a56146b6324e065d6d24a19855292ebf5276
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
+ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861234"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68300432"
 ---
 # <a name="database-snapshots-sql-server"></a>Snapshot del database (SQL Server)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Uno snapshot del database è una vista statica di sola lettura di un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ovvero il *database di origine*. Lo snapshot del database è consistente dal punto di vista transazionale con il database di origine al momento della creazione dello snapshot. Lo snapshot di un database deve risiedere sempre nella stessa istanza del server dove si trova il relativo database di origine. Con l'aggiornamento del database di origine, viene aggiornato anche lo snapshot del database. Pertanto, più a lungo viene conservato uno snapshot del database, più è probabile che utilizzi tutto il proprio spazio disponibile su disco.  
+
+Uno snapshot del database è una vista statica di sola lettura di un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ovvero il *database di origine*. Lo snapshot del database è consistente dal punto di vista transazionale con il database di origine al momento della creazione dello snapshot. Lo snapshot di un database deve risiedere sempre nella stessa istanza del server dove si trova il relativo database di origine. Sebbene gli snapshot del database offrano una visualizzazione di sola lettura dei dati nello stesso stato in cui è stato creato lo snapshot, le dimensioni del file di snapshot aumentano man mano che vengono apportate modifiche al database di origine. Per informazioni dettagliate, vedere la sezione [Panoramica delle caratteristiche](#FeatureOverview) riportata di seguito.
   
  È possibile generare più snapshot di uno stesso database di origine. Ogni snapshot del database viene mantenuto finché non viene eliminato esplicitamente dal proprietario del database.  
   

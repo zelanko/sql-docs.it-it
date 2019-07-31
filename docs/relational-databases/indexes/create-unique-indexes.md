@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: caec4221795ed991c01d635931989499302b0c1d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7129c5feb6bc23a7e72dddfa70a10d4d2bc0811c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898598"
 ---
 # <a name="create-unique-indexes"></a>Creare indici univoci
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "52515078"
 > [!NOTE]  
 >  Non è possibile creare un indice univoco in un'unica colonna se in essa è contenuto il valore NULL in più righe. Analogamente, non è possibile creare un indice univoco su più colonne se la combinazione di colonne contiene il valore NULL in più righe. Ai fini dell'indicizzazione, questi valori sono considerati duplicati.  
   
- **Contenuto dell'argomento**  
+ **Contenuto dell'articolo**  
   
 -   **Prima di iniziare:**  
   
@@ -116,7 +115,7 @@ ms.locfileid: "52515078"
   
 7.  In **(Generale)** nella griglia principale selezionare **Tipo** , quindi scegliere **Indice** dall'elenco.  
   
-8.  Selezionare **Colonne** e quindi fare clic sul pulsante con i puntini di sospensione **(...)**.  
+8.  Selezionare **Colonne** e quindi fare clic sul pulsante con i puntini di sospensione **(...)** .  
   
 9. In **Nome colonna** della finestra di dialogo **Colonne indice**selezionare le colonne da indicizzare. È possibile selezionare fino a 16 colonne. Per ottenere prestazioni ottimali, selezionare una o due colonne per indice. Per ogni colonna selezionata, è possibile specificare se nell'indice i valori della colonna dovranno essere organizzati in ordine crescente o decrescente.  
   
@@ -124,7 +123,7 @@ ms.locfileid: "52515078"
   
 11. In **(Generale)** nella griglia principale selezionare **Univoco** , quindi scegliere **Sì** dall'elenco.  
   
-12. Facoltativo: In **Progettazione tabelle**nella griglia principale selezionare **Ignora chiavi duplicate** , quindi scegliere **Sì** dall'elenco. Eseguire questa operazione se si desidera ignorare i tentativi per aggiungere dati che comporterebbero la creazione di una chiave duplicata nell'indice univoco.  
+12. Facoltativo: in **Progettazione tabelle** nella griglia principale selezionare **Ignora chiavi duplicate**, quindi scegliere **Sì** dall'elenco. Eseguire questa operazione se si desidera ignorare i tentativi per aggiungere dati che comporterebbero la creazione di una chiave duplicata nell'indice univoco.  
   
 13. Scegliere **Chiudi**.  
   
@@ -138,13 +137,13 @@ ms.locfileid: "52515078"
   
 3.  Espandere la tabella in cui si desidera creare un indice univoco.  
   
-4.  Fare clic con il pulsante destro del mouse sulla cartella **Indici**, scegliere **Nuovo indice** e selezionare **Indice non cluster**.  
+4.  Fare clic con il pulsante destro del mouse sulla cartella **Indici**, scegliere **Nuovo indice**e selezionare **Indice non cluster**.  
   
 5.  Nella pagina **Generale** della finestra di dialogo **Nuovo indice** immettere il nome del nuovo indice nella casella **Nome indice** .  
   
 6.  Selezionare la casella di controllo **Univoco** .  
   
-7.  In **Colonne chiave indice** fare clic su **Aggiungi**.  
+7.  In **Colonne chiave indice**fare clic su **Aggiungi**.  
   
 8.  Nella finestra di dialogo **Seleziona colonne da**_nome\_tabella_ selezionare le caselle di controllo delle colonne della tabella da aggiungere all'indice univoco.  
   
@@ -160,7 +159,7 @@ ms.locfileid: "52515078"
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;  

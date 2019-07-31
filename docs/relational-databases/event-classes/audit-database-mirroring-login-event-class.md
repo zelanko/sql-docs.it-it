@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 66da3f496c244a63055020d02a41560279712099
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb9c8b9774be0daa74b30bfd51ee97bf1e2271c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679859"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903447"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Classe di evento Audit Database Mirroring Login
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

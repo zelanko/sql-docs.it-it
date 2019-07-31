@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f25c7527000cb95878b60f4dfe05be4b47f943bb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 621387ca62340818cbe8d5529de17bcdf7e96884
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532738"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999372"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Scenari di utilizzo delle tabelle temporali
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +139,7 @@ FROM Employee
 > Se si applica AT TIME ZONE alle colonne del periodo, SQL Server esegue un'analisi di tabella/indice, che può risultare molto costosa. Per ovviare a questo tipo di condizione nelle query:  
 > \<colonna PERIOD>  AT TIME ZONE '\<<fuso orario>'  >  {< | > | =, ...} date_condition.  
   
- Vedere anche: [Querying Data in a System-Versioned Temporal Table](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)(Esecuzione di query sui dati in una tabella temporale con controllo delle versioni di sistema).  
+ Vedere anche: [Query sui dati in una tabella temporale con controllo delle versioni di sistema](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).  
   
 ## <a name="point-in-time-analysis-time-travel"></a>Analisi temporizzate (spostamento cronologico)  
  A differenza del controllo dei dati, in cui lo stato attivo è in genere sulle modifiche apportate ai singoli record, negli scenari di spostamento cronologico gli utenti vogliono visualizzare le modifiche di interi set di dati nel tempo. A volte lo spostamento cronologico include diverse tabelle temporali correlate, ognuna delle quali viene modificata con una frequenza diversa, per cui si vogliono analizzare:  
@@ -427,15 +426,15 @@ FROM CTE
   
  Esistono diverse categorie di dimensioni a modifica lenta basate sulla modalità di mantenimento della cronologia delle modifiche:  
   
--   Tipo 0: la cronologia non viene mantenuta. Gli attributi delle dimensioni riflettono i valori originali.  
+-   Tipo 0:  la cronologia non viene mantenuta. Gli attributi delle dimensioni riflettono i valori originali.  
   
--   Tipo 1: gli attributi delle dimensioni riflettono i valori più recenti. I valori precedenti vengono sovrascritti.  
+-   Tipo 1:  gli attributi delle dimensioni riflettono i valori più recenti. I valori precedenti vengono sovrascritti  
   
--   Tipo 2: ogni versione del membro di dimensione è rappresentato con una riga separata nella tabella, in genere con colonne che rappresentano il periodo di validità.  
+-   Tipo 2:  ogni versione del membro di dimensione è rappresentato con una riga separata nella tabella, in genere con colonne che rappresentano il periodo di validità  
   
--   Tipo 3: mantenimento di una cronologia limitata per gli attributi selezionati, usando colonne aggiuntive nella stessa riga.  
+-   Tipo 3: mantenimento di una cronologia limitata per gli attributi selezionati, usando colonne aggiuntive nella stessa riga  
   
--   Tipo 4: mantenimento della cronologia nella tabella separata, mentre la tabella delle dimensioni originale mantiene le versioni dei membri di dimensione più recenti (correnti).  
+-   Tipo 4: mantenimento della cronologia nella tabella separata, mentre la tabella delle dimensioni originale mantiene le versioni dei membri di dimensione più recenti (correnti)  
   
  Quando si sceglie una strategia basata su dimensioni a modifica lenta, è responsabilità del livello ETL (Extract-Transform-Load) mantenere tabelle delle dimensioni accurate, che in genere richiedono una notevole quantità di codice e una manutenzione complessa.  
   

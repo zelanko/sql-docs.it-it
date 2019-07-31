@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 2963dd3f867b4080d383f51dc9f41baf0a1733ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a90f9b303fa285c5fc826aab232abe3e07166992
+ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66793735"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354599"
 ---
 # <a name="configure-a-distributed-always-on-availability-group"></a>Configurare un gruppo di disponibilità distribuito Always On  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,10 +81,10 @@ GO
 ```  
   
 >[!NOTE]
->L'esempio precedente usa il seeding diretto, dove **SEEDING_MODE** è impostato su **AUTOMATIC** per le repliche e il gruppo di disponibilità distribuito. Questa configurazione imposta le repliche secondarie e il gruppo di disponibilità secondario in modo che vengano popolati automaticamente senza richiedere alcun backup e ripristino manuale del database primario.  
+>L'esempio precedente usa il seeding automatico, dove **SEEDING_MODE** è impostato su **AUTOMATIC** per le repliche e il gruppo di disponibilità distribuito. Questa configurazione imposta le repliche secondarie e il gruppo di disponibilità secondario in modo che vengano popolati automaticamente senza richiedere alcun backup e ripristino manuale del database primario.  
   
 ### <a name="join-the-secondary-replicas-to-the-primary-availability-group"></a>Creare un join delle repliche secondarie al gruppo di disponibilità primario  
-È necessario creare un join tra tutte le repliche secondarie al gruppo di disponibilità tramite **ALTER AVAILABILITY GROUP** con l'opzione **JOIN** . Dal momento che in questo esempio viene usato il seeding diretto, è necessario chiamare anche  **ALTER AVAILABILITY GROUP** con l'opzione **GRANT CREATE ANY DATABASE** . Questa impostazione consente al gruppo di disponibilità di creare il database e avviare il seeding automatico dalla replica primaria.  
+È necessario creare un join tra tutte le repliche secondarie al gruppo di disponibilità tramite **ALTER AVAILABILITY GROUP** con l'opzione **JOIN** . Dal momento che in questo esempio viene usato il seeding automatico, è necessario chiamare anche **ALTER AVAILABILITY GROUP** con l'opzione **GRANT CREATE ANY DATABASE**. Questa impostazione consente al gruppo di disponibilità di creare il database e avviare il seeding automatico dalla replica primaria.  
   
 In questo esempio i seguenti comandi vengono eseguiti sulla replica secondaria, `server2`, per creare un join del gruppo di disponibilità `ag1` . Il gruppo di disponibilità può quindi creare database sulla replica secondaria.  
   
@@ -136,7 +135,7 @@ GO
 > Il gruppo di disponibilità secondario deve usare lo stesso endpoint del mirroring del database (in questo esempio la porta 5022). In caso contrario, la replica verrà interrotta dopo un failover locale.  
   
 ### <a name="join-the-secondary-replicas-to-the-secondary-availability-group"></a>Creare un join delle repliche secondarie al gruppo di disponibilità secondario  
- In questo esempio i seguenti comandi vengono eseguiti sulla replica secondaria, `server4`, per creare un join del gruppo di disponibilità `ag2` . Il gruppo di disponibilità può quindi creare database sulla replica secondaria per supportare il seeding diretto.  
+ In questo esempio i seguenti comandi vengono eseguiti sulla replica secondaria, `server4`, per creare un join del gruppo di disponibilità `ag2` . Il gruppo di disponibilità può quindi creare database sulla replica secondaria per supportare il seeding automatico.  
   
 ```sql  
 ALTER AVAILABILITY GROUP [ag2] JOIN   

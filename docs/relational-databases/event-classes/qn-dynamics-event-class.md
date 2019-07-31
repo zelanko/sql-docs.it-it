@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 3c1ffa0c-c9e5-40a6-a26b-28339f60ebc3
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: edfa72f4206896897cc449caa0d709f0ae5f51dd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 575ca341e19d36055d7780fd1deec8d05e370111
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940611"
 ---
 # <a name="qndynamics-event-class"></a>Classe di evento QN:Dynamics
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "51675890"
 |DatabaseName|**nvarchar**|Nome del database in cui viene eseguita l'istruzione dell'utente.|35|Sì|  
 |EventClass|**int**|Tipo di evento = 202.|27|no|  
 |EventSequence|**int**|Numero di sequenza dell'evento.|51|no|  
-|EventSubClass|**nvarchar**|Tipo di sottoclasse di evento in cui sono disponibili informazioni aggiuntive su ogni classe di evento. Questa colonna può contenere i valori seguenti:<br /><br /> **Clock run started**: indica che è stato avviato il thread in background nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] che pianifica le tabelle di parametri scadute per la pulizia.<br /><br /> **Clock run finished**: indica che il thread in background nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] che pianifica le tabelle di parametri scadute per la pulizia è terminato.<br /><br /> **Master cleanup task started**: indica quando viene avviata la pulizia (Garbage Collection) per rimuovere i dati di sottoscrizione di notifica delle query scaduti.<br /><br /> **Master cleanup task finished**: indica quando termina la pulizia (Garbage Collection) per rimuovere i dati di sottoscrizione di notifica delle query scaduti.<br /><br /> **Master cleanup task skipped**: indica che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non ha eseguito la pulizia (Garbage Collection) per rimuovere i dati di sottoscrizione di notifica delle query scaduti.|21|Sì|  
+|EventSubClass|**nvarchar**|Tipo di sottoclasse di evento in cui sono disponibili informazioni aggiuntive su ogni classe di evento. Questa colonna può contenere i valori seguenti:<br /><br /> **Clock run started**: indica che è stato avviato il thread in background nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] che pianifica le tabelle di parametri scadute per la pulizia.<br /><br /> **Clock run finished**: indica che è terminato il thread in background nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] che pianifica le tabelle di parametri scadute per la pulizia.<br /><br /> **Master cleanup task started**: indica quando viene avviata la pulizia (Garbage Collection) per rimuovere i dati di sottoscrizione di notifica delle query.<br /><br /> **Master cleanup task finished**: indica quando viene terminata la pulizia (Garbage Collection) per rimuovere i dati di sottoscrizione di notifica delle query.<br /><br /> **Master cleanup task skipped**: indica che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non ha eseguito la pulizia (Garbage Collection) per rimuovere i dati di sottoscrizione di notifica delle query.|21|Sì|  
 |GroupID|**int**|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
 |HostName|**nvarchar**|Nome del computer in cui è in esecuzione il client. Questa colonna di dati viene popolata se il nome host viene fornito dal client. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |IsSystem|**int**|Indica se l'evento è stato generato per un processo di sistema o un processo utente.<br /><br /> 0 = utente<br /><br /> 1 = sistema|60|no|  

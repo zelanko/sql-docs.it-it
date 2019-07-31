@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48d62232c5d481ccbb6204f5ba14465dea75ca30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 022e1228a9796dadddc4d9adfd20b4faeda35515
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946567"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307641"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisiti per la registrazione minima nell'importazione bulk
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "64946567"
   
 -   La tabella di destinazione non viene replicata.  
   
--   Il blocco di tabella è specificato (utilizzando TABLOID). Per la tabella con indice columnstore di cluster, non è necessaria l'opzione TABLOCK per la registrazione minima.  Inoltre, viene eseguita la registrazione minima solo del caricamento dei dati in gruppi di righe compressi, che richiede una proprietà batchsize pari a 102400 o superiori.  
+-   Il blocco di tabella è specificato (utilizzando TABLOID). Per la tabella con indice columnstore di cluster, non è necessaria l'opzione TABLOCK per la registrazione minima.  Inoltre viene eseguita la registrazione minima solo dei dati caricati in gruppi di righe compressi, che richiede una proprietà batchsize con valore pari a 102400 o superiore.  
   
     > [!NOTE]  
     >  Sebbene gli inserimenti di dati non vengano registrati nel log delle transazioni quando viene eseguita un'importazione bulk con registrazione minima, nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] vengono registrate le allocazioni degli extent per ogni nuovo extent allocato alla tabella.  
@@ -50,17 +49,15 @@ ms.locfileid: "64946567"
   
 -   Se la tabella non include indici cluster ma uno o più indici non cluster, le pagine di dati vengono sempre registrate con registrazione minima. La modalità di registrazione delle pagine di indice, tuttavia, dipende dal fatto che la tabella sia o meno vuota:  
   
-    -   Se la tabella è vuota, le pagine di indice vengono registrate tramite registrazione minima.  
+    -   Se la tabella è vuota, le pagine di indice vengono registrate tramite registrazione minima.  Se si parte da una tabella vuota e si esegue l'importazione bulk dei dati in più batch, per il primo batch le pagine di indice e di dati vengono registrate con registrazione minima. A partire dal secondo batch, tuttavia, la registrazione minima viene applicata solo alle pagine di dati. 
   
-    -   Se la tabella non è vuota, le pagine di indice vengono registrate tramite registrazione completa.  
+    -   Se la tabella non è vuota, le pagine di indice vengono registrate tramite registrazione completa.    
+
+-   Se la tabella include un indice cluster ed è vuota, le pagine di dati e di indice vengono registrate tramite registrazione minima. Se invece una tabella include un indice cluster basato sull'albero B e non è vuota, le pagine di dati e di indice vengono registrate con registrazione completa indipendentemente dal modello di recupero. Se si parte da una tabella rowstore vuota e si esegue l'importazione bulk dei dati in batch, per il primo batch le pagine di indice e di dati vengono registrate con registrazione minima. A partire dal secondo batch, tuttavia, la registrazione minima viene applicata solo alle pagine di dati.
+
+- Per informazioni sulla registrazione per un indice columnstore cluster (CCI), vedere [Istruzioni per il caricamento di dati dell'indice columnstore](../indexes/columnstore-indexes-data-loading-guidance.md#plan-bulk-load-sizes-to-minimize-delta-rowgroups).
   
-        > [!NOTE]  
-        >  Se si parte da una tabella vuota e si esegue l'importazione bulk dei dati in più batch, per il primo batch le pagine di indice e di dati vengono registrate con registrazione minima. A partire dal secondo batch, tuttavia, la registrazione minima viene applicata solo alle pagine di dati.  
-  
--   Se la tabella include un indice cluster ed è vuota, le pagine di dati e di indice vengono registrate tramite registrazione minima. Se, invece, una tabella include un indice cluster basato sull'albero B e non è vuota, le pagine di dati e di indice vengono registrate con registrazione completa indipendentemente dal modello di recupero. Per le tabelle con indice columnstore di cluster, viene sempre eseguita la registrazione minima del caricamento dei dati nel gruppo di righe compresso indipendentemente dal fatto che la tabella sia vuota o no quando la proprietà batchsize > = 102400.  
-  
-    > [!NOTE]  
-    >  Se si parte da una tabella rowstore vuota e si esegue l'importazione bulk dei dati in batch, per il primo batch le pagine di indice e di dati vengono registrate con registrazione minima. A partire dal secondo batch, tuttavia, la registrazione minima viene applicata solo alle pagine di dati.  
+
   
 > [!NOTE]  
 >  Quando la replica transazionale è abilitata, le operazioni BULK INSERT vengono registrate completamente persino nel modello di recupero con registrazione minima delle operazioni bulk.  

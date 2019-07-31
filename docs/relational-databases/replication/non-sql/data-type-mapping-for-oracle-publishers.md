@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8744c1ff2980db897606dfc11ab6ba7085da93f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b9d63f55ec7baacb4e387f6ee2f4a063ffa645b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739189"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901126"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Mapping dei tipi di dati per i server di pubblicazione Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47739189"
 |RAW([1-2000])|VARBINARY([1-2000])|no|  
 |real|FLOAT|no|  
 |ROWID|CHAR(18)|no|  
-|TIMESTAMP|DATETIME|Sì|  
+|timestamp|DATETIME|Sì|  
 |TIMESTAMP(0-7)|DATETIME|Sì|  
 |TIMESTAMP(8-9)|DATETIME|Sì|  
 |TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|Sì|  
@@ -83,7 +82,7 @@ ms.locfileid: "47739189"
 ### <a name="float-and-number-types"></a>Tipi FLOAT e NUMBER  
  La scala e la precisione specificate durante il mapping dei tipi di dati FLOAT e NUMBER dipende dalla scala e dalla precisione specificate per la colonna che utilizza il tipo di dati nel database Oracle. La precisione è il numero di cifre in un numero. La scala è il numero di cifre a destra della virgola decimale in un numero. Il numero 123,45, ad esempio, ha una precisione di 5 e una scala di 2.  
   
- In Oracle è possibile definire i numeri con una scala maggiore della precisione, ad esempio NUMBER(4,5), mentre in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la precisione deve essere uguale o maggiore della scala. Per garantire che i dati non vengano troncati, se la scala è maggiore della precisione nel server di pubblicazione Oracle, la precisione viene impostata su un valore uguale a quello della scala quando si esegue il mapping del tipo di dati. Il mapping di NUMBER(4,5) sarebbe NUMERIC(5,5).  
+ In Oracle è possibile definire i numeri con una scala maggiore della precisione, ad esempio NUMBER(4,5), mentre in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la precisione deve essere uguale o maggiore della scala. Per garantire che i dati non vengano troncati, se la scala è maggiore della precisione nel server di pubblicazione Oracle, la precisione viene impostata su un valore uguale a quello della scala quando si esegue il mapping del tipo di dati: Il mapping di NUMBER(4,5) sarebbe NUMERIC(5,5).  
   
 > [!NOTE]  
 >  Se non si specifica una scala e una precisione per NUMBER, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono automaticamente utilizzate la scala massima (8) e la precisione massima (38). Per migliorare le prestazioni e le operazioni di archiviazione durante la replica dei dati, è consigliabile impostare una scala e una precisione specifiche in Oracle.  

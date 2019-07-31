@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8979e3457250cbce7fe3dbe5992c84e786d3f7c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0932181110c5c4ec34e3d4bdf6b1395bffc65cca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709699"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904988"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Visualizzazione e lettura del log di diagnostica dell'istanza del cluster di failover
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,9 +22,9 @@ ms.locfileid: "47709699"
   
 -   **Prima di iniziare:**  [Indicazioni](#Recommendations), [Sicurezza](#Security)  
   
--   **Per visualizzare il log di diagnostica usando:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Per visualizzare il log di diagnostica usando**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Per configurare le impostazioni del log di diagnostica usando:** [Transact-SQL](#TsqlConfigure)  
+-   **Per configurare le impostazioni del log di diagnostica usando** [Transact-SQL](#TsqlConfigure)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -36,7 +35,7 @@ ms.locfileid: "47709699"
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  L'autorizzazione VIEW SERVER STATE è necessaria per eseguire **fn_xe_file_target_read_file**.  
   
  Aprire SQL Server Management Studio come amministratore.  

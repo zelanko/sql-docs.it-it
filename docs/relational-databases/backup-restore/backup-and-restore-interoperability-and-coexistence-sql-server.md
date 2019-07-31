@@ -1,5 +1,5 @@
 ---
-title: 'Backup e ripristino: interoperabilità e coesistenza (SQL Server) | Microsoft Docs'
+title: 'Backup e ripristino: Interoperabilità e coesistenza (SQL Server) | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0ba345be62ae0efdcb13fe35103c472a17bef952
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d22aaa5ec3eba14931c5af22f68152bf7b19ad84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723789"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940875"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Backup e ripristino: interoperabilità e coesistenza (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47723789"
   
  Se si verifica un problema durante l'avvio del database, il recupero non riesce e il database viene contrassegnato come sospetto. Se è possibile isolare uno o più file in cui è presente il problema, l'amministratore del database può attivare la modalità offline per i file e tentare di riavviare il database. Per attivare la modalità offline per un file, è possibile utilizzare l'istruzione [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) seguente:  
   
- ALTER DATABASE *nome_database* MODIFY FILE (NAME **='***nomefile***'**, OFFLINE)  
+ ALTER DATABASE *nome_database* MODIFY FILE (NAME **='***nomefile***'** , OFFLINE)  
   
  Se l'avvio ha esito positivo, tutti i filegroup che includono un file offline rimangono in modalità offline.  
   
@@ -135,6 +134,6 @@ ms.locfileid: "47723789"
 ## <a name="see-also"></a>Vedere anche  
  [Backup e ripristino di database SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Backup e ripristino di database replicati](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
-[Repliche secondarie attive: Backup in repliche secondarie \(gruppi di disponibilità Always On\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+[Repliche secondarie attive: Backup in repliche secondarie \(Gruppi di disponibilità AlwaysOn\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

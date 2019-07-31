@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 39eac1be5a9e6479a7607364bb194b5aa5b8716f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1900d3d447dd7974fb9afbbd83f17ca375bfbe81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895436"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Esercitazione: Preparare SQL Server per la replica: server di pubblicazione, server di distribuzione, sottoscrittore
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,11 +122,11 @@ In questa sezione viene configurata la cartella usata per la creazione e l'archi
 
    ![Selezioni per la condivisione della cartella repldata](media/tutorial-preparing-the-server-for-replication/repldata.png)
 
-6. Nella finestra di dialogo **Autorizzazioni per repldata** selezionare **Aggiungi**. Nella casella **Select User, Computers, Service Account, or Groups** (Seleziona utenti, computer, account del servizio o gruppi) digitare il nome dell'account dell'agente di snapshot creato in precedenza nel formato <*Nome_server_pubblicazione*>**\repl_snapshot**. Selezionare **Verifica nomi** e quindi selezionare **OK**.  
+6. Nella finestra di dialogo **Autorizzazioni per repldata** selezionare **Aggiungi**. Nella casella **Select User, Computers, Service Account, or Groups** (Seleziona utenti, computer, account del servizio o gruppi) digitare il nome dell'account dell'agente di snapshot creato in precedenza nel formato <*Nome_server_pubblicazione*> **\repl_snapshot**. Selezionare **Verifica nomi** e quindi selezionare **OK**.  
 
    ![Selezioni per aggiungere autorizzazioni di condivisione](media/tutorial-preparing-the-server-for-replication/addshareperms.png)
 
-7. Ripetere il passaggio 6 per aggiungere gli altri due account creati in precedenza: <*Nome_server_pubblicazione*>**\repl_merge** e <*Nome_server_pubblicazione*>**\repl_distribution**.
+7. Ripetere il passaggio 6 per aggiungere gli altri due account creati in precedenza: <*Nome_server_pubblicazione*> **\repl_merge** e <*Nome_server_pubblicazione*> **\repl_distribution**.
 
 8. Dopo aver aggiunto i tre account, assegnare le autorizzazioni seguenti:      
    - repl_distribution: **Lettura**  
@@ -142,12 +141,12 @@ In questa sezione viene configurata la cartella usata per la creazione e l'archi
 
     ![Pulsante "Modifica" nella scheda "Sicurezza"](media/tutorial-preparing-the-server-for-replication/editsecurity.png)   
 
-11. Nella finestra di dialogo **Autorizzazioni per repldata** selezionare **Aggiungi**. Nella casella **Select Users, Computers, Service Accounts, or Groups** (Seleziona utenti, computer, account del servizio o gruppi) digitare il nome dell'account dell'agente di snapshot creato in precedenza nel formato <*Nome_server_pubblicazione*>**\repl_snapshot**. Selezionare **Verifica nomi** e quindi selezionare **OK**.  
+11. Nella finestra di dialogo **Autorizzazioni per repldata** selezionare **Aggiungi**. Nella casella **Select Users, Computers, Service Accounts, or Groups** (Seleziona utenti, computer, account del servizio o gruppi) digitare il nome dell'account dell'agente di snapshot creato in precedenza nel formato <*Nome_server_pubblicazione*> **\repl_snapshot**. Selezionare **Verifica nomi** e quindi selezionare **OK**.  
 
     ![Selezioni per aggiungere autorizzazioni di sicurezza](media/tutorial-preparing-the-server-for-replication/addsecuritypermissions.png)
 
   
-12. Ripetere il passaggio precedente per aggiungere le autorizzazioni per l'agente di distribuzione nel formato <*Nome_server_pubblicazione*>**\repl_distribution** e per l'agente di merge nel formato <*Nome_server_pubblicazione*>**\repl_merge**.  
+12. Ripetere il passaggio precedente per aggiungere le autorizzazioni per l'agente di distribuzione nel formato <*Nome_server_pubblicazione*> **\repl_distribution** e per l'agente di merge nel formato <*Nome_server_pubblicazione*> **\repl_merge**.  
     
   
 13. Verificare che siano state concesse le autorizzazioni seguenti:  
@@ -185,14 +184,14 @@ In questa esercitazione non è prevista la configurazione del server di pubblica
   
    Verrà avviata la Configurazione guidata distribuzione.  
   
-3. Nella pagina **Server di distribuzione** selezionare <*'NomeServer'*>  **fungerà da database di distribuzione per se stesso. Verranno creati un database di distribuzione e un log**. Fare quindi clic su **Avanti**.  
+3. Nella pagina **Server di distribuzione** selezionare < *'NomeServer'* >  **fungerà da database di distribuzione per se stesso. Verranno creati un database di distribuzione e un log**. Fare quindi clic su **Avanti**.  
 
    ![Opzione perché il server funga da server di distribuzione per se stesso](media/tutorial-preparing-the-server-for-replication/serverdistributor.png)
   
 4. Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent non è in esecuzione, nella pagina Avvio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agent selezionare** Configura il servizio  **Agent[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'avvio automatico**. Fare clic su **Avanti**.  
 
      
-5. Immettere il percorso \\\\<*Nome_server_pubblicazione*>**\repldata** nella casella di testo **Cartella snapshot** e quindi selezionare **Avanti**. Questo percorso deve corrispondere a quanto visto in precedenza in **Percorso di rete** nella cartella delle proprietà di repldata dopo la configurazione delle proprietà della condivisione. 
+5. Immettere il percorso \\\\<*Nome_server_pubblicazione*> **\repldata** nella casella di testo **Cartella snapshot** e quindi selezionare **Avanti**. Questo percorso deve corrispondere a quanto visto in precedenza in **Percorso di rete** nella cartella delle proprietà di repldata dopo la configurazione delle proprietà della condivisione. 
 
    ![Confronto tra i percorsi di rete nella finestra di dialogo "Proprietà repldata" e nella Configurazione guidata distribuzione](media/tutorial-preparing-the-server-for-replication/repldatasnapshot.png)
   
@@ -219,7 +218,7 @@ Se l'istanza di SQL Server Management Studio è in esecuzione con diritti ammini
 
    ![Comando "Nuovo account accesso" nel menu di scelta rapida](media/tutorial-preparing-the-server-for-replication/newlogin.png)
   
-2. Nella pagina **Generale** selezionare **Cerca**. Immettere <*Nome_server_pubblicazione*>**\repl_snapshot** nella casella **Immettere il nome dell'oggetto da selezionare**, selezionare **Verifica nomi** e quindi selezionare **OK**.  
+2. Nella pagina **Generale** selezionare **Cerca**. Immettere <*Nome_server_pubblicazione*> **\repl_snapshot** nella casella **Immettere il nome dell'oggetto da selezionare**, selezionare **Verifica nomi** e quindi selezionare **OK**.  
 
    ![Selezioni per l'immissione del nome dell'oggetto](media/tutorial-preparing-the-server-for-replication/addsnapshotlogin.png)
   

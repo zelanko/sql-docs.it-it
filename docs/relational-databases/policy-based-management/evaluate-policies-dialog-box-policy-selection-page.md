@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a4972e42798e1cfeb46b77fb414fa77cd4b6b86a
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: cbcedf14cc2046314c28972c3332df42d70c4539
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512406"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901145"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Finestra di dialogo Valuta criteri, pagina Selezione criteri
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,15 +25,15 @@ ms.locfileid: "51512406"
   
 ## <a name="options"></a>Opzioni  
  **Origine**  
- Specifica l'origine dei criteri. Per modificare l'origine, fare clic sul pulsante Sfoglia (**...**) per aprire la finestra di dialogo **Seleziona origine** .  
+ Specifica l'origine dei criteri. Per modificare l'origine, fare clic sul pulsante Sfoglia ( **...** ) per aprire la finestra di dialogo **Seleziona origine** .  
   
  **File**  
- Digitare il percorso o usare il pulsante Sfoglia (**...**) per selezionare un file che contiene i criteri della gestione basata su criteri.  
+ Digitare il percorso o usare il pulsante Sfoglia ( **...** ) per selezionare un file che contiene i criteri della gestione basata su criteri.  
   
  **Server**  
  Selezionare questa opzione per eseguire una connessione a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] che contiene i criteri desiderati.  
   
- **Criteri: Criteri**  
+ **Criteri: criterio**  
  Fare clic su questa opzione per aprire la finestra di dialogo relativa ai criteri specificati.  
   
  **Criteri: Categoria**  

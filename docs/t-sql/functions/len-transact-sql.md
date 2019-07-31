@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c3a4b7c9685b11517ce97ebcce64d25f069f1a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6194b035ae28a1c70dbba2f2b72050fb87a76328
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948670"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329324"
 ---
 # <a name="len-transact-sql"></a>LEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Restituisce il numero di caratteri dell'espressione stringa specificata, esclusi gli spazi vuoti finali.  
+  Restituisce il numero di caratteri dell'espressione stringa specificata, esclusi gli spazi finali.  
   
 > [!NOTE]  
 >  Per restituire il numero di byte usati per rappresentare un'espressione, usare la funzione [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md).  
@@ -49,12 +48,12 @@ LEN ( string_expression )
  [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) stringa da valutare. *string_expression* può essere una costante, una variabile o una colonna di dati di tipo carattere o binario.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **bigint** se *expression* è del tipo di dati **varchar(max)**, **nvarchar(max)** o **varbinary(max)**. In caso contrario, **int**.  
+ **bigint** se *expression* è del tipo di dati **varchar(max)** , **nvarchar(max)** o **varbinary(max)** . In caso contrario, **int**.  
   
  Se si utilizzano le regole di confronto SC, il valore intero restituito considererà le coppie di surrogati UTF-16 come un singolo carattere. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="remarks"></a>Remarks  
- LEN esclude gli spazi vuoti finali. Se questo è un problema, provare a usare la funzione [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md) che non taglia la stringa. Se si elabora una stringa Unicode, DATALENGTH restituirà due volte il numero di caratteri. Nell'esempio seguente viene illustrato l'uso di LEN e DATALENGTH con uno spazio finale.  
+ LEN esclude gli spazi finali. Se questo è un problema, provare a usare la funzione [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md) che non taglia la stringa. Se si elabora una stringa Unicode, DATALENGTH restituirà due volte il numero di caratteri. Nell'esempio seguente viene illustrato l'uso di LEN e DATALENGTH con uno spazio finale.  
   
 ```  
 DECLARE @v1 varchar(40),  

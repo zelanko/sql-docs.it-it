@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c9ac17d307e677c732fcd73602aab81416e8e366
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c877ffb5bb15836f21a6a37c7cd8ccb22b27cc10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649375"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987768"
 ---
 # <a name="backup-device-media-contents-page"></a>Dispositivo di backup (pagina Contenuto supporti)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +59,8 @@ ms.locfileid: "47649375"
 |Intestazione|Valori|  
 |------------|------------|  
 |**Nome**|Nome del set di backup.|  
-|**Tipo**|Oggetto di cui viene eseguito il backup: database, file o *\<vuoto>*, nel caso dei log delle transazioni.|  
-|**Componente**|Tipo di backup eseguito, ovvero Completo, Differenziale o Log delle transazioni.|  
+|**Tipo**|Oggetto di cui è stato eseguito il backup: database, file o *\<vuoto>* , nel caso dei log delle transazioni.|  
+|**Componente**|Tipo di operazione di backup eseguita: Completo, Differenziale o Log delle transazioni.|  
 |**Server**|Nome dell'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che ha eseguito l'operazione di backup.|  
 |**Database**|Nome del database di cui è stato eseguito il backup.|  
 |**Posizione**|Posizione del set di backup nel volume.|  

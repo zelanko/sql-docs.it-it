@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b458dc14c0a64428b5d59d7a4411327a82326d0d
-ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
+ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506498"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307628"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Indici columnstore - Linee guida per il caricamento di dati
 
@@ -44,11 +43,15 @@ Come illustrato nel diagramma, un caricamento bulk:
 > In una tabella rowstore con dati di un indice columnstore non cluster, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inserisce sempre i dati nella tabella di base. I dati non vengono mai inseriti direttamente nell'indice columnstore.  
 
 Il caricamento bulk include le ottimizzazioni seguenti per le prestazioni:
--   **Caricamenti paralleli:** È possibile eseguire più caricamenti bulk in simultanea (bcp o bulk insert) con il caricamento di un file di dati separato per ognuno. Diversamente dai caricamenti bulk di rowstore in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è necessario specificare `TABLOCK`, poiché ogni thread di importazione bulk caricherà i dati esclusivamente in un rowgroup distinto (compresso o delta) che presenta un blocco esclusivo. Se si usa `TABLOCK` verrà forzato il blocco esclusivo sulla tabella e non sarà possibile importare dati in parallelo.  
--   **Registrazione minima:** Un caricamento bulk usa la registrazione minima per i dati destinati direttamente a rowgroup compressi. Per tutti i dati destinati a un rowgroup differenziale viene usata la registrazione completa. Ciò include qualsiasi dimensione di batch minore di 102.400 righe. L'obiettivo del caricamento bulk, tuttavia, è evitare i rowgroup differenziali per la maggior parte dei dati.  
--   **Ottimizzazione del blocco:** Durante il caricamento in rowgroup compressi, viene acquisito il blocco X sul rowgroup. Tuttavia durante il caricamento bulk in rowgroup delta viene acquisito il blocco X del rowgroup, ma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continua a bloccare i blocchi PAGE/EXTENT perché il blocco X del rowgroup non rientra nella gerarchia di blocco.  
+-   **Caricamenti paralleli:** È possibile eseguire più caricamenti bulk in simultanea (bcp o bulk insert) con il caricamento di un file di dati separato per ognuno. Diversamente dai caricamenti bulk di rowstore in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], non è necessario specificare `TABLOCK`, poiché ogni thread di importazione bulk caricherà i dati esclusivamente in un rowgroup distinto (compresso o delta) che presenta un blocco esclusivo. 
+
+-   **Registrazione ridotta:** i dati caricati direttamente all'interno di rowgroup compressi portano a una riduzione significativa delle dimensioni del log. Se, ad esempio, i dati sono stati compressi 10 volte, il log delle transazioni corrispondente sarà di circa 10 volte più piccolo senza richiedere TABLOCK o il modello di recupero con registrazione minima delle operazioni bulk o il modello di recupero di registrazione minima. Per tutti i dati destinati a un rowgroup differenziale viene usata la registrazione completa. Ciò include qualsiasi dimensione di batch minore di 102.400 righe.  La procedura consigliata corrisponde all'uso di batchsize > = 102400. Poiché non è necessario usare TABLOCK, è possibile caricare i dati in parallelo. 
+
+-   **Registrazione minima:** è possibile ottenere ulteriori riduzioni nella registrazione se si soddisfano i prerequisiti per la [registrazione minima](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md). Tuttavia, a differenza del caricamento dei dati in un rowstore, TABLOCK causa un blocco X (esclusivo) sulla tabella anziché un blocco BU (aggiornamento bulk) e pertanto non è possibile eseguire il caricamento parallelo dei dati. Per altre informazioni sui blocchi, vedere [Blocco e controllo delle versioni delle righe](../sql-server-transaction-locking-and-row-versioning-guide.md).
+
+-   **Ottimizzazione del blocco:** Il blocco X su un gruppo di righe viene acquisito automaticamente durante il caricamento dei dati in un rowgroup compresso. Durante il caricamento bulk in un rowgroup delta, tuttavia, viene acquisito un blocco X in corrispondenza del rowgroup, ma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continua a bloccare PAGE/EXTENT perché il blocco X del rowgroup non rientra nella gerarchia di blocco.  
   
-In presenza di un indice albero B non cluster su un indice columnstore non sono previsti il blocco o l'ottimizzazione della registrazione per l'indice, ma le ottimizzazioni sull'indice columnstore cluster descritte in precedenza sono ancora presenti.  
+In presenza di un indice albero B non cluster su un indice columnstore non sono previsti il blocco o l'ottimizzazione della registrazione per l'indice, ma le ottimizzazioni sull'indice columnstore cluster descritte in precedenza sono ancora applicabili.  
   
 ## <a name="plan-bulk-load-sizes-to-minimize-delta-rowgroups"></a>Pianificare le dimensioni di caricamento bulk per ridurre al minimo i rowgroup differenziali
 Gli indici columnstore offrono prestazioni ottimali quando la maggior parte delle righe viene compressa in columnstore e non inserita nei rowgroup differenziali. È consigliabile ridimensionare i carichi in modo che le righe vengano spostate direttamente nel columnstore ignorando il più possibile l'archivio differenziale.
@@ -59,8 +62,8 @@ Gli scenari seguenti indicano quando le righe caricate vengono direttamente indi
 |-----------------------|-------------------------------------------|--------------------------------------|  
 |102.000|0|102.000|  
 |145.000|145.000<br /><br /> Dimensioni rowgroup: 145.000|0|  
-|1.048.577|1,048,576<br /><br /> Dimensioni rowgroup: 1.048.576.|1|  
-|2.252.152|2.252.152<br /><br /> Dimensioni rowgroup: 1.048.576, 1.048.576, 155.000.|0|  
+|1\.048.577|1,048,576<br /><br /> Dimensioni rowgroup: 1.048.576.|1|  
+|2\.252.152|2\.252.152<br /><br /> Dimensioni rowgroup: 1.048.576, 1.048.576, 155.000.|0|  
 | &nbsp; | &nbsp; | &nbsp; |
   
  Nell'esempio seguente vengono illustrati i risultati del caricamento di 1.048.577 righe in una tabella. I risultati mostrano che esiste un rowgroup COMPRESSED nel columnstore (come segmenti di colonna compressi) e 1 riga nel deltastore.  
@@ -83,7 +86,7 @@ INSERT INTO <columnstore index>
 SELECT <list of columns> FROM <Staging Table>  
 ```  
   
- Il comando carica i dati nell'indice columnstore in modo analogo ai comandi bcp o bulk insert, ma in un unico batch. Se il numero di righe nella tabella di staging è < 102.400, le righe vengono caricate in un rowgroup delta, altrimenti possono essere caricate direttamente in un rowgroup compresso. Uno dei limiti principali era il fatto che l'operazione `INSERT` è a thread singolo. Per caricare i dati in parallelo era possibile creare più tabelle di staging o eseguire i comandi `INSERT`/`SELECT` con intervalli non sovrapposti di righe dalla tabella di staging. Questa limitazione è stata eliminata in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Il comando seguente carica i dati dalla tabella di staging in parallelo, ma è necessario specificare `TABLOCK`.  
+ Il comando carica i dati nell'indice columnstore in modo analogo ai comandi bcp o bulk insert, ma in un unico batch. Se il numero di righe nella tabella di staging è < 102.400, le righe vengono caricate in un rowgroup delta, altrimenti possono essere caricate direttamente in un rowgroup compresso. Uno dei limiti principali era il fatto che l'operazione `INSERT` è a thread singolo. Per caricare i dati in parallelo era possibile creare più tabelle di staging o eseguire i comandi `INSERT`/`SELECT` con intervalli non sovrapposti di righe dalla tabella di staging. Questa limitazione è stata eliminata in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Il comando seguente carica i dati dalla tabella di staging in parallelo, ma è necessario specificare `TABLOCK`. Questo comportamento può sembrare in contraddizione con quanto affermato in precedenza con bulkload, ma la differenza principale è che il caricamento parallelo dei dati dalla tabella di staging viene eseguito nella stessa transazione.
   
 ```sql  
 INSERT INTO <columnstore index> WITH (TABLOCK) 
@@ -91,7 +94,7 @@ SELECT <list of columns> FROM <Staging Table>
 ```  
   
  Per il caricamento in indici columnstore cluster da una tabella di staging sono disponibili le ottimizzazioni seguenti:
--   **Ottimizzazione dei log:** con registrazione minima quando i dati vengono caricati in rowgroup compressi. Non si ha registrazione minima quando i dati vengono caricati in rowgroup delta.  
+-   **Ottimizzazione dei log:** registrazione ridotta quando i dati vengono caricati in rowgroup compressi.   
 -   **Ottimizzazione del blocco:** Durante il caricamento in rowgroup compressi, viene acquisito il blocco X sul rowgroup. Tuttavia quando si opera con rowgroup delta viene acquisito il blocco X del rowgroup, ma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continua a bloccare i blocchi PAGE/EXTENT, perché il blocco X del rowgroup non rientra nella gerarchia di blocco.  
   
  In caso di più indici non cluster, non si ha blocco o ottimizzazione della registrazione dell'indice, ma le ottimizzazioni sull'indice columnstore cluster descritte in precedenza sono ancora presenti.  

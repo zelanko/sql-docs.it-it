@@ -1,5 +1,5 @@
 ---
-title: Indici columnstore - Panoramica | Microsoft Docs
+title: 'Indici columnstore: Panoramica | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/08/2018
 ms.prod: sql
@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebf4644c17f9fdbb02c89edec72abd39bdd9c42e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae39d06d96232b27d58020d5f6e6184a57001e6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739179"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912090"
 ---
-# <a name="columnstore-indexes-overview"></a>Indici columnstore - Panoramica
+# <a name="columnstore-indexes-overview"></a>Indici columnstore: Panoramica
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Gli indici columnstore rappresentano lo standard per l'archiviazione di tabelle dei fatti di data warehousing di grandi dimensioni e per l'esecuzione di query su queste tabelle. Questo indice usa l'archiviazione dei dati basata su colonne e l'elaborazione di query per ottenere miglioramenti fino a **10 volte per le prestazioni delle query** nel data warehouse rispetto all'archiviazione tradizionale orientata alle righe. È anche possibile ottenere miglioramenti fino a **10 volte per la compressione dei dati** rispetto alle dimensioni dei dati non compressi. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], gli indici columnstore consentono l'analisi operativa, rendendo possibile l'esecuzione di analisi in tempo reale ad alte prestazioni su carichi di lavoro transazionali.  

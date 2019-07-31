@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2c9c2cbb9799447ad3e12cab311a5153d6341045
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 98e784be4bbe4e939ed4413a33d6a3ed36872558
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695563"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902805"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
 ## <a name="arguments"></a>Argomenti  
  *event_notification_name*  
- Nome della notifica degli eventi. I nomi delle notifiche degli eventi devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md) e devono essere univoci nell'ambito in cui vengono creati, ovvero SERVER, DATABASE o *object_name*.  
+ Nome della notifica degli eventi. I nomi delle notifiche degli eventi devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md) e devono essere univoci nell'ambito in cui vengono creati, vale a dire SERVER, DATABASE o *object_name*.  
   
  SERVER  
  Indica che l'ambito della notifica degli eventi corrisponde all'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se viene specificato questo parametro, la notifica viene attivata ogni volta che l'evento specificato nella clausola FOR si verifica nell'ambito dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -95,7 +94,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  Le conversazioni rimangono aperte fino a quando la notifica degli eventi non viene eliminata. Alcuni errori possono causare una terminazione anticipata delle conversazioni. Una terminazione esplicita di una parte delle conversazioni o di tutte le conversazioni può impedire al servizio di destinazione di ricevere ulteriori messaggi.  
   
- { **'**_broker\_instance\_specifier_**'** | **'current database'** }  
+ { **'** _broker\_instance\_specifier_ **'**  |  **'current database'** }  
  Specifica un'istanza di Service Broker in base alla quale viene risolto l'argomento *broker_service*. Per ottenere il valore di un'istanza specifica di Service Broker, eseguire una query sulla colonna **service_broker_guid** della vista del catalogo **sys.databases**. Usare **'current database'** per specificare l'istanza di Service Broker nel database corrente. **'current database'** è un valore letterale stringa senza distinzione tra maiuscole e minuscole.  
   
 > [!NOTE]  
@@ -117,7 +116,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  Gli errori che si verificano durante l'invio di una notifica degli eventi vengono registrati.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per creare una notifica degli eventi con ambito database (ON DATABASE), è necessario disporre dell'autorizzazione CREATE DATABASE DDL EVENT NOTIFICATION per il database corrente.  
   
  Per creare una notifica degli eventi per un'istruzione DDL con ambito server (ON SERVER), è necessario disporre dell'autorizzazione CREATE DDL EVENT NOTIFICATION nel server.  
@@ -131,7 +130,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  Negli Esempi A e B seguenti il GUID nella clausola `TO SERVICE 'NotifyService'` ('8140a771-3c4b-4479-8ac0-81008ab17984') è specifico del computer in cui è stato configurato l'esempio. Per tale istanza, su tratta del GUID per il database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
 >   
->  Per copiare ed eseguire questi esempi, è necessario sostituire il GUID con quello del computer e dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in uso. Come illustrato nella sezione Argomenti precedente, è possibile acquisire **'**_broker\_instance\_specifier_**'** eseguendo una query sulla colonna service_broker_guid della vista del catalogo sys.databases.  
+>  Per copiare ed eseguire questi esempi, è necessario sostituire il GUID con quello del computer e dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in uso. Come illustrato nella sezione Argomenti precedente, è possibile acquisire **'** _broker\_instance\_specifier_ **'** eseguendo una query sulla colonna service_broker_guid della vista del catalogo sys.databases.  
   
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. Creazione di una notifica degli eventi con ambito server  
  Nell'esempio seguente vengono creati gli oggetti necessari per la configurazione di un servizio di destinazione con [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Il servizio di destinazione fa riferimento al tipo di messaggio e al contratto del servizio di inizializzazione per le notifiche degli eventi, quindi viene creata una notifica degli eventi per tale servizio di destinazione che invia una notifica ogni volta che si verifica un evento di traccia `Object_Created` nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

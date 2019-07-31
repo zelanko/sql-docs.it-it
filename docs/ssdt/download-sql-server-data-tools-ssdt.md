@@ -12,14 +12,13 @@ keywords:
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 3790d0f71b130ff1b73ae9af94fabcefed1cedd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 62b3db01792005afa7c124f4f31b78cdc350b2dd
+ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65368348"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290342"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Scaricare e installare SQL Server Data Tools (SSDT) per Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,18 +65,18 @@ Il programma di installazione elenca le istanze di Visual Studio disponibili per
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT per Visual Studio 2017 (programma di installazione autonomo)
 
-[![download](../ssdt/media/download.png) Download di SSDT per Visual Studio 2017 (15.9.1)](https://go.microsoft.com/fwlink/?linkid=2086373) 
+[![download](../ssdt/media/download.png) Download di SSDT per Visual Studio 2017 (15.9.2)](https://go.microsoft.com/fwlink/?linkid=2095463) 
 
 > [!IMPORTANT]
-> - Prima di installare SSDT per Visual Studio 2017 (15.9.1), disinstallare le estensioni *Progetti di Analysis Services* e *Progetti di Reporting Services*, se già installate, e chiudere tutte le istanze di Visual Studio.
+> - Prima di installare SSDT per Visual Studio 2017 (15.9.2), disinstallare le estensioni *Progetti di Analysis Services* e *Progetti di Reporting Services*, se già installate, e chiudere tutte le istanze di Visual Studio.
 > - Usare SSDT per Visual Studio 2017 (15.8.0) o versioni precedenti per la progettazione di pacchetti SSIS contenenti un'origine o una destinazione Teradata. Le versioni di SSDT per Visual Studio 2017 successive alla 15.8.0 non consentono di progettare pacchetti SSIS contenenti origine/destinazione Teradata di Attunity.
 
 
 **Informazioni sulla versione**  
   
-Numero di versione: 15.9.1  
-Numero di build: 14.0.16191.0  
-Data di rilascio: 27 aprile 2019  
+Numero di versione: 15.9.2  
+Numero di build: 14.0.16194.0  
+Data di rilascio: 17 luglio 2019  
 
 Per un elenco completo delle modifiche, vedere [Note sulla versione per SQL Server Data Tools (SSDT)](release-notes-ssdt.md).
 
@@ -87,17 +86,17 @@ SSDT per Visual Studio 2017 ha gli stessi [requisiti di sistema](https://docs.mi
 
 Questa versione di **SSDT per VS 2017** può essere installata nelle lingue seguenti:
 
-- [Cinese semplificato]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x804)
-- [Cinese tradizionale]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x404)
-- [Inglese (Stati Uniti)]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x409)
-- [Francese]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x40c)
-- [Tedesco]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x407)
-- [Italiano]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x410)
-- [Giapponese]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x411)
-- [Coreano]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x412)
-- [Portoghese (Brasile)]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x416)
-- [Russo]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x419)
-- [Spagnolo]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x40a)
+- [Cinese semplificato]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x804)
+- [Cinese tradizionale]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x404)
+- [Inglese (Stati Uniti)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x409)
+- [Francese]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x40c)
+- [Tedesco]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x407)
+- [Italiano]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x410)
+- [Giapponese]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x411)
+- [Coreano]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x412)
+- [Portoghese (Brasile)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x416)
+- [Russo]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x419)
+- [Spagnolo]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x40a)
 
 ## <a name="offline-install"></a>Eseguire l'installazione offline
 

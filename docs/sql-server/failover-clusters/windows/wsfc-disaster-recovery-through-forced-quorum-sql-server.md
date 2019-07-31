@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d1d5b272edba906e829b44ae4e23e9ddd8d4eaa0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2453c994ca274d4fd584d04026e3f4e0eb0cecf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699729"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904949"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Ripristino di emergenza WSFC tramite quorum forzato (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Un errore del quorum è causato generalmente da una situazione di emergenza a livello di sistema, da un errore di comunicazione persistente o da una configurazione errata che interessa diversi nodi del cluster WSFC.  Per il recupero da un errore del quorum è necessario intervenire manualmente.  
   
--   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
+-   **Prima di iniziare:**  [Prerequisiti](#Prerequisites), [Sicurezza](#Security)  
   
 -   **Ripristino di emergenza WSFC tramite la procedura relativa al quorum forzato** [Ripristino di emergenza WSFC tramite la procedura relativa al quorum forzato](#Main)  
   
@@ -66,7 +65,7 @@ ms.locfileid: "51699729"
   
      Su questo nodo riportare manualmente il cluster online utilizzando la procedura relativa al quorum forzato.  Per ridurre al minimo la possibile perdita di dati, selezionare un nodo che nell'ultima operazione ospitava una replica primaria del gruppo di disponibilità.  
   
-     Per ulteriori informazioni, vedere la pagina relativa alla  [forzatura dell'avvio di un cluster WSFC senza quorum](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
+     Per altre informazioni, vedere:  [Forzare l'avvio di un cluster WSFC senza un quorum](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
   
     > [!NOTE]  
     >  L'impostazione del quorum forzato comporta il blocco dei controlli del quorum a livello di cluster, finché il cluster WSFC logico non otterrà una maggioranza di voti e passerà automaticamente alla modalità operativa di un quorum normale.  

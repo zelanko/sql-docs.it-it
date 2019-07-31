@@ -18,14 +18,13 @@ f1_keywords:
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 089a97d4a2f6476719a3570d4d59bea664b71690
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40fff511c9ff69ce6da9de9cf7bcaf21cb4d9ef3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909709"
 ---
 # <a name="index-properties-f1-help"></a>Guida sensibile al contesto di Proprietà indice
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "47846371"
  Consente di visualizzare il nome dell'indice. Per un indice esistente questo campo è di sola lettura. Quando si crea un nuovo indice, digitare il nome dell'indice.  
   
  **Tipo di indice**  
- Indica il tipo di indice. Per i nuovi indici, indica il tipo di indice selezionato all'apertura della finestra di dialogo. Gli indici possono essere: **Cluster**, **Non cluster**, **AML primario**, **XML secondario**, **Spaziale**, **Columnstore cluster**o **Columnstore non cluster**.  
+ Indica il tipo di indice. Per i nuovi indici, indica il tipo di indice selezionato all'apertura della finestra di dialogo. Gli indici possono essere: **Cluster**, **Non cluster**, **XML primario**, **XML secondario**, **Spaziale**, **Columnstore cluster** o **Columnstore non cluster**.  
   
  **Nota** È consentito un solo indice cluster per ogni tabella. È consentito un solo indice columnstore con ottimizzazione per la memoria xVelocity per ogni tabella.  
   
@@ -184,7 +183,7 @@ ms.locfileid: "47846371"
 ### <a name="bounding-box"></a>Riquadro  
  Si definisce *riquadro* il perimetro della griglia di livello principale di un piano geometrico. I parametri del riquadro sono presenti solo nello schema a mosaico griglia geometrica. Questi parametri non sono disponibili se **Schema a mosaico** è impostato su **Griglia geografica**.  
   
- Nel pannello sono visualizzate le coordinate **(**_X-min_**,**_Y-min_**)** e **(**_X-max_**,**_Y-max_**)** del rettangolo di selezione. Non esistono valori predefiniti, Quando si crea un indice spaziale nuovo su una colonna di tipo **geometry** , è quindi necessario specificare i valori delle coordinate.  
+ Nel pannello sono visualizzate le coordinate **(** _X-min_ **,** _Y-min_ **)** e **(** _X-max_ **,** _Y-max_ **)** del rettangolo di selezione. Non esistono valori predefiniti, Quando si crea un indice spaziale nuovo su una colonna di tipo **geometry** , è quindi necessario specificare i valori delle coordinate.  
   
  **X-min**  
  La coordinata X dell'angolo inferiore sinistro del riquadro.  

@@ -36,14 +36,13 @@ helpviewer_keywords:
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f0e93aaff4ed0f8eb02de0acb3e9362c1a390a1
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 4c94d94a572f1bc3c8ac0fe7507bc251537d38f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991914"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938886"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -148,7 +147,7 @@ OR ALTER
  Esegue la crittografia delle voci della tabella [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) contenenti il testo dell'istruzione CREATE VIEW. Se si utilizza WITH ENCRYPTION, la vista non viene pubblicata nell'ambito della replica di SQL Server.  
   
  SCHEMABINDING  
- Associa la vista allo schema della tabella o delle tabelle sottostanti. Quando la clausola SCHEMABINDING viene specificata, non è possibile apportare alla tabella o alle tabelle di base modifiche che hanno effetto sulla definizione della vista. È necessario prima modificare o eliminare la definizione della vista per rimuovere le dipendenze dalla tabella da modificare. Quando si usa SCHEMABINDING, l'argomento *select_statement* deve includere i nomi composti da due parti (_schema_**.**_object_) delle tabelle, delle viste o delle funzioni definite dall'utente a cui viene fatto riferimento. Tutti gli oggetti a cui viene fatto riferimento devono essere presenti nello stesso database.  
+ Associa la vista allo schema della tabella o delle tabelle sottostanti. Quando la clausola SCHEMABINDING viene specificata, non è possibile apportare alla tabella o alle tabelle di base modifiche che hanno effetto sulla definizione della vista. È necessario prima modificare o eliminare la definizione della vista per rimuovere le dipendenze dalla tabella da modificare. Quando si usa SCHEMABINDING, l'argomento *select_statement* deve includere i nomi composti da due parti (_schema_ **.** _object_) delle tabelle, delle viste o delle funzioni definite dall'utente a cui viene fatto riferimento. Tutti gli oggetti a cui viene fatto riferimento devono essere presenti nello stesso database.  
   
  Le viste o le tabelle che fanno parte di una vista creata con la clausola SCHEMABINDING non possono essere eliminate, a meno che la vista non venga eliminata o modificata in modo che non sia più associata a uno schema. In caso contrario, nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene generato un errore. Inoltre, l'esecuzione di istruzioni ALTER TABLE su tabelle che fanno parte di viste associate a schema ha esito negativo se tali istruzioni modificano la definizione della vista.  
   
@@ -347,7 +346,7 @@ FROM Tn;
   
 -   La replica di aggiornamenti tramite la vista equivale alla replica di tabelle in due database distinti, ovvero le tabelle vengono gestite da agenti di replica diversi e l'ordine degli aggiornamenti non è prevedibile.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Sono richieste l'autorizzazione CREATE VIEW per il database e l'autorizzazione ALTER per lo schema in cui viene creata la vista.  
   
 ## <a name="examples"></a>Esempi  
@@ -367,7 +366,7 @@ GO
   
 ```  
   
-### <a name="b-using-with-encryption"></a>b. Utilizzo della clausola WITH ENCRYPTION  
+### <a name="b-using-with-encryption"></a>B. Utilizzo della clausola WITH ENCRYPTION  
  Nell'esempio seguente viene utilizzata l'opzione `WITH ENCRYPTION` e vengono illustrate colonne calcolate, colonne rinominate e più colonne.  
   
 **Si applica a** : da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
