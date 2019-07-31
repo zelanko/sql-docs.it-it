@@ -1,5 +1,5 @@
 ---
-title: Eseguire il backup, ripristino e spostamento del catalogo SSIS | Microsoft Docs
+title: Backup, ripristino e spostamento del catalogo SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 625e090ab65eff7a912785e3ddef2de3e7d83b0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061269"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670505"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>Backup, ripristino e spostamento del catalogo SSISDB
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] è incluso il database SSISDB. È possibile eseguire una query sulle viste nel database SSISDB per verificare oggetti, impostazioni e dati operativi archiviati nel catalogo **SSISDB** . In questo argomento vengono fornite istruzioni per l'esecuzione del backup e del ripristino del database.  
@@ -48,7 +48,7 @@ ms.locfileid: "66061269"
   
 5.  Se si ripristina il database SSISDB a un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in cui il catalogo SSISDB non è mai stato creato, generare lo script CREATE PROCEDURE per sp_ssis_startup, effettuando le operazioni riportate di seguito. Per altre informazioni, vedere [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql).  
   
-    1.  In Esplora oggetti espandere il nodo **Database**, quindi espandere **master** > **Programmabilità** > nodo **Stored procedure**.  
+    1.  In Esplora oggetti espandere il nodo **database** , quindi espandere il nodo**stored procedure** di**programmabilità** > **Master** >  **database** > di sistema.  
   
     2.  Fare clic con il pulsante destro del mouse su **dbo.sp_ssis_startup**, quindi fare clic su **Crea script per stored procedure** > **Genera codice per istruzione CREATE in** > **Nuova finestra editor di query**.  
   

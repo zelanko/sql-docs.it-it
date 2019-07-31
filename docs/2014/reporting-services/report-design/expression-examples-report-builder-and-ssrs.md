@@ -9,16 +9,16 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/08/2017
-ms.openlocfilehash: 456dd8e4e232f77e7cc7709a997fdd8ae5ef0e5b
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 77aca108aa3acae73dfb3fa226aa0530b6a9b8b5
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413009"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661289"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Esempi di espressioni (Generatore report e SSRS)
 
-Le espressioni vengono utilizzate di frequente nei report per controllare il contenuto e l'aspetto del report. Le espressioni sono scritte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]e può usare codice personalizzato funzioni incorporate, report e variabili di gruppo e variabili definite dall'utente. Le espressioni iniziano con un segno di uguale (=). Per altre informazioni sull'editor espressioni e sui tipi di riferimenti che è possibile includere, vedere [Uso delle espressioni nei report &#40;Generatore report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md) e [Aggiungere un'espressione &#40;Generatore report e SSRS&#41;](add-an-expression-report-builder-and-ssrs.md).  
+Le espressioni vengono utilizzate di frequente nei report per controllare il contenuto e l'aspetto del report. Le espressioni sono scritte [!INCLUDE[msCoName](../../includes/msconame-md.md)] in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]e possono usare funzioni predefinite di codice personalizzato, variabili di report e di gruppo e variabili definite dall'utente. Le espressioni iniziano con un segno di uguale (=). Per altre informazioni sull'editor espressioni e sui tipi di riferimenti che è possibile includere, vedere [Uso delle espressioni nei report &#40;Generatore report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md) e [Aggiungere un'espressione &#40;Generatore report e SSRS&#41;](add-an-expression-report-builder-and-ssrs.md).  
 
 > [!IMPORTANT]  
 >  Quando RDL Sandboxing è abilitato, al momento della pubblicazione del report nel testo dell'espressione è possibile utilizzare solo determinati tipi e membri. Per altre informazioni, vedere [Enable and Disable RDL Sandboxing](../enable-and-disable-rdl-sandboxing.md).  
@@ -51,7 +51,7 @@ Per altre informazioni sulle espressioni semplici e complesse, per sapere dove �
 
 Per altre informazioni su come scrivere espressioni in cui vengono utilizzati molti operatori e funzioni che si utilizzano anche per esempi di espressione in questo argomento, ma nel contesto di scrittura di un report, vedere [Esercitazione: Introduzione alle espressioni](../tutorial-introducing-expressions.md).  
 
-Nell'editor espressioni è inclusa una vista gerarchica delle funzioni predefinite. Quando si seleziona la funzione, nel riquadro Valori viene visualizzato un esempio di codice. Per altre informazioni, vedere la [finestra di dialogo espressione](../expression-dialog-box.md) oppure [nella finestra di dialogo espressione &#40;Generatore Report&#41;](../expression-dialog-box-report-builder.md).  
+Nell'editor espressioni è inclusa una vista gerarchica delle funzioni predefinite. Quando si seleziona la funzione, nel riquadro Valori viene visualizzato un esempio di codice. Per ulteriori informazioni, vedere la finestra di dialogo [espressione](../expression-dialog-box.md) o finestra di dialogo [espressione &#40;Generatore report&#41;](../expression-dialog-box-report-builder.md).  
 
 ## <a name="functions"></a>Funzioni  
 
@@ -176,9 +176,9 @@ Nell'esempio seguente viene visualizzata la data di inizio dell'anno in corso
 =Format(Parameters!StartDate.Value, "D") & " through " &  Format(Parameters!EndDate.Value, "D")    
 ```  
 
-Se la casella di testo contiene solo una data o numero, è necessario utilizzare la proprietà formato della casella di testo per applicare la formattazione anziché il `Format` funzione all'interno della casella di testo.  
+Se la casella di testo contiene solo una data o un numero, è necessario utilizzare la proprietà Format della casella di testo per applicare la formattazione `Format` anziché la funzione all'interno della casella di testo.  
 
--   Il `Right`, `Len`, e `InStr` funzioni sono utili per ottenere sottostringhe, ad esempio, trimming *dominio*\\*username* solo il nome utente. L'espressione seguente restituisce la parte della stringa a destra del carattere barra rovesciata (\\) da un parametro denominato *User*:  
+-   Le `Right`funzioni `Len`,\\e `InStr` sono utili per la restituzione di una sottostringa, ad esempio per la rimozione del nome utente di *dominio* *al solo* nome utente. L'espressione seguente restituisce la parte della stringa a destra del carattere barra rovesciata (\\) da un parametro denominato *User*:  
 
 ```  
 =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -190,7 +190,7 @@ L'espressione seguente restituisce lo stesso valore dell'espressione precedente,
 =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
 ```  
 
--   È possibile visualizzare i valori selezionati di un parametro multivalore. L'esempio seguente usa il `Join` funzione per concatenare i valori selezionati del parametro *MySelection* in un'unica stringa che può essere impostata come espressione per il valore di una casella di testo in un elemento del report:  
+-   È possibile visualizzare i valori selezionati di un parametro multivalore. Nell'esempio seguente viene utilizzata `Join` la funzione per concatenare i valori selezionati del parametro *IsSelected* in un'unica stringa che può essere impostata come espressione per il valore di una casella di testo in un elemento del report:  
 
 ```  
 = Join(Parameters!MySelection.Value)  
@@ -203,7 +203,7 @@ Nell'esempio riportato di seguito viene eseguita la stessa operazione dell'esemp
 
 ```  
 
--   Il `Regex` le funzioni di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> sono utili per modificare il formato di stringhe esistenti, ad esempio, la formattazione di un numero di telefono. L'espressione seguente usa il `Replace` funzione per modificare il formato di un numero telefonico di dieci cifre in un campo da "*nnn*-*nnn*-*nnnn* "a" (*nnn*) *nnn*-*nnnn*":  
+-   Le `Regex` funzioni [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] disonoutilipermodificareilformatodistringheesistenti,adesempioperformattareun<xref:System.Text.RegularExpressions> numero di telefono. Nell'espressione seguente viene utilizzata `Replace` la funzione per modificare il formato di un numero di telefono a dieci cifre in un campo da "*nnn*-*nnn*-*nnnn*" a "(*nnn*) *nnn* - *nnnn*":  
 
 ```  
 =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -217,7 +217,7 @@ Nell'esempio riportato di seguito viene eseguita la stessa operazione dell'esemp
 -   Specificando un campo chiave è possibile utilizzare la funzione `Lookup` per recuperare un valore da un set di dati per una relazione uno-a-uno, ad esempio, una coppia chiave-valore. Nell'espressione seguente viene visualizzato il nome prodotto da un set di dati ("Product"), in base all'identificatore del prodotto con cui eseguire la corrispondenza:  
 
 ```  
-=Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
+=Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields!ProductName.Value, "Product")  
 ```  
 
 #### <a name="lookupset"></a>LookupSet  
@@ -433,7 +433,7 @@ Per specificare i colori per un grafico con forme, è possibile utilizzare codic
 =IIF(CountRows()>12,false,true)  
 ```  
 
--   L'espressione seguente, se impostata nella `Hidden` proprietà di una colonna, Visualizza la colonna solo se il campo esiste nel set di dati di report dopo che i dati vengono recuperati dall'origine dati:  
+-   L'espressione seguente, se impostata nella `Hidden` proprietà di una colonna, Visualizza la colonna solo se il campo esiste nel set di dati del report dopo che i dati sono stati recuperati dall'origine dati:  
 
 ```  
 =IIF(Fields!Column_1.IsMissing, true, false)  

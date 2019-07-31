@@ -1,5 +1,5 @@
 ---
-title: Provider obbligatori per il Data Shaping | Microsoft Docs
+title: Provider richiesti per la data shaping | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 98b34b985650f92fb840b14daba8d5bf16d8454a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 732563fc2c4e1cc93beac8712d845b960ae56aaf
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67924363"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661272"
 ---
 # <a name="required-providers-for-data-shaping"></a>Provider necessari per il data shaping
-Il data shaping in genere richiede due provider. Il provider di servizi [Data shaping per OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), fornisce i dati di data shaping, funzionalità e un provider di dati, ad esempio il Provider OLE DB per SQL Server, che include le righe di dati per popolare il data shaping [Recordset ](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Il data shaping richiede in genere due provider. Il provider di servizi, [Data Shaping Service per OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), fornisce la funzionalità di data shaping e un provider di dati, ad esempio il provider di OLE DB per SQL Server, fornisce righe di dati per popolare il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)a forma di.  
   
- Il nome del provider di servizi (MSDataShape) può essere specificato come valore dei [Connection](../../../ado/reference/ado-api/connection-object-ado.md) oggetto [Provider](../../../ado/reference/ado-api/provider-property-ado.md) proprietà o parola chiave della stringa di connessione "Provider = MSDataShape;".  
+ Il nome del provider di servizi (MSDataShape) può essere specificato come valore della proprietà del [provider](../../../ado/reference/ado-api/provider-property-ado.md) di oggetti [connessione](../../../ado/reference/ado-api/connection-object-ado.md) o della parola chiave della stringa di connessione "provider = MSDataShape;".  
   
- Il nome del provider di dati può essere specificato come valore dei **Provider di dati** proprietà dinamiche, che viene aggiunto al **connessione** oggetto [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta in base al il Data shaping per OLE DB o parola chiave della stringa di connessione "**Provider di dati =** _provider_".  
+ Il nome del provider di dati può essere specificato come valore della proprietà dinamica **provider di dati** , che viene aggiunto alla raccolta delle [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) dell'oggetto **connessione** dal servizio Data Shaping per OLE DB o dalla parola chiave della stringa di connessione " **Provider di dati =** _provider_".  
   
- Nessun provider di dati è obbligatorio se il **Recordset** non viene popolata (ad esempio, come un creato **Recordset** in cui le colonne vengono create con la nuova parola chiave). In tal caso, specificare "**Provider di dati =** none;".  
+ Non è necessario alcun provider di dati se il **Recordset** non è popolato, ad esempio in un **Recordset** fabbricato in cui le colonne vengono create con la parola chiave New. In tal caso, specificare "**provider di dati =** None;".  
   
 ## <a name="example"></a>Esempio  
   
@@ -38,6 +38,6 @@ cnn.Open "Data Provider=SQLOLEDB;Integrated Security=SSPI;Database=Northwind"
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempio di Data Shaping](../../../ado/guide/data/data-shaping-example.md)   
- [Grammatica formale per Shape](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Esempio di data shaping](../../../ado/guide/data/data-shaping-example.md)   
+ [Grammatica forma formale](../../../ado/guide/data/formal-shape-grammar.md)   
  [Comandi Shape in generale](../../../ado/guide/data/shape-commands-in-general.md)
