@@ -1,7 +1,7 @@
 ---
 title: Join (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/18/2018
+ms.date: 07/19/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -10,31 +10,33 @@ helpviewer_keywords:
 - HASH join
 - NESTED LOOPS join
 - MERGE join
+- ADAPTIVE join
 - joins [SQL Server], about joins
 - join hints [SQL Server]
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29fa0dcc89cd8e1ad88abcf9974884b723b7a64e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051950"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419593"
 ---
 # <a name="joins-sql-server"></a>Join (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue operazioni di ordinamento, intersezione, unione e differenza tramite le tecnologie di ordinamento in memoria e di hash join. Grazie a questo tipo di piano di query, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta il partizionamento verticale delle tabelle, denominato talvolta "archiviazione a colonne".   
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza tre tipi di operazioni di join:    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza quattro tipi di operazioni di join:    
 -   Join a cicli annidati     
 -   Merge join   
 -   Hash join   
+-   Join adattivi (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])
 
 ## <a name="fundamentals"></a> Nozioni di base sui join
-I join consentono di recuperare dati da due o più tabelle in base alle relazioni logiche esistenti tra le tabelle stesse. I join indicano la modalità con cui Microsoft SQL Server usa i dati di una tabella per la selezione di righe in un'altra tabella.    
+I join consentono di recuperare dati da due o più tabelle in base alle relazioni logiche esistenti tra le tabelle stesse. I join indicano la modalità d'uso dei dati di una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la selezione di righe in un'altra tabella.    
 
 Una condizione di join definisce il modo in cui due tabelle sono correlate in una query in base agli elementi seguenti:    
 -   L'impostazione della colonna di ogni tabella da utilizzare per il join. In una condizione di join tipica viene specificata una chiave esterna di una tabella e la chiave associata nell'altra tabella.    
@@ -115,6 +117,8 @@ Nel caso più semplice, ovvero un *join a cicli annidati di tipo naive*, la rice
 
 Un nested loop join è particolarmente efficace se l'input esterno è di dimensioni ridotte mentre l'input interno è preindicizzato e di dimensioni notevoli. In molte transazioni di dimensioni ridotte, ad esempio quelle relative a set di righe limitati, i nested loop join indicizzati offrono prestazioni superiori rispetto ai merge join e agli hash join. Per le query di notevoli dimensioni, tuttavia, i nested loop join rappresentano raramente la scelta ottimale.    
 
+Quando l'attributo OPTIMIZED dell'operatore di join a cicli annidati viene impostato su **True**, significa che vengono usati cicli annidati ottimizzati (o l'ordinamento in batch) per ridurre al minimo le operazioni di I/O quando la tabella interna è di grandi dimensioni, indipendentemente dal fatto che sia parallelizzata o meno. La presenza di questa ottimizzazione in un determinato piano potrebbe non essere ovvia durante l'analisi di un piano di esecuzione, dato che l'ordinamento stesso è un'operazione nascosta. La presenza dell'attributo OPTIMIZED nel codice XML del piano, tuttavia, indica che il join a cicli annidati potrebbe tentare di riordinare le righe di input per migliorare le prestazioni di I/O.
+
 ## <a name="merge"></a> Informazioni sui merge join
 Se i due input di join non sono di dimensioni ridotte, ma sono ordinati in base alla rispettiva colonna di join (ad esempio, se sono stati ottenuti tramite l'analisi di indici ordinati), l'operazione di join più rapida è rappresentata dal merge join. Se entrambi gli input di join sono di dimensioni notevoli e analoghe, un merge join con ordinamento eseguito in precedenza e un hash join offrono prestazioni simili. Le operazioni di hash join, tuttavia, risultano spesso molto più rapide se le dimensioni dei due input differiscono in modo significativo.       
 
@@ -142,15 +146,12 @@ Gli hash join vengono utilizzati per vari tipi di operazioni di corrispondenza t
 Nelle sezioni seguenti vengono descritti i diversi tipi di hash join: hash join in memoria, grace hash join e hash join ricorsivo.    
 
 ### <a name="inmem_hash"></a> Hash join in memoria
-
 L'hash join esegue in primo luogo l'analisi o il calcolo dell'intero input di compilazione, quindi compila una tabella hash in memoria. Ogni riga viene inserita in un hash bucket in base al valore hash calcolato per la chiave hash. Se l'intero input di compilazione è inferiore alla memoria disponibile, tutte le righe possono essere inserite nella tabella hash. A questa fase di compilazione segue la fase probe. Viene eseguita l'analisi o il calcolo dell'intero input probe, una riga alla volta. Per ogni riga probe viene calcolato il valore della chiave hash, viene eseguita l'analisi dell'hash bucket corrispondente e vengono prodotte le corrispondenze.    
 
 ### <a name="grace_hash"></a> Grace hash join
-
 Se le dimensioni dell'input di compilazione sono superiori a quelle della memoria disponibile, l'hash join viene eseguito in vari passaggi. In questo caso, l'hash join viene definito grace hash join. Ogni passaggio prevede una fase di compilazione e una fase probe. L'input di compilazione e l'input probe vengono inizialmente analizzati e partizionati in più file, tramite una funzione di hashing sulle chiavi hash. L'utilizzo della funzione di hashing sulle chiavi hash garantisce che ogni coppia di record su cui si basa il join si trovi nella stessa coppia di file. In tal modo il join di due input di grandi dimensioni risulta convertito in più istanze di dimensioni ridotte della stessa attività. L'hash join viene quindi applicato a ogni coppia di file partizionati.    
 
 ### <a name="recursive_hash"></a> Hash join ricorsivo
-
 Se l'input di compilazione ha dimensioni tali per cui gli input per un'unione esterna standard richiedono più livelli di unione, saranno necessari più passaggi di partizionamento e più livelli di partizionamento. Se soltanto alcune partizioni sono di grandi dimensioni, i passaggi di partizionamento aggiuntivi vengono utilizzati soltanto per tali partizioni. Per velocizzare al massimo i passaggi di partizionamento vengono utilizzate operazioni di I/O asincrone di grandi dimensioni, per cui un unico thread può tenere occupate più unità disco.    
 
 > [!NOTE]
@@ -164,14 +165,132 @@ Se Query Optimizer non prevede correttamente quale dei due input è il più picc
 > L'inversione dei ruoli si verifica in maniera indipendente da qualsiasi struttura o hint per la query e inoltre non viene visualizzata nel piano di query. Quando si verifica, l'inversione dei ruoli è un'operazione trasparente all'utente.
 
 ### <a name="hash_bailout"></a> hash bailout
-
 Il termine hash bailout è talvolta usato per descrivere grace hash join o hash join ricorsivi.    
 
 > [!NOTE]
 > Gli hash join ricorsivi e gli hash bailout causano una riduzione delle prestazioni del server. Se si nota la presenza di molti eventi di avviso di hash in una traccia, aggiornare le statistiche sulle colonne che si sta unendo in join.    
 
 Per altre informazioni sugli hash bailout, vedere [Hash Warning - classe di evento](../../relational-databases/event-classes/hash-warning-event-class.md).    
-  
+
+## <a name="adaptive"></a> Informazioni sui join adattivi
+[Modalità batch](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) I join adattivi consentono di rimandare a **dopo** la scansione del primo input la scelta tra l'esecuzione di un metodo [hash join](#hash) e l'esecuzione di un metodo join a [cicli annidati](#nested_loops). L'operatore Join adattivo definisce una soglia che viene usata per stabilire quando passare a un piano Cicli annidati. Durante l'esecuzione, un piano di query può pertanto passare a una strategia di join più efficace senza dover essere ricompilato. 
+
+> [!TIP]
+> Questa funzionalità è ottimale per i carichi di lavoro con frequenti oscillazioni tra i volumi di input di join rilevati.
+
+La decisione in fase di esecuzione è basata sui passaggi seguenti:
+-  Se il conteggio delle righe dell'input del join di compilazione è così ridotto che un join a cicli annidati è preferibile a un hash join, il piano passa a un algoritmo a cicli annidati.
+-  Se l'input del join di compilazione supera una determinata soglia di numero di righe, non si verifica alcun cambiamento e il piano continua con un hash join.
+
+La query seguente illustra un esempio di join adattivo:
+
+```sql
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
+FROM [Fact].[Order] AS [fo]
+INNER JOIN [Dimension].[Stock Item] AS [si]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+WHERE [fo].[Quantity] = 360;
+```
+
+La query restituisce 336 righe. Se si attiva [Statistiche query dinamiche](../../relational-databases/performance/live-query-statistics.md), viene visualizzato il piano seguente:
+
+![Risultato della query: 336 righe](../../relational-databases/performance/media/4_AQPStats336Rows.png)
+
+Nel piano notare quanto segue:
+1. Un'analisi dell'indice columnstore che specifica le righe per la fase di compilazione dell'hash join.
+2. Il nuovo operatore di join adattivo. L'operatore definisce la soglia usata per il passaggio a un piano Cicli annidati. In questo esempio la soglia corrisponde a 78 righe. Se il risultato è &gt;= 78 righe, verrà usato un hash join. Se è inferiore alla soglia, verrà usato un join a cicli annidati.
+3. Dato che la query restituisce 336 righe, questa soglia viene superata e pertanto il secondo ramo rappresenta la fase di probe di un'operazione hash join standard. Si noti che Statistiche query dinamiche visualizza le righe del flusso tra gli operatori, in questo caso "672 di 672".
+4. L'ultimo ramo è una Ricerca indice cluster che il join a cicli annidati avrebbe usato se la soglia non fosse stata superata. Il valore visualizzato è "0 di 336" righe (il ramo non viene usato).
+
+Confrontare ora il piano con la stessa query, ma in questo caso quando il valore *Quantità* ha una sola riga nella tabella:
+ 
+```sql
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
+FROM [Fact].[Order] AS [fo]
+INNER JOIN [Dimension].[Stock Item] AS [si]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+WHERE [fo].[Quantity] = 361;
+```
+La query restituisce una riga. Con l'abilitazione di Statistiche query dinamiche viene visualizzato il piano seguente:
+
+![Risultato della query: una riga](../../relational-databases/performance/media/5_AQPStatsOneRow.png)
+
+Nel piano notare quanto segue:
+- Con una sola riga restituita, ora il flusso di righe attraversa Ricerca indice cluster.
+- Poiché non è stata portata avanti la fase di compilazione dell'hash join, nessuna riga attraversa il secondo ramo.
+
+### <a name="adaptive-join-remarks"></a>Osservazioni per i join adattivi
+I join adattivi presentano requisiti di memoria superiori rispetto a un piano equivalente con join a cicli annidati indicizzati. La memoria aggiuntiva risulta necessaria, come se il join a cicli annidati fosse un hash join. Si registra un sovraccarico anche per la fase di compilazione come operazione stop-and-go rispetto a un join a cicli annidati equivalente a livello di flussi. A tale costo aggiuntivo corrisponde una maggior flessibilità per gli scenari in cui i conteggi delle righe possono variare nell'input di compilazione.
+
+I join adattivi in modalità batch funzionano per l'esecuzione iniziale di un'istruzione. Dopo la compilazione, le esecuzioni consecutive restano adattive sulla base della soglia di join adattivo di compilazione e delle righe di runtime del flusso di dati della fase di compilazione dell'input esterno.
+
+Se un join adattivo passa al funzionamento con cicli annidati usa le righe già lette dalla compilazione hash join. L'operatore **non** legge di nuovo le righe del riferimento esterno.
+
+### <a name="tracking-adaptive-join-activity"></a>Rilevamento delle attività di join adattivo
+L'operatore Join adattivo ha i seguenti attributi dell'operatore del piano:
+
+|Attributo del piano|Descrizione|
+|---|---|
+|AdaptiveThresholdRows|Visualizza l'uso della soglia che determina il passaggio da un hash join a un join a cicli annidati.|
+|EstimatedJoinType|Probabile tipo del join.|
+|ActualJoinType|In un piano reale visualizza l'algoritmo di join scelto in base alla soglia.|
+
+Il piano stimato visualizza la struttura del piano di join adattivo, la soglia di join adattivo definita e il tipo di join stimato.
+
+> [!TIP]
+> Query Store acquisisce e può imporre un piano di join adattivo in modalità batch.
+
+### <a name="adaptive-join-eligible-statements"></a>Istruzioni idonee per i join adattivi
+Alcune condizioni rendono un join logico idoneo per un join adattivo in modalità batch:
+- Il livello di compatibilità del database è 140 o superiore.
+- La query è un'istruzione `SELECT` (attualmente le istruzioni di modifica dei dati non sono idonee).
+- Il join è idoneo per l'esecuzione in un algoritmo fisico di join a cicli annidati indicizzati o di hash join.
+- L'hash join usa la [modalità batch](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) con un indice columnstore nella query globale o una tabella Columnstore indicizzata a cui fa riferimento direttamente il join.
+- Il primo elemento figlio (riferimento esterno) deve essere identico per le soluzioni alternative generate dal join a cicli annidati e dall'hash join.
+
+### <a name="adaptive-threshold-rows"></a>Righe della soglia adattiva
+Il grafico seguente visualizza un esempio di intersezione tra il costo di un hash join e il costo di un join a cicli annidati alternativo. In questo punto di intersezione viene determinata la soglia, che a sua volta determina l'algoritmo usato per l'operazione di join.
+
+![Soglia di join](../../relational-databases/performance/media/6_AQPJoinThreshold.png)
+
+### <a name="disabling-adaptive-joins-without-changing-the-compatibility-level"></a>Disabilitazione dei join adattivi senza modificare il livello di compatibilità
+È possibile disabilitare i join adattivi nell'ambito del database o dell'istruzione mantenendo comunque la compatibilità sul livello 140 o superiore.  
+Per disabilitare i join adattivi per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
+
+```sql
+-- SQL Server 2017
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = OFF;
+```
+
+Quando è abilitata, questa impostazione viene visualizzata come abilitata in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
+Per abilitare nuovamente i join adattivi per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
+
+```sql
+-- SQL Server 2017
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = ON;
+```
+
+È anche possibile disabilitare i join adattivi per una query specifica, definendo `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` come [hint per la query USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Esempio:
+
+```sql
+SELECT s.CustomerID,
+       s.CustomerName,
+       sc.CustomerCategoryName
+FROM Sales.Customers AS s
+LEFT OUTER JOIN Sales.CustomerCategories AS sc
+       ON s.CustomerCategoryID = sc.CustomerCategoryID
+OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
+```
+
+> [!NOTE]
+> L'hint per la query USE HINT ha la precedenza rispetto una configurazione con ambito database o un'impostazione del flag di traccia. 
+
 ## <a name="nulls_joins"></a> Valori Null e join
 Gli eventuali valori Null presenti nelle colonne delle tabelle da unire in join non possono essere associati ad altri valori. La presenza di valori Null in una colonna di una delle tabelle da unire in join viene restituita solo se si usa un outer join, a meno che la clausola `WHERE` non escluda i valori Null.     
 
@@ -236,7 +355,3 @@ Nel set di risultati non è agevole distinguere un valore NULL dei dati da un va
 [Conversione di tipi di dati &#40;motore di database&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
 [Subqueries](../../relational-databases/performance/subqueries.md)     (Sottoquery)  
 [Join adattivi](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)    
-
-
-  
-  

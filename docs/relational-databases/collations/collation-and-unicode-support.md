@@ -24,17 +24,20 @@ helpviewer_keywords:
 - SQL Server collations
 - UTF-8
 - UTF-16
+- UTF8
+- UTF16
+- UCS2
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af749bdb7050d9e71fdfe698fe295255a4603add
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5807b8ae9c3b074068d0422a91b1dc1711c4067a
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118494"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471039"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -272,7 +275,7 @@ Nella tabella seguente sono illustrati i byte per l'archiviazione della codifica
 
 > [!TIP]   
 > Si pensa comunemente che in [CHAR(*n*) e VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) o in [NCHAR(*n*) e NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) l'elemento *n* definisca il numero di caratteri. Questo è dovuto al fatto che nell'esempio di una colonna CHAR(10) è possibile archiviare 10 caratteri ASCII nell'intervallo 0-127 usando regole di confronto come Latin1_General_100_CI_AI, perché ogni carattere in questo intervallo usa solo 1 byte.    
-> Tuttavia, in [CHAR(*n*) e VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), l'elemento *n* definisce la lunghezza della stringa in **byte** (0-8000), mentre in [NCHAR(*n*) e NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) l'elemento *n* definisce la lunghezza della stringa in **coppie di byte** (0-4000). *n* non definisce mai il numero di caratteri che è possibile archiviare.
+> Tuttavia, in [CHAR(*n*) e VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), l'elemento *n* definisce le dimensioni della stringa in **byte** (0-8000), mentre in [NCHAR(*n*) e NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) l'elemento *n* definisce le dimensioni della stringa in **coppie di byte** (0-4000). *n* non definisce mai il numero di caratteri che è possibile archiviare,
 
 Come illustrato in precedenza, a seconda del set di caratteri in uso, la scelta della codifica Unicode e del tipo di dati appropriati può offrire importanti risparmi di risorse di archiviazione o al contrario incrementare il footprint della memoria. Ad esempio se si usa una regola di confronto con supporto UTF-8 come Latin1_General_100_CI_AI_SC_UTF8, una colonna `CHAR(10)` archivia 10 byte e può contenere 10 caratteri ASCII nell'intervallo 0-127, ma solo 5 caratteri nell'intervallo 128-2047 e solo 3 caratteri nell'intervallo 2048-65535. Tuttavia, dato che una colonna `NCHAR(10)` archivia 10 coppie di byte (20 byte), può ospitare 10 caratteri nell'intervallo 0-65535.  
 
@@ -301,7 +304,9 @@ Per altre considerazioni, vedere [Scrittura di istruzioni Transact-SQL internazi
 [Scrittura di istruzioni Transact-SQL internazionali](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 [SQL Server Best Practices Migration to Unicode](https://go.microsoft.com/fwlink/?LinkId=113890) (Procedure consigliate di SQL Server: migrazione a Unicode) - non più aggiornato   
 [Sito Web Unicode Consortium](https://go.microsoft.com/fwlink/?LinkId=48619)   
-[Standard Unicode](http://www.unicode.org/standard/standard.html)      
+[Standard Unicode](http://www.unicode.org/standard/standard.html)     
+[Supporto UTF-8 in OLE DB Driver for SQL Server](../../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
+Blog [Introducing UTF-8 support for SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928) (Introduzione al supporto di UTF-8 per SQL Server)       
     
 ## <a name="see-also"></a>Vedere anche    
 [Regole di confronto dei database indipendenti](../../relational-databases/databases/contained-database-collations.md)     
