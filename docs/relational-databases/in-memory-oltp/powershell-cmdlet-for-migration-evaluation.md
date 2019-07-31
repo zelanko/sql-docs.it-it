@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 117250d3-9982-47fe-94fd-6f29f6159940
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea10ab18048ed4c9482874db26b4f981e66e2cc7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 769948242c747abdfb1fd6e32606df6a5800a9bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661829"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054440"
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>Cmdlet di PowerShell per la valutazione della migrazione
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,6 +41,6 @@ Save-SqlMigrationReport [ -MigrationType OLTP ] [ -Server server -Database datab
 |FolderPath|Cartella in cui il cmdlet deve depositare i report generati. Obbligatorio.|  
   
 ## <a name="results"></a>Risultati  
- La cartella specificata nel parametro -FolderPath conterrà due nomi di cartella: Tables e Stored procedures. Se l'oggetto di destinazione è una tabella, il report sarà all'interno della cartella Tables. In caso contrario, sarà all'interno della cartella Stored procedures.  
+ La cartella specificata nel parametro -FolderPath conterrà due nomi di cartella: Tables e Stored Procedures. Se l'oggetto di destinazione è una tabella, il report sarà all'interno della cartella Tables. In caso contrario, sarà all'interno della cartella Stored procedures.  
   
   

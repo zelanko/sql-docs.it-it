@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c3302577e705bf563ad54037437213a4088407f0
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 48eaf7f49976ed8784973c950887dc92252b08e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101898"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -115,7 +114,7 @@ La cache delle procedure viene cancellata anche con le seguenti operazioni di ri
 ## <a name="result-sets"></a>Set di risultati  
 Quando non viene specificata la clausola WITH NO_INFOMSGS, DBCC FREEPROCCACHE restituisce: "Esecuzione DBCC completata. Se sono stati visualizzati messaggi di errore DBCC, rivolgersi all'amministratore di sistema".
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 Applicabile a: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 - È necessario disporre dell'autorizzazione ALTER SERVER STATE per il server.  
 
@@ -171,7 +170,7 @@ DBCC FREEPROCCACHE (0x060006001ECA270EC0215D05000000000000000000000000);
 GO  
 ```  
   
-### <a name="b-clearing-all-plans-from-the-plan-cache"></a>b. Cancellazione di tutti i piani dalla cache dei piani  
+### <a name="b-clearing-all-plans-from-the-plan-cache"></a>B. Cancellazione di tutti i piani dalla cache dei piani  
 Nell'esempio seguente vengono cancellati tutti gli elementi dalla cache dei piani. La clausola WITH `NO_INFOMSGS` viene specificata per impedire la visualizzazione del messaggio di informazioni.
   
 ```sql  

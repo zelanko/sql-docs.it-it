@@ -32,17 +32,16 @@ helpviewer_keywords:
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f91b618e98fa9036b27a398731ecfaca51925611
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558958"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134428"
 ---
 # <a name="database-mail-configuration-objects"></a>Oggetti di configurazione di Posta elettronica database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Posta elettronica database dispone di due oggetti di configurazione: gli oggetti di configurazione del database forniscono una modalità per configurare le impostazioni che Posta elettronica database deve utilizzare per l'invio di messaggi posta elettronica dall'applicazione di database o da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+  Posta elettronica database ha due oggetti di configurazione: gli oggetti di configurazione del database offrono una modalità per configurare le impostazioni che Posta elettronica database deve usare per l'invio di messaggi di posta elettronica dall'applicazione di database o da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 -   Account di Posta elettronica database  
   
@@ -60,11 +59,11 @@ ms.locfileid: "51558958"
   
  Posta elettronica database supporta tre metodi di autenticazione per la comunicazione con un server SMTP:  
   
--   Autenticazione di Windows: Posta elettronica database utilizza le credenziali dell'account servizio Windows del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] per l'autenticazione sul server SMTP.  
+-   Autenticazione di Windows: Posta elettronica database usa le credenziali dell'account servizio Windows del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] per l'autenticazione sul server SMTP.  
   
--   Autenticazione di base: Posta elettronica database utilizza il nome utente e la password specificati per l'autenticazione sul server SMTP.  
+-   Autenticazione di base:  Posta elettronica database usa il nome utente e la password specificati per l'autenticazione sul server SMTP.  
   
--   Autenticazione anonima: il server SMTP non richiede autenticazione.  Posta elettronica database non utilizzerà credenziali per l'autenticazione nel server SMTP.  
+-   Autenticazione anonima:  il server SMTP non richiede l'autenticazione.  Posta elettronica database non utilizzerà credenziali per l'autenticazione nel server SMTP.  
   
  Le informazioni sull'account vengono archiviate nel database **msdb** . Ciascun account include le informazioni seguenti:  
   

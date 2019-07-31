@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e48239d521ed82c5bcfe2920c36b89e82cc1e193
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: aea91d8ed791809296a924d10aab176f16ebe82f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305379"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117139"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -84,9 +83,9 @@ CREATE SERVER AUDIT audit_name
  Percorso del log di controllo. Il nome del file viene generato in base al nome e al GUID del controllo.  
   
  MAXSIZE = { *max_size }*  
- Specifica le dimensioni massime consentite per il file di controllo. *max_size* deve essere un valore intero seguito da MB, GB, TB, o UNLIMITED. Il valore minimo che è possibile specificare per *max_size* è 2 MB, mentre il valore massimo è 2.147.483.647 TB. Se si specifica UNLIMITED, le dimensioni del file possono aumentare fino a quando non si esaurisce lo spazio su disco. 0 indica UNLIMITED. Se si specifica un valore minore di 2 MB, viene generato l'errore MSG_MAXSIZE_TOO_SMALL. Il valore predefinito è UNLIMITED.  
+ Specifica le dimensioni massime consentite per il file di controllo. *max_size* deve essere un valore intero seguito da MB, GB, TB, o UNLIMITED. Il valore minimo che è possibile specificare per *max_size* è 2 MB, mentre il valore massimo è 2.147.483.647 TB. Se si specifica UNLIMITED, le dimensioni del file possono aumentare fino a quando non si esaurisce lo spazio su disco. Anche 0 indica UNLIMITED. Se si specifica un valore minore di 2 MB, viene generato l'errore MSG_MAXSIZE_TOO_SMALL. Il valore predefinito è UNLIMITED.  
   
- MAX_ROLLOVER_FILES =*{ integer* | UNLIMITED }  
+ MAX_ROLLOVER_FILES = *{ integer* | UNLIMITED }  
  Indica il numero massimo di file da mantenere nel file system oltre al file corrente. Il valore *MAX_ROLLOVER_FILES* deve essere di tipo Integer o UNLIMITED. Il valore predefinito è UNLIMITED. Questo parametro viene valutato ogni volta che il controllo viene riavviato (quando l'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene riavviata o quando il controllo viene disabilitato e quindi riabilitato) oppure quando è necessario un nuovo file perché è stato raggiunto il valore MAXSIZE. Quando *MAX_ROLLOVER_FILES* viene valutato, se il numero di file supera l'impostazione di *MAX_ROLLOVER_FILES*, viene eliminato il file meno recente. Di conseguenza, quando l'impostazione di *MAX_ROLLOVER_FILES* è 0, viene creato un nuovo file 0 ogni volta che l'impostazione di *MAX_ROLLOVER_FILES* viene valutata. Un solo file viene eliminato automaticamente quando viene valutata l'impostazione di *MAX_ROLLOVER_FILES*, pertanto quando il valore di *MAX_ROLLOVER_FILES* viene ridotto, il numero di file non verrà ridotto, a meno che i file obsoleti non vengano eliminati manualmente. Il numero massimo di file specificabili è 2.147.483.647.  
   
  MAX_FILES =*integer*  
@@ -151,7 +150,7 @@ Forza l'arresto dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversio
   
  L'istruzione CREATE SERVER AUDIT è nell'ambito di una transazione. L'esecuzione del rollback della transazione comporta il rollback anche per l'istruzione.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per creare, modificare o eliminare un controllo del server, le entità devono disporre dell'autorizzazione ALTER ANY SERVER AUDIT o CONTROL SERVER.  
   
  Quando si salvano informazioni di controllo in un file, per contribuire a impedirne l'alterazione, limitare l'accesso al percorso del file.  
@@ -166,7 +165,7 @@ CREATE SERVER AUDIT HIPAA_Audit
     TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
 ```  
   
-### <a name="b-creating-a-server-audit-with-a-windows-application-log-target-with-options"></a>b. Creazione di un controllo del server con il registro applicazioni di Windows come destinazione e con opzioni  
+### <a name="b-creating-a-server-audit-with-a-windows-application-log-target-with-options"></a>B. Creazione di un controllo del server con il registro applicazioni di Windows come destinazione e con opzioni  
  Nell'esempio seguente viene creato un controllo del server denominato `HIPAA_Audit` con il registro applicazioni di Windows come destinazione. Nella coda viene eseguita un'operazione di scrittura al secondo e il motore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene arrestato in caso di errore.  
   
 ```sql  

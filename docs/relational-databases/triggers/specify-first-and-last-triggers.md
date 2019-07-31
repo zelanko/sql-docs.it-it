@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57da60f74ed24de6b1ef48eaa12053112a91a39f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1020bb9dff821471f33ba3af9285249a93980133
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747789"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055995"
 ---
 # <a name="specify-first-and-last-triggers"></a>Specifica dei primi e degli ultimi trigger
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UP
   
  Se il primo o l'ultimo trigger viene modificato da un'istruzione ALTER TRIGGER, l'attributo **First** o **Last** viene rimosso e il valore relativo all'ordine viene impostato su **None**. È necessario reimpostare l'ordine usando **sp_settriggerorder**.  
   
- La funzione OBJECTPROPERTY indica se un trigger è un primo o ultimo trigger tramite le proprietà seguenti: **ExecIsFirstInsertTrigger**, **ExecIsFirstUpdateTrigger**, **ExecIsFirstDeleteTrigger**, **ExecIsLastInsertTrigger**, **ExecIsLastUpdateTrigger** e **ExecIsLastDeleteTrigger**.  
+ La funzione OBJECTPROPERTY segnala se un trigger è primo o ultimo usando le proprietà seguenti: **ExecIsFirstInsertTrigger**, **ExecIsFirstUpdateTrigger**, **ExecIsFirstDeleteTrigger**, **ExecIsLastInsertTrigger**, **ExecIsLastUpdateTrigger** e **ExecIsLastDeleteTrigger**.  
   
  La replica genera automaticamente un primo trigger per ogni tabella inclusa in una sottoscrizione ad aggiornamento in coda o ad aggiornamento immediato. La replica richiede che il proprio trigger sia il primo trigger. La replica genera un errore se si cerca di includere una tabella con un primo trigger in una sottoscrizione ad aggiornamento immediato o ad aggiornamento in coda. Se si prova a impostare un trigger come primo dopo l'inclusione di una tabella in una sottoscrizione, **sp_settriggerorder** restituisce un errore. Se si usa ALTER sul trigger di replica oppure **sp_settriggerorder** per modificare il trigger di replica come ultimo trigger o come trigger senza un ordine di esecuzione specifico, la sottoscrizione non funzionerà in modo corretto.  
   

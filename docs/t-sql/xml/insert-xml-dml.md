@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4cedc8dee9040e198ffc5f229453a10d54065257
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 95cf1eaa68e429d18456d7f0f9490b700efad3db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012112"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051292"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ insert
   
 ## <a name="arguments"></a>Argomenti  
  *Expression1*  
- Identifica uno o più nodi da inserire. Può trattarsi di un'istanza XML costante, un riferimento a un'istanza del tipo di dati XML tipizzata della stessa raccolta di XML Schema in cui viene applicato il metodo modify, un'istanza del tipo di dati XML non tipizzata che usa una funzione **sql:column()**/**sql:variable()** autonoma o un'espressione XQuery. L'espressione può restituire un nodo, anche un nodo di testo, o una sequenza ordinata di nodi, ma non può essere risolta nel nodo radice (/). Se l'espressione restituisce un valore o una sequenza di valori, tali valori vengono inseriti come un nodo di testo nel quale ogni valore della sequenza è separato da uno spazio. Se si specificano più nodi come costante, i nodi vengono racchiusi tra parentesi e sono separati da virgole. Non è possibile inserire sequenze eterogenee, ad esempio una sequenza di elementi, attributi o valori. Se *Expression1* viene risolta in una sequenza vuota, non viene inserito nulla e non vengono restituiti errori.  
+ Identifica uno o più nodi da inserire. Può trattarsi di un'istanza XML costante, un riferimento a un'istanza del tipo di dati XML tipizzata della stessa raccolta di XML Schema in cui viene applicato il metodo modify, un'istanza del tipo di dati XML non tipizzata che usa una funzione **sql:column()** /**sql:variable()** autonoma o un'espressione XQuery. L'espressione può restituire un nodo, anche un nodo di testo, o una sequenza ordinata di nodi, ma non può essere risolta nel nodo radice (/). Se l'espressione restituisce un valore o una sequenza di valori, tali valori vengono inseriti come un nodo di testo nel quale ogni valore della sequenza è separato da uno spazio. Se si specificano più nodi come costante, i nodi vengono racchiusi tra parentesi e sono separati da virgole. Non è possibile inserire sequenze eterogenee, ad esempio una sequenza di elementi, attributi o valori. Se *Expression1* viene risolta in una sequenza vuota, non viene inserito nulla e non vengono restituiti errori.  
   
  into  
  I nodi identificati da *Expression1* vengono inseriti come discendenti diretti (nodi figlio) del nodo identificato da *Expression2*. Se il nodo in *Expression2* ha già uno o più nodi figlio, è necessario usare **as first** o **as last** per specificare la posizione in cui si intende aggiungere il nuovo nodo, ad esempio rispettivamente all'inizio o alla fine dell'elenco di nodi. Le parole chiave **as first** e **as last** vengono ignorate se si inseriscono attributi.  
@@ -105,7 +104,7 @@ GO
   
  Si noti che in diverse espressioni di percorso dell'esempio è specificato "[1]" come requisito per la tipizzazione statica, in modo tale da garantire la presenza di un singolo nodo di destinazione.  
   
-### <a name="b-inserting-multiple-elements-into-the-document"></a>b. Inserimento di più elementi nel documento  
+### <a name="b-inserting-multiple-elements-into-the-document"></a>B. Inserimento di più elementi nel documento  
  Nell'esempio seguente un documento viene prima assegnato a una variabile di tipo **xml**. Una sequenza di due elementi, che rappresenta le funzionalità del prodotto, viene quindi assegnata a una seconda variabile di tipo **xml**. Questa sequenza viene quindi inserita nella prima variabile.  
   
 ```  
@@ -168,7 +167,7 @@ GO
 ```  
   
 ### <a name="d-inserting-a-comment-node"></a>D. Inserimento di un nodo di commento  
- In questa query viene prima assegnato un documento XML a una variabile di tipo **xml**. Viene quindi utilizzato il linguaggio XML DML per inserire un nodo di commento dopo il primo elemento <`step`>.  
+ In questa query viene prima assegnato un documento XML a una variabile di tipo **xml**. Viene quindi usato il linguaggio XML DML per inserire un nodo di commento dopo il primo elemento <`step`>.  
   
 ```  
 USE AdventureWorks;  
@@ -212,7 +211,7 @@ GO
 ```  
   
 ### <a name="f-inserting-data-using-a-cdata-section"></a>F. Inserimento di dati tramite una sezione CDATA  
- Quando si inserisce testo che include caratteri non validi in XML, ad esempio < o >, è possibile utilizzare le sezioni CDATA per inserire i dati come illustrato nella query seguente. Nella query viene specificata una sezione CDATA che tuttavia viene aggiunta come un nodo di testo nel quale i caratteri non validi sono convertiti in entità, ad esempio '<' viene salvato come &lt;.  
+ Quando si inserisce testo che include caratteri non validi in XML, ad esempio < or >, è possibile usare le sezioni CDATA per inserire i dati come illustrato nella query seguente. Nella query viene specificata una sezione CDATA che tuttavia viene aggiunta come un nodo di testo nel quale i caratteri non validi sono convertiti in entità, ad esempio '<' viene salvato come &lt;.  
   
 ```  
 USE AdventureWorks;  
@@ -243,7 +242,7 @@ GO
 ```  
   
 ### <a name="g-inserting-text-node"></a>G. Inserimento di un nodo di testo  
- In questa query viene prima assegnato un documento XML a una variabile di tipo **xml**. Viene quindi utilizzato il linguaggio XML DML per inserire un nodo di testo come primo figlio dell'elemento <`Root`>. Per specificare il testo viene utilizzato il costruttore di testo.  
+ In questa query viene prima assegnato un documento XML a una variabile di tipo **xml**. Viene quindi usato il linguaggio XML DML per inserire un nodo di testo come primo figlio dell'elemento <`Root`>. Per specificare il testo viene utilizzato il costruttore di testo.  
   
 ```  
 USE AdventureWorks;  
@@ -289,7 +288,7 @@ SET x.modify('insert <Material>Aluminium</Material> as first
 GO  
 ```  
   
- Anche in questo caso, quando viene inserito il nodo elemento <`Material`>, l'espressione di percorso deve restituire una singola destinazione. Questo requisito viene specificato in modo esplicito tramite l'aggiunta di [1] alla fine dell'espressione.  
+ Anche in questo caso, quando viene inserito il nodo elemento <`Material`> l'espressione di percorso deve restituire una singola destinazione. Questo requisito viene specificato in modo esplicito tramite l'aggiunta di [1] alla fine dell'espressione.  
   
 ```  
 -- check the update  
@@ -323,7 +322,7 @@ SELECT @myDoc;
 GO  
 ```  
   
- L'esempio seguente è simile, eccetto che per il fatto che l'istruzione XML DML **insert** inserisce un elemento nel documento se la condizione è True, ovvero se l'elemento <`WorkCenter`> include un numero inferiore o uguale a due di elementi figlio <`step`>.  
+ L'esempio seguente è simile, eccetto che per il fatto che l'istruzione XML DML **insert** inserisce un elemento nel documento se la condizione è True, vale a dire se l'elemento <`WorkCenter`> include un numero inferiore o uguale a due elementi figlio <`step`>.  
   
 ```  
 USE AdventureWorks;  

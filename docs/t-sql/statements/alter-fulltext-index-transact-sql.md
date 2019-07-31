@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2db3b6241096501190e2d1c8e3978bd349fed7a3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4729caa9c90ae2ebc90ab3254b4222e0fb47ae46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526203"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067528"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ ALTER FULLTEXT INDEX ON table_name
  Disabilitare un indice full-text consente di disattivare il rilevamento delle modifiche conservando l'indice full-text, che può essere riattivato utilizzando ENABLE in qualsiasi momento. Quando l'indice full-text è disabilitato, i relativi metadati vengono mantenuti nelle tabelle di sistema. Se l'opzione CHANGE_TRACKING è abilitata (aggiornamento manuale o automatico) quando l'indice full-text è disabilitato, lo stato dell'indice viene bloccato, eventuali ricerche per indicizzazione in corso vengono arrestate e le nuove modifiche apportate ai dati della tabella non vengono registrate o propagate nell'indice.  
   
  SET CHANGE_TRACKING {MANUAL | AUTO | OFF}  
- Specifica se le modifiche (aggiornamenti, eliminazioni o inserimenti) apportate alle colonne della tabella coperte dall'indice full-text verranno propagate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] all'indice full-text. Le modifiche apportate ai dati tramite WRITETEXT e UPDATETEXT non vengono riportate nell'indice full-text e pertanto non vengono registrate dalla funzione di rilevamento delle modifiche.  
+ Specifica se le modifiche (aggiornamenti, eliminazioni o inserimenti) apportate alle colonne della tabella coperte dall'indice full-text verranno propagate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] all'indice full-text. Le modifiche apportate ai dati tramite WRITETEXT e UPDATETEXT non vengono riflesse nell'indice full-text, pertanto non vengono registrate dalla funzione di rilevamento delle modifiche.  
   
 > [!NOTE]  
 >  Per informazioni sull'interazione del rilevamento delle modifiche e del parametro WITH NO POPULATION, vedere la sezione "Osservazioni" più avanti in questo argomento.  
@@ -91,7 +90,7 @@ ALTER FULLTEXT INDEX ON table_name
  Specifica che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non manterrà un elenco delle modifiche apportate ai dati indicizzati.  
   
  ADD | DROP *column_name*  
- Specifica le colonne da aggiungere o eliminare in un indice full-text. La colonna o le colonne devono essere di tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** o **varbinary(max)**.  
+ Specifica le colonne da aggiungere o eliminare in un indice full-text. La colonna o le colonne devono essere di tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** o **varbinary(max)** .  
   
  Utilizzare la clausola DROP solo per colonne abilitate in precedenza per l'indicizzazione full-text.  
   
@@ -128,7 +127,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Consente di creare la frase chiave aggiuntiva e gli indici di somiglianza dei documenti che fanno parte dell'indicizzazione semantica statistica. Per altre informazioni, vedere [Ricerca semantica &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
- [ **,**_...n_]  
+ [ **,** _...n_]  
  Indica che è possibile specificare più colonne per la clausola ADD, ALTER o DROP. Se si specificano più colonne, utilizzare la virgola come separatore.  
   
  WITH NO POPULATION  
@@ -185,7 +184,7 @@ ALTER FULLTEXT INDEX ON table_name
  Modifica l'elenco delle proprietà di ricerca associate all'indice, se presente.  
   
  OFF  
- Specifica che all'indice full-text non deve essere associato alcun elenco di proprietà. Quando si disattiva l'elenco delle proprietà di ricerca di un indice full-text (ALTER FULLTEXT INDEX ... SET SEARCH PROPERTY LIST OFF), non sarà più possibile eseguire la ricerca delle proprietà nella tabella di base.  
+ Specifica che all'indice full-text non deve essere associato alcun elenco di proprietà. Quando si disattiva l'elenco delle proprietà di ricerca di un indice full-text (ALTER FULLTEXT INDEX ... SET SEARCH PROPERTY LIST OFF), non è più possibile eseguire la ricerca delle proprietà nella tabella di base.  
   
  Per impostazione predefinita, quando si disattiva un elenco delle proprietà di ricerca esistente, l'indice full-text viene ripopolato automaticamente. Se si specifica WITH NO POPULATION quando si disattiva l'elenco delle proprietà di ricerca, il ripopolamento automatico non ha luogo. È tuttavia consigliabile eseguire un popolamento completo su questo indice full-text. Il ripopolamento dell'indice full-text comporta la rimozione dei metadati specifici di ogni proprietà di ricerca eliminata, rendendo più piccolo e più efficiente l'indice full-text.  
   
@@ -209,7 +208,7 @@ ALTER FULLTEXT INDEX ON table_name
 ## <a name="interactions-of-change-tracking-and-no-population-parameter"></a>Interazioni del rilevamento delle modifiche con NO POPULATION  
  Il popolamento dell'indice full-text dipende dal fatto che il rilevamento delle modifiche sia o meno abilitato e che si specifichi o meno WITH NO POPULATION nell'istruzione ALTER FULLTEXT INDEX. Nella tabella seguente è riepilogato il risultato di tale interazione.  
   
-|Rilevamento modifiche|WITH NO POPULATION|Risultato|  
+|Rilevamento delle modifiche|WITH NO POPULATION|Risultato|  
 |---------------------|------------------------|------------|  
 |Non abilitato|Non specificato|Viene eseguito un popolamento completo dell'indice.|  
 |Non abilitato|Specified|L'indice non viene popolato fino a quando non viene eseguita un'istruzione ALTER FULLTEXT INDEX...START POPULATION.|  
@@ -232,7 +231,7 @@ ALTER FULLTEXT INDEX ON table_name
 > [!NOTE]  
 >  Per altre informazioni sul funzionamento della ricerca full-text con gli elenchi delle proprietà di ricerca, vedere [Eseguire ricerche nelle proprietà dei documenti con elenchi delle proprietà di ricerca](../../relational-databases/search/search-document-properties-with-search-property-lists.md). Per informazioni sui popolamenti completi, vedere [Popolare gli indici full-text](../../relational-databases/search/populate-full-text-indexes.md).  
   
-### <a name="scenario-a-switching-directly-to-a-different-search-property-list"></a>Scenario A: Passaggio diretto a un elenco delle proprietà di ricerca diverso  
+### <a name="scenario-a-switching-directly-to-a-different-search-property-list"></a>Scenario A: Passaggio diretto a un elenco di proprietà di ricerca diverso  
   
 1.  Un indice full-text viene creato in `table_1` con un elenco delle proprietà di ricerca `spl_1`:  
   
@@ -256,7 +255,7 @@ ALTER FULLTEXT INDEX ON table_name
   
      Questa istruzione comporta un popolamento completo, ovvero il comportamento predefinito.  Tuttavia, prima di avviare questo popolamento, il motore di ricerca full-text tronca automaticamente l'indice.  
   
-### <a name="scenario-b-turning-off-the-search-property-list-and-later-associating-the-index-with-any-search-property-list"></a>Scenario B: Disattivazione dell'elenco delle proprietà di ricerca e successiva associazione dell'indice a qualsiasi elenco delle proprietà di ricerca  
+### <a name="scenario-b-turning-off-the-search-property-list-and-later-associating-the-index-with-any-search-property-list"></a>Scenario B: Disattivazione dell'elenco delle proprietà di ricerca e successiva associazione dell'indice a qualsiasi elenco di proprietà di ricerca  
   
 1.  Un indice full-text viene creato in `table_1` con un elenco delle proprietà di ricerca `spl_1`, seguito da un popolamento completo automatico (comportamento predefinito):  
   

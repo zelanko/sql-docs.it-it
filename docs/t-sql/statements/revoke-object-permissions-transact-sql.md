@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8e7c288fb10eb1473835f29fa538c49d2fe47585
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 0e374b0042ec4b46b8c64e71b86d45d1f4cd3062
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140895"
 ---
 # <a name="revoke-object-permissions-transact-sql"></a>REVOKE - autorizzazioni per oggetti (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -142,7 +141,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 |VIEW CHANGE TRACKING|CONTROL|VIEW CHANGE TRACKING|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per l'oggetto.  
   
  Se si utilizza la clausola AS, l'entità specificata deve essere proprietaria dell'oggetto per cui vengono revocate le autorizzazioni.  
@@ -158,7 +157,7 @@ REVOKE SELECT ON OBJECT::Person.Address FROM RosaQdM;
 GO  
 ```  
   
-### <a name="b-revoking-execute-permission-on-a-stored-procedure"></a>b. Revoca dell'autorizzazione EXECUTE per una stored procedure  
+### <a name="b-revoking-execute-permission-on-a-stored-procedure"></a>B. Revoca dell'autorizzazione EXECUTE per una stored procedure  
  Nell'esempio seguente viene revocata l'autorizzazione `EXECUTE` per la stored procedure `HumanResources.uspUpdateEmployeeHireInfo` a un ruolo applicazione denominato `Recruiting11`.  
   
 ```  

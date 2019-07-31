@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 870d1b5d1a7bedb0d758be7eef4cb3f7b2e0106c
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: 281f1144fc9698fcb39d974167d02ce36602b4fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089824"
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Abilitare il backup gestito di SQL Server in Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +89,7 @@ Registrare l'URL del contenitore e la firma di accesso condiviso per usarli per 
   
 2.  **Assicurarsi che il servizio SQL Server Agent sia avviato e in esecuzione:** se non è in esecuzione, avviare SQL Server Agent.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è necessaria l'esecuzione di SQL Server Agent nell'istanza per poter eseguire le operazioni di backup.  Per assicurarsi che le operazioni in questione vengano eseguite regolarmente, è possibile impostare l'esecuzione automatica di SQL Server Agent.  
   
-3.  **Determinare il periodo di conservazione:** determinare il periodo di memorizzazione per i file di backup. Il periodo di memorizzazione viene specificato in giorni in un intervallo compreso tra 1 e 30.  
+3.  **Determinare il periodo di conservazione:** determinare il periodo di conservazione per i file di backup. Il periodo di memorizzazione viene specificato in giorni in un intervallo compreso tra 1 e 30.  
   
 4.  **Abilitare e configurare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:** avviare SQL Server Management Studio e connettersi all'istanza di SQL Server di destinazione. Nella finestra Query eseguire l'istruzione seguente dopo aver modificato i valori per il nome del database, l'URL del contenitore e il periodo di memorizzazione in base alle esigenze:  
   
@@ -124,7 +123,7 @@ Registrare l'URL del contenitore e la firma di accesso condiviso per usarli per 
   
     2.  Configurare la notifica di SQL Server Agent per l'uso di Posta elettronica database. Per altre informazioni, vedere [Configure SQL Server Agent Mail to Use Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
   
-    3.  **Abilitare le notifiche di posta elettronica per ricevere avvisi ed errori di backup:** Nella finestra di query eseguire le istruzioni Transact-SQL seguenti:  
+    3.  **Abilitare le notifiche di posta elettronica per ricevere avvisi ed errori di backup:** nella finestra di query eseguire le istruzioni Transact-SQL seguenti:  
   
         ```  
         EXEC msdb.managed_backup.sp_set_parameter  

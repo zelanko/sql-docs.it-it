@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: df99a74b9c26e13c9fc2037c9d540ee844bfebfb
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 1fb7e3e0a261c0cf518dda93610b721af14a3472
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658275"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136486"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -404,7 +403,7 @@ Ciò è dovuto al fatto che i listener del gruppo di disponibilità richiedono l
   
 -   Master Data Services 2012 ospitato in un database del motore di database di SQL Server in SQL Server 2014 con Data Quality Services 2014 installato.  
   
-**Soluzione alternativa:** usare la stessa versione di Master Data Services del database del motore di database e Data Quality Services.  
+**Soluzione alternativa:** usare la stessa versione di Master Data Services del database del motore di database e di Data Quality Services.  
   
 ### <a name="UA"></a>Problemi di Gestione spazio aggiornamenti (RTM)
   

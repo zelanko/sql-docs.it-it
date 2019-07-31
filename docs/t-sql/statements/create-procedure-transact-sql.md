@@ -45,14 +45,13 @@ helpviewer_keywords:
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9bd4b93d90bc75e7dfc97a526cee544cb71b69a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 14597122e586aca0290a4823f07dbb17e5cccda2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006531"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -157,7 +156,7 @@ OR ALTER
   
  Evitare l'uso del prefisso **sp_** per la denominazione delle procedure. Questo prefisso viene usato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per definire le procedure di sistema. L'utilizzo del prefisso può comportare l'interruzione del codice dell'applicazione, se è presente una procedura di sistema con lo stesso nome.  
   
- Le stored procedure temporanee locali o globali possono essere create usando un simbolo di cancelletto (#) prima di *procedure_name* (*#procedure_name*) per le stored procedure temporanee locali e due simboli di cancelletto per quelle globali (*##procedure_name*). Una stored procedure temporanea locale è visibile solo alla connessione da cui è stata creata e, alla chiusura di quest'ultima, viene eliminata. Una stored procedure temporanea globale è disponibile per tutte le connessioni e viene eliminata al termine dell'ultima sessione che la usano. Non è possibile specificare nomi temporanei per le procedure CLR.  
+ Le stored procedure temporanee locali o globali possono essere create usando un simbolo di cancelletto (#) prima di *procedure_name* ( *#procedure_name*) per le stored procedure temporanee locali e due simboli di cancelletto per quelle globali ( *##procedure_name*). Una stored procedure temporanea locale è visibile solo alla connessione da cui è stata creata e, alla chiusura di quest'ultima, viene eliminata. Una stored procedure temporanea globale è disponibile per tutte le connessioni e viene eliminata al termine dell'ultima sessione che la usano. Non è possibile specificare nomi temporanei per le procedure CLR.  
   
  Il nome completo di una procedura o di una stored procedure temporanea globale, inclusi i simboli ##, non deve superare i 128 caratteri. Il nome completo di una stored procedure temporanea locale, incluso il simbolo #, non deve superare i 116 caratteri.  
   
@@ -172,16 +171,16 @@ OR ALTER
  Le procedure numerate non possono includere i tipi **xml** o CLR definiti dall'utente né possono essere usate in una guida di piano.  
   
  **@** *parameter*  
- Parametro dichiarato nella procedura. Specificare un nome di parametro usando la chiocciola (**@**) come primo carattere. Il nome di parametro deve essere conforme alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). Poiché i parametri sono locali rispetto alla procedura, è possibile usare gli stessi nomi di parametro in altre procedure.  
+ Parametro dichiarato nella procedura. Specificare un nome di parametro usando la chiocciola ( **@** ) come primo carattere. Il nome di parametro deve essere conforme alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). Poiché i parametri sono locali rispetto alla procedura, è possibile usare gli stessi nomi di parametro in altre procedure.  
   
  È possibile dichiarare uno o più parametri con un limite massimo di 2.100. Il valore di ogni parametro dichiarato deve essere specificato dall'utente quando viene chiamata la procedura, a meno che non venga indicato un valore predefinito per il parametro oppure il valore venga impostato in modo da corrispondere a quello di un altro parametro. Se una procedura contiene [parametri con valori di tabella](../../relational-databases/tables/use-table-valued-parameters-database-engine.md) e nella chiamata il parametro non è presente, viene passata una tabella vuota. I parametri possono rappresentare solo espressioni costanti, non nomi di tabella, nomi di colonna o nomi di altri oggetti di database. Per altre informazioni, vedere [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
  Se viene specificata l'opzione FOR REPLICATION, non è possibile dichiarare alcun parametro.  
   
- [ _type\_schema\_name_**.** ] *data_type*  
+ [ _type\_schema\_name_ **.** ] *data_type*  
  Tipo di dati del parametro e schema a cui appartiene il tipo di dati.  
   
-**Linee guida per le procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]**:  
+**Linee guida per le procedure [!INCLUDE[tsql](../../includes/tsql-md.md)]** :  
   
 -   Tutti i tipi di dati [!INCLUDE[tsql](../../includes/tsql-md.md)] possono essere usati come parametri.  
   
@@ -242,10 +241,10 @@ FOR REPLICATION
  { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
  Una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che includono il corpo della procedura. Per racchiudere le istruzioni è possibile usare le parole chiave facoltative BEGIN ed END. Per informazioni, vedere le sezioni Procedure consigliate, Osservazioni generali e Limitazioni e restrizioni riportate di seguito.  
   
-EXTERNAL NAME _assembly\_name_**.**_class\_name_**.**_method\_name_  
+EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_  
  **Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Specifica il metodo di un assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] affinché una procedura CLR vi faccia riferimento. *class_name* deve essere un identificatore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido e deve esistere come una classe nell'assembly. Se alla classe è stato assegnato un nome qualificato dallo spazio dei nomi le cui parti sono separate da un punto (**.**), il nome della classe deve essere delimitato tramite parentesi quadre (**[]**) o virgolette (**""**). Il metodo specificato deve essere un metodo statico della classe.  
+ Specifica il metodo di un assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] affinché una procedura CLR vi faccia riferimento. *class_name* deve essere un identificatore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido e deve esistere come una classe nell'assembly. Se alla classe è stato assegnato un nome qualificato dallo spazio dei nomi le cui parti sono separate da un punto ( **.** ), il nome della classe deve essere delimitato tramite parentesi quadre ( **[]** ) o virgolette ( **""** ). Il metodo specificato deve essere un metodo statico della classe.  
   
  Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può eseguire il codice CLR. È possibile creare, modificare ed eliminare gli oggetti di database che fanno riferimento a moduli CLR; tuttavia non è possibile eseguire questi riferimenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finché non viene abilitata l'opzione [clr enabled option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Per abilitare questa opzione, usare [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
@@ -344,7 +343,7 @@ SELECT DB_NAME() AS ThisDB;
 ```   
 Chiamare la stored procedure con l'istruzione: `EXEC What_DB_is_this;`   
 
-Un'operazione leggermente più complessa consiste nello specificare un parametro di input per rendere la procedura più flessibile. Ad esempio  
+Un'operazione leggermente più complessa consiste nello specificare un parametro di input per rendere la procedura più flessibile. Esempio:  
 ```sql   
 CREATE PROC What_DB_is_that @ID int   
 AS    
@@ -452,7 +451,7 @@ GO
   
 |Nome dell'oggetto di Performance Monitor|Nome del contatore di Performance Monitor|  
 |-------------------------------------|--------------------------------------|  
-|SQLServer: oggetto Plan Cache|Percentuale riscontri cache|  
+|SQLServer: Oggetto cache dei piani|Percentuale riscontri cache|  
 ||Pagine cache|  
 ||Conteggio oggetti cache*|  
   
@@ -460,7 +459,7 @@ GO
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  Sono richieste l'autorizzazione **CREATE PROCEDURE** per il database e **ALTER** per lo schema in cui viene creata la procedura. In alternativa, è richiesta l'appartenenza al ruolo predefinito del database **db_ddladmin**.  
   
  Per le stored procedure CLR è necessaria la proprietà dell'assembly a cui viene fatto riferimento nella clausola EXTERNAL NAME oppure l'autorizzazione **REFERENCES** per tale assembly.  
@@ -529,7 +528,7 @@ GO
 HumanResources.uspGetAllEmployees;  
 ```  
   
-#### <a name="b-returning-more-than-one-result-set"></a>b. Restituzione di più di un set di risultati  
+#### <a name="b-returning-more-than-one-result-set"></a>B. Restituzione di più di un set di risultati  
  Tramite la procedura seguente vengono restituiti due set di risultati.  
   
 ```sql  

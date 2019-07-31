@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 85643186d92e2033fc909ae166533cac0e18f44d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbe9c2805a6e8b5354207534b5758c28081011e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732709"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121278"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Pubblicazione dell'esecuzione delle stored procedure nella replica transazionale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ EXEC give_raise
   
 -   SQL Server Management Studio: [Pubblicare l'esecuzione di una stored procedure in una pubblicazione transazionale &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   Programmazione Transact-SQL della replica: eseguire [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) e specificare un valore 'serializable proc exec' (consigliato) o 'proc exec' per il parametro **@type**. Per altre informazioni sulla definizione degli articoli, vedere [Definire un articolo](../../../relational-databases/replication/publish/define-an-article.md).  
+-   Programmazione Transact-SQL della replica: eseguire [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) e specificare un valore 'serializable proc exec' (consigliato) o 'proc exec' per il parametro **@type** . Per altre informazioni sulla definizione degli articoli, vedere [Definire un articolo](../../../relational-databases/replication/publish/define-an-article.md).  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>Modifica della procedura nel Sottoscrittore  
  Per impostazione predefinita, la definizione della stored procedure nel server di pubblicazione viene distribuita in ogni Sottoscrittore. È comunque possibile modificare la stored procedure anche nel Sottoscrittore. Ciò risulta utile se nel Sottoscrittore si desidera eseguire logica diversa da quella eseguita nel server di pubblicazione. Si supponga, ad esempio, che la stored procedure **sp_big_delete**nel server di pubblicazione svolga due funzioni, ovvero elimini 1.000.000 di righe dalla tabella replicata **big_table1** e aggiorni la tabella non replicata **big_table2**. In questo caso, per ridurre la quantità di risorse di rete utilizzate, è necessario distribuire l'eliminazione del milione di righe come stored procedure pubblicando **sp_big_delete**. Nel Sottoscrittore è possibile modificare **sp_big_delete** in modo che esegua l'eliminazione delle righe, ma non l'aggiornamento successivo di **big_table2**.  

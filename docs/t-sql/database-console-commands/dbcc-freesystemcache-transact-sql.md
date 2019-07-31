@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 00b6ddce8d5c69e16913290b0300fc6828352147
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 451743ebafe719b554384edd2d9abadb60e070f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685678"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039134"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ L'esecuzione di DBCC FREESYSTEMCACHE comporta la cancellazione della cache dei p
 ## <a name="result-sets"></a>Set di risultati  
 Il comando DBCC FREESYSTEMCACHE restituisce: "Esecuzione DBCC completata. Se sono stati visualizzati messaggi di errore DBCC, rivolgersi all'amministratore di sistema".
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 È necessario disporre dell'autorizzazione ALTER SERVER STATE per il server.
   
 ## <a name="examples"></a>Esempi  
@@ -78,7 +77,7 @@ Nell'esempio seguente viene illustrato come pulire le cache dedicate a un pool d
 DBCC FREESYSTEMCACHE ('ALL', default);  
 ```  
   
-### <a name="b-releasing-entries-from-their-respective-caches-after-they-become-unused"></a>b. Rilascio delle voci dalle relative cache non appena tali voci diventano inutilizzate  
+### <a name="b-releasing-entries-from-their-respective-caches-after-they-become-unused"></a>B. Rilascio delle voci dalle relative cache non appena tali voci diventano inutilizzate  
 Nell'esempio seguente viene utilizzata la clausola MARK_IN_USE_FOR_REMOVAL per rilasciare le voci da tutte le cache correnti non appena le voci diventano inutilizzate.
   
 ```sql

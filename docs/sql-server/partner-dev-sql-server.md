@@ -9,13 +9,12 @@ ms.technology: ''
 ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
-manager: craigg
-ms.openlocfilehash: c47021ce06d51b833ede6ee75f1e575e4b078314
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1f3a1e85fa9d6b8e762a5d3fa68e65b098f9cdd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62506936"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132870"
 ---
 # <a name="sql-server-development-partners"></a>Partner di sviluppo per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,11 +24,11 @@ Per il supporto allo sviluppo delle soluzioni di database SQL Server, è possibi
 
 | Partner | Descrizione | Collegamenti |
 | --- | --- | --- |
-|![idera][1] |**IDERA**<br>Rapid SQL è un ambiente di sviluppo SQL integrato intelligente che consente agli sviluppatori e agli amministratori di database di creare codice SQL ad alte prestazioni su tutte le principali piattaforme di database, incluso SQL Server, da un'unica interfaccia.<br><br>[Requisiti di sistema][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Sito Web][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] |
-|![click2cloud][2] |**Click2Cloud Inc.**<br>Click2Cloud Inc. offre alla community degli sviluppatori flessibilità nella scelta di linguaggi di programmazione, framework e servizi con l'uso dei set di strumenti appropriati. Usando il toolkit di Click2Cloud, gli sviluppatori possono creare contenitori "SQL in Linux" e collegarli a un'applicazione, supportando comunque l'architettura multi-tenant sicura. I contenitori possono essere distribuiti in modo indipendente in qualsiasi piattaforma di contenitore basata sul cloud.|[Marketplace][click2cloud_marketplace]<br>[Sito Web][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[Video][click2cloud_youtube] |
+|![idera][1] |**IDERA**<br>Rapid SQL è un ambiente di sviluppo SQL integrato intelligente che consente agli sviluppatori e agli amministratori di database di creare codice SQL ad alte prestazioni su tutte le principali piattaforme di database, incluso SQL Server, da un'unica interfaccia.<br><br>[Requisiti di sistema][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Sito Web][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube]<br>click2cloud |
+|![**Click2Cloud Inc.**][2] |Click2Cloud Inc. offre alla community degli sviluppatori flessibilità nella scelta di linguaggi di programmazione, framework e servizi con l'uso dei set di strumenti appropriati.<br>Usando il toolkit di Click2Cloud, gli sviluppatori possono creare contenitori "SQL in Linux" e collegarli a un'applicazione, supportando comunque l'architettura multi-tenant sicura. I contenitori possono essere distribuiti in modo indipendente in qualsiasi piattaforma di contenitore basata sul cloud. [Marketplace][click2cloud_marketplace]<br>[Website][click2cloud_website]|[Twitter][click2cloud_twitter]<br>[Video][click2cloud_youtube]<br>Passaggi successivi<br>Per saperne di più su alcuni altri partner Microsoft, vedere i [partner di disponibilità elevata e ripristino di emergenza][hadr_partners], [management partners][management_partners] e i [partner di monitoraggio][monitor_partners]. |
 
-## <a name="next-steps"></a>Passaggi successivi
-Per saperne di più su alcuni altri partner Microsoft, vedere i [partner di disponibilità elevata e ripristino di emergenza][hadr_partners], i [partner di gestione][management_partners] e i [partner di monitoraggio][monitor_partners].
+## <a name="next-steps"></a>Next steps
+To learn more about some of our other partners, see <bpt id="p1">[</bpt>High availability, and disaster recovery partners<ept id="p1">][hadr_partners]</ept>, <bpt id="p2">[</bpt>management partners<ept id="p2">][management_partners]</ept>, and <bpt id="p3">[</bpt>monitoring partners<ept id="p3">][monitor_partners]</ept>.
 
 <!--Image references-->
 [1]: ./media/partner-hadr-sql-server/idera_logo.png

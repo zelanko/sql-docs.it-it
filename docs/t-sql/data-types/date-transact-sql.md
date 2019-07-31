@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 076c4927ee5f3811b9c3415c1db30cc7cfa2a6a2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ae7ab885ced505ccf7da03d388e8063c276fc0d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113706"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -107,7 +106,7 @@ Nella conversione di tipi di dati relativi alla data e all'ora, [!INCLUDE[ssNoVe
 
 Questa sezione descrive il risultato della conversione di un tipo di dati **date** in altri tipi di dati relativi a data e ora.
   
-Quando la conversione viene eseguita in **time(n)**, ha esito negativo e viene generato il messaggio di errore 206: "Conflitto del tipo di operando: date è incompatibile con time".
+Quando la conversione viene eseguita in **time(n)** , ha esito negativo e viene generato il messaggio di errore 206: "Conflitto del tipo di operando: date è incompatibile con time".
   
 Se viene eseguita la conversione in **datetime**, la data viene copiata. Nel codice seguente vengono illustrati i risultati della conversione di un valore `date` in un valore `datetime`.
   
@@ -141,7 +140,7 @@ SELECT @date AS '@date', @smalldatetime AS '@smalldatetime';
 --(1 row(s) affected)  
 ```  
   
-Per la conversione in **datetimeoffset(n)**, la data viene copiata e l'ora viene impostata su 00:00.0000000 +00:00. Nel codice seguente vengono illustrati i risultati della conversione di un valore `date` in un valore `datetimeoffset(3)`.
+Per la conversione in **datetimeoffset(n)** , la data viene copiata e l'ora viene impostata su 00:00.0000000 +00:00. Nel codice seguente vengono illustrati i risultati della conversione di un valore `date` in un valore `datetimeoffset(3)`.
   
 ```sql
 DECLARE @date date = '1912-10-25';  
@@ -157,7 +156,7 @@ SELECT @date AS '@date', @datetimeoffset AS '@datetimeoffset';
 --(1 row(s) affected)  
 ```  
   
-Quando viene eseguita la conversione in **datetime2(n)**, il componente relativo alla data viene copiato e quello relativo all'ora viene impostato su 00:00.000000. Nel codice seguente vengono illustrati i risultati della conversione di un valore `date` in un valore `datetime2(3)`.
+Quando viene eseguita la conversione in **datetime2(n)** , il componente relativo alla data viene copiato e quello relativo all'ora viene impostato su 00:00.000000. Nel codice seguente vengono illustrati i risultati della conversione di un valore `date` in un valore `datetime2(3)`.
   
 ```sql
 DECLARE @date date = '1912-10-25'  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a482767c416e1adf4de30d6493c4c79ca07d2398
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 337b2ee6d7edffeb49c2cee6291d30100b4c1df0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070328"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -88,7 +87,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  È necessaria l'autorizzazione **ALTER** per la sequenza o **ALTER** per lo schema. Per concedere l'autorizzazione **ALTER** per la sequenza, usare **ALTER ON OBJECT** nel formato seguente:  
   
 ```  
@@ -104,7 +103,7 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
  Per esempi relativi alla creazione di sequenze e all'uso della funzione **NEXT VALUE FOR** per generare numeri di sequenza, vedere [Numeri di sequenza](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
 ### <a name="a-altering-a-sequence"></a>A. Alterazione di una sequenza  
- Nell'esempio seguente vengono creati uno schema denominato Test e una sequenza denominata TestSeq usando il tipo di dati **int**, con un intervallo di valori compreso tra 0 e 255. La sequenza inizia con 125 e aumenta di 25 ogni volta che viene generato un numero. Poiché la sequenza è configurata per la ripresa del ciclo quando il valore supera il valore massimo di 200, la sequenza riprende dal valore minimo di 100.  
+ Nell'esempio seguente vengono creati uno schema denominato Test e una sequenza denominata TestSeq usando il tipo di dati **int**, con un intervallo di valori compreso tra 100 e 200. La sequenza inizia con 125 e aumenta di 25 ogni volta che viene generato un numero. Poiché la sequenza è configurata per la ripresa del ciclo quando il valore supera il valore massimo di 200, la sequenza riprende dal valore minimo di 100.  
   
 ```  
 CREATE SCHEMA Test ;  
@@ -122,7 +121,7 @@ CREATE SEQUENCE Test.TestSeq
 GO  
 ```  
   
- Nell'esempio seguente la sequenza TestSeq viene modificata in modo da avere un intervallo di valori compreso tra 0 e 255. La sequenza riavvia la serie di numerazione con 100 e aumenta di 50 ogni volta che viene generato un numero.  
+ Nell'esempio seguente la sequenza TestSeq viene modificata in modo da avere un intervallo di valori compreso tra 50 e 200. La sequenza riavvia la serie di numerazione con 100 e aumenta di 50 ogni volta che viene generato un numero.  
   
 ```  
 ALTER SEQUENCE Test. TestSeq  

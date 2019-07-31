@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 068d92c4913a59e9c18c601d2c21b8b3c80a0a19
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ac6464cb5bab7e16cb6ee0282f402c1416ec47cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520229"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044728"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Forzare l'avvio di un cluster WSFC senza un quorum
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,9 +25,9 @@ ms.locfileid: "52520229"
   
 -   **Prima di iniziare:**  [Indicazioni](#Recommendations), [Sicurezza](#Security)  
   
--   **Per forzare l'avvio di un cluster senza un quorum usando:**  [Utilizzo di Gestione cluster di failover](#FailoverClusterManagerProcedure), [Utilizzo di Powershell](#PowerShellProcedure), [Utilizzo di Net.exe](#CommandPromptProcedure)  
+-   **Per forzare l'avvio di un cluster senza un quorum usando:**  [Uso di Gestione cluster di failover](#FailoverClusterManagerProcedure), [Uso di PowerShell](#PowerShellProcedure), [Uso di Net.exe](#CommandPromptProcedure)  
   
--   **Completamento:**  [Completamento: dopo avere forzato l'avvio senza un quorum di un cluster](#FollowUp)  
+-   **Completamento:**  [Follow Up: Dopo aver forzato l'avvio senza un quorum di un cluster](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -48,7 +47,7 @@ ms.locfileid: "52520229"
   
 3.  Nel riquadro sinistro, nell'albero **Gestione cluster di failover** fare clic sul nome del cluster.  
   
-4.  Nel riquadro Riepilogo confermare che il valore **Configurazione quorum** corrente è:  **Avviso: il cluster è in esecuzione in stato ForceQuorum**.  
+4.  Nel riquadro di riepilogo, verificare che il valore corrente per **Configurazione quorum** sia:  **Avviso: il cluster è in esecuzione in stato ForceQuorum**.  
   
 ##  <a name="PowerShellProcedure"></a> Utilizzo di Powershell  
   
@@ -103,7 +102,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a> Completamento: dopo avere forzato l'avvio senza un quorum di un cluster  
+##  <a name="FollowUp"></a> Completamento: Dopo aver forzato l'avvio senza un quorum di un cluster  
   
 -   È necessario rivalutare e riconfigurare i valori NodeWeight per costruire correttamente un nuovo quorum prima di riportare online altri nodi. In caso contrario, è possibile che il cluster torni nuovamente offline.  
   

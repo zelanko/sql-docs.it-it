@@ -1,5 +1,5 @@
 ---
-title: 'Classe di evento TM: Rollback Tran Starting | Microsoft Docs'
+title: 'TM: Rollback Tran Starting - Classe di evento| Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 3b4d0d56-c51f-4f07-a116-5d4bd6ec1a3c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a0822827abe97e8c6585bf7bc7397f8aef9f2361
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b0a702203dfbab242965fdb4b729e6f1c73f0cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753749"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049025"
 ---
 # <a name="tm-rollback-tran-starting-event-class"></a>TM: Rollback Tran Starting - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  La classe di evento TM: Rollback Tran Starting indica l'avvio di una richiesta ROLLBACK TRANSACTION. La richiesta viene inviata dal client tramite l'interfaccia di gestione delle transazioni. La colonna EventSubClass indica se una nuova transazione verrà avviata dopo il rollback della transazione corrente.  
+  TM: Rollback Tran Starting è una classe di evento che indica l'avvio di una richiesta ROLLBACK TRANSACTION. La richiesta viene inviata dal client tramite l'interfaccia di gestione delle transazioni. La colonna EventSubClass indica se una nuova transazione verrà avviata dopo il rollback della transazione corrente.  
   
-## <a name="tm-rollback-tran-starting-event-class-data-columns"></a>Colonne di dati della classe di evento TM: Rollback Tran Starting  
+## <a name="tm-rollback-tran-starting-event-class-data-columns"></a>TM: Rollback Tran Starting - Colonne di dati della classe di evento  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  

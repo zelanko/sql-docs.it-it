@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ca7cb161bb4b3bebf2d7c65018b5221fd5bf1cf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e16f646a963d22a2fe3a6a67428970d11ee5cb43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100257"
 ---
 # <a name="overview-and-usage-scenarios"></a>Panoramica e scenari di utilizzo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,8 +65,8 @@ Per iniziare a usare questo approccio in un'applicazione esistente:
 
 #### <a name="customer-case-studies"></a>Case study dei clienti
 
-- CMC Markets sfrutta OLTP in memoria in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] per ottenere una bassa latenza costante: [Poiché un secondo di attesa è troppo lungo, questa società di servizi finanziari sta aggiornando il software di intermediazione.](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
-- Derivco sfrutta OLTP in memoria in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] per supportare un aumento della produttività e gestire i picchi del carico di lavoro: [Quando una società di giochi online non vuole rischiare il proprio futuro, scommette su [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
+- CMC Markets sfrutta OLTP in memoria in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] per ottenere una bassa latenza costante: [Poiché un'attesa di un secondo è troppo lunga, la società di servizi finanziari sta aggiornando il software di trading.](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
+- Derivco sfrutta OLTP in memoria in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] per supportare una maggiore velocità effettiva e gestire i picchi del carico di lavoro: [Quando una società di gioco online non vuole rischiare il proprio futuro, scommette su [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
 
 
 ### <a name="data-ingestion-including-iot-internet-of-things"></a>Inserimento di dati, tra cui IoT (Internet delle cose)
@@ -93,14 +92,14 @@ Il repository di esempi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 #### <a name="customer-case-studies"></a>Case study dei clienti
 
 - [Quorum raddoppia il carico di lavoro del database delle chiavi riducendone al contempo l'utilizzo del 70% grazie all'uso di OLTP in memoria nel database SQL di Azure](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
-- EdgeNet ha migliorato le prestazioni del caricamento dati in batch e ha eliminato la necessità di mantenere una cache di livello intermedio grazie a OLTP in memoria in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Azienda di servizi dati ottiene accesso in tempo reale ai dati dei prodotti con la tecnologia In-Memory](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
-- Il Beth Israel Deaconess Medical Center ha migliorato in modo significativo la velocità di inserimento dei dati dai controller di dominio e la gestione dei picchi del carico di lavoro grazie a OLTP in memoria in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for]
+- Con OLTP in memoria in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], EdgeNet ha migliorato le prestazioni del caricamento batch dei dati e ha rimosso la necessità di mantenere una cache di livello intermedio: [Azienda di servizi dati ottiene l'accesso in tempo reale ai dati dei prodotti con la tecnologia in memoria](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
+- Il Beth Israel Deaconess Medical Center ha migliorato in modo significativo la velocità di inserimento dei dati dai controller di dominio e la gestione dei picchi del carico di lavoro grazie a OLTP in memoria in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for ]
 
 ### <a name="caching-and-session-state"></a>Memorizzazione nella cache e stato della sessione
 
 La tecnologia di OLTP in memoria rende SQL molto interessante per mantenere lo stato della sessione (ad esempio, per un'applicazione ASP.NET) e per la memorizzazione nella cache.
 
-Lo stato della sessione ASP.NET è un caso di utilizzo di grande successo per OLTP in memoria. Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un cliente ha quasi raggiunto 1,2 milioni di richieste al secondo. Nel frattempo, questo cliente ha iniziato a usare OLTP in memoria per le esigenze di memorizzazione nella cache di tutte le applicazioni di livello intermedio nell'organizzazione. Dettagli: [Modo in cui bwin usa OLTP in memoria di [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] per ottenere prestazioni e scalabilità senza precedenti](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
+Lo stato della sessione ASP.NET è un caso di utilizzo di grande successo per OLTP in memoria. Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un cliente ha quasi raggiunto 1,2 milioni di richieste al secondo. Nel frattempo, questo cliente ha iniziato a usare OLTP in memoria per le esigenze di memorizzazione nella cache di tutte le applicazioni di livello intermedio nell'organizzazione. Dettagli: [In che modo bwin usa OLTP in memoria di [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] per ottenere prestazioni e scalabilità senza precedenti](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
 
 #### <a name="implementation-considerations"></a>Considerazioni sull'implementazione
 
@@ -112,8 +111,8 @@ Iniziare con l'ottimizzazione per la memoria dello stato della sessione ASP.NET 
 
 #### <a name="customer-case-studies"></a>Case study dei clienti
 
-- bwin ha potuto aumentare notevolmente la produttività e ridurre il footprint dell'hardware per lo stato della sessione ASP.NET grazie a OLTP in memoria in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Sito di giochi riesce ad arrivare a 250.000 richieste al secondo migliorando l'esperienza dei giocatori](https://customers.microsoft.com/story/gaming-site-can-scale-to-250000-requests-per-second-an)
-- bwin ha aumentato ulteriormente la produttività con lo stato della sessione ASP.NET e ha implementato un sistema di memorizzazione nella cache di livello intermedio per l'intera azienda grazie a OLTP in memoria in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]: [Modo in cui bwin usa OLTP in memoria di [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] per ottenere prestazioni e scalabilità senza precedenti](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
+- bwin ha potuto aumentare notevolmente la produttività e ridurre il footprint dell'hardware per lo stato sessione ASP.NET grazie a OLTP in memoria in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]: [Sito di gioco riesce ad arrivare a 250.000 richieste al secondo migliorando l'esperienza dei giocatori](https://customers.microsoft.com/story/gaming-site-can-scale-to-250000-requests-per-second-an)
+- bwin ha aumentato ulteriormente la velocità effettiva con lo stato sessione ASP.NET e ha implementato un sistema di memorizzazione nella cache di livello intermedio per l'intera azienda grazie a OLTP in memoria in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]: [In che modo bwin usa OLTP in memoria di [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] per ottenere prestazioni e scalabilità senza precedenti](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
 
 ### <a name="tempdb-object-replacement"></a>Sostituzione dell'oggetto tempdb
 
@@ -123,12 +122,12 @@ Le variabili di tabella con ottimizzazione per la memoria e le tabelle non durev
 
 #### <a name="implementation-considerations"></a>Considerazioni sull'implementazione
 
-Per iniziare, vedere: [Miglioramento delle prestazioni della tabella temporanea e della variabile di tabella con l'ottimizzazione della memoria](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/).
+Per un'introduzione, vedere: [Miglioramento delle prestazioni della tabella temporanea e della variabile di tabella con l'ottimizzazione della memoria.](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
 
 #### <a name="customer-case-studies"></a>Case study dei clienti
 
-- Un cliente è riuscito a migliorare le prestazioni del 40% semplicemente sostituendo i parametri con valori di tabella tradizionali con i parametri con valori di tabella ottimizzata per la memoria: [Inserimento di dati IoT ad alta velocità grazie a OLTP in memoria in Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)
-- SentryOne ha migliorato significativamente la capacità di inserimento dati con una latenza quasi nulla nella soluzione di monitoraggio, scambiando le tabelle in tempdb con le tabelle OLTP In-Memory nell'ambito dei miglioramenti di scalabilità aziendale: [Il fornitore di soluzioni supera il limite massimo delle prestazioni con l'innovazione nel monitoraggio dei dati.](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure)
+- Un cliente è riuscito a migliorare le prestazioni del 40% semplicemente sostituendo i parametri con valori di tabella tradizionali con i parametri con valori di tabella ottimizzata per la memoria: [Inserimento dati IoT ad alta velocità grazie a OLTP in memoria in Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)
+- SentryOne ha migliorato significativamente la capacità di inserimento dati con una latenza quasi nulla nella soluzione di monitoraggio, scambiando le tabelle in tempdb con le tabelle OLTP In-Memory nell'ambito dei miglioramenti di scalabilità aziendale: [Il provider di soluzioni supera il limite massimo delle prestazioni con l'innovazione nel monitoraggio dei dati.](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure)
 
 ### <a name="etl-extract-transform-load"></a>ETL (Extract, Transform, Load, ovvero estrazione, trasformazione e caricamento)
 

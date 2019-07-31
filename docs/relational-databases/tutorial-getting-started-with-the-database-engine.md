@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ed7e9e5831d4a3e17d29395279b9c680afaea8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 535854f49dc1271d24af5718edb4258bc76566ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834539"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075489"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>Esercitazione: Introduzione al motore di database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ In questa esercitazione vengono descritte le procedure per connettersi al [!INCL
   
 L'esercitazione è suddivisa in due lezioni:  
   
-[Lezione 1: Connessione al Motore di database](../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
+[Lezione 1: Connessione al motore di database](../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
 In questa lezione verranno descritte le procedure per connettersi a [!INCLUDE[ssDE](../includes/ssde-md.md)] e consentire ad altre persone di connettersi.  
   
 [Lezione 2: Connessione da un altro computer](../relational-databases/lesson-2-connecting-from-another-computer.md)  
@@ -49,7 +48,7 @@ Per utilizzare l'esercitazione è necessario che nel sistema siano installati i 
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)](Indici per tabelle con ottimizzazione per la memoria). Per installare [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], vedere [Scaricare SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).  
   
 ## <a name="see-also"></a>Vedere anche  
-[Esercitazione su SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
+[Esercitazione: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
   
   
   

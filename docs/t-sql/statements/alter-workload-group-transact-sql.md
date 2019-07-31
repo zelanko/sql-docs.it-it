@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bac81675ce0469fe39d11745462f2a3376aed73f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6563abe72382cb912e3d71851398e5d778b47a19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091748"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +115,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Viene specificato il grado massimo di parallelismo (DOP) per le richieste parallele. *value* deve essere 0 o un numero intero positivo, da 1 a 255. Quando *value* è 0, il server sceglie il grado massimo di parallelismo. Si tratta dell'impostazione predefinita e consigliata.  
   
 > [!NOTE]  
-> Il valore effettivo impostato da [!INCLUDE[ssDE](../../includes/ssde-md.md)] per MAX_DOP potrebbe essere inferiore al valore specificato. Il valore finale è determinato dalla formula min(255, *numero di CPU)*.  
+> Il valore effettivo impostato da [!INCLUDE[ssDE](../../includes/ssde-md.md)] per MAX_DOP potrebbe essere inferiore al valore specificato. Il valore finale è determinato dalla formula min(255, *numero di CPU)* .  
   
 > [!CAUTION]  
 > La modifica di MAX_DOP può influire negativamente sulle prestazioni di un server. Se è necessario modificare MAX_DOP, si consiglia di impostarlo a un valore minore o uguale al numero massimo di utilità di pianificazione dell'hardware che sono presenti in un singolo nodo NUMA. Si consiglia di non impostare MAX_DOP a un valore maggiore di 8.  
@@ -158,13 +157,13 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  Per l'esecuzione di istruzioni DDL, è consigliabile avere familiarità con gli stati di Resource Governor. Per altre informazioni, vedere [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
- REQUEST_MEMORY_GRANT_PERCENT: in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] al fine di ottenere prestazioni ottimali è possibile utilizzare per la creazione dell'indice una quantità di memoria per l'area di lavoro maggiore di quella concessa inizialmente. Questa speciale gestione è supportata da Resource Governor nelle versioni successive, tuttavia, la concessione iniziale ed eventuali concessioni di memoria aggiuntiva sono limitate dalle impostazioni di gruppo del carico di lavoro e dal pool di risorse.  
+ REQUEST_MEMORY_GRANT_PERCENT: in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], per la creazione dell'indice è consentito l'uso di una maggiore quantità di memoria per l'area di lavoro di quella concessa inizialmente, al fine di migliorare le prestazioni. Questa speciale gestione è supportata da Resource Governor nelle versioni successive, tuttavia, la concessione iniziale ed eventuali concessioni di memoria aggiuntiva sono limitate dalle impostazioni di gruppo del carico di lavoro e dal pool di risorse.  
   
  **Creazione dell'indice in una tabella partizionata**  
   
  La quantità di memoria utilizzata per la creazione dell'indice in una tabella partizionata non allineata è proporzionale al numero di partizioni coinvolte.  Se la memoria totale necessaria supera il limite per query (REQUEST_MAX_MEMORY_GRANT_PERCENT) imposto dal gruppo di carico di lavoro di Resource Governor, la creazione dell'indice potrebbe non riuscire. Poiché il gruppo di carico di lavoro "default" consente a una query di superare il limite per query con la memoria minima necessaria per la compatibilità con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], l'utente potrebbe essere in grado di eseguire la stessa creazione dell'indice in un gruppo di carico di lavoro "default", se nel pool di risorse "default" è configurata una quantità di memoria totale sufficiente per eseguire la query.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL SERVER.  
   
 ## <a name="examples"></a>Esempi  

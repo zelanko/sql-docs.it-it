@@ -1,5 +1,5 @@
 ---
-title: 'Classe di evento TM: Commit Tran Starting | Microsoft Docs'
+title: 'TM: Commit Tran Starting - Classe di evento | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 3e1ac37e-6093-4dc9-9e5d-4270db18b547
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de0bbd146084598e289f4a79afc545283fd6fb68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 715eb611d1228eb5ab08ead6fc84da076bd8bb30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732079"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125136"
 ---
 # <a name="tm-commit-tran-starting-event-class"></a>TM: Commit Tran Starting - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  La classe di evento TM: Commit Tran Starting indica l'avvio di una richiesta COMMIT TRANSACTION. inviata dal client tramite l'interfaccia di gestione delle transazioni. La colonna EventSubClass indica se, in seguito al commit della transazione corrente, verrà avviata una nuova transazione.  
+  TM: Commit Tran Starting è una classe di evento che indica l'avvio di una richiesta COMMIT TRANSACTION inviata dal client tramite l'interfaccia di gestione delle transazioni. La colonna EventSubClass indica se, in seguito al commit della transazione corrente, verrà avviata una nuova transazione.  
   
-## <a name="tm-commit-tran-starting-event-class-data-columns"></a>Colonne di dati della classe di evento TM: Commit Tran Starting  
+## <a name="tm-commit-tran-starting-event-class-data-columns"></a>TM: Commit Tran Starting - Colonne di dati della classe di evento  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  

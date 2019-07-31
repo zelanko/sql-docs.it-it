@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ae64276c-4e1e-4ef3-9ee9-ebeb2f61e565
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9ee53fe406fbf3de9f203d33c580c6936e446e0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23772a43a6786f7570542ebd5d11bcfba5e53790
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007080"
 ---
 # <a name="mssqlserver7986"></a>MSSQLSERVER_7986
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47657269"
 |Origine evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nome simbolico|DBCC2_PRE_CHECKS_CROSS_OBJECT_LINKAGE|  
-|Testo del messaggio|Controlli preliminari su tabella di sistema: per l'ID di oggetto ID_O è definito un collegamento a catena tra oggetti. La pagina ID1_P punta a ID2_P nell'ID di unità di allocazione ID1_A (dovrebbe essere ID2_A). Istruzione di controllo interrotta a causa di un errore irreversibile.|  
+|Testo del messaggio|Controlli preliminari su tabella di sistema: per l'ID oggetto O_ID è definito un collegamento a catena tra oggetti. La pagina ID1_P punta a ID2_P nell'ID di unità di allocazione ID1_A (dovrebbe essere ID2_A). Istruzione di controllo interrotta a causa di un errore irreversibile.|  
   
 ## <a name="explanation"></a>Spiegazione  
 La prima fase dell'esecuzione di un comando DBCC CHECKDB consiste nell'eseguire controlli primitivi nelle pagine dei dati delle tabelle di sistema critiche. Non è possibile correggere eventuali errori rilevati. DBCC CHECKDB verrà pertanto terminato immediatamente. Il puntatore di pagina successiva della pagina *P_ID1* nel livello dati dell'oggetto specificato punta alla pagina *P_ID2* di un oggetto diverso.  

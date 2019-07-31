@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b74eddf6fa77c63d7b4657375883e9b83e1893d4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6bd60789112a8aa28481b3bb615f1df2a957125a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067570"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Limiti della capacità di calcolo per edizione di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ ms.locfileid: "52400624"
   
 -   Un processore fisico può essere costituito da uno o più core. Un processore fisico corrisponde a un pacchetto del processore o a un socket.  
   
-Sistemi con più processori fisici o sistemi con processori fisici che dispongono di più core e/o Hyper-thread consentono al sistema operativo di eseguire più attività simultaneamente. Ogni thread di esecuzione viene visualizzato come un processore logico. Se ad esempio il computer in uso dispone di due processori quad core con l'Hyper-Threading abilitato e due thread per core, sono presenti 16 processori logici: 2 processori x 4 core per processore x 2 thread per core. Si noti che:  
+Sistemi con più processori fisici o sistemi con processori fisici che dispongono di più core e/o Hyper-thread consentono al sistema operativo di eseguire più attività simultaneamente. Ogni thread di esecuzione viene visualizzato come un processore logico. Se ad esempio il computer in uso dispone di due processori quad core con hyperthreading abilitato e due thread per core, sono presenti 16 processori logici: 2 processori x 4 core per processore x 2 thread per core. Si noti che:  
   
 -   La capacità di calcolo di un processore logico da un solo thread di un core con l'Hyper-Threading è inferiore alla capacità di calcolo di un processore logico da quello stesso core con l'Hyper-Threading disabilitato.  
   
@@ -78,7 +77,7 @@ Questi limiti si applicano a una sola istanza di [!INCLUDE[ssNoVersion](../inclu
   
 Nella tabella seguente vengono specificati i limiti della capacità di calcolo per una sola istanza di ogni edizione di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]:  
   
-|Edizione di[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Capacità di calcolo massima per una singola istanza ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacità di calcolo massima per una singola istanza (AS, RS)|  
+|Edizione di[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Capacità di calcolo massima per una singola istanza ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacità di calcolo massima per una singola istanza (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition: licenze basate su core\*|Valore massimo del sistema operativo|Valore massimo del sistema operativo|  
 |Developer|Valore massimo del sistema operativo|Valore massimo del sistema operativo|  

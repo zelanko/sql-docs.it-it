@@ -1,5 +1,5 @@
 ---
-title: 'Classe di evento TM: Promote Tran Completed | Microsoft Docs'
+title: 'TM: Promote Tran Completed - Classe di evento | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 839beaed-b094-467a-9b97-8764e9451fc0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87b1eaf67f0b47bb0e77cec60f4b1b6b7eeaa7d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0671936227892a6a1d01e1bb0a7b246996f836be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125132"
 ---
 # <a name="tm-promote-tran-completed-event-class"></a>TM: Promote Tran Completed - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  La classe di evento TM: Promote Tran Completed indica il completamento di una richiesta PROMOTE TRANSACTION inviata dal client tramite l'interfaccia di gestione delle transazioni.  
+  TM: Promote Tran Completed è una classe di evento che indica il completamento di una richiesta PROMOTE TRANSACTION inviata dal client tramite l'interfaccia di gestione delle transazioni.  
   
-## <a name="tm-promote-tran-completed-event-class-data-columns"></a>Colonne di dati della classe di evento TM: Promote Tran Completed  
+## <a name="tm-promote-tran-completed-event-class-data-columns"></a>TM: Promote Tran Completed - Colonne di dati della classe di evento  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5db753c673c38a0f14340d06b21abebd59887c93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3cd81ad5125b6822dd59205bad32cb39194712d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666129"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075980"
 ---
 # <a name="deferred-transactions-sql-server"></a>Transazioni posticipate (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "47666129"
 |Azione|Risoluzione (se si verificano problemi di I/O oppure i dati necessari sono offline)|  
 |------------|-----------------------------------------------------------------------|  
 |Avvio del server|transazione posticipata|  
-|Ripristina|Transazione posticipata|  
+|Ripristina|transazione posticipata|  
 |Collega|Il collegamento ha esito negativo|  
 |Riavvio automatico|transazione posticipata|  
 |Creazione di database o di snapshot del database|La creazione ha esito negativo|  
@@ -86,7 +85,7 @@ ms.locfileid: "47666129"
   
          Per informazioni sulla modalità di emergenza, vedere [Stati del database](../../relational-databases/databases/database-states.md).  
   
-    -   Correggere quindi gli errori del database usando l'opzione DBCC REPAIR_ALLOW_DATA_LOSS in una delle istruzioni DBCC seguenti: [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)o [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).  
+    -   Correggere quindi gli errori del database usando l'opzione DBCC REPAIR_ALLOW_DATA_LOSS in una delle istruzioni DBCC seguenti: [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) o [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).  
   
          Quando rileva la pagina danneggiata, DBCC ne esegue la deallocazione e corregge gli eventuali errori correlati. Questo approccio consente di attivare di nuovo la modalità online per il database in uno stato fisicamente consistente. È tuttavia possibile che vengano persi dati aggiuntivi. Utilizzare pertanto questo approccio solo se strettamente necessario.  
   

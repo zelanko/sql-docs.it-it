@@ -28,14 +28,13 @@ helpviewer_keywords:
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bcff15423fb1ab3f1f05347bddba6eab09fae713
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: af749bdb7050d9e71fdfe698fe295255a4603add
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419192"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118494"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -271,10 +270,14 @@ Nella tabella seguente sono illustrati i byte per l'archiviazione della codifica
 
 <sup>2</sup> Intervallo di punti di codice per [caratteri supplementari](#Supplementary_Characters).
 
-Come illustrato in precedenza, a seconda del set di caratteri in uso, la scelta della codifica Unicode e del tipo di dati appropriati può offrire importanti risparmi di risorse di archiviazione. Se ad esempio si cambia il tipo di dati di una colonna esistente con caratteri ASCII da `NCHAR(10)` in `CHAR(10)` usando una regola di confronto con supporto UTF-8, i requisiti di archiviazione vengono ridotti del 50%. Questa riduzione deriva dal fatto che `NCHAR(10)` richiede 20 byte per l'archiviazione, mentre `CHAR(10)` richiede solo 10 byte per la rappresentazione della stessa stringa Unicode.
+> [!TIP]   
+> Si pensa comunemente che in [CHAR(*n*) e VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) o in [NCHAR(*n*) e NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) l'elemento *n* definisca il numero di caratteri. Questo è dovuto al fatto che nell'esempio di una colonna CHAR(10) è possibile archiviare 10 caratteri ASCII nell'intervallo 0-127 usando regole di confronto come Latin1_General_100_CI_AI, perché ogni carattere in questo intervallo usa solo 1 byte.    
+> Tuttavia, in [CHAR(*n*) e VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), l'elemento *n* definisce la lunghezza della stringa in **byte** (0-8000), mentre in [NCHAR(*n*) e NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) l'elemento *n* definisce la lunghezza della stringa in **coppie di byte** (0-4000). *n* non definisce mai il numero di caratteri che è possibile archiviare.
+
+Come illustrato in precedenza, a seconda del set di caratteri in uso, la scelta della codifica Unicode e del tipo di dati appropriati può offrire importanti risparmi di risorse di archiviazione o al contrario incrementare il footprint della memoria. Ad esempio se si usa una regola di confronto con supporto UTF-8 come Latin1_General_100_CI_AI_SC_UTF8, una colonna `CHAR(10)` archivia 10 byte e può contenere 10 caratteri ASCII nell'intervallo 0-127, ma solo 5 caratteri nell'intervallo 128-2047 e solo 3 caratteri nell'intervallo 2048-65535. Tuttavia, dato che una colonna `NCHAR(10)` archivia 10 coppie di byte (20 byte), può ospitare 10 caratteri nell'intervallo 0-65535.  
 
 Prima di scegliere se usare la codifica UTF-8 o UTF-16 per un database o una colonna, considerare la distribuzione dei dati di tipo stringa che verranno archiviati:
--  Se sono principalmente nell'intervallo ASCII (ad esempio, per la lingua inglese), ogni carattere richiede 1 byte con UTF-8 e 2 byte con UTF-16. L'uso di UTF-8 offre vantaggi in termini di archiviazione. 
+-  Se sono principalmente nell'intervallo ASCII 0-127 (ad esempio, per la lingua inglese), ogni carattere richiede 1 byte con UTF-8 e 2 byte con UTF-16. L'uso di UTF-8 offre vantaggi in termini di archiviazione. Se si cambia il tipo di dati di una colonna esistente con caratteri ASCII nell'intervallo 0-127 da `NCHAR(10)` a `CHAR(10)` usando una regola di confronto con supporto UTF-8, i requisiti di archiviazione vengono ridotti del 50%. Questa riduzione deriva dal fatto che `NCHAR(10)` richiede 20 byte per l'archiviazione, mentre `CHAR(10)` richiede solo 10 byte per la rappresentazione della stessa stringa Unicode.    
 -  Oltre l'intervallo ASCII, quasi tutti gli script basati sull'alfabeto latino, nonché greco, cirillico, copto, armeno, ebraico, arabo, siriaco, tāna e n'ko, richiederanno 2 byte per carattere sia in UTF-8 che in UTF-16. In questi casi non vi sono significative differenze a livello di archiviazione per i tipi di dati simili (ad esempio, tra l'uso di **char** o **nchar**).
 -  Se si tratta principalmente di script dell'Asia orientale (ad esempio, coreano, cinese e giapponese), ogni carattere richiede 3 byte con UTF-8 e 2 byte con UTF-16. L'uso di UTF-16 offre vantaggi in termini di archiviazione. 
 -  I caratteri nell'intervallo da 010000 a 10FFFF richiedono 4 byte sia in UTF-8 che in UTF-16. In questi casi non vi sono differenze di archiviazione per i tipi di dati simili (ad esempio, tra l'uso di **char** o **nchar**).

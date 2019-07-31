@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 28face7dd893a43b9167ff162a3c741b99c65eab
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3d015602e944416435c95aba6aaea1ead84b834a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018872"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077969"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant (Motore di database)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ VALUES
 'adventure-works\FirstNewEmployee', 'Application Intern', '3/11/07') ;  
 ```  
   
-### <a name="b-inserting-a-row-as-a-greater-descendant-node"></a>b. Inserimento di una riga come nodo discendente maggiore  
+### <a name="b-inserting-a-row-as-a-greater-descendant-node"></a>B. Inserimento di una riga come nodo discendente maggiore  
 Viene assunto un altro nuovo dipendente, che risponde allo stesso responsabile dell'esempio A. Eseguire il codice seguente per inserire la nuova riga mediante il metodo GetDescendant, usando l'argomento child1 per specificare che il nodo della nuova riga seguirà il nodo dell'esempio A, divenendo `/3/1/2/`:
   
 ```sql

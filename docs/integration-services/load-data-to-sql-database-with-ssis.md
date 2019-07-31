@@ -10,13 +10,12 @@ ms.custom: loading
 ms.date: 08/20/2018
 ms.author: janinez
 author: janinezhang
-manager: craigg
-ms.openlocfilehash: 73b77182cc8ed447f8540aed5010aeee704c0e97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d57c9f725ec8f7c2a26a110a6d317bd5ec1de118
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65720557"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054514"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Caricare dati in SQL Server o nel database SQL di Azure con SQL Server Integration Services (SSIS)
 
@@ -56,9 +55,9 @@ Per velocizzare l'operazione, è possibile usare Importazione/Esportazione guida
 ## <a name="prerequisites"></a>Prerequisites
 Per eseguire questa esercitazione, sono necessari:
 
-1. **SQL Server Integration Services (SSIS)**. SSIS è un componente di SQL Server e richiede una versione con licenza o la versione per sviluppatori o la versione di valutazione di SQL Server. Per ottenere una versione di valutazione di SQL Server, vedere [Evaluation Center per SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
+1. **SQL Server Integration Services (SSIS)** . SSIS è un componente di SQL Server e richiede una versione con licenza o la versione per sviluppatori o la versione di valutazione di SQL Server. Per ottenere una versione di valutazione di SQL Server, vedere [Evaluation Center per SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
 2. **Visual Studio** (facoltativo). Per ottenere l'edizione gratuita di Visual Studio Community, vedere [Visual Studio Community][Visual Studio Community]. Se non si vuole installare Visual Studio, è possibile installare solo SQL Server Data Tools (SSDT). SSDT installa una versione di Visual Studio con funzionalità limitate.
-3. **SQL Server Data Tools per Visual Studio (SSDT)**. Per ottenere SQL Server Data Tools per Visual Studio, vedere [Scaricare SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
+3. **SQL Server Data Tools per Visual Studio (SSDT)** . Per ottenere SQL Server Data Tools per Visual Studio, vedere [Scaricare SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
 4. In questa esercitazione ci si connette a un'istanza di SQL Server o del database SQL e si caricano i dati. È necessario avere le autorizzazioni per connettersi, creare una tabella e caricare i dati nelle seguenti destinazioni:
    - **Un database SQL di Azure**. Per altre informazioni, vedere [Database SQL di Azure](/azure/sql-database/).  
       o Gestione configurazione

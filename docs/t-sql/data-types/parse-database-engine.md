@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 55ac77cc4332ce7fe71f1dc2f1fc57d29a05a1e3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8f7160513cd23e16f06dbba27851920b66bf72c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041692"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119823"
 ---
 # <a name="parse-database-engine"></a>Parse (Motore di database)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ hierarchyidRepresentation    StringRepresentation
 0x5ADE                       /1/1/3/
 ```
   
-### <a name="b-clr-example"></a>b. Esempio CLR  
+### <a name="b-clr-example"></a>B. Esempio CLR  
 Nel frammento di codice seguente viene chiamato il metodo Parse():
   
 ```sql

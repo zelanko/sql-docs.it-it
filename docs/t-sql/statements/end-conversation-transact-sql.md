@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8ff8f2d557fac07f588b278e2b2667b75e60f478
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5bd9dd2e967c1ce6551dbc3b952a8bf8baa09585
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701292"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084488"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ END CONVERSATION conversation_handle
  Codice di errore. *failure_code* è di tipo **int**. Il codice di errore è un codice definito dall'utente incluso nel messaggio di errore inviato all'altro lato della conversazione. Il codice di errore deve essere maggiore di 0.  
   
  DESCRIPTION =*failure_text*  
- Messaggio di errore. *failure_text* è di tipo **nvarchar(3000)**. Il testo dell'errore è un messaggio testuale definito dall'utente incluso nel messaggio di errore inviato all'altro lato della conversazione.  
+ Messaggio di errore. *failure_text* è di tipo **nvarchar(3000)** . Il testo dell'errore è un messaggio testuale definito dall'utente incluso nel messaggio di errore inviato all'altro lato della conversazione.  
   
  WITH CLEANUP  
  Rimuove tutti i messaggi e le voci della vista del catalogo per un lato di una conversazione che non è possibile completare normalmente. La pulizia non viene notificata all'altro lato della conversazione. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elimina l'endpoint della conversazione, tutti i messaggi per la conversazione nella coda di trasmissione e tutti i messaggi per la conversazione nella coda del servizio. Gli amministratori possono utilizzare questa opzione per rimuovere le conversazioni che non possono essere completate normalmente. Se, ad esempio, il servizio remoto viene rimosso in modo definitivo, un amministratore può utilizzare WITH CLEANUP per rimuovere le conversazioni associate a tale servizio. Non usare WITH CLEANUP nel codice di un'applicazione [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Se si esegue END CONVERSATION WITH CLEANUP prima che l'endpoint di ricezione confermi la ricezione di un messaggio, l'endpoint di invio invierà di nuovo il messaggio. In questo modo, il dialogo potrebbe essere eseguito di nuovo.  
@@ -84,7 +83,7 @@ END CONVERSATION conversation_handle
   
  END CONVERSATION non è un'istruzione valida in una funzione definita dall'utente.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per terminare una conversazione attiva, l'utente corrente deve essere il proprietario della conversazione, un membro del ruolo predefinito del server sysadmin o un membro del ruolo predefinito del database db_owner.  
   
  I membri del ruolo predefinito del server sysadmin o del ruolo predefinito del database db_owner possono utilizzare WITH CLEANUP per rimuovere i metadati di una conversazione già completata.  

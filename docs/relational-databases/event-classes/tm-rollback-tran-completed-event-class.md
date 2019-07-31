@@ -1,5 +1,5 @@
 ---
-title: 'Classe di evento TM: Rollback Tran Completed| Microsoft Docs'
+title: 'TM: Rollback Tran Completed - Classe di evento | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: af4043db-bc9f-4cd8-8d07-ef3efae85148
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72f4b3ce6e4e10964c6f3a31fb532dc4805641ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c56cc6335bfb30d6edd82c2d4456603df1bab9a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748567"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125153"
 ---
 # <a name="tm-rollback-tran-completed-event-class"></a>TM: Rollback Tran Completed - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  La classe di evento TM: Rollback Tran Completed indica il completamento di una richiesta ROLLBACK TRANSACTION. La richiesta è stata inviata dal client tramite l'interfaccia di gestione delle transazioni. La colonna EventSubClass indica se una nuova transazione verrà avviata dopo il rollback della transazione corrente.  
+  TM: Rollback Tran Completed è una classe di evento che indica il completamento di una richiesta ROLLBACK TRANSACTION. La richiesta è stata inviata dal client tramite l'interfaccia di gestione delle transazioni. La colonna EventSubClass indica se una nuova transazione verrà avviata dopo il rollback della transazione corrente.  
   
-## <a name="tm-rollback-tran-completed-event-class-data-columns"></a>Colonne di dati della classe di evento TM: Rollback Tran Completed  
+## <a name="tm-rollback-tran-completed-event-class-data-columns"></a>TM: Rollback Tran Completed - Colonne di dati della classe di evento  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  

@@ -1,5 +1,5 @@
 ---
-title: 'Classe di evento TM: Save Tran Starting | Microsoft Docs'
+title: 'TM: Save Tran Starting (classe di evento) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 6f19fe7c-a452-4323-b957-7e17d13bf8fd
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 75c263439a5da45e4a6c751d3a669350b29f153f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3cf22c17cc0b76e9ea05b8f600ae6b695d615777
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821729"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007005"
 ---
 # <a name="tm-save-tran-starting-event-class"></a>TM: Save Tran Starting - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  La classe di evento TM: Save Tran Starting indica che è stata avviata una richiesta SAVE TRANSACTION. La richiesta è stata inviata dal client tramite l'interfaccia di gestione delle transazioni.  
+  TM: Save Tran Starting è una classe di evento che indica che è stata avviata una richiesta SAVE TRANSACTION. La richiesta è stata inviata dal client tramite l'interfaccia di gestione delle transazioni.  
   
-## <a name="tm-save-tran-starting-event-class-data-columns"></a>Colonne di dati della classe di evento TM: Save Tran Starting  
+## <a name="tm-save-tran-starting-event-class-data-columns"></a>TM: Save Tran Starting - Colonne di dati della classe di evento  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  

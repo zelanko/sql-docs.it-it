@@ -2,29 +2,28 @@
 title: Supplemento alla privacy di SQL Server | Microsoft Docs
 ms.date: 01/19/2019
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: mikeray
 ms.custom: ''
 ms.topic: conceptual
 f1_keywords: ''
 helpviewer_keywords: ''
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 06116a52b35acb2ffef584e751e2c7285ce99551
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+author: aliceku
+ms.author: aliceku
+ms.openlocfilehash: 40057200c5b8241849f4030e6c418cf080d149f2
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420026"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329346"
 ---
 # <a name="sql-server-privacy-supplement"></a>Supplemento alla privacy di SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In questo articolo viene riepilogato il comportamento di vari oggetti dati usati in SQL Server e la modalità con cui tali oggetti vengono usati per passare le informazioni in modo riservato o personale. Questo articolo funge da supplemento all'[Informativa sulla privacy di Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839). La classificazione dei dati in questo articolo si applica solo alle versioni del prodotto SQL Server locale. Non si applica agli elementi seguenti:
+Questo articolo riepiloga le funzionalità abilitate per Internet che consentono di raccogliere e inviare a Microsoft dati anonimi di diagnostica e di utilizzo delle funzionalità. SQL Server può raccogliere informazioni standard sul computer e dati relativi all'uso e alle prestazioni che possono venire trasmessi a Microsoft e analizzati al fine di migliorare la qualità, la sicurezza e l'affidabilità del prodotto. Questo articolo funge da supplemento all'[Informativa sulla privacy di Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839). La classificazione dei dati in questo articolo si applica solo alle versioni del prodotto SQL Server locale. Non si applica agli elementi seguenti:
 
 - Database SQL di Azure
-- SQL Server Management Studio (SSMS)
+- [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
 - Data Migration Assistant
@@ -46,7 +45,7 @@ Informazioni correlate alle credenziali usate per proteggere gli account di acce
 
 |Scenario |Restrizioni di accesso |Requisiti di mantenimento |
 |---------|---------|---------|
-|Queste credenziali non lasciano mai il computer dell'utente tramite il feedback sull'utilizzo. |- |- |
+|Queste credenziali non lasciano mai il computer dell'utente come dati di Utilizzo e diagnostica. |- |- |
 |I dump di arresto anomalo del sistema possono contenere dati di controllo di accesso. |- |Dump di arresto anomalo: massimo 30 giorni. |
 |Queste credenziali non lasciano mai il computer dell'utente mediante il feedback utente a meno che il cliente non le inserisca manualmente |Limite all'uso interno Microsoft senza accesso per terze parti. |Commenti e suggerimenti degli utenti: massimo 1 anno|
 |&nbsp;|&nbsp;|&nbsp;|
@@ -65,7 +64,7 @@ Si definiscono contenuto del cliente i dati archiviati nelle tabelle utente, dir
 
 |Scenario  |Restrizioni di accesso  |Requisiti di mantenimento |
 |---------|---------|---------|
-|Questi dati non lasciano mai il computer dell'utente tramite il feedback sull'utilizzo. |- |- |
+|Questi dati non lasciano il computer dell'utente come dati di Utilizzo e diagnostica. |- |- |
 |I dump di arresto anomalo del sistema possono includere contenuto del cliente ed essere inviati a Microsoft. |- |Dump di arresto anomalo: massimo 30 giorni. |
 |I clienti possono dare il proprio consenso all'invio a Microsoft di feedback utente che include contenuto del cliente. |Limite all'uso interno Microsoft senza accesso per terze parti. Microsoft può rendere disponibili i dati al cliente originale. |Commenti e suggerimenti degli utenti: massimo 1 anno |
 
@@ -88,7 +87,7 @@ Dati ricevuti da un utente o generati dall'uso del prodotto.
 
 |Scenario  |Restrizioni di accesso  |Requisiti di mantenimento|
 |---------|---------|---------|
-|Questi dati non lasciano mai il computer dell'utente tramite il feedback sull'utilizzo. |- |- |
+|Questi dati non lasciano il computer dell'utente come dati di Utilizzo e diagnostica. |- |- |
 |I dump di arresto anomalo del sistema possono includere informazioni personali dell'utente finale e possono essere inviati a Microsoft. |- |Dump di arresto anomalo: massimo 30 giorni |
 |L'ID di identificazione del cliente può essere inviato a Microsoft per offrire nuove funzionalità ibride e cloud che gli utenti hanno sottoscritto. |- |Attualmente non esiste alcuna funzionalità ibrida o cloud di questo tipo.|
 |I clienti possono dare il proprio consenso all'invio a Microsoft di feedback utente che include contenuto del cliente.|Limite all'uso interno Microsoft senza accesso per terze parti. Microsoft può rendere disponibili i dati al cliente originale. |Commenti e suggerimenti degli utenti: massimo 1 anno |
@@ -120,7 +119,7 @@ Dati generati nel corso dell'esecuzione del server.  I dati non includono conten
 
 ### <a name="examples-of-system-metadata"></a>Esempi di metadati di sistema
 
-I dati riportati si seguito sono considerati metadati di sistema se non includono contenuto del cliente, controllo di accesso del cliente o informazioni personali dell'utente finale:
+I dati riportati di seguito sono considerati metadati di sistema se non includono contenuto del cliente, metadati oggetto, dati di controllo di accesso del cliente o informazioni personali dell'utente finale:
 
 - GUID del database
 - Hash del nome del computer
@@ -142,7 +141,7 @@ Microsoft esamina i valori dei nomi di applicazione impostati da altri programmi
 |Possono essere usati da Microsoft per migliorare le funzionalità e/o eliminare bug nelle funzionalità correnti.|Limite all'uso interno Microsoft senza accesso per terze parti. |Minimo 90 giorni - Massimo 3 anni |
 |Possono essere usati per offrire suggerimenti al cliente.  Ad esempio, si può consigliare, in base all'utilizzo del prodotto, di valutare l'uso della funzionalità *X* poiché consentirebbe prestazioni superiori. |Microsoft può rendere disponibili i dati al cliente originale, ad esempio mediante i dashboard. |Registri di protezione dei dati dei clienti: minimo 3 anni, massimo 6 anni |
 |Possono essere usati da Microsoft per la pianificazione futura dei prodotti. |Microsoft può condividere queste informazioni con altri fornitori di hardware e software per migliorare il funzionamento dei loro prodotti con il software Microsoft. |Minimo 90 giorni - Massimo 3 anni|
-|Possono essere usati da Microsoft per offrire servizi basati su cloud in base al feedback utente generato. Ad esempio, un dashboard cliente che illustra l'utilizzo di funzionalità in tutte le installazioni di SQL Server all'interno di un'organizzazione. |Microsoft può rendere disponibili i dati al cliente originale, ad esempio mediante i dashboard. |Minimo 90 giorni - Massimo 3 anni |
+|Possono essere usati da Microsoft per offrire servizi basati su cloud in base ai dati di Utilizzo e diagnostica generati. Ad esempio, un dashboard cliente che illustra l'utilizzo di funzionalità in tutte le installazioni di SQL Server all'interno di un'organizzazione. |Microsoft può rendere disponibili i dati al cliente originale, ad esempio mediante i dashboard. |Minimo 90 giorni - Massimo 3 anni |
 |I clienti possono dare il proprio consenso all'invio a Microsoft di feedback utente che include contenuto del cliente. |Limite all'uso interno Microsoft senza accesso per terze parti. Microsoft può rendere disponibili i dati al cliente originale. |Commenti e suggerimenti degli utenti: massimo 1 anno |
 |Il nome del database e il nome dell'applicazione possono essere usati per classificare i database e le applicazioni in categorie note, ad esempio quelli che potrebbero eseguire software fornito da Microsoft o da altre società.|Limite all'uso interno Microsoft senza accesso per terze parti.|Minimo 90 giorni - Massimo 3 anni |
 
@@ -157,6 +156,10 @@ Dati che descrivono o vengono usati per configurare server, database, tabelle e 
 - Nomi di statistiche
 
 ### <a name="permitted-usage-scenarios"></a>Scenari di utilizzo consentiti
+
+> [!NOTE]
+> Prima della raccolta viene eseguito l'hashing di tutti i valori dei metadati degli oggetti.
+>
 
 |Scenario  |Restrizioni di accesso  |Requisiti di mantenimento|
 |---------|---------|---------|

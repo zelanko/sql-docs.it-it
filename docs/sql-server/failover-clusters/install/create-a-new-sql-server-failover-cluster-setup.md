@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c93844267fd91f248c073b00b12c4a07d16d7da5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2581a2a6c91640ce00b8bc804d8b52183de533ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063970"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Creare un nuovo cluster di failover di SQL Server (programma di installazione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "52525286"
   
  Le opzioni riportate di seguito sono disponibili per l'installazione del cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
- **Opzione 1: installazione integrata con la funzionalità per l'aggiunta del nodo**  
+ **Opzione 1: Installazione integrata con la funzionalità per l'aggiunta del nodo**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L'installazione integrata del cluster di failover prevede i passaggi seguenti:  
   
@@ -46,7 +45,7 @@ ms.locfileid: "52525286"
   
     -   Se il nodo da aggiungere dispone di subnet aggiuntive o diverse, è possibile specificare indirizzi IP aggiuntivi. Se il nodo da aggiungere è su una subnet diversa, è necessario anche confermare che la dipendenza delle risorse di indirizzo IP è stata impostata su OR. Per altre informazioni sui diversi scenari possibili durante le operazioni di aggiunta del nodo, vedere [Aggiungere o rimuovere nodi in un cluster di failover di SQL Server &#40;programma di installazione&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
- **Opzione 2: installazione avanzata o aziendale**  
+ **Opzione 2: Installazione avanzata o aziendale**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L'installazione avanzata o aziendale del cluster di failover prevede i passaggi seguenti:  
   
@@ -69,7 +68,7 @@ ms.locfileid: "52525286"
   
  Per altre informazioni sull'installazione di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in un cluster di failover Windows, vedere [Come eseguire il clustering di SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
-## <a name="prerequisites"></a>Prerequisiti  
+## <a name="prerequisites"></a>Prerequisites  
  Prima di avviare l'installazione, vedere gli argomenti seguenti della documentazione online di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   [Pianificazione di un'installazione di SQL Server](../../../sql-server/install/planning-a-sql-server-installation.md)  
@@ -124,7 +123,7 @@ ms.locfileid: "52525286"
   
 11. Nella pagina Configurazione dell'istanza specificare se installare un'istanza predefinita o denominata. Per ulteriori informazioni, vedere [Instance Configuration](../../install/instance-configuration.md).  
   
-     **Nome di rete di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**: specificare un nome di rete per il nuovo cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si tratta del nome utilizzato per identificare il cluster di failover nella rete.  
+     **Nome di rete di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** : specificare un nome di rete per il nuovo cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si tratta del nome utilizzato per identificare il cluster di failover nella rete.  
   
     > [!NOTE]  
     >  Nelle precedenti versioni dei cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] questo nome era noto come nome virtuale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -230,7 +229,7 @@ ms.locfileid: "52525286"
   
 ##  <a name="prepare"></a> Preparazione  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Passaggio 1 dell'installazione avanzata o aziendale del cluster di failover: preparazione  
+#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Passaggio 1 dell'installazione avanzata o aziendale del cluster di failover: Preparazione  
   
 1.  Inserire il supporto di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , quindi nella cartella radice fare doppio clic sul file Setup.exe. Per eseguire l'installazione da una condivisione di rete, spostarsi nella cartella radice nella condivisione, quindi fare doppio clic sul file Setup.exe. Per altre informazioni sulla procedura di installazione dei prerequisiti, vedere [Operazioni preliminari all'installazione del clustering di failover](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md). È possibile che venga richiesto di installare i prerequisiti se non sono già stati installati in precedenza.  
   
@@ -262,7 +261,7 @@ ms.locfileid: "52525286"
      È possibile specificare una directory personalizzata per i componenti condivisi utilizzando il campo presente nella parte inferiore della pagina. Per modificare il percorso di installazione per i componenti condivisi, aggiornare il percorso nel campo disponibile nella parte inferiore della finestra di dialogo oppure fare clic sul pulsante con i puntini di sospensione per spostarsi in una directory di installazione. Il percorso di installazione predefinito è C:\Programmi\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\.  
   
     > [!NOTE]  
-    >  Quando si seleziona la funzionalità Servizi [!INCLUDE[ssDE](../../../includes/ssde-md.md)] , vengono selezionate automaticamente sia la replica sia la ricerca full-text. Se si deseleziona una di queste funzionalità secondarie, viene deselezionata anche la funzionalità Servizi [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+    >  Quando si seleziona la funzionalità Servizi [!INCLUDE[ssDE](../../../includes/ssde-md.md)] , vengono selezionate automaticamente sia la replica sia la ricerca full-text. Se si deseleziona una di queste funzionalità secondarie, viene deselezionata anche la funzionalità Servizi [!INCLUDE[ssDE](../../../includes/ssde-md.md)] .  
   
 11. Nella pagina Configurazione dell'istanza specificare se installare un'istanza predefinita o denominata.
   
@@ -322,7 +321,7 @@ ms.locfileid: "52525286"
   
 ## <a name="complete"></a>Operazione completata  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Passaggio 2 dell'installazione avanzata o aziendale del cluster di failover: completamento  
+#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Passaggio 2 dell'installazione avanzata o aziendale del cluster di failover: Operazione completata  
   
 1.  Dopo aver preparato tutti i nodi nel modo descritto nel passaggio relativo alla [preparazione](#prepare), eseguire il programma di installazione in uno dei nodi preparati, preferibilmente in quello proprietario del disco condiviso. Nella pagina **Avanzate** di Centro installazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fare clic su **Completamento cluster avanzato**.  
   
@@ -343,7 +342,7 @@ ms.locfileid: "52525286"
   
 7.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Il programma di installazione esegue uno o più set di regole basati sulle funzionalità selezionate per convalidare la configurazione.  
   
-8.  Utilizzare la pagina Gruppo risorse cluster per specificare il nome del gruppo di risorse cluster in cui verranno memorizzate le risorse del server virtuale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per specificare il nome del gruppo di risorse del cluster di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , Sono disponibili due opzioni:  
+8.  Utilizzare la pagina Gruppo risorse cluster per specificare il nome del gruppo di risorse cluster in cui verranno memorizzate le risorse del server virtuale di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per specificare il nome del gruppo di risorse del cluster di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , Sono disponibili due opzioni:  
   
     -   Utilizzare l'elenco per specificare un gruppo esistente da utilizzare.  
   
@@ -397,7 +396,7 @@ ms.locfileid: "52525286"
 19. Al termine dell'installazione, nella pagina **Operazione completata** viene visualizzato un collegamento al file di log di riepilogo del processo di installazione e ad altre note importanti. Per completare il processo di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , fare clic su **Chiudi**. A questo punto tutti i nodi preparati per lo stesso cluster di failover appartengono al cluster di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] completato.  
   
 ## <a name="next-steps"></a>Next Steps  
- **Configurare la nuova installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**: per ridurre la superficie di attacco di un sistema, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono installati e abilitati in modo selettivo i servizi e le funzionalità principali. Per ulteriori informazioni, vedere [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  
+ **Configurare la nuova installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** : per ridurre la superficie di attacco di un sistema, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vengono installati e abilitati in modo selettivo i servizi e le funzionalità principali. Per ulteriori informazioni, vedere [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  
   
  Per altre informazioni sui file di log, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   

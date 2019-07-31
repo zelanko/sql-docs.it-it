@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 41e33a33d969f074139c6bdeb5eba99f59728831
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ae451d86f2490765f3871deca925f4b6348e2304
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666096"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140418"
 ---
-# <a name="tutorial-using-the-hierarchyid-data-type"></a>Esercitazione: Utilizzo del tipo di dati hierarchyid
+# <a name="tutorial-using-the-hierarchyid-data-type"></a>Esercitazione: Uso del tipo di dati hierarchyid
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 Questa esercitazione è destinata agli utenti che hanno esperienza nell'uso di [!INCLUDE[tsql](../../includes/tsql-md.md)]ma non hanno familiarità con il tipo di dati **hierarchyid** .  
   

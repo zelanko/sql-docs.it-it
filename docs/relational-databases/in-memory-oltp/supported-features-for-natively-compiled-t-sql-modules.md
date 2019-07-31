@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88a7eb6303509766cbd7ae703135d6a33a4e54fc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a1cf5b6242f5c76abf8dca638a2596eb2cae9641
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518237"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025078"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Funzionalità supportate per i moduli T-SQL compilati in modo nativo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,8 +48,8 @@ ms.locfileid: "52518237"
 
 Sono supportati i costrutti delle query indicati di seguito:  
 
-Espressione CASE: CASE può essere utilizzata in qualsiasi istruzione o clausola che consenta un'espressione valida.
-   - **Si applica a:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)](DDL supportate per moduli T-SQL compilati in modo nativo).  
+Espressione CASE: L'espressione CASE può essere utilizzata in qualsiasi istruzione o clausola che consenta un'espressione valida.
+   - **Si applica a:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
     A partire da [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], le istruzioni CASE sono supportate per i moduli T-SQL compilati in modo nativo.
 
 Clausola SELECT:  
@@ -202,11 +201,11 @@ Sono supportate le istruzioni DML seguenti.
 
 -   Funzioni di data: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME e YEAR.  
 
--   Funzioni stringa: LEN, LTRIM, RTRIM e SUBSTRING.  
+-   Funzioni di stringa: LEN, LTRIM, RTRIM e SUBSTRING.  
     - **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
-      A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], sono supportate anche le funzioni integrate seguenti: TRIM, TRANSLATE e CONCAT_WS.  
+      A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] sono supportate anche le funzioni integrate seguenti: TRIM, TRANSLATE e CONCAT_WS.  
 
--   Funzione di identità: SCOPE_IDENTITY  
+-   Funzioni di identità: SCOPE_IDENTITY  
 
 -   Funzioni NULL: ISNULL  
 
@@ -216,7 +215,7 @@ Sono supportate le istruzioni DML seguenti.
     - **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
       A partire da [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], le funzioni JSON sono supportate nei moduli compilati in modo nativo.
 
--   Funzioni di errore: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY e ERROR_STATE  
+-   Funzioni di errore: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY ed ERROR_STATE  
 
 -   Funzioni di sistema: @@rowcount. Le istruzioni all'interno di stored procedure compilate in modo nativo aggiornano @@rowcount ed è possibile usare @@rowcount in una stored procedure compilata in modo nativo per determinare il numero di righe interessate dall'ultima istruzione eseguita all'interno della stored procedure. Tuttavia, @@rowcount viene reimpostato su 0 all'inizio e alla fine dell'esecuzione di una stored procedure compilata in modo nativo.  
 
@@ -245,13 +244,13 @@ Sono supportate le istruzioni DML seguenti.
 ##  <a name="los"></a> Limitazioni relative all'ordinamento  
  È possibile ordinare più di 8.000 righe in una query che usa [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) e una clausola [ORDER BY Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md). Tuttavia, senza la [ clausola ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) può ordinare fino a 8.000 righe, meno se sono presenti join.  
 
- Se la query usa sia l'operatore [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) che una [clausola ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), è possibile specificare fino a 8192 righe per l'operatore TOP. Se si specificano più di 8192 righe, viene visualizzato il messaggio di errore: **Messaggio 41398, livello 16, stato 1, procedura *\<nomeProcedura>*, riga *\<<numeroRiga>*. L'operatore TOP può restituire un massimo di 8192 righe. Il numero richiesto è *\<numero>*.**  
+ Se la query usa sia l'operatore [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) che una [clausola ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md), è possibile specificare fino a 8192 righe per l'operatore TOP. Se si specificano più di 8192 righe viene visualizzato il messaggio di errore seguente: **Messaggio 41398, livello 16, stato 1, procedura *\<nomeProcedura>* , riga *\<<numeroRiga>* . L'operatore TOP può restituire un massimo di 8192 righe. Il numero richiesto è *\<numero>* .**  
 
  Se non si dispone di una clausola TOP, è possibile ordinare qualsiasi numero di righe con ORDER BY.  
 
  Se non si utilizza una clausola ORDER BY, è possibile utilizzare qualsiasi valore intero con l'operatore TOP.  
 
- Esempio con TOP N = 8192: compila  
+ Esempio con TOP N = 8192: esegue la compilazione  
 
 ```sql  
 CREATE PROCEDURE testTop  
@@ -279,7 +278,7 @@ GO
 
  Il limite di 8192 righe si applica solo a `TOP N``N` dove  è una costante, come negli esempi precedenti.  Se è necessario un valore `N` maggiore di 8192 è possibile assegnare il valore a una variabile e utilizzare tale variabile con `TOP`.  
 
- Esempio di utilizzo di una variabile: compila  
+ Esempio d'uso di una variabile: esegue la compilazione  
 
 ```sql  
 CREATE PROCEDURE testTop  
@@ -293,7 +292,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- **Limitazioni per le righe restituite.** In due casi è possibile che il numero di righe che possono essere restituite dall'operatore TOP venga ridotto:  
+ **Limitazioni per le righe restituite:** In due casi è possibile che il numero di righe restituibili dall'operatore TOP venga ridotto:  
 
 -   Utilizzando JOIN nella query.  L'influenza di JOIN sulla limitazione dipende dal piano di query.  
 

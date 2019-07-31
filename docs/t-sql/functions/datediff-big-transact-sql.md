@@ -1,7 +1,7 @@
 ---
 title: DATEDIFF_BIG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2acd0d75b28f3a0d6a155f681a5b8011473f91a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3724c25854bd98a98b077fb59897ba4da250aee1
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943681"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329296"
 ---
 # <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,19 +38,20 @@ Vedere [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](../../t-sq
   
 ## <a name="syntax"></a>Sintassi  
   
-```sql
-  
+```
 DATEDIFF_BIG ( datepart , startdate , enddate )  
 ```  
   
 ## <a name="arguments"></a>Argomenti  
 *datepart*  
-Parte di *startdate* ed *enddate* che specifica il tipo di limite superato. `DATEDIFF_BIG` non accetta equivalenti di variabili definite dall'utente. Questa tabella elenca tutti gli argomenti validi per *datepart*.
+Parte di *startdate* ed *enddate* che specifica il tipo di limite superato.
 
 > [!NOTE]
-> `DATEDIFF_BIG` non accetta equivalenti di variabili definite dall'utente come argomenti di *datepart*.
+> `DATEDIFF_BIG` non accetta valori *datepart* da variabili definite dall'utente o come stringhe tra virgolette.
+
+Questa tabella elenca i nomi e le abbreviazioni di tutti gli argomenti *datepart* validi.
   
-|*datepart*|Abbreviazioni|  
+|Nome *datepart*| Abbreviazione *datepart*|  
 |---|---|
 |**year**|**yy, yyyy**|  
 |**quarter**|**qq, q**|  
@@ -65,7 +65,10 @@ Parte di *startdate* ed *enddate* che specifica il tipo di limite superato. `DAT
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
-  
+
+> [!NOTE]
+> Ogni nome *datepart* specifico e le abbreviazioni *datepart* corrispondenti restituiscono lo stesso valore.
+
 *startdate*  
 Espressione che può risolversi in uno dei valori seguenti:
 
@@ -82,12 +85,10 @@ Per *date*, `DATEDIFF_BIG` accetta un'espressione di colonna, un'espressione, un
 Vedere *startdate*.
   
 ## <a name="return-type"></a>Tipo restituito  
-
 **bigint** con segno  
   
 ## <a name="return-value"></a>Valore restituito  
-Restituisce il numero (valore bigint con segno) dei limiti di datepart specificati sovrapposti tra i valori startdate ed enddate indicati.
--   Ogni *datepart* specifico e le rispettive abbreviazioni di tali *datepart* restituiscono lo stesso valore.  
+Restituisce la differenza **bigint** tra *startdate* ed *enddate*, espressa nel limite impostato da *datepart*.
   
 Per un valore restituito esterno all'intervallo per **bigint** (da -9.223.372.036.854.775.808 a +9.223.372.036.854.775.807), `DATEDIFF_BIG` restituisce un errore. A differenza di `DATEDIFF` che restituisce un **int** e può quindi determinare un overflow con una precisione di **minute** o superiore, `DATEDIFF_BIG` può determinare un overflow solo se si usa la precisione **nanosecond** dove la differenza tra *enddate* e *startdate* è superiore a 292 anni, 3 mesi, 10 giorni, 23 ore, 47 minuti e 16.8547758 secondi.
   

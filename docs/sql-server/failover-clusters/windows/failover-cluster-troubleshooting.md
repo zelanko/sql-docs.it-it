@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9f6c458d34a5d42d0300441ee85c03a3bf4a04c3
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: e1cf8ea99cac00670bd96437e0a5484d2888cbe9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044796"
 ---
 # <a name="failover-cluster-troubleshooting"></a>Risoluzione dei problemi relativi al clustering di failover
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "52302814"
 -   Utilizzo di stored procedure estese e di oggetti COM.  
   
 ## <a name="basic-troubleshooting-steps"></a>Procedura di base per la risoluzione dei problemi  
- La prima attività di diagnostica è l'esecuzione del controllo di convalida sul cluster aggiornato. Per informazioni sulla convalida, vedere [Guida dettagliata al cluster di failover: Convalidare l'hardware per un cluster di failover](https://technet.microsoft.com/library/cc732035.aspx).  Il controllo può essere completato senza interruzione del servizio, poiché non ha effetto sulle risorse cluster in linea. La convalida può essere eseguita in qualsiasi momento dopo aver installato la funzionalità Clustering di failover, ovvero prima della distribuzione del cluster, durante la sua creazione e mentre il cluster è in esecuzione. In effetti mentre il cluster è in uso vengono eseguiti altri test, che verificano la corretta adozione delle procedure consigliate per i carichi di lavoro a disponibilità elevata. Delle decine di test eseguiti, solo alcuni hanno impatto sui carichi di lavoro del cluster in esecuzione. e rientrano tutti nella categoria di archiviazione, pertanto ignorare l'intera categoria è un modo pratico per evitare test che possono causare interruzioni.  
+ La prima attività di diagnostica è l'esecuzione del controllo di convalida sul cluster aggiornato. Per informazioni dettagliate sulla convalida, vedere [Guida dettagliata ai cluster di failover: convalida dell'hardware per un cluster di failover](https://technet.microsoft.com/library/cc732035.aspx).  Il controllo può essere completato senza interruzione del servizio, poiché non ha effetto sulle risorse cluster in linea. La convalida può essere eseguita in qualsiasi momento dopo aver installato la funzionalità Clustering di failover, ovvero prima della distribuzione del cluster, durante la sua creazione e mentre il cluster è in esecuzione. In effetti mentre il cluster è in uso vengono eseguiti altri test, che verificano la corretta adozione delle procedure consigliate per i carichi di lavoro a disponibilità elevata. Delle decine di test eseguiti, solo alcuni hanno impatto sui carichi di lavoro del cluster in esecuzione. e rientrano tutti nella categoria di archiviazione, pertanto ignorare l'intera categoria è un modo pratico per evitare test che possono causare interruzioni.  
 Il clustering di failover prevede una misura di protezione integrata che evita tempi di inattività imprevisti quando si eseguono test di archiviazione durante la convalida. Se il cluster presenta gruppi online all'avvio della convalida e i test di archiviazione restano selezionati, all'utente verrà chiesto di confermare l'esecuzione di tutti i test o di ignorare il test dei dischi di tutti i gruppi in linea, per evitare tempi di inattività. Se l'intera categoria di archiviazione è stata esclusa dal test, il messaggio non viene visualizzato. In questo modo la convalida del cluster avviene senza tempi di inattività.  
   
 #### <a name="how-to-revalidate-your-cluster"></a>Procedura di riconvalida del cluster  
@@ -49,7 +48,7 @@ Il clustering di failover prevede una misura di protezione integrata che evita t
   
 4.  Per visualizzare gli argomenti della Guida che consentono di interpretare i risultati, fare clic su **Ulteriori informazioni sui test di convalida dei cluster**.  
   
- Per visualizzare gli argomenti della Guida relativi alla convalida dei cluster dopo aver chiuso la procedura guidata, nello snap-in Cluster di failover fare clic su **?**, **Guida**, selezionare la scheda **Contenuto** , espandere il contenuto della Guida per il cluster di failover e quindi fare clic su **Convalida della configurazione di un cluster di failover**.  Al termine della procedura guidata di convalida, i risultati verranno visualizzati nel **Report di riepilogo** . Tutti i test devono essere superati con un segno di spunta verde o, in alcuni casi, un triangolo giallo di avviso. Quando si esaminano aree relative a problemi (X rosse o punti interrogativi gialli) nella parte del report che riepiloga i risultati del test, fare clic su un singolo test per esaminare i dettagli. Tutti i problemi segnalati con una X rossa devono essere risolti prima di passare alla risoluzione dei problemi di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ Per visualizzare gli argomenti della Guida relativi alla convalida dei cluster dopo aver chiuso la procedura guidata, nello snap-in Cluster di failover fare clic su **?** , **Guida**, selezionare la scheda **Contenuto** , espandere il contenuto della Guida per il cluster di failover e quindi fare clic su **Convalida della configurazione di un cluster di failover**.  Al termine della procedura guidata di convalida, i risultati verranno visualizzati nel **Report di riepilogo** . Tutti i test devono essere superati con un segno di spunta verde o, in alcuni casi, un triangolo giallo di avviso. Quando si esaminano aree relative a problemi (X rosse o punti interrogativi gialli) nella parte del report che riepiloga i risultati del test, fare clic su un singolo test per esaminare i dettagli. Tutti i problemi segnalati con una X rossa devono essere risolti prima di passare alla risoluzione dei problemi di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  **Installare gli aggiornamenti**  
   
@@ -78,54 +77,54 @@ Il clustering di failover prevede una misura di protezione integrata che evita t
   
      L'utilizzo di questa procedura per eseguire il recupero in presenza di un errore del sistema operativo può richiedere tempo. Se è possibile eseguire il recupero in modo più agevole, evitare di utilizzare questa tecnica.  
   
-     Per altre informazioni, vedere [Creare un nuovo cluster di failover di SQL Server &#40;programma di installazione&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) e [Procedura: Recuperare da un errore dell'istanza del cluster di failover nello scenario 2](recover-from-failover-cluster-instance-failure.md).  
+     Per altre informazioni, vedere [Creare un nuovo cluster di failover di SQL Server &#40;programma di installazione&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) e [Procedura: Recupero da un errore del cluster di failover. Scenario 2](recover-from-failover-cluster-instance-failure.md).  
   
 ## <a name="resolving-common-problems"></a>Risoluzione di problemi comuni  
  Di seguito vengono elencati alcuni problemi comuni relativi all'utilizzo e le rispettive modalità di risoluzione.  
   
 ### <a name="problem-incorrect-use-of-command-prompt-syntax-to-install-sql-server"></a>Problema: uso non corretto della sintassi del prompt dei comandi per installare SQL Server  
- **Problema 1** : è difficile diagnosticare problemi di installazione quando si usa l'opzione **/qn** dal prompt dei comandi, perché **tale opzione** determina l'eliminazione di tutte le finestre di dialogo dell'interfaccia utente e dei messaggi di errore del programma di installazione. Se l'opzione **/qn** viene specificata, tutti i messaggi del programma di installazione, compresi i messaggi di errore, vengono inseriti nei file di log del programma. Per altre informazioni sui file di log, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
+ **Problema 1:** è difficile diagnosticare problemi di installazione quando si usa l'opzione **/qn** al prompt dei comandi, perché l'opzione **/qn** determina l'eliminazione di tutte le finestre di dialogo dell'interfaccia utente e dei messaggi di errore del programma di installazione. Se l'opzione **/qn** viene specificata, tutti i messaggi del programma di installazione, compresi i messaggi di errore, vengono inseriti nei file di log del programma. Per altre informazioni sui file di log, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
- **Risoluzione 1**: usare l'opzione **/qb** anziché l'opzione **/qn** . Se si usa l'opzione **/qb** , per ogni passaggio verrà visualizzata l'interfaccia utente di base, inclusi i messaggi di errore.  
+ **Soluzione 1**: usare l'opzione **/qb** anziché l'opzione **/qn**. Se si usa l'opzione **/qb** , per ogni passaggio verrà visualizzata l'interfaccia utente di base, inclusi i messaggi di errore.  
   
-### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>Problema: SQL Server non è in grado di accedere alla rete dopo la migrazione in un altro nodo  
+### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>Problema: SQL Server non riesce ad accedere alla rete dopo la migrazione in un altro nodo  
  **Problema 1** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non sono in grado di contattare un controller di dominio.  
   
- **Risoluzione 1**: controllare la presenza di problemi di rete, quali errori della scheda o problemi DNS, nei log eventi. Verificare che sia possibile effettuare il ping del controller di dominio.  
+ **Soluzione 1**: controllare la presenza di problemi di rete, ad esempio errori della scheda o problemi DNS, nei log eventi. Verificare che sia possibile effettuare il ping del controller di dominio.  
   
  **Problema 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non sono identiche in tutti i nodi del cluster oppure il nodo non è in grado di riavviare un servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] di cui è stata eseguita la migrazione da un nodo bloccato.  
   
- **Risoluzione 2:** modificare le password dell'account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . In caso contrario, se si modificano le password dell'account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un nodo, sarà necessario modificare le password anche in tutti gli altri nodi. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ **Soluzione 2:** cambiare le password dell'account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. In caso contrario, se si modificano le password dell'account del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un nodo, sarà necessario modificare le password anche in tutti gli altri nodi. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-### <a name="problem-sql-server-cannot-access-the-cluster-disks"></a>Problema: SQL Server non è in grado di accedere ai dischi del cluster  
+### <a name="problem-sql-server-cannot-access-the-cluster-disks"></a>Problema: SQL Server non riesce ad accedere ai dischi del cluster  
  **Problema 1:** il firmware o i driver non sono aggiornati in tutti i nodi.  
   
- **Risoluzione 1:** verificare che in tutti i nodi vengano utilizzate le versioni corrette del firmware e le stesse versioni del driver.  
+ **Soluzione 1:** verificare che tutti i nodi usino versioni corrette del firmware e le stesse versioni dei driver.  
   
- **Problema 2:** un nodo non è in grado di recuperare i dischi del cluster di cui è stata eseguita la migrazione da un nodo bloccato in un disco cluster condiviso che utilizza una diversa lettera di unità.  
+ **Problema 2:** un nodo non riesce a recuperare i dischi del cluster di cui è stata eseguita la migrazione da un nodo con errori a un disco cluster condiviso che usa una lettera di unità diversa.  
   
- **Risoluzione 2:** le lettere di unità disco dei dischi del cluster devono essere identiche su entrambi i server. In caso contrario, modificare l'installazione originale del sistema operativo e del servizio cluster (MSCS, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Cluster Service).  
+ **Soluzione 2:** le lettere di unità disco dei dischi del cluster devono essere identiche in entrambi i server. In caso contrario, modificare l'installazione originale del sistema operativo e del servizio cluster (MSCS, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Cluster Service).  
   
-### <a name="problem-failure-of-a-sql-server-service-causes-failover"></a>Problema: un servizio SQL Server in errore determina il failover  
- **Risoluzione:** per impedire che un errore in servizi specifici determini il failover del gruppo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , configurare i servizi tramite Amministrazione cluster in Windows, come descritto di seguito:  
+### <a name="problem-failure-of-a-sql-server-service-causes-failover"></a>Problema: failover causato da un errore di un servizio SQL Server  
+ **Soluzione:** per evitare che un errore di servizi specifici determini il failover del gruppo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], configurare tali servizi tramite Amministrazione cluster in Windows, come descritto di seguito:  
   
 -   Deselezionare la casella di controllo **Influisce sul gruppo** nella scheda **Avanzate** della finestra di dialogo **Proprietà full-text** . Se tuttavia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] causa un failover, il servizio Ricerca full-text verrà riavviato.  
   
-### <a name="problem-sql-server-does-not-start-automatically"></a>Problema: SQL Server non viene avviato automaticamente  
- **Risoluzione:** per avviare automaticamente un cluster di failover, utilizzare Amministrazione cluster in MSCS. Impostare il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per l'avvio manuale. Configurare inoltre Amministrazione cluster in MSCS per l'avvio del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Gestione dei servizi](https://msdn.microsoft.com/library/ms178096\(v=sql.105\).aspx).  
+### <a name="problem-sql-server-does-not-start-automatically"></a>Problema: SQL Server non si avvia automaticamente  
+ **Soluzione:** per avviare automaticamente un cluster di failover, usare Amministrazione cluster in MSCS. Impostare il servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per l'avvio manuale. Configurare inoltre Amministrazione cluster in MSCS per l'avvio del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per altre informazioni, vedere [Gestione dei servizi](https://msdn.microsoft.com/library/ms178096\(v=sql.105\).aspx).  
   
-### <a name="problem-the-network-name-is-offline-and-you-cannot-connect-to-sql-server-using-tcpip"></a>Problema: il nome di rete è offline e non è possibile connettersi a SQL Server tramite TCP/IP  
- **Problema 1:** DNS non è disponibile e la risorsa del cluster è impostata in modo da richiedere DNS.  
+### <a name="problem-the-network-name-is-offline-and-you-cannot-connect-to-sql-server-using-tcpip"></a>Problema: il nome rete è offline e non è possibile connettersi a SQL Server tramite TCP/IP  
+ **Problema 1:** DNS non è disponibile e la risorsa cluster è impostata in modo da richiedere DNS.  
   
- **Risoluzione 1:** Risolvere i problemi relativi a DNS.  
+ **Soluzione 1:** risolvere i problemi di DNS.  
   
  **Problema 2:** nella rete è presente un nome duplicato.  
   
- **Risoluzione 2:** utilizzare NBTSTAT per individuare il nome duplicato e risolvere il problema.  
+ **Soluzione 2:** usare NBTSTAT per individuare il nome duplicato e quindi risolvere il problema.  
   
  **Problema 3:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non esegue la connessione tramite named pipe.  
   
- **Risoluzione 3:** per la connessione tramite named pipe, creare un alias utilizzando Gestione configurazione SQL Server per connettersi al computer appropriato. Se, ad esempio, si usa un cluster con due nodi (**Nodo A** e **Nodo B**) e un'istanza del cluster di failover (**Virtsql**) con un'istanza predefinita, è possibile seguire la procedura seguente per connettersi al server la cui risorsa Nome di rete è offline:  
+ **Soluzione 3:** usando Gestione configurazione SQL Server, creare un alias per connettersi al computer appropriato tramite named pipe. Se, ad esempio, si usa un cluster con due nodi (**Nodo A** e **Nodo B**) e un'istanza del cluster di failover (**Virtsql**) con un'istanza predefinita, è possibile seguire la procedura seguente per connettersi al server la cui risorsa Nome di rete è offline:  
   
 1.  Utilizzare Amministrazione cluster per determinare il nodo in cui è esecuzione il gruppo che contiene l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . In questo esempio si tratta del nodo **Node A**.  
   
@@ -139,15 +138,15 @@ Il clustering di failover prevede una misura di protezione integrata che evita t
   
 6.  Connettersi all'istanza utilizzando l'alias SQLTEST1 come nome del server.  
   
-### <a name="problem-sql-server-setup-fails-on-a-cluster-with-error-11001"></a>Problema: impossibile installare SQL Server in un cluster con errore 11001  
- **Problema** : Chiave orfana del Registro di sistema in [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.X\Cluster]  
+### <a name="problem-sql-server-setup-fails-on-a-cluster-with-error-11001"></a>Problema: impossibile installare SQL Server in un cluster. Errore 11001  
+ **Problema:** chiave orfana del Registro di sistema in [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.X\Cluster]  
   
- **Risoluzione:** accertarsi che l'hive del Registro di sistema MSSQL.X non sia attualmente in uso, quindi eliminare la chiave relativa al cluster.  
+ **Soluzione:** assicurarsi che l'hive del Registro di sistema MSSQL.X non sia in uso e quindi eliminare la chiave relativa al cluster.  
   
 ### <a name="problem-cluster-setup-error-the-installer-has-insufficient-privileges-to-access-this-directory-drivemicrosoft-sql-server-the-installation-cannot-continue-log-on-as-an-administrator-or-contact-your-system-administrator"></a>Problema: errore di installazione del cluster: "Privilegi insufficienti per accedere alla directory: \<unità>\Microsoft SQL Server. Accedere come amministratore oppure contattare l'amministratore del sistema"  
  **Problema:** questo errore è causato da un'unità condivisa SCSI non partizionata correttamente.  
   
- **Risoluzione** : usare la procedura seguente per ricreare una singola partizione nel disco condiviso:  
+ **Soluzione:** usare la procedura seguente per ricreare un'unica partizione nel disco condiviso:  
   
 1.  Eliminare la risorsa disco dal cluster.  
   
@@ -161,10 +160,10 @@ Il clustering di failover prevede una misura di protezione integrata che evita t
   
 6.  Eseguire il programma di installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-### <a name="problem-applications-fail-to-enlist-sql-server-resources-in-a-distributed-transaction"></a>Problema: le applicazioni non sono in grado di integrare le risorse di SQL Server in una transazione distribuita  
- **Problema:** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) non è completamente configurato in Windows, quindi è possibile che le applicazioni non possano visualizzare l'elenco delle risorse [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in una transazione distribuita. Questo problema può interessare server collegati, query distribuite e stored procedure remote che utilizzano transazioni distribuite. Per ulteriori informazioni sulla configurazione di MS DTC, vedere [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md).  
+### <a name="problem-applications-fail-to-enlist-sql-server-resources-in-a-distributed-transaction"></a>Problema: le applicazioni non riescono a integrare le risorse di SQL Server in una transazione distribuita  
+ **Problema:** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) non è completamente configurato in Windows. È quindi possibile che le applicazioni non riescano a visualizzare l'elenco delle risorse [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in una transazione distribuita. Questo problema può interessare server collegati, query distribuite e stored procedure remote che utilizzano transazioni distribuite. Per ulteriori informazioni sulla configurazione di MS DTC, vedere [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md).  
   
- **Risoluzione:** per evitare tali problemi, è necessario abilitare completamente i servizi MS DTC nei server in cui è installato [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e MS DTC è configurato.  
+ **Soluzione:** per evitare problemi di questo tipo, è necessario abilitare completamente i servizi MS DTC nei server in cui è installato [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e MS DTC è configurato.  
   
  Per abilitare completamente MS DTC, effettuare le operazioni seguenti:  
   

@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0995346ac3c740efb6779f69e29003abf625a81e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100459"
 ---
 # <a name="move-system-databases"></a>Spostare i database di sistema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -149,7 +148,7 @@ ms.locfileid: "54136121"
   
 2.  Nel nodo **Servizi di SQL Server** fare clic con il pulsante destro del mouse sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ad esempio **SQL Server (MSSQLSERVER)** e scegliere **Proprietà**.  
   
-3.  Nella finestra di dialogo **Proprietà (**_nome_istanza_**) di SQL Server** fare clic sulla scheda **Parametri di avvio** .  
+3.  Nella finestra di dialogo **Proprietà (** _nome_istanza_ **) di SQL Server** fare clic sulla scheda **Parametri di avvio** .  
   
 4.  Nella casella **Parametri esistenti** selezionare il parametro -d per spostare il file di dati master. Per salvare le modifiche, fare clic su **Aggiorna** .  
   

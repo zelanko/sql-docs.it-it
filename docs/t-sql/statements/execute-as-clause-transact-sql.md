@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8b20360492be7a7667f8f43b686bc04c723bd5e9
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 7adffba6294d2639f94f8ebe753248bcb58f39dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084472"
 ---
 # <a name="execute-as-clause-transact-sql"></a>Clausola EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -111,7 +110,7 @@ DDL Triggers with Database Scope
   
  La concatenazione della proprietà presenta le limitazioni seguenti:  
   
--   Si applica solo a queste istruzioni DML: SELECT, INSERT, UPDATE e DELETE.  
+-   Si applica solo alle istruzioni DML: SELECT, INSERT, UPDATE e DELETE.  
   
 -   I proprietari degli oggetti chiamanti devono corrispondere a quelli degli oggetti chiamati.  
   
@@ -188,7 +187,7 @@ GO
 ## <a name="best-practice"></a>Procedura consigliata  
  Specificare un account di accesso o un utente che dispone delle autorizzazioni minime necessarie per eseguire le operazioni definite nel modulo. Ad esempio, non specificare un account di un proprietario di database a meno che non siano necessarie tali autorizzazioni.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire un modulo specificato con EXECUTE AS, il chiamante deve disporre delle autorizzazioni EXECUTE per il modulo.  
   
  Per eseguire un modulo CLR specificato con EXECUTE AS che ha accesso alle risorse in un altro database o server, il database o server di destinazione deve considerare attendibile l'autenticatore del database nel quale ha origine il modulo (il database di origine).  

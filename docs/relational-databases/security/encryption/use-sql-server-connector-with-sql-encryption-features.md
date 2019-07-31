@@ -1,7 +1,7 @@
 ---
 title: Usare Connettore SQL Server con le funzionalità di crittografia SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,17 +12,15 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: aliceku
 ms.author: aliceku
-manager: craigg
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b6f47c0b1139e78119a345cfbb7565500dc346a1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 965980bcfe765f291b232a48af946db5f8f4f230
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401084"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329260"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Usare Connettore SQL Server con le funzionalità di crittografia SQL
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Le attività di crittografia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comuni che usano una chiave asimmetrica protetta dall'insieme di credenziali delle chiavi di Azure includono le tre aree seguenti.  
   
 -   Transparent Data Encryption con una chiave asimmetrica dell'insieme di credenziali delle chiavi di Azure  
@@ -49,22 +47,22 @@ ms.locfileid: "52401084"
      Modificare lo script [!INCLUDE[tsql](../../../includes/tsql-md.md)] sottostante nei modi seguenti:  
   
     -   Modificare l'argomento `IDENTITY` (`ContosoDevKeyVault`) in modo che punti all'insieme di credenziali delle chiavi di Azure.
-        - Se si usa **Azure pubblico**, sostituire l'argomento `IDENTITY` con il nome dell'insieme di credenziali delle chiavi di Azure della parte II.
-        - Se si usa un **cloud privato di Azure** , ad esempio Azure per enti pubblici, Azure Cina o Azure Germania, sostituire l'argomento `IDENTITY` con l'URI dell'insieme di credenziali restituito nella parte II, passaggio 3. Non includere "https://" nell'URI dell'insieme di credenziali.   
+        - Se si usa **Azure globale**, sostituire l'argomento `IDENTITY` con il nome di Azure Key Vault dalla parte II.
+        - Se si usa un **cloud privato di Azure** , ad esempio Azure per enti pubblici, Azure Cina 21 Vianet o Azure Germania, sostituire l'argomento `IDENTITY` con l'URI dell'insieme di credenziali restituito nella parte II, passaggio 3. Non includere "https://" nell'URI dell'insieme di credenziali.   
   
-    -   Sostituire la prima parte dell'argomento `SECRET` con l'**ID client** di Azure Active Directory della parte 1. In questo esempio l'**ID client** è `EF5C8E094D2A4A769998D93440D8115D`.  
+    -   Sostituire la prima parte dell'argomento `SECRET` con l' **ID client** di Azure Active Directory della parte 1. In questo esempio l' **ID client** è `EF5C8E094D2A4A769998D93440D8115D`.  
   
         > [!IMPORTANT]  
-        >  È necessario rimuovere i trattini dall'**ID client**.  
+        >  È necessario rimuovere i trattini dall' **ID Client**.  
   
     -   Completare la seconda parte dell'argomento `SECRET` con il **segreto client** della parte I. In questo esempio il **segreto client** della parte I è `Replace-With-AAD-Client-Secret`. La stringa finale dell'argomento `SECRET` sarà una lunga sequenza di lettere e numeri *senza trattini*.  
   
     ```sql  
     USE master;  
     CREATE CREDENTIAL Azure_EKM_TDE_cred   
-        WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
+        WITH IDENTITY = 'ContosoDevKeyVault', -- for global Azure
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
-        -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China
+        -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
         SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;  
@@ -146,13 +144,13 @@ ms.locfileid: "52401084"
      Modificare lo script [!INCLUDE[tsql](../../../includes/tsql-md.md)] sottostante nei modi seguenti:  
   
     -   Modificare l'argomento `IDENTITY` (`ContosoDevKeyVault`) in modo che punti all'insieme di credenziali delle chiavi di Azure.
-        - Se si usa **Azure pubblico**, sostituire l'argomento `IDENTITY` con il nome dell'insieme di credenziali delle chiavi di Azure della parte II.
-        - Se si usa un **cloud privato di Azure** , ad esempio Azure per enti pubblici, Azure Cina o Azure Germania, sostituire l'argomento `IDENTITY` con l'URI dell'insieme di credenziali restituito nella parte II, passaggio 3. Non includere "https://" nell'URI dell'insieme di credenziali.    
+        - Se si usa **Azure globale**, sostituire l'argomento `IDENTITY` con il nome di Azure Key Vault dalla parte II.
+        - Se si usa un **cloud privato di Azure** , ad esempio Azure per enti pubblici, Azure Cina 21 Vianet o Azure Germania, sostituire l'argomento `IDENTITY` con l'URI dell'insieme di credenziali restituito nella parte II, passaggio 3. Non includere "https://" nell'URI dell'insieme di credenziali.    
   
-    -   Sostituire la prima parte dell'argomento `SECRET` con l'**ID client** di Azure Active Directory della parte 1. In questo esempio l'**ID client** è `EF5C8E094D2A4A769998D93440D8115D`.  
+    -   Sostituire la prima parte dell'argomento `SECRET` con l' **ID client** di Azure Active Directory della parte 1. In questo esempio l' **ID client** è `EF5C8E094D2A4A769998D93440D8115D`.  
   
         > [!IMPORTANT]  
-        >  È necessario rimuovere i trattini dall'**ID client**.  
+        >  È necessario rimuovere i trattini dall' **ID Client**.  
   
     -   Completare la seconda parte dell'argomento `SECRET` con il **segreto client** della parte I. In questo esempio il **segreto client** della parte I è `Replace-With-AAD-Client-Secret`. La stringa finale dell'argomento `SECRET` sarà una lunga sequenza di lettere e numeri *senza trattini*.   
   
@@ -160,9 +158,9 @@ ms.locfileid: "52401084"
         USE master;  
   
         CREATE CREDENTIAL Azure_EKM_Backup_cred   
-            WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
+            WITH IDENTITY = 'ContosoDevKeyVault', -- for global Azure
             -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
-            -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China
+            -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
             -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
             SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
         FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;    

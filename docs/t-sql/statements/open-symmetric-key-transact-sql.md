@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: cf608c46a176e53c76a3ca67c8707beea76a2205
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 026f801a055bf801b6b1afd2a07a5b4499f9b3da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327592"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129390"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
   
  Non è possibile aprire chiavi simmetriche create da provider di crittografia. Le operazioni di crittografia e decrittografia che usano questo tipo di chiave simmetrica vengono eseguite correttamente senza l'istruzione **OPEN** dato che è il provider di crittografia ad aprire e chiudere la chiave.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È necessario che il chiamante disponga di un'autorizzazione per la chiave e che non gli sia stata negata l'autorizzazione VIEW DEFINITION per la chiave. I requisisti aggiuntivi possono variare, in base al meccanismo di decrittografia.  
   
 -   DECRYPTION BY CERTIFICATE: autorizzazione CONTROL per il certificato e password che crittografa la relativa chiave privata.  
@@ -100,7 +99,7 @@ OPEN SYMMETRIC KEY SymKeyMarketing3
 GO  
 ```  
   
-### <a name="b-opening-a-symmetric-key-by-using-another-symmetric-key"></a>b. Apertura di una chiave simmetrica tramite un'altra chiave simmetrica  
+### <a name="b-opening-a-symmetric-key-by-using-another-symmetric-key"></a>B. Apertura di una chiave simmetrica tramite un'altra chiave simmetrica  
  Nell'esempio seguente la chiave simmetrica `MarketingKey11` viene aperta e quindi decrittografata tramite la chiave simmetrica `HarnpadoungsatayaSE3`.  
   
 ```  

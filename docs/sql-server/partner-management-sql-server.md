@@ -8,13 +8,12 @@ ms.prod: sql
 ms.technology: ''
 ms.author: mikeray
 author: MikeRayMSFT
-manager: craigg
-ms.openlocfilehash: 35243a3f983f711968f8012eaa23eefdacb11a31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e4d29fb73c11b727c21730a71eb8d97331296f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63003400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049786"
 ---
 # <a name="sql-server-managing-partners"></a>Partner di gestione per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,10 +23,10 @@ Per gestire i servizi di SQL Server, è possibile scegliere tra una vasta gamma 
 
 | Partner | Descrizione | Collegamenti |
 | --- | --- | --- | --- |
-|![idera][1] |**IDERA**<br>SQL Compliance Manager è una soluzione di controllo completa che consente di vedere chi ha fatto cosa, come e quando nelle istanze SQL Server per garantire la conformità alle normative e ai requisiti di protezione dei dati.<br><br>[Requisiti di sistema][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Sito Web][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] | |
+|![idera][1] |**IDERA**<br>SQL Compliance Manager è una soluzione di controllo completa che consente di vedere chi ha fatto cosa, come e quando nelle istanze SQL Server per garantire la conformità alle normative e ai requisiti di protezione dei dati.<br><br>[Requisiti di sistema][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Sito Web][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube]<br>Passaggi successivi | |
 
-## <a name="next-steps"></a>Passaggi successivi
-Per saperne di più su alcuni altri partner Microsoft, vedere i [partner di disponibilità elevata e ripristino di emergenza][hadr_partners], i [partner di gestione][monitor_partners] e i [partner di sviluppo][dev_partners].
+## <a name="next-steps"></a>Per informazioni su altri partner Microsoft, vedere i [partner di disponibilità elevata e ripristino di emergenza][hadr_partners], [management partners][monitor_partners] e i [partner di sviluppo][dev_partners].
+To learn more about some of our other partners, see <bpt id="p1">[</bpt>High availability, and disaster recovery partners<ept id="p1">][hadr_partners]</ept>, <bpt id="p2">[</bpt>management partners<ept id="p2">][monitor_partners]</ept>, and <bpt id="p3">[</bpt>development partners<ept id="p3">][dev_partners]</ept>.
 
 <!--Image references-->
 [1]: ./media/partner-hadr-sql-server/idera_logo.png

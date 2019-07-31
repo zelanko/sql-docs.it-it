@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 979866917514cb10689f60bf5114d02dbe889fd9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 543b28f5980c8126a9475a54557a05964718c707
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826709"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056131"
 ---
 # <a name="dml-triggers"></a>Trigger DML
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,10 +60,10 @@ ms.locfileid: "47826709"
 |Applicabilità|Tabelle|Tabelle e viste|  
 |Quantità per tabella o vista|Multiplo per azione di trigger (UPDATE, DELETE e INSERT)|Singolo per azione di trigger (UPDATE, DELETE e INSERT)|  
 |Riferimenti di propagazione|Nessuna restrizione|I trigger INSTEAD OF UPDATE e DELETE non sono consentiti in tabelle che rappresentano le destinazioni di vincoli di integrità per operazioni referenziali di propagazione|  
-|Esecuzione|Dopo:<br /><br /> Elaborazione dei vincoli<br /><br /> Operazioni referenziali dichiarative<br /><br /> Creazione di tabelle**inserted** e **deleted** <br /><br /> Operazione di trigger|Prima: elaborazione dei vincoli<br /><br /> Invece di: operazione di trigger<br /><br /> Dopo: creazione di tabelle  **inserted** e **deleted**|  
+|Esecuzione|Dopo:<br /><br /> Elaborazione dei vincoli<br /><br /> Operazioni referenziali dichiarative<br /><br /> Creazione di tabelle**inserted** e **deleted**<br /><br /> Operazione di trigger|Prima di: Elaborazione dei vincoli<br /><br /> In sostituzione di:  Operazione di trigger<br /><br /> Dopo: creazione di tabelle  **inserted** e **deleted**|  
 |Ordine di esecuzione|È possibile specificare la prima e l'ultima esecuzione|Non applicabile|  
-|Riferimenti a colonne**varchar (max)**, **nvarchar (max)** e **varbinary (max)** in tabelle **inserted** e **deleted** |Allowed|Allowed|  
-|Riferimenti a colonne**text**, **ntext**e **image** in tabelle **inserted** e **deleted** |Non consentiti|Allowed|  
+|Riferimenti a colonne**varchar (max)** , **nvarchar (max)** e **varbinary (max)** in tabelle **inserted** e **deleted**|Allowed|Allowed|  
+|Riferimenti a colonne**text**, **ntext**e **image** in tabelle **inserted** e **deleted**|Non consentiti|Allowed|  
   
  Trigger CLR  
  I trigger CLR includono i trigger AFTER e INSTEAD OF. Un trigger CLR può essere anche un trigger DDL. Anziché eseguire una stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] , un trigger CLR consente di eseguire uno o più metodi scritti in codice gestito che sono membri di un assembly creato in .NET Framework e caricato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

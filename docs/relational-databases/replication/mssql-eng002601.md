@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fd3e274f1a8616c0d0aa9d54bcdd84a35d6936ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d24cc29fd35694ab69ad006498d3456d3ade68e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111013"
 ---
 # <a name="mssqleng002601"></a>MSSQL_ENG002601
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47777870"
   
 -   Viene utilizzata una tabella con una colonna Identity, ma la colonna non è gestita in modo appropriato.  
   
--   Nella replica di tipo merge questo errore può verificarsi anche durante un inserimento nella tabella di sistema **MSmerge_contents**. L'errore generato è simile all'errore "Impossibile inserire la riga di chiave duplicata nell'oggetto 'MSmerge_contents' con indice univoco 'ucl1SycContents'".  
+-   Nella replica di tipo merge questo errore può verificarsi anche durante un inserimento nella tabella di sistema **MSmerge_contents**. L'errore generato è simile al seguente: Non è possibile inserire la riga di chiave duplicata nell'oggetto 'MSmerge_contents' con indice univoco 'ucl1SycContents.'  
   
 ## <a name="user-action"></a>Azione dell'utente  
  L'azione richiesta dipende dal motivo per il quale è stato generato l'errore:  

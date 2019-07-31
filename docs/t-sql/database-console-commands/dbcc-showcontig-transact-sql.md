@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 0cc3055f6d6d6f293500cdd6aabca5c0e51df11a
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 0e1fff3c60dab7e8fe055753c125fddf70abb1df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039058"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +97,7 @@ Nella tabella seguente vengono descritte le informazioni del set di risultati.
 |**Byte Pagine per extent**|Numero di pagine per extent nella catena di pagine.|  
 |**Densità di analisi [conteggio ottimale: conteggio effettivo]**|Valore percentuale. Rapporto tra **Conteggio ottimale** e **Conteggio effettivo**. Questo valore è 100 se tutti gli elementi sono contigui, è minore di 100 in presenza di frammentazioni.<br /><br /> **Conteggio ottimale** rappresenta il numero ideale di cambi di extent se tutti gli elementi fossero contigui. **Conteggio effettivo** rappresenta il numero effettivo di cambi di extent.|  
 |**Frammentazione analisi logica**|Percentuale di pagine non ordinate restituite dall'analisi delle pagine foglia di un indice. Questo valore non è rilevante per gli heap. Una pagina risulta non ordinata quando la pagina fisica successiva allocata all'indice è diversa da quella a cui fa riferimento il *puntatore di pagina successiva* nella pagina foglia corrente.|  
-|**Frammentazione analisi extent**|Percentuale di extent non ordinati rilevati durante l'analisi delle pagine foglia di un indice. Questo valore non è rilevante per gli heap. Un extent risulta non ordinato quando l'extent contenente la pagina corrente di un indice non corrisponde fisicamente all'extent successivo a quello che contiene la pagina precedente di un indice.<br /><br /> Nota: Questo numero non è significativo se l'indice è esteso a più file.|  
+|**Frammentazione analisi extent**|Percentuale di extent non ordinati rilevati durante l'analisi delle pagine foglia di un indice. Questo valore non è rilevante per gli heap. Un extent risulta non ordinato quando l'extent contenente la pagina corrente di un indice non corrisponde fisicamente all'extent successivo a quello che contiene la pagina precedente di un indice.<br /><br /> Nota: questo numero non è significativo se l'indice si estende su più file.|  
 |**Byte disponibili per pagina**|Numero medio di byte disponibili nelle pagine sottoposte ad analisi. Maggiore è il numero, minore sarà il livello di riempimento delle pagine. I numeri minori indicano una situazione migliore se nell'indice non verranno eseguiti numerosi inserimenti casuali. Anche le dimensioni delle righe influiscono su questo valore, che risulta maggiore per righe di grandi dimensioni.|  
 |**Byte densità pagina (completa)**|Densità media della pagina, in percentuale. Questo valore tiene conto delle dimensioni delle righe e pertanto rappresenta un'indicazione più precisa dell'effettivo livello di riempimento delle pagine. Sono preferibili valori elevati.|  
   
@@ -132,7 +131,7 @@ Se si specifica TABLERESULTS, DBCC SHOWCONTIG restituisce le colonne seguenti ol
 |**BestCount**|Rappresenta il numero ideale di cambi di extent se tutti gli elementi fossero contigui.|  
 |**ActualCount**|Rappresenta il numero effettivo di cambi di extent.|  
 |**LogicalFragmentation**|Percentuale di pagine non ordinate restituite dall'analisi delle pagine foglia di un indice. Questo valore non è rilevante per gli heap. Una pagina risulta non ordinata quando la pagina fisica successiva allocata all'indice è diversa da quella a cui fa riferimento il *puntatore di pagina successiva* nella pagina foglia corrente.|  
-|**ExtentFragmentation**|Percentuale di extent non ordinati rilevati durante l'analisi delle pagine foglia di un indice. Questo valore non è rilevante per gli heap. Un extent risulta non ordinato quando l'extent contenente la pagina corrente di un indice non corrisponde fisicamente all'extent successivo a quello che contiene la pagina precedente di un indice.<br /><br /> Nota: Questo numero non è significativo se l'indice è esteso a più file.|  
+|**ExtentFragmentation**|Percentuale di extent non ordinati rilevati durante l'analisi delle pagine foglia di un indice. Questo valore non è rilevante per gli heap. Un extent risulta non ordinato quando l'extent contenente la pagina corrente di un indice non corrisponde fisicamente all'extent successivo a quello che contiene la pagina precedente di un indice.<br /><br /> Nota: questo numero non è significativo se l'indice si estende su più file.|  
   
 Se si specificano le opzioni WITH TABLERESULTS e FAST, il set di risultati è uguale a quello restituito specificando WITH TABLERESULTS, con l'eccezione delle colonne seguenti che avranno valori Null:
 
@@ -149,9 +148,9 @@ Quando si specifica *index_id*, l'istruzione DBCC SHOWCONTIG attraversa la caten
 ## <a name="restrictions"></a>Restrictions  
 DBCC SHOWCONTIG non visualizza dati di tipo **ntext**, **text** e **image**. La mancata visualizzazione è dovuta al fatto gli indici di testo che archiviano dati di tipo text e image non esistono più.
   
-Inoltre, DBCC SHOWCONTIG non supporta alcune nuove caratteristiche. Ad esempio
+Inoltre, DBCC SHOWCONTIG non supporta alcune nuove caratteristiche. Esempio:
 -   Se la tabella o l'indice specificato è partizionato, DBCC SHOWCONTIG visualizza solo la prima partizione della tabella o dell'indice specificato.  
--   DBCC SHOWCONTIG non supporta la visualizzazione di informazioni di archiviazione per i dati di overflow della riga e di altri tipi nuovi per dati all'esterno di righe, come **nvarchar(max)**, **varchar(max)**, **varbinary(max)** e **xml**.  
+-   DBCC SHOWCONTIG non supporta la visualizzazione di informazioni di archiviazione per i dati di overflow della riga e di altri tipi nuovi per dati all'esterno di righe, come **nvarchar(max)** , **varchar(max)** , **varbinary(max)** e **xml**.  
 -   Gli indici spaziali non sono supportati da DBCC SHOWCONTIG.  
   
 Tutte le nuove funzionalità sono completamente supportate dalla vista a gestione dinamica [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).
@@ -185,7 +184,7 @@ Il numero **Media byte disponibili per pagina** e **Media densità pagina (compl
     > [!NOTE]  
     >  Il valore **Frammentazione analisi extent** sarà elevato se l'indice è esteso a più file. Per ridurre questo valore, è necessario ridurre la frammentazione dell'indice.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 L'utente deve essere il proprietario della tabella oppure un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_owner** o **db_ddladmin**.
   
 ## <a name="examples"></a>Esempi  
@@ -199,7 +198,7 @@ DBCC SHOWCONTIG ('HumanResources.Employee');
 GO  
 ```  
   
-### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>b. Utilizzo di OBJECT_ID per ottenere l'ID della tabella e di sys.indexes per ottenere l'ID dell'indice  
+### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>B. Utilizzo di OBJECT_ID per ottenere l'ID della tabella e di sys.indexes per ottenere l'ID dell'indice  
 Nell'esempio seguente vengono usate la funzione `OBJECT_ID` e la vista del catalogo `sys.indexes` per ottenere l'ID di tabella e l'ID di indice per l'indice `AK_Product_Name` della tabella `Production.Product` nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
   
 ```sql  

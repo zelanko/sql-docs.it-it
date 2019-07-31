@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 68ffba6177eb86944ad62cc4876effdd7a63af8c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3112a23426054740a0c716648c94d83d4c39925a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391245"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073676"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Creazione di server collegati (Motore di database di SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "52391245"
   
 ##  <a name="Security"></a> Sicurezza  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  Quando si utilizzano istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] è richiesta l'autorizzazione **ALTER ANY LINKED SERVER** per il server o l'appartenenza nel ruolo predefinito del server **setupadmin** . Quando si utilizza [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] è richiesta l'autorizzazione **CONTROL SERVER** o l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ##  <a name="Procedures"></a> Come creare un server collegato  
@@ -223,7 +222,7 @@ ms.locfileid: "52391245"
   
     ```  
   
-##  <a name="FollowUp"></a> Completamento: passaggi da effettuare dopo aver creato un server collegato  
+##  <a name="FollowUp"></a> Completamento: Passaggi da effettuare dopo aver creato un server collegato  
   
 #### <a name="to-test-the-linked-server"></a>Per testare il server collegato  
   

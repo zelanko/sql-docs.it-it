@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f3d5bea06c12da29eb38c3190682d2fcfe344fe4
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 05f0d6d99ca4e5274882ec5d4e751ba658b62a1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326772"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114795"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY - autorizzazioni per oggetti (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ PRIVILEGES
 >  Un'istruzione DENY a livello di tabella non ha la precedenza rispetto a un'istruzione GRANT a livello di colonna. Questa incoerenza nella gerarchia delle autorizzazioni è stata mantenuta per compatibilità con le versioni precedenti.  
   
  ON [ OBJECT **::** ] [ *schema_name* ] **.** *object_name*  
- Specifica l'oggetto per cui viene negata l'autorizzazione. L'utilizzo di OBJECT è facoltativo se si specifica *schema_name*. Se si usa OBJECT, il qualificatore di ambito (**::**) è obbligatorio. Se si omette *schema_name*, viene usato lo schema predefinito. Se si specifica *schema_name*, il qualificatore di ambito dello schema (**.**) è obbligatorio.  
+ Specifica l'oggetto per cui viene negata l'autorizzazione. L'utilizzo di OBJECT è facoltativo se si specifica *schema_name*. Se si usa OBJECT, il qualificatore di ambito ( **::** ) è obbligatorio. Se si omette *schema_name*, viene usato lo schema predefinito. Se si specifica *schema_name*, il qualificatore di ambito dello schema ( **.** ) è obbligatorio.  
   
  TO \<database_principal>  
  Specifica l'entità a cui viene negata l'autorizzazione.  
@@ -132,7 +131,7 @@ PRIVILEGES
 |VIEW CHANGE TRACKING|CONTROL|VIEW CHANGE TRACKING|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per l'oggetto.  
   
  Se si utilizza la clausola AS, l'entità specificata deve essere proprietaria dell'oggetto per cui vengono negate le autorizzazioni.  
@@ -148,7 +147,7 @@ DENY SELECT ON OBJECT::Person.Address TO RosaQdM;
 GO  
 ```  
   
-### <a name="b-denying-execute-permission-on-a-stored-procedure"></a>b. Negazione dell'autorizzazione EXECUTE per una stored procedure  
+### <a name="b-denying-execute-permission-on-a-stored-procedure"></a>B. Negazione dell'autorizzazione EXECUTE per una stored procedure  
  Nell'esempio seguente viene negata l'autorizzazione `EXECUTE` per la stored procedure `HumanResources.uspUpdateEmployeeHireInfo` a un ruolo applicazione denominato `Recruiting11`.  
   
 ```  
