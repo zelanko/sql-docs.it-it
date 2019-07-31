@@ -6672,8 +6672,6 @@
                   href: relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md
         - name: Utilità SQL Server
           href: relational-databases/manage/sql-server-utility-features-and-tasks.md
-        - name: API Valutazione SQL
-          href: sql-assessment-api/sql-assessment-api-overview.md
           items:
             - name: Considerazioni per l'esecuzione di set di raccolta dell'utilità e non appartenenti all'utilità nella stessa istanza di SQL Server
               href: relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md
@@ -6709,6 +6707,8 @@
               href: relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md
             - name: Guida sensibile al contesto di Gestione Utilità
               href: relational-databases/manage/utility-explorer-f1-help.md
+        - name: API Valutazione SQL
+          href: sql-assessment-api/sql-assessment-api-overview.md
     - name: Monitoraggio
       href: relational-databases/performance/monitor-and-tune-for-performance.md
       items:
@@ -7532,6 +7532,8 @@
               href: master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md
             - name: Guida per gli sviluppatori
               href: master-data-services/develop/master-data-services-developer-documentation.md
+            - name: Ospitare un database in un'istanza gestita
+              href: ./master-data-services/master-data-services-host-database-on-managed-instance.md
         - name: componente aggiuntivo per Excel
           href: master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md
           items:
@@ -7972,8 +7974,6 @@
               href: relational-databases/security/sql-vulnerability-assessment.md
             - name: Individuazione dati e classificazione
               href: relational-databases/security/sql-data-discovery-and-classification.md
-            - name: Risoluzione dei problemi di Connettore SQL Server
-              href: relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md
         - name: Accesso per l'autenticazione
           items:
             - name: Determinare le autorizzazioni valide
@@ -8021,8 +8021,16 @@
                   href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
             - name: Spostare un database protetto con TDE
               href: relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md
-            - name: Abilitare TDE con EKM
-              href: relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md
+            - name: Extensible Key Management
+              items:
+                - name: Abilitare TDE con EKM
+                  href: relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md
+                - name: Connettore SQL Server con crittografia
+                  href: relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
+                - name: Uso di EKM con Azure Key Vault
+                  href: relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
+                - name: Risoluzione dei problemi di Connettore SQL Server
+                  href: relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md
             - name: Eseguire il backup della chiave master del servizio
               href: relational-databases/security/encryption/back-up-the-service-master-key.md
             - name: Ripristinare la chiave master del servizio
@@ -8039,16 +8047,12 @@
               href: relational-databases/security/encryption/encrypt-a-column-of-data.md
         - name: Proteggere il database SQL di Azure
           items:
-            - name: Connettore SQL Server con crittografia
-              href: relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
             - name: Bring your own key >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
             - name: Eseguire la rotazione delle chiavi BYOK per TDE >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
             - name: Rimuovere la protezione TDE >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
-            - name: Uso di EKM con Azure Key Vault
-              href: relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
         - name: Controllo
           items:
             - name: Creare una specifica di controllo server
