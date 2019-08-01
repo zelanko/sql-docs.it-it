@@ -17,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9d670c1dbfc94e80394cf34733b8a91aeb6cb056
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68032700"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702778"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce un elenco delle stored procedure dell'ambiente corrente.  
   
@@ -42,9 +43,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @sp_name = ] 'name'` È il nome della procedura utilizzata per restituire informazioni del catalogo. *nome* viene **nvarchar(390)** , con un valore predefinito è NULL. La ricerca con caratteri jolly è supportata.  
+`[ @sp_name = ] 'name'`Nome della procedura utilizzata per restituire le informazioni del catalogo. *Name* è di **tipo nvarchar (390)** e il valore predefinito è null. La ricerca con caratteri jolly è supportata.  
   
-`[ @sp_owner = ] 'schema'` È il nome dello schema a cui appartiene la stored procedure. *lo schema* viene **nvarchar (384)** , con un valore predefinito è NULL. La ricerca con caratteri jolly è supportata. Se *proprietario* non viene specificato, si applicano le regole di visibilità predefinite procedure del sistema DBMS sottostante.  
+`[ @sp_owner = ] 'schema'`Nome dello schema a cui appartiene la stored procedure. *schema* è di **tipo nvarchar (384)** e il valore predefinito è null. La ricerca con caratteri jolly è supportata. Se il *proprietario* non è specificato, vengono applicate le regole di visibilità predefinite della procedura del sistema DBMS sottostante.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se lo schema corrente contiene una procedura con il nome specificato, viene restituita tale procedura. Se è specificata una stored procedure non qualificata, [!INCLUDE[ssDE](../../includes/ssde-md.md)] cerca la procedura nell'ordine seguente:  
   
@@ -54,13 +55,13 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   Schema **dbo** nel database corrente.  
   
-`[ @qualifier = ] 'qualifier'` È il nome del qualificatore della procedura. *qualificatore* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano i nomi di tre parti per le tabelle nel formato (_qualificatore_ **.** _schema_ **.** _nome_. Nelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualificatore* rappresenta il nome del database. In alcuni prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
+`[ @qualifier = ] 'qualifier'`Nome del qualificatore della procedura. *Qualifier* è di **tipo sysname**e il valore predefinito è null. Vari prodotti DBMS supportano la denominazione in tre parti per le tabelle nel formato (_qualificatore_ **.** _schema_ di **.** _nome_. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *Qualifier* rappresenta il nome del database. In alcuni prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
-`[ @fUsePattern = ] 'fUsePattern'` Determina se il carattere di sottolineatura (_), simbolo di percentuale (%) o parentesi quadre []) vengono interpretati come caratteri jolly. *fUsePattern* viene **bit**, con un valore predefinito è 1.  
+`[ @fUsePattern = ] 'fUsePattern'`Determina se il carattere di sottolineatura (_), la percentuale (%) o le parentesi quadre []) vengono interpretati come caratteri jolly. *fUsePattern* è di **bit**e il valore predefinito è 1.  
   
- **0** = criteri di corrispondenza è disattivata.  
+ **0** = la corrispondenza di criteri è disattivata.  
   
- **1** = criteri di corrispondenza si trova in.  
+ **1** = i criteri di ricerca sono on.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  Nessuna  
@@ -75,15 +76,15 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |**NUM_INPUT_PARAMS**|**int**|Riservato per utilizzi futuri.|  
 |**NUM_OUTPUT_PARAMS**|**int**|Riservato per utilizzi futuri.|  
 |**NUM_RESULT_SETS**|**int**|Riservato per utilizzi futuri.|  
-|**SEZIONE OSSERVAZIONI**|**varchar(254)**|Descrizione della procedura. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene restituito alcun valore per questa colonna.|  
+|**OSSERVAZIONI**|**varchar(254)**|Descrizione della procedura. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene restituito alcun valore per questa colonna.|  
 |**PROCEDURE_TYPE**|**smallint**|Tipo di procedura. Tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene restituito sempre 2.0. I valori validi sono i seguenti:<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
 ## <a name="remarks"></a>Note  
  Per garantire la massima interoperabilità, con il client del gateway è consigliabile utilizzare solo i caratteri jolly standard SQL, ovvero il segno di percentuale (%) e il carattere di sottolineatura (_).  
   
- Le informazioni sulle autorizzazioni per l'accesso in esecuzione a una stored procedure specifica non vengono necessariamente verificate. Pertanto, l'accesso non è garantito. Si noti che viene utilizzata solo la denominazione in tre parti. Pertanto, con l'esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono restituite solo le stored procedure locali e non quelle remote, che richiedono una denominazione in quattro parti. Se l'attributo del server ACCESSIBLE_SPROC è Y nel set di risultati **sp_server_info**, vengono restituite solo le stored procedure che possono essere eseguite dall'utente corrente.  
+ Le informazioni sulle autorizzazioni per l'accesso in esecuzione a una stored procedure specifica non vengono necessariamente verificate. Pertanto, l'accesso non è garantito. Si noti che viene utilizzata solo la denominazione in tre parti. Pertanto, con l'esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono restituite solo le stored procedure locali e non quelle remote, che richiedono una denominazione in quattro parti. Se l'attributo server ACCESSIBLE_SPROC è Y nel set di risultati per **sp_server_info**, vengono restituite solo le stored procedure che possono essere eseguite dall'utente corrente.  
   
- **sp_stored_procedures** equivale a **SQLProcedures** in ODBC. I risultati restituiti vengono ordinati **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**, e **PROCEDURE_NAME**.  
+ **sp_stored_procedures** equivale a SQLProcedures in ODBC. I risultati restituiti vengono ordinati in base a **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**e **procedure_name**.  
   
 ## <a name="permissions"></a>Permissions  
  È richiesta l'autorizzazione SELECT per lo schema.  
@@ -109,7 +110,7 @@ sp_stored_procedures N'uspLogError', N'dbo', N'AdventureWorks2012', 1;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le Stored procedure del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Stored procedure &#40;del catalogo Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
