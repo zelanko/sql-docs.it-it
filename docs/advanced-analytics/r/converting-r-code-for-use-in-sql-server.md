@@ -7,12 +7,13 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a2bd6db3aaae2c07f6f46aecce3e7df913fc2a9e
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 536be600d319335173dbf112ec2d8f67cc7bf14b
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470243"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715743"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>Conversione del codice R per l'esecuzione in istanze di SQL Server (in-database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +70,7 @@ La modifica del codice varia a seconda che si intenda inviare il codice R da un 
 
 + Definire i dati di input primari come query SQL, laddove possibile, per evitare lo spostamento dei dati.
 
-+ Quando si esegue R in una stored procedure, è possibile passare attraverso  più input scalari. Per tutti i parametri che si desidera utilizzare nell'output, aggiungere la parola chiave **output** . 
++ Quando si esegue R in una stored procedure, è possibile passare attraverso più input scalari. Per tutti i parametri che si desidera utilizzare nell'output, aggiungere la parola chiave **output** . 
 
     Il seguente input `@model_name` scalare, ad esempio, contiene il nome del modello, che viene anche restituito nella relativa colonna nei risultati:
 
@@ -115,7 +116,7 @@ La modifica del codice varia a seconda che si intenda inviare il codice R da un 
 
     Ad esempio, questa soluzione R Mostra come funzioni T-SQL definite dall'utente e R possono eseguire la stessa attività di progettazione delle funzionalità: [Procedura dettagliata end-to-end di Data Science](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md).
 
-+ Se possibile, sostituire le funzioni R convenzionali  con funzioni scaler che supportano l'esecuzione distribuita. Per altre informazioni, vedere [confronto tra le funzioni r di base e scale r](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler-compared-to-base-r).
++ Se possibile, sostituire le funzioni R convenzionali con funzioni scaler che supportano l'esecuzione distribuita. Per altre informazioni, vedere [confronto tra le funzioni r di base e scale r](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler-compared-to-base-r).
 
 + Consultare uno sviluppatore di database per determinare i modi per migliorare le prestazioni usando SQL Server funzionalità come le [tabelle ottimizzate](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)per la memoria o, se si dispone di Enterprise Edition, [Resource Governor](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)).
 

@@ -1,39 +1,40 @@
 ---
-title: Guida introduttiva per l'utilizzo di strutture dei dati in Python - SQL Server Machine Learning
-description: In questa Guida introduttiva per lo script di Python in SQL Server, informazioni su come usare le strutture di dati con le procedure di sistema archiviata sp_execute_external_script.
+title: Guida introduttiva per l'uso di strutture di dati in Python
+description: In questa Guida introduttiva per script Python in SQL Server, informazioni su come usare le strutture di dati con il sistema sp_execute_external_script stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ffbbd39c08221db4afa6427626ca618e04617166
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 13fb37bee355ce1d379d8348734293baaeb481d8
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962086"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714804"
 ---
-# <a name="quickstart-python-data-structures-in-sql-server"></a>Avvio rapido: Strutture di dati di Python in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="quickstart-python-data-structures-in-sql-server"></a>Avvio rapido: Strutture di dati Python in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Questa Guida introduttiva illustra come usare le strutture di dati quando si usano Python in SQL Server Machine Learning Services.
+Questa Guida introduttiva illustra come usare le strutture di dati quando si usa Python in SQL Server Machine Learning Services.
 
-SQL Server si basa su Python **pandas** pacchetto, che è ideale per l'utilizzo di dati tabulari. Tuttavia, è possibile passare un valore scalare da Python a SQL Server e aspettarsi che "funzionano". In questa Guida introduttiva, verranno esaminate alcune definizioni dei tipi di dati di base, per prepararti per altri problemi che possono verificarsi quando si passano dati tabulari tra codice Python e SQL Server.
+SQL Server si basa sul pacchetto **Pandas** di Python, ideale per l'utilizzo di dati tabulari. Tuttavia, non è possibile passare un valore scalare da Python a SQL Server e aspettarsi che sia "semplicemente funzionante". In questa Guida introduttiva verranno esaminate alcune definizioni dei tipi di dati di base per preparare l'utente in caso di problemi aggiuntivi che potrebbero verificarsi durante il passaggio di dati tabulari tra Python e SQL Server.
 
 + Un frame di dati è una tabella con _più_ colonne.
-+ Una singola colonna di un frame di dati, è un oggetto di tipo elenco denominato una serie.
-+ Un singolo valore è una cella di un frame di dati e deve essere chiamata in base all'indice.
++ Una singola colonna di un dataframe è un oggetto simile a un elenco denominato serie.
++ Un singolo valore è una cella di un frame di dati e deve essere chiamato da index.
 
-Come si esporrà il singolo risultato di un calcolo come frame di dati, se un frame di dati richiede una struttura tabulare? Una risposta è per rappresentare il valore scalare singolo come una serie, che viene facilmente convertita in un frame di dati. 
+Come è possibile esporre il singolo risultato di un calcolo come frame di dati, se un frame di dati richiede una struttura tabulare? Una risposta consiste nel rappresentare il singolo valore scalare come una serie, che è facilmente convertibile in un frame di dati. 
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Una Guida introduttiva precedente [Python verificare esiste nel Server SQL](quickstart-python-verify.md), vengono fornite informazioni e collegamenti per la configurazione dell'ambiente di Python necessario per questa Guida introduttiva.
+Una guida introduttiva precedente, [Verify Python exists in SQL Server](quickstart-python-verify.md), fornisce informazioni e collegamenti per la configurazione dell'ambiente Python necessario per questa Guida introduttiva.
 
-## <a name="scalar-value-as-a-series"></a>Valore scalare come una serie
+## <a name="scalar-value-as-a-series"></a>Valore scalare sotto forma di serie
 
-In questo esempio esegue alcuni calcoli matematici semplici e converte un valore scalare in una serie.
+Questo esempio esegue alcune operazioni matematiche semplici e converte un valore scalare in una serie.
 
 1. Una serie richiede un indice, che è possibile assegnare manualmente, come illustrato di seguito, o a livello di codice.
 
@@ -50,7 +51,7 @@ In questo esempio esegue alcuni calcoli matematici semplici e converte un valore
     '
     ```
 
-2. Poiché la serie non è stata convertita in un frame di dati, vengono restituiti i valori nella finestra dei messaggi, ma è possibile notare che i risultati sono in formato tabulare più.
+2. Poiché la serie non è stata convertita in un frame di dati, i valori vengono restituiti nella finestra messaggi, ma è possibile vedere che i risultati sono in un formato tabulare.
 
     **Risultati**
 
@@ -61,7 +62,7 @@ In questo esempio esegue alcuni calcoli matematici semplici e converte un valore
     dtype: float64
     ```
 
-3. Per aumentare la lunghezza della serie, è possibile aggiungere nuovi valori, utilizzando una matrice. 
+3. Per aumentare la lunghezza della serie, è possibile aggiungere nuovi valori usando una matrice. 
 
     ```sql
     execute sp_execute_external_script 
@@ -76,7 +77,7 @@ In questo esempio esegue alcuni calcoli matematici semplici e converte un valore
     '
     ```
 
-    Se non si specifica un indice, viene generato un indice che dispone di valori a partire da 0 e termina con la lunghezza della matrice.
+    Se non si specifica un indice, viene generato un indice con valori che iniziano con 0 e che terminano con la lunghezza della matrice.
 
     **Risultati**
 
@@ -87,7 +88,7 @@ In questo esempio esegue alcuni calcoli matematici semplici e converte un valore
     dtype: float64
     ```
 
-4. Se si aumenta il numero di **indice** valori, ma non aggiungere nuovi **dati** valori, i valori dei dati vengono ripetuti per riempire la serie.
+4. Se si aumenta il numero di valori di **Indice** , ma non si aggiungono nuovi valori di **dati** , i valori dei dati vengono ripetuti per riempire la serie.
 
     ```sql
     execute sp_execute_external_script 
@@ -111,11 +112,11 @@ In questo esempio esegue alcuni calcoli matematici semplici e converte un valore
     dtype: float64
     ```
 
-## <a name="convert-series-to-data-frame"></a>Convertire serie in frame di dati
+## <a name="convert-series-to-data-frame"></a>Converti serie in frame di dati
 
-Visto convertito risultati matematici scalari in una struttura tabulare, è comunque necessario convertirli in un formato che può gestire SQL Server. 
+Dopo aver convertito i risultati matematici scalari in una struttura tabulare, è comunque necessario convertirli in un formato che possa essere gestito da SQL Server. 
 
-1. Per convertire una serie in un frame di dati, chiamare il pandas [DataFrame](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) (metodo).
+1. Per convertire una serie in un frame di dati, chiamare il metodo Pandas [dataframe](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe).
 
     ```sql
     execute sp_execute_external_script 
@@ -134,7 +135,7 @@ Visto convertito risultati matematici scalari in una struttura tabulare, è comu
     WITH RESULT SETS (( ResultValue float ))
     ```
 
-2. Il risultato è illustrato di seguito. Anche se si utilizza l'indice per ottenere valori specifici dal frame di dati, i valori di indice non fanno parte dell'output.
+2. Il risultato è illustrato di seguito. Anche se si usa l'indice per ottenere valori specifici dal data. frame, i valori dell'indice non fanno parte dell'output.
 
     **Risultati**
 
@@ -143,11 +144,11 @@ Visto convertito risultati matematici scalari in una struttura tabulare, è comu
     |0.5|
     |2|
 
-## <a name="output-values-into-dataframe"></a>Valori di output in frame di dati
+## <a name="output-values-into-dataframe"></a>Valori di output in data. frame
 
-Di seguito viene illustrato come la conversione in un frame di dati funziona con due serie che contiene i risultati delle operazioni matematiche semplici. Il primo ha un indice di valori sequenziali generati da Python. Il secondo Usa un indice di valori di stringa arbitrario.
+Viene ora illustrato in che modo la conversione in un data. frame funziona con le due serie contenenti i risultati delle semplici operazioni matematiche. Il primo ha un indice di valori sequenziali generati da Python. Il secondo usa un indice arbitrario di valori stringa.
 
-1. In questo esempio Ottiene un valore dalla serie che utilizza un indice integer.
+1. Questo esempio Mostra come ottenere un valore dalla serie che usa un indice Integer.
 
     ```sql
     EXECUTE sp_execute_external_script 
@@ -166,9 +167,9 @@ Di seguito viene illustrato come la conversione in un frame di dati funziona con
     WITH RESULT SETS (( ResultValue float ))
     ```
 
-    Tenere presente che l'indice generato automaticamente inizia da 0. Provare a usare un valore di indice di intervallo fuori e vedere cosa succede.
+    Tenere presente che l'indice generato automaticamente inizia da 0. Provare a usare un valore di indice non compreso nell'intervallo per vedere cosa accade.
 
-2. A questo punto è possibile ottenere un singolo valore da altri frame di dati che include un indice stringa. 
+2. A questo punto, è possibile ottenere un singolo valore dall'altro frame di dati con un indice di stringa. 
 
     ```sql
     EXECUTE sp_execute_external_script 
@@ -192,11 +193,11 @@ Di seguito viene illustrato come la conversione in un frame di dati funziona con
     |------|
     |0.5|
 
-    Se si prova a usare un indice numerico per ottenere un valore di questa serie, viene visualizzato un errore.
+    Se si tenta di usare un indice numerico per ottenere un valore da questa serie, viene ricevuto un errore.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 Successivamente, si creerà un modello predittivo usando Python in SQL Server.
 
 > [!div class="nextstepaction"]
-> [Creare, eseguire il training e usare un modello Python con le stored procedure in SQL Server](quickstart-python-train-score-in-tsql.md)
+> [Creare, eseguire il training e usare un modello Python con stored procedure in SQL Server](quickstart-python-train-score-in-tsql.md)
