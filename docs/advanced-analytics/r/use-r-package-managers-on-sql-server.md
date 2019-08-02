@@ -1,18 +1,19 @@
 ---
 title: Usare i gestori di pacchetti R
-description: Usare i comandi R standard come install. Packages per aggiungere nuovi pacchetti R a SQL Server 2016 R Services o SQL Server 2017 Machine Learning Services (in-database).
+description: Usare i comandi R standard come install. Packages per aggiungere nuovi pacchetti R a SQL Server 2016 R Services o SQL Server Machine Learning Services (in-database).
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1977e616b8f5ac41f533d49fab684db146cdb204
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 75ef22eb7e06fa1f8d4d2a0d9c754959f1bb1ae4
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469880"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715026"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Usare i gestori di pacchetti R per installare i pacchetti R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ Questa procedura usa RGui, ma è possibile usare RTerm o qualsiasi altro strumen
 
 Se il pacchetto di destinazione dipende da pacchetti aggiuntivi, il programma di installazione di R scaricherà automaticamente le dipendenze e le installerà automaticamente.
 
-Se si dispone di più istanze di SQL Server, ad esempio istanze affiancate di SQL Server 2016 R Services e SQL Server 2017 Machine Learning Services, eseguire l'installazione separatamente per ogni istanza se si desidera utilizzare il pacchetto in entrambi i contesti. I pacchetti non possono essere condivisi tra istanze.
+Se si dispone di più istanze di SQL Server, ad esempio istanze affiancate di SQL Server 2016 R Services e SQL Server Machine Learning Services, eseguire l'installazione separatamente per ogni istanza se si desidera utilizzare il pacchetto in entrambi i contesti. I pacchetti non possono essere condivisi tra istanze.
 
 ## <a name = "bkmk_offlineInstall"></a>Installazione offline con strumenti R
 

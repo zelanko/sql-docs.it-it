@@ -6,19 +6,18 @@ ms.date: 05/31/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 86c698420a64832e49cd6cbff5e6727896ec45f4
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 1573c260c3d34ba3f733316fbae2672b2f9adfb1
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470273"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715152"
 ---
 # <a name="troubleshoot-machine-learning-in-sql-server"></a>Risolvere i problemi di Machine Learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Usare questa pagina come punto di partenza per risolvere i problemi noti.
-
-**Si applica a:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (R e Python)
 
 ## <a name="known-issues"></a>Problemi noti
 
@@ -38,10 +37,8 @@ Se si è verificato un errore o è necessario comprendere un problema nell'ambie
 
 Iniziare da qui se Machine Learning non è stato configurato con SQL Server o se si vuole aggiungere la funzionalità:
 
-+ [Installare SQL Server Machine Learning Services 2017 (in-database)](install/sql-machine-learning-services-windows-install.md)
-+ [Installare SQL Server Machine Learning Server 2017 (autonomo)](install/sql-machine-learning-standalone-windows-install.md)
-+ [Installare SQL Server 2016 R Services (in-database)](install/sql-r-services-windows-install.md)
-+ [Installare SQL Server R Server 2016 (autonomo)](install/sql-r-standalone-windows-install.md)
++ [Installare SQL Server Machine Learning Services (in-database)](install/sql-machine-learning-services-windows-install.md)
++ [Installa SQL Server Machine Learning Server (standalone)](install/sql-machine-learning-standalone-windows-install.md)
 + [Installazione dal prompt dei comandi](install/sql-ml-component-commandline-install.md)
 + [Installazione offline (senza Internet)](install/sql-ml-component-install-without-internet-access.md)
 

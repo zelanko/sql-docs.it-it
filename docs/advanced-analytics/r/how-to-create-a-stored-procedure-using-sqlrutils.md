@@ -7,14 +7,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a224bed65cd7d3fd1b6dda4ed10d56f79ecc12ee
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 22faeb2ea9f3e2104c2c1921b91a26ec5068079e
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470144"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715699"
 ---
-# <a name="create-a-stored-pprocedure-using-sqlrutils"></a>Creare un pProcedure archiviato usando sqlrutils
+# <a name="create-a-stored-procedure-using-sqlrutils"></a>Creare una stored procedure con sqlrutils
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Questo articolo descrive i passaggi per la conversione del codice R per l'esecuzione come stored procedure T-SQL. Per ottenere i migliori risultati possibili, può essere necessario modificare il codice per garantire che tutti gli input possano essere parametrizzati.
@@ -29,7 +30,7 @@ Inoltre, poiché i parametri di input per la funzione R diventeranno i parametri
 
 ### <a name="inputs"></a>Input
 
-Tra i parametri di input può esistere al massimo un frame di dati.
+Tra i parametri di input può essere presente al massimo un frame di dati.
 
 Gli oggetti nel frame di dati e altri parametri di input della funzione devono essere dei tipi di dati R seguenti:
 - POSIXct
@@ -89,7 +90,7 @@ Per illustrare, si supponga di voler creare un stored procedure denominato **sp_
 
 - Usa una funzione **foosql**esistente. La funzione è basata sul codice esistente nella funzione R **foo**, ma è stata riscritta la funzione per conformarsi ai requisiti descritti in [questa sezione](#bkmk_rewrite)e ha denominato la funzione aggiornata come **foosql**.
 - Usa il frame di dati **queryinput** come input
-- Genera come output un frame di dati con il nome della variabile  R, SQLOutput
+- Genera come output un frame di dati con il nome della variabile R, SQLOutput
 - Si vuole creare il codice T-SQL come file nella `C:\Temp` cartella, in modo che sia possibile eseguirlo con SQL Server Management Studio in un secondo momento
 
 ```R
@@ -116,7 +117,7 @@ Per entrambi i metodi è necessario che il stored procedure sia registrato nel d
 
 È possibile registrare il stored procedure usando R oppure è possibile eseguire l'istruzione CREATE PROCEDURE in T-SQL.
 
-- Uso di T-SQL.  Se si ha familiarità con T-SQL, aprire Management Studio di SQL Server (o qualsiasi altro client in grado di eseguire comandi SQL DDL) ed eseguire l'istruzione create procedure usando il codice preparato `StoredProcedure` dalla funzione.
+- Uso di T-SQL.  Se si ha familiarità con T-SQL, aprire SQL Server Management Studio (o qualsiasi altro client in grado di eseguire comandi SQL DDL) ed eseguire l'istruzione create procedure usando il codice preparato dalla `StoredProcedure` funzione.
 - Uso di R. Mentre si è ancora nell'ambiente R, è possibile usare la `registerStoredProcedure` funzione in **sqlrutils** per registrare il stored procedure con il database.
 
   Ad esempio, è possibile registrare il stored procedure **sp_rsample** nell'istanza e nel database definiti in *sqlConnStr*, effettuando questa chiamata R:

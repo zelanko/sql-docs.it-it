@@ -8,12 +8,13 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: cec029f4ffb047a49ff9902c430c4bd98aa03850
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: ff4d0839cfdf24b1b43fe9d5a371092713bc63cf
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470284"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715789"
 ---
 #  <a name="get-r-and-python-package-information"></a>Ottenere informazioni sui pacchetti R e Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-Facoltativamente, è possibile usare [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) nelle versioni più recenti di RevoScaleR in SQL Server 2017 Machine Learning Services o [r Services aggiornato da r ad almeno RevoScaleR 9.0.1](../install/upgrade-r-and-python.md). Questo stored procedure restituisce il percorso della libreria di istanze e la versione di RevoScaleR usata da SQL Server:
+Facoltativamente, è possibile usare [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) nelle versioni più recenti di RevoScaleR in SQL Server Machine Learning Services o [r Services aggiornamento di r ad almeno RevoScaleR 9.0.1](../install/upgrade-r-and-python.md). Questo stored procedure restituisce il percorso della libreria di istanze e la versione di RevoScaleR usata da SQL Server:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -59,7 +60,7 @@ STDOUT message(s) from external script:
 
 ## <a name="get-the-python-library-location"></a>Ottenere il percorso della libreria Python
 
-Per **Python** in SQL Server 2017, eseguire l'istruzione seguente per verificare la libreria predefinita per l'istanza corrente. Questo esempio restituisce l'elenco delle cartelle incluse nella variabile Python `sys.path` . L'elenco include la directory corrente e il percorso della libreria standard.
+Per **Python**, eseguire l'istruzione seguente per verificare la libreria predefinita per l'istanza corrente. Questo esempio restituisce l'elenco delle cartelle incluse nella variabile Python `sys.path` . L'elenco include la directory corrente e il percorso della libreria standard.
 
 ```sql
 EXECUTE sp_execute_external_script

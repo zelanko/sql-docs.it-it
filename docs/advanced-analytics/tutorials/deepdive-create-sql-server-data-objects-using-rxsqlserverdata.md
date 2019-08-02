@@ -7,12 +7,13 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 423a90fe66749a3192c6f03c0efee314b4ceef37
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 403f71b4c04d4017094fb7de85ae5de36bcb2c68
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469752"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714905"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>Creare oggetti dati SQL Server usando RxSqlServerData (esercitazione SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +178,7 @@ Il pacchetto **RevoScaleR** contiene funzioni specifiche per i tipi di origine d
   
     - L'argomento *outFile* specifica la tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui verranno salvati i dati.
   
-    - Se la tabella esiste già e non si usa l'  opzione di sovrascrittura, i risultati vengono inseriti senza troncamenti.
+    - Se la tabella esiste già e non si usa l' opzione di sovrascrittura, i risultati vengono inseriti senza troncamenti.
   
 Anche in questo caso, se la connessione ha avuto esito positivo, verrà visualizzato un messaggio che indica il completamento e il tempo necessario per scrivere i dati nella tabella:
 

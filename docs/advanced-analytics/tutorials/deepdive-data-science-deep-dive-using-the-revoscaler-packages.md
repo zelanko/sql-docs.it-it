@@ -7,12 +7,13 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c326d51e9b3ac4edac61f97bf5f7fa3143d8d350
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 4db5debf4ba71f29a8870c8674a5422e9ffd334a
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470627"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714878"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>Esercitazione: Usare le funzioni R RevoScaleR con i dati SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +24,7 @@ In questa esercitazione in più parti viene introdotto un intervallo di funzioni
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-+ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) con la funzionalità r o [2016 SQL Server r Services (in-database)](../install/sql-r-services-windows-install.md)
++ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) con la funzionalità R oppure [R Services per SQL Server (in-database)](../install/sql-r-services-windows-install.md)
   
 + [Autorizzazioni del database](../security/user-permission.md) e account di accesso utente del database SQL Server
 
@@ -31,7 +32,7 @@ In questa esercitazione in più parti viene introdotto un intervallo di funzioni
 
 + Un IDE, ad esempio RStudio o lo strumento RGUI incorporato incluso in R
 
-Per spostarsi avanti e indietro tra i contesti di calcolo locali e remoti, sono necessari due sistemi. Local è in genere una workstation di sviluppo con potenza sufficienti per carichi di lavoro data science. Remote in questo caso è SQL Server 2017 o SQL Server 2016 con la funzionalità R abilitata. 
+Per spostarsi avanti e indietro tra i contesti di calcolo locali e remoti, sono necessari due sistemi. Local è in genere una workstation di sviluppo con potenza sufficienti per carichi di lavoro data science. Remote in questo caso è SQL Server con la funzionalità R abilitata. 
 
 Il cambio di contesto di calcolo si basa sul fatto che la stessa versione di **RevoScaleR** sia in sistemi locali che remoti. In una workstation locale è possibile ottenere i pacchetti **RevoScaleR** e i provider correlati installando Microsoft R client.
 

@@ -1,18 +1,19 @@
 ---
 title: Conversioni dei tipi di dati da R a SQL
-description: Esaminare il tipo di dati implicito ed esplicito converstions tra R e SQL Server nelle soluzioni di data science e machine learning.
+description: Esaminare le conversioni di tipi di dati implicite ed esplicite tra R e SQL Server nelle soluzioni di data science e machine learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/10/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5606997e26aa006e102a2cc60f5635702500e53f
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 7c829f39ee9c80d1bad3a4fb33c10635897cfb98
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470053"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715097"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>Mapping dei tipi di dati tra R e SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,7 +22,7 @@ Per le soluzioni R eseguite nella funzionalità di integrazione di R in SQL Serv
 
 ## <a name="base-r-version"></a>Versione di base di R
 
-SQL Server 2016 R Services e SQL Server 2017 Machine Learning Services con R, sono allineati con versioni specifiche di Microsoft R Open. Ad esempio, la versione più recente, SQL Server 2017 Machine Learning Services, è basata su Microsoft R Open 3.3.3.
+SQL Server 2016 R Services e SQL Server Machine Learning Services con R sono allineati con versioni specifiche di Microsoft R Open. Ad esempio, la versione più recente, SQL Server Machine Learning Services, è basata su Microsoft R Open 3.3.3.
 
 Per visualizzare la versione R associata a una particolare istanza di SQL Server, aprire **RGui**. Per l'istanza predefinita, il percorso sarà il seguente:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
 

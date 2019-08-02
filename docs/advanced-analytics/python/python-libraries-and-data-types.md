@@ -1,18 +1,19 @@
 ---
 title: Conversioni dei tipi di dati da Python a SQL
-description: Esaminare il tipo di dati implicito ed esplicito converstions tra Python e SQL Server nelle soluzioni di data science e machine learning.
+description: Esaminare le conversioni di tipi di dati implicite ed esplicite tra Python e SQL Server nelle soluzioni di data science e machine learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8aea7e67f6560aa750e67601b5b6a41f7d68b47d
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 690126098bbbd3ab26add51a0484f735120351de
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470340"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715778"
 ---
 # <a name="data-type-mappings-between-python-and-sql-server"></a>Mapping dei tipi di dati tra Python e SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -20,8 +21,6 @@ ms.locfileid: "68470340"
 Per le soluzioni Python eseguite nella funzionalità di integrazione di Python in SQL Server Machine Learning Services, esaminare l'elenco dei tipi di dati non supportati e le conversioni dei tipi di dati che possono essere eseguite in modo implicito quando i dati vengono passati tra Python e SQL Server.
 
 ## <a name="python-version"></a>Versione di Python
-
-SQL Server 2017 Anaconda 4,2 Distribution e Python 3,6.
 
 Un subset della funzionalità RevoScaleR (rxLinMod, rxLogit, rxPredict, rxDTrees, rxBTrees, forse alcuni altri) viene fornito usando le API Python, usando un nuovo pacchetto python **revoscalepy**. È possibile usare questo pacchetto per lavorare con i dati usando i frame di dati Pandas, i file XDF o le query di dati SQL.
 
@@ -51,6 +50,3 @@ In questa tabella sono elencate le conversioni implicite fornite. Altri tipi di 
 |**varbinary(max)**|`bytes`|
 |**varchar(n)**|`str`|
 |**ntext**|`str`|
-
-## <a name="see-also"></a>Vedere anche
-

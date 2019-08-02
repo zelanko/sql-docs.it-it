@@ -1,18 +1,19 @@
 ---
 title: Estensione del linguaggio di programmazione Python
-description: Informazioni sull'esecuzione di codice Python e sulle librerie Python predefinite in SQL Server 2017 Machine Learning Services.
+description: Informazioni sull'esecuzione di codice Python e sulle librerie Python predefinite in SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/05/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f85392f8bfbb7ee89b8387b0f7d27038b9a8303b
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 61a1a5629d4f0488b5f75a08578c39f2e68f2c7d
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470471"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715876"
 ---
 # <a name="python-language-extension-in-sql-server"></a>Estensione del linguaggio Python in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ Microsoftml e revoscalepy sono strettamente collegati; le origini dati utilizzat
 
 Il modulo **revoscalepy** viene importato nel codice Python e quindi vengono chiamate funzioni dal modulo, come qualsiasi altra funzione di Python.
 
-Le origini dati supportate includono i database ODBC, SQL Server e il formato di file XDF per lo scambio di dati con altre origini o con soluzioni R. I dati di input per Python devono essere tabulari. Tutti i risultati Python devono essere restituiti sotto forma di frame  di dati Pandas.
+Le origini dati supportate includono i database ODBC, SQL Server e il formato di file XDF per lo scambio di dati con altre origini o con soluzioni R. I dati di input per Python devono essere tabulari. Tutti i risultati Python devono essere restituiti sotto forma di frame di dati Pandas.
 
 I contesti di calcolo supportati includono il contesto di calcolo locale o remoto SQL Server. Un contesto di calcolo remoto si riferisce all'esecuzione del codice che viene avviata in un computer, ad esempio una workstation, ma quindi passa l'esecuzione dello script a un computer remoto. Per cambiare il contesto di calcolo è necessario che entrambi i sistemi abbiano la stessa libreria revoscalepy.
 

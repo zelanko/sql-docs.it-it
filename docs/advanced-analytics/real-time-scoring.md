@@ -3,16 +3,17 @@ title: Assegnazione di punteggi in tempo reale con sp_rxPredict stored procedure
 description: Generare stime usando sp_rxPredict, assegnando punteggi ai dati in base a un modello con training preliminare scritto in R su SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/29/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b4284d77464597857eca500b4a8ad29e1f4d06ee
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 26701ac6e538d195a5a85ad66af9578848889d23
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469962"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715643"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>Assegnazione di punteggi in tempo reale con sp_rxPredict in SQL Server machine learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,7 +22,7 @@ Il Punteggio in tempo reale usa il stored procedure di sistema [sp_rxPredict](ht
 
 ## <a name="how-real-time-scoring-works"></a>Funzionamento del punteggio in tempo reale
 
-Il Punteggio in tempo reale è supportato sia in SQL Server 2017 che in SQL Server 2016, su tipi di modello specifici basati su funzioni RevoScaleR o MicrosoftML, ad esempio [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). USA librerie native C++ per generare punteggi, in base all'input dell'utente fornito a un modello di Machine Learning archiviato in un formato binario speciale.
+Il Punteggio in tempo reale è supportato su tipi di modello specifici in base alle funzioni RevoScaleR o MicrosoftML, ad esempio [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). USA librerie native C++ per generare punteggi, in base all'input dell'utente fornito a un modello di Machine Learning archiviato in un formato binario speciale.
 
 Poiché un modello sottoposto a training può essere utilizzato per l'assegnazione dei punteggi senza dover chiamare un runtime di linguaggio esterno, viene ridotto l'overhead di più processi. Questo supporta prestazioni di stima molto più veloci per gli scenari di assegnazione dei punteggi di produzione. Poiché i dati non lasciano mai SQL Server, è possibile generare e inserire i risultati in una nuova tabella senza alcuna conversione dei dati tra R e SQL.
 

@@ -7,17 +7,18 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0f8cc5aaa10beeb5b91b27111e15013cc705ed20
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e87770447c371f46ad384daffa3c7bc40b836904
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469953"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715599"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Configurare un client data science per lo sviluppo R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-L'integrazione di r è disponibile in SQL Server 2016 o versione successiva quando si include l'opzione del linguaggio R in un'installazione di [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) o [SQL Server 2017 Machine Learning Services (in-database)](../install/sql-machine-learning-services-windows-install.md) . 
+L'integrazione di r è disponibile in SQL Server 2016 o versione successiva quando si include l'opzione del linguaggio R in un'installazione di [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) o [SQL Server Machine Learning Services (in-database)](../install/sql-machine-learning-services-windows-install.md) . 
 
 Per sviluppare e distribuire soluzioni R per SQL Server, installare [Microsoft R client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) nella workstation di sviluppo per ottenere [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) e altre librerie r. La libreria RevoScaleR, necessaria anche per l'istanza di SQL Server remota, coordina le richieste di elaborazione tra entrambi i sistemi. 
 

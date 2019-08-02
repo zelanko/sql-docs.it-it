@@ -1,18 +1,19 @@
 ---
 title: pacchetto python revoscalepy
-description: Introduzione al modulo revoscalepy in SQL Server 2017 Machine Learning Services con Python.
+description: Introduzione al modulo revoscalepy in SQL Server Machine Learning Services con Python.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/12/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 297e58fe089b0f68670a9d2a994f05d9c8bf4344
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 76c68d0753c4ba29387b3378c1086ce9bce4f53b
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470323"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715770"
 ---
 # <a name="revoscalepy-python-module-in-sql-server"></a>revoscalepy (modulo Python in SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ La libreria **revoscalepy** viene distribuita in più prodotti Microsoft, ma l'u
 
 Il modulo **revoscalepy** è basato su Python 3,5 ed è disponibile solo quando si installa uno dei seguenti prodotti o download Microsoft:
 
-+ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
++ [Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 o versione successiva](https://docs.microsoft.com/machine-learning-server/)
 + [Librerie client Python per un client data science](setup-python-client-tools-sql.md)
 
@@ -102,7 +103,7 @@ Quando si esegue localmente, in genere si esegue uno script Python dalla riga di
 
 Quando si è pronti per incapsulare lo script Python all'interno di un stored procedure, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), è consigliabile riscrivere il codice come una singola funzione con input e output chiaramente definiti. 
 
-Gli input e gli output  devono essere frame di dati Pandas. Al termine di questa operazione, è possibile chiamare il stored procedure da qualsiasi client che supporta T-SQL, passare facilmente le query SQL come input e salvare i risultati nelle tabelle SQL. Per un esempio, vedere [informazioni sull'analisi Python nel database per sviluppatori SQL](../tutorials/sqldev-in-database-python-for-sql-developers.md).
+Gli input e gli output devono essere frame di dati Pandas. Al termine di questa operazione, è possibile chiamare il stored procedure da qualsiasi client che supporta T-SQL, passare facilmente le query SQL come input e salvare i risultati nelle tabelle SQL. Per un esempio, vedere [informazioni sull'analisi Python nel database per sviluppatori SQL](../tutorials/sqldev-in-database-python-for-sql-developers.md).
 
 ### <a name="using-revoscalepy-with-microsoftml"></a>Uso di revoscalepy con microsoftml
 

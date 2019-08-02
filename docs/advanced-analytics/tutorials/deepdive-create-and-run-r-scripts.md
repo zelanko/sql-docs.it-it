@@ -7,12 +7,13 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5b1ec344a2ec9728a24d45c47dd80737e6155b01
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 90a674057845427fe60fd3c62268bf0fb3d18688
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469818"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715577"
 ---
 # <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>Statistiche di riepilogo di calcolo in R (esercitazione SQL Server e RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ Usare un IDE R o **Rgui** per eseguire lo script r in questa lezione.
 
 ## <a name="compute-summary-statistics-on-remote-data"></a>Calcolo delle statistiche di riepilogo sui dati remoti
 
-Prima di poter eseguire qualsiasi codice R in modalità remota, è necessario specificare il contesto di calcolo remoto. Tutti i calcoli successivi avvengono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer specificato nel parametro sqlcompute  .
+Prima di poter eseguire qualsiasi codice R in modalità remota, è necessario specificare il contesto di calcolo remoto. Tutti i calcoli successivi avvengono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer specificato nel parametro sqlcompute .
 
 Un contesto di calcolo rimane attivo fino a quando non viene modificato. Tuttavia, gli script R che *non possono essere* eseguiti in un contesto server remoto verranno eseguiti automaticamente in locale.
 

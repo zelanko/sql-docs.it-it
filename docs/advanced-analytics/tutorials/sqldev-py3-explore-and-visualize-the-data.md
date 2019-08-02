@@ -7,12 +7,13 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0442fd942f0dd509f24b98b5ca1c6d6c31a197f0
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 6ee82de1431a6bc21596505dc4b008b817b35830
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470552"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714701"
 ---
 # <a name="explore-and-visualize-the-data"></a>Esplorare e visualizzare i dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,12 +26,12 @@ In questo passaggio si esplorano i dati di esempio e si generano alcuni tracciat
 
 Prima di tutto, è necessario esaminare lo schema dei dati, in quanto sono state apportate alcune modifiche per semplificare l'uso dei dati dei taxi di NYC
 
-+ Il set di dati originale usava file distinti per gli identificatori di taxi e i record di viaggio. Sono stati aggiunti i due set di impostazioni originali per le colonne medaglier, _hack_license_e _pickup_datetime_.  
++ Il set di dati originale usava file distinti per gli identificatori di taxi e i record di viaggio. Sono stati aggiunti i due set di impostazioni originali per lecolonne medaglier, _hack_license_e _pickup_datetime_.  
 + Il set di dati originale estendeva molti file ed era piuttosto grande. È downsampling ottenere solo l'1% del numero di record originale. La tabella dati corrente contiene 1.703.957 righe e 23 colonne.
 
 **Identificatori di taxi**
 
-La  colonna medaglione rappresenta il numero di ID univoco del taxi.
+La colonna medaglione rappresenta il numero di ID univoco del taxi.
 
 La colonna _hack_license_ contiene il numero di licenza del tassista (resi anonimi).
 
@@ -74,7 +75,7 @@ Il stored procedure restituisce un oggetto Python `figure` serializzato come flu
 
     - La variabile `@query` definisce il testo `SELECT tipped FROM nyctaxi_sample`della query, che viene passato al blocco di codice Python come argomento della variabile `@input_data_1`di input dello script.
     - Lo script Python è piuttosto semplice: gli oggetti **matplotlib** `figure` vengono usati per creare l'istogramma e il grafico a dispersione e questi oggetti vengono `pickle` quindi serializzati usando la libreria.
-    - L'oggetto grafico Python viene serializzato in un  dataframe di Pandas per l'output.
+    - L'oggetto grafico Python viene serializzato in un dataframe di Pandas per l'output.
   
     ```sql
     DROP PROCEDURE IF EXISTS PyPlotMatplotlib;

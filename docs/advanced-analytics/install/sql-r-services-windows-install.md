@@ -7,19 +7,20 @@ ms.date: 05/03/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 9cc14328e0e43106f9fec0779f073bcd1568e888
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: =sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 61dd49191e85d9fd4685904ae01b72d754d43318
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345013"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715816"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Installare SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questo articolo illustra come installare e configurare **SQL Server 2016 R Services**. Se si dispone di SQL Server 2016, installare questa funzionalità per abilitare l'esecuzione del codice R in SQL Server.
 
-In SQL Server 2017, l'integrazione di R è disponibile in [Machine Learning Services](../r/r-server-standalone.md), che riflette l'aggiunta di Python. Per l'integrazione di R e il supporto di installazione di SQL Server 2017, vedere [Install SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) to Add the feature. 
+In SQL Server 2017, l'integrazione di R è disponibile in [Machine Learning Services](../r/r-server-standalone.md), che riflette l'aggiunta di Python. Per l'integrazione di R e il supporto di installazione di SQL Server 2017, vedere [Install SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) per aggiungere la funzionalità. 
 
 <a name="bkmk_prereqs"> </a> 
 
@@ -27,7 +28,7 @@ In SQL Server 2017, l'integrazione di R è disponibile in [Machine Learning Serv
 
 + È necessaria un'istanza del motore di database. Non è possibile installare solo R, sebbene sia possibile aggiungerlo in modo incrementale a un'istanza esistente.
 
-+ Per la continuità aziendale, i [gruppi di always on disponibilità](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) sono supportati per R Services. È necessario installare R Services e configurare i pacchetti in ogni nodo.
++ Per la continuità aziendale, i [gruppi di disponibilità always on](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) sono supportati per R Services. È necessario installare R Services e configurare i pacchetti in ogni nodo.
 
 + Non installare R Services in un cluster di failover. Il meccanismo di sicurezza usato per isolare i processi R non è compatibile con un ambiente Windows Server failover cluster.
 
@@ -156,7 +157,7 @@ Usare la procedura seguente per verificare che tutti i componenti usati per avvi
 
 7. Se la finestra di avvio è in esecuzione, dovrebbe essere possibile eseguire una semplice R per verificare che i runtime di scripting esterni possano comunicare con SQL Server. 
 
-    Aprire una nuova  finestra di query [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]in, quindi eseguire uno script come il seguente:
+    Aprire una nuova finestra di query [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]in, quindi eseguire uno script come il seguente:
     
     ```sql
     EXEC sp_execute_external_script  @language =N'R',

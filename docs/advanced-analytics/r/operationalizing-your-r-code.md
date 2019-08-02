@@ -7,12 +7,13 @@ ms.date: 03/15/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1ac89b23d9b027c8f5fd02daa28a4246cddf48f1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: adcac48bc7d90aae5f05a9b671f05e34cc8cf554
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470138"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715679"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Rendere operativo codice R usando stored procedure in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ Poiché è possibile eseguire R o Python da una stored procedure, è possibile e
 
 Il Punteggio è un'attività importante che può essere facilmente automatizzata o avviata da applicazioni esterne. È necessario eseguire il training del modello in anticipo, usando R o Python o un stored procedure e [salvare il modello in formato binario in](../tutorials/walkthrough-build-and-save-the-model.md) una tabella. Quindi, è possibile caricare il modello in una variabile come parte di una chiamata di stored procedure, usando una di queste opzioni per l'assegnazione dei punteggi da T-SQL:
 
-+ Punteggio in [tempo reale](../real-time-scoring.md) , ottimizzato per piccoli batch
++ [Punteggio in tempo reale, ottimizzato per piccoli batch
 + Assegnazione di punteggi a riga singola, per la chiamata da un'applicazione
 + Assegnazione dei [punteggi nativi](../sql-native-scoring.md), per la stima batch veloce da SQL Server senza chiamare R
 

@@ -1,20 +1,21 @@
 ---
 title: Come creare un pool di risorse per R e Python
-description: Definire un pool di risorse SQL Server per i processi R o Python in un'istanza del motore di database SQL Server 2016 o SQL Server 2017.
+description: Definire un pool di risorse SQL Server per i processi R o Python in un'istanza del motore di database SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5b58c2a42334352d64aa2cea61a75585f29996c3
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 882b9b15fbba567f30172d625af3867b27ae387e
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344065"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715898"
 ---
-# <a name="how-to-create-a-resource-pool-for-machine-learning-in-sql-server"></a>Come creare un pool di risorse per Machine Learning in SQL Server
+# <a name="how-to-create-a-resource-pool-for-sql-server-machine-learning-services"></a>Come creare un pool di risorse per SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questo articolo descrive come creare e usare un pool di risorse specifico per la gestione di carichi di lavoro di Machine Learning di R e Python in SQL Server. Si presuppone che siano già state installate e abilitate le funzionalità di machine learning e si voglia riconfigurare l'istanza per supportare una gestione più dettagliata delle risorse usate dal processo esterno, ad esempio R o Python.
@@ -188,7 +189,7 @@ Per verificare che le modifiche siano state apportate, controllare la configuraz
   
      In questo caso, poiché i pool sono stati creati con affinità AUTO, non viene visualizzata alcuna informazione. Per altre informazioni, vedere [sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md).
 
-## <a name="see-also"></a>Vedere anche
+## <a name="next-steps"></a>Passaggi successivi
 
 Per ulteriori informazioni sulla gestione delle risorse del server, vedere:
 

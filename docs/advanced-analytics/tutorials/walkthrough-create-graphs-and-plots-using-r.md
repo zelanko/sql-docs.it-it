@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f14005b8ba9d6f05d2b69deba29d83af5695f657
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 3e8293fecf351176ac2b1e88176395f6c2b34d20
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470506"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715310"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Creare grafici e tracciati con SQL e R (procedura dettagliata)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +71,7 @@ In genere, i server di database bloccano l'accesso a Internet. Questo può risul
     ```
 
     + La funzione *mapPlot* accetta due argomenti: un oggetto dati esistente definito in precedenza mediante RxSqlServerData e la rappresentazione della mappa passata dal client.
-    + Nella riga che inizia con la variabile *DS* , viene usato rxImport per caricare i dati in memoria dall'origine dati creata in precedenza , indatasource. (L'origine dati contiene solo 1000 righe; se si desidera creare una mappa con più punti dati, è possibile sostituire un'origine dati diversa).
+    + Nella riga che inizia con la variabile *DS* , viene usato rxImport per caricare i dati in memoria dall'origine dati creata in precedenza, indatasource. (L'origine dati contiene solo 1000 righe; se si desidera creare una mappa con più punti dati, è possibile sostituire un'origine dati diversa).
     + Quando si usano funzioni R Open Source, i dati devono essere caricati in frame di dati nella memoria locale. Tuttavia, chiamando la funzione [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) , è possibile eseguire nella memoria del contesto di calcolo remoto.
 
 2. Modificare il contesto di calcolo in locale e caricare le librerie necessarie per la creazione delle mappe.

@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2a149b4a98ec6c3a1d35cb499dcd391d87216752
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e49b843b0b32969bd440177cf445916487ad2670
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470267"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715207"
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>Pacchetti R e Python predefiniti in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,7 +22,7 @@ Questo articolo elenca i pacchetti R e Python installati con SQL Server e dove t
 
 ## <a name="r-package-list-for-sql-server"></a>Elenco di pacchetti R per SQL Server
 
-I pacchetti r vengono installati con [SQL Server 2016 r Services](../install/sql-r-services-windows-install.md) e [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) quando si seleziona la funzionalità r durante l'installazione. 
+I pacchetti r vengono installati con [SQL Server 2016 r Services](../install/sql-r-services-windows-install.md) e [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) quando si seleziona la funzionalità r durante l'installazione. 
 
 |Pacchetti         | 2016 | 2017 | Descrizione |
 |----------------|--------------|--------------|-------------|
@@ -30,11 +31,11 @@ I pacchetti r vengono installati con [SQL Server 2016 r Services](../install/sql
 | [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9,2 | Aggiunge gli algoritmi di Machine Learning in R. | 
 | [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.a.  | 9,2 | Usato per la scrittura di istruzioni MDX in R. |
 
-MicrosoftML e olapr sono disponibili per impostazione predefinita in SQL Server 2017 Machine Learning Services. In un'istanza di SQL Server 2016 R Services è possibile aggiungere questi pacchetti tramite un [aggiornamento del componente](../install/upgrade-r-and-python.md). L'aggiornamento di un componente consente inoltre di ottenere le versioni più recenti dei pacchetti (ad esempio, le versioni più recenti di RevoScaleR includono funzioni per la gestione dei pacchetti in SQL Server).
+MicrosoftML e olapr sono disponibili per impostazione predefinita in SQL Server Machine Learning Services. In un'istanza di SQL Server 2016 R Services è possibile aggiungere questi pacchetti tramite un [aggiornamento del componente](../install/upgrade-r-and-python.md). L'aggiornamento di un componente consente inoltre di ottenere le versioni più recenti dei pacchetti (ad esempio, le versioni più recenti di RevoScaleR includono funzioni per la gestione dei pacchetti in SQL Server).
 
 ## <a name="python-package-list-for-sql-server"></a>Elenco di pacchetti Python per SQL Server
 
-I pacchetti Python sono disponibili solo in SQL Server 2017 quando si installa [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) e si seleziona la funzionalità Python.
+I pacchetti Python sono disponibili solo in SQL Server 2017 quando si installa [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) e si seleziona la funzionalità Python.
 
 | Pacchetti         | 2017    |  Descrizione |
 | -----------------|-------------|------------|
@@ -52,7 +53,7 @@ La tabella seguente riepiloga le versioni di R fornite da riparazione tramite SQ
 |Versione             | Versione di R       |
 |--------------------|-----------------|
 | [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) | 3.2.2   | 
-| [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 |
+| [Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 |
 
 Non è mai necessario sovrascrivere manualmente la versione di R installata dal programma di installazione di SQL Server con le versioni più recenti sul Web. I pacchetti Microsoft R sono basati su versioni specifiche di R. la modifica dell'installazione potrebbe destabilizzarla.
 
@@ -64,7 +65,7 @@ SQL Server 2017 Machine Learning è la prima versione con supporto sia per R che
 
 |Versione             | Versione Anaconda| Pacchetti Microsoft    |
 |--------------------|-----------------|-----------------------|
-| SQL Server 2017 Machine Learning Services  | 4,2 su Python 3,5 | revoscalepy, microsoftml |
+| SQL Server Machine Learning Services  | 4,2 su Python 3,5 | revoscalepy, microsoftml |
 
 Non è mai necessario sovrascrivere manualmente la versione di Python installata dal programma di installazione di SQL Server con le versioni più recenti sul Web. I pacchetti Microsoft Python sono basati su versioni specifiche di Anaconda. La modifica dell'installazione potrebbe destabilizzarla.
 

@@ -7,12 +7,13 @@ ms.date: 08/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b148bd1ca51a7121ae043e2b616100e295c008aa
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: f84b799fa901f7461f448683cceffe78e1dddfd3
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344764"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714954"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Assegnazione di punteggi nativi mediante la funzione PREDICT T-SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ La funzione restituisce le stime per i dati di input, insieme alle colonne di da
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-PREDICT è disponibile in tutte le edizioni del motore di database SQL Server 2017 e abilitato per impostazione predefinita, incluso SQL Server 2017 Machine Learning Services in Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux) o il database SQL di Azure. Non è necessario installare R, Python o abilitare funzionalità aggiuntive.
+PREDICT è disponibile in tutte le edizioni del motore di database SQL Server 2017 e abilitato per impostazione predefinita, inclusi SQL Server Machine Learning Services in Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux) o database SQL di Azure. Non è necessario installare R, Python o abilitare funzionalità aggiuntive.
 
 + Il training del modello deve essere eseguito in anticipo utilizzando uno degli algoritmi **RX** supportati elencati di seguito.
 

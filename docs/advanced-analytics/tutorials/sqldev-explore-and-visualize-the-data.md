@@ -7,12 +7,13 @@ ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 362e7866636f83b9c75bf75ce30a0f012b3751fa
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 2c204e06edd830d8036b6d0119ce1aff1a9c6833
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470633"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715376"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Lezione 1: Esplorare e visualizzare i dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,11 +34,11 @@ Uno degli obiettivi principali di questa lezione è illustrare come chiamare le 
 
 Lo sviluppo di una soluzione di analisi scientifica dei dati prevede in genere frequenti esplorazioni e visualizzazioni dei dati. Per prima cosa è necessario esaminare i dati di esempio, se non è già stato fatto.
 
-Nel set di dati pubblico originale, gli identificatori di taxi e i record di viaggio sono stati forniti in file distinti. Tuttavia, per semplificare l'utilizzo dei dati di esempio, i due set di dati originali sono Stati Uniti in join alle colonne medaglione, _hack\_license_e _pickup\_DateTime_.  È stato eseguito anche un campionamento dei record in modo da ottenere solo l'1% del numero di record originale. Il set di dati ridotto risultante include 1.703.957 righe e 23 colonne.
+Nel set di dati pubblico originale, gli identificatori di taxi e i record di viaggio sono stati forniti in file distinti. Tuttavia, per semplificare l'utilizzo dei dati di esempio, i due set di dati originali sono Stati Uniti in joinalle colonne medaglione, _hack\_license_e _pickup\_DateTime_.  È stato eseguito anche un campionamento dei record in modo da ottenere solo l'1% del numero di record originale. Il set di dati ridotto risultante include 1.703.957 righe e 23 colonne.
 
 **Identificatori di taxi**
   
--   La  colonna medaglione rappresenta il numero di ID univoco del taxi.
+-   La colonna medaglione rappresenta il numero di ID univoco del taxi.
   
 -   La _colonna\_License hack_ contiene il numero di licenza del tassista (resi anonimi).
   

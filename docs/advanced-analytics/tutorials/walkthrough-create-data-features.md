@@ -7,12 +7,13 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e799b1ccba38d7716f2987112573a1d2d07203cd
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: f12c20a54c0811e392eaa85684d7fac1a209c396
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468464"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714693"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>Creare funzionalità di dati usando R e SQL Server (procedura dettagliata)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,9 +55,9 @@ In primo luogo, è possibile eseguire questa operazione nel modo in cui gli uten
     featureDataSource <- RxSqlServerData(sqlQuery = bigQuery,colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric", dropoff_longitude = "numeric", dropoff_latitude = "numeric", passenger_count  = "numeric", trip_distance  = "numeric", trip_time_in_secs  = "numeric", direct_distance  = "numeric"), connectionString = connStr);
     ```
 
-    - [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) può richiedere una query di selezione valida, fornita come argomento al parametro sqlQuery, oppure il nome  di un oggetto Table, fornito come parametro _Table_ .
+    - [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) può richiedere una query di selezione valida, fornita come argomento al parametro sqlQuery, oppure il nome di un oggetto Table, fornito come parametro _Table_ .
     
-    - Se si desidera campionare i dati da una tabella, è necessario utilizzare  il parametro sqlQuery, definire i parametri di campionamento utilizzando la clausola T-SQL TABLESAMPLE e impostare l'argomento _rowBuffering_ su false.
+    - Se si desidera campionare i dati da una tabella, è necessario utilizzare il parametro sqlQuery, definire i parametri di campionamento utilizzando la clausola T-SQL TABLESAMPLE e impostare l'argomento _rowBuffering_ su false.
 
 3. Eseguire il codice seguente per creare la funzione R personalizzata. ComputeDist accetta due coppie di valori di latitudine e longitudine e calcola la distanza lineare tra di essi, restituendo la distanza in miglia.
 
@@ -111,7 +112,7 @@ In primo luogo, è possibile eseguire questa operazione nel modo in cui gli uten
     
     Tuttavia, si noti un paio di punti relativi a rxDataStep: 
     
-    In altre origini dati è possibile usare gli argomenti *varsToKeep* e *varsToDrop*, ma questi non sono supportati per le origini dati SQL Server. Pertanto, in questo esempio è stato usato l'argomento  Transformations per specificare sia le colonne pass-through sia le colonne trasformate. Inoltre, in caso di esecuzione in un SQL Server contesto di calcolo  , l'argomento indata può assumere solo un'origine dati SQL Server.
+    In altre origini dati è possibile usare gli argomenti *varsToKeep* e *varsToDrop*, ma questi non sono supportati per le origini dati SQL Server. Pertanto, in questo esempio è stato usato l'argomento Transformations per specificare sia le colonne pass-through sia le colonne trasformate. Inoltre, in caso di esecuzione in un SQL Server contesto di calcolo , l'argomento indata può assumere solo un'origine dati SQL Server.
 
     Il codice precedente può inoltre generare un messaggio di avviso quando viene eseguito su set di dati più grandi. Quando il numero di righe per il numero di colonne da creare supera un valore impostato (il valore predefinito è 3 milioni), rxDataStep restituisce un avviso e il numero di righe nel frame di dati restituito verrà troncato. Per rimuovere l'avviso, è possibile modificare l'argomento _maxRowsByCols_ nella funzione rxDataStep. Tuttavia, se _maxRowsByCols_ è troppo grande, potrebbe verificarsi un problema durante il caricamento del frame di dati in memoria.
 
@@ -134,7 +135,7 @@ Passare a [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/dow
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
     -- User-defined function calculates the direct distance between two geographical coordinates.
-    RETURNS
+    RETURNS decimal(28, 10)
     AS
     BEGIN
       DECLARE @distance decimal(28, 10)

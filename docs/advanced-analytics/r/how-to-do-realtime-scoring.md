@@ -1,18 +1,19 @@
 ---
 title: Generare previsioni e stime usando modelli di apprendimento automatico
-description: Usare rxPredict o sp_rxPredict per il punteggio in tempo reale oppure prevedere T-SQL per il Punteggio nativo per le stime e la previsione in R e in Pythin in SQL Server Machine Learning.
+description: Usare rxPredict o sp_rxPredict per il punteggio in tempo reale oppure prevedere T-SQL per il Punteggio nativo per le stime e la previsione in R e Python in SQL Server Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/30/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 39edb40da1ebbddfff805aca321b99ea766f085c
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: d01be0f7d7a18091b965ad73b9bf035558b34864
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470120"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715692"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Come generare previsioni e stime usando modelli di Machine Learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -7,12 +7,13 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ecff1f32d129b71a014038fa681e76b9a2f44554
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: af2b1bf8f619800737863ff955011b011f4819d0
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470522"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715395"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>Compilare un modello R e salvarlo in SQL Server (procedura dettagliata)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -153,7 +154,7 @@ In questa sezione verranno sperimentate entrambe le tecniche.
     rxRoc(actualVarName= "tipped", predVarNames = "Score", scoredOutput);
     ```
 
-    Questa chiamata restituisce i valori utilizzati per il calcolo del grafico ROC. La colonna dell'etichetta è tipped, con i risultati effettivi che si sta tentando di stimare, mentre nella colonna _Score_ è presente la stima.
+    Questa chiamata restituisce i valori utilizzati per il calcolo del grafico ROC. La colonna dell'etichettaè tipped, con i risultati effettivi che si sta tentando di stimare, mentre nella colonna _Score_ è presente la stima.
 
 2. Per tracciare effettivamente il grafico, è possibile salvare l'oggetto ROC, quindi disegnarlo con la funzione Plot. Il grafo viene creato nel contesto di calcolo remoto e restituito all'ambiente R.
 

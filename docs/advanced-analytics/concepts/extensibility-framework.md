@@ -3,16 +3,17 @@ title: Architettura di estendibilità per il linguaggio R e lo script Python
 description: Supporto del codice esterno per il motore di database SQL Server, con architettura doppia per l'esecuzione di script R e Python su dati relazionali.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/17/2018
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a5c49172ed23867f95e383878f792092bd762177
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 49c45fa39cd271140ba78c2b1b32ee8a2f9c1a7a
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470453"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715251"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Architettura di estendibilità in SQL Server Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,7 +22,7 @@ SQL Server dispone di un Framework di estendibilità per l'esecuzione di script 
 
 ## <a name="background"></a>Sfondo
 
-Il Framework di estendibilità è stato introdotto in SQL Server 2016 per supportare il runtime di R. SQL Server 2017 aggiunge il supporto per Python
+Il Framework di estendibilità è stato introdotto in SQL Server 2016 per supportare il runtime di R. SQL Server 2017 e versioni successive è dotato del supporto per Python.
 
 Lo scopo del Framework di estendibilità è fornire un'interfaccia tra SQL Server e linguaggi data science, ad esempio R e Python, riducendo l'attrito durante lo sviluppo di soluzioni data science in produzione e proteggendo i dati esposti durante lo sviluppo processo. Eseguendo un linguaggio di scripting attendibile all'interno di un Framework protetto gestito da SQL Server, gli amministratori di database possono mantenere la sicurezza consentendo ai data scientist di accedere ai dati aziendali.
 
@@ -55,8 +56,8 @@ I componenti includono un servizio **Launchpad** usato per richiamare i lanci sp
 
 | Avvii attendibili | Estensione | Versioni SQL Server |
 |-------------------|-----------|---------------------|
-| RLauncher. dll per il linguaggio R | [Estensione R](extension-r.md) | SQL Server 2016, SQL Server 2017 |
-| Pythonlauncher. dll per Python 3,5 | [Estensione Python](extension-python.md) | SQL Server 2017 |
+| RLauncher. dll per il linguaggio R | [Estensione R](extension-r.md) | SQL Server 2016 e versioni successive |
+| Pythonlauncher. dll per Python 3,5 | [Estensione Python](extension-python.md) | SQL Server 2017 e versioni successive |
 
 Il servizio [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] viene eseguito con il relativo account utente. Se si modifica l'account che esegue Launchpad, assicurarsi di usare Gestione configurazione SQL Server per assicurarsi che le modifiche vengano scritte nei file correlati.
 
@@ -70,7 +71,7 @@ Per eseguire attività in una lingua supportata specifica, la finestra di avvio 
 
 In effetti, BxlServer è un ambiente di runtime del linguaggio che funziona con SQL Server per trasferire i dati e gestire le attività. BXL si basa sul linguaggio di scambio binario e si riferisce al formato dati utilizzato per spostare i dati in modo efficiente tra SQL Server e processi esterni. BxlServer è anche una parte importante dei prodotti correlati, ad esempio Microsoft R Client e Microsoft R Server.
 
-Il **satellite SQL** è un'API di estendibilità, inclusa nel motore di database a partire da SQL Server 2016, che supporta codice esterno o Runtime esterni implementato C++con C o.
+Il **satellite SQL** è un'API di estendibilità, inclusa nel motore di database, che supporta il codice esterno o i runtime esterni C++implementati con C o.
 
 BxlServer usa SQL Satellite per queste attività:
 
