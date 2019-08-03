@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 85911e4ce5652d15b99be4d87f75a04214a7f854
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eaeeaa5009cb119b40dcde9b8f9baa170d8f7bef
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075639"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68762535"
 ---
 # <a name="spreinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Contrassegna la sottoscrizione per la reinizializzazione. Questa stored procedure viene eseguita nel server di pubblicazione per sottoscrizioni push.  
   
@@ -44,40 +44,40 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è all.  
+`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è all.  
   
-`[ @article = ] 'article'` È il nome dell'articolo. *articolo* viene **sysname**, con un valore predefinito è all. Per le pubblicazioni ad aggiornamento immediato, *articolo* deve essere **tutte**; in caso contrario, la stored procedure ignora la pubblicazione e segnala un errore.  
+`[ @article = ] 'article'`Nome dell'articolo. *article* è di **tipo sysname**e il valore predefinito è all. Per una pubblicazione con aggiornamento immediato, l' *articolo* deve essere **All**; in caso contrario, il stored procedure ignora la pubblicazione e segnala un errore.  
   
-`[ @subscriber = ] 'subscriber'` È il nome del sottoscrittore. *Sottoscrittore* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @subscriber = ] 'subscriber'`Nome del Sottoscrittore. *Subscriber* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @destination_db = ] 'destination_db'` È il nome del database di destinazione. *destination_db* viene **sysname**, con un valore predefinito è all.  
+`[ @destination_db = ] 'destination_db'`Nome del database di destinazione. *destination_db* è di **tipo sysname**e il valore predefinito è all.  
   
-`[ @for_schema_change = ] 'for_schema_change'` Indica se viene eseguita la reinizializzazione in seguito a una modifica dello schema nel database di pubblicazione. *for_schema_change* viene **bit**, con un valore predefinito è 0. Se **0**, le sottoscrizioni attive per le pubblicazioni che consentono l'aggiornamento immediato vengono riattivate, purché l'intera pubblicazione e non solo di alcuni articoli, vengono reinizializzate. Le reinizializzazione viene pertanto avviata in seguito a modifiche dello schema. Se **1**, le sottoscrizioni attive vengono riattivate fino a quando non viene eseguito l'agente Snapshot.  
+`[ @for_schema_change = ] 'for_schema_change'`Indica se la reinizializzazione viene eseguita in seguito a una modifica dello schema nel database di pubblicazione. *for_schema_change* è di **bit**e il valore predefinito è 0. Se è **0**, le sottoscrizioni attive per le pubblicazioni che consentono l'aggiornamento immediato vengono riattivate fino a quando l'intera pubblicazione e non solo alcuni degli articoli vengono reinizializzate. Le reinizializzazione viene pertanto avviata in seguito a modifiche dello schema. Se è **1**, le sottoscrizioni attive non vengono riattivate fino a quando non viene eseguita la agente di snapshot.  
   
-`[ @publisher = ] 'publisher'` Specifica un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher = ] 'publisher'`Specifica un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
->  *server di pubblicazione* non deve essere utilizzata per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione.  
+>  il *Server* di pubblicazione non deve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] essere utilizzato per i server di pubblicazione.  
   
-`[ @ignore_distributor_failure = ] ignore_distributor_failure` Consente la reinizializzazione anche se il server di distribuzione non esiste o è offline. *ignore_distributor_failure* viene **bit**, con un valore predefinito è 0. Se **0**, la reinizializzazione ha esito negativo se il server di distribuzione non esiste o è offline.  
+`[ @ignore_distributor_failure = ] ignore_distributor_failure`Consente la reinizializzazione anche se il server di distribuzione non esiste o è offline. *ignore_distributor_failure* è di **bit**e il valore predefinito è 0. Se è **0**, la reinizializzazione ha esito negativo se il server di distribuzione non esiste o è offline.  
   
-`[ @invalidate_snapshot = ] invalidate_snapshot` Invalida lo snapshot di pubblicazione esistente. *invalidate_snapshot* viene **bit**, con un valore predefinito è 0. Se **1**, viene generato un nuovo snapshot per la pubblicazione.  
+`[ @invalidate_snapshot = ] invalidate_snapshot`Invalida lo snapshot della pubblicazione esistente. *invalidate_snapshot* è di **bit**e il valore predefinito è 0. Se è **1**, viene generato un nuovo snapshot per la pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_reinitsubscription** viene utilizzata nella replica transazionale.  
+ **sp_reinitsubscription** viene utilizzato nella replica transazionale.  
   
- **sp_reinitsubscription** non è supportata per la replica transazionale peer-to-peer.  
+ **sp_reinitsubscription** non è supportato per la replica transazionale peer-to-peer.  
   
  Per le sottoscrizioni in cui lo snapshot iniziale viene applicato automaticamente e la pubblicazione non consente sottoscrizioni aggiornabili, l'agente snapshot deve essere eseguito al termine di questa stored procedure in modo che vengano preparati i file dello schema e del programma per la copia bulk e gli agenti di distribuzione siano quindi in grado di risincronizzare le sottoscrizioni.  
   
- Per le sottoscrizioni in cui lo snapshot iniziale viene applicato automaticamente e la pubblicazione consente sottoscrizioni aggiornabili, l'agente di distribuzione risincronizza la sottoscrizione utilizzando i file dello schema e del programma per la copia bulk più recenti creati in precedenza dall'agente snapshot. L'agente di distribuzione risincronizza la sottoscrizione immediatamente dopo l'esecuzione **sp_reinitsubscription**, se l'agente di distribuzione non è occupato; in caso contrario, la sincronizzazione può verificarsi dopo il (intervallo di messaggio specificato dal parametro del prompt dei comandi dell'agente di distribuzione: **MessageInterval**).  
+ Per le sottoscrizioni in cui lo snapshot iniziale viene applicato automaticamente e la pubblicazione consente sottoscrizioni aggiornabili, l'agente di distribuzione risincronizza la sottoscrizione utilizzando i file dello schema e del programma per la copia bulk più recenti creati in precedenza dall'agente snapshot. Il agente di distribuzione risincronizza la sottoscrizione immediatamente dopo che l'utente esegue **sp_reinitsubscription**, se il agente di distribuzione non è occupato. in caso contrario, la sincronizzazione può essere eseguita dopo l'intervallo di messaggi (specificato da agente di distribuzione parametro del prompt dei comandi: **MessageInterval**).  
   
  **sp_reinitsubscription** non ha alcun effetto sulle sottoscrizioni in cui lo snapshot iniziale viene applicato manualmente.  
   
- Per risincronizzare le sottoscrizioni anonime di una pubblicazione, passare **tutte** o NULL come *sottoscrittore*.  
+ Per risincronizzare le sottoscrizioni anonime di una pubblicazione, passare **All** o null come Sottoscrittore.  
   
  La replica transazionale supporta la reinizializzazione della sottoscrizione a livello di articolo. Lo snapshot dell'articolo viene riapplicato nel Sottoscrittore durante la successiva sincronizzazione dopo che l'articolo è stato contrassegnato per la reinizializzazione. Se esistono articoli dipendenti sottoscritti dallo stesso Sottoscrittore, tuttavia, la riapplicazione dello snapshot nell'articolo potrebbe avere esito negativo, a meno che anche gli articoli dipendenti della pubblicazione non vengano reinizializzati automaticamente in particolari circostanze:  
   
@@ -89,7 +89,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
  [!code-sql[HowTo#sp_reinittranpushsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitsubscription-tr_1.sql)]  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server, i membri del **db_owner** ruolo predefinito del database o il creatore della sottoscrizione può eseguire **sp_reinitsubscription** .  
+ Solo i membri del ruolo predefinito del server **sysadmin** , i membri del ruolo predefinito del database **db_owner** o l'autore della sottoscrizione possono eseguire **sp_reinitsubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Reinizializzare una sottoscrizione](../../relational-databases/replication/reinitialize-a-subscription.md)   

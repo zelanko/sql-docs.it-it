@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 46aeaafce338d3ffdb9b6d4cb3d827fbbefde82d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c49a710b25bad0cf36115afadc439cbe793981c3
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045837"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768916"
 ---
 # <a name="spchangeagentprofile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Modifiche di un parametro di un profilo dell'agente di replica archiviato nella [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) tabella. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
+  Modifica un parametro di un profilo dell'agente di replica archiviato nella tabella [Transact &#40;-&#41; SQL MSagent_profiles](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) . Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,11 +39,11 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @profile_id = ] profile_id` È l'ID del profilo. *profile_id* viene **int**, non prevede alcun valore predefinito.  
+`[ @profile_id = ] profile_id`ID del profilo. *profile_id* è di **tipo int**e non prevede alcun valore predefinito.  
   
-`[ @property = ] 'property'` È il nome della proprietà. *proprietà* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @property = ] 'property'`Nome della proprietà. *Property* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @value = ] 'value'` È il nuovo valore della proprietà. *valore* viene **nvarchar(3000)** , non prevede alcun valore predefinito.  
+`[ @value = ] 'value'`Nuovo valore della proprietà. *value* è di **tipo nvarchar (3000)** e non prevede alcun valore predefinito.  
   
  Nella tabella seguente vengono descritte le proprietà del profilo che è possibile modificare.  
   
@@ -52,13 +52,13 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 |**description**|Descrizione del profilo.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_change_agent_profile** viene utilizzata in tutti i tipi di replica.  
+ **sp_change_agent_profile** viene utilizzato in tutti i tipi di replica.  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_change_agent_profile**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_change_agent_profile**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   

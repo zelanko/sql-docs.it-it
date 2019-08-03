@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7769c4e648cf3ed3898409cbdc3f0787dcb6d837
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 96a32ea04fc53f1a0bf3a842a5e68cde5586ac29
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113125"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770876"
 ---
 # <a name="spreplshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Restituisce i comandi per le transazioni contrassegnate per la replica in formato leggibile. **sp_replshowcmds** può essere eseguito solo quando le connessioni client, inclusa la connessione corrente, non leggono le transazioni replicate dal log. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
+  Restituisce i comandi per le transazioni contrassegnate per la replica in formato leggibile. **sp_replshowcmds** può essere eseguito solo quando le connessioni client (inclusa la connessione corrente) non leggono le transazioni replicate dal log. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,34 +37,34 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @maxtrans = ] maxtrans` È il numero di transazioni per cui si desidera ottenere informazioni. *maxtrans* viene **int**, il valore predefinito è **1**, che consente di specificare il numero massimo di transazioni in attesa di replica per il quale **sp_replshowcmds** Restituisce informazioni.  
+`[ @maxtrans = ] maxtrans`Numero di transazioni per cui si desidera ottenere informazioni. *maxtrans* è di **tipo int**e il valore predefinito è **1**, che specifica il numero massimo di transazioni in attesa di replica per le quali **sp_replshowcmds** restituisce informazioni.  
   
 ## <a name="result-sets"></a>Set di risultati  
- **sp_replshowcmds** è una procedura diagnostica che restituisce informazioni sul database di pubblicazione da cui viene eseguito.  
+ **sp_replshowcmds** è una procedura di diagnostica che restituisce informazioni sul database di pubblicazione da cui viene eseguita.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |**xact_seqno**|**binary(10)**|Numero di sequenza del comando.|  
 |**originator_id**|**int**|ID dell'origine del comando, sempre **0**.|  
-|**publisher_database_id**|**int**|ID del database di pubblicazione, sempre **0**.|  
+|**publisher_database_id**|**int**|ID del database del server di pubblicazione, sempre **0**.|  
 |**article_id**|**int**|ID dell'articolo.|  
 |**type**|**int**|Tipo di comando.|  
 |**comando**|**nvarchar(1024)**|Comando [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
 ## <a name="remarks"></a>Note  
- **sp_replshowcmds** viene utilizzata nella replica transazionale.  
+ **sp_replshowcmds** viene utilizzato nella replica transazionale.  
   
- Usando **sp_replshowcmds**, è possibile visualizzare le transazioni che sono attualmente non distribuiti (quelle che rimangono nel log delle transazioni che non sono stati inviati al server di distribuzione).  
+ Utilizzando **sp_replshowcmds**, è possibile visualizzare le transazioni attualmente non distribuite (le transazioni rimanenti nel log delle transazioni che non sono state inviate al server di distribuzione).  
   
  I client che eseguono **sp_replshowcmds** e **sp_replcmds** nello stesso database ricevono l'errore 18752.  
   
- Per evitare questo errore, è necessario disconnettere il primo client o il ruolo del client come agente di lettura log deve essere liberato eseguendo **sp_replflush**. Dopo che tutti i client sono stati disconnessi dall'agente di lettura log **sp_replshowcmds** può essere eseguito correttamente.  
+ Per evitare questo errore, il primo client deve disconnettersi o il ruolo del client come lettore di log deve essere rilasciato eseguendo **sp_replflush**. Dopo che tutti i client sono stati disconnessi dalla lettura log, **sp_replshowcmds** può essere eseguito correttamente.  
   
 > [!NOTE]  
->  **sp_replshowcmds** deve essere eseguito solo per risolvere i problemi con la replica.  
+>  **sp_replshowcmds** deve essere eseguito solo per la risoluzione dei problemi relativi alla replica.  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_replshowcmds**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_replshowcmds**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Messaggi di errore](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   

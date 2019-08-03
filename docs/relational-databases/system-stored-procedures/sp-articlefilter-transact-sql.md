@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 11d00c389f815117f624ea0a8099a49e7db28fdd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d90cd0ba957da820ce5a937ae687e39ca0302025
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129751"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769063"
 ---
 # <a name="sparticlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Filtra i dati da pubblicare in base a un articolo di tabella. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -43,50 +43,50 @@ sp_articlefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` È il nome della pubblicazione che contiene l'articolo. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'`Nome della pubblicazione contenente l'articolo. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @article = ] 'article'` È il nome dell'articolo. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @article = ] 'article'`Nome dell'articolo. *article* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @filter_name = ] 'filter_name'` È il nome della stored procedure di filtro da creare dal *filter_name*. *filter_name* viene **nvarchar(386)** , con un valore predefinito è NULL. È necessario specificare un nome univoco per il filtro per gli articoli.  
+`[ @filter_name = ] 'filter_name'`Nome del filtro stored procedure da creare dall' *filter_name*. *filter_name* è di **tipo nvarchar (386)** e il valore predefinito è null. È necessario specificare un nome univoco per il filtro per gli articoli.  
   
-`[ @filter_clause = ] 'filter_clause'` È una restrizione clausola (WHERE) che definisce un filtro orizzontale. Quando si specifica la clausola di restrizione, omettere la parola chiave WHERE. *filter_clause* viene **ntext**, con un valore predefinito è NULL.  
+`[ @filter_clause = ] 'filter_clause'`Clausola di restrizione (WHERE) che definisce un filtro orizzontale. Quando si specifica la clausola di restrizione, omettere la parola chiave WHERE. *filter_clause* è di tipo **ntext**e il valore predefinito è null.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Segnala che l'azione eseguita da questa stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**, il valore predefinito è **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Conferma che l'azione eseguita da questo stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è di **bit**e il valore predefinito è **0**.  
   
- **0** specifica che le modifiche apportate all'articolo non invalidano lo snapshot non è valido. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
+ **0** specifica che le modifiche apportate all'articolo non invalidano lo snapshot. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
   
- **1** specifica che le modifiche apportate all'articolo possono invalidare lo snapshot non è valido e se sono presenti sottoscrizioni esistenti richiedono un nuovo snapshot, consente lo snapshot esistente deve essere contrassegnato come obsoleto e di generarne uno nuovo.  
+ **1** specifica che le modifiche apportate all'articolo possono invalidare lo snapshot e, se sono presenti sottoscrizioni che richiedono un nuovo snapshot, consente di contrassegnare lo snapshot esistente come obsoleto e di generare un nuovo snapshot.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription` Segnala che l'azione eseguita da questa stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è un **bit**, il valore predefinito è **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription`Conferma che l'azione eseguita da questo stored procedure potrebbe richiedere la reinizializzazione delle sottoscrizioni esistenti. *force_reinit_subscription* è di **bit**e il valore predefinito è **0**.  
   
- **0** specifica che le modifiche apportate all'articolo non causano la necessità di reinizializzazione delle sottoscrizioni. Se la stored procedure rileva che la modifica richiede la reinizializzazione delle sottoscrizioni, viene generato un errore e non viene apportata alcuna modifica.  
+ **0** specifica che le modifiche apportate all'articolo non determinano la reinizializzazione delle sottoscrizioni. Se la stored procedure rileva che la modifica richiede la reinizializzazione delle sottoscrizioni, viene generato un errore e non viene apportata alcuna modifica.  
   
- **1** specifica che le modifiche apportate all'articolo comportano la reinizializzazione delle sottoscrizioni esistenti e autorizza la reinizializzazione della sottoscrizione.  
+ **1** specifica che le modifiche apportate all'articolo provocano la reinizializzazione delle sottoscrizioni esistenti e consente la reinizializzazione della sottoscrizione.  
   
-`[ @publisher = ] 'publisher'` Specifica un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher = ] 'publisher'`Specifica un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
->  *server di pubblicazione* non devono essere usati con un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
+>  il *server di pubblicazione* non deve essere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzato con un server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_articlefilter** viene utilizzata nella replica snapshot e transazionale.  
+ **sp_articlefilter** viene utilizzato nella replica snapshot e nella replica transazionale.  
   
- L'esecuzione **sp_articlefilter** per un articolo con le sottoscrizioni esistenti richiede che tali sottoscrizioni per la reinizializzazione.  
+ Per eseguire **sp_articlefilter** per un articolo con sottoscrizioni esistenti, è necessario reinizializzare le sottoscrizioni.  
   
- **sp_articlefilter** crea il filtro, inserisce l'ID della stored procedure di filtro nel **filtro** della colonna della [sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) tabella e quindi Inserisce il testo della clausola di restrizione nella **filter_clause** colonna.  
+ **sp_articlefilter** crea il filtro, inserisce l'ID del filtro stored procedure nella colonna **filtro** della tabella [Transact-SQL &#40;&#41; sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md) e quindi inserisce il testo della clausola di restrizione nel **filtro. colonna _clause** .  
   
- Per creare un articolo con filtro orizzontale, eseguire [sp_addarticle &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) con nessuna *filtro* parametro. Eseguire **sp_articlefilter**, specificando tutti i parametri inclusi *filter_clause*, quindi eseguire [sp_articleview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md), specificando tutti i parametri includono lo stesso *filter_clause*. Se il filtro è già presente e se il **tipo** nelle **sysarticles** viene **1** (articolo basato su log), il filtro precedente viene eliminato e viene creato un nuovo filtro.  
+ Per creare un articolo con un filtro orizzontale, eseguire [sp_addarticle &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) senza il parametro *Filter* . Eseguire **sp_articlefilter**, specificando tutti i parametri, incluso *filter_clause*, quindi eseguire [sp_articleview &#40;Transact&#41;-SQL](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md), fornendo tutti i parametri che includono il *filter_clause*identico. Se il filtro esiste già e il **tipo** in **sysarticles** è **1** (articolo basato su log), il filtro precedente viene eliminato e viene creato un nuovo filtro.  
   
- Se *filter_name* e *filter_clause* vengono omessi, il filtro precedente viene eliminato e l'ID del filtro è impostato su **0**.  
+ Se non vengono specificati *filter_name* e *filter_clause* , il filtro precedente viene eliminato e l'ID del filtro viene impostato su **0**.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articlefilter-transac_1.sql)]  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_articlefilter**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_articlefilter**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   

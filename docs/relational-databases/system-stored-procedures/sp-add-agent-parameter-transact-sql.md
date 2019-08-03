@@ -1,5 +1,5 @@
 ---
-title: la procedura sp_add_agent_parameter (Transact-SQL) | Microsoft Docs
+title: sp_add_agent_parameter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: a61b85090dc88dddbb28c923f4acdc6e8fa07cb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c1aafa1736ff626f7b0bea9bea8753ae2c509ac4
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941806"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770956"
 ---
 # <a name="spaddagentparameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Aggiunge un nuovo parametro e il relativo valore a un profilo agente. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
   
@@ -39,9 +39,9 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @profile_id = ] profile_id` È l'ID del profilo dal **MSagent_profiles** nella tabella di **msdb** database. *profile_id* viene **int**, non prevede alcun valore predefinito.  
+`[ @profile_id = ] profile_id`ID del profilo dalla tabella **MSagent_profiles** nel database **msdb** . *profile_id* è di **tipo int**e non prevede alcun valore predefinito.  
   
- Per individuare il tipo di agente *profile_id* rappresenta, trovare il *profile_id* nel [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) tabella e prendere nota di *agent_type* valore del campo. Sono disponibili i valori seguenti:  
+ Per individuare il tipo di agente rappresentato da questo *profile_id* , trovare il *profile_id* nella [tabella &#40;Transact-SQL&#41; MSagent_profiles](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) e prendere nota del valore del campo *agent_type* . Sono disponibili i valori seguenti:  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -51,7 +51,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 |**4**|Agente di merge|  
 |**9**|Agente di lettura coda|  
   
-`[ @parameter_name = ] 'parameter_name'` È il nome del parametro. *parameter_name* viene **sysname**, non prevede alcun valore predefinito. Per un elenco di parametri già definiti nei profili del sistema, vedere [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md). Per un elenco completo dei parametri validi per ogni agente, vedere gli argomenti seguenti:  
+`[ @parameter_name = ] 'parameter_name'`Nome del parametro. *parameter_name* è di **tipo sysname**e non prevede alcun valore predefinito. Per un elenco dei parametri già definiti nei profili di sistema, vedere [profili degli agenti di replica](../../relational-databases/replication/agents/replication-agent-profiles.md). Per un elenco completo dei parametri validi per ogni agente, vedere gli argomenti seguenti:  
   
 -   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -63,16 +63,16 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
 -   [Agente di lettura coda repliche](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
-`[ @parameter_value = ] 'parameter_value'` È il valore da assegnare al parametro. *parameter_value* viene **nvarchar(255**, non prevede alcun valore predefinito.  
+`[ @parameter_value = ] 'parameter_value'`Valore da assegnare al parametro. *parameter_value* è di **tipo nvarchar (255)** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **la procedura sp_add_agent_parameter** viene utilizzata nella replica snapshot, la replica transazionale e di tipo merge.  
+ **sp_add_agent_parameter** viene utilizzata per la replica snapshot, la replica transazionale e la replica di tipo merge.  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_add_agent_parameter**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_add_agent_parameter**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Usare i profili agenti di replica](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   

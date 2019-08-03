@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: dd3e27e935d7774c3882e8cc46430542351dd87c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5ca3487a22989261f0d6039f065ae0c102e534a1
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113147"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770869"
 ---
 # <a name="spreplsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Utilizzata per richiamare il rilevamento e la gestione di loopback nella replica transazionale bidirezionale. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -38,18 +38,18 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @server_name = ] 'server_name'` È il nome del server in cui viene applicata la transazione. *originating_server* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @server_name = ] 'server_name'`Nome del server in cui viene applicata la transazione. *originating_server* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @database_name = ] 'database_name'` È il nome del database in cui viene applicata la transazione. *originating_db* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @database_name = ] 'database_name'`Nome del database in cui viene applicata la transazione. *originating_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_replsetoriginator** viene eseguita dall'agente di distribuzione per registrare l'origine delle transazioni applicate dalla replica. Queste informazioni vengono utilizzate per richiamare il rilevamento di loopback per le sottoscrizioni transazionali bidirezionali per cui è stata impostata la proprietà di loopback.  
+ **sp_replsetoriginator** viene eseguito dal agente di distribuzione per registrare l'origine delle transazioni applicate dalla replica. Queste informazioni vengono utilizzate per richiamare il rilevamento di loopback per le sottoscrizioni transazionali bidirezionali per cui è stata impostata la proprietà di loopback.  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** nel server di pubblicazione, i membri del ruolo predefinito del server di **db_owner** ruolo predefinito del database nel database di pubblicazione, o gli utenti nell'elenco di accesso (PAL) alla pubblicazione può eseguire **sp_replsetoriginator**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** nel server di pubblicazione, i membri del ruolo predefinito del database **db_owner** nel database di pubblicazione oppure gli utenti nell'elenco di accesso alla pubblicazione possono eseguire **sp_replsetoriginator**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

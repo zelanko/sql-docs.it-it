@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2c97fec403da1913f7f39f1da706d107cd964aa4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 90dee1076743ae54201248c808b04c6197d42198
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902922"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770926"
 ---
 # <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Restituisce le proprietà del database di distribuzione specificato. La stored procedure viene eseguita nel database di distribuzione del server di distribuzione.  
   
@@ -37,7 +37,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @database = ] 'database_name'` È il nome del database per cui vengono restituite le proprietà. *database_name* viene **sysname**, il valore predefinito è **%** per tutti i database associati al server di distribuzione e in cui l'utente dispone delle autorizzazioni.  
+`[ @database = ] 'database_name'`Nome del database per il quale vengono restituite le proprietà. *database_name* è di **tipo sysname**e il valore **%** predefinito è per tutti i database associati al server di distribuzione e per i quali l'utente dispone delle autorizzazioni.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -46,7 +46,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**name**|**sysname**|Nome del database di distribuzione.|  
 |**min_distretention**|**int**|Periodo di memorizzazione minimo espresso in ore che deve trascorrere prima dell'eliminazione delle transazioni.|  
 |**max_distretention**|**int**|Periodo di memorizzazione massimo espresso in ore trascorso il quale le transazioni vengono eliminate.|  
-|**periodo memorizzazione cronologia**|**int**|Numero di ore di memorizzazione della cronologia.|  
+|**conservazione cronologia**|**int**|Numero di ore di memorizzazione della cronologia.|  
 |**history_cleanup_agent**|**sysname**|Nome dell'agente di pulizia del contenuto della cronologia.|  
 |**distribution_cleanup_agent**|**sysname**|Nome dell'agente di pulizia dei riferimenti alla distribuzione.|  
 |**status**|**int**|Solo per uso interno.|  
@@ -58,13 +58,13 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**log_file_size**|**int**|Dimensioni iniziali del file di log in MB.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_helpdistributiondb** viene utilizzata in tutti i tipi di replica.  
+ **sp_helpdistributiondb** viene utilizzato in tutti i tipi di replica.  
   
 ## <a name="permissions"></a>Permissions  
- I membri del **db_owner** ruolo predefinito del database o il **replmonitor** ruolo in un database di distribuzione e gli utenti nell'elenco di accesso alla pubblicazione di una pubblicazione che utilizza il database di distribuzione possono eseguire **sp_helpdistributiondb** per restituire le informazioni relative ai file. I membri del **pubbliche** possono eseguire **sp_helpdistributiondb** per restituire informazioni non correlate a file per i database di distribuzione a cui hanno accesso.  
+ I membri del ruolo predefinito del database **db_owner** o del ruolo **replmonitor** in un database di distribuzione e gli utenti nell'elenco di accesso alla pubblicazione di una pubblicazione che utilizza il database di distribuzione possono eseguire **sp_helpdistributiondb** per restituire informazioni correlate ai file. I membri del ruolo **public** possono eseguire **sp_helpdistributiondb** per restituire informazioni non correlate ai file per i database di distribuzione a cui hanno accesso.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

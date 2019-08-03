@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ee304c9847019b21f1e08f57a3e0fdf0b439d241
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0b9666c13a2e4d8183d19fade64bf49b13377b9a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101405"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771058"
 ---
 # <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Restituisce informazioni sui mapping dei tipi di dati definiti tra [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database (DBMS) i sistemi di gestione. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
+  Restituisce informazioni sui mapping dei tipi di dati definiti tra [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i sistemi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di gestione non di database (DBMS). Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,18 +43,18 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @source_dbms = ] 'source_dbms'` È il nome del DBMS da cui vengono eseguito il mapping di tipi di dati. *source_dbms* viene **sysname**, e può essere uno dei valori seguenti.  
+`[ @source_dbms = ] 'source_dbms'`Nome del sistema DBMS da cui viene eseguito il mapping dei tipi di dati. *source_dbms* è di **tipo sysname**. i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|L'origine è un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|L'origine è un database Oracle.|  
   
-`[ @source_version = ] 'source_version'` È la versione del prodotto del sistema DBMS di origine. *source_version*viene **varchar (10)** , e se non specificato, il tipo di dati i mapping per tutte le versioni dell'origine di DBMS vengono restituiti. Consente al set dei risultati di venire filtrato in base alla versione di origine del sistema DBMS.  
+`[ @source_version = ] 'source_version'`È la versione del prodotto del sistema DBMS di origine. *source_version*è di tipo **varchar (10)** e, se non è specificato, vengono restituiti i mapping dei tipi di dati per tutte le versioni del sistema DBMS di origine. Consente al set dei risultati di venire filtrato in base alla versione di origine del sistema DBMS.  
   
-`[ @source_type = ] 'source_type'` È il tipo di dati elencato nel sistema DBMS di origine. *source_type* viene **sysname**, se non specificato, vengono restituiti i mapping per tutti i tipi di dati nel DBMS di origine. Consente al set di risultati di venire filtrato in base al tipo di dati nel sistema DBMS di origine.  
+`[ @source_type = ] 'source_type'`Tipo di dati elencato nel sistema DBMS di origine. *source_type* è di **tipo sysname**. se non viene specificato, vengono restituiti i mapping per tutti i tipi di dati nel sistema DBMS di origine. Consente al set di risultati di venire filtrato in base al tipo di dati nel sistema DBMS di origine.  
   
-`[ @destination_dbms = ] 'destination_dbms'` È il nome del sistema DBMS di destinazione. *destination_dbms* viene **sysname**, e può essere uno dei valori seguenti.  
+`[ @destination_dbms = ] 'destination_dbms'`Nome del sistema DBMS di destinazione. *destination_dbms* è di **tipo sysname**. i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -63,11 +63,11 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |**DB2**|La destinazione è un database IBM DB2.|  
 |**SYBASE**|La destinazione è un database Sybase.|  
   
-`[ @destination_version = ] 'destination_version'` È la versione del prodotto del sistema DBMS di destinazione. *destination_version*viene **varchar (10)** , se non specificato, vengono restituiti i mapping per tutte le versioni del sistema DBMS di destinazione. Consente al set dei risultati di venire filtrato in base alla versione di destinazione del sistema DBMS.  
+`[ @destination_version = ] 'destination_version'`È la versione del prodotto del sistema DBMS di destinazione. *destination_version*è di tipo **varchar (10)** e, se non è specificato, vengono restituiti i mapping per tutte le versioni del sistema DBMS di destinazione. Consente al set dei risultati di venire filtrato in base alla versione di destinazione del sistema DBMS.  
   
-`[ @destination_type = ] 'destination_type'` È il tipo di dati elencato nel sistema DBMS di destinazione. *destination_type*viene **sysname**, se non specificato, vengono restituiti i mapping per tutti i tipi di dati nel DBMS di destinazione. Consente al set di risultati di venire filtrato in base al tipo di dati nel sistema DBMS di destinazione.  
+`[ @destination_type = ] 'destination_type'`Tipo di dati elencato nel sistema DBMS di destinazione. *destination_type*è di **tipo sysname**. se non viene specificato, vengono restituiti i mapping per tutti i tipi di dati nel sistema DBMS di destinazione. Consente al set di risultati di venire filtrato in base al tipo di dati nel sistema DBMS di destinazione.  
   
-`[ @defaults_only = ] defaults_only` È il mapping dei tipi di dati predefiniti vengono restituiti solo. *defaults_only* viene **bit**, il valore predefinito è **0**. **1** indica che solo i dati predefiniti i mapping dei tipi vengono restituiti. **0** indica che il valore predefinito e qualsiasi dato definito dall'utente mapping dei tipi vengono restituiti.  
+`[ @defaults_only = ] defaults_only`Indica se vengono restituiti solo i mapping dei tipi di dati predefiniti. *defaults_only* è di **bit**e il valore predefinito è **0**. **1** indica che vengono restituiti solo i mapping dei tipi di dati predefiniti. **0** indica che vengono restituiti i mapping predefiniti e i mapping dei tipi di dati definiti dall'utente.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -78,18 +78,18 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |**source_type**|Tipo di dati nel sistema DBMS di origine.|  
 |**destination_dbms**|Nome del sistema DBMS di destinazione.|  
 |**destination_type**|Tipo di dati nel sistema DBMS di destinazione.|  
-|**is_default**|Indica il mapping predefinito o un mapping alternativo. Un valore pari **0** indica che questo mapping è definito dall'utente.|  
+|**is_default**|Indica il mapping predefinito o un mapping alternativo. Il valore **0** indica che il mapping è definito dall'utente.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_helpdatatypemap** definisce i mapping dei tipi di dati dal Server di pubblicazione non SQL e da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agli editori di non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sottoscrittori.  
+ **sp_helpdatatypemap** definisce i mapping dei tipi di dati da autori non SQL Server e da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autori a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sottoscrittori non.  
   
- Se non è supportata la combinazione specificata di origine e destinazione DBMS **sp_helpdatatypemap** restituisce un set di risultati vuoto.  
+ Quando la combinazione specificata di DBMS di origine e di destinazione non è supportata, **sp_helpdatatypemap** restituisce un set di risultati vuoto.  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** nel server di distribuzione membri del ruolo predefinito del server di **db_owner** ruolo predefinito del database nel database di distribuzione possono eseguire **sp_helpdatatypemap**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** nel server di distribuzione o i membri del ruolo predefinito del database **db_owner** nel database di distribuzione possono eseguire **sp_helpdatatypemap**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_getdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4c9d0a82422675c9698d7216b92e1c9401392a79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6f5ee076163ff3cf0f69daab7ceff115bf5876a6
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004827"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769018"
 ---
 # <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Inizializza una richiesta di convalida dei dati per l'articolo specificato. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione e nel database di sottoscrizione del Sottoscrittore.  
   
@@ -44,50 +44,50 @@ sp_article_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` È il nome della pubblicazione in cui l'articolo esista. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'`Nome della pubblicazione in cui è presente l'articolo. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @article = ] 'article'` È il nome dell'articolo da convalidare. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @article = ] 'article'`Nome dell'articolo da convalidare. *article* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @rowcount_only = ] type_of_check_requested` Specifica se il conteggio delle righe per la tabella viene restituito solo. *type_of_check_requested* viene **smallint**, il valore predefinito è **1**.  
+`[ @rowcount_only = ] type_of_check_requested`Specifica se viene restituito solo il conteggio delle righe per la tabella. *type_of_check_requested* è di **smallint**e il valore predefinito è **1**.  
   
- Se **0**, eseguire un conteggio delle righe e una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] checksum compatibile con 7.0.  
+ Se è **0**, eseguire un conteggio delle [!INCLUDE[msCoName](../../includes/msconame-md.md)] righe e un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] checksum compatibile con 7,0.  
   
- Se **1**, eseguire solo un controllo di conteggio delle righe.  
+ Se è **1**, eseguire solo un controllo RowCount.  
   
- Se **2**, eseguire un conteggio delle righe e checksum binario.  
+ Se è **2**, eseguire un conteggio delle righe e un checksum binario.  
   
-`[ @full_or_fast = ] full_or_fast` Il metodo consente di calcolare il conteggio delle righe. *full_or_fast* viene **tinyint**, i possibili valori sono i seguenti.  
+`[ @full_or_fast = ] full_or_fast`Metodo utilizzato per calcolare il conteggio delle righe. *full_or_fast* è di **tinyint**. i possibili valori sono i seguenti.  
   
 |**Valore**|**Descrizione**|  
 |---------------|---------------------|  
 |**0**|Esegue un conteggio completo tramite COUNT(*).|  
-|**1**|Esegue un conteggio rapido in **sysindexes**. Conteggio delle righe **sysindexes** è più veloce rispetto al conteggio delle righe nella tabella effettiva. Tuttavia **sysindexes** viene aggiornato in modo differito, e il conteggio delle righe potrebbe non essere accurata.|  
+|**1**|Esegue un conteggio rapido da **sysindexes. Rows**. Il conteggio delle righe in **sysindexes** è più veloce rispetto al conteggio delle righe nella tabella effettiva. Tuttavia, **sysindexes** viene aggiornato in modalità differita e il conteggio delle righe potrebbe non essere accurato.|  
 |**2** (impostazione predefinita)|Esegue un conteggio rapido condizionale eseguendo innanzitutto un tentativo con il metodo rapido. Se il metodo rapido evidenzia delle differenze, viene applicato il metodo completo. Se *expected_rowcount* è NULL e la stored procedure viene utilizzata per ottenere il valore, viene utilizzato sempre un Count (\*) completo.|  
   
-`[ @shutdown_agent = ] shutdown_agent` Indica se l'agente di distribuzione viene interrotta immediatamente dopo il completamento della convalida. *shutdown_agent* viene **bit**, il valore predefinito è **0**. Se **0**, l'agente di distribuzione non viene arrestato. Se **1**, l'agente di distribuzione viene interrotta al termine della convalida dell'articolo.  
+`[ @shutdown_agent = ] shutdown_agent`Specifica se l'agente di distribuzione deve essere chiuso immediatamente dopo il completamento della convalida. *shutdown_agent* è di **bit**e il valore predefinito è **0**. Se è **0**, il agente di distribuzione non viene arrestato. Se è **1**, il agente di distribuzione si arresta dopo la convalida dell'articolo.  
   
-`[ @subscription_level = ] subscription_level` Indica se la convalida viene prelevata da un set di sottoscrittori. *subscription_level* viene **bit**, il valore predefinito è **0**. Se **0**, la convalida viene applicata a tutti i sottoscrittori. Se **1**, la convalida viene applicata solo a un subset dei sottoscrittori specificati tramite chiamate a **sp_marksubscriptionvalidation** nella transazione aperta corrente.  
+`[ @subscription_level = ] subscription_level`Specifica se la convalida viene prelevata o meno da un set di sottoscrittori. *subscription_level* è di **bit**e il valore predefinito è **0**. Se è **0**, la convalida viene applicata a tutti i sottoscrittori. Se è **1**, la convalida viene applicata solo a un subset di sottoscrittori specificato dalle chiamate a **sp_marksubscriptionvalidation** nella transazione aperta corrente.  
   
 `[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @publisher = ] 'publisher'` Specifica un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher = ] 'publisher'`Specifica un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
->  *server di pubblicazione* non deve essere utilizzata quando si richiede la convalida in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
+>  il *server di pubblicazione* non deve essere utilizzato quando viene richiesta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la convalida in un server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_article_validation** viene utilizzata nella replica transazionale.  
+ **sp_article_validation** viene utilizzato nella replica transazionale.  
   
- **sp_article_validation** fa sì che le informazioni di convalida di sull'articolo specificato e invia una richiesta di convalida nel log delle transazioni. Quando l'agente di distribuzione riceve la richiesta, confronta le informazioni di convalida incluse nella richiesta con quelle della tabella del Sottoscrittore. I risultati della convalida vengono visualizzati negli avvisi di Monitoraggio replica e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+ **sp_article_validation** fa sì che le informazioni di convalida vengano raccolte nell'articolo specificato e invii una richiesta di convalida al log delle transazioni. Quando l'agente di distribuzione riceve la richiesta, confronta le informazioni di convalida incluse nella richiesta con quelle della tabella del Sottoscrittore. I risultati della convalida vengono visualizzati negli avvisi di Monitoraggio replica e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="permissions"></a>Permissions  
- Solo gli utenti con autorizzazioni SELEZIONANO ALL nella tabella di origine per l'articolo in fase di convalida può eseguire **sp_article_validation**.  
+ Solo gli utenti con autorizzazioni SELECT ALL nella tabella di origine per l'articolo da convalidare possono eseguire **sp_article_validation**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Convalidare i dati replicati](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
+ [Convalida dei dati replicati](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
  [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
  [sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   

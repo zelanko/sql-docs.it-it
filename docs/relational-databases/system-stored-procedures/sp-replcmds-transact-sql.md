@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8aad9f67b155c1f247426053b948cc6dd29e4cbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3d60de0f459ec1224f6023e8ee848227fdc17ece
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006894"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771015"
 ---
 # <a name="spreplcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Restituisce i comandi per le transazioni contrassegnate per la replica. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
 > [!IMPORTANT]  
->  Il **sp_replcmds** procedure deve essere eseguita solo per risolvere i problemi con la replica.  
+>  La stored procedure **sp_replcmds** deve essere eseguita solo per risolvere i problemi relativi alla replica.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,19 +40,19 @@ sp_replcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @maxtrans = ] maxtrans` È il numero di transazioni da ottenere informazioni. *maxtrans* viene **int**, il valore predefinito è **1**, che specifica la transazione successiva in attesa per la distribuzione.  
+`[ @maxtrans = ] maxtrans`Numero di transazioni per cui restituire informazioni. *maxtrans* è di **tipo int**e il valore predefinito è **1**, che specifica la transazione successiva in attesa di distribuzione.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**id articolo**|**int**|ID dell'articolo.|  
+|**ID articolo**|**int**|ID dell'articolo.|  
 |**partial_command**|**bit**|Indica se si tratta di un comando parziale.|  
 |**comando**|**varbinary(1024)**|Valore del comando.|  
 |**xactid**|**binary(10)**|ID della transazione.|  
 |**xact_seqno**|**varbinary(16)**|Numero di sequenza della transazione.|  
 |**publication_id**|**int**|ID della pubblicazione.|  
-|**command_id**|**int**|ID del comando nel [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
+|**command_id**|**int**|ID del comando in [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
 |**command_type**|**int**|Tipo di comando.|  
 |**originator_srvname**|**sysname**|Server in cui ha origine la transazione.|  
 |**originator_db**|**sysname**|Database in cui ha origine la transazione.|  
@@ -62,21 +62,21 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**originator_lsn**|**varbinary(16)**|Identifica il numero di sequenza del file di log (LSN) per il comando nella pubblicazione di origine.|  
   
 ## <a name="remarks"></a>Note  
- **sp_replcmds** viene usato dal processo di lettura log nella replica transazionale.  
+ **sp_replcmds** viene utilizzato dal processo di lettura log nella replica transazionale.  
   
- La replica considera il primo client che esegue **sp_replcmds** all'interno di un database come agente di lettura log.  
+ La replica considera il primo client che esegue **sp_replcmds** all'interno di un database specificato come lettura log.  
   
  Questa procedura può generare comandi per tabelle qualificate con il nome del proprietario oppure non qualifica il nome della tabella (impostazione predefinita). L'aggiunta di nomi di tabella qualificati consente di replicare i dati di tabelle di proprietà di un utente specifico di un database in tabelle di proprietà dello stesso utente in un altro database.  
   
 > [!NOTE]  
 >  Poiché il nome di tabella nel database di origine è qualificato dal nome del proprietario, per la tabella del database di destinazione è necessario specificare lo stesso nome di proprietario.  
   
- I client che tentano di eseguire **sp_replcmds** nello stesso database ricevono l'errore 18752 fino a quando il primo client si disconnette. Dopo il primo client si disconnette, è possibile eseguire un altro client **sp_replcmds**, e diventa il nuovo agente di lettura log.  
+ I client che tentano di eseguire **sp_replcmds** nello stesso database ricevono l'errore 18752 fino a quando il primo client si disconnette. Quando il primo client si disconnette, un altro client può eseguire **sp_replcmds**e diventa la nuova lettura log.  
   
- Viene aggiunto un numero di messaggi di avviso 18759 sia la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log degli errori e il [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro applicazioni di Windows se **sp_replcmds** è in grado di replicare un comando di testo, perché non è il puntatore di testo recuperate nella stessa transazione.  
+ Viene aggiunto un messaggio di avviso numero 18759 al log [!INCLUDE[msCoName](../../includes/msconame-md.md)] degli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] errori di e [!INCLUDE[msCoName](../../includes/msconame-md.md)] al registro delle applicazioni di Windows se **sp_replcmds** non è in grado di replicare un comando di testo perché il puntatore di testo non è stato recuperato nello stesso transazione.  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_replcmds**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_replcmds**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Messaggi di errore](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   

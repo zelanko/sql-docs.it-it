@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7b2f098fab2856b51b389e2161fdbe3281e1e3cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9db4f3a40311e94d94d8910f4d1625f89f29926a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120165"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768965"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Modifica le proprietà del database di distribuzione. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
   
@@ -39,30 +39,30 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @database = ] 'database'` È il nome del database di distribuzione. *database* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @database = ] 'database'`Nome del database di distribuzione. il *database* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @property = ] 'property'` È la proprietà da modificare per il database specificato. *proprietà* viene **sysname**, i possibili valori sono i seguenti.  
+`[ @property = ] 'property'`Proprietà da modificare per il database specificato. *Property* è di **tipo sysname**. i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
 |**history_retention**|Periodo di memorizzazione delle tabelle di cronologia.|  
 |**max_distretention**|Periodo di memorizzazione massimo per la distribuzione.|  
 |**min_distretention**|Periodo di memorizzazione minimo per la distribuzione.|  
-|NULL (predefinito)|Tutti disponibili *proprietà* vengono stampati i valori.|  
+|NULL (predefinito)|Vengono stampati tutti i valori delle *Proprietà* disponibili.|  
   
-`[ @value = ] 'value'` È il nuovo valore per la proprietà specificata. *valore* viene **nvarchar(255**, con un valore predefinito è NULL.  
+`[ @value = ] 'value'`Nuovo valore per la proprietà specificata. *value* è di **tipo nvarchar (255)** e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_changedistributiondb** viene utilizzata in tutti i tipi di replica.  
+ **sp_changedistributiondb** viene utilizzato in tutti i tipi di replica.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_changedistributiondb](../../relational-databases/replication/codesnippet/tsql/sp-changedistributiondb-_1.sql)]  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_changedistributiondb**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_changedistributiondb**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 02d46b5df95335920dca9ef9cf80e9fa6dabb94f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9bef68803beedbfdb0d6034b2a92665f033d9641
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124797"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768291"
 ---
 # <a name="spdropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Rimuove la designazione del Sottoscrittore da un server registrato. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -42,26 +42,26 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @subscriber = ] 'subscriber'` È il nome del sottoscrittore che si desidera eliminare. *Sottoscrittore* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @subscriber = ] 'subscriber'`Nome del Sottoscrittore da eliminare. *Subscriber* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 `[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_dropsubscriber** viene utilizzata in tutti i tipi di replica.  
+ **sp_dropsubscriber** viene utilizzato in tutti i tipi di replica.  
   
- Questa stored procedure rimuove il server **sub** opzione e rimuove il mapping di account di accesso remoto dell'amministratore di sistema **repl_subscriber**.  
+ Questa stored procedure rimuove l'opzione server **Sub** e rimuove il mapping dell'account di accesso remoto dell'amministratore di sistema a **repl_subscriber**.  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_dropsubscriber**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_dropsubscriber**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eliminare una sottoscrizione Push](../../relational-databases/replication/delete-a-push-subscription.md)   
- [Eliminare una sottoscrizione Pull](../../relational-databases/replication/delete-a-pull-subscription.md)   
+ [Eliminare una sottoscrizione push](../../relational-databases/replication/delete-a-push-subscription.md)   
+ [Eliminare una sottoscrizione pull](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
  [sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   

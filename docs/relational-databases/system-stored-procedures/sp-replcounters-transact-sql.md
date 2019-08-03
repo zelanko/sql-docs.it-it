@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 62f4cf0f471a17c927d1eb8ad2801a378657b0cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 12ddbfe11a2b1a29dadaacde845f96e70959bebb
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006904"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770998"
 ---
 # <a name="spreplcounters-transact-sql"></a>sp_replcounters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Restituisce le statistiche di replica relative a latenza, velocità effettiva e numero delle transazioni per ogni database pubblicato. Questa stored procedure viene eseguita in qualsiasi database del server di pubblicazione.  
   
@@ -43,16 +43,16 @@ sp_replcounters
 |-----------------|---------------|-----------------|  
 |**Database**|**sysname**|Nome del database.|  
 |**Transazioni replicate**|**int**|Numero di transazioni nel log in attesa di recapito al database di distribuzione.|  
-|**Frequenza di replica transazioni/sec**|**float**|Numero medio di transazioni al secondo recapitate al database di distribuzione.|  
+|**Velocità di replica Trans/sec**|**float**|Numero medio di transazioni al secondo recapitate al database di distribuzione.|  
 |**Latenza di replica**|**float**|Tempo medio di permanenza delle transazioni nel log prima della distribuzione, espresso in secondi.|  
 |**Replbeginlsn**|**binary(10)**|Numero di sequenza del file di log (LSN) corrispondente al punto di troncamento corrente nel log.|  
 |**Replnextlsn**|**binary(10)**|LSN del record di commit successivo in attesa di recapito al database di distribuzione.|  
   
 ## <a name="remarks"></a>Note  
- **sp_replcounters** viene utilizzata nella replica transazionale.  
+ **sp_replcounters** viene utilizzato nella replica transazionale.  
   
 ## <a name="permissions"></a>Permissions  
- Richiede l'appartenenza al **db_owner** ruolo predefinito del database oppure **sysadmin** ruolo predefinito del server.  
+ È richiesta l'appartenenza al ruolo predefinito del database **db_owner** o del ruolo predefinito del server **sysadmin** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   

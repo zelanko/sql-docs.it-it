@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6b009fc8d08b9494a6ad3a33169fbb7d783b92be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 55d7ad0dfd941102cfeb6661e65980f980fa8b2d
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902899"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770981"
 ---
 # <a name="sphelpdynamicsnapshotjob-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Restituisce informazioni sui processi di agente che generano snapshot dei dati filtrati. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -45,15 +45,15 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **%** , che restituisce informazioni su tutti i processi di snapshot dei dati filtrati che corrispondono alla stringa *dynamic_ snapshot_jobid*e *dynamic_snapshot_jobname*per tutte le pubblicazioni.  
+`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è **%** di **tipo sysname**e il valore predefinito è, che restituisce informazioni su tutti i processi di snapshot dei dati filtrati che corrispondono ai valori specificati per *dynamic_snapshot_jobid*e *dynamic_snapshot_jobname* Pubblicazioni.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` È il nome di un processo di snapshot dei dati filtrati. *dynamic_snapshot_jobname*viene **sysname**, con valore predefinito è **%** ', che restituisce tutti i processi dinamici per una pubblicazione con l'oggetto specificato *dynamic_ snapshot_jobid*. Se quando è stato creato il processo non è stato specificato in modo esplicito un nome di processo, il nome del processo verrà indicato nel formato seguente:  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`Nome di un processo di snapshot dei dati filtrati. *dynamic_snapshot_jobname*è di **%** **tipo sysname**e il valore predefinito è', che restituisce tutti i processi dinamici per una pubblicazione con il *dynamic_snapshot_jobid*specificato. Se quando è stato creato il processo non è stato specificato in modo esplicito un nome di processo, il nome del processo verrà indicato nel formato seguente:  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
 ```  
   
-`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` È un identificatore per un processo di snapshot dei dati filtrati. *dynamic_snapshot_jobid*viene **uniqueidentifier**, con valore predefinito è NULL, che restituisce tutti i processi di snapshot che corrispondono alla stringa *dynamic_snapshot_jobname*.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`Identificatore di un processo di snapshot dei dati filtrati. *dynamic_snapshot_jobid*è di tipo **uniqueidentifier**e il valore predefinito è null, che restituisce tutti i processi di snapshot corrispondenti al *dynamic_snapshot_jobname*specificato.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -61,15 +61,15 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identifica il processo di snapshot dei dati filtrati.|  
 |**job_name**|**sysname**|Nome del processo di snapshot dei dati filtrati.|  
-|**job_id**|**uniqueidentifier**|Identifica la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo dell'agente nel server di distribuzione.|  
-|**dynamic_filter_login**|**sysname**|Valore utilizzato per valutare il [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) funzione in un filtro di riga con parametri definito per la pubblicazione.|  
-|**dynamic_filter_hostname**|**sysname**|Valore utilizzato per valutare il [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) funzione in un filtro di riga con parametri definito per la pubblicazione.|  
+|**job_id**|**uniqueidentifier**|Identifica il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processo di Agent nel server di distribuzione.|  
+|**dynamic_filter_login**|**sysname**|Valore utilizzato per la valutazione della funzione [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) in un filtro di riga con parametri definito per la pubblicazione.|  
+|**dynamic_filter_hostname**|**sysname**|Valore utilizzato per la valutazione della funzione [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) in un filtro di riga con parametri definito per la pubblicazione.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Percorso della cartella da cui i file di snapshot vengono letti se viene utilizzato un filtro di riga con parametri.|  
-|**frequency_type**|**int**|Frequenza pianificata per l'esecuzione dell'agente. I possibile valori sono i seguenti.<br /><br /> **1** = una sola volta<br /><br /> **2** = su richiesta<br /><br /> **4** = giornaliera<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativa<br /><br /> **64** = avvio automatico<br /><br /> **128** = periodica|  
+|**frequency_type**|**int**|Frequenza pianificata per l'esecuzione dell'agente. I possibile valori sono i seguenti.<br /><br /> **1** = una volta<br /><br /> **2** = su richiesta<br /><br /> **4** = giornaliero<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativo<br /><br /> **64** = avvio automatico<br /><br /> **128** = ricorrente|  
 |**frequency_interval**|**int**|Giorni in cui l'agente viene eseguito. I possibili valori sono i seguenti.<br /><br /> **1** = domenica<br /><br /> **2** = lunedì<br /><br /> **3** = martedì<br /><br /> **4** = mercoledì<br /><br /> **5** = giovedì<br /><br /> **6** = venerdì<br /><br /> **7** = sabato<br /><br /> **8** = giorno<br /><br /> **9** = giorni feriali<br /><br /> **10** = giorni festivi|  
-|**frequency_subday_type**|**int**|È il tipo che definisce la frequenza con cui l'agente viene eseguito quando *frequency_type* viene **4** (giornaliera), i possibili valori sono i seguenti.<br /><br /> **1** = all'ora specificata<br /><br /> **2** = secondi<br /><br /> **4** = minuti<br /><br /> **8** = ore|  
-|**frequency_subday_interval**|**int**|Numero di intervalli di *frequency_subday_type* tra le esecuzioni pianificate dell'agente.|  
-|**frequency_relative_interval**|**int**|Settimana in cui viene eseguito l'agente in un determinato mese quando *frequency_type* viene **32** (mensile relativo), i possibili valori sono i seguenti.<br /><br /> **1** = prima<br /><br /> **2** = secondi<br /><br /> **4** = terza<br /><br /> **8** = quarta<br /><br /> **16** = ultima|  
+|**frequency_subday_type**|**int**|Tipo che definisce la frequenza con cui l'agente viene eseguito quando *frequency_type* è **4** (giornaliera). i possibili valori sono i seguenti.<br /><br /> **1** = all'ora specificata<br /><br /> **2** = secondi<br /><br /> **4** = minuti<br /><br /> **8** = ore|  
+|**frequency_subday_interval**|**int**|Numero di intervalli di *frequency_subday_type* che si verificano tra l'esecuzione pianificata dell'agente.|  
+|**frequency_relative_interval**|**int**|Settimana in cui l'agente viene eseguito in un determinato mese quando *frequency_type* è **32** (mensile relativo). i possibili valori sono i seguenti.<br /><br /> **1** = prima<br /><br /> **2** = secondo<br /><br /> **4** = terzo<br /><br /> **8** = quarto<br /><br /> **16** = Ultima|  
 |**frequency_recurrence_factor**|**int**|Numero di settimane o mesi tra le esecuzioni pianificate dell'agente.|  
 |**active_start_date**|**int**|Data della prima esecuzione pianificata dell'agente nel formato YYYYMMDD.|  
 |**active_end_date**|**int**|Data dell'ultima esecuzione pianificata dell'agente nel formato YYYYMMDD.|  
@@ -77,15 +77,15 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 |**active_end_time**|**int**|Ora dell'ultima esecuzione pianificata dell'agente nel formato HHMMSS.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_helpdynamicsnapshot_job** viene utilizzata nella replica di tipo merge.  
+ **sp_helpdynamicsnapshot_job** viene utilizzata per la replica di tipo merge.  
   
  Se vengono utilizzati tutti i valori predefiniti dei parametri, verranno restituite informazioni su tutti i processi di snapshot dei dati partizionati per l'intero database di pubblicazione.  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server, il **db_owner** corrette del database e l'elenco di accesso per la pubblicazione possono eseguire **sp_helpdynamicsnapshot_job**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** , del ruolo predefinito del database **db_owner** e dell'elenco di accesso alla pubblicazione possono eseguire **sp_helpdynamicsnapshot_job**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9bfe002a-25b5-4226-bcfb-feb2060d6b4a
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c92355cf5113960d92229157c86346135daad19e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 49c06ac45a91014199caa75c5893971f6f3de715
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006952"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771029"
 ---
 # <a name="spremovedistpublisherdbreplication-transact-sql"></a>sp_removedistpublisherdbreplication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Rimuove i metadati di pubblicazione appartenenti a una pubblicazione specifica nel server di distribuzione. La stored procedure viene eseguita nel database di distribuzione del server di distribuzione.  
   
@@ -38,17 +38,17 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publisher_db = ] 'publisher_db'` È il nome del database di pubblicazione. *publisher_db* viene **sysname** non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'`Nome del database di pubblicazione. *publisher_db* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_removedistpublisherdbreplication** utilizzata dalla replica transazionale e snapshot.  
+ **sp_removedistpublisherdbreplication** viene utilizzata dalla replica transazionale e snapshot.  
   
- **sp_removedistpublisherdbreplication** viene utilizzato quando sarà necessario creare nuovamente un database pubblicato senza eliminare il database di distribuzione. Vengono rimossi i metadati seguenti:  
+ **sp_removedistpublisherdbreplication** viene utilizzato quando è necessario ricreare un database pubblicato senza eliminare anche il database di distribuzione. Vengono rimossi i metadati seguenti:  
   
 -   Tutti i metadati della pubblicazione.  
   
@@ -59,7 +59,7 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
 -   I metadati di tutti i processi dell'agente di replica che appartengono alla pubblicazione.  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** nel server di distribuzione membri del ruolo predefinito del server di **db_owner** ruolo predefinito del database nel database di distribuzione possono eseguire **sp _ removedistpublisherdbreplication**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** nel server di distribuzione o i membri del ruolo predefinito del database **db_owner** nel database di distribuzione possono eseguire **sp_removedistpublisherdbreplication**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

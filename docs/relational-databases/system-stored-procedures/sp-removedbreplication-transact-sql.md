@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7d3931ff867ef1475165eb6cbac97f4ba4564bf9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fdae843c3918013ec850c5d807853c10a8f3f190
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006960"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771045"
 ---
 # <a name="spremovedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Questa stored procedure rimuove tutti gli oggetti di replica nel database di pubblicazione dell'istanza del server di pubblicazione di SQL Server nel database di sottoscrizione dell'istanza del sottoscrittore di SQL Server. Avviare l'esecuzione nel database appropriato oppure, se l'esecuzione è nel contesto di un altro database nella stessa istanza, specificare il database in cui gli oggetti di replica devono essere rimossi. Questa procedura non rimuove gli oggetti di altri database, ad esempio il database di distribuzione.  
   
@@ -41,31 +41,31 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @dbname = ] 'dbname'` È il nome del database. *dbname* è di tipo **sysname**e il valore predefinito è NULL. Quando è NULL, viene utilizzato il database corrente.  
+`[ @dbname = ] 'dbname'`Nome del database. *dbname* è di tipo **sysname**e il valore predefinito è NULL. Quando è NULL, viene utilizzato il database corrente.  
   
-`[ @type = ] type` È il tipo di replica di database a cui gli oggetti vengono rimossi. *tipo di* viene **nvarchar(5** e può essere uno dei valori seguenti.  
+`[ @type = ] type`Tipo di replica per cui vengono rimossi gli oggetti di database. il *tipo* è **nvarchar (5)** . i possibili valori sono i seguenti.  
   
 |||  
 |-|-|  
 |**tran**|Rimuove gli oggetti di pubblicazione correlati alla replica transazionale.|  
 |**merge**|Rimuove gli oggetti di pubblicazione correlati alla replica di tipo merge.|  
-|**entrambi** (impostazione predefinita)|Rimuove tutti gli oggetti di pubblicazione correlati alla replica.|  
+|**entrambi** predefinita|Rimuove tutti gli oggetti di pubblicazione correlati alla replica.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_removedbreplication** viene utilizzata in tutti i tipi di replica.  
+ **sp_removedbreplication** viene utilizzato in tutti i tipi di replica.  
   
- **sp_removedbreplication** è utile quando si ripristina un database replicato che non è presenti oggetti di replica che devono essere ripristinati.  
+ **sp_removedbreplication** è utile quando si ripristina un database replicato privo di oggetti di replica che devono essere ripristinati.  
   
- **sp_removedbreplication** non può essere usato su un database contrassegnato come di sola lettura.  
+ Impossibile utilizzare **sp_removedbreplication** per un database contrassegnato come di sola lettura.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_removedbreplication**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_removedbreplication**.  
   
 ## <a name="example"></a>Esempio  
   

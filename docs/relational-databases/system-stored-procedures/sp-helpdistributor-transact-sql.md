@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 42c350876037c83505860c65b26f4302d75b6eed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0681e82f9e36fd2a2f66bb8b7d3faa2f07a72f13
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122563"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770936"
 ---
 # <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Elenca le informazioni sul server di distribuzione, database di distribuzione, directory di lavoro e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account utente dell'agente. Questa stored procedure viene eseguita nel database di pubblicazione o in qualsiasi database del server di pubblicazione.  
+  Elenca le informazioni sul server di distribuzione, il database di distribuzione, [!INCLUDE[msCoName](../../includes/msconame-md.md)] la directory di lavoro e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'account utente di Agent. Questa stored procedure viene eseguita nel database di pubblicazione o in qualsiasi database del server di pubblicazione.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,59 +49,59 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @distributor = ] 'distributor' OUTPUT` È il nome del server di distribuzione. Server di distribuzione **sysname**, il valore predefinito è **%** , che è l'unico valore che restituisce un set di risultati.  
+`[ @distributor = ] 'distributor' OUTPUT`Nome del server di distribuzione. Distributor è di **tipo sysname**e il valore **%** predefinito è, che è l'unico valore che restituisce un set di risultati.  
   
-`[ @distribdb = ] 'distribdb' OUTPUT` È il nome del database di distribuzione. *distribdb* viene **sysname**, il valore predefinito è **%** , che è l'unico valore che restituisce un set di risultati.  
+`[ @distribdb = ] 'distribdb' OUTPUT`Nome del database di distribuzione. *distribdb* è di **tipo sysname**e il valore **%** predefinito è, che è l'unico valore che restituisce un set di risultati.  
   
-`[ @directory = ] 'directory' OUTPUT` È la directory di lavoro. *directory* viene **nvarchar(255**, il valore predefinito è **%** , che è l'unico valore che restituisce un set di risultati.  
+`[ @directory = ] 'directory' OUTPUT`È la directory di lavoro. la *directory* è di **tipo nvarchar (255)** e il **%** valore predefinito è, che è l'unico valore che restituisce un set di risultati.  
   
-`[ @account = ] 'account' OUTPUT` È il [!INCLUDE[msCoName](../../includes/msconame-md.md)] account utente di Windows. *account*viene **nvarchar(255**, il valore predefinito è **%** , che è l'unico valore che restituisce un set di risultati.  
+`[ @account = ] 'account' OUTPUT`Account utente [!INCLUDE[msCoName](../../includes/msconame-md.md)] di Windows. l' *account*è di **tipo nvarchar (255)** e il **%** valore predefinito è, che è l'unico valore che restituisce un set di risultati.  
   
-`[ @min_distretention = ] _min_distretentionOUTPUT` È il periodo di memorizzazione minimo per la distribuzione espresso in ore. *min_distretention* viene **int**, il valore predefinito è **-1**.  
+`[ @min_distretention = ] _min_distretentionOUTPUT`Periodo di memorizzazione minimo per la distribuzione, in ore. *min_distretention* è di **tipo int**e il valore predefinito è **-1**.  
   
-`[ @max_distretention = ] _max_distretentionOUTPUT` È il periodo di memorizzazione massimo per la distribuzione espresso in ore. *max_distretention* viene **int**, il valore predefinito è **-1**.  
+`[ @max_distretention = ] _max_distretentionOUTPUT`Periodo di memorizzazione massimo per la distribuzione, in ore. *max_distretention* è di **tipo int**e il valore predefinito è **-1**.  
   
-`[ @history_retention = ] _history_retentionOUTPUT` È il periodo di memorizzazione della cronologia espresso in ore. *history_retention* viene **int**, il valore predefinito è **-1**.  
+`[ @history_retention = ] _history_retentionOUTPUT`Periodo di memorizzazione della cronologia, in ore. *history_retention* è di **tipo int**e il valore predefinito è **-1**.  
   
-`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` È il nome dell'agente di pulizia della cronologia. *history_cleanupagent* viene **nvarchar(100)** , il valore predefinito è **%** , che è l'unico valore che restituisce un set di risultati.  
+`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT`Nome dell'agente di pulizia della cronologia. *history_cleanupagent* è di **tipo nvarchar (100)** e il valore **%** predefinito è, che è l'unico valore che restituisce un set di risultati.  
   
-`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` È il nome dell'agente di pulizia di distribuzione. *distrib_cleanupagent* viene **nvarchar(100)** , il valore predefinito è **%** , che è l'unico valore che restituisce un set di risultati.  
+`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT`Nome dell'agente di pulizia della distribuzione. *distrib_cleanupagent* è di **tipo nvarchar (100)** e il valore **%** predefinito è, che è l'unico valore che restituisce un set di risultati.  
   
-`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @local = ] 'local'` È se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ottenere i valori del server locale. *locale* viene **nvarchar(5**, con un valore predefinito è NULL.  
+`[ @local = ] 'local'`Indica se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ottenere i valori del server locale. *local* è di **tipo nvarchar (5)** e il valore predefinito è null.  
   
-`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` È il nome del server che esegue chiamate di procedura remota. *rpcsrvname* viene **sysname**, il valore predefinito è **%** , che è l'unico valore che restituisce un set di risultati.  
+`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT`Nome del server che esegue chiamate di procedure remote. *rpcsrvname* è di **tipo sysname**e il valore **%** predefinito è, che è l'unico valore che restituisce un set di risultati.  
   
-`[ @publisher_type = ] 'publisher_type' OUTPUT` È il tipo di server di pubblicazione del server di pubblicazione. *publisher_type* viene **sysname**, il valore predefinito è **%** , che è l'unico valore che restituisce un set di risultati.  
+`[ @publisher_type = ] 'publisher_type' OUTPUT`Tipo di server di pubblicazione del server di pubblicazione. *publisher_type* è di **tipo sysname**e il valore **%** predefinito è, che è l'unico valore che restituisce un set di risultati.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**server di distribuzione**|**sysname**|Nome del server di distribuzione.|  
+|**distribuzione**|**sysname**|Nome del server di distribuzione.|  
 |**database di distribuzione**|**sysname**|Nome del database di distribuzione.|  
 |**directory**|**nvarchar(255)**|Nome della directory di lavoro.|  
 |**account**|**nvarchar(255)**|Nome dell'account utente di Windows.|  
-|**conservazione di distrib min**|**int**|Periodo di memorizzazione minimo per la distribuzione.|  
-|**distrib massima conservazione**|**int**|Periodo di memorizzazione massimo per la distribuzione.|  
-|**periodo memorizzazione cronologia**|**int**|Periodo di memorizzazione per la cronologia.|  
-|**agente di pulizia della cronologia**|**nvarchar(100)**|Nome dell'agente di pulizia del contenuto della cronologia.|  
-|**agente**|**nvarchar(100)**|Nome dell'agente di pulizia dei riferimenti alla distribuzione.|  
-|**nome del server RPC**|**sysname**|Nome del server di distribuzione remoto o locale.|  
-|**nome account di accesso RPC**|**sysname**|Account di accesso utilizzato per le chiamate di procedure remote al server di distribuzione remoto.|  
-|**tipo di server di pubblicazione**|**sysname**|Tipo di server di pubblicazione. Può essere uno dei tipi seguenti:<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE GATEWAY**|  
+|**conservazione min DISTRIB**|**int**|Periodo di memorizzazione minimo per la distribuzione.|  
+|**conservazione DISTRIB max**|**int**|Periodo di memorizzazione massimo per la distribuzione.|  
+|**conservazione cronologia**|**int**|Periodo di memorizzazione per la cronologia.|  
+|**agente pulizia contenuto cronologia**|**nvarchar(100)**|Nome dell'agente di pulizia del contenuto della cronologia.|  
+|**agente di pulizia distribuzione**|**nvarchar(100)**|Nome dell'agente di pulizia dei riferimenti alla distribuzione.|  
+|**nome server RPC**|**sysname**|Nome del server di distribuzione remoto o locale.|  
+|**nome dell'account di accesso RPC**|**sysname**|Account di accesso utilizzato per le chiamate di procedure remote al server di distribuzione remoto.|  
+|**tipo di server di pubblicazione**|**sysname**|Tipo di server di pubblicazione. Può essere uno dei tipi seguenti:<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **GATEWAY ORACLE**|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_helpdistributor** viene utilizzata in tutti i tipi di replica.  
+ **sp_helpdistributor** viene utilizzato in tutti i tipi di replica.  
   
- Se vengono specificati uno o più parametri di output durante l'esecuzione **sp_helpdistributor**, tutti i parametri di output, impostati su NULL vengono assegnati i valori in uscita e non viene restituito alcun set di risultati. Se non viene specificato alcun parametro di output, viene restituito un set di risultati.  
+ Se durante l'esecuzione di **sp_helpdistributor**vengono specificati uno o più parametri di output, a tutti i parametri di output impostati su null vengono assegnati valori all'uscita e non viene restituito alcun set di risultati. Se non viene specificato alcun parametro di output, viene restituito un set di risultati.  
   
 ## <a name="permissions"></a>Permissions  
- Il seguenti set di risultati le colonne o parametri di output vengono restituiti ai membri del **sysadmin** ruolo predefinito del server nel server di pubblicazione e il **db_owner** ruolo predefinito del database nel database di pubblicazione:  
+ Le colonne del set di risultati o i parametri di output seguenti vengono restituiti ai membri del ruolo predefinito del server **sysadmin** nel server di pubblicazione e del ruolo predefinito del database **db_owner** nel database di pubblicazione:  
   
 |Colonna del set di risultati|Parametro di output|  
 |-----------------------|----------------------|  

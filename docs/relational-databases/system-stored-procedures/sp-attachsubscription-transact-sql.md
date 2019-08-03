@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d9f144d9d896fb75af5f59850c249b9044d1b781
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e059b78a886735ce53b86de77effa43b03136df
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046156"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768973"
 ---
 # <a name="spattachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Collega un database di sottoscrizione esistente a qualsiasi Sottoscrittore. Questa stored procedure viene eseguita nel database master del nuovo Sottoscrittore.  
   
@@ -53,65 +53,65 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @dbname = ] 'dbname'` È la stringa che specifica il database di sottoscrizione di destinazione in base al nome. *dbname* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @dbname = ] 'dbname'`Stringa che specifica il database di sottoscrizione di destinazione in base al nome. *dbname* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @filename = ] 'filename'` È il nome e percorso fisico del file MDF primario (**master** file di dati). *nome file* viene **nvarchar(260)** , non prevede alcun valore predefinito.  
+`[ @filename = ] 'filename'`Nome e posizione fisica del file MDF primario (file di dati**Master** ). *filename* è di **tipo nvarchar (260)** e non prevede alcun valore predefinito.  
   
-`[ @subscriber_security_mode = ] 'subscriber_security_mode'` È la modalità di sicurezza del sottoscrittore da utilizzare quando ci si connette a un sottoscrittore durante la sincronizzazione. *subscriber_security_mode* viene **int**, con un valore predefinito è NULL.  
+`[ @subscriber_security_mode = ] 'subscriber_security_mode'`Modalità di sicurezza del Sottoscrittore da utilizzare per la connessione a un Sottoscrittore durante la sincronizzazione. *subscriber_security_mode* è di **tipo int**e il valore predefinito è null.  
   
 > [!NOTE]  
 >  È necessario utilizzare l'autenticazione di Windows. Se *subscriber_security_mode* non è **1** (autenticazione di Windows), viene restituito un errore.  
   
-`[ @subscriber_login = ] 'subscriber_login'` È il nome di accesso del sottoscrittore da utilizzare quando ci si connette a un sottoscrittore durante la sincronizzazione. *subscriber_login* viene **sysname**, con un valore predefinito è NULL.  
+`[ @subscriber_login = ] 'subscriber_login'`Nome dell'account di accesso del Sottoscrittore da utilizzare per la connessione a un Sottoscrittore durante la sincronizzazione. *subscriber_login* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
->  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti. Se *subscriber_security_mode* non è **1** e *subscriber_login* è specificato, viene restituito un errore.  
+>  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti. Se *subscriber_security_mode* è diverso da **1** e *subscriber_login* è specificato, viene restituito un errore.  
   
-`[ @subscriber_password = ] 'subscriber_password'` È la password del sottoscrittore. *subscriber_password* viene **sysname**, con un valore predefinito è NULL.  
+`[ @subscriber_password = ] 'subscriber_password'`Password del Sottoscrittore. *subscriber_password* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
->  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti. Se *subscriber_security_mode* non è **1** e *subscriber_password* è specificato, viene restituito un errore.  
+>  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti. Se *subscriber_security_mode* è diverso da **1** e *subscriber_password* è specificato, viene restituito un errore.  
   
-`[ @distributor_security_mode = ] distributor_security_mode` È la modalità di sicurezza da utilizzare quando ci si connette a un server di distribuzione durante la sincronizzazione. *distributor_security_mode* viene **int**, il valore predefinito è **0**. **0** specifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione. **1** specifica l'autenticazione di Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @distributor_security_mode = ] distributor_security_mode`Modalità di sicurezza da utilizzare per la connessione a un database di distribuzione durante la sincronizzazione. *distributor_security_mode* è di **tipo int**e il valore predefinito è **0**. **0** specifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione di. **1** specifica l'autenticazione di Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @distributor_login = ] 'distributor_login'` È l'account di accesso da utilizzare quando ci si connette a un server di distribuzione durante la sincronizzazione. *distributor_login* è obbligatorio se *distributor_security_mode* è impostata su **0**. *distributor_login* viene **sysname**, con un valore predefinito è NULL.  
+`[ @distributor_login = ] 'distributor_login'`Account di accesso del server di distribuzione da utilizzare per la connessione a un database di distribuzione durante la sincronizzazione. *distributor_login* è obbligatorio se *distributor_security_mode* è impostato su **0**. *distributor_login* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @distributor_password = ] 'distributor_password'` È la password del server di distribuzione. *distributor_password* è obbligatorio se *distributor_security_mode* è impostata su **0**. *distributor_password* viene **sysname**, con un valore predefinito è NULL. Il valore di *distributor_password* deve essere inferiore a 120 caratteri Unicode.  
+`[ @distributor_password = ] 'distributor_password'`Password del server di distribuzione. *distributor_password* è obbligatorio se *distributor_security_mode* è impostato su **0**. *distributor_password* è di **tipo sysname**e il valore predefinito è null. Il valore di *distributor_password* deve essere inferiore a 120 caratteri Unicode.  
   
 > [!IMPORTANT]  
 >  Non usare una password vuota. Usare una password complessa. Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
   
-`[ @publisher_security_mode = ] publisher_security_mode` È la modalità di sicurezza da utilizzare quando ci si connette a un server di pubblicazione durante la sincronizzazione. *publisher_security_mode* viene **int**, il valore predefinito è **1**. Se **0**, specifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione. Se **1**, specifica l'autenticazione di Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode`Modalità di sicurezza da utilizzare per la connessione a un server di pubblicazione durante la sincronizzazione. *publisher_security_mode* è di **tipo int**e il valore predefinito è **1**. Se è **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene specificata l'autenticazione di. Se è **1**, viene specificata l'autenticazione di Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @publisher_login = ] 'publisher_login'` È l'account di accesso da utilizzare quando ci si connette a un server di pubblicazione durante la sincronizzazione. *publisher_login* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher_login = ] 'publisher_login'`Account di accesso da utilizzare per la connessione a un server di pubblicazione durante la sincronizzazione. *publisher_login* è di **tipo sysname**e il valore predefinito è null.  
   
-`[ @publisher_password = ] 'publisher_password'` Password utilizzata durante la connessione al server di pubblicazione. *publisher_password* viene **sysname**, con un valore predefinito è NULL. Il valore di *publisher_password* deve essere inferiore a 120 caratteri Unicode.  
+`[ @publisher_password = ] 'publisher_password'`Password utilizzata per la connessione al server di pubblicazione. *publisher_password* è di **tipo sysname**e il valore predefinito è null. Il valore di *publisher_password* deve essere inferiore a 120 caratteri Unicode.  
   
 > [!IMPORTANT]  
 >  Non usare una password vuota. Usare una password complessa. Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
   
-`[ @job_login = ] 'job_login'` È l'account di accesso per l'account di Windows con cui viene eseguito l'agente. *job_login* viene **nvarchar(257)** , non prevede alcun valore predefinito. Questo account di Windows viene sempre utilizzato per le connessioni dell'agente al server di distribuzione.  
+`[ @job_login = ] 'job_login'`Account di accesso per l'account di Windows utilizzato per l'esecuzione dell'agente. *job_login* è di **tipo nvarchar (257)** e non prevede alcun valore predefinito. Questo account di Windows viene sempre utilizzato per le connessioni dell'agente al server di distribuzione.  
   
-`[ @job_password = ] 'job_password'` È la password per l'account di Windows con cui viene eseguito l'agente. *job_password* viene **sysname**, non prevede alcun valore predefinito. Il valore di *job_password* deve essere inferiore a 120 caratteri Unicode.  
+`[ @job_password = ] 'job_password'`Password per l'account di Windows utilizzato per l'esecuzione dell'agente. *job_password* è di **tipo sysname**e non prevede alcun valore predefinito. Il valore di *job_password* deve essere inferiore a 120 caratteri Unicode.  
   
 > [!IMPORTANT]  
 >  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
   
-`[ @db_master_key_password = ] 'db_master_key_password'` È la password di una chiave definita dall'utente del Database Master. *db_master_key_password* viene **nvarchar(524**, con un valore predefinito NULL. Se *db_master_key_password* non viene specificato, verrà eliminata e ricreata una chiave Master del Database esistente.  
+`[ @db_master_key_password = ] 'db_master_key_password'`Password di una chiave master del database definita dall'utente. *db_master_key_password* è di **tipo nvarchar (524)** e il valore predefinito è null. Se *db_master_key_password* non è specificato, una chiave master del database esistente verrà eliminata e ricreata.  
   
 > [!IMPORTANT]  
 >  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_attachsubscription** viene utilizzata nella replica snapshot, la replica transazionale e di tipo merge.  
+ **sp_attachsubscription** viene utilizzata per la replica snapshot, la replica transazionale e la replica di tipo merge.  
   
- Non è possibile collegare una sottoscrizione alla pubblicazione se il periodo di memorizzazione della pubblicazione è scaduto. Se si specifica una sottoscrizione quando il periodo di memorizzazione è scaduto, viene generato un errore durante il collegamento o la prima sincronizzazione della sottoscrizione. Le pubblicazioni con un periodo di memorizzazione pari **0** (scadenza) vengono ignorati.  
+ Non è possibile collegare una sottoscrizione alla pubblicazione se il periodo di memorizzazione della pubblicazione è scaduto. Se si specifica una sottoscrizione quando il periodo di memorizzazione è scaduto, viene generato un errore durante il collegamento o la prima sincronizzazione della sottoscrizione. Le pubblicazioni con un periodo di memorizzazione della pubblicazione pari a **0** (nessuna scadenza) vengono ignorate.  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_attachsubscription**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_attachsubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

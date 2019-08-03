@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3acf4ee5515bad2db88e2d928ca897ba9e04a085
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 960da4d98ea33ceb3ecdb48e36d565854484feb9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927819"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768865"
 ---
 # <a name="spdropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Elimina un database di distribuzione. Rimuove i file fisici utilizzati dal database se non sono utilizzati da un altro database. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
   
@@ -37,17 +37,17 @@ sp_dropdistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @database = ] 'database'` È il database da eliminare. *database* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @database = ] 'database'`Database da eliminare. il *database* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_dropdistributiondb** viene utilizzata in tutti i tipi di replica.  
+ **sp_dropdistributiondb** viene utilizzato in tutti i tipi di replica.  
   
- Questa stored procedure deve essere eseguita prima di eliminare il server di distribuzione eseguendo **sp_dropdistributor**.  
+ È necessario eseguire questa stored procedure prima di eliminare il server di distribuzione eseguendo **sp_dropdistributor**.  
   
- **sp_dropdistributiondb** rimuove anche un processo di agente di lettura coda per il database di distribuzione, se presente.  
+ **sp_dropdistributiondb** rimuove anche un processo di agente di lettura coda per il database di distribuzione, se disponibile.  
   
  Per disabilitare la distribuzione, è necessario che il database di distribuzione sia online. Se esiste uno snapshot per il database di distribuzione, deve essere eliminato prima della disabilitazione della distribuzione. Uno snapshot del database è una copia offline e di sola lettura di un database e non è correlato a uno snapshot di replica. Per altre informazioni, vedere [Snapshot del database &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
@@ -55,7 +55,7 @@ sp_dropdistributiondb [ @database= ] 'database'
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributiondb-tr_1.sql)]  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_dropdistributiondb**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_dropdistributiondb**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Disabilitare la pubblicazione e la distribuzione](../../relational-databases/replication/disable-publishing-and-distribution.md)   

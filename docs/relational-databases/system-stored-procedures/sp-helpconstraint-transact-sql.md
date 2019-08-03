@@ -18,15 +18,15 @@ ms.assetid: 29d6cd36-535d-4765-bca8-62f9d9886ff5
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd443a8e03663eb3fb46e75e09d852c797f6d427
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d722d3b54c2f0b6d73660e2195aed4039e1eda2c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101368"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771081"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Restituisce un elenco di tutti i tipi di vincoli, con i relativi nomi definiti dall'utente o dal sistema, le colonne in cui sono stati definiti e l'espressione che li definisce (solo per i vincoli DEFAULT e CHECK).  
   
@@ -41,18 +41,18 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @objname = ] 'table'` È la tabella sulla quale vincolo vengono restituite informazioni. La tabella specificata deve essere locale rispetto al database corrente. *Nella tabella* viene **nvarchar(776)** , non prevede alcun valore predefinito.  
+`[ @objname = ] 'table'`Tabella in cui vengono restituite le informazioni sui vincoli. La tabella specificata deve essere locale rispetto al database corrente. *Table* è di **tipo nvarchar (776)** e non prevede alcun valore predefinito.  
   
-`[ @nomsg = ] 'no_message'` È un parametro facoltativo che consente di stampare il nome della tabella. *no_message* viene **varchar (5)** , il valore predefinito è **msg**. **nomsg** Annulla la stampa.  
+`[ @nomsg = ] 'no_message'`È un parametro facoltativo che stampa il nome della tabella. *no_message* è di tipo **varchar (5)** e il valore predefinito è **msg**. **nomsg Annulla** disattiva la stampa.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- **sp_helpconstraint** consente di visualizzare una colonna con indicizzazione decrescente se fanno parte di chiavi primarie. Nel set di risultati il nome di tali colonne viene seguito da un segno meno (-). Nel caso di colonne indicizzate in ordine crescente, come per impostazione predefinita, viene invece visualizzato solo il nome delle colonne.  
+ **sp_helpconstraint** Visualizza una colonna indicizzata in ordine decrescente se ha partecipato alle chiavi primarie. Nel set di risultati il nome di tali colonne viene seguito da un segno meno (-). Nel caso di colonne indicizzate in ordine crescente, come per impostazione predefinita, viene invece visualizzato solo il nome delle colonne.  
   
 ## <a name="remarks"></a>Note  
- L'esecuzione **sp_help**_tabella_ tutte le informazioni sulla tabella specificata. Per visualizzare solo le informazioni sui vincoli, usare **sp_helpconstraint**.  
+ L'esecuzione della_tabella_ **sp_help**restituisce tutte le informazioni sulla tabella specificata. Per visualizzare solo le informazioni sui vincoli, usare **sp_helpconstraint**.  
   
 ## <a name="permissions"></a>Permissions  
  È richiesta l'appartenenza al ruolo **public** .  
@@ -67,7 +67,7 @@ EXEC sp_helpconstraint 'Production.Product';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Stored procedure &#40;di motore di database Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   

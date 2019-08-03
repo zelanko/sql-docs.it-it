@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c9f883b7eafc59a3d9d93541e07fe4c4db08b9c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b1aaa8afdb6ad67f906140c0714f115b64c08bc1
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950591"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68764435"
 ---
 # <a name="spreplmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Restituisce informazioni dettagliate a livello di articolo su una specifica sessione di replica dell'agente di merge, utilizzato per monitorare la replica di tipo merge. Il set di risultati include una riga di dettaglio per ogni articolo sincronizzato durante la sessione, nonché una riga che rappresenta l'inizializzazione della sessione e righe che riepilogano le fasi di caricamento e scaricamento della sessione. Questa stored procedure viene eseguita nel database di distribuzione del server di distribuzione oppure nel database di sottoscrizione del Sottoscrittore.  
   
@@ -37,14 +37,14 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @session_id = ] session_id` Specifica una sessione dell'agente. *session_id* viene **int** non prevede alcun valore predefinito.  
+`[ @session_id = ] session_id`Specifica una sessione di Agent. *session_id* è di **tipo int** e non prevede alcun valore predefinito.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**PhaseID**|**int**|Fase della sessione di sincronizzazione. I possibili valori sono i seguenti.<br /><br /> **0** = inizializzazione o riga di riepilogo<br /><br /> **1** = caricamento<br /><br /> **2** = download|  
-|**ArticleName**|**sysname**|Nome dell'articolo in fase di sincronizzazione. **ArticleName** contiene anche informazioni di riepilogo per le righe nel set di risultati che non rappresentano dettagli del caso.|  
+|**PhaseID**|**int**|Fase della sessione di sincronizzazione. I possibili valori sono i seguenti.<br /><br /> **0** = riga di inizializzazione o di riepilogo<br /><br /> **1** = caricamento<br /><br /> **2** = download|  
+|**ArticleName**|**sysname**|Nome dell'articolo in fase di sincronizzazione. **ArticleName** contiene inoltre informazioni di riepilogo per le righe nel set di risultati che non rappresentano i dettagli degli articoli.|  
 |**PercentComplete**|**decimal**|Indica la percentuale delle modifiche totali applicate in una riga di dettaglio dell'articolo per le sessioni in esecuzione e quelle non riuscite.|  
 |**RelativeCost**|**decimal**|Indica il tempo dedicato alla sincronizzazione dell'articolo come percentuale del tempo totale di sincronizzazione per la sessione.|  
 |**Durata**|**int**|Durata della sessione dell'agente.|  
@@ -54,19 +54,19 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |**Conflitti**|**int**|Numero di conflitti verificatisi in una sessione.|  
 |**ErrorID**|**int**|ID di un errore di sessione.|  
 |**SeqNo**|**int**|Ordine delle sessioni nel set di risultati.|  
-|**Tipo di riga**|**int**|Indica il tipo di informazioni rappresentato da ogni riga nel set di risultati.<br /><br /> **0** = inizializzazione<br /><br /> **1** = riepilogo del caricamento<br /><br /> **2** = dettagli di caricamento dell'articolo<br /><br /> **3** = riepilogo del download<br /><br /> **4** = dettagli di scaricamento dell'articolo|  
-|**Modifiche allo schema**|**int**|Numero di modifiche dello schema in una sessione.|  
+|**RowType**|**int**|Indica il tipo di informazioni rappresentato da ogni riga nel set di risultati.<br /><br /> **0** = inizializzazione<br /><br /> **1** = Riepilogo del caricamento<br /><br /> **2** = dettagli di caricamento dell'articolo<br /><br /> **3** = Riepilogo download<br /><br /> **4** = dettagli sul download degli articoli|  
+|**SchemaChanges**|**int**|Numero di modifiche dello schema in una sessione.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_replmonitorhelpmergesessiondetail** viene usato per monitorare la replica di tipo merge.  
+ **sp_replmonitorhelpmergesessiondetail** viene utilizzato per monitorare la replica di tipo merge.  
   
- Quando viene eseguito sul sottoscrittore **sp_replmonitorhelpmergesessiondetail** solo restituisce informazioni dettagliate sulle ultime 5 sessioni dell'agente di Merge.  
+ Quando viene eseguito nel Sottoscrittore, **sp_replmonitorhelpmergesessiondetail** restituisce solo informazioni dettagliate sulle ultime 5 sessioni agente di merge.  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **db_owner** oppure **replmonitor** ruolo predefinito del database nel database di distribuzione nel server di distribuzione o nel database di sottoscrizione del sottoscrittore possono eseguire **sp _ replmonitorhelpmergesessiondetail**.  
+ Solo i membri del ruolo predefinito del database **db_owner** o **replmonitor** nel database di distribuzione nel server di distribuzione o nel database di sottoscrizione nel Sottoscrittore possono eseguire **sp_replmonitorhelpmergesessiondetail**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitorare la replica a livello di programmazione](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

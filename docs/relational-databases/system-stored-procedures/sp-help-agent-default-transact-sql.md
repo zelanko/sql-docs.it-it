@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3a043c3cb8087ef7515860adec34044da89997f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0797b8fe4a2ba496b28f0c347eb5349e77e91e0
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055277"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68762756"
 ---
 # <a name="sphelpagentdefault-transact-sql"></a>sp_help_agent_default (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Restituisce l'ID della configurazione predefinita per il tipo di agente passato come parametro. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
   
@@ -38,9 +38,9 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @profile_id = ] _profile_idOUTPUT` È l'ID della configurazione predefinita per il tipo di agente. *profile_id* viene **int**, non prevede alcun valore predefinito. *profile_id* è anche un parametro di OUTPUT e restituisce l'ID della configurazione predefinita per il tipo di agente.  
+`[ @profile_id = ] _profile_idOUTPUT`ID della configurazione predefinita per il tipo di agente. *profile_id* è di **tipo int**e non prevede alcun valore predefinito. *profile_id* è anche un parametro di output e restituisce l'ID della configurazione predefinita per il tipo di agente.  
   
-`[ @agent_type = ] 'agent_type'` È il tipo di agente. *agent_type* viene **int**e non prevede alcun valore predefinito, i possibili valori sono i seguenti.  
+`[ @agent_type = ] 'agent_type'`Tipo di agente. *agent_type* è di **tipo int**e non prevede alcun valore predefinito. i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -51,13 +51,13 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 |**9**|Agente di lettura coda|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_help_agent_default** viene utilizzata in tutti i tipi di replica.  
+ **sp_help_agent_default** viene utilizzato in tutti i tipi di replica.  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server o il **replmonitor** ruolo predefinito del database possono eseguire **sp_help_agent_default**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **replmonitor** possono eseguire **sp_help_agent_default**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

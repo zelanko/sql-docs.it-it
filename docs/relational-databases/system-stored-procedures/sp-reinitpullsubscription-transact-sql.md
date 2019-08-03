@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 1389e76d4e679a3ee16c548bf752d5668dfa48b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 078cb7f1607e6af94756d43efc2e6d21fbada52c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075668"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68762342"
 ---
 # <a name="spreinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Contrassegna una sottoscrizione pull o anonima transazionale per la reinizializzazione alla successiva esecuzione dell'agente di distribuzione. Questa stored procedure viene eseguita nel database di sottoscrizione pull del Sottoscrittore.  
   
@@ -39,31 +39,31 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publisher_db = ] 'publisher_db'` È il nome del server di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher_db = ] 'publisher_db'`Nome del database del server di pubblicazione. *publisher_db* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è all, che indica che tutte le sottoscrizioni per la reinizializzazione.  
+`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è all, che contrassegna tutte le sottoscrizioni per la reinizializzazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_reinitpullsubscription** viene utilizzata nella replica transazionale.  
+ **sp_reinitpullsubscription** viene utilizzato nella replica transazionale.  
   
- **sp_reinitpullsubscription** non è supportata per la replica transazionale peer-to-peer.  
+ **sp_reinitpullsubscription** non è supportato per la replica transazionale peer-to-peer.  
   
- **sp_reinitpullsubscription** può essere chiamato dal sottoscrittore per reinizializzare la sottoscrizione, durante l'esecuzione successiva dell'agente di distribuzione.  
+ **sp_reinitpullsubscription** può essere chiamato dal Sottoscrittore per reinizializzare la sottoscrizione, durante la successiva esecuzione del agente di distribuzione.  
   
- Sottoscrizioni alle pubblicazioni create con un valore pari **false** per **@immediate_sync** non è possibile reinizializzare dal sottoscrittore.  
+ Le sottoscrizioni di pubblicazioni create con un valore false **@immediate_sync** per non possono essere reinizializzate dal Sottoscrittore.  
   
- È possibile reinizializzare una sottoscrizione pull, eseguire **sp_reinitpullsubscription** nel Sottoscrittore oppure **sp_reinitsubscription** nel server di pubblicazione.  
+ È possibile reinizializzare una sottoscrizione pull eseguendo **sp_reinitpullsubscription** nel Sottoscrittore o **sp_reinitsubscription** nel server di pubblicazione.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_reinitpullsubscription**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_reinitpullsubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Reinizializzare una sottoscrizione](../../relational-databases/replication/reinitialize-a-subscription.md)   

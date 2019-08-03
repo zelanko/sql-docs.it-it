@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 95d45e34c5e32e2ace95c2f0e86684aa0e5b575c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1781e22e97870e7b9c26e7de397d77600ecbe1ce
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950622"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771244"
 ---
 # <a name="spreplmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Restituisce informazioni sulle sessioni passate per un agente di merge specifico. Viene restituita una riga per ogni sessione che soddisfa i criteri del filtro. Questa stored procedure, utilizzata per il monitoraggio della replica di tipo merge, viene eseguita nel database di distribuzione del server di distribuzione o nel database di sottoscrizione del Sottoscrittore.  
   
@@ -42,28 +42,28 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @agent_name = ] 'agent_name'` È il nome dell'agente. *agent_name* viene **nvarchar(100)** non prevede alcun valore predefinito.  
+`[ @agent_name = ] 'agent_name'`Nome dell'agente. *agent_name* è di **tipo nvarchar (100)** e non prevede alcun valore predefinito.  
   
-`[ @hours = ] hours` È l'intervallo di tempo, espresso in ore, per il quale vengono restituite le informazioni sulla sessione passate dell'agente. *ore* viene **int**, che può essere uno degli intervalli seguenti.  
+`[ @hours = ] hours`Intervallo di tempo, in ore, per cui vengono restituite le informazioni sulla sessione dell'agente cronologico. *hours* è di **tipo int**. i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
 |< **0**|Restituisce informazioni sulle esecuzioni passate dell'agente, per al massimo 100 esecuzioni.|  
 |**0** (predefinito)|Restituisce informazioni su tutte le esecuzioni passate dell'agente.|  
-|> **0**|Restituisce informazioni sull'agente di esecuzioni che si sono verificati nelle ultime *ore* numero di ore.|  
+|> **0**|Restituisce informazioni sulle esecuzioni di agenti che si sono verificate nel numero di ore dell'ultima *ora* .|  
   
-`[ @session_type = ] session_type` Filtra il set di risultati in base al risultato finale della sessione. *session_type* viene **int**, i possibili valori sono i seguenti.  
+`[ @session_type = ] session_type`Filtra il set di risultati in base al risultato finale della sessione. *session_type* è di **tipo int**. i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
 |**1** (impostazione predefinita)|Sessioni dell'agente con esito positivo o da ritentare.|  
 |**0**|Sessioni dell'agente con esito negativo.|  
   
-`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL. Questo parametro viene usato quando si esegue **sp_replmonitorhelpmergesession** nel Sottoscrittore.  
+`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è null. Questo parametro viene utilizzato quando si esegue **sp_replmonitorhelpmergesession** nel Sottoscrittore.  
   
-`[ @publisher_db = ] 'publisher_db'` È il nome del database di pubblicazione. *publisher_db* viene **sysname**, con un valore predefinito è NULL. Questo parametro viene usato quando si esegue **sp_replmonitorhelpmergesession** nel Sottoscrittore.  
+`[ @publisher_db = ] 'publisher_db'`Nome del database di pubblicazione. *publisher_db* è di **tipo sysname**e il valore predefinito è null. Questo parametro viene utilizzato quando si esegue **sp_replmonitorhelpmergesession** nel Sottoscrittore.  
   
-`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è NULL. Questo parametro viene usato quando si esegue **sp_replmonitorhelpmergesession** nel Sottoscrittore.  
+`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e il valore predefinito è null. Questo parametro viene utilizzato quando si esegue **sp_replmonitorhelpmergesession** nel Sottoscrittore.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -84,15 +84,15 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**LastMessage**|**nvarchar(500)**|Ultimo messaggio registrato dall'agente di merge durante la sessione.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_replmonitorhelpmergesession** viene usato per monitorare la replica di tipo merge.  
+ **sp_replmonitorhelpmergesession** viene utilizzato per monitorare la replica di tipo merge.  
   
- Quando viene eseguito sul sottoscrittore **sp_replmonitorhelpmergesession** solo restituisce informazioni sulle ultime cinque sessioni dell'agente di Merge.  
+ Quando viene eseguito nel Sottoscrittore, **sp_replmonitorhelpmergesession** restituisce solo le informazioni sulle ultime cinque sessioni agente di merge.  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **db_owner** oppure **replmonitor** ruolo predefinito del database nel database di distribuzione nel server di distribuzione o nel database di sottoscrizione del sottoscrittore possono eseguire **sp _ replmonitorhelpmergesession**.  
+ Solo i membri del ruolo predefinito del database **db_owner** o **replmonitor** nel database di distribuzione nel server di distribuzione o nel database di sottoscrizione nel Sottoscrittore possono eseguire **sp_replmonitorhelpmergesession**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitorare la replica a livello di programmazione](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

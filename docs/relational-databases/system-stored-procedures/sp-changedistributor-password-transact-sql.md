@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 29974fc7a60f675dc9921f527fd8348beb4f2134
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3715bfacd1a94f588992d7e6832814f50c076d1c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120076"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768899"
 ---
 # <a name="spchangedistributorpassword-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Modifica la password per un server di distribuzione. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
   
@@ -37,19 +37,19 @@ sp_changedistributor_password [ @password= ] 'password'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @password = ] 'password'` È la nuova password. *la password* viene **sysname**, non prevede alcun valore predefinito. Se il server di distribuzione è locale, la password del **distributor_admin** viene modificato l'account di accesso di sistema.  
+`[ @password = ] 'password'`Nuova password. *password* è di **tipo sysname**e non prevede alcun valore predefinito. Se il server di distribuzione è locale, viene modificata la password dell'account di accesso di sistema **distributor_admin** .  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_changedistributor_password** viene utilizzata in tutti i tipi di replica.  
+ **sp_changedistributor_password** viene utilizzato in tutti i tipi di replica.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_changedistributor_password](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pas_1.sql)]  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_changedistributor_password**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_changedistributor_password**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le impostazioni di sicurezza della replica](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fd7a493a3126aecbf816d364e5b7497f2bf494d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e87e542395c00797ce50b220ad8a6c981f43605a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084958"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771089"
 ---
 # <a name="sphelparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Restituisce tutte le colonne della tabella sottostante. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione. Per i server di pubblicazione Oracle questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
   
@@ -39,14 +39,14 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` È il nome della pubblicazione che contiene l'articolo. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'`Nome della pubblicazione contenente l'articolo. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @article = ] 'article'` È il nome dell'articolo per cui le colonne restituite. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @article = ] 'article'`Nome dell'articolo per cui vengono restituite le colonne. *article* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @publisher = ] 'publisher'` Specifica un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher = ] 'publisher'`Specifica un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
->  *server di pubblicazione* non deve essere specificato quando viene pubblicato l'articolo richiesto da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
+>  il *server di pubblicazione* non deve essere specificato quando l'articolo richiesto viene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicato da un server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (colonne non pubblicate) o **1** (colonne pubblicate)  
@@ -55,22 +55,22 @@ sp_helparticlecolumns [ @publication = ] 'publication'
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**id della colonna**|**int**|Identificatore della colonna.|  
+|**ID colonna**|**int**|Identificatore della colonna.|  
 |**column**|**sysname**|Nome della colonna.|  
 |**published**|**bit**|Indica se la colonna è pubblicata:<br /><br /> **0** = No<br /><br /> **1** = Sì|  
 |**tipo di server di pubblicazione**|**sysname**|Tipo di dati della colonna nel server di pubblicazione.|  
-|**tipo di sottoscrittore**|**sysname**|Tipo di dati della colonna nel Sottoscrittore.|  
+|**tipo di Sottoscrittore**|**sysname**|Tipo di dati della colonna nel Sottoscrittore.|  
   
 ## <a name="remarks"></a>Note  
- **sp_helparticlecolumns** viene utilizzata nella replica snapshot e transazionale.  
+ **sp_helparticlecolumns** viene utilizzata per la replica snapshot e transazionale.  
   
- **sp_helparticlecolumns** è utile per controllare una partizione verticale.  
+ **sp_helparticlecolumns** è utile per il controllo di una partizione verticale.  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database, o elenco di accesso alla pubblicazione per la pubblicazione corrente può eseguire **sp_helparticlecolumns**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** , del ruolo predefinito del database **db_owner** o dell'elenco di accesso alla pubblicazione corrente possono eseguire **sp_helparticlecolumns**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Define and Modify a Column Filter](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
+ [Definire e modificare un filtro colonne](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
