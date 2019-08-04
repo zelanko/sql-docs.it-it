@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 89cd3991819bdba99d3a4b95c16e7b3247808031
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8436616ced84892dc7e484a5d83f3f0c3779f244
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126383"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771577"
 ---
 # <a name="spscriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Crea gli script delle procedure personalizzate INSERT, UPDATE e DELETE per tutti gli articoli di tabella in una pubblicazione in cui è abilitata l'opzione per la generazione automatica dello schema delle procedure personalizzate. **sp_scriptpublicationcustomprocs** è particolarmente utile per la configurazione di sottoscrizioni per cui lo snapshot viene applicato manualmente.  
+  Crea gli script delle procedure personalizzate INSERT, UPDATE e DELETE per tutti gli articoli di tabella in una pubblicazione in cui è abilitata l'opzione per la generazione automatica dello schema delle procedure personalizzate. **sp_scriptpublicationcustomprocs** è particolarmente utile per la configurazione di sottoscrizioni per le quali lo snapshot viene applicato manualmente.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,18 +37,18 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication_name'` È il nome della pubblicazione. *publication_name* viene **sysname** non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication_name'`Nome della pubblicazione. *publication_name* è di **tipo sysname** e non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
- Restituisce un set di risultati è costituito da un unico **nvarchar (4000)** colonna. Il set di risultati forma l'istruzione CREATE PROCEDURE completa utilizzata per creare la stored procedure personalizzata.  
+ Restituisce un set di risultati costituito da una singola colonna **nvarchar (4000)** . Il set di risultati forma l'istruzione CREATE PROCEDURE completa utilizzata per creare la stored procedure personalizzata.  
   
 ## <a name="remarks"></a>Note  
  Lo script delle procedure personalizzate non viene creato per gli articoli senza l'opzione per la generazione automatica dello schema delle procedure personalizzate (0x2).  
   
- Le procedure seguenti vengono utilizzate da **sp_scriptpublicationcustomprocs** per creare procedure nel sottoscrittore e non deve essere eseguito direttamente:  
+ Le procedure riportate di seguito vengono utilizzate da **sp_scriptpublicationcustomprocs** per creare procedure per il Sottoscrittore e non devono essere eseguite direttamente:  
   
  **sp_script_reconciliation_delproc**  
   
@@ -75,7 +75,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
  **sp_scriptxupdproc**  
   
 ## <a name="permissions"></a>Permissions  
- Eseguire l'autorizzazione viene concessa per **pubbliche**; un controllo della sicurezza procedurale viene eseguito all'interno di questa stored procedure per limitare l'accesso ai membri del **sysadmin** ruolo predefinito del server e **DB _ proprietario** ruolo predefinito del database nel database corrente.  
+ L'autorizzazione Execute è concessa a **public**; all'interno di questa stored procedure viene eseguito un controllo di sicurezza procedurale per limitare l'accesso ai membri del ruolo predefinito del server **sysadmin** e del ruolo predefinito del database **db_owner** nel database corrente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

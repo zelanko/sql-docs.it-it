@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: d4a4105496fff9cf9fa9674495ec44f62b16adba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 45088122cfb6824598aaf40486264d41216d3c39
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072757"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771324"
 ---
 # <a name="spadddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Crea una voce nella [sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) tabella (se non esiste uno), contrassegna la voce del server come server di distribuzione e archivia le informazioni sulle proprietà. Questa stored procedure viene eseguita nel database master del server di distribuzione per registrare e contrassegnare il server come server di distribuzione. Nel caso di un server di distribuzione remoto la stored procedure viene eseguita nel database master del server di pubblicazione per registrare il server di distribuzione remoto.  
+  Crea una voce nella tabella [sys. sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) (se non ne è presente una), contrassegna la voce del server come server di distribuzione e archivia le informazioni sulle proprietà. Questa stored procedure viene eseguita nel database master del server di distribuzione per registrare e contrassegnare il server come server di distribuzione. Nel caso di un server di distribuzione remoto la stored procedure viene eseguita nel database master del server di pubblicazione per registrare il server di distribuzione remoto.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,11 +42,11 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @distributor = ] 'distributor'` È il nome del server di distribuzione. *server di distribuzione* viene **sysname**, non prevede alcun valore predefinito. Questo parametro viene utilizzato solo per la configurazione di un server di distribuzione remoto. Aggiunge voci per le proprietà del server di distribuzione nel **msdb... MSdistributor** tabella.  
+`[ @distributor = ] 'distributor'`Nome del server di distribuzione. *Distributor* è di **tipo sysname**e non prevede alcun valore predefinito. Questo parametro viene utilizzato solo per la configurazione di un server di distribuzione remoto. Vengono aggiunte voci per le proprietà del server di distribuzione nel **database msdb. Tabella MSdistributor** .  
   
-`[ @heartbeat_interval = ] heartbeat_interval` È il numero massimo di minuti quale un agente può non registrare alcun messaggio di stato di avanzamento. *heartbeat_interval* viene **int**, con un valore predefinito è 10 minuti. Viene creato un processo di SQL Server Agent che viene eseguito in base a questo intervallo per controllare lo stato degli agenti di replica in esecuzione.  
+`[ @heartbeat_interval = ] heartbeat_interval`Numero massimo di minuti per cui un agente può passare senza registrare un messaggio di stato. *heartbeat_interval* è di **tipo int**e il valore predefinito è 10 minuti. Viene creato un processo di SQL Server Agent che viene eseguito in base a questo intervallo per controllare lo stato degli agenti di replica in esecuzione.  
   
-`[ @password = ] 'password']` Password del **distributor_admin** account di accesso. *la password* viene **sysname**, con un valore predefinito è NULL. Se il valore è NULL o una stringa vuota, la password viene reimpostata su un valore casuale. La password deve essere configurata quando viene aggiunto il primo server di distribuzione remoto. **distributor_admin** account di accesso e *password* vengono archiviati per la voce di server collegato utilizzata per una *server di distribuzione* connessione RPC, incluse le connessioni locali. Se *distributore* è locale, la password per **distributor_admin** è impostata su un nuovo valore. Per i server di pubblicazione con un server di distribuzione remoto, lo stesso valore per *password* deve essere specificato quando si esegue **sp_adddistributor** sia il server di pubblicazione di distribuzione. [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) può essere utilizzato per modificare la password del server di distribuzione.  
+`[ @password = ] 'password']`Password dell'account di accesso **distributor_admin** . *password* è di **tipo sysname**e il valore predefinito è null. Se il valore è NULL o una stringa vuota, la password viene reimpostata su un valore casuale. La password deve essere configurata quando viene aggiunto il primo server di distribuzione remoto. l'account di accesso **distributor_admin** e la *password* vengono archiviati per la voce del server collegato utilizzata per una connessione RPC del database di *distribuzione* , incluse le connessioni locali. Se il *server di distribuzione* è locale, la password per **distributor_admin** è impostata su un nuovo valore. Per i server di pubblicazione con un server di distribuzione remoto, è necessario specificare lo stesso valore di *password* durante l'esecuzione di **sp_adddistributor** nel server di pubblicazione e nel server di distribuzione. [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) può essere utilizzato per modificare la password del server di distribuzione.  
   
 > [!IMPORTANT]  
 >  Se possibile, richiedere agli utenti di immettere le credenziali di sicurezza in fase di esecuzione. Se è necessario archiviare le credenziali in un file script, è fondamentale proteggere il file per evitare accessi non autorizzati.  
@@ -57,13 +57,13 @@ sp_adddistributor [ @distributor= ] 'distributor'
  0 (esito positivo) o 1 (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_adddistributor** viene utilizzata nella replica snapshot, la replica transazionale e di tipo merge.  
+ **sp_adddistributor** viene utilizzata per la replica snapshot, la replica transazionale e la replica di tipo merge.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/sp-adddistributor-transa_1.sql)]  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_adddistributor**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_adddistributor**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare la pubblicazione e la distribuzione](../../relational-databases/replication/configure-publishing-and-distribution.md)   

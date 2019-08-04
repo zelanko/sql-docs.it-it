@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 20809f5f-941d-427f-8f0c-de7a6c487584
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: eaf42b746fca4999e7a67e0aff220ff2d09772cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6745589616dec5b129992cc555e1238cd62b545
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950725"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771591"
 ---
 # <a name="spreplflush-transact-sql"></a>sp_replflush (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Scarica la cache degli articoli. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
 > [!IMPORTANT]  
->  Non dovrebbe risultare necessario eseguire questa procedura manualmente. **sp_replflush** deve essere utilizzato solo per la risoluzione dei problemi di replica come indicato da un professionista del supporto tecnico esperto della replica.  
+>  Non dovrebbe risultare necessario eseguire questa procedura manualmente. **sp_replflush** deve essere utilizzato solo per la risoluzione dei problemi di replica come indicato da un professionista del supporto di replica esperto.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,17 +40,17 @@ sp_replflush
 ```  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_replflush** viene utilizzata nella replica transazionale.  
+ **sp_replflush** viene utilizzato nella replica transazionale.  
   
- Le definizioni degli articoli vengono archiviate nella cache per migliorare il grado di efficienza. **sp_replflush** verrà utilizzato da altre stored procedure di replica ogni modifica o eliminazione della definizione di un articolo.  
+ Le definizioni degli articoli vengono archiviate nella cache per migliorare il grado di efficienza. **sp_replflush** viene utilizzata da altre stored procedure di replica ogni volta che la definizione di un articolo viene modificata o eliminata.  
   
- Una sola connessione client può disporre dell'accesso a un determinato database tramite un agente di lettura log. Se un client ha accesso in lettura log per un database, in esecuzione **sp_replflush** fa sì che il client rilasciare il proprio accesso. Altri client può quindi analizzare i log delle transazioni tramite **sp_replcmds** oppure **sp_replshowcmds**.  
+ Una sola connessione client può disporre dell'accesso a un determinato database tramite un agente di lettura log. Se un client ha accesso in lettura log a un database, l'esecuzione di **sp_replflush** fa sì che il client rilasci l'accesso. Gli altri client possono quindi eseguire l'analisi del log delle transazioni tramite **sp_replcmds** o **sp_replshowcmds**.  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server o il **db_owner** ruolo predefinito del database possono eseguire **sp_replflush**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_replflush**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   

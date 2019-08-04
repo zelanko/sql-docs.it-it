@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 59011e56766d46f768e579a21207dde2ecf84be5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 82b333095adfaf50220e5d2392114e3ab74bf822
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67905287"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771295"
 ---
 # <a name="spcheckdynamicfilters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Visualizza informazioni sulle proprietà dei filtri di riga con parametri per una pubblicazione, specificando in particolare le funzioni utilizzate per generare una partizione di dati filtrati per una pubblicazione e se la pubblicazione consente l'utilizzo di partizioni pre-calcolate. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -48,34 +48,34 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` È il nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**can_use_partition_groups**|**bit**|Se la pubblicazione consente l'utilizzo di partizioni pre-calcolate; in cui **1** significa che le partizioni calcolate possono essere utilizzate, e **0** significa che non possono essere utilizzate.|  
-|**has_dynamic_filters**|**bit**|È se è stato definito il filtro di almeno una riga con parametri della pubblicazione; in cui **1** significa che esistono uno o più filtri di riga con parametri, e **0** significa che non esistono filtri dinamici.|  
+|**can_use_partition_groups**|**bit**|Indica se la pubblicazione è idonea per l'utilizzo di partizioni pre-calcolate. dove **1** indica che è possibile utilizzare le partizioni pre-calcolate e **0** indica che non è possibile utilizzarle.|  
+|**has_dynamic_filters**|**bit**|Indica se nella pubblicazione è stato definito almeno un filtro di riga con parametri. dove **1** indica che sono presenti uno o più filtri di riga con parametri e **0** indica che non esistono filtri dinamici.|  
 |**dynamic_filters_function_list**|**nvarchar(500)**|Elenco delle funzioni utilizzate per filtrare gli articoli di una pubblicazione, separate con un punto e virgola.|  
 |**validate_subscriber_info**|**nvarchar(500)**|Elenco delle funzioni utilizzate per filtrare gli articoli di una pubblicazione, separate con un segno più (+).|  
-|**uses_host_name**|**bit**|Se il [HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md) funzione viene usata nei filtri di riga con parametri, dove **1** indica che questa funzione viene utilizzata per i filtri dinamici.|  
-|**uses_suser_sname**|**bit**|Se il [SUSER_SNAME ()](../../t-sql/functions/suser-sname-transact-sql.md) funzione viene usata nei filtri di riga con parametri, dove **1** indica che questa funzione viene utilizzata per i filtri dinamici.|  
+|**uses_host_name**|**bit**|Se per i filtri di riga con parametri viene utilizzata la funzione [HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md) , dove **1** indica che questa funzione viene utilizzata per l'applicazione di filtri dinamici.|  
+|**uses_suser_sname**|**bit**|Se la funzione [SUSER_SNAME ()](../../t-sql/functions/suser-sname-transact-sql.md) viene utilizzata nei filtri di riga con parametri, dove **1** indica che questa funzione viene utilizzata per l'applicazione di filtri dinamici.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_check_dynamic_filters** viene utilizzata nella replica di tipo merge.  
+ **sp_check_dynamic_filters** viene utilizzata per la replica di tipo merge.  
   
- Se una pubblicazione è stata definita per utilizzare partizioni precalcolate **sp_check_dynamic_filters** verifica la presenza di eventuali violazioni delle restrizioni di partizioni pre-calcolate. Se viene rilevata una qualsiasi violazione, viene restituito un errore. Per altre informazioni, vedere [Ottimizzare le prestazioni dei filtri con parametri con le partizioni pre-calcolate](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
+ Se è stata definita una pubblicazione per l'utilizzo di partizioni pre-calcolate, **sp_check_dynamic_filters** verifica la presenza di eventuali violazioni delle restrizioni delle partizioni pre-calcolate. Se viene rilevata una qualsiasi violazione, viene restituito un errore. Per altre informazioni, vedere [Ottimizzare le prestazioni dei filtri con parametri con le partizioni pre-calcolate](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
  Se una pubblicazione è stata definita in modo da includere filtri di riga con parametri ma non viene rilevato alcun filtro, viene restituito un errore.  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_check_dynamic_filters**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_check_dynamic_filters**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione delle partizioni di una pubblicazione di tipo Merge con filtri con parametri](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
+ [Gestire le partizioni per una pubblicazione di tipo merge con filtri con parametri](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
  [sp_check_join_filter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-join-filter-transact-sql.md)   
  [sp_check_subset_filter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-subset-filter-transact-sql.md)  
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f180e2b3478ce136fa16d82084d46b79e6152957
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28589be83c62f705457e990b328be98e88905568
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070418"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771267"
 ---
 # <a name="spcheckjoinfilter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Consente di verificare un filtro di join tra due tabelle per determinare se la relativa clausola è valida. Questa stored procedure restituisce inoltre informazioni sul filtro di join specificato e indica se può essere utilizzato con partizioni pre-calcolate per la tabella specificata. Questa stored procedure viene eseguita nella pubblicazione del server di pubblicazione. Per altre informazioni, vedere [Ottimizzare le prestazioni dei filtri con parametri con le partizioni pre-calcolate](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
@@ -45,32 +45,32 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @filtered_table = ] 'filtered_table'` È il nome di una tabella filtrata. *filtered_table* viene **nvarchar(400)** , non prevede alcun valore predefinito.  
+`[ @filtered_table = ] 'filtered_table'`Nome di una tabella filtrata. *filtered_table* è di **tipo nvarchar (400)** e non prevede alcun valore predefinito.  
   
-`[ @join_table = ] 'join_table'` È il nome di una tabella da unire in join *filtered_table*. *join_table* viene **nvarchar(400)** , non prevede alcun valore predefinito.  
+`[ @join_table = ] 'join_table'`Nome di una tabella che viene unita in join a *filtered_table*. *join_table* è di **tipo nvarchar (400)** e non prevede alcun valore predefinito.  
   
-`[ @join_filterclause = ] 'join_filterclause'` Si sta testando la clausola di filtro di join. *join_filterclause* viene **nvarchar(1000)** , non prevede alcun valore predefinito.  
+`[ @join_filterclause = ] 'join_filterclause'`Clausola del filtro di join sottoposta a test. *join_filterclause* è di **tipo nvarchar (1000)** e non prevede alcun valore predefinito.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|**can_use_partition_groups**|**bit**|Se la pubblicazione consente le partizioni pre-calcolate. in cui **1** significa che è possono utilizzare le partizioni di valore, e **0** significa che non possono essere utilizzate.|  
-|**has_dynamic_filters**|**bit**|Se la clausola di filtro include almeno una funzione di filtro con parametri; in cui **1** indica che viene utilizzata una funzione di filtro con parametri, e **0** significa che tale funzione non viene utilizzata.|  
+|**can_use_partition_groups**|**bit**|Indica se la pubblicazione è idonea per le partizioni pre-calcolate. dove **1** indica che è possibile usare le partizioni valore e **0** indica che non possono essere usate.|  
+|**has_dynamic_filters**|**bit**|Indica se la clausola di filtro fornita include almeno una funzione di filtro con parametri. dove **1** indica che viene utilizzata una funzione di filtro con parametri e **0** indica che tale funzione non viene utilizzata.|  
 |**dynamic_filters_function_list**|**nvarchar(500)**|Elenco delle funzioni nella clausola di filtro che definiscono un filtro con parametri per un articolo, separate con un punto e virgola.|  
-|**uses_host_name**|**bit**|Se il [HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md) funzione viene utilizzata nella clausola di filtro, in cui **1** indica che questa funzione viene utilizzata.|  
-|**uses_suser_sname**|**bit**|Se il [SUSER_SNAME ()](../../t-sql/functions/suser-sname-transact-sql.md) funzione viene utilizzata nella clausola di filtro, in cui **1** indica che questa funzione viene utilizzata.|  
+|**uses_host_name**|**bit**|Se nella clausola di filtro viene utilizzata la funzione [HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md) , dove **1** indica che questa funzione è presente.|  
+|**uses_suser_sname**|**bit**|Se nella clausola di filtro viene utilizzata la funzione [SUSER_SNAME ()](../../t-sql/functions/suser-sname-transact-sql.md) , dove **1** indica che questa funzione è presente.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_check_join_filter** viene utilizzata nella replica di tipo merge.  
+ **sp_check_join_filter** viene utilizzata per la replica di tipo merge.  
   
- **sp_check_join_filter** può essere eseguito su tutte le tabelle correlate anche se non è pubblicata. Questa stored procedure può essere utilizzata per verificare una clausola di filtro di join prima della definizione di un filtro di join tra due articoli.  
+ **sp_check_join_filter** può essere eseguito su tutte le tabelle correlate anche se non sono pubblicate. Questa stored procedure può essere utilizzata per verificare una clausola di filtro di join prima della definizione di un filtro di join tra due articoli.  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_check_join_filter**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_check_join_filter**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

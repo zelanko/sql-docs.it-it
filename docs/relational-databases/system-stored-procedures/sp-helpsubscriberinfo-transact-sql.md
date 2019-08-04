@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ab6168730f8c2f5be3db951ed595db4d377b996d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 38b653dcb51f428692401fb87609187a82449393
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048376"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771494"
 ---
 # <a name="sphelpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Visualizza informazioni su un Sottoscrittore. Questa stored procedure viene eseguita in qualsiasi database del server di pubblicazione.  
   
@@ -38,12 +38,12 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @subscriber = ] 'subscriber'` È il nome del sottoscrittore. *Sottoscrittore* viene **sysname**, il valore predefinito è **%** , che restituisce tutte le informazioni.  
+`[ @subscriber = ] 'subscriber'`Nome del Sottoscrittore. *Subscriber* è di **%** **tipo sysname**e il valore predefinito è, che restituisce tutte le informazioni.  
   
-`[ @publisher = ] 'publisher'` È il nome del server di pubblicazione. *server di pubblicazione* viene **sysname**e il valore predefinito è il nome del server corrente.  
+`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e il valore predefinito è il nome del server corrente.  
   
 > [!NOTE]  
->  *server di pubblicazione* non deve essere specificato, tranne nel caso un server di pubblicazione Oracle.  
+>  il *server di pubblicazione* non deve essere specificato, tranne quando si tratta di un server di pubblicazione Oracle.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -51,18 +51,18 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|Nome del server di pubblicazione.|  
 |**subscriber**|**sysname**|Nome del Sottoscrittore.|  
-|**type**|**tinyint**|Tipo di Sottoscrittore:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database **1** = origine dati ODBC|  
+|**type**|**tinyint**|Tipo di Sottoscrittore:<br /><br /> **0**  = database1 = origine dati ODBC[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**login**|**sysname**|ID dell'account di accesso per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**password**|**sysname**|Password per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**commit_batch_size**|**int**|Non supportati.|  
 |**status_batch_size**|**int**|Non supportati.|  
 |**flush_frequency**|**int**|Non supportati.|  
-|**frequency_type**|**int**|Frequenza di esecuzione dell'agente di distribuzione:<br /><br /> **1** = una sola volta<br /><br /> **2** = su richiesta<br /><br /> **4** = giornaliera<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativa<br /><br /> **64** = avvio automatico<br /><br /> **128** = periodica|  
+|**frequency_type**|**int**|Frequenza di esecuzione dell'agente di distribuzione:<br /><br /> **1** = una volta<br /><br /> **2** = su richiesta<br /><br /> **4** = giornaliero<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativo<br /><br /> **64** = avvio automatico<br /><br /> **128** = ricorrente|  
 |**frequency_interval**|**int**|Valore applicato alla frequenza impostata da *frequency_type*.|  
-|**frequency_relative_interval**|**int**|Data dell'agente di distribuzione usata quando *frequency_type* è impostata su **32** (frequenza mensile relativa):<br /><br /> **1** = prima<br /><br /> **2** = secondi<br /><br /> **4** = terza<br /><br /> **8** = quarta<br /><br /> **16** = ultima|  
-|**frequency_recurrence_factor**|**int**|Fattore di occorrenza utilizzato da *frequency_type*.|  
-|**frequency_subday**|**int**|Frequenza di ripianificazione durante il periodo definito:<br /><br /> **1** = una sola volta<br /><br /> **2** = secondi<br /><br /> **4** = minuti<br /><br /> **8** = ore|  
-|**frequency_subday_interval**|**int**|Intervallo per la *frequency_subday*.|  
+|**frequency_relative_interval**|**int**|Data del agente di distribuzione usato quando *frequency_type* è impostato su **32** (mensile relativo):<br /><br /> **1** = prima<br /><br /> **2** = secondo<br /><br /> **4** = terzo<br /><br /> **8** = quarto<br /><br /> **16** = Ultima|  
+|**frequency_recurrence_factor**|**int**|Fattore di ricorrenza utilizzato da *frequency_type*.|  
+|**frequency_subday**|**int**|Frequenza di ripianificazione durante il periodo definito:<br /><br /> **1** = una volta<br /><br /> **2** = secondo<br /><br /> **4** = minuto<br /><br /> **8** = ora|  
+|**frequency_subday_interval**|**int**|Intervallo per *frequency_subday*.|  
 |**active_start_time_of_day**|**int**|Ora del giorno della prima esecuzione pianificata dell'agente di distribuzione nel formato HHMMSS.|  
 |**active_end_time_of_day**|**int**|Ora del giorno in cui viene arrestata la pianificazione dell'agente di distribuzione nel formato HHMMSS.|  
 |**active_start_date**|**int**|Data della prima esecuzione pianificata dell'agente di distribuzione nel formato AAAAMMGG.|  
@@ -70,26 +70,26 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**retryattempt**|**int**|Non supportati.|  
 |**retrydelay**|**int**|Non supportati.|  
 |**description**|**nvarchar(255)**|Descrizione in formato testo del Sottoscrittore.|  
-|**security_mode**|**int**|Modalità di sicurezza implementata:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticazione<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] l'autenticazione di Windows|  
-|**frequency_type2**|**int**|Frequenza di esecuzione dell'agente di merge:<br /><br /> **1** = una sola volta<br /><br /> **2** = su richiesta<br /><br /> **4** = giornaliera<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativa<br /><br /> **64** = avvio automatico<br /><br /> **128** = periodica|  
+|**security_mode**|**int**|Modalità di sicurezza implementata:<br /><br /> **autenticazione 0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 1 =  autenticazionediWindows[!INCLUDE[msCoName](../../includes/msconame-md.md)]|  
+|**frequency_type2**|**int**|Frequenza di esecuzione dell'agente di merge:<br /><br /> **1** = una volta<br /><br /> **2** = su richiesta<br /><br /> **4** = giornaliero<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativo<br /><br /> **64** = avvio automatico<br /><br /> **128** = ricorrente|  
 |**frequency_interval2**|**int**|Valore applicato alla frequenza impostata da *frequency_type*.|  
-|**frequency_relative_interval2**|**int**|Data dell'agente di Merge utilizzato quando *frequency_type* è impostato su 32 (mensile relativa):<br /><br /> **1** = prima<br /><br /> **2** = secondi<br /><br /> **4** = terza<br /><br /> **8** = quarta<br /><br /> **16** = ultima|  
-|**frequency_recurrence_factor2**|**int**|Fattore di occorrenza utilizzato da *frequency_type * *.*|  
-|**frequency_subday2**|**int**|Frequenza di ripianificazione durante il periodo definito:<br /><br /> **1** = una sola volta<br /><br /> **2** = secondi<br /><br /> **4** = minuti<br /><br /> **8** = ore|  
-|**frequency_subday_interval2**|**int**|Intervallo per la *frequency_subday*.|  
+|**frequency_relative_interval2**|**int**|Data del agente di merge utilizzato quando *frequency_type* è impostato su 32 (mensile relativo):<br /><br /> **1** = prima<br /><br /> **2** = secondo<br /><br /> **4** = terzo<br /><br /> **8** = quarto<br /><br /> **16** = Ultima|  
+|**frequency_recurrence_factor2**|**int**|Fattore di ricorrenza utilizzato da *frequency_type * *.*|  
+|**frequency_subday2**|**int**|Frequenza di ripianificazione durante il periodo definito:<br /><br /> **1** = una volta<br /><br /> **2** = secondo<br /><br /> **4** = minuto<br /><br /> **8** = ora|  
+|**frequency_subday_interval2**|**int**|Intervallo per *frequency_subday*.|  
 |**active_start_time_of_day2**|**int**|Ora del giorno della prima esecuzione pianificata dell'agente di merge nel formato HHMMSS.|  
 |**active_end_time_of_day2**|**int**|Ora del giorno in cui viene arrestata la pianificazione dell'agente di merge nel formato HHMMSS|  
 |**active_start_date2**|**int**|Data della prima pianificazione dell'agente di merge nel formato AAAAMMGG.|  
 |**active_end_date2**|**int**|Data in cui viene arrestata la pianificazione dell'agente di merge nel formato AAAAMMGG.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_helpsubscriberinfo** viene utilizzata nella replica snapshot, la replica transazionale e di tipo merge.  
+ **sp_helpsubscriberinfo** viene utilizzata per la replica snapshot, la replica transazionale e la replica di tipo merge.  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database, o elenco di accesso alla pubblicazione per la pubblicazione può eseguire **sp_helpsubscriberinfo**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** , del ruolo predefinito del database **db_owner** o dell'elenco di accesso alla pubblicazione possono eseguire **sp_helpsubscriberinfo**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2ea4590e129812dd0acc68b6353fc4f379bb0b8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18921fa57cfa203b0d8e5274caeb1e17c385405c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110885"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771297"
 ---
 # <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Modifica le proprietà del server di distribuzione. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
   
@@ -38,26 +38,26 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @property = ] 'property'` È la proprietà per un determinato server di distribuzione. *proprietà* viene **sysname**, i possibili valori sono i seguenti.  
+`[ @property = ] 'property'`Proprietà di un database di distribuzione specificato. *Property* è di **tipo sysname**. i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
 |**heartbeat_interval**|Periodo massimo in minuti durante il quale un agente può essere eseguito senza registrare alcun messaggio di stato.|  
-|NULL (predefinito)|Tutti disponibili *proprietà* vengono stampati i valori.|  
+|NULL (predefinito)|Vengono stampati tutti i valori delle *Proprietà* disponibili.|  
   
-`[ @value = ] 'value'` È il valore per la proprietà server di distribuzione specificata. *valore* viene **nvarchar (255)** , con un valore predefinito è NULL.  
+`[ @value = ] 'value'`Valore per la proprietà del server di distribuzione specificata. *value* è di tipo **varchar (255)** e il valore predefinito è null.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_changedistributor_property** viene utilizzata in tutti i tipi di replica.  
+ **sp_changedistributor_property** viene utilizzato in tutti i tipi di replica.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_changedistributor_property](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pro_1.sql)]  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_changedistributor_property**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_changedistributor_property**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

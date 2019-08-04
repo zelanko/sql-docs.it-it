@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a431b41119e919adfd62178ed32473a931b455b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6f7b63875d7c4c4c5ab5f3880c133448fe6da240
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055215"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771460"
 ---
 # <a name="sphelpagentprofile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Visualizza il profilo di un agente specificato. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
   
@@ -38,7 +38,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @agent_type = ] agent_type` È il tipo di agente. *agent_type* viene **int**, il valore predefinito è **0**, i possibili valori sono i seguenti.  
+`[ @agent_type = ] agent_type`Tipo di agente. *agent_type* è di **tipo int**e il valore predefinito è **0**. i possibili valori sono i seguenti.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -48,7 +48,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**4**|Agente di merge|  
 |**9**|Agente di lettura coda|  
   
-`[ @profile_id = ] profile_id` È l'ID del profilo da visualizzare. *profile_id* viene **int**, il valore predefinito è **-1**, che restituisce tutti i profili nel **MSagent_profiles** tabella.  
+`[ @profile_id = ] profile_id`ID del profilo da visualizzare. *profile_id* è di **tipo int**e il valore predefinito è **-1**, che restituisce tutti i profili della tabella **MSagent_profiles** .  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -56,19 +56,19 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |-----------------|---------------|-----------------|  
 |**profile_id**|**int**|ID del profilo.|  
 |**profile_name**|**sysname**|Nome univoco per il tipo di agente.|  
-|**agent_type**|**int**|**1** = agente snapshot<br /><br /> **2** = agente di lettura log<br /><br /> **3** = agente di distribuzione<br /><br /> **4** = agente di merge<br /><br /> **9** = agente di lettura coda|  
+|**agent_type**|**int**|**1** = agente di snapshot<br /><br /> **2** = agente di lettura log<br /><br /> **3** = agente di distribuzione<br /><br /> **4** = agente di merge<br /><br /> **9** = agente di lettura coda|  
 |**Tipo**|**int**|**0** = sistema<br /><br /> **1** = personalizzato|  
 |**description**|**varchar(3000)**|Descrizione del profilo.|  
 |**def_profile**|**bit**|Indica se il profilo corrisponde al profilo predefinito per il tipo di agente specificato.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_help_agent_profile** viene utilizzata in tutti i tipi di replica.  
+ **sp_help_agent_profile** viene utilizzato in tutti i tipi di replica.  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server o il **replmonitor** ruolo predefinito del database possono eseguire **sp_help_agent_profile**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **replmonitor** possono eseguire **sp_help_agent_profile**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Usare i profili agenti di replica](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   

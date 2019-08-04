@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 302d807b70e4cceb7cf25bffd0af637df7c4ad8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 80eb30fc6b6b2cea9fc058780831af3915fd9007
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120160"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771357"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Modifica le proprietà del server di pubblicazione della distribuzione. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione.  
   
@@ -40,13 +40,13 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publisher = ] 'publisher'` È il nome dell'editore. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publisher = ] 'publisher'`Nome del server di pubblicazione. *Publisher* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @property = ] 'property'` È una proprietà da modificare per il server di pubblicazione specificato. *proprietà* viene **sysname** i possibili valori sono i seguenti.  
+`[ @property = ] 'property'`Proprietà da modificare per il server di pubblicazione specificato. *Property* è di **tipo sysname** . i possibili valori sono i seguenti.  
   
-`[ @value = ] 'value'` È il valore per la proprietà specificata. *valore* viene **nvarchar(255**, con un valore predefinito è NULL.  
+`[ @value = ] 'value'`Valore per la proprietà specificata. *value* è di **tipo nvarchar (255)** e il valore predefinito è null.  
   
-`[ @storage_connection_string = ] 'storage_connection_string'` È necessaria per l'istanza gestita di Database SQL, deve corrispondere alla chiave di accesso per il volume di archiviazione di Database SQL di Azure. 
+`[ @storage_connection_string = ] 'storage_connection_string'`È obbligatorio per istanza gestita di database SQL, deve corrispondere alla chiave di accesso per il volume di archiviazione del database SQL di Azure. 
 
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
@@ -60,20 +60,20 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 |**distribution_db**||Nome del database di distribuzione.|  
 |**login**||Nome dell'account di accesso.|  
 |**password**||Password complessa per l'account di accesso fornito.|  
-|**security_mode**|**1**|Esegue la connessione al server di pubblicazione utilizzando l'autenticazione di Windows. *Non può essere modificato per non -* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *server di pubblicazione.*|  
-||**0**|Esegue la connessione al server di pubblicazione utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Non può essere modificato per non -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *server di pubblicazione.*|  
+|**security_mode**|**1**|Esegue la connessione al server di pubblicazione utilizzando l'autenticazione di Windows. *Questa operazione non può essere modificata per un* [!INCLUDE[msCoName](../../includes/msconame-md.md)] *server di pubblicazione non.* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+||**0**|Esegue la connessione al server di pubblicazione utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Questa operazione non può essere modificata per un* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *server di pubblicazione non.*|  
 |**working_directory**||Directory di lavoro utilizzata per archiviare i file dei dati e di schema per la pubblicazione.|  
-|NULL (predefinito)||Tutti disponibili *proprietà* opzioni vengono stampate.| 
-|**storage_connection_string**| Chiave di accesso | La chiave di accesso per la directory di lavoro quando il database è l'istanza gestita di Azure SQL Database. 
+|NULL (predefinito)||Verranno stampate tutte le opzioni di *Proprietà* disponibili.| 
+|**storage_connection_string**| Chiave di accesso | Chiave di accesso per la directory di lavoro quando il database viene Istanza gestita di database SQL di Azure. 
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_changedistpublisher** viene utilizzata in tutti i tipi di replica.  
+ **sp_changedistpublisher** viene utilizzato in tutti i tipi di replica.  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_changedistpublisher**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** possono eseguire **sp_changedistpublisher**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9852aaaf0b719bfa03736997959d76110dff4d6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1003a1a33565da9b48135123d83c4ea6551debeb
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997510"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771478"
 ---
 # <a name="sphelpreplicationoption-transact-sql"></a>sp_helpreplicationoption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Visualizza i tipi di opzioni di replica attivate per un server. Questa stored procedure viene eseguita in qualsiasi database di qualsiasi server.  
   
@@ -37,7 +37,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @optname = ] 'option_name'` È il nome dell'opzione di replica per eseguire una query per. *option_name* viene **sysname**, con un valore predefinito è NULL.  
+`[ @optname = ] 'option_name'`Nome dell'opzione di replica per cui eseguire una query. *option_name* è di **tipo sysname**e il valore predefinito è null.  
   
 |Value|Descrizione|  
 |-----------|-----------------|  
@@ -57,10 +57,10 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 |**install_failures**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_helpreplicationoption** viene usato per ottenere informazioni sulle opzioni di replica abilitato in un server specifico. Per ottenere informazioni su un database specifico, usare **sp_helpreplicationdboption**.  
+ **sp_helpreplicationoption** viene usato per ottenere informazioni sulle opzioni di replica abilitate in un determinato server. Per ottenere informazioni su un database specifico, usare **sp_helpreplicationdboption**.  
   
 ## <a name="permissions"></a>Permissions  
  Le autorizzazioni di esecuzione vengono assegnate per impostazione predefinita al ruolo **public** .  

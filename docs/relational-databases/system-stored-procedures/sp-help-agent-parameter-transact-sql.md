@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 616e5547c4acf59f88dc67c5aabc507eb30fe251
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 398e1eebbb269fa1f1507725fefff820c5174f58
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055306"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771507"
 ---
 # <a name="sphelpagentparameter-transact-sql"></a>sp_help_agent_parameter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Restituisce tutti i parametri di un profilo dal [MSagent_parameters &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) la tabella di sistema. Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione in cui l'agente è in esecuzione.  
+  Restituisce tutti i parametri di un profilo dalla tabella di sistema [Transact &#40;-&#41; SQL MSagent_parameters](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) . Questa stored procedure viene eseguita in qualsiasi database del server di distribuzione in cui l'agente è in esecuzione.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,7 +37,7 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @profile_id = ] profile_id` È l'ID del profilo dal [MSagent_parameters &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) tabella. *profile_id* viene **int**, il valore predefinito è **-1**, ovvero vengono restituiti tutti i parametri.  
+`[ @profile_id = ] profile_id`ID del profilo dalla tabella [Transact-SQL&#41; MSagent_parameters &#40;](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) . *profile_id* è di **tipo int**e il valore predefinito è **-1**, che restituisce tutti i parametri.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -48,13 +48,13 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
 |**Valore**|**nvarchar(255)**|Valore del parametro.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_help_agent_parameter** viene utilizzata in tutti i tipi di replica.  
+ **sp_help_agent_parameter** viene utilizzato in tutti i tipi di replica.  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server o il **replmonitor** ruolo predefinito del database possono eseguire **sp_help_agent_parameter**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **replmonitor** possono eseguire **sp_help_agent_parameter**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Usare i profili agenti di replica](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
