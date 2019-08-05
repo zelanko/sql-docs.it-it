@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7b970772ef0797730f7bca49ca299dea3a3c8914
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 47b334cf08e126308544ec2126c96f7da0bed932
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120439"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770022"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>Informazioni sulla pubblicazione, Agenti (pubblicazione snapshot)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La scheda **Agenti** visualizza informazioni di riepilogo sull'agente snapshot per la pubblicazione selezionata.  
   
 ## <a name="options"></a>Opzioni  

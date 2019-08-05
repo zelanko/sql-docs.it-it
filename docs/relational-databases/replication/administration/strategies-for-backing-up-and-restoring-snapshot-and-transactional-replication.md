@@ -20,24 +20,25 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 695839b7687fb649ffd529ecb3fde7b78d65f3ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: ddfc9d657334e6aa971ff57b2febdff175ce3911
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948687"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768734"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Strategie per il backup e il ripristino della replica snapshot e della replica transazionale
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Quando si progetta una strategia di backup e ripristino per la replica snapshot e la replica transazionale, è necessario considerare le tre aree di fattori seguenti:  
   
--   Database di cui eseguire il backup.  
-  
--   Impostazioni di backup per la replica transazionale.  
-  
+-   Database di cui eseguire il backup.
+-   Impostazioni di backup per la replica transazionale.
 -   Passaggi richiesti per ripristinare un database, i quali variano in base al tipo di replica e alle opzioni scelte.  
   
  In questo argomento vengono illustrate le tre aree elencate in precedenza. Per altre informazioni sul backup e il ripristino per la pubblicazione Oracle, vedere [Backup e ripristino di server di pubblicazione Oracle](../../../relational-databases/replication/non-sql/backup-and-restore-for-oracle-publishers.md).  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../../includes/azure-sql-db-replication-supportability-note.md)]
   
 ## <a name="backing-up-databases"></a>Backup di database  
  Per la replica snapshot e la replica transazionale è necessario effettuare a intervalli regolari il backup dei database seguenti:  
