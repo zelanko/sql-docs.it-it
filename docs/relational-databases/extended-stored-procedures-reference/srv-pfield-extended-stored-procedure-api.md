@@ -26,7 +26,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68131577"
 ---
-# <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield (API della stored procedure estesa)
+# <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (API della stored procedure estesa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
@@ -86,6 +86,6 @@ len
  Un puntatore a una stringa con terminazione Null che contiene il valore corrente per il campo specificato nella struttura SRV_PROC. Se il campo è vuoto, viene restituito un puntatore valido a una stringa vuota e *len* contiene 0. Se il campo non è noto, viene restituito NULL e *len* contiene il valore -1.  
   
 > [!IMPORTANT]  
->  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e l'analisi della sicurezza, visitare il sito Web [Security Developer Center](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+>  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e l'analisi della sicurezza, visitare il sito Web [Security Developer Center](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   

@@ -27,7 +27,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "62718058"
 ---
-# <a name="srvsendrow-extended-stored-procedure-api"></a>srv_convert (API delle stored procedure estese)
+# <a name="srv_sendrow-extended-stored-procedure-api"></a>srv_convert (API delle stored procedure estese)
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
@@ -60,7 +60,7 @@ srvproc
 >  L'API delle stored procedure estese non supporta l'invio di righe di calcolo al client. Se, inoltre, una riga che contiene dati `ntext`, `text` o `image` viene inviata al client, il puntatore di testo e il timestamp di testo non vengono inclusi.  
   
 > [!IMPORTANT]  
->  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+>  È necessario esaminare con attenzione il codice sorgente delle stored procedure estese e testare le DLL compilate prima di installarle in un server di produzione. Per informazioni sui test e sull'analisi della sicurezza, visitare questo [sito Web Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Vedere anche  
  [srv_describe &#40;API Stored procedure estesa&#41;](srv-describe-extended-stored-procedure-api.md)  
