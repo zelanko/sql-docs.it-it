@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe907a62279c819c227772d70008ee96d172e229
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: aeee5d947a2af0f58030ce6ba94091df10d56c49
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127894"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68767770"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Inizializzazione di una sottoscrizione transazionale senza uno snapshot
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Per impostazione predefinita, una sottoscrizione di una pubblicazione transazionale viene inizializzata con uno snapshot generato dall'agente snapshot e applicato dall'agente di distribuzione. In alcuni scenari, ad esempio quelli che comportano l'utilizzo di set di dati iniziali di grandi dimensioni, è preferibile inizializzare una sottoscrizione utilizzando un altro metodo. Altri metodi di inizializzazione di un Sottoscrittore includono:  
   
 -   Specifica di un backup. Ripristinare il backup sul Sottoscrittore in modo che l'agente di distribuzione possa quindi copiare le procedure di sistema e i metadati di replica richiesti. L'inizializzazione con un backup rappresenta la procedura più rapida per il recapito dei dati al Sottoscrittore ed è conveniente in quanto è possibile utilizzare qualsiasi backup recente purché sia stato eseguito in seguito all'abilitazione della pubblicazione per l'inizializzazione con un backup.  

@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 997c0b8e-d8d9-4eed-85b1-6baa1f8594ce
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 813a0da699fe098f6086208a93e87aeab940a486
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 2229119fd5f6b8b2482c8bb201ac8bade8366596
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063045"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768117"
 ---
 # <a name="delete-a-pull-subscription"></a>Eliminazione di una sottoscrizione pull
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   In questo argomento viene descritto come eliminare una sottoscrizione pull in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o RMO (Replication Management Objects).  
   
  **Contenuto dell'articolo**  
@@ -66,15 +67,15 @@ ms.locfileid: "68063045"
   
 #### <a name="to-delete-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Per eliminare una sottoscrizione pull di una pubblicazione snapshot o transazionale  
   
-1.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md). Specificare i parametri **@publication**, **@publisher**e **@publisher_db**.  
+1.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md). Specificare i parametri **@publication** , **@publisher** e **@publisher_db** .  
   
-2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md). Specificare i parametri **@publication** e **@subscriber**. Specificare il valore **all** per il parametro **@article**. (Facoltativo) Se non è possibile accedere al database di distribuzione, specificare il valore **1** per il parametro **@ignore_distributor** per eliminare la sottoscrizione senza rimuovere gli oggetti correlati nel database di distribuzione.  
+2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md). Specificare i parametri **@publication** e **@subscriber** . Specificare il valore **all** per il parametro **@article** . (Facoltativo) Se non è possibile accedere al database di distribuzione, specificare il valore **1** per il parametro **@ignore_distributor** per eliminare la sottoscrizione senza rimuovere gli oggetti correlati nel database di distribuzione.  
   
 #### <a name="to-delete-a-pull-subscription-to-a-merge-publication"></a>Per eliminare una sottoscrizione pull di una pubblicazione di tipo merge  
   
-1.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md). Specificare i parametri **@publication**, **@publisher**e **@publisher_db**.  
+1.  Nel database di sottoscrizione del Sottoscrittore eseguire [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md). Specificare i parametri **@publication** , **@publisher** e **@publisher_db** .  
   
-2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md). Specificare i parametri **@publication**, **@subscriber**e **@subscriber_db**. Specificare il valore **pull** per il parametro **@subscription_type**. (Facoltativo) Se non è possibile accedere al database di distribuzione, specificare il valore **1** per il parametro **@ignore_distributor** per eliminare la sottoscrizione senza rimuovere gli oggetti correlati nel database di distribuzione.  
+2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md). Specificare i parametri **@publication** , **@subscriber** e **@subscriber_db** . Specificare il valore **pull** per il parametro **@subscription_type** . (Facoltativo) Se non è possibile accedere al database di distribuzione, specificare il valore **1** per il parametro **@ignore_distributor** per eliminare la sottoscrizione senza rimuovere gli oggetti correlati nel database di distribuzione.  
   
 ###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
  Nell'esempio seguente viene eliminata una sottoscrizione pull di una pubblicazione transazionale. Il primo batch viene eseguito nel Sottoscrittore, mentre il secondo viene eseguito nel server di pubblicazione.  

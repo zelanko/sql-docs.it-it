@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ffc0c7c54ea8cdcd83f78334d3748892cef07fe4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 635cdf4b698659ca85c343331425500c88c74759
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67905294"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769855"
 ---
 # <a name="manage-identity-columns"></a>Gestione delle colonne Identity
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   In questo argomento viene descritto come gestire le colonne Identity in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Quando gli inserimenti del Sottoscrittore vengono replicati nel server di pubblicazione, è necessario gestire le colonne Identity in modo da evitare l'assegnazione dello stesso valore Identity sia al Sottoscrittore che al server di pubblicazione. È possibile gestire automaticamente intervalli di valori Identity tramite la replica oppure scegliere di gestirli manualmente.  Per informazioni sulle opzioni di gestione degli intervalli di valori Identity fornite dalla replica, vedere [Replicare colonne Identity](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
  **Contenuto dell'articolo**  

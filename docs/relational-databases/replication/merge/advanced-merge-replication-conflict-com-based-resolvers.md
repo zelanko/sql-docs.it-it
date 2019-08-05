@@ -14,10 +14,10 @@ ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ec508dbaf274816ecf32f8eaa0a8047baa60e2a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/30/2019
 ms.locfileid: "68033391"
 ---
 # <a name="advanced-merge-replication-conflict---com-based-resolvers"></a>Conflitti nella replica di tipo merge avanzata - Sistemi di risoluzione basati su COM

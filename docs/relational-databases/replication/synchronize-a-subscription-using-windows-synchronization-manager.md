@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e5d686d0028b871fa163b3e1e4a1c71647ede60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 81899227c470ece81f01338e4e873e2f40cd015c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129797"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768297"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Sincronizzare una sottoscrizione mediante Gestione sincronizzazione Microsoft Windows
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Synchronization Manager può essere utilizzato solo per sincronizzare le sottoscrizioni con le pubblicazioni Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito nello stesso computer in cui è installato il componente Gestione sincronizzazione, nonché per sincronizzare pagine Web e file offline. Per utilizzare Gestione sincronizzazione:  
   
 1.  Abilitare la sincronizzazione delle sottoscrizioni pull con Gestione sincronizzazione Microsoft Windows nella finestra di dialogo **Proprietà sottoscrizione - \<Sottoscrittore>: \<DatabaseSottoscrizione >** . Per altre informazioni sull'accesso a questa finestra di dialogo, vedere [Visualizzare e modificare le proprietà delle sottoscrizioni pull](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  

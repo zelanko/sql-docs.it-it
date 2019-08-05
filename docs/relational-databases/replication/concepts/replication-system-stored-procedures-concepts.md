@@ -18,15 +18,16 @@ helpviewer_keywords:
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 344b2abfafe5f2e69c6e758744e2cd63fa663603
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: f887fdf9aaddf49e5dc2c9f79ed43299f572eb13
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903287"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768137"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'accesso a livello di codice a tutte le funzionalità configurabili dall'utente in una topologia di replica viene fornito da stored procedure di sistema. Mentre le stored procedure possono essere eseguite singolarmente utilizzando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o l'utilità della riga di comando sqlcmd, può rivelarsi vantaggioso scrivere file script [!INCLUDE[tsql](../../../includes/tsql-md.md)] che consentono di eseguire una sequenza logica di attività di replica.  
   

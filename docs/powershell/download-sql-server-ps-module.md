@@ -11,12 +11,12 @@ keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b7c49c25e1594657c3855aca1d50aac0fc47316f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 622d086c110bbf321534371d6b5547cadf9cbfd8
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951716"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68697281"
 ---
 # <a name="install-sql-server-powershell-module"></a>Installare il modulo PowerShell SqlServer
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,6 @@ Questo articolo include indicazioni per l'installazione del modulo PowerShell **
 > * **SqlServer**: questo modulo include nuovi cmdlet per supportare le funzionalità più recenti di SQL. Il modulo contiene anche le versioni aggiornate dei cmdlet in **SQLPS**. 
 
 Le versioni precedenti del modulo **SqlServer** *erano* incluse con SQL Server Management Studio (SSMS), ma solo con le versioni 16.x di SQL Server Management Studio. Per usare PowerShell con SSMS 17.0 e versioni successive, è necessario installare il modulo **SqlServer** da [PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver).
-La versione corrente del modulo **SqlServer** è la 21.1.18080. È basata sulla versione v150 di Microsoft.SQLServer.SMO e supporta la versione successiva di SQL Server. L'ultima versione del modulo basata sulla versione v140 di Microsoft.SQLServer.SMO è la 21.0.17279.
 
 Versioni non definitive del modulo possono essere rese disponibili con una maggiore frequenza: vedere la sezione alla fine di questa pagina su come ottenere queste versioni del modulo.
 

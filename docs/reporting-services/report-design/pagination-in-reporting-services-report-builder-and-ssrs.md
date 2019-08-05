@@ -1,6 +1,6 @@
 ---
 title: Paginazione in Reporting Services (Generatore report e SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 07/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 93ba4ad975c940979cd1e5604de51e92f2c441cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 507aeab666f1849b9216b22e90dfee3d21f92694
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65582204"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68632031"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Paginazione in Reporting Services (Generatore report e SSRS)
   Il termine paginazione si riferisce al numero di pagine all'interno di un report e alla disposizione degli elementi del report in tali pagine. In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] la paginazione varia a seconda dell'estensione per il rendering usata per visualizzare e recapitare il report. Quando si esegue un report sul server di report, viene usato il renderer HTML. Tale renderer si attiene a un set specifico di regole di paginazione. Se ad esempio si esporta lo stesso report in formato PDF, viene usato il renderer PDF e viene applicato un set di regole differente, pertanto il report viene impaginato in modo diverso. Per progettare correttamente un report di facile lettura e ottimizzato per il renderer che si intende usare per recapitare il report, è necessario comprendere le regole usate per controllare la paginazione in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "65582204"
   
  Per impostazione predefinita, le dimensioni della pagina sono 8,5 x 11 pollici, ma è possibile cambiarle nella finestra di dialogo **Imposta pagina** o nel riquadro **Proprietà report** oppure modificando le proprietà PageHeight e PageWidth nel riquadro **Proprietà** . Le dimensioni della pagina non vengono aumentate o ridotte a seconda del contenuto del corpo del report. Se si desidera che il report sia visualizzato in una sola pagina, tutto il contenuto del corpo del report deve essere inserito nella pagina fisica. Se non è possibile inserirlo e si usa il formato con interruzioni di pagina manuali, per il report saranno necessarie ulteriori pagine. Se il corpo del report si estende oltre il bordo destro della pagina fisica, viene inserita un'interruzione di pagina orizzontale. Se il corpo del report si estende oltre il bordo inferiore della pagina fisica, viene inserita un'interruzione di pagina verticale.  
   
- Se si desidera eseguire l'override delle dimensioni della pagina fisica definite nel report, è possibile specificare tali dimensioni usando le impostazioni relative alle informazioni sui dispositivi per il renderer specifico usato per esportare il report. Per altre informazioni, vedere [Reporting Services Device Information Settings](https://go.microsoft.com/fwlink/?LinkId=102515).  
+ Se si desidera eseguire l'override delle dimensioni della pagina fisica definite nel report, è possibile specificare tali dimensioni usando le impostazioni relative alle informazioni sui dispositivi per il renderer specifico usato per esportare il report. Per altre informazioni, vedere [Reporting Services Device Information Settings](../device-information-settings-for-rendering-extensions-reporting-services.md).  
   
 ### <a name="margins"></a>Margini  
  I margini vengono tracciati dal bordo delle dimensioni della pagina fisica verso l'interno fino all'impostazione specificata. Se un elemento del report si estende nell'area del margine, viene tagliato in modo da non eseguire il rendering dell'area della sovrapposizione. Se per i margini si specificano dimensioni tali che la larghezza orizzontale o verticale della pagina sia uguale a zero, il valore predefinito delle impostazioni dei margini sarà uguale a zero. I margini vengono specificati nella finestra di dialogo **Imposta pagina** o nel riquadro **Proprietà report** oppure modificando le proprietà TopMargin, BottomMargin, LeftMargin e RightMargin nel riquadro **Proprietà** . Se si desidera eseguire l'override delle dimensioni dei margini definite nel report, è possibile specificare tali dimensioni usando le impostazioni relative alle informazioni sui dispositivi per il renderer specifico usato per esportare il report.  

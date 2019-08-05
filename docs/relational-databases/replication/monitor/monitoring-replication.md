@@ -18,15 +18,16 @@ helpviewer_keywords:
 ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f58fb09416bb6cc800c31dffa47e359d361ccaf7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b35b7ecc21497e7b8c458b6d0e46c410f96d5d21
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082967"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68767133"
 ---
 # <a name="monitoring-replication"></a>Monitoraggio (replica)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Il monitoraggio di una topologia di replica rappresenta un aspetto essenziale della distribuzione di una replica. Dato che l'attività di replica viene distribuita, è fondamentale monitorarne l'attività e lo stato su tutti i computer interessati. Con l'uso di vari strumenti di monitoraggio è possibile rispondere a domande comuni quali: 
 
 -   Il sistema di replica funziona correttamente?
@@ -42,7 +43,7 @@ Per monitorare la replica è possibile utilizzare gli strumenti seguenti:
 -   **Monitoraggio replica per SQL Server**: il più importante strumento per il monitoraggio della replica che offre una visualizzazione incentrata sul server di pubblicazione dell'intera attività di replica. Per altre informazioni, vedere [Monitoring Replication](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md). 
 -   **SQL Server Management Studio**: offre l'accesso a Monitoraggio replica. Consente anche di visualizzare lo stato attuale e l'ultimo messaggio registrato dagli agenti seguenti e di avviare e arrestare ogni agente: agente di lettura log, agente di snapshot, agente di merge e agente di distribuzione. Per altre informazioni, vedere [Monitor Replication Agents](../../../relational-databases/replication/monitor/monitor-replication-agents.md).  
   
--   **Transact-SQL (T-SQL) e Replication Management Objects (RMO)**: entrambe le interfacce consentono di monitorare tutti i tipi di replica dal database di distribuzione. La replica di tipo merge consente inoltre di monitorare la replica dal Sottoscrittore.  
+-   **Transact-SQL (T-SQL) e Replication Management Objects (RMO)** : entrambe le interfacce consentono di monitorare tutti i tipi di replica dal database di distribuzione. La replica di tipo merge consente inoltre di monitorare la replica dal Sottoscrittore.  
   
 -   **Avvisi per gli eventi degli agenti di replica**: durante la replica sono disponibili diversi avvisi predefiniti per gli eventi degli agenti di replica. Se necessario, è anche possibile creare nuovi avvisi. Gli avvisi possono essere utilizzati per avviare una risposta automatica in seguito a un evento e/o per inviare notifiche all'amministratore. Per altre informazioni, vedere [Usare gli avvisi per gli eventi degli agenti di replica](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md).  
   

@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fef7b32c2da62c4e61e0ef2da4f4e2a5d17f777c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 3f82a7cc00a80bcddec32161d0a2c877c6bf1175
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051905"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768408"
 ---
 # <a name="secure-the-distributor"></a>Sicurezza del database di distribuzione
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Gli agenti di replica che si connettono al server di distribuzione sono l'agente di lettura log, l'agente snapshot, l'agente di lettura coda, l'agente di distribuzione e l'agente di merge. È importante fornire un account di accesso appropriato per ognuno di questi agenti seguendo il principio di concedere i diritti minimi necessari nonché proteggere l'archiviazione di tutte le password:  
   
 -   Per informazioni sulla gestione di account di accesso e password, vedere [Gestire gli account di accesso e le password nella replica](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  

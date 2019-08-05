@@ -12,15 +12,16 @@ helpviewer_keywords:
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5a53c0ac886185e2d6723a5a01c055c1c828fe51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: c7f499c813f31717e5932cf0b78b4699b72b2a85
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121262"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769337"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Specificare la modalità di propagazione delle modifiche per gli articoli transazionali
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La replica transazionale consente di specificare la modalità di propagazione delle modifiche dei dati dal server di pubblicazione ai Sottoscrittori. Per ogni tabella pubblicata è possibile specificare una delle quattro modalità con cui ogni operazione (INSERT, UPDATE o DELETE) dovrebbe propagarsi al Sottoscrittore:  
   
 -   Specificare che la replica transazionale deve inserire in uno script e in un secondo momento chiamare una stored procedure per propagare le modifiche ai Sottoscrittori (impostazione predefinita).  

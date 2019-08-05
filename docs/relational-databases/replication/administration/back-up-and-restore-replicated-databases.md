@@ -25,15 +25,16 @@ helpviewer_keywords:
 ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 53691231f08e9ac9fe97807d062c7fed39746a7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 101c272e51a4a4fdab4456f87aac297c2ac56476
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939411"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768819"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>Backup e ripristino di database replicati
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Il backup e il ripristino dei dati dei database replicati richiedono un'attenzione particolare. In questo argomento sono fornite informazioni introduttive e collegamenti ad informazioni più approfondite sulle strategie di backup e ripristino per ogni tipo di replica.  
   

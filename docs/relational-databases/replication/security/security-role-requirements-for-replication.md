@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: b324a80f-4319-4cb2-847b-1910c49d90e0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8ee132e13a750e682c7fa29a375e88679fd2871a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: c0b8d89fd9e276edfffd6635da1518aacef0a25c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051786"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768419"
 ---
 # <a name="security-role-requirements-for-replication"></a>Requisiti del ruolo di sicurezza per la replica
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La replica limita le azioni specifiche che un utente può eseguire in base ai ruoli a cui viene eseguito il mapping dell'account di accesso dell'utente. La replica concede determinate autorizzazioni al ruolo predefinito del server **sysadmin** , al ruolo predefinito del database **db_owner** e agli account di accesso presenti nell'elenco di accesso alla pubblicazione.  
   
 ## <a name="security-role-requirements-for-replication-setup"></a>Requisiti del ruolo di sicurezza per la configurazione della replica  

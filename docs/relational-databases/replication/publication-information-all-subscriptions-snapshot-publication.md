@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 7ce656c2-6e60-4625-8955-1daff641070c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a652d7d2b38abec301faa87ce6fb25f46707b538
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: f0ef9094c1e7d6a7396ee946dd9b4e7e3b3587b8
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120376"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769996"
 ---
 # <a name="publication-information-all-subscriptions-snapshot-publication"></a>Informazioni sulla pubblicazione, Tutte le sottoscrizioni (Pubblicazione snapshot)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Nella scheda **Tutte le sottoscrizioni** vengono visualizzate le informazioni su tutte le sottoscrizioni della pubblicazione snapshot selezionata.  
   
 ## <a name="options"></a>Opzioni  

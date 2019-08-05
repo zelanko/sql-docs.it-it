@@ -17,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 95a088d78fd3fedfd4e1303808860e8d3e4b9486
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 3429a9c1e99277c9113e1773e99c8bd58a1cc01a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073589"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769834"
 ---
 # <a name="replicate-identity-columns"></a>Replica di colonne Identity
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando si assegna la proprietà IDENTITY a una colonna, vengono automaticamente generati numeri sequenziali per le nuove righe inserite nella tabella contenente la colonna Identity. Per altre informazioni, vedere [IDENTITY &#40;proprietà&#41; &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md). Dato che è possibile includere le colonne Identity come parte della chiave primaria, è importante evitare di inserire valori duplicati nelle colonne Identity. Per utilizzare colonne Identity in una topologia di replica con aggiornamenti in più di un nodo, è necessario che ogni nodo presente nella topologia di replica utilizzi un intervallo di valori Identity diverso, in modo da non generare duplicati.  
   
  Ad esempio, al server di pubblicazione potrebbe essere assegnato l'intervallo 1-100, al Sottoscrittore A l'intervallo 101-200 e al Sottoscrittore B l'intervallo 201-300. Se una riga viene inserita nel server di pubblicazione e il valore Identity è, ad esempio, 65, tale valore viene replicato in ogni Sottoscrittore. Durante l'inserimento dei dati nei Sottoscrittori, il valore della colonna Identity nella tabella dei Sottoscrittori non viene incrementato, bensì viene inserito il valore letterale di 65. Il valore della colonna Identity viene incrementato solo in seguito a inserimenti da parte dell'utente e non a inserimenti generati dall'agente di replica.  

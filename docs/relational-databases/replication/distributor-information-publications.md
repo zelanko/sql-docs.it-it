@@ -16,15 +16,16 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 90459364211bef6714ba3af63cdc4669e0190049
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 043a13a84eebe9fc1c2cac96628ce6303653e8ac
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128303"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768587"
 ---
 # <a name="distributor-information-publications"></a>Informazioni sul server di distribuzione, Pubblicazioni
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Nella scheda **Pubblicazioni** vengono fornite informazioni di riepilogo relative a tutte le pubblicazioni nel server di distribuzione selezionato nel riquadro sinistro.  
   
 Nelle informazioni visualizzate relative alle pubblicazioni supportate dal server di distribuzione è inclusa una colonna in cui è contenuta l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del server di pubblicazione. In caso contrario, le informazioni sulla pubblicazione corrispondono alle informazioni sulla pubblicazione fornite quando si visualizzano pubblicazioni nella vista Server di pubblicazione di Monitoraggio replica. Per ulteriori informazioni sulle colonne nella scheda **Pubblicazioni** , vedere [Publisher Information, Publications](../../relational-databases/replication/publisher-information-publications.md).  

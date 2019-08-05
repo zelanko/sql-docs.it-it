@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d654627a3e35aacfebe4b3c69573eff83beaa39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: a2d9e5b04164b3e8aab8c8d0a2fa50d154b10345
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115225"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769257"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Visualizzazione e modifica delle proprietà del server di pubblicazione e del database di distribuzione
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   In questo argomento viene descritto come visualizzare e modificare le proprietà del database di distribuzione e del server di pubblicazione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o RMO (Replication Management Objects).  
   
  **Contenuto dell'articolo**  
@@ -59,11 +60,11 @@ ms.locfileid: "68115225"
   
 2.  Fare clic con il pulsante destro del mouse sulla cartella **Replica** e quindi scegliere **Proprietà server di distribuzione**.  
   
-3.  Visualizzare e modificare le proprietà nella finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>**.  
+3.  Visualizzare e modificare le proprietà nella finestra di dialogo **Proprietà database di distribuzione - \<DatabaseDistribuzione>** .  
   
-    -   Per visualizzare e modificare le proprietà di un database di distribuzione, fare clic sul pulsante delle proprietà (**...**) relativo al database nella pagina **Generale** della finestra di dialogo.  
+    -   Per visualizzare e modificare le proprietà di un database di distribuzione, fare clic sul pulsante delle proprietà ( **...** ) relativo al database nella pagina **Generale** della finestra di dialogo.  
   
-    -   Per visualizzare e modificare le proprietà del server di pubblicazione associato al database di distribuzione, fare clic sul pulsante delle proprietà (**...**) relativo al server di pubblicazione nella pagina **Server di pubblicazione** della finestra di dialogo.  
+    -   Per visualizzare e modificare le proprietà del server di pubblicazione associato al database di distribuzione, fare clic sul pulsante delle proprietà ( **...** ) relativo al server di pubblicazione nella pagina **Server di pubblicazione** della finestra di dialogo.  
   
     -   Per accedere ai profili degli agenti di replica, fare clic sul pulsante **Impostazioni predefinite profili** nella pagina **Generale** della finestra di dialogo. Per altre informazioni, vedere [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
@@ -77,7 +78,7 @@ ms.locfileid: "68115225"
   
 2.  Fare clic con il pulsante destro del mouse sulla cartella **Replica** e quindi scegliere **Proprietà server di pubblicazione**.  
   
-3.  Visualizzare e modificare le proprietà nella finestra di dialogo **Proprietà server di pubblicazione - <ServerPubblicazione>**.  
+3.  Visualizzare e modificare le proprietà nella finestra di dialogo **Proprietà server di pubblicazione - <ServerPubblicazione>** .  
   
     -   Un utente nel ruolo predefinito del server **sysadmin** può abilitare i database per la replica nella pagina **Database di pubblicazione** . L'abilitazione di un database non ne comporta la pubblicazione, ma piuttosto consente a un utente nel ruolo predefinito del database **db_owner** per il database in questione di creare una o più pubblicazioni nel database.  
   

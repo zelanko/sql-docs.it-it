@@ -15,15 +15,16 @@ f1_keywords:
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aa39a4752952a3d214d7dea8eaeb236c75d9f5d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 1bc6b8506244b16a1c9592ed59e91684494bfa1e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021321"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768549"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>Finestra di dialogo Proprietà server di pubblicazione di replica di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 Questo argomento descrive le diverse opzioni disponibili nella finestra di dialogo Proprietà server di pubblicazione. 
 
@@ -71,7 +72,7 @@ La finestra di dialogo **Proprietà server di pubblicazione** consente di visual
   
 ### <a name="options"></a>Opzioni  
  **Sottoscrittori**  
- La griglia delle proprietà **Sottoscrittori** visualizza i Sottoscrittori abilitati al ricevimento di dati dalle pubblicazioni incluse nel server di pubblicazione corrente. Per visualizzare e impostare proprietà aggiuntive fare clic sul pulsante delle proprietà (**...**) accanto a un Sottoscrittore.  
+ La griglia delle proprietà **Sottoscrittori** visualizza i Sottoscrittori abilitati al ricevimento di dati dalle pubblicazioni incluse nel server di pubblicazione corrente. Per visualizzare e impostare proprietà aggiuntive fare clic sul pulsante delle proprietà ( **...** ) accanto a un Sottoscrittore.  
   
  **Aggiungi**  
  Fare clic su **Aggiungi** per aggiungere un Sottoscrittore e quindi fare clic su **Aggiungi Sottoscrittore SQL Server** o su **Aggiungi Sottoscrittore non SQL Server**.  

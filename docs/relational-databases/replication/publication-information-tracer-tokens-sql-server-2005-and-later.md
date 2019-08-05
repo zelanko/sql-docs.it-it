@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: a115ba95-17ae-45df-91bd-5a1a35f3745f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 34e0bc66497d789e13005b1bdaa85e50bb062234
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: e4ec223179bf7fdb2e2fae250f95ab241ed1acf7
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120281"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770007"
 ---
 # <a name="publication-information-tracer-tokens-sql-server-2005-and-later"></a>Informazioni sulla pubblicazione, Token di traccia (SQL Server 2005 e versioni successive)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La scheda **Token di traccia** consente di convalidare le connessioni e di misurare la latenza di un sistema che utilizza la replica transazionale. Un token, ovvero una piccola quantità di dati, viene scritto nel log delle transazioni del database di pubblicazione, contrassegnato come se fosse una comune transazione replicata e inviato tramite il sistema in modo da consentire:  
   
 -   Il calcolo del tempo che trascorre tra l'esecuzione del commit di una transazione nel server di pubblicazione e l'inserimento del comando corrispondente nel database di distribuzione del server di distribuzione.  

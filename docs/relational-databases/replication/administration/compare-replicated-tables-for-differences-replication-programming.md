@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6df93be45d9e914d97e9fd8f0c2f712f3935ea8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: a36c825a01d9c205732636bbd91e40dc322e546d
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939337"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770815"
 ---
 # <a name="compare-replicated-tables-for-differences-replication-programming"></a>Confronto di tabelle replicate al fine di individuare le differenze (programmazione della replica)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La convalida degli articoli consente di determinare se i dati pubblicati per gli articoli di tabella nel server di pubblicazione e nel Sottoscrittore non sono identici, fattore che può indicare la mancanza di convergenza. Per altre informazioni, vedere [Convalidare i dati replicati](../../../relational-databases/replication/validate-data-at-the-subscriber.md). La convalida restituisce tuttavia solo un risultato positivo o negativo e non fornisce informazioni sulle differenze specifiche tra le tabelle di origine e di destinazione. L'utilità del prompt dei comandi **tablediff** restituisce informazioni dettagliate sulle differenze tra due tabelle e può anche generare uno script [!INCLUDE[tsql](../../../includes/tsql-md.md)] per ripristinare la convergenza tra una sottoscrizione e i dati nel server di pubblicazione.  
   
 > [!NOTE]  

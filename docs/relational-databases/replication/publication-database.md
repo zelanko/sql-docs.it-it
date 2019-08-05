@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: a9fafc9b-9963-4b59-97a0-3472158fa665
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9aeab30218f559a511195f66a66d3416a5993bb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 38694dfd2eadb4b25c2606bc825f5388e48daf29
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027119"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770056"
 ---
 # <a name="publication-database"></a>Database di pubblicazione
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Il database di pubblicazione è il database del server di pubblicazione che funge da origine dei dati e degli oggetti di database da replicare. Tutti i database utilizzati nella replica devono essere abilitati. Il database viene abilitato quando un membro del ruolo predefinito del server **sysadmin** :  
   
 -   Crea una pubblicazione nel database tramite la Creazione guidata nuova pubblicazione.  

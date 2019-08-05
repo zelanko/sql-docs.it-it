@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 6bc64ddb-5c86-4681-a391-77fc1d3c4e6e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dbdb879f51c564dcfeb156a8b56b77bbe8d5d10e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 9c550e12b671f7063b8659de8d7b998f86917ff2
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021347"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68763938"
 ---
 # <a name="publisher-information-subscription-watch-list-transactional"></a>Informazioni sul server di pubblicazione, Elenco verifica sottoscrizioni (transazionale)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La scheda **Elenco verifica sottoscrizioni** è disponibile per i server di distribuzione in cui viene eseguito SQL Server 2005 e versioni successive. Consente di visualizzare informazioni sulle sottoscrizioni da tutte le pubblicazioni disponibili nel server di pubblicazione selezionato. È possibile filtrare l'elenco delle sottoscrizioni per visualizzare errori, avvisi ed eventuali sottoscrizioni con prestazioni scarse. Questa scheda offre agli amministratori un unico punto per il monitoraggio di tutte le attività di replica eseguite nel server di pubblicazione: Monitoraggio replica visualizza infatti tutte le sottoscrizioni che necessitano di attenzione in base al tipo di replica selezionato e all'opzione scelta nell'elenco a discesa **Mostra**. Poiché gli elementi visualizzati in questa scheda si basano sullo stato e le prestazioni correnti, le sottoscrizioni vengono visualizzate in questa pagina solo se queste corrispondono all'opzione selezionata nella casella di riepilogo **Mostra** .  
   
 ## <a name="options"></a>Opzioni  

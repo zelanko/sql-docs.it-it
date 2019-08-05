@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 362861dcc90222d32ccd816fb419fa99fc4de65a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: c9e96d5ebbe71273204b39ed5d387ecab598654a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907946"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68764364"
 ---
 # <a name="change-publication-and-article-properties"></a>Modifica delle proprietà di pubblicazioni e articoli
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Dopo aver creato una pubblicazione, è possibile modificare la maggior parte delle proprietà della pubblicazione stessa e degli articoli. In alcuni casi è necessario rigenerare lo snapshot e/o reinizializzare le sottoscrizioni. In questo argomento vengono fornite informazioni su tutte le proprietà che, se modificate, richiedono l'esecuzione di una o entrambe le azioni.  
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>Proprietà della pubblicazione per la replica snapshot e transazionale  

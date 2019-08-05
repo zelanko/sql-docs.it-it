@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 17561f22d85a7bd6564d898d84da22364c0c92a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: e158860b786a7612a31acd629a7b5d5deff203f3
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129947"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769482"
 ---
 # <a name="sql-server-replication"></a>Replica di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La replica è costituita da un set di tecnologie per la copia e la distribuzione di dati e oggetti di database da un database a un altro e la successiva sincronizzazione dei database in modo che risultino consistenti. Usare la replica per distribuire dati a diverse posizioni e a utenti remoti o mobili tramite reti locali e WAN, connessioni remote, connessioni wireless e Internet.  
   
  La replica transazionale viene in genere utilizzata negli scenari server-server con esigenze di elevata velocità effettiva, inclusi il miglioramento delle caratteristiche di scalabilità e disponibilità, funzionalità di data warehouse e di creazione di report, integrazione di dati da più siti, integrazione di dati eterogenei e ripartizione del carico di lavoro dell'elaborazione batch. La replica di tipo merge è principalmente progettata per le applicazioni mobili o server distribuite con possibili conflitti di dati. Tra gli scenari comuni sono inclusi lo scambio di dati con utenti mobili, applicazioni POS e integrazione di dati da più siti. La replica snapshot viene utilizzata per fornire il set di dati iniziale per la replica di tipo merge o transazionale, nonché nel caso sia necessario un aggiornamento completo dei dati. Con questi tre tipi di replica, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] costituisce un sistema potente e flessibile per la sincronizzazione dei dati aziendali. La replica in SQLCE 3.5 e SQLCE 4.0 è supportata sia in [!INCLUDE[win8srv](../../includes/win8srv-md.md)] sia in [!INCLUDE[win8](../../includes/win8-md.md)].  

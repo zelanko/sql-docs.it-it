@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: ebf59330-a421-45a5-9020-0484a96852bc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8ca9f5b72e4036a3796852f0b5388d98147d7c51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 10ddecc4e3c81d48a2824eb48e48495e4f2dec1d
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020160"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68764945"
 ---
 # <a name="new-agent-profile"></a>Nuovo profilo agente
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La finestra di dialogo **Nuovo profilo agente** consente di creare un nuovo profilo. I nuovi profili sono sempre basati su profili esistenti, ma possono essere modificati in base ai requisiti delle applicazioni. Dopo aver creato un profilo, è possibile applicarlo a processi agente esistenti e creati in un secondo momento nella finestra di dialogo **Profili agente** . I valori dei parametri degli agenti possono essere modificati nella finestra di dialogo \<Proprietà **NomeProfiloAgente>** .  
   
 ## <a name="options"></a>Opzioni  

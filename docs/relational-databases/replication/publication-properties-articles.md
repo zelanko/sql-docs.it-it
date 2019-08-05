@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: bdeea318-a153-44b8-9e51-9155f3bad18b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 06da0b5b0fb6dbbdbd4a85c2792d19ab288d36bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: e68a2065da5acb7405fc155f4601a9a5dc7a2c3f
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908096"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769953"
 ---
 # <a name="publication-properties-articles"></a>Proprietà pubblicazione, Articoli
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La pagina **Articoli** della finestra di dialogo **Proprietà pubblicazione** contiene informazioni sugli articoli contenuti in una pubblicazione e consente di aggiungere o rimuovere articoli da pubblicazioni esistenti, nonché di modificare i filtri delle colonne e le proprietà degli articoli.  
   
 > [!NOTE]  

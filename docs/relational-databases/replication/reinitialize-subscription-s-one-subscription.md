@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 9b0cf0be-d1f1-4163-a0ca-d6f095aa707e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5e0a9a86e88990fc6084b5a9d8981201c46ffd7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b2144707d41ae82d0983a7b9c5a9ead6cf9832c9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046746"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768454"
 ---
 # <a name="reinitialize-subscriptions---one-subscription"></a>Reinizializza sottoscrizioni - Una sottoscrizione
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La finestra di dialogo **Reinizializza sottoscrizioni** consente di contrassegnare una sottoscrizione per la reinizializzazione. La reinizializzazione implica l'applicazione di uno snapshot al Sottoscrittore e viene eseguita dall'agente di distribuzione per le sottoscrizioni di pubblicazioni transazionali e dall'agente di merge per le sottoscrizioni di pubblicazioni di tipo merge.  
   
 ## <a name="options"></a>Opzioni  

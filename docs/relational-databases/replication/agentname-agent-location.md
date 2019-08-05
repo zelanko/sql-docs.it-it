@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: dc664d80-fbe3-4586-aba8-a71fa62d14f0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 33e9af6e246d2fe48f93c452a7ae143ce40d96fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: f909e2ffc6f0af693325ae40cb50e92d465fc82c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027825"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768697"
 ---
 # <a name="ltagentnamegt-agent-location"></a>Posizione in cui eseguire l'agente &lt;NomeAgente&gt;
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   L'agente di merge (per le sottoscrizioni di tipo merge) e l'agente di distribuzione (per le sottoscrizioni transazionali e snapshot) vengono eseguiti nel server di distribuzione o nel Sottoscrittore. Se l'agente viene eseguito nel server di distribuzione, la sottoscrizione viene denominata sottoscrizione push; mentre se l'agente viene eseguito nel Sottoscrittore, viene definita sottoscrizione pull. Per altre informazioni sulle sottoscrizioni push e pull, vedere [Sottoscrizione delle pubblicazioni](../../relational-databases/replication/subscribe-to-publications.md). Tutte le sottoscrizioni create in questo passaggio della procedura guidata risulteranno del tipo selezionato. Per creare sottoscrizioni di entrambi i tipi, è necessario eseguire due volte la procedura guidata.  
   
 > [!NOTE]  

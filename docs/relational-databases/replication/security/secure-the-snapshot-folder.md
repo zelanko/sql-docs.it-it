@@ -12,15 +12,16 @@ helpviewer_keywords:
 ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 30e0f800477af8305f64b617aa3af543e789bdc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 68f87d4707f17eab8a37332b6db2baff5ed5a42f
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051887"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768457"
 ---
 # <a name="secure-the-snapshot-folder"></a>Sicurezza della cartella snapshot
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La cartella snapshot è una directory in cui vengono archiviati i file di snapshot. È consigliabile dedicare questa directory esclusivamente all'archiviazione degli snapshot. Concedere all'agente snapshot l'autorizzazione di scrittura per la cartella e verificare che l'autorizzazione di lettura sia concessa solo all'account di Windows utilizzato dall'agente di merge o dall'agente di distribuzione per accedere alla cartella. L'account di Windows associato all'agente deve essere un account di dominio per poter accedere a una cartella snapshot posizionata in un computer remoto.  
   
 > [!NOTE]  

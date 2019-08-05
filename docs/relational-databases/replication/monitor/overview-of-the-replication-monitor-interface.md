@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e3681d88f0cd91ce955919ad24f0e95b0600c5e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: e293625ab72ba1b94b32a1e6c1ada853b88509f4
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061450"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770600"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Panoramica dell'interfaccia di Monitoraggio replica
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Monitoraggio replica per[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offre una visualizzazione incentrata sul server di pubblicazione o sul server di distribuzione di tutte le attività di replica suddivise in due riquadri. Se si aggiunge un server di pubblicazione nel riquadro sinistro di Monitoraggio replica, verranno visualizzate nel riquadro sinistro informazioni sul server di pubblicazione, sulle relative pubblicazioni, sulle sottoscrizioni a tali pubblicazioni e sui diversi agenti di replica. Oltre a visualizzare informazioni per la topologia di replica, Monitoraggio replica consente di eseguire numerose attività, quali l'avvio e l'arresto degli agenti e la convalida dei dati.  
   
 ## <a name="viewing-information-for-the-entire-topology"></a>Visualizzazione di informazioni per l'intera topologia  

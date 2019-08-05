@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 32e8e55d24ebd1ff27ef5e87e1da46a69feadb02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 04cfff3e2772f945d01093bab15246924a104b2b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939439"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768842"
 ---
 # <a name="best-practices-for-replication-administration"></a>Procedure consigliate per l'amministrazione della replica
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Dopo aver configurato la replica, è importante comprendere in che modo amministrare una topologia di replica. In questo argomento sono contenute procedure consigliate di base relative a diverse aree, con collegamenti ad altre informazioni per ogni area. Oltre ad attenersi a tali procedure, provare a familiarizzare con domande e problemi comuni leggendo: [Domande frequenti per gli amministratori di replica](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
   
  È preferibile suddividere le procedure consigliate in due aree:  

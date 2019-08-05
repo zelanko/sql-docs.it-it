@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 54ea1c6f261a8ca6d7b68f4b9751338e6baf10db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b3c7d1474164741ef8380ce1904f99a05e833456
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121236"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769309"
 ---
 # <a name="transactional-replication"></a>Replica transazionale
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La replica transazionale in genere ha inizio con la creazione di uno snapshot degli oggetti e dei dati del database di pubblicazione. Dopo la creazione dello snapshot iniziale, le successive modifiche ai dati e allo schema eseguite nel server di pubblicazione vengono generalmente recapitate al Sottoscrittore nel momento in cui vengono eseguite. Le modifiche ai dati vengono applicate al Sottoscrittore nello stesso ordine e negli stessi limiti della transazione con cui vengono eseguite nel server di pubblicazione. Di conseguenza, la consistenza transazionale all'interno di una pubblicazione è garantita.  
   
  La replica transazionale viene solitamente utilizzata negli ambienti da server a server ed è appropriata ai casi seguenti:  

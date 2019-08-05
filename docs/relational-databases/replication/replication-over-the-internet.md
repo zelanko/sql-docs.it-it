@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 04e7f4ed-e244-4bbe-ba12-09c33abea09e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 085af23bd85b326fe419799cbdc591e596d69c8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: c453b95b0bebfcb685e4c44502577edfda45c42a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005379"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768477"
 ---
 # <a name="replication-over-the-internet"></a>Replica su Internet
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La replica dei dati su Internet consente a utenti remoti e non connessi di accedere ai dati nel momento desiderato tramite una connessione a Internet. È possibile replicare i dati su Internet utilizzando:  
   
 -   Una rete privata virtuale (VPN). Per altre informazioni, vedere [Pubblicare i dati su Internet tramite VPN](../../relational-databases/replication/publish-data-over-the-internet-using-vpn.md).  

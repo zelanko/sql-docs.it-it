@@ -14,16 +14,19 @@ helpviewer_keywords:
 ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a9914246135350540b0155e61905d1e548a033fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: f07a80d5667a91376c9e5936be2474c826d6569a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051872"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769608"
 ---
 # <a name="secure-the-subscriber"></a>Sicurezza del Sottoscrittore
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Gli agenti di merge e di distribuzione si connettono al Sottoscrittore. Queste connessioni possono essere stabilite nel contesto di un account di accesso di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o di Windows. È importante specificare un account di accesso appropriato per questi agenti, attenendosi al principio di concedere i diritti minimi necessari e proteggere l'archiviazione di tutte le password. Per informazioni sulle autorizzazioni necessarie per ogni agente, vedere [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../../includes/azure-sql-db-replication-supportability-note.md)]
   
 ## <a name="distribution-agent"></a>Agente di distribuzione  
  È possibile utilizzare un agente di distribuzione per sottoscrizione, ovvero un agente indipendente in base all'impostazione predefinita per le pubblicazioni create nella Creazione guidata nuova pubblicazione, oppure un agente di distribuzione per coppia di database di pubblicazione e database di sottoscrizione, ovvero un agente condiviso. T  

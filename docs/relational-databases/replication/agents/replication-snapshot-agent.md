@@ -15,19 +15,22 @@ helpviewer_keywords:
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1e0c9d8d91bce3cc632e6cfd8a5f50353a55793a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 4f79bab916e955dfced1fc5bd01df65f98473c54
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085935"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768285"
 ---
 # <a name="replication-snapshot-agent"></a>Agente snapshot repliche
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Agente snapshot repliche è un file eseguibile che consente di preparare i file di snapshot contenenti lo schema e i dati delle tabelle pubblicate e degli oggetti di database, di archiviare i file nella cartella snapshot e di registrare i processi di sincronizzazione nel database di distribuzione.  
   
 > [!NOTE]  
->  I parametri possono essere specificati in qualsiasi ordine.  
+>  - I parametri possono essere specificati in qualsiasi ordine.  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../../includes/azure-sql-db-replication-supportability-note.md)]
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -79,8 +82,8 @@ snapshot [ -?]
  **-?**  
  Stampa tutti i parametri disponibili.  
   
- **-Publisher**  _server_name_[**\\**_instance\_name_]  
- Nome del server di pubblicazione. Specificare server_name per l'istanza predefinita di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server\_name_**\\**_instance\_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
+ **-Publisher**  _server_name_[ **\\** _instance\_name_]  
+ Nome del server di pubblicazione. Specificare server_name per l'istanza predefinita di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server\_name_ **\\** _instance\_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
   
  **-Publication** _pubblicazione_  
  Nome della pubblicazione. Questo parametro è valido solo se la pubblicazione è configurata in modo che sia sempre disponibile uno snapshot per le sottoscrizioni nuove o reinizializzate.  
@@ -94,10 +97,10 @@ snapshot [ -?]
  **-DefinitionFile** _def_path_and_file_name_  
  Percorso del file di definizione dell'agente. Un file di definizione dell'agente contiene argomenti della riga di comando per l'agente. Il contenuto del file viene analizzato come file eseguibile. Utilizzare virgolette doppie (") per specificare valori dell'argomento contenenti caratteri arbitrari.  
   
- **-Distributor** _server_name_[**\\**_instance\_name_]  
- Nome del database di distribuzione. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server\_name_**\\**_instance\_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
+ **-Distributor** _server_name_[ **\\** _instance\_name_]  
+ Nome del database di distribuzione. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare _server\_name_ **\\** _instance\_name_ per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
   
- **-DistributorDeadlockPriority** [**-1**|**0**|**1**]  
+ **-DistributorDeadlockPriority** [ **-1**|**0**|**1**]  
  Priorità della connessione dell'agente snapshot con il server di distribuzione quando si verifica un deadlock. Questo parametro è specificato per risolvere deadlock che possono verificarsi tra l'agente snapshot e le applicazioni utente durante la generazione dello snapshot.  
   
 |Valore di DistributorDeadlockPriority|Descrizione|  
@@ -216,7 +219,7 @@ snapshot [ -?]
  **-PublisherDB** _publisher_database_  
  Nome del database di pubblicazione. *Questo parametro non è supportato per i server di pubblicazione Oracle*.  
   
- **-PublisherDeadlockPriority** [**-1**|**0**|**1**]  
+ **-PublisherDeadlockPriority** [ **-1**|**0**|**1**]  
  Priorità della connessione dell'agente snapshot con il server di pubblicazione quando si verifica un deadlock. Questo parametro è specificato per risolvere deadlock che possono verificarsi tra l'agente snapshot e le applicazioni utente durante la generazione dello snapshot.  
   
 |Valore di PublisherDeadlockPriority|Descrizione|  
@@ -225,7 +228,7 @@ snapshot [ -?]
 |**0** (predefinito)|La priorità non è assegnata.|  
 |**1**|L'agente snapshot ha la priorità quando si verifica un deadlock nel server di pubblicazione.|  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance\_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance\_name_]  
  Specifica l'istanza del partner di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che partecipa in una sessione di mirroring del database con il database di pubblicazione. Per altre informazioni, vedere [Mirroring e replica del database &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherLogin** _publisher_login_  
