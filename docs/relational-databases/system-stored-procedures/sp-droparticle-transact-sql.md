@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 050de12a1dc1ff91071ae3c81d3b30425f1a590e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 882c57c552d9666ec3ef308f63a6c5058c21e8e2
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912886"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768928"
 ---
 # <a name="spdroparticle-transact-sql"></a>sp_droparticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Elimina un articolo da una pubblicazione snapshot o transazionale. Non è possibile rimuovere un articolo se esistono una o più sottoscrizioni per tale articolo. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
   
@@ -42,40 +42,40 @@ sp_droparticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @publication = ] 'publication'` È il nome della pubblicazione che contiene l'articolo da eliminare. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @publication = ] 'publication'`Nome della pubblicazione contenente l'articolo da eliminare. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @article = ] 'article'` È il nome dell'articolo da eliminare. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
+`[ @article = ] 'article'`Nome dell'articolo da eliminare. *article* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
 `[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Segnala che l'azione eseguita da questa stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è un **bit**, il valore predefinito è **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Conferma che l'azione eseguita da questo stored procedure potrebbe invalidare uno snapshot esistente. *force_invalidate_snapshot* è di **bit**e il valore predefinito è **0**.  
   
- **0** specifica che le modifiche apportate all'articolo non invalidano lo snapshot non è valido. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
+ **0** specifica che le modifiche apportate all'articolo non invalidano lo snapshot. Se la stored procedure rileva che la modifica richiede un nuovo snapshot, viene generato un errore e non viene apportata alcuna modifica.  
   
- **1** specifica che le modifiche apportate all'articolo possono invalidare lo snapshot non è valido e se sono presenti sottoscrizioni esistenti richiedono un nuovo snapshot, consente lo snapshot esistente deve essere contrassegnato come obsoleto e di generarne uno nuovo.  
+ **1** specifica che le modifiche apportate all'articolo possono invalidare lo snapshot e, se sono presenti sottoscrizioni che richiedono un nuovo snapshot, consente di contrassegnare lo snapshot esistente come obsoleto e di generare un nuovo snapshot.  
   
-`[ @publisher = ] 'publisher'` Specifica un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
+`[ @publisher = ] 'publisher'`Specifica un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di [!INCLUDE[msCoName](../../includes/msconame-md.md)] pubblicazione non. *Publisher* è di **tipo sysname**e il valore predefinito è null.  
   
 > [!NOTE]  
->  *server di pubblicazione* non deve essere utilizzata quando si modificano le proprietà degli articoli in una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
+>  Impossibile utilizzare *Publisher* quando si modificano le proprietà degli articoli [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un server di pubblicazione.  
   
 `[ @from_drop_publication = ] from_drop_publication` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- **sp_droparticle** viene utilizzata nella replica snapshot e transazionale.  
+ **sp_droparticle** viene utilizzata per la replica snapshot e transazionale.  
   
- Per gli articoli filtrati orizzontalmente, **sp_droparticle** controlla le **tipo** colonna dell'articolo nella [sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) alla tabella determinare se una vista o un filtro, deve anche essere eliminato. Se sono disponibili viste o filtri generati in modo automatico, questi vengono eliminati insieme all'articolo. Le viste e i filtri creati in modo manuale non vengono eliminati.  
+ Per gli articoli con filtro orizzontale, **sp_droparticle** controlla la colonna **Type** dell'articolo nella tabella [Transact &#40;&#41; -SQL sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md) per determinare se deve essere eliminata anche una vista o un filtro. Se sono disponibili viste o filtri generati in modo automatico, questi vengono eliminati insieme all'articolo. Le viste e i filtri creati in modo manuale non vengono eliminati.  
   
- L'esecuzione **sp_droparticle** per eliminare un articolo da una pubblicazione non rimuove l'oggetto dal database di pubblicazione o dell'oggetto corrispondente dal database di sottoscrizione. Utilizzare `DROP <object>` per rimuovere manualmente questi oggetti, se necessario.  
+ L'esecuzione di **sp_droparticle** per eliminare un articolo da una pubblicazione non comporta la rimozione dell'oggetto dal database di pubblicazione o dell'oggetto corrispondente dal database di sottoscrizione. Utilizzare `DROP <object>` per rimuovere manualmente questi oggetti, se necessario.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_droparticle](../../relational-databases/replication/codesnippet/tsql/sp-droparticle-transact-_1.sql)]  
   
 ## <a name="permissions"></a>Permissions  
- Solo i membri del **sysadmin** ruolo predefinito del server oppure **db_owner** ruolo predefinito del database possono eseguire **sp_droparticle**.  
+ Solo i membri del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** possono eseguire **sp_droparticle**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Eliminare un articolo](../../relational-databases/replication/publish/delete-an-article.md)   
