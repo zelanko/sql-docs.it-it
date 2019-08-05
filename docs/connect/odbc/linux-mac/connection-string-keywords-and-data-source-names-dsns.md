@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f1bbdb044afd8fb4a5ff55d1a9d5fea2b3f14da1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 486d26dd3afeb91cb43181875e22592fb482af5f
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008833"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702798"
 ---
 # <a name="connecting-to-sql-server"></a>Connessione a SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -54,7 +54,7 @@ Server = [protocol:]server[,port]
 
 È anche possibile specificare il protocollo e la porta per la connessione al server. Ad esempio, **server = TCP:** _ServerName_ **, 12345**. Si noti che l'unico protocollo supportato dai driver Linux e macOS è `tcp`.
 
-Per connettersi a un'istanza denominata tramite una porta statica, usare <b>Server=</b>*nomeserver*,**numero_porta**. La connessione a una porta dinamica non è supportata.  
+Per connettersi a un'istanza denominata tramite una porta statica, usare <b>Server=</b>*nomeserver*,**numero_porta**. La connessione a una porta dinamica non è supportata prima della versione 17.4.
 
 In alternativa, è possibile aggiungere le informazioni del DSN in un file di modello ed eseguire il comando seguente per aggiungere tali informazioni a `~/.odbc.ini`:
  - **odbcinst -i -s -f** _template_file_  
@@ -86,20 +86,31 @@ SSL usa la libreria OpenSSL. La tabella seguente mostra le versioni minime suppo
 
 |Piattaforma|Versione minima OpenSSL|Percorso del file di archivio di scopi consentiti ai certificati|  
 |------------|---------------------------|--------------------------------------------|
+|Debian 10|1.1.1|/etc/ssl/certs|
 |Debian 9|1.1.0|/etc/ssl/certs|
-|Debian 8.71 |1.0.1|/etc/ssl/certs|
-|macOS 10.13|1.0.2|/usr/local/etc/openssl/certs|
-|macOS 10.12|1.0.2|/usr/local/etc/openssl/certs|
-|OS X 10.11|1.0.2|/usr/local/etc/openssl/certs|
+|Debian 8.71|1.0.1|/etc/ssl/certs|
+|OS X 10,11, macOS 10,12, 10,13, 10,14|1.0.2|/usr/local/etc/openssl/certs|
+|Red Hat Enterprise Linux 8|1.1.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
-|SuSE Linux Enterprise 12 |1.0.1|/etc/ssl/certs|
-|SuSE Linux Enterprise 11 |0.9.8|/etc/ssl/certs|
-|Ubuntu 17.10 |1.0.2|/etc/ssl/certs|
-|Ubuntu 16.10 |1.0.2|/etc/ssl/certs|
-|Ubuntu 16.04 |1.0.2|/etc/ssl/certs|
-  
+|SuSE Linux Enterprise 15|1.1.0|/etc/ssl/certs|
+|SuSE Linux Enterprise 11, 12|1.0.1|/etc/ssl/certs|
+|Ubuntu 18.10, 19.04|1.1.1|/etc/ssl/certs|
+|Ubuntu 18.04|1.1.0|/etc/ssl/certs|
+|Ubuntu 16.04, 16.10, 17.10|1.0.2|/etc/ssl/certs|
+|Ubuntu 14.04|1.0.1|/etc/ssl/certs|
+
 È anche possibile specificare la crittografia nella stringa di connessione usando `Encrypt` l'opzione quando si usa **SQLDriverConnect** per la connessione.
+
+## <a name="adjusting-the-tcp-keep-alive-settings"></a>Regolazione delle impostazioni Keep-alive TCP
+
+A partire dal driver ODBC 17,4, la frequenza con cui il driver invia pacchetti Keep-Alive e li ritrasmette quando non viene ricevuta una risposta è configurabile.
+Per configurare, aggiungere le impostazioni seguenti alla sezione del driver in `odbcinst.ini`o alla sezione del DSN in. `odbc.ini` Quando ci si connette a un DSN, il driver utilizzerà le impostazioni nella sezione del DSN, se presente; in caso contrario, o se ci si connette solo a una stringa di connessione, utilizzerà le impostazioni nella sezione `odbcinst.ini`del driver in. Se l'impostazione non è presente in nessuna delle due posizioni, il driver utilizzerà il valore predefinito.
+
+- `KeepAlive=<integer>`Controlla la frequenza con cui TCP tenta di verificare che una connessione inattiva sia ancora intatta inviando un pacchetto keep-alive. Il valore predefinito è **30** secondi.
+
+- `KeepAliveInterval=<integer>`determina l'intervallo che separa le ritrasmissioni keep-alive fino a quando non viene ricevuta una risposta.  Il valore predefinito è **1** secondo.
+
 
 ## <a name="see-also"></a>Vedere anche  
 [Installazione di Microsoft ODBC Driver for SQL Server in Linux e macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)  

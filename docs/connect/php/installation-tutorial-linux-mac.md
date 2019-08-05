@@ -1,6 +1,6 @@
 ---
 title: Esercitazione sull'installazione in Linux e macOS dei driver Microsoft per PHP per SQL Server | Microsoft Docs
-ms.date: 06/21/2019
+ms.date: 07/26/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: 7a2312a4ff6af5a11825274e3e010873ef2d3bd9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 78db7a94e462238b65e90d9b2af035a9906403ac
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256700"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68632012"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Esercitazione sull'installazione in Linux e macOS dei driver Microsoft per PHP per SQL Server
 Le istruzioni seguenti presuppongono che venga usato un ambiente pulito e illustrano come installare PHP 7.x, il driver Microsoft ODBC, Apache e i driver Microsoft per PHP per SQL Server in Ubuntu 16.04, 18.04 e 18.10, Red Hat 7, Debian 8 e 9, Suse 12 e 15 e macOS 10.12, 10.13 e 10.14. I consigli contenuti in queste istruzioni riguardano l'installazione dei driver con PECL, ma è anche possibile scaricare i file binari precompilati dalla pagina del progetto GitHub relativo ai [driver Microsoft per PHP per SQL Server](https://github.com/Microsoft/msphpsql/releases) e installare tali file seguendo le istruzioni riportate in [Caricamento dei driver Microsoft per PHP per SQL Server](../../connect/php/loading-the-php-sql-driver.md). Per una spiegazione del caricamento delle estensioni e dei motivi per cui non si aggiungeranno le estensioni a php.ini, vedere la sezione relativa al [caricamento dei driver](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup).
@@ -175,7 +175,7 @@ Per testare l'installazione, vedere [Test dell'installazione](#testing-your-inst
 ## <a name="installing-the-drivers-on-suse-12-and-15"></a>Installazione dei driver in Suse 12 e 15
 
 > [!NOTE]
-> Nelle istruzioni seguenti, sostituire <SuseVersion> con la propria versione di Suse: SLE_15 o SLE_15_SP1 se si usa Suse Enterprise Linux 15 e valori analoghi per le altre versioni. Non tutte le versioni di PHP sono disponibili per tutte le versioni di Suse Linux. Vedere `http://download.opensuse.org/repositories/devel:/languages:/php` per verificare in quali versioni di Suse è disponibile la versione predefinita di PHP o `http://download.opensuse.org/repositories/devel:/languages:/php:/` per verificare quali altre versioni di PHP sono disponibili per le singole versioni di Suse.
+> Nelle istruzioni seguenti sostituire <SuseVersion> con la propria versione di Suse: SLE_15 o SLE_15_SP1 se si usa Suse Enterprise Linux 15. Per SUSE 12, usare SLE_12_SP4 (o versione successiva, se applicabile). Non tutte le versioni di PHP sono disponibili per tutte le versioni di Suse Linux. Vedere `http://download.opensuse.org/repositories/devel:/languages:/php` per verificare in quali versioni di Suse è disponibile la versione predefinita di PHP o `http://download.opensuse.org/repositories/devel:/languages:/php:/` per verificare quali altre versioni di PHP sono disponibili per le singole versioni di Suse.
 
 > [!NOTE]
 > I pacchetti per PHP 7.3 non sono disponibili per Suse 12. Per installare PHP 7.1, sostituire l'URL del repository riportato di seguito con questo URL: `https://download.opensuse.org/repositories/devel:/languages:/php:/php71/<SuseVersion>/devel:languages:php:php71.repo`.

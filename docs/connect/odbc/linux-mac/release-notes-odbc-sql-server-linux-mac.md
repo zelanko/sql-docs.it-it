@@ -7,15 +7,15 @@ ms.prod_service: connectivity
 ms.reviewer: MightyPen
 ms.technology: connectivity
 ms.topic: conceptual
-author: karinazhou
+author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 6f6cdc23073585f5a9a6a8cee0c3fc779f7ca27a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d2587a6150807841edc9773478f1b798ee60d84
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63190581"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742808"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Note sulla versione per Microsoft ODBC Driver for SQL Server in Linux e macOS
 
@@ -35,6 +35,15 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+## <a name="174-august-2019"></a>17,4, agosto 2019
+
+| Funzionalità aggiunta | Dettagli |
+| :------------ | :------ |
+| Always Encrypted con enclave sicuri. | Vedere [Uso di Always Encrypted con il driver ODBC](../using-always-encrypted-with-the-odbc-driver.md). |
+| Caricamento dinamico di OpenSSL | Vedere [Linee guida per la programmazione](programming-guidelines.md#bkmk-openssl). |
+| Impostazioni Keep-alive TCP configurabili. | Vedere [Connessione a SQL Server](connection-string-keywords-and-data-source-names-dsns.md). |
+| Correzioni di bug. | Vedere [Correzioni di bug](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
 
 ## <a name="173-february-2019"></a>17.3, febbraio 2019
 

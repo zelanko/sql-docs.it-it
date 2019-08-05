@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 919a386af2ff0ceb714daf2c48ac199d2cbfb46d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7e2dde267cf2c5f12140d883114565390d2e5d6
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008714"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702717"
 ---
 # <a name="system-requirements"></a>Requisiti di sistema
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -39,8 +39,10 @@ I driver per Linux e macOS sono disponibili solo per le versioni a 64 bit dei se
 |Apple macOS 10.14 (Mojave)|17| 
 |Debian Linux 8|13, 13.1, 17|
 |Debian Linux 9|17|
+|Debian Linux 10|17.4|
 |RedHat Enterprise Linux 6|13, 13.1, 17|
 |RedHat Enterprise Linux 7|13, 13.1, 17|
+|RedHat Enterprise Linux 8|17.4|
 |SuSE Linux Enterprise Server 11|13, 13.1, 17 <br /><br /> **NOTA:** ODBC Driver 17 supporta solo SuSE Linux Enterprise Server 11 SP4|
 |SuSE Linux Enterprise Server 12|13, 13.1, 17|
 |SuSE Linux Enterprise Server 15|17|
@@ -52,6 +54,7 @@ I driver per Linux e macOS sono disponibili solo per le versioni a 64 bit dei se
 |Ubuntu Linux 17.10|17|
 |Ubuntu Linux 18.04|17| 
 |Ubuntu Linux 18.10|17| 
+|Ubuntu Linux 19.04|17.3| 
 
 I pacchetti di installazione di [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13, 13.1 e 17 per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Linux e macOS risolvono automaticamente le dipendenze del driver se installati tramite il sistema di gestione pacchetti della distribuzione, come descritto in [Installazione del driver](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
