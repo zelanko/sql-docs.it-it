@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 71b3f839326bec0a8b5606e2c7de3f25584b4ff1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71355cfe5341af74083e21cb786b441c71c48c80
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62802697"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811315"
 ---
 # <a name="understanding-incremental-generation"></a>Informazioni sulla generazione incrementale
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "62802697"
  Aggiunta di un nuovo oggetto, ad esempio una dimensione, un cubo o un attributo.  
  La Generazione guidata schema aggiunge gli oggetti sottostanti a cui il nuovo oggetto è mappato.  
   
- Se la Generazione guidata schema non può implementare la modifica richiesta a causa di un errore restituito dal Motore di database per la presenza di un oggetto utente nel database dell'area di interesse, la procedura guidata verrà interrotta e verrà visualizzato l'errore restituito dal Motore di database. Se, ad esempio, si crea un vincolo di chiave primaria o un indice non cluster su una tabella generata in precedenza dalla procedura guidata, la tabella non verrà eliminata perché il vincolo o l'indice non è stato creato dalla Generazione guidata schema.  
+ Se la Generazione guidata schema non può implementare la modifica richiesta a causa di un errore restituito dal Motore di database per la presenza di un oggetto utente nel database dell'area di interesse, la procedura guidata verrà interrotta e verrà visualizzato l'errore restituito dal Motore di database. Se, ad esempio, si crea un vincolo PRIMARY KEY o un indice non cluster in una tabella dopo che la procedura guidata ha generato la tabella, la generazione guidata schema non elimina tale tabella perché non ha creato il vincolo o l'indice.  
   
 ## <a name="supporting-schema-changes"></a>Supporto delle modifiche dello schema  
  Quando si modificano le proprietà delle tabelle o delle colonne nel database dell'area di interesse o nella vista origine dati associata, la Generazione guidata schema gestisce le modifiche come descritto di seguito.  

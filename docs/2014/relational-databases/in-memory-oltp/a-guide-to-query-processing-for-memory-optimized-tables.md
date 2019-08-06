@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a610c41fd9e3126bb0f5833dcacfe27ce969a72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4db539979cf6a9e06d93b38fbc2aa92c8cdbabfb
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468089"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811075"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guida all'elaborazione delle query per le tabelle con ottimizzazione per la memoria
   Con OLTP in memoria sono state introdotte le tabelle ottimizzate per la memoria e le stored procedure compilate in modo nativo in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. In questo articolo viene fornita una panoramica sull'elaborazione delle query per le tabelle ottimizzate per la memoria e le stored procedure compilate in modo nativo.  
@@ -114,7 +114,7 @@ Pipeline di elaborazione delle query di SQL Server.
   
 6.  Access Methods recupera le righe dalle pagine dell'indice e dei dati nel pool di buffer e carica le pagine dal disco nel pool di buffer in base alle esigenze.  
   
- Per la prima query di esempio, il motore di esecuzione richiede ad Access Methods le righe dell'indice cluster di Customer e dell'indice non cluster di Order. Access Methods attraversa le strutture di indice ad albero B per recuperare le righe richieste. In questo caso vengono recuperate tutte le righe poiché il piano richiede le analisi complete degli indici.  
+ Per la prima query di esempio, il motore di esecuzione richiede le righe dell'indice cluster sul cliente e l'indice non cluster in base all'ordine dai metodi di accesso. Access Methods attraversa le strutture di indice ad albero B per recuperare le righe richieste. In questo caso vengono recuperate tutte le righe poiché il piano richiede le analisi complete degli indici.  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Accesso del codice [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretato alle tabelle con ottimizzazione per la memoria  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] ai batch ad hoc e alle stored procedure si fa riferimento anche con l'espressione " [!INCLUDE[tsql](../../../includes/tsql-md.md)]interpretato". L'interpretazione si riferisce al fatto che ogni operatore nel piano di query viene interpretato dal motore di esecuzione delle query. Il motore di esecuzione legge l'operatore e i relativi parametri ed esegue l'operazione.  
@@ -195,7 +195,7 @@ END
 |-|-----------------------|-----------------|  
 |Compilazione iniziale|Al momento della creazione.|Alla prima esecuzione.|  
 |Ricompilazione automatica|Alla prima esecuzione della procedura dopo il riavvio del database o del server.|Al riavvio del server. In alternativa, eliminazione dalla cache dei piani, in genere in base alle modifiche di schema o di statistiche o a utilizzo elevato di memoria.|  
-|Ricompilazione manuale|Non supportato. La soluzione alternativa consiste nell'eliminare e ricreare la stored procedure.|Usare `sp_recompile`. È possibile eliminare manualmente il piano dalla cache, ad esempio tramite DBCC FREEPROCCACHE. È inoltre possibile creare la stored procedure specificando WITH RECOMPILE affinché venga ricompilata a ogni esecuzione.|  
+|Ricompilazione manuale|Non supportati. La soluzione alternativa consiste nell'eliminare e ricreare la stored procedure.|Usare `sp_recompile`. È possibile eliminare manualmente il piano dalla cache, ad esempio tramite DBCC FREEPROCCACHE. È inoltre possibile creare la stored procedure specificando WITH RECOMPILE affinché venga ricompilata a ogni esecuzione.|  
   
 ### <a name="compilation-and-query-processing"></a>Compilazione ed elaborazione delle query  
  Nel diagramma seguente viene illustrato il processo di compilazione per le stored procedure compilate in modo nativo:  
@@ -222,7 +222,7 @@ Esecuzione di stored procedure compilate in modo nativo.
   
  La chiamata di una stored procedure compilata in modo nativo viene descritta nel modo riportato di seguito.  
   
-1.  L'utente esegue un' `EXEC` *usp_myproc* istruzione.  
+1.  L'utente rilascia un' `EXEC`istruzione *usp_myproc* .  
   
 2.  Il parser estrae il nome e i parametri della stored procedure.  
   
@@ -255,7 +255,7 @@ GO
 ### <a name="query-operators-in-natively-compiled-stored-procedures"></a>Operatori di query nelle stored procedure compilate in modo nativo  
  Nella tabella seguente vengono riepilogati gli operatori di query supportati nelle stored procedure compilate in modo nativo:  
   
-|Operatore|Query di esempio|  
+|Operator|Query di esempio|  
 |--------------|------------------|  
 |SELECT|`SELECT OrderID FROM dbo.[Order]`|  
 |INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`|  

@@ -1,5 +1,5 @@
 ---
-title: La convalida incrociata (Analysis Services - Data Mining) | Microsoft Docs
+title: Convalida incrociata (Analysis Services-Data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 27a2d837071ddd6a1bddb7d3aa05a4d7ec34cfe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bde0035ae3c855d2add02003ca9ea84357146f90
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085224"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809850"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Convalida incrociata (Analysis Services - Data mining)
   *Convalida incrociata* è un strumento standard di analisi e costituisce un'importante funzionalità per lo sviluppo e l'ottimizzazione dei modelli di data mining. Viene utilizzata dopo la creazione di una struttura di data mining e dei relativi modelli per determinare la validità del modello e  prevede le applicazioni seguenti:  
@@ -60,7 +60,7 @@ ms.locfileid: "66085224"
   
  Nell'esempio nel diagramma viene illustrato l'utilizzo dei dati se vengono specificate tre riduzioni.  
   
- ![La modalità di segmentazione dei dati tramite la convalida incrociata](../media/xvoverviewmain.gif "come di segmentazione dei dati tramite la convalida incrociata")  
+ ![Come i dati dei segmenti della convalida] incrociata (../media/xvoverviewmain.gif "Come i dati dei segmenti della convalida") incrociata  
   
  Nello scenario nel diagramma, la struttura di data mining contiene un set di dati di controllo utilizzato per il testing, ma il set di dati di test non è stato incluso per la convalida incrociata. Di conseguenza, per la convalida incrociata vengono utilizzati tutti i dati nel set di dati di training, ovvero il 70% dei dati nella struttura di data mining. Il report della convalida incrociata mostra il numero totale di case utilizzato in ogni partizione.  
   
@@ -82,11 +82,11 @@ ms.locfileid: "66085224"
 ### <a name="choosing-models-and-columns-to-validate"></a>Scelta di modelli e colonne da convalidare  
  Quando si usa la scheda **Convalida incrociata** in Progettazione modelli di data mining, è necessario innanzitutto selezionare la colonna stimabile da un elenco. In genere, una struttura di data mining può supportare numerosi modelli di data mining, che non utilizzano tutti la stessa colonna stimabile. Quando si esegue la convalida incrociata, solo i modelli che utilizzano la stessa colonna stimabile possono essere inclusi nel report.  
   
- Per scegliere un attributo stimabile, fare clic su **Attributo di destinazione** e selezionare la colonna dall'elenco. Se l'attributo di destinazione è una colonna nidificata o una colonna in una tabella nidificata, è necessario digitare il nome della colonna nidificata utilizzando il formato \<nome tabella nidificata > (chiave).\< Annidati colonna >. Se l'unica colonna utilizzata della tabella nidificata è la colonna chiave, è possibile usare \<nome tabella nidificata > (chiave).  
+ Per scegliere un attributo stimabile, fare clic su **Attributo di destinazione** e selezionare la colonna dall'elenco. Se l'attributo di destinazione è una colonna nidificata o una colonna in una tabella nidificata, è necessario digitare il nome della colonna nidificata utilizzando \<il formato nome tabella nidificata > (\< chiave). > Di colonna nidificata. Se l'unica colonna utilizzata dalla tabella nidificata è la colonna chiave, è possibile utilizzare \<il nome della tabella nidificata > (chiave).  
   
  Dopo che l'attributo stimabile è stato selezionato, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono testati automaticamente tutti i modelli che utilizzano lo stesso attributo. Se l'attributo di destinazione contiene valori discreti, dopo avere selezionato la colonna stimabile è possibile digitare uno stato di destinazione nel caso sia presente un valore specifico da stimare.  
   
- La selezione dello stato di destinazione influisce sulle misure restituite. Se si specifica un attributo di destinazione, vale a dire, un nome di colonna- e non si sceglie un valore specifico che si desidera che il modello dovrebbe stimare, per impostazione predefinita il modello verrà valutato in base alla stima dello stato più probabile.  
+ La selezione dello stato di destinazione influisce sulle misure restituite. Se si specifica un attributo di destinazione, ovvero un nome di colonna, e non si sceglie un valore specifico che il modello deve stimare, per impostazione predefinita il modello verrà valutato in base alla stima dello stato più probabile.  
   
  Quando si usa la convalida incrociata con modelli di clustering, non è disponibile alcuna colonna stimabile ma è necessario selezionare **#Cluster** dall'elenco nella casella di riepilogo **Attributo di destinazione** . Dopo avere selezionato questa opzione, altre opzioni non attinenti ai modelli di clustering, ad esempio **Stato di destinazione**, sono disabilitate. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eseguirà quindi il test di tutti i modelli di clustering associati alla struttura di data mining.  
   

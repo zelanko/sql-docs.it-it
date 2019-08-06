@@ -1,5 +1,5 @@
 ---
-title: 'Report di stato: Classe di evento online Index Operation | Microsoft Docs'
+title: 'Report di stato: Online Index Operation - Classe di evento | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a09b4c8f6f6c600ac7b14faf35966a82c0b6905
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d0efc3d22fcba588c1104d716cbab0f26eff374
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62520409"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811257"
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>Report di stato: Classe di evento Online Index Operation
-  Progress Report: Classe di evento operazione sugli indici online indica lo stato di un'operazione di compilazione indice online durante il processo di compilazione è in esecuzione.  
+  La classe di evento Progress Report: Online Index Operation indica lo stato di un'operazione di compilazione di un indice online durante l'esecuzione del processo di compilazione.  
   
-## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Report di stato: Colonne dati della classe evento operazione sugli indici online  
+## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Report di stato: Online Index Operation - Colonne di dati della classe di evento  
   
 |Nome colonna di dati|Tipo di dati|Descrizione|ID colonna|Filtrabile|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -38,7 +38,7 @@ ms.locfileid: "62520409"
 |EndTime|`datetime`|Ora del completamento dell'operazione di creazione dell'indice online.|15|Yes|  
 |EventClass|`int`|Tipo di evento = 190.|27|No|  
 |EventSequence|`int`|Sequenza di un determinato evento all'interno della richiesta.|51|No|  
-|EventSubClass|`int`|Tipo di sottoclasse di evento.<br /><br /> 1 = Avvio<br /><br /> 2 = Inizio esecuzione fase 1<br /><br /> 3 = Fine esecuzione fase 1<br /><br /> 4 = Inizio esecuzione fase 2<br /><br /> 5 = Fine esecuzione fase 2<br /><br /> 6 = Conteggio righe inserite<br /><br /> 7 = Fine<br /><br /> Fase 1 si riferisce all'oggetto di base (indice cluster o heap) o indica se l'operazione sull'indice include solo un indice non cluster. Fase 2 viene utilizzata quando l'operazione di compilazione di un indice include sia la ricompilazione originale che gli indici non cluster aggiuntivi.  Ad esempio, se un oggetto ha un indice cluster e molti indici non cluster, con 'Ricompila tutto' verrebbero ricompilati tutti gli indici. L'oggetto di base (l'indice cluster) viene ricompilato nella fase 1 e tutti gli indici non cluster vengono ricompilati quindi nella fase 2.|21|Yes|  
+|EventSubClass|`int`|Tipo di sottoclasse di evento.<br /><br /> 1 = Avvio<br /><br /> 2 = Inizio esecuzione fase 1<br /><br /> 3 = Fine esecuzione fase 1<br /><br /> 4 = Inizio esecuzione fase 2<br /><br /> 5 = Fine esecuzione fase 2<br /><br /> 6 = Conteggio righe inserite<br /><br /> 7 = Fine<br /><br /> La fase 1 si riferisce all'oggetto di base (indice cluster o heap) o se l'operazione sull'indice include solo un indice non cluster. La fase 2 viene utilizzata quando un'operazione di compilazione dell'indice include sia la ricompilazione originale che gli indici non cluster aggiuntivi.  Ad esempio, se un oggetto dispone di un indice cluster e di diversi indici non cluster,' Ricompila tutto ' ricreerà tutti gli indici. L'oggetto di base (l'indice cluster) viene ricompilato nella fase 1 e tutti gli indici non cluster vengono ricompilati nella fase 2.|21|Yes|  
 |GroupID|`int`|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Yes|  
 |HostName|`nvarchar`|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Yes|  
 |IndexID|`int`|ID dell'indice dell'oggetto interessato dall'evento.|24|Yes|  

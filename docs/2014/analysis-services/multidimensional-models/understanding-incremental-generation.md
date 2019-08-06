@@ -14,12 +14,12 @@ ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 003b56fe3dbfae3f442be6b966f3cdc3008909b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ace9bbbbbc023d14dbce91a176f7d05ad19d699b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072676"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811065"
 ---
 # <a name="understanding-incremental-generation"></a>Informazioni sulla generazione incrementale
   Dopo la generazione iniziale dello schema, è possibile modificare le definizioni dei cubi e delle dimensioni mediante [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]e quindi eseguire di nuovo la Generazione guidata schema. La procedura guidata aggiorna lo schema nel database dell'area di interesse e nella vista origine dati associata in base alle modifiche apportate, mantenendo i dati attualmente esistenti nelle tabelle da rigenerare nella misura massima consentita. Se dopo la generazione iniziale le tabelle sono state modificate, la Generazione guidata schema mantiene tali modifiche in base alle regole seguenti:  
@@ -62,7 +62,7 @@ ms.locfileid: "66072676"
  Aggiunta di un nuovo oggetto, ad esempio una dimensione, un cubo o un attributo.  
  La Generazione guidata schema aggiunge gli oggetti sottostanti a cui il nuovo oggetto è mappato.  
   
- Se la Generazione guidata schema non può implementare la modifica richiesta a causa di un errore restituito dal Motore di database per la presenza di un oggetto utente nel database dell'area di interesse, la procedura guidata verrà interrotta e verrà visualizzato l'errore restituito dal Motore di database. Se, ad esempio, si crea un vincolo di chiave primaria o un indice non cluster su una tabella generata in precedenza dalla procedura guidata, la tabella non verrà eliminata perché il vincolo o l'indice non è stato creato dalla Generazione guidata schema.  
+ Se la Generazione guidata schema non può implementare la modifica richiesta a causa di un errore restituito dal Motore di database per la presenza di un oggetto utente nel database dell'area di interesse, la procedura guidata verrà interrotta e verrà visualizzato l'errore restituito dal Motore di database. Se, ad esempio, si crea un vincolo PRIMARY KEY o un indice non cluster in una tabella dopo che la procedura guidata ha generato la tabella, la generazione guidata schema non elimina tale tabella perché non ha creato il vincolo o l'indice.  
   
 ## <a name="supporting-schema-changes"></a>Supporto delle modifiche dello schema  
  Quando si modificano le proprietà delle tabelle o delle colonne nel database dell'area di interesse o nella vista origine dati associata, la Generazione guidata schema gestisce le modifiche come descritto di seguito.  

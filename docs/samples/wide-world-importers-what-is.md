@@ -1,5 +1,5 @@
 ---
-title: Wide World Importers - database di esempio per SQL | Microsoft Docs
+title: Wide World Importers-database di esempio per SQL | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,59 +9,59 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c178d116dddb5dc18b1bec91066205fe08f6d0c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 872892d307883bb7df31b08de701b2030d9aeb1f
+ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067614"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794602"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Database di esempio Wide World Importers per Microsoft SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Questa è una panoramica di Wide World Importers la società fittizia e i flussi di lavoro sono stati risolti in database di esempio WideWorldImporters per SQL Server e Database SQL di Azure.  
+Si tratta di una panoramica delle aziende e dei flussi di lavoro del mondo fittizio che vengono risolti nei database di esempio WideWorldImporters per SQL Server e il database SQL di Azure.  
 
-Wide World Importers (WWI) è un'utilità di importazione di vendita all'ingrosso originalità beni di consumo e server di distribuzione operativo dall'area di San Francisco alloggiamenti.
+Wide World Importers (prima guerra) è un ingrosso dei prodotti importatori e distributori che operano dall'area San Francisco Bay.
 
-Come un ingrosso, i clienti di WWI sono principalmente le aziende che rivendono a singoli utenti. WWI viene venduto ai clienti di vendita al dettaglio degli Stati Uniti inclusi archivi di specializzazione, supermercati, computing archivi, negozi attrazione da turismo e alcune persone. WWI vende anche per altri grossisti tramite una rete di agenti che promuove i prodotti per conto del WWI. Anche se tutti i clienti di WWI si basano attualmente negli Stati Uniti, la società non sia progettata per eseguire il push per l'espansione in altri paesi.
+In qualità di Grossista, i clienti della prima guerra sono principalmente aziende che rivendono a singoli utenti. La prima guerra vende ai clienti al dettaglio tra i Stati Uniti inclusi negozi specializzati, supermercati, archivi di calcolo, negozi di attrazioni turistiche e alcuni utenti. La prima guerra si vende anche ad altri grossisti tramite una rete di agenti che promuovono i prodotti per conto della prima guerra. Anche se tutti i clienti della prima guerra si basano attualmente sulla Stati Uniti, l'azienda intende effettuare il push dell'espansione in altri paesi.
 
-WWI acquista prodotti da fornitori incluse originalità e produttori di giocattoli e altri grossisti originalità. Essi azionari i beni nel proprio warehouse WWI e riordino da fornitori in base alle necessità per soddisfare gli ordini dei clienti. Sono anche grandi volumi di creazione del pacchetto di materiali di acquistare e vendere in piccole quantità per maggiore praticità dei clienti.
+La prima guerra acquista prodotti da fornitori, tra cui produttori di giocattoli e giocattoli, e altri ingrosso. Le scorte vengono risalete nel magazzino della prima guerra e riordinate dai fornitori in base alle esigenze per soddisfare gli ordini dei clienti. Inoltre, acquistano grandi volumi di materiali per la creazione di pacchetti e li vendono in quantità minori come vantaggio per i clienti.
 
-Recentemente WWI avviato per la vendita numerose novità commestibili, ad esempio derivati interessanti.  L'azienda in precedenza non aveva gestire gli elementi trattati. A questo punto, per soddisfare trattamento i requisiti di prodotti alimentari, devono monitorare la temperatura nelle stanze refrigeratore e uno qualsiasi dei loro Van chiller sezioni.
+Recentemente, la prima guerra inizia a vendere una varietà di novità commestibili come peperoncino cioccolato.  In precedenza la società non ha dovuto gestire gli elementi refrigerati. A questo punto, per soddisfare i requisiti di gestione degli alimenti, è necessario monitorare la temperatura nella propria stanza chiller e in tutti i relativi autocarri con sezioni chiller.
 
-## <a name="workflow-for-warehouse-stock-items"></a>Flusso di lavoro per articoli di scorte di magazzino
+## <a name="workflow-for-warehouse-stock-items"></a>Flusso di lavoro per gli elementi azionari del magazzino
 
-Il tipico flusso per come gli elementi sono immagazzinati e distribuiti è come indicato di seguito:
-- WWI crea gli ordini di acquisto e invia gli ordini per i fornitori.
-- Gli elementi di trasmissione fornitori, WWI li riceve e li forniti nel loro warehouse.
-- I clienti ordinano gli elementi da WWI
-- WWI riempie l'ordine del cliente con le voci del warehouse e quando non è disponibile sufficiente stock, vengono ordinate le azioni aggiuntive da fornitori.
-- Alcuni clienti non si desidera attendere che gli elementi non in magazzino. Se si ordina ad esempio cinque diversi elementi azionari e quattro sono disponibili, che vogliono ricevere i quattro elementi e ordine arretrato l'elemento rimanente. L'elemento viene loro inviati più avanti in una spedizione separata.
-- I clienti per gli elementi di titoli, le fatture in genere WWI convertendo l'ordine in una fattura.
-- I clienti potrebbero ordinare gli elementi non in magazzino. Questi elementi sono relativi a ordini inevasi.
-- WWI Invia elementi azionari ai clienti tramite i propri furgoni o tramite altri metodi di spedizione o il corriere.
-- I clienti di pagare le fatture per WWI.
-- Periodicamente, WWI paga fornitori per gli elementi che sono stati negli ordini di acquisto. Si tratta spesso di qualche minuto dopo che sono stati ricevuti i beni di consumo.
+Il flusso tipico per la modalità di inventario e distribuzione degli elementi è il seguente:
+- La prima guerra crea gli ordini di acquisto e invia gli ordini ai fornitori.
+- I fornitori inviano gli elementi, la prima guerra li riceve e li archivia nel magazzino.
+- Ordinare gli elementi dei clienti dalla prima guerra
+- La prima guerra riempie l'ordine del cliente con le scorte del magazzino e, quando non dispone di scorte sufficienti, Ordina le scorte aggiuntive dai fornitori.
+- Alcuni clienti non desiderano attendere gli elementi che non sono in magazzino. Se ordinano cinque voci diverse e quattro sono disponibili, vogliono ricevere i quattro elementi ed eseguire il backorder dell'elemento rimanente. L'elemento verrà quindi inviato successivamente in una spedizione separata.
+- La prima guerra fattura i clienti per gli elementi azionari, in genere convertendo l'ordine in una fattura.
+- I clienti possono ordinare gli elementi che non sono in magazzino. Questi elementi sono riordinati.
+- La prima guerra distribuisce articoli ai clienti tramite i propri Furgoni di consegna oppure tramite altri corrieri o metodi di spedizione.
+- I clienti pagano le fatture alla prima guerra.
+- Periodicamente, la prima guerra paga i fornitori per gli articoli che si trovavano negli ordini di acquisto. Si tratta spesso di una volta che ha ricevuto la merce.
 
-## <a name="data-warehouse-and-analysis-workflow"></a>Flusso di lavoro Data Warehouse e analisi
+## <a name="data-warehouse-and-analysis-workflow"></a>Flusso di lavoro di data warehouse e analisi
 
-Anche se il team di WWI Usa SQL Server Reporting Services per generare report operativi dal database WideWorldImporters, devono anche eseguire analitica dei dati ed è necessario generare report strategiche. Il team di aver creato un modello dimensionale dati in un database WideWorldImportersDW. Questo database viene popolato da un pacchetto di Integration Services.
+Mentre il team alla prima guerra USA SQL Server Reporting Services per generare report operativi dal database WideWorldImporters, è necessario anche eseguire analisi sui dati ed è necessario generare report strategici. Il team ha creato un modello di dati dimensionale in un database WideWorldImportersDW. Questo database è popolato da un pacchetto di Integration Services.
 
-SQL Server Analysis Services viene utilizzato per creare modelli di dati analitici dai dati nel modello di dati unidimensionale. SQL Server Reporting Services viene utilizzato per generare report strategica direttamente dal modello di dati dimensionali e anche dal modello di analisi. Power BI consente di creare i dashboard dagli stessi dati. I dashboard vengono usati in siti Web e su telefoni e Tablet. *Nota: questi modelli di dati e i report non sono ancora disponibili*
+SQL Server Analysis Services viene utilizzato per creare modelli di dati analitici dai dati nel modello di dati dimensionale. SQL Server Reporting Services viene utilizzato per generare report strategici direttamente dal modello di dati dimensionali e anche dal modello analitico. Power BI viene usato per creare dashboard dagli stessi dati. I dashboard vengono usati nei siti Web e su telefoni e tablet. *Nota: i modelli di dati e i report non sono ancora disponibili*
 
 ## <a name="additional-workflows"></a>Flussi di lavoro aggiuntivi
 
-Questi sono flussi di lavoro aggiuntivi.
-- Note sulla carta di credito problemi WWI quando un cliente non riceve good per qualche motivo, o quando le merci sono difettosi. Tali valori vengono considerati fatture negative.
-- WWI conta periodicamente le quantità di scorte di elementi azionari da garantire che la quantità di scorte indicata come disponibile nel sistema siano accurate. (Il processo di questa operazione viene chiamato un stocktake).
-- A freddo delle temperature chat room. Beni di consumo perishable vengono archiviati in locali frigoriferi. I dati del sensore da queste chat vengono inseriti nel database per scopi di monitoraggio e analitica.
-- Rilevamento della posizione del veicolo. Veicoli che trasportano beni di WWI includono sensori che tiene traccia del percorso. Questo percorso verrà nuovamente inserito nel database per il monitoraggio e ulteriormente analitica.
+Si tratta di flussi di lavoro aggiuntivi.
+- La prima guerra rilascia note di credito quando un cliente non riceve il bene per qualche motivo o quando i beni sono difettosi. Questi vengono considerati come fatture negative.
+- La prima guerra conta periodicamente le quantità su misura degli articoli azionari per garantire la correttezza delle quantità di titoli visualizzate come disponibili nel sistema. Il processo di questa operazione è denominato Stocktake.
+- Temperature della stanza fredda. Le merci deteriorabili vengono archiviate in celle frigorifere. I dati dei sensori di queste chat vengono inseriti nel database per scopi di monitoraggio e analisi.
+- Rilevamento della posizione del veicolo. I veicoli che trasportano merci per la prima guerra includono sensori che tengono traccia della località. Questo percorso viene nuovamente inserito nel database per il monitoraggio e l'analisi.
 
 ## <a name="fiscal-year"></a>Anno fiscale
 
-L'azienda opera con un esercizio che inizia il 1 ° novembre.
+La società opera con un anno finanziario che inizia il 1 ° novembre.
 
-## <a name="terms-of-use"></a>Condizioni d'uso
+## <a name="terms-of-use"></a>Condizioni per l'utilizzo
 
-La licenza per il database di esempio e il codice di esempio descritto qui: [file License. txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
+La licenza per il database di esempio e il codice di esempio è descritta di seguito: [License. txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
-Il database di esempio include i dati pubblici che sono stati caricati dal data.gov ed EarthData naturale. Le condizioni d'uso si trovano qui: [https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)
+Il database di esempio include dati pubblici caricati da data.gov e EarthData naturale. Le condizioni per l'utilizzo sono:[https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)

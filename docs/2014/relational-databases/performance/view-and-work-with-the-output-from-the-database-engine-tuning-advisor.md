@@ -26,12 +26,12 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 29dac7e1636026da3f77ac832a148a832abe240a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e767348fb5bc01bcdb2aaaa3fad1dd4f461eb6c
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63151449"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811025"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database
   Durante l'ottimizzazione di database tramite Ottimizzazione guidata motore di database, vengono creati automaticamente riepiloghi, indicazioni, report e log di ottimizzazione. È possibile utilizzare l'output del log di ottimizzazione per risolvere gli eventuali problemi verificatisi durante le sessioni di ottimizzazione di Ottimizzazione guidata motore di database. È possibile utilizzare i riepiloghi, le indicazioni e i report per determinare se implementare le indicazioni o continuare l'ottimizzazione fino a migliorare le prestazioni di esecuzione delle query come necessario per l'installazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per informazioni sull'utilizzo di Ottimizzazione guidata motore di database per creare carichi di lavoro e ottimizzare un database, vedere [Avvio e utilizzo di Ottimizzazione guidata motore di database](database-engine-tuning-advisor.md).  
@@ -163,7 +163,7 @@ ms.locfileid: "63151449"
   
 2.  Copiare e incollare l'[Esempio di file di input XML con configurazione specificata dall'utente &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md) in un editor XML o un editor di testo. Utilizzare questo codice di esempio per la creazione di un file di input XML per la sessione di ottimizzazione in corso. Per informazioni sull'esecuzione di questa attività, vedere la sezione "Creare un file di input XML" in [Avvio e utilizzo di Ottimizzazione guidata motore di database](database-engine-tuning-advisor.md).  
   
-3.  Modificare gli elementi `TuningOptions` e `Configuration` del file di input XML di esempio. Nell'elemento `TuningOptions` specificare le strutture di progettazione fisica che devono essere prese in considerazione da Ottimizzazione guidata motore di database durante la sessione di ottimizzazione. Nell'elemento `Configuration` specificare le strutture di progettazione fisica corrispondenti alla configurazione ipotetica delle strutture di progettazione fisica del database che si desidera siano analizzate da Ottimizzazione guidata motore di database. Per informazioni sugli attributi e gli elementi figlio è possibile usare con il `TuningOptions` e il `Configuration` gli elementi padre, vedere [riferimento a File di Input XML &#40;Ottimizzazione guidata motore di Database&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+3.  Modificare gli elementi `TuningOptions` e `Configuration` del file di input XML di esempio. Nell'elemento `TuningOptions` specificare le strutture di progettazione fisica che devono essere prese in considerazione da Ottimizzazione guidata motore di database durante la sessione di ottimizzazione. Nell'elemento `Configuration` specificare le strutture di progettazione fisica corrispondenti alla configurazione ipotetica delle strutture di progettazione fisica del database che si desidera siano analizzate da Ottimizzazione guidata motore di database. Per informazioni sugli attributi e sugli elementi figlio che è possibile usare con `TuningOptions` gli elementi `Configuration` padre e, vedere [Ottimizzazione guidata motore di database &#40;&#41;di riferimento ai file di input XML](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 4.  Salvare il file di input con l'estensione **xml** .  
   
@@ -282,7 +282,7 @@ ms.locfileid: "63151449"
  Vista o indice interessato dall'indicazione. L'icona visualizzata in questa colonna indica se è consigliabile eliminare o aggiungere la **Destinazione indicazione**.  
   
  **Dettagli**  
- Descrizione di **Destinazione indicazione**. I valori possibili includono clustered, indexed view o vuoto, ovvero un indice non cluster. Viene inoltre indicato se l'indice è univoco.  
+ Descrizione di **Destinazione indicazione**. I valori possibili includono clustered, indexed view o blank, che indica un indice non cluster. Viene inoltre indicato se l'indice è univoco.  
   
  **Schema partizione**  
  Se viene consigliato il partizionamento, in questa colonna viene visualizzato lo schema di partizione.  

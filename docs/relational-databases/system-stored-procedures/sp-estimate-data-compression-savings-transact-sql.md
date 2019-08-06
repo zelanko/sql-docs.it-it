@@ -18,24 +18,24 @@ helpviewer_keywords:
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4e15f0755cac41f0f262582417e0e22ead39f9be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0e7d9c1e2f3c6d0de5e41775c445b46f232d5985
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124557"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811376"
 ---
-# <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
+# <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Restituisce le dimensioni correnti degli oggetti richiesti e stima le dimensioni dell'oggetto per lo stato di compressione richiesto. La compressione può essere valutata per intere tabelle o parti di esse, Inclusi heap, indici cluster, indici non cluster, gli indici columnstore, indicizzati viste e tabelle e partizioni dell'indice. Gli oggetti possono essere compressi utilizzando la compressione degli archivi riga, pagina, columnstore o columnstore. Se la tabella, la partizione o l'indice è già compresso, è possibile utilizzare questa procedura per stimare le dimensioni della tabella, della partizione o dell'indice se venisse ricompresso.  
+  Restituisce le dimensioni correnti degli oggetti richiesti e stima le dimensioni dell'oggetto per lo stato di compressione richiesto. La compressione può essere valutata per intere tabelle o parti di esse, Sono inclusi gli heap, gli indici cluster, gli indici non cluster, gli indici columnstore, le viste indicizzate e le partizioni delle tabelle e degli indici. Gli oggetti possono essere compressi usando la compressione di riga, pagina, columnstore o archivio columnstore. Se la tabella, la partizione o l'indice è già compresso, è possibile utilizzare questa procedura per stimare le dimensioni della tabella, della partizione o dell'indice se venisse ricompresso.  
   
 > [!NOTE]
->  La compressione e **sp_estimate_data_compression_savings** non sono disponibili in tutte le edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  La compressione e **sp_estimate_data_compression_savings** non sono disponibili in ogni edizione [!INCLUDE[msCoName](../../includes/msconame-md.md)]di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  Per stimare le dimensioni dell'oggetto in caso di applicazione dell'impostazione di compressione richiesta, questa stored procedure esegue il campionamento dell'oggetto di origine e carica i relativi dati in una tabella e in un indice equivalenti creati in tempdb. La tabella o l'indice creato in tempdb viene quindi compresso in base all'impostazione richiesta e viene calcolato il risparmio stimato in caso di utilizzo della compressione.  
   
- Per modificare lo stato della compressione di una tabella, indice o partizione, usare il [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) oppure [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) istruzioni. Per informazioni generali sulla compressione, vedere [compressione dei dati](../../relational-databases/data-compression/data-compression.md).  
+ Per modificare lo stato di compressione di una tabella, di un indice o di una partizione, utilizzare le istruzioni [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [alter index](../../t-sql/statements/alter-index-transact-sql.md) . Per informazioni generali sulla compressione, vedere [compressione dei dati](../../relational-databases/data-compression/data-compression.md).  
   
 > [!NOTE]  
 >  Se i dati esistenti sono frammentati, potrebbe essere possibile ridurne le dimensioni senza utilizzare la compressione ricompilando l'indice. Per gli indici, il fattore di riempimento viene applicato durante la ricompilazione. Questo potrebbe comportare un aumento delle dimensioni dell'indice.  
@@ -56,22 +56,22 @@ sp_estimate_data_compression_savings
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @schema_name=] '*schema_name*'  
- Nome dello schema del database che contiene la tabella o la vista indicizzata. *schema_name* viene **sysname**. Se *schema_name* è NULL, viene utilizzato lo schema predefinito dell'utente corrente.  
+ [ @schema_name=]'*schema_name*'  
+ Nome dello schema del database che contiene la tabella o la vista indicizzata. *schema_name* è di **tipo sysname**. Se *schema_name* è null, viene usato lo schema predefinito dell'utente corrente.  
   
- [ @object_name=] '*object_name*'  
+ [ @object_name=]'*object_name*'  
  Nome della tabella o della vista indicizzata su cui è basato l'indice. *object_name* è di tipo **sysname**.  
   
- [ @index_id=] '*index_id*'  
- ID dell'indice. *index_id* viene **int**, e può essere uno dei seguenti valori: il numero di ID di un indice, NULL o 0 se *object_id* è un heap. Per restituire informazioni per tutti gli indici per una tabella di base o una vista, specificare NULL. Se si specifica NULL, è necessario specificare NULL anche per *partition_number*.  
+ [ @index_id=]'*index_id*'  
+ ID dell'indice. *index_id* è di **tipo int**. i possibili valori sono i seguenti: il numero di ID di un indice, null o 0 se *object_id* è un heap. Per restituire informazioni per tutti gli indici per una tabella di base o una vista, specificare NULL. Se si specifica NULL, è necessario specificare NULL anche per *partition_number*.  
   
- [ @partition_number=] '*partition_number*'  
- Numero di partizione nell'oggetto. *partition_number* viene **int**, e può essere uno dei seguenti valori: il numero di partizione di un indice o heap, NULL o 1 per un heap o un indice non partizionato.  
+ [ @partition_number=]'*partition_number*'  
+ Numero di partizione nell'oggetto. *partition_number* è di **tipo int**. i possibili valori sono i seguenti: il numero di partizione di un indice o heap, null o 1 per un indice o un heap non partizionato.  
   
- Per specificare la partizione, è anche possibile specificare il [$partition](../../t-sql/functions/partition-transact-sql.md) (funzione). Per restituire le informazioni per tutte le partizioni dell'oggetto, specificare NULL.  
+ Per specificare la partizione, è anche possibile specificare la funzione [$Partition](../../t-sql/functions/partition-transact-sql.md) . Per restituire le informazioni per tutte le partizioni dell'oggetto, specificare NULL.  
   
- [ @data_compression=] '*data_compression*'  
- Tipo di compressione da valutare. *DATA_COMPRESSION* può essere uno dei valori seguenti: NONE, ROW, pagina, COLUMNSTORE o COLUMNSTORE_ARCHIVE.  
+ [ @data_compression=]'*DATA_COMPRESSION*'  
+ Tipo di compressione da valutare. *DATA_COMPRESSION* può essere uno dei valori seguenti: NONE, ROW, PAGE, COLUMNStore o COLUMNSTORE_ARCHIVE.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -91,7 +91,7 @@ sp_estimate_data_compression_savings
 |sample_size_with_requested_compression_setting (KB)|**bigint**|Dimensioni del campione creato utilizzando l'impostazione di compressione richiesta e, se applicabile, il fattore di riempimento esistente e senza frammentazione.|  
   
 ## <a name="remarks"></a>Note  
- Utilizzare sp_estimate_data_compression_savings per stimare il risparmio che può verificarsi quando si abilita una tabella o una partizione per riga, pagina, columnstore o la compressione degli archivi columnstore. Se, ad esempio, le dimensioni medie della riga possono essere ridotte del 40%, è possibile ridurre del 40% le dimensioni dell'oggetto. Si potrebbe non ottenere un risparmio in termini di spazio a seconda del fattore di riempimento e delle dimensioni della riga. Se si riducono del 40% le dimensioni di una riga lunga 8000 byte, ad esempio, una pagina di dati può comunque contenere una sola riga e non si ottiene alcun risparmio.  
+ Usare sp_estimate_data_compression_savings per stimare i risparmi che possono verificarsi quando si abilita una tabella o una partizione per la compressione dell'archivio di righe, pagine, columnstore o columnstore. Se, ad esempio, le dimensioni medie della riga possono essere ridotte del 40%, è possibile ridurre del 40% le dimensioni dell'oggetto. Si potrebbe non ottenere un risparmio in termini di spazio a seconda del fattore di riempimento e delle dimensioni della riga. Se si riducono del 40% le dimensioni di una riga lunga 8000 byte, ad esempio, una pagina di dati può comunque contenere una sola riga e non si ottiene alcun risparmio.  
   
  Se i risultati dell'esecuzione di sp_estimate_data_compression_savings indicano un aumento delle dimensioni della tabella, significa che in molte righe della tabella viene utilizzata quasi la precisione completa dei tipi di dati e l'aggiunta del limitato overhead necessario per il formato compresso supera il risparmio che è possibile ottenere dalla compressione. In questi rari casi, non abilitare la compressione.  
   
@@ -107,31 +107,31 @@ sp_estimate_data_compression_savings
  È richiesta l'autorizzazione SELECT per la tabella.  
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
- Prima di SQL Server 2019, questa procedura non vengono applicati gli indici columnstore e pertanto non accetta i parametri di compressione dati COLUMNSTORE_ARCHIVE e COLUMNSTORE.  A partire da SQL Server 2019, gli indici columnstore sono utilizzabile come un oggetto di origine per la stima sia come un tipo di compressione richiesto.
+ Prima di SQL Server 2019, questa procedura non si applicava agli indici columnstore e pertanto non accettava i parametri di compressione dei dati COLUMNStore e COLUMNSTORE_ARCHIVE.  A partire da SQL Server 2019, gli indici columnstore possono essere usati sia come oggetto di origine per la stima che come tipo di compressione richiesto.
 
-## <a name="considerations-for-columnstore-indexes"></a>Considerazioni per gli indici Columnstore
- A partire da SQL Server 2019, sp_estimate_compression_savings supporta la stima sia la compressione degli archivi columnstore e columnstore. A differenza di compressione di page e row, applicare la compressione columnstore a un oggetto richiede la creazione di un nuovo indice columnstore. Per questo motivo, quando si usano le opzioni di COLUMNSTORE e COLUMNSTORE_ARCHIVE di questa procedura, il tipo dell'oggetto di origine fornito alla procedura determina il tipo di indice columnstore utilizzata per la stima le dimensioni compresse. Nella tabella seguente viene illustrato il riferimento al tipo quando gli oggetti utilizzati per stimare il risparmio di compressione per ogni oggetto di origine di @data_compression parametro è impostato su COLUMNSTORE o COLUMNSTORE_ARCHIVE.
+## <a name="considerations-for-columnstore-indexes"></a>Considerazioni per gli indici columnstore
+ A partire da SQL Server 2019, sp_estimate_compression_savings supporta la stima della compressione dell'archivio columnstore e columnstore. A differenza della compressione di pagine e righe, per applicare la compressione columnstore a un oggetto è necessario creare un nuovo indice columnstore. Per questo motivo, quando si usano le opzioni COLUMNStore e COLUMNSTORE_ARCHIVE di questa procedura, il tipo dell'oggetto di origine fornito alla routine determina il tipo di indice columnstore usato per la stima delle dimensioni compresse. La tabella seguente illustra gli oggetti di riferimento usati per stimare i risparmi di compressione per ogni tipo di @data_compression oggetto di origine quando il parametro è impostato su columnstore o COLUMNSTORE_ARCHIVE.
 
  |Oggetto di origine|Oggetto di riferimento|
  |-----------------|---------------|
  |Heap|Indice columnstore cluster|
  |Indice cluster|Indice columnstore cluster|
- |Indice non cluster|Indice columnstore non cluster (incluse le colonne chiave e qualsiasi included_columns dell'indice non cluster specificato, nonché la colonna di partizione della tabella, se presente)|
- |Indice columnstore non cluster|Indice columnstore non cluster (incluse le stesse colonne dell'indice columnstore non cluster specificato)|
+ |Indice non cluster|Indice columnstore non cluster (incluse le colonne chiave e le colonne incluse dell'indice non cluster specificato, nonché la colonna di partizione della tabella, se presente)|
+ |indice columnstore non cluster|Indice columnstore non cluster (incluse le stesse colonne dell'indice columnstore non cluster specificato)|
  |Indice columnstore cluster|Indice columnstore cluster|
 
 > [!NOTE]  
-> Quando si stima la compressione del columnstore da un oggetto di origine rowstore (indice cluster, indici non cluster o heap), se sono presenti colonne nell'oggetto di origine che hanno un tipo di dati che non è supportato in un indice columnstore, sp_estimate_compression_ risparmi avrà esito negativo con un errore.
+> Quando si stima la compressione columnstore da un oggetto di origine rowstore (indice cluster, indice non cluster o heap), se nell'oggetto di origine sono presenti colonne che hanno un tipo di dati non supportato in un indice columnstore, sp_estimate_compression_savings avrà esito negativo con un errore.
 
- Analogamente, quando il @data_compression parametro è impostato su NONE, ROW o PAGE e l'oggetto di origine è un indice columnstore, la tabella seguente descrive gli oggetti di riferimento utilizzati.
+ Analogamente, quando @data_compression il parametro è impostato su None, Row o Page e l'oggetto di origine è un indice columnstore, nella tabella seguente vengono descritti gli oggetti di riferimento utilizzati.
 
  |Oggetto di origine|Oggetto di riferimento|
  |-----------------|---------------|
  |Indice columnstore cluster|Heap|
- |Indice columnstore non cluster|Indice non cluster (incluse le colonne contenute nell'indice columnstore non cluster come colonne chiave e la colonna di partizione della tabella, se presente, come colonna inclusa)|
+ |indice columnstore non cluster|Indice non cluster (incluse le colonne contenute nell'indice columnstore non cluster come colonne chiave e la colonna di partizione della tabella, se presente, come colonna inclusa)|
 
 > [!NOTE]  
-> Quando si stima rowstore compressione (NONE, ROW o PAGE) da un oggetto di origine di columnstore, assicurarsi che l'indice di origine non contiene più di 32 colonne come questo è il limite supportato in un indice rowstore (non cluster).
+> Quando si stima la compressione rowstore (nessuno, riga o pagina) da un oggetto di origine columnstore, assicurarsi che l'indice di origine non contenga più di 32 colonne, perché questo è il limite supportato in un indice rowstore (non cluster).
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono stimate le dimensioni della tabella `Production.WorkOrderRouting` in caso di utilizzo della compressione `ROW`.  
@@ -147,7 +147,7 @@ GO
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
- [Motore di database le Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Stored procedure &#40;di motore di database Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Implementazione della compressione Unicode](../../relational-databases/data-compression/unicode-compression-implementation.md)  
   
   

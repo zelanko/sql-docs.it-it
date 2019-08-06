@@ -12,14 +12,14 @@ ms.assetid: 6ea84f2f-e7a2-4028-9ea9-af0d2eba660e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb0387cebdda52817143e0e3da98c20f4c49da50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8af9ae77562cb8ece9cb23e32c4e4ce216987715
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667088"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811123"
 ---
-# <a name="mssqleng014010"></a>MSSQL_ENG014010
+# <a name="mssql_eng014010"></a>MSSQL_ENG014010
     
 ## <a name="message-details"></a>Dettagli messaggio  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62667088"
   
      10.193.17.129 inst1  
   
--   Rimuovere la replica, registrare ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , quindi ristabilire la replica. Se il valore di @@SERVERNAME non è corretto per un'istanza non cluster, eseguire la procedura seguente:  
+-   Rimuovere la replica, registrare ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , quindi ristabilire la replica. Se il valore di @@SERVERNAME non è corretto per un'istanza non cluster, attenersi alla procedura seguente:  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  

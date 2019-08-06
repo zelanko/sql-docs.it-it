@@ -1,5 +1,5 @@
 ---
-title: Informazioni sugli schemi di Database | Microsoft Docs
+title: Informazioni sugli schemi di database | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b3439fff5e3bba68f01c24a0979434e21a01ded6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5aebada2f962e2b90f96a9822dbbe76e796f23e5
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072713"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811052"
 ---
 # <a name="understanding-the-database-schemas"></a>Informazioni sugli schemi di database
   La Generazione guidata schema consente di generare uno schema relazionale denormalizzato per il database dell'area di interesse in base alle dimensioni e ai gruppi di misure in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La procedura guidata genera una tabella relazionale per ogni dimensione, denominata tabella della dimensione, in cui vengono archiviati i dati della dimensione e una tabella relazionale per ogni gruppo di misure, denominata tabella dei fatti, in cui vengono archiviati i fatti. Durante la generazione di queste tabelle relazionali, la procedura guidata ignora dimensioni collegate, gruppi di misure collegati e dimensioni temporali del server.  
@@ -71,7 +71,7 @@ ms.locfileid: "66072713"
  Relazioni  
  La procedura guidata genera una relazione per ogni relazione di tipo Regolare tra la tabella dei fatti e l'attributo di granularità della tabella della dimensione. Se la granularità si basa sull'attributo chiave della tabella della dimensione, la relazione viene creata nel database e nella vista origine dati. Se la granularità si basa su un altro attributo, la relazione viene creata solo nella vista origine dati.  
   
- Se si è scelto di generare gli indici nella procedura guidata, per ogni colonna delle relazioni verrà generato un indice non cluster.  
+ Se si sceglie di generare gli indici nella procedura guidata, viene generato un indice non cluster per ognuna di queste colonne di relazioni.  
   
  Vincoli  
  Le chiave primarie non vengono generate nelle tabelle dei fatti.  
@@ -82,7 +82,7 @@ ms.locfileid: "66072713"
  La procedura guidata genera una tabella separata per l'archiviazione dei valori tradotti per ogni proprietà nel gruppo di misure che richiede una colonna per la traduzione. La procedura guidata crea inoltre una colonna separata per ogni lingua in cui i valori devono essere tradotti.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Conversione del tipo di dati e lunghezze predefinite  
- Generazione guidata schema Ignora sempre i tipi di dati eccetto le colonne che usano il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` tipo di dati. La dimensione dei dati `wchar` viene convertita direttamente nel tipo di dati `nvarchar`. Tuttavia, se la lunghezza specificata di una colonna con il tipo di dati `wchar` è maggiore di 4000 byte, la Generazione guidata schema genererà un errore.  
+ La generazione guidata schema consente di ignorare i tipi di dati in tutti i casi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tranne che per le colonne che utilizzano il `wchar` tipo di dati. La dimensione dei dati `wchar` viene convertita direttamente nel tipo di dati `nvarchar`. Tuttavia, se la lunghezza specificata di una colonna con il tipo di dati `wchar` è maggiore di 4000 byte, la Generazione guidata schema genererà un errore.  
   
  Se per un elemento di dati, ad esempio l'associazione di un attributo, non è stata specificata la lunghezza, per la colonna verrà utilizzata la lunghezza predefinita specificata nella tabella seguente.  
   

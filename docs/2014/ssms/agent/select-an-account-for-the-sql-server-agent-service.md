@@ -21,12 +21,12 @@ ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 204d312e1350e7284b335806a0286baf9603c9a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b2fd7a22c202b1210b17f86903fce32ec8d4b5b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666798"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811077"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Selezionare un account per il servizio SQL Server Agent
   L'account di avvio del servizio definisce l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows in cui viene eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, nonché le relative autorizzazioni di rete. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent viene eseguito con un account utente specificato. Selezionare un account per il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , in cui è possibile scegliere tra le opzioni seguenti:  
@@ -74,22 +74,22 @@ ms.locfileid: "62666798"
 ## <a name="supported-service-account-types"></a>Tipi di account di servizio supportati  
  Nella tabella seguente vengono elencati i tipi di account di Windows che possono essere utilizzati per il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-|Tipo di account di servizio|Server non di cluster|Server di cluster|Controller di dominio (non di cluster)|  
+|Tipo di account di servizio|Server non cluster|Server di cluster|Controller di dominio (non cluster)|  
 |--------------------------|---------------------------|----------------------|------------------------------------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Account di dominio di Windows (membro del gruppo Administrators di Windows)|Supportato|Supportato|Supportato|  
 |Account di dominio di Windows (non amministrativo)|Supportato<sup>1</sup>|Supportato<sup>1</sup>|Supportato<sup>1</sup>|  
-|Account Servizio di rete (NT AUTHORITY\NetworkService)|Supportato<sup>1, 3, 4</sup>|Non supportato|Non supportato|  
-|Account Utente locale (non amministrativo)|Supportato<sup>1</sup>|Non supportato|Non applicabile|  
-|Account Sistema locale (NT AUTHORITY\System)|Supportato<sup>2</sup>|Non supportato|Supportato<sup>2</sup>|  
-|Account Servizio locale (NT AUTHORITY\NetworkService)|Non supportato|Non supportato|Non supportato|  
+|Account Servizio di rete (NT AUTHORITY\NetworkService)|Supportato<sup>1, 3, 4</sup>|Non supportate|Non supportate|  
+|Account Utente locale (non amministrativo)|Supportato<sup>1</sup>|Non supportate|Non applicabile|  
+|Account Sistema locale (NT AUTHORITY\System)|Supportato<sup>2</sup>|Non supportate|Supportato<sup>2</sup>|  
+|Account Servizio locale (NT AUTHORITY\NetworkService)|Non supportate|Non supportate|Non supportate|  
   
- <sup>1</sup> vedere Limitazione 1 di seguito.  
+ <sup>1</sup> vedere la limitazione 1 riportata di seguito.  
   
- <sup>2</sup> vedere limitazione 2 di seguito.  
+ <sup>2</sup> vedere la limitazione 2 riportata di seguito.  
   
- <sup>3</sup> vedere Limitazione 3 riportato di seguito.  
+ <sup>3</sup> vedere la limitazione 3 riportata di seguito.  
   
- <sup>4</sup> vedere limitazione 4 di seguito.  
+ <sup>4</sup> vedere la limitazione 4 riportata di seguito.  
   
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Limitazione 1: uso di account non amministrativi per l'amministrazione multiserver  
  È possibile che l'integrazione nei server di destinazione non riesca e venga visualizzato il messaggio di errore "Operazione di integrazione non riuscita".  

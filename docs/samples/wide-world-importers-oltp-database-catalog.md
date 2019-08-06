@@ -1,5 +1,5 @@
 ---
-title: Catalogo del database WideWorldImporters OLTP - SQL | Microsoft Docs
+title: Catalogo del database OLTP WideWorldImporters-SQL | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,212 +9,212 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7e9d8fe2dba82e83594c73e442a2e52260900ba9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2560043ca6acc4b5df141bcbc898ac09b21f97a8
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091247"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811527"
 ---
-# <a name="wideworldimporters-database-catalog"></a>Catalogo del database WideWorldImporters
+# <a name="wideworldimporters-database-catalog"></a>Catalogo di database WideWorldImporters
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Il database WideWorldImporters contiene tutte le le informazioni sulle transazioni e dei dati giornaliera per vendite e acquisti, nonché i dati del sensore per veicoli e chat ad accesso sporadico.
+Il database WideWorldImporters contiene tutte le informazioni sulle transazioni e i dati giornalieri per le vendite e gli acquisti, oltre ai dati dei sensori per i veicoli e le stanze fredde.
 
 ## <a name="schemas"></a>Schemi
 
-WideWorldImporters Usa gli schemi per scopi diversi, ad esempio l'archiviazione dei dati, la definizione come gli utenti possono accedere ai dati e fornendo gli oggetti per l'integrazione e sviluppo di data warehouse.
+WideWorldImporters utilizza schemi per scopi diversi, ad esempio l'archiviazione dei dati, la definizione del modo in cui gli utenti possono accedere ai dati e la fornitura di oggetti per data warehouse lo sviluppo e l'integrazione.
 
 ### <a name="data-schemas"></a>Schemi di dati
 
-Gli schemi includano i dati. Alcune tabelle è necessarie per tutti gli altri schemi e si trova nello schema dell'applicazione.
+Questi schemi contengono i dati. Per tutti gli altri schemi sono necessarie diverse tabelle e si trovano nello schema dell'applicazione.
 
 |schema|Descrizione|
 |-----------------------------|---------------------|
-|Applicazione|Gli utenti a livello di applicazione, contatti e i parametri. Contiene anche le tabelle di riferimento con i dati che viene usati in più schemi|
-|Purchasing|Elemento titolo acquista da fornitori e i dettagli relativi ai fornitori.|  
-|Sales|Titolo elemento vendita ai clienti di vendita al dettaglio e i dettagli relativi alle persone di vendite e clienti. |  
-|Warehouse|Inventario di magazzino e le transazioni.|  
+|Applicazione|Utenti, contatti e parametri a livello di applicazione. Contiene anche tabelle di riferimento con dati utilizzati da più schemi|
+|Purchasing|Acquisti di articoli azionari da fornitori e informazioni dettagliate sui fornitori.|  
+|Sales|Vendite di articoli azionari ai clienti finali e informazioni dettagliate sui clienti e sui venditori. |  
+|Warehouse|Inventario e transazioni di articoli azionari.|  
 
 ### <a name="secure-access-schemas"></a>Schemi di accesso sicuro
 
-Questi schemi vengono utilizzati per le applicazioni esterne che non sono consentite per accedere direttamente alle tabelle di dati. Contengono le viste e stored procedure utilizzate dalle applicazioni esterne.
+Questi schemi vengono utilizzati per le applicazioni esterne che non possono accedere direttamente alle tabelle di dati. Contengono viste e stored procedure utilizzate da applicazioni esterne.
 
 |schema|Descrizione|
 |-----------------------------|---------------------|
 |Sito Web|Tutti gli accessi al database dal sito Web della società sono tramite questo schema.|
-|Report|Tutti gli accessi al database da report di Reporting Services sono tramite questo schema.|
-|PowerBI|Tutti gli accessi al database dal dashboard di Power BI tramite il Gateway aziendale sono tramite questo schema.|
+|Report|Tutti gli accessi al database da Reporting Services report si riferiscono a questo schema.|
+|PowerBI|Tutti gli accessi al database dal dashboard Power BI tramite il gateway aziendale sono tramite questo schema.|
 
-Si noti che i report e Power BI gli schemi non vengono utilizzati nella versione iniziale del database di esempio. Tuttavia, gli esempi di tutti i Reporting Services e Power BI basati su questo database sono invitati a usare questi schemi.
+Si noti che i report e gli schemi Power BI non vengono utilizzati nella versione iniziale del database di esempio. Tuttavia, tutti i Reporting Services e Power BI esempi basati su questo database sono invitati a utilizzare questi schemi.
 
 ### <a name="development-schemas"></a>Schemi di sviluppo
 
-Schemi con finalità speciali
+Schemi per scopi specifici
 
 |schema|Descrizione|
 |-----------------------------|---------------------|
-|Integrazione|Gli oggetti e le procedure necessari per l'integrazione di data warehouse (ad esempio la migrazione dei dati nel database WideWorldImportersDW).|
-|Sequenze|Contiene le sequenze usate da tutte le tabelle nell'applicazione.|
+|Integrazione|Oggetti e procedure necessari per l'integrazione di data warehouse, ad esempio la migrazione dei dati al database WideWorldImportersDW.|
+|Sequenze|Include le sequenze utilizzate da tutte le tabelle nell'applicazione.|
 
 ## <a name="tables"></a>Tabelle
 
-Tutte le tabelle nel database sono negli schemi di dati.
+Tutte le tabelle del database si trovano negli schemi di dati.
 
-### <a name="application-schema"></a>Schema dell'applicazione
+### <a name="application-schema"></a>Schema applicazione
 
-Dettagli dei parametri e gli utenti (utenti e contatti), insieme a tabelle di riferimento comuni (comuni a più altri schemi).
+Dettagli dei parametri e delle persone (utenti e contatti), insieme alle tabelle di riferimento comuni (comuni a più schemi diversi).
 
 |Tabella|Descrizione|
 |-----------------------------|---------------------|
-|SystemParameters|Contiene i parametri configurabili a livello di sistema.|
-|Utenti|Contiene i nomi utente, informazioni di contatto, per tutti coloro che usano l'applicazione e per le persone che si occupa di Wide World Importers in organizzazioni del cliente. Ciò include personale, i clienti, fornitori e gli eventuali altri contatti. Per gli utenti che dispongono dell'autorizzazione per utilizzare il sistema o un sito Web, le informazioni includono i dettagli di accesso.|
-|Città|Esistono molti indirizzi archiviati nel sistema, per gli utenti, indirizzi di recapito di organizzazione dei clienti, gli indirizzi di inizio corsa a fornitori e così via. Ogni volta che viene archiviato un indirizzo, è presente un riferimento a una città in questa tabella. È inoltre disponibile una posizione spaziale per ogni città.|
-|StateProvinces|Città fanno parte di stati o province. Questa tabella contiene i dettagli di questi strumenti, tra cui i dati spaziali che descrive i limiti di ogni stato o provincia.|
-|Paesi|Stati o province fanno parte di terzi. Questa tabella contiene i dettagli di questi strumenti, tra cui i dati spaziali che descrive i limiti di ogni paese.|
-|DeliveryMethods|Possibilità per fornire elementi azionari (ad esempio, furgone/furgone, post, pickup, courier e così via)|
-|PaymentMethods|Opzioni per eseguire pagamenti (ad esempio, contanti, assegno, EFT, ecc.)|
-|TransactionTypes|Tipi di clienti, fornitore o transazioni azionarie (ad esempio, fatturazione, nota di credito e così via)|
+|SystemParameters|Contiene parametri configurabili a livello di sistema.|
+|Persone|Contiene i nomi utente, le informazioni di contatto, per tutti gli utenti che usano l'applicazione e per gli utenti che hanno a che fare con le organizzazioni del cliente. Sono inclusi il personale, i clienti, i fornitori e altri contatti. Per gli utenti a cui è stata concessa l'autorizzazione a utilizzare il sistema o il sito Web, le informazioni includono i dettagli di accesso.|
+|Città|Nel sistema sono archiviati molti indirizzi, per gli utenti, per gli indirizzi di recapito dell'organizzazione cliente, per gli indirizzi di ritiro dei fornitori e così via. Ogni volta che viene archiviato un indirizzo, in questa tabella è presente un riferimento a una città. Esiste anche una posizione spaziale per ogni città.|
+|StateProvinces|Le città fanno parte di Stati o province. Questa tabella contiene i dettagli di questi elementi, inclusi i dati spaziali che descrivono i limiti di ogni stato o provincia.|
+|Paesi|Stati o province fanno parte di paesi. Questa tabella contiene i dettagli di questi elementi, inclusi i dati spaziali che descrivono i limiti di ogni paese.|
+|DeliveryMethods|Opzioni per la distribuzione di articoli di stock, ad esempio Truck/Van, post, pickup, Courier e così via.|
+|PaymentMethods|Opzioni per l'esecuzione dei pagamenti (ad esempio, contanti, check, EFT e così via)|
+|TransactionTypes|Tipi di cliente, fornitore o transazione azionaria (ad esempio, fattura, nota di credito e così via)|
 
 ### <a name="purchasing-schema"></a>Schema di acquisto
 
-Dettagli di fornitori e acquisti in magazzino.
+Dettagli dei fornitori e degli acquisti di articoli azionari.
 
 |Tabella|Descrizione|
 |-----------------------------|---------------------|
-|Suppliers|Tabella dell'entità principale dei fornitori (organizzazioni)|
-|SupplierCategories|Categorie dei fornitori (ad esempio, novità, toys, clothing, creazione di pacchetti e così via).|
-|SupplierTransactions|Tutte le transazioni finanziarie che sono correlati al fornitore (fatture, pagamenti)|
-|PurchaseOrders|Gli ordini di acquisto dei dettagli del fornitore|
-|PurchaseOrderLines|Le righe di dettaglio da fornitori di ordini di acquisto|
+|Suppliers|Tabella principale delle entità per i fornitori (organizzazioni)|
+|SupplierCategories|Categorie per i fornitori (ad esempio, novità, giocattoli, abbigliamento, creazione di pacchetti e così via)|
+|SupplierTransactions|Tutte le transazioni finanziarie correlate ai fornitori (fatture, pagamenti)|
+|PurchaseOrders|Dettagli degli ordini di acquisto del fornitore|
+|PurchaseOrderLines|Righe di dettaglio dagli ordini di acquisto dei fornitori|
 
  
-### <a name="sales-schema"></a>Schema di vendita
+### <a name="sales-schema"></a>Schema vendite
 
-Dettagli di clienti, i venditori e delle vendite in magazzino.
-
-|Tabella|Descrizione|
-|-----------------------------|---------------------|
-|Customers|Tabelle di entità principale per i clienti (aziende o utenti singoli)|
-|CustomerCategories|Categorie per i clienti (ad esempio archivi originalità supermercati, e così via.)|
-|BuyingGroups|Le organizzazioni dei clienti possono far parte di gruppi di esercitare un maggiore potenza di acquisto|
-|CustomerTransactions|Tutte le transazioni finanziarie che sono correlati al cliente (fatture, pagamenti)|
-|SpecialDeals|Prezzi speciali. Questo può includere prezzi fissi, discount in dollari o percentuale di sconto.|
-|Orders|Dettagli di ordini dei clienti|
-|OrderLines|Righe di dettaglio degli ordini cliente|
-|Fatture|Dettagli di fatture dei clienti|
-|InvoiceLines|Righe di dettaglio da fatture dei clienti|
-
-### <a name="warehouse-schema"></a>Schema del warehouse
-
-Dettagli elementi azionari, le aziende e le transazioni.
+Dettagli relativi a clienti, venditori e vendite di articoli azionari.
 
 |Tabella|Descrizione|
 |-----------------------------|---------------------|
-|StockItems|Tabella dell'entità principale per gli elementi di scorte|
-|StockItemHoldings|Colonne non temporali per gli elementi di scorte. Queste sono le colonne aggiornate di frequente.|
-|StockGroups|Gruppi per la classificazione titoli degli articoli (ad esempio, novità, toys, novità commestibili e così via)|
-|StockItemStockGroups|Quali azioni sono gli elementi in cui stock Raggruppa (molti a molti)|
-|Colori|Gli elementi azionari (facoltativamente) possono avere colori|
-|PackageTypes|Modi in cui gli elementi delle scorte possono essere incluso nel pacchetto (ad esempio, casella carton, gruppo, kg, e così via.|
-|StockItemTransactions|Transazioni che coprono tutti gli spostamenti di tutti gli elementi azionari (ricezione, la vendita, annullamento)|
-|VehicleTemperatures|Regolarmente registrate le temperature di chillers del veicolo|
-|ColdRoomTemperatures|Regolarmente registrate le temperature di chillers chat room ad accesso sporadico|
+|Customers|Principali tabelle di entità per i clienti (organizzazioni o individui)|
+|CustomerCategories|Categorie per i clienti (ad esempio, negozi di novità, supermercati e così via)|
+|BuyingGroups|Le organizzazioni del cliente possono far parte di gruppi che impiegano una maggiore potenza di acquisto|
+|CustomerTransactions|Tutte le transazioni finanziarie correlate ai clienti (fatture, pagamenti)|
+|SpecialDeals|Prezzo speciale. Questo può includere prezzi fissi, sconto in dollari o percentuale di sconto.|
+|Orders|Dettagli degli ordini dei clienti|
+|OrderLines|Righe di dettaglio dagli ordini dei clienti|
+|Fatture|Dettagli delle fatture dei clienti|
+|InvoiceLines|Righe di dettaglio dalle fatture dei clienti|
+
+### <a name="warehouse-schema"></a>Schema warehouse
+
+Dettagli degli articoli azionari, delle relative operazioni di mantenimento e delle transazioni.
+
+|Tabella|Descrizione|
+|-----------------------------|---------------------|
+|StockItems|Tabella principale delle entità per gli elementi azionari|
+|StockItemHoldings|Colonne non temporali per gli elementi azionari. Si tratta di colonne aggiornate di frequente.|
+|StockGroups|Gruppi per la categorizzazione di elementi azionari (ad esempio, novità, giocattoli, novità commestibili e così via)|
+|StockItemStockGroups|Quali elementi azionari sono in cui i gruppi azionari (molti a molti)|
+|Colori|Gli elementi azionari possono (facoltativamente) avere colori|
+|Elemento packagetypes|Modi in cui è possibile confezionare gli elementi azionari, ad esempio box, carton, pallet, kg e così via.|
+|StockItemTransactions|Transazioni che coprono tutti i movimenti di tutti gli elementi azionari (ricevuta, vendita, scrittura)|
+|VehicleTemperatures|Temperature registrate regolarmente per i refrigeratori dei veicoli|
+|ColdRoomTemperatures|Temperature registrate regolarmente dei chiller della stanza fredda|
 
 
-## <a name="design-considerations"></a>Considerazioni di progettazione
+## <a name="design-considerations"></a>Considerazioni sulla progettazione
 
-Progettazione di database è soggettiva e non è possibile progettare un database giusto o sbagliato. Gli schemi e tabelle in questo database mostrano le idee per come è possibile progettare il proprio database.
+La progettazione del database è soggettiva e non esiste una soluzione corretta o errata per progettare un database. Gli schemi e le tabelle di questo database mostrano le idee per la progettazione di un database personalizzato.
 
 ### <a name="schema-design"></a>Progettazione dello schema
 
-WideWorldImporters Usa un numero ridotto di schemi in modo che sia facile da comprendere il sistema di database e illustrano i principi di database.  
+WideWorldImporters utilizza un numero ridotto di schemi per semplificare la comprensione del sistema di database e la dimostrazione dei principi del database.  
 
-Laddove possibile, il database colloca le tabelle che vengono in genere eseguite query nello stesso schema per ridurre al minimo la complessità di join.
+Laddove possibile, il database colloca le tabelle normalmente sottoposte a query nello stesso schema per ridurre al minimo la complessità dei join.
 
-Lo schema del database è stata generata dal codice basato su una serie di tabelle di metadati in un altro database WWI_Preparation. In questo modo WideWorldImporters un livello molto elevato di coerenza di progettazione, denominazione coerenza e completezza. Per informazioni dettagliate sul modo in cui è stato generato lo schema, vedere il codice sorgente: [wide-world-utilità di importazione/wwi-database-scripts](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
+Lo schema del database è stato generato dal codice in base a una serie di tabelle di metadati in un altro database WWI_Preparation. Ciò offre a WideWorldImporters un livello molto elevato di coerenza della progettazione, coerenza dei nomi e completezza. Per informazioni dettagliate sul modo in cui lo schema è stato generato, vedere il codice sorgente: [Wide-World-Importers/overstate-database-scripts](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
 
-### <a name="table-design"></a>Progettazione di tabelle
+### <a name="table-design"></a>Progettazione tabella
 
-- Tutte le tabelle hanno chiavi primarie di colonna singola per motivi di semplicità di join.
-- Tutti gli schemi, tabelle, colonne, indici e vincoli check associata una descrizione della proprietà che può essere utilizzato per identificare lo scopo dell'oggetto o colonna estesa. Le tabelle ottimizzate per la memoria sono un'eccezione a questa perché attualmente non supporta le proprietà estese.
-- Tutte le chiavi esterne vengono indicizzate automaticamente a meno che non è un altro indice non cluster con lo stesso componente a sinistra.
-- Numerazione automatica nelle tabelle è basata su sequenze. Queste sequenze sono più facili da usare in ambienti simili rispetto alle colonne di identità e i server collegati. Le tabelle ottimizzate per la memoria usano colonne IDENTITY perché non supportano in SQL Server 2016.
-- Una singola sequenza (TransactionID) viene usata per queste tabelle: CustomerTransactions SupplierTransactions e StockItemTransactions. Ciò dimostra come un set di tabelle può avere un'unica sequenza.
-- Alcune colonne contengono valori predefiniti appropriati.
+- Tutte le tabelle includono chiavi primarie a colonna singola per la semplicità di join.
+- Tutti gli schemi, le tabelle, le colonne, gli indici e i vincoli check hanno una proprietà estesa Description che può essere utilizzata per identificare lo scopo dell'oggetto o della colonna. Le tabelle con ottimizzazione per la memoria rappresentano un'eccezione a questo dato che attualmente non supportano le proprietà estese.
+- Tutte le chiavi esterne vengono indicizzate automaticamente a meno che non esista un altro indice non cluster con lo stesso componente a sinistra.
+- La numerazione automatica nelle tabelle è basata sulle sequenze. Queste sequenze sono più facili da usare tra server collegati e ambienti simili rispetto alle colonne IDENTITY. Le tabelle con ottimizzazione per la memoria usano le colonne IDENTITY perché non supportano in SQL Server 2016.
+- Per queste tabelle viene utilizzata una singola sequenza (ID transazione): CustomerTransactions, SupplierTransactions e StockItemTransactions. Viene illustrato il modo in cui un set di tabelle può avere una singola sequenza.
+- Alcune colonne hanno valori predefiniti appropriati.
 
 ### <a name="security-schemas"></a>Schemi di sicurezza
 
-Per la sicurezza, WideWorldImporters non consente le applicazioni esterne accedere direttamente gli schemi di dati. Per isolare l'accesso, WideWorldImporters Usa gli schemi di accesso di sicurezza che non contengono dati, ma contengono viste e stored procedure. Le applicazioni esterne usano gli schemi di sicurezza per recuperare i dati che sono autorizzati a visualizzare.  In questo modo, gli utenti possono eseguire soltanto le viste e stored procedure negli schemi di accesso sicuro
+Per la sicurezza, WideWorldImporters non consente alle applicazioni esterne di accedere direttamente agli schemi di dati. Per isolare l'accesso, WideWorldImporters utilizza schemi di accesso alla sicurezza che non contengono dati, ma che contengono viste e stored procedure. Le applicazioni esterne utilizzano gli schemi di sicurezza per recuperare i dati che sono autorizzati a visualizzare.  In questo modo, gli utenti possono eseguire le viste e le stored procedure solo negli schemi di accesso sicuro
 
-Ad esempio, in questo esempio include i dashboard di Power BI. Un'applicazione esterna consente di accedere ai dashboard di Power BI dal gateway di Power BI come utente che dispone dell'autorizzazione di sola lettura per lo schema di Power BI.  L'autorizzazione di sola lettura, l'utente deve solo l'autorizzazione SELECT ed EXECUTE per lo schema di Power BI. Un amministratore del database WWI vengono assegnate queste autorizzazioni in base alle esigenze.
+Ad esempio, questo esempio include Power BI Dashboard. Un'applicazione esterna accede a questi dashboard Power BI dal gateway Power BI come utente che dispone dell'autorizzazione di sola lettura per lo schema Power bi.  Per l'autorizzazione di sola lettura, l'utente deve avere solo l'autorizzazione SELECT ed EXECUTE per lo schema Power bi. Un amministratore di database alla prima guerra assegna queste autorizzazioni in base alle esigenze.
 
 ## <a name="stored-procedures"></a>Stored procedure
 
-Le stored procedure sono organizzate in schemi. La maggior parte degli schemi vengono usata per la configurazione o a scopo di esempio.
+Le stored procedure sono organizzate in schemi. La maggior parte degli schemi viene utilizzata a scopo di configurazione o di campionamento.
 
-Il `Website` schema contiene le stored procedure che possono essere usate da un front-end Web.
+Lo `Website` schema contiene le stored procedure che possono essere utilizzate da un front-end Web.
 
-Il `Reports` e `PowerBI` gli schemi sono pensati per reporting services e a scopo di Power BI. Tutte le estensioni dell'esempio sono invitate a usare gli schemi per la creazione di report.
+Gli `Reports` schemi `PowerBI` e sono destinati a Reporting Services e a scopi Power bi. Tutte le estensioni dell'esempio sono consigliate per l'utilizzo di questi schemi per la creazione di report.
 
-### <a name="website-schema"></a>Schema di sito Web
+### <a name="website-schema"></a>Schema sito Web
 
-Queste sono le procedure utilizzate da un'applicazione client, ad esempio un Web front-end.
+Queste sono le procedure usate da un'applicazione client, ad esempio un front-end Web.
 
 |Routine|Scopo|
 |-----------------------------|---------------------|
-|ActivateWebsiteLogon|Consente a una persona (da `Application.People`) di accedere al sito Web.|
-|ChangePassword|Modifica password dell'utente (per gli utenti che non usano meccanismi di autenticazione esterni).|
-|InsertCustomerOrders|Consente l'inserimento di uno o più ordini di clienti (incluse le righe d'ordine).|
-|InvoiceCustomerOrders|Accetta un elenco di ordini di ricevere una fattura ed elabora le fatture.|
-|RecordColdRoomTemperatures|Accetta un elenco di dati di sensori, come un parametro con valori di tabella (TVP) e applica i dati per il `Warehouse.ColdRoomTemperatures` tabella temporale.|
-|RecordVehicleTemperature|Accetta una matrice JSON e lo usa per aggiornare `Warehouse.VehicleTemperatures`.|
-|SearchForCustomers|Esegue la ricerca per i clienti per nome o parte del nome (il nome della società o il nome di persona).|
+|ActivateWebsiteLogon|Consente a una persona ( `Application.People`da) di accedere al sito Web.|
+|ChangePassword|Modifica la password di un utente (per gli utenti che non usano meccanismi di autenticazione esterni).|
+|InsertCustomerOrders|Consente l'inserimento di uno o più ordini cliente (incluse le righe di ordine).|
+|InvoiceCustomerOrders|Accetta un elenco di ordini per la fatturazione ed elabora le fatture.|
+|RecordColdRoomTemperatures|Accetta un elenco di dati del sensore come parametro con valori di tabella (TVP) e applica i dati alla `Warehouse.ColdRoomTemperatures` tabella temporale.|
+|RecordVehicleTemperature|Accetta una matrice JSON e la usa per aggiornare `Warehouse.VehicleTemperatures`.|
+|SearchForCustomers|Cerca i clienti in base al nome o a una parte del nome, ovvero il nome della società o il nome della persona.|
 |SearchForPeople|Cerca persone per nome o parte del nome.|
-|SearchForStockItems|Cerca le voci dal nome o parte del nome o i commenti di marketing.|
-|SearchForStockItemsByTags|Cerca le voci dai tag.|
-|SearchForSuppliers|Consente di cercare fornitori per nome o parte del nome (il nome della società o il nome di persona).|
+|SearchForStockItems|Cerca gli elementi azionari per nome o parte del nome o dei commenti di marketing.|
+|SearchForStockItemsByTags|Cerca gli elementi azionari in base ai tag.|
+|SearchForSuppliers|Cerca i fornitori in base al nome o a una parte del nome (nome della società o nome della persona).|
 
 ### <a name="integration-schema"></a>Schema di integrazione
 
-Le stored procedure in questo schema vengono utilizzate dal processo ETL. Ottengono i dati necessari da diverse tabelle per l'intervallo di tempo necessari per il [pacchetto ETL semplice](wide-world-importers-perform-etl.md).
+Le stored procedure in questo schema vengono utilizzate dal processo ETL. Ottengono i dati necessari da diverse tabelle per l'intervallo di tempo richiesto dal [pacchetto ETL](wide-world-importers-perform-etl.md).
 
 ### <a name="dataloadsimulation-schema"></a>Schema DataLoadSimulation
 
-Simula un carico di lavoro che inserisce le vendite e acquisti. La stored procedure principale è `PopulateDataToCurrentDate`, che consente di inserire i dati di esempio fino alla data corrente.
+Simula un carico di lavoro che inserisce vendite e acquisti. Il stored procedure principale è `PopulateDataToCurrentDate`, utilizzato per inserire i dati di esempio fino alla data corrente.
 
 |Routine|Scopo|
 |-----------------------------|---------------------|
-|Configuration_ApplyDataLoadSimulationProcedures|Crea nuovamente le procedure necessarie per i dati di simulazione di carico. È necessario per spostare i dati fino alla data corrente.|
-|Configuration_RemoveDataLoadSimulationProcedures|Questa operazione rimuove le procedure nuovamente dopo la simulazione di dati è stata completata.|
-|DeactivateTemporalTablesBeforeDataLoad|Rimuove la natura temporale di tutte le tabelle temporali e laddove, viene applicato un trigger in modo che è possibile apportare modifiche come se sono stati applicati a una data precedente rispetto a consentono le tabelle temporali con sys.|
-|PopulateDataToCurrentDate|Utilizzato per visualizzare i dati fino alla data corrente. Deve essere eseguito prima di qualsiasi altra opzione di configurazione dopo il ripristino del database da un backup iniziale.|
-|ReactivateTemporalTablesAfterDataLoad|Ristabilisce le tabelle temporali, inclusi controllo della coerenza dei dati. (Rimuove i trigger associati).|
+|Configuration_ApplyDataLoadSimulationProcedures|Ricrea le procedure necessarie per la simulazione del caricamento dei dati. Questa operazione è necessaria per portare i dati alla data corrente.|
+|Configuration_RemoveDataLoadSimulationProcedures|In questo modo, le procedure vengono rimosse al termine della simulazione.|
+|DeactivateTemporalTablesBeforeDataLoad|Rimuove la natura temporale di tutte le tabelle temporali e, ove applicabile, applica un trigger in modo che le modifiche possano essere apportate come se fossero applicate a una data precedente rispetto a quelle consentite dalle tabelle sys-temporali.|
+|PopulateDataToCurrentDate|Utilizzato per portare i dati alla data corrente. Deve essere eseguito prima di qualsiasi altra opzione di configurazione dopo il ripristino del database da un backup iniziale.|
+|ReactivateTemporalTablesAfterDataLoad|Ristabilisce le tabelle temporali, inclusa la verifica della coerenza dei dati. Rimuove i trigger associati.|
 
 
-### <a name="application-schema"></a>Schema dell'applicazione
+### <a name="application-schema"></a>Schema applicazione
 
-Queste procedure vengono utilizzate per configurare l'esempio. Vengono utilizzati per applicare le funzionalità dell'edizione enterprise per la versione standard edition dell'esempio, nonché per aggiungere il controllo e l'indicizzazione full-text.
+Queste procedure vengono utilizzate per configurare l'esempio. Vengono utilizzati per applicare le funzionalità di Enterprise Edition alla versione Standard Edition dell'esempio e per aggiungere il controllo e l'indicizzazione full-text.
 
 |Routine|Scopo|
 |-----------------------------|---------------------|
-|AddRoleMemberIfNonexistant|Aggiunge un membro a un ruolo se non è già membro del ruolo|
-|Configuration_ApplyAuditing|Aggiunge il controllo. Il controllo server viene applicato per i database standard edition; il controllo del database aggiuntivo viene aggiunta per enterprise edition.|
-|Configuration_ApplyColumnstoreIndexing|Si applica a indici columnstore `Sales.OrderLines` e `Sales.InvoiceLines` e reindexes in modo appropriato.|
-|Configuration_ApplyFullTextIndexing|Si applica a indici full-text per `Application.People`, `Sales.Customers`, `Purchasing.Suppliers`, e `Warehouse.StockItems`. Sostituisce `Website.SearchForPeople`, `Website.SearchForSuppliers`, `Website.SearchForCustomers`, `Website.SearchForStockItems`, `Website.SearchForStockItemsByTags` con le procedure di sostituzione che usano l'indicizzazione full-text.|
-|Configuration_ApplyPartitioning|Si applica al partizionamento delle tabelle `Sales.CustomerTransactions` e `Purchasing.SupplierTransactions`e consente di riorganizzare gli indici in base alle proprie.|
-|Configuration_ApplyRowLevelSecurity|Applica la sicurezza a livello di riga per filtrare i clienti per sales territory relativi ruoli.|
-|Configuration_ConfigureForEnterpriseEdition|Si applica l'indicizzazione columnstore, full-text, in memoria, polybase e partizionamento.|
-|Configuration_EnableInMemory|Aggiunge un filegroup ottimizzato per la memoria (quando non funziona in Azure), sostituisce `Warehouse.ColdRoomTemperatures`, `Warehouse.VehicleTemperatures` con gli equivalenti in memoria e viene eseguita la migrazione dei dati, verrà ricreata la `Website.OrderIDList`, `Website.OrderList`, `Website.OrderLineList`, `Website.SensorDataList` tipi con le tabelle equivalenti ottimizzate per la memoria, Elimina e crea nuovamente le procedure descritte `Website.InvoiceCustomerOrders`, `Website.InsertCustomerOrders`, e `Website.RecordColdRoomTemperatures` che usa questi tipi di tabella.|
+|AddRoleMemberIfNonexistant|Aggiunge un membro a un ruolo se il membro non è già incluso nel ruolo|
+|Configuration_ApplyAuditing|Aggiunge il controllo. Il controllo del server viene applicato per i database Standard Edition; per Enterprise Edition è stato aggiunto il controllo aggiuntivo del database.|
+|Configuration_ApplyColumnstoreIndexing|Applica l'indicizzazione `Sales.OrderLines` columnstore a e `Sales.InvoiceLines` e reindicizzare in modo appropriato.|
+|Configuration_ApplyFullTextIndexing|Applica indici full `Application.People`- `Sales.Customers`Text `Purchasing.Suppliers`a, `Warehouse.StockItems`, e. Sostituisce `Website.SearchForPeople` ,`Website.SearchForSuppliers`, ,`Website.SearchForStockItems`, con`Website.SearchForStockItemsByTags` procedure di sostituzione che utilizzano l'indicizzazione full-text. `Website.SearchForCustomers`|
+|Configuration_ApplyPartitioning|Applica il partizionamento delle `Sales.CustomerTransactions` tabelle `Purchasing.SupplierTransactions`a e e riorganizza gli indici da adattare.|
+|Configuration_ApplyRowLevelSecurity|Applica la sicurezza a livello di riga per filtrare i clienti in base ai ruoli correlati al territorio di vendita.|
+|Configuration_ConfigureForEnterpriseEdition|Applica indicizzazione columnstore, full-text, in memoria, polibase e partizionamento.|
+|Configuration_EnableInMemory|Aggiunge un filegroup ottimizzato per la memoria (quando non funziona in Azure) `Warehouse.ColdRoomTemperatures`, `Warehouse.VehicleTemperatures` sostituisce con gli equivalenti in memoria ed esegue la migrazione dei dati, ricrea i `Website.OrderIDList`tipi di `Website.OrderList`tabella `Website.OrderLineList`, `Website.SensorDataList` ,, con equivalenti con ottimizzazione per la memoria, Elimina e ricrea le routine `Website.InvoiceCustomerOrders`, `Website.InsertCustomerOrders`e `Website.RecordColdRoomTemperatures` che utilizzano questi tipi di tabella.|
 |Configuration_RemoveAuditing|Rimuove la configurazione di controllo.|
-|Configuration_RemoveRowLevelSecurity|Rimuove la configurazione di sicurezza a livello di riga (questa è necessaria per le modifiche apportate alle tabelle associate).|
-|CreateRoleIfNonExistant|Crea un ruolo del database se non esiste già.|
+|Configuration_RemoveRowLevelSecurity|Rimuove la configurazione di sicurezza a livello di riga, necessaria per le modifiche alle tabelle associate.|
+|CreateRoleIfNonExistant|Crea un ruolo del database, se non esiste già.|
 
 
-### <a name="sequences-schema"></a>Schema di sequenze
+### <a name="sequences-schema"></a>Schema sequences
 
-Procedure per configurare le sequenze nel database.
+Procedure per la configurazione delle sequenze nel database.
 
 |Routine|Scopo|
 |-----------------------------|---------------------|
-|ReseedAllSequences|Chiama la routine ReseedSequenceBeyondTableValue per tutte le sequenze.|
-|ReseedSequenceBeyondTableValue|Usato per riposizionare il valore di sequenza successivo oltre il valore in qualsiasi tabella che utilizza la stessa sequenza. (Ad esempio, un DBCC CHECKIDENT per equivalente a colonne identity per le sequenze ma tra potenzialmente più tabelle).|
+|ReseedAllSequences|Chiama la stored procedure ReseedSequenceBeyondTableValue per tutte le sequenze.|
+|ReseedSequenceBeyondTableValue|Utilizzato per riposizionare il successivo valore di sequenza oltre il valore in una tabella che utilizza la stessa sequenza. (Ad esempio, un DBCC CHECKIDENT per le colonne Identity equivalenti per le sequenze, ma in più tabelle potenzialmente diverse).|

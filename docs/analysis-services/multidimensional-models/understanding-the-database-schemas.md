@@ -1,5 +1,5 @@
 ---
-title: Informazioni sugli schemi di Database | Microsoft Docs
+title: Informazioni sugli schemi di database | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 91a54be06727a674a16f12295fa886f869b188e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab70f8c3f7bd788214ce6ed27f2e02ea6a0b43ac
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68164966"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811298"
 ---
 # <a name="understanding-the-database-schemas"></a>Informazioni sugli schemi di database
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "68164966"
  Relazioni  
  La procedura guidata genera una relazione per ogni relazione di tipo Regolare tra la tabella dei fatti e l'attributo di granularità della tabella della dimensione. Se la granularità si basa sull'attributo chiave della tabella della dimensione, la relazione viene creata nel database e nella vista origine dati. Se la granularità si basa su un altro attributo, la relazione viene creata solo nella vista origine dati.  
   
- Se si è scelto di generare gli indici nella procedura guidata, per ogni colonna delle relazioni verrà generato un indice non cluster.  
+ Se si sceglie di generare gli indici nella procedura guidata, viene generato un indice non cluster per ognuna di queste colonne di relazioni.  
   
  Vincoli  
  Le chiave primarie non vengono generate nelle tabelle dei fatti.  

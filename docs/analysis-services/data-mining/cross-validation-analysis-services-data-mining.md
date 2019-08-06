@@ -1,5 +1,5 @@
 ---
-title: La convalida incrociata (Analysis Services - Data Mining) | Microsoft Docs
+title: Convalida incrociata (Analysis Services-Data mining) | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bf8960fb659611003325275b2cf86d9325351c29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b207ce822fbe83d4a388ecf9da52b7c6cfa020a1
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68183815"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811375"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Convalida incrociata (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "68183815"
   
  Nell'esempio nel diagramma viene illustrato l'utilizzo dei dati se vengono specificate tre riduzioni.  
   
- ![La modalità di segmentazione dei dati tramite la convalida incrociata](../../analysis-services/data-mining/media/xvoverviewmain.gif "come di segmentazione dei dati tramite la convalida incrociata")  
+ ![Come i dati dei segmenti della convalida] incrociata (../../analysis-services/data-mining/media/xvoverviewmain.gif "Come i dati dei segmenti della convalida") incrociata  
   
  Nello scenario nel diagramma, la struttura di data mining contiene un set di dati di controllo utilizzato per il testing, ma il set di dati di test non è stato incluso per la convalida incrociata. Di conseguenza, per la convalida incrociata vengono utilizzati tutti i dati nel set di dati di training, ovvero il 70% dei dati nella struttura di data mining. Il report della convalida incrociata mostra il numero totale di case utilizzato in ogni partizione.  
   
@@ -77,11 +77,11 @@ ms.locfileid: "68183815"
 ### <a name="choosing-models-and-columns-to-validate"></a>Scelta di modelli e colonne da convalidare  
  Quando si usa la scheda **Convalida incrociata** in Progettazione modelli di data mining, è necessario innanzitutto selezionare la colonna stimabile da un elenco. In genere, una struttura di data mining può supportare numerosi modelli di data mining, che non utilizzano tutti la stessa colonna stimabile. Quando si esegue la convalida incrociata, solo i modelli che utilizzano la stessa colonna stimabile possono essere inclusi nel report.  
   
- Per scegliere un attributo stimabile, fare clic su **Attributo di destinazione** e selezionare la colonna dall'elenco. Se l'attributo di destinazione è una colonna nidificata o una colonna in una tabella nidificata, è necessario digitare il nome della colonna nidificata utilizzando il formato \<nome tabella nidificata > (chiave).\< Annidati colonna >. Se l'unica colonna utilizzata della tabella nidificata è la colonna chiave, è possibile usare \<nome tabella nidificata > (chiave).  
+ Per scegliere un attributo stimabile, fare clic su **Attributo di destinazione** e selezionare la colonna dall'elenco. Se l'attributo di destinazione è una colonna nidificata o una colonna in una tabella nidificata, è necessario digitare il nome della colonna nidificata utilizzando \<il formato nome tabella nidificata > (\< chiave). > Di colonna nidificata. Se l'unica colonna utilizzata dalla tabella nidificata è la colonna chiave, è possibile utilizzare \<il nome della tabella nidificata > (chiave).  
   
  Dopo che l'attributo stimabile è stato selezionato, in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono testati automaticamente tutti i modelli che utilizzano lo stesso attributo. Se l'attributo di destinazione contiene valori discreti, dopo avere selezionato la colonna stimabile è possibile digitare uno stato di destinazione nel caso sia presente un valore specifico da stimare.  
   
- La selezione dello stato di destinazione influisce sulle misure restituite. Se si specifica un attributo di destinazione, vale a dire, un nome di colonna- e non si sceglie un valore specifico che si desidera che il modello dovrebbe stimare, per impostazione predefinita il modello verrà valutato in base alla stima dello stato più probabile.  
+ La selezione dello stato di destinazione influisce sulle misure restituite. Se si specifica un attributo di destinazione, ovvero un nome di colonna, e non si sceglie un valore specifico che il modello deve stimare, per impostazione predefinita il modello verrà valutato in base alla stima dello stato più probabile.  
   
  Quando si usa la convalida incrociata con modelli di clustering, non è disponibile alcuna colonna stimabile ma è necessario selezionare **#Cluster** dall'elenco nella casella di riepilogo **Attributo di destinazione** . Dopo avere selezionato questa opzione, altre opzioni non attinenti ai modelli di clustering, ad esempio **Stato di destinazione**, sono disabilitate. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eseguirà quindi il test di tutti i modelli di clustering associati alla struttura di data mining.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "68183815"
  Per un esempio della creazione di un report di convalida incrociata utilizzando l'interfaccia utente, vedere [Creare un report di convalida incrociata](../../analysis-services/data-mining/create-a-cross-validation-report.md).  
   
 ### <a name="cross-validation-stored-procedures"></a>Stored procedure di convalida incrociata  
- Per gli utenti esperti, la convalida incrociata è anche disponibile sotto forma di stored procedure di sistema con parametri completi. È possibile eseguire le stored procedure connettendosi a un'istanza da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o da qualsiasi applicazione in codice gestito.  
+ Per gli utenti esperti, la convalida incrociata è anche disponibile sotto forma di stored procedure di sistema con parametri completi. È possibile eseguire le stored procedure connettendosi a un'istanza da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]o da qualsiasi applicazione di codice gestito.  
   
  Le stored procedure sono raggruppate per tipo di modello di data mining. Un set di stored procedure può essere utilizzato solo con modelli di clustering. L'altro set di stored procedure può essere utilizzato con altri modelli di data mining.  
   

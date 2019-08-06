@@ -13,12 +13,12 @@ ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22af830a8dda47bfe4533668d90f1cac473d4bfa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 404bd1d31a910f0fd2d181ab4198ffab065ffd4f
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002709"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811509"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>Creazione, modifica e rimozione di indici
 
@@ -29,10 +29,10 @@ ms.locfileid: "68002709"
  È possibile creare un indice in una colonna XML specificando la proprietà <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> dell'oggetto <xref:Microsoft.SqlServer.Management.Smo.Index>.  
   
 ## <a name="examples"></a>Esempi  
- Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un Visual C&#35; progetto SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Per usare qualsiasi esempio di codice fornito, è necessario scegliere l'ambiente di programmazione, il modello di programmazione e il linguaggio di programmazione per la creazione dell'applicazione. Per altre informazioni, vedere [creare un progetto Visual&#35; C SMO in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>Creazione di un indice composto non cluster in Visual Basic  
- In questo esempio di codice viene illustrato come creare un indice composto non cluster. Per un indice composto, aggiungere più di una colonna all'indice. Impostare il <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> proprietà **False** per un indice non cluster.  
+ In questo esempio di codice viene illustrato come creare un indice composito e non cluster. Per un indice composto, aggiungere più di una colonna all'indice. Impostare la <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> proprietà su **false** per un indice non cluster.  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -89,7 +89,7 @@ End Class
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-c"></a>Creazione di un indice composto non cluster in Visual C#  
- In questo esempio di codice viene illustrato come creare un indice composto non cluster. Per un indice composto, aggiungere più di una colonna all'indice. Impostare il <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> proprietà **False** per un indice non cluster.  
+ In questo esempio di codice viene illustrato come creare un indice composito e non cluster. Per un indice composto, aggiungere più di una colonna all'indice. Impostare la <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> proprietà su **false** per un indice non cluster.  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -147,7 +147,7 @@ public class A {
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-powershell"></a>Creazione di un indice composto non cluster in PowerShell  
- In questo esempio di codice viene illustrato come creare un indice composto non cluster. Per un indice composto, aggiungere più di una colonna all'indice. Impostare il <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> proprietà **False** per un indice non cluster.  
+ In questo esempio di codice viene illustrato come creare un indice composito e non cluster. Per un indice composto, aggiungere più di una colonna all'indice. Impostare la <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> proprietà su **false** per un indice non cluster.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and to the  
@@ -188,7 +188,7 @@ $idx.Drop();
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-basic"></a>Creazione di un indice XML in Visual Basic  
- In questo esempio di codice viene illustrato come creare un indice XML in un tipo di dati XML. Il tipo di dati XML è un insieme di schemi XML denominato MySampleCollection, creato in [utilizzando schemi XML](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). Gli indici XML presentano alcune restrizioni, una delle quali è rappresentata dal fatto che devono essere creati in una tabella che dispone già di una chiave primaria cluster.  
+ In questo esempio di codice viene illustrato come creare un indice XML in un tipo di dati XML. Il tipo di dati XML è un XML Schema raccolta denominato mycollectioncollection, creato in utilizzando gli [schemi XML](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). Gli indici XML presentano alcune restrizioni, una delle quali è rappresentata dal fatto che devono essere creati in una tabella che dispone già di una chiave primaria cluster.  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -251,7 +251,7 @@ End Class
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-c"></a>Creazione di un indice XML in Visual C#  
- In questo esempio di codice viene illustrato come creare un indice XML in un tipo di dati XML. Il tipo di dati XML è un insieme di schemi XML denominato MySampleCollection, creato in [utilizzando schemi XML](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). Gli indici XML presentano alcune restrizioni, una delle quali è rappresentata dal fatto che devono essere creati in una tabella che dispone già di una chiave primaria cluster.  
+ In questo esempio di codice viene illustrato come creare un indice XML in un tipo di dati XML. Il tipo di dati XML è un XML Schema raccolta denominato mycollectioncollection, creato in utilizzando gli [schemi XML](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). Gli indici XML presentano alcune restrizioni, una delle quali è rappresentata dal fatto che devono essere creati in una tabella che dispone già di una chiave primaria cluster.  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -314,7 +314,7 @@ public class A {
 ```  
   
 ## <a name="creating-an-xml-index-in-powershell"></a>Creazione di un indice XML in PowerShell  
- In questo esempio di codice viene illustrato come creare un indice XML in un tipo di dati XML. Il tipo di dati XML è un insieme di schemi XML denominato MySampleCollection, creato in [utilizzando schemi XML](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). Gli indici XML presentano alcune restrizioni, una delle quali è rappresentata dal fatto che devono essere creati in una tabella che dispone già di una chiave primaria cluster.  
+ In questo esempio di codice viene illustrato come creare un indice XML in un tipo di dati XML. Il tipo di dati XML è un XML Schema raccolta denominato mycollectioncollection, creato in utilizzando gli [schemi XML](../../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md). Gli indici XML presentano alcune restrizioni, una delle quali è rappresentata dal fatto che devono essere creati in una tabella che dispone già di una chiave primaria cluster.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to adventureworks2012  

@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 7be448918599918bdf638b43178030703da724a9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: e337e04714b0d8dcc9a8227ca48ad9dc33dcc3dc
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771375"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811391"
 ---
-# <a name="spaddarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
+# <a name="sp_addarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Viene creato un articolo che viene aggiunto a una pubblicazione. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
@@ -210,7 +210,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x20000000000**|Replica l'attributo SPARSE per le colonne. Per altre informazioni su questo attributo, vedere [usare le colonne di tipo sparse](../../relational-databases/tables/use-sparse-columns.md).|  
 |**0x40000000000**|Consente di creare script da parte dell'agente snapshot per creare una tabella ottimizzata per la memoria nel Sottoscrittore.|  
 |**0x80000000000**|Converte l'indice cluster in un indice non cluster per gli articoli con ottimizzazione per la memoria.|  
-|**0x400000000000**|Replica tutti gli indici columnstore non cluster nelle tabelle|  
+|**0x400000000000**|Replica gli indici columnstore non cluster nelle tabelle|  
 |**0x800000000000**|Replica tutti gli indici columnstore non cluster flitered nella tabella o nelle tabelle.|  
 |NULL|La replica imposta automaticamente *schema_option* su un valore predefinito, il cui valore dipende da altre proprietà degli articoli. Nella tabella "Opzioni predefinite dello schema" riportata nella sezione Osservazioni vengono descritte le opzioni predefinite dello schema in base a tipo di articolo e tipo di replica.<br /><br /> Il valore predefinito per le[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pubblicazioni non è **0x050D3**.|  
   

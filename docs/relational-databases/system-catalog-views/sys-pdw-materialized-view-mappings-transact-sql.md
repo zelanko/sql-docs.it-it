@@ -9,28 +9,28 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f4e286a335ca6668c81e6b959bd61605c0ea398a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 919b55fe869a77bf27acd8a14820c63dd82eb968
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059388"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811497"
 ---
-# <a name="syspdwmaterializedviewmappings-transact-sql-preview"></a>Sys.pdw_materialized_view_mappings (Transact-SQL) (anteprima)
+# <a name="syspdw_materialized_view_mappings-transact-sql-preview"></a>sys. PDW _materialized_view_mappings (Transact-SQL) (anteprima)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Unisce la vista materializzata per i nomi degli oggetti interni dalla object_id.
+Associa la vista materializzata ai nomi di oggetto interni tramite object_id.
 
-Le colonne physical_name object_id formano la chiave per questa vista del catalogo.
+Le colonne physical_name e object_id formano la chiave per questa vista del catalogo.
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|physical_name |**nvarchar(36)**|Il nome fisico per la vista materializzata.|  
-|object_id  |**int**|L'ID di oggetto per la vista materializzata. Visualizzare [Sys. Objects (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest).| 
+|physical_name |**nvarchar(36)**|Nome fisico per la vista materializzata.|  
+|object_id  |**int**|ID oggetto per la vista materializzata. Vedere [sys. Objects (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest).| 
 
 ## <a name="permissions"></a>Permissions
 

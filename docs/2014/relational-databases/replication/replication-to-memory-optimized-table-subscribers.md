@@ -10,12 +10,12 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0ee585f9773858848f213b3eeef6e995aedfb53f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250877"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811234"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replica in sottoscrittori di tabelle con ottimizzazione per la memoria
   Le tabelle con funzione di sottoscrittori di replica transazionale, esclusa la replica transazionale peer-to-peer, possono essere configurate come tabelle ottimizzate per la memoria. Le altre configurazioni di replica non sono compatibili con le tabelle ottimizzate per la memoria.  
@@ -50,7 +50,7 @@ ms.locfileid: "63250877"
     GO  
     ```  
   
- **Generare uno Snapshot e adattare lo Schema**  
+ **Generare uno snapshot e modificare lo schema**  
   
 1.  Creare un processo di snapshot e generare uno snapshot.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "63250877"
     EXEC sp_startpublication_snapshot @publication = N'Publication1';  
     ```  
   
-2.  Passare alla cartella dello snapshot. Il percorso predefinito è "C:\Program Files\Microsoft SQL Server\MSSQL12. \<Istanza > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\".  
+2.  Passare alla cartella dello snapshot. Il percorso predefinito è "C:\Programmi\Microsoft SQL Server\MSSQL12. Istanza > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\". \<  
   
-3.  Individuare il **. SCH** file per la tabella e aprirlo in Management Studio. Modificare lo schema della tabella e aggiornare la stored procedure, come descritto di seguito.  
+3.  Individuare il **. File SCH** per la tabella e aprirlo in Management Studio. Modificare lo schema della tabella e aggiornare la stored procedure, come descritto di seguito.  
   
      Valutare gli indici definiti nel file IDX. Modificare `CREATE TABLE` per specificare gli indici, i vincoli, la chiave primaria e la sintassi ottimizzata per la memoria obbligatori. Per le tabelle ottimizzate per la memoria, le colonne di indice devono essere NOT NULL e le colonne di indice di tipi di carattere devono essere Unicode e utilizzare le regole di confronto BIN2. Vedere l'esempio riportato di seguito:  
   
@@ -226,7 +226,7 @@ ms.locfileid: "63250877"
     go  
     ```  
   
-5.  Creare database sottoscrittore utilizzando il **isolamento elevate to snapshot** opzione e impostate le regole di confronto predefinite su Latin1_General_CS_AS_KS_WS se si usano tipi di dati carattere non Unicode.  
+5.  Creare il database del Sottoscrittore utilizzando l'opzione **eleva per l'isolamento dello snapshot** e impostare le regole di confronto predefinite su Latin1_General_CS_AS_KS_WS in caso di utilizzo di tipi di dati carattere non Unicode.  
   
     ```  
     CREATE DATABASE [Sub]   
@@ -241,7 +241,7 @@ ms.locfileid: "63250877"
     GO  
     ```  
   
-6.  Applicare lo schema al database del sottoscrittore e salvare lo schema per un uso futuro.  
+6.  Applicare lo schema al database di un Sottoscrittore e salvare lo schema per un utilizzo futuro.  
   
 7.  Caricare i dati (origine) del server di pubblicazione nel sottoscrittore. I dati non devono essere modificati nel server di pubblicazione finché non si aggiunge una sottoscrizione.  È possibile utilizzare BCP come illustrato di seguito:  
   
@@ -263,7 +263,7 @@ ms.locfileid: "63250877"
     GO  
     ```  
   
- **Non aggiungere una sottoscrizione sync**  
+ **Non aggiungere alcuna sottoscrizione di sincronizzazione**  
   
  Aggiungere una sottoscrizione no sync.  
   
@@ -282,7 +282,7 @@ GO
   
  Le tabelle con ottimizzazione per la memoria dovrebbero ora iniziare a ricevere aggiornamenti dal server di pubblicazione.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restrizioni  
  È supportata una sola replica transazionale unidirezionale. La replica transazionale peer-to-peer non è supportata.  
   
  Non è possibile pubblicare le tabelle con ottimizzazione per la memoria.  
@@ -293,19 +293,19 @@ GO
   
  Nel sottoscrittore le tabelle interessate dalla replica transazionale possono essere configurate come tabelle ottimizzate per la memoria, ma le tabelle del sottoscrittore devono soddisfare i requisiti delle tabelle ottimizzate per la memoria. Si applicano pertanto le restrizioni seguenti.  
   
--   Per creare una tabella ottimizzata per la memoria in un sottoscrittore di replica transazionale, è necessario modificare manualmente i file dello schema dello snapshot utilizzati per creare le tabelle ottimizzate per la memoria. Per altre informazioni, vedere [modifica di un file di schema](#Schema).  
+-   Per creare una tabella ottimizzata per la memoria in un sottoscrittore di replica transazionale, è necessario modificare manualmente i file dello schema dello snapshot utilizzati per creare le tabelle ottimizzate per la memoria. Per ulteriori informazioni, vedere [modifica di un file di schema](#Schema).  
   
 -   Alle tabelle replicate in tabelle ottimizzate per la memoria in un sottoscrittore si applica il limite di 8060 byte per riga delle tabelle ottimizzate per la memoria.  
   
--   Le tabelle replicate in tabelle ottimizzate per la memoria in un sottoscrittore sono limitate ai tipi di dati consentiti nelle tabelle ottimizzate per la memoria. Per altre informazioni, vedere [Supported Data Types](../in-memory-oltp/supported-data-types-for-in-memory-oltp.md).  
+-   Le tabelle replicate in tabelle ottimizzate per la memoria in un sottoscrittore sono limitate ai tipi di dati consentiti nelle tabelle ottimizzate per la memoria. Per ulteriori informazioni, vedere [tipi di dati supportati](../in-memory-oltp/supported-data-types-for-in-memory-oltp.md).  
   
--   Vengono applicate restrizioni all'aggiornamento della chiave primaria delle tabelle replicate in una tabella ottimizzata per la memoria in un sottoscrittore. Per altre informazioni, vedere [la replica delle modifiche a una chiave primaria](#PrimaryKey).  
+-   Vengono applicate restrizioni all'aggiornamento della chiave primaria delle tabelle replicate in una tabella ottimizzata per la memoria in un sottoscrittore. Per ulteriori informazioni, vedere [replica delle modifiche in una chiave primaria](#PrimaryKey).  
   
 -   Chiave esterna, vincolo univoco, trigger, modifiche dello schema, ROWGUIDCOL, colonne calcolate, compressione dei dati, tipi di dati alias, controllo delle versioni e blocchi non sono supportati nelle tabelle ottimizzate per la memoria. Per informazioni, vedere [Costrutti T-SQL non supportati da OLTP in memoria](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) .  
   
 ##  <a name="Schema"></a> Modifica di un file dello schema  
   
--   Gli indici cluster non sono supportati. Modificare eventuali indici cluster in indici non cluster.  
+-   Gli indici cluster non sono supportati. Modificare gli indici cluster in indici non cluster.  
   
 -   Tutte le colonne nella chiave di un indice devono essere specificate come `NOT NULL`.  
   
@@ -313,7 +313,7 @@ GO
   
 -   ANSI_PADDING deve essere ON.  
   
-##  <a name="PrimaryKey"></a> La replica delle modifiche a una chiave primaria  
+##  <a name="PrimaryKey"></a>Replica delle modifiche a una chiave primaria  
  Non è possibile aggiornare la chiave primaria di una tabella ottimizzata per la memoria. Per replicare un aggiornamento della chiave primaria in un sottoscrittore, modificare la stored procedure di aggiornamento per recapitare l'aggiornamento come coppia di eliminazione e inserimento.  
   
 ## <a name="see-also"></a>Vedere anche  

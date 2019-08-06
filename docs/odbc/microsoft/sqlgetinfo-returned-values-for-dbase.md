@@ -16,25 +16,25 @@ helpviewer_keywords:
 ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: dd6b25ebc06df82fa9974b3274ae527e6f6fa347
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 247928cfbc7e051853bba0c7f49644a1a6203614
+ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003158"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794680"
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>Valori restituiti da SQLGetInfo per dBASE
-La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento e i corrispondenti valori restituiti dal **SQLGetInfo**. Queste informazioni possono essere recuperate passando il linguaggio C elencato #defines **SQLGetInfo** nel *fInfoType* argomento. Per altre informazioni sui valori restituiti da **SQLGetInfo**, vedere la *riferimento per programmatori ODBC*.  
+Nella tabella seguente sono elencati i #defines del linguaggio C per l'argomento *fInfoType* e i valori corrispondenti restituiti da **SQLGetInfo**. Queste informazioni possono essere recuperate passando le #defines del linguaggio C elencate a **SQLGetInfo** nell'argomento *fInfoType* . Per ulteriori informazioni sui valori restituiti da **SQLGetInfo**, vedere *ODBC Programmer ' s Reference*.  
   
 > [!NOTE]  
->  In cui **SQLGetInfo** restituisce una maschera di bit a 32 bit, una barra verticale (&#124;) rappresenta un'operazione OR.  
+>  Dove **SQLGetInfo** restituisce una maschera di bit a 32 bit, una barra&#124;verticale () rappresenta un OR bit per bit.  
   
 |InfoType|Valore restituito|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|Tutti i set|  
+|SQL_AGGREGATE_FUNCTIONS|Tutti impostati|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|Più valori|  
 |SQL_ASYNC_MODE|0|  
@@ -44,7 +44,7 @@ La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|"Y"|  
 |SQL_CATALOG_NAME_SEPARATOR|"\\"|  
-|SQL_CATALOG_TERM|"Directory"|  
+|SQL_CATALOG_TERM|Directory|  
 |SQL_CATALOG_USAGE|Più valori|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
@@ -81,22 +81,22 @@ La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|Il DSN di ODBC. ini, o "" se parola chiave DRIVER viene usato in ODBC. ini|  
-|SQL_DATA_SOURCE_READ_ONLY|"N" (seconda sull'origine dati).|  
+|SQL_DATA_SOURCE_NAME|DSN da ODBC. ini o "" Se si usa la parola chiave DRIVER in ODBC. ini|  
+|SQL_DATA_SOURCE_READ_ONLY|"N" (dipende dall'origine dati.)|  
 |SQL_DATABASE_NAME|Directory database corrente|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|"DBASE"|  
+|SQL_DBMS_NAME|DBASE|  
 |SQL_DBMS_VER|Più valori|  
 |SQL_DDL_INDEX|Più valori|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|Gestito da Gestione Driver.|  
-|SQL_DRIVER_HENV|Gestito da Gestione Driver.|  
-|SQL_DRIVER_HLIB|Gestito da Gestione Driver.|  
-|SQL_DRIVER_HSTMT|Gestito da Gestione Driver.|  
+|SQL_DRIVER_HDBC|Gestito da Gestione driver.|  
+|SQL_DRIVER_HENV|Gestito da Gestione driver.|  
+|SQL_DRIVER_HLIB|Gestito da Gestione driver.|  
+|SQL_DRIVER_HSTMT|Gestito da Gestione driver.|  
 |SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00.*nnnn*" (*nnnn* specifica la data di compilazione)|  
+|SQL_DRIVER_VER|"4,00.*nnnn*" (*nnnn* specifica la data di compilazione)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -110,8 +110,8 @@ La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|SQL_CA1_NEXT|  
 |SQL_GETDATA_EXTENSIONS|Più valori|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
-|SQL_IDENTIFIER_CASE|SQL_IC_UPPER (il qualificatore viene restituito in minuscolo e maiuscolo in modo che Windows NT possono individuare la directory.)|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"'" (virgolette inverse)|  
+|SQL_IDENTIFIER_CASE|SQL_IC_UPPER (il qualificatore viene restituito in un caso misto, in modo che Windows NT possa individuare la directory).|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (virgoletta indietro)|  
 |SQL_KEYWORDS|Più valori|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -119,7 +119,7 @@ La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento
 |SQL_MAX_CHAR_LITERAL_LEN|254|  
 |SQL_MAX_COLUMN_NAME_LEN|10|  
 |SQL_MAX_COLUMNS_IN_GROUP_BY|10|  
-|SQL_MAX_COLUMNS_IN_INDEX|0 (limitare sconosciuto o non applicabile)|  
+|SQL_MAX_COLUMNS_IN_INDEX|0 (limite sconosciuto o non applicabile)|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
 |SQL_MAX_COLUMNS_IN_TABLE|255|  
@@ -143,7 +143,7 @@ La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento
 |SQL_NUMERIC_FUNCTIONS|Più valori|  
 |SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
-|SQL_ODBC_VER|Da Gestione Driver|  
+|SQL_ODBC_VER|Da Gestione driver|  
 |SQL_OJ_CAPABILITIES|Più valori|  
 |SQL_ORDER_BY_COLUMNS_IN_SELECT|"N"|  
 |SQL_OUTER_JOINS|"Y"|  
@@ -155,12 +155,12 @@ La tabella seguente elenca il linguaggio C# defines per il *fInfoType* argomento
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|Più valori|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|"DBASE"|  
-|SQL_SPECIAL_CHARACTERS|"~`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
+|SQL_SERVER_NAME|DBASE|  
+|SQL_SPECIAL_CHARACTERS|"~\`\@}{\?"';:/<,.!\>'#$%^&\*\_-+=\\ \[]&#124;"|  
 |SQL_STRING_FUNCTIONS|Più valori|  
 |SQL_SUBQUERIES|Più valori|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|"TABLE"|  
+|SQL_TABLE_TERM|TABELLA|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|Più valori|  
