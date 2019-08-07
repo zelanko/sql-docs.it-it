@@ -194,7 +194,7 @@ Il stored procedure restituisce un oggetto Python `figure` serializzato come flu
   
 6.  Il file di output viene creato nella directory di lavoro di Python. Per visualizzare il tracciato, individuare la directory di lavoro Python e aprire il file. Nell'immagine seguente viene illustrato un tracciato salvato nel computer client.
   
-    Importo della ![mancia rispetto alla tariffa] Importo della (media/sqldev-python-sample-plot.png "mancia rispetto alla tariffa") 
+    ![mancia rispetto alla tariffa](media/sqldev-python-sample-plot.png "mancia rispetto alla tariffa") 
 
 ## <a name="next-step"></a>Passaggio successivo
 

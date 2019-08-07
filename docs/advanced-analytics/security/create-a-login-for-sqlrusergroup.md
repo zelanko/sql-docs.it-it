@@ -41,7 +41,7 @@ Per risolvere l'errore di connessione, è possibile creare un account di accesso
 
 4. Nella finestra di dialogo **tipi di oggetti** selezionare **gruppi**. Deselezionare tutte le altre caselle di controllo.
 
-     Finestra ![di dialogo Seleziona gruppi in tipi di oggetto] Finestra (media/implied-auth-login3.png "di dialogo Seleziona gruppi in tipi di oggetto")
+     Finestra ![di dialogo Seleziona gruppi in tipi di oggetto](media/implied-auth-login3.png "Finestra di dialogo Seleziona gruppi in tipi di oggetto")
 
 4. Fare clic su **Avanzate**, verificare che la posizione in cui eseguire la ricerca sia il computer corrente, quindi fare clic su **trova**.
 
