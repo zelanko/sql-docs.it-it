@@ -32,7 +32,7 @@ ms.locfileid: "68495286"
   
 6.  Nella finestra di dialogo **gestione connessione Excel** fare clic su **Sfoglia**, quindi selezionare il file **Suppliers. xls** nella cartella **EIM tutorial** . Verificare che **Microsoft excel 97-2003** sia selezionato nella casella **versione di Excel** , quindi fare clic su **OK**.  
   
-     Finestra di ![dialogo Gestione connessione Excel] Finestra di (../../2014/tutorials/media/et-addingexcelsourcetothedataflow-01.jpg "dialogo Gestione connessione Excel")  
+     ![Finestra di dialogo Gestione connessione Excel](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-01.jpg "dialogo Gestione connessione Excel")  
   
 7.  Nella finestra di dialogo **Editor origine Excel** selezionare **IncomingSuppliers $** nella casella **di riepilogo nome del foglio di Excel** .  
   
