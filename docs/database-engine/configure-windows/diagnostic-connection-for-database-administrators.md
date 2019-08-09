@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c912c17ce6914a2de2425ad61e27f49ef7cab86c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee6c63623cc5b88e0cbb9c4a3edd7a78e6137d77
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011871"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670475"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Connessione di diagnostica per gli amministratori di database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "68011871"
     -   Se nella vista sys.dm_os_tasks non vi sono processi associati alla sessione, ma questa è ancora presente nella vista sys.dm_exec_sessions dopo l'esecuzione di un comando KILL, allora non è disponibile un thread di lavoro. Selezionare uno dei processi attualmente in esecuzione (un processo elencato nella vista sys.dm_os_tasks con un `sessions_id <> NULL`) e terminare la sessione ad esso associata per liberare il thread di lavoro. Si noti che la terminazione di una singola sessione potrebbe non essere sufficiente e che potrebbe essere necessario terminare più sessioni.  
   
 ## <a name="dac-port"></a>Porta della connessione DAC  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in attesa della connessione DAC sulla porta TCP 1434 se disponibile o una porta TCP assegnata dinamicamente all'avvio di [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Il log degli errori contiene il numero di porta su cui è in attesa la connessione DAC. Per impostazione predefinita, il listener della connessione DAC accetta connessioni solo sulla porta locale. Per un esempio di codice che attiva le connessioni amministrative remote, vedere [Opzione di configurazione del server remote admin connections](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in attesa della connessione DAC sulla porta TCP 1434 se disponibile o una porta TCP assegnata dinamicamente all'avvio di [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Il [log degli errori](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md) contiene il numero di porta su cui è in ascolto la connessione DAC. Per impostazione predefinita, il listener della connessione DAC accetta connessioni solo sulla porta locale. Per un esempio di codice che attiva le connessioni amministrative remote, vedere [Opzione di configurazione del server remote admin connections](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md).  
   
  Dopo aver configurato la connessione amministrativa remota, il listener della connessione DAC viene abilitato senza richiedere un riavvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pertanto da tale istante un client può stabilire una connessione DAC in remoto. È possibile abilitare il listener della connessione DAC per accettare connessioni in remoto anche se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non risponde effettuando prima una connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando la connessione DAC locale, quindi eseguendo la store procedure sp_configure per accettare la connessione da connessioni remote.  
   

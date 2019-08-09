@@ -1,7 +1,7 @@
 ---
 title: Opzioni di avvio del servizio del motore di database | Microsoft Docs
 ms.custom: ''
-ms.date: 05/31/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 53c7ea706f9e886f147532bfbd3dd148a6ca7d1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91f6f88255fb45e101484637f1db823660796475
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011975"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68763234"
 ---
 # <a name="database-engine-service-startup-options"></a>Opzioni di avvio del servizio del motore di database
 
@@ -82,8 +82,9 @@ Le opzioni di avvio consentono di designare determinati percorsi di file necessa
  Può essere necessario utilizzare particolari opzioni a ogni avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'impostazione di queste opzioni, ad esempio l'avvio con un flag di traccia, è più semplice se si configurano i parametri di avvio con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Questi strumenti consentono di salvare le opzioni di avvio come chiavi del Registro di sistema e di avviare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre con le opzioni di avvio.  
   
 ## <a name="compatibility-support"></a>Informazioni sulla compatibilità  
- Il parametro **-h**  non è supportato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Questo parametro è stato utilizzato in versioni precedenti di istanze a 32 bit di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per riservare spazio di indirizzi della memoria virtuale per metadati della memoria a caldo quando AWE è abilitato. Per ulteriori informazioni, vedere [Funzionalità di SQL Server obsolete in SQL Server 2016](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).  
-  
+
+Per le opzioni che sono state rimosse dalle versioni precedenti, vedere [Applicazione sqlservr](../../tools/sqlservr-application.md#compatibility-support).
+
 ## <a name="related-tasks"></a>Attività correlate  
 [Configurare l'opzione di configurazione del server scan for startup procs](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)  
 [Avviare, arrestare, sospendere, riprendere, riavviare il motore di database, SQL Server Agent o SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: adef2650015edadfe61d331c6358fa85c0099c99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bfc88ea17f78aaad42d585490a4776db65824d92
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014656"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742935"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Panoramica di Gruppi di disponibilità AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ ms.locfileid: "68014656"
   
 -   **Accesso in sola lettura a una o più repliche secondarie (repliche secondarie leggibili)**  
   
-     Una replica di disponibilità può essere configurata in modo da consentire l'accesso in sola lettura ai relativi database locali quando svolge il ruolo secondario, sebbene alcune operazioni non siano pienamente supportate. Se inoltre si desidera impedire l'esecuzione dei carichi di lavoro in sola lettura sulla replica primaria, è possibile configurare le repliche in modo da consentire l'accesso in lettura/scrittura solo quando l'esecuzione avviene nel ruolo primario. Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+     Una replica di disponibilità secondaria può essere configurata in modo da consentire solo l'accesso in sola lettura ai relativi database locali, sebbene alcune operazioni non siano pienamente supportate. In questo modo si eviteranno i tentativi di connessione in lettura/scrittura alla replica secondaria. È anche possibile impedire carichi di lavoro di sola lettura nella replica _primaria_ consentendo solo l'accesso in lettura/scrittura. In questo modo si eviteranno connessioni di sola lettura alla replica primaria. Per altre informazioni, vedere [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
      Se un listener del gruppo di disponibilità e una o più repliche secondarie leggibili vengono elaborate da un gruppo di disponibilità, tramite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] è possibile instradare le richieste di connessione con finalità di lettura a una di tali repliche (*routing di sola lettura*). Per altre informazioni, vedere [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   

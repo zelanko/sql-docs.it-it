@@ -21,12 +21,12 @@ ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c129998db40a64507b119b8392abcb56cc119a8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4a9ef3df75a54b6565b1d71c0a9e4557f752f95b
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001682"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68697498"
 ---
 # <a name="data-type-conversion-database-engine"></a>Conversione del tipo di dati (motore di database)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,8 +57,44 @@ Utilizzare CAST invece di CONVERT per rendere il codice di programma [!INCLUDE[t
 Nella figura seguente vengono illustrate le conversioni di tipi di dati esplicite e implicite consentite per i tipi di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questi includono **xml**, **bigint** e **sql_variant**. Non è possibile eseguire una conversione implicita in un'assegnazione dal tipo di dati **sql_variant**, ma è possibile eseguire una conversione implicita verso il tipo di dati **sql_variant**.
   
 ![Tabella di conversione dei tipi di dati](../../t-sql/data-types/media/lrdatahd.png "Tabella di conversione dei tipi di dati")
-  
+
+Mentre il grafico sopra riportato illustra tutte le conversioni esplicite e implicite consentite in SQL Server, non indica il tipo di dati risultante della conversione. Quando SQL Server esegue una conversione esplicita, l'istruzione stessa determina il tipo di dati risultante. Per le conversioni implicite, le istruzioni di assegnazione, ad esempio l'impostazione del valore di una variabile o l'inserimento di un valore in una colonna, hanno come risultato il tipo di dati definito dalla dichiarazione di variabile o dalla definizione di colonna. Per gli operatori di confronto o altre espressioni, il tipo di dati risultante dipende dalle regole di precedenza dei tipi di dati.
+
+Ad esempio, lo script seguente definisce una variabile di tipo `varchar`, assegna un valore di tipo `int` alla variabile e quindi seleziona una concatenazione della variabile con una stringa.
+
+```sql
+DECLARE @string varchar(10);
+SET @string = 1;
+SELECT @string + ' is a string.'
+```
+
+Il valore `int` di `1` viene convertito in un `varchar`, in modo che l'istruzione `SELECT` restituisca il valore `1 is a string.`.
+
+L'esempio seguente mostra uno script simile con una variabile `int`:
+
+```sql
+DECLARE @notastring int;
+SET @notastring = '1';
+SELECT @notastring + ' is not a string.'
+```
+
+In questo caso, l'istruzione `SELECT` genera l'errore seguente:
+
+`Msg 245, Level 16, State 1, Line 3`
+`Conversion failed when converting the varchar value ' is not a string.' to data type int.`
+
+Per valutare l'espressione `@notastring + ' is not a string.'`, SQL Server segue le regole di precedenza dei tipi di dati per completare la conversione implicita prima che il risultato dell'espressione possa essere calcolato. Dato che `int` ha una precedenza maggiore di `varchar`, SQL Server tenta di convertire la stringa in un intero e non riesce perché la stringa non può essere convertita in un intero. Se l'espressione fornisce una stringa che può essere convertita, l'istruzione ha esito positivo, come nell'esempio seguente:
+
+```sql
+DECLARE @notastring int;
+SET @notastring = '1';
+SELECT @notastring + '1'
+```
+
+In questo caso, la stringa `1` può essere convertita nel valore intero `1`, quindi questa istruzione `SELECT` restituisce il valore `2`. Si noti che l'operatore `+` diventa un'addizione anziché una concatenazione quando i tipi di dati specificati sono interi.
+
 ## <a name="data-type-conversion-behaviors"></a>Funzionamento della conversione dei tipi di dati
+
 Alcune conversioni implicite ed esplicite non sono supportate quando si converte il tipo di dati di un oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un altro tipo di dati. Non è ad esempio possibile convertire un valore **nchar** in un valore **image**. Un valore **nchar** può essere convertito in un valore **binary** solo tramite una conversione esplicita, in quanto la conversione implicita in valore **binary** non è supportata. È tuttavia possibile convertire in modo esplicito o implicito un valore **nchar** in valore **nvarchar**.
   
 Negli argomenti seguenti viene descritto il funzionamento della conversione dei tipi di dati corrispondenti:

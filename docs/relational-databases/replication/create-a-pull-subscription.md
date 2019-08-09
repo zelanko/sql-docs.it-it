@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 13a883b6b36bfb2863caa5b066e58216cbad1549
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 259ff6d422788f302d05b435026839970b9f75db
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903056"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768664"
 ---
 # <a name="create-a-pull-subscription"></a>Creazione di una sottoscrizione pull
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   In questo argomento viene descritto come creare una sottoscrizione pull in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o RMO (Replication Management Objects).  
   
  L'impostazione della sottoscrizione pull per la replica P2P è possibile dallo script, ma non è disponibile tramite la procedura guidata.  
@@ -91,24 +92,24 @@ ms.locfileid: "67903056"
   
     -   Se il valore di **allow_pull** nel set di risultati è **1**, la pubblicazione supporta le sottoscrizioni pull.  
   
-    -   Se il valore di **allow_pull** è **0**, eseguire [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) specificando **allow_pull** per **@property** e **true** per **@value** .  
+    -   Se il valore di **allow_pull** è **0**, eseguire [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) specificando **allow_pull** per **\@property** e **true** per **\@value**.  
   
-2.  Nel Sottoscrittore eseguire [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Specificare **@publisher** e **@publication** . Per informazioni sull'aggiornamento delle sottoscrizioni, vedere [Creazione di una sottoscrizione aggiornabile di una pubblicazione transazionale](publish/create-an-updatable-subscription-to-a-transactional-publication.md).   
+2.  Nel Sottoscrittore eseguire [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Specificare i parametri **\@publisher** e **\@publication**. Per informazioni sull'aggiornamento delle sottoscrizioni, vedere [Creazione di una sottoscrizione aggiornabile di una pubblicazione transazionale](publish/create-an-updatable-subscription-to-a-transactional-publication.md).   
   
 3.  Nel Sottoscrittore eseguire [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specificare le opzioni seguenti:  
   
-    -   I parametri **@publisher** , **@publisher_db** e **@publication** .  
+    -   I parametri **\@publisher**, **\@publisher_db** e **\@publication**.  
   
-    -   I parametri [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows per l'esecuzione dell'agente di distribuzione nel Sottoscrittore nei parametri **@job_login** e **@job_password** .  
+    -   Le credenziali di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows per l'esecuzione dell'agente di distribuzione nel Sottoscrittore nei parametri **\@job_login** e **\@job_password**.  
   
         > [!NOTE]  
-        >  Per le connessioni effettuate con l'autenticazione integrata di Windows vengono utilizzate sempre le credenziali di Windows specificate da **@job_login** e **@job_password** . L'agente di distribuzione attiva sempre la connessione locale al Sottoscrittore utilizzando l'autenticazione integrata di Windows. Per impostazione predefinita, l'agente si connetterà al server di distribuzione con l'autenticazione integrata di Windows.  
+        >  Per le connessioni effettuate con l'autenticazione integrata di Windows vengono usate sempre le credenziali di Windows specificate da **\@job_login** e **\@job_password**. L'agente di distribuzione attiva sempre la connessione locale al Sottoscrittore utilizzando l'autenticazione integrata di Windows. Per impostazione predefinita, l'agente si connetterà al server di distribuzione con l'autenticazione integrata di Windows.  
   
-    -   (Facoltativo) Il valore **0** per **@distributor_security_mode** e le informazioni sull'account di accesso di SQL Server per **@distributor_login** e **@distributor_password** , se è necessario usare l'autenticazione di SQL Server per la connessione al database di distribuzione.  
+    -   (Facoltativo) Impostare il valore **0** per **\@distributor_security_mode** e specificare le informazioni di accesso di SQL Server per **\@distributor_login** e **\@distributor_password**, se è necessario usare l'autenticazione di SQL Server per la connessione al server di distribuzione.  
   
     -   Specificare una pianificazione per il processo dell'agente di distribuzione da eseguire per la sottoscrizione. Per altre informazioni, vedere [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
-4.  Nel server di pubblicazione eseguire [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) per registrare la sottoscrizione pull. Specificare i parametri **@publication** , **@subscriber** e **@destination_db** . Specificare il valore **pull** per **@subscription_type** .  
+4.  Nel server di pubblicazione eseguire [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) per registrare la sottoscrizione pull. Specificare **\@publication**, **\@subscriber** e **\@destination_db**. Specificare il valore **pull** per **\@subscription_type**.  
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication"></a>Per creare una sottoscrizione pull di una pubblicazione di tipo merge  
   
@@ -116,32 +117,32 @@ ms.locfileid: "67903056"
   
     -   Se il valore di **allow_pull** nel set di risultati è **1**, la pubblicazione supporta le sottoscrizioni pull.  
   
-    -   Se il valore di **allow_pull** è **0**, eseguire [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) specificando **allow_pull** per **@property** e **true** per **@value** .  
+    -   Se il valore di **allow_pull** è **0**, eseguire [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) specificando **allow_pull** per **\@property** e **true** per **\@value**.  
   
-2.  Nel Sottoscrittore eseguire [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Specificare i parametri **@publisher** , **@publisher_db** , **@publication** e i parametri seguenti:  
+2.  Nel Sottoscrittore eseguire [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Specificare **\@publisher**, **\@publisher_db**, **\@publication** e i parametri seguenti:  
   
-    -   **@subscriber_type** : specificare **local** per una sottoscrizione client e **global** per una sottoscrizione server.  
+    -   **\@subscriber_type**: specificare **local** per una sottoscrizione client e **global** per una sottoscrizione server.  
   
-    -   **@subscription_priority** : specificare la priorità della sottoscrizione (l'intervallo di valori consentito è compreso tra**0,00** e **99,99**). Questo parametro è obbligatorio solo per una sottoscrizione server.  
+    -   **\@subscription_priority**: specificare la priorità d,ella sottoscrizione (l'intervallo di valori consentito è compreso tra **0,00** e **99,99**). Questo parametro è obbligatorio solo per una sottoscrizione server.  
   
          Per altre informazioni, vedere [Rilevamento e risoluzione avanzati dei conflitti nella replica di tipo merge](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 3.  Nel Sottoscrittore eseguire [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). Specificare i parametri seguenti:  
   
-    -   **@publisher** , **@publisher_db** e **@publication** .  
+    -   **\@publisher**, **\@publisher_db** e **\@publication**.  
   
-    -   Le credenziali di Windows per l'esecuzione dell'agente di merge nel Sottoscrittore nei parametri **@job_login** e **@job_password** .  
+    -   Le credenziali di Windows per l'esecuzione dell'agente di merge nel Sottoscrittore nei parametri **\@job_login** e **\@job_password**.  
   
         > [!NOTE]  
-        >  Per le connessioni effettuate con l'autenticazione integrata di Windows vengono utilizzate sempre le credenziali di Windows specificate da **@job_login** e **@job_password** . L'agente di merge attiva sempre la connessione locale al Sottoscrittore utilizzando l'autenticazione integrata di Windows. Per impostazione predefinita, l'agente si connetterà al database di distribuzione e al server di pubblicazione con l'autenticazione integrata di Windows.  
+        >  Per le connessioni effettuate con l'autenticazione integrata di Windows vengono usate sempre le credenziali di Windows specificate da **\@job_login** e **\@job_password**. L'agente di merge attiva sempre la connessione locale al Sottoscrittore utilizzando l'autenticazione integrata di Windows. Per impostazione predefinita, l'agente si connetterà al database di distribuzione e al server di pubblicazione con l'autenticazione integrata di Windows.  
   
-    -   (Facoltativo) Impostare il valore **0** per **@distributor_security_mode** e specificare le informazioni di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nei parametri **@distributor_login** e **@distributor_password** , se è necessario utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la connessione al server di distribuzione.  
+    -   (Facoltativo) Impostare il valore **0** per **\@distributor_security_mode** e specificare le informazioni di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nei parametri **\@distributor_login** e **\@distributor_password**, se è necessario usare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la connessione al server di distribuzione.  
   
-    -   (Facoltativo) Impostare il valore **0** per **@publisher_security_mode** e specificare le informazioni di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nei parametri **@publisher_login** e **@publisher_password** , se è necessario utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la connessione al server di pubblicazione.  
+    -   (Facoltativo) Impostare il valore **0** per **\@publisher_security_mode** e specificare le informazioni sull'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nei parametri **\@publisher_login** e **\@publisher_password**, se è necessario usare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la connessione al server di pubblicazione.  
   
     -   Una pianificazione per il processo dell'agente di merge per la sottoscrizione. Per altre informazioni, vedere [Creazione di una sottoscrizione aggiornabile di una pubblicazione transazionale](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
-4.  Nel server di pubblicazione eseguire [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Specificare i parametri **@publication** , **@subscriber** , **@subscriber_db** e il valore **pull** per **@subscription_type** . In questo modo la sottoscrizione pull viene registrata.  
+4.  Nel server di pubblicazione eseguire [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Specificare **\@publication**, **\@subscriber**, **\@subscriber_db** e il valore **pull** per **\@subscription_type**. In questo modo la sottoscrizione pull viene registrata.  
   
 ###  <a name="TsqlExample"></a> Esempi (Transact-SQL)  
  Nell'esempio seguente viene creata una sottoscrizione pull di una pubblicazione transazionale. Il primo batch viene eseguito nel Sottoscrittore e il secondo batch viene eseguito nel server di pubblicazione. I valori per l'account di accesso e la relativa password vengono specificati in fase di esecuzione tramite variabili di scripting sqlcmd.  

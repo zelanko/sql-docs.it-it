@@ -1,7 +1,7 @@
 ---
 title: OLTP in memoria (ottimizzazione in memoria) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/24/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,27 +14,21 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4908caa8c45b4c4f4cd1cdbbc539fe4da3265677
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ab822203fa55e32a3b310f6c5a3ecfe3269d8ed
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050219"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715917"
 ---
-# <a name="in-memory-oltp-in-memory-optimization"></a>OLTP in memoria (ottimizzazione per la memoria)
+# <a name="in-memory-oltp-and-memory-optimization"></a>OLTP in memoria e ottimizzazione per la memoria
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] può migliorare significativamente le prestazioni di elaborazione delle transazioni, di inserimento e caricamento dei dati e di scenari di dati temporanei.  Per ottenere il codice di base e le informazioni necessarie per verificare rapidamente la tabella ottimizzata per la memoria e la stored procedure compilata in modo nativo, vedere
  -  [Avvio rapido 1: Tecnologie OLTP in memoria per migliorare le prestazioni di Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md).  
  
-Video di 17 minuti che descrive OLTP in memoria e i vantaggi per le prestazioni:
-
--  [In-Memory OLTP in SQL Server 2016](https://www.youtube.com/watch?v=l5l5eophmK4)(OLTP in memoria in SQL Server 2016)
-
-Per scaricare la demo sulle prestazioni per OLTP in memoria usata nel video: 
-
-- [In-Memory OLTP Performance Demo v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
+In YouTube è stato caricato un [**video di 17 minuti**](#anchorname-17minute-video) che descrive OLTP in memoria in SQL Server, illustrandone i vantaggi per le prestazioni.
 
 Per una panoramica più dettagliata di OLTP in memoria e un'analisi degli scenari che esaminano i vantaggi derivanti dalla tecnologia per le prestazioni:
 
@@ -70,10 +64,13 @@ Per una panoramica più dettagliata di OLTP in memoria e un'analisi degli scenar
 |[Supporto della disponibilità elevata per i database OLTP in memoria](../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)|Descrive i gruppi di disponibilità e il clustering di failover in [!INCLUDE[hek_2](../../includes/hek-2-md.md)].|  
 |[Supporto di SQL Server per OLTP in memoria](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)|Elenco della sintassi e delle funzionalità nuove e aggiornate per il supporto di tabelle ottimizzate per la memoria.|  
 |[Migrazione a OLTP in memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)|Viene illustrato come eseguire la migrazione di tabelle basate su disco in tabelle ottimizzate per la memoria.|  
-  
- Altre informazioni su [!INCLUDE[hek_2](../../includes/hek-2-md.md)] sono disponibili in:  
+| &nbsp; | &nbsp; |
 
-- [Video che descrive OLTP in memoria e i vantaggi per le prestazioni](https://www.youtube.com/watch?v=l5l5eophmK4).
+## <a name="links-to-other-websites"></a>Collegamenti ad altri siti Web
+
+Questa sezione include collegamenti ad altri siti Web che contengono informazioni su OLTP in memoria in SQL Server.
+
+- [**Video** che descrive OLTP in memoria e i vantaggi per le prestazioni](#anchorname-17minute-video)
 
 - [In-Memory OLTP Performance Demo v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 
@@ -86,7 +83,56 @@ Per una panoramica più dettagliata di OLTP in memoria e un'analisi degli scenar
 -   [OLTP in memoria: considerazioni sulla migrazione e sui modelli di carico di lavoro comuni](https://msdn.microsoft.com/library/dn673538.aspx)  
   
 -   [Blog di OLTP in memoria](https://go.microsoft.com/fwlink/?LinkId=311696)  
-  
+
+## <a name="anchorname-17minute-video"></a>Video di 17 minuti, indicizzato
+
+- _Titolo del video:_ **In-Memory OLTP in SQL Server 2016** (OLTP in memoria in SQL Server 2016)
+- _Data di pubblicazione:_ 10-03-2019
+- _Durata:_ 17:32
+- _Condotto da:_ Jos de Bruijn, Senior Program Manager per SQL Server
+
+### <a name="demo-can-be-downloaded"></a>È possibile scaricare una demo
+
+In corrispondenza del contrassegno temporale 08:09, il video esegue una dimostrazione due volte. È possibile scaricare la demo sulle prestazioni eseguibile usata nel video dal collegamento seguente:
+
+- [In-Memory OLTP Performance Demo v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
+
+I passaggi generali illustrati nel video sono i seguenti:
+
+1. Prima di tutto la demo viene eseguita con una tabella normale.
+2. Viene quindi visualizzata un'edizione ottimizzata per la memoria della tabella che viene creata e popolata con pochi clic in SQL Server Management Studio (SSMS.exe).
+3. La demo viene quindi rieseguita con la tabella ottimizzata per la memoria. Il miglioramento della velocità misurato è enorme.
+
+### <a name="index-to-each-section-in-the-video"></a>Indice per ogni sezione del video
+
+| Collegamento al contrassegno temporale | Titolo della sezione |
+| :------------- | :------------ |
+| A.&nbsp; [00:00](https://www.youtube.com/watch?v=l5l5eophmK4&t=0) | Inizio. |
+| <br/>B.&nbsp; [00:56](https://www.youtube.com/watch?v=l5l5eophmK4&t=56) | <br/>Motivi per cui i clienti devono prendere in considerazione OLTP in memoria. |
+| &nbsp; &nbsp; [01:03](https://www.youtube.com/watch?v=l5l5eophmK4&t=63) | L'hardware moderno richiede un'architettura moderna del sistema di database. |
+| &nbsp; &nbsp; [02:10](https://www.youtube.com/watch?v=l5l5eophmK4&t=130) | Esplosione nei dati generati; le operazioni devono essere immediate (bassa latenza). |
+| &nbsp; &nbsp; [03:19](https://www.youtube.com/watch?v=l5l5eophmK4&t=199) | Ridurre il TCO: fare di più con le risorse disponibili. |
+| <br/>C.&nbsp; [03:33](https://www.youtube.com/watch?v=l5l5eophmK4&t=213) | <br/>Che cos'è OLTP in memoria.<br/>Prestazioni ottimizzate grazie alla tecnologia ottimizzata per la memoria. |
+| &nbsp; &nbsp; [05:03](https://www.youtube.com/watch?v=l5l5eophmK4&t=303) | Elaborazione delle transazioni fino a 30 volte più veloce. |
+| &nbsp; &nbsp; [05:22](https://www.youtube.com/watch?v=l5l5eophmK4&t=322) | Completamente durevole: i dati sopravvivono agli errori del server. |
+| &nbsp; &nbsp; [06:15](https://www.youtube.com/watch?v=l5l5eophmK4&t=375) | Integrazione completa in SQL Server. Non occorre imparare nuovi linguaggi o strumenti. |
+| &nbsp; &nbsp; [07:22](https://www.youtube.com/watch?v=l5l5eophmK4&t=442) | Primo rilascio in SQL Server 2014, ma con notevoli miglioramenti nella versione 2016. |
+| &nbsp; &nbsp; [07:58](https://www.youtube.com/watch?v=l5l5eophmK4&t=558) | Disponibile anche nel database SQL di Azure (nel cloud). |
+| <br/>D.&nbsp; [08:09](https://www.youtube.com/watch?v=l5l5eophmK4&t=489) | <br/>Dimostrazione delle prestazioni.<br/> Eseguire la demo con una tabella normale. |
+| &nbsp; &nbsp; [09:11](https://www.youtube.com/watch?v=l5l5eophmK4&t=551) | Menu di scelta rapida di SSMS: **Report** &gt; **Analisi delle prestazioni per le transazioni** |
+| &nbsp; &nbsp; [10:38](https://www.youtube.com/watch?v=l5l5eophmK4&t=638) | Menu di scelta rapida di SSMS: **Ottimizzazione guidata per la memoria**<br/> &nbsp; &nbsp; Creare effettivamente una tabella ottimizzata per la memoria da una tabella normale e inoltre eseguire la migrazione dei dati. |
+| &nbsp; &nbsp; [11:28](https://www.youtube.com/watch?v=l5l5eophmK4&t=688) | Eseguire nuovamente la demo, notando un miglioramento della velocità di 45 volte. |
+| <br/>E.&nbsp; [12:17](https://www.youtube.com/watch?v=l5l5eophmK4&t=737) | <br/>OLTP in memoria più facile da usare in SQL Server 2016 (rispetto alla versione 2014). |
+| &nbsp; &nbsp; [12:43](https://www.youtube.com/watch?v=l5l5eophmK4&t=763) | Analisi semplificata per semplificare la migrazione delle app. |
+| &nbsp; &nbsp; [13:03](https://www.youtube.com/watch?v=l5l5eophmK4&t=783) | Minore complessità della migrazione delle app grazie a un maggiore supporto del linguaggio Transact-SQL, ad esempio con chiavi esterne e trigger. |
+| &nbsp; &nbsp; [13:56](https://www.youtube.com/watch?v=l5l5eophmK4&t=836) | Gestibilità migliorata.<br/> &nbsp; &nbsp; Ad esempio, modificare schema e indici, aggiornamento automatico delle statistiche. |
+| <br/>F.&nbsp; [14:46](https://www.youtube.com/watch?v=l5l5eophmK4&t=886) | <br/>Maggiore scalabilità. |
+| &nbsp; &nbsp; [15:12](https://www.youtube.com/watch?v=l5l5eophmK4&t=912) | Tabelle ottimizzate per la memoria di grandi dimensioni (fino a 2 TB per database). |
+| &nbsp; &nbsp; [15:34](https://www.youtube.com/watch?v=l5l5eophmK4&t=934) | Scalabilità ancora migliore. |
+| &nbsp; &nbsp; [16:41](https://www.youtube.com/watch?v=l5l5eophmK4&t=1001) | Fare di più con le risorse già disponibili. |
+| <br/>G.&nbsp; [16:53](https://www.youtube.com/watch?v=l5l5eophmK4&t=1013) | <br/>Commenti finali. (Termina alle 17:32.) |
+| &nbsp; | &nbsp; |
+
 ## <a name="see-also"></a>Vedere anche  
  [Caratteristiche del database](../../relational-databases/database-features.md)  
   

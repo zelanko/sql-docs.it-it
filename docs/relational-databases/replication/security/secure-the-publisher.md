@@ -17,23 +17,22 @@ helpviewer_keywords:
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3784135455a29d3d1662793d743d9d788e64b5f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: d2d1746a9ace097c8d915bb1cb5425170883250d
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095641"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769644"
 ---
 # <a name="secure-the-publisher"></a>Sicurezza del server di pubblicazione
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Gli agenti di replica seguenti si connettono al server di pubblicazione:  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   
--   Agente di lettura log  
+Gli agenti di replica seguenti si connettono al server di pubblicazione:  
   
--   agente snapshot  
-  
+-   Agenti di lettura log
+-   agente snapshot
 -   Agente di lettura coda  
-  
 -   Agente di merge  
   
  È importante specificare un account di accesso appropriato per questi agenti, attenendosi al principio di concedere i diritti minimi necessari e proteggere l'archiviazione di tutte le password. Per informazioni sulle autorizzazioni necessarie per ogni agente, vedere [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  

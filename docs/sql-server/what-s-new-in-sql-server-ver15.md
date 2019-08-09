@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d988fc9dfc126bef79d94ca0867128085069456e
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: caf8b23b823d7863e1bd7c8abd01ef43b0b8ec20
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495444"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702891"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novità di [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -125,7 +125,10 @@ L'[archivio degli annunci per [!INCLUDE[sql-server-2019](../includes/sssqlv15-md
 
 ### <a name="polybase"></a>PolyBase
 
-| Nuova funzionalità o aggiornamento | Dettagli | PolyBase | I nomi delle colonne della tabella esterna vengono ora usati per eseguire query in origini dati SQL Server, Oracle, Teradata, MongoDB e ODBC. | | &nbsp; | &nbsp; |
+|Nuova funzionalità o aggiornamento | Dettagli |
+|:---|:---|
+|PolyBase |I nomi delle colonne della tabella esterna vengono ora usati per eseguire query su origini dati SQL Server, Oracle, Teradata, MongoDB e ODBC. |
+| &nbsp; | &nbsp; |
 
 ### <a name="collation"></a>Regole di confronto
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a13421707f332ee992d07daa4e9bd337996a7dad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136394"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68693194"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Come contribuire alla documentazione di SQL Server
 
@@ -32,14 +32,24 @@ Tutti i contenuti pubblici vengono convalidati dal team responsabile dei contenu
 
 ## <a id="githubui"></a> Apportare modifiche nel browser
 
-È possibile apportare semplici modifiche al contenuto SQL Server nel browser e quindi inviarle a Microsoft. L'intera procedura è documentata nell'articolo [Panoramica della Guida per i collaboratori di Microsoft Docs](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). Il video seguente illustra la procedura completa per l'invio delle modifiche nel browser:
+È possibile apportare semplici modifiche al contenuto SQL Server nel browser e quindi inviarle a Microsoft. Per altre informazioni, vedere la [panoramica della guida per i collaboratori di Microsoft Docs](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). 
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE23pxh]
+La procedura seguente sintetizza il processo: 
 
-> [!TIP]
-> Si noti che la posizione del pulsante **Modifica** è leggermente diversa rispetto a quanto indicato nel video, ma la procedura è la stessa.
->
-> ![Pulsante di modifica](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
+1. Nella pagina per cui si vogliono inviare commenti e suggerimenti selezionare il collegamento **Modifica** in alto a destra.
+1. Nella pagina successiva selezionare l'icona **Matita** in alto a destra.
+1. Nella finestra **Edit file text** (Modifica testo file) nella pagina successiva apportare le modifiche direttamente al testo che si vuole modificare.
+    Se è necessaria assistenza per la formattazione del testo nuovo o modificato, vedere [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) (Scheda di riferimento rapido per il markdown).
+1. Dopo aver apportato le modifiche, in **Commit changes** (Conferma modifiche):
+    1. Nella prima casella di testo immettere una breve descrizione della modifica apportata.
+    1. Nella casella **Add an optional extended description** (Aggiungi descrizione estesa facoltativa) immettere una breve descrizione della modifica.
+1. Selezionare **Propose file change** (Proponi modifica file).
+1. Nella pagina **Comparing changes** (Confronto modifiche) selezionare **Create pull request** (Crea richiesta pull). 
+1. Nella pagina **Open a pull request** (Apri richiesta pull) selezionare **Create pull request** (Crea richiesta pull). 
+
+Il video seguente illustra la procedura completa per l'invio delle modifiche nel browser:
+
+![Modificare la documentazione SQL](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
 ## <a id="tools"></a> Apportare modifiche a livello locale con gli strumenti
 

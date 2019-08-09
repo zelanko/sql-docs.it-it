@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc85c55e86ee026a59c20539eb5c761d0cf66fd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 7793c64a6c7d5dc404c24f502a45067d2e95fcca
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129834"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769458"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>Finestra di dialogo Proprietà sottoscrizione di replica di SQL Server 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 ### <a name="publisher-properties"></a>Proprietà server di pubblicazione
 La finestra di dialogo **Proprietà sottoscrizione** nel server di pubblicazione consente di visualizzare e impostare proprietà per le sottoscrizioni push. Sebbene sia possibile visualizzare alcune proprietà per le sottoscrizioni pull, nella finestra di dialogo **Proprietà sottoscrizione** nel Sottoscrizione sono incluse proprietà aggiuntive ed è possibile modificarle.  
@@ -46,7 +46,8 @@ La finestra di dialogo **Proprietà sottoscrizione** nel Sottoscrittore consente
  Se un'opzione è visualizzata in modalità di sola lettura, può essere impostata solo al momento della creazione della sottoscrizione. Se si desidera impostare opzioni non disponibili nella Creazione guidata nuova sottoscrizione, creare la sottoscrizione tramite stored procedure. Per ulteriori informazioni, vedere [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md) e [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
   
 > [!NOTE]  
->  Se non è stato ancora creato un processo dell'agente di merge o di distribuzione per la sottoscrizione, numerose proprietà non verranno visualizzate. Per creare un processo dell'agente per una sottoscrizione pull, eseguire [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) in caso di una sottoscrizione a una pubblicazione transazionale o snapshot o [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) in caso di una sottoscrizione a una pubblicazione di tipo merge.  
+>  - Se non è stato ancora creato un processo dell'agente di merge o di distribuzione per la sottoscrizione, numerose proprietà non verranno visualizzate. Per creare un processo dell'agente per una sottoscrizione pull, eseguire [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) in caso di una sottoscrizione a una pubblicazione transazionale o snapshot o [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) in caso di una sottoscrizione a una pubblicazione di tipo merge.  
+> - Un'istanza gestita di database SQL di Azure può essere un server di pubblicazione, un server di distribuzione e un Sottoscrittore per la replica snapshot e transazionale. I database singoli e in pool del database SQL di Azure possono essere solo sottoscrittori push per la replica snapshot e transazionale. Per altre informazioni, vedere [Replica transazionale con il database SQL di Azure](/azure/sql-database/sql-database-managed-instance-transactional-replication). 
   
 ## <a name="publisher-options-for-all-subscriptions"></a>Opzioni del server di pubblicazione per tutte le sottoscrizioni  
  **Security**  

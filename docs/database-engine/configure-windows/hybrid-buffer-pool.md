@@ -10,21 +10,22 @@ ms.topic: conceptual
 ms.assetid: ''
 author: DBArgenis
 ms.author: argenisf
-ms.openlocfilehash: 471708dc2e6b6feb3f91bd831ff63fce1177c8d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e4808c0895695eba562c25ea0ee412348dc148f5
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998061"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68697561"
 ---
 # <a name="hybrid-buffer-pool"></a>Pool di buffer ibrido
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Il pool di buffer ibrido consente al motore di database di accedere direttamente alle pagine di dati nei file di database archiviati nei dispositivi con memoria persistente. Questa funzionalità è stata introdotta in [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)].
 
-In un sistema tradizionale senza memoria persistente SQL Server memorizza nella cache le pagine di dati del pool di buffer basato su DRAM. Con il pool di buffer ibrido, SQL Server non esegue una copia della pagina nella parte basata su DRAM del pool di buffer e accede invece direttamente alla pagina nel file di database nel dispositivo PMEM. L'accesso ai file di dati nei dispositivi con memoria persistente per pool di buffer ibrido viene eseguito usando I/O mappato alla memoria (MMIO), noto anche come *riconoscimento* dei file di dati in SQL Server.
+In un sistema tradizionale senza memoria persistente SQL Server memorizza nella cache le pagine di dati del pool di buffer. Con il pool di buffer ibrido, SQL Server non esegue una copia della pagina nella parte di memoria basata su DRAM del pool di buffer, ma accede alla pagina direttamente nel file di database che si trova nel dispositivo con memoria persistente. L'accesso in lettura ai file di dati nei dispositivi PMEM per il pool di buffer ibrido viene eseguito direttamente seguendo un puntatore alle pagine di dati nel dispositivo PMEM.  
 
-In un dispositivo con memoria persistente è possibile accedere direttamente solo alle pagine clean. Quando una pagina è contrassegnata come dirty, viene prima copiata nel pool di buffer basato su DRAM e poi riscritta nel dispositivo con memoria persistente e contrassegnata nuovamente come clean. Questo processo avviene durante le operazioni di checkpoint regolari.
+In un dispositivo con memoria persistente è possibile accedere direttamente solo alle pagine clean. Quando una pagina è contrassegnata come dirty, viene prima copiata nel pool di buffer DRAM e poi riscritta nel dispositivo con memoria persistente e contrassegnata nuovamente come clean. Ciò si verifica durante le normali operazioni di checkpoint. Il meccanismo per copiare il file dal dispositivo PMEM alla DRAM è l'I/O mappato alla memoria (MMIO, Memory-Mapped I/O) diretto ed è noto anche come *riconoscimento* dei file di dati all'interno di SQL Server.
+
 
 La funzionalità di pool di buffer ibrido è disponibile sia per Windows che per Linux. Il dispositivo con memoria persistente deve essere formattato con un file system che supporti DAX (DirectAccess). I file system XFS, EXT4 e NTFS supportano tutti DAX. SQL Server rileverà automaticamente se i file di dati si trovano in un dispositivo PMEM formattato in modo appropriato ed eseguirà il mapping di memoria nello spazio utente. Questo mapping si verifica all'avvio, quando un nuovo database viene collegato, ripristinato, creato o quando la funzionalità di pool di buffer ibrido viene abilitata per un database.
 

@@ -20,16 +20,18 @@ helpviewer_keywords:
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 84050cd000ae53b8b913a9652a4ddb323743c8da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bd0cafe74b558dc86f6709b23e2f1195ecada520
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046580"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768471"
 ---
 # <a name="replication-agent-security-model"></a>Modello di sicurezza dell'agente di replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Il modello di sicurezza degli agenti di replica garantisce un controllo dettagliato sugli account usati per eseguire gli agenti e stabilire connessioni: Per ogni agente, è possibile specificare un account diverso. Per altre informazioni su come specificare gli account, vedere [Controllo di identità e accesso (replica)](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
+
+Il modello di sicurezza dell'agente di replica è leggermente diverso per le istanze gestite del database SQL di Azure, in quanto non sono previsti account di Windows con cui verranno eseguiti gli agenti. Al contrario, è necessario eseguire tutte le operazioni tramite l'autenticazione di SQL Server. 
   
 > [!IMPORTANT]  
 >  Quando un membro del ruolo predefinito del server **sysadmin** configura la replica, è possibile configurare gli agenti di replica in modo che rappresentino l'account di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent. A tale scopo è necessario non specificare un account di accesso e una password per un agente di replica. Si tratta comunque di un approccio non consigliato. Ai fini della sicurezza, è consigliabile invece specificare un account per ogni agente dotato delle autorizzazioni minime descritte nella sezione "Autorizzazioni richieste per gli agenti" più avanti in questo argomento.  

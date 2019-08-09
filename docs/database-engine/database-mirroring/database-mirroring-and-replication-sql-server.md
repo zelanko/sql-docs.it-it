@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9296bd28852eda3abd29e8a54984ec37f726c8b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e957d0ae199375ffe13a756cc1a8b0872aa962e3
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006454"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661439"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Mirroring e replica del database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,9 +72,9 @@ ms.locfileid: "68006454"
   
 3.  Configurare la distribuzione per il server mirror. Assegnare al database mirror lo stesso nome del server di pubblicazione e specificare lo stesso server di distribuzione e la stessa cartella snapshot utilizzati dal database principale. Se ad esempio si configura la replica con stored procedure, eseguire [sp_adddistpublisher](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) nel server di distribuzione e quindi [sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) nel mirror. Per **sp_adddistpublisher**:  
   
-    -   Impostare il valore del parametro **@publisher** sul nome di rete del server mirror.  
+    -   Impostare il valore del parametro **\@publisher** sul nome di rete del server mirror.  
   
-    -   Impostare il valore del parametro **@working_directory** sulla cartella snapshot usata dal server principale.  
+    -   Impostare il valore del parametro **\@working_directory** sulla cartella snapshot usata dal server principale.  
   
 4.  Specificare il nome del database mirror per il parametro dell'agente **-PublisherFailoverPartner**. Questo parametro è necessario per l'identificazione del database mirror dopo il failover da parte degli agenti seguenti:  
   
@@ -134,12 +134,12 @@ ms.locfileid: "68006454"
   
 -   Se si amministra la replica sul database mirror mediante stored procedure o oggetti RMO (Replication Management Objects), per i casi in cui si specifica il nome del server di pubblicazione indicare il nome dell'istanza in cui il database è stato abilitato per la replica. Per determinare il nome appropriato, usare la funzione [publishingnomeserver](../../t-sql/functions/replication-functions-publishingservername.md).  
   
-     Quando si esegue il mirroring di un database di pubblicazione, i metadati della replica archiviati nel database con mirroring sono identici a quelli archiviati nel database principale. Ne consegue che, per i database di pubblicazione abilitati per la replica nel database principale, il nome dell'istanza del server di pubblicazione archiviato in tabelle di sistema nel database mirror equivale al nome del database principale e non a quello del database mirror. Ciò influisce sulla manutenzione e sulla configurazione della replica se viene eseguito il failover del database di pubblicazione sul server mirror. Se, ad esempio, si sta configurando la replica con stored procedure sul database mirror dopo un failover e si vuole aggiungere una sottoscrizione pull a un database di pubblicazione abilitato sul database principale, è necessario specificare il nome del server principale invece del nome del server mirror per il parametro **@publisher** di **sp_addpullsubscription** o **sp_addmergepullsubscription**.  
+     Quando si esegue il mirroring di un database di pubblicazione, i metadati della replica archiviati nel database con mirroring sono identici a quelli archiviati nel database principale. Ne consegue che, per i database di pubblicazione abilitati per la replica nel database principale, il nome dell'istanza del server di pubblicazione archiviato in tabelle di sistema nel database mirror equivale al nome del database principale e non a quello del database mirror. Ciò influisce sulla manutenzione e sulla configurazione della replica se viene eseguito il failover del database di pubblicazione sul server mirror. Ad esempio, se si configura la replica con stored procedure sul database mirror dopo un failover e si vuole aggiungere una sottoscrizione pull a un database di pubblicazione abilitato nel server principale, è necessario specificare il nome del server principale invece del nome del server mirror per il parametro **\@publisher** di **sp_addpullsubscription** o **sp_addmergepullsubscription**.  
   
-     Se si abilita un database di pubblicazione sul server mirror dopo che è stato eseguito il failover sul server mirror, il nome dell'istanza del server di pubblicazione archiviato in tabelle di sistema equivale al nome del server mirror. In questo caso, per il parametro **@publisher** è necessario usare il nome del database mirror.  
+     Se si abilita un database di pubblicazione nel server mirror dopo che è stato eseguito il failover sul server mirror, il nome dell'istanza del server di pubblicazione archiviato nelle tabelle di sistema equivale al nome del server mirror. In questo caso, per il parametro **\@publisher** è necessario usare il nome del server mirror.  
   
     > [!NOTE]  
-    >  In alcuni casi, ad esempio se si usa **sp_addpublication**, il parametro **@publisher** è supportato solo per server di pubblicazione non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Non è quindi rilevante per il mirroring del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+    >  In alcuni casi, ad esempio se si usa **sp_addpublication**, il parametro **\@publisher** è supportato solo per server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non è quindi rilevante per il mirroring del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Per sincronizzare una sottoscrizione in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dopo un failover, sincronizzare le sottoscrizioni pull dal Sottoscrittore e le sottoscrizioni push dal server di pubblicazione attivo.  
   

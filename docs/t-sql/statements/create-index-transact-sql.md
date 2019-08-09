@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7808af6be2759b618ec0c57fb9ebb6e97f3b3a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae776b53016995fdcfd0ccfdb0c242b19f88addc
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048169"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661459"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -702,7 +702,7 @@ In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sono state intr
 - Non è possibile specificare opzioni utilizzando in una stessa istruzione sia la sintassi compatibile con le versioni precedenti, sia la nuova sintassi. Se ad esempio si specifica WITH (**DROP_EXISTING, ONLINE = ON**), l'istruzione avrà esito negativo.
 - Quando si crea un indice XML le opzioni devono essere specificate usando WITH ( **_option_name_= ON | OFF**).
 
-## <a name="dropexisting-clause"></a>Clausola DROP_EXISTING
+## <a name="drop_existing-clause"></a>Clausola DROP_EXISTING
 È possibile utilizzare la clausola DROP_EXISTING per ricompilare l'indice, aggiungere o eliminare colonne, modificare opzioni, modificare il tipo di ordinamento delle colonne oppure cambiare lo schema di partizione o il filegroup.
 
 Se l'indice applica un vincolo PRIMARY KEY o UNIQUE e la definizione dell'indice non viene modificata in alcun modo, l'indice verrà eliminato e ricreato mantenendo il vincolo esistente. Se invece la definizione dell'indice viene modificata, l'istruzione avrà esito negativo. Per modificare la definizione di un vincolo PRIMARY KEY o UNIQUE, eliminare il vincolo e aggiungere un vincolo con la nuova definizione.
@@ -829,7 +829,7 @@ CREATE NONCLUSTERED INDEX IX_SalesPerson_SalesQuota_SalesYTD ON Sales.SalesPerso
 ```
 
 ### <a name="c-create-an-index-on-a-table-in-another-database"></a>C. Creare un indice per una tabella in un altro database
-Nell'esempio seguente viene creato un indice non cluster per la colonna `VendorID` della tabella `ProductVendor` nel database `Purchasing`.
+Nell'esempio seguente viene creato un indice cluster per la colonna `VendorID` della tabella `ProductVendor` nel database `Purchasing`.
 
 ```sql
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID ON Purchasing..ProductVendor (VendorID);
@@ -873,7 +873,7 @@ Server: Msg 2601, Level 14, State 1, Line 1
 Cannot insert duplicate key row in object 'UnitMeasure' with unique index 'AK_UnitMeasure_Name'. The statement has been terminated.
 ```
 
-### <a name="f-use-the-ignoredupkey-option"></a>F. Uso dell'opzione IGNORE_DUP_KEY
+### <a name="f-use-the-ignore_dup_key-option"></a>F. Uso dell'opzione IGNORE_DUP_KEY
 Nell'esempio seguente viene illustrato l'effetto dell'opzione `IGNORE_DUP_KEY` tramite l'inserimento di più righe in una tabella temporanea prima con questa opzione impostata su `ON` e quindi con questa opzione impostata su `OFF`. Nella tabella `#Test` viene inserita una singola riga che genererà intenzionalmente un valore duplicato quando verrà eseguita la seconda istruzione `INSERT` su più righe. Il calcolo delle righe della tabella restituisce il numero di righe inserite.
 
 ```sql
@@ -934,7 +934,7 @@ Number of rows
 
 Si noti che nella tabella non è stata inserita alcuna riga della tabella `Production.UnitMeasure`, sebbene la violazione del vincolo dell'indice `UNIQUE` fosse determinata da una sola riga.
 
-### <a name="g-using-dropexisting-to-drop-and-re-create-an-index"></a>G. Utilizzo di DROP_EXISTING per l'eliminazione e la ricreazione di un indice
+### <a name="g-using-drop_existing-to-drop-and-re-create-an-index"></a>G. Utilizzo di DROP_EXISTING per l'eliminazione e la ricreazione di un indice
 Nell'esempio seguente viene eliminato e ricreato un indice esistente nella colonna `ProductID` della tabella `Production.WorkOrder` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] utilizzando l'opzione `DROP_EXISTING`. Vengono inoltre impostate le opzioni `FILLFACTOR` e `PAD_INDEX` .
 
 ```sql

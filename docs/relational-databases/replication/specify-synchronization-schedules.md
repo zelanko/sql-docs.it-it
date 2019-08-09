@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 970e982ccc5e2d7f7af7643f08e90b2dc791f7e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 43b5d4f59ae68f52968fc4aaa10a400e0d8f8ff3
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907578"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769543"
 ---
 # <a name="specify-synchronization-schedules"></a>Impostazione di pianificazioni della sincronizzazione
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   In questo argomento viene descritto come specificare le pianificazioni di sincronizzazione in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o RMO (Replication Management Objects). Quando si crea una sottoscrizione, è possibile definire una pianificazione della sincronizzazione per controllare l'esecuzione dell'agente di replica per la sottoscrizione. Se non si specificano parametri di pianificazione, per la sottoscrizione verrà utilizzata la pianificazione predefinita.  
   
  Le sottoscrizioni vengono sincronizzate dall'agente di distribuzione, per la replica snapshot e transazionale, o dall'agente di merge, per la replica di tipo merge. Gli agenti possono essere in esecuzione continuamente, essere in esecuzione su richiesta o essere in esecuzione su una pianificazione.  
@@ -146,49 +147,49 @@ ms.locfileid: "67907578"
   
  Una pianificazione è definita dai parametri di programmazione seguenti, i cui comportamenti vengono ereditati da [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md):  
   
--   **@frequency_type** : tipo di frequenza utilizzata per la pianificazione dell'agente.  
+-   **\@frequency_type**: tipo di frequenza usata per la pianificazione dell'agente.  
   
--   **@frequency_interval** : giorno della settimana in cui viene eseguito un agente.  
+-   **\@frequency_interval**: giorno della settimana in cui viene eseguito un agente.  
   
--   **@frequency_relative_interval** : settimana di un determinato mese in cui è pianificata l'esecuzione mensile dell'agente.  
+-   **\@frequency_relative_interval**: settimana di un determinato mese in cui è pianificata l'esecuzione mensile dell'agente.  
   
--   **@frequency_recurrence_factor** : numero di unità relative al tipo di frequenza tra sincronizzazioni.  
+-   **\@frequency_recurrence_factor**: numero di unità relative al tipo di frequenza tra una sincronizzazione e l'altra.  
   
--   **@frequency_subday** : unità della frequenza quando l'agente viene eseguito più di una volta al giorno.  
+-   **\@frequency_subday**: unità della frequenza quando l'agente viene eseguito più di una volta al giorno.  
   
--   **@frequency_subday_interval** : numero di unità della frequenza tra un'esecuzione e l'altra quando l'agente viene eseguito più di una volta al giorno.  
+-   **\@frequency_subday_interval**: numero di unità della frequenza tra un'esecuzione e l'altra quando l'agente viene eseguito più di una volta al giorno.  
   
--   **@active_start_time_of_day** : ora di un determinato giorno in cui un agente viene avviato per la prima volta.  
+-   **\@active_start_time_of_day**: ora di un determinato giorno in cui un agente viene avviato per la prima volta.  
   
--   **@active_end_time_of_day** : ora di un determinato giorno in cui un agente viene avviato per l'ultima volta.  
+-   **\@active_end_time_of_day**: ora di un determinato giorno in cui un agente viene avviato per l'ultima volta.  
   
--   **@active_start_date** : primo giorno di applicazione della pianificazione dell'agente.  
+-   **\@active_start_date**: primo giorno di applicazione della pianificazione dell'agente.  
   
--   **@active_end_date** : ultimo giorno di applicazione della pianificazione dell'agente.  
+-   **\@active_end_date**: ultimo giorno di applicazione della pianificazione dell'agente.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-transactional-publication"></a>Per definire la pianificazione della sincronizzazione per una sottoscrizione pull di una pubblicazione transazionale  
   
 1.  Creare una nuova sottoscrizione pull di una pubblicazione transazionale. Per altre informazioni, vedere [Creazione di una sottoscrizione pull](../../relational-databases/replication/create-a-pull-subscription.md).  
   
-2.  Nel Sottoscrittore eseguire [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specificare **@publisher** , **@publisher_db** , **@publication** e le credenziali di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows utilizzate per eseguire l'agente di distribuzione nel Sottoscrittore per **@job_name** e **@password** . Specificare i parametri di sincronizzazione, descritti in dettaglio in precedenza, con cui definire la pianificazione per il processo dell'agente di distribuzione che sincronizza la sottoscrizione.  
+2.  Nel Sottoscrittore eseguire [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specificare **\@publisher**, **\@publisher_db**, **\@publication** e le credenziali di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows usate per eseguire l'agente di distribuzione nel Sottoscrittore per **\@job_name** e **\@password**. Specificare i parametri di sincronizzazione, descritti in dettaglio in precedenza, con cui definire la pianificazione per il processo dell'agente di distribuzione che sincronizza la sottoscrizione.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-transactional-publication"></a>Per definire la pianificazione della sincronizzazione per una sottoscrizione push di una pubblicazione transazionale  
   
 1.  Creare una nuova sottoscrizione push di una pubblicazione transazionale. Per altre informazioni, vedere [Creazione di una sottoscrizione push](../../relational-databases/replication/create-a-push-subscription.md).  
   
-2.  Nel Sottoscrittore eseguire [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Specificare **@subscriber** , **@subscriber_db** , **@publication** e le credenziali di Windows utilizzate per eseguire l'agente di distribuzione nel Sottoscrittore per **@job_name** e **@password** . Specificare i parametri di sincronizzazione, descritti in dettaglio in precedenza, con cui definire la pianificazione per il processo dell'agente di distribuzione che sincronizza la sottoscrizione.  
+2.  Nel Sottoscrittore eseguire [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Specificare **\@subscriber**, **\@subscriber_db**, **\@publication** e le credenziali di Windows usate per eseguire l'agente di distribuzione nel Sottoscrittore per **\@job_name** e **\@password**. Specificare i parametri di sincronizzazione, descritti in dettaglio in precedenza, con cui definire la pianificazione per il processo dell'agente di distribuzione che sincronizza la sottoscrizione.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-merge-publication"></a>Per definire la pianificazione della sincronizzazione per una sottoscrizione pull di una pubblicazione di tipo merge  
   
 1.  Creare una nuova sottoscrizione pull di una pubblicazione di tipo merge. Per altre informazioni, vedere [Creazione di una sottoscrizione pull](../../relational-databases/replication/create-a-pull-subscription.md).  
   
-2.  Nel Sottoscrittore eseguire [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specificare **@publisher** , **@publisher_db** , **@publication** e le credenziali di Windows utilizzate per eseguire l'agente di merge nel Sottoscrittore per **@job_name** e **@password** . Specificare i parametri di sincronizzazione, descritti in dettaglio in precedenza, con cui definire la pianificazione per il processo dell'agente di merge che sincronizza la sottoscrizione.  
+2.  Nel Sottoscrittore eseguire [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Specificare **\@publisher**, **\@publisher_db**, **\@publication** e le credenziali di Windows usate per eseguire l'agente di merge nel Sottoscrittore per **\@job_name** e **\@password**. Specificare i parametri di sincronizzazione, descritti in dettaglio in precedenza, con cui definire la pianificazione per il processo dell'agente di merge che sincronizza la sottoscrizione.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-merge-publication"></a>Per definire la pianificazione della sincronizzazione per una sottoscrizione push di una pubblicazione di tipo merge  
   
 1.  Creare una nuova sottoscrizione push di una pubblicazione di tipo merge. Per altre informazioni, vedere [Creazione di una sottoscrizione push](../../relational-databases/replication/create-a-push-subscription.md).  
   
-2.  Nel Sottoscrittore eseguire [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Specificare **@subscriber** , **@subscriber_db** , **@publication** e le credenziali di Windows utilizzate per eseguire l'agente di merge nel Sottoscrittore per **@job_name** e **@password** . Specificare i parametri di sincronizzazione, descritti in dettaglio in precedenza, con cui definire la pianificazione per il processo dell'agente di merge che sincronizza la sottoscrizione.  
+2.  Nel Sottoscrittore eseguire [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Specificare **\@subscriber**, **\@subscriber_db**, **\@publication** e le credenziali di Windows usate per eseguire l'agente di merge nel Sottoscrittore per **\@job_name** e **\@password**. Specificare i parametri di sincronizzazione, descritti in dettaglio in precedenza, con cui definire la pianificazione per il processo dell'agente di merge che sincronizza la sottoscrizione.  
   
 ##  <a name="RMOProcedure"></a> Utilizzo di RMO (Replication Management Objects)  
  La replica utilizza SQL Server Agent per pianificare i processi per attività che vengono svolte periodicamente, ad esempio la generazione di snapshot e la sincronizzazione delle sottoscrizioni. È possibile utilizzare gli oggetti RMO (Replication Management Objects) a livello di programmazione per specificare le pianificazioni per i processi dell'agente di replica.  

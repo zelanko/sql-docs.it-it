@@ -10,15 +10,16 @@ ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: df3f1e188593e3e193faed98b7932a3dffa1adde
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b6ead290451c17499825f051158020b2b88b37b9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005360"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769664"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replica in sottoscrittori di tabelle con ottimizzazione per la memoria
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Le tabelle con funzione di snapshot e sottoscrittori di replica transazionale, esclusa la replica transazionale peer-to-peer, possono essere configurate come tabelle ottimizzate per la memoria. Le altre configurazioni di replica non sono compatibili con le tabelle ottimizzate per la memoria. Questa funzionalità è disponibile a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
@@ -26,7 +27,7 @@ ms.locfileid: "68005360"
   
 -   **Configurare il database sottoscrittore per supportare la replica per le tabelle ottimizzate per la memoria**  
   
-     Impostare la proprietà **@memory_optimized** su **true** con [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) o [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md).  
+     Impostare la proprietà **\@memory_optimized** su **true** con [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) o [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md).  
   
 -   **Configurare l'articolo in modo da supportare la replica per le tabelle ottimizzate per la memoria**  
   
@@ -38,7 +39,7 @@ ms.locfileid: "68005360"
   
 2.  Aggiungere articoli alla pubblicazione. Per altre informazioni, vedere [definire un articolo](../../relational-databases/replication/publish/define-an-article.md).  
   
-     Se si esegue la configurazione usando [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** della stored procedure **sp_addarticle** su   
+     Se si esegue la configurazione con [!INCLUDE[tsql](../../includes/tsql-md.md)] impostare il parametro **\@schema_option** della stored procedure **sp_addarticle** su   
     **0x40000000000**.  
   
 3.  Nella finestra Proprietà articolo impostare **Abilita ottimizzazione per la memoria** su **true**.  
@@ -55,16 +56,16 @@ ms.locfileid: "68005360"
   
 1.  Passare alle proprietà della sottoscrizione in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e impostare **Sottoscrizione con ottimizzazione** per la memoria su **true**. Le modifiche non vengono applicate prima della reinizializzazione della sottoscrizione.  
   
-     Se si esegue la configurazione usando [!INCLUDE[tsql](../../includes/tsql-md.md)] impostare il nuovo parametro **@memory_optimized** della stored procedure **sp_addsubscription** su true.  
+     Se si esegue la configurazione con [!INCLUDE[tsql](../../includes/tsql-md.md)] impostare il nuovo parametro **\@memory_optimized** della stored procedure **sp_addsubscription** su true.  
   
 2.  Passare alle proprietà articolo per una pubblicazione in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e impostare **Abilita ottimizzazione per la memoria** su true.  
   
-     Se si esegue la configurazione usando [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** della stored procedure **sp_addarticle** su   
+     Se si esegue la configurazione con [!INCLUDE[tsql](../../includes/tsql-md.md)] impostare il parametro **\@schema_option** della stored procedure **sp_addarticle** su   
     **0x40000000000**.  
   
 3.  Le tabelle con ottimizzazione per la memoria non supportano gli indici cluster. Per far sì che la replica possa gestirlo convertendolo in un indice non cluster nella destinazione, impostare **Converti indice cluster in indice non cluster per un articolo con ottimizzazione per la memoria** su true.  
   
-     Se si esegue la configurazione usando [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** della stored procedure **sp_addarticle** su  **0x0000080000000000**.  
+     Se si esegue la configurazione con [!INCLUDE[tsql](../../includes/tsql-md.md)] impostare il parametro **\@schema_option** della stored procedure **sp_addarticle** su **0x0000080000000000**.  
   
 4.  Rigenerare lo snapshot.  
   

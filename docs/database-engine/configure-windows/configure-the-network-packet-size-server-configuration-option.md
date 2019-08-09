@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: eb0cde5c787e721e99bfa41caa37c7b793141385
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: be854d2002692611289d401b4ad98cb63cf4a27b
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68012494"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731105"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>Configurare l'opzione di configurazione del server network packet size
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,6 +54,9 @@ ms.locfileid: "68012494"
   
 -   Il valore massimo consentito per network packet size per le connessioni crittografate è di 16.383 byte.  
   
+> [!NOTE]  
+> Se MARS è abilitato, il provider SMUX aggiungerà un'intestazione a 16 byte al pacchetto prima della crittografia SSL, riducendo la dimensione massima del pacchetto di rete a 16368 byte.
+   
 ###  <a name="Recommendations"></a> Indicazioni  
   
 -   Questa opzione è avanzata e la relativa modifica è riservata ad amministratori di database esperti o a professionisti dotati di certificazione per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

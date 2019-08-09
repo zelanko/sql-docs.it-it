@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1900d3d447dd7974fb9afbbd83f17ca375bfbe81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 212782574ffa5cc603a8b7c28a9ced3d34d89a50
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895436"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742938"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Esercitazione: Preparare SQL Server per la replica: server di pubblicazione, server di distribuzione, sottoscrittore
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -212,7 +212,7 @@ Se l'istanza di SQL Server Management Studio è in esecuzione con diritti ammini
 >[!NOTE]
 > Se SQL Server Agent non sembra avviarsi, fare clic con il pulsante destro del mouse su SQL Server Agent in SSMS e quindi scegliere **Aggiorna**. Se è ancora arrestato, avviarlo manualmente da Gestione configurazione SQL Server.    
   
-### <a name="set-database-permissions-at-the-publisher"></a>Impostare le autorizzazioni per il database nel server di pubblicazione  
+## <a name="set-database-permissions"></a>Impostare le autorizzazioni per il database  
   
 1. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] espandere la cartella **Sicurezza**, fare clic con il pulsante destro del mouse su **Account di accesso** e quindi scegliere **Nuovo account accesso**:  
 
@@ -233,6 +233,8 @@ Se l'istanza di SQL Server Management Studio è in esecuzione con diritti ammini
 5. Ripetere i passaggi 1-4 per creare un account di accesso per gli altri account locali (repl_distribution, repl_logreader e repl_merge). È necessario eseguire il mapping di questi account anche agli utenti membri del ruolo predefinito del database **db_owner** nel database di **distribuzione** e nel database **AdventureWorks**.  
 
    ![Visualizzazione di tutti i quattro account in Esplora oggetti](media/tutorial-preparing-the-server-for-replication/usersinssms.png)
+   
+ 6. Ripetere i passaggi 1-4 nel Sottoscrittore per l'agente di distribuzione e l'agente di merge, impostando il nome del computer su quello del Sottoscrittore. 
   
   
 Per altre informazioni, vedere:

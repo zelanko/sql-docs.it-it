@@ -16,14 +16,14 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3af59410ed151e54a5cc7ea7a546f8979a318693
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d7ef8b52e3ee31e688e51454a72c0f359bcb68b
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906870"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68632131"
 ---
-# <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
+# <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 Concatena i valori delle espressioni della stringa e inserisce i valori dei separatori tra di essi. Il separatore non viene aggiunto alla fine della stringa.
@@ -95,6 +95,7 @@ FROM Person.Person;
 |Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
 
 I valori `NULL` presenti nelle celle `name` non vengono restituiti nel risultato.   
+
 > [!NOTE]  
 >  Se si usa l'editor di query di Management Studio, l'opzione **Risultati in formato griglia** non può implementare il ritorno a capo. Passare a **Risultati in formato testo** per visualizzare il risultato impostato correttamente.   
 
@@ -127,16 +128,17 @@ FROM Person.Person;
 |Davide Sánchez (8 febbraio 2003 12:00) <br />Terri Duffy (24 febbraio 2002 12:00) <br />Roberto Tamburello (5 dicembre 2001 12:00) <br />Rob Walters (29 dicembre 2001 12:00) <br />... |
 
 > [!NOTE]  
->  Se si usa l'editor di query di Management Studio, l'opzione **Risultati in formato griglia** non può implementare il ritorno a capo. Passare a **Risultati in formato testo** per visualizzare il risultato impostato correttamente.   
+> Se si usa l'editor di query di Management Studio, l'opzione **Risultati in formato griglia** non può implementare il ritorno a capo. Passare a **Risultati in formato testo** per visualizzare il risultato impostato correttamente.
 
-### <a name="d-return-news-articles-with-related-tags"></a>D. Restituire articoli di giornale con tag correlati 
+### <a name="d-return-news-articles-with-related-tags"></a>D. Restituire articoli di giornale con tag correlati
+
 Gli articoli e i tag correlati vengono suddivisi in tabelle diverse. Lo sviluppatore vuole che venga restituita una riga per ogni articolo con tutti i tag associati. Usare la query seguente:
 
 ```sql
-SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
-FROM dbo.Article AS a       
-LEFT JOIN dbo.ArticleTag AS t 
-    ON a.ArticleId = t.ArticleId 
+SELECT a.articleId, title, STRING_AGG (tag, ',') as tags
+FROM dbo.Article AS a
+LEFT JOIN dbo.ArticleTag AS t
+    ON a.ArticleId = t.ArticleId
 GROUP BY a.articleId, title;
 ```
 
@@ -144,9 +146,12 @@ GROUP BY a.articleId, title;
 
 |articleId |title |tags |
 |--- |--- |--- |
-|172 |I sondaggi indicano risultati delle elezioni molto vicini |politica, sondaggi, municipio | 
+|172 |I sondaggi indicano risultati delle elezioni molto vicini |politica, sondaggi, municipio |
 |176 |La nuova autostrada dovrebbe ridurre il traffico |NULL |
-|177 |I cani continuano a essere preferiti ai gatti |sondaggi, animali| 
+|177 |I cani continuano a essere preferiti ai gatti |sondaggi, animali|
+
+> [!NOTE]
+> La clausola `GROUP BY` è obbligatoria se la funzione `STRING_AGG` non è l'unico elemento nell'elenco `SELECT`.
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. Generare un elenco di messaggi di posta elettronica per città
 

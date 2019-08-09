@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 621a122ae3464f207797b6e51a21674192e2a758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/30/2019
 ms.locfileid: "67902721"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
@@ -42,7 +42,7 @@ Nella riga seguente fare clic su qualsiasi nome di prodotto. Viene visualizzato 
 
 ||||||
 |---|---|---|---|---|
-|**\*_ SQL Server \*_** &nbsp;|[Database SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Piattaforma di strumenti<br />analitici (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
+|**\* _SQL Server \*_** &nbsp;|[Database SQL](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Piattaforma di strumenti<br />analitici (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -73,7 +73,7 @@ WITH
 
 ## <a name="arguments"></a>Argomenti
 
-### <a name="datasourcename"></a>data_source_name
+### <a name="data_source_name"></a>data_source_name
 
 Specifica il nome definito dall'utente per l'origine dati. Il nome deve essere univoco all'interno del database in SQL Server.
 
@@ -110,7 +110,7 @@ Note aggiuntive e indicazioni utili per l'impostazione della posizione:
 - `wasb` è il protocollo predefinito dell'archiviazione BLOB di Azure. `wasbs` è facoltativo ma consigliato quando i dati vengono inviati usando una connessione SSL protetta.
 - Per garantire la corretta esecuzione delle query di PolyBase durante un failover di `Namenode` di Hadoop, provare a usare un indirizzo IP virtuale per l'istanza di `Namenode` del cluster Hadoop. In caso contrario, eseguire un comando [ALTER EXTERNAL DATA SOURCE][alter_eds] in modo che punti alla nuova posizione.
 
-### <a name="connectionoptions--keyvaluepair"></a>CONNECTION_OPTIONS = *key_value_pair*
+### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = *key_value_pair*
 
 Specifica le opzioni aggiuntive quando si esegue la connessione a un'origine dati esterna tramite `ODBC`.
 
@@ -126,7 +126,7 @@ Indica se è possibile eseguire il pushdown del calcolo nell'origine dati estern
 
 Per abilitare o disabilitare il pushdown a livello di query, si usa un [hint][hint_pb].
 
-### <a name="credential--credentialname"></a>CREDENTIAL = *credential_name*
+### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
 Specifica una credenziale con ambito database per l'autenticazione nell'origine dati esterna.
 
@@ -142,19 +142,19 @@ Per un esempio d'uso di `CREDENTIAL` con `SHARED ACCESS SIGNATURE` e `TYPE` = `B
 
 Per creare credenziali con ambito database, vedere [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
-### <a name="type---hadoop--blobstorage-"></a>TYPE = *[ HADOOP | BLOB_STORAGE ]*
+### <a name="type---hadoop--blob_storage-"></a>TYPE = *[ HADOOP | BLOB_STORAGE ]*
 
 Specifica il tipo dell'origine dati esterna da configurare. Questo parametro non è sempre obbligatorio.
 
 - Usare HADOOP quando l'origine dati esterna è Cloudera, Hortonworks o Archiviazione BLOB di Azure.
-- Usare BLOB_STORAGE durante l'esecuzione di operazioni bulk con [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset] con [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+- Usare BLOB_STORAGE durante l'esecuzione di operazioni bulk con [BULK INSERT][bulk_insert] o [OPENROWSET][openrowset] con [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 
 > [!IMPORTANT]
 > Non impostare `TYPE` se si usa qualsiasi altra origine dati esterna.
 
 Per un esempio d'uso di `TYPE` = `HADOOP` per caricare i dati da Archiviazione BLOB di Azure, vedere [Creare un'origine dati esterna per fare riferimento all'archiviazione BLOB di Azure](#e-create-external-data-source-to-reference-azure-blob-storage).
 
-### <a name="resourcemanagerlocation--resourcemanageruriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
+### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
 Configurare questo valore facoltativo per la connessione a Hortonworks o Cloudera.
 
@@ -317,7 +317,7 @@ WITH
 ### <a name="f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>F. Creare un'origine dati esterna per le operazioni bulk che recuperano i dati dall'archiviazione BLOB di Azure
 
 **Si applica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
-Usare l'origine dati seguente per le operazioni bulk che usano [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. Le credenziali devono impostare `SHARED ACCESS SIGNATURE` come identità, non devono includere il carattere `?` iniziale nel token di firma di accesso condiviso, devono avere almeno un'autorizzazione di lettura per il file da caricare (ad esempio `srt=o&sp=r`). Inoltre il periodo di scadenza deve essere valido (tutte le date sono in formato UTC). Per altre informazioni sulle firme di accesso condiviso, vedere [Uso delle firme di accesso condiviso][sas_token].
+Usare l'origine dati seguente per le operazioni bulk che usano [BULK INSERT][bulk_insert] o [OPENROWSET][openrowset]. Le credenziali devono impostare `SHARED ACCESS SIGNATURE` come identità, non devono includere il carattere `?` iniziale nel token di firma di accesso condiviso, devono avere almeno un'autorizzazione di lettura per il file da caricare (ad esempio `srt=o&sp=r`). Inoltre il periodo di scadenza deve essere valido (tutte le date sono in formato UTC). Per altre informazioni sulle firme di accesso condiviso, vedere [Uso delle firme di accesso condiviso][sas_token].
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
@@ -406,7 +406,7 @@ WITH
 
 ## <a name="arguments"></a>Argomenti
 
-### <a name="datasourcename"></a>data_source_name
+### <a name="data_source_name"></a>data_source_name
 
 Specifica il nome definito dall'utente per l'origine dati. Il nome deve essere univoco all'interno del database nel database SQL (SQL DB).
 
@@ -429,7 +429,7 @@ Note aggiuntive e indicazioni utili per l'impostazione della posizione:
 
 - Il motore di database SQL non verifica l'esistenza dell'origine dati esterna quando viene creato l'oggetto. Per eseguire la convalida, creare una tabella esterna usando l'origine dati esterna.
 
-### <a name="credential--credentialname"></a>CREDENTIAL = *credential_name*
+### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
 Specifica una credenziale con ambito database per l'autenticazione nell'origine dati esterna.
 
@@ -446,18 +446,18 @@ Per un esempio d'uso di `CREDENTIAL` con `SHARED ACCESS SIGNATURE` e `TYPE` = `B
 
 Per creare credenziali con ambito database, vedere [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
-### <a name="type---blobstorage--rdbms--shardmapmanager"></a>TYPE = *[ BLOB_STORAGE | RDBMS | SHARD_MAP_MANAGER]*
+### <a name="type---blob_storage--rdbms--shard_map_manager"></a>TYPE = *[ BLOB_STORAGE | RDBMS | SHARD_MAP_MANAGER]*
 
 Specifica il tipo dell'origine dati esterna da configurare. Questo parametro non è sempre obbligatorio.
 
 - Usare RDBMS per le query tra database usando la query elastica del database SQL.  
 - Usare SHARD_MAP_MANAGER durante la creazione di un'origine dati esterna per la connessione a un database SQL partizionato.
-- Usare BLOB_STORAGE durante l'esecuzione di operazioni bulk con [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset].
+- Usare BLOB_STORAGE durante l'esecuzione di operazioni bulk con [BULK INSERT][bulk_insert] o [OPENROWSET][openrowset].
 
 > [!IMPORTANT]
 > Non impostare `TYPE` se si usa qualsiasi altra origine dati esterna.
 
-### <a name="databasename--databasename"></a>DATABASE_NAME = *database_name*
+### <a name="database_name--database_name"></a>DATABASE_NAME = *database_name*
 
 Configurare questo argomento quando `TYPE` è impostato su `RDBMS` o `SHARD_MAP_MANAGER`.
 
@@ -468,7 +468,7 @@ Configurare questo argomento quando `TYPE` è impostato su `RDBMS` o `SHARD_MAP_
 
 Per un esempio relativo alla creazione di un'origine dati esterna in cui `TYPE` = `RDBMS`, vedere [Creare un'origine dati esterna RDBMS](#b-create-an-rdbms-external-data-source)
 
-### <a name="shardmapname--shardmapname"></a>SHARD_MAP_NAME = *shard_map_name*
+### <a name="shard_map_name--shard_map_name"></a>SHARD_MAP_NAME = *shard_map_name*
 
 Usato quando l'argomento `TYPE` è impostato su `SHARD_MAP_MANAGER` solo per impostare il nome della mappa partizioni.
 
@@ -544,7 +544,7 @@ Per un'esercitazione dettagliata su RDBMS, vedere [Introduzione alle query tra d
 
 ### <a name="c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>C. Creare un'origine dati esterna per le operazioni bulk che recuperano i dati dall'archiviazione BLOB di Azure
 
-Usare l'origine dati seguente per le operazioni bulk che usano [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. Le credenziali devono impostare `SHARED ACCESS SIGNATURE` come identità, non devono includere il carattere `?` iniziale nel token di firma di accesso condiviso, devono avere almeno un'autorizzazione di lettura per il file da caricare (ad esempio `srt=o&sp=r`). Inoltre il periodo di scadenza deve essere valido (tutte le date sono in formato UTC). Per altre informazioni sulle firme di accesso condiviso, vedere [Uso delle firme di accesso condiviso][sas_token].
+Usare l'origine dati seguente per le operazioni bulk che usano [BULK INSERT][bulk_insert] o [OPENROWSET][openrowset]. Le credenziali devono impostare `SHARED ACCESS SIGNATURE` come identità, non devono includere il carattere `?` iniziale nel token di firma di accesso condiviso, devono avere almeno un'autorizzazione di lettura per il file da caricare (ad esempio `srt=o&sp=r`). Inoltre il periodo di scadenza deve essere valido (tutte le date sono in formato UTC). Per altre informazioni sulle firme di accesso condiviso, vedere [Uso delle firme di accesso condiviso][sas_token].
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
@@ -630,7 +630,7 @@ WITH
 
 ## <a name="arguments"></a>Argomenti
 
-### <a name="datasourcename"></a>data_source_name
+### <a name="data_source_name"></a>data_source_name
 
 Specifica il nome definito dall'utente per l'origine dati. Il nome deve essere univoco all'interno del database in SQL Data Warehouse (SQL DW).
 
@@ -655,7 +655,7 @@ Note aggiuntive e indicazioni utili per l'impostazione della posizione:
 - Per garantire una semantica di esecuzione di query coerente, usare la stessa origine dati esterna per tutte le tabelle quando si eseguono query su Hadoop.
 - `wasb` è il protocollo predefinito dell'archiviazione BLOB di Azure. `wasbs` è facoltativo ma consigliato quando i dati vengono inviati usando una connessione SSL protetta.
 
-### <a name="credential--credentialname"></a>CREDENTIAL = *credential_name*
+### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
 Specifica una credenziale con ambito database per l'autenticazione nell'origine dati esterna.
 
@@ -666,7 +666,7 @@ Note aggiuntive e indicazioni utili per la creazione delle credenziali:
 
 Per creare credenziali con ambito database, vedere [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
-### <a name="type---hadoop--blobstorage-"></a>TYPE = *[ HADOOP | BLOB_STORAGE ]*
+### <a name="type---hadoop--blob_storage-"></a>TYPE = *[ HADOOP | BLOB_STORAGE ]*
 
 Specifica il tipo dell'origine dati esterna da configurare. Questo parametro non è sempre obbligatorio.
 
@@ -849,7 +849,7 @@ WITH
 
 ## <a name="arguments"></a>Argomenti
 
-### <a name="datasourcename"></a>data_source_name
+### <a name="data_source_name"></a>data_source_name
 
 Specifica il nome definito dall'utente per l'origine dati. Il nome deve essere univoco all'interno del server nella piattaforma di strumenti analitici (Parallel Data Warehouse o PDW).
 
@@ -876,7 +876,7 @@ Note aggiuntive e indicazioni utili per l'impostazione della posizione:
 - `wasb` è il protocollo predefinito dell'archiviazione BLOB di Azure. `wasbs` è facoltativo ma consigliato quando i dati vengono inviati usando una connessione SSL protetta.
 - Per garantire la corretta esecuzione delle query di PolyBase durante un failover di `Namenode` di Hadoop, provare a usare un indirizzo IP virtuale per l'istanza di `Namenode` del cluster Hadoop. In caso contrario, eseguire un comando [ALTER EXTERNAL DATA SOURCE][alter_eds] in modo che punti alla nuova posizione.
 
-### <a name="credential--credentialname"></a>CREDENTIAL = *credential_name*
+### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
 Specifica una credenziale con ambito database per l'autenticazione nell'origine dati esterna.
 
@@ -896,7 +896,7 @@ Specifica il tipo dell'origine dati esterna da configurare. Questo parametro non
 
 Per un esempio d'uso di `TYPE` = `HADOOP` per caricare i dati da Archiviazione BLOB di Azure, vedere [Creare un'origine dati esterna per fare riferimento all'archiviazione BLOB di Azure](#d-create-external-data-source-to-reference-azure-blob-storage).
 
-### <a name="resourcemanagerlocation--resourcemanageruriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
+### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
 Configurare questo valore facoltativo per la connessione a Hortonworks o Cloudera.
 
