@@ -1,7 +1,7 @@
 ---
 title: Inserire dati in un pool di dati di SQL Server
 titleSuffix: SQL Server big data clusters
-description: Questa esercitazione illustra come inserire dati nel pool di dati di un cluster di big data di SQL Server 2019 (anteprima).
+description: Questa esercitazione illustra come inserire dati nel pool di dati di un cluster Big Data di SQL Server 2019 (anteprima).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,55 +9,55 @@ ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 626b5442596c5a0f9beedef779937cf875efff00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 178eceaf99d1f8c2b51f7079d0bdd406c2cb5eef
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957796"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670525"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Esercitazione: Inserire dati in un pool di dati di SQL Server con Transact-SQL
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questa esercitazione illustra come usare Transact-SQL per caricare i dati di [pool di dati](concept-data-pool.md) di un cluster di big data di SQL Server 2019 (anteprima). Con i cluster di big data di SQL Server, i dati da una varietà di origini possono essere inseriti e distribuiti in istanze del pool di dati.
+Questa esercitazione illustra come usare Transact-SQL per inserire dati nel [pool di dati](concept-data-pool.md) di un cluster Big Data di SQL Server 2019 (anteprima). I cluster Big Data di SQL Server consentono infatti di inserire e distribuire dati provenienti da origini diverse tra più istanze di pool di dati.
 
-In questa esercitazione si imparerà a:
+In questa esercitazione verranno illustrate le procedure per:
 
 > [!div class="checklist"]
 > * Creare una tabella esterna nel pool di dati.
-> * Inserire i dati clickstream web di esempio nella tabella dati del pool.
-> * Unire i dati nella tabella di pool di dati con le tabelle locali.
+> * Inserire dati clickstream Web di esempio nella tabella del pool di dati.
+> * Unire i dati della tabella del pool di dati con tabelle locali.
 
 > [!TIP]
-> Se si preferisce, è possibile scaricare ed eseguire uno script per i comandi in questa esercitazione. Per istruzioni, vedere la [dati pool esempi](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) su GitHub.
+> Se si preferisce, è possibile scaricare ed eseguire uno script per i comandi descritti in questa esercitazione. Per istruzioni, vedere i [pool di dati di esempio](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) in GitHub.
 
 ## <a id="prereqs"></a> Prerequisiti
 
-- [Strumenti dei big Data](deploy-big-data-tools.md)
+- [Strumenti per Big Data](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
    - **Estensione di SQL Server 2019**
-- [Caricare i dati di esempio in cluster i big Data](tutorial-load-sample-data.md)
+- [Caricare dati di esempio nel cluster Big Data](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>Creare una tabella esterna nel pool di dati
 
-La procedura seguente crea una tabella esterna nel pool di dati denominato **web_clickstream_clicks_data_pool**. Questa tabella è quindi utilizzabile come un percorso per l'inserimento di dati nel cluster di big data.
+La procedura seguente consente di creare una tabella esterna nel pool di dati denominata **web_clickstream_clicks_data_pool**. La tabella può essere quindi usata come posizione per l'inserimento di dati nel cluster Big Data.
 
-1. In Azure Data Studio, connettersi all'istanza master di SQL Server del cluster di big data. Per altre informazioni, vedere [connettersi all'istanza master di SQL Server](connect-to-big-data-cluster.md#master).
+1. In Azure Data Studio connettersi all'istanza master di SQL Server del cluster Big Data. Per altre informazioni, vedere [Connettersi all'istanza master di SQL Server](connect-to-big-data-cluster.md#master).
 
-1. Fare doppio clic sulla connessione nel **server** finestra per visualizzare il dashboard di server per l'istanza master di SQL Server. Selezionare **nuova Query**.
+1. Fare doppio clic sulla connessione nella finestra **Server** per visualizzare il dashboard del server per l'istanza master di SQL Server. Selezionare **Nuova query**.
 
-   ![Query di istanza master di SQL Server](./media/tutorial-data-pool-ingest-sql/sql-server-master-instance-query.png)
+   ![Query dell'istanza master di SQL Server](./media/tutorial-data-pool-ingest-sql/sql-server-master-instance-query.png)
 
-1. Eseguire il comando Transact-SQL seguente per modificare il contesto per il **Sales** database nell'istanza master.
+1. Eseguire il comando Transact-SQL seguente per modificare il contesto nel database **Sales** dell'istanza master.
 
    ```sql
    USE Sales
    GO
    ```
 
-1. Creare un'origine dati esterna al pool di dati se non esiste già.
+1. Creare un'origine dati esterna nel pool di dati, se non esiste già.
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
@@ -78,18 +78,18 @@ La procedura seguente crea una tabella esterna nel pool di dati denominato **web
       );
    ```
   
-1. Nella versione CTP 3.1, la creazione di pool di dati è asincrona, ma non è possibile determinare quando viene completato ancora. Attendere due minuti per assicurarsi che il pool di dati viene creato prima di continuare.
+1. Nella versione CTP 3.1 la creazione del pool di dati è asincrona, ma non esiste alcun modo per determinare quando viene completata. Prima di continuare, attendere due minuti per avere la certezza che il pool di dati sia stato creato.
 
-## <a name="load-data"></a>Caricamento dei dati
+## <a name="load-data"></a>Caricare dati
 
-Le seguenti operazioni di inserimento dati clickstream web di esempio nel pool di dati utilizzando la tabella esterna creata nei passaggi precedenti.
+La procedura seguente consente di inserire nel pool dati clickstream Web di esempio usando la tabella esterna creata in precedenza.
 
-1. Usa un' `INSERT INTO` istruzione per inserire i risultati della query nel pool di dati (la **web_clickstream_clicks_data_pool** tabella esterna).
+1. Usare un'`INSERT INTO`istruzione per inserire i risultati della query nel pool di dati (tabella esterna **web_clickstream_clicks_data_pool**).
 
    ```sql
    INSERT INTO web_clickstream_clicks_data_pool
    SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
-     FROM sales.dbo.web_clickstreams_hdfs_parquet
+     FROM sales.dbo.web_clickstreams_hdfs
    INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
                            AND wcs_user_sk IS NOT NULL)
    GROUP BY wcs_user_sk, i_category_id
@@ -103,9 +103,9 @@ Le seguenti operazioni di inserimento dati clickstream web di esempio nel pool d
    SELECT TOP 10 * FROM [dbo].[web_clickstream_clicks_data_pool]  
    ```
 
-## <a name="query-the-data"></a>Eseguire query sui dati
+## <a name="query-the-data"></a>Eseguire una query sui dati
 
-Unire i risultati della query nel pool di dati con dati locali in archiviati il **Sales** tabella.
+Unire in join i risultati archiviati dalla query nel pool di dati con i dati locali della tabella **Sales**.
 
 ```sql
 SELECT TOP (100)
@@ -136,6 +136,6 @@ DROP EXTERNAL TABLE [dbo].[web_clickstream_clicks_data_pool];
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Informazioni su come inserire dati nel pool di dati con i processi di Spark:
+Informazioni su come inserire dati nel pool di dati con processi Spark:
 > [!div class="nextstepaction"]
-> [Inserire i dati con i processi Spark](tutorial-data-pool-ingest-spark.md)
+> [Inserire dati con processi Spark](tutorial-data-pool-ingest-spark.md)
