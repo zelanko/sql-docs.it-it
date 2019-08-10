@@ -1,5 +1,5 @@
 ---
-title: La definizione di membri calcolati | Microsoft Docs
+title: Definizione dei membri calcolati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 91dbc92eca754b99a154b062c4f40e5663a4cd9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4d2fddf1707ec4e1521b99d9d526f173464cd8e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078396"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888186"
 ---
 # <a name="defining-calculated-members"></a>Definizione dei membri calcolati
   I membri calcolati sono membri di una dimensione o di un gruppo di misure definiti in base a una combinazione di dati del cubo, di operatori aritmetici, di numeri e di funzioni. È possibile ad esempio creare un membro calcolato che calcoli la somma di due misure fisiche del cubo. Le definizioni dei membri calcolati vengono archiviate nei cubi, ma i loro valori vengono calcolati in fase di query.  
@@ -32,7 +32,7 @@ ms.locfileid: "66078396"
   
      Nella figura seguente viene illustrata la scheda **Calcoli** di Progettazione cubi.  
   
-     ![Scheda calcoli di Progettazione cubi](../../2014/tutorials/media/l6-calculatedmembers-1.gif "scheda calcoli di Progettazione cubi")  
+     ![Scheda Calcoli di Progettazione cubi](../../2014/tutorials/media/l6-calculatedmembers-1.gif "Scheda Calcoli di Progettazione cubi")  
   
 2.  Fare clic su **Nuovo membro calcolato** sulla barra degli strumenti della scheda **Calcoli**.  
   
@@ -40,9 +40,9 @@ ms.locfileid: "66078396"
   
      Nella figura seguente viene illustrato il modulo visualizzato nel riquadro **Calculation Expressions** (Espressioni di calcolo) quando si fa clic su **Nuovo membro calcolato**.  
   
-     ![Form del riquadro espressioni calcoli](../../2014/tutorials/media/l6-calculatedmembers-02.gif "form del riquadro espressioni di calcolo")  
+     ![Modulo del riquadro Espressioni di calcolo](../../2014/tutorials/media/l6-calculatedmembers-02.gif "Modulo del riquadro Espressioni di calcolo")  
   
-3.  Nel **Name** modificare il nome della misura calcolata per `[Total Sales Amount]`.  
+3.  Nella casella **nome** modificare il nome della misura `[Total Sales Amount]`calcolata in.  
   
      Se il nome di un membro calcolato contiene uno spazio, tale nome deve essere racchiuso tra parentesi quadre.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66078396"
   
 5.  Trascinare **Internet Sales-Sales Amount** dalla scheda **Metadati** nel riquadro **Strumenti di calcolo** alla casella **Espressione** nel riquadro **Calculation Expressions** (Espressioni di calcolo).  
   
-6.  Nel **espressione** , digitare un segno più (`+`) dopo **[Measures]. [ Internet Sales-Sales Amount]** .  
+6.  Nella casella **espressione** Digitare un segno più (`+`) dopo **[Measures]. [ Internet Sales-Sales Amount]** .  
   
 7.  Nella scheda **Metadati** del riquadro **Strumenti di calcolo** , espandere **Vendite rivenditore**e trascinare **Reseller Sales-Sales Amount** nella casella **Espressione** del riquadro **Calculation Expressions** (Espressioni di calcolo) dopo il segno più (+).  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66078396"
   
      Nella figura seguente viene illustrato il riquadro **Calculation Expressions** (Espressioni di calcolo) popolato con le impostazione specificate nei passaggi precedenti.  
   
-     ![Riquadro espressioni calcoli Populated](../../2014/tutorials/media/l6-calculatedmembers-03.gif "riquadro espressioni di calcolo compilato")  
+     ![Riquadro Espressioni di calcolo popolate](../../2014/tutorials/media/l6-calculatedmembers-03.gif "Riquadro Espressioni di calcolo popolate")  
   
 10. Sulla barra degli strumenti della scheda **Calcoli** fare clic su **Visualizzazione Script**e controllare lo script di calcolo nel riquadro **Calculation Expressions** (Espressioni di calcolo).  
   
@@ -83,11 +83,11 @@ ms.locfileid: "66078396"
   
      La figura seguente illustra gli script di calcolo che saranno visualizzati nel riquadro **Calculation Expressions** (Espressioni di calcolo) a questo punto dell'esercitazione.  
   
-     ![Gli script nel riquadro espressioni di calcolo](../../2014/tutorials/media/l6-calculatedmembers-04.gif "script nel riquadro espressioni di calcolo")  
+     ![Script nel riquadro Espressioni di calcolo](../../2014/tutorials/media/l6-calculatedmembers-04.gif "Script nel riquadro Espressioni di calcolo")  
   
-12. Sulla barra degli strumenti del **calcoli** scheda, fare clic su **visualizzazione Form**, verificare che `[Total Sales Amount]` sia selezionata nella **libreria Script** riquadro e quindi fare clic su  **Nuovo membro calcolato**.  
+12. Sulla barra degli strumenti della scheda **calcoli** fare clic **su visualizzazione form**, verificare `[Total Sales Amount]` che sia selezionato nel riquadro **Libreria script** , quindi fare clic su **nuovo membro calcolato**.  
   
-13. Modificare il nome del nuovo membro calcolato per `[Total Product Cost]`, quindi creare l'espressione seguente nella **espressione** casella:  
+13. Modificare il nome del nuovo membro `[Total Product Cost]`calcolato in, quindi creare l'espressione seguente nella casella **espressione** :  
   
     ```  
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
@@ -101,9 +101,9 @@ ms.locfileid: "66078396"
   
 ## <a name="defining-gross-profit-margin-calculations"></a>Definizione dei calcoli del margine di profitto lordo  
   
-1.  Verificare che `[Total Product Cost]` sia selezionato nel **libreria Script** riquadro e quindi fare clic su **nuovo membro calcolato** sulla barra degli strumenti del **calcoli** scheda.  
+1.  Verificare che `[Total Product Cost]` sia selezionato nel riquadro **Libreria script** , quindi fare clic su **nuovo membro calcolato** nella barra degli strumenti della scheda **calcoli** .  
   
-2.  Nel **Name** modificare il nome della nuova misura calcolata per `[Internet GPM]`.  
+2.  Nella casella **nome** modificare il nome della nuova misura `[Internet GPM]`calcolata in.  
   
 3.  Nella casella **Espressione** creare l'espressione MDX seguente:  
   
@@ -119,7 +119,7 @@ ms.locfileid: "66078396"
   
 6.  Fare clic su **Nuovo membro calcolato** sulla barra degli strumenti della scheda **Calcoli**.  
   
-7.  Nel **Name** modificare il nome della nuova misura calcolata per `[Reseller GPM]`.  
+7.  Nella casella **nome** modificare il nome della nuova misura `[Reseller GPM]`calcolata in.  
   
 8.  Nella casella **Espressione** creare l'espressione MDX seguente:  
   
@@ -135,7 +135,7 @@ ms.locfileid: "66078396"
   
 11. Fare clic su **Nuovo membro calcolato** sulla barra degli strumenti della scheda **Calcoli**.  
   
-12. Nel **Name** modificare il nome della misura calcolata in `[Total GPM]`.  
+12. Nella casella **nome** modificare il nome della misura `[Total GPM]`calcolata in.  
   
 13. Nella casella **Espressione** creare l'espressione MDX seguente:  
   
@@ -153,7 +153,7 @@ ms.locfileid: "66078396"
   
 16. Fare clic su **Visualizzazione Script** sulla barra degli strumenti della scheda **Calcoli** e controllare i tre calcoli appena aggiunti allo script di calcolo.  
   
-17. Aggiungere una nuova riga nello script di calcolo, immediatamente prima di `[Internet GPM]` calcolo, quindi aggiungere il testo seguente allo script su una riga a sé stante:  
+17. Aggiungere una nuova riga nello script di calcolo immediatamente prima del `[Internet GPM]` calcolo, quindi aggiungere il testo seguente allo script su una riga a se stante:  
   
     ```  
     /* Calculations to calculate gross profit margin */  
@@ -161,17 +161,17 @@ ms.locfileid: "66078396"
   
      Nella figura seguente viene illustrato il riquadro **Espressioni** con i tre nuovi calcoli.  
   
-     ![Nuovi calcoli nel riquadro espressioni di calcolo](../../2014/tutorials/media/l6-calculatedmembers-05.gif "nuovi calcoli nel riquadro espressioni di calcolo")  
+     ![Nuovi calcoli nel riquadro Espressioni di calcolo](../../2014/tutorials/media/l6-calculatedmembers-05.gif "Nuovi calcoli nel riquadro Espressioni di calcolo")  
   
 ## <a name="defining-the-percent-of-total-calculations"></a>Definizione della percentuale dei calcoli totali  
   
 1.  Fare clic su **Visualizzazione Form** sulla barra degli strumenti della scheda **Calcoli**.  
   
-2.  Nel **libreria Script** riquadro, selezionare `[Total GPM]`, quindi fare clic su **nuovo membro calcolato** sulla barra degli strumenti del **calcoli** scheda.  
+2.  Nel riquadro **Libreria script** selezionare `[Total GPM]`, quindi fare clic su **nuovo membro calcolato** nella barra degli strumenti della scheda **calcoli** .  
   
      Facendo clic sull'ultimo membro calcolato nel riquadro **Libreria script** prima di selezionare **Nuovo membro calcolato** si garantisce che il nuovo membro calcolato venga immesso alla fine dello script. L'esecuzione degli script seguirà l'ordine visualizzato nel riquadro **Libreria script** .  
   
-3.  Modificare il nome del nuovo membro calcolato per `[Internet Sales Ratio to All Products]`.  
+3.  Modificare il nome del nuovo membro calcolato in `[Internet Sales Ratio to All Products]`.  
   
 4.  Digitare l'espressione seguente nella casella **Espressione** :  
   
@@ -194,7 +194,7 @@ ms.locfileid: "66078396"
   
 7.  Fare clic su **Nuovo membro calcolato** sulla barra degli strumenti della scheda **Calcoli**.  
   
-8.  Modificare il nome del nuovo membro calcolato in `[Reseller Sales Ratio to All Products]`.  
+8.  Modificare il nome del membro calcolato in `[Reseller Sales Ratio to All Products]`.  
   
 9. Digitare l'espressione seguente nella casella **Espressione** :  
   
@@ -215,7 +215,7 @@ ms.locfileid: "66078396"
   
 12. Fare clic su **Nuovo membro calcolato** sulla barra degli strumenti della scheda **Calcoli**.  
   
-13. Modificare il nome del nuovo membro calcolato in `[Total Sales Ratio to All Products]`.  
+13. Modificare il nome del membro calcolato in `[Total Sales Ratio to All Products]`.  
   
 14. Digitare l'espressione seguente nella casella **Espressione** :  
   
@@ -236,7 +236,7 @@ ms.locfileid: "66078396"
   
 17. Fare clic su **Visualizzazione Script** nella barra degli strumenti della scheda **Calcoli**e controllare i tre calcoli appena aggiunti allo script di calcolo.  
   
-18. Aggiungere una nuova riga nello script di calcolo, immediatamente prima di `[Internet Sales Ratio to All Products]` calcolo, quindi aggiungere il testo seguente allo script su una riga a sé stante:  
+18. Aggiungere una nuova riga nello script di calcolo immediatamente prima del `[Internet Sales Ratio to All Products]` calcolo, quindi aggiungere il testo seguente allo script su una riga a se stante:  
   
     ```  
     /* Calculations to calculate percentage of product to total product sales */  
@@ -272,7 +272,7 @@ ms.locfileid: "66078396"
   
      Si noti che il margine di profitto lordo per le vendite rivenditore è notevolmente inferiore rispetto alle vendite Internet, come illustrato nella figura seguente.  
   
-     ![Riquadro dei dati che mostra le vendite rivenditore](../../2014/tutorials/media/l6-calculatedmembers-7b.gif "riquadro dei dati che mostra le vendite rivenditore")  
+     ![Riquadro dei dati] in cui sono visualizzate le vendite rivenditore (../../2014/tutorials/media/l6-calculatedmembers-7b.gif "Riquadro dei dati") in cui sono visualizzate le vendite rivenditore  
   
 9. Aggiungere le misure **Total Sales Ratio to All Products**, **Internet Sales Ratio to All Products**e **Reseller Sales Ratio to All Products** all'area Valori.  
   
@@ -287,7 +287,7 @@ ms.locfileid: "66078396"
      Si noti che la vendita di accessori aumenta nel tempo, ma che tali vendite rappresentano solo una piccola frazione delle vendite totali. Si noti inoltre che il margine di profitto lordo per le vendite di accessori è più alto rispetto a quello delle bici.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Definizione dei set denominati](../analysis-services/lesson-6-2-defining-named-sets.md)  
+ [Definizione dei set denominati](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Calcoli](multidimensional-models-olap-logical-cube-objects/calculations.md)   

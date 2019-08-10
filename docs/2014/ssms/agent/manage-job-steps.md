@@ -24,12 +24,12 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a844f429409210b1b7ba6de9784714b5af336eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 395b2ea5647560b141d93ef2ba4e1a26b81b042a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68189156"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893130"
 ---
 # <a name="manage-job-steps"></a>Gestire passaggi di processo
   Un passaggio di processo è un'operazione eseguita dal processo in un database o in un server. Ogni processo deve essere composto da almeno un passaggio. I passaggi di processo possono essere costituiti dagli elementi seguenti:  
@@ -50,7 +50,7 @@ ms.locfileid: "68189156"
   
  Ogni passaggio di processo viene eseguito in un contesto di sicurezza specifico. Se tramite il passaggio di processo viene specificato un proxy, il passaggio viene eseguito nel contesto di sicurezza della credenziale per il proxy. Se tramite il passaggio di processo non viene specificato un proxy, il passaggio viene eseguito nel contesto dell'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Solo i membri del ruolo predefinito del server sysadmin possono creare processi in cui non venga specificato esplicitamente un proxy.  
   
- Poiché i passaggi di processo vengono eseguiti nel contesto di un utente specifico di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, l'utente deve essere in possesso delle autorizzazioni e della configurazione necessarie per l'esecuzione del passaggio di processo. Se, ad esempio, si crea un processo che richiede una lettera di unità o un percorso UNC (Universal Naming Convention), i passaggi di processo possono essere eseguiti con l'account utente di Windows durante la verifica delle operazioni. L'utente di Windows per il passaggio di processo, tuttavia, deve inoltre disporre delle autorizzazioni richieste, delle configurazioni della lettera di unità o dell'accesso all'unità necessaria. In caso contrario, il passaggio di processo non verrà eseguito correttamente. Per evitare questo problema, assicurarsi che il proxy per ogni passaggio di processo disponga delle autorizzazioni necessarie per l'operazione eseguita dal passaggio. Per altre informazioni, vedere [Centro sicurezza per il motore di Database di SQL Server e Database SQL di Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).  
+ Poiché i passaggi di processo vengono eseguiti nel contesto di un utente specifico di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, l'utente deve essere in possesso delle autorizzazioni e della configurazione necessarie per l'esecuzione del passaggio di processo. Se, ad esempio, si crea un processo che richiede una lettera di unità o un percorso UNC (Universal Naming Convention), i passaggi di processo possono essere eseguiti con l'account utente di Windows durante la verifica delle operazioni. L'utente di Windows per il passaggio di processo, tuttavia, deve inoltre disporre delle autorizzazioni richieste, delle configurazioni della lettera di unità o dell'accesso all'unità necessaria. In caso contrario, il passaggio di processo non verrà eseguito correttamente. Per evitare questo problema, assicurarsi che il proxy per ogni passaggio di processo disponga delle autorizzazioni necessarie per l'operazione eseguita dal passaggio. Per altre informazioni, vedere [Centro sicurezza per SQL Server motore di database e il database SQL di Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).  
   
 ## <a name="job-step-logs"></a>Log dei passaggi di processo  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent può scrivere output da alcuni passaggi di processo in un file del sistema operativo o nella tabella sysjobstepslogs del database msdb. I tipi di passaggi di processo seguenti consentono la scrittura dell'output in entrambe le destinazioni:  
@@ -89,7 +89,7 @@ ms.locfileid: "68189156"
   
  In alternativa, è possibile aprire un file [!INCLUDE[tsql](../../includes/tsql-md.md)] esistente come comando per il passaggio di processo.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] I passaggi di processo non usano proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Il passaggio di processo viene invece eseguito come proprietario del passaggio oppure come account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent se il proprietario è un membro del ruolo predefinito del server sysadmin. I membri del ruolo predefinito del server sysadmin possono anche specificare che i passaggi di processo [!INCLUDE[tsql](../../includes/tsql-md.md)] vengano eseguiti nel contesto di un altro utente tramite il parametro *database_user_name* della stored procedure sp_add_jobstep. Per altre informazioni, vedere [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] I passaggi di processo non usano proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Il passaggio di processo viene invece eseguito come proprietario del passaggio oppure come account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent se il proprietario è un membro del ruolo predefinito del server sysadmin. I membri del ruolo predefinito del server sysadmin possono anche specificare che i passaggi di processo [!INCLUDE[tsql](../../includes/tsql-md.md)] vengano eseguiti nel contesto di un altro utente tramite il parametro *database_user_name* della stored procedure sp_add_jobstep. Per ulteriori informazioni, vedere [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
 > [!NOTE]  
 >  Un singolo passaggio di processo [!INCLUDE[tsql](../../includes/tsql-md.md)] può contenere più batch. [!INCLUDE[tsql](../../includes/tsql-md.md)] I passaggi di processo possono contenere comandi GO incorporati.  
@@ -166,7 +166,7 @@ Set oServer = nothing
   
 -   Digitare l'istruzione da eseguire. L'istruzione deve essere una query MDX.  
   
- Per altre informazioni su MDX, vedere [nozioni fondamentali sulle Query MDX &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md).  
+ Per ulteriori informazioni su MDX, vedere [nozioni fondamentali sulle &#40;query&#41;MDX Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services).  
   
 ## <a name="integration-services-packages"></a>Pacchetti Integration Services  
  Quando si crea un passaggio di processo con un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , è necessario eseguire le operazioni seguenti:  
@@ -211,8 +211,8 @@ Set oServer = nothing
 |Viene descritto come eliminare un log dei passaggi di processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [dbo.sysjobstepslogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
- [Creare i processi](create-jobs.md)   
+ [dbo. nella sysjobstepslogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+ [Creazione di processi](create-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
   
   

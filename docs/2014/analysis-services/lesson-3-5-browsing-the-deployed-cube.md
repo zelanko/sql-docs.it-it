@@ -10,12 +10,12 @@ ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9c4b80f65b894ebe81ab440e4e7a8f2a7080d2e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9273f35ccca51d92461783f1110890b161a85059
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078913"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888465"
 ---
 # <a name="browsing-the-deployed-cube"></a>Esplorazione di un cubo distribuito
   Nell'attività seguente si esplorerà il cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. Poiché l'analisi confronta la misura in più dimensioni, verrà utilizzata una tabella pivot di Excel per esplorare i dati. L'utilizzo di una tabella pivot consente di posizionare cliente, data e informazioni sul prodotto su diversi assi in modo da potere visualizzare come cambia Internet Sales quando viene visualizzato in periodi di tempo, dati demografici del cliente e linee di prodotti specifici.  
@@ -42,9 +42,9 @@ ms.locfileid: "66078913"
   
      Verranno visualizzate le vendite realizzate nel mese di febbraio 2006 tramite Internet in base alla regione e alla linea di prodotti, come illustrato nella figura seguente.  
   
-     ![Vendite Internet per regione e linea di prodotti](../../2014/tutorials/media/l3-cube-browser-finish.gif "vendite Internet per regione e linea di prodotti")  
+     ![Vendite Internet per area e linea di prodotti](../../2014/tutorials/media/l3-cube-browser-finish.gif "Vendite Internet per area e linea di prodotti")  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 4: La definizione di attributo avanzato e proprietà dimensione](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+ [Lezione 4: Definizione di proprietà avanzate per attributi e dimensioni](https://docs.microsoft.com/analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties)  
   
   

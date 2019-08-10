@@ -3,17 +3,17 @@ title: Conversioni dei tipi di dati da R a SQL
 description: Esaminare le conversioni di tipi di dati implicite ed esplicite tra R e SQL Server nelle soluzioni di data science e machine learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/10/2019
+ms.date: 08/08/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7c829f39ee9c80d1bad3a4fb33c10635897cfb98
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: ef35a704023ab6c8eb0bd735b2feba3b6475b506
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715097"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893000"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>Mapping dei tipi di dati tra R e SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

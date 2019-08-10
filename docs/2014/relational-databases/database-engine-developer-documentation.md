@@ -1,5 +1,5 @@
 ---
-title: Per gli sviluppatori&#39;Guida (motore di Database) | Microsoft Docs
+title: Guida&#39;per gli sviluppatori (motore di database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba11f16b14520ac5340724597a6e5b9aa3dedbcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: df0b873936d6738e79e656fa0ac5e69e799efe3e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872617"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890810"
 ---
-# <a name="developer39s-guide-database-engine"></a>Per gli sviluppatori&#39;Guida (motore di Database)
+# <a name="developer39s-guide-database-engine"></a>Guida&#39;per gli sviluppatori (motore di database)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fornisce un vasto set di strumenti per lo sviluppo, l'amministrazione e il controllo di applicazioni di database.  
   
 ## <a name="in-this-section"></a>In questa sezione  
@@ -52,10 +52,10 @@ ms.locfileid: "62872617"
  Viene descritto come utilizzare l'interfaccia di programmazione della finestra di messaggio eccezione nelle applicazioni per fornire maggiore controllo sulla messaggistica, offrire agli utenti la possibilità di salvare il contenuto dei messaggi di errore per riferimento futuro, nonché ottenere informazioni sui messaggi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Programmazione di data mining](../analysis-services/dev-guide/data-mining-programming.md)   
- [Guida per sviluppatori &#40;Analysis Services&#41;](../analysis-services/analysis-services-developer-documentation.md)   
- [Guida per sviluppatori &#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
- [Guida per sviluppatori &#40;replica&#41;](replication/concepts/replication-developer-documentation.md)   
- [Guida per sviluppatori &#40;Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
+ [Programmazione di data mining](https://docs.microsoft.com/analysis-services/dev-guide/data-mining-programming)   
+ [Guida &#40;per gli sviluppatori Analysis Services&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
+ [Guida &#40;per gli sviluppatori Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
+ [Guida &#40;per gli sviluppatori-replica&#41;](replication/concepts/replication-developer-documentation.md)   
+ [Guida &#40;per gli sviluppatori Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
   
   

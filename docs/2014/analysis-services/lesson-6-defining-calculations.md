@@ -10,12 +10,12 @@ ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0d8312019c5deeebb93185609433ae7e4925e3da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcfa51678379ecf7f54a956db17089544b22f6be
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078385"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888044"
 ---
 # <a name="lesson-6-defining-calculations"></a>Lezione 6: Definizione di calcoli
   In questa lezione verranno descritte le procedure per definire calcoli, che sono espressioni MDX (Multidimensional Expressions) o script. I calcoli consentono di definire membri calcolati e set denominati, nonché di eseguire altri comandi script per estendere le capacità di un cubo di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . È ad esempio possibile eseguire un comando script per definire un sottocubo e quindi assegnare un calcolo alle celle incluse nel sottocubo.  
@@ -45,19 +45,19 @@ ms.locfileid: "66078385"
   
  In questa lezione sono incluse le attività seguenti:  
   
- [Definizione dei membri calcolati](../analysis-services/lesson-6-1-defining-calculated-members.md)  
+ [Definizione dei membri calcolati](https://docs.microsoft.com/analysis-services/lesson-6-1-defining-calculated-members)  
  In questa attività vengono definiti i membri calcolati.  
   
- [Definizione dei set denominati](../analysis-services/lesson-6-2-defining-named-sets.md)  
+ [Definizione dei set denominati](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
  In questa procedura vengono definiti i set denominati.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 7: Definizione degli indicatori di prestazioni chiave &#40;indicatori KPI&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+ [Lezione 7: Definizione degli indicatori &#40;di prestazioni chiave KPI&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Scenario di Analysis Services Tutorial](../analysis-services/analysis-services-tutorial-scenario.md)   
- [Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)   
- [Creare set denominati](multidimensional-models/create-named-sets.md)   
+ [Scenario di Analysis Services Tutorial](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
+ [Esercitazione di modellazione &#40;multidimensionale Adventure Works&#41;](https://docs.microsoft.com/analysis-services/multidimensional-modeling-adventure-works-tutorial)   
+ [Creazione di set denominati](multidimensional-models/create-named-sets.md)   
  [Creare membri calcolati](multidimensional-models/create-calculated-members.md)  
   
   

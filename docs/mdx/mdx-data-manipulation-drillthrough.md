@@ -1,5 +1,5 @@
 ---
-title: Istruzione DRILLTHROUGH (MDX) | Microsoft Docs
+title: Istruzione drill-through (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0149898e44476233eafcb226a221fc5cc48ae1d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee90d2c367fa289e8255a84e4eb6da19b37933e0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006262"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891211"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>Manipolazione dei dati MDX - DRILLTHROUGH
 
@@ -35,23 +35,23 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  *Unsigned_Integer*  
  Valore integer positivo.  
   
- *Istruzione MDX SELECT*  
+ *Istruzione SELECT MDX*  
  Qualsiasi istruzione SELECT di espressione MDX (Multidimensional Expression) valida.  
   
  *Set_of_Attributes_and_Measures*  
  Elenco delimitato da virgole di misure e attributi della dimensione.  
   
 ## <a name="remarks"></a>Note  
- Il drill-through è un'operazione con cui un utente finale seleziona una singola cella di un cubo e recupera un set di risultati dai dati di origine di tale cella allo scopo di ottenere informazioni più dettagliate. Per impostazione predefinita, il set di risultati di un drill-through è derivato dalle righe di tabella che sono state valutate per calcolare il valore della cella del cubo selezionata. Per il drill-through da parte degli utenti finali, è necessario che le relative applicazioni client supportino tale funzionalità. In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], i risultati vengono recuperati direttamente dall'archivio MOLAP, a meno che non vengono eseguite su partizioni o dimensioni ROLAP.  
+ Il drill-through è un'operazione con cui un utente finale seleziona una singola cella di un cubo e recupera un set di risultati dai dati di origine di tale cella allo scopo di ottenere informazioni più dettagliate. Per impostazione predefinita, il set di risultati di un drill-through è derivato dalle righe di tabella che sono state valutate per calcolare il valore della cella del cubo selezionata. Per il drill-through da parte degli utenti finali, è necessario che le relative applicazioni client supportino tale funzionalità. In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]i risultati vengono recuperati direttamente dall'archiviazione MOLAP, a meno che non vengano eseguite query su partizioni o dimensioni ROLAP.  
   
 > [!IMPORTANT]  
 >  La sicurezza relativa al drill-through è basata sulle opzioni di sicurezza generali definite per il cubo. Se un utente non può ottenere alcuni dati tramite MDX, all'utente verranno applicate dal drill-through le stesse restrizioni.  
   
- La cella interessata è specificata da un'istruzione MDX. Il valore specificato per il **MAXROWS** argomento indica il numero massimo di righe che devono essere restituiti dal set di righe risultante.  
+ La cella interessata è specificata da un'istruzione MDX. Il valore specificato dall'argomento **MaxRows** indica il numero massimo di righe che devono essere restituite dal set di righe risultante.  
   
- Per impostazione predefinita, il numero massimo di righe restituite è 10.000. Ciò significa che se si lascia **MAXROWS** non viene specificato, si otterranno 10.000 righe o meno. Se questo valore è troppo basso per il proprio scenario, è possibile impostare **MAXROWS** un numero maggiore, ad esempio `MAXROWS 20000`. Se è troppo basso complessiva, è possibile aumentare il valore predefinito modificando il **OLAP\Query\DefaultDrillthroughMaxRows** proprietà del server. Per altre informazioni sulla modifica di questa proprietà, vedere [proprietà del Server in Analysis Services](../analysis-services/server-properties/server-properties-in-analysis-services.md).  
+ Per impostazione predefinita, il numero massimo di righe restituite è 10.000. Ciò significa che se si lascia **MaxRows** non specificato, si otterranno 10.000 righe o meno. Se questo valore è troppo basso per lo scenario in uso, è possibile impostare **MaxRows** su un numero maggiore, `MAXROWS 20000`ad esempio. Se il valore è troppo basso, è possibile aumentare il valore predefinito modificando la proprietà del server **OLAP\Query\DefaultDrillthroughMaxRows** . Per ulteriori informazioni sulla modifica di questa proprietà, vedere [proprietà del server in Analysis Services](https://docs.microsoft.com/analysis-services/server-properties/server-properties-in-analysis-services).  
   
- Se non diversamente specificato, le colonne restituite includono tutti gli attributi di granularità per tutte le dimensioni correlate al gruppo di misure della misura specificata, tranne le dimensioni molti-a-molti. Le dimensioni del cubo sono precedute da $ per consentire la distinzione tra dimensioni e gruppi di misure. Il **restituire** clausola consente di specificare le colonne restituite dalla query drill-through. Le funzioni seguenti possono essere applicate a un singolo attributo o misura mediante la **restituire** clausola.  
+ Se non diversamente specificato, le colonne restituite includono tutti gli attributi di granularità per tutte le dimensioni correlate al gruppo di misure della misura specificata, tranne le dimensioni molti-a-molti. Le dimensioni del cubo sono precedute da $ per consentire la distinzione tra dimensioni e gruppi di misure. La clausola **return** viene utilizzata per specificare le colonne restituite dalla query drill-through. Le funzioni seguenti possono essere applicate a un singolo attributo o misura mediante la clausola **return** .  
   
  Name(attribute_name)  
  Restituisce il nome del membro dell'attributo specificato.  
@@ -97,6 +97,6 @@ RETURN
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Istruzioni MDX di manipolazione dei dati &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+ [MDX istruzioni &#40;di manipolazione dei dati MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

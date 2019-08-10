@@ -10,12 +10,12 @@ ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 490d9f6e1cdaeab274290649d2bb7f5c691595ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe6b022300a873ab7e7e747265c96a3abf43ea59
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063026"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887465"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>Impostazione delle relazioni tra gli attributi in una gerarchia definita dall'utente
   Come è già stato illustrato in questa esercitazione, è possibile organizzare le gerarchie degli attributi in livelli all'interno delle gerarchie utente in modo da offrire agli utenti percorsi di navigazione in un cubo. Una gerarchia utente può rappresentare una gerarchia naturale, ad esempio una città, uno stato e un paese, oppure un percorso di navigazione, ad esempio il nome di un dipendente, la funzione e il reparto di appartenenza. Ai fini della navigazione, non esiste differenza tra questi due tipi di gerarchie utente.  
@@ -176,12 +176,12 @@ ms.locfileid: "66063026"
   
 12. Impostare la proprietà **AttributeHierarchyOptimizedState** su **NotOptimized**, la proprietà **AttributeHierarchyOrdered** su **False**e la proprietà **AttributeHierarchyVisible** su **False**.  
   
-13. Scegliere **Salva tutti** dal menu **File**.  
+13. Nel menu **File** fare clic su **Salva tutto**.  
   
 14. Scegliere **Deploy Analysis Services Tutorial** (Distribuisci Analysis Services Tutorial) dal menu [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Compila **di**.  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Definizione delle proprietà UnknownMember e NullProcessing](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+ [Definizione delle proprietà UnknownMember e NullProcessing](https://docs.microsoft.com/analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Definire relazioni tra attributi](multidimensional-models/attribute-relationships-define.md)   

@@ -10,12 +10,12 @@ ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c449e323c87f55d1cbc334d41916a26863cfccd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d7f0f0964c2602ef4203c0f14ee71af73f65d46
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078223"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888070"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Definizione ed esplorazione delle prospettive
   Una prospettiva può semplificare la visualizzazione di un cubo a scopi specifici. Per impostazione predefinita, gli utenti possono vedere tutti gli elementi di un cubo per i quali dispongono di autorizzazioni. Quando si visualizza un intero cubo di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , viene visualizzata la prospettiva predefinita del cubo. La navigazione all'interno di una visualizzazione dell'intero cubo può essere molto complessa per gli utenti, soprattutto per coloro che devono solo interagire con una piccola parte del cubo per soddisfare i requisiti di Business Intelligence e di report.  
@@ -33,15 +33,15 @@ ms.locfileid: "66078223"
   
      Tutti gli oggetti e i relativi tipi verranno visualizzati nel riquadro **Prospettive** , come illustrato nella figura seguente.  
   
-     ![Riquadro prospettive di Progettazione cubi](../../2014/tutorials/media/l9-perspectives-1.gif "riquadro prospettive di Progettazione cubi")  
+     ![Riquadro prospettive di Progettazione cubi](../../2014/tutorials/media/l9-perspectives-1.gif "Riquadro prospettive di Progettazione cubi")  
   
 2.  Fare clic sul pulsante **Nuova prospettiva** sulla barra degli strumenti della scheda **Prospettive** .  
   
      Verrà visualizzata una nuova prospettiva nella colonna **Nome prospettiva** , con il nome predefinito **Prospettiva**, come illustrato nella figura seguente. Si noti che è selezionata la casella di controllo corrispondente a ogni oggetto. Finché non si deseleziona la casella di controllo di un oggetto, questa prospettiva è identica alla prospettiva predefinita del cubo.  
   
-     ![Nuova prospettiva nella colonna nome prospettiva](../../2014/tutorials/media/l9-perspectives-2.gif "nuova prospettiva nella colonna nome prospettiva")  
+     ![Nuova prospettiva nella colonna Nome prospettiva](../../2014/tutorials/media/l9-perspectives-2.gif "Nuova prospettiva nella colonna Nome prospettiva")  
   
-3.  Modificare il nome della prospettiva in `Internet Sales`.  
+3.  Modificare il nome della prospettiva `Internet Sales`in.  
   
 4.  Nella riga successiva impostare DefaultMeasure su **Internet Sales-Sales Amount**.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66078223"
   
 5.  Deselezionare le caselle di controllo corrispondenti agli oggetti seguenti:  
   
-    -   `Reseller Sales` Gruppo di misure  
+    -   `Reseller Sales`gruppo di misure  
   
     -   Gruppo di misure**Sales Quotas**  
   
@@ -101,7 +101,7 @@ ms.locfileid: "66078223"
   
 4.  Deselezionare le caselle di controllo corrispondenti agli oggetti seguenti:  
   
-    -   `Internet Sales` Gruppo di misure  
+    -   `Internet Sales`gruppo di misure  
   
     -   Gruppo di misure**Internet Sales Reason**  
   
@@ -138,9 +138,9 @@ ms.locfileid: "66078223"
   
 3.  Deselezionare le caselle di controllo corrispondenti agli oggetti seguenti:  
   
-    -   `Internet Sales` Gruppo di misure  
+    -   `Internet Sales`gruppo di misure  
   
-    -   `Reseller Sales` Gruppo di misure  
+    -   `Reseller Sales`gruppo di misure  
   
     -   Gruppo di misure**Internet Sales Reason**  
   
@@ -170,28 +170,28 @@ ms.locfileid: "66078223"
   
 4.  Analizza in Excel richiede di scegliere quale prospettiva utilizzare per la visualizzazione del modello in Excel, come illustrato nell'immagine seguente.  
   
-     ![Gli oggetti per la prospettiva Internet Sales](../../2014/tutorials/media/l9-perspectives-3.gif "gli oggetti per la prospettiva Internet Sales")  
+     ![Oggetti per la prospettiva Internet Sales](../../2014/tutorials/media/l9-perspectives-3.gif "Oggetti per la prospettiva Internet Sales")  
   
 5.  In alternativa, è possibile avviare Excel dal menu Start di Windows, definire una connessione al database Analysis Services Tutorial su localhost e scegliere una prospettiva nella procedura guidata Connessione dati, come illustrato nell'immagine seguente.  
   
-     ![Connessione guidata dati in Excel](../../2014/tutorials/media/l9-perspectives-3b.gif "connessione guidata dati in Excel")  
+     ![Connessione guidata dati in Excel](../../2014/tutorials/media/l9-perspectives-3b.gif "Connessione guidata dati in Excel")  
   
-6.  Selezionare `Internet Sales` nella **prospettiva** elenco ed esaminare le misure e dimensioni nel riquadro dei metadati.  
+6.  Selezionare `Internet Sales` nell'elenco **prospettiva** , quindi rivedere le misure e le dimensioni nel riquadro metadati.  
   
      Si noti che vengono visualizzati solo gli oggetti specificati per la prospettiva Internet Sales.  
   
 7.  Nel riquadro dei metadati espandere **Misure**.  
   
-     Si noti che solo le `Internet Sales` gruppo di misure viene visualizzata, insieme con il **Internet GPM** e **Internet Sales Ratio to All Products** membri calcolati.  
+     Si noti che viene `Internet Sales` visualizzato solo il gruppo di misure, insieme ai membri calcolati **Internet GPM** e **Internet Sales Ratio per tutti i prodotti** .  
   
 8.  Nel modello selezionare di nuovo Excel. Selezionare `Sales Summary`.  
   
      Si noti che in ognuno di questi gruppi di misure viene visualizzata un'unica misura, come illustrato nella figura seguente.  
   
-     ![Misure Internet Sales e Reseller Sales](../../2014/tutorials/media/l9-perspectives-4.gif "misure Internet Sales e Reseller Sales")  
+     ![Misure Internet Sales e Reseller Sales](../../2014/tutorials/media/l9-perspectives-4.gif "Misure Internet Sales e Reseller Sales")  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Definizione ed esplorazione delle traduzioni](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  
+ [Definizione ed esplorazione delle traduzioni](https://docs.microsoft.com/analysis-services/lesson-9-2-defining-and-browsing-translations)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Prospettive](multidimensional-models-olap-logical-cube-objects/perspectives.md)   

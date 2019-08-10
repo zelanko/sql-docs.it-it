@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 616cd0bcbf9275598ce94e3935e56e37048f6f64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 263238a0d8430928fad99042dfa0ffd06921a33b
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033888"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893325"
 ---
 # <a name="mdx-syntax-elements-mdx"></a>Elementi della sintassi MDX (MDX)
 
@@ -24,12 +24,12 @@ ms.locfileid: "68033888"
 |----------|----------------|  
 |[Identificatori](../mdx/identifiers-mdx.md)|Gli identificatori sono nomi di oggetti quali cubi, dimensioni, membri e misure.|  
 |**Tipi di dati**|Definiscono i tipi dei dati contenuti nelle celle, nelle proprietà dei membri e nelle proprietà delle celle. MDX supporta solo il tipo di dati OLE VARIANT. Per ulteriori informazioni sulla coercizione, la conversione e la modifica del tipo di dati VARIANT, vedere l'argomento dedicato a VARIANT e VARIANTARG nella documentazione di Platform SDK.|  
-|[Le espressioni &#40;MDX&#41;](../mdx/expressions-mdx.md)|Le espressioni sono unità di sintassi che Analysis Services può essere risolto a oggetti o valori singoli (scalari). Le espressioni includono funzioni che restituiscono un singolo valore, un'espressione set e così via.|  
+|[Espressioni &#40;MDX&#41;](../mdx/expressions-mdx.md)|Le espressioni sono unità di sintassi che Analysis Services possibile risolvere in oggetti o valori singoli (scalari). Le espressioni includono funzioni che restituiscono un singolo valore, un'espressione set e così via.|  
 |[Operatori](../mdx/operators-mdx-syntax.md)|Gli operatori sono elementi di sintassi che utilizzano una o più espressioni MDX semplici per formare espressioni MDX più complesse.|  
-|[Funzioni](../mdx/functions-mdx-syntax.md)|Le funzioni sono elementi di sintassi che accettano zero, uno o più valori di input e che restituiscono un valore scalare o un oggetto. Gli esempi includono la [somma](../mdx/sum-mdx.md) funzione per l'aggiunta di più valori, il [membri](../mdx/members-set-mdx.md) funzione che restituisce un set di membri da una dimensione o un livello e così via.|  
-|[Commenti](../mdx/comments-mdx-syntax.md)|I commenti sono parti di testo inserite all'interno di istruzioni MDX o script per spiegarne lo scopo dell'istruzione. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] non esegue commenti.|  
+|[Funzioni](../mdx/functions-mdx-syntax.md)|Le funzioni sono elementi di sintassi che accettano zero, uno o più valori di input e che restituiscono un valore scalare o un oggetto. Gli esempi includono la funzione [Sum](../mdx/sum-mdx.md) per l'aggiunta di diversi valori, la funzione [Members](../mdx/members-set-mdx.md) per la restituzione di un set di membri da una dimensione o un livello e così via.|  
+|[Commenti](../mdx/comments-mdx-syntax.md)|I commenti sono parti di testo inserite all'interno di istruzioni MDX o script per spiegarne lo scopo dell'istruzione. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]non esegue commenti.|  
 |[Parole chiave riservate](../mdx/reserved-keywords-mdx-syntax.md)|Le parole chiave riservate sono parole che vengono utilizzate da MDX e non possono essere utilizzate come nomi per gli oggetti impiegati nelle istruzioni MDX.|  
-|[I membri, tuple e set](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)|Prima di creare una query MDX, è necessario comprendere i concetti di membro, tupla e set.|  
+|[Membri, Tuple e set](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)|Prima di creare una query MDX, è necessario comprendere i concetti di membro, tupla e set.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento a MDX &#40;Multidimensional Expressions&#41;](../mdx/multidimensional-expressions-mdx-reference.md)  

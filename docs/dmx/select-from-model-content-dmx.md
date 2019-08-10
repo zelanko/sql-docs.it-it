@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;modello&gt;. CONTENUTO (DMX) | Microsoft Docs
+title: Selezionare da &lt;modello&gt;. CONTENUTO (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 63cd10aaddfb0a22f8942e48007d36f8e634b233
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906728"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892834"
 ---
-# <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;modello&gt;. CONTENUTO (DMX)
+# <a name="select-from-ltmodelgtcontent-dmx"></a>Selezionare da &lt;modello&gt;. CONTENUTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Restituisce il set di righe dello schema del modello di data mining per il modello di data mining specificato.  
@@ -46,12 +46,12 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  facoltativo. Espressione che restituisce un valore scalare.  
   
 ## <a name="remarks"></a>Note  
- Il **SELECT FROM**  _\<modello >_ **. CONTENUTO** contenuto specifico per ogni algoritmo restituito dall'istruzione. È ad esempio possibile utilizzare le descrizioni di tutte le regole di un modello Association Rules in un'applicazione personalizzata. È possibile usare una **SELECT FROM \<modello >. CONTENUTO** istruzione per restituire i valori nella colonna NODE_RULE del modello.  
+ > **Di selezione dal**  _\<modello_ **.** L'istruzione Content restituisce contenuto specifico per ogni algoritmo. È ad esempio possibile utilizzare le descrizioni di tutte le regole di un modello Association Rules in un'applicazione personalizzata. È possibile utilizzare una **selezione da \<modello >. Istruzione CONTENT** per la restituzione di valori nella colonna NODE_RULE del modello.  
   
  Nella tabella seguente vengono elencate le colonne incluse nel contenuto del modello di data mining.  
   
 > [!NOTE]  
->  Gli algoritmi possono interpretare le colonne in modo diverso al fine di rappresentarne correttamente il contenuto. Per una descrizione del contenuto per ogni algoritmo e suggerimenti su come interpretare ed eseguire query sul modello di data mining contenuto per ogni tipo di modello del modello di data mining, vedere [contenuto del modello di Data Mining &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+>  Gli algoritmi possono interpretare le colonne in modo diverso al fine di rappresentarne correttamente il contenuto. Per una descrizione del contenuto del modello di data mining per ogni algoritmo e suggerimenti su come interpretare ed eseguire query sul contenuto del modello di data mining per ogni tipo di modello, vedere [ &#40;contenuto&#41;dei modelli di data mining Analysis Services-Data mining](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
   
 |Colonna del set di righe relativo al contenuto|Descrizione|  
 |---------------------------|-----------------|  
@@ -88,10 +88,10 @@ WHERE NODE_TYPE = 1
 |-----------------|----------------|  
 |TM_DecisionTree|0|  
   
- La query seguente utilizza il **IsDescendant** funzione per restituire gli elementi figlio immediati del nodo in cui è stato restituito nella query precedente.  
+ Nella query seguente viene utilizzata la funzione **descendant** per restituire gli elementi figlio immediati del nodo restituito nella query precedente.  
   
 > [!NOTE]  
->  Poiché il valore node_name è una stringa, è possibile utilizzare un'istruzione Sub-select per restituire il valore NODE_ID come argomento per il **IsDescendant** (funzione).  
+>  Poiché il valore di NODE_NAME è una stringa, non è possibile usare un'istruzione sub-SELECT per restituire NODE_ID come argomento della funzione **descendant** .  
   
 ```  
 SELECT NODE_NAME, NODETYPE, NODE_CAPTION   
@@ -101,7 +101,7 @@ WHERE ISDESCENDANT('0')
   
  Risultati previsti:  
   
- Poiché il modello è un modello di albero delle decisioni, i discendenti del nodo padre del modello includono un singolo nodo delle statistiche marginali, un nodo che rappresenta l'attributo stimabile e più nodi che contengono valori e attributi di input. Per altre informazioni, vedere [Contenuto dei modelli di data mining per i modelli di albero delle decisioni &#40;Analysis Services - Data mining&#41;](../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
+ Poiché il modello è un modello di albero delle decisioni, i discendenti del nodo padre del modello includono un singolo nodo delle statistiche marginali, un nodo che rappresenta l'attributo stimabile e più nodi che contengono valori e attributi di input. Per altre informazioni, vedere [Contenuto dei modelli di data mining per i modelli di albero delle decisioni &#40;Analysis Services - Data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining).  
   
 ## <a name="using-the-flattened-keyword"></a>Utilizzo della parola chiave FLATTENED  
  Il contenuto del modello di data mining contiene spesso informazioni interessanti sul modello presente nelle colonne della tabella nidificata. La parola chiave FLATTENED consente di recuperare i dati da una colonna della tabella nidificata senza utilizzare un provider che supporta i set di righe gerarchici.  
@@ -144,7 +144,7 @@ WHERE NODE_TYPE = 26
   
 ## <a name="see-also"></a>Vedere anche  
  [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
+ [Istruzioni di manipolazione &#40;dei&#41; dati DMX di Data Mining Extensions](../dmx/dmx-statements-data-manipulation.md)   
  [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

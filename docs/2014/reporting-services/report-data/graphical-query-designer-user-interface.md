@@ -19,20 +19,20 @@ ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e6324606dea5f3ea6f094e9b3c3dbe31d5fbcf92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2fc424ec2354130d361305b0e3dd2a0bb015cca6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107255"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891096"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interfaccia utente della finestra Progettazione query con interfaccia grafica
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dispone di due finestre Progettazione query, una con interfaccia grafica e una basata su testo, per la creazione di query che consentano di recuperare i dati da un database relazionale per un set di dati del report in Progettazione report. Usare la finestra Progettazione query con interfaccia grafica per compilare in modo interattivo una query e visualizzare i risultati per origine dati di tipo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB e ODBC. Usare la finestra Progettazione query basata su testo per specificare più istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] , la sintassi di una query complessa o del comando, nonché query basate su espressioni. Per altre informazioni, vedere [Interfaccia utente di Progettazione query basata su testo](../text-based-query-designer-user-interface.md). Per altre informazioni sull'utilizzo dei tipi di origini dati specifiche, vedere [aggiungere dati a un Report &#40;Generatore Report e SSRS&#41;](report-datasets-ssrs.md).  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dispone di due finestre Progettazione query, una con interfaccia grafica e una basata su testo, per la creazione di query che consentano di recuperare i dati da un database relazionale per un set di dati del report in Progettazione report. Usare la finestra Progettazione query con interfaccia grafica per compilare in modo interattivo una query e visualizzare i risultati per origine dati di tipo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB e ODBC. Usare la finestra Progettazione query basata su testo per specificare più istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] , la sintassi di una query complessa o del comando, nonché query basate su espressioni. Per altre informazioni, vedere [Interfaccia utente di Progettazione query basata su testo](../text-based-query-designer-user-interface.md). Per ulteriori informazioni sull'utilizzo di tipi di origini dati specifici, vedere [aggiungere dati a un &#40;report Generatore report e&#41;SSRS](report-datasets-ssrs.md).  
   
  .  
   
 ## <a name="graphical-query-designer"></a>Finestra Progettazione query con interfaccia grafica  
- Questa finestra di Progettazione query con interfaccia grafica supporta tre tipi di comandi di query: **Testo**, **StoredProcedure**, o **TableDirect**. Prima di creare una query per il set di dati, è necessario selezionare l'opzione del tipo di comando nella pagina Query della finestra di dialogo [Proprietà set di dati](../dataset-properties-dialog-box-query.md) .  
+ Questa finestra Progettazione query con interfaccia grafica supporta tre tipi di comandi di query: **Text**, **StoredProcedure**o **TableDirect**. Prima di creare una query per il set di dati, è necessario selezionare l'opzione del tipo di comando nella pagina Query della finestra di dialogo [Proprietà set di dati](../dataset-properties-dialog-box-query.md) .  
   
  Sono disponibili le opzioni seguenti per tipo di query:  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66107255"
 |![Pulsante Mostra/Nascondi riquadro griglia](../media/rsqdicon-showhidegrid.gif "Pulsante Mostra/Nascondi riquadro griglia")|Consente di visualizzare o nascondere il riquadro griglia.|  
 |![Pulsante Mostra/Nascondi riquadro SQL](../media/rsqdicon-showhidesql.gif "Pulsante Mostra/Nascondi riquadro SQL")|Consente di visualizzare o nascondere il riquadro SQL.|  
 |![Pulsante Mostra/Nascondi riquadro risultati](../media/rsqdicon-showhideresult.gif "Pulsante Mostra/Nascondi riquadro risultati")|Consente di visualizzare o nascondere il riquadro risultati.|  
-|![Esecuzione della query](../../analysis-services/media/rsqdicon-run.gif "Esecuzione della query")|Consente di eseguire la query.|  
+|![Esecuzione della query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Esecuzione della query")|Consente di eseguire la query.|  
 |![Pulsante Verifica istruzione SQL nel riquadro SQL](../media/rsqdicon-verifysql.gif "Pulsante Verifica istruzione SQL nel riquadro SQL")|Consente di verificare la correttezza della sintassi del testo della query.|  
 |![Impostazione dell'ordinamento crescente per il campo selezionato](../media/rsqdicon-sortascending.gif "Impostazione dell'ordinamento crescente per il campo selezionato")|Consente di impostare l'ordinamento su **Ordinamento crescente** per la colonna selezionata nel riquadro Diagramma,|  
 |![Impostazione dell'ordinamento decrescente per il campo selezionato](../media/rsqdicon-sortdescending.gif "Impostazione dell'ordinamento decrescente per il campo selezionato")|Consente di impostare l'ordinamento su **Ordinamento decrescente** per la colonna selezionata nel riquadro Diagramma,|  
@@ -118,7 +118,7 @@ EXEC uspGetEmployeeManagers '1';
 |**Modifica come testo**|Consente di passare dalla finestra Progettazione query basata su testo alla finestra Progettazione query con interfaccia grafica e viceversa.|  
 |**Importa**|Consente di importare una query esistente da un file o un report. Sono supportati solo i file con estensione sql e rdl. Per altre informazioni, vedere [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Icona del pulsante Progettazione query standard](../media/icongenericquerydesigner.gif "Icona del pulsante Progettazione query standard")|Consente di passare dall'interfaccia di Progettazione query generica all'interfaccia grafica e viceversa, mantenendo la visualizzazione del testo della query o della stored procedure.|  
-|![Esecuzione della query](../../analysis-services/media/rsqdicon-run.gif "Esecuzione della query")|Consente di selezione tutte le colonne della tabella selezionata.|  
+|![Esecuzione della query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Esecuzione della query")|Consente di selezione tutte le colonne della tabella selezionata.|  
   
 ### <a name="command-type-storedprocedure"></a>Tipo di comando StoredProcedure  
  Nel tipo **StoredProcedure** nella finestra Progettazione query con interfaccia grafica viene visualizzato un elenco a discesa delle stored procedure disponibili dall'origine dei dati e un riquadro Risultati. Nella tabella seguente viene descritta la funzione di ogni riquadro.  
@@ -135,7 +135,7 @@ EXEC uspGetEmployeeManagers '1';
 |------------|-----------------|  
 |**Modifica come testo**|Consente di passare dalla finestra Progettazione query basata su testo alla finestra Progettazione query con interfaccia grafica e viceversa.|  
 |**Importa**|Consente di importare una query esistente da un file o un report. Sono supportati solo i file con estensione sql e rdl. Per altre informazioni, vedere [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Esecuzione della query](../../analysis-services/media/rsqdicon-run.gif "Esecuzione della query")|Consente di eseguire la stored procedure selezionata.|  
+|![Esecuzione della query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Esecuzione della query")|Consente di eseguire la stored procedure selezionata.|  
 |Elenco a discesa Stored procedure|Fare clic sulla freccia GIÙ per visualizzare un elenco delle stored procedure disponibili dall'origine dei dati. Fare clic su una stored procedure nell'elenco per selezionarla.|  
   
 #### <a name="example"></a>Esempio  
@@ -144,11 +144,11 @@ EXEC uspGetEmployeeManagers '1';
  `uspGetEmployeeManagers '1';`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eseguire query di strumenti di progettazione di Report della finestra di progettazione di SQL Server Data Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)   
- [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-datasets-ssrs.md)   
+ [Strumenti di progettazione query in Progettazione report &#40;SQL Server Data Tools SSRS&#41;](query-design-tools-ssrs.md)   
+ [Aggiunta di dati a un &#40;Generatore report di report e SSRS&#41;](report-datasets-ssrs.md)   
  [Tipo di connessione SQL Server &#40;SSRS&#41;](sql-server-connection-type-ssrs.md)   
  [Tipo di connessione OLE DB &#40;SSRS&#41;](ole-db-connection-type-ssrs.md)   
- [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-datasets-ssrs.md)   
+ [Aggiunta di dati a un &#40;Generatore report di report e SSRS&#41;](report-datasets-ssrs.md)   
  [Tipo di connessione Oracle &#40;SSRS&#41;](oracle-connection-type-ssrs.md)   
  [RSReportDesigner - file di configurazione](../report-server/rsreportdesigner-configuration-file.md)   
  [Procedure per la progettazione di query e viste &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

@@ -10,12 +10,12 @@ ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 813740a542f06417156c746574dd0995e59aabd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0ccca3f8c9f6307f9715286a3496002dd7e1278
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62791881"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889229"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services con i gruppi di disponibilità AlwaysOn
   Un gruppo di disponibilità AlwaysOn è una raccolta predefinita di database relazionali di SQL Server per cui è previsto un failover reciproco quando le condizioni attivano un failover in uno dei database, reindirizzando le richieste a un database con mirroring su un'altra istanza nello stesso gruppo di disponibilità. Se i gruppi di disponibilità vengono utilizzati come soluzione di disponibilità elevata, è possibile utilizzare un database di questo gruppo come origine dati in una soluzione multidimensionale o tabulare di Analysis Services. Tutte le operazioni di Analysis Services elencate di seguito funzionano nel modo previsto quando si utilizza un database di disponibilità: elaborazione o importazione di dati, query dirette su dati relazionali (utilizzando la modalità DirectQuery o l'archiviazione ROLAP) e writeback.  
@@ -115,7 +115,7 @@ ms.locfileid: "62791881"
   
      A questo punto, creare un'origine dati in un modello di Analysis Services che utilizza un database dal gruppo appena configurato.  
   
-##  <a name="bkmk_ssasAODB"></a> Creare un'origine dati di Analysis Services utilizzando un database di disponibilità AlwaysOn  
+##  <a name="bkmk_ssasAODB"></a>Creare un'origine dati Analysis Services usando un database di disponibilità AlwaysOn  
  In questa sezione viene illustrato come creare un'origine dati di Analysis Services connessa a un database in un gruppo di disponibilità. È possibile utilizzare queste istruzioni per configurare una connessione a una replica primaria (impostazione predefinita) o a una replica secondaria leggibile configurata in base ai passaggi della sezione precedente. Le impostazioni di configurazione AlwaysOn e le proprietà di connessione impostate nel client determineranno se verrà utilizzata la replica primaria o quella secondaria.  
   
 1.  In [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)], in un progetto di modello di data mining e multidimensionale di Analysis Services, fare clic con il pulsante destro del mouse su **Origini dati** e selezionare **Nuova origine dati**. Per creare una nuova origine dati, fare clic su **Nuova** .  
@@ -130,7 +130,7 @@ ms.locfileid: "62791881"
   
      Per determinare il nome del listener del gruppo di disponibilità, è possibile rivolgersi a un amministratore di database o connettersi a un'istanza del gruppo di disponibilità e visualizzare la relativa configurazione della disponibilità AlwaysOn. Nella schermata seguente il listener del gruppo di disponibilità è **AdventureWorks2**.  
   
-     ![Cartella di disponibilità AlwaysOn in Management Studio](../../media/ssas-alwaysoninfoinssms.png "cartella di disponibilità AlwaysOn in Management Studio")  
+     ![Cartella di disponibilità AlwaysOn in Management Studio](../../media/ssas-alwaysoninfoinssms.png "Cartella di disponibilità AlwaysOn in Management Studio")  
   
 4.  In Gestione connessione scegliere **Tutto** nel riquadro di navigazione sinistro per visualizzare la griglia delle proprietà del provider di dati.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "62791881"
   
  Gli errori persistenti sono con tutta probabilità dovuti a un problema di configurazione. È possibile provare a eseguire nuovamente lo script T-SQL per risolvere i problemi con l'elenco di routing, gli URL del routing di sola lettura e la finalità di lettura sulla replica secondaria. È inoltre necessario verificare che la replica primaria consenta tutte le connessioni.  
   
-##  <a name="bkmk_writeback"></a> Writeback quando si utilizza un database di disponibilità AlwaysOn  
+##  <a name="bkmk_writeback"></a>Writeback quando si utilizza un database di disponibilità AlwaysOn  
  Il writeback è una funzionalità di Analysis Services che supporta l'analisi di simulazione in Excel. È comunemente utilizzato per attività di elaborazione budget e previsioni nelle applicazioni personalizzate.  
   
  Il supporto per il writeback richiede una connessione client READWRITE. Se in Excel si prova a eseguire il writeback in una connessione di sola lettura, si verifica l'errore seguente: "Impossibile recuperare i dati dall'origine dati esterna." "Impossibile recuperare i dati dall'origine dati esterna."  
@@ -218,9 +218,9 @@ ms.locfileid: "62791881"
   
 ## <a name="see-also"></a>Vedere anche  
  [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
- [Repliche secondarie attive: Repliche secondarie leggibili &#40;gruppi di disponibilità AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [Criteri AlwaysOn per problemi operativi con gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
- [Creare un'origine dati &#40;SSAS multidimensionale&#41;](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [Abilitare il writeback della dimensione](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
+ [Repliche secondarie attive: Repliche secondarie &#40;leggibili gruppi di disponibilità AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [Criteri AlwaysOn per problemi operativi con Gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
+ [Creare un'origine dati &#40;SSAS multidimensionale&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
+ [Abilitare il writeback della dimensione](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  
   
   

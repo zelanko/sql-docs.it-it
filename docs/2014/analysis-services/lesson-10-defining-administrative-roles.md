@@ -10,12 +10,12 @@ ms.assetid: a74239f4-0f38-43ed-82d3-bf742dbf8a54
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 28697c46e2e72ae4bfff95155f6646d1a5d076c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f835defb27410c0c812ac5acf5793cf15accbe60
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66079160"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888452"
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>Lezione 10: Definizione dei ruoli amministrativi
   In questa lezione viene illustrato come definire i ruoli di sicurezza per le attività amministrative.  
@@ -25,11 +25,11 @@ ms.locfileid: "66079160"
   
  In questa lezione è contenuta l'attività seguente:  
   
- [Concessione di autorizzazioni per l'elaborazione di database](../analysis-services/lesson-10-granting-process-database-permissions.md)  
+ [Concessione di autorizzazioni per l'elaborazione di database](https://docs.microsoft.com/analysis-services/lesson-10-granting-process-database-permissions)  
  In questa attività viene definito un ruolo di sicurezza che dispone delle autorizzazioni per elaborare il database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e viene successivamente eseguito un test del ruolo di sicurezza definito.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Scenario di Analysis Services Tutorial](../analysis-services/analysis-services-tutorial-scenario.md)   
+ [Scenario di Analysis Services Tutorial](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
  [Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

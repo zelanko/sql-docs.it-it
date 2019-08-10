@@ -1,5 +1,5 @@
 ---
-title: Aggiungere i tipi di contenuto di Server di Report a una raccolta (Reporting Services in modalità integrata SharePoint) | Microsoft Docs
+title: Aggiungere tipi di contenuto del server di report a una raccolta (Reporting Services in modalità integrata SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6ef4049f10363eca45615db234e3ed63687caf8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78c9080f1ea9ac0d733a45718886e31ab52171c8
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66110013"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891627"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>Aggiungere tipi di contenuto del server di report a una raccolta (Reporting Services in modalità integrata SharePoint)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dispone di tipi di contenuto di SharePoint predefiniti usati per gestire file di origini dati condivise (con estensione rsds), modelli di report (con estensione smdl) e file di definizione dei report di Generatore report (con estensione rdl). Se si aggiungono i tipi di contenuto **Report di Generatore report**, **Modello di report**e **Origine dati report** a una raccolta, sarà possibile utilizzare il comando **Nuovo** per creare nuovi documenti del tipo desiderato.  
@@ -31,7 +31,7 @@ ms.locfileid: "66110013"
 > [!TIP]  
 >  Se i tipi di contenuto di una raccolta **non** sono stati già configurati, abilitare innanzitutto la relativa gestione, quindi abilitare i tipi di contenuto di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Vedere le procedure per abilitare la gestione dei tipi di contenuto in una singola raccolta documenti.  
   
- **Breve video:** [(SSRS) Abilitare i tipi di contenuto SSRS in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
+ **Breve video:** [(SSRS) abilitazione di tipi di contenuto in sharepoint2010. wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
   
  **Contenuto dell'argomento:**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66110013"
   
 2.  Passare a **Impostazioni sito**.  
   
-    -   In SharePoint 2013 fare clic sull'icona **Impostazioni** . ![Impostazioni di SharePoint](../analysis-services/media/as-sharepoint2013-settings-gear.gif "Impostazioni di SharePoint")  
+    -   In SharePoint 2013 fare clic sull'icona **Impostazioni** . ![Impostazioni di SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Impostazioni di SharePoint")  
   
     -   In SharePoint 2010 fare clic su **Azioni sito**, quindi su **Impostazioni sito**.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66110013"
   
 5.  Aggiornare il browser, quindi fare clic su **Attiva** per **Funzionalità di integrazione Server report**.  
   
-    ![Deactivate](media/rs-reportserver-integration-deactivate.gif "rs_reportserver_integration_deactive")  
+    ![Disattiva](media/rs-reportserver-integration-deactivate.gif "rs_reportserver_integration_deactive")  
   
 ##  <a name="bkmk_enable_content_management"></a> Per abilitare la gestione dei tipi di contenuto per una singola raccolta documenti (SharePoint 2013)  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66110013"
 9. > [!NOTE]  
     >  Se il gruppo dei tipi di contenuto di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] **Tipi di contenuto SQL Server Reporting Services** non è visibile nella pagina **Aggiungi tipi di contenuto** , viene soddisfatta una delle condizioni seguenti:  
   
-    -   Il componente aggiuntivo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per prodotti SharePoint non è stato installato. Per altre informazioni, vedere [installare o disinstallare il componente aggiuntivo di Reporting Services per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). Questo argomento include informazioni sull'installazione del componente aggiuntivo e sull'esecuzione passaggio per passaggio di un'installazione di tipo "solo file" del componente aggiuntivo per risolvere i problemi.  
+    -   Il componente aggiuntivo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per prodotti SharePoint non è stato installato. Per ulteriori informazioni, vedere [installare o disinstallare il componente aggiuntivo Reporting Services per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). Questo argomento include informazioni sull'installazione del componente aggiuntivo e sull'esecuzione passaggio per passaggio di un'installazione di tipo "solo file" del componente aggiuntivo per risolvere i problemi.  
   
     -   Il componente aggiuntivo viene installato ma la funzionalità della raccolta siti **Funzionalità di integrazione Server report** non sarà attiva. Verificare la funzionalità della raccolta siti in **Impostazioni sito**.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66110013"
   
 ##  <a name="bkmk_enable_content_management_2010"></a> Per abilitare la gestione dei tipi di contenuto per una singola raccolta documenti (SharePoint 2010)  
   
-1.  Aprire la raccolta per cui si desidera abilitare più tipi di contenuto. Nella barra dei menu della raccolta, vengono visualizzati i menu seguenti: **Nuove**, **caricare**, **azioni**, e **impostazioni**. Se il menu **Impostazioni**non viene visualizzato, non si dispone delle autorizzazioni necessarie per l'aggiunta di un tipo di contenuto.  
+1.  Aprire la raccolta per cui si desidera abilitare più tipi di contenuto. Sulla barra dei menu della raccolta vengono visualizzati i menu seguenti: **Nuove**, **carica**, **azioni**e **Impostazioni**. Se il menu **Impostazioni**non viene visualizzato, non si dispone delle autorizzazioni necessarie per l'aggiunta di un tipo di contenuto.  
   
 2.  Sulla barra multifunzione **Strumenti raccolta** fare clic su **Raccolta**.  
   
@@ -160,10 +160,10 @@ ms.locfileid: "66110013"
   
      ![rs_general_app_settings_old_integrations](media/rs-general-app-settings-old-integrations.gif "rs_general_app_settings_old_integrations")  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Informazioni di riferimento sulle autorizzazioni relative a elenchi e siti di SharePoint per gli elementi del server di report](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
- [Avviare Generatore Report &#40;Generatore Report&#41;](report-builder/start-report-builder.md)  
+ [Avvia Generatore report &#40;Generatore report&#41;](report-builder/start-report-builder.md)  
   
   

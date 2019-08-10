@@ -5,16 +5,16 @@ description: Usare PySpark per eseguire il training e creare modelli di Machine 
 author: RogPodge
 ms.author: roliu
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 07/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9e139e76e5f5f756b57a9366cc896716cda58959
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 91c9dad3c87b9c43a611293a549f782b85beec5c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811214"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893964"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>Creare, esportare e assegnare punteggi ai modelli di Machine Learning Spark nei cluster SQL Server Big Data
 
@@ -41,7 +41,7 @@ Per eseguire l'esempio, è necessario disporre anche dei seguenti prerequisiti:
 
 Per questo esempio, il Census Data (**AdultCensusIncome. csv**) viene usato per compilare un modello di pipeline di Spark ml.
 
-1. Usare il file [mleap_sql_test/Setup. sh](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/setup.sh) per scaricare il set di dati da Internet e inserirlo in HDFS nel cluster SQL Server Big Data. Questo consente l'accesso a Spark.
+1. Usare il file [mleap_sql_test/Setup. sh](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mleap_sql_test/setup.sh) per scaricare il set di dati da Internet e inserirlo in HDFS nel cluster SQL Server Big Data. Questo consente l'accesso a Spark.
 
 1. Scaricare quindi il notebook di esempio [train_score_export_ml_models_with_spark. ipynb](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/train_score_export_ml_models_with_spark.ipynb). Da una riga di comando di PowerShell o bash, eseguire il comando seguente per scaricare il notebook:
 
@@ -56,15 +56,15 @@ Per questo esempio, il Census Data (**AdultCensusIncome. csv**) viene usato per 
 I dati vengono prima letti in Spark e suddivisi in set di dati di training e di testing. Il codice addestra quindi un modello di pipeline con i dati di training. Infine, esporta il modello in un bundle MLeap.
 
 > [!TIP]
-> È anche possibile esaminare o eseguire il codice Python associato a questi passaggi all'esterno del notebook nel file [mleap_sql_test/mleap_pyspark. py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_pyspark.py) .
+> È anche possibile esaminare o eseguire il codice Python associato a questi passaggi all'esterno del notebook nel file [mleap_sql_test/mleap_pyspark. py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mleap_sql_test/mleap_pyspark.py) .
 
 ## <a name="model-scoring-with-sql-server"></a>Assegnazione di punteggi al modello con SQL Server
 
 Ora che il modello di pipeline di Spark ML si trova in un formato [MLeap bundle](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html) di serializzazione comune, è possibile assegnare un punteggio al modello in Java senza la presenza di Spark. 
 
-In questo esempio viene utilizzata l' [estensione del linguaggio Java](../language-extensions/language-extensions-overview.md) in SQL Server. Per assegnare un punteggio al modello in SQL Server, è prima di tutto necessario compilare un'applicazione Java in grado di caricare il modello in Java e assegnargli un punteggio. È possibile trovare il codice di esempio per questa applicazione Java nella [cartella MSSQL-mleap-app](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mssql-mleap-app).
+In questo esempio viene utilizzata l' [estensione del linguaggio Java](../language-extensions/language-extensions-overview.md) in SQL Server. Per assegnare un punteggio al modello in SQL Server, è prima di tutto necessario compilare un'applicazione Java in grado di caricare il modello in Java e assegnargli un punteggio. È possibile trovare il codice di esempio per questa applicazione Java nella [cartella MSSQL-mleap-app](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mssql-mleap-app).
 
-Dopo aver compilato l'esempio, è possibile usare Transact-SQL per chiamare l'applicazione Java e assegnare un punteggio al modello con una tabella di database. Questo può essere visualizzato nel file di origine [mleap_sql_test/mleap_sql_tests. py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_sql_tests.py) .
+Dopo aver compilato l'esempio, è possibile usare Transact-SQL per chiamare l'applicazione Java e assegnare un punteggio al modello con una tabella di database. Questo può essere visualizzato nel file di origine [mleap_sql_test/mleap_sql_tests. py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mleap_sql_test/mleap_sql_tests.py) .
 
 ## <a name="next-steps"></a>Passaggi successivi
 

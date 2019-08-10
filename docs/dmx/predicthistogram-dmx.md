@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 61a90dc7fa034fc8983246aa4eb7119832a2d47d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fdc63d1c93d1290c701233cb94f71f157c771182
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008008"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893855"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,10 +34,10 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
  Tabella.  
   
 ## <a name="remarks"></a>Note  
- Un istogramma genera colonne di statistiche. La struttura della colonna dell'istogramma restituito dipende dal tipo di riferimento di colonna che viene usato con il **PredictHistogram** (funzione).  
+ Un istogramma genera colonne di statistiche. La struttura delle colonne dell'istogramma restituito dipende dal tipo di riferimento di colonna usato con la funzione **PredictHistogram** .  
   
 ## <a name="scalar-columns"></a>Colonne scalari  
- Per un \<riferimento a colonna scalare >, l'istogramma che il **PredictHistogram** restituito dalla funzione le colonne seguenti:  
+ Per un \<riferimento a colonna scalare >, l'istogramma restituito dalla funzione **PredictHistogram** è costituito dalle colonne seguenti:  
   
 -   Valore stimato.  
   
@@ -47,18 +47,18 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$ProbabilityVariance**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmi di data mining non supportano **$ProbabilityVariance**. Per gli algoritmi [!INCLUDE[msCoName](../includes/msconame-md.md)] questa colonna contiene sempre 0.  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)]gli algoritmi di data mining non supportano **$ProbabilityVariance**. Per gli algoritmi [!INCLUDE[msCoName](../includes/msconame-md.md)] questa colonna contiene sempre 0.  
   
 -   **$ProbabilityStdev**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmi di data mining non supportano **$ProbabilityStdev**. Per gli algoritmi [!INCLUDE[msCoName](../includes/msconame-md.md)] questa colonna contiene sempre 0.  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)]gli algoritmi di data mining non supportano **$ProbabilityStdev**. Per gli algoritmi [!INCLUDE[msCoName](../includes/msconame-md.md)] questa colonna contiene sempre 0.  
   
 -   **$AdjustedProbability**  
   
-     Il **$AdjustedProbability** colonna è un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] estensione per il [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB specifiche di Data Mining.  
+     La colonna **$AdjustedProbability** è un' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] estensione della OLE DB [!INCLUDE[msCoName](../includes/msconame-md.md)] per la specifica di data mining.  
   
 ## <a name="cluster-columns"></a>Colonne cluster  
- L'istogramma che il **PredictHistogram** funzione restituisce per una \<riferimento alla colonna del cluster > è costituito da colonne seguenti:  
+ L'istogramma restituito dalla funzione **PredictHistogram** per un \<riferimento a una colonna cluster > è costituito dalle colonne seguenti:  
   
 -   **$Cluster** (rappresenta il nome del cluster)  
   
@@ -67,7 +67,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 -   **$Probability**  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene restituito lo stato stimato della colonna Bike Buyer in una query singleton. La query restituisce anche gli stati più probabili prime due dell'attributo Bike Buyer, in base alla probabilità adattata ottenuta mediante il **PredictHistogram** (funzione).  
+ Nell'esempio seguente viene restituito lo stato stimato della colonna Bike Buyer in una query singleton. La query restituisce anche i primi due stati più probabili dell'attributo Bike Buyer, in base alla probabilità adattata ottenuta tramite la funzione **PredictHistogram** .  
   
 ```  
 SELECT  
@@ -91,9 +91,9 @@ NATURAL PREDICTION JOIN
  [PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)   
  [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
  [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
- [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle funzioni](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Guida di riferimento &#40;alle&#41; funzioni DMX di Data Mining Extensions](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Funzioni &#40;di stima generali DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

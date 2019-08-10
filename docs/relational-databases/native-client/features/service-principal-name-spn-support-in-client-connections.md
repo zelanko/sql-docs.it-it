@@ -15,12 +15,12 @@ ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 126a419f52ee88349d1d64fcfe756fcb3681c03a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d0129290734cfc374ab8b563fab14692a7b59fe6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069186"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893308"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Supporto per nomi SPN nelle connessioni client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68069186"
   
  Per altre informazioni su Kerberos, vedere gli articoli seguenti:  
   
--   [Kerberos Technical Supplement for Windows](https://go.microsoft.com/fwlink/?LinkId=101449)  
+-   [Kerberos Technical Supplement for Windows](/previous-versions/msp-n-p/ff649429(v=pandp.10))  
   
 -   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
@@ -72,18 +72,18 @@ ms.locfileid: "68069186"
  Poiché il nuovo comportamento di connessione viene implementato dal client, non è specifico di una determinata versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Server collegati e delega  
- Quando si creano server collegati, è possibile usare il parametro **@provstr** di [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) per specificare i nomi SPN del server e del server partner di failover. L'uso di questo parametro offre gli stessi vantaggi ottenuti specificando i nomi SPN nelle stringhe di connessione del client È più semplice e più affidabile per stabilire le connessioni che usano l'autenticazione Kerberos.  
+ Quando si creano server collegati, è possibile usare il parametro **@provstr** di [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) per specificare i nomi SPN del server e del server partner di failover. L'uso di questo parametro offre gli stessi vantaggi ottenuti specificando i nomi SPN nelle stringhe di connessione del client È più semplice e affidabile stabilire connessioni che usano l'autenticazione Kerberos.  
   
  La delega con server collegati richiede l'autenticazione Kerberos.  
   
 ## <a name="management-aspects-of-spns-specified-by-applications"></a>Aspetti correlati alla gestione dei nomi SPN specificati dalle applicazioni  
  Nel determinare se specificare nomi SPN in un'applicazione (tramite stringhe di connessione) o a livello di programmazione tramite proprietà di connessione (anziché basandosi sui nomi SPN generati dal provider predefinito), considerare gli aspetti seguenti:  
   
--   Sicurezza: Il nome SPN specificato divulgare informazioni protette?  
+-   Sicurezza: Il nome SPN specificato divulga le informazioni protette?  
   
--   Affidabilità: Per consentire l'uso di nomi SPN predefiniti, l'account del servizio in cui il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esecuzione dell'istanza devono avere privilegi sufficienti per l'aggiornamento di Active Directory nel centro distribuzione CHIAVI.  
+-   Affidabilità Per consentire l'utilizzo di nomi SPN predefiniti, l'account del servizio in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cui viene eseguita l'istanza di deve disporre di privilegi sufficienti per aggiornare il Active Directory nel KDC.  
   
--   Trasparenza di praticità e il percorso: Come i nomi SPN di un'applicazione varia se il database viene spostato in un altro [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza? Questa considerazione si applica sia al server principale sia al relativo partner di failover se si usa il mirroring del database. Se una modifica apportata al server comporta la modifica dei nomi SPN, valutare le conseguenze sulle applicazioni e determinare se sarà possibile gestire tutte le modifiche.  
+-   Praticità e trasparenza della posizione: In che modo verranno interessati i nomi SPN di un'applicazione se il database viene [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] spostato in un'istanza diversa? Questa considerazione si applica sia al server principale sia al relativo partner di failover se si usa il mirroring del database. Se una modifica apportata al server comporta la modifica dei nomi SPN, valutare le conseguenze sulle applicazioni e determinare se sarà possibile gestire tutte le modifiche.  
   
 ## <a name="specifying-the-spn"></a>Definizione del nome SPN  
  È possibile specificare un nome SPN nelle finestre di dialogo e nel codice. In questa sezione viene descritto come specificare un nome SPN.  
@@ -105,7 +105,7 @@ ms.locfileid: "68069186"
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>Sintassi ODBC e OLE DB con supporto di nomi SPN  
  Per informazioni specifiche della sintassi, vedere gli argomenti seguenti:  
   
--   [Nomi dell'entità servizio &#40;entità servizio&#41; nelle connessioni Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
+-   [Nomi &#40;dell'entità servizio&#41; SPN nelle connessioni &#40;client ODBC&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
   
 -   [Nomi SPN &#40;Service Principal Name&#41; nelle connessioni client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   

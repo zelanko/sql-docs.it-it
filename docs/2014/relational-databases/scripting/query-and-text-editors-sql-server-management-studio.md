@@ -25,12 +25,12 @@ ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39476a5bc6c1f115595c529e56090f7dda31aba2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db986748530a11057bf55e18c6404160504fdb89
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063876"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891754"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Editor di query e di testo (SQL Server Management Studio)
   È possibile utilizzare uno degli editor di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per modificare e testare interattivamente uno script [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX o XML/A oppure per modificare un file XML o un file di testo normale. Ogni editor è supportato da un servizio specifico del linguaggio che assegna un colore alle parole chiave e controlla il codice per rilevare eventuali errori di sintassi e utilizzo. L'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] include un debugger [!INCLUDE[tsql](../../includes/tsql-md.md)] che è possibile utilizzare per correggere i problemi nel codice [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -108,8 +108,8 @@ ms.locfileid: "66063876"
 |Descrizione dell'attività|Argomento|  
 |----------------------|-----------|  
 |Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di base dell'editor di query del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Editor di query del Motore di database &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
-|Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di base dell'editor di query MDX.|[Editor di query MDX &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
-|Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di base dell'editor di query DMX.|[Editor di query DMX &#40;Analysis Services - Data mining&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
+|Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di base dell'editor di query MDX.|[Editor di query MDX &#40;Analysis Services - Dati multidimensionali&#41;](https://docs.microsoft.com/analysis-services/mdx-query-editor-analysis-services-multidimensional-data)|  
+|Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di base dell'editor di query DMX.|[Editor di query DMX &#40;Analysis Services - Data mining&#41;](https://docs.microsoft.com/analysis-services/dmx-query-editor-analysis-services-data-mining)|  
 |Vengono descritte le modalità di visualizzazione e di utilizzo delle caratteristiche di base dell'editor di query XML/A.|[Editor XML &#40;SQL Server Management Studio&#41;](xml-editor-sql-server-management-studio.md)|  
 |Viene descritto come configurare opzioni per i vari editor, ad esempio numerazione delle righe e opzioni IntelliSense.|[Configurazione di editor &#40;SQL Server Management Studio&#41;](configure-editors-sql-server-management-studio.md)|  
 |Vengono descritti i vari modi in cui è possibile avviare gli editor in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Apertura di un editor &#40;SQL Server Management Studio&#41;](open-an-editor-sql-server-management-studio.md)|  

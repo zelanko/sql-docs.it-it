@@ -1,5 +1,5 @@
 ---
-title: Esercitazioni su DMX (Analysis Services - Data Mining) | Microsoft Docs
+title: Esercitazioni DMX (Analysis Services-Data mining) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 28f7788b0dc11c8c06e98b385d6814cb7fe81142
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 553ae5c425b08dc0b53f101d028fdea1557bf63c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061727"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892783"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>Esercitazioni su DMX (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,16 +30,16 @@ ms.locfileid: "68061727"
  In questa esercitazione vengono descritte le procedure per la creazione di un modello di data mining che stima quali prodotti tendono a essere acquistati contemporaneamente. Viene inoltre illustrato l'utilizzo delle tabelle nidificate in data mining.  
   
 ## <a name="reference"></a>Riferimenti  
- [Le estensioni di Data Mining di dati &#40;DMX&#41; gli elementi della sintassi](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
+ [Elementi di sintassi &#40;DMX&#41; di Data Mining Extensions](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
  [Istruzioni DMX &#40;Data Mining Extensions&#41; per la definizione dei dati](../dmx/dmx-statements-data-definition.md)  
   
- [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)  
+ [Istruzioni di manipolazione &#40;dei&#41; dati DMX di Data Mining Extensions](../dmx/dmx-statements-data-manipulation.md)  
   
  [Informazioni sull'istruzione DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
 ## <a name="related-sections"></a>Sezioni correlate  
- [Accesso ai dati di modelli multidimensionali &#40;Analysis Services - dati multidimensionali&#41;](../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)  
+ [Accesso ai &#40;dati del modello multidimensionale Analysis Services-Dati multidimensionali&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Struttura e utilizzo di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   

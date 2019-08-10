@@ -1,5 +1,5 @@
 ---
-title: Definizione ed esplorazione dei KPI | Microsoft Docs
+title: Definizione ed esplorazione degli indicatori KPI | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 27508ec35e6d7d061a278859a0a9bf38e63a95e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7eba0c1778923981361e5ecab1819afe3dec58d9
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078378"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888082"
 ---
 # <a name="defining-and-browsing-kpis"></a>Definizione ed esplorazione dei KPI
   Per definire gli indicatori di prestazioni chiave (KPI), è innanzitutto necessario definire un nome per l'indicatore KPI e il gruppo di misure a cui è associato. Un indicatore KPI può essere associato a tutti i gruppi di misure o a un unico gruppo di misure. In seguito è possibile definire gli elementi seguenti dell'indicatore KPI:  
@@ -59,15 +59,15 @@ ms.locfileid: "66078378"
   
      Nella figura seguente viene illustrata la scheda **KPI** di Progettazione cubi.  
   
-     ![Scheda KPI di Progettazione cubi](../../2014/tutorials/media/l7-kpi-1.gif "scheda KPI di Progettazione cubi")  
+     ![Scheda KPI di Progettazione cubi](../../2014/tutorials/media/l7-kpi-1.gif "Scheda KPI di Progettazione cubi")  
   
 2.  Fare clic sul pulsante **Nuovo indicatore KPI** sulla barra degli strumenti della scheda **KPI** .  
   
      Verrà visualizzato un modello KPI vuoto nel riquadro di visualizzazione, come illustrato nella figura seguente.  
   
-     ![Modello KPI vuoto nel riquadro visualizzazione](../../2014/tutorials/media/l7-kpi-2.gif "modello KPI vuoto nel riquadro di visualizzazione")  
+     ![Modello KPI vuoto nel riquadro di visualizzazione](../../2014/tutorials/media/l7-kpi-2.gif "Modello KPI vuoto nel riquadro di visualizzazione")  
   
-3.  Nel **Name** , digitare `Reseller Revenue`e quindi selezionare **Reseller Sales** nel **gruppo di misure associato** elenco.  
+3.  Nella casella **nome** Digitare `Reseller Revenue`e quindi selezionare **Reseller Sales** nell'elenco **gruppo di misure associato** .  
   
 4.  Nella scheda **Metadati** del riquadro **Strumenti di calcolo** , espandere **Misure**e **Vendite rivenditore**e quindi trascinare la misura **Reseller Sales-Sales Amount** nella casella **Espressione valore** .  
   
@@ -152,7 +152,7 @@ ms.locfileid: "66078378"
   
 1.  Fare clic sul pulsante **Visualizzazione Form** nella barra degli strumenti della scheda **KPI** e fare clic sul pulsante **Nuovo indicatore KPI** .  
   
-2.  Nel **nome** , digitare `Product Gross Profit Margin`e quindi verificare che  **\<tutti >** viene visualizzato nel **gruppo di misure associato** elenco.  
+2.  Nella casella **nome** Digitare `Product Gross Profit Margin`, quindi verificare che  **\<tutti >** siano visualizzati nell'elenco gruppo di **misure associato** .  
   
 3.  Nella scheda **Metadati** del riquadro **Strumenti di calcolo** trascinare la misura **Total GPM** nella casella **Espressione valore** .  
   
@@ -261,13 +261,13 @@ ms.locfileid: "66078378"
   
 2.  Quando la distribuzione ha avuto esito positivo, fare clic su **Riconnetti** nella barra degli strumenti della scheda **KPI** e scegliere **Visualizzazione Esplorazione**.  
   
-     Il `Product Gross Profit Margin` KPI viene visualizzata e viene visualizzato il valore KPI relativo **Q3 CY 2007** e il **America del Nord** territorio di vendita.  
+     Viene `Product Gross Profit Margin` visualizzato l'indicatore KPI e viene visualizzato il valore KPI per **Q3 CY 2007** e il **America del Nord** Sales Territory.  
   
 3.  Nel riquadro **Filtro** selezionare **Product** nell'elenco **Dimensione** , selezionare **Category** nell'elenco **Gerarchia** , selezionare **Uguale a** nell'elenco **Operatore** , quindi selezionare **Bikes** nell'elenco **Espressione filtro** e infine fare clic su **OK**.  
   
      Verrà visualizzato il margine di profitto lordo per le biciclette vendute dai rivenditori in Nord America nel terzo trimestre dell'anno di calendario 2007.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 8: Definizione delle azioni](../analysis-services/lesson-8-defining-actions.md)  
+ [Lezione 8: Definizione di azioni](https://docs.microsoft.com/analysis-services/lesson-8-defining-actions)  
   
   

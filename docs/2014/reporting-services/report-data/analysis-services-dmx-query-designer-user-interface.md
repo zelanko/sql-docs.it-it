@@ -17,17 +17,17 @@ ms.assetid: 5fd726a4-aed7-4e6c-9404-ccb2db66cf26
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 09a251ad3aaa288c13e4ded43ff1985bdfb10b7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d43ce55186f9545c1eb237620960fb678a4f402
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107496"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891309"
 ---
 # <a name="analysis-services-dmx-query-designer-user-interface"></a>Interfaccia utente di Progettazione query DMX in Analysis Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include finestre Progettazione query con interfaccia grafica per la compilazione di query MDX (Multidimensional Expression) e DMX (Data Mining Expression) per un'origine dati di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . In questo argomento viene descritta Progettazione query DMX. Per altre informazioni sulla finestra Progettazione query MDX, vedere [Interfaccia utente di Progettazione query MDX di Analysis Services](analysis-services-mdx-query-designer-user-interface.md).  
   
- La finestra di Progettazione query con interfaccia grafica DMX è disponibili tre modalità: Progettazione Query e risultato. Per passare da una modalità all'altra, fare clic con il pulsante destro del mouse nel riquadro Progettazione query e selezionare la modalità. In ogni modalità è disponibile un riquadro Metadati dal quale è possibile trascinare membri dei cubi selezionati per compilare una query DMX che recupera dati per un set di dati quando il report viene elaborato.  
+ Nella finestra Progettazione query con interfaccia grafica DMX sono disponibili tre modalità: Progettazione, query e risultato. Per passare da una modalità all'altra, fare clic con il pulsante destro del mouse nel riquadro Progettazione query e selezionare la modalità. In ogni modalità è disponibile un riquadro Metadati dal quale è possibile trascinare membri dei cubi selezionati per compilare una query DMX che recupera dati per un set di dati quando il report viene elaborato.  
   
 ## <a name="graphical-dmx-query-designer-toolbar"></a>Barra degli strumenti di Progettazione query DMX  
  I pulsanti della barra degli strumenti di Progettazione query consentono di progettare query DMX utilizzando l'interfaccia grafica. Nella tabella seguente vengono illustrati i pulsanti con le relative funzioni.  
@@ -36,13 +36,13 @@ ms.locfileid: "66107496"
 |------------|-----------------|  
 |**Modifica come testo**|Disabilitato per questo tipo di origine dati.|  
 |**Importa**|Consente di importare una query esistente da un file di definizione di report (con estensione rdl) nel file system. Per altre informazioni, vedere [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Passa alla visualizzazione query MDX](../../analysis-services/media/rsqdicon-commandtypemdx.gif "Passa alla visualizzazione query MDX")|Consente di passare alla modalità Progettazione query MDX.|  
+|![Passa alla visualizzazione query MDX](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-commandtypemdx.gif "Passa alla visualizzazione query MDX")|Consente di passare alla modalità Progettazione query MDX.|  
 |![Passa alla visualizzazione linguaggio query DMX](../media/rsqdicon-commandtypedmx.gif "Passa alla visualizzazione linguaggio query DMX")|Consente di passare alla modalità Progettazione query DMX.|  
-|![Aggiorna i dati dei risultati](../../analysis-services/media/rsqdicon-refresh.gif "Aggiorna i dati dei risultati")|Consente di aggiornare i metadati dall'origine dati.|  
-|![Elimina](../../analysis-services/media/rsqdicon-delete.gif "Elimina")|Consente di eliminare dalla query la colonna selezionata nel riquadro Dati.|  
-|![Icona della finestra di dialogo Parametri query](../../analysis-services/media/iconqueryparameter.gif "Icona della finestra di dialogo Parametri query")|Consente di visualizzare la finestra di dialogo **Parametri query** . Quando si assegna un valore predefinito a una variabile, un parametro del report corrispondente viene creato quando si passa alla visualizzazione Layout in Progettazione report.|  
-|![Esecuzione della query](../../analysis-services/media/rsqdicon-run.gif "Esecuzione della query")|Consente di preparare la query.|  
-|![Passa alla modalità progettazione](../../analysis-services/media/rsqdicon-designmode.gif "Passa alla modalità progettazione")|Consente di passare dalla modalità progettazione alla modalità query e viceversa. Per passare alla visualizzazione dei risultati, fare clic con il pulsante destro del mouse sul riquadro Progettazione e scegliere **Risultato**.|  
+|![Aggiorna i dati dei risultati](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-refresh.gif "Aggiorna i dati dei risultati")|Consente di aggiornare i metadati dall'origine dati.|  
+|![Elimina](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "Elimina")|Consente di eliminare dalla query la colonna selezionata nel riquadro Dati.|  
+|![Icona della finestra di dialogo Parametri query](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Icona della finestra di dialogo Parametri query")|Consente di visualizzare la finestra di dialogo **Parametri query** . Quando si assegna un valore predefinito a una variabile, un parametro del report corrispondente viene creato quando si passa alla visualizzazione Layout in Progettazione report.|  
+|![Esecuzione della query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Esecuzione della query")|Consente di preparare la query.|  
+|![Passa alla modalità progettazione](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Passa alla modalità progettazione")|Consente di passare dalla modalità progettazione alla modalità query e viceversa. Per passare alla visualizzazione dei risultati, fare clic con il pulsante destro del mouse sul riquadro Progettazione e scegliere **Risultato**.|  
   
 ## <a name="graphical-dmx-query-designer-in-design-mode"></a>Progettazione query DMX in modalità progettazione  
  Quando si modifica un set di dati che utilizza un'origine dati di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] che non dispone di cubi validi ma dispone di modelli di data mining validi, la finestra Progettazione query con interfaccia grafica si apre in modalità progettazione. Nella figura seguente vengono etichettati i riquadri per la modalità progettazione.  

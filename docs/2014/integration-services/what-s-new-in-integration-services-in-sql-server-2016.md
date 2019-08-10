@@ -1,5 +1,5 @@
 ---
-title: Cosa&#39;s nuovo (Integration Services) | Microsoft Docs
+title: '&#39;Novità (Integration Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6eda4eb4f01819bd569a472df01a276c5f270f31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5562b7424e4a104204becaed10378ffc999c4e98
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62766094"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891108"
 ---
-# <a name="what39s-new-integration-services"></a>Cosa&#39;s nuovo (Integration Services)
+# <a name="what39s-new-integration-services"></a>&#39;Novità (Integration Services)
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] è invariato dalla versione precedente.  
   
- Per informazioni su altri [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] prodotti e tecnologie, vedere [What ' s New in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
+ Per informazioni su altri [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] prodotti e tecnologie, vedere Novità [di SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
   
- Per altre informazioni sulle modifiche relative al [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence, vedere [What ' s New in Analysis Services e Business Intelligence](../analysis-services/what-s-new-in-analysis-services.md).  
+ Per ulteriori informazioni sulle modifiche correlate a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence, vedere Novità [di Analysis Services e Business Intelligence](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services).  
   
 ##  <a name="ValidateXML"></a> Output di convalida XML avanzato in Attività XML  
  È possibile convalidare documenti XML e ottenere output avanzato degli errori abilitando la proprietà `ValidationDetails` dell'Attività XML. Prima che fosse disponibile la proprietà `ValidationDetails`, la convalida XML da parte dell'Attività XML restituiva solo un risultato di tipo True o False, senza informazioni sugli errori o sulle rispettive posizioni. Attualmente, quando si imposta `ValidationDetails` su True, il file di output contiene informazioni dettagliate su ogni errore, inclusi il numero di riga e la posizione. È possibile usare questa informazione per comprendere, individuare e risolvere gli errori nei documenti XML. Per ulteriori informazioni, vedere [Validate XML with the XML Task](control-flow/xml-task.md).  

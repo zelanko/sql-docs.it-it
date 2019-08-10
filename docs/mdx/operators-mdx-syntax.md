@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a1a03ecd9f41fe7d236f8c61f7059014a6ac07fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5067793ae0f5533a889973e18f7b300914df9092
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68088216"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892109"
 ---
 # <a name="operators-mdx-syntax"></a>Operatori (sintassi MDX)
 
@@ -46,7 +46,7 @@ ms.locfileid: "68088216"
  Quando si utilizzano più operatori, l'ordine in cui vengono valutati da MDX è molto importante. Per utilizzare alcuni operatori, inoltre, può essere necessario convertire i dati da un tipo di dati a un altro affinché gli operatori possano essere valutati.  
   
 ## <a name="evaluating-complex-expressions"></a>Valutazione di espressioni complesse  
- Quando si compila un'espressione è possibile utilizzare gli operatori per combinare diverse espressioni più piccole. In queste espressioni complesse MDX valuta gli operatori in ordine in base alla definizione di precedenza degli operatori utilizzata da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Gli operatori con precedenza superiore vengono applicati prima di quelli con precedenza inferiore.  
+ Quando si compila un'espressione è possibile utilizzare gli operatori per combinare diverse espressioni più piccole. In queste espressioni complesse, MDX valuta gli operatori in base alla definizione della precedenza degli operatori utilizzata da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Gli operatori con precedenza superiore vengono applicati prima di quelli con precedenza inferiore.  
   
 ### <a name="understanding-operator-precedence"></a>Informazioni sulla precedenza degli operatori  
  Nell'elenco seguente viene illustrata la precedenza degli operatori, dalla più alta alla più bassa. Gli operatori indicati sulla stessa riga hanno la stessa precedenza e vengono valutati da sinistra a destra, a meno che non siano presenti parentesi che impongono un ordine diverso:  
@@ -77,12 +77,12 @@ ms.locfileid: "68088216"
   
 -   Oppure  
   
- Per altre informazioni sugli operatori in MDX, vedere [riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md).  
+ Per ulteriori informazioni sugli operatori in MDX, vedere MDX [Reference Reference &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md).  
   
 ### <a name="determining-results"></a>Determinazione dei risultati  
  Quando si combinano più espressioni semplici in modo da formare un'espressione complessa, il tipo di dati del valore risultante viene ottenuto combinando le regole degli operatori con le regole relative alla precedenza dei tipi di dati.  
   
- Se il risultato è un carattere o un valore Unicode, le regole di confronto verranno determinate combinando le regole degli operatori con le regole sulla precedenza delle regole di confronto. Per altre informazioni sulle regole di confronto, vedere [lingue e regole di confronto &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md).  
+ Se il risultato è un carattere o un valore Unicode, le regole di confronto verranno determinate combinando le regole degli operatori con le regole sulla precedenza delle regole di confronto. Per ulteriori informazioni sulle regole di confronto, vedere [lingue e regole &#40;di&#41;confronto Analysis Services](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services).  
   
  Sono previste inoltre regole per determinare precisione, scala e lunghezza del risultato in base alla precisione, alla scala e alla lunghezza delle varie espressioni semplici.  
   
@@ -95,10 +95,10 @@ ms.locfileid: "68088216"
 |Gerarchia|Member|\<hierarchy>.defaultmember|  
 |Member|Tupla|(\<Membro >)|  
 |Tupla|Member|\<tuple>.item(0)|  
-|Tupla|Scalare|\<tupla >. Value|  
+|Tupla|Scalare|\<Tuple >. Value|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Elementi della sintassi MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [Guida di riferimento &#40;agli operatori MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [MDX (elementi &#40;della sintassi MDX)&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

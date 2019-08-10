@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03875d828940a2baa5d9f30f7beb58adb77abf07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 333be9cb6c86c1db3801ac50159610c6d19d1611
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018111"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941105"
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68018111"
 |**srvproduct**|**sysname**|Nome del prodotto del server remoto.|  
 |**providername**|**nvarchar(128)**|Nome del provider OLE DB per l'accesso al server.|  
 |**datasource**|**nvarchar(4000)**|Valore dell'origine dei dati OLE DB.|  
-|**Posizione**|**nvarchar(4000)**|Valore della posizione di OLE DB.|  
+|**percorso**|**nvarchar(4000)**|Valore della posizione di OLE DB.|  
 |**providerstring**|**nvarchar(4000)**|Valore stringa del provider OLE DB.|  
 |**schemadate**|**datetime**|Data dell'ultimo aggiornamento della riga.|  
 |**topologyx**|**int**|Non usato.|  
@@ -53,23 +53,23 @@ ms.locfileid: "68018111"
 |**connecttimeout**|**int**|Impostazione del timeout per la connessione al server.|  
 |**querytimeout**|**int**|Impostazione del timeout per le query eseguite sul server.|  
 |**srvnetname**|**char(30)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**isremote**|**bit**|1 = Server remoto.<br /><br /> 0 = Server collegato.|  
-|**rpc**|**bit**|1 = **sp_serveroption@rpc** impostata su **true** oppure **su**.<br /><br /> 0 = **sp_serveroption@rpc** impostata su **false** oppure **off**.|  
-|**pub**|**bit**|1 = **sp_serveroption@pub** impostata su **true** oppure **su**.<br /><br /> 0 = **sp_serveroption@pub** impostata su **false** oppure **off**.|  
-|**sub**|**bit**|1 = **sp_serveroption@sub** impostata su **true** oppure **su**.<br /><br /> 0 = **sp_serveroption@sub** impostata su **false** oppure **off**.|  
-|**dist**|**bit**|1 = **sp_serveroption@dist** impostata su **true** oppure **su**.<br /><br /> 0 = **sp_serveroption@dist** impostata su **false** oppure **off**.|  
-|**dpub**|**bit**|1 = **sp_serveroption@dpub** impostata su **true** oppure **su**.<br /><br /> 0 = **sp_serveroption@dpub** impostata su **false** oppure **off**.|  
-|**rpcout**|**bit**|1 =  **sp_serveroption@rpc out** impostata su **true** oppure **su**.<br /><br /> 0 =  **sp_serveroption@rpc out** impostata su **false** oppure **off**.|  
-|**DataAccess**|**bit**|1 =  **sp_serveroption@data access** impostata su **true** oppure **su**.<br /><br /> 0 =  **sp_serveroption@data access** impostata su **false** oppure **off**.|  
-|**collationcompatible**|**bit**|1 =  **sp_serveroption@collation compatibili** impostata su **true** oppure **su**.<br /><br /> 0 =  **sp_serveroption@collation compatibili** impostata su **false** oppure **off**.|  
-|**system**|**bit**|1 = **sp_serveroption@system** impostata su **true** oppure **su**.<br /><br /> 0 = **sp_serveroption@system** impostata su **false** oppure **off**.|  
-|**UseRemoteCollation**|**bit**|1 =  **sp_serveroption@remote regole di confronto** impostata su **true** oppure **su**.<br /><br /> 0 =  **sp_serveroption@remote regole di confronto** impostata su **false** oppure **off**.|  
-|**lazyschemavalidation**|**bit**|1 =  **sp_serveroption@lazy convalida dello schema** impostata su **true** oppure **su**.<br /><br /> 0 =  **sp_serveroption@lazy convalida dello schema** impostata su **false** oppure **off**.|  
-|**regole di confronto**|**sysname**|Regole di confronto del server come impostato da  **sp_serveroption@collation nome**.|  
+|**IsRemote**|**bit**|1 = Server remoto.<br /><br /> 0 = Server collegato.|  
+|**rpc**|**bit**|1 = **sp_serveroption\@RPC** è impostata su **true** o **on**.<br /><br /> 0 = **sp_serveroption\@RPC** è impostata su **false** o **off**.|  
+|**pub**|**bit**|1 = **sp_serveroption\@pub** è impostata su **true** o **on**.<br /><br /> 0 = **sp_serveroption\@pub** è impostata su **false** o **off**.|  
+|**sub**|**bit**|1 = **sp_serveroption\@Sub** è impostata su **true** o **on**.<br /><br /> 0 = **sp_serveroption\@Sub** è impostata su **false** o **off**.|  
+|**dist**|**bit**|1 = **sp_serveroption\@dist** è impostata su **true** o **on**.<br /><br /> 0 = **sp_serveroption\@dist** è impostata su **false** o **off**.|  
+|**dpub**|**bit**|1 = **sp_serveroption\@dpub** è impostata su **true** o **on**.<br /><br /> 0 = **sp_serveroption\@dpub** è impostata su **false** o **off**.|  
+|**rpcout**|**bit**|1 = **sp_serveroption\@RPC out** è impostata su **true** o **on**.<br /><br /> 0 = **sp_serveroption\@RPC out** è impostata su **false** o **off**.|  
+|**DataAccess**|**bit**|1 = **sp_serveroption\@Data Access** è impostata su **true** o **on**.<br /><br /> 0 = **sp_serveroption\@Data Access** è impostata su **false** o **off**.|  
+|**CollationCompatible**|**bit**|1 = **sp_serveroption\@collation compatible** è impostata su **true** o **on**.<br /><br /> 0 = **sp_serveroption\@collation compatible** è impostata su **false** o **off**.|  
+|**system**|**bit**|1 = **sp_serveroption\@System** è impostata su **true** o **on**.<br /><br /> 0 = **sp_serveroption\@System** è impostata su **false** o **off**.|  
+|**UseRemoteCollation**|**bit**|1 = **sp_serveroption\@remote collation** è impostata su **true** o **on**.<br /><br /> 0 = **sp_serveroption\@remote collation** è impostata su **false** o **off**.|  
+|**lazyschemavalidation**|**bit**|1 = **la\@convalida dello schema lazy di sp_serveroption** è impostata su **true** o **on**.<br /><br /> 0 = **la\@convalida dello schema lazy di sp_serveroption** è impostata su **false** o **off**.|  
+|**confronto**|**sysname**|Regole di confronto del server impostate **dal\@nome delle regole di confronto di sp_serveroption**.|  
 |**nonsqlsub**|bit|0 = il server è un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 1 = il server non è un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Mapping di tabelle di sistema a viste di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Mapping di tabelle di sistema a &#40;viste di sistema Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Viste della compatibilità &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

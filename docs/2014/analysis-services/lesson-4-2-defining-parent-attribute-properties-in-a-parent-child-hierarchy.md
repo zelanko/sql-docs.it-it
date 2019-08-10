@@ -1,5 +1,5 @@
 ---
-title: Definizione delle proprietà degli attributo padre in una gerarchia padre-figlio | Microsoft Docs
+title: Definizione delle proprietà degli attributi padre in una gerarchia padre-figlio | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 613156430d7c85977aee2e147c5b158124316a94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8688e40fc0075bded60069bea24e8114dd51fa0f
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078672"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888383"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Definizione delle proprietà degli attributi padre in una gerarchia padre-figlio
   Una gerarchia padre-figlio è una gerarchia in una dimensione basata su due colonne di tabella. Nell'insieme, queste colonne definiscono le relazioni gerarchiche tra i membri della dimensione. La prima colonna, denominata *colonna chiave membro*, identifica ogni membro della dimensione. L'altra colonna, denominata *colonna padre*, identifica l'elemento padre di ogni membro della dimensione. La proprietà **NamingTemplate** di un attributo padre consente di determinare il nome di ogni livello nella gerarchia padre-figlio e la proprietà **MembersWithData** consente di determinare se i dati del membro padre devono essere visualizzati.  
   
- Per altre informazioni, vedere [gerarchia padre-figlio](multidimensional-models/parent-child-dimension.md), [attributi nelle gerarchie padre-figlio](multidimensional-models/parent-child-dimension-attributes.md)  
+ Per ulteriori informazioni, vedere [gerarchia padre-figlio](multidimensional-models/parent-child-dimension.md), [attributi nelle gerarchie padre-figlio](multidimensional-models/parent-child-dimension-attributes.md)  
   
 > [!NOTE]  
 >  Quando si utilizza la Creazione guidata dimensione per creare una dimensione, vengono riconosciute le tabelle che presentano relazioni padre-figlio e viene definita automaticamente la gerarchia padre-figlio.  
@@ -57,7 +57,7 @@ ms.locfileid: "66078672"
   
      Nell'immagine seguente viene illustrata la gerarchia Employees espansa.  
   
-10. ![Tabella pivot che mostra gerarchia Employees](../../2014/tutorials/media/l4-employee-1.gif "tabella pivot che mostra gerarchia Employees")  
+10. ![Tabella pivot che mostra la gerarchia Employees](../../2014/tutorials/media/l4-employee-1.gif "Tabella pivot che mostra la gerarchia Employees")  
   
      Si noti che le vendite di ogni responsabile nel Livello 03 vengono visualizzate anche nel Livello 04. dal momento che ogni responsabile è anche un dipendente di altri responsabili. Nell'attività successiva gli importi delle vendite verranno nascosti.  
   
@@ -69,17 +69,17 @@ ms.locfileid: "66078672"
   
      Si noti l'icona particolare dell'attributo. Tale icona indica che l'attributo rappresenta la chiave del padre in una gerarchia padre-figlio. Si noti anche che nella finestra Proprietà la proprietà **Usage** è definita come **Padre**. Questa proprietà è stata impostata con la Creazione guidata dimensione durante la progettazione della dimensione. La procedura guidata ha rilevato automaticamente la relazione padre-figlio.  
   
-3.  Nella finestra Proprietà fare clic sul pulsante con i puntini di sospensione (**...**) nella cella della proprietà **NamingTemplate** .  
+3.  Nella finestra Proprietà fare clic sul pulsante con i puntini di sospensione ( **...** ) nella cella della proprietà **NamingTemplate** .  
   
      Nella finestra di dialogo **Modello denominazione livelli** viene definito il modello di denominazione dei livelli che consente di determinare i nomi dei livelli nella gerarchia padre-figlio visualizzati durante l'esplorazione dei cubi.  
   
-4.  Nella seconda riga, ovvero nella riga contenente **\***, digitare **Employee Level \*** nella colonna **Nome** e fare clic sulla terza riga.  
+4.  Nella seconda riga, ovvero nella riga contenente **\*** , digitare **Employee Level \*** nella colonna **Nome** e fare clic sulla terza riga.  
   
      Si noti che alla voce **Risultato** ogni livello verrà denominato "Employee Level" seguito da un numero progressivo.  
   
      La figura seguente illustrale modifiche apportate nella finestra di dialogo **Modello denominazione livelli** .  
   
-     ![Finestra di dialogo Modello denominazione livello](../../2014/tutorials/media/l4-namingtemplate.gif "nella finestra di dialogo Modello denominazione livelli")  
+     Finestra di ![dialogo Modello denominazione livelli] Finestra di (../../2014/tutorials/media/l4-namingtemplate.gif "dialogo Modello denominazione livelli")  
   
 5.  Fare clic su **OK**.  
   
@@ -101,10 +101,10 @@ ms.locfileid: "66078672"
   
      Nella figura seguente vengono illustrate le modifiche apportate alla gerarchia Employee. Si noti che tephen Y. Jiang non viene più visualizzato come dipendente di se stesso.  
   
-     ![Gerarchia Employees modificata](../../2014/tutorials/media/l4-employee-2.png "gerarchia Employees modificata")  
+     ![Gerarchia Employees modificata](../../2014/tutorials/media/l4-employee-2.png "Gerarchia Employees modificata")  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Raggruppamento automatico dei membri degli attributi](../analysis-services/lesson-4-3-automatically-grouping-attribute-members.md)  
+ [Raggruppamento automatico dei membri degli attributi](https://docs.microsoft.com/analysis-services/lesson-4-3-automatically-grouping-attribute-members)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gerarchia padre-figlio](multidimensional-models/parent-child-dimension.md)   

@@ -1,5 +1,5 @@
 ---
-title: Editor attività Query di Data Mining (scheda Output) | Microsoft Docs
+title: Editor attività query di data mining (scheda output) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ ms.assetid: 62f9e015-6fe0-4396-ad90-3ad51bf00025
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: db02b92ffead56451e72c7a1d564c2c9956d2ecc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b381ec722125bfa6ad8a4b8102e2fa3b7a5c309
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059783"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890464"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>Editor attività Query di data mining (Scheda Output)
   Utilizzare la scheda **Output** della finestra di dialogo **Editor attività Query di data mining** per specificare la destinazione della query di stima.  
   
- Per informazioni sull'implementazione di data mining nei pacchetti, vedere [Attività Query di data mining](control-flow/data-mining-query-task.md) e [Soluzioni di data mining](../analysis-services/data-mining/data-mining-solutions.md).  
+ Per informazioni sull'implementazione di data mining nei pacchetti, vedere [Attività Query di data mining](control-flow/data-mining-query-task.md) e [Soluzioni di data mining](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ## <a name="general-options"></a>Opzioni generali  
  **Name**  
@@ -53,6 +53,6 @@ ms.locfileid: "66059783"
  [Guida di riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor attività Query di data mining &#40;scheda Modello di data mining&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
  [Editor attività Query di data mining &#40;scheda Query&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
- [Progettazione modelli di data mining](../analysis-services/data-mining/data-mining-designer.md)  
+ [Progettazione modelli di data mining](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

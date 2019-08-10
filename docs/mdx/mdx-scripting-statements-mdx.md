@@ -1,5 +1,5 @@
 ---
-title: Istruzioni (MDX MultiDimensional Expression) di Scripting MDX | Microsoft Docs
+title: Istruzioni di scripting MDX (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4799cf21da7acec0e909f302a68a95b0eb23e2d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5564c73ec8d10b37285c1d3e7e7f65fd295894a8
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116234"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893334"
 ---
 # <a name="mdx-scripting-statements-mdx"></a>Istruzioni di scripting MDX (MDX)
 
@@ -26,15 +26,15 @@ ms.locfileid: "68116234"
 |-----------|-----------------|  
 |[Istruzione CALCULATE &#40;MDX&#41;](../mdx/mdx-scripting-calculate.md)|Calcola un sottocubo, determinando facoltativamente l'ordine di valutazione delle dimensioni incluse nel sottocubo stesso.|  
 |[Istruzione CASE &#40;MDX&#41;](../mdx/case-statement-mdx.md)|Consente di restituire valori specifici da più confronti in base a condizioni specifiche.|  
-|[Parola chiave EXISTING &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)|Forza la valutazione di un determinato set all'interno del contesto corrente.|  
+|[Parola chiave EXISTING &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword)|Forza la valutazione di un determinato set all'interno del contesto corrente.|  
 |[Istruzione FREEZE &#40;MDX&#41;](../mdx/mdx-scripting-freeze.md)|Blocca sui valori correnti i valori delle celle del sottocubo specificato.|  
 |[Istruzione IF &#40;MDX&#41;](../mdx/mdx-scripting-if.md)|Esegue una determinata istruzione se la condizione specificata è soddisfatta.|  
 |[Istruzione SCOPE &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)|Limita l'ambito delle istruzioni MDX specificate a un sottocubo specifico.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alle istruzioni MDX &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
- [Istruzioni di definizione dei dati MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [Istruzioni MDX di manipolazione dei dati &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Nozioni fondamentali sullo scripting MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [Informazioni di riferimento &#40;sull'istruzione MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
+ [MDX-istruzioni &#40;per la definizione dei dati MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [MDX istruzioni &#40;di manipolazione dei dati MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Nozioni fondamentali sullo scripting MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services)  
   
   

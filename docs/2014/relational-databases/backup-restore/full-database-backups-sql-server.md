@@ -19,12 +19,12 @@ ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bad28d9b10d09cbf08e3568d9f994c7d5b84dfda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 713e2e507fd98f6d3d87fe60e075e587725ddaf2
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922051"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890351"
 ---
 # <a name="full-database-backups-sql-server"></a>Backup completo del database (SQL Server)
   Un backup completo del database consente di eseguire il backup dell'intero database. Tale backup include la parte del log delle transazioni sufficiente per consentire il recupero del database completo dopo il ripristino del backup completo del database. I backup completi del database rappresentano il database al momento del completamento del backup.  
@@ -104,6 +104,6 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Backup e ripristino di database SQL Server](back-up-and-restore-of-sql-server-databases.md)   
  [Panoramica del backup &#40;SQL Server&#41;](backup-overview-sql-server.md)   
- [Backup e ripristino di database di Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
+ [Backup e ripristino di database di Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)  
   
   

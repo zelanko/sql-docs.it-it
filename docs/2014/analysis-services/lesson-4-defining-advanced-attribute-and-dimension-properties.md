@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 4: La definizione di Advanced attributo e proprietà dimensione | Microsoft Docs'
+title: 'Lezione 4: Definizione di proprietà avanzate per attributi e dimensioni | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 0e86b9be-e47d-4bb4-87eb-136ff3a61aef
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a8b81a5d2e8bfe57c1ae8d8464b5af9140dd9dbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1da73bb522aa3fbf825841e637f01b0c455f09c2
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078634"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888261"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lezione 4: Definizione delle proprietà avanzate di attributi e dimensioni
   In questa lezione verranno illustrate le procedure per l'utilizzo di alcune proprietà avanzate degli attributi, delle gerarchie degli attribuiti e delle proprietà delle dimensioni.  
@@ -29,12 +29,12 @@ ms.locfileid: "66078634"
  In questa attività vengono illustrate le procedure per aprire, controllare e distribuire una versione modificata del progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial, con più gruppi di misure e dimensioni aggiuntive.  
   
  [Definizione delle proprietà degli attributi padre in una gerarchia padre-figlio](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
- In questa attività vengono illustrate le procedure per definire i nomi dei livelli in una dimensione padre-figlio e per specificare se i dati correlati ai membri padre vengono visualizzati. Per altre informazioni, vedere [gerarchia padre-figlio](multidimensional-models/parent-child-dimension.md) e [attributi nelle gerarchie padre-figlio](multidimensional-models/parent-child-dimension-attributes.md).  
+ In questa attività vengono illustrate le procedure per definire i nomi dei livelli in una dimensione padre-figlio e per specificare se i dati correlati ai membri padre vengono visualizzati. Per ulteriori informazioni, vedere [gerarchia padre-figlio](multidimensional-models/parent-child-dimension.md) e [attributi nelle gerarchie padre-figlio](multidimensional-models/parent-child-dimension-attributes.md).  
   
  [Raggruppamento automatico dei membri degli attributi](lesson-4-3-automatically-grouping-attribute-members.md)  
  In questa attività vengono illustrate le procedure per creare automaticamente gruppi di membri dell'attributo in base alla distribuzione dei membri all'interno della gerarchia dell'attributo. Per altre informazioni, vedere [Raggruppare membri di attributo &#40;discretizzazione&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
   
- [Come nascondere e disabilitare le gerarchie degli attributi](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
+ [Come nascondere e disabilitare le gerarchie degli attributi](https://docs.microsoft.com/analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies)  
  In questa attività vengono illustrate le procedure per disabilitare o nascondere le gerarchie degli attributi.  
   
  [Ordinamento dei membri dell'attributo in base a un attributo secondario](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
@@ -47,11 +47,11 @@ ms.locfileid: "66078634"
  In questa attività vengono configurate le proprietà UnknownMember e UnknownMemberName per gestire le condizioni di errore determinate dai membri Null della dimensione.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 5: Definizione delle relazioni tra dimensioni e gruppi di misure](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+ [Lezione 5: Definizione di relazioni tra dimensioni e gruppi di misure](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Scenario di Analysis Services Tutorial](analysis-services-tutorial-scenario.md)   
- [Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [Esercitazione di modellazione &#40;multidimensionale Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

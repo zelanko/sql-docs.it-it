@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 299004e869aeab826e5f1207a0ecc4d31639e2c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f373f626d778c4d77ec5843dca5bb11da728451d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037944"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887451"
 ---
 # <a name="value-mdx"></a>Value (MDX)
 
@@ -32,7 +32,7 @@ Member_Expression[.Value]
  Espressione MDX (Multidimensional Expression) valida che restituisce un membro.  
   
 ## <a name="remarks"></a>Note  
- Il **valore** funzione restituisce il valore del membro specificato sotto forma di stringa. Il **valore** argomento è facoltativo perché il valore di un membro è la proprietà predefinita di un membro e valore restituito per un membro se non viene specificato nessun altro valore. Per altre informazioni sulle proprietà dei membri, vedere [proprietà intrinseche dei membri &#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) e [le proprietà dei membri definite dall'utente &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
+ La funzione **value** restituisce il valore del membro specificato sotto forma di stringa. L'argomento **value** è facoltativo perché il valore di un membro è la proprietà predefinita di un membro e è un valore che viene restituito per un membro se non viene specificato alcun altro valore. Per ulteriori informazioni sulle proprietà dei membri, vedere [proprietà &#40;intrinseche dei&#41; membri MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) e [proprietà &#40;dei membri definite&#41;dall'utente MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene restituito il valore di un membro, così come viene esplicitamente restituito il nome di tale membro.  
@@ -56,7 +56,7 @@ from [Adventure Works]
  [MemberValue &#40;MDX&#41;](../mdx/membervalue-mdx.md)   
  [Properties &#40;MDX&#41;](../mdx/properties-mdx.md)   
  [Nome &#40;MDX&#41;](../mdx/name-mdx.md)   
- [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
+ [&#40;MDX univoco&#41;](../mdx/uniquename-mdx.md)   
  [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

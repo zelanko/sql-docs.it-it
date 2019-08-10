@@ -22,12 +22,12 @@ ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 96eab9a3b388c8cb68203dce22e8bd1abc013e4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 586a1315c2d8e73d5010964864560db0fc0012fd
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922942"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890812"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Backup e ripristino di database SQL Server
   In questo argomento vengono descritti i vantaggi dell'esecuzione del backup dei database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e illustrati i termini di base del backup e del ripristino. Vengono inoltre presentate alcune strategie di backup e ripristino per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e alcune considerazioni relative alla sicurezza per il backup e il ripristino di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -101,7 +101,7 @@ ms.locfileid: "62922942"
   
 
   
-##  <a name="BnrStrategies"></a> Introduzione alle strategie di ripristino e Backup  
+##  <a name="BnrStrategies"></a>Introduzione alle strategie di backup e ripristino  
  Il backup e il ripristino dei dati devono essere personalizzati per uno specifico ambiente e devono funzionare con le risorse disponibili. Per un utilizzo affidabile delle funzionalità di backup e ripristino è pertanto necessaria un'apposita strategia. Una strategia ben progettata a tale scopo ottimizza la disponibilità dei dati e ne riduce al minimo la perdita, rispettando al contempo le esigenze aziendali specifiche.  
   
 > [!IMPORTANT]  
@@ -150,7 +150,7 @@ ms.locfileid: "62922942"
   
      Per altre informazioni, vedere [Stimare le dimensioni di un backup completo del database](#EstimateDbBuSize), più avanti in questa sezione.  
   
-####  <a name="EstimateDbBuSize"></a> Stimare le dimensioni di un Backup completo del Database  
+####  <a name="EstimateDbBuSize"></a>Stima delle dimensioni di un backup completo del database  
  Prima di implementare una strategia di backup e ripristino, stimare quanto spazio su disco verrà utilizzato da un backup del database completo. Con l'operazione di backup i dati contenuti nel database vengono copiati nel file di backup. Poiché il backup include soltanto i dati presenti nel database, ma non lo spazio inutilizzato, le dimensioni del backup risultano di solito inferiori a quelle del database originale. È possibile stimare la dimensione di un backup del database completo tramite la stored procedure di sistema **sp_spaceused**. Per altre informazioni, vedere [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql).  
   
 ### <a name="schedule-backups"></a>Pianificare le operazioni di backup  
@@ -226,7 +226,7 @@ ms.locfileid: "62922942"
 ### <a name="restoring-data-backups"></a>Ripristino di backup dei dati  
  **Utilizzo di SQL Server Management Studio**  
   
--   [Ripristinare un Backup del Database &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [Ripristinare un backup &#40;del database SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [Ripristinare un database in una nuova posizione &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)  
   
@@ -277,7 +277,7 @@ ms.locfileid: "62922942"
  [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Backup e ripristino di database di Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)   
+ [Backup e ripristino di database di Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
  [Backup e ripristino di indici e cataloghi full-text](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [Backup e ripristino di database replicati](../replication/administration/back-up-and-restore-replicated-databases.md)   
  [Log delle transazioni &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   

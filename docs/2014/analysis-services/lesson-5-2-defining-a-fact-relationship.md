@@ -1,5 +1,5 @@
 ---
-title: La definizione di una relazione di tipo fatti | Microsoft Docs
+title: Definizione di una relazione di tipo fact | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 726b5fa4295d68c5b74d4fb3cac711126a8e570b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26f92fffadba9ceed03518d07fb3f27339ebff38
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078570"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888234"
 ---
 # <a name="defining-a-fact-relationship"></a>Definizione di una relazione di tipo Fatti
   Talvolta può essere necessario dimensionare le misure in base ai dati contenuti nella tabella dei fatti o eseguire query per trovare informazioni correlate specifiche aggiuntive, come ad esempio i numeri delle fatture o degli ordini di acquisto collegati a operazioni di vendita specifiche. Quando viene definita una dimensione basata su un elemento della tabella dei fatti di questo tipo, la dimensione viene denominata *dimensione dei fatti*. Le dimensioni dei fatti sono inoltre note come dimensioni degeneri. Le dimensioni dei fatti sono utili per raggruppare righe di tabelle dei fatti collegate, come ad esempio tutte le righe collegate a un particolare numero di fattura. Sebbene sia possibile inserire queste informazioni in una tabella della dimensione separata del database relazionale, la creazione di una tale tabella non si rivela vantaggiosa in quanto la tabella della dimensione aumenterebbe allo stesso modo della tabella dei fatti determinando un'inutile duplicazione dei dati nonché un'inutile complessità.  
   
- In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]è possibile determinare se duplicare i dati delle dimensioni dei fatti in una struttura della dimensione MOLAP per aumentare le prestazioni delle query o se definire la dimensione dei fatti come una dimensione ROLAP per risparmiare spazio di archiviazione a discapito delle prestazioni delle query. Quando si archivia una dimensione con modalità MOLAP, tutti i membri della dimensione vengono archiviati nell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in una struttura MOLAP a compressione elevata, oltre a essere archiviati nelle partizioni del gruppo di misure. Quando si archivia una dimensione con la modalità di archiviazione ROLAP, solo la definizione di dimensione viene archiviata in MOLAP di membri della struttura di dimensione vengono eseguite query dalla tabella dei fatti relazionale sottostante in fase di query. È possibile decidere la modalità di archiviazione appropriata in base alla frequenza con la quale vengono eseguite query sulla dimensione dei fatti, al numero delle righe restituite da una query tipica, alle prestazioni delle query e ai costi di elaborazione. Se una dimensione viene definita come ROLAP non è necessario che anche tutti i cubi in cui viene utilizzata la dimensione siano archiviati tramite la modalità di archiviazione ROLAP. La modalità di archiviazione di ogni dimensione può essere configurata in modo indipendente.  
+ In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]è possibile determinare se duplicare i dati delle dimensioni dei fatti in una struttura della dimensione MOLAP per aumentare le prestazioni delle query o se definire la dimensione dei fatti come una dimensione ROLAP per risparmiare spazio di archiviazione a discapito delle prestazioni delle query. Quando si archivia una dimensione con modalità MOLAP, tutti i membri della dimensione vengono archiviati nell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in una struttura MOLAP a compressione elevata, oltre a essere archiviati nelle partizioni del gruppo di misure. Quando si archivia una dimensione con la modalità di archiviazione ROLAP, solo la definizione della dimensione viene archiviata nella struttura MOLAP. i membri della dimensione stessi vengono sottoposti a query dalla tabella dei fatti relazionale sottostante in fase di query. È possibile decidere la modalità di archiviazione appropriata in base alla frequenza con la quale vengono eseguite query sulla dimensione dei fatti, al numero delle righe restituite da una query tipica, alle prestazioni delle query e ai costi di elaborazione. Se una dimensione viene definita come ROLAP non è necessario che anche tutti i cubi in cui viene utilizzata la dimensione siano archiviati tramite la modalità di archiviazione ROLAP. La modalità di archiviazione di ogni dimensione può essere configurata in modo indipendente.  
   
  Quando si definisce una dimensione dei fatti, è possibile definire la relazione tra la dimensione dei fatti e il gruppo di misure come una relazione di tipo Fatti. Alle relazioni di tipo Fatti si applicano i vincoli seguenti:  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66078570"
   
 7.  Nell'elenco **Colonna nome** selezionare **SalesOrderLineNumber**.  
   
-8.  Scegliere **Avanti**.  
+8.  Fare clic su **Avanti**.  
   
 9. Nella pagina **Selezione tabelle correlate** deselezionare le caselle di controllo accanto a tutte le tabelle e quindi fare clic su **Avanti**.  
   
@@ -61,17 +61,17 @@ ms.locfileid: "66078570"
   
 12. Nella pagina **Completamento procedura guidata** modificare il nome in **Internet Sales Order Details** e quindi fare clic su **Fine** per completare la procedura guidata.  
   
-13. Scegliere **Salva tutti** dal menu **File**.  
+13. Nel menu **File** fare clic su **Salva tutto**.  
   
-14. Nel **attributi** riquadro della finestra di progettazione dimensioni per il **Internet Sales Order Details** dimensione, selezionare **Sales Order Number**e quindi modificare il  **Nome** proprietà nella finestra proprietà in `Item Description.`  
+14. Nel riquadro **attributi** di Progettazione dimensioni per la dimensione **Internet Sales Order** Details, selezionare **Sales Order Number**, quindi modificare la proprietà **Name** nel finestra Proprietà`Item Description.`  
   
-15. Nel **NameColumn** proprietà di cella, fare clic sul pulsante **(...)** . Nella finestra di dialogo **Colonna nome** selezionare **Product** dall'elenco **Tabella di origine** , selezionare **EnglishProductName** per **Colonna di origine**e quindi fare clic su **OK**.  
+15. Nella cella della proprietà **NameColumn** fare clic sul pulsante Sfoglia **(...)** . Nella finestra di dialogo **Colonna nome** selezionare **Product** dall'elenco **Tabella di origine** , selezionare **EnglishProductName** per **Colonna di origine**e quindi fare clic su **OK**.  
   
 16. Aggiungere l'attributo **Sales Order Number** alla dimensione trascinando la colonna **SalesOrderNumber** dalla tabella **InternetSales** del riquadro **Vista origine dati** al riquadro **Attributi** .  
   
-17. Modificare il **Name** proprietà del nuovo **Sales Order Number** dell'attributo `Order Number`e modificare il **OrderBy** proprietà **chiave**.  
+17. Modificare la proprietà **Name** del nuovo attributo **Sales Order Number** in `Order Number`e modificare la proprietà **OrderBy** in **Key**.  
   
-18. Nel **gerarchie** riquadro, creare un **Internet Sales Orders** gerarchia utente che contiene la `Order Number` e **Item Description** livelli, nell'ordine indicato.  
+18. Nel riquadro **gerarchie** creare una gerarchia utente **Internet Sales Orders** contenente i livelli di `Order Number` **Descrizione dell'elemento** e, in questo ordine.  
   
 19. Nel riquadro **Attributi** selezionare **Internet Sales Order Details**e quindi controllare il valore della proprietà **StorageMode** nella finestra Proprietà.  
   
@@ -87,13 +87,13 @@ ms.locfileid: "66078570"
   
      Si noti che la dimensione del cubo **Internet Sales Order Details** viene configurata automaticamente come provvista di una relazione di tipo Fatti, indicata dall'icona univoca.  
   
-2.  Fare clic sul pulsante Sfoglia ( **...** ) nei **Item Description** cella all'intersezione tra il **Internet Sales** gruppo di misure e la **Internet Sales Order Details** dimensione, a Esaminare le proprietà di relazione di tipo fatti.  
+2.  Fare clic sul pulsante Sfoglia ( **...** ) nella cella **Descrizione elemento** , all'intersezione tra il gruppo di misure **Internet Sales** e la dimensione **Internet Sales Order Details** , per esaminare le proprietà della relazione di tipo fact.  
   
      Verrà visualizzata la finestra di dialogo **Definisci relazione** . Si noti che non è possibile configurare le proprietà.  
   
      L'immagine seguente illustra le proprietà della relazione di tipo Fatti nella finestra di dialogo **Definisci relazione** .  
   
-     ![Finestra di dialogo Definisci relazione](../../2014/tutorials/media/l5-factrelationship-2.gif "nella finestra di dialogo Definisci relazione")  
+     Finestra di ![dialogo Definisci relazione] Finestra di (../../2014/tutorials/media/l5-factrelationship-2.gif "dialogo Definisci relazione")  
   
 3.  Fare clic su **Annulla**.  
   
@@ -115,10 +115,10 @@ ms.locfileid: "66078570"
   
      Nell'immagine seguente viene illustrato il risultato dei passaggi precedenti.  
   
-     ![Dimensionamento di Internet Sales-Sales Amount](../../2014/tutorials/media/l5-factrelationship-3.gif "dimensionamento di Internet Sales-Sales Amount")  
+     ![Dimensionamento di Internet Sales-Sales Amount](../../2014/tutorials/media/l5-factrelationship-3.gif "Dimensionamento di Internet Sales-Sales Amount")  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Definizione di una relazione molti-a-molti](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  
+ [Definizione di una relazione molti-a-molti](https://docs.microsoft.com/analysis-services/lesson-5-3-defining-a-many-to-many-relationship)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Relazioni tra dimensioni](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

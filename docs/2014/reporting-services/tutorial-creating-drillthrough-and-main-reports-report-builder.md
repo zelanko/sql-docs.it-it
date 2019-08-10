@@ -10,32 +10,32 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ff48bab49e2ef0889bda054d6a1ff656f0916585
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b074195ecda842e0270f3cadce790be30fdce7cc
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66098881"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892378"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Esercitazione: Creazione di drill-through e report principali (Generatore Report)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Esercitazione: Creazione di report drill-through e report principali (Generatore report)
   In questa esercitazione verrà illustrato come creare due tipi di report: un report drill-through e un report principale. I dati di vendita di esempio utilizzati in questi report vengono recuperati da un cubo di Analysis Services. Nell'illustrazione seguente vengono mostrati i report creati.  
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
   
- La figura seguente mostra come il valore del campo Games and Toys nel report principale viene visualizzato nel titolo del report drill-through. I dati nel report drill-through riguardano la categoria di prodotto Games and Toys.  
+ Nella figura seguente viene illustrato il modo in cui il valore del campo, giochi e giocattoli, nel report principale, viene visualizzato nel titolo del report drill-through. I dati nel report drill-through riguardano la categoria di prodotto Games and Toys.  
   
  ![rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "rs_DrillthroughCubeTutorialParmExpr")  
   
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
  **Nel report drill-through si apprenderà come:**  
   
-1.  [Creare un Report matrice drill-through e un set di dati dalla tabella o dalla creazione guidata matrice](#DMatrixAndDataset)  
+1.  [Creazione di un report matrice drill-through e di un set di dati dalla creazione guidata tabella o matrice](#DMatrixAndDataset)  
   
     1.  [Specificare una connessione dati](#DConnection)  
   
-    2.  [Creare una Query MDX](#DMDXQuery)  
+    2.  [Creare una query MDX](#DMDXQuery)  
   
-    3.  [Organizzare i dati in gruppi](#DLayout)  
+    3.  [Organizzare i dati in stile gruppi](#DLayout)  
   
     4.  [Aggiungere subtotali e totali](#DTotals)  
   
@@ -43,43 +43,43 @@ ms.locfileid: "66098881"
   
 2.  [Formattare i dati come valuta](#DFormat)  
   
-3.  [Aggiungere colonne per presentare i valori vendite in grafici sparkline](#DSparkline)  
+3.  [Aggiungere colonne per visualizzare i valori delle vendite in grafici sparkline](#DSparkline)  
   
-4.  [Aggiungere un titolo Report con nome Product Category](#DReportTitle)  
+4.  [Aggiungi titolo rapporto con nome categoria prodotto](#DReportTitle)  
   
-5.  [Aggiornare le proprietà dei parametri](#DParameter)  
+5.  [Aggiornare le proprietà del parametro](#DParameter)  
   
-6.  [Salvare il Report in una raccolta di SharePoint](#DSave)  
+6.  [Salvare il report in una raccolta di SharePoint](#DSave)  
   
  **Nel report principale si apprenderà come:**  
   
-1.  [Creare il Report di matrice principale e il set di dati dalla tabella o dalla creazione guidata matrice](#MMatrixAndDataset)  
+1.  [Creare il report matrice principale e il set di dati dalla creazione guidata tabella o matrice](#MMatrixAndDataset)  
   
     1.  [Specificare una connessione dati](#MConnection)  
   
-    2.  [Creare una Query MDX](#MMDXQuery)  
+    2.  [Creare una query MDX](#MMDXQuery)  
   
-    3.  [Organizzare dati in gruppi](#MLayout)  
+    3.  [Organizzare i dati in gruppi](#MLayout)  
   
     4.  [Aggiungere subtotali e totali](#MTotals)  
   
     5.  [Scegliere uno stile](#MStyle)  
   
-2.  [Rimuovere la riga totale complessivo](#MGrandTotal)  
+2.  [Rimuovere la riga del totale complessivo](#MGrandTotal)  
   
-3.  [Configurare la casella di testo azione drill-through](#MDrillthrough)  
+3.  [Configurare l'azione della casella di testo per il drill-through](#MDrillthrough)  
   
 4.  [Sostituire i valori numerici con gli indicatori](#MIndicators)  
   
-5.  [Aggiornare le proprietà dei parametri](#MParameter)  
+5.  [Aggiornare le proprietà del parametro](#MParameter)  
   
-6.  [Aggiungere un titolo al Report](#MTitle)  
+6.  [Aggiungere un titolo al report](#MTitle)  
   
-7.  [Salvare il Report in una raccolta di SharePoint](#MSave)  
+7.  [Salvare il report in una raccolta di SharePoint](#MSave)  
   
 8.  [Eseguire i report principali e drill-through](#MRunReports)  
   
- Tempo stimato per completare questa esercitazione: 30 minuti.  
+ Tempo stimato per il completamento di questa esercitazione: 30 minuti.  
   
 ## <a name="requirements"></a>Requisiti  
  Questa esercitazione richiede l'accesso al cubo vendite Contoso. Questo requisito si applica sia al drill-through che ai report principali. Per altre informazioni sui requisiti, vedere [Prerequisiti per le esercitazioni &#40;Generatore report&#41;](../reporting-services/report-builder-tutorials.md).  
@@ -89,9 +89,9 @@ ms.locfileid: "66098881"
   
 #### <a name="to-create-a-new-report"></a>Per creare un nuovo report  
   
-1.  Fare clic su **avviare**, scegliere **programmi**, scegliere [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Generatore Report**, quindi fare clic su **Generatore Report**.  
+1.  Fare clic sul pulsante **Start**, scegliere **programmi** [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] , **Generatore report**e quindi fare clic su **Generatore report**.  
   
-     Il **introduttiva** verrà visualizzata la finestra di dialogo. Se non viene visualizzato, dal **Generatore Report** e fare clic **New**.  
+     Verrà visualizzata la finestra di dialogo **Introduzione** . Se non viene visualizzato, fare clic sul pulsante **Generatore report** , quindi su **nuovo**.  
   
 2.  Nel riquadro sinistro verificare che sia selezionata l'opzione **Nuovo report** .  
   
@@ -141,7 +141,7 @@ ms.locfileid: "66098881"
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. Scegliere **Avanti**.  
+14. Fare clic su **Avanti**.  
   
 ##  <a name="DMDXQuery"></a> 1b. Creare una query MDX  
  In un report, è possibile utilizzare un set di dati condiviso che dispone di una query predefinita oppure è possibile creare un set di dati incorporato da utilizzare solo nel report. In questa esercitazione si creerà un set di dati incorporato.  
@@ -153,7 +153,7 @@ ms.locfileid: "66098881"
 2.  Nella finestra di dialogo **Seleziona cubo** fare clic su Vendite, quindi fare clic su **OK**.  
   
     > [!TIP]  
-    >  Se non si vuole compilare manualmente la query MDX, fare clic sull'icona ![Switch to Design mode (Passa alla modalità progettazione)](../analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode(Passa alla modalità progettazione)"), impostare Progettazione query in modalità query, incollare l'MDX completato nella progettazione query, quindi procedere con il passaggio 6 in [Per creare il set di dati](#DSkip).  
+    >  Se non si vuole compilare manualmente la query MDX, fare clic sull'icona ![Switch to Design mode (Passa alla modalità progettazione)](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode(Passa alla modalità progettazione)"), impostare Progettazione query in modalità query, incollare l'MDX completato nella progettazione query, quindi procedere con il passaggio 6 in [Per creare il set di dati](#DSkip).  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -167,7 +167,7 @@ ms.locfileid: "66098881"
   
 5.  Nell'elenco dell'espressione filtro, espandere **Tutti i canali**, fare clic su **Online**, fare clic su **Rivenditore**, quindi fare clic su **OK**.  
   
-     La query include ora un filtro per includere solo queste canali: Online e rivenditore.  
+     La query include ora un filtro per includere solo questi canali: Online e rivenditore.  
   
 6.  Espandere la dimensione Territorio di vendita, quindi trascinare Gruppo territorio di vendita nella colonna **Gerarchia** , sotto **Nome canale**.  
   
@@ -196,7 +196,7 @@ ms.locfileid: "66098881"
     > [!NOTE]  
     >  Il parametro contiene i nomi di categorie di prodotto. Per visualizzare il report drill-through che viene aperto quando si fa clic sul collegamento drill-through nel report principale, è necessario essere connessi a un server di report.  
   
-###  <a name="DSkip"></a> Per creare il set di dati  
+###  <a name="DSkip"></a>Per creare il set di dati  
   
 1.  Trascinare Nome canale dalla dimensione Canale al riquadro dei dati.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "66098881"
   
 6.  Nella barra degli strumenti Progettazione query fare clic su **Esegui (!)** .  
   
-7.  Scegliere **Avanti**.  
+7.  Fare clic su **Avanti**.  
   
 ##  <a name="DLayout"></a> 1c. Organizzare i dati in gruppi  
  Quando si selezionano dei campi in cui raggruppare i dati, si progetta una matrice con righe e colonne che visualizzano dati dettagliati e dati aggregati.  
@@ -236,7 +236,7 @@ ms.locfileid: "66098881"
   
      I passaggi 4 e 5 consentono di specificare i dati da visualizzare nella matrice.  
   
-6.  Scegliere **Avanti**.  
+6.  Fare clic su **Avanti**.  
   
 ##  <a name="DTotals"></a> 1d. Aggiungere subtotali e totali  
  Dopo avere creato i gruppi, è possibile aggiungere e formattare delle righe nelle quali visualizzare i valori di aggregazione per i campi. È anche possibile scegliere se mostrare tutti i dati o lasciare che sia l'utente a espandere e comprimere in modo interattivo i dati raggruppati.  
@@ -247,14 +247,14 @@ ms.locfileid: "66098881"
   
      Nel riquadro di anteprima della creazione guidata viene visualizzata una matrice con quattro righe.  
   
-2.  Scegliere **Avanti**.  
+2.  Fare clic su **Avanti**.  
   
-##  <a name="DStyle"></a> 1e. Scegliere uno stile  
+##  <a name="DStyle"></a>1e. Scegliere uno stile  
  Uno stile specifica lo stile del carattere, il set di colori e uno stile del bordo.  
   
 #### <a name="to-specify-a-style"></a>Per specificare uno stile  
   
-1.  Nel **scegliere uno stile** pagina, nel riquadro stili, selezionare ardesia.  
+1.  Nel riquadro Stili della pagina **scegliere uno stile** selezionare Slate.  
   
 2.  Scegliere **Fine**.  
   
@@ -389,12 +389,12 @@ ms.locfileid: "66098881"
   
 7.  Fare clic su **Salva**.  
   
-##  <a name="MMatrixAndDataset"></a> 1. Creare un nuovo Report tabella o procedura guidata matrice  
+##  <a name="MMatrixAndDataset"></a> 1. Creazione di un nuovo report da Creazione guidata tabella o matrice  
  Dalla finestra di dialogo **Attività iniziali** creare un report matrice tramite **Creazione guidata tabella o matrice**.  
   
 #### <a name="to-create-a-new-report"></a>Per creare un nuovo report  
   
-1.  Fare clic su **avviare**, scegliere **programmi**, scegliere [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Generatore Report**, quindi fare clic su **Generatore Report**.  
+1.  Fare clic sul pulsante **Start**, scegliere **programmi** [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] , **Generatore report**e quindi fare clic su **Generatore report**.  
   
 2.  Nella finestra di dialogo **Attività iniziali** verificare che l'opzione **Nuovo report** sia selezionata e fare clic su **Creazione guidata tabella o matrice**.  
   
@@ -435,7 +435,7 @@ ms.locfileid: "66098881"
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. Scegliere **Avanti**.  
+14. Fare clic su **Avanti**.  
   
 ##  <a name="MMDXQuery"></a> 1b. Creare una query MDX  
  Quindi creare un set di dati incorporato. A tale scopo, si utilizzerà Progettazione query per creare filtri, parametri, membri calcolati e il set di dati stesso.  
@@ -447,7 +447,7 @@ ms.locfileid: "66098881"
 2.  Nella finestra di dialogo **Seleziona cubo** fare clic su Vendite, quindi fare clic su **OK**.  
   
     > [!TIP]  
-    >  Se non si vuole compilare manualmente la query MDX, fare clic sull'icona ![Switch to Design mode (Passa alla modalità progettazione)](../analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode (Passa alla modalità progettazione)"), impostare Progettazione query in modalità query, incollare l'MDX completato nella progettazione query, quindi procedere con il passaggio 5 in [Per creare il set di dati](#MSkip).  
+    >  Se non si vuole compilare manualmente la query MDX, fare clic sull'icona ![Switch to Design mode (Passa alla modalità progettazione)](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode (Passa alla modalità progettazione)"), impostare Progettazione query in modalità query, incollare l'MDX completato nella progettazione query, quindi procedere con il passaggio 5 in [Per creare il set di dati](#MSkip).  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -461,7 +461,7 @@ ms.locfileid: "66098881"
   
 5.  Nell'elenco dell'espressione filtro, espandere **Tutti i canali**, fare clic su **Online** e **Rivenditore**, quindi fare clic su **OK**.  
   
-     La query include ora un filtro per includere solo queste canali: Online e rivenditore.  
+     La query include ora un filtro per includere solo questi canali: Online e rivenditore.  
   
 6.  Espandere la dimensione Territorio di vendita, quindi trascinare Gruppo territorio di vendita nella colonna **Gerarchia** , sotto **Nome canale**.  
   
@@ -519,7 +519,7 @@ ms.locfileid: "66098881"
   
 8.  Nella casella **Nome** digitare  **Fatturato netto**, quindi fare clic su **OK**. Nel riquadro Membri calcolati è elencato il membro calcolato di **Fatturato netto** .  
   
-###  <a name="MSkip"></a> Per creare il set di dati  
+###  <a name="MSkip"></a>Per creare il set di dati  
   
 1.  Trascinare Nome canale dalla dimensione Canale al riquadro dei dati.  
   
@@ -533,7 +533,7 @@ ms.locfileid: "66098881"
   
      Controllare il set di risultati della query  
   
-6.  Scegliere **Avanti**.  
+6.  Fare clic su **Avanti**.  
   
 ##  <a name="MLayout"></a> 1c. Organizzare i dati in gruppi  
  Quando si selezionano dei campi in cui raggruppare i dati, si progetta una matrice con righe e colonne che visualizza dati dettagliati e dati aggregati.  
@@ -561,16 +561,16 @@ ms.locfileid: "66098881"
   
 1.  Nella pagina **Scegliere il layout** , sotto **Opzioni**, verificare che la casella **Mostra subtotali e totali complessivi** sia selezionata.  
   
-     Nel riquadro di anteprima della creazione guidata viene visualizzata una matrice con quattro righe.  Quando si esegue il report, ogni riga viene visualizzata nel seguente modo: La prima riga è il gruppo di colonne, la seconda riga contiene le intestazioni di colonna, la terza riga contiene i dati della categoria del prodotto (`[Sum(Net_ QTY)]` e `[Sum(Net_Sales)]`, e la quarta riga contiene i totali.  
+     Nel riquadro di anteprima della creazione guidata viene visualizzata una matrice con quattro righe.  Quando si esegue il report, ogni riga viene visualizzata nel seguente modo: La prima riga è il gruppo di colonne, la seconda riga contiene le intestazioni di colonna, la terza riga contiene i dati della categoria`[Sum(Net_ QTY)]` di `[Sum(Net_Sales)]`prodotto (e e la quarta riga contiene i totali.  
   
-2.  Scegliere **Avanti**.  
+2.  Fare clic su **Avanti**.  
   
-##  <a name="MStyle"></a> 1e. Scegliere uno stile  
+##  <a name="MStyle"></a>1e. Scegliere uno stile  
  Applicare lo stile Ardesia al report. Si tratta dello stesso stile che utilizza il report drill-through.  
   
 #### <a name="to-specify-a-style"></a>Per specificare uno stile  
   
-1.  Nel **scegliere uno stile** pagina, nel riquadro stili, selezionare ardesia.  
+1.  Nel riquadro Stili della pagina **scegliere uno stile** selezionare Slate.  
   
 2.  Scegliere **Fine**.  
   
@@ -738,6 +738,6 @@ ms.locfileid: "66098881"
 5.  Facoltativamente, esplorare le altre categorie di prodotto facendo clic sui nomi.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esercitazioni su &#40;Generatore Report&#41;](report-builder-tutorials.md)  
+ [Esercitazioni &#40;Generatore report&#41;](report-builder-tutorials.md)  
   
   

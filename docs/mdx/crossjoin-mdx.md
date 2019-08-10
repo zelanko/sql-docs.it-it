@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 275a7546bae70ba329cff7af2df107e43c3d1b4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 63de71ae82e60b8ec7d8a39e18f89e6bd2393f2d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047164"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892941"
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin (MDX)
 
@@ -39,14 +39,14 @@ Set_Expression1 * Set_Expression2 [* ...n]
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
 ## <a name="remarks"></a>Note  
- Il **Crossjoin** funzione restituisce il prodotto incrociato di due o più set specificati. L'ordine delle tuple nel set di risultati dipende dall'ordine dei set da unire e dall'ordine dei membri corrispondenti. Ad esempio, quando il primo set è costituito {x1, x2,...,x..., x*n*}, e il secondo da {y1, y2,..., y*n*}, il prodotto incrociato di tali set è:  
+ La funzione **Crossjoin** restituisce il prodotto incrociato di due o più set specificati. L'ordine delle tuple nel set di risultati dipende dall'ordine dei set da unire e dall'ordine dei membri corrispondenti. Ad esempio, quando il primo set è costituito da {x1, X2,..., x*n*} e il secondo set è costituito da {Y1, Y2,..., y*n*}, il prodotto incrociato di questi set è:  
   
  {(x1, y1), (x1, y2),...,(x1, y*n*), (x2, y1), (x2, y2),...,  
   
  (x2, y*n*),..., (x*n*, y1), (x*n*, y2),..., (xn, y*n*)}  
   
 > [!IMPORTANT]  
->  Se i set nel cross join sono costituiti da tuple di gerarchie dell'attributo diverse contenute nella stessa dimensione, questa funzione restituirà solo le tuple effettivamente esistenti. Per altre informazioni, vedere [concetti chiave di MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
+>  Se i set nel cross join sono costituiti da tuple di gerarchie dell'attributo diverse contenute nella stessa dimensione, questa funzione restituirà solo le tuple effettivamente esistenti. Per ulteriori informazioni, vedere [concetti chiave in MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
   
 ## <a name="examples"></a>Esempi  
  Nella query seguente vengono illustrati esempi semplici dell'utilizzo della funzione Crossjoin sull'asse delle colonne e delle righe di una query:  

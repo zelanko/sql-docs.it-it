@@ -12,12 +12,12 @@ ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0a7498820bedf5d412fe227c268a6bef35d3d74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 533abbb47db40f16c0d7d5e4d85851975c89e23d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072517"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889327"
 ---
 # <a name="ragged-hierarchies"></a>Gerarchie incomplete
   Una gerarchia incompleta è una gerarchia definita dall'utente contenente un numero di livelli ineguale. Sono esempi comuni un organigramma in cui un responsabile di alto livello ha sia responsabili di reparto sia non responsabili come subalterni oppure le gerarchie geografiche composte da Paese-Regione-Città, in cui alcune città non presentano un elemento padre Stato o Provincia, ad esempio Washington D.C., Città del Vaticano o Nuova Delhi.  
@@ -28,7 +28,7 @@ ms.locfileid: "66072517"
   
  Innanzitutto, controllare il modo in cui l'applicazione client gestisce il percorso di drill-down. Ad esempio, tramite Excel i nomi padre vengono ripetuti come segnaposto per i valori mancanti. Per visualizzare questo comportamento, creare una tabella pivot utilizzando la dimensione Territorio vendita nel modello multidimensionale Adventure Works. In una tabella pivot che contiene gli attributi Gruppo, Paese e Regione per Territorio vendita, ai paesi che non presentano un valore relativo alla regione verrà assegnato un segnaposto, in questo caso una ripetizione dell'elemento padre al livello superiore (il nome del paese). Questo comportamento deriva dalla proprietà della stringa di connessione MDX Compatibility=1 che è fissa in Excel. Se il client non fornisce naturalmente i comportamenti di drill-down desiderati, è possibile impostare le proprietà nel modello, in modo da modificare almeno alcuni di questi comportamenti.  
   
- In questo argomento sono incluse le sezioni seguenti:  
+ Di seguito sono elencate le diverse sezioni di questo argomento:  
   
 -   [Approcci per la modifica della navigazione drill-down in una gerarchia incompleta](#bkmk_approach)  
   
@@ -41,9 +41,9 @@ ms.locfileid: "66072517"
   
 -   Utilizzare una gerarchia regolare ma impostare la proprietà `HideMemberIf` in ciascun livello, per specificare se un livello mancante viene visualizzato all'utente. Se si imposta la proprietà `HideMemberIf`, è necessario impostare anche la proprietà `MDXCompatibility` nella stringa di connessione, per sostituire i comportamenti di navigazione predefiniti. Le istruzioni per l'impostazione di queste proprietà sono fornite in questo argomento.  
   
--   Creare una gerarchia padre-figlio che gestisca esplicitamente i membri dei livelli. Per un'illustrazione della tecnica, vedere il post di blog [Ragged Hierarchy in SSAS](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/)(Gerarchia incompleta in SSAS). Per altre informazioni nella documentazione Online, vedere [gerarchia padre-figlio](parent-child-dimension.md). L'aspetto negativo relativo alla creazione di una gerarchia padre-figlio è che si può disporre solo di una per ogni dimensione e che in genere si verifica una riduzione delle prestazioni durante il calcolo delle aggregazioni per i membri intermedi.  
+-   Creare una gerarchia padre-figlio che gestisca esplicitamente i membri dei livelli. Per un'illustrazione della tecnica, vedere il post di blog [Ragged Hierarchy in SSAS](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/)(Gerarchia incompleta in SSAS). Per ulteriori informazioni nella documentazione online di, vedere [gerarchia padre-figlio](parent-child-dimension.md). L'aspetto negativo relativo alla creazione di una gerarchia padre-figlio è che si può disporre solo di una per ogni dimensione e che in genere si verifica una riduzione delle prestazioni durante il calcolo delle aggregazioni per i membri intermedi.  
   
- Se la dimensione contiene più di una gerarchia incompleta, è necessario utilizzare il primo approccio, impostando la proprietà `HideMemberIf`. Gli sviluppatori BI con esperienza pratica nella gestione di gerarchie incomplete vanno oltre, promuovendo modifiche aggiuntive nelle tabelle dati fisiche, mediante la creazione di tabelle separate per ciascun livello. Visualizzare [Martin Mason di gerarchie incomplete 1a parte di cubo finanziario SSAS (blog)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) per informazioni dettagliate su questa tecnica.  
+ Se la dimensione contiene più di una gerarchia incompleta, è necessario utilizzare il primo approccio, impostando la proprietà `HideMemberIf`. Gli sviluppatori BI con esperienza pratica nella gestione di gerarchie incomplete vanno oltre, promuovendo modifiche aggiuntive nelle tabelle dati fisiche, mediante la creazione di tabelle separate per ciascun livello. Per informazioni dettagliate su questa tecnica, vedere [la sezione relativa alle gerarchie finanziarie SSAS di Martin Mason-parte 1a-incomplete (Blog)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) .  
   
 ##  <a name="bkmk_Hide"></a> Impostazione della proprietà HideMemberIf per nascondere i membri in una gerarchia regolare  
  Nella tabella di una dimensione incompleta, i membri mancanti da un punto di vista logico possono essere rappresentati in diversi modi. Le celle della tabella possono contenere valori Null o stringhe vuote oppure possono contenere lo stesso valore del membro padre come segnaposto. La rappresentazione dei segnaposti è determinata dallo stato del segnaposto dei membri figlio, come determinato dalla proprietà `HideMemberIf` e dalla proprietà della stringa di connessione `MDX Compatibility` per l'applicazione client.  
@@ -74,6 +74,6 @@ ms.locfileid: "66072517"
  [Creare gerarchie definite dall'utente](user-defined-hierarchies-create.md)   
  [Gerarchie definite dall'utente](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [Gerarchia padre-figlio](parent-child-dimension.md)   
- [Connection String Properties &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [Connection String Properties &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/connection-string-properties-analysis-services)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Gli operatori unari | Microsoft Docs
+title: Operatori unari | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1bb0dcbd16fc96cb587718504de8fa43babd0db6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ec9ac3eef28c4deae08d577487599575852c132
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097361"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893549"
 ---
 # <a name="unary-operators"></a>Operatori unari
 
@@ -40,9 +40,9 @@ FROM [Adventure Works]
 WHERE [Product].[Category].[Bikes]  
 ```  
   
- Inoltre, MDX utilizzare speciali operatori unari per determinare l'operazione di aggregazione eseguita dal [RollupChildren](../mdx/rollupchildren-mdx.md) (funzione). Per altre informazioni su questi operatori unari speciali, vedere [aggiungere un'aggregazione personalizzata a una dimensione](../analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension.md).  
+ Inoltre, MDX utilizza gli operatori unari speciali per determinare l'operazione di aggregazione eseguita dalla funzione [RollupChildren](../mdx/rollupchildren-mdx.md) . Per ulteriori informazioni su questi operatori unari speciali, vedere [aggiungere un'aggregazione personalizzata a una dimensione](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli operatori &#40;sintassi MDX&#41;](../mdx/operators-mdx-syntax.md)  
+ [Sintassi &#40;MDX degli operatori&#41;](../mdx/operators-mdx-syntax.md)  
   
   

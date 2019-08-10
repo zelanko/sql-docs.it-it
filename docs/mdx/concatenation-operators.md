@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 235320a65bf04e8b0ce1d7c23da588a4d541a0b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7298f80a7d3f61b5b00692be8fbc480429487454
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915864"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892466"
 ---
 # <a name="concatenation-operators"></a>Operatori di concatenazione
 
@@ -32,10 +32,10 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="language-considerations"></a>Considerazioni sul linguaggio  
- Se le stringhe utilizzate in un'operazione di concatenazione hanno le stesse regole di confronto, le regole di confronto dell'input verranno utilizzate anche per la stringa risultante dalla concatenazione. Se invece le stringhe utilizzate in un'operazione di concatenazione hanno regole di confronto diverse, le regole di confronto della stringa risultante dalla concatenazione verranno determinate in base alla precedenza delle regole di confronto. Per altre informazioni, vedere [Lingue e regole di confronto &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md).  
+ Se le stringhe utilizzate in un'operazione di concatenazione hanno le stesse regole di confronto, le regole di confronto dell'input verranno utilizzate anche per la stringa risultante dalla concatenazione. Se invece le stringhe utilizzate in un'operazione di concatenazione hanno regole di confronto diverse, le regole di confronto della stringa risultante dalla concatenazione verranno determinate in base alla precedenza delle regole di confronto. Per altre informazioni, vedere [Lingue e regole di confronto &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Gli operatori &#40;sintassi MDX&#41;](../mdx/operators-mdx-syntax.md)  
+ [Guida di riferimento &#40;agli operatori MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Sintassi &#40;MDX degli operatori&#41;](../mdx/operators-mdx-syntax.md)  
   
   

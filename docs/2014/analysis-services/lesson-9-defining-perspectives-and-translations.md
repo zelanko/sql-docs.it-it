@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 9: Defining Perspectives and Translations | Microsoft Docs'
+title: 'Lezione 9: Definizione di prospettive e traduzioni | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f1af3719a658711b1a232b0248e511e0a658414d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 914140df4460741f8441ce899a8e73a420806169
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078178"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887891"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>Lezione 9: Definizione di prospettive e traduzioni
   In questa lezione verranno descritte le procedure per definire prospettive e traduzioni. Le prospettive possono essere definite per ridurre la complessità evidente di un cubo e le traduzioni possono essere definite per consentire agli utenti di visualizzare i metadati di un cubo nella lingua di preferenza.  
@@ -28,19 +28,19 @@ ms.locfileid: "66078178"
  [Definizione ed esplorazione delle prospettive](multidimensional-models-olap-logical-cube-objects/perspectives.md)  
  In questa attività vengono definite ed esplorate le prospettive per semplificare la visualizzazione del cubo per utenti o utilizzi specifici.  
   
- [Definizione ed esplorazione delle traduzioni](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  
+ [Definizione ed esplorazione delle traduzioni](https://docs.microsoft.com/analysis-services/lesson-9-2-defining-and-browsing-translations)  
  In questa procedura vengono definite ed esplorate traduzioni di metadati specifici in determinate lingue.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
  [Lezione 10: Definizione dei ruoli amministrativi](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Scenario di Analysis Services Tutorial](../analysis-services/analysis-services-tutorial-scenario.md)   
- [Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
- [Prospettive](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)   
+ [Scenario di Analysis Services Tutorial](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
+ [Esercitazione di modellazione &#40;multidimensionale Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [Prospettive](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives)   
  [Prospettive nei modelli multidimensionali](multidimensional-models/perspectives-in-multidimensional-models.md)   
  [Traduzioni delle dimensioni](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
  [Traduzioni di cubi](multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
- [Le traduzioni &#40;Analysis Services&#41;](translations-analysis-services.md)  
+ [Analysis Services &#40;traduzioni&#41;](translations-analysis-services.md)  
   
   

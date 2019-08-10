@@ -1,5 +1,5 @@
 ---
-title: database_service_objectives (Database SQL di Azure) | Microsoft Docs
+title: sys. database_service_objectives (database SQL di Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/21/2018
 ms.service: sql-database
@@ -15,37 +15,37 @@ ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
 author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 4174e59fd451d1d709decbbc8955c9fe2329703e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fc6c0fc0dbd9ce98d3be2e226e6b2ed3c01cb187
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079410"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893288"
 ---
-# <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>database_service_objectives (Database SQL di Azure)
+# <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys. database_service_objectives (database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-Restituisce l'edizione (livello di servizio), l'obiettivo di servizio (piano tariffario) e nome del pool elastico, se presente, per un database SQL di Azure o Azure SQL Data Warehouse. Se si è connessi al database master in un server di database SQL di Azure, restituisce informazioni su tutti i database. Per Azure SQL Data Warehouse, è necessario essere connessi al database master.  
+Restituisce l'edizione (livello di servizio), l'obiettivo di servizio (piano tariffario) e il nome del pool elastico, se presente, per un database SQL di Azure o un Azure SQL Data Warehouse. Se si è connessi al database master in un server di database SQL di Azure, restituisce informazioni su tutti i database. Per Azure SQL Data Warehouse, è necessario essere connessi al database master.  
   
   
- Per informazioni sui prezzi, vedere [opzioni del Database SQL e le prestazioni: Database SQL-prezzi](https://azure.microsoft.com/pricing/details/sql-database/) e [SQL Data Warehouse prezzi](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
+ Per informazioni sui prezzi, vedere [opzioni e prestazioni del database SQL: Prezzi del database](https://azure.microsoft.com/pricing/details/sql-database/) SQL e [prezzi SQL data warehouse](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
   
- Per modificare le impostazioni del servizio, vedere [ALTER DATABASE (Database SQL di Azure)](../../t-sql/statements/alter-database-azure-sql-database.md) e [ALTER DATABASE (Azure SQL Data Warehouse)](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest).  
+ Per modificare le impostazioni del servizio, vedere [ALTER database (database SQL di Azure)](../../t-sql/statements/alter-database-azure-sql-database.md) e [alter database (Azure SQL Data Warehouse)](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest).  
   
- La vista database_service_objectives contiene le colonne seguenti.  
+ La vista sys. database_service_objectives contiene le colonne seguenti.  
   
 |Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
-|database_id|int|ID del database, univoco all'interno di un'istanza del server di Database SQL di Azure. Sottoponibile a join con [Sys. Databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
-|edition|sysname|Il livello di servizio per il database o data warehouse: **Base**, **Standard**, **Premium** oppure **Data Warehouse**.|  
-|service_objective|sysname|Il piano tariffario del database. Se il database è in un pool elastico, restituisce **ElasticPool**.<br /><br /> Nel **base** tier, restituisce **base**.<br /><br /> **Database singolo in un livello di servizio standard** restituisce uno dei seguenti: S0, S1, S2, S3, S4, S6, S7, S9 o S12.<br /><br /> **Database singolo in un livello premium** restituisce delle operazioni seguenti: P1, P2, P4, P6, P11 o P15.<br /><br /> **SQL Data Warehouse** restituisce DW100 tramite DW30000c.|  
-|nome_pool_elastico|sysname|Il nome del [pool elastico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) a cui appartiene il database. Restituisce **NULL** se il database è un database singolo o un warehoue dati.|  
+|database_id|int|ID del database, univoco all'interno di un'istanza del server di database SQL di Azure. Joinable con [sys. databases &#40;Transact&#41;-SQL](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|edition|sysname|Livello di servizio per il database o data warehouse: **Basic**, **standard**, **Premium** o **data warehouse**.|  
+|service_objective|sysname|Piano tariffario del database. Se il database si trova in un pool elastico, restituisce **ElasticPool**.<br /><br /> Il livello **Basic** restituisce **Basic**.<br /><br /> Il **database singolo in un livello di servizio standard** restituisce uno dei seguenti elementi: S0, S1, S2, S3, S4, S6, S7, S9 o S12.<br /><br /> Il **database singolo in un livello Premium** restituisce quanto segue: P1, P2, P4, P6, P11 o P15.<br /><br /> **SQL data warehouse** restituisce DW100 tramite DW30000c.<br /><br /> Per informazioni dettagliate, vedere [database singoli](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/), [pool elastici](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/), [data warehouse](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/)|  
+|elastic_pool_name|sysname|Nome del [pool elastico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) a cui appartiene il database. Restituisce **null** se il database è un database singolo o un data warehouse.|  
   
 ## <a name="permissions"></a>Permissions  
- È necessario **dbManager** autorizzazione per il database master.  A livello di database, l'utente deve essere l'autore o il proprietario.  
+ Richiede l'autorizzazione **dbManager** per il database master.  A livello di database, l'utente deve essere l'autore o il proprietario.  
   
 ## <a name="examples"></a>Esempi  
- Questo esempio può essere eseguito nel database master o nei database utente di Database SQL di Azure. La query restituisce il nome del servizio e informazioni di livello delle prestazioni dei database.  
+ Questo esempio può essere eseguito nel database master o nei database utente del database SQL di Azure. La query restituisce le informazioni sul nome, il servizio e il livello di prestazioni dei database.  
   
 ```sql  
 SELECT  d.name,   

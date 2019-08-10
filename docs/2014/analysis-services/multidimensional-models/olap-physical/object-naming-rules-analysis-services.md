@@ -1,5 +1,5 @@
 ---
-title: Oggetto le regole di denominazione (Analysis Services) | Microsoft Docs
+title: Regole di denominazione degli oggetti (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,17 +12,17 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 64e04754fd4bc4a404854eb5260daddf543e3c2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be8bec262afc67571c67ad6919ae9e9163a434be
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65979967"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889440"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regole di denominazione degli oggetti (Analysis Services)
   In questo argomento vengono descritte le convenzioni di denominazione dell'oggetto, le parole riservate e i caratteri che non possono essere utilizzati nel nome dell'oggetto, nel codice o nello script in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
-##  <a name="bkmk_Names"></a> Convenzioni di denominazione  
+##  <a name="bkmk_Names"></a>Convenzioni di denominazione  
  Ogni oggetto dispone di una proprietà `Name` e `ID` che deve essere univoca nell'ambito della raccolta padre. Ad esempio, due dimensioni possono avere lo stesso nome fintanto che ciascuna risiede in un database diverso.  
   
  Sebbene sia possibile specificarlo manualmente, l'`ID` viene solitamente generato automaticamente quando viene creato l'oggetto. Si consiglia di non modificare mai la proprietà `ID` una volta avviata la compilazione di un modello. In un modello tutti i riferimenti agli oggetti sono basati sull'`ID`. Pertanto, la modifica dell'`ID` può facilmente causare il danneggiamento del modello.  
@@ -31,7 +31,7 @@ ms.locfileid: "65979967"
   
  Le regole seguenti si applicano alle proprietà `Name` e `ID`.  
   
--   Per i nomi non viene fatta distinzione tra maiuscole e minuscole. Non è possibile avere un cubo denominato "sales" e un altro denominato "Sales" nello stesso database.  
+-   Per i nomi non viene fatta distinzione tra maiuscole e minuscole. Non è possibile avere un cubo denominato "Sales" e un altro denominato "Sales" nello stesso database.  
   
 -   Gli spazi iniziali o finali non sono consentiti nel nome dell'oggetto, sebbene sia possibile incorporare gli spazi all'interno del nome. Gli spazi iniziali e finali vengono eliminati in modo implicito. Ciò si applica sia alle proprietà `Name` e `ID` di un oggetto.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "65979967"
   
 -   Non esiste alcun particolare requisito per il primo carattere di un identificatore, che può pertanto essere qualsiasi carattere valido.  
   
-##  <a name="bkmk_reserved"></a> Caratteri e parole riservate  
+##  <a name="bkmk_reserved"></a>Parole riservate e caratteri  
  Le parole riservate sono in inglese e si applicano ai nomi di oggetto, non alle didascalie. Se si utilizza inavvertitamente una parola riservata in un nome di oggetto, si verificherà un errore di convalida. Per i modelli di data mining e multidimensionali, le parole riservate descritte di seguito non possono mai essere utilizzate in alcun nome di oggetto.  
   
  Per i modelli tabulari dove la compatibilità di database è impostata su 1103, le regole di convalida sono state rese flessibili per alcuni oggetti, non conformi per i requisiti di caratteri estesi e le convenzioni di denominazione di alcune applicazioni client. I database che soddisfano questi criteri sono soggetti a regole di convalida meno restrittive. In questo caso è possibile che un nome di oggetto includa un carattere limitato e superi comunque la convalida.  
@@ -68,28 +68,28 @@ ms.locfileid: "65979967"
   
 |Object|Caratteri non validi|  
 |------------|------------------------|  
-|`Server`|Seguire le convenzioni di denominazione del server Windows quando si denomina un oggetto server. Visualizzare [convenzioni di denominazione (Windows)](/windows/desktop/DNS/naming-conventions) per informazioni dettagliate.|  
+|`Server`|Seguire le convenzioni di denominazione del server Windows quando si denomina un oggetto server. Per informazioni dettagliate, vedere convenzioni di [denominazione (Windows)](/windows/desktop/DNS/naming-conventions) .|  
 |`DataSource`|`: / \ * | ? " () [] {} <>`|  
 |`Level` o `Attribute`|````. , ; ' ` : / \ * &| ? " & % $ ! + = [] {} \< >````|  
 |`Dimension` o `Hierarchy`|````. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \<,>````|  
 |Tutti gli altri oggetti|````. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \< >````|  
   
- **Eccezioni: Quando sono consentiti i caratteri riservati**  
+ **Eccezioni Quando sono consentiti caratteri riservati**  
   
  Come è stato notato, i database di un livello di compatibilità e di modalità specifico possono avere nomi di oggetti che includono caratteri riservati. I nomi di attributi della dimensione, gerarchie, livelli, misuri e oggetti KPI possono includere caratteri riservati, per database tabulari (1103 o un valore superiore) che consentono l'utilizzo di caratteri estesi:  
   
 |Livello di compatibilità del database e modalità del server|Caratteri riservati consentiti?|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP (tutte le versioni)|no|  
+|MOLAP (tutte le versioni)|No|  
 |Tabulare - 1050|No|  
 |Tabulare - 1100|No|  
-|Tabulare - 1130 e superiore|Yes|  
+|Tabulare-1130 e versioni successive|Yes|  
   
  I database possono avere un valore ModelType predefinito. Il valore predefinito è equivalente a multidimensionale e quindi non supporta l'utilizzo di caratteri riservati nei nomi delle colonne.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Parole riservate MDX](/sql/mdx/mdx-reserved-words)   
- [Le traduzioni &#40;Analysis Services&#41;](../../../analysis-services/translations-analysis-services.md)   
- [XML for Analysis conformità &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
+ [Analysis Services &#40;traduzioni&#41;](https://docs.microsoft.com/analysis-services/translations-analysis-services)   
+ [XMLA XML for Analysis &#40;Compliance&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

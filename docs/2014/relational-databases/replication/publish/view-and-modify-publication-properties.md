@@ -18,12 +18,12 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4af21c912ce5a703cd46f0f9b00b5dd4bda7d2d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5053cc16734cc18c75e163fec4c06b1768e590cc
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68212057"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941060"
 ---
 # <a name="view-and-modify-publication-properties"></a>Visualizzazione e modifica delle proprietà della pubblicazione
   In questo argomento viene descritto come modificare le proprietà delle pubblicazioni in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o RMO (Replication Management Objects).  
@@ -102,29 +102,29 @@ ms.locfileid: "68212057"
   
 #### <a name="to-view-the-properties-of-a-snapshot-or-transactional-publication"></a>Per visualizzare le proprietà di una pubblicazione snapshot o transazionale  
   
-1.  Eseguire [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql), specificando il nome della pubblicazione per il parametro **@publication** . Se questo parametro viene omesso, verranno restituite le informazioni su tutte le pubblicazioni disponibili nel server di pubblicazione.  
+1.  Eseguire [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql), specificando il nome della pubblicazione per il  **\@** parametro publication. Se questo parametro viene omesso, verranno restituite le informazioni su tutte le pubblicazioni disponibili nel server di pubblicazione.  
   
 #### <a name="to-change-the-properties-of-a-snapshot-or-transactional-publication"></a>Per modificare le proprietà di una pubblicazione snapshot o transazionale  
   
-1.  Eseguire [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), specificando la proprietà della pubblicazione da modificare nel parametro **@property** e il nuovo valore di questa proprietà nel parametro **@value** .  
+1.  Eseguire [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), specificando la proprietà della pubblicazione da modificare  **\@** nel parametro Property e il nuovo  **\@** valore di questa proprietà nel parametro value.  
   
     > [!NOTE]  
-    >  Se la modifica richiederà la generazione di un nuovo snapshot, è necessario specificare anche il valore **1** per **@force_invalidate_snapshot** e se richiederà la reinizializzazione dei Sottoscrittori, è necessario specificare il valore **1** per **@force_reinit_subscription** . Per altre informazioni sulle proprietà che, in caso di modifica, richiedono un nuovo snapshot o una reinizializzazione, vedere [Modificare le proprietà di pubblicazioni e articoli](change-publication-and-article-properties.md).  
+    >  Se la modifica richiederà la generazione di un nuovo snapshot, è necessario specificare anche il valore **1** per  **\@force_invalidate_snapshot**e se la modifica richiederà la reinizializzazione dei sottoscrittori, è necessario specificare un valore pari a **1.**   **per\@force_reinit_subscription**. Per altre informazioni sulle proprietà che, in caso di modifica, richiedono un nuovo snapshot o una reinizializzazione, vedere [Modificare le proprietà di pubblicazioni e articoli](change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>Per visualizzare le proprietà di una pubblicazione di tipo merge  
   
-1.  Eseguire [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), specificando il nome della pubblicazione per il parametro **@publication** . Se questo parametro viene omesso, verranno restituite le informazioni su tutte le pubblicazioni disponibili nel server di pubblicazione.  
+1.  Eseguire [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), specificando il nome della pubblicazione per il  **\@** parametro publication. Se questo parametro viene omesso, verranno restituite le informazioni su tutte le pubblicazioni disponibili nel server di pubblicazione.  
   
 #### <a name="to-change-the-properties-of-a-merge-publication"></a>Per modificare le proprietà di una pubblicazione di tipo merge  
   
-1.  Eseguire [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), specificando la proprietà della pubblicazione da modificare nel parametro **@property** e il nuovo valore di questa proprietà nel parametro **@value** .  
+1.  Eseguire [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), specificando la proprietà della pubblicazione da modificare  **\@** nel parametro Property e il nuovo  **\@** valore di questa proprietà nel parametro value.  
   
     > [!NOTE]  
-    >  Se la modifica richiederà la generazione di un nuovo snapshot, è necessario specificare anche il valore **1** per **@force_invalidate_snapshot** e se richiederà la reinizializzazione dei Sottoscrittori, è necessario specificare il valore **1** per **@force_reinit_subscription** . Per altre informazioni sulle proprietà che, in caso di modifica, richiedono un nuovo snapshot o una reinizializzazione, vedere [Modificare le proprietà di pubblicazioni e articoli](change-publication-and-article-properties.md).  
+    >  Se la modifica richiederà la generazione di un nuovo snapshot, è necessario specificare anche il valore **1** per  **\@force_invalidate_snapshot**e se la modifica richiederà la reinizializzazione dei sottoscrittori, è necessario specificare un valore pari a **1. per force_reinit_subscription per** altre informazioni sulle proprietà che, se modificate, richiedono un nuovo snapshot o una reinizializzazione, vedere [modificare le proprietà di pubblicazioni e articoli](change-publication-and-article-properties.md).  **\@**  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>Per visualizzare le proprietà di uno snapshot  
   
-1.  Eseguire [sp_helppublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql), specificando il nome della pubblicazione per il parametro **@publication** .  
+1.  Eseguire [sp_helppublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql), specificando il nome della pubblicazione per il  **\@** parametro publication.  
   
 #### <a name="to-change-the-properties-of-a-snapshot"></a>Per modificare le proprietà di uno snapshot  
   

@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 754180cfa1ff907e9590b70ba074cd28eaaa804e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 8073d51fb4376acbdc19724422f6ef7543e3c403
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769094"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894047"
 ---
-# <a name="spaddpushsubscriptionagent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
+# <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Aggiunge un nuovo processo di agente pianificato per sincronizzare una sottoscrizione push di una pubblicazione transazionale. Questa stored procedure viene eseguita nel database di pubblicazione del server di pubblicazione.  
@@ -71,7 +71,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="arguments"></a>Argomenti  
 `[ @publication = ] 'publication'`Nome della pubblicazione. *Publication* è di **tipo sysname**e non prevede alcun valore predefinito.  
   
-`[ @subscriber = ] 'subscriber'`Nome del Sottoscrittore. *Subscriber* è di **tipo sysname**e il valore predefinito è null.  
+`[ @subscriber = ] 'subscriber'`Nome dell'istanza del Sottoscrittore o nome del listener del gruppo di disponibilità se il database del Sottoscrittore è un gruppo di disponibilità. *Subscriber* è di **tipo sysname**e il valore predefinito è null. 
   
 `[ @subscriber_db = ] 'subscriber_db'`Nome del database di sottoscrizione. *subscriber_db* è di **tipo sysname**e il valore predefinito è null. Per un Sottoscrittore non SQL Server, specificare il valore **(destinazione predefinita)** per *subscriber_db*.  
   

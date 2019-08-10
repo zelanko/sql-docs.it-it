@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3eac4057f8a4db818a02068f33cbc7b295353f0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23a7433ffb0f06330c948de0955193a885eec768
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68207898"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890189"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>Annotazioni CSDL per Business Intelligence (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,14 +27,14 @@ ms.locfileid: "68207898"
   
  Lo schema CSDLBI è generato dal server Analysis Services in risposta a una richiesta di una definizione del modello da un client, ad esempio [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. L'applicazione client invia una query XML al server Analysis Services che ospita i dati del modello. In risposta, il server invia un messaggio XML che contiene una definizione delle entità nel modello,utilizzando le annotazioni CSDLBI. Il client di creazione report quindi utilizza le informazioni per presentare i campi, le aggregazioni e le misure disponibili nel modello. Le annotazioni CSDLBI forniscono inoltre informazioni sul raggruppamento, l'ordinamento e la formattazione dei dati.  
   
- Per informazioni generali su CSDLBI, vedere [concetti di CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts).  
+ Per informazioni generali su CSDLBI, vedere [concetti relativi a CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts).  
   
 ### <a name="working-with-csdl"></a>Utilizzo di CSDL  
  Il set di annotazioni CSDLBI che rappresenta un qualsiasi modello tabulare particolare è un documento XML contenente una raccolta di entità semplici e complesse. Le entità definiscono tabelle (o dimensioni), colonne (attributi), associazioni (relazioni) e formule incluse in colonne calcolate, misure o indicatori KPI.  
   
  Non è possibile modificare questi oggetti direttamente, ma è necessario utilizzare gli strumenti client e le API disponibili per l'utilizzo dei modelli tabulari.  
   
- È possibile ottenere il linguaggio CSDL per un modello inviando una richiesta DISCOVER al server in cui è ospitato il modello. La richiesta deve essere qualificata specificando il server e il modello e, facoltativamente, una vista o una prospettiva. Il messaggio restituito è una stringa XML. Determinati elementi dipendono dal linguaggio e possono restituire valori diversi a seconda del linguaggio della connessione corrente. Per altre informazioni, vedere [set di righe DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
+ È possibile ottenere il linguaggio CSDL per un modello inviando una richiesta DISCOVER al server in cui è ospitato il modello. La richiesta deve essere qualificata specificando il server e il modello e, facoltativamente, una vista o una prospettiva. Il messaggio restituito è una stringa XML. Determinati elementi dipendono dal linguaggio e possono restituire valori diversi a seconda del linguaggio della connessione corrente. Per ulteriori informazioni, vedere [set di righe DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
   
 ### <a name="csdlbi-versions"></a>Versioni di CSDLBI  
  La specifica CSDL originale di Entity Data Framework fornisce la maggior parte delle entità e proprietà necessarie per supportare la modellazione. Le annotazioni Business Intelligence supportano i requisiti speciali dei modelli tabulari, le proprietà della creazione report necessarie per i client quali [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] e metadati aggiuntivi richiesti per i modelli multidimensionali. In questa sezione vengono descritti gli aggiornamenti di ogni versione.  
@@ -63,11 +63,11 @@ ms.locfileid: "68207898"
   
 -   Supporto per le prospettive.  
   
- Per informazioni dettagliate sui singoli elementi delle annotazioni CSDLBI, vedere [Technical Reference for annotazioni Business Intelligence per CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl). Per informazioni sulla specifica CSDL di base, vedere la [specifica CSDL](http://go.microsoft.com/fwlink/?LinkId=205855) su MSDN.  
+ Per informazioni dettagliate sui singoli elementi nelle annotazioni CSDLBI, vedere [riferimento tecnico per le annotazioni di Business Intelligence per CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl). Per informazioni sulla specifica CSDL di base, vedere la [specifica CSDL](http://go.microsoft.com/fwlink/?LinkId=205855) in MSDN.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Comprendere il modello a oggetti tabulare alla compatibilità livelli 1050 a 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
+ [Informazioni sul modello a oggetti tabulare con i livelli di compatibilità da 1050 a 1103](https://docs.microsoft.com/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103)   
  [Concetti di CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)   
- [Comprendere il modello a oggetti tabulare alla compatibilità livelli 1050 a 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
+ [Informazioni sul modello a oggetti tabulare con i livelli di compatibilità da 1050 a 1103](https://docs.microsoft.com/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103)  
   
   

@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c5843ec42cf4ba712a2e55c9cc96dd6f482c0760
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0b5039ae62eac25d698442d4aeb92ad3c4ebc3a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047087"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892905"
 ---
 # <a name="defaultmember-mdx"></a>DefaultMember (MDX)
 
@@ -35,7 +35,7 @@ Hierarchy_Expression.DefaultMember
  Il membro predefinito di un attributo viene utilizzato per valutare le espressioni se un attributo non è incluso in una query.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente usa il **DefaultMember** funzione, in combinazione con la **nome** funzione per restituire il membro predefinito per la dimensione Destination Currency nel cubo Adventure Works. Nell'esempio viene restituito **dollaro Statunitense**. Il **Name** funzione viene utilizzata per restituire il nome della misura anziché la proprietà predefinita della misura, ovvero **valore**.  
+ Nell'esempio seguente viene utilizzata la funzione **DefaultMember** , in combinazione con la funzione **Name** , per restituire il membro predefinito per la dimensione di tipo valuta di destinazione nel cubo Adventure Works. Nell'esempio viene restituito il **dollaro statunitense**. La funzione **Name** viene utilizzata per restituire il nome della misura anziché la proprietà predefinita della misura, ovvero **value**.  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -46,6 +46,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento alle funzioni MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [Definire un membro predefinito](../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md)  
+ [Definire un membro predefinito](https://docs.microsoft.com/analysis-services/multidimensional-models/attribute-properties-define-a-default-member)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Risolvere i problemi di PowerPivot per SharePoint | Microsoft Docs
+title: Risolvere i problemi relativi a un'installazione di PowerPivot per SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 97bc2ce7-af04-4372-ad79-c96b8c3417ab
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fc6e01ff69850cb4faf9240c9dc0247ba0d01f11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 797405386e8a6c0b9e62328699f3a73a6d845313
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66091777"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892440"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>Risoluzione dei problemi di un'installazione di PowerPivot per SharePoint
   Se vengono generati errori anziché le pagine e le caratteristiche previste, effettuare le operazioni riportate di seguito.  
@@ -31,7 +31,7 @@ ms.locfileid: "66091777"
 ### <a name="powerpivot-gallery-thumbnail-images-show-as-a-red-x"></a>Le immagini di anteprima per Raccolta PowerPivot sono visualizzate come una X rossa.  
  Una delle cause possibile potrebbe essere che **Integrazione della funzionalità di PowerPivot per le raccolte siti** non è attiva. Completare la procedura seguente:  
   
-1.  Nella libreria della raccolta PowerPivot, fare clic su **Impostazioni sito** dall'icona dell'ingranaggio ![impostazioni di SharePoint](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "impostazioni di SharePoint") o **Home** elenco.  
+1.  Nella libreria della raccolta PowerPivot fare clic su **Impostazioni sito** dall'icona a forma di ingranaggio ![SharePoint]impostazioni di(https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint") o l'elenco **Home** .  
   
 2.  Nella sezione **Amministrazione raccolta siti** fare clic su **Funzionalità raccolta siti**.  
   
@@ -39,6 +39,6 @@ ms.locfileid: "66091777"
   
 4.  Verificare che **Integrazione delle funzionalità di PowerPivot per le raccolte siti** sia **Attiva**.  
   
- Per ulteriori cause di questo problema, vedere [raccolta PowerPivot viene illustrata la x rossa per le icone](https://support.microsoft.com/kb/2361559) (https://support.microsoft.com/kb/2361559).  
+ Per ulteriori cause di questo problema, vedere la pagina [relativa alle icone rosse per](https://support.microsoft.com/kb/2361559) le icone https://support.microsoft.com/kb/2361559) della raccolta PowerPivot.  
   
   

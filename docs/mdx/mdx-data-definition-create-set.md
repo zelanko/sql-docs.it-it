@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 91b040a1c625387ed25855d3c3eb26955088f5c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6f8d522f7832a280aa8b280bbe912640b566974a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038327"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893747"
 ---
 # <a name="mdx-data-definition---create-set"></a>Definizione dei dati MDX - CREATE SET
 
@@ -40,20 +40,20 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  *Set_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
- *Property_name*  
+ *Property_Name*  
  Stringa valida che fornisce il nome di una proprietà del set.  
   
  *Property_Value*  
  Espressione scalare valida che definisce il valore della proprietà del set.  
   
 ## <a name="remarks"></a>Note  
- Un set denominato è un set di membri di dimensioni, o un'espressione che definisce un set, che è possibile creare per un riutilizzo successivo. Un set denominato, ad esempio, consente di definire un set di membri di dimensioni costituito dal set dei primi dieci punti vendita per fatturato. Questo set può essere definito in modo statico o mediante una funzione simile [TopCount](../mdx/topcount-mdx.md). Il set denominato potrà quindi essere utilizzato ogni volta che sarà necessario recuperare il set dei primi 10 punti vendita.  
+ Un set denominato è un set di membri di dimensioni, o un'espressione che definisce un set, che è possibile creare per un riutilizzo successivo. Un set denominato, ad esempio, consente di definire un set di membri di dimensioni costituito dal set dei primi dieci punti vendita per fatturato. Questo set può essere definito in modo statico o tramite una funzione come il [conteggio dei conteggi](../mdx/topcount-mdx.md). Il set denominato potrà quindi essere utilizzato ogni volta che sarà necessario recuperare il set dei primi 10 punti vendita.  
   
- L'istruzione CREATE SET crea un set denominato che rimane disponibile per tutta la sessione e può pertanto essere utilizzato in più query durante la sessione. Per altre informazioni, vedere [creazione di membri calcolati &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
+ L'istruzione CREATE SET crea un set denominato che rimane disponibile per tutta la sessione e può pertanto essere utilizzato in più query durante la sessione. Per ulteriori informazioni, vedere [creazione di membri &#40;calcolati con ambito sessione&#41;MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members).  
   
- È inoltre possibile definire un set denominato da utilizzare in un'unica query. Per definire un set di questo tipo, utilizzare la clausola WITH nell'istruzione SELECT. Per altre informazioni sulla clausola WITH, vedere [creazione set denominati &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
+ È inoltre possibile definire un set denominato da utilizzare in un'unica query. Per definire un set di questo tipo, utilizzare la clausola WITH nell'istruzione SELECT. Per ulteriori informazioni sulla clausola WITH, vedere [creazione di set &#40;denominati con ambito query&#41;MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets).  
   
- Il *Set_Expression* clausola può contenere qualsiasi funzione che supporta la sintassi MDX. L'ambito dei set creati con l'istruzione CREATE SET che non specificano la clausola SESSION è sessione. Utilizzare la clausola WITH per creare un set con l'ambito query.  
+ La clausola *set_expression* può contenere qualsiasi funzione che supporta la sintassi MDX. L'ambito dei set creati con l'istruzione CREATE SET che non specificano la clausola SESSION è sessione. Utilizzare la clausola WITH per creare un set con l'ambito query.  
   
  Specificando un cubo diverso dal cubo connesso viene generato un errore. Pertanto, per identificare il cubo corrente è consigliabile usare CURRENTCUBE anziché il nome di un cubo.  
   
@@ -61,10 +61,10 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  Un set definito dall'utente può trovarsi all'interno di uno degli ambiti elencati nella tabella seguente.  
   
  Ambito query  
- La visibilità e la durata del set sono limitate alla query. Il set è definito in un'unica query. L'ambito query prevale sull'ambito sessione. Per altre informazioni, vedere [creazione set denominati &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
+ La visibilità e la durata del set sono limitate alla query. Il set è definito in un'unica query. L'ambito query prevale sull'ambito sessione. Per ulteriori informazioni, vedere [creazione di set &#40;denominati con ambito&#41;query MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets).  
   
  Ambito sessione  
- La visibilità e la durata del set sono limitate alla sessione in cui è stato creato. (La durata è inferiore alla durata della sessione se viene eseguita un'istruzione DROP SET sul set). L'istruzione CREATE SET crea un set con ambito sessione. Utilizzare la clausola WITH per creare un set con l'ambito query.  
+ La visibilità e la durata del set sono limitate alla sessione in cui è stato creato. (La durata è inferiore alla durata della sessione se nel set viene eseguita un'istruzione DROP SET). L'istruzione CREATE SET crea un set con ambito sessione. Utilizzare la clausola WITH per creare un set con l'ambito query.  
   
 ### <a name="example"></a>Esempio  
  Nell'esempio seguente viene creato un set denominato Core Products. Mediante la query SELECT viene quindi illustrata la chiamata del set appena creato. Affinché possa essere eseguita la query SELECT, è necessario che sia stata innanzitutto eseguita l'istruzione CREATE SET. Non possono essere eseguite nello stesso batch.  
@@ -92,15 +92,15 @@ SELECT [Core Products] ON 0
  Specifica che il set non è visibile agli utenti che eseguono una query sul cubo.  
   
 ## <a name="standard-properties"></a>Proprietà standard  
- Ogni set presenta un set di proprietà predefinite. Quando un'applicazione client è connesso a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], le proprietà predefinite sono supportati o disponibili per essere supportate, come l'amministratore sceglie.  
+ Ogni set presenta un set di proprietà predefinite. Quando un'applicazione client è connessa a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], le proprietà predefinite sono supportate o disponibili per essere supportate, in quanto l'amministratore sceglie.  
   
 |Identificatore proprietà|Significato|  
 |-------------------------|-------------|  
 |CAPTION|Una stringa che l'applicazione client utilizza come didascalia per il set.|  
-|DISPLAY_FOLDER|Una stringa che identifica il percorso della cartella di visualizzazione che l'applicazione client utilizza per mostrare il set. Il separatore di livello delle cartelle è definito dall'applicazione client. Per gli strumenti e i client forniti da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la barra rovesciata (\\) è il separatore di livello. Per fornire più cartelle di visualizzazione per un set definito, utilizzare un punto e virgola (;) per separare le cartelle.|  
+|DISPLAY_FOLDER|Una stringa che identifica il percorso della cartella di visualizzazione che l'applicazione client utilizza per mostrare il set. Il separatore di livello delle cartelle è definito dall'applicazione client. Per gli strumenti e i client forniti [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]da, la barra\\rovesciata () è il separatore di livello. Per fornire più cartelle di visualizzazione per un set definito, utilizzare un punto e virgola (;) per separare le cartelle.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Istruzione DROP SET &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)   
- [Istruzioni di definizione dei dati MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Istruzione &#40;drop set MDX&#41;](../mdx/mdx-data-definition-drop-set.md)   
+ [MDX-istruzioni &#40;per la definizione dei dati MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

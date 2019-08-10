@@ -1,5 +1,5 @@
 ---
-title: Eseguire query di strumenti di progettazione di Report della finestra di progettazione di SQL Server Data Tools (SSRS) | Microsoft Docs
+title: Strumenti di progettazione di query in Progettazione report SQL Server Data Tools (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,12 +20,12 @@ ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a7b952414a86a647655a7a0c0dbc2754b352e671
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65294483b65b0df44e7a4b01899319697e441fa1
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107180"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891004"
 ---
 # <a name="query-design-tools-in-report-designer-sql-server-data-tools-ssrs"></a>Strumenti per la progettazione di query in Progettazione report in SQL Server Data Tools (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include svariati strumenti per la progettazione di query che è possibile usare per creare query sui set di dati in Progettazione report. La disponibilità di un particolare strumento di progettazione query dipende dal tipo di origine dei dati utilizzato. Inoltre, in alcuni strumenti di progettazione query sono disponibili modalità alternative, così che sia possibile scegliere se lavorare in modalità visiva o direttamente nel linguaggio query. In questo argomento si illustrano tutti gli strumenti disponibili e si descrivono i tipi di origine dei dati supportati da ognuno di essi. Vengono quindi descritti gli strumenti seguenti:  
@@ -49,7 +49,7 @@ ms.locfileid: "66107180"
 ##  <a name="Textbased"></a> Finestra Progettazione query basata su testo  
  La finestra Progettazione query basata su testo è lo strumento di compilazione di query predefinito per la maggior parte delle origini dati relazionali supportate, incluse [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, Teradata, OLE DB, XML e ODBC. A differenza della finestra Progettazione query con interfaccia grafica, questo strumento non consente di convalidare la sintassi delle query durante la fase di progettazione. Nella figura seguente viene illustrato lo strumento Progettazione query basata su testo.  
   
- ![Finestra Progettazione query standard per query di dati relazionali](../../analysis-services/media/rsqd-dsaw-sql-generic.gif "Finestra Progettazione query standard per query di dati relazionali")  
+ ![Finestra Progettazione query standard per query di dati relazionali](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "Finestra Progettazione query standard per query di dati relazionali")  
   
  È consigliabile utilizzare la finestra Progettazione query basata su testo per creare query complesse, impiegare stored procedure, eseguire query sui dati XML e scrivere query dinamiche. A seconda dell'origine dei dati, è possibile attivare/disattivare il pulsante **Modifica come testo** sulla barra degli strumenti per passare dalla finestra Progettazione query con interfaccia grafica alla finestra Progettazione query basata su testo e viceversa. Per altre informazioni, vedere [Interfaccia utente di Progettazione query basata su testo](../text-based-query-designer-user-interface.md).  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66107180"
 ##  <a name="MDX"></a> Progettazione query MDX  
  La finestra Progettazione query MDX (Multidimensional Expression) consente di creare o modificare query eseguite su un'origine dati di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] con cubi multidimensionali. Nella figura seguente viene illustrato lo strumento Progettazione query MDX dopo che la query e il filtro sono stati definiti.  
   
- ![Progettazione query MDX di Analysis Services in visualizzazione Progettazione](../../analysis-services/media/rsqd-dsawas-mdx-designmode.gif "Progettazione query MDX di Analysis Services in visualizzazione Progettazione")  
+ ![Progettazione query MDX di Analysis Services in visualizzazione Progettazione](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsawas-mdx-designmode.gif "Progettazione query MDX di Analysis Services in visualizzazione Progettazione")  
   
  Per utilizzare questa finestra, è necessario definire un'origine dei dati che contenga un cubo di Analysis Services valido ed elaborato. Quando si definisce un set di dati per l'origine dei dati, è possibile aprire la query nella finestra Progettazione query MDX. Se necessario, utilizzare i pulsanti MDX e DMX sulla barra degli strumenti per passare dalla modalità MDX a DMX e viceversa. Per altre informazioni, vedere [Interfaccia utente di Progettazione query MDX di Analysis Services](analysis-services-mdx-query-designer-user-interface.md).  
   
@@ -95,7 +95,7 @@ ms.locfileid: "66107180"
   
 ## <a name="see-also"></a>Vedere anche  
  [Strumenti di Reporting Services](../tools/reporting-services-tools.md)   
- [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-datasets-ssrs.md)   
+ [Aggiunta di dati a un &#40;Generatore report di report e SSRS&#41;](report-datasets-ssrs.md)   
  [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Esercitazioni su Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
  [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   

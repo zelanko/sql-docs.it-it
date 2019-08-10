@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 201072b1b0e371e1f22ee9e32b009ebcea47b2b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4e31a687597e454b9afe38d6c6dd1c15af486d0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038175"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893720"
 ---
 # <a name="mdx-data-definition---drop-set"></a>Definizione dei dati MDX - DROP SET
 
@@ -40,9 +40,9 @@ DROP [SESSION] SET
  Espressione stringa valida che specifica il nome del set denominato da eliminare.  
   
 ## <a name="remarks"></a>Note  
- Per altre informazioni sui set denominati, vedere [Compilazione di set denominati in MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md).  
+ Per altre informazioni sui set denominati, vedere [Compilazione di set denominati in MDX &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Istruzioni di definizione dei dati MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [MDX-istruzioni &#40;per la definizione dei dati MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

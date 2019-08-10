@@ -16,15 +16,15 @@ ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1a8be3c24a5d13c1a1b3733ab7cbf755c732a612
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c273e453d4eec6d754f38d6be03385957ad50fec
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107142"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890944"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interfaccia utente di Progettazione query relazionale (Generatore report)
-  Generatore report fornisce una finestra di Progettazione query con interfaccia grafica e una finestra Progettazione query basata su testo per la creazione di una query che specifica i dati da recuperare da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] database relazionali e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] per un set di dati di report. Utilizzare la finestra Progettazione query con interfaccia grafica per esplorare i metadati, compilare in modo interattivo una query e visualizzarne i risultati. Utilizzare Progettazione query basata su testo per visualizzare la query compilata nella finestra Progettazione query con interfaccia grafica o per modificare una query. È inoltre possibile importare una query esistente da un file o un report.  
+  Generatore report fornisce una finestra Progettazione query con interfaccia grafica e una finestra Progettazione query basata su testo che consentono di creare una query che specifica i dati [!INCLUDE[msCoName](../../../includes/msconame-md.md)] da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recuperare dai [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database relazionali di e e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] per un set di dati del report. Utilizzare la finestra Progettazione query con interfaccia grafica per esplorare i metadati, compilare in modo interattivo una query e visualizzarne i risultati. Utilizzare Progettazione query basata su testo per visualizzare la query compilata nella finestra Progettazione query con interfaccia grafica o per modificare una query. È inoltre possibile importare una query esistente da un file o un report.  
   
 > [!NOTE]  
 >  Per specificare in Generatore report una query per i tipi di origine dati Oracle, OLE DB, ODBC e Teradata, è necessario utilizzare la finestra Progettazione query basata su testo. Per altre informazioni, vedere [Interfaccia utente di Progettazione query basata su testo &#40;Generatore report &#41;](text-based-query-designer-user-interface-report-builder.md).  
@@ -42,11 +42,11 @@ ms.locfileid: "66107142"
   
  Nella figura seguente è illustrata la finestra Progettazione query con interfaccia grafica nell'utilizzo con tabelle o viste.  
   
- ![Progettazione con interfaccia grafica per le query](../../analysis-services/media/rsqd-relational-graphical.gif "Progettazione con interfaccia grafica per le query")  
+ ![Progettazione con interfaccia grafica per le query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-relational-graphical.gif "Progettazione con interfaccia grafica per le query")  
   
  Nella figura seguente viene illustrata la finestra Progettazione query con interfaccia grafica quando viene utilizzata con stored procedure o funzioni con valori di tabella.  
   
- ![Stored procedure in finestra Progettazione query con interfaccia grafica](../../analysis-services/media/rs-relational-graphical-sp.gif "Stored procedure in finestra Progettazione query con interfaccia grafica")  
+ ![Stored procedure in finestra Progettazione query con interfaccia grafica](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-graphical-sp.gif "Stored procedure in finestra Progettazione query con interfaccia grafica")  
   
  Nella tabella seguente viene descritta la funzione di ogni riquadro.  
   

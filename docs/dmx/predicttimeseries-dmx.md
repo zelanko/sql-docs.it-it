@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 60c55373a1647f6a2f12526e308d6ca45aeebb7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48b656283cbe251b0c8ecb4e7c7b41681cddc7ba
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041698"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893887"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Restituisce i valori futuri stimati per una serie temporale. I dati di una serie temporale sono continui e possono essere archiviati in una tabella nidificata o di case. Il **PredictTimeSeries** funzione restituisce sempre una tabella nidificata.  
+  Restituisce i valori futuri stimati per una serie temporale. I dati di una serie temporale sono continui e possono essere archiviati in una tabella nidificata o di case. La funzione **PredictTimeSeries** restituisce sempre una tabella nidificata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,22 +37,22 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *\<riferimento a una colonna di tabella >* ,  *\<perchè colonna scalare >*  
+ *riferimento a colonna di tabella >, colonna scalare referenc > \<*  *\<*  
  Specifica il nome della colonna da stimare. La colonna può contenere dati scalari o tabulari.  
   
  *n*  
- Specifica il numero dei prossimi passaggi da stimare. Se non viene specificato un valore per *n*, il valore predefinito è 1.  
+ Specifica il numero dei prossimi passaggi da stimare. Se non si specifica un valore per *n*, il valore predefinito è 1.  
   
  *n* non può essere 0. La funzione restituisce un errore se non viene indicata almeno una stima.  
   
  *n-start, n-end*  
  Specifica un intervallo di passaggi della serie temporale.  
   
- *n-start* deve essere un numero intero e non può essere 0.  
+ *n-Start* deve essere un numero intero e non può essere 0.  
   
- *n-end* deve essere un numero intero maggiore *n-start*.  
+ *n-end* deve essere un numero intero maggiore di *n-Start*.  
   
- *\<query di origine >*  
+ *\<> di query di origine*  
  Definisce i dati esterni utilizzati per l'esecuzione di stime.  
   
  REPLACE_MODEL_CASES | EXTEND_MODEL_CASES  
@@ -65,12 +65,12 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  È possibile utilizzare questi argomenti solo quando i dati nuovi sono aggiunti mediante un'istruzione PREDICTION JOIN. Se si utilizza una query PREDICTION JOIN e non si specifica un argomento, l'impostazione predefinita è EXTEND_MODEL_CASES.  
   
 ## <a name="return-type"></a>Tipo restituito  
- Oggetto \< *espressione di tabella*>.  
+ > \<Un' *espressione di tabella*.  
   
 ## <a name="remarks"></a>Note  
  L'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series non supporta la stima cronologica quando i dati nuovi sono aggiunti mediante l'istruzione PREDICTION JOIN.  
   
- In un'istruzione PREDICTION JOIN, il processo di stima inizia sempre immediatamente dopo la fine della serie di training originale anche se si aggiungono dati nuovi. Pertanto, il *n* parametro e *avvio n* i valori dei parametri devono essere un numero intero maggiore di 0.  
+ In un'istruzione PREDICTION JOIN, il processo di stima inizia sempre immediatamente dopo la fine della serie di training originale anche se si aggiungono dati nuovi. Pertanto, i valori dei parametri *n* e *n-Start* devono essere un numero intero maggiore di 0.  
   
 > [!NOTE]  
 >  La lunghezza dei dati nuovi non influisce sul punto iniziale di stima. Pertanto, per aggiungere dati nuovi ed eseguire anche stime nuove, accertarsi di impostare il punto di inizio della stima su un valore maggiore della lunghezza dei dati nuovi oppure estendere il punto finale della stima in base alla lunghezza dei dati nuovi.  
@@ -84,13 +84,13 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   Nel terzo esempio è illustrato come utilizzare il parametro EXTEND_MODEL_CASES per aggiornare un modello di data mining con nuovi dati.  
   
- Per altre informazioni sull'uso di modelli time series, vedere l'esercitazione sul data mining, [lezione 2: Creazione di uno Scenario di previsione &#40;esercitazione intermedia sul Data Mining&#41; ](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) e [ora esercitazione su DMX per stima serie](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
+ Per ulteriori informazioni sull'utilizzo dei modelli Time Series, vedere l'esercitazione data mining, [lezione 2: Creazione di &#40;uno scenario di previsione intermedio&#41; ](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) di esercitazione di data mining e di un'esercitazione DMX per la stima delle [serie temporali](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
   
 > [!NOTE]  
 >  È possibile che vengano restituiti risultati diversi dal modello utilizzato. I risultati degli esempi seguenti sono forniti solo per illustrare il formato del risultato.  
   
 ### <a name="example-1-predicting-a-number-of-time-slices"></a>Esempio 1: Stima di un numero di intervalli di tempo  
- L'esempio seguente usa il **PredictTimeSeries** funzione per restituire una stima per i prossimi tre intervalli temporali e limita i risultati per la serie M200 nelle aree Europa e Pacifico. In questo modello specifico, l'attributo stimabile è Quantity, pertanto è necessario usare `[Quantity]` come primo argomento alla funzione PredictTimeSeries.  
+ Nell'esempio seguente viene usata la funzione **PredictTimeSeries** per restituire una stima per i successivi tre passaggi temporali e vengono limitati i risultati alla serie M200 nelle aree Europe e Pacific. In questo particolare modello, l'attributo stimabile è Quantity, quindi è necessario `[Quantity]` usare come primo argomento per la funzione PredictTimeSeries.  
   
 ```  
 SELECT FLATTENED  
@@ -115,10 +115,10 @@ OR [Model Region] = 'M200 Pacific'
   
  In questo esempio è stata utilizzata la parola chiave FLATTENED per rendere più semplice la lettura dei risultati.  Se non si utilizza la parola chiave FLATTENED e viene restituito invece un set di righe gerarchico, questa query restituisce due colonne. La prima colonna contiene il valore per [ModelRegion] e la seconda colonna contiene una tabella nidificata con due colonne: $TIME, che mostra gli intervalli di tempo stimati e Quantity, che contiene i valori stimati.  
   
-### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>Esempio 2: Aggiunta di nuovi dati e utilizzo di REPLACE_MODEL_CASES  
+### <a name="example-2-adding-new-data-and-using-replace_model_cases"></a>Esempio 2: Aggiunta di nuovi dati e utilizzo di REPLACE_MODEL_CASES  
  Si supponga di trovare dati non corretti per una particolare area e di voler utilizzare gli schemi nel modello per modificare le stime in modo che riflettano i nuovi dati. In alternativa, si potrebbe scoprire che un'altra area dispone di tendenze più affidabili e desiderare di applicare il modello più affidabile ai dati da un'area diversa.  
   
- In questo scenario, è possibile utilizzare il parametro REPLACE_MODEL_CASES e specificare un nuovo set di dati da impiegare come dati della cronologia. In tal modo, le proiezioni saranno basate sugli schemi nel modello specificato, ma continueranno uniformemente dalla fine dei nuovi punti dati. Per una procedura dettagliata completa di questo scenario, vedere [Advanced stime basate su serie temporali &#40;esercitazione intermedia sul Data Mining dei dati&#41;](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71).  
+ In questo scenario, è possibile utilizzare il parametro REPLACE_MODEL_CASES e specificare un nuovo set di dati da impiegare come dati della cronologia. In tal modo, le proiezioni saranno basate sugli schemi nel modello specificato, ma continueranno uniformemente dalla fine dei nuovi punti dati. Per una procedura dettagliata completa di questo scenario, vedere [Advanced Time Series Predictions &#40;Intermediate&#41;data mining tutorial](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71).  
   
  Nella seguente query PREDICTION JOIN è illustrata la sintassi per la sostituzione di dati e l'esecuzione delle nuove stime. Per i dati della sostituzione, l'esempio recupera il valore delle colonne Amount e Quantity e moltiplica ogni valore per due:  
   
@@ -143,7 +143,7 @@ ON
 [Forecasting].[Amount] = t.[Amount]  
 ```  
   
- Le tabelle seguenti confrontano i risultati della stima.  
+ Nelle tabelle seguenti vengono confrontati i risultati della stima.  
   
  Stime originali:  
   
@@ -161,8 +161,8 @@ ON
 |M200 Pacific|8/25/2008 12:00:00 AM|89|  
 |M200 Pacific|9/25/2008 12:00:00 AM|84|  
   
-### <a name="example-3-adding-new-data-and-using-extendmodelcases"></a>Esempio 3: Aggiunta di nuovi dati e utilizzo di EXTEND_MODEL_CASES  
- Esempio 3 viene illustrato l'utilizzo dei *EXTEND_MODEL_CASES* opzione per fornire nuovi dati, che viene aggiunto alla fine di una serie di dati esistente. Anziché sostituire i punti dati esistenti, i nuovi dati vengono aggiunti nel modello.  
+### <a name="example-3-adding-new-data-and-using-extend_model_cases"></a>Esempio 3: Aggiunta di nuovi dati e utilizzo di EXTEND_MODEL_CASES  
+ Nell'esempio 3 viene illustrato l'utilizzo dell'opzione *EXTEND_MODEL_CASES* per fornire nuovi dati, che vengono aggiunti alla fine di una serie di dati esistente. Anziché sostituire i punti dati esistenti, i nuovi dati vengono aggiunti nel modello.  
   
  Nell'esempio seguente, i nuovi dati vengono forniti nell'istruzione SELECT che segue NATURAL PREDICTION JOIN. È possibile fornire più righe di nuovo input con questa sintassi, ma ogni nuova riga di input deve disporre di un timestamp univoco:  
   
@@ -185,7 +185,7 @@ WHERE ([Model Region] = 'M200 Europe'
  OR [Model Region] = 'M200 Pacific')  
 ```  
   
- Poiché la query Usa la *EXTEND_MODEL_CASES* opzione [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] esegue le azioni seguenti per le stime:  
+ Poiché la query usa l'opzione *EXTEND_MODEL_CASES* , [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] esegue le azioni seguenti per le stime:  
   
 -   Aumenta la dimensione totale dei case di training aggiungendo i due nuovi mesi di dati al modello.  
   
@@ -193,11 +193,11 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   Restituisce stime nuove per i tre intervalli di tempo rimanenti in base al modello appena espanso.  
   
- Nella tabella seguente sono elencati i risultati della query dell'esempio 2. Notare che i primi due valori restituiti per M200 Europa corrispondono esattamente ai nuovi valori forniti. Questo comportamento avviene per motivi strutturali. Per avviare stime dopo la fine dei nuovi dati, è necessario specificare intervallo temporale di inizio e di fine. Per un esempio di come eseguire questa operazione, vedere [lezione 5: Estendere la serie temporale modellare](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
+ Nella tabella seguente sono elencati i risultati della query dell'esempio 2. Notare che i primi due valori restituiti per M200 Europa corrispondono esattamente ai nuovi valori forniti. Questo comportamento avviene per motivi strutturali. Per avviare stime dopo la fine dei nuovi dati, è necessario specificare intervallo temporale di inizio e di fine. Per un esempio di come eseguire questa operazione, vedere [lezione 5: Estensione del modello](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d)Time Series.  
   
  Inoltre, notare che non sono stati forniti i nuovi dati per l'area Pacifico. Pertanto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] restituisce nuove stime per tutti e cinque gli intervalli di tempo,  
   
- Quantità: M200 Europe. EXTEND_MODEL_CASES:  
+ Quantità M200 Europe. EXTEND_MODEL_CASES:  
   
 |$TIME|Quantity|  
 |-----------|--------------|  
@@ -207,7 +207,7 @@ WHERE ([Model Region] = 'M200 Europe'
 |10/25/2008 0:00|69|  
 |11/25/2008 0:00|68|  
   
- Quantità:  M200 Pacific. EXTEND_MODEL_CASES:  
+ Quantità  M200 Pacific. EXTEND_MODEL_CASES:  
   
 |$TIME|Quantity|  
 |-----------|--------------|  
@@ -218,9 +218,9 @@ WHERE ([Model Region] = 'M200 Europe'
 |11/25/2008 0:00|38|  
   
 ## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>Esempio 4: Restituzione di statistiche in una stima basata su serie temporali  
- Il **PredictTimeSeries** la funzione non supporta *INCLUDE_STATISTICS* come parametro. Tuttavia, è possibile utilizzare la query seguente per visualizzare le statistiche di stima relative a una query di serie temporale. Questo approccio può essere utilizzato anche nel caso di modelli con colonne della tabella nidificate.  
+ La funzione **PredictTimeSeries** non supporta *INCLUDE_STATISTICS* come parametro. Tuttavia, è possibile utilizzare la query seguente per visualizzare le statistiche di stima relative a una query di serie temporale. Questo approccio può essere utilizzato anche nel caso di modelli con colonne della tabella nidificate.  
   
- In questo modello specifico, l'attributo stimabile è Quantity, pertanto è necessario usare `[Quantity]` come primo argomento alla funzione PredictTimeSeries. Se nel modello viene utilizzato un attributo stimabile diverso, è possibile sostituire un nome della colonna diverso.  
+ In questo particolare modello, l'attributo stimabile è Quantity, quindi è necessario `[Quantity]` usare come primo argomento per la funzione PredictTimeSeries. Se nel modello viene utilizzato un attributo stimabile diverso, è possibile sostituire un nome della colonna diverso.  
   
 ```  
 SELECT FLATTENED [Model Region],  
@@ -252,8 +252,8 @@ OR [Model Region] = 'M200 North America'
 >  In questo esempio è stata utilizzata la parola chiave FLATTENED per rendere più semplice la presentazione dei risultati in una tabella. Tuttavia, se il provider supporta i set di righe gerarchici, è possibile omettere la parola chiave FLATTENED. Se si omette la parola chiave FLATTENED, la query restituisce due colonne, la prima colonna contenente il valore che identifica la serie di dati `[Model Region]` e la seconda colonna contenente la tabella di statistiche nidificata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle funzioni](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Esempi di query sul modello di serie temporale](../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Guida di riferimento &#40;alle&#41; funzioni DMX di Data Mining Extensions](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Esempi di query sul modello di serie temporale](https://docs.microsoft.com/analysis-services/data-mining/time-series-model-query-examples)   
  [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
   
   

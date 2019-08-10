@@ -1,5 +1,5 @@
 ---
-title: Definizione e uso di un'azione drill-through | Microsoft Docs
+title: Definizione e utilizzo di un'azione drill-through | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4b503c63706135b326490ccefc3f0d8ca6ceccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6cf8b025530cbeee236e519564cc5c25861824c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078270"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888110"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Definizione e utilizzo di un'azione drill-through
   Il dimensionamento dei dati della tabella dei fatti tramite una dimensione dei fatti senza l'applicazione di un filtro appropriato sui dati restituiti dalla query può causare un rallentamento delle prestazioni. Per evitare questo problema, è possibile definire un'azione drill-through che limita il numero complessivo di righe restituite. In questo modo è possibile migliorare in modo significativo le prestazioni delle query.  
@@ -30,15 +30,15 @@ ms.locfileid: "66078270"
   
      La figura seguente illustra la scheda **Azioni** di Progettazione cubi.  
   
-     ![Scheda azioni di Progettazione cubi](../../2014/tutorials/media/l8-action1.gif "scheda azioni di Progettazione cubi")  
+     ![Scheda azioni di Progettazione cubi](../../2014/tutorials/media/l8-action1.gif "Scheda azioni di Progettazione cubi")  
   
 2.  Fare clic sul pulsante **Nuova azione dril-through** sulla barra degli strumenti della scheda **Azioni** .  
   
      Nel riquadro di visualizzazione verrà visualizzato un modello Azione vuoto.  
   
-     ![Modello azione vuoto nel riquadro di visualizzazione](../../2014/tutorials/media/l8-action2.gif "modello azione vuoto nel riquadro informazioni")  
+     ![Modello di azione vuoto nel riquadro di visualizzazione](../../2014/tutorials/media/l8-action2.gif "Modello di azione vuoto nel riquadro di visualizzazione")  
   
-3.  Nel **Name** modificare il nome dell'azione in `Internet Sales Details Drillthrough Action`.  
+3.  Nella casella **nome** modificare il nome dell'azione `Internet Sales Details Drillthrough Action`in.  
   
 4.  Selezionare **Internet Sales** dall'elenco **Membri gruppo di misure**.  
   
@@ -46,19 +46,19 @@ ms.locfileid: "66078270"
   
 6.  Nell'elenco **Colonne restituite** selezionare le caselle di controllo **Item Description** e **Order Number** e fare clic su **OK**. Nella figura seguente viene illustrato l'aspetto che dovrebbe avere assunto il modello Azione a questo punto della procedura.  
   
-     ![Casella colonne drill-through](../../2014/tutorials/media/l8-action3.gif "casella colonne drill-through")  
+     ![Casella Colonne drill-through](../../2014/tutorials/media/l8-action3.gif "Casella Colonne drill-through")  
   
 7.  Espandere la casella **Proprietà aggiuntive** , come illustrato nella figura seguente.  
   
-     ![Casella proprietà aggiuntive](../../2014/tutorials/media/l8-action4.gif "casella proprietà aggiuntive")  
+     ![Casella proprietà aggiuntive](../../2014/tutorials/media/l8-action4.gif "Casella proprietà aggiuntive")  
   
-8.  Nel **MaximumRows** , digitare `10`.  
+8.  Nella casella **numero massimo di righe** Digitare `10`.  
   
-9. Nel **didascalia** , digitare `Drillthrough to Order Details...`.  
+9. Nella casella **didascalia** Digitare `Drillthrough to Order Details...`.  
   
      Queste impostazioni limitano il numero di righe restituite e specificano la didascalia che viene visualizzata nel menu dell'applicazione client. La figura seguente illustra tali impostazioni all'interno della casella **Proprietà aggiuntive** .  
   
-     ![Casella proprietà aggiuntive](../../2014/tutorials/media/l8-action5.gif "casella proprietà aggiuntive")  
+     ![Casella proprietà aggiuntive](../../2014/tutorials/media/l8-action5.gif "Casella proprietà aggiuntive")  
   
 ## <a name="using-the-drillthrough-action"></a>Utilizzo dell'azione drill-through  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66078270"
   
      I dettagli degli ordini spediti ad Adam Powell vengono visualizzati nel **visualizzatore dati di esempio**, come illustrato nella figura seguente. Servirebbero tuttavia alcuni dettagli supplementari, ad esempio la data dell'ordine, la data di scadenza e la data di spedizione. Nella procedura seguente si aggiungeranno tali dettagli supplementari.  
   
-     ![Gli ordini spediti ad Adam Powell](../../2014/tutorials/media/l8-action6.gif "ordini spediti ad Adam Powell")  
+     ![Ordini spediti ad Adam Powell](../../2014/tutorials/media/l8-action6.gif "Ordini spediti ad Adam Powell")  
   
 8.  Chiudere Excel.  
   
@@ -104,11 +104,11 @@ ms.locfileid: "66078270"
   
     -   ShipDateKey  
   
-6.  Modifica il **Name** proprietà per il **Order Date Key** dell'attributo `Order Date` , quindi fare clic sul pulsante per il **colonna nome** proprietà e il **Colonna nome** finestra di dialogo **data** come tabella di origine e SimpleDate come colonna di origine. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Modificare la **proprietà Name** dell'attributo **Order Date Key** su `Order Date` then, fare clic sul pulsante Browse per la proprietà **nome colonna** e nella finestra di dialogo **colonna nome** selezionare **Data** come tabella di origine e selezionare SimpleDate come colonna di origine. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Modificare il **Name** proprietà per il **Due Date Key** dell'attributo `Due Date`e quindi, usando il metodo di stesso come il **Order Date Key** modificare il  **Assegnare un nome colonna** proprietà per l'attributo **date. simpledate (WChar)** .  
+7.  Modificare la proprietà **Name** dell'attributo **date date Key** in `Due Date`, quindi, usando lo stesso metodo dell'attributo **Order Date Key** , modificare la proprietà **Name Column** di questo attributo in **date. SimpleDate (WCHAR)** .  
   
-8.  Modificare il **nome** proprietà per il **Ship Date Key** dell'attributo `Ship Date`e quindi modificare la **colonna nome** proprietà per questo attributo su  **Date. simpledate (WChar)** .  
+8.  Modificare la proprietà **Name** dell'attributo **Ship Date Key** in `Ship Date`, quindi modificare la proprietà **Name Column** di questo attributo in **date. SimpleDate (WCHAR)** .  
   
 9. Passare alla scheda **Azioni[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di Progettazione cubi per il cubo**  Tutorial.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66078270"
   
      Nella figura seguente vengono illustrate tali colonne selezionate.  
   
-     ![Casella colonne drill-through](../../2014/tutorials/media/l8-action7.gif "casella colonne drill-through")  
+     ![Casella Colonne drill-through](../../2014/tutorials/media/l8-action7.gif "Casella Colonne drill-through")  
   
 ## <a name="reviewing-the-modified-drillthrough-action"></a>Controllo dell'azione drill-through modificata  
   
@@ -140,16 +140,16 @@ ms.locfileid: "66078270"
   
      I dettagli di questi ordini spediti ad Adam Powell vengono visualizzati in un foglio di lavoro temporaneo. Tali dettagli includono informazioni relative a descrizione articolo, numero ordine, data dell'ordine, data di scadenza e data di spedizione, come illustrato nell'immagine seguente.  
   
-     ![Gli ordini spediti ad Adam Powell](../../2014/tutorials/media/l8-action8.gif "ordini spediti ad Adam Powell")  
+     ![Ordini spediti ad Adam Powell](../../2014/tutorials/media/l8-action8.gif "Ordini spediti ad Adam Powell")  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 9: Definizione di prospettive e traduzioni](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+ [Lezione 9: Definizione di prospettive e traduzioni](https://docs.microsoft.com/analysis-services/lesson-9-defining-perspectives-and-translations)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Azioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
+ [Azioni &#40;Analysis Services-Dati multidimensionali&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [Azioni nei modelli multidimensionali](multidimensional-models/actions-in-multidimensional-models.md)   
  [Relazioni tra dimensioni](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [La definizione di una relazione di tipo fatti](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)   
+ [Definizione di una relazione di tipo Fatti](https://docs.microsoft.com/analysis-services/lesson-5-2-defining-a-fact-relationship)   
  [Definire una relazione di tipo Fatti e le relative proprietà](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   

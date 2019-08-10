@@ -1,5 +1,5 @@
 ---
-title: Ordinamento dei membri dell'attributo basato su un attributo secondario | Microsoft Docs
+title: Ordinamento dei membri dell'attributo in base a un attributo secondario | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7424a92ce4d8e4f6b0ca4c55238ede33d982933
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db52caa0670af868cd5986c85890c291e5f6aac7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078702"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888311"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>Ordinamento dei membri dell'attributo in base a un attributo secondario
-  Nella lezione 3 è stato illustrato l'ordinamento dei membri dell'attributo in base al nome o al valore di chiave. È stato inoltre descritto come utilizzare una chiave composta del membro per influire sui membri dell'attributo e sul tipo di ordinamento. Per altre informazioni, vedere [Modifica della dimensione Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). Tuttavia, se il nome o la chiave dell'attributo non forniscono il tipo di ordinamento desiderato, è possibile utilizzare un attributo secondario per ottenere i risultati richiesti. Definendo una relazione tra gli attributi, è possibile utilizzare il secondo attributo per ordinare i membri del primo attributo.  
+  Nella lezione 3 è stato illustrato l'ordinamento dei membri dell'attributo in base al nome o al valore di chiave. È stato inoltre descritto come utilizzare una chiave composta del membro per influire sui membri dell'attributo e sul tipo di ordinamento. Per altre informazioni, vedere [Modifica della dimensione Date](https://docs.microsoft.com/analysis-services/lesson-3-4-modifying-the-date-dimension). Tuttavia, se il nome o la chiave dell'attributo non forniscono il tipo di ordinamento desiderato, è possibile utilizzare un attributo secondario per ottenere i risultati richiesti. Definendo una relazione tra gli attributi, è possibile utilizzare il secondo attributo per ordinare i membri del primo attributo.  
   
  Le relazioni tra attributi definiscono le relazioni o le dipendenze che intercorrono tra gli attributi. In una dimensione basata su una singola tabella relazionale tutti gli attributi sono in genere correlati tra loro mediante l'attributo chiave poiché tutti gli attributi relativi a una dimensione includono informazioni sui membri collegati mediante l'attributo chiave della dimensione ai fatti della tabella dei fatti per ogni gruppo di misure correlato. In una dimensione basata su più tabelle, gli attributi sono in genere collegati in base alla chiave di join tra le tabelle. Se supportato dai dati sottostanti, gli attributi correlati possono essere utilizzati per specificare un ordinamento. Ad esempio, è possibile creare un nuovo attributo tramite cui viene fornita la logica di ordinamento per un attributo correlato.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66078702"
   
      Si noti che i mesi sono ora ordinati cronologicamente, come illustrato nella figura seguente.  
   
-     ![Modificata la gerarchia utente in ordine cronologico](../../2014/tutorials/media/l4-memberproperties-3.gif "modificata la gerarchia utente in ordine cronologico")  
+     ![Gerarchia utente modificata in ordine cronologico](../../2014/tutorials/media/l4-memberproperties-3.gif "Gerarchia utente modificata in ordine cronologico")  
   
 ## <a name="defining-attribute-relationships-and-sort-order-in-the-customer-dimension"></a>Definizione delle relazioni tra gli attributi e il tipo di ordinamento nella dimensione Customer  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66078702"
   
      Nell'immagine seguente vengono illustrati i membri della gerarchia dell'attributo **Commute Distance** ordinati in base ai valori ASCII della chiave del membro.  
   
-     ![Gerarchia dell'attributo distanza commute](../../2014/tutorials/media/l4-memberproperties-4.gif "gerarchia dell'attributo Commute Distance")  
+     ![Gerarchia dell'attributo Commute Distance](../../2014/tutorials/media/l4-memberproperties-4.gif "Gerarchia dell'attributo Commute Distance")  
   
 2.  Passare alla scheda **Struttura dimensione** in Progettazione dimensioni per la dimensione Customer, fare clic con il pulsante destro del mouse su **CommuteDistanceSort** nella tabella **Customer** del riquadro **Vista origine dati** e scegliere **Nuovo attributo da colonna**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66078702"
   
      Si noti che i membri della gerarchia dell'attributo sono ora ordinati in base a un criterio logico per distanza crescente come illustrato nella figura seguente.  
   
-     ![Ordinare nuovamente gerarchia dell'attributo Commute Distance](../../2014/tutorials/media/l4-memberproperties-5.gif "gerarchia dell'attributo Commute Distance Re-sorted")  
+     ![Gerarchia dell'attributo Commute Distance] riordinata (../../2014/tutorials/media/l4-memberproperties-5.gif "Gerarchia dell'attributo Commute Distance") riordinata  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
  [Impostazione delle relazioni tra gli attributi in una gerarchia definita dall'utente](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  

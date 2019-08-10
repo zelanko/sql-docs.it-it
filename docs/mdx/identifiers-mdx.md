@@ -8,22 +8,22 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 24a1f2b1cb49335ba529126005c41b062e7a9e60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105407"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891217"
 ---
 # <a name="identifiers-mdx"></a>Identificatori (MDX)
 
 
-  Un identificatore è il nome di un oggetto di Analysis Services. Ogni oggetto può e deve avere un identificatore. inclusi cubi, dimensioni, gerarchie, livelli, membri e così via. L'identificatore di un oggetto consente di fare riferimento a tale oggetto nelle istruzioni MDX (Multidimensional Expressions).  
+  Un identificatore è il nome di un oggetto Analysis Services. Ogni oggetto può e deve avere un identificatore. inclusi cubi, dimensioni, gerarchie, livelli, membri e così via. L'identificatore di un oggetto consente di fare riferimento a tale oggetto nelle istruzioni MDX (Multidimensional Expressions).  
   
  A seconda del nome attribuito all'oggetto, l'identificatore può essere regolare o delimitato.  
   
 > [!NOTE]  
->  Gli identificatori regolari sia delimitatori devono contenere da 1 a 100 caratteri.  
+>  Sia gli identificatori regolari che quelli delimitati devono contenere da 1 a 100 caratteri.  
   
 ## <a name="using-regular-identifiers"></a>Utilizzo di identificatori regolari  
  Un identificatore regolare è un nome di oggetto che rispetta le seguenti regole di formattazione per gli identificatori regolari. Gli identificatori regolari possono essere utilizzati con e senza delimitatori.  
@@ -32,19 +32,19 @@ ms.locfileid: "68105407"
   
 1.  Il primo carattere deve essere uno dei seguenti:  
   
-    -   Una lettera definita dallo Standard Unicode 2.0. ovvero i caratteri dell'alfabeto latino a-z e A-Z e i caratteri di altre lingue.  
+    -   Una lettera definita dallo standard Unicode 2,0. ovvero i caratteri dell'alfabeto latino a-z e A-Z e i caratteri di altre lingue.  
   
     -   Il carattere di sottolineatura (_).  
   
 2.  I caratteri successivi possono essere:  
   
-    -   Lettere definite nello Standard Unicode 2.0.  
+    -   Lettere definite nello standard Unicode 2,0.  
   
     -   Numeri decimali inclusi nell'alfabeto Latino di base o in altri alfabeti nazionali.  
   
     -   Il carattere di sottolineatura (_).  
   
-3.  L'identificatore non deve coincidere con una parola chiave riservata di MDX. In MDX per le parole chiave riservate non viene fatta distinzione tra maiuscole e minuscole. Per altre informazioni, vedere [parole chiave riservate &#40;sintassi MDX&#41;](../mdx/reserved-keywords-mdx-syntax.md).  
+3.  L'identificatore non deve coincidere con una parola chiave riservata di MDX. In MDX per le parole chiave riservate non viene fatta distinzione tra maiuscole e minuscole. Per altre informazioni, vedere [sintassi&#41;di &#40;parole chiave riservate MDX](../mdx/reserved-keywords-mdx-syntax.md).  
   
 4.  Non sono consentiti spazi incorporati o caratteri speciali.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68105407"
   
 -   Quando il nome di un oggetto o parte di esso include parole riservate.  
   
-     È consigliabile non utilizzare parole chiave riservate come nomi di oggetto. I database aggiornati da versioni precedenti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] possono contenere identificatori che includono parole riservate non nelle versioni precedenti, ma ora sono riservati. Finché non sarà possibile modificare gli identificatori per tali oggetti, sarà necessario farvi riferimento tramite identificatori delimitati.  
+     È consigliabile non utilizzare parole chiave riservate come nomi di oggetto. I database aggiornati da versioni precedenti [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] di possono contenere identificatori che includono parole non riservate nella versione precedente, ma ora sono riservate. Finché non sarà possibile modificare gli identificatori per tali oggetti, sarà necessario farvi riferimento tramite identificatori delimitati.  
   
 -   Quando il nome di un oggetto include caratteri non elencati come identificatori qualificati.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "68105407"
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento al linguaggio MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [Elementi della sintassi MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
+ [MDX (elementi &#40;della sintassi MDX)&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

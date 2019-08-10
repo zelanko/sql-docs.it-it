@@ -10,12 +10,12 @@ ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5db09273a26bd8dd596a6ae576b2f8f0cc414190
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86aa646865ecfe3da6ed1ad4bacb75907ab39472
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66106070"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891870"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipi di dati nelle espressioni (Generatore report e SSRS)
   I tipi di dati rappresentano tipologie di dati diversi che possono essere archiviati ed elaborati in modo efficiente. I tipi di dati standard includono testo, noto anche come stringhe, numeri con e senza posizioni decimali, date e ore e immagini. I valori in un report devono essere costituiti da un tipo di dati RDL (Report Definition Language). È possibile formattare un valore in base alle proprie preferenze quando si lo visualizza in un report. Un campo che rappresenta la valuta, ad esempio, viene archiviato nella definizione del report come numero a virgola mobile, ma può essere visualizzato in diversi formati a seconda della proprietà di formattazione scelta.  
@@ -30,12 +30,12 @@ ms.locfileid: "66106070"
   
 |Tipo RDL|Tipi CLR|  
 |--------------|---------------|  
-|String|Impostazione predefinita: String<br /><br /> Chart, GUID, Timespan|  
-|Boolean|Impostazione predefinita: Boolean|  
-|Valore intero|Impostazione predefinita: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|DateTime|Impostazione predefinita: DateTime<br /><br /> DateTimeOffset|  
-|float|Impostazione predefinita: Double<br /><br /> Single, Decimal|  
-|Binario|Impostazione predefinita: Byte[]|  
+|String|Valore predefinito: String<br /><br /> Chart, GUID, Timespan|  
+|Boolean|Valore predefinito: Boolean|  
+|Integer|Valore predefinito: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
+|DateTime|Valore predefinito: DateTime<br /><br /> DateTimeOffset|  
+|Float|Valore predefinito: Double<br /><br /> Single, Decimal|  
+|Binary|Valore predefinito: Byte[]|  
 |Variant|Uno qualsiasi tra quelli riportati in precedenza eccetto Byte []|  
 |VariantArray|Matrice di Variant|  
 |Serializable|Variant oppure tipi contrassegnati con Serializable o che consentono di implementare ISerializable.|  
@@ -116,9 +116,9 @@ ms.locfileid: "66106070"
   
     -   Nell'espressione seguente la stringa viene convertita in un valore di data e ora: `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         Se la stringa `MyDateTime.Value` include una differenza UTC, la funzione `DateTime.Parse` regola in primo luogo l'ora in base alla differenza UTC: 7 AM, - [`+08:00`] con l'ora UTC 11 PM. della notte precedente). La funzione `DateTime.Parse` applica quindi la differenza UTC del server di report locale e, se necessario, regola nuovamente l'ora in base all'ora legale. Ad esempio, a Redmond, Washington, la differenza tra ora locale e ora legale è `[-07:00]`, ovvero 7 ore prima delle 23.00. Il risultato è il seguente `DateTime` valore: `2007-07-06 04:07:07 PM` (6 luglio 2007 alle 16.07).  
+         Se la stringa `MyDateTime.Value` include una differenza UTC, la funzione `DateTime.Parse` regola in primo luogo l'ora in base alla differenza UTC: 7 AM, - [`+08:00`] con l'ora UTC 11 PM. della notte precedente). La funzione `DateTime.Parse` applica quindi la differenza UTC del server di report locale e, se necessario, regola nuovamente l'ora in base all'ora legale. Ad esempio, a Redmond, Washington, la differenza tra ora locale e ora legale è `[-07:00]`, ovvero 7 ore prima delle 23.00. Il risultato è il valore `DateTime` seguente: `2007-07-06 04:07:07 PM` (6 luglio 2007 alle 16.07).  
   
- Per altre informazioni sulla conversione di stringhe `DateTime` tipi di dati, vedere [analisi di stringhe di data e ora](https://go.microsoft.com/fwlink/?LinkId=89703), [formattazione di data e ora per impostazioni cultura specifiche](https://go.microsoft.com/fwlink/?LinkId=89704), e [scelta Tra DateTime, DateTimeOffset e TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) su MSDN.  
+ Per ulteriori informazioni sulla conversione di stringhe `DateTime` in tipi di dati, vedere [analisi di stringhe di data e ora](https://go.microsoft.com/fwlink/?LinkId=89703), [formattazione di data e ora per impostazioni cultura specifiche](https://go.microsoft.com/fwlink/?LinkId=89704)e [scelta tra DateTime, DateTimeOffset e TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) in MSDN.  
   
 -   Aggiungere un nuovo campo calcolato al set di dati del report che utilizza un'espressione per estrarre parti della stringa. Per altre informazioni, vedere [Aggiunta, modifica e aggiornamento di campi nel riquadro dei dati del report &#40;Generatore report e SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
@@ -140,7 +140,7 @@ ms.locfileid: "66106070"
   
  Per altre informazioni sui tipi di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Tipi di dati &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql) e [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql) nella [documentazione online di SQL Server](https://go.microsoft.com/fwlink/?linkid=120955).  
   
- Per altre nellaformazioni sui tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vedere [Tipi di dati nella Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) nella [SQL Server Books Onlnellae](https://go.microsoft.com/fwlink/?linkid=120955).  
+ Per altre nellaformazioni sui tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vedere [Tipi di dati nella Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services) nella [SQL Server Books Onlnellae](https://go.microsoft.com/fwlink/?linkid=120955).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Formattazione degli elementi del report &#40;Generatore report e SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)  

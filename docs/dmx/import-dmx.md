@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 74b718515fc03d0babbda36851f61d96f07e854a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2141a4f8ccc6e34ec3010ad3ce8e8e3789d09132
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074767"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892751"
 ---
 # <a name="import-dmx"></a>IMPORT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,10 +44,10 @@ IMPORT FROM 'C:\TEMP\Association_NEW.dmb'
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
- [Le estensioni di Data Mining di dati &#40;DMX&#41; istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
- [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle istruzioni](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Istruzioni DMX per &#40;la&#41; definizione dei dati DMX di Data Mining Extensions](../dmx/dmx-statements-data-definition.md)   
+ [Istruzioni di manipolazione &#40;dei&#41; dati DMX di Data Mining Extensions](../dmx/dmx-statements-data-manipulation.md)   
+ [Guida di riferimento &#40;alle&#41; istruzioni DMX di Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)   
  [EXPORT &#40;DMX&#41;](../dmx/export-dmx.md)   
- [Esportare e importare gli oggetti di data mining](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
+ [Esportare e importare gli oggetti di data mining](https://docs.microsoft.com/analysis-services/data-mining/export-and-import-data-mining-objects)  
   
   

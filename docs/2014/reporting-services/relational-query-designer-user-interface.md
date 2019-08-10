@@ -1,5 +1,5 @@
 ---
-title: Interfaccia utente della finestra Progettazione Query relazionale | Microsoft Docs
+title: Interfaccia utente di progettazione query relazionale | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 4f8aa192-e6fc-4b4e-b107-5a5372ac31d9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b39d9d685b158b32dc504229221e6089e6b3e41f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45f4b0b09c5f99a1dc561fdba40a659b7f0012d6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107984"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891140"
 ---
 # <a name="relational-query-designer-user-interface"></a>Interfaccia utente di Progettazione query relazionale
   In Progettazione report in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] sono disponibili due finestre Progettazione query, una con interfaccia grafica e una basata su testo, per la creazione di una query che consente di specificare i dati da recuperare da [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] di [!INCLUDE[msCoName](../includes/msconame-md.md)] e [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] per un set di dati del report. Utilizzare la finestra Progettazione query con interfaccia grafica per esplorare i metadati, compilare in modo interattivo una query e visualizzarne i risultati. Utilizzare Progettazione query basata su testo per visualizzare la query compilata nella finestra Progettazione query con interfaccia grafica o per modificare una query. È inoltre possibile importare una query esistente da un file o un report.  
@@ -36,11 +36,11 @@ ms.locfileid: "66107984"
   
  Nella figura seguente è illustrata la finestra Progettazione query con interfaccia grafica nell'utilizzo con tabelle o viste.  
   
- ![Progettazione con interfaccia grafica per le query](../analysis-services/media/rsqd-relational-graphical.gif "Progettazione con interfaccia grafica per le query")  
+ ![Progettazione con interfaccia grafica per le query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-relational-graphical.gif "Progettazione con interfaccia grafica per le query")  
   
  Nella figura seguente viene illustrata la finestra Progettazione query con interfaccia grafica quando viene utilizzata con stored procedure o funzioni con valori di tabella.  
   
- ![Stored procedure in finestra Progettazione query con interfaccia grafica](../analysis-services/media/rs-relational-graphical-sp.gif "Stored procedure in finestra Progettazione query con interfaccia grafica")  
+ ![Stored procedure in finestra Progettazione query con interfaccia grafica](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-graphical-sp.gif "Stored procedure in finestra Progettazione query con interfaccia grafica")  
   
  Nella tabella seguente viene descritta la funzione di ogni riquadro.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66107984"
   
  Le aggregazioni forniscono un riepilogo dei dati. Per supportare l'aggregazione che recapita i dati di riepilogo, i dati vengono raggruppati. Quando si utilizza un'aggregazione nella query, gli altri campi restituiti dalla query vengono raggruppati automaticamente e la query include la clausola SQL GROUP BY. È possibile riepilogare i dati senza aggiungere un'aggregazione semplicemente usando l'opzione **Raggruppato per** nell'elenco **Raggruppa e aggrega** . In gran parte delle aggregazioni è inclusa una versione che utilizza la parola chiave DISTINCT. L'inclusione di DISTINCT consente di eliminare i valori duplicati.  
   
- [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] viene utilizzato [!INCLUDE[tsql](../includes/tsql-md.md)] e [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] utilizza [!INCLUDE[DWsql](../includes/dwsql-md.md)]. Entrambi i dialetti del linguaggio SQL supportano la clausola, la parola chiave e le aggregazioni fornite dalla finestra Progettazione query.  
+ [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]USA [!INCLUDE[tsql](../includes/tsql-md.md)] e [!INCLUDE[msCoName](../includes/msconame-md.md)] USA.[!INCLUDE[DWsql](../includes/dwsql-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] Entrambi i dialetti del linguaggio SQL supportano la clausola, la parola chiave e le aggregazioni fornite dalla finestra Progettazione query.  
   
  Per altre informazioni su [!INCLUDE[tsql](../includes/tsql-md.md)], vedere la [Guida di riferimento a Transact-SQL &#40;Motore di database& #41;](/sql/t-sql/language-reference) nella [documentazione online](https://go.microsoft.com/fwlink/?LinkId=141687) di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sul sito msdn.microsoft.com.  
   

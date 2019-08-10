@@ -1,5 +1,5 @@
 ---
-title: Interfaccia utente della finestra Progettazione Query basata su testo | Microsoft Docs
+title: Interfaccia utente di progettazione query basata su testo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -16,19 +16,19 @@ ms.assetid: 44b7c664-03aa-494e-a484-052b318e810c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dfd6d077d80093821346be030ee0dd9c2af0fc9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ceec7e4a58b98763f7a3215d29087eb948ec0b41
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66100595"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891323"
 ---
 # <a name="text-based-query-designer-user-interface"></a>Interfaccia utente di Progettazione query basata su testo
   La finestra Progettazione query basata su testo consente di specificare una query tramite il linguaggio di query supportato dall'origine dati, eseguire la query e visualizzare i risultati in fase di progettazione. È possibile specificare più istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] , la sintassi della query o dei comandi per estensioni per l'elaborazione dati personalizzata e query che vengono specificate come espressioni. Poiché non esegue la pre-elaborazione della query e può gestire qualsiasi tipo di sintassi della query, la finestra Progettazione query basata su testo rappresenta lo strumento di progettazione query predefinito per molti tipi di origine dati.  
   
  Nella finestra Progettazione query basata su testo vengono visualizzati una barra degli strumenti e i due riquadri seguenti:  
   
--   **Query** Mostra il testo della query, nome della tabella o nome della stored procedure.  
+-   **Query** di Consente di visualizzare il testo della query, il nome della tabella o il nome della stored procedure.  
   
 -   **Risultato** Consente di visualizzare i risultati della query eseguita in fase di progettazione.  
   
@@ -39,13 +39,13 @@ ms.locfileid: "66100595"
 |------------|-----------------|  
 |**Modifica come testo**|Consente di passare dalla finestra Progettazione query basata su testo alla finestra Progettazione query con interfaccia grafica e viceversa. Le finestre Progettazione query con interfaccia grafica non sono supportate da tutti i tipi di origine dati.|  
 |**Importa**|Consente di importare una query esistente da un file o un report. Sono supportati solo i tipi di file con estensione sql e rdl. Per altre informazioni, vedere [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Esecuzione della query](../analysis-services/media/rsqdicon-run.gif "Esecuzione della query")|Consente di eseguire la query e di visualizzare il set di risultati nel riquadro Risultati.|  
-|**Tipo di comando**|Selezionare **Text**, **StoredProcedure**o **TableDirect**. Se una stored procedure dispone di parametri, facendo clic su **Esegui** sulla barra degli strumenti viene visualizzata la finestra di dialogo **Definisci parametri query** ed è possibile inserire i valori desiderati. Si noti che se una stored procedure restituisce più di un set di risultati, solo il primo set di risultati viene utilizzato per popolare il set di dati.<br /><br /> Il supporto per il tipo di comando varia in base al tipo di origine dati. Ad esempio, solo OLE DB e ODBC supportano **TableDirect**.|  
+|![Esecuzione della query](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Esecuzione della query")|Consente di eseguire la query e di visualizzare il set di risultati nel riquadro Risultati.|  
+|**Tipo di comando**|Selezionare **Text**, **StoredProcedure**o **TableDirect**. Se una stored procedure dispone di parametri, facendo clic su **Esegui** sulla barra degli strumenti viene visualizzata la finestra di dialogo **Definisci parametri query** ed è possibile inserire i valori desiderati. Si noti che se un stored procedure restituisce più di un set di risultati, per popolare il set di dati viene utilizzato solo il primo set di risultati.<br /><br /> Il supporto per il tipo di comando varia in base al tipo di origine dati. Ad esempio, solo OLE DB e ODBC supportano **TableDirect**.|  
   
 ### <a name="command-type-text"></a>Tipo di comando Text  
  Quando si crea un set di dati di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], in Progettazione report viene visualizzata la finestra Progettazione query con interfaccia grafica per impostazione predefinita. Per passare alla finestra Progettazione query basata su testo, fare clic sul pulsante **Modifica come testo** sulla barra degli strumenti. La finestra Progettazione query basata su testo include due riquadri, il riquadro Query e il riquadro Risultati. Nella figura seguente vengono etichettati tutti i riquadri.  
   
- ![Finestra Progettazione query standard per query di dati relazionali](../analysis-services/media/rsqd-dsaw-sql-generic.gif "Finestra Progettazione query standard per query di dati relazionali")  
+ ![Finestra Progettazione query standard per query di dati relazionali](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "Finestra Progettazione query standard per query di dati relazionali")  
   
  Nella tabella seguente viene descritta la funzione di ogni riquadro.  
   
@@ -87,14 +87,14 @@ uspGetEmployeeManagers;
   
  `Sales.Customer`  
   
- Quando si immette il nome della tabella Sales. Customer, è equivalente alla creazione di [!INCLUDE[tsql](../includes/tsql-md.md)] istruzione `SELECT * FROM Sales.Customer;`.  
+ Quando si immette il nome della tabella Sales. Customer, è l'equivalente della creazione dell' [!INCLUDE[tsql](../includes/tsql-md.md)] istruzione `SELECT * FROM Sales.Customer;`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eseguire query di strumenti di progettazione di Report della finestra di progettazione di SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
+ [Strumenti di progettazione query in Progettazione report &#40;SQL Server Data Tools SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Tipo di connessione SQL Server &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
  [Tipo di connessione OLE DB &#40;SSRS&#41;](report-data/ole-db-connection-type-ssrs.md)   
- [Tipo di connessione ODBC &#40;SSRS&#41;](report-data/odbc-connection-type-ssrs.md)   
+ [Tipo &#40;di connessione ODBC SSRS&#41;](report-data/odbc-connection-type-ssrs.md)   
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [File di configurazione RSReportDesigner](report-server/rsreportdesigner-configuration-file.md)  
   

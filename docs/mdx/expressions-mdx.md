@@ -1,5 +1,5 @@
 ---
-title: Espressioni (MDX MultiDimensional Expression) | Microsoft Docs
+title: Espressioni (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d8ed2484bb3eb31b1bb73000f848dffd27e85e9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a1dfcdc52bb52652c204e31c28ccf5ec48ca7a00
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118866"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893592"
 ---
 # <a name="expressions-mdx"></a>Espressioni (MDX)
 
@@ -32,7 +32,7 @@ ms.locfileid: "68118866"
  In MDX una funzione scalare restituisce un singolo valore nel contesto di valutazione. Questa distinzione è importante per comprendere come vengono risolte le funzioni scalari in MDX, perché la maggior parte delle espressioni, delle istruzioni e degli script MDX non viene valutata su un singolo elemento di dati, ma iterativamente su un gruppo di elementi di dati quali celle o membri. Al momento della valutazione, tuttavia, la funzione scalare sta in genere esaminando un singolo elemento di dati.  
   
  Identificatori di oggetto  
- MDX è un linguaggio orientato a oggetti, a causa della natura dei dati multidimensionali. In MDX gli identificatori degli oggetti sono considerati espressioni semplici. Per altre informazioni sugli identificatori, vedere [identificatori &#40;MDX&#41;](../mdx/identifiers-mdx.md).  
+ MDX è un linguaggio orientato a oggetti, a causa della natura dei dati multidimensionali. In MDX gli identificatori degli oggetti sono considerati espressioni semplici. Per ulteriori informazioni sugli identificatori, vedere [identificatori &#40;MDX&#41;](../mdx/identifiers-mdx.md).  
   
  Un'espressione complessa può essere compilata da combinazioni di queste entità unite tramite vari operatori.  
   
@@ -85,6 +85,6 @@ WHERE [Product].[Category].[Bikes]
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento al linguaggio MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Nozioni fondamentali sulle query MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
   
   

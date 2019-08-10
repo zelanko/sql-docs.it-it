@@ -1,5 +1,5 @@
 ---
-title: Creazione di un'analisi di progetto (esercitazione di base di Data Mining) di servizi | Microsoft Docs
+title: Creazione di un progetto di Analysis Services (esercitazione di base sul data mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 784c0401-0358-4117-9c85-4e8220ce71d9
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: ee6c1a8b765843304d25f1e2ad485ede2badcba4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bec038ece2971c82315aca9965f0d897e6de1034
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62855188"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893338"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>Creazione di un progetto di Analysis Services (Esercitazione di base sul data mining)
   In ogni progetto di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] vengono definiti gli oggetti in un singolo database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] può contenere molti tipi diversi di oggetti  
@@ -32,7 +32,7 @@ ms.locfileid: "62855188"
   
  Per impostazione predefinita, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa l'istanza **localhost** per i nuovi progetti. Se si usa un'istanza denominata o un server diverso, è necessario creare e aprire il progetto prima di modificare il nome dell'istanza.  
   
- Per altre informazioni sui progetti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vedere [Creating an Analysis Services Project](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md).  
+ Per altre informazioni sui progetti di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vedere [Creating an Analysis Services Project](https://docs.microsoft.com/analysis-services/lesson-1-1-creating-an-analysis-services-project).  
   
 ### <a name="to-create-an-analysis-services-project"></a>Per creare un progetto di Analysis Services  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62855188"
   
 4.  Nel riquadro **Modelli** selezionare **Progetto multidimensionale e di data mining di Analysis Services**.  
   
-5.  Nel **Name** casella, denominare il nuovo progetto `BasicDataMining`.  
+5.  Nella casella **nome** assegnare un nome al nuovo progetto `BasicDataMining`.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -57,10 +57,10 @@ ms.locfileid: "62855188"
 3.  Sul lato destro del riquadro **Pagine delle proprietà** , verificare in **Destinazione**che il nome del **Server** sia **localhost**. Se si usa un'altra istanza, digitarne il nome. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="next-task-in-lesson"></a>Attività successiva della lezione  
- [Creazione di un'origine dati &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+ [Esercitazione sulla creazione di &#40;un'origine dati di base sul data mining&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Compilare progetti di Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
- [Creare un progetto di Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+ [Compilare progetti di Analysis Services &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/build-analysis-services-projects-ssdt)   
+ [Creare un progetto di Analysis Services &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt)  
   
   

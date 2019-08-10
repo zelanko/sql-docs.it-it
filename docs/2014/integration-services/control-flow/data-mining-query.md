@@ -12,12 +12,12 @@ ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cf644d1ef54695a4c590a3a67e84da699f8f192b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07373f17838fa387fe6ee22e31312a3933307fa3
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832387"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890325"
 ---
 # <a name="data-mining-query"></a>Query di data mining
   Il riquadro di progettazione contiene il generatore delle query di stima di data mining che consente di compilare le query delle stime di data mining. È possibile progettare query di stima in base a tabelle di input o query di stima singleton. Passare alla visualizzazione dei risultati per eseguire la query e visualizzare i risultati. Nella visualizzazione Query viene visualizzata la query DMX (Data Mining Extensions) creata dal generatore delle query di stima.  
@@ -63,7 +63,7 @@ ms.locfileid: "62832387"
  Consente di specificare una condizione o un'espressione utente da applicare a una colonna. È possibile trascinare le colonne dalle tabelle contenenti il modello di data mining e dalle tabelle di input sulla cella.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining nuove interfacce Query](../../analysis-services/data-mining/data-mining-query-tools.md)   
+ [Interfacce di query di data mining](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
  [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

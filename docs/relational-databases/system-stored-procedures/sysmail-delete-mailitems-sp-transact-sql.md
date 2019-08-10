@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 23ecda5fd8d91f20133eb2295d38dc9d9ace66f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df7ae090efbcd448dc5df3df5355273c891da4fe
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069097"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941177"
 ---
-# <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
+# <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Elimina definitivamente messaggi di posta elettronica dalle tabelle interne di Posta elettronica database.  
@@ -40,20 +40,20 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-`[ @sent_before = ] 'sent_before'` Elimina messaggi di posta elettronica anteriori alla data e ora specificate il *sent_before* argomento. *sent_before* viene **datetime** con valore predefinito è NULL. che indica tutte le date.  
+`[ @sent_before = ] 'sent_before'`Elimina i messaggi di posta elettronica fino alla data e all'ora fornite come argomento *sent_before* . *sent_before* è di tipo **DateTime** e il valore predefinito è null. che indica tutte le date.  
   
-`[ @sent_status = ] 'sent_status'` Elimina messaggi di posta elettronica del tipo specificato da *sent_status*. *sent_status* viene **varchar (8)** non prevede alcun valore predefinito. Possibili valori sono **inviato**, **unsent**, **ritentare**, e **non è stato possibile**. NULL indica tutti gli stati.  
+`[ @sent_status = ] 'sent_status'`Elimina i messaggi di posta elettronica del tipo specificato da *sent_status*. *sent_status* è di tipo **varchar (8)** e non prevede alcun valore predefinito. Le voci valide vengono **inviate**, non **inviate**, riprovate e **non riuscite**. NULL indica tutti gli stati.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Note  
- I messaggi di posta elettronica database e dei relativi allegati sono archiviati nel **msdb** database. I messaggi devono essere eliminati periodicamente per evitare **msdb** dall'aumento delle dimensioni maggiori del previsto e per assicurare la conformità con il programma di conservazione dei documenti di organizzazioni. Usare la **sysmail_delete_mailitems_sp** stored procedure per eliminare definitivamente messaggi di posta elettronica dalle tabelle di posta elettronica Database. Un argomento facoltativo consente di eliminare solo i messaggi di posta elettronica meno recenti tramite l'impostazione di una data e un'ora. I messaggi di posta elettronica con una data anteriore a quella specificata nell'argomento verranno eliminati. Un altro argomento facoltativo consente di eliminare solo i messaggi di posta elettronica di un determinato tipo, specificato come la **sent_status** argomento. È necessario fornire un argomento di tipo **@sent_before** oppure **@sent_status** . Per eliminare tutti i messaggi, usare  **@sent_before GETDATE () =** .  
+ Posta elettronica database messaggi e i relativi allegati vengono archiviati nel database **msdb** . I messaggi devono essere eliminati periodicamente per evitare che il **database msdb** cresca più grande del previsto e sia conforme al programma di conservazione dei documenti delle organizzazioni. Utilizzare il stored procedure **sysmail_delete_mailitems_sp** per eliminare definitivamente i messaggi di posta elettronica dalle tabelle posta elettronica database. Un argomento facoltativo consente di eliminare solo i messaggi di posta elettronica meno recenti tramite l'impostazione di una data e un'ora. I messaggi di posta elettronica con una data anteriore a quella specificata nell'argomento verranno eliminati. Un altro argomento facoltativo consente di eliminare solo i messaggi di posta elettronica di un determinato tipo, specificati come argomento **sent_status** . È necessario fornire un argomento per  **\@sent_before** o  **\@sent_status**. Per eliminare tutti i messaggi, usare  **\@sent_before = getdate ()** .  
   
- L'eliminazione di un messaggio di posta elettronica comporta la rimozione degli allegati correlati a tale messaggio, L'eliminazione di posta elettronica non elimina le voci corrispondenti nella **sysmail_event_log**. Uso [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) eliminare elementi dal log.  
+ L'eliminazione di un messaggio di posta elettronica comporta la rimozione degli allegati correlati a tale messaggio, L'eliminazione della posta elettronica non comporta l'eliminazione delle voci corrispondenti in **sysmail_event_log**. Usare [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) per eliminare gli elementi dal log.  
   
 ## <a name="permissions"></a>Permissions  
- Per impostazione predefinita, questa stored procedure viene concessa per l'esecuzione di ai membri disattivare la **sysadmin** ruolo predefinito del server e **DatabaseMailUserRole**. I membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura per eliminare messaggi di posta elettronica inviati da tutti gli utenti. I membri del **DatabaseMailUserRole** possono eliminare solo i messaggi di posta elettronica inviati da tale utente.  
+ Per impostazione predefinita, questo stored procedure viene concesso per l'esecuzione ai membri del ruolo predefinito del server **sysadmin** e **DatabaseMailUserRole**. I membri del ruolo predefinito del server **sysadmin** possono eseguire questa procedura per eliminare i messaggi di posta elettronica inviati da tutti gli utenti. I membri di **DatabaseMailUserRole** possono eliminare solo i messaggi di posta elettronica inviati da tale utente.  
   
 ## <a name="examples"></a>Esempi  
   

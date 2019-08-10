@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e3a948ce783593ce649ad161d0db73a22a909885
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bd8365b2d3aac82c184af549ef21952fd4c8e649
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041720"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893899"
 ---
 # <a name="predictprobability-dmx"></a>PredictProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,10 +34,10 @@ PredictProbability(<scalar column reference>, [<predicted state>])
  Valore scalare.  
   
 ## <a name="remarks"></a>Note  
- Se lo stato stimato viene omesso, verrà utilizzato lo stato con la probabilità più alta, escludendo il bucket degli stati mancanti. Per includere il bucket degli stati mancanti, impostare il \<stato stimato > a **INCLUDE_NULL**. Per restituire la probabilità per gli stati mancanti, impostare il \<stato stimato > su NULL.  
+ Se lo stato stimato viene omesso, verrà utilizzato lo stato con la probabilità più alta, escludendo il bucket degli stati mancanti. Per includere il bucket degli stati mancanti, impostare \<il > di stato stimato su **INCLUDE_NULL**. Per restituire la probabilità per gli stati mancanti, impostare lo \<stato stimato > su null.  
   
 > [!NOTE]  
->  Alcuni modelli di data mining non forniscono i valori di probabilità e pertanto non possono utilizzare questa funzione. Inoltre, i valori di probabilità per un valore di destinazione specifico vengono calcolati in modo diverso o potrebbero essere interpretati in modo diverso a seconda del tipo di modello su cui si esegue la query. Per altre informazioni sulle modalità di calcolo delle probabilità per un determinato tipo di modello, vedere l'argomento singolo algoritmo corrispondente in [Mining Model Content &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+>  Alcuni modelli di data mining non forniscono i valori di probabilità e pertanto non possono utilizzare questa funzione. Inoltre, i valori di probabilità per un valore di destinazione specifico vengono calcolati in modo diverso o potrebbero essere interpretati in modo diverso a seconda del tipo di modello su cui si esegue la query. Per ulteriori informazioni sul modo in cui viene calcolata la probabilità per un particolare tipo di modello, vedere l'argomento relativo all'algoritmo singolo nel [contenuto &#40;del modello di data mining Analysis Services-Data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzato un natural prediction join per determinare la probabilità che un individuo sia un acquirente di biciclette sulla base del modello di data mining TM Decision Tree e la probabilità per la stima. In questo esempio sono presenti due funzioni PredictProbability, una per ogni valore possibile. Se si omette questo argomento, la funzione restituisce la probabilità per il valore più probabile.  
@@ -63,8 +63,8 @@ NATURAL PREDICTION JOIN
 |1|0.867074195848097|0.132755556974282|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento alle funzioni](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Guida di riferimento &#40;alle&#41; funzioni DMX di Data Mining Extensions](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Funzioni &#40;di stima generali DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

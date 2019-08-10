@@ -1,5 +1,5 @@
 ---
-title: Editor attività elaborazione (pagina Analysis Services) di Analysis Services | Microsoft Docs
+title: Editor attività Elaborazione Analysis Services (pagina Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,12 +14,12 @@ ms.assetid: 5612be78-57cf-4e4e-92cf-6bfa9f971040
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a6a114cba7caa1fa223f21de2aa8cc4a85979fe1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59220dd32388eed75ed725e7a8b5956394ae575d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061465"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890364"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Editor attività Elaborazione Analysis Services (pagina Analysis Services)
   Usare la pagina **Analysis Services** della finestra di dialogo **Editor attività Elaborazione Analysis Services** per specificare una gestione connessione Analysis Services, selezionare gli oggetti analitici da elaborare e impostare le opzioni di elaborazione e di gestione degli errori.  
@@ -50,7 +50,7 @@ ms.locfileid: "66061465"
 |--------------|-----------------|  
 |**Nome oggetto**|Consente di visualizzare i nomi degli oggetti specificati.|  
 |**Tipo**|Consente di visualizzare i tipi degli oggetti specificati.|  
-|**Opzioni elaborazione**|Consente di selezionare un'opzione di elaborazione nell'elenco.<br /><br /> **Argomenti correlati**: [Elaborazione degli oggetti modello multidimensionale](../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**Opzioni elaborazione**|Consente di selezionare un'opzione di elaborazione nell'elenco.<br /><br /> **Argomenti correlati**: [Elaborazione di oggetti del modello multidimensionale](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**Impostazioni**|Consente di visualizzare le impostazioni di elaborazione per gli oggetti specificati.|  
   
  **Aggiungi**  

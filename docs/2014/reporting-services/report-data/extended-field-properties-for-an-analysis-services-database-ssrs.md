@@ -10,19 +10,19 @@ ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b05d670e7873cab5b44c1bce0c62c716809af476
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b601c08633ffe98d6b6005aa3dc34c773810ba3
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107284"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892026"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Proprietà di campo estese per un database di Analysis Services (SSRS)
-  L'estensione per l'elaborazione dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta proprietà di campo estese. Le proprietà di campo estese sono proprietà aggiuntive rispetto alle proprietà di campo `Value` e `IsMissing`, disponibili nell'origine dei dati e supportate dall'estensione per l'elaborazione dati. Le proprietà estese non vengono visualizzate nel riquadro Dati report all'interno della raccolta di campi per un set di dati del report. È possibile includere valori di proprietà di campo estese nel report scrivendo espressioni che essi sono specificati per nome usando l'elemento predefinito `Fields` raccolta.  
+  L'estensione per l'elaborazione dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta proprietà di campo estese. Le proprietà di campo estese sono proprietà aggiuntive rispetto alle proprietà di campo `Value` e `IsMissing`, disponibili nell'origine dei dati e supportate dall'estensione per l'elaborazione dati. Le proprietà estese non vengono visualizzate nel riquadro Dati report all'interno della raccolta di campi per un set di dati del report. È possibile includere valori di proprietà di campo estese nel report scrivendo espressioni che le specificano in base al nome usando `Fields` la raccolta predefinita.  
   
  Le proprietà estese includono proprietà predefinite e proprietà personalizzate. Le proprietà predefinite sono comuni a più origini dati, per le quali viene eseguito il mapping a nomi di proprietà di campo specifiche e risultano accessibili per nome tramite la raccolta predefinita `Fields`. Le proprietà personalizzate sono specifiche per ogni provider di dati ed è possibile accedervi mediante la raccolta predefinita `Fields` solo tramite la sintassi che utilizza il nome della proprietà estesa come stringa.  
   
- Quando si usa la finestra Progettazione query MDX con interfaccia grafica di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per definire la query, a quest'ultima viene automaticamente aggiunto un set predefinito di proprietà delle celle e delle dimensioni. Nel report è possibile utilizzare solo le proprietà estese specificatamente elencate nella query MDX. A seconda del report, potrebbe essere opportuno modificare il testo del comando MDX in modo che includa altre proprietà personalizzate o delle dimensioni definite nel cubo. Per altre informazioni sui campi estesi disponibili nelle origini dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere [Creazione e uso di valori di proprietà &#40;MDX&#41;](../../analysis-services/creating-and-using-property-values-mdx.md).  
+ Quando si usa la finestra Progettazione query MDX con interfaccia grafica di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per definire la query, a quest'ultima viene automaticamente aggiunto un set predefinito di proprietà delle celle e delle dimensioni. Nel report è possibile utilizzare solo le proprietà estese specificatamente elencate nella query MDX. A seconda del report, potrebbe essere opportuno modificare il testo del comando MDX in modo che includa altre proprietà personalizzate o delle dimensioni definite nel cubo. Per altre informazioni sui campi estesi disponibili nelle origini dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere [Creazione e uso di valori di proprietà &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/creating-and-using-property-values-mdx).  
   
 ## <a name="working-with-field-properties-in-a-report"></a>Utilizzo delle proprietà di campo in un report  
  Le proprietà di campo estese includono proprietà predefinite e proprietà specifiche del provider di dati. Le proprietà di campo non vengono visualizzate con l'elenco dei campi nel riquadro **Dati report** , sebbene siano incluse nella query compilata per un set di dati. Non è possibile pertanto trascinarle nell'area di progettazione del report. È invece necessario trascinare il campo nel report e quindi modificare la proprietà `Value` del campo impostando la proprietà che si desidera utilizzare. Se, ad esempio, i dati delle celle di un cubo sono già stati formattati, è possibile usare la proprietà di campo FormattedValue usando l'espressione seguente: `=Fields!FieldName.FormattedValue`.  
@@ -54,7 +54,7 @@ ms.locfileid: "66107284"
 |`FontWeight`|`String`|Restituisce lo spessore del carattere definito nel database per l'elemento.|  
 |`FontStyle`|`String`|Restituisce lo stile del tipo di carattere definito nel database per l'elemento.|  
 |`TextDecoration`|`String`|Restituisce la formattazione di testo speciale definita nel database per l'elemento.|  
-|`FormattedValue`|`String`|Restituisce un valore formattato per una misura o una cifra chiave. Ad esempio, il `FormattedValue` proprietà per **Sales Amount Quota** restituisce un formato valuta come $1,124,400.00.|  
+|`FormattedValue`|`String`|Restituisce un valore formattato per una misura o una cifra chiave. Ad esempio, la `FormattedValue` proprietà per **Sales Amount Quota** restituisce un formato di valuta come $1.124.400,00.|  
 |`Key`|`Object`|Restituisce la chiave per un livello.|  
 |`LevelNumber`|`Integer`|Per gerarchie padre-figlio, questa proprietà restituisce il numero del livello o della dimensione.|  
 |`ParentUniqueName`|`String`|Per gerarchie padre-figlio, restituisce un nome completo del livello padre.|  

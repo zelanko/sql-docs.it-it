@@ -1,5 +1,5 @@
 ---
-title: Usando una versione modificata dell'analisi dei servizi di progetto dell'esercitazione | Microsoft Docs
+title: Uso di una versione modificata del progetto Analysis Services Tutorial | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 43ec549444fd108dbee9e53518a4e996b281b46b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42116af318d6549b5b70b190aaf5f24b551c2069
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078808"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888398"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Utilizzo di una versione modificata del progetto Analysis Services Tutorial
   Le lezioni rimanenti di questa esercitazione sono basate su una versione migliorata del progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial completato nelle prime tre lezioni. Altre tabelle e calcoli denominati sono stati aggiunti alla vista origine dati **Adventure Works DW 2012** ; sono state aggiunte altre dimensioni al progetto e al cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. Infine, è stato aggiunto un secondo gruppo di misure contenente le misure di una seconda tabella dei fatti. Il progetto migliorato consente di approfondire la conoscenza delle tecniche per l'aggiunta di funzionalità alla propria applicazione di Business Intelligence senza la necessità di tornare su informazioni già acquisite.  
@@ -40,7 +40,7 @@ ms.locfileid: "66078808"
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>Caricamento ed elaborazione del progetto migliorato  
   
-1.  Nelle [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]via il **File** menu, fare clic su **Chiudi soluzione** per chiudere i file non è possibile utilizzare.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]scegliere **Chiudi soluzione** dal menu **file** per chiudere i file che non verranno utilizzati.  
   
 2.  Scegliere **Apri** dal menu **File**e fare clic su **Progetto/Soluzione**.  
   
@@ -56,12 +56,12 @@ ms.locfileid: "66078808"
 ### <a name="data-source-view"></a>Vista origine dati  
  Nella vista origine dati del progetto migliorato è inclusa un'ulteriore tabella dei fatti e quattro tabelle delle dimensioni aggiuntive del database [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
- Si noti che con dieci tabelle nei dati di visualizzazione dell'origine di \<tutte le tabelle > diagramma risulta molto pieno. Di conseguenza, risulta difficile individuare sia le relazioni tra le tabelle che tabelle specifiche. Per risolvere questo problema, le tabelle vengono organizzate in due diagrammi logici, ovvero **Internet Sales** e **Reseller Sales** . Ogni diagramma è organizzato in base a una singola tabella dei fatti. La creazione di diagrammi logici consente di visualizzare e utilizzare un subset specifico delle tabelle in una vista origine dati anziché visualizzare sempre tutte le tabelle e le relative relazioni in un unico diagramma.  
+ Si noti che con dieci tabelle nella vista origine dati, tutte \<le tabelle > diagramma sta diventando affollato. Di conseguenza, risulta difficile individuare sia le relazioni tra le tabelle che tabelle specifiche. Per risolvere questo problema, le tabelle vengono organizzate in due diagrammi logici, ovvero **Internet Sales** e **Reseller Sales** . Ogni diagramma è organizzato in base a una singola tabella dei fatti. La creazione di diagrammi logici consente di visualizzare e utilizzare un subset specifico delle tabelle in una vista origine dati anziché visualizzare sempre tutte le tabelle e le relative relazioni in un unico diagramma.  
   
 #### <a name="internet-sales-diagram"></a>Diagramma Internet Sales  
  Il diagramma **Internet Sales** contiene le tabelle relative alla vendita dei prodotti [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] direttamente ai clienti tramite Internet. Le tabelle del diagramma sono le quattro tabelle delle dimensioni e una sola tabella dei fatti aggiunte alla vista origine dati di **Adventure Works DW 2012** nella Lezione 1. Le tabelle sono le seguenti:  
   
--   **Geography**  
+-   **Area geografica**  
   
 -   **Customer**  
   
@@ -117,6 +117,6 @@ ms.locfileid: "66078808"
  [Definizione delle proprietà degli attributi padre in una gerarchia padre-figlio](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 
   
 ## <a name="see-also"></a>Vedere anche  
- [Distribuzione di un progetto di Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
+ [Distribuzione di un progetto di Analysis Services](https://docs.microsoft.com/analysis-services/lesson-2-5-deploying-an-analysis-services-project)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di Set di espressioni | Microsoft Docs
+title: Utilizzo di espressioni set | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 622458f3ea3f8baf74b3aaa4aa9c46f94972f490
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1588d955e728830da4417160591a5c2b6c231473
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038015"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893498"
 ---
 # <a name="using-set-expressions"></a>Utilizzo di espressioni set
 
@@ -49,17 +49,17 @@ ms.locfileid: "68038015"
   
  è costituito da due membri della dimensione Measures. Sull'asse di Rows, il set  
   
- {([Product]. [Product Categories]. [Category]. & [4], [Date]. [Calendar]. [Calendar Year]. & [2004]),  
+ {([Prodotto]. [Categorie di prodotti]. [Category]. & [4], [DATE]. [Calendario]. [Anno di calendario]. & [2004]),  
   
- ([Product]. [Product Categories]. [Category]. & [1], [Date]. [Calendar]. [Calendar Year]. & [2003]),  
+ ([Prodotto]. [Categorie di prodotti]. [Category]. & [1], [DATE]. [Calendario]. [Anno di calendario]. & [2003]),  
   
- ([Product]. [Product Categories]. [Category]. & [3], [Date]. [Calendar]. [Calendar Year]. & amp;[2004])}  
+ ([Prodotto]. [Categorie di prodotti]. [Category]. & [3], [DATE]. [Calendario]. [Anno di calendario]. & [2004])}  
   
  è costituito da tre tuple, ognuna delle quali contiene due riferimenti espliciti a membri sulla gerarchia Product Categories della dimensione Product e sulla gerarchia Calendar della dimensione Date.  
   
- Per esempi di funzioni che restituiscono set, vedere [utilizzo di membri, tuple e set di &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
+ Per esempi di funzioni che restituiscono set, vedere [utilizzo di membri, Tuple e set &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le espressioni &#40;MDX&#41;](../mdx/expressions-mdx.md)  
+ [Espressioni &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   
