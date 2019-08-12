@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: c326237456d7c4a427f2077dce8d148be3501902
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fdff711249e7fd356ad74f37faf5bb98482672d2
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106336"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893089"
 ---
 # <a name="data-mining-query"></a>Query di data mining
 
@@ -67,7 +67,7 @@ ms.locfileid: "68106336"
  Consente di specificare una condizione o un'espressione utente da applicare a una colonna. È possibile trascinare le colonne dalle tabelle contenenti il modello di data mining e dalle tabelle di input sulla cella.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strumenti query di data mining](../../analysis-services/data-mining/data-mining-query-tools.md)   
+ [Strumenti query di data mining](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
  [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-statements.md)  
   
   

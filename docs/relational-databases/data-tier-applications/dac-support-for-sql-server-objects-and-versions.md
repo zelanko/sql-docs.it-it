@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3e2b32c6804de71d9af074de15b8506c493dfa99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0e0f85e21898ccf61d7c205305fc9179edc2af4
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030479"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810583"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>Supporto dell'applicazione livello dati per oggetti e versioni di SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "68030479"
 |-|-|  
 |RUOLO DEL DATABASE|FUNZIONE: inline con valori di tabella|  
 |FUNZIONE: con valori di tabella con istruzioni multiple|FUNZIONE: Scalare|  
-|INDICE: Cluster|INDICE: non cluster|  
+|INDICE: Cluster|INDICE: Non cluster|  
 |INDICE: spaziale|INDICE: Univoco|  
 |Account di accesso|Autorizzazioni|  
 |Appartenenze a ruoli|SCHEMA|  

@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: caf8b23b823d7863e1bd7c8abd01ef43b0b8ec20
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: bfe22edbc76805fb821ddda42a07a3b74395bdb6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702891"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893994"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novità di [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -46,7 +46,7 @@ Community Technology Preview (CTP) 3.2 è la versione pubblica più recente di [
 
 | Nuova funzionalità o aggiornamento | Dettagli |
 |:---|:---| 
-| Impostazione di governance per gli aggiornamenti della cache di Power BI.  | Il servizio Power BI memorizza nella cache i dati dei riquadri del dashboard e i dati del report per il caricamento iniziale del report Live Connect, causando un numero eccessivo di query della cache inviate a SSAS e in casi estremi il sovraccarico del server. In questa versione è stata introdotta la proprietà **ClientCacheRefreshPolicy**. Questa proprietà consente di eseguire l'override di questo comportamento a livello di server. Per altre informazioni, vedere [Proprietà generali](../analysis-services/server-properties/general-properties.md). |
+| Impostazione di governance per gli aggiornamenti della cache di Power BI.  | Il servizio Power BI memorizza nella cache i dati dei riquadri del dashboard e i dati del report per il caricamento iniziale del report Live Connect, causando un numero eccessivo di query della cache inviate a SSAS e in casi estremi il sovraccarico del server. In questa versione è stata introdotta la proprietà **ClientCacheRefreshPolicy**. Questa proprietà consente di eseguire l'override di questo comportamento a livello di server. Per altre informazioni, vedere [Proprietà generali](https://docs.microsoft.com/analysis-services/server-properties/general-properties). |
 | Collegamento online  | Questa funzionalità offre la possibilità di collegare un modello tabulare come operazione online. Il collegamento online può essere usato per la sincronizzazione di repliche di sola lettura negli ambienti con scalabilità orizzontale delle query locali. Per altre informazioni, vedere [Collegamento online](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32) in Dettagli. |
 | &nbsp; | &nbsp; |
 

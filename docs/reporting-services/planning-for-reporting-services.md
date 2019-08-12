@@ -8,24 +8,24 @@ ms.topic: conceptual
 ms.assetid: 4dde9d4d-e4fa-4bbe-91b0-0bcb0dc7dde7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 573a35b3e1c8512f274d05658b3030e41576a65e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa89fdf4bce0f268d71ea8c93e60ec4fcee6237c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580825"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891766"
 ---
 # <a name="planning-for-reporting-services"></a>Pianificazione per Reporting Services
   In questi argomenti vengono fornite informazioni su [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Informazioni su come installare e configurare l'ambiente [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nel modo più adatto per le proprie esigenze.  
   
- ![Icona della cartella file piccola](../analysis-services/media/filefolder-small.png "Icona della cartella file piccola") **Pianificazione e architettura generale della funzionalità Reporting Services**  
+ ![Icona della cartella file piccola](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Icona della cartella file piccola") **Pianificazione e architettura generale della funzionalità Reporting Services**  
  [Supporto browser per Reporting Services e Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
   
  [Pianificare la progettazione e la distribuzione di report | Reporting Services](https://msdn.microsoft.com/1c1e265e-52a2-4de3-96fd-ca4abae01c02)  
   
  [Visualizzare i report Reporting Services su dispositivi Microsoft Surface e Apple iOS](https://msdn.microsoft.com/library/2124bcf5-d60a-475f-a4ae-de6df44d2860)  
   
- ![Icona della cartella file piccola](../analysis-services/media/filefolder-small.png "Icona della cartella file piccola") **Configurazione di Reporting Services**  
+ ![Icona della cartella file piccola](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Icona della cartella file piccola") **Configurazione di Reporting Services**  
  [Server di report di Reporting Services](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   
  [Elenco di controllo per la distribuzione: installare Reporting Services in una farm di SharePoint esistente](https://msdn.microsoft.com/library/436b4c3d-3f2f-464a-be7e-5c051d9ffb8f)  

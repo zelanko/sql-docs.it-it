@@ -16,12 +16,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 372bdfd2bdb749a624f5b68ff69380825d86b3ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a05419d31d7b3c8579afc824b9bb27f15aa9481d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990924"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892705"
 ---
 # <a name="sql-server-installation"></a>Installazione di SQL Server
 
@@ -77,7 +77,7 @@ Viene descritto come preparare il computer per [!INCLUDE[ssNoVersion](../../incl
 [Installare le funzionalità di Business Intelligence di SQL Server con SharePoint &#40;Power Pivot e Reporting Services&#41;](https://msdn.microsoft.com/library/3166107c-30c2-468e-bb1b-bb42b79b37c3)  
  In questa sezione viene illustrato come installare funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un ambiente SharePoint. e vengono identificate le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibili in una versione ed edizione specifiche di SharePoint Sono incluse anche le procedure di installazione per [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint e per Reporting Services in modalità SharePoint.  
   
-![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Installare il nuovo database di esempio, [Wide World Importers](../../sample/world-wide-importers/wide-world-importers-documentation.md). 
+![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Installare il nuovo database di esempio, [Wide World Importers](../../sample/world-wide-importers/wide-world-importers-documentation.md). 
   
 [Altri esempi e database di esempio di SQL Server](https://sqlserversamples.codeplex.com/)  
  Viene descritto come installare e configurare gli esempi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i database di esempio.  

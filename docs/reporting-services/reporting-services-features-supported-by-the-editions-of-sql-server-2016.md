@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/20/2019
-ms.openlocfilehash: eca8f43d358ca3869c3812a457b710d64dadeaf5
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: 3e61381c2298a197be698ed82c247023ad708789
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343876"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893279"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>Funzionalità di SQL Server Reporting Services supportate nelle diverse edizioni
 
@@ -24,9 +24,9 @@ Questo argomento illustra le funzionalità di SQL Server Reporting Services (SSR
 
  ## <a name="try-sql-server-2017"></a>Provare SQL Server 2017
 
-> [![Scaricare SQL Server 2017](../analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Scaricare SQL Server 2017 da Evaluation Center](https://go.microsoft.com/fwlink/?LinkID=829477)**    
+> [![Scaricare SQL Server 2017](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Scaricare SQL Server 2017 da Evaluation Center](https://go.microsoft.com/fwlink/?LinkID=829477)**    
 >
-> ![Macchina virtuale di Azure piccola](../analysis-services/media/azure-virtual-machine-small.png) **[Attivare una macchina virtuale con SQL Server 2017 già installato](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+> ![Macchina virtuale di Azure piccola](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[Attivare una macchina virtuale con SQL Server 2017 già installato](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
 
 Per le funzionalità supportate dalle edizioni Evaluation e Developer, vedere la colonna dell'edizione SQL Server Enterprise nella tabella seguente.
 

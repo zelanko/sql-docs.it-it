@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ba7459c97a64422023bed0cffd292c418933ce43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64637e048277db5ad082b2b6a9ffad4b4b0d3ea7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126198"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892290"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,7 +42,7 @@ Per accedere a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
  Gli utenti esperti nella gestione di **Windows Firewall** e che sanno quali impostazioni del firewall vogliono configurare possono passare direttamente agli articoli più avanzati:  
   
 -   [Configurazione di Windows Firewall per l'accesso al Motore di database](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)    
--   [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)    
+-   [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)    
 -   [Configurare un firewall per l'accesso al server di report](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
 ##  <a name="BKMK_basic"></a> Informazioni di base sul firewall  
@@ -159,7 +159,7 @@ Per impostazione predefinita le porte tipiche usate da SQL Server Analysis Servi
   
  Se gli utenti accedono a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tramite IIS e Internet, è necessario aprire la porta su cui IIS è in attesa e specificare la porta nella stringa di connessione client. In questo caso, non è necessario aprire alcuna porta per l'accesso diretto ad [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. È consigliabile limitare la porta predefinita 2389 e la porta 2382 insieme a tutte le altre porte non necessarie.  
   
- Per istruzioni dettagliate su come configurare Windows Firewall per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+ Per istruzioni dettagliate su come configurare Windows Firewall per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vedere [Configurare Windows Firewall per consentire l'accesso ad Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access).  
   
 ###  <a name="BKMK_ssrs"></a> Porte utilizzate da Reporting Services  
 

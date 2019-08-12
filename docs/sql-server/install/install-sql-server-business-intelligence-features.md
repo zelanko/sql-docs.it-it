@@ -10,12 +10,12 @@ ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: afef865ed2440f278d61e8b0f4d3304867803853
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 418852430170e40308d1d37446b9868281960f49
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126193"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894057"
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>Installare le funzionalità di business intelligence di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "68126193"
 ## <a name="sql-server-bi-features"></a>Funzionalità di business intelligence di SQL Server  
  Tutte le funzionalità di SQL Server, inclusi i componenti di business intelligence, vengono installate durante l'installazione di SQL Server. I collegamenti seguenti forniscono informazioni aggiuntive specifiche per ogni funzionalità di business intelligence.  
   
--   [Installare Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services.md)  
+-   [Installare Analysis Services](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services)  
   
--   [Installazione di Analisi Services in modalità Power Pivot](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
+-   [Installazione di Analisi Services in modalità Power Pivot](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)  
   
 -   [Installare Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68126193"
   
 ## <a name="see-also"></a>Vedere anche  
  [Novità di Reporting Services &#40;SSRS&#41;](https://msdn.microsoft.com/bc909063-6b84-4b3a-80d2-e93fc04b4b9d)   
- [Novità di Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md)   
+ [Novità di Analysis Services](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)   
  [Novità di Integration Services](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)   
  [Novità in Master Data Services &#40;MDS&#41;](../../master-data-services/what-s-new-in-master-data-services-mds.md)   
  [Installare SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)   

@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5352a4b71e485a58907d4702dd10929955f92500
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0359a53fafa4c738b80d4ad44b3c9babdd534cf7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65570972"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892556"
 ---
 # <a name="grouping-pane"></a>Riquadro di raggruppamento
 Durante la progettazione di report di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , nel riquadro Raggruppamento vengono visualizzati i gruppi di righe e di colonne dell'area dati Tablix selezionata. Il riquadro Raggruppamento non è disponibile per le aree dati Grafico e Misuratore. Il riquadro di raggruppamento è costituito da un riquadro Gruppi di righe e da un riquadro Gruppi di colonne e include due modalità: predefinita e avanzata. Nella modalità predefinita è riportata una visualizzazione gerarchica dei membri dinamici dei gruppi di righe e di colonne. Nella modalità avanzata vengono visualizzati sia i membri dinamici che quelli statici dei gruppi di righe e di colonne. Un gruppo è un set di dati denominato che deriva da un set di dati del report visualizzato in un'area dati. I gruppi sono organizzati in gerarchie che includono membri statici e dinamici. Per altre informazioni, vedere [Informazioni sui gruppi &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
-  ![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Se il riquadro di raggruppamento non è visualizzato, scegliere **Raggruppamento** dal menu **Report**.
+  ![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Se il riquadro di raggruppamento non è visualizzato, scegliere **Raggruppamento** dal menu **Report**.
   
  Le celle nelle aree dei gruppi di colonne e di righe possono essere membri statici o dinamici di un gruppo. I membri statici vengono ripetuti una volta per ogni gruppo e in genere contengono etichette o totali. I membri dinamici vengono ripetuti una volta per ogni istanza di gruppo e in genere contengono i valori univoci dell'espressione di raggruppamento. Quando si selezionano celle della Tablix nell'area dei gruppi di righe o di colonne, viene selezionato il membro di gruppo corrispondente nel riquadro Gruppi di righe o Gruppi di colonne. Viceversa, se si selezionano gruppi nel riquadro di raggruppamento, la cella corrispondente associata al membro del gruppo viene selezionata nell'area di progettazione. Per altre informazioni sulle aree dei gruppi di colonne e righe Tablix, vedere [Aree dell'area dati Tablix &#40;Generatore report e SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
@@ -49,7 +49,7 @@ Durante la progettazione di report di [!INCLUDE[ssRSnoversion_md](../../includes
 ## <a name="advanced-mode"></a>Modalità avanzata  
 Nella modalità avanzata è possibile visualizzare tutti i membri statici e dinamici di un gruppo. Quando si seleziona un membro, nella finestra Proprietà vengono visualizzate le proprietà per il **membro Tablix**selezionato.  
   
-![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Per attivare/disattivare la **Modalità avanzata**, fare clic con il pulsante destro del mouse sulla freccia rivolta verso il basso accanto al riquadro Gruppi di colonne e quindi scegliere **Modalità avanzata**.  
+![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Per attivare/disattivare la **Modalità avanzata**, fare clic con il pulsante destro del mouse sulla freccia rivolta verso il basso accanto al riquadro Gruppi di colonne e quindi scegliere **Modalità avanzata**.  
   
 Nella maggior parte dei casi, le proprietà che controllano la visualizzazione delle righe e delle colonne di gruppo statiche e dinamiche vengono impostate automaticamente al momento della creazione di un gruppo o dell'aggiunta dei totali. 
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f9e9884a8875d63ba9defcee5fa20dc121d595ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581342"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889837"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services in SQL Server Data Tools (SSDT)
 
@@ -39,7 +39,7 @@ ms.locfileid: "65581342"
   
 -   **Creazione guidata progetto server di report.** Quando si seleziona un progetto Creazione guidata server di report, verrà creato automaticamente un progetto server di report e verrà aperta la Creazione guidata report. Nella procedura guidata è possibile creare un report seguendo le istruzioni riportate in ogni pagina per creare una stringa di connessione a un'origine dati, impostare le credenziali dell'origine dati, progettare una query, aggiungere un'area dati Tabella o Matrice, specificare i dati del report e i gruppi, selezionare uno stile di carattere e colore, pubblicare il report in un server di report e visualizzare l'anteprima del report in locale. Dopo aver creato un report con la procedura guidata, è possibile modificarne i dati e la finestra di progettazione tramite Progettazione report nel progetto server di report.  
   
- ![Nuovi modelli di progetto in SSDT](../../analysis-services/media/ssdt-biprojects.png "Nuovi modelli di progetto in SSDT")  
+ ![Nuovi modelli di progetto in SSDT](https://docs.microsoft.com/analysis-services/analysis-services/media/ssdt-biprojects.png "Nuovi modelli di progetto in SSDT")  
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Finestre e riquadri Progettazione report  

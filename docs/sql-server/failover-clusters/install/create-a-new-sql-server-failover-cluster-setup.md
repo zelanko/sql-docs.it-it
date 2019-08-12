@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2581a2a6c91640ce00b8bc804d8b52183de533ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 02cb0eb53ee8561884799c3a5e4f4f44eb5ff752
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063970"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893180"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Creare un nuovo cluster di failover di SQL Server (programma di installazione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "68063970"
   
 8.  Nella pagina Condizioni di licenza leggere il contratto di licenza, quindi selezionare la casella di controllo per accettarne le condizioni. Per migliorare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è inoltre possibile abilitare l'opzione relativa all'utilizzo delle funzionalità e inviare report a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Per continuare, fare clic su **Avanti** . Per terminare l'installazione, fare clic su **Annulla**.  
   
-9. Nella pagina Selezione funzionalità selezionare i componenti per l'installazione. Dopo aver selezionato il nome della funzionalità desiderata, nel riquadro a destra verrà visualizzata una descrizione per ogni gruppo di componenti. È possibile selezionare qualsiasi combinazione di caselle di controllo, ma solo il [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità tabulare e [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità multidimensionale supportano il clustering di failover. Gli altri componenti selezionati verranno eseguiti in modo autonomo senza funzionalità di failover nel nodo corrente in cui si esegue il programma di installazione. Per altre informazioni sulle modalità di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , vedere [Determinare la modalità server di un'istanza di Analysis Services](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+9. Nella pagina Selezione funzionalità selezionare i componenti per l'installazione. Dopo aver selezionato il nome della funzionalità desiderata, nel riquadro a destra verrà visualizzata una descrizione per ogni gruppo di componenti. È possibile selezionare qualsiasi combinazione di caselle di controllo, ma solo il [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità tabulare e [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità multidimensionale supportano il clustering di failover. Gli altri componenti selezionati verranno eseguiti in modo autonomo senza funzionalità di failover nel nodo corrente in cui si esegue il programma di installazione. Per altre informazioni sulle modalità di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , vedere [Determinare la modalità server di un'istanza di Analysis Services](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance).  
   
      I prerequisiti per le funzionalità selezionate vengono visualizzati nel riquadro di destra. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verranno installati i prerequisiti che non sono stati ancora installati durante la procedura di installazione descritta più avanti in questo argomento.  
   
@@ -254,7 +254,7 @@ ms.locfileid: "68063970"
   
 9. Nella pagina Condizioni di licenza leggere il contratto di licenza, quindi selezionare la casella di controllo per accettarne le condizioni. Per migliorare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è inoltre possibile abilitare l'opzione relativa all'utilizzo delle funzionalità e inviare report a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Per continuare, fare clic su **Avanti** . Per terminare l'installazione, fare clic su **Annulla**.  
   
-10. Nella pagina Selezione funzionalità selezionare i componenti per l'installazione. Dopo aver selezionato il nome della funzionalità desiderata, nel riquadro a destra verrà visualizzata una descrizione per ogni gruppo di componenti. È possibile selezionare qualsiasi combinazione di caselle di controllo, ma solo il [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità tabulare e [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità multidimensionale supportano il clustering di failover. Gli altri componenti selezionati verranno eseguiti in modo autonomo senza funzionalità di failover nel nodo corrente in cui si esegue il programma di installazione. Per altre informazioni sulle modalità di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , vedere [Determinare la modalità server di un'istanza di Analysis Services](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+10. Nella pagina Selezione funzionalità selezionare i componenti per l'installazione. Dopo aver selezionato il nome della funzionalità desiderata, nel riquadro a destra verrà visualizzata una descrizione per ogni gruppo di componenti. È possibile selezionare qualsiasi combinazione di caselle di controllo, ma solo il [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità tabulare e [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità multidimensionale supportano il clustering di failover. Gli altri componenti selezionati verranno eseguiti in modo autonomo senza funzionalità di failover nel nodo corrente in cui si esegue il programma di installazione. Per altre informazioni sulle modalità di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , vedere [Determinare la modalità server di un'istanza di Analysis Services](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance).  
   
      I prerequisiti per le funzionalità selezionate vengono visualizzati nel riquadro di destra. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verranno installati i prerequisiti che non sono stati ancora installati durante la procedura di installazione descritta più avanti in questo argomento.  
   

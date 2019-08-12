@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 04dacff6d9a7feed350c6f8e4417bbbd81b80b30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4516effe7308386def1aa7cca885f9fa48547ec5
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502617"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889733"
 ---
 # <a name="upgrade-reports-ssrs"></a>Aggiornare i report (SSRS)
 
@@ -136,8 +136,8 @@ I file di definizione del report (con estensione rdl) esistenti vengono aggiorna
 ## <a name="next-steps"></a>Passaggi successivi
 
 [Eseguire l'aggiornamento e la migrazione di Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[Modifiche di rilievo di SQL Server Reporting Services in SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
-[Modifiche del comportamento di SQL Server Reporting Services in SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
+[Modifiche di rilievo di SQL Server Reporting Services in SQL Server 2016](https://docs.microsoft.com/analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016)   
+[Modifiche del comportamento di SQL Server Reporting Services in SQL Server 2016](https://docs.microsoft.com/analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016)   
 [Funzionalità non più disponibili in SQL Server Reporting Services in SQL Server 2016](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [Elementi dei report personalizzati](../../reporting-services/custom-report-items/custom-report-items.md)   
 [Aggiornare un database del server di report](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  

@@ -11,12 +11,12 @@ ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 4676b4d17dc2de9118623037e6725c2b3c637c7e
-ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
+ms.openlocfilehash: 9efb156c64d0e8daf7dcae8849a2e4687773602c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68290362"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892471"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Note sulla versione per SQL Server Data Tools (SSDT)
 
@@ -947,6 +947,6 @@ _Per SQL Server 2016._
 [Scaricare SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Versioni precedenti di SQL Server Data Tools &#40;SSDT e SSDT-BI&#41;](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
 [Novità del motore di database](https://msdn.microsoft.com/library/bb510411.aspx)  
-[Novità di Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)  
+[Novità di Analysis Services](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)  
 [Novità di Integration Services](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
   
