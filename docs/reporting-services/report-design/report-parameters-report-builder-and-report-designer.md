@@ -10,12 +10,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
-ms.openlocfilehash: ef5664ab93b5e293dd176a91da83284cc2b72743
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 494b682853425b40699ff698117d2941805ab7da
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463602"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941144"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parametri report (Generatore report e Progettazione report)
 
@@ -75,13 +75,13 @@ Quando si visualizza un report con parametri, ogni parametro viene visualizzato 
   
 1. **Riquadro Parametri** Nella barra degli strumenti del visualizzatore di report vengono visualizzati un messaggio di richiesta e un valore predefinito per ogni parametro. È possibile personalizzare il layout dei parametri nel riquadro Parametri. Per altre informazioni, vedere [Personalizzare il riquadro dei parametri in un report &#40;Generatore report&#41;](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
   
-2. Parametro **@SalesDate**  Il parametro @SalesDate ha il tipo di dati **DateTime**. Accanto alla casella di testo viene visualizzata la richiesta di selezionare la data. Per modificare la data, digitare una nuova data nella casella di testo o usare il controllo calendario.  
+2. **Parametro \@SalesDate** Il parametro @SalesDate ha il tipo di dati **DateTime**. Accanto alla casella di testo viene visualizzata la richiesta di selezionare la data. Per modificare la data, digitare una nuova data nella casella di testo o usare il controllo calendario.  
   
-3. Parametro **@ShowAll**  Il parametro @ShowAll ha il tipo di dati **Boolean**. Usare i pulsanti di opzione per specificare **True** o **False**.  
+3. **Parametro \@ShowAll** Il parametro @ShowAll ha il tipo di dati **Boolean**. Usare i pulsanti di opzione per specificare **True** o **False**.  
   
 4. **Handle Mostra o nasconde l'area dei parametri** Nella barra degli strumenti del visualizzatore di report fare clic su questa freccia per mostrare o nascondere il riquadro dei parametri.  
   
-5. Parametro **@CategoryQuota**  Il parametro @CategoryQuota ha il tipo di dati **Float** e di conseguenza accetta un valore numerico.  @CategoryQuota è impostato per consentire più valori.  
+5. **Parametro \@CategoryQuota** Il parametro @CategoryQuota ha il tipo di dati **Float** e di conseguenza accetta un valore numerico.  @CategoryQuota è impostato per consentire più valori.  
   
 6. **Visualizza report**  Dopo aver immesso i valori dei parametri, fare clic su **Visualizza report** per eseguire il report. Se tutti i parametri hanno valori predefiniti, il report viene eseguito automaticamente a prima vista.  
   

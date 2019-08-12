@@ -1,7 +1,7 @@
 ---
 title: Utilizzo del Driver JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 997c797116e1424f8747d493de2af5b4fd57082e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b00cd72309fde42ab794d7a365be2a736e3671e0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916149"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893663"
 ---
 # <a name="using-the-jdbc-driver"></a>Utilizzo del driver JDBC
 
@@ -26,6 +26,8 @@ Questa sezione include istruzioni introduttive per creare una connessione sempli
 ## <a name="choosing-the-right-jar-file"></a>Scelta del file JAR corretto
 
 Microsoft JDBC Driver fornisce diversi file JAR da usare in base alle impostazioni JRE (Java Runtime Environment) preferite, come illustrato di seguito:
+
+Microsoft JDBC Driver 7.4 per SQL Server fornisce i file della libreria di classi **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** e **mssql-jdbc-7.4.1.jre12.jar**.
 
 Microsoft JDBC Driver 7.2 per SQL Server fornisce i file della libreria di classi **mssql-jdbc-7.2.2.jre8.jar** e **mssql-jdbc-7.2.2.jre11.jar**.
 
@@ -49,13 +51,37 @@ Se si usa il driver JDBC 4.1 o 4.2, impostare il classpath per l'inclusione del 
 
 Se si usa il driver JDBC 6.2, impostare il classpath per l'inclusione del file **mssql-jdbc-6.2.2.jre7.jar** o **mssql-jdbc-6.2.2.jre8.jar**.
 
-Se si usa il driver JDBC 6.4, impostare il classpath per l'inclusione del file **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar o **mssql-jdbc-6.4.0.jre9.jar**.
+Se si usa il driver JDBC 6.4, impostare il classpath per l'inclusione del file **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar** o **mssql-jdbc-6.4.0.jre9.jar**.
 
 Se si usa il driver JDBC 7.0, impostare il classpath per l'inclusione del file **mssql-jdbc-7.0.0.jre8.jar** o **mssql-jdbc-7.0.0.jre10.jar**.
 
 Se si usa il driver JDBC 7.2, impostare il classpath per l'inclusione del file **mssql-jdbc-7.2.2.jre8.jar** o **mssql-jdbc-7.2.2.jre11.jar**.
 
+Se si usa il driver JDBC 7.4, impostare il classpath per l'inclusione del file **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** o **mssql-jdbc-7.4.1.jre12.jar**.
+
 Se nel classpath manca una voce per il file JAR necessario, un'applicazione genera l'eccezione comune `Class not found`.  
+
+### <a name="for-microsoft-jdbc-driver-74"></a>Per Microsoft JDBC Driver 7.4
+
+Il file **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar**, o **mssql-jdbc-7.4.1.jre12.jar** viene installato nelle posizioni seguenti:
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.4.1.jre8.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.4.1.jre11.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.4.1.jre12.jar
+```
+
+Il frammento di codice seguente è un esempio di istruzione CLASSPATH usata per un'applicazione Windows:
+
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 7.4 for SQL Server\sqljdbc_7.4\enu\mssql-jdbc-7.4.1.jre11.jar`
+
+Il frammento di codice seguente è un esempio di istruzione CLASSPATH usata per un'applicazione Unix/Linux:
+
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.4/enu/mssql-jdbc-7.4.1.jre11.jar`
+
+Assicurarsi che l'istruzione CLASSPATH contenga un solo [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], ad esempio **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar**, o **mssql-jdbc-7.4.1.jre12.jar**.
 
 ### <a name="for-microsoft-jdbc-driver-72"></a>Per Microsoft JDBC Driver 7.2
 

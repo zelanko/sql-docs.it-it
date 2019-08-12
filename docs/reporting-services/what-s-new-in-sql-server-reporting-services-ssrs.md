@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/08/2019
-ms.openlocfilehash: d7755f15e78f29814eee93557286736b849c96c6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7e6864a935a9e1d3f2fcdcb1dbe100a65df3789a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264586"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893523"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novità di SQL Server Reporting Services (SSRS)
 
@@ -26,7 +26,7 @@ Per le note sulla versione corrente, vedere [Note sulla versione di SQL Server 2
 
 Per informazioni su Server di report di Power BI, vedere [Che cos'è Server di report di Power BI?](https://docs.microsoft.com/power-bi/report-server/get-started).
 
-**Scarica** ![download](../analysis-services/media/download.png "download")
+**Scarica** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
 
 Per scaricare SQL Server 2017 Reporting Services, accedere all' **[Area download Microsoft](https://www.microsoft.com/download/details.aspx?id=55252)** .
 
@@ -34,7 +34,7 @@ Per scaricare SQL Server 2017 Reporting Services, accedere all' **[Area download
 
 ## <a name="sql-server-2019-preview-reporting-services"></a>Anteprima di SQL Server 2019 Reporting Services
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services non è disponibile per CTP 3.1. Installare la versione corrente, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services non è disponibile per CTP 3.2. Installare la versione corrente, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -161,7 +161,7 @@ Per altre informazioni sul supporto dei browser, vedere [Supporto browser per Re
 2. Selezionare il dashboard a cui si vuole aggiungere l'elemento.
 3. Selezionare la frequenza di aggiornamento del riquadro nel dashboard.
 
-![nota](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "nota") L'aggiornamento è gestito dalle sottoscrizioni di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e, dopo l'aggiunta dell'elemento, è possibile modificare la sottoscrizione e configurare un'altra pianificazione dell'aggiornamento.
+![nota](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "nota") L'aggiornamento è gestito dalle sottoscrizioni di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e, dopo l'aggiunta dell'elemento, è possibile modificare la sottoscrizione e configurare un'altra pianificazione dell'aggiornamento.
 
 ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 

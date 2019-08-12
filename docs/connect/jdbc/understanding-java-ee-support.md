@@ -1,7 +1,7 @@
 ---
 title: Informazioni sul supporto Java EE | Microsoft Docs
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f8c723be34119ed244e69247887ef34d8bb5a7cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 318800db7335a47226e75a4e05a4493c366507f9
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916632"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892316"
 ---
 # <a name="understanding-java-ee-support"></a>Informazioni sul supporto Java EE
 
@@ -36,8 +36,10 @@ Per il driver JDBC 6.4, il driver è incluso in **mssql-jdbc-6.4.0.jre7.jar**, *
 Per il driver JDBC 7.0, il driver è incluso in **mssql-jdbc-7.0.0.jre8.jar** o **mssql-jdbc-7.0.0.jre10.jar**.
 
 Per il driver JDBC 7.2, il driver è incluso in **mssql-jdbc-7.2.2.jre8.jar** o **mssql-jdbc-7.2.2.jre11.jar**.
+
+Per il driver JDBC 7.4, il driver è incluso in **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** o **mssql-jdbc-7.4.1.jre12.jar**.
   
-Il nome della classe viene usato quando si carica il driver con la classe JDBC DriverManager, nonché quando è necessario specificare il nome della classe del driver in qualsiasi configurazione del driver. Per configurare un'origine dati all'interno di un server applicazioni Java EE potrebbe ad esempio essere necessario immettere il nome della classe del driver.  
+Il nome della classe viene utilizzato ogni volta che si carica il driver con la classe JDBC DriverManager e ogni volta che si specifica il nome della classe del driver in qualsiasi configurazione del driver. Per configurare un'origine dati all'interno di un server applicazioni Java EE potrebbe ad esempio essere necessario immettere il nome della classe del driver.  
   
 ## <a name="data-sources"></a>Origini dati
 

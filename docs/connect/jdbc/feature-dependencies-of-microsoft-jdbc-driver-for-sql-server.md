@@ -1,7 +1,7 @@
 ---
 title: Dipendenze delle funzionalità di Microsoft JDBC Driver per SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1bf49c4264b89b6a47f083eec3654a757c1dce6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 26395c7a925906e7b27d4e47098164019e56f31d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956592"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893956"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Dipendenze delle funzionalità di Microsoft JDBC Driver per SQL Server
 
@@ -26,11 +26,11 @@ Questo articolo elenca le librerie da cui dipende Microsoft JDBC Driver per SQL 
 ## <a name="compile-time"></a>Fase di compilazione
 
  - `com.microsoft.azure:azure-keyvault` : provider Azure Key Vault per la funzionalità Azure Key Vault Always Encrypted (facoltativo)
- - `com.microsoft.azure:azure-keyvault-webkey` : provider Azure Key Vault per la funzionalità Azure Key Vault Always Encrypted (facoltativo)
  - `com.microsoft.azure:adal4j` : Azure Active Directory Library per Java per la funzionalità di autenticazione di Azure Active Directory e la funzionalità Azure Key Vault (facoltativo)
  - `com.microsoft.rest:client-runtime` : Azure Active Directory Library per Java per la funzionalità di autenticazione di Azure Active Directory e la funzionalità Azure Key Vault (facoltativo)
-- `org.osgi:org.osgi.core`: libreria OSGi Core per il supporto OSGi Framework.
-- `org.osgi:org.osgi.compendium`: libreria OSGi Compendium per il supporto OSGi Framework.
+ - `org.antlr:antlr4-runtime`: ANTLR 4 Runtime per la funzionalità useFmtOnly (facoltativo)
+ - `org.osgi:org.osgi.core`: libreria OSGi Core per il supporto OSGi Framework.
+ - `org.osgi:org.osgi.compendium`: libreria OSGi Compendium per il supporto OSGi Framework.
 
 ## <a name="test-time"></a>Fase di timeout
 
@@ -42,20 +42,20 @@ I progetti specifici che richiedono una delle funzionalità elencate precedentem
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.2.2.jre11</version>
+    <version>7.4.1.jre11</version>
     <scope>compile</scope>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>adal4j</artifactId>
-    <version>1.6.3</version>
+    <version>1.6.4</version>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.rest</groupId>
     <artifactId>client-runtime</artifactId>
-    <version>1.6.5</version>
+    <version>1.6.10</version>
 </dependency>
 ```
 
@@ -65,32 +65,26 @@ I progetti specifici che richiedono una delle funzionalità elencate precedentem
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.2.2.jre11</version>
+    <version>7.4.1.jre11</version>
     <scope>compile</scope>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>adal4j</artifactId>
-    <version>1.6.3</version>
+    <version>1.6.4</version>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.rest</groupId>
     <artifactId>client-runtime</artifactId>
-    <version>1.6.5</version>
+    <version>1.6.10</version>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-keyvault</artifactId>
-    <version>1.2.0</version>
-</dependency>
-
-<dependency>
-    <groupId>com.microsoft.azure</groupId>
-    <artifactId>azure-keyvault-webkey</artifactId>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
 </dependency>
 ```
 
@@ -98,6 +92,7 @@ I progetti specifici che richiedono una delle funzionalità elencate precedentem
 
 ### <a name="working-with-the-azure-key-vault-provider"></a>Uso del provider Azure Key Vault:
 
+- Versione del driver JDBC 7.4.1 - Versioni delle dipendenze: Azure-Keyvault (versione 1.2.1), Adal4j (versione 1.6.4), Client-Runtime-for-AutoRest (1.6.10) e relative dipendenze ([applicazione di esempio](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
 - Versione del driver JDBC 7.2.2 - Versioni delle dipendenze: Azure-Keyvault (versione 1.2.0), Azure-Keyvault-Webkey (versione 1.2.0), Adal4j (versione 1.6.3), Client-Runtime-for-AutoRest (1.6.5) e relative dipendenze ([applicazione di esempio](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
 - Versione del driver JDBC 7.0.0 - Versioni delle dipendenze: Azure-Keyvault (versione 1.0.0), Adal4j (versione 1.6.0) e relative dipendenze ([applicazione di esempio](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
 - Versione del driver JDBC 6.4.0 - Versioni delle dipendenze: Azure-Keyvault (versione 1.0.0), Adal4j (versione 1.4.0) e relative dipendenze ([applicazione di esempio](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
@@ -107,10 +102,11 @@ I progetti specifici che richiedono una delle funzionalità elencate precedentem
 > [!NOTE]
 > Con le versioni del driver 6.2.2 e 6.4.0, la dipendenza azure-keyvault-java era stata aggiornata alla versione 1.0.0. La nuova versione non era tuttavia compatibile con la versione precedente (0.9.7) e interrompe l'implementazione esistente nel driver. La nuova implementazione nel driver ha richiesto modifiche API, che a loro volta interrompono i programmi client che usano il provider Azure Key Vault.
 >
-> Questo problema viene risolto con la versione più recente del driver (7.0.0). Il costruttore rimosso che usava il meccanismo di callback dell'autenticazione è stato nuovamente aggiunto al provider Azure Key Vault per la compatibilità con le versioni precedenti.
+> Questo problema viene risolto con le versioni più recenti del driver (dalla 7.0.0 in poi). Il costruttore rimosso che usava il meccanismo di callback dell'autenticazione è stato nuovamente aggiunto al provider Azure Key Vault per la compatibilità con le versioni precedenti.
 
 ### <a name="working-with-azure-active-directory-authentication"></a>Utilizzo dell'autenticazione di Azure Active Directory:
 
+- Versione del driver JDBC 7.4.1 - Versioni delle dipendenze: Adal4j (versione 1.6.4), Client-Runtime-for-AutoRest (1.6.10) e relative dipendenze
 - Versione del driver JDBC 7.2.2 - Versioni delle dipendenze: Adal4j (versione 1.6.3), Client-Runtime-for-AutoRest (1.6.5) e relative dipendenze
 - Versione del driver JDBC 7.0.0 - Versioni delle dipendenze: Adal4j (versione 1.6.0) e relative dipendenze
 - Versione del driver JDBC 6.4.0 - Versioni delle dipendenze: Adal4j (versione 1.4.0) e relative dipendenze

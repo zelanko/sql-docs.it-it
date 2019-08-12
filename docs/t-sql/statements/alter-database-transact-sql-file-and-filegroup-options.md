@@ -42,12 +42,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: cf78133d4efa7f055694306f7b7ab22f7937b73b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a4e5ed82200e0bc647981f730765ced973962ba
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065758"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809792"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opzioni per file e filegroup ALTER DATABASE (Transact-SQL)
 
@@ -63,7 +63,7 @@ Nella riga seguente fare clic su qualsiasi nome di prodotto. Viene visualizzato 
 
 |||
 |-|-|-|
-|**\* _SQL Server \*_** &nbsp;|[Istanza gestita<br />database SQL](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|**\* _SQL Server \*_ ** &nbsp;|[Istanza gestita<br />database SQL](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
@@ -532,7 +532,7 @@ Nell'esempio seguente viene spostato il database `tempdb` dal percorso corrente 
 2. Modificare il percorso di ogni file tramite `ALTER DATABASE`.
 
     ```sql
-    USE maser;
+    USE master;
     GO
     ALTER DATABASE tempdb
     MODIFY FILE (NAME = tempdev, FILENAME = 'E:\SQLData\tempdb.mdf');
@@ -683,7 +683,7 @@ GO
 
 > |||
 > |-|-|-|
-> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|**_\* Istanza gestita<br />database SQL\*_**<br />&nbsp;|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|**_\* Istanza gestita<br />database SQL \*_**<br />&nbsp;|
 
 &nbsp;
 
