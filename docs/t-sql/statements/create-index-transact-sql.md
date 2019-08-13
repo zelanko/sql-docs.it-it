@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae776b53016995fdcfd0ccfdb0c242b19f88addc
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 9fdc5ee7428aec65c96755eb9a1c0e013de80d01
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661459"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809776"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -1109,8 +1109,8 @@ ALTER INDEX test_idx on test_table RESUME
 ALTER INDEX test_idx on test_table ABORT
 ```
 
-### <a name="o-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>O. Creare un indice non cluster per una tabella nel database corrente
-Nell'esempio seguente viene creato un indice non cluster per la colonna `VendorID` della tabella `ProductVendor`.
+### <a name="o-create-a-nonclustered-index-on-a-table-in-the-current-database"></a>O. Creare un indice non cluster in una tabella nel database corrente
+Nell'esempio seguente viene creato un indice non cluster nella colonna `VendorID` della tabella `ProductVendor`.
 
 ```sql
 CREATE INDEX IX_ProductVendor_VendorID
@@ -1118,7 +1118,7 @@ CREATE INDEX IX_ProductVendor_VendorID
 ```
 
 ### <a name="p-create-a-clustered-index-on-a-table-in-another-database"></a>P. Creare un indice cluster per una tabella in un altro database
-Nell'esempio seguente viene creato un indice non cluster per la colonna `VendorID` della tabella `ProductVendor` nel database `Purchasing`.
+Nell'esempio seguente viene creato un indice non cluster nella colonna `VendorID` della tabella `ProductVendor` nel database `Purchasing`.
 
 ```sql
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID

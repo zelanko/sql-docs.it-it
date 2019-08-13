@@ -29,12 +29,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b56627ea415a67016b4009c44556019e6fc20d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 52aeeca0dc61f36fbde2ad4a708d359f1dd19567
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061044"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809748"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -73,7 +73,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
     [ ON <on_option> ] 
 [ ; ]  
   
---Create a non-clustered columnstore index on a disk-based table.  
+--Create a nonclustered columnstore index on a disk-based table.  
 CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name   
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }
         ( column  [ ,...n ] )  
@@ -139,7 +139,7 @@ Specifica il nome composto da una, due o tre parti della tabella da archiviare c
   
 #### <a name="with-options"></a>Opzioni WITH
 
-##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON
+##### <a name="drop_existing--off--on"></a>DROP_EXISTING = [OFF] | ON
 
    `DROP_EXISTING = ON` specifica di eliminare l'indice esistente e di creare un nuovo indice columnstore.  
 ```sql
@@ -148,7 +148,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ```
    L'impostazione predefinita, DROP_EXISTING = OFF, prevede che il nome dell'indice sia uguale al nome esistente. Se il nome di indice specificato esiste già, si verifica un errore.  
   
-##### <a name="maxdop--maxdegreeofparallelism"></a>MAXDOP = *max_degree_of_parallelism*  
+##### <a name="maxdop--max_degree_of_parallelism"></a>MAXDOP = *max_degree_of_parallelism*  
    Esegue l'override della configurazione del server del massimo grado di parallelismo per la durata dell'operazione di indice. Utilizzare MAXDOP per limitare il numero di processori utilizzati durante l'esecuzione di un piano parallelo. Il valore massimo è 64 processori.  
   
    I valori per *max_degree_of_parallelism* possono essere:  
@@ -163,7 +163,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 
    Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) e [Configurare operazioni parallele sugli indici](../../relational-databases/indexes/configure-parallel-index-operations.md).  
  
-###### <a name="compressiondelay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minuti ]  
+###### <a name="compression_delay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minuti ]  
    Per una tabella basata su disco, *delay* specifica il numero minimo di minuti in cui un rowgroup differenziale deve rimanere nello stato CLOSED nel rowgroup differenziale prima che SQL Server lo comprima nel rowgroup compresso. Poiché le tabelle basate su disco non tengono traccia delle ore di inserimento e aggiornamento per le singole righe, SQL Server applica il ritardo ai rowgroup differenziali nello stato CLOSED.  
    Il valore predefinito è 0 minuti.  
    
@@ -174,7 +174,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 
    Per indicazioni su quando usare COMPRESSION_DELAY, vedere l'[introduzione a columnstore per l'analisi operativa in tempo reale](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
-##### <a name="datacompression--columnstore--columnstorearchive"></a>DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
+##### <a name="data_compression--columnstore--columnstore_archive"></a>DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
    Specifica l'opzione di compressione dei dati per la tabella, il numero di partizione o l'intervallo di partizioni specificato. Sono disponibili le opzioni seguenti:   
 - `COLUMNSTORE` è l'impostazione predefinita e indica di eseguire la compressione usando il columnstore che offre le prestazioni migliori. Questa è la scelta tipica.  
 - `COLUMNSTORE_ARCHIVE` comprime la tabella o la partizione in una dimensione ancora inferiore. Usare questa opzione per situazioni come l'archiviazione in cui sono richieste risorse di archiviazione più piccole e si ha a disposizione più tempo per l'archiviazione e il recupero.  
@@ -224,12 +224,12 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
    Specifica il nome composto da una, due o tre parti della tabella che contiene l'indice.  
 
 #### <a name="with-options"></a>Opzioni WITH
-##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON  
+##### <a name="drop_existing--off--on"></a>DROP_EXISTING = [OFF] | ON  
    DROP_EXISTING = ON L'indice esistente deve essere eliminato e ricompilato. Il nome di indice specificato deve corrispondere a quello dell'indice esistente, mentre la definizione dell'indice può essere modificata. È possibile, ad esempio, specificare colonne diverse oppure opzioni dell'indice.
   
    DROP_EXISTING = OFF Se il nome di indice specificato esiste già, viene visualizzato un messaggio di errore. Il tipo di indice non può essere modificato tramite l'opzione DROP_EXISTING. Per quanto riguarda la sintassi compatibile con le versioni precedenti, WITH DROP_EXISTING equivale a WITH DROP_EXISTING = ON.  
 
-###### <a name="maxdop--maxdegreeofparallelism"></a>MAXDOP = *max_degree_of_parallelism*  
+###### <a name="maxdop--max_degree_of_parallelism"></a>MAXDOP = *max_degree_of_parallelism*  
    Esegue l'override dell'[opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) per la durata dell'operazione sugli indici. Utilizzare MAXDOP per limitare il numero di processori utilizzati durante l'esecuzione di un piano parallelo. Il valore massimo è 64 processori.  
   
    I valori per *max_degree_of_parallelism* possono essere:  
@@ -250,10 +250,10 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
 CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPrice, TaxRate) WITH ( ONLINE = ON );
 ```
 
-##### <a name="compressiondelay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minuti]  
+##### <a name="compression_delay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minuti]  
    Specifica un limite inferiore per il periodo di tempo in cui una riga deve rimanere nel rowgroup differenziale prima che sia idonea per la migrazione in un rowgroup compresso. Un cliente ad esempio può dire che se una riga non viene modificata per 120 minuti, diventa idonea per la compressione in formato di archiviazione a colonne. Per l'indice columnstore nelle tabelle basate su disco, non si tiene traccia dell'ora in cui una riga viene inserita o aggiornata, ma si usa l'ora di chiusura del rowgroup differenziale come proxy per la riga. La durata predefinita è 0 minuti. La migrazione di una riga nella risorsa di archiviazione a colonne viene eseguita quando risulta che nel rowgroup differenziale sono state accumulate 1 milione di righe e il rowgroup viene contrassegnato come chiuso.  
   
-###### <a name="datacompression"></a>DATA_COMPRESSION  
+###### <a name="data_compression"></a>DATA_COMPRESSION  
    Specifica l'opzione di compressione dei dati per la tabella, il numero di partizione o l'intervallo di partizioni specificato. Si applica solo agli indici columnstore, inclusi gli indici columnstore cluster e quelli non cluster. Sono disponibili le opzioni seguenti:
    
 - `COLUMNSTORE`: è l'impostazione predefinita e indica di eseguire la compressione usando il columnstore che offre le prestazioni migliori. Questa è la scelta tipica.  
@@ -261,7 +261,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
  Per altre informazioni sulla compressione, vedere [Compressione dei dati](../../relational-databases/data-compression/data-compression.md).  
   
-##### <a name="where-filterexpression--and-filterexpression-"></a>WHERE \<filter_expression> [ AND \<filter_expression> ]
+##### <a name="where-filter_expression--and-filter_expression-"></a>WHERE \<filter_expression> [ AND \<filter_expression> ]
   
    L'opzione è detta predicato del filtro e consente di specificare le righe da includere nell'indice. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea statistiche filtrate per le righe di dati nell'indice filtrato.  
   
@@ -487,7 +487,7 @@ GO
 1.  Innanzitutto, creare una tabella di piccole dimensioni da usare nell'esempio.  
   
     ```sql  
-    --Create a rowstore table with a clustered index and a non-clustered index.  
+    --Create a rowstore table with a clustered index and a nonclustered index.  
     CREATE TABLE MyFactTable (  
         ProductKey [int] NOT NULL,  
         OrderDateKey [int] NOT NULL,  
@@ -498,14 +498,14 @@ GO
         CLUSTERED INDEX ( ProductKey )  
     );  
   
-    --Add a non-clustered index.  
+    --Add a nonclustered index.  
     CREATE INDEX my_index ON MyFactTable ( ProductKey, OrderDateKey );  
     ```  
   
 2.  Eliminare tutti gli indici non cluster della tabella rowstore.  
   
     ```sql  
-    --Drop all non-clustered indexes  
+    --Drop all nonclustered indexes  
     DROP INDEX my_index ON MyFactTable;  
     ```  
   

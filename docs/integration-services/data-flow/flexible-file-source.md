@@ -12,12 +12,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfilesrc.f1
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 277c688b77e74d1dad35b19c279a648e56b8f396
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: 694a6c2307983c7003be80be5dc318fc756af392
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316673"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892333"
 ---
 # <a name="flexible-file-source"></a>Origine di File flessibili
 
@@ -38,7 +38,7 @@ Le seguenti proprietà sono disponibili nell'**Editor Origine di File flessibili
 - **Tipo di gestione connessione file:** specifica il tipo di gestione connessione di origine. Sceglierne una esistente del tipo specificato oppure crearne una nuova.
 - **Percorso cartella:** specifica il percorso della cartella di origine.
 - **Nome file:** specifica il nome file di origine.
-- **Formato di file:** specifica il formato del file di origine. I formati supportati sono **Testo**, **Avro**, **ORC**, **Parquet**.
+- **Formato di file:** specifica il formato del file di origine. I formati supportati sono **Testo**, **Avro**, **ORC**, **Parquet**. Per ORC/Parquet è necessario Java. Per informazioni dettagliate, vedere [qui](../../integration-services/azure-feature-pack-for-integration-services-ssis.md#dependency-on-java).
 - **Carattere delimitatore di colonna:** specifica il carattere usato come delimitatore di colonna (i delimitatori composti da più caratteri non sono supportati).
 - **Prima riga come nome di colonna:** specifica se la prima riga deve essere considerata come nome di colonna.
 - **Decomprimi file:** specifica se decomprimere il file di origine.
@@ -58,7 +58,7 @@ Dopo aver specificato le informazioni di connessione, passare alla pagina **Colo
 
 **Note sulla configurazione delle autorizzazioni dell'entità servizio**
 
-Per il funzionamento di **Test connessione** (sia per archiviazione BLOB sia per Azure Data Lake Storage Gen2), all'entità servizio deve essere assegnato almeno il ruolo **Lettore dei dati dei BLOB di archiviazione** per l'account di archiviazione.
+Per il funzionamento di **Test connessione** (sia per archiviazione BLOB sia per Azure Data Lake Storage Gen2), all'entità servizio deve essere assegnato almeno il **Ruolo con autorizzazioni di lettura per i dati dei BLOB di archiviazione** per l'account di archiviazione.
 Questa operazione viene eseguita con [Controllo degli accessi in base al ruolo](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
 
 Per l'archiviazione BLOB, l'autorizzazione di lettura viene concessa assegnando almeno il ruolo **Lettore dei dati dei BLOB di archiviazione**.
@@ -72,30 +72,3 @@ In alternativa, se l'entità di sicurezza non dispone di un'assegnazione di Cont
 Per l'autorizzazione di lettura, concedere almeno l'autorizzazione di **esecuzione** partendo dal file system di origine insieme all'autorizzazione di **lettura** per i file da leggere.
 In alternativa, concedere almeno il ruolo **Lettore dei dati dei BLOB di archiviazione** con Controllo degli accessi in base al ruolo.
 Per informazioni dettagliate, vedere [questo articolo](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control).
-
-**Prerequisiti per il formato di file ORC/Parquet**
-
-Per usare il formato di file ORC/Parquet è necessario Java.
-L'architettura (a 32 o a 64 bit) della build di Java deve corrispondere a quella del runtime di SSIS da usare.
-Sono state sottoposte a test le build di Java seguenti.
-
-- [OpenJDK 8u192 di Zulu](https://www.azul.com/downloads/zulu/zulu-windows/)
-- [Oracle Java SE Runtime Environment 8u192](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
-
-**Configurare OpenJDK di Zulu**
-
-1. Scaricare ed estrarre il pacchetto di installazione con estensione zip.
-2. Dal prompt dei comandi, eseguire `sysdm.cpl`.
-3. Nella scheda **Avanzate** selezionare **Variabili di ambiente**.
-4. Nella sezione **Variabili di sistema** selezionare **Nuova**.
-5. Immettere `JAVA_HOME` in **Nome variabile**.
-6. Selezionare **Sfoglia directory**, passare alla cartella estratta e selezionare la sottocartella `jre`.
-   Selezionare quindi **OK** e **Valore variabile** verrà popolato automaticamente.
-7. Selezionare **OK** per chiudere la finestra di dialogo **Nuova variabile di sistema**.
-8. Selezionare **OK** per chiudere la finestra di dialogo **Variabili di ambiente**.
-9. Selezionare **OK** per chiudere la finestra di dialogo **Proprietà del sistema**.
-
-**Configurare Oracle Java SE Runtime Environment**
-
-1. Scaricare ed eseguire il programma di installazione con estensione exe.
-2. Seguire le istruzioni del programma di installazione per completare l'installazione.

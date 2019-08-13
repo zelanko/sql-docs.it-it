@@ -13,14 +13,14 @@ ms.assetid: f5f04590-e1c6-40d8-ab2b-98c791a0fc44
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 43f9e6a2e1c3f6ba2ae6afa9261866690c2a47ef
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 3c2a2777ca1679cbc8fe0748c4c5ec1cdfa92f1d
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770547"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811484"
 ---
-# <a name="mssqleng014114"></a>MSSQL_ENG014114
+# <a name="mssql_eng014114"></a>MSSQL_ENG014114
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>Dettagli messaggio  
@@ -52,7 +52,7 @@ ms.locfileid: "68770547"
   
      10.193.17.129 inst1  
   
--   Disabilitare la distribuzione, registrare l'istanza e quindi riattivare la distribuzione. Se il valore di @@SERVERNAME non è corretto per un'istanza non cluster, eseguire la procedura seguente:  
+-   Disabilitare la distribuzione, registrare l'istanza e quindi riattivare la distribuzione. Se il valore di @@SERVERNAME non è corretto per un'istanza non cluster, eseguire questa procedura:  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  

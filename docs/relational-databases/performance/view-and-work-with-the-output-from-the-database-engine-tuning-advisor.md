@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1ce0df5d3ebf4b4adde9e35be63c3c105df1d152
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 481a6a0a109683c94ef754ea679a801a92a8aabc
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986642"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811365"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Visualizzare e utilizzare l'output di Ottimizzazione guidata motore di database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -285,7 +285,7 @@ ms.locfileid: "67986642"
  Vista o indice interessato dall'indicazione. L'icona visualizzata in questa colonna indica se è consigliabile eliminare o aggiungere la **Destinazione indicazione**.  
   
  **Dettagli**  
- Descrizione di **Destinazione indicazione**. I valori possibili includono clustered, indexed view o vuoto, ovvero un indice non cluster. Viene inoltre indicato se l'indice è univoco.  
+ Descrizione di **Destinazione indicazione**. I valori possibili includono la vista indicizzata in cluster o un valore vuoto che indica un indice non cluster. Viene inoltre indicato se l'indice è univoco.  
   
  **Schema partizione**  
  Se viene consigliato il partizionamento, in questa colonna viene visualizzato lo schema di partizione.  

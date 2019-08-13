@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 07/31/2019
-ms.openlocfilehash: c30179ae89bc69e84005a95a4d370acf4b692bd2
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.openlocfilehash: e499f58eff6c09ac8d32d4cd630afc4c7855c299
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68731135"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809859"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Note sulla versione per SQL Server Management Studio (SSMS)
 
@@ -382,7 +382,7 @@ SSMS 18.1 è la versione GA più recente di SSMS. Se è necessaria una versione 
 |Scripting per gli oggetti|Correzione di un problema per cui non è possibile eseguire lo script degli oggetti di database quando si usa AAD con MFA per connettersi al database SQL di Azure.|
 |Scripting per gli oggetti|Correzione di un problema per cui il tentativo di creare lo script di un indice spaziale con GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID in un database SQL di Azure generava un errore.|
 |Scripting per gli oggetti|Correzione di un problema a causa del quale gli script di un database SQL di Azure usavano sempre come destinazione un'istanza di SQL locale, anche se le impostazioni di scripting di "Esplora oggetti" erano definite in modo da corrispondere all'origine.|
-|Scripting per gli oggetti|Correzione di un problema per cui durante il tentativo di creare lo script di una tabella in un database SQL Data Warehouse che include indici cluster e non cluster vengono generate istruzioni T-SQL non corrette.|
+|Scripting per gli oggetti|Correzione di un problema per cui durante il tentativo di creare lo script di una tabella in un database SQL Data Warehouse con indici cluster e non cluster vengono generate istruzioni T-SQL non corrette.|
 |Scripting per gli oggetti|Correzione di un problema per cui durante il tentativo di creare lo script di una tabella in un database SQL Data Warehouse con indici columnstore cluster e indici cluster vengono generate istruzioni T-SQL non corrette (duplicate).|
 |Scripting per gli oggetti|Correzione del problema di scripting di tabelle partizionate senza valori di intervallo (database SQL Data Warehouse).|
 |Scripting per gli oggetti|Correzione di un problema per cui l'utente non è in grado di creare lo script di un controllo o di una specifica di controllo SERVER_PERMISSION_CHANGE_GROUP.|

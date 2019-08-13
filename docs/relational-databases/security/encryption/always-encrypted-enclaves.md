@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 22570f7ae8a9f11b89f11027698c948be5766d25
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 998594a4c0c649a0ad73d36e858cf733fc364aae
+ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661221"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68841566"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclave sicuri
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -168,7 +168,6 @@ Gli enclave sicuri migliorano le funzionalità di Always Encrypted. Le funzional
     > [!NOTE]
     > Le operazioni precedenti sono supportate per le colonne di tipo stringa di caratteri che usano le regole di confronto con un ordinamento binary2 (regole di confronto BIN2). Le colonne di tipo stringa di caratteri che usano regole di confronto non BIN2 possono essere crittografate tramite crittografia casuale e chiavi di crittografia di colonna abilitate per l'enclave. Tuttavia, l'unica nuova funzionalità abilitata per questo tipo di colonne è la crittografia sul posto.
 - Creazione di indici non cluster sulle colonne con crittografia casuale.
-- Colonne calcolate che usano espressioni contenenti il predicato LIKE e operatori di confronto su colonne con crittografia casuale.
 
 Tutte le altre limitazioni (non interessate dai miglioramenti precedenti) elencate per Always Encrypted (senza enclave sicuri) in [Informazioni sulle funzionalità](always-encrypted-database-engine.md#feature-details) si applicano anche ad Always Encrypted con enclave sicuri.
 
@@ -182,6 +181,7 @@ Le limitazioni seguenti sono specifiche per Always Encrypted con enclave sicuri:
     - char[n], varchar[n], binary[n], varbinary[n], se n è maggiore di 7935.
 - Non è possibile combinare le operazioni di crittografia sul posto con qualsiasi altra modifica dei metadati di colonna, ad eccezione della modifica delle regole di confronto all'interno della stessa tabella codici e del supporto dei valori Null. Ad esempio, non è possibile crittografare, crittografare di nuovo, o decrittografare, una colonna E modificare un tipo di dati della colonna in un'unica istruzione Transact-SQL ALTER TABLE o ALTER COLUMN. Usare due istruzioni separate.
 - L'uso di chiavi abilitate per l'enclave per le colonne in tabelle in memoria non è supportato.
+- Le espressioni che definiscono le colonne calcolate non possono eseguire alcun calcolo sulle colonne abilitate per gli enclave usando la crittografia casuale (anche se i calcoli sono confronti tra intervalli e di tipo LIKE).
 - Gli unici archivi di chiavi supportati per l'archiviazione di chiavi master della colonna abilitate per l'enclave sono Archivio certificati Windows e Azure Key Vault.
 
 Le limitazioni seguenti si applicano a [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], ma è previsto che vengano rimosse:

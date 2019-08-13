@@ -16,12 +16,12 @@ ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3ec5fed63d84ece9a3f54c5c2ae5304dcf8bd6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61747c9b7e445990bd285061f63c5497b0f51f85
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082626"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811332"
 ---
 # <a name="modify-unique-constraints"></a>Modificare vincoli univoci
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "68082626"
     |--------|------------------------|  
     |Cambiare le colonne a cui è associato il vincolo|1) In **(Generale)** all'interno della griglia fare clic su **Colonne** e quindi sui puntini di sospensione **(...)** a destra della proprietà.<br /><br /> 2) Nella finestra di dialogo **Colonne indice** specificare la nuova colonna o l'ordinamento o entrambi per l'indice.|  
     |Rinominare il vincolo|In **Identità**all'interno della griglia, digitare un nuovo nome nella casella di testo **Nome** . Scegliere un nome che non sia ancora presente nell'elenco **Indice o chiave primari/univoci selezionati** .|  
-    |Impostare l'opzione cluster|In **Progettazione tabelle**, all'interno della griglia, selezionare **Crea come CLUSTERED** e dall'elenco a discesa selezionare Sì per creare un indice cluster oppure No per crearne uno non cluster. Per ogni tabella è possibile creare un solo indice cluster. Se esiste già un indice cluster in questa tabella, deselezionare questa opzione sull'indice originale.|  
+    |Impostare l'opzione cluster|Nella griglia sotto **Progettazione tabelle** selezionare **Crea come CLUSTERED** e nell'elenco a discesa scegliere Sì per creare un indice cluster e No per crearne uno non cluster. Per ogni tabella è possibile creare un solo indice cluster. Se esiste già un indice cluster in questa tabella, deselezionare questa opzione sull'indice originale.|  
     |Definire un fattore di riempimento|In **Progettazione tabelle**all'interno della griglia espandere la categoria **Specifica riempimento** e digitare un numero intero compreso tra 0 e 100 nella casella **Riempimento** .|  
   
 5.  Nel menu **File** scegliere **Salva**_table name_.  

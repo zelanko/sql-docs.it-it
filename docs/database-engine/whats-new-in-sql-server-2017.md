@@ -10,12 +10,12 @@ ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
 author: rothja
 ms.author: jroth
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 4ee8a779ef486246d5f4dd927acf7c57a1261c61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc752d5653c4483552312c45139996e8a84c39e4
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059029"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811279"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Novità del motore di database - SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ Questo argomento descrive i miglioramenti apportati al [!INCLUDE[ssdenoversion-m
 -  [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] offre ora funzionalità di database di grafi per modellare dati più significativi orientati alle relazioni. È stata inclusa una nuova sintassi [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) per la creazione di tabelle nodi e archi e la parola chiave [MATCH](../t-sql/queries/match-sql-graph.md) per le query. Per altre informazioni, vedere [Graph Processing with SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md) (Elaborazione di grafi con SQL Server 2017).   
 - Una nuova generazione di miglioramenti di elaborazione delle query che adatterà le strategie di ottimizzazione alle condizioni di runtime del carico di lavoro dell'applicazione. Per questa prima versione della famiglia di funzionalità di **elaborazione di query adattive**, sono disponibili tre nuovi miglioramenti: **join adattivi in modalità batch**, **feedback delle concessioni di memoria in modalità batch** ed **esecuzione interleaved** per le funzioni con valori di tabella a istruzioni multiple.  Vedere [Elaborazione di query intelligenti nei database SQL](../relational-databases/performance/intelligent-query-processing.md).
 - L'ottimizzazione automatica è una funzionalità di database che offre informazioni su potenziali problemi di prestazioni delle query, suggerisce soluzioni e corregge automaticamente i problemi rilevati. L'ottimizzazione automatica in [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] invia una notifica ogni volta che viene rilevato un potenziale problema di prestazioni e consente di applicare azioni correttive o consente al [!INCLUDE[ssde-md](../includes/ssde-md.md)] di correggere automaticamente i problemi di prestazioni. Per altre informazioni, vedere [Ottimizzazione automatica](../relational-databases/automatic-tuning/automatic-tuning.md).
-- PERFORMANCE ENHANCEMENT FOR NON CLUSTERED INDEX BUILD ON MEMORY-OPTIMIZED TABLES. Le prestazioni di ricompilazione dell'indice bwtree (non cluster) per le tabelle MEMORY_OPTIMIZED durante il recupero del database sono state notevolmente ottimizzate. Questo miglioramento riduce in modo significativo il tempo di recupero del database quando vengono usati gli indici non cluster.  
+- PERFORMANCE ENHANCEMENT FOR NON CLUSTERED INDEX BUILD ON MEMORY-OPTIMIZED TABLES. Le prestazioni di ricompilazione dell'indice bwtree (non cluster) per le tabelle MEMORY_OPTIMIZED durante il recupero del database sono state notevolmente ottimizzate. Questo miglioramento riduce in modo significativo il tempo di ripristino del database quando vengono usati indici non cluster.  
 - [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) include tre nuove colonne: socket_count cores_per_socket, numa_node_count. Ciò è utile quando si esegue il server in una macchina virtuale, perché un eccesso di NUMA può causare l'overcommit degli host con conseguenti problemi di prestazioni.
 - Una nuova colonna modified_extent_page_count\, è stata introdotta in [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) per tenere traccia delle modifiche differenziali in ogni file del database. La nuova colonna modified_extent_page_count consente di creare soluzioni di backup intelligente eseguendo un backup differenziale se la percentuale di pagine modificate nel database è inferiore a una determinata soglia, pari ad esempio al 70-80%, altrimenti eseguendo un backup completo del database.
 - SELECT INTO ... ON FileGroup - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) supporta ora il caricamento di una tabella in un filegroup diverso da quello predefinito dell'utente usando la parola chiave **ON** aggiunta nella sintassi SELECT INTO TSQL.
@@ -50,7 +50,7 @@ Questo argomento descrive i miglioramenti apportati al [!INCLUDE[ssdenoversion-m
 - I gruppi di disponibilità sono ora supportati negli ambienti Windows e Linux per consentire le migrazioni e i test tra i diversi sistemi operativi.
 - È stato aggiunto il supporto per i criteri di conservazione delle tabelle temporali.
 - È stata introdotta la nuova vista a gestione dinamica SYS.DM_DB_STATS_HISTOGRAM.
-- È stato aggiunto il supporto per la compilazione e la ricompilazione degli indici online columnstore non cluster.
+- È stato aggiunto il supporto per la compilazione e la ricompilazione degli indici columnstore non cluster online
 - È stata aggiunta[sys.dm_db_stats_histogram (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) per l'analisi delle statistiche.
 - L'ottimizzazione guidata di database (DTA) rilasciata con SQL Server Management Studio versione 16.4, per l'analisi di SQL Server 2016 e versioni successive, include alcune opzioni aggiuntive.    
    - Prestazioni migliorate. Per altre informazioni, vedere [Performance Improvements using Database Engine Tuning Advisor (DTA) recommendations](../relational-databases/performance/performance-improvements-using-dta-recommendations.md)(Miglioramenti delle prestazioni mediante le indicazioni dell'ottimizzazione guidata di database).

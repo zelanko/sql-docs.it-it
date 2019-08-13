@@ -11,12 +11,12 @@ ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db6c9b111ae8448b0b4873fc9478712c57739346
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2da0a78e8bc8486832ff878e3ee96e0bf16e9496
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999459"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811355"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Considerazioni e limitazioni delle tabelle temporali
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "67999459"
   
 -   **ON DELETE CASCADE** e **ON UPDATE CASCADE** non sono consentiti nella tabella corrente. In altre parole, quando la tabella temporale fa riferimento alla tabella nella relazione di chiave esterna (corrispondente a *parent_object_id* in sys.foreign_keys) non sono consentite le opzioni CASCADE. Per risolvere questa limitazione, usare la logica dell'applicazione oppure i trigger AFTER per mantenere la coerenza su eliminazione nella tabella di chiave primaria (corrispondente a  *referenced_object_id* in sys.foreign_keys). Se la tabella di chiave primaria è temporale e la tabella di riferimento non lo è, questa limitazione non sussiste. 
 
-    **NOTA:** questa limitazione si applica solo a SQL Server 2016. Le opzioni CASCADE sono supportate in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e SQL Server 2017 a partire dalla versione CTP 2.0.  
+    **NOTA** questa limitazione si applica solo a SQL Server 2016. Le opzioni CASCADE sono supportate in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] e SQL Server 2017 a partire dalla versione CTP 2.0.  
   
 -   Per non invalidare la logica DML, i trigger**INSTEAD OF** non sono consentiti né per la tabella corrente né per quella di cronologia. I trigger**AFTER** sono consentiti solo per la tabella corrente. Sono bloccati nella tabella di cronologia per evitare di invalidare la logica DML.  
   

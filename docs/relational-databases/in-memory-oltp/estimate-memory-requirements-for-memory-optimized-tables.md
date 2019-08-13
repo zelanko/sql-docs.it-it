@@ -11,12 +11,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aeb9fdd447b36a44803d711a80aa7f2714857d01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2597aa470eea7e69c649b7ce207dffadab81edc3
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050405"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811167"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Stimare i requisiti di memoria delle tabelle con ottimizzazione per la memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -143,11 +143,11 @@ Pertanto, nell'esempio, la memoria necessaria per ogni matrice di hash è:
   
 Poiché vi sono tre indici hash, la memoria necessaria per gli indici hash è 3 * 64 MB = 192 MB.  
   
-#### <a name="memory-for-non-clustered-indexes"></a>Memoria per gli indici non cluster  
+#### <a name="memory-for-nonclustered-indexes"></a>Memoria per gli indici non cluster  
   
-Gli indici non cluster vengono implementati come alberi B con nodi interni contenenti il valore di indice e i puntatori ai nodi successivi.  Nei nodi foglia sono inclusi il valore di indice e un puntatore alla riga di tabella in memoria.  
+Gli indici non cluster vengono implementati come oggetti BTree con i nodi interni contenenti il valore di indice e i puntatori ai nodi successivi.  Nei nodi foglia sono inclusi il valore di indice e un puntatore alla riga di tabella in memoria.  
   
-A differenza degli indici hash, gli indici non cluster non presentano dimensioni fisse per il bucket. Le dimensioni dell'indice aumentano e si riducono dinamicamente in base ai dati.  
+A differenza degli indici hash, gli indici non cluster non hanno dimensioni fisse per il bucket. Le dimensioni dell'indice aumentano e si riducono dinamicamente in base ai dati.  
   
 La memoria necessaria per gli indici non cluster può essere calcolata come indicato di seguito:  
   
@@ -155,7 +155,7 @@ La memoria necessaria per gli indici non cluster può essere calcolata come indi
     Per una configurazione tipica, la memoria allocata ai nodi non foglia è una percentuale minima della memoria globale utilizzata dall'indice, che per le sue dimensioni contenute può essere sicuramente ignorata.  
   
 - **Memoria per i nodi foglia**   
-    I nodi foglia hanno una riga per ogni chiave univoca della tabella che punta alle righe di dati con questa chiave univoca.  Se si dispone di più righe con la stessa chiave, cioè si dispone di un indice non cluster non univoco, esiste un'unica riga nel nodo foglia dell'indice che punta a una delle righe con le altre righe collegate tra loro.  Pertanto, la memoria totale necessaria può essere approssimata nel modo seguente:
+    I nodi foglia hanno una riga per ogni chiave univoca della tabella che punta alle righe di dati con questa chiave univoca.  Se si hanno più righe con la stessa chiave, ovvero si ha un indice non cluster non univoco, c'è una sola riga nel nodo foglia dell'indice che punta a una delle righe, con le altre righe collegate tra loro.  Pertanto, la memoria totale necessaria può essere approssimata nel modo seguente:
   - memoryForNonClusteredIndex = (pointerSize + sum (keyColumnDataTypeSizes) * rowsWithUniqueKeys  
   
  Gli indici non cluster rappresentano la soluzione migliore in caso di ricerche in intervalli, come esemplificato dalla query seguente:  

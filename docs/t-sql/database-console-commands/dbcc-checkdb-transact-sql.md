@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 18fdd8cb0062f2f3adcd5979fb5c9203d93f393d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15c1fc0789ff665569ed17be9415bdbdd8047714
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102114"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809896"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ REPAIR_FAST
  Supporta la sintassi per motivi di compatibilità con le versioni precedenti Non vengono eseguite correzioni.  
     
 REPAIR_REBUILD  
- Esegue operazioni di ripristino senza possibilità di perdita dei dati. Sono incluse operazioni di ripristino rapide, ad esempio ripristino di righe mancanti in indici non cluster, e operazioni che richiedono una maggiore quantità di tempo, come la ricompilazione di un indice.  
+ Esegue operazioni di ripristino senza possibilità di perdita dei dati. Sono incluse operazioni di ripristino rapide, ad esempio ripristino di righe mancanti in indici non cluster, nonché operazioni che richiedono una maggiore quantità di tempo, come la ricompilazione di un indice.  
  Questo argomento non consente di correggere errori relativi ai dati FILESTREAM.  
     
 > [!IMPORTANT] 
@@ -258,7 +258,7 @@ Quando il database è in modalità di emergenza e DBCC CHECKDB viene eseguito co
 Se il comando DBCC CHECKDB viene eseguito correttamente, il database è in uno stato consistente dal punto di vista fisico e lo stato del database viene impostato su ONLINE. È tuttavia possibile che il database contenga una o più inconsistenze delle transazioni. È consigliabile eseguire [DBCC CHECKCONSTRAINTS](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md) per identificare eventuali difetti della logica di business ed eseguire immediatamente il backup del database.
 Se il comando DBCC CHECKDB non riesce, non è possibile correggere il database.
     
-## <a name="running-dbcc-checkdb-with-repairallowdataloss-in-replicated-databases"></a>Esecuzione di DBCC CHECKDB con REPAIR_ALLOW_DATA_LOSS nei database replicati    
+## <a name="running-dbcc-checkdb-with-repair_allow_data_loss-in-replicated-databases"></a>Esecuzione di DBCC CHECKDB con REPAIR_ALLOW_DATA_LOSS nei database replicati    
 L'esecuzione del comando DBCC CHECKDB con l'opzione REPAIR_ALLOW_DATA_LOSS può influire sui database utente (database di pubblicazione e di sottoscrizione) e sul database di distribuzione utilizzato dalla replica. Nei database di pubblicazione e di sottoscrizione sono incluse le tabelle pubblicate e le tabelle di metadati della replica. Per questi database è necessario tenere in considerazione i possibili problemi seguenti:
 -   Tabelle pubblicate. Le azioni eseguite dal processo CHECKDB per correggere i dati utente danneggiati potrebbero non essere replicate:    
 -   La replica di tipo merge utilizza i trigger per tenere traccia delle modifiche apportate alle tabelle pubblicate. Se il processo CHECKDB inserisce, aggiorna o elimina righe, i trigger non vengono attivati e, di conseguenza, le modifiche non vengono replicate.

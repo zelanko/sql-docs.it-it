@@ -14,12 +14,12 @@ ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b903668a68752edaad612b4ada31329e7dd80a77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e3b0fdb182b3623f4461544d94347544d7d19bf6
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081752"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811127"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Descrizione di indici cluster e non cluster.
 
@@ -49,7 +49,7 @@ Vedere [Indici](../../relational-databases/indexes/indexes.md) per altri tipi di
 
 ## <a name="indexes-and-constraints"></a>Indici e vincoli
 
-Gli indici vengono creati automaticamente quando si definiscono vincoli PRIMARY KEY e UNIQUE sulle colonne della tabella. Quando si crea una tabella con un vincolo UNIQUE, ad esempio, [!INCLUDE[ssDE](../../includes/ssde-md.md)]crea automaticamente un indice non cluster. Se invece si configura un vincolo PRIMARY KEY, [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea automaticamente un indice cluster, a meno che non esista già. Se si tenta di imporre un vincolo PRIMARY KEY in una tabella esistente e nella tabella esiste già un indice cluster, SQL Server impone il vincolo PRIMARY KEY usando un indice non cluster.
+Gli indici vengono creati automaticamente quando si definiscono vincoli PRIMARY KEY e UNIQUE sulle colonne della tabella. Quando si crea una tabella con un vincolo UNIQUE, ad esempio, [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea automaticamente un indice non cluster. Se invece si configura un vincolo PRIMARY KEY, [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea automaticamente un indice cluster, a meno che non esista già. Se si tenta di imporre un vincolo PRIMARY KEY in una tabella esistente e nella tabella esiste già un indice cluster, SQL Server impone il vincolo PRIMARY KEY usando un indice non cluster.
 
 Per altre informazioni, vedere [Creare chiavi primarie](../../relational-databases/tables/create-primary-keys.md) e [Creare vincoli univoci](../../relational-databases/tables/create-unique-constraints.md).
 

@@ -11,12 +11,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d7d326e03c684a17d976d13c27a37aa97ae16792
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bf133d6cfc07482b9d10505592b2ea402095c46c
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091412"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811151"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guida all'elaborazione delle query per le tabelle con ottimizzazione per la memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ Piano di query per il join di tabelle basate su disco.
   
 -   Le righe della tabella Customer vengono recuperate dall'indice cluster, che è la struttura dei dati primaria e contiene i dati completi della tabella.  
   
--   I dati della tabella Order vengono recuperati utilizzando l'indice non cluster della colonna CustomerID. L'indice contiene sia la colonna CustomerID, utilizzata per il join, sia la colonna chiave primaria OrderID, che viene restituita all'utente. La restituzione di colonne aggiuntive dalla tabella Order richiederebbe ricerche nell'indice cluster della tabella stessa.  
+-   I dati della tabella Order vengono recuperati usando l'indice non cluster della colonna CustomerID. L'indice contiene sia la colonna CustomerID, utilizzata per il join, sia la colonna chiave primaria OrderID, che viene restituita all'utente. La restituzione di colonne aggiuntive dalla tabella Order richiederebbe ricerche nell'indice cluster della tabella stessa.  
   
 -   L'operatore logico **Inner Join** viene implementato dall'operatore fisico **Merge join**. Gli altri tipi di join fisico sono **Cicli annidati** e **Hash join**. L'operatore **Merge Join** consente di sfruttare il fatto che entrambi gli indici sono ordinati in base alla colonna di join CustomerID.  
   

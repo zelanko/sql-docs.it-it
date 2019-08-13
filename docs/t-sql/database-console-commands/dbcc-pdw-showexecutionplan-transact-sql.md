@@ -12,14 +12,14 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d0dd253eb161c842a2edbdcad73edd41114d73cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7fd267efe05da089cf72b1b9d1e4a04e6c18b83b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039076"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809846"
 ---
-# <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
+# <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Consente di visualizzare il piano di esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per una query in esecuzione in uno specifico nodo di controllo o di calcolo [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Consente di risolvere i problemi relativi alle prestazioni di query quando le query vengono eseguite sui nodi di calcolo e di controllo.
@@ -59,7 +59,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
   
 ## <a name="examples-includesssdwincludessssdw-mdmd"></a>Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
   
-### <a name="a-dbcc-pdwshowexecutionplan-basic-syntax"></a>A. Sintassi di base DBCC PDW_SHOWEXECUTIONPLAN  
+### <a name="a-dbcc-pdw_showexecutionplan-basic-syntax"></a>A. Sintassi di base DBCC PDW_SHOWEXECUTIONPLAN  
  Durante l'esecuzione su un'istanza [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], modificare la query precedente per selezionare anche distribution_id.  
   
 ```sql
@@ -76,7 +76,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( 1, 375 );
 ```  
 
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="b-dbcc-pdwshowexecutionplan-basic-syntax"></a>B. Sintassi di base DBCC PDW_SHOWEXECUTIONPLAN  
+### <a name="b-dbcc-pdw_showexecutionplan-basic-syntax"></a>B. Sintassi di base DBCC PDW_SHOWEXECUTIONPLAN  
  La query che è in esecuzione da troppo tempo sta eseguendo un'operazione del piano di query DMS o un'operazione del piano di query SQL.  
   
 Se la query sta eseguendo un'operazione del piano di query DMS, è possibile usare la query seguente per recuperare un elenco degli ID di nodo e di sessione per i passaggi che non sono stati completati.

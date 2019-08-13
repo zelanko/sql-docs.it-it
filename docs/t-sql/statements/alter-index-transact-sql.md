@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 382fd4ab40c574fd1a3d9ce2e972e2c6ea07cc31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a9228530dcf0204987feda98083ba3a16c946093
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071348"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809800"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -209,7 +209,7 @@ ALTER INDEX { index_name | ALL }
   
  Il [!INCLUDE[ssSDS](../../includes/sssds-md.md)] supporta il formato del nome in tre parti database_name.[schema_name].table_or_view_name, dove database_name è il database corrente o tempdb e table_or_view_name inizia con #.  
   
- REBUILD [ WITH **(**\<rebuild_index_option> [ **,**... *n*]**)** ]  
+ REBUILD [ WITH **(** \<rebuild_index_option> [ **,** ... *n*] **)** ]  
  Specifica che l'indice verrà ricompilato con le stesse colonne, lo stesso tipo di indice, lo stesso attributo di univocità e lo stesso tipo di ordinamento. Questa clausola equivale a [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md). REBUILD abilita un indice disabilitato. La ricompilazione di un indice cluster non comporta la ricompilazione degli indici non cluster associati, a meno che non venga specificata la parola chiave ALL. Se non vengono specificate opzioni di indice, vengono applicati i valori esistenti delle opzioni di indice archiviati in [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md). Per le opzioni di indice il cui valore non è archiviato in **sys.indexes**, viene applicato il valore predefinito indicato nella definizione dell'argomento dell'opzione.  
   
  Se viene specificata la parola chiave ALL e la tabella sottostante è un heap, l'operazione di ricompilazione non ha effetto sulla tabella. Vengono ricompilati tutti gli indici non cluster associati alla tabella.  
@@ -248,7 +248,7 @@ PARTITION
   
  Numero di partizioni di un indice partizionato da ricompilare o riorganizzare. *partition_number* è un'espressione costante che può fare riferimento a variabili, incluse variabili o funzioni con tipo definito dall'utente (UDT) e funzioni definite dall'utente, ma non a istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. È necessario che *partition_number* esista o l'istruzione avrà esito negativo.  
   
- WITH **(**\<single_partition_rebuild_index_option>**)**  
+ WITH **(** \<single_partition_rebuild_index_option> **)**  
    
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -309,7 +309,7 @@ COMPRESS_ALL_ROW_GROUPS consente di forzare i rowgroup differenziali OPEN o CLOS
   
 -   L'opzione OFF forza tutti i rowgroup nel columnstore.  
   
-SET **(** \<set_index option> [ **,**... *n*] **)**  
+SET **(** \<set_index option> [ **,** ... *n*] **)**  
  Specifica alcune opzioni per l'indice senza ricompilare né riorganizzare l'indice. La parola chiave SET non può essere specificata per un indice disabilitato.  
   
 PAD_INDEX = { ON | OFF }  
@@ -423,7 +423,7 @@ FILLFACTOR = *fillfactor*
   
 -   Un subset di un indice partizionato (è possibile ricompilare online un intero indice partizionato).  
 
--  Nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)], prima della versione 12, e in SQL Server, prima di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], non è consentito l'uso dell'opzione `ONLINE` per la compilazione di indici cluster o le operazioni di ricompilazione quando la tabella di base contiene le colonne **varchar (max)** o **varbinary (max)**.
+-  Nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)], prima della versione 12, e in SQL Server, prima di [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], non è consentito l'uso dell'opzione `ONLINE` per la compilazione di indici cluster o le operazioni di ricompilazione quando la tabella di base contiene le colonne **varchar (max)** o **varbinary (max)** .
 
 RESUMABLE **=** { ON | **OFF**}
 
@@ -535,7 +535,7 @@ Il valore predefinito è 0 minuti.
   
  Per altre informazioni sulla compressione, vedere [Compressione dei dati](../../relational-databases/data-compression/data-compression.md).  
   
- ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [**,**...n] **)**  
+ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...n] **)**  
     
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. 
   
@@ -754,7 +754,7 @@ La funzionalità seguente è disabilitata per le operazioni di ricompilazione de
 
  Per altre informazioni, vedere [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
   
- ### <a name="waitatlowpriority-with-online-index-operations"></a>WAIT_AT_LOW_PRIORITY con operazioni sull'indice online  
+ ### <a name="wait_at_low_priority-with-online-index-operations"></a>WAIT_AT_LOW_PRIORITY con operazioni sull'indice online  
   
  Per eseguire l'istruzione DDL per una ricompilazione dell'indice online, è necessario completare tutte le transazioni bloccanti attive in esecuzione in una specifica tabella. Quando la ricompilazione dell'indice online viene eseguita, blocca tutte le nuove transazioni pronte per l'esecuzione in questa tabella. Sebbene la durata del blocco della ricompilazione dell'indice online sia molto breve, l'attesa del completamento di tutte le transazioni aperte in una tabella specificata e il blocco dell'avvio di nuove transazioni potrebbero influire in modo significativo sulla velocità effettiva, provocando un rallentamento o un timeout del carico di lavoro e limitando notevolmente l'accesso alla tabella sottostante. L'opzione **WAIT_AT_LOW_PRIORITY** consente agli amministratori di database di gestire i blocchi S e Sch-M necessari per le ricompilazioni degli indici online, nonché di selezionare una tra 3 opzioni. In tutti e tre i casi, se durante il tempo di attesa, ( (MAX_DURATION = n [minuti]) ),non sono presenti attività di blocco, la ricompilazione dell'indice online viene eseguita immediatamente senza attendere il completamento dell'istruzione DDL.  
   

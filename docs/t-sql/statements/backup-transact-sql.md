@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 84bc446438a5b8938ee84b1e741c2768636d45b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d3a49210575efac6f7d8b4190f96670d06c8824
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141224"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809728"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -178,7 +178,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 
 --Encryption Options
  ENCRYPTION (ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY } , encryptor_options ) <encryptor_options> ::=
-   SERVER CERTIFICATE = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
+   `SERVER CERTIFICATE` = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
 ```
 
 ## <a name="arguments"></a>Argomenti
@@ -305,8 +305,10 @@ ENCRYPTION si usa per specificare la crittografia di un backup. È possibile spe
 
 Se si sceglie di crittografare è necessario specificare il componente di crittografia utilizzando le relative opzioni:
 
-- SERVER CERTIFICATE = Encryptor_Name
-- SERVER ASYMMETRIC KEY = Encryptor_Name
+- `SERVER CERTIFICATE` = Encryptor_Name
+- `SERVER ASYMMETRIC KEY` = Encryptor_Name
+
+`SERVER CERTIFICATE` e `SERVER ASYMMETRIC KEY` rappresentano un certificato e una chiave asimmetrica creati nel database `master`. Per altre informazioni, vedere [`CREATE CERTIFICATE`](../../t-sql/statements/create-certificate-transact-sql.md) e [`CREATE ASYMMETRIC KEY`](../../t-sql/statements/create-asymmetric-key-transact-sql.md), rispettivamente.
 
 > [!WARNING]
 > Quando la crittografia viene usata con l'argomento `FILE_SNAPSHOT`, il file di metadati viene crittografato usando l'algoritmo di crittografia specificato e il sistema verifica che il processo di [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) sia stato completato per il database. Non viene eseguita alcuna crittografia aggiuntiva per i dati. Il backup non viene eseguito se il database non è stato crittografato o se la crittografia non è stata completata prima dell'istruzione di backup.
@@ -1008,8 +1010,8 @@ ENCRYPTION si usa per specificare la crittografia di un backup. È possibile spe
 
 Se si sceglie di crittografare è necessario specificare il componente di crittografia utilizzando le relative opzioni:
 
-- SERVER CERTIFICATE = Encryptor_Name
-- SERVER ASYMMETRIC KEY = Encryptor_Name
+- `SERVER CERTIFICATE = <Encryptor_Name>`
+- `SERVER ASYMMETRIC KEY = <Encryptor_Name>`
 
 **Opzioni del set di backup**
 

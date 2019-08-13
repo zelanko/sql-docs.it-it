@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6bc1a51be4f86112623ca433256782369cbca36d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c061360d6308e9fb6927e26f887d084ec6058134
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938940"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809824"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -320,7 +320,7 @@ GO
 ```  
 
 ### <a name="d-creating-a-user-defined-table-type-with-primary-key-and-index"></a>D. Creazione di un tipo di tabella definito dall'utente con chiave primaria e indice
-L'Nell'esempio seguente viene creato un tipo di tabella definito dall'utente che contiene tre colonne, una delle quali (`Name`) è la chiave primaria e un'altra (`Price`) dispone di un indice non cluster.  Per altre informazioni su come creare e usare parametri con valori di tabella, vedere [Usare parametri con valori di tabella &#40;motore di database&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).
+Nell'esempio seguente viene creato un tipo di tabella definito dall'utente che contiene tre colonne, una delle quali (`Name`) è la chiave primaria e un'altra (`Price`) ha un indice non cluster.  Per altre informazioni su come creare e usare parametri con valori di tabella, vedere [Usare parametri con valori di tabella &#40;motore di database&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).
 
 ```sql
 CREATE TYPE InventoryItem AS TABLE

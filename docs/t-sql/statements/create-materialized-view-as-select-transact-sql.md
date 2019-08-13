@@ -34,15 +34,15 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 - maximum number of columns per view
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 076bf71586baa61e8bb77c093cd274eca898bf00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2b58102644c596fde248861bb504bf06b932d6e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912626"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893768"
 ---
 # <a name="create-materialized-view-as-select-transact-sql-preview"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) (anteprima)
 
@@ -120,11 +120,10 @@ Le operazioni ALTER TABLE SWITCH non sono supportate sulle tabelle a cui fanno r
 
 |Scenario|Nuove colonne da aggiungere alla vista materializzata|Commento|  
 |-----------------|---------------|-----------------|
-|COUNT_BIG() | non è presente nell'elenco SELECT di una definizione di vista materializzata |COUNT_BIG (*) |Viene aggiunta automaticamente dalla creazione di una vista materializzata.  Non è richiesta alcuna azione da parte dell'utente.|
+|COUNT_BIG() non è presente nell'elenco SELECT di una definizione di vista materializzata| COUNT_BIG (*) |Viene aggiunta automaticamente dalla creazione di una vista materializzata.  Non è richiesta alcuna azione da parte dell'utente.|
 |La funzione SUM(a) viene specificata dagli utenti nell'elenco SELECT della definizione di una vista materializzata e 'a' è un'espressione che ammette i valori Null. |COUNT_BIG (a) |Gli utenti devono aggiungere l'espressione 'a' manualmente nella definizione della vista materializzata.|
 |La funzione AVG(a) viene specificata dagli utenti nell'elenco SELECT della definizione di una vista materializzata e 'a' è un'espressione.|SUM(a), COUNT_BIG(a)|Viene aggiunta automaticamente dalla creazione di una vista materializzata.  Non è richiesta alcuna azione da parte dell'utente.|
-|La funzione STDEV(a) viene specificata dagli utenti nell'elenco SELECT della definizione di una vista materializzata e 'a' è un'espressione.|SUM(a),  
-COUNT_BIG(a) SUM(square(a))|Viene aggiunta automaticamente dalla creazione di una vista materializzata.  Non è richiesta alcuna azione da parte dell'utente. |
+|La funzione STDEV(a) viene specificata dagli utenti nell'elenco SELECT della definizione di una vista materializzata e 'a' è un'espressione.|SUM(a), COUNT_BIG(a), SUM(square(a))|Viene aggiunta automaticamente dalla creazione di una vista materializzata.  Non è richiesta alcuna azione da parte dell'utente. |
 | | | |
 
 Dopo la creazione, le viste materializzate sono visibili all'interno di SQL Server Management Studio nella cartella views dell'istanza di Azure SQL Data Warehouse.

@@ -12,12 +12,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfiledest.f1
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: a8200ed17e9581f0c39693ee7386f7f33c566265
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: 4572651bb90098c9afb3a01c574401356dac6706
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316630"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892305"
 ---
 # <a name="flexible-file-destination"></a>Destinazione di File flessibili
 
@@ -39,7 +39,7 @@ Le seguenti proprietà sono disponibili nell'**Editor Destinazione di File fless
 - **Tipo di gestione connessione file:** specifica il tipo di gestione connessione di origine. Sceglierne una esistente del tipo specificato oppure crearne una nuova.
 - **Percorso cartella:** specifica il percorso della cartella di destinazione.
 - **Nome file:** specifica il nome file di destinazione.
-- **Formato di file:** specifica il formato del file di destinazione. I formati supportati sono **Testo**, **Avro**, **ORC**, **Parquet**.
+- **Formato di file:** specifica il formato del file di destinazione. I formati supportati sono **Testo**, **Avro**, **ORC**, **Parquet**. Per ORC/Parquet è necessario Java. Per informazioni dettagliate, vedere [qui](../../integration-services/azure-feature-pack-for-integration-services-ssis.md#dependency-on-java).
 - **Carattere delimitatore di colonna:** specifica il carattere da usare come delimitatore di colonna (i delimitatori composti da più caratteri non sono supportati).
 - **Prima riga come nome di colonna:** specifica se scrivere i nomi di colonna nella prima riga.
 - **Comprimi file:** specifica se comprimere il file.
@@ -74,30 +74,3 @@ In alternativa, se l'entità di sicurezza non dispone di un'assegnazione di Cont
 Per l'autorizzazione di scrittura, concedere almeno l'autorizzazione di **esecuzione** partendo dal file system del sink insieme all'autorizzazione di **scrittura** per la cartella del sink.
 In alternativa, concedere almeno il ruolo **Collaboratore ai dati dei BLOB di archiviazione** con Controllo degli accessi in base al ruolo.
 Per informazioni dettagliate, vedere [questo articolo](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control).
-
-**Prerequisiti per il formato di file ORC/Parquet**
-
-Per usare il formato di file ORC/Parquet è necessario Java.
-L'architettura (a 32 o a 64 bit) della build di Java deve corrispondere a quella del runtime di SSIS da usare.
-Sono state sottoposte a test le build di Java seguenti.
-
-- [OpenJDK 8u192 di Zulu](https://www.azul.com/downloads/zulu/zulu-windows/)
-- [Oracle Java SE Runtime Environment 8u192](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
-
-**Configurare OpenJDK di Zulu**
-
-1. Scaricare ed estrarre il pacchetto di installazione con estensione zip.
-2. Dal prompt dei comandi, eseguire `sysdm.cpl`.
-3. Nella scheda **Avanzate** selezionare **Variabili di ambiente**.
-4. Nella sezione **Variabili di sistema** selezionare **Nuova**.
-5. Immettere `JAVA_HOME` in **Nome variabile**.
-6. Selezionare **Sfoglia directory**, passare alla cartella estratta e selezionare la sottocartella `jre`.
-   Selezionare quindi **OK** e **Valore variabile** verrà popolato automaticamente.
-7. Selezionare **OK** per chiudere la finestra di dialogo **Nuova variabile di sistema**.
-8. Selezionare **OK** per chiudere la finestra di dialogo **Variabili di ambiente**.
-9. Selezionare **OK** per chiudere la finestra di dialogo **Proprietà del sistema**.
-
-**Configurare Oracle Java SE Runtime Environment**
-
-1. Scaricare ed eseguire il programma di installazione con estensione exe.
-2. Seguire le istruzioni del programma di installazione per completare l'installazione.

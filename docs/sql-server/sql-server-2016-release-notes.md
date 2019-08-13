@@ -13,12 +13,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9a62e627e372a7c280e0187a33accc9563da91c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4a0bc3d50808c25999f1791a752e069bc02bed0d
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136513"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811556"
 ---
 # <a name="sql-server-2016-release-notes"></a>Note sulla versione di SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "68136513"
 
 - [![Download da Evaluation Center](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  Scaricare SQL Server 2016 da **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
 - [![Macchina virtuale di Azure piccola](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016) Se si ha un account di Azure,  fare clic **[qui](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016)** per creare rapidamente una macchina virtuale in cui è già installato SQL Server 2016 SP1.
-- [![Download di SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) Per ottenere la versione più recente di SQL Server Management Studio, vedere **[Scaricare SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.
+- [![Download di SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) Per ottenere la versione più recente di SQL Server Management Studio, vedere **[Scaricare SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)** .
 
 ## <a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)
 
@@ -107,7 +107,7 @@ La tabella seguente contiene un riepilogo dei principali miglioramenti disponibi
 
 |Funzionalità|Descrizione|Ulteriori informazioni|
 |---|---|---|
-|Inserimento in blocco negli heap con TABLOCK automatico in TF 715| Trace Flag 715 abilita il blocco della tabella per le operazioni di caricamento bulk in heap senza indici non cluster.|[La migrazione dei carichi di lavoro SAP a SQL Server è 2,5 volte più veloce](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
+|Inserimento in blocco negli heap con TABLOCK automatico in TF 715| Il flag di traccia 715 abilita il blocco di tabella per le operazioni di caricamento bulk in heap senza indici non cluster.|[La migrazione dei carichi di lavoro SAP a SQL Server è 2,5 volte più veloce](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
 |CREATE o ALTER|Consentono la distribuzione di oggetti, ad esempio stored procedure, trigger, funzioni definite dall'utente e visualizzazioni.|[Blog sul motore di database di SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
 |Supporto DROP TABLE per la replica|Supporto DDL DROP TABLE per la replica per consentire l'eliminazione degli articoli relativi alla replica.|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)|
 |Firma del driver RsFx FileStream|Il driver RsFx FileStream viene firmato e certificato usando il dashboard del centro per sviluppatori di hardware Windows (portale per sviluppatori) che consente di installare il driver RsFx FileStream di SQL Server 2016 SP1 in Windows Server 2016 o Windows 10 senza alcun problema.|[La migrazione dei carichi di lavoro SAP a SQL Server è 2,5 volte più veloce](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|

@@ -22,12 +22,12 @@ ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ff6e63c05b380d1cee875c29570bd3cc4b97d051
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: a1398e56ccb4ade7504d20708fda3c4bdec9d34b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266771"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811548"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Selezionare un account per il servizio SQL Server Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ L'account utilizzato per l'esecuzione del servizio [!INCLUDE[ssNoVersion](../../
 ## <a name="supported-service-account-types"></a>Tipi di account di servizio supportati  
 Nella tabella seguente vengono elencati i tipi di account di Windows che possono essere utilizzati per il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-|Tipo di account di servizio|Server non di cluster|Server di cluster|Controller di dominio (non di cluster)|  
+|Tipo di account di servizio|Server non cluster|Server di cluster|Controller di dominio (non cluster)|  
 |------------------------|-------------------------|--------------------|--------------------------------------|  
 |[!INCLUDE[msCoName](../../includes/msconame_md.md)] Account di dominio di Windows (membro del gruppo Administrators di Windows)|Supportato|Supportato|Supportato|  
 |Account di dominio di Windows (non amministrativo)|Supportato<br /><br />Vedere Limitazione 1 di seguito.|Supportato<br /><br />Vedere Limitazione 1 di seguito.|Supportato<br /><br />Vedere Limitazione 1 di seguito.|  

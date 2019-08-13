@@ -12,12 +12,12 @@ ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9388483151326222dd8fa5e085467b15600eca9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2965fea796efac9a337580ee32c9de53c976320
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940644"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811139"
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>Report di stato: Classe di evento Online Index Operation
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67940644"
 |EndTime|**datetime**|Ora del completamento dell'operazione di creazione dell'indice online.|15|Sì|  
 |EventClass|**int**|Tipo di evento = 190.|27|no|  
 |EventSequence|**int**|Sequenza di un determinato evento all'interno della richiesta.|51|no|  
-|EventSubClass|**int**|Tipo di sottoclasse di evento.<br /><br /> 1 = Avvio<br /><br /> 2 = Inizio esecuzione fase 1<br /><br /> 3 = Fine esecuzione fase 1<br /><br /> 4 = Inizio esecuzione fase 2<br /><br /> 5 = Fine esecuzione fase 2<br /><br /> 6 = Conteggio righe inserite<br /><br /> 7 = Fine<br /><br /> Fase 1 si riferisce all'oggetto di base (indice cluster o heap) o indica se l'operazione sull'indice include solo un indice non cluster. Fase 2 viene utilizzata quando l'operazione di compilazione di un indice include sia la ricompilazione originale che gli indici non cluster aggiuntivi.  Ad esempio, se un oggetto ha un indice cluster e molti indici non cluster, con 'Ricompila tutto' verrebbero ricompilati tutti gli indici. L'oggetto di base (l'indice cluster) viene ricompilato nella fase 1 e tutti gli indici non cluster vengono ricompilati quindi nella fase 2.|21|Sì|  
+|EventSubClass|**int**|Tipo di sottoclasse di evento.<br /><br /> 1 = Avvio<br /><br /> 2 = Inizio esecuzione fase 1<br /><br /> 3 = Fine esecuzione fase 1<br /><br /> 4 = Inizio esecuzione fase 2<br /><br /> 5 = Fine esecuzione fase 2<br /><br /> 6 = Conteggio righe inserite<br /><br /> 7 = Fine<br /><br /> La fase 1 si riferisce all'oggetto di base (indice cluster o heap) o indica se l'operazione sull'indice include solo un indice non cluster. La fase 2 viene usata quando un'operazione di compilazione di un indice include sia la ricompilazione originale che gli indici non cluster aggiuntivi.  Se, ad esempio, un oggetto ha un indice cluster e molti indici non cluster, con "Ricompila tutto" verrebbero ricompilati tutti gli indici. L'oggetto di base (indice cluster) viene ricompilato nella fase 1 e tutti gli indici non cluster vengono ricompilati quindi nella fase 2.|21|Sì|  
 |GroupID|**int**|ID del gruppo del carico di lavoro in cui viene generato l'evento di Traccia SQL.|66|Sì|  
 |HostName|**nvarchar**|Nome del computer in cui viene eseguito il client. Questa colonna di dati viene popolata se il client fornisce il nome host. Per determinare il nome host, usare la funzione HOST_NAME.|8|Sì|  
 |IndexID|**int**|ID dell'indice dell'oggetto interessato dall'evento.|24|Sì|  

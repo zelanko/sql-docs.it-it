@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 4c4f504f-dd2b-42c5-8a20-1a8ad9a5d632
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: e9ccc245c540cfa6e87ee13f6cbb09f10c7734b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 38d79f3a76d71b677c722ca6226182b692dee506
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045446"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892249"
 ---
 # <a name="azure-data-lake-store-destination"></a>Destinazione di Azure Data Lake Store
 
@@ -32,7 +32,8 @@ ms.locfileid: "68045446"
 > [!NOTE]
 > Per assicurarsi che la Gestione connessioni di Azure Data Lake Store e che i componenti che la usano, cioè l'origine e la destinazione di Azure Data Lake Store, possano connettersi ai servizi, scaricare la versione del Feature Pack di Azure più recente da [qui](https://www.microsoft.com/download/details.aspx?id=49492). 
 
-## <a name="configure-the-azure-data-lake-store-destination"></a>Configurare Destinazione di Azure Data Lake Store  
+**Configurare Destinazione di Azure Data Lake Storage**
+
 1. Trascinare **Destinazione di Azure Data Lake Store** nella finestra di progettazione del flusso di dati e fare doppio clic per visualizzare l'editor.  
 
 2.  Nel campo **Gestione connessioni di Azure Data Lake Store** specificare un'istanza esistente di Gestione connessioni di Azure Data Lake Store o creare una nuova istanza che faccia riferimento a un servizio di Azure Data Lake Store.  
@@ -43,30 +44,6 @@ ms.locfileid: "68045446"
   
        Se il formato del file corrisponde a testo, è necessario impostare il valore **Carattere delimitatore di colonna** . Selezionare anche **Nomi di colonne nella prima riga di dati** se la prima riga nel file contiene i nomi di colonna.  
 
-       Se il formato di file è ORC, è necessario installare JRE (Java Runtime Environment) per la piattaforma appropriata.
+       Se il formato di file è ORC, è necessario Java. Per informazioni dettagliate, vedere [qui](../../integration-services/azure-feature-pack-for-integration-services-ssis.md#dependency-on-java).
   
 3.  Dopo aver specificato le informazioni di connessione, passare alla pagina **Colonne** per eseguire il mapping delle colonne di origine alle colonne di destinazione per il flusso di dati SSIS.  
-
-## <a name="prerequisite-for-orc-file-format"></a>Prerequisiti per il formato di file ORC
-Per usare il formato di file ORC è necessario Java.
-L'architettura (a 32 o a 64 bit) della build di Java deve corrispondere a quella del runtime di SSIS da usare.
-Sono state sottoposte a test le build di Java seguenti.
-
-- [OpenJDK 8u192 di Zulu](https://www.azul.com/downloads/zulu/zulu-windows/)
-- [Oracle Java SE Runtime Environment 8u192](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
-
-### <a name="set-up-zulus-openjdk"></a>Configurare OpenJDK di Zulu
-1. Scaricare ed estrarre il pacchetto di installazione con estensione zip.
-2. Dal prompt dei comandi, eseguire `sysdm.cpl`.
-3. Nella scheda **Avanzate** selezionare **Variabili di ambiente**.
-4. Nella sezione **Variabili di sistema** selezionare **Nuova**.
-5. Immettere `JAVA_HOME` in **Nome variabile**.
-6. Selezionare **Sfoglia directory**, passare alla cartella estratta e selezionare la sottocartella `jre`.
-   Selezionare quindi **OK** e **Valore variabile** verrà popolato automaticamente.
-7. Selezionare **OK** per chiudere la finestra di dialogo **Nuova variabile di sistema**.
-8. Selezionare **OK** per chiudere la finestra di dialogo **Variabili di ambiente**.
-9. Selezionare **OK** per chiudere la finestra di dialogo **Proprietà del sistema**.
-
-### <a name="set-up-oracles-java-se-runtime-environment"></a>Configurare Oracle Java SE Runtime Environment
-1. Scaricare ed eseguire il programma di installazione con estensione exe.
-2. Seguire le istruzioni del programma di installazione per completare l'installazione.

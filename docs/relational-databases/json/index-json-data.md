@@ -13,12 +13,12 @@ ms.assetid: ced241e1-ff09-4d6e-9f04-a594a9d2f25e
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a31be55598d3a3df42a9d5a5fd39832fdbc08754
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cbdea9d1ffd22fdedbfe15b66eb6d9b57f33d1f8
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909292"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809972"
 ---
 # <a name="index-json-data"></a>Indicizzazione dei dati JSON
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ Di seguito viene riportato il piano di esecuzione per la query di questo esempio
   
 ![Piano di esecuzione](../../relational-databases/json/media/jsonindexblog1.png "Piano di esecuzione")  
   
-Anziché un'analisi completa della tabella, SQL Server usa un indice seek nell'indice non cluster e individua le righe che soddisfano le condizioni specificate. Usa quindi una ricerca chiave nella tabella `SalesOrderHeader` per recuperare le altre colonne a cui si fa riferimento nella query, in questo esempio, `SalesOrderNumber` e `OrderDate`.  
+Invece di una scansione di tabella completa, SQL Server usa una ricerca nell'indice non cluster e individua le righe che soddisfano le condizioni specificate. Usa quindi una ricerca chiave nella tabella `SalesOrderHeader` per recuperare le altre colonne a cui si fa riferimento nella query, in questo esempio, `SalesOrderNumber` e `OrderDate`.  
  
 ### <a name="optimize-the-index-further-with-included-columns"></a>Ottimizzare ulteriormente l'indice con colonne incluse
 Se si aggiungono le colonne richieste nell'indice è possibile evitare questa ulteriore ricerca nella tabella. È possibile aggiungere tali colonne come colonne incluse standard, come illustrato nell'esempio seguente che estende l'esempio `CREATE INDEX` precedente.  
@@ -82,7 +82,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
 INCLUDE(SalesOrderNumber,OrderDate)
 ```  
   
-In questo caso SQL Server non deve leggere i dati aggiuntivi della tabella `SalesOrderHeader` perché tutto il necessario è incluso nell'indice non cluster JSON. Questo tipo di indice è un buon metodo per combinare i dati JSON e di colonna nelle query e per creare indici ottimali per il carico di lavoro.  
+In questo caso SQL Server non deve leggere i dati aggiuntivi della tabella `SalesOrderHeader` perché tutto il necessario è incluso nell'indice JSON non cluster. Questo tipo di indice è un buon metodo per combinare i dati JSON e di colonna nelle query e per creare indici ottimali per il carico di lavoro.  
   
 ## <a name="json-indexes-are-collation-aware-indexes"></a>Gli indici JSON sono in grado di riconoscere le regole di confronto  
 Una caratteristica importante degli indici per i dati JSON è che gli indici sono in grado di riconoscere le regole di confronto. Il risultato della funzione `JSON_VALUE`, che si usa quando si crea la colonna calcolata, è un valore di testo che eredita le regole di confronto dall'espressione di input. Di conseguenza, i valori dell'indice vengono ordinati usando le regole di confronto definite nelle colonne di origine.  
@@ -135,11 +135,11 @@ FROM JsonCollection
 ORDER BY JSON_VALUE(json,'$.name')
 ```  
   
- Se si esamina il piano di esecuzione, si noterà che vengono usati valori ordinati dall'indice non cluster.  
+ Se si esamina il piano di esecuzione effettivo, si noterà che vengono usati valori ordinati dall'indice non cluster.  
   
  ![Piano di esecuzione](../../relational-databases/json/media/jsonindexblog2.png "Piano di esecuzione")  
   
- Anche se la query include una clausola `ORDER BY`, il piano di esecuzione non usa un operatore di ordinamento. L'indice JSON è già ordinato in base alle regole per il serbo (cirillico). SQL Server può pertanto usare l'indice non cluster in cui risultati sono già ordinati.  
+ Anche se la query include una clausola `ORDER BY`, il piano di esecuzione non usa un operatore di ordinamento. L'indice JSON è già ordinato in base alle regole per il serbo (cirillico). SQL Server può quindi usare l'indice non cluster in cui risultati sono già ordinati.  
   
  Se tuttavia si modificano le regole di confronto dell'espressione `ORDER BY`, ad esempio inserendo `COLLATE French_100_CI_AS_SC` dopo la funzione `JSON_VALUE`, si ottiene un piano di esecuzione della query diverso.  
   

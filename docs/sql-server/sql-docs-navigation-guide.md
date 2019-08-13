@@ -10,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3cdcac17ddc09223d63e7dd923fd561e0a334fc2
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.openlocfilehash: e5a3e33d48b70146b439790e6439ef4f9cac08b5
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68700054"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941160"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Guida all'esplorazione della documentazione di SQL Server 
 
@@ -65,7 +65,7 @@ La documentazione tecnica di SQL Server include contenuto per diverse versioni e
 
 ![Filtro della versione in SQL Docs](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-Se si seleziona **SQL Server** > **Hide nothing** (Visualizza tutto) ci si assicura che tutto il contenuto sia visibile e che nessun elemento sia nascosto a causa del filtro della versione. 
+Se si seleziona **All SQL** > **Hide nothing** (Tutto SQL > Visualizza tutto) tutto il contenuto è visibile e non viene nascosto niente con il filtro. 
 
 ## <a name="breadcrumbs"></a>Percorsi di navigazione
 
