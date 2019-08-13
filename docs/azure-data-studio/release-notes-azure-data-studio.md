@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 07/11/2019
-ms.openlocfilehash: 8f19424b1e7946c7fb3d7a7056c1bda94b83b79b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 3e2b75282c9babf876d0daec033a435d75c2e2f1
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959381"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731056"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Note sulla versione per Azure Data Studio
 
@@ -137,7 +137,7 @@ ms.locfileid: "67959381"
 **Soluzione alternativa:** verrà risolto nella prossima versione. 
 - [4458](https://github.com/Microsoft/azuredatastudio/issues/4458): Dacpac Extract causa l'arresto anomalo di SqlToolsService se viene usata una versione non valida <br/>
 **Soluzione alternativa:** riavviare Azure Data Studio e verificare che venga usata la versione corretta.
-- Le icone di nuovo notebook e apertura notebook vanno perdute <br/> 
+- Le icone di nuovo notebook e apertura notebook vanno perdute <br/>
 **Soluzione alternativa:** Il tipo di connessione legacy è deprecato. Si consiglia di connettersi all'endpoint SQL Server per ottenere tutte le azioni (nuovo notebook, processo Spark) come previsto. 
 
 ## <a name="february-2019"></a>Febbraio 2019
