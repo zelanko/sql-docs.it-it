@@ -1,7 +1,7 @@
 ---
 title: Eseguire un notebook di esempio | Microsoft Docs
 titleSuffix: SQL Server big data clusters
-description: Questa esercitazione illustra come è possibile caricare un'esecuzione di notebook Spark di esempio in un cluster di big data di SQL Server 2019 (anteprima).
+description: Questa esercitazione illustra come caricare l'esecuzione di un notebook Spark di esempio in un cluster Big Data di SQL Server 2019 (anteprima).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,38 +10,38 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: ab558194a67118719c144ea20f9e97496d2cb478
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957738"
 ---
-# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>Esercitazione: Eseguire un notebook di esempio in un cluster di big data di SQL Server
+# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>Esercitazione: Eseguire un notebook di esempio in un cluster Big Data di SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questa esercitazione illustra come caricare ed eseguire un notebook in Azure Data Studio in un cluster di big data di SQL Server 2019 (anteprima). In questo modo i data Scientist e data Engineer per eseguire il codice Python, R o Scala del cluster.
+Questa esercitazione illustra come caricare ed eseguire un notebook di Azure Data Studio in un cluster Big Data di SQL Server 2019 (anteprima). Questa operazione consente infatti ai data scientist e ai data engineer di eseguire codice Python, R o Scala sul cluster.
 
 > [!TIP]
-> Se si preferisce, è possibile scaricare ed eseguire uno script per i comandi in questa esercitazione. Per istruzioni, vedere la [esempi di Spark](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark) su GitHub.
+> Se si preferisce, è possibile scaricare ed eseguire uno script per i comandi descritti in questa esercitazione. Per istruzioni, vedere gli [esempi di Spark](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark) in GitHub.
 
 ## <a id="prereqs"></a> Prerequisiti
 
-- [Strumenti dei big Data](deploy-big-data-tools.md)
+- [Strumenti per Big Data](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
    - **Estensione di SQL Server 2019**
-- [Caricare i dati di esempio in cluster i big Data](tutorial-load-sample-data.md)
+- [Caricare dati di esempio nel cluster Big Data](tutorial-load-sample-data.md)
 
-## <a name="download-the-sample-notebook-file"></a>Scaricare il file di notebook di esempio
+## <a name="download-the-sample-notebook-file"></a>Scaricare il file del notebook di esempio
 
-Usare le istruzioni seguenti per caricare il file di notebook di esempio **spark-sql.ipynb** in Azure Data Studio.
+Usare le istruzioni seguenti per caricare il file del notebook di esempio **spark-sql.ipynb** in Azure Data Studio.
 
-1. Aprire un prompt dei comandi bash (Linux) o Windows PowerShell.
+1. Aprire un prompt dei comandi Bash (Linux) o Windows PowerShell.
 
-1. Passare a una directory in cui si desidera scaricare il file di notebook di esempio a.
+1. Passare alla directory in cui si vuole scaricare il file del notebook di esempio.
 
-1. Eseguire il comando seguente **curl** comando per scaricare il file di notebook da GitHub:
+1. Eseguire il comando **curl** seguente per scaricare il file del notebook da GitHub:
 
    ```bash
    curl 'https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-loading/transform-csv-files.ipynb' -o transform-csv-files.ipynb
@@ -49,31 +49,31 @@ Usare le istruzioni seguenti per caricare il file di notebook di esempio **spark
 
 ## <a name="open-the-notebook"></a>Aprire il notebook
 
-La procedura seguente illustra come aprire il file di notebook in Azure Data Studio:
+Questa procedura illustra come aprire il file del notebook in Azure Data Studio:
 
-1. In Azure Data Studio, connettersi all'istanza master del cluster di big data. Per altre informazioni, vedere [connettersi a un cluster di big data](connect-to-big-data-cluster.md).
+1. In Azure Data Studio connettersi all'istanza master del cluster Big Data. Per altre informazioni, vedere [Connettersi a un cluster Big Data](connect-to-big-data-cluster.md).
 
-1. Fare doppio clic sulla connessione di gateway HDFS/Spark nel **server** finestra. Quindi selezionare **aprire Notebook**.
+1. Fare doppio clic sulla connessione del gateway HDFS/Spark nella finestra **Server**. Selezionare quindi **Open Notebook** (Apri notebook).
 
-   ![Aprire notebook](media/tutorial-notebook-spark/azure-data-studio-open-notebook.png)
+   ![Apri notebook](media/tutorial-notebook-spark/azure-data-studio-open-notebook.png)
 
-1. Attendere che il **Kernel** e il contesto di destinazione (**collegare a**) in cui inserire. Impostare il **Kernel** al **PySpark3**e impostare **collegare a** all'indirizzo IP dell'endpoint di cluster di big data.
+1. Attendere che il **kernel** e il contesto di destinazione **(Connetti a**) siano popolati. Impostare il **kernel** su **PySpark3** e l'opzione **Connetti a** sull'indirizzo IP dell'endpoint del cluster Big Data.
 
-   ![Impostare Kernel e associare a](media/tutorial-notebook-spark/set-kernel-and-attach-to.png)
+   ![Imposta Kernel e Connetti a](media/tutorial-notebook-spark/set-kernel-and-attach-to.png)
 
 ## <a name="run-the-notebook-cells"></a>Eseguire le celle del notebook
 
-È possibile eseguire ogni cella del notebook facendo clic sul pulsante play a sinistra della cella. I risultati vengono visualizzati nel notebook dopo l'esecuzione della cella.
+È possibile eseguire ogni cella del notebook premendo il pulsante di riproduzione a sinistra della cella. I risultati verranno visualizzati nel notebook al termine dell'esecuzione della cella.
 
-![Eseguire la cella notebook](media/tutorial-notebook-spark/run-notebook-cell.png)
+![Eseguire la cella del notebook](media/tutorial-notebook-spark/run-notebook-cell.png)
 
-Eseguire ogni cella del notebook di esempio in successione. Per altre informazioni sull'uso di notebook con cluster di big data di SQL Server, vedere le risorse seguenti:
+Eseguire tutte le celle del notebook di esempio in successione. Per altre informazioni sull'utilizzo dei notebook con cluster Big Data di SQL Server, vedere le risorse seguenti:
 
-- [Come usare i notebook in fase di anteprima di SQL Server 2019](notebooks-guidance.md)
+- [Come usare i notebook in SQL Server 2019 (anteprima)](notebooks-guidance.md)
 - [Come gestire i notebook in Azure Data Studio](notebooks-how-to-manage.md)
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Altre informazioni sui blocchi appunti:
+Altre informazioni sui notebook:
 > [!div class="nextstepaction"]
-> [Scopri i notebook](notebooks-guidance.md)
+> [Altre informazioni sui notebook](notebooks-guidance.md)

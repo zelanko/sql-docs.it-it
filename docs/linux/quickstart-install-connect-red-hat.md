@@ -1,7 +1,7 @@
 ---
-title: Introduzione a SQL Server su Red Hat Enterprise Linux
+title: Introduzione a SQL Server in Red Hat Enterprise Linux
 titleSuffix: SQL Server
-description: Questa Guida introduttiva illustra come installare SQL Server 2017 o SQL Server 2019 in Red Hat Enterprise Linux e quindi creare ed eseguire query di un database con sqlcmd.
+description: Questa guida di avvio rapido illustra come installare SQL Server 2017 o SQL Server 2019 in Red Hat Enterprise Linux e quindi come creare ed eseguire query su un database con sqlcmd.
 author: VanMSFT
 ms.author: vanto
 ms.date: 07/16/2018
@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.openlocfilehash: 38df65ffefbc0ed264d631214025059449d84b35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67910500"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Avvio rapido: Installare SQL Server e creare un database in Red Hat
@@ -23,44 +23,44 @@ ms.locfileid: "67910500"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-In questa Guida introduttiva, si installa SQL Server 2017 o SQL Server 2019 su Red Hat Enterprise Linux (RHEL). Quindi Connettiti **sqlcmd** per creare il primo database ed eseguire query.
+In questa guida di avvio rapido si installerà SQL Server 2017 o SQL Server 2019 in Red Hat Enterprise Linux (RHEL). Ci si connette quindi con **sqlcmd** per creare il primo database ed eseguire query.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-In questa Guida introduttiva, si installa SQL Server 2019 anteprima su Red Hat Enterprise Linux (RHEL) 7.3 +. Quindi Connettiti **sqlcmd** per creare il primo database ed eseguire query.
+In questa guida di avvio rapido si installerà Anteprima di SQL Server 2019 in Red Hat Enterprise Linux (RHEL) 7.3+. Ci si connette quindi con **sqlcmd** per creare il primo database ed eseguire query.
 
 ::: moniker-end
 
 > [!TIP]
-> Questa esercitazione richiede l'input dell'utente e una connessione a internet. Se è interessati al [automatica](sql-server-linux-setup.md#unattended) oppure [offline](sql-server-linux-setup.md#offline) procedure di installazione, vedere [informazioni aggiuntive sull'installazione per SQL Server in Linux](sql-server-linux-setup.md).
+> Questa esercitazione richiede l'input dell'utente e una connessione Internet. Se si è interessati alle procedure di installazione [automatica](sql-server-linux-setup.md#unattended) o [offline](sql-server-linux-setup.md#offline), vedere [Linee guida per l'installazione di SQL Server in Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-È necessario disporre di un computer con RHEL 7.3, 7.4, 7.5 o 7.6 **almeno 2 GB** di memoria.
+È necessario un computer RHEL 7.3, 7.4, 7.5 o 7.6 con **almeno 2 GB** di memoria.
 
-Per installare Red Hat Enterprise Linux nel proprio computer, visitare [ https://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). È anche possibile creare macchine virtuali RHEL in Azure. Visualizzare [creare e gestire VM Linux con Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)e usare `--image RHEL` nella chiamata a `az vm create`.
+Per installare Red Hat Enterprise Linux nel computer in uso, passare a [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). È anche possibile creare macchine virtuali RHEL in Azure. Vedere [Creare e gestire VM Linux con l'interfaccia della riga di comando di Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm) e usare `--image RHEL` nella chiamata a `az vm create`.
 
-Se è stato precedentemente installato una versione CTP o RC di SQL Server 2017, è innanzitutto necessario rimuovere il repository precedente prima di seguire questi passaggi. Per altre informazioni, vedere [repository configurare Linux per SQL Server 2017 e 2019](sql-server-linux-change-repo.md).
+Se in precedenza è stata installata una versione CTP o RC di SQL Server 2017, occorre rimuovere il repository precedente prima di eseguire questa procedura. Per altre informazioni, vedere [Configurare i repository Linux per SQL Server 2017 e 2019](sql-server-linux-change-repo.md).
 
-Per altri requisiti di sistema, vedere [requisiti di sistema per SQL Server in Linux](sql-server-linux-setup.md#system).
+Per altri requisiti di sistema, vedere [Requisiti di sistema per SQL Server su Linux](sql-server-linux-setup.md#system).
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 ## <a id="install"></a>Installare SQL Server
 
-Per configurare SQL Server in RHEL, eseguire i comandi seguenti in un terminale per installare il **mssql-server** pacchetto:
+Per configurare SQL Server in RHEL, eseguire i comandi seguenti in un terminale per installare il pacchetto **mssql-server**:
 
-1. Scaricare il file di configurazione del repository di Microsoft SQL Server 2017 Red Hat:
+1. Scaricare il file di configurazione del repository Microsoft SQL Server 2017 per Red Hat:
 
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
    ```
 
    > [!TIP]
-   > Se si vuole provare 2019 di SQL Server, è necessario registrare invece le **Preview (2019)** repository. Usare il comando seguente per le installazioni di SQL Server 2019:
+   > Se si vuole provare SQL Server 2019, occorre invece registrare il repository **Anteprima (2019)** . Usare il comando seguente per le installazioni di SQL Server 2019:
    >
    > ```bash
    > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo
@@ -72,17 +72,17 @@ Per configurare SQL Server in RHEL, eseguire i comandi seguenti in un terminale 
    sudo yum install -y mssql-server
    ```
 
-3. Dopo il completamento dell'installazione del pacchetto, eseguire **mssql-conf setup** e seguire le istruzioni per impostare la password account SA e scegliere l'edizione.
+3. Al termine dell'installazione del pacchetto, eseguire **mssql-conf setup** e seguire le istruzioni per impostare la password dell'amministratore di sistema e scegliere l'edizione.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
    > [!TIP]
-   > Le seguenti edizioni di SQL Server 2017 gratuitamente vengono concesso in licenza: Evaluation, Developer ed Express.
+   > Le edizioni di SQL Server 2017 seguenti sono concesse in licenza gratuitamente: Evaluation, Developer ed Express.
 
    > [!NOTE]
-   > Assicurarsi di specificare una password complessa per l'account SA (caratteri di lunghezza 8 minimo, incluse le lettere maiuscole e lettere minuscole, cifre in base 10 e/o i simboli non alfanumerici).
+   > Assicurarsi di specificare una password complessa per l'account dell'amministratore di sistema (lunghezza minima di 8 caratteri, con lettere sia maiuscole che minuscole, cifre in base 10 e/o simboli non alfanumerici).
 
 4. Al termine della configurazione, verificare che il servizio sia in esecuzione:
 
@@ -90,7 +90,7 @@ Per configurare SQL Server in RHEL, eseguire i comandi seguenti in un terminale 
    systemctl status mssql-server
    ```
 
-5. Per consentire le connessioni remote, aprire la porta di SQL Server nel firewall in RHEL. La porta di SQL Server predefinita è TCP 1433. Se si usa **FirewallD** per firewall, è possibile usare i comandi seguenti:
+5. Per consentire connessioni remote, aprire la porta di SQL Server nel firewall in RHEL. La porta di SQL Server predefinita è TCP 1433. Se per il firewall si usa **FirewallD**, è possibile usare i comandi seguenti:
 
    ```bash
    sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
@@ -105,9 +105,9 @@ A questo punto, SQL Server è in esecuzione nel computer RHEL ed è pronto per l
 
 ## <a id="install"></a>Installare SQL Server
 
-Per configurare SQL Server in RHEL, eseguire i comandi seguenti in un terminale per installare il **mssql-server** pacchetto:
+Per configurare SQL Server in RHEL, eseguire i comandi seguenti in un terminale per installare il pacchetto **mssql-server**:
 
-1. Scaricare l'anteprima di Microsoft SQL Server 2019 file di configurazione del repository di Red Hat:
+1. Scaricare il file di configurazione del repository di Anteprima di Microsoft SQL Server 2019 per Red Hat:
 
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo
@@ -119,14 +119,14 @@ Per configurare SQL Server in RHEL, eseguire i comandi seguenti in un terminale 
    sudo yum install -y mssql-server
    ```
 
-3. Dopo il completamento dell'installazione del pacchetto, eseguire **mssql-conf setup** e seguire le istruzioni per impostare la password account SA e scegliere l'edizione.
+3. Al termine dell'installazione del pacchetto, eseguire **mssql-conf setup** e seguire le istruzioni per impostare la password dell'amministratore di sistema e scegliere l'edizione.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
    > [!NOTE]
-   > Assicurarsi di specificare una password complessa per l'account SA (caratteri di lunghezza 8 minimo, incluse le lettere maiuscole e lettere minuscole, cifre in base 10 e/o i simboli non alfanumerici).
+   > Assicurarsi di specificare una password complessa per l'account dell'amministratore di sistema (lunghezza minima di 8 caratteri, con lettere sia maiuscole che minuscole, cifre in base 10 e/o simboli non alfanumerici).
 
 4. Al termine della configurazione, verificare che il servizio sia in esecuzione:
 
@@ -134,40 +134,40 @@ Per configurare SQL Server in RHEL, eseguire i comandi seguenti in un terminale 
    systemctl status mssql-server
    ```
 
-5. Per consentire le connessioni remote, aprire la porta di SQL Server nel firewall in RHEL. La porta di SQL Server predefinita è TCP 1433. Se si usa **FirewallD** per firewall, è possibile usare i comandi seguenti:
+5. Per consentire connessioni remote, aprire la porta di SQL Server nel firewall in RHEL. La porta di SQL Server predefinita è TCP 1433. Se per il firewall si usa **FirewallD**, è possibile usare i comandi seguenti:
 
    ```bash
    sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
    sudo firewall-cmd --reload
    ```
 
-A questo punto, anteprima di SQL Server 2019 è in esecuzione nel computer RHEL e sia pronto per l'uso.
+A questo punto, Anteprima di SQL Server 2019 è in esecuzione nel computer RHEL ed è pronto per l'uso.
 
 ::: moniker-end
 
 ## <a id="tools"></a>Installare gli strumenti da riga di comando di SQL Server
 
-Per creare un database, è necessario connettersi con uno strumento che è possibile eseguire istruzioni Transact-SQL in SQL Server. La procedura seguente installa gli strumenti da riga di comando di SQL Server: [sqlcmd](../tools/sqlcmd-utility.md) e [bcp](../tools/bcp-utility.md).
+Per creare un database, è necessario connettersi con uno strumento in grado di eseguire istruzioni Transact-SQL nel server SQL. La procedura seguente installa gli strumenti da riga di comando di SQL Server [sqlcmd](../tools/sqlcmd-utility.md) e [bcp](../tools/bcp-utility.md).
 
-1. Scaricare il file di configurazione del repository Microsoft Red Hat.
+1. Scaricare il file di configurazione del repository Microsoft per Red Hat.
 
    ```bash
    sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/7/prod.repo
    ```
 
-1. Se si dispone di una versione precedente di **mssql-tools** installato, rimuovere eventuali pacchetti unixODBC meno recenti.
+1. Se era già stata installata una versione precedente di **mssql-tools**, rimuovere tutti i pacchetti unixODBC meno recenti.
 
    ```bash
    sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
    ```
 
-1. Eseguire i comandi seguenti per installare **mssql-tools** con il pacchetto di sviluppo unixODBC.
+1. Eseguire i comandi seguenti per installare **mssql-tools** con il pacchetto per sviluppatori unixODBC.
 
    ```bash
    sudo yum install -y mssql-tools unixODBC-devel
    ```
 
-1. Per praticità, aggiungere `/opt/mssql-tools/bin/` per il **percorso** variabile di ambiente. Ciò consente di eseguire gli strumenti senza specificare il percorso completo. Eseguire i comandi seguenti per modificare la **percorso** per sessioni di accesso e le sessioni interattive/senza accesso:
+1. Per praticità, aggiungere `/opt/mssql-tools/bin/` alla variabile di ambiente **PATH**. In questo modo è possibile eseguire gli strumenti senza specificare il percorso completo. Eseguire i comandi seguenti per modificare la variabile **PATH** sia per le sessioni di accesso che per le sessioni interattive/non di accesso:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile

@@ -1,7 +1,7 @@
 ---
-title: Estensione di file dacpac di SQL Server
+title: Estensione SQL Server dacpac
 titleSuffix: Azure Data Studio
-description: Installare e usare l'estensione di file dacpac di SQL Server (anteprima) per Azure Data Studio
+description: Installare e usare l'estensione SQL Server dacpac (anteprima) per Azure Data Studio
 ms.custom: seodec18
 ms.date: 03/18/2019
 ms.reviewer: alayu; sstein
@@ -11,38 +11,38 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: e40e377310b33034b4abecdc5e58eab17d39695d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959191"
 ---
 # <a name="sql-server-dacpac-extension-preview"></a>Estensione dacpac di SQL Server (anteprima)
 
-**La creazione guidata applicazione livello dati** offre un'esperienza facile da usare per distribuire ed estrarre file con estensione dacpac e importare ed esportare file con estensione bacpac.
+**La procedura guidata dell'applicazione a livello di dati** offre una soluzione di facile utilizzo per distribuire ed estrarre file con estensione DACAPC e importare ed esportare file con estensione BACPAC.
 
-Questa esperienza è attualmente la versione di anteprima iniziale. Per segnalare problemi e richieste di funzionalità [qui.](https://github.com/microsoft/azuredatastudio/issues)
+Questa funzionalità è attualmente disponibile in versione di anteprima iniziale. Segnalare eventuali problemi e richieste di funzionalità [qui](https://github.com/microsoft/azuredatastudio/issues).
 
 ![azioni dati](media/sql-server-dacpac-extension/data-tier-application-actions.png)
 
  ### <a name="requirements"></a>Requisiti
- * Questa procedura guidata richiede una connessione attiva a un'istanza di SQL Server per iniziare.
+ * Per avviare questa procedura guidata è necessaria una connessione attiva a un'istanza di SQL Server.
 
- ### <a name="how-do-i-start-the-data-tier-application-wizard"></a>Come si inizia la creazione guidata applicazione livello dati?
- * Il punto di ingresso principale per la procedura guidata è un database in Esplora oggetti fare clic destro e fare clic su **Creazione guidata applicazione livello dati**.
- * Se un utente è connesso a un'istanza di SQL Server, l'utente può anche avviare la procedura guidata dal riquadro comandi (Ctrl + MAIUSC + P) eseguendo una ricerca per **Creazione guidata applicazione livello dati.**
+ ### <a name="how-do-i-start-the-data-tier-application-wizard"></a>Com'è possibile avviare la procedura guidata dell'applicazione a livello di dati?
+ * Il punto di ingresso principale della procedura guidata è fare clic con il pulsante destro del mouse su un database in Esplora oggetti e quindi scegliere **Data-tier Application wizard** (Procedura guidata dell'applicazione a livello di dati).
+ * Se un utente è connesso a un'istanza di SQL Server, può avviare la procedura guidata anche dal riquadro comandi (CTRL+MAIUSC+P) cercando **Procedura guidata dell'applicazione a livello di dati**.
 
- ### <a name="why-would-i-use-the-data-tier-application-wizard"></a>Perché usare la procedura guidata dell'applicazione livello dati?
- Questa procedura guidata è stata creata per aggiungere la possibilità di estrarre e distribuire i file con estensione dacpac e importare ed esportare file bacpac in Azure Data Studio.
+ ### <a name="why-would-i-use-the-data-tier-application-wizard"></a>Perché usare la procedura guidata dell'applicazione a livello di dati?
+ Questa procedura guidata è stata creata per aggiungere la possibilità di estrarre e distribuire file con estensione DACPAC e di importare ed esportare file con estensione BACPAC in Azure Data Studio.
 
-## <a name="install-the-sql-server-dacpac-extension"></a>Installare l'estensione di file dacpac di SQL Server
+## <a name="install-the-sql-server-dacpac-extension"></a>Installare l'estensione SQL Server dacpac
 
-1. Per aprire la gestione delle estensioni e accedere alle estensioni disponibili, selezionare l'icona delle estensioni o scegliere **Estensioni** dal menu **Visualizza**.
-2. Selezionare l'estensione di file dacpac di SQL Server e fare clic su **installare**.
-1. Selezionare **Ricarica** per abilitare l'estensione (richiesto solo la prima volta in cui l'estensione viene installata).
-2. Passare al dashboard di gestione facendo clic con il tasto destro del mouse sul server o sul database e selezionando **Gestisci**.
+1. Per aprire Gestione estensioni e accedere alle estensioni disponibili, selezionare l'icona delle estensioni oppure l'opzione **Estensioni** dal menu **Visualizza**.
+2. Selezionare l'estensione SQL Server dacpac e fare clic su **Installa**.
+1. Selezionare **Ricarica** per abilitare l'estensione (necessario solo la prima volta che si installa un'estensione).
+2. Passare al dashboard di gestione facendo clic con il pulsante destro del mouse sul server o sul database in uso e scegliendo quindi **Gestisci**.
 3. Le estensioni installate vengono visualizzate come schede nel dashboard di gestione:
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sui file dacpac, [controllare la documentazione.](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017)
+Per altre informazioni su dacpac, [consultare la documentazione di riferimento](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017).

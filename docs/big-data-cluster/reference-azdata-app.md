@@ -1,7 +1,7 @@
 ---
-title: riferimento all'app azdata
+title: Informazioni di riferimento su azdata app
 titleSuffix: SQL Server big data clusters
-description: Articolo di riferimento per i comandi dell'app azdata.
+description: Articolo di riferimento per i comandi azdata app.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,31 +10,31 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 793edde26ebebf9e55c5751adbedf662142280de
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68426281"
 ---
-# <a name="azdata-app"></a>app azdata
+# <a name="azdata-app"></a>azdata app
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-L'articolo seguente fornisce informazioni di riferimento per i comandi dell' **app** nello strumento **azdata** . Per ulteriori informazioni su altri comandi **azdata** , vedere [riferimento azdata](reference-azdata.md).
+L'articolo seguente fornisce informazioni di riferimento sui comandi **app** dello strumento **azdata**. Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandi:
+## <a name="commands"></a>Comandi
 |     |     |
 | --- | --- |
-[modello di app azdata](reference-azdata-app-template.md) | Modelli.
-[azdata app init](#azdata-app-init) | Avvia la nuova ossatura dell'applicazione.
-[creazione dell'app azdata](#azdata-app-create) | Creare un'applicazione.
-[aggiornamento dell'app azdata](#azdata-app-update) | Aggiornare l'applicazione.
-[elenco di app azdata](#azdata-app-list) | Elencare le applicazioni.
-[eliminazione dell'app azdata](#azdata-app-delete) | Eliminare l'applicazione.
-[esecuzione dell'app azdata](#azdata-app-run) | Eseguire l'applicazione.
-[Descrizione dell'app azdata](#azdata-app-describe) | Descrivere l'applicazione.
+[azdata app template](reference-azdata-app-template.md) | Modelli.
+[azdata app init](#azdata-app-init) | Avvia un nuovo scheletro dell'applicazione.
+[azdata app create](#azdata-app-create) | Crea un'applicazione.
+[azdata app update](#azdata-app-update) | Aggiorna un'applicazione.
+[azdata app list](#azdata-app-list) | Elenca le applicazioni.
+[azdata app delete](#azdata-app-delete) | Elimina un'applicazione.
+[azdata app run](#azdata-app-run) | Esegue un'applicazione.
+[azdata app describe](#azdata-app-describe) | Descrive un'applicazione.
 ## <a name="azdata-app-init"></a>azdata app init
-Consente di eseguire il Kickstart dei nuovi file di scheletro e/o speci dell'applicazione basati su ambienti di Runtime.
+Consente di avviare lo scheletro di una nuova applicazione e/o file specifici basati su ambienti di runtime.
 ```bash
 azdata app init [--spec -s] 
                 [--name -n]  
@@ -44,106 +44,106 @@ azdata app init [--spec -s]
                 [--url -u]
 ```
 ### <a name="examples"></a>Esempi
-Impalcatura di una `spec.yaml` nuova applicazione.
+Eseguire lo scaffolding solo di una nuova applicazione `spec.yaml`.
 ```bash
 azdata app init --spec
 ```
-Impalcatura di un nuovo scheletro dell'applicazione R `r` basato sul modello.
+Eseguire lo scaffolding di un nuovo scheletro dell'applicazione R in base al modello `r`.
 ```bash
 azdata app init --name reduce --template r
 ```
-Impalcatura di una nuova ossatura dell'applicazione Python `python` basata sul modello.
+Eseguire lo scaffolding dello scheletro di una nuova applicazione Python in base al modello `python`.
 ```bash
 azdata app init --name reduce --template python
 ```
-Impalcatura di una nuova ossatura dell'applicazione SSIS `ssis` basata sul modello.
+Eseguire lo scaffolding dello scheletro di una nuova applicazione SSIS in base al modello `ssis`.
 ```bash
 azdata app init --name reduce --template ssis            
 ```
 ### <a name="optional-parameters"></a>Parametri facoltativi
 #### `--spec -s`
-Generare solo un'applicazione spec. yaml.
+Genera solo un'applicazione spec.yaml.
 #### `--name -n`
 Nome applicazione
 #### `--version -v`
 Versione dell'applicazione.
 #### `--template -t`
-Nome del modello. Per un elenco completo dei nomi di modello supportati, eseguire`azdata app template list`
+Nome del modello. Per un elenco completo dei nomi di modello supportati, eseguire `azdata app template list`
 #### `--destination -d`
-Posizione in cui posizionare la struttura dell'applicazione. Impostazione predefinita: directory di lavoro corrente.
+Posizione in cui inserire lo scheletro dell'applicazione. Valore predefinito: directory di lavoro corrente.
 #### `--url -u`
-Specificare un percorso del repository di modelli diverso. Predefinita https://github.com/Microsoft/SQLBDC-AppDeploy.git
+Specificare un percorso di un repository di modelli diverso. Valore predefinito: https://github.com/Microsoft/SQLBDC-AppDeploy.git
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
+Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e l'uscita.
+Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
-Formato di output.  Valori consentiti: JSON, jsonc, Table, TSV.  Impostazione predefinita: JSON.
+Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per [http://jmespath.org/](http://jmespath.org/]) ulteriori informazioni ed esempi, vedere.
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
-## <a name="azdata-app-create"></a>creazione dell'app azdata
-Creare un'applicazione.
+Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
+## <a name="azdata-app-create"></a>azdata app create
+Crea un'applicazione.
 ```bash
 azdata app create --spec -s 
                   
 ```
 ### <a name="examples"></a>Esempi
-Creare una nuova applicazione da una directory contenente una specifica di distribuzione di spec. YAML valida.
+Creare una nuova applicazione da una directory contenente specifiche di distribuzione di spec.yaml valide.
 ```bash
 azdata app create --spec /path/to/dir/with/spec/yaml
 ```
 ### <a name="required-parameters"></a>Parametri obbligatori
 #### `--spec -s`
-Percorso di una directory con un file di specifica YAML che descrive l'applicazione.
+Percorso di una directory con un file di specifiche YAML che descrive l'applicazione.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
+Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e l'uscita.
+Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
-Formato di output.  Valori consentiti: JSON, jsonc, Table, TSV.  Impostazione predefinita: JSON.
+Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per [http://jmespath.org/](http://jmespath.org/]) ulteriori informazioni ed esempi, vedere.
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
-## <a name="azdata-app-update"></a>aggiornamento dell'app azdata
-Aggiornare un'applicazione.
+Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
+## <a name="azdata-app-update"></a>azdata app update
+Aggiorna un'applicazione.
 ```bash
 azdata app update [--spec -s] 
                   [--yes -y]
 ```
 ### <a name="examples"></a>Esempi
-Aggiornare un'applicazione esistente da una directory contenente una specifica di distribuzione di spec. YAML valida.
+Aggiornare un'applicazione esistente da una directory contenente specifiche di distribuzione di spec.yaml valide.
 ```bash
 azdata app update --spec /path/to/dir/with/spec/yaml    
 ```
 ### <a name="optional-parameters"></a>Parametri facoltativi
 #### `--spec -s`
-Percorso di una directory con un file di specifica YAML che descrive l'applicazione.
+Percorso di una directory con un file di specifiche YAML che descrive l'applicazione.
 #### `--yes -y`
-Non richiedere conferma quando si aggiorna un'applicazione dal file spec. YAML di CWD.
+Non richiedere conferma quando si aggiorna un'applicazione dal file spec.yaml di CWD.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
+Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e l'uscita.
+Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
-Formato di output.  Valori consentiti: JSON, jsonc, Table, TSV.  Impostazione predefinita: JSON.
+Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per [http://jmespath.org/](http://jmespath.org/]) ulteriori informazioni ed esempi, vedere.
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
-## <a name="azdata-app-list"></a>elenco di app azdata
-Elencare un'applicazione o le applicazioni.
+Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
+## <a name="azdata-app-list"></a>azdata app list
+Elenca le applicazioni.
 ```bash
 azdata app list [--name -n] 
                 [--version -v]
 ```
 ### <a name="examples"></a>Esempi
-Elencare l'applicazione in base al nome e alla versione.
+Elencare le applicazioni per nome e versione.
 ```bash
 azdata app list --name reduce  --version v1
 ```
@@ -162,23 +162,23 @@ Nome applicazione
 Versione dell'applicazione.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
+Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e l'uscita.
+Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
-Formato di output.  Valori consentiti: JSON, jsonc, Table, TSV.  Impostazione predefinita: JSON.
+Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per [http://jmespath.org/](http://jmespath.org/]) ulteriori informazioni ed esempi, vedere.
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
-## <a name="azdata-app-delete"></a>eliminazione dell'app azdata
-Eliminare un'applicazione.
+Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
+## <a name="azdata-app-delete"></a>azdata app delete
+Elimina un'applicazione.
 ```bash
 azdata app delete --name -n 
                   --version -v
 ```
 ### <a name="examples"></a>Esempi
-Elimina l'applicazione in base al nome e alla versione.
+Eliminare le applicazioni per nome e versione.
 ```bash
 azdata app delete --name reduce --version v1    
 ```
@@ -189,17 +189,17 @@ Nome applicazione
 Versione dell'applicazione.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
+Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e l'uscita.
+Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
-Formato di output.  Valori consentiti: JSON, jsonc, Table, TSV.  Impostazione predefinita: JSON.
+Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per [http://jmespath.org/](http://jmespath.org/]) ulteriori informazioni ed esempi, vedere.
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
-## <a name="azdata-app-run"></a>esecuzione dell'app azdata
-Eseguire un'applicazione.
+Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
+## <a name="azdata-app-run"></a>azdata app run
+Esegue un'applicazione.
 ```bash
 azdata app run --name -n 
                --version -v  
@@ -214,7 +214,7 @@ Eseguire l'applicazione con 1 parametro di input.
 ```bash
 azdata app run --name reduce --version v1 --inputs x=10
 ```
-Eseguire un'applicazione con più parametri di input.
+Eseguire l'applicazione con più parametri di input.
 ```bash
 azdata app run --name reduce --version v1 --inputs x=10,y5.6    
 ```
@@ -225,49 +225,49 @@ Nome applicazione
 Versione dell'applicazione.
 ### <a name="optional-parameters"></a>Parametri facoltativi
 #### `--inputs`
-Parametri di input dell'applicazione in `name=value` formato CSV.
+Parametri di input dell'applicazione in un formato CSV di `name=value`.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
+Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e l'uscita.
+Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
-Formato di output.  Valori consentiti: JSON, jsonc, Table, TSV.  Impostazione predefinita: JSON.
+Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per [http://jmespath.org/](http://jmespath.org/]) ulteriori informazioni ed esempi, vedere.
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
-## <a name="azdata-app-describe"></a>Descrizione dell'app azdata
-Descrivere un'applicazione.
+Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
+## <a name="azdata-app-describe"></a>azdata app describe
+Descrive un'applicazione.
 ```bash
 azdata app describe [--spec -s] 
                     [--name -n]  
                     [--version -v]
 ```
 ### <a name="examples"></a>Esempi
-Descrivere l'applicazione.
+Descrivere un'applicazione.
 ```bash
 azdata app describe --name reduce --version v1    
 ```
 ### <a name="optional-parameters"></a>Parametri facoltativi
 #### `--spec -s`
-Percorso di una directory con un file di specifica YAML che descrive l'applicazione.
+Percorso di una directory con un file di specifiche YAML che descrive l'applicazione.
 #### `--name -n`
 Nome applicazione
 #### `--version -v`
 Versione dell'applicazione.
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
+Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e l'uscita.
+Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
-Formato di output.  Valori consentiti: JSON, jsonc, Table, TSV.  Impostazione predefinita: JSON.
+Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per [http://jmespath.org/](http://jmespath.org/]) ulteriori informazioni ed esempi, vedere.
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
+Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per ulteriori informazioni su altri comandi **azdata** , vedere [riferimento azdata](reference-azdata.md). Per altre informazioni su come installare lo strumento **azdata** , vedere [Install azdata to manage SQL Server 2019 Big Data Clusters](deploy-install-azdata.md).
+Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md). Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).

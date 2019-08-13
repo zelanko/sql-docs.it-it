@@ -1,7 +1,7 @@
 ---
 title: Ripristinare un database
 titleSuffix: SQL Server big data clusters
-description: Questo articolo illustra come ripristinare un database nell'istanza master di un cluster di big data di SQL Server 2019 (anteprima).
+description: Questo articolo illustra come ripristinare un database nell'istanza master di un cluster Big Data di SQL Server 2019 (anteprima).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,30 +10,30 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 1ad5ca749f3862f0d7df3411efd78104052dba91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958621"
 ---
-# <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Ripristinare un database nell'istanza master del cluster dei big data di SQL Server
+# <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Ripristinare un database nell'istanza master di un cluster Big Data di SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo descrive come ripristinare un database esistente nell'istanza master di un cluster di big data di SQL Server 2019 (anteprima). Il metodo consigliato è usare una copia di backup, e il ripristino approccio.
+Questo articolo descrive come ripristinare un database esistente nell'istanza master di un cluster Big Data di SQL Server 2019 (anteprima). Il metodo consigliato prevede l'uso di un approccio di tipo: backup, copia e ripristino.
 
-## <a name="backup-your-existing-database"></a>Eseguire il backup del database esistente
+## <a name="backup-your-existing-database"></a>Eseguire il backup di un database esistente
 
-In primo luogo, il backup del database di SQL Server esistente da SQL Server in Windows o Linux. Usare le tecniche standard di backup con Transact-SQL o con uno strumento come SQL Server Management Studio (SSMS).
+Come prima operazione, eseguire il backup di un database SQL Server esistente da SQL Server in Windows o in Linux. Usare tecniche di backup standard con Transact-SQL o con uno strumento come SQL Server Management Studio (SSMS).
 
-Questo articolo illustra come ripristinare il database AdventureWorks, ma è possibile usare qualsiasi backup del database. 
+Questo articolo descrive come ripristinare il database AdventureWorks, ma è possibile usare qualsiasi backup di database. 
 
 > [!TIP]
 > È possibile scaricare il backup di AdventureWorks [qui](https://www.microsoft.com/download/details.aspx?id=49502).
 
 ## <a name="copy-the-backup-file"></a>Copiare il file di backup
 
-Copiare il file di backup nel contenitore di SQL Server nel pod istanza master del cluster Kubernetes.
+Copiare il file di backup nel contenitore SQL Server disponibile nel pod dell'istanza master del cluster Kubernetes.
 
 ```bash
 kubectl cp <path to .bak file> mssql-master-pool-0:/tmp -c mssql-server -n <name of your big data cluster>
@@ -45,7 +45,7 @@ Esempio:
 kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak mssql-master-pool-0:/tmp -c mssql-server -n clustertest
 ```
 
-Verificare quindi che il file di backup è stato copiato nel contenitore di pod.
+Verificare quindi che il file di backup sia stato copiato nel contenitore pod.
 
 ```bash
 kubectl exec -it mssql-master-pool-0 -n <name of your big data cluster> -c mssql-server -- bin/bash
@@ -64,7 +64,7 @@ exit
 
 ## <a name="restore-the-backup-file"></a>Ripristinare il file di backup
 
-Successivamente, ripristinare il backup del database per istanza master di SQL Server.  Se si sta ripristinando un backup di database che è stato creato in Windows, è necessario ottenere i nomi dei file.  In Azure Data Studio, connettersi all'istanza master ed eseguire questo script SQL:
+Ripristinare quindi il backup del database in un'istanza master di SQL Server.  Se si ripristina un backup di database creato in Windows, sarà necessario ottenere i nomi dei file.  In Azure Data Studio connettersi all'istanza master ed eseguire lo script SQL seguente:
 
 ```sql
 RESTORE FILELISTONLY FROM DISK='/tmp/<db file name>.bak'
@@ -76,9 +76,9 @@ Esempio:
 RESTORE FILELISTONLY FROM DISK='/tmp/AdventureWorks2016CTP3.bak'
 ```
 
-![Elenco di file di backup](media/restore-database/database-restore-file-list.png)
+![Elenco dei file di backup](media/restore-database/database-restore-file-list.png)
 
-A questo punto, ripristinare il database. Lo script seguente è riportato un esempio. Sostituire i nomi o i percorsi in base alle esigenze a seconda del backup del database.
+Ripristinare ora il database. Di seguito è riportato uno script di esempio. Sostituire i nomi o i percorsi in base alle esigenze, a seconda del backup di database selezionato.
 
 ```sql
 RESTORE DATABASE AdventureWorks2016CTP3
@@ -88,9 +88,9 @@ WITH MOVE 'AdventureWorks2016CTP3_Data' TO '/var/opt/mssql/data/AdventureWorks20
         MOVE 'AdventureWorks2016CTP3_mod' TO '/var/opt/mssql/data/AdventureWorks2016CTP3_mod'
 ```
 
-## <a name="configure-data-pool-and-hdfs-access"></a>Configurare l'accesso HDFS e pool di dati
+## <a name="configure-data-pool-and-hdfs-access"></a>Configurare il pool di dati e l'accesso HDFS
 
-A questo punto, per l'istanza master di SQL Server al pool di dati di accesso e HDFS, eseguire le procedure di pool archiviati pool e l'archiviazione dei dati. Eseguire gli script di Transact-SQL seguenti nel database appena ripristinato:
+Per consentire all'istanza master di SQL Server di accedere ai pool di dati e al gateway HDFS, eseguire ora le stored procedure del pool di dati e del pool di archiviazione. Eseguire gli script Transact-SQL seguenti sul database appena ripristinato:
 
 ```sql
 USE AdventureWorks2016CTP3
@@ -108,10 +108,10 @@ GO
 ```
 
 > [!NOTE]
-> È necessario eseguire questi script di installazione solo per i database ripristinati da versioni precedenti di SQL Server. Se si crea un nuovo database nell'istanza master di SQL Server, pool e l'archiviazione del pool store procedure dati sono già configurate per l'utente.
+> Sarà necessario eseguire questi script di installazione solo sui database ripristinati da versioni precedenti di SQL Server. Se si crea un nuovo database nell'istanza master di SQL Server, le stored procedure del pool di dati e del pool di archiviazione sono già configurate.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sui cluster di big data di SQL Server, vedere Panoramica riportata di seguito:
+Per altre informazioni sui cluster Big Data di SQL Server, vedere l'articolo di panoramica seguente:
 
-- [Quali sono i cluster di SQL Server 2019 dei big Data?](big-data-cluster-overview.md)
+- [Che cosa sono i cluster Big Data di SQL Server 2019?](big-data-cluster-overview.md)

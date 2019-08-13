@@ -1,7 +1,7 @@
 ---
 title: "Esercitazione: Usare l'editor Transact-SQL per creare oggetti di database"
 titleSuffix: Azure Data Studio
-description: Questa esercitazione illustra le funzionalità principali in Azure Data Studio che semplificano l'uso con T-SQL.
+description: Questa esercitazione illustra le funzionalità principali di Azure Data Studio che semplificano l'uso di T-SQL.
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: tutorial
@@ -11,70 +11,70 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: b4778d54fe3853f2560159a83dae42c4fd8e55e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959017"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Esercitazione: Usare l'editor Transact-SQL per creare oggetti di database- [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Esercitazione: Usare l'editor Transact-SQL per creare oggetti di database - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-La creazione e l'esecuzione di query, stored procedure, script, e così via sono le attività principali dei professionisti che operano su database. Questa esercitazione illustra le funzionalità chiave nell'editor T-SQL per creare oggetti database.
+La creazione e l'esecuzione di query, stored procedure, script e così via sono le attività principali dei professionisti dei database. Questa esercitazione illustra le funzionalità principali dell'editor T-SQL per la creazione di oggetti di database.
 
-In questa esercitazione imparerete a usare [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] per:
+In questa esercitazione si apprenderà come usare [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] per:
 > [!div class="checklist"]
-> * Ricercare oggetti database
-> * Modificare i dati della tabella 
-> * Usare frammenti di codice per scrivere rapidamente T-SQL
-> * Visualizzare i dettagli dell'oggetto database con *Visualizza definizione* e *Vai a definizione*
+> * Cercare oggetti di database
+> * Modificare i dati delle tabelle 
+> * Usare i frammenti di codice per scrivere rapidamente T-SQL
+> * Visualizzare i dettagli degli oggetti di database usando *Visualizza definizione* e *Vai a definizione*
 
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-Questa esercitazione richiede *TutorialDB*, un database su SQL Server o Database SQL di Azure. Per crearlo, completare una delle guide rapide seguenti:
+Per questa esercitazione è necessario il database di SQL Server o il database SQL di Azure *TutorialDB*. Per creare il database *TutorialDB*, completare uno degli argomenti di avvio rapido seguenti:
 
-- [Connettersi ed eseguire query su SQL Server [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [Connettersi ed eseguire query su Azure SQL Database tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Connettersi ed eseguire query in SQL Server con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Connettersi ed eseguire query nel database SQL di Azure con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
-## <a name="quickly-locate-a-database-object-and-perform-a-common-task"></a>Individuare rapidamente un oggetto database ed eseguire un'attività comune
+## <a name="quickly-locate-a-database-object-and-perform-a-common-task"></a>Individuare rapidamente un oggetto di database ed eseguire un'attività comune
 
-[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] fornisce un widget di ricerca per trovare rapidamente gli oggetti database. L'elenco dei risultati fornisce un menu di scelta rapida per le attività comuni relative all'oggetto selezionato, ad esempio *modifica dati* per una tabella.
+[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] fornisce un widget di ricerca per trovare rapidamente gli oggetti di database. Nell'elenco dei risultati è disponibile un menu di scelta rapida per le attività comuni relative all'oggetto selezionato, ad esempio la *Modifica dati* per una tabella.
 
-1. Aprire la barra laterale server (**Ctrl + G**), espandere **database**e selezionare **TutorialDB**. 
+1. Aprire la barra laterale SERVER (**CTRL +G**), espandere **Database** e selezionare **TutorialDB**. 
 
-1. Aprire la *Dashboard TutorialDB* selezionando **TutorialDB** e successivamente **Gestisci** dal menu di scelta rapida:
+1. Aprire il *dashboard TutorialDB* facendo clic con il pulsante destro del mouse su **TutorialDB** e scegliendo **Gestisci** dal menu di scelta rapida:
 
-   ![menu di scelta rapida - gestione](./media/tutorial-sql-editor/insight-open-dashboard.png)
+   ![menu di scelta rapida - Gestisci](./media/tutorial-sql-editor/insight-open-dashboard.png)
 
-1. Nella dashboard, fare doppio clic su **dbo.Customers** (nel widget di ricerca) e selezionare **modifica dati**.
+1. Nel dashboard fare clic con il pulsante destro del mouse su **dbo.Customers** (nel widget di ricerca) e selezionare **Modifica dati**.
    
    > [!TIP]
-   > Per i database con molti oggetti, usare il widget di ricerca per individuare rapidamente ciò che si sta cercando, come tabelle, viste, e così via.
+   > Per i database con molti oggetti, usare il widget di ricerca per individuare rapidamente la tabella, la vista e così via.
 
    ![widget di ricerca rapida](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. Modificare la colonna **Email** nella prima riga, scrivendo *orlando0@adventure-works.comorlando0@adventure-works.com* . Premere **invio** per salvare le modifiche.
+1. Modificare la colonna **Email** nella prima riga, digitare *orlando0@adventure-works.com* e premere **INVIO** per salvare la modifica.
 
-   ![Modificare i dati](./media/tutorial-sql-editor/edit-data.png)
+   ![modifica dati](./media/tutorial-sql-editor/edit-data.png)
 
-## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>Usare frammenti di codice T-SQL per creare le stored procedure
+## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>Usare frammenti di codice T-SQL per creare stored procedure
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] fornisce molti frammenti di codice T-SQL incorporati per la creazione rapida di istruzioni.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] in sono disponibili molti frammenti di codice T-SQL predefiniti per creare rapidamente istruzioni.
 
 
-1. Aprire un nuovo editor di query premendo **Ctrl+N**.
+1. Aprire un nuovo editor di query premendo **CTRL+N**.
 
-2. Scrivere **sql** nell'editor, selezionare con la freccia verso il basso la voce **sqlCreateStoredProcedure** e premere il *tab* (o *invio*) per espandere il frammento relativo alle stored procedure.
+2. Digitare **sql** nell'editor, scorrere verso il basso fino a **sqlCreateStoredProcedure** e premere *TAB* o *INVIO* per caricare il frammento di codice per la creazione di stored procedure.
 
-   ![snippet-list](./media/tutorial-sql-editor/snippet-list.png)
+   ![elenco di frammenti](./media/tutorial-sql-editor/snippet-list.png)
 
-3. Il frammento creato include due campi per la modifica rapida, *StoredProcedureName* e *SchemaName*. Selezionare *StoredProcedureName* e premere il pulsante destro del mouse. Selezionare quindi **Modifica tutte le occorrenze**. A questo punto digitare *getCustomer* e tutte le voci *StoredProcedureName* verranno sostituite da *getCustomer*.
+3. Il frammento di codice per la creazione di stored procedure ha due campi impostati per la modifica rapida, *StoredProcedureName* e *SchemaName*. Selezionare *StoredProcedureName*, fare clic con il pulsante destro del mouse e scegliere **Cambia tutte le occorrenze**. A questo punto, digitare *getCustomer* e tutte le voci *StoredProcedureName* cambiano in *getCustomer*.
 
-   ![Frammento di codice](./media/tutorial-sql-editor/snippet.png)
+   ![frammento di codice](./media/tutorial-sql-editor/snippet.png)
 
-5. Sostituire allo stesso modo tutte le occorrenze di *SchemaName* con *dbo*. 
-6. Il frammento contiene segnaposto per parametri e testo da aggiornare nel corpo. Il comando *EXECUTE* contiene inoltre il segnaposto come commento, poiché non si sa a priori il numero di parametri che avrà la procedura. er questa esercitazione il frammento di codice di aggiornamento risulterà simile al codice seguente:
+5. Modificare tutte le occorrenze di *SchemaName* in *dbo*. 
+6. Il frammento di codice contiene parametri segnaposto e corpo del testo che devono essere aggiornati. Anche l'istruzione *EXECUTE* contiene testo segnaposto perché non conosce il numero di parametri che la stored procedure avrà. Per questa esercitazione, aggiornare il frammento di codice in modo che abbia un aspetto simile al seguente:
 
     ```sql
     -- Create a new stored procedure called 'getCustomer' in schema 'dbo'
@@ -107,21 +107,21 @@ Questa esercitazione richiede *TutorialDB*, un database su SQL Server o Database
     GO
     ```
     
-5. Per creare la stored procedure e testarne l'esecuzione, premere **F5**.
+5. Per creare la stored procedure e avviare un'esecuzione di test, premere **F5**.
 
-A questo punto viene creata la stored procedure e il riquadro **RISULTATI** mostra il record restituito in formato JSON. Per visualizzare il JSON formattato, fare clic sul record. 
+La stored procedure viene creata e il riquadro **RISULTATI** mostra il cliente restituito in JSON. Per vedere il formato JSON formattato, fare clic sul record restituito. 
 
 
-## <a name="use-peek-definition"></a>Utilizzare Visualizza definizione 
+## <a name="use-peek-definition"></a>Usare Visualizza definizione 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] offre la possibilità di visualizzare una definizione di oggetti usando la funzionalità di anteprima della definizione. In questa sezione viene creata una seconda stored procedure e tramite Visualizza definizione vengono mostrate le colonne di una tabella per creare rapidamente il corpo della stored procedure che la consuma.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] consente di vedere la definizione di un oggetto usando la funzionalità di visualizzazione definizione. Questa sezione crea una seconda stored procedure e usa la visualizzazione definizione per vedere le colonne presenti in una tabella e creare rapidamente il corpo della stored procedure.
 
-1. Aprire un nuovo editor premendo **Ctrl+N**. 
+1. Aprire un nuovo editor premendo **CTRL+N**. 
 
-2. Scrivere *sql* nell'editor, selezionare con la freccia verso il basso la voce *sqlCreateStoredProcedure* e premere il *tab* (o *invio*) per espandere il frammento relativo alle stored procedure.
+2. Digitare *sql* nell'editor, scorrere verso il basso fino a *sqlCreateStoredProcedure* e premere *TAB* o *INVIO* per caricare il frammento di codice per la creazione di stored procedure.
 3. Digitare *setCustomer* per *StoredProcedureName* e *dbo* per *SchemaName*
 
-3. Sostituire @param con la definizione di parametro seguente:
+3. Sostituire i segnaposto @param con la definizione di parametro seguente:
 
    ```sql
    @json_val nvarchar(max)
@@ -132,11 +132,11 @@ A questo punto viene creata la stored procedure e il riquadro **RISULTATI** most
    INSERT INTO dbo.Customers
    ```
 
-5. Nella *INSERT* appena aggiunta premere il tasto destro sulla tabella **dbo.Customers** e selezionare **Visualizza definizione**.
+5. Nella riga *INSERT* appena aggiunta, fare clic con il pulsante destro del mouse su **dbo.Customers** e scegliere **Visualizza definizione**.
 
-   ![Visualizza definizione](./media/tutorial-sql-editor/peek-definition.png)
+   ![visualizza definizione](./media/tutorial-sql-editor/peek-definition.png)
 
-6. La definizione della tabella viene mostrata in modo rapido ed è possibile visualizzare le colonne presenti nella tabella. Fare riferimento all'elenco delle colonne per completare facilmente le istruzioni per la stored procedure. Completare la creazione dell'istruzione INSERT e il corpo della stored procedure. Infine, chiudere la finestra di definizione:
+6. Compare la definizione della tabella, che consente di vedere rapidamente le colonne presenti nella tabella. Vedere l'elenco delle colonne per completare facilmente le istruzioni per la stored procedure. Completare la creazione dell'istruzione INSERT aggiunta in precedenza per completare il corpo della stored procedure e chiudere la finestra di visualizzazione definizione:
 
    ```sql
    INSERT INTO dbo.Customers (CustomerId, Name, Location, Email)
@@ -148,8 +148,8 @@ A questo punto viene creata la stored procedure e il riquadro **RISULTATI** most
                Email nvarchar(50)
     )
    ```
-7. Eliminare (o impostare come commento) i comandi *EXECUTE* nella parte inferiore della query.
-8. L'intera istruzione dovrebbe essere simile al seguente:
+7. Eliminare o impostare come commento il comando *EXECUTE* nella parte inferiore della query.
+8. L'intera istruzione dovrebbe essere simile al codice seguente:
 
    ```sql
    -- Create a new stored procedure called 'setCustomer' in schema 'dbo'
@@ -180,20 +180,20 @@ A questo punto viene creata la stored procedure e il riquadro **RISULTATI** most
 
 8. Per creare la stored procedure *setCustomer*, premere **F5**.
 
-## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>Utilizzare il salvataggio dei risultati come JSON per testare la procedura setCustomer
+## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>Salvare i risultati della query come JSON per testare la stored procedure setCustomer
 
-La stored procedure *setCustomer* creata nella sezione precedente richiede i dati JSON passati nel parametro *@json_val* . In questa sezione viene illustrato come ottenere un JSON formattato correttamente per poi passarlo al parametro, in modo da testare la stored procedure.
+La stored procedure *setCustomer* creata nella sezione precedente richiede che i dati JSON vengano passati al parametro *@json_val* . Questa sezione illustra come ottenere un frammento di JSON formattato correttamente da passare al parametro, in modo da poter testare la stored procedure.
 
-1. Nella barra laterale **SERVER** premere il tasto destro del mouse su *dbo.Customers* e fare clic su **Seleziona le prime 1000 righe**.
+1. Nella barra laterale **SERVER** fare clic con il pulsante destro del mouse sulla tabella *dbo.Customers* e scegliere **Seleziona le prime 1000 righe**.
 
-2. Selezionare la prima riga nella visualizzazione dei risultati, assicurarsi che sia selezionata l'intera riga (il numero 1 nella colonna più a sinistra fare clic) e selezionare **Salva con nome JSON**.  
-3. Cambiare la cartella in un percorso da ricordare al fine di eliminare il file in un secondo momento (sul desktop, ad esempio) e fare clic su **Salva**. Il file in formato JSON si aprirà.
+2. Selezionare la prima riga nella visualizzazione risultati, verificare che sia selezionata l'intera riga (fare clic sul numero 1 nella colonna più a sinistra) e selezionare **Save as JSON** (Salva come JSON).  
+3. Modificare la cartella in un percorso semplice da ricordare per poter eliminare il file in un secondo momento, ad esempio il desktop, e fare clic su **Salva**. Viene aperto il file in formato JSON.
 
-   ![Salva come JSON](./media/tutorial-sql-editor/save-as-json.png)
+   ![salvare come JSON](./media/tutorial-sql-editor/save-as-json.png)
 
-4. Selezionare i dati JSON nell'editor e copiarlo.
-5. Aprire un nuovo editor premendo **Ctrl+N**.
-6. Nei passaggi precedenti viene illustrato come è possibile ottenere facilmente i dati formattati correttamente per completare la chiamata alla procedura *setCustomer*. Il codice seguente usa lo stesso formato JSON con nuovi dettagli in modo da poter testare la procedura *setCustomer*. L'istruzione include la sintassi per dichiarare il parametro ed eseguire le procedure di get e set. È possibile incollare i dati copiati dalla sezione precedente e modificarli o semplicemente incollare l'istruzione seguente nell'editor di query.
+4. Selezionare i dati JSON nell'editor e copiarli.
+5. Aprire un nuovo editor premendo **CTRL+N**.
+6. I passaggi precedenti mostrano come è possibile ottenere facilmente i dati formattati correttamente per completare la chiamata alla stored procedure *setCustomer*. Si può osservare che il codice seguente usa lo stesso formato JSON con i dettagli dei nuovi clienti, in modo che sia possibile testare la procedura *setCustomer*. L'istruzione include la sintassi per dichiarare il parametro ed eseguire le nuove routine Get e Set. È possibile incollare i dati copiati dalla sezione precedente e modificarli in modo che corrispondano a quelli dell'esempio seguente o semplicemente incollare l'istruzione seguente nell'editor di query.
 
    ```sql
    -- example to execute the stored procedure we just created
@@ -213,20 +213,20 @@ La stored procedure *setCustomer* creata nella sezione precedente richiede i dat
    EXECUTE dbo.getCustomer @ID = 5
    ```
 
-7. Eseguire premendo **F5**. Lo script inserisce un nuovo cliente e restituisce le nuove informazioni su di esso in formato JSON. Fare clic sul risultato per aprire una visualizzazione formattata.
+7. Eseguire lo script premendo **F5**. Lo script inserisce un nuovo cliente e restituisce le informazioni del nuovo cliente in formato JSON. Fare clic sul risultato per aprire una visualizzazione formattata.
 
    ![risultato del test](./media/tutorial-sql-editor/test-result.png)
 
 ## <a name="next-steps"></a>Passaggi successivi
-In questa esercitazione si è appreso come:
+In questa esercitazione sono state illustrate le procedure per:
 > [!div class="checklist"]
-> * Ricercare oggetti database
-> * Modificare i dati della tabella 
-> * Scrivere lo script T-SQL utilizzando i frammenti di codice
-> * Visualizzare i dettagli dell'oggetto database con Visualizza definizione e Vai a definizione
+> * Cercare rapidamente oggetti dello schema
+> * Modificare i dati delle tabelle 
+> * Scrivere script T-SQL usando frammenti di codice
+> * Visualizzare i dettagli degli oggetti di database usando Visualizza definizione e Vai a definizione
 
 
-Per informazioni su come abilitare il widget delle **cinque query più lente**, completare l'esercitazione successiva:
+Per informazioni su come abilitare il widget per le **cinque query più lente**, completare l'esercitazione successiva:
 
 > [!div class="nextstepaction"]
-> [Abilitare il widget sulle query lente](tutorial-qds-sql-server.md)
+> [Abilitare il widget di informazioni dettagliate di esempio sulle query lente](tutorial-qds-sql-server.md)

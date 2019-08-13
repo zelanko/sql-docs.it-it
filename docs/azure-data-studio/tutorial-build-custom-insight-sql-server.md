@@ -1,7 +1,7 @@
 ---
-title: 'Esercitazione: Compilare un widget insight personalizzato'
+title: 'Esercitazione: Creare un widget di informazioni dettagliate personalizzato'
 titleSuffix: Azure Data Studio
-description: Questa esercitazione illustra come compilare widget insight personalizzato e aggiungerli ai dashboard di server e database in Azure Data Studio.
+description: Questa esercitazione illustra come creare widget di informazioni dettagliate personalizzati e aggiungerli ai dashboard di server e database in Azure Data Studio.
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: tutorial
@@ -11,37 +11,37 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 34ee9c23569897247f05d6b9b5f9f2610f5d68fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959093"
 ---
-# <a name="tutorial-build-a-custom-insight-widget"></a>Esercitazione: Compilare un widget insight personalizzato
+# <a name="tutorial-build-a-custom-insight-widget"></a>Esercitazione: Creare un widget di informazioni dettagliate personalizzato
 
-Con questa esercitazione viene mostrato come costruire un widget di informazioni dettagliate personalizzato sfruttando le query di informazioni dettagliate.
+Questa esercitazione illustra come usare query di informazioni dettagliate per creare widget di informazioni dettagliate personalizzati.
 
-Durante questa esercitazione si apprenderà come:
+In questa esercitazione verranno illustrate le procedure per:
 > [!div class="checklist"]
 > * Eseguire una query e visualizzarla in un grafico
-> * Compilare un widget di informazioni personalizzato dal grafico
+> * Creare un widget di informazioni dettagliate personalizzato a partire dal grafico
 > * Aggiungere il grafico a un dashboard di server o database
-> * Aggiungere i dettagli per il widget di informazioni personalizzato
+> * Aggiungere dettagli al widget di informazioni dettagliate personalizzato
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-Questa esercitazione richiede *TutorialDB*, un database su SQL Server o Database SQL di Azure. Per crearlo, completare una delle guide rapide seguenti:
+Per questa esercitazione è necessario il database di SQL Server o il database SQL di Azure *TutorialDB*. Per creare il database *TutorialDB*, completare uno degli argomenti di avvio rapido seguenti:
 
-- [Connettersi ed eseguire query su SQL Server [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [Connettersi ed eseguire query su Azure SQL Database tramite[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Connettersi ed eseguire query in SQL Server con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Connettersi ed eseguire query nel database SQL di Azure con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
 ## <a name="run-your-own-query-and-view-the-result-in-a-chart-view"></a>Eseguire una query e visualizzare il risultato in un grafico
-In questo passaggio, eseguiremo uno script sql per ottenere la lista delle sessioni attive.
+In questo passaggio si eseguirà uno script SQL per applicare una query alle sessioni attive correnti.
 
-1. Per aprire un nuovo editor, premere **Ctrl + N**. 
+1. Premere **CTRL + N** per aprire un nuovo editor. 
 
-2. Modificare il contesto di connessione su **TutorialDB**.
+2. Modificare il contesto di connessione in **TutorialDB**.
 
 3. Incollare la query seguente nell'editor di query:
 
@@ -51,31 +51,31 @@ In questo passaggio, eseguiremo uno script sql per ottenere la lista delle sessi
    WHERE status = 'running'
    ```
 
-4. Salvare la query in un \*file con estensione `.sql`. Per questa esercitazione, salvare lo script come *activeSession.sql*.
+4. Salvare la query nell'editor in un file \*.sql. Per questa esercitazione, salvare lo script come *activeSession.sql*.
 
-5. Per eseguire la query, premere **F5**.
+5. Premere **F5** per eseguire la query.
 
-6. Dopo che vengono visualizzati i risultati della query, fare clic su **Visualizzazione grafico** nella barra laterale a destra dei risultati, quindi fare clic sulla scheda **Visualizzatore grafico**.
+6. Quando vengono visualizzati i risultati della query, fare clic su **View as Chart** (Visualizza come grafico) e quindi sulla scheda **Visualizzatore grafico**.
 
-7. Change **tipo di grafico** al **conteggio**. Queste impostazioni di eseguire il rendering di un grafico di conteggio.
+7. Impostare **Tipo di grafico** su **conteggio**. Con queste impostazioni viene generato un grafico di conteggio.
 
-## <a name="add-the-custom-insight-to-the-database-dashboard"></a>Aggiungere le informazioni dettagliate personalizzate alla dashboard del database
+## <a name="add-the-custom-insight-to-the-database-dashboard"></a>Aggiungere informazioni dettagliate personalizzate al dashboard del database
 
-1. Per aprire la configurazione del widget di informazioni dettagliate, fare clic su **creare informazioni dettagliate** nel *Visualizzatore grafico*:
+1. Per aprire la configurazione del widget di informazioni dettagliate, fare clic su **Create Insight** (Crea informazioni dettagliate) nella scheda *Visualizzatore grafico*:
 
    ![configurazione](./media/tutorial-build-custom-insight-sql-server/create-insight.png)
    
-2. Copiare la configurazione proposta (il JSON). 
+2. Copiare la configurazione delle informazioni dettagliate (i dati JSON). 
 
-3. Premere **Ctrl+virgola** per aprire le *impostazioni utente*.
+3. Premere **CTRL + virgola** per aprire *Impostazioni utente*.
 
-4. Scrivere *dashboard* in *Cerca impostazioni*.
+4. Digitare *dashboard* in *Impostazioni di ricerca*.
 
-5. Fare clic su **Edit** per *dashboard.database.widgets*.
+5. Fare clic su **Modifica** per *dashboard.database.widgets*.
 
    ![impostazioni del dashboard](./media/tutorial-build-custom-insight-sql-server/dashboard-settings.png)
 
-6. Incollare il frammento di JSON in *dashboard.database.widgets*. Le impostazioni della dashboard del database dovrebbero essere simili al seguente listato:
+6. Incollare i dati JSON della configurazione di informazioni dettagliate in *dashboard.database.widgets*. Le impostazioni del dashboard del database saranno disposte nel modo seguente:
 
    ```json
     "dashboard.database.widgets": [
@@ -103,15 +103,15 @@ In questo passaggio, eseguiremo uno script sql per ottenere la lista delle sessi
     ]
    ```
 
-7. Salvare le *impostazioni utente* e aprire la dashboard del database *TutorialDB* per visualizzare il widget con le sessioni attive:
+7. Salvare il file *Impostazioni utente* e aprire il dashboard del database *TutorialDB* per visualizzare il widget delle sessioni attive:
 
-   ![insight activesession](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
+   ![informazioni dettagliate sessione attiva](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
 
-## <a name="add-details-to-custom-insight"></a>Aggiungere i dettagli al widget personalizzato
+## <a name="add-details-to-custom-insight"></a>Aggiungere dettagli alle informazioni dettagliate personalizzate
 
-1. Per aprire un nuovo editor, premere **Ctrl + N**.
+1. Premere **CTRL + N** per aprire un nuovo editor.
 
-2. Modificare il contesto di connessione su **TutorialDB**.
+2. Modificare il contesto di connessione in **TutorialDB**.
 
 3. Incollare la query seguente nell'editor di query:
 
@@ -121,11 +121,11 @@ In questo passaggio, eseguiremo uno script sql per ottenere la lista delle sessi
     WHERE status = 'running'
    ```
 
-4. Salvare la query in un \*file con estensione `.sql`. Per questa esercitazione, salvare lo script come *activeSessionDetail.sql*.
+4. Salvare la query nell'editor in un file \*.sql. Per questa esercitazione, salvare lo script come *activeSessionDetail.sql*.
 
-5. Premere **Ctrl+virgola** per aprire le *impostazioni utente*.
+5. Premere **CTRL + virgola** per aprire *Impostazioni utente*.
 
-6. Modificare il nodo *dashboard.database.widgets* nel file di impostazioni:
+6. Modificare il nodo *dashboard.database.widgets* esistente nel file delle impostazioni:
 
    ```json
     "dashboard.database.widgets": [
@@ -158,19 +158,19 @@ In questo passaggio, eseguiremo uno script sql per ottenere la lista delle sessi
     ]
    ```
 
-7. Salvare le *impostazioni utente* e aprire la dashboard di *TutorialDB*. Fare clic sul pulsante con i puntini di sospensione (...) accanto a *My Widget* per visualizzare i dettagli:
+7. Salvare il file *Impostazioni utente* e aprire il dashboard del database *TutorialDB*. Fare clic sul pulsante con i puntini di sospensione accanto a *My-Widget* per visualizzare i dettagli del widget:
 
-    ![insight activesession](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
+    ![informazioni dettagliate sessione attiva](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
 ## <a name="next-steps"></a>Passaggi successivi
-In questa esercitazione si è appreso come:
+In questa esercitazione sono state illustrate le procedure per:
 > [!div class="checklist"]
 > * Eseguire una query e visualizzarla in un grafico
-> * Compilare un widget di informazioni personalizzato dal grafico
+> * Creare un widget di informazioni dettagliate personalizzato a partire dal grafico
 > * Aggiungere il grafico a un dashboard di server o database
-> * Aggiungere i dettagli per il widget di informazioni personalizzato
+> * Aggiungere dettagli al widget di informazioni dettagliate personalizzato
 
-Per informazioni su come eseguire backup e ripristino di database, completare l'esercitazione successiva:
+Per informazioni su come eseguire il backup e ripristino di un database, completare l'esercitazione successiva:
 
 > [!div class="nextstepaction"]
-> [Eseguire backup e ripristino di database](tutorial-backup-restore-sql-server.md).
+> [Eseguire il backup e ripristino dei database](tutorial-backup-restore-sql-server.md).

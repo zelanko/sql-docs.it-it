@@ -15,12 +15,12 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01a823e288ade074b4e9ccd432c40c15e9f96f07
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: eca3bed56e39330199d491836ac32fadabea1cce
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495404"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941130"
 ---
 # <a name="extended-events-overview"></a>Panoramica degli eventi estesi
 
@@ -52,7 +52,7 @@ Si tratta di un sistema di monitoraggio delle prestazioni leggero in cui vengono
   
 ## <a name="extended-events-architecture"></a>Architettura degli eventi estesi  
 
-Eventi estesi è il nome di un sistema generale di gestione degli eventi per sistemi server. L'infrastruttura di Eventi estesi supporta la correlazione di dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e, in certe condizioni, la correlazione di dati dal sistema operativo e dalle applicazioni di database. Nel caso del sistema operativo, l'output di Eventi estesi deve essere indirizzato a Event Tracing for Windows (ETW). ETW consente di correlare i dati di un evento con i dati di un evento del sistema operativo o di un'applicazione.  
+Eventi estesi è il nome di un sistema generale di gestione degli eventi per sistemi server. L'infrastruttura degli eventi estesi supporta la correlazione di dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e in certe condizioni, la correlazione di dati dal sistema operativo e dalle applicazioni di database. Nel caso del sistema operativo, l'output di Eventi estesi deve essere indirizzato a Event Tracing for Windows (ETW). ETW consente di correlare i dati di un evento con i dati di un evento del sistema operativo o di un'applicazione.  
 
 In tutte le applicazioni sono presenti punti di esecuzione utili sia all'interno che all'esterno di un'applicazione. All'interno dell'applicazione, l'elaborazione asincrona può essere accodata utilizzando informazioni raccolte durante l'esecuzione iniziale di un'attività. All'esterno dell'applicazione, i punti di esecuzione forniscono utilità di monitoraggio con informazioni. Le informazioni sono relative alle caratteristiche del comportamento e delle prestazioni dell'applicazione monitorata.  
 

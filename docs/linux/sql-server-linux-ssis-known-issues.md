@@ -1,6 +1,6 @@
 ---
-title: Limitazioni e problemi noti per SSIS in Linux
-description: Questo articolo descrive le limitazioni e problemi noti per SQL Server Integration Services (SSIS) in computer Linux
+title: Limitazioni e problemi noti di SSIS in Linux
+description: Questo articolo descrive le limitazioni e i problemi noti di SQL Server Integration Services (SSIS) nei computer Linux
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -9,38 +9,38 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 45e5d9b36b6fd75db7bbc3c5ea397ee9226e2771
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032234"
 ---
-# <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Limitazioni e problemi noti per SSIS in Linux
+# <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Limitazioni e problemi noti di SSIS in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Questo articolo descrive le limitazioni e problemi noti per SQL Server Integration Services (SSIS) in Linux.
+Questo articolo descrive le limitazioni e i problemi noti di SQL Server Integration Services (SSIS) in Linux.
 
-## <a name="general-limitations-and-known-issues"></a>Problemi noti e limitazioni generali
+## <a name="general-limitations-and-known-issues"></a>Limitazioni e problemi noti generali
 
 Le funzionalità seguenti non sono supportate in questa versione di SSIS in Linux:
-  - Database del catalogo SSIS
-  - Esecuzione del pacchetto pianificato da SQL Agent
+  - Database di catalogo SSIS
+  - Esecuzione pianificata dei pacchetti tramite SQL Agent
   - Autenticazione di Windows
   - Componenti di terze parti
   - Change Data Capture (CDC)
   - SSIS Scale Out
-  - Azure Feature Pack per SSIS
+  - Feature Pack di Azure per SSIS
   - Supporto di Hadoop e HDFS
   - Microsoft Connector for SAP BW
 
-Per altre limitazioni e problemi noti di SSIS in Linux, vedere la [note sulla versione](sql-server-linux-release-notes.md#ssis).
+Per altre limitazioni e problemi noti di SSIS in Linux, vedere le [note sulla versione](sql-server-linux-release-notes.md#ssis).
 
 ## <a name="components"></a> Componenti supportati e non supportati
 
-I seguenti componenti di Integration Services predefiniti sono supportati in Linux. Alcune di esse presentano limitazioni sulla piattaforma Linux. Componenti predefiniti che non sono elencati qui non sono supportati in Linux.
+I componenti di Integration Services predefiniti seguenti sono supportati in Linux. Alcuni di questi presentano limitazioni nella piattaforma Linux. I componenti predefiniti non elencati qui non sono supportati in Linux.
 
-## <a name="supported-control-flow-tasks"></a>Attività flusso di controllo è supportato
+## <a name="supported-control-flow-tasks"></a>Attività di flusso di controllo
 - Inserimento bulk - attività
 - Attività Flusso di dati
 - Attività Profiling dati
@@ -51,58 +51,58 @@ I seguenti componenti di Integration Services predefiniti sono supportati in Lin
 - Attività Servizio Web
 - Attività XML
 
-## <a name="control-flow-tasks-supported-with-limitations"></a>Attività flusso di controllo è supportata con limitazioni
+## <a name="control-flow-tasks-supported-with-limitations"></a>Attività di flusso di controllo supportate con limitazioni
 
 | Attività | Limitazioni |
 |------------|---|
 | Execute Process Task | Supporta solo la modalità in-process. |
-| Attività File system | Il *directory di spostamento* e *impostare gli attributi di file* azioni non sono supportate. |
-| attività Script | Supporta solo l'API di .NET Framework standard. |
+| Attività File system | Le azioni *Sposta directory* e *Set file attributes* (Imposta attributi file) non sono supportate. |
+| attività Script | Supporta solo API .NET Framework standard. |
 | Invia messaggi - attività | Supporta solo la modalità utente anonimo. |
-| Attività Trasferisci Database | I percorsi UNC non sono supportati. |
+| Attività Trasferisci database | I percorsi UNC non sono supportati. |
 | | |
 
-## <a name="supported-and-unsupported-maintenance-plan-tasks"></a>Attività piano di manutenzione supportati e non supportati
+## <a name="supported-and-unsupported-maintenance-plan-tasks"></a>Attività di piano di manutenzione supportate e non supportate
 
-In un piano di manutenzione di SQL Server, è possibile usare in genere un'ampia gamma di attività SSIS.
+In un piano di manutenzione di SQL Server è in genere possibile usare un'ampia gamma di attività SSIS.
 
-La seguente attività di manutenzione non sono supportate in Linux:
+Le attività di piano di manutenzione seguenti non sono supportate in Linux:
 - Notifica operatore
-- Esegui processo di SQL Server Agent
+- Esecuzione processo di SQL Server Agent
 
-La seguente attività di manutenzione sono supportate in Linux:
-- Controlla integrità Database
-- Compatta Database
+Le attività di piano di manutenzione seguenti sono supportate in Linux:
+- Controlla integrità database
+- Compatta database
 - Riorganizza indice
 - Ricompila indice
 - Aggiorna statistiche
-- Pulizia contenuto cronologia
-- Eseguire il backup di Database
+- Pulisci contenuto cronologia
+- Backup database
 - Istruzione T-SQL
 
-## <a name="supported-control-flow-containers"></a>Contenitori del flusso di controllo è supportato
+## <a name="supported-control-flow-containers"></a>Contenitori di flusso di controllo supportati
 - Sequenza - contenitore
 - Contenitore Ciclo For
 - Contenitore Ciclo Foreach
 
-## <a name="supported-data-flow-sources-and-destinations"></a>Origini flusso di dati supportati e le destinazioni
-- Destinazione e origine File non elaborato
+## <a name="supported-data-flow-sources-and-destinations"></a>Origini e destinazioni dei dati supportate
+- Origine e destinazione file non elaborato
 - Origine XML
 
-## <a name="data-flow-sources-and-destinations-supported-with-limitations"></a>Origini flusso di dati e destinazioni è supportate con limitazioni
+## <a name="data-flow-sources-and-destinations-supported-with-limitations"></a>Origini e destinazioni di flusso di dati supportate con limitazioni
 
 | Componente | Limitazioni |
 |------------|---|
-| Destinazione e origine ADO.NET | Supportano solo il provider di dati SQLClient. |
-| Destinazione e origine File flat | Supportano solo i percorsi di file basato su Windows, a cui viene applicata la regola di mapping di percorso predefinito. Ad esempio `D:\home\ssis\travel.csv` diventa `/home/ssis/travel.csv`. |
+| Origine e destinazione ADO.NET | Supporta solo il provider di dati SQLClient. |
+| Origine e destinazione file flat | Supporta solo i percorsi di file di tipo Windows, ai quali viene applicata la regola di mapping del percorso predefinito. Ad esempio, `D:\home\ssis\travel.csv` diventa `/home/ssis/travel.csv`. |
 | Origine OData | Supporta solo l'autenticazione di base. |
-| Origine e destinazione ODBC | Supporta i driver di Unicode ODBC a 64 bit in Linux. Dipende dalla Gestione driver UnixODBC in Linux. |
-| Origine OLE DB e destinazione | Supportano solo SQL Server Native Client 11.0, Provider Microsoft OLE DB per SQL Server. |
+| Origine e destinazione ODBC | Supporta i driver ODBC Unicode a 64 bit in Linux. Dipende dalla gestione driver UnixODBC in Linux. |
+| Origine e destinazione OLE DB | Supporta solo SQL Server Native Client 11.0 e Provider Microsoft OLE DB per SQL Server. |
 | | |
 
-## <a name="supported-data-flow-transformations"></a>Trasformazioni del flusso di dati è supportata
+## <a name="supported-data-flow-transformations"></a>Trasformazioni di flusso di dati supportate
 - Aggregate
-- Audit
+- Controllare il funzionamento di
 - Server di distribuzione di dati bilanciati
 - Mappa caratteri
 - Suddivisione condizionale
@@ -125,25 +125,25 @@ La seguente attività di manutenzione sono supportate in Linux:
 - Union All
 - UnPivot
 
-## <a name="data-flow-transformations-supported-with-limitations"></a>Trasformazioni del flusso di dati supportate con limitazioni
+## <a name="data-flow-transformations-supported-with-limitations"></a>Trasformazioni di flusso di dati supportate con limitazioni
 
 | Componente | Limitazioni |
 |------------|---|
-| Comando OLE DB - trasformazione | Stesse limitazioni dell'origine OLE DB e la destinazione. |
-| componente script | Supporta solo l'API di .NET Framework standard. |
+| Comando OLE DB - trasformazione | Stesse limitazioni di origine e destinazione OLE DB. |
+| componente script | Supporta solo API .NET Framework standard. |
 | | |
 
 ## <a name="supported-and-unsupported-log-providers"></a>Provider di log supportati e non supportati
-Tutti i provider di log SSIS incorporati sono supportati in Linux tranne il provider del registro eventi di Windows.
+Tutti i provider di log SSIS predefiniti sono supportati in Linux, ad eccezione del provider di log eventi di Windows.
 
-Il provider di log di SQL Server supporta solo l'autenticazione di SQL. non supporta l'autenticazione di Windows.
+Il provider di log di SQL Server supporta solo l'autenticazione SQL e non l'autenticazione di Windows.
 
-I provider di log SSIS per file di testo, per i file XML e per SQL Server Profiler scrivono il proprio output a un file specificato. Le considerazioni seguenti si applicano al percorso del file:
--   Se non si specifica un percorso, il provider di log scrive nella directory corrente dell'host. Se l'utente corrente non dispone delle autorizzazioni di scrittura nella directory corrente dell'host, il provider di log genera un errore.
--   È possibile usare una variabile di ambiente in un percorso di file. Se si specifica una variabile di ambiente, viene visualizzato il testo letterale specificato nel percorso del file. Ad esempio, se si specifica `%TMP%/log.txt`, il provider di log consente di accodare il testo letterale `/%TMP%/log.txt` nella directory host corrente.
+I provider di log SSIS per i file di testo, per i file XML e per SQL Server Profiler scrivono l'output in un file specificato dall'utente. Al percorso del file si applicano le considerazioni seguenti:
+-   Se non si specifica un percorso, il provider di log scrive nella directory corrente dell'host. Se l'utente corrente non dispone delle autorizzazioni necessarie per scrivere nella directory corrente dell'host, il provider di log genera un errore.
+-   Non è possibile usare una variabile di ambiente in un percorso di file. Se si specifica una variabile di ambiente, il testo letterale specificato viene visualizzato nel percorso del file. Se, ad esempio, si specifica `%TMP%/log.txt`, il provider di log accoda il testo letterale `/%TMP%/log.txt` alla directory host corrente.
 
 ## <a name="related-content-about-ssis-on-linux"></a>Contenuto correlato su SSIS in Linux
 -   [Estrarre, trasformare e caricare i dati in Linux con SSIS](sql-server-linux-migrate-ssis.md)
 -   [Installare SQL Server Integration Services (SSIS) in Linux](sql-server-linux-setup-ssis.md)
 -   [Configurare SQL Server Integration Services in Linux con ssis-conf](sql-server-linux-configure-ssis.md)
--   [Esecuzione in Linux con cron pacchetti pianificazione SQL Server Integration Services](sql-server-linux-schedule-ssis-packages.md)
+-   [Pianificare l'esecuzione del pacchetto SQL Server Integration Services in Linux con cron](sql-server-linux-schedule-ssis-packages.md)

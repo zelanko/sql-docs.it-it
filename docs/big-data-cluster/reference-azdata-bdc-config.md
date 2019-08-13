@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ed777391af3695da69e04c0e2693cff912c76771
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 1962fd25416ab3546c15f9b894375e0f3ed740c6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426291"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894030"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
@@ -22,7 +22,7 @@ ms.locfileid: "68426291"
 
 L'articolo seguente fornisce informazioni di riferimento per i comandi **bdc config** nello strumento **azdata**. Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandi
+## <a name="commands"></a>Comandi:
 |     |     |
 | --- | --- |
 [azdata bdc config init](#azdata-bdc-config-init) | Inizializza un profilo di configurazione del cluster Big Data che è possibile usare per la creazione del cluster.
@@ -57,7 +57,7 @@ Origine del profilo di configurazione: ["aks-dev-test", "kubeadm-dev-test", "min
 #### `--force -f`
 Forza la sovrascrittura del file di destinazione.
 #### `--accept-eula -a`
-Indica se accettare le condizioni di licenza: [yes/no]. Se non si vuole usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su "yes". Le condizioni di licenza di questo prodotto sono disponibili in https://aka.ms/azdata-eula.
+Indica se accettare le condizioni di licenza: [yes/no]. Se non si vuole usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su "yes". 
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
@@ -92,7 +92,7 @@ Profilo di configurazione predefinito: ["aks-dev-test", "kubeadm-dev-test", "min
 Tipo di configurazione che si vuole visualizzare.
 `cluster`
 #### `--accept-eula -a`
-Indica se accettare le condizioni di licenza: [yes/no]. Se non si vuole usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su "yes". Le condizioni di licenza di questo prodotto sono disponibili in https://aka.ms/azdata-eula.
+Indica se accettare le condizioni di licenza: [yes/no]. Se non si vuole usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su "yes". 
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
 Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
@@ -277,7 +277,7 @@ Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefin
 #### `--query -q`
 Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
+Aumenta il livello di dettaglio della registrazione. Usare --debug per i log di debug completi.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

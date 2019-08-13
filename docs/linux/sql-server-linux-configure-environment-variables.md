@@ -1,6 +1,6 @@
 ---
-title: Configurare le impostazioni di SQL Server con le variabili di ambiente
-description: Questo articolo descrive come usare le variabili di ambiente per configurare impostazioni specifiche di SQL Server 2017 in Linux.
+title: Configurare le impostazioni di SQL Server con variabili di ambiente
+description: Questo articolo descrive come usare variabili di ambiente per configurare impostazioni di SQL Server 2017 specifiche in Linux.
 author: VanMSFT
 ms.author: vanto
 ms.date: 07/24/2019
@@ -8,35 +8,35 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 51589a2183043c5c8ea8d1f9bf5d4af6fcc1eea3
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
-ms.translationtype: MT
+ms.openlocfilehash: f6e78603aee684a9db3dc89e94f331275d1cd0bf
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419244"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68476220"
 ---
-# <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurare le impostazioni di SQL Server con le variabili di ambiente in Linux
+# <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurare le impostazioni di SQL Server con variabili di ambiente in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-È possibile usare diverse variabili di ambiente per configurare SQL Server 2017 in Linux. Queste variabili vengono usate in due scenari:
+Per configurare SQL Server 2017 in Linux è possibile usare diverse variabili di ambiente. Queste variabili vengono usate in due scenari:
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-È possibile usare diverse variabili di ambiente per configurare SQL Server anteprima 2019 in Linux. Queste variabili vengono usate in due scenari:
+Per configurare Anteprima di SQL Server 2019 in Linux è possibile usare diverse variabili di ambiente. Queste variabili vengono usate in due scenari:
 
 ::: moniker-end
 
-- Per configurare la configurazione iniziale con `mssql-conf setup` il comando.
-- Per configurare un nuovo [contenitore SQL Server in Docker](quickstart-install-connect-docker.md).
+- Per definire la configurazione iniziale con il comando `mssql-conf setup`.
+- Per configurare un nuovo [contenitore di SQL Server in Docker](quickstart-install-connect-docker.md).
 
 > [!TIP]
-> Se è necessario configurare SQL Server dopo questi scenari di installazione, vedere [configurare SQL Server in Linux con lo strumento MSSQL-conf](sql-server-linux-configure-mssql-conf.md).
+> Se è necessario configurare scenari di SQL Server simili a questi scenari di installazione, vedere [Configurare SQL Server in Linux con lo strumento mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
 ## <a name="environment-variables"></a>Variabili di ambiente
 
@@ -46,21 +46,21 @@ ms.locfileid: "68419244"
 | Variabile di ambiente | Descrizione |
 |-----|-----|
 | **ACCEPT_EULA** | Impostare la variabile **ACCEPT_EULA** su qualsiasi valore per confermare l'accettazione delle [condizioni di licenza ](https://go.microsoft.com/fwlink/?LinkId=746388). Impostazione obbligatoria per l'immagine di SQL Server. |
-| **MSSQL_SA_PASSWORD** | Configurare la password dell'utente SA. |
-| **MSSQL_PID** | Impostare la SQL Server edizione o il codice Product Key. I valori possibili includono: </br></br>**Copia di valutazione**</br>**Sviluppatore**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Codice Product Key**</br></br>Se si specifica un codice Product Key, deve essere nel formato # # # # #-# # # # #-# # # # #-# # # # # # # # # # #, dove ' #' è un numero o una lettera.|
-| **MSSQL_LCID** | Imposta l'ID lingua da utilizzare per SQL Server. Ad esempio, 1036 è francese. |
-| **MSSQL_COLLATION** | Imposta le regole di confronto predefinite per SQL Server. In questo modo viene eseguito l'override del mapping predefinito dell'ID lingua (LCID) alle regole di confronto. |
-| **MSSQL_MEMORY_LIMIT_MB** | Imposta la quantità massima di memoria (in MB) che SQL Server possibile utilizzare. Per impostazione predefinita, è il 80% della memoria fisica totale. |
-| **MSSQL_TCP_PORT** | Configurare la porta TCP su cui è in ascolto il SQL Server (valore predefinito 1433). |
-| **MSSQL_IP_ADDRESS** | Impostare l'indirizzo IP. Attualmente, l'indirizzo IP deve essere di tipo IPv4 (0.0.0.0). |
-| **MSSQL_BACKUP_DIR** | Impostare il percorso predefinito della directory di backup. |
-| **MSSQL_DATA_DIR** | Modificare la directory in cui vengono creati i nuovi file di dati del database di SQL Server (con estensione MDF). |
-| **MSSQL_LOG_DIR** | Modificare la directory in cui vengono creati i nuovi file di log del database di SQL Server (con estensione ldf). |
-| **MSSQL_DUMP_DIR** | Modificare la directory in cui SQL Server depositeranno i dump della memoria e altri file per la risoluzione dei problemi per impostazione predefinita. |
-| **MSSQL_ENABLE_HADR** | Abilitare il gruppo di disponibilità. Ad esempio,' 1' è abilitato è 0' è disabilitato |
-| **MSSQL_AGENT_ENABLED** | Abilitare SQL Server Agent. Ad esempio,' true ' è abilitato è false ' è disabilitato. Per impostazione predefinita, Agent è disabilitato.  |
-| **MSSQL_MASTER_DATA_FILE** | Imposta il percorso del file di dati del database master. Deve essere denominato **master. MDF** fino alla prima esecuzione del SQL Server. |
-| **MSSQL_MASTER_LOG_FILE** | Imposta il percorso del file di log del database master. Deve essere denominato **Mastlog. ldf** fino alla prima esecuzione del SQL Server. |
+| **MSSQL_SA_PASSWORD** | Consente di configurare la password dell'utente SA. |
+| **MSSQL_PID** | Consente di impostare l'edizione o il codice Product Key di SQL Server. I valori possibili includono: </br></br>**Copia di valutazione**</br>**Sviluppatore**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Un codice Product Key**</br></br>Se si specifica un codice Product Key, questo deve essere nel formato #####-#####-#####-#####-#####, dove '#' è un numero o una lettera.|
+| **MSSQL_LCID** | Imposta l'ID della lingua da usare per SQL Server. Ad esempio, 1036 corrisponde al francese. |
+| **MSSQL_COLLATION** | Imposta le regole di confronto per SQL Server. In questo modo viene eseguito l'override del mapping predefinito dell'ID lingua (LCID) per le regole di confronto. |
+| **MSSQL_MEMORY_LIMIT_MB** | Imposta la quantità massima di memoria (in MB) che SQL Server può usare. Per impostazione predefinita, corrisponde all'80% della memoria fisica totale. |
+| **MSSQL_TCP_PORT** | Consente di configurare la porta TCP su cui è in ascolto SQL Server (impostazione predefinita: 1433). |
+| **MSSQL_IP_ADDRESS** | Consente di impostare l'indirizzo IP. Attualmente l'indirizzo IP deve essere nello stile IPv4 (0.0.0.0). |
+| **MSSQL_BACKUP_DIR** | Consente di usare il percorso della directory di backup predefinito. |
+| **MSSQL_DATA_DIR** | Consente di cambiare la directory in cui vengono creati i file di dati (con estensione mdf) di un nuovo database di SQL Server. |
+| **MSSQL_LOG_DIR** | Consente di cambiare la directory in cui vengono creati i file di log (con estensione ldf) di un nuovo database di SQL Server. |
+| **MSSQL_DUMP_DIR** | Consente di cambiare la directory in cui SQL Server deposita i dump della memoria e altri file per la risoluzione dei problemi per impostazione predefinita. |
+| **MSSQL_ENABLE_HADR** | Consente di abilitare un gruppo di disponibilità. Ad esempio, il valore '1' lo abilita e il valore '0' lo disabilita |
+| **MSSQL_AGENT_ENABLED** | Abilitare SQL Server Agent. Ad esempio, il valore 'true' lo abilita e il valore 'false' lo disabilita. Per impostazione predefinita, l'agente è disabilitato.  |
+| **MSSQL_MASTER_DATA_FILE** | Imposta il percorso del file di dati del database master. Il nome del file deve essere **master.mdf** fino alla prima esecuzione di SQL Server. |
+| **MSSQL_MASTER_LOG_FILE** | Imposta il percorso del file di log del database master. Il nome del file deve essere **mastlog.mdf** fino alla prima esecuzione di SQL Server. |
 | **MSSQL_ERROR_LOG_FILE** | Imposta il percorso dei file di log degli errori. |
 
 ::: moniker-end
@@ -70,57 +70,57 @@ ms.locfileid: "68419244"
 | Variabile di ambiente | Descrizione |
 |-----|-----|
 | **ACCEPT_EULA** | Impostare la variabile **ACCEPT_EULA** su qualsiasi valore per confermare l'accettazione delle [condizioni di licenza ](https://go.microsoft.com/fwlink/?LinkId=746388). Impostazione obbligatoria per l'immagine di SQL Server. |
-| **MSSQL_SA_PASSWORD** | Configurare la password dell'utente SA. |
-| **MSSQL_PID** | Impostare la SQL Server edizione o il codice Product Key. I valori possibili includono: </br></br>**Copia di valutazione**</br>**Sviluppatore**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Codice Product Key**</br></br>Se si specifica un codice Product Key, deve essere nel formato # # # # #-# # # # #-# # # # #-# # # # # # # # # # #, dove ' #' è un numero o una lettera.|
-| **MSSQL_LCID** | Imposta l'ID lingua da utilizzare per SQL Server. Ad esempio, 1036 è francese. |
-| **MSSQL_COLLATION** | Imposta le regole di confronto predefinite per SQL Server. In questo modo viene eseguito l'override del mapping predefinito dell'ID lingua (LCID) alle regole di confronto. |
-| **MSSQL_MEMORY_LIMIT_MB** | Imposta la quantità massima di memoria (in MB) che SQL Server possibile utilizzare. Per impostazione predefinita, è il 80% della memoria fisica totale. |
-| **MSSQL_TCP_PORT** | Configurare la porta TCP su cui è in ascolto il SQL Server (valore predefinito 1433). |
-| **MSSQL_IP_ADDRESS** | Impostare l'indirizzo IP. Attualmente, l'indirizzo IP deve essere di tipo IPv4 (0.0.0.0). |
-| **MSSQL_BACKUP_DIR** | Impostare il percorso predefinito della directory di backup. |
-| **MSSQL_DATA_DIR** | Modificare la directory in cui vengono creati i nuovi file di dati del database di SQL Server (con estensione MDF). |
-| **MSSQL_LOG_DIR** | Modificare la directory in cui vengono creati i nuovi file di log del database di SQL Server (con estensione ldf). |
-| **MSSQL_DUMP_DIR** | Modificare la directory in cui SQL Server depositeranno i dump della memoria e altri file per la risoluzione dei problemi per impostazione predefinita. |
-| **MSSQL_ENABLE_HADR** | Abilitare il gruppo di disponibilità. Ad esempio,' 1' è abilitato è 0' è disabilitato |
-| **MSSQL_AGENT_ENABLED** | Abilitare SQL Server Agent. Ad esempio,' true ' è abilitato è false ' è disabilitato. Per impostazione predefinita, Agent è disabilitato.  |
-| **MSSQL_MASTER_DATA_FILE** | Imposta il percorso del file di dati del database master. Deve essere denominato **master. MDF** fino alla prima esecuzione del SQL Server. |
-| **MSSQL_MASTER_LOG_FILE** | Imposta il percorso del file di log del database master. Deve essere denominato **Mastlog. ldf** fino alla prima esecuzione del SQL Server. |
+| **MSSQL_SA_PASSWORD** | Consente di configurare la password dell'utente SA. |
+| **MSSQL_PID** | Consente di impostare l'edizione o il codice Product Key di SQL Server. I valori possibili includono: </br></br>**Copia di valutazione**</br>**Sviluppatore**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Un codice Product Key**</br></br>Se si specifica un codice Product Key, questo deve essere nel formato #####-#####-#####-#####-#####, dove '#' è un numero o una lettera.|
+| **MSSQL_LCID** | Imposta l'ID della lingua da usare per SQL Server. Ad esempio, 1036 corrisponde al francese. |
+| **MSSQL_COLLATION** | Imposta le regole di confronto per SQL Server. In questo modo viene eseguito l'override del mapping predefinito dell'ID lingua (LCID) per le regole di confronto. |
+| **MSSQL_MEMORY_LIMIT_MB** | Imposta la quantità massima di memoria (in MB) che SQL Server può usare. Per impostazione predefinita, corrisponde all'80% della memoria fisica totale. |
+| **MSSQL_TCP_PORT** | Consente di configurare la porta TCP su cui è in ascolto SQL Server (impostazione predefinita: 1433). |
+| **MSSQL_IP_ADDRESS** | Consente di impostare l'indirizzo IP. Attualmente l'indirizzo IP deve essere nello stile IPv4 (0.0.0.0). |
+| **MSSQL_BACKUP_DIR** | Consente di usare il percorso della directory di backup predefinito. |
+| **MSSQL_DATA_DIR** | Consente di cambiare la directory in cui vengono creati i file di dati (con estensione mdf) di un nuovo database di SQL Server. |
+| **MSSQL_LOG_DIR** | Consente di cambiare la directory in cui vengono creati i file di log (con estensione ldf) di un nuovo database di SQL Server. |
+| **MSSQL_DUMP_DIR** | Consente di cambiare la directory in cui SQL Server deposita i dump della memoria e altri file per la risoluzione dei problemi per impostazione predefinita. |
+| **MSSQL_ENABLE_HADR** | Consente di abilitare un gruppo di disponibilità. Ad esempio, il valore '1' lo abilita e il valore '0' lo disabilita |
+| **MSSQL_AGENT_ENABLED** | Abilitare SQL Server Agent. Ad esempio, il valore 'true' lo abilita e il valore 'false' lo disabilita. Per impostazione predefinita, l'agente è disabilitato.  |
+| **MSSQL_MASTER_DATA_FILE** | Imposta il percorso del file di dati del database master. Il nome del file deve essere **master.mdf** fino alla prima esecuzione di SQL Server. |
+| **MSSQL_MASTER_LOG_FILE** | Imposta il percorso del file di log del database master. Il nome del file deve essere **mastlog.mdf** fino alla prima esecuzione di SQL Server. |
 | **MSSQL_ERROR_LOG_FILE** | Imposta il percorso dei file di log degli errori. |
 
 ::: moniker-end
 
-## <a name="use-with-initial-setup"></a>Usare con l'installazione iniziale
+## <a name="use-with-initial-setup"></a>Usare con la configurazione iniziale
 
-Questo esempio viene `mssql-conf setup` eseguito con le variabili di ambiente configurate. Vengono specificate le variabili di ambiente seguenti:
+Questo esempio esegue `mssql-conf setup` con variabili di ambiente configurate. Vengono specificate le variabili di ambiente seguenti:
 
-- **ACCEPT_EULA** accetta il contratto di licenza con l'utente finale.
-- **MSSSQL_PID** specifica l'edizione di SQL Server per sviluppatori con licenza gratuita per l'utilizzo non in produzione.
-- **MSSQL_SA_PASSWORD** imposta una password complessa.
-- **MSSQL_TCP_PORT** imposta la porta TCP su cui SQL Server resta in attesa su 1234.
+- **ACCEPT_EULA** consente di accettare il contratto di licenza con l'utente finale.
+- **MSSSQL_PID** specifica la Developer Edition di SQL Server con licenza gratuita per l'uso non in produzione.
+- **MSSQL_SA_PASSWORD** consente di impostare una password complessa.
+- **MSSQL_TCP_PORT** consente di configurare la porta TCP su cui è in ascolto SQL Server su 1234.
 
 ```bash
 sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' MSSQL_TCP_PORT=1234 /opt/mssql/bin/mssql-conf setup
 ```
 
-## <a name="use-with-docker"></a>Usare con Docker
+## <a name="use-with-docker"></a>Uso con Docker
 
-Questo comando Docker di esempio usa le variabili di ambiente seguenti per creare un nuovo contenitore SQL Server:
+Questo comando Docker di esempio usa le variabili di ambiente seguenti per creare un nuovo contenitore di SQL Server:
 
-- **ACCEPT_EULA** accetta il contratto di licenza con l'utente finale.
-- **MSSSQL_PID** specifica l'edizione di SQL Server per sviluppatori con licenza gratuita per l'utilizzo non in produzione.
-- **MSSQL_SA_PASSWORD** imposta una password complessa.
-- **MSSQL_TCP_PORT** imposta la porta TCP su cui SQL Server resta in attesa su 1234. Ciò significa che anziché eseguire il mapping della porta 1433 (impostazione predefinita) a una porta host, è necessario eseguire il mapping della `-p 1234:1234` porta TCP personalizzata con il comando riportato in questo esempio.
+- **ACCEPT_EULA** consente di accettare il contratto di licenza con l'utente finale.
+- **MSSSQL_PID** specifica la Developer Edition di SQL Server con licenza gratuita per l'uso non in produzione.
+- **MSSQL_SA_PASSWORD** consente di impostare una password complessa.
+- **MSSQL_TCP_PORT** consente di configurare la porta TCP su cui è in ascolto SQL Server su 1234. Ciò significa che anziché eseguire il mapping della porta 1433 (impostazione predefinita) a una porta host, è necessario eseguire il mapping della porta TCP personalizzata con il comando `-p 1234:1234` riportato in questo esempio.
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-Se si esegue Docker in Linux/macOS, usare la sintassi seguente con virgolette singole:
+Se si esegue Docker in Linux o macOS, usare la sintassi seguente con virgolette singole:
 
 ```bash
 docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 
-Se si esegue Docker in Windows, usare la sintassi seguente con le virgolette doppie:
+Se si esegue Docker in Windows, usare la sintassi seguente con virgolette doppie:
 
 ```bash
 docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2017-latest
@@ -133,22 +133,22 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Se si esegue Docker in Linux/macOS, usare la sintassi seguente con virgolette singole:
+Se si esegue Docker in Linux o macOS, usare la sintassi seguente con virgolette singole:
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
 ```
 
-Se si esegue Docker in Windows, usare la sintassi seguente con le virgolette doppie:
+Se si esegue Docker in Windows, usare la sintassi seguente con virgolette doppie:
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
 ```
 
 ::: moniker-end
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre impostazioni SQL Server non elencate, vedere [configurare SQL Server in Linux con lo strumento MSSQL-conf](sql-server-linux-configure-mssql-conf.md).
+Per altre impostazioni di SQL Server non elencate, vedere [Configurare SQL Server in Linux con lo strumento mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
-Per ulteriori informazioni su come installare ed eseguire SQL Server in Linux, vedere [install SQL Server in Linux](sql-server-linux-setup.md).
+Per altre informazioni su come installare ed eseguire SQL Server in Linux, vedere [Installare SQL Server in Linux](sql-server-linux-setup.md).

@@ -1,7 +1,7 @@
 ---
-title: Eseguire query sui dati esterni in Oracle
+title: Eseguire query su dati esterni in Oracle
 titleSuffix: SQL Server big data clusters
-description: Questa esercitazione illustra come eseguire query sui dati di Oracle da un cluster di big data di SQL Server 2019 (anteprima). Creare una tabella esterna su dati in Oracle e quindi eseguire una query.
+description: Questa esercitazione illustra come eseguire una query su dati Oracle da un cluster Big Data di SQL Server 2019 (anteprima). Si creerà una tabella esterna con i dati di Oracle e si eseguirà quindi una query.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
@@ -10,42 +10,42 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: bf0efdc3a9be44a0ffad4efcaaeb351bbdbdf626
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957716"
 ---
-# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Esercitazione: Eseguire una query Oracle da un cluster di big data di SQL Server
+# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Esercitazione: Eseguire query su dati Oracle da un cluster Big Data di SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questa esercitazione illustra come eseguire query sui dati di Oracle da un cluster di big data di SQL Server 2019. Per eseguire questa esercitazione, è necessario avere accesso a un server Oracle. Se non si ha accesso, in questa esercitazione può avere un'idea del funzionamento della virtualizzazione dei dati per origini dati esterne in cluster di big data di SQL Server.
+Questa esercitazione illustra come eseguire una query su dati Oracle da un cluster Big Data di SQL Server 2019. Per eseguire questa esercitazione, è necessario avere accesso a un server Oracle. In caso contrario, questa esercitazione può dare un'idea del funzionamento della virtualizzazione dei dati per origini dati esterne nel cluster Big Data di SQL Server.
 
-In questa esercitazione si imparerà a:
+In questa esercitazione verranno illustrate le procedure per:
 
 > [!div class="checklist"]
 > * Creare una tabella esterna per i dati in un database Oracle esterno.
-> * Aggiungere i dati con dati di valore elevato nell'istanza master.
+> * Unire questi dati con dati di valore elevato nell'istanza master.
 
 > [!TIP]
-> Se si preferisce, è possibile scaricare ed eseguire uno script per i comandi in questa esercitazione. Per istruzioni, vedere la [esempi di dati di virtualizzazione](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) su GitHub.
+> Se si preferisce, è possibile scaricare ed eseguire uno script per i comandi descritti in questa esercitazione. Per istruzioni, vedere [Esempi di virtualizzazione di dati](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) in GitHub.
 
 ## <a id="prereqs"></a> Prerequisiti
 
-- [Strumenti dei big Data](deploy-big-data-tools.md)
+- [Strumenti per Big Data](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
    - **Estensione di SQL Server 2019**
-- [Caricare i dati di esempio in cluster i big Data](tutorial-load-sample-data.md)
+- [Caricare dati di esempio nel cluster Big Data](tutorial-load-sample-data.md)
 
 ## <a name="create-an-oracle-table"></a>Creare una tabella Oracle
 
-La procedura seguente crea una tabella di esempio denominata `INVENTORY` in Oracle.
+Questa procedura consente di creare in Oracle una tabella semplice denominata `INVENTORY`.
 
-1. Connettersi a un'istanza di Oracle e il database che si desidera usare per questa esercitazione.
+1. Connettersi a un'istanza di Oracle e al database che si vuole usare per questa esercitazione.
 
-1. Eseguire l'istruzione seguente per creare il `INVENTORY` tabella:
+1. Eseguire l'istruzione seguente per creare la tabella `INVENTORY`:
 
    ```sql
     CREATE TABLE "INVENTORY"
@@ -59,33 +59,33 @@ La procedura seguente crea una tabella di esempio denominata `INVENTORY` in Orac
     CREATE INDEX INV_ITEM ON HR.INVENTORY(INV_ITEM);
     ```
 
-1. Importare il contenuto del **inventory.csv** file in questa tabella. Questo file è stato creato con gli script di creazione di esempio nel [prerequisiti](#prereqs) sezione.
+1. Importare nella tabella il contenuto del file **inventory.csv**. Questo file è stato creato a partire dagli script di creazione di esempio disponibili nella sezione [Prerequisiti](#prereqs).
 
 ## <a name="create-an-external-data-source"></a>Creare un'origine dati esterna
 
-Il primo passaggio consiste nel creare un'origine dati esterna che possa accedere al server Oracle.
+Il primo passaggio prevede la creazione di un'origine dati esterna in grado di accedere al server Oracle.
 
-1. In Azure Data Studio, connettersi all'istanza master di SQL Server del cluster di big data. Per altre informazioni, vedere [connettersi all'istanza master di SQL Server](connect-to-big-data-cluster.md#master).
+1. In Azure Data Studio connettersi all'istanza master di SQL Server del cluster Big Data. Per altre informazioni, vedere [Connettersi all'istanza master di SQL Server](connect-to-big-data-cluster.md#master).
 
-1. Fare doppio clic sulla connessione nel **server** finestra per visualizzare il dashboard di server per l'istanza master di SQL Server. Selezionare **nuova Query**.
+1. Fare doppio clic sulla connessione nella finestra **Server** per visualizzare il dashboard del server per l'istanza master di SQL Server. Selezionare **Nuova query**.
 
-   ![Query di istanza master di SQL Server](./media/tutorial-query-oracle/sql-server-master-instance-query.png)
+   ![Query dell'istanza master di SQL Server](./media/tutorial-query-oracle/sql-server-master-instance-query.png)
 
-1. Eseguire il comando Transact-SQL seguente per modificare il contesto per il **Sales** database nell'istanza master.
+1. Eseguire il comando Transact-SQL seguente per modificare il contesto nel database **Sales** dell'istanza master.
 
    ```sql
    USE Sales
    GO
    ```
 
-1. Creare una credenziale con ambito database per la connessione al server Oracle. Fornire le credenziali appropriate per il server Oracle nell'istruzione seguente.
+1. Creare le credenziali con ambito database per connettersi al server Oracle. Fornire le credenziali appropriate al server Oracle nell'istruzione seguente.
 
    ```sql
    CREATE DATABASE SCOPED CREDENTIAL [OracleCredential]
    WITH IDENTITY = '<oracle_user,nvarchar(100),SYSTEM>', SECRET = '<oracle_user_password,nvarchar(100),manager>';
    ```
 
-1. Creare un'origine dati esterna che punta al server Oracle.
+1. Creare un'origine dati esterna che punti al server Oracle.
 
    ```sql
    CREATE EXTERNAL DATA SOURCE [OracleSalesSrvr]
@@ -94,7 +94,7 @@ Il primo passaggio consiste nel creare un'origine dati esterna che possa acceder
 
 ## <a name="create-an-external-table"></a>Creare una tabella esterna
 
-Successivamente, creare una tabella esterna denominata **iventory_ora** tramite il `INVENTORY` tabella sul server Oracle.
+Successivamente, creare una tabella esterna denominata **iventory_ora** sulla base della tabella `INVENTORY` presente nel server Oracle.
 
 ```sql
 CREATE EXTERNAL TABLE [inventory_ora]
@@ -105,11 +105,11 @@ WITH (DATA_SOURCE=[OracleSalesSrvr],
 ```
 
 > [!NOTE]
-> I nomi di tabella e i nomi delle colonne useranno ANSI SQL identificatore delimitato tra virgolette durante l'esecuzione di query su Oracle. Di conseguenza, i nomi sono tra maiuscole e minuscole. È importante specificare il nome nella definizione della tabella esterna che corrisponda esattamente del caso di nomi della tabella e colonna nei metadati di Oracle.
+> I nomi delle tabelle e delle colonne useranno l'identificatore delimitato da ANSI SQL durante l'esecuzione di query su dati Oracle. Per i nomi delle variabili viene quindi fatta distinzione tra maiuscole e minuscole. Nella definizione della tabella esterna è importante specificare il nome rispettando esattamente le lettere minuscole e maiuscole dei nomi delle tabelle e delle colonne nei metadati Oracle.
 
-## <a name="query-the-data"></a>Eseguire query sui dati
+## <a name="query-the-data"></a>Eseguire una query sui dati
 
-Eseguire la query seguente per aggiungere i dati nel `iventory_ora` tabella esterna con le tabelle in locale `Sales` database.
+Eseguire la query seguente per creare un join tra i dati della `iventory_ora`tabella esterna e le tabelle nel database `Sales` locale.
 
 ```sql
 SELECT TOP(100) w.w_warehouse_name, i.inv_item, SUM(i.inv_quantity_on_hand) as total_quantity

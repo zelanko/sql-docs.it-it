@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 488394cbf4b52a952ffc46ab2ec6c9a273466bd5
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 0a2891256bd6e45de356d620d3fa75256528b697
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426041"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894014"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
@@ -22,7 +22,7 @@ ms.locfileid: "68426041"
 
 L'articolo seguente fornisce informazioni di riferimento sui comandi **bdc** dello strumento **azdata**. Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandi
+## <a name="commands"></a>Comandi:
 
 |     |     |
 | --- | --- |
@@ -75,7 +75,7 @@ Nome del cluster Big Data, usato per gli spazi dei nomi kubernetes.
 #### `--config-profile -c`
 Profilo di configurazione del cluster Big Data, usato per la distribuzione del cluster: ['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
 #### `--accept-eula -a`
-Indica se accettare le condizioni di licenza: [yes/no]. Se non si vuole usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su "yes". Le condizioni di licenza di questo prodotto sono disponibili in https://aka.ms/azdata-eula e https://go.microsoft.com/fwlink/?LinkId=2002534.
+Indica se accettare le condizioni di licenza: [yes/no]. Se non si vuole usare questo argomento, è possibile impostare la variabile di ambiente ACCEPT_EULA su "yes". Le condizioni di licenza per questo prodotto possono essere visualizzate [https://go.microsoft.com/fwlink/?LinkId=2002534](https://go.microsoft.com/fwlink/?LinkId=2002534)all'indirizzo.
 #### `--node-label -l`
 Etichetta del nodo del cluster Big data, usata per definire i nodi in cui eseguire la distribuzione.
 #### `--force -f`
@@ -118,7 +118,7 @@ Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefin
 #### `--query -q`
 Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
+Aumenta il livello di dettaglio della registrazione. Usare --debug per i log di debug completi.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

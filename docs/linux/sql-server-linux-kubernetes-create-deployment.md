@@ -1,6 +1,6 @@
 ---
-title: Creare script di distribuzione per SQL Server gruppo di disponibilità AlwaysOn in Kubernetes
-description: Questo articolo illustra come creare script di distribuzione per un SQL Server gruppo di disponibilità AlwaysOn in Kubernetes
+title: Creare script di distribuzione per il gruppo di disponibilità Always On di SQL Server in Kubernetes
+description: Questo articolo illustra come creare script di distribuzione per un gruppo di disponibilità Always On di SQL Server in Kubernetes
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,45 +10,45 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 181773a19e87c34a1931cae05f5a329aedbc1239
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68000138"
 ---
-# <a name="create-deployment-script-for-sql-server-always-on-availability-group"></a>Creare uno script di distribuzione per SQL Server gruppo di disponibilità AlwaysOn
+# <a name="create-deployment-script-for-sql-server-always-on-availability-group"></a>Creare lo script di distribuzione per il gruppo di disponibilità Always On di SQL Server
 
-Questo articolo descrive come distribuire un gruppo di disponibilità in un cluster Kubernetes in un singolo comando con un esempio di script di distribuzione. `deploy-ag.py` è uno script Python che crea il `.yaml` nei file per il cluster e applicarle collettivamente a un cluster Kubernetes.
+Questo articolo descrive come distribuire un gruppo di disponibilità in un cluster Kubernetes in un unico comando con uno script di distribuzione di esempio. `deploy-ag.py` è uno script Python che crea i file `.yaml` per il cluster e può applicarli a un cluster Kubernetes.
 
-I file del file da scaricare [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-deployment-script).
+Scaricare i file da [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-deployment-script).
 
 ## <a name="before-you-start"></a>Prima di iniziare
 
 Installare gli strumenti seguenti nella workstation.
 
 * [Python](https://www.python.org/downloads/) (3.5 o 3.6)
-* [PyYAML](https://pyyaml.org/) -i pacchetti Python
-* [Client Kubernetes](https://github.com/kubernetes-client/python) -pacchetto Python
+* [PyYAML](https://pyyaml.org/): pacchetti Python
+* [Client Kubernetes](https://github.com/kubernetes-client/python): pacchetto Python
 
-Aggiungere i percorsi di python alle variabili di ambiente (per Windows).
+Aggiungere i percorsi Python alle variabili di ambiente (per Windows).
 
 ### <a name="install-the-required-components"></a>Installare i componenti necessari
 
-Nell'esempio seguente il codice precedente installa i pacchetti PyYAML e Client di Kubernetes per Python.
+L'esempio seguente illustra come installare i pacchetti client PyYAML e Kubernetes per Python.
 
 Dopo aver installato Python, scaricare ed estrarre la cartella di esempio. 
 
-Per configurare i file necessari, eseguire il comando seguente. Sostituire `<path>` con il percorso del file di esempio estratti.
+Per configurare i file necessari, eseguire il comando seguente. Sostituire `<path>` con la posizione dei file di esempio estratti.
 
 ```cmd
 pip install --user -r "C:\<path>\requirements.txt"
 ```
 
-## <a name="create-cluster-and-download-config-file"></a>Creare Cluster e scaricare file di configurazione
+## <a name="create-cluster-and-download-config-file"></a>Creare il cluster e scaricare il file di configurazione
 
-Nell'esempio seguente crea il cluster in Azure Kubernetes Service (AKS).
+L'esempio seguente crea il cluster nel servizio Azure Kubernetes.
 
-Prima di eseguire lo script, aggiornare i valori in parentesi acute - `<>`.
+Prima di eseguire lo script, aggiornare i valori tra le parentesi acute `<>`.
 
 ```azcli
 az aks create  --resource-group <GroupName> --name <ClusterName> --generate-ssh-keys --node-count 4 --kubernetes-version 1.11.1
@@ -57,39 +57,39 @@ az aks get-credentials --resource-group=<GroupName> --name=<ClusterName>
 ```
 
 >[!NOTE]
->I gruppi di disponibilità richiede Kubernetes versione 1.11.0 o successiva. L'esempio specifica 1.11.1.
+>Per i gruppi di disponibilità è necessario Kubernetes versione 1.11.0 o successiva. Nell'esempio viene usata la versione 1.11.1.
 
 ## <a name="run-the-deployment-script"></a>Eseguire lo script di distribuzione
 
-Gli esempi seguenti illustrano come eseguire `deploy-ag.py`.
+Negli esempi seguenti viene illustrato come eseguire `deploy-ag.py`.
 
-### <a name="help"></a>Help
+### <a name="help"></a>Guida
 
 ```cmd
 python ./deploy-ag.py --help
 ```
 
-* **utilizzo**: `deploy-ag.py [-h] {deploy | failover} ...`
+* **sintassi**: `deploy-ag.py [-h] {deploy | failover} ...`
 * **argomenti facoltativi**:
-  * `-h, --help` Mostra questo messaggio della Guida e uscita
+  * `-h, --help` visualizza questo messaggio della guida ed esce
 * **sottocomandi**:
-  * Operazioni su agenti k8s {distribuire | failover}
+  * Azioni sull'agente k8s {deploy | failover}
 
   `deploy`
 
-   Distribuire un set di istanze di SQL Server in un gruppo di disponibilità
+   Distribuisce un set di istanze di SQL Server in un gruppo di disponibilità
 
   `failover`
 
-   Eseguire il failover a una replica di destinazione.
+   Effettua il failover in una replica di destinazione.
 
-### <a name="deploy-help"></a>Distribuire la Guida
+### <a name="deploy-help"></a>Deploy help
 
 ```cmd
 python ./deploy-ag.py deploy --help
 ```
 
-* **utilizzo**:
+* **sintassi**:
 
   ```
   python ./deploy-ag.py deploy [-h] [--verbose] [--ag AG] [-n NAMESPACE]
@@ -98,13 +98,13 @@ python ./deploy-ag.py deploy --help
     [--skip-create-namespace]
   ```
 
-  Distribuire SQL Server e gli agenti k8s in namespace(AG name)
+  Distribuisce gli agenti SQL Server e k8s nello spazio dei nomi (nome AG)
 
 * **argomenti facoltativi**:
   
   `-h, --help`
   
-  Mostra questo messaggio della Guida e uscita
+  Visualizza questo messaggio della guida ed esce
   
   `--verbose, -v`
   
@@ -112,36 +112,36 @@ python ./deploy-ag.py deploy --help
   
   `--ag AG`
   
-  nome del gruppo di disponibilità. Default = ag1
+  Nome del gruppo di disponibilità. Impostazione predefinita=ag1
   
   `-n NAMESPACE, --namespace NAMESPACE`
   
-  nome dello spazio dei nomi k8s. L'impostazione predefinita al nome del gruppo di disponibilità se non specificato.
+  Nome dello spazio dei nomi k8s. Se viene omesso, l'impostazione predefinita è il nome AG.
 
   `--dry-run`
   
-  Creare i manifesti, ma non applicarle.
+  Crea i manifesti, ma non li applica.
   
   `-s SQL_SERVERS [SQL_SERVERS ...], --sql-servers SQL_SERVERS [SQL_SERVERS ...]`
 
-  nomi delle istanze di SQL Server (fino a 5, separati da spazi) Default = ['mssql1', 'mssql2', 'mssql3']
+  Nomi delle istanze di SQL Server (fino a 5, separati da spazi) Impostazione predefinita=["mssql1", "mssql2", "mssql3"]
   
   `-p SA_PASSWORD, --sa-password SA_PASSWORD`
   
-  Password account SA. Default='SAPassword2018'
+  Password dell'amministratore di sistema. Impostazione predefinita="SAPassword2018"
   
   `-e {ON_PREM,AKS}, --env {ON_PREM,AKS}`
   
   `--skip-create-namespace`
   
-  Ignorare la creazione dello spazio dei nomi.
+  Ignora la creazione dello spazio dei nomi.
 
-### <a name="failover-help"></a>Failover della Guida in linea
+### <a name="failover-help"></a>Failover help
 
 ```cmd
 python ./deploy-ag.py failover --help
 ```
-* **utilizzo**: 
+* **sintassi**: 
 
   ```cmd
   python deploy-ag.py failover [-h] [--verbose] [--ag AG]
@@ -149,17 +149,17 @@ python ./deploy-ag.py failover --help
     target_replica
   ```
 
-  Eseguire il failover manuale
+  Failover manuale
 
-* **gli argomenti posizionali**: `target_replica`
+* **argomenti posizionali**: `target_replica`
 
-  nome della replica di SQL Server di destinazione per il failover
+  Nome della replica di SQL Server di destinazione per il failover
 
 * **argomenti facoltativi**:
 
   `-h, --help`
   
-  Mostra questo messaggio della Guida e uscita
+  Visualizza questo messaggio della guida ed esce
 
   `--verbose, -v`
   
@@ -167,49 +167,49 @@ python ./deploy-ag.py failover --help
 
   `--ag AG`
   
-  nome del gruppo di disponibilità. Default = ag1
+  Nome del gruppo di disponibilità. Impostazione predefinita=ag1
 
   `--namespace NAMESPACE`
 
-  nome dello spazio dei nomi k8s. Il valore predefinito è nome del gruppo di disponibilità se non specificato
+  Nome dello spazio dei nomi k8s. Se viene omesso, l'impostazione predefinita è il nome AG
 
   `--dry-run`
   
-  Creare, ma non si applicano i manifesti.
+  Crea, ma non applica i manifesti.
 
-### <a name="create-the-manifests---dont-apply"></a>Creare i manifesti: non si applicano
+### <a name="create-the-manifests---dont-apply"></a>Crea i manifesti, non li applica
 
-Lo script seguente crea i file manifesto, ma non sono valide.
+Lo script seguente crea i file manifesto, ma non li applica.
 
 ```cmd
 python ./deploy-ag.py deploy --dry-run
 ```
 
-L'esempio seguente crea i manifesti per un gruppo di disponibilità nello spazio dei nomi `AG1` con tre repliche. Prima di eseguire lo script, sostituire `<MyC0m91exP@55w0r!>` con una password complessa.
+L'esempio seguente crea i manifesti per un gruppo di disponibilità sotto lo spazio dei nomi `AG1` con tre repliche. Prima di eseguire lo script, sostituire `<MyC0m91exP@55w0r!>` con una password complessa.
 
 ```cmd
 python ./deploy-ag.py deploy --ag ag1 --namespace AG1 --sa-password '<MyC0m91exP@55w0r!>' --env AKS --dry-run
 ```
 
-Il comando precedente genera directory dei file yaml di esempio.
+Il comando precedente genera la directory dei file YAML di esempio.
 
-In questo caso, l'output del comando Mostra in cui vengono creati i file manifesto.
+In questo caso, l'output del comando mostra la posizione in cui vengono creati i file manifesto.
 
 ![Output dello script](./media/sql-server-linux-kubernetes-create-deployment/scriptbuild-out.png)
     
-### <a name="create-the-manifests-and-apply"></a>Creare i manifesti e applicare
+### <a name="create-the-manifests-and-apply"></a>Creare i manifesti e applicarli
 
-L'esempio seguente crea i manifesti per un gruppo di disponibilità nello spazio dei nomi `ag1` con tre repliche e le applica al cluster Kubernetes. Il cluster verrà quindi creato il gruppo di disponibilità. Prima di eseguire lo script, sostituire `<MyC0m91exP@55w0r!>` con una password complessa.
+L'esempio seguente crea i manifesti per un gruppo di disponibilità sotto lo spazio dei nomi `ag1` con tre repliche e li applica al cluster Kubernetes. Il cluster creerà quindi il gruppo di disponibilità. Prima di eseguire lo script, sostituire `<MyC0m91exP@55w0r!>` con una password complessa.
 
 ```
 python ./deploy-ag.py deploy --ag ag1 --namespace ag1 --sa-password '<MyC0m91exP@55w0r!>' --env AKS --verbose
 ```
 
-Al termine dell'esecuzione dello script, l'operatore di Kubernetes crea lo spazio di archiviazione, le istanze di SQL Server, i servizi di bilanciamento di carico. È possibile monitorare la distribuzione con [dashboard di Kubernetes](https://docs.microsoft.com/azure/aks/kubernetes-dashboard).
+Al completamento dello script, l'operatore Kubernetes crea la risorsa di archiviazione, le istanze di SQL Server e i servizi di bilanciamento del carico. È possibile monitorare la distribuzione con il [dashboard di Kubernetes](https://docs.microsoft.com/azure/aks/kubernetes-dashboard).
 
 Dopo che Kubernetes ha creato i contenitori di SQL Server:
 
-1. [Connettere](sql-server-linux-kubernetes-connect.md) a un'istanza di SQL Server nel cluster.
+1. [Connettersi](sql-server-linux-kubernetes-connect.md) a un'istanza di SQL Server nel cluster.
 
 1. Creazione di un database.
 
@@ -217,11 +217,11 @@ Dopo che Kubernetes ha creato i contenitori di SQL Server:
 
 1. Aggiungere il database al gruppo di disponibilità.
 
-Viene creato il gruppo di disponibilità con seeding automatico in modo che SQL Server creerà automaticamente i database secondari nelle repliche appropriate.
+Il gruppo di disponibilità viene creato con il seeding automatico, quindi SQL Server creerà automaticamente i database secondari nelle repliche appropriate.
 
-### <a name="manually-failover"></a>Eseguire il failover manuale
+### <a name="manually-failover"></a>Failover manuale
 
-Nell'esempio seguente esegue il failover della replica primaria.
+L'esempio seguente effettua il failover della replica primaria.
 
 ```cmd
 python ./deploy-ag.py failover --ag ag1 --namespace ag1 --verbose mssql1-0
@@ -229,4 +229,4 @@ python ./deploy-ag.py failover --ag ag1 --namespace ag1 --verbose mssql1-0
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Gruppo di disponibilità SQL Server in cluster Kubernetes](sql-server-ag-kubernetes.md)
+[Gruppo di disponibilità di SQL Server nel cluster Kubernetes](sql-server-ag-kubernetes.md)

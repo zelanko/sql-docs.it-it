@@ -1,7 +1,7 @@
 ---
-title: Inserire i dati con i processi Spark
+title: Inserire dati con processi Spark
 titleSuffix: SQL Server big data clusters
-description: Questa esercitazione illustra come inserire dati nel pool di dati di un cluster di big data 2019 Server SQL (anteprima) con i processi Spark in Azure Data Studio.
+description: Questa esercitazione illustra come inserire dati nel pool di dati di un cluster Big Data di SQL Server 2019 (anteprima) usando processi Spark in Azure Data Studio.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
@@ -10,47 +10,47 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 6d0ea6d4fb7a3aea9788c089ad68cb3bf523837f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957812"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Esercitazione: Inserire dati in un pool di dati di SQL Server con i processi Spark
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Esercitazione: Inserire dati in un pool di dati di SQL Server con processi Spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questa esercitazione illustra come usare processi di Spark per caricare i dati di [pool di dati](concept-data-pool.md) di un cluster di big data di SQL Server 2019 (anteprima). 
+Questa esercitazione illustra come usare processi Spark per caricare dati nel [pool di dati](concept-data-pool.md) di un cluster Big Data di SQL Server 2019 (anteprima). 
 
-In questa esercitazione si imparerà a:
+In questa esercitazione verranno illustrate le procedure per:
 
 > [!div class="checklist"]
 > * Creare una tabella esterna nel pool di dati.
-> * Creare un processo Spark per caricare i dati da HDFS.
-> * Query sui risultati della tabella esterna.
+> * Creare un processo Spark mediante il quale caricare i dati da HDFS.
+> * Eseguire una query sui risultati nella tabella esterna.
 
 > [!TIP]
-> Se si preferisce, è possibile scaricare ed eseguire uno script per i comandi in questa esercitazione. Per istruzioni, vedere la [dati pool esempi](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) su GitHub.
+> Se si preferisce, è possibile scaricare ed eseguire uno script per i comandi descritti in questa esercitazione. Per istruzioni, vedere i [pool di dati di esempio](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) in GitHub.
 
 ## <a id="prereqs"></a> Prerequisiti
 
-- [Strumenti dei big Data](deploy-big-data-tools.md)
+- [Strumenti per Big Data](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
    - **Estensione di SQL Server 2019**
-- [Caricare i dati di esempio in cluster i big Data](tutorial-load-sample-data.md)
+- [Caricare dati di esempio nel cluster Big Data](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>Creare una tabella esterna nel pool di dati
 
-La procedura seguente crea una tabella esterna nel pool di dati denominato **web_clickstreams_spark_results**. Questa tabella è quindi utilizzabile come un percorso per l'inserimento di dati nel cluster di big data.
+Questa procedura consente di creare una tabella esterna nel pool di dati denominata **web_clickstreams_spark_results**. La tabella può essere quindi usata come posizione per l'inserimento di dati nel cluster Big Data.
 
-1. In Azure Data Studio, connettersi all'istanza master di SQL Server del cluster di big data. Per altre informazioni, vedere [connettersi all'istanza master di SQL Server](connect-to-big-data-cluster.md#master).
+1. In Azure Data Studio connettersi all'istanza master di SQL Server del cluster Big Data. Per altre informazioni, vedere [Connettersi all'istanza master di SQL Server](connect-to-big-data-cluster.md#master).
 
-1. Fare doppio clic sulla connessione nel **server** finestra per visualizzare il dashboard di server per l'istanza master di SQL Server. Selezionare **nuova Query**.
+1. Fare doppio clic sulla connessione nella finestra **Server** per visualizzare il dashboard del server per l'istanza master di SQL Server. Selezionare **Nuova query**.
 
-   ![Query di istanza master di SQL Server](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
+   ![Query dell'istanza master di SQL Server](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
 
-1. Creare un'origine dati esterna al pool di dati se non esiste già.
+1. Creare un'origine dati esterna nel pool di dati, se non esiste già.
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
@@ -73,64 +73,64 @@ La procedura seguente crea una tabella esterna nel pool di dati denominato **web
       );
    ```
   
-1. Nella versione CTP 3.1, la creazione di pool di dati è asincrona, ma non è possibile determinare quando viene completato ancora. Attendere due minuti per assicurarsi che il pool di dati viene creato prima di continuare.
+1. Nella versione CTP 3.1 la creazione del pool di dati è asincrona, ma non esiste alcun modo per determinare quando viene completata. Prima di continuare, attendere due minuti per avere la certezza che il pool di dati sia stato creato.
 
 ## <a name="start-a-spark-streaming-job"></a>Avviare un processo di streaming Spark
 
-Il passaggio successivo consiste nel creare un processo che carica i dati clickstream web dal pool di archiviazione (distribuito Hadoop HDFS) di streaming Spark nella tabella esterna che è stato creato nel pool di dati.
+Il passaggio successivo consiste nella creazione di un processo di streaming Spark che carica dati clickstream Web dal pool di archiviazione (HDFS) nella tabella esterna creata nel pool di dati.
 
-1. In Azure Data Studio, connettersi all'istanza master del cluster di big data. Per altre informazioni, vedere [connettersi a un cluster di big data](connect-to-big-data-cluster.md).
+1. In Azure Data Studio connettersi all'istanza master del cluster Big Data. Per altre informazioni, vedere [Connettersi a un cluster Big Data](connect-to-big-data-cluster.md).
 
-1. Fare doppio clic sulla connessione di gateway HDFS/Spark nel **server** finestra. Quindi selezionare **nuovo processo Spark**.
+1. Fare doppio clic sulla connessione del gateway HDFS/Spark nella finestra **Server**. Selezionare quindi **New Spark Job** (Nuovo processo Spark).
 
    ![Nuovo processo Spark](media/tutorial-data-pool-ingest-spark/hdfs-new-spark-job.png)
 
-1. Nel **nuovo processo** finestra, immettere un nome nella **il nome del processo** campo.
+1. Nella finestra **Nuovo processo** immettere un nome nel campo **Nome processo**.
 
-1. Nel **File con estensione Jar / all'anno precedente** elenco a discesa, selezionare **HDFS**. Quindi immettere il percorso del file jar seguenti:
+1. Nell'elenco a discesa **File Jar/py** selezionare **HDFS**. Immettere quindi il seguente percorso di file JAR:
 
    ```text
    /jar/mssql-spark-lib-assembly-1.0.jar
    ```
 
-1. Nel **classe principale** immettere `FileStreaming`.
+1. Nel campo **Classe principale** immettere `FileStreaming`.
 
-1. Nel **argomenti** immettere il testo seguente, specificando la password per l'istanza master di SQL Server nel `<your_password>` segnaposto. 
+1. Nel campo **Argomenti** immettere il testo seguente, specificando la password per accedere all'istanza master di SQL Server nel segnaposto `<your_password>`. 
 
    ```text
    --server mssql-master-pool-0.service-master-pool --port 1433 --user sa --password <your_password> --database sales --table web_clickstreams_spark_results --source_dir hdfs:///clickstream_data --input_format csv --enable_checkpoint false --timeout 380000
    ```
 
-   La tabella seguente descrive ciascun argomento:
+   Nella tabella seguente viene descritto ciascun argomento:
 
    | Argomento | Descrizione |
    |---|---|
-   | nome del server | Uso di SQL Server per la lettura lo schema della tabella |
-   | Numero di porta | Porta SQL Server è in ascolto (valore predefinito 1433) |
-   | userName | Nome utente di accesso di SQL Server |
-   | password | Password di accesso di SQL Server |
+   | nome del server | SQL Server da usare per la lettura dello schema della tabella |
+   | numero di porta | Porta su cui è in ascolto SQL Server (valore predefinito: 1433) |
+   | username | Nome utente di accesso a SQL Server |
+   | password | Password di accesso a SQL Server |
    | nome del database | Database di destinazione |
-   | nome della tabella esterna | Tabella da utilizzare per ottenere risultati |
-   | Directory di origine per lo streaming | Questo deve essere un URI completo, ad esempio "hdfs: / / / clickstream_data" |
-   | formato di input | Ciò può essere "csv", ". parquet" o "json" |
-   | Abilita checkpoint | true o false |
-   | timeout | tempo di esecuzione del processo per espresso in millisecondi prima di uscire |
+   | nome tabella esterna | Tabella da usare per i risultati |
+   | directory di origine per lo streaming | Deve essere un URI completo, ad esempio "hdfs:///clickstream_data" |
+   | formato di input | Può essere "CSV", "parquet" o "JSON" |
+   | abilita checkpoint | true o false |
+   | timeout | tempo di esecuzione del processo (in millisecondi) prima dell'uscita |
 
-1. Premere **Submit** per inviare il processo.
+1. Premere **INVIO** per inviare il processo.
 
-   ![Invio di processi Spark](media/tutorial-data-pool-ingest-spark/spark-new-job-settings.png)
+   ![Invio del processo Spark](media/tutorial-data-pool-ingest-spark/spark-new-job-settings.png)
 
-## <a name="query-the-data"></a>Eseguire query sui dati
+## <a name="query-the-data"></a>Eseguire una query sui dati
 
-I passaggi seguenti mostrano che il processo di streaming Spark caricato i dati da HDFS in pool di dati.
+Questa procedura dimostra che il processo di streaming Spark ha caricato i dati da HDFS nel pool di dati.
 
-1. Prima dell'esecuzione di query i dati acquisiti, esaminare l'output della cronologia di attività per verificare che il processo completato.
+1. Prima di eseguire una query sui dati inseriti, controllare l'output della cronologia delle attività per verificare che il processo sia stato completato.
 
-   ![Cronologia dei processi Spark](media/tutorial-data-pool-ingest-spark/spark-task-history.png)
+   ![Cronologia processi Spark](media/tutorial-data-pool-ingest-spark/spark-task-history.png)
 
-1. Tornare alla finestra di query SQL Server istanza master aperta all'inizio di questa esercitazione.
+1. Tornare alla finestra di query dell'istanza master di SQL Server aperta all'inizio di questa esercitazione.
 
-1. Eseguire la query seguente per esaminare i dati acquisiti.
+1. Eseguire la query seguente per esaminare i dati inseriti.
 
    ```sql
    USE Sales

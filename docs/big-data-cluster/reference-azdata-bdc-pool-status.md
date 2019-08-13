@@ -1,7 +1,7 @@
 ---
-title: informazioni di riferimento sullo stato del pool BDC azdata
+title: Informazioni di riferimento su azdata bdc pool status
 titleSuffix: SQL Server big data clusters
-description: Articolo di riferimento per i comandi di stato del pool BDC azdata.
+description: Articolo di riferimento per i comandi azdata bdc pool status.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,23 +10,23 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: d0a5925af4f16f2147988b2318880d9acec664c3
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68426131"
 ---
-# <a name="azdata-bdc-pool-status"></a>stato pool BDC azdata
+# <a name="azdata-bdc-pool-status"></a>azdata bdc pool status
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-L'articolo seguente fornisce informazioni di riferimento sui comandi di **stato del pool BDC** nello strumento **azdata** . Per ulteriori informazioni su altri comandi **azdata** , vedere [riferimento azdata](reference-azdata.md).
+L'articolo seguente fornisce informazioni di riferimento per i comandi **bdc pool status** nello strumento **azdata**. Per altre informazioni su altri comandi **azdata**, vedere [Informazioni di riferimento su azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandi:
+## <a name="commands"></a>Comandi
 |     |     |
 | --- | --- |
-[visualizzazione dello stato del pool BDC azdata](#azdata-bdc-pool-status-show) | Stato del pool.
-## <a name="azdata-bdc-pool-status-show"></a>visualizzazione dello stato del pool BDC azdata
+[azdata bdc pool status show](#azdata-bdc-pool-status-show) | Stato del pool.
+## <a name="azdata-bdc-pool-status-show"></a>azdata bdc pool status show
 Stato del pool.
 ```bash
 azdata bdc pool status show --kind -k 
@@ -41,7 +41,7 @@ Ottenere lo stato del pool di dati.
 ```bash
 azdata bdc pool status show --kind data --name default
 ```
-Ottenere lo stato del pool di risorse di calcolo.
+Ottenere lo stato del pool di calcolo.
 ```bash
 azdata bdc pool status show --kind compute --name default
 ```
@@ -55,23 +55,23 @@ azdata bdc pool status show --kind spark --name default
 ```
 ### <a name="required-parameters"></a>Parametri obbligatori
 #### `--kind -k`
-Tipo di pool di cluster Big Data.
+Tipo di pool del cluster Big Data.
 ### <a name="optional-parameters"></a>Parametri facoltativi
 #### `--name -n`
-Nome del pool di cluster Big Data.
+Nome del pool del cluster Big Data.
 `default`
 ### <a name="global-arguments"></a>Argomenti globali
 #### `--debug`
-Aumenta il livello di dettaglio di registrazione per mostrare tutti i log di debug.
+Aumenta il livello di dettaglio della registrazione per mostrare tutti i log di debug.
 #### `--help -h`
-Mostra questo messaggio della Guida e l'uscita.
+Visualizza questo messaggio della guida ed esce.
 #### `--output -o`
-Formato di output.  Valori consentiti: JSON, jsonc, Table, TSV.  Impostazione predefinita: JSON.
+Formato di output.  Valori consentiti: json, jsonc, table, tsv.  Valore predefinito: json.
 #### `--query -q`
-Stringa di query JMESPath. Per [http://jmespath.org/](http://jmespath.org/]) ulteriori informazioni ed esempi, vedere.
+Stringa di query JMESPath. Per altre informazioni ed esempi, vedere [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Aumenta il livello di dettaglio di registrazione. Usare --debug per i log di debug completi.
+Aumenta il livello di dettaglio della registrazione. Usare --debug per log di debug completi.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni su come installare lo strumento **azdata** , vedere [Install azdata to manage SQL Server 2019 Big Data Clusters](deploy-install-azdata.md).
+Per altre informazioni su come installare lo strumento **azdata**, vedere [Installare azdata per gestire i cluster Big Data di SQL Server 2019](deploy-install-azdata.md).

@@ -1,6 +1,6 @@
 ---
 title: Gestire SQL Server in Linux con PowerShell Core
-description: Questo articolo offre una panoramica dell'uso di PowerShell Core con SQL Server in Linux.
+description: Questo articolo offre una panoramica dell'uso di PowerShell core con SQL Server in Linux.
 ms.date: 04/22/2019
 ms.prod: sql
 ms.technology: linux
@@ -9,23 +9,23 @@ author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
 ms.openlocfilehash: d8d0675bbb7ebbedc9d1efec29fff8854670c10f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67952531"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>Gestire SQL Server in Linux con PowerShell Core
 
-Questo articolo introduce [SQL Server PowerShell](../powershell/sql-server-powershell.md) e illustra alcuni esempi su come usarlo con il Core di PowerShell (PS Core) in macOS e Linux. PowerShell Core è ora un progetto Open Source sul [GitHub](https://github.com/powershell/powershell).
+Questo articolo presenta [SQL Server PowerShell](../powershell/sql-server-powershell.md) e illustra alcuni esempi di come usarlo con PowerShell Core (PS Core) in macOS e Linux. PowerShell Core è ora un progetto open source in [GitHub](https://github.com/powershell/powershell).
 
 ## <a name="cross-platform-editor-options"></a>Opzioni dell'editor multipiattaforma
 
-Tutti i passaggi seguenti di PowerShell Core funzionerà in un terminale regolare oppure è possibile eseguirli da un terminale all'interno di Visual Studio Code o Data Studio di Azure.  Visual Studio Code sia Data Studio di Azure sono disponibili in macOS e Linux.  Per altre informazioni su Azure Data Studio, vedere [questa Guida introduttiva](https://docs.microsoft.com/sql/azure-data-studio/quickstart-sql-server).  È anche possibile provare a usare il [estensione PowerShell](https://docs.microsoft.com/sql/azure-data-studio/powershell-extension) appositamente.
+Tutti i passaggi di PowerShell Core seguenti funzioneranno in un terminale normale. In alternativa, è possibile eseguirli da un terminale all'interno di VS Code o di Azure Data Studio.  Sia VS Code che Azure Data Studio sono disponibili in macOS e Linux.  Per altre informazioni su Azure Data Studio, vedere [questo argomento di avvio rapido](https://docs.microsoft.com/sql/azure-data-studio/quickstart-sql-server).  È anche possibile usare l'[estensione PowerShell](https://docs.microsoft.com/sql/azure-data-studio/powershell-extension).
 
 ## <a name="installing-powershell-core"></a>Installazione di PowerShell Core
 
-Per altre informazioni sull'installazione di PowerShell Core in varie piattaforme supportate e sperimentale, vedere gli articoli seguenti:
+Per altre informazioni sull'installazione di PowerShell Core in varie piattaforme supportate e sperimentali, vedere gli articoli seguenti:
 
 - [Installazione di PowerShell Core in Windows](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6)
 - [Installazione di PowerShell Core in Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
@@ -34,7 +34,7 @@ Per altre informazioni sull'installazione di PowerShell Core in varie piattaform
 
 ## <a name="install-the-sqlserver-module"></a>Installare il modulo SqlServer
 
-Il `SqlServer` modulo viene mantenuto nel [PowerShell Gallery](https://www.powershellgallery.com/packages/SqlServer/). Quando si lavora con SQL Server, è consigliabile usare sempre la versione più recente del modulo SqlServer PowerShell.
+Il modulo `SqlServer` viene mantenuto in [PowerShell Gallery](https://www.powershellgallery.com/packages/SqlServer/). Quando si lavora con SQL Server, è consigliabile usare sempre la versione più recente del modulo di PowerShell SqlServer.
 
 Per installare il modulo SqlServer, aprire una sessione di PowerShell Core ed eseguire il codice seguente:
 
@@ -42,31 +42,31 @@ Per installare il modulo SqlServer, aprire una sessione di PowerShell Core ed es
 Install-Module -Name SqlServer
 ```
 
-Per altre informazioni su come installare il modulo SqlServer da PowerShell Gallery, vedere questo [pagina](../powershell/download-sql-server-ps-module.md).
+Per altre informazioni su come installare il modulo SqlServer da PowerShell Gallery, vedere questa [pagina](../powershell/download-sql-server-ps-module.md).
 
-## <a name="using-the-sqlserver-module"></a>Usando il modulo SqlServer
+## <a name="using-the-sqlserver-module"></a>Uso del modulo SqlServer
 
-Per iniziare, avviare PowerShell Core.  Se si usa macOS o Linux, aprire una *sessione terminal* nel computer e digitare **pwsh** per avviare una nuova sessione di PowerShell Core.  In Windows, usare <kbd>vincere</kbd>+<kbd>R</kbd>e il tipo `pwsh` per avviare una nuova sessione di PowerShell Core.
+Avviare PowerShell Core.  Se si usa macOS o Linux, aprire una *sessione del terminale* sul computer e digitare **pwsh** per avviare una nuova sessione di PowerShell Core.  In Windows usare <kbd>Win</kbd>+<kbd>R</kbd> e digitare `pwsh` per avviare una nuova sessione di PowerShell Core.
 
 ```
 pwsh
 ```
 
-SQL Server fornisce un modulo di PowerShell denominato **SqlServer**. È possibile usare la **SqlServer** module per importare i componenti di SQL Server (provider di SQL Server e i cmdlet) in un ambiente di PowerShell o script.
+SQL Server fornisce un modulo di PowerShell denominato **SqlServer**. È possibile usare il modulo **SqlServer** per importare i componenti di SQL Server (provider e cmdlet di SQL Server) in un ambiente o uno script di PowerShell.
 
-Copiare e incollare il comando seguente al prompt di PowerShell per importare i **SqlServer** modulo nella sessione corrente di PowerShell:
+Copiare e incollare il comando seguente al prompt di PowerShell per importare il modulo **SqlServer** nella sessione di PowerShell corrente:
 
 ```powershell
 Import-Module SqlServer
 ```
 
-Digitare il comando seguente al prompt di PowerShell per verificare che il **SqlServer** modulo è stato importato correttamente:
+Digitare il comando seguente al prompt di PowerShell per verificare che il modulo di **SqlServer** sia stato importato correttamente:
 
 ```powershell
 Get-Module -Name SqlServer
 ```
 
-PowerShell dovrebbe riportare informazioni simili all'output seguente:
+PowerShell dovrebbe visualizzare informazioni simili all'output seguente:
 
 ```
 ModuleType Version    Name          ExportedCommands
@@ -76,14 +76,14 @@ Script     21.1.18102 SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 
 ## <a name="connect-to-sql-server-and-get-server-information"></a>Connettersi a SQL Server e ottenere informazioni sul server
 
-La procedura seguente usa PowerShell Core per connettersi all'istanza di SQL Server in Linux e visualizzare un paio di proprietà del server.
+La procedura seguente usa PowerShell Core per connettersi all'istanza di SQL Server in Linux e visualizzare alcune proprietà del server.
 
-Copiare e incollare i comandi seguenti al prompt di PowerShell. Quando si eseguono questi comandi, verranno PowerShell:
-- Visualizzare una finestra di dialogo che richiede il nome host o indirizzo IP dell'istanza di
-- Visualizzare il *richiesta di credenziali di PowerShell* finestra di dialogo che richiede le credenziali. È possibile usare il *username SQL* e *password SQL* per connettersi all'istanza di SQL Server in Linux
-- Usare la **Get-SqlInstance** per connettersi alle **Server** e visualizzare alcune proprietà
+Copiare e incollare i comandi seguenti al prompt di PowerShell. Quando si eseguono questi comandi, PowerShell effettua le operazioni seguenti:
+- Visualizza una finestra di dialogo in cui viene richiesto il nome host o l'indirizzo IP dell'istanza
+- Visualizza la finestra di dialogo *PowerShell credential request* (Richiesta credenziali di PowerShell), in cui vengono richieste le credenziali. È possibile usare il *nome utente SQL* e la *password SQL* per connettersi all'istanza di SQL Server in Linux
+- Usare il cmdlet **Get-SqlInstance** per connettersi al **server** e visualizzare alcune proprietà
 
-Facoltativamente, è sufficiente sostituire il `$serverInstance` variabile con l'indirizzo IP o il nome host dell'istanza di SQL Server.
+Facoltativamente, è possibile sostituire la variabile `$serverInstance` con l'indirizzo IP o il nome host dell'istanza di SQL Server.
 
 ```powershell
 # Prompt for instance & credentials to login into SQL Server
@@ -95,7 +95,7 @@ Get-SqlInstance -ServerInstance $serverInstance -Credential $credential
 # done
 ```
 
-PowerShell dovrebbe riportare informazioni simili all'output seguente:
+PowerShell dovrebbe visualizzare informazioni simili all'output seguente:
 
 ```
 Instance Name                   Version    ProductLevel UpdateLevel  HostPlatform HostDistribution
@@ -104,15 +104,15 @@ your_server_instance            14.0.3048  RTM          CU13         Linux      
 ```
 
 > [!NOTE]
-> Se per questi valori viene visualizzato nulla, molto probabilmente la connessione all'istanza di SQL Server di destinazione non riuscita. Assicurarsi che è possibile usare le stesse informazioni di connessione per la connessione da SQL Server Management Studio. Rivedere poi i [consigli per la risoluzione dei problemi di connessione](sql-server-linux-troubleshooting-guide.md#connection).
+> Se non viene visualizzato nulla per questi valori, la connessione all'istanza di SQL Server di destinazione probabilmente non è riuscita. Verificare che sia possibile usare le stesse informazioni di connessione per connettersi da SQL Server Management Studio. Rivedere poi i [consigli per la risoluzione dei problemi di connessione](sql-server-linux-troubleshooting-guide.md#connection).
 
-## <a name="using-the-sql-server-powershell-provider"></a>Tramite il Provider PowerShell per SQL Server
+## <a name="using-the-sql-server-powershell-provider"></a>Uso del provider SQL Server PowerShell
 
-Un'altra opzione per la connessione all'istanza di SQL Server consiste nell'usare la [PowerShell Provider per SQL Server](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider).  Utilizzando il provider consente di passare l'istanza di SQL Server simile a come se si sono stati passando la struttura ad albero in Esplora oggetti, ma nella riga di comando.  Per impostazione predefinita questo provider viene presentato come un oggetto PSDrive denominato `SQLSERVER:\` che è possibile usare per connettersi ed esplorare le istanze di SQL Server che ha accesso l'account di dominio.  Visualizzare [passaggi di configurazione](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps) per informazioni su come configurare l'autenticazione di Active Directory per SQL Server in Linux.
+Un'altra opzione per connettersi all'istanza di SQL Server prevede l'uso del [provider SQL Server PowerShell](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider).  L'uso del provider consente di esplorare l'istanza di SQL Server come se si stesse esplorando la struttura ad albero in Esplora oggetti, ma nella riga di comando.  Per impostazione predefinita, questo provider viene presentato come unità PSDrive denominata `SQLSERVER:\`, che è possibile usare per connettersi alle istanze di SQL Server a cui l'account di dominio ha accesso ed esplorarle.  Per informazioni su come configurare l'autenticazione di Active Directory per SQL Server in Linux, vedere [Passaggi di configurazione](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps).
 
-È anche possibile usare l'autenticazione di SQL con il PowerShell Provider per SQL Server. A questo scopo, usare il `New-PSDrive` cmdlet per creare un nuovo dispositivo PSDrive e fornire le credenziali appropriate per la connessione.
+È anche possibile usare l'autenticazione di SQL con il provider SQL Server PowerShell. A questo scopo, usare il cmdlet `New-PSDrive` per creare una nuova unità PSDrive e immettere le credenziali appropriate per la connessione.
 
-In questo esempio riportato di seguito, si verrà visualizzato un esempio di come creare un nuovo dispositivo PSDrive mediante l'autenticazione SQL.
+Nell'esempio seguente viene illustrato come creare una nuova unità PSDrive usando l'autenticazione di SQL.
 
 ```powershell
 # NOTE: We are reusing the values saved in the $credential variable from the above example.
@@ -120,19 +120,19 @@ In questo esempio riportato di seguito, si verrà visualizzato un esempio di com
 New-PSDrive -Name SQLonDocker -PSProvider SqlServer -Root 'SQLSERVER:\SQL\localhost,10002\Default\' -Credential $credential
 ```
 
-È possibile verificare che l'unità è stata creata eseguendo la `Get-PSDrive` cmdlet.
+Per verificare che l'unità sia stata creata, eseguire il cmdlet `Get-PSDrive`.
 
 ```powershell
 Get-PSDrive
 ```
 
-Dopo aver creato il nuovo PSDrive, è possibile avviare lo spostamento.
+Dopo aver creato la nuova unità PSDrive, è possibile iniziare a esplorarla.
 
 ```powershell
 dir SQLonDocker:\Databases
 ```
 
-Ecco ciò che l'output potrebbe essere simile.  Si può notare questo output è simile a ciò che SSMS verrà visualizzato nel nodo database.  Visualizza i database utente, ma non i database di sistema.
+L'output potrebbe essere simile al seguente.  È possibile notare che questo output è simile a quello che verrà visualizzato da SSMS nel nodo Databases.  Visualizza i database utente, ma non i database di sistema.
 
 ```powershell
 Name                 Status           Size     Space  Recovery Compat. Owner
@@ -145,11 +145,11 @@ AdventureWorksDW2016 Normal      172.00 MB   74.76 MB Simple       130 sa
 AdventureWorksDW2017 Normal      208.00 MB   40.57 MB Simple       140 sa
 ```
 
-Se si desidera vedere tutti i database sull'istanza, una possibilità consiste nell'utilizzare il `Get-SqlDatabase` cmdlet.
+Se è necessario visualizzare tutti i database dell'istanza, è possibile usare il cmdlet `Get-SqlDatabase`.
 
 ## <a name="get-databases"></a>Ottenere i database
 
-È un cmdlet importante conoscere il `Get-SqlDatabase`.  Per molte operazioni che coinvolgono un database o oggetti all'interno di un database, il `Get-SqlDatabase` cmdlet può essere utilizzato.  Se si specificano valori per entrambe le `-ServerInstance` e `-Database` verranno recuperati i parametri, solo tale oggetto di un database.  Tuttavia, se si specifica solo il `-ServerInstance` parametro, verrà restituito un elenco completo di tutti i database in tale istanza.
+Un cmdlet importante da conoscere è `Get-SqlDatabase`.  Per molte operazioni che coinvolgono un database o gli oggetti all'interno di un database, è possibile usare il cmdlet `Get-SqlDatabase`.  Se si specificano i valori per entrambi i parametri `-ServerInstance` e `-Database`, verrà recuperato solo l'oggetto di database.  Se tuttavia si specifica solo il parametro `-ServerInstance`, verrà restituito un elenco completo di tutti i database di tale istanza.
 
 ```powershell
 # NOTE: We are reusing the values saved in the $credential variable from the above example.
@@ -158,7 +158,7 @@ Se si desidera vedere tutti i database sull'istanza, una possibilità consiste n
 Get-SqlDatabase -ServerInstance ServerB -Credential $credential
 ```
 
-Ecco un esempio di ciò che potrebbe essere restituito dal comando Get-SqlDatabase precedente:
+Di seguito è riportato un esempio di output restituito dal comando Get-SqlDatabase precedente:
 
 ```powershell
 Name                 Status           Size     Space  Recovery Compat. Owner
@@ -178,14 +178,14 @@ tempdb               Normal       16.00 MB    5.49 MB Simple       140 sa
 
 ## <a name="examine-sql-server-error-logs"></a>Esaminare i log degli errori di SQL Server
 
-La procedura seguente usa PowerShell Core per esaminare l'errore di connessione di log nell'istanza di SQL Server in Linux.
+La procedura seguente usa PowerShell Core per esaminare i log degli errori connettendosi all'istanza di SQL Server in Linux.
 
-Copiare e incollare i comandi seguenti al prompt di PowerShell. Si potrebbero richiedere alcuni minuti per l'esecuzione. Questi comandi procedere come segue:
-- Visualizzare una finestra di dialogo che richiede il nome host o indirizzo IP dell'istanza di
-- Visualizzare il *richiesta di credenziali di PowerShell* finestra di dialogo in cui vengono richieste le credenziali. È possibile usare il *username SQL* e *password SQL* per connettersi all'istanza di SQL Server in Linux
-- Usare il **Get-SqlErrorLog** log di cmdlet per connettersi all'istanza di SQL Server in Linux e recuperare l'errore poiché **ieri**
+Copiare e incollare i comandi seguenti al prompt di PowerShell. L'esecuzione dei comandi potrebbe richiedere alcuni minuti. Questi comandi eseguono i passaggi seguenti:
+- Visualizzano una finestra di dialogo in cui viene richiesto il nome host o l'indirizzo IP dell'istanza
+- Visualizzano la finestra di dialogo *PowerShell credential request* (Richiesta credenziali di PowerShell), in cui vengono richieste le credenziali. È possibile usare il *nome utente SQL* e la *password SQL* per connettersi all'istanza di SQL Server in Linux
+- Usare il cmdlet **Get-SqlErrorLog** per connettersi all'istanza di SQL Server in Linux e recuperare i log degli errori da ieri (**Yesterday**)
 
-Facoltativamente, è possibile sostituire il `$serverInstance` variabile con l'indirizzo IP o il nome host dell'istanza di SQL Server.
+Facoltativamente, è possibile sostituire la variabile `$serverInstance` con l'indirizzo IP o il nome host dell'istanza di SQL Server.
 
 ```powershell
 # Prompt for instance & credentials to login into SQL Server
@@ -197,10 +197,10 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 # done
 ```
 
-## <a name="explore-cmdlets-currently-available-in-ps-core"></a>Esplorare i cmdlet è attualmente disponibili in Powershell Core
-Mentre il modulo SqlServer ha attualmente 106 cmdlet disponibili in Windows PowerShell, sono disponibili in PSCore 59 solo del 106. Di seguito è incluso un elenco completo dei 59 cmdlet attualmente disponibili.  Per documentazione approfondita di tutti i cmdlet nel modulo SqlServer, vedere SqlServer [riferimento ai cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/).
+## <a name="explore-cmdlets-currently-available-in-ps-core"></a>Esplorare i cmdlet attualmente disponibili in PS core
+Nonostante il modulo SqlServer abbia attualmente 106 cmdlet disponibili in Windows PowerShell, in PSCore ne sono disponibili solo 59. Di seguito è riportato un elenco completo dei 59 cmdlet attualmente disponibili.  Per una documentazione dettagliata di tutti i cmdlet del modulo SqlServer, vedere le [informazioni di riferimento sui cmdlet](https://docs.microsoft.com/powershell/module/sqlserver/) di SqlServer.
 
-Il comando seguente illustra tutti i cmdlet disponibili nella versione di PowerShell in uso.
+Il comando seguente consente di visualizzare tutti i cmdlet disponibili nella versione di PowerShell in uso.
 
 ```powershell
 Get-Command -Module SqlServer -CommandType Cmdlet |
@@ -258,7 +258,7 @@ SELECT Name
 - New-SqlHADREndpoint
 - Set-SqlHADREndpoint
 - Get-SqlInstance
-- Aggiungere-SqlLogin
+- Add-SqlLogin
 - Remove-SqlLogin
 - Get-SqlLogin
 - Set-SqlSmartAdmin

@@ -1,7 +1,7 @@
 ---
-title: Gestire i notebook in Azure Data Studio
+title: Gestire notebook in Azure Data Studio
 titleSuffix: SQL Server big data clusters
-description: Informazioni su come gestire i notebook in Azure Data Studio. Ciò include l'apertura di notebook, essi un notevole risparmio e modificando la connessione di cluster di big data.
+description: Informazioni su come gestire notebook in Azure Data Studio, inclusi l'apertura di un notebook, il relativo salvataggio e la modifica della connessione del cluster Big Data.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,74 +10,74 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 5417166ea69abe726f47b6bf2adede4b937d5b00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958285"
 ---
-# <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Come gestire i notebook in Azure Data Studio
+# <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Come gestire notebook in Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Questo articolo illustra come aprire e salvare i file di notebook in Azure Data Studio con l'anteprima di SQL Server 2019. Viene inoltre illustrato come modificare la connessione al cluster SQL Server i big Data.
+Questo articolo descrive come aprire e salvare file di notebook in Azure Data Studio con SQL Server 2019 (anteprima). Illustra inoltre come modificare la connessione al cluster Big Data di SQL Server.
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-Questo articolo presuppone che si disponga già di un notebook che si desidera usare in Azure Data Studio. Se si desidera creare un notebook, vedere [come usare i notebook in fase di anteprima di SQL Server 2019](notebooks-guidance.md). Per usare i notebook in Azure Data Studio, è necessario soddisfare i prerequisiti seguenti:
+Questo articolo presuppone che si disponga già di un notebook che si vuole usare in Azure Data Studio. Se si vuole creare un notebook, vedere [Come usare i notebook in SQL Server 2019 (anteprima)](notebooks-guidance.md). Per poter usare i notebook in Azure Data Studio, è necessario soddisfare i prerequisiti seguenti:
 
-- [Distribuire un cluster di big data](quickstart-big-data-cluster-deploy.md).
-- [Strumenti di big data di SQL Server 2019](deploy-big-data-tools.md):
+- [Distribuire un cluster Big Data](quickstart-big-data-cluster-deploy.md).
+- [Strumenti per Big Data di SQL Server 2019](deploy-big-data-tools.md):
    - **Azure Data Studio**
    - **Estensione di SQL Server 2019**
    - **kubectl**
 
-## <a name="open-a-notebook"></a>Apre un notebook
+## <a name="open-a-notebook"></a>Aprire un notebook
 
-Esistono diversi modi per aprire la **aprire Notebook** finestra di dialogo. È possibile usare il menu File, il Dashboard e il riquadro comandi. Le sezioni seguenti descrivono ogni metodo.
+Sono disponibili vari modi per aprire la finestra di dialogo **Open Notebook** (Apri notebook): è possibile usare il menu file, il dashboard e il riquadro comandi. Nelle sezioni seguenti vengono descritti i vari metodi.
 
-### <a name="file-menu"></a>Menu file
+### <a name="file-menu"></a>Menu File
 
-Selezionare **Apri File** dal menu File Cmd + O (nel Mac) e Ctrl + O (in Windows).
+Selezionare **Apri file** dal menu File: CTRL + O (in Windows) e Cmd+O (in Mac).
 
-![Aprire la finestra di dialogo Apri File selezionare Apri File](./media/notebooks-how-to-manage/open-file-1.png) 
+![Aprire la finestra di dialogo Apri file selezionando Apri file](./media/notebooks-how-to-manage/open-file-1.png) 
 
-### <a name="dashboard"></a>dashboard
+### <a name="dashboard"></a>Dashboard
 
-Fare clic su **aprire Notebook** nel dashboard per aprire la finestra di dialogo Apri File.
+Fare clic su **Open Notebook** (Apri notebook) nel dashboard per aprire la finestra di dialogo Apri file.
 
-![Aprire la finestra di dialogo Apri File selezionare aprire Notebook nel dashboard](./media/notebooks-how-to-manage/open-file-2.png) 
+![Aprire la finestra di dialogo Apri file selezionando Open Notebook (Apri notebook) nel dashboard](./media/notebooks-how-to-manage/open-file-2.png) 
 
 ### <a name="command-palette"></a>Riquadro comandi
 
-Usare comandi **File: Apri** nel riquadro comandi digitando Cmd + MAIUSC + P (nel Mac) e Ctrl + MAIUSC + P (in Windows).
+Usare il comando **File: Aprire**  dal riquadro comandi digitando CTRL+MAIUSC+P (in Windows) o CMD+MAIUSC+P (in Mac).
 
-![Aprire la finestra di dialogo Apri File immettendo File:Open nel riquadro comandi](./media/notebooks-how-to-manage/open-file-3.png)
+![Aprire la finestra di dialogo Apri file digitando File:Apri nel riquadro comandi](./media/notebooks-how-to-manage/open-file-3.png)
 
-## <a name="save-a-notebook"></a>Salva un notebook
+## <a name="save-a-notebook"></a>Salvare un notebook
 
-È attualmente un modo per salvare un notebook. È necessario selezionare **salvare** nella barra degli strumenti del blocco appunti.
+È attualmente disponibile un solo modo per salvare un notebook. È necessario selezionare **Salva** dalla barra degli strumenti del notebook.
 
-![Salva File, fare clic su Salva nella barra degli strumenti del blocco appunti](./media/notebooks-how-to-manage/save-file-1.png)
+![Salvare il file facendo clic su Salva sulla barra degli strumenti del notebook](./media/notebooks-how-to-manage/save-file-1.png)
 
 > [!NOTE]
-> I metodi seguenti attualmente non salvano le modifiche ai blocchi appunti:
+> I metodi seguenti non consentono attualmente di salvare modifiche sui notebook:
 >
-> - **Salva file**, **Salva File con nome...**  e **File Salva tutto** comandi dal menu File.
-> - **File: Salvare** comandi immessi nel riquadro comandi.
+> - Comandi **Salva file**, **Salva file con nome...** e **Salva tutto** dal menu File.
+> - Comando **File: Salva** immessi nel riquadro comandi.
 
-## <a name="change-the-big-data-cluster"></a>Modificare i cluster di big data
+## <a name="change-the-big-data-cluster"></a>Modificare il cluster Big Data
 
-Per modificare i cluster di big data di SQL Server per un notebook:
+Per modificare il cluster Big Data di SQL Server per un notebook:
 
-1. Fare clic sui **Collega a** menu nella barra degli strumenti del blocco appunti.
+1. Fare clic sul menu **Associa a** sulla barra degli strumenti del notebook.
 
-   ![Fare clic su Connetti a menu sulla barra degli strumenti del blocco appunti](./media/notebooks-how-to-manage/select-attach-to-1.png)
+   ![Fare clic sul menu "Associa a" sulla barra degli strumenti del notebook](./media/notebooks-how-to-manage/select-attach-to-1.png)
 
-2. Fare clic su un server dal **Collega a** menu.
+2. Scegliere un server dal menu **Associa a**.
 
-   ![Selezionare un server dal collegamento al menu](./media/notebooks-how-to-manage/select-attach-to-2.png)
+   ![Selezionare un server dal menu Associa a.](./media/notebooks-how-to-manage/select-attach-to-2.png)
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni su notebook in Azure Data Studio, vedere [come usare i notebook in fase di anteprima di SQL Server 2019](notebooks-guidance.md).
+Per altre informazioni sui notebook in Azure Data Studio, vedere [Come usare i notebook nella versione di anteprima di SQL Server 2019](notebooks-guidance.md).

@@ -1,7 +1,7 @@
 ---
 title: Terminale integrato
 titleSuffix: Azure Data Studio
-description: Scopri il terminale integrato in Azure Data Studio.
+description: Informazioni sul terminale integrato in Azure Data Studio.
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
@@ -11,45 +11,45 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959530"
 ---
 # <a name="integrated-terminal"></a>Terminale integrato
 
-In [!INCLUDE[name-sos](../includes/name-sos-short.md)] è possibile aprire un terminale integrato, avviato inizialmente dalla radice dell'area di lavoro. Ciò risulta utile poiché elimina la necessità di passare da una finestra all'altra o di modificare lo stato di un terminale esistente per eseguire un'attività rapida dalla riga di comando.
+In [!INCLUDE[name-sos](../includes/name-sos-short.md)] è possibile aprire un terminale integrato, partendo inizialmente dalla radice dell'area di lavoro. Questo può essere utile perché non è necessario cambiare finestra o modificare lo stato di un terminale esistente per eseguire una rapida attività dalla riga di comando.
 
 Per aprire il terminale:
 
-* Premere **Ctrl+`** con il carattere apice inverso.
-* Selezionare il comando **Terminale integrato** |  dal menu **Visualizza**.
-* Dal **riquadro comandi** (**CTRL+MAIUSC+P**) scegliere il comando **Visualizza: Attiva/Disattiva terminale integrato**.
+* Usare la scelta rapida da tastiera **CTRL+`** con il carattere apice inverso.
+* Usare il comando di menu **Visualizza** | **Terminale integrato**.
+* Dal **riquadro comandi** (**CTRL+MAIUSC+P**) usare il comando **Visualizza:Attiva/Disattiva terminale integrato**.
 
 ![Terminale](media/integrated-terminal/terminal-screen.png)
 
 > [!NOTE]
-> È comunque possibile aprire una shell esterna con il **comando Apri nel prompt dei comandi di Esplora risorse** (**Apri nel terminale** in Mac o Linux) se si preferisce lavorare all'esterno di [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+> È comunque possibile aprire una shell esterna con il comando **Apri nel prompt dei comandi** di Explorer (**Apri nel terminale** in Mac o Linux) se si preferisce lavorare all'esterno di [!INCLUDE[name-sos](../includes/name-sos-short.md)].
 
 ## <a name="managing-multiple-terminals"></a>Gestione di più terminali
 
-È possibile creare più terminali aperti in diverse posizioni e spostarsi facilmente tra di essi È possibile infatti aggiungere più istanze del terminale facendo clic sull'icona "+" (più) in alto a destra del pannello **TERMINALE** o premendo **Ctrl+Maiusc+`** . Ogni istanza creata aggiunge un'altra voce nell'elenco a discesa in alto a destra, il quale può essere usato per selezionare i vari terminali.
+È possibile creare più terminali aperti in posizioni diverse e spostarsi facilmente tra di essi. Per aggiungere istanze del terminale, fare clic sull'icona con il segno più in alto a destra nel pannello **TERMINALE** o usare il comando **CTRL+MAIUSC+`** . Verrà creata un'altra voce nell'elenco a discesa, che può essere usata per spostarsi tra i terminali.
 
 ![Più terminali](media/integrated-terminal/terminal-multiple-instances.png)
 
-Per rimuovere le istanze create premere l'icona del cestino.
+Rimuovere istanze del terminale facendo clic sul pulsante del cestino.
 
 > [!TIP]
-> Se vengono usati spesso più terminali, è possibile aggiungere tasti di scelta rapida per i comandi `focusNext`, `focusPrevious` e `kill` descritti nella [sezione Tasti di scelta rapida](#key-bindings) per spostarsi da un terminale all'altro usando solo la tastiera.
+> Se si usano frequentemente più terminali, è possibile aggiungere tasti di scelta rapida per i comandi `focusNext`, `focusPrevious` e `kill` descritti nella [sezione Tasti di scelta rapida](#key-bindings), per consentire gli spostamenti tra i terminali mediante la sola tastiera.
 
 ## <a name="configuration"></a>Configurazione
 
-L'impostazione predefinita della shell usata è `$SHELL` in Linux e macOS, PowerShell in Windows 10 e cmd.exe nelle versioni precedenti di Windows. L'impostazione può essere ignorata manualmente impostando `terminal.integrated.shell.*` nelle [impostazioni](settings.md). Gli argomenti possono essere passati alla shell del terminale in Linux e macOS usando l'impostazione `terminal.integrated.shellArgs.*`.
+La shell usata è per impostazione predefinita `$SHELL` in Linux e MacOS, PowerShell in Windows 10 e cmd.exe nelle versioni precedenti di Windows. È possibile eseguire l'override di questi valori manualmente impostando `terminal.integrated.shell.*` nelle [impostazioni](settings.md). È possibile passare argomenti alla shell del terminale in Linux e MacOS usando le impostazioni `terminal.integrated.shellArgs.*`.
 
 ### <a name="windows"></a>Windows
 
-Configurare correttamente la shell in Windows corrisponde ad individuare il file eseguibile corretto e aggiornare l'impostazione. Di seguito un elenco di file eseguibili di shell comuni e i percorsi predefiniti:
+Per configurare correttamente la shell in Windows occorre individuare l'eseguibile corretto e aggiornare l'impostazione. Di seguito è riportato un elenco di file eseguibili della shell comuni e delle rispettive posizioni predefinite:
 
 ```json
 // 64-bit cmd if available, otherwise 32-bit
@@ -63,16 +63,16 @@ Configurare correttamente la shell in Windows corrisponde ad individuare il file
 ```
 
 > [!NOTE]
-> Per essere utilizzato come un terminale integrato, il file eseguibile della shell deve essere un'applicazione console in modo che `stdin/stdout/stderr` possano essere reindirizzati.
+> Per poter essere usato come terminale integrato, il file eseguibile della shell deve essere un'applicazione console, in modo che sia possibile reindirizzare `stdin/stdout/stderr`.
 
 > [!TIP]
-> La shell del terminale integrato viene eseguita con le autorizzazioni di [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Se è necessario eseguire un comando della shell con autorizzazioni elevate (amministratore) o diverse, è possibile usare le utilità della piattaforma, ad esempio `runas.exe`, all'interno di un terminale.
+> La shell del terminale integrato viene eseguita con le autorizzazioni di [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Se è necessario eseguire un comando della shell con privilegi elevati (amministratore) o con autorizzazioni diverse, è possibile servirsi di utilità della piattaforma, ad esempio `runas.exe`, all'interno di un terminale.
 
 ### <a name="shell-arguments"></a>Argomenti della shell
 
-Quando viene avviata, è possibile passare argomenti alla shell.
+È possibile passare argomenti alla shell quando viene avviata.
 
-Ad esempio, per eseguire bash come una shell di account di accesso (viene eseguito `.bash_profile`), passare l'argomento `-l` (tra virgolette doppie):
+Ad esempio, per abilitare l'esecuzione di bash come shell di accesso (che esegue `.bash_profile`), passare l'argomento `-l` con virgolette doppie:
 
 ```json
 // Linux
@@ -81,7 +81,7 @@ Ad esempio, per eseguire bash come una shell di account di accesso (viene esegui
 
 ## <a name="terminal-display-settings"></a>Impostazioni di visualizzazione del terminale
 
-È possibile personalizzare il carattere e l'altezza della riga nel terminale integrato con le seguenti impostazioni:
+È possibile personalizzare il tipo di carattere e l'altezza della riga del terminale integrato con le impostazioni seguenti:
 
 * `terminal.integrated.fontFamily`
 * `terminal.integrated.fontSize`
@@ -89,65 +89,65 @@ Ad esempio, per eseguire bash come una shell di account di accesso (viene esegui
 
 ## <a id="key-bindings"></a>Tasti di scelta rapida del terminale
 
-Il **Vista: Attiva/Disattiva terminale integrato** comando è associato a **Ctrl +'** per passare rapidamente il pannello terminale integrato da e verso visualizzazione.
+Il comando **Visualizza: Attiva/Disattiva terminale integrato** è associato a **CTRL+`** per includere o escludere rapidamente il pannello terminale integrato dalla visualizzazione.
 
-Di seguito sono elencati i tasti di scelta rapida per spostarsi rapidamente nel terminale integrato:
+Di seguito sono riportate le scelte rapide da tastiera per spostarsi rapidamente all'interno del terminale integrato:
 
 |Key|Comando|  
 |---|---|  
-|**CTRL +\`**|Mostra terminale integrato|  
-|**CTRL + MAIUSC +\`**|Crea un nuovo terminale|  
-|**CTRL+freccia su**|Scorre verso l'alto|  
-|**CTRL+freccia giù**|Scorre verso il basso|  
-|**CTRL+PGSU**|Scorre di una pagina verso l'alto|  
-|**CTRL+PGGIÙ**|Scorre di una pagina verso il basso|  
-|**CTRL+Home**|Scorre fino all'inizio|  
-|**CTRL + fine**|Scorrere verso il basso|  
-|**CTRL+K**|Cancella il contenuto del terminale|  
+|**CTRL+\`**|Mostra terminale integrato|  
+|**CTRL+MAIUSC+\`**|Crea nuovo terminale|  
+|**CTRL+freccia SU**|Scorri verso l'alto|  
+|**CTRL+freccia GIÙ**|Scorri verso il basso|  
+|**CTRL+PGSU**|Scorri pagina verso l'alto|  
+|**CTRL+PGGIÙ**|Scorri pagina verso il basso|  
+|**CTRL+HOME**|Scorri all'inizio|  
+|**CTRL+FINE**|Scorri alla fine|  
+|**CTRL+K**|Cancella il terminale|  
 
-Sono disponibili altri comandi e possono essere associati ai tasti di scelta rapida che preferite.
+Sono disponibili altri comandi del terminale che è possibile associare alle scelte rapida da tastiera preferite.
 
-Sono:
+ovvero:
 
-* `workbench.action.terminal.focus`: Lo stato attivo al terminale. Corrisponde all'attivazione/disattivazione ma imposta lo stato attivo del terminale anziché nasconderlo, quando è visibile.
-* `workbench.action.terminal.focusNext`: Illustra l'istanza successiva terminal.
-* `workbench.action.terminal.focusPrevious`: Si concentra la precedente istanza terminal.
-* `workbench.action.terminal.kill`: Rimuovere l'istanza di terminale corrente.
-* `workbench.action.terminal.runSelectedText`: Eseguire il testo selezionato nell'istanza del terminale.
-* `workbench.action.terminal.runActiveFile`: Eseguire il file attivo nell'istanza del terminale.
+* `workbench.action.terminal.focus`: Sposta stato attivo sul terminale. Questo comando è simile ad Attiva/Disattiva terminale integrato, ma se il terminale è visibile sposta lo stato attivo su di esso invece di nasconderlo.
+* `workbench.action.terminal.focusNext`: Sposta stato attivo sull'istanza del terminale successiva.
+* `workbench.action.terminal.focusPrevious`: Sposta stato attivo sull'istanza del terminale precedente.
+* `workbench.action.terminal.kill`: Rimuovi l'istanza del terminale corrente.
+* `workbench.action.terminal.runSelectedText`: Esegui il testo selezionato nell'istanza del terminale.
+* `workbench.action.terminal.runActiveFile`: Esegui il file attivo nell'istanza del terminale.
 
 ### <a name="run-selected-text"></a>Eseguire il testo selezionato
 
-Usare la `runSelectedText` comando, selezionare il testo in un editor ed eseguire il comando **Terminal: Esecuzione del testo selezionato nel terminale Active** tramite il **riquadro comandi** (**Ctrl + MAIUSC + P**). Il terminale tenta di eseguire il testo selezionato:
+Per usare il comando `runSelectedText`, selezionare testo in un editor ed eseguire il comando **Terminale: Esegui testo selezionato nel terminale attivo** tramite il **riquadro comandi** (**CTRL+MAIUSC+P**). Il terminale tenta di eseguire il testo selezionato:
 
 ![Eseguire il testo selezionato](media/integrated-terminal/terminal_run_selected.png)
 
-Se non è selezionato alcun testo nell'editor attivo, viene eseguita nel terminale la riga su cui si trova il cursore.
+Se nell'editor attivo non è selezionato alcun testo, nel terminale viene eseguita la riga in cui si trova il cursore.
 
-### <a name="copy--paste"></a>Copia e Incolla
+### <a name="copy--paste"></a>Copiare e incollare
 
-I tasti di scelta rapida per copiare e incollare seguono gli standard di piattaforma:
+I tasti di scelta rapida per copiare e incollare seguono gli standard della piattaforma:
 
-* Linux: **CTRL + MAIUSC + C** e **Ctrl + MAIUSC + V**
-* Mac: **Cmd + C** e **Cmd + V**
-* Windows: **CTRL + C** e **Ctrl + V**
+* Linux: **CTRL+MAIUSC+C** e **CTRL+MAIUSC+V**
+* Mac: **CMD+C** e **CMD+V**
+* Windows: **CTRL+C** e **CTRL+V**
 
 ### <a name="find"></a>Trova
 
-Il terminale integrato dispone di una funzionalità di ricerca di base attivabile tramite **Ctrl+F**.
+Il terminale integrato ha una funzionalità di ricerca di base che è possibile attivare con **CTRL+F**.
 
-Se si desidera che **Ctrl+F** venga eseguito sulla shell anziché come ricerca in Linux e Windows, è necessario rimuovere il tasto di scelta rapida:
+Se si vuole che **CTRL+F** passi alla shell anziché avviare il widget Trova in Linux e Windows, è necessario rimuovere il tasto di scelta rapida, come indicato di seguito:
 
 ```js
 { "key": "ctrl+f", "command": "-workbench.action.terminal.focusFindWidget",
                       "when": "terminalFocus" },
 ```
 
-### <a name="rename-terminal-sessions"></a>Rinominare le sessioni del terminale
+### <a name="rename-terminal-sessions"></a>Rinominare sessioni del terminale
 
-Le sessioni terminale integrate possono essere rinominate ora utilizzando il **Terminal: Rinominare** (`workbench.action.terminal.rename`) comandi. Il nuovo nome viene visualizzato in terminal selezione elenco a discesa.
+È ora possibile rinominare le sessioni del terminale integrato usando il comando **Terminale: Rinomina** (`workbench.action.terminal.rename`). Il nuovo nome viene visualizzato nell'elenco a discesa di selezione del terminale.
 
-### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>Utilizzo forzato di tasti di scelta rapida per il passaggio tra i terminali
+### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>Imporre ai tasti di scelta rapida l'attraversamento del terminale
 
-Mentre il terminale integrato è attivo, molti tasti di scelta rapida non funzioneranno perché tali sequenze sono utilizzati dal terminale stesso. L'impostazione `terminal.integrated.commandsToSkipShell` può essere utilizzata per risolvere il problema. Contiene una matrice di nomi di comando con tasti di scelta rapida ignorare l'elaborazione, la shell e invece essere elaborati dal [!INCLUDE[name-sos](../includes/name-sos-short.md)] sistema di associazione della chiave. Per impostazione predefinita, questo include tutti i tasti di scelta rapida del terminale più una selezione di alcuni dei più comuni tasti di scelta rapida.
+Quando lo stato attivo è sul terminale integrato, molti tasti di scelta rapida non funzioneranno perché le pressioni di tasti vengono passate e utilizzate dal terminale stesso. Per aggirare questo problema, è possibile usare l'impostazione `terminal.integrated.commandsToSkipShell`. Contiene una matrice di nomi di comandi i cui tasti di scelta rapida ignorano l'elaborazione da parte della shell e vengono invece elaborati dal sistema dei tasti di scelta rapida di [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Per impostazione predefinita sono inclusi tutti i tasti di scelta del terminale, oltre ad alcuni tasti di scelta rapida di uso frequente.
 

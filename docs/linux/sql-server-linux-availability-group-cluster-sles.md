@@ -1,7 +1,7 @@
 ---
-title: Configurare Cluster SLES per gruppo di disponibilità di SQL Server
+title: Configurare un cluster SLES per un gruppo di disponibilità di SQL Server
 titleSuffix: SQL Server
-description: Informazioni su come creare cluster di gruppo di disponibilità per SQL Server su SUSE Linux Enterprise Server (SLES)
+description: Informazioni su come creare cluster di un gruppo di disponibilità per SQL Server in SUSE Linux Enterprise Server (SLES)
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -11,46 +11,46 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.openlocfilehash: 063adf4f1f180138150484e4ac9fc397ef886f5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68003556"
 ---
-# <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurare Cluster SLES per gruppo di disponibilità di SQL Server
+# <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurare un cluster SLES per un gruppo di disponibilità di SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Questa guida fornisce istruzioni per creare un cluster a tre nodi per SQL Server su SUSE Linux Enterprise Server (SLES) 12 SP2. Per la disponibilità elevata, un gruppo di disponibilità in Linux richiede tre nodi, vedere la [elevata disponibilità e protezione dei dati per le configurazioni di gruppo di disponibilità](sql-server-linux-availability-group-ha.md). Il livello di clustering si basa su SUSE [estensione a disponibilità elevata (Georgiano)](https://www.suse.com/products/highavailability) costruita basandosi su [Pacemaker](https://clusterlabs.org/). 
+Questo documento include le istruzioni per la creazione di un cluster a tre nodi per SQL Server in SUSE Linux Enterprise Server (SLES) 12 SP2. Per la disponibilità elevata, un gruppo di disponibilità in Linux richiede tre nodi. Vedere [Disponibilità elevata e protezione dei dati per le configurazioni del gruppo di disponibilità](sql-server-linux-availability-group-ha.md). Il livello di clustering si basa su SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability), a sua volta basato su [Pacemaker](https://clusterlabs.org/). 
 
-Per altre informazioni su configurazione del cluster, opzioni dell'agente di risorsa, gestione, le procedure consigliate e indicazioni, vedere [SUSE Linux Enterprise ad alta disponibilità estensione 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
+Per altre informazioni su configurazione dei cluster, opzioni degli agenti delle risorse, gestione, procedure consigliate e suggerimenti, vedere [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
 >[!NOTE]
->A questo punto, l'integrazione con Pacemaker in Linux SQL Server non è accoppiato come con WSFC per Windows. Servizio SQL Server in Linux non è compatibile con i cluster. Pacemaker controlla tutti l'orchestrazione delle risorse del cluster, tra cui la risorsa del gruppo di disponibilità. In Linux, è consigliabile limitarsi a sempre nella disponibilità gruppo di viste a gestione dinamica (DMV) che forniscono informazioni sul cluster, ad esempio hadr_cluster. Inoltre, nome di rete virtuale è specifico al cluster WSFC, è disponibile un equivalente dello stesso in Pacemaker. È comunque possibile creare un listener per usarlo per la riconnessione dopo il failover trasparente, ma si dovrà registrare manualmente il nome del listener nel server DNS con l'indirizzo IP usato per creare la risorsa IP virtuale (come illustrato nelle sezioni seguenti).
+>A questo punto, l'integrazione di SQL Server con Pacemaker in Linux non è associata come con il cluster WSFC in Windows. Il servizio SQL Server in Linux non è compatibile con i cluster. Pacemaker controlla tutta l'orchestrazione delle risorse cluster, inclusa la risorsa del gruppo di disponibilità. In Linux non è consigliabile fare affidamento sulle DMV dei gruppi di disponibilità Always On che forniscono informazioni sul cluster come sys.dm_hadr_cluster. Inoltre, il nome della rete virtuale è specifico di WSFC e non esiste un equivalente in Pacemaker. È comunque possibile creare un listener per la riconnessione trasparente dopo il failover, ma sarà necessario registrare manualmente il nome del listener nel server DNS con l'indirizzo IP usato per creare la risorsa IP virtuale, come illustrato nelle sezioni seguenti.
 
 
-## <a name="roadmap"></a>Guida di orientamento
+## <a name="roadmap"></a>Roadmap
 
-La procedura per la creazione di un gruppo di disponibilità per la disponibilità elevata varia tra i server Linux e un cluster di failover di Windows Server. L'elenco seguente descrive i passaggi generali: 
+La procedura per la creazione di un gruppo di disponibilità per la disponibilità elevata è diversa tra i server Linux e un cluster di failover di Windows Server. Nell'elenco seguente sono descritti i passaggi principali: 
 
 1. [Configurare SQL Server nei nodi del cluster](sql-server-linux-setup.md).
 
 2. [Creare il gruppo di disponibilità](sql-server-linux-availability-group-failover-ha.md). 
 
-3. Configurare un cluster di resource manager, ad esempio Pacemaker. Queste istruzioni sono in questo documento.
+3. Configurare un modulo per la gestione di risorse cluster, ad esempio Pacemaker. Le istruzioni sono riportate in questo documento.
    
-   Il modo per configurare un gestore di risorse cluster dipende la distribuzione Linux specifica. 
+   La modalità di configurazione di un modulo per la gestione di risorse cluster dipende dalla specifica distribuzione Linux. 
 
    >[!IMPORTANT]
-   >Gli ambienti di produzione richiedono un agente di isolamento, ad esempio STONITH per la disponibilità elevata. Gli esempi in questo articolo non usano gli agenti di fencing. Sono per i test e convalida solo. 
+   >Per la disponibilità elevata, negli ambienti di produzione è necessario un agente di isolamento, ad esempio STONITH. Gli esempi in questo articolo non usano agenti di isolamento. Sono illustrati solo a scopo di test e convalida. 
    
-   >Un cluster Pacemaker Usa fencing per restituire il cluster a uno stato noto. Il modo per configurare l'isolamento varia a seconda della distribuzione e l'ambiente. A questo punto, l'isolamento non è disponibile in alcuni ambienti cloud. Visualizzare [estensione di disponibilità elevata di SUSE Linux Enterprise](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing).
+   >Un cluster Pacemaker usa l'isolamento per ripristinare uno stato noto del cluster. La modalità di configurazione dell'isolamento dipende dalla distribuzione e dall'ambiente. Attualmente l'isolamento non è disponibile in alcuni ambienti cloud. Vedere [SUSE Linux Enterprise High Availability Extension](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.fencing).
 
-5. [Aggiungere il gruppo di disponibilità come una risorsa in cluster](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server). 
+5. [Aggiungere il gruppo di disponibilità come risorsa nel cluster](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server). 
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 
-Per completare lo scenario end-to-end seguente, è necessario tre macchine virtuali da distribuire il cluster di tre nodi. I passaggi seguenti illustrano come configurare questi server.
+Per completare lo scenario end-to-end seguente, sono necessari tre computer per distribuire il cluster a tre nodi. I passaggi seguenti illustrano come configurare questi server.
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Installare e configurare il sistema operativo in ogni nodo del cluster 
 
@@ -58,13 +58,13 @@ Il primo passaggio consiste nel configurare il sistema operativo nei nodi del cl
 
 ### <a name="install-and-configure-sql-server-service-on-each-cluster-node"></a>Installare e configurare il servizio SQL Server in ogni nodo del cluster
 
-1. Installare e configurare il servizio SQL Server in tutti i nodi. Per istruzioni dettagliate, vedere [installare SQL Server in Linux](sql-server-linux-setup.md).
+1. Installare e configurare il servizio SQL Server in tutti i nodi. Per istruzioni dettagliate, vedere [Installare SQL Server in Linux](sql-server-linux-setup.md).
 
-1. Designare un nodo primari e di altri nodi come repliche secondarie. Usare questi termini all'interno di questa Guida.
+1. Designare un nodo come primario e gli altri nodi come secondari. Usare questi termini per tutte le istruzioni riportate in questo documento.
 
-1. Assicurarsi che i nodi che faranno parte del cluster possono comunicare tra loro.
+1. Assicurarsi che i nodi da includere nel cluster possano comunicare tra loro.
 
-   L'esempio seguente mostra `/etc/hosts` con aggiunte per tre nodi denominati SLES1, SLES2 e SLES3.
+   L'esempio seguente mostra `/etc/hosts` con gli indirizzi aggiuntivi per i tre nodi denominati SLES1, SLES2 e SLES3.
 
    ```
    127.0.0.1   localhost
@@ -73,13 +73,13 @@ Il primo passaggio consiste nel configurare il sistema operativo nei nodi del cl
    10.128.16.22 SLES3
    ```
 
-   Tutti i nodi del cluster devono essere in grado di accedere reciprocamente tramite SSH. Strumenti come `hb_report` o `crm_report` (per la risoluzione dei problemi) e History Explorer di Hawk richiedono l'accesso a SSH tra i nodi, in caso contrario, essi possono raccogliere dati solo dal nodo corrente. Nel caso in cui si usa una porta SSH non standard, usare l'opzione -X (vedere `man` pagina). Ad esempio, se la porta SSH è 3479, richiamare un `crm_report` con:
+   Tutti i nodi del cluster devono poter accedere l'uno all'altro tramite SSH. Strumenti come `hb_report` o `crm_report` (per la risoluzione dei problemi) e History Explorer di Hawk richiedono l'accesso a SSH senza password da un nodo all'altro, altrimenti possono raccogliere dati solo dal nodo corrente. Se si usa una porta SSH non standard, usare l'opzione -X (vedere la pagina relativa a `man`). Se, ad esempio, la porta SSH è 3479, richiamare un oggetto `crm_report` con:
 
    ```bash
    sudo crm_report -X "-p 3479" [...]
    ```
 
-   Per altre informazioni, vedere la [Guida all'amministrazione di SLES - sezione varie](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc).
+   Per altre informazioni, vedere [SLES Administration Guide - Miscellaneous](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc) (Guida all'amministrazione di SLES - Varie).
 
 
 ## <a name="create-a-sql-server-login-for-pacemaker"></a>Creare un account di accesso di SQL Server per Pacemaker
@@ -88,15 +88,15 @@ Il primo passaggio consiste nel configurare il sistema operativo nei nodi del cl
 
 ## <a name="configure-an-always-on-availability-group"></a>Configurare un gruppo di disponibilità Always On
 
-Nei server Linux, configurare il gruppo di disponibilità e quindi configurare le risorse del cluster. Per configurare il gruppo di disponibilità, vedere [Configura gruppo di disponibilità AlwaysOn per SQL Server in Linux](sql-server-linux-availability-group-configure-ha.md)
+Nei server Linux configurare il gruppo di disponibilità e quindi le risorse cluster. Per configurare il gruppo di disponibilità, vedere [Configurare un gruppo di disponibilità Always On di SQL Server per la disponibilità elevata in Linux](sql-server-linux-availability-group-configure-ha.md)
 
 ## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Installare e configurare Pacemaker in ogni nodo del cluster
 
-1. Installare l'estensione di disponibilità elevata
+1. Installare l'estensione per la disponibilità elevata
 
-   Per riferimento, vedere [installazione SUSE Linux Enterprise Server e l'estensione per la disponibilità elevata](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.installation)
+   Per informazioni di riferimento, vedere [Installing SUSE Linux Enterprise Server and High Availability Extension](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.installation) (Installazione di SUSE Linux Enterprise Server e dell'estensione per la disponibilità elevata)
 
-1. Installa pacchetto dell'agente di risorse SQL Server su entrambi i nodi.
+1. Installare il pacchetto dell'agente delle risorse SQL Server in entrambi i nodi.
 
    ```bash
    sudo zypper install mssql-server-ha
@@ -104,38 +104,38 @@ Nei server Linux, configurare il gruppo di disponibilità e quindi configurare l
 
 ## <a name="set-up-the-first-node"></a>Configurare il primo nodo
 
-   Fare riferimento a [istruzioni di installazione di SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node)
+   Vedere le [istruzioni per l'installazione di SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node)
 
-1. Accedere come `root` per la macchina fisica o virtuale da usare come nodo del cluster.
-2. Avviare lo script di bootstrap eseguendo:
+1. Accedere come `root` alla macchina virtuale o fisica che si vuole usare come nodo del cluster.
+2. Avviare lo script di bootstrap con il comando seguente:
    ```bash
    sudo ha-cluster-init
    ```
 
-   NTP non è stato configurato per l'esecuzione all'avvio, verrà visualizzato un messaggio. 
+   Se NTP non è stato configurato in modo da essere eseguito in fase di avvio, viene visualizzato un messaggio. 
 
-   Se si decide di continuare comunque, lo script genera le chiavi per l'accesso SSH e per lo strumento di sincronizzazione Csync2 automaticamente e avvia i servizi necessari per entrambi. 
+   Se si decide di continuare comunque, lo script genera automaticamente le chiavi per l'accesso SSH e per lo strumento di sincronizzazione Csync2 e avvia i servizi necessari per entrambi. 
 
 3. Per configurare il livello di comunicazione del cluster (Corosync): 
 
-   a. Immettere un indirizzo di rete a cui associarsi. Per impostazione predefinita, lo script viene proposto l'indirizzo di rete di eth0. In alternativa, immettere un indirizzo di rete diversi, ad esempio l'indirizzo di bond0. 
+   A. Immettere un indirizzo di rete con cui stabilire l'associazione. Per impostazione predefinita, lo script propone l'indirizzo di rete eth0. In alternativa, immettere un indirizzo di rete diverso, ad esempio bond0. 
 
-   b. Immettere un indirizzo multicast. Lo script viene proposto un indirizzo casuale che è possibile utilizzare come valore predefinito. 
+   B. Immettere un indirizzo multicast. Lo script propone un indirizzo casuale che è possibile usare come predefinito. 
 
-   c. Immettere una porta di multicast. Lo script viene proposto 5405 come predefinito. 
+   c. Immettere una porta multicast. Lo script propone 5405 come numero di porta predefinito. 
 
-   d. Per configurare `SBD ()`, immettere un percorso persistente per la partizione del dispositivo di blocco che si desidera utilizzare per SBD. Il percorso deve essere coerente in tutti i nodi del cluster. 
-   Infine, lo script avvierà il servizio Pacemaker per connettere il cluster a nodo singolo e abilitare l'interfaccia di gestione Web Hawk2. L'URL da utilizzare per Hawk2 viene visualizzato sullo schermo. 
+   d. Per configurare `SBD ()`, immettere un percorso permanente per la partizione del dispositivo a blocchi che si vuole usare per SBD. Il percorso deve essere coerente in tutti i nodi del cluster. 
+   Lo script avvierà infine il servizio Pacemaker per portare online il cluster a un nodo e abilitare l'interfaccia di gestione Web Hawk2. L'URL da usare per Hawk2 viene visualizzato sullo schermo. 
 
-4. Per i dettagli del processo di installazione, controllare `/var/log/sleha-bootstrap.log`. È ora disponibile un cluster in esecuzione un nodo. Controllare lo stato del cluster con lo stato di crm:
+4. Per informazioni dettagliate sul processo di installazione, vedere `/var/log/sleha-bootstrap.log`. A questo punto è disponibile un cluster a un nodo in esecuzione. Verificare lo stato del cluster con crm status:
 
    ```bash
    sudo crm status
    ```
 
-   È anche possibile visualizzare la configurazione del cluster con `crm configure show xml` o `crm configure show`.
+   È anche possibile vedere la configurazione del cluster con `crm configure show xml` o `crm configure show`.
 
-5. La procedura di bootstrap viene creato un utente di Linux denominato hacluster con la password per linux. Sostituire la password predefinita con una protezione appena possibile: 
+5. La routine di bootstrap crea un utente Linux denominato hacluster con password linux. Sostituire la password predefinita con una password sicura, non appena possibile: 
 
    ```bash
    sudo passwd hacluster
@@ -143,32 +143,32 @@ Nei server Linux, configurare il gruppo di disponibilità e quindi configurare l
 
 ## <a name="add-nodes-to-the-existing-cluster"></a>Aggiungere nodi al cluster esistente
 
-Se si dispone di un cluster in esecuzione con uno o più nodi, aggiungere più nodi del cluster con lo script di bootstrap a disponibilità elevata-cluster-join. Lo script necessita esclusivamente l'accesso a un nodo del cluster esistente e verrà completata automaticamente la configurazione di base sul computer corrente. Usare la procedura seguente:
+Se è in esecuzione un cluster con uno o più nodi, aggiungere altri nodi del cluster con lo script di bootstrap ha-cluster-join. Lo script deve semplicemente disporre dell'accesso a un nodo del cluster esistente e completerà automaticamente la configurazione di base nel computer corrente. Eseguire la procedura descritta di seguito:
 
-Se sono stati configurati i nodi del cluster esistente con il `YaST` modulo di cluster, assicurarsi che siano soddisfatti i prerequisiti seguenti prima di eseguire `ha-cluster-join`:
-- L'utente radice sui nodi esistenti include le chiavi SSH per l'accesso senza password. 
-- `Csync2` è configurato sui nodi esistenti. Per altre informazioni, vedere configurazione Csync2 con YaST. 
+Se i nodi del cluster esistenti sono stati configurati con il modulo per cluster `YaST`, prima di eseguire `ha-cluster-join` assicurarsi che i prerequisiti seguenti siano soddisfatti:
+- L'utente ROOT nei nodi esistenti dispone di chiavi SSH per l'accesso senza password. 
+- `Csync2` è configurato nei nodi esistenti. Per altre informazioni, vedere Configurazione di Csync2 con YaST. 
 
-1. Accedere come utente root per la macchina fisica o virtuale dovrebbe essere aggiunti al cluster. 
-2. Avviare lo script di bootstrap eseguendo: 
+1. Accedere come utente ROOT alla macchina virtuale o fisica che dovrebbe essere aggiunta al cluster. 
+2. Avviare lo script di bootstrap con il comando seguente: 
 
    ```bash
    sudo ha-cluster-join
    ```
 
-   NTP non è stato configurato per l'esecuzione all'avvio, verrà visualizzato un messaggio. 
+   Se NTP non è stato configurato in modo da essere eseguito in fase di avvio, viene visualizzato un messaggio. 
 
-3. Se si decide di continuare comunque, verrà richiesto per l'indirizzo IP di un nodo esistente. Immettere l'indirizzo IP. 
+3. Se si decide di continuare comunque, verrà chiesto di specificare l'indirizzo IP di un nodo esistente. Immettere l'indirizzo IP. 
 
-4. Se non si è già configurato un accesso a SSH senza password tra entrambi i computer, è anche richiederà la password radice del nodo esistente. 
+4. Se non è già stato configurato un accesso SSH senza password tra entrambi i computer, verrà chiesto di specificare anche la password radice del nodo esistente. 
 
-   Dopo l'accesso al nodo specificato, lo script copia la configurazione di Corosync, configura SSH e `Csync2`e riporta online il computer corrente come nuovo nodo del cluster. A parte ciò, viene avviato il servizio richiesto perché Hawk. Se è stata configurata l'archiviazione condivisa con `OCFS2`, viene creato automaticamente anche la directory del punto di montaggio per i `OCFS2` file system. 
+   Dopo aver eseguito l'accesso al nodo specificato, lo script copia la configurazione di Corosync, configura SSH e `Csync2`, quindi porta online il computer corrente come nuovo nodo del cluster. Oltre a questo, avvia il servizio necessario per Hawk. Se lo spazio di archiviazione condiviso è stato configurato con `OCFS2`, viene creata automaticamente anche la directory del punto di montaggio per il file system `OCFS2`. 
 
 5. Ripetere i passaggi precedenti per tutti i computer da aggiungere al cluster. 
 
-6. Per informazioni dettagliate del processo, controllare `/var/log/ha-cluster-bootstrap.log`. 
+6. Per informazioni dettagliate sulla procedura, vedere `/var/log/ha-cluster-bootstrap.log`. 
 
-1. Controllare lo stato del cluster con `sudo crm status`. Se il secondo nodo è stato aggiunto correttamente, l'output sarà simile al seguente:
+1. Verificare lo stato del cluster con `sudo crm status`. Se il secondo nodo è stato aggiunto correttamente, l'output sarà simile al seguente:
 
    ```bash
    sudo crm status
@@ -181,83 +181,83 @@ Se sono stati configurati i nodi del cluster esistente con il `YaST` modulo di c
    ```
 
    >[!NOTE]
-   >`admin_addr` è la risorsa cluster IP virtuale configurata durante l'installazione iniziale del cluster a nodo singolo.
+   >`admin_addr` è la risorsa cluster IP virtuale definita durante la configurazione iniziale del cluster a un nodo.
 
-Dopo aver aggiunto tutti i nodi, controllare se è necessario modificare i criteri di quorum no nelle opzioni di cluster globale. Ciò è particolarmente importante per i cluster a due nodi. Per altre informazioni, vedere sezione 4.1.2, opzione no-quorum-policy. 
+Dopo aver aggiunto tutti i nodi, controllare se è necessario modificare no-quorum-policy nelle opzioni globali del cluster. Questa operazione è particolarmente importante per i cluster a due nodi. Per altre informazioni, vedere la sezione 4.1.2 relativa all'opzione no-quorum-policy. 
 
-## <a name="set-cluster-property-cluster-recheck-interval"></a>Impostare proprietà di cluster del cluster-Ricontrolla-intervallo
+## <a name="set-cluster-property-cluster-recheck-interval"></a>Impostare la proprietà del cluster cluster-recheck-interval
 
-`cluster-recheck-interval` indica l'intervallo di polling in corrispondenza del quale il cluster controlla modifiche nei parametri delle risorse, i vincoli o altre opzioni di cluster. Se una replica diventa inattiva, il cluster tenta di riavviare la replica in base all'intervallo è associato mediante il `failure-timeout` valore e il `cluster-recheck-interval` valore. Ad esempio, se `failure-timeout` è impostato su 60 secondi e `cluster-recheck-interval` è impostato su 120 secondi, il riavvio viene eseguito un tentativo in base all'intervallo è maggiore di 60 secondi ma inferiore a 120 secondi. È consigliabile impostare timeout errore 60s e controlla di nuovo-cluster-interval su un valore maggiore di 60 secondi. Non è consigliabile impostare intervallo-cluster-nuova verifica su un valore ridotto.
+`cluster-recheck-interval` indica l'intervallo di polling in base al quale il cluster verifica se sono state apportate modifiche ai parametri delle risorse, ai vincoli o ad altre opzioni del cluster. Se una replica diventa inattiva, il cluster prova a riavviare la replica in base a un intervallo associato ai valori di `failure-timeout` e `cluster-recheck-interval`. Se, ad esempio, `failure-timeout` è impostato su 60 secondi e `cluster-recheck-interval` su 120, viene eseguito un tentativo di riavvio in base a un intervallo superiore a 60 secondi ma inferiore a 120. È consigliabile impostare failure-timeout su 60 secondi e cluster-recheck-interval su un valore superiore a 60 secondi. Evitare di impostare cluster-recheck-interval su un valore inferiore.
 
-Per aggiornare il valore della proprietà da `2 minutes` eseguire:
+Per aggiornare il valore della proprietà su `2 minutes`, eseguire il comando seguente:
 
 ```bash
 crm configure property cluster-recheck-interval=2min
 ```
 
 > [!IMPORTANT] 
-> Se si dispone già di una risorsa gruppo di disponibilità gestita da un cluster Pacemaker, tenere presente che tutte le distribuzioni che usano la versione più recente disponibile Pacemaker pacchetto 1.1.18-11.el7 introducano un cambiamento di comportamento per il cluster iniziale-errore-è-errore irreversibile impostazione quando relativo il valore è false. Questa modifica interessa il flusso di lavoro di failover. Se una replica primaria si verifica un'interruzione, il cluster è previsto per il failover su una delle repliche secondarie disponibili. Al contrario, gli utenti noteranno che il cluster insiste avviare la replica primaria non riuscita. Se tale database primario non torna online (a causa di un'interruzione dell'alimentazione permanente), il cluster mai effettua il failover a un'altra replica secondaria disponibile. Grazie a questa modifica, una configurazione consigliata in precedenza per impostare start-errore-è-errore irreversibile non è più valida e l'impostazione deve essere ripristinato il valore predefinito di `true`. Inoltre, la risorsa del gruppo di disponibilità deve essere aggiornato per includere il `failover-timeout` proprietà. 
+> Se è già presente una risorsa del gruppo di disponibilità gestita da un cluster Pacemaker, si noti che tutte le distribuzioni che usano il pacchetto Pacemaker 1.1.18-11.el7 più recente introducono una modifica del comportamento per l'impostazione del cluster start-failure-is-fatal quando il relativo valore è false. Questa modifica influisce sul flusso di lavoro del failover. Se si verifica un'interruzione in una replica primaria, di norma dovrebbe essere eseguito il failover del cluster in una delle repliche secondarie disponibili. Al contrario, gli utenti noteranno che il cluster continuerà a provare ad avviare la replica primaria che ha subito l'interruzione. Se la replica primaria non torna mai online, a causa di un'interruzione permanente, il cluster non esegue mai il failover in un'altra replica secondaria disponibile. A causa di questa modifica, una configurazione precedentemente consigliata per impostare start-failure-is-fatal non è più valida e l'impostazione deve essere ripristinata sul valore `true` predefinito. La risorsa del gruppo di disponibilità deve inoltre essere aggiornata in modo da includere la proprietà `failover-timeout`. 
 >
->Per aggiornare il valore della proprietà da `true` eseguire:
+>Per aggiornare il valore della proprietà su `true`, eseguire il comando seguente:
 >
 >```bash
 >crm configure property start-failure-is-fatal=true
 >```
 >
->Aggiornare le proprietà della risorsa del gruppo di disponibilità esistente `failure-timeout` al `60s` eseguire (sostituire `ag1` con il nome della risorsa gruppo di disponibilità): 
+>Per aggiornare la proprietà `failure-timeout` della risorsa del gruppo di disponibilità esistente su `60s`, eseguire il comando seguente (sostituendo `ag1` con il nome della risorsa): 
 >
 >```bash
 >crm configure edit ag1
 ># In the text editor, add `meta failure-timeout=60s` after any `param`s and before any `op`s
 >```
 
-Per altre informazioni sulle proprietà del cluster Pacemaker, vedere [configurazione di risorse Cluster](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html).
+Per altre informazioni sulle proprietà del cluster Pacemaker, vedere [Configurazione delle risorse cluster](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html).
 
 ## <a name="configure-fencing-stonith"></a>Configurare l'isolamento (STONITH)
-I fornitori del cluster pacemaker richiedono STONITH deve essere abilitata e un dispositivo di fencing configurato per l'installazione del cluster supportate. Quando cluster resource manager non è possibile determinare lo stato di un nodo o di una risorsa in un nodo, l'isolamento consente di visualizzare di nuovo il cluster a uno stato noto.
+I fornitori di cluster Pacemaker richiedono l'abilitazione di STONITH e un dispositivo di isolamento impostato per una configurazione di cluster supportata. Quando il modulo per la gestione di risorse cluster non riesce a determinare lo stato di un nodo o di una risorsa in un nodo, per ripristinare uno stato noto del cluster viene usato l'isolamento.
 
-Isolamento a livello di risorsa principalmente assicura che non vi sia alcun danneggiamento dei dati durante un'interruzione del servizio tramite la configurazione di una risorsa. È possibile utilizzare l'isolamento a livello di risorsa, ad esempio, con DRBD (Distributed replicati blocco dispositivo) per contrassegnare il disco in un nodo come obsoleta quando il collegamento di comunicazione si arresta.
+L'isolamento a livello di risorsa garantisce soprattutto che i dati non subiscano danni durante un'interruzione tramite la configurazione di una risorsa. È ad esempio possibile usare l'isolamento a livello di risorsa con DRBD (Distributed Replicated Block Device) per contrassegnare come obsoleto il disco su un nodo quando il collegamento di comunicazione diventa inattivo.
 
-Isolamento a livello di nodo assicura che un nodo non viene eseguita alcuna risorsa. In tal caso, reimpostare il nodo e l'implementazione di Pacemaker di esso viene chiamato STONITH (che è l'acronimo di "girare in altro nodo nell'intestazione"). Pacemaker supporta una vasta gamma di dispositivi, ad esempio un uninterruptible power supply o gestione schede di interfaccia di per i server di conflitti.
+L'isolamento a livello di nodo consente di assicurarsi che un nodo non esegua alcuna risorsa. Questa operazione viene eseguita tramite il reset del nodo e la relativa implementazione in Pacemaker è detta STONITH, che è l'acronimo di "Shoot The Other Node In The Head", un'espressione inglese usata per indicare che l'altro nodo deve essere arrestato. Pacemaker supporta un'ampia gamma di dispositivi di isolamento, ad esempio un alimentatore di continuità o schede di interfaccia di gestione per i server.
 
-Per altre informazioni, vedere [cluster Pacemaker da zero](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/), [Fencing e Stonith](https://clusterlabs.org/doc/crm_fencing.html) e [documentazione SUSE a disponibilità elevata: L'isolamento e STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
+Per altre informazioni, vedere [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/) (Cluster Pacemaker da zero), [Fencing and Stonith](https://clusterlabs.org/doc/crm_fencing.html) (Isolamento e Stonith) e la [documentazione di SUSE sulla disponibilità elevata: Fencing and STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html) (Isolamento e STONITH).
 
-In fase di inizializzazione del cluster, se non viene rilevata alcuna configurazione di STONITH è disabilitata. Può essere abilitata in un secondo momento usando il comando seguente:
+In fase di inizializzazione del cluster, se non viene rilevata alcuna configurazione, STONITH è disabilitato. È possibile abilitarlo in un secondo momento tramite il comando seguente:
 
 ```bash
 sudo crm configure property stonith-enabled=true
 ```
   
 >[!IMPORTANT]
->La disabilitazione di STONITH è solo a scopo di test. Se si prevede di utilizzare Pacemaker in un ambiente di produzione, è necessario pianificare un'implementazione di STONITH a seconda dell'ambiente e lasciarla abilitata. SUSE fornisce gli agenti di fencing per tutti gli ambienti cloud (tra cui Azure) o Hyper-V. Consequentially, il fornitore del cluster non offre il supporto per l'esecuzione di cluster di produzione in questi ambienti. Microsoft sta lavorando a una soluzione per questo divario che sarà disponibile nelle versioni future.
+>La disabilitazione di STONITH viene eseguita solo a scopo di test. Se si prevede di usare Pacemaker in un ambiente di produzione, è consigliabile pianificare un'implementazione di STONITH in base all'ambiente e mantenerla abilitata. SUSE non fornisce agenti di isolamento per ambienti cloud (incluso Azure) o Hyper-V. Di conseguenza, il fornitore del cluster non offre supporto per l'esecuzione di cluster di produzione in questi ambienti. Questo problema è attualmente in fase di studio e una soluzione sarà disponibile nelle versioni future.
 
 
-## <a name="configure-the-cluster-resources-for-sql-server"></a>Configurare le risorse del cluster per SQL Server
+## <a name="configure-the-cluster-resources-for-sql-server"></a>Configurare le risorse cluster per SQL Server
 
-Fare riferimento a [SLES amministrazione Guid](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.manual_config)
+Vedere [SLES Administration Guide](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.manual_config) (Guida all'amministrazione di SLES)
 
-## <a name="enable-pacemaker"></a>Enable Pacemaker
+## <a name="enable-pacemaker"></a>Abilitare Pacemaker
 
-Enable Pacemaker in modo che venga avviato automaticamente.
+Abilitare Pacemaker per consentirne l'avvio automatico.
 
-Eseguire il comando seguente in ogni nodo del cluster.
+In ogni nodo del cluster eseguire il comando seguente.
 
 ```bash
 systemctl enable pacemaker
 ```
 
-### <a name="create-availability-group-resource"></a>Crea risorsa gruppo di disponibilità
+### <a name="create-availability-group-resource"></a>Creare una risorsa del gruppo di disponibilità
 
-Il comando seguente crea e configura la risorsa del gruppo di disponibilità per tre repliche del gruppo di disponibilità [ag1]. Le operazioni di monitoraggio e i timeout devono essere specificate in modo esplicito in SLES basata sul fatto che i timeout sono altamente dipendente dal carico di lavoro e devono essere attentamente regolato per ogni distribuzione.
-Eseguire il comando in uno dei nodi del cluster:
+Il comando seguente crea e configura la risorsa per tre repliche del gruppo di disponibilità [ag1]. Le operazioni di monitoraggio e i timeout devono essere definiti in modo esplicito in SLES tenendo conto del fatto che i timeout sono fortemente dipendenti dai carichi di lavoro e devono essere definiti con precisione per ogni distribuzione.
+Eseguire il comando seguente in uno dei nodi del cluster:
 
-1. Eseguire `crm configure` aprire il prompt dei comandi di crm:
+1. Eseguire `crm configure` per aprire il prompt di crm:
 
    ```bash
    sudo crm configure 
    ```
 
-1. Nel prompt di crm, eseguire il comando seguente per configurare le proprietà della risorsa.
+1. Nel prompt di crm eseguire il comando seguente per configurare le proprietà della risorsa.
 
    ```bash
    primitive ag_cluster \
@@ -282,7 +282,7 @@ Eseguire il comando in uno dei nodi del cluster:
 
 ### <a name="create-virtual-ip-resource"></a>Creare una risorsa IP virtuale
 
-Se non è stato creato la risorsa IP virtuale durante l'esecuzione `ha-cluster-init` è possibile creare questa risorsa ora. Il comando seguente crea una risorsa IP virtuale. Sostituire `<**0.0.0.0**>` con un indirizzo disponibile dalla rete e `<**24**>` con il numero di bit nella maschera di subnet CIDR. Eseguire in un nodo.
+Se la risorsa IP virtuale non è stata creata al momento dell'esecuzione di `ha-cluster-init`, è possibile crearla adesso. Il comando seguente crea una risorsa IP virtuale. Sostituire `<**0.0.0.0**>` con un indirizzo disponibile della rete e `<**24**>` con il numero di bit nella subnet mask CIDR. Eseguire il comando in un nodo.
 
 ```bash
 crm configure \
@@ -292,10 +292,10 @@ primitive admin_addr \
       cidr_netmask=<**24**>
 ```
 
-### <a name="add-colocation-constraint"></a>Aggiungi vincolo di condivisione del percorso
-Quasi ogni decisione di in un cluster Pacemaker, come scegliere in cui deve essere eseguita una risorsa, viene eseguita confrontando i punteggi. I punteggi vengono calcolati per ogni risorsa e cluster resource manager sceglie il nodo con il punteggio più alto per una determinata risorsa. (Se un nodo ha un punteggio negativo per una risorsa, la risorsa non è possibile eseguire su tale nodo.) È possibile gestire le decisioni del cluster con vincoli. I vincoli hanno un punteggio. Se un vincolo ha un punteggio inferiore a infinito, è solo un'indicazione. Un punteggio pari a infinito significa che è indispensabile. Microsoft vuole garantire che primaria del gruppo di disponibilità e virtuale risorsa ip vengono eseguiti nello stesso host, quindi viene definito un vincolo di condivisione del percorso con un punteggio pari a infinito. 
+### <a name="add-colocation-constraint"></a>Aggiungere un vincolo di condivisione percorso
+Quasi tutte le decisioni di un cluster Pacemaker, come la scelta della posizione in cui deve essere eseguita una risorsa, vengono eseguite tramite il confronto di punteggi. Il calcolo dei punteggi viene eseguito per singola risorsa e il modulo per la gestione di risorse cluster sceglie il nodo con il punteggio più alto per una determinata risorsa. Se un nodo ha un punteggio negativo per una risorsa, questa non può essere eseguita su tale nodo. Le decisioni del cluster possono essere modificate applicando vincoli. I vincoli hanno un punteggio. Se un vincolo ha un punteggio inferiore a INFINITY, è solo un suggerimento. Un punteggio INFINITY indica invece che il vincolo è obbligatorio. Per assicurarsi che la replica primaria del gruppo di disponibilità e la risorsa IP virtuale vengano eseguite nello stesso host, definire un vincolo di condivisione percorso con punteggio INFINITY. 
 
-Per impostare il vincolo di condivisione percorso per l'indirizzo IP virtuale per l'esecuzione nello stesso nodo master, eseguire il comando seguente in un nodo:
+Per impostare un vincolo di condivisione percorso per fare in modo che la risorsa IP virtuale venga eseguita nello stesso nodo della risorsa master, eseguire il comando seguente in un nodo:
 
 ```bash
 crm configure
@@ -304,16 +304,16 @@ colocation vip_on_master inf: \
 commit
 ```
 
-### <a name="add-ordering-constraint"></a>Aggiungi vincolo di ordinamento
-Il vincolo di condivisione percorso ha un vincolo di ordinamento implicito. Sposta la risorsa IP virtuale prima di spostare la risorsa del gruppo di disponibilità. Per impostazione predefinita è la sequenza di eventi: 
+### <a name="add-ordering-constraint"></a>Aggiungere un vincolo di ordinamento
+Il vincolo di condivisione percorso ha un vincolo di ordinamento implicito. Sposta la risorsa IP virtuale prima di spostare la risorsa del gruppo di disponibilità. Di seguito è indicata la sequenza di eventi predefinita: 
 
-1. Risorsa utente di problemi la migrazione da node1 a node2 a principale del gruppo di disponibilità.
-2. La risorsa IP virtuale viene arrestata nel nodo 1.
-3. La risorsa IP virtuale verrà avviata nel nodo 2. A questo punto, l'indirizzo IP temporaneamente punti al nodo 2 mentre il nodo 2 è ancora un pre-failover secondario. 
-4. Viene abbassato di livello principale del gruppo di disponibilità nel nodo 1 per slave.
-5. Lo slave di gruppo di disponibilità nel nodo 2 venga innalzato di livello master. 
+1. L'utente invia un comando di migrazione della risorsa alla replica master del gruppo di disponibilità, dal nodo 1 al nodo 2.
+2. La risorsa IP virtuale viene arrestata sul nodo 1.
+3. La risorsa IP virtuale viene avviata sul nodo 2. A questo punto, l'indirizzo IP punta temporaneamente al nodo 2, mentre il nodo 2 è ancora una replica secondaria preliminare al failover. 
+4. La replica master del gruppo di disponibilità nel nodo 1 viene abbassata di livello e diventa slave.
+5. La replica slave del gruppo di disponibilità nel nodo 2 viene alzata di livello e diventa master. 
 
-Per evitare temporaneamente che puntano al nodo con il database secondario pre-failover l'indirizzo IP, aggiungere un vincolo di ordinamento. Per aggiungere un vincolo di ordinamento, eseguire il comando seguente in un nodo: 
+Per evitare che l'indirizzo IP punti temporaneamente al nodo con la replica secondaria preliminare al failover, aggiungere un vincolo di ordinamento. Per aggiungere un vincolo di ordinamento, eseguire il comando seguente in un nodo: 
 
 ```bash
 crm crm configure \
@@ -322,18 +322,18 @@ crm crm configure \
 
 
 >[!IMPORTANT]
->Dopo aver configurato il cluster e aggiungere il gruppo di disponibilità come risorsa cluster, è possibile usare Transact-SQL per eseguire il failover le risorse di gruppo di disponibilità. Risorse del cluster SQL Server in Linux non sono collegate come strettamente con il sistema operativo perché sono in un Server Failover Cluster WSFC (Windows). Servizio SQL Server non riconosce la presenza del cluster. Tutte le orchestrazioni vengono eseguite mediante gli strumenti di gestione di cluster. SLES usare `crm`. 
+>Dopo aver configurato il cluster e aggiunto il gruppo di disponibilità come risorsa cluster, non è possibile usare Transact-SQL per eseguire il failover delle risorse del gruppo di disponibilità. Le risorse cluster di SQL Server in Linux non sono strettamente associate al sistema operativo come in un cluster WSFC (Windows Server Failover Cluster). Il servizio SQL Server non è a conoscenza della presenza del cluster. Tutta l'orchestrazione viene eseguita tramite gli strumenti per la gestione di cluster. In SLES usare `crm`. 
 
-Eseguire manualmente il failover il gruppo di disponibilità con `crm`. Non avviare il failover con Transact-SQL. Per altre informazioni, vedere [Failover](sql-server-linux-availability-group-failover-ha.md#failover).
+Per eseguire manualmente il failover per il gruppo di disponibilità, usare `crm`. Non avviare il failover con Transact-SQL. Per altre informazioni, vedere [Failover](sql-server-linux-availability-group-failover-ha.md#failover).
 
 
 Per altre informazioni, vedere:
-- [La gestione delle risorse cluster](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm).   
-- [Disponibilità elevata di concetti](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.concepts)
-- [Riferimento rapido di pacemaker](https://github.com/ClusterLabs/pacemaker/blob/master/doc/pcs-crmsh-quick-ref.md) 
+- [Managing Cluster Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm) (Gestione di risorse cluster)   
+- [HA Concepts](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.concepts) (Concetti relativi alla disponibilità elevata)
+- [Pacemaker Quick Reference](https://github.com/ClusterLabs/pacemaker/blob/master/doc/pcs-crmsh-quick-ref.md) (Riferimento rapido per Pacemaker) 
 
 <!---[!INCLUDE [Pacemaker Concepts](..\includes\ss-linux-cluster-pacemaker-concepts.md)]--->
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Funzionamento di gruppo di disponibilità elevata](sql-server-linux-availability-group-failover-ha.md)
+[Gestire gruppi di disponibilità per la disponibilità elevata](sql-server-linux-availability-group-failover-ha.md)
