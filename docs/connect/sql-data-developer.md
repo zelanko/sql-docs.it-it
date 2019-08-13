@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cfd79f0cd7470ea94be1c77e5bc27016531909ad
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8d94f07f12269bb2d4690ae01a5c51dd91d051f7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265391"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893917"
 ---
 # <a name="sql-data-developer"></a>SQL Data Developer
 Usa la piattaforma dati SQL Microsoft per creare soluzioni incentrate sui dati tra dispositivi mobili e desktop per server Web, server aziendali e cloud.  
@@ -24,7 +24,7 @@ Usa la piattaforma dati SQL Microsoft per creare soluzioni incentrate sui dati t
 * [SQL Server motore di database](../database-engine/configure-windows/sql-server-database-engine.md): usare la motore di database SQL Server per creare database relazionali per l'elaborazione delle transazioni online o i dati di Online Analytical Processing. 
 * [SQL Azure](https://docs.microsoft.com/azure/sql-database/): usare SQL Azure per spostare il database nel cloud 
 * [SQL Compact](https://www.microsoft.com/download/details.aspx?id=17876): SQL Server Compact per creare applicazioni autonome e connesse occasionalmente per dispositivi mobili, desktop e client Web.
-* Local [DB: usare](../database-engine/configure-windows/sql-server-2016-express-localdb.md)il database locale durante lo sviluppo per scrivere e testare il codice Transact-SQL senza dover gestire un'istanza del server completa di SQL Server.
+* [Local DB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): usare il database locale durante lo sviluppo per scrivere e testare il codice Transact-SQL senza dover gestire un'istanza del server completa di SQL Server.
 
 ## <a name="sql-data-tools"></a>SQL Data Tools
 * [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) : usare SSDT per creare database relazionali, database SQL di Azure, pacchetti di Integration Services, modelli di dati Analysis Services e report Reporting Services.
@@ -40,7 +40,7 @@ Usa la piattaforma dati SQL Microsoft per creare soluzioni incentrate sui dati t
 * [Sqlxml 4,0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md): usare SQLXML 4,0 per esportare dati relazionali in XML.
 
 ## <a name="data-collection-processing-and-visualization"></a>Raccolta, elaborazione e visualizzazione dei dati
-* [Analysis Services](../analysis-services/analysis-services-developer-documentation.md)
+* [Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)
 * [Integration Services](../integration-services/integration-services-developer-documentation.md)  
 * [Master Data Services](../master-data-services/develop/master-data-services-developer-documentation.md)
 * [Servizi di replica](../relational-databases/replication/concepts/replication-developer-documentation.md)
